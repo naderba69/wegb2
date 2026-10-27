@@ -381,9 +381,12 @@
     "noteAr": [
       "منقولٌ بـ Konjunktiv I حيّ: führe… / bewerte… — لا تجميلٌ بل نقلُ أمانة",
       "الفعلُ الوظيفي مُزدوج: eine Rolle spielen + infrage stellen — المعيارُ مُنجَزٌ في أول سطرين",
-      "خاتمةٌ بسؤالٍ مفتوح (Ob uns das… steht dahin) — قالبُ التعليق الصحفيّ يُغلَق ولا يُغلِق"
+      "خاتمةٌ بسؤالٍ مفتوح (Ob uns das… steht dahin) — قالبُ التعليق الصحفيّ يُغلَق ولا يُغلِق",
+      "Goethe B2 Schreiben: Forumsbeitrag ~150 Wörter — 45 Min. Teil 1/2"
     ],
-    "zielWort": 150
+    "zielWort": 150,
+    "b2Typ": "forum",
+    "dauerMin": 45
   },
   {
     "id": "w-b2-02",
@@ -403,9 +406,12 @@
     "noteAr": [
       "ثلاثيةُ um zu / ohne… / statt zu في مواضعها النحوية الصحيحة — معيارٌ لا ينجو منه إلا من درَّب",
       "Funktionsverbgefüge ×2: einbringen + zur Entlastung verhelfen (وتَنجَز «den Beweis antreten») — ثلاثٌ إن حسبت",
-      "طلبُ موعدٍ بإطار زمني محدد (binnen zwei Wochen) — الرسميةُ لا تعني الضبابية"
+      "طلبُ موعدٍ بإطار زمني محدد (binnen zwei Wochen) — الرسميةُ لا تعني الضبابية",
+      "Goethe B2 Schreiben: Formelle Nachricht ~100 Wörter — 30 Min. Teil 2/2"
     ],
-    "zielWort": 150
+    "zielWort": 100,
+    "b2Typ": "nachricht",
+    "dauerMin": 30
   },
   {
     "id": "w-b2-03",
@@ -425,9 +431,12 @@
     "noteAr": [
       "تلخيصٌ بلا نهاية: «passt in eine Bahnhofsdurchsage — mehr sei nicht verraten» — الهمزُ بذكاء بدلَ الحرق",
       "زوايا الربط الرفيعة كلها: zwar…doch / obgleich / im Hinblick auf / zugegeben / insgesamt — المعيارُ مُستنفَدٌ حرفياً",
-      "نقدٌ متزن حتى في الجملة الواحدة: قوةُ التفاصيل، ضعفُ الشخصيات — الميزانُ لا المجاملة"
+      "نقدٌ متزن حتى في الجملة الواحدة: قوةُ التفاصيل، ضعفُ الشخصيات — الميزانُ لا المجاملة",
+      "Goethe B2 Schreiben: Forumsbeitrag ~150 Wörter — 45 Min. Teil 1/2"
     ],
-    "zielWort": 150
+    "zielWort": 150,
+    "b2Typ": "forum",
+    "dauerMin": 45
   },
   {
     "id": "w-b2-04",
@@ -447,9 +456,12 @@
     "noteAr": [
       "فصلٌ معماري: proponents → critics → «كلٌّ صادقٌ في نصفه» → موقف — نمطُ Erörterung المصدَّق",
       "شرطيتان نظاميتان: sofern / unter der Bedingung dass — و«vorausgesetzt» الثالثة مكافأة",
-      "النبرة بلا «أنا» حتى الجملةِ الموقعية الأخيرة (Meines Erachtens) — المعيارُ الموضوعيُّ مُطبَّقٌ بصيغته الرسمية"
+      "النبرة بلا «أنا» حتى الجملةِ الموقعية الأخيرة (Meines Erachtens) — المعيارُ الموضوعيُّ مُطبَّقٌ بصيغته الرسمية",
+      "Goethe B2 Schreiben: Forumsbeitrag ~150 Wörter — 45 Min. Teil 1/2"
     ],
-    "zielWort": 150
+    "zielWort": 150,
+    "b2Typ": "forum",
+    "dauerMin": 45
   },
   {
     "id": "w-b2-05",
@@ -469,9 +481,12 @@
     "noteAr": [
       "Partizipialattribute أربعةٌ سالمة: von mir… gesammelten / in Tunesien ausgebildete / an Ihrer Fakultät erworbenes / von Ihnen vergebene — المعيارُ مضاعَف",
       "هدفٌ ملموسٌ مضاعف: Lastmanagement لقرية + تصميمٌ لذوي الجيوب الخفيفة — لا جملةُ «أحب البيئة» الفارغة",
-      "صلةُ الخبرة بالفرصة صريحة: ما نَقَصَكَ من تمويلٍ هنا هو ما اكتمل هناك"
+      "صلةُ الخبرة بالفرصة صريحة: ما نَقَصَكَ من تمويلٍ هنا هو ما اكتمل هناك",
+      "Goethe B2 Schreiben: Formelle Nachricht ~100 Wörter — 30 Min. Teil 2/2"
     ],
-    "zielWort": 150
+    "zielWort": 100,
+    "b2Typ": "nachricht",
+    "dauerMin": 30
   },
   {
     "id": "w-a1-06",
@@ -558,9 +573,12 @@
     "noteAr": [
       "Konjunktiv I أربعُ مرات في المنقول (bleibe / sei / begreife / konsumiere / verlerne) — النقلُ الصحفيُّ أمانةٌ تصرفية",
       "الأدوات الثلاث نظامية: laut / …zufolge / demzufolge — توزيعُ المصدرية كما يُلزِم التقرير",
-      "فصلٌ أخيرٌ بفعل التوازن: «تقنية نعم… لكن» بعد أن عُرِضَ الطرفان بلا رجَّةِ مرجَّح — ثم استشرافُ العشرِ سنوات: ختامُ التقارير الكبار"
+      "فصلٌ أخيرٌ بفعل التوازن: «تقنية نعم… لكن» بعد أن عُرِضَ الطرفان بلا رجَّةِ مرجَّح — ثم استشرافُ العشرِ سنوات: ختامُ التقارير الكبار",
+      "Goethe B2 Schreiben: Forumsbeitrag ~150 Wörter — 45 Min. Teil 1/2"
     ],
-    "zielWort": 150
+    "zielWort": 150,
+    "b2Typ": "forum",
+    "dauerMin": 45
   },
   {
     "id": "w-a1-07",
@@ -668,9 +686,12 @@
     "noteAr": [
       "أرقام وأرقامٌ عكسية: طلب + أجل محدد (bis Freitag) ثم شرطان (Rücktritt / Erstattung binnen vierzehn Tagen) — الشكوىُ قانونٌ مُهذَّب",
       "دقة الوقائع: رقم طلب، رقم فاتورة، رسالة الخطأ حرفياً — لا «الوصولُ لا يعمل» بلا جثة دليل",
-      "«Belege halte ich bereit» — ورقةُ القوة الأخيرة تُلْمَح ولا تُلَوَّح: آدابُ الضغط الرسمي"
+      "«Belege halte ich bereit» — ورقةُ القوة الأخيرة تُلْمَح ولا تُلَوَّح: آدابُ الضغط الرسمي",
+      "Goethe B2 Schreiben: Formelle Nachricht ~100 Wörter — 30 Min. Teil 2/2"
     ],
-    "zielWort": 150
+    "zielWort": 100,
+    "b2Typ": "nachricht",
+    "dauerMin": 30
   },
   {
     "id": "w-b2-08",
@@ -690,9 +711,12 @@
     "noteAr": [
       "je…desto مزدوجةٌ في صلب السؤال لا للزينة — قالبُ المقارنة كما يُطلَب",
       "Konjunktiv II في خدمة الحُجَّة لا الحفظ: hätte… nie gelernt / wäre — شرطيّةُ تجربةٍ لا شرطيّةُ كتاب",
-      "قلبُ حجةِ التكلفة: الأغلى ليس الرحلةَ بل زمنُ الشكّ — تقنيةُ الردِّ الصفوة: ماثلةٌ في النص لا مسمّاةٌ في الحاشية"
+      "قلبُ حجةِ التكلفة: الأغلى ليس الرحلةَ بل زمنُ الشكّ — تقنيةُ الردِّ الصفوة: ماثلةٌ في النص لا مسمّاةٌ في الحاشية",
+      "Goethe B2 Schreiben: Forumsbeitrag ~150 Wörter — 45 Min. Teil 1/2"
     ],
-    "zielWort": 150
+    "zielWort": 150,
+    "b2Typ": "forum",
+    "dauerMin": 45
   },
   {
     "id": "w-a1-08",
@@ -910,10 +934,13 @@
     "noteAr": [
       "نموذج امتحان B2: Leserbrief ببنية إشارة ← حجج ← دحض ← موقف",
       "الدحض بـ«Zwar … doch» هو المهارة الفاصلة بين B1 وB2",
-      "الأرقام في النموذج عامة (Minuten) بلا إحصاء مختلَق — قاعدة المشروع"
+      "الأرقام في النموذج عامة (Minuten) بلا إحصاء مختلَق — قاعدة المشروع",
+      "Goethe B2 Schreiben: Formelle Nachricht ~100 Wörter — 30 Min. Teil 2/2"
     ],
     "neu": true,
-    "zielWort": 150
+    "zielWort": 100,
+    "b2Typ": "nachricht",
+    "dauerMin": 30
   },
   {
     "id": "w-b2-10",
@@ -932,10 +959,13 @@
     "sample": "Betreff: Reklamation – Bestellung Nr. 88214 vom 2. Mai\n\nSehr geehrte Damen und Herren,\n\nam 9. Mai wurde mir der bestellte Wasserkocher geliefert. Das Paket war bereits geöffnet, und das Gerät weist einen Riss im Glas auf; ein Foto und den Lieferschein füge ich bei. Noch am selben Tag habe ich den Schaden über Ihr Kontaktformular gemeldet und am 16. Mai telefonisch nachgefragt. Bis heute habe ich keine Antwort erhalten.\n\nIch fordere Sie daher auf, mir bis zum 6. Juni entweder ein einwandfreies Ersatzgerät zu liefern oder den Kaufpreis von 39,90 Euro zu erstatten. Die Rücksendung des defekten Geräts ist auf Ihre Kosten zu organisieren.\n\nSollte ich bis zu diesem Termin keine Rückmeldung erhalten, werde ich mich an die Verbraucherzentrale wenden und meine weiteren Rechte prüfen lassen.\n\nMit freundlichen Grüßen\nRania Haddad",
     "noteAr": [
       "الشكوى الرسمية تُبنى على تواريخ: كل خطوة بتاريخها — هذا ما يجعلها قابلة للتنفيذ",
-      "«Sollte ich … erhalten, werde ich …»: شرط بلا wenn + مستقبل — بنية B2 نموذجية للإنذار المهذّب"
+      "«Sollte ich … erhalten, werde ich …»: شرط بلا wenn + مستقبل — بنية B2 نموذجية للإنذار المهذّب",
+      "Goethe B2 Schreiben: Formelle Nachricht ~100 Wörter — 30 Min. Teil 2/2"
     ],
     "neu": true,
-    "zielWort": 150
+    "zielWort": 100,
+    "b2Typ": "nachricht",
+    "dauerMin": 30
   },
   {
     "id": "w-b2-11",
@@ -955,10 +985,13 @@
     "noteAr": [
       "Stellungnahme في B2: الموقف يأتي بعد الموازنة لا قبلها",
       "«Kann Freiwilligkeit verordnet werden?» سؤال بلاغي في المقدمة — أداة أسلوبية تُحتسب في B2",
-      "صيغ B2: Passiv (verordnet werden)، Nominalisierung (Freiwilligkeit، Engagement)، Konjunktiv II (bliebe)"
+      "صيغ B2: Passiv (verordnet werden)، Nominalisierung (Freiwilligkeit، Engagement)، Konjunktiv II (bliebe)",
+      "Goethe B2 Schreiben: Forumsbeitrag ~150 Wörter — 45 Min. Teil 1/2"
     ],
     "neu": true,
-    "zielWort": 150
+    "zielWort": 150,
+    "b2Typ": "forum",
+    "dauerMin": 45
   },
   {
     "id": "w-a0-03",
@@ -1124,9 +1157,12 @@
     "sample": "Die Digitalisierung der Schulen wird kontrovers diskutiert. Richtig eingesetzt könnte sie den Unterricht vielfältiger und zugänglicher machen. Digitale Lehrmittel bieten aktuelle Quellen und ermöglichen es, dass Lernende im eigenen Tempo üben; Lehrkräfte können Aufgaben besser an unterschiedliche Niveaus anpassen. Zudem lassen sich Projekte leichter gemeinsam bearbeiten, auch wenn eine Klasse nicht am selben Ort arbeitet. Dem stehen erhebliche Risiken gegenüber. Wo Geräte oder stabiles Internet fehlen, werden soziale Unterschiede verstärkt. Außerdem lenken Benachrichtigungen ab, und die Erhebung persönlicher Daten wirft Datenschutzfragen auf. Ein Beispiel: Eine Recherche auf dem Tablet kann mehrere Perspektiven sichtbar machen; ohne klare Aufgabe wechseln manche jedoch zu Spielen. Technik allein verbessert also keinen Unterricht. Schulen sollten Lehrkräfte fortbilden, Datenschutz verbindlich regeln und analoge Alternativen sichern. Aus meiner Sicht ist Digitalisierung dann sinnvoll, wenn sie ein pädagogisches Ziel unterstützt und nicht die Beziehung zwischen Lehrkraft und Lernenden ersetzt.",
     "noteAr": [
       "ابدأ بأطروحة، ثم اعرض حجتين مؤيدتين وحجتين معارضتين مع مثال محدد لكل موقف؛ لا تكتفِ بسرد المزايا.",
-      "نوّع الروابط: obwohl يقدّم جملة تابعة، وtrotz يسبق اسماً في حالة المضاف إليه؛ واختم بحكم معلّل لا بمجرد إعادة العنوان."
+      "نوّع الروابط: obwohl يقدّم جملة تابعة، وtrotz يسبق اسماً في حالة المضاف إليه؛ واختم بحكم معلّل لا بمجرد إعادة العنوان.",
+      "Goethe B2 Schreiben: Forumsbeitrag ~150 Wörter — 45 Min. Teil 1/2"
     ],
-    "zielWort": 160
+    "zielWort": 150,
+    "b2Typ": "forum",
+    "dauerMin": 45
   },
   {
     "id": "w-b2-13",
@@ -1146,9 +1182,12 @@
     "sample": "[Ihre Anschrift]\n[Anschrift des Vermieters]\nKöln, den 28. Oktober\n\nBetreff: Erneute Mängelanzeige – Heizung in meiner Wohnung\n\nSehr geehrter Herr Müller,\n\nseit dem 30. September funktioniert die Heizung im Wohnzimmer meiner Wohnung nicht. Die Raumtemperatur liegt abends nur bei etwa 16 Grad, sodass das Zimmer kaum nutzbar ist. Am 3. und am 10. Oktober habe ich Sie bereits telefonisch über den Defekt informiert; leider wurde bisher weder eine Reparatur veranlasst noch ein Termin vereinbart. Ich bitte Sie daher, den Mangel innerhalb von 14 Tagen nach Zugang dieses Schreibens fachgerecht zu beheben. Bei Zugang am 28. Oktober endet diese Frist am 11. November. Bitte bestätigen Sie mir schriftlich, wann ein Handwerker kommt. Sollte die Reparatur bis zum Ablauf der Frist nicht erfolgt sein, behalte ich mir vor, nach rechtlicher Beratung eine angemessene Mietminderung geltend zu machen. Ich hoffe auf eine zeitnahe Lösung.\n\nMit freundlichen Grüßen\nMax Beispiel",
     "noteAr": [
       "ضع العنوان والتاريخ والموضوع قبل التحية، وسجّل تاريخ بدء العطل وتاريخي البلاغين السابقين بترتيب زمني دقيق.",
-      "حدّد مهلة 14 يوماً بموعد نهائي واطلب التأكيد؛ صغ Mietminderung كاحتمال بعد استشارة قانونية، لا كتخفيض فوري تلقائي."
+      "حدّد مهلة 14 يوماً بموعد نهائي واطلب التأكيد؛ صغ Mietminderung كاحتمال بعد استشارة قانونية، لا كتخفيض فوري تلقائي.",
+      "Goethe B2 Schreiben: Formelle Nachricht ~100 Wörter — 30 Min. Teil 2/2"
     ],
-    "zielWort": 160
+    "zielWort": 100,
+    "b2Typ": "nachricht",
+    "dauerMin": 30
   },
   {
     "id": "w-a0-06",
@@ -1251,9 +1290,12 @@
     "sample": "Das Homeoffice hat die Arbeitswelt nachhaltig verändert, doch nicht jeder Beschäftigte und jeder Betrieb profitiert gleichermaßen. Arbeitnehmerinnen und Arbeitnehmer sparen den täglichen Arbeitsweg und können ihre Arbeitszeit oft flexibler organisieren. Arbeitgeber gewinnen Zugang zu Fachkräften außerhalb ihres Standorts und benötigen möglicherweise weniger Bürofläche. Gleichzeitig kann die dauerhafte Arbeit zu Hause soziale Isolation fördern und die Grenze zwischen Beruf und Freizeit verwischen. Für Unternehmen wird es schwieriger, neue Beschäftigte einzuarbeiten und spontane Absprachen im Team zu ermöglichen; zudem müssen sensible Daten zuverlässig geschützt werden. Ein hybrides Modell könnte diese Nachteile begrenzen: feste Teamtage im Büro sichern den Austausch, während konzentrierte Aufgaben an anderen Tagen zu Hause erledigt werden. Voraussetzung sind klare Arbeitszeiten, geeignete Ausstattung und Regeln zur Erreichbarkeit. Meiner Ansicht nach sollte Homeoffice weder Pflicht noch Ausnahme sein. Beschäftigte und Arbeitgeber sollten gemeinsam entscheiden, welche Mischung zu den Aufgaben passt. So verbindet man Flexibilität mit Zusammenarbeit, ohne die Risiken zu übersehen.",
     "noteAr": [
       "ميّز بين مصلحة الموظف وصاحب العمل، ووازن المرونة وتوفير الوقت مع العزلة وصعوبة التنسيق وحماية البيانات.",
-      "اعرض حجة مضادة ثم اقترح حلاً وسطاً عملياً، مثل أيام هجينة وقواعد واضحة، وعلّل موقفك في خاتمة محددة."
+      "اعرض حجة مضادة ثم اقترح حلاً وسطاً عملياً، مثل أيام هجينة وقواعد واضحة، وعلّل موقفك في خاتمة محددة.",
+      "Goethe B2 Schreiben: Forumsbeitrag ~150 Wörter — 45 Min. Teil 1/2"
     ],
-    "zielWort": 160
+    "zielWort": 150,
+    "b2Typ": "forum",
+    "dauerMin": 45
   },
   {
     "id": "w-b2-15",
@@ -1273,9 +1315,12 @@
     "noteAr": [
       "افتتاح بموقف صريح لا تمهيد طويل — معيار Goethe الأول",
       "توازن حججي (einerseits/andererseits) ثم حل وسط في الخاتمة بدل انتصار طرف",
-      "مثال من التجربة بصيغة عامة قابلة للنقل (zwei Tage) لا حكاية شخصية طويلة"
+      "مثال من التجربة بصيغة عامة قابلة للنقل (zwei Tage) لا حكاية شخصية طويلة",
+      "Goethe B2 Schreiben: Forumsbeitrag ~150 Wörter — 45 Min. Teil 1/2"
     ],
-    "zielWort": 150
+    "zielWort": 150,
+    "b2Typ": "forum",
+    "dauerMin": 45
   },
   {
     "id": "w-b2-16",
@@ -1295,9 +1340,12 @@
     "noteAr": [
       "ربط سببي صريح (das führt dazu, dass) يرفع معيار التراكيب",
       "الاعتراف بالحجة المضادة ثم تفنيدها (Das mag sein, jedoch) — نضج حجاجي B2",
-      "الخاتمة مشروطة (wenn) لا مطلقة — تدرّج في الحكم"
+      "الخاتمة مشروطة (wenn) لا مطلقة — تدرّج في الحكم",
+      "Goethe B2 Schreiben: Forumsbeitrag ~150 Wörter — 45 Min. Teil 1/2"
     ],
-    "zielWort": 150
+    "zielWort": 150,
+    "b2Typ": "forum",
+    "dauerMin": 45
   },
   {
     "id": "w-b2-17",
@@ -1317,9 +1365,12 @@
     "noteAr": [
       "مقارنة زمنية (Im Vergleich zu früher) من وسائل التعبير المعيارية",
       "خاتمة بجملة تلخيصية صريحة (Zusammenfassend kann man sagen) تُغلق البنية",
-      "نفي متوازن (kein Geschenk, sondern) يري نضجًا لغويًا"
+      "نفي متوازن (kein Geschenk, sondern) يري نضجًا لغويًا",
+      "Goethe B2 Schreiben: Forumsbeitrag ~150 Wörter — 45 Min. Teil 1/2"
     ],
-    "zielWort": 150
+    "zielWort": 150,
+    "b2Typ": "forum",
+    "dauerMin": 45
   },
   {
     "id": "w-b2-18",
@@ -1339,9 +1390,12 @@
     "noteAr": [
       "تدرّج المقترح (schrittweise) يحوّل الموقف إلى خطة — مطلوب في خلاصات B2",
       "اعتراف بفئة متضررة محددة (ältere Menschen) لا بمعارضة مجردة",
-      "تنويع الروابط: außerdem/trotzdem/aus diesem Grund في نص واحد"
+      "تنويع الروابط: außerdem/trotzdem/aus diesem Grund في نص واحد",
+      "Goethe B2 Schreiben: Forumsbeitrag ~150 Wörter — 45 Min. Teil 1/2"
     ],
-    "zielWort": 150
+    "zielWort": 150,
+    "b2Typ": "forum",
+    "dauerMin": 45
   },
   {
     "id": "w-b2-23",
@@ -1361,9 +1415,12 @@
     "noteAr": [
       "تمثيل الموقف المضاد بنزاهة (Das stimmt teilweise) قبل الرد — قلب صيغة telc",
       "حجتان ماديتان (Freiheit, Kontrolle) لا عاطفيتان فقط",
-      "تسوية ختامية بصيغة Vorschlag (Als Kompromiss schlage ich vor)"
+      "تسوية ختامية بصيغة Vorschlag (Als Kompromiss schlage ich vor)",
+      "Goethe B2 Schreiben: Forumsbeitrag ~150 Wörter — 45 Min. Teil 1/2"
     ],
-    "zielWort": 150
+    "zielWort": 150,
+    "b2Typ": "forum",
+    "dauerMin": 45
   },
   {
     "id": "w-b2-19",
@@ -1383,9 +1440,12 @@
     "noteAr": [
       "افتتاح مباشر بالمشكلة (leider muss ich) — لا مقدمات فارغة في رسائل العمل",
       "موعدان بديلان محددان يجعلان الرد سهلًا على المديرة",
-      "جملة الاستعداد للاستفسار (Für Rückfragen …) ختام مهني معياري"
+      "جملة الاستعداد للاستفسار (Für Rückfragen …) ختام مهني معياري",
+      "Goethe B2 Schreiben: Formelle Nachricht ~100 Wörter — 30 Min. Teil 2/2"
     ],
-    "zielWort": 100
+    "zielWort": 100,
+    "b2Typ": "nachricht",
+    "dauerMin": 30
   },
   {
     "id": "w-b2-20",
@@ -1405,9 +1465,12 @@
     "noteAr": [
       "Konjunktiv II في الطلبين (Könnten Sie / würde ich gern) — علامة مهنية B2",
       "تقديم النفس بوظيفة وقسم وتاريخ بداية في سطرين",
-      "شكر مسبق (Vielen Dank im Voraus) يغلق الطلب بأدب"
+      "شكر مسبق (Vielen Dank im Voraus) يغلق الطلب بأدب",
+      "Goethe B2 Schreiben: Formelle Nachricht ~100 Wörter — 30 Min. Teil 2/2"
     ],
-    "zielWort": 100
+    "zielWort": 100,
+    "b2Typ": "nachricht",
+    "dauerMin": 30
   },
   {
     "id": "w-b2-21",
@@ -1427,9 +1490,12 @@
     "noteAr": [
       "تحية بـ Liebe Frau لأن العلاقة زمالة (نصف رسمية) لا رسمية كاملة",
       "ترتيب زمني/أولوي (Zuerst … Am Freitag außerdem) يجعل التسليم قابلًا للتنفيذ",
-      "بديل عند المشكلة باسم ورقم داخلي — واقعية مهنية مقنعة"
+      "بديل عند المشكلة باسم ورقم داخلي — واقعية مهنية مقنعة",
+      "Goethe B2 Schreiben: Formelle Nachricht ~100 Wörter — 30 Min. Teil 2/2"
     ],
-    "zielWort": 100
+    "zielWort": 100,
+    "b2Typ": "nachricht",
+    "dauerMin": 30
   },
   {
     "id": "w-b2-22",
@@ -1449,9 +1515,12 @@
     "noteAr": [
       "إشارة دقيقة للمقال (Datum + Inhalt) تفتتح رسائل القرّاء معياريًا",
       "استعارة وظيفية (Bäume sind Klimaanlage) ترفع مستوى التعبير",
-      "اقتراح متناسب (zwei neue für jeden) لا مطالبة قصوى"
+      "اقتراح متناسب (zwei neue für jeden) لا مطالبة قصوى",
+      "Goethe B2 Schreiben: Formelle Nachricht ~100 Wörter — 30 Min. Teil 2/2"
     ],
-    "zielWort": 150
+    "zielWort": 100,
+    "b2Typ": "nachricht",
+    "dauerMin": 30
   },
   {
     "id": "w-b1-14",
@@ -2075,10 +2144,13 @@
     "noteAr": [
       "بنية einerseits/andererseits كاملة",
       "حجة الإنسانية مقابل حجة الكفاءة",
-      "خاتمة مشروطة لا مطلقة"
+      "خاتمة مشروطة لا مطلقة",
+      "Goethe B2 Schreiben: Forumsbeitrag ~150 Wörter — 45 Min. Teil 1/2"
     ],
-    "zielWort": 170,
-    "neu": true
+    "zielWort": 150,
+    "neu": true,
+    "b2Typ": "forum",
+    "dauerMin": 45
   },
   {
     "id": "w-b2-25",
@@ -2098,10 +2170,13 @@
     "noteAr": [
       "مشكلة بسلوك قابل للقياس لا انطباعات",
       "حل مقترح بعرض جهد (Entwurf mitbringen)",
-      "توقيع بالوظيفة يلائم السياق"
+      "توقيع بالوظيفة يلائم السياق",
+      "Goethe B2 Schreiben: Formelle Nachricht ~100 Wörter — 30 Min. Teil 2/2"
     ],
-    "zielWort": 140,
-    "neu": true
+    "zielWort": 100,
+    "neu": true,
+    "b2Typ": "nachricht",
+    "dauerMin": 30
   },
   {
     "id": "w-b2-26",
@@ -2121,10 +2196,13 @@
     "noteAr": [
       "تمييز بين الجذب والبقاء في المهنة",
       "كل محور مرتبط بنتيجة عملية",
-      "ختام بترتيب صريح (an erster Stelle)"
+      "ختام بترتيب صريح (an erster Stelle)",
+      "Goethe B2 Schreiben: Forumsbeitrag ~150 Wörter — 45 Min. Teil 1/2"
     ],
-    "zielWort": 180,
-    "neu": true
+    "zielWort": 150,
+    "neu": true,
+    "b2Typ": "forum",
+    "dauerMin": 45
   },
   {
     "id": "w-b2-27",
@@ -2144,10 +2222,13 @@
     "noteAr": [
       "ربط شخصي بمقال الجريدة",
       "سبب اقتصادي واحد محدد",
-      "اقتراحان عمليان (Umbau/Förderung)"
+      "اقتراحان عمليان (Umbau/Förderung)",
+      "Goethe B2 Schreiben: Formelle Nachricht ~100 Wörter — 30 Min. Teil 2/2"
     ],
-    "zielWort": 160,
-    "neu": true
+    "zielWort": 100,
+    "neu": true,
+    "b2Typ": "nachricht",
+    "dauerMin": 30
   },
   {
     "id": "w-b2-28",
@@ -2167,10 +2248,13 @@
     "noteAr": [
       "مشاهد متسلسلة بمنطق الوردية",
       "توازن بين التقني والإنساني",
-      "خاتمة بملاحظة واحدة قوية"
+      "خاتمة بملاحظة واحدة قوية",
+      "Goethe B2 Schreiben: Forumsbeitrag ~150 Wörter — 45 Min. Teil 1/2"
     ],
-    "zielWort": 170,
-    "neu": true
+    "zielWort": 150,
+    "neu": true,
+    "b2Typ": "forum",
+    "dauerMin": 45
   },
   {
     "id": "w-b2-41",
@@ -2191,9 +2275,12 @@
     "noteAr": [
       "منقول حي: seien gestiegen / würde gebaut — نقل أمانة",
       "تركيب اسمي: die Forderung — معيار منجز",
-      "خاتمة بتوصية عملية"
+      "خاتمة بتوصية عملية",
+      "Goethe B2 Schreiben: Forumsbeitrag ~150 Wörter — 45 Min. Teil 1/2"
     ],
-    "zielWort": 150
+    "zielWort": 150,
+    "b2Typ": "forum",
+    "dauerMin": 45
   },
   {
     "id": "w-b2-42",
@@ -2213,9 +2300,12 @@
     "noteAr": [
       "افتتاح بالمشكلة دون مقدمات",
       "موعدان يجعلان الرد سهلاً",
-      "ختام مهني"
+      "ختام مهني",
+      "Goethe B2 Schreiben: Formelle Nachricht ~100 Wörter — 30 Min. Teil 2/2"
     ],
-    "zielWort": 100
+    "zielWort": 100,
+    "b2Typ": "nachricht",
+    "dauerMin": 30
   },
   {
     "id": "w-b2-43",
@@ -2236,9 +2326,12 @@
     "noteAr": [
       "منقول: seien teurer / würden ersetzt — حي",
       "مبني للمجهول: werde gespart / würden dargestellt — منجز",
-      "خاتمة توصية"
+      "خاتمة توصية",
+      "Goethe B2 Schreiben: Forumsbeitrag ~150 Wörter — 45 Min. Teil 1/2"
     ],
-    "zielWort": 150
+    "zielWort": 150,
+    "b2Typ": "forum",
+    "dauerMin": 45
   },
   {
     "id": "w-b2-44",
@@ -2258,9 +2351,12 @@
     "noteAr": [
       "ملاحظتان واضحتان",
       "موعدان محددان",
-      "ختام مهني"
+      "ختام مهني",
+      "Goethe B2 Schreiben: Formelle Nachricht ~100 Wörter — 30 Min. Teil 2/2"
     ],
-    "zielWort": 100
+    "zielWort": 100,
+    "b2Typ": "nachricht",
+    "dauerMin": 30
   },
   {
     "id": "w-b2-45",
@@ -2281,8 +2377,11 @@
     "noteAr": [
       "نقل بـ Konjunktiv I: überfordere/fehle — حي",
       "تركيب اسمي: die Sorge — منجز",
-      "خاتمة بسؤال مفتوح"
+      "خاتمة بسؤال مفتوح",
+      "Goethe B2 Schreiben: Forumsbeitrag ~150 Wörter — 45 Min. Teil 1/2"
     ],
-    "zielWort": 150
+    "zielWort": 150,
+    "b2Typ": "forum",
+    "dauerMin": 45
   }
 ]
