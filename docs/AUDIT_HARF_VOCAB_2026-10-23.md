@@ -39,19 +39,9 @@
 - "die berichterstattung" → b2-medien-schule-032(B2:b2-medien-schule)=التغطية الإخبارية | vu-b1p-000(B1:b1-medien-reise-verben)=التغطيةُ الإخبارية
 - … و 23 أخرى
 
-## الأفكار التحسينية (عينة 30/1020)
+## الأفكار التحسينية (عينة 30/1010)
 | البطاقة | الفكرة |
 |---------|--------|
-| `vocab.json:h03-konsum-geld/v690:werben` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:h03-konsum-geld/v693:sich leisten können` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:h03-konsum-geld/v699:umtauschen` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:h03-konsum-geld/v702:reklamieren` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:h03-konsum-geld/v705:zurückgeben` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:h03-konsum-geld/v706:konsumieren` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:h04-mobilitaet-verkehr/v718:sich fortbewegen` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:h04-mobilitaet-verkehr/v726:entwerten` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:h04-mobilitaet-verkehr/v728:sich verspäten` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:h04-mobilitaet-verkehr/v743:pendeln` | أضف تصريف (spricht/gekommen) للفعل |
 | `vocab.json:h04-mobilitaet-verkehr/v753:sich an die Verkehrsregeln halten` | أضف تصريف (spricht/gekommen) للفعل |
 | `vocab.json:h04-mobilitaet-verkehr/v766:einchecken` | أضف تصريف (spricht/gekommen) للفعل |
 | `vocab.json:h05-staat-recht/v779:vorschreiben` | أضف تصريف (spricht/gekommen) للفعل |
@@ -72,8 +62,18 @@
 | `vocab.json:h06-studium-lernen/v845:zulassen` | أضف تصريف (spricht/gekommen) للفعل |
 | `vocab.json:h06-studium-lernen/v854:benoten` | أضف تصريف (spricht/gekommen) للفعل |
 | `vocab.json:h06-studium-lernen/v856:durchfallen` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:h06-studium-lernen/v857:zurücktreten` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:h06-studium-lernen/v860:sich einschreiben` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:h06-studium-lernen/v864:ausleihen` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:h06-studium-lernen/v875:ablenken` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:h06-studium-lernen/v878:unterbrechen` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:h06-studium-lernen/v885:sich überprüfen` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:h06-studium-lernen/v889:betonen` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:h06-studium-lernen/v891:sich vertippen` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:h06-studium-lernen/v901:betreuen` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:h07-gefuehle-psyche/v908:sich ärgern über` | أضف تصريف (spricht/gekommen) للفعل |
 
-_… و 990 فكرة إضافية — تُصدّر بعد تثبيت P0/P1._
+_… و 980 فكرة إضافية — تُصدّر بعد تثبيت P0/P1._
 
 ## خطة المتابعة (المعلم الخبير)
 1. **القواعد ✅ P0 0** (منجز)

@@ -12570,7 +12570,8 @@
         "aussprache": "w = «ڤ»",
         "exampleDe": "Viele Firmen werben mit kostenloser Lieferung.",
         "exampleAr": "شركات كثيرة تروّج…",
-        "plural": "die Strukturen"
+        "plural": "die Strukturen",
+        "posInfo": "wirbt, warb, hat geworben"
       },
       {
         "id": "v691",
@@ -12614,7 +12615,8 @@
         ],
         "aussprache": "ö = بينَ الضمّةِ والكسرة",
         "exampleDe": "Eine Wohnung im Zentrum können wir uns nicht mehr leisten.",
-        "exampleAr": "شقة في المركز لم ن…"
+        "exampleAr": "شقة في المركز لم ن…",
+        "posInfo": "kann sich leisten, konnte sich leisten, hat sich leisten können"
       },
       {
         "id": "v694",
@@ -12703,7 +12705,8 @@
         ],
         "aussprache": "sch = «ش»",
         "exampleDe": "Kann ich den Pullover gegen Größe M umtauschen?",
-        "exampleAr": "هل يمكنني استبدال…"
+        "exampleAr": "هل يمكنني استبدال…",
+        "posInfo": "tauscht um, tauschte um, hat umgetauscht"
       },
       {
         "id": "v700",
@@ -12747,7 +12750,8 @@
         ],
         "aussprache": "ie = «إي» ممدودة",
         "exampleDe": "Den defekten Wasserkocher habe ich sofort reklamiert.",
-        "exampleAr": "الغلاية المعطوبة ق…"
+        "exampleAr": "الغلاية المعطوبة ق…",
+        "posInfo": "reklamiert, reklamierte, hat reklamiert"
       },
       {
         "id": "v703",
@@ -12791,7 +12795,8 @@
         "aussprache": "z = «تس» · ü = ضمّةٌ بشفتَينِ مستديرتَين",
         "exampleDe": "Den Pullover kann ich mit Kassenzettel zurückgeben.",
         "exampleAr": "يمكنني إعادة البلو…",
-        "plural": "die Methoden"
+        "plural": "die Methoden",
+        "posInfo": "gibt zurück, gab zurück, hat zurückgegeben"
       },
       {
         "id": "v706",
@@ -12804,7 +12809,8 @@
         ],
         "aussprache": "ie = «إي» ممدودة",
         "exampleDe": "Wir konsumieren mehr, als wir wirklich brauchen.",
-        "exampleAr": "نستهلك أكثر مما نح…"
+        "exampleAr": "نستهلك أكثر مما نح…",
+        "posInfo": "konsumiert, konsumierte, hat konsumiert"
       },
       {
         "id": "v707",
@@ -12993,7 +12999,8 @@
         ],
         "aussprache": "w = «ڤ»",
         "exampleDe": "In der Stadt bewege ich mich fast nur mit dem Rad fort.",
-        "exampleAr": "في المدينة أتنقّل…"
+        "exampleAr": "في المدينة أتنقّل…",
+        "posInfo": "bewegt sich fort, bewegte sich fort, hat sich fortbewegt"
       },
       {
         "id": "v719",
@@ -13111,7 +13118,8 @@
         ],
         "aussprache": "w = «ڤ»",
         "exampleDe": "Vergiss nicht, das Ticket vor der Fahrt zu entwerten.",
-        "exampleAr": "لا تنسَ ختم التذكر…"
+        "exampleAr": "لا تنسَ ختم التذكر…",
+        "posInfo": "entwertet, entwertete, hat entwertet"
       },
       {
         "id": "v727",
@@ -13139,7 +13147,8 @@
         ],
         "aussprache": "v = «ف»",
         "exampleDe": "Entschuldigung, ich habe mich verspätet, der Bus kam nicht.",
-        "exampleAr": "عذراً، تأخّرت، فال…"
+        "exampleAr": "عذراً، تأخّرت، فال…",
+        "posInfo": "verspätet sich, verspätete sich, hat sich verspätet"
       },
       {
         "id": "v729",
@@ -13370,7 +13379,8 @@
           "mobilitaet-verkehr"
         ],
         "exampleDe": "Seit dem Umzug pendelt er vierzig Kilometer zur Arbeit.",
-        "exampleAr": "منذ الانتقال يتنقّ…"
+        "exampleAr": "منذ الانتقال يتنقّ…",
+        "posInfo": "pendelt, pendelte, hat gependelt"
       },
       {
         "id": "v744",
