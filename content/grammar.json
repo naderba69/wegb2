@@ -2115,6 +2115,20 @@
         "answer": "Ich lerne Deutsch, weil ich in Deutschland arbeiten will.",
         "points": 2,
         "explanationAr": "weil/dass = قوس فعلي: الفعل المصرف في النهاية (will). فاصلة إجبارية — خطأ عربي شائع نسيانها."
+      },
+      {
+        "id": "a2-wd-um3",
+        "type": "umformung",
+        "promptDe": "Tausche: Ich will in Deutschland arbeiten, ___ ich Deutsch lerne.",
+        "promptAr": "استخدم weil مع فعل في النهاية.",
+        "quelleDe": "Ich lerne Deutsch, weil ich in Deutschland arbeiten will.",
+        "answer": "weil ich Deutsch lerne",
+        "alternatives": [],
+        "explanationAr": "weil جملة تابعة: فعل في النهاية — شرح عربي.",
+        "explanationDe": "weil جملة تابعة: فعل في النهاية — شرح عربي.",
+        "hintAr": "Verb am Ende",
+        "points": 2,
+        "level": "A2"
       }
     ]
   },
@@ -2293,6 +2307,20 @@
         "answer": "Ich gehe ins Kino.",
         "points": 2,
         "explanationAr": "im (in+dem) مكان → ins (in+das) اتجاه: wo vs wohin. تحويل حاسم B1."
+      },
+      {
+        "id": "a2-we-um3",
+        "type": "umformung",
+        "promptDe": "Richtung: Die Katze springt auf ___ Stuhl.",
+        "promptAr": "Wo? (مكان) vs Wohin? (وجهة)",
+        "quelleDe": "Die Katze sitzt auf dem Stuhl.",
+        "answer": "auf den Stuhl",
+        "alternatives": [],
+        "explanationAr": "sitz/liegen = مكان Dativ، springen/legen = وجهة Akk — شرح عربي.",
+        "explanationDe": "sitz/liegen = مكان Dativ، springen/legen = وجهة Akk — شرح عربي.",
+        "hintAr": "Wohin Akk",
+        "points": 2,
+        "level": "A2"
       }
     ]
   },
@@ -2463,6 +2491,20 @@
         "answer": "Kann ich hier rauchen? (ugs. Erlaubnis)",
         "points": 2,
         "explanationAr": "dürfen (إذن رسمي) vs können (قدرة/إذن عامي). فرق تسجيلي B1."
+      },
+      {
+        "id": "a2-mod-um3",
+        "type": "umformung",
+        "promptDe": "Höflich mit Konjunktiv II: Ich ___ gern Arzt werden. (wollen)",
+        "promptAr": "صيغة مهذبة.",
+        "quelleDe": "Ich will Arzt werden.",
+        "answer": "Ich würde gern Arzt werden.",
+        "alternatives": [],
+        "explanationAr": "würde + Infinitiv للتعبير المهذب — شرح عربي.",
+        "explanationDe": "würde + Infinitiv للتعبير المهذب — شرح عربي.",
+        "hintAr": "würde gern",
+        "points": 2,
+        "level": "A2"
       }
     ]
   },
@@ -4066,6 +4108,20 @@
         "answer": "Ich hoffe, bald zu kommen.",
         "points": 2,
         "explanationAr": "dass + فاعل = zu+مصدر لنفس الفاعل: Ich hoffe zu kommen. اختصار مصدري B2."
+      },
+      {
+        "id": "b2-inf-um3",
+        "type": "umformung",
+        "promptDe": "Nominal: Das viele Lernen ist wichtig — Welcher Infinitiv mit zu?",
+        "promptAr": "حدد Infinitivgruppe.",
+        "quelleDe": "Es ist wichtig, viel zu lernen.",
+        "answer": "zu lernen",
+        "alternatives": [],
+        "explanationAr": "Infinitiv mit zu بعد صفة/اسم (wichtig zu …) — شرح عربي.",
+        "explanationDe": "Infinitiv mit zu بعد صفة/اسم (wichtig zu …) — شرح عربي.",
+        "hintAr": "zu + Infinitiv",
+        "points": 2,
+        "level": "B2"
       }
     ],
     "resources": [
@@ -5727,6 +5783,20 @@
         "answer": "das Auto meines Vaters",
         "points": 2,
         "explanationAr": "Genitiv B1: von + Dativ → des + Genitiv-s: meines Vaters. Genitiv حيّ في الكتابة الرسمية."
+      },
+      {
+        "id": "b1-gen-um3",
+        "type": "umformung",
+        "promptDe": "Genitiv → von: Das Auto ___ meinem Vater ist neu. (Alternative)",
+        "promptAr": "حوّل Genitiv إلى von+Dativ.",
+        "quelleDe": "Das Auto meines Vaters ist neu.",
+        "answer": "von meinem Vater",
+        "alternatives": [],
+        "explanationAr": "Genitiv الأدبي = von+Dativ في اللغة المحكية — شرح عربي.",
+        "explanationDe": "Genitiv الأدبي = von+Dativ في اللغة المحكية — شرح عربي.",
+        "hintAr": "von + Dativ",
+        "points": 2,
+        "level": "B1"
       }
     ]
   },
@@ -6374,6 +6444,20 @@
         "answer": "die Entscheidung",
         "points": 2,
         "explanationAr": "اشتقاق B1: entscheiden → Entscheidung (-ung مؤنث). Wortbildung B2 أساس Nominalstil."
+      },
+      {
+        "id": "b1-wb-um3",
+        "type": "umformung",
+        "promptDe": "Nominal: ___ schnelle Entscheidung ist wichtig.",
+        "promptAr": "حوّل الفعل إلى اسم.",
+        "quelleDe": "Er entscheidet schnell.",
+        "answer": "Seine schnelle Entscheidung",
+        "alternatives": [],
+        "explanationAr": "entscheid-en → Entscheidung مع Genitiv — شرح عربي.",
+        "explanationDe": "entscheid-en → Entscheidung مع Genitiv — شرح عربي.",
+        "hintAr": "Entscheidung feminin",
+        "points": 2,
+        "level": "B1"
       }
     ],
     "resources": [
@@ -15313,6 +15397,20 @@
         "answer": "Ich koche nicht, aber ich spreche weich: ich.",
         "points": 2,
         "explanationAr": "ch بعد a/o/u = ach-Laut حلقي؛ بعد i/e/ä/ö/ü = ich-Laut رخو. فرق ألماني خالص — Conti Contrast يثبته."
+      },
+      {
+        "id": "a1-ch-um3",
+        "type": "umformung",
+        "promptDe": "Höre den ach-Laut /x/: Wo hörst du /x/ in „machen“? Schreibe „ach“ oder „ich“.",
+        "promptAr": "أين تسمع صوت ach /x/؟",
+        "quelleDe": "Ich mache das Licht an.",
+        "answer": "ach",
+        "alternatives": [],
+        "explanationAr": "ch بعد a/o/u = ach-Laut /x/ (machen) — شرح عربي يوضح الفرق مع ich-Laut.",
+        "explanationDe": "ch بعد a/o/u = ach-Laut /x/ (machen) — شرح عربي يوضح الفرق مع ich-Laut.",
+        "hintAr": "ach nach a",
+        "points": 2,
+        "level": "A1"
       }
     ],
     "pitfalls": [
@@ -15472,6 +15570,20 @@
         "answer": "Ich fahre [faːɐə] nach Berlin (vokalisiert).",
         "points": 2,
         "explanationAr": "r في النهاية يُنطق حركة صائتة ɐ (Vokalisierung): fahren → [faːɐən]. فرق سمعي ألماني — لا r عربية قوية."
+      },
+      {
+        "id": "a1-r-um3",
+        "type": "umformung",
+        "promptDe": "Vokalisch: Wie klingt „r“ in „teuer“? — Vokal-r",
+        "promptAr": "كيف يُنطق r في teuer؟",
+        "quelleDe": "Der rote Rock ist teuer.",
+        "answer": "Vokal-r",
+        "alternatives": [],
+        "explanationAr": "r بعد حرف علة يُحذف ويُمطّ العلة (teuer = /tɔɪɐ/) — شرح عربي.",
+        "explanationDe": "r بعد حرف علة يُحذف ويُمطّ العلة (teuer = /tɔɪɐ/) — شرح عربي.",
+        "hintAr": "r nach Vokal",
+        "points": 2,
+        "level": "A1"
       }
     ],
     "pitfalls": [
@@ -15682,6 +15794,20 @@
         "answer": "sprechen [ʃpreçen]",
         "points": 2,
         "explanationAr": "sp/st في البداية = schp/scht: sprechen → schprechen صوتياً. ليست s+p."
+      },
+      {
+        "id": "a1-sp-um3",
+        "type": "umformung",
+        "promptDe": "Regel: sp → ʃp, st → ʃt — Wie liest du „sprechen“?",
+        "promptAr": "كيف تُنطق sp/st أول الكلمة؟",
+        "quelleDe": "Ich spreche Deutsch und stehe früh auf.",
+        "answer": "ʃp",
+        "alternatives": [],
+        "explanationAr": "sp/st أول الكلمة تُنطق ʃp/ʃt (sprechen/stehen) — شرح عربي.",
+        "explanationDe": "sp/st أول الكلمة تُنطق ʃp/ʃt (sprechen/stehen) — شرح عربي.",
+        "hintAr": "ʃp am Anfang",
+        "points": 2,
+        "level": "A1"
       }
     ],
     "pitfalls": [
@@ -16365,6 +16491,20 @@
         "answer": "Es regnet, trotzdem gehen wir spazieren.",
         "points": 2,
         "explanationAr": "obwohl (جانبية) → trotzdem (ظرف في المرتبة 1 + فعل 2). trotzdem = Haupt­sat­z."
+      },
+      {
+        "id": "b2-ko-um3",
+        "type": "umformung",
+        "promptDe": "Mit trotzdem: Es regnet, ___ gehen wir spazieren.",
+        "promptAr": "استخدم trotzdem بدل obwohl.",
+        "quelleDe": "Obwohl es regnet, gehen wir spazieren.",
+        "answer": "trotzdem gehen wir spazieren",
+        "alternatives": [],
+        "explanationAr": "obwohl (تابعة) ↔ trotzdem (رئيسية مع Inversion) — شرح عربي.",
+        "explanationDe": "obwohl (تابعة) ↔ trotzdem (رئيسية مع Inversion) — شرح عربي.",
+        "hintAr": "trotzdem = رغم ذلك",
+        "points": 2,
+        "level": "B2"
       }
     ],
     "pitfalls": [
