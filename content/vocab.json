@@ -58371,7 +58371,8 @@
         "article": "die",
         "farbe": "ROT",
         "exampleDe": "Eine unerwartete Folgewirkung der Reform ist die höhere Nachfrage.",
-        "exampleAr": "من الآثا…"
+        "exampleAr": "من الآثا…",
+        "img": "/cards/folgewirkung.png"
       },
       {
         "id": "v1442",
@@ -58386,7 +58387,8 @@
         "article": "die",
         "farbe": "ROT",
         "exampleDe": "Als Folge des Regens fiel der Unterricht aus.",
-        "exampleAr": "نتيجة ال…"
+        "exampleAr": "نتيجة ال…",
+        "img": "/cards/folge.png"
       },
       {
         "id": "v1443",
@@ -58401,7 +58403,8 @@
         "article": "der",
         "farbe": "BLAU",
         "exampleDe": "Der Strukturwandel verändert die Wirtschaftsstruktur vieler Regionen.",
-        "exampleAr": "يغيّر ال…"
+        "exampleAr": "يغيّر ال…",
+        "img": "/cards/strukturwandel.png"
       },
       {
         "id": "v1444",
@@ -58417,7 +58420,8 @@
         "article": "die",
         "farbe": "ROT",
         "exampleDe": "Die Entwicklung der KI schreitet schnell voran.",
-        "exampleAr": "يتقدّم تطوير الذكاء الاصطناعي بسرعة."
+        "exampleAr": "يتقدّم تطوير الذكاء الاصطناعي بسرعة.",
+        "img": "/cards/entwicklung.png"
       },
       {
         "id": "v1445",
@@ -58433,7 +58437,8 @@
         "article": "die",
         "farbe": "ROT",
         "exampleDe": "Niemand weiß genau, was die Zukunft bringt.",
-        "exampleAr": "لا أحد يعرف بدقة ماذا سيجلب المستقبل."
+        "exampleAr": "لا أحد يعرف بدقة ماذا سيجلب المستقبل.",
+        "img": "/cards/zukunft.png"
       },
       {
         "id": "v1446",
