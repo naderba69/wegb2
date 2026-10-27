@@ -2129,6 +2129,20 @@
         "hintAr": "Verb am Ende",
         "points": 2,
         "level": "A2"
+      },
+      {
+        "id": "a2-wd2-um4",
+        "type": "umformung",
+        "promptDe": "Frage: Was denkst du? — dass er kommt",
+        "promptAr": "أكمل dass.",
+        "quelleDe": "Ich denke, dass er kommt.",
+        "answer": "dass er kommt",
+        "alternatives": [],
+        "explanationAr": "dass جملة تابعة فعل آخر — شرح عربي.",
+        "explanationDe": "dass جملة تابعة فعل آخر — شرح عربي.",
+        "hintAr": "dass + Verb Ende",
+        "points": 2,
+        "level": "A2"
       }
     ]
   },
@@ -2503,6 +2517,20 @@
         "explanationAr": "würde + Infinitiv للتعبير المهذب — شرح عربي.",
         "explanationDe": "würde + Infinitiv للتعبير المهذب — شرح عربي.",
         "hintAr": "würde gern",
+        "points": 2,
+        "level": "A2"
+      },
+      {
+        "id": "a2-mod2-um3",
+        "type": "umformung",
+        "promptDe": "Höflich: Ich ___ viel lernen. (sollen)",
+        "promptAr": "بديل مهذب.",
+        "quelleDe": "Ich muss viel lernen.",
+        "answer": "Ich soll viel lernen",
+        "alternatives": [],
+        "explanationAr": "müssen → sollen للتخفيف — شرح عربي.",
+        "explanationDe": "müssen → sollen للتخفيف — شرح عربي.",
+        "hintAr": "sollen",
         "points": 2,
         "level": "A2"
       }
@@ -3977,6 +4005,20 @@
         "answer": "Er entscheidet.",
         "points": 2,
         "explanationAr": "Funktionsverbgefüge B2: eine Entscheidung treffen → entscheiden. Nominalstil vs Verbalstil — الأكاديمي يفضل البسيط."
+      },
+      {
+        "id": "b2-fv2-um4",
+        "type": "umformung",
+        "promptDe": "Einfach: Er ___. (äußert)",
+        "promptAr": "بدل Funktionsverb.",
+        "quelleDe": "Er bringt es zum Ausdruck.",
+        "answer": "Er äußert es",
+        "alternatives": [],
+        "explanationAr": "zum Ausdruck bringen → äußern — شرح عربي.",
+        "explanationDe": "zum Ausdruck bringen → äußern — شرح عربي.",
+        "hintAr": "äußern",
+        "points": 2,
+        "level": "B2"
       }
     ],
     "resources": [
@@ -6556,6 +6598,20 @@
         "hintAr": "Entscheidung feminin",
         "points": 2,
         "level": "B1"
+      },
+      {
+        "id": "b1-wb2-um4",
+        "type": "umformung",
+        "promptDe": "Verb: Man ___ schnell. (entscheiden)",
+        "promptAr": "من اسم إلى فعل.",
+        "quelleDe": "Die Entscheidung war schnell.",
+        "answer": "Man entschied schnell",
+        "alternatives": [],
+        "explanationAr": "Entscheidung → entscheiden — شرح عربي.",
+        "explanationDe": "Entscheidung → entscheiden — شرح عربي.",
+        "hintAr": "entschied",
+        "points": 2,
+        "level": "B1"
       }
     ],
     "resources": [
@@ -8558,6 +8614,20 @@
         "answer": "Wegen seiner schnellen Entscheidung gewinnt er Zeit.",
         "explanationAr": "التحويل الاسمي الأكاديمي B2: جملة weil الفعلية → عبارة اسمية wegen + Genitiv + تسمية (entscheiden → Entscheidung).",
         "points": 2
+      },
+      {
+        "id": "b2-nom-um3",
+        "type": "umformung",
+        "promptDe": "Nominal: Wegen ___ schnelle Entscheidung gewann er. (seiner)",
+        "promptAr": "إلى أسلوب اسمي.",
+        "quelleDe": "Weil er schnell entschied, gewann er.",
+        "answer": "Wegen seiner schnellen Entscheidung",
+        "alternatives": [],
+        "explanationAr": "Nominalstil B2: weil-Satz → wegen+Genitiv — شرح عربي.",
+        "explanationDe": "Nominalstil B2: weil-Satz → wegen+Genitiv — شرح عربي.",
+        "hintAr": "Wegen seiner",
+        "points": 2,
+        "level": "B2"
       }
     ],
     "resources": [
@@ -8745,6 +8815,20 @@
         "explanationAr": "تحية A0: ich bin + اسم — شرح عربي يوضح.",
         "explanationDe": "تحية A0: ich bin + اسم — شرح عربي يوضح.",
         "hintAr": "ich bin",
+        "points": 2,
+        "level": "A0"
+      },
+      {
+        "id": "a0-beg-um4",
+        "type": "umformung",
+        "promptDe": "Antwort: Ich ___ Ahmed. (heiße)",
+        "promptAr": "أجب.",
+        "quelleDe": "Wie heißt du?",
+        "answer": "Ich heiße Ahmed",
+        "alternatives": [],
+        "explanationAr": "A0: Wie heißt du? → Ich heiße ... — شرح عربي.",
+        "explanationDe": "A0: Wie heißt du? → Ich heiße ... — شرح عربي.",
+        "hintAr": "heiße",
         "points": 2,
         "level": "A0"
       }
@@ -15875,6 +15959,20 @@
         "explanationAr": "ch بعد a/o/u = ach-Laut /x/ (machen) — شرح عربي يوضح الفرق مع ich-Laut.",
         "explanationDe": "ch بعد a/o/u = ach-Laut /x/ (machen) — شرح عربي يوضح الفرق مع ich-Laut.",
         "hintAr": "ach nach a",
+        "points": 2,
+        "level": "A1"
+      },
+      {
+        "id": "a1-ch2-um3",
+        "type": "umformung",
+        "promptDe": "Wo hörst du ich-Laut? — in „ich“",
+        "promptAr": "أين ich-Laut؟",
+        "quelleDe": "Ich spreche Deutsch.",
+        "answer": "in ich",
+        "alternatives": [],
+        "explanationAr": "ich-Laut /ç/ بعد e/i/ä/ö/ü — شرح عربي.",
+        "explanationDe": "ich-Laut /ç/ بعد e/i/ä/ö/ü — شرح عربي.",
+        "hintAr": "ich-Laut",
         "points": 2,
         "level": "A1"
       }
