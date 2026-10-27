@@ -14514,7 +14514,8 @@
         ],
         "aussprache": "ei = «آي» لا «إي» · ü = ضمّةٌ بشفتَينِ مستديرتَين",
         "exampleDe": "Letztes Jahr wurden in der Stadt achthundert Menschen eingebürgert.",
-        "exampleAr": "السنة الماضية جُنّ…"
+        "exampleAr": "السنة الماضية جُنّ…",
+        "posInfo": "bürget ein, bürgete ein, hat eingebürget"
       },
       {
         "id": "v818",
@@ -14542,7 +14543,8 @@
         ],
         "aussprache": "ie = «إي» ممدودة · sch = «ش»",
         "exampleDe": "Niemanden darf man abschieben, ohne dass ein Gericht entscheidet.",
-        "exampleAr": "لا يجوز إبعاد أحد…"
+        "exampleAr": "لا يجوز إبعاد أحد…",
+        "posInfo": "schiebt ab, schiebte ab, hat abgeschiebt"
       },
       {
         "id": "v820",
@@ -14724,7 +14726,8 @@
         ],
         "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
         "exampleDe": "Er versuchte, den Prüfer mit Geld zu bestechen.",
-        "exampleAr": "حاول رشوة المفتّش…"
+        "exampleAr": "حاول رشوة المفتّش…",
+        "posInfo": "bestecht, bestechte, hat bestecht"
       },
       {
         "id": "v832",
@@ -14768,7 +14771,8 @@
         ],
         "aussprache": "sch = «ش»",
         "exampleDe": "Wer Unterlagen fälscht, verliert den Anspruch sofort.",
-        "exampleAr": "من يزوّر الوثائق ي…"
+        "exampleAr": "من يزوّر الوثائق ي…",
+        "posInfo": "fälscht, fälschte, hat gefälscht"
       },
       {
         "id": "v835",
@@ -14797,7 +14801,8 @@
         ],
         "aussprache": "ei = «آي» لا «إي» · sch = «ش»",
         "exampleDe": "Der Arzt bescheinigt die Arbeitsunfähigkeit für drei Tage.",
-        "exampleAr": "الطبيب يشهد بعدم ا…"
+        "exampleAr": "الطبيب يشهد بعدم ا…",
+        "posInfo": "bescheinigt, bescheinigte, hat bescheinigt"
       },
       {
         "id": "v837",
@@ -14826,7 +14831,8 @@
         ],
         "aussprache": "ei = «آي» لا «إي» · ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · w = «ڤ»",
         "exampleDe": "Sie muss nachweisen, dass sie zwölf Monate Praxis hat.",
-        "exampleAr": "عليها إثبات أن لدي…"
+        "exampleAr": "عليها إثبات أن لدي…",
+        "posInfo": "weist nach, weiste nach, hat nachgeweist"
       },
       {
         "id": "v839",
@@ -14838,7 +14844,8 @@
           "staat-recht"
         ],
         "exampleDe": "Kopien von Zeugnissen muss man beglaubigen lassen.",
-        "exampleAr": "نسخ الشهادات يجب ت…"
+        "exampleAr": "نسخ الشهادات يجب ت…",
+        "posInfo": "beglaubigt, beglaubigte, hat beglaubigt"
       },
       {
         "id": "v840",
@@ -14970,7 +14977,8 @@
         "aussprache": "z = «تس»",
         "exampleDe": "Die Uni will nur Bewerber mit B2-Zertifikat zulassen.",
         "exampleAr": "الجامعة لا تريد قب…",
-        "plural": "die Vorgaben"
+        "plural": "die Vorgaben",
+        "posInfo": "lasst zu, lasste zu, hat zugelasst"
       },
       {
         "id": "v846",
@@ -15107,7 +15115,8 @@
           "studium-lernen"
         ],
         "exampleDe": "Die Dozentin benotet die Arbeit nach Struktur, Quellen und Sprache.",
-        "exampleAr": "المحاضِرة تمنح الع…"
+        "exampleAr": "المحاضِرة تمنح الع…",
+        "posInfo": "benotet, benotete, hat benott"
       },
       {
         "id": "v855",
@@ -15135,7 +15144,8 @@
         ],
         "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
         "exampleDe": "Wer durchfallen sollte, darf die Prüfung noch zweimal wiederholen.",
-        "exampleAr": "من قد يرسب يمكنه إ…"
+        "exampleAr": "من قد يرسب يمكنه إ…",
+        "posInfo": "fallt durch, fallte durch, ist durchgefallt"
       },
       {
         "id": "v857",
@@ -15148,7 +15158,8 @@
         ],
         "aussprache": "z = «تس» · ü = ضمّةٌ بشفتَينِ مستديرتَين",
         "exampleDe": "Von der Prüfung kann man mit Attest bis zum Vortag zurücktreten.",
-        "exampleAr": "يمكن الانسحاب من ا…"
+        "exampleAr": "يمكن الانسحاب من ا…",
+        "posInfo": "rücktretet zu, rücktretete zu, hat zugerücktrett"
       },
       {
         "id": "v858",
@@ -15193,7 +15204,8 @@
         "aussprache": "ei = «آي» لا «إي» · sch = «ش»",
         "exampleDe": "Sie schreibt sich für Informatik ein, im Wintersemester.",
         "exampleAr": "تسجّل في الإعلامية…",
-        "plural": "die Bedingungen"
+        "plural": "die Bedingungen",
+        "posInfo": "schreibt ein, schreibte ein, hat eingeschreibt"
       },
       {
         "id": "v861",
@@ -15251,7 +15263,8 @@
         ],
         "aussprache": "ei = «آي» لا «إي»",
         "exampleDe": "Man darf bis zu zehn Bücher gleichzeitig ausleihen.",
-        "exampleAr": "يمكن استعارة حتى ع…"
+        "exampleAr": "يمكن استعارة حتى ع…",
+        "posInfo": "leiht aus, leihte aus, hat ausgeleiht"
       },
       {
         "id": "v865",
@@ -15419,7 +15432,8 @@
         ],
         "exampleDe": "Das Handy auf dem Tisch lenkt ab, auch wenn es stumm ist.",
         "exampleAr": "الهاتف على الطاولة…",
-        "plural": "die Kompetenzen"
+        "plural": "die Kompetenzen",
+        "posInfo": "lenkt ab, lenkte ab, hat abgelenkt"
       },
       {
         "id": "v876",
@@ -15463,7 +15477,8 @@
         ],
         "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
         "exampleDe": "Bitte unterbrechen Sie mich nicht, ich bin gleich fertig.",
-        "exampleAr": "من فضلك لا تقاطعني…"
+        "exampleAr": "من فضلك لا تقاطعني…",
+        "posInfo": "brecht unter, brechte unter, hat unterbrecht"
       },
       {
         "id": "v879",
@@ -15571,7 +15586,8 @@
         "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
         "exampleDe": "Ich überprüfe mich jeden Sonntag mit den Karten der Woche.",
         "exampleAr": "أختبر نفسي كل أحد…",
-        "plural": "die Fertigkeiten"
+        "plural": "die Fertigkeiten",
+        "posInfo": "prüft über, prüfte über, hat überprüft"
       },
       {
         "id": "v886",
@@ -15629,7 +15645,8 @@
           "studium-lernen"
         ],
         "exampleDe": "Man betont „umfahren“ je nach Bedeutung anders.",
-        "exampleAr": "يُوكَّد «umfahren»…"
+        "exampleAr": "يُوكَّد «umfahren»…",
+        "posInfo": "betont, betonte, hat betont"
       },
       {
         "id": "v890",
@@ -15658,7 +15675,8 @@
         ],
         "aussprache": "v = «ف»",
         "exampleDe": "Ich habe mich vertippt, es sollte „Frist“ heißen.",
-        "exampleAr": "أخطأت على لوحة الم…"
+        "exampleAr": "أخطأت على لوحة الم…",
+        "posInfo": "vertippt, vertippte, hat vertippt"
       },
       {
         "id": "v892",
@@ -15811,7 +15829,8 @@
         ],
         "aussprache": "eu/äu = «أوي»",
         "exampleDe": "Der Professor betreut nur fünf Arbeiten pro Semester.",
-        "exampleAr": "الأستاذ يشرف على خ…"
+        "exampleAr": "الأستاذ يشرف على خ…",
+        "posInfo": "betreut, betreute, hat betreut"
       },
       {
         "id": "v902",
@@ -15973,7 +15992,8 @@
         ],
         "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين · -er في الآخر = «أَ» خفيفة",
         "exampleDe": "Ich ärgere mich über den Chat statt einer klaren Mail.",
-        "exampleAr": "يغيظني الشات بدل إ…"
+        "exampleAr": "يغيظني الشات بدل إ…",
+        "posInfo": "ärget, ärgete, hat geärget"
       },
       {
         "id": "v909",
@@ -16064,7 +16084,8 @@
         ],
         "aussprache": "sch = «ش» · ü = ضمّةٌ بشفتَينِ مستديرتَين",
         "exampleDe": "Wir wollen Karim zum Geburtstag überraschen.",
-        "exampleAr": "نريد مفاجأة كريم ف…"
+        "exampleAr": "نريد مفاجأة كريم ف…",
+        "posInfo": "rascht über, raschte über, hat überrascht"
       },
       {
         "id": "v915",
@@ -16230,7 +16251,8 @@
         ],
         "exampleDe": "Die Frage nach der Lücke im Lebenslauf belastet ihn noch immer.",
         "exampleAr": "سؤال الفجوة في الس…",
-        "plural": "die Anlässe"
+        "plural": "die Anlässe",
+        "posInfo": "belastet, belastete, hat belastt"
       },
       {
         "id": "v926",
@@ -16272,7 +16294,8 @@
           "gefuehle-psyche"
         ],
         "exampleDe": "Die Ärztin konnte den Vater mit ruhigen Worten beruhigen.",
-        "exampleAr": "الطبيبة استطاعت ته…"
+        "exampleAr": "الطبيبة استطاعت ته…",
+        "posInfo": "beruhigt, beruhigte, hat beruhigt"
       },
       {
         "id": "v929",
@@ -16284,7 +16307,8 @@
           "gefuehle-psyche"
         ],
         "exampleDe": "Nach zehn Minuten hat sich das Kind beruhigt.",
-        "exampleAr": "بعد عشر دقائق هدأ…"
+        "exampleAr": "بعد عشر دقائق هدأ…",
+        "posInfo": "beruhigt, beruhigte, hat beruhigt"
       },
       {
         "id": "v930",
@@ -16375,7 +16399,8 @@
         "aussprache": "ie = «إي» ممدودة",
         "exampleDe": "Wer die Frist ignoriert, riskiert den Verlust des Anspruchs.",
         "exampleAr": "من يتجاهل المهلة ي…",
-        "plural": "die Impulse"
+        "plural": "die Impulse",
+        "posInfo": "riskiert, riskierte, hat geriskiert"
       },
       {
         "id": "v936",
@@ -16546,7 +16571,8 @@
         ],
         "aussprache": "ie = «إي» ممدودة",
         "exampleDe": "Er hat die zweite Mahnung einfach ignoriert.",
-        "exampleAr": "تجاهل الإنذار الثا…"
+        "exampleAr": "تجاهل الإنذار الثا…",
+        "posInfo": "ignoriert, ignorierte, hat geignoriert"
       },
       {
         "id": "v947",
@@ -16574,7 +16600,8 @@
         ],
         "aussprache": "sch = «ش»",
         "exampleDe": "Er schämt sich für seinen Akzent, dabei versteht ihn jeder.",
-        "exampleAr": "يخجل من لكنته مع أ…"
+        "exampleAr": "يخجل من لكنته مع أ…",
+        "posInfo": "schämt, schämte, hat geschämt"
       },
       {
         "id": "v949",
@@ -16587,7 +16614,8 @@
         ],
         "aussprache": "ß = «س» مشدَّدة",
         "exampleDe": "Wer einen Kollegen vor allen bloßstellt, zerstört das Arbeitsklima.",
-        "exampleAr": "من يفضح زميلاً أما…"
+        "exampleAr": "من يفضح زميلاً أما…",
+        "posInfo": "jdet, jdete, hat gejdt"
       },
       {
         "id": "v950",
@@ -16614,7 +16642,8 @@
           "gefuehle-psyche"
         ],
         "exampleDe": "Sie wollte ihn nicht kränken, nur die Fakten nennen.",
-        "exampleAr": "لم تُرد جرحه، بل ذ…"
+        "exampleAr": "لم تُرد جرحه، بل ذ…",
+        "posInfo": "kränkt, kränkte, hat gekränkt"
       },
       {
         "id": "v952",
@@ -16690,7 +16719,8 @@
         ],
         "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
         "exampleDe": "Nach zwei Jahren sehnt er sich nach dem Freitagsessen bei den Eltern.",
-        "exampleAr": "بعد سنتين يتوق إلى…"
+        "exampleAr": "بعد سنتين يتوق إلى…",
+        "posInfo": "sehnt, sehnte, hat gesehnt"
       },
       {
         "id": "v957",
@@ -16796,7 +16826,8 @@
           "gefuehle-psyche"
         ],
         "exampleDe": "Die Uni erkennt das tunesische Diplom nur teilweise an.",
-        "exampleAr": "الجامعة تعترف بالش…"
+        "exampleAr": "الجامعة تعترف بالش…",
+        "posInfo": "erkennt an, erkennte an, hat angeerkennt"
       },
       {
         "id": "v964",
@@ -16823,7 +16854,8 @@
         ],
         "exampleDe": "Der Lehrer lobt Sara, weil sie viel Fortschritte gemacht hat.",
         "exampleAr": "المعلّم يمدح سارة…",
-        "plural": "die Effekte"
+        "plural": "die Effekte",
+        "posInfo": "lobt, lobte, hat gelobt"
       },
       {
         "id": "v966",
@@ -16849,7 +16881,8 @@
           "gefuehle-psyche"
         ],
         "exampleDe": "Die Lehrerin tadelt selten, aber wenn, dann deutlich.",
-        "exampleAr": "المعلّمة نادراً ما…"
+        "exampleAr": "المعلّمة نادراً ما…",
+        "posInfo": "tadet, tadete, hat getadet"
       },
       {
         "id": "v968",
@@ -16876,7 +16909,8 @@
         ],
         "aussprache": "v = «ف» · w = «ڤ»",
         "exampleDe": "Nadia möchte ihm nicht vorwerfen, die Absprache gebrochen zu haben.",
-        "exampleAr": "نادية لا تريد أن ت…"
+        "exampleAr": "نادية لا تريد أن ت…",
+        "posInfo": "jdmt, jdmte, hat gejdmt"
       },
       {
         "id": "v970",
@@ -16950,7 +16984,8 @@
           "gefuehle-psyche"
         ],
         "exampleDe": "Meine Mutter sorgt sich um mich, wenn ich nicht anrufe.",
-        "exampleAr": "أمي تقلق عليّ إذا…"
+        "exampleAr": "أمي تقلق عليّ إذا…",
+        "posInfo": "sorgt, sorgte, hat gesorgt"
       },
       {
         "id": "v975",
@@ -17016,7 +17051,8 @@
         ],
         "aussprache": "ie = «إي» ممدودة",
         "exampleDe": "Wir trainieren zweimal pro Woche, im Winter in der Halle.",
-        "exampleAr": "نتدرّب مرتين أسبوع…"
+        "exampleAr": "نتدرّب مرتين أسبوع…",
+        "posInfo": "trainiert, trainierte, hat getrainiert"
       },
       {
         "id": "v979",
@@ -17086,7 +17122,8 @@
           "sport-freizeit"
         ],
         "exampleDe": "Vor dem Laufen dehne ich mich zehn Minuten.",
-        "exampleAr": "قبل الجري أمطّ عضل…"
+        "exampleAr": "قبل الجري أمطّ عضل…",
+        "posInfo": "dehnt, dehnte, hat gedehnt"
       },
       {
         "id": "v984",
@@ -17173,7 +17210,8 @@
           "sport-freizeit"
         ],
         "exampleDe": "Von der Erkältung hat er sich in einer Woche erholt.",
-        "exampleAr": "من الزكام تعافى في…"
+        "exampleAr": "من الزكام تعافى في…",
+        "posInfo": "erholt, erholte, ist erholt"
       },
       {
         "id": "v990",
@@ -17202,7 +17240,8 @@
         ],
         "aussprache": "sp/st في البداية = «شب/شت» · ß = «س» مشدَّدة",
         "exampleDe": "Beim Marathon kann man bei Kilometer dreißig an seine Grenzen stoßen.",
-        "exampleAr": "في الماراثون قد يب…"
+        "exampleAr": "في الماراثون قد يب…",
+        "posInfo": "at, ate, hat geat"
       },
       {
         "id": "v992",
@@ -17246,7 +17285,8 @@
         ],
         "aussprache": "ie = «إي» ممدودة",
         "exampleDe": "Man muss die Belastung dosieren, sonst streikt der Körper.",
-        "exampleAr": "يجب تقدير جرعة الج…"
+        "exampleAr": "يجب تقدير جرعة الج…",
+        "posInfo": "dosiert, dosierte, hat gedosiert"
       },
       {
         "id": "v995",
@@ -17383,7 +17423,8 @@
         ],
         "aussprache": "eu/äu = «أوي»",
         "exampleDe": "Die Familie kam und feuerte die Mannschaft vom Rand aus an.",
-        "exampleAr": "العائلة جاءت وشجّع…"
+        "exampleAr": "العائلة جاءت وشجّع…",
+        "posInfo": "feuet an, feuete an, hat angefeuet"
       },
       {
         "id": "v1004",
@@ -17395,7 +17436,8 @@
           "sport-freizeit"
         ],
         "exampleDe": "Als das Tor fiel, jubelten selbst die ruhigsten Zuschauer.",
-        "exampleAr": "حين سُجّل الهدف صا…"
+        "exampleAr": "حين سُجّل الهدف صا…",
+        "posInfo": "jubet, jubete, hat gejubet"
       },
       {
         "id": "v1005",
@@ -17516,7 +17558,8 @@
         ],
         "aussprache": "ei = «آي» لا «إي»",
         "exampleDe": "Der Schiedsrichter muss pfeifen, bevor der Ball die Linie überquert.",
-        "exampleAr": "على الحكم أن يُطلق…"
+        "exampleAr": "على الحكم أن يُطلق…",
+        "posInfo": "pfeift, pfeifte, hat gepfeift"
       },
       {
         "id": "v1013",
@@ -17592,7 +17635,8 @@
         ],
         "aussprache": "ie = «إي» ممدودة",
         "exampleDe": "Sie engagiert sich seit zwei Jahren im Verein für Nachhilfe.",
-        "exampleAr": "هي منخرطة منذ سنتي…"
+        "exampleAr": "هي منخرطة منذ سنتي…",
+        "posInfo": "engagiert, engagierte, hat geengagiert"
       },
       {
         "id": "v1018",
@@ -17637,7 +17681,8 @@
         ],
         "aussprache": "ei = «آي» لا «إي»",
         "exampleDe": "Nach dem Umzug ist er dem Fußballverein im Stadtteil beigetreten.",
-        "exampleAr": "بعد الانتقال انضم…"
+        "exampleAr": "بعد الانتقال انضم…",
+        "posInfo": "tretet bei, tretete bei, hat beitrett"
       },
       {
         "id": "v1021",
@@ -17664,7 +17709,8 @@
           "sport-freizeit"
         ],
         "exampleDe": "Wer austreten will, schickt eine E-Mail an den Vorstand.",
-        "exampleAr": "من يريد الانسحاب ي…"
+        "exampleAr": "من يريد الانسحاب ي…",
+        "posInfo": "tretet aus, tretete aus, hat ausgetrett"
       },
       {
         "id": "v1023",
@@ -17723,7 +17769,8 @@
         ],
         "aussprache": "w = «ڤ»",
         "exampleDe": "Am Sonntag wandern wir drei Stunden in den Bergen.",
-        "exampleAr": "يوم الأحد نتنزّه م…"
+        "exampleAr": "يوم الأحد نتنزّه م…",
+        "posInfo": "wandet, wandete, hat gewandet"
       },
       {
         "id": "v1027",
@@ -18508,7 +18555,8 @@
           "medien-meinung"
         ],
         "exampleDe": "Der Artikel behauptet, der Konzern habe die Zahlen geschönt.",
-        "exampleAr": "المقال يدّعي أن ال…"
+        "exampleAr": "المقال يدّعي أن ال…",
+        "posInfo": "behauptet, behauptete, hat behauptt"
       },
       {
         "id": "v1078",
@@ -18521,7 +18569,8 @@
         ],
         "aussprache": "w = «ڤ»",
         "exampleDe": "Die zweite Studie widerlegt die These der ersten.",
-        "exampleAr": "الدراسة الثانية تد…"
+        "exampleAr": "الدراسة الثانية تد…",
+        "posInfo": "widerlegt, widerlegte, hat gewiderlegt"
       },
       {
         "id": "v1079",
@@ -18534,7 +18583,8 @@
         ],
         "aussprache": "ei = «آي» لا «إي» · sch = «ش» · v = «ف»",
         "exampleDe": "Der Bericht verschweigt, wer die Umfrage bezahlt hat.",
-        "exampleAr": "التقرير يكتم من دف…"
+        "exampleAr": "التقرير يكتم من دف…",
+        "posInfo": "verschweigt, verschweigte, hat verschweigt"
       },
       {
         "id": "v1080",
@@ -18547,7 +18597,8 @@
         ],
         "aussprache": "z = «تس»",
         "exampleDe": "Die Überschrift spitzt die Aussage stark zu.",
-        "exampleAr": "العنوان يبالغ في ت…"
+        "exampleAr": "العنوان يبالغ في ت…",
+        "posInfo": "spitzt zu, spitzte zu, hat zugespitzt"
       },
       {
         "id": "v1081",
@@ -18560,7 +18611,8 @@
         ],
         "aussprache": "ei = «آي» لا «إي»",
         "exampleDe": "Eine gute Redaktion ordnet die Zahl in den Zeitraum ein.",
-        "exampleAr": "التحرير الجيد يضع…"
+        "exampleAr": "التحرير الجيد يضع…",
+        "posInfo": "ordnt ein, ordnte ein, hat eingeordnt"
       },
       {
         "id": "v1082",
@@ -18573,7 +18625,8 @@
         ],
         "aussprache": "ie = «إي» ممدودة · ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · v = «ف»",
         "exampleDe": "Ich kann nachvollziehen, warum du unter Zeitdruck so entschieden hast.",
-        "exampleAr": "أستطيع أن أفهم لما…"
+        "exampleAr": "أستطيع أن أفهم لما…",
+        "posInfo": "vollzieht nach, vollziehte nach, ist nachgevollzieht"
       },
       {
         "id": "v1083",
@@ -19334,7 +19387,8 @@
         ],
         "aussprache": "ei = «آي» لا «إي»",
         "exampleDe": "Wer in zwei Hauptfächern mangelhaft steht, kann sitzen bleiben.",
-        "exampleAr": "من يكون ضعيفاً في…"
+        "exampleAr": "من يكون ضعيفاً في…",
+        "posInfo": "sitzt, sitzte, hat gesitzt"
       },
       {
         "id": "v1132",
@@ -20054,7 +20108,8 @@
         ],
         "aussprache": "sp/st في البداية = «شب/شت»",
         "exampleDe": "Am Ende des Jahres spenden wir an die Tafel.",
-        "exampleAr": "في نهاية السنة نتب…"
+        "exampleAr": "في نهاية السنة نتب…",
+        "posInfo": "spendet, spendete, hat gespendt"
       },
       {
         "id": "v1176",
@@ -20650,7 +20705,8 @@
         ],
         "aussprache": "ei = «آي» لا «إي»",
         "exampleDe": "Überschüssigen Solarstrom kann man ins Netz einspeisen.",
-        "exampleAr": "الكهرباء الشمسية ا…"
+        "exampleAr": "الكهرباء الشمسية ا…",
+        "posInfo": "speist ein, speiste ein, hat eingespeist"
       },
       {
         "id": "v1214",
@@ -20663,7 +20719,8 @@
         ],
         "aussprache": "sch = «ش»",
         "exampleDe": "Das alte Kraftwerk wird nächstes Jahr abgeschaltet.",
-        "exampleAr": "المحطة القديمة ستُ…"
+        "exampleAr": "المحطة القديمة ستُ…",
+        "posInfo": "schaltet ab, schaltete ab, hat abgeschaltt"
       },
       {
         "id": "v1215",
@@ -20676,7 +20733,8 @@
         ],
         "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
         "exampleDe": "Nach der Wartung muss man das Kraftwerk langsam wieder hochfahren.",
-        "exampleAr": "بعد الصيانة يجب إع…"
+        "exampleAr": "بعد الصيانة يجب إع…",
+        "posInfo": "hochfahrt, hochfahrte, ist gehochfahrt"
       },
       {
         "id": "v1216",
@@ -20688,7 +20746,8 @@
           "energie-wende"
         ],
         "exampleDe": "Bei zu viel Wind muss der Betreiber die Anlagen abregeln.",
-        "exampleAr": "عند الرياح الزائدة…"
+        "exampleAr": "عند الرياح الزائدة…",
+        "posInfo": "reget ab, regete ab, hat abgereget"
       },
       {
         "id": "v1217",
@@ -21439,7 +21498,8 @@
         ],
         "aussprache": "ei = «آي» لا «إي» · ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · z = «تس»",
         "exampleDe": "Hersteller müssen Zucker und Fett auf der Packung kennzeichnen.",
-        "exampleAr": "على المصنّعين وسم…"
+        "exampleAr": "على المصنّعين وسم…",
+        "posInfo": "kennzeichnt, kennzeichnte, hat gekennzeichnt"
       },
       {
         "id": "v1265",
@@ -21451,7 +21511,8 @@
           "ernaehrung-verbraucherschutz"
         ],
         "exampleDe": "Verbraucherzentralen können Firmen wegen falscher Werbung abmahnen.",
-        "exampleAr": "مراكز حماية المسته…"
+        "exampleAr": "مراكز حماية المسته…",
+        "posInfo": "mahnt ab, mahnte ab, hat abgemahnt"
       },
       {
         "id": "v1266",
@@ -21464,7 +21525,8 @@
         ],
         "aussprache": "z = «تس» · ü = ضمّةٌ بشفتَينِ مستديرتَين",
         "exampleDe": "Der Hersteller musste die Charge wegen Glassplittern zurückrufen.",
-        "exampleAr": "المصنّع اضطر لاستد…"
+        "exampleAr": "المصنّع اضطر لاستد…",
+        "posInfo": "rückruft zu, rückrufte zu, hat zugerückruft"
       },
       {
         "id": "v1267",
@@ -22175,7 +22237,8 @@
         ],
         "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · v = «ف»",
         "exampleDe": "Die Stadt will das Viertel verdichten, ohne Grünflächen zu opfern.",
-        "exampleAr": "المدينة تريد حشو ا…"
+        "exampleAr": "المدينة تريد حشو ا…",
+        "posInfo": "verdichtet, verdichtete, hat verdichtt"
       },
       {
         "id": "v1311",
@@ -22188,7 +22251,8 @@
         ],
         "aussprache": "ie = «إي» ممدودة",
         "exampleDe": "Das Haus wurde energetisch saniert, die Miete stieg um zwölf Prozent.",
-        "exampleAr": "المبنى رُمّم طاقيا…"
+        "exampleAr": "المبنى رُمّم طاقيا…",
+        "posInfo": "saniert, sanierte, hat gesaniert"
       },
       {
         "id": "v1312",
@@ -22201,7 +22265,8 @@
         ],
         "aussprache": "w = «ڤ»",
         "exampleDe": "Die Stadt will leere Büros in Wohnungen umwandeln.",
-        "exampleAr": "المدينة تريد تحويل…"
+        "exampleAr": "المدينة تريد تحويل…",
+        "posInfo": "wandet um, wandete um, hat umgewandet"
       },
       {
         "id": "v1313",
@@ -22214,7 +22279,8 @@
         ],
         "aussprache": "w = «ڤ»",
         "exampleDe": "Wer ein Viertel aufwertet, muss an die alten Mieter denken.",
-        "exampleAr": "من يرتقي بحي عليه…"
+        "exampleAr": "من يرتقي بحي عليه…",
+        "posInfo": "wertet auf, wertete auf, hat aufgewertt"
       },
       {
         "id": "v1314",
@@ -22811,7 +22877,8 @@
         ],
         "aussprache": "ei = «آي» لا «إي»",
         "exampleDe": "Nach einem Jahr habe ich mich in Leipzig eingelebt.",
-        "exampleAr": "بعد سنة استأنست في…"
+        "exampleAr": "بعد سنة استأنست في…",
+        "posInfo": "lebt ein, lebte ein, hat eingelebt"
       },
       {
         "id": "v1352",
@@ -22824,7 +22891,8 @@
         ],
         "aussprache": "ei = «آي» لا «إي» · ü = ضمّةٌ بشفتَينِ مستديرتَين",
         "exampleDe": "Sie hat sich schnell in das Team eingefügt, ohne sich zu verbiegen.",
-        "exampleAr": "اندمجت بسرعة في ال…"
+        "exampleAr": "اندمجت بسرعة في ال…",
+        "posInfo": "fügt ein, fügte ein, hat eingefügt"
       },
       {
         "id": "v1353",
@@ -22837,7 +22905,8 @@
         ],
         "aussprache": "ie = «إي» ممدودة",
         "exampleDe": "Ein Verein integriert schneller als jeder Kurs.",
-        "exampleAr": "الجمعية تدمج أسرع…"
+        "exampleAr": "الجمعية تدمج أسرع…",
+        "posInfo": "integriert, integrierte, hat geintegriert"
       },
       {
         "id": "v1354",
@@ -23490,7 +23559,8 @@
           "erinnerungskultur"
         ],
         "exampleDe": "Am Sonntag gedenkt die Stadt der Opfer des Hochwassers.",
-        "exampleAr": "يوم الأحد تستذكر ا…"
+        "exampleAr": "يوم الأحد تستذكر ا…",
+        "posInfo": "gedenkt, gedenkte, hat gedenkt"
       },
       {
         "id": "v1396",
@@ -23503,7 +23573,8 @@
         ],
         "aussprache": "v = «ف»",
         "exampleDe": "Er verdrängt das Problem, statt darüber zu sprechen.",
-        "exampleAr": "هو يكبت المشكلة بد…"
+        "exampleAr": "هو يكبت المشكلة بد…",
+        "posInfo": "verdrängt, verdrängte, hat verdrängt"
       },
       {
         "id": "v1397",
@@ -23516,7 +23587,8 @@
         ],
         "aussprache": "ei = «آي» لا «إي»",
         "exampleDe": "Der Verein will seine eigene Geschichte aufarbeiten, mit Historikern.",
-        "exampleAr": "الجمعية تريد استقص…"
+        "exampleAr": "الجمعية تريد استقص…",
+        "posInfo": "arbeitet auf, arbeitete auf, hat aufgearbeitt"
       },
       {
         "id": "v1398",
@@ -23529,7 +23601,8 @@
         ],
         "aussprache": "ie = «إي» ممدودة · v = «ف»",
         "exampleDe": "Wer Verbrechen relativieren will, beginnt oft mit „aber“.",
-        "exampleAr": "من يريد المقارنة ل…"
+        "exampleAr": "من يريد المقارنة ل…",
+        "posInfo": "relativiert, relativierte, hat gerelativiert"
       },
       {
         "id": "v1399",
@@ -23922,7 +23995,8 @@
         "tags": [
           "essen"
         ],
-        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة"
+        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
+        "posInfo": "kocht, kochte, hat gekocht"
       },
       {
         "id": "vw-a1ess-037",
@@ -23934,7 +24008,8 @@
         "level": "A1",
         "tags": [
           "essen"
-        ]
+        ],
+        "posInfo": "backt, backte, hat gebackt"
       },
       {
         "id": "vw-a1ess-038",
@@ -23947,7 +24022,8 @@
         "tags": [
           "essen"
         ],
-        "aussprache": "sch = «ش»"
+        "aussprache": "sch = «ش»",
+        "posInfo": "schmeckt, schmeckte, hat geschmeckt"
       },
       {
         "id": "vw-a1ess-039",
@@ -23959,7 +24035,8 @@
         "level": "A1",
         "tags": [
           "essen"
-        ]
+        ],
+        "posInfo": "bestellt, bestellte, hat bestellt"
       },
       {
         "id": "vw-a1ess-042",
@@ -24339,7 +24416,8 @@
         "level": "A1",
         "tags": [
           "essen"
-        ]
+        ],
+        "posInfo": "grillt, grillte, hat gegrillt"
       },
       {
         "id": "r311a1-060",
@@ -24777,7 +24855,8 @@
         "level": "A1",
         "tags": [
           "kleidung"
-        ]
+        ],
+        "posInfo": "tragt, tragte, hat getragt"
       },
       {
         "id": "vw-a1koe-033",
@@ -24790,7 +24869,8 @@
         "tags": [
           "kleidung"
         ],
-        "aussprache": "ie = «إي» ممدودة · z = «تس»"
+        "aussprache": "ie = «إي» ممدودة · z = «تس»",
+        "posInfo": "zieht an, ziehte an, ist angezieht"
       },
       {
         "id": "vw-a1koe-035",
@@ -24802,7 +24882,8 @@
         "level": "A1",
         "tags": [
           "kleidung"
-        ]
+        ],
+        "posInfo": "passt, passte, hat gepasst"
       },
       {
         "id": "vw-a1koe-036",
@@ -24814,7 +24895,8 @@
         "level": "A1",
         "tags": [
           "kleidung"
-        ]
+        ],
+        "posInfo": "kostet, kostete, hat gekostt"
       },
       {
         "id": "vw-a1koe-037",
@@ -24995,7 +25077,8 @@
         "tags": [
           "kleidung"
         ],
-        "aussprache": "sch = «ش» · w = «ڤ»"
+        "aussprache": "sch = «ش» · w = «ڤ»",
+        "posInfo": "wascht, waschte, hat gewascht"
       },
       {
         "id": "vw-a1koe-050",
@@ -25299,7 +25382,8 @@
         "level": "A1",
         "tags": [
           "verkehr"
-        ]
+        ],
+        "posInfo": "fahrt, fahrte, ist gefahrt"
       },
       {
         "id": "vw-a1sta-020",
@@ -25311,7 +25395,8 @@
         "level": "A1",
         "tags": [
           "verkehr"
-        ]
+        ],
+        "posInfo": "lauft, laufte, hat gelauft"
       },
       {
         "id": "vw-a1sta-021",
@@ -25324,7 +25409,8 @@
         "tags": [
           "verkehr"
         ],
-        "aussprache": "ie = «إي» ممدودة"
+        "aussprache": "ie = «إي» ممدودة",
+        "posInfo": "fliegt, fliegte, ist gefliegt"
       },
       {
         "id": "vw-a1sta-022",
@@ -25336,7 +25422,8 @@
         "level": "A1",
         "tags": [
           "verkehr"
-        ]
+        ],
+        "posInfo": "kommt an, kommte an, ist angekommt"
       },
       {
         "id": "vw-a1sta-023",
@@ -25348,7 +25435,8 @@
         "level": "A1",
         "tags": [
           "verkehr"
-        ]
+        ],
+        "posInfo": "fahrt ab, fahrte ab, ist abgefahrt"
       },
       {
         "id": "vw-a1sta-026",
@@ -25478,7 +25566,8 @@
         "level": "A1",
         "tags": [
           "weg"
-        ]
+        ],
+        "posInfo": "fragt, fragte, hat gefragt"
       },
       {
         "id": "vw-a1sta-036",
@@ -25491,7 +25580,8 @@
         "tags": [
           "weg"
         ],
-        "aussprache": "ei = «آي» لا «إي» · z = «تس»"
+        "aussprache": "ei = «آي» لا «إي» · z = «تس»",
+        "posInfo": "zeigt, zeigte, hat gezeigt"
       },
       {
         "id": "vw-a1sta-037",
@@ -25504,7 +25594,8 @@
         "tags": [
           "weg"
         ],
-        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة"
+        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
+        "posInfo": "sucht, suchte, hat gesucht"
       },
       {
         "id": "vw-a1sta-038",
@@ -25519,7 +25610,8 @@
         ],
         "syn": [
           "entdecken"
-        ]
+        ],
+        "posInfo": "findet, findete, hat gefindt"
       },
       {
         "id": "vw-a1sta-040",
@@ -25546,7 +25638,8 @@
         "level": "A1",
         "tags": [
           "einkauf"
-        ]
+        ],
+        "posInfo": "kauft, kaufte, hat gekauft"
       },
       {
         "id": "vw-a1sta-042",
@@ -25559,7 +25652,8 @@
         "tags": [
           "einkauf"
         ],
-        "aussprache": "v = «ف»"
+        "aussprache": "v = «ف»",
+        "posInfo": "verkauft, verkaufte, hat verkauft"
       },
       {
         "id": "vw-a1sta-043",
@@ -25831,7 +25925,8 @@
         "level": "A1",
         "tags": [
           "verkehr"
-        ]
+        ],
+        "posInfo": "fliegt ab, fliegte ab, ist abgefliegt"
       },
       {
         "id": "r311a1-051",
@@ -25843,7 +25938,8 @@
         "level": "A1",
         "tags": [
           "weg"
-        ]
+        ],
+        "posInfo": "nehmt mit, nehmte mit, hat mitgenehmt"
       }
     ]
   },
@@ -25881,7 +25977,8 @@
         "tags": [
           "arbeit"
         ],
-        "aussprache": "w = «ڤ»"
+        "aussprache": "w = «ڤ»",
+        "posInfo": "bewerbt, bewerbte, hat bewerbt"
       },
       {
         "id": "vw-a2arb-019",
@@ -25894,7 +25991,8 @@
         "tags": [
           "arbeit"
         ],
-        "aussprache": "ie = «إي» ممدودة · v = «ف»"
+        "aussprache": "ie = «إي» ممدودة · v = «ف»",
+        "posInfo": "verdient, verdiente, hat verdient"
       },
       {
         "id": "vw-a2arb-022",
@@ -25921,7 +26019,8 @@
         "level": "A2",
         "tags": [
           "buero"
-        ]
+        ],
+        "posInfo": "sagt ab, sagte ab, hat abgesagt"
       },
       {
         "id": "vw-a2arb-024",
@@ -25934,7 +26033,8 @@
         "tags": [
           "buero"
         ],
-        "aussprache": "ie = «إي» ممدودة · sch = «ش» · v = «ف»"
+        "aussprache": "ie = «إي» ممدودة · sch = «ش» · v = «ف»",
+        "posInfo": "verschiebt, verschiebte, hat verschiebt"
       },
       {
         "id": "vw-a2arb-025",
@@ -25976,7 +26076,8 @@
         "tags": [
           "buero"
         ],
-        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين"
+        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
+        "posInfo": "füllt aus, füllte aus, hat ausgefüllt"
       },
       {
         "id": "vw-a2arb-035",
@@ -26001,7 +26102,8 @@
         "level": "A2",
         "tags": [
           "bildung"
-        ]
+        ],
+        "posInfo": "besteht, bestehte, hat besteht"
       },
       {
         "id": "vw-a2arb-040",
@@ -26014,7 +26116,8 @@
         "tags": [
           "bildung"
         ],
-        "aussprache": "ie = «إي» ممدودة · w = «ڤ»"
+        "aussprache": "ie = «إي» ممدودة · w = «ڤ»",
+        "posInfo": "holt wieder, holte wieder, hat wiederholt"
       },
       {
         "id": "vw-a2arb-041",
@@ -26059,7 +26162,8 @@
         ],
         "syn": [
           "erläutern"
-        ]
+        ],
+        "posInfo": "erklärt, erklärte, hat erklärt"
       },
       {
         "id": "vw-a2arb-046",
@@ -26072,7 +26176,8 @@
         "tags": [
           "bildung"
         ],
-        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين"
+        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
+        "posInfo": "übt, übte, hat geübt"
       },
       {
         "id": "vw-a2arb-049",
@@ -26323,7 +26428,8 @@
         "tags": [
           "arbeit"
         ],
-        "aussprache": "v = «ف»"
+        "aussprache": "v = «ف»",
+        "posInfo": "stellt vor, stellte vor, hat vorgestellt"
       },
       {
         "id": "vw-a2arb-082",
@@ -26336,7 +26442,8 @@
         "tags": [
           "arbeit"
         ],
-        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة"
+        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
+        "posInfo": "fragt nach, fragte nach, hat nachgefragt"
       },
       {
         "id": "vw-a2arb-083",
@@ -26348,7 +26455,8 @@
         "level": "A2",
         "tags": [
           "arbeit"
-        ]
+        ],
+        "posInfo": "meldet, meldete, hat gemeldt"
       },
       {
         "id": "vw-a2arb-085",
@@ -26643,7 +26751,8 @@
         "level": "A2",
         "tags": [
           "arbeit"
-        ]
+        ],
+        "posInfo": "beantwortet, beantwortete, hat beantwortt"
       }
     ]
   },
@@ -26709,7 +26818,8 @@
         "tags": [
           "wohnen"
         ],
-        "aussprache": "ie = «إي» ممدودة"
+        "aussprache": "ie = «إي» ممدودة",
+        "posInfo": "repariert, reparierte, hat gerepariert"
       },
       {
         "id": "vw-a2all-011",
@@ -26736,7 +26846,8 @@
         "level": "A2",
         "tags": [
           "wohnen"
-        ]
+        ],
+        "posInfo": "trennt, trennte, hat getrennt"
       },
       {
         "id": "vw-a2all-013",
@@ -26749,7 +26860,8 @@
         "tags": [
           "wohnen"
         ],
-        "aussprache": "eu/äu = «أوي»"
+        "aussprache": "eu/äu = «أوي»",
+        "posInfo": "räumt auf, räumte auf, hat aufgeräumt"
       },
       {
         "id": "vw-a2all-014",
@@ -26791,7 +26903,8 @@
         "level": "A2",
         "tags": [
           "kommunikation"
-        ]
+        ],
+        "posInfo": "ruft an, rufte an, hat angeruft"
       },
       {
         "id": "vw-a2all-019",
@@ -26804,7 +26917,8 @@
         "tags": [
           "kommunikation"
         ],
-        "aussprache": "sch = «ش»"
+        "aussprache": "sch = «ش»",
+        "posInfo": "schickt, schickte, hat geschickt"
       },
       {
         "id": "vw-a2all-020",
@@ -26817,7 +26931,8 @@
         "tags": [
           "kommunikation"
         ],
-        "aussprache": "ei = «آي» لا «إي» · ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة"
+        "aussprache": "ei = «آي» لا «إي» · ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
+        "posInfo": "erreicht, erreichte, hat erreicht"
       },
       {
         "id": "vw-a2all-021",
@@ -26829,7 +26944,8 @@
         "level": "A2",
         "tags": [
           "kommunikation"
-        ]
+        ],
+        "posInfo": "bescheidet, bescheidete, hat bescheid"
       },
       {
         "id": "vw-a2all-023",
@@ -26842,7 +26958,8 @@
         "tags": [
           "kommunikation"
         ],
-        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة"
+        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
+        "posInfo": "sprecht ab, sprechte ab, hat abgesprecht"
       },
       {
         "id": "vw-a2all-025",
@@ -26855,7 +26972,8 @@
         "tags": [
           "sozial"
         ],
-        "aussprache": "ei = «آي» لا «إي»"
+        "aussprache": "ei = «آي» لا «إي»",
+        "posInfo": "ladet ein, ladete ein, hat eingeladt"
       },
       {
         "id": "vw-a2all-026",
@@ -26868,7 +26986,8 @@
         "tags": [
           "sozial"
         ],
-        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين"
+        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
+        "posInfo": "sagt ab, sagte ab, hat abgesagt"
       },
       {
         "id": "vw-a2all-028",
@@ -26881,7 +27000,8 @@
         "tags": [
           "sozial"
         ],
-        "aussprache": "sch = «ش»"
+        "aussprache": "sch = «ش»",
+        "posInfo": "entschuldigt, entschuldigte, hat entschuldigt"
       },
       {
         "id": "vw-a2all-030",
@@ -26925,7 +27045,8 @@
         "tags": [
           "sozial"
         ],
-        "aussprache": "ei = «آي» لا «إي» · ie = «إي» ممدودة"
+        "aussprache": "ei = «آي» لا «إي» · ie = «إي» ممدودة",
+        "posInfo": "feiet, feiete, hat gefeiet"
       },
       {
         "id": "vw-a2all-035",
@@ -27107,7 +27228,8 @@
         "tags": [
           "freizeit"
         ],
-        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة"
+        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
+        "posInfo": "bucht, buchte, hat gebucht"
       },
       {
         "id": "vw-a2all-051",
@@ -27135,7 +27257,8 @@
         "level": "A2",
         "tags": [
           "freizeit"
-        ]
+        ],
+        "posInfo": "packt, packte, hat gepackt"
       },
       {
         "id": "vw-a2all-053",
@@ -27243,7 +27366,8 @@
         "tags": [
           "wohnen"
         ],
-        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين"
+        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
+        "posInfo": "lüftet, lüftete, hat gelüftt"
       },
       {
         "id": "vw-a2all-067",
@@ -27270,7 +27394,8 @@
         "tags": [
           "wohnen"
         ],
-        "aussprache": "sch = «ش» · w = «ڤ»"
+        "aussprache": "sch = «ش» · w = «ڤ»",
+        "posInfo": "beschwert, beschwerte, hat beschwert"
       },
       {
         "id": "vw-a2all-069",
@@ -27345,7 +27470,8 @@
         "tags": [
           "kommunikation"
         ],
-        "aussprache": "ei = «آي» لا «إي» · w = «ڤ»"
+        "aussprache": "ei = «آي» لا «إي» · w = «ڤ»",
+        "posInfo": "leitet weiter, leitete weiter, hat weitergeleitt"
       },
       {
         "id": "vw-a2all-074",
@@ -27392,7 +27518,8 @@
         "tags": [
           "sozial"
         ],
-        "aussprache": "sch = «ش» · v = «ف»"
+        "aussprache": "sch = «ش» · v = «ف»",
+        "posInfo": "schlagt vor, schlagte vor, hat vorgeschlagt"
       },
       {
         "id": "vw-a2all-079",
@@ -27405,7 +27532,8 @@
         "tags": [
           "sozial"
         ],
-        "aussprache": "z = «تس»"
+        "aussprache": "z = «تس»",
+        "posInfo": "sagt zu, sagte zu, hat zugesagt"
       },
       {
         "id": "vw-a2all-080",
@@ -27417,7 +27545,8 @@
         "level": "A2",
         "tags": [
           "sozial"
-        ]
+        ],
+        "posInfo": "bedankt, bedankte, hat bedankt"
       },
       {
         "id": "vw-a2all-081",
@@ -29087,7 +29216,8 @@
         "level": "A1",
         "tags": [
           "verb"
-        ]
+        ],
+        "posInfo": "lest, leste, hat gelest"
       },
       {
         "id": "vx-haus--029",
@@ -29103,7 +29233,8 @@
         "aussprache": "ei = «آي» لا «إي» · sch = «ش»",
         "syn": [
           "verfassen"
-        ]
+        ],
+        "posInfo": "schreibt, schreibte, hat geschreibt"
       },
       {
         "id": "vx-haus--030",
@@ -29116,7 +29247,8 @@
         "tags": [
           "verb"
         ],
-        "aussprache": "ö = بينَ الضمّةِ والكسرة"
+        "aussprache": "ö = بينَ الضمّةِ والكسرة",
+        "posInfo": "hört, hörte, hat gehört"
       },
       {
         "id": "vx-haus--031",
@@ -29131,7 +29263,8 @@
         ],
         "syn": [
           "schauen"
-        ]
+        ],
+        "posInfo": "seht, sehte, hat geseht"
       },
       {
         "id": "vx-haus--032",
@@ -29143,7 +29276,8 @@
         "level": "A1",
         "tags": [
           "verb"
-        ]
+        ],
+        "posInfo": "geht, gehte, ist geht"
       },
       {
         "id": "vx-haus--033",
@@ -29156,7 +29290,8 @@
         "tags": [
           "verb"
         ],
-        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة"
+        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
+        "posInfo": "macht, machte, hat gemacht"
       },
       {
         "id": "vx-haus--034",
@@ -29168,7 +29303,8 @@
         "level": "A1",
         "tags": [
           "verb"
-        ]
+        ],
+        "posInfo": "gebt, gebte, hat gebt"
       },
       {
         "id": "vx-haus--035",
@@ -29180,7 +29316,8 @@
         "level": "A1",
         "tags": [
           "verb"
-        ]
+        ],
+        "posInfo": "nehmt, nehmte, hat genehmt"
       },
       {
         "id": "vx-haus--036",
@@ -29195,7 +29332,8 @@
         ],
         "syn": [
           "mitteilen"
-        ]
+        ],
+        "posInfo": "sagt, sagte, hat gesagt"
       },
       {
         "id": "vx-haus--037",
@@ -29207,7 +29345,8 @@
         "level": "A1",
         "tags": [
           "verb"
-        ]
+        ],
+        "posInfo": "bringt, bringte, hat gebringt"
       },
       {
         "id": "vx-haus--038",
@@ -29222,7 +29361,8 @@
         ],
         "syn": [
           "unterstützen"
-        ]
+        ],
+        "posInfo": "helft, helfte, hat gehelft"
       },
       {
         "id": "vx-haus--039",
@@ -29235,7 +29375,8 @@
         "tags": [
           "verb"
         ],
-        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة"
+        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
+        "posInfo": "braucht, brauchte, hat gebraucht"
       },
       {
         "id": "vx-haus--040",
@@ -29248,7 +29389,8 @@
         "tags": [
           "verb"
         ],
-        "aussprache": "w = «ڤ»"
+        "aussprache": "w = «ڤ»",
+        "posInfo": "wisst, wisste, hat gewisst"
       },
       {
         "id": "vx-haus--041",
@@ -29260,7 +29402,8 @@
         "level": "A1",
         "tags": [
           "verb"
-        ]
+        ],
+        "posInfo": "kennt, kennte, hat gekennt"
       },
       {
         "id": "vx-haus--042",
@@ -29275,7 +29418,8 @@
         ],
         "syn": [
           "glauben"
-        ]
+        ],
+        "posInfo": "denkt, denkte, hat gedenkt"
       },
       {
         "id": "vx-haus--043",
@@ -29288,7 +29432,8 @@
         "tags": [
           "verb"
         ],
-        "aussprache": "ei = «آي» لا «إي»"
+        "aussprache": "ei = «آي» لا «إي»",
+        "posInfo": "bleibt, bleibte, hat gebleibt"
       },
       {
         "id": "vx-haus--044",
@@ -29301,7 +29446,8 @@
         "tags": [
           "verb"
         ],
-        "aussprache": "ö = بينَ الضمّةِ والكسرة"
+        "aussprache": "ö = بينَ الضمّةِ والكسرة",
+        "posInfo": "öffnt, öffnte, hat geöffnt"
       },
       {
         "id": "vx-haus--045",
@@ -29314,7 +29460,8 @@
         "tags": [
           "verb"
         ],
-        "aussprache": "ie = «إي» ممدودة · sch = «ش» · ß = «س» مشدَّدة"
+        "aussprache": "ie = «إي» ممدودة · sch = «ش» · ß = «س» مشدَّدة",
+        "posInfo": "schließt, schließte, hat geschließt"
       },
       {
         "id": "vx-haus--046",
@@ -29329,7 +29476,8 @@
         ],
         "syn": [
           "beginnen"
-        ]
+        ],
+        "posInfo": "fangt an, fangte an, hat angefangt"
       },
       {
         "id": "vx-haus--047",
@@ -29342,7 +29490,8 @@
         "tags": [
           "verb"
         ],
-        "aussprache": "ö = بينَ الضمّةِ والكسرة"
+        "aussprache": "ö = بينَ الضمّةِ والكسرة",
+        "posInfo": "hört auf, hörte auf, hat aufgehört"
       },
       {
         "id": "vx-haus--048",
@@ -29355,7 +29504,8 @@
         "tags": [
           "verb"
         ],
-        "aussprache": "v = «ف»"
+        "aussprache": "v = «ف»",
+        "posInfo": "vergesst, vergesste, hat vergesst"
       },
       {
         "id": "vx-haus--049",
@@ -29367,7 +29517,8 @@
         "level": "A1",
         "tags": [
           "verb"
-        ]
+        ],
+        "posInfo": "erinnet, erinnete, hat erinnern"
       },
       {
         "id": "vx-haus--050",
@@ -29380,7 +29531,8 @@
         "tags": [
           "verb"
         ],
-        "aussprache": "w = «ڤ»"
+        "aussprache": "w = «ڤ»",
+        "posInfo": "wartet, wartete, hat gewartt"
       },
       {
         "id": "vx-haus--051",
@@ -29393,7 +29545,8 @@
         "tags": [
           "verb"
         ],
-        "aussprache": "ie = «إي» ممدودة · sp/st في البداية = «شب/شت»"
+        "aussprache": "ie = «إي» ممدودة · sp/st في البداية = «شب/شت»",
+        "posInfo": "spielt, spielte, hat gespielt"
       },
       {
         "id": "vx-haus--052",
@@ -30536,7 +30689,8 @@
         "tags": [
           "freizeit"
         ],
-        "aussprache": "sch = «ش» · w = «ڤ»"
+        "aussprache": "sch = «ش» · w = «ڤ»",
+        "posInfo": "schwimmt, schwimmte, hat geschwimmt"
       },
       {
         "id": "vy-natur-025",
@@ -30549,7 +30703,8 @@
         "tags": [
           "freizeit"
         ],
-        "aussprache": "z = «تس»"
+        "aussprache": "z = «تس»",
+        "posInfo": "tanzt, tanzte, hat getanzt"
       },
       {
         "id": "vy-natur-026",
@@ -30561,7 +30716,8 @@
         "level": "A1",
         "tags": [
           "freizeit"
-        ]
+        ],
+        "posInfo": "singt, singte, hat gesingt"
       },
       {
         "id": "vy-natur-027",
@@ -30639,7 +30795,8 @@
         "aussprache": "ei = «آي» لا «إي»",
         "syn": [
           "verreisen"
-        ]
+        ],
+        "posInfo": "reist, reiste, hat gereist"
       },
       {
         "id": "vy-natur-034",
@@ -30655,7 +30812,8 @@
         "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
         "syn": [
           "aufsuchen"
-        ]
+        ],
+        "posInfo": "besucht, besuchte, hat besucht"
       },
       {
         "id": "vy-natur-035",
@@ -30670,7 +30828,8 @@
         ],
         "syn": [
           "begegnen"
-        ]
+        ],
+        "posInfo": "trefft, treffte, hat getrefft"
       },
       {
         "id": "vy-natur-036",
@@ -30682,7 +30841,8 @@
         "level": "A1",
         "tags": [
           "freizeit"
-        ]
+        ],
+        "posInfo": "spaziert, spazierte, ist gespaziert"
       },
       {
         "id": "vy-natur-037",
@@ -30814,7 +30974,8 @@
         "tags": [
           "gefuehl"
         ],
-        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة"
+        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
+        "posInfo": "lacht, lachte, hat gelacht"
       },
       {
         "id": "vy-natur-045",
@@ -30827,7 +30988,8 @@
         "tags": [
           "gefuehl"
         ],
-        "aussprache": "ei = «آي» لا «إي» · w = «ڤ»"
+        "aussprache": "ei = «آي» لا «إي» · w = «ڤ»",
+        "posInfo": "weint, weinte, hat geweint"
       },
       {
         "id": "vy-natur-046",
@@ -30843,7 +31005,8 @@
         "aussprache": "ie = «إي» ممدودة",
         "syn": [
           "liebhaben"
-        ]
+        ],
+        "posInfo": "liebt, liebte, hat geliebt"
       },
       {
         "id": "vy-natur-047",
@@ -30859,7 +31022,8 @@
         "aussprache": "ö = بينَ الضمّةِ والكسرة",
         "syn": [
           "gern haben"
-        ]
+        ],
+        "posInfo": "mögt, mögte, hat gemögt"
       },
       {
         "id": "vy-natur-048",
@@ -30874,7 +31038,8 @@
         ],
         "syn": [
           "verabscheuen"
-        ]
+        ],
+        "posInfo": "hasst, hasste, hat gehasst"
       },
       {
         "id": "vy-natur-049",
@@ -30886,7 +31051,8 @@
         "level": "A1",
         "tags": [
           "gefuehl"
-        ]
+        ],
+        "posInfo": "angstet, angstete, hat geangstt"
       },
       {
         "id": "vy-natur-050",
@@ -30947,7 +31113,8 @@
         "tags": [
           "haushalt"
         ],
-        "aussprache": "sch = «ش»"
+        "aussprache": "sch = «ش»",
+        "posInfo": "duscht, duschte, hat geduscht"
       },
       {
         "id": "vy-natur-054",
@@ -30959,7 +31126,8 @@
         "level": "A1",
         "tags": [
           "haushalt"
-        ]
+        ],
+        "posInfo": "kehrt, kehrte, hat gekehrt"
       },
       {
         "id": "vy-natur-055",
@@ -30987,7 +31155,8 @@
         "tags": [
           "haushalt"
         ],
-        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين"
+        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
+        "posInfo": "büget, bügete, hat gebüget"
       },
       {
         "id": "vy-natur-057",
@@ -31045,7 +31214,8 @@
         "tags": [
           "haushalt"
         ],
-        "aussprache": "ei = «آي» لا «إي» · sch = «ش»"
+        "aussprache": "ei = «آي» لا «إي» · sch = «ش»",
+        "posInfo": "schneidet, schneidete, hat geschneidt"
       },
       {
         "id": "vy-natur-061",
@@ -31072,7 +31242,8 @@
         "level": "A1",
         "tags": [
           "natur"
-        ]
+        ],
+        "posInfo": "riecht, riechte, hat geriecht"
       },
       {
         "id": "r311a1-071",
@@ -31214,7 +31385,8 @@
         "tags": [
           "meinung"
         ],
-        "aussprache": "ei = «آي» لا «إي» · sch = «ش»"
+        "aussprache": "ei = «آي» لا «إي» · sch = «ش»",
+        "posInfo": "entscheidet, entscheidete, hat entscheidt"
       },
       {
         "id": "vy-leben-010",
@@ -31227,7 +31399,8 @@
         "tags": [
           "meinung"
         ],
-        "aussprache": "ei = «آي» لا «إي» · ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · v = «ف»"
+        "aussprache": "ei = «آي» لا «إي» · ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · v = «ف»",
+        "posInfo": "vergleicht, vergleichte, hat vergleicht"
       },
       {
         "id": "vy-leben-011",
@@ -31240,7 +31413,8 @@
         "tags": [
           "meinung"
         ],
-        "aussprache": "eu/äu = «أوي»"
+        "aussprache": "eu/äu = «أوي»",
+        "posInfo": "bedeutet, bedeutete, hat bedeutt"
       },
       {
         "id": "vy-leben-012",
@@ -31252,7 +31426,8 @@
         "level": "A2",
         "tags": [
           "meinung"
-        ]
+        ],
+        "posInfo": "erlaubt, erlaubte, hat erlaubt"
       },
       {
         "id": "vy-leben-014",
@@ -31264,7 +31439,8 @@
         "level": "A2",
         "tags": [
           "alltag"
-        ]
+        ],
+        "posInfo": "gewöhnt, gewöhnte, hat gewöhnt"
       },
       {
         "id": "vy-leben-016",
@@ -31277,7 +31453,8 @@
         "tags": [
           "alltag"
         ],
-        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين"
+        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
+        "posInfo": "interessiert, interessierte, hat geinteressiert"
       },
       {
         "id": "vy-leben-017",
@@ -31289,7 +31466,8 @@
         "level": "A2",
         "tags": [
           "alltag"
-        ]
+        ],
+        "posInfo": "achtet, achtete, hat geachtt"
       },
       {
         "id": "vy-leben-018",
@@ -31301,7 +31479,8 @@
         "level": "A2",
         "tags": [
           "alltag"
-        ]
+        ],
+        "posInfo": "passt auf, passte auf, hat aufgepasst"
       },
       {
         "id": "vy-leben-019",
@@ -31314,7 +31493,8 @@
         "tags": [
           "alltag"
         ],
-        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · v = «ف»"
+        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · v = «ف»",
+        "posInfo": "versprecht, versprechte, hat versprecht"
       },
       {
         "id": "vy-leben-021",
@@ -31405,7 +31585,8 @@
         "tags": [
           "technik"
         ],
-        "aussprache": "sch = «ش» · ö = بينَ الضمّةِ والكسرة"
+        "aussprache": "sch = «ش» · ö = بينَ الضمّةِ والكسرة",
+        "posInfo": "löscht, löschte, hat gelöscht"
       },
       {
         "id": "vy-leben-030",
@@ -31417,7 +31598,8 @@
         "level": "A2",
         "tags": [
           "technik"
-        ]
+        ],
+        "posInfo": "unterladet her, unterladete her, hat hergeunterladt"
       },
       {
         "id": "vy-leben-031",
@@ -31488,7 +31670,8 @@
         "level": "A2",
         "tags": [
           "gesundheit"
-        ]
+        ],
+        "posInfo": "nehmt ab, nehmte ab, hat abgenehmt"
       },
       {
         "id": "vy-leben-046",
@@ -31501,7 +31684,8 @@
         "tags": [
           "gesundheit"
         ],
-        "aussprache": "z = «تس»"
+        "aussprache": "z = «تس»",
+        "posInfo": "nehmt zu, nehmte zu, hat zugenehmt"
       },
       {
         "id": "vy-leben-047",
@@ -32097,7 +32281,8 @@
         "tags": [
           "sprache"
         ],
-        "aussprache": "z = «تس» · ü = ضمّةٌ بشفتَينِ مستديرتَين"
+        "aussprache": "z = «تس» · ü = ضمّةٌ بشفتَينِ مستديرتَين",
+        "posInfo": "setzt über, setzte über, hat übersetzt"
       },
       {
         "id": "vz-welt-b-015",
@@ -32110,7 +32295,8 @@
         "tags": [
           "sprache"
         ],
-        "aussprache": "ie = «إي» ممدودة · ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة"
+        "aussprache": "ie = «إي» ممدودة · ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
+        "posInfo": "buchstabiert, buchstabierte, hat gebuchstabiert"
       },
       {
         "id": "vz-welt-b-016",
@@ -32123,7 +32309,8 @@
         "tags": [
           "sprache"
         ],
-        "img": "/cards/bitte.webp"
+        "img": "/cards/bitte.webp",
+        "posInfo": "holt wieder, holte wieder, hat wiederholt"
       },
       {
         "id": "vz-welt-b-017",
@@ -32137,7 +32324,8 @@
           "sprache"
         ],
         "img": "/cards/sprechen.webp",
-        "aussprache": "sp/st في البداية = «شب/شت» · ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة"
+        "aussprache": "sp/st في البداية = «شب/شت» · ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
+        "posInfo": "langsamert, langsamerte, hat gelangsamert"
       },
       {
         "id": "vz-welt-b-018",
@@ -32310,7 +32498,8 @@
         "tags": [
           "bewegung"
         ],
-        "aussprache": "sp/st في البداية = «شب/شت»"
+        "aussprache": "sp/st في البداية = «شب/شت»",
+        "posInfo": "steht, stehte, hat gesteht"
       },
       {
         "id": "vz-welt-b-031",
@@ -32323,7 +32512,8 @@
         "tags": [
           "bewegung"
         ],
-        "aussprache": "z = «تس»"
+        "aussprache": "z = «تس»",
+        "posInfo": "sitzt, sitzte, hat gesitzt"
       },
       {
         "id": "vz-welt-b-032",
@@ -32336,7 +32526,8 @@
         "tags": [
           "bewegung"
         ],
-        "aussprache": "ie = «إي» ممدودة"
+        "aussprache": "ie = «إي» ممدودة",
+        "posInfo": "liegt, liegte, hat geliegt"
       },
       {
         "id": "vz-welt-b-033",
@@ -32349,7 +32540,8 @@
         "tags": [
           "bewegung"
         ],
-        "aussprache": "sp/st في البداية = «شب/شت»"
+        "aussprache": "sp/st في البداية = «شب/شت»",
+        "posInfo": "stellt, stellte, hat gestellt"
       },
       {
         "id": "vz-welt-b-034",
@@ -32361,7 +32553,8 @@
         "level": "A1",
         "tags": [
           "bewegung"
-        ]
+        ],
+        "posInfo": "legt, legte, hat gelegt"
       },
       {
         "id": "vz-welt-b-035",
@@ -32374,7 +32567,8 @@
         "tags": [
           "bewegung"
         ],
-        "aussprache": "z = «تس»"
+        "aussprache": "z = «تس»",
+        "posInfo": "setzt, setzte, hat gesetzt"
       },
       {
         "id": "vz-welt-b-036",
@@ -32386,7 +32580,8 @@
         "level": "A1",
         "tags": [
           "bewegung"
-        ]
+        ],
+        "posInfo": "hängt, hängte, hat gehängt"
       },
       {
         "id": "vz-welt-b-037",
@@ -32398,7 +32593,8 @@
         "level": "A1",
         "tags": [
           "bewegung"
-        ]
+        ],
+        "posInfo": "fallt, fallte, ist gefallt"
       },
       {
         "id": "vz-welt-b-038",
@@ -32411,7 +32607,8 @@
         "tags": [
           "bewegung"
         ],
-        "aussprache": "ei = «آي» لا «إي» · sp/st في البداية = «شب/شت»"
+        "aussprache": "ei = «آي» لا «إي» · sp/st في البداية = «شب/شت»",
+        "posInfo": "steigt, steigte, ist gesteigt"
       },
       {
         "id": "vz-welt-b-039",
@@ -32424,7 +32621,8 @@
         "tags": [
           "bewegung"
         ],
-        "aussprache": "ei = «آي» لا «إي»"
+        "aussprache": "ei = «آي» لا «إي»",
+        "posInfo": "steigt aus, steigte aus, ist ausgesteigt"
       },
       {
         "id": "vz-welt-b-040",
@@ -32436,7 +32634,8 @@
         "level": "A1",
         "tags": [
           "bewegung"
-        ]
+        ],
+        "posInfo": "kommt mit, kommte mit, ist mitgekommt"
       },
       {
         "id": "vz-welt-b-041",
@@ -32449,7 +32648,8 @@
         "tags": [
           "bewegung"
         ],
-        "aussprache": "z = «تس» · ü = ضمّةٌ بشفتَينِ مستديرتَين"
+        "aussprache": "z = «تس» · ü = ضمّةٌ بشفتَينِ مستديرتَين",
+        "posInfo": "rückkommt zu, rückkommte zu, ist zugerückkommt"
       },
       {
         "id": "vz-welt-b-042",
@@ -32462,7 +32662,8 @@
         "tags": [
           "bewegung"
         ],
-        "aussprache": "w = «ڤ»"
+        "aussprache": "w = «ڤ»",
+        "posInfo": "geht weg, gehte weg, ist weggegeht"
       },
       {
         "id": "vz-welt-b-043",
@@ -32477,7 +32678,8 @@
         ],
         "syn": [
           "abholen"
-        ]
+        ],
+        "posInfo": "holt, holte, hat geholt"
       },
       {
         "id": "vz-welt-b-044",
@@ -33268,7 +33470,8 @@
         "level": "A1",
         "tags": [
           "phrase"
-        ]
+        ],
+        "posInfo": "kennenlernt, kennenlernte, hat gekennenlernt"
       },
       {
         "id": "r311a1-030",
@@ -33280,7 +33483,8 @@
         "level": "A1",
         "tags": [
           "beruf"
-        ]
+        ],
+        "posInfo": "bietet an, bietete an, hat angebiett"
       }
     ]
   },
@@ -33390,7 +33594,8 @@
         "tags": [
           "schreiben"
         ],
-        "aussprache": "ie = «إي» ممدودة"
+        "aussprache": "ie = «إي» ممدودة",
+        "posInfo": "höflicht, höflichte, hat gehöflicht"
       },
       {
         "id": "vz-schrei-009",
@@ -33403,7 +33608,8 @@
         "tags": [
           "meinung"
         ],
-        "aussprache": "z = «تس»"
+        "aussprache": "z = «تس»",
+        "posInfo": "stimmt zu, stimmte zu, hat zugestimmt"
       },
       {
         "id": "vz-schrei-011",
@@ -33591,7 +33797,8 @@
         "tags": [
           "alltag"
         ],
-        "aussprache": "ie = «إي» ممدودة"
+        "aussprache": "ie = «إي» ممدودة",
+        "posInfo": "informiert, informierte, hat geinformiert"
       },
       {
         "id": "vz-schrei-026",
@@ -33604,7 +33811,8 @@
         "tags": [
           "alltag"
         ],
-        "aussprache": "ei = «آي» لا «إي»"
+        "aussprache": "ei = «آي» لا «إي»",
+        "posInfo": "teilnehmt, teilnehmte, hat geteilnehmt"
       },
       {
         "id": "vz-schrei-027",
@@ -33664,7 +33872,8 @@
         "level": "A2",
         "tags": [
           "einkauf"
-        ]
+        ],
+        "posInfo": "bestellt, bestellte, hat bestellt"
       },
       {
         "id": "vz-schrei-036",
@@ -33819,7 +34028,8 @@
         "level": "A2",
         "tags": [
           "schreiben"
-        ]
+        ],
+        "posInfo": "korrekturt, korrekturte, hat gekorrekturt"
       },
       {
         "id": "r312a2-054",
@@ -33876,7 +34086,8 @@
         "level": "A2",
         "tags": [
           "schreiben"
-        ]
+        ],
+        "posInfo": "notiert, notierte, hat genotiert"
       },
       {
         "id": "r312a2-058",
@@ -33888,7 +34099,8 @@
         "level": "A2",
         "tags": [
           "schreiben"
-        ]
+        ],
+        "posInfo": "markiert, markierte, hat gemarkiert"
       },
       {
         "id": "r312a2-059",
@@ -33968,7 +34180,8 @@
         "tags": [
           "modal"
         ],
-        "aussprache": "ö = بينَ الضمّةِ والكسرة"
+        "aussprache": "ö = بينَ الضمّةِ والكسرة",
+        "posInfo": "könnt, könnte, hat gekönnt"
       },
       {
         "id": "va-modort-001",
@@ -33981,7 +34194,8 @@
         "tags": [
           "modal"
         ],
-        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين"
+        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
+        "posInfo": "müsst, müsste, hat gemüsst"
       },
       {
         "id": "va-modort-002",
@@ -33994,7 +34208,8 @@
         "tags": [
           "modal"
         ],
-        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين"
+        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
+        "posInfo": "dürft, dürfte, hat gedürft"
       },
       {
         "id": "va-modort-003",
@@ -34007,7 +34222,8 @@
         "tags": [
           "modal"
         ],
-        "aussprache": "w = «ڤ»"
+        "aussprache": "w = «ڤ»",
+        "posInfo": "wollt, wollte, hat gewollt"
       },
       {
         "id": "va-modort-004",
@@ -34019,7 +34235,8 @@
         "level": "A1",
         "tags": [
           "modal"
-        ]
+        ],
+        "posInfo": "sollt, sollte, hat gesollt"
       },
       {
         "id": "va-modort-005",
@@ -34032,7 +34249,8 @@
         "tags": [
           "modal"
         ],
-        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · ö = بينَ الضمّةِ والكسرة"
+        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · ö = بينَ الضمّةِ والكسرة",
+        "posInfo": "möchtet, möchtete, hat gemöchtt"
       },
       {
         "id": "va-modort-006",
@@ -34045,7 +34263,8 @@
         "tags": [
           "modal"
         ],
-        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين"
+        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
+        "posInfo": "nichtet, nichtete, hat genichtt"
       },
       {
         "id": "va-modort-007",
@@ -34058,7 +34277,8 @@
         "tags": [
           "modal"
         ],
-        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين"
+        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
+        "posInfo": "nichtet, nichtete, hat genichtt"
       },
       {
         "id": "va-modort-008",
@@ -34682,7 +34902,8 @@
         "level": "A1",
         "tags": [
           "digital"
-        ]
+        ],
+        "posInfo": "klickt, klickte, hat geklickt"
       },
       {
         "id": "va-modort-057",
@@ -34695,7 +34916,8 @@
         "tags": [
           "digital"
         ],
-        "img": "/cards/internet.webp"
+        "img": "/cards/internet.webp",
+        "posInfo": "sucht, suchte, hat gesucht"
       },
       {
         "id": "va-modort-058",
@@ -34781,7 +35003,8 @@
         "level": "A1",
         "tags": [
           "arzt"
-        ]
+        ],
+        "posInfo": "ruht aus, ruhte aus, hat ausgeruht"
       },
       {
         "id": "va-modort-068",
@@ -34875,7 +35098,8 @@
         "level": "A1",
         "tags": [
           "post"
-        ]
+        ],
+        "posInfo": "holt ab, holte ab, hat abgeholt"
       },
       {
         "id": "va-modort-074",
@@ -34920,7 +35144,8 @@
           "bank"
         ],
         "img": "/cards/bezahlen.webp",
-        "aussprache": "z = «تس»"
+        "aussprache": "z = «تس»",
+        "posInfo": "bart, barte, hat gebart"
       },
       {
         "id": "va-modort-079",
@@ -34933,7 +35158,8 @@
         "tags": [
           "bank"
         ],
-        "aussprache": "z = «تس»"
+        "aussprache": "z = «تس»",
+        "posInfo": "mitet, mitete, hat gemitt"
       },
       {
         "id": "va-modort-081",
@@ -34994,7 +35220,8 @@
         "tags": [
           "alltag"
         ],
-        "aussprache": "ei = «آي» لا «إي»"
+        "aussprache": "ei = «آي» لا «إي»",
+        "posInfo": "leiht, leihte, hat geleiht"
       },
       {
         "id": "va-modort-086",
@@ -35007,7 +35234,8 @@
         "tags": [
           "alltag"
         ],
-        "aussprache": "ei = «آي» لا «إي»"
+        "aussprache": "ei = «آي» لا «إي»",
+        "posInfo": "teilt, teilte, hat geteilt"
       },
       {
         "id": "va-modort-087",
@@ -35020,7 +35248,8 @@
         "tags": [
           "alltag"
         ],
-        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · w = «ڤ»"
+        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · w = «ڤ»",
+        "posInfo": "wechset, wechsete, hat gewechset"
       },
       {
         "id": "va-modort-088",
@@ -35032,7 +35261,8 @@
         "level": "A1",
         "tags": [
           "alltag"
-        ]
+        ],
+        "posInfo": "bringt mit, bringte mit, hat mitgebringt"
       },
       {
         "id": "va-modort-089",
@@ -35045,7 +35275,8 @@
         "tags": [
           "alltag"
         ],
-        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة"
+        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
+        "posInfo": "macht aus, machte aus, hat ausgemacht"
       },
       {
         "id": "va-modort-090",
@@ -35058,7 +35289,8 @@
         "tags": [
           "alltag"
         ],
-        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة"
+        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
+        "posInfo": "macht an, machte an, hat angemacht"
       },
       {
         "id": "va-modort-091",
@@ -35212,7 +35444,8 @@
         "level": "A1",
         "tags": [
           "alltag"
-        ]
+        ],
+        "posInfo": "kaputtgeht, kaputtgehte, ist gekaputtgeht"
       },
       {
         "id": "va-modort-101",
@@ -35225,7 +35458,8 @@
         "tags": [
           "alltag"
         ],
-        "aussprache": "ie = «إي» ممدودة"
+        "aussprache": "ie = «إي» ممدودة",
+        "posInfo": "funktioniert, funktionierte, hat gefunktioniert"
       },
       {
         "id": "va-modort-102",
@@ -35324,7 +35558,8 @@
         "level": "A1",
         "tags": [
           "post"
-        ]
+        ],
+        "posInfo": "telefoniert, telefonierte, hat getelefoniert"
       },
       {
         "id": "r311a1-037",
@@ -35452,7 +35687,8 @@
         "level": "A1",
         "tags": [
           "amt"
-        ]
+        ],
+        "posInfo": "kreuzt an, kreuzte an, hat angekreuzt"
       },
       {
         "id": "r311a1-046",
@@ -35464,7 +35700,8 @@
         "level": "A1",
         "tags": [
           "amt"
-        ]
+        ],
+        "posInfo": "kriegt, kriegte, hat gekriegt"
       }
     ]
   },
@@ -35569,7 +35806,8 @@
         "aussprache": "w = «ڤ»",
         "syn": [
           "beantworten"
-        ]
+        ],
+        "posInfo": "twortet an, twortete an, hat angetwortt"
       },
       {
         "id": "vb-abschl-007",
@@ -35612,7 +35850,8 @@
         "level": "A1",
         "tags": [
           "schule"
-        ]
+        ],
+        "posInfo": "lautet, lautete, hat gelautt"
       },
       {
         "id": "vb-abschl-010",
@@ -35625,7 +35864,8 @@
         "tags": [
           "schule"
         ],
-        "img": "/cards/lernen.webp"
+        "img": "/cards/lernen.webp",
+        "posInfo": "auswendigt, auswendigte, hat geauswendigt"
       },
       {
         "id": "vb-abschl-011",
@@ -35836,7 +36076,8 @@
         "tags": [
           "verkehr"
         ],
-        "aussprache": "z = «تس» · ü = ضمّةٌ بشفتَينِ مستديرتَين"
+        "aussprache": "z = «تس» · ü = ضمّةٌ بشفتَينِ مستديرتَين",
+        "posInfo": "rückfahrt zu, rückfahrte zu, ist zugerückfahrt"
       },
       {
         "id": "vb-abschl-026",
@@ -35864,7 +36105,8 @@
         "tags": [
           "verkehr"
         ],
-        "aussprache": "ei = «آي» لا «إي»"
+        "aussprache": "ei = «آي» لا «إي»",
+        "posInfo": "pünktlicht, pünktlichte, hat gepünktlicht"
       },
       {
         "id": "vb-abschl-029",
@@ -36205,7 +36447,8 @@
           "sozial"
         ],
         "img": "/cards/wohnen.webp",
-        "aussprache": "w = «ڤ»"
+        "aussprache": "w = «ڤ»",
+        "posInfo": "sammt zu, sammte zu, hat zugesammt"
       },
       {
         "id": "vb-abschl-052",
@@ -36260,7 +36503,8 @@
         "tags": [
           "alltag",
           "Wiederholung"
-        ]
+        ],
+        "posInfo": "freut, freute, hat gefreut"
       },
       {
         "id": "r311a1-079",
@@ -36272,7 +36516,8 @@
         "level": "A1",
         "tags": [
           "alltag"
-        ]
+        ],
+        "posInfo": "kümmet, kümmete, hat gekümmet"
       }
     ]
   },
@@ -36467,7 +36712,8 @@
           "person"
         ],
         "img": "/cards/verstehen.webp",
-        "aussprache": "v = «ف»"
+        "aussprache": "v = «ف»",
+        "posInfo": "versteht, verstehte, hat versteht"
       },
       {
         "id": "vc-mensch-020",
@@ -36480,7 +36726,8 @@
         "tags": [
           "person"
         ],
-        "aussprache": "v = «ف»"
+        "aussprache": "v = «ف»",
+        "posInfo": "vertraut, vertraute, hat vertraut"
       },
       {
         "id": "vc-mensch-022",
@@ -36572,7 +36819,8 @@
         "tags": [
           "person"
         ],
-        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين"
+        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
+        "posInfo": "entschuldigt, entschuldigte, hat entschuldigt"
       },
       {
         "id": "vc-mensc-800",
@@ -36611,7 +36859,8 @@
         "level": "A2",
         "tags": [
           "person"
-        ]
+        ],
+        "posInfo": "verlasst, verlasste, hat verlasst"
       },
       {
         "id": "vc-mensc-803",
@@ -36666,7 +36915,8 @@
         "tags": [
           "person"
         ],
-        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة"
+        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
+        "posInfo": "sorgt, sorgte, hat gesorgt"
       },
       {
         "id": "vc-mensc-807",
@@ -36679,7 +36929,8 @@
         "tags": [
           "person"
         ],
-        "aussprache": "ö = بينَ الضمّةِ والكسرة"
+        "aussprache": "ö = بينَ الضمّةِ والكسرة",
+        "posInfo": "tröstet, tröstete, hat getröstt"
       },
       {
         "id": "vc-mensc-808",
@@ -36718,7 +36969,8 @@
         "tags": [
           "person"
         ],
-        "aussprache": "z = «تس» · ö = بينَ الضمّةِ والكسرة"
+        "aussprache": "z = «تس» · ö = بينَ الضمّةِ والكسرة",
+        "posInfo": "hört zu, hörte zu, hat zugehört"
       },
       {
         "id": "vc-mensc-811",
@@ -36759,7 +37011,8 @@
         "tags": [
           "person"
         ],
-        "aussprache": "w = «ڤ»"
+        "aussprache": "w = «ڤ»",
+        "posInfo": "wirkt, wirkte, hat gewirkt"
       },
       {
         "id": "vc-mensc-880",
@@ -37426,7 +37679,8 @@
         "tags": [
           "reise"
         ],
-        "aussprache": "v = «ف»"
+        "aussprache": "v = «ف»",
+        "posInfo": "verlauft, verlaufte, hat verlauft"
       },
       {
         "id": "vc-reise--016",
@@ -37528,7 +37782,8 @@
         "level": "A2",
         "tags": [
           "fest"
-        ]
+        ],
+        "posInfo": "gratuliert, gratulierte, hat gegratuliert"
       },
       {
         "id": "vc-reise--024",
@@ -37541,7 +37796,8 @@
         "tags": [
           "fest"
         ],
-        "aussprache": "z = «تس»"
+        "aussprache": "z = «تس»",
+        "posInfo": "ladet ein, ladete ein, hat eingeladt"
       },
       {
         "id": "vc-reise--025",
@@ -37613,7 +37869,8 @@
         "tags": [
           "fest"
         ],
-        "aussprache": "ei = «آي» لا «إي» · v = «ف»"
+        "aussprache": "ei = «آي» لا «إي» · v = «ف»",
+        "posInfo": "bereitet vor, bereitete vor, hat vorgebereitt"
       },
       {
         "id": "vc-reise-800",
@@ -37699,7 +37956,8 @@
         "tags": [
           "fest"
         ],
-        "aussprache": "ie = «إي» ممدودة"
+        "aussprache": "ie = «إي» ممدودة",
+        "posInfo": "probiert, probierte, hat geprobiert"
       },
       {
         "id": "vc-reise-806",
@@ -37712,7 +37970,8 @@
         "tags": [
           "fest"
         ],
-        "aussprache": "w = «ڤ»"
+        "aussprache": "w = «ڤ»",
+        "posInfo": "sattet, sattete, hat gesattt"
       },
       {
         "id": "vc-reise-807",
@@ -37849,7 +38108,8 @@
         "level": "A2",
         "tags": [
           "reise"
-        ]
+        ],
+        "posInfo": "verreist, verreiste, hat verreist"
       },
       {
         "id": "r312a2-100",
@@ -37990,7 +38250,8 @@
         "tags": [
           "medien"
         ],
-        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · v = «ف» · ö = بينَ الضمّةِ والكسرة"
+        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · v = «ف» · ö = بينَ الضمّةِ والكسرة",
+        "posInfo": "veröffentlicht, veröffentlichte, hat veröffentlicht"
       },
       {
         "id": "vc-medien-008",
@@ -38064,7 +38325,8 @@
         "tags": [
           "medien"
         ],
-        "aussprache": "ie = «إي» ممدودة"
+        "aussprache": "ie = «إي» ممدودة",
+        "posInfo": "kommentiert, kommentierte, ist gekommentiert"
       },
       {
         "id": "vc-medien-014",
@@ -38218,7 +38480,8 @@
         "level": "A2",
         "tags": [
           "schule"
-        ]
+        ],
+        "posInfo": "fehlt, fehlte, hat gefehlt"
       },
       {
         "id": "vc-medien-026",
@@ -38230,7 +38493,8 @@
         "level": "A2",
         "tags": [
           "schule"
-        ]
+        ],
+        "posInfo": "konzentriert, konzentrierte, hat gekonzentriert"
       },
       {
         "id": "vc-medien-027",
@@ -38242,7 +38506,8 @@
         "level": "A2",
         "tags": [
           "schule"
-        ]
+        ],
+        "posInfo": "bereitet vor, bereitete vor, hat vorgebereitt"
       },
       {
         "id": "vc-medien-028",
@@ -38254,7 +38519,8 @@
         "level": "A2",
         "tags": [
           "praep"
-        ]
+        ],
+        "posInfo": "wartet, wartete, hat gewartt"
       },
       {
         "id": "vc-medien-030",
@@ -38267,7 +38533,8 @@
         "tags": [
           "praep"
         ],
-        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين · -er في الآخر = «أَ» خفيفة"
+        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين · -er في الآخر = «أَ» خفيفة",
+        "posInfo": "freut, freute, hat gefreut"
       },
       {
         "id": "vc-medien-031",
@@ -38279,7 +38546,8 @@
         "level": "A2",
         "tags": [
           "praep"
-        ]
+        ],
+        "posInfo": "denkt, denkte, hat gedenkt"
       },
       {
         "id": "vc-medien-032",
@@ -38292,7 +38560,8 @@
         "tags": [
           "praep"
         ],
-        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين · -er في الآخر = «أَ» خفيفة"
+        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين · -er في الآخر = «أَ» خفيفة",
+        "posInfo": "sprecht, sprechte, hat gesprecht"
       },
       {
         "id": "vc-medien-034",
@@ -38304,7 +38573,8 @@
         "level": "A2",
         "tags": [
           "praep"
-        ]
+        ],
+        "posInfo": "bittet, bittete, hat gebittt"
       },
       {
         "id": "vc-medien-035",
@@ -38317,7 +38587,8 @@
         "tags": [
           "praep"
         ],
-        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين"
+        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
+        "posInfo": "dankt, dankte, hat gedankt"
       },
       {
         "id": "vc-medien-036",
@@ -38330,7 +38601,8 @@
         "tags": [
           "praep"
         ],
-        "aussprache": "v = «ف»"
+        "aussprache": "v = «ف»",
+        "posInfo": "angstet, angstete, hat geangstt"
       },
       {
         "id": "vc-medien-037",
@@ -38342,7 +38614,8 @@
         "level": "A2",
         "tags": [
           "praep"
-        ]
+        ],
+        "posInfo": "friedet zu, friedete zu, hat zugefriedt"
       },
       {
         "id": "vc-medien-038",
@@ -38354,7 +38627,8 @@
         "level": "A2",
         "tags": [
           "praep"
-        ]
+        ],
+        "posInfo": "erinnet, erinnete, hat erinnern"
       },
       {
         "id": "vc-medien-039",
@@ -38367,7 +38641,8 @@
         "tags": [
           "praep"
         ],
-        "aussprache": "v = «ف»"
+        "aussprache": "v = «ف»",
+        "posInfo": "hängt ab, hängte ab, hat abgehängt"
       },
       {
         "id": "vc-medie-800",
@@ -38380,7 +38655,8 @@
         "tags": [
           "medien"
         ],
-        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين"
+        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
+        "posInfo": "prüft, prüfte, hat geprüft"
       },
       {
         "id": "vc-medie-801",
@@ -38788,7 +39064,8 @@
         "tags": [
           "wohnen"
         ],
-        "aussprache": "ei = «آي» لا «إي» · sp/st في البداية = «شب/شت» · ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة"
+        "aussprache": "ei = «آي» لا «إي» · sp/st في البداية = «شب/شت» · ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
+        "posInfo": "streicht, streichte, hat gestreicht"
       },
       {
         "id": "vd-wohnen-018",
@@ -38832,7 +39109,8 @@
         "level": "A2",
         "tags": [
           "wohnen"
-        ]
+        ],
+        "posInfo": "kündigt, kündigte, hat gekündigt"
       },
       {
         "id": "vd-wohnen-021",
@@ -38936,7 +39214,8 @@
         "tags": [
           "wohnen"
         ],
-        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · z = «تس»"
+        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · z = «تس»",
+        "posInfo": "zahlt nach, zahlte nach, hat nachgezahlt"
       },
       {
         "id": "vd-wohnen-028",
@@ -39059,7 +39338,8 @@
         "level": "A2",
         "tags": [
           "wohnen"
-        ]
+        ],
+        "posInfo": "zieht aus, ziehte aus, ist ausgezieht"
       },
       {
         "id": "vd-wohnv-900",
@@ -39316,7 +39596,8 @@
         "tags": [
           "geld"
         ],
-        "aussprache": "sch = «ش» · v = «ف» · w = «ڤ»"
+        "aussprache": "sch = «ش» · v = «ف» · w = «ڤ»",
+        "posInfo": "verschwendet, verschwendete, hat verschwendt"
       },
       {
         "id": "vd-geld-k-014",
@@ -39390,7 +39671,8 @@
         "tags": [
           "geld"
         ],
-        "aussprache": "ie = «إي» ممدودة · z = «تس» · ü = ضمّةٌ بشفتَينِ مستديرتَين"
+        "aussprache": "ie = «إي» ممدودة · z = «تس» · ü = ضمّةٌ بشفتَينِ مستديرتَين",
+        "posInfo": "zieht über, ziehte über, ist überzieht"
       },
       {
         "id": "vd-geld-k-021",
@@ -39419,7 +39701,8 @@
         "tags": [
           "geld"
         ],
-        "aussprache": "ei = «آي» لا «إي»"
+        "aussprache": "ei = «آي» لا «إي»",
+        "posInfo": "etwast, etwaste, hat geetwast"
       },
       {
         "id": "vd-geld-k-023",
@@ -39463,7 +39746,8 @@
         "aussprache": "w = «ڤ»",
         "syn": [
           "siegen"
-        ]
+        ],
+        "posInfo": "gewinnt, gewinnte, hat gewinnt"
       },
       {
         "id": "vd-gesund-007",
@@ -39476,7 +39760,8 @@
         "tags": [
           "sport"
         ],
-        "aussprache": "ie = «إي» ممدودة · v = «ف»"
+        "aussprache": "ie = «إي» ممدودة · v = «ف»",
+        "posInfo": "verliert, verlierte, hat verliert"
       },
       {
         "id": "vd-gesund-008",
@@ -39505,7 +39790,8 @@
         "tags": [
           "sport"
         ],
-        "aussprache": "v = «ف» · z = «تس»"
+        "aussprache": "v = «ف» · z = «تس»",
+        "posInfo": "verletzt, verletzte, hat verletzt"
       },
       {
         "id": "vd-gesund-012",
@@ -39691,7 +39977,8 @@
         "level": "A2",
         "tags": [
           "gesundheit"
-        ]
+        ],
+        "posInfo": "entspannt, entspannte, hat entspannt"
       },
       {
         "id": "vd-gesund-027",
@@ -39720,7 +40007,8 @@
         "tags": [
           "gesundheit"
         ],
-        "aussprache": "ö = بينَ الضمّةِ والكسرة"
+        "aussprache": "ö = بينَ الضمّةِ والكسرة",
+        "posInfo": "raucht, rauchte, hat geraucht"
       },
       {
         "id": "vpfl-01",
@@ -39877,7 +40165,8 @@
         "level": "A2",
         "tags": [
           "gesundheit"
-        ]
+        ],
+        "posInfo": "wehtut, wehtute, hat gewehtut"
       },
       {
         "id": "r312a2-125",
@@ -39889,7 +40178,8 @@
         "level": "A2",
         "tags": [
           "gesundheit"
-        ]
+        ],
+        "posInfo": "sterbt, sterbte, ist gesterbt"
       }
     ]
   },
@@ -39938,7 +40228,8 @@
         "tags": [
           "kueche"
         ],
-        "aussprache": "sch = «ش»"
+        "aussprache": "sch = «ش»",
+        "posInfo": "mischt, mischte, hat gemischt"
       },
       {
         "id": "ve-kueche--003",
@@ -39964,7 +40255,8 @@
         "level": "A2",
         "tags": [
           "kueche"
-        ]
+        ],
+        "posInfo": "bratet, bratete, hat gebratt"
       },
       {
         "id": "ve-kueche--005",
@@ -39976,7 +40268,8 @@
         "level": "A2",
         "tags": [
           "kueche"
-        ]
+        ],
+        "posInfo": "kocht, kochte, hat gekocht"
       },
       {
         "id": "ve-kueche--006",
@@ -39989,7 +40282,8 @@
         "tags": [
           "kueche"
         ],
-        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين"
+        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
+        "posInfo": "kühlt ab, kühlte ab, hat abgekühlt"
       },
       {
         "id": "ve-kueche--007",
@@ -40002,7 +40296,8 @@
         "tags": [
           "kueche"
         ],
-        "aussprache": "w = «ڤ» · z = «تس» · ü = ضمّةٌ بشفتَينِ مستديرتَين"
+        "aussprache": "w = «ڤ» · z = «تس» · ü = ضمّةٌ بشفتَينِ مستديرتَين",
+        "posInfo": "würzt, würzte, hat gewürzt"
       },
       {
         "id": "ve-kueche--008",
@@ -40126,7 +40421,8 @@
         "tags": [
           "kueche"
         ],
-        "aussprache": "sch = «ش» · w = «ڤ»"
+        "aussprache": "sch = «ش» · w = «ڤ»",
+        "posInfo": "wascht ab, waschte ab, hat abgewascht"
       },
       {
         "id": "ve-kueche--016",
@@ -40170,7 +40466,8 @@
         "tags": [
           "kueche"
         ],
-        "aussprache": "v = «ف»"
+        "aussprache": "v = «ف»",
+        "posInfo": "verderbt, verderbte, hat verderbt"
       },
       {
         "id": "ve-kueche--020",
@@ -40183,7 +40480,8 @@
         "tags": [
           "kueche"
         ],
-        "aussprache": "ei = «آي» لا «إي» · ie = «إي» ممدودة"
+        "aussprache": "ei = «آي» لا «إي» · ie = «إي» ممدودة",
+        "posInfo": "friert ein, frierte ein, hat eingefriert"
       },
       {
         "id": "ve-kueche--021",
@@ -40195,7 +40493,8 @@
         "level": "A2",
         "tags": [
           "kueche"
-        ]
+        ],
+        "posInfo": "taut auf, taute auf, hat aufgetaut"
       },
       {
         "id": "ve-kueche--022",
@@ -40268,7 +40567,8 @@
         "tags": [
           "kueche"
         ],
-        "aussprache": "ei = «آي» لا «إي» · v = «ف» · z = «تس»"
+        "aussprache": "ei = «آي» لا «إي» · v = «ف» · z = «تس»",
+        "posInfo": "heizt vor, heizte vor, hat vorgeheizt"
       },
       {
         "id": "ve-kueche-802",
@@ -40313,7 +40613,8 @@
         "tags": [
           "kueche"
         ],
-        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين"
+        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
+        "posInfo": "rührt um, rührte um, hat umgerührt"
       },
       {
         "id": "ve-kueche-805",
@@ -40338,7 +40639,8 @@
         "level": "A2",
         "tags": [
           "kueche"
-        ]
+        ],
+        "posInfo": "tropft ab, tropfte ab, hat abgetropft"
       },
       {
         "id": "ve-kueche-807",
@@ -40519,7 +40821,8 @@
         "level": "A2",
         "tags": [
           "kueche"
-        ]
+        ],
+        "posInfo": "schenkt, schenkte, hat geschenkt"
       },
       {
         "id": "r312a2-134",
@@ -40531,7 +40834,8 @@
         "level": "A2",
         "tags": [
           "kueche"
-        ]
+        ],
+        "posInfo": "packt ein, packte ein, hat eingepackt"
       },
       {
         "id": "r312a2-135",
@@ -40543,7 +40847,8 @@
         "level": "A2",
         "tags": [
           "kueche"
-        ]
+        ],
+        "posInfo": "klappt, klappte, hat geklappt"
       }
     ]
   },
@@ -40830,7 +41135,8 @@
         "tags": [
           "erzaehlen"
         ],
-        "aussprache": "w = «ڤ»"
+        "aussprache": "w = «ڤ»",
+        "posInfo": "entwicket, entwickete, hat entwickeln"
       },
       {
         "id": "ve-erzaehl-021",
@@ -40843,7 +41149,8 @@
         "tags": [
           "erzaehlen"
         ],
-        "aussprache": "v = «ف»"
+        "aussprache": "v = «ف»",
+        "posInfo": "verändet, verändete, hat verändern"
       },
       {
         "id": "ve-erzaehl-022",
@@ -40963,7 +41270,8 @@
         "tags": [
           "erzaehlen"
         ],
-        "aussprache": "w = «ڤ» · ö = بينَ الضمّةِ والكسرة"
+        "aussprache": "w = «ڤ» · ö = بينَ الضمّةِ والكسرة",
+        "posInfo": "gewöhnt, gewöhnte, hat gewöhnt"
       },
       {
         "id": "ve-erzaeh-806",
@@ -40992,7 +41300,8 @@
         "tags": [
           "erzaehlen"
         ],
-        "aussprache": "w = «ڤ» · ü = ضمّةٌ بشفتَينِ مستديرتَين"
+        "aussprache": "w = «ڤ» · ü = ضمّةٌ بشفتَينِ مستديرتَين",
+        "posInfo": "windet über, windete über, hat überwindt"
       },
       {
         "id": "ve-erzaeh-808",
@@ -41005,7 +41314,8 @@
         "tags": [
           "erzaehlen"
         ],
-        "aussprache": "z = «تس»"
+        "aussprache": "z = «تس»",
+        "posInfo": "stolzt, stolzte, hat gestolzt"
       },
       {
         "id": "ve-erzaeh-809",
@@ -41194,7 +41504,8 @@
         "level": "A2",
         "tags": [
           "erzaehlen"
-        ]
+        ],
+        "posInfo": "passiert, passierte, hat gepassiert"
       },
       {
         "id": "r312a2-150",
@@ -41206,7 +41517,8 @@
         "level": "A2",
         "tags": [
           "erzaehlen"
-        ]
+        ],
+        "posInfo": "stattfindet, stattfindete, hat gestattfindt"
       },
       {
         "id": "r312a2-151",
@@ -41218,7 +41530,8 @@
         "level": "A2",
         "tags": [
           "erzaehlen"
-        ]
+        ],
+        "posInfo": "träumt, träumte, hat geträumt"
       },
       {
         "id": "r312a2-152",
@@ -41230,7 +41543,8 @@
         "level": "A2",
         "tags": [
           "erzaehlen"
-        ]
+        ],
+        "posInfo": "lügt, lügte, hat gelügt"
       },
       {
         "id": "r312a2-153",
@@ -41454,7 +41768,8 @@
         "level": "A2",
         "tags": [
           "schutz"
-        ]
+        ],
+        "posInfo": "befolgt, befolgte, hat befolgt"
       },
       {
         "id": "ve-arbeits-017",
@@ -41466,7 +41781,8 @@
         "level": "A2",
         "tags": [
           "schutz"
-        ]
+        ],
+        "posInfo": "meldet, meldete, hat gemeldt"
       },
       {
         "id": "ve-arbeits-018",
@@ -41587,7 +41903,8 @@
         "tags": [
           "umwelt"
         ],
-        "aussprache": "ei = «آي» لا «إي» · z = «تس»"
+        "aussprache": "ei = «آي» لا «إي» · z = «تس»",
+        "posInfo": "sparsamt, sparsamte, hat gesparsamt"
       },
       {
         "id": "ve-umwelt--007",
@@ -41641,7 +41958,8 @@
         "tags": [
           "umwelt"
         ],
-        "aussprache": "ie = «إي» ممدودة · v = «ف» · w = «ڤ»"
+        "aussprache": "ie = «إي» ممدودة · v = «ف» · w = «ڤ»",
+        "posInfo": "verwendet wieder, verwendete wieder, hat wiederverwendt"
       },
       {
         "id": "ve-umwelt--014",
@@ -41654,7 +41972,8 @@
         "tags": [
           "umwelt"
         ],
-        "aussprache": "ei = «آي» لا «إي» · v = «ف»"
+        "aussprache": "ei = «آي» لا «إي» · v = «ف»",
+        "posInfo": "vermeidet, vermeidete, hat vermeidt"
       },
       {
         "id": "ve-umwelt--016",
@@ -41758,7 +42077,8 @@
         "tags": [
           "umwelt"
         ],
-        "aussprache": "z = «تس»"
+        "aussprache": "z = «تس»",
+        "posInfo": "tragt bei, tragte bei, hat beitragt"
       },
       {
         "id": "r312a2-154",
@@ -41770,7 +42090,8 @@
         "level": "A2",
         "tags": [
           "umwelt"
-        ]
+        ],
+        "posInfo": "stellt her, stellte her, hat hergestellt"
       },
       {
         "id": "r312a2-155",
@@ -41796,7 +42117,8 @@
         "level": "A2",
         "tags": [
           "umwelt"
-        ]
+        ],
+        "posInfo": "schneit, schneite, hat geschneit"
       },
       {
         "id": "r312a2-157",
@@ -41913,7 +42235,8 @@
         "level": "A2",
         "tags": [
           "umwelt"
-        ]
+        ],
+        "posInfo": "macht auf, machte auf, hat aufgemacht"
       },
       {
         "id": "r312a2-165",
@@ -41925,7 +42248,8 @@
         "level": "A2",
         "tags": [
           "umwelt"
-        ]
+        ],
+        "posInfo": "geht aus, gehte aus, ist ausgegeht"
       },
       {
         "id": "r312a2-166",
@@ -41937,7 +42261,8 @@
         "level": "A2",
         "tags": [
           "umwelt"
-        ]
+        ],
+        "posInfo": "tragt aus, tragte aus, hat ausgetragt"
       },
       {
         "id": "r312a2-167",
@@ -41949,7 +42274,8 @@
         "level": "A2",
         "tags": [
           "umwelt"
-        ]
+        ],
+        "posInfo": "beendet, beendete, hat beendt"
       }
     ]
   },
@@ -42490,7 +42816,8 @@
         "level": "A2",
         "tags": [
           "rede"
-        ]
+        ],
+        "posInfo": "leidtut, leidtute, hat geleidtut"
       },
       {
         "id": "r312a2-174",
@@ -42502,7 +42829,8 @@
         "level": "A2",
         "tags": [
           "rede"
-        ]
+        ],
+        "posInfo": "schimpft, schimpfte, hat geschimpft"
       },
       {
         "id": "r312a2-175",
@@ -42514,7 +42842,8 @@
         "level": "A2",
         "tags": [
           "rede"
-        ]
+        ],
+        "posInfo": "rechnt, rechnte, hat gerechnt"
       },
       {
         "id": "r312a2-176",
@@ -42526,7 +42855,8 @@
         "level": "A2",
         "tags": [
           "rede"
-        ]
+        ],
+        "posInfo": "weckt, weckte, hat geweckt"
       },
       {
         "id": "r312a2-177",
@@ -42702,7 +43032,8 @@
         "tags": [
           "aussehen"
         ],
-        "aussprache": "z = «تس»"
+        "aussprache": "z = «تس»",
+        "posInfo": "bequemt, bequemte, hat bequem"
       },
       {
         "id": "vf-kultur-013",
@@ -42715,7 +43046,8 @@
         "tags": [
           "aussehen"
         ],
-        "aussprache": "ie = «إي» ممدودة"
+        "aussprache": "ie = «إي» ممدودة",
+        "posInfo": "probiert an, probierte an, hat angeprobiert"
       },
       {
         "id": "vf-kultur-014",
@@ -42828,7 +43160,8 @@
         "tags": [
           "digital"
         ],
-        "aussprache": "ei = «آي» لا «إي»"
+        "aussprache": "ei = «آي» لا «إي»",
+        "posInfo": "loggt ein, loggte ein, hat eingeloggt"
       },
       {
         "id": "vf-kultur-033",
@@ -42841,7 +43174,8 @@
         "tags": [
           "digital"
         ],
-        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة"
+        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
+        "posInfo": "hochladet, hochladete, hat gehochladt"
       },
       {
         "id": "vf-kultur-034",
@@ -42868,7 +43202,8 @@
         "level": "A2",
         "tags": [
           "digital"
-        ]
+        ],
+        "posInfo": "druckt aus, druckte aus, hat ausgedruckt"
       },
       {
         "id": "vf-kultur-036",
@@ -42974,7 +43309,8 @@
         "level": "A2",
         "tags": [
           "bildung"
-        ]
+        ],
+        "posInfo": "gebt ab, gebte ab, hat abgegebt"
       },
       {
         "id": "vf-kultd-305",
@@ -43000,7 +43336,8 @@
         "tags": [
           "bildung"
         ],
-        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة"
+        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
+        "posInfo": "holt nach, holte nach, hat nachgeholt"
       },
       {
         "id": "vf-kultd-307",
@@ -43044,7 +43381,8 @@
         "level": "A2",
         "tags": [
           "bildung"
-        ]
+        ],
+        "posInfo": "gebt auf, gebte auf, hat aufgegebt"
       },
       {
         "id": "vf-kultd-310",
@@ -43057,7 +43395,8 @@
         "tags": [
           "bildung"
         ],
-        "aussprache": "ei = «آي» لا «إي»"
+        "aussprache": "ei = «آي» لا «إي»",
+        "posInfo": "dranbleibt, dranbleibte, hat gedranbleibt"
       },
       {
         "id": "vf-kultd-311",
@@ -43099,7 +43438,8 @@
         "tags": [
           "bildung"
         ],
-        "aussprache": "sp/st في البداية = «شب/شت» · ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة"
+        "aussprache": "sp/st في البداية = «شب/شت» · ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
+        "posInfo": "flüssigt, flüssigte, hat geflüssigt"
       },
       {
         "id": "vf-kultd-314",
@@ -43173,7 +43513,8 @@
         "tags": [
           "verkehr"
         ],
-        "aussprache": "sch = «ش» · w = «ڤ» · z = «تس»"
+        "aussprache": "sch = «ش» · w = «ڤ» · z = «تس»",
+        "posInfo": "schwarzfahrt, schwarzfahrte, ist geschwarzfahrt"
       },
       {
         "id": "vf-kultd-319",
@@ -43229,7 +43570,8 @@
         "level": "A2",
         "tags": [
           "verkehr"
-        ]
+        ],
+        "posInfo": "tankt, tankte, hat getankt"
       },
       {
         "id": "vf-kultd-323",
@@ -43332,7 +43674,8 @@
         "tags": [
           "behoerde"
         ],
-        "aussprache": "v = «ف»"
+        "aussprache": "v = «ف»",
+        "posInfo": "verlänget, verlängete, hat verlängern"
       },
       {
         "id": "vf-kultd-330",
@@ -43361,7 +43704,8 @@
         "tags": [
           "behoerde"
         ],
-        "aussprache": "ei = «آي» لا «إي»"
+        "aussprache": "ei = «آي» لا «إي»",
+        "posInfo": "widersprucht, widerspruchte, hat gewidersprucht"
       },
       {
         "id": "vf-kultd-332",
@@ -43472,7 +43816,8 @@
         "tags": [
           "behoerde"
         ],
-        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين"
+        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
+        "posInfo": "zuständigt, zuständigte, hat gezuständigt"
       },
       {
         "id": "vf-kultd-503",
@@ -43701,7 +44046,8 @@
         "level": "A2",
         "tags": [
           "kultur"
-        ]
+        ],
+        "posInfo": "bastet, bastete, hat gebastet"
       },
       {
         "id": "r312a2-194",
@@ -43713,7 +44059,8 @@
         "level": "A2",
         "tags": [
           "kultur"
-        ]
+        ],
+        "posInfo": "fotografiert, fotografierte, hat gefotografiert"
       },
       {
         "id": "r312a2-195",
@@ -43725,7 +44072,8 @@
         "level": "A2",
         "tags": [
           "kultur"
-        ]
+        ],
+        "posInfo": "joggt, joggte, hat gejoggt"
       },
       {
         "id": "r312a2-196",
@@ -43737,7 +44085,8 @@
         "level": "A2",
         "tags": [
           "kultur"
-        ]
+        ],
+        "posInfo": "reitet, reitete, hat gereitt"
       },
       {
         "id": "r312a2-197",
@@ -44197,7 +44546,8 @@
         "tags": [
           "argum"
         ],
-        "aussprache": "ei = «آي» لا «إي» · eu/äu = «أوي»"
+        "aussprache": "ei = «آي» لا «إي» · eu/äu = «أوي»",
+        "posInfo": "räumt ein, räumte ein, hat eingeräumt"
       },
       {
         "id": "vg-argumen-009",
@@ -44338,7 +44688,8 @@
         "tags": [
           "argum"
         ],
-        "aussprache": "ei = «آي» لا «إي» · sch = «ش» · z = «تس»"
+        "aussprache": "ei = «آي» لا «إي» · sch = «ش» · z = «تس»",
+        "posInfo": "schätzt ein, schätzte ein, hat eingeschätzt"
       },
       {
         "id": "vg-argumen-021",
@@ -44380,7 +44731,8 @@
         "tags": [
           "argum"
         ],
-        "aussprache": "w = «ڤ»"
+        "aussprache": "w = «ڤ»",
+        "posInfo": "wägt ab, wägte ab, hat abgewägt"
       },
       {
         "id": "vg-staatx-700",
@@ -44408,7 +44760,8 @@
         "tags": [
           "argum"
         ],
-        "aussprache": "ei = «آي» لا «إي»"
+        "aussprache": "ei = «آي» لا «إي»",
+        "posInfo": "sachlicht, sachlichte, hat gesachlicht"
       },
       {
         "id": "r313b1-114",
@@ -44857,7 +45210,8 @@
         "tags": [
           "karriere"
         ],
-        "aussprache": "ei = «آي» لا «إي» · w = «ڤ»"
+        "aussprache": "ei = «آي» لا «إي» · w = «ڤ»",
+        "posInfo": "entwicket weiter, entwickete weiter, hat weitergeentwicket"
       },
       {
         "id": "vg-arbeit--006",
@@ -44917,7 +45271,8 @@
         "tags": [
           "karriere"
         ],
-        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين"
+        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
+        "posInfo": "gründet, gründete, hat gegründt"
       },
       {
         "id": "vg-arbeit--012",
@@ -44943,7 +45298,8 @@
         "tags": [
           "karriere"
         ],
-        "aussprache": "ei = «آي» لا «إي» · sch = «ش»"
+        "aussprache": "ei = «آي» لا «إي» · sch = «ش»",
+        "posInfo": "scheitet, scheitete, hat gescheitet"
       },
       {
         "id": "vg-arbeit--014",
@@ -45047,7 +45403,8 @@
         "tags": [
           "karriere"
         ],
-        "aussprache": "v = «ف»"
+        "aussprache": "v = «ف»",
+        "posInfo": "verhandet, verhandete, hat verhandeln"
       },
       {
         "id": "vg-arbeit--023",
@@ -45133,7 +45490,8 @@
         "tags": [
           "karriere"
         ],
-        "aussprache": "ei = «آي» لا «إي»"
+        "aussprache": "ei = «آي» لا «إي»",
+        "posInfo": "belastbart, belastbarte, hat belastbar"
       },
       {
         "id": "vg-psyche--000",
@@ -45205,7 +45563,8 @@
         "tags": [
           "psyche"
         ],
-        "aussprache": "w = «ڤ» · ü = ضمّةٌ بشفتَينِ مستديرتَين"
+        "aussprache": "w = «ڤ» · ü = ضمّةٌ بشفتَينِ مستديرتَين",
+        "posInfo": "wohlfühlt, wohlfühlte, hat gewohlfühlt"
       },
       {
         "id": "vg-psyche--013",
@@ -45262,7 +45621,8 @@
         "tags": [
           "psyche"
         ],
-        "aussprache": "eu/äu = «أوي»"
+        "aussprache": "eu/äu = «أوي»",
+        "posInfo": "bereut, bereute, hat bereut"
       },
       {
         "id": "vg-psyche--017",
@@ -45275,7 +45635,8 @@
         "tags": [
           "psyche"
         ],
-        "aussprache": "ei = «آي» لا «إي» · v = «ف» · z = «تس»"
+        "aussprache": "ei = «آي» لا «إي» · v = «ف» · z = «تس»",
+        "posInfo": "verzeiht, verzeihte, hat verzeiht"
       },
       {
         "id": "vg-psyche--018",
@@ -45304,7 +45665,8 @@
         "tags": [
           "konflikt"
         ],
-        "aussprache": "v = «ف» · w = «ڤ»"
+        "aussprache": "v = «ف» · w = «ڤ»",
+        "posInfo": "werft vor, werfte vor, hat vorgewerft"
       },
       {
         "id": "vg-psyche--021",
@@ -45317,7 +45679,8 @@
         "tags": [
           "konflikt"
         ],
-        "aussprache": "ei = «آي» لا «إي»"
+        "aussprache": "ei = «آي» لا «إي»",
+        "posInfo": "beleidigt, beleidigte, hat beleidigt"
       },
       {
         "id": "vg-psyche--022",
@@ -45330,7 +45693,8 @@
         "tags": [
           "konflikt"
         ],
-        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · z = «تس»"
+        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · z = «تس»",
+        "posInfo": "setzt durch, setzte durch, hat durchgesetzt"
       },
       {
         "id": "vg-psyche--024",
@@ -45343,7 +45707,8 @@
         "tags": [
           "konflikt"
         ],
-        "aussprache": "v = «ف»"
+        "aussprache": "v = «ف»",
+        "posInfo": "vermittet, vermittete, hat vermitteln"
       },
       {
         "id": "vg-psyche--025",
@@ -45371,7 +45736,8 @@
         "tags": [
           "konflikt"
         ],
-        "aussprache": "ei = «آي» لا «إي»"
+        "aussprache": "ei = «آي» لا «إي»",
+        "posInfo": "lenkt ein, lenkte ein, hat eingelenkt"
       },
       {
         "id": "vg-psyche--027",
@@ -45446,7 +45812,8 @@
         "level": "B1",
         "tags": [
           "projekt"
-        ]
+        ],
+        "posInfo": "plant, plante, hat geplant"
       },
       {
         "id": "vh-projekt-002",
@@ -45531,7 +45898,8 @@
         "tags": [
           "projekt"
         ],
-        "aussprache": "z = «تس»"
+        "aussprache": "z = «تس»",
+        "posInfo": "setzt um, setzte um, hat umgesetzt"
       },
       {
         "id": "vh-projekt-008",
@@ -45625,7 +45993,8 @@
         "tags": [
           "projekt"
         ],
-        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين"
+        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
+        "posInfo": "lobt, lobte, hat gelobt"
       },
       {
         "id": "vh-projekt-017",
@@ -45638,7 +46007,8 @@
         "tags": [
           "projekt"
         ],
-        "aussprache": "v = «ف»"
+        "aussprache": "v = «ف»",
+        "posInfo": "verbesset, verbessete, hat verbessern"
       },
       {
         "id": "vh-projekt-018",
@@ -45726,7 +46096,8 @@
         "level": "B1",
         "tags": [
           "projekt"
-        ]
+        ],
+        "posInfo": "stimmt ab, stimmte ab, hat abgestimmt"
       },
       {
         "id": "vh-projekt-024",
@@ -46146,7 +46517,8 @@
         "tags": [
           "leben"
         ],
-        "aussprache": "v = «ف»"
+        "aussprache": "v = «ف»",
+        "posInfo": "etwast, etwaste, hat geetwast"
       },
       {
         "id": "vh-gesundh-015",
@@ -46368,7 +46740,8 @@
         "tags": [
           "medien"
         ],
-        "aussprache": "ei = «آي» لا «إي» · v = «ف»"
+        "aussprache": "ei = «آي» لا «إي» · v = «ف»",
+        "posInfo": "verbreitet, verbreitete, hat verbreitt"
       },
       {
         "id": "vh-technik-015",
@@ -46457,7 +46830,8 @@
         "level": "B1",
         "tags": [
           "medien"
-        ]
+        ],
+        "posInfo": "betragt, betragte, hat betragt"
       },
       {
         "id": "vh-technik-022",
@@ -46469,7 +46843,8 @@
         "level": "B1",
         "tags": [
           "medien"
-        ]
+        ],
+        "posInfo": "nehmt zu, nehmte zu, hat zugenehmt"
       },
       {
         "id": "vh-technik-023",
@@ -46481,7 +46856,8 @@
         "level": "B1",
         "tags": [
           "medien"
-        ]
+        ],
+        "posInfo": "nehmt ab, nehmte ab, hat abgenehmt"
       }
     ]
   },
@@ -46681,7 +47057,8 @@
         "level": "B1",
         "tags": [
           "stadt1"
-        ]
+        ],
+        "posInfo": "protestiert, protestierte, hat geprotestiert"
       },
       {
         "id": "vi-stadt-u-017",
@@ -46827,7 +47204,8 @@
         "tags": [
           "recht"
         ],
-        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين"
+        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
+        "posInfo": "haftet, haftete, hat gehaftt"
       },
       {
         "id": "vi-geld-re-009",
@@ -46979,7 +47357,8 @@
         "tags": [
           "geld1"
         ],
-        "aussprache": "sch = «ش» · v = «ف»"
+        "aussprache": "sch = «ش» · v = «ف»",
+        "posInfo": "verschuldet, verschuldete, hat verschuldt"
       },
       {
         "id": "vi-geld-re-020",
@@ -47047,7 +47426,8 @@
         "level": "B1",
         "tags": [
           "geld1"
-        ]
+        ],
+        "posInfo": "pfändet, pfändete, hat gepfändt"
       }
     ]
   },
@@ -47067,7 +47447,8 @@
         "tags": [
           "verb1"
         ],
-        "aussprache": "w = «ڤ»"
+        "aussprache": "w = «ڤ»",
+        "posInfo": "beantragt, beantragte, hat beantragt"
       },
       {
         "id": "vi-funktio-001",
@@ -47080,7 +47461,8 @@
         "tags": [
           "verb1"
         ],
-        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · ü = ضمّةٌ بشفتَينِ مستديرتَين"
+        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · ü = ضمّةٌ بشفتَينِ مستديرتَين",
+        "posInfo": "berücksichtigt, berücksichtigte, hat berücksichtigt"
       },
       {
         "id": "vi-funktio-003",
@@ -47092,7 +47474,8 @@
         "level": "B1",
         "tags": [
           "verb1"
-        ]
+        ],
+        "posInfo": "besteht, bestehte, hat besteht"
       },
       {
         "id": "vi-funktio-004",
@@ -47104,7 +47487,8 @@
         "level": "B1",
         "tags": [
           "verb1"
-        ]
+        ],
+        "posInfo": "besteht, bestehte, hat besteht"
       },
       {
         "id": "vi-funktio-005",
@@ -47116,7 +47500,8 @@
         "level": "B1",
         "tags": [
           "verb1"
-        ]
+        ],
+        "posInfo": "bezieht, beziehte, ist bezieht"
       },
       {
         "id": "vi-funktio-006",
@@ -47128,7 +47513,8 @@
         "level": "B1",
         "tags": [
           "verb1"
-        ]
+        ],
+        "posInfo": "verzichtet, verzichtete, hat verzichtt"
       },
       {
         "id": "vi-funktio-007",
@@ -47140,7 +47526,8 @@
         "level": "B1",
         "tags": [
           "verb1"
-        ]
+        ],
+        "posInfo": "beteiligt, beteiligte, hat beteiligt"
       },
       {
         "id": "vi-funktio-008",
@@ -47152,7 +47539,8 @@
         "level": "B1",
         "tags": [
           "verb1"
-        ]
+        ],
+        "posInfo": "teilnehmt, teilnehmte, hat geteilnehmt"
       },
       {
         "id": "vi-funktio-009",
@@ -47164,7 +47552,8 @@
         "level": "B1",
         "tags": [
           "verb1"
-        ]
+        ],
+        "posInfo": "weist hin, weiste hin, hat hingeweist"
       },
       {
         "id": "vi-funktio-010",
@@ -47177,7 +47566,8 @@
         "tags": [
           "verb1"
         ],
-        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين · -er في الآخر = «أَ» خفيفة"
+        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين · -er في الآخر = «أَ» خفيفة",
+        "posInfo": "verfügt, verfügte, hat verfügt"
       },
       {
         "id": "vi-funktio-011",
@@ -47189,7 +47579,8 @@
         "level": "B1",
         "tags": [
           "verb1"
-        ]
+        ],
+        "posInfo": "wirkt aus, wirkte aus, hat ausgewirkt"
       },
       {
         "id": "vi-funktio-012",
@@ -47201,7 +47592,8 @@
         "level": "B1",
         "tags": [
           "verb1"
-        ]
+        ],
+        "posInfo": "rückführt zu, rückführte zu, hat zugerückführt"
       },
       {
         "id": "vi-funktio-013",
@@ -47213,7 +47605,8 @@
         "level": "B1",
         "tags": [
           "verb1"
-        ]
+        ],
+        "posInfo": "geltet, geltete, hat geltt"
       },
       {
         "id": "vi-funktio-014",
@@ -47226,7 +47619,8 @@
         "tags": [
           "verb1"
         ],
-        "aussprache": "z = «تس»"
+        "aussprache": "z = «تس»",
+        "posInfo": "dient, diente, hat gedient"
       },
       {
         "id": "vi-funktio-015",
@@ -47239,7 +47633,8 @@
         "tags": [
           "verb1"
         ],
-        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين"
+        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
+        "posInfo": "eignt, eignte, hat geeignt"
       },
       {
         "id": "vi-funktio-016",
@@ -47251,7 +47646,8 @@
         "level": "B1",
         "tags": [
           "verb1"
-        ]
+        ],
+        "posInfo": "it, ite, hat geit"
       },
       {
         "id": "vi-funktio-017",
@@ -47264,7 +47660,8 @@
         "tags": [
           "verb1"
         ],
-        "aussprache": "sp/st في البداية = «شب/شت»"
+        "aussprache": "sp/st في البداية = «شب/شت»",
+        "posInfo": "zurt, zurte, hat gezurt"
       },
       {
         "id": "vi-funktio-018",
@@ -47276,7 +47673,8 @@
         "level": "B1",
         "tags": [
           "verb1"
-        ]
+        ],
+        "posInfo": "it, ite, hat geit"
       },
       {
         "id": "vi-funktio-019",
@@ -47288,7 +47686,8 @@
         "level": "B1",
         "tags": [
           "verb1"
-        ]
+        ],
+        "posInfo": "rücksichtet, rücksichtete, hat gerücksichtt"
       },
       {
         "id": "vi-funktio-020",
@@ -47314,7 +47713,8 @@
         "tags": [
           "verb1"
         ],
-        "img": "/cards/kommen.webp"
+        "img": "/cards/kommen.webp",
+        "posInfo": "zut, zute, ist gezut"
       },
       {
         "id": "vi-funktio-022",
@@ -47327,7 +47727,8 @@
         "tags": [
           "verb1"
         ],
-        "img": "/cards/kommen.webp"
+        "img": "/cards/kommen.webp",
+        "posInfo": "it, ite, ist geit"
       },
       {
         "id": "vi-funktio-023",
@@ -47339,7 +47740,8 @@
         "level": "B1",
         "tags": [
           "verb1"
-        ]
+        ],
+        "posInfo": "wertet, wertete, hat gewertt"
       },
       {
         "id": "vi-funktio-024",
@@ -47351,7 +47753,8 @@
         "level": "B1",
         "tags": [
           "verb1"
-        ]
+        ],
+        "posInfo": "mühet, mühete, hat gemühet"
       },
       {
         "id": "vi-funkv-700",
@@ -47363,7 +47766,8 @@
         "level": "B1",
         "tags": [
           "verb1"
-        ]
+        ],
+        "posInfo": "bezugt, bezugte, hat bezug"
       },
       {
         "id": "vi-funkv-701",
@@ -47376,7 +47780,8 @@
         "tags": [
           "verb1"
         ],
-        "aussprache": "v = «ف»"
+        "aussprache": "v = «ف»",
+        "posInfo": "abstandet, abstandete, hat geabstandt"
       },
       {
         "id": "vi-funkv-702",
@@ -47388,7 +47793,8 @@
         "level": "B1",
         "tags": [
           "verb1"
-        ]
+        ],
+        "posInfo": "kritikt, kritikte, hat gekritikt"
       },
       {
         "id": "vi-funkv-703",
@@ -47400,7 +47806,8 @@
         "level": "B1",
         "tags": [
           "verb1"
-        ]
+        ],
+        "posInfo": "einflusst, einflusste, hat geeinflusst"
       },
       {
         "id": "vi-funkv-704",
@@ -47424,7 +47831,8 @@
         "level": "B1",
         "tags": [
           "verb1"
-        ]
+        ],
+        "posInfo": "zumt, zumte, hat gezumt"
       },
       {
         "id": "vi-funkv-706",
@@ -47437,7 +47845,8 @@
         "tags": [
           "verb1"
         ],
-        "aussprache": "ie = «إي» ممدودة · z = «تس»"
+        "aussprache": "ie = «إي» ممدودة · z = «تس»",
+        "posInfo": "it, ite, ist geit"
       },
       {
         "id": "vi-funkv-707",
@@ -47450,7 +47859,8 @@
         "tags": [
           "verb1"
         ],
-        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين"
+        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
+        "posInfo": "verantwortungt, verantwortungte, hat verantwortung"
       },
       {
         "id": "vi-funkv-708",
@@ -47463,7 +47873,8 @@
         "tags": [
           "verb1"
         ],
-        "aussprache": "sp/st في البداية = «شب/شت»"
+        "aussprache": "sp/st في البداية = «شب/شت»",
+        "posInfo": "untert, unterte, hat unter"
       },
       {
         "id": "vi-funkv-709",
@@ -47475,7 +47886,8 @@
         "level": "B1",
         "tags": [
           "verb1"
-        ]
+        ],
+        "posInfo": "zurt, zurte, hat gezurt"
       },
       {
         "id": "vi-funkv-710",
@@ -47487,7 +47899,8 @@
         "level": "B1",
         "tags": [
           "verb1"
-        ]
+        ],
+        "posInfo": "erfolgt, erfolgte, hat erfolg"
       }
     ]
   },
@@ -47762,7 +48175,8 @@
         "tags": [
           "mig"
         ],
-        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · z = «تس»"
+        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · z = «تس»",
+        "posInfo": "rechtfindet zu, rechtfindete zu, hat zugerechtfindt"
       },
       {
         "id": "vj-migrati-009",
@@ -47803,7 +48217,8 @@
         "tags": [
           "mig"
         ],
-        "aussprache": "ei = «آي» لا «إي»"
+        "aussprache": "ei = «آي» لا «إي»",
+        "posInfo": "beschwert, beschwerte, hat beschwert"
       },
       {
         "id": "vj-migrati-013",
@@ -47888,7 +48303,8 @@
         "tags": [
           "fam"
         ],
-        "aussprache": "ie = «إي» ممدودة · z = «تس»"
+        "aussprache": "ie = «إي» ممدودة · z = «تس»",
+        "posInfo": "erzieht, erziehte, ist erzieht"
       },
       {
         "id": "vj-migrati-019",
@@ -48522,7 +48938,8 @@
         "level": "B1",
         "tags": [
           "dienst"
-        ]
+        ],
+        "posInfo": "erstattet, erstattete, hat erstattt"
       },
       {
         "id": "vk-b1x-012",
@@ -48683,7 +49100,8 @@
         "tags": [
           "natur1"
         ],
-        "aussprache": "w = «ڤ»"
+        "aussprache": "w = «ڤ»",
+        "posInfo": "teilnehmt, teilnehmte, hat geteilnehmt"
       },
       {
         "id": "vk-b1x-026",
@@ -48708,7 +49126,8 @@
         "tags": [
           "natur1"
         ],
-        "aussprache": "w = «ڤ»"
+        "aussprache": "w = «ڤ»",
+        "posInfo": "wärmt auf, wärmte auf, hat aufgewärmt"
       },
       {
         "id": "vk-b1x-028",
@@ -48874,7 +49293,8 @@
         "tags": [
           "bild"
         ],
-        "aussprache": "ei = «آي» لا «إي» · sp/st في البداية = «شب/شت»"
+        "aussprache": "ei = «آي» لا «إي» · sp/st في البداية = «شب/شت»",
+        "posInfo": "deutlicht, deutlichte, ist gedeutlicht"
       },
       {
         "id": "vk-b1x-041",
@@ -48886,7 +49306,8 @@
         "level": "B1",
         "tags": [
           "bild"
-        ]
+        ],
+        "posInfo": "leichtet, leichtete, hat geleichtt"
       },
       {
         "id": "vk-b1x-042",
@@ -48899,7 +49320,8 @@
         "tags": [
           "bild"
         ],
-        "aussprache": "ei = «آي» لا «إي»"
+        "aussprache": "ei = «آي» لا «إي»",
+        "posInfo": "konstantet, konstantete, hat gekonstantt"
       },
       {
         "id": "vk-b1x-043",
@@ -49239,7 +49661,8 @@
         "level": "B1",
         "tags": [
           "brief"
-        ]
+        ],
+        "posInfo": "umt, umte, hat geumt"
       },
       {
         "id": "vl-b1y-005",
@@ -49277,7 +49700,8 @@
         "level": "B1",
         "tags": [
           "brief"
-        ]
+        ],
+        "posInfo": "widersprucht, widerspruchte, hat gewidersprucht"
       },
       {
         "id": "vl-b1y-008",
@@ -49437,7 +49861,8 @@
         "tags": [
           "wirt"
         ],
-        "aussprache": "ie = «إي» ممدودة"
+        "aussprache": "ie = «إي» ممدودة",
+        "posInfo": "rentiert, rentierte, hat gerentiert"
       },
       {
         "id": "vl-b1y-021",
@@ -49908,7 +50333,8 @@
         "level": "B1",
         "tags": [
           "zeit1"
-        ]
+        ],
+        "posInfo": "it, ite, hat geit"
       },
       {
         "id": "vm-b1z-019",
@@ -49921,7 +50347,8 @@
         "tags": [
           "zeit1"
         ],
-        "aussprache": "ie = «إي» ممدودة · sch = «ش»"
+        "aussprache": "ie = «إي» ممدودة · sch = «ش»",
+        "posInfo": "schiebt auf, schiebte auf, hat aufgeschiebt"
       },
       {
         "id": "vm-b1z-020",
@@ -49933,7 +50360,8 @@
         "level": "B1",
         "tags": [
           "zeit1"
-        ]
+        ],
+        "posInfo": "lenkt ab, lenkte ab, hat abgelenkt"
       },
       {
         "id": "vm-b1z-021",
@@ -49946,7 +50374,8 @@
         "tags": [
           "zeit1"
         ],
-        "aussprache": "ei = «آي» لا «إي»"
+        "aussprache": "ei = «آي» لا «إي»",
+        "posInfo": "konzentriertet, konzentriertete, hat gekonzentriertt"
       },
       {
         "id": "vm-b1z-022",
@@ -49997,7 +50426,8 @@
         "tags": [
           "zeit1"
         ],
-        "aussprache": "sch = «ش» · ü = ضمّةٌ بشفتَينِ مستديرتَين"
+        "aussprache": "sch = «ش» · ü = ضمّةٌ بشفتَينِ مستديرتَين",
+        "posInfo": "dranbleibt, dranbleibte, hat gedranbleibt"
       },
       {
         "id": "vm-b1z-026",
@@ -50025,7 +50455,8 @@
         "level": "B1",
         "tags": [
           "bew"
-        ]
+        ],
+        "posInfo": "etwast, etwaste, hat geetwast"
       },
       {
         "id": "vm-b1z-028",
@@ -50037,7 +50468,8 @@
         "level": "B1",
         "tags": [
           "bew"
-        ]
+        ],
+        "posInfo": "auft, aufte, hat geauft"
       },
       {
         "id": "vm-b1z-029",
@@ -50050,7 +50482,8 @@
         "tags": [
           "bew"
         ],
-        "aussprache": "sp/st في البداية = «شب/شت»"
+        "aussprache": "sp/st في البداية = «شب/شت»",
+        "posInfo": "hintert, hinterte, hat gehintert"
       },
       {
         "id": "vm-b1z-030",
@@ -50063,7 +50496,8 @@
         "tags": [
           "bew"
         ],
-        "aussprache": "z = «تس»"
+        "aussprache": "z = «تس»",
+        "posInfo": "auft, aufte, ist geauft"
       },
       {
         "id": "vm-b1z-031",
@@ -50075,7 +50509,8 @@
         "level": "B1",
         "tags": [
           "bew"
-        ]
+        ],
+        "posInfo": "aust, auste, ist geaust"
       },
       {
         "id": "vm-b1z-032",
@@ -50100,7 +50535,8 @@
         "level": "B1",
         "tags": [
           "bew"
-        ]
+        ],
+        "posInfo": "inst, inste, hat geinst"
       },
       {
         "id": "vm-b1z-034",
@@ -50113,7 +50549,8 @@
         "tags": [
           "bew"
         ],
-        "aussprache": "ei = «آي» لا «إي»"
+        "aussprache": "ei = «آي» لا «إي»",
+        "posInfo": "auft, aufte, hat geauft"
       },
       {
         "id": "vm-b1z-035",
@@ -50125,7 +50562,8 @@
         "level": "B1",
         "tags": [
           "bew"
-        ]
+        ],
+        "posInfo": "untert, unterte, hat unter"
       },
       {
         "id": "vm-b1z-036",
@@ -50151,7 +50589,8 @@
         "tags": [
           "bew"
         ],
-        "img": "/cards/kommen.webp"
+        "img": "/cards/kommen.webp",
+        "posInfo": "zurt, zurte, ist gezurt"
       },
       {
         "id": "vm-b1z-900",
@@ -51912,7 +52351,8 @@
         "tags": [
           "praefix"
         ],
-        "aussprache": "ei = «آي» لا «إي» · sch = «ش» · v = «ف»"
+        "aussprache": "ei = «آي» لا «إي» · sch = «ش» · v = «ف»",
+        "posInfo": "verschreibt, verschreibte, hat verschreibt"
       },
       {
         "id": "vp-b1u-027",
@@ -51925,7 +52365,8 @@
         "tags": [
           "praefix"
         ],
-        "aussprache": "ei = «آي» لا «إي» · sch = «ش»"
+        "aussprache": "ei = «آي» لا «إي» · sch = «ش»",
+        "posInfo": "schreibt auf, schreibte auf, hat aufgeschreibt"
       },
       {
         "id": "vp-b1u-028",
@@ -51937,7 +52378,8 @@
         "level": "B1",
         "tags": [
           "praefix"
-        ]
+        ],
+        "posInfo": "schreibt unter, schreibte unter, hat unterschreibt"
       },
       {
         "id": "vp-b1u-029",
@@ -51950,7 +52392,8 @@
         "tags": [
           "praefix"
         ],
-        "aussprache": "ei = «آي» لا «إي» · sch = «ش» · z = «تس»"
+        "aussprache": "ei = «آي» لا «إي» · sch = «ش» · z = «تس»",
+        "posInfo": "schreibt zu, schreibte zu, hat zugeschreibt"
       },
       {
         "id": "vp-b1u-030",
@@ -51963,7 +52406,8 @@
         "tags": [
           "praefix"
         ],
-        "aussprache": "ei = «آي» لا «إي»"
+        "aussprache": "ei = «آي» لا «إي»",
+        "posInfo": "besteht, bestehte, hat besteht"
       },
       {
         "id": "vp-b1u-031",
@@ -51975,7 +52419,8 @@
         "level": "B1",
         "tags": [
           "praefix"
-        ]
+        ],
+        "posInfo": "entsteht, entstehte, hat entsteht"
       },
       {
         "id": "vp-b1u-032",
@@ -51988,7 +52433,8 @@
         "tags": [
           "praefix"
         ],
-        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة"
+        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
+        "posInfo": "versteht, verstehte, hat versteht"
       },
       {
         "id": "vp-b1u-033",
@@ -52000,7 +52446,8 @@
         "level": "B1",
         "tags": [
           "praefix"
-        ]
+        ],
+        "posInfo": "gesteht, gestehte, hat gesteht"
       },
       {
         "id": "vp-b1u-034",
@@ -52013,7 +52460,8 @@
         "tags": [
           "praefix"
         ],
-        "aussprache": "w = «ڤ»"
+        "aussprache": "w = «ڤ»",
+        "posInfo": "widersteht, widerstehte, hat gewidersteht"
       },
       {
         "id": "vp-b1u-900",
@@ -52439,7 +52887,8 @@
         "tags": [
           "gem"
         ],
-        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين"
+        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
+        "posInfo": "setzt ein, setzte ein, hat eingesetzt"
       },
       {
         "id": "vq-b1t-022",
@@ -53314,7 +53763,8 @@
         "level": "B1",
         "tags": [
           "digital"
-        ]
+        ],
+        "posInfo": "bloggt, bloggte, hat gebloggt"
       },
       {
         "id": "r313b1-005",
@@ -53386,7 +53836,8 @@
         "level": "B1",
         "tags": [
           "digital"
-        ]
+        ],
+        "posInfo": "mailt, mailte, hat gemailt"
       },
       {
         "id": "r313b1-010",
@@ -53472,7 +53923,8 @@
         "level": "B1",
         "tags": [
           "digital"
-        ]
+        ],
+        "posInfo": "twittet, twittete, hat getwittet"
       },
       {
         "id": "r313b1-016",
@@ -53484,7 +53936,8 @@
         "level": "B1",
         "tags": [
           "digital"
-        ]
+        ],
+        "posInfo": "googet, googete, hat gegooget"
       },
       {
         "id": "r313b1-017",
@@ -53863,7 +54316,8 @@
         "level": "B1",
         "tags": [
           "refl"
-        ]
+        ],
+        "posInfo": "bemüht, bemühte, hat bemüht"
       },
       {
         "id": "vs-b1r-026",
@@ -53876,7 +54330,8 @@
         "tags": [
           "refl"
         ],
-        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة"
+        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
+        "posInfo": "erkundigt, erkundigte, hat erkundigt"
       },
       {
         "id": "vs-b1r-029",
@@ -53888,7 +54343,8 @@
         "level": "B1",
         "tags": [
           "refl"
-        ]
+        ],
+        "posInfo": "verlasst, verlasste, hat verlasst"
       },
       {
         "id": "vs-b1r-030",
@@ -53900,7 +54356,8 @@
         "level": "B1",
         "tags": [
           "refl"
-        ]
+        ],
+        "posInfo": "gewöhnt, gewöhnte, hat gewöhnt"
       },
       {
         "id": "vs-b1r-031",
@@ -53913,7 +54370,8 @@
         "tags": [
           "refl"
         ],
-        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين"
+        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
+        "posInfo": "zeitet, zeitete, hat gezeitt"
       },
       {
         "id": "vs-b1r-032",
@@ -53926,7 +54384,8 @@
         "tags": [
           "refl"
         ],
-        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة"
+        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
+        "posInfo": "notizt, notizte, hat genotizt"
       },
       {
         "id": "vs-b1r-033",
@@ -53938,7 +54397,8 @@
         "level": "B1",
         "tags": [
           "refl"
-        ]
+        ],
+        "posInfo": "etwast, etwaste, hat geetwast"
       },
       {
         "id": "vs-b1r-034",
@@ -53950,7 +54410,8 @@
         "level": "B1",
         "tags": [
           "refl"
-        ]
+        ],
+        "posInfo": "verbesset, verbessete, hat verbessern"
       },
       {
         "id": "vs-b1r-900",
@@ -53963,7 +54424,8 @@
         "tags": [
           "refl"
         ],
-        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين"
+        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
+        "posInfo": "bereitet vor, bereitete vor, hat vorgebereitt"
       },
       {
         "id": "vs-b1r-901",
@@ -53976,7 +54438,8 @@
         "tags": [
           "refl"
         ],
-        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين"
+        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
+        "posInfo": "meldet an, meldete an, hat angemeldt"
       },
       {
         "id": "r313b1-082",
@@ -54033,7 +54496,8 @@
         "level": "B1",
         "tags": [
           "pruefung"
-        ]
+        ],
+        "posInfo": "löst, löste, hat gelöst"
       },
       {
         "id": "r313b1-086",
@@ -54119,7 +54583,8 @@
         "level": "B1",
         "tags": [
           "pruefung"
-        ]
+        ],
+        "posInfo": "ordnt zu, ordnte zu, hat zugeordnt"
       },
       {
         "id": "r313b1-092",
@@ -54378,7 +54843,8 @@
         "tags": [
           "sport2"
         ],
-        "aussprache": "eu/äu = «أوي» · v = «ف»"
+        "aussprache": "eu/äu = «أوي» · v = «ف»",
+        "posInfo": "beugt vor, beugte vor, hat vorgebeugt"
       },
       {
         "id": "vt-b1q-016",
@@ -54746,7 +55212,8 @@
         "level": "B1",
         "tags": [
           "buero"
-        ]
+        ],
+        "posInfo": "faxt, faxte, hat gefaxt"
       },
       {
         "id": "r313b1-070",
@@ -54816,7 +55283,8 @@
         "level": "B1",
         "tags": [
           "arbeit"
-        ]
+        ],
+        "posInfo": "jobbt, jobbte, hat gejobbt"
       },
       {
         "id": "r313b1-075",
@@ -55001,7 +55469,8 @@
         "tags": [
           "med2"
         ],
-        "aussprache": "ie = «إي» ممدودة"
+        "aussprache": "ie = «إي» ممدودة",
+        "posInfo": "teilt, teilte, ist geteilt"
       },
       {
         "id": "vu-b1p-005",
@@ -55056,7 +55525,8 @@
         "level": "B1",
         "tags": [
           "med2"
-        ]
+        ],
+        "posInfo": "zut, zute, hat gezut"
       },
       {
         "id": "vu-b1p-010",
@@ -55233,7 +55703,8 @@
         "level": "B1",
         "tags": [
           "verb2"
-        ]
+        ],
+        "posInfo": "kennt aus, kennte aus, hat ausgekennt"
       },
       {
         "id": "vu-b1p-023",
@@ -55245,7 +55716,8 @@
         "level": "B1",
         "tags": [
           "verb2"
-        ]
+        ],
+        "posInfo": "est, este, hat geest"
       },
       {
         "id": "vu-b1p-024",
@@ -55258,7 +55730,8 @@
         "tags": [
           "verb2"
         ],
-        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين"
+        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
+        "posInfo": "kommt auf, kommte auf, ist aufgekommt"
       },
       {
         "id": "vu-b1p-025",
@@ -55270,7 +55743,8 @@
         "level": "B1",
         "tags": [
           "verb2"
-        ]
+        ],
+        "posInfo": "weist hin, weiste hin, hat hingeweist"
       },
       {
         "id": "vu-b1p-026",
@@ -55282,7 +55756,8 @@
         "level": "B1",
         "tags": [
           "verb2"
-        ]
+        ],
+        "posInfo": "wirkt aus, wirkte aus, hat ausgewirkt"
       },
       {
         "id": "vu-b1p-027",
@@ -55294,7 +55769,8 @@
         "level": "B1",
         "tags": [
           "verb2"
-        ]
+        ],
+        "posInfo": "darauft, daraufte, ist gedarauft"
       },
       {
         "id": "vu-b1p-028",
@@ -55306,7 +55782,8 @@
         "level": "B1",
         "tags": [
           "verb2"
-        ]
+        ],
+        "posInfo": "ausstellt her, ausstellte her, hat hergeausstellt"
       },
       {
         "id": "vu-b1p-029",
@@ -55318,7 +55795,8 @@
         "level": "B1",
         "tags": [
           "verb2"
-        ]
+        ],
+        "posInfo": "rückgreift zu, rückgreifte zu, hat zugerückgreift"
       },
       {
         "id": "vu-b1p-030",
@@ -55331,7 +55809,8 @@
         "tags": [
           "verb2"
         ],
-        "aussprache": "z = «تس» · ö = بينَ الضمّةِ والكسرة"
+        "aussprache": "z = «تس» · ö = بينَ الضمّةِ والكسرة",
+        "posInfo": "auszöget hin, auszögete hin, hat hingeauszöget"
       },
       {
         "id": "vu-b1p-031",
@@ -55343,7 +55822,8 @@
         "level": "B1",
         "tags": [
           "verb2"
-        ]
+        ],
+        "posInfo": "it, ite, hat geit"
       },
       {
         "id": "vu-b1p-032",
@@ -55355,7 +55835,8 @@
         "level": "B1",
         "tags": [
           "verb2"
-        ]
+        ],
+        "posInfo": "zurt, zurte, hat gezurt"
       },
       {
         "id": "vu-b1p-033",
@@ -55367,7 +55848,8 @@
         "level": "B1",
         "tags": [
           "verb2"
-        ]
+        ],
+        "posInfo": "abstandet, abstandete, hat geabstandt"
       },
       {
         "id": "vu-b1p-034",
@@ -55379,7 +55861,8 @@
         "level": "B1",
         "tags": [
           "verb2"
-        ]
+        ],
+        "posInfo": "zurt, zurte, hat gezurt"
       },
       {
         "id": "vu-b1p-900",
@@ -55482,7 +55965,8 @@
         "level": "B1",
         "tags": [
           "medien"
-        ]
+        ],
+        "posInfo": "campt, campte, hat gecampt"
       },
       {
         "id": "r313b1-059",
@@ -55597,7 +56081,8 @@
         "level": "B1",
         "tags": [
           "medien"
-        ]
+        ],
+        "posInfo": "surft, surfte, hat gesurft"
       },
       {
         "id": "r313b1-067",
@@ -55793,7 +56278,8 @@
         "tags": [
           "verw"
         ],
-        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين · -er في الآخر = «أَ» خفيفة"
+        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين · -er في الآخر = «أَ» خفيفة",
+        "posInfo": "stimmt ab, stimmte ab, hat abgestimmt"
       },
       {
         "id": "vv-verwal-013",
@@ -55819,7 +56305,8 @@
         "tags": [
           "verw"
         ],
-        "aussprache": "ei = «آي» لا «إي»"
+        "aussprache": "ei = «آي» لا «إي»",
+        "posInfo": "it, ite, hat geit"
       },
       {
         "id": "vv-verwal-015",
@@ -56306,7 +56793,8 @@
         "tags": [
           "mein2"
         ],
-        "aussprache": "v = «ف»"
+        "aussprache": "v = «ف»",
+        "posInfo": "vermutet, vermutete, hat vermutt"
       },
       {
         "id": "vv-gefueh-012",
@@ -56319,7 +56807,8 @@
         "tags": [
           "mein2"
         ],
-        "aussprache": "ei = «آي» لا «إي» · w = «ڤ» · z = «تس»"
+        "aussprache": "ei = «آي» لا «إي» · w = «ڤ» · z = «تس»",
+        "posInfo": "bezweifet, bezweifete, hat bezweifeln"
       },
       {
         "id": "vv-gefueh-013",
@@ -56331,7 +56820,8 @@
         "level": "B1",
         "tags": [
           "mein2"
-        ]
+        ],
+        "posInfo": "schätzt ein, schätzte ein, hat eingeschätzt"
       },
       {
         "id": "vv-gefueh-016",
@@ -56344,7 +56834,8 @@
         "tags": [
           "mein2"
         ],
-        "aussprache": "z = «تس»"
+        "aussprache": "z = «تس»",
+        "posInfo": "gebt zu, gebte zu, hat zugegebt"
       },
       {
         "id": "vv-gefueh-017",
@@ -56357,7 +56848,8 @@
         "tags": [
           "mein2"
         ],
-        "aussprache": "ei = «آي» لا «إي»"
+        "aussprache": "ei = «آي» لا «إي»",
+        "posInfo": "bestreitet, bestreitete, hat bestreitt"
       },
       {
         "id": "vv-gefueh-018",
@@ -56369,7 +56861,8 @@
         "level": "B1",
         "tags": [
           "mein2"
-        ]
+        ],
+        "posInfo": "nahelegt, nahelegte, hat genahelegt"
       },
       {
         "id": "vv-gefueh-019",
@@ -56381,7 +56874,8 @@
         "level": "B1",
         "tags": [
           "mein2"
-        ]
+        ],
+        "posInfo": "offenlasst, offenlasste, hat geoffenlasst"
       }
     ]
   },
@@ -57801,7 +58295,8 @@
           "Wiederholung"
         ],
         "exampleDe": "Die Studie konnte die Wirkung noch nicht beweisen.",
-        "exampleAr": "لم تستطع الدراسة إثبات التأثير بعد."
+        "exampleAr": "لم تستطع الدراسة إثبات التأثير بعد.",
+        "posInfo": "beweist, beweiste, hat beweist"
       },
       {
         "id": "v1438",
@@ -57814,7 +58309,8 @@
           "zukunft"
         ],
         "exampleDe": "Die Ergebnisse untermauern die zentrale These der Studie.",
-        "exampleAr": "تدعم الن…"
+        "exampleAr": "تدعم الن…",
+        "posInfo": "mauet unter, mauete unter, hat untermauern"
       },
       {
         "id": "v1439",
@@ -57827,7 +58323,8 @@
           "zukunft"
         ],
         "exampleDe": "Die Forschenden interpretieren die Ergebnisse vorsichtig.",
-        "exampleAr": "يفسّر ال…"
+        "exampleAr": "يفسّر ال…",
+        "posInfo": "interpretiert, interpretierte, hat geinterpretiert"
       },
       {
         "id": "v1440",
@@ -59367,7 +59864,8 @@
           "a0-klassenzimmer",
           "Wiederholung"
         ],
-        "pos": "Verb"
+        "pos": "Verb",
+        "posInfo": "öffnt, öffnte, hat geöffnt"
       },
       {
         "de": "schließen",
@@ -59380,7 +59878,8 @@
           "a0-klassenzimmer",
           "Wiederholung"
         ],
-        "pos": "Verb"
+        "pos": "Verb",
+        "posInfo": "schließt, schließte, hat geschließt"
       },
       {
         "de": "schreiben",
@@ -59393,7 +59892,8 @@
           "a0-klassenzimmer",
           "Wiederholung"
         ],
-        "pos": "Verb"
+        "pos": "Verb",
+        "posInfo": "schreibt, schreibte, hat geschreibt"
       },
       {
         "de": "lesen",
