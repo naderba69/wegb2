@@ -2081,6 +2081,16 @@
           "dass"
         ],
         "explanationAr": "dass يربط جملة «أعرف أن …» والفعل في الآخر."
+      },
+      {
+        "id": "a1-wd-um1",
+        "type": "umformung",
+        "promptDe": "Verbinde mit weil/dass (Verb am Ende).",
+        "promptAr": "اربط بـ weil/dass مع الفعل في النهاية.",
+        "quelleDe": "Ich lerne Deutsch. Ich will in Deutschland arbeiten.",
+        "answer": "Ich lerne Deutsch, weil ich in Deutschland arbeiten will.",
+        "points": 2,
+        "explanationAr": "weil/dass = قوس فعلي: الفعل المصرف في النهاية (will). فاصلة إجبارية — خطأ عربي شائع نسيانها."
       }
     ]
   },
@@ -3586,6 +3596,16 @@
         ],
         "explanationAr": "الشرط بلا wenn: الفعل أوّلاً.",
         "points": 2
+      },
+      {
+        "id": "b2-bed-um1",
+        "type": "umformung",
+        "promptDe": "Forme Bedingung mit falls um (Konjunktiv).",
+        "promptAr": "حوّل الشرط بـ falls.",
+        "quelleDe": "Wenn es regnet, bleibe ich zu Hause. (real)",
+        "answer": "Falls es regnen sollte, bliebe ich zu Hause.",
+        "points": 2,
+        "explanationAr": "Bedingung B2: wenn (واقع) → falls + sollte + Konjunktiv II (احتمال). فرق دقيق GGP."
       }
     ],
     "resources": [
@@ -5331,6 +5351,16 @@
           "reisen."
         ],
         "explanationAr": "مشبك المستقبل Futur I: الفعل المساعد werden في المركز الثاني والمصدر reisen في آخر الجملة."
+      },
+      {
+        "id": "a2-fu-um1",
+        "type": "umformung",
+        "promptDe": "Forme Präsens → Futur I mit werden um.",
+        "promptAr": "حوّل إلى مستقبل بـ werden.",
+        "quelleDe": "Ich besuche dich morgen.",
+        "answer": "Ich werde dich morgen besuchen.",
+        "points": 2,
+        "explanationAr": "Futur I: werden + Infinitiv في النهاية. العربية مستقبل بـ سـ؛ الألمانية قوس فعلي."
       }
     ]
   },
@@ -5549,6 +5579,16 @@
           "Vaters."
         ],
         "explanationAr": "المضاف إليه Genitiv للمذكر يأخذ meines والاسم ينتهي بـ -s: meines Vaters."
+      },
+      {
+        "id": "b1-gen-um1",
+        "type": "umformung",
+        "promptDe": "Forme Besitz mit Genitiv-s um.",
+        "promptAr": "حوّل الملكية بـ Genitiv.",
+        "quelleDe": "das Auto von meinem Vater",
+        "answer": "das Auto meines Vaters",
+        "points": 2,
+        "explanationAr": "Genitiv B1: von + Dativ → des + Genitiv-s: meines Vaters. Genitiv حيّ في الكتابة الرسمية."
       }
     ]
   },
@@ -5834,6 +5874,16 @@
         "promptDe": "Ich spreche mit sein___ Kollegen.",
         "answer": "em",
         "explanationAr": "بعد sein في Dativ: seinem — والاسم أخذ N-Deklination: Kollegen."
+      },
+      {
+        "id": "b1-adj-um1",
+        "type": "umformung",
+        "promptDe": "Dekliniere Adjektiv nach definitem Artikel.",
+        "promptAr": "صرّف الصفة بعد أداة معرفة.",
+        "quelleDe": "der (klein) Tisch",
+        "answer": "der kleine Tisch",
+        "points": 2,
+        "explanationAr": "بعد der/die/das: الصفة -e فقط (kleine). بعد ein: -er/-e/-es. نظام B1 يحتاج Contrast جدول."
       }
     ]
   },
@@ -7750,6 +7800,16 @@
         ],
         "explanationAr": "weder … noch ينفي بلا kein.",
         "points": 2
+      },
+      {
+        "id": "b2-dk-um1",
+        "type": "umformung",
+        "promptDe": "Forme mit Doppelkonnektor um (nicht nur...sondern auch).",
+        "promptAr": "حوّل بـ رابط مزدوج.",
+        "quelleDe": "Er spricht Deutsch und er spricht Englisch.",
+        "answer": "Er spricht nicht nur Deutsch, sondern auch Englisch.",
+        "points": 2,
+        "explanationAr": "Doppelkonnektor B2: nicht nur...sondern auch يركز التركيز — مهارة كتابية أكاديمية."
       }
     ]
   },
@@ -11188,6 +11248,16 @@
         "explanationAr": "können → könnten (Konj. II): Kannst→Könntest — أدب A2, ليس ماضي.",
         "points": 2,
         "promptAr": "حوّل الجملة حسب القاعدة."
+      },
+      {
+        "id": "a2-k2h-um1",
+        "type": "umformung",
+        "promptDe": "Forme höflich mit Konjunktiv II (würden/könnten).",
+        "promptAr": "حوّل إلى صيغة مهذبة بـ Konjunktiv II.",
+        "quelleDe": "Gib mir bitte das Salz!",
+        "answer": "Könnten Sie mir bitte das Salz geben?",
+        "points": 2,
+        "explanationAr": "مهذب B1: Imperativ → Konjunktiv II: könnten/würden. فرق ثقافة: المباشر وقح في ألمانيا."
       }
     ],
     "pitfalls": [
@@ -11564,6 +11634,16 @@
         "explanationAr": "التصحيح: راجع القاعدة وانتبه للنهايات والأدوات — التمرين يدرّب التحويل بدقة.",
         "points": 2,
         "promptAr": "حوّل الجملة حسب القاعدة."
+      },
+      {
+        "id": "a2-adj-um1",
+        "type": "umformung",
+        "promptDe": "Setze Adjektiv mit richtiger Endung ein.",
+        "promptAr": "ضع الصفة بالنهاية الإعرابية الصحيحة.",
+        "quelleDe": "ein (groß) Haus",
+        "answer": "ein großes Haus",
+        "points": 2,
+        "explanationAr": "Adjektivendung: ein + Neutrum + -es بعد kein/ein. groß → großes. النهايات B1 ليست تزيينًا بل وظيفة إعرابية."
       }
     ]
   },
@@ -13750,6 +13830,16 @@
           "falsch"
         ],
         "promptAr": "هل الجملة صحيحة؟ اختر «صح» أو «خطأ»."
+      },
+      {
+        "id": "b2-tk-um1",
+        "type": "umformung",
+        "promptDe": "Verbinde Argumente mit Textkonnektor (einerseits/andererseits).",
+        "promptAr": "اربط الحجج برابط نصي.",
+        "quelleDe": "Er ist teuer. Er ist gut.",
+        "answer": "Einerseits ist er teuer, andererseits ist er gut.",
+        "points": 2,
+        "explanationAr": "Textkonnektor B2: einerseits/andererseits ينظّم الحجة — مطلوب في كتابة الامتحان B2."
       }
     ],
     "verify": [
@@ -14980,6 +15070,16 @@
         "explanationAr": "r في النهاية/بعد a: fahren → [aɐ] مدغم vokalisiert، لا يُلفظ r صريح.",
         "points": 2,
         "promptAr": "حوّل الجملة حسب القاعدة."
+      },
+      {
+        "id": "a1-r-um1",
+        "type": "umformung",
+        "promptDe": "Forme mit gerolltem vs vokalisiertem r um.",
+        "promptAr": "حوّل نطق r من مجرور إلى صائت.",
+        "quelleDe": "Ich fahre nach Berlin (gerollt).",
+        "answer": "Ich fahre [faːɐə] nach Berlin (vokalisiert).",
+        "points": 2,
+        "explanationAr": "r في النهاية يُنطق حركة صائتة ɐ (Vokalisierung): fahren → [faːɐən]. فرق سمعي ألماني — لا r عربية قوية."
       }
     ],
     "pitfalls": [
