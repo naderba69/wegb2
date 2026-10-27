@@ -3202,6 +3202,20 @@
           "falsch"
         ],
         "promptAr": "هل هذه الجملة Plusquamperfekt؟"
+      },
+      {
+        "id": "b1-plu-um3",
+        "type": "umformung",
+        "promptDe": "Ich hatte das Buch gelesen, bevor du kamst. Frage: Was passiert zuerst? — Lesen (Plusquamperfekt hatte gelesen) vor Kommen",
+        "promptAr": "أي الحدثين أولاً؟",
+        "quelleDe": "Ich hatte das Buch gelesen, bevor du kamst.",
+        "answer": "Lesen vor Kommen (hatte gelesen)",
+        "alternatives": [],
+        "explanationAr": "Plusquamperfekt يدل على الأقدم — شرح عربي.",
+        "explanationDe": "Plusquamperfekt يدل على الأقدم — شرح عربي.",
+        "hintAr": "had gelesen",
+        "points": 2,
+        "level": "B1"
       }
     ],
     "resources": [
@@ -3554,6 +3568,20 @@
           "geht in Rente."
         ],
         "explanationAr": "النعت الاسمي المشتق Partizipialattribut: يوضع قبل الاسم موصوفاً مع نهايات الصفات: Der von allen geschätzte Kollege."
+      },
+      {
+        "id": "b2-pa2-um3",
+        "type": "umformung",
+        "promptDe": "Relativ: Die Kinder, die ___, spielen. (lachen)",
+        "promptAr": "حوّل Partizip إلى جملة نسبية.",
+        "quelleDe": "Die lachenden Kinder spielen.",
+        "answer": "Die Kinder, die lachen, spielen",
+        "alternatives": [],
+        "explanationAr": "Partizip I = Nebensatz مع die — شرح عربي.",
+        "explanationDe": "Partizip I = Nebensatz مع die — شرح عربي.",
+        "hintAr": "die lachen",
+        "points": 2,
+        "level": "B2"
       }
     ],
     "resources": [
@@ -8579,6 +8607,20 @@
         "answer": "Wie heißen Sie?",
         "points": 2,
         "explanationAr": "du (عادي) → Sie (رسمي) + فعل جمع: heißt → heißen. فرق ثقافي B1: متى نستخدم Sie؟"
+      },
+      {
+        "id": "a0-beg-um3",
+        "type": "umformung",
+        "promptDe": "Wie antwortest du? Hallo, ___ bin Ahmed.",
+        "promptAr": "أكمل التحية.",
+        "quelleDe": "Hallo, ich bin Sara.",
+        "answer": "ich bin Ahmed",
+        "alternatives": [],
+        "explanationAr": "تحية A0: ich bin + اسم — شرح عربي يوضح.",
+        "explanationDe": "تحية A0: ich bin + اسم — شرح عربي يوضح.",
+        "hintAr": "ich bin",
+        "points": 2,
+        "level": "A0"
       }
     ],
     "pitfalls": [
@@ -10059,6 +10101,20 @@
           "keine Zeit."
         ],
         "explanationAr": "عند البدء بالظرف الزمني (Gestern) يتقدم الفعل إلى الموضع الثاني ويليه الفاعل: Gestern hatte ich keine Zeit."
+      },
+      {
+        "id": "a2-praet-um3",
+        "type": "umformung",
+        "promptDe": "Präsens: Ich ___ heute krank. (war → bin)",
+        "promptAr": "حوّل Präteritum إلى Präsens.",
+        "quelleDe": "Ich war gestern krank.",
+        "answer": "Ich bin heute krank",
+        "alternatives": [],
+        "explanationAr": "Präteritum war (كان) → Präsens bin — شرح عربي.",
+        "explanationDe": "Präteritum war (كان) → Präsens bin — شرح عربي.",
+        "hintAr": "war → bin",
+        "points": 2,
+        "level": "A2"
       }
     ]
   },
@@ -11052,6 +11108,20 @@
         "answer": "Er drückt aus, dass...",
         "points": 2,
         "explanationAr": "zum Ausdruck bringen → ausdrücken. B1 Funktionsverb: فعل خفيف + اسم قوي — للتكثيف."
+      },
+      {
+        "id": "b1-fv-um3",
+        "type": "umformung",
+        "promptDe": "Einfach: Wir ___. (entscheiden)",
+        "promptAr": "استخدم الفعل البسيط.",
+        "quelleDe": "Wir treffen eine Entscheidung.",
+        "answer": "Wir entscheiden",
+        "alternatives": [],
+        "explanationAr": "Funktionsverb → Vollverb: Entscheidung treffen → entscheiden — شرح عربي.",
+        "explanationDe": "Funktionsverb → Vollverb: Entscheidung treffen → entscheiden — شرح عربي.",
+        "hintAr": "entscheiden",
+        "points": 2,
+        "level": "B1"
       }
     ],
     "pitfalls": [
@@ -12050,6 +12120,20 @@
         "answer": "ein großes Haus",
         "points": 2,
         "explanationAr": "Adjektivendung: ein + Neutrum + -es بعد kein/ein. groß → großes. النهايات B1 ليست تزيينًا بل وظيفة إعرابية."
+      },
+      {
+        "id": "a2-adj2-um3",
+        "type": "umformung",
+        "promptDe": "Adjektiv als Nomen: Der ___ liest. (alt → Alte)",
+        "promptAr": "حوّل الصفة إلى اسم.",
+        "quelleDe": "Der Mann ist alt.",
+        "answer": "Der Alte liest",
+        "alternatives": [],
+        "explanationAr": "alt → der Alte (اسم من صفة) — شرح عربي.",
+        "explanationDe": "alt → der Alte (اسم من صفة) — شرح عربي.",
+        "hintAr": "der Alte",
+        "points": 2,
+        "level": "A2"
       }
     ]
   },
@@ -14808,6 +14892,20 @@
         "answer": "Wo wohnen Sie?",
         "points": 2,
         "explanationAr": "du wohnst (مفرد) → Sie wohnen (جمع شكلي). الضمير الرسمي دائماً كبير Sie."
+      },
+      {
+        "id": "a0-dus-um3",
+        "type": "umformung",
+        "promptDe": "Du-Form: ___ du Herr Müller?",
+        "promptAr": "حوّل Sie إلى du.",
+        "quelleDe": "Sind Sie Herr Müller?",
+        "answer": "Bist du Herr Müller?",
+        "alternatives": [],
+        "explanationAr": "Sie (رسمي) → du (ودي) مع تصريف bist — شرح عربي.",
+        "explanationDe": "Sie (رسمي) → du (ودي) مع تصريف bist — شرح عربي.",
+        "hintAr": "du bist",
+        "points": 2,
+        "level": "A0"
       }
     ],
     "pitfalls": [
@@ -16014,6 +16112,20 @@
         "answer": "Tag [tak] (g→k), gib [gip]",
         "points": 2,
         "explanationAr": "b/d/g في النهاية تُنطق p/t/k: Tag = tak. Mayer: صوت+كتابة Contrast يثبت القاعدة."
+      },
+      {
+        "id": "a1-aus-um3",
+        "type": "umformung",
+        "promptDe": "Auslaut: Wie klingt g in „Tag“? — k-Laut",
+        "promptAr": "كيف يُنطق g آخر الكلمة؟",
+        "quelleDe": "Der Tag ist schön.",
+        "answer": "k-Laut",
+        "alternatives": [],
+        "explanationAr": "Auslautverhärtung: Tag /ta:k/ (g→k) — شرح عربي.",
+        "explanationDe": "Auslautverhärtung: Tag /ta:k/ (g→k) — شرح عربي.",
+        "hintAr": "Tag = tak",
+        "points": 2,
+        "level": "A1"
       }
     ],
     "pitfalls": [
@@ -16874,6 +16986,20 @@
         "answer": "Ich bin nicht sicher, aber ich denke: B ist richtig, weil...",
         "points": 2,
         "explanationAr": "استراتيجية B1: لا تترك فراغاً — خمّن مع تبرير weil. Conti Prediction: التخمين ينشط الذاكرة."
+      },
+      {
+        "id": "a1-str-um3",
+        "type": "umformung",
+        "promptDe": "Strategie: Was zuerst? Fragen oder Text? — Fragen",
+        "promptAr": "استراتيجية القراءة.",
+        "quelleDe": "Prüfung: Lies zuerst die Fragen, dann den Text.",
+        "answer": "Fragen zuerst",
+        "alternatives": [],
+        "explanationAr": "A1 Leseratten: قراءة السؤال أولاً توفر الوقت — شرح عربي.",
+        "explanationDe": "A1 Leseratten: قراءة السؤال أولاً توفر الوقت — شرح عربي.",
+        "hintAr": "Fragen zuerst",
+        "points": 2,
+        "level": "A1"
       }
     ],
     "pitfalls": [
@@ -17865,6 +17991,20 @@
         "answer": "Ich sehe den Studenten.",
         "points": 2,
         "explanationAr": "N-Deklination: Student, Kunde, Kollege → Akk -n: den Studenten. حالة B2 خاصة."
+      },
+      {
+        "id": "b2-n-um3",
+        "type": "umformung",
+        "promptDe": "Welcher Kasus? — den Studenten (Akk N-Deklination)",
+        "promptAr": "حدد حالة N-Deklination.",
+        "quelleDe": "Ich sehe den Studenten.",
+        "answer": "Akk N-Deklination",
+        "alternatives": [],
+        "explanationAr": "Student (مذكر ضعيف) يأخذ -en في Akk/Dat/Gen — شرح عربي.",
+        "explanationDe": "Student (مذكر ضعيف) يأخذ -en في Akk/Dat/Gen — شرح عربي.",
+        "hintAr": "N-Deklination -en",
+        "points": 2,
+        "level": "B2"
       }
     ],
     "resources": [
