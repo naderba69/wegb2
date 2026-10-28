@@ -140,12 +140,12 @@ export function useProgress() {
     });
   }, []);
 
-  /** تسجيل نتيجة مهمة — النجاح ≥80% (ومهمةُ التحقق تُغلِق سجلَّ درسِها استقلالاً أو حاجةً) */
+  /** تسجيل نتيجة مهمة — النجاح ≥60% (Goethe 60/100) وتميّز ≥80% — مهمةُ التحقق تُغلِق سجلَّ درسِها استقلالاً أو حاجةً */
     const submitTask = useCallback(
     (day: number, taskId: string, score: number, total: number, kind?: TaskKind, geplantMin?: number, verifyFor?: string, minutenEffektiv?: number) => {
       update((p) => {
         const prev = p.plan.tasks[taskId];
-        const passed = total > 0 && score / total >= 0.8;
+        const passed = total > 0 && score / total >= 0.6;
         const result: TaskResult = {
           done: true,
           passed: passed || !!prev?.passed,

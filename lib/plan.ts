@@ -838,7 +838,7 @@ export function buildDay(day: number, progress: Progress): DayPlan {
         id: tid(5),
         kind: "check",
         titleDe: "Tagescheck",
-        titleAr: "فحص اليوم (عتبة النجاح 80%)",
+        titleAr: "فحص اليوم (60% نجاح رسمي — 80% تميّز)",
         minutes: 15,
         quiz: buildQuiz(day, phase, 8, progress, "tc"),
       });
@@ -910,7 +910,7 @@ export function buildDay(day: number, progress: Progress): DayPlan {
         id: tid(5),
         kind: "check",
         titleDe: "Tagescheck",
-        titleAr: "فحص اليوم (عتبة النجاح 80%)",
+        titleAr: "فحص اليوم (60% نجاح رسمي — 80% تميّز)",
         minutes: 15,
         quiz: buildQuiz(day, phase, 8, progress, "tc2"),
       });
@@ -977,7 +977,7 @@ export function buildDay(day: number, progress: Progress): DayPlan {
         id: tid(5),
         kind: "check",
         titleDe: "Tagescheck",
-        titleAr: "فحص اليوم (عتبة النجاح 80%)",
+        titleAr: "فحص اليوم (60% نجاح رسمي — 80% تميّز)",
         minutes: 15,
         quiz: buildQuiz(day, phase, 10, progress, "tc3"),
       });

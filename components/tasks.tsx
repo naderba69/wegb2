@@ -1471,7 +1471,7 @@ function CheckTask({ task, onPoints, persistKey }: { task: DayTask; onPoints: (p
           </div>
         )
       )}
-      <p style={{ color: "var(--color-ink2)", marginBottom: "0.7rem" }}>عتبة النجاح 80% — الفاشل يُعاد ويُرحَّل إن لزم.</p>
+      <p style={{ color: "var(--color-ink2)", marginBottom: "0.7rem" }}>عتبة النجاح 60% Goethe (80% تميّز) — الفاشل يُعاد ويُرحَّل إن لزم.</p>
       <ExerciseSet items={task.quiz ?? []} onPoints={onPoints} storageKey={persistKey ? `${persistKey}:quiz` : undefined} />
     </section>
   );
