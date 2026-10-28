@@ -569,7 +569,7 @@ const vocabRepeatAudit = (() => {
     ok([1, 5, 60, 120, 121, 200, 300, 377].every((d) => bauHoerRunde(d).level === levelOf(Math.min(d, TOTAL)) && texts.some((t) => t.level === bauHoerRunde(d).level)), "K24d المعمل يعمل على مستوى الخطة في كل يوم — ولكل مستوى نصوصه، بلا جولة فارغة أبداً");
     ok(darfSpielen("pruefung", 0) === true && darfSpielen("pruefung", 1) === false && darfSpielen("training", 99) === true, "K24e القانون الصارم: استماعة واحدة في الامتحان — الثانية ممنوعة في المحرك نفسه لا في الواجهة");
     ok(fragenFrei(0) === false && fragenFrei(1) === true, "K24f لا إجابات قبل استماعة — القفل مبرمج لا أدبي");
-    ok(RATE.lern === 0.7 && RATE.pruefung === 0.95 && Object.keys(RATE).length === 2, "K24g معدّلان نظاميان بالضبط — لا منزلق فوضى");
+    ok(RATE.sehrLangsam === 0.6 && RATE.lern === 0.7 && RATE.pruefung === 0.95 && RATE.schnell === 1.25 && Object.keys(RATE).length === 4, "K24g أربعة معدّلات نظامية — لا منزلق فوضى (0.6×/0.7×/0.95×/1.25× Mayer)");
     const demo = bauHoerRunde(150);
     const ans: Record<string, string> = {};
     for (const it of demo.items) ans[it.id] = it.options ? it.options.find((o) => werteItem(it, o)) ?? it.options[0] : it.answers[0];

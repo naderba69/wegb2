@@ -17,6 +17,7 @@ import { checkAbzeichen } from "./spiel";
 import { logK, KIND_KOMPETENZ, FEHLER_ZU_KOMPETENZ } from "./kompetenz";
 import { progressKeyActive } from "./profiles";
 import { migrateCurriculumSchedule } from "./curriculum-schedule";
+import { idbGet, idbSet, idbDelete } from "./idb";
 
 export const PROGRESS_EVENT = "weg-progress-changed";
 
@@ -95,14 +96,72 @@ export function loadProgress(): Progress {
   }
 }
 
+/** تقليص الحجم عند الاقتراب من حد 5MB: احتفظ بآخر 45 يومًا مفصّلاً، الأقدم يبقى ملخّصه فقط */
+function pruneForQuota(p: Progress): Progress {
+  const raw = JSON.stringify(p);
+  if (raw.length < 4_200_000) return p;
+  const days = p.plan.days ?? {};
+  const keys = Object.keys(days).map(Number).sort((a,b)=>a-b);
+  if (keys.length <= 45) return p;
+  const keep = new Set(keys.slice(-45));
+  const pruned: Record<string, unknown> = {};
+  for (const k of Object.keys(days)) {
+    const nk = Number(k);
+    if (keep.has(nk)) pruned[k] = (days as Record<string, unknown>)[k];
+    else {
+      const d = (days as Record<string, unknown>)[k] as { score?: number; total?: number; closed?: boolean; at?: string };
+      pruned[k] = { score: d.score, total: d.total, closed: d.closed, at: d.at };
+    }
+  }
+  return { ...p, plan: { ...p.plan, days: pruned as typeof days } };
+}
+
 export function saveProgress(p: Progress) {
   try {
-    const migrated = migrateCurriculumSchedule(separateLegacyManualMinutes(p));
-    window.localStorage.setItem(progressKeyActive(), JSON.stringify(migrated));
-    emit();
+    const migrated = migrateCurriculumSchedule(separateLegacyManualMinutes(pruneForQuota(p)));
+    const key = progressKeyActive();
+    const raw = JSON.stringify(migrated);
+    try {
+      window.localStorage.setItem(key, raw);
+      emit();
+      // also mirror to IDB for backup (best-effort, async)
+      idbSet(key, raw).catch(()=>{});
+      return;
+    } catch (e) {
+      const isQuota = e instanceof DOMException && (e.name === "QuotaExceededError" || (e as unknown as { code?: number }).code === 22);
+      if (!isQuota) throw e;
+      // fallback to IDB
+      idbSet(key, raw).then((ok)=>{
+        if (ok) {
+          try { window.localStorage.removeItem(key); } catch {}
+          emit();
+          console.warn("wegb2: localStorage quota exceeded — migrated to IndexedDB");
+        }
+      }).catch(()=>{});
+      // try prune more aggressively and retry localStorage once
+      try {
+        const pruned = pruneForQuota({ ...migrated, plan: { ...migrated.plan, kompetenzLog: [], sicherheit: [] } } as Progress);
+        window.localStorage.setItem(key, JSON.stringify(pruned));
+        emit();
+      } catch {}
+    }
   } catch {
-    /* التخزين ممتلئ أو محظور */
+    /* التخزين ممتلئ أو محظور — IDB already attempted */
   }
+}
+
+/** تحميل مع دعم IndexedDB كـ fallback (يُستدعى async في الـ hook) */
+export async function loadProgressAsync(): Promise<Progress> {
+  const sync = loadProgress();
+  if (sync !== emptyProgress) return sync;
+  // try IDB
+  try {
+    const key = progressKeyActive();
+    const raw = await idbGet(key);
+    if (!raw) return emptyProgress;
+    const p = JSON.parse(raw) as Progress;
+    return separateLegacyManualMinutes(migrateCurriculumSchedule({ ...emptyProgress, ...p, plan: { ...emptyProgress.plan, ...p.plan }, settings: { ...emptyProgress.settings, ...p.settings } }));
+  } catch { return emptyProgress; }
 }
 
 export const MAX_STREAK = 7; // K-StreakCap: لا سلاسل عدوانية — السقف 7 مع حماية «يوم سيّئ»
@@ -125,11 +184,24 @@ export function useProgress() {
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
-    setProgress(loadProgress());
-    setReady(true);
-    const onChange = () => setProgress(loadProgress());
+    let cancelled = false;
+    const sync = loadProgress();
+    if (sync !== emptyProgress) {
+      setProgress(sync);
+      setReady(true);
+    } else {
+      // try IDB async (quota fallback)
+      loadProgressAsync().then((p)=>{
+        if (!cancelled) { setProgress(p); setReady(true); }
+      }).catch(()=>{ if(!cancelled) setReady(true); });
+    }
+    const onChange = () => {
+      const s = loadProgress();
+      if (s !== emptyProgress) setProgress(s);
+      else loadProgressAsync().then((p)=>{ if(!cancelled) setProgress(p); });
+    };
     window.addEventListener(PROGRESS_EVENT, onChange);
-    return () => window.removeEventListener(PROGRESS_EVENT, onChange);
+    return () => { cancelled = true; window.removeEventListener(PROGRESS_EVENT, onChange); };
   }, []);
 
   const update = useCallback((fn: (p: Progress) => Progress) => {
@@ -268,6 +340,8 @@ export function useProgress() {
         if (key?.startsWith(prefix)) window.localStorage.removeItem(key);
       }
     } catch { /* progress reset still works if optional timer storage is unavailable */ }
+    try { window.localStorage.removeItem(progressKeyActive()); } catch {}
+    idbDelete(progressKeyActive()).catch(()=>{});
     saveProgress(emptyProgress);
     setProgress(emptyProgress);
   }, []);
