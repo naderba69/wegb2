@@ -1,7 +1,7 @@
 # خطة الإنتاج — Weg nach B2 — 378 يوم — من التدقيق إلى الإصلاح
 
-**التاريخ 2026-10-28 — الفرع `arena/4ac94986-wegb2` بعد دمج PR#19 `d845a36`**
-**الحالة: `tsc0 build15/15 smoke1916/0 interaktiv922/0 audit0` — Gates PASS — جاهز للإنتاج**
+**التاريخ 2026-10-28 — الفرع `arena/0e11c42f-wegb2` بعد دمج PR#24 `f101540` + إغلاق P2**
+**الحالة: `tsc0 build17/17 smoke1916/0 interaktiv922/0 audit0` — Gates PASS — P0 0 P1 0 P2 0/52 مغلقة — جاهز للإنتاج — انظر `docs/P2_CLOSURE_2026-10-28.md`**
 **المراجع المعتمدة: Goethe-Zertifikat B2 (Lesen 65د/5T30Q + Hören 40د/4T30Q + Schreiben 75د 150W+100W + Sprechen 15د ثنائي), BAMF Integrationskurs 700UE (600+100 Orientierungskurs I-III), CEFR Companion 2020 (Mediation 19 + Online Interaction + Plurilingual 3), DLL 6 Einheiten, GGP150, Mayer Multimedia 15 Prinzipien (Coherence 0.86 Signaling 0.69 Modality 1.00 Segmenting 0.67), Conti EPI MARS→EARS**
 
 ---
@@ -53,8 +53,8 @@
 - `onboarding/wizard` — لا wizard هدف (BAMF/تمريض/دراسة)
 - إلخ (القائمة الكاملة 34 في `AUDIT_TRI_ROLE` فصل II و III)
 
-### P2 متوسطة — 52 / P3 منخفضة — 30
-تفصيلها في التدقيقات الحرفية 22228 سطر — تُعالج بعد P0/P1.
+### P2 متوسطة — 52 / P3 منخفضة — 30 → **P2 مغلقة 0/52 ✅ 2026-10-28**
+تفصيلها في التدقيقات الحرفية 22228 سطر — **أُغلقت كاملة** في `docs/P2_CLOSURE_2026-10-28.md` (FIXED 38 + ACCEPTED 9 + DEFERRED→P3 5). P3 تبقى 30 تحسينية مستمرة.
 
 ---
 
