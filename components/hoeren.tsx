@@ -137,7 +137,7 @@ export function HoerLabor({ progress }: { progress: Progress }) {
         )}
       </div>
 
-      {mitAudio && <audio ref={audioRef} src={hoerenAudio[runde.textId].file} preload="metadata" />}
+      {mitAudio && <audio ref={audioRef} src={hoerenAudio[runde.textId].file} preload="auto" />}
       <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap", alignItems: "center", marginBottom: "0.6rem" }}>
         {darfSpielen(modus, plays) ? (
           <button className="btn btn-gold" onClick={abspielen} disabled={!speechAvailable() && !mitAudio && modus === "pruefung"}>
