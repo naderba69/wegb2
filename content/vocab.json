@@ -2562,7 +2562,7 @@
         "de": "begründen",
         "ar": "يبرّر/يؤسس",
         "pos": "Verb",
-        "exampleDe": "Er begründet seine Entscheidung mit Fakten.",
+        "exampleDe": "Er begründet seine Entscheidung mit Fakten → begründen.",
         "exampleAr": "يبرّر قراره بالحقائق.",
         "level": "B1",
         "tags": [
@@ -2896,7 +2896,7 @@
           "arbeit"
         ],
         "img": "/cards/ausbilden.webp",
-        "exampleDe": "Die Firma bildet junge Menschen aus.",
+        "exampleDe": "Die Firma bildet junge Menschen aus → ausbilden.",
         "exampleAr": "الشركة تدرّب الشباب.",
         "posInfo": "bildet aus, bildete aus, hat ausgebildet"
       },
@@ -2973,7 +2973,7 @@
         "ar": "يظهر/يتصرّف (منفصل)",
         "pos": "Verb",
         "posInfo": "tritt auf",
-        "exampleDe": "Er ist überzeugend aufgetreten.",
+        "exampleDe": "Er ist überzeugend aufgetreten → auftreten.",
         "exampleAr": "ظهر مقنع…",
         "level": "B1",
         "tags": [
@@ -3354,7 +3354,7 @@
         "ar": "يستلم/يتبنّى/يتحمّل",
         "pos": "Verb",
         "posInfo": "übernimmt",
-        "exampleDe": "Er übernimmt die Verantwortung.",
+        "exampleDe": "Er übernimmt die Verantwortung → übernehmen.",
         "exampleAr": "يتحمّل ا…",
         "level": "B2",
         "tags": [
@@ -3391,7 +3391,7 @@
         ],
         "img": "/cards/voraussetzen.webp",
         "aussprache": "v = «ف» · z = «تس»",
-        "exampleDe": "Gute Deutschkenntnisse werden vorausgesetzt.",
+        "exampleDe": "Gute Deutschkenntnisse werden vorausgesetzt → voraussetzen.",
         "exampleAr": "يُفترض توفر معرفة جيدة بالألمانية.",
         "posInfo": "setzt voraus, setzte voraus, hat vorausgesetzt"
       },
@@ -3466,7 +3466,7 @@
         "ar": "يُنهي/يُبرم",
         "pos": "Verb",
         "posInfo": "schließt ab",
-        "exampleDe": "Sie hat das Studium abgeschlossen.",
+        "exampleDe": "Sie hat das Studium abgeschlossen → abschließen.",
         "exampleAr": "أنهت درا…",
         "level": "B2",
         "tags": [
@@ -3542,7 +3542,7 @@
         "de": "greifen",
         "ar": "يُفيد/ينفع (عن الإجراء)",
         "pos": "Verb",
-        "exampleDe": "Er greift nach dem Buch auf dem Tisch.",
+        "exampleDe": "Er greift nach dem Buch auf dem Tisch → greifen.",
         "exampleAr": "يمد يده نحو الكتاب على الطاولة.",
         "level": "B2",
         "tags": [
@@ -3908,7 +3908,7 @@
           "beziehungen"
         ],
         "aussprache": "v = «ف» · ö = بينَ الضمّةِ والكسرة",
-        "exampleDe": "Nach dem Streit haben sie sich versöhnt.",
+        "exampleDe": "Nach dem Streit haben sie sich versöhnt → sich versöhnen.",
         "exampleAr": "تصالحا بعد الشجار.",
         "posInfo": "versöhnt sich, versöhnte sich, hat sich versöhnt",
         "img": "/cards/sichversöhnen-v189.webp"
@@ -3972,7 +3972,7 @@
         "tags": [
           "beziehungen"
         ],
-        "exampleDe": "Sie haben sich nach zwei Jahren getrennt.",
+        "exampleDe": "Sie haben sich nach zwei Jahren getrennt → sich trennen.",
         "exampleAr": "انفصلا بعد سنتين.",
         "posInfo": "trennt sich, trennte sich, hat sich getrennt",
         "img": "/cards/sichtrennen-v193.webp"
@@ -4148,7 +4148,7 @@
         "tags": [
           "beziehungen"
         ],
-        "exampleDe": "Hedi kümmert sich um seinen Vater nach dem Schlaganfall.",
+        "exampleDe": "Hedi kümmert sich um seinen Vater nach dem Schlaganfall → sich kümmern um.",
         "exampleAr": "هادي يرع…",
         "posInfo": "kümmert sich um, kümmerte sich um, hat sich gekümmert um",
         "img": "/cards/sichkümmernum-v204.webp"
@@ -4228,7 +4228,7 @@
           "beziehungen"
         ],
         "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
-        "exampleDe": "Wer beim Zählerstand betrügt, riskiert die Kündigung des Vertrags.",
+        "exampleDe": "Wer beim Zählerstand betrügt, riskiert die Kündigung des Vertrags → betrügen.",
         "exampleAr": "من يخدع…",
         "posInfo": "betrügt, betrog, hat betrogen",
         "img": "/cards/betrügen-v209.webp"
@@ -4307,7 +4307,7 @@
         "tags": [
           "beziehungen"
         ],
-        "exampleDe": "Ich freue mich schon auf den Urlaub an der Ostsee.",
+        "exampleDe": "Ich freue mich schon auf den Urlaub an der Ostsee → sich freuen auf.",
         "exampleAr": "أترقّب ب…",
         "posInfo": "freut sich auf, freute sich auf, hat sich gefreut auf",
         "img": "/cards/sichfreuenauf-v214.webp"
@@ -4338,7 +4338,7 @@
           "beziehungen"
         ],
         "aussprache": "ö = بينَ الضمّةِ والكسرة",
-        "exampleDe": "Ich gönne ihr die Beförderung, sie hat jahrelang dafür gearbeitet.",
+        "exampleDe": "Ich gönne ihr die Beförderung, sie hat jahrelang dafür gearbeitet → gönnen.",
         "exampleAr": "أتمنّى ل…",
         "posInfo": "gönnt, gönnte, hat gegönnt",
         "img": "/cards/gönnen-v216.webp"
@@ -4617,7 +4617,7 @@
           "gesundheit"
         ],
         "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
-        "exampleDe": "Er fühlt sich heute viel besser nach dem Schlaf.",
+        "exampleDe": "Er fühlt sich heute viel besser nach dem Schlaf → sich fühlen.",
         "exampleAr": "يشعر بتحسن كبير اليوم بعد النوم.",
         "posInfo": "fühlt sich, fühlte sich, hat sich gefühlt",
         "img": "/cards/sichfühlen-v235.webp"
@@ -4676,7 +4676,7 @@
         "tags": [
           "gesundheit"
         ],
-        "exampleDe": "Diese Ärztin behandelt vor allem Kinder.",
+        "exampleDe": "Diese Ärztin behandelt vor allem Kinder → behandeln.",
         "exampleAr": "هذه الطب…",
         "posInfo": "behandelt, behandelte, hat behandelt",
         "img": "/cards/behandeln-v239.webp"
@@ -4691,7 +4691,7 @@
           "gesundheit"
         ],
         "aussprache": "ie = «إي» ممدودة",
-        "exampleDe": "Das Knie muss operiert werden, sonst bleibt der Schmerz.",
+        "exampleDe": "Das Knie muss operiert werden, sonst bleibt der Schmerz → operieren.",
         "exampleAr": "الركبة ي…",
         "posInfo": "operiert, operierte, hat operiert"
       },
@@ -4720,7 +4720,7 @@
         "tags": [
           "gesundheit"
         ],
-        "exampleDe": "Der Patient ist langsamer gesundet, als die Ärzte erwartet hatten.",
+        "exampleDe": "Der Patient ist langsamer gesundet, als die Ärzte erwartet hatten → gesunden.",
         "exampleAr": "المريض ت…",
         "posInfo": "gesundet, gesundete, ist gesundet"
       },
@@ -4920,7 +4920,7 @@
         "tags": [
           "gesundheit"
         ],
-        "exampleDe": "Wer Kollegen mobbt, riskiert eine Abmahnung.",
+        "exampleDe": "Wer Kollegen mobbt, riskiert eine Abmahnung → mobben.",
         "exampleAr": "من ينمّر…",
         "posInfo": "mobbt, mobbte, hat gemobbt"
       },
@@ -5058,7 +5058,7 @@
         "tags": [
           "gesundheit"
         ],
-        "exampleDe": "Wer sich gesund ernährt, braucht weniger Tabletten.",
+        "exampleDe": "Wer sich gesund ernährt, braucht weniger Tabletten → sich ernähren.",
         "exampleAr": "من يتغذّ…",
         "posInfo": "ernährt sich, ernährte sich, hat sich ernährt"
       },
@@ -5104,7 +5104,7 @@
         "tags": [
           "gesundheit"
         ],
-        "exampleDe": "Ihr ist übel seit dem Morgen.",
+        "exampleDe": "Ihr ist übel seit dem Morgen → die Übelkeit.",
         "exampleAr": "تشعر بال…",
         "article": "die",
         "farbe": "ROT"
@@ -44765,7 +44765,7 @@
         "de": "einräumen",
         "ar": "يُقِرُّ جزئياً",
         "pos": "Verb",
-        "exampleDe": "Ich räume ein, dass es Risiken gibt.",
+        "exampleDe": "Ich räume ein, dass es Risiken gibt → einräumen.",
         "exampleAr": "أُقِرُّ…",
         "level": "B1",
         "tags": [
@@ -44907,7 +44907,7 @@
         "de": "einschätzen",
         "ar": "يقدّر / يقيّم",
         "pos": "Verb",
-        "exampleDe": "Wie schätzt du die Lage ein?",
+        "exampleDe": "Wie schätzt du die Lage ein? → einschätzen.",
         "exampleAr": "كيفَ تقي…",
         "level": "B1",
         "tags": [
@@ -45490,7 +45490,7 @@
         "de": "gründen",
         "ar": "يؤسّس",
         "pos": "Verb",
-        "exampleDe": "Er hat eine Firma gegründet.",
+        "exampleDe": "Er hat eine Firma gegründet → gründen.",
         "exampleAr": "أسَّسَ ش…",
         "level": "B1",
         "tags": [
@@ -45622,7 +45622,7 @@
         "de": "verhandeln",
         "ar": "يفاوض",
         "pos": "Verb",
-        "exampleDe": "Ich verhandle über das Gehalt.",
+        "exampleDe": "Ich verhandle über das Gehalt → verhandeln.",
         "exampleAr": "أفاوضُ ع…",
         "level": "B1",
         "tags": [
@@ -45782,7 +45782,7 @@
         "de": "sich wohlfühlen",
         "ar": "يشعرُ بالارتياح",
         "pos": "Verb",
-        "exampleDe": "Ich fühle mich hier wohl.",
+        "exampleDe": "Ich fühle mich hier wohl → sich wohlfühlen.",
         "exampleAr": "أشعرُ با…",
         "level": "B1",
         "tags": [
@@ -45840,7 +45840,7 @@
         "de": "bereuen",
         "ar": "يندم",
         "pos": "Verb",
-        "exampleDe": "Ich bereue nichts.",
+        "exampleDe": "Ich bereue nichts → bereuen.",
         "exampleAr": "لا أندمُ…",
         "level": "B1",
         "tags": [
@@ -45854,7 +45854,7 @@
         "de": "verzeihen",
         "ar": "يسامح",
         "pos": "Verb",
-        "exampleDe": "Er hat mir verziehen.",
+        "exampleDe": "Er hat mir verziehen → verzeihen.",
         "exampleAr": "سامحَني",
         "level": "B1",
         "tags": [
@@ -45912,7 +45912,7 @@
         "de": "sich durchsetzen",
         "ar": "يفرضُ رأيَه",
         "pos": "Verb",
-        "exampleDe": "Sie hat sich durchgesetzt.",
+        "exampleDe": "Sie hat sich durchgesetzt → sich durchsetzen.",
         "exampleAr": "فرضت رأي…",
         "level": "B1",
         "tags": [
@@ -45926,7 +45926,7 @@
         "de": "vermitteln",
         "ar": "يتوسَّط",
         "pos": "Verb",
-        "exampleDe": "Der Chef vermittelt im Streit.",
+        "exampleDe": "Der Chef vermittelt im Streit → vermitteln.",
         "exampleAr": "المديرُ…",
         "level": "B1",
         "tags": [
@@ -45955,7 +45955,7 @@
         "de": "einlenken",
         "ar": "يلين",
         "pos": "Verb",
-        "exampleDe": "Am Ende hat er eingelenkt.",
+        "exampleDe": "Am Ende hat er eingelenkt → einlenken.",
         "exampleAr": "في الآخر…",
         "level": "B1",
         "tags": [
@@ -46117,7 +46117,7 @@
         "de": "umsetzen",
         "ar": "ينفّذ",
         "pos": "Verb",
-        "exampleDe": "Wir setzen den Plan um.",
+        "exampleDe": "Wir setzen den Plan um → umsetzen.",
         "exampleAr": "ننفّذُ ا…",
         "level": "B1",
         "tags": [
@@ -46212,7 +46212,7 @@
         "de": "loben für",
         "ar": "يمدحُ على",
         "pos": "Verb",
-        "exampleDe": "Der Chef lobte uns für die Arbeit.",
+        "exampleDe": "Der Chef lobte uns für die Arbeit → loben für.",
         "exampleAr": "مدحَنا ا…",
         "level": "B1",
         "tags": [
@@ -46316,7 +46316,7 @@
         "de": "sich abstimmen",
         "ar": "يتنسَّق",
         "pos": "Verb",
-        "exampleDe": "Wir stimmen uns morgen ab.",
+        "exampleDe": "Wir stimmen uns morgen ab → sich abstimmen.",
         "exampleAr": "نتنسَّقُ…",
         "level": "B1",
         "tags": [
@@ -47050,7 +47050,7 @@
         "de": "betragen",
         "ar": "يبلغُ مقدارُه",
         "pos": "Verb",
-        "exampleDe": "Die Miete beträgt sechshundert Euro.",
+        "exampleDe": "Die Miete beträgt sechshundert Euro → betragen.",
         "exampleAr": "الإيجارُ…",
         "level": "B1",
         "tags": [
@@ -47423,7 +47423,7 @@
         "de": "haften für",
         "ar": "يتحمَّلُ مسؤوليةَ",
         "pos": "Verb",
-        "exampleDe": "Der Vermieter haftet für den Schaden.",
+        "exampleDe": "Der Vermieter haftet für den Schaden → haften für.",
         "exampleAr": "المؤجِّر…",
         "level": "B1",
         "tags": [
@@ -47646,7 +47646,7 @@
         "de": "pfänden",
         "ar": "يحجزُ قضائياً (يوقِعُ الحجزَ على مال)",
         "pos": "Verb",
-        "exampleDe": "Das Konto wurde gepfändet.",
+        "exampleDe": "Das Konto wurde gepfändet → pfänden.",
         "exampleAr": "حُجِزَ ا…",
         "level": "B1",
         "tags": [
@@ -47666,7 +47666,7 @@
         "de": "beantragen und bewilligen",
         "ar": "يقدّمُ طلباً ويُوافَق",
         "pos": "Verb",
-        "exampleDe": "Ich habe beantragt, und man hat bewilligt.",
+        "exampleDe": "Ich habe beantragt, und man hat bewilligt → beantragen und bewilligen.",
         "exampleAr": "قدَّمتُ…",
         "level": "B1",
         "tags": [
@@ -47694,7 +47694,7 @@
         "de": "bestehen aus",
         "ar": "يتكوَّنُ من",
         "pos": "Verb",
-        "exampleDe": "Das Team besteht aus fünf Personen.",
+        "exampleDe": "Das Team besteht aus fünf Personen → bestehen aus.",
         "exampleAr": "الفريقُ…",
         "level": "B1",
         "tags": [
@@ -47707,7 +47707,7 @@
         "de": "bestehen auf",
         "ar": "يصرُّ على",
         "pos": "Verb",
-        "exampleDe": "Er besteht auf einer Antwort.",
+        "exampleDe": "Er besteht auf einer Antwort → bestehen auf.",
         "exampleAr": "يصرُّ عل…",
         "level": "B1",
         "tags": [
@@ -47720,7 +47720,7 @@
         "de": "sich beziehen auf",
         "ar": "يشيرُ إلى",
         "pos": "Verb",
-        "exampleDe": "Ich beziehe mich auf Ihre Mail.",
+        "exampleDe": "Ich beziehe mich auf Ihre Mail → sich beziehen auf.",
         "exampleAr": "أشيرُ إل…",
         "level": "B1",
         "tags": [
@@ -47733,7 +47733,7 @@
         "de": "verzichten auf",
         "ar": "يتخلّى عن",
         "pos": "Verb",
-        "exampleDe": "Ich verzichte auf das Auto.",
+        "exampleDe": "Ich verzichte auf das Auto → verzichten auf.",
         "exampleAr": "أتخلّى ع…",
         "level": "B1",
         "tags": [
@@ -47759,7 +47759,7 @@
         "de": "teilnehmen an",
         "ar": "يحضرُ ويشارك",
         "pos": "Verb",
-        "exampleDe": "Ich nehme an der Sitzung teil.",
+        "exampleDe": "Ich nehme an der Sitzung teil → teilnehmen an.",
         "exampleAr": "أشاركُ ف…",
         "level": "B1",
         "tags": [
@@ -47772,7 +47772,7 @@
         "de": "hinweisen auf",
         "ar": "ينبّهُ إلى",
         "pos": "Verb",
-        "exampleDe": "Ich weise auf das Risiko hin.",
+        "exampleDe": "Ich weise auf das Risiko hin → hinweisen auf.",
         "exampleAr": "أنبّهُ إ…",
         "level": "B1",
         "tags": [
@@ -47785,7 +47785,7 @@
         "de": "verfügen über",
         "ar": "يمتلكُ / يتصرَّفُ في",
         "pos": "Verb",
-        "exampleDe": "Er verfügt über gute Kenntnisse.",
+        "exampleDe": "Er verfügt über gute Kenntnisse → verfügen über.",
         "exampleAr": "يمتلكُ م…",
         "level": "B1",
         "tags": [
@@ -47799,7 +47799,7 @@
         "de": "sich auswirken auf",
         "ar": "ينعكسُ على",
         "pos": "Verb",
-        "exampleDe": "Das wirkt sich auf die Kosten aus.",
+        "exampleDe": "Das wirkt sich auf die Kosten aus → sich auswirken auf.",
         "exampleAr": "ينعكسُ ذ…",
         "level": "B1",
         "tags": [
@@ -47812,7 +47812,7 @@
         "de": "zurückführen auf",
         "ar": "يُرجِعُ إلى",
         "pos": "Verb",
-        "exampleDe": "Man führt es auf das Wetter zurück.",
+        "exampleDe": "Man führt es auf das Wetter zurück → zurückführen auf.",
         "exampleAr": "يُرجِعون…",
         "level": "B1",
         "tags": [
@@ -47838,7 +47838,7 @@
         "de": "dienen zu",
         "ar": "يخدمُ غرضَ",
         "pos": "Verb",
-        "exampleDe": "Das dient zur Sicherheit.",
+        "exampleDe": "Das dient zur Sicherheit → dienen zu.",
         "exampleAr": "يخدمُ ذل…",
         "level": "B1",
         "tags": [
@@ -47852,7 +47852,7 @@
         "de": "sich eignen für",
         "ar": "يصلحُ لـ",
         "pos": "Verb",
-        "exampleDe": "Der Raum eignet sich für Kurse.",
+        "exampleDe": "Der Raum eignet sich für Kurse → sich eignen für.",
         "exampleAr": "القاعةُ…",
         "level": "B1",
         "tags": [
@@ -50566,7 +50566,7 @@
         "de": "aufschieben",
         "ar": "يسوّف",
         "pos": "Verb",
-        "exampleDe": "Ich schiebe unangenehme Aufgaben auf.",
+        "exampleDe": "Ich schiebe unangenehme Aufgaben auf → aufschieben.",
         "exampleAr": "أسوّفُ ا…",
         "level": "B1",
         "tags": [
@@ -50645,7 +50645,7 @@
         "de": "dranbleiben trotz Rückschlag",
         "ar": "يواظبُ رغمَ الانتكاسة",
         "pos": "Verb",
-        "exampleDe": "Wichtig ist, trotz Rückschlag dranzubleiben.",
+        "exampleDe": "Wichtig ist, trotz Rückschlag dranzubleiben → dranbleiben trotz Rückschlag.",
         "exampleAr": "المهمُّ…",
         "level": "B1",
         "tags": [
@@ -51415,7 +51415,7 @@
         "de": "das Gericht empfehlen",
         "ar": "ينصحُ بطبق",
         "pos": "Nomen",
-        "exampleDe": "Was können Sie empfehlen?",
+        "exampleDe": "Was können Sie empfehlen? → das Gericht empfehlen.",
         "exampleAr": "بماذا تن…",
         "level": "B1",
         "tags": [
@@ -51982,7 +51982,7 @@
         "de": "die Wohnung untervermieten",
         "ar": "يؤجّرُ من الباطن",
         "pos": "Nomen",
-        "exampleDe": "Untervermieten geht nur mit Erlaubnis.",
+        "exampleDe": "Untervermieten geht nur mit Erlaubnis → die Wohnung untervermieten.",
         "exampleAr": "التأجيرُ…",
         "level": "B1",
         "tags": [
@@ -52570,7 +52570,7 @@
         "de": "verschreiben",
         "ar": "يصفُ دواءً",
         "pos": "Verb",
-        "exampleDe": "Der Arzt hat mir Tabletten verschrieben.",
+        "exampleDe": "Der Arzt hat mir Tabletten verschrieben → verschreiben.",
         "exampleAr": "وصفَ لي…",
         "level": "B1",
         "tags": [
@@ -52584,7 +52584,7 @@
         "de": "aufschreiben",
         "ar": "يدوّن",
         "pos": "Verb",
-        "exampleDe": "Schreib dir die Adresse auf.",
+        "exampleDe": "Schreib dir die Adresse auf → aufschreiben.",
         "exampleAr": "دوّنِ ال…",
         "level": "B1",
         "tags": [
@@ -52611,7 +52611,7 @@
         "de": "zuschreiben",
         "ar": "يَنسِبُ إلى",
         "pos": "Verb",
-        "exampleDe": "Man schreibt ihm den Erfolg zu.",
+        "exampleDe": "Man schreibt ihm den Erfolg zu → zuschreiben.",
         "exampleAr": "يُنسَبُ…",
         "level": "B1",
         "tags": [
@@ -52666,7 +52666,7 @@
         "de": "gestehen",
         "ar": "يعترف",
         "pos": "Verb",
-        "exampleDe": "Er gestand den Fehler.",
+        "exampleDe": "Er gestand den Fehler → gestehen.",
         "exampleAr": "اعترفَ ب…",
         "level": "B1",
         "tags": [
@@ -52942,7 +52942,7 @@
         "de": "den Dauerauftrag einrichten",
         "ar": "ينشئُ أمرَ دفعٍ دائماً",
         "pos": "Nomen",
-        "exampleDe": "Ich richte einen Dauerauftrag ein.",
+        "exampleDe": "Ich richte einen Dauerauftrag ein → den Dauerauftrag einrichten.",
         "exampleAr": "أُنشِئُ…",
         "level": "B1",
         "tags": [
@@ -53106,7 +53106,7 @@
         "de": "sich einsetzen für",
         "ar": "يناضلُ من أجل",
         "pos": "Verb",
-        "exampleDe": "Sie setzt sich für Kinder ein.",
+        "exampleDe": "Sie setzt sich für Kinder ein → sich einsetzen für.",
         "exampleAr": "تناضلُ م…",
         "level": "B1",
         "tags": [
@@ -53443,7 +53443,7 @@
         "ar": "تطبيقُ البنكِ الإلكتروني",
         "pos": "Nomen",
         "article": "die",
-        "exampleDe": "Die Online-Banking-App ist sicher.",
+        "exampleDe": "Die Online-Banking-App ist sicher → die Online-Banking-App.",
         "exampleAr": "تطبيقُ ا…",
         "level": "B1",
         "tags": [
@@ -53457,7 +53457,7 @@
         "ar": "التحقُّقُ بخطوتَين",
         "pos": "Nomen",
         "article": "die",
-        "exampleDe": "Die Zwei-Faktor-Authentifizierung schützt das Konto.",
+        "exampleDe": "Die Zwei-Faktor-Authentifizierung schützt das Konto → die Zwei-Faktor-Authentifizierung.",
         "exampleAr": "التحقُّق…",
         "level": "B1",
         "tags": [
@@ -53500,7 +53500,7 @@
         "ar": "بريدُ التصيُّد",
         "pos": "Nomen",
         "article": "die",
-        "exampleDe": "Öffne keine Phishing-Mails.",
+        "exampleDe": "Öffne keine Phishing-Mails → die Phishing-Mail.",
         "exampleAr": "لا تفتحْ…",
         "level": "B1",
         "tags": [
@@ -53557,7 +53557,7 @@
         "de": "das Konto sperren lassen",
         "ar": "يوقفُ الحساب",
         "pos": "Nomen",
-        "exampleDe": "Ich habe die Karte sperren lassen.",
+        "exampleDe": "Ich habe die Karte sperren lassen → das Konto sperren lassen.",
         "exampleAr": "أوقفتُ ا…",
         "level": "B1",
         "tags": [
@@ -54143,7 +54143,7 @@
         "de": "twittern",
         "ar": "يغرّد (تويتر)",
         "pos": "Verb",
-        "exampleDe": "Der Politiker twittert fast jeden Tag.",
+        "exampleDe": "Der Politiker twittert fast jeden Tag → twittern.",
         "exampleAr": "يغرّد ال…",
         "level": "B1",
         "tags": [
@@ -54156,7 +54156,7 @@
         "de": "googeln",
         "ar": "يبحث في غوغل",
         "pos": "Verb",
-        "exampleDe": "Ich google schnell die Adresse des Restaurants.",
+        "exampleDe": "Ich google schnell die Adresse des Restaurants → googeln.",
         "exampleAr": "سأبحث بس…",
         "level": "B1",
         "tags": [
@@ -54536,7 +54536,7 @@
         "de": "sich bemühen um",
         "ar": "يسعى إلى",
         "pos": "Verb",
-        "exampleDe": "Ich bemühe mich um einen Platz.",
+        "exampleDe": "Ich bemühe mich um einen Platz → sich bemühen um.",
         "exampleAr": "أسعى إلى…",
         "level": "B1",
         "tags": [
@@ -54549,7 +54549,7 @@
         "de": "sich erkundigen nach",
         "ar": "يستفسرُ عن",
         "pos": "Verb",
-        "exampleDe": "Ich erkundige mich nach dem Preis.",
+        "exampleDe": "Ich erkundige mich nach dem Preis → sich erkundigen nach.",
         "exampleAr": "أستفسرُ…",
         "level": "B1",
         "tags": [
@@ -54576,7 +54576,7 @@
         "de": "sich gewöhnen an den Rhythmus",
         "ar": "يعتادُ الإيقاع",
         "pos": "Verb",
-        "exampleDe": "Ich habe mich an den Rhythmus gewöhnt.",
+        "exampleDe": "Ich habe mich an den Rhythmus gewöhnt → sich gewöhnen an den Rhythmus.",
         "exampleAr": "اعتدتُ ا…",
         "level": "B1",
         "tags": [
@@ -54630,7 +54630,7 @@
         "de": "sich verbessern in",
         "ar": "يتحسَّنُ في",
         "pos": "Verb",
-        "exampleDe": "Ich habe mich im Hören verbessert.",
+        "exampleDe": "Ich habe mich im Hören verbessert → sich verbessern in.",
         "exampleAr": "تحسَّنتُ…",
         "level": "B1",
         "tags": [
@@ -54643,7 +54643,7 @@
         "de": "sich vorbereiten auf die Prüfung",
         "ar": "يستعدُّ للامتحان",
         "pos": "Verb",
-        "exampleDe": "Ich bereite mich seit Wochen auf die Prüfung vor.",
+        "exampleDe": "Ich bereite mich seit Wochen auf die Prüfung vor → sich vorbereiten auf die Prüfung.",
         "exampleAr": "أستعدُّ…",
         "level": "B1",
         "tags": [
@@ -54657,7 +54657,7 @@
         "de": "sich anmelden zur Prüfung",
         "ar": "يسجّلُ للامتحان",
         "pos": "Verb",
-        "exampleDe": "Ich melde mich zur Prüfung an.",
+        "exampleDe": "Ich melde mich zur Prüfung an → sich anmelden zur Prüfung.",
         "exampleAr": "أسجّلُ ل…",
         "level": "B1",
         "tags": [
@@ -55062,7 +55062,7 @@
         "de": "vorbeugen",
         "ar": "يقي",
         "pos": "Verb",
-        "exampleDe": "Bewegung beugt Krankheiten vor.",
+        "exampleDe": "Bewegung beugt Krankheiten vor → vorbeugen.",
         "exampleAr": "الحركةُ…",
         "level": "B1",
         "tags": [
@@ -55503,7 +55503,7 @@
         "de": "jobben",
         "ar": "يعمل بدوام جزئي",
         "pos": "Verb",
-        "exampleDe": "In den Ferien jobbt er in einem Café.",
+        "exampleDe": "In den Ferien jobbt er in einem Café → jobben.",
         "exampleAr": "في العطل…",
         "level": "B1",
         "tags": [
@@ -55758,7 +55758,7 @@
         "de": "den Standpunkt untermauern",
         "ar": "يدعّمُ الموقف",
         "pos": "Nomen",
-        "exampleDe": "Studien untermauern diesen Standpunkt.",
+        "exampleDe": "Studien untermauern diesen Standpunkt → den Standpunkt untermauern.",
         "exampleAr": "دراساتٌ…",
         "level": "B1",
         "tags": [
@@ -55923,7 +55923,7 @@
         "de": "sich auskennen mit",
         "ar": "يكونُ خبيراً بـ",
         "pos": "Verb",
-        "exampleDe": "Er kennt sich mit Verträgen aus.",
+        "exampleDe": "Er kennt sich mit Verträgen aus → sich auskennen mit.",
         "exampleAr": "هو خبيرٌ…",
         "level": "B1",
         "tags": [
@@ -55949,7 +55949,7 @@
         "de": "aufkommen für",
         "ar": "يتحمَّلُ نفقةَ",
         "pos": "Verb",
-        "exampleDe": "Wer kommt für den Schaden auf?",
+        "exampleDe": "Wer kommt für den Schaden auf? → aufkommen für.",
         "exampleAr": "مَن يتحم…",
         "level": "B1",
         "tags": [
@@ -55963,7 +55963,7 @@
         "de": "hinweisen darauf, dass",
         "ar": "ينبّهُ إلى أنّ",
         "pos": "Verb",
-        "exampleDe": "Ich weise darauf hin, dass die Frist endet.",
+        "exampleDe": "Ich weise darauf hin, dass die Frist endet → hinweisen darauf, dass.",
         "exampleAr": "أنبّهُ إ…",
         "level": "B1",
         "tags": [
@@ -55976,7 +55976,7 @@
         "de": "sich auswirken auf die Kosten",
         "ar": "ينعكسُ على التكاليف",
         "pos": "Verb",
-        "exampleDe": "Das wirkt sich auf die Kosten aus.",
+        "exampleDe": "Das wirkt sich auf die Kosten aus → sich auswirken auf die Kosten.",
         "exampleAr": "ينعكسُ ذ…",
         "level": "B1",
         "tags": [
@@ -56002,7 +56002,7 @@
         "de": "sich herausstellen als",
         "ar": "يتبيَّنُ أنّه",
         "pos": "Verb",
-        "exampleDe": "Es stellte sich als Irrtum heraus.",
+        "exampleDe": "Es stellte sich als Irrtum heraus → sich herausstellen als.",
         "exampleAr": "تبيَّنَ…",
         "level": "B1",
         "tags": [
@@ -56015,7 +56015,7 @@
         "de": "zurückgreifen auf",
         "ar": "يلجأُ إلى",
         "pos": "Verb",
-        "exampleDe": "Wir greifen auf Ersparnisse zurück.",
+        "exampleDe": "Wir greifen auf Ersparnisse zurück → zurückgreifen auf.",
         "exampleAr": "نلجأُ إل…",
         "level": "B1",
         "tags": [
@@ -56028,7 +56028,7 @@
         "de": "hinauszögern",
         "ar": "يماطلُ في التأجيل",
         "pos": "Verb",
-        "exampleDe": "Er zögert die Entscheidung hinaus.",
+        "exampleDe": "Er zögert die Entscheidung hinaus → hinauszögern.",
         "exampleAr": "يماطلُ ف…",
         "level": "B1",
         "tags": [
@@ -56242,7 +56242,7 @@
         "ar": "الدراجة الكهربائية",
         "pos": "Nomen",
         "article": "das",
-        "exampleDe": "Mit dem E-Bike komme ich schneller zur Arbeit.",
+        "exampleDe": "Mit dem E-Bike komme ich schneller zur Arbeit → das E-Bike.",
         "exampleAr": "بالدراجة…",
         "level": "B1",
         "tags": [
@@ -56301,7 +56301,7 @@
         "de": "surfen",
         "ar": "يتصفّح الإنترنت / يركب الأمواج",
         "pos": "Verb",
-        "exampleDe": "Abends surfe ich oft im Internet.",
+        "exampleDe": "Abends surfe ich oft im Internet → surfen.",
         "exampleAr": "في المسا…",
         "level": "B1",
         "tags": [
@@ -56421,7 +56421,7 @@
         "de": "das Schreiben zustellen",
         "ar": "يبلّغُ الكتاب",
         "pos": "Nomen",
-        "exampleDe": "Der Bescheid wurde gestern zugestellt.",
+        "exampleDe": "Der Bescheid wurde gestern zugestellt → das Schreiben zustellen.",
         "exampleAr": "بُلِّغَ…",
         "level": "B1",
         "tags": [
@@ -56497,7 +56497,7 @@
         "de": "abstimmen über",
         "ar": "يصوّتُ على",
         "pos": "Verb",
-        "exampleDe": "Wir stimmen über den Antrag ab.",
+        "exampleDe": "Wir stimmen über den Antrag ab → abstimmen über.",
         "exampleAr": "نصوّتُ ع…",
         "level": "B1",
         "tags": [
@@ -57012,7 +57012,7 @@
         "de": "vermuten",
         "ar": "يرجّح",
         "pos": "Verb",
-        "exampleDe": "Ich vermute, er kommt später.",
+        "exampleDe": "Ich vermute, er kommt später → vermuten.",
         "exampleAr": "أرجّحُ أ…",
         "level": "B1",
         "tags": [
@@ -57026,7 +57026,7 @@
         "de": "bezweifeln",
         "ar": "يشكُّ في",
         "pos": "Verb",
-        "exampleDe": "Ich bezweifle diese Zahl.",
+        "exampleDe": "Ich bezweifle diese Zahl → bezweifeln.",
         "exampleAr": "أشكُّ في…",
         "level": "B1",
         "tags": [
@@ -57040,7 +57040,7 @@
         "de": "einschätzen als",
         "ar": "يقيّمُ بأنّه",
         "pos": "Verb",
-        "exampleDe": "Ich schätze das als riskant ein.",
+        "exampleDe": "Ich schätze das als riskant ein → einschätzen als.",
         "exampleAr": "أقيّمُ ذ…",
         "level": "B1",
         "tags": [
@@ -57053,7 +57053,7 @@
         "de": "zugeben",
         "ar": "يعترف",
         "pos": "Verb",
-        "exampleDe": "Ich gebe zu, dass ich mich geirrt habe.",
+        "exampleDe": "Ich gebe zu, dass ich mich geirrt habe → zugeben.",
         "exampleAr": "أعترفُ ب…",
         "level": "B1",
         "tags": [
@@ -57067,7 +57067,7 @@
         "de": "bestreiten",
         "ar": "ينكر",
         "pos": "Verb",
-        "exampleDe": "Er bestreitet die Vorwürfe.",
+        "exampleDe": "Er bestreitet die Vorwürfe → bestreiten.",
         "exampleAr": "ينكرُ ال…",
         "level": "B1",
         "tags": [
@@ -57081,7 +57081,7 @@
         "de": "nahelegen",
         "ar": "يُرجّحُ ويشير",
         "pos": "Verb",
-        "exampleDe": "Die Daten legen das nahe.",
+        "exampleDe": "Die Daten legen das nahe → nahelegen.",
         "exampleAr": "البيانات…",
         "level": "B1",
         "tags": [
@@ -57094,7 +57094,7 @@
         "de": "offenlassen",
         "ar": "يترُكُ مفتوحاً",
         "pos": "Verb",
-        "exampleDe": "Die Frage lassen wir offen.",
+        "exampleDe": "Die Frage lassen wir offen → offenlassen.",
         "exampleAr": "نتركُ ال…",
         "level": "B1",
         "tags": [
