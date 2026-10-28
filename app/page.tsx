@@ -15,6 +15,8 @@ import { TodayB2Praxis } from "@/components/today-b2-praxis";
 import { stationOfTask, STATIONEN } from "@/components/stationen";
 import { LernPfad } from "@/components/lernpath";
 import { ProfilWahl } from "@/components/profil";
+import { progressKeyActive } from "@/lib/profiles";
+import { OnboardingWizard } from "@/components/onboarding-wizard";
 import { Klassenzimmer } from "@/components/akademie/Klassenzimmer";
 import { resumeAusloesen, resumeBedarf, resumePlan, resumeZustand } from "@/lib/wiedereinstieg";
 import { SkillBalancePlan } from "@/components/skillplan";
@@ -51,16 +53,39 @@ const SKILL_AR: Record<string, string> = {
 };
 
 type TaskPoints = Record<string, { score: number; total: number }>;
-const dayStepKey = (day: number) => `wegb2:day-step:${day}`;
-const dayPointsKey = (day: number) => `wegb2:partial-points:${day}`;
+/** P1 fix code/dayStepKey: مفاتيح per-profile + per-day لتجنب فوق كتابة يوم برقم عبر الملفات أو عند تغيير التاريخ */
+function profilePrefix(): string {
+  try { return progressKeyActive(); } catch { return "weg-b2-progress-p1"; }
+}
+const dayStepKey = (day: number) => `${profilePrefix()}:day-step:${day}`;
+const dayPointsKey = (day: number) => `${profilePrefix()}:partial-points:${day}`;
 function clearPartialTaskState(taskId: string) {
   try {
-    const prefix = `wegb2:partial:${taskId}:`;
+    const prefix = `${profilePrefix()}:partial:${taskId}:`;
+    const legacyPrefix = `wegb2:partial:${taskId}:`;
     for (let i = localStorage.length - 1; i >= 0; i--) {
       const key = localStorage.key(i);
-      if (key?.startsWith(prefix)) localStorage.removeItem(key);
+      if (key?.startsWith(prefix) || key?.startsWith(legacyPrefix)) localStorage.removeItem(key);
     }
   } catch { /* التخزين محظور أو ممتلئ */ }
+}
+function migrateLegacyDayKeys() {
+  // ترحيل لمرة واحدة: انسخ مفاتيح wegb2:day-step:N القديمة إلى المفتاح الجديد per-profile إن لم يوجد
+  try {
+    const prefix = profilePrefix();
+    for (let day = 1; day <= 378; day++) {
+      const legacy = `wegb2:day-step:${day}`;
+      const neu = `${prefix}:day-step:${day}`;
+      if (!localStorage.getItem(neu) && localStorage.getItem(legacy)) {
+        localStorage.setItem(neu, localStorage.getItem(legacy)!);
+      }
+      const legacy2 = `wegb2:partial-points:${day}`;
+      const neu2 = `${prefix}:partial-points:${day}`;
+      if (!localStorage.getItem(neu2) && localStorage.getItem(legacy2)) {
+        localStorage.setItem(neu2, localStorage.getItem(legacy2)!);
+      }
+    }
+  } catch { /* */ }
 }
 
 /** شاشة «اليوم»: مهمة واحدة في المقدمة؛ الأدوات والبدائل قابلة للفتح عند الحاجة. */
@@ -89,6 +114,7 @@ export default function Today() {
 
   useEffect(() => {
     if (!ready) return;
+    migrateLegacyDayKeys();
     let savedStep = 0;
     try {
       const parsed = Number(localStorage.getItem(dayStepKey(day)));
@@ -135,6 +161,7 @@ export default function Today() {
 
   if (!ready) return <div className="today-screen" role="status" aria-live="polite">⏳ جارٍ استعادة خطتك وتقدّمك المحفوظ…</div>;
 
+  const showOnboarding = !(progress as any).settings?.onboardingDone && progress.plan.day <= 3;
   const resultOf = (id: string) => progress.plan.tasks[id];
   // 🔐 بوابة الجلسة: الجديد لا يُرى قبل تسليم الاسترجاع (lib/ritual.ts)
   const ritual = ritualUrteil(plan, progress);
@@ -374,6 +401,7 @@ export default function Today() {
 
   return (
     <div className="today-screen fadein dirb ui-page ui-page--today" data-testid="today-screen">
+      {showOnboarding && <OnboardingWizard />}
       {modulGate.gesperrt && (
         <section
           id="modul-pruefung-mahnung"

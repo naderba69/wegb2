@@ -1,3 +1,18 @@
+/**
+ * DesignSystem v1 — المصدر الوحيد للحقيقة (P1 design/system)
+ * Docs: docs/UX_BLUEPRINT_PROFI_2026-10-22.md §1-6 + app/globals.css لayers ①-⑥
+ * المبدأ: كل توكن جديد يولد في :root (--ui-*) وglobals.css §②، وAliases --color-* في §② فقط.
+ * لا Tailwind متضارب: @theme جسْر legacy فقط، لا لون جديد هنا. الأيقونات عبر KindIcon SVG + إيموجي مؤقت.
+ * الوصولية: :focus-visible حلقة خضراء 3px + 44px targets (P1 a11y/focus-ring) — موثق في globals.css:1254
+ */
+export const DS_TOKENS = {
+  colors: { navy: "#0b1020", green: "#22c55e", gold: "#f2c866", paper2: "#111a2b", ink: "#f3f6fb", ink2: "#a4b2c7" },
+  radii: { card: "1.15rem", control: "0.85rem" },
+  focus: "3px solid #86efac offset 3px + 4px glow (WCAG AA)",
+  targets: "44px minHeight",
+  icons: "KindIcon (SVG) + fallback emoji — unified via components/dirb/icons.tsx",
+} as const;
+
 import type { HTMLAttributes } from "react";
 
 type UiDataAttributes = { [key: `data-${string}`]: string | number | boolean | undefined };

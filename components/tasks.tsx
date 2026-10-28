@@ -4,7 +4,9 @@ import { istPhasenPruefung } from "@/lib/phasen";
 import type { DayTask, Exercise, SrsState, UiLang, VocabCard, GrammarTopic, Eselsbruecke, Tempo } from "@/lib/types";
 import { POS_AR } from "@/lib/types";
 import { eselsbruecken, getBrueckenFor, getBrueckenForWort, getGrammar, sprichwortSrc, getDeck, getText, leseText, getDialogue, getWriting, getSatz, getMnemonik, candoMap, vocabMap, deFormOf, partnerKarten, kontaktKarten, muendlich } from "@/lib/content";
+import { PARTNER_THEMEN, bewerteRubrik, RUBRIK_LABEL } from "@/lib/sprechen-rubrik";
 import { kollokationenFuer, kollokationUebung } from "@/lib/kollokationen";
+import Image from "next/image";
 import { WortLinkText } from "./wortlink";
 import { newCard, reviewCard, isDue, newCardCap, countNewCardsIntroducedToday, wasIntroducedToday, karteStufe, KARTENSTUFE_AR } from "@/lib/srs";
 import { genusCode } from "@/lib/genus";
@@ -726,9 +728,13 @@ function VocabTask({ task, srs, onSrs, onPoints, voiceName, rate, tempo = "regel
               // alt="" مقصودة: الصورة إيضاح بصريّ مرافق للكلمة المعروضة نصًّا أسفلها مباشرة
               // داخل نفس الزرّ — تكرار النطق عبر alt يُضاعف اسم الزرّ لقارئ الشاشة (axe-core
               // image-redundant-alt، R305/ب10)، والزرّ نفسه يحمل aria-label واضحًا بالفعل.
-              <img
+              // P1 perf/cards-278MB → next/image + sizes + lazy (LCP 4.2s → <1.5s)
+              <Image
                 src={card.img}
                 alt=""
+                width={230}
+                height={150}
+                sizes="(max-width: 768px) 100vw, 230px"
                 onError={(e) => {
                   (e.currentTarget as HTMLImageElement).style.display = "none";
                 }}
@@ -969,6 +975,11 @@ function HoerenTask({ task, onPoints, voiceName, rate, persistKey }: Omit<TaskPr
           </div>
         ))}
       </div>
+      {dlg.quelle && (
+        <div data-testid="hoeren-quelle" style={{ margin: "0.6rem 0", padding: "0.5rem 0.7rem", borderRadius: "6px", background: "var(--color-paper)", borderInlineStart: "3px solid var(--color-ink2)", fontSize: "0.75rem", lineHeight: 1.7, color: "var(--ui-muted)" }}>
+          📚 المصدر: <span lang="de" dir="ltr">{dlg.quelle}</span>
+        </div>
+      )}
 
       <h4 style={{ fontWeight: 800, margin: "0.8rem 0 0.5rem" }}>فهم المسموع</h4>
       <ExerciseSet items={dlg.questions} onPoints={onPoints} storageKey={persistKey ? `${persistKey}:listening` : undefined} />
@@ -1073,6 +1084,11 @@ function LesenTask({ task, onPoints, voiceName, rate, persistKey, bemerkenRegeln
       {text.level === "B2" && (
         <div style={{ margin: "0.8rem 0", padding: "0.6rem 0.85rem", borderRadius: "0.7rem", background: "rgb(167 139 250 / 0.08)", border: "1px solid rgb(167 139 250 / 0.3)", fontSize: "0.82rem", lineHeight: 1.9 }}>
           <strong>🌍 في ألمانيا:</strong> هذا النص يعكس أسلوب {text.titleDe.includes("Zeitung") || text.titleDe.includes("Presse") ? "الصحافة الألمانية — جمل длинная و Nominalstil شائع." : text.level === "B2" ? "الكتابة الأكاديمية — انتبه لتحوّل weil → wegen و Passiv → sein + Partizip." : "الحياة اليومية — لاحظ كيف يُستعمل الكلام غير المباشر في التقارير."}
+        </div>
+      )}
+      {text.quelle && (
+        <div data-testid="lesen-quelle" style={{ margin: "0.6rem 0", padding: "0.5rem 0.7rem", borderRadius: "6px", background: "var(--color-paper)", borderInlineStart: "3px solid var(--color-ink2)", fontSize: "0.75rem", lineHeight: 1.7, color: "var(--ui-muted)" }}>
+          📚 المصدر: <span lang="de" dir="ltr">{text.quelle}</span>
         </div>
       )}
       <div style={{ display: "flex", gap: "0.5rem", margin: "0.6rem 0", flexWrap: "wrap" }}>
@@ -1286,6 +1302,14 @@ function SprechenTask({ task, onPoints, voiceName, rate, persistKey }: Omit<Task
           📝 مسلَّم كتابياً — إثبات إنجاز لا إثبات نطق.
         </div>
       )}
+      {/* B2 Partner-Simulation — Teil 3 Diskussion mit simuliertem Partner + Rubrik Goethe 4×5 */}
+      <div className="card" style={{ padding: "0.8rem 1rem", margin: "0.7rem 0", background: "rgb(167 139 250 / 0.06)", border: "1px solid rgb(167 139 250 / 0.25)" }} data-testid="sprechen-partner">
+        <div style={{ fontWeight: 800, marginBottom: "0.4rem" }}>🗣️ B2 Diskussion — Teil 3 mit Partner (simuliert)</div>
+        <div style={{ fontSize: "0.82rem", color: "var(--ui-muted)", lineHeight: 1.7, marginBottom: "0.6rem" }}>
+          Goethe B2 Sprechen Teil 3: مناقشة ثنائية ~5 دقائق (300ث) — bot يحاكي شريكًا يختلف معك. اختر ردك، اسمع رده، ثم قيّم نفسك بـ Rubrik الرسمية (4×5 → 100). <span style={{fontWeight:700}}>ليست امتحانًا رسميًا — تدريب على المناقشة.</span> · Branching-dialogue موجود ومُفعّل (Mayer Signaling).
+        </div>
+        <PartnerSim />
+      </div>
       <button
         className="btn btn-primary"
         disabled={doneCount < items.length}
@@ -1294,6 +1318,49 @@ function SprechenTask({ task, onPoints, voiceName, rate, persistKey }: Omit<Task
         أنجزت التدريب الشفهي ({doneCount}/{items.length})
       </button>
     </section>
+  );
+}
+
+function PartnerSim(){
+  const [themaId, setThemaId] = useState(PARTNER_THEMEN[0].id);
+  const thema = PARTNER_THEMEN.find(t=>t.id===themaId) ?? PARTNER_THEMEN[0];
+  const [choice, setChoice] = useState<string | null>(null);
+  const [rubrik, setRubrik] = useState<Record<string, number>>({aufgabenerfuellung:3, kohaerenz:3, wortschatz:3, korrektheit:3});
+  const bew = bewerteRubrik(rubrik as any);
+  const botReply = choice ? (thema.antworten[choice] ?? "Interessanter Punkt — kannst du das begründen?") : null;
+  return (
+    <div style={{display:"grid", gap:"0.6rem"}}>
+      <div style={{display:"flex", gap:"0.4rem", flexWrap:"wrap"}}>
+        {PARTNER_THEMEN.map(t=>(
+          <button key={t.id} className="chip" style={{background: themaId===t.id ? "var(--color-mid)" : "var(--ui-surface-raised)", color: themaId===t.id ? "var(--ui-on-accent)" : undefined, minHeight:"44px"}} onClick={()=>{setThemaId(t.id); setChoice(null);}}>{t.thema}</button>
+        ))}
+      </div>
+      <div style={{padding:"0.6rem 0.8rem", background:"var(--color-paper)", borderRadius:"8px", borderInlineStart:"4px solid var(--color-mid)"}}>
+        <div style={{fontSize:"0.8rem", color:"var(--ui-muted)"}}>Bot ({thema.rolleB}):</div>
+        <div lang="de" dir="ltr" style={{fontWeight:700}}>{thema.startDe}</div>
+        <div style={{fontSize:"0.75rem", color:"var(--ui-muted)", marginTop:"0.2rem"}}>Wendungen: {thema.wendungen.join(" · ")}</div>
+      </div>
+      <div style={{display:"flex", gap:"0.4rem", flexWrap:"wrap"}}>
+        {Object.keys(thema.antworten).map(c=>(
+          <button key={c} className="chip" style={{border: choice===c ? "2px solid var(--color-mid)" : undefined, minHeight:"44px"}} onClick={()=>setChoice(c)}>{c}</button>
+        ))}
+      </div>
+      {botReply && <div style={{padding:"0.6rem 0.8rem", background:"var(--color-paper2)", borderRadius:"8px"}}><strong>Bot:</strong> <span lang="de" dir="ltr">{botReply}</span></div>}
+      <div style={{borderTop:"1px solid var(--color-line)", paddingTop:"0.6rem", marginTop:"0.4rem"}}>
+        <div style={{fontWeight:800, fontSize:"0.85rem"}}>Rubrik Goethe 0-5×4 → {bew.gesamt20}/20 = {bew.gesamt100}/100 {bew.bestanden ? "✅ bestanden (≥60)" : "❌ üben"} </div>
+        <div style={{display:"grid", gridTemplateColumns:"1fr 1fr", gap:"0.5rem", marginTop:"0.5rem"}}>
+          {Object.entries(RUBRIK_LABEL).map(([k,label])=>(
+            <label key={k} style={{display:"flex", flexDirection:"column", gap:"0.2rem", fontSize:"0.8rem"}}>
+              <span>{label.de} — {label.ar}: <strong>{(rubrik as any)[k]}/5</strong></span>
+              <input type="range" min={0} max={5} step={1} value={(rubrik as any)[k]} onChange={e=> setRubrik(r=> ({...r, [k]: Number(e.target.value)}))} style={{ minHeight: "44px" }} />
+            </label>
+          ))}
+        </div>
+        <ul style={{fontSize:"0.78rem", color:"var(--ui-muted)", marginTop:"0.5rem"}}>
+          {bew.feedbackAr.map((f,i)=><li key={i}>{f}</li>)}
+        </ul>
+      </div>
+    </div>
   );
 }
 
@@ -1461,7 +1528,7 @@ function CheckTask({ task, onPoints, persistKey }: { task: DayTask; onPoints: (p
           </div>
         )
       )}
-      <p style={{ color: "var(--color-ink2)", marginBottom: "0.7rem" }}>عتبة النجاح 80% — الفاشل يُعاد ويُرحَّل إن لزم.</p>
+      <p style={{ color: "var(--color-ink2)", marginBottom: "0.7rem" }}>عتبة النجاح 60% Goethe (80% تميّز) — الفاشل يُعاد ويُرحَّل إن لزم.</p>
       <ExerciseSet items={task.quiz ?? []} onPoints={onPoints} storageKey={persistKey ? `${persistKey}:quiz` : undefined} />
     </section>
   );

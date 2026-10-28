@@ -550,7 +550,7 @@ export function Pruefung({
     <section className="card fadein" style={{ padding: "1.2rem" }}>
       <h3 style={{ fontWeight: 800, marginBottom: "0.2rem" }}>📝 {task.titleDe}</h3>
       <div style={{ color: "var(--color-ink2)", marginBottom: "0.8rem" }}>
-        {task.titleAr} — أربعة أقسام، ورقة واحدة، عتبة النجاح في الخطة 80%. التزم الصدق في التقييم الذاتي.
+        {task.titleAr} — أربعة أقسام، ورقة واحدة، عتبة النجاح في الخطة 60% (Goethe) — 80% تميّز. التزم الصدق في التقييم الذاتي.
       </div>
 
       {text && (
@@ -672,7 +672,7 @@ export function Pruefung({
           </div>
           <div style={{ fontWeight: 800, fontSize: "1.05rem" }}>الدرجة: {report.note}</div>
           <div style={{ marginTop: "0.3rem" }}>
-            {report.passed ? "🎉 ناجح — أنت جاهز للمستوى التالي!" : "⚠️ دون عتبة 80% — سيرفع المحرّك ما لم يُتقَن تعويضاً إلزامياً."}
+            {report.passed ? "🎉 ناجح — أنت جاهز للمستوى التالي!" : "⚠️ دون عتبة 60% Goethe — سيرفع المحرّك ما لم يُتقَن تعويضاً إلزامياً."}
           </div>
           {report.schwach.length > 0 && (
             <div style={{ marginTop: "0.5rem", fontSize: "0.92rem", textAlign: "start" }}>

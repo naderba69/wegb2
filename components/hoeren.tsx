@@ -120,8 +120,10 @@ export function HoerLabor({ progress }: { progress: Progress }) {
       <HoerStrategienKarte started={started} geprueft={geprueft} />
       <div style={{ display: "flex", gap: "0.4rem", flexWrap: "wrap", marginBottom: "0.6rem" }}>
         <ModusUmschalter modus={modus} onWechsel={reset} />
+        <button className="chip" style={{ cursor: "pointer", background: tempo === "sehrLangsam" ? "var(--color-mid)" : "var(--ui-surface-raised)", color: tempo === "sehrLangsam" ? "var(--ui-on-accent)" : undefined, padding: "0.45rem 0.7rem", minHeight: "44px" }} onClick={() => setTempo("sehrLangsam")}>🐢 {RATE.sehrLangsam}× langsam</button>
         <button className="chip" style={{ cursor: "pointer", background: tempo === "lern" ? "var(--color-mid)" : "var(--ui-surface-raised)", color: tempo === "lern" ? "var(--ui-on-accent)" : undefined, padding: "0.45rem 0.7rem", minHeight: "44px" }} onClick={() => setTempo("lern")}>🐢 {RATE.lern}×</button>
         <button className="chip" style={{ cursor: "pointer", background: tempo === "pruefung" ? "var(--color-mid)" : "var(--ui-surface-raised)", color: tempo === "pruefung" ? "var(--ui-on-accent)" : undefined, padding: "0.45rem 0.7rem", minHeight: "44px" }} onClick={() => setTempo("pruefung")}>⚡ {RATE.pruefung}× Prüfungstempo</button>
+        <button className="chip" style={{ cursor: "pointer", background: tempo === "schnell" ? "var(--color-mid)" : "var(--ui-surface-raised)", color: tempo === "schnell" ? "var(--ui-on-accent)" : undefined, padding: "0.45rem 0.7rem", minHeight: "44px" }} onClick={() => setTempo("schnell")}>⏩ {RATE.schnell}× schnell</button>
         <button type="button" className="chip" data-testid="stimme-aufnahme" style={{ cursor: "pointer", background: stimme === "aufnahme" ? "var(--color-mid)" : "var(--ui-surface-raised)", color: stimme === "aufnahme" ? "var(--ui-on-accent)" : undefined, padding: "0.45rem 0.7rem", minHeight: "44px" }} onClick={() => setStimme("aufnahme")}>🔊 الصوت المسجّل</button>
         <button type="button" className="chip" data-testid="stimme-geraet" style={{ cursor: "pointer", background: stimme === "geraet" ? "var(--color-mid)" : "var(--ui-surface-raised)", color: stimme === "geraet" ? "var(--ui-on-accent)" : undefined, padding: "0.45rem 0.7rem", minHeight: "44px" }} onClick={() => setStimme("geraet")}>🗣 صوت الجهاز — صوت ثانٍ للنص نفسه</button>
         {stimme === "geraet" && (
@@ -281,7 +283,7 @@ export function LueckDiktat({ progress }: { progress: Progress }) {
       <div style={{ fontSize: "0.83rem", color: "var(--color-ink2)", margin: "0.3rem 0 0.45rem", lineHeight: 1.75 }}>
         شريطُ النصِّ الكامل يدور، وأنت تملأ الكلمة الساقطة في كل جملة — لا سكربتَ قبل التسليم، ولا رحمةَ بالإملاء.
       </div>
-      {file && <audio ref={audioRef} src={file} preload="auto" />}
+      {file && <audio ref={audioRef} src={file} preload="metadata" />}
       <div style={{ display: "flex", gap: "0.4rem", flexWrap: "wrap", margin: "0.4rem 0 0.6rem", alignItems: "center" }}>
         {(["B1", "B2"] as const).map((L) => (
           <button key={L} className="chip" style={{ cursor: "pointer", background: nivel === L ? "var(--color-cola)" : "var(--ui-surface-raised)", color: nivel === L ? "var(--ui-on-accent)" : undefined, padding: "0.45rem 0.75rem", minHeight: "44px" }} onClick={() => { setNivel(L); setNr(0); reset(); }}>🎚 {L}</button>

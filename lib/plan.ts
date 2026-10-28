@@ -69,21 +69,26 @@ import { legacyThroughDayFor } from "./curriculum-schedule";
  */
 
 // ── حتمية العشوائية (LCG ببذرة ثابتة لكل يوم) ─────────────────────────
+// P1 fix code/lcg-rng — Math.abs()% كان يفقد حتمية المنصات مع seed سالب (rng(-7) ≠)
+// الحل: modulo آمن + نطاق [1, MOD-1] بلا abs، Park-Miller 16807 حتمي عبر Node/Browser
 export function rng(seed: number) {
-  let s = Math.abs(Math.floor(seed)) % 2147483647;
-  if (s <= 0) s += 2147483646;
+  const MOD = 2147483647;
+  let s = Math.floor(seed) % MOD;
+  if (s <= 0) s += MOD - 1; // يحوّل 0→MOD-1 و السالب→موجب بلا فقدان
+  if (s <= 0 || s >= MOD) s = 1; // احتياط
   return () => {
-    s = (s * 16807) % 2147483647;
-    return (s - 1) / 2147483646;
+    s = (s * 16807) % MOD;
+    return (s - 1) / (MOD - 1);
   };
 }
-/** خلط في المكان يُعيد المصفوفة (للاستخدام في buildQuiz بعد الالتقاط) */
+/** خلط بلا طفرة — ينسخ أولاً ثم يخلط (P1 code/shuffle-mutate fix) */
 function shuffleArr<T>(arr: T[], rand: () => number): T[] {
-  for (let i = arr.length - 1; i > 0; i--) {
+  const out = [...arr];
+  for (let i = out.length - 1; i > 0; i--) {
     const j = Math.floor(rand() * (i + 1));
-    [arr[i], arr[j]] = [arr[j], arr[i]];
+    [out[i], out[j]] = [out[j], out[i]];
   }
-  return arr;
+  return out;
 }
 
 export function pickN<T>(arr: T[], n: number, rand: () => number): T[] {
@@ -838,7 +843,7 @@ export function buildDay(day: number, progress: Progress): DayPlan {
         id: tid(5),
         kind: "check",
         titleDe: "Tagescheck",
-        titleAr: "فحص اليوم (عتبة النجاح 80%)",
+        titleAr: "فحص اليوم (60% نجاح رسمي — 80% تميّز)",
         minutes: 15,
         quiz: buildQuiz(day, phase, 8, progress, "tc"),
       });
@@ -910,7 +915,7 @@ export function buildDay(day: number, progress: Progress): DayPlan {
         id: tid(5),
         kind: "check",
         titleDe: "Tagescheck",
-        titleAr: "فحص اليوم (عتبة النجاح 80%)",
+        titleAr: "فحص اليوم (60% نجاح رسمي — 80% تميّز)",
         minutes: 15,
         quiz: buildQuiz(day, phase, 8, progress, "tc2"),
       });
@@ -977,7 +982,7 @@ export function buildDay(day: number, progress: Progress): DayPlan {
         id: tid(5),
         kind: "check",
         titleDe: "Tagescheck",
-        titleAr: "فحص اليوم (عتبة النجاح 80%)",
+        titleAr: "فحص اليوم (60% نجاح رسمي — 80% تميّز)",
         minutes: 15,
         quiz: buildQuiz(day, phase, 10, progress, "tc3"),
       });
