@@ -1252,8 +1252,31 @@ body:has(.ui-app-shell) {
   gap: 0.3rem;
 }
 :where(a, button, input, textarea, select, summary, [tabindex]):focus-visible {
-  outline: 2px solid var(--ui-focus);
+  outline: 3px solid var(--ui-focus);
   outline-offset: 3px;
+  box-shadow: 0 0 0 4px rgb(134 239 172 / 0.22);
+}
+/* ف Fallback للمتصفحات بلا :focus-visible + نحترم تفضيل تقليل الحركة */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+:where(a, button, input, textarea, select, summary, [tabindex]):focus {
+  outline: 3px solid var(--ui-focus);
+  outline-offset: 3px;
+}
+:where(a, button, input, textarea, select, summary, [tabindex]):focus:not(:focus-visible) {
+  outline: none;
+  box-shadow: none;
+}
+/* P1 a11y/ki-ehrlich — تباين الإفصاح 4.5:1 بدل 3.2:1 */
+[data-audio-kind="ki"] {
+  color: #e2e8f0 !important;
+  background: rgb(15 23 42 / 0.6);
+  border: 1px solid rgb(148 163 184 / 0.28);
+  border-radius: 0.45rem;
+  padding: 0.35rem 0.55rem;
+  font-size: 0.84rem !important;
+  line-height: 1.7;
 }
 :where(button, input, textarea, select) { font: inherit; }
 

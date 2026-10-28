@@ -1,7 +1,8 @@
 "use client";
 // ✍️ Schreib-Werkstatt — كتابة بتوقيت امتحان (Teil 1: 15د · Teil 2: 28د) مع مستشار الكتابة
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import type { Progress, Schreibaufgabe } from "@/lib/types";
+import { pruefeText } from "@/lib/schreibpruefer";
 import { TOTAL_DAYS } from "@/lib/types";
 import { writingTasks } from "@/lib/content";
 import { levelOf, pickN, rng } from "@/lib/plan";
@@ -67,6 +68,13 @@ export function SchreibWerkstatt({ progress }: { progress: Progress }) {
     );
   };
 
+  const liveHints = useMemo(() => {
+    if (!text.trim() || done) return [];
+    // P1 write/live-count: اقتراح حيّ لـ weil/dass + أخطاء القواعد الظاهرة أثناء الكتابة
+    try { return pruefeText(text).filter(b => b.regelId === "a2-weil-dass" || b.spalte === "grammatik").slice(0, 2); } catch { return []; }
+  }, [text, done]);
+  const wortProzent = cfg ? Math.min(100, Math.round((words / cfg.ziel) * 100)) : 0;
+
   const mmss = `${String(Math.floor(left / 60)).padStart(2, "0")}:${String(left % 60).padStart(2, "0")}`;
   const criteria = task?.criteria ?? [];
 
@@ -115,18 +123,28 @@ export function SchreibWerkstatt({ progress }: { progress: Progress }) {
             className="field"
             rows={8}
             dir="ltr"
+            aria-label="نص الكتابة الألماني — عدّاد الكلمات حيّ"
             style={{ lineHeight: 1.8, width: "100%" }}
             placeholder="Schreibe hier … (der Timer läuft!)"
             value={text}
             disabled={done}
             onChange={(e) => setText(e.target.value)}
           />
-          <div style={{ display: "flex", justifyContent: "space-between", fontSize: "0.85rem", margin: "0.3rem 0", flexWrap: "wrap" }}>
-            <span className="rtl-num" style={{ color: words >= cfg!.ziel ? "var(--color-a1)" : "var(--color-cola)", fontWeight: 700 }}>
-              {words} / {cfg!.ziel} كلمة
+          {/* P1 write/live-count — عدّاد حيّ + شريط تقدّم + تلميح weil/dass */}
+          <div style={{ display: "flex", justifyContent: "space-between", fontSize: "0.85rem", margin: "0.3rem 0", flexWrap: "wrap", alignItems: "center", gap: "0.5rem" }}>
+            <span className="rtl-num" style={{ color: words >= cfg!.ziel ? "var(--color-a1)" : words >= cfg!.ziel * 0.6 ? "var(--color-gold)" : "var(--color-cola)", fontWeight: 700 }}>
+              {words} / {cfg!.ziel} كلمة {words >= cfg!.ziel ? "✓" : words >= cfg!.ziel * 0.5 ? "… تابع" : ""}
+            </span>
+            <span style={{ flex: 1, minWidth: 80, height: 6, background: "var(--color-paper)", borderRadius: 3, overflow: "hidden", maxWidth: 160 }}>
+              <span style={{ display: "block", height: "100%", width: `${wortProzent}%`, background: words >= cfg!.ziel ? "var(--color-a1)" : "var(--color-gold)", transition: "width 200ms" }} />
             </span>
             {left === 0 && !done && <strong style={{ color: "var(--color-cola)" }}>⏰ انتهى الوقت — سلّم الآن!</strong>}
           </div>
+          {liveHints.length > 0 && (
+            <div role="status" aria-live="polite" style={{ background: "var(--color-warn-soft, #fff7ed)", border: "1px solid var(--color-warn, #f59e0b)", borderRadius: "0.5rem", padding: "0.4rem 0.6rem", fontSize: "0.82rem", marginBottom: "0.3rem" }}>
+              💡 تلميح حيّ: {liveHints.map(h => h.meldungAr).join(" · ")} {liveHints[0].vorschlagDe ? `→ ${liveHints[0].vorschlagDe}` : ""}
+            </div>
+          )}
           <div style={{ fontWeight: 700, margin: "0.4rem 0 0.2rem" }}>معايير التقييم الذاتي:</div>
           {criteria.map((c, i) => (
             <label key={c} style={{ display: "flex", gap: "0.5rem", cursor: done ? "default" : "pointer", margin: "0.15rem 0" }}>
