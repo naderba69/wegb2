@@ -77,7 +77,7 @@
         "ar": "يُدعى",
         "pos": "Verb",
         "posInfo": "unregelmäßig",
-        "exampleDe": "Ich heiße Omar.",
+        "exampleDe": "Ich heiße Omar → heißen.",
         "exampleAr": "اسمي عمر…",
         "level": "A1",
         "tags": [
@@ -91,7 +91,7 @@
         "de": "kommen",
         "ar": "يأتي / يأتي من",
         "pos": "Verb",
-        "exampleDe": "Ich komme aus Tunesien.",
+        "exampleDe": "Ich komme aus Tunesien → kommen.",
         "exampleAr": "أنا من ت…",
         "level": "A1",
         "tags": [
@@ -108,7 +108,7 @@
         "de": "wohnen",
         "ar": "يسكن",
         "pos": "Verb",
-        "exampleDe": "Ich wohne in Tunis.",
+        "exampleDe": "Ich wohne in Tunis → wohnen.",
         "exampleAr": "أسكن في…",
         "level": "A1",
         "tags": [
@@ -145,7 +145,7 @@
         "ar": "يفهم",
         "pos": "Verb",
         "posInfo": "versteht",
-        "exampleDe": "Ich verstehe das nicht.",
+        "exampleDe": "Ich verstehe das nicht → verstehen.",
         "exampleAr": "لا أفهم…",
         "level": "A1",
         "tags": [
@@ -162,7 +162,7 @@
         "de": "lernen",
         "ar": "يتعلّم",
         "pos": "Verb",
-        "exampleDe": "Ich lerne Deutsch.",
+        "exampleDe": "Ich lerne Deutsch → lernen.",
         "exampleAr": "أتعلّم ا…",
         "level": "A1",
         "tags": [
@@ -176,7 +176,7 @@
         "de": "arbeiten",
         "ar": "يعمل",
         "pos": "Verb",
-        "exampleDe": "Er arbeitet als Lehrer.",
+        "exampleDe": "Er arbeitet als Lehrer → arbeiten.",
         "exampleAr": "هو يعمل…",
         "level": "A1",
         "tags": [
@@ -442,7 +442,7 @@
         "de": "bezahlen",
         "ar": "يدفع",
         "pos": "Verb",
-        "exampleDe": "Ich bezahle die Rechnung mit Karte.",
+        "exampleDe": "Ich bezahle die Rechnung mit Karte → bezahlen.",
         "exampleAr": "أدفع الفاتورة بالبطاقة.",
         "level": "A1",
         "tags": [
@@ -478,7 +478,7 @@
         "pos": "Nomen",
         "article": "der",
         "farbe": "BLAU",
-        "exampleDe": "Viele Grüße an deine Familie!",
+        "exampleDe": "Viele Grüße an deine Familie! → der Gruß.",
         "exampleAr": "تحياتي ا…",
         "level": "A1",
         "tags": [
@@ -760,7 +760,7 @@
         "ar": "يقوم من النوم (منفصل)",
         "pos": "Verb",
         "posInfo": "steht auf",
-        "exampleDe": "Ich stehe um 7 Uhr auf.",
+        "exampleDe": "Ich stehe um 7 Uhr auf → aufstehen.",
         "exampleAr": "أقوم في…",
         "level": "A1",
         "tags": [
@@ -774,7 +774,7 @@
         "ar": "ينام",
         "pos": "Verb",
         "posInfo": "schläft",
-        "exampleDe": "Er schläft früh.",
+        "exampleDe": "Er schläft früh → schlafen.",
         "exampleAr": "ينام مبك…",
         "level": "A1",
         "tags": [
@@ -808,7 +808,7 @@
           "alltag"
         ],
         "img": "/cards/trinken.webp",
-        "exampleDe": "Zum Frühstück trinke ich immer einen Tee mit Milch.",
+        "exampleDe": "Zum Frühstück trinke ich immer einen Tee mit Milch → trinken.",
         "exampleAr": "على الفط…"
       },
       {
@@ -1528,7 +1528,7 @@
         ],
         "img": "/cards/reservieren.webp",
         "aussprache": "ie = «إي» ممدودة · v = «ف»",
-        "exampleDe": "Ich reserviere einen Tisch für zwei Personen.",
+        "exampleDe": "Ich reserviere einen Tisch für zwei Personen → reservieren.",
         "exampleAr": "أحجز طاولة لشخصين.",
         "posInfo": "reserviert, reservierte, hat reserviert"
       },
@@ -1723,7 +1723,7 @@
         ],
         "img": "/cards/einkaufen.webp",
         "aussprache": "ei = «آي» لا «إي»",
-        "exampleDe": "Ich kaufe immer samstags auf dem Markt ein.",
+        "exampleDe": "Ich kaufe immer samstags auf dem Markt ein → einkaufen.",
         "exampleAr": "أتسوّق د…"
       },
       {
@@ -2057,7 +2057,7 @@
         "de": "glauben",
         "ar": "يعتقد",
         "pos": "Verb",
-        "exampleDe": "Ich glaube, das ist falsch.",
+        "exampleDe": "Ich glaube, das ist falsch → glauben.",
         "exampleAr": "أعتقد أن…",
         "level": "A2",
         "tags": [
@@ -2075,7 +2075,7 @@
         "ar": "يفرح (متعدد اللواحق)",
         "pos": "Verb",
         "posInfo": "+auf / über",
-        "exampleDe": "Ich freue mich auf das Wochenende.",
+        "exampleDe": "Ich freue mich auf das Wochenende → sich freuen.",
         "exampleAr": "أتطلّع بفرح إلى نهاية الأسبوع.",
         "level": "A2",
         "tags": [
@@ -2095,7 +2095,7 @@
           "gefuehl"
         ],
         "img": "/cards/sich-aergern.webp",
-        "exampleDe": "Ich ärgere mich über den Lärm der Nachbarn.",
+        "exampleDe": "Ich ärgere mich über den Lärm der Nachbarn → sich ärgern.",
         "exampleAr": "أنزعج من…"
       },
       {
@@ -2167,7 +2167,7 @@
         "de": "gratulieren",
         "ar": "يهنّئ (+Dativ)",
         "pos": "Verb",
-        "exampleDe": "Ich gratuliere dir zum Geburtstag!",
+        "exampleDe": "Ich gratuliere dir zum Geburtstag! → gratulieren.",
         "exampleAr": "أهنّئك ب…",
         "level": "A2",
         "tags": [
@@ -2221,7 +2221,7 @@
         ],
         "img": "/cards/berichten.webp",
         "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
-        "exampleDe": "Die Zeitung berichtet über den Streik bei der Bahn.",
+        "exampleDe": "Die Zeitung berichtet über den Streik bei der Bahn → berichten.",
         "exampleAr": "الجريدة…"
       },
       {
@@ -2236,7 +2236,7 @@
         ],
         "img": "/cards/erzaehlen.webp",
         "aussprache": "z = «تس»",
-        "exampleDe": "Erzähl mir von deinem ersten Tag in Deutschland!",
+        "exampleDe": "Erzähl mir von deinem ersten Tag in Deutschland! → erzählen.",
         "exampleAr": "احكِ لي…",
         "syn": [
           "berichten"
@@ -2301,7 +2301,7 @@
           "plan"
         ],
         "img": "/cards/hoffen.webp",
-        "exampleDe": "Ich hoffe, dass der Zug pünktlich kommt.",
+        "exampleDe": "Ich hoffe, dass der Zug pünktlich kommt → hoffen.",
         "exampleAr": "آمل أن ي…"
       },
       {
@@ -2332,7 +2332,7 @@
           "rat"
         ],
         "img": "/cards/empfehlen.webp",
-        "exampleDe": "Ich empfehle dir das Café am Bahnhof, der Kuchen ist super.",
+        "exampleDe": "Ich empfehle dir das Café am Bahnhof, der Kuchen ist super → empfehlen.",
         "exampleAr": "أنصحك با…"
       },
       {
@@ -2461,7 +2461,7 @@
         ],
         "img": "/cards/erwarten.webp",
         "aussprache": "w = «ڤ»",
-        "exampleDe": "Ich erwarte morgen ein Paket, bitte nehmen Sie es an.",
+        "exampleDe": "Ich erwarte morgen ein Paket, bitte nehmen Sie es an → erwarten.",
         "exampleAr": "أنتظر طر…",
         "posInfo": "erwartet, erwartete, hat erwartet"
       },
@@ -4799,7 +4799,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Für die Prüfungsverschiebung verlangt die Uni ein ärztliches Attest.",
         "exampleAr": "لتأجيل ا…",
-        "plural": "die Atteste"
+        "plural": "die Atteste",
+        "img": "/cards/b2-v249.webp"
       },
       {
         "id": "v250",
@@ -4953,7 +4954,8 @@
         "aussprache": "ei = «آي» لا «إي»",
         "exampleDe": "Ein gutes Arbeitsklima ist wichtiger als der Obstkorb.",
         "exampleAr": "المناخ ا…",
-        "plural": "die Arbeitsklimate"
+        "plural": "die Arbeitsklimate",
+        "img": "/cards/b2-v259.webp"
       },
       {
         "id": "v260",
@@ -5090,7 +5092,8 @@
         "aussprache": "z = «تس»",
         "exampleDe": "Der Arzt hört das Herz ab und schaut in den Hals.",
         "exampleAr": "الطبيب ي…",
-        "plural": "die Herzen"
+        "plural": "die Herzen",
+        "img": "/cards/b2-v1408.webp"
       },
       {
         "id": "vpfl-03",
@@ -5251,7 +5254,8 @@
         "exampleAr": "ميزان ال…",
         "article": "das",
         "farbe": "GRÜN",
-        "plural": "die Fieberthermometer"
+        "plural": "die Fieberthermometer",
+        "img": "/cards/b2-vpfl-13.webp"
       },
       {
         "id": "vpfl-14",
@@ -5339,7 +5343,8 @@
         "exampleDe": "Das Blut wird im Labor untersucht.",
         "exampleAr": "يُفحص ال…",
         "article": "das",
-        "farbe": "GRÜN"
+        "farbe": "GRÜN",
+        "img": "/cards/b2-vpfl-19.webp"
       },
       {
         "id": "vpfl-32",
@@ -5479,7 +5484,8 @@
         "exampleDe": "Das Gelenk ist geschwollen.",
         "exampleAr": "المفصل م…",
         "article": "das",
-        "farbe": "GRÜN"
+        "farbe": "GRÜN",
+        "img": "/cards/b2-vpfl-41.webp"
       },
       {
         "id": "vpfl-42",
@@ -5521,7 +5527,8 @@
         "exampleDe": "Das Gehirn braucht Sauerstoff.",
         "exampleAr": "الدماغ ي…",
         "article": "das",
-        "farbe": "GRÜN"
+        "farbe": "GRÜN",
+        "img": "/cards/b2-vpfl-44.webp"
       },
       {
         "id": "vpfl-45",
@@ -5646,7 +5653,8 @@
         "exampleAr": "المضاد ا…",
         "pos": "Nomen",
         "article": "das",
-        "farbe": "GRÜN"
+        "farbe": "GRÜN",
+        "img": "/cards/b2-vpfl-70.webp"
       },
       {
         "id": "vpfl-71",
@@ -5870,7 +5878,8 @@
         "exampleAr": "يمكن لجل…",
         "pos": "Nomen",
         "article": "das",
-        "farbe": "GRÜN"
+        "farbe": "GRÜN",
+        "img": "/cards/b2-vpfl-86.webp"
       },
       {
         "id": "vpfl-87",
@@ -6207,7 +6216,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Für ein Ehrenamt braucht man nur Zeit und Bereitschaft.",
         "exampleAr": "للعمل ال…",
-        "plural": "die Ehrenämter"
+        "plural": "die Ehrenämter",
+        "img": "/cards/b2-v286.webp"
       },
       {
         "id": "v287",
@@ -6254,7 +6264,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Ihr Engagement im Verein hat ihr später den Job gebracht.",
         "exampleAr": "التزامها…",
-        "plural": "die Engagements"
+        "plural": "die Engagements",
+        "img": "/cards/b2-v289.webp"
       },
       {
         "id": "v290",
@@ -6528,7 +6539,8 @@
         "aussprache": "w = «ڤ»",
         "exampleDe": "Er hat ein schlechtes Gewissen, weil er den Termin vergessen hat.",
         "exampleAr": "يؤنّبه ض…",
-        "plural": "die Gewissen"
+        "plural": "die Gewissen",
+        "img": "/cards/b2-v308.webp"
       },
       {
         "id": "v309",
@@ -6573,7 +6585,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Das stärkste Argument gegen das Auto ist der Preis.",
         "exampleAr": "أقوى حجة…",
-        "plural": "die Argumente"
+        "plural": "die Argumente",
+        "img": "/cards/b2-v311.webp"
       },
       {
         "id": "v312",
@@ -6900,7 +6913,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Im Dorf fährt der Bus nur dreimal am Tag.",
         "exampleAr": "في القري…",
-        "plural": "die Dörfer"
+        "plural": "die Dörfer",
+        "img": "/cards/b2-v336.webp"
       },
       {
         "id": "v337",
@@ -6931,7 +6945,8 @@
         "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
         "exampleDe": "Das Grundstück ist klein, aber der Garten geht nach Süden.",
         "exampleAr": "قطعة الأ…",
-        "plural": "die Grundstücke"
+        "plural": "die Grundstücke",
+        "img": "/cards/b2-v338.webp"
       },
       {
         "id": "v339",
@@ -6947,7 +6962,8 @@
         "aussprache": "ei = «آي» لا «إي»",
         "exampleDe": "Ein Eigenheim bindet einen an einen Ort, für Jahrzehnte.",
         "exampleAr": "المنزل ا…",
-        "plural": "die Eigenheime"
+        "plural": "die Eigenheime",
+        "img": "/cards/b2-v339.webp"
       },
       {
         "id": "v340",
@@ -7465,7 +7481,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Das Gerät ist alt, aber es funktioniert noch gut.",
         "exampleAr": "الجهاز ق…",
-        "plural": "die Geräte"
+        "plural": "die Geräte",
+        "img": "/cards/b2-v374.webp"
       },
       {
         "id": "v375",
@@ -7873,7 +7890,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Ein Backup jede Woche hätte den Verlust der Arbeit verhindert.",
         "exampleAr": "نسخة احت…",
-        "plural": "die Backups"
+        "plural": "die Backups",
+        "img": "/cards/b2-v401.webp"
       },
       {
         "id": "v402",
@@ -7991,7 +8009,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Das Abonnement verlängert sich automatisch, wenn man nicht kündigt.",
         "exampleAr": "الاشتراك…",
-        "plural": "die Abos"
+        "plural": "die Abos",
+        "img": "/cards/b2-v409.webp"
       },
       {
         "id": "v410",
@@ -8135,7 +8154,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Das Ergebnis der Prüfung kommt in vier Wochen.",
         "exampleAr": "نتيجة الامتحان تصل خلال أربعة أسابيع.",
-        "plural": "die Ergebnisse"
+        "plural": "die Ergebnisse",
+        "img": "/cards/b2-v419.webp"
       },
       {
         "id": "v420",
@@ -8150,7 +8170,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Das Experiment wurde dreimal wiederholt, mit gleichem Ergebnis.",
         "exampleAr": "التجربة أُعيدت ثلاث مرات بنفس النتيجة.",
-        "plural": "die Initiativen"
+        "plural": "die Initiativen",
+        "img": "/cards/b2-v420.webp"
       },
       {
         "id": "v421",
@@ -8519,7 +8540,8 @@
         "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
         "exampleDe": "Das Gutachten des Instituts kommt zu einem anderen Ergebnis.",
         "exampleAr": "التقرير…",
-        "plural": "die Gutachten"
+        "plural": "die Gutachten",
+        "img": "/cards/b2-v446.webp"
       },
       {
         "id": "v447",
@@ -8564,7 +8586,8 @@
         "aussprache": "sch = «ش»",
         "exampleDe": "Das Forschungsprojekt untersucht Lärm in Schulen.",
         "exampleAr": "المشروع…",
-        "plural": "die Forschungsprojekte"
+        "plural": "die Forschungsprojekte",
+        "img": "/cards/b2-v449.webp"
       },
       {
         "id": "v450",
@@ -8708,7 +8731,8 @@
         "article": "das",
         "farbe": "GRÜN",
         "exampleDe": "Das Aussehen ist beim Vorstellungsgespräch nicht alles.",
-        "exampleAr": "المظهر ل…"
+        "exampleAr": "المظهر ل…",
+        "img": "/cards/b2-v457.webp"
       },
       {
         "id": "v458",
@@ -8775,7 +8799,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Das Ideal der ständigen Erreichbarkeit macht viele krank.",
         "exampleAr": "المثال ا…",
-        "plural": "die Ideale"
+        "plural": "die Ideale",
+        "img": "/cards/b2-v461.webp"
       },
       {
         "id": "v462",
@@ -8908,7 +8933,8 @@
         "aussprache": "-er في الآخر = «أَ» خفيفة",
         "exampleDe": "Im Alter braucht man mehr Zeit für den Alltag.",
         "exampleAr": "في الكِب…",
-        "plural": "die Gutachten"
+        "plural": "die Gutachten",
+        "img": "/cards/b2-v470.webp"
       },
       {
         "id": "v471",
@@ -9482,7 +9508,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Das Gemälde zeigt eine Straße bei Nacht, ohne Menschen.",
         "exampleAr": "اللوحة ت…",
-        "plural": "die Gemälde"
+        "plural": "die Gemälde",
+        "img": "/cards/b2-v507.webp"
       },
       {
         "id": "v508",
@@ -9510,7 +9537,8 @@
         "farbe": "GRÜN",
         "exampleDe": "An der Wand hängt ein Bild von meiner Familie.",
         "exampleAr": "على الجد…",
-        "plural": "die Bilder"
+        "plural": "die Bilder",
+        "img": "/cards/b2-v509.webp"
       },
       {
         "id": "v510",
@@ -9540,7 +9568,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Das Denkmal erinnert an die Opfer der Überschwemmung.",
         "exampleAr": "النصب ال…",
-        "plural": "die Denkmäler"
+        "plural": "die Denkmäler",
+        "img": "/cards/b2-v511.webp"
       },
       {
         "id": "v512",
@@ -9633,7 +9662,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Welches Instrument spielst du? – Gitarre, seit drei Jahren.",
         "exampleAr": "أي آلة ت…",
-        "plural": "die Instrumente"
+        "plural": "die Instrumente",
+        "img": "/cards/b2-v517.webp"
       },
       {
         "id": "v518",
@@ -9723,7 +9753,8 @@
         "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
         "exampleDe": "Das Drehbuch wurde zehnmal umgeschrieben.",
         "exampleAr": "السيناري…",
-        "plural": "die Drehbücher"
+        "plural": "die Drehbücher",
+        "img": "/cards/b2-v523.webp"
       },
       {
         "id": "v524",
@@ -9891,7 +9922,8 @@
         "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
         "exampleDe": "Wir lernen im Kurs ein kurzes Gedicht auswendig.",
         "exampleAr": "نحفظ في…",
-        "plural": "die Gedichte"
+        "plural": "die Gedichte",
+        "img": "/cards/b2-v534.webp"
       },
       {
         "id": "v535",
@@ -9936,7 +9968,8 @@
         "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
         "exampleDe": "Es lohnt sich, das Buch zweimal zu lesen.",
         "exampleAr": "يستحق ال…",
-        "plural": "die Bücher"
+        "plural": "die Bücher",
+        "img": "/cards/b2-v537.webp"
       },
       {
         "id": "v538",
@@ -9983,7 +10016,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Das dritte Kapitel ist das längste und das spannendste.",
         "exampleAr": "الفصل ال…",
-        "plural": "die Richtwerte"
+        "plural": "die Richtwerte",
+        "img": "/cards/b2-v540.webp"
       },
       {
         "id": "v541",
@@ -10044,7 +10078,8 @@
         "aussprache": "v = «ف»",
         "exampleDe": "Beim Festival im Juli spielen dreißig Bands aus zehn Ländern.",
         "exampleAr": "في مهرجا…",
-        "plural": "die Festivals"
+        "plural": "die Festivals",
+        "img": "/cards/b2-v544.webp"
       },
       {
         "id": "v545",
@@ -10074,7 +10109,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Das kulturelle Erbe der Region sind ihre Märkte, nicht ihre Museen.",
         "exampleAr": "الإرث ال…",
-        "plural": "die Erben"
+        "plural": "die Erben",
+        "img": "/cards/b2-v546.webp"
       },
       {
         "id": "v547",
@@ -10194,7 +10230,8 @@
         "syn": [
           "der Lohn"
         ],
-        "plural": "die Gehälter"
+        "plural": "die Gehälter",
+        "img": "/cards/b2-v553.webp"
       },
       {
         "id": "v554",
@@ -10539,7 +10576,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Das Burnout kam nicht plötzlich, sondern nach Monaten ohne Pause.",
         "exampleAr": "الاحتراق الوظيفي ل…",
-        "plural": "die Studien"
+        "plural": "die Studien",
+        "img": "/cards/b2-v575.webp"
       },
       {
         "id": "v576",
@@ -10613,7 +10651,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Das Elterngeld hängt vom Einkommen der letzten zwölf Monate ab.",
         "exampleAr": "منحة الوالدين تتوق…",
-        "plural": "die Analysen"
+        "plural": "die Analysen",
+        "img": "/cards/b2-v580.webp"
       },
       {
         "id": "v581",
@@ -11371,7 +11410,8 @@
         "aussprache": "w = «ڤ»",
         "exampleDe": "Ein Einwegprodukt ist billig im Kauf und teuer für die Umwelt.",
         "exampleAr": "المنتج أحادي الاست…",
-        "plural": "die Einwegprodukte"
+        "plural": "die Einwegprodukte",
+        "img": "/cards/b2-v604.webp"
       },
       {
         "id": "v605",
@@ -11603,7 +11643,8 @@
         "farbe": "GRÜN",
         "aussprache": "ö = بينَ الضمّةِ والكسرة",
         "exampleDe": "Der Preis für Erdöl ist wieder gestiegen.",
-        "exampleAr": "سعر النفط ارتفع مج…"
+        "exampleAr": "سعر النفط ارتفع مج…",
+        "img": "/cards/b2-v619.webp"
       },
       {
         "id": "v620",
@@ -11618,7 +11659,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Viele Wohnungen werden noch mit Erdgas geheizt.",
         "exampleAr": "شقق كثيرة ما زالت…",
-        "plural": "die Rezensionen"
+        "plural": "die Rezensionen",
+        "img": "/cards/b2-v620.webp"
       },
       {
         "id": "v621",
@@ -11826,7 +11868,8 @@
         "article": "das",
         "farbe": "GRÜN",
         "exampleDe": "Das Aussterben einer Art fällt oft erst auf, wenn es zu spät ist.",
-        "exampleAr": "انقراض نوع ما لا ي…"
+        "exampleAr": "انقراض نوع ما لا ي…",
+        "img": "/cards/b2-v634.webp"
       },
       {
         "id": "v635",
@@ -11857,7 +11900,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Das Biotop am Bahndamm wurde von Freiwilligen angelegt.",
         "exampleAr": "الموطن البيئي على…",
-        "plural": "die Biotope"
+        "plural": "die Biotope",
+        "img": "/cards/b2-v636.webp"
       },
       {
         "id": "v637",
@@ -11872,7 +11916,8 @@
         "farbe": "GRÜN",
         "aussprache": "w = «ڤ» · -er في الآخر = «أَ» خفيفة",
         "exampleDe": "Das Grundwasser ist in trockenen Sommern deutlich gesunken.",
-        "exampleAr": "المياه الجوفية انخ…"
+        "exampleAr": "المياه الجوفية انخ…",
+        "img": "/cards/b2-v637.webp"
       },
       {
         "id": "v638",
@@ -11888,7 +11933,8 @@
         "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · w = «ڤ» · -er في الآخر = «أَ» خفيفة",
         "exampleDe": "Beim Hochwasser stand das Wasser einen Meter hoch im Keller.",
         "exampleAr": "في الفيضان بلغ الم…",
-        "plural": "die Hochwasser"
+        "plural": "die Hochwasser",
+        "img": "/cards/b2-v638.webp"
       },
       {
         "id": "v639",
@@ -11982,7 +12028,8 @@
         "farbe": "GRÜN",
         "aussprache": "sch = «ش» · z = «تس»",
         "exampleDe": "Das Gletscherschmelzen verändert die Flüsse im Tal.",
-        "exampleAr": "ذوبان الأنهار الجل…"
+        "exampleAr": "ذوبان الأنهار الجل…",
+        "img": "/cards/b2-v644.webp"
       },
       {
         "id": "v645",
@@ -12090,7 +12137,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Das Abkommen wurde unterschrieben, die Umsetzung fehlt noch.",
         "exampleAr": "الاتفاق وُقّع، وال…",
-        "plural": "die Abkommen"
+        "plural": "die Abkommen",
+        "img": "/cards/b2-v651.webp"
       },
       {
         "id": "v652",
@@ -12416,7 +12464,8 @@
         "article": "das",
         "farbe": "GRÜN",
         "exampleDe": "Das Guthaben auf der Karte reicht noch für drei Fahrten.",
-        "exampleAr": "الرصيد على البطاقة…"
+        "exampleAr": "الرصيد على البطاقة…",
+        "img": "/cards/b2-v672.webp"
       },
       {
         "id": "v673",
@@ -12756,7 +12805,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Unser Budget für den Urlaub sind achthundert Euro.",
         "exampleAr": "ميزانيتنا للعطلة ث…",
-        "plural": "die Budgets"
+        "plural": "die Budgets",
+        "img": "/cards/b2-v694.webp"
       },
       {
         "id": "v695",
@@ -12980,7 +13030,8 @@
         "article": "das",
         "farbe": "GRÜN",
         "exampleDe": "Der Betrag wird bar ausgezahlt, ich habe kein Bargeld dabei.",
-        "exampleAr": "المبلغ يُدفع نقداً…"
+        "exampleAr": "المبلغ يُدفع نقداً…",
+        "img": "/cards/b2-v709.webp"
       },
       {
         "id": "v710",
@@ -13141,7 +13192,8 @@
         "aussprache": "eu/äu = «أوي» · z = «تس»",
         "exampleDe": "Jedes Fahrzeug muss alle zwei Jahre zur Prüfung.",
         "exampleAr": "كل مركبة يجب أن تخ…",
-        "plural": "die Fahrzeuge"
+        "plural": "die Fahrzeuge",
+        "img": "/cards/b2-v719.webp"
       },
       {
         "id": "v720",
@@ -13156,7 +13208,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Das Elektroauto lädt über Nacht an der Wallbox in der Garage.",
         "exampleAr": "السيارة الكهربائية…",
-        "plural": "die Modelle"
+        "plural": "die Modelle",
+        "img": "/cards/b2-v720.webp"
       },
       {
         "id": "v721",
@@ -13307,7 +13360,8 @@
         "aussprache": "ei = «آي» لا «إي»",
         "exampleDe": "Der Zug nach Köln fährt heute von Gleis fünf, nicht von Gleis drei.",
         "exampleAr": "قطار كولن ينطلق ال…",
-        "plural": "die Pläne"
+        "plural": "die Pläne",
+        "img": "/cards/b2-v730.webp"
       },
       {
         "id": "v731",
@@ -13736,7 +13790,8 @@
         "aussprache": "ß = «س» مشدَّدة",
         "exampleDe": "Wer bei Rot fährt, zahlt ein Bußgeld und bekommt einen Punkt.",
         "exampleAr": "من يقطع الإشارة ال…",
-        "plural": "die Bußgelder"
+        "plural": "die Bußgelder",
+        "img": "/cards/b2-v758.webp"
       },
       {
         "id": "v759",
@@ -13752,7 +13807,8 @@
         "aussprache": "v = «ف»",
         "exampleDe": "Nach dem zweiten Verstoß drohte ihm ein Fahrverbot von einem Monat.",
         "exampleAr": "بعد المخالفة الثان…",
-        "plural": "die Fahrverbote"
+        "plural": "die Fahrverbote",
+        "img": "/cards/b2-v759.webp"
       },
       {
         "id": "v760",
@@ -13876,7 +13932,8 @@
         "article": "das",
         "farbe": "GRÜN",
         "exampleDe": "Ins Handgepäck passen nur Flüssigkeiten bis hundert Milliliter.",
-        "exampleAr": "في أمتعة الكابينة…"
+        "exampleAr": "في أمتعة الكابينة…",
+        "img": "/cards/b2-v767.webp"
       },
       {
         "id": "v768",
@@ -13946,7 +14003,8 @@
         "aussprache": "z = «تس»",
         "exampleDe": "Das neue Gesetz gilt ab Januar für alle Mieter.",
         "exampleAr": "القانون الجديد يسر…",
-        "plural": "die Gesetze"
+        "plural": "die Gesetze",
+        "img": "/cards/b2-v771.webp"
       },
       {
         "id": "v772",
@@ -14369,7 +14427,8 @@
         "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
         "exampleDe": "Vor dem Gericht muss zuerst ein Schlichtungsversuch stehen.",
         "exampleAr": "قبل المحكمة يجب أن…",
-        "plural": "die Gerichte"
+        "plural": "die Gerichte",
+        "img": "/cards/b2-v799.webp"
       },
       {
         "id": "v800",
@@ -14710,7 +14769,8 @@
         "article": "das",
         "farbe": "GRÜN",
         "exampleDe": "Der Antrag auf Asyl wird in einem persönlichen Gespräch geprüft.",
-        "exampleAr": "طلب اللجوء يُفحص ف…"
+        "exampleAr": "طلب اللجوء يُفحص ف…",
+        "img": "/cards/b2-v821.webp"
       },
       {
         "id": "v822",
@@ -15161,7 +15221,8 @@
         "aussprache": "ö = بينَ الضمّةِ والكسرة",
         "exampleDe": "Der Hörsaal war so voll, dass Studierende auf den Stufen saßen.",
         "exampleAr": "قاعة المحاضرات كان…",
-        "plural": "die Hörsäle"
+        "plural": "die Hörsäle",
+        "img": "/cards/b2-v848.webp"
       },
       {
         "id": "v849",
@@ -15739,7 +15800,8 @@
         "farbe": "GRÜN",
         "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
         "exampleDe": "Schlaf ist wichtig für das Gedächtnis, sagt der Autor.",
-        "exampleAr": "النوم مهم للذاكرة،…"
+        "exampleAr": "النوم مهم للذاكرة،…",
+        "img": "/cards/b2-v886.webp"
       },
       {
         "id": "v887",
@@ -15922,7 +15984,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Das Institut sucht eine neue Erstprüferin binnen sechs Wochen.",
         "exampleAr": "المعهد يبحث عن ممت…",
-        "plural": "die Institute"
+        "plural": "die Institute",
+        "img": "/cards/b2-v898.webp"
       },
       {
         "id": "v899",
@@ -16937,7 +17000,8 @@
         "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
         "exampleDe": "Das Bedürfnis nach Ruhe ist nach einer Nachtschicht am größten.",
         "exampleAr": "الحاجة إلى الهدوء…",
-        "plural": "die Bedürfnisse"
+        "plural": "die Bedürfnisse",
+        "img": "/cards/b2-v961.webp"
       },
       {
         "id": "v962",
@@ -17096,7 +17160,8 @@
         "farbe": "GRÜN",
         "aussprache": "ei = «آي» لا «إي» · w = «ڤ»",
         "exampleDe": "Das Heimweh kam am ersten Abend, beim Brot mit Käse.",
-        "exampleAr": "الحنين إلى الوطن ج…"
+        "exampleAr": "الحنين إلى الوطن ج…",
+        "img": "/cards/b2-v972.webp"
       },
       {
         "id": "v973",
@@ -17206,7 +17271,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Das Fitnessstudio kündigt man schriftlich mit sechs Wochen Frist.",
         "exampleAr": "يُلغى اشتراك الناد…",
-        "plural": "die Fitnessstudios"
+        "plural": "die Fitnessstudios",
+        "img": "/cards/b2-v979.webp"
       },
       {
         "id": "v980",
@@ -17235,7 +17301,8 @@
         "article": "das",
         "farbe": "GRÜN",
         "exampleDe": "Ausdauertraining dreimal pro Woche senkt den Blutdruck.",
-        "exampleAr": "تمرين التحمل ثلاث…"
+        "exampleAr": "تمرين التحمل ثلاث…",
+        "img": "/cards/b2-v981.webp"
       },
       {
         "id": "v982",
@@ -17276,7 +17343,8 @@
         "article": "das",
         "farbe": "GRÜN",
         "exampleDe": "Das Dehnen nach dem Training beugt Zerrungen vor.",
-        "exampleAr": "الإطالة بعد التمري…"
+        "exampleAr": "الإطالة بعد التمري…",
+        "img": "/cards/b2-v984.webp"
       },
       {
         "id": "v985",
@@ -17621,7 +17689,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Beim Derby sind die Karten seit Wochen weg.",
         "exampleAr": "في مباراة الديربي…",
-        "plural": "die Derbys"
+        "plural": "die Derbys",
+        "img": "/cards/b2-v1007.webp"
       },
       {
         "id": "v1008",
@@ -18017,7 +18086,8 @@
         "farbe": "GRÜN",
         "aussprache": "ie = «إي» ممدودة · sch = «ش» · ß = «س» مشدَّدة",
         "exampleDe": "Das Elfmeterschießen gewann die Mannschaft mit fünf zu vier.",
-        "exampleAr": "ركلات الترجيح ربحه…"
+        "exampleAr": "ركلات الترجيح ربحه…",
+        "img": "/cards/b2-v1033.webp"
       },
       {
         "id": "v1034",
@@ -18267,7 +18337,8 @@
         "article": "das",
         "farbe": "GRÜN",
         "exampleDe": "Agenda-Setting entscheidet nicht, was wir denken, sondern worüber.",
-        "exampleAr": "تقرير جدول النقاش…"
+        "exampleAr": "تقرير جدول النقاش…",
+        "img": "/cards/b2-v1049.webp"
       },
       {
         "id": "v1050",
@@ -18514,7 +18585,8 @@
         "article": "das",
         "farbe": "GRÜN",
         "exampleDe": "Das Framing „Flut“ macht aus Menschen eine Naturkatastrophe.",
-        "exampleAr": "تأطير «طوفان» يحوّ…"
+        "exampleAr": "تأطير «طوفان» يحوّ…",
+        "img": "/cards/b2-v1065.webp"
       },
       {
         "id": "v1066",
@@ -18990,7 +19062,8 @@
         "farbe": "GRÜN",
         "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
         "exampleDe": "Das Bildungsbürgertum kennt die Regeln der Schule von zu Hause.",
-        "exampleAr": "البرجوازية التعليم…"
+        "exampleAr": "البرجوازية التعليم…",
+        "img": "/cards/b2-v1096.webp"
       },
       {
         "id": "v1097",
@@ -19723,7 +19796,8 @@
         "farbe": "GRÜN",
         "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
         "exampleDe": "Das Bürgergeld wird vom Jobcenter monatlich überwiesen.",
-        "exampleAr": "بدل المواطن يحوّله…"
+        "exampleAr": "بدل المواطن يحوّله…",
+        "img": "/cards/b2-v1141.webp"
       },
       {
         "id": "v1142",
@@ -20203,7 +20277,8 @@
         "aussprache": "-er في الآخر = «أَ» خفيفة",
         "exampleDe": "Das Jobcenter zahlt den Kurs, wenn man den Antrag rechtzeitig stellt.",
         "exampleAr": "مكتب العمل يدفع ال…",
-        "plural": "die Jobcenter"
+        "plural": "die Jobcenter",
+        "img": "/cards/b2-v1172.webp"
       },
       {
         "id": "v1173",
@@ -20320,7 +20395,8 @@
         "aussprache": "-er في الآخر = «أَ» خفيفة",
         "exampleDe": "Ein Endlager muss für Jahrtausende sicher sein.",
         "exampleAr": "موقع الدفن النهائي…",
-        "plural": "die Endlager"
+        "plural": "die Endlager",
+        "img": "/cards/b2-v1179.webp"
       },
       {
         "id": "v1180",
@@ -20539,7 +20615,8 @@
         "aussprache": "ie = «إي» ممدودة · eu/äu = «أوي» · z = «تس»",
         "exampleDe": "Das Erneuerbare-Energien-Gesetz garantierte jahrelang feste Preise.",
         "exampleAr": "قانون الطاقات المت…",
-        "plural": "die Erneuerbare-Energien-Gesetze"
+        "plural": "die Erneuerbare-Energien-Gesetze",
+        "img": "/cards/b2-v1193.webp"
       },
       {
         "id": "v1194",
@@ -21252,7 +21329,8 @@
         "aussprache": "ie = «إي» ممدودة",
         "exampleDe": "Das Biosiegel garantiert Mindeststandards, nicht Perfektion.",
         "exampleAr": "الختم العضوي يضمن…",
-        "plural": "die Biosiegel"
+        "plural": "die Biosiegel",
+        "img": "/cards/b2-v1239.webp"
       },
       {
         "id": "v1240",
@@ -21422,7 +21500,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Das Bundeskartellamt prüft, ob die Fusion den Wettbewerb schadet.",
         "exampleAr": "مكتب مكافحة الكارت…",
-        "plural": "die Bundeskartellämter"
+        "plural": "die Bundeskartellämter",
+        "img": "/cards/b2-v1250.webp"
       },
       {
         "id": "v1251",
@@ -21760,7 +21839,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Für Kinder ist schon eine kleine Menge dieses Mittels Gift.",
         "exampleAr": "للأطفال حتى كمية ص…",
-        "plural": "die Gifte"
+        "plural": "die Gifte",
+        "img": "/cards/b2-v1411.webp"
       }
     ]
   },
@@ -22490,7 +22570,8 @@
         "aussprache": "ei = «آي» لا «إي» · ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · w = «ڤ»",
         "exampleDe": "Das Fachkräfteeinwanderungsgesetz erleichtert die Anerkennung von Abschlüssen.",
         "exampleAr": "قانون استقدام الكو…",
-        "plural": "die Fachkräfteeinwanderungsgesetze"
+        "plural": "die Fachkräfteeinwanderungsgesetze",
+        "img": "/cards/b2-v1317.webp"
       },
       {
         "id": "v1318",
@@ -22877,7 +22958,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Das Herkunftsland steht in jedem Formular, der Beruf selten.",
         "exampleAr": "البلد الأصلي مذكور…",
-        "plural": "die Herkunftsländer"
+        "plural": "die Herkunftsländer",
+        "img": "/cards/b2-v1342.webp"
       },
       {
         "id": "v1343",
@@ -23161,7 +23243,8 @@
         "article": "das",
         "farbe": "GRÜN",
         "exampleDe": "Das Gedenken an die Opfer findet jedes Jahr am selben Ort statt.",
-        "exampleAr": "إحياء ذكرى الضحايا…"
+        "exampleAr": "إحياء ذكرى الضحايا…",
+        "img": "/cards/b2-v1360.webp"
       },
       {
         "id": "v1361",
@@ -23455,7 +23538,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Das Gedenkritual mit Kranz und Rede wirkt auf Jugendliche oft fern.",
         "exampleAr": "طقس الإحياء بالإكل…",
-        "plural": "die Gedenkrituale"
+        "plural": "die Gedenkrituale",
+        "img": "/cards/b2-v1379.webp"
       },
       {
         "id": "v1380",
@@ -24130,7 +24214,7 @@
         "de": "kochen",
         "ar": "يطبخ",
         "pos": "Verb",
-        "exampleDe": "Mein Vater kocht am Wochenende.",
+        "exampleDe": "Mein Vater kocht am Wochenende → kochen.",
         "exampleAr": "أبي يطبخ…",
         "level": "A1",
         "tags": [
@@ -24144,7 +24228,7 @@
         "de": "backen",
         "ar": "يخبز",
         "pos": "Verb",
-        "exampleDe": "Sie backt Brot selbst.",
+        "exampleDe": "Sie backt Brot selbst → backen.",
         "exampleAr": "هي تخبزُ…",
         "level": "A1",
         "tags": [
@@ -24157,7 +24241,7 @@
         "de": "schmecken",
         "ar": "يكونُ طعمُه",
         "pos": "Verb",
-        "exampleDe": "Das Essen schmeckt sehr gut.",
+        "exampleDe": "Das Essen schmeckt sehr gut → schmecken.",
         "exampleAr": "الطعامُ…",
         "level": "A1",
         "tags": [
@@ -24710,7 +24794,7 @@
         "ar": "اليد",
         "pos": "Nomen",
         "article": "die",
-        "exampleDe": "Wasch dir die Hände!",
+        "exampleDe": "Wasch dir die Hände! → die Hand.",
         "exampleAr": "اغسلْ يد…",
         "level": "A1",
         "tags": [
@@ -24991,7 +25075,7 @@
         "de": "tragen",
         "ar": "يرتدي / يحمل",
         "pos": "Verb",
-        "exampleDe": "Er trägt heute einen Anzug.",
+        "exampleDe": "Er trägt heute einen Anzug → tragen.",
         "exampleAr": "يرتدي ال…",
         "level": "A1",
         "tags": [
@@ -25004,7 +25088,7 @@
         "de": "anziehen",
         "ar": "يلبس",
         "pos": "Verb",
-        "exampleDe": "Zieh dir die Jacke an!",
+        "exampleDe": "Zieh dir die Jacke an! → anziehen.",
         "exampleAr": "البسِ ال…",
         "level": "A1",
         "tags": [
@@ -25018,7 +25102,7 @@
         "de": "passen",
         "ar": "يناسب (مقاساً)",
         "pos": "Verb",
-        "exampleDe": "Die Hose passt mir nicht.",
+        "exampleDe": "Die Hose passt mir nicht → passen.",
         "exampleAr": "البنطالُ…",
         "level": "A1",
         "tags": [
@@ -25031,7 +25115,7 @@
         "de": "kosten",
         "ar": "يكلّف",
         "pos": "Verb",
-        "exampleDe": "Was kostet die Jacke?",
+        "exampleDe": "Was kostet die Jacke? → kosten.",
         "exampleAr": "كم تكلّف…",
         "level": "A1",
         "tags": [
@@ -25212,7 +25296,7 @@
         "de": "waschen",
         "ar": "يغسل",
         "pos": "Verb",
-        "exampleDe": "Ich wasche die Kleidung am Samstag.",
+        "exampleDe": "Ich wasche die Kleidung am Samstag → waschen.",
         "exampleAr": "أغسلُ ال…",
         "level": "A1",
         "tags": [
@@ -25518,7 +25602,7 @@
         "de": "fahren",
         "ar": "يقود / يسافر بمركبة",
         "pos": "Verb",
-        "exampleDe": "Ich fahre nach Berlin.",
+        "exampleDe": "Ich fahre nach Berlin → fahren.",
         "exampleAr": "أسافرُ إ…",
         "level": "A1",
         "tags": [
@@ -25531,7 +25615,7 @@
         "de": "laufen",
         "ar": "يمشي / يجري",
         "pos": "Verb",
-        "exampleDe": "Ich laufe zur Arbeit.",
+        "exampleDe": "Ich laufe zur Arbeit → laufen.",
         "exampleAr": "أمشي إلى…",
         "level": "A1",
         "tags": [
@@ -25558,7 +25642,7 @@
         "de": "ankommen",
         "ar": "يصل",
         "pos": "Verb",
-        "exampleDe": "Der Zug kommt um acht an.",
+        "exampleDe": "Der Zug kommt um acht an → ankommen.",
         "exampleAr": "القطارُ…",
         "level": "A1",
         "tags": [
@@ -25571,7 +25655,7 @@
         "de": "abfahren",
         "ar": "ينطلق",
         "pos": "Verb",
-        "exampleDe": "Der Bus fährt gleich ab.",
+        "exampleDe": "Der Bus fährt gleich ab → abfahren.",
         "exampleAr": "الحافلةُ…",
         "level": "A1",
         "tags": [
@@ -25702,7 +25786,7 @@
         "de": "fragen",
         "ar": "يسأل",
         "pos": "Verb",
-        "exampleDe": "Ich frage den Mann.",
+        "exampleDe": "Ich frage den Mann → fragen.",
         "exampleAr": "أسألُ ال…",
         "level": "A1",
         "tags": [
@@ -25729,7 +25813,7 @@
         "de": "suchen",
         "ar": "يبحث",
         "pos": "Verb",
-        "exampleDe": "Ich suche den Bahnhof.",
+        "exampleDe": "Ich suche den Bahnhof → suchen.",
         "exampleAr": "أبحثُ عن…",
         "level": "A1",
         "tags": [
@@ -25743,7 +25827,7 @@
         "de": "finden",
         "ar": "يجد",
         "pos": "Verb",
-        "exampleDe": "Ich finde die Adresse nicht.",
+        "exampleDe": "Ich finde die Adresse nicht → finden.",
         "exampleAr": "لا أجدُ…",
         "level": "A1",
         "tags": [
@@ -25774,7 +25858,7 @@
         "de": "kaufen",
         "ar": "يشتري",
         "pos": "Verb",
-        "exampleDe": "Ich kaufe Brot und Milch.",
+        "exampleDe": "Ich kaufe Brot und Milch → kaufen.",
         "exampleAr": "أشتري خب…",
         "level": "A1",
         "tags": [
@@ -25787,7 +25871,7 @@
         "de": "verkaufen",
         "ar": "يبيع",
         "pos": "Verb",
-        "exampleDe": "Er verkauft Obst.",
+        "exampleDe": "Er verkauft Obst → verkaufen.",
         "exampleAr": "يبيعُ فا…",
         "level": "A1",
         "tags": [
@@ -26018,7 +26102,7 @@
         "pos": "Nomen",
         "article": "die",
         "farbe": "ROT",
-        "exampleDe": "Ich fahre mit der S-Bahn zur Arbeit.",
+        "exampleDe": "Ich fahre mit der S-Bahn zur Arbeit → die S-Bahn.",
         "exampleAr": "أذهب إلى…",
         "level": "A1",
         "tags": [
@@ -26061,7 +26145,7 @@
         "de": "abfliegen",
         "ar": "يُقلع (بالطائرة)",
         "pos": "Verb",
-        "exampleDe": "Der Flug fliegt um neun Uhr ab.",
+        "exampleDe": "Der Flug fliegt um neun Uhr ab → abfliegen.",
         "exampleAr": "تقلع الر…",
         "level": "A1",
         "tags": [
@@ -26112,7 +26196,7 @@
         "de": "sich bewerben",
         "ar": "يتقدَّمُ بطلب",
         "pos": "Verb",
-        "exampleDe": "Ich bewerbe mich bei einer Firma.",
+        "exampleDe": "Ich bewerbe mich bei einer Firma → sich bewerben.",
         "exampleAr": "أتقدَّمُ…",
         "level": "A2",
         "tags": [
@@ -26126,7 +26210,7 @@
         "de": "verdienen",
         "ar": "يكسب",
         "pos": "Verb",
-        "exampleDe": "Sie verdient gut.",
+        "exampleDe": "Sie verdient gut → verdienen.",
         "exampleAr": "تكسبُ جي…",
         "level": "A2",
         "tags": [
@@ -26211,7 +26295,7 @@
         "de": "ausfüllen",
         "ar": "يملأ",
         "pos": "Verb",
-        "exampleDe": "Ich fülle den Antrag aus.",
+        "exampleDe": "Ich fülle den Antrag aus → ausfüllen.",
         "exampleAr": "أملأُ ال…",
         "level": "A2",
         "tags": [
@@ -26238,7 +26322,7 @@
         "de": "bestehen",
         "ar": "ينجح (في امتحان)",
         "pos": "Verb",
-        "exampleDe": "Ich habe die Prüfung bestanden.",
+        "exampleDe": "Ich habe die Prüfung bestanden → bestehen.",
         "exampleAr": "نجحتُ في…",
         "level": "A2",
         "tags": [
@@ -26251,7 +26335,7 @@
         "de": "wiederholen",
         "ar": "يعيد",
         "pos": "Verb",
-        "exampleDe": "Ich wiederhole die Vokabeln täglich.",
+        "exampleDe": "Ich wiederhole die Vokabeln täglich → wiederholen.",
         "exampleAr": "أراجعُ ا…",
         "level": "A2",
         "tags": [
@@ -26295,7 +26379,7 @@
         "de": "erklären",
         "ar": "يشرح",
         "pos": "Verb",
-        "exampleDe": "Die Lehrerin erklärt die Regel.",
+        "exampleDe": "Die Lehrerin erklärt die Regel → erklären.",
         "exampleAr": "المعلّمة…",
         "level": "A2",
         "tags": [
@@ -26311,7 +26395,7 @@
         "de": "üben",
         "ar": "يتمرَّن",
         "pos": "Verb",
-        "exampleDe": "Ich übe jeden Tag zwanzig Minuten.",
+        "exampleDe": "Ich übe jeden Tag zwanzig Minuten → üben.",
         "exampleAr": "أتمرَّنُ…",
         "level": "A2",
         "tags": [
@@ -26577,7 +26661,7 @@
         "de": "nachfragen",
         "ar": "يستفسر",
         "pos": "Verb",
-        "exampleDe": "Ich frage lieber nach, bevor ich anfange.",
+        "exampleDe": "Ich frage lieber nach, bevor ich anfange → nachfragen.",
         "exampleAr": "أفضّلُ أ…",
         "level": "A2",
         "tags": [
@@ -26887,7 +26971,7 @@
         "de": "beantworten",
         "ar": "يجيب عن",
         "pos": "Verb",
-        "exampleDe": "Ich beantworte Ihre Frage gern morgen.",
+        "exampleDe": "Ich beantworte Ihre Frage gern morgen → beantworten.",
         "exampleAr": "سأجيب عن…",
         "level": "A2",
         "tags": [
@@ -26995,7 +27079,7 @@
         "de": "aufräumen",
         "ar": "يرتّب",
         "pos": "Verb",
-        "exampleDe": "Ich räume mein Zimmer auf.",
+        "exampleDe": "Ich räume mein Zimmer auf → aufräumen.",
         "exampleAr": "أرتّبُ غ…",
         "level": "A2",
         "tags": [
@@ -27039,7 +27123,7 @@
         "de": "anrufen",
         "ar": "يتّصلُ هاتفياً",
         "pos": "Verb",
-        "exampleDe": "Ich rufe dich später an.",
+        "exampleDe": "Ich rufe dich später an → anrufen.",
         "exampleAr": "سأتّصلُ…",
         "level": "A2",
         "tags": [
@@ -27052,7 +27136,7 @@
         "de": "schicken",
         "ar": "يرسل",
         "pos": "Verb",
-        "exampleDe": "Schick mir bitte die Adresse.",
+        "exampleDe": "Schick mir bitte die Adresse → schicken.",
         "exampleAr": "أرسلْ لي…",
         "level": "A2",
         "tags": [
@@ -27107,7 +27191,7 @@
         "de": "einladen",
         "ar": "يدعو",
         "pos": "Verb",
-        "exampleDe": "Ich lade dich zum Essen ein.",
+        "exampleDe": "Ich lade dich zum Essen ein → einladen.",
         "exampleAr": "أدعوكَ إ…",
         "level": "A2",
         "tags": [
@@ -27135,7 +27219,7 @@
         "de": "sich entschuldigen",
         "ar": "يعتذر",
         "pos": "Verb",
-        "exampleDe": "Ich entschuldige mich für die Verspätung.",
+        "exampleDe": "Ich entschuldige mich für die Verspätung → sich entschuldigen.",
         "exampleAr": "أعتذرُ ع…",
         "level": "A2",
         "tags": [
@@ -27195,7 +27279,7 @@
         "ar": "الضيف",
         "pos": "Nomen",
         "article": "der",
-        "exampleDe": "Wir haben heute Gäste.",
+        "exampleDe": "Wir haben heute Gäste → der Gast.",
         "exampleAr": "لدينا ضي…",
         "level": "A2",
         "tags": [
@@ -27363,7 +27447,7 @@
         "de": "buchen",
         "ar": "يحجز (رحلةً أو فندقاً)",
         "pos": "Verb",
-        "exampleDe": "Ich buche das Hotel online.",
+        "exampleDe": "Ich buche das Hotel online → buchen.",
         "exampleAr": "أحجزُ ال…",
         "level": "A2",
         "tags": [
@@ -27393,7 +27477,7 @@
         "de": "packen",
         "ar": "يحزم",
         "pos": "Verb",
-        "exampleDe": "Ich packe heute Abend.",
+        "exampleDe": "Ich packe heute Abend → packen.",
         "exampleAr": "أحزمُ هذ…",
         "level": "A2",
         "tags": [
@@ -27529,7 +27613,7 @@
         "de": "sich beschweren",
         "ar": "يشتكي",
         "pos": "Verb",
-        "exampleDe": "Ich habe mich beim Vermieter beschwert.",
+        "exampleDe": "Ich habe mich beim Vermieter beschwert → sich beschweren.",
         "exampleAr": "اشتكيتُ…",
         "level": "A2",
         "tags": [
@@ -27605,7 +27689,7 @@
         "de": "weiterleiten",
         "ar": "يحوّلُ رسالة",
         "pos": "Verb",
-        "exampleDe": "Ich leite die Mail weiter.",
+        "exampleDe": "Ich leite die Mail weiter → weiterleiten.",
         "exampleAr": "أحوّلُ ا…",
         "level": "A2",
         "tags": [
@@ -27653,7 +27737,7 @@
         "de": "vorschlagen",
         "ar": "يقترح",
         "pos": "Verb",
-        "exampleDe": "Ich schlage Samstag vor.",
+        "exampleDe": "Ich schlage Samstag vor → vorschlagen.",
         "exampleAr": "أقترحُ ا…",
         "level": "A2",
         "tags": [
@@ -27667,7 +27751,7 @@
         "de": "zusagen",
         "ar": "يقبلُ دعوة",
         "pos": "Verb",
-        "exampleDe": "Ich habe schon zugesagt.",
+        "exampleDe": "Ich habe schon zugesagt → zusagen.",
         "exampleAr": "قبلتُ ال…",
         "level": "A2",
         "tags": [
@@ -29352,7 +29436,7 @@
         "de": "lesen",
         "ar": "يقرأ",
         "pos": "Verb",
-        "exampleDe": "Ich lese jeden Abend.",
+        "exampleDe": "Ich lese jeden Abend → lesen.",
         "exampleAr": "أقرأُ كلَّ مساء",
         "level": "A1",
         "tags": [
@@ -29365,7 +29449,7 @@
         "de": "schreiben",
         "ar": "يكتب",
         "pos": "Verb",
-        "exampleDe": "Schreib mir bitte eine Mail.",
+        "exampleDe": "Schreib mir bitte eine Mail → schreiben.",
         "exampleAr": "اكتبْ لي بريداً من فضلك",
         "level": "A1",
         "tags": [
@@ -29382,7 +29466,7 @@
         "de": "hören",
         "ar": "يسمع",
         "pos": "Verb",
-        "exampleDe": "Hörst du die Musik?",
+        "exampleDe": "Hörst du die Musik? → hören.",
         "exampleAr": "أتسمعُ الموسيقى؟",
         "level": "A1",
         "tags": [
@@ -29396,7 +29480,7 @@
         "de": "sehen",
         "ar": "يرى",
         "pos": "Verb",
-        "exampleDe": "Ich sehe dich morgen.",
+        "exampleDe": "Ich sehe dich morgen → sehen.",
         "exampleAr": "أراكَ غد…",
         "level": "A1",
         "tags": [
@@ -29412,7 +29496,7 @@
         "de": "gehen",
         "ar": "يذهب",
         "pos": "Verb",
-        "exampleDe": "Ich gehe zu Fuß.",
+        "exampleDe": "Ich gehe zu Fuß → gehen.",
         "exampleAr": "أذهبُ مش…",
         "level": "A1",
         "tags": [
@@ -29425,7 +29509,7 @@
         "de": "machen",
         "ar": "يفعل / يصنع",
         "pos": "Verb",
-        "exampleDe": "Was machst du gerade?",
+        "exampleDe": "Was machst du gerade? → machen.",
         "exampleAr": "ماذا تفع…",
         "level": "A1",
         "tags": [
@@ -29452,7 +29536,7 @@
         "de": "nehmen",
         "ar": "يأخذ",
         "pos": "Verb",
-        "exampleDe": "Ich nehme den Bus.",
+        "exampleDe": "Ich nehme den Bus → nehmen.",
         "exampleAr": "آخذُ الح…",
         "level": "A1",
         "tags": [
@@ -29465,7 +29549,7 @@
         "de": "sagen",
         "ar": "يقول",
         "pos": "Verb",
-        "exampleDe": "Was hast du gesagt?",
+        "exampleDe": "Was hast du gesagt? → sagen.",
         "exampleAr": "ماذا قلت…",
         "level": "A1",
         "tags": [
@@ -29481,7 +29565,7 @@
         "de": "bringen",
         "ar": "يُحضِر",
         "pos": "Verb",
-        "exampleDe": "Bring bitte Brot mit.",
+        "exampleDe": "Bring bitte Brot mit → bringen.",
         "exampleAr": "أحضِرْ خ…",
         "level": "A1",
         "tags": [
@@ -29510,7 +29594,7 @@
         "de": "brauchen",
         "ar": "يحتاج",
         "pos": "Verb",
-        "exampleDe": "Ich brauche mehr Zeit.",
+        "exampleDe": "Ich brauche mehr Zeit → brauchen.",
         "exampleAr": "أحتاجُ و…",
         "level": "A1",
         "tags": [
@@ -29538,7 +29622,7 @@
         "de": "kennen",
         "ar": "يعرِفُ شخصاً",
         "pos": "Verb",
-        "exampleDe": "Kennst du diese Frau?",
+        "exampleDe": "Kennst du diese Frau? → kennen.",
         "exampleAr": "أتعرفُ ه…",
         "level": "A1",
         "tags": [
@@ -29551,7 +29635,7 @@
         "de": "denken",
         "ar": "يفكّر",
         "pos": "Verb",
-        "exampleDe": "Ich denke oft an dich.",
+        "exampleDe": "Ich denke oft an dich → denken.",
         "exampleAr": "أفكّرُ ف…",
         "level": "A1",
         "tags": [
@@ -29567,7 +29651,7 @@
         "de": "bleiben",
         "ar": "يبقى",
         "pos": "Verb",
-        "exampleDe": "Ich bleibe heute zu Hause.",
+        "exampleDe": "Ich bleibe heute zu Hause → bleiben.",
         "exampleAr": "أبقى الي…",
         "level": "A1",
         "tags": [
@@ -29581,7 +29665,7 @@
         "de": "öffnen",
         "ar": "يفتح",
         "pos": "Verb",
-        "exampleDe": "Öffne bitte das Fenster.",
+        "exampleDe": "Öffne bitte das Fenster → öffnen.",
         "exampleAr": "افتحِ النافذةَ من فضلك",
         "level": "A1",
         "tags": [
@@ -29595,7 +29679,7 @@
         "de": "schließen",
         "ar": "يُغلق",
         "pos": "Verb",
-        "exampleDe": "Die Bank schließt um vier.",
+        "exampleDe": "Die Bank schließt um vier → schließen.",
         "exampleAr": "البنكُ يُغلقُ الرابعة",
         "level": "A1",
         "tags": [
@@ -29609,7 +29693,7 @@
         "de": "anfangen",
         "ar": "يبدأ",
         "pos": "Verb",
-        "exampleDe": "Der Film fängt gleich an.",
+        "exampleDe": "Der Film fängt gleich an → anfangen.",
         "exampleAr": "الفيلمُ…",
         "level": "A1",
         "tags": [
@@ -29625,7 +29709,7 @@
         "de": "aufhören",
         "ar": "يتوقّف",
         "pos": "Verb",
-        "exampleDe": "Hör bitte auf!",
+        "exampleDe": "Hör bitte auf! → aufhören.",
         "exampleAr": "توقّفْ م…",
         "level": "A1",
         "tags": [
@@ -29653,7 +29737,7 @@
         "de": "erinnern",
         "ar": "يُذكِّر",
         "pos": "Verb",
-        "exampleDe": "Erinnere mich bitte daran.",
+        "exampleDe": "Erinnere mich bitte daran → erinnern.",
         "exampleAr": "ذكّرْني…",
         "level": "A1",
         "tags": [
@@ -29666,7 +29750,7 @@
         "de": "warten",
         "ar": "ينتظر",
         "pos": "Verb",
-        "exampleDe": "Ich warte seit zehn Minuten.",
+        "exampleDe": "Ich warte seit zehn Minuten → warten.",
         "exampleAr": "أنتظرُ م…",
         "level": "A1",
         "tags": [
@@ -30824,7 +30908,7 @@
         "de": "schwimmen",
         "ar": "يسبح",
         "pos": "Verb",
-        "exampleDe": "Ich schwimme zweimal pro Woche.",
+        "exampleDe": "Ich schwimme zweimal pro Woche → schwimmen.",
         "exampleAr": "أسبحُ مر…",
         "level": "A1",
         "tags": [
@@ -30838,7 +30922,7 @@
         "de": "tanzen",
         "ar": "يرقص",
         "pos": "Verb",
-        "exampleDe": "Sie tanzt sehr gut.",
+        "exampleDe": "Sie tanzt sehr gut → tanzen.",
         "exampleAr": "ترقصُ جي…",
         "level": "A1",
         "tags": [
@@ -30927,7 +31011,7 @@
         "de": "reisen",
         "ar": "يسافر",
         "pos": "Verb",
-        "exampleDe": "Ich reise gern allein.",
+        "exampleDe": "Ich reise gern allein → reisen.",
         "exampleAr": "أحبُّ ال…",
         "level": "A1",
         "tags": [
@@ -30944,7 +31028,7 @@
         "de": "besuchen",
         "ar": "يزور",
         "pos": "Verb",
-        "exampleDe": "Ich besuche meine Oma.",
+        "exampleDe": "Ich besuche meine Oma → besuchen.",
         "exampleAr": "أزورُ جد…",
         "level": "A1",
         "tags": [
@@ -31109,7 +31193,7 @@
         "de": "lachen",
         "ar": "يضحك",
         "pos": "Verb",
-        "exampleDe": "Wir haben viel gelacht.",
+        "exampleDe": "Wir haben viel gelacht → lachen.",
         "exampleAr": "ضحكنا كث…",
         "level": "A1",
         "tags": [
@@ -31123,7 +31207,7 @@
         "de": "weinen",
         "ar": "يبكي",
         "pos": "Verb",
-        "exampleDe": "Das Kind weint.",
+        "exampleDe": "Das Kind weint → weinen.",
         "exampleAr": "الطفلُ ي…",
         "level": "A1",
         "tags": [
@@ -31137,7 +31221,7 @@
         "de": "lieben",
         "ar": "يحبّ",
         "pos": "Verb",
-        "exampleDe": "Ich liebe meine Familie.",
+        "exampleDe": "Ich liebe meine Familie → lieben.",
         "exampleAr": "أحبُّ عا…",
         "level": "A1",
         "tags": [
@@ -31171,7 +31255,7 @@
         "de": "hassen",
         "ar": "يكره",
         "pos": "Verb",
-        "exampleDe": "Ich hasse Warten.",
+        "exampleDe": "Ich hasse Warten → hassen.",
         "exampleAr": "أكرهُ ال…",
         "level": "A1",
         "tags": [
@@ -31248,7 +31332,7 @@
         "de": "duschen",
         "ar": "يستحمّ",
         "pos": "Verb",
-        "exampleDe": "Ich dusche jeden Morgen.",
+        "exampleDe": "Ich dusche jeden Morgen → duschen.",
         "exampleAr": "أستحمُّ…",
         "level": "A1",
         "tags": [
@@ -31262,7 +31346,7 @@
         "de": "kehren",
         "ar": "يكنس",
         "pos": "Verb",
-        "exampleDe": "Ich kehre die Küche.",
+        "exampleDe": "Ich kehre die Küche → kehren.",
         "exampleAr": "أكنسُ ال…",
         "level": "A1",
         "tags": [
@@ -31290,7 +31374,7 @@
         "de": "bügeln",
         "ar": "يكوي",
         "pos": "Verb",
-        "exampleDe": "Ich bügle die Hemden.",
+        "exampleDe": "Ich bügle die Hemden → bügeln.",
         "exampleAr": "أكوي الق…",
         "level": "A1",
         "tags": [
@@ -31349,7 +31433,7 @@
         "de": "schneiden",
         "ar": "يقطع",
         "pos": "Verb",
-        "exampleDe": "Schneide das Brot, bitte.",
+        "exampleDe": "Schneide das Brot, bitte → schneiden.",
         "exampleAr": "اقطعِ ال…",
         "level": "A1",
         "tags": [
@@ -31520,7 +31604,7 @@
         "de": "sich entscheiden",
         "ar": "يقرّر",
         "pos": "Verb",
-        "exampleDe": "Ich habe mich für den Kurs entschieden.",
+        "exampleDe": "Ich habe mich für den Kurs entschieden → sich entscheiden.",
         "exampleAr": "قرَّرتُ…",
         "level": "A2",
         "tags": [
@@ -31534,7 +31618,7 @@
         "de": "vergleichen",
         "ar": "يقارن",
         "pos": "Verb",
-        "exampleDe": "Vergleiche die beiden Angebote.",
+        "exampleDe": "Vergleiche die beiden Angebote → vergleichen.",
         "exampleAr": "قارِنْ ب…",
         "level": "A2",
         "tags": [
@@ -31548,7 +31632,7 @@
         "de": "bedeuten",
         "ar": "يعني",
         "pos": "Verb",
-        "exampleDe": "Was bedeutet dieses Wort?",
+        "exampleDe": "Was bedeutet dieses Wort? → bedeuten.",
         "exampleAr": "ماذا تعن…",
         "level": "A2",
         "tags": [
@@ -31562,7 +31646,7 @@
         "de": "erlauben",
         "ar": "يسمح",
         "pos": "Verb",
-        "exampleDe": "Das ist hier nicht erlaubt.",
+        "exampleDe": "Das ist hier nicht erlaubt → erlauben.",
         "exampleAr": "هذا غيرُ…",
         "level": "A2",
         "tags": [
@@ -31575,7 +31659,7 @@
         "de": "sich gewöhnen an",
         "ar": "يعتادُ على",
         "pos": "Verb",
-        "exampleDe": "Ich habe mich an das Wetter gewöhnt.",
+        "exampleDe": "Ich habe mich an das Wetter gewöhnt → sich gewöhnen an.",
         "exampleAr": "اعتدتُ ع…",
         "level": "A2",
         "tags": [
@@ -31588,7 +31672,7 @@
         "de": "sich interessieren für",
         "ar": "يهتمُّ بـ",
         "pos": "Verb",
-        "exampleDe": "Ich interessiere mich für Technik.",
+        "exampleDe": "Ich interessiere mich für Technik → sich interessieren für.",
         "exampleAr": "أهتمُّ ب…",
         "level": "A2",
         "tags": [
@@ -31602,7 +31686,7 @@
         "de": "achten auf",
         "ar": "ينتبهُ إلى",
         "pos": "Verb",
-        "exampleDe": "Achte auf die Schilder!",
+        "exampleDe": "Achte auf die Schilder! → achten auf.",
         "exampleAr": "انتبهْ إ…",
         "level": "A2",
         "tags": [
@@ -31615,7 +31699,7 @@
         "de": "aufpassen",
         "ar": "يحترس / يراقب",
         "pos": "Verb",
-        "exampleDe": "Pass auf, das ist heiß!",
+        "exampleDe": "Pass auf, das ist heiß! → aufpassen.",
         "exampleAr": "احترسْ،…",
         "level": "A2",
         "tags": [
@@ -31628,7 +31712,7 @@
         "de": "versprechen",
         "ar": "يَعِد",
         "pos": "Verb",
-        "exampleDe": "Ich verspreche es dir.",
+        "exampleDe": "Ich verspreche es dir → versprechen.",
         "exampleAr": "أَعِدُكَ…",
         "level": "A2",
         "tags": [
@@ -31720,7 +31804,7 @@
         "de": "löschen",
         "ar": "يحذف",
         "pos": "Verb",
-        "exampleDe": "Ich habe die Datei gelöscht.",
+        "exampleDe": "Ich habe die Datei gelöscht → löschen.",
         "exampleAr": "حذفتُ ال…",
         "level": "A2",
         "tags": [
@@ -31734,7 +31818,7 @@
         "de": "herunterladen",
         "ar": "يُنزّل",
         "pos": "Verb",
-        "exampleDe": "Lade die App herunter.",
+        "exampleDe": "Lade die App herunter → herunterladen.",
         "exampleAr": "نزِّلِ ا…",
         "level": "A2",
         "tags": [
@@ -31819,7 +31903,7 @@
         "de": "zunehmen",
         "ar": "يزيدُ وزناً",
         "pos": "Verb",
-        "exampleDe": "Im Winter nehme ich zu.",
+        "exampleDe": "Im Winter nehme ich zu → zunehmen.",
         "exampleAr": "في الشتا…",
         "level": "A2",
         "tags": [
@@ -32028,7 +32112,7 @@
         "ar": "الكتاب الإلكتروني",
         "pos": "Nomen",
         "article": "das",
-        "exampleDe": "Ich lese das Buch lieber als E-Book.",
+        "exampleDe": "Ich lese das Buch lieber als E-Book → das E-Book.",
         "exampleAr": "أفضّل قر…",
         "level": "A2",
         "tags": [
@@ -32633,7 +32717,7 @@
         "de": "stehen",
         "ar": "يقف",
         "pos": "Verb",
-        "exampleDe": "Ich stehe an der Haltestelle.",
+        "exampleDe": "Ich stehe an der Haltestelle → stehen.",
         "exampleAr": "أقفُ عند…",
         "level": "A1",
         "tags": [
@@ -32661,7 +32745,7 @@
         "de": "liegen",
         "ar": "يرقد / يكون موضوعاً",
         "pos": "Verb",
-        "exampleDe": "Das Buch liegt auf dem Tisch.",
+        "exampleDe": "Das Buch liegt auf dem Tisch → liegen.",
         "exampleAr": "الكتابُ…",
         "level": "A1",
         "tags": [
@@ -32675,7 +32759,7 @@
         "de": "stellen",
         "ar": "يضعُ واقفاً",
         "pos": "Verb",
-        "exampleDe": "Stell die Flasche in den Kühlschrank.",
+        "exampleDe": "Stell die Flasche in den Kühlschrank → stellen.",
         "exampleAr": "ضعِ القا…",
         "level": "A1",
         "tags": [
@@ -32689,7 +32773,7 @@
         "de": "legen",
         "ar": "يضعُ مضجعاً",
         "pos": "Verb",
-        "exampleDe": "Leg das Handy auf den Tisch.",
+        "exampleDe": "Leg das Handy auf den Tisch → legen.",
         "exampleAr": "ضعِ الها…",
         "level": "A1",
         "tags": [
@@ -32702,7 +32786,7 @@
         "de": "setzen",
         "ar": "يُجلِس",
         "pos": "Verb",
-        "exampleDe": "Setz dich bitte!",
+        "exampleDe": "Setz dich bitte! → setzen.",
         "exampleAr": "اجلسْ من…",
         "level": "A1",
         "tags": [
@@ -32716,7 +32800,7 @@
         "de": "hängen",
         "ar": "يعلّق",
         "pos": "Verb",
-        "exampleDe": "Häng die Jacke an den Haken.",
+        "exampleDe": "Häng die Jacke an den Haken → hängen.",
         "exampleAr": "علّقِ ال…",
         "level": "A1",
         "tags": [
@@ -32729,7 +32813,7 @@
         "de": "fallen",
         "ar": "يسقط",
         "pos": "Verb",
-        "exampleDe": "Pass auf, der Teller fällt!",
+        "exampleDe": "Pass auf, der Teller fällt! → fallen.",
         "exampleAr": "احترسْ،…",
         "level": "A1",
         "tags": [
@@ -32756,7 +32840,7 @@
         "de": "aussteigen",
         "ar": "ينزلُ من مركبة",
         "pos": "Verb",
-        "exampleDe": "Wo steigen Sie aus?",
+        "exampleDe": "Wo steigen Sie aus? → aussteigen.",
         "exampleAr": "أينَ تنز…",
         "level": "A1",
         "tags": [
@@ -32770,7 +32854,7 @@
         "de": "mitkommen",
         "ar": "يرافق",
         "pos": "Verb",
-        "exampleDe": "Kommst du mit?",
+        "exampleDe": "Kommst du mit? → mitkommen.",
         "exampleAr": "أتأتي مع…",
         "level": "A1",
         "tags": [
@@ -32783,7 +32867,7 @@
         "de": "zurückkommen",
         "ar": "يعود",
         "pos": "Verb",
-        "exampleDe": "Ich komme um acht zurück.",
+        "exampleDe": "Ich komme um acht zurück → zurückkommen.",
         "exampleAr": "أعودُ في…",
         "level": "A1",
         "tags": [
@@ -32811,7 +32895,7 @@
         "de": "holen",
         "ar": "يجلب",
         "pos": "Verb",
-        "exampleDe": "Hol bitte das Brot.",
+        "exampleDe": "Hol bitte das Brot → holen.",
         "exampleAr": "اجلبِ ال…",
         "level": "A1",
         "tags": [
@@ -33619,7 +33703,7 @@
         "de": "anbieten",
         "ar": "يَعرِض (شيئًا)",
         "pos": "Verb",
-        "exampleDe": "Das Restaurant bietet vegetarisches Essen an.",
+        "exampleDe": "Das Restaurant bietet vegetarisches Essen an → anbieten.",
         "exampleAr": "يقدّم ال…",
         "level": "A1",
         "tags": [
@@ -33743,7 +33827,7 @@
         "de": "zustimmen",
         "ar": "يوافق",
         "pos": "Verb",
-        "exampleDe": "Ich stimme dir zu.",
+        "exampleDe": "Ich stimme dir zu → zustimmen.",
         "exampleAr": "أوافقُك",
         "level": "A2",
         "tags": [
@@ -33932,7 +34016,7 @@
         "de": "sich informieren",
         "ar": "يستعلم",
         "pos": "Verb",
-        "exampleDe": "Ich informiere mich über den Kurs.",
+        "exampleDe": "Ich informiere mich über den Kurs → sich informieren.",
         "exampleAr": "أستعلمُ…",
         "level": "A2",
         "tags": [
@@ -33946,7 +34030,7 @@
         "de": "teilnehmen",
         "ar": "يشارك",
         "pos": "Verb",
-        "exampleDe": "Ich nehme am Kurs teil.",
+        "exampleDe": "Ich nehme am Kurs teil → teilnehmen.",
         "exampleAr": "أشاركُ ف…",
         "level": "A2",
         "tags": [
@@ -34008,7 +34092,7 @@
         "de": "bestellen und abholen",
         "ar": "يطلبُ ويستلم",
         "pos": "Verb",
-        "exampleDe": "Ich bestelle online und hole im Laden ab.",
+        "exampleDe": "Ich bestelle online und hole im Laden ab → bestellen und abholen.",
         "exampleAr": "أطلبُ عب…",
         "level": "A2",
         "tags": [
@@ -34329,7 +34413,7 @@
         "de": "müssen",
         "ar": "يجب عليه",
         "pos": "Verb",
-        "exampleDe": "Ich muss morgen früh aufstehen.",
+        "exampleDe": "Ich muss morgen früh aufstehen → müssen.",
         "exampleAr": "عليَّ ال…",
         "level": "A1",
         "tags": [
@@ -34371,7 +34455,7 @@
         "de": "sollen",
         "ar": "ينبغي له",
         "pos": "Verb",
-        "exampleDe": "Was soll ich mitbringen?",
+        "exampleDe": "Was soll ich mitbringen? → sollen.",
         "exampleAr": "ماذا ينب…",
         "level": "A1",
         "tags": [
@@ -34384,7 +34468,7 @@
         "de": "möchten",
         "ar": "يودّ",
         "pos": "Verb",
-        "exampleDe": "Ich möchte einen Kaffee, bitte.",
+        "exampleDe": "Ich möchte einen Kaffee, bitte → möchten.",
         "exampleAr": "أودُّ قه…",
         "level": "A1",
         "tags": [
@@ -35011,7 +35095,7 @@
         "ar": "البريدُ الإلكتروني",
         "pos": "Nomen",
         "article": "die",
-        "exampleDe": "Ich schreibe dir eine E-Mail.",
+        "exampleDe": "Ich schreibe dir eine E-Mail → die E-Mail.",
         "exampleAr": "أكتبُ لك…",
         "level": "A1",
         "tags": [
@@ -35038,7 +35122,7 @@
         "de": "klicken",
         "ar": "ينقر",
         "pos": "Verb",
-        "exampleDe": "Klick hier, bitte.",
+        "exampleDe": "Klick hier, bitte → klicken.",
         "exampleAr": "انقرْ هن…",
         "level": "A1",
         "tags": [
@@ -35051,7 +35135,7 @@
         "de": "suchen im Internet",
         "ar": "يبحثُ في الإنترنت",
         "pos": "Verb",
-        "exampleDe": "Ich suche im Internet nach einer Wohnung.",
+        "exampleDe": "Ich suche im Internet nach einer Wohnung → suchen im Internet.",
         "exampleAr": "أبحثُ في…",
         "level": "A1",
         "tags": [
@@ -35234,7 +35318,7 @@
         "de": "abholen",
         "ar": "يستلم",
         "pos": "Verb",
-        "exampleDe": "Ich hole das Paket ab.",
+        "exampleDe": "Ich hole das Paket ab → abholen.",
         "exampleAr": "أستلمُ ا…",
         "level": "A1",
         "tags": [
@@ -35397,7 +35481,7 @@
         "de": "mitbringen",
         "ar": "يُحضِرُ معه",
         "pos": "Verb",
-        "exampleDe": "Bring bitte Brot mit.",
+        "exampleDe": "Bring bitte Brot mit → mitbringen.",
         "exampleAr": "أحضِرْ خ…",
         "level": "A1",
         "tags": [
@@ -35410,7 +35494,7 @@
         "de": "ausmachen",
         "ar": "يُطفئ / يتّفق",
         "pos": "Verb",
-        "exampleDe": "Mach bitte das Licht aus.",
+        "exampleDe": "Mach bitte das Licht aus → ausmachen.",
         "exampleAr": "أطفئِ ال…",
         "level": "A1",
         "tags": [
@@ -35424,7 +35508,7 @@
         "de": "anmachen",
         "ar": "يُشعِل",
         "pos": "Verb",
-        "exampleDe": "Mach die Heizung an.",
+        "exampleDe": "Mach die Heizung an → anmachen.",
         "exampleAr": "أشعلِ ال…",
         "level": "A1",
         "tags": [
@@ -35580,7 +35664,7 @@
         "de": "kaputtgehen",
         "ar": "يتعطّل",
         "pos": "Verb",
-        "exampleDe": "Mein Handy ist gestern kaputtgegangen.",
+        "exampleDe": "Mein Handy ist gestern kaputtgegangen → kaputtgehen.",
         "exampleAr": "تعطَّلَ…",
         "level": "A1",
         "tags": [
@@ -35593,7 +35677,7 @@
         "de": "funktionieren",
         "ar": "يعمل (جهاز)",
         "pos": "Verb",
-        "exampleDe": "Der Aufzug funktioniert wieder.",
+        "exampleDe": "Der Aufzug funktioniert wieder → funktionieren.",
         "exampleAr": "المصعدُ…",
         "level": "A1",
         "tags": [
@@ -35694,7 +35778,7 @@
         "de": "telefonieren",
         "ar": "يهاتف / يتحدث هاتفيًا",
         "pos": "Verb",
-        "exampleDe": "Ich telefoniere jeden Abend mit meiner Mutter.",
+        "exampleDe": "Ich telefoniere jeden Abend mit meiner Mutter → telefonieren.",
         "exampleAr": "أتحدث ها…",
         "level": "A1",
         "tags": [
@@ -35823,7 +35907,7 @@
         "de": "ankreuzen",
         "ar": "يضع علامة في المربع",
         "pos": "Verb",
-        "exampleDe": "Bitte kreuzen Sie die richtige Antwort an.",
+        "exampleDe": "Bitte kreuzen Sie die richtige Antwort an → ankreuzen.",
         "exampleAr": "يرجى وضع…",
         "level": "A1",
         "tags": [
@@ -35836,7 +35920,7 @@
         "de": "kriegen",
         "ar": "يحصل على / ينال",
         "pos": "Verb",
-        "exampleDe": "Ich kriege morgen meinen neuen Ausweis.",
+        "exampleDe": "Ich kriege morgen meinen neuen Ausweis → kriegen.",
         "exampleAr": "سأحصل عل…",
         "level": "A1",
         "tags": [
@@ -35938,7 +36022,7 @@
         "de": "antworten",
         "ar": "يجيب",
         "pos": "Verb",
-        "exampleDe": "Antworte bitte auf Deutsch.",
+        "exampleDe": "Antworte bitte auf Deutsch → antworten.",
         "exampleAr": "أجبْ بال…",
         "level": "A1",
         "tags": [
@@ -36211,7 +36295,7 @@
         "de": "zurückfahren",
         "ar": "يعودُ بمركبة",
         "pos": "Verb",
-        "exampleDe": "Wir fahren um sieben zurück.",
+        "exampleDe": "Wir fahren um sieben zurück → zurückfahren.",
         "exampleAr": "نعودُ في…",
         "level": "A1",
         "tags": [
@@ -36638,7 +36722,7 @@
         "de": "sich freuen",
         "ar": "يفرح / يسعد",
         "pos": "Verb",
-        "exampleDe": "Ich freue mich sehr auf die Ferien.",
+        "exampleDe": "Ich freue mich sehr auf die Ferien → sich freuen.",
         "exampleAr": "أنا سعيد جدًا بانتظار العطلة.",
         "level": "A1",
         "tags": [
@@ -36652,7 +36736,7 @@
         "de": "sich kümmern",
         "ar": "يعتني بـ",
         "pos": "Verb",
-        "exampleDe": "Sie kümmert sich um ihre kleine Schwester.",
+        "exampleDe": "Sie kümmert sich um ihre kleine Schwester → sich kümmern.",
         "exampleAr": "تعتني بأ…",
         "level": "A1",
         "tags": [
@@ -36861,7 +36945,7 @@
         "de": "vertrauen",
         "ar": "يثق",
         "pos": "Verb",
-        "exampleDe": "Ich vertraue dir.",
+        "exampleDe": "Ich vertraue dir → vertrauen.",
         "exampleAr": "أثقُ بك",
         "level": "A2",
         "tags": [
@@ -36954,7 +37038,7 @@
         "de": "sich entschuldigen für",
         "ar": "يعتذرُ عن",
         "pos": "Verb",
-        "exampleDe": "Ich entschuldige mich für die Verspätung.",
+        "exampleDe": "Ich entschuldige mich für die Verspätung → sich entschuldigen für.",
         "exampleAr": "أعتذرُ ع…",
         "level": "A2",
         "tags": [
@@ -37064,7 +37148,7 @@
         "de": "trösten",
         "ar": "يواسي",
         "pos": "Verb",
-        "exampleDe": "Sie hat mich getröstet.",
+        "exampleDe": "Sie hat mich getröstet → trösten.",
         "exampleAr": "واسَتْني",
         "level": "A2",
         "tags": [
@@ -37104,7 +37188,7 @@
         "de": "zuhören",
         "ar": "يُنصِت",
         "pos": "Verb",
-        "exampleDe": "Hör mir bitte zu.",
+        "exampleDe": "Hör mir bitte zu → zuhören.",
         "exampleAr": "أنصتْ إل…",
         "level": "A2",
         "tags": [
@@ -37146,7 +37230,7 @@
         "de": "wirken",
         "ar": "يبدو / يؤثّر",
         "pos": "Verb",
-        "exampleDe": "Er wirkt heute müde.",
+        "exampleDe": "Er wirkt heute müde → wirken.",
         "exampleAr": "يبدو متع…",
         "level": "A2",
         "tags": [
@@ -37874,7 +37958,7 @@
         "ar": "العُرف",
         "pos": "Nomen",
         "article": "der",
-        "exampleDe": "Jeder Ort hat eigene Bräuche.",
+        "exampleDe": "Jeder Ort hat eigene Bräuche → der Brauch.",
         "exampleAr": "لكلِّ مك…",
         "level": "A2",
         "tags": [
@@ -37918,7 +38002,7 @@
         "de": "gratulieren zum Fest",
         "ar": "يهنّئُ بالعيد",
         "pos": "Verb",
-        "exampleDe": "Ich gratuliere dir zum Fest!",
+        "exampleDe": "Ich gratuliere dir zum Fest! → gratulieren zum Fest.",
         "exampleAr": "أهنّئكَ…",
         "level": "A2",
         "tags": [
@@ -37931,7 +38015,7 @@
         "de": "einladen zu",
         "ar": "يدعو إلى",
         "pos": "Verb",
-        "exampleDe": "Wir laden dich zum Essen ein.",
+        "exampleDe": "Wir laden dich zum Essen ein → einladen zu.",
         "exampleAr": "ندعوكَ إ…",
         "level": "A2",
         "tags": [
@@ -38004,7 +38088,7 @@
         "de": "vorbereiten",
         "ar": "يحضّر",
         "pos": "Verb",
-        "exampleDe": "Ich bereite das Essen vor.",
+        "exampleDe": "Ich bereite das Essen vor → vorbereiten.",
         "exampleAr": "أحضّرُ ا…",
         "level": "A2",
         "tags": [
@@ -38062,7 +38146,7 @@
         "de": "den Tisch reservieren",
         "ar": "يحجزُ طاولة",
         "pos": "Nomen",
-        "exampleDe": "Ich reserviere einen Tisch für vier.",
+        "exampleDe": "Ich reserviere einen Tisch für vier → den Tisch reservieren.",
         "exampleAr": "أحجزُ طا…",
         "level": "A2",
         "tags": [
@@ -38091,7 +38175,7 @@
         "de": "probieren",
         "ar": "يتذوَّق / يجرّب",
         "pos": "Verb",
-        "exampleDe": "Probier mal diesen Kuchen!",
+        "exampleDe": "Probier mal diesen Kuchen! → probieren.",
         "exampleAr": "تذوَّقْ…",
         "level": "A2",
         "tags": [
@@ -38385,7 +38469,7 @@
         "de": "veröffentlichen",
         "ar": "ينشر",
         "pos": "Verb",
-        "exampleDe": "Die Ergebnisse werden morgen veröffentlicht.",
+        "exampleDe": "Die Ergebnisse werden morgen veröffentlicht → veröffentlichen.",
         "exampleAr": "النتائجُ…",
         "level": "A2",
         "tags": [
@@ -38460,7 +38544,7 @@
         "de": "kommentieren",
         "ar": "يعلّق",
         "pos": "Verb",
-        "exampleDe": "Viele haben den Beitrag kommentiert.",
+        "exampleDe": "Viele haben den Beitrag kommentiert → kommentieren.",
         "exampleAr": "علَّقَ ك…",
         "level": "A2",
         "tags": [
@@ -38616,7 +38700,7 @@
         "de": "fehlen",
         "ar": "يتغيّب / ينقص",
         "pos": "Verb",
-        "exampleDe": "Gestern hat er gefehlt.",
+        "exampleDe": "Gestern hat er gefehlt → fehlen.",
         "exampleAr": "تغيَّبَ…",
         "level": "A2",
         "tags": [
@@ -38629,7 +38713,7 @@
         "de": "sich konzentrieren auf",
         "ar": "يركّزُ على",
         "pos": "Verb",
-        "exampleDe": "Ich konzentriere mich auf die Prüfung.",
+        "exampleDe": "Ich konzentriere mich auf die Prüfung → sich konzentrieren auf.",
         "exampleAr": "أركّزُ ع…",
         "level": "A2",
         "tags": [
@@ -38642,7 +38726,7 @@
         "de": "sich vorbereiten auf",
         "ar": "يستعدُّ لـ",
         "pos": "Verb",
-        "exampleDe": "Ich bereite mich auf das Gespräch vor.",
+        "exampleDe": "Ich bereite mich auf das Gespräch vor → sich vorbereiten auf.",
         "exampleAr": "أستعدُّ…",
         "level": "A2",
         "tags": [
@@ -38655,7 +38739,7 @@
         "de": "warten auf",
         "ar": "ينتظرُ (شيئاً)",
         "pos": "Verb",
-        "exampleDe": "Ich warte auf die Antwort.",
+        "exampleDe": "Ich warte auf die Antwort → warten auf.",
         "exampleAr": "أنتظرُ ا…",
         "level": "A2",
         "tags": [
@@ -38668,7 +38752,7 @@
         "de": "sich freuen über",
         "ar": "يفرحُ بـ",
         "pos": "Verb",
-        "exampleDe": "Ich freue mich über dein Geschenk.",
+        "exampleDe": "Ich freue mich über dein Geschenk → sich freuen über.",
         "exampleAr": "أفرحُ به…",
         "level": "A2",
         "tags": [
@@ -38682,7 +38766,7 @@
         "de": "denken an",
         "ar": "يفكّرُ في",
         "pos": "Verb",
-        "exampleDe": "Ich denke oft an meine Familie.",
+        "exampleDe": "Ich denke oft an meine Familie → denken an.",
         "exampleAr": "أفكّرُ ك…",
         "level": "A2",
         "tags": [
@@ -38709,7 +38793,7 @@
         "de": "bitten um",
         "ar": "يطلبُ (شيئاً)",
         "pos": "Verb",
-        "exampleDe": "Ich bitte um Hilfe.",
+        "exampleDe": "Ich bitte um Hilfe → bitten um.",
         "exampleAr": "أطلبُ ال…",
         "level": "A2",
         "tags": [
@@ -38722,7 +38806,7 @@
         "de": "danken für",
         "ar": "يشكرُ على",
         "pos": "Verb",
-        "exampleDe": "Ich danke dir für alles.",
+        "exampleDe": "Ich danke dir für alles → danken für.",
         "exampleAr": "أشكرُكَ…",
         "level": "A2",
         "tags": [
@@ -38763,7 +38847,7 @@
         "de": "sich erinnern an",
         "ar": "يتذكَّر",
         "pos": "Verb",
-        "exampleDe": "Erinnerst du dich an ihn?",
+        "exampleDe": "Erinnerst du dich an ihn? → sich erinnern an.",
         "exampleAr": "أتتذكَّر…",
         "level": "A2",
         "tags": [
@@ -38776,7 +38860,7 @@
         "de": "abhängen von",
         "ar": "يعتمدُ على",
         "pos": "Verb",
-        "exampleDe": "Das hängt vom Wetter ab.",
+        "exampleDe": "Das hängt vom Wetter ab → abhängen von.",
         "exampleAr": "هذا يعتم…",
         "level": "A2",
         "tags": [
@@ -38790,7 +38874,7 @@
         "de": "prüfen",
         "ar": "يتحقَّق",
         "pos": "Verb",
-        "exampleDe": "Prüfe die Zahlen genau.",
+        "exampleDe": "Prüfe die Zahlen genau → prüfen.",
         "exampleAr": "تحقَّقْ…",
         "level": "A2",
         "tags": [
@@ -39199,7 +39283,7 @@
         "de": "streichen",
         "ar": "يدهن",
         "pos": "Verb",
-        "exampleDe": "Ich streiche die Wände weiß.",
+        "exampleDe": "Ich streiche die Wände weiß → streichen.",
         "exampleAr": "أدهنُ ال…",
         "level": "A2",
         "tags": [
@@ -39245,7 +39329,7 @@
         "de": "kündigen zum Monatsende",
         "ar": "يُنهي آخرَ الشهر",
         "pos": "Verb",
-        "exampleDe": "Ich kündige zum Monatsende.",
+        "exampleDe": "Ich kündige zum Monatsende → kündigen zum Monatsende.",
         "exampleAr": "أُنهي ال…",
         "level": "A2",
         "tags": [
@@ -39474,7 +39558,7 @@
         "de": "ausziehen aus",
         "ar": "يُخلي السكن",
         "pos": "Verb",
-        "exampleDe": "Er zieht aus der Wohnung aus.",
+        "exampleDe": "Er zieht aus der Wohnung aus → ausziehen aus.",
         "exampleAr": "يُخلي ال…",
         "level": "A2",
         "tags": [
@@ -39806,7 +39890,7 @@
         "de": "überziehen",
         "ar": "يتجاوزُ الرصيد",
         "pos": "Verb",
-        "exampleDe": "Ich habe das Konto überzogen.",
+        "exampleDe": "Ich habe das Konto überzogen → überziehen.",
         "exampleAr": "تجاوزتُ…",
         "level": "A2",
         "tags": [
@@ -39836,7 +39920,7 @@
         "de": "sich etwas leisten",
         "ar": "يقدرُ على تحمُّلِ نفقة",
         "pos": "Verb",
-        "exampleDe": "Das kann ich mir nicht leisten.",
+        "exampleDe": "Das kann ich mir nicht leisten → sich etwas leisten.",
         "exampleAr": "لا أقدرُ…",
         "level": "A2",
         "tags": [
@@ -39878,7 +39962,7 @@
         "de": "gewinnen",
         "ar": "يفوز",
         "pos": "Verb",
-        "exampleDe": "Wer hat gewonnen?",
+        "exampleDe": "Wer hat gewonnen? → gewinnen.",
         "exampleAr": "مَن فاز؟",
         "level": "A2",
         "tags": [
@@ -39895,7 +39979,7 @@
         "de": "verlieren",
         "ar": "يخسر",
         "pos": "Verb",
-        "exampleDe": "Wir haben knapp verloren.",
+        "exampleDe": "Wir haben knapp verloren → verlieren.",
         "exampleAr": "خسرنا بف…",
         "level": "A2",
         "tags": [
@@ -39925,7 +40009,7 @@
         "de": "sich verletzen",
         "ar": "يُصاب",
         "pos": "Verb",
-        "exampleDe": "Ich habe mich beim Sport verletzt.",
+        "exampleDe": "Ich habe mich beim Sport verletzt → sich verletzen.",
         "exampleAr": "أُصِبتُ…",
         "level": "A2",
         "tags": [
@@ -40301,7 +40385,7 @@
         "de": "wehtun",
         "ar": "يؤلم",
         "pos": "Verb",
-        "exampleDe": "Mein Kopf tut mir weh.",
+        "exampleDe": "Mein Kopf tut mir weh → wehtun.",
         "exampleAr": "رأسي يؤل…",
         "level": "A2",
         "tags": [
@@ -40363,7 +40447,7 @@
         "de": "mischen",
         "ar": "يخلط",
         "pos": "Verb",
-        "exampleDe": "Mische Mehl und Wasser.",
+        "exampleDe": "Mische Mehl und Wasser → mischen.",
         "exampleAr": "اخلطِ ال…",
         "level": "A2",
         "tags": [
@@ -40391,7 +40475,7 @@
         "de": "braten",
         "ar": "يقلي",
         "pos": "Verb",
-        "exampleDe": "Ich brate das Hähnchen.",
+        "exampleDe": "Ich brate das Hähnchen → braten.",
         "exampleAr": "أقلي الد…",
         "level": "A2",
         "tags": [
@@ -40556,7 +40640,7 @@
         "de": "abwaschen",
         "ar": "يغسلُ الصحون",
         "pos": "Verb",
-        "exampleDe": "Ich wasche nach dem Essen ab.",
+        "exampleDe": "Ich wasche nach dem Essen ab → abwaschen.",
         "exampleAr": "أغسلُ ال…",
         "level": "A2",
         "tags": [
@@ -40601,7 +40685,7 @@
         "de": "verderben",
         "ar": "يفسد",
         "pos": "Verb",
-        "exampleDe": "Das Fleisch ist verdorben.",
+        "exampleDe": "Das Fleisch ist verdorben → verderben.",
         "exampleAr": "اللحمُ ف…",
         "level": "A2",
         "tags": [
@@ -40615,7 +40699,7 @@
         "de": "einfrieren",
         "ar": "يجمّد",
         "pos": "Verb",
-        "exampleDe": "Ich friere das Brot ein.",
+        "exampleDe": "Ich friere das Brot ein → einfrieren.",
         "exampleAr": "أجمّدُ ا…",
         "level": "A2",
         "tags": [
@@ -40702,7 +40786,7 @@
         "de": "vorheizen",
         "ar": "يسخّنُ مسبقاً",
         "pos": "Verb",
-        "exampleDe": "Heize den Ofen auf zweihundert Grad vor.",
+        "exampleDe": "Heize den Ofen auf zweihundert Grad vor → vorheizen.",
         "exampleAr": "سخّنِ ال…",
         "level": "A2",
         "tags": [
@@ -40957,7 +41041,7 @@
         "de": "schenken",
         "ar": "يهدي",
         "pos": "Verb",
-        "exampleDe": "Ich schenke meiner Mutter Blumen.",
+        "exampleDe": "Ich schenke meiner Mutter Blumen → schenken.",
         "exampleAr": "أهدي أمي…",
         "level": "A2",
         "tags": [
@@ -40983,7 +41067,7 @@
         "de": "klappen",
         "ar": "ينجح / يسير على ما يرام",
         "pos": "Verb",
-        "exampleDe": "Hoffentlich klappt alles beim Umzug.",
+        "exampleDe": "Hoffentlich klappt alles beim Umzug → klappen.",
         "exampleAr": "نأمل أن…",
         "level": "A2",
         "tags": [
@@ -41270,7 +41354,7 @@
         "de": "sich entwickeln",
         "ar": "يتطوَّر",
         "pos": "Verb",
-        "exampleDe": "Die Stadt hat sich entwickelt.",
+        "exampleDe": "Die Stadt hat sich entwickelt → sich entwickeln.",
         "exampleAr": "المدينةُ…",
         "level": "A2",
         "tags": [
@@ -41284,7 +41368,7 @@
         "de": "sich verändern",
         "ar": "يتغيَّر",
         "pos": "Verb",
-        "exampleDe": "Vieles hat sich verändert.",
+        "exampleDe": "Vieles hat sich verändert → sich verändern.",
         "exampleAr": "تغيَّرَ…",
         "level": "A2",
         "tags": [
@@ -41405,7 +41489,7 @@
         "de": "sich gewöhnen",
         "ar": "يعتاد",
         "pos": "Verb",
-        "exampleDe": "Man gewöhnt sich schnell.",
+        "exampleDe": "Man gewöhnt sich schnell → sich gewöhnen.",
         "exampleAr": "يعتادُ ا…",
         "level": "A2",
         "tags": [
@@ -41435,7 +41519,7 @@
         "de": "überwinden",
         "ar": "يتجاوز",
         "pos": "Verb",
-        "exampleDe": "Ich habe die Angst überwunden.",
+        "exampleDe": "Ich habe die Angst überwunden → überwinden.",
         "exampleAr": "تجاوزتُ…",
         "level": "A2",
         "tags": [
@@ -41640,7 +41724,7 @@
         "de": "passieren",
         "ar": "يحدث",
         "pos": "Verb",
-        "exampleDe": "Was ist hier passiert?",
+        "exampleDe": "Was ist hier passiert? → passieren.",
         "exampleAr": "ماذا حدث…",
         "level": "A2",
         "tags": [
@@ -41653,7 +41737,7 @@
         "de": "stattfinden",
         "ar": "يقام / يجري",
         "pos": "Verb",
-        "exampleDe": "Die Party findet bei mir statt.",
+        "exampleDe": "Die Party findet bei mir statt → stattfinden.",
         "exampleAr": "ستُقام ا…",
         "level": "A2",
         "tags": [
@@ -41666,7 +41750,7 @@
         "de": "träumen",
         "ar": "يحلم",
         "pos": "Verb",
-        "exampleDe": "Ich habe heute Nacht von dir geträumt.",
+        "exampleDe": "Ich habe heute Nacht von dir geträumt → träumen.",
         "exampleAr": "حلمت بك…",
         "level": "A2",
         "tags": [
@@ -41848,7 +41932,7 @@
         "ar": "صندوقُ الإسعافات",
         "pos": "Nomen",
         "article": "der",
-        "exampleDe": "Der Erste-Hilfe-Kasten hängt an der Wand.",
+        "exampleDe": "Der Erste-Hilfe-Kasten hängt an der Wand → der Erste-Hilfe-Kasten.",
         "exampleAr": "صندوقُ ا…",
         "level": "A2",
         "tags": [
@@ -41904,7 +41988,7 @@
         "de": "befolgen",
         "ar": "يمتثل",
         "pos": "Verb",
-        "exampleDe": "Ich befolge die Regeln genau.",
+        "exampleDe": "Ich befolge die Regeln genau → befolgen.",
         "exampleAr": "أمتثلُ ل…",
         "level": "A2",
         "tags": [
@@ -41917,7 +42001,7 @@
         "de": "melden",
         "ar": "يبلّغ",
         "pos": "Verb",
-        "exampleDe": "Melde den Schaden sofort.",
+        "exampleDe": "Melde den Schaden sofort → melden.",
         "exampleAr": "بلّغْ عن…",
         "level": "A2",
         "tags": [
@@ -42093,7 +42177,7 @@
         "de": "wiederverwenden",
         "ar": "يعيدُ الاستعمال",
         "pos": "Verb",
-        "exampleDe": "Wir verwenden die Gläser wieder.",
+        "exampleDe": "Wir verwenden die Gläser wieder → wiederverwenden.",
         "exampleAr": "نعيدُ اس…",
         "level": "A2",
         "tags": [
@@ -42226,7 +42310,7 @@
         "de": "herstellen",
         "ar": "يصنّع / ينتج",
         "pos": "Verb",
-        "exampleDe": "Diese Firma stellt Autos her.",
+        "exampleDe": "Diese Firma stellt Autos her → herstellen.",
         "exampleAr": "تصنّع هذ…",
         "level": "A2",
         "tags": [
@@ -42253,7 +42337,7 @@
         "de": "schneien",
         "ar": "تتساقط الثلوج",
         "pos": "Verb",
-        "exampleDe": "Im Winter schneit es oft.",
+        "exampleDe": "Im Winter schneit es oft → schneien.",
         "exampleAr": "غالبًا م…",
         "level": "A2",
         "tags": [
@@ -42384,7 +42468,7 @@
         "de": "ausgehen",
         "ar": "يخرج (للتسلية)",
         "pos": "Verb",
-        "exampleDe": "Am Samstag gehen wir mit Freunden aus.",
+        "exampleDe": "Am Samstag gehen wir mit Freunden aus → ausgehen.",
         "exampleAr": "سنخرج مع…",
         "level": "A2",
         "tags": [
@@ -42397,7 +42481,7 @@
         "de": "austragen",
         "ar": "يوزّع (البريد/الجرائد)",
         "pos": "Verb",
-        "exampleDe": "Mein Bruder trägt am Morgen Zeitungen aus.",
+        "exampleDe": "Mein Bruder trägt am Morgen Zeitungen aus → austragen.",
         "exampleAr": "يوزّع أخ…",
         "level": "A2",
         "tags": [
@@ -42952,7 +43036,7 @@
         "de": "leidtun",
         "ar": "يؤسف / يحزّ (في النفس)",
         "pos": "Verb",
-        "exampleDe": "Es tut mir leid, dass ich zu spät komme.",
+        "exampleDe": "Es tut mir leid, dass ich zu spät komme → leidtun.",
         "exampleAr": "يؤسفني أ…",
         "level": "A2",
         "tags": [
@@ -42965,7 +43049,7 @@
         "de": "schimpfen",
         "ar": "يوبّخ / يزمجر",
         "pos": "Verb",
-        "exampleDe": "Der Lehrer schimpft, weil wir zu laut sind.",
+        "exampleDe": "Der Lehrer schimpft, weil wir zu laut sind → schimpfen.",
         "exampleAr": "يوبّخنا…",
         "level": "A2",
         "tags": [
@@ -43309,7 +43393,7 @@
         "de": "hochladen",
         "ar": "يرفعُ ملفاً",
         "pos": "Verb",
-        "exampleDe": "Laden Sie den Nachweis hoch.",
+        "exampleDe": "Laden Sie den Nachweis hoch → hochladen.",
         "exampleAr": "ارفعِ ال…",
         "level": "A2",
         "tags": [
@@ -43338,7 +43422,7 @@
         "de": "ausdrucken",
         "ar": "يطبع",
         "pos": "Verb",
-        "exampleDe": "Drucken Sie das Formular aus.",
+        "exampleDe": "Drucken Sie das Formular aus → ausdrucken.",
         "exampleAr": "اطبعِ ال…",
         "level": "A2",
         "tags": [
@@ -43445,7 +43529,7 @@
         "de": "abgeben",
         "ar": "يسلّم",
         "pos": "Verb",
-        "exampleDe": "Ich gebe die Arbeit morgen ab.",
+        "exampleDe": "Ich gebe die Arbeit morgen ab → abgeben.",
         "exampleAr": "أسلّمُ ا…",
         "level": "A2",
         "tags": [
@@ -43471,7 +43555,7 @@
         "de": "nachholen",
         "ar": "يستدرك",
         "pos": "Verb",
-        "exampleDe": "Ich hole die Stunde nach.",
+        "exampleDe": "Ich hole die Stunde nach → nachholen.",
         "exampleAr": "أستدركُ…",
         "level": "A2",
         "tags": [
@@ -43530,7 +43614,7 @@
         "de": "dranbleiben",
         "ar": "يواظب",
         "pos": "Verb",
-        "exampleDe": "Bleib dran, es lohnt sich.",
+        "exampleDe": "Bleib dran, es lohnt sich → dranbleiben.",
         "exampleAr": "واظبْ، ا…",
         "level": "A2",
         "tags": [
@@ -44195,7 +44279,7 @@
         "de": "fotografieren",
         "ar": "يصوّر",
         "pos": "Verb",
-        "exampleDe": "Im Urlaub fotografiere ich gern Landschaften.",
+        "exampleDe": "Im Urlaub fotografiere ich gern Landschaften → fotografieren.",
         "exampleAr": "أحب تصوي…",
         "level": "A2",
         "tags": [
@@ -44221,7 +44305,7 @@
         "de": "reiten",
         "ar": "يركب الخيل",
         "pos": "Verb",
-        "exampleDe": "Sie reitet jedes Wochenende auf dem Bauernhof.",
+        "exampleDe": "Sie reitet jedes Wochenende auf dem Bauernhof → reiten.",
         "exampleAr": "تركب الخ…",
         "level": "A2",
         "tags": [
@@ -44291,7 +44375,7 @@
         "ar": "القميص (تي-شيرت)",
         "pos": "Nomen",
         "article": "das",
-        "exampleDe": "Ich trage heute ein blaues T-Shirt.",
+        "exampleDe": "Ich trage heute ein blaues T-Shirt → das T-Shirt.",
         "exampleAr": "أرتدي ال…",
         "level": "A2",
         "tags": [
@@ -48310,7 +48394,7 @@
         "de": "sich zurechtfinden",
         "ar": "يهتدي إلى تدبُّرِ أمرِه",
         "pos": "Verb",
-        "exampleDe": "Nach einem Monat fand ich mich zurecht.",
+        "exampleDe": "Nach einem Monat fand ich mich zurecht → sich zurechtfinden.",
         "exampleAr": "بعدَ شهر…",
         "level": "B1",
         "tags": [
@@ -49074,7 +49158,7 @@
         "de": "erstatten",
         "ar": "يعوّض مالياً",
         "pos": "Verb",
-        "exampleDe": "Die Firma erstattet die Fahrtkosten.",
+        "exampleDe": "Die Firma erstattet die Fahrtkosten → erstatten.",
         "exampleAr": "الشركةُ…",
         "level": "B1",
         "tags": [
@@ -49235,7 +49319,7 @@
         "de": "teilnehmen am Wettbewerb",
         "ar": "يشاركُ في المسابقة",
         "pos": "Verb",
-        "exampleDe": "Ich nehme am Wettbewerb teil.",
+        "exampleDe": "Ich nehme am Wettbewerb teil → teilnehmen am Wettbewerb.",
         "exampleAr": "أشاركُ ف…",
         "level": "B1",
         "tags": [
@@ -49261,7 +49345,7 @@
         "de": "sich aufwärmen",
         "ar": "يُحمّي عضلاتِه",
         "pos": "Verb",
-        "exampleDe": "Vor dem Sport wärme ich mich auf.",
+        "exampleDe": "Vor dem Sport wärme ich mich auf → sich aufwärmen.",
         "exampleAr": "قبلَ الر…",
         "level": "B1",
         "tags": [
@@ -49874,7 +49958,7 @@
         "de": "verbleiben mit freundlichen Grüßen",
         "ar": "وتفضَّلوا بقبولِ التحيات",
         "pos": "Wendung",
-        "exampleDe": "Ich verbleibe mit freundlichen Grüßen.",
+        "exampleDe": "Ich verbleibe mit freundlichen Grüßen → verbleiben mit freundlichen Grüßen.",
         "exampleAr": "وتفضَّلو…",
         "level": "B1",
         "tags": [
@@ -49996,7 +50080,7 @@
         "de": "sich rentieren",
         "ar": "يكونُ مربحاً",
         "pos": "Verb",
-        "exampleDe": "Die Solaranlage rentiert sich nach acht Jahren.",
+        "exampleDe": "Die Solaranlage rentiert sich nach acht Jahren → sich rentieren.",
         "exampleAr": "المنظومة…",
         "level": "B1",
         "tags": [
@@ -53899,7 +53983,7 @@
         "de": "bloggen",
         "ar": "يدوّن (مدونة إلكترونية)",
         "pos": "Verb",
-        "exampleDe": "Sie bloggt jede Woche über ihre Reisen.",
+        "exampleDe": "Sie bloggt jede Woche über ihre Reisen → bloggen.",
         "exampleAr": "تدوّن كل…",
         "level": "B1",
         "tags": [
@@ -53913,7 +53997,7 @@
         "ar": "مشغّل الأقراص المدمجة",
         "pos": "Nomen",
         "article": "der",
-        "exampleDe": "Der alte CD-Player funktioniert nicht mehr.",
+        "exampleDe": "Der alte CD-Player funktioniert nicht mehr → der CD-Player.",
         "exampleAr": "مشغّل ال…",
         "level": "B1",
         "tags": [
@@ -53972,7 +54056,7 @@
         "de": "mailen",
         "ar": "يرسل بريدًا إلكترونيًا",
         "pos": "Verb",
-        "exampleDe": "Ich maile dir die Unterlagen heute Abend.",
+        "exampleDe": "Ich maile dir die Unterlagen heute Abend → mailen.",
         "exampleAr": "سأرسل لك…",
         "level": "B1",
         "tags": [
@@ -60086,7 +60170,7 @@
         "ar": "يكتب",
         "id": "a0-klassenzimmer-018",
         "level": "A0",
-        "exampleDe": "Ich schreibe meinen Namen.",
+        "exampleDe": "Ich schreibe meinen Namen → schreiben.",
         "exampleAr": "أكتب اسمي.",
         "tags": [
           "a0-klassenzimmer",
@@ -60100,7 +60184,7 @@
         "ar": "يقرأ",
         "id": "a0-klassenzimmer-019",
         "level": "A0",
-        "exampleDe": "Ich lese ein Buch.",
+        "exampleDe": "Ich lese ein Buch → lesen.",
         "exampleAr": "أقرأ كتاباً.",
         "tags": [
           "a0-klassenzimmer",
@@ -60114,7 +60198,7 @@
         "ar": "يسمع",
         "id": "a0-klassenzimmer-020",
         "level": "A0",
-        "exampleDe": "Ich höre den Lehrer.",
+        "exampleDe": "Ich höre den Lehrer → hören.",
         "exampleAr": "أسمع المعلم.",
         "tags": [
           "a0-klassenzimmer",
@@ -61452,7 +61536,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Das Abwasser wird in der Kläranlage gereinigt.",
         "exampleAr": "تُنقّى م…",
-        "plural": "die Abwässer"
+        "plural": "die Abwässer",
+        "img": "/cards/b2-j03-umwelt-energie-020.webp"
       },
       {
         "id": "j03-umwelt-energie-021",
@@ -62624,7 +62709,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Das Blutdruckgerät zeigt 120 zu 80.",
         "exampleAr": "يُظهر جه…",
-        "plural": "die Blutdruckgeräte"
+        "plural": "die Blutdruckgeräte",
+        "img": "/cards/b2-j04-gesundheit-pflege-036.webp"
       },
       {
         "id": "j04-gesundheit-pflege-037",
@@ -64575,7 +64661,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Sie löscht ihr altes Benutzerkonto.",
         "exampleAr": "تحذف حسا…",
-        "plural": "die Benutzerkonten"
+        "plural": "die Benutzerkonten",
+        "img": "/cards/b2-j06-medien-digital-031.webp"
       },
       {
         "id": "j06-medien-digital-032",
@@ -65416,7 +65503,8 @@
         "article": "das",
         "farbe": "GRÜN",
         "exampleDe": "Das Haushaltsgeld muss für vier Wochen reichen.",
-        "exampleAr": "يجب أن ي…"
+        "exampleAr": "يجب أن ي…",
+        "img": "/cards/b2-j07-geld-wirtschaft-030.webp"
       },
       {
         "id": "j07-geld-wirtschaft-031",
@@ -65445,7 +65533,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Das Darlehen läuft über zehn Jahre.",
         "exampleAr": "يمتد الق…",
-        "plural": "die Darlehen"
+        "plural": "die Darlehen",
+        "img": "/cards/b2-j07-geld-wirtschaft-032.webp"
       },
       {
         "id": "j07-geld-wirtschaft-033",
@@ -67350,7 +67439,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Ein Drittel der Schüler kommt mit dem Bus.",
         "exampleAr": "ثلث التل…",
-        "plural": "die Drittel"
+        "plural": "die Drittel",
+        "img": "/cards/b2-j10-meinung-diskussion-010.webp"
       },
       {
         "id": "j10-meinung-diskussion-011",
@@ -68313,7 +68403,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Das Bügeleisen ist noch heiß.",
         "exampleAr": "المكواة…",
-        "plural": "die Bügeleisen"
+        "plural": "die Bügeleisen",
+        "img": "/cards/b2-j11-alltag-haus-008.webp"
       },
       {
         "id": "j11-alltag-haus-009",
@@ -68402,7 +68493,8 @@
         "article": "das",
         "farbe": "GRÜN",
         "exampleDe": "Das Geschirr steht noch in der Spüle.",
-        "exampleAr": "ما زالت…"
+        "exampleAr": "ما زالت…",
+        "img": "/cards/b2-j11-alltag-haus-014.webp"
       },
       {
         "id": "j11-alltag-haus-015",
@@ -68417,7 +68509,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Das Besteck liegt in der Schublade.",
         "exampleAr": "أدوات ال…",
-        "plural": "die Bestecke"
+        "plural": "die Bestecke",
+        "img": "/cards/b2-j11-alltag-haus-015.webp"
       },
       {
         "id": "j11-alltag-haus-016",
@@ -69159,7 +69252,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Das Blatt fällt vom Baum.",
         "exampleAr": "تسقط الو…",
-        "plural": "die Blätter"
+        "plural": "die Blätter",
+        "img": "/cards/b2-j12-natur-tiere-004.webp"
       },
       {
         "id": "j12-natur-tiere-005",
@@ -69204,7 +69298,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Auf dem Feld wächst Weizen.",
         "exampleAr": "ينمو الق…",
-        "plural": "die Felder"
+        "plural": "die Felder",
+        "img": "/cards/b2-j12-natur-tiere-007.webp"
       },
       {
         "id": "j12-natur-tiere-008",
@@ -69547,7 +69642,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Ein Haustier braucht Zeit und Liebe.",
         "exampleAr": "يحتاج ال…",
-        "plural": "die Haustiere"
+        "plural": "die Haustiere",
+        "img": "/cards/b2-j12-natur-tiere-030.webp"
       },
       {
         "id": "j12-natur-tiere-031",
@@ -69622,7 +69718,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Das Insekt sitzt auf der Blume.",
         "exampleAr": "تجلس الح…",
-        "plural": "die Insekten"
+        "plural": "die Insekten",
+        "img": "/cards/b2-j12-natur-tiere-035.webp"
       },
       {
         "id": "j12-natur-tiere-036",
@@ -70353,7 +70450,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Das Handgelenk ist verstaucht.",
         "exampleAr": "المعصم م…",
-        "plural": "die Handgelenke"
+        "plural": "die Handgelenke",
+        "img": "/cards/b2-j13-koerper-zeit-009.webp"
       },
       {
         "id": "j13-koerper-zeit-010",
@@ -70547,7 +70645,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Das letzte Jahrhundert brachte große Veränderungen.",
         "exampleAr": "جلب القر…",
-        "plural": "die Jahrhunderte"
+        "plural": "die Jahrhunderte",
+        "img": "/cards/b2-j13-koerper-zeit-022.webp"
       },
       {
         "id": "j13-koerper-zeit-023",
@@ -70562,7 +70661,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Ein Jahrzehnt ist schnell vergangen.",
         "exampleAr": "مرّ عقد…",
-        "plural": "die Jahrzehnte"
+        "plural": "die Jahrzehnte",
+        "img": "/cards/b2-j13-koerper-zeit-023.webp"
       },
       {
         "id": "j13-koerper-zeit-024",
@@ -73669,7 +73769,7 @@
         "de": "ankündigen",
         "ar": "يعلن عن",
         "pos": "Verb",
-        "exampleDe": "Die Firma kündigt neue Produkte an.",
+        "exampleDe": "Die Firma kündigt neue Produkte an → ankündigen.",
         "exampleAr": "تعلن الش…",
         "level": "B1",
         "tags": [
@@ -73723,7 +73823,7 @@
         "de": "anschnallen",
         "ar": "يربط حزام الأمان",
         "pos": "Verb",
-        "exampleDe": "Bitte schnallen Sie sich im Auto immer an.",
+        "exampleDe": "Bitte schnallen Sie sich im Auto immer an → anschnallen.",
         "exampleAr": "من فضلكم…",
         "level": "B1",
         "tags": [
@@ -73736,7 +73836,7 @@
         "de": "ansehen",
         "ar": "ينظر إلى / يعتبر",
         "pos": "Verb",
-        "exampleDe": "Wir haben uns gestern einen Film angesehen.",
+        "exampleDe": "Wir haben uns gestern einen Film angesehen → ansehen.",
         "exampleAr": "شاهدنا ب…",
         "level": "B1",
         "tags": [
@@ -73830,7 +73930,7 @@
         "de": "anzeigen",
         "ar": "يعرض / يُبلغ",
         "pos": "Verb",
-        "exampleDe": "Das Display zeigt die Uhrzeit an.",
+        "exampleDe": "Das Display zeigt die Uhrzeit an → anzeigen.",
         "exampleAr": "تعرض الش…",
         "level": "B1",
         "tags": [
@@ -74071,7 +74171,7 @@
         "de": "aufwachen",
         "ar": "يستيقظ",
         "pos": "Verb",
-        "exampleDe": "Ich wache jeden Morgen um sechs Uhr auf.",
+        "exampleDe": "Ich wache jeden Morgen um sechs Uhr auf → aufwachen.",
         "exampleAr": "أستيقظ ك…",
         "level": "B1",
         "tags": [
@@ -74213,7 +74313,7 @@
         "de": "ausreichen",
         "ar": "يكفي",
         "pos": "Verb",
-        "exampleDe": "Das Geld reicht nicht für die ganze Reise aus.",
+        "exampleDe": "Das Geld reicht nicht für die ganze Reise aus → ausreichen.",
         "exampleAr": "المال لا…",
         "level": "B1",
         "tags": [
@@ -74316,7 +74416,7 @@
         "de": "auswählen",
         "ar": "يختار",
         "pos": "Verb",
-        "exampleDe": "Wähle bitte eine Antwort aus.",
+        "exampleDe": "Wähle bitte eine Antwort aus → auswählen.",
         "exampleAr": "اختر من…",
         "level": "B1",
         "tags": [
@@ -74491,7 +74591,7 @@
         "ar": "مترو الأنفاق",
         "pos": "Nomen",
         "article": "die",
-        "exampleDe": "In Berlin fahre ich meistens mit der U-Bahn.",
+        "exampleDe": "In Berlin fahre ich meistens mit der U-Bahn → die U-Bahn.",
         "exampleAr": "في برلين…",
         "level": "B1",
         "tags": [
@@ -74635,7 +74735,7 @@
         "de": "bedienen",
         "ar": "يخدم / يشغّل",
         "pos": "Verb",
-        "exampleDe": "Die Kellnerin bedient die Gäste freundlich.",
+        "exampleDe": "Die Kellnerin bedient die Gäste freundlich → bedienen.",
         "exampleAr": "تخدم الن…",
         "level": "B1",
         "tags": [
@@ -74648,7 +74748,7 @@
         "de": "sich befinden",
         "ar": "يقع / يتواجد",
         "pos": "Verb",
-        "exampleDe": "Der Bahnhof befindet sich im Zentrum der Stadt.",
+        "exampleDe": "Der Bahnhof befindet sich im Zentrum der Stadt → sich befinden.",
         "exampleAr": "تقع المح…",
         "level": "B1",
         "tags": [
@@ -74673,7 +74773,7 @@
         "de": "begegnen",
         "ar": "يصادف / يلتقي بـ",
         "pos": "Verb",
-        "exampleDe": "Ich bin ihr zufällig auf der Straße begegnet.",
+        "exampleDe": "Ich bin ihr zufällig auf der Straße begegnet → begegnen.",
         "exampleAr": "صادفتها…",
         "level": "B1",
         "tags": [
@@ -74700,7 +74800,7 @@
         "de": "begrüßen",
         "ar": "يرحّب بـ",
         "pos": "Verb",
-        "exampleDe": "Der Direktor begrüßt die neuen Mitarbeiter.",
+        "exampleDe": "Der Direktor begrüßt die neuen Mitarbeiter → begrüßen.",
         "exampleAr": "يرحّب ال…",
         "level": "B1",
         "tags": [
@@ -74832,7 +74932,7 @@
         "de": "bemerken",
         "ar": "يلاحظ",
         "pos": "Verb",
-        "exampleDe": "Hast du bemerkt, dass er heute fehlt?",
+        "exampleDe": "Hast du bemerkt, dass er heute fehlt? → bemerken.",
         "exampleAr": "هل لاحظت…",
         "level": "B1",
         "tags": [
@@ -74845,7 +74945,7 @@
         "de": "sich bemühen",
         "ar": "يبذل جهدًا",
         "pos": "Verb",
-        "exampleDe": "Er bemüht sich sehr um gute Noten.",
+        "exampleDe": "Er bemüht sich sehr um gute Noten → sich bemühen.",
         "exampleAr": "يبذل جهد…",
         "level": "B1",
         "tags": [
@@ -74898,7 +74998,7 @@
         "de": "berechnen",
         "ar": "يحسب",
         "pos": "Verb",
-        "exampleDe": "Der Verkäufer berechnet den Preis falsch.",
+        "exampleDe": "Der Verkäufer berechnet den Preis falsch → berechnen.",
         "exampleAr": "يحسب الب…",
         "level": "B1",
         "tags": [
@@ -75022,7 +75122,7 @@
         "de": "beschränken",
         "ar": "يحدّ / يقصر",
         "pos": "Verb",
-        "exampleDe": "Die Zeit für die Prüfung ist beschränkt.",
+        "exampleDe": "Die Zeit für die Prüfung ist beschränkt → beschränken.",
         "exampleAr": "الوقت ال…",
         "level": "B1",
         "tags": [
@@ -75050,7 +75150,7 @@
         "de": "besetzen",
         "ar": "يشغل / يحتلّ",
         "pos": "Verb",
-        "exampleDe": "Alle Plätze im Saal sind besetzt.",
+        "exampleDe": "Alle Plätze im Saal sind besetzt → besetzen.",
         "exampleAr": "جميع الم…",
         "level": "B1",
         "tags": [
@@ -75063,7 +75163,7 @@
         "de": "besitzen",
         "ar": "يمتلك",
         "pos": "Verb",
-        "exampleDe": "Meine Familie besitzt ein kleines Haus auf dem Land.",
+        "exampleDe": "Meine Familie besitzt ein kleines Haus auf dem Land → besitzen.",
         "exampleAr": "تمتلك عا…",
         "level": "B1",
         "tags": [
@@ -75198,7 +75298,7 @@
         "de": "bieten",
         "ar": "يقدّم / يعرض",
         "pos": "Verb",
-        "exampleDe": "Das Hotel bietet einen schönen Blick auf das Meer.",
+        "exampleDe": "Das Hotel bietet einen schönen Blick auf das Meer → bieten.",
         "exampleAr": "يقدّم ال…",
         "level": "B1",
         "tags": [
@@ -75247,7 +75347,7 @@
         "de": "bitten",
         "ar": "يطلب بتأدّب",
         "pos": "Verb",
-        "exampleDe": "Ich bitte Sie um Verständnis.",
+        "exampleDe": "Ich bitte Sie um Verständnis → bitten.",
         "exampleAr": "أرجو منك…",
         "level": "B1",
         "tags": [
@@ -75305,7 +75405,7 @@
         "de": "blitzen",
         "ar": "يومض البرق",
         "pos": "Verb",
-        "exampleDe": "Es blitzt und donnert draußen.",
+        "exampleDe": "Es blitzt und donnert draußen → blitzen.",
         "exampleAr": "يومض الب…",
         "level": "B1",
         "tags": [
@@ -75330,7 +75430,7 @@
         "de": "bluten",
         "ar": "ينزف",
         "pos": "Verb",
-        "exampleDe": "Sein Finger blutet stark.",
+        "exampleDe": "Sein Finger blutet stark → bluten.",
         "exampleAr": "إصبعه ين…",
         "level": "B1",
         "tags": [
@@ -75416,7 +75516,7 @@
         "de": "brennen",
         "ar": "يحترق",
         "pos": "Verb",
-        "exampleDe": "In der Küche brennt eine Kerze.",
+        "exampleDe": "In der Küche brennt eine Kerze → brennen.",
         "exampleAr": "تحترق شم…",
         "level": "B1",
         "tags": [
@@ -75634,7 +75734,7 @@
         "de": "sich beschäftigen",
         "ar": "ينشغل بـ / يهتمّ بـ",
         "pos": "Verb",
-        "exampleDe": "Er beschäftigt sich viel mit Geschichte.",
+        "exampleDe": "Er beschäftigt sich viel mit Geschichte → sich beschäftigen.",
         "exampleAr": "ينشغل كث…",
         "level": "B1",
         "tags": [
@@ -76166,7 +76266,7 @@
         "de": "donnern",
         "ar": "تدوّي الرعود",
         "pos": "Verb",
-        "exampleDe": "Draußen donnert es laut.",
+        "exampleDe": "Draußen donnert es laut → donnern.",
         "exampleAr": "الرعد يد…",
         "level": "B1",
         "tags": [
@@ -76379,7 +76479,7 @@
         "ar": "بطاقة الدفع البنكية",
         "pos": "Nomen",
         "article": "die",
-        "exampleDe": "Ich bezahle meistens mit der EC-Karte.",
+        "exampleDe": "Ich bezahle meistens mit der EC-Karte → die EC-Karte.",
         "exampleAr": "أدفع في…",
         "level": "B1",
         "tags": [
@@ -76417,7 +76517,7 @@
         "de": "eilen",
         "ar": "يُسرع",
         "pos": "Verb",
-        "exampleDe": "Sie eilt jeden Morgen zur Arbeit.",
+        "exampleDe": "Sie eilt jeden Morgen zur Arbeit → eilen.",
         "exampleAr": "تُسرع كل…",
         "level": "B1",
         "tags": [
@@ -76502,7 +76602,7 @@
         "de": "einfallen",
         "ar": "يخطر على البال",
         "pos": "Verb",
-        "exampleDe": "Mir ist sein Name plötzlich wieder eingefallen.",
+        "exampleDe": "Mir ist sein Name plötzlich wieder eingefallen → einfallen.",
         "exampleAr": "خطر على…",
         "level": "B1",
         "tags": [
@@ -76682,7 +76782,7 @@
         "de": "eintreten",
         "ar": "يدخل / يحدث",
         "pos": "Verb",
-        "exampleDe": "Bitte treten Sie ein und setzen Sie sich.",
+        "exampleDe": "Bitte treten Sie ein und setzen Sie sich → eintreten.",
         "exampleAr": "من فضلك…",
         "level": "B1",
         "tags": [
@@ -76991,7 +77091,7 @@
         "de": "entwickeln",
         "ar": "يُطوّر",
         "pos": "Verb",
-        "exampleDe": "Die Firma entwickelt eine neue App.",
+        "exampleDe": "Die Firma entwickelt eine neue App → entwickeln.",
         "exampleAr": "تطوّر ال…",
         "level": "B1",
         "tags": [
@@ -77004,7 +77104,7 @@
         "de": "sich ereignen",
         "ar": "يحدث / يقع",
         "pos": "Verb",
-        "exampleDe": "Der Unfall hat sich gestern Abend ereignet.",
+        "exampleDe": "Der Unfall hat sich gestern Abend ereignet → sich ereignen.",
         "exampleAr": "وقع الحا…",
         "level": "B1",
         "tags": [
@@ -77032,7 +77132,7 @@
         "de": "erfordern",
         "ar": "يتطلّب",
         "pos": "Verb",
-        "exampleDe": "Diese Arbeit erfordert viel Geduld.",
+        "exampleDe": "Diese Arbeit erfordert viel Geduld → erfordern.",
         "exampleAr": "يتطلّب ه…",
         "level": "B1",
         "tags": [
@@ -77058,7 +77158,7 @@
         "de": "sich erkälten",
         "ar": "يُصاب بنزلة برد",
         "pos": "Verb",
-        "exampleDe": "Zieh dich warm an, sonst erkältest du dich.",
+        "exampleDe": "Zieh dich warm an, sonst erkältest du dich → sich erkälten.",
         "exampleAr": "البس ملا…",
         "level": "B1",
         "tags": [
@@ -77127,7 +77227,7 @@
         "de": "erleben",
         "ar": "يعيش / يختبر (تجربة)",
         "pos": "Verb",
-        "exampleDe": "Wir haben im Urlaub viel Schönes erlebt.",
+        "exampleDe": "Wir haben im Urlaub viel Schönes erlebt → erleben.",
         "exampleAr": "عشنا تجا…",
         "level": "B1",
         "tags": [
@@ -77153,7 +77253,7 @@
         "de": "ernähren",
         "ar": "يُغذّي / يُعيل",
         "pos": "Verb",
-        "exampleDe": "Sie ernährt sich sehr gesund.",
+        "exampleDe": "Sie ernährt sich sehr gesund → ernähren.",
         "exampleAr": "تتغذّى ب…",
         "level": "B1",
         "tags": [
@@ -78422,7 +78522,7 @@
         "de": "sich etwas gefallen lassen",
         "ar": "يتقبّل / يرضى بأمر ما",
         "pos": "Wendung",
-        "exampleDe": "Das kann sie sich nicht gefallen lassen.",
+        "exampleDe": "Das kann sie sich nicht gefallen lassen → sich etwas gefallen lassen.",
         "exampleAr": "لا يمكنه…",
         "level": "B1",
         "tags": [
@@ -79706,7 +79806,7 @@
         "de": "informieren",
         "ar": "يُعلِم/يُخبِر",
         "pos": "Verb",
-        "exampleDe": "Die Firma informiert die Kunden über die neuen Preise.",
+        "exampleDe": "Die Firma informiert die Kunden über die neuen Preise → informieren.",
         "exampleAr": "تُعلِم ا…",
         "level": "B1",
         "tags": [
@@ -79914,7 +80014,7 @@
         "de": "sich irren",
         "ar": "يُخطئ/يغلَط",
         "pos": "Verb",
-        "exampleDe": "Entschuldigung, ich habe mich geirrt.",
+        "exampleDe": "Entschuldigung, ich habe mich geirrt → sich irren.",
         "exampleAr": "عفوًا، ل…",
         "level": "B1",
         "tags": [
@@ -80161,7 +80261,7 @@
         "de": "kämpfen",
         "ar": "يُقاتِل/يكافح",
         "pos": "Verb",
-        "exampleDe": "Die Feuerwehr kämpft gegen das Feuer.",
+        "exampleDe": "Die Feuerwehr kämpft gegen das Feuer → kämpfen.",
         "exampleAr": "يكافح رج…",
         "level": "B1",
         "tags": [
@@ -80470,7 +80570,7 @@
         "de": "kleben",
         "ar": "يَلصَق/يُلصِق",
         "pos": "Verb",
-        "exampleDe": "Er klebt das Foto in das Album.",
+        "exampleDe": "Er klebt das Foto in das Album → kleben.",
         "exampleAr": "يُلصِق ا…",
         "level": "B1",
         "tags": [
@@ -80513,7 +80613,7 @@
         "de": "klingeln",
         "ar": "يَرِنّ (الجرس)",
         "pos": "Verb",
-        "exampleDe": "Es klingelt an der Tür.",
+        "exampleDe": "Es klingelt an der Tür → klingeln.",
         "exampleAr": "يرنّ جرس…",
         "level": "B1",
         "tags": [
@@ -80526,7 +80626,7 @@
         "de": "klingen",
         "ar": "يبدو صوته (كـ)",
         "pos": "Verb",
-        "exampleDe": "Deine Idee klingt sehr gut.",
+        "exampleDe": "Deine Idee klingt sehr gut → klingen.",
         "exampleAr": "فكرتك تب…",
         "level": "B1",
         "tags": [
@@ -80554,7 +80654,7 @@
         "de": "klopfen",
         "ar": "يَطرُق/يَقرَع",
         "pos": "Verb",
-        "exampleDe": "Jemand klopft an die Tür.",
+        "exampleDe": "Jemand klopft an die Tür → klopfen.",
         "exampleAr": "يطرُق أح…",
         "level": "B1",
         "tags": [
@@ -80820,7 +80920,7 @@
         "de": "korrigieren",
         "ar": "يُصحِّح",
         "pos": "Verb",
-        "exampleDe": "Die Lehrerin korrigiert die Hausaufgaben.",
+        "exampleDe": "Die Lehrerin korrigiert die Hausaufgaben → korrigieren.",
         "exampleAr": "تُصحِّح…",
         "level": "B1",
         "tags": [
@@ -81147,7 +81247,7 @@
         "de": "landen",
         "ar": "يَهبِط",
         "pos": "Verb",
-        "exampleDe": "Das Flugzeug landet um sechs Uhr.",
+        "exampleDe": "Das Flugzeug landet um sechs Uhr → landen.",
         "exampleAr": "تهبط الط…",
         "level": "B1",
         "tags": [
@@ -81212,7 +81312,7 @@
         "de": "lassen",
         "ar": "يَترُك/يَدَع",
         "pos": "Verb",
-        "exampleDe": "Lass mich bitte in Ruhe arbeiten.",
+        "exampleDe": "Lass mich bitte in Ruhe arbeiten → lassen.",
         "exampleAr": "دعني أعم…",
         "level": "B1",
         "tags": [
@@ -81353,7 +81453,7 @@
         "de": "leisten",
         "ar": "يُنجِز/يُؤدّي",
         "pos": "Verb",
-        "exampleDe": "Das Team leistet gute Arbeit.",
+        "exampleDe": "Das Team leistet gute Arbeit → leisten.",
         "exampleAr": "يُنجِز ا…",
         "level": "B1",
         "tags": [
@@ -81366,7 +81466,7 @@
         "de": "leiten",
         "ar": "يُدير/يقود",
         "pos": "Verb",
-        "exampleDe": "Frau Berger leitet die Abteilung seit zwei Jahren.",
+        "exampleDe": "Frau Berger leitet die Abteilung seit zwei Jahren → leiten.",
         "exampleAr": "تُدير ال…",
         "level": "B1",
         "tags": [
@@ -81906,7 +82006,7 @@
         "de": "merken",
         "ar": "يلاحظ/يتذكّر",
         "pos": "Verb",
-        "exampleDe": "Sie merkt sich alle Namen sehr gut.",
+        "exampleDe": "Sie merkt sich alle Namen sehr gut → merken.",
         "exampleAr": "تتذكّر ك…",
         "level": "B1",
         "tags": [
@@ -82472,7 +82572,7 @@
         "de": "sich nähern",
         "ar": "يقترب",
         "pos": "Verb",
-        "exampleDe": "Der Zug nähert sich langsam dem Bahnhof.",
+        "exampleDe": "Der Zug nähert sich langsam dem Bahnhof → sich nähern.",
         "exampleAr": "يقترب ال…",
         "level": "B1",
         "tags": [
@@ -82569,7 +82669,7 @@
         "de": "nennen",
         "ar": "يسمّي/يُسمّي",
         "pos": "Verb",
-        "exampleDe": "Man nennt diesen Berg den höchsten in Europa.",
+        "exampleDe": "Man nennt diesen Berg den höchsten in Europa → nennen.",
         "exampleAr": "يُسمّى ه…",
         "level": "B1",
         "tags": [
@@ -82919,7 +83019,7 @@
         "de": "ordnen",
         "ar": "يُرتّب/ينظّم",
         "pos": "Verb",
-        "exampleDe": "Sie ordnet die Bücher nach dem Alphabet.",
+        "exampleDe": "Sie ordnet die Bücher nach dem Alphabet → ordnen.",
         "exampleAr": "تُرتّب ا…",
         "level": "B1",
         "tags": [
@@ -83473,7 +83573,7 @@
         "de": "präsentieren",
         "ar": "يعرض/يقدّم",
         "pos": "Verb",
-        "exampleDe": "Sie präsentiert ihr Projekt vor der ganzen Klasse.",
+        "exampleDe": "Sie präsentiert ihr Projekt vor der ganzen Klasse → präsentieren.",
         "exampleAr": "تقدّم مش…",
         "level": "B1",
         "tags": [
@@ -83527,7 +83627,7 @@
         "de": "produzieren",
         "ar": "ينتج/يصنّع",
         "pos": "Verb",
-        "exampleDe": "Die Fabrik produziert jeden Tag tausend Autos.",
+        "exampleDe": "Die Fabrik produziert jeden Tag tausend Autos → produzieren.",
         "exampleAr": "ينتج الم…",
         "level": "B1",
         "tags": [
@@ -85678,7 +85778,7 @@
         "de": "stecken",
         "ar": "يضع/يكون عالقًا",
         "pos": "Verb",
-        "exampleDe": "Der Schlüssel steckt in der Tür.",
+        "exampleDe": "Der Schlüssel steckt in der Tür → stecken.",
         "exampleAr": "المفتاح…",
         "level": "B1",
         "tags": [
@@ -85819,7 +85919,7 @@
         "de": "stinken",
         "ar": "تنبعث منه رائحة كريهة",
         "pos": "Verb",
-        "exampleDe": "Der Müll in der Küche stinkt stark.",
+        "exampleDe": "Der Müll in der Küche stinkt stark → stinken.",
         "exampleAr": "القمامة…",
         "level": "B1",
         "tags": [
@@ -86516,7 +86616,7 @@
         "de": "tippen",
         "ar": "يكتب على لوحة المفاتيح/ينقر",
         "pos": "Verb",
-        "exampleDe": "Sie tippt schnell auf dem Handy.",
+        "exampleDe": "Sie tippt schnell auf dem Handy → tippen.",
         "exampleAr": "تكتب بسر…",
         "level": "B1",
         "tags": [
@@ -86664,7 +86764,7 @@
         "de": "transportieren",
         "ar": "ينقل",
         "pos": "Verb",
-        "exampleDe": "Die Firma transportiert Möbel.",
+        "exampleDe": "Die Firma transportiert Möbel → transportieren.",
         "exampleAr": "تنقل الش…",
         "level": "B1",
         "tags": [
@@ -86707,7 +86807,7 @@
         "de": "treiben",
         "ar": "يدفع/يمارس",
         "pos": "Verb",
-        "exampleDe": "Er treibt viel Sport.",
+        "exampleDe": "Er treibt viel Sport → treiben.",
         "exampleAr": "يمارس ال…",
         "level": "B1",
         "tags": [
@@ -86772,7 +86872,7 @@
         "de": "tun",
         "ar": "يفعل",
         "pos": "Verb",
-        "exampleDe": "Was tust du am Wochenende?",
+        "exampleDe": "Was tust du am Wochenende? → tun.",
         "exampleAr": "ماذا تفع…",
         "level": "B1",
         "tags": [
@@ -87041,7 +87141,7 @@
         "de": "umdrehen",
         "ar": "يقلب/يدير",
         "pos": "Verb",
-        "exampleDe": "Bitte drehen Sie das Blatt um.",
+        "exampleDe": "Bitte drehen Sie das Blatt um → umdrehen.",
         "exampleAr": "الرجاء ق…",
         "level": "B1",
         "tags": [
@@ -87294,7 +87394,7 @@
         "de": "unterrichten",
         "ar": "يُدرّس",
         "pos": "Verb",
-        "exampleDe": "Sie unterrichtet Deutsch.",
+        "exampleDe": "Sie unterrichtet Deutsch → unterrichten.",
         "exampleAr": "هي تُدرّ…",
         "level": "B1",
         "tags": [
@@ -87489,7 +87589,7 @@
         "de": "verbrennen",
         "ar": "يحرق",
         "pos": "Verb",
-        "exampleDe": "Das Holz verbrennt schnell.",
+        "exampleDe": "Das Holz verbrennt schnell → verbrennen.",
         "exampleAr": "الخشب يح…",
         "level": "B1",
         "tags": [
@@ -87637,7 +87737,7 @@
         "de": "verhaften",
         "ar": "يعتقل",
         "pos": "Verb",
-        "exampleDe": "Die Polizei verhaftet den Täter.",
+        "exampleDe": "Die Polizei verhaftet den Täter → verhaften.",
         "exampleAr": "الشرطة ت…",
         "level": "B1",
         "tags": [
@@ -87650,7 +87750,7 @@
         "de": "sich verhalten",
         "ar": "يتصرّف/يسلك",
         "pos": "Wendung",
-        "exampleDe": "Er verhält sich ruhig.",
+        "exampleDe": "Er verhält sich ruhig → sich verhalten.",
         "exampleAr": "يتصرّف ب…",
         "level": "B1",
         "tags": [
@@ -87692,7 +87792,7 @@
         "de": "verlangen",
         "ar": "يطلب/يتطلّب",
         "pos": "Verb",
-        "exampleDe": "Er verlangt eine Antwort.",
+        "exampleDe": "Er verlangt eine Antwort → verlangen.",
         "exampleAr": "يطلب جوا…",
         "level": "B1",
         "tags": [
@@ -87830,7 +87930,7 @@
         "de": "verraten",
         "ar": "يخون/يكشف سراً",
         "pos": "Verb",
-        "exampleDe": "Bitte verrate nichts!",
+        "exampleDe": "Bitte verrate nichts! → verraten.",
         "exampleAr": "الرجاء ل…",
         "level": "B1",
         "tags": [
@@ -87884,7 +87984,7 @@
         "de": "verschwinden",
         "ar": "يختفي",
         "pos": "Verb",
-        "exampleDe": "Er verschwindet schnell.",
+        "exampleDe": "Er verschwindet schnell → verschwinden.",
         "exampleAr": "يختفي بس…",
         "level": "B1",
         "tags": [
@@ -87923,7 +88023,7 @@
         "de": "verstecken",
         "ar": "يخبّئ",
         "pos": "Verb",
-        "exampleDe": "Er versteckt das Geschenk.",
+        "exampleDe": "Er versteckt das Geschenk → verstecken.",
         "exampleAr": "يخبّئ ال…",
         "level": "B1",
         "tags": [
@@ -87979,7 +88079,7 @@
         "de": "verurteilen",
         "ar": "يدين/يحكم",
         "pos": "Verb",
-        "exampleDe": "Das Gericht verurteilt den Täter.",
+        "exampleDe": "Das Gericht verurteilt den Täter → verurteilen.",
         "exampleAr": "المحكمة…",
         "level": "B1",
         "tags": [
@@ -88242,7 +88342,7 @@
         "de": "vorkommen",
         "ar": "يحدث/يوجد",
         "pos": "Verb",
-        "exampleDe": "Das kommt oft vor.",
+        "exampleDe": "Das kommt oft vor → vorkommen.",
         "exampleAr": "هذا يحدث…",
         "level": "B1",
         "tags": [
@@ -88295,7 +88395,7 @@
         "de": "vorstellen",
         "ar": "يقدّم/يتخيّل",
         "pos": "Verb",
-        "exampleDe": "Wir stellen uns vor.",
+        "exampleDe": "Wir stellen uns vor → vorstellen.",
         "exampleAr": "نقدّم أن…",
         "level": "B1",
         "tags": [
@@ -90637,7 +90737,7 @@
         "de": "entweder...oder",
         "ar": "إمّا ... أو (بدون مسافات)",
         "pos": "Wendung",
-        "exampleDe": "Entweder heute oder morgen fahren wir los.",
+        "exampleDe": "Entweder heute oder morgen fahren wir los → entweder...oder.",
         "exampleAr": "إمّا الي…",
         "level": "B1",
         "tags": [
