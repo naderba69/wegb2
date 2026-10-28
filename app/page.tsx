@@ -15,6 +15,7 @@ import { TodayB2Praxis } from "@/components/today-b2-praxis";
 import { stationOfTask, STATIONEN } from "@/components/stationen";
 import { LernPfad } from "@/components/lernpath";
 import { ProfilWahl } from "@/components/profil";
+import { OnboardingWizard } from "@/components/onboarding-wizard";
 import { Klassenzimmer } from "@/components/akademie/Klassenzimmer";
 import { resumeAusloesen, resumeBedarf, resumePlan, resumeZustand } from "@/lib/wiedereinstieg";
 import { SkillBalancePlan } from "@/components/skillplan";
@@ -135,6 +136,7 @@ export default function Today() {
 
   if (!ready) return <div className="today-screen" role="status" aria-live="polite">⏳ جارٍ استعادة خطتك وتقدّمك المحفوظ…</div>;
 
+  const showOnboarding = !(progress as any).settings?.onboardingDone && progress.plan.day <= 3;
   const resultOf = (id: string) => progress.plan.tasks[id];
   // 🔐 بوابة الجلسة: الجديد لا يُرى قبل تسليم الاسترجاع (lib/ritual.ts)
   const ritual = ritualUrteil(plan, progress);
@@ -374,6 +376,7 @@ export default function Today() {
 
   return (
     <div className="today-screen fadein dirb ui-page ui-page--today" data-testid="today-screen">
+      {showOnboarding && <OnboardingWizard />}
       {modulGate.gesperrt && (
         <section
           id="modul-pruefung-mahnung"
