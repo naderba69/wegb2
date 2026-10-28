@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { useProgress } from "@/lib/store";
+import { speakAny } from "@/lib/speech";
 
 type Ziel = "bamf" | "pflege" | "studium" | "arbeit" | "allgemein";
 const ZIELE: { id: Ziel; labelDe: string; labelAr: string; descAr: string; icon: string }[] = [
@@ -36,6 +37,14 @@ export function OnboardingWizard() {
         </div>
         <div style={{ height: 6, background: "var(--color-paper)", borderRadius: 3, margin: "0.6rem 0", overflow: "hidden" }}>
           <div style={{ width: `${step * 50}%`, height: "100%", background: "var(--ui-green)", transition: "width 200ms" }} />
+        </div>
+        {/* P1 onboarding/video — 60ث ترحيب: فيديو/صوت يشرح 378ي = 152د/ي */}
+        <div data-testid="onboarding-willkommen-60s" style={{ background: "var(--color-paper2)", border: "1px solid var(--color-line)", borderRadius: "0.7rem", padding: "0.6rem 0.8rem", marginBottom: "0.6rem" }}>
+          <div style={{ fontWeight: 800, fontSize: "0.85rem" }}>🎬 60 ثانية — ماذا ستفعل في 378 يوماً؟</div>
+          <div style={{ fontSize: "0.78rem", color: "var(--color-ink2)", lineHeight: 1.7 }}>378 يوماً = 152د/يوم B2 متوسط داخل السقف — البداية سؤال استرجاع، والجديد حتمي (لا توهان)، والتعويض تلقائي. اختر هدفك ووتيرتك وانطلق.</div>
+          <audio controls preload="none" src="/willkommen-60s.mp3" onError={(e) => { (e.currentTarget as HTMLAudioElement).style.display = "none"; }} style={{ width: "100%", marginTop: "0.4rem" }} />
+          <button type="button" className="btn btn-ghost" style={{ marginTop: "0.35rem", width: "100%", minHeight: "44px" }} onClick={() => speakAny("Willkommen bei Weg nach B2. In 378 Tagen erreichst du B2 mit 152 Minuten pro Tag im B2-Abschnitt. Jeden Tag wartet eine Abruf-Frage, dann neues Material, unverlierbar deterministisch. Wähle jetzt dein Ziel und dein Tempo.", { rate: 0.95 })}>▶ استمع للترحيب 60ث (TTS)</button>
+          <div style={{ fontSize: "0.70rem", color: "var(--color-ink2)", marginTop: "0.2rem" }}>تسجيل بشري قادم — الآن TTS + نص يكفي لـ D1 (Mayer Modality+Segmenting).</div>
         </div>
 
         {step === 1 && (
