@@ -21451,7 +21451,7 @@
         ],
         "article": "die",
         "farbe": "ROT",
-        "exampleDe": "Die Abo-Falle beginnt mit einem kostenlosen Probemonat.",
+        "exampleDe": "Die Abo-Falle beginnt mit einem kostenlosen Probemonat → die Abo-Falle.",
         "exampleAr": "فخ الاشتراك يبدأ ب…",
         "plural": "die Abo-Fallen"
       },
@@ -22254,7 +22254,7 @@
         "article": "das",
         "farbe": "GRÜN",
         "aussprache": "sp/st في البداية = «شب/شت»",
-        "exampleDe": "Das Stadt-Land-Gefälle zeigt sich beim Internet und beim Busfahrplan.",
+        "exampleDe": "Das Stadt-Land-Gefälle zeigt sich beim Internet und beim Busfahrplan → das Stadt-Land-Gefälle.",
         "exampleAr": "هوّة المدينة والري…"
       },
       {
@@ -22469,7 +22469,7 @@
           "stadtentwicklung"
         ],
         "aussprache": "ie = «إي» ممدودة",
-        "exampleDe": "Das Haus wurde energetisch saniert, die Miete stieg um zwölf Prozent.",
+        "exampleDe": "Das Haus wurde energetisch saniert, die Miete stieg um zwölf Prozent → sanieren.",
         "exampleAr": "المبنى رُمّم طاقيا…",
         "posInfo": "saniert, sanierte, hat gesaniert"
       },
@@ -22497,7 +22497,7 @@
           "stadtentwicklung"
         ],
         "aussprache": "w = «ڤ»",
-        "exampleDe": "Wer ein Viertel aufwertet, muss an die alten Mieter denken.",
+        "exampleDe": "Wer ein Viertel aufwertet, muss an die alten Mieter denken → aufwerten.",
         "exampleAr": "من يرتقي بحي عليه…",
         "posInfo": "wertet auf, wertete auf, hat aufgewertt"
       },
@@ -23097,7 +23097,7 @@
           "migration-integration"
         ],
         "aussprache": "ei = «آي» لا «إي»",
-        "exampleDe": "Nach einem Jahr habe ich mich in Leipzig eingelebt.",
+        "exampleDe": "Nach einem Jahr habe ich mich in Leipzig eingelebt → sich einleben.",
         "exampleAr": "بعد سنة استأنست في…",
         "posInfo": "lebt ein, lebte ein, hat eingelebt"
       },
@@ -23111,7 +23111,7 @@
           "migration-integration"
         ],
         "aussprache": "ei = «آي» لا «إي» · ü = ضمّةٌ بشفتَينِ مستديرتَين",
-        "exampleDe": "Sie hat sich schnell in das Team eingefügt, ohne sich zu verbiegen.",
+        "exampleDe": "Sie hat sich schnell in das Team eingefügt, ohne sich zu verbiegen → sich einfügen.",
         "exampleAr": "اندمجت بسرعة في ال…",
         "posInfo": "fügt ein, fügte ein, hat eingefügt"
       },
@@ -23125,7 +23125,7 @@
           "migration-integration"
         ],
         "aussprache": "ie = «إي» ممدودة",
-        "exampleDe": "Ein Verein integriert schneller als jeder Kurs.",
+        "exampleDe": "Ein Verein integriert schneller als jeder Kurs → integrieren.",
         "exampleAr": "الجمعية تدمج أسرع…",
         "posInfo": "integriert, integrierte, hat geintegriert"
       },
@@ -23585,7 +23585,7 @@
         "article": "die",
         "farbe": "ROT",
         "aussprache": "sp/st في البداية = «شب/شت»",
-        "exampleDe": "Die Stasi-Unterlagen kann man auf Antrag einsehen.",
+        "exampleDe": "Die Stasi-Unterlagen kann man auf Antrag einsehen → die Stasi-Unterlagen.",
         "exampleAr": "ملفات الشرطة السري…"
       },
       {
@@ -23782,7 +23782,7 @@
         "tags": [
           "erinnerungskultur"
         ],
-        "exampleDe": "Am Sonntag gedenkt die Stadt der Opfer des Hochwassers.",
+        "exampleDe": "Am Sonntag gedenkt die Stadt der Opfer des Hochwassers → gedenken.",
         "exampleAr": "يوم الأحد تستذكر ا…",
         "posInfo": "gedenkt, gedenkte, hat gedenkt"
       },
@@ -23796,7 +23796,7 @@
           "erinnerungskultur"
         ],
         "aussprache": "v = «ف»",
-        "exampleDe": "Er verdrängt das Problem, statt darüber zu sprechen.",
+        "exampleDe": "Er verdrängt das Problem, statt darüber zu sprechen → verdrängen.",
         "exampleAr": "هو يكبت المشكلة بد…",
         "posInfo": "verdrängt, verdrängte, hat verdrängt"
       },
@@ -60255,7 +60255,7 @@
         "tags": [
           "arbeit"
         ],
-        "exampleDe": "Die Klinik setzt neue Technik ein.",
+        "exampleDe": "Die Klinik setzt neue Technik ein → einsetzen.",
         "exampleAr": "توظّف ال…",
         "posInfo": "setzt ein, setzte ein, hat eingesetzt"
       },
@@ -60268,7 +60268,7 @@
         "tags": [
           "arbeit"
         ],
-        "exampleDe": "Wir handeln die Bedingungen gemeinsam aus.",
+        "exampleDe": "Wir handeln die Bedingungen gemeinsam aus → aushandeln.",
         "exampleAr": "نتفاوض ع…",
         "posInfo": "handet aus, handete aus, hat ausgehandet"
       },
@@ -60281,7 +60281,7 @@
         "tags": [
           "arbeit"
         ],
-        "exampleDe": "Die Firma befördert sie zur Stationsleiterin.",
+        "exampleDe": "Die Firma befördert sie zur Stationsleiterin → befördern.",
         "exampleAr": "الشركة ت…",
         "posInfo": "befördet, befördete, hat befördern"
       },
@@ -60294,7 +60294,7 @@
         "tags": [
           "arbeit"
         ],
-        "exampleDe": "Er verzichtet auf die Pause.",
+        "exampleDe": "Er verzichtet auf die Pause → verzichten.",
         "exampleAr": "يستغني ع…",
         "posInfo": "verzichtet, verzichtete, hat verzichtt"
       },
@@ -60307,7 +60307,7 @@
         "tags": [
           "arbeit"
         ],
-        "exampleDe": "Ich erledige die Aufgabe heute noch.",
+        "exampleDe": "Ich erledige die Aufgabe heute noch → erledigen.",
         "exampleAr": "أُنهي ال…",
         "posInfo": "erledigt, erledigte, hat erledigt"
       },
@@ -60320,7 +60320,7 @@
         "tags": [
           "arbeit"
         ],
-        "exampleDe": "Er eignet sich gut für diese Arbeit.",
+        "exampleDe": "Er eignet sich gut für diese Arbeit → sich eignen.",
         "exampleAr": "يصلح جيد…",
         "posInfo": "eignt, eignte, hat geeignt"
       },
@@ -60684,7 +60684,7 @@
         "tags": [
           "arbeit"
         ],
-        "exampleDe": "Sie arbeitet sich gerade in die neue Station ein.",
+        "exampleDe": "Sie arbeitet sich gerade in die neue Station ein → sich einarbeiten.",
         "exampleAr": "تندمج حا…",
         "posInfo": "arbeitet ein, arbeitete ein, hat eingearbeitt"
       },
@@ -60697,7 +60697,7 @@
         "tags": [
           "arbeit"
         ],
-        "exampleDe": "Wer vertritt dich im Urlaub?",
+        "exampleDe": "Wer vertritt dich im Urlaub? → vertreten.",
         "exampleAr": "من ينوب…",
         "posInfo": "vertretet, vertretete, hat vertrett"
       },
@@ -60710,7 +60710,7 @@
         "tags": [
           "arbeit"
         ],
-        "exampleDe": "Wir planen eine Pause ein.",
+        "exampleDe": "Wir planen eine Pause ein → einplanen.",
         "exampleAr": "نُدرج اس…",
         "posInfo": "plant ein, plante ein, hat eingeplant"
       },
@@ -60723,7 +60723,7 @@
         "tags": [
           "arbeit"
         ],
-        "exampleDe": "Die Pflegekraft protokolliert alle Werte.",
+        "exampleDe": "Die Pflegekraft protokolliert alle Werte → protokollieren.",
         "exampleAr": "الممرّضة…",
         "posInfo": "protokolliert, protokollierte, hat geprotokolliert"
       },
@@ -60775,7 +60775,7 @@
         "tags": [
           "arbeit"
         ],
-        "exampleDe": "Die Frist wird auf zwei Tage verkürzt.",
+        "exampleDe": "Die Frist wird auf zwei Tage verkürzt → verkürzen.",
         "exampleAr": "تُختصر ا…",
         "posInfo": "verkürzt, verkürzte, hat verkürzt"
       },
@@ -61052,7 +61052,7 @@
         "tags": [
           "gesellschaft"
         ],
-        "exampleDe": "Reichen Sie die Unterlagen bis Freitag ein.",
+        "exampleDe": "Reichen Sie die Unterlagen bis Freitag ein → einreichen.",
         "exampleAr": "قدّموا ا…",
         "posInfo": "reicht ein, reichte ein, hat eingereicht"
       },
@@ -61065,7 +61065,7 @@
         "tags": [
           "gesellschaft"
         ],
-        "exampleDe": "Wer zu schnell fährt, wird bestraft.",
+        "exampleDe": "Wer zu schnell fährt, wird bestraft → bestrafen.",
         "exampleAr": "من يقود…",
         "posInfo": "bestraft, bestrafte, hat bestraft"
       },
@@ -61078,7 +61078,7 @@
         "tags": [
           "gesellschaft"
         ],
-        "exampleDe": "Die Polizei ermittelt in diesem Fall.",
+        "exampleDe": "Die Polizei ermittelt in diesem Fall → ermitteln.",
         "exampleAr": "تحقّق ال…",
         "posInfo": "ermittet, ermittete, hat ermitteln"
       },
@@ -61091,7 +61091,7 @@
         "tags": [
           "gesellschaft"
         ],
-        "exampleDe": "Er bezeugt, was er gesehen hat.",
+        "exampleDe": "Er bezeugt, was er gesehen hat → bezeugen.",
         "exampleAr": "يشهد بما…",
         "posInfo": "bezeugt, bezeugte, hat bezeugt"
       },
@@ -61117,7 +61117,7 @@
         "tags": [
           "gesellschaft"
         ],
-        "exampleDe": "Die Gewerkschaft fordert mehr Personal.",
+        "exampleDe": "Die Gewerkschaft fordert mehr Personal → fordern.",
         "exampleAr": "تطالب ال…",
         "posInfo": "fordet, fordete, hat gefordet"
       },
@@ -61130,7 +61130,7 @@
         "tags": [
           "gesellschaft"
         ],
-        "exampleDe": "Der Staat unterstützt Familien mit wenig Geld.",
+        "exampleDe": "Der Staat unterstützt Familien mit wenig Geld → unterstützen.",
         "exampleAr": "تدعم الد…",
         "posInfo": "stützt unter, stützte unter, hat unterstützt"
       },
@@ -61143,7 +61143,7 @@
         "tags": [
           "gesellschaft"
         ],
-        "exampleDe": "Niemand darf wegen seiner Herkunft benachteiligt werden.",
+        "exampleDe": "Niemand darf wegen seiner Herkunft benachteiligt werden → benachteiligen.",
         "exampleAr": "لا يجوز…",
         "posInfo": "benachteiligt, benachteiligte, hat benachteiligt"
       },
@@ -61795,7 +61795,7 @@
         "tags": [
           "umwelt"
         ],
-        "exampleDe": "Der Verkehr verursacht viel Lärm.",
+        "exampleDe": "Der Verkehr verursacht viel Lärm → verursachen.",
         "exampleAr": "تسبّب حر…",
         "posInfo": "verursacht, verursachte, hat verursacht"
       },
@@ -61821,7 +61821,7 @@
         "tags": [
           "umwelt"
         ],
-        "exampleDe": "Die neue Heizung spart viel Energie ein.",
+        "exampleDe": "Die neue Heizung spart viel Energie ein → einsparen.",
         "exampleAr": "التدفئة…",
         "posInfo": "spart ein, sparte ein, hat eingespart"
       },
@@ -61834,7 +61834,7 @@
         "tags": [
           "umwelt"
         ],
-        "exampleDe": "Wer Rad fährt, schont die Umwelt.",
+        "exampleDe": "Wer Rad fährt, schont die Umwelt → schonen.",
         "exampleAr": "من يركب…",
         "posInfo": "schont, schonte, hat geschont"
       },
@@ -61847,7 +61847,7 @@
         "tags": [
           "umwelt"
         ],
-        "exampleDe": "Alte Flaschen werden wiederverwertet.",
+        "exampleDe": "Alte Flaschen werden wiederverwertet → wiederverwerten.",
         "exampleAr": "تُعاد إع…",
         "posInfo": "verwertet wieder, verwertete wieder, hat wiederverwertt"
       },
@@ -61899,7 +61899,7 @@
         "tags": [
           "umwelt"
         ],
-        "exampleDe": "Die Wäsche trocknet draußen schnell.",
+        "exampleDe": "Die Wäsche trocknet draußen schnell → trocknen.",
         "exampleAr": "يجفّ الغ…",
         "posInfo": "trocknt, trocknte, hat getrocknt"
       },
@@ -61938,7 +61938,7 @@
         "tags": [
           "umwelt"
         ],
-        "exampleDe": "Der Klimawandel bedroht viele Inseln.",
+        "exampleDe": "Der Klimawandel bedroht viele Inseln → bedrohen.",
         "exampleAr": "يهدّد تغ…",
         "posInfo": "bedroht, bedrohte, hat bedroht"
       },
@@ -61964,7 +61964,7 @@
         "tags": [
           "umwelt"
         ],
-        "exampleDe": "Der Sturm zerstörte viele Häuser.",
+        "exampleDe": "Der Sturm zerstörte viele Häuser → zerstören.",
         "exampleAr": "دمّرت ال…",
         "posInfo": "zerstört, zerstörte, hat zerstört"
       },
@@ -61977,7 +61977,7 @@
         "tags": [
           "umwelt"
         ],
-        "exampleDe": "Viele steigen auf ein Elektroauto um.",
+        "exampleDe": "Viele steigen auf ein Elektroauto um → umsteigen auf.",
         "exampleAr": "ينتقل كث…",
         "posInfo": "steigt um, steigte um, ist umgesteigt"
       },
@@ -61990,7 +61990,7 @@
         "tags": [
           "umwelt"
         ],
-        "exampleDe": "Bäume gleichen einen Teil der Emissionen aus.",
+        "exampleDe": "Bäume gleichen einen Teil der Emissionen aus → ausgleichen.",
         "exampleAr": "توازن ال…",
         "posInfo": "gleicht aus, gleichte aus, hat ausgegleicht"
       },
@@ -62895,7 +62895,7 @@
         "tags": [
           "gesundheit"
         ],
-        "exampleDe": "Der Arzt impft das Kind gegen Masern.",
+        "exampleDe": "Der Arzt impft das Kind gegen Masern → impfen.",
         "exampleAr": "يلقّح ال…",
         "posInfo": "impft, impfte, hat geimpft"
       },
@@ -62921,7 +62921,7 @@
         "tags": [
           "gesundheit"
         ],
-        "exampleDe": "Die Pflegekraft verabreicht das Medikament um acht Uhr.",
+        "exampleDe": "Die Pflegekraft verabreicht das Medikament um acht Uhr → verabreichen.",
         "exampleAr": "تعطي الم…",
         "posInfo": "verabreicht, verabreichte, hat verabreicht"
       },
@@ -62934,7 +62934,7 @@
         "tags": [
           "gesundheit"
         ],
-        "exampleDe": "Nehmen Sie die Tablette nach dem Essen ein.",
+        "exampleDe": "Nehmen Sie die Tablette nach dem Essen ein → einnehmen.",
         "exampleAr": "تناول ال…",
         "posInfo": "nehmt ein, nehmte ein, hat eingenehmt"
       },
@@ -62947,7 +62947,7 @@
         "tags": [
           "gesundheit"
         ],
-        "exampleDe": "Der Arzt setzt das Mittel langsam ab.",
+        "exampleDe": "Der Arzt setzt das Mittel langsam ab → absetzen.",
         "exampleAr": "يوقف الط…",
         "posInfo": "setzt ab, setzte ab, hat abgesetzt"
       },
@@ -62986,7 +62986,7 @@
         "tags": [
           "gesundheit"
         ],
-        "exampleDe": "Der Arzt stellt eine Entzündung fest.",
+        "exampleDe": "Der Arzt stellt eine Entzündung fest → feststellen.",
         "exampleAr": "يلاحظ ال…",
         "posInfo": "feststellt, feststellte, hat gefeststellt"
       },
@@ -62999,7 +62999,7 @@
         "tags": [
           "gesundheit"
         ],
-        "exampleDe": "Sie tastet den Bauch vorsichtig ab.",
+        "exampleDe": "Sie tastet den Bauch vorsichtig ab → abtasten.",
         "exampleAr": "تجسّ الب…",
         "posInfo": "tastet ab, tastete ab, hat abgetastt"
       },
@@ -63012,7 +63012,7 @@
         "tags": [
           "gesundheit"
         ],
-        "exampleDe": "Der Arzt hört die Lunge mit dem Stethoskop ab.",
+        "exampleDe": "Der Arzt hört die Lunge mit dem Stethoskop ab → abhören.",
         "exampleAr": "يُصغي ال…",
         "posInfo": "hört ab, hörte ab, hat abgehört"
       },
@@ -63025,7 +63025,7 @@
         "tags": [
           "gesundheit"
         ],
-        "exampleDe": "Er verbindet die Wunde neu.",
+        "exampleDe": "Er verbindet die Wunde neu → verbinden.",
         "exampleAr": "يضمّد ال…",
         "posInfo": "verbindet, verbindete, hat verbindt"
       },
@@ -63038,7 +63038,7 @@
         "tags": [
           "gesundheit"
         ],
-        "exampleDe": "Die Instrumente werden sterilisiert.",
+        "exampleDe": "Die Instrumente werden sterilisiert → sterilisieren.",
         "exampleAr": "تُعقّم ا…",
         "posInfo": "sterilisiert, sterilisierte, hat gesterilisiert"
       },
@@ -63051,7 +63051,7 @@
         "tags": [
           "gesundheit"
         ],
-        "exampleDe": "Der Zahn wird örtlich betäubt.",
+        "exampleDe": "Der Zahn wird örtlich betäubt → betäuben.",
         "exampleAr": "يُخدّر ا…",
         "posInfo": "betäubt, betäubte, hat betäubt"
       },
@@ -63064,7 +63064,7 @@
         "tags": [
           "gesundheit"
         ],
-        "exampleDe": "Die Wunde muss genäht werden.",
+        "exampleDe": "Die Wunde muss genäht werden → nähen.",
         "exampleAr": "يجب خياط…",
         "posInfo": "näht, nähte, hat genäht"
       },
@@ -63077,7 +63077,7 @@
         "tags": [
           "gesundheit"
         ],
-        "exampleDe": "Der Schnitt verheilt ohne Probleme.",
+        "exampleDe": "Der Schnitt verheilt ohne Probleme → verheilen.",
         "exampleAr": "يلتئم ال…",
         "posInfo": "verheilt, verheilte, hat verheilt"
       },
@@ -63090,7 +63090,7 @@
         "tags": [
           "gesundheit"
         ],
-        "exampleDe": "Die Wunde heilt langsam, aber gut.",
+        "exampleDe": "Die Wunde heilt langsam, aber gut → heilen.",
         "exampleAr": "يلتئم ال…",
         "posInfo": "heilt, heilte, hat geheilt"
       },
@@ -63103,7 +63103,7 @@
         "tags": [
           "gesundheit"
         ],
-        "exampleDe": "Die Pflegekraft mobilisiert die Patientin am Bett.",
+        "exampleDe": "Die Pflegekraft mobilisiert die Patientin am Bett → mobilisieren.",
         "exampleAr": "تُنهض ال…",
         "posInfo": "mobilisiert, mobilisierte, hat gemobilisiert"
       },
@@ -63116,7 +63116,7 @@
         "tags": [
           "gesundheit"
         ],
-        "exampleDe": "Reichen Sie mir bitte das Glas an.",
+        "exampleDe": "Reichen Sie mir bitte das Glas an → anreichen.",
         "exampleAr": "ناولني ا…",
         "posInfo": "reicht an, reichte an, hat angereicht"
       },
@@ -63129,7 +63129,7 @@
         "tags": [
           "gesundheit"
         ],
-        "exampleDe": "Im Winter stecken sich viele an.",
+        "exampleDe": "Im Winter stecken sich viele an → sich anstecken.",
         "exampleAr": "في الشتا…",
         "posInfo": "steckt an, steckte an, hat angesteckt"
       },
@@ -63155,7 +63155,7 @@
         "tags": [
           "gesundheit"
         ],
-        "exampleDe": "Die Grippe breitet sich schnell aus.",
+        "exampleDe": "Die Grippe breitet sich schnell aus → sich ausbreiten.",
         "exampleAr": "تنتشر ال…",
         "posInfo": "breitet aus, breitete aus, hat ausgebreitt"
       },
@@ -63791,7 +63791,7 @@
         "tags": [
           "bildung"
         ],
-        "exampleDe": "Sie studiert Medizin in Heidelberg.",
+        "exampleDe": "Sie studiert Medizin in Heidelberg → studieren.",
         "exampleAr": "تدرس الط…",
         "posInfo": "studiert, studierte, hat gestudiert"
       },
@@ -63830,7 +63830,7 @@
         "tags": [
           "bildung"
         ],
-        "exampleDe": "Ich nehme an, dass der Kurs morgen beginnt.",
+        "exampleDe": "Ich nehme an, dass der Kurs morgen beginnt → annehmen.",
         "exampleAr": "أفترض أن…",
         "posInfo": "nehmt an, nehmte an, hat angenehmt"
       },
@@ -63882,7 +63882,7 @@
         "tags": [
           "bildung"
         ],
-        "exampleDe": "Sie gliedert ihren Text in drei Teile.",
+        "exampleDe": "Sie gliedert ihren Text in drei Teile → gliedern.",
         "exampleAr": "تقسّم نص…",
         "posInfo": "gliedet, gliedete, hat gegliedet"
       },
@@ -63908,7 +63908,7 @@
         "tags": [
           "bildung"
         ],
-        "exampleDe": "Er eignet sich die Sprache schnell an.",
+        "exampleDe": "Er eignet sich die Sprache schnell an → sich aneignen.",
         "exampleAr": "يكتسب ال…",
         "posInfo": "eignt an, eignte an, hat angeeignt"
       },
@@ -63921,7 +63921,7 @@
         "tags": [
           "bildung"
         ],
-        "exampleDe": "Der Kurs vertieft deine Kenntnisse.",
+        "exampleDe": "Der Kurs vertieft deine Kenntnisse → vertiefen.",
         "exampleAr": "تعمّق ال…",
         "posInfo": "vertieft, vertiefte, hat vertieft"
       },
@@ -63934,7 +63934,7 @@
         "tags": [
           "bildung"
         ],
-        "exampleDe": "Lesen erweitert den Wortschatz.",
+        "exampleDe": "Lesen erweitert den Wortschatz → erweitern.",
         "exampleAr": "القراءة…",
         "posInfo": "erweitet, erweitete, hat erweitern"
       },
@@ -64777,7 +64777,7 @@
         "tags": [
           "medien"
         ],
-        "exampleDe": "Der Sender strahlt den Film am Sonntag aus.",
+        "exampleDe": "Der Sender strahlt den Film am Sonntag aus → ausstrahlen.",
         "exampleAr": "تبثّ الق…",
         "posInfo": "strahlt aus, strahlte aus, hat ausgestrahlt"
       },
@@ -64790,7 +64790,7 @@
         "tags": [
           "medien"
         ],
-        "exampleDe": "Werbung beeinflusst unser Kaufverhalten.",
+        "exampleDe": "Werbung beeinflusst unser Kaufverhalten → beeinflussen.",
         "exampleAr": "تؤثّر ال…",
         "posInfo": "beeinflusst, beeinflusste, hat beeinflusst"
       },
@@ -64803,7 +64803,7 @@
         "tags": [
           "medien"
         ],
-        "exampleDe": "Die Bilder wurden manipuliert.",
+        "exampleDe": "Die Bilder wurden manipuliert → manipulieren.",
         "exampleAr": "تم التلا…",
         "posInfo": "manipuliert, manipulierte, hat gemanipuliert"
       },
@@ -64816,7 +64816,7 @@
         "tags": [
           "medien"
         ],
-        "exampleDe": "Klicken Sie den Link bitte nicht an.",
+        "exampleDe": "Klicken Sie den Link bitte nicht an → anklicken.",
         "exampleAr": "لا تنقر…",
         "posInfo": "klickt an, klickte an, hat angeklickt"
       },
@@ -64829,7 +64829,7 @@
         "tags": [
           "medien"
         ],
-        "exampleDe": "Sie registriert sich auf der Plattform.",
+        "exampleDe": "Sie registriert sich auf der Plattform → registrieren.",
         "exampleAr": "تسجّل في…",
         "posInfo": "registriert, registrierte, hat geregistriert"
       },
@@ -64842,7 +64842,7 @@
         "tags": [
           "medien"
         ],
-        "exampleDe": "Er abonniert den Kanal seit Jahren.",
+        "exampleDe": "Er abonniert den Kanal seit Jahren → abonnieren.",
         "exampleAr": "يشترك في…",
         "posInfo": "onniert ab, onnierte ab, hat abgeonniert"
       },
@@ -64868,7 +64868,7 @@
         "tags": [
           "medien"
         ],
-        "exampleDe": "Stelle den Ton bitte lauter ein.",
+        "exampleDe": "Stelle den Ton bitte lauter ein → einstellen.",
         "exampleAr": "ارفع الص…",
         "posInfo": "stellt ein, stellte ein, hat eingestellt"
       },
@@ -65616,7 +65616,7 @@
         "tags": [
           "geld"
         ],
-        "exampleDe": "Sie bezahlt den Kredit in fünf Jahren ab.",
+        "exampleDe": "Sie bezahlt den Kredit in fünf Jahren ab → abbezahlen.",
         "exampleAr": "تسدّد ال…",
         "posInfo": "bezahlt ab, bezahlte ab, hat abgebezahlt"
       },
@@ -65629,7 +65629,7 @@
         "tags": [
           "geld"
         ],
-        "exampleDe": "Er investiert in eine kleine Firma.",
+        "exampleDe": "Er investiert in eine kleine Firma → investieren.",
         "exampleAr": "يستثمر ف…",
         "posInfo": "investiert, investierte, hat geinvestiert"
       },
@@ -65655,7 +65655,7 @@
         "tags": [
           "geld"
         ],
-        "exampleDe": "Die Firma liefert innerhalb von drei Tagen.",
+        "exampleDe": "Die Firma liefert innerhalb von drei Tagen → liefern.",
         "exampleAr": "توصّل ال…",
         "posInfo": "liefet, liefete, hat geliefet"
       },
@@ -65668,7 +65668,7 @@
         "tags": [
           "geld"
         ],
-        "exampleDe": "Der weite Weg lohnt sich für den Preis.",
+        "exampleDe": "Der weite Weg lohnt sich für den Preis → sich lohnen.",
         "exampleAr": "يستحق ال…",
         "posInfo": "lohnt, lohnte, hat gelohnt"
       },
@@ -65694,7 +65694,7 @@
         "tags": [
           "geld"
         ],
-        "exampleDe": "Er feilscht um jeden Euro.",
+        "exampleDe": "Er feilscht um jeden Euro → feilschen.",
         "exampleAr": "يساوم عل…",
         "posInfo": "feilscht, feilschte, hat gefeilscht"
       },
@@ -66191,7 +66191,7 @@
         "tags": [
           "gefuehle"
         ],
-        "exampleDe": "Sie sehnt sich nach ihrer Heimat.",
+        "exampleDe": "Sie sehnt sich nach ihrer Heimat → sich sehnen.",
         "exampleAr": "تحنّ إلى…",
         "posInfo": "sehnt, sehnte, hat gesehnt"
       },
@@ -66204,7 +66204,7 @@
         "tags": [
           "gefuehle"
         ],
-        "exampleDe": "Er vermisst seine Familie sehr.",
+        "exampleDe": "Er vermisst seine Familie sehr → vermissen.",
         "exampleAr": "يفتقد عا…",
         "posInfo": "vermisst, vermisste, hat vermisst"
       },
@@ -66217,7 +66217,7 @@
         "tags": [
           "gefuehle"
         ],
-        "exampleDe": "Ich zweifle an seinem Plan.",
+        "exampleDe": "Ich zweifle an seinem Plan → zweifeln.",
         "exampleAr": "أشكّ في…",
         "posInfo": "zweifet, zweifete, hat gezweifet"
       },
@@ -66230,7 +66230,7 @@
         "tags": [
           "gefuehle"
         ],
-        "exampleDe": "Verzweifle nicht, es gibt eine Lösung.",
+        "exampleDe": "Verzweifle nicht, es gibt eine Lösung → verzweifeln.",
         "exampleAr": "لا تيأس،…",
         "posInfo": "verzweifet, verzweifete, hat verzweifeln"
       },
@@ -66243,7 +66243,7 @@
         "tags": [
           "gefuehle"
         ],
-        "exampleDe": "Nach dem Anruf erleichterte sie sich.",
+        "exampleDe": "Nach dem Anruf erleichterte sie sich → sich erleichtern.",
         "exampleAr": "بعد المك…",
         "posInfo": "erleichtet, erleichtete, hat erleichtern"
       },
@@ -66256,7 +66256,7 @@
         "tags": [
           "gefuehle"
         ],
-        "exampleDe": "Reg dich nicht so auf!",
+        "exampleDe": "Reg dich nicht so auf! → sich aufregen.",
         "exampleAr": "لا تنفعل…",
         "posInfo": "regt auf, regte auf, hat aufgeregt"
       },
