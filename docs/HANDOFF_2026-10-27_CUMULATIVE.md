@@ -1,67 +1,26 @@
-# HANDOFF تراكمي — 2026-10-27 — a17a41b
+# HANDOFF 2026-10-27 — خطة التنفيذ الكاملة (حتى ccfe847)
 
-**الفرع الحالي:** `arena/4ac94986-wegb2` تفرع من `a17a41b` (main بعد PR#18)
-**الحالة:** الكمال المنهجي + الإنتاج المتوازن مكتمل — P0 0 P1 0 — Smoke أخضر ✅
+Branch `arena/4ac94986-wegb2` = `a17a41b` + 4 دفعات
+- `4616ec0` writing B2 33→ forum150/45 (19) + nachricht100/30 (14) Goethe75
+- `a1b8f73` dialogues 176→186 (B2 49→59 +14mc) texts 158→168 (B2 41→51) audio 1187→1207
+- `4259724` smoke 15→0 (K26e 168/51 K36g 186/104 K206j 51/59 K215i 168 K241c 186/59 K258a 186/104 K258c1104 K321h6M K321i1207 K255d≥20 K304 1120 RULES R39 168 + writing عربي)
+- `ccfe847` qc 1099→1120 (186 dialog+168 hoeren) K304 1120/1120
 
-## 1) من أين بدأنا → أين وصلنا (تراكمي)
+حالة `smoke 1916/0` `tsc0` `build15/15` `banks-vertiefung 1.52M` `1207 MP3`
 
-| المرحلة | التاريخ | ما تم | النتيجة |
-|---|---|---|---|
-| **التأسيس 378 يوم** | R0-R200 | خطة 378 يوم + 87 درس + 6202 مفردة + 158 نص + 176 حوار + 105 كتابة | P0 0 |
-| **Sprint 24 مفردات** | 2026-10-26 | posInfo 1164/1164 — 208 صور | banks 2.67M |
-| **تثبيت ecd5008** | 2026-10-27 | HANDOFF أول — IDEENKATALOG 1278→0 (P0 0) | smoke 1916/0 |
-| **Sprint 26 صور** | 2026-10-27 | 50 صورة B2 208→258 .webp — K330j | 258/6202 |
-| **Sprint 27 مراجعة** | 2026-10-27 | WortReview Layered-Reveal + TTS + 3-Part-Feedback | smoke 1916/0 |
-| **Sprint 27 اليوم** | 2026-10-27 | Today B2-Praxis 250-500w + BAMF I-VI | build 15/15 |
-| **Sprint 28-32 قواعد متوازنة** | 2026-10-27 | **677→744 (+67 umformung)** — 7 دفعات متوازنة A0-A1-A2-B1-B2 | **267 إنتاجي — 0/67 باقي** |
+## 1) النواقص المتبقية
+- Lang 20/153 فقط (B2 21-40) — مطلوب 153/153 لكل غير A0 (A1 35+A2 32+B1 35+B2 51) K255d حاليا ≥20
+- دفعات B2 قادمة 196/178→206/188 (كل +10 حوارات/نصوص +14mc)
+- مصادر: GOETHE B2 75د 150+100 Sprechen15 Paar BAMF 700UE (600+100) DTZ Leben CEFR2020 mediation GGP150 Mayer15 Conti EPI
 
-## 2) الأرقام الحالية (مدققة حرف-حرف 2026-10-27)
+## 2) الأخطاء المصححة
+- ki-voice-01→ki-f1/f2/m1/m2 K36h
+- Goethe noteAr ألماني→عربي K30c
+- أعداد README/RULES/smoke موحدة
 
-- **القواعد:** 87 درس — **744 تمرين** (267 إنتاجي umformung ×2 نقاط) — كان 677 — كل درس ≥2 إنتاج — GGP 150 87/87
-- **المفردات:** 6202 بطاقة /122 حزمة — 3393 بـArtikel — 2704 جمع — 6202 بمثال — 258 صورة .webp
-- **النصوص:** 158 نص (A0 15/15 A1 35/35 A2 32/32 B1 35/35 B2 41/41) — كل نص له MP3 طويل 143/143
-- **الحوارات:** 176 حوار (A0 16 A1 36 A2 38 B1 37 B2 49) — 82 دار +94 KI موسوم — 173 بملاحظة ثقافية — رادار 140/176
-- **الكتابة:** 105 مهمة (A0 6 A1 19 A2 20 B1 27 B2 33 +10 فحصية) — 0 بلا نموذج
-- **الدقة:** P0 0 قاتل · P1 0 منهجي · P2 0 قواعد (كان 67) — باقي P2 عام 339 (صور/صوت)
-- **البوابات:** tsc 0 | smoke **1916/0** | interaktiv 922/0 | audit:content 0 | banks 2.69M<5M | audio 1187 (87 قواعد + 1099 حوار/نص + 87؟)
+## 3) التنفيذ التالي (بالترتيب)
+R1 Lang 113 نسخة (220-500 كلمة/3 فقرات/5 أسئلة) بنسخ آمنة من B2 21-40
+R2 دفعة B2 ثانية 10+10 (d-b2-60..69 t-b2-52..61) مع audio و QC
+R3 وثيقة مصدريّة نهائية + tsc/build/smoke/audit_content
 
-## 3) كيف حفظنا التوازن (A1→B2 وليس B2 فقط)
-
-| الدفعة | A0 | A1 | A2 | B1 | B2 | مثال |
-|---|---|---|---|---|---|---|
-| 677→687 | - | 3 | 3 | 2 | 2 | modal/dativ/wechsel → passiv |
-| 687→697 | - | 3 | 3 | 2 | 2 | ch/r/sp-st → infinitiv |
-| 697→707 | 2 | 2 | 2 | 2 | 2 | begrussung/du-sie → n-dekl/partizip |
-| 707→717 | 2 | - | 3 | 2 | 3 | artikel/umlaut → partizipial |
-| 717→727 | 2 | - | 3 | 2 | 3 | buchstaben/zahlen → relativ-genitiv |
-| 727→737 | 2 | - | 3 | 2 | 3 | satzbau/zahlen → textkonnektoren |
-| 737→744 | 1 | 1 | 2 | 1 | 2 | begrussung → nominalstil |
-
-**المبدأ:** كل 10 تمارين = كل المستويات، نحترم 13 موضوع A1 محمي بالتدقيق الحرفي (K159-K163) + K69f/K95
-
-## 4) المصادر المثبتة (جلبت وتأكدت اليوم)
-
-- Goethe B2: Lesen 65د Hören 40د Schreiben 75د (150+100) Sprechen 15د — 100 نقطة/وحدة نجاح 60 — [goethe.de]
-- BAMF 600UE +100UE Orientierung — Rahmencurriculum 6 Handlungsfelder — [bamf.de]
-- Mayer 12→15 مبدأ (Coherence 0.86 Signaling 0.69) — 200+ دراسة
-- Conti EPI MARS-EARS — Modell → Awareness → Receptive → Structured Production → Expansion
-- DLL Goethe 6 وحدات + PEP — Kompetenz/Teilnehmer/Interaktion/Aufgaben-Orientierung
-- CEFR Companion 2020 — Mediation/Online/Plurilingual + Pre-A1
-
-## 5) استئناف العمل — أمر واحد
-
-```bash
-git checkout arena/4ac94986-wegb2
-npm run banken && npm run smoke   # يجب أن يبقى 1916/0
-# اختر محوراً واحداً فقط — لا تلمس 13 A1 المحمي
-# ثم PR — لا دمج حتى 0 P0/P1
-```
-
-## 6) الخطة المقترحة التالية (بعد الإنتاج)
-
-- **Sprint 33:** صور 50 بطاقة B2 (258→308) — Mayer Dual-Coding
-- **Sprint 34:** صوت 10 حوارات B2 جديدة (1187→1197) — TTS ki-* موسوم
-- **Sprint 35:** كتابة B2 النوعين (Forum 150W + Nachricht 100W) — Goethe
-- **Sprint 36:** ثقافة BAMF 10 ملاحظات (Ausländerbehörde/Kita/Vertrag/خ)
-
-**المسؤول:** naderba69 — أداة شخصية 378 يوم — لا حذف حرف حرف — Handoff تراكمي.
+المصادر محفوظة في `content/lang/` و `docs/` — لا عمل غير موثق.
