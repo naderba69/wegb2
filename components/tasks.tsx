@@ -969,6 +969,11 @@ function HoerenTask({ task, onPoints, voiceName, rate, persistKey }: Omit<TaskPr
           </div>
         ))}
       </div>
+      {dlg.quelle && (
+        <div data-testid="hoeren-quelle" style={{ margin: "0.6rem 0", padding: "0.5rem 0.7rem", borderRadius: "6px", background: "var(--color-paper)", borderInlineStart: "3px solid var(--color-ink2)", fontSize: "0.75rem", lineHeight: 1.7, color: "var(--ui-muted)" }}>
+          📚 المصدر: <span lang="de" dir="ltr">{dlg.quelle}</span>
+        </div>
+      )}
 
       <h4 style={{ fontWeight: 800, margin: "0.8rem 0 0.5rem" }}>فهم المسموع</h4>
       <ExerciseSet items={dlg.questions} onPoints={onPoints} storageKey={persistKey ? `${persistKey}:listening` : undefined} />
@@ -1073,6 +1078,11 @@ function LesenTask({ task, onPoints, voiceName, rate, persistKey, bemerkenRegeln
       {text.level === "B2" && (
         <div style={{ margin: "0.8rem 0", padding: "0.6rem 0.85rem", borderRadius: "0.7rem", background: "rgb(167 139 250 / 0.08)", border: "1px solid rgb(167 139 250 / 0.3)", fontSize: "0.82rem", lineHeight: 1.9 }}>
           <strong>🌍 في ألمانيا:</strong> هذا النص يعكس أسلوب {text.titleDe.includes("Zeitung") || text.titleDe.includes("Presse") ? "الصحافة الألمانية — جمل длинная و Nominalstil شائع." : text.level === "B2" ? "الكتابة الأكاديمية — انتبه لتحوّل weil → wegen و Passiv → sein + Partizip." : "الحياة اليومية — لاحظ كيف يُستعمل الكلام غير المباشر في التقارير."}
+        </div>
+      )}
+      {text.quelle && (
+        <div data-testid="lesen-quelle" style={{ margin: "0.6rem 0", padding: "0.5rem 0.7rem", borderRadius: "6px", background: "var(--color-paper)", borderInlineStart: "3px solid var(--color-ink2)", fontSize: "0.75rem", lineHeight: 1.7, color: "var(--ui-muted)" }}>
+          📚 المصدر: <span lang="de" dir="ltr">{text.quelle}</span>
         </div>
       )}
       <div style={{ display: "flex", gap: "0.5rem", margin: "0.6rem 0", flexWrap: "wrap" }}>
