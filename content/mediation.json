@@ -1,0 +1,162 @@
+[
+  {
+    "id": "m-01",
+    "level": "B2",
+    "titleDe": "Zusammenfassung für Kollegin",
+    "titleAr": "تلخيص لزميلة",
+    "taskDe": "Du hast einen Artikel über Homeoffice gelesen. Kollegin Aisha hat keine Zeit. Fasse die Vor- und Nachteile in fünf Sätzen auf Deutsch zusammen. Nutze Alltagssprache. Nenne Quelle kurz.",
+    "taskAr": "لخص مقالة عن العمل المنزلي لزميلة لا وقت لها.",
+    "quelle": "CEFR Companion 2020 Mediation — Zusammenfassen",
+    "criteria": [
+      "Aufgabenerfüllung",
+      "Kommunikationsstrategie",
+      "Sprachmittel",
+      "Kohärenz"
+    ],
+    "sample": "Beispiel: Liebe Aisha, im Artikel steht... Viele Grüße"
+  },
+  {
+    "id": "m-02",
+    "level": "B2",
+    "titleDe": "Ankündigung erklären",
+    "titleAr": "شرح إعلان",
+    "taskDe": "An der Haustür hängt eine Ankündigung: Morgen kein Wasser wegen Reparatur. Erkläre Nachbar Herrn Lehmann auf Deutsch, was passiert und was er tun soll.",
+    "taskAr": "اشرح إعلان انقطاع الماء لجار.",
+    "quelle": "CEFR Mediation — Informationen weitergeben",
+    "criteria": [
+      "Aufgabenerfüllung",
+      "Kommunikationsstrategie",
+      "Sprachmittel",
+      "Kohärenz"
+    ],
+    "sample": "Beispiel: Liebe Aisha, im Artikel steht... Viele Grüße"
+  },
+  {
+    "id": "m-03",
+    "level": "B2",
+    "titleDe": "Grafik erklären",
+    "titleAr": "شرح رسم بياني",
+    "taskDe": "Eine Grafik zeigt: 70 von 100 Jugendlichen nutzen täglich Soziale Medien, 30 lesen täglich Bücher. Erkläre die Grafik in einfachen Worten für Großmutter.",
+    "taskAr": "اشرح رسمًا بيانيًا لجدّة.",
+    "quelle": "CEFR Mediation — Grafik vermitteln",
+    "criteria": [
+      "Aufgabenerfüllung",
+      "Kommunikationsstrategie",
+      "Sprachmittel",
+      "Kohärenz"
+    ],
+    "sample": "Beispiel: Liebe Aisha, im Artikel steht... Viele Grüße"
+  },
+  {
+    "id": "m-04",
+    "level": "B2",
+    "titleDe": "Nachricht vereinfachen",
+    "titleAr": "تبسيط رسالة",
+    "taskDe": "Behörde schreibt: Ihr Antrag ist unvollständig, reichen Sie Einkommensnachweis nach. Formuliere die Nachricht einfacher für Freund Yusuf.",
+    "taskAr": "بسّط رسالة رسمية لصديق.",
+    "quelle": "CEFR Mediation — Vereinfachen",
+    "criteria": [
+      "Aufgabenerfüllung",
+      "Kommunikationsstrategie",
+      "Sprachmittel",
+      "Kohärenz"
+    ],
+    "sample": "Beispiel: Liebe Aisha, im Artikel steht... Viele Grüße"
+  },
+  {
+    "id": "m-05",
+    "level": "B2",
+    "titleDe": "Streit schlichten",
+    "titleAr": "تهدئة خلاف",
+    "taskDe": "Zwei Kursteilnehmende streiten über Pünktlichkeit. Höre beiden zu und formuliere einen Vorschlag, der beide respektiert.",
+    "taskAr": "اقترح حلاً يحترم الطرفين.",
+    "quelle": "CEFR Mediation — Konflikte",
+    "criteria": [
+      "Aufgabenerfüllung",
+      "Kommunikationsstrategie",
+      "Sprachmittel",
+      "Kohärenz"
+    ],
+    "sample": "Beispiel: Liebe Aisha, im Artikel steht... Viele Grüße"
+  },
+  {
+    "id": "m-06",
+    "level": "B2",
+    "titleDe": "Einladung weiterleiten",
+    "titleAr": "تمرير دعوة",
+    "taskDe": "Du erhältst Einladung zu Fest im Hof. Leite sie an Nachbarin weiter und füge hinzu, was mitzubringen ist.",
+    "taskAr": "مرّر دعوة مع إضافة.",
+    "quelle": "CEFR Mediation — Weiterleiten",
+    "criteria": [
+      "Aufgabenerfüllung",
+      "Kommunikationsstrategie",
+      "Sprachmittel",
+      "Kohärenz"
+    ],
+    "sample": "Beispiel: Liebe Aisha, im Artikel steht... Viele Grüße"
+  },
+  {
+    "id": "m-07",
+    "level": "B2",
+    "titleDe": "Kleingedrucktes erklären",
+    "titleAr": "شرح البنود الصغيرة",
+    "taskDe": "Mietvertrag sagt: Kaution drei Monatskaltmieten, Rückzahlung nach Auszug. Erkläre das für Freundin ohne Juradeutsch.",
+    "taskAr": "اشرح بند الكفالة بلغة يومية.",
+    "quelle": "CEFR Mediation — Fachsprache",
+    "criteria": [
+      "Aufgabenerfüllung",
+      "Kommunikationsstrategie",
+      "Sprachmittel",
+      "Kohärenz"
+    ],
+    "sample": "Beispiel: Liebe Aisha, im Artikel steht... Viele Grüße"
+  },
+  {
+    "id": "m-08",
+    "level": "B2",
+    "titleDe": "Meinung zusammenführen",
+    "titleAr": "جمع الآراء",
+    "taskDe": "Drei Personen diskutieren Vier-Tage-Woche. Fasse ihre Argumente neutral zusammen und schlage Kompromiss vor.",
+    "taskAr": "لخص ثلاث وجهات نظر واقترح حلاً وسطًا.",
+    "quelle": "CEFR Mediation — Zusammenführen",
+    "criteria": [
+      "Aufgabenerfüllung",
+      "Kommunikationsstrategie",
+      "Sprachmittel",
+      "Kohärenz"
+    ],
+    "sample": "Beispiel: Liebe Aisha, im Artikel steht... Viele Grüße"
+  },
+  {
+    "id": "m-09",
+    "level": "B2",
+    "titleDe": "Online-Chat moderieren",
+    "titleAr": "إدارة دردشة",
+    "taskDe": "In Gruppenchat schreiben Teilnehmende gleichzeitig. Fasse bisherigen Stand zusammen und stelle nächste Frage klar.",
+    "taskAr": "لخص الدردشة واطرح السؤال التالي.",
+    "quelle": "CEFR Online Interaction",
+    "criteria": [
+      "Aufgabenerfüllung",
+      "Kommunikationsstrategie",
+      "Sprachmittel",
+      "Kohärenz"
+    ],
+    "sample": "Beispiel: Liebe Aisha, im Artikel steht... Viele Grüße"
+  },
+  {
+    "id": "m-10",
+    "level": "B2",
+    "titleDe": "Plurilinguale Brücke",
+    "titleAr": "جسر لغوي",
+    "taskDe": "Mutter versteht nur Arabisch, Kind nur Deutsch. Vermittle zwischen beiden bei Anmeldung im Sportverein.",
+    "taskAr": "كُن وسيطًا بين أم وطفل بلغتين.",
+    "quelle": "CEFR Plurilingual",
+    "criteria": [
+      "Aufgabenerfüllung",
+      "Kommunikationsstrategie",
+      "Sprachmittel",
+      "Kohärenz"
+    ],
+    "sample": "Beispiel: Liebe Aisha, im Artikel steht... Viele Grüße"
+  }
+]

@@ -1,0 +1,1242 @@
+[
+  {
+    "id": "o-01",
+    "level": "B1",
+    "titleDe": "Grundgesetz Artikel eins bis fünf",
+    "titleAr": "حول Menschenwürde und Grundrechte",
+    "de": "Artikel eins schützt die Würde des Menschen. Niemand darf einen anderen demütigen. Artikel zwei betont freie Entfaltung und Leben. Artikel drei fordert Gleichheit vor dem Gesetz. Artikel vier schützt Glauben und Gewissen. Artikel fünf sichert freie Meinung und Presse. Diese Rechte gelten für alle in Deutschland. Der Staat muss sie achten und schützen. Teilnehmende lernen, wie diese Artikel im Alltag wirken, etwa bei Diskriminierung am Arbeitsplatz oder bei Demonstrationen.",
+    "ar": "نص توجيهي BAMF — حول Menschenwürde und Grundrechte",
+    "questions": [
+      {
+        "id": "o-01-q1",
+        "type": "mc",
+        "promptDe": "Worüber informiert der Text hauptsächlich?",
+        "promptAr": "عن ماذا يُخبر النص؟",
+        "options": [
+          "Grundgesetz Artikel eins bis fünf",
+          "Urlaub am Meer",
+          "Kochen mit Freunden"
+        ],
+        "answer": "Grundgesetz Artikel eins bis fünf",
+        "explanationAr": "الدليل: «Artikel eins schützt die Würde des Mensc»"
+      },
+      {
+        "id": "o-01-q2",
+        "type": "mc",
+        "promptDe": "Welche Aussage stimmt laut Text?",
+        "promptAr": "أي عبارة صحيحة حسب النص؟",
+        "options": [
+          "Der Staat muss Grundrechte schützen.",
+          "Niemand hat Rechte.",
+          "Nur Behörden haben Rechte."
+        ],
+        "answer": "Der Staat muss Grundrechte schützen.",
+        "explanationAr": "النص يذكر حماية الدولة للحقوق."
+      },
+      {
+        "id": "o-01-q3",
+        "type": "truefalse",
+        "promptDe": "Der Text beschreibt Pflichten für den Alltag.",
+        "promptAr": "النص يصف واجبات الحياة اليومية.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "richtig",
+        "explanationAr": "النص يربط الحقوق بالحياة اليومية."
+      },
+      {
+        "id": "o-01-q4",
+        "type": "mc",
+        "promptDe": "Wozu dient das Thema im Integrationskurs?",
+        "promptAr": "ما فائدة الموضوع في دورة الاندماج؟",
+        "options": [
+          "Formulare verstehen und höflich nachfragen",
+          "Nur im Urlaub helfen",
+          "Keine Bedeutung"
+        ],
+        "answer": "Formulare verstehen und höflich nachfragen",
+        "explanationAr": "الخاتمة تذكر التدريب على النماذج والاستفسار."
+      }
+    ],
+    "quelle": "BAMF-Rahmencurriculum Orientierungskurs Modul I-III — Eigene Erstellung — kein BAMF-Originaltext — vgl. BAMF Konzept 700UE (600+100) und Leben in Deutschland"
+  },
+  {
+    "id": "o-02",
+    "level": "B1",
+    "titleDe": "Demokratie und Rechtsstaat",
+    "titleAr": "حول Wahlen und Gewaltenteilung",
+    "de": "In Deutschland entscheiden freie Wahlen über das Parlament. Bundestag und Bundesrat machen Gesetze. Gerichte prüfen, ob Gesetze zum Grundgesetz passen. Regierung und Parlament kontrollieren einander. Dieses Prinzip heißt Gewaltenteilung. Bürger können wählen und gewählt werden. Parteien tragen zur Meinungsbildung bei. Im Kurs wird geübt, Wahlbenachrichtigungen zu verstehen und Anträge zu lesen.",
+    "ar": "نص توجيهي BAMF — حول Wahlen und Gewaltenteilung",
+    "questions": [
+      {
+        "id": "o-02-q1",
+        "type": "mc",
+        "promptDe": "Worüber informiert der Text hauptsächlich?",
+        "promptAr": "عن ماذا يُخبر النص؟",
+        "options": [
+          "Demokratie und Rechtsstaat",
+          "Urlaub am Meer",
+          "Kochen mit Freunden"
+        ],
+        "answer": "Demokratie und Rechtsstaat",
+        "explanationAr": "الدليل: «In Deutschland entscheiden freie Wahlen »"
+      },
+      {
+        "id": "o-02-q2",
+        "type": "mc",
+        "promptDe": "Welche Aussage stimmt laut Text?",
+        "promptAr": "أي عبارة صحيحة حسب النص؟",
+        "options": [
+          "Der Staat muss Grundrechte schützen.",
+          "Niemand hat Rechte.",
+          "Nur Behörden haben Rechte."
+        ],
+        "answer": "Der Staat muss Grundrechte schützen.",
+        "explanationAr": "النص يذكر حماية الدولة للحقوق."
+      },
+      {
+        "id": "o-02-q3",
+        "type": "truefalse",
+        "promptDe": "Der Text beschreibt Pflichten für den Alltag.",
+        "promptAr": "النص يصف واجبات الحياة اليومية.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "richtig",
+        "explanationAr": "النص يربط الحقوق بالحياة اليومية."
+      },
+      {
+        "id": "o-02-q4",
+        "type": "mc",
+        "promptDe": "Wozu dient das Thema im Integrationskurs?",
+        "promptAr": "ما فائدة الموضوع في دورة الاندماج؟",
+        "options": [
+          "Formulare verstehen und höflich nachfragen",
+          "Nur im Urlaub helfen",
+          "Keine Bedeutung"
+        ],
+        "answer": "Formulare verstehen und höflich nachfragen",
+        "explanationAr": "الخاتمة تذكر التدريب على النماذج والاستفسار."
+      }
+    ],
+    "quelle": "BAMF-Rahmencurriculum Orientierungskurs Modul I-III — Eigene Erstellung — kein BAMF-Originaltext — vgl. BAMF Konzept 700UE (600+100) und Leben in Deutschland"
+  },
+  {
+    "id": "o-03",
+    "level": "B1",
+    "titleDe": "Bundesländer und Föderalismus",
+    "titleAr": "حول Bund Länder Gemeinden",
+    "de": "Deutschland besteht aus Bund und Ländern. Jedes Land hat eigenes Parlament und Regierung. Bildung und Polizei liegen oft bei den Ländern. Der Bund regelt Außenpolitik und Verteidigung. Gemeinden kümmern sich um Kitas und Straßen. Diese Aufteilung schützt vor zu viel Macht an einem Ort. Teilnehmende üben, Zuständigkeiten zu erkennen, etwa bei Anmeldung oder Schulwahl.",
+    "ar": "نص توجيهي BAMF — حول Bund Länder Gemeinden",
+    "questions": [
+      {
+        "id": "o-03-q1",
+        "type": "mc",
+        "promptDe": "Worüber informiert der Text hauptsächlich?",
+        "promptAr": "عن ماذا يُخبر النص؟",
+        "options": [
+          "Bundesländer und Föderalismus",
+          "Urlaub am Meer",
+          "Kochen mit Freunden"
+        ],
+        "answer": "Bundesländer und Föderalismus",
+        "explanationAr": "الدليل: «Deutschland besteht aus Bund und Ländern»"
+      },
+      {
+        "id": "o-03-q2",
+        "type": "mc",
+        "promptDe": "Welche Aussage stimmt laut Text?",
+        "promptAr": "أي عبارة صحيحة حسب النص؟",
+        "options": [
+          "Der Staat muss Grundrechte schützen.",
+          "Niemand hat Rechte.",
+          "Nur Behörden haben Rechte."
+        ],
+        "answer": "Der Staat muss Grundrechte schützen.",
+        "explanationAr": "النص يذكر حماية الدولة للحقوق."
+      },
+      {
+        "id": "o-03-q3",
+        "type": "truefalse",
+        "promptDe": "Der Text beschreibt Pflichten für den Alltag.",
+        "promptAr": "النص يصف واجبات الحياة اليومية.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "richtig",
+        "explanationAr": "النص يربط الحقوق بالحياة اليومية."
+      },
+      {
+        "id": "o-03-q4",
+        "type": "mc",
+        "promptDe": "Wozu dient das Thema im Integrationskurs?",
+        "promptAr": "ما فائدة الموضوع في دورة الاندماج؟",
+        "options": [
+          "Formulare verstehen und höflich nachfragen",
+          "Nur im Urlaub helfen",
+          "Keine Bedeutung"
+        ],
+        "answer": "Formulare verstehen und höflich nachfragen",
+        "explanationAr": "الخاتمة تذكر التدريب على النماذج والاستفسار."
+      }
+    ],
+    "quelle": "BAMF-Rahmencurriculum Orientierungskurs Modul I-III — Eigene Erstellung — kein BAMF-Originaltext — vgl. BAMF Konzept 700UE (600+100) und Leben in Deutschland"
+  },
+  {
+    "id": "o-04",
+    "level": "B1",
+    "titleDe": "Sozialstaat und Teilhabe",
+    "titleAr": "حول Versicherung und Solidarität",
+    "de": "Wer in Deutschland arbeitet, zahlt in Versicherungen ein. Krankenversicherung hilft bei Krankheit. Rentenversicherung sichert das Alter. Arbeitslosenversicherung unterstützt bei Jobsuche. Familien erhalten Kindergeld. Der Sozialstaat hilft auch in Notlagen. Im Kurs wird geübt, Formulare für Anträge zu verstehen und freundlich nachzufragen.",
+    "ar": "نص توجيهي BAMF — حول Versicherung und Solidarität",
+    "questions": [
+      {
+        "id": "o-04-q1",
+        "type": "mc",
+        "promptDe": "Worüber informiert der Text hauptsächlich?",
+        "promptAr": "عن ماذا يُخبر النص؟",
+        "options": [
+          "Sozialstaat und Teilhabe",
+          "Urlaub am Meer",
+          "Kochen mit Freunden"
+        ],
+        "answer": "Sozialstaat und Teilhabe",
+        "explanationAr": "الدليل: «Wer in Deutschland arbeitet, zahlt in Ve»"
+      },
+      {
+        "id": "o-04-q2",
+        "type": "mc",
+        "promptDe": "Welche Aussage stimmt laut Text?",
+        "promptAr": "أي عبارة صحيحة حسب النص؟",
+        "options": [
+          "Der Staat muss Grundrechte schützen.",
+          "Niemand hat Rechte.",
+          "Nur Behörden haben Rechte."
+        ],
+        "answer": "Der Staat muss Grundrechte schützen.",
+        "explanationAr": "النص يذكر حماية الدولة للحقوق."
+      },
+      {
+        "id": "o-04-q3",
+        "type": "truefalse",
+        "promptDe": "Der Text beschreibt Pflichten für den Alltag.",
+        "promptAr": "النص يصف واجبات الحياة اليومية.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "richtig",
+        "explanationAr": "النص يربط الحقوق بالحياة اليومية."
+      },
+      {
+        "id": "o-04-q4",
+        "type": "mc",
+        "promptDe": "Wozu dient das Thema im Integrationskurs?",
+        "promptAr": "ما فائدة الموضوع في دورة الاندماج؟",
+        "options": [
+          "Formulare verstehen und höflich nachfragen",
+          "Nur im Urlaub helfen",
+          "Keine Bedeutung"
+        ],
+        "answer": "Formulare verstehen und höflich nachfragen",
+        "explanationAr": "الخاتمة تذكر التدريب على النماذج والاستفسار."
+      }
+    ],
+    "quelle": "BAMF-Rahmencurriculum Orientierungskurs Modul I-III — Eigene Erstellung — kein BAMF-Originaltext — vgl. BAMF Konzept 700UE (600+100) und Leben in Deutschland"
+  },
+  {
+    "id": "o-05",
+    "level": "B1",
+    "titleDe": "Grundgesetz Artikel sechs bis zehn",
+    "titleAr": "حول Familie Kommunikation Wohnung",
+    "de": "Artikel sechs schützt Ehe und Familie. Eltern haben Rechte und Pflichten für ihre Kinder. Artikel sieben regelt Schule unter Aufsicht des Staates. Artikel acht erlaubt Versammlungen ohne Waffen. Artikel neun schützt Vereine und Gewerkschaften. Artikel zehn sichert Briefgeheimnis. Diese Artikel zeigen, wie Alltag und Grundrechte verbunden sind. Teilnehmende üben Gespräche mit Behörden.",
+    "ar": "نص توجيهي BAMF — حول Familie Kommunikation Wohnung",
+    "questions": [
+      {
+        "id": "o-05-q1",
+        "type": "mc",
+        "promptDe": "Worüber informiert der Text hauptsächlich?",
+        "promptAr": "عن ماذا يُخبر النص؟",
+        "options": [
+          "Grundgesetz Artikel sechs bis zehn",
+          "Urlaub am Meer",
+          "Kochen mit Freunden"
+        ],
+        "answer": "Grundgesetz Artikel sechs bis zehn",
+        "explanationAr": "الدليل: «Artikel sechs schützt Ehe und Familie. E»"
+      },
+      {
+        "id": "o-05-q2",
+        "type": "mc",
+        "promptDe": "Welche Aussage stimmt laut Text?",
+        "promptAr": "أي عبارة صحيحة حسب النص؟",
+        "options": [
+          "Der Staat muss Grundrechte schützen.",
+          "Niemand hat Rechte.",
+          "Nur Behörden haben Rechte."
+        ],
+        "answer": "Der Staat muss Grundrechte schützen.",
+        "explanationAr": "النص يذكر حماية الدولة للحقوق."
+      },
+      {
+        "id": "o-05-q3",
+        "type": "truefalse",
+        "promptDe": "Der Text beschreibt Pflichten für den Alltag.",
+        "promptAr": "النص يصف واجبات الحياة اليومية.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "richtig",
+        "explanationAr": "النص يربط الحقوق بالحياة اليومية."
+      },
+      {
+        "id": "o-05-q4",
+        "type": "mc",
+        "promptDe": "Wozu dient das Thema im Integrationskurs?",
+        "promptAr": "ما فائدة الموضوع في دورة الاندماج؟",
+        "options": [
+          "Formulare verstehen und höflich nachfragen",
+          "Nur im Urlaub helfen",
+          "Keine Bedeutung"
+        ],
+        "answer": "Formulare verstehen und höflich nachfragen",
+        "explanationAr": "الخاتمة تذكر التدريب على النماذج والاستفسار."
+      }
+    ],
+    "quelle": "BAMF-Rahmencurriculum Orientierungskurs Modul I-III — Eigene Erstellung — kein BAMF-Originaltext — vgl. BAMF Konzept 700UE (600+100) und Leben in Deutschland"
+  },
+  {
+    "id": "o-06",
+    "level": "B1",
+    "titleDe": "Europäische Union und Deutschland",
+    "titleAr": "حول Freizügigkeit und Zusammenarbeit",
+    "de": "Deutschland arbeitet eng mit der EU zusammen. EU-Bürger dürfen in Deutschland leben und arbeiten. Waren und Dienstleistungen bewegen sich frei. Das EU-Parlament wird direkt gewählt. Deutschland vertritt seine Interessen im EU-Rat. Im Kurs wird geübt, Rechte bei Umzug und Arbeit in der EU zu verstehen.",
+    "ar": "نص توجيهي BAMF — حول Freizügigkeit und Zusammenarbeit",
+    "questions": [
+      {
+        "id": "o-06-q1",
+        "type": "mc",
+        "promptDe": "Worüber informiert der Text hauptsächlich?",
+        "promptAr": "عن ماذا يُخبر النص؟",
+        "options": [
+          "Europäische Union und Deutschland",
+          "Urlaub am Meer",
+          "Kochen mit Freunden"
+        ],
+        "answer": "Europäische Union und Deutschland",
+        "explanationAr": "الدليل: «Deutschland arbeitet eng mit der EU zusa»"
+      },
+      {
+        "id": "o-06-q2",
+        "type": "mc",
+        "promptDe": "Welche Aussage stimmt laut Text?",
+        "promptAr": "أي عبارة صحيحة حسب النص؟",
+        "options": [
+          "Der Staat muss Grundrechte schützen.",
+          "Niemand hat Rechte.",
+          "Nur Behörden haben Rechte."
+        ],
+        "answer": "Der Staat muss Grundrechte schützen.",
+        "explanationAr": "النص يذكر حماية الدولة للحقوق."
+      },
+      {
+        "id": "o-06-q3",
+        "type": "truefalse",
+        "promptDe": "Der Text beschreibt Pflichten für den Alltag.",
+        "promptAr": "النص يصف واجبات الحياة اليومية.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "richtig",
+        "explanationAr": "النص يربط الحقوق بالحياة اليومية."
+      },
+      {
+        "id": "o-06-q4",
+        "type": "mc",
+        "promptDe": "Wozu dient das Thema im Integrationskurs?",
+        "promptAr": "ما فائدة الموضوع في دورة الاندماج؟",
+        "options": [
+          "Formulare verstehen und höflich nachfragen",
+          "Nur im Urlaub helfen",
+          "Keine Bedeutung"
+        ],
+        "answer": "Formulare verstehen und höflich nachfragen",
+        "explanationAr": "الخاتمة تذكر التدريب على النماذج والاستفسار."
+      }
+    ],
+    "quelle": "BAMF-Rahmencurriculum Orientierungskurs Modul I-III — Eigene Erstellung — kein BAMF-Originaltext — vgl. BAMF Konzept 700UE (600+100) und Leben in Deutschland"
+  },
+  {
+    "id": "o-07",
+    "level": "B1",
+    "titleDe": "Religion Weltanschauung Toleranz",
+    "titleAr": "حول Glaube und Zusammenleben",
+    "de": "In Deutschland sind Staat und Religion getrennt. Niemand muss seinen Glauben offenbaren. Kirchen und andere Gemeinschaften sind frei. Toleranz bedeutet, andere Lebensweisen zu achten. Schulen unterrichten Religion oder Ethik wahlweise. Im Kurs wird geübt, höflich über Feiertage und Bräuche zu sprechen.",
+    "ar": "نص توجيهي BAMF — حول Glaube und Zusammenleben",
+    "questions": [
+      {
+        "id": "o-07-q1",
+        "type": "mc",
+        "promptDe": "Worüber informiert der Text hauptsächlich?",
+        "promptAr": "عن ماذا يُخبر النص؟",
+        "options": [
+          "Religion Weltanschauung Toleranz",
+          "Urlaub am Meer",
+          "Kochen mit Freunden"
+        ],
+        "answer": "Religion Weltanschauung Toleranz",
+        "explanationAr": "الدليل: «In Deutschland sind Staat und Religion g»"
+      },
+      {
+        "id": "o-07-q2",
+        "type": "mc",
+        "promptDe": "Welche Aussage stimmt laut Text?",
+        "promptAr": "أي عبارة صحيحة حسب النص؟",
+        "options": [
+          "Der Staat muss Grundrechte schützen.",
+          "Niemand hat Rechte.",
+          "Nur Behörden haben Rechte."
+        ],
+        "answer": "Der Staat muss Grundrechte schützen.",
+        "explanationAr": "النص يذكر حماية الدولة للحقوق."
+      },
+      {
+        "id": "o-07-q3",
+        "type": "truefalse",
+        "promptDe": "Der Text beschreibt Pflichten für den Alltag.",
+        "promptAr": "النص يصف واجبات الحياة اليومية.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "richtig",
+        "explanationAr": "النص يربط الحقوق بالحياة اليومية."
+      },
+      {
+        "id": "o-07-q4",
+        "type": "mc",
+        "promptDe": "Wozu dient das Thema im Integrationskurs?",
+        "promptAr": "ما فائدة الموضوع في دورة الاندماج؟",
+        "options": [
+          "Formulare verstehen und höflich nachfragen",
+          "Nur im Urlaub helfen",
+          "Keine Bedeutung"
+        ],
+        "answer": "Formulare verstehen und höflich nachfragen",
+        "explanationAr": "الخاتمة تذكر التدريب على النماذج والاستفسار."
+      }
+    ],
+    "quelle": "BAMF-Rahmencurriculum Orientierungskurs Modul I-III — Eigene Erstellung — kein BAMF-Originaltext — vgl. BAMF Konzept 700UE (600+100) und Leben in Deutschland"
+  },
+  {
+    "id": "o-08",
+    "level": "B1",
+    "titleDe": "Nachkriegszeit und Teilung",
+    "titleAr": "حول Vier Zonen und Neubeginn",
+    "de": "Nach dem Krieg wurde Deutschland in vier Zonen geteilt. Im Westen entstand Demokratie mit Marktwirtschaft. Im Osten entstand ein sozialistischer Staat. Familien wurden durch Grenzen getrennt. Viele Menschen flohen nach Westen. Trotz Teilung hielten viele Kontakt. Teilnehmende üben, Zeitzeugenberichte zu verstehen.",
+    "ar": "نص توجيهي BAMF — حول Vier Zonen und Neubeginn",
+    "questions": [
+      {
+        "id": "o-08-q1",
+        "type": "mc",
+        "promptDe": "Worüber informiert der Text hauptsächlich?",
+        "promptAr": "عن ماذا يُخبر النص؟",
+        "options": [
+          "Nachkriegszeit und Teilung",
+          "Urlaub am Meer",
+          "Kochen mit Freunden"
+        ],
+        "answer": "Nachkriegszeit und Teilung",
+        "explanationAr": "الدليل: «Nach dem Krieg wurde Deutschland in vier»"
+      },
+      {
+        "id": "o-08-q2",
+        "type": "mc",
+        "promptDe": "Welche Aussage stimmt laut Text?",
+        "promptAr": "أي عبارة صحيحة حسب النص؟",
+        "options": [
+          "Der Staat muss Grundrechte schützen.",
+          "Niemand hat Rechte.",
+          "Nur Behörden haben Rechte."
+        ],
+        "answer": "Der Staat muss Grundrechte schützen.",
+        "explanationAr": "النص يذكر حماية الدولة للحقوق."
+      },
+      {
+        "id": "o-08-q3",
+        "type": "truefalse",
+        "promptDe": "Der Text beschreibt Pflichten für den Alltag.",
+        "promptAr": "النص يصف واجبات الحياة اليومية.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "richtig",
+        "explanationAr": "النص يربط الحقوق بالحياة اليومية."
+      },
+      {
+        "id": "o-08-q4",
+        "type": "mc",
+        "promptDe": "Wozu dient das Thema im Integrationskurs?",
+        "promptAr": "ما فائدة الموضوع في دورة الاندماج؟",
+        "options": [
+          "Formulare verstehen und höflich nachfragen",
+          "Nur im Urlaub helfen",
+          "Keine Bedeutung"
+        ],
+        "answer": "Formulare verstehen und höflich nachfragen",
+        "explanationAr": "الخاتمة تذكر التدريب على النماذج والاستفسار."
+      }
+    ],
+    "quelle": "BAMF-Rahmencurriculum Orientierungskurs Modul I-III — Eigene Erstellung — kein BAMF-Originaltext — vgl. BAMF Konzept 700UE (600+100) und Leben in Deutschland"
+  },
+  {
+    "id": "o-09",
+    "level": "B1",
+    "titleDe": "Wirtschaftswunder und Integration",
+    "titleAr": "حول Aufbau und Anwerbung",
+    "de": "In den fünfziger und sechziger Jahren wuchs die Wirtschaft schnell. Viele Menschen fanden Arbeit. Firmen suchten Arbeitskräfte aus anderen Ländern. Anwerbeabkommen brachten viele nach Deutschland. Sie halfen beim Aufbau und blieben. Ihre Kinder wuchsen hier auf. Im Kurs wird geübt, Biografien und Anträge auf Anerkennung zu lesen.",
+    "ar": "نص توجيهي BAMF — حول Aufbau und Anwerbung",
+    "questions": [
+      {
+        "id": "o-09-q1",
+        "type": "mc",
+        "promptDe": "Worüber informiert der Text hauptsächlich?",
+        "promptAr": "عن ماذا يُخبر النص؟",
+        "options": [
+          "Wirtschaftswunder und Integration",
+          "Urlaub am Meer",
+          "Kochen mit Freunden"
+        ],
+        "answer": "Wirtschaftswunder und Integration",
+        "explanationAr": "الدليل: «In den fünfziger und sechziger Jahren wu»"
+      },
+      {
+        "id": "o-09-q2",
+        "type": "mc",
+        "promptDe": "Welche Aussage stimmt laut Text?",
+        "promptAr": "أي عبارة صحيحة حسب النص؟",
+        "options": [
+          "Der Staat muss Grundrechte schützen.",
+          "Niemand hat Rechte.",
+          "Nur Behörden haben Rechte."
+        ],
+        "answer": "Der Staat muss Grundrechte schützen.",
+        "explanationAr": "النص يذكر حماية الدولة للحقوق."
+      },
+      {
+        "id": "o-09-q3",
+        "type": "truefalse",
+        "promptDe": "Der Text beschreibt Pflichten für den Alltag.",
+        "promptAr": "النص يصف واجبات الحياة اليومية.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "richtig",
+        "explanationAr": "النص يربط الحقوق بالحياة اليومية."
+      },
+      {
+        "id": "o-09-q4",
+        "type": "mc",
+        "promptDe": "Wozu dient das Thema im Integrationskurs?",
+        "promptAr": "ما فائدة الموضوع في دورة الاندماج؟",
+        "options": [
+          "Formulare verstehen und höflich nachfragen",
+          "Nur im Urlaub helfen",
+          "Keine Bedeutung"
+        ],
+        "answer": "Formulare verstehen und höflich nachfragen",
+        "explanationAr": "الخاتمة تذكر التدريب على النماذج والاستفسار."
+      }
+    ],
+    "quelle": "BAMF-Rahmencurriculum Orientierungskurs Modul I-III — Eigene Erstellung — kein BAMF-Originaltext — vgl. BAMF Konzept 700UE (600+100) und Leben in Deutschland"
+  },
+  {
+    "id": "o-10",
+    "level": "B1",
+    "titleDe": "Mauerbau und Teilung Berlins",
+    "titleAr": "حول Stadt geteilt",
+    "de": "Eine Mauer teilte Berlin in Ost und West. Familien konnten sich lange nicht sehen. Briefe und Pakete waren oft der einzige Kontakt. Viele versuchten, die Mauer zu überwinden. Die Stadt lebte mit Stacheldraht und Wachen. Erst viel später fiel die Mauer. Teilnehmende üben, Schilder und Gedenktexte zu verstehen.",
+    "ar": "نص توجيهي BAMF — حول Stadt geteilt",
+    "questions": [
+      {
+        "id": "o-10-q1",
+        "type": "mc",
+        "promptDe": "Worüber informiert der Text hauptsächlich?",
+        "promptAr": "عن ماذا يُخبر النص؟",
+        "options": [
+          "Mauerbau und Teilung Berlins",
+          "Urlaub am Meer",
+          "Kochen mit Freunden"
+        ],
+        "answer": "Mauerbau und Teilung Berlins",
+        "explanationAr": "الدليل: «Eine Mauer teilte Berlin in Ost und West»"
+      },
+      {
+        "id": "o-10-q2",
+        "type": "mc",
+        "promptDe": "Welche Aussage stimmt laut Text?",
+        "promptAr": "أي عبارة صحيحة حسب النص؟",
+        "options": [
+          "Der Staat muss Grundrechte schützen.",
+          "Niemand hat Rechte.",
+          "Nur Behörden haben Rechte."
+        ],
+        "answer": "Der Staat muss Grundrechte schützen.",
+        "explanationAr": "النص يذكر حماية الدولة للحقوق."
+      },
+      {
+        "id": "o-10-q3",
+        "type": "truefalse",
+        "promptDe": "Der Text beschreibt Pflichten für den Alltag.",
+        "promptAr": "النص يصف واجبات الحياة اليومية.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "richtig",
+        "explanationAr": "النص يربط الحقوق بالحياة اليومية."
+      },
+      {
+        "id": "o-10-q4",
+        "type": "mc",
+        "promptDe": "Wozu dient das Thema im Integrationskurs?",
+        "promptAr": "ما فائدة الموضوع في دورة الاندماج؟",
+        "options": [
+          "Formulare verstehen und höflich nachfragen",
+          "Nur im Urlaub helfen",
+          "Keine Bedeutung"
+        ],
+        "answer": "Formulare verstehen und höflich nachfragen",
+        "explanationAr": "الخاتمة تذكر التدريب على النماذج والاستفسار."
+      }
+    ],
+    "quelle": "BAMF-Rahmencurriculum Orientierungskurs Modul I-III — Eigene Erstellung — kein BAMF-Originaltext — vgl. BAMF Konzept 700UE (600+100) und Leben in Deutschland"
+  },
+  {
+    "id": "o-11",
+    "level": "B1",
+    "titleDe": "Friedliche Revolution und Einheit",
+    "titleAr": "حول Demonstrationen und Öffnung",
+    "de": "In vielen Städten gingen Menschen auf die Straße. Sie forderten Reisefreiheit und freie Wahlen. Die Regierung öffnete schließlich die Grenzen. Menschen feierten auf der Mauer. Danach begannen Verhandlungen über Einheit. Beide Staaten wurden eins. Im Kurs wird geübt, Nachrichten und Interviews zu lesen.",
+    "ar": "نص توجيهي BAMF — حول Demonstrationen und Öffnung",
+    "questions": [
+      {
+        "id": "o-11-q1",
+        "type": "mc",
+        "promptDe": "Worüber informiert der Text hauptsächlich?",
+        "promptAr": "عن ماذا يُخبر النص؟",
+        "options": [
+          "Friedliche Revolution und Einheit",
+          "Urlaub am Meer",
+          "Kochen mit Freunden"
+        ],
+        "answer": "Friedliche Revolution und Einheit",
+        "explanationAr": "الدليل: «In vielen Städten gingen Menschen auf di»"
+      },
+      {
+        "id": "o-11-q2",
+        "type": "mc",
+        "promptDe": "Welche Aussage stimmt laut Text?",
+        "promptAr": "أي عبارة صحيحة حسب النص؟",
+        "options": [
+          "Der Staat muss Grundrechte schützen.",
+          "Niemand hat Rechte.",
+          "Nur Behörden haben Rechte."
+        ],
+        "answer": "Der Staat muss Grundrechte schützen.",
+        "explanationAr": "النص يذكر حماية الدولة للحقوق."
+      },
+      {
+        "id": "o-11-q3",
+        "type": "truefalse",
+        "promptDe": "Der Text beschreibt Pflichten für den Alltag.",
+        "promptAr": "النص يصف واجبات الحياة اليومية.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "richtig",
+        "explanationAr": "النص يربط الحقوق بالحياة اليومية."
+      },
+      {
+        "id": "o-11-q4",
+        "type": "mc",
+        "promptDe": "Wozu dient das Thema im Integrationskurs?",
+        "promptAr": "ما فائدة الموضوع في دورة الاندماج؟",
+        "options": [
+          "Formulare verstehen und höflich nachfragen",
+          "Nur im Urlaub helfen",
+          "Keine Bedeutung"
+        ],
+        "answer": "Formulare verstehen und höflich nachfragen",
+        "explanationAr": "الخاتمة تذكر التدريب على النماذج والاستفسار."
+      }
+    ],
+    "quelle": "BAMF-Rahmencurriculum Orientierungskurs Modul I-III — Eigene Erstellung — kein BAMF-Originaltext — vgl. BAMF Konzept 700UE (600+100) und Leben in Deutschland"
+  },
+  {
+    "id": "o-12",
+    "level": "B1",
+    "titleDe": "Deutschland nach der Einheit",
+    "titleAr": "حول Aufbau Ost und Alltag",
+    "de": "Nach der Einheit mussten viele Betriebe neu starten. Schulen und Behörden wurden umgebaut. Viele Menschen lernten Berufe neu. Es gab Hoffnung und auch Enttäuschung. Begegnungen zwischen Ost und West prägten den Alltag. Solidarität half beim Neuanfang. Teilnehmende üben, Berichte über Wandel zu verstehen.",
+    "ar": "نص توجيهي BAMF — حول Aufbau Ost und Alltag",
+    "questions": [
+      {
+        "id": "o-12-q1",
+        "type": "mc",
+        "promptDe": "Worüber informiert der Text hauptsächlich?",
+        "promptAr": "عن ماذا يُخبر النص؟",
+        "options": [
+          "Deutschland nach der Einheit",
+          "Urlaub am Meer",
+          "Kochen mit Freunden"
+        ],
+        "answer": "Deutschland nach der Einheit",
+        "explanationAr": "الدليل: «Nach der Einheit mussten viele Betriebe »"
+      },
+      {
+        "id": "o-12-q2",
+        "type": "mc",
+        "promptDe": "Welche Aussage stimmt laut Text?",
+        "promptAr": "أي عبارة صحيحة حسب النص؟",
+        "options": [
+          "Der Staat muss Grundrechte schützen.",
+          "Niemand hat Rechte.",
+          "Nur Behörden haben Rechte."
+        ],
+        "answer": "Der Staat muss Grundrechte schützen.",
+        "explanationAr": "النص يذكر حماية الدولة للحقوق."
+      },
+      {
+        "id": "o-12-q3",
+        "type": "truefalse",
+        "promptDe": "Der Text beschreibt Pflichten für den Alltag.",
+        "promptAr": "النص يصف واجبات الحياة اليومية.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "richtig",
+        "explanationAr": "النص يربط الحقوق بالحياة اليومية."
+      },
+      {
+        "id": "o-12-q4",
+        "type": "mc",
+        "promptDe": "Wozu dient das Thema im Integrationskurs?",
+        "promptAr": "ما فائدة الموضوع في دورة الاندماج؟",
+        "options": [
+          "Formulare verstehen und höflich nachfragen",
+          "Nur im Urlaub helfen",
+          "Keine Bedeutung"
+        ],
+        "answer": "Formulare verstehen und höflich nachfragen",
+        "explanationAr": "الخاتمة تذكر التدريب على النماذج والاستفسار."
+      }
+    ],
+    "quelle": "BAMF-Rahmencurriculum Orientierungskurs Modul I-III — Eigene Erstellung — kein BAMF-Originaltext — vgl. BAMF Konzept 700UE (600+100) und Leben in Deutschland"
+  },
+  {
+    "id": "o-13",
+    "level": "B1",
+    "titleDe": "Einwanderung und Vielfalt heute",
+    "titleAr": "حول Gastarbeiterkinder und Einbürgerung",
+    "de": "Viele Menschen kamen aus verschiedenen Ländern nach Deutschland. Sie brachten Sprachen und Erfahrungen mit. Ihre Kinder besuchen heute Schulen hier. Manche lassen sich einbürgern und erhalten deutschen Pass. Integration bedeutet Teilhabe an Arbeit und Bildung. Vielfalt gehört zum Alltag. Im Kurs wird geübt, Einbürgerungsfragen zu verstehen.",
+    "ar": "نص توجيهي BAMF — حول Gastarbeiterkinder und Einbürgerung",
+    "questions": [
+      {
+        "id": "o-13-q1",
+        "type": "mc",
+        "promptDe": "Worüber informiert der Text hauptsächlich?",
+        "promptAr": "عن ماذا يُخبر النص؟",
+        "options": [
+          "Einwanderung und Vielfalt heute",
+          "Urlaub am Meer",
+          "Kochen mit Freunden"
+        ],
+        "answer": "Einwanderung und Vielfalt heute",
+        "explanationAr": "الدليل: «Viele Menschen kamen aus verschiedenen L»"
+      },
+      {
+        "id": "o-13-q2",
+        "type": "mc",
+        "promptDe": "Welche Aussage stimmt laut Text?",
+        "promptAr": "أي عبارة صحيحة حسب النص؟",
+        "options": [
+          "Der Staat muss Grundrechte schützen.",
+          "Niemand hat Rechte.",
+          "Nur Behörden haben Rechte."
+        ],
+        "answer": "Der Staat muss Grundrechte schützen.",
+        "explanationAr": "النص يذكر حماية الدولة للحقوق."
+      },
+      {
+        "id": "o-13-q3",
+        "type": "truefalse",
+        "promptDe": "Der Text beschreibt Pflichten für den Alltag.",
+        "promptAr": "النص يصف واجبات الحياة اليومية.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "richtig",
+        "explanationAr": "النص يربط الحقوق بالحياة اليومية."
+      },
+      {
+        "id": "o-13-q4",
+        "type": "mc",
+        "promptDe": "Wozu dient das Thema im Integrationskurs?",
+        "promptAr": "ما فائدة الموضوع في دورة الاندماج؟",
+        "options": [
+          "Formulare verstehen und höflich nachfragen",
+          "Nur im Urlaub helfen",
+          "Keine Bedeutung"
+        ],
+        "answer": "Formulare verstehen und höflich nachfragen",
+        "explanationAr": "الخاتمة تذكر التدريب على النماذج والاستفسار."
+      }
+    ],
+    "quelle": "BAMF-Rahmencurriculum Orientierungskurs Modul I-III — Eigene Erstellung — kein BAMF-Originaltext — vgl. BAMF Konzept 700UE (600+100) und Leben in Deutschland"
+  },
+  {
+    "id": "o-14",
+    "level": "B1",
+    "titleDe": "Erinnerungskultur und Verantwortung",
+    "titleAr": "حول Gedenken und Lernen",
+    "de": "Deutschland erinnert an Verfolgung und Krieg. Gedenkstätten laden zum Lernen ein. Schulen besuchen Orte der Erinnerung. Erinnerung schützt vor Wiederholung. Verantwortung zeigt sich im Respekt für alle Menschen. Im Kurs wird geübt, Einladungen zu Gedenkveranstaltungen zu lesen.",
+    "ar": "نص توجيهي BAMF — حول Gedenken und Lernen",
+    "questions": [
+      {
+        "id": "o-14-q1",
+        "type": "mc",
+        "promptDe": "Worüber informiert der Text hauptsächlich?",
+        "promptAr": "عن ماذا يُخبر النص؟",
+        "options": [
+          "Erinnerungskultur und Verantwortung",
+          "Urlaub am Meer",
+          "Kochen mit Freunden"
+        ],
+        "answer": "Erinnerungskultur und Verantwortung",
+        "explanationAr": "الدليل: «Deutschland erinnert an Verfolgung und K»"
+      },
+      {
+        "id": "o-14-q2",
+        "type": "mc",
+        "promptDe": "Welche Aussage stimmt laut Text?",
+        "promptAr": "أي عبارة صحيحة حسب النص؟",
+        "options": [
+          "Der Staat muss Grundrechte schützen.",
+          "Niemand hat Rechte.",
+          "Nur Behörden haben Rechte."
+        ],
+        "answer": "Der Staat muss Grundrechte schützen.",
+        "explanationAr": "النص يذكر حماية الدولة للحقوق."
+      },
+      {
+        "id": "o-14-q3",
+        "type": "truefalse",
+        "promptDe": "Der Text beschreibt Pflichten für den Alltag.",
+        "promptAr": "النص يصف واجبات الحياة اليومية.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "richtig",
+        "explanationAr": "النص يربط الحقوق بالحياة اليومية."
+      },
+      {
+        "id": "o-14-q4",
+        "type": "mc",
+        "promptDe": "Wozu dient das Thema im Integrationskurs?",
+        "promptAr": "ما فائدة الموضوع في دورة الاندماج؟",
+        "options": [
+          "Formulare verstehen und höflich nachfragen",
+          "Nur im Urlaub helfen",
+          "Keine Bedeutung"
+        ],
+        "answer": "Formulare verstehen und höflich nachfragen",
+        "explanationAr": "الخاتمة تذكر التدريب على النماذج والاستفسار."
+      }
+    ],
+    "quelle": "BAMF-Rahmencurriculum Orientierungskurs Modul I-III — Eigene Erstellung — kein BAMF-Originaltext — vgl. BAMF Konzept 700UE (600+100) und Leben in Deutschland"
+  },
+  {
+    "id": "o-15",
+    "level": "B1",
+    "titleDe": "Anmeldung und Wohnung",
+    "titleAr": "حول Behörde Formular Termin",
+    "de": "Wer nach Deutschland zieht, muss sich anmelden. Das Amt braucht Personalausweis und Mietvertrag. Ein Termin hilft, Wartezeit zu vermeiden. Formulare fragen nach Name, Adresse und Geburtstag. Wer etwas nicht versteht, fragt höflich nach. Eine Bestätigung kommt per Post. Teilnehmende üben, Anmeldeformulare auszufüllen.",
+    "ar": "نص توجيهي BAMF — حول Behörde Formular Termin",
+    "questions": [
+      {
+        "id": "o-15-q1",
+        "type": "mc",
+        "promptDe": "Worüber informiert der Text hauptsächlich?",
+        "promptAr": "عن ماذا يُخبر النص؟",
+        "options": [
+          "Anmeldung und Wohnung",
+          "Urlaub am Meer",
+          "Kochen mit Freunden"
+        ],
+        "answer": "Anmeldung und Wohnung",
+        "explanationAr": "الدليل: «Wer nach Deutschland zieht, muss sich an»"
+      },
+      {
+        "id": "o-15-q2",
+        "type": "mc",
+        "promptDe": "Welche Aussage stimmt laut Text?",
+        "promptAr": "أي عبارة صحيحة حسب النص؟",
+        "options": [
+          "Der Staat muss Grundrechte schützen.",
+          "Niemand hat Rechte.",
+          "Nur Behörden haben Rechte."
+        ],
+        "answer": "Der Staat muss Grundrechte schützen.",
+        "explanationAr": "النص يذكر حماية الدولة للحقوق."
+      },
+      {
+        "id": "o-15-q3",
+        "type": "truefalse",
+        "promptDe": "Der Text beschreibt Pflichten für den Alltag.",
+        "promptAr": "النص يصف واجبات الحياة اليومية.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "richtig",
+        "explanationAr": "النص يربط الحقوق بالحياة اليومية."
+      },
+      {
+        "id": "o-15-q4",
+        "type": "mc",
+        "promptDe": "Wozu dient das Thema im Integrationskurs?",
+        "promptAr": "ما فائدة الموضوع في دورة الاندماج؟",
+        "options": [
+          "Formulare verstehen und höflich nachfragen",
+          "Nur im Urlaub helfen",
+          "Keine Bedeutung"
+        ],
+        "answer": "Formulare verstehen und höflich nachfragen",
+        "explanationAr": "الخاتمة تذكر التدريب على النماذج والاستفسار."
+      }
+    ],
+    "quelle": "BAMF-Rahmencurriculum Orientierungskurs Modul I-III — Eigene Erstellung — kein BAMF-Originaltext — vgl. BAMF Konzept 700UE (600+100) und Leben in Deutschland"
+  },
+  {
+    "id": "o-16",
+    "level": "B1",
+    "titleDe": "Arbeit und Anerkennung",
+    "titleAr": "حول Bewerbung Abschluss Zeugnis",
+    "de": "Viele Berufe brauchen anerkannte Abschlüsse. Die Anerkennungsstelle prüft Zeugnisse. Manchmal ist ein Sprachkurs nötig. Bewerbungen enthalten Lebenslauf und Anschreiben. Arbeitgeber laden zu Gesprächen ein. Höfliche Rückfragen sind erwünscht. Im Kurs wird geübt, Bewerbungen zu schreiben.",
+    "ar": "نص توجيهي BAMF — حول Bewerbung Abschluss Zeugnis",
+    "questions": [
+      {
+        "id": "o-16-q1",
+        "type": "mc",
+        "promptDe": "Worüber informiert der Text hauptsächlich?",
+        "promptAr": "عن ماذا يُخبر النص؟",
+        "options": [
+          "Arbeit und Anerkennung",
+          "Urlaub am Meer",
+          "Kochen mit Freunden"
+        ],
+        "answer": "Arbeit und Anerkennung",
+        "explanationAr": "الدليل: «Viele Berufe brauchen anerkannte Abschlü»"
+      },
+      {
+        "id": "o-16-q2",
+        "type": "mc",
+        "promptDe": "Welche Aussage stimmt laut Text?",
+        "promptAr": "أي عبارة صحيحة حسب النص؟",
+        "options": [
+          "Der Staat muss Grundrechte schützen.",
+          "Niemand hat Rechte.",
+          "Nur Behörden haben Rechte."
+        ],
+        "answer": "Der Staat muss Grundrechte schützen.",
+        "explanationAr": "النص يذكر حماية الدولة للحقوق."
+      },
+      {
+        "id": "o-16-q3",
+        "type": "truefalse",
+        "promptDe": "Der Text beschreibt Pflichten für den Alltag.",
+        "promptAr": "النص يصف واجبات الحياة اليومية.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "richtig",
+        "explanationAr": "النص يربط الحقوق بالحياة اليومية."
+      },
+      {
+        "id": "o-16-q4",
+        "type": "mc",
+        "promptDe": "Wozu dient das Thema im Integrationskurs?",
+        "promptAr": "ما فائدة الموضوع في دورة الاندماج؟",
+        "options": [
+          "Formulare verstehen und höflich nachfragen",
+          "Nur im Urlaub helfen",
+          "Keine Bedeutung"
+        ],
+        "answer": "Formulare verstehen und höflich nachfragen",
+        "explanationAr": "الخاتمة تذكر التدريب على النماذج والاستفسار."
+      }
+    ],
+    "quelle": "BAMF-Rahmencurriculum Orientierungskurs Modul I-III — Eigene Erstellung — kein BAMF-Originaltext — vgl. BAMF Konzept 700UE (600+100) und Leben in Deutschland"
+  },
+  {
+    "id": "o-17",
+    "level": "B1",
+    "titleDe": "Gesundheit und Versicherung",
+    "titleAr": "حول Arzt Termin Karte",
+    "de": "Bei Krankheit ruft man die Praxis an und vereinbart einen Termin. Die Versichertenkarte zeigt man am Empfang. Der Arzt erklärt Diagnose und Behandlung. Apotheken geben Medikamente aus. Notdienste helfen am Wochenende. Im Kurs wird geübt, Arztbriefe zu verstehen.",
+    "ar": "نص توجيهي BAMF — حول Arzt Termin Karte",
+    "questions": [
+      {
+        "id": "o-17-q1",
+        "type": "mc",
+        "promptDe": "Worüber informiert der Text hauptsächlich?",
+        "promptAr": "عن ماذا يُخبر النص؟",
+        "options": [
+          "Gesundheit und Versicherung",
+          "Urlaub am Meer",
+          "Kochen mit Freunden"
+        ],
+        "answer": "Gesundheit und Versicherung",
+        "explanationAr": "الدليل: «Bei Krankheit ruft man die Praxis an und»"
+      },
+      {
+        "id": "o-17-q2",
+        "type": "mc",
+        "promptDe": "Welche Aussage stimmt laut Text?",
+        "promptAr": "أي عبارة صحيحة حسب النص؟",
+        "options": [
+          "Der Staat muss Grundrechte schützen.",
+          "Niemand hat Rechte.",
+          "Nur Behörden haben Rechte."
+        ],
+        "answer": "Der Staat muss Grundrechte schützen.",
+        "explanationAr": "النص يذكر حماية الدولة للحقوق."
+      },
+      {
+        "id": "o-17-q3",
+        "type": "truefalse",
+        "promptDe": "Der Text beschreibt Pflichten für den Alltag.",
+        "promptAr": "النص يصف واجبات الحياة اليومية.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "richtig",
+        "explanationAr": "النص يربط الحقوق بالحياة اليومية."
+      },
+      {
+        "id": "o-17-q4",
+        "type": "mc",
+        "promptDe": "Wozu dient das Thema im Integrationskurs?",
+        "promptAr": "ما فائدة الموضوع في دورة الاندماج؟",
+        "options": [
+          "Formulare verstehen und höflich nachfragen",
+          "Nur im Urlaub helfen",
+          "Keine Bedeutung"
+        ],
+        "answer": "Formulare verstehen und höflich nachfragen",
+        "explanationAr": "الخاتمة تذكر التدريب على النماذج والاستفسار."
+      }
+    ],
+    "quelle": "BAMF-Rahmencurriculum Orientierungskurs Modul I-III — Eigene Erstellung — kein BAMF-Originaltext — vgl. BAMF Konzept 700UE (600+100) und Leben in Deutschland"
+  },
+  {
+    "id": "o-18",
+    "level": "B1",
+    "titleDe": "Schule und Kita",
+    "titleAr": "حول Anmeldung Elternabend",
+    "de": "Eltern melden Kinder in Kita oder Schule an. Ein Gespräch klärt Betreuungszeiten. Elternabende informieren über Fortschritte. Lehrer geben Rückmeldung zu Hausaufgaben. Bei Fragen hilft das Sekretariat. Im Kurs wird geübt, Elternbriefe zu lesen.",
+    "ar": "نص توجيهي BAMF — حول Anmeldung Elternabend",
+    "questions": [
+      {
+        "id": "o-18-q1",
+        "type": "mc",
+        "promptDe": "Worüber informiert der Text hauptsächlich?",
+        "promptAr": "عن ماذا يُخبر النص؟",
+        "options": [
+          "Schule und Kita",
+          "Urlaub am Meer",
+          "Kochen mit Freunden"
+        ],
+        "answer": "Schule und Kita",
+        "explanationAr": "الدليل: «Eltern melden Kinder in Kita oder Schule»"
+      },
+      {
+        "id": "o-18-q2",
+        "type": "mc",
+        "promptDe": "Welche Aussage stimmt laut Text?",
+        "promptAr": "أي عبارة صحيحة حسب النص؟",
+        "options": [
+          "Der Staat muss Grundrechte schützen.",
+          "Niemand hat Rechte.",
+          "Nur Behörden haben Rechte."
+        ],
+        "answer": "Der Staat muss Grundrechte schützen.",
+        "explanationAr": "النص يذكر حماية الدولة للحقوق."
+      },
+      {
+        "id": "o-18-q3",
+        "type": "truefalse",
+        "promptDe": "Der Text beschreibt Pflichten für den Alltag.",
+        "promptAr": "النص يصف واجبات الحياة اليومية.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "richtig",
+        "explanationAr": "النص يربط الحقوق بالحياة اليومية."
+      },
+      {
+        "id": "o-18-q4",
+        "type": "mc",
+        "promptDe": "Wozu dient das Thema im Integrationskurs?",
+        "promptAr": "ما فائدة الموضوع في دورة الاندماج؟",
+        "options": [
+          "Formulare verstehen und höflich nachfragen",
+          "Nur im Urlaub helfen",
+          "Keine Bedeutung"
+        ],
+        "answer": "Formulare verstehen und höflich nachfragen",
+        "explanationAr": "الخاتمة تذكر التدريب على النماذج والاستفسار."
+      }
+    ],
+    "quelle": "BAMF-Rahmencurriculum Orientierungskurs Modul I-III — Eigene Erstellung — kein BAMF-Originaltext — vgl. BAMF Konzept 700UE (600+100) und Leben in Deutschland"
+  },
+  {
+    "id": "o-19",
+    "level": "B1",
+    "titleDe": "Bank und Verträge",
+    "titleAr": "حول Konto Lastschrift Kündigung",
+    "de": "Ein Konto bei einer Bank hilft im Alltag. Gehalt kommt per Überweisung. Miete wird oft per Lastschrift bezahlt. Verträge haben Kündigungsfristen. Wer kündigen will, schreibt einen Brief. Im Kurs wird geübt, Kontoauszüge zu verstehen.",
+    "ar": "نص توجيهي BAMF — حول Konto Lastschrift Kündigung",
+    "questions": [
+      {
+        "id": "o-19-q1",
+        "type": "mc",
+        "promptDe": "Worüber informiert der Text hauptsächlich?",
+        "promptAr": "عن ماذا يُخبر النص؟",
+        "options": [
+          "Bank und Verträge",
+          "Urlaub am Meer",
+          "Kochen mit Freunden"
+        ],
+        "answer": "Bank und Verträge",
+        "explanationAr": "الدليل: «Ein Konto bei einer Bank hilft im Alltag»"
+      },
+      {
+        "id": "o-19-q2",
+        "type": "mc",
+        "promptDe": "Welche Aussage stimmt laut Text?",
+        "promptAr": "أي عبارة صحيحة حسب النص؟",
+        "options": [
+          "Der Staat muss Grundrechte schützen.",
+          "Niemand hat Rechte.",
+          "Nur Behörden haben Rechte."
+        ],
+        "answer": "Der Staat muss Grundrechte schützen.",
+        "explanationAr": "النص يذكر حماية الدولة للحقوق."
+      },
+      {
+        "id": "o-19-q3",
+        "type": "truefalse",
+        "promptDe": "Der Text beschreibt Pflichten für den Alltag.",
+        "promptAr": "النص يصف واجبات الحياة اليومية.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "richtig",
+        "explanationAr": "النص يربط الحقوق بالحياة اليومية."
+      },
+      {
+        "id": "o-19-q4",
+        "type": "mc",
+        "promptDe": "Wozu dient das Thema im Integrationskurs?",
+        "promptAr": "ما فائدة الموضوع في دورة الاندماج؟",
+        "options": [
+          "Formulare verstehen und höflich nachfragen",
+          "Nur im Urlaub helfen",
+          "Keine Bedeutung"
+        ],
+        "answer": "Formulare verstehen und höflich nachfragen",
+        "explanationAr": "الخاتمة تذكر التدريب على النماذج والاستفسار."
+      }
+    ],
+    "quelle": "BAMF-Rahmencurriculum Orientierungskurs Modul I-III — Eigene Erstellung — kein BAMF-Originaltext — vgl. BAMF Konzept 700UE (600+100) und Leben in Deutschland"
+  },
+  {
+    "id": "o-20",
+    "level": "B1",
+    "titleDe": "Leben in Deutschland Alltag",
+    "titleAr": "حول Nachbarschaft Feste Hilfe",
+    "de": "In vielen Häusern wohnen Menschen aus verschiedenen Ländern. Feste im Hof bringen Nachbarn zusammen. Wer Hilfe braucht, fragt im Nachbarschaftszentrum. Vereine laden zu Sport und Musik ein. Ehrenamt verbindet. Im Kurs wird geübt, Einladungen zu verstehen.",
+    "ar": "نص توجيهي BAMF — حول Nachbarschaft Feste Hilfe",
+    "questions": [
+      {
+        "id": "o-20-q1",
+        "type": "mc",
+        "promptDe": "Worüber informiert der Text hauptsächlich?",
+        "promptAr": "عن ماذا يُخبر النص؟",
+        "options": [
+          "Leben in Deutschland Alltag",
+          "Urlaub am Meer",
+          "Kochen mit Freunden"
+        ],
+        "answer": "Leben in Deutschland Alltag",
+        "explanationAr": "الدليل: «In vielen Häusern wohnen Menschen aus ve»"
+      },
+      {
+        "id": "o-20-q2",
+        "type": "mc",
+        "promptDe": "Welche Aussage stimmt laut Text?",
+        "promptAr": "أي عبارة صحيحة حسب النص؟",
+        "options": [
+          "Der Staat muss Grundrechte schützen.",
+          "Niemand hat Rechte.",
+          "Nur Behörden haben Rechte."
+        ],
+        "answer": "Der Staat muss Grundrechte schützen.",
+        "explanationAr": "النص يذكر حماية الدولة للحقوق."
+      },
+      {
+        "id": "o-20-q3",
+        "type": "truefalse",
+        "promptDe": "Der Text beschreibt Pflichten für den Alltag.",
+        "promptAr": "النص يصف واجبات الحياة اليومية.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "richtig",
+        "explanationAr": "النص يربط الحقوق بالحياة اليومية."
+      },
+      {
+        "id": "o-20-q4",
+        "type": "mc",
+        "promptDe": "Wozu dient das Thema im Integrationskurs?",
+        "promptAr": "ما فائدة الموضوع في دورة الاندماج؟",
+        "options": [
+          "Formulare verstehen und höflich nachfragen",
+          "Nur im Urlaub helfen",
+          "Keine Bedeutung"
+        ],
+        "answer": "Formulare verstehen und höflich nachfragen",
+        "explanationAr": "الخاتمة تذكر التدريب على النماذج والاستفسار."
+      }
+    ],
+    "quelle": "BAMF-Rahmencurriculum Orientierungskurs Modul I-III — Eigene Erstellung — kein BAMF-Originaltext — vgl. BAMF Konzept 700UE (600+100) und Leben in Deutschland"
+  }
+]

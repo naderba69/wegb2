@@ -12595,8 +12595,8 @@ void 0;
 }
 /* ═══ K257 · R163: عمارةُ تحميلِ البنوك — لا وارداتٍ ثابتةَ JSON؛ Node يقرأ content/ مباشرة ═══ */
 {
-  ok(bankenBereit() && BANK_DATEIEN.length === 19 && VERTIEFUNG_DATEIEN.length === 15 && LANG_DATEIEN.length === 22 && !!bankRoh("vocab.json") && !!bankRoh("vocab-core.json") && !!bankRoh("vocab-b2.json") && !!bankRoh("grammar-core.json") && !!bankRoh("grammar-b2.json"),
-    "K257a bankload جاهزٌ في Node: 56 ملفَّ بنكٍ (19 core inkl. vocab-core+grammar-core + 15 vertiefung inkl. vocab-b2+grammar-b2 + 22 lang — R402 P2: 4.55→2.53MB main 0.72gz + 1.53MB vertiefung 0.49gz — vocab B2 43/grammar B2 23 lazy) — لا نسخةَ وسيطةَ قد تختلف في الاختبارات");
+  ok(bankenBereit() && BANK_DATEIEN.length === 19 && VERTIEFUNG_DATEIEN.length === 17 && LANG_DATEIEN.length === 22 && !!bankRoh("vocab.json") && !!bankRoh("vocab-core.json") && !!bankRoh("vocab-b2.json") && !!bankRoh("grammar-core.json") && !!bankRoh("grammar-b2.json"),
+    "K257a bankload جاهزٌ في Node: 58 ملفَّ بنكٍ (19 core inkl. vocab-core+grammar-core + 17 vertiefung inkl. vocab-b2+grammar-b2+orientierung+mediation + 22 lang — R402 P2: 4.55→2.53MB main 0.72gz + 1.53MB vertiefung 0.49gz — vocab B2 43/grammar B2 23 lazy) — لا نسخةَ وسيطةَ قد تختلف في الاختبارات");
   const sammle = (dir: string, out: string[]): string[] => {
     for (const e of readdirSync(dir, { withFileTypes: true })) {
       const p2 = `${dir}/${e.name}`;
