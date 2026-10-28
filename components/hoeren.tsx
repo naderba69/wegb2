@@ -137,7 +137,7 @@ export function HoerLabor({ progress }: { progress: Progress }) {
         )}
       </div>
 
-      {mitAudio && <audio ref={audioRef} src={hoerenAudio[runde.textId].file} preload="auto" />}
+      {mitAudio && <audio ref={audioRef} src={hoerenAudio[runde.textId].file} preload="metadata" />}
       <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap", alignItems: "center", marginBottom: "0.6rem" }}>
         {darfSpielen(modus, plays) ? (
           <button className="btn btn-gold" onClick={abspielen} disabled={!speechAvailable() && !mitAudio && modus === "pruefung"}>
@@ -283,7 +283,7 @@ export function LueckDiktat({ progress }: { progress: Progress }) {
       <div style={{ fontSize: "0.83rem", color: "var(--color-ink2)", margin: "0.3rem 0 0.45rem", lineHeight: 1.75 }}>
         شريطُ النصِّ الكامل يدور، وأنت تملأ الكلمة الساقطة في كل جملة — لا سكربتَ قبل التسليم، ولا رحمةَ بالإملاء.
       </div>
-      {file && <audio ref={audioRef} src={file} preload="auto" />}
+      {file && <audio ref={audioRef} src={file} preload="metadata" />}
       <div style={{ display: "flex", gap: "0.4rem", flexWrap: "wrap", margin: "0.4rem 0 0.6rem", alignItems: "center" }}>
         {(["B1", "B2"] as const).map((L) => (
           <button key={L} className="chip" style={{ cursor: "pointer", background: nivel === L ? "var(--color-cola)" : "var(--ui-surface-raised)", color: nivel === L ? "var(--ui-on-accent)" : undefined, padding: "0.45rem 0.75rem", minHeight: "44px" }} onClick={() => { setNivel(L); setNr(0); reset(); }}>🎚 {L}</button>

@@ -38,6 +38,15 @@ const nextConfig = {
           { key: "Permissions-Policy", value: "microphone=(self), camera=(), geolocation=()" },
         ],
       },
+      // P1 perf/audio-100MB: Range-Streaming + long cache für 1227 MP3 (100.5MB) — kein preload=all, Browser holt per Byte-Range
+      {
+        source: "/audio/:path*",
+        headers: [
+          { key: "Accept-Ranges", value: "bytes" },
+          { key: "Cache-Control", value: "public, max-age=31536000, immutable" },
+          { key: "Content-Type", value: "audio/mpeg" },
+        ],
+      },
     ];
   },
 };
