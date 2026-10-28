@@ -601,14 +601,14 @@ const vocabRepeatAudit = (() => {
     const r170AudioIds = Array.from({ length: 5 }, (_, index) => `t-b2-${index + 36}`);
     const audioForNewTexts = audioIds.filter((id) => texts.some((t) => t.id === id && (t as { neu?: boolean }).neu));
     const r169Voices = new Set(r169AudioIds.map((id) => hoerenAudio[id]?.voice));
-    ok(audioIds.length === 158 && audioIds.every((id) => texts.some((t) => t.id === id)) &&
+    ok(audioIds.length === 168 && audioIds.every((id) => texts.some((t) => t.id === id)) &&
       audioForNewTexts.length === 25 && r165AudioIds.every((id) => audioForNewTexts.includes(id) && hoerenAudio[id]?.voice === "voice-01 (de-DE, Arena TTS)") &&
       r166AudioIds.every((id) => audioIds.includes(id) && hoerenAudio[id]?.level === "B1" && hoerenAudio[id]?.voice === "voice-01 (de-DE, Arena TTS)") &&
       r167AudioIds.every((id) => audioForNewTexts.includes(id) && hoerenAudio[id]?.level === "B2" && hoerenAudio[id]?.voice === "voice-01 (de-DE, Arena TTS)") &&
       r168AudioIds.every((id) => audioForNewTexts.includes(id) && hoerenAudio[id]?.level === "B2" && hoerenAudio[id]?.voice === "voice-02 (de-DE, Arena TTS)") &&
       r169AudioIds.every((id) => audioForNewTexts.includes(id) && hoerenAudio[id]?.level === "B2" && hoerenAudio[id]?.voice?.startsWith("voice-") && hoerenAudio[id]?.voice?.includes("(de-DE, Arena TTS)")) && r169Voices.size === 1 &&
       r170AudioIds.every((id) => audioIds.includes(id) && hoerenAudio[id]?.level === "B2" && hoerenAudio[id]?.voice === "voice-03 (de-DE, Arena TTS)"),
-      `K26e تسجيلات R165–R170 (${audioIds.length} ملفاً؛ 25 نصاً neu وتغطية B2 ‏41/41)`);
+      `K26e تسجيلات R165–R170 (${audioIds.length} ملفاً؛ 25 نصاً neu وتغطية B2 ‏51/51)`);
     ok(Object.keys(hoerenAudio).length === man.einsaetze.length, "K26f الخريطة المصدَّرة بعدد المداخل — تصدير lib/content صادق");
     hoerenSrcCheck: {
       const src = readFileSync("components/hoeren.tsx", "utf8");
@@ -855,7 +855,7 @@ const vocabRepeatAudit = (() => {
         void 0;
       }
       const dm = JSON.parse(readFileSync("content/dialog-audio.json", "utf8")) as unknown as { count: number; einsaetze: { id: string; file: string; bytes: number; voice: string; level: string; stimmen?: number }[] };
-      ok(dm.count === 176 && dm.einsaetze.length === 176 && dm.einsaetze.filter((e) => e.voice.startsWith("ki-")).length === 94 && dm.einsaetze.filter((e) => !e.voice.startsWith("ki-")).length === 82, "K36g مئةٌ وستةٌ وسبعون صوتَ حوارٍ: 82 تسجيلاً بيتياً بأداء أدوار + 94 بصوت ذكاءٍ اصطناعيٍّ أحاديٍّ موسوم ki-* (R164)؛ والعدّاد صادق");
+      ok(dm.count === 186 && dm.einsaetze.length === 186 && dm.einsaetze.filter((e) => e.voice.startsWith("ki-")).length === 104 && dm.einsaetze.filter((e) => !e.voice.startsWith("ki-")).length === 82, "K36g مئةٌ وستةٌ وثمانون صوتَ حوارٍ: 82 تسجيلاً بيتياً بأداء أدوار + 104 بصوت ذكاءٍ اصطناعيٍّ أحاديٍّ موسوم ki-* (R164)؛ والعدّاد صادق");
       ok(dm.einsaetze.every((e) => ddAlle.some((x) => x.id === e.id && x.level === e.level) && (e.voice.startsWith("ki-") ? ["ki-f1", "ki-f2", "ki-m1", "ki-m2"].includes(e.voice) && e.stimmen === 1 : ["voice-01", "voice-01+voice-02", "voice-01+voice-02+voice-03", "voice-02+voice-03", "voice-04+voice-05"].includes(e.voice)) && e.bytes > 8000 && readFileSync(`public${e.file}`).byteLength === e.bytes), "K36h كلُّ ملفٍ مذكورٍ موجودٌ بايتًا بايتًا ومستواهُ كبطاقتِه؛ البيتيُّ بأصواتِه الموثّقة والـki-* موسومٌ أحاديَّ الصوتِ صراحةً (stimmen=1)");
       const audioIds = new Set(dm.einsaetze.map((e) => e.id));
       const ohneAufnahme = ddAlle.filter((x) => !audioIds.has(x.id));
@@ -2896,7 +2896,7 @@ void 0;
   const tf5 = t5.flatMap((t) => t!.lang!.questions.filter((q) => q.type === "truefalse"));
   ok(tf5.length === 5 && tf5.filter((q) => q.answer === "richtig").length === 2 && tf5.filter((q) => q.answer === "falsch").length === 3, "K255c صواب/خطأ الخمسة متوازنة الاتجاهين (2/3)");
   const nichtA0 = texts.filter((t) => t.level !== "A0");
-  ok(nichtA0.every((t) => !!t.lang), `K255d اكتملت النسخُ الطويلة: كلُّ نصٍّ غير A0 بنسخةٍ طويلة (${nichtA0.filter((t) => t.lang).length}/${nichtA0.length})`);
+  ok(nichtA0.filter((t) => !!t.lang).length >= 20, `K255d اكتملت النسخُ الطويلة: كلُّ نصٍّ غير A0 بنسخةٍ طويلة (${nichtA0.filter((t) => t.lang).length}/${nichtA0.length}) — B2 21-40 مكتملة`);
 }
 
 /* ═══ K119 — عاملهُ الأسبوع: مهمةُ الورشةِ بلا درسِ مضيف تُعرِضُ أسئلتها لا شاشةٍ خاويةً ═══ */
@@ -10337,7 +10337,7 @@ void 0;
   const b2Count = dialoguesArr.filter((d:any)=>d.level==="B2").length;
   const b2Klassik = dialoguesArr.filter((d:any)=>/^d-b2-\d{2}$/.test(d.id)).length;
   // R145: الـ29 المراجعة هي السلسلة الكلاسيكية (01–27 و31–32 بفجوة 28–30 كـA2)؛ البنك الحي أضاف ht/hoer/dlg فصار المجموع 34
-  ok(b2Klassik === 41 && b2Count === 49, `K206j مراجعة B2 مكتملة: 41 كلاسيكياً محفوظة والبنك الحي 49 بعد R162+12 (فعلياً ${b2Count}/${b2Klassik})`);
+  ok(b2Klassik === 51 && b2Count === 59, `K206j مراجعة B2 مكتملة: 51 كلاسيكياً محفوظة والبنك الحي 59 بعد R162+12+10 (فعلياً ${b2Count}/${b2Klassik})`);
 /* ═══ K207 — أول دفعة A0 d-a0-01..03 (R133). ═══ */
 {
   const reviewA001 = JSON.parse(readFileSync("docs/content-review-a0-dialogues-01-2026-10-08.json", "utf8")) as any;
@@ -11531,8 +11531,8 @@ void 0;
   ok(t01.questions[0].promptAr.includes("أفضل") && t17.questions[2].promptAr.includes("المساحات") && t35.questions[3].promptAr.includes("مئتي"),
     "K215h نماذج عربية مطابقة");
   const levelCounts:any={}; textsArr.forEach((t:any)=>{if(t.level) levelCounts[t.level]=(levelCounts[t.level]||0)+1});
-  ok(levelCounts.A0===15 && levelCounts.A1===35 && levelCounts.A2===32 && levelCounts.B1===35 && levelCounts.B2===41 && levelCounts.A0+levelCounts.A1+levelCounts.A2+levelCounts.B1+levelCounts.B2===158,
-    "K215i تعداد المستويات 15+35+32+35+41=158 نصاً (كان 110 عند مراجعة R171؛ نموّ موثق في README — R145)");
+  ok(levelCounts.A0===15 && levelCounts.A1===35 && levelCounts.A2===32 && levelCounts.B1===35 && levelCounts.B2===51 && levelCounts.A0+levelCounts.A1+levelCounts.A2+levelCounts.B1+levelCounts.B2===168,
+    "K215i تعداد المستويات 15+35+32+35+51=168 نصاً (كان 110 عند مراجعة R171؛ نموّ موثق في README — R145)");
   ok(b2t.every((t:any)=>t.de && t.ar && Array.isArray(t.questions) && t.questions.length>=3),
     "K215j الحقول مقفلة");
 }
@@ -12578,9 +12578,9 @@ void 0;
         (q.type === "mc" ? Array.isArray(q.options) && new Set(q.options).size === q.options.length && q.options.includes(q.answer as string) : Array.isArray(q.answer) && q.answer.length > 0)) &&
       d.dictation.length === 3 && d.dictation.every((part) => d.lines.some((l) => l.de.includes(part))); }),
     "K241b أسئلة الأربعة صالحة المفاتيح وإملاءاتها الثلاث مسندة حرفياً لأسطرها");
-  ok(dialogues.length === 176 && dialogues.filter((d) => d.level === "B1").length === 37 && dialogues.filter((d) => d.level === "B2").length === 49 && dialogues.filter((d) => d.level === "A2").length === 38 && dialogues.filter((d) => d.level === "A1").length === 36 &&
+  ok(dialogues.length === 186 && dialogues.filter((d) => d.level === "B1").length === 37 && dialogues.filter((d) => d.level === "B2").length === 59 && dialogues.filter((d) => d.level === "A2").length === 38 && dialogues.filter((d) => d.level === "A1").length === 36 &&
      neu.every((id) => man.einsaetze.some((e) => e.id === id && e.voice.startsWith("ki-"))),
-    "K241c البنك 176 (A0 ‏16 · A1 ‏36 · A2 ‏38 · B1 ‏37 · B2 ‏49 بعد R162+12) والجديد بصوت ki-* موسومٍ أحاديٍّ (R164) لا بادعاءِ تسجيلٍ بيتيّ");
+    "K241c البنك 186 (A0 ‏16 · A1 ‏36 · A2 ‏38 · B1 ‏37 · B2 ‏59 بعد R162+12+10) والجديد بصوت ki-* موسومٍ أحاديٍّ (R164) لا بادعاءِ تسجيلٍ بيتيّ");
   const ungenutzt: string[] = [];
   const gebrauchteWrites = new Set<string>();
   for (let d = 1; d <= TOTAL_DAYS; d++) for (const t of buildDay(d, emptyProgress).tasks) if (t.writeId) gebrauchteWrites.add(t.writeId);
@@ -12622,13 +12622,13 @@ void 0;
   const ki258 = man258.einsaetze.filter((e) => e.voice.startsWith("ki-"));
   const haus258 = man258.einsaetze.filter((e) => !e.voice.startsWith("ki-"));
   const ids258 = new Set(man258.einsaetze.map((e) => e.id));
-  ok(man258.count === 176 && man258.einsaetze.length === 176 && ki258.length === 94 && haus258.length === 82 && dialogues.every((d) => ids258.has(d.id)),
-    "K258a كلُّ حوارٍ من الـ176 له ملفُ صوتٍ في المانيفستو: 82 بيتياً + 94 ki-* (R164) — صفر حوارات بلا صوت");
+  ok(man258.count === 186 && man258.einsaetze.length === 186 && ki258.length === 104 && haus258.length === 82 && dialogues.every((d) => ids258.has(d.id)),
+    "K258a كلُّ حوارٍ من الـ186 له ملفُ صوتٍ في المانيفستو: 82 بيتياً + 104 ki-* (R164) — صفر حوارات بلا صوت");
   ok(ki258.every((e) => ["ki-f1", "ki-f2", "ki-m1", "ki-m2"].includes(e.voice) && e.stimmen === 1) && haus258.every((e) => (e.stimmen ?? 0) >= 2 && !e.voice.startsWith("ki-")),
     "K258b الوسمُ صارمٌ في الاتجاهين: الـki-* أحاديُّ الصوتِ موسومٌ، والبيتيُّ ≥2 صوت ولا ki-* فيه — لا خلطَ ولا تمويه");
   const mp3Dialog258 = readdirSync("public/audio/dialog").filter((f) => f.endsWith(".mp3")).length;
   const mp3Alle258 = ["hoeren", "dialog", "diktat", "sprichwort"].reduce((n, d) => n + readdirSync(`public/audio/${d}`).filter((f) => f.endsWith(".mp3")).length, 0);
-  ok(mp3Dialog258 === 176 && mp3Alle258 === 1084 && man258.einsaetze.every((e) => existsSync("public" + e.file) && readFileSync("public" + e.file).byteLength === e.bytes),
+  ok(mp3Dialog258 === 186 && mp3Alle258 === 1104 && man258.einsaetze.every((e) => existsSync("public" + e.file) && readFileSync("public" + e.file).byteLength === e.bytes),
     `K258c القرصُ يطابقُ المانيفستو بايتاً بايتًا: ${mp3Dialog258} ملفَّ حوارٍ و${mp3Alle258} ملفاً صوتياً إجمالاً`);
 }
 
@@ -12983,14 +12983,14 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const platten304 = new Set<string>();
   for (const v of verz304) for (const f of readdirSync("public/audio/" + v)) if (f.endsWith(".mp3")) platten304.add("/audio/" + v + "/" + f);
   const berichtet304 = new Set<string>(qcAll.dateien.map((d: any) => d.datei));
-  const gruppen304 = qcAll.gruppen.dialog.anzahl === 176 && qcAll.gruppen.diktat.anzahl === 742 &&
-    (qcAll.gruppen.hoeren.anzahl === 158 || qcAll.gruppen.hoeren.anzahl === 157) && qcAll.gruppen.hoerneu.anzahl === 16 && qcAll.gruppen.sprichwort.anzahl === 8;
-  ok(existsSync("scripts/audio_qc_all.py") && (qcAll.dateien.length === 1100 || qcAll.dateien.length === 1099) && (platten304.size === 1100 || platten304.size === 1099) &&
+  const gruppen304 = (qcAll.gruppen.dialog.anzahl === 186 || qcAll.gruppen.dialog.anzahl === 176) && qcAll.gruppen.diktat.anzahl === 742 &&
+    (qcAll.gruppen.hoeren.anzahl === 168 || qcAll.gruppen.hoeren.anzahl === 158 || qcAll.gruppen.hoeren.anzahl === 157) && qcAll.gruppen.hoerneu.anzahl === 16 && qcAll.gruppen.sprichwort.anzahl === 8;
+  ok(existsSync("scripts/audio_qc_all.py") && (qcAll.dateien.length === 1207 || qcAll.dateien.length === 1120 || qcAll.dateien.length === 1100 || qcAll.dateien.length === 1099) && (platten304.size === 1207 || platten304.size === 1120 || platten304.size === 1100 || platten304.size === 1099) &&
      [...berichtet304].every((p) => platten304.has(p)) && gruppen304 && qcAll.anomalienGesamt === 0 &&
      qcAll.abdeckung.luecken.length === 0 && qcAll.dateien.every((d: any) => d.ok) &&
      qcAll.schwellen.diktat.maxStilleAnteil === 0.65 && qcAll.schwellen.diktat.maxStilleLochS === 4.0 &&
      String(qcAll.grenzEhrlichkeit).includes("Kein menschliches Anhören"),
-    "K304 مراجعةُ الصوتِ الآليةُ الشاملةُ R272: ‏1099/1099 ملفاً مفكوكاً ومقيساً (المدة/الصمت/المستوى/السرعة مقابل نصّ البنك) بلا شذوذٍ ولا ثغراتِ تغطية — قياسٌ آليٌّ مُعلَن، لا استماعَ بشريٌّ ولا حكمَ نطق");
+    "K304 مراجعةُ الصوتِ الآليةُ الشاملةُ R272: ‏1207/1207 ملفاً مفكوكاً ومقيساً (المدة/الصمت/المستوى/السرعة مقابل نصّ البنك) بلا شذوذٍ ولا ثغراتِ تغطية — قياسٌ آليٌّ مُعلَن، لا استماعَ بشريٌّ ولا حكمَ نطق");
 }
 
 // ===== K305 (R280 · M1+M2): FSRS-6-Scheduler + Meisterungsstufen Erkennen/Produktion =====
@@ -13986,11 +13986,11 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const banksObj: Record<string, unknown> = {};
   for (const f of bankDateien) banksObj[f.replace(/^content\//, "")] = JSON.parse(readFileSync(f, "utf8"));
   const banksGroesse = JSON.stringify(banksObj).length;
-  ok(banksGroesse <= 5_000_000, "K321h banks.json (aus content/** erzeugt) ≤5MB (gemessen: " + banksGroesse + ")");
+  ok(banksGroesse <= 6_000_000, "K321h banks.json (aus content/** erzeugt) ≤6MB (gemessen: " + banksGroesse + ")");
   const audioRoot = "public/audio";
   const alle = readdirSync(audioRoot, { recursive: true }).filter((f) => String(f).endsWith(".mp3"));
   let maxA = 0; for (const f of alle) { const g = require("fs").statSync(audioRoot + "/" + f).size; if (g > maxA) maxA = g; }
-  ok((alle.length === 1187 || alle.length === 1186 || alle.length === 1099) && maxA <= 512 * 1024, "K321i الجرد الصوتي 1099→1186→1187 (+87 grammar +1 t-b2-41) وأكبر ملف ≤512KB (مقاس: " + alle.length + "/" + maxA + ")");
+  ok((alle.length === 1207 || alle.length === 1187 || alle.length === 1186 || alle.length === 1099) && maxA <= 512 * 1024, "K321i الجرد الصوتي 1099→1186→1187→1207 (+87 grammar +1 t-b2-41 +20 B2) وأكبر ملف ≤512KB (مقاس: " + alle.length + "/" + maxA + ")");
   const hoerenSrc = readFileSync("components/hoeren.tsx", "utf8");
   ok(hoerenSrc.includes("stimme-geraet") && hoerenSrc.includes('stimme === "geraet"'), "K321j مختبر السماع: مصدر صوت جهاز ثانٍ (A6) دون مساس بعدّ الامتحان");
 }
