@@ -484,7 +484,8 @@
         "tags": [
           "gruss"
         ],
-        "plural": "die Grüße"
+        "plural": "die Grüße",
+        "img": "/cards/dergruß--001.webp"
       },
       {
         "id": "r311a1-002",
@@ -496,7 +497,8 @@
         "level": "A1",
         "tags": [
           "gruss"
-        ]
+        ],
+        "img": "/cards/aufwiederhören--002.webp"
       },
       {
         "id": "r311a1-003",
@@ -511,7 +513,8 @@
         "tags": [
           "vorstellen"
         ],
-        "plural": "die Herren"
+        "plural": "die Herren",
+        "img": "/cards/derherr--003.webp"
       },
       {
         "id": "r311a1-004",
@@ -526,7 +529,8 @@
         "tags": [
           "vorstellen"
         ],
-        "plural": "die Damen"
+        "plural": "die Damen",
+        "img": "/cards/diedame--004.webp"
       },
       {
         "id": "r311a1-005",
@@ -538,7 +542,8 @@
         "level": "A1",
         "tags": [
           "vorstellen"
-        ]
+        ],
+        "img": "/cards/euer--005.webp"
       },
       {
         "id": "r311a1-006",
@@ -550,7 +555,8 @@
         "level": "A1",
         "tags": [
           "gruss"
-        ]
+        ],
+        "img": "/cards/circa--006.webp"
       }
     ]
   },
@@ -1050,7 +1056,8 @@
         "exampleAr": "تلعبُ ال…",
         "farbe": "GRÜN",
         "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
-        "plural": "die Mädchen"
+        "plural": "die Mädchen",
+        "img": "/cards/dasmädchen-1400.webp"
       },
       {
         "id": "v1401",
@@ -1066,7 +1073,8 @@
         "exampleAr": "آكلُ الح…",
         "farbe": "BLAU",
         "aussprache": "ö = بينَ الضمّةِ والكسرة",
-        "plural": "die Löffel"
+        "plural": "die Löffel",
+        "img": "/cards/derlöffel-1401.webp"
       },
       {
         "id": "v1402",
@@ -1082,7 +1090,8 @@
         "exampleAr": "الحليبُ…",
         "farbe": "BLAU",
         "aussprache": "sch = «ش» · ü = ضمّةٌ بشفتَينِ مستديرتَين",
-        "plural": "die Kühlschränke"
+        "plural": "die Kühlschränke",
+        "img": "/cards/derkühlschrank-1402.webp"
       },
       {
         "id": "v1415",
@@ -1098,7 +1107,8 @@
         "exampleAr": "يخبزُ ال…",
         "farbe": "BLAU",
         "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
-        "plural": "die Kuchen"
+        "plural": "die Kuchen",
+        "img": "/cards/derkuchen-1415.webp"
       },
       {
         "id": "v1416",
@@ -1113,7 +1123,8 @@
         "exampleDe": "Ohne Zucker, bitte — der Arzt hat es verboten.",
         "exampleAr": "بلا سكرٍ…",
         "farbe": "BLAU",
-        "aussprache": "z = «تس» · -er في الآخر = «أَ» خفيفة"
+        "aussprache": "z = «تس» · -er في الآخر = «أَ» خفيفة",
+        "img": "/cards/derzucker-1416.webp"
       },
       {
         "id": "v1418",
@@ -1128,7 +1139,8 @@
         "exampleDe": "Die Milch ist sauer geworden.",
         "exampleAr": "حمُضَ ال…",
         "farbe": "ROT",
-        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة"
+        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
+        "img": "/cards/diemilch-1418.webp"
       },
       {
         "id": "v1419",
@@ -1144,7 +1156,8 @@
         "exampleAr": "المفاتيح…",
         "farbe": "BLAU",
         "aussprache": "sch = «ش»",
-        "plural": "die Tische"
+        "plural": "die Tische",
+        "img": "/cards/dertisch-1419.webp"
       },
       {
         "id": "v1420",
@@ -1159,7 +1172,8 @@
         "exampleDe": "Ein Stück Butter für das Frühstück.",
         "exampleAr": "قطعةُ زب…",
         "farbe": "ROT",
-        "aussprache": "-er في الآخر = «أَ» خفيفة"
+        "aussprache": "-er في الآخر = «أَ» خفيفة",
+        "img": "/cards/diebutter-1420.webp"
       },
       {
         "id": "v1422",
@@ -1174,7 +1188,8 @@
         "exampleDe": "Zwei Liter Wasser am Tag sind Pflicht.",
         "exampleAr": "لترانِ م…",
         "farbe": "GRÜN",
-        "aussprache": "w = «ڤ» · -er في الآخر = «أَ» خفيفة"
+        "aussprache": "w = «ڤ» · -er في الآخر = «أَ» خفيفة",
+        "img": "/cards/daswasser-1422.webp"
       },
       {
         "id": "r311a1-007",
@@ -1189,7 +1204,8 @@
         "tags": [
           "familie"
         ],
-        "plural": "die Eltern"
+        "plural": "die Eltern",
+        "img": "/cards/dieeltern--007.webp"
       },
       {
         "id": "r311a1-008",
@@ -1204,7 +1220,8 @@
         "tags": [
           "familie"
         ],
-        "plural": "die Großeltern"
+        "plural": "die Großeltern",
+        "img": "/cards/diegroßeltern--008.webp"
       },
       {
         "id": "r311a1-009",
@@ -1219,7 +1236,8 @@
         "tags": [
           "familie"
         ],
-        "plural": "die Hausfrauen"
+        "plural": "die Hausfrauen",
+        "img": "/cards/diehausfrau--009.webp"
       },
       {
         "id": "r311a1-010",
@@ -1234,7 +1252,8 @@
         "tags": [
           "familie"
         ],
-        "plural": "die Hausmänner"
+        "plural": "die Hausmänner",
+        "img": "/cards/derhausmann--010.webp"
       },
       {
         "id": "r311a1-011",
@@ -1247,7 +1266,8 @@
         "tags": [
           "familie"
         ],
-        "posInfo": "heiratet, heiratete, hat geheiratet"
+        "posInfo": "heiratet, heiratete, hat geheiratet",
+        "img": "/cards/heiraten--011.webp"
       },
       {
         "id": "r311a1-012",
@@ -1262,7 +1282,8 @@
         ],
         "ant": [
           "gestorben"
-        ]
+        ],
+        "img": "/cards/geboren--012.webp"
       },
       {
         "id": "r311a1-013",
@@ -1277,7 +1298,8 @@
         ],
         "ant": [
           "geboren"
-        ]
+        ],
+        "img": "/cards/gestorben--013.webp"
       },
       {
         "id": "r311a1-014",
@@ -1292,7 +1314,8 @@
         ],
         "ant": [
           "lebendig"
-        ]
+        ],
+        "img": "/cards/tot--014.webp"
       },
       {
         "id": "r311a1-015",
@@ -1307,7 +1330,8 @@
         "tags": [
           "familie"
         ],
-        "plural": "die Partnerinnen"
+        "plural": "die Partnerinnen",
+        "img": "/cards/diepartnerin--015.webp"
       },
       {
         "id": "r311a1-016",
@@ -1322,7 +1346,8 @@
         "tags": [
           "familie"
         ],
-        "plural": "die Kindergärten"
+        "plural": "die Kindergärten",
+        "img": "/cards/derkindergarten--016.webp"
       },
       {
         "id": "r311a1-017",
@@ -1336,7 +1361,8 @@
         "level": "A1",
         "tags": [
           "familie"
-        ]
+        ],
+        "img": "/cards/dererwachsene--017.webp"
       }
     ]
   },
@@ -1845,7 +1871,8 @@
         "exampleAr": "بلا قفاز…",
         "farbe": "BLAU",
         "aussprache": "sch = «ش»",
-        "plural": "die Handschuhe"
+        "plural": "die Handschuhe",
+        "img": "/cards/derhandschuh-1403.webp"
       },
       {
         "id": "v1404",
@@ -1861,7 +1888,8 @@
         "exampleAr": "تقلعُ طا…",
         "farbe": "GRÜN",
         "aussprache": "eu/äu = «أوي» · z = «تس»",
-        "plural": "die Flugzeuge"
+        "plural": "die Flugzeuge",
+        "img": "/cards/dasflugzeug-1404.webp"
       },
       {
         "id": "v1414",
@@ -1876,7 +1904,8 @@
         "exampleDe": "Meine Hose ist zu lang — brauche ich eine Schneiderin?",
         "exampleAr": "سروالي ط…",
         "farbe": "ROT",
-        "plural": "die Hosen"
+        "plural": "die Hosen",
+        "img": "/cards/diehose-1414.webp"
       },
       {
         "id": "v1417",
@@ -1891,7 +1920,8 @@
         "exampleDe": "In Bayern holt man die Semmel früh beim Bäcker.",
         "exampleAr": "في بافار…",
         "farbe": "ROT",
-        "plural": "die Semmeln"
+        "plural": "die Semmeln",
+        "img": "/cards/diesemmel-1417.webp"
       },
       {
         "id": "v1421",
@@ -1907,7 +1937,8 @@
         "exampleAr": "يُغلقونَ…",
         "farbe": "ROT",
         "aussprache": "sp/st في البداية = «شب/شت» · ß = «س» مشدَّدة",
-        "plural": "die Straßen"
+        "plural": "die Straßen",
+        "img": "/cards/diestraße-1421.webp"
       },
       {
         "id": "v1423",
@@ -1923,7 +1954,8 @@
         "exampleAr": "حريق! نا…",
         "farbe": "GRÜN",
         "aussprache": "eu/äu = «أوي» · -er في الآخر = «أَ» خفيفة",
-        "plural": "die Feuer"
+        "plural": "die Feuer",
+        "img": "/cards/dasfeuer-1423.webp"
       },
       {
         "id": "v1425",
@@ -1939,7 +1971,8 @@
         "exampleAr": "غرفةُ ال…",
         "farbe": "GRÜN",
         "aussprache": "sch = «ش» · z = «تس» · -er في الآخر = «أَ» خفيفة",
-        "plural": "die Schlafzimmer"
+        "plural": "die Schlafzimmer",
+        "img": "/cards/dasschlafzimmer-1425.webp"
       },
       {
         "id": "v1426",
@@ -1955,7 +1988,8 @@
         "exampleAr": "معلمُنا…",
         "farbe": "BLAU",
         "aussprache": "-er في الآخر = «أَ» خفيفة",
-        "plural": "die Lehrer"
+        "plural": "die Lehrer",
+        "img": "/cards/derlehrer-1426.webp"
       },
       {
         "id": "v1427",
@@ -1973,7 +2007,8 @@
         "syn": [
           "die Ferien"
         ],
-        "plural": "die Urlaube"
+        "plural": "die Urlaube",
+        "img": "/cards/derurlaub-1427.webp"
       }
     ]
   },
@@ -2478,7 +2513,8 @@
         "exampleAr": "المبنى ا…",
         "farbe": "GRÜN",
         "aussprache": "eu/äu = «أوي»",
-        "plural": "die Gebäude"
+        "plural": "die Gebäude",
+        "img": "/cards/dasgebäude-1405.webp"
       }
     ]
   },
@@ -2992,7 +3028,8 @@
         "exampleDe": "Die Polizei nahm den Dieb fest.",
         "exampleAr": "أوقفتِ ا…",
         "farbe": "ROT",
-        "aussprache": "ei = «آي» لا «إي» · z = «تس»"
+        "aussprache": "ei = «آي» لا «إي» · z = «تس»",
+        "img": "/cards/diepolizei-1406.webp"
       },
       {
         "id": "v1407",
@@ -3008,7 +3045,8 @@
         "exampleAr": "روتْ قصة…",
         "farbe": "ROT",
         "aussprache": "sch = «ش»",
-        "plural": "die Geschichten"
+        "plural": "die Geschichten",
+        "img": "/cards/diegeschichte-1407.webp"
       },
       {
         "id": "r313b1-163",
@@ -3020,7 +3058,8 @@
         "level": "B1",
         "tags": [
           "feste"
-        ]
+        ],
+        "img": "/cards/pfingsten--163.webp"
       },
       {
         "id": "r313b1-164",
@@ -3035,7 +3074,8 @@
           "feste"
         ],
         "farbe": "BLAU",
-        "plural": "die Nationalfeiertage"
+        "plural": "die Nationalfeiertage",
+        "img": "/cards/dernationalfeierta--164.webp"
       }
     ]
   },
@@ -3539,7 +3579,8 @@
           "b2-medien-schule"
         ],
         "pos": "Nomen",
-        "plural": "die Leitartikel"
+        "plural": "die Leitartikel",
+        "img": "/cards/derleitartikel--031.webp"
       },
       {
         "de": "die Berichterstattung",
@@ -3551,7 +3592,8 @@
         "tags": [
           "b2-medien-schule"
         ],
-        "pos": "Nomen"
+        "pos": "Nomen",
+        "img": "/cards/dieberichterstattu--032.webp"
       },
       {
         "de": "die Quellenangabe, -n",
@@ -3564,7 +3606,8 @@
           "b2-medien-schule"
         ],
         "pos": "Nomen",
-        "plural": "die Quellenangaben"
+        "plural": "die Quellenangaben",
+        "img": "/cards/diequellenangaben--033.webp"
       },
       {
         "de": "die Nachrichtensendung, -en",
@@ -3577,7 +3620,8 @@
           "b2-medien-schule"
         ],
         "pos": "Nomen",
-        "plural": "die Nachrichtensendungen"
+        "plural": "die Nachrichtensendungen",
+        "img": "/cards/dienachrichtensend--034.webp"
       },
       {
         "de": "die Talkshow, -s",
@@ -3590,7 +3634,8 @@
           "b2-medien-schule"
         ],
         "pos": "Nomen",
-        "plural": "die Talkshows"
+        "plural": "die Talkshows",
+        "img": "/cards/dietalkshows--035.webp"
       },
       {
         "de": "die Titelseite, -n",
@@ -3603,7 +3648,8 @@
           "b2-medien-schule"
         ],
         "pos": "Nomen",
-        "plural": "die Titelseiten"
+        "plural": "die Titelseiten",
+        "img": "/cards/dietitelseiten--036.webp"
       },
       {
         "de": "das Boulevardblatt, die Boulevardblätter",
@@ -3615,7 +3661,8 @@
         "tags": [
           "b2-medien-schule"
         ],
-        "pos": "Nomen"
+        "pos": "Nomen",
+        "img": "/cards/dasboulevardblattd--037.webp"
       },
       {
         "de": "die Medienkompetenz",
@@ -3627,7 +3674,8 @@
         "tags": [
           "b2-medien-schule"
         ],
-        "pos": "Nomen"
+        "pos": "Nomen",
+        "img": "/cards/diemedienkompetenz--038.webp"
       },
       {
         "de": "der Schulabschluss, -schlüsse",
@@ -3640,7 +3688,8 @@
           "b2-medien-schule"
         ],
         "pos": "Nomen",
-        "plural": "die Schulabschlüsse"
+        "plural": "die Schulabschlüsse",
+        "img": "/cards/derschulabschlusss--039.webp"
       },
       {
         "de": "das Abitur",
@@ -3652,7 +3701,8 @@
         "tags": [
           "b2-medien-schule"
         ],
-        "pos": "Nomen"
+        "pos": "Nomen",
+        "img": "/cards/dasabitur--040.webp"
       },
       {
         "de": "die Klassenarbeit, -en",
@@ -3665,7 +3715,8 @@
           "b2-medien-schule"
         ],
         "pos": "Nomen",
-        "plural": "die Klassenarbeiten"
+        "plural": "die Klassenarbeiten",
+        "img": "/cards/dieklassenarbeiten--041.webp"
       },
       {
         "de": "die Note, -n",
@@ -3678,7 +3729,8 @@
           "b2-medien-schule"
         ],
         "pos": "Nomen",
-        "plural": "die Noten"
+        "plural": "die Noten",
+        "img": "/cards/dienoten--042.webp"
       },
       {
         "de": "das Zeugnis, -se",
@@ -3691,7 +3743,8 @@
           "b2-medien-schule"
         ],
         "pos": "Nomen",
-        "plural": "die Zeugnisse"
+        "plural": "die Zeugnisse",
+        "img": "/cards/daszeugnisse--043.webp"
       },
       {
         "de": "der Lehrplan, -pläne",
@@ -3704,7 +3757,8 @@
           "b2-medien-schule"
         ],
         "pos": "Nomen",
-        "plural": "die Lehrpläne"
+        "plural": "die Lehrpläne",
+        "img": "/cards/derlehrplanpläne--044.webp"
       },
       {
         "de": "das Schulsystem, -e",
@@ -3717,7 +3771,8 @@
           "b2-medien-schule"
         ],
         "pos": "Nomen",
-        "plural": "die Schulsysteme"
+        "plural": "die Schulsysteme",
+        "img": "/cards/dasschulsysteme--045.webp"
       }
     ]
   },
@@ -3741,7 +3796,8 @@
         "aussprache": "ie = «إي» ممدودة · z = «تس»",
         "exampleDe": "Eine gute Beziehung braucht Zeit und Vertrauen.",
         "exampleAr": "العلاقة…",
-        "plural": "die Beziehungen"
+        "plural": "die Beziehungen",
+        "img": "/cards/diebeziehung-v181.webp"
       },
       {
         "id": "v182",
@@ -3756,7 +3812,8 @@
         "farbe": "BLAU",
         "exampleDe": "Ich habe noch Kontakt zu meinen alten Kollegen.",
         "exampleAr": "ما زلت ع…",
-        "plural": "die Kontakte"
+        "plural": "die Kontakte",
+        "img": "/cards/derkontakt-v182.webp"
       },
       {
         "id": "v183",
@@ -3772,7 +3829,8 @@
         "aussprache": "eu/äu = «أوي» · sch = «ش»",
         "exampleDe": "Unsere Freundschaft hält seit der Schulzeit in Sfax.",
         "exampleAr": "صداقتنا…",
-        "plural": "die Freundschaften"
+        "plural": "die Freundschaften",
+        "img": "/cards/diefreundschaft-v183.webp"
       },
       {
         "id": "v184",
@@ -3788,7 +3846,8 @@
         "aussprache": "-er في الآخر = «أَ» خفيفة",
         "exampleDe": "Mein Partner und ich teilen uns die Hausarbeit.",
         "exampleAr": "أنا وشري…",
-        "plural": "die Partner"
+        "plural": "die Partner",
+        "img": "/cards/derpartner-v184.webp"
       },
       {
         "id": "v185",
@@ -3804,7 +3863,8 @@
         "aussprache": "sch = «ش»",
         "exampleDe": "Eine Partnerschaft auf Augenhöhe verteilt auch die unsichtbare Arbeit.",
         "exampleAr": "الشراكة…",
-        "plural": "die Partnerschaften"
+        "plural": "die Partnerschaften",
+        "img": "/cards/diepartnerschaft-v185.webp"
       },
       {
         "id": "v186",
@@ -3820,7 +3880,8 @@
         "aussprache": "v = «ف»",
         "exampleDe": "Das Verhältnis zwischen Mieter und Vermieter war nie schlecht, nur distanziert.",
         "exampleAr": "العلاقة…",
-        "plural": "die Verhältnisse"
+        "plural": "die Verhältnisse",
+        "img": "/cards/dasverhältnis-v186.webp"
       },
       {
         "id": "v188",
@@ -3834,7 +3895,8 @@
         "aussprache": "ei = «آي» لا «إي» · sp/st في البداية = «شب/شت»",
         "exampleDe": "Wir streiten uns oft über kleine Dinge.",
         "exampleAr": "نتشاجر كثيراً على أمور صغيرة.",
-        "posInfo": "streitet sich, stritt sich, hat sich gestritten"
+        "posInfo": "streitet sich, stritt sich, hat sich gestritten",
+        "img": "/cards/sichstreiten-v188.webp"
       },
       {
         "id": "v189",
@@ -3848,7 +3910,8 @@
         "aussprache": "v = «ف» · ö = بينَ الضمّةِ والكسرة",
         "exampleDe": "Nach dem Streit haben sie sich versöhnt.",
         "exampleAr": "تصالحا بعد الشجار.",
-        "posInfo": "versöhnt sich, versöhnte sich, hat sich versöhnt"
+        "posInfo": "versöhnt sich, versöhnte sich, hat sich versöhnt",
+        "img": "/cards/sichversöhnen-v189.webp"
       },
       {
         "id": "v190",
@@ -3863,7 +3926,8 @@
         "farbe": "GRÜN",
         "aussprache": "v = «ف»",
         "exampleDe": "Ohne Vertrauen funktioniert keine Zusammenarbeit.",
-        "exampleAr": "بلا ثقة…"
+        "exampleAr": "بلا ثقة…",
+        "img": "/cards/dasvertrauen-v190.webp"
       },
       {
         "id": "v191",
@@ -3879,7 +3943,8 @@
         "exampleAr": "طارق يُع…",
         "ant": [
           "unzuverlässig"
-        ]
+        ],
+        "img": "/cards/zuverlässig-v191.webp"
       },
       {
         "id": "v192",
@@ -3895,7 +3960,8 @@
         "exampleAr": "كن صادقا…",
         "ant": [
           "unehrlich"
-        ]
+        ],
+        "img": "/cards/ehrlich-v192.webp"
       },
       {
         "id": "v193",
@@ -3908,7 +3974,8 @@
         ],
         "exampleDe": "Sie haben sich nach zwei Jahren getrennt.",
         "exampleAr": "انفصلا بعد سنتين.",
-        "posInfo": "trennt sich, trennte sich, hat sich getrennt"
+        "posInfo": "trennt sich, trennte sich, hat sich getrennt",
+        "img": "/cards/sichtrennen-v193.webp"
       },
       {
         "id": "v194",
@@ -3923,7 +3990,8 @@
         "farbe": "ROT",
         "exampleDe": "Die Trennung war für die Kinder schwerer als für die Eltern.",
         "exampleAr": "الانفصال…",
-        "plural": "die Trennungen"
+        "plural": "die Trennungen",
+        "img": "/cards/dietrennung-v194.webp"
       },
       {
         "id": "v195",
@@ -3939,7 +4007,8 @@
         "aussprache": "ei = «آي» لا «إي» · sch = «ش»",
         "exampleDe": "Nach der Scheidung teilen sie sich weiterhin die Betreuung.",
         "exampleAr": "بعد الطل…",
-        "plural": "die Scheidungen"
+        "plural": "die Scheidungen",
+        "img": "/cards/diescheidung-v195.webp"
       },
       {
         "id": "v196",
@@ -3955,7 +4024,8 @@
         "exampleAr": "هو واقع…",
         "ant": [
           "gleichgültig"
-        ]
+        ],
+        "img": "/cards/verliebt-v196.webp"
       },
       {
         "id": "v197",
@@ -3970,7 +4040,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Sie hat heute Abend ein Date im Café am Fluss.",
         "exampleAr": "لديها هذ…",
-        "plural": "die Dates"
+        "plural": "die Dates",
+        "img": "/cards/dasdate-v197.webp"
       },
       {
         "id": "v198",
@@ -3984,7 +4055,8 @@
         "aussprache": "v = «ف»",
         "exampleDe": "Sie verabreden sich für morgen Abend im Café.",
         "exampleAr": "يتفقون على موعد غداً مساءً في المقهى.",
-        "posInfo": "verabredet sich, verabredete sich, hat sich verabredet"
+        "posInfo": "verabredet sich, verabredete sich, hat sich verabredet",
+        "img": "/cards/sichverabreden-v198.webp"
       },
       {
         "id": "v199",
@@ -4000,7 +4072,8 @@
         "aussprache": "v = «ف»",
         "exampleDe": "Tut mir leid, ich habe die Verabredung vergessen.",
         "exampleAr": "آسفة، نس…",
-        "plural": "die Verabredungen"
+        "plural": "die Verabredungen",
+        "img": "/cards/dieverabredung-v199.webp"
       },
       {
         "id": "v200",
@@ -4016,7 +4089,8 @@
         "aussprache": "v = «ف»",
         "exampleDe": "Das Missverständnis entstand, weil die Mail keinen Betreff hatte.",
         "exampleAr": "سوء الفه…",
-        "plural": "die Missverständnisse"
+        "plural": "die Missverständnisse",
+        "img": "/cards/dasmissverständnis-v200.webp"
       },
       {
         "id": "v201",
@@ -4030,7 +4104,8 @@
         "aussprache": "ie = «إي» ممدودة · z = «تس»",
         "exampleDe": "Im Team kommunizieren wir hauptsächlich per E-Mail.",
         "exampleAr": "في الفري…",
-        "posInfo": "kommuniziert, kommunizierte, hat kommuniziert"
+        "posInfo": "kommuniziert, kommunizierte, hat kommuniziert",
+        "img": "/cards/kommunizieren-v201.webp"
       },
       {
         "id": "v202",
@@ -4044,7 +4119,8 @@
         "article": "die",
         "farbe": "ROT",
         "exampleDe": "Zu viel Nähe kann in einer WG genauso stören wie zu wenig.",
-        "exampleAr": "القرب ال…"
+        "exampleAr": "القرب ال…",
+        "img": "/cards/dienähe-v202.webp"
       },
       {
         "id": "v203",
@@ -4060,7 +4136,8 @@
         "aussprache": "z = «تس»",
         "exampleDe": "Seit dem Streit gibt es eine gewisse Distanz zwischen ihnen.",
         "exampleAr": "منذ الشج…",
-        "plural": "die Distanzen"
+        "plural": "die Distanzen",
+        "img": "/cards/diedistanz-v203.webp"
       },
       {
         "id": "v204",
@@ -4073,7 +4150,8 @@
         ],
         "exampleDe": "Hedi kümmert sich um seinen Vater nach dem Schlaganfall.",
         "exampleAr": "هادي يرع…",
-        "posInfo": "kümmert sich um, kümmerte sich um, hat sich gekümmert um"
+        "posInfo": "kümmert sich um, kümmerte sich um, hat sich gekümmert um",
+        "img": "/cards/sichkümmernum-v204.webp"
       },
       {
         "id": "v205",
@@ -4089,7 +4167,8 @@
         "aussprache": "ei = «آي» لا «إي» · z = «تس»",
         "exampleDe": "Seine Zuneigung zeigt er nicht in Worten, sondern in Taten.",
         "exampleAr": "مودّته ل…",
-        "plural": "die Zuneigungen"
+        "plural": "die Zuneigungen",
+        "img": "/cards/diezuneigung-v205.webp"
       },
       {
         "id": "v206",
@@ -4104,7 +4183,8 @@
         "farbe": "BLAU",
         "exampleDe": "Der Konflikt im Team wurde am runden Tisch gelöst.",
         "exampleAr": "الصراع ف…",
-        "plural": "die Konflikte"
+        "plural": "die Konflikte",
+        "img": "/cards/derkonflikt-v206.webp"
       },
       {
         "id": "v207",
@@ -4120,7 +4200,8 @@
         "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
         "exampleDe": "Nach dem Gespräch mit der Chefin war ich erleichtert.",
         "exampleAr": "بعد الحو…",
-        "plural": "die Gespräche"
+        "plural": "die Gespräche",
+        "img": "/cards/dasgespräch-v207.webp"
       },
       {
         "id": "v208",
@@ -4134,7 +4215,8 @@
         "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين · -er في الآخر = «أَ» خفيفة",
         "exampleDe": "Wir haben uns lange über den Film unterhalten.",
         "exampleAr": "تحدثنا ط…",
-        "posInfo": "unterhält sich über, unterhielt sich über, hat sich unterhalten über"
+        "posInfo": "unterhält sich über, unterhielt sich über, hat sich unterhalten über",
+        "img": "/cards/sichunterhaltenübe-v208.webp"
       },
       {
         "id": "v209",
@@ -4148,7 +4230,8 @@
         "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
         "exampleDe": "Wer beim Zählerstand betrügt, riskiert die Kündigung des Vertrags.",
         "exampleAr": "من يخدع…",
-        "posInfo": "betrügt, betrog, hat betrogen"
+        "posInfo": "betrügt, betrog, hat betrogen",
+        "img": "/cards/betrügen-v209.webp"
       },
       {
         "id": "v210",
@@ -4163,7 +4246,8 @@
         "farbe": "BLAU",
         "aussprache": "v = «ف»",
         "exampleDe": "Für ihn war die Weitergabe des Geheimnisses ein Verrat.",
-        "exampleAr": "بالنسبة…"
+        "exampleAr": "بالنسبة…",
+        "img": "/cards/derverrat-v210.webp"
       },
       {
         "id": "v211",
@@ -4179,7 +4263,8 @@
         "aussprache": "ei = «آي» لا «إي»",
         "exampleDe": "Das bleibt unser Geheimnis, sag es niemandem!",
         "exampleAr": "هذا يبقى…",
-        "plural": "die Geheimnisse"
+        "plural": "die Geheimnisse",
+        "img": "/cards/dasgeheimnis-v211.webp"
       },
       {
         "id": "v212",
@@ -4193,7 +4278,8 @@
         "aussprache": "eu/äu = «أوي» · sch = «ش»",
         "exampleDe": "Ich will dich nicht enttäuschen, aber der Termin ist unrealistisch.",
         "exampleAr": "لا أريد…",
-        "posInfo": "enttäuscht, enttäuschte, hat enttäuscht"
+        "posInfo": "enttäuscht, enttäuschte, hat enttäuscht",
+        "img": "/cards/enttäuschen-v212.webp"
       },
       {
         "id": "v213",
@@ -4209,7 +4295,8 @@
         "aussprache": "eu/äu = «أوي» · sch = «ش»",
         "exampleDe": "Die Enttäuschung über die Absage hielt nur einen Tag.",
         "exampleAr": "خيبة الأ…",
-        "plural": "die Enttäuschungen"
+        "plural": "die Enttäuschungen",
+        "img": "/cards/dieenttäuschung-v213.webp"
       },
       {
         "id": "v214",
@@ -4222,7 +4309,8 @@
         ],
         "exampleDe": "Ich freue mich schon auf den Urlaub an der Ostsee.",
         "exampleAr": "أترقّب ب…",
-        "posInfo": "freut sich auf, freute sich auf, hat sich gefreut auf"
+        "posInfo": "freut sich auf, freute sich auf, hat sich gefreut auf",
+        "img": "/cards/sichfreuenauf-v214.webp"
       },
       {
         "id": "v215",
@@ -4237,7 +4325,8 @@
         "farbe": "BLAU",
         "aussprache": "ei = «آي» لا «إي»",
         "exampleDe": "Neid entsteht oft dort, wo man nur die Fassade des anderen sieht.",
-        "exampleAr": "الحسد ين…"
+        "exampleAr": "الحسد ين…",
+        "img": "/cards/derneid-v215.webp"
       },
       {
         "id": "v216",
@@ -4251,7 +4340,8 @@
         "aussprache": "ö = بينَ الضمّةِ والكسرة",
         "exampleDe": "Ich gönne ihr die Beförderung, sie hat jahrelang dafür gearbeitet.",
         "exampleAr": "أتمنّى ل…",
-        "posInfo": "gönnt, gönnte, hat gegönnt"
+        "posInfo": "gönnt, gönnte, hat gegönnt",
+        "img": "/cards/gönnen-v216.webp"
       },
       {
         "id": "v217",
@@ -4283,7 +4373,8 @@
         "aussprache": "ei = «آي» لا «إي» · w = «ڤ»",
         "exampleDe": "In der WG ist es Gewohnheit, sonntags zusammen zu kochen.",
         "exampleAr": "في السكن…",
-        "plural": "die Gewohnheiten"
+        "plural": "die Gewohnheiten",
+        "img": "/cards/diegewohnheit-v218.webp"
       },
       {
         "id": "v219",
@@ -4298,7 +4389,8 @@
         "farbe": "BLAU",
         "exampleDe": "Am Ende fanden beide Seiten einen Kompromiss.",
         "exampleAr": "في النها…",
-        "plural": "die Kompromisse"
+        "plural": "die Kompromisse",
+        "img": "/cards/derkompromiss-v219.webp"
       },
       {
         "id": "v220",
@@ -4348,7 +4440,8 @@
         "farbe": "ROT",
         "aussprache": "ei = «آي» لا «إي»",
         "exampleDe": "Die Gesundheit geht vor der Frist, sagt mein Chef.",
-        "exampleAr": "الصحة قب…"
+        "exampleAr": "الصحة قب…",
+        "img": "/cards/diegesundheit-v223.webp"
       },
       {
         "id": "v224",
@@ -4363,7 +4456,8 @@
         "exampleAr": "رانيا مر…",
         "ant": [
           "gesund"
-        ]
+        ],
+        "img": "/cards/krank-v224.webp"
       },
       {
         "id": "v225",
@@ -4379,7 +4473,8 @@
         "aussprache": "ei = «آي» لا «إي»",
         "exampleDe": "Die Krankheit ist nicht ansteckend, sagt die Ärztin.",
         "exampleAr": "المرض غي…",
-        "plural": "die Krankheiten"
+        "plural": "die Krankheiten",
+        "img": "/cards/diekrankheit-v225.webp"
       },
       {
         "id": "v227",
@@ -4395,7 +4490,8 @@
         "aussprache": "z = «تس»",
         "exampleDe": "Die Ärztin hat mich für drei Tage krankgeschrieben.",
         "exampleAr": "الطبيبة…",
-        "plural": "die Ärztinnen"
+        "plural": "die Ärztinnen",
+        "img": "/cards/dieärztin-v227.webp"
       },
       {
         "id": "v228",
@@ -4410,7 +4506,8 @@
         "farbe": "ROT",
         "exampleDe": "Die Praxis öffnet um acht, ich war um zehn nach acht da.",
         "exampleAr": "العيادة…",
-        "plural": "die Praxen"
+        "plural": "die Praxen",
+        "img": "/cards/diepraxis-v228.webp"
       },
       {
         "id": "v229",
@@ -4425,7 +4522,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Die Post ist gegenüber vom Krankenhaus.",
         "exampleAr": "البريد م…",
-        "plural": "die Krankenhäuser"
+        "plural": "die Krankenhäuser",
+        "img": "/cards/daskrankenhaus-v229.webp"
       },
       {
         "id": "v230",
@@ -4440,7 +4538,8 @@
         "farbe": "ROT",
         "exampleDe": "In der Apotheke neben der Praxis kaufe ich die Tabletten.",
         "exampleAr": "أشتري ال…",
-        "plural": "die Apotheken"
+        "plural": "die Apotheken",
+        "img": "/cards/dieapotheke-v230.webp"
       },
       {
         "id": "v231",
@@ -4456,7 +4555,8 @@
         "aussprache": "z = «تس»",
         "exampleDe": "Der Arzt schreibt ein Rezept für ein Fiebermittel.",
         "exampleAr": "الطبيب ي…",
-        "plural": "die Rezepte"
+        "plural": "die Rezepte",
+        "img": "/cards/dasrezept-v231.webp"
       },
       {
         "id": "v232",
@@ -4471,7 +4571,8 @@
         "farbe": "ROT",
         "exampleDe": "Nehmen Sie eine Tablette morgens und eine abends.",
         "exampleAr": "تناول قر…",
-        "plural": "die Tabletten"
+        "plural": "die Tabletten",
+        "img": "/cards/dietablette-v232.webp"
       },
       {
         "id": "v233",
@@ -4487,7 +4588,8 @@
         "aussprache": "sch = «ش» · z = «تس»",
         "exampleDe": "Der Schmerz im Knie ist nach dem Laufen schlimmer.",
         "exampleAr": "ألم الرك…",
-        "plural": "die Schmerzen"
+        "plural": "die Schmerzen",
+        "img": "/cards/derschmerz-v233.webp"
       },
       {
         "id": "v234",
@@ -4502,7 +4604,8 @@
         "farbe": "GRÜN",
         "aussprache": "ie = «إي» ممدودة · -er في الآخر = «أَ» خفيفة",
         "exampleDe": "Bei Fieber ist Sport gefährlich, warten Sie, bis Sie gesund sind.",
-        "exampleAr": "مع الحمّ…"
+        "exampleAr": "مع الحمّ…",
+        "img": "/cards/dasfieber-v234.webp"
       },
       {
         "id": "v235",
@@ -4516,7 +4619,8 @@
         "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
         "exampleDe": "Er fühlt sich heute viel besser nach dem Schlaf.",
         "exampleAr": "يشعر بتحسن كبير اليوم بعد النوم.",
-        "posInfo": "fühlt sich, fühlte sich, hat sich gefühlt"
+        "posInfo": "fühlt sich, fühlte sich, hat sich gefühlt",
+        "img": "/cards/sichfühlen-v235.webp"
       },
       {
         "id": "v236",
@@ -4574,7 +4678,8 @@
         ],
         "exampleDe": "Diese Ärztin behandelt vor allem Kinder.",
         "exampleAr": "هذه الطب…",
-        "posInfo": "behandelt, behandelte, hat behandelt"
+        "posInfo": "behandelt, behandelte, hat behandelt",
+        "img": "/cards/behandeln-v239.webp"
       },
       {
         "id": "v241",
@@ -4603,7 +4708,8 @@
         "farbe": "ROT",
         "exampleDe": "Die Operation dauerte zwei Stunden und verlief gut.",
         "exampleAr": "العملية…",
-        "plural": "die Operationen"
+        "plural": "die Operationen",
+        "img": "/cards/dieoperation-v242.webp"
       },
       {
         "id": "v243",
@@ -4660,7 +4766,8 @@
         ],
         "exampleDe": "Ich muss mich heute krankmelden, ich habe starke Kopfschmerzen.",
         "exampleAr": "يجب أن أ…",
-        "posInfo": "meldet sich krank, meldete sich krank, hat sich krankgemeldet"
+        "posInfo": "meldet sich krank, meldete sich krank, hat sich krankgemeldet",
+        "img": "/cards/sichkrankmelden-v246.webp"
       },
       {
         "id": "v248",
@@ -4676,7 +4783,8 @@
         "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · v = «ف»",
         "exampleDe": "Welche Versicherung zahlt den Wasserschaden, Hausrat oder Vermieter?",
         "exampleAr": "أي تأمين…",
-        "plural": "die Versicherungen"
+        "plural": "die Versicherungen",
+        "img": "/cards/dieversicherung-v248.webp"
       },
       {
         "id": "v249",
@@ -4721,7 +4829,8 @@
         "farbe": "BLAU",
         "aussprache": "sp/st في البداية = «شب/شت»",
         "exampleDe": "Vor der Prüfung hatte ich viel Stress und wenig Schlaf.",
-        "exampleAr": "قبل الام…"
+        "exampleAr": "قبل الام…",
+        "img": "/cards/derstress-v251.webp"
       },
       {
         "id": "v252",
@@ -4736,7 +4845,8 @@
         "exampleAr": "بعد عشر…",
         "ant": [
           "entspannt"
-        ]
+        ],
+        "img": "/cards/gestresst-v252.webp"
       },
       {
         "id": "v253",
@@ -4859,7 +4969,8 @@
         "aussprache": "ei = «آي» لا «إي» · z = «تس»",
         "exampleDe": "Meine Arbeitszeit ist von acht bis siebzehn Uhr.",
         "exampleAr": "ساعات عم…",
-        "plural": "die Arbeitszeiten"
+        "plural": "die Arbeitszeiten",
+        "img": "/cards/diearbeitszeit-v260.webp"
       },
       {
         "id": "v261",
@@ -10286,7 +10397,8 @@
         "farbe": "ROT",
         "exampleDe": "Meine Kollegin hilft mir oft bei schwierigen E-Mails.",
         "exampleAr": "زميلتي تساعدني كثي…",
-        "plural": "die Kolleginnen"
+        "plural": "die Kolleginnen",
+        "img": "/cards/diekollegin-v566.webp"
       },
       {
         "id": "v567",
@@ -10364,7 +10476,8 @@
         "exampleAr": "هي مجتهدة جداً وتد…",
         "ant": [
           "faul"
-        ]
+        ],
+        "img": "/cards/fleißig-v571.webp"
       },
       {
         "id": "v572",
@@ -10531,7 +10644,8 @@
         "exampleAr": "الصافي الذي يبقى ل…",
         "ant": [
           "brutto"
-        ]
+        ],
+        "img": "/cards/netto-v582.webp"
       },
       {
         "id": "v583",
@@ -10546,7 +10660,8 @@
         "exampleAr": "الراتب 2500 يورو إ…",
         "ant": [
           "netto"
-        ]
+        ],
+        "img": "/cards/brutto-v583.webp"
       },
       {
         "id": "v584",
@@ -10686,7 +10801,8 @@
         "exampleAr": "كان عاطلاً عن العم…",
         "ant": [
           "berufstätig"
-        ]
+        ],
+        "img": "/cards/arbeitslos-v592.webp"
       },
       {
         "id": "v593",
@@ -11223,7 +11339,8 @@
         ],
         "exampleDe": "In Deutschland recyceln wir Papier, Glas und Plastik getrennt.",
         "exampleAr": "في ألمانيا نعيد تد…",
-        "posInfo": "recycelt, recycelte, hat recycelt"
+        "posInfo": "recycelt, recycelte, hat recycelt",
+        "img": "/cards/recyceln-v602.webp"
       },
       {
         "id": "v603",
@@ -11300,7 +11417,8 @@
         "aussprache": "v = «ف»",
         "exampleDe": "Können Sie das Geschenk bitte schön verpacken?",
         "exampleAr": "هل يمكنك تغليف اله…",
-        "posInfo": "verpackt, verpackte, hat verpackt"
+        "posInfo": "verpackt, verpackte, hat verpackt",
+        "img": "/cards/verpacken-v607.webp"
       },
       {
         "id": "v608",
@@ -12148,7 +12266,8 @@
         "exampleAr": "الغرفة كانت مناسبة…",
         "ant": [
           "ungünstig"
-        ]
+        ],
+        "img": "/cards/günstig-v662.webp"
       },
       {
         "id": "v663",
@@ -12238,7 +12357,8 @@
         "aussprache": "ö = بينَ الضمّةِ والكسرة",
         "exampleDe": "Ich möchte ein Konto bei Ihrer Bank eröffnen.",
         "exampleAr": "أريد فتح حساب في ب…",
-        "posInfo": "eröffnet, eröffnete, hat eröffnet"
+        "posInfo": "eröffnet, eröffnete, hat eröffnet",
+        "img": "/cards/eröffnen-v668.webp"
       },
       {
         "id": "v669",
@@ -12403,7 +12523,8 @@
         "aussprache": "eu/äu = «أوي» · v = «ف»",
         "exampleDe": "Die Verkäuferin zeigt mir eine größere Größe.",
         "exampleAr": "البائعة تُريني مقا…",
-        "plural": "die Verkäuferinnen"
+        "plural": "die Verkäuferinnen",
+        "img": "/cards/dieverkäuferin-v679.webp"
       },
       {
         "id": "v680",
@@ -12448,7 +12569,8 @@
         "farbe": "ROT",
         "exampleDe": "Auf der Einkaufsliste stehen Brot, Milch, Eier und Käse.",
         "exampleAr": "في قائمة التسوق خب…",
-        "plural": "die Einkaufslisten"
+        "plural": "die Einkaufslisten",
+        "img": "/cards/dieeinkaufsliste-v682.webp"
       },
       {
         "id": "v683",
@@ -12463,7 +12585,8 @@
         "farbe": "BLAU",
         "exampleDe": "Der Einkauf für die Woche kostet etwa fünfzig Euro.",
         "exampleAr": "تسوّق الأسبوع يكلّ…",
-        "plural": "die Einkäufe"
+        "plural": "die Einkäufe",
+        "img": "/cards/dereinkauf-v683.webp"
       },
       {
         "id": "v684",
@@ -12494,7 +12617,8 @@
         "farbe": "ROT",
         "exampleDe": "Das Brot aus der Bäckerei hat eine bessere Qualität.",
         "exampleAr": "خبز المخبز جودته أ…",
-        "plural": "die Systeme"
+        "plural": "die Systeme",
+        "img": "/cards/diequalität-v685.webp"
       },
       {
         "id": "v686",
@@ -13106,7 +13230,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Ich habe das Ticket online gekauft, es ist auf dem Handy.",
         "exampleAr": "اشتريت التذكرة عبر…",
-        "plural": "die Entwürfe"
+        "plural": "die Entwürfe",
+        "img": "/cards/dasticket-v725.webp"
       },
       {
         "id": "v726",
@@ -13149,7 +13274,8 @@
         "aussprache": "v = «ف»",
         "exampleDe": "Entschuldigung, ich habe mich verspätet, der Bus kam nicht.",
         "exampleAr": "عذراً، تأخّرت، فال…",
-        "posInfo": "verspätet sich, verspätete sich, hat sich verspätet"
+        "posInfo": "verspätet sich, verspätete sich, hat sich verspätet",
+        "img": "/cards/sichverspäten-v728.webp"
       },
       {
         "id": "v729",
@@ -13196,7 +13322,8 @@
         "farbe": "ROT",
         "exampleDe": "Wegen der Baustelle ist die Straße bis Freitag gesperrt.",
         "exampleAr": "بسبب ورشة الطريق ا…",
-        "plural": "die Baustellen"
+        "plural": "die Baustellen",
+        "img": "/cards/diebaustelle-v731.webp"
       },
       {
         "id": "v732",
@@ -13258,7 +13385,8 @@
         "farbe": "ROT",
         "exampleDe": "Gehen Sie geradeaus bis zur Ampel, dann rechts.",
         "exampleAr": "امشِ مستقيماً حتى…",
-        "plural": "die Projekte"
+        "plural": "die Projekte",
+        "img": "/cards/dieampel-v735.webp"
       },
       {
         "id": "v736",
@@ -13640,7 +13768,8 @@
         "aussprache": "ei = «آي» لا «إي» · sch = «ش» · ü = ضمّةٌ بشفتَينِ مستديرتَين",
         "exampleDe": "Ich mache gerade den Führerschein, nächste Woche ist die Prüfung.",
         "exampleAr": "أنا أحضّر رخصة الس…",
-        "plural": "die Faktoren"
+        "plural": "die Faktoren",
+        "img": "/cards/derführerschein-v760.webp"
       },
       {
         "id": "v761",
@@ -13702,7 +13831,8 @@
         "farbe": "BLAU",
         "exampleDe": "Mein Onkel hat mich am Flughafen in Frankfurt abgeholt.",
         "exampleAr": "عمّي أخذني من مطار…",
-        "plural": "die Flughäfen"
+        "plural": "die Flughäfen",
+        "img": "/cards/derflughafen-v764.webp"
       },
       {
         "id": "v765",
@@ -13972,7 +14102,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Für die Anmeldung müssen Sie zum Amt gehen.",
         "exampleAr": "للتسجيل يجب أن تذه…",
-        "plural": "die Ämter"
+        "plural": "die Ämter",
+        "img": "/cards/dasamt-v781.webp"
       },
       {
         "id": "v782",
@@ -14594,7 +14725,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Nach dem Urteil kam der Mann für zwei Jahre ins Gefängnis.",
         "exampleAr": "بعد الحكم دخل الرج…",
-        "plural": "die Gefängnisse"
+        "plural": "die Gefängnisse",
+        "img": "/cards/dasgefängnis-v822.webp"
       },
       {
         "id": "v823",
@@ -16423,7 +16555,8 @@
         ],
         "syn": [
           "glücklich"
-        ]
+        ],
+        "img": "/cards/froh-v936.webp"
       },
       {
         "id": "v937",
@@ -16439,7 +16572,8 @@
         "aussprache": "eu/äu = «أوي»",
         "exampleDe": "Die Kinder springen vor Freude, denn morgen sind Ferien.",
         "exampleAr": "الأطفال يقفزون من…",
-        "plural": "die Freuden"
+        "plural": "die Freuden",
+        "img": "/cards/diefreude-v937.webp"
       },
       {
         "id": "v938",
@@ -23643,7 +23777,8 @@
           "essen"
         ],
         "farbe": "GRÜN",
-        "plural": "die Brote"
+        "plural": "die Brote",
+        "img": "/cards/dasbrot--000.webp"
       },
       {
         "id": "vw-a1ess-006",
@@ -57688,7 +57823,8 @@
         "level": "A0",
         "tags": [
           "a0-start"
-        ]
+        ],
+        "img": "/cards/gutenmorgen--001.webp"
       },
       {
         "id": "a0-002",
@@ -57700,7 +57836,8 @@
         "level": "A0",
         "tags": [
           "a0-start"
-        ]
+        ],
+        "img": "/cards/gutenabend--002.webp"
       },
       {
         "id": "a0-003",
@@ -57712,7 +57849,8 @@
         "level": "A0",
         "tags": [
           "a0-start"
-        ]
+        ],
+        "img": "/cards/gutenacht--003.webp"
       },
       {
         "id": "a0-004",
@@ -57724,7 +57862,8 @@
         "level": "A0",
         "tags": [
           "a0-start"
-        ]
+        ],
+        "img": "/cards/willkommen--004.webp"
       },
       {
         "id": "a0-005",
@@ -57736,7 +57875,8 @@
         "level": "A0",
         "tags": [
           "a0-start"
-        ]
+        ],
+        "img": "/cards/vielglück--005.webp"
       },
       {
         "id": "a0-006",
@@ -57748,7 +57888,8 @@
         "level": "A0",
         "tags": [
           "a0-start"
-        ]
+        ],
+        "img": "/cards/prost--006.webp"
       },
       {
         "id": "a0-007",
@@ -57760,7 +57901,8 @@
         "level": "A0",
         "tags": [
           "a0-start"
-        ]
+        ],
+        "img": "/cards/mahlzeit--007.webp"
       },
       {
         "id": "a0-008",
@@ -57772,7 +57914,8 @@
         "level": "A0",
         "tags": [
           "a0-start"
-        ]
+        ],
+        "img": "/cards/zumwohl--008.webp"
       },
       {
         "id": "a0-009",
@@ -57784,7 +57927,8 @@
         "level": "A0",
         "tags": [
           "a0-start"
-        ]
+        ],
+        "img": "/cards/keineahnung--009.webp"
       },
       {
         "id": "a0-010",
@@ -57796,7 +57940,8 @@
         "level": "A0",
         "tags": [
           "a0-start"
-        ]
+        ],
+        "img": "/cards/ja--010.webp"
       },
       {
         "id": "a0-011",
@@ -57808,7 +57953,8 @@
         "level": "A0",
         "tags": [
           "a0-start"
-        ]
+        ],
+        "img": "/cards/nein--011.webp"
       },
       {
         "id": "a0-012",
@@ -57820,7 +57966,8 @@
         "level": "A0",
         "tags": [
           "a0-start"
-        ]
+        ],
+        "img": "/cards/aua--012.webp"
       },
       {
         "id": "a0-013",
@@ -57832,7 +57979,8 @@
         "level": "A0",
         "tags": [
           "a0-start"
-        ]
+        ],
+        "img": "/cards/igitt--013.webp"
       },
       {
         "id": "a0-014",
@@ -57844,7 +57992,8 @@
         "level": "A0",
         "tags": [
           "a0-start"
-        ]
+        ],
+        "img": "/cards/pfui--014.webp"
       },
       {
         "id": "a0-015",
@@ -57856,7 +58005,8 @@
         "level": "A0",
         "tags": [
           "a0-start"
-        ]
+        ],
+        "img": "/cards/huch--015.webp"
       },
       {
         "id": "a0-016",

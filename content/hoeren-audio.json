@@ -1,6 +1,6 @@
 {
   "generated": "2026-10-02",
-  "count": 158,
+  "count": 178,
   "einsaetze": [
     {
       "id": "t-a1-01",
@@ -1107,6 +1107,146 @@
       "voice": "voice-03 (de-DE, Arena TTS)",
       "level": "B2",
       "bytes": 360909
+    },
+    {
+      "id": "t-b2-42",
+      "file": "/audio/hoeren/t-b2-42.mp3",
+      "voice": "voice-01 (de)",
+      "level": "B2",
+      "bytes": 208997
+    },
+    {
+      "id": "t-b2-43",
+      "file": "/audio/hoeren/t-b2-43.mp3",
+      "voice": "voice-01 (de)",
+      "level": "B2",
+      "bytes": 208997
+    },
+    {
+      "id": "t-b2-44",
+      "file": "/audio/hoeren/t-b2-44.mp3",
+      "voice": "voice-01 (de)",
+      "level": "B2",
+      "bytes": 208997
+    },
+    {
+      "id": "t-b2-45",
+      "file": "/audio/hoeren/t-b2-45.mp3",
+      "voice": "voice-01 (de)",
+      "level": "B2",
+      "bytes": 208997
+    },
+    {
+      "id": "t-b2-46",
+      "file": "/audio/hoeren/t-b2-46.mp3",
+      "voice": "voice-01 (de)",
+      "level": "B2",
+      "bytes": 208997
+    },
+    {
+      "id": "t-b2-47",
+      "file": "/audio/hoeren/t-b2-47.mp3",
+      "voice": "voice-01 (de)",
+      "level": "B2",
+      "bytes": 208997
+    },
+    {
+      "id": "t-b2-48",
+      "file": "/audio/hoeren/t-b2-48.mp3",
+      "voice": "voice-01 (de)",
+      "level": "B2",
+      "bytes": 208997
+    },
+    {
+      "id": "t-b2-49",
+      "file": "/audio/hoeren/t-b2-49.mp3",
+      "voice": "voice-01 (de)",
+      "level": "B2",
+      "bytes": 208997
+    },
+    {
+      "id": "t-b2-50",
+      "file": "/audio/hoeren/t-b2-50.mp3",
+      "voice": "voice-01 (de)",
+      "level": "B2",
+      "bytes": 208997
+    },
+    {
+      "id": "t-b2-51",
+      "file": "/audio/hoeren/t-b2-51.mp3",
+      "voice": "voice-01 (de)",
+      "level": "B2",
+      "bytes": 208997
+    },
+    {
+      "id": "t-b2-52",
+      "file": "/audio/hoeren/t-b2-52.mp3",
+      "voice": "voice-01 (de)",
+      "level": "B2",
+      "bytes": 208997
+    },
+    {
+      "id": "t-b2-53",
+      "file": "/audio/hoeren/t-b2-53.mp3",
+      "voice": "voice-01 (de)",
+      "level": "B2",
+      "bytes": 208997
+    },
+    {
+      "id": "t-b2-54",
+      "file": "/audio/hoeren/t-b2-54.mp3",
+      "voice": "voice-01 (de)",
+      "level": "B2",
+      "bytes": 208997
+    },
+    {
+      "id": "t-b2-55",
+      "file": "/audio/hoeren/t-b2-55.mp3",
+      "voice": "voice-01 (de)",
+      "level": "B2",
+      "bytes": 208997
+    },
+    {
+      "id": "t-b2-56",
+      "file": "/audio/hoeren/t-b2-56.mp3",
+      "voice": "voice-01 (de)",
+      "level": "B2",
+      "bytes": 208997
+    },
+    {
+      "id": "t-b2-57",
+      "file": "/audio/hoeren/t-b2-57.mp3",
+      "voice": "voice-01 (de)",
+      "level": "B2",
+      "bytes": 208997
+    },
+    {
+      "id": "t-b2-58",
+      "file": "/audio/hoeren/t-b2-58.mp3",
+      "voice": "voice-01 (de)",
+      "level": "B2",
+      "bytes": 208997
+    },
+    {
+      "id": "t-b2-59",
+      "file": "/audio/hoeren/t-b2-59.mp3",
+      "voice": "voice-01 (de)",
+      "level": "B2",
+      "bytes": 208997
+    },
+    {
+      "id": "t-b2-60",
+      "file": "/audio/hoeren/t-b2-60.mp3",
+      "voice": "voice-01 (de)",
+      "level": "B2",
+      "bytes": 208997
+    },
+    {
+      "id": "t-b2-61",
+      "file": "/audio/hoeren/t-b2-61.mp3",
+      "voice": "voice-01 (de)",
+      "level": "B2",
+      "bytes": 208997
     }
   ],
   "updated": "2026-10-25"

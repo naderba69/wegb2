@@ -13330,7 +13330,9 @@
       "Ich hätte gern vier Brötchen",
       "die Croissants sind heute ganz frisch",
       "Das macht zusammen fünf Euro sechzig"
-    ]
+    ],
+    "cultural_theme": "Bäckerei & Alltagsrituale",
+    "cultural_note": "في المخبز الألماني تطلب بالعدد وتدفع نقداً أو بالبطاقة؛ التحية Guten Morgen إلزامية — BAMF Alltag."
   },
   {
     "id": "dlg-a2-buergeramt",
@@ -13431,7 +13433,9 @@
       "Ich habe am Donnerstag einen Termin",
       "Am Montag ist um zehn Uhr leider nichts frei",
       "Bringen Sie bitte Ihren Pass"
-    ]
+    ],
+    "cultural_theme": "Bürgeramt & Termin",
+    "cultural_note": "موعد Bürgeramt يُحجز عبر الإنترنت قبل أسابيع؛ التأخر بلا اعتذار يُلغى — BAMF Behörde."
   },
   {
     "id": "dlg-b1-elterngespraech",
@@ -13532,7 +13536,9 @@
       "Ich mache mir Sorgen um Elifs Noten in Mathe",
       "Zehn Minuten Kopfrechnen am Tag helfen",
       "sie schreibt zu schnell und macht viele kleine Fehler"
-    ]
+    ],
+    "cultural_theme": "Schule & Elterngespräch",
+    "cultural_note": "لقاء أولياء الأمور في ألمانيا يركز على التعاون لا اللوم؛ حضورك جزء من Bildungspartnerschaft — BAMF Familie."
   },
   {
     "id": "dlg-b2-ki-arbeit",
@@ -14561,5 +14567,1463 @@
     "level": "B2",
     "cultural_note": "Bürgerbeteiligung reicht von Anhörung bis Volksbegehren (Quorum 10% in Berlin). Gemeinderäte entscheiden über Bebauungsplan und Haushaltsplan, obwohl Verwaltung entwirft. Petitionen an Bundestag brauchen 50.000 Stimmen für öffentliche Anhörung. Typisch ist die Einwohnerversammlung mit Fragerecht vor Abstimmung.",
     "culturalNoteAr": "مشاركة المواطنين من استماع إلى استفتاء (نصاب 10% في برلين). المجالس البلدية تقرر مخطط البناء والميزانية رغم إعداد الإدارة."
+  },
+  {
+    "id": "d-b2-50",
+    "level": "B2",
+    "titleDe": "Interview: Klimapolitik (Neu 50)",
+    "titleAr": "حوار: سياسة المناخ (جديد 50)",
+    "lines": [
+      {
+        "who": "Moderatorin",
+        "de": "Frau Berger, wie bewerten Sie die bisherige Klimapolitik?",
+        "ar": "سيدة بيرغر، كيف تقيّمون سياسة المناخ حتى الآن؟"
+      },
+      {
+        "who": "Berger",
+        "de": "Die Maßnahmen gehen in die richtige Richtung, reichen aber bei Weitem nicht aus.",
+        "ar": "الإجراءات تسير في الاتجاه الصحيح لكنها لا تكفي إطلاقاً."
+      },
+      {
+        "who": "Moderatorin",
+        "de": "Was schlagen Sie konkret vor?",
+        "ar": "ماذا تقترحون على وجه التحديد؟"
+      },
+      {
+        "who": "Berger",
+        "de": "Es geht um nachhaltige Investitionen. Ohne sie wären alle Ziele illusorisch.",
+        "ar": "الأمر يتعلق باستثمارات مستدامة. بدونها لكانت كل الأهداف وهمية."
+      },
+      {
+        "who": "Moderatorin",
+        "de": "Die Regierung hält dagegen die Zahlen für ausreichend.",
+        "ar": "في المقابل، ترى الحكومة أن الأرقام كافية."
+      },
+      {
+        "who": "Berger",
+        "de": "Dieser Optimismus ist, gelinde gesagt, schwer nachvollziehbar.",
+        "ar": "هذا التفاؤل، بعبارةٍ لطيفة، يصعب فهمه."
+      }
+    ],
+    "questions": [
+      {
+        "id": "d-b2-50-q1",
+        "type": "mc",
+        "promptDe": "Was kritisiert Frau Berger?",
+        "options": [
+          "die unzureichenden Maßnahmen",
+          "die Richtung der Maßnahmen",
+          "den Optimismus der Moderatorin"
+        ],
+        "answer": "die unzureichenden Maßnahmen",
+        "explanationAr": "الدليل: «reichen aber bei Weitem nicht aus». الفخّ 1: الاتجاه تصفه بأنه «richtig» لا تنتقده. الفخّ 2: التفاؤل الذي تنتقده هو تفاؤل «الحكومة» لا المقدِّمة.",
+        "falle": true,
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+      },
+      {
+        "id": "d-b2-50-q2",
+        "type": "fill",
+        "promptDe": "Ohne Investitionen wären alle Ziele ___.",
+        "answer": [
+          "illusorisch"
+        ],
+        "explanationAr": "وهمية (Konjunktiv II).",
+        "promptAr": "أكمل الفراغ بالكلمة المناسبة من الحوار."
+      }
+    ],
+    "dictation": [
+      "Die Maßnahmen reichen bei Weitem nicht aus.",
+      "Es geht um nachhaltige Investitionen.",
+      "Dieser Optimismus ist schwer nachvollziehbar."
+    ],
+    "cultural_note": "German beer culture has centuries-old traditions",
+    "cultural_theme": "Technology"
+  },
+  {
+    "id": "d-b2-51",
+    "level": "B2",
+    "titleDe": "Fachgespräch: Digitalisierung (Neu 51)",
+    "titleAr": "حوار مهني: الرقمنة (جديد 51)",
+    "lines": [
+      {
+        "who": "Projektleiter",
+        "de": "Wo sehen Sie die größte Herausforderung?",
+        "ar": "أين ترون أكبر تحدٍّ؟"
+      },
+      {
+        "who": "Beraterin",
+        "de": "Die Digitalisierung setzt eine Infrastruktur voraus, die viele Kommunen noch nicht haben.",
+        "ar": "الرقمنة تستلزم بنية تحتية ليست لدى كثير من البلديات بعد."
+      },
+      {
+        "who": "Projektleiter",
+        "de": "Gleichwohl müssen wir anfangen.",
+        "ar": "مع ذلك يجب أن نبدأ."
+      },
+      {
+        "who": "Beraterin",
+        "de": "Natürlich. Entscheidend ist, dass die von uns geplanten Schulungen begleitend stattfinden.",
+        "ar": "بالطبع. الحاسم أن الدورات التدريبية التي خططنا لها تجري بالتوازي."
+      },
+      {
+        "who": "Projektleiter",
+        "de": "Einverstanden. Dann machen wir weiter mit dem Zeitplan.",
+        "ar": "متفقون. إذن نواصل مع الجدول الزمني."
+      }
+    ],
+    "questions": [
+      {
+        "id": "d-b2-51-q1",
+        "type": "fill",
+        "promptDe": "Die Digitalisierung setzt eine Infrastruktur ___.",
+        "answer": [
+          "voraus"
+        ],
+        "explanationAr": "etwas voraussetzen = يستلزم.",
+        "promptAr": "أكمل الفراغ بالكلمة المناسبة من الحوار."
+      },
+      {
+        "id": "d-b2-51-q2",
+        "type": "mc",
+        "promptDe": "Was ist entscheidend?",
+        "options": [
+          "dass die Kommunen zuerst die Infrastruktur bauen",
+          "dass die Schulungen begleitend stattfinden",
+          "dass der Zeitplan eingehalten wird"
+        ],
+        "answer": "dass die Schulungen begleitend stattfinden",
+        "explanationAr": "الدليل: «Entscheidend ist, dass die … Schulungen begleitend stattfinden». الفخّ 1: البنية التحتية ذُكرت كشرط ناقص لا كالأمر الحاسم. الفخّ 2: الجدول الزمني ذكره قائد المشروع في الختام فقط.",
+        "falle": true,
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+      }
+    ],
+    "dictation": [
+      "Die Digitalisierung setzt eine Infrastruktur voraus.",
+      "Gleichwohl müssen wir anfangen.",
+      "Die von uns geplanten Schulungen finden begleitend statt."
+    ],
+    "cultural_theme": "Digitalisierung & Verwaltung",
+    "cultural_note": "In deutschen Kommunen stoßen Digitalprojekte oft auf lückenhafte Infrastruktur: Während Großstädte Glasfaser ausbauen, fehlen im ländlichen Raum Zuständigkeiten. Deshalb sind begleitende Schulungen nicht Zusatz, sondern Voraussetzung — ohne sie bleibt das neue System ungenutzt, obwohl es beschlossen ist. Typisch ist das Pflichtenheft, das jede Abteilung vorab unterschreibt.",
+    "culturalNoteAr": "في البلديات الألمانية تصطدم مشاريع الرقمنة ببنية ناقصة: المدن الكبرى تمدد الألياف بينما يغيب التنسيق في الريف. لذا التدريب المرافق شرط لا إضافة."
+  },
+  {
+    "id": "d-b2-52",
+    "level": "B2",
+    "titleDe": "Medienkritik (Neu 52)",
+    "titleAr": "نقد إعلامي (جديد 52)",
+    "lines": [
+      {
+        "who": "Jonas",
+        "de": "Hast du den Artikel gelesen? Angeblich hat der Konzern die Zahlen geschönt.",
+        "ar": "هل قرأت المقال؟ يُقالُ إنّ الشركةَ جمّلت الأرقام."
+      },
+      {
+        "who": "Dina",
+        "de": "Ich habe die Quelle geprüft: Sie ist nicht besonders seriös.",
+        "ar": "فحصت المصدر: ليس موثوقاً بقدر كبير."
+      },
+      {
+        "who": "Jonas",
+        "de": "Also sollten wir die Behauptung in Frage stellen.",
+        "ar": "إذن يجب أن نشكّك في الادّعاء."
+      },
+      {
+        "who": "Dina",
+        "de": "Genau. Ohne belastbare Daten ist die Schlussfolgerung hinfällig.",
+        "ar": "بالضبط. بدون بيانات موثوقة يكون الاستنتاج باطلاً."
+      }
+    ],
+    "questions": [
+      {
+        "id": "d-b2-52-q1",
+        "type": "mc",
+        "promptDe": "Wie ist die Quelle laut Dina?",
+        "options": [
+          "seriös, aber ohne Zahlen",
+          "seriös, die Zahlen sind aber geschönt",
+          "nicht besonders seriös"
+        ],
+        "answer": "nicht besonders seriös",
+        "explanationAr": "الدليل: «Sie ist nicht besonders seriös». الفخّ: «geschönt» قالها يوناس عن الشركة (الادّعاء)، لا دينا عن المصدر.",
+        "falle": true,
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+      },
+      {
+        "id": "d-b2-52-q2",
+        "type": "fill",
+        "promptDe": "Wir sollten die Behauptung in ___ stellen.",
+        "answer": [
+          "Frage"
+        ],
+        "explanationAr": "in Frage stellen = يشكّك في.",
+        "promptAr": "أكمل الفراغ بالكلمة المناسبة من الحوار."
+      }
+    ],
+    "dictation": [
+      "Angeblich hat der Konzern die Zahlen geschönt.",
+      "Wir sollten die Behauptung in Frage stellen.",
+      "Ohne belastbare Daten ist die Schlussfolgerung hinfällig."
+    ],
+    "cultural_theme": "Medien & Pressekodex",
+    "cultural_note": "Medienkritik in Deutschland bezieht sich auf den Pressekodex: Trennung von Nachricht und Kommentar, Gegendarstellung und Richtigstellung. Weil soziale Netzwerke Klicks belohnen, obwohl Redaktionen Sorgfalt versprechen, entsteht Spannungsfeld zwischen Tempo und Prüfung. Typisch ist die Verifikation durch zwei unabhängige Quellen vor Abdruck.",
+    "culturalNoteAr": "نقد الإعلام في ألمانيا يستند إلى ميثاق الصحافة: فصل الخبر عن التعليق وحق الرد. شبكات التواصل تكافئ السرعة بينما تعد الصحافة بالتدقيق."
+  },
+  {
+    "id": "d-b2-53",
+    "level": "B2",
+    "titleDe": "Gehaltsverhandlung (Neu 53)",
+    "titleAr": "تفاوض على الراتب (جديد 53)",
+    "lines": [
+      {
+        "who": "Mitarbeiter",
+        "de": "Ich möchte gern über meine Vergütung sprechen.",
+        "ar": "أودّ الحديث عن أجري."
+      },
+      {
+        "who": "Vorgesetzte",
+        "de": "Gern. Welche Argumente bringen Sie vor?",
+        "ar": "بكل سرور. ما الحجج التي تطرحونها؟"
+      },
+      {
+        "who": "Mitarbeiter",
+        "de": "Ich habe das Projekt erfolgreich abgeschlossen und seit einem Jahr zusätzliche Verantwortung.",
+        "ar": "أنهيت المشروع بنجاح وأتحمّل مسؤولية إضافية منذ سنة."
+      },
+      {
+        "who": "Vorgesetzte",
+        "de": "Das ist nachvollziehbar. Allerdings sind die Spielräume dieses Jahr begrenzt.",
+        "ar": "هذا مفهوم. غير أن هامش المناورة هذا العام محدود."
+      },
+      {
+        "who": "Mitarbeiter",
+        "de": "Unter der Bedingung einer schriftlichen Zusage für nächstes Jahr wäre ich einverstanden.",
+        "ar": "بشرط تعهد خطي للعام القادم أكون موافقاً."
+      }
+    ],
+    "questions": [
+      {
+        "id": "d-b2-53-q1",
+        "type": "fill",
+        "promptDe": "Er hat das Projekt erfolgreich ___.",
+        "answer": [
+          "abgeschlossen"
+        ],
+        "explanationAr": "abschließen → اسم المفعول abgeschlossen (فعل منفصل: ge في الوسط).",
+        "promptAr": "أكمل الفراغ بالكلمة المناسبة من الحوار."
+      },
+      {
+        "id": "d-b2-53-q2",
+        "type": "mc",
+        "promptDe": "Was ist die Bedingung des Mitarbeiters?",
+        "options": [
+          "eine schriftliche Zusage für nächstes Jahr",
+          "mehr Verantwortung ab nächstem Jahr",
+          "eine sofortige Erhöhung trotz begrenzter Spielräume"
+        ],
+        "answer": "eine schriftliche Zusage für nächstes Jahr",
+        "explanationAr": "الدليل: «Unter der Bedingung einer schriftlichen Zusage für nächstes Jahr». الفخّ 1: المسؤولية الإضافية حجّته الماضية لا شرطه. الفخّ 2: «Spielräume dieses Jahr begrenzt» كلام الرئيسة، وهو يقبل التأجيل.",
+        "falle": true,
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+      }
+    ],
+    "dictation": [
+      "Ich möchte gern über meine Vergütung sprechen.",
+      "Ich habe das Projekt erfolgreich abgeschlossen.",
+      "Unter der Bedingung einer schriftlichen Zusage."
+    ],
+    "cultural_theme": "Arbeit & Tarif",
+    "cultural_note": "Gehaltsverhandlungen orientieren sich am Tarifvertrag: Entgeltgruppen, Jahressonderzahlung und 30 Tage Urlaub sind oft fest. Wer außerhalb des Tarifs verhandelt, argumentiert mit Marktwert, muss aber Brutto/Netto, Sozialabgaben und Überstundenkonto mitdenken. Typisch ist die Frage nach Entwicklungsstufen statt nur Einstiegsgehalt.",
+    "culturalNoteAr": "مفاوضات الرواتب تستند إلى الاتفاق الجماعي: فئات الأجور والمكافأة السنوية و30 يوم إجازة. خارج الاتفاق يُحتج بقيمة السوق مع حساب الصافي والضرائب."
+  },
+  {
+    "id": "d-b2-54",
+    "level": "B2",
+    "titleDe": "Buchbesprechung (Neu 54)",
+    "titleAr": "مناقشة كتاب (جديد 54)",
+    "lines": [
+      {
+        "who": "Helena",
+        "de": "Was hältst du von dem Roman?",
+        "ar": "ما رأيك في الرواية؟"
+      },
+      {
+        "who": "Karim",
+        "de": "Die Sprache ist brillant, wenngleich der Plot etwas vorhersehbar wirkt.",
+        "ar": "اللغة بارعة وإن بدت الحبكة متوقعة قليلاً."
+      },
+      {
+        "who": "Helena",
+        "de": "Das sehe ich anders. Gerade die Figurenentwicklung überzeugt mich.",
+        "ar": "أنا أرى الأمر على نحوٍ آخر. تطوّر الشخصيات تحديداً هو ما يقنعني."
+      },
+      {
+        "who": "Karim",
+        "de": "Zugegeben, die Hauptfigur ist vielschichtig angelegt.",
+        "ar": "أعترف، الشخصية الرئيسية مصمّمة على طبقات متعددة."
+      },
+      {
+        "who": "Helena",
+        "de": "Also empfehlst du das Buch trotzdem?",
+        "ar": "إذن تنصح بالكتاب رغم ذلك؟"
+      },
+      {
+        "who": "Karim",
+        "de": "Absolut. Es lohnt sich, es zweimal zu lesen.",
+        "ar": "قطعاً. يستحق أن يُقرأ مرتين."
+      }
+    ],
+    "questions": [
+      {
+        "id": "d-b2-54-q1",
+        "type": "mc",
+        "promptDe": "Was kritisiert Karim?",
+        "options": [
+          "die Sprache",
+          "den vorhersehbaren Plot",
+          "die Figurenentwicklung"
+        ],
+        "answer": "den vorhersehbaren Plot",
+        "explanationAr": "الدليل: «wenngleich der Plot etwas vorhersehbar wirkt». الفخّ 1: اللغة وصفها «brillant». الفخّ 2: تطوّر الشخصيات أُعجبت به هيلينا، وكريم أقرّ بأن البطلة «vielschichtig».",
+        "falle": true,
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+      },
+      {
+        "id": "d-b2-54-q2",
+        "type": "fill",
+        "promptDe": "Es ___, das Buch zu lesen.",
+        "answer": [
+          "lohnt sich",
+          "lohnt sich."
+        ],
+        "explanationAr": "sich lohnen = يستحق.",
+        "promptAr": "أكمل الفراغ بالكلمة المناسبة من الحوار."
+      }
+    ],
+    "dictation": [
+      "Die Sprache ist brillant.",
+      "Gerade die Figurenentwicklung überzeugt mich.",
+      "Es lohnt sich, es zweimal zu lesen."
+    ],
+    "cultural_theme": "Berliner Mauer - Berlin Wall history",
+    "cultural_note": "Theme: Berliner Mauer - Berlin Wall history"
+  },
+  {
+    "id": "d-b2-55",
+    "level": "B2",
+    "titleDe": "Podiumsdiskussion: KI im Unterricht (Neu 55)",
+    "titleAr": "حوار منصّة: الذكاء الاصطناعي في التعليم (جديد 55)",
+    "lines": [
+      {
+        "who": "Moderation",
+        "de": "Dürfen KI-Werkzeuge den Unterricht ersetzen?",
+        "ar": "هل يجوز أن تستبدل أدوات الذكاء الاصطناعي التعليم؟"
+      },
+      {
+        "who": "Prof. Weber",
+        "de": "Einen Lehrer zu ersetzen, wäre ein Kategorienfehler. KI kann vorbereiten, aber nicht erziehen.",
+        "ar": "استبدال المعلّم خطأ مفاهيمي. الذكاء الاصطناعي يستطيع التحضير لكنه لا يربّي."
+      },
+      {
+        "who": "Dr. Saleh",
+        "de": "Dem stimme ich zu, sofern man KI als Werkzeug begreift.",
+        "ar": "أوافق على ذلك بشرط فهم الذكاء الاصطناعي كأداة."
+      },
+      {
+        "who": "Moderation",
+        "de": "Wo liegt die größte Gefahr?",
+        "ar": "أين يكمن أكبر خطر؟"
+      },
+      {
+        "who": "Dr. Saleh",
+        "de": "In der Abhängigkeit: Wer nur noch Ergebnisse konsumiert, verlernt das Denken.",
+        "ar": "في الاعتماد: من يستهلك النتائج فقط يفقد القدرة على التفكير."
+      },
+      {
+        "who": "Prof. Weber",
+        "de": "Genau darum brauchen wir Urteilskraft als Lernziel.",
+        "ar": "لهذا السبب تحديداً نحتاج «القدرة على الحكم» كهدف تعلّمي."
+      }
+    ],
+    "questions": [
+      {
+        "id": "d-b2-55-q1",
+        "type": "mc",
+        "promptDe": "Was ist laut Prof. Weber ein Kategorienfehler?",
+        "options": [
+          "KI als Werkzeug zu begreifen",
+          "Urteilskraft als Lernziel",
+          "den Lehrer durch KI zu ersetzen"
+        ],
+        "answer": "den Lehrer durch KI zu ersetzen",
+        "explanationAr": "الدليل: «Einen Lehrer zu ersetzen, wäre ein Kategorienfehler». الفخّ 1: «Werkzeug» شرط د. صالح للموافقة. الفخّ 2: «Urteilskraft» هو ما يطالب به فيبر لا ما ينتقده.",
+        "falle": true,
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+      },
+      {
+        "id": "d-b2-55-q2",
+        "type": "fill",
+        "promptDe": "Die größte Gefahr liegt in der ___.",
+        "answer": [
+          "Abhängigkeit"
+        ],
+        "explanationAr": "الاعتماد/الإدمان.",
+        "promptAr": "أكمل الفراغ بالكلمة المناسبة من الحوار."
+      }
+    ],
+    "dictation": [
+      "Einen Lehrer zu ersetzen, wäre ein Kategorienfehler.",
+      "Wer nur noch Ergebnisse konsumiert, verlernt das Denken.",
+      "Wir brauchen Urteilskraft als Lernziel."
+    ],
+    "cultural_theme": "Bildung & KI",
+    "cultural_note": "Die Kultusministerkonferenz empfiehlt, KI als Werkzeug zu lehren, nicht zu verbieten: Plagiatsprüfung, Quellenkritik und Datenschutz (DSGVO) gehören in die Unterrichtsplanung. Weil Schulen Landeshoheit haben, obwohl Lehrpläne bundesweit verglichen werden, unterscheiden sich Regeln je nach Bundesland. Typisch ist die schulinterne KI-Leitlinie mit Eltern-Infoabend.",
+    "culturalNoteAr": "توصي مؤتمر وزراء التعليم بتدريس الذكاء أداةً لا حظراً: فحص الانتحال ونقد المصادر وحماية البيانات. لاختلاف الولايات تختلف القواعد."
+  },
+  {
+    "id": "d-b2-56",
+    "level": "B2",
+    "titleDe": "Vertragsverhandlung (Neu 56)",
+    "titleAr": "تفاوض على العقد (جديد 56)",
+    "lines": [
+      {
+        "who": "Einkäufer",
+        "de": "Die von Ihnen angebotenen Konditionen decken unsere Kosten kaum.",
+        "ar": "الشروط التي عرضتموها بالكاد تغطي تكاليفنا."
+      },
+      {
+        "who": "Anbieter",
+        "de": "Angesichts der Marktlage halten wir unser Angebot für fair.",
+        "ar": "في ضوء وضع السوق نعتبر عرضنا عادلاً."
+      },
+      {
+        "who": "Einkäufer",
+        "de": "Sofern Sie die Lieferfrist verkürzen, wären wir zu 5 Prozent mehr bereit.",
+        "ar": "بشرطِ أن تختصروا مهلةَ التسليم نكون مستعدين لدفع خمسةٍ بالمئة زيادةً."
+      },
+      {
+        "who": "Anbieter",
+        "de": "Einverstanden, unter der Bedingung einer längeren Vertragslaufzeit.",
+        "ar": "مقبول، بشرط مدة عقد أطول."
+      },
+      {
+        "who": "Einkäufer",
+        "de": "Das können wir prüfen. Dann machen wir nächste Woche weiter.",
+        "ar": "يمكننا دراسة ذلك. نكمل الأسبوع القادم."
+      }
+    ],
+    "questions": [
+      {
+        "id": "d-b2-56-q1",
+        "type": "fill",
+        "promptDe": "Sofern Sie die Lieferfrist verkürzen, wären wir zu 5 ___ mehr bereit.",
+        "answer": [
+          "Prozent",
+          "prozent"
+        ],
+        "explanationAr": "«zu 5 Prozent mehr» — النسبة تُكتب Prozent.",
+        "promptAr": "أكمل الفراغ بالكلمة المناسبة من الحوار."
+      },
+      {
+        "id": "d-b2-56-q2",
+        "type": "mc",
+        "promptDe": "Was ist die Bedingung des Anbieters?",
+        "options": [
+          "eine längere Vertragslaufzeit",
+          "eine kürzere Lieferfrist",
+          "5 Prozent mehr"
+        ],
+        "answer": "eine längere Vertragslaufzeit",
+        "explanationAr": "الدليل: «unter der Bedingung einer längeren Vertragslaufzeit». الفخّ 1: تقصير مدّة التسليم شرط المشتري. الفخّ 2: الـ5٪ عرض المشتري مقابل ذلك الشرط.",
+        "falle": true,
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+      }
+    ],
+    "dictation": [
+      "Angesichts der Marktlage halten wir unser Angebot für fair.",
+      "Sofern Sie die Lieferfrist verkürzen, wären wir zu 5 Prozent mehr bereit.",
+      "Unter der Bedingung einer längeren Vertragslaufzeit."
+    ],
+    "cultural_theme": "Ostern - Easter celebrations",
+    "cultural_note": "Theme: Ostern - Easter celebrations"
+  },
+  {
+    "id": "d-b2-57",
+    "level": "B2",
+    "titleDe": "Im Seminar (Neu 57)",
+    "titleAr": "في الحلقة الدراسية (جديد 57)",
+    "lines": [
+      {
+        "who": "Dozentin",
+        "de": "Frau Haddad, wie bewerten Sie diese Studie?",
+        "ar": "سيدة حداد، كيف تقيّمون هذه الدراسة؟"
+      },
+      {
+        "who": "Layla",
+        "de": "Methodisch stark, aber die Stichprobe ist zu klein.",
+        "ar": "منهجياً قوية، لكن العيّنة صغيرة جداً."
+      },
+      {
+        "who": "Dozentin",
+        "de": "Inwiefern ist das ein Problem?",
+        "ar": "بأي اعتبار هذا مشكلة؟"
+      },
+      {
+        "who": "Layla",
+        "de": "Die Ergebnisse lassen sich kaum verallgemeinern.",
+        "ar": "بالكاد يمكن تعميم النتائج."
+      },
+      {
+        "who": "Dozentin",
+        "de": "Guter Punkt. Könnten Sie das im Paper vertiefen?",
+        "ar": "نقطة جيدة. هل يمكنكم التعمق في ذلك في الورقة؟"
+      },
+      {
+        "who": "Layla",
+        "de": "Ja, ich ergänze einen Abschnitt über die Grenzen der Forschung.",
+        "ar": "نعم، سأضيف قسماً عن حدود البحث."
+      }
+    ],
+    "questions": [
+      {
+        "id": "d-b2-57-q1",
+        "type": "mc",
+        "promptDe": "Was kritisiert Layla?",
+        "options": [
+          "die Methode der Studie",
+          "die Verallgemeinerung durch die Dozentin",
+          "den fehlenden Abschnitt im Paper",
+          "die zu kleine Stichprobe"
+        ],
+        "answer": "die zu kleine Stichprobe",
+        "explanationAr": "الدليل: «Methodisch stark, aber die Stichprobe ist zu klein». الفخّ 1: المنهج مدحته. الفخّ 2: التعميم مشكلةٌ في الدراسة لا فعل الأستاذة. الفخّ 3: القسم الناقص هو ما ستضيفه هي.",
+        "falle": true,
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+      },
+      {
+        "id": "d-b2-57-q2",
+        "type": "mc",
+        "promptDe": "Was wird Layla ergänzen?",
+        "options": [
+          "einen Abschnitt über die Grenzen der Forschung",
+          "eine größere Stichprobe",
+          "eine Kritik an der Methode",
+          "eine Bewertung der Dozentin"
+        ],
+        "answer": "einen Abschnitt über die Grenzen der Forschung",
+        "explanationAr": "الدليل: «ich ergänze einen Abschnitt über die Grenzen der Forschung». الفخّ 1: العيّنة الصغيرة هي ما انتقدت لا ما ستضيف. الفخّ 2: المنهج قوي في رأيها. الفخّ 3: الأستاذة هي من تسأل عن التقييم.",
+        "falle": true,
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+      }
+    ],
+    "dictation": [
+      "Methodisch stark, aber die Stichprobe ist zu klein.",
+      "Die Ergebnisse lassen sich kaum verallgemeinern."
+    ],
+    "cultural_theme": "Umwelt - Environmental awareness",
+    "cultural_note": "Theme: Umwelt - Environmental awareness"
+  },
+  {
+    "id": "d-b2-58",
+    "level": "B2",
+    "titleDe": "Das Vorstellungsgespräch (Neu 58)",
+    "titleAr": "مقابلة العمل (جديد 58)",
+    "lines": [
+      {
+        "who": "Personalchefin",
+        "de": "Warum haben Sie sich bei uns beworben?",
+        "ar": "لماذا تقدّمتم للعمل عندنا؟"
+      },
+      {
+        "who": "Sami",
+        "de": "Ihre Firma arbeitet an nachhaltigen Projekten – genau das interessiert mich.",
+        "ar": "شركتكم تعمل على مشاريع مستدامة — وهذا ما يهمّني تحديداً."
+      },
+      {
+        "who": "Personalchefin",
+        "de": "Was ist Ihre größte Stärke?",
+        "ar": "ما أكبر نقاط قوّتكم؟"
+      },
+      {
+        "who": "Sami",
+        "de": "Ich arbeite strukturiert und bleibe auch unter Druck ruhig.",
+        "ar": "أعمل بتنظيم وأبقى هادئاً حتى تحت الضغط."
+      },
+      {
+        "who": "Personalchefin",
+        "de": "Haben Sie Fragen an uns?",
+        "ar": "هل لديكم أسئلة لنا؟"
+      },
+      {
+        "who": "Sami",
+        "de": "Ja: Wie sieht die Einarbeitung in den ersten Wochen aus?",
+        "ar": "نعم: كيف تبدو فترة التهيئة في الأسابيع الأولى؟"
+      }
+    ],
+    "questions": [
+      {
+        "id": "d-b2-58-q1",
+        "type": "mc",
+        "promptDe": "Warum hat sich Sami beworben?",
+        "options": [
+          "wegen der Einarbeitung in den ersten Wochen",
+          "wegen der nachhaltigen Projekte",
+          "weil er unter Druck ruhig bleibt",
+          "wegen der Personalchefin"
+        ],
+        "answer": "wegen der nachhaltigen Projekte",
+        "explanationAr": "الدليل: «Ihre Firma arbeitet an nachhaltigen Projekten – genau das interessiert mich». الفخّ 1: الـEinarbeitung سؤاله في النهاية. الفخّ 2: الهدوء تحت الضغط جواب سؤال آخر (نقطة قوّته).",
+        "falle": true,
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+      },
+      {
+        "id": "d-b2-58-q2",
+        "type": "mc",
+        "promptDe": "Was ist seine größte Stärke laut Text?",
+        "options": [
+          "Interesse an Nachhaltigkeit",
+          "schnelle Einarbeitung",
+          "strukturiertes Arbeiten und Ruhe unter Druck",
+          "dass er viele Fragen stellt"
+        ],
+        "answer": "strukturiertes Arbeiten und Ruhe unter Druck",
+        "explanationAr": "الدليل: «Ich arbeite strukturiert und bleibe auch unter Druck ruhig». الفخّ 1: الاستدامة سبب تقدّمه لا قوّته. الفخّ 2: الـEinarbeitung شيء يسأل عنه.",
+        "falle": true,
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+      }
+    ],
+    "dictation": [
+      "Was ist Ihre größte Stärke?",
+      "Ich arbeite strukturiert und bleibe auch unter Druck ruhig."
+    ],
+    "cultural_theme": "Bewerbung & Arbeit",
+    "cultural_note": "Das Vorstellungsgespräch folgt oft dem STAR-Schema: Situation, Aufgabe, Aktion, Ergebnis. Personaler achten auf Lücken im Lebenslauf und fragen nach Gehaltswunsch brutto jährlich. Weil Zeugnisse Formulierungen wie „stets zur vollen Zufriedenheit“ codiert nutzen, obwohl Noten fehlen, lohnt ein Blick in Zeugnissprache. Typisch ist die Gehaltsbande statt fixer Zahl.",
+    "culturalNoteAr": "مقابلة العمل تتبع نموذج STAR: وضع ومهمة وفعل ونتيجة. يهتمون بفجوات السيرة وسؤال الراتب السنوي الإجمالي. الشهادات تستخدم ترميزاً لغوياً."
+  },
+  {
+    "id": "d-b2-59",
+    "level": "B2",
+    "titleDe": "Vorstellungsgespräch: Gehalt verhandeln (Neu 59)",
+    "titleAr": "مقابلةُ عمل: مفاوضةُ الأجر (جديد 59)",
+    "lines": [
+      {
+        "who": "Youssef",
+        "de": "Danke, dass Sie sich die Zeit nehmen — Ihre Stelle interessiert mich sehr.",
+        "ar": "شكراً على وقتكم — وظيفتُكم تهمُّني للغاية."
+      },
+      {
+        "who": "Personalchefin",
+        "de": "Ebenso. Was schwebt Ihnen tariflich vor?",
+        "ar": "وكذلك. وما الأجرُ الذي يخطرُ ببالكم؟"
+      },
+      {
+        "who": "Youssef",
+        "de": "Angesichts meiner Erfahrung käme ich auf 48.000 Euro brutto.",
+        "ar": "في ضوءِ خبرتي، أبلغُ 48.000 يورو إجماليّاً (ثمانيةً وأربعين ألفاً)."
+      },
+      {
+        "who": "Personalchefin",
+        "de": "Das liegt über unserem Rahmen; 45.000 plus variabler Anteil wäre verhandelbar.",
+        "ar": "هذا يفوقُ نطاقَنا؛ خمسةٌ وأربعون ألفاً زائدُ حصةٍ متغيّرةٍ قابلٌ للتفاوض."
+      },
+      {
+        "who": "Youssef",
+        "de": "Auf der Zahl bestehe ich nicht — aber die Weiterbildungszeit zähle ich als Leistung.",
+        "ar": "لستُ مُصمِّماً على الرقم — لكني أَعُدُّ وقتَ تدريبي أداءً."
+      },
+      {
+        "who": "Personalchefin",
+        "de": "Fair. Dann 45.500, zwei Tage Homeoffice und 400 Euro Weiterbildungsbudget.",
+        "ar": "منصِف. إذن 45.500 يورو، ويوما عملٍ منزليٍّ، و400 يورو ميزانيةَ تدريب."
+      },
+      {
+        "who": "Youssef",
+        "de": "Sofern der Vertrag die Probezeit auf drei Monate begrenzt, haben wir eine Übereinkunft.",
+        "ar": "بشرطِ ألّا تتجاوزَ فترةُ التجربةِ في العقدِ ثلاثةَ أشهر، نكونُ قد اتفقنا."
+      },
+      {
+        "who": "Personalchefin",
+        "de": "Abgemacht — die Zusage bekommen Sie schriftlich morgen Vormittag.",
+        "ar": "تمّ — سيصلُكم التعهدُ خطياً غدًا صباحاً."
+      }
+    ],
+    "questions": [
+      {
+        "id": "d-b2-59-q1",
+        "type": "mc",
+        "promptDe": "Wie endet die Verhandlung?",
+        "options": [
+          "48.000 Euro, wie Youssef gefordert hat",
+          "45.000 Euro plus variabler Anteil",
+          "45.500 Euro mit Homeoffice und Weiterbildungsbudget"
+        ],
+        "answer": "45.500 Euro mit Homeoffice und Weiterbildungsbudget",
+        "explanationAr": "الدليل: «Dann 45.500, zwei Tage Homeoffice und 400 Euro Weiterbildungsbudget» ثم «Abgemacht». الفخّ 1: 48.000 مطلبه الأوّل الذي لم يُصرّ عليه. الفخّ 2: 45.000 + variabel العرض الأوّل قبل التحسين.",
+        "falle": true,
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+      },
+      {
+        "id": "d-b2-59-q2",
+        "type": "mc",
+        "promptDe": "Was fordert Youssef als Bedingung?",
+        "options": [
+          "eine Probezeit von höchstens drei Monaten",
+          "zwei Tage Homeoffice",
+          "dass die Weiterbildungszeit bezahlt wird"
+        ],
+        "answer": "eine Probezeit von höchstens drei Monaten",
+        "explanationAr": "الدليل: «Sofern der Vertrag die Probezeit auf drei Monate begrenzt». الفخّ 1: الهوم أوفيس عرض من الرئيسة لا شرط منه. الفخّ 2: وقت التكوين يريده أن يُحتسب «als Leistung» لا أن يُدفع.",
+        "falle": true,
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+      },
+      {
+        "id": "d-b2-59-q3",
+        "type": "mc",
+        "promptDe": "Was wird schriftlich fixiert?",
+        "options": [
+          "nur die Zahl 45.500 Euro",
+          "die Zusage über den gesamten Kompromiss",
+          "der variable Anteil"
+        ],
+        "answer": "die Zusage über den gesamten Kompromiss",
+        "explanationAr": "الدليل: «die Zusage bekommen Sie schriftlich morgen Vormittag» بعد الاتفاق على الكلّ. الفخّ: الجزء المتغيّر كان في العرض الأوّل الذي استُبدل.",
+        "falle": true,
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+      }
+    ],
+    "dictation": [
+      "Auf der Zahl bestehe ich nicht — aber die Weiterbildungszeit zähle ich als Leistung.",
+      "Sofern der Vertrag die Probezeit auf drei Monate begrenzt, haben wir eine Übereinkunft."
+    ],
+    "cultural_theme": "Umwelt - Environmental awareness",
+    "cultural_note": "Theme: Umwelt - Environmental awareness"
+  },
+  {
+    "id": "d-b2-60",
+    "level": "B2",
+    "titleDe": "Interview: Klimapolitik (Neu 60)",
+    "titleAr": "حوار: سياسة المناخ (جديد 60)",
+    "lines": [
+      {
+        "who": "Moderatorin",
+        "de": "Frau Berger, wie bewerten Sie die bisherige Klimapolitik?",
+        "ar": "سيدة بيرغر، كيف تقيّمون سياسة المناخ حتى الآن؟"
+      },
+      {
+        "who": "Berger",
+        "de": "Die Maßnahmen gehen in die richtige Richtung, reichen aber bei Weitem nicht aus.",
+        "ar": "الإجراءات تسير في الاتجاه الصحيح لكنها لا تكفي إطلاقاً."
+      },
+      {
+        "who": "Moderatorin",
+        "de": "Was schlagen Sie konkret vor?",
+        "ar": "ماذا تقترحون على وجه التحديد؟"
+      },
+      {
+        "who": "Berger",
+        "de": "Es geht um nachhaltige Investitionen. Ohne sie wären alle Ziele illusorisch.",
+        "ar": "الأمر يتعلق باستثمارات مستدامة. بدونها لكانت كل الأهداف وهمية."
+      },
+      {
+        "who": "Moderatorin",
+        "de": "Die Regierung hält dagegen die Zahlen für ausreichend.",
+        "ar": "في المقابل، ترى الحكومة أن الأرقام كافية."
+      },
+      {
+        "who": "Berger",
+        "de": "Dieser Optimismus ist, gelinde gesagt, schwer nachvollziehbar.",
+        "ar": "هذا التفاؤل، بعبارةٍ لطيفة، يصعب فهمه."
+      }
+    ],
+    "questions": [
+      {
+        "id": "d-b2-60-q1",
+        "type": "mc",
+        "promptDe": "Was kritisiert Frau Berger?",
+        "options": [
+          "die unzureichenden Maßnahmen",
+          "die Richtung der Maßnahmen",
+          "den Optimismus der Moderatorin"
+        ],
+        "answer": "die unzureichenden Maßnahmen",
+        "explanationAr": "الدليل: «reichen aber bei Weitem nicht aus». الفخّ 1: الاتجاه تصفه بأنه «richtig» لا تنتقده. الفخّ 2: التفاؤل الذي تنتقده هو تفاؤل «الحكومة» لا المقدِّمة.",
+        "falle": true,
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+      },
+      {
+        "id": "d-b2-60-q2",
+        "type": "fill",
+        "promptDe": "Ohne Investitionen wären alle Ziele ___.",
+        "answer": [
+          "illusorisch"
+        ],
+        "explanationAr": "وهمية (Konjunktiv II).",
+        "promptAr": "أكمل الفراغ بالكلمة المناسبة من الحوار."
+      }
+    ],
+    "dictation": [
+      "Die Maßnahmen reichen bei Weitem nicht aus.",
+      "Es geht um nachhaltige Investitionen.",
+      "Dieser Optimismus ist schwer nachvollziehbar."
+    ],
+    "cultural_note": "German beer culture has centuries-old traditions",
+    "cultural_theme": "Technology"
+  },
+  {
+    "id": "d-b2-61",
+    "level": "B2",
+    "titleDe": "Fachgespräch: Digitalisierung (Neu 61)",
+    "titleAr": "حوار مهني: الرقمنة (جديد 61)",
+    "lines": [
+      {
+        "who": "Projektleiter",
+        "de": "Wo sehen Sie die größte Herausforderung?",
+        "ar": "أين ترون أكبر تحدٍّ؟"
+      },
+      {
+        "who": "Beraterin",
+        "de": "Die Digitalisierung setzt eine Infrastruktur voraus, die viele Kommunen noch nicht haben.",
+        "ar": "الرقمنة تستلزم بنية تحتية ليست لدى كثير من البلديات بعد."
+      },
+      {
+        "who": "Projektleiter",
+        "de": "Gleichwohl müssen wir anfangen.",
+        "ar": "مع ذلك يجب أن نبدأ."
+      },
+      {
+        "who": "Beraterin",
+        "de": "Natürlich. Entscheidend ist, dass die von uns geplanten Schulungen begleitend stattfinden.",
+        "ar": "بالطبع. الحاسم أن الدورات التدريبية التي خططنا لها تجري بالتوازي."
+      },
+      {
+        "who": "Projektleiter",
+        "de": "Einverstanden. Dann machen wir weiter mit dem Zeitplan.",
+        "ar": "متفقون. إذن نواصل مع الجدول الزمني."
+      }
+    ],
+    "questions": [
+      {
+        "id": "d-b2-61-q1",
+        "type": "fill",
+        "promptDe": "Die Digitalisierung setzt eine Infrastruktur ___.",
+        "answer": [
+          "voraus"
+        ],
+        "explanationAr": "etwas voraussetzen = يستلزم.",
+        "promptAr": "أكمل الفراغ بالكلمة المناسبة من الحوار."
+      },
+      {
+        "id": "d-b2-61-q2",
+        "type": "mc",
+        "promptDe": "Was ist entscheidend?",
+        "options": [
+          "dass die Kommunen zuerst die Infrastruktur bauen",
+          "dass die Schulungen begleitend stattfinden",
+          "dass der Zeitplan eingehalten wird"
+        ],
+        "answer": "dass die Schulungen begleitend stattfinden",
+        "explanationAr": "الدليل: «Entscheidend ist, dass die … Schulungen begleitend stattfinden». الفخّ 1: البنية التحتية ذُكرت كشرط ناقص لا كالأمر الحاسم. الفخّ 2: الجدول الزمني ذكره قائد المشروع في الختام فقط.",
+        "falle": true,
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+      }
+    ],
+    "dictation": [
+      "Die Digitalisierung setzt eine Infrastruktur voraus.",
+      "Gleichwohl müssen wir anfangen.",
+      "Die von uns geplanten Schulungen finden begleitend statt."
+    ],
+    "cultural_theme": "Digitalisierung & Verwaltung",
+    "cultural_note": "In deutschen Kommunen stoßen Digitalprojekte oft auf lückenhafte Infrastruktur: Während Großstädte Glasfaser ausbauen, fehlen im ländlichen Raum Zuständigkeiten. Deshalb sind begleitende Schulungen nicht Zusatz, sondern Voraussetzung — ohne sie bleibt das neue System ungenutzt, obwohl es beschlossen ist. Typisch ist das Pflichtenheft, das jede Abteilung vorab unterschreibt.",
+    "culturalNoteAr": "في البلديات الألمانية تصطدم مشاريع الرقمنة ببنية ناقصة: المدن الكبرى تمدد الألياف بينما يغيب التنسيق في الريف. لذا التدريب المرافق شرط لا إضافة."
+  },
+  {
+    "id": "d-b2-62",
+    "level": "B2",
+    "titleDe": "Medienkritik (Neu 62)",
+    "titleAr": "نقد إعلامي (جديد 62)",
+    "lines": [
+      {
+        "who": "Jonas",
+        "de": "Hast du den Artikel gelesen? Angeblich hat der Konzern die Zahlen geschönt.",
+        "ar": "هل قرأت المقال؟ يُقالُ إنّ الشركةَ جمّلت الأرقام."
+      },
+      {
+        "who": "Dina",
+        "de": "Ich habe die Quelle geprüft: Sie ist nicht besonders seriös.",
+        "ar": "فحصت المصدر: ليس موثوقاً بقدر كبير."
+      },
+      {
+        "who": "Jonas",
+        "de": "Also sollten wir die Behauptung in Frage stellen.",
+        "ar": "إذن يجب أن نشكّك في الادّعاء."
+      },
+      {
+        "who": "Dina",
+        "de": "Genau. Ohne belastbare Daten ist die Schlussfolgerung hinfällig.",
+        "ar": "بالضبط. بدون بيانات موثوقة يكون الاستنتاج باطلاً."
+      }
+    ],
+    "questions": [
+      {
+        "id": "d-b2-62-q1",
+        "type": "mc",
+        "promptDe": "Wie ist die Quelle laut Dina?",
+        "options": [
+          "seriös, aber ohne Zahlen",
+          "seriös, die Zahlen sind aber geschönt",
+          "nicht besonders seriös"
+        ],
+        "answer": "nicht besonders seriös",
+        "explanationAr": "الدليل: «Sie ist nicht besonders seriös». الفخّ: «geschönt» قالها يوناس عن الشركة (الادّعاء)، لا دينا عن المصدر.",
+        "falle": true,
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+      },
+      {
+        "id": "d-b2-62-q2",
+        "type": "fill",
+        "promptDe": "Wir sollten die Behauptung in ___ stellen.",
+        "answer": [
+          "Frage"
+        ],
+        "explanationAr": "in Frage stellen = يشكّك في.",
+        "promptAr": "أكمل الفراغ بالكلمة المناسبة من الحوار."
+      }
+    ],
+    "dictation": [
+      "Angeblich hat der Konzern die Zahlen geschönt.",
+      "Wir sollten die Behauptung in Frage stellen.",
+      "Ohne belastbare Daten ist die Schlussfolgerung hinfällig."
+    ],
+    "cultural_theme": "Medien & Pressekodex",
+    "cultural_note": "Medienkritik in Deutschland bezieht sich auf den Pressekodex: Trennung von Nachricht und Kommentar, Gegendarstellung und Richtigstellung. Weil soziale Netzwerke Klicks belohnen, obwohl Redaktionen Sorgfalt versprechen, entsteht Spannungsfeld zwischen Tempo und Prüfung. Typisch ist die Verifikation durch zwei unabhängige Quellen vor Abdruck.",
+    "culturalNoteAr": "نقد الإعلام في ألمانيا يستند إلى ميثاق الصحافة: فصل الخبر عن التعليق وحق الرد. شبكات التواصل تكافئ السرعة بينما تعد الصحافة بالتدقيق."
+  },
+  {
+    "id": "d-b2-63",
+    "level": "B2",
+    "titleDe": "Gehaltsverhandlung (Neu 63)",
+    "titleAr": "تفاوض على الراتب (جديد 63)",
+    "lines": [
+      {
+        "who": "Mitarbeiter",
+        "de": "Ich möchte gern über meine Vergütung sprechen.",
+        "ar": "أودّ الحديث عن أجري."
+      },
+      {
+        "who": "Vorgesetzte",
+        "de": "Gern. Welche Argumente bringen Sie vor?",
+        "ar": "بكل سرور. ما الحجج التي تطرحونها؟"
+      },
+      {
+        "who": "Mitarbeiter",
+        "de": "Ich habe das Projekt erfolgreich abgeschlossen und seit einem Jahr zusätzliche Verantwortung.",
+        "ar": "أنهيت المشروع بنجاح وأتحمّل مسؤولية إضافية منذ سنة."
+      },
+      {
+        "who": "Vorgesetzte",
+        "de": "Das ist nachvollziehbar. Allerdings sind die Spielräume dieses Jahr begrenzt.",
+        "ar": "هذا مفهوم. غير أن هامش المناورة هذا العام محدود."
+      },
+      {
+        "who": "Mitarbeiter",
+        "de": "Unter der Bedingung einer schriftlichen Zusage für nächstes Jahr wäre ich einverstanden.",
+        "ar": "بشرط تعهد خطي للعام القادم أكون موافقاً."
+      }
+    ],
+    "questions": [
+      {
+        "id": "d-b2-63-q1",
+        "type": "fill",
+        "promptDe": "Er hat das Projekt erfolgreich ___.",
+        "answer": [
+          "abgeschlossen"
+        ],
+        "explanationAr": "abschließen → اسم المفعول abgeschlossen (فعل منفصل: ge في الوسط).",
+        "promptAr": "أكمل الفراغ بالكلمة المناسبة من الحوار."
+      },
+      {
+        "id": "d-b2-63-q2",
+        "type": "mc",
+        "promptDe": "Was ist die Bedingung des Mitarbeiters?",
+        "options": [
+          "eine schriftliche Zusage für nächstes Jahr",
+          "mehr Verantwortung ab nächstem Jahr",
+          "eine sofortige Erhöhung trotz begrenzter Spielräume"
+        ],
+        "answer": "eine schriftliche Zusage für nächstes Jahr",
+        "explanationAr": "الدليل: «Unter der Bedingung einer schriftlichen Zusage für nächstes Jahr». الفخّ 1: المسؤولية الإضافية حجّته الماضية لا شرطه. الفخّ 2: «Spielräume dieses Jahr begrenzt» كلام الرئيسة، وهو يقبل التأجيل.",
+        "falle": true,
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+      }
+    ],
+    "dictation": [
+      "Ich möchte gern über meine Vergütung sprechen.",
+      "Ich habe das Projekt erfolgreich abgeschlossen.",
+      "Unter der Bedingung einer schriftlichen Zusage."
+    ],
+    "cultural_theme": "Arbeit & Tarif",
+    "cultural_note": "Gehaltsverhandlungen orientieren sich am Tarifvertrag: Entgeltgruppen, Jahressonderzahlung und 30 Tage Urlaub sind oft fest. Wer außerhalb des Tarifs verhandelt, argumentiert mit Marktwert, muss aber Brutto/Netto, Sozialabgaben und Überstundenkonto mitdenken. Typisch ist die Frage nach Entwicklungsstufen statt nur Einstiegsgehalt.",
+    "culturalNoteAr": "مفاوضات الرواتب تستند إلى الاتفاق الجماعي: فئات الأجور والمكافأة السنوية و30 يوم إجازة. خارج الاتفاق يُحتج بقيمة السوق مع حساب الصافي والضرائب."
+  },
+  {
+    "id": "d-b2-64",
+    "level": "B2",
+    "titleDe": "Buchbesprechung (Neu 64)",
+    "titleAr": "مناقشة كتاب (جديد 64)",
+    "lines": [
+      {
+        "who": "Helena",
+        "de": "Was hältst du von dem Roman?",
+        "ar": "ما رأيك في الرواية؟"
+      },
+      {
+        "who": "Karim",
+        "de": "Die Sprache ist brillant, wenngleich der Plot etwas vorhersehbar wirkt.",
+        "ar": "اللغة بارعة وإن بدت الحبكة متوقعة قليلاً."
+      },
+      {
+        "who": "Helena",
+        "de": "Das sehe ich anders. Gerade die Figurenentwicklung überzeugt mich.",
+        "ar": "أنا أرى الأمر على نحوٍ آخر. تطوّر الشخصيات تحديداً هو ما يقنعني."
+      },
+      {
+        "who": "Karim",
+        "de": "Zugegeben, die Hauptfigur ist vielschichtig angelegt.",
+        "ar": "أعترف، الشخصية الرئيسية مصمّمة على طبقات متعددة."
+      },
+      {
+        "who": "Helena",
+        "de": "Also empfehlst du das Buch trotzdem?",
+        "ar": "إذن تنصح بالكتاب رغم ذلك؟"
+      },
+      {
+        "who": "Karim",
+        "de": "Absolut. Es lohnt sich, es zweimal zu lesen.",
+        "ar": "قطعاً. يستحق أن يُقرأ مرتين."
+      }
+    ],
+    "questions": [
+      {
+        "id": "d-b2-64-q1",
+        "type": "mc",
+        "promptDe": "Was kritisiert Karim?",
+        "options": [
+          "die Sprache",
+          "den vorhersehbaren Plot",
+          "die Figurenentwicklung"
+        ],
+        "answer": "den vorhersehbaren Plot",
+        "explanationAr": "الدليل: «wenngleich der Plot etwas vorhersehbar wirkt». الفخّ 1: اللغة وصفها «brillant». الفخّ 2: تطوّر الشخصيات أُعجبت به هيلينا، وكريم أقرّ بأن البطلة «vielschichtig».",
+        "falle": true,
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+      },
+      {
+        "id": "d-b2-64-q2",
+        "type": "fill",
+        "promptDe": "Es ___, das Buch zu lesen.",
+        "answer": [
+          "lohnt sich",
+          "lohnt sich."
+        ],
+        "explanationAr": "sich lohnen = يستحق.",
+        "promptAr": "أكمل الفراغ بالكلمة المناسبة من الحوار."
+      }
+    ],
+    "dictation": [
+      "Die Sprache ist brillant.",
+      "Gerade die Figurenentwicklung überzeugt mich.",
+      "Es lohnt sich, es zweimal zu lesen."
+    ],
+    "cultural_theme": "Berliner Mauer - Berlin Wall history",
+    "cultural_note": "Theme: Berliner Mauer - Berlin Wall history"
+  },
+  {
+    "id": "d-b2-65",
+    "level": "B2",
+    "titleDe": "Podiumsdiskussion: KI im Unterricht (Neu 65)",
+    "titleAr": "حوار منصّة: الذكاء الاصطناعي في التعليم (جديد 65)",
+    "lines": [
+      {
+        "who": "Moderation",
+        "de": "Dürfen KI-Werkzeuge den Unterricht ersetzen?",
+        "ar": "هل يجوز أن تستبدل أدوات الذكاء الاصطناعي التعليم؟"
+      },
+      {
+        "who": "Prof. Weber",
+        "de": "Einen Lehrer zu ersetzen, wäre ein Kategorienfehler. KI kann vorbereiten, aber nicht erziehen.",
+        "ar": "استبدال المعلّم خطأ مفاهيمي. الذكاء الاصطناعي يستطيع التحضير لكنه لا يربّي."
+      },
+      {
+        "who": "Dr. Saleh",
+        "de": "Dem stimme ich zu, sofern man KI als Werkzeug begreift.",
+        "ar": "أوافق على ذلك بشرط فهم الذكاء الاصطناعي كأداة."
+      },
+      {
+        "who": "Moderation",
+        "de": "Wo liegt die größte Gefahr?",
+        "ar": "أين يكمن أكبر خطر؟"
+      },
+      {
+        "who": "Dr. Saleh",
+        "de": "In der Abhängigkeit: Wer nur noch Ergebnisse konsumiert, verlernt das Denken.",
+        "ar": "في الاعتماد: من يستهلك النتائج فقط يفقد القدرة على التفكير."
+      },
+      {
+        "who": "Prof. Weber",
+        "de": "Genau darum brauchen wir Urteilskraft als Lernziel.",
+        "ar": "لهذا السبب تحديداً نحتاج «القدرة على الحكم» كهدف تعلّمي."
+      }
+    ],
+    "questions": [
+      {
+        "id": "d-b2-65-q1",
+        "type": "mc",
+        "promptDe": "Was ist laut Prof. Weber ein Kategorienfehler?",
+        "options": [
+          "KI als Werkzeug zu begreifen",
+          "Urteilskraft als Lernziel",
+          "den Lehrer durch KI zu ersetzen"
+        ],
+        "answer": "den Lehrer durch KI zu ersetzen",
+        "explanationAr": "الدليل: «Einen Lehrer zu ersetzen, wäre ein Kategorienfehler». الفخّ 1: «Werkzeug» شرط د. صالح للموافقة. الفخّ 2: «Urteilskraft» هو ما يطالب به فيبر لا ما ينتقده.",
+        "falle": true,
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+      },
+      {
+        "id": "d-b2-65-q2",
+        "type": "fill",
+        "promptDe": "Die größte Gefahr liegt in der ___.",
+        "answer": [
+          "Abhängigkeit"
+        ],
+        "explanationAr": "الاعتماد/الإدمان.",
+        "promptAr": "أكمل الفراغ بالكلمة المناسبة من الحوار."
+      }
+    ],
+    "dictation": [
+      "Einen Lehrer zu ersetzen, wäre ein Kategorienfehler.",
+      "Wer nur noch Ergebnisse konsumiert, verlernt das Denken.",
+      "Wir brauchen Urteilskraft als Lernziel."
+    ],
+    "cultural_theme": "Bildung & KI",
+    "cultural_note": "Die Kultusministerkonferenz empfiehlt, KI als Werkzeug zu lehren, nicht zu verbieten: Plagiatsprüfung, Quellenkritik und Datenschutz (DSGVO) gehören in die Unterrichtsplanung. Weil Schulen Landeshoheit haben, obwohl Lehrpläne bundesweit verglichen werden, unterscheiden sich Regeln je nach Bundesland. Typisch ist die schulinterne KI-Leitlinie mit Eltern-Infoabend.",
+    "culturalNoteAr": "توصي مؤتمر وزراء التعليم بتدريس الذكاء أداةً لا حظراً: فحص الانتحال ونقد المصادر وحماية البيانات. لاختلاف الولايات تختلف القواعد."
+  },
+  {
+    "id": "d-b2-66",
+    "level": "B2",
+    "titleDe": "Vertragsverhandlung (Neu 66)",
+    "titleAr": "تفاوض على العقد (جديد 66)",
+    "lines": [
+      {
+        "who": "Einkäufer",
+        "de": "Die von Ihnen angebotenen Konditionen decken unsere Kosten kaum.",
+        "ar": "الشروط التي عرضتموها بالكاد تغطي تكاليفنا."
+      },
+      {
+        "who": "Anbieter",
+        "de": "Angesichts der Marktlage halten wir unser Angebot für fair.",
+        "ar": "في ضوء وضع السوق نعتبر عرضنا عادلاً."
+      },
+      {
+        "who": "Einkäufer",
+        "de": "Sofern Sie die Lieferfrist verkürzen, wären wir zu 5 Prozent mehr bereit.",
+        "ar": "بشرطِ أن تختصروا مهلةَ التسليم نكون مستعدين لدفع خمسةٍ بالمئة زيادةً."
+      },
+      {
+        "who": "Anbieter",
+        "de": "Einverstanden, unter der Bedingung einer längeren Vertragslaufzeit.",
+        "ar": "مقبول، بشرط مدة عقد أطول."
+      },
+      {
+        "who": "Einkäufer",
+        "de": "Das können wir prüfen. Dann machen wir nächste Woche weiter.",
+        "ar": "يمكننا دراسة ذلك. نكمل الأسبوع القادم."
+      }
+    ],
+    "questions": [
+      {
+        "id": "d-b2-66-q1",
+        "type": "fill",
+        "promptDe": "Sofern Sie die Lieferfrist verkürzen, wären wir zu 5 ___ mehr bereit.",
+        "answer": [
+          "Prozent",
+          "prozent"
+        ],
+        "explanationAr": "«zu 5 Prozent mehr» — النسبة تُكتب Prozent.",
+        "promptAr": "أكمل الفراغ بالكلمة المناسبة من الحوار."
+      },
+      {
+        "id": "d-b2-66-q2",
+        "type": "mc",
+        "promptDe": "Was ist die Bedingung des Anbieters?",
+        "options": [
+          "eine längere Vertragslaufzeit",
+          "eine kürzere Lieferfrist",
+          "5 Prozent mehr"
+        ],
+        "answer": "eine längere Vertragslaufzeit",
+        "explanationAr": "الدليل: «unter der Bedingung einer längeren Vertragslaufzeit». الفخّ 1: تقصير مدّة التسليم شرط المشتري. الفخّ 2: الـ5٪ عرض المشتري مقابل ذلك الشرط.",
+        "falle": true,
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+      }
+    ],
+    "dictation": [
+      "Angesichts der Marktlage halten wir unser Angebot für fair.",
+      "Sofern Sie die Lieferfrist verkürzen, wären wir zu 5 Prozent mehr bereit.",
+      "Unter der Bedingung einer längeren Vertragslaufzeit."
+    ],
+    "cultural_theme": "Ostern - Easter celebrations",
+    "cultural_note": "Theme: Ostern - Easter celebrations"
+  },
+  {
+    "id": "d-b2-67",
+    "level": "B2",
+    "titleDe": "Im Seminar (Neu 67)",
+    "titleAr": "في الحلقة الدراسية (جديد 67)",
+    "lines": [
+      {
+        "who": "Dozentin",
+        "de": "Frau Haddad, wie bewerten Sie diese Studie?",
+        "ar": "سيدة حداد، كيف تقيّمون هذه الدراسة؟"
+      },
+      {
+        "who": "Layla",
+        "de": "Methodisch stark, aber die Stichprobe ist zu klein.",
+        "ar": "منهجياً قوية، لكن العيّنة صغيرة جداً."
+      },
+      {
+        "who": "Dozentin",
+        "de": "Inwiefern ist das ein Problem?",
+        "ar": "بأي اعتبار هذا مشكلة؟"
+      },
+      {
+        "who": "Layla",
+        "de": "Die Ergebnisse lassen sich kaum verallgemeinern.",
+        "ar": "بالكاد يمكن تعميم النتائج."
+      },
+      {
+        "who": "Dozentin",
+        "de": "Guter Punkt. Könnten Sie das im Paper vertiefen?",
+        "ar": "نقطة جيدة. هل يمكنكم التعمق في ذلك في الورقة؟"
+      },
+      {
+        "who": "Layla",
+        "de": "Ja, ich ergänze einen Abschnitt über die Grenzen der Forschung.",
+        "ar": "نعم، سأضيف قسماً عن حدود البحث."
+      }
+    ],
+    "questions": [
+      {
+        "id": "d-b2-67-q1",
+        "type": "mc",
+        "promptDe": "Was kritisiert Layla?",
+        "options": [
+          "die Methode der Studie",
+          "die Verallgemeinerung durch die Dozentin",
+          "den fehlenden Abschnitt im Paper",
+          "die zu kleine Stichprobe"
+        ],
+        "answer": "die zu kleine Stichprobe",
+        "explanationAr": "الدليل: «Methodisch stark, aber die Stichprobe ist zu klein». الفخّ 1: المنهج مدحته. الفخّ 2: التعميم مشكلةٌ في الدراسة لا فعل الأستاذة. الفخّ 3: القسم الناقص هو ما ستضيفه هي.",
+        "falle": true,
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+      },
+      {
+        "id": "d-b2-67-q2",
+        "type": "mc",
+        "promptDe": "Was wird Layla ergänzen?",
+        "options": [
+          "einen Abschnitt über die Grenzen der Forschung",
+          "eine größere Stichprobe",
+          "eine Kritik an der Methode",
+          "eine Bewertung der Dozentin"
+        ],
+        "answer": "einen Abschnitt über die Grenzen der Forschung",
+        "explanationAr": "الدليل: «ich ergänze einen Abschnitt über die Grenzen der Forschung». الفخّ 1: العيّنة الصغيرة هي ما انتقدت لا ما ستضيف. الفخّ 2: المنهج قوي في رأيها. الفخّ 3: الأستاذة هي من تسأل عن التقييم.",
+        "falle": true,
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+      }
+    ],
+    "dictation": [
+      "Methodisch stark, aber die Stichprobe ist zu klein.",
+      "Die Ergebnisse lassen sich kaum verallgemeinern."
+    ],
+    "cultural_theme": "Umwelt - Environmental awareness",
+    "cultural_note": "Theme: Umwelt - Environmental awareness"
+  },
+  {
+    "id": "d-b2-68",
+    "level": "B2",
+    "titleDe": "Das Vorstellungsgespräch (Neu 68)",
+    "titleAr": "مقابلة العمل (جديد 68)",
+    "lines": [
+      {
+        "who": "Personalchefin",
+        "de": "Warum haben Sie sich bei uns beworben?",
+        "ar": "لماذا تقدّمتم للعمل عندنا؟"
+      },
+      {
+        "who": "Sami",
+        "de": "Ihre Firma arbeitet an nachhaltigen Projekten – genau das interessiert mich.",
+        "ar": "شركتكم تعمل على مشاريع مستدامة — وهذا ما يهمّني تحديداً."
+      },
+      {
+        "who": "Personalchefin",
+        "de": "Was ist Ihre größte Stärke?",
+        "ar": "ما أكبر نقاط قوّتكم؟"
+      },
+      {
+        "who": "Sami",
+        "de": "Ich arbeite strukturiert und bleibe auch unter Druck ruhig.",
+        "ar": "أعمل بتنظيم وأبقى هادئاً حتى تحت الضغط."
+      },
+      {
+        "who": "Personalchefin",
+        "de": "Haben Sie Fragen an uns?",
+        "ar": "هل لديكم أسئلة لنا؟"
+      },
+      {
+        "who": "Sami",
+        "de": "Ja: Wie sieht die Einarbeitung in den ersten Wochen aus?",
+        "ar": "نعم: كيف تبدو فترة التهيئة في الأسابيع الأولى؟"
+      }
+    ],
+    "questions": [
+      {
+        "id": "d-b2-68-q1",
+        "type": "mc",
+        "promptDe": "Warum hat sich Sami beworben?",
+        "options": [
+          "wegen der Einarbeitung in den ersten Wochen",
+          "wegen der nachhaltigen Projekte",
+          "weil er unter Druck ruhig bleibt",
+          "wegen der Personalchefin"
+        ],
+        "answer": "wegen der nachhaltigen Projekte",
+        "explanationAr": "الدليل: «Ihre Firma arbeitet an nachhaltigen Projekten – genau das interessiert mich». الفخّ 1: الـEinarbeitung سؤاله في النهاية. الفخّ 2: الهدوء تحت الضغط جواب سؤال آخر (نقطة قوّته).",
+        "falle": true,
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+      },
+      {
+        "id": "d-b2-68-q2",
+        "type": "mc",
+        "promptDe": "Was ist seine größte Stärke laut Text?",
+        "options": [
+          "Interesse an Nachhaltigkeit",
+          "schnelle Einarbeitung",
+          "strukturiertes Arbeiten und Ruhe unter Druck",
+          "dass er viele Fragen stellt"
+        ],
+        "answer": "strukturiertes Arbeiten und Ruhe unter Druck",
+        "explanationAr": "الدليل: «Ich arbeite strukturiert und bleibe auch unter Druck ruhig». الفخّ 1: الاستدامة سبب تقدّمه لا قوّته. الفخّ 2: الـEinarbeitung شيء يسأل عنه.",
+        "falle": true,
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+      }
+    ],
+    "dictation": [
+      "Was ist Ihre größte Stärke?",
+      "Ich arbeite strukturiert und bleibe auch unter Druck ruhig."
+    ],
+    "cultural_theme": "Bewerbung & Arbeit",
+    "cultural_note": "Das Vorstellungsgespräch folgt oft dem STAR-Schema: Situation, Aufgabe, Aktion, Ergebnis. Personaler achten auf Lücken im Lebenslauf und fragen nach Gehaltswunsch brutto jährlich. Weil Zeugnisse Formulierungen wie „stets zur vollen Zufriedenheit“ codiert nutzen, obwohl Noten fehlen, lohnt ein Blick in Zeugnissprache. Typisch ist die Gehaltsbande statt fixer Zahl.",
+    "culturalNoteAr": "مقابلة العمل تتبع نموذج STAR: وضع ومهمة وفعل ونتيجة. يهتمون بفجوات السيرة وسؤال الراتب السنوي الإجمالي. الشهادات تستخدم ترميزاً لغوياً."
+  },
+  {
+    "id": "d-b2-69",
+    "level": "B2",
+    "titleDe": "Vorstellungsgespräch: Gehalt verhandeln (Neu 69)",
+    "titleAr": "مقابلةُ عمل: مفاوضةُ الأجر (جديد 69)",
+    "lines": [
+      {
+        "who": "Youssef",
+        "de": "Danke, dass Sie sich die Zeit nehmen — Ihre Stelle interessiert mich sehr.",
+        "ar": "شكراً على وقتكم — وظيفتُكم تهمُّني للغاية."
+      },
+      {
+        "who": "Personalchefin",
+        "de": "Ebenso. Was schwebt Ihnen tariflich vor?",
+        "ar": "وكذلك. وما الأجرُ الذي يخطرُ ببالكم؟"
+      },
+      {
+        "who": "Youssef",
+        "de": "Angesichts meiner Erfahrung käme ich auf 48.000 Euro brutto.",
+        "ar": "في ضوءِ خبرتي، أبلغُ 48.000 يورو إجماليّاً (ثمانيةً وأربعين ألفاً)."
+      },
+      {
+        "who": "Personalchefin",
+        "de": "Das liegt über unserem Rahmen; 45.000 plus variabler Anteil wäre verhandelbar.",
+        "ar": "هذا يفوقُ نطاقَنا؛ خمسةٌ وأربعون ألفاً زائدُ حصةٍ متغيّرةٍ قابلٌ للتفاوض."
+      },
+      {
+        "who": "Youssef",
+        "de": "Auf der Zahl bestehe ich nicht — aber die Weiterbildungszeit zähle ich als Leistung.",
+        "ar": "لستُ مُصمِّماً على الرقم — لكني أَعُدُّ وقتَ تدريبي أداءً."
+      },
+      {
+        "who": "Personalchefin",
+        "de": "Fair. Dann 45.500, zwei Tage Homeoffice und 400 Euro Weiterbildungsbudget.",
+        "ar": "منصِف. إذن 45.500 يورو، ويوما عملٍ منزليٍّ، و400 يورو ميزانيةَ تدريب."
+      },
+      {
+        "who": "Youssef",
+        "de": "Sofern der Vertrag die Probezeit auf drei Monate begrenzt, haben wir eine Übereinkunft.",
+        "ar": "بشرطِ ألّا تتجاوزَ فترةُ التجربةِ في العقدِ ثلاثةَ أشهر، نكونُ قد اتفقنا."
+      },
+      {
+        "who": "Personalchefin",
+        "de": "Abgemacht — die Zusage bekommen Sie schriftlich morgen Vormittag.",
+        "ar": "تمّ — سيصلُكم التعهدُ خطياً غدًا صباحاً."
+      }
+    ],
+    "questions": [
+      {
+        "id": "d-b2-69-q1",
+        "type": "mc",
+        "promptDe": "Wie endet die Verhandlung?",
+        "options": [
+          "48.000 Euro, wie Youssef gefordert hat",
+          "45.000 Euro plus variabler Anteil",
+          "45.500 Euro mit Homeoffice und Weiterbildungsbudget"
+        ],
+        "answer": "45.500 Euro mit Homeoffice und Weiterbildungsbudget",
+        "explanationAr": "الدليل: «Dann 45.500, zwei Tage Homeoffice und 400 Euro Weiterbildungsbudget» ثم «Abgemacht». الفخّ 1: 48.000 مطلبه الأوّل الذي لم يُصرّ عليه. الفخّ 2: 45.000 + variabel العرض الأوّل قبل التحسين.",
+        "falle": true,
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+      },
+      {
+        "id": "d-b2-69-q2",
+        "type": "mc",
+        "promptDe": "Was fordert Youssef als Bedingung?",
+        "options": [
+          "eine Probezeit von höchstens drei Monaten",
+          "zwei Tage Homeoffice",
+          "dass die Weiterbildungszeit bezahlt wird"
+        ],
+        "answer": "eine Probezeit von höchstens drei Monaten",
+        "explanationAr": "الدليل: «Sofern der Vertrag die Probezeit auf drei Monate begrenzt». الفخّ 1: الهوم أوفيس عرض من الرئيسة لا شرط منه. الفخّ 2: وقت التكوين يريده أن يُحتسب «als Leistung» لا أن يُدفع.",
+        "falle": true,
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+      },
+      {
+        "id": "d-b2-69-q3",
+        "type": "mc",
+        "promptDe": "Was wird schriftlich fixiert?",
+        "options": [
+          "nur die Zahl 45.500 Euro",
+          "die Zusage über den gesamten Kompromiss",
+          "der variable Anteil"
+        ],
+        "answer": "die Zusage über den gesamten Kompromiss",
+        "explanationAr": "الدليل: «die Zusage bekommen Sie schriftlich morgen Vormittag» بعد الاتفاق على الكلّ. الفخّ: الجزء المتغيّر كان في العرض الأوّل الذي استُبدل.",
+        "falle": true,
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+      }
+    ],
+    "dictation": [
+      "Auf der Zahl bestehe ich nicht — aber die Weiterbildungszeit zähle ich als Leistung.",
+      "Sofern der Vertrag die Probezeit auf drei Monate begrenzt, haben wir eine Übereinkunft."
+    ],
+    "cultural_theme": "Umwelt - Environmental awareness",
+    "cultural_note": "Theme: Umwelt - Environmental awareness"
   }
 ]
