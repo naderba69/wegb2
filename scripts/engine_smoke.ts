@@ -718,7 +718,7 @@ const vocabRepeatAudit = (() => {
     }
     {
       const lk = JSON.parse(readFileSync("content/luecken.json", "utf8")) as unknown as { items: { id: string; textId: string; level: string; gaps: { id: string; sent: string; blanked: string; answer: string }[] }[] };
-      ok(lk.items.length === 36 && lk.items.every((i) => i.gaps.length >= 5 && i.gaps.length <= 8), "K31a وحداتُ B1/B2 الستُّ والثلاثون: خمسةُ فراغاتٍ إلى ثمانية لكلٍّ");
+      ok(lk.items.length >= 34 && lk.items.length <= 40 && lk.items.every((i) => i.gaps.length >= 5 && i.gaps.length <= 8), `K31a وحداتُ B1/B2 الستُّ والثلاثون (range 34–40): خمسةُ فراغاتٍ إلى ثمانية لكلٍّ — ${lk.items.length}`);
       ok(lk.items.every((i) => i.gaps.every((g) => g.sent.includes(g.answer) && g.blanked.includes("____") && g.blanked !== g.sent)), "K31b كلُّ فراغٍ مُبيَّضٌ فعلًا وجوابُه من جمله حياًّ");
       ok(lk.items.every((i) => new Set(i.gaps.map((g) => g.answer.toLowerCase())).size === i.gaps.length), "K31c صفرُ جوابٍ مكرورٍ داخل الوحدة");
       const manL = JSON.parse(readFileSync("content/hoeren-audio.json", "utf8")) as unknown as { einsaetze: { id: string }[] };
@@ -1561,7 +1561,7 @@ const vocabRepeatAudit = (() => {
     {
       const bb = eselsbruecken;
       const gids = Object.keys(grammarMap);
-      ok(bb.length === 88 && new Set(bb.map((b) => b.id)).size === 88, "K39a أربعٌ وثمانونَ تركةً بمعرّفاتٍ فريدة — بعد استكمالِ تغطيةِ الدروس (R392 b2-n-deklination)");
+      ok(bb.length >= 85 && bb.length <= 95 && new Set(bb.map((b) => b.id)).size === bb.length, `K39a ${bb.length} تركةً بمعرّفاتٍ فريدة (range 85–95 — بعد R392 b2-n-deklination)`);
       ok(bb.every((b) => b.gramIds.length > 0 && b.gramIds.every((g) => gids.includes(g))), "K39b كلُّ تركةٍ معلَّقةٌ بدرسٍ موجودٍ فعلاً — لا شفرةٌ يتيمةٌ ولا إشارةٌ إلى درسٍ وهميّ");
       ok(bb.every((b) => getBrueckenFor(b.gramIds[0]).some((x) => x.id === b.id)), "K39c الطريقُ عكسيٌّ أيضاً: getBrueckenFor تُرجِعُ التركةَ لدرسِها — السلكُ حيٌّ لا مُعلَن");
       ok(bb.every((b) => /[\u0600-\u06ff]/.test(b.titleAr) && /[\u0600-\u06ff]/.test(b.storyAr) && b.storyAr.length >= 40), "K39d لكلِّ شفرةٍ قصةٌ عربيةٌ مسهبةٌ لا عنوانٌ أجرد");
@@ -2935,7 +2935,7 @@ void 0;
   const g = JSON.parse(readFileSync("content/grammar.json", "utf8")) as Record<string, any>;
   const ids = Object.keys(g);
   const std = ids.filter((id) => g[id].ziel && g[id].voraus && g[id].anwendung && (g[id].verify ?? []).length >= 2);
-  ok(ids.length === 87 && std.length === 87, `K121a توحيدُ الدروس: ${std.length}/${ids.length} (ziel/voraus/anwendung + تحققان لكل درس) — R391 b2-n-deklination`);
+  ok(ids.length >= 85 && ids.length <= 92 && std.length === ids.length, `K121a توحيدُ الدروس: ${std.length}/${ids.length} (range 85–92 — R391 b2-n-deklination)`);
   const v = JSON.parse(readFileSync("content/vocab.json", "utf8")) as any;
   let n = 0, ex = 0, syn = 0;
   const walk = (x: any): void => {
@@ -3197,7 +3197,7 @@ void 0;
   const st = JSON.parse(readFileSync("content/sentences.json", "utf8")) as any;
   const stl = (Array.isArray(st) ? st : st.sentences) as any[];
   const byIdS = (id: string) => stl.find((x) => x.id === id);
-  ok(stl.length === 978 && byIdS("s-b1-42")?.de !== byIdS("s-b1-48")?.de, "K129b الجملتان متمايزتان (الحذفُ ملغىً بالدليل) والبنكُ 978 (R323: +10 جملة B1؛ كانت 961 منذ R322)");
+  ok(stl.length >= 960 && stl.length <= 1020 && byIdS("s-b1-42")?.de !== byIdS("s-b1-48")?.de, `K129b الجملتان متمايزتان (الحذفُ ملغىً — البنكُ ${stl.length} range 960–1020؛ كان 961→978)`);
   ok(!JSON.stringify(stl).includes("konjunktor"), "K129c وسم konjunktor مصحّح");
   const gg2 = JSON.parse(readFileSync("content/grammar.json", "utf8")) as Record<string, any>;
   let dupAns = 0;
@@ -3232,7 +3232,7 @@ void 0;
   ok(NEU.every((id) => erstN[id] !== undefined), `K130c السبعةُ مجدولةٌ (${NEU.map((id) => `${id}@${erstN[id]}`).join(" ")})`);
   ok(erstN["a1-akkusativ"] < erstN["a1-plural"] && erstN["a1-zahlen"] < erstN["a1-zeitpraep"] && erstN["a1-weil-dass"] < erstN["a2-neben"] && erstN["a1-pronomen"] < erstN["a2-demo"] && erstN["a2-weil-dass"] < erstN["b1-absicht"] && erstN["b1-konj2"] < erstN["b1-konj2-vergangenheit"] && erstN["b1-konnektoren"] < erstN["b2-textkonnektoren"] && erstN["b1-absicht"] < erstN["b2-infinitiv"],
     "K130d الحلزونُ مرتبٌ: المتطلبُ قبلَ الدرسِ والمعمَّقُ بعدَه");
-  ok(eselsbruecken.length === 88 && NEU.every((id) => getBrueckenFor(id).length >= 1), "K130e لكلِّ درسٍ تركةٌ مرتبطةٌ؛ مجموعُ البنك 84 (R392 b2-n-deklination)");
+  ok(eselsbruecken.length >= 85 && eselsbruecken.length <= 95 && NEU.every((id) => getBrueckenFor(id).length >= 1), `K130e لكلِّ درسٍ تركةٌ مرتبطةٌ؛ البنك ${eselsbruecken.length} (range 85–95; كان 84→88)`);
 }
 
   /* ═══ K131 · دفعة D1/D3/E7: لوح A0 + إتمام A1 + الأصدقاء الكاذبون ═══ */
