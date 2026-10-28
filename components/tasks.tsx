@@ -1327,7 +1327,7 @@ function PartnerSim(){
     <div style={{display:"grid", gap:"0.6rem"}}>
       <div style={{display:"flex", gap:"0.4rem", flexWrap:"wrap"}}>
         {PARTNER_THEMEN.map(t=>(
-          <button key={t.id} className="chip" style={{background: themaId===t.id ? "var(--color-mid)" : "var(--ui-surface-raised)", color: themaId===t.id ? "var(--ui-on-accent)" : undefined, minHeight:"36px"}} onClick={()=>{setThemaId(t.id); setChoice(null);}}>{t.thema}</button>
+          <button key={t.id} className="chip" style={{background: themaId===t.id ? "var(--color-mid)" : "var(--ui-surface-raised)", color: themaId===t.id ? "var(--ui-on-accent)" : undefined, minHeight:"44px"}} onClick={()=>{setThemaId(t.id); setChoice(null);}}>{t.thema}</button>
         ))}
       </div>
       <div style={{padding:"0.6rem 0.8rem", background:"var(--color-paper)", borderRadius:"8px", borderInlineStart:"4px solid var(--color-mid)"}}>
@@ -1337,7 +1337,7 @@ function PartnerSim(){
       </div>
       <div style={{display:"flex", gap:"0.4rem", flexWrap:"wrap"}}>
         {Object.keys(thema.antworten).map(c=>(
-          <button key={c} className="chip" style={{border: choice===c ? "2px solid var(--color-mid)" : undefined, minHeight:"36px"}} onClick={()=>setChoice(c)}>{c}</button>
+          <button key={c} className="chip" style={{border: choice===c ? "2px solid var(--color-mid)" : undefined, minHeight:"44px"}} onClick={()=>setChoice(c)}>{c}</button>
         ))}
       </div>
       {botReply && <div style={{padding:"0.6rem 0.8rem", background:"var(--color-paper2)", borderRadius:"8px"}}><strong>Bot:</strong> <span lang="de" dir="ltr">{botReply}</span></div>}
@@ -1347,7 +1347,7 @@ function PartnerSim(){
           {Object.entries(RUBRIK_LABEL).map(([k,label])=>(
             <label key={k} style={{display:"flex", flexDirection:"column", gap:"0.2rem", fontSize:"0.8rem"}}>
               <span>{label.de} — {label.ar}: <strong>{(rubrik as any)[k]}/5</strong></span>
-              <input type="range" min={0} max={5} step={1} value={(rubrik as any)[k]} onChange={e=> setRubrik(r=> ({...r, [k]: Number(e.target.value)}))} />
+              <input type="range" min={0} max={5} step={1} value={(rubrik as any)[k]} onChange={e=> setRubrik(r=> ({...r, [k]: Number(e.target.value)}))} style={{ minHeight: "44px" }} />
             </label>
           ))}
         </div>
