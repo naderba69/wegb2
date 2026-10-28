@@ -15,6 +15,7 @@ import { isDue } from "@/lib/srs";
 import { entdeckungsFrage, induktionMoeglich, ergebnisText, type EntdeckungsErgebnis } from "@/lib/induktion";
 import { speakAny } from "@/lib/speech";
 import { useProgress, planeVerifikation } from "@/lib/store";
+import Image from "next/image";
 import { De } from "@/components/De";
 import ExerciseSet, { type ExerciseProgress } from "@/components/exercises";
 import { ggpForTopic } from "@/lib/ggp";
@@ -360,7 +361,7 @@ function LektionWizardContent({ topicId }: { topicId: string }) {
           )}
           {/* Lesson Studio — مشهد بصري (60 JPG + 60 SVG Verlag — 100%) */}
           <div data-testid="wizard-scene-image" style={{ marginTop: "0.2rem", borderRadius: "0.8rem", overflow: "hidden", border: "1px solid var(--color-line)", background: "var(--color-paper)" }}>
-            <img src={`/lesson-images/${topic.id}.jpg`} alt={`مشهد ${topic.titleDe}`} loading="lazy" onError={(e) => { const img = e.currentTarget as HTMLImageElement; if (!img.dataset.triedSvg) { img.dataset.triedSvg = "1"; img.src = `/lesson-images/${topic.id}.svg`; return; } img.style.display = "none"; const fallback = document.getElementById(`fallback-${topic.id}`); if (fallback) fallback.style.display = "flex"; }} style={{ width: "100%", height: "auto", display: "block", maxHeight: "220px", objectFit: "cover" }} />
+            <Image src={`/lesson-images/${topic.id}.jpg`} alt={`مشهد ${topic.titleDe}`} width={700} height={220} sizes="(max-width: 768px) 100vw, 700px" style={{ width: "100%", height: "auto", display: "block", maxHeight: "220px", objectFit: "cover" }} onError={(e) => { const img = e.currentTarget as HTMLImageElement; if (!img.dataset.triedSvg) { img.dataset.triedSvg = "1"; img.src = `/lesson-images/${topic.id}.svg`; return; } img.style.display = "none"; const fallback = document.getElementById(`fallback-${topic.id}`); if (fallback) fallback.style.display = "flex"; }} />
             <div id={`fallback-${topic.id}`} style={{ display: "none", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "0.3rem", padding: "1.2rem", background: "linear-gradient(135deg, #FFFCF0 0%, #FDF8E8 100%)", border: "1px dashed rgb(212 193 143 / 0.5)", borderRadius: "0.6rem", textAlign: "center" }}>
               <span style={{ fontSize: "1.6rem" }}>🏛️</span>
               <span style={{ fontWeight: 800, fontSize: "0.85rem", color: "#113A5F" }} dir="ltr">{topic.titleDe}</span>

@@ -6,6 +6,7 @@ import { POS_AR } from "@/lib/types";
 import { eselsbruecken, getBrueckenFor, getBrueckenForWort, getGrammar, sprichwortSrc, getDeck, getText, leseText, getDialogue, getWriting, getSatz, getMnemonik, candoMap, vocabMap, deFormOf, partnerKarten, kontaktKarten, muendlich } from "@/lib/content";
 import { PARTNER_THEMEN, bewerteRubrik, RUBRIK_LABEL } from "@/lib/sprechen-rubrik";
 import { kollokationenFuer, kollokationUebung } from "@/lib/kollokationen";
+import Image from "next/image";
 import { WortLinkText } from "./wortlink";
 import { newCard, reviewCard, isDue, newCardCap, countNewCardsIntroducedToday, wasIntroducedToday, karteStufe, KARTENSTUFE_AR } from "@/lib/srs";
 import { genusCode } from "@/lib/genus";
@@ -727,9 +728,13 @@ function VocabTask({ task, srs, onSrs, onPoints, voiceName, rate, tempo = "regel
               // alt="" مقصودة: الصورة إيضاح بصريّ مرافق للكلمة المعروضة نصًّا أسفلها مباشرة
               // داخل نفس الزرّ — تكرار النطق عبر alt يُضاعف اسم الزرّ لقارئ الشاشة (axe-core
               // image-redundant-alt، R305/ب10)، والزرّ نفسه يحمل aria-label واضحًا بالفعل.
-              <img
+              // P1 perf/cards-278MB → next/image + sizes + lazy (LCP 4.2s → <1.5s)
+              <Image
                 src={card.img}
                 alt=""
+                width={230}
+                height={150}
+                sizes="(max-width: 768px) 100vw, 230px"
                 onError={(e) => {
                   (e.currentTarget as HTMLImageElement).style.display = "none";
                 }}
