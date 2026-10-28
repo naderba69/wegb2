@@ -66269,7 +66269,7 @@
         "tags": [
           "gefuehle"
         ],
-        "exampleDe": "Vor der Prüfung spannt er sich an.",
+        "exampleDe": "Vor der Prüfung spannt er sich an → sich anspannen.",
         "exampleAr": "قبل الام…",
         "posInfo": "spannt an, spannte an, hat angespannt"
       },
@@ -66295,7 +66295,7 @@
         "tags": [
           "gefuehle"
         ],
-        "exampleDe": "Er beneidet ihn um sein ruhiges Leben.",
+        "exampleDe": "Er beneidet ihn um sein ruhiges Leben → beneiden.",
         "exampleAr": "يحسده عل…",
         "posInfo": "beneidet, beneidete, hat beneidt"
       },
@@ -66308,7 +66308,7 @@
         "tags": [
           "gefuehle"
         ],
-        "exampleDe": "Ich bewundere deine Geduld.",
+        "exampleDe": "Ich bewundere deine Geduld → bewundern.",
         "exampleAr": "أُعجب بص…",
         "posInfo": "bewundet, bewundete, hat bewundern"
       },
@@ -66321,7 +66321,7 @@
         "tags": [
           "gefuehle"
         ],
-        "exampleDe": "Er verachtet Lüge und Verrat.",
+        "exampleDe": "Er verachtet Lüge und Verrat → verachten.",
         "exampleAr": "يحتقر ال…",
         "posInfo": "verachtet, verachtete, hat verachtt"
       },
@@ -66360,7 +66360,7 @@
         "tags": [
           "gefuehle"
         ],
-        "exampleDe": "Er verliebte sich beim ersten Treffen.",
+        "exampleDe": "Er verliebte sich beim ersten Treffen → sich verlieben.",
         "exampleAr": "وقع في ا…",
         "posInfo": "verliebt, verliebte, hat verliebt"
       },
@@ -66373,7 +66373,7 @@
         "tags": [
           "gefuehle"
         ],
-        "exampleDe": "Sie kommt mit allen Kollegen gut aus.",
+        "exampleDe": "Sie kommt mit allen Kollegen gut aus → auskommen mit.",
         "exampleAr": "تنسجم مع…",
         "posInfo": "kommt aus, kommte aus, ist ausgekommt"
       },
@@ -66386,7 +66386,7 @@
         "tags": [
           "gefuehle"
         ],
-        "exampleDe": "Sie versteht sich gut mit ihm.",
+        "exampleDe": "Sie versteht sich gut mit ihm → sich verstehen mit.",
         "exampleAr": "تتفاهم م…",
         "posInfo": "versteht, verstehte, hat versteht"
       },
@@ -66903,7 +66903,7 @@
         "tags": [
           "stadt"
         ],
-        "exampleDe": "Er verpasste den Zug um zwei Minuten.",
+        "exampleDe": "Er verpasste den Zug um zwei Minuten → verpassen.",
         "exampleAr": "فوّت الق…",
         "posInfo": "verpasst, verpasste, hat verpasst"
       },
@@ -66929,7 +66929,7 @@
         "tags": [
           "stadt"
         ],
-        "exampleDe": "Die Verspätung wurde durchgesagt.",
+        "exampleDe": "Die Verspätung wurde durchgesagt → durchsagen.",
         "exampleAr": "أُذيع ال…",
         "posInfo": "sagt durch, sagte durch, hat durchgesagt"
       },
@@ -66955,7 +66955,7 @@
         "tags": [
           "stadt"
         ],
-        "exampleDe": "Der Lkw überholt langsam den Bus.",
+        "exampleDe": "Der Lkw überholt langsam den Bus → überholen.",
         "exampleAr": "تتجاوز ا…",
         "posInfo": "holt über, holte über, hat überholt"
       },
@@ -66981,7 +66981,7 @@
         "tags": [
           "stadt"
         ],
-        "exampleDe": "Das Auto beschleunigt sehr schnell.",
+        "exampleDe": "Das Auto beschleunigt sehr schnell → beschleunigen.",
         "exampleAr": "تُسرع ال…",
         "posInfo": "beschleunigt, beschleunigte, hat beschleunigt"
       },
@@ -66994,7 +66994,7 @@
         "tags": [
           "stadt"
         ],
-        "exampleDe": "An der Kreuzung biegst du links ab.",
+        "exampleDe": "An der Kreuzung biegst du links ab → abbiegen.",
         "exampleAr": "عند التق…",
         "posInfo": "biegt ab, biegte ab, hat abgebiegt"
       },
@@ -67033,7 +67033,7 @@
         "tags": [
           "stadt"
         ],
-        "exampleDe": "Sie storniert die Buchung kostenlos.",
+        "exampleDe": "Sie storniert die Buchung kostenlos → stornieren.",
         "exampleAr": "تلغي الح…",
         "posInfo": "storniert, stornierte, hat gestorniert"
       },
@@ -67750,7 +67750,7 @@
         "tags": [
           "meinung"
         ],
-        "exampleDe": "Wir sehen den Kurs als große Chance an.",
+        "exampleDe": "Wir sehen den Kurs als große Chance an → ansehen als.",
         "exampleAr": "نرى الدو…",
         "posInfo": "seht an, sehte an, hat angeseht"
       },
@@ -67763,7 +67763,7 @@
         "tags": [
           "meinung"
         ],
-        "exampleDe": "Er betrachtet das als Fehler.",
+        "exampleDe": "Er betrachtet das als Fehler → betrachten als.",
         "exampleAr": "يعدّ ذلك…",
         "posInfo": "betrachtet, betrachtete, hat betrachtt"
       },
@@ -67776,7 +67776,7 @@
         "tags": [
           "meinung"
         ],
-        "exampleDe": "Ich halte ihn für ehrlich.",
+        "exampleDe": "Ich halte ihn für ehrlich → halten für.",
         "exampleAr": "أراه صاد…",
         "posInfo": "haltet, haltete, hat gehaltt"
       },
@@ -67789,7 +67789,7 @@
         "tags": [
           "meinung"
         ],
-        "exampleDe": "Was meinst du dazu?",
+        "exampleDe": "Was meinst du dazu? → meinen.",
         "exampleAr": "ما رأيك…",
         "posInfo": "meint, meinte, hat gemeint"
       },
@@ -67802,7 +67802,7 @@
         "tags": [
           "meinung"
         ],
-        "exampleDe": "Ich schätze die Kosten auf tausend Euro.",
+        "exampleDe": "Ich schätze die Kosten auf tausend Euro → schätzen.",
         "exampleAr": "أقدّر ال…",
         "posInfo": "schätzt, schätzte, hat geschätzt"
       },
@@ -67815,7 +67815,7 @@
         "tags": [
           "meinung"
         ],
-        "exampleDe": "Er zweifelt an der Wahrheit der Geschichte.",
+        "exampleDe": "Er zweifelt an der Wahrheit der Geschichte → zweifeln an.",
         "exampleAr": "يشكّ في…",
         "posInfo": "zweifet, zweifete, hat gezweifet"
       },
@@ -67828,7 +67828,7 @@
         "tags": [
           "meinung"
         ],
-        "exampleDe": "Ich befürworte den Vorschlag voll.",
+        "exampleDe": "Ich befürworte den Vorschlag voll → befürworten.",
         "exampleAr": "أؤيّد ال…",
         "posInfo": "befürwortet, befürwortete, hat befürwortt"
       },
@@ -67867,7 +67867,7 @@
         "tags": [
           "meinung"
         ],
-        "exampleDe": "Ergänze bitte den Satz.",
+        "exampleDe": "Ergänze bitte den Satz → ergänzen.",
         "exampleAr": "أكمل الج…",
         "posInfo": "ergänzt, ergänzte, hat ergänzt"
       },
@@ -67880,7 +67880,7 @@
         "tags": [
           "meinung"
         ],
-        "exampleDe": "Daraus folgt, dass wir warten müssen.",
+        "exampleDe": "Daraus folgt, dass wir warten müssen → folgern.",
         "exampleAr": "من هذا ي…",
         "posInfo": "folget, folgete, hat gefolget"
       },
@@ -67893,7 +67893,7 @@
         "tags": [
           "meinung"
         ],
-        "exampleDe": "Aus den Zahlen schließt man, dass es besser wird.",
+        "exampleDe": "Aus den Zahlen schließt man, dass es besser wird → schließen aus.",
         "exampleAr": "من الأرق…",
         "posInfo": "schließt, schließte, hat geschließt"
       },
@@ -67906,7 +67906,7 @@
         "tags": [
           "meinung"
         ],
-        "exampleDe": "Sport bewirkt viel für die Gesundheit.",
+        "exampleDe": "Sport bewirkt viel für die Gesundheit → bewirken.",
         "exampleAr": "تُحدث ال…",
         "posInfo": "bewirkt, bewirkte, hat bewirkt"
       },
@@ -67919,7 +67919,7 @@
         "tags": [
           "meinung"
         ],
-        "exampleDe": "Stress führt oft zu Schlafproblemen.",
+        "exampleDe": "Stress führt oft zu Schlafproblemen → führen zu.",
         "exampleAr": "يؤدي الت…",
         "posInfo": "führt, führte, hat geführt"
       },
@@ -67932,7 +67932,7 @@
         "tags": [
           "meinung"
         ],
-        "exampleDe": "Die Nachricht löste große Freude aus.",
+        "exampleDe": "Die Nachricht löste große Freude aus → auslösen.",
         "exampleAr": "أطلق الخ…",
         "posInfo": "löst aus, löste aus, hat ausgelöst"
       },
@@ -67945,7 +67945,7 @@
         "tags": [
           "meinung"
         ],
-        "exampleDe": "Übung steigert die Leistung langsam.",
+        "exampleDe": "Übung steigert die Leistung langsam → steigern.",
         "exampleAr": "يرفع الت…",
         "posInfo": "steiget, steigete, hat gesteiget"
       },
@@ -67958,7 +67958,7 @@
         "tags": [
           "meinung"
         ],
-        "exampleDe": "Die Bank senkt die Zinsen.",
+        "exampleDe": "Die Bank senkt die Zinsen → senken.",
         "exampleAr": "تخفّض ال…",
         "posInfo": "senkt, senkte, hat gesenkt"
       },
@@ -67971,7 +67971,7 @@
         "tags": [
           "meinung"
         ],
-        "exampleDe": "Der Preis wurde um zehn Prozent erhöht.",
+        "exampleDe": "Der Preis wurde um zehn Prozent erhöht → erhöhen.",
         "exampleAr": "رُفع الس…",
         "posInfo": "erhöht, erhöhte, hat erhöht"
       },
@@ -67984,7 +67984,7 @@
         "tags": [
           "meinung"
         ],
-        "exampleDe": "Weniger Zucker verringert das Risiko.",
+        "exampleDe": "Weniger Zucker verringert das Risiko → verringern.",
         "exampleAr": "يقلّل ال…",
         "posInfo": "verringet, verringete, hat verringern"
       },
@@ -67997,7 +67997,7 @@
         "tags": [
           "meinung"
         ],
-        "exampleDe": "Das Wetter verschlechtert sich morgen.",
+        "exampleDe": "Das Wetter verschlechtert sich morgen → sich verschlechtern.",
         "exampleAr": "سيسوء ال…",
         "posInfo": "verschlechtet, verschlechtete, hat verschlechtern"
       },
@@ -68712,7 +68712,7 @@
         "tags": [
           "alltag"
         ],
-        "exampleDe": "Er wischt den Boden im Bad auf.",
+        "exampleDe": "Er wischt den Boden im Bad auf → aufwischen.",
         "exampleAr": "يمسح أرض…",
         "posInfo": "wischt auf, wischte auf, hat aufgewischt"
       },
@@ -68725,7 +68725,7 @@
         "tags": [
           "alltag"
         ],
-        "exampleDe": "Samstags staubsauge ich die Wohnung.",
+        "exampleDe": "Samstags staubsauge ich die Wohnung → staubsaugen.",
         "exampleAr": "يوم السب…",
         "posInfo": "staubsaugt, staubsaugte, hat gestaubsaugt"
       },
@@ -68738,7 +68738,7 @@
         "tags": [
           "alltag"
         ],
-        "exampleDe": "Sie wischt den Tisch nach dem Essen.",
+        "exampleDe": "Sie wischt den Tisch nach dem Essen → wischen.",
         "exampleAr": "تمسح الط…",
         "posInfo": "wischt, wischte, hat gewischt"
       },
@@ -68751,7 +68751,7 @@
         "tags": [
           "alltag"
         ],
-        "exampleDe": "Wer spült heute das Geschirr?",
+        "exampleDe": "Wer spült heute das Geschirr? → spülen.",
         "exampleAr": "من يجلي…",
         "posInfo": "spült, spülte, hat gespült"
       },
@@ -68764,7 +68764,7 @@
         "tags": [
           "alltag"
         ],
-        "exampleDe": "Er trocknet die Gläser ab.",
+        "exampleDe": "Er trocknet die Gläser ab → abtrocknen.",
         "exampleAr": "يجفّف ال…",
         "posInfo": "trocknt ab, trocknte ab, hat abgetrocknt"
       },
@@ -68777,7 +68777,7 @@
         "tags": [
           "alltag"
         ],
-        "exampleDe": "Sie hängt die Wäsche auf dem Balkon auf.",
+        "exampleDe": "Sie hängt die Wäsche auf dem Balkon auf → aufhängen.",
         "exampleAr": "تعلّق ال…",
         "posInfo": "hängt auf, hängte auf, hat aufgehängt"
       },
@@ -68790,7 +68790,7 @@
         "tags": [
           "alltag"
         ],
-        "exampleDe": "Die Hemden lege ich zusammen.",
+        "exampleDe": "Die Hemden lege ich zusammen → zusammenlegen.",
         "exampleAr": "أطوي الق…",
         "posInfo": "sammenlegt zu, sammenlegte zu, hat zugesammenlegt"
       },
@@ -68803,7 +68803,7 @@
         "tags": [
           "alltag"
         ],
-        "exampleDe": "Rühre die Suppe langsam um.",
+        "exampleDe": "Rühre die Suppe langsam um → rühren.",
         "exampleAr": "حرّك الح…",
         "posInfo": "rührt, rührte, hat gerührt"
       },
@@ -68816,7 +68816,7 @@
         "tags": [
           "alltag"
         ],
-        "exampleDe": "Sie schält die Kartoffeln fürs Abendessen.",
+        "exampleDe": "Sie schält die Kartoffeln fürs Abendessen → schälen.",
         "exampleAr": "تقشّر ال…",
         "posInfo": "schält, schälte, hat geschält"
       },
@@ -68829,7 +68829,7 @@
         "tags": [
           "alltag"
         ],
-        "exampleDe": "Schmecke die Soße bitte noch ab.",
+        "exampleDe": "Schmecke die Soße bitte noch ab → abschmecken.",
         "exampleAr": "تذوّقي ا…",
         "posInfo": "schmeckt ab, schmeckte ab, hat abgeschmeckt"
       },
@@ -68842,7 +68842,7 @@
         "tags": [
           "alltag"
         ],
-        "exampleDe": "Das Essen wird um acht serviert.",
+        "exampleDe": "Das Essen wird um acht serviert → servieren.",
         "exampleAr": "يُقدّم ا…",
         "posInfo": "serviert, servierte, hat geserviert"
       },
@@ -68855,7 +68855,7 @@
         "tags": [
           "alltag"
         ],
-        "exampleDe": "Er knöpft sein Hemd zu.",
+        "exampleDe": "Er knöpft sein Hemd zu → knöpfen.",
         "exampleAr": "يزرّر قم…",
         "posInfo": "knöpft, knöpfte, hat geknöpft"
       },
@@ -69904,7 +69904,7 @@
         "tags": [
           "natur"
         ],
-        "exampleDe": "Im Herbst erntet man die Äpfel.",
+        "exampleDe": "Im Herbst erntet man die Äpfel → ernten.",
         "exampleAr": "في الخري…",
         "posInfo": "erntet, erntete, hat erntt"
       },
@@ -69917,7 +69917,7 @@
         "tags": [
           "natur"
         ],
-        "exampleDe": "Sie pflanzt Tomaten im Garten.",
+        "exampleDe": "Sie pflanzt Tomaten im Garten → pflanzen.",
         "exampleAr": "تزرع الط…",
         "posInfo": "pflanzt, pflanzte, hat gepflanzt"
       },
@@ -69930,7 +69930,7 @@
         "tags": [
           "natur"
         ],
-        "exampleDe": "Gieße die Blumen bitte jeden Morgen.",
+        "exampleDe": "Gieße die Blumen bitte jeden Morgen → gießen.",
         "exampleAr": "اسقِ الز…",
         "posInfo": "gießt, gießte, hat gegießt"
       },
@@ -69943,7 +69943,7 @@
         "tags": [
           "natur"
         ],
-        "exampleDe": "Der Fluss fließt ins Meer.",
+        "exampleDe": "Der Fluss fließt ins Meer → fließen.",
         "exampleAr": "يتدفق ال…",
         "posInfo": "fließt, fließte, hat gefließt"
       },
@@ -69956,7 +69956,7 @@
         "tags": [
           "natur"
         ],
-        "exampleDe": "Der Wind weht heute stark.",
+        "exampleDe": "Der Wind weht heute stark → wehen.",
         "exampleAr": "تهبّ الر…",
         "posInfo": "weht, wehte, hat geweht"
       },
@@ -69969,7 +69969,7 @@
         "tags": [
           "natur"
         ],
-        "exampleDe": "Die Sonne scheint den ganzen Tag.",
+        "exampleDe": "Die Sonne scheint den ganzen Tag → scheinen.",
         "exampleAr": "تشرق الش…",
         "posInfo": "scheint, scheinte, hat gescheint"
       },
@@ -69982,7 +69982,7 @@
         "tags": [
           "natur"
         ],
-        "exampleDe": "Im Winter friert der See zu.",
+        "exampleDe": "Im Winter friert der See zu → frieren.",
         "exampleAr": "في الشتا…",
         "posInfo": "friert, frierte, hat gefriert"
       },
@@ -69995,7 +69995,7 @@
         "tags": [
           "natur"
         ],
-        "exampleDe": "Im Frühling taut der Schnee.",
+        "exampleDe": "Im Frühling taut der Schnee → tauen.",
         "exampleAr": "يذوب الث…",
         "posInfo": "taut, taute, hat getaut"
       },
@@ -70008,7 +70008,7 @@
         "tags": [
           "natur"
         ],
-        "exampleDe": "Der Wolf jagt in der Nacht.",
+        "exampleDe": "Der Wolf jagt in der Nacht → jagen.",
         "exampleAr": "يصطاد ال…",
         "posInfo": "jagt, jagte, hat gejagt"
       },
@@ -70021,7 +70021,7 @@
         "tags": [
           "natur"
         ],
-        "exampleDe": "Die Schnecke kriecht langsam.",
+        "exampleDe": "Die Schnecke kriecht langsam → kriechen.",
         "exampleAr": "تزحف الح…",
         "posInfo": "kriecht, kriechte, hat gekriecht"
       },
@@ -70034,7 +70034,7 @@
         "tags": [
           "natur"
         ],
-        "exampleDe": "Der Frosch springt ins Wasser.",
+        "exampleDe": "Der Frosch springt ins Wasser → springen.",
         "exampleAr": "يقفز الض…",
         "posInfo": "springt, springte, hat gespringt"
       },
@@ -70881,7 +70881,7 @@
         "tags": [
           "koerper"
         ],
-        "exampleDe": "Atme tief durch die Nase.",
+        "exampleDe": "Atme tief durch die Nase → atmen.",
         "exampleAr": "تنفّس بع…",
         "posInfo": "atmt, atmte, hat geatmt"
       },
@@ -70920,7 +70920,7 @@
         "tags": [
           "koerper"
         ],
-        "exampleDe": "Kaue langsam und gründlich.",
+        "exampleDe": "Kaue langsam und gründlich → kauen.",
         "exampleAr": "امضغ ببط…",
         "posInfo": "kaut, kaute, hat gekaut"
       },
@@ -70933,7 +70933,7 @@
         "tags": [
           "koerper"
         ],
-        "exampleDe": "Sie lächelt freundlich in die Kamera.",
+        "exampleDe": "Sie lächelt freundlich in die Kamera → lächeln.",
         "exampleAr": "تبتسم بو…",
         "posInfo": "lächet, lächete, hat gelächet"
       },
@@ -70946,7 +70946,7 @@
         "tags": [
           "koerper"
         ],
-        "exampleDe": "Das Baby schreit die ganze Nacht.",
+        "exampleDe": "Das Baby schreit die ganze Nacht → schreien.",
         "exampleAr": "يصرخ الط…",
         "posInfo": "schreit, schreite, hat geschreit"
       },
@@ -70959,7 +70959,7 @@
         "tags": [
           "koerper"
         ],
-        "exampleDe": "Sie flüstert ihm etwas ins Ohr.",
+        "exampleDe": "Sie flüstert ihm etwas ins Ohr → flüstern.",
         "exampleAr": "تهمس له…",
         "posInfo": "flüstet, flüstete, hat geflüstet"
       },
@@ -70985,7 +70985,7 @@
         "tags": [
           "koerper"
         ],
-        "exampleDe": "Er nickt zustimmend mit dem Kopf.",
+        "exampleDe": "Er nickt zustimmend mit dem Kopf → nicken.",
         "exampleAr": "يهزّ رأس…",
         "posInfo": "nickt, nickte, hat genickt"
       },
@@ -70998,7 +70998,7 @@
         "tags": [
           "koerper"
         ],
-        "exampleDe": "Leg dich kurz hin und ruh dich aus.",
+        "exampleDe": "Leg dich kurz hin und ruh dich aus → sich hinlegen.",
         "exampleAr": "استلقِ ق…",
         "posInfo": "legt hin, legte hin, hat hingelegt"
       },
@@ -71011,7 +71011,7 @@
         "tags": [
           "koerper"
         ],
-        "exampleDe": "Sie bückt sich nach dem Ball.",
+        "exampleDe": "Sie bückt sich nach dem Ball → sich bücken.",
         "exampleAr": "تنحني لت…",
         "posInfo": "bückt, bückte, hat gebückt"
       },
@@ -71024,7 +71024,7 @@
         "tags": [
           "koerper"
         ],
-        "exampleDe": "Er kniet vor dem Regal.",
+        "exampleDe": "Er kniet vor dem Regal → knien.",
         "exampleAr": "يركع أما…",
         "posInfo": "knit, knite, hat geknit"
       },
@@ -71050,7 +71050,7 @@
         "tags": [
           "koerper"
         ],
-        "exampleDe": "Er stolperte über einen Stein.",
+        "exampleDe": "Er stolperte über einen Stein → stolpern.",
         "exampleAr": "تعثّر بح…",
         "posInfo": "stolpet, stolpete, hat gestolpet"
       },
@@ -71063,7 +71063,7 @@
         "tags": [
           "koerper"
         ],
-        "exampleDe": "Auf dem Eis rutscht man leicht aus.",
+        "exampleDe": "Auf dem Eis rutscht man leicht aus → ausrutschen.",
         "exampleAr": "ينزلق ال…",
         "posInfo": "rutscht aus, rutschte aus, ist ausgerutscht"
       },
@@ -71076,7 +71076,7 @@
         "tags": [
           "koerper"
         ],
-        "exampleDe": "Damals herrschte ein König über das Land.",
+        "exampleDe": "Damals herrschte ein König über das Land → herrschen.",
         "exampleAr": "آنذاك حك…",
         "posInfo": "rscht her, rschte her, hat hergerscht"
       },
@@ -71089,7 +71089,7 @@
         "tags": [
           "koerper"
         ],
-        "exampleDe": "Die Armee eroberte die Stadt.",
+        "exampleDe": "Die Armee eroberte die Stadt → erobern.",
         "exampleAr": "احتلّ ال…",
         "posInfo": "erobet, erobete, hat erobern"
       },
@@ -71102,7 +71102,7 @@
         "tags": [
           "koerper"
         ],
-        "exampleDe": "Sie befreiten die Gefangenen.",
+        "exampleDe": "Sie befreiten die Gefangenen → befreien.",
         "exampleAr": "حرّروا ا…",
         "posInfo": "befreit, befreite, hat befreit"
       },
@@ -71128,7 +71128,7 @@
         "tags": [
           "koerper"
         ],
-        "exampleDe": "Sie entdeckte einen Fehler im Plan.",
+        "exampleDe": "Sie entdeckte einen Fehler im Plan → entdecken.",
         "exampleAr": "اكتشفت خ…",
         "posInfo": "entdeckt, entdeckte, hat entdeckt"
       },
@@ -71826,7 +71826,7 @@
         "tags": [
           "kultur"
         ],
-        "exampleDe": "Die Band probt jeden Dienstag.",
+        "exampleDe": "Die Band probt jeden Dienstag → proben.",
         "exampleAr": "يتدرّب ا…",
         "posInfo": "probt, probte, hat geprobt"
       },
@@ -71839,7 +71839,7 @@
         "tags": [
           "kultur"
         ],
-        "exampleDe": "Das Publikum applaudiert lange.",
+        "exampleDe": "Das Publikum applaudiert lange → applaudieren.",
         "exampleAr": "يصفق الج…",
         "posInfo": "applaudiert, applaudierte, hat geapplaudiert"
       },
@@ -71852,7 +71852,7 @@
         "tags": [
           "kultur"
         ],
-        "exampleDe": "Sie stellt ihre Bilder in Berlin aus.",
+        "exampleDe": "Sie stellt ihre Bilder in Berlin aus → ausstellen.",
         "exampleAr": "تعرض صور…",
         "posInfo": "stellt aus, stellte aus, hat ausgestellt"
       },
@@ -71865,7 +71865,7 @@
         "tags": [
           "kultur"
         ],
-        "exampleDe": "Das Kind zeichnet ein Haus.",
+        "exampleDe": "Das Kind zeichnet ein Haus → zeichnen.",
         "exampleAr": "يرسم الط…",
         "posInfo": "zeichnt, zeichnte, hat gezeichnt"
       },
@@ -71878,7 +71878,7 @@
         "tags": [
           "kultur"
         ],
-        "exampleDe": "Er gestaltet das Plakat neu.",
+        "exampleDe": "Er gestaltet das Plakat neu → gestalten.",
         "exampleAr": "يصمم الم…",
         "posInfo": "gestaltet, gestaltete, hat gestaltt"
       },
@@ -71891,7 +71891,7 @@
         "tags": [
           "kultur"
         ],
-        "exampleDe": "Sie komponiert ihre Lieder selbst.",
+        "exampleDe": "Sie komponiert ihre Lieder selbst → komponieren.",
         "exampleAr": "تؤلف أغا…",
         "posInfo": "komponiert, komponierte, hat gekomponiert"
       },
