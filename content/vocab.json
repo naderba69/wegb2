@@ -5592,7 +5592,7 @@
         "tags": [
           "gesundheit"
         ],
-        "exampleDe": "Ich begleite Sie zur Untersuchung.",
+        "exampleDe": "Ich begleite Sie zur Untersuchung → begleiten.",
         "exampleAr": "سأرافقك…",
         "pos": "Verb",
         "posInfo": "begleitet, begleitete, hat begleitet"
@@ -6138,7 +6138,7 @@
           "gesellschaft"
         ],
         "aussprache": "ie = «إي» ممدودة",
-        "exampleDe": "Wer Bewerber wegen des Namens aussortiert, diskriminiert.",
+        "exampleDe": "Wer Bewerber wegen des Namens aussortiert, diskriminiert → diskriminieren.",
         "exampleAr": "من يستبع…",
         "posInfo": "diskriminiert, diskriminierte, hat diskriminiert"
       },
@@ -6199,7 +6199,7 @@
           "gesellschaft"
         ],
         "aussprache": "ie = «إي» ممدودة · z = «تس»",
-        "exampleDe": "Ich akzeptiere deine Entscheidung, auch wenn ich anders denke.",
+        "exampleDe": "Ich akzeptiere deine Entscheidung, auch wenn ich anders denke → akzeptieren.",
         "exampleAr": "أقبل قرا…",
         "posInfo": "akzeptiert, akzeptierte, hat akzeptiert"
       },
@@ -6697,7 +6697,7 @@
           "wohnen"
         ],
         "aussprache": "ie = «إي» ممدودة · v = «ف»",
-        "exampleDe": "Sie vermietet das kleine Zimmer an eine Studentin.",
+        "exampleDe": "Sie vermietet das kleine Zimmer an eine Studentin → vermieten.",
         "exampleAr": "هي تؤجّر…",
         "posInfo": "vermietet, vermietete, hat vermietet"
       },
@@ -6821,7 +6821,7 @@
           "wohnen"
         ],
         "aussprache": "ie = «إي» ممدودة · z = «تس»",
-        "exampleDe": "Wir ziehen im März um, zwei Straßen weiter.",
+        "exampleDe": "Wir ziehen im März um, zwei Straßen weiter → umziehen.",
         "exampleAr": "ننتقل في…",
         "plural": "die Kooperationen",
         "posInfo": "zieht um, zog um, ist umgezogen"
@@ -6836,7 +6836,7 @@
           "wohnen"
         ],
         "aussprache": "ie = «إي» ممدودة · z = «تس»",
-        "exampleDe": "Ende März ziehe ich aus der alten Wohnung aus.",
+        "exampleDe": "Ende März ziehe ich aus der alten Wohnung aus → ausziehen.",
         "exampleAr": "في نهاية…",
         "posInfo": "zieht aus, zog aus, ist ausgezogen"
       },
@@ -6850,7 +6850,7 @@
           "wohnen"
         ],
         "aussprache": "ei = «آي» لا «إي» · ie = «إي» ممدودة · z = «تس»",
-        "exampleDe": "Am Ersten ziehen wir in die neue Wohnung ein.",
+        "exampleDe": "Am Ersten ziehen wir in die neue Wohnung ein → einziehen.",
         "exampleAr": "في الأول…",
         "posInfo": "zieht ein, zog ein, ist eingezogen"
       },
@@ -7079,7 +7079,7 @@
           "wohnen"
         ],
         "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
-        "exampleDe": "Wir haben die Wohnung zweimal besichtigt, einmal bei Tageslicht.",
+        "exampleDe": "Wir haben die Wohnung zweimal besichtigt, einmal bei Tageslicht → besichtigen.",
         "exampleAr": "عايّنا ا…",
         "posInfo": "besichtigt, besichtigte, hat besichtigt"
       },
@@ -7291,7 +7291,7 @@
         "tags": [
           "wohnen"
         ],
-        "exampleDe": "Die Firma stattet jeden Arbeitsplatz mit zwei Bildschirmen aus.",
+        "exampleDe": "Die Firma stattet jeden Arbeitsplatz mit zwei Bildschirmen aus → ausstatten.",
         "exampleAr": "الشركة ت…",
         "posInfo": "stattet aus, stattete aus, hat ausgestattet"
       },
@@ -7350,7 +7350,7 @@
           "wohnen"
         ],
         "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين · -er في الآخر = «أَ» خفيفة",
-        "exampleDe": "Er beschwert sich über den Lärm der Nachbarn.",
+        "exampleDe": "Er beschwert sich über den Lärm der Nachbarn → sich beschweren über.",
         "exampleAr": "يشكو من ضجيج الجيران.",
         "plural": "die Debatten",
         "posInfo": "beschwert sich über, beschwerte sich über, hat sich beschwert über"
@@ -7800,7 +7800,7 @@
         ],
         "article": "der",
         "farbe": "BLAU",
-        "exampleDe": "Der Online-Handel muss die Versandkosten bei Widerruf erstatten.",
+        "exampleDe": "Der Online-Handel muss die Versandkosten bei Widerruf erstatten → der Online-Handel.",
         "exampleAr": "التجارة…",
         "plural": "die Verträge"
       },
@@ -7829,7 +7829,7 @@
         "tags": [
           "digital"
         ],
-        "exampleDe": "Das Konto wurde gehackt, weil das Passwort auch für Spiele galt.",
+        "exampleDe": "Das Konto wurde gehackt, weil das Passwort auch für Spiele galt → hacken.",
         "exampleAr": "الحساب ا…",
         "posInfo": "hackt, hackte, hat gehackt"
       },
@@ -8090,7 +8090,7 @@
           "wissenschaft"
         ],
         "aussprache": "sch = «ش»",
-        "exampleDe": "Sie forscht seit Jahren zu Schlaf und Gedächtnis.",
+        "exampleDe": "Sie forscht seit Jahren zu Schlaf und Gedächtnis → forschen.",
         "exampleAr": "هي تبحث…",
         "plural": "die Maßnahmen",
         "posInfo": "forscht, forschte, hat geforscht"
@@ -8121,7 +8121,7 @@
           "wissenschaft"
         ],
         "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
-        "exampleDe": "Der Arzt untersucht zuerst den Hals und dann die Ohren.",
+        "exampleDe": "Der Arzt untersucht zuerst den Hals und dann die Ohren → untersuchen.",
         "exampleAr": "الطبيب ي…",
         "posInfo": "untersucht, untersuchte, hat untersucht"
       },
@@ -8307,7 +8307,7 @@
           "wissenschaft"
         ],
         "aussprache": "w = «ڤ»",
-        "exampleDe": "Wir werten die Fragebögen erst nach der letzten Befragung aus.",
+        "exampleDe": "Wir werten die Fragebögen erst nach der letzten Befragung aus → auswerten.",
         "exampleAr": "نحلّل ال…",
         "posInfo": "wertet aus, wertete aus, hat ausgewertet"
       },
@@ -8336,7 +8336,7 @@
         "tags": [
           "wissenschaft"
         ],
-        "exampleDe": "Die Studie hat tausend Haushalte telefonisch befragt.",
+        "exampleDe": "Die Studie hat tausend Haushalte telefonisch befragt → befragen.",
         "exampleAr": "الدراسة…",
         "posInfo": "befragt, befragte, hat befragt"
       },
@@ -8382,7 +8382,7 @@
           "wissenschaft"
         ],
         "aussprache": "ie = «إي» ممدودة · z = «تس»",
-        "exampleDe": "Wer zitiert, muss die Quelle mit Seitenzahl angeben.",
+        "exampleDe": "Wer zitiert, muss die Quelle mit Seitenzahl angeben → zitieren.",
         "exampleAr": "من يقتبس…",
         "plural": "die Demonstrationen",
         "posInfo": "zitiert, zitierte, hat zitiert"
@@ -8396,7 +8396,7 @@
         "tags": [
           "wissenschaft"
         ],
-        "exampleDe": "Die Behauptung ist nicht belegt, es fehlt jede Quelle.",
+        "exampleDe": "Die Behauptung ist nicht belegt, es fehlt jede Quelle → belegen.",
         "exampleAr": "الادّعاء…",
         "posInfo": "belegt, belegte, hat belegt"
       },
@@ -8568,7 +8568,7 @@
           "wissenschaft"
         ],
         "aussprache": "ö = بينَ الضمّةِ والكسرة",
-        "exampleDe": "Die Stadt fördert Sprachkurse für Neuankömmlinge.",
+        "exampleDe": "Die Stadt fördert Sprachkurse für Neuankömmlinge → fördern.",
         "exampleAr": "المدينة…",
         "posInfo": "fördert, förderte, hat gefördert"
       },
@@ -8644,7 +8644,7 @@
           "wissenschaft"
         ],
         "aussprache": "ie = «إي» ممدودة · z = «تس»",
-        "exampleDe": "Das Team publiziert die Ergebnisse frei zugänglich.",
+        "exampleDe": "Das Team publiziert die Ergebnisse frei zugänglich → publizieren.",
         "exampleAr": "الفريق ي…",
         "posInfo": "publiziert, publizierte, hat publiziert"
       },
@@ -8886,7 +8886,7 @@
           "schoenheit"
         ],
         "aussprache": "sch = «ش»",
-        "exampleDe": "Sie schminkt sich nur für besondere Anlässe.",
+        "exampleDe": "Sie schminkt sich nur für besondere Anlässe → sich schminken.",
         "exampleAr": "هي تتزيّ…",
         "posInfo": "schminkt sich, schminkte sich, hat sich geschminkt"
       },
@@ -9053,7 +9053,7 @@
           "schoenheit"
         ],
         "aussprache": "ie = «إي» ممدودة · z = «تس»",
-        "exampleDe": "Zieh dich warm an, es sind nur acht Grad!",
+        "exampleDe": "Zieh dich warm an, es sind nur acht Grad! → sich anziehen.",
         "exampleAr": "ارتدِ مل…",
         "posInfo": "zieht sich an, zog sich an, hat sich angezogen"
       },
@@ -9312,7 +9312,7 @@
           "schoenheit"
         ],
         "aussprache": "ei = «آي» لا «إي»",
-        "exampleDe": "Ihr ruhiges Auftreten hat die Personalchefin beeindruckt.",
+        "exampleDe": "Ihr ruhiges Auftreten hat die Personalchefin beeindruckt → beeindrucken.",
         "exampleAr": "حضورها ا…",
         "plural": "die Sanktionen",
         "posInfo": "beeindruckt, beeindruckte, hat beeindruckt"
@@ -9389,7 +9389,7 @@
           "schoenheit"
         ],
         "aussprache": "ei = «آي» لا «إي» · ü = ضمّةٌ بشفتَينِ مستديرتَين",
-        "exampleDe": "Die Überschrift übertreibt, der Text selbst ist vorsichtig.",
+        "exampleDe": "Die Überschrift übertreibt, der Text selbst ist vorsichtig → übertreiben.",
         "exampleAr": "العنوان…",
         "plural": "die Geldstrafen",
         "posInfo": "übertreibt, übertrieb, hat übertrieben"
@@ -9520,7 +9520,7 @@
         "tags": [
           "kunst-kultur"
         ],
-        "exampleDe": "Am Wochenende male ich, um den Kopf frei zu bekommen.",
+        "exampleDe": "Am Wochenende male ich, um den Kopf frei zu bekommen → malen.",
         "exampleAr": "في نهاية…",
         "posInfo": "malt, malte, hat gemalt"
       },
@@ -9703,7 +9703,7 @@
         "tags": [
           "kunst-kultur"
         ],
-        "exampleDe": "Der Regisseur hat den Film in nur drei Wochen gedreht.",
+        "exampleDe": "Der Regisseur hat den Film in nur drei Wochen gedreht → drehen.",
         "exampleAr": "المخرج ص…",
         "plural": "die Bestimmungen",
         "posInfo": "dreht, drehte, hat gedreht"
@@ -9829,7 +9829,7 @@
           "kunst-kultur"
         ],
         "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
-        "exampleDe": "Die Schüler führen im Juni ein eigenes Stück auf.",
+        "exampleDe": "Die Schüler führen im Juni ein eigenes Stück auf → aufführen.",
         "exampleAr": "التلاميذ…",
         "posInfo": "führt auf, führte auf, hat aufgeführt"
       },
@@ -9858,7 +9858,7 @@
           "kunst-kultur"
         ],
         "aussprache": "ie = «إي» ممدودة",
-        "exampleDe": "Sie kritisiert den Plan sachlich, ohne laut zu werden.",
+        "exampleDe": "Sie kritisiert den Plan sachlich, ohne laut zu werden → kritisieren.",
         "exampleAr": "هي تنتقد…",
         "plural": "die Normen",
         "posInfo": "kritisiert, kritisierte, hat kritisiert"
@@ -9873,7 +9873,7 @@
           "kunst-kultur"
         ],
         "aussprache": "ie = «إي» ممدودة · z = «تس»",
-        "exampleDe": "Wer ein Buch rezensiert, sollte es ganz gelesen haben.",
+        "exampleDe": "Wer ein Buch rezensiert, sollte es ganz gelesen haben → rezensieren.",
         "exampleAr": "من يكتب…",
         "posInfo": "rezensiert, rezensierte, hat rezensiert"
       },
@@ -10606,7 +10606,7 @@
         "article": "die",
         "farbe": "ROT",
         "aussprache": "w = «ڤ»",
-        "exampleDe": "Von Work-Life-Balance spricht die Firma viel, die Überstunden bleiben.",
+        "exampleDe": "Von Work-Life-Balance spricht die Firma viel, die Überstunden bleiben → die Work-Life-Balance.",
         "exampleAr": "الشركة تتكلم كثيرا…"
       },
       {
@@ -11254,7 +11254,7 @@
         "tags": [
           "arbeit-beruf"
         ],
-        "exampleDe": "Ich trage die Werte sofort ein.",
+        "exampleDe": "Ich trage die Werte sofort ein → eintragen.",
         "exampleAr": "أدوّن القيم فورًا.",
         "pos": "Verb",
         "posInfo": "trägt ein, trug ein, hat eingetragen"
@@ -11267,7 +11267,7 @@
         "tags": [
           "arbeit-beruf"
         ],
-        "exampleDe": "Der Patient wird alle zwei Stunden gelagert.",
+        "exampleDe": "Der Patient wird alle zwei Stunden gelagert → lagern.",
         "exampleAr": "يُقلَّب المريض كل…",
         "pos": "Verb",
         "posInfo": "lagert, lagerte, hat gelagert"
@@ -11331,7 +11331,7 @@
           "umwelt-klima"
         ],
         "aussprache": "sch = «ش» · v = «ف» · z = «تس»",
-        "exampleDe": "Die Fabrik hat den Fluss jahrzehntelang verschmutzt.",
+        "exampleDe": "Die Fabrik hat den Fluss jahrzehntelang verschmutzt → verschmutzen.",
         "exampleAr": "المصنع لوّث النهر…",
         "posInfo": "verschmutzt, verschmutzte, hat verschmutzt"
       },
@@ -11688,7 +11688,7 @@
           "umwelt-klima"
         ],
         "aussprache": "ß = «س» مشدَّدة",
-        "exampleDe": "Ältere Busse stoßen deutlich mehr Feinstaub aus.",
+        "exampleDe": "Ältere Busse stoßen deutlich mehr Feinstaub aus → ausstoßen.",
         "exampleAr": "الحافلات القديمة ت…",
         "posInfo": "stößt aus, stieß aus, hat ausgestoßen"
       },
@@ -11780,7 +11780,7 @@
           "umwelt-klima"
         ],
         "aussprache": "sch = «ش»",
-        "exampleDe": "Zu viel Salz auf den Straßen schädigt die Bäume am Rand.",
+        "exampleDe": "Zu viel Salz auf den Straßen schädigt die Bäume am Rand → schädigen.",
         "exampleAr": "الملح الزائد على ا…",
         "posInfo": "schädigt, schädigte, hat geschädigt"
       },
@@ -12433,7 +12433,7 @@
         "tags": [
           "konsum-geld"
         ],
-        "exampleDe": "Ich hebe am Automaten hundert Euro ab.",
+        "exampleDe": "Ich hebe am Automaten hundert Euro ab → abheben.",
         "exampleAr": "أسحب من الصرّاف ما…",
         "plural": "die Anwendungen",
         "posInfo": "hebt ab, hob ab, hat abgehoben"
@@ -12448,7 +12448,7 @@
           "konsum-geld"
         ],
         "aussprache": "ei = «آي» لا «إي» · z = «تس»",
-        "exampleDe": "Jeden Monat zahle ich fünfzig Euro auf das Sparkonto ein.",
+        "exampleDe": "Jeden Monat zahle ich fünfzig Euro auf das Sparkonto ein → einzahlen.",
         "exampleAr": "كل شهر أودع خمسين…",
         "posInfo": "zahlt ein, zahlte ein, hat eingezahlt"
       },
@@ -12924,7 +12924,7 @@
           "konsum-geld"
         ],
         "aussprache": "ie = «إي» ممدودة",
-        "exampleDe": "Den defekten Wasserkocher habe ich sofort reklamiert.",
+        "exampleDe": "Den defekten Wasserkocher habe ich sofort reklamiert → reklamieren.",
         "exampleAr": "الغلاية المعطوبة ق…",
         "posInfo": "reklamiert, reklamierte, hat reklamiert"
       },
@@ -13174,7 +13174,7 @@
           "mobilitaet-verkehr"
         ],
         "aussprache": "w = «ڤ»",
-        "exampleDe": "In der Stadt bewege ich mich fast nur mit dem Rad fort.",
+        "exampleDe": "In der Stadt bewege ich mich fast nur mit dem Rad fort → sich fortbewegen.",
         "exampleAr": "في المدينة أتنقّل…",
         "posInfo": "bewegt sich fort, bewegte sich fort, hat sich fortbewegt"
       },
@@ -13325,7 +13325,7 @@
           "mobilitaet-verkehr"
         ],
         "aussprache": "v = «ف»",
-        "exampleDe": "Entschuldigung, ich habe mich verspätet, der Bus kam nicht.",
+        "exampleDe": "Entschuldigung, ich habe mich verspätet, der Bus kam nicht → sich verspäten.",
         "exampleAr": "عذراً، تأخّرت، فال…",
         "posInfo": "verspätet sich, verspätete sich, hat sich verspätet",
         "img": "/cards/sichverspäten-v728.webp"
@@ -13561,7 +13561,7 @@
         "tags": [
           "mobilitaet-verkehr"
         ],
-        "exampleDe": "Seit dem Umzug pendelt er vierzig Kilometer zur Arbeit.",
+        "exampleDe": "Seit dem Umzug pendelt er vierzig Kilometer zur Arbeit → pendeln.",
         "exampleAr": "منذ الانتقال يتنقّ…",
         "posInfo": "pendelt, pendelte, hat gependelt"
       },
@@ -14127,7 +14127,7 @@
           "staat-recht"
         ],
         "aussprache": "ei = «آي» لا «إي» · sch = «ش» · v = «ف»",
-        "exampleDe": "Das Gesetz schreibt vor, dass die Nebenkosten jährlich abgerechnet werden.",
+        "exampleDe": "Das Gesetz schreibt vor, dass die Nebenkosten jährlich abgerechnet werden → vorschreiben.",
         "exampleAr": "القانون يُملي أن ت…",
         "posInfo": "schreibt vor, schrieb vor, hat vorgeschrieben"
       },
@@ -14217,7 +14217,7 @@
           "staat-recht"
         ],
         "aussprache": "w = «ڤ»",
-        "exampleDe": "Der Antrag auf Wohngeld wurde nach sechs Wochen bewilligt.",
+        "exampleDe": "Der Antrag auf Wohngeld wurde nach sechs Wochen bewilligt → bewilligen.",
         "exampleAr": "طلب إعانة السكن وو…",
         "plural": "die Theorien",
         "posInfo": "bewilligt, bewilligte, hat bewilligt"
@@ -14262,7 +14262,7 @@
         "tags": [
           "staat-recht"
         ],
-        "exampleDe": "Die Stadt hat den Umbau genehmigt, mit Auflagen zum Lärmschutz.",
+        "exampleDe": "Die Stadt hat den Umbau genehmigt, mit Auflagen zum Lärmschutz → genehmigen.",
         "exampleAr": "المدينة رخّصت التج…",
         "posInfo": "genehmigt, genehmigte, hat genehmigt"
       },
@@ -14276,7 +14276,7 @@
           "staat-recht"
         ],
         "aussprache": "ie = «إي» ممدودة · v = «ف»",
-        "exampleDe": "Die Hausordnung verbietet laute Musik nach zweiundzwanzig Uhr.",
+        "exampleDe": "Die Hausordnung verbietet laute Musik nach zweiundzwanzig Uhr → verbieten.",
         "exampleAr": "نظام البناية يمنع…",
         "posInfo": "verbietet, verbot, hat verboten"
       },
@@ -14708,7 +14708,7 @@
           "staat-recht"
         ],
         "aussprache": "ei = «آي» لا «إي» · ü = ضمّةٌ بشفتَينِ مستديرتَين",
-        "exampleDe": "Letztes Jahr wurden in der Stadt achthundert Menschen eingebürgert.",
+        "exampleDe": "Letztes Jahr wurden in der Stadt achthundert Menschen eingebürgert → einbürgern.",
         "exampleAr": "السنة الماضية جُنّ…",
         "posInfo": "bürget ein, bürgete ein, hat eingebürget"
       },
@@ -14967,7 +14967,7 @@
           "staat-recht"
         ],
         "aussprache": "sch = «ش»",
-        "exampleDe": "Wer Unterlagen fälscht, verliert den Anspruch sofort.",
+        "exampleDe": "Wer Unterlagen fälscht, verliert den Anspruch sofort → fälschen.",
         "exampleAr": "من يزوّر الوثائق ي…",
         "posInfo": "fälscht, fälschte, hat gefälscht"
       },
@@ -14997,7 +14997,7 @@
           "staat-recht"
         ],
         "aussprache": "ei = «آي» لا «إي» · sch = «ش»",
-        "exampleDe": "Der Arzt bescheinigt die Arbeitsunfähigkeit für drei Tage.",
+        "exampleDe": "Der Arzt bescheinigt die Arbeitsunfähigkeit für drei Tage → bescheinigen.",
         "exampleAr": "الطبيب يشهد بعدم ا…",
         "posInfo": "bescheinigt, bescheinigte, hat bescheinigt"
       },
@@ -15312,7 +15312,7 @@
         "tags": [
           "studium-lernen"
         ],
-        "exampleDe": "Die Dozentin benotet die Arbeit nach Struktur, Quellen und Sprache.",
+        "exampleDe": "Die Dozentin benotet die Arbeit nach Struktur, Quellen und Sprache → benoten.",
         "exampleAr": "المحاضِرة تمنح الع…",
         "posInfo": "benotet, benotete, hat benott"
       },
@@ -15400,7 +15400,7 @@
           "studium-lernen"
         ],
         "aussprache": "ei = «آي» لا «إي» · sch = «ش»",
-        "exampleDe": "Sie schreibt sich für Informatik ein, im Wintersemester.",
+        "exampleDe": "Sie schreibt sich für Informatik ein, im Wintersemester → sich einschreiben.",
         "exampleAr": "تسجّل في الإعلامية…",
         "plural": "die Bedingungen",
         "posInfo": "schreibt ein, schreibte ein, hat eingeschreibt"
@@ -15628,7 +15628,7 @@
         "tags": [
           "studium-lernen"
         ],
-        "exampleDe": "Das Handy auf dem Tisch lenkt ab, auch wenn es stumm ist.",
+        "exampleDe": "Das Handy auf dem Tisch lenkt ab, auch wenn es stumm ist → ablenken.",
         "exampleAr": "الهاتف على الطاولة…",
         "plural": "die Kompetenzen",
         "posInfo": "lenkt ab, lenkte ab, hat abgelenkt"
@@ -15782,7 +15782,7 @@
           "studium-lernen"
         ],
         "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
-        "exampleDe": "Ich überprüfe mich jeden Sonntag mit den Karten der Woche.",
+        "exampleDe": "Ich überprüfe mich jeden Sonntag mit den Karten der Woche → sich überprüfen.",
         "exampleAr": "أختبر نفسي كل أحد…",
         "plural": "die Fertigkeiten",
         "posInfo": "prüft über, prüfte über, hat überprüft"
@@ -15843,7 +15843,7 @@
         "tags": [
           "studium-lernen"
         ],
-        "exampleDe": "Man betont „umfahren“ je nach Bedeutung anders.",
+        "exampleDe": "Man betont „umfahren“ je nach Bedeutung anders → betonen.",
         "exampleAr": "يُوكَّد «umfahren»…",
         "posInfo": "betont, betonte, hat betont"
       },
@@ -15873,7 +15873,7 @@
           "studium-lernen"
         ],
         "aussprache": "v = «ف»",
-        "exampleDe": "Ich habe mich vertippt, es sollte „Frist“ heißen.",
+        "exampleDe": "Ich habe mich vertippt, es sollte „Frist“ heißen → sich vertippen.",
         "exampleAr": "أخطأت على لوحة الم…",
         "posInfo": "vertippt, vertippte, hat vertippt"
       },
@@ -16028,7 +16028,7 @@
           "studium-lernen"
         ],
         "aussprache": "eu/äu = «أوي»",
-        "exampleDe": "Der Professor betreut nur fünf Arbeiten pro Semester.",
+        "exampleDe": "Der Professor betreut nur fünf Arbeiten pro Semester → betreuen.",
         "exampleAr": "الأستاذ يشرف على خ…",
         "posInfo": "betreut, betreute, hat betreut"
       },
@@ -16191,7 +16191,7 @@
           "gefuehle-psyche"
         ],
         "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين · -er في الآخر = «أَ» خفيفة",
-        "exampleDe": "Ich ärgere mich über den Chat statt einer klaren Mail.",
+        "exampleDe": "Ich ärgere mich über den Chat statt einer klaren Mail → sich ärgern über.",
         "exampleAr": "يغيظني الشات بدل إ…",
         "posInfo": "ärget, ärgete, hat geärget"
       },
@@ -16449,7 +16449,7 @@
         "tags": [
           "gefuehle-psyche"
         ],
-        "exampleDe": "Die Frage nach der Lücke im Lebenslauf belastet ihn noch immer.",
+        "exampleDe": "Die Frage nach der Lücke im Lebenslauf belastet ihn noch immer → belasten.",
         "exampleAr": "سؤال الفجوة في الس…",
         "plural": "die Anlässe",
         "posInfo": "belastet, belastete, hat belastt"
@@ -16506,7 +16506,7 @@
         "tags": [
           "gefuehle-psyche"
         ],
-        "exampleDe": "Nach zehn Minuten hat sich das Kind beruhigt.",
+        "exampleDe": "Nach zehn Minuten hat sich das Kind beruhigt → sich beruhigen.",
         "exampleAr": "بعد عشر دقائق هدأ…",
         "posInfo": "beruhigt, beruhigte, hat beruhigt"
       },
@@ -16597,7 +16597,7 @@
           "gefuehle-psyche"
         ],
         "aussprache": "ie = «إي» ممدودة",
-        "exampleDe": "Wer die Frist ignoriert, riskiert den Verlust des Anspruchs.",
+        "exampleDe": "Wer die Frist ignoriert, riskiert den Verlust des Anspruchs → riskieren.",
         "exampleAr": "من يتجاهل المهلة ي…",
         "plural": "die Impulse",
         "posInfo": "riskiert, riskierte, hat geriskiert"
@@ -16772,7 +16772,7 @@
           "gefuehle-psyche"
         ],
         "aussprache": "ie = «إي» ممدودة",
-        "exampleDe": "Er hat die zweite Mahnung einfach ignoriert.",
+        "exampleDe": "Er hat die zweite Mahnung einfach ignoriert → ignorieren.",
         "exampleAr": "تجاهل الإنذار الثا…",
         "posInfo": "ignoriert, ignorierte, hat geignoriert"
       },
@@ -16801,7 +16801,7 @@
           "gefuehle-psyche"
         ],
         "aussprache": "sch = «ش»",
-        "exampleDe": "Er schämt sich für seinen Akzent, dabei versteht ihn jeder.",
+        "exampleDe": "Er schämt sich für seinen Akzent, dabei versteht ihn jeder → sich schämen.",
         "exampleAr": "يخجل من لكنته مع أ…",
         "posInfo": "schämt, schämte, hat geschämt"
       },
@@ -16815,7 +16815,7 @@
           "gefuehle-psyche"
         ],
         "aussprache": "ß = «س» مشدَّدة",
-        "exampleDe": "Wer einen Kollegen vor allen bloßstellt, zerstört das Arbeitsklima.",
+        "exampleDe": "Wer einen Kollegen vor allen bloßstellt, zerstört das Arbeitsklima → jdn bloßstellen.",
         "exampleAr": "من يفضح زميلاً أما…",
         "posInfo": "jdet, jdete, hat gejdt"
       },
@@ -16920,7 +16920,7 @@
           "gefuehle-psyche"
         ],
         "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
-        "exampleDe": "Nach zwei Jahren sehnt er sich nach dem Freitagsessen bei den Eltern.",
+        "exampleDe": "Nach zwei Jahren sehnt er sich nach dem Freitagsessen bei den Eltern → sich sehnen nach.",
         "exampleAr": "بعد سنتين يتوق إلى…",
         "posInfo": "sehnt, sehnte, hat gesehnt"
       },
@@ -17028,7 +17028,7 @@
         "tags": [
           "gefuehle-psyche"
         ],
-        "exampleDe": "Die Uni erkennt das tunesische Diplom nur teilweise an.",
+        "exampleDe": "Die Uni erkennt das tunesische Diplom nur teilweise an → anerkennen.",
         "exampleAr": "الجامعة تعترف بالش…",
         "posInfo": "erkennt an, erkennte an, hat angeerkennt"
       },
@@ -17055,7 +17055,7 @@
         "tags": [
           "gefuehle-psyche"
         ],
-        "exampleDe": "Der Lehrer lobt Sara, weil sie viel Fortschritte gemacht hat.",
+        "exampleDe": "Der Lehrer lobt Sara, weil sie viel Fortschritte gemacht hat → loben.",
         "exampleAr": "المعلّم يمدح سارة…",
         "plural": "die Effekte",
         "posInfo": "lobt, lobte, hat gelobt"
@@ -17083,7 +17083,7 @@
         "tags": [
           "gefuehle-psyche"
         ],
-        "exampleDe": "Die Lehrerin tadelt selten, aber wenn, dann deutlich.",
+        "exampleDe": "Die Lehrerin tadelt selten, aber wenn, dann deutlich → tadeln.",
         "exampleAr": "المعلّمة نادراً ما…",
         "posInfo": "tadet, tadete, hat getadet"
       },
@@ -17111,7 +17111,7 @@
           "gefuehle-psyche"
         ],
         "aussprache": "v = «ف» · w = «ڤ»",
-        "exampleDe": "Nadia möchte ihm nicht vorwerfen, die Absprache gebrochen zu haben.",
+        "exampleDe": "Nadia möchte ihm nicht vorwerfen, die Absprache gebrochen zu haben → jdm etwas vorwerfen.",
         "exampleAr": "نادية لا تريد أن ت…",
         "posInfo": "jdmt, jdmte, hat gejdmt"
       },
@@ -17187,7 +17187,7 @@
         "tags": [
           "gefuehle-psyche"
         ],
-        "exampleDe": "Meine Mutter sorgt sich um mich, wenn ich nicht anrufe.",
+        "exampleDe": "Meine Mutter sorgt sich um mich, wenn ich nicht anrufe → sich sorgen um.",
         "exampleAr": "أمي تقلق عليّ إذا…",
         "posInfo": "sorgt, sorgte, hat gesorgt"
       },
@@ -17327,7 +17327,7 @@
         "tags": [
           "sport-freizeit"
         ],
-        "exampleDe": "Vor dem Laufen dehne ich mich zehn Minuten.",
+        "exampleDe": "Vor dem Laufen dehne ich mich zehn Minuten → sich dehnen.",
         "exampleAr": "قبل الجري أمطّ عضل…",
         "posInfo": "dehnt, dehnte, hat gedehnt"
       },
@@ -17416,7 +17416,7 @@
         "tags": [
           "sport-freizeit"
         ],
-        "exampleDe": "Von der Erkältung hat er sich in einer Woche erholt.",
+        "exampleDe": "Von der Erkältung hat er sich in einer Woche erholt → sich erholen.",
         "exampleAr": "من الزكام تعافى في…",
         "posInfo": "erholt, erholte, ist erholt"
       },
@@ -17629,7 +17629,7 @@
           "sport-freizeit"
         ],
         "aussprache": "eu/äu = «أوي»",
-        "exampleDe": "Die Familie kam und feuerte die Mannschaft vom Rand aus an.",
+        "exampleDe": "Die Familie kam und feuerte die Mannschaft vom Rand aus an → anfeuern.",
         "exampleAr": "العائلة جاءت وشجّع…",
         "posInfo": "feuet an, feuete an, hat angefeuet"
       },
@@ -17642,7 +17642,7 @@
         "tags": [
           "sport-freizeit"
         ],
-        "exampleDe": "Als das Tor fiel, jubelten selbst die ruhigsten Zuschauer.",
+        "exampleDe": "Als das Tor fiel, jubelten selbst die ruhigsten Zuschauer → jubeln.",
         "exampleAr": "حين سُجّل الهدف صا…",
         "posInfo": "jubet, jubete, hat gejubet"
       },
@@ -17842,7 +17842,7 @@
           "sport-freizeit"
         ],
         "aussprache": "ie = «إي» ممدودة",
-        "exampleDe": "Sie engagiert sich seit zwei Jahren im Verein für Nachhilfe.",
+        "exampleDe": "Sie engagiert sich seit zwei Jahren im Verein für Nachhilfe → sich engagieren.",
         "exampleAr": "هي منخرطة منذ سنتي…",
         "posInfo": "engagiert, engagierte, hat geengagiert"
       },
@@ -17888,7 +17888,7 @@
           "sport-freizeit"
         ],
         "aussprache": "ei = «آي» لا «إي»",
-        "exampleDe": "Nach dem Umzug ist er dem Fußballverein im Stadtteil beigetreten.",
+        "exampleDe": "Nach dem Umzug ist er dem Fußballverein im Stadtteil beigetreten → beitreten.",
         "exampleAr": "بعد الانتقال انضم…",
         "posInfo": "tretet bei, tretete bei, hat beitrett"
       },
@@ -18336,7 +18336,7 @@
         ],
         "article": "das",
         "farbe": "GRÜN",
-        "exampleDe": "Agenda-Setting entscheidet nicht, was wir denken, sondern worüber.",
+        "exampleDe": "Agenda-Setting entscheidet nicht, was wir denken, sondern worüber → das Agenda-Setting.",
         "exampleAr": "تقرير جدول النقاش…",
         "img": "/cards/b2-v1049.webp"
       },
@@ -18765,7 +18765,7 @@
         "tags": [
           "medien-meinung"
         ],
-        "exampleDe": "Der Artikel behauptet, der Konzern habe die Zahlen geschönt.",
+        "exampleDe": "Der Artikel behauptet, der Konzern habe die Zahlen geschönt → behaupten.",
         "exampleAr": "المقال يدّعي أن ال…",
         "posInfo": "behauptet, behauptete, hat behauptt"
       },
@@ -18779,7 +18779,7 @@
           "medien-meinung"
         ],
         "aussprache": "w = «ڤ»",
-        "exampleDe": "Die zweite Studie widerlegt die These der ersten.",
+        "exampleDe": "Die zweite Studie widerlegt die These der ersten → widerlegen.",
         "exampleAr": "الدراسة الثانية تد…",
         "posInfo": "widerlegt, widerlegte, hat gewiderlegt"
       },
@@ -18793,7 +18793,7 @@
           "medien-meinung"
         ],
         "aussprache": "ei = «آي» لا «إي» · sch = «ش» · v = «ف»",
-        "exampleDe": "Der Bericht verschweigt, wer die Umfrage bezahlt hat.",
+        "exampleDe": "Der Bericht verschweigt, wer die Umfrage bezahlt hat → verschweigen.",
         "exampleAr": "التقرير يكتم من دف…",
         "posInfo": "verschweigt, verschweigte, hat verschweigt"
       },
@@ -18807,7 +18807,7 @@
           "medien-meinung"
         ],
         "aussprache": "z = «تس»",
-        "exampleDe": "Die Überschrift spitzt die Aussage stark zu.",
+        "exampleDe": "Die Überschrift spitzt die Aussage stark zu → zuspitzen.",
         "exampleAr": "العنوان يبالغ في ت…",
         "posInfo": "spitzt zu, spitzte zu, hat zugespitzt"
       },
@@ -18821,7 +18821,7 @@
           "medien-meinung"
         ],
         "aussprache": "ei = «آي» لا «إي»",
-        "exampleDe": "Eine gute Redaktion ordnet die Zahl in den Zeitraum ein.",
+        "exampleDe": "Eine gute Redaktion ordnet die Zahl in den Zeitraum ein → einordnen.",
         "exampleAr": "التحرير الجيد يضع…",
         "posInfo": "ordnt ein, ordnte ein, hat eingeordnt"
       },
@@ -19858,7 +19858,7 @@
         "article": "die",
         "farbe": "ROT",
         "aussprache": "ie = «إي» ممدودة",
-        "exampleDe": "Die Riester-Rente lohnt sich vor allem mit Kindern und Zulagen.",
+        "exampleDe": "Die Riester-Rente lohnt sich vor allem mit Kindern und Zulagen → die Riester-Rente.",
         "exampleAr": "معاش ريستر يستحق خ…"
       },
       {
@@ -20613,7 +20613,7 @@
         "article": "das",
         "farbe": "GRÜN",
         "aussprache": "ie = «إي» ممدودة · eu/äu = «أوي» · z = «تس»",
-        "exampleDe": "Das Erneuerbare-Energien-Gesetz garantierte jahrelang feste Preise.",
+        "exampleDe": "Das Erneuerbare-Energien-Gesetz garantierte jahrelang feste Preise → das Erneuerbare-Energien-Gesetz.",
         "exampleAr": "قانون الطاقات المت…",
         "plural": "die Erneuerbare-Energien-Gesetze",
         "img": "/cards/b2-v1193.webp"
@@ -20753,7 +20753,7 @@
         "article": "der",
         "farbe": "BLAU",
         "aussprache": "ei = «آي» لا «إي»",
-        "exampleDe": "Der CO2-Preis verteuert Benzin und Heizöl schrittweise.",
+        "exampleDe": "Der CO2-Preis verteuert Benzin und Heizöl schrittweise → der CO2-Preis.",
         "exampleAr": "سعر الكربون يرفع ث…",
         "plural": "die CO2-Preise"
       },
@@ -20934,7 +20934,7 @@
           "energie-wende"
         ],
         "aussprache": "sch = «ش»",
-        "exampleDe": "Das alte Kraftwerk wird nächstes Jahr abgeschaltet.",
+        "exampleDe": "Das alte Kraftwerk wird nächstes Jahr abgeschaltet → abschalten.",
         "exampleAr": "المحطة القديمة ستُ…",
         "posInfo": "schaltet ab, schaltete ab, hat abgeschaltt"
       },
@@ -21171,7 +21171,7 @@
         ],
         "article": "der",
         "farbe": "BLAU",
-        "exampleDe": "Der Nutri-Score zeigt mit fünf Farben, wie ausgewogen ein Produkt ist.",
+        "exampleDe": "Der Nutri-Score zeigt mit fünf Farben, wie ausgewogen ein Produkt ist → der Nutri-Score.",
         "exampleAr": "المقياس اللوني يُظ…",
         "plural": "die Nutri-Scores"
       },
@@ -21219,7 +21219,7 @@
         "article": "die",
         "farbe": "ROT",
         "aussprache": "-er في الآخر = «أَ» خفيفة",
-        "exampleDe": "Hinter jeder E-Nummer steckt ein geprüfter Zusatzstoff.",
+        "exampleDe": "Hinter jeder E-Nummer steckt ein geprüfter Zusatzstoff → die E-Nummer.",
         "exampleAr": "وراء كل رقم E مُضا…",
         "plural": "die E-Nummern"
       },
