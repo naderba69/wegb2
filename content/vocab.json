@@ -478,7 +478,7 @@
         "pos": "Nomen",
         "article": "der",
         "farbe": "BLAU",
-        "exampleDe": "Viele Grüße an deine Familie!",
+        "exampleDe": "Viele Grüße an deine Familie!.",
         "exampleAr": "تحياتي ا…",
         "level": "A1",
         "tags": [
@@ -2167,7 +2167,7 @@
         "de": "gratulieren",
         "ar": "يهنّئ (+Dativ)",
         "pos": "Verb",
-        "exampleDe": "Ich gratuliere dir zum Geburtstag!",
+        "exampleDe": "Ich gratuliere dir zum Geburtstag!.",
         "exampleAr": "أهنّئك ب…",
         "level": "A2",
         "tags": [
@@ -2236,7 +2236,7 @@
         ],
         "img": "/cards/erzaehlen.webp",
         "aussprache": "z = «تس»",
-        "exampleDe": "Erzähl mir von deinem ersten Tag in Deutschland!",
+        "exampleDe": "Erzähl mir von deinem ersten Tag in Deutschland!.",
         "exampleAr": "احكِ لي…",
         "syn": [
           "berichten"
@@ -4799,7 +4799,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Für die Prüfungsverschiebung verlangt die Uni ein ärztliches Attest.",
         "exampleAr": "لتأجيل ا…",
-        "plural": "die Atteste"
+        "plural": "die Atteste",
+        "img": "/cards/b2-v249.webp"
       },
       {
         "id": "v250",
@@ -4953,7 +4954,8 @@
         "aussprache": "ei = «آي» لا «إي»",
         "exampleDe": "Ein gutes Arbeitsklima ist wichtiger als der Obstkorb.",
         "exampleAr": "المناخ ا…",
-        "plural": "die Arbeitsklimate"
+        "plural": "die Arbeitsklimate",
+        "img": "/cards/b2-v259.webp"
       },
       {
         "id": "v260",
@@ -5090,7 +5092,8 @@
         "aussprache": "z = «تس»",
         "exampleDe": "Der Arzt hört das Herz ab und schaut in den Hals.",
         "exampleAr": "الطبيب ي…",
-        "plural": "die Herzen"
+        "plural": "die Herzen",
+        "img": "/cards/b2-v1408.webp"
       },
       {
         "id": "vpfl-03",
@@ -5251,7 +5254,8 @@
         "exampleAr": "ميزان ال…",
         "article": "das",
         "farbe": "GRÜN",
-        "plural": "die Fieberthermometer"
+        "plural": "die Fieberthermometer",
+        "img": "/cards/b2-vpfl-13.webp"
       },
       {
         "id": "vpfl-14",
@@ -5339,7 +5343,8 @@
         "exampleDe": "Das Blut wird im Labor untersucht.",
         "exampleAr": "يُفحص ال…",
         "article": "das",
-        "farbe": "GRÜN"
+        "farbe": "GRÜN",
+        "img": "/cards/b2-vpfl-19.webp"
       },
       {
         "id": "vpfl-32",
@@ -5479,7 +5484,8 @@
         "exampleDe": "Das Gelenk ist geschwollen.",
         "exampleAr": "المفصل م…",
         "article": "das",
-        "farbe": "GRÜN"
+        "farbe": "GRÜN",
+        "img": "/cards/b2-vpfl-41.webp"
       },
       {
         "id": "vpfl-42",
@@ -5521,7 +5527,8 @@
         "exampleDe": "Das Gehirn braucht Sauerstoff.",
         "exampleAr": "الدماغ ي…",
         "article": "das",
-        "farbe": "GRÜN"
+        "farbe": "GRÜN",
+        "img": "/cards/b2-vpfl-44.webp"
       },
       {
         "id": "vpfl-45",
@@ -5646,7 +5653,8 @@
         "exampleAr": "المضاد ا…",
         "pos": "Nomen",
         "article": "das",
-        "farbe": "GRÜN"
+        "farbe": "GRÜN",
+        "img": "/cards/b2-vpfl-70.webp"
       },
       {
         "id": "vpfl-71",
@@ -5870,7 +5878,8 @@
         "exampleAr": "يمكن لجل…",
         "pos": "Nomen",
         "article": "das",
-        "farbe": "GRÜN"
+        "farbe": "GRÜN",
+        "img": "/cards/b2-vpfl-86.webp"
       },
       {
         "id": "vpfl-87",
@@ -6207,7 +6216,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Für ein Ehrenamt braucht man nur Zeit und Bereitschaft.",
         "exampleAr": "للعمل ال…",
-        "plural": "die Ehrenämter"
+        "plural": "die Ehrenämter",
+        "img": "/cards/b2-v286.webp"
       },
       {
         "id": "v287",
@@ -6254,7 +6264,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Ihr Engagement im Verein hat ihr später den Job gebracht.",
         "exampleAr": "التزامها…",
-        "plural": "die Engagements"
+        "plural": "die Engagements",
+        "img": "/cards/b2-v289.webp"
       },
       {
         "id": "v290",
@@ -6528,7 +6539,8 @@
         "aussprache": "w = «ڤ»",
         "exampleDe": "Er hat ein schlechtes Gewissen, weil er den Termin vergessen hat.",
         "exampleAr": "يؤنّبه ض…",
-        "plural": "die Gewissen"
+        "plural": "die Gewissen",
+        "img": "/cards/b2-v308.webp"
       },
       {
         "id": "v309",
@@ -6573,7 +6585,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Das stärkste Argument gegen das Auto ist der Preis.",
         "exampleAr": "أقوى حجة…",
-        "plural": "die Argumente"
+        "plural": "die Argumente",
+        "img": "/cards/b2-v311.webp"
       },
       {
         "id": "v312",
@@ -6900,7 +6913,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Im Dorf fährt der Bus nur dreimal am Tag.",
         "exampleAr": "في القري…",
-        "plural": "die Dörfer"
+        "plural": "die Dörfer",
+        "img": "/cards/b2-v336.webp"
       },
       {
         "id": "v337",
@@ -6931,7 +6945,8 @@
         "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
         "exampleDe": "Das Grundstück ist klein, aber der Garten geht nach Süden.",
         "exampleAr": "قطعة الأ…",
-        "plural": "die Grundstücke"
+        "plural": "die Grundstücke",
+        "img": "/cards/b2-v338.webp"
       },
       {
         "id": "v339",
@@ -6947,7 +6962,8 @@
         "aussprache": "ei = «آي» لا «إي»",
         "exampleDe": "Ein Eigenheim bindet einen an einen Ort, für Jahrzehnte.",
         "exampleAr": "المنزل ا…",
-        "plural": "die Eigenheime"
+        "plural": "die Eigenheime",
+        "img": "/cards/b2-v339.webp"
       },
       {
         "id": "v340",
@@ -7465,7 +7481,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Das Gerät ist alt, aber es funktioniert noch gut.",
         "exampleAr": "الجهاز ق…",
-        "plural": "die Geräte"
+        "plural": "die Geräte",
+        "img": "/cards/b2-v374.webp"
       },
       {
         "id": "v375",
@@ -7873,7 +7890,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Ein Backup jede Woche hätte den Verlust der Arbeit verhindert.",
         "exampleAr": "نسخة احت…",
-        "plural": "die Backups"
+        "plural": "die Backups",
+        "img": "/cards/b2-v401.webp"
       },
       {
         "id": "v402",
@@ -7991,7 +8009,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Das Abonnement verlängert sich automatisch, wenn man nicht kündigt.",
         "exampleAr": "الاشتراك…",
-        "plural": "die Abos"
+        "plural": "die Abos",
+        "img": "/cards/b2-v409.webp"
       },
       {
         "id": "v410",
@@ -8135,7 +8154,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Das Ergebnis der Prüfung kommt in vier Wochen.",
         "exampleAr": "نتيجة الامتحان تصل خلال أربعة أسابيع.",
-        "plural": "die Ergebnisse"
+        "plural": "die Ergebnisse",
+        "img": "/cards/b2-v419.webp"
       },
       {
         "id": "v420",
@@ -8150,7 +8170,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Das Experiment wurde dreimal wiederholt, mit gleichem Ergebnis.",
         "exampleAr": "التجربة أُعيدت ثلاث مرات بنفس النتيجة.",
-        "plural": "die Initiativen"
+        "plural": "die Initiativen",
+        "img": "/cards/b2-v420.webp"
       },
       {
         "id": "v421",
@@ -8519,7 +8540,8 @@
         "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
         "exampleDe": "Das Gutachten des Instituts kommt zu einem anderen Ergebnis.",
         "exampleAr": "التقرير…",
-        "plural": "die Gutachten"
+        "plural": "die Gutachten",
+        "img": "/cards/b2-v446.webp"
       },
       {
         "id": "v447",
@@ -8564,7 +8586,8 @@
         "aussprache": "sch = «ش»",
         "exampleDe": "Das Forschungsprojekt untersucht Lärm in Schulen.",
         "exampleAr": "المشروع…",
-        "plural": "die Forschungsprojekte"
+        "plural": "die Forschungsprojekte",
+        "img": "/cards/b2-v449.webp"
       },
       {
         "id": "v450",
@@ -8708,7 +8731,8 @@
         "article": "das",
         "farbe": "GRÜN",
         "exampleDe": "Das Aussehen ist beim Vorstellungsgespräch nicht alles.",
-        "exampleAr": "المظهر ل…"
+        "exampleAr": "المظهر ل…",
+        "img": "/cards/b2-v457.webp"
       },
       {
         "id": "v458",
@@ -8775,7 +8799,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Das Ideal der ständigen Erreichbarkeit macht viele krank.",
         "exampleAr": "المثال ا…",
-        "plural": "die Ideale"
+        "plural": "die Ideale",
+        "img": "/cards/b2-v461.webp"
       },
       {
         "id": "v462",
@@ -8908,7 +8933,8 @@
         "aussprache": "-er في الآخر = «أَ» خفيفة",
         "exampleDe": "Im Alter braucht man mehr Zeit für den Alltag.",
         "exampleAr": "في الكِب…",
-        "plural": "die Gutachten"
+        "plural": "die Gutachten",
+        "img": "/cards/b2-v470.webp"
       },
       {
         "id": "v471",
@@ -9027,7 +9053,7 @@
           "schoenheit"
         ],
         "aussprache": "ie = «إي» ممدودة · z = «تس»",
-        "exampleDe": "Zieh dich warm an, es sind nur acht Grad!",
+        "exampleDe": "Zieh dich warm an, es sind nur acht Grad!.",
         "exampleAr": "ارتدِ مل…",
         "posInfo": "zieht sich an, zog sich an, hat sich angezogen"
       },
@@ -9482,7 +9508,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Das Gemälde zeigt eine Straße bei Nacht, ohne Menschen.",
         "exampleAr": "اللوحة ت…",
-        "plural": "die Gemälde"
+        "plural": "die Gemälde",
+        "img": "/cards/b2-v507.webp"
       },
       {
         "id": "v508",
@@ -9510,7 +9537,8 @@
         "farbe": "GRÜN",
         "exampleDe": "An der Wand hängt ein Bild von meiner Familie.",
         "exampleAr": "على الجد…",
-        "plural": "die Bilder"
+        "plural": "die Bilder",
+        "img": "/cards/b2-v509.webp"
       },
       {
         "id": "v510",
@@ -9540,7 +9568,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Das Denkmal erinnert an die Opfer der Überschwemmung.",
         "exampleAr": "النصب ال…",
-        "plural": "die Denkmäler"
+        "plural": "die Denkmäler",
+        "img": "/cards/b2-v511.webp"
       },
       {
         "id": "v512",
@@ -9633,7 +9662,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Welches Instrument spielst du? – Gitarre, seit drei Jahren.",
         "exampleAr": "أي آلة ت…",
-        "plural": "die Instrumente"
+        "plural": "die Instrumente",
+        "img": "/cards/b2-v517.webp"
       },
       {
         "id": "v518",
@@ -9723,7 +9753,8 @@
         "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
         "exampleDe": "Das Drehbuch wurde zehnmal umgeschrieben.",
         "exampleAr": "السيناري…",
-        "plural": "die Drehbücher"
+        "plural": "die Drehbücher",
+        "img": "/cards/b2-v523.webp"
       },
       {
         "id": "v524",
@@ -9891,7 +9922,8 @@
         "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
         "exampleDe": "Wir lernen im Kurs ein kurzes Gedicht auswendig.",
         "exampleAr": "نحفظ في…",
-        "plural": "die Gedichte"
+        "plural": "die Gedichte",
+        "img": "/cards/b2-v534.webp"
       },
       {
         "id": "v535",
@@ -9936,7 +9968,8 @@
         "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
         "exampleDe": "Es lohnt sich, das Buch zweimal zu lesen.",
         "exampleAr": "يستحق ال…",
-        "plural": "die Bücher"
+        "plural": "die Bücher",
+        "img": "/cards/b2-v537.webp"
       },
       {
         "id": "v538",
@@ -9983,7 +10016,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Das dritte Kapitel ist das längste und das spannendste.",
         "exampleAr": "الفصل ال…",
-        "plural": "die Richtwerte"
+        "plural": "die Richtwerte",
+        "img": "/cards/b2-v540.webp"
       },
       {
         "id": "v541",
@@ -10044,7 +10078,8 @@
         "aussprache": "v = «ف»",
         "exampleDe": "Beim Festival im Juli spielen dreißig Bands aus zehn Ländern.",
         "exampleAr": "في مهرجا…",
-        "plural": "die Festivals"
+        "plural": "die Festivals",
+        "img": "/cards/b2-v544.webp"
       },
       {
         "id": "v545",
@@ -10074,7 +10109,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Das kulturelle Erbe der Region sind ihre Märkte, nicht ihre Museen.",
         "exampleAr": "الإرث ال…",
-        "plural": "die Erben"
+        "plural": "die Erben",
+        "img": "/cards/b2-v546.webp"
       },
       {
         "id": "v547",
@@ -10194,7 +10230,8 @@
         "syn": [
           "der Lohn"
         ],
-        "plural": "die Gehälter"
+        "plural": "die Gehälter",
+        "img": "/cards/b2-v553.webp"
       },
       {
         "id": "v554",
@@ -10539,7 +10576,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Das Burnout kam nicht plötzlich, sondern nach Monaten ohne Pause.",
         "exampleAr": "الاحتراق الوظيفي ل…",
-        "plural": "die Studien"
+        "plural": "die Studien",
+        "img": "/cards/b2-v575.webp"
       },
       {
         "id": "v576",
@@ -10613,7 +10651,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Das Elterngeld hängt vom Einkommen der letzten zwölf Monate ab.",
         "exampleAr": "منحة الوالدين تتوق…",
-        "plural": "die Analysen"
+        "plural": "die Analysen",
+        "img": "/cards/b2-v580.webp"
       },
       {
         "id": "v581",
@@ -11371,7 +11410,8 @@
         "aussprache": "w = «ڤ»",
         "exampleDe": "Ein Einwegprodukt ist billig im Kauf und teuer für die Umwelt.",
         "exampleAr": "المنتج أحادي الاست…",
-        "plural": "die Einwegprodukte"
+        "plural": "die Einwegprodukte",
+        "img": "/cards/b2-v604.webp"
       },
       {
         "id": "v605",
@@ -11603,7 +11643,8 @@
         "farbe": "GRÜN",
         "aussprache": "ö = بينَ الضمّةِ والكسرة",
         "exampleDe": "Der Preis für Erdöl ist wieder gestiegen.",
-        "exampleAr": "سعر النفط ارتفع مج…"
+        "exampleAr": "سعر النفط ارتفع مج…",
+        "img": "/cards/b2-v619.webp"
       },
       {
         "id": "v620",
@@ -11618,7 +11659,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Viele Wohnungen werden noch mit Erdgas geheizt.",
         "exampleAr": "شقق كثيرة ما زالت…",
-        "plural": "die Rezensionen"
+        "plural": "die Rezensionen",
+        "img": "/cards/b2-v620.webp"
       },
       {
         "id": "v621",
@@ -11826,7 +11868,8 @@
         "article": "das",
         "farbe": "GRÜN",
         "exampleDe": "Das Aussterben einer Art fällt oft erst auf, wenn es zu spät ist.",
-        "exampleAr": "انقراض نوع ما لا ي…"
+        "exampleAr": "انقراض نوع ما لا ي…",
+        "img": "/cards/b2-v634.webp"
       },
       {
         "id": "v635",
@@ -11857,7 +11900,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Das Biotop am Bahndamm wurde von Freiwilligen angelegt.",
         "exampleAr": "الموطن البيئي على…",
-        "plural": "die Biotope"
+        "plural": "die Biotope",
+        "img": "/cards/b2-v636.webp"
       },
       {
         "id": "v637",
@@ -11872,7 +11916,8 @@
         "farbe": "GRÜN",
         "aussprache": "w = «ڤ» · -er في الآخر = «أَ» خفيفة",
         "exampleDe": "Das Grundwasser ist in trockenen Sommern deutlich gesunken.",
-        "exampleAr": "المياه الجوفية انخ…"
+        "exampleAr": "المياه الجوفية انخ…",
+        "img": "/cards/b2-v637.webp"
       },
       {
         "id": "v638",
@@ -11888,7 +11933,8 @@
         "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · w = «ڤ» · -er في الآخر = «أَ» خفيفة",
         "exampleDe": "Beim Hochwasser stand das Wasser einen Meter hoch im Keller.",
         "exampleAr": "في الفيضان بلغ الم…",
-        "plural": "die Hochwasser"
+        "plural": "die Hochwasser",
+        "img": "/cards/b2-v638.webp"
       },
       {
         "id": "v639",
@@ -11982,7 +12028,8 @@
         "farbe": "GRÜN",
         "aussprache": "sch = «ش» · z = «تس»",
         "exampleDe": "Das Gletscherschmelzen verändert die Flüsse im Tal.",
-        "exampleAr": "ذوبان الأنهار الجل…"
+        "exampleAr": "ذوبان الأنهار الجل…",
+        "img": "/cards/b2-v644.webp"
       },
       {
         "id": "v645",
@@ -12090,7 +12137,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Das Abkommen wurde unterschrieben, die Umsetzung fehlt noch.",
         "exampleAr": "الاتفاق وُقّع، وال…",
-        "plural": "die Abkommen"
+        "plural": "die Abkommen",
+        "img": "/cards/b2-v651.webp"
       },
       {
         "id": "v652",
@@ -12416,7 +12464,8 @@
         "article": "das",
         "farbe": "GRÜN",
         "exampleDe": "Das Guthaben auf der Karte reicht noch für drei Fahrten.",
-        "exampleAr": "الرصيد على البطاقة…"
+        "exampleAr": "الرصيد على البطاقة…",
+        "img": "/cards/b2-v672.webp"
       },
       {
         "id": "v673",
@@ -12756,7 +12805,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Unser Budget für den Urlaub sind achthundert Euro.",
         "exampleAr": "ميزانيتنا للعطلة ث…",
-        "plural": "die Budgets"
+        "plural": "die Budgets",
+        "img": "/cards/b2-v694.webp"
       },
       {
         "id": "v695",
@@ -12980,7 +13030,8 @@
         "article": "das",
         "farbe": "GRÜN",
         "exampleDe": "Der Betrag wird bar ausgezahlt, ich habe kein Bargeld dabei.",
-        "exampleAr": "المبلغ يُدفع نقداً…"
+        "exampleAr": "المبلغ يُدفع نقداً…",
+        "img": "/cards/b2-v709.webp"
       },
       {
         "id": "v710",
@@ -13141,7 +13192,8 @@
         "aussprache": "eu/äu = «أوي» · z = «تس»",
         "exampleDe": "Jedes Fahrzeug muss alle zwei Jahre zur Prüfung.",
         "exampleAr": "كل مركبة يجب أن تخ…",
-        "plural": "die Fahrzeuge"
+        "plural": "die Fahrzeuge",
+        "img": "/cards/b2-v719.webp"
       },
       {
         "id": "v720",
@@ -13156,7 +13208,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Das Elektroauto lädt über Nacht an der Wallbox in der Garage.",
         "exampleAr": "السيارة الكهربائية…",
-        "plural": "die Modelle"
+        "plural": "die Modelle",
+        "img": "/cards/b2-v720.webp"
       },
       {
         "id": "v721",
@@ -13307,7 +13360,8 @@
         "aussprache": "ei = «آي» لا «إي»",
         "exampleDe": "Der Zug nach Köln fährt heute von Gleis fünf, nicht von Gleis drei.",
         "exampleAr": "قطار كولن ينطلق ال…",
-        "plural": "die Pläne"
+        "plural": "die Pläne",
+        "img": "/cards/b2-v730.webp"
       },
       {
         "id": "v731",
@@ -13736,7 +13790,8 @@
         "aussprache": "ß = «س» مشدَّدة",
         "exampleDe": "Wer bei Rot fährt, zahlt ein Bußgeld und bekommt einen Punkt.",
         "exampleAr": "من يقطع الإشارة ال…",
-        "plural": "die Bußgelder"
+        "plural": "die Bußgelder",
+        "img": "/cards/b2-v758.webp"
       },
       {
         "id": "v759",
@@ -13752,7 +13807,8 @@
         "aussprache": "v = «ف»",
         "exampleDe": "Nach dem zweiten Verstoß drohte ihm ein Fahrverbot von einem Monat.",
         "exampleAr": "بعد المخالفة الثان…",
-        "plural": "die Fahrverbote"
+        "plural": "die Fahrverbote",
+        "img": "/cards/b2-v759.webp"
       },
       {
         "id": "v760",
@@ -13876,7 +13932,8 @@
         "article": "das",
         "farbe": "GRÜN",
         "exampleDe": "Ins Handgepäck passen nur Flüssigkeiten bis hundert Milliliter.",
-        "exampleAr": "في أمتعة الكابينة…"
+        "exampleAr": "في أمتعة الكابينة…",
+        "img": "/cards/b2-v767.webp"
       },
       {
         "id": "v768",
@@ -13946,7 +14003,8 @@
         "aussprache": "z = «تس»",
         "exampleDe": "Das neue Gesetz gilt ab Januar für alle Mieter.",
         "exampleAr": "القانون الجديد يسر…",
-        "plural": "die Gesetze"
+        "plural": "die Gesetze",
+        "img": "/cards/b2-v771.webp"
       },
       {
         "id": "v772",
@@ -14369,7 +14427,8 @@
         "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
         "exampleDe": "Vor dem Gericht muss zuerst ein Schlichtungsversuch stehen.",
         "exampleAr": "قبل المحكمة يجب أن…",
-        "plural": "die Gerichte"
+        "plural": "die Gerichte",
+        "img": "/cards/b2-v799.webp"
       },
       {
         "id": "v800",
@@ -14710,7 +14769,8 @@
         "article": "das",
         "farbe": "GRÜN",
         "exampleDe": "Der Antrag auf Asyl wird in einem persönlichen Gespräch geprüft.",
-        "exampleAr": "طلب اللجوء يُفحص ف…"
+        "exampleAr": "طلب اللجوء يُفحص ف…",
+        "img": "/cards/b2-v821.webp"
       },
       {
         "id": "v822",
@@ -15161,7 +15221,8 @@
         "aussprache": "ö = بينَ الضمّةِ والكسرة",
         "exampleDe": "Der Hörsaal war so voll, dass Studierende auf den Stufen saßen.",
         "exampleAr": "قاعة المحاضرات كان…",
-        "plural": "die Hörsäle"
+        "plural": "die Hörsäle",
+        "img": "/cards/b2-v848.webp"
       },
       {
         "id": "v849",
@@ -15739,7 +15800,8 @@
         "farbe": "GRÜN",
         "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
         "exampleDe": "Schlaf ist wichtig für das Gedächtnis, sagt der Autor.",
-        "exampleAr": "النوم مهم للذاكرة،…"
+        "exampleAr": "النوم مهم للذاكرة،…",
+        "img": "/cards/b2-v886.webp"
       },
       {
         "id": "v887",
@@ -15922,7 +15984,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Das Institut sucht eine neue Erstprüferin binnen sechs Wochen.",
         "exampleAr": "المعهد يبحث عن ممت…",
-        "plural": "die Institute"
+        "plural": "die Institute",
+        "img": "/cards/b2-v898.webp"
       },
       {
         "id": "v899",
@@ -16937,7 +17000,8 @@
         "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
         "exampleDe": "Das Bedürfnis nach Ruhe ist nach einer Nachtschicht am größten.",
         "exampleAr": "الحاجة إلى الهدوء…",
-        "plural": "die Bedürfnisse"
+        "plural": "die Bedürfnisse",
+        "img": "/cards/b2-v961.webp"
       },
       {
         "id": "v962",
@@ -17096,7 +17160,8 @@
         "farbe": "GRÜN",
         "aussprache": "ei = «آي» لا «إي» · w = «ڤ»",
         "exampleDe": "Das Heimweh kam am ersten Abend, beim Brot mit Käse.",
-        "exampleAr": "الحنين إلى الوطن ج…"
+        "exampleAr": "الحنين إلى الوطن ج…",
+        "img": "/cards/b2-v972.webp"
       },
       {
         "id": "v973",
@@ -17206,7 +17271,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Das Fitnessstudio kündigt man schriftlich mit sechs Wochen Frist.",
         "exampleAr": "يُلغى اشتراك الناد…",
-        "plural": "die Fitnessstudios"
+        "plural": "die Fitnessstudios",
+        "img": "/cards/b2-v979.webp"
       },
       {
         "id": "v980",
@@ -17235,7 +17301,8 @@
         "article": "das",
         "farbe": "GRÜN",
         "exampleDe": "Ausdauertraining dreimal pro Woche senkt den Blutdruck.",
-        "exampleAr": "تمرين التحمل ثلاث…"
+        "exampleAr": "تمرين التحمل ثلاث…",
+        "img": "/cards/b2-v981.webp"
       },
       {
         "id": "v982",
@@ -17276,7 +17343,8 @@
         "article": "das",
         "farbe": "GRÜN",
         "exampleDe": "Das Dehnen nach dem Training beugt Zerrungen vor.",
-        "exampleAr": "الإطالة بعد التمري…"
+        "exampleAr": "الإطالة بعد التمري…",
+        "img": "/cards/b2-v984.webp"
       },
       {
         "id": "v985",
@@ -17621,7 +17689,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Beim Derby sind die Karten seit Wochen weg.",
         "exampleAr": "في مباراة الديربي…",
-        "plural": "die Derbys"
+        "plural": "die Derbys",
+        "img": "/cards/b2-v1007.webp"
       },
       {
         "id": "v1008",
@@ -18017,7 +18086,8 @@
         "farbe": "GRÜN",
         "aussprache": "ie = «إي» ممدودة · sch = «ش» · ß = «س» مشدَّدة",
         "exampleDe": "Das Elfmeterschießen gewann die Mannschaft mit fünf zu vier.",
-        "exampleAr": "ركلات الترجيح ربحه…"
+        "exampleAr": "ركلات الترجيح ربحه…",
+        "img": "/cards/b2-v1033.webp"
       },
       {
         "id": "v1034",
@@ -18267,7 +18337,8 @@
         "article": "das",
         "farbe": "GRÜN",
         "exampleDe": "Agenda-Setting entscheidet nicht, was wir denken, sondern worüber.",
-        "exampleAr": "تقرير جدول النقاش…"
+        "exampleAr": "تقرير جدول النقاش…",
+        "img": "/cards/b2-v1049.webp"
       },
       {
         "id": "v1050",
@@ -18514,7 +18585,8 @@
         "article": "das",
         "farbe": "GRÜN",
         "exampleDe": "Das Framing „Flut“ macht aus Menschen eine Naturkatastrophe.",
-        "exampleAr": "تأطير «طوفان» يحوّ…"
+        "exampleAr": "تأطير «طوفان» يحوّ…",
+        "img": "/cards/b2-v1065.webp"
       },
       {
         "id": "v1066",
@@ -18990,7 +19062,8 @@
         "farbe": "GRÜN",
         "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
         "exampleDe": "Das Bildungsbürgertum kennt die Regeln der Schule von zu Hause.",
-        "exampleAr": "البرجوازية التعليم…"
+        "exampleAr": "البرجوازية التعليم…",
+        "img": "/cards/b2-v1096.webp"
       },
       {
         "id": "v1097",
@@ -19723,7 +19796,8 @@
         "farbe": "GRÜN",
         "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
         "exampleDe": "Das Bürgergeld wird vom Jobcenter monatlich überwiesen.",
-        "exampleAr": "بدل المواطن يحوّله…"
+        "exampleAr": "بدل المواطن يحوّله…",
+        "img": "/cards/b2-v1141.webp"
       },
       {
         "id": "v1142",
@@ -20203,7 +20277,8 @@
         "aussprache": "-er في الآخر = «أَ» خفيفة",
         "exampleDe": "Das Jobcenter zahlt den Kurs, wenn man den Antrag rechtzeitig stellt.",
         "exampleAr": "مكتب العمل يدفع ال…",
-        "plural": "die Jobcenter"
+        "plural": "die Jobcenter",
+        "img": "/cards/b2-v1172.webp"
       },
       {
         "id": "v1173",
@@ -20320,7 +20395,8 @@
         "aussprache": "-er في الآخر = «أَ» خفيفة",
         "exampleDe": "Ein Endlager muss für Jahrtausende sicher sein.",
         "exampleAr": "موقع الدفن النهائي…",
-        "plural": "die Endlager"
+        "plural": "die Endlager",
+        "img": "/cards/b2-v1179.webp"
       },
       {
         "id": "v1180",
@@ -20539,7 +20615,8 @@
         "aussprache": "ie = «إي» ممدودة · eu/äu = «أوي» · z = «تس»",
         "exampleDe": "Das Erneuerbare-Energien-Gesetz garantierte jahrelang feste Preise.",
         "exampleAr": "قانون الطاقات المت…",
-        "plural": "die Erneuerbare-Energien-Gesetze"
+        "plural": "die Erneuerbare-Energien-Gesetze",
+        "img": "/cards/b2-v1193.webp"
       },
       {
         "id": "v1194",
@@ -21252,7 +21329,8 @@
         "aussprache": "ie = «إي» ممدودة",
         "exampleDe": "Das Biosiegel garantiert Mindeststandards, nicht Perfektion.",
         "exampleAr": "الختم العضوي يضمن…",
-        "plural": "die Biosiegel"
+        "plural": "die Biosiegel",
+        "img": "/cards/b2-v1239.webp"
       },
       {
         "id": "v1240",
@@ -21422,7 +21500,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Das Bundeskartellamt prüft, ob die Fusion den Wettbewerb schadet.",
         "exampleAr": "مكتب مكافحة الكارت…",
-        "plural": "die Bundeskartellämter"
+        "plural": "die Bundeskartellämter",
+        "img": "/cards/b2-v1250.webp"
       },
       {
         "id": "v1251",
@@ -21760,7 +21839,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Für Kinder ist schon eine kleine Menge dieses Mittels Gift.",
         "exampleAr": "للأطفال حتى كمية ص…",
-        "plural": "die Gifte"
+        "plural": "die Gifte",
+        "img": "/cards/b2-v1411.webp"
       }
     ]
   },
@@ -22490,7 +22570,8 @@
         "aussprache": "ei = «آي» لا «إي» · ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · w = «ڤ»",
         "exampleDe": "Das Fachkräfteeinwanderungsgesetz erleichtert die Anerkennung von Abschlüssen.",
         "exampleAr": "قانون استقدام الكو…",
-        "plural": "die Fachkräfteeinwanderungsgesetze"
+        "plural": "die Fachkräfteeinwanderungsgesetze",
+        "img": "/cards/b2-v1317.webp"
       },
       {
         "id": "v1318",
@@ -22877,7 +22958,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Das Herkunftsland steht in jedem Formular, der Beruf selten.",
         "exampleAr": "البلد الأصلي مذكور…",
-        "plural": "die Herkunftsländer"
+        "plural": "die Herkunftsländer",
+        "img": "/cards/b2-v1342.webp"
       },
       {
         "id": "v1343",
@@ -23161,7 +23243,8 @@
         "article": "das",
         "farbe": "GRÜN",
         "exampleDe": "Das Gedenken an die Opfer findet jedes Jahr am selben Ort statt.",
-        "exampleAr": "إحياء ذكرى الضحايا…"
+        "exampleAr": "إحياء ذكرى الضحايا…",
+        "img": "/cards/b2-v1360.webp"
       },
       {
         "id": "v1361",
@@ -23455,7 +23538,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Das Gedenkritual mit Kranz und Rede wirkt auf Jugendliche oft fern.",
         "exampleAr": "طقس الإحياء بالإكل…",
-        "plural": "die Gedenkrituale"
+        "plural": "die Gedenkrituale",
+        "img": "/cards/b2-v1379.webp"
       },
       {
         "id": "v1380",
@@ -24710,7 +24794,7 @@
         "ar": "اليد",
         "pos": "Nomen",
         "article": "die",
-        "exampleDe": "Wasch dir die Hände!",
+        "exampleDe": "Wasch dir die Hände!.",
         "exampleAr": "اغسلْ يد…",
         "level": "A1",
         "tags": [
@@ -25004,7 +25088,7 @@
         "de": "anziehen",
         "ar": "يلبس",
         "pos": "Verb",
-        "exampleDe": "Zieh dir die Jacke an!",
+        "exampleDe": "Zieh dir die Jacke an!.",
         "exampleAr": "البسِ ال…",
         "level": "A1",
         "tags": [
@@ -25031,7 +25115,7 @@
         "de": "kosten",
         "ar": "يكلّف",
         "pos": "Verb",
-        "exampleDe": "Was kostet die Jacke?",
+        "exampleDe": "Was kostet die Jacke?.",
         "exampleAr": "كم تكلّف…",
         "level": "A1",
         "tags": [
@@ -29382,7 +29466,7 @@
         "de": "hören",
         "ar": "يسمع",
         "pos": "Verb",
-        "exampleDe": "Hörst du die Musik?",
+        "exampleDe": "Hörst du die Musik?.",
         "exampleAr": "أتسمعُ الموسيقى؟",
         "level": "A1",
         "tags": [
@@ -29425,7 +29509,7 @@
         "de": "machen",
         "ar": "يفعل / يصنع",
         "pos": "Verb",
-        "exampleDe": "Was machst du gerade?",
+        "exampleDe": "Was machst du gerade?.",
         "exampleAr": "ماذا تفع…",
         "level": "A1",
         "tags": [
@@ -29465,7 +29549,7 @@
         "de": "sagen",
         "ar": "يقول",
         "pos": "Verb",
-        "exampleDe": "Was hast du gesagt?",
+        "exampleDe": "Was hast du gesagt?.",
         "exampleAr": "ماذا قلت…",
         "level": "A1",
         "tags": [
@@ -29538,7 +29622,7 @@
         "de": "kennen",
         "ar": "يعرِفُ شخصاً",
         "pos": "Verb",
-        "exampleDe": "Kennst du diese Frau?",
+        "exampleDe": "Kennst du diese Frau?.",
         "exampleAr": "أتعرفُ ه…",
         "level": "A1",
         "tags": [
@@ -29625,7 +29709,7 @@
         "de": "aufhören",
         "ar": "يتوقّف",
         "pos": "Verb",
-        "exampleDe": "Hör bitte auf!",
+        "exampleDe": "Hör bitte auf!.",
         "exampleAr": "توقّفْ م…",
         "level": "A1",
         "tags": [
@@ -31548,7 +31632,7 @@
         "de": "bedeuten",
         "ar": "يعني",
         "pos": "Verb",
-        "exampleDe": "Was bedeutet dieses Wort?",
+        "exampleDe": "Was bedeutet dieses Wort?.",
         "exampleAr": "ماذا تعن…",
         "level": "A2",
         "tags": [
@@ -31602,7 +31686,7 @@
         "de": "achten auf",
         "ar": "ينتبهُ إلى",
         "pos": "Verb",
-        "exampleDe": "Achte auf die Schilder!",
+        "exampleDe": "Achte auf die Schilder!.",
         "exampleAr": "انتبهْ إ…",
         "level": "A2",
         "tags": [
@@ -31615,7 +31699,7 @@
         "de": "aufpassen",
         "ar": "يحترس / يراقب",
         "pos": "Verb",
-        "exampleDe": "Pass auf, das ist heiß!",
+        "exampleDe": "Pass auf, das ist heiß!.",
         "exampleAr": "احترسْ،…",
         "level": "A2",
         "tags": [
@@ -32702,7 +32786,7 @@
         "de": "setzen",
         "ar": "يُجلِس",
         "pos": "Verb",
-        "exampleDe": "Setz dich bitte!",
+        "exampleDe": "Setz dich bitte!.",
         "exampleAr": "اجلسْ من…",
         "level": "A1",
         "tags": [
@@ -32729,7 +32813,7 @@
         "de": "fallen",
         "ar": "يسقط",
         "pos": "Verb",
-        "exampleDe": "Pass auf, der Teller fällt!",
+        "exampleDe": "Pass auf, der Teller fällt!.",
         "exampleAr": "احترسْ،…",
         "level": "A1",
         "tags": [
@@ -32756,7 +32840,7 @@
         "de": "aussteigen",
         "ar": "ينزلُ من مركبة",
         "pos": "Verb",
-        "exampleDe": "Wo steigen Sie aus?",
+        "exampleDe": "Wo steigen Sie aus?.",
         "exampleAr": "أينَ تنز…",
         "level": "A1",
         "tags": [
@@ -32770,7 +32854,7 @@
         "de": "mitkommen",
         "ar": "يرافق",
         "pos": "Verb",
-        "exampleDe": "Kommst du mit?",
+        "exampleDe": "Kommst du mit?.",
         "exampleAr": "أتأتي مع…",
         "level": "A1",
         "tags": [
@@ -34371,7 +34455,7 @@
         "de": "sollen",
         "ar": "ينبغي له",
         "pos": "Verb",
-        "exampleDe": "Was soll ich mitbringen?",
+        "exampleDe": "Was soll ich mitbringen?.",
         "exampleAr": "ماذا ينب…",
         "level": "A1",
         "tags": [
@@ -37918,7 +38002,7 @@
         "de": "gratulieren zum Fest",
         "ar": "يهنّئُ بالعيد",
         "pos": "Verb",
-        "exampleDe": "Ich gratuliere dir zum Fest!",
+        "exampleDe": "Ich gratuliere dir zum Fest!.",
         "exampleAr": "أهنّئكَ…",
         "level": "A2",
         "tags": [
@@ -38091,7 +38175,7 @@
         "de": "probieren",
         "ar": "يتذوَّق / يجرّب",
         "pos": "Verb",
-        "exampleDe": "Probier mal diesen Kuchen!",
+        "exampleDe": "Probier mal diesen Kuchen!.",
         "exampleAr": "تذوَّقْ…",
         "level": "A2",
         "tags": [
@@ -38763,7 +38847,7 @@
         "de": "sich erinnern an",
         "ar": "يتذكَّر",
         "pos": "Verb",
-        "exampleDe": "Erinnerst du dich an ihn?",
+        "exampleDe": "Erinnerst du dich an ihn?.",
         "exampleAr": "أتتذكَّر…",
         "level": "A2",
         "tags": [
@@ -39878,7 +39962,7 @@
         "de": "gewinnen",
         "ar": "يفوز",
         "pos": "Verb",
-        "exampleDe": "Wer hat gewonnen?",
+        "exampleDe": "Wer hat gewonnen?.",
         "exampleAr": "مَن فاز؟",
         "level": "A2",
         "tags": [
@@ -41640,7 +41724,7 @@
         "de": "passieren",
         "ar": "يحدث",
         "pos": "Verb",
-        "exampleDe": "Was ist hier passiert?",
+        "exampleDe": "Was ist hier passiert?.",
         "exampleAr": "ماذا حدث…",
         "level": "A2",
         "tags": [
@@ -44823,7 +44907,7 @@
         "de": "einschätzen",
         "ar": "يقدّر / يقيّم",
         "pos": "Verb",
-        "exampleDe": "Wie schätzt du die Lage ein?",
+        "exampleDe": "Wie schätzt du die Lage ein?.",
         "exampleAr": "كيفَ تقي…",
         "level": "B1",
         "tags": [
@@ -51331,7 +51415,7 @@
         "de": "das Gericht empfehlen",
         "ar": "ينصحُ بطبق",
         "pos": "Nomen",
-        "exampleDe": "Was können Sie empfehlen?",
+        "exampleDe": "Was können Sie empfehlen?.",
         "exampleAr": "بماذا تن…",
         "level": "B1",
         "tags": [
@@ -55865,7 +55949,7 @@
         "de": "aufkommen für",
         "ar": "يتحمَّلُ نفقةَ",
         "pos": "Verb",
-        "exampleDe": "Wer kommt für den Schaden auf?",
+        "exampleDe": "Wer kommt für den Schaden auf?.",
         "exampleAr": "مَن يتحم…",
         "level": "B1",
         "tags": [
@@ -60613,7 +60697,7 @@
         "tags": [
           "arbeit"
         ],
-        "exampleDe": "Wer vertritt dich im Urlaub?",
+        "exampleDe": "Wer vertritt dich im Urlaub?.",
         "exampleAr": "من ينوب…",
         "posInfo": "vertretet, vertretete, hat vertrett"
       },
@@ -61452,7 +61536,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Das Abwasser wird in der Kläranlage gereinigt.",
         "exampleAr": "تُنقّى م…",
-        "plural": "die Abwässer"
+        "plural": "die Abwässer",
+        "img": "/cards/b2-j03-umwelt-energie-020.webp"
       },
       {
         "id": "j03-umwelt-energie-021",
@@ -62624,7 +62709,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Das Blutdruckgerät zeigt 120 zu 80.",
         "exampleAr": "يُظهر جه…",
-        "plural": "die Blutdruckgeräte"
+        "plural": "die Blutdruckgeräte",
+        "img": "/cards/b2-j04-gesundheit-pflege-036.webp"
       },
       {
         "id": "j04-gesundheit-pflege-037",
@@ -64575,7 +64661,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Sie löscht ihr altes Benutzerkonto.",
         "exampleAr": "تحذف حسا…",
-        "plural": "die Benutzerkonten"
+        "plural": "die Benutzerkonten",
+        "img": "/cards/b2-j06-medien-digital-031.webp"
       },
       {
         "id": "j06-medien-digital-032",
@@ -65416,7 +65503,8 @@
         "article": "das",
         "farbe": "GRÜN",
         "exampleDe": "Das Haushaltsgeld muss für vier Wochen reichen.",
-        "exampleAr": "يجب أن ي…"
+        "exampleAr": "يجب أن ي…",
+        "img": "/cards/b2-j07-geld-wirtschaft-030.webp"
       },
       {
         "id": "j07-geld-wirtschaft-031",
@@ -65445,7 +65533,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Das Darlehen läuft über zehn Jahre.",
         "exampleAr": "يمتد الق…",
-        "plural": "die Darlehen"
+        "plural": "die Darlehen",
+        "img": "/cards/b2-j07-geld-wirtschaft-032.webp"
       },
       {
         "id": "j07-geld-wirtschaft-033",
@@ -66167,7 +66256,7 @@
         "tags": [
           "gefuehle"
         ],
-        "exampleDe": "Reg dich nicht so auf!",
+        "exampleDe": "Reg dich nicht so auf!.",
         "exampleAr": "لا تنفعل…",
         "posInfo": "regt auf, regte auf, hat aufgeregt"
       },
@@ -67350,7 +67439,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Ein Drittel der Schüler kommt mit dem Bus.",
         "exampleAr": "ثلث التل…",
-        "plural": "die Drittel"
+        "plural": "die Drittel",
+        "img": "/cards/b2-j10-meinung-diskussion-010.webp"
       },
       {
         "id": "j10-meinung-diskussion-011",
@@ -67699,7 +67789,7 @@
         "tags": [
           "meinung"
         ],
-        "exampleDe": "Was meinst du dazu?",
+        "exampleDe": "Was meinst du dazu?.",
         "exampleAr": "ما رأيك…",
         "posInfo": "meint, meinte, hat gemeint"
       },
@@ -68313,7 +68403,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Das Bügeleisen ist noch heiß.",
         "exampleAr": "المكواة…",
-        "plural": "die Bügeleisen"
+        "plural": "die Bügeleisen",
+        "img": "/cards/b2-j11-alltag-haus-008.webp"
       },
       {
         "id": "j11-alltag-haus-009",
@@ -68402,7 +68493,8 @@
         "article": "das",
         "farbe": "GRÜN",
         "exampleDe": "Das Geschirr steht noch in der Spüle.",
-        "exampleAr": "ما زالت…"
+        "exampleAr": "ما زالت…",
+        "img": "/cards/b2-j11-alltag-haus-014.webp"
       },
       {
         "id": "j11-alltag-haus-015",
@@ -68417,7 +68509,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Das Besteck liegt in der Schublade.",
         "exampleAr": "أدوات ال…",
-        "plural": "die Bestecke"
+        "plural": "die Bestecke",
+        "img": "/cards/b2-j11-alltag-haus-015.webp"
       },
       {
         "id": "j11-alltag-haus-016",
@@ -68658,7 +68751,7 @@
         "tags": [
           "alltag"
         ],
-        "exampleDe": "Wer spült heute das Geschirr?",
+        "exampleDe": "Wer spült heute das Geschirr?.",
         "exampleAr": "من يجلي…",
         "posInfo": "spült, spülte, hat gespült"
       },
@@ -69159,7 +69252,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Das Blatt fällt vom Baum.",
         "exampleAr": "تسقط الو…",
-        "plural": "die Blätter"
+        "plural": "die Blätter",
+        "img": "/cards/b2-j12-natur-tiere-004.webp"
       },
       {
         "id": "j12-natur-tiere-005",
@@ -69204,7 +69298,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Auf dem Feld wächst Weizen.",
         "exampleAr": "ينمو الق…",
-        "plural": "die Felder"
+        "plural": "die Felder",
+        "img": "/cards/b2-j12-natur-tiere-007.webp"
       },
       {
         "id": "j12-natur-tiere-008",
@@ -69547,7 +69642,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Ein Haustier braucht Zeit und Liebe.",
         "exampleAr": "يحتاج ال…",
-        "plural": "die Haustiere"
+        "plural": "die Haustiere",
+        "img": "/cards/b2-j12-natur-tiere-030.webp"
       },
       {
         "id": "j12-natur-tiere-031",
@@ -69622,7 +69718,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Das Insekt sitzt auf der Blume.",
         "exampleAr": "تجلس الح…",
-        "plural": "die Insekten"
+        "plural": "die Insekten",
+        "img": "/cards/b2-j12-natur-tiere-035.webp"
       },
       {
         "id": "j12-natur-tiere-036",
@@ -70353,7 +70450,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Das Handgelenk ist verstaucht.",
         "exampleAr": "المعصم م…",
-        "plural": "die Handgelenke"
+        "plural": "die Handgelenke",
+        "img": "/cards/b2-j13-koerper-zeit-009.webp"
       },
       {
         "id": "j13-koerper-zeit-010",
@@ -70547,7 +70645,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Das letzte Jahrhundert brachte große Veränderungen.",
         "exampleAr": "جلب القر…",
-        "plural": "die Jahrhunderte"
+        "plural": "die Jahrhunderte",
+        "img": "/cards/b2-j13-koerper-zeit-022.webp"
       },
       {
         "id": "j13-koerper-zeit-023",
@@ -70562,7 +70661,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Ein Jahrzehnt ist schnell vergangen.",
         "exampleAr": "مرّ عقد…",
-        "plural": "die Jahrzehnte"
+        "plural": "die Jahrzehnte",
+        "img": "/cards/b2-j13-koerper-zeit-023.webp"
       },
       {
         "id": "j13-koerper-zeit-024",
@@ -74832,7 +74932,7 @@
         "de": "bemerken",
         "ar": "يلاحظ",
         "pos": "Verb",
-        "exampleDe": "Hast du bemerkt, dass er heute fehlt?",
+        "exampleDe": "Hast du bemerkt, dass er heute fehlt?.",
         "exampleAr": "هل لاحظت…",
         "level": "B1",
         "tags": [
@@ -86772,7 +86872,7 @@
         "de": "tun",
         "ar": "يفعل",
         "pos": "Verb",
-        "exampleDe": "Was tust du am Wochenende?",
+        "exampleDe": "Was tust du am Wochenende?.",
         "exampleAr": "ماذا تفع…",
         "level": "B1",
         "tags": [
@@ -87830,7 +87930,7 @@
         "de": "verraten",
         "ar": "يخون/يكشف سراً",
         "pos": "Verb",
-        "exampleDe": "Bitte verrate nichts!",
+        "exampleDe": "Bitte verrate nichts!.",
         "exampleAr": "الرجاء ل…",
         "level": "B1",
         "tags": [
