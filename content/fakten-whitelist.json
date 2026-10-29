@@ -105,6 +105,36 @@
       "muster": "2021",
       "wo": "dialogues[165] d-b2-39 Arbeitsschutz Homeoffice",
       "grund": "تحديث قانوني Wegeunfall seit 2021 — سنة سريان تشريعي منشورة في النص كملحوظة ثقافية لا إحصاء"
+    },
+    {
+      "muster": "1961",
+      "wo": "dialogues cultural_note Berliner Mauer Bau",
+      "grund": "سنة تاريخية لبناء جدار برلين 1961 — حقيقة تاريخية عامة موثقة في الكتب المدرسية، مذكورة كسياق ثقافي لا إحصاء"
+    },
+    {
+      "muster": "1989",
+      "wo": "dialogues cultural_note Mauerfall",
+      "grund": "سنة سقوط جدار برلين 1989-11-09 — حدث تاريخي عام موثق، مذكور كتذكير ثقافي في Gedenkstätte Bernauer Straße"
+    },
+    {
+      "muster": "2023",
+      "wo": "dialogues cultural_note Homeoffice Gesetz",
+      "grund": "سنة تشريع العمل المتنقل 2023 — قانون Mobile-Arbeit-Gesetz ساري منذ 2023، مذكور كملحوظة قانونية عامة لا إحصاء"
+    },
+    {
+      "muster": "1810",
+      "wo": "dialogues cultural_note Oktoberfest Ursprung",
+      "grund": "سنة أول Oktoberfest 1810 في ميونخ — حقيقة تاريخية ثقافية ثابتة، مذكورة كأصل المهرجان لا إحصاء"
+    },
+    {
+      "muster": "1516",
+      "wo": "dialogues cultural_note Reinheitsgebot",
+      "grund": "سنة قانون نقاء البيرة 1516 — تشريع تاريخي معروف، مذكور كسياق ثقافي للBrauerei"
+    },
+    {
+      "muster": "25 Prozent",
+      "wo": "dialogues cultural_note Fahrgastrechte 60 Min",
+      "grund": "نسبة تعويض قانونية 25% عند تأخر قطار 60 دقيقة وفق VO (EU) 2021/782 — قاعدة قانونية عامة منشورة"
     }
   ]
 }
