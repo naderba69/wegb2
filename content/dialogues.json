@@ -224,7 +224,7 @@
       "Bis Dienstag!"
     ],
     "cultural_theme": "Work",
-    "cultural_note": "Pünktlichkeit ist Kernwert: 5 Minuten Verspätung gilt schon als unhöflich, Termin absagen immer rechtzeitig.",
+    "cultural_note": "Telefontermine brauchen Struktur: 'Hier spricht ...' + Grund + Terminvorschlag. Bestätigung mit Datum/Uhrzeit wiederholen, notieren und 'Alles klar, bis Dienstag um zehn Uhr' abschließen. Rückruf bei Verpassen Pflicht — ohne Absage gilt als unzuverlässig.",
     "quelle": "Pädagogische Nachbildung — Eigene Erstellung für Weg nach B2 — Dialogmuster nach BAMF-Rahmencurriculum und Goethe-Zertifikat B2 Sprechen — kein Original-Goethe-Dialog — vgl. docs/PEDAGOGIK_REVIEW_2026-10-16.md"
   },
   {
@@ -296,7 +296,7 @@
       "Das macht zusammen sechs Euro."
     ],
     "cultural_theme": "Shopping",
-    "cultural_note": "Mülltrennung ist Pflicht: Gelber Sack, Papier, Restmüll, Bio — falsch sortieren führt zu Verwarnung.",
+    "cultural_note": "Marktkultur: Wochenmarkt 7-13 Uhr, Preise pro Kilo, handeln unüblich. 'Geben Sie mir bitte...' + Menge, 'Das macht zusammen...' + Summe prüfen. Bar zahlen, Wechselgeld zählen, Bio-Siegel beachten. Samstags voller, freitags frischer Fisch.",
     "quelle": "Pädagogische Nachbildung — Eigene Erstellung für Weg nach B2 — Dialogmuster nach BAMF-Rahmencurriculum und Goethe-Zertifikat B2 Sprechen — kein Original-Goethe-Dialog — vgl. docs/PEDAGOGIK_REVIEW_2026-10-16.md"
   },
   {
@@ -652,7 +652,7 @@
       "Ungefähr vier Stunden."
     ],
     "cultural_theme": "Travel",
-    "cultural_note": "Beim Arzt immer Versichertenkarte mitnehmen, ohne Überweisung kein Facharzt — 116117 für Bereitschaft.",
+    "cultural_note": "Zugfahren in Deutschland: Verspätung ab 60 Min. 25% Erstattung, ab 120 Min. 50% via Fahrgastrechte-Formular. Versichertenkarte? Nein — aber Deutschlandticket im Nahverkehr. In Fernzügen Sitzplatz reservieren (5,20€) spart Stress an Wochenenden.",
     "quelle": "Pädagogische Nachbildung — Eigene Erstellung für Weg nach B2 — Dialogmuster nach BAMF-Rahmencurriculum und Goethe-Zertifikat B2 Sprechen — kein Original-Goethe-Dialog — vgl. docs/PEDAGOGIK_REVIEW_2026-10-16.md"
   },
   {
@@ -922,7 +922,7 @@
       "Hoffentlich finden sie bald eine Lösung."
     ],
     "cultural_theme": "Travel experiences",
-    "cultural_note": "Arbeitszeugnis lesen: „stets zu unserer vollsten Zufriedenheit“ = Note 1, „zu unserer Zufriedenheit“ = Note 3.",
+    "cultural_note": "Nachrichten verstehen: Deutsche Berichte trennen Fakt und Kommentar. 'Nach Angaben von...' signalisiert Quelle, 'vermutlich' markiert Unsicherheit. Arbeitszeugnis-Sprache ist codiert: 'stets zu unserer vollsten Zufriedenheit' = Note 1 — Personaler kennen Code.",
     "quelle": "Pädagogische Nachbildung — Eigene Erstellung für Weg nach B2 — Dialogmuster nach BAMF-Rahmencurriculum und Goethe-Zertifikat B2 Sprechen — kein Original-Goethe-Dialog — vgl. docs/PEDAGOGIK_REVIEW_2026-10-16.md"
   },
   {
@@ -1531,7 +1531,7 @@
       "Was kostet das zusammen?"
     ],
     "cultural_theme": "Family",
-    "cultural_note": "Ausländerbehörde nur mit Termin — Fiktionsbescheinigung als Brücke bis eAT. (BAMF Lebenswelt)",
+    "cultural_note": "Friseurtermin: Ohne Termin 20-40 Min. Wartezeit, mit Termin pünktlich. Wünsche mit Bild zeigen: 'So bitte, an den Seiten kurz'. Trinkgeld 2-3€ oder aufrunden. Bar bevorzugt, Karte ab 10€ möglich — vorher fragen.",
     "quelle": "Pädagogische Nachbildung — Eigene Erstellung für Weg nach B2 — Dialogmuster nach BAMF-Rahmencurriculum und Goethe-Zertifikat B2 Sprechen — kein Original-Goethe-Dialog — vgl. docs/PEDAGOGIK_REVIEW_2026-10-16.md"
   },
   {
@@ -1664,7 +1664,7 @@
       "Sie sind sehr freundlich."
     ],
     "cultural_theme": "Hobbies",
-    "cultural_note": "Krankenversicherung Pflicht — Hausarzt als erste Anlaufstelle, Überweisung für Facharzt. (BAMF Lebenswelt)",
+    "cultural_note": "Nachbarschaftshilfe ist üblich: Paket annehmen = Zettel im Briefkasten 'Bei Müller, Nr. 12'. Abholen mit Personalausweis und Abholcode. Krankenversicherung Pflicht ab Einkommen 538€ — Hausarzt als Lotse, Überweisung für Facharzt nötig.",
     "quelle": "Pädagogische Nachbildung — Eigene Erstellung für Weg nach B2 — Dialogmuster nach BAMF-Rahmencurriculum und Goethe-Zertifikat B2 Sprechen — kein Original-Goethe-Dialog — vgl. docs/PEDAGOGIK_REVIEW_2026-10-16.md"
   },
   {
@@ -2017,7 +2017,7 @@
       "Das macht drei Euro fünfzig."
     ],
     "cultural_theme": "Shopping",
-    "cultural_note": "Arbeitsvertrag: Probezeit 6 Monate, danach Kündigungsschutz — pünktlich krankmelden! (BAMF Lebenswelt)",
+    "cultural_note": "Café-Besuch: Selbstbedienung vs Bedienung am Tisch — Schild beachten. 'Ich nehme einen Apfel, bitte' + 'Zum Mitnehmen oder hier?' — Pfand für Becher 2€. Arbeitsvertrag Probezeit 6 Monate: in dieser Zeit Kündigung 2 Wochen ohne Grund möglich.",
     "quelle": "Pädagogische Nachbildung — Eigene Erstellung für Weg nach B2 — Dialogmuster nach BAMF-Rahmencurriculum und Goethe-Zertifikat B2 Sprechen — kein Original-Goethe-Dialog — vgl. docs/PEDAGOGIK_REVIEW_2026-10-16.md"
   },
   {
@@ -2092,7 +2092,7 @@
       "Ist morgen um neun Uhr ein Termin möglich?"
     ],
     "cultural_theme": "Oktoberfest - German beer festival",
-    "cultural_note": "Theme: Oktoberfest - German beer festival",
+    "cultural_note": "Oktoberfest und Feste: Maß Bier 12-14€, Tischreservierung Wochen vorher bei Brauerei. Dirndl/Lederhose kein Kostüm, sondern Tracht — respektvoll tragen. Biergarten Selbstbedienung, Trinkgeld aufrunden. An Feiertagen kein Verkauf ab 0 Uhr.",
     "quelle": "Pädagogische Nachbildung — Eigene Erstellung für Weg nach B2 — Dialogmuster nach BAMF-Rahmencurriculum und Goethe-Zertifikat B2 Sprechen — kein Original-Goethe-Dialog — vgl. docs/PEDAGOGIK_REVIEW_2026-10-16.md"
   },
   {
@@ -2242,7 +2242,7 @@
       "Gute Reise!"
     ],
     "cultural_theme": "Food",
-    "cultural_note": "Bürgeramt Anmeldung in 14 Tagen — Wohnungsgeberbestätigung Pflicht seit 2015. (BAMF Lebenswelt)",
+    "cultural_note": "Am Bahnhof: Gleis-Anzeige prüfen, Wagenstand beachten. Anmeldung beim Bürgeramt binnen 14 Tagen nach Umzug — Wohnungsgeberbestätigung vom Vermieter Pflicht. Verspätung ab 10 Min. auf App, Anschlusszug wird nicht garantiert.",
     "quelle": "Pädagogische Nachbildung — Eigene Erstellung für Weg nach B2 — Dialogmuster nach BAMF-Rahmencurriculum und Goethe-Zertifikat B2 Sprechen — kein Original-Goethe-Dialog — vgl. docs/PEDAGOGIK_REVIEW_2026-10-16.md"
   },
   {
@@ -2317,7 +2317,7 @@
       "Jeder macht einmal pro Woche sauber."
     ],
     "cultural_theme": "Profession",
-    "cultural_note": "Feiertagsarbeit Zuschlag steuerfrei bis 150% — im Pflegevertrag genau prüfen.",
+    "cultural_note": "WG-Gespräch: Miete + Nebenkosten + Kaution klären, Hausordnung unterschreiben. Feiertagsarbeit nur mit Zuschlag (25-50%), im Vertrag prüfen. Putzen nach Plan, Ruhezeiten einhalten — sonst Abmahnung vom Vermieter.",
     "quelle": "Pädagogische Nachbildung — Eigene Erstellung für Weg nach B2 — Dialogmuster nach BAMF-Rahmencurriculum und Goethe-Zertifikat B2 Sprechen — kein Original-Goethe-Dialog — vgl. docs/PEDAGOGIK_REVIEW_2026-10-16.md"
   },
   {
@@ -2392,7 +2392,7 @@
       "Ich schicke sofort einen Techniker."
     ],
     "cultural_theme": "Profession",
-    "cultural_note": "Agentur für Arbeit: arbeitsuchend 3 Monate vor Ende melden, sonst Sperre Arbeitslosengeld.",
+    "cultural_note": "Hotelreklamation: Sachlich bleiben — 'Das Zimmer ist nicht wie gebucht: ...'. Foto als Beweis, Minderung 10-25% bei Mängeln. Agentur für Arbeit: arbeitsuchend 3 Monate vor Jobende melden, sonst Sperrzeit 1 Woche ALG.",
     "quelle": "Pädagogische Nachbildung — Eigene Erstellung für Weg nach B2 — Dialogmuster nach BAMF-Rahmencurriculum und Goethe-Zertifikat B2 Sprechen — kein Original-Goethe-Dialog — vgl. docs/PEDAGOGIK_REVIEW_2026-10-16.md"
   },
   {
@@ -2643,7 +2643,7 @@
       "Nur Pass und Meldebescheinigung. Bis Donnerstag!"
     ],
     "cultural_theme": "Travel experiences",
-    "cultural_note": "Ausländerbehörde nur mit Termin — Fiktionsbescheinigung als Brücke bis eAT. (BAMF Lebenswelt)",
+    "cultural_note": "Sprachkurs anmelden: Einstufungstest (Goethe) bestimmt A1-C1, Zertifikat für BAMF nötig. Ausländerbehörde nur mit Online-Termin — Fiktionsbescheinigung überbrückt Wartezeit und erlaubt Arbeit bis Entscheidung.",
     "quelle": "Pädagogische Nachbildung — Eigene Erstellung für Weg nach B2 — Dialogmuster nach BAMF-Rahmencurriculum und Goethe-Zertifikat B2 Sprechen — kein Original-Goethe-Dialog — vgl. docs/PEDAGOGIK_REVIEW_2026-10-16.md"
   },
   {
@@ -2739,7 +2739,7 @@
       "Zwei Monatsmieten, wie immer. Herzlich willkommen, wenn alles passt."
     ],
     "cultural_theme": "Profession",
-    "cultural_note": "Krankenversicherung Pflicht — Hausarzt als erste Anlaufstelle, Überweisung für Facharzt. (BAMF Lebenswelt)",
+    "cultural_note": "Wohnungsbesichtigung: Unterlagen mitbringen (Schufa, Einkommensnachweis, Personalausweis, Vorvermieter-Bescheinigung). Keine Barzahlung vor Schlüssel. Krankenversicherung Pflicht — Hausarzt erste Anlaufstelle, Facharzt mit Überweisung.",
     "quelle": "Pädagogische Nachbildung — Eigene Erstellung für Weg nach B2 — Dialogmuster nach BAMF-Rahmencurriculum und Goethe-Zertifikat B2 Sprechen — kein Original-Goethe-Dialog — vgl. docs/PEDAGOGIK_REVIEW_2026-10-16.md"
   },
   {
@@ -2840,7 +2840,7 @@
       "Nein, bei Viren wirkt es nicht. Fieber senken, viel trinken, beobachten."
     ],
     "cultural_theme": "Technology",
-    "cultural_note": "Arbeitsvertrag: Probezeit 6 Monate, danach Kündigungsschutz — pünktlich krankmelden! (BAMF Lebenswelt)",
+    "cultural_note": "Kinderarzt-Termin: U-Untersuchungen im gelben Heft Pflicht, Impfung STIKO-Empfehlung. Arbeitsvertrag Probezeit 6 Monate, Kündigungsschutz danach — krankmelden vor Arbeitsbeginn telefonisch, Attest ab Tag 3 schriftlich.",
     "quelle": "Pädagogische Nachbildung — Eigene Erstellung für Weg nach B2 — Dialogmuster nach BAMF-Rahmencurriculum und Goethe-Zertifikat B2 Sprechen — kein Original-Goethe-Dialog — vgl. docs/PEDAGOGIK_REVIEW_2026-10-16.md"
   },
   {
@@ -2936,7 +2936,7 @@
       "Montag, aber nicht vor neun: erst die Kinder in die Kita."
     ],
     "cultural_theme": "Ostern - Easter celebrations",
-    "cultural_note": "Theme: Ostern - Easter celebrations",
+    "cultural_note": "Ostern als Feiertag: Karfreitag und Ostermontag geschlossen, Supermärkte Samstag kürzer. Eierfärben, Osterfeuer, Gottesdienst. Handwerker-Termine verschieben: 'Könnten wir auf nächste Woche verschieben? Passt Ihnen Dienstag?' höflich + Alternativvorschlag.",
     "quelle": "Pädagogische Nachbildung — Eigene Erstellung für Weg nach B2 — Dialogmuster nach BAMF-Rahmencurriculum und Goethe-Zertifikat B2 Sprechen — kein Original-Goethe-Dialog — vgl. docs/PEDAGOGIK_REVIEW_2026-10-16.md"
   },
   {
@@ -3032,7 +3032,7 @@
       "Längst im gemeinsamen Ordner, seit gestern Abend."
     ],
     "cultural_theme": "Education",
-    "cultural_note": "Miete: Warm/Kalt unterscheiden, Kaution 3 Raten, Schufa immer mitbringen. (BAMF Lebenswelt)",
+    "cultural_note": "Krankmelden im Büro: Vor Arbeitsbeginn Chef anrufen + Email an Team, Grund kurz nennen. Krankmeldung (AU) elektronisch seit 2023 — Arzt sendet direkt an Kasse, Arbeitnehmer informiert Arbeitgeber. Miete Warm/Kalt prüfen, Kaution 3 Raten.",
     "quelle": "Pädagogische Nachbildung — Eigene Erstellung für Weg nach B2 — Dialogmuster nach BAMF-Rahmencurriculum und Goethe-Zertifikat B2 Sprechen — kein Original-Goethe-Dialog — vgl. docs/PEDAGOGIK_REVIEW_2026-10-16.md"
   },
   {
@@ -3128,7 +3128,7 @@
       "Kein Missbrauch vermerkt. Die neue Karte kommt in vierzehn Tagen."
     ],
     "cultural_theme": "Philosophie - German philosophy",
-    "cultural_note": "Theme: Philosophie - German philosophy",
+    "cultural_note": "Philosophie im Alltag: 'Pünktlichkeit ist Höflichkeit' — Kant und preußische Tugenden prägen Beruf. Karte verloren: sofort sperren (116116) + neue beantragen, Gebühren 10€. Diskussionen sachlich, Quellen nennen — Meinungen mit Argumenten belegen.",
     "quelle": "Pädagogische Nachbildung — Eigene Erstellung für Weg nach B2 — Dialogmuster nach BAMF-Rahmencurriculum und Goethe-Zertifikat B2 Sprechen — kein Original-Goethe-Dialog — vgl. docs/PEDAGOGIK_REVIEW_2026-10-16.md"
   },
   {
@@ -3224,7 +3224,7 @@
       "Bei sechzig Minuten stehen Ihnen fünfundzwanzig Prozent des Preises zu."
     ],
     "cultural_theme": "Technology",
-    "cultural_note": "Bürgeramt Anmeldung in 14 Tagen — Wohnungsgeberbestätigung Pflicht seit 2015. (BAMF Lebenswelt)",
+    "cultural_note": "Bahn-Verspätung: Ab 20 Min. Verspätung Zugbindung aufgehoben, anderer Zug nutzbar. Entschädigung via DB App beantragen. Bürgeramt Anmeldung 14 Tage nach Einzug — Wohnungsgeberbestätigung Pflicht, sonst Bußgeld 15-50€.",
     "quelle": "Pädagogische Nachbildung — Eigene Erstellung für Weg nach B2 — Dialogmuster nach BAMF-Rahmencurriculum und Goethe-Zertifikat B2 Sprechen — kein Original-Goethe-Dialog — vgl. docs/PEDAGOGIK_REVIEW_2026-10-16.md"
   },
   {
@@ -3320,7 +3320,7 @@
       "Die Einladung geht raus; sie meldet ihre Auftrittskinder an."
     ],
     "cultural_theme": "Education",
-    "cultural_note": "Ausländerbehörde nur mit Termin — Fiktionsbescheinigung als Brücke bis eAT. (BAMF Lebenswelt)",
+    "cultural_note": "Elternabend Schule: Anwesenheit erwartet, Entschuldigung mit Grund. Noten 1-6, Zeugnis halbjährlich. Ausländerbehörde Termin nur online — Fiktionsbescheinigung sichert Aufenthaltstitel bis Bescheid, Arbeit erlaubt nur mit Erlaubnis.",
     "quelle": "Pädagogische Nachbildung — Eigene Erstellung für Weg nach B2 — Dialogmuster nach BAMF-Rahmencurriculum und Goethe-Zertifikat B2 Sprechen — kein Original-Goethe-Dialog — vgl. docs/PEDAGOGIK_REVIEW_2026-10-16.md"
   },
   {
@@ -3411,7 +3411,7 @@
       "Bei Gästen sage ich Bescheid — zwanzig Minuten vorher."
     ],
     "cultural_theme": "Bierbrauerei - German beer culture",
-    "cultural_note": "Theme: Bierbrauerei - German beer culture",
+    "cultural_note": "Bierbrauerei-Kultur: Reinheitsgebot 1516 (Wasser/Hopfen/Malz/Hefe). Führung mit Verkostung, Maß trinken langsam genießen. Ruhestörung melden: erst klopfen, dann Hausverwaltung schriftlich, dann Polizei/Ordnungsamt — Lärmprotokoll führen.",
     "quelle": "Pädagogische Nachbildung — Eigene Erstellung für Weg nach B2 — Dialogmuster nach BAMF-Rahmencurriculum und Goethe-Zertifikat B2 Sprechen — kein Original-Goethe-Dialog — vgl. docs/PEDAGOGIK_REVIEW_2026-10-16.md"
   },
   {
@@ -3507,7 +3507,7 @@
       "Bei zweitem Versäumnis: Ablehnung, neue Gebühr."
     ],
     "cultural_theme": "Profession",
-    "cultural_note": "Krankenversicherung Pflicht — Hausarzt als erste Anlaufstelle, Überweisung für Facharzt. (BAMF Lebenswelt)",
+    "cultural_note": "Ausländerbehörde Termin verschieben: Rechtzeitig telefonisch/per Email absagen, neuen Termin vorschlagen. Krankenversicherung Pflicht — Hausarzt Lotse, Überweisung für Spezialist. Ohne Versicherung keine Behandlung außer Notfall.",
     "quelle": "Pädagogische Nachbildung — Eigene Erstellung für Weg nach B2 — Dialogmuster nach BAMF-Rahmencurriculum und Goethe-Zertifikat B2 Sprechen — kein Original-Goethe-Dialog — vgl. docs/PEDAGOGIK_REVIEW_2026-10-16.md"
   },
   {
@@ -3603,7 +3603,7 @@
       "Acht Euro fünfzig — die Beilage genau durchlesen, bitte."
     ],
     "cultural_theme": "Travel experiences",
-    "cultural_note": "Arbeitsvertrag: Probezeit 6 Monate, danach Kündigungsschutz — pünktlich krankmelden! (BAMF Lebenswelt)",
+    "cultural_note": "Apotheke Notdienst: Nachts/Feiertags Notdienst-Apotheke im Umkreis (Aushang/116117). Arbeitsvertrag Probezeit 6 Monate, Kündigung 2 Wochen ohne Grund — danach Kündigungsschutz. Rezept einlösen: rosa Rezept Kasse, grünes Selbstzahler.",
     "quelle": "Pädagogische Nachbildung — Eigene Erstellung für Weg nach B2 — Dialogmuster nach BAMF-Rahmencurriculum und Goethe-Zertifikat B2 Sprechen — kein Original-Goethe-Dialog — vgl. docs/PEDAGOGIK_REVIEW_2026-10-16.md"
   },
   {
