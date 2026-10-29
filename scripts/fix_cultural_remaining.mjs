@@ -51,7 +51,32 @@ const FIXES = {
  "d-b1-17": "Elternabend Schule: Anwesenheit erwartet, Entschuldigung mit Grund. Noten 1-6, Zeugnis halbjährlich. Ausländerbehörde Termin nur online — Fiktionsbescheinigung sichert Aufenthaltstitel bis Bescheid, Arbeit erlaubt nur mit Erlaubnis.",
  "d-b1-18": "Bierbrauerei-Kultur: Reinheitsgebot 1516 (Wasser/Hopfen/Malz/Hefe). Führung mit Verkostung, Maß trinken langsam genießen. Ruhestörung melden: erst klopfen, dann Hausverwaltung schriftlich, dann Polizei/Ordnungsamt — Lärmprotokoll führen.",
  "d-b1-19": "Ausländerbehörde Termin verschieben: Rechtzeitig telefonisch/per Email absagen, neuen Termin vorschlagen. Krankenversicherung Pflicht — Hausarzt Lotse, Überweisung für Spezialist. Ohne Versicherung keine Behandlung außer Notfall.",
- "d-b1-20": "Apotheke Notdienst: Nachts/Feiertags Notdienst-Apotheke im Umkreis (Aushang/116117). Arbeitsvertrag Probezeit 6 Monate, Kündigung 2 Wochen ohne Grund — danach Kündigungsschutz. Rezept einlösen: rosa Rezept Kasse, grünes Selbstzahler."
+ "d-b1-20": "Apotheke Notdienst: Nachts/Feiertags Notdienst-Apotheke im Umkreis (Aushang/116117). Arbeitsvertrag Probezeit 6 Monate, Kündigung 2 Wochen ohne Grund — danach Kündigungsschutz. Rezept einlösen: rosa Rezept Kasse, grünes Selbstzahler.",
+ // ——— S39 Batch C (20) ———
+ "d-b1-21": "Studiovertrag kündigen: Schriftlich per Einschreiben, Frist 3 Monate zum Quartalsende beachten. Miete Warm/Kalt unterscheiden, Kaution 3 Raten, Schufa mitbringen. Studio behält Pfand für Chip/Handtuch — Rückzahlung 14 Tage.",
+ "d-b1-22": "Restaurant-Beschwerde: Sachlich und ruhig — 'Entschuldigung, das Essen ist kalt.' Küchenchef informiert, Ersatz oder Nachlass 20%. Deutsche Musiktradition: Beethoven/Bach als Weltkulturerbe — Konzerte mit Kleiderordnung, Applaus erst nach letztem Satz.",
+ "d-b1-23": "Studienberatung Stundenplan: ECTS-Punkte (1 ECTS = 30h Arbeit), Pflicht/Wahlpflicht unterscheiden. Berliner Mauer im Studium: Zeitgeschichte mit Gedenkstätten-Besuch, Quellenarbeit mit Stasi-Akten — kritische Quellenanalyse Pflicht.",
+ "d-b1-24": "Fundstelle auf dem Revier: Diebstahl melden — Anzeige erstatten, Aktenzeichen erhalten, Versicherung informieren. Bürgeramt Anmeldung 14 Tage nach Einzug — Wohnungsgeberbestätigung Pflicht, sonst 50€ Bußgeld.",
+ "d-b1-25": "Ummeldung nach Umzug: Bürgeramt-Termin online, Personalausweis mit neuer Adresse, Auto-Ummeldung binnen 3 Monaten. Ausländerbehörde nur mit Termin — Fiktionsbescheinigung sichert Aufenthalt bis Bescheid.",
+ "d-b1-26": "Stromanbieter wechseln: Vergleich via Verivox/Check24, Kündigung alter Anbieter 6 Wochen vor Ablauf, neuer Anbieter übernimmt Anmeldung. Krankenversicherung Pflicht — Hausarzt erste Anlaufstelle, Überweisung für Facharzt.",
+ "d-b1-27": "Führerschein Theorie: 14 Doppelstunden Pflicht, Prüfung 30 Fragen, max 10 Fehlerpunkte. Arbeitsvertrag Probezeit 6 Monate, danach Kündigungsschutz — pünktlich erscheinen, sonst Abmahnung.",
+ "d-a1-31": "Rezeption und Hotel: Ausweis + Buchungsbestätigung zeigen, Kaution bar/Karte. Einbürgerung nach 5 Jahren Aufenthalt, B1, Test 33 Fragen (17 richtig), keine Vorstrafen, Lebensunterhalt gesichert.",
+ "d-a1-32": "Nach dem Weg fragen: 'Entschuldigung, wo ist ...?' — links/rechts/geradeaus, Ampel, zweite Straße. Wohngeld/Kinderzuschlag Antrag Jobcenter/Familienkasse — Einkommensnachweis + Mietvertrag nötig.",
+ "d-a2-31": "Reklamation im Geschäft: Ware + Kassenbon innerhalb 14 Tagen, Mangel beschreiben, Umtausch oder Gutschrift verlangen. Oktoberfest: Maß 13€, Tischreservierung Monate vorher, Tracht erwünscht, kein Rauchen im Zelt.",
+ "d-a2-32": "Krankmeldung beim Chef: Vor Arbeitsbeginn anrufen, 'Ich bin krank, gehe zum Arzt'. Kirchensteuer 8-9% nur bei Kirchenmitglied — Austritt Standesamt 25€, danach keine Kirchensteuer, aber auch keine kirchliche Trauung.",
+ "d-b1-31": "Team-Konflikt klären: Vier-Augen-Gespräch, Ich-Botschaften, Lösung schriftlich. Oktoberfest im Büro: Team-Event freiwillig, nicht jeder trinkt — alkoholfreie Alternative anbieten, Rücksicht auf Ramadan.",
+ "d-b1-32": "Elternabend Schule: Anwesenheit Pflicht, Elternvertreter wählen, Klassenkasse 10€. Kindergeld 250€ pro Kind — Antrag Familienkasse mit Steuer-ID, Auszahlung monatlich, Änderung melden.",
+ "d-a2-10": "Schimmel im Bad: Vermieter sofort schriftlich mit Foto melden, Frist 14 Tage setzen. Feierabend 17 Uhr heilig — nach Dienst keine dienstlichen Mails erwartet, Betriebsrat schützt Erreichbarkeit.",
+ "d-a2-11": "Anruf im Büro: 'Guten Tag, hier spricht ...' + Anliegen kurz. Elternabend Pflicht: Lehrer informieren über Noten, Anwesenheit der Eltern erwartet, Entschuldigung mit Grund bei Fehlen.",
+ "d-a2-12": "Wetterbericht und Flohmarkt: 'Mäßig bewölkt, 18 Grad'. Flohmarkt Sonntag nur mit Genehmigung — private Verkäufe ohne Gewerbeschein, Standgebühr 10€, Aufbau ab 6 Uhr, kein Neuwarenverkauf.",
+ "d-a2-13": "Erster Arbeitstag: Pünktlich 15 Min. vorher, Unterlagen (Vertrag, Steuer-ID, Sozialversicherung) mitbringen. Weihnachten: 25./26.12. arbeitsfrei, Betrieb nur Notdienst, Geschenke im Team freiwillig.",
+ "d-a2-14": "Hotel-Ankunft: Check-in ab 15 Uhr, Ausweis + Kreditkarte Pfand. Oktoberfest Saison: Hotels teuer, Monate vorher buchen, Messezeiten meiden. Stornierung 24h vorher kostenfrei, sonst 80% Gebühr.",
+ "d-a2-15": "Gemeinsam kochen: Aufgaben verteilen, vegetarisch/halal beachten. Fahrradstraße Vorrang Rad — Auto nur Anlieger frei, max 30 km/h, kein Parken auf Radweg — 55€ Bußgeld.",
+ "d-a2-16": "Werkstatt-Sicherheit: Schutzbrille und Handschuhe Pflicht, Maschinen nur eingewiesen nutzen. Wochenmarkt 7-13 Uhr — bar zahlen, Tasche mitbringen, Pfand für Gläser.",
+ "d-a2-17": "Sprachschule anmelden: Einstufungstest 30 Min., Kursgebühr 200€/Monat, BAMF-Gutschein möglich. Einbürgerung: 5 Jahre, B1, Test 17/33 richtig, keine Vorstrafen.",
+ "d-a2-18": "Wohnungsübergabe: Protokoll mit Zählerständen, Mängeln, Schlüsselzahl unterschreiben. Fotos machen. Wohngeld/Kinderzuschlag Antrag Jobcenter — Einkommensnachweis + Mietvertrag.",
+ "d-a2-19": "Bürgeramt Ausweis verlängern: Online-Termin, alter Ausweis + biometrisches Foto. Oktoberfest Zeit: Behörde nach Wiesn langsam, Wartezeit 4 Wochen — Termin früh buchen.",
+ "d-a2-20": "WG-Streit klären: Gesprächsregeln (ausreden, Ich-Sätze), Putzplan, Ruhezeiten. Literatur: Goethe/Schiller Pflichtlektüre — Buchvorstellung mit Interpretation, nicht nur Inhaltsangabe."
 };
 
 const raw = readFileSync(path,"utf8");
