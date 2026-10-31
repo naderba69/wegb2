@@ -91025,7 +91025,7 @@
         "de": "die Gleichberechtigung",
         "ar": "المساواة في الحقوق",
         "pos": "Nomen",
-        "level": "B1",
+        "level": "B2",
         "article": "die",
         "farbe": "ROT",
         "plural": "die Gleichberechtigungen",
@@ -91085,7 +91085,7 @@
         "de": "die Demokratie",
         "ar": "الديمقراطية",
         "pos": "Nomen",
-        "level": "B1",
+        "level": "B2",
         "article": "die",
         "farbe": "ROT",
         "plural": "die Demokratien",
@@ -91160,7 +91160,7 @@
         "de": "die Integration",
         "ar": "الاندماج (تصحيح إملائي: die Integration)",
         "pos": "Nomen",
-        "level": "B1",
+        "level": "B2",
         "article": "die",
         "farbe": "ROT",
         "plural": "die Integrationen",
@@ -91175,7 +91175,7 @@
         "de": "der Aufenthaltstitel",
         "ar": "تصريح الإقامة",
         "pos": "Nomen",
-        "level": "B1",
+        "level": "B2",
         "article": "der",
         "farbe": "BLAU",
         "plural": "die Aufenthaltstitel",
@@ -91265,7 +91265,7 @@
         "de": "das Jobcenter",
         "ar": "مركز العمل",
         "pos": "Nomen",
-        "level": "B1",
+        "level": "B2",
         "article": "das",
         "farbe": "GRÜN",
         "plural": "die Jobcenter",
@@ -91306,7 +91306,7 @@
         "exampleAr": "المادة 1: كرامة الإنسان مصونة → Menschenwürde",
         "pos": "Nomen",
         "article": "die",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "orientierung",
@@ -91318,13 +91318,13 @@
       },
       {
         "id": "bamf-orient-ii-023",
-        "de": "die Demokratie",
+        "de": "die Demokratie (Variante)",
         "ar": "الديمقراطية",
         "exampleDe": "Wir leben in einer Demokratie → Demokratie.",
         "exampleAr": "نعيش في ديمقراطية → Demokratie",
         "pos": "Nomen",
         "article": "die",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "orientierung",
@@ -91336,13 +91336,13 @@
       },
       {
         "id": "bamf-orient-ii-024",
-        "de": "der Bundestag",
+        "de": "der Bundestag (Variante)",
         "ar": "البرلمان الاتحادي",
         "exampleDe": "Der Bundestag wählt den Kanzler → Bundestag.",
         "exampleAr": "البوندستاغ ينتخب المستشار → Bundestag",
         "pos": "Nomen",
         "article": "der",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "orientierung",
@@ -91372,13 +91372,13 @@
       },
       {
         "id": "bamf-orient-ii-026",
-        "de": "das Grundgesetz",
+        "de": "das Grundgesetz (Variante)",
         "ar": "القانون الأساسي",
         "exampleDe": "Das Grundgesetz schützt die Grundrechte → Grundgesetz.",
         "exampleAr": "القانون الأساسي يحمي الحقوق → Grundgesetz",
         "pos": "Nomen",
         "article": "das",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "orientierung",
@@ -91390,13 +91390,13 @@
       },
       {
         "id": "bamf-orient-ii-027",
-        "de": "die Meinungsfreiheit",
+        "de": "die Meinungsfreiheit (Variante)",
         "ar": "حرية الرأي",
         "exampleDe": "Meinungsfreiheit gilt auch online → Meinungsfreiheit.",
         "exampleAr": "حرية الرأي تشمل الإنترنت → Meinungsfreiheit",
         "pos": "Nomen",
         "article": "die",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "orientierung",
@@ -91414,7 +91414,7 @@
         "exampleAr": "حرية الدين تحمي الجميع → Religionsfreiheit",
         "pos": "Nomen",
         "article": "die",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "orientierung",
@@ -91426,13 +91426,13 @@
       },
       {
         "id": "bamf-orient-ii-029",
-        "de": "die Gleichberechtigung",
+        "de": "die Gleichberechtigung (Variante)",
         "ar": "المساواة",
         "exampleDe": "Gleichberechtigung von Mann und Frau → Gleichberechtigung.",
         "exampleAr": "مساواة الرجل والمرأة → Gleichberechtigung",
         "pos": "Nomen",
         "article": "die",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "orientierung",
@@ -91498,13 +91498,13 @@
       },
       {
         "id": "bamf-orient-ii-033",
-        "de": "der Rechtsstaat",
+        "de": "der Rechtsstaat (Variante)",
         "ar": "دولة القانون",
         "exampleDe": "Rechtsstaat bedeutet: Gesetze gelten für alle → Rechtsstaat.",
         "exampleAr": "دولة القانون: القوانين للجميع → Rechtsstaat",
         "pos": "Nomen",
         "article": "der",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "orientierung",
@@ -91534,13 +91534,13 @@
       },
       {
         "id": "bamf-orient-ii-035",
-        "de": "das Wahlrecht",
+        "de": "das Wahlrecht (Variante)",
         "ar": "حق الانتخاب",
         "exampleDe": "Wahlrecht ab 18 Jahren → Wahlrecht.",
         "exampleAr": "حق الانتخاب من 18 → Wahlrecht",
         "pos": "Nomen",
         "article": "das",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "orientierung",
@@ -91576,7 +91576,7 @@
         "exampleAr": "المستشار يقود الحكومة → Bundeskanzler",
         "pos": "Nomen",
         "article": "der",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "orientierung",
@@ -91648,7 +91648,7 @@
         "exampleAr": "التسامح مع أنماط الحياة الأخرى → Toleranz",
         "pos": "Nomen",
         "article": "die",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "orientierung",
@@ -91921,7 +91921,7 @@
         "exampleAr": "تأمين المسؤولية مهم جدا → Haftpflichtversicherung",
         "pos": "Nomen",
         "article": "die",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF6",
@@ -92035,7 +92035,7 @@
         "exampleAr": "التسجيل خلال 14 يوما → Anmeldung",
         "pos": "Nomen",
         "article": "die",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF6",
@@ -92062,7 +92062,7 @@
         "exampleAr": "إثبات التأمين الصحي → Krankenversicherung",
         "pos": "Verb",
         "article": "die",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF3",
@@ -92119,7 +92119,7 @@
         "exampleAr": "صرف الوصفة في الصيدلية → Rezept",
         "pos": "Verb",
         "article": "das",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF3",
@@ -92138,7 +92138,7 @@
         "exampleAr": "جلب الدواء من الصيدلية → Apotheke",
         "pos": "Verb",
         "article": "die",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF3",
@@ -92157,7 +92157,7 @@
         "exampleAr": "الإبلاغ صباحا لدى صاحب العمل → krankmelden",
         "pos": "Verb",
         "article": null,
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF3",
@@ -92214,7 +92214,7 @@
         "exampleAr": "فترة التجربة ستة أشهر → Probezeit",
         "pos": "Verb",
         "article": "die",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF3",
@@ -92404,7 +92404,7 @@
         "exampleAr": "تعليم مستمر عبر قسيمة → Weiterbildung",
         "pos": "Verb",
         "article": "die",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF3",
@@ -92545,7 +92545,7 @@
         "exampleAr": "شهادة المتوسطة بعد الصف 10 → Realschule",
         "pos": "Verb",
         "article": "die",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF2",
@@ -92602,7 +92602,7 @@
         "exampleAr": "زيارة المدرسة المهنية مع التدريب → Berufsschule",
         "pos": "Verb",
         "article": "die",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF2",
@@ -92621,7 +92621,7 @@
         "exampleAr": "بدء تدريب كممرض → Ausbildung",
         "pos": "Verb",
         "article": "die",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF2",
@@ -92640,7 +92640,7 @@
         "exampleAr": "بدء الدراسة في الجامعة → Studium",
         "pos": "Verb",
         "article": "das",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF2",
@@ -92659,7 +92659,7 @@
         "exampleAr": "التسجيل في الجامعة → Universität",
         "pos": "Verb",
         "article": "die",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF2",
@@ -92678,7 +92678,7 @@
         "exampleAr": "ترجمة والاعتراف بالشهادة → Zeugnis",
         "pos": "Verb",
         "article": "das",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF2",
@@ -92773,7 +92773,7 @@
         "exampleAr": "أخذ دروس خصوصية في الرياضيات → Nachhilfe",
         "pos": "Verb",
         "article": "die",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF2",
@@ -92792,7 +92792,7 @@
         "exampleAr": "إلزامية التعليم من 6 سنوات → Schulpflicht",
         "pos": "Verb",
         "article": "die",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF2",
@@ -92811,7 +92811,7 @@
         "exampleAr": "تخطيط عطلة الصيف → Ferien",
         "pos": "Verb",
         "article": "die",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF2",
@@ -92849,7 +92849,7 @@
         "exampleAr": "حضور دورة ألماني في مدرسة الشعب → Volkshochschule",
         "pos": "Verb",
         "article": "die",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF2",
@@ -92862,13 +92862,13 @@
       },
       {
         "id": "bamf-bildung-103",
-        "de": "der Integrationskurs",
+        "de": "der Integrationskurs (Variante)",
         "ar": "دورة الاندماج",
         "exampleDe": "Integrationskurs mit 700 Stunden absolvieren → Integrationskurs.",
         "exampleAr": "إتمام دورة الاندماج 700 ساعة → Integrationskurs",
         "pos": "Verb",
         "article": "der",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF2",
@@ -92925,7 +92925,7 @@
         "exampleAr": "طلب منحة الوالدين بعد الولادة → Elterngeld",
         "pos": "Verb",
         "article": "das",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF2",
@@ -92944,7 +92944,7 @@
         "exampleAr": "أخذ إجازة والدين حتى 3 سنوات → Elternzeit",
         "pos": "Verb",
         "article": "die",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF2",
@@ -93134,7 +93134,7 @@
         "exampleAr": "الذهاب مع الأطفال لساحة اللعب → Spielplatz",
         "pos": "Verb",
         "article": "der",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF2",
@@ -93153,7 +93153,7 @@
         "exampleAr": "ممارسة تربية بلا عنف → Erziehung",
         "pos": "Verb",
         "article": "die",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF2",
@@ -93172,7 +93172,7 @@
         "exampleAr": "تنظيم رعاية بعد المدرسة → Betreuung",
         "pos": "Verb",
         "article": "die",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF2",
@@ -93324,7 +93324,7 @@
         "exampleAr": "التسجيل مبكرا في الروضة → anmelden",
         "pos": "Verb",
         "article": null,
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF2",
@@ -93447,7 +93447,7 @@
         "exampleAr": "تقديم الإقرار سنويا → Steuererklärung",
         "pos": "Verb",
         "article": "die",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF5",
@@ -93517,13 +93517,13 @@
       },
       {
         "id": "bamf-behoerden-137",
-        "de": "die Überweisung",
+        "de": "die Überweisung (Variante)",
         "ar": "التحويل البنكي",
         "exampleDe": "Überweisung online tätigen → Überweisung.",
         "exampleAr": "إجراء تحويل عبر الإنترنت → Überweisung",
         "pos": "Verb",
         "article": "die",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF5",
@@ -93542,7 +93542,7 @@
         "exampleAr": "الدفع ببطاقة الصراف → EC-Karte",
         "pos": "Verb",
         "article": "die",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF5",
@@ -93561,7 +93561,7 @@
         "exampleAr": "استخدام بطاقة ائتمان للشراء → Kreditkarte",
         "pos": "Verb",
         "article": "die",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF5",
@@ -93612,13 +93612,13 @@
       },
       {
         "id": "bamf-behoerden-142",
-        "de": "die Haftpflichtversicherung",
+        "de": "die Haftpflichtversicherung (Variante)",
         "ar": "تأمين المسؤولية",
         "exampleDe": "Haftpflichtversicherung abschließen → Haftpflicht.",
         "exampleAr": "إبرام تأمين مسؤولية → Haftpflicht",
         "pos": "Verb",
         "article": "die",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF5",
@@ -93669,13 +93669,13 @@
       },
       {
         "id": "bamf-behoerden-145",
-        "de": "die Sozialversicherung",
+        "de": "die Sozialversicherung (Variante)",
         "ar": "التأمين الاجتماعي",
         "exampleDe": "Sozialversicherung über Arbeitgeber → Sozialversicherung.",
         "exampleAr": "تأمين اجتماعي عبر صاحب العمل → Sozialversicherung",
         "pos": "Verb",
         "article": "die",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF5",
@@ -93694,7 +93694,7 @@
         "exampleAr": "دفع تأمين التقاعد شهريا → Rentenversicherung",
         "pos": "Verb",
         "article": "die",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF5",
@@ -93726,13 +93726,13 @@
       },
       {
         "id": "bamf-behoerden-148",
-        "de": "das Jobcenter",
+        "de": "das Jobcenter (Variante)",
         "ar": "مركز العمل",
         "exampleDe": "Beim Jobcenter Bürgergeld beantragen → Jobcenter.",
         "exampleAr": "طلب برغرغيلد في مركز العمل → Jobcenter",
         "pos": "Verb",
         "article": "das",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF5",
@@ -93859,13 +93859,13 @@
       },
       {
         "id": "bamf-behoerden-155",
-        "de": "die Niederlassungserlaubnis",
+        "de": "die Niederlassungserlaubnis (Variante)",
         "ar": "تصريح الاستقرار",
         "exampleDe": "Niederlassungserlaubnis nach 5 Jahren → Niederlassungserlaubnis.",
         "exampleAr": "تصريح استقرار بعد 5 سنوات → Niederlassungserlaubnis",
         "pos": "Verb",
         "article": "die",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF5",
@@ -93878,13 +93878,13 @@
       },
       {
         "id": "bamf-behoerden-156",
-        "de": "die Einbürgerung",
+        "de": "die Einbürgerung (Variante)",
         "ar": "التجنيس",
         "exampleDe": "Einbürgerung nach 5 Jahren beantragen → Einbürgerung.",
         "exampleAr": "طلب تجنيس بعد 5 سنوات → Einbürgerung — StAG 2024 Reform",
         "pos": "Verb",
         "article": "die",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF5",
@@ -93903,7 +93903,7 @@
         "exampleAr": "نجاح اختبار التجنيس 33 سؤالا → Einbürgerungstest",
         "pos": "Verb",
         "article": "der",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF5",
@@ -94068,12 +94068,12 @@
       },
       {
         "id": "bamf-behoerden-166",
-        "de": "die Wohngeld beantragen",
+        "de": "das Wohngeld beantragen",
         "ar": "طلب مساعدة السكن",
         "exampleDe": "Wohngeld bei niedrigem Einkommen beantragen → Wohngeld.",
         "exampleAr": "طلب مساعدة سكن لدخل منخفض → Wohngeld",
         "pos": "Verb",
-        "article": "die",
+        "article": "das",
         "level": "B1",
         "tags": [
           "bamf",
@@ -94083,7 +94083,7 @@
           "S28-33"
         ],
         "quelle": "BAMF S.31 HF6 — vgl. docs/PEDAGOGIK_REVIEW_2026-10-16.md S.8-12",
-        "farbe": "GRUEN"
+        "farbe": "GRÜN"
       },
       {
         "id": "bamf-behoerden-167",
@@ -94093,7 +94093,7 @@
         "exampleAr": "دفع رسوم بث 18,36€ شهريا → Rundfunkgebühr",
         "pos": "Verb",
         "article": "die",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF5",
@@ -94207,7 +94207,7 @@
         "exampleAr": "سؤال مركز حماية المستهلك عند النصب → Verbraucherzentrale",
         "pos": "Verb",
         "article": "die",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF5",
@@ -94340,7 +94340,7 @@
         "exampleAr": "إدارة حساب جاري مجانا → Girokonto",
         "pos": "Verb",
         "article": "das",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF5",
@@ -94424,7 +94424,7 @@
         "exampleAr": "الحصول على خصم 20% → Rabatt",
         "pos": "Verb",
         "article": "der",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF8",
@@ -94519,7 +94519,7 @@
         "exampleAr": "ضمان سنتين من تاريخ الشراء → Garantie",
         "pos": "Verb",
         "article": "die",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF8",
@@ -94652,7 +94652,7 @@
         "exampleAr": "العضوية في ناد رياضي → Verein",
         "pos": "Verb",
         "article": "der",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF8",
@@ -94671,7 +94671,7 @@
         "exampleAr": "تطوع في الإطفاء → Ehrenamt",
         "pos": "Verb",
         "article": "das",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF8",
@@ -94747,7 +94747,7 @@
         "exampleAr": "رحلة مع العائلة → Ausflug",
         "pos": "Verb",
         "article": "der",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF8",
@@ -94988,13 +94988,13 @@
       },
       {
         "id": "bamf-alltag-konsum-214",
-        "de": "die Mülltrennung",
+        "de": "die Mülltrennung (Variante)",
         "ar": "فرز النفايات",
         "exampleDe": "Mülltrennung gelb/papier/rest/bio → Mülltrennung.",
         "exampleAr": "فرز أصفر/ورق/باقي/عضوي → Mülltrennung",
         "pos": "Verb",
         "article": "die",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF8",
@@ -95013,7 +95013,7 @@
         "exampleAr": "تسجيل نفايات كبيرة وإخراجها → Sperrmüll",
         "pos": "Verb",
         "article": "der",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF8",
@@ -95206,7 +95206,7 @@
         "exampleAr": "التواعد على قهوة → verabreden",
         "pos": "Verb",
         "article": null,
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF8",
@@ -95420,7 +95420,7 @@
         "exampleAr": "حماية المناخ بتقليل السيارة → Klima",
         "pos": "Verb",
         "article": "das",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF5",
@@ -95433,13 +95433,13 @@
       },
       {
         "id": "bamf-natur-medien-237",
-        "de": "der Klimawandel",
+        "de": "der Klimawandel (Variante)",
         "ar": "تغير المناخ",
         "exampleDe": "Klimawandel erfordert Handeln → Klimawandel.",
         "exampleAr": "تغير المناخ يتطلب عملا → Klimawandel",
         "pos": "Verb",
         "article": "der",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF5",
@@ -95629,7 +95629,7 @@
         "exampleAr": "الحصول على كهرباء خضراء → Strom",
         "pos": "Verb",
         "article": "der",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF5",
@@ -95686,7 +95686,7 @@
         "exampleAr": "حماية البيئة تبدأ في المنزل → Umweltschutz",
         "pos": "Verb",
         "article": "der",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF5",
@@ -95800,7 +95800,7 @@
         "exampleAr": "سماع راديو في السيارة → Radio",
         "pos": "Verb",
         "article": "das",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF5",
@@ -95838,7 +95838,7 @@
         "exampleAr": "استخدام هاتف ذكي يوميا → Smartphone",
         "pos": "Verb",
         "article": "das",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF5",
@@ -95876,7 +95876,7 @@
         "exampleAr": "استخدام تواصل بنقد → soziale Medien",
         "pos": "Verb",
         "article": "die",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF5",
@@ -95909,13 +95909,13 @@
       },
       {
         "id": "bamf-natur-medien-262",
-        "de": "der Datenschutz",
+        "de": "der Datenschutz (Variante)",
         "ar": "حماية البيانات",
         "exampleDe": "Datenschutz ernst nehmen → Datenschutz.",
         "exampleAr": "أخذ حماية بيانات بجدية → Datenschutz",
         "pos": "Verb",
         "article": "der",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF5",
@@ -96029,7 +96029,7 @@
         "exampleAr": "مناقشة سياسة بموضوعية → diskutieren",
         "pos": "Verb",
         "article": null,
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF5",
@@ -96042,13 +96042,13 @@
       },
       {
         "id": "bamf-natur-medien-269",
-        "de": "die Meinungsfreiheit",
+        "de": "die Meinungsfreiheit (Variante 2)",
         "ar": "حرية الرأي",
         "exampleDe": "Meinungsfreiheit respektieren → Meinungsfreiheit.",
         "exampleAr": "احترام حرية رأي → Meinungsfreiheit",
         "pos": "Verb",
         "article": "die",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF5",
@@ -96061,13 +96061,13 @@
       },
       {
         "id": "bamf-natur-medien-270",
-        "de": "die Pressefreiheit",
+        "de": "die Pressefreiheit (Variante)",
         "ar": "حرية الصحافة",
         "exampleDe": "Pressefreiheit schützt Demokratie → Pressefreiheit.",
         "exampleAr": "حرية صحافة تحمي ديمقراطية → Pressefreiheit",
         "pos": "Verb",
         "article": "die",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF5",
@@ -96118,13 +96118,13 @@
       },
       {
         "id": "bamf-natur-medien-273",
-        "de": "der Bundestag",
+        "de": "der Bundestag (Variante 2)",
         "ar": "البوندستاغ",
         "exampleDe": "Bundestag alle 4 Jahre wählen → Bundestag.",
         "exampleAr": "انتخاب بوندستاغ كل 4 سنوات → Bundestag",
         "pos": "Verb",
         "article": "der",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF5",
@@ -96181,7 +96181,7 @@
         "exampleAr": "فهم تاريخ ألماني → Geschichte",
         "pos": "Verb",
         "article": "die",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF5",
@@ -96284,7 +96284,7 @@
         "exampleAr": "تحية الجار بلطف → Nachbar",
         "pos": "Verb",
         "article": "der",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF8",
@@ -96302,7 +96302,7 @@
         "exampleAr": "احترام مجتمع المنزل → Hausgemeinschaft",
         "pos": "Verb",
         "article": "die",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF8",
@@ -96393,7 +96393,7 @@
         "exampleAr": "سعي لمصالحة بعد نزاع → Versöhnung",
         "pos": "Verb",
         "article": "die",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF8",
@@ -96411,7 +96411,7 @@
         "exampleAr": "إيجاد تسوية → Kompromiss",
         "pos": "Verb",
         "article": "der",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF8",
@@ -96519,7 +96519,7 @@
         "exampleAr": "احتفال مشترك بالعيد → Feiertag",
         "pos": "Verb",
         "article": "der",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF8",
@@ -96640,13 +96640,13 @@
       },
       {
         "id": "bamf-rest-301",
-        "de": "die Toleranz",
+        "de": "die Toleranz (Variante)",
         "ar": "التسامح",
         "exampleDe": "Toleranz gegenüber Religionen → Toleranz.",
         "exampleAr": "تسامح تجاه أديان → Toleranz",
         "pos": "Verb",
         "article": "die",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF8",
@@ -96664,7 +96664,7 @@
         "exampleAr": "احترام آراء أخرى → Respekt",
         "pos": "Verb",
         "article": "der",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF8",
@@ -96766,13 +96766,13 @@
       },
       {
         "id": "bamf-rest-308",
-        "de": "der Rechtsstaat",
+        "de": "der Rechtsstaat (Variante 2)",
         "ar": "دولة القانون",
         "exampleDe": "Rechtsstaat schützt Bürger → Rechtsstaat.",
         "exampleAr": "دولة قانون تحمي مواطن → Rechtsstaat",
         "pos": "Verb",
         "article": "der",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF8",
@@ -96880,7 +96880,7 @@
         "exampleAr": "انتخاب عمدة مباشرة → Bürgermeister",
         "pos": "Verb",
         "article": "der",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF8",
@@ -96898,7 +96898,7 @@
         "exampleAr": "مجلس بلدي يقرر محليا → Gemeinderat",
         "pos": "Verb",
         "article": "der",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF8",
@@ -96952,7 +96952,7 @@
         "exampleAr": "اتحاد أوروبي 27 عضوا → EU",
         "pos": "Verb",
         "article": "die",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF8",
@@ -97078,7 +97078,7 @@
         "exampleAr": "احتفال توحيد 1990 → Wiedervereinigung",
         "pos": "Verb",
         "article": "die",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF8",
@@ -97096,7 +97096,7 @@
         "exampleAr": "جدار برلين 1961-89 → Mauer",
         "pos": "Verb",
         "article": "die",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF8",
@@ -97150,7 +97150,7 @@
         "exampleAr": "فيدرالية مع مجلس اتحادي → Föderalismus",
         "pos": "Verb",
         "article": "der",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF8",
@@ -97162,13 +97162,13 @@
       },
       {
         "id": "bamf-rest-330",
-        "de": "der Bundesrat",
+        "de": "der Bundesrat (Variante)",
         "ar": "المجلس الاتحادي",
         "exampleDe": "Bundesrat vertritt Länder → Bundesrat.",
         "exampleAr": "مجلس اتحادي يمثل ولايات → Bundesrat",
         "pos": "Verb",
         "article": "der",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF8",
@@ -97186,7 +97186,7 @@
         "exampleAr": "فصل تشريعية/تنفيذية → Gewaltenteilung",
         "pos": "Verb",
         "article": "die",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF8",
@@ -97198,13 +97198,13 @@
       },
       {
         "id": "bamf-rest-332",
-        "de": "die Opposition",
+        "de": "die Opposition (Variante)",
         "ar": "المعارضة",
         "exampleDe": "Opposition kontrolliert Regierung → Opposition.",
         "exampleAr": "معارضة تراقب حكومة → Opposition",
         "pos": "Verb",
         "article": "die",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF8",
@@ -97216,13 +97216,13 @@
       },
       {
         "id": "bamf-rest-333",
-        "de": "die Pressefreiheit",
+        "de": "die Pressefreiheit (Variante 2)",
         "ar": "حرية الصحافة",
         "exampleDe": "Pressefreiheit garantieren → Pressefreiheit.",
         "exampleAr": "ضمان حرية صحافة → Pressefreiheit",
         "pos": "Verb",
         "article": "die",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF8",
@@ -97234,13 +97234,13 @@
       },
       {
         "id": "bamf-rest-334",
-        "de": "die Meinungsfreiheit",
+        "de": "die Meinungsfreiheit (Variante 3)",
         "ar": "حرية الرأي",
         "exampleDe": "Meinungsfreiheit nutzen → Meinungsfreiheit.",
         "exampleAr": "استخدام حرية رأي → Meinungsfreiheit",
         "pos": "Verb",
         "article": "die",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF8",
@@ -97270,13 +97270,13 @@
       },
       {
         "id": "bamf-rest-336",
-        "de": "die Religionsfreiheit",
+        "de": "die Religionsfreiheit (Variante)",
         "ar": "حرية الدين",
         "exampleDe": "Religionsfreiheit für alle → Religionsfreiheit.",
         "exampleAr": "حرية دين للجميع → Religionsfreiheit",
         "pos": "Verb",
         "article": "die",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF8",
@@ -97306,13 +97306,13 @@
       },
       {
         "id": "bamf-rest-338",
-        "de": "der Umweltschutz",
+        "de": "der Umweltschutz (Variante)",
         "ar": "حماية البيئة",
         "exampleDe": "Umweltschutz als Staatsziel → Umweltschutz.",
         "exampleAr": "حماية بيئة كهدف دولة → Umweltschutz",
         "pos": "Verb",
         "article": "der",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF8",
@@ -97342,13 +97342,13 @@
       },
       {
         "id": "bamf-rest-340",
-        "de": "die Integration",
+        "de": "die Integration (Variante)",
         "ar": "الاندماج",
         "exampleDe": "Integration durch Sprache → Integration.",
         "exampleAr": "اندماج عبر لغة → Integration",
         "pos": "Verb",
         "article": "die",
-        "level": "B1",
+        "level": "B2",
         "tags": [
           "bamf",
           "HF8",
@@ -97602,7 +97602,7 @@
         "exampleAr": "بحث معلومات في إنترنت → recherchieren",
         "pos": "Verb",
         "article": null,
-        "level": "B2",
+        "level": "B1",
         "tags": [
           "p3",
           "projekt",

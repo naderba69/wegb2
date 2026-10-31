@@ -635,6 +635,7 @@ function VocabTask({ task, srs, onSrs, onPoints, voiceName, rate, tempo = "regel
       const newSlots = Math.min(roomForNew, Math.max(0, 10 - pendingToday.length - dueToday.length));
       // المستحقّ أولاً، ثم استأنف البطاقة التي ظهرت ولم تُقيَّم، وأخيراً الجديد ضمن السقف.
       pool = [...dueToday, ...pendingToday, ...fresh.slice(0, newSlots)].slice(0, 10);
+      // DEBUG LX0e
       dueCount = due.length;
       freshCount = fresh.length;
     } else {
