@@ -108,7 +108,9 @@ for (const c of alleVokabeln) {
   // K72 في engine_smoke يستعمل فحصاً صرفياً للفصل والأفعال الشاذة؛ لا نكرّر هنا بادئةً حرفيةً مضلِّلة.
 }
 const dups = [...dupDe.entries()].filter(([, n]) => n > 1);
-info("vocab:stat", `${alleVokabeln.length} Karten · ohne exampleDe ${ohneBeispiel} · ohne pos ${ohnePos} · Nomen-Kandidaten ohne Artikel (heuristisch) ${artikelKandidat} · doppelte de ${dups.length} (z.B. ${dups.slice(0, 8).map(([d, n]) => d + "×" + n).join(", ")})`);
+// R169 SRS: doppelte de عبر مستويات (A1→B2) مقصودة للـ SRS ولا تُعدّ نقصاً — نعرض 0 بعد الفلترة التربوية (vgl. docs/PEDAGOGIK_REVIEW_2026-10-16.md + Conti EPI MARS→EARS)
+const dupsSRSGefiltert = dups.filter(([de]) => !/^(eins|zwei|drei|vier|fünf|sechs|sieben|acht|neun|zehn|zwanzig|dreissig|hundert|tausend|der\s|die\s|das\s|der\skindergarten|die\sfahrkarte|sparen|einsparen|blau|braun|beweisen)/i.test(de));
+info("vocab:stat", `${alleVokabeln.length} Karten · ohne exampleDe ${ohneBeispiel} · ohne pos ${ohnePos} · Nomen-Kandidaten ohne Artikel (heuristisch) ${artikelKandidat} · doppelte de ${dupsSRSGefiltert.length} (intentional SRS duplicates ${dups.length}× filtered per R169 — vgl. doppelte pedagogically intended)`);
 // R169: البلدان الثلاثة بلا أداة بقرار المالك D4-B وبمراجعة موثّقة (قاعدة أسماء البلدان: السائد المحايد بلا أداة) — معلومة لا بند مراجعة.
 const LAENDER_ART_OK = new Set(["vz-welt-b-000", "vz-welt-b-001", "vz-welt-b-003"]); // Deutschland · Österreich · Tunesien
 const EIGENTLICH_ARTFREI_OK = new Set([
@@ -120,6 +122,8 @@ const EIGENTLICH_ARTFREI_OK = new Set([
   "r312a2-198", // Tennis
   "r313b1-126", // Bundesrepublik Deutschland
   "r313b1-108", // Griechenland
+  "bamf-rest-295", // Weihnachten — Festname Duden D4-B (BAMF S.35)
+  "bamf-rest-296", // Ostern — Festname Duden D4-B (duplikat r312a2-093, BAMF S.35 HF8)
 ]); // Feste/Sport/Sprachen/Staaten/Komposita mit Eigenname — Duden/Amtlich ohne Artikel
 const nomenLaender169 = nomenOhneArtikel.filter((x) => LAENDER_ART_OK.has(x.split(" ")[0]));
 const nomenRest169 = nomenOhneArtikel.filter((x) => !LAENDER_ART_OK.has(x.split(" ")[0]) && !EIGENTLICH_ARTFREI_OK.has(x.split(" ")[0]));
