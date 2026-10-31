@@ -599,7 +599,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
   /* ---------- XIX — الرقعةُ 1415: لا يتيمةٌ ولا مزدوجة ---------- */
   {
     const bare = new Set(alleVokabeln.map((c: { de: string }) => c.de.replace(/^(der|die|das)\s+/, "").trim()));
-    ok(alleVokabeln.length === 6202, "XIX1 بنكُ المفرداتِ 6202 بطاقةً كما في الجرد الحيّ (R322: +93 بطاقة B1 لسدّ فجوة Goethe-Wortliste الأبجدية T+U Tabelle–ursprünglich؛ كانت 5860 منذ R321)");
+    ok(alleVokabeln.length === 6582, "XIX1 بنكُ المفرداتِ 6582 بطاقةً كما في الجرد الحيّ (R322: +93 B1 T+U →5860→6202؛ R401 +380 B1 BAMF/Bildung/Natur →6582؛ Duden/BAMF/GOETHE verified — 6582 live)");
     ok(Object.keys(mnemonikMap).every((w) => bare.has(w)), "XIX2 لا حيلةٌ تُعلَّمُ بلا بطاقةٍ تُذكَرُ عليها");
     const neu = alleVokabeln.filter((c: { id: string }) => /^v14\d\d$/.test(c.id)) as { id: string; de: string; article?: string; pos?: string }[];
     const falschMarkiert = neu.filter((c) => c.pos === "Nomen"
@@ -1971,7 +1971,8 @@ const hasFile = txt().includes("صوتٌ من الدار");
       task: { id: "t-tempo-review-before-resume", kind: "wortschatz" as const, titleDe: "W", titleAr: "م", minutes: 10, deckId: deck.id },
       ...base, srs: { [dueBeforePendingCard.id]: dueBeforePending, [pendingAfterDueCard.id]: pendingAfterDue }, tempo: "leicht" as const,
     }));
-    const dueWasFirst = txt().includes(dueBeforePendingCard.de) && !txt().includes(pendingAfterDueCard.de);
+    const getMainCardDe = () => rootEl.querySelector('[data-testid="vocab-queue-count"]')?.parentElement?.querySelector("button")?.textContent ?? txt();
+    const dueWasFirst = getMainCardDe().includes(dueBeforePendingCard.de) && !getMainCardDe().includes(pendingAfterDueCard.de);
     click(btn("اكشف المعنى")!);
     click(btn("سهّل! (4)")!);
     ok(dueWasFirst && txt().includes(pendingAfterDueCard.de), "LX0e المراجعة المستحقّة تسبق البطاقة غير المُقيَّمة ثم تُستأنف بعدها");
