@@ -2,6 +2,7 @@
 // العقد المعماري: كل محرّك يسجّل عبر logK أي كفاءة تدربها وهل نجحت المحاولة.
 // التقدير = 70% أداء مسجَّل حديثاً + 30% مؤشرات تراكمية — حتمي وموثّق بلا خوادم.
 
+import { lokalesDatum } from "./datum";
 import type { Progress, Kompetenz, TaskKind } from "./types";
 import { stufenWert } from "./srs";
 
@@ -48,7 +49,7 @@ export const FEHLER_ZU_KOMPETENZ: Record<string, Kompetenz> = {
 
 /** تسجيل محاولة (ناجحة/خاطئة) على شبكة الكفاءات. */
 export function logK(p: Progress, h: Kompetenz, ok: boolean): Progress {
-  const arr = [...(p.kompetenzLog || []), { h, ok, d: new Date().toISOString().slice(0, 10) }]; // R284/A30: Datum fuer Wochen-Bilanz
+  const arr = [...(p.kompetenzLog || []), { h, ok, d: lokalesDatum() }]; // R284/A30: Datum fuer Wochen-Bilanz
   return { ...p, kompetenzLog: arr.slice(-600) };
 }
 

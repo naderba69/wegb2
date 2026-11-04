@@ -1,4 +1,5 @@
 "use client";
+import { lokalesDatum, lokalesDatumPlus } from "./datum";
 import { useCallback, useEffect, useState } from "react";
 import {
   emptyProgress,
@@ -17,8 +18,11 @@ import { checkAbzeichen } from "./spiel";
 import { logK, KIND_KOMPETENZ, FEHLER_ZU_KOMPETENZ } from "./kompetenz";
 import { progressKeyActive } from "./profiles";
 import { migrateCurriculumSchedule } from "./curriculum-schedule";
+import { recordTodayUxClosed, recordTodayUxSubmission } from "./metriken";
+import type { TodayStepId } from "./today-steps";
 
 export const PROGRESS_EVENT = "weg-progress-changed";
+export const PROGRESS_SAVE_ERROR_EVENT = "weg-progress-save-error";
 
 /** Move legacy, source-unknown minute totals out of the measured-time field. Before the session timer,
  *  the UI's only way to add time was manual booking, so old totals are self-reported, not measured. */
@@ -95,23 +99,26 @@ export function loadProgress(): Progress {
   }
 }
 
-export function saveProgress(p: Progress) {
+export function saveProgress(p: Progress): boolean {
   try {
     const migrated = migrateCurriculumSchedule(separateLegacyManualMinutes(p));
     window.localStorage.setItem(progressKeyActive(), JSON.stringify(migrated));
     emit();
+    return true;
   } catch {
-    /* التخزين ممتلئ أو محظور */
+    // لا نعرض نجاحاً وهمياً: كل مستهلك يسمع الحدث، وuseProgress لا يبدّل الحالة المرئية.
+    if (typeof window !== "undefined") window.dispatchEvent(new Event(PROGRESS_SAVE_ERROR_EVENT));
+    return false;
   }
 }
 
 export const MAX_STREAK = 7; // K-StreakCap: لا سلاسل عدوانية — السقف 7 مع حماية «يوم سيّئ»
 
 export function touchStreak(p: Progress): Progress {
-  const today = new Date().toISOString().slice(0, 10);
+  const today = lokalesDatum();
   const last = p.streak.last;
   if (last === today) return p;
-  const yesterday = new Date(Date.now() - 86400000).toISOString().slice(0, 10);
+  const yesterday = lokalesDatumPlus(-1);
   // يوم سيّئ أو غياب معلَن: تُجمَّد السلسلة عند قيمتها الحالية (≤7) بلا كسر
   if (p.badDay === today || p.badDay === yesterday) {
     return { ...p, streak: { last: today, count: Math.min(p.streak.count, MAX_STREAK) } };
@@ -135,14 +142,23 @@ export function useProgress() {
   const update = useCallback((fn: (p: Progress) => Progress) => {
     setProgress((prev) => {
       const next = touchStreak(fn(prev));
-      saveProgress(next);
-      return next;
+      return saveProgress(next) ? next : prev;
     });
   }, []);
 
   /** تسجيل نتيجة مهمة — النجاح ≥80% (ومهمةُ التحقق تُغلِق سجلَّ درسِها استقلالاً أو حاجةً) */
-    const submitTask = useCallback(
-    (day: number, taskId: string, score: number, total: number, kind?: TaskKind, geplantMin?: number, verifyFor?: string, minutenEffektiv?: number) => {
+  const submitTask = useCallback(
+    (
+      day: number,
+      taskId: string,
+      score: number,
+      total: number,
+      kind?: TaskKind,
+      geplantMin?: number,
+      verifyFor?: string,
+      minutenEffektiv?: number,
+      ux?: { activeMs: number; step: TodayStepId; hasStep5: boolean },
+    ) => {
       update((p) => {
         const prev = p.plan.tasks[taskId];
         const passed = total > 0 && score / total >= 0.8;
@@ -169,6 +185,9 @@ export function useProgress() {
             {
               ...p,
               verify,
+              todayUx: ux
+                ? recordTodayUxSubmission(p.todayUx, day, ux.activeMs, ux.step, passed, ux.hasStep5)
+                : p.todayUx,
               xp: (p.xp ?? 0) + (result.passed ? 15 : 5),
               plan: { ...p.plan, tasks: { ...p.plan.tasks, [taskId]: result } },
             },
@@ -189,11 +208,15 @@ export function useProgress() {
       dayTotal: number,
       tasksDone: number,
       tasksTotal: number,
-      debts: DebtItem[]
+      debts: DebtItem[],
+      activeSessionMs?: number,
     ) => {
       update((p) =>
         checkAbzeichen({
           ...p,
+          todayUx: Number.isFinite(activeSessionMs)
+            ? recordTodayUxClosed(p.todayUx, day, activeSessionMs as number)
+            : p.todayUx,
           xp: (p.xp ?? 0) + 30,
           plan: {
             ...p.plan,
@@ -256,7 +279,7 @@ export function useProgress() {
       plan: { ...emptyProgress.plan, ...p.plan },
       settings: { ...emptyProgress.settings, ...p.settings },
     }));
-    saveProgress(merged);
+    if (!saveProgress(merged)) throw new Error("progress-storage-failed");
     setProgress(merged);
   }, []);
 
@@ -268,7 +291,7 @@ export function useProgress() {
         if (key?.startsWith(prefix)) window.localStorage.removeItem(key);
       }
     } catch { /* progress reset still works if optional timer storage is unavailable */ }
-    saveProgress(emptyProgress);
+    if (!saveProgress(emptyProgress)) return;
     setProgress(emptyProgress);
   }, []);
 
@@ -281,7 +304,7 @@ export function recordStudyMinutes(day: number, minutes: number): number {
   try {
     const p = loadProgress();
     const byDay = p.plan.minutenEffektivTage ?? {};
-    saveProgress({
+    const gespeichert = saveProgress({
       ...p,
       plan: {
         ...p.plan,
@@ -290,7 +313,7 @@ export function recordStudyMinutes(day: number, minutes: number): number {
         minutenTrennungVersion: 1,
       },
     });
-    return minutes;
+    return gespeichert ? minutes : 0;
   } catch {
     return 0;
   }
@@ -305,7 +328,7 @@ export function bucheMinuten(minuten: number, day?: number): number {
     const minutenManuellTage = Number.isInteger(day) && (day as number) >= 1
       ? { ...(p.plan.minutenManuellTage ?? {}), [day as number]: ((p.plan.minutenManuellTage ?? {})[day as number] ?? 0) + z }
       : p.plan.minutenManuellTage;
-    saveProgress({
+    if (!saveProgress({
       ...p,
       plan: {
         ...p.plan,
@@ -313,7 +336,7 @@ export function bucheMinuten(minuten: number, day?: number): number {
         minutenManuellTage,
         minutenTrennungVersion: 1,
       },
-    });
+    })) return 0;
   } catch {
     return 0;
   }

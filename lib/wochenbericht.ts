@@ -1,3 +1,4 @@
+import { lokalesDatum } from "./datum";
 import { alleVokabeln } from "./content";
 import { buildDay } from "./plan";
 import type { Progress, TaskKind } from "./types";
@@ -34,12 +35,12 @@ const montagVon = (jetzt: Date): string => {
   const d = new Date(Date.UTC(jetzt.getUTCFullYear(), jetzt.getUTCMonth(), jetzt.getUTCDate()));
   const wd = (d.getUTCDay() + 6) % 7; // Montag = 0
   d.setUTCDate(d.getUTCDate() - wd);
-  return d.toISOString().slice(0, 10);
+  return lokalesDatum(d);
 };
 
 export function wochenBericht(p: Progress, jetzt = new Date()): WochenBericht {
   const von = montagVon(jetzt);
-  const bis = jetzt.toISOString().slice(0, 10);
+  const bis = lokalesDatum(jetzt);
 
   const proArt = new Map<string, number>();
   for (const r of Object.values(p.plan.tasks ?? {})) {

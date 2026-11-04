@@ -1,3 +1,4 @@
+import { lokalesDatum } from "./datum";
 // إدارة الملفات العائلية — كل متعلّم ملفّه المستقل (خطة/دفتر/بطاقات/أوسمة بلا تداخل)
 export interface ProfileInfo {
   id: string;
@@ -44,7 +45,7 @@ export function initProfiles(): ProfilesData {
   // ترحيل: بيانات «weg-b2-progress» القديمة تصبح الملف الأساسي
   const data: ProfilesData = {
     active: "p1",
-    list: [{ id: "p1", name: "الأساسي", emoji: "🎓", created: new Date().toISOString().slice(0, 10) }],
+    list: [{ id: "p1", name: "الأساسي", emoji: "🎓", created: lokalesDatum() }],
   };
   try {
     const legacy = window.localStorage.getItem(LEGACY_KEY);
@@ -88,7 +89,7 @@ export function addProfile(name: string, emoji: string) {
     id,
     name: name.trim() || `ملف ${d.list.length + 1}`,
     emoji: emoji || "📘",
-    created: new Date().toISOString().slice(0, 10),
+    created: lokalesDatum(),
   });
   if (typeof window !== "undefined") window.dispatchEvent(new Event(PROFILE_WILL_CHANGE));
   d.active = id;

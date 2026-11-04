@@ -4,6 +4,7 @@
 //   🌍 Family Report بالإنجليزية — لأهل لا يتكلمون العربية ولا الألمانية
 //   🎧 دليل Diktat منزلي — تسميع بورقة واحدة بلا أي ألمانية من الوالدين
 //   📅 اجتماع الأحد — طقس أسبوعي بخمس خطوات يجمع العائلة حول التقدّم
+import { lokalesDatum } from "@/lib/datum";
 import { useState } from "react";
 import type { Progress } from "@/lib/types";
 import { TOTAL_DAYS } from "@/lib/types";
@@ -39,7 +40,7 @@ function familienBerichtHtml(p: Progress, name: string): string {
   const tage = Object.values(p.plan.days ?? {}).filter((d) => d.closed).length;
   const schwach = [...KOMPETENZEN].sort((a, b) => w[a].wert - w[b].wert || a.localeCompare(b))[0];
   const rows = KOMPETENZEN.map((h) => `<tr><td>${EN_SKILL[h]}</td><td class="n">${w[h].wert}</td></tr>`).join("");
-  const heute = new Date().toISOString().slice(0, 10);
+  const heute = lokalesDatum();
   return `<!doctype html><html dir="ltr"><head><meta charset="utf-8"><title>Family Report — ${name}</title>
 <style>
 body{font-family:Georgia,serif;color:#2c2a25;background:#fff;margin:2rem;max-width:44rem}
@@ -90,7 +91,7 @@ function diktatGuideHtml(p: Progress, name: string): string {
     )
     .join("");
   const schluessel = items.map((s, i) => `<tr><td class="n">${i + 1}</td><td>${s.de}</td></tr>`).join("");
-  const heute = new Date().toISOString().slice(0, 10);
+  const heute = lokalesDatum();
   return `<!doctype html><html><head><meta charset="utf-8"><title>Diktat zu Hause — ${name}</title>
 <style>
 body{font-family:Georgia,serif;color:#2c2a25;background:#fff;margin:1.6rem;max-width:44rem}

@@ -1,5 +1,6 @@
 "use client";
 // 🔔 A27 (R293): تذكيرات محلية — إشعار متصفح بموافقتك + تصدير تقويم .ics
+import { lokalesDatum } from "@/lib/datum";
 import { useEffect, useState } from "react";
 import { useProgress } from "@/lib/store";
 import { erinnerungFaellig, icsText } from "@/lib/erinnerung";
@@ -14,7 +15,7 @@ export function ErinnerungsWache() {
         if (!roh) return;
         const p = JSON.parse(roh) as Parameters<typeof erinnerungFaellig>[0];
         if (!erinnerungFaellig(p, new Date())) return;
-        const heute = new Date().toISOString().slice(0, 10);
+        const heute = lokalesDatum();
         if (localStorage.getItem(FEUER_KEY) === heute) return;
         if (typeof Notification === "undefined" || Notification.permission !== "granted") return;
         localStorage.setItem(FEUER_KEY, heute);

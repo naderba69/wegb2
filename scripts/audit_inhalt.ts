@@ -3,6 +3,7 @@ import { readFileSync, existsSync } from "fs";
 import { grammarMap, sentences, texts, dialogues, writingTasks, alleVokabeln, fehlerList, eselsbruecken, muendlich, vortrag, verben, szenarien, leseText } from "../lib/content";
 import { grader } from "../lib/grader";
 import { buildDay } from "../lib/plan";
+import { parsePitfallContrast } from "../lib/pitfall";
 import { emptyProgress, TOTAL_DAYS } from "../lib/types";
 import type { Exercise } from "../lib/types";
 
@@ -36,10 +37,22 @@ function pruefeExercise(e: Exercise, wo: string) {
 
 /* grammar */
 const ids = new Set<string>();
+let pitfallTotal = 0;
+let pitfallContrasts = 0;
 for (const t of Object.values(grammarMap)) {
   if (!t.titleDe || !t.titleAr || !t.summaryAr) add("grammar:kopf", t.id);
   if (!t.examples?.length) add("grammar:keineBeispiele", t.id);
   if (!t.pitfalls?.length) add("grammar:keineFallen", t.id);
+  for (const [pitfallIndex, pitfall] of (t.pitfalls ?? []).entries()) {
+    pitfallTotal++;
+    const wo = `${t.id}[${pitfallIndex}]`;
+    if (!pitfall.de.trim() || !pitfall.ar.trim()) add("grammar:pitfall leer", wo);
+    if (AR.test(pitfall.de) || !AR.test(pitfall.ar)) add("grammar:pitfall sprache", `${wo} «${pitfall.de}»`);
+    if (pitfall.de.includes("→")) {
+      if (parsePitfallContrast(pitfall.de)) pitfallContrasts++;
+      else add("grammar:pitfall Kontrast unlesbar", `${wo} «${pitfall.de}»`);
+    }
+  }
   for (const r of t.rules) { if (DE_ONLY_BAD.test(r.de)) add("grammar:rule.de arabisch", `${t.id} «${r.de}»`); if (!AR.test(r.ar)) add("grammar:rule.ar", `${t.id} «${r.de}»`); }
   for (const ex of t.examples) {
     if (AR.test(ex.de)) add("grammar:example.de arabisch", `${t.id} «${ex.de}»`);
@@ -51,6 +64,7 @@ for (const t of Object.values(grammarMap)) {
   for (const e of t.exercises) { if (ids.has(e.id)) add("exercise:dupId", e.id); ids.add(e.id); pruefeExercise(e, t.id); }
   if (t.exercises.length < 5) hinweis("grammar:wenigeÜbungen — prüfen تربوياً", `${t.id} (${t.exercises.length})`);
 }
+info("grammar:pitfalls", `${pitfallTotal} تنبيهاً مكتملاً؛ ${pitfallContrasts} زوج ✗/✓ صريحاً قابلاً للعرض، والبقية فروق استعمال بلا تصحيح مخمّن`);
 /* texts / dialogues */
 const audioText = JSON.parse(readFileSync("content/hoeren-audio.json", "utf8"));
 const audioDlg = JSON.parse(readFileSync("content/dialog-audio.json", "utf8"));

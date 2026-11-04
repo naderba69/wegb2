@@ -14,6 +14,12 @@ export default function BankenStart({ children }: { children: ReactNode }) {
   const [versuch, setVersuch] = useState(0);
 
   useEffect(() => {
+    // بيان الخصوصية يجب أن يبقى متاحاً حتى إذا تعطلت بنوك الدروس أو الشبكة؛
+    // الصفحة نفسها لا تستهلك أي بنك محتوى.
+    if (window.location.pathname === "/datenschutz") {
+      setBereit(true);
+      return;
+    }
     if (bankenBereit()) {
       setBereit(true);
       return;

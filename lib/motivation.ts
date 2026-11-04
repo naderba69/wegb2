@@ -9,6 +9,7 @@
  *  وعند غياب السجلّ يبدأ من 3 مع التصريح بذلك. لا نقاط ولا عملات هنا.
  * ═══════════════════════════════════════════════════════════════════
  */
+import { lokalesDatum } from "./datum";
 import type { Progress } from "./types";
 
 /** تاريخ ISO (YYYY-MM-DD) من طابع DayResult.at */
@@ -18,7 +19,7 @@ function datumVon(at: string): string {
 function plusTage(iso: string, n: number): string {
   const d = new Date(iso + "T00:00:00Z");
   d.setUTCDate(d.getUTCDate() + n);
-  return d.toISOString().slice(0, 10);
+  return lokalesDatum(d);
 }
 /** اثنين أسبوعِ تاريخٍ معطى (أسابيع ألمانية تبدأ الاثنين) */
 export function wochenMontag(iso: string): string {

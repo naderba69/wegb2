@@ -5,6 +5,7 @@
  * القراءة والاستماع والبنى تُصحَّح آليًا؛ الكتابة والتحدّث بتقييم ذاتي بشبكة معلنة.
  * محاكاة تدريبية صادقة الاسم: ليست امتحانًا رسميًا ولا توقّع نتيجة.
  */
+import { lokalesDatum } from "@/lib/datum";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useProgress } from "@/lib/store";
 import {
@@ -153,7 +154,7 @@ export default function Simulation() {
       ...p,
       simulationen: [
         ...(p.simulationen ?? []),
-        { datum: new Date().toISOString().slice(0, 10), seed, format, punkte: bewertung.prozent, bestanden: bewertung.bestanden },
+        { datum: lokalesDatum(), seed, format, punkte: bewertung.prozent, bestanden: bewertung.bestanden },
       ].slice(-30),
     }));
   }, [phase, bewertung, seed, format, update]);

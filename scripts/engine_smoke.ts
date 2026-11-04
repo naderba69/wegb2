@@ -118,9 +118,19 @@ import { buildSkillKlausur, SKILL_LABELS, type SkillKey } from "../lib/klausur";
 import { karteninCsv, allesInCsv, exportKarten } from "../lib/karten-export";
 import { analysiere, bewerteAussprache, silbenImText, zielDauer } from "../lib/aussprache";
 import { pruefeText, pruefeBrief, bewerteSchreiben, heilUebungen, effektiveSchwere, DISPUT_SCHWELLE } from "../lib/schreibpruefer";
-import { feedbackQuote, fehlerHeilung, pruefungsKurve } from "../lib/metriken";
+import {
+  feedbackQuote,
+  fehlerHeilung,
+  pruefungsKurve,
+  recordTodayUxClosed,
+  recordTodayUxSubmission,
+  todayUxSummary,
+} from "../lib/metriken";
 import { buildModulPruefung, bewerte, darfWiederholen, modulFrei, tagGesperrt, rettungsplan } from "../lib/modulpruefung";
 import { emptyProgress, TOTAL_DAYS, CURRICULUM_SCHEDULE_VERSION, type SrsState, type Tempo } from "../lib/types";
+import { groupTasksByTodayStep, todayStepOf, todayTaskSubmitted } from "../lib/today-steps";
+import { parsePitfallContrast } from "../lib/pitfall";
+import { lessonSceneFor } from "../lib/lesson-scene";
 import { CURRICULUM_SECTIONS, buildCurriculumDay } from "../lib/curriculum";
 import { migrateCurriculumSchedule } from "../lib/curriculum-schedule";
 import {
@@ -151,7 +161,7 @@ import { buildBrueckeItems, katVonSektion } from "../lib/bruecken";
 import { selbstKorrektur } from "../components/lernstrategie";
 import { planeEinwand } from "../lib/muendlich";
 import { synonymKontexteFuer, synonymKontextAnzahl } from "../lib/synonyme";
-import type { Exercise, Level, Progress, TaskResult, DayTask } from "../lib/types";
+import type { Exercise, Level, Progress, TaskResult, DayTask, GrammarTopic } from "../lib/types";
 import { STUFEN, stufeVonTag, tagVonStufe, ankerVon, wegHeute } from "../lib/weg";
 import { AKTIVITAETEN } from "../lib/aktivitaeten";
 import { gemischteOptionen } from "../lib/optionen";
@@ -2911,7 +2921,7 @@ void 0;
 /* ═══ K120 — سجلُّ القواعدِ يفحصُ نفسَه: كلُّ دليلٍ «ملف:سطر» مذكورٍ موجودٌ حرفياً ═══ */
 {
   const rules = readFileSync("RULES.md", "utf8");
-  const re = /`([^`]+\.(?:ts|tsx|json|css|md)):(\d+)`\s*«([^»]+)»/g;
+  const re = /`([^`]+\.(?:ts|tsx|json|css|md|mjs)):(\d+)`\s*«([^»]+)»/g;
   const bad: string[] = [];
   let m: RegExpExecArray | null;
   let n = 0;
@@ -2974,7 +2984,7 @@ void 0;
   const offlineSrc122 = srcOf("components/offline.tsx");
   // R202: الاستثناء الثالث بنفس المنطق حرفيًا — بطاقة عدم الاتصال تجلب بيان الصوت وملفات MP3 من نفس الأصل
   // فقط لتعبئة مخزن المتصفح المحلي؛ لا بيانات مستخدم، ولا رابط خارجي في الملفّ إطلاقًا (يُختبَر أدناه).
-  ok(fetchIn.length === 4 && fetchIn[0] === "components/offline.tsx" && fetchIn[1] === "components/shadowing.tsx" && fetchIn[2] === "lib/bankload.ts" && fetchIn[3] === "lib/grader.ts" && bankSrc.includes('fetch("/banks.json")') && !/https?:\/\//.test(bankSrc) && shadowSrc122.includes("fetch(einheit.audioSrc)") && !/https?:\/\//.test(shadowSrc122) && offlineSrc122.includes('fetch("/audio-manifest.json")') && offlineSrc122.includes("fetch(e.p)") && !/https?:\/\//.test(offlineSrc122), `K122c fetch الخارجيُّ محصورٌ في مصحّح LLM وbankload يجلب /banks.json من نفس الأصل فقط (R163)؛ والاستثناء الوحيد الإضافي منذ R184 هو جلب التظليل لملفّ النموذج من نفس الأصل (einheit.audioSrc، بلا أيّ رابط http) لتحليله موجيًا — لا رفع ولا خادم خارجي؛ ومنذ R202 تجلب بطاقة عدم الاتصال بيان/ملفات الصوت من نفس الأصل لتعبئة مخزن محلي (بلا رابط http في ملفّها إطلاقًا)؛ تنزيلُ حزمة المتصفح محكومٌ بـK135 (${fetchIn.join(",") || "لا شيء"})`);
+  ok(fetchIn.length === 4 && fetchIn[0] === "components/offline.tsx" && fetchIn[1] === "components/shadowing.tsx" && fetchIn[2] === "lib/bankload.ts" && fetchIn[3] === "lib/grader.ts" && bankSrc.includes('fetch("/banks.json")') && !/https?:\/\//.test(bankSrc) && shadowSrc122.includes("fetch(einheit.audioSrc)") && !/https?:\/\//.test(shadowSrc122) && offlineSrc122.includes('fetch("/audio-manifest.json"') && offlineSrc122.includes("fetch(e.p") && !/https?:\/\//.test(offlineSrc122), `K122c fetch الخارجيُّ محصورٌ في مصحّح LLM وbankload يجلب /banks.json من نفس الأصل فقط (R163)؛ والاستثناء الوحيد الإضافي منذ R184 هو جلب التظليل لملفّ النموذج من نفس الأصل (einheit.audioSrc، بلا أيّ رابط http) لتحليله موجيًا — لا رفع ولا خادم خارجي؛ ومنذ R202 تجلب بطاقة عدم الاتصال بيان/ملفات الصوت من نفس الأصل لتعبئة مخزن محلي (بلا رابط http في ملفّها إطلاقًا)؛ تنزيلُ حزمة المتصفح محكومٌ بـK135 (${fetchIn.join(",") || "لا شيء"})`);
   ok(srcOf("app/einstellungen/page.tsx").includes("أُذِنُ بإرسال صوتي") && srcOf("lib/speech.ts").includes("بلا إذنٍ صريحٍ في الإعدادات"),
     "K122d سلسلةُ الموافقةِ السحابية: صياغةُ الإذنِ + شرطُ البوابةِ حاضران");
   const callers = code.filter((f) => f !== "lib/speech.ts" && srcOf(f).includes("listenDe("));
@@ -3436,12 +3446,22 @@ void 0;
     classroomSrc.includes("saveProgress(loadProgress())") && classroomSrc.includes("persistKey={`wegb2:partial:${currentTask.id}`}"),
     "K143d وقت الجلسة المقاس منفصل عن تقديرات المهام؛ المزيد يمدّ الهدف والتوقف يحفظ أحدث الحالة والمسودة دون إغلاق أو دين");
 
-  const pkg = JSON.parse(readFileSync("package.json", "utf8")) as { dependencies: { next: string }; devDependencies: { postcss: string }; overrides: { postcss: string } };
+  const pkg = JSON.parse(readFileSync("package.json", "utf8")) as {
+    dependencies: { next: string };
+    devDependencies: { postcss: string };
+    overrides: { postcss: string; minimatch: string };
+    scripts: { postinstall: string; "audit:deps": string };
+  };
   const lock = JSON.parse(readFileSync("package-lock.json", "utf8")) as { packages: Record<string, { version?: string }> };
-  ok(pkg.dependencies.next === "^15.5.27" && lock.packages["node_modules/next"]?.version === "15.5.27" &&
+  const dependencyPatch = readFileSync("scripts/patch_jsx_a11y_minimatch.mjs", "utf8");
+  ok(pkg.dependencies.next === "15.5.29" && lock.packages["node_modules/next"]?.version === "15.5.29" &&
     pkg.devDependencies.postcss === "^8.5.28" && pkg.overrides.postcss === "$postcss" &&
-    lock.packages["node_modules/postcss"]?.version === "8.5.28",
-    "K143f ترقيع أمني ضمن Next 15: PostCSS موحّد بالـoverride، من دون قفزة رئيسية");
+    lock.packages["node_modules/postcss"]?.version === "8.5.28" &&
+    pkg.overrides.minimatch === "^11.0.4" && lock.packages["node_modules/minimatch"]?.version === "11.0.4" &&
+    pkg.scripts.postinstall === "node scripts/patch_jsx_a11y_minimatch.mjs" &&
+    pkg.scripts["audit:deps"] === "npm audit --audit-level=moderate" &&
+    dependencyPatch.includes("eslint-plugin-jsx-a11y ↔ minimatch 11 ready"),
+    "K143f ترقيع أمني ضمن Next 15: Next 15.5.29 + PostCSS موحّد + minimatch 11 مع رقعة توافق محروسة، من دون قفزة رئيسية");
 
   const auditSrc = readFileSync("scripts/audit_inhalt.ts", "utf8");
   const scripts = JSON.parse(readFileSync("package.json", "utf8")).scripts as Record<string, string>;
@@ -12548,7 +12568,7 @@ void 0;
   ok(mcAlle.length > 900, `K145a جُمعت أسئلةُ الاختيارِ من البنوكِ كلِّها (${mcAlle.length})`);
   ok(mcAlle.every((q) => {
     const g = gemischteOptionen(q.options, `mc:${q.id}`);
-    return g.length === q.options.length && [...g].sort().join("") === [...q.options].sort().join("") && g.includes(q.answer);
+    return g.length === q.options.length && JSON.stringify([...g].sort()) === JSON.stringify([...q.options].sort()) && g.includes(q.answer);
   }), "K145b الخلطُ تبديلٌ حقيقيٌّ بلا فقدٍ ولا تكرارٍ وجوابُه حاضرٌ دائماً");
   const positionen: Record<number, number> = {};
   let vier = 0;
@@ -12975,16 +12995,18 @@ function collectR262(dir: string, out: string[] = []): string[] {
 // ===== K304 (R272): Vollstaendige maschinelle Audio-QC des gesamten Audio-Bestands
 // (Besitzer-Entscheid: keine menschliche Anhoerung — die Pruefung ist vollautomatisiert
 // und ehrlich als Maschinenmessung gekennzeichnet; scripts/audio_qc_all.py, Bericht
-// docs/audio-qc-all-2026-10-18.json). Jede MP3 auf der Platte genau einmal geprueft. =====
+// docs/audio-qc-all-2026-11-04.json). Jede MP3 auf der Platte genau einmal geprueft. =====
 {
-  const qcAll = JSON.parse(readFileSync("docs/audio-qc-all-2026-10-18.json", "utf8")) as any;
+  const qcAll = JSON.parse(readFileSync("docs/audio-qc-all-2026-11-04.json", "utf8")) as any;
   const verz304 = ["dialog", "diktat", "hoeren", "hoerneu", "sprichwort"];
   const platten304 = new Set<string>();
   for (const v of verz304) for (const f of readdirSync("public/audio/" + v)) if (f.endsWith(".mp3")) platten304.add("/audio/" + v + "/" + f);
   const berichtet304 = new Set<string>(qcAll.dateien.map((d: any) => d.datei));
   const gruppen304 = qcAll.gruppen.dialog.anzahl === 176 && qcAll.gruppen.diktat.anzahl === 742 &&
     qcAll.gruppen.hoeren.anzahl === 157 && qcAll.gruppen.hoerneu.anzahl === 16 && qcAll.gruppen.sprichwort.anzahl === 8;
-  ok(existsSync("scripts/audio_qc_all.py") && qcAll.dateien.length === 1099 && platten304.size === 1099 &&
+  ok(existsSync("scripts/audio_qc_all.py") && existsSync("scripts/run_audio_qc.py") &&
+     existsSync("scripts/requirements-audio-qc.txt") && qcAll.datum === "2026-11-04" &&
+     qcAll.dateien.length === 1099 && platten304.size === 1099 &&
      [...platten304].every((p) => berichtet304.has(p)) && gruppen304 && qcAll.anomalienGesamt === 0 &&
      qcAll.abdeckung.luecken.length === 0 && qcAll.dateien.every((d: any) => d.ok) &&
      qcAll.schwellen.diktat.maxStilleAnteil === 0.65 && qcAll.schwellen.diktat.maxStilleLochS === 4.0 &&
@@ -13604,10 +13626,12 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const sw = readFileSync("public/sw.js", "utf8");
   const offSrc = readFileSync("components/offline.tsx", "utf8");
   const einSrc2 = readFileSync("app/einstellungen/page.tsx", "utf8");
-  ok(/const CACHE = "wegb2-v\d+"/.test(sw) && sw.includes('"/banks.json"') && sw.includes("stale-while-revalidate") &&
-     sw.includes('url.pathname.startsWith("/audio/")') && sw.includes('req.mode === "navigate"') &&
-     sw.includes("url.origin !== self.location.origin") && sw.includes("Promise.allSettled"),
-    "K282a عامل الخدمة v2: غلاف + banks.json بتحديث خلفي + صوتيات cache-first + سقوط ملاحي، ونفس الأصل حصرًا وتثبيت متسامح");
+  ok(/const CACHE = "wegb2-v\d+"/.test(sw) && ["/banks.json", "/banks-vertiefung.json", "/banks-lang.json"].every((p) => sw.includes(`"${p}"`)) &&
+     ["/lernen", "/ueben", "/fortschritt", "/pruefen", "/einstellungen", "/masar", "/drucken"].every((p) => sw.includes(`"${p}"`)) &&
+     sw.includes("speichereRouteMitAssets") && sw.includes('url.pathname.startsWith("/audio/")') && sw.includes('request.mode === "navigate"') &&
+     sw.includes("url.origin !== self.location.origin") && sw.includes("Promise.allSettled") && sw.includes("FULL_AUDIO_PREFIX") &&
+     sw.includes("for (const route of ROUTES)") && sw.includes("for (const url of SHELL)") && sw.includes("Route-Asset fehlt"),
+    "K282a عامل الخدمة v4: الصفحات كلها + البنوك الثلاثة + Next chunks + صوت cache-first محفوظ عند التحديث + سقوط ملاحي ونفس الأصل؛ تثبيت متسلسل لا يعلق CacheStorage ويفشل بدل ادعاء غلاف ناقص");
   ok(einSrc2.includes("<OfflineKarte />") && offSrc.includes("navigator.storage") && offSrc.includes("caches.delete") &&
      offSrc.includes("امسح مخزن عدم الاتصال") && offSrc.includes("لا يُمسّ"),
     "K282b بطاقة عدم الاتصال في الإعدادات: حجم مقاس من المتصفح ومسح بيد المتعلّم مع إبقاء التقدّم");
@@ -13821,9 +13845,10 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const kopier = readFileSync("scripts/copy_banks.mjs", "utf8");
   const offSrc = readFileSync("components/offline.tsx", "utf8");
   ok(kopier.includes("audio-manifest.json") && offSrc.includes('data-testid="offline-voll-download"') &&
-     offSrc.includes("wegb2-audio-voll") && offSrc.includes("audio-manifest.json") &&
-     offSrc.includes("نحو 64 MB") && offSrc.includes(" تقدّمك وبطاقاتك ودفترك لم يُمسّوا"),
-    "K295 تنزيل الصوت الكامل صار قرارًا صريحًا بحجم معلن وبيان مبنيّ من الملفات نفسها — والتقدّم خارج المخزن كعهد K282");
+     offSrc.includes("wegb2-audio-voll-v1") && offSrc.includes("audio-manifest.json") &&
+     offSrc.includes("bytes.byteLength !== e.b") && offSrc.includes("fehler > 0") && offSrc.includes("erstStart.audioMb") &&
+     !offSrc.includes("نحو 64 MB"),
+    "K295 تنزيل الصوت الكامل يتحقق من حجم كل ملف، لا يعلن اكتمالاً مع الفشل، ويعرض الحجم الحي من البيان بلا رقم قديم");
 }
 
 // ===== K296 (R203 · Kenntnisprüfungs-Wissen + Berufsstart-Checkliste):
@@ -14116,11 +14141,11 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const einstSrc2 = readFileSync("app/einstellungen/page.tsx", "utf8");
   ok(einstSrc2.includes("zusatz") && einstSrc2.includes("KOMFORT_KEY") && einstSrc2.includes("weg-lesestoff-v1"), "K328d ب6: التصدير/الاستيراد يحملان عدّاد القراءة الحرّة وإعدادات الراحة");
   const swSrc = readFileSync("public/sw.js", "utf8");
-  ok(swSrc.includes("AUDIO_MAX") && swSrc.includes("trimmeCache") && swSrc.includes('wegb2-v3'), "K328e ب7: سقف لكاش الصوت في SW مع تقليص أقدم الملفات");
+  ok(swSrc.includes("AUDIO_MAX") && swSrc.includes("trimmeCache") && /wegb2-v\d+/.test(swSrc), "K328e ب7: سقف لكاش الصوت في SW مع تقليص أقدم الملفات");
   ok(!readFileSync("components/spiele.tsx", "utf8").includes("void key"), "K328f ب4: لا كود ميّت متبقٍّ في محطة الألعاب");
   const pkg = readFileSync("package.json", "utf8");
   const ci = readFileSync(".github/workflows/ci.yml", "utf8");
-  ok(pkg.includes('"lint": "eslint app components lib"') && ci.includes("npm run lint"), "K328g ب4: ESLint بقاعدة الكود الميّت خطوة إلزامية في CI");
+  ok(pkg.includes('"lint": "eslint app components lib middleware.ts"') && ci.includes("npm run lint"), "K328g ب4: ESLint بقاعدة الكود الميّت يشمل middleware وهو خطوة إلزامية في CI");
 }
 
 
@@ -14155,7 +14180,9 @@ function collectR262(dir: string, out: string[] = []): string[] {
   ok(arabischK330.test(notFoundSrc) && /عُد|العودة|اليوم/.test(notFoundSrc), "K330b ت14: app/not-found.tsx عربي بزرّ عودة — لا صفحة 404 إنجليزية بعد 378 يومًا عربيًا");
   // ت15: زرّ إعادة محاولة حقيقي عند فشل أول تحميل لـ/banks.json (بدل نص "حدّث الصفحة" بلا فعل)
   const bankenStartSrc = readFileSync("components/BankenStart.tsx", "utf8");
-  ok(bankenStartSrc.includes('data-testid="banken-retry"') && bankenStartSrc.includes("initialisiereBanken"), "K330c ت15: زرّ «أعد المحاولة» يستدعي initialisiereBanken() دون تحميل الصفحة كاملة");
+  ok(bankenStartSrc.includes('data-testid="banken-retry"') && bankenStartSrc.includes("initialisiereBanken") &&
+     bankenStartSrc.includes('window.location.pathname === "/datenschutz"'),
+    "K330c ت15: زرّ «أعد المحاولة» يستدعي initialisiereBanken() دون تحميل الصفحة كاملة؛ وبيان الخصوصية يبقى متاحاً عند فشل البنوك");
   // ت16+ب10: بطاقة المفردة (أكثر تفاعل متكرر) بلا تداخل أزرار (axe-core nested-interactive) وبزرّ حقيقي قابل للتبويب
   const tasksSrc = readFileSync("components/tasks.tsx", "utf8");
   ok(!/role="button"\s*\n\s*tabIndex=\{0\}/.test(tasksSrc) && /<button[\s\S]{0,60}onClick=\{\(\) => setFlipped\(true\)\}/.test(tasksSrc), "K330d ت16+ب10: بطاقة المفردة تُقلَب بزرّ حقيقي وحيد — لا role=\"button\"+tabIndex يُغلِّف أزرارًا حقيقية أخرى (axe nested-interactive سابقًا)");
@@ -14171,9 +14198,13 @@ function collectR262(dir: string, out: string[] = []): string[] {
   // ب14: jsx-a11y ضمن تكوين ESLint المسطّح
   const eslintCfg = readFileSync("eslint.config.mjs", "utf8");
   ok(eslintCfg.includes("eslint-plugin-jsx-a11y") && eslintCfg.includes("jsxA11y.flatConfigs.recommended.rules"), "K330h ب14: jsx-a11y مفعَّلة في ESLint — تصطاد مستقبلاً ما كشفه ت16 يدويًا");
-  // ب16: رؤوس أمان CSP فعلية في next.config.mjs
+  // ب16: CSP فعلية بنَفَس request nonce؛ لا script-src unsafe-inline في النسخة المنشورة.
   const nextCfg = readFileSync("next.config.mjs", "utf8");
-  ok(nextCfg.includes("Content-Security-Policy") && nextCfg.includes("default-src 'self'"), "K330i ب16: CSP أساسية مفعَّلة — دفاعٌ إضافي لتسريب مفتاح LLM المخزَّن محليًا");
+  const middlewareSrc = readFileSync("middleware.ts", "utf8");
+  ok(middlewareSrc.includes("Content-Security-Policy") && middlewareSrc.includes("default-src 'self'") &&
+     middlewareSrc.includes("nonce-${nonce}") && middlewareSrc.includes("strict-dynamic") &&
+     !/script-src[^\n]*unsafe-inline/.test(middlewareSrc) && nextCfg.includes("Strict-Transport-Security"),
+    "K330i ب16: CSP per-request nonce بلا script unsafe-inline + HSTS ورؤوس أمان للنسخة المنشورة");
   // ب3: كل مرجع صورة بطاقة في vocab.json صار .webp (لا .png) — 180 صورة محوَّلة فعليًا على القرص
   const vocabRaw = readFileSync("content/vocab.json", "utf8");
   ok(!/\/cards\/[^"]+\.png/.test(vocabRaw) && /\/cards\/[^"]+\.webp/.test(vocabRaw), "K330j ب3: مراجع صور البطاقات في content/vocab.json كلها .webp — صفر .png متبقٍّ");
@@ -14296,6 +14327,199 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const pruefenAtK333 = homeK333.indexOf('data-testid="today-pruefen-eingebettet"');
   ok(playerAtK333 >= 0 && uebenAtK333 > playerAtK333 && pruefenAtK333 > uebenAtK333,
     "K333f R308: القسمان المُدمَجان يأتيان بعد مشغّل اليوم — إضافةٌ ذيلية لا تُخلّ بترتيب K136 (خطوة واحدة ← هدف ← مشغّل)");
+}
+
+
+/* ═══ K335 — Unified Today + Lesson Studio 2.0: تجميعٌ حقيقي، لا قفل عقابي، ومحتوى أصيل ═══ */
+{
+  const probe = (kind: DayTask["kind"], extra: Partial<DayTask> = {}): DayTask => ({
+    id: `probe-${kind}-${extra.verifyFor ?? "normal"}`,
+    kind,
+    titleDe: "Probe",
+    titleAr: "اختبار",
+    minutes: 5,
+    ...extra,
+  });
+  const beispiele = [
+    probe("wiederholen"),
+    probe("check", { verifyFor: "a1-sein-haben" }),
+    probe("grammatik"),
+    probe("lesen"),
+    probe("hoeren"),
+    probe("schreiben"),
+    probe("check"),
+  ];
+  ok(beispiele.map(todayStepOf).join(",") === "1,1,2,3,3,4,5",
+    "K335a اليوم الموحّد يجمع الاسترجاع/التحقق في ①، القاعدة في ②، الاستيعاب في ③، الإنتاج في ④، والفحص في ⑤");
+
+  let gruppierungSauber = true;
+  for (let d = 1; d <= TOTAL_DAYS && gruppierungSauber; d++) {
+    const tasks = buildDay(d, emptyProgress).tasks;
+    const grouped = groupTasksByTodayStep(tasks);
+    const alle = [...grouped.values()].flat();
+    if (alle.length !== tasks.length || new Set(alle.map((t) => t.id)).size !== tasks.length) gruppierungSauber = false;
+    for (const sid of [1, 2, 3, 4, 5] as const) {
+      const soll = tasks.filter((task) => todayStepOf(task) === sid).map((task) => task.id).join("|");
+      const ist = (grouped.get(sid) ?? []).map((task) => task.id).join("|");
+      if (soll !== ist) gruppierungSauber = false;
+    }
+  }
+  ok(gruppierungSauber,
+    "K335b تجميع المحطات يحفظ كل مهمة مرة واحدة وترتيبها الداخلي عبر الأيام 1–378؛ buildDay نفسه لا يتغيّر");
+
+  const fehlversuch = { done: true, passed: false, score: 0, total: 3, attempts: 1 };
+  ok(todayTaskSubmitted(fehlversuch, { score: 0, total: 0 }) &&
+    todayTaskSubmitted(undefined, { score: 0, total: 3 }) &&
+    !todayTaskSubmitted(undefined, { score: 0, total: 0 }),
+    "K335c التسليم يفتح المحطة التالية حتى عند الخطأ؛ المحاولة غير الصحيحة تُرحَّل للعلاج ولا تصبح قفلاً أبدياً");
+
+  const stepperK335 = readFileSync("components/akademie/TodayStepper.tsx", "utf8");
+  const homeK335 = readFileSync("app/page.tsx", "utf8");
+  ok(stepperK335.includes('data-testid="today-stepper"') &&
+    stepperK335.includes("([1, 2, 3, 4, 5] as TodayStepId[])") &&
+    stepperK335.includes('data-testid={`today-step-${sid}`}') &&
+    stepperK335.includes("todayTaskSubmitted(resultOf(task.id), localOf(task.id))") &&
+    homeK335.includes("<TodayStepper") && !homeK335.includes("resultOf={resultOf as any}"),
+    "K335d خريطة اليوم ذات خمس محطات ظاهرة ومربوطة بأنواع آمنة؛ لا cast any ولا قفل مبني على passed وحده");
+
+  const wizardK335 = readFileSync("components/akademie/LektionWizard.tsx", "utf8");
+  const klassK335 = readFileSync("components/akademie/Klassenzimmer.tsx", "utf8");
+  const tasksK335 = readFileSync("components/tasks.tsx", "utf8");
+  ok(wizardK335.includes("lesson-rule--paired") && wizardK335.includes("lesson-table--layered") &&
+    wizardK335.includes('data-testid="wizard-concept-map"') && wizardK335.includes('data-testid="wizard-anwendung-input"') &&
+    wizardK335.includes('data-testid="wizard-kultur"') && wizardK335.includes('data-testid="wizard-complete-today"') &&
+    wizardK335.includes("خطأك الآن = نموّ") && tasksK335.includes("lessonStudio && task.topicId && !task.verifyFor") &&
+    klassK335.includes("lessonStudio") && klassK335.includes("lessonCompleted={localOf(currentTask.id).total > 0}"),
+    "K335e Lesson Studio 2.0 مدمج فعلياً في مهمة قواعد «اليوم»: قاعدة+مثال، كشف متدرج، خريطة مفاهيم، تطبيق سياقي، ورسالة نمو");
+
+  const lernenK335 = readFileSync("app/lernen/page.tsx", "utf8");
+  ok(tasksK335.includes("authentic-reader") && tasksK335.includes("lesen-satz-audio-") &&
+    tasksK335.includes('data-testid="authentic-dialog"') &&
+    lernenK335.includes('data-testid="lernen-search"') && lernenK335.includes("qNorm") &&
+    lernenK335.includes("مكتبة الدروس الـ 87"),
+    "K335f القارئ الأصيل يتيح صوتاً لكل جملة، ومكتبة الدروس الـ87 قابلة للبحث الفوري بالعربية أو الألمانية");
+
+  const pitfallsK335 = (Object.values(grammarMap) as GrammarTopic[]).flatMap((topic) => topic.pitfalls ?? []);
+  const explicitK335 = pitfallsK335.filter((pitfall) => pitfall.de.includes("→"));
+  const contrastsK335 = pitfallsK335.map((pitfall) => parsePitfallContrast(pitfall.de)).filter(Boolean);
+  ok(pitfallsK335.length === 200 && pitfallsK335.every((pitfall) => pitfall.de.trim() && pitfall.ar.trim()) &&
+    explicitK335.every((pitfall) => parsePitfallContrast(pitfall.de) !== null),
+    `K335g كل تنبيه قواعد مكتمل؛ وكل سهم صريح قابل للتحليل بلا زوج فارغ أو متطابق (${explicitK335.length}/${pitfallsK335.length})`);
+  ok(contrastsK335.length >= 155 &&
+    parsePitfallContrast("„das wichtige“ ✗ → „das Wichtige“ ✓")?.rightDe === "„das Wichtige“" &&
+    parsePitfallContrast("„Ja!“ (Antwort) ≠ „Du bist ja müde.“ (Modalpartikel)") === null,
+    `K335h المقارنة الصريحة تعمل في ${contrastsK335.length} تنبيهاً وتحفظ فرق الحرف الكبير؛ فرق الاستعمال بلا سهم لا يتحول إلى صواب مخمّن`);
+  ok(wizardK335.includes("parsePitfallContrast(p.de)") && wizardK335.includes("lesson-pitfall-side--wrong") &&
+    wizardK335.includes("lesson-pitfall-side--right") && wizardK335.includes("lesson-pitfall--note"),
+    "K335i الاستوديو يعرض ✗/✓ فقط للمصدر ذي الزوج الصريح، ويعرض بقية التنبيهات كفروق استعمال صادقة بلا شطبٍ مضلل");
+}
+
+
+/* ═══ K336 — قياس تجربة «اليوم»: زمن نشط محلي، بلا تاريخ مُختلق أو telemetry ═══ */
+{
+  let ux: Progress["todayUx"] = undefined;
+  ux = recordTodayUxSubmission(ux, 1, 30_000, 1, false, true);
+  ux = recordTodayUxSubmission(ux, 1, 60_000, 2, false, true);
+  ux = recordTodayUxSubmission(ux, 1, 90_000, 3, true, true);
+  ux = recordTodayUxSubmission(ux, 1, 180_000, 5, false, true);
+  ux = recordTodayUxClosed(ux, 1, 240_000);
+  ux = recordTodayUxSubmission(ux, 2, 45_000, 3, true, false);
+  ux = recordTodayUxClosed(ux, 2, 120_000);
+
+  const day1 = ux.days[1];
+  ok(day1.firstAttemptActiveMs === 30_000 && day1.firstSuccessActiveMs === 90_000 &&
+    day1.reachedStep5ActiveMs === 180_000 && day1.closedActiveMs === 240_000 && day1.hasStep5,
+    "K336a أول محاولة/نجاح وبلوغ ⑤ والإغلاق تُثبَّت مرةً واحدة بزمن الجلسة النشط لا بتقدير المهمة");
+
+  const uxRepeated = recordTodayUxSubmission(ux, 1, 300_000, 5, true, true);
+  ok(uxRepeated.days[1].firstAttemptActiveMs === 30_000 && uxRepeated.days[1].firstSuccessActiveMs === 90_000 &&
+    uxRepeated.days[1].reachedStep5ActiveMs === 180_000 && uxRepeated.days[1].closedActiveMs === 240_000,
+    "K336b إعادة التسليم لا تعيد كتابة المعالم الأولى ولا تحسّن الأرقام بأثر رجعي");
+
+  const summaryK336 = todayUxSummary({ ...emptyProgress, todayUx: ux } as Progress);
+  ok(summaryK336.attemptedDays === 2 && summaryK336.firstSuccessDays === 2 && summaryK336.medianFirstSuccessMin === 1.1 &&
+    summaryK336.step5EligibleDays === 1 && summaryK336.step5ReachedDays === 1 && summaryK336.step5ReachedPct === 100 &&
+    summaryK336.closedDays === 2 && summaryK336.closedPct === 100,
+    "K336c الملخص يحسب وسيط أول نجاح وعينة ⑤ والإغلاق بمقاماتها الصحيحة؛ الأيام بلا ⑤ لا تخفّض نسبة بلوغها");
+
+  const emptyUxK336 = todayUxSummary(emptyProgress);
+  ok(emptyUxK336.attemptedDays === 0 && emptyUxK336.medianFirstSuccessMin === null &&
+    emptyUxK336.step5ReachedPct === null && emptyUxK336.closedPct === null,
+    "K336d لا بيانات = null وعينة صفر، لا نجاح صفري مضلل ولا تاريخ رجعي مفبرك");
+
+  const pageK336 = readFileSync("app/page.tsx", "utf8");
+  const storeK336 = readFileSync("lib/store.ts", "utf8");
+  const reportK336 = readFileSync("components/berichte.tsx", "utf8");
+  ok(pageK336.includes("activeMs: sessionSnapshot.totalMs") && pageK336.includes("hasStep5: plan.tasks.some") &&
+    storeK336.includes("recordTodayUxSubmission(p.todayUx") && storeK336.includes("recordTodayUxClosed(p.todayUx") &&
+    reportK336.includes('data-testid="today-ux-metrics"') && reportK336.includes("بيانات وصفية محلية"),
+    "K336e المسار الحي يمرّر زمن المؤقت النشط، والتقارير تعرض القياس المحلي وحدوده بلا شبكة أو ادعاء عينة جماعية");
+}
+
+
+/* ═══ K337 — Wort-für-Wort-Audit: nur bestätigte Blocker, ausführbar in CI ═══ */
+{
+  const wordAuditK337 = readFileSync("scripts/wort_fuer_wort_audit.ts", "utf8");
+  const packageK337 = JSON.parse(readFileSync("package.json", "utf8")) as { scripts?: Record<string, string> };
+  const ciK337 = readFileSync(".github/workflows/ci.yml", "utf8");
+  ok(packageK337.scripts?.["audit:words"] === "tsx scripts/wort_fuer_wort_audit.ts" &&
+    ciK337.includes("runs-on: ubuntu-24.04") &&
+    ciK337.includes("uses: actions/checkout@v7") && ciK337.includes("uses: actions/setup-node@v7") &&
+    ciK337.includes("run: npm run audit:words") && wordAuditK337.includes("process.exitCode = 1"),
+    "K337a التدقيق الحرفي أمر قابل لإعادة التشغيل وبوابة CI مانعة على Actions/Node الحديثة عند وجود blocker مؤكد");
+  ok(wordAuditK337.includes("re.lastIndex = 0") && wordAuditK337.includes("Rule regressions:") &&
+    wordAuditK337.includes("tp.examples || []") && wordAuditK337.includes("tp.verify || []") &&
+    wordAuditK337.includes("scanDe(f.falsch, \"fehler.json\", f.id, false)") &&
+    !wordAuditK337.includes('[/من فضلك/g, "من فضلك"]') && !wordAuditK337.includes('[/هراء/g, "هراء"]'),
+    "K337b اختبارات الانحدار تمنع تسرّب lastIndex وقواعد no-op، وتفصل أمثلة الخطأ المقصودة وتغطي examples/verify");
+}
+
+
+/* ═══ K338 — مشهد بصري حتمي لكل درس، بلا 87 أصلاً ثقيلاً أو شبكة ═══ */
+{
+  const scenesK338 = Object.values(grammarMap).map((topic) => lessonSceneFor(topic.id, topic.titleDe, topic.level));
+  const kindsK338 = new Set(scenesK338.map((scene) => scene.kind));
+  ok(scenesK338.length === 87 && new Set(scenesK338.map((scene) => scene.signature)).size === 87 &&
+    kindsK338.size === 9 && scenesK338.every((scene) => scene.markers.length >= 3 && scene.markers.length <= 5 &&
+      scene.markers.every((marker) => marker.x >= 22 && marker.x <= 295 && marker.y >= 12 && marker.y <= 95) &&
+      scene.labelAr.trim().length > 10 && scene.altAr.includes("مشهد بصري رمزي")),
+    "K338a موضوعات القواعد الـ87 لها 87 توقيع مشهد حتمي فريد ضمن تسع عائلات ومع وصف عربي ميسّر");
+
+  const sceneComponentK338 = readFileSync("components/akademie/LessonSceneVisual.tsx", "utf8");
+  const wizardK338 = readFileSync("components/akademie/LektionWizard.tsx", "utf8");
+  const cssK338 = readFileSync("app/globals.css", "utf8");
+  ok(sceneComponentK338.includes('role="img"') && sceneComponentK338.includes("<title id={titleId}") &&
+    sceneComponentK338.includes('data-testid="wizard-scene-visual"') &&
+    !sceneComponentK338.includes("<img") && !sceneComponentK338.includes("fetch(") && !sceneComponentK338.includes("http") &&
+    wizardK338.includes("<LessonSceneVisual topicId={topic.id}") &&
+    cssK338.includes(".lesson-scene-visual[data-level=\"B2\"]") &&
+    cssK338.includes("@media (max-width: 520px)"),
+    "K338b المشهد SVG خفيف وموسوم لقارئ الشاشة، داخل هوية الدرس، متجاوب، وبلا صورة أو طلب خارجي");
+}
+
+
+/* ═══ K339 — تدقيق بنية المستودع الكامل وبوابات CI غير صورية ═══ */
+{
+  const packageK339 = JSON.parse(readFileSync("package.json", "utf8")) as { scripts?: Record<string, string> };
+  const repoAuditK339 = readFileSync("scripts/repo_audit.py", "utf8");
+  const interaktivK339 = readFileSync("scripts/interaktiv_test.tsx", "utf8");
+  const ciK339 = readFileSync(".github/workflows/ci.yml", "utf8");
+  const lighthouseK339 = JSON.parse(readFileSync("lighthouserc.json", "utf8")) as {
+    ci?: { collect?: { startServerCommand?: string }; assert?: { assertions?: Record<string, [string, { minScore: number }]> }; upload?: { target?: string } };
+  };
+  ok(packageK339.scripts?.["audit:repo"] === "python3 scripts/repo_audit.py" &&
+    packageK339.scripts?.["audit:plan"] === "tsx scripts/student_audit.ts" &&
+    ciK339.includes("npm run audit:repo") && ciK339.includes("npm run audit:plan") && repoAuditK339.includes('"--cached", "--others", "--exclude-standard"') &&
+    repoAuditK339.includes("ast.parse") && repoAuditK339.includes("json.loads") && repoAuditK339.includes("media_header_ok") &&
+    !interaktivK339.includes("temp disabled") && !existsSync(".prod.pid"),
+    "K339a بوابة المستودع تمسح الملفات المتتبعة والجديدة: صياغة Python/JS وJSON/YAML وUTF-8 والروابط المحلية وترويسات 1469 أصلاً؛ لا اختبارات معطلة ولا PID متعقب");
+  ok(packageK339.scripts?.["audit:lighthouse"] === "npx --yes @lhci/cli@0.12.x autorun" &&
+    lighthouseK339.ci?.collect?.startServerCommand === "npm run start -- -p 3000" &&
+    lighthouseK339.ci?.upload?.target === "filesystem" &&
+    lighthouseK339.ci?.assert?.assertions?.["categories:accessibility"]?.[0] === "error" &&
+    !ciK339.includes("LHCI warn") && !ciK339.includes("autorun ||") &&
+    ciK339.indexOf("npm run build") < ciK339.indexOf("npm run audit:lighthouse"),
+    "K339b Lighthouse يعمل بعد build كحاجز وصولية حقيقي لا خطوةً تُحوّل الفشل إلى نجاح، ويحفظ تقريره محلياً بلا رفع عام");
 }
 
 
