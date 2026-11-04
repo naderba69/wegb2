@@ -130,6 +130,7 @@ import { buildModulPruefung, bewerte, darfWiederholen, modulFrei, tagGesperrt, r
 import { emptyProgress, TOTAL_DAYS, CURRICULUM_SCHEDULE_VERSION, type SrsState, type Tempo } from "../lib/types";
 import { groupTasksByTodayStep, todayStepOf, todayTaskSubmitted } from "../lib/today-steps";
 import { parsePitfallContrast } from "../lib/pitfall";
+import { lessonSceneFor } from "../lib/lesson-scene";
 import { CURRICULUM_SECTIONS, buildCurriculumDay } from "../lib/curriculum";
 import { migrateCurriculumSchedule } from "../lib/curriculum-schedule";
 import {
@@ -14451,6 +14452,7 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const packageK337 = JSON.parse(readFileSync("package.json", "utf8")) as { scripts?: Record<string, string> };
   const ciK337 = readFileSync(".github/workflows/ci.yml", "utf8");
   ok(packageK337.scripts?.["audit:words"] === "tsx scripts/wort_fuer_wort_audit.ts" &&
+    ciK337.includes("runs-on: ubuntu-24.04") &&
     ciK337.includes("uses: actions/checkout@v7") && ciK337.includes("uses: actions/setup-node@v7") &&
     ciK337.includes("run: npm run audit:words") && wordAuditK337.includes("process.exitCode = 1"),
     "K337a التدقيق الحرفي أمر قابل لإعادة التشغيل وبوابة CI مانعة على Actions/Node الحديثة عند وجود blocker مؤكد");
@@ -14459,6 +14461,29 @@ function collectR262(dir: string, out: string[] = []): string[] {
     wordAuditK337.includes("scanDe(f.falsch, \"fehler.json\", f.id, false)") &&
     !wordAuditK337.includes('[/من فضلك/g, "من فضلك"]') && !wordAuditK337.includes('[/هراء/g, "هراء"]'),
     "K337b اختبارات الانحدار تمنع تسرّب lastIndex وقواعد no-op، وتفصل أمثلة الخطأ المقصودة وتغطي examples/verify");
+}
+
+
+/* ═══ K338 — مشهد بصري حتمي لكل درس، بلا 87 أصلاً ثقيلاً أو شبكة ═══ */
+{
+  const scenesK338 = Object.values(grammarMap).map((topic) => lessonSceneFor(topic.id, topic.titleDe, topic.level));
+  const kindsK338 = new Set(scenesK338.map((scene) => scene.kind));
+  ok(scenesK338.length === 87 && new Set(scenesK338.map((scene) => scene.signature)).size === 87 &&
+    kindsK338.size === 9 && scenesK338.every((scene) => scene.markers.length >= 3 && scene.markers.length <= 5 &&
+      scene.markers.every((marker) => marker.x >= 22 && marker.x <= 295 && marker.y >= 12 && marker.y <= 95) &&
+      scene.labelAr.trim().length > 10 && scene.altAr.includes("مشهد بصري رمزي")),
+    "K338a موضوعات القواعد الـ87 لها 87 توقيع مشهد حتمي فريد ضمن تسع عائلات ومع وصف عربي ميسّر");
+
+  const sceneComponentK338 = readFileSync("components/akademie/LessonSceneVisual.tsx", "utf8");
+  const wizardK338 = readFileSync("components/akademie/LektionWizard.tsx", "utf8");
+  const cssK338 = readFileSync("app/globals.css", "utf8");
+  ok(sceneComponentK338.includes('role="img"') && sceneComponentK338.includes("<title id={titleId}") &&
+    sceneComponentK338.includes('data-testid="wizard-scene-visual"') &&
+    !sceneComponentK338.includes("<img") && !sceneComponentK338.includes("fetch(") && !sceneComponentK338.includes("http") &&
+    wizardK338.includes("<LessonSceneVisual topicId={topic.id}") &&
+    cssK338.includes(".lesson-scene-visual[data-level=\"B2\"]") &&
+    cssK338.includes("@media (max-width: 520px)"),
+    "K338b المشهد SVG خفيف وموسوم لقارئ الشاشة، داخل هوية الدرس، متجاوب، وبلا صورة أو طلب خارجي");
 }
 
 

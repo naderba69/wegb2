@@ -2794,6 +2794,13 @@ const hasFile = txt().includes("صوتٌ من الدار");
       const { grammarMap } = await import("../lib/content");
       mount(React.createElement(LektionWizard, { topicId: "a2-wasfuer" }));
       ok(txt().includes("السؤال عن النوع") && txt().includes("هدف هذا الدرس") && txt().includes("يبني على"), "LXXVIII1 المعالج يعرض درس Was-für وهدفه ومتطلباته");
+      const sceneVisual = d0.querySelector('[data-testid="wizard-scene-visual"]');
+      const sceneSvg = sceneVisual?.querySelector('svg[role="img"]');
+      ok(sceneVisual?.getAttribute("data-scene-kind") === "question" &&
+        (sceneVisual?.getAttribute("data-scene-signature") ?? "").startsWith("a2-wasfuer:question:") &&
+        !!sceneSvg?.querySelector("title")?.textContent?.includes("Was für") &&
+        (sceneVisual?.textContent ?? "").includes("ابدأ من المعلومة التي تريدها"),
+        "LXXVIII16 هوية الدرس تعرض مشهده الرمزي الدلالي مع وصف قارئ شاشة وتوقيع موضوع مستقل");
 
       const unlock0 = (d0.querySelector('[data-testid="wizard-ueberspringen"]') ?? d0.querySelector('[data-testid="wizard-beobachtet"]')) as HTMLElement | null;
       ok(!!unlock0, "LXXVIII2 خطوةُ اكتشاف النمط تتيح المتابعة بتفاعل صريح");

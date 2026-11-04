@@ -18,6 +18,7 @@ import { speakAny } from "@/lib/speech";
 import { useProgress, planeVerifikation } from "@/lib/store";
 import { De } from "@/components/De";
 import ExerciseSet, { type ExerciseProgress } from "@/components/exercises";
+import { LessonSceneVisual } from "@/components/akademie/LessonSceneVisual";
 
 /** الخطوات الخمس — الترتيب نفسه هو الميثاق (K108a) */
 const SCHRITTE = ["خمّن", "قاعدة", "أمثلة", "تطبيق", "خلاصة"] as const;
@@ -329,6 +330,7 @@ function LektionWizardContent({ topicId, embedded, completedInDay, onComplete }:
         </div>
         <div className="lesson-title-de" dir="ltr">{topic.titleDe}</div>
         <div className="lesson-title-ar">{topic.titleAr}</div>
+        <LessonSceneVisual topicId={topic.id} titleDe={topic.titleDe} level={topic.level} />
         {topic.ziel && (
           <div className="lesson-ziel" data-testid="wizard-ziel">
             <span aria-hidden>🎯</span>

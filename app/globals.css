@@ -1718,6 +1718,42 @@ body:has(.ui-app-shell) {
   font-size: 0.88rem;
   line-height: 1.8;
 }
+.lesson-scene-visual {
+  margin: 0;
+  display: grid;
+  grid-template-columns: minmax(10rem, 1fr) minmax(8rem, 0.72fr);
+  gap: 0.65rem;
+  align-items: center;
+  color: var(--ui-green-bright);
+}
+.lesson-scene-visual[data-level="A0"], .lesson-scene-visual[data-level="A1"] { color: #4ade80; }
+.lesson-scene-visual[data-level="A2"] { color: #60a5fa; }
+.lesson-scene-visual[data-level="B1"] { color: #f2c866; }
+.lesson-scene-visual[data-level="B2"] { color: #a78bfa; }
+.lesson-scene-visual__frame {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--ui-border);
+  border-radius: 0.85rem;
+  background: var(--ui-surface);
+}
+.lesson-scene-visual svg { display: block; width: 100%; height: auto; max-height: 7.5rem; }
+.lesson-scene-visual figcaption { display: grid; gap: 0.2rem; font-size: 0.78rem; line-height: 1.65; }
+.lesson-scene-visual figcaption span { color: var(--ui-muted); font-weight: 750; }
+.lesson-scene-visual figcaption strong { color: var(--ui-text); font-size: 0.88rem; }
+.lesson-scene-svg__background { fill: var(--ui-surface); stroke: var(--ui-border); }
+.lesson-scene-svg__marker { fill: currentColor; opacity: 0.16; }
+.lesson-scene-svg__panel { fill: var(--ui-surface-raised); stroke: currentColor; stroke-width: 2; }
+.lesson-scene-svg__node { fill: var(--ui-surface-raised); stroke: currentColor; stroke-width: 2; }
+.lesson-scene-svg__solid { fill: currentColor; stroke: currentColor; stroke-width: 1.5; }
+.lesson-scene-svg__line { fill: none; stroke: currentColor; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+.lesson-scene-svg__line--soft { stroke-width: 2; opacity: 0.64; }
+.lesson-scene-svg__route { stroke-dasharray: 7 7; }
+@media (max-width: 520px) {
+  .lesson-scene-visual { grid-template-columns: 1fr; }
+  .lesson-scene-visual figcaption { grid-template-columns: auto 1fr; align-items: baseline; }
+  .lesson-scene-visual svg { max-height: 6.5rem; }
+}
 .lesson-scene {
   display: grid;
   gap: 0.4rem;

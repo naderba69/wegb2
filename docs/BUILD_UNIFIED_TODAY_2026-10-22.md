@@ -210,10 +210,10 @@ function stepOf(task: DayTask, dayType: DayType): StepId {
 - [x] **1B — Stepper Shell:** `<TodayStepper>` بخمس نقاط + خط + قفل، مع إبقاء بطاقة المهمة الحالية الواضحة
 - [x] **1C — Grouping:** تجميع `plan.tasks` إلى 5 خطوات في `lib/today-steps.ts` + عدّاد مهام لكل خطوة؛ `buildDay` لا يتغير
 - [x] **1D — Gating UI:** قفل مرئي (🔒) + نص سبب + تقدم شريط أفقي؛ التسليم الخاطئ يفتح التالية ويعود للعلاج بدل الحبس
-- [x] **1E — Preserve Gates:** كل data-testid القديم بقي والجديد أُضيف — smoke **1930/0** في 2026-11-04
+- [x] **1E — Preserve Gates:** كل data-testid القديم بقي والجديد أُضيف — smoke **1934/0** في 2026-11-04
 - [x] **1F — Lesson Embed:** مهمة القواعد داخل «اليوم» تعرض `<LektionWizard embedded>` فعلياً وتعيد نتيجتها إلى مشغّل اليوم (2026-11-04)
 
-**معيار النجاح:** `npm run smoke 1930/0` + `npm run interaktiv 928/0` + `npm run build 15/15`؛ K335 يفحص تجميع جميع الأيام 1–378، لا ثلاث عينات فقط.
+**معيار النجاح:** `npm run smoke 1934/0` + `npm run interaktiv 929/0` + `npm run build 15/15`؛ K335 يفحص تجميع جميع الأيام 1–378، لا ثلاث عينات فقط.
 
 ### Sprint 2 — الاستوديو التحريري 2.0 (Lesson Content) — مكتمل
 - [x] 2A — Spatial Contiguity: قاعدة + مثال في نفس الكارت (`lesson-rule--paired`)
@@ -222,6 +222,7 @@ function stepOf(task: DayTask, dayType: DayType): StepId {
 - [x] 2D — Contrast Pitfall ✗/✓: يعرض بطاقتين لـ155/200 زوجاً مكتوباً صراحةً حول `→`؛ والـ45 الأخرى تبقى «فرق استعمال + لماذا؟» بلا تصحيح مخمّن (`parsePitfallContrast` + K335g–i + LXXVIII15)
 - [x] 2E — Context Application: حقل جملة حرة في سياق المشهد + feedback ثلاثي في `ExerciseSet`
 - [x] 2F — Summary Concept Map: نقاط القاعدة كـ chip map لا نص طويل
+- [x] 2G — Scene Visual: 87 مشهداً رمزياً حتمياً من هوية الموضوع ضمن 9 عائلات دلالية؛ SVG متجاوب وميسّر، بلا أصل صورة أو طلب خارجي (`lessonSceneFor` + `LessonSceneVisual` + K338/LXXVIII16)
 
 ### Sprint 3 — المحتوى الأصيل والتفريق
 - [x] 3A — Authentic Reader: نصوص بتصميم قارئ + 🔊 لكل جملة
@@ -260,7 +261,7 @@ function stepOf(task: DayTask, dayType: DayType): StepId {
 |---|---|---|---|
 | Time to First Success | غير مقاس — لا baseline صادق | القياس المحلي بدأ من هذا الإصدار | <1.5 د هدف، لا نتيجة بعد |
 | إكمال الخطوات | غير مقاس — لا baseline صادق | يُقاس بلوغ ⑤ وإغلاق اليوم منفصلين | 85% هدف، لا نتيجة بعد |
-| smoke | 1916/0 | 1930/0 | بلا تراجع |
+| smoke | 1916/0 | 1934/0 | بلا تراجع |
 | build | 15/15 | 15/15 | 15/15 |
 | إحساس «مميز لا مكرر» | — | Stepper + Editorial | + Authentic Reader |
 
