@@ -121,6 +121,8 @@ import { pruefeText, pruefeBrief, bewerteSchreiben, heilUebungen, effektiveSchwe
 import { feedbackQuote, fehlerHeilung, pruefungsKurve } from "../lib/metriken";
 import { buildModulPruefung, bewerte, darfWiederholen, modulFrei, tagGesperrt, rettungsplan } from "../lib/modulpruefung";
 import { emptyProgress, TOTAL_DAYS, CURRICULUM_SCHEDULE_VERSION, type SrsState, type Tempo } from "../lib/types";
+import { groupTasksByTodayStep, todayStepOf, todayTaskSubmitted } from "../lib/today-steps";
+import { parsePitfallContrast } from "../lib/pitfall";
 import { CURRICULUM_SECTIONS, buildCurriculumDay } from "../lib/curriculum";
 import { migrateCurriculumSchedule } from "../lib/curriculum-schedule";
 import {
@@ -151,7 +153,7 @@ import { buildBrueckeItems, katVonSektion } from "../lib/bruecken";
 import { selbstKorrektur } from "../components/lernstrategie";
 import { planeEinwand } from "../lib/muendlich";
 import { synonymKontexteFuer, synonymKontextAnzahl } from "../lib/synonyme";
-import type { Exercise, Level, Progress, TaskResult, DayTask } from "../lib/types";
+import type { Exercise, Level, Progress, TaskResult, DayTask, GrammarTopic } from "../lib/types";
 import { STUFEN, stufeVonTag, tagVonStufe, ankerVon, wegHeute } from "../lib/weg";
 import { AKTIVITAETEN } from "../lib/aktivitaeten";
 import { gemischteOptionen } from "../lib/optionen";
@@ -2911,7 +2913,7 @@ void 0;
 /* ═══ K120 — سجلُّ القواعدِ يفحصُ نفسَه: كلُّ دليلٍ «ملف:سطر» مذكورٍ موجودٌ حرفياً ═══ */
 {
   const rules = readFileSync("RULES.md", "utf8");
-  const re = /`([^`]+\.(?:ts|tsx|json|css|md)):(\d+)`\s*«([^»]+)»/g;
+  const re = /`([^`]+\.(?:ts|tsx|json|css|md|mjs)):(\d+)`\s*«([^»]+)»/g;
   const bad: string[] = [];
   let m: RegExpExecArray | null;
   let n = 0;
@@ -3436,12 +3438,22 @@ void 0;
     classroomSrc.includes("saveProgress(loadProgress())") && classroomSrc.includes("persistKey={`wegb2:partial:${currentTask.id}`}"),
     "K143d وقت الجلسة المقاس منفصل عن تقديرات المهام؛ المزيد يمدّ الهدف والتوقف يحفظ أحدث الحالة والمسودة دون إغلاق أو دين");
 
-  const pkg = JSON.parse(readFileSync("package.json", "utf8")) as { dependencies: { next: string }; devDependencies: { postcss: string }; overrides: { postcss: string } };
+  const pkg = JSON.parse(readFileSync("package.json", "utf8")) as {
+    dependencies: { next: string };
+    devDependencies: { postcss: string };
+    overrides: { postcss: string; minimatch: string };
+    scripts: { postinstall: string; "audit:deps": string };
+  };
   const lock = JSON.parse(readFileSync("package-lock.json", "utf8")) as { packages: Record<string, { version?: string }> };
-  ok(pkg.dependencies.next === "^15.5.27" && lock.packages["node_modules/next"]?.version === "15.5.27" &&
+  const dependencyPatch = readFileSync("scripts/patch_jsx_a11y_minimatch.mjs", "utf8");
+  ok(pkg.dependencies.next === "15.5.29" && lock.packages["node_modules/next"]?.version === "15.5.29" &&
     pkg.devDependencies.postcss === "^8.5.28" && pkg.overrides.postcss === "$postcss" &&
-    lock.packages["node_modules/postcss"]?.version === "8.5.28",
-    "K143f ترقيع أمني ضمن Next 15: PostCSS موحّد بالـoverride، من دون قفزة رئيسية");
+    lock.packages["node_modules/postcss"]?.version === "8.5.28" &&
+    pkg.overrides.minimatch === "^11.0.4" && lock.packages["node_modules/minimatch"]?.version === "11.0.4" &&
+    pkg.scripts.postinstall === "node scripts/patch_jsx_a11y_minimatch.mjs" &&
+    pkg.scripts["audit:deps"] === "npm audit --audit-level=moderate" &&
+    dependencyPatch.includes("eslint-plugin-jsx-a11y ↔ minimatch 11 ready"),
+    "K143f ترقيع أمني ضمن Next 15: Next 15.5.29 + PostCSS موحّد + minimatch 11 مع رقعة توافق محروسة، من دون قفزة رئيسية");
 
   const auditSrc = readFileSync("scripts/audit_inhalt.ts", "utf8");
   const scripts = JSON.parse(readFileSync("package.json", "utf8")).scripts as Record<string, string>;
@@ -14296,6 +14308,91 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const pruefenAtK333 = homeK333.indexOf('data-testid="today-pruefen-eingebettet"');
   ok(playerAtK333 >= 0 && uebenAtK333 > playerAtK333 && pruefenAtK333 > uebenAtK333,
     "K333f R308: القسمان المُدمَجان يأتيان بعد مشغّل اليوم — إضافةٌ ذيلية لا تُخلّ بترتيب K136 (خطوة واحدة ← هدف ← مشغّل)");
+}
+
+
+/* ═══ K335 — Unified Today + Lesson Studio 2.0: تجميعٌ حقيقي، لا قفل عقابي، ومحتوى أصيل ═══ */
+{
+  const probe = (kind: DayTask["kind"], extra: Partial<DayTask> = {}): DayTask => ({
+    id: `probe-${kind}-${extra.verifyFor ?? "normal"}`,
+    kind,
+    titleDe: "Probe",
+    titleAr: "اختبار",
+    minutes: 5,
+    ...extra,
+  });
+  const beispiele = [
+    probe("wiederholen"),
+    probe("check", { verifyFor: "a1-sein-haben" }),
+    probe("grammatik"),
+    probe("lesen"),
+    probe("hoeren"),
+    probe("schreiben"),
+    probe("check"),
+  ];
+  ok(beispiele.map(todayStepOf).join(",") === "1,1,2,3,3,4,5",
+    "K335a اليوم الموحّد يجمع الاسترجاع/التحقق في ①، القاعدة في ②، الاستيعاب في ③، الإنتاج في ④، والفحص في ⑤");
+
+  let gruppierungSauber = true;
+  for (let d = 1; d <= TOTAL_DAYS && gruppierungSauber; d++) {
+    const tasks = buildDay(d, emptyProgress).tasks;
+    const grouped = groupTasksByTodayStep(tasks);
+    const alle = [...grouped.values()].flat();
+    if (alle.length !== tasks.length || new Set(alle.map((t) => t.id)).size !== tasks.length) gruppierungSauber = false;
+    for (const sid of [1, 2, 3, 4, 5] as const) {
+      const soll = tasks.filter((task) => todayStepOf(task) === sid).map((task) => task.id).join("|");
+      const ist = (grouped.get(sid) ?? []).map((task) => task.id).join("|");
+      if (soll !== ist) gruppierungSauber = false;
+    }
+  }
+  ok(gruppierungSauber,
+    "K335b تجميع المحطات يحفظ كل مهمة مرة واحدة وترتيبها الداخلي عبر الأيام 1–378؛ buildDay نفسه لا يتغيّر");
+
+  const fehlversuch = { done: true, passed: false, score: 0, total: 3, attempts: 1 };
+  ok(todayTaskSubmitted(fehlversuch, { score: 0, total: 0 }) &&
+    todayTaskSubmitted(undefined, { score: 0, total: 3 }) &&
+    !todayTaskSubmitted(undefined, { score: 0, total: 0 }),
+    "K335c التسليم يفتح المحطة التالية حتى عند الخطأ؛ المحاولة غير الصحيحة تُرحَّل للعلاج ولا تصبح قفلاً أبدياً");
+
+  const stepperK335 = readFileSync("components/akademie/TodayStepper.tsx", "utf8");
+  const homeK335 = readFileSync("app/page.tsx", "utf8");
+  ok(stepperK335.includes('data-testid="today-stepper"') &&
+    stepperK335.includes("([1, 2, 3, 4, 5] as TodayStepId[])") &&
+    stepperK335.includes('data-testid={`today-step-${sid}`}') &&
+    stepperK335.includes("todayTaskSubmitted(resultOf(task.id), localOf(task.id))") &&
+    homeK335.includes("<TodayStepper") && !homeK335.includes("resultOf={resultOf as any}"),
+    "K335d خريطة اليوم ذات خمس محطات ظاهرة ومربوطة بأنواع آمنة؛ لا cast any ولا قفل مبني على passed وحده");
+
+  const wizardK335 = readFileSync("components/akademie/LektionWizard.tsx", "utf8");
+  const klassK335 = readFileSync("components/akademie/Klassenzimmer.tsx", "utf8");
+  const tasksK335 = readFileSync("components/tasks.tsx", "utf8");
+  ok(wizardK335.includes("lesson-rule--paired") && wizardK335.includes("lesson-table--layered") &&
+    wizardK335.includes('data-testid="wizard-concept-map"') && wizardK335.includes('data-testid="wizard-anwendung-input"') &&
+    wizardK335.includes('data-testid="wizard-kultur"') && wizardK335.includes('data-testid="wizard-complete-today"') &&
+    wizardK335.includes("خطأك الآن = نموّ") && tasksK335.includes("lessonStudio && task.topicId && !task.verifyFor") &&
+    klassK335.includes("lessonStudio") && klassK335.includes("lessonCompleted={localOf(currentTask.id).total > 0}"),
+    "K335e Lesson Studio 2.0 مدمج فعلياً في مهمة قواعد «اليوم»: قاعدة+مثال، كشف متدرج، خريطة مفاهيم، تطبيق سياقي، ورسالة نمو");
+
+  const lernenK335 = readFileSync("app/lernen/page.tsx", "utf8");
+  ok(tasksK335.includes("authentic-reader") && tasksK335.includes("lesen-satz-audio-") &&
+    tasksK335.includes('data-testid="authentic-dialog"') &&
+    lernenK335.includes('data-testid="lernen-search"') && lernenK335.includes("qNorm") &&
+    lernenK335.includes("مكتبة الدروس الـ 87"),
+    "K335f القارئ الأصيل يتيح صوتاً لكل جملة، ومكتبة الدروس الـ87 قابلة للبحث الفوري بالعربية أو الألمانية");
+
+  const pitfallsK335 = (Object.values(grammarMap) as GrammarTopic[]).flatMap((topic) => topic.pitfalls ?? []);
+  const explicitK335 = pitfallsK335.filter((pitfall) => pitfall.de.includes("→"));
+  const contrastsK335 = pitfallsK335.map((pitfall) => parsePitfallContrast(pitfall.de)).filter(Boolean);
+  ok(pitfallsK335.length === 200 && pitfallsK335.every((pitfall) => pitfall.de.trim() && pitfall.ar.trim()) &&
+    explicitK335.every((pitfall) => parsePitfallContrast(pitfall.de) !== null),
+    `K335g كل تنبيه قواعد مكتمل؛ وكل سهم صريح قابل للتحليل بلا زوج فارغ أو متطابق (${explicitK335.length}/${pitfallsK335.length})`);
+  ok(contrastsK335.length >= 155 &&
+    parsePitfallContrast("„das wichtige“ ✗ → „das Wichtige“ ✓")?.rightDe === "„das Wichtige“" &&
+    parsePitfallContrast("„Ja!“ (Antwort) ≠ „Du bist ja müde.“ (Modalpartikel)") === null,
+    `K335h المقارنة الصريحة تعمل في ${contrastsK335.length} تنبيهاً وتحفظ فرق الحرف الكبير؛ فرق الاستعمال بلا سهم لا يتحول إلى صواب مخمّن`);
+  ok(wizardK335.includes("parsePitfallContrast(p.de)") && wizardK335.includes("lesson-pitfall-side--wrong") &&
+    wizardK335.includes("lesson-pitfall-side--right") && wizardK335.includes("lesson-pitfall--note"),
+    "K335i الاستوديو يعرض ✗/✓ فقط للمصدر ذي الزوج الصريح، ويعرض بقية التنبيهات كفروق استعمال صادقة بلا شطبٍ مضلل");
 }
 
 

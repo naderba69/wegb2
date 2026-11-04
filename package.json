@@ -16,14 +16,17 @@
     "prebuild": "npm run banken",
     "predev": "npm run banken",
     "audio:qc": "python3 scripts/audio_qc_all.py",
-    "lint": "eslint app components lib"
+    "lint": "eslint app components lib",
+    "postinstall": "node scripts/patch_jsx_a11y_minimatch.mjs",
+    "audit:deps": "npm audit --audit-level=moderate"
   },
   "dependencies": {
-    "next": "^15.5.27",
+    "next": "15.5.29",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
+    "@next/eslint-plugin-next": "15.5.29",
     "@tailwindcss/postcss": "^4.0.0",
     "@types/jsdom": "^30.0.0",
     "@types/node": "^22.10.0",
@@ -39,10 +42,11 @@
     "tailwindcss": "^4.0.0",
     "tsx": "^4.23.15",
     "typescript": "^5.7.0",
-    "typescript-eslint": "^8.71.2",
+    "typescript-eslint": "^8.72.1",
     "yaml": "^2.9.1"
   },
   "overrides": {
-    "postcss": "$postcss"
+    "postcss": "$postcss",
+    "minimatch": "^11.0.4"
   }
 }

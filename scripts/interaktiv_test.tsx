@@ -2859,6 +2859,54 @@ const hasFile = txt().includes("صوتٌ من الدار");
       const dueTask = after ? buildDay(43, after).tasks.find((t) => t.verifyFor === "a2-wasfuer") : undefined;
       ok(!premature && !!dueEntry && dueTask?.kind === "check" && dueTask.quiz?.length === 2,
         "LXXVIII11 لا يظهر قبل موعده؛ وفي اليوم الثالث يظهر تحققٌ مستقلٌ ببندين جديدين");
+
+      // 2026-11-04: الاستوديو نفسه داخل مهمة «اليوم»، لا في /lernen وحدها.
+      const { default: TaskView } = await import("../components/tasks");
+      const studioTask = { id: "today-studio-a2-wasfuer", kind: "grammatik" as const, titleDe: "Was für", titleAr: "السؤال عن النوع", minutes: 30, topicId: "a2-wasfuer" };
+      const studioPoints: Array<[number, number]> = [];
+      mount(React.createElement(TaskView, {
+        task: studioTask,
+        lang: "ar" as const,
+        day: 40,
+        srs: {},
+        onSrs: () => {},
+        onPoints: (p: number, m: number) => studioPoints.push([p, m]),
+        lessonStudio: true,
+        lessonCompleted: false,
+      }));
+      const embeddedFinish = d0.querySelector('[data-testid="wizard-complete-today"]') as HTMLButtonElement | null;
+      ok(!!d0.querySelector('[data-testid="lektion-wizard"]') && !!embeddedFinish && !d0.querySelector('[data-testid="wizard-zurueck-heute"]'),
+        "LXXVIII12 مهمة القواعد الحية داخل «اليوم» تعرض الاستوديو المضمّن ولا تطلب مغادرة الصفحة");
+      if (embeddedFinish) click(embeddedFinish);
+      ok(studioPoints.length === 1 && studioPoints[0][0] === 3 && studioPoints[0][1] === 3,
+        "LXXVIII13 إنهاء الاستوديو يعيد 3/3 مرة واحدة إلى مشغّل مهمة اليوم كي تصبح قابلة للتسليم");
+      mount(React.createElement(TaskView, {
+        task: studioTask,
+        lang: "ar" as const,
+        day: 40,
+        srs: {},
+        onSrs: () => {},
+        onPoints: (p: number, m: number) => studioPoints.push([p, m]),
+        lessonStudio: true,
+        lessonCompleted: true,
+      }));
+      const alreadyDone = d0.querySelector('[data-testid="wizard-complete-today"]') as HTMLButtonElement | null;
+      ok(!!alreadyDone && alreadyDone.disabled && (alreadyDone.textContent ?? "").includes("سُجّل"),
+        "LXXVIII14 إعادة فتح الاستوديو بعد تسجيله لا تضاعف نقاط مهمة اليوم");
+
+      // تنبيهٌ مختلط: زوجان صريحان ✗/✓، ثم فرق استعمال بلا «صواب» مختلق.
+      storage.setItem("weg-wizard-a2-verb-praep", JSON.stringify({ schritt: 4, erledigt: [true, true, true, true, false] }));
+      mount(React.createElement(LektionWizard, { topicId: "a2-verb-praep", embedded: true }));
+      const wrongPitfalls = d0.querySelectorAll(".lesson-pitfall-side--wrong");
+      const rightPitfalls = d0.querySelectorAll(".lesson-pitfall-side--right");
+      const usageNotes = d0.querySelectorAll(".lesson-pitfall--note");
+      ok(wrongPitfalls.length === 2 && rightPitfalls.length === 2 && usageNotes.length === 1 &&
+        (wrongPitfalls[0]?.textContent ?? "").includes("Ich warte für dich") &&
+        (rightPitfalls[0]?.textContent ?? "").includes("Ich warte auf dich") &&
+        (usageNotes[0]?.textContent ?? "").includes("an jemanden denken") &&
+        (usageNotes[0]?.textContent ?? "").includes("فرق استعمال") &&
+        !(usageNotes[0]?.querySelector(".lesson-pitfall-wrong")),
+        "LXXVIII15 جدار الفخاخ يفصل زوجي ✗/✓ الصريحين، ويعرض فرق الاستعمال الثالث بلا شطبٍ أو تصحيحٍ مخمّن");
     } finally {
       if (leave) leave();
       autoEntdecken = oldAutoEntdecken;

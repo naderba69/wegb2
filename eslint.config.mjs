@@ -4,6 +4,7 @@
 import tseslint from "typescript-eslint";
 import reactHooks from "eslint-plugin-react-hooks";
 import jsxA11y from "eslint-plugin-jsx-a11y";
+import nextPlugin from "@next/eslint-plugin-next";
 
 export default [
   {
@@ -16,10 +17,13 @@ export default [
       "@typescript-eslint": tseslint.plugin,
       "react-hooks": reactHooks,
       "jsx-a11y": jsxA11y,
+      "@next/next": nextPlugin,
     },
     rules: {
       "@typescript-eslint/no-unused-vars": ["error", { argsIgnorePattern: "^_", varsIgnorePattern: "^_", caughtErrors: "none" }],
       "react-hooks/exhaustive-deps": "warn",
+      ...nextPlugin.configs.recommended.rules,
+      ...nextPlugin.configs["core-web-vitals"].rules,
       ...jsxA11y.flatConfigs.recommended.rules,
       // كل <audio> هنا هو محتوى الدرس نفسه (كلمة/جملة/حوار ألماني) لا فيديو تكميلي —
       // والنصّ الألماني معروض دائمًا إلى جانبه على الشاشة (المعادل الوظيفي للترجمة

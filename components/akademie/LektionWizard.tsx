@@ -12,6 +12,7 @@ import Link from "next/link";
 import { grammarMap, getBrueckenFor, candoMap } from "@/lib/content";
 import type { Eselsbruecke } from "@/lib/types";
 import { isDue } from "@/lib/srs";
+import { parsePitfallContrast } from "@/lib/pitfall";
 import { entdeckungsFrage, induktionMoeglich, ergebnisText, type EntdeckungsErgebnis } from "@/lib/induktion";
 import { speakAny } from "@/lib/speech";
 import { useProgress, planeVerifikation } from "@/lib/store";
@@ -205,11 +206,27 @@ function IndependentApplication({
   );
 }
 
-export function LektionWizard({ topicId }: { topicId: string }) {
-  return <LektionWizardContent key={topicId} topicId={topicId} />;
+interface LektionWizardProps {
+  topicId: string;
+  /** داخل «اليوم»: لا تنقّل إلى مسار آخر، بل أبلغ مشغّل المهمة أن الاستوديو اكتمل. */
+  embedded?: boolean;
+  completedInDay?: boolean;
+  onComplete?: () => void;
 }
 
-function LektionWizardContent({ topicId }: { topicId: string }) {
+export function LektionWizard({ topicId, embedded = false, completedInDay = false, onComplete }: LektionWizardProps) {
+  return (
+    <LektionWizardContent
+      key={topicId}
+      topicId={topicId}
+      embedded={embedded}
+      completedInDay={completedInDay}
+      onComplete={onComplete}
+    />
+  );
+}
+
+function LektionWizardContent({ topicId, embedded, completedInDay, onComplete }: Required<Pick<LektionWizardProps, "topicId" | "embedded" | "completedInDay">> & Pick<LektionWizardProps, "onComplete">) {
   const topic = grammarMap[topicId];
   const { progress } = useProgress();
   const day = progress.plan.day;
@@ -562,18 +579,34 @@ function LektionWizardContent({ topicId }: { topicId: string }) {
             {topic.pitfalls && topic.pitfalls.length > 0 && (
               <div style={{ display: "grid", gap: "0.5rem" }}>
                 <div style={{ fontWeight: 800, color: "var(--color-die)", fontSize: "0.9rem" }}>⚠️ جدار الفخاخ — لا تقع فيها</div>
-                {topic.pitfalls.map((p) => (
-                  <div key={p.de} className="lesson-pitfall">
-                    <div>
-                      <div style={{ fontSize: "0.72rem", fontWeight: 800, color: "var(--ui-muted)" }}>✗ خطأ شائع</div>
-                      <De className="lesson-pitfall-wrong">{p.de}</De>
+                {topic.pitfalls.map((p, pitfallIndex) => {
+                  const contrast = parsePitfallContrast(p.de);
+                  return (
+                    <div key={`${p.de}-${pitfallIndex}`} className={`lesson-pitfall ${contrast ? "lesson-pitfall--contrast" : "lesson-pitfall--note"}`}>
+                      {contrast ? (
+                        <>
+                          <div className="lesson-pitfall-side lesson-pitfall-side--wrong">
+                            <div className="lesson-pitfall-label">✗ خطأ شائع</div>
+                            <De className="lesson-pitfall-wrong">{contrast.wrongDe}</De>
+                          </div>
+                          <div className="lesson-pitfall-side lesson-pitfall-side--right">
+                            <div className="lesson-pitfall-label">✓ الصواب</div>
+                            <De className="lesson-pitfall-right">{contrast.rightDe}</De>
+                          </div>
+                        </>
+                      ) : (
+                        <div className="lesson-pitfall-side lesson-pitfall-side--note">
+                          <div className="lesson-pitfall-label">⚠️ فرق استعمال</div>
+                          {p.de && <De className="lesson-pitfall-note">{p.de}</De>}
+                        </div>
+                      )}
+                      <div className="lesson-pitfall-reason">
+                        <div className="lesson-pitfall-label">لماذا؟</div>
+                        <div>{p.ar}</div>
+                      </div>
                     </div>
-                    <div>
-                      <div style={{ fontSize: "0.72rem", fontWeight: 800, color: "var(--ui-muted)" }}>لماذا؟</div>
-                      <div style={{ fontSize: "0.86rem", color: "var(--color-ink2)", lineHeight: 1.7 }}>{p.ar}</div>
-                    </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             )}
             {(topic.level === "B1" || topic.level === "B2") && (
@@ -604,15 +637,38 @@ function LektionWizardContent({ topicId }: { topicId: string }) {
               </div>;
             })()}
             {(!topic.anwendung || anwendungGespeichert) ? (
-              <Link href="/" className="btn btn-primary" data-testid="wizard-zurueck-heute" style={{ minHeight: "44px", textDecoration: "none" }} onClick={() => { if ((topic.verify ?? []).length > 0) planeVerifikation(topicId, day); tuer(4); }}>
-                ✅ أنهيتُ التدريب — عُد إلى «اليوم»
-              </Link>
+              embedded ? (
+                <button
+                  type="button"
+                  className="btn btn-primary"
+                  data-testid="wizard-complete-today"
+                  disabled={completedInDay}
+                  style={{ minHeight: "44px" }}
+                  onClick={() => {
+                    if ((topic.verify ?? []).length > 0) planeVerifikation(topicId, day);
+                    tuer(4);
+                    onComplete?.();
+                  }}
+                >
+                  {completedInDay ? "✓ سُجّل الدرس في مهمة اليوم" : "✅ أنهيتُ الاستوديو — سجّل المهمة"}
+                </button>
+              ) : (
+                <Link href="/" className="btn btn-primary" data-testid="wizard-zurueck-heute" style={{ minHeight: "44px", textDecoration: "none" }} onClick={() => { if ((topic.verify ?? []).length > 0) planeVerifikation(topicId, day); tuer(4); }}>
+                  ✅ أنهيتُ التدريب — عُد إلى «اليوم»
+                </Link>
+              )
             ) : (
               <div className="card" style={{ padding: "0.7rem 0.9rem", background: "var(--color-paper2)" }}>
                 <p style={{ margin: "0 0 0.45rem", fontSize: "0.84rem" }}>احفظ إجابتك كتدريب قبل تسجيل إكمال الدرس وجدولة التحقّق المؤجّل. يمكنك التوقّف الآن؛ سيبقى موضعك ومسودتك محفوظين بلا لوم.</p>
-                <Link href="/" className="btn btn-ghost" data-testid="wizard-pause-today" style={{ minHeight: "44px", textDecoration: "none" }}>
-                  ⏸ أتوقّف الآن — عُد إلى «اليوم»
-                </Link>
+                {embedded ? (
+                  <button type="button" className="btn btn-ghost" data-testid="wizard-pause-embedded" onClick={() => document.getElementById("today-stepper")?.scrollIntoView({ behavior: "smooth", block: "start" })} style={{ minHeight: "44px" }}>
+                    ⏸ أتوقّف الآن — موضعك محفوظ
+                  </button>
+                ) : (
+                  <Link href="/" className="btn btn-ghost" data-testid="wizard-pause-today" style={{ minHeight: "44px", textDecoration: "none" }}>
+                    ⏸ أتوقّف الآن — عُد إلى «اليوم»
+                  </Link>
+                )}
               </div>
             )}
           </div>

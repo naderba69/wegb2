@@ -450,11 +450,10 @@ export default function Today() {
       {/* 🗺️ Sprint 1B — Unified Today Stepper: 5 خطوات مرئية + مقفلة بصرياً (Hybrid Gated) */}
       <TodayStepper
         plan={plan}
-        progress={progress}
         ritual={ritual}
         stepFrei={stepFrei}
         setStep={setStep}
-        resultOf={resultOf as any}
+        resultOf={resultOf}
         localOf={localOf}
       />
 

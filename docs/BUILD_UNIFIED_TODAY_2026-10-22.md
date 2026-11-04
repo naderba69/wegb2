@@ -205,34 +205,34 @@ function stepOf(task: DayTask, dayType: DayType): StepId {
 
 ## 5) خطة التنفيذ — Sprints
 
-### Sprint 1 — اليوم الموحّد (Shell) — هذا الـ PR
-- [ ] **1A — Fix K139d** ✅ done (layout inline → CSS)
-- [ ] **1B — Stepper Shell:** استبدال `dirb-held + minis + time-hint` بـ `<TodayStepper>` 5 نقاط + خط + قفل
-- [ ] **1C — Grouping:** تجميع `plan.tasks` إلى 5 خطوات (stepOf) + عرض عدّاد مهام لكل خطوة
-- [ ] **1D — Gating UI:** قفل مرئي (🔒) + نص سبب + تقدم شريط أفقي أعلى الصفحة
-- [ ] **1E — Preserve Gates:** كل data-testid القديم يبقى (held-mini-*, today-screen, dirb-tagesziel…) + الجديد يُضاف — لا كسر smoke
-- [ ] **1F — Lesson Embed:** في Step ② استدعاء `<LektionWizard>` كما هو — لا تغيير محتوى بعد
+### Sprint 1 — اليوم الموحّد (Shell) — مكتمل
+- [x] **1A — Fix K139d** ✅ done (layout inline → CSS)
+- [x] **1B — Stepper Shell:** `<TodayStepper>` بخمس نقاط + خط + قفل، مع إبقاء بطاقة المهمة الحالية الواضحة
+- [x] **1C — Grouping:** تجميع `plan.tasks` إلى 5 خطوات في `lib/today-steps.ts` + عدّاد مهام لكل خطوة؛ `buildDay` لا يتغير
+- [x] **1D — Gating UI:** قفل مرئي (🔒) + نص سبب + تقدم شريط أفقي؛ التسليم الخاطئ يفتح التالية ويعود للعلاج بدل الحبس
+- [x] **1E — Preserve Gates:** كل data-testid القديم بقي والجديد أُضيف — smoke **1925/0** في 2026-11-04
+- [x] **1F — Lesson Embed:** مهمة القواعد داخل «اليوم» تعرض `<LektionWizard embedded>` فعلياً وتعيد نتيجتها إلى مشغّل اليوم (2026-11-04)
 
-**معيار النجاح:** `npm run smoke 1916/0` + `npm run build 15/15` + يدوياً: اليوم 1 و 32 و 95 يُعرضون بـ5 خطوات صحيحة.
+**معيار النجاح:** `npm run smoke 1925/0` + `npm run interaktiv 926/0` + `npm run build 15/15`؛ K335 يفحص تجميع جميع الأيام 1–378، لا ثلاث عينات فقط.
 
-### Sprint 2 — الاستوديو التحريري 2.0 (Lesson Content)
-- [ ] 2A — Spatial Contiguity: قاعدة + مثال في نفس الكارت (lesson-rule--paired)
-- [ ] 2B — Signaling: تلوين حالات (CSS .case-nom/.akk/.dat/.gen) + تلوين الفعل
-- [ ] 2C — Layered Reveal: كل تمرين يكشف سطر جدول (transition + :has)
-- [ ] 2D — Contrast Pitfall: بطاقتان ✗/✓ جنباً إلى جنب (موجود لكن تحسين)
-- [ ] 2E — Context Application: حقل جملة حرة في سياق المشهد + feedback ثلاثي
-- [ ] 2F — Summary Concept Map: نقاط القاعدة كـ chip map لا نص طويل
+### Sprint 2 — الاستوديو التحريري 2.0 (Lesson Content) — مكتمل
+- [x] 2A — Spatial Contiguity: قاعدة + مثال في نفس الكارت (`lesson-rule--paired`)
+- [x] 2B — Signaling: تلوين الحالات (`case-chip-nom/akk/dat/gen`)
+- [x] 2C — Layered Reveal: صفوف الجدول بكشف متدرج (`lesson-table--layered`)
+- [x] 2D — Contrast Pitfall ✗/✓: يعرض بطاقتين لـ155/200 زوجاً مكتوباً صراحةً حول `→`؛ والـ45 الأخرى تبقى «فرق استعمال + لماذا؟» بلا تصحيح مخمّن (`parsePitfallContrast` + K335g–i + LXXVIII15)
+- [x] 2E — Context Application: حقل جملة حرة في سياق المشهد + feedback ثلاثي في `ExerciseSet`
+- [x] 2F — Summary Concept Map: نقاط القاعدة كـ chip map لا نص طويل
 
 ### Sprint 3 — المحتوى الأصيل والتفريق
-- [ ] 3A — Authentic Reader: نصوص/حوارات بتصميم قارئ + 🔊 per sentence
-- [ ] 3B — Level Identity: A0/A1 بصري، B2 أكاديمي — عبر levelClass
-- [ ] 3C — GGP Filter: إبراز 150 feature حسب المستوى (لا بيانات جديدة)
-- [ ] 3D — /lernen → «المكتبة»: تحويل صفحة الدرس المنفصلة إلى مكتبة بحثية (بحث فوري + filter مستوى)
+- [x] 3A — Authentic Reader: نصوص بتصميم قارئ + 🔊 لكل جملة
+- [x] 3B — Level Identity: A0/A1 بصري، B2 أكاديمي — عبر `lesson-stage--<level>`
+- [ ] 3C — GGP Filter: **مؤجل بصدق**؛ لا توجد في المستودع مصفوفة German Grammar Profile ذات 150 feature، ولا يجوز ادعاء إبرازها من `level` وحده
+- [x] 3D — /lernen → «المكتبة»: بحث فوري بالعربية/الألمانية + تجميع حسب المستوى
 
-### Sprint 4 — التغذية والثقافة
-- [ ] 4A — 3-part Feedback في كل quiz (موجود جزئياً — تعميم)
-- [ ] 4B — Growth Mindset: رسائل «خطأك يجهّزك» — موجودة — تعزيز
-- [ ] 4C — Cultural Note: بطاقة «في ألمانيا…» لكل درس B1/B2 (اختياري — P2 إن ضاق الوقت)
+### Sprint 4 — التغذية والثقافة — مكتمل
+- [x] 4A — 3-part Feedback في كل `ExerciseSet`: ما الصواب/الخطأ + لماذا + الخطوة التالية
+- [x] 4B — Growth Mindset: رسالة «خطأك الآن = نموّ» في الاكتشاف
+- [x] 4C — Cultural Note: بطاقة «في ألمانيا…» في دروس B1/B2، موسومة بأنها تلميح لا مادة امتحان
 
 ---
 

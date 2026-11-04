@@ -1806,8 +1806,16 @@ body:has(.ui-app-shell) {
   border-radius: 0.85rem;
   background: var(--ui-danger-soft);
 }
-.lesson-pitfall-wrong { color: var(--ui-danger); font-weight: 800; text-decoration: line-through; }
+.lesson-pitfall--note { grid-template-columns: 1fr; border-color: var(--ui-border); background: var(--ui-surface-raised); }
+.lesson-pitfall-side { padding: 0.55rem 0.65rem; border-radius: 0.6rem; border: 1px solid var(--ui-border); background: var(--ui-surface); }
+.lesson-pitfall-side--wrong { border-color: rgb(248 113 113 / 0.4); background: rgb(248 113 113 / 0.06); }
+.lesson-pitfall-side--right { border-color: rgb(34 197 94 / 0.4); background: rgb(34 197 94 / 0.07); }
+.lesson-pitfall-side--note { border: 0; padding: 0; background: transparent; }
+.lesson-pitfall-label { margin-bottom: 0.2rem; color: var(--ui-muted); font-size: 0.72rem; font-weight: 800; }
+.lesson-pitfall-wrong { color: var(--ui-danger); font-weight: 800; text-decoration: line-through; text-decoration-thickness: 2px; }
 .lesson-pitfall-right { color: var(--ui-green); font-weight: 800; }
+.lesson-pitfall-note { color: var(--ui-text); font-weight: 750; }
+.lesson-pitfall-reason { grid-column: 1 / -1; padding-top: 0.45rem; border-top: 1px solid var(--ui-border); color: var(--ui-muted); font-size: 0.86rem; line-height: 1.75; }
 .lesson-summary {
   padding: 0.8rem 1rem;
   border-radius: 0.85rem;

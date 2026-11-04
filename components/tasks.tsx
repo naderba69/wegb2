@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useMemo, useState } from "react";
+import Image from "next/image";
 import { istPhasenPruefung } from "@/lib/phasen";
 import type { DayTask, Exercise, SrsState, UiLang, VocabCard, GrammarTopic, Eselsbruecke, Tempo } from "@/lib/types";
 import { POS_AR } from "@/lib/types";
@@ -27,6 +28,7 @@ import { meldung } from "@/lib/meldungen";
 import { BemerkenKarte } from "./bemerken";
 import { entdeckungsFrage, induktionMoeglich, ergebnisText, type EntdeckungsErgebnis } from "@/lib/induktion";
 import { grammarMap } from "@/lib/content";
+import { LektionWizard } from "@/components/akademie/LektionWizard";
 const alleGrammatik = Object.values(grammarMap);
 const alleVokabelIds = Object.values(vocabMap).flatMap((deck) => deck.cards.map((card) => card.id));
 
@@ -69,6 +71,10 @@ interface TaskProps {
   srs: Record<string, SrsState>;
   onSrs: (cardId: string, state: SrsState) => void;
   onPoints: (points: number, max: number) => void;
+  /** داخل صفحة اليوم، مهمة القواعد تُعرض باستوديو الدرس الكامل بدل البطاقة المختصرة. */
+  lessonStudio?: boolean;
+  /** يمنع احتساب إكمال الاستوديو مرتين قبل تسليم مهمة اليوم. */
+  lessonCompleted?: boolean;
   /** نتيجة استرجاع جملة كبسولة (M1): تُحجز في فواصل المتعلم المتكيفة. */
   onKapselErgebnis?: (satzId: string, ok: boolean) => void;
   voiceName?: string;
@@ -81,7 +87,7 @@ interface TaskProps {
 }
 
 /** عارض مهمة اليوم حسب نوعها — كل شيء داخلي (TTS بدل الملفات) */
-export default function TaskView({ task, lang: _lang, day, srs, onSrs, onPoints, voiceName, rate, tempo = "regelmaessig", persistKey, onKapselErgebnis, bemerkenRegeln }: TaskProps) {
+export default function TaskView({ task, lang: _lang, day, srs, onSrs, onPoints, lessonStudio = false, lessonCompleted = false, voiceName, rate, tempo = "regelmaessig", persistKey, onKapselErgebnis, bemerkenRegeln }: TaskProps) {
   // تسميع الإملاء: مستمع عام يعمل في كل المهام
   useEffect(() => {
     const onSpeak = (e: Event) => {
@@ -95,7 +101,16 @@ export default function TaskView({ task, lang: _lang, day, srs, onSrs, onPoints,
 
   switch (task.kind) {
     case "grammatik":
-      return <GrammarTask task={task} srs={srs} onPoints={onPoints} persistKey={persistKey} />;
+      return lessonStudio && task.topicId && !task.verifyFor ? (
+        <LektionWizard
+          topicId={task.topicId}
+          embedded
+          completedInDay={lessonCompleted}
+          onComplete={() => { if (!lessonCompleted) onPoints(3, 3); }}
+        />
+      ) : (
+        <GrammarTask task={task} srs={srs} onPoints={onPoints} persistKey={persistKey} />
+      );
     case "wortschatz":
       return <VocabTask task={task} srs={srs} onSrs={onSrs} onPoints={onPoints} voiceName={voiceName} rate={rate} tempo={tempo} persistKey={persistKey} />;
     case "hoeren":
@@ -726,11 +741,14 @@ function VocabTask({ task, srs, onSrs, onPoints, voiceName, rate, tempo = "regel
               // alt="" مقصودة: الصورة إيضاح بصريّ مرافق للكلمة المعروضة نصًّا أسفلها مباشرة
               // داخل نفس الزرّ — تكرار النطق عبر alt يُضاعف اسم الزرّ لقارئ الشاشة (axe-core
               // image-redundant-alt، R305/ب10)، والزرّ نفسه يحمل aria-label واضحًا بالفعل.
-              <img
+              <Image
                 src={card.img}
                 alt=""
+                width={230}
+                height={150}
+                sizes="(max-width: 480px) 70vw, 230px"
                 onError={(e) => {
-                  (e.currentTarget as HTMLImageElement).style.display = "none";
+                  e.currentTarget.style.display = "none";
                 }}
                 style={{ display: "block", margin: "0 auto 0.6rem", width: "100%", maxWidth: 230, height: 150, objectFit: "contain", borderRadius: 12, background: "var(--color-card)" }}
               />
@@ -938,11 +956,11 @@ function HoerenTask({ task, onPoints, voiceName, rate, persistKey }: Omit<TaskPr
         )}
       </div>
 
-      <div style={{ display: "grid", gap: "0.35rem", margin: "0.8rem 0" }}>
+      <div className="authentic-reader authentic-dialog" data-testid="authentic-dialog" style={{ display: "grid", gap: "0.35rem", margin: "0.8rem 0" }}>
         {dlg.lines.map((l, i) => (
           <div
             key={i}
-            className="card"
+            className="card authentic-satz"
             style={{
               padding: "0.55rem 0.8rem",
               background: lineIdx === i ? "rgb(34 197 94 / 0.14)" : "transparent",
@@ -953,10 +971,11 @@ function HoerenTask({ task, onPoints, voiceName, rate, persistKey }: Omit<TaskPr
             }}
           >
             <button
-              className="chip"
+              className="chip authentic-satz-audio"
               style={{ cursor: "pointer" }}
               disabled={pruefung && !abgegeben}
               onClick={() => { if (pruefung && !abgegeben) return; speakLine(l.de, undefined, { voiceName, rate }); }}
+              aria-label={`استمع إلى سطر ${l.who}`}
               title="اسمع السطر"
             >
               🔊
