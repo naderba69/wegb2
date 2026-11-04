@@ -11,7 +11,8 @@
     "audit:words": "tsx scripts/wort_fuer_wort_audit.ts",
     "audit:repo": "python3 scripts/repo_audit.py",
     "audit:plan": "tsx scripts/student_audit.ts",
-    "audit:lighthouse": "npx --yes @lhci/cli@0.12.x autorun",
+    "audit:lighthouse": "npx --yes @lhci/cli@0.16.0 autorun",
+    "e2e:browser": "node scripts/browser_e2e.mjs",
     "gen:tools": "node scripts/gen_tools.mjs",
     "extract:tools": "node scripts/extract_tools.mjs",
     "build": "next build",
@@ -20,7 +21,7 @@
     "prebuild": "npm run banken",
     "predev": "npm run banken",
     "audio:qc": "python3 scripts/run_audio_qc.py",
-    "lint": "eslint app components lib middleware.ts",
+    "lint": "eslint app components lib scripts middleware.ts",
     "postinstall": "node scripts/patch_jsx_a11y_minimatch.mjs",
     "audit:deps": "npm audit --audit-level=moderate"
   },

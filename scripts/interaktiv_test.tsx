@@ -482,7 +482,6 @@ const hasFile = txt().includes("صوتٌ من الدار");
     ok(!!btn("🔁 جولة نصٍّ جديد"), "XII12 طريق الثورة مفتوح — جولة جديدة لا إعادة مُثقلة");
 
     const { levelOf } = await import("../lib/plan");
-    const p1 = { ...emptyProgress, plan: { ...emptyProgress.plan, day: 1 } };
     mount(React.createElement(HoerLabor, { progress: { ...emptyProgress } }));
     ok(txt().includes("🔊 صوت مُنتَج"), "XII13 نصُ اليومِ الأوّل يحملُ شارةَ الصوتِ المُنتَج — لا TTS جهاز");
     const aud = d0.querySelector("audio");
@@ -519,8 +518,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
 
 
   /* ═══════════════ موجةُ ξ التتويج: مراكزُ XV الجديدة ═══════════════ */
-  const { dialogAudio, dialogAudioSrc, dialogAudioArt, dialogAudioIstKi, getMnemonik, mnemonikMap, alleVokabeln, fehlerList, luecken, dialogues } = await import("../lib/content");
-  const { default: fsRaw } = { default: null } as { default: null };
+  const { dialogAudio, dialogAudioSrc, dialogAudioArt, dialogAudioIstKi, getMnemonik, mnemonikMap, alleVokabeln, fehlerList } = await import("../lib/content");
 
   /* ---------- XIII — DialogOrdnung: دورةُ الترتيبِ كاملة ---------- */
   let dlgSeen = "";
@@ -710,7 +708,6 @@ const hasFile = txt().includes("صوتٌ من الدار");
   /* ---------- XXVI — تركاتُ الحفظ داخلَ درسِ القواعدِ نفسِه ---------- */
   {
     const { default: TaskView } = await import("../components/tasks");
-    const { getBrueckenFor, eselsbruecken } = await import("../lib/content");
     const mkTask = (topicId: string) => ({ id: "t-" + topicId, kind: "grammatik" as const, titleDe: "Grammatik", titleAr: "قاعدة", minutes: 15, topicId });
     mount(React.createElement(TaskView, { task: mkTask("a2-dativ"), lang: "ar" as const, day: 60, srs: {}, onSrs: () => {}, onPoints: () => {}, voiceName: "", rate: 1 }));
     ok(txt().includes("🧠 تركاتُ الحفظ لهذا الدرس"), "XXVI1 كتلةُ التركاتِ تظهرُ داخلَ بطاقةِ القاعدةِ لا في صفحةٍ منفصلةٍ يهجرُها المتعلِّم");
@@ -1271,8 +1268,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
     const { ablenker, signalRadar } = await import("../lib/signalwoerter");
     const { SignalRadar } = await import("../components/signalradar");
     const mitFalle = dialogues.find((d) => ablenker(d).length > 0 && signalRadar(d).anzahlSignale > 0)!;
-    let pts = 0;
-    mount(React.createElement(SignalRadar, { dlg: mitFalle, onPoints: (p: number) => { pts += p; } }));
+    mount(React.createElement(SignalRadar, { dlg: mitFalle, onPoints: () => {} }));
     ok(!!rootEl.querySelector('[data-testid="signalradar"]'), `LII1 الرادارُ مرسومٌ لحوارٍ فيه مُضلِّل (${mitFalle.id})`);
     ok(rootEl.querySelectorAll('[data-testid="radar-zeile"]').length === 0, "LII2 مطويٌّ ابتداءً — يُفتح بعدَ الإجابةِ لا قبلَها");
     ok(txt().includes("مُضلِّل مسموع"), "LII3 وعنوانُه يعلنُ عددَ المُضلِّلاتِ قبلَ الفتح");
@@ -1564,14 +1560,18 @@ const hasFile = txt().includes("صوتٌ من الدار");
 
     try {
       mount(React.createElement(LocalSpeechPilot));
+      const idleStatus = d0.querySelector('[data-testid="local-asr-state"]')?.textContent ?? "";
+      const noAutomaticProbe = availabilityOptions === null;
+      const refresh = d0.querySelector('[data-testid="local-asr-refresh"]') as HTMLButtonElement | null;
+      if (refresh) click(refresh);
       await asyncAct(flushAsync);
       const state = d0.querySelector('[data-testid="local-asr-state"]');
       const consent = d0.querySelector('[data-testid="local-asr-download-consent"]') as HTMLInputElement | null;
       const install = d0.querySelector('[data-testid="local-asr-install"]') as HTMLButtonElement | null;
       const initialStatus = state?.textContent ?? "";
-      ok(initialStatus.includes("يمكن طلب") && JSON.stringify(availabilityOptions).includes('"de-DE"') &&
-        JSON.stringify(availabilityOptions).includes('"processLocally":true'),
-        "LXXXIII1 يفحص حزمة de-DE بخيار processLocally=true ويعرض حالتها قبل طلب الميكروفون");
+      ok(idleStatus.includes("لم يُفحَص") && noAutomaticProbe && initialStatus.includes("يمكن طلب") &&
+        JSON.stringify(availabilityOptions).includes('"de-DE"') && JSON.stringify(availabilityOptions).includes('"processLocally":true'),
+        "LXXXIII1 لا يفحص تلقائياً؛ وبعد نقرة صريحة يفحص de-DE بخيار processLocally=true ويعرض حالتها قبل طلب الميكروفون");
       ok(!!consent && !!install && install.disabled && installCalls === 0,
         "LXXXIII2 زر التثبيت معطّل ولا استدعاء قبل موافقة التنزيل المنفصلة");
 
@@ -1618,6 +1618,8 @@ const hasFile = txt().includes("صوتٌ من الدار");
 
       W.SpeechRecognition = undefined;
       mount(React.createElement(LocalSpeechPilot));
+      const unsupportedRefresh = d0.querySelector('[data-testid="local-asr-refresh"]') as HTMLButtonElement | null;
+      if (unsupportedRefresh) click(unsupportedRefresh);
       await asyncAct(flushAsync);
       ok((d0.querySelector('[data-testid="local-asr-state"]')?.textContent ?? "").includes("لا يوفّر واجهة") && webkitStarts === 0,
         "LXXXIII8 وجود webkit وحده لا يفعّل طياراً محلياً ولا يسقط إلى التعرف غير المثبت");
@@ -2321,7 +2323,6 @@ const hasFile = txt().includes("صوتٌ من الدار");
     const { WortfamilienStation } = await import("../components/wortfamilien");
     mount(React.createElement(WortfamilienStation, {}));
     ok(!!rootEl.querySelector('[data-testid="wortfamilien"]'), "R293a محطة عائلات الكلمات (A22) تُرسم من البنك");
-    const falscheOpt = [...rootEl.querySelectorAll('[data-testid^="ableitung-opt-"]')].find((b) => !(b as HTMLElement).style.border.includes("good")) as HTMLElement | undefined;
     const opt0 = rootEl.querySelector('[data-testid="ableitung-opt-0"]') as HTMLElement | null;
     ok(!!opt0, "R293b سؤال الاشتقاق بخياراته حاضر");
     if (opt0) click(opt0);
@@ -3079,7 +3080,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
       storage.setItem("weg-b2-profiles", JSON.stringify({ active: "p1", list: [{ id: "p1", name: "اختبار", emoji: "🧪", created: "2026-10-04" }] }));
       const startProgress = JSON.parse(JSON.stringify(emptyProgress)) as typeof emptyProgress;
       const topicId = "a1-akkusativ";
-      const { grammarMap, getBrueckenFor } = await import("../lib/content");
+      const { getBrueckenFor } = await import("../lib/content");
       const bridges = getBrueckenFor(topicId);
       const dueId = bridges[0]?.id;
       if (dueId) startProgress.srs[`bru:${dueId}`] = { ease: 2.5, interval: 1, due: "2000-01-01T00:00:00.000Z", reps: 1, lapses: 0 };
@@ -4480,6 +4481,42 @@ const hasFile = txt().includes("صوتٌ من الدار");
   if (echterSchliessen3) click(echterSchliessen3);
   ok(loadProgress().plan.day === 6, "R309-15 ويتقدّم اليوم بلا أيّ اعتراضٍ من قفل الوحدة — القفل يسري فقط عند الحافّة الفعلية");
 
+  act(() => { dom.window.localStorage.removeItem(progressKeyActive()); });
+}
+
+/* ═══ R310 — فشل localStorage ظاهر ولا يغيّر الحالة المرئية كذباً ═══ */
+{
+  const { useProgress, saveProgress } = await import("../lib/store");
+  const { progressKeyActive } = await import("../lib/profiles");
+  const { PersistenzWache } = await import("../components/PersistenzWache");
+  act(() => { saveProgress({ ...emptyProgress, plan: { ...emptyProgress.plan, day: 1 } }); });
+
+  function SpeicherProbe() {
+    const { progress, ready, update } = useProgress();
+    return React.createElement("div", null,
+      React.createElement("span", { "data-testid": "save-day" }, ready ? String(progress.plan.day) : "…"),
+      React.createElement("button", { type: "button", onClick: () => update((p) => ({ ...p, plan: { ...p.plan, day: 2 } })) }, "غيّر اليوم تجريبياً"),
+    );
+  }
+
+  mount(React.createElement(React.Fragment, null, React.createElement(SpeicherProbe), React.createElement(PersistenzWache)));
+  await act(async () => { await Promise.resolve(); });
+  const storageProto = Object.getPrototypeOf(dom.window.localStorage) as Storage;
+  const originalSetItem = storageProto.setItem;
+  let direkt: boolean | undefined;
+  try {
+    storageProto.setItem = (() => { throw new dom.window.DOMException("quota", "QuotaExceededError"); }) as typeof Storage.prototype.setItem;
+    act(() => { direkt = saveProgress({ ...emptyProgress, plan: { ...emptyProgress.plan, day: 2 } }); });
+    ok(direkt !== true && txt().includes("لم يُحفَظ آخر تغيير"), "R310-1 saveProgress يعيد false ويطلق إنذاراً مرئياً عند امتلاء/حظر التخزين");
+    const wechseln = btn("غيّر اليوم تجريبياً");
+    if (wechseln) click(wechseln);
+    ok((rootEl.querySelector('[data-testid="save-day"]')?.textContent ?? "") === "1", "R310-2 useProgress يبقي اليوم المرئي المحفوظ ولا يعرض اليوم 2 كنجاح وهمي");
+  } finally {
+    storageProto.setItem = originalSetItem;
+  }
+  const verstanden = btn("فهمت");
+  if (verstanden) click(verstanden);
+  ok(!txt().includes("لم يُحفَظ آخر تغيير"), "R310-3 إنذار الحفظ قابل للإغلاق بعد أن يفهمه المستخدم");
   act(() => { dom.window.localStorage.removeItem(progressKeyActive()); });
 }
 

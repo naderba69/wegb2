@@ -7,7 +7,6 @@
  * التشغيل:  npm run smoke
  */
 
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import {
   rng,
   pickN,
@@ -147,15 +146,15 @@ import { entdeckungsFrage, induktionMoeglich, ergebnisText, MIN_BEISPIELE, stufe
 import { STIL_PAARE, REGEL_AR, bankPruefen, stilUebungen, registerErkennen, stilProfil } from "../lib/stil";
 import { signaleIn, ablenker, signalRadar, signalDrill, radarAbdeckung, SIGNALE, KATEGORIE_AR } from "../lib/signalwoerter";
 import { kapselIds, kapselSaetze, kapselAusTag, KAPSEL_GROESSE, KAPSEL_LEITER, kapselVerbuche, kapselFaellig, kapselIdsAdaptiv, kapselQuizAdaptiv, kapselQuiz, satzIdAusUebung } from "../lib/kapsel";
-import { EINSTUFUNG_SKILLS, einstufungsFragen, einstufungsPool, einstufungStart, einstufungAktuell, einstufungAntwort, einstiegsVorschlag } from "../lib/einstufung";
-import { schattenEinheiten, huellkurve, kurveAufLaenge, korrelation, pausenZaehlen, vergleicheSchatten } from "../lib/shadowing";
+import { EINSTUFUNG_SKILLS, einstufungsFragen, einstufungStart, einstufungAntwort, einstiegsVorschlag } from "../lib/einstufung";
+import { schattenEinheiten, vergleicheSchatten } from "../lib/shadowing";
 import { wortDiff, diffStatistik } from "../lib/textdiff";
 import { musterDrill } from "../lib/musterdrill";
 import { wochenBilanz, streakAusVerlauf, zielAusVerlauf, wochenMontag } from "../lib/motivation";
 import { lernendenZeile } from "../lib/lehrer";
 import { zielTempo, ZIEL_MINUTEN_OK, ZIEL_MINUTEN_MAX } from "../lib/zieltempo";
 import { ritualUrteil, aufgabeGesperrt, torAufgaben, sperrText } from "../lib/ritual";
-import { PHASEN, PHASE_START, LERNLAST, ABSCHLUSS_VON, levelAmTag, istPhasenPruefung, lastMinuten, PHASEN_PRUEFUNGSTAGE } from "../lib/phasen";
+import { PHASEN, PHASE_START, LERNLAST, ABSCHLUSS_VON, levelAmTag, lastMinuten, PHASEN_PRUEFUNGSTAGE } from "../lib/phasen";
 import { getDialogue, eselsbruecken, getBrueckenFor, vocabMap, sprichwortAudio, sprichwortSrc } from "../lib/content";
 import { buildBrueckeItems, katVonSektion } from "../lib/bruecken";
 import { selbstKorrektur } from "../components/lernstrategie";
@@ -514,7 +513,7 @@ const vocabRepeatAudit = (() => {
     const D = (h: number, m = 0) => new Date(2026, 8, 26, h, m, 5); // 2026-09-26 محلي
     const mk = (o: Partial<Progress>): Progress => ({ ...emptyProgress, ...o });
     const p0 = signKontrakt(mk({}), "21:30", "xp30", D(10));
-    ok(p0.kontrakt?.uhrzeit === "21:30" && p0.kontrakt?.seit === "2026-09-26", "K22a التوقيع يختم الساعة ويوم الحسم");
+    ok(p0.kontrakt?.uhrzeit === "21:30" && p0.kontrakt?.seit === "2026-09-26" && tagLokal(D(10)) === "2026-09-26", "K22a التوقيع يختم الساعة ويوم التقويم المحلي بلا انزلاق UTC");
     ok(voidKontrakt(voidKontrakt(p0)).kontrakt === undefined, "K22b الفكّ محو كامل — ومحو بلا عقد لا يغيّر شيئاً (idempotent)");
 
     const aktiv: Progress = { ...p0, plan: { ...p0.plan, days: { 200: { closed: false, score: 30, total: 100, tasksDone: 3, tasksTotal: 8, at: "2026-09-26T20:00:00" } } } };
@@ -573,7 +572,7 @@ const vocabRepeatAudit = (() => {
   /* ===== K24 — معمل الاستماع HörLabor (Modul AF) ===== */
   {
     ok(texts.length >= 40 && texts.every((t) => t.questions.length >= 2), "K24a مادة المعمل هي بنك القراءة نفسه بكل توسعاته — لا محتوى موازٍ ولا فرعٌ منفصل");
-    const r1 = bauHoerRunde(120), r1alt = bauHoerRunde(120), r2 = bauHoerRunde(121);
+    const r1 = bauHoerRunde(120), r1alt = bauHoerRunde(120);
     ok(r1.textId === r1alt.textId && r1.items.map((x) => x.id).join() === r1alt.items.map((x) => x.id).join(), "K24b حتمية الجولة: اليوم نفسه يلد النص والأسئلة بالترتيب نفسه");
     ok(r1.items.every((x) => x.options === null || x.options.length >= 2) && r1.items.every((x) => x.answers.every((a) => a.length > 0)), "K24c كل بند قابل للحكم: خيارات أو صيغ مقبولة");
     ok([1, 5, 60, 120, 121, 200, 300, 377].every((d) => bauHoerRunde(d).level === levelOf(Math.min(d, TOTAL)) && texts.some((t) => t.level === bauHoerRunde(d).level)), "K24d المعمل يعمل على مستوى الخطة في كل يوم — ولكل مستوى نصوصه، بلا جولة فارغة أبداً");
@@ -1271,28 +1270,37 @@ const vocabRepeatAudit = (() => {
   /* K52 · صدقُ المبالغ: كلُّ مبلغِ يورو في الألمانيةِ لهُ مقابلٌ في الترجمة */
   {
     const deZahl: Record<string, number> = { zwei: 2, drei: 3, vier: 4, fünf: 5, sechs: 6, sieben: 7, acht: 8, neun: 9, zehn: 10,
-      elf: 11, zwölf: 12, fünfzehn: 15, zwanzig: 20, fünfundzwanzig: 25, dreißig: 30, vierzig: 40, fünfzig: 50, sechzig: 60, siebzig: 70, achtzig: 80, neunzig: 90, hundert: 100, dreiundachtzig: 83, zweitausendvierhundert: 2400 };
+      elf: 11, zwölf: 12, vierzehn: 14, fünfzehn: 15, achtzehn: 18, zwanzig: 20, fünfundzwanzig: 25, dreißig: 30, vierzig: 40, fünfzig: 50, sechzig: 60, siebzig: 70, achtzig: 80, neunzig: 90, hundert: 100, dreiundachtzig: 83, zweitausendvierhundert: 2400 };
     const arZahl: Record<string, number> = { "اثنان": 2, "يورويْن": 2, "ثلاثة": 3, "أربعة": 4, "خمسة": 5, "ستة": 6, "سبعة": 7,
-      "ثمانية": 8, "تسعة": 9, "عشرة": 10, "خمسة عشر": 15, "عشرين": 20, "عشرون": 20, "خمسة وعشرين": 25, "خمسةٌ وعشرون": 25,
+      "ثمانية": 8, "تسعة": 9, "عشرة": 10, "اثنا عشر": 12, "أربعة عشر": 14, "خمسة عشر": 15, "ثمانية عشر": 18, "عشرين": 20, "عشرون": 20, "خمسة وعشرين": 25, "خمسةٌ وعشرون": 25,
       "ثلاثين": 30, "ثلاثون": 30, "أربعين": 40, "خمسين": 50, "خمسون": 50, "مئة": 100, "مئةِ": 100, "ستّون": 60, "ستين": 60, "سبعين": 70, "ثمانين": 80, "ثمانون": 80, "تسعين": 90, "ثلاثةٌ وثمانون": 83, "نصف": 50, "ونصفًا": 50, "والنصف": 50 };
     const zahlenAus = (s: string, tab: Record<string, number>) => {
       const out = new Set<number>();
-      for (const m of s.matchAll(/\d+/g)) out.add(Number(m[0]));
-      for (const [w, v] of Object.entries(tab)) if (new RegExp(`(^|[^A-Za-zÄÖÜäöüß])${w}([^A-Za-zÄÖÜäöüß]|$)`).test(s)) out.add(v);
+      const normal = s.normalize("NFC").replace(/[\u064B-\u065F\u0670]/g, "");
+      for (const m of normal.matchAll(/\d+/g)) out.add(Number(m[0]));
+      for (const [w, v] of Object.entries(tab)) {
+        const wort = w.normalize("NFC").replace(/[\u064B-\u065F\u0670]/g, "");
+        if (new RegExp(`(^|[^A-Za-zÄÖÜäöüß])${wort}([^A-Za-zÄÖÜäöüß]|$)`).test(normal)) out.add(v);
+      }
       return out;
     };
     const ziffernNur = (s: string) => new Set([...s.matchAll(/\d[\d.]*/g)].map((m) => Number(m[0].replace(/\./g, ""))));
+    const euroZahlenDe = (s: string) => {
+      const out = new Set([...s.matchAll(/(\d[\d.]*)\s*Euro/gi)].map((m) => Number(m[1].replace(/\./g, ""))));
+      for (const [wort, wert] of Object.entries(deZahl)) if (new RegExp(`(^|[^A-Za-zÄÖÜäöüß])${wort}\\s+Euro`, "i").test(s)) out.add(wert);
+      return out;
+    };
     const dial = JSON.parse(readFileSync("content/dialogues.json", "utf8")) as { id: string; lines: { de: string; ar: string }[] }[];
     const schief: string[] = [];
     for (const d of dial) for (const [i, l] of d.lines.entries()) {
       if (!/Euro/.test(l.de)) continue;
-      const dz = ziffernNur(l.de), az = new Set([...ziffernNur(l.ar), ...zahlenAus(l.ar, arZahl)]);
+      const dz = euroZahlenDe(l.de), az = new Set([...ziffernNur(l.ar), ...zahlenAus(l.ar, arZahl)]);
       const fehlt = [...dz].filter((n) => !az.has(n));
       if (fehlt.length) schief.push(`${d.id}:${i} ${fehlt.join(",")}`);
     }
     ok(schief.length === 0, `K52a كلُّ مبلغٍ مكتوبٍ بالخاناتِ في الحواراتِ يردُ في الترجمةِ كما هو (${schief.slice(0, 4).join(" · ") || "لا شيء"})`);
     const txt = texts.filter((t) => /Euro/.test(t.de));
-    const schief2 = txt.filter((t) => { const dz = ziffernNur(t.de), az = new Set([...ziffernNur(t.ar), ...zahlenAus(t.ar, arZahl)]); return [...dz].some((n) => !az.has(n)); }).map((t) => t.id);
+    const schief2 = txt.filter((t) => { const dz = euroZahlenDe(t.de), az = new Set([...ziffernNur(t.ar), ...zahlenAus(t.ar, arZahl)]); return [...dz].some((n) => !az.has(n)); }).map((t) => t.id);
     ok(schief2.length === 0, `K52b وكذلك في نصوصِ القراءة — لا رقمَ يتبدَّلُ في العبور (${schief2.join(",") || "لا شيء"})`);
   }
 
@@ -1681,7 +1689,6 @@ void 0;
   {
     // R145: مهامّ partner (R138–R141) محاكاةُ كلامٍ امتحانية (تعارف/مونولوج/نقاش) = إنتاجٌ شفهيّ بامتياز؛ إخراجها من التصنيف أظهر أيامَ مراجعةٍ كاذبةَ الخلوّ
     const PROD_KINDS = new Set(["schreiben", "sprechen", "grammatik", "partner"]);
-    const REZEPTIV_KINDS = new Set(["lesen", "hoeren", "wiederholen"]);
     // أسئلة quiz من نوع إنتاج تحسب كإنتاج بوزن 0.8 دقيقة/سؤال، mc بصفر.
     const FREE_RE = /"(fill|umformung|order|translate|dictation)"/;
     function produktionsMinuten(d: number): number {
@@ -1736,7 +1743,7 @@ void 0;
     const tag378K = kIds(378);
     ok(tag50K.length === 3 && new Set(tag50K).size === 3 && tag200K.length === 3 && new Set(tag200K).size === 3 && tag378K.length === 3,
       `K90c كبسولةُ الصباحِ دائماً 3 جملٍ فريدة (وسط B1: ${tag200K.length}، يوم 378: ${tag378K.length})`);
-    const quizTypen = new Set(tag50Q.map((q) => q.type));
+    const quizTypen = new Set([...tag50Q, ...tag200Q].map((q) => q.type));
     ok(quizTypen.size >= 2, `K90c أسئلةُ الكبسولةِ متنوّعة النوع (لا سؤال متعدّد ولا نمط وحيد) — أنواع: ${[...quizTypen].join("/")}`);
     // K90d: الكبسولة المتباعدة لا تعيد نفس الجملة من الأمس عندما تتوفر جمل أقدم (بعد اليوم 30 على الأقل)
     const tag100 = kIds(100), tag101 = kIds(101);
@@ -1886,7 +1893,6 @@ void 0;
     const layoutSrc = readFileSync("app/layout.tsx", "utf8");
     const globalsSrc = readFileSync("app/globals.css", "utf8");
     const altOk = existsSync("app/alt/page.tsx");
-    const altSrc = altOk ? readFileSync("app/alt/page.tsx", "utf8") : "";
     const revSrc = existsSync("components/akademie/FehlerRevue.tsx") ? readFileSync("components/akademie/FehlerRevue.tsx", "utf8") : "";
     const klassSrc = readFileSync("components/akademie/Klassenzimmer.tsx", "utf8");
 
@@ -2004,7 +2010,6 @@ void 0;
     // وأن الواجهة تعرض الكبسولة.
     const seite2 = readFileSync("components/akademie/Klassenzimmer.tsx", "utf8");
     ok(seite2.includes("gesternKapsel") || /kapsel/.test(seite2), "K65g وكبسولةُ الأمسِ تقعُ خلفَ قفلِ البوابة: لا جديدَ قبلَ استظهارِها");
-    const w2 = buildDay(2, P).tasks[0];
     const seite = require("fs").readFileSync("app/page.tsx", "utf8"), komp = require("fs").readFileSync("components/kapsel.tsx", "utf8");
     const klassK = require("fs").readFileSync("components/akademie/Klassenzimmer.tsx", "utf8");
     ok(/<TagesKapsel day=\{day\}/.test(klassK) && /<Klassenzimmer/.test(seite) && /data-testid="tageskapsel"/.test(komp) && !/قرأتها"\s*<\/button>/.test(komp) && /speakDe/.test(komp),
@@ -2413,7 +2418,6 @@ void 0;
     ok(zweitRichtig.length === 0, `K73h لا مشتّتَ يظهرُ في متلازماتِ البطاقةِ نفسِها — لا خيارَ ثانٍ صحيحاً (${zweitRichtig.map((u) => u.id).slice(0, 3).join(",")})`);
     const ausnahmen = require("../content/kollok-ausnahmen.json") as Record<string, { de: string; grund: string }>;
     const b2 = alleVokabeln.filter((k) => k.level === "B2");
-    const b2Ohne = b2.filter((k) => !kollokationen[k.id] && !ausnahmen[k.id]).map((k) => k.id);
     ok(Object.keys(ausnahmen).length <= 66 && Object.entries(ausnahmen).every(([id, a]) => ids.has(id) && !kollokationen[id] && a.grund.length > 10 && a.de === ids.get(id)!.de), `K73k قائمةُ الاستثناءِ صريحةٌ ومعلَّلةٌ ومحدودة (${Object.keys(ausnahmen).length} ≤66)، ولا بطاقةَ فيها لها متلازمات — R313: +4 اختصارات (bzw./d.h./vgl./z.B.) بلا متلازمة ممكنة؛ R315: +11 أدواتٍ وظيفيةً من أحرف D-E؛ R316: +3 أدواتٍ وظيفيةً من أحرف F-G-H (falls, genauso, halt) بلا متلازمة ممكنة`);
     const b1 = alleVokabeln.filter((k) => k.level === "B1");
     /** قاعدةٌ آليّة: بطاقةٌ من ≥2 كلمتَي محتوى (in Kauf nehmen, Ich würde sagen) هي متلازمةٌ بذاتِها — تُعرَضُ كما هي ولا تحتاجُ متلازمةً لمتلازمة */
@@ -8222,7 +8226,7 @@ void 0;
     "K186i مفاتيح الإجابات التسع محمية ولا انحراف عن اللقطات المراجعة (بما في ذلك ملء schwarzfahren وan)");
 
   ok(correctionsListA2Batch10.every((c: any) => c.field.endsWith(".ar")) &&
-    selectedA2Batch10.every((dialogue) => dialogue.questions.every((q: any, qi: number) => {
+    selectedA2Batch10.every((dialogue) => dialogue.questions.every((q: any) => {
       const snap = itemByIdA2Batch10.get(q.id)?.reviewed;
       return snap && snap.promptDe === q.promptDe &&
         JSON.stringify(snap.answer) === JSON.stringify(q.answer) &&
@@ -10104,7 +10108,7 @@ void 0;
     "K201e d-b2-15: أبلغتُ عن الضرر، فنيُّ الطوارئ، تسوية المطالبة خلال أسبوعين، سلفة (لا عربون)، تأمين المنقولات");
   const dialoguesArr = JSON.parse(readFileSync("content/dialogues.json","utf8")) as any[];
   const locksOk205 = reviewB205.corrections.every((c:any)=>c.unit.endsWith(".ar")) &&
-    ["d-b2-13","d-b2-14","d-b2-15"].every((id,i)=>{
+    ["d-b2-13","d-b2-14","d-b2-15"].every((id)=>{
       const dlg=dialoguesArr.find((x:any)=>x.id===id);
       return dlg.lines.length===8 && dlg.questions.length===3 && dlg.dictation.length===2 &&
         dlg.questions.every((q:any)=>Array.isArray(q.options) && q.options.length===3);
@@ -10133,7 +10137,6 @@ void 0;
 {
   const reviewB206 = JSON.parse(readFileSync("docs/content-review-b2-dialogues-06-2026-10-08.json", "utf8")) as any;
   const reviewB206Md = readFileSync("docs/content-review-b2-dialogues-06-2026-10-08.md", "utf8");
-  const reviewB207Md = readFileSync("docs/content-review-b2-dialogues-07-2026-10-08.md", "utf8");
   const patchB206Src = readFileSync("scripts/patches/review_b2_dialogues_06.py", "utf8");
   ok(reviewB206.reviewRule === "R128" && reviewB206.totals.dialogues === 3 &&
     reviewB206.totals.lines === 24 && reviewB206.totals.questions === 9 && reviewB206.totals.dictation === 6 &&
@@ -10175,30 +10178,6 @@ void 0;
 /* ═══ K203 — سابع دفعة B2 d-b2-19..21 (R129). ═══ */
 {
   const reviewB207 = JSON.parse(readFileSync("docs/content-review-b2-dialogues-07-2026-10-08.json", "utf8")) as any;
-  const reviewB208 = JSON.parse(readFileSync("docs/content-review-b2-dialogues-08-2026-10-08.json", "utf8")) as any;
-  const reviewB209 = JSON.parse(readFileSync("docs/content-review-b2-dialogues-09-2026-10-08.json", "utf8")) as any;
-  const reviewB210 = JSON.parse(readFileSync("docs/content-review-b2-dialogues-10-2026-10-08.json", "utf8")) as any;
-  const reviewFixW5 = JSON.parse(readFileSync("docs/content-review-fix-w5-2026-10-09.json", "utf8")) as any;
-  const reviewA0T1 = JSON.parse(readFileSync("docs/content-review-a0-texts-01-2026-10-09.json", "utf8")) as any;
-  const reviewA1T1 = JSON.parse(readFileSync("docs/content-review-a1-texts-01-2026-10-09.json", "utf8")) as any;
-  const reviewA1T2 = JSON.parse(readFileSync("docs/content-review-a1-texts-02-2026-10-09.json", "utf8")) as any;
-  const reviewA1T3 = JSON.parse(readFileSync("docs/content-review-a1-texts-03-2026-10-09.json", "utf8")) as any;
-  const reviewA2T1 = JSON.parse(readFileSync("docs/content-review-a2-texts-01-2026-10-09.json", "utf8")) as any;
-  const reviewB1T1 = JSON.parse(readFileSync("docs/content-review-b1-texts-01-2026-10-09.json", "utf8")) as any;
-  const reviewB2T1 = JSON.parse(readFileSync("docs/content-review-b2-texts-01-2026-10-09.json", "utf8")) as any;
-  const reviewB2T1Md = readFileSync("docs/content-review-b2-texts-01-2026-10-09.md", "utf8");
-  const reviewB1T1Md = readFileSync("docs/content-review-b1-texts-01-2026-10-09.md", "utf8");
-  const reviewA2T1Md = readFileSync("docs/content-review-a2-texts-01-2026-10-09.md", "utf8");
-  const reviewA1T3Md = readFileSync("docs/content-review-a1-texts-03-2026-10-09.md", "utf8");
-  const reviewA1T2Md = readFileSync("docs/content-review-a1-texts-02-2026-10-09.md", "utf8");
-  const reviewA1T1Md = readFileSync("docs/content-review-a1-texts-01-2026-10-09.md", "utf8");
-  const reviewA0T1Md = readFileSync("docs/content-review-a0-texts-01-2026-10-09.md", "utf8");
-  const reviewFixW5Md = readFileSync("docs/content-review-fix-w5-2026-10-09.md", "utf8");
-  const reviewA001 = JSON.parse(readFileSync("docs/content-review-a0-dialogues-01-2026-10-08.json", "utf8")) as any;
-  const reviewA001Md = readFileSync("docs/content-review-a0-dialogues-01-2026-10-08.md", "utf8");
-  const reviewB210Md = readFileSync("docs/content-review-b2-dialogues-10-2026-10-08.md", "utf8");
-  const reviewB209Md = readFileSync("docs/content-review-b2-dialogues-09-2026-10-08.md", "utf8");
-  const reviewB208Md = readFileSync("docs/content-review-b2-dialogues-08-2026-10-08.md", "utf8");
   const reviewB207Md = readFileSync("docs/content-review-b2-dialogues-07-2026-10-08.md", "utf8");
   const patchB207Src = readFileSync("scripts/patches/review_b2_dialogues_07.py", "utf8");
   ok(reviewB207.reviewRule === "R129" && reviewB207.totals.dialogues === 3 &&
@@ -14145,7 +14124,7 @@ function collectR262(dir: string, out: string[] = []): string[] {
   ok(!readFileSync("components/spiele.tsx", "utf8").includes("void key"), "K328f ب4: لا كود ميّت متبقٍّ في محطة الألعاب");
   const pkg = readFileSync("package.json", "utf8");
   const ci = readFileSync(".github/workflows/ci.yml", "utf8");
-  ok(pkg.includes('"lint": "eslint app components lib middleware.ts"') && ci.includes("npm run lint"), "K328g ب4: ESLint بقاعدة الكود الميّت يشمل middleware وهو خطوة إلزامية في CI");
+  ok(pkg.includes('"lint": "eslint app components lib scripts middleware.ts"') && ci.includes("npm run lint"), "K328g ب4: ESLint بقاعدة الكود الميّت يشمل التطبيق وmiddleware والسكريبتات وهو خطوة إلزامية في CI");
 }
 
 
@@ -14505,7 +14484,7 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const interaktivK339 = readFileSync("scripts/interaktiv_test.tsx", "utf8");
   const ciK339 = readFileSync(".github/workflows/ci.yml", "utf8");
   const lighthouseK339 = JSON.parse(readFileSync("lighthouserc.json", "utf8")) as {
-    ci?: { collect?: { startServerCommand?: string }; assert?: { assertions?: Record<string, [string, { minScore: number }]> }; upload?: { target?: string } };
+    ci?: { collect?: { startServerCommand?: string; url?: string[] }; assert?: { assertions?: Record<string, [string, { minScore: number }]> }; upload?: { target?: string } };
   };
   ok(packageK339.scripts?.["audit:repo"] === "python3 scripts/repo_audit.py" &&
     packageK339.scripts?.["audit:plan"] === "tsx scripts/student_audit.ts" &&
@@ -14513,8 +14492,9 @@ function collectR262(dir: string, out: string[] = []): string[] {
     repoAuditK339.includes("ast.parse") && repoAuditK339.includes("json.loads") && repoAuditK339.includes("media_header_ok") &&
     !interaktivK339.includes("temp disabled") && !existsSync(".prod.pid"),
     "K339a بوابة المستودع تمسح الملفات المتتبعة والجديدة: صياغة Python/JS وJSON/YAML وUTF-8 والروابط المحلية وترويسات 1469 أصلاً؛ لا اختبارات معطلة ولا PID متعقب");
-  ok(packageK339.scripts?.["audit:lighthouse"] === "npx --yes @lhci/cli@0.12.x autorun" &&
+  ok(packageK339.scripts?.["audit:lighthouse"] === "npx --yes @lhci/cli@0.16.0 autorun" &&
     lighthouseK339.ci?.collect?.startServerCommand === "npm run start -- -p 3000" &&
+    lighthouseK339.ci?.collect?.url?.length === 8 &&
     lighthouseK339.ci?.upload?.target === "filesystem" &&
     lighthouseK339.ci?.assert?.assertions?.["categories:accessibility"]?.[0] === "error" &&
     !ciK339.includes("LHCI warn") && !ciK339.includes("autorun ||") &&

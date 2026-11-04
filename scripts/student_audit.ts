@@ -8,7 +8,6 @@ console.log("=== DEEP STUDENT+AUDITOR QA — ALL 378 DAYS ===\n");
 const errors: string[] = [];
 const warnings: string[] = [];
 const err = (m: string) => errors.push(m);
-const wrn = (m: string) => warnings.push(m);
 
 function findGrammar(id: string, o: any): any {
   if (!o) return null;

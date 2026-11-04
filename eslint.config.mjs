@@ -18,6 +18,17 @@ export default [
     rules: { "@next/next/google-font-display": "off" },
   },
   {
+    files: ["scripts/**/*.{ts,tsx,mjs}"],
+    languageOptions: {
+      parser: tseslint.parser,
+      parserOptions: { ecmaFeatures: { jsx: true } },
+    },
+    plugins: { "@typescript-eslint": tseslint.plugin },
+    rules: {
+      "@typescript-eslint/no-unused-vars": ["error", { argsIgnorePattern: "^_", varsIgnorePattern: "^_", caughtErrors: "none" }],
+    },
+  },
+  {
     files: ["app/**/*.{ts,tsx}", "components/**/*.{ts,tsx}", "lib/**/*.ts", "middleware.ts"],
     languageOptions: {
       parser: tseslint.parser,

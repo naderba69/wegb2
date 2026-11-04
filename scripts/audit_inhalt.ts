@@ -1,6 +1,6 @@
 /* جرد المحتوى — يفصل العيوب البنيوية عن إشارات heuristic التي تحتاج حكماً بشرياً */
 import { readFileSync, existsSync } from "fs";
-import { grammarMap, sentences, texts, dialogues, writingTasks, alleVokabeln, fehlerList, eselsbruecken, muendlich, vortrag, verben, szenarien, leseText } from "../lib/content";
+import { grammarMap, sentences, texts, dialogues, writingTasks, alleVokabeln, eselsbruecken, leseText } from "../lib/content";
 import { grader } from "../lib/grader";
 import { buildDay } from "../lib/plan";
 import { parsePitfallContrast } from "../lib/pitfall";

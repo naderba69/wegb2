@@ -131,15 +131,18 @@
 ```bash
 npm install
 npm run dev      # تطوير — http://localhost:3000
-npm run build      # إنتاج: 16/16 مساراً في R137
+npm run build      # إنتاج: 16/16 مساراً في R138
 npm start          # تقديم حزمة الإنتاج
 npm run audit:plan # 378/378 يوماً، 2500 مهمة فعلية، 0 خطأ/تحذير
 npm run audio:qc   # 1099/1099 ملفاً، 0 شذوذ آلي (ليس استماعاً بشرياً)
-npm run smoke      # R137: 1936 نجاحاً، 0 فشل
-npm run interaktiv # R137: 933 نجاحاً، 0 فشل؛ 22838 عنصراً ملموساً بلا عنصر عارٍ/أخرس/بلا عنوان
+npm run smoke      # R138: 1936 نجاحاً، 0 فشل
+npm run interaktiv # R138: 936 نجاحاً، 0 فشل؛ 22838 عنصراً ملموساً بلا عنصر عارٍ/أخرس/بلا عنوان
 npm run audit:content && npm run audit:words && npm run audit:repo
-npm run audit:lighthouse # الوصولية مانعة ≥0.9؛ الأداء تحذير مرئي لا يُخفى
+npm run e2e:browser      # Chromium إنتاجي حقيقي: CSP + SW + 9 مسارات و3 بنوك بلا شبكة
+npm run audit:lighthouse # LHCI 0.16.0 مثبت مباشرة؛ 8 مسارات، الوصولية مانعة ≥0.9
 ```
+
+> يفحص Lighthouse ثمانية مسارات فعلية؛ أمّا `/einstellungen` فيغطيه `e2e:browser` كاملاً لأن Lighthouse/Chromium headless يعيدان `PAGE_HUNG` لهذا المسار وحده، بينما اجتاز في CDP الحقيقي online/offline. فحص حزمة التعرّف المحلي هناك لا يبدأ تلقائياً، بل بعد نقرة صريحة. تبقى مراجعة الميكروفون على جهاز فعلي تحققاً بشرياً/جهازياً غير مُدَّعى.
 
 ## 🏛 المعمارية — خمسُ وجهاتٍ وطابورٌ واحد
 

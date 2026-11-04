@@ -46,5 +46,7 @@ jobs:
         run: npm run audit:words
       - name: Produktions-Build
         run: npm run build
-      - name: Lighthouse CI (a11y ≥0.9، مانع)
+      - name: Browser-E2E (echtes Chromium, SW + Offline + CSP)
+        run: npm run e2e:browser
+      - name: Lighthouse CI (8 Hauptseiten، a11y ≥0.9 مانع)
         run: npm run audit:lighthouse
