@@ -14451,8 +14451,9 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const packageK337 = JSON.parse(readFileSync("package.json", "utf8")) as { scripts?: Record<string, string> };
   const ciK337 = readFileSync(".github/workflows/ci.yml", "utf8");
   ok(packageK337.scripts?.["audit:words"] === "tsx scripts/wort_fuer_wort_audit.ts" &&
+    ciK337.includes("uses: actions/checkout@v7") && ciK337.includes("uses: actions/setup-node@v7") &&
     ciK337.includes("run: npm run audit:words") && wordAuditK337.includes("process.exitCode = 1"),
-    "K337a التدقيق الحرفي أمر قابل لإعادة التشغيل وبوابة CI مانعة عند وجود blocker مؤكد");
+    "K337a التدقيق الحرفي أمر قابل لإعادة التشغيل وبوابة CI مانعة على Actions/Node الحديثة عند وجود blocker مؤكد");
   ok(wordAuditK337.includes("re.lastIndex = 0") && wordAuditK337.includes("Rule regressions:") &&
     wordAuditK337.includes("tp.examples || []") && wordAuditK337.includes("tp.verify || []") &&
     wordAuditK337.includes("scanDe(f.falsch, \"fehler.json\", f.id, false)") &&

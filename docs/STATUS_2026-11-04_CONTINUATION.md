@@ -39,6 +39,7 @@
 - فرض `minimatch 11.0.4` لإغلاق `GHSA-g3hv-75wg-m249`.
 - لأن `eslint-plugin-jsx-a11y 6.10.2` لم يدعم تصدير minimatch 11 بعد، أُضيفت رقعة توافق صغيرة، حتمية، قابلة لإعادة التطبيق، وتفشل بصوت عالٍ إن تغيّر upstream: `scripts/patch_jsx_a11y_minimatch.mjs` عبر `postinstall`.
 - أُضيف `npm run audit:deps` إلى CI؛ النتيجة الحالية صفر ثغرات حتى مستوى moderate.
+- رُقّيت خطوتا CI إلى `actions/checkout@v7` و`actions/setup-node@v7` لإزالة تحذير runtime Node 20 المتقادم الذي ظهر في أول تشغيل R134.
 - أُضيفت قواعد Next Core Web Vitals إلى ESLint، وأُصلح رابط داخلي خام وصورة مفردات إلى `Link` و`Image`.
 
 ### 6) قياس تجربة «اليوم» محلياً
