@@ -31,6 +31,8 @@ jobs:
         run: npm run interaktiv
       - name: Inhalts-Audit
         run: npm run audit:content
+      - name: Wort-für-Wort-Audit (bestätigte Blocker)
+        run: npm run audit:words
       - name: Lighthouse CI (a11y ≥0.9)
         run: npx --yes @lhci/cli@0.12.x autorun || echo "LHCI warn — requires build artifacts"
       - name: Produktions-Build

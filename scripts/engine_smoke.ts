@@ -14445,6 +14445,22 @@ function collectR262(dir: string, out: string[] = []): string[] {
 }
 
 
+/* ═══ K337 — Wort-für-Wort-Audit: nur bestätigte Blocker, ausführbar in CI ═══ */
+{
+  const wordAuditK337 = readFileSync("scripts/wort_fuer_wort_audit.ts", "utf8");
+  const packageK337 = JSON.parse(readFileSync("package.json", "utf8")) as { scripts?: Record<string, string> };
+  const ciK337 = readFileSync(".github/workflows/ci.yml", "utf8");
+  ok(packageK337.scripts?.["audit:words"] === "tsx scripts/wort_fuer_wort_audit.ts" &&
+    ciK337.includes("run: npm run audit:words") && wordAuditK337.includes("process.exitCode = 1"),
+    "K337a التدقيق الحرفي أمر قابل لإعادة التشغيل وبوابة CI مانعة عند وجود blocker مؤكد");
+  ok(wordAuditK337.includes("re.lastIndex = 0") && wordAuditK337.includes("Rule regressions:") &&
+    wordAuditK337.includes("tp.examples || []") && wordAuditK337.includes("tp.verify || []") &&
+    wordAuditK337.includes("scanDe(f.falsch, \"fehler.json\", f.id, false)") &&
+    !wordAuditK337.includes('[/من فضلك/g, "من فضلك"]') && !wordAuditK337.includes('[/هراء/g, "هراء"]'),
+    "K337b اختبارات الانحدار تمنع تسرّب lastIndex وقواعد no-op، وتفصل أمثلة الخطأ المقصودة وتغطي examples/verify");
+}
+
+
 /* ═══ K400 — B2 Prüfungsschema 400 Punkte (R401) ═══ */
 {
   const pruef = JSON.parse(readFileSync("content/pruefung-b2.json","utf8")) as { gesamt:number; bestehen:number; module:{id:string; punkte:number; bestehen:number}[] };

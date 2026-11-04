@@ -8,6 +8,7 @@
     "interaktiv": "esbuild scripts/interaktiv_test.tsx --bundle --platform=node --format=cjs --external:jsdom --jsx=automatic --outfile=node_modules/.cache/interaktiv.cjs --log-level=error && node node_modules/.cache/interaktiv.cjs",
     "smoke": "esbuild scripts/engine_smoke.ts --bundle --platform=node --format=cjs --jsx=transform --tsconfig=tsconfig.json --outfile=.cache/smoke.cjs --log-level=warning && node .cache/smoke.cjs",
     "audit:content": "esbuild scripts/audit_inhalt.ts --bundle --platform=node --format=cjs --tsconfig=tsconfig.json --outfile=.cache/audit.cjs --log-level=warning && node .cache/audit.cjs",
+    "audit:words": "tsx scripts/wort_fuer_wort_audit.ts",
     "gen:tools": "node scripts/gen_tools.mjs",
     "extract:tools": "node scripts/extract_tools.mjs",
     "build": "next build",
