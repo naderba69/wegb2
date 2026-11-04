@@ -12568,7 +12568,7 @@ void 0;
   ok(mcAlle.length > 900, `K145a جُمعت أسئلةُ الاختيارِ من البنوكِ كلِّها (${mcAlle.length})`);
   ok(mcAlle.every((q) => {
     const g = gemischteOptionen(q.options, `mc:${q.id}`);
-    return g.length === q.options.length && [...g].sort().join("") === [...q.options].sort().join("") && g.includes(q.answer);
+    return g.length === q.options.length && JSON.stringify([...g].sort()) === JSON.stringify([...q.options].sort()) && g.includes(q.answer);
   }), "K145b الخلطُ تبديلٌ حقيقيٌّ بلا فقدٍ ولا تكرارٍ وجوابُه حاضرٌ دائماً");
   const positionen: Record<number, number> = {};
   let vier = 0;
@@ -12995,16 +12995,18 @@ function collectR262(dir: string, out: string[] = []): string[] {
 // ===== K304 (R272): Vollstaendige maschinelle Audio-QC des gesamten Audio-Bestands
 // (Besitzer-Entscheid: keine menschliche Anhoerung — die Pruefung ist vollautomatisiert
 // und ehrlich als Maschinenmessung gekennzeichnet; scripts/audio_qc_all.py, Bericht
-// docs/audio-qc-all-2026-10-18.json). Jede MP3 auf der Platte genau einmal geprueft. =====
+// docs/audio-qc-all-2026-11-04.json). Jede MP3 auf der Platte genau einmal geprueft. =====
 {
-  const qcAll = JSON.parse(readFileSync("docs/audio-qc-all-2026-10-18.json", "utf8")) as any;
+  const qcAll = JSON.parse(readFileSync("docs/audio-qc-all-2026-11-04.json", "utf8")) as any;
   const verz304 = ["dialog", "diktat", "hoeren", "hoerneu", "sprichwort"];
   const platten304 = new Set<string>();
   for (const v of verz304) for (const f of readdirSync("public/audio/" + v)) if (f.endsWith(".mp3")) platten304.add("/audio/" + v + "/" + f);
   const berichtet304 = new Set<string>(qcAll.dateien.map((d: any) => d.datei));
   const gruppen304 = qcAll.gruppen.dialog.anzahl === 176 && qcAll.gruppen.diktat.anzahl === 742 &&
     qcAll.gruppen.hoeren.anzahl === 157 && qcAll.gruppen.hoerneu.anzahl === 16 && qcAll.gruppen.sprichwort.anzahl === 8;
-  ok(existsSync("scripts/audio_qc_all.py") && qcAll.dateien.length === 1099 && platten304.size === 1099 &&
+  ok(existsSync("scripts/audio_qc_all.py") && existsSync("scripts/run_audio_qc.py") &&
+     existsSync("scripts/requirements-audio-qc.txt") && qcAll.datum === "2026-11-04" &&
+     qcAll.dateien.length === 1099 && platten304.size === 1099 &&
      [...platten304].every((p) => berichtet304.has(p)) && gruppen304 && qcAll.anomalienGesamt === 0 &&
      qcAll.abdeckung.luecken.length === 0 && qcAll.dateien.every((d: any) => d.ok) &&
      qcAll.schwellen.diktat.maxStilleAnteil === 0.65 && qcAll.schwellen.diktat.maxStilleLochS === 4.0 &&
@@ -14484,6 +14486,31 @@ function collectR262(dir: string, out: string[] = []): string[] {
     cssK338.includes(".lesson-scene-visual[data-level=\"B2\"]") &&
     cssK338.includes("@media (max-width: 520px)"),
     "K338b المشهد SVG خفيف وموسوم لقارئ الشاشة، داخل هوية الدرس، متجاوب، وبلا صورة أو طلب خارجي");
+}
+
+
+/* ═══ K339 — تدقيق بنية المستودع الكامل وبوابات CI غير صورية ═══ */
+{
+  const packageK339 = JSON.parse(readFileSync("package.json", "utf8")) as { scripts?: Record<string, string> };
+  const repoAuditK339 = readFileSync("scripts/repo_audit.py", "utf8");
+  const interaktivK339 = readFileSync("scripts/interaktiv_test.tsx", "utf8");
+  const ciK339 = readFileSync(".github/workflows/ci.yml", "utf8");
+  const lighthouseK339 = JSON.parse(readFileSync("lighthouserc.json", "utf8")) as {
+    ci?: { collect?: { startServerCommand?: string }; assert?: { assertions?: Record<string, [string, { minScore: number }]> }; upload?: { target?: string } };
+  };
+  ok(packageK339.scripts?.["audit:repo"] === "python3 scripts/repo_audit.py" &&
+    packageK339.scripts?.["audit:plan"] === "tsx scripts/student_audit.ts" &&
+    ciK339.includes("npm run audit:repo") && ciK339.includes("npm run audit:plan") && repoAuditK339.includes('"--cached", "--others", "--exclude-standard"') &&
+    repoAuditK339.includes("ast.parse") && repoAuditK339.includes("json.loads") && repoAuditK339.includes("media_header_ok") &&
+    !interaktivK339.includes("temp disabled") && !existsSync(".prod.pid"),
+    "K339a بوابة المستودع تمسح الملفات المتتبعة والجديدة: صياغة Python/JS وJSON/YAML وUTF-8 والروابط المحلية وترويسات 1469 أصلاً؛ لا اختبارات معطلة ولا PID متعقب");
+  ok(packageK339.scripts?.["audit:lighthouse"] === "npx --yes @lhci/cli@0.12.x autorun" &&
+    lighthouseK339.ci?.collect?.startServerCommand === "npm run start -- -p 3000" &&
+    lighthouseK339.ci?.upload?.target === "filesystem" &&
+    lighthouseK339.ci?.assert?.assertions?.["categories:accessibility"]?.[0] === "error" &&
+    !ciK339.includes("LHCI warn") && !ciK339.includes("autorun ||") &&
+    ciK339.indexOf("npm run build") < ciK339.indexOf("npm run audit:lighthouse"),
+    "K339b Lighthouse يعمل بعد build كحاجز وصولية حقيقي لا خطوةً تُحوّل الفشل إلى نجاح، ويحفظ تقريره محلياً بلا رفع عام");
 }
 
 

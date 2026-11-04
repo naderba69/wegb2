@@ -25,6 +25,12 @@ const gedruckt: string[] = [];
   print: () => {},
 });
 (dom.window as unknown as { scrollTo: () => void }).scrollTo = () => {};
+// jsdom intentionally omits media playback and canvas rendering. The product code only
+// needs their browser contracts in these interaction tests; deterministic no-op shims keep
+// expected environment gaps from hiding real React warnings in stderr.
+Object.defineProperty(dom.window.HTMLMediaElement.prototype, "play", { configurable: true, value: () => Promise.resolve() });
+Object.defineProperty(dom.window.HTMLMediaElement.prototype, "pause", { configurable: true, value: () => undefined });
+Object.defineProperty(dom.window.HTMLCanvasElement.prototype, "getContext", { configurable: true, value: () => null });
 let scrollHits: string[] = [];
 (dom.window as unknown as { Element: { prototype: { scrollIntoView: (this: unknown) => void } } }).Element.prototype.scrollIntoView = function (this: unknown) {
   const el = this as { id?: string };
@@ -53,7 +59,17 @@ async function main() {
   const React = await import("react");
   const { createRoot } = await import("react-dom/client");
   const { emptyProgress, TOTAL_DAYS } = await import("../lib/types");
-  const act = (React as unknown as { act: (cb: () => void) => void }).act;
+  type TestAct = {
+    (cb: () => void): void;
+    (cb: () => Promise<void>): Promise<void>;
+  };
+  const act = (React as unknown as { act: TestAct }).act;
+  const flushAsync = async () => {
+    await act(async () => {
+      await Promise.resolve();
+      await new Promise<void>((resolve) => setTimeout(resolve, 0));
+    });
+  };
 
   const d0 = dom.window.document as unknown as Document;
   const rootEl = d0.getElementById("root")!;
@@ -988,17 +1004,24 @@ const hasFile = txt().includes("صوتٌ من الدار");
     const vorher = Object.keys(loadProgress().fehler ?? {}).length;
     mount(React.createElement(TaskView, { task: { id: "t-" + g, kind: "grammatik" as const, titleDe: "G", titleAr: "ق", minutes: 15, topicId: g }, ...props }));
     const falschOpt = items[0].optionen.find((o: string) => o !== items[0].antwort)!;
-    const fb = btn(falschOpt);
+    const fb = Array.from(rootEl.querySelectorAll('[data-testid="grammar-bruecken-block"] button')).find(
+      (b) => (b.textContent ?? "").trim() === falschOpt && !(b as HTMLButtonElement).disabled,
+    ) as HTMLElement | undefined;
     ok(!!fb, "XXXVI1 خيارٌ خاطئٌ متاحٌ للنقر");
-    if (fb) click(fb as HTMLElement);
-    ok(true, "XXXVI2 temp disabled");
-    ok(true, "XXXVI3 temp disabled");
+    if (fb) click(fb);
+    ok((fb?.textContent ?? "").startsWith("❌"), "XXXVI2 الخيار الخاطئ يُوسَم بصرياً بعلامة ❌ بعد النقر");
+    ok(txt().includes(items[0].erklaerungAr), "XXXVI3 الخطأ يكشف تفسير الشفرة العربية فوراً ولا يكتفي باللون");
     const nachher = Object.keys(loadProgress().fehler ?? {}).length;
-    ok(true, "XXXVI4 temp disabled");
-    const eintrag = Object.values(loadProgress().fehler ?? {}).find((f) => (f as { quelle?: string }).quelle === "Eselsbrücke") as { ar?: string; art?: string } | undefined;
-    ok(true, "XXXVI5 temp disabled");
-    ok(true, "XXXVI6 temp disabled");
-    ok(true, "XXXVI7 temp disabled");
+    ok(nachher === vorher + 1, "XXXVI4 الخطأ يضيف سجلاً واحداً بالضبط إلى دفتر الأخطاء");
+    const erwartetFalsch = `${items[0].frageDe} → ${falschOpt}`;
+    const eintrag = Object.values(loadProgress().fehler ?? {}).find((f) => f.falsch === erwartetFalsch);
+    ok(eintrag?.quelle === "Eselsbrücke", "XXXVI5 سجل الخطأ يحمل مصدر Eselsbrücke الصريح");
+    ok(eintrag?.art === items[0].kat && eintrag?.ar === `شفرةُ الحفظ — ${items[0].erklaerungAr}`,
+      "XXXVI6 فئة السجل وتفسيره يطابقان سؤال الشفرة نفسه");
+    const erwartetRichtig = items[0].art === "artikel"
+      ? `${items[0].antwort} ${items[0].frageDe.replace("___ ", "")}`
+      : items[0].antwort;
+    ok(eintrag?.richtig === erwartetRichtig, "XXXVI7 دفتر الأخطاء يحفظ الجواب الصحيح القابل للمراجعة");
   }
 
 
@@ -2158,7 +2181,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
   /* ═══════════ R288 — M8 تأكيد البطاقات + M9 إعادة كتابة 48س + M4 معايرة ═══════════ */
   {
     const { loadProgress, saveProgress } = await import("../lib/store");
-    saveProgress({ ...loadProgress(), fehler: {} });
+    act(() => { saveProgress({ ...loadProgress(), fehler: {} }); });
     const { FehlerKartenWahl } = await import("../components/fehlerkarten");
     mount(React.createElement(FehlerKartenWahl, {
       quelle: "Test",
@@ -2174,9 +2197,12 @@ const hasFile = txt().includes("صوتٌ من الدار");
     const fehlerDanach = Object.values(loadProgress().fehler ?? {}) as { falsch: string }[];
     ok(fehlerDanach.length === 1 && fehlerDanach[0].falsch === "der Hundin", "R288b المؤكَّد وحده يدخل دفتر الأخطاء — وما أُلغي تأكيده لا يدخل");
 
-    saveProgress({ ...loadProgress(), wiederschreiben: [{ id: "ws-test", erstellt: "2026-10-15T10:00:00.000Z", faellig: "2026-10-17T10:00:00.000Z", absatz: "Ich habe müde und ich gehe nach Hause.", spalten: ["grammatik"], status: "offen" as const }] });
+    act(() => {
+      saveProgress({ ...loadProgress(), wiederschreiben: [{ id: "ws-test", erstellt: "2026-10-15T10:00:00.000Z", faellig: "2026-10-17T10:00:00.000Z", absatz: "Ich habe müde und ich gehe nach Hause.", spalten: ["grammatik"], status: "offen" as const }] });
+    });
     const { WiederschreibenKarte } = await import("../components/wiederschreiben");
     mount(React.createElement(WiederschreibenKarte, { quelleText: "" }));
+    await flushAsync();
     const eingabe = rootEl.querySelector('[data-testid="wiederschreiben-input-ws-test"]') as HTMLTextAreaElement | null;
     ok(!!rootEl.querySelector('[data-testid="wiederschreiben-karte"]') && !!eingabe, "R288c بطاقة إعادة الكتابة المستحقّة (M9) تُرسم مع فقرة الأصل");
     if (eingabe) typeIn(eingabe, "Ich bin heute zu Hause und lerne Deutsch.");
@@ -2187,7 +2213,9 @@ const hasFile = txt().includes("صوتٌ من الدار");
     const { alleVokabeln } = await import("../lib/content");
     const ersteKarte = alleVokabeln[0];
     const jetIso = new Date().toISOString();
-    saveProgress({ ...loadProgress(), srs: { [ersteKarte.id]: { ease: 2.5, interval: 2, due: jetIso, reps: 5, lapses: 3, introduced: jetIso, stab: 2 } } });
+    act(() => {
+      saveProgress({ ...loadProgress(), srs: { [ersteKarte.id]: { ease: 2.5, interval: 2, due: jetIso, reps: 5, lapses: 3, introduced: jetIso, stab: 2 } } });
+    });
     const { KalibrierungPanel } = await import("../components/kalibrierung");
     mount(React.createElement(KalibrierungPanel, { progress: loadProgress() as never }));
     ok(!!rootEl.querySelector('[data-testid="kalibrierung-panel"]') && txt().includes(ersteKarte.de), "R288e لوحة المعايرة (M4) تعرض البطاقة العنيدة باسمها وزرَّي إصلاحها");
@@ -3880,6 +3908,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
   {
     const { OfflineKarte } = await import("../components/offline");
     mount(React.createElement(OfflineKarte));
+    await flushAsync();
     ok(!!rootEl.querySelector('[data-testid="offline-voll-download"]') && txt().includes("نحو 64 MB"),
       "CIII1 بطاقة عدم الاتصال تعرض تنزيل الصوت الكامل بحجمه الحقيقي قبل أيّ نقرة");
   }
@@ -4052,7 +4081,14 @@ const hasFile = txt().includes("صوتٌ من الدار");
 {
   const { FehlerGrenze } = await import("../components/fehlergrenze");
   const Kaputt = () => { throw new Error("Testfehler"); };
-  mount(React.createElement(FehlerGrenze, null, React.createElement(Kaputt)));
+  const consoleError = console.error;
+  try {
+    // React logs the deliberately thrown probe even though FehlerGrenze catches it.
+    console.error = () => undefined;
+    mount(React.createElement(FehlerGrenze, null, React.createElement(Kaputt)));
+  } finally {
+    console.error = consoleError;
+  }
   ok(!!rootEl.querySelector('[data-testid="fehlergrenze-karte"]') && !!rootEl.querySelector('[data-testid="fehlergrenze-retry"]'), "R303a عطل مكوّن يُحتَوى في بطاقة عربية مع زرّ إعادة — التطبيق لا يبيضّ");
 }
 

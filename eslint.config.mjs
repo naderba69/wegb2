@@ -7,6 +7,16 @@ import jsxA11y from "eslint-plugin-jsx-a11y";
 import nextPlugin from "@next/eslint-plugin-next";
 
 export default [
+  // Keep the Next plugin visible at the root config level. Next 15 inspects the
+  // config file itself during `next build`; a files-only declaration runs the
+  // rules correctly but produces a false "plugin not detected" warning.
+  {
+    plugins: { "@next/next": nextPlugin },
+    // Next 15's build-time detector assumes a rules object once it sees the
+    // plugin. A disabled sentinel keeps that legacy detector safe; the scoped
+    // config below replaces it with the full recommended/Core Web Vitals set.
+    rules: { "@next/next/google-font-display": "off" },
+  },
   {
     files: ["app/**/*.{ts,tsx}", "components/**/*.{ts,tsx}", "lib/**/*.ts"],
     languageOptions: {
@@ -17,7 +27,6 @@ export default [
       "@typescript-eslint": tseslint.plugin,
       "react-hooks": reactHooks,
       "jsx-a11y": jsxA11y,
-      "@next/next": nextPlugin,
     },
     rules: {
       "@typescript-eslint/no-unused-vars": ["error", { argsIgnorePattern: "^_", varsIgnorePattern: "^_", caughtErrors: "none" }],

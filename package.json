@@ -9,6 +9,9 @@
     "smoke": "esbuild scripts/engine_smoke.ts --bundle --platform=node --format=cjs --jsx=transform --tsconfig=tsconfig.json --outfile=.cache/smoke.cjs --log-level=warning && node .cache/smoke.cjs",
     "audit:content": "esbuild scripts/audit_inhalt.ts --bundle --platform=node --format=cjs --tsconfig=tsconfig.json --outfile=.cache/audit.cjs --log-level=warning && node .cache/audit.cjs",
     "audit:words": "tsx scripts/wort_fuer_wort_audit.ts",
+    "audit:repo": "python3 scripts/repo_audit.py",
+    "audit:plan": "tsx scripts/student_audit.ts",
+    "audit:lighthouse": "npx --yes @lhci/cli@0.12.x autorun",
     "gen:tools": "node scripts/gen_tools.mjs",
     "extract:tools": "node scripts/extract_tools.mjs",
     "build": "next build",
@@ -16,7 +19,7 @@
     "banken": "node scripts/copy_banks.mjs",
     "prebuild": "npm run banken",
     "predev": "npm run banken",
-    "audio:qc": "python3 scripts/audio_qc_all.py",
+    "audio:qc": "python3 scripts/run_audio_qc.py",
     "lint": "eslint app components lib",
     "postinstall": "node scripts/patch_jsx_a11y_minimatch.mjs",
     "audit:deps": "npm audit --audit-level=moderate"

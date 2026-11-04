@@ -19,6 +19,10 @@ jobs:
         run: npm ci
       - name: Tools-Generator (YAML → lib/ — R402 P2)
         run: npm run gen:tools && git diff --exit-code lib/ content/tools.yaml
+      - name: Repository-Audit (alle getrackten Dateien)
+        run: npm run audit:repo
+      - name: Plan-Audit (378 Tage)
+        run: npm run audit:plan
       - name: TypeScript
         run: ./node_modules/.bin/tsc --noEmit
       - name: ESLint (toter Code, R303)
@@ -33,7 +37,7 @@ jobs:
         run: npm run audit:content
       - name: Wort-für-Wort-Audit (bestätigte Blocker)
         run: npm run audit:words
-      - name: Lighthouse CI (a11y ≥0.9)
-        run: npx --yes @lhci/cli@0.12.x autorun || echo "LHCI warn — requires build artifacts"
       - name: Produktions-Build
         run: npm run build
+      - name: Lighthouse CI (a11y ≥0.9، مانع)
+        run: npm run audit:lighthouse

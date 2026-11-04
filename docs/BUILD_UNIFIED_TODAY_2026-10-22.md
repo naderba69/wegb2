@@ -210,10 +210,10 @@ function stepOf(task: DayTask, dayType: DayType): StepId {
 - [x] **1B — Stepper Shell:** `<TodayStepper>` بخمس نقاط + خط + قفل، مع إبقاء بطاقة المهمة الحالية الواضحة
 - [x] **1C — Grouping:** تجميع `plan.tasks` إلى 5 خطوات في `lib/today-steps.ts` + عدّاد مهام لكل خطوة؛ `buildDay` لا يتغير
 - [x] **1D — Gating UI:** قفل مرئي (🔒) + نص سبب + تقدم شريط أفقي؛ التسليم الخاطئ يفتح التالية ويعود للعلاج بدل الحبس
-- [x] **1E — Preserve Gates:** كل data-testid القديم بقي والجديد أُضيف — smoke **1934/0** في 2026-11-04
+- [x] **1E — Preserve Gates:** كل data-testid القديم بقي والجديد أُضيف — smoke **1936/0** في 2026-11-04
 - [x] **1F — Lesson Embed:** مهمة القواعد داخل «اليوم» تعرض `<LektionWizard embedded>` فعلياً وتعيد نتيجتها إلى مشغّل اليوم (2026-11-04)
 
-**معيار النجاح:** `npm run smoke 1934/0` + `npm run interaktiv 929/0` + `npm run build 15/15`؛ K335 يفحص تجميع جميع الأيام 1–378، لا ثلاث عينات فقط.
+**معيار النجاح:** `npm run smoke 1936/0` + `npm run interaktiv 929/0` بلا stderr + `npm run build 15/15`؛ K335 يفحص تجميع جميع الأيام 1–378، لا ثلاث عينات فقط.
 
 ### Sprint 2 — الاستوديو التحريري 2.0 (Lesson Content) — مكتمل
 - [x] 2A — Spatial Contiguity: قاعدة + مثال في نفس الكارت (`lesson-rule--paired`)
@@ -241,6 +241,12 @@ function stepOf(task: DayTask, dayType: DayType): StepId {
 - [x] 5C — لوحة محلية + CSV، بلا نصوص إجابات أو شبكة أو ملء رجعي (`K336` + `LXXI5–6`)
 - [ ] 5D — تقييم الأهداف على عينة مستخدمين فعلية؛ لا يُستبدل ببيانات الاختبارات الاصطناعية
 
+### Sprint 6 — سلامة المستودع والبوابات — مكتمل
+- [x] 6A — `audit:repo`: كل ملف متتبع أو جديد يمر عبر فحص الصياغة والترميز والبيانات والروابط وترويسات الأصول
+- [x] 6B — `audit:plan`: جميع الأيام 1–378 و3540 مهمة، بلا يوم فارغ أو مرجع/جواب معطوب
+- [x] 6C — `audio:qc`: بيئة Python معزولة بتبعيات مثبتة؛ 1099/1099 MP3 بلا شذوذ أو فجوة
+- [x] 6D — إزالة ستة اختبارات نجاح وهمي وتنظيف stderr؛ Lighthouse حاجز a11y مانع بعد build بلا رفع عام
+
 ---
 
 ## 6) ما لا نلمسه (Hard Gates)
@@ -261,7 +267,7 @@ function stepOf(task: DayTask, dayType: DayType): StepId {
 |---|---|---|---|
 | Time to First Success | غير مقاس — لا baseline صادق | القياس المحلي بدأ من هذا الإصدار | <1.5 د هدف، لا نتيجة بعد |
 | إكمال الخطوات | غير مقاس — لا baseline صادق | يُقاس بلوغ ⑤ وإغلاق اليوم منفصلين | 85% هدف، لا نتيجة بعد |
-| smoke | 1916/0 | 1934/0 | بلا تراجع |
+| smoke | 1916/0 | 1936/0 | بلا تراجع |
 | build | 15/15 | 15/15 | 15/15 |
 | إحساس «مميز لا مكرر» | — | Stepper + Editorial | + Authentic Reader |
 
