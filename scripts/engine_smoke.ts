@@ -118,7 +118,14 @@ import { buildSkillKlausur, SKILL_LABELS, type SkillKey } from "../lib/klausur";
 import { karteninCsv, allesInCsv, exportKarten } from "../lib/karten-export";
 import { analysiere, bewerteAussprache, silbenImText, zielDauer } from "../lib/aussprache";
 import { pruefeText, pruefeBrief, bewerteSchreiben, heilUebungen, effektiveSchwere, DISPUT_SCHWELLE } from "../lib/schreibpruefer";
-import { feedbackQuote, fehlerHeilung, pruefungsKurve } from "../lib/metriken";
+import {
+  feedbackQuote,
+  fehlerHeilung,
+  pruefungsKurve,
+  recordTodayUxClosed,
+  recordTodayUxSubmission,
+  todayUxSummary,
+} from "../lib/metriken";
 import { buildModulPruefung, bewerte, darfWiederholen, modulFrei, tagGesperrt, rettungsplan } from "../lib/modulpruefung";
 import { emptyProgress, TOTAL_DAYS, CURRICULUM_SCHEDULE_VERSION, type SrsState, type Tempo } from "../lib/types";
 import { groupTasksByTodayStep, todayStepOf, todayTaskSubmitted } from "../lib/today-steps";
@@ -14393,6 +14400,48 @@ function collectR262(dir: string, out: string[] = []): string[] {
   ok(wizardK335.includes("parsePitfallContrast(p.de)") && wizardK335.includes("lesson-pitfall-side--wrong") &&
     wizardK335.includes("lesson-pitfall-side--right") && wizardK335.includes("lesson-pitfall--note"),
     "K335i الاستوديو يعرض ✗/✓ فقط للمصدر ذي الزوج الصريح، ويعرض بقية التنبيهات كفروق استعمال صادقة بلا شطبٍ مضلل");
+}
+
+
+/* ═══ K336 — قياس تجربة «اليوم»: زمن نشط محلي، بلا تاريخ مُختلق أو telemetry ═══ */
+{
+  let ux: Progress["todayUx"] = undefined;
+  ux = recordTodayUxSubmission(ux, 1, 30_000, 1, false, true);
+  ux = recordTodayUxSubmission(ux, 1, 60_000, 2, false, true);
+  ux = recordTodayUxSubmission(ux, 1, 90_000, 3, true, true);
+  ux = recordTodayUxSubmission(ux, 1, 180_000, 5, false, true);
+  ux = recordTodayUxClosed(ux, 1, 240_000);
+  ux = recordTodayUxSubmission(ux, 2, 45_000, 3, true, false);
+  ux = recordTodayUxClosed(ux, 2, 120_000);
+
+  const day1 = ux.days[1];
+  ok(day1.firstAttemptActiveMs === 30_000 && day1.firstSuccessActiveMs === 90_000 &&
+    day1.reachedStep5ActiveMs === 180_000 && day1.closedActiveMs === 240_000 && day1.hasStep5,
+    "K336a أول محاولة/نجاح وبلوغ ⑤ والإغلاق تُثبَّت مرةً واحدة بزمن الجلسة النشط لا بتقدير المهمة");
+
+  const uxRepeated = recordTodayUxSubmission(ux, 1, 300_000, 5, true, true);
+  ok(uxRepeated.days[1].firstAttemptActiveMs === 30_000 && uxRepeated.days[1].firstSuccessActiveMs === 90_000 &&
+    uxRepeated.days[1].reachedStep5ActiveMs === 180_000 && uxRepeated.days[1].closedActiveMs === 240_000,
+    "K336b إعادة التسليم لا تعيد كتابة المعالم الأولى ولا تحسّن الأرقام بأثر رجعي");
+
+  const summaryK336 = todayUxSummary({ ...emptyProgress, todayUx: ux } as Progress);
+  ok(summaryK336.attemptedDays === 2 && summaryK336.firstSuccessDays === 2 && summaryK336.medianFirstSuccessMin === 1.1 &&
+    summaryK336.step5EligibleDays === 1 && summaryK336.step5ReachedDays === 1 && summaryK336.step5ReachedPct === 100 &&
+    summaryK336.closedDays === 2 && summaryK336.closedPct === 100,
+    "K336c الملخص يحسب وسيط أول نجاح وعينة ⑤ والإغلاق بمقاماتها الصحيحة؛ الأيام بلا ⑤ لا تخفّض نسبة بلوغها");
+
+  const emptyUxK336 = todayUxSummary(emptyProgress);
+  ok(emptyUxK336.attemptedDays === 0 && emptyUxK336.medianFirstSuccessMin === null &&
+    emptyUxK336.step5ReachedPct === null && emptyUxK336.closedPct === null,
+    "K336d لا بيانات = null وعينة صفر، لا نجاح صفري مضلل ولا تاريخ رجعي مفبرك");
+
+  const pageK336 = readFileSync("app/page.tsx", "utf8");
+  const storeK336 = readFileSync("lib/store.ts", "utf8");
+  const reportK336 = readFileSync("components/berichte.tsx", "utf8");
+  ok(pageK336.includes("activeMs: sessionSnapshot.totalMs") && pageK336.includes("hasStep5: plan.tasks.some") &&
+    storeK336.includes("recordTodayUxSubmission(p.todayUx") && storeK336.includes("recordTodayUxClosed(p.todayUx") &&
+    reportK336.includes('data-testid="today-ux-metrics"') && reportK336.includes("بيانات وصفية محلية"),
+    "K336e المسار الحي يمرّر زمن المؤقت النشط، والتقارير تعرض القياس المحلي وحدوده بلا شبكة أو ادعاء عينة جماعية");
 }
 
 

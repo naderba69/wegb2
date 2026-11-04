@@ -17,6 +17,8 @@ import { checkAbzeichen } from "./spiel";
 import { logK, KIND_KOMPETENZ, FEHLER_ZU_KOMPETENZ } from "./kompetenz";
 import { progressKeyActive } from "./profiles";
 import { migrateCurriculumSchedule } from "./curriculum-schedule";
+import { recordTodayUxClosed, recordTodayUxSubmission } from "./metriken";
+import type { TodayStepId } from "./today-steps";
 
 export const PROGRESS_EVENT = "weg-progress-changed";
 
@@ -141,8 +143,18 @@ export function useProgress() {
   }, []);
 
   /** تسجيل نتيجة مهمة — النجاح ≥80% (ومهمةُ التحقق تُغلِق سجلَّ درسِها استقلالاً أو حاجةً) */
-    const submitTask = useCallback(
-    (day: number, taskId: string, score: number, total: number, kind?: TaskKind, geplantMin?: number, verifyFor?: string, minutenEffektiv?: number) => {
+  const submitTask = useCallback(
+    (
+      day: number,
+      taskId: string,
+      score: number,
+      total: number,
+      kind?: TaskKind,
+      geplantMin?: number,
+      verifyFor?: string,
+      minutenEffektiv?: number,
+      ux?: { activeMs: number; step: TodayStepId; hasStep5: boolean },
+    ) => {
       update((p) => {
         const prev = p.plan.tasks[taskId];
         const passed = total > 0 && score / total >= 0.8;
@@ -169,6 +181,9 @@ export function useProgress() {
             {
               ...p,
               verify,
+              todayUx: ux
+                ? recordTodayUxSubmission(p.todayUx, day, ux.activeMs, ux.step, passed, ux.hasStep5)
+                : p.todayUx,
               xp: (p.xp ?? 0) + (result.passed ? 15 : 5),
               plan: { ...p.plan, tasks: { ...p.plan.tasks, [taskId]: result } },
             },
@@ -189,11 +204,15 @@ export function useProgress() {
       dayTotal: number,
       tasksDone: number,
       tasksTotal: number,
-      debts: DebtItem[]
+      debts: DebtItem[],
+      activeSessionMs?: number,
     ) => {
       update((p) =>
         checkAbzeichen({
           ...p,
+          todayUx: Number.isFinite(activeSessionMs)
+            ? recordTodayUxClosed(p.todayUx, day, activeSessionMs as number)
+            : p.todayUx,
           xp: (p.xp ?? 0) + 30,
           plan: {
             ...p.plan,

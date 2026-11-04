@@ -11,6 +11,7 @@ import { grammarMap } from "@/lib/content";
 import { ritualUrteil, aufgabeGesperrt } from "@/lib/ritual";
 import { KindIcon } from "@/components/dirb/icons";
 import TodayStepper from "@/components/akademie/TodayStepper";
+import { todayStepOf } from "@/lib/today-steps";
 import { stationOfTask, STATIONEN } from "@/components/stationen";
 import { LernPfad } from "@/components/lernpath";
 import { ProfilWahl } from "@/components/profil";
@@ -271,14 +272,28 @@ export default function Today() {
     localStorage.removeItem("weg-abend"); // أوّلُ مهمّةٍ في اليومِ الجديدِ تُعيدُ قفلَ التدريب الحرّ
     const task = plan.tasks[stepFrei];
     if (!task) return;
-    session.checkpoint();
+    const sessionSnapshot = session.checkpoint();
     const local = localOf(task.id);
     const actualTaskMinutes = session.taskMinutes(task.id);
     // 🎯 إنجازُ تدريبِ درسٍ يجدول تحققَ استقلاله بعد 3 أيام (مهمة جديدة لا إعادة)
     if (task.topicId && (grammarMap[task.topicId]?.verify ?? []).length > 0 && !progress.verify?.[task.topicId]) {
       planeVerifikation(task.topicId, day);
     }
-    submitTask(day, task.id, local.score, local.total, task.kind, task.minutes, task.verifyFor, actualTaskMinutes);
+    submitTask(
+      day,
+      task.id,
+      local.score,
+      local.total,
+      task.kind,
+      task.minutes,
+      task.verifyFor,
+      actualTaskMinutes,
+      {
+        activeMs: sessionSnapshot.totalMs,
+        step: todayStepOf(task),
+        hasStep5: plan.tasks.some((candidate) => todayStepOf(candidate) === 5),
+      },
+    );
     clearPartialTaskState(task.id);
     setPoints((old) => {
       const next = { ...old };
@@ -303,7 +318,7 @@ export default function Today() {
     // 🔒 R309: لا تُفتَحُ وحدةٌ قبلَ اجتيازِ امتحانِ سابقتِها (lib/modulpruefung.ts) —
     // قفلٌ فعلي حقيقي هنا لا مطالبة إعلامية فقط: الإغلاق يتوقّف فعلًا عند هذه الحدود.
     if (modulGate.gesperrt) { oeffneModulPruefungJetzt(); return; }
-    session.pause();
+    const sessionSnapshot = session.pause();
     const merged: Record<string, { done: boolean; passed: boolean; score: number; total: number; attempts: number }> = {};
     for (const tk of plan.tasks) {
       const r = progress.plan.tasks[tk.id];
@@ -320,7 +335,7 @@ export default function Today() {
     }
     const ds = dayScore(plan, merged as never);
     const debts = debtsFrom(plan, merged as never);
-    closeDay(day, ds.score, Math.max(ds.total, 1), ds.done, ds.tasksTotal, debts);
+    closeDay(day, ds.score, Math.max(ds.total, 1), ds.done, ds.tasksTotal, debts, sessionSnapshot.totalMs);
     for (const task of plan.tasks) clearPartialTaskState(task.id);
     try { localStorage.removeItem(dayPointsKey(day)); } catch { /* التخزين محظور */ }
     localStorage.setItem("weg-abend", "1"); // مساءُ ما بعدِ الإغلاق: بابُ «تدرّب» يُفتح

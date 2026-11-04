@@ -2686,6 +2686,10 @@ const hasFile = txt().includes("صوتٌ من الدار");
       fehler: { y: { key: "y", falsch: "a", richtig: "b", art: "s", ar: "x", treffer: 3, srs: { ease: 2.5, interval: 0, due: new Date().toISOString(), reps: 3, lapses: 3, learning: true } } },
       exams: { 10: { score: 60, passed: false }, 20: { score: 90, passed: true } },
       modulPruefungen: { 2: { versuche: 3, best: 70, bestanden: false } },
+      todayUx: { version: 1 as const, days: {
+        1: { firstAttemptActiveMs: 15_000, firstSuccessActiveMs: 60_000, hasStep5: true, reachedStep5ActiveMs: 180_000, closedActiveMs: 240_000 },
+        2: { firstAttemptActiveMs: 10_000, firstSuccessActiveMs: 120_000, hasStep5: true },
+      } },
     };
     mount(React.createElement(BerichteZentrum, { progress: prog as never, name: "مقياس" }));
     const hdr = btn("BerichteZentrum");
@@ -2694,6 +2698,13 @@ const hasFile = txt().includes("صوتٌ من الدار");
     ok((rootEl.querySelector('[data-testid="metrik-feedback"]')?.textContent ?? "").includes("50"), "LXXI2 التغذيةُ 1/2 = 50٪");
     ok((rootEl.querySelector('[data-testid="metrik-heilung"]')?.textContent ?? "").includes("عالق"), "LXXI3 تنبيهُ الخطأِ العالق");
     ok((rootEl.querySelector('[data-testid="metrik-kurve"]')?.textContent ?? "").includes("أُعيدت مرتين"), "LXXI4 تنبيهُ الوحدةِ المعادة");
+    const uxPanel = rootEl.querySelector('[data-testid="today-ux-metrics"]');
+    ok(!!uxPanel && (rootEl.querySelector('[data-testid="ux-first-success"]')?.textContent ?? "").includes("1.5") &&
+      (rootEl.querySelector('[data-testid="ux-step5-reached"]')?.textContent ?? "").includes("50") &&
+      (rootEl.querySelector('[data-testid="ux-day-closed"]')?.textContent ?? "").includes("50"),
+      "LXXI5 قياس تجربة اليوم يعرض وسيط أول نجاح وبلوغ ⑤ والإغلاق من العينة المحلية بمقامات صحيحة");
+    ok((uxPanel?.textContent ?? "").includes("بلا نصوص إجابات") && (uxPanel?.textContent ?? "").includes("ليست نتيجة عامة"),
+      "LXXI6 الواجهة تصرّح أن القياس محلي وصفي، بلا نصوص أو إرسال أو ادعاء عينة جماعية");
   }
 
 

@@ -10,7 +10,7 @@ import { TOTAL_DAYS } from "@/lib/types";
 import { kompetenzWerte, b2Score, pruefungsBereitschaft, bereitBand, KOMPETENZEN, KOMPETENZ_AR, band } from "@/lib/kompetenz";
 import { fehlerFamilien, resistenteFehler, schwere, URSACHEN, ursacheVon } from "@/lib/fehler";
 import { planPct } from "@/lib/plan";
-import { feedbackQuote, fehlerHeilung, pruefungsKurve } from "@/lib/metriken";
+import { feedbackQuote, fehlerHeilung, pruefungsKurve, todayUxSummary } from "@/lib/metriken";
 import { noteFromPct } from "@/lib/grader";
 import { prognose } from "@/lib/prognose";
 import { sprechHeute } from "@/lib/sprechziel";
@@ -121,6 +121,13 @@ function csvHtml(p: Progress): string {
   zeilen.push(`metrik_heilung_stuck,${m2.stuck}`);
   zeilen.push(`metrik_kurve_trend,${m3.trend ?? ""}`);
   zeilen.push(`metrik_kurve_wiederholt,${m3.wiederholt.join("|")}`);
+  const ux = todayUxSummary(p);
+  zeilen.push(`ux_erste_erfolg_median_min,${ux.medianFirstSuccessMin ?? ""}`);
+  zeilen.push(`ux_erste_erfolg_basis,${ux.firstSuccessDays}/${ux.attemptedDays}`);
+  zeilen.push(`ux_schritt5_erreicht_pct,${ux.step5ReachedPct ?? ""}`);
+  zeilen.push(`ux_schritt5_basis,${ux.step5ReachedDays}/${ux.step5EligibleDays}`);
+  zeilen.push(`ux_tag_abgeschlossen_pct,${ux.closedPct ?? ""}`);
+  zeilen.push(`ux_tag_abgeschlossen_basis,${ux.closedDays}/${ux.attemptedDays}`);
   for (const f of fehlerFamilien(p)) zeilen.push(`familie_${f.art},${f.gl.length}`);
   zeilen.push(`srs_karten,${Object.keys(p.srs ?? {}).length}`);
   for (const [k, v] of Object.entries(p.exams ?? {})) zeilen.push(`pruefung_tag_${k},${v.score}`);
@@ -289,6 +296,43 @@ export function BerichteZentrum({ progress, name = "المتعلّم" }: { progr
                     </>
                   )}
                 </div>
+              </div>
+            );
+          })()}
+
+          {/* قياسات تجربة «اليوم»: محلية وصفية، لا تحليلات جماعية ولا ادعاء نتيجة ميدانية. */}
+          {(() => {
+            const ux = todayUxSummary(progress);
+            return (
+              <div data-testid="today-ux-metrics" className="card" style={{ padding: "0.9rem 1.1rem", background: "var(--color-paper)", fontSize: "0.85rem" }}>
+                <div style={{ fontWeight: 900, marginBottom: "0.35rem" }}>🧭 قياس تجربة «اليوم» — على هذا الجهاز فقط</div>
+                {ux.attemptedDays === 0 ? (
+                  <p style={{ margin: 0, color: "var(--color-ink2)", lineHeight: 1.8 }}>
+                    لا عيّنة بعد. يبدأ القياس مع أول مهمة تُسلَّم بعد هذا التحديث، ويحسب وقت الجلسة النشط فقط.
+                  </p>
+                ) : (
+                  <div style={{ display: "grid", gap: "0.3rem" }}>
+                    <div data-testid="ux-first-success">
+                      <strong>أول نجاح:</strong>{" "}
+                      {ux.medianFirstSuccessMin === null
+                        ? `لم يحدث نجاح بعد في ${ux.attemptedDays} يوم مقاس.`
+                        : <><span className="rtl-num" style={{ fontWeight: 900 }}>{ux.medianFirstSuccessMin.toFixed(1)}</span> دقيقة وسيطًا · <span className="rtl-num">{ux.firstSuccessDays}/{ux.attemptedDays}</span> أيام لها نجاح مسجّل.</>}
+                    </div>
+                    <div data-testid="ux-step5-reached">
+                      <strong>بلوغ المحطة ⑤:</strong>{" "}
+                      {ux.step5ReachedPct === null
+                        ? "لا يوم مقاس احتوى محطة ⑤ بعد."
+                        : <><span className="rtl-num" style={{ fontWeight: 900 }}>{ux.step5ReachedPct}٪</span> · <span className="rtl-num">{ux.step5ReachedDays}/{ux.step5EligibleDays}</span> من الأيام المؤهلة.</>}
+                    </div>
+                    <div data-testid="ux-day-closed">
+                      <strong>إكمال مسار اليوم:</strong>{" "}
+                      <span className="rtl-num" style={{ fontWeight: 900 }}>{ux.closedPct ?? 0}٪</span> · <span className="rtl-num">{ux.closedDays}/{ux.attemptedDays}</span> أيام أُغلقت عاديًا.
+                    </div>
+                  </div>
+                )}
+                <p style={{ margin: "0.45rem 0 0", color: "var(--color-ink2)", fontSize: "0.75rem", lineHeight: 1.75 }}>
+                  بيانات وصفية محلية بلا نصوص إجابات ولا إرسال شبكي. الأيام السابقة للتحديث غير مفبركة ولا تدخل العيّنة؛ وهذه ليست نتيجة عامة لمستخدمين آخرين.
+                </p>
               </div>
             );
           })()}
