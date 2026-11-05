@@ -22,7 +22,15 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "adaptive-engine",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "الخوارزمية المقترحة تبسّط FSRS ولا تكفي لإحلال محرك الجدولة الحالي؛ تُراجع الصيغة والمصدر ثم تقارن سلوكياً مع lib/srs.ts قبل أي اعتماد.",
+        "candidateEvidence": [
+          "lib/srs.ts"
+        ]
       }
     },
     {
@@ -43,7 +51,15 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "research-guidance",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "العلاقة بين النوم والتثبيت مفيدة كتوجيه عام، لكن الجدول والسعة الرقمية في النموذج غير موثقين ولا ينبغي تحويلهما إلى وصفة صحية أو إلزام يومي.",
+        "candidateEvidence": [
+          "components/gesundheit.tsx"
+        ]
       }
     },
     {
@@ -64,7 +80,15 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "adaptive-engine",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "معايرة الصعوبة واعدة، لكن حدود الخطأ 12–28٪ لا تحمل دليلاً سياقياً أو بيانات متعلمين؛ يلزم بروتوكول ميداني ومقارنة مسبقة قبل وصلها بالخطة.",
+        "candidateEvidence": [
+          "lib/plan.ts"
+        ]
       }
     },
     {
@@ -85,7 +109,15 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "adaptive-engine",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "الاسترجاع الموسع موجود مفهوماً في SRS الحالي؛ يلزم مقارنة جداول وفشل/إعادة وتحديد هل هو دمج أم بديل قبل إنشاء محرك ثانٍ.",
+        "candidateEvidence": [
+          "lib/srs.ts"
+        ]
       }
     },
     {
@@ -106,7 +138,15 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "instructional-design",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "التشابك مطبق أصلاً في تنويع مهام اليوم، لكن الدالة العامة لا تثبت أثراً تعليمياً؛ المطلوب خريطة إلى توزيع المهارات واختبار عدم التكتل.",
+        "candidateEvidence": [
+          "lib/plan.ts"
+        ]
       }
     },
     {
@@ -127,7 +167,15 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "learner-activity",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "أسئلة لماذا قابلة للتحويل إلى نشاط شرح ذاتي، لكنها تحتاج مطالبات مرتبطة بقواعد محددة ومعيار إجابة وإتاحة قبل وصلها بالمتعلم.",
+        "candidateEvidence": [
+          "content/grammar.json"
+        ]
       }
     },
     {
@@ -148,7 +196,13 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "learner-activity",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "الرسم التخطيطي نشاط اختياري محتمل، لكنه يحتاج تصميم حفظ/خصوصية وبديل غير بصري وتقييم فائدة؛ إرجاع تعليمات نصية وحده ليس أداة مكتملة.",
+        "candidateEvidence": []
       }
     },
     {
@@ -169,7 +223,15 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "instructional-design",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "الأمثلة المحسوسة موجودة في دروس القواعد، لكن الحد الأدنى العددي وحده لا يقيس تنوع السياق أو صحة المثال؛ يلزم معيار جودة وربط مباشر.",
+        "candidateEvidence": [
+          "content/grammar.json"
+        ]
       }
     },
     {
@@ -190,7 +252,13 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "instructional-design",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "نظرية التباين تصلح لمقارنة الأمثلة، لكن النموذج الحالي يعيد زوج نصوص فقط؛ يلزم تعريف الثابت والمتغير واختبار تعلم قبل التوصيل.",
+        "candidateEvidence": []
       }
     },
     {
@@ -211,7 +279,15 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "exam-transfer",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "التدريب الموافق لشكل القياس مهم لـB2، لكنه يعتمد على اكتمال مراجعة مصادر Goethe/telc؛ لا يعتمد قبل توقيع صيغة الامتحان وتوثيق الفروق التدريبية.",
+        "candidateEvidence": [
+          "content/accreditation-alignment.json"
+        ]
       }
     },
     {
@@ -232,7 +308,15 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "memory-theory",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "التباعد مقابل الحشد مغطى جزئياً في SRS؛ النسبة 0.2 ادعاء سياقي يحتاج مصدر وتجربة مقارنة قبل أن تصبح قاعدة منتج.",
+        "candidateEvidence": [
+          "lib/srs.ts"
+        ]
       }
     },
     {
@@ -253,7 +337,13 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "research-guidance",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "النسيان المستحث بالاسترجاع مفهوم بحثي لا نشاطاً مستقلاً للمتعلم؛ يبقى مبدأ تصميم حتى يثبت احتياج واضح وطريقة قياس غير مضللة.",
+        "candidateEvidence": []
       }
     },
     {
@@ -274,7 +364,13 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "assessment-method",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "أثر الاختبار الأمامي قد يدعم الاختبارات القبلية، لكن مكسب 15–25٪ غير موثق في السياق الحالي ويلزم تصميم لا يرهق المتعلم وقياس ميداني.",
+        "candidateEvidence": []
       }
     },
     {
@@ -295,7 +391,15 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "learner-activity",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "أثر التوليد موجود في مهام الإنتاج، لكن إخفاء أحرف الكلمة ليس دليلاً كافياً؛ يلزم ربط بمادة فعلية وتصحيح وتدرج صعوبة.",
+        "candidateEvidence": [
+          "lib/plan.ts"
+        ]
       }
     },
     {
@@ -316,7 +420,13 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "learner-activity",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "القراءة الجهرية قابلة للتطبيق، لكن معامل المكسب 1.15 غير موثق ولا يمكن قياس الجهر دون إدخال أو إقرار صريح؛ يلزم بديل لمن لا يستطيع النطق.",
+        "candidateEvidence": []
       }
     },
     {
@@ -337,7 +447,13 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "learner-activity",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "الإيماء مناسب لبعض الأفعال لكنه يحتاج نشاطاً اختيارياً وتعليمات آمنة وبدائل حركية/بصرية ومراجعة إتاحة قبل التوصيل.",
+        "candidateEvidence": []
       }
     },
     {
@@ -358,7 +474,15 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "multimodal-design",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "الترميز الألماني/العربي/الصورة موجود جزئياً في البطاقات، لكن وجود ثلاث قنوات لا يثبت الفاعلية؛ يلزم تدقيق الصور والحمل المعرفي وحقوقها.",
+        "candidateEvidence": [
+          "content/vocab.json"
+        ]
       }
     },
     {
@@ -379,7 +503,15 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "assessment-method",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "التوليد الخاطئ قد يكون مفيداً مع تغذية راجعة مضمونة، لكنه عالي المخاطر إذا رسخ خطأ أو غاب التصحيح؛ يلزم حارس سلوكي وتجربة مضبوطة.",
+        "candidateEvidence": [
+          "lib/fehler.ts"
+        ]
       }
     },
     {
@@ -400,7 +532,15 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "assessment-method",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "الاختبار القبلي ممكن داخل التشخيص، لكن معامل المنفعة غير موثق ويجب فصل التخمين غير المعاقب عن الدرجة وتوضيح أثره للمتعلم.",
+        "candidateEvidence": [
+          "lib/einstufung.ts"
+        ]
       }
     },
     {
@@ -421,7 +561,15 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "feedback-engine",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "توقيت التغذية الراجعة قرار محرك مهم، لكن عتبة 40٪ وتأخير عشر دقائق بلا دليل سياقي؛ يلزم تعريف نوع المهمة وتجربة ومؤشرات ضرر.",
+        "candidateEvidence": [
+          "lib/fehler.ts"
+        ]
       }
     },
     {
@@ -13879,7 +14027,14 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "merge-duplicate",
+        "classification": "duplicate-catalog-record",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "low",
+        "rationaleAr": "العنوان الألماني مطابق حرفياً للسجل 438؛ يُحفظ هذا المعرف للتتبع التاريخي ويُمنع تطويره كأداة مستقلة حتى لا يتضاعف القياس والتنفيذ.",
+        "candidateEvidence": [],
+        "canonicalId": 438
       }
     },
     {
@@ -14049,7 +14204,14 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "merge-duplicate",
+        "classification": "duplicate-catalog-record",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "low",
+        "rationaleAr": "العنوان الألماني مطابق حرفياً للسجل 539؛ يُحفظ هذا المعرف للتتبع التاريخي ويُمنع تطويره كأداة مستقلة حتى لا يتضاعف القياس والتنفيذ.",
+        "candidateEvidence": [],
+        "canonicalId": 539
       }
     },
     {
@@ -14576,7 +14738,14 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "merge-duplicate",
+        "classification": "duplicate-catalog-record",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "low",
+        "rationaleAr": "العنوان الألماني مطابق حرفياً للسجل 400؛ يُحفظ هذا المعرف للتتبع التاريخي ويُمنع تطويره كأداة مستقلة حتى لا يتضاعف القياس والتنفيذ.",
+        "candidateEvidence": [],
+        "canonicalId": 400
       }
     },
     {
@@ -15712,7 +15881,14 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "merge-duplicate",
+        "classification": "duplicate-catalog-record",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "low",
+        "rationaleAr": "العنوان الألماني مطابق حرفياً للسجل 490؛ يُحفظ هذا المعرف للتتبع التاريخي ويُمنع تطويره كأداة مستقلة حتى لا يتضاعف القياس والتنفيذ.",
+        "candidateEvidence": [],
+        "canonicalId": 490
       }
     },
     {
@@ -15756,7 +15932,14 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "merge-duplicate",
+        "classification": "duplicate-catalog-record",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "low",
+        "rationaleAr": "العنوان الألماني مطابق حرفياً للسجل 489؛ يُحفظ هذا المعرف للتتبع التاريخي ويُمنع تطويره كأداة مستقلة حتى لا يتضاعف القياس والتنفيذ.",
+        "candidateEvidence": [],
+        "canonicalId": 489
       }
     },
     {
@@ -15779,7 +15962,14 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "merge-duplicate",
+        "classification": "duplicate-catalog-record",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "low",
+        "rationaleAr": "العنوان الألماني مطابق حرفياً للسجل 488؛ يُحفظ هذا المعرف للتتبع التاريخي ويُمنع تطويره كأداة مستقلة حتى لا يتضاعف القياس والتنفيذ.",
+        "candidateEvidence": [],
+        "canonicalId": 488
       }
     },
     {
@@ -16033,7 +16223,14 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "merge-duplicate",
+        "classification": "duplicate-catalog-record",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "low",
+        "rationaleAr": "العنوان الألماني مطابق حرفياً للسجل 431؛ يُحفظ هذا المعرف للتتبع التاريخي ويُمنع تطويره كأداة مستقلة حتى لا يتضاعف القياس والتنفيذ.",
+        "candidateEvidence": [],
+        "canonicalId": 431
       }
     },
     {
@@ -16056,7 +16253,14 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "merge-duplicate",
+        "classification": "duplicate-catalog-record",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "low",
+        "rationaleAr": "العنوان الألماني مطابق حرفياً للسجل 432؛ يُحفظ هذا المعرف للتتبع التاريخي ويُمنع تطويره كأداة مستقلة حتى لا يتضاعف القياس والتنفيذ.",
+        "candidateEvidence": [],
+        "canonicalId": 432
       }
     },
     {

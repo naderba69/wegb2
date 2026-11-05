@@ -29,6 +29,7 @@ type ToolSummary = {
   total: number;
   citationLabels: number;
   genericPrototypeModules: number;
+  resolvedExactDuplicateGroups: number;
   reviewedDecisions: number;
   productIntegrated: number;
   fieldValidated: number;
@@ -117,7 +118,7 @@ export default function QualitaetPage() {
           <div className="card" style={{ padding: "0.8rem" }}>
             <strong className="rtl-num">{toolSummary.total}</strong><br />
             فكرة/مفهوم في الكتالوج
-            <br /><small>{toolSummary.reviewedDecisions} قرارات أكاديمية · {toolSummary.productIntegrated} موصولة بدليل كامل</small>
+            <br /><small>{toolSummary.reviewedDecisions} قرار فرز · {toolSummary.resolvedExactDuplicateGroups}/8 تكرارات حرفية محلولة · {toolSummary.productIntegrated} موصولة بدليل كامل</small>
           </div>
           <div className="card" style={{ padding: "0.8rem" }}>
             <strong className="rtl-num">{evidenceDone}/{evidenceUnits.length}</strong><br />

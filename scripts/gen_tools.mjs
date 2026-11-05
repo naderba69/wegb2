@@ -58,6 +58,11 @@ function genSummary(tools, governance) {
     .map(([title, ids]) => ({ title, ids }));
   const overrides = governance.overrides ?? {};
   const states = tools.map((tool) => ({ ...governance.defaultState, ...(overrides[String(tool.id)] ?? {}) }));
+  const decisionBreakdown = {};
+  for (const state of states) decisionBreakdown[state.decision] = (decisionBreakdown[state.decision] ?? 0) + 1;
+  const resolvedExactDuplicateGroups = exactDuplicateTitleGroups.filter((group) =>
+    group.ids.slice(1).every((id) => overrides[String(id)]?.decision === "merge-duplicate" && overrides[String(id)]?.canonicalId === group.ids[0])
+  ).length;
   return {
     schemaVersion: 1,
     updated: governance.updated,
@@ -68,6 +73,8 @@ function genSummary(tools, governance) {
     citationLabels: tools.filter((tool) => Boolean(tool.research?.trim())).length,
     genericPrototypeModules: tools.filter((tool) => new RegExp(`tool${tool.id}Gain`).test(tool.code ?? "") && new RegExp(`tool${tool.id}Check`).test(tool.code ?? "")).length,
     exactDuplicateTitleGroups,
+    resolvedExactDuplicateGroups,
+    decisionBreakdown,
     reviewedDecisions: states.filter((state) => state.decision !== "pending-academic-review").length,
     adopted: states.filter((state) => state.decision === "adopt").length,
     productIntegrated: states.filter((state) => state.productStatus === "wired-and-tested").length,

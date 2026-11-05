@@ -65,7 +65,14 @@
       ]
     }
   ],
-  "reviewedDecisions": 0,
+  "resolvedExactDuplicateGroups": 8,
+  "decisionBreakdown": {
+    "defer": 18,
+    "research-only": 2,
+    "pending-academic-review": 792,
+    "merge-duplicate": 8
+  },
+  "reviewedDecisions": 28,
   "adopted": 0,
   "productIntegrated": 0,
   "fieldValidated": 0,
