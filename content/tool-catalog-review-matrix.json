@@ -590,7 +590,23 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "metacognitive-assessment",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "يوجد بالفعل تقييم ثقة اختياري ثنائي قبل أسئلة الاختيار مع تسجيل الثقة الخاطئة واختبارات سلوكية، لكنه ليس مقياس JOL من 0–100؛ كما أن نموذج السجل يخلط ظاهرياً بين وحدات النسبة والنتيجة. يلزم ربط صريح وتوحيد الوحدات وقياس المعايرة قبل اعتماد المعرف.",
+        "candidateEvidence": [
+          "components/exercises.tsx",
+          "components/fehler-ui.tsx",
+          "lib/types.ts",
+          "scripts/interaktiv_test.tsx",
+          "lib/self-assessment-var.ts"
+        ],
+        "relatedIds": [
+          240,
+          556
+        ]
       }
     },
     {
@@ -611,7 +627,20 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "learner-activity",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "الشرح الذاتي نشاط قابل للتصميم، لكنه يتداخل مع أسئلة لماذا في السجل 186، ومعامل 1.3 غير موثق؛ يلزم قالب مرتبط بقاعدة محددة ومعيار استجابة واختبار إتاحة بدلاً من احتساب زر الإقرار تعلماً.",
+        "candidateEvidence": [
+          "lib/elaborative-interrogation.ts",
+          "content/grammar.json"
+        ],
+        "relatedIds": [
+          186,
+          544
+        ]
       }
     },
     {
@@ -632,7 +661,20 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "instructional-design",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "تلاشي المثال المحلول مناسب مبدئياً، لكن الانتقال بعد تكرارين أو خمسة ثابت وغير حساس للأداء؛ يلزم سلم مثال-فجوة-حل مرتبط بإجابات فعلية وقاعدة رجوع عند التعثر قبل توصيله.",
+        "candidateEvidence": [
+          "lib/scaffolding-deep.ts",
+          "content/grammar.json"
+        ],
+        "relatedIds": [
+          284,
+          285
+        ]
       }
     },
     {
@@ -653,7 +695,19 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "instructional-design",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "انعكاس الخبرة مبدأ لا أداة مستقلة؛ خريطة الدعم حسب المستوى وعدد التكرارات تبسيط غير كافٍ ولا تقيس معرفة المتعلم الفعلية، لذلك يبقى قيد البحث لتوجيه السقالات لا كميزة إنتاجية.",
+        "candidateEvidence": [
+          "lib/scaffolding-deep.ts",
+          "lib/plan.ts"
+        ],
+        "relatedIds": [
+          289
+        ]
       }
     },
     {
@@ -674,7 +728,20 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "partner-dependent-activity",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "التعلم التعاوني يحتاج شريكاً حقيقياً وأدواراً ومهمة مشتركة وآلية أمان، بينما الدالة الحالية تختار حجم مجموعة وتفترض مكسباً فقط؛ لا يوجد حالياً إثبات جلسة جماعية أو بنية هوية وخصوصية.",
+        "candidateEvidence": [
+          "content/muendlich.json",
+          "lib/plan.ts"
+        ],
+        "relatedIds": [
+          258,
+          980
+        ]
       }
     },
     {
@@ -695,7 +762,21 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "partner-dependent-assessment",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "تغذية الأقران قد تدعم الكتابة والتحدث، لكن قالب نجمتين وأمنية ومعامل المكسب لا يثبتان جودة المراجعة؛ يلزم Rubric واضح وموافقة وخصوصية وإبلاغ عن الإساءة وتجربة بشرية قبل التوصيل.",
+        "candidateEvidence": [
+          "lib/peer-assessment.ts",
+          "content/writing.json"
+        ],
+        "relatedIds": [
+          243,
+          557,
+          718
+        ]
       }
     },
     {
@@ -716,7 +797,20 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "assessment-governance",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "الأثر الارتجاعي خاصية لنظام التقويم لا تمريناً منفرداً، ونسبة تداخل القوائم لا تقيس أثراً إيجابياً أو سلبياً على التعلم؛ يستخدم كمطلب حوكمة بعد توثيق صيغ Goethe وtelc ومراجعة خرائط التغطية.",
+        "candidateEvidence": [
+          "lib/washback.ts",
+          "content/accreditation-alignment.json"
+        ],
+        "relatedIds": [
+          247,
+          997
+        ]
       }
     },
     {
@@ -737,7 +831,18 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "assessment-method",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "التقويم الديناميكي يحتاج سلالم تلميح خاصة بكل مهمة وسياسة درجة تفصل القدرة المستقلة عن الأداء بمساعدة؛ عدّ المحاولة وحده لا يثبت ZPD ولا يكفي لاتخاذ قرار تعلم.",
+        "candidateEvidence": [
+          "lib/dynamic-assessment.ts"
+        ],
+        "relatedIds": [
+          554
+        ]
       }
     },
     {
@@ -758,7 +863,28 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "feedback-engine",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "اختزال الطلاقة إلى recast والدقة إلى explicit مع تأخير عشر دقائق حسب عتبة 0.7 قرار غير موثق؛ يلزم نوع خطأ وسياق مهمة وخيار متعلم واختبار يمنع تثبيت الخطأ أو قطع التواصل.",
+        "candidateEvidence": [
+          "lib/feedback-recast.ts",
+          "lib/feedback-explicit.ts",
+          "lib/fehler.ts"
+        ],
+        "relatedIds": [
+          200,
+          360,
+          401,
+          403,
+          405,
+          406,
+          407,
+          817,
+          818
+        ]
       }
     },
     {
@@ -779,7 +905,17 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "contrastive-pedagogy",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "المقارنة العربية-الألمانية مفيدة لجمهور المنتج، لكن العبارات العامة عن العربية قد تهمل الفصحى واللهجات وتتحول إلى تعميم سلبي؛ يلزم مراجع لغوي ثنائي وربط كل تنبيه بخطأ موثق ومثال صحيح.",
+        "candidateEvidence": [
+          "lib/contrastive-var.ts",
+          "content/grammar.json"
+        ],
+        "relatedIds": []
       }
     },
     {
@@ -800,7 +936,22 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "input-presentation",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "تمييز الشكل قد يساعد الانتباه، لكن استبدال أول سلسلة بعلامات Markdown لا يضمن عرضاً دلالياً أو تكرارات صحيحة أو وصول قارئ الشاشة، ومعامل المكسب غير مثبت؛ يلزم مكوّن آمن واختبار وصول.",
+        "candidateEvidence": [
+          "lib/input-enhancement-deep.ts"
+        ],
+        "relatedIds": [
+          372,
+          373,
+          417,
+          418,
+          711
+        ]
       }
     },
     {
@@ -821,7 +972,21 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "sla-theory",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "فرضية الانتباه إطار لتصميم الملاحظة وليست ميزة مستقلة، والدالة المنطقية noticed ثم understood لا تثبت تحول المدخل إلى اكتساب؛ تحفظ كمرجع تصميم حتى توثق المطالبات وتقاس مهمة فعلية.",
+        "candidateEvidence": [
+          "lib/noticing-deep.ts"
+        ],
+        "relatedIds": [
+          378,
+          696,
+          811,
+          893
+        ]
       }
     },
     {
@@ -842,7 +1007,23 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "sla-theory",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "فرضية التفاعل تفسر قيمة التفاوض على المعنى، لكن عبارات التوضيح ومعامل 1.25 لا يثبتان تفاعلاً أو تعلماً، كما أن المنتج لا يثبت شريكاً حقيقياً؛ تفصل النظرية عن أنشطة الحوار القابلة للاختبار.",
+        "candidateEvidence": [
+          "lib/interaction-deep.ts",
+          "content/muendlich.json"
+        ],
+        "relatedIds": [
+          362,
+          411,
+          412,
+          810,
+          822
+        ]
       }
     },
     {
@@ -863,7 +1044,24 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "sla-theory",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "فرضية الإخراج مبرر تربوي لا أداة بحد ذاتها؛ طلب ثلاث جمل وعتبة تعقيد 0.6 لا يبرهنان pushed output أو اكتساباً، لذا تربط لاحقاً بمهام إنتاج ومعايير لغوية بدلاً من اعتماد النموذج.",
+        "candidateEvidence": [
+          "lib/output-deep.ts",
+          "lib/plan.ts"
+        ],
+        "relatedIds": [
+          413,
+          414,
+          415,
+          809,
+          824,
+          882
+        ]
       }
     },
     {
@@ -884,7 +1082,22 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "instructional-design",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "التركيز على الشكل مبدأ دمج الانتباه اللغوي داخل مهمة تواصلية، وليس إضافة نص إلى اسم المهمة؛ يبقى قاعدة تصميم تحتاج خريطة مهمة-شكل وأمثلة وتصحيحاً واختباراً قبل أي ادعاء تنفيذ.",
+        "candidateEvidence": [
+          "lib/focus-on-form-deep.ts"
+        ],
+        "relatedIds": [
+          416,
+          712,
+          713,
+          814,
+          883
+        ]
       }
     },
     {
@@ -905,7 +1118,21 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "instructional-design",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "التعلم القائم على المهام منهج دورة كاملة لا دالة تنقل آلياً بين ثلاث حالات؛ تحفظ الفكرة لتدقيق المهام الحالية وربط ما قبل المهمة والتنفيذ والتركيز بمخرجات قابلة للقياس.",
+        "candidateEvidence": [
+          "lib/tblt-deep.ts",
+          "content/writing.json",
+          "content/muendlich.json"
+        ],
+        "relatedIds": [
+          523,
+          833
+        ]
       }
     },
     {
@@ -926,7 +1153,17 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "instructional-design",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "PPP تسلسل تدريسي محتمل للمبتدئين لا ميزة مستقلة، وربطه الثابت بأيام الأسبوع لا يراعي المحتوى أو الإتقان؛ يبقى نمطاً بحثياً يقارن ببدائل التصميم ولا يفرض على الخطة آلياً.",
+        "candidateEvidence": [
+          "lib/ppp-deep.ts",
+          "lib/plan.ts"
+        ],
+        "relatedIds": []
       }
     },
     {
@@ -947,7 +1184,25 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "instructional-design",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "المدخل المعجمي إطار لتنظيم التعلم حول العبارات والمتلازمات، بينما إرجاع نص ومعامل 1.3 ليس نشاطاً مثبتاً؛ يستخدم لتدقيق بنك المتلازمات وتجنب عد المنهج نفسه ميزة.",
+        "candidateEvidence": [
+          "lib/lexical-deep.ts",
+          "content/kollokationen.json"
+        ],
+        "relatedIds": [
+          320,
+          439,
+          526,
+          642,
+          838,
+          842,
+          894
+        ]
       }
     },
     {
@@ -968,7 +1223,17 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "instructional-design",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "الترجمة التقابلية قد تخدم الملاحظة في مواضع محددة، لكنها تحمل خطر الترجمة الحرفية والاعتماد الزائد وتحتاج مراجعة ألمانية-عربية؛ لا تعتمد كمسار عام قبل تحديد الحالات والأمثلة والبدائل أحادية اللغة.",
+        "candidateEvidence": [
+          "content/grammar.json",
+          "content/vocab.json"
+        ],
+        "relatedIds": []
       }
     },
     {
@@ -989,7 +1254,19 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "instructional-design",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "المقاربة التواصلية إطار منهجي متعدد الكفايات لا متوسطاً حسابياً بسيطاً، والدالة لا تقيس تواصلاً حقيقياً؛ تحفظ كقاعدة لتدقيق توازن الأنشطة الشفهية والكتابية لا كميزة مستقلة.",
+        "candidateEvidence": [
+          "lib/clt-deep.ts",
+          "content/muendlich.json"
+        ],
+        "relatedIds": [
+          832
+        ]
       }
     },
     {

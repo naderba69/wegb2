@@ -5,9 +5,9 @@ import { resolve } from "node:path";
 import YAML from "yaml";
 
 type Tool = { id: number; family: string; titleDe: string; titleAr: string; level: string; bloom: string; examRelevant: boolean; fase: string; research?: string; desc?: string; code?: string };
-type Override = { decision?: string; researchStatus?: string; productStatus?: string; automatedTestStatus?: string; fieldValidationStatus?: string; classification?: string; reviewerRole?: string; reviewedAt?: string; risk?: string; rationaleAr?: string; candidateEvidence?: string[]; canonicalId?: number };
+type Override = { decision?: string; researchStatus?: string; productStatus?: string; automatedTestStatus?: string; fieldValidationStatus?: string; classification?: string; reviewerRole?: string; reviewedAt?: string; risk?: string; rationaleAr?: string; candidateEvidence?: string[]; relatedIds?: number[]; canonicalId?: number };
 type Governance = { schemaVersion: number; catalog: { firstId: number; lastId: number; expectedEntries: number }; claimAr: string; defaultState: Record<string, string>; allowedDecisions: string[]; productionAcceptance: string[]; overrides: Record<string, Override> };
-type Summary = { schemaVersion: number; total: number; firstId: number; lastId: number; citationLabels: number; genericPrototypeModules: number; exactDuplicateTitleGroups: Array<{ title: string; ids: number[] }>; resolvedExactDuplicateGroups: number; decisionBreakdown: Record<string, number>; reviewedDecisions: number; adopted: number; productIntegrated: number; fieldValidated: number; claimAr: string };
+type Summary = { schemaVersion: number; total: number; firstId: number; lastId: number; citationLabels: number; genericPrototypeModules: number; exactDuplicateTitleGroups: Array<{ title: string; ids: number[] }>; resolvedExactDuplicateGroups: number; decisionBreakdown: Record<string, number>; reviewedDecisions: number; pendingTriage: number; relatedCatalogReferences: number; adopted: number; productIntegrated: number; fieldValidated: number; claimAr: string };
 type ReviewItem = { id: number; titleDe: string; titleAr: string; family: string; level: string; bloom: string; citationLabel: string | null; prototypeKind: string; duplicateTitleIds: number[]; status: Record<string, unknown> };
 type ReviewMatrix = { schemaVersion: number; claimAr: string; items: ReviewItem[] };
 
@@ -33,7 +33,8 @@ check(governance.productionAcceptance.length >= 8, "معيار الإنتاج ي
 
 const overrideIds = Object.keys(governance.overrides);
 check(overrideIds.every((id) => ids.includes(Number(id))), "كل override يعود إلى أداة موجودة");
-check(Object.values(governance.overrides).every((entry) => !entry.decision || governance.allowedDecisions.includes(entry.decision)), "قرارات المراجعة محصورة في الحالات المسموحة");
+check(Object.values(governance.overrides).every((entry) => entry.decision && governance.allowedDecisions.includes(entry.decision)), "كل override يحمل قراراً من الحالات المسموحة");
+check(Object.entries(governance.overrides).every(([id, entry]) => !entry.relatedIds || (Array.isArray(entry.relatedIds) && new Set(entry.relatedIds).size === entry.relatedIds.length && entry.relatedIds.every((relatedId) => relatedId !== Number(id) && ids.includes(relatedId)))), "كل الإحالات المفاهيمية فريدة وتعود إلى سجلات أخرى موجودة");
 const generic = tools.filter((tool) => new RegExp(`tool${tool.id}Gain`).test(tool.code ?? "") && new RegExp(`tool${tool.id}Check`).test(tool.code ?? "")).length;
 const citationLabels = tools.filter((tool) => Boolean(tool.research?.trim())).length;
 const titleGroups = new Map<string, number[]>();
@@ -51,7 +52,14 @@ check(summary.genericPrototypeModules === generic && generic === 720, `النم�
 check(summary.citationLabels === citationLabels && citationLabels === 811, `تسميات المراجع الأولية معدودة دون تسميتها مراجع موثقة (${citationLabels})`);
 check(summary.exactDuplicateTitleGroups.length === duplicateGroups.length, `مجموعات العناوين المتطابقة مكشوفة (${duplicateGroups.length})`);
 check(summary.resolvedExactDuplicateGroups === duplicateGroups.length && duplicateGroups.every(([, groupedIds]) => groupedIds.slice(1).every((id) => governance.overrides[String(id)]?.decision === "merge-duplicate" && governance.overrides[String(id)]?.canonicalId === groupedIds[0])), `كل التكرارات الحرفية الثمانية مرتبطة بسجل مرجعي واحد (${summary.resolvedExactDuplicateGroups}/${duplicateGroups.length})`);
-check(summary.reviewedDecisions === reviewedOverrides.length && Object.values(summary.decisionBreakdown).reduce((sum, count) => sum + count, 0) === tools.length, `قرارات المراجعة محسوبة من السجل البندي (${summary.reviewedDecisions})`);
+const expectedDecisionBreakdown = tools.reduce<Record<string, number>>((counts, tool) => {
+  const decision = governance.overrides[String(tool.id)]?.decision ?? governance.defaultState.decision;
+  counts[decision] = (counts[decision] ?? 0) + 1;
+  return counts;
+}, {});
+check(summary.reviewedDecisions === reviewedOverrides.length && JSON.stringify(summary.decisionBreakdown) === JSON.stringify(expectedDecisionBreakdown) && summary.pendingTriage === expectedDecisionBreakdown["pending-academic-review"], `قرارات المراجعة محسوبة من السجل البندي (${summary.reviewedDecisions} فرز، ${summary.pendingTriage} معلق)`);
+const relatedCatalogReferences = Object.values(governance.overrides).reduce((count, entry) => count + (entry.relatedIds?.length ?? 0), 0);
+check(summary.relatedCatalogReferences === relatedCatalogReferences, `الإحالات المفاهيمية محسوبة دون تسميتها دمجاً (${relatedCatalogReferences})`);
 check(summary.productIntegrated === 0 && summary.fieldValidated === 0 && summary.adopted === 0, "لا اكتمال أو تحقق ميداني مصطنع قبل المصدر والتوصيل والاختبار");
 
 const pending = tools.filter((tool) => {

@@ -67,12 +67,14 @@
   ],
   "resolvedExactDuplicateGroups": 8,
   "decisionBreakdown": {
-    "defer": 18,
-    "research-only": 2,
-    "pending-academic-review": 792,
+    "defer": 27,
+    "research-only": 13,
+    "pending-academic-review": 772,
     "merge-duplicate": 8
   },
-  "reviewedDecisions": 28,
+  "reviewedDecisions": 48,
+  "pendingTriage": 772,
+  "relatedCatalogReferences": 59,
   "adopted": 0,
   "productIntegrated": 0,
   "fieldValidated": 0,
