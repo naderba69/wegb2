@@ -5,9 +5,13 @@ import { fileURLToPath } from "url";
 import yaml from "yaml";
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const YAML_PATH = join(ROOT, "content", "tools.yaml");
+const GOVERNANCE_PATH = join(ROOT, "content", "tool-catalog-governance.json");
+const SUMMARY_PATH = join(ROOT, "content", "tool-catalog-summary.json");
+const REVIEW_MATRIX_PATH = join(ROOT, "content", "tool-catalog-review-matrix.json");
 const LIB_DIR = join(ROOT, "lib");
 const raw = readFileSync(YAML_PATH, "utf8");
 const tools = yaml.parse(raw);
+const governance = JSON.parse(readFileSync(GOVERNANCE_PATH, "utf8"));
 if (!Array.isArray(tools)) { console.error("tools.yaml must be array"); process.exit(1); }
 function genToolFile(t) {
   const header = `/**\n * ${t.id} — ${t.titleDe} — ${t.titleAr || ""}\n * Family: ${t.family} | Bloom: ${t.bloom} | Level: ${t.level}\n * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools\n */\n`;
@@ -38,6 +42,71 @@ function genCatalog(tools) {
   const entries = tools.map(t => `  { id:${t.id}, family:${JSON.stringify(t.family)}, titleDe:${JSON.stringify(t.titleDe)}, level:${JSON.stringify(t.level)} as ToolLevel, bloom:${JSON.stringify(t.bloom)}, examRelevant:${!!t.examRelevant}, fase:${JSON.stringify(t.fase || "any")} }`).join(",\n");
   return header + `export const TOOL_CATALOG: ToolMeta[] = [\n${entries}\n];\nexport function toolsForLevel(level:string):ToolMeta[]{ return TOOL_CATALOG.filter(t=> t.level===level || t.level==="A0-B2" || t.level.includes(level)); }\nexport function toolsByFamily(fam:string):ToolMeta[]{ return TOOL_CATALOG.filter(t=> t.family===fam); }\n`;
 }
+function toolIndex(tools) {
+  const titleGroups = new Map();
+  for (const tool of tools) {
+    const key = String(tool.titleDe).trim().toLocaleLowerCase("de");
+    titleGroups.set(key, [...(titleGroups.get(key) ?? []), tool.id]);
+  }
+  return titleGroups;
+}
+
+function genSummary(tools, governance) {
+  const titleGroups = toolIndex(tools);
+  const exactDuplicateTitleGroups = [...titleGroups.entries()]
+    .filter(([, ids]) => ids.length > 1)
+    .map(([title, ids]) => ({ title, ids }));
+  const overrides = governance.overrides ?? {};
+  const states = tools.map((tool) => ({ ...governance.defaultState, ...(overrides[String(tool.id)] ?? {}) }));
+  return {
+    schemaVersion: 1,
+    updated: governance.updated,
+    sourcePath: governance.catalog.sourcePath,
+    total: tools.length,
+    firstId: Math.min(...tools.map((tool) => tool.id)),
+    lastId: Math.max(...tools.map((tool) => tool.id)),
+    citationLabels: tools.filter((tool) => Boolean(tool.research?.trim())).length,
+    genericPrototypeModules: tools.filter((tool) => new RegExp(`tool${tool.id}Gain`).test(tool.code ?? "") && new RegExp(`tool${tool.id}Check`).test(tool.code ?? "")).length,
+    exactDuplicateTitleGroups,
+    reviewedDecisions: states.filter((state) => state.decision !== "pending-academic-review").length,
+    adopted: states.filter((state) => state.decision === "adopt").length,
+    productIntegrated: states.filter((state) => state.productStatus === "wired-and-tested").length,
+    fieldValidated: states.filter((state) => state.fieldValidationStatus === "verified-or-not-required").length,
+    claimAr: governance.claimAr,
+  };
+}
+
+function genReviewMatrix(tools, governance) {
+  const titleGroups = toolIndex(tools);
+  const overrides = governance.overrides ?? {};
+  return {
+    schemaVersion: 1,
+    updated: governance.updated,
+    sourcePath: governance.catalog.sourcePath,
+    claimAr: governance.claimAr,
+    items: tools.map((tool) => {
+      const titleKey = String(tool.titleDe).trim().toLocaleLowerCase("de");
+      const generic = new RegExp(`tool${tool.id}Gain`).test(tool.code ?? "") && new RegExp(`tool${tool.id}Check`).test(tool.code ?? "");
+      return {
+        id: tool.id,
+        titleDe: tool.titleDe,
+        titleAr: tool.titleAr,
+        family: tool.family,
+        level: tool.level,
+        bloom: tool.bloom,
+        examRelevant: Boolean(tool.examRelevant),
+        fase: tool.fase || "any",
+        citationLabel: tool.research ?? null,
+        prototypeKind: generic ? "generic-gain-check" : "custom-prototype",
+        duplicateTitleIds: (titleGroups.get(titleKey) ?? []).filter((id) => id !== tool.id),
+        status: { ...governance.defaultState, ...(overrides[String(tool.id)] ?? {}) },
+      };
+    }),
+  };
+}
+
 for (const t of tools) writeFileSync(join(LIB_DIR, `tool-${t.id}.ts`), genToolFile(t), "utf8");
 writeFileSync(join(LIB_DIR, "tool-catalog.ts"), genCatalog(tools), "utf8");
-console.log(`gen_tools: ${tools.length} tools → lib/tool-*.ts + lib/tool-catalog.ts`);
+writeFileSync(SUMMARY_PATH, `${JSON.stringify(genSummary(tools, governance), null, 2)}\n`, "utf8");
+writeFileSync(REVIEW_MATRIX_PATH, `${JSON.stringify(genReviewMatrix(tools, governance), null, 2)}\n`, "utf8");
+console.log(`gen_tools: ${tools.length} tools → lib/tool-*.ts + catalog + governed item matrix`);

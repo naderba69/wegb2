@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "updated": "2026-11-05",
+  "catalog": {
+    "sourcePath": "content/tools.yaml",
+    "firstId": 181,
+    "lastId": 1000,
+    "expectedEntries": 820
+  },
+  "claimAr": "السجلات 181–1000 أفكار ومفاهيم ونماذج أولية للبحث والفرز، وليست 820 ميزة مدمجة. لا تُسمى الأداة منفذة إلا بعد مصدر موثق، قرار ملاءمة، نشاط متعلم حي، مخرج قابل للقياس، اختبار آلي، مراجعة إتاحة وخصوصية، ودليل ميداني عند الحاجة.",
+  "defaultState": {
+    "catalogStatus": "catalogued",
+    "researchStatus": "citation-label-unverified",
+    "productStatus": "prototype-not-wired",
+    "automatedTestStatus": "not-demonstrated",
+    "fieldValidationStatus": "not-tested",
+    "decision": "pending-academic-review"
+  },
+  "allowedDecisions": [
+    "adopt",
+    "merge-duplicate",
+    "research-only",
+    "reject-not-applicable",
+    "defer",
+    "pending-academic-review"
+  ],
+  "productionAcceptance": [
+    "full-citation-or-authoritative-source",
+    "source-snapshot-and-license-note",
+    "pedagogical-rationale-and-target-learner",
+    "non-duplicate-decision",
+    "learner-visible-activity-reference",
+    "measurable-learning-outcome",
+    "automated-behaviour-test",
+    "accessibility-and-privacy-review",
+    "field-validation-when-claim-requires-it"
+  ],
+  "overrides": {}
+}

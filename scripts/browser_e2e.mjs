@@ -235,9 +235,55 @@ async function main() {
 
     await navigate(cdp, sessionId, `${ORIGIN}/qualitaet`);
     const quality = await poll(cdp, sessionId,
-      `document.body?.textContent?.includes("لا يحمل اعتماداً رسمياً من Goethe-Institut أو telc gGmbH") && document.body?.textContent?.includes("ما يمنع الاعتماد الآن؟") && !document.body?.textContent?.includes("تعذّر تحميل المحتوى")`,
+      `document.body?.textContent?.includes("لا يحمل اعتماداً رسمياً من Goethe-Institut أو telc gGmbH") && document.body?.textContent?.includes("برنامج الإكمال الأكاديمي") && document.body?.textContent?.includes("سمات قواعد مرشحة") && document.body?.textContent?.includes("فكرة/مفهوم في الكتالوج") && document.body?.textContent?.includes("ما يمنع الاعتماد الآن؟") && !document.body?.textContent?.includes("تعذّر تحميل المحتوى")`,
       "Qualitätsseite mit ehrlicher Akkreditierungsgrenze");
     if (!quality) fail("Qualitätsseite oder Akkreditierungsgrenze fehlt");
+
+    // Lab profiles are preflight evidence only: viewport/touch/media emulation is
+    // not recorded as a physical-device or human-accessibility sign-off.
+    const labProfiles = [];
+    for (const profile of [
+      { id: "desktop-1440", width: 1440, height: 900, scale: 1, mobile: false, touch: false },
+      { id: "android-360", width: 360, height: 800, scale: 3, mobile: true, touch: true },
+      { id: "tablet-768", width: 768, height: 1024, scale: 2, mobile: true, touch: true },
+    ]) {
+      await cdp.send("Emulation.setDeviceMetricsOverride", {
+        width: profile.width,
+        height: profile.height,
+        deviceScaleFactor: profile.scale,
+        mobile: profile.mobile,
+        screenWidth: profile.width,
+        screenHeight: profile.height,
+      }, sessionId);
+      await cdp.send("Emulation.setTouchEmulationEnabled", { enabled: profile.touch, maxTouchPoints: profile.touch ? 5 : 1 }, sessionId);
+      await cdp.send("Emulation.setEmulatedMedia", {
+        media: "screen",
+        features: [
+          { name: "prefers-reduced-motion", value: "reduce" },
+          { name: "prefers-color-scheme", value: "dark" },
+        ],
+      }, sessionId);
+      await navigate(cdp, sessionId, `${ORIGIN}/qualitaet`);
+      await poll(cdp, sessionId,
+        `!!document.querySelector("[data-ui-shell='ui-app-shell']") && document.body?.textContent?.includes("برنامج الإكمال الأكاديمي")`,
+        `Lab profile ${profile.id} render`);
+      const result = await evalJs(cdp, sessionId, `({
+        width: innerWidth,
+        shell: !!document.querySelector("[data-ui-shell='ui-app-shell']"),
+        overflow: Math.max(document.documentElement.scrollWidth, document.body.scrollWidth) - innerWidth,
+        reducedMotion: matchMedia("(prefers-reduced-motion: reduce)").matches,
+        dark: matchMedia("(prefers-color-scheme: dark)").matches,
+        hasFocusable: !!document.querySelector("a[href],button:not([disabled]),input:not([disabled])")
+      })`);
+      if (!result.shell || result.width !== profile.width || result.overflow > 2 || !result.reducedMotion || !result.dark || !result.hasFocusable) {
+        fail(`Lab-Profil ${profile.id} fehlgeschlagen: ${JSON.stringify(result)}`);
+      }
+      labProfiles.push({ ...profile, ...result, limitation: "emulation-not-physical-device" });
+    }
+    await cdp.send("Emulation.clearDeviceMetricsOverride", {}, sessionId);
+    await cdp.send("Emulation.setTouchEmulationEnabled", { enabled: false }, sessionId);
+    await cdp.send("Emulation.setEmulatedMedia", { media: "screen", features: [] }, sessionId);
+    const mediaCapability = await evalJs(cdp, sessionId, `({ secureContext: isSecureContext, mediaDevicesApi: !!navigator.mediaDevices?.getUserMedia })`);
 
     const sw = await poll(cdp, sessionId, `(async()=>{const r=await navigator.serviceWorker.getRegistration();return r?.active?.state==="activated"&&!!navigator.serviceWorker.controller})()`, "Service Worker activation");
     if (!sw) fail("Service Worker nicht aktiv");
@@ -283,6 +329,8 @@ async function main() {
     console.log(JSON.stringify({
       chrome,
       csp: { nonce: true, scriptUnsafeInline: false, frameAncestorsSelf: true },
+      labProfiles,
+      mediaCapability: { ...mediaCapability, limitation: "API-presence-only-no-real-microphone" },
       serviceWorker: { active: true, caches: online.entries, missing: online.missing },
       offlineRoutes,
       offlineBanks,

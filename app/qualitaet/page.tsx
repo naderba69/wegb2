@@ -20,9 +20,41 @@ type Alignment = {
   externalGates: Array<{ id: string; titleAr: string; ownerRole: string; status: string }>;
 };
 
-const alignment = JSON.parse(
-  readFileSync(join(process.cwd(), "content", "accreditation-alignment.json"), "utf8"),
-) as Alignment;
+type GrammarProfile = {
+  claimAr: string;
+  summary: { topics: number; candidateFeatures: number; sourceVerifiedFeatures: number; directlyAssessedFeatures: number; humanReviewedFeatures: number };
+};
+
+type ToolSummary = {
+  total: number;
+  citationLabels: number;
+  genericPrototypeModules: number;
+  reviewedDecisions: number;
+  productIntegrated: number;
+  fieldValidated: number;
+  claimAr: string;
+};
+
+type ExternalEvidence = {
+  sourceArtifacts: Array<{ status: string }>;
+  requirementReviews: Array<{ status: string }>;
+  gateReviews: Array<{ status: string }>;
+};
+
+type RealWorldProgram = {
+  automatedPreflight: Array<{ status: string }>;
+  testCases: Array<{ status: string }>;
+};
+
+function readJson<T>(name: string): T {
+  return JSON.parse(readFileSync(join(process.cwd(), "content", name), "utf8")) as T;
+}
+
+const alignment = readJson<Alignment>("accreditation-alignment.json");
+const grammarProfile = readJson<GrammarProfile>("grammar-profile-matrix.json");
+const toolSummary = readJson<ToolSummary>("tool-catalog-summary.json");
+const externalEvidence = readJson<ExternalEvidence>("external-evidence.json");
+const realWorld = readJson<RealWorldProgram>("real-world-validation.json");
 
 export const metadata: Metadata = {
   title: "الجودة والمواءمة — WegB2",
@@ -42,6 +74,9 @@ export default function QualitaetPage() {
   const requirements = alignment.targets.flatMap((target) => target.requirements);
   const implemented = requirements.filter((item) => item.implementationStatus === "implemented").length;
   const externalDone = alignment.externalGates.filter((gate) => gate.status === "passed").length;
+  const evidenceUnits = [...externalEvidence.sourceArtifacts, ...externalEvidence.requirementReviews, ...externalEvidence.gateReviews];
+  const evidenceDone = evidenceUnits.filter((item) => item.status === "verified" || item.status === "passed").length;
+  const realWorldDone = realWorld.testCases.filter((item) => item.status === "passed" || item.status === "failed" || item.status === "blocked").length;
 
   return (
     <div style={{ maxWidth: "960px", margin: "0 auto", padding: "1.25rem 1rem 5rem", display: "grid", gap: "1rem" }}>
@@ -66,6 +101,43 @@ export default function QualitaetPage() {
           <div className="card" style={{ padding: "0.8rem" }}><strong className="rtl-num">{externalDone}/{alignment.externalGates.length}</strong><br />حواجز خارجية موقعة</div>
           <div className="card" style={{ padding: "0.8rem" }}><strong className="rtl-num">2</strong><br />هدفان: Goethe B2 وtelc B2</div>
         </div>
+      </section>
+
+      <section className="card" style={{ padding: "1rem", display: "grid", gap: "0.8rem" }}>
+        <h2 style={{ margin: 0 }}>برنامج الإكمال الأكاديمي</h2>
+        <p style={{ margin: 0, lineHeight: 1.85 }}>
+          الأرقام التالية تفصل الجرد والبنية عن التحقق. وجود سمة أو فكرة في ملف لا يعني أنها معتمدة أو موصولة بالمتعلم.
+        </p>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(190px, 1fr))", gap: "0.7rem" }}>
+          <div className="card" style={{ padding: "0.8rem" }}>
+            <strong className="rtl-num">{grammarProfile.summary.candidateFeatures}</strong><br />
+            سمات قواعد مرشحة من {grammarProfile.summary.topics} موضوعاً
+            <br /><small>{grammarProfile.summary.sourceVerifiedFeatures} موثقة خارجياً · {grammarProfile.summary.directlyAssessedFeatures} مربوطة مباشرة بقياس</small>
+          </div>
+          <div className="card" style={{ padding: "0.8rem" }}>
+            <strong className="rtl-num">{toolSummary.total}</strong><br />
+            فكرة/مفهوم في الكتالوج
+            <br /><small>{toolSummary.reviewedDecisions} قرارات أكاديمية · {toolSummary.productIntegrated} موصولة بدليل كامل</small>
+          </div>
+          <div className="card" style={{ padding: "0.8rem" }}>
+            <strong className="rtl-num">{evidenceDone}/{evidenceUnits.length}</strong><br />
+            وحدات مصدر ومراجعة موقعة
+            <br /><small>2 مصدر + 10 مراجعات + 7 حواجز</small>
+          </div>
+          <div className="card" style={{ padding: "0.8rem" }}>
+            <strong className="rtl-num">{realWorldDone}/{realWorld.testCases.length}</strong><br />
+            جلسات اختبار واقعي موثقة
+            <br /><small>{realWorld.automatedPreflight.length} بوابات مخبرية تمهيدية لا تحل محلها</small>
+          </div>
+        </div>
+        <details>
+          <summary style={{ cursor: "pointer", fontWeight: 800 }}>حدود مصفوفة القواعد وكتالوج 820</summary>
+          <p style={{ lineHeight: 1.85 }}>{grammarProfile.claimAr}</p>
+          <p style={{ lineHeight: 1.85 }}>{toolSummary.claimAr}</p>
+          <p style={{ marginBottom: 0, color: "var(--color-ink2)" }}>
+            الجرد الحالي كشف {toolSummary.genericPrototypeModules} نموذجاً عاماً و{toolSummary.citationLabels} تسمية مرجع أولية؛ لا تُعد هذه مراجع موثقة أو مزايا إنتاجية.
+          </p>
+        </details>
       </section>
 
       {alignment.targets.map((target) => (

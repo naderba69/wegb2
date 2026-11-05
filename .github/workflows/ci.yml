@@ -22,14 +22,24 @@ jobs:
           cache-dependency-path: scripts/requirements-audio-qc.txt
       - name: Abhängigkeiten installieren
         run: npm ci
-      - name: Tools-Generator (YAML → lib/ — R402 P2)
-        run: npm run gen:tools && git diff --exit-code lib/ content/tools.yaml
+      - name: Tools-Generator (YAML → lib/ + governance summary)
+        run: npm run gen:tools && git diff --exit-code lib/ content/tool-catalog-summary.json content/tool-catalog-review-matrix.json content/tools.yaml
+      - name: Grammar-Profile-Generator (87 Themen → evidence matrix)
+        run: npm run gen:ggp && git diff --exit-code content/grammar-profile-matrix.json
       - name: Repository-Audit (alle getrackten Dateien)
         run: npm run audit:repo
       - name: Plan-Audit (378 Tage, vollständige Aufgabenreferenzen)
         run: npm run audit:plan
       - name: Accreditation-Alignment (Goethe B2 + telc B2، technische Evidenz)
         run: npm run audit:accreditation
+      - name: External-Evidence-Dossier (2 sources + 10 reviews + 7 gates)
+        run: npm run audit:evidence
+      - name: Grammar-Profile (internal matrix; no unsupported GGP claim)
+        run: npm run audit:ggp
+      - name: Tool-Catalog Governance (820 ideas, evidence lifecycle)
+        run: npm run audit:tools
+      - name: Real-World Validation Program (no simulated human sign-off)
+        run: npm run audit:real-world
       - name: Audio-QC (1099 Dateien neu dekodieren und messen)
         run: npm run audio:qc
       - name: TypeScript
