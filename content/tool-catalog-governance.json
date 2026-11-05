@@ -7205,6 +7205,563 @@
         940
       ]
     },
+    "481": {
+      "classification": "intercultural-interpretation-activity",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "يحتاج Cultural Assimilator حادثة عابرة للثقافات غامضة، وتفسيرات بديلة لسلوك المشاركين، ثم تغذية راجعة تفكك الافتراضات من دون تنميط. لدى المنتج نص انعكاس ثقافي وبطاقات ملاءمة تداولية، لكنها أسئلة فهم أو اختيار عبارة لا تفسير حادثة من منظورات متعددة؛ لذلك لا تُنسب إليها الطريقة بعد.",
+      "candidateEvidence": [
+        "content/lang/b2-36-40.json",
+        "lib/pragmatik.ts",
+        "components/pragmatik.tsx",
+        "components/tasks.tsx"
+      ],
+      "relatedIds": [
+        311,
+        312,
+        482,
+        483,
+        570,
+        692,
+        731,
+        934
+      ]
+    },
+    "482": {
+      "classification": "intercultural-critical-incident-activity",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "الحادثة الحرجة الثقافية تتطلب موقفاً قصيراً ملتبساً يصفه المتعلم ويفصل الوقائع عن تفسيره ويقارن فرضيات ثم يراجع الحكم. النص الحي عن الصراحة يعرض قصة مكتملة واستنتاجها، وبطاقات البراغماتية لها جواب اجتماعي واحد؛ لا يوجد مسار تحليل حادثة أو حفظ تبرير المتعلم، فيبقى النشاط غير موصول.",
+      "candidateEvidence": [
+        "content/lang/b2-36-40.json",
+        "content/texts.json",
+        "lib/pragmatik.ts",
+        "components/pragmatik.tsx"
+      ],
+      "relatedIds": [
+        311,
+        312,
+        481,
+        483,
+        570,
+        731,
+        934
+      ]
+    },
+    "483": {
+      "classification": "human-participant-ethnographic-project",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "المشروع الإثنوغرافي يحتاج سؤالاً وموقعاً أو مجتمعاً وملاحظة أو مقابلات بموافقة وتدويناً انعكاسياً وتحليلاً يعترف بموقع الباحث وحدود العينة. المنتج الفردي لا يجمع بيانات بشرية أو موافقات ولا يوفر دفتر ميدان أو مراجعة أخلاقية؛ النصوص الثقافية والمقابلات المتخيلة ليست إثنوغرافيا منفذة.",
+      "candidateEvidence": [
+        "content/muendlich.json",
+        "content/writing.json",
+        "components/interview2.tsx",
+        "content/real-world-validation.json",
+        "app/datenschutz/page.tsx"
+      ],
+      "relatedIds": [
+        205,
+        309,
+        311,
+        424,
+        481,
+        482,
+        748,
+        934,
+        980
+      ]
+    },
+    "484": {
+      "classification": "idiomatic-awareness-practice",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "candidate-live-implementation",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "medium",
+      "rationaleAr": "درس B2 الحي يصرح بأن التعبير لا يترجم حرفياً، يقابل المعنى الحرفي بالمقصود، ويطلب اختيار المعنى والإكمال وإعادة الصياغة والترجمة والإنتاج مع تغذية راجعة؛ وهذه مطابقة مرشحة للوعي الاصطلاحي. يظل البنك الداخلي صغيراً وتحتاج درجة الشيوع والسجل والملاءمة السياقية والمجاز غير الشفاف إلى مراجعة مصدرية وبشرية.",
+      "candidateEvidence": [
+        "content/grammar.json",
+        "components/akademie/LektionWizard.tsx",
+        "components/tasks.tsx",
+        "scripts/engine_smoke.ts"
+      ],
+      "relatedIds": [
+        308,
+        320,
+        321,
+        324,
+        325,
+        446,
+        448,
+        644
+      ]
+    },
+    "485": {
+      "classification": "language-competence-construct",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "الطلاقة المفاهيمية بناء واسع يتعلق باستخدام الشبكات التصورية والمجازات الملائمة عبر اللغة والثقافة، ولا تقاس بمعرفة تسعة تعابير أو نجاح أسئلة اختيار. لدى المنتج تدريب اصطلاحي ومشاهد رمزية فقط؛ لا توجد عينة إنتاج ممثلة أو Rubric أو مقيمون يثبتون هذا البناء، فيبقى إطاراً للبحث.",
+      "candidateEvidence": [
+        "content/grammar.json",
+        "components/tasks.tsx",
+        "lib/lesson-scene.ts"
+      ],
+      "relatedIds": [
+        324,
+        441,
+        442,
+        443,
+        444,
+        445,
+        446,
+        448
+      ]
+    },
+    "486": {
+      "classification": "language-competence-construct",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "الطلاقة التداولية تتجاوز معرفة العبارة الأنسب إلى إنتاج تلقائي سلس في أفعال كلام وسلاسل خطابية متعددة. بطاقات الاختيار والسيناريوهات الثابتة تدرب الملاءمة لكنها لا تقيس السرعة أو التردد أو الإصلاح أو جودة الأداء الحر لدى مقيمين؛ فلا يُستنتج بناء الطلاقة من نقاط الجلسة.",
+      "candidateEvidence": [
+        "lib/pragmatik.ts",
+        "components/pragmatik.tsx",
+        "lib/dialogszenarien.ts",
+        "components/dialogszenarien.tsx"
+      ],
+      "relatedIds": [
+        312,
+        313,
+        314,
+        349,
+        692,
+        932
+      ]
+    },
+    "487": {
+      "classification": "language-competence-construct",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "الطلاقة الخطابية بناء أداء يشمل استمرار الكلام أو الكتابة وترابط الأفكار والإحالة والتنظيم تحت شروط قابلة للمقارنة. وجود روابط ومهام كتابة أو حديث لا يقيس الطلاقة نفسها، ولا توجد عينة زمنية موثقة أو ترميز للتوقف والترابط ومقيمون؛ لذا تبقى مؤشرات المحتوى أدلة مجاورة فقط.",
+      "candidateEvidence": [
+        "content/redemittel.json",
+        "components/redemittel.tsx",
+        "content/writing.json",
+        "components/schreiben.tsx",
+        "content/muendlich.json"
+      ],
+      "relatedIds": [
+        315,
+        316,
+        328,
+        350,
+        672,
+        706,
+        928
+      ]
+    },
+    "488": {
+      "classification": "language-competence-construct",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "الكفاءة التفاعلية تظهر في بناء المعنى والدور والإصلاح مع أطراف حقيقيين وفي سياق محدد. الحوارات والخيارات الحالية ثابتة أو فردية، ورفيق الكلام الاصطناعي لا يثبت مشاركة بشرية أو تفاوضاً؛ لا توجد جلسة وهوية وموافقة وتحليل تفاعل، لذلك لا تُستنتج الكفاءة من إكمال السيناريو.",
+      "candidateEvidence": [
+        "content/dialogues.json",
+        "lib/dialogszenarien.ts",
+        "components/dialogszenarien.tsx",
+        "components/sprechbegleiter.tsx",
+        "content/muendlich.json"
+      ],
+      "relatedIds": [
+        205,
+        213,
+        225,
+        337,
+        350,
+        362,
+        411,
+        412,
+        930
+      ]
+    },
+    "489": {
+      "classification": "language-competence-construct",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "الكفاءة الاستراتيجية بناء أوسع من عرض نصائح أو عبارات تعويض؛ تتطلب اختيار الاستراتيجية وتنفيذها عند تعطل التواصل وقياس ملاءمتها ونقلها إلى موقف جديد. المنتج يدرب استراتيجيات تعلم وامتحان وبعض طلبات التوضيح، لكنه لا يقيس هذا البناء عبر مهام ومقيمين، فلا يحول الاستخدام إلى حكم كفاءة.",
+      "candidateEvidence": [
+        "components/lernstrategie.tsx",
+        "lib/hoerstrategien.ts",
+        "components/hoerstrategien.tsx",
+        "lib/pragmatik.ts",
+        "components/simulation.tsx"
+      ],
+      "relatedIds": [
+        303,
+        307,
+        310,
+        350,
+        595,
+        929
+      ]
+    },
+    "490": {
+      "classification": "language-competence-construct",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "الكفاءة الاجتماعية اللغوية تشمل السجل والعلاقة والهوية والمنطقة والمؤسسة، ولا يثبتها اختيار صيغة مهذبة في عشرة مواقف. توجد أنشطة ملاءمة وروابط رسمية وغير رسمية مرشحة، لكن لا توجد تغطية ممثلة أو إنتاج حر أو مراجعة حساسية ومقيمون؛ لذلك يبقى البناء للبحث لا نتيجة متعلم.",
+      "candidateEvidence": [
+        "lib/pragmatik.ts",
+        "components/pragmatik.tsx",
+        "content/redemittel.json",
+        "components/dialogszenarien.tsx"
+      ],
+      "relatedIds": [
+        311,
+        312,
+        313,
+        314,
+        692,
+        927,
+        932,
+        933,
+        934
+      ]
+    },
+    "491": {
+      "classification": "learner-needs-analysis-design",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "يجمع المنتج تشخيص أربع مهارات ووتيرة البطاقات واسم الامتحان وموعده، وهي مدخلات قريبة لكنها لا تشكل Needs Analysis: لا يسأل المواقف المستهدفة واللغة المطلوبة فيها والوقت والموارد والتفضيلات وأصحاب المصلحة، ولا يترجمها إلى أولويات قابلة للمراجعة. يلزم استبيان محدود البيانات وشفاف وخيار تخطٍ قبل التخصيص.",
+      "candidateEvidence": [
+        "lib/einstufung.ts",
+        "components/einstufung.tsx",
+        "app/einstellungen/page.tsx",
+        "components/zieltempo.tsx",
+        "app/datenschutz/page.tsx"
+      ],
+      "relatedIds": [
+        201,
+        237,
+        290,
+        304,
+        368,
+        492,
+        553
+      ]
+    },
+    "492": {
+      "classification": "internal-syllabus-artifact",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "candidate-live-implementation",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "للمنتج منهج حي حتمي من 378 يوماً بخمس مراحل ومتطلبات وتسلسل قواعد ومهام واسترجاع وفحوص، وتعرض خريطة المنهج المادة الفعلية؛ وهذا أثر مرشح لتصميم syllabus داخلي. لا يثبت وجود الخطة تطبيق نموذج Nunan أو استناد الاختيارات إلى تحليل احتياجات أو مراجعة خارجية، كما لا توجد نتائج ميدانية تبرر الحمل والتسلسل.",
+      "candidateEvidence": [
+        "lib/plan.ts",
+        "lib/curriculum.ts",
+        "lib/curriculum-schedule.ts",
+        "components/akademie/CurriculumMap.tsx",
+        "scripts/student_audit.ts"
+      ],
+      "relatedIds": [
+        191,
+        194,
+        217,
+        467,
+        491,
+        493,
+        494,
+        497,
+        522
+      ]
+    },
+    "493": {
+      "classification": "curriculum-evaluation-governance",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "تقويم المنهج عملية تجمع أهدافاً ومعايير وبيانات تنفيذ وتعلم وآراء متعلمين ومعلمين ثم تحكم على الجودة والإنصاف والتحسين. تدقيق الخطة والمحتوى الحالي يثبت الاتساق البنيوي والتغطية فقط، و0/23 جلسة واقعية منفذة؛ فلا يُسمى نجاح البوابات Curriculum Evaluation ولا يستنتج أثراً.",
+      "candidateEvidence": [
+        "scripts/student_audit.ts",
+        "scripts/audit_inhalt.ts",
+        "content/real-world-validation.json",
+        "app/qualitaet/page.tsx"
+      ],
+      "relatedIds": [
+        207,
+        239,
+        246,
+        492,
+        494,
+        997
+      ]
+    },
+    "494": {
+      "classification": "internal-cefr-alignment-map",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "candidate-live-implementation",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "توجد بنية حية A0–B2 ومراحل وأهداف Can-Do وربط داخلي بين عدد من دروس القواعد والأهداف، مع مصفوفات تعلن حدودها؛ فهي مطابقة مرشحة لمواءمة داخلية. لا توجد لقطة CEFR موقعة أو مراجعة بندية مستقلة أو تحقق معياري وميداني، و25 موضوع قواعد بلا ربط Can-Do؛ لذلك لا تعني الملصقات اعتماد CEFR أو بلوغ مستوى.",
+      "candidateEvidence": [
+        "content/cando.json",
+        "lib/phasen.ts",
+        "content/grammar-profile-governance.json",
+        "content/grammar-profile-matrix.json",
+        "scripts/grammar_profile_audit.ts"
+      ],
+      "relatedIds": [
+        240,
+        246,
+        492,
+        493,
+        495,
+        496,
+        497,
+        522,
+        606,
+        937
+      ]
+    },
+    "495": {
+      "classification": "can-do-descriptor-support",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "candidate-live-implementation",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "يعرض المنتج 44 عبارة أستطيع A0–B2، يحفظ تعليم المتعلم الذاتي، ويعرض أهدافاً مرتبطة ببعض الاستعمالات المستقلة داخل الدرس؛ وهذه مطابقة حية مرشحة لدعم Can-Do. الواصفات غير موقعة إلى مصدر خارجي، والعلامة الذاتية ليست قياساً، و25 موضوعاً بلا ربط، كما تحتاج عبارات اجتياز الامتحان إلى مراجعة أو إعادة صياغة.",
+      "candidateEvidence": [
+        "content/cando.json",
+        "components/tasks.tsx",
+        "components/akademie/LektionWizard.tsx",
+        "content/grammar-profile-matrix.json",
+        "scripts/grammar_profile_audit.ts",
+        "scripts/interaktiv_test.tsx"
+      ],
+      "relatedIds": [
+        240,
+        242,
+        246,
+        494,
+        497,
+        522,
+        556
+      ]
+    },
+    "496": {
+      "classification": "external-profile-framework",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "Profil Deutsch مصدر خارجي يحتاج نسخة مرخصة وإصداراً محدداً وربطاً بندياً ومراجعاً مؤهلاً. المصفوفة الحالية مشتقة من grammar.json وتصرح بأنها داخلية، ومصدر GGP/Profil غير مزود؛ لا يجوز تحويل عناوين المستويات أو تقرير تاريخي إلى مطابقة رسمية أو نسخ واصفات غير موثق.",
+      "candidateEvidence": [
+        "content/grammar-profile-governance.json",
+        "content/grammar-profile-matrix.json",
+        "docs/GGP_GRAMMAR_PROFILE.md",
+        "scripts/grammar_profile_audit.ts"
+      ],
+      "relatedIds": [
+        246,
+        494,
+        495,
+        497
+      ]
+    },
+    "497": {
+      "classification": "cefr-action-oriented-task-practice",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "candidate-live-implementation",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "تعرض دروس القواعد استعمالاً مستقلاً بموقف جديد، تحفظ إنتاج المتعلم محلياً، وتربط عدداً منها بمعرف Can-Do ثم تؤخر تحققاً جديداً؛ وهذه مطابقة مرشحة محدودة لمهام موجهة للفعل وفق GERS. الربط غير شامل ولا مراجع خارجياً، و25 موضوعاً بلا Can-Do، ولا يثبت إنتاج نحوي فردي مهمة اجتماعية أصيلة أو مستوى CEFR.",
+      "candidateEvidence": [
+        "content/grammar.json",
+        "content/cando.json",
+        "components/akademie/LektionWizard.tsx",
+        "lib/plan.ts",
+        "content/grammar-profile-matrix.json",
+        "scripts/interaktiv_test.tsx"
+      ],
+      "relatedIds": [
+        240,
+        492,
+        494,
+        495,
+        496,
+        522
+      ]
+    },
+    "498": {
+      "classification": "telc-exam-format-practice",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "candidate-live-implementation",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "محاكاة telc B2 الحية تنشئ القراءة والبنى اللغوية والاستماع مرة واحدة ومهمة كتابة وتحضيراً شفهياً بأزمنة وشرطي نجاح للكتلتين، وتعرض أنها تدريب ذاتي غير رسمي؛ وهذه مطابقة مرشحة للصيغة. لقطة المصدر الرسمية والمراجعة المستقلة ما زالتا معلقتين، والكتابة والتحدث ذاتيا التقييم ولا يوجد اعتماد من telc.",
+      "candidateEvidence": [
+        "lib/simulation.ts",
+        "components/simulation.tsx",
+        "content/accreditation-alignment.json",
+        "scripts/accreditation_audit.ts",
+        "scripts/engine_smoke.ts",
+        "app/qualitaet/page.tsx"
+      ],
+      "relatedIds": [
+        190,
+        207,
+        230,
+        239,
+        310,
+        428,
+        494,
+        552,
+        997
+      ]
+    },
+    "499": {
+      "classification": "out-of-scope-exam-preparation",
+      "decision": "reject-not-applicable",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "نطاق المنتج المعلن هو الألمانية العامة حتى B2 والتحضير لـGoethe B2 وtelc B2، ولا توجد محاكاة TestDaF أو أقسامه الأكاديمية أو أزمنته أو شبكات تقييمه. ورود TestDaF في تعليق قائمة تراكيب لا ينفذ تحضيراً امتحانياً؛ يُرفض من النطاق الحالي بدلاً من توسيع ادعاء غير موثق.",
+      "candidateEvidence": [
+        "content/accreditation-alignment.json",
+        "app/pruefen/page.tsx",
+        "lib/simulation.ts",
+        "lib/fvg.ts"
+      ],
+      "relatedIds": [
+        190,
+        310,
+        428,
+        498,
+        500
+      ]
+    },
+    "500": {
+      "classification": "out-of-scope-exam-preparation",
+      "decision": "reject-not-applicable",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "لا يقدم المنتج مسار DSH أو مهامه الجامعية أو شروط المؤسسة وأقسامها وأزمنتها وتقييمها، والنطاق الموثق يحصر المواءمة في Goethe B2 وtelc B2. لذا يرفض DSH Prep من النطاق الحالي؛ لا تكفي مادة B2 عامة أو كتابة أكاديمية متفرقة لنسب تحضير امتحان مستقل.",
+      "candidateEvidence": [
+        "content/accreditation-alignment.json",
+        "app/pruefen/page.tsx",
+        "lib/simulation.ts",
+        "content/writing.json"
+      ],
+      "relatedIds": [
+        190,
+        310,
+        428,
+        498,
+        499
+      ]
+    },
     "840": {
       "classification": "duplicate-catalog-record",
       "decision": "merge-duplicate",
