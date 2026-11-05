@@ -8088,7 +8088,27 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "implicit-corrective-feedback-technique",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "إعادة الصياغة التصحيحية تتطلب أن يعيد المحاور قول المعنى بصيغة صحيحة من دون تحويله إلى شرح صريح، ثم تُفحص استجابة المتعلم. الوحدة المعزولة تعيد الجواب الصحيح فقط وغير مستوردة، والتصحيح الحي الحالي يكشف الخطأ والنموذج صراحة؛ لذلك لا يوجد recast حي موثوق.",
+        "candidateEvidence": [
+          "lib/feedback-recast.ts",
+          "components/exercises.tsx"
+        ],
+        "relatedIds": [
+          360,
+          361,
+          403,
+          410,
+          815,
+          817,
+          819,
+          820,
+          821
+        ]
       }
     },
     {
@@ -8106,10 +8126,32 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "explicit-corrective-feedback",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "بعد المحاولة الأخيرة يعرض عارض التمارين الحي الحكم الصريح والنموذج والفرق الكلمي وسبب الخطأ والخطوة التالية، وهو تطابق مرشح للتصحيح الصريح. لا تصنف كل رسالة حسب نوع الخطأ أو شدة التدخل، ولا يثبت الكشف إصلاحاً أو احتفاظاً لاحقاً.",
+        "candidateEvidence": [
+          "components/exercises.tsx",
+          "lib/grader.ts",
+          "components/ui.tsx",
+          "scripts/interaktiv_test.tsx"
+        ],
+        "relatedIds": [
+          360,
+          361,
+          403,
+          407,
+          410,
+          817,
+          818,
+          820,
+          821
+        ]
       }
     },
     {
@@ -8127,10 +8169,34 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "corrective-prompt-technique",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "تمنح تمارين التحويل الحية بعد الخطأ الأول تلميحاً موجهاً يسمّي الفخ أو العنصر الناقص من دون كشف النموذج، ثم تطلب محاولة أخيرة؛ وهي مطابقة مرشحة لنمط prompt. التغطية لا تشمل كل أنواع التمارين، ولا يوجد محرك يصنف المطالبة أو يقيس الإصلاح المؤجل.",
+        "candidateEvidence": [
+          "components/exercises.tsx",
+          "lib/grader.ts",
+          "scripts/interaktiv_test.tsx"
+        ],
+        "relatedIds": [
+          360,
+          401,
+          402,
+          404,
+          405,
+          406,
+          407,
+          410,
+          816,
+          817,
+          820,
+          821
+        ]
       }
     },
     {
@@ -8151,7 +8217,25 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "interactional-feedback-technique",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "طلب التوضيح تصرف تفاعلي يظهر عند تعثر الفهم ويحتاج جواباً جديداً ثم تحققاً من زوال الغموض. قائمة العبارات المعزولة أو مطالبات الحوار الثابتة لا تكتشف تعثراً ولا تربط طلباً باستجابة؛ ويلزم شريك أو محرك آمن وسجل حلقة قبل التوصيل.",
+        "candidateEvidence": [
+          "lib/feedback-clarification.ts",
+          "lib/interaction-deep.ts",
+          "components/sprechbegleiter.tsx"
+        ],
+        "relatedIds": [
+          360,
+          362,
+          403,
+          410,
+          412,
+          822
+        ]
       }
     },
     {
@@ -8172,7 +8256,26 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "implicit-corrective-feedback-technique",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "التكرار التصحيحي يعيد الجزء الخاطئ ببروز نغمي مقصود ويحتاج صوتاً أو ترميزاً يميز الخطأ ثم استجابة متعلم. الدالة المعزولة تعالج مثالاً واحداً نصياً وغير مستوردة، ولا توجد واجهة أو ملفات صوت معدلة دينامياً؛ لذا لا يعد تكرار السؤال أو الصوت تنفيذاً.",
+        "candidateEvidence": [
+          "lib/feedback-repetition.ts",
+          "components/exercises.tsx"
+        ],
+        "relatedIds": [
+          360,
+          401,
+          403,
+          410,
+          815,
+          819,
+          820,
+          821
+        ]
       }
     },
     {
@@ -8190,10 +8293,30 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "elicitation-feedback-technique",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "بعد الخطأ الأول تطلب الواجهة الحية محاولة ثانية بلا كشف، وتستعمل تمارين التحويل والفجوات لإكمال الشكل ذاتياً؛ وهي مطابقة مرشحة محدودة للاستنباط. لكن المطالبة عامة في معظم البنود ولا تولد فراغاً من خطأ المتعلم، ولا تسجل نوع الاستنباط أو إصلاحاً مؤجلاً.",
+        "candidateEvidence": [
+          "components/exercises.tsx",
+          "lib/grader.ts",
+          "content/grammar.json",
+          "scripts/interaktiv_test.tsx"
+        ],
+        "relatedIds": [
+          360,
+          403,
+          409,
+          410,
+          816,
+          820,
+          821
+        ]
       }
     },
     {
@@ -8211,10 +8334,32 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "metalinguistic-corrective-feedback",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "تسمي تمارين التحويل الحية البنية الناقصة أو الفخ الباقي، وبعد التسليم تعرض سبباً وقاعدة وخطوة تالية؛ وهي مطابقة مرشحة لتغذية راجعة ما وراء لغوية. الكواشف شكلية وجزئية ولا تثبت فهم المصطلح أو إصلاحه، وتحتاج مراجعة لغوية بندية.",
+        "candidateEvidence": [
+          "components/exercises.tsx",
+          "lib/grader.ts",
+          "content/grammar.json",
+          "scripts/interaktiv_test.tsx"
+        ],
+        "relatedIds": [
+          343,
+          360,
+          402,
+          403,
+          409,
+          410,
+          818,
+          820,
+          923
+        ]
       }
     },
     {
@@ -8235,7 +8380,25 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "partner-dependent-correction",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "تصحيح الأقران يحتاج متعلمين حقيقيين ومعياراً وتدريباً وموافقة وخصوصية وإشرافاً على الضرر. المنتج محلي فردي ولا يملك حسابات أو تبادل نصوص أو هوية مصحح؛ والمراجعة الذاتية أو التصحيح الآلي لا يجوز تسميتهما تصحيح أقران.",
+        "candidateEvidence": [
+          "lib/peer-assessment.ts",
+          "lib/peer-assessment-var2.ts",
+          "content/writing.json"
+        ],
+        "relatedIds": [
+          206,
+          243,
+          309,
+          557,
+          718,
+          761
+        ]
       }
     },
     {
@@ -8253,10 +8416,34 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "learner-self-correction",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "تتيح الواجهة محاولة ثانية بلا كشف، ثم حلقة كتابة تحفظ المسودة وتطلب إعادة صياغة ومقارنة، مع إعادة مؤجلة بعد 48 ساعة؛ وهي مطابقة حية مرشحة للتصحيح الذاتي. لا يثبت تغير الكلمات صحة التصحيح أو استقلاله، وبعض الكواشف لا تفهم المعنى.",
+        "candidateEvidence": [
+          "components/exercises.tsx",
+          "components/schreibschleife.tsx",
+          "components/wiederschreiben.tsx",
+          "lib/wiederschreiben.ts",
+          "lib/textdiff.ts",
+          "scripts/interaktiv_test.tsx"
+        ],
+        "relatedIds": [
+          304,
+          356,
+          360,
+          403,
+          406,
+          407,
+          410,
+          719,
+          720
+        ]
       }
     },
     {
@@ -8277,7 +8464,33 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "feedback-response-outcome",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "التقاط المتعلم حدث بعد التغذية الراجعة يتطلب ربط خطأ محدد بنوع تغذية ثم استجابة وتحديد هل حدث repair. تسجل بعض التمارين محاولة ثانية في الجلسة، لكن الحوكمة لا تحتفظ بحلقة مصنفة ولا تميز التكرار عن التعديل ولا تقيس الاحتفاظ؛ لذلك لا يعتمد uptake من مجرد النقر أو الصواب.",
+        "candidateEvidence": [
+          "components/exercises.tsx",
+          "components/schreibschleife.tsx",
+          "lib/grader.ts"
+        ],
+        "relatedIds": [
+          361,
+          401,
+          402,
+          403,
+          404,
+          405,
+          406,
+          407,
+          409,
+          817,
+          818,
+          819,
+          820,
+          821
+        ]
       }
     },
     {
@@ -8298,7 +8511,24 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "sla-interaction-theory",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "فرضية التفاعل تفسر كيف قد يفيد التفاوض والتغذية الراجعة في جعل المدخل قابلاً للمعالجة، وليست ميزة مستقلة. الحوارات الثابتة ورفيق الذكاء لا يثبتان تعثراً متبادلاً أو شريكاً بشرياً أو اكتساباً؛ تبقى النظرية مرجعاً لتصميم حلقات قابلة للرصد والقياس.",
+        "candidateEvidence": [
+          "lib/interaction-deep.ts",
+          "components/sprechbegleiter.tsx",
+          "content/dialogues.json"
+        ],
+        "relatedIds": [
+          213,
+          362,
+          412,
+          810,
+          822
+        ]
       }
     },
     {
@@ -8319,7 +8549,25 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "meaning-negotiation-theory",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "التفاوض المتقدم على المعنى يتطلب مؤشراً لتعثر الفهم وطلب توضيح أو تحققاً ثم استجابة معدلة ونتيجة فهم. لا تحقق العبارات الجاهزة أو المحادثة الحرة غير المصنفة هذا التسلسل، ولا يجوز استنتاج التفاوض من عدد الرسائل؛ لذلك يبقى السجل بحثياً.",
+        "candidateEvidence": [
+          "lib/interaction-deep.ts",
+          "lib/feedback-clarification.ts",
+          "components/sprechbegleiter.tsx"
+        ],
+        "relatedIds": [
+          213,
+          362,
+          404,
+          411,
+          810,
+          822
+        ]
       }
     },
     {
@@ -8337,10 +8585,33 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "output-revision-activity",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "تتيح حلقة الكتابة الحية مسودة ثم مؤشرات وتصحيحاً محلياً أو اختيارياً ثم نسخة معدلة ومقارنة، كما توجد إعادة مؤجلة؛ وهي مطابقة مرشحة للإخراج المعدل. لا يثبت الفرق الكلمي أن التعديل جاء من تفاوض على المعنى أو أنه أصلح اللغة أو حسن الفهم لدى مخاطب.",
+        "candidateEvidence": [
+          "components/schreiben.tsx",
+          "components/schreibschleife.tsx",
+          "components/wiederschreiben.tsx",
+          "lib/textdiff.ts",
+          "lib/wiederschreiben.ts"
+        ],
+        "relatedIds": [
+          214,
+          356,
+          361,
+          409,
+          414,
+          415,
+          809,
+          824,
+          882
+        ]
       }
     },
     {
@@ -8361,7 +8632,25 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "sla-output-theory",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "الإخراج المفهوم مفهوم وظيفي يقتضي أن يفهم مخاطب فعلي الرسالة، لا أن يكتمل حقل أو يطابق نموذجاً. يوفر المنتج مهام كتابة وتحدث وإنتاجاً حراً، لكنه لا يملك حكم مستمع أو قارئ على انتقال المعنى؛ لذلك لا يثبت comprehensible output أو أثره في الاكتساب.",
+        "candidateEvidence": [
+          "components/schreiben.tsx",
+          "components/sprechkarten.tsx",
+          "content/muendlich.json"
+        ],
+        "relatedIds": [
+          214,
+          413,
+          415,
+          809,
+          824,
+          882
+        ]
       }
     },
     {
@@ -8382,7 +8671,26 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "sla-output-theory",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "الإخراج المدفوع يفترض ضغطاً تواصلياً يدفع المتعلم إلى دقة أو تعقيد يتجاوز قدرته الحالية. التحويلات ومعايير المهمة تطلب إنتاجاً مقيداً، لكنها لا تثبت ضغط مخاطب أو تعديل رسالة ولا تقيس التعقيد والدقة والطلاقة معاً؛ لذا يبقى المفهوم بحثياً.",
+        "candidateEvidence": [
+          "components/exercises.tsx",
+          "components/schreiben.tsx",
+          "content/grammar.json"
+        ],
+        "relatedIds": [
+          214,
+          358,
+          413,
+          414,
+          809,
+          824,
+          882
+        ]
       }
     },
     {
@@ -8403,7 +8711,27 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "instructional-focus-comparison",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "التمييز بين focus on form داخل تواصل ذي معنى وfocus on forms كسلسلة قواعد هو إطار تصميم ومقارنة، لا زر أو درجة. يحتوي المنتج دروس قواعد وأنشطة ملاحظة ومهام تواصلية، لكنه لا يربط تدخل الشكل بلحظة تعثر داخل مهمة واحدة ولا يقارن النهجين؛ لذلك لا يعتمد التنفيذ.",
+        "candidateEvidence": [
+          "lib/focus-on-form-deep.ts",
+          "components/akademie/LektionWizard.tsx",
+          "components/bemerken.tsx"
+        ],
+        "relatedIds": [
+          215,
+          373,
+          374,
+          375,
+          712,
+          713,
+          814,
+          883
+        ]
       }
     },
     {
@@ -8421,10 +8749,32 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "textual-input-enhancement",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "تلوّن بطاقة القراءة الحية شاهد القاعدة داخل جملته، وتسميه وتسأل عن موضعه، كما تشير جداول Lesson Studio بصرياً إلى الحالات؛ وهي مطابقة مرشحة للتعزيز النصي. الإبراز يقتصر على أنماط سطحية وبعض القواعد ولا يثبت الانتباه أو الاكتساب، ويحتاج فحص تباين وقارئ شاشة.",
+        "candidateEvidence": [
+          "lib/bemerken.ts",
+          "components/bemerken.tsx",
+          "components/tasks.tsx",
+          "components/akademie/LektionWizard.tsx",
+          "scripts/interaktiv_test.tsx"
+        ],
+        "relatedIds": [
+          211,
+          280,
+          377,
+          378,
+          418,
+          419,
+          711,
+          714
+        ]
       }
     },
     {
@@ -8445,7 +8795,27 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "aural-input-enhancement",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "التعزيز السمعي يحتاج معالجة مقصودة لبروز شكل مستهدف مثل الشدة أو الوقفة أو الإبطاء الموضعي مع صوت مرجعي وبديل وصول. سرعة المشغل العامة وإعادة السطر لا تبرزان شكلاً بعينه، والملفات الحالية غير موسومة بنقاط تعزيز؛ لذا لا يوجد تنفيذ حي للسجل.",
+        "candidateEvidence": [
+          "components/hoeren.tsx",
+          "components/shadowing.tsx",
+          "lib/speech.ts"
+        ],
+        "relatedIds": [
+          211,
+          267,
+          341,
+          342,
+          377,
+          417,
+          419,
+          711
+        ]
       }
     },
     {
@@ -8463,10 +8833,34 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "consciousness-raising-activity",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "يبدأ Lesson Studio بأمثلة ويطلب ملاحظة النمط قبل فتح القاعدة، وتعرض القراءة شاهداً حقيقياً وتسأل أي جملة تحمله؛ وهي مطابقة حية مرشحة لنشاط رفع الوعي. لا تقيس الواجهة تفسير المتعلم للقاعدة أو مستوى وعيه، ولا تثبت أن الاكتشاف أفضل من الشرح.",
+        "candidateEvidence": [
+          "components/akademie/LektionWizard.tsx",
+          "lib/bemerken.ts",
+          "components/bemerken.tsx",
+          "scripts/interaktiv_test.tsx"
+        ],
+        "relatedIds": [
+          186,
+          202,
+          211,
+          280,
+          377,
+          378,
+          379,
+          417,
+          418,
+          714,
+          923
+        ]
       }
     },
     {
@@ -8487,7 +8881,22 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "partner-dependent-dictogloss",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "Dictogloss يتطلب استماعاً إلى نص وتدوين كلمات ثم إعادة بناء المعنى ومقارنة النسخة، وغالباً تفاوضاً تعاونياً. الإملاء الحي يطلب نسخ الجملة حرفياً ويكشف النموذج، ولا توجد مرحلة ملاحظات أو إعادة بناء نص أو شريك؛ والوحدة المعزولة تسمي الخطوات فقط.",
+        "candidateEvidence": [
+          "lib/dictogloss-var.ts",
+          "components/diktat.tsx",
+          "components/hoeren.tsx"
+        ],
+        "relatedIds": [
+          224,
+          396,
+          715
+        ]
       }
     },
     {
