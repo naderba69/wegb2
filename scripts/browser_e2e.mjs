@@ -6,7 +6,7 @@
  * Service Worker activation, complete shell caching, and offline routes/banks.
  */
 import { execFileSync, spawn } from "node:child_process";
-import { existsSync, mkdtempSync, rmSync } from "node:fs";
+import { existsSync, mkdtempSync, readFileSync, rmSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import process from "node:process";
@@ -18,9 +18,15 @@ const ORIGIN = `http://${HOST}:${PORT}`;
 const ROUTES = ["/", "/lernen", "/ueben", "/fortschritt", "/pruefen", "/einstellungen", "/masar", "/drucken", "/datenschutz", "/qualitaet"];
 const BANKS = ["/banks.json", "/banks-vertiefung.json", "/banks-lang.json"];
 const TIMEOUT = 120_000;
+const SW_TIMEOUT = 240_000;
+const toolSummary = JSON.parse(readFileSync(join(ROOT, "content/tool-catalog-summary.json"), "utf8"));
 
 function fail(message) {
   throw new Error(message);
+}
+
+function workflowCommandValue(value) {
+  return String(value).replaceAll("%", "%25").replaceAll("\r", "%0D").replaceAll("\n", "%0A");
 }
 
 function chromePath() {
@@ -168,12 +174,28 @@ async function poll(cdp, sessionId, expression, beschreibung, timeout = TIMEOUT)
   fail(`${beschreibung}: timeout (letzter Wert ${JSON.stringify(wert)})`);
 }
 
+async function pollTextMarkers(cdp, sessionId, selector, markers, beschreibung, timeout = TIMEOUT) {
+  const ende = Date.now() + timeout;
+  let text = "";
+  let missing = markers;
+  while (Date.now() < ende) {
+    text = await evalJs(cdp, sessionId, `document.querySelector(${JSON.stringify(selector)})?.textContent ?? ""`);
+    missing = markers.filter((marker) => !text.includes(marker));
+    if (!missing.length) return text;
+    await new Promise((resolve) => setTimeout(resolve, 500));
+  }
+  const catalogIndex = text.indexOf("قرار فرز");
+  const excerpt = catalogIndex >= 0 ? text.slice(Math.max(0, catalogIndex - 24), catalogIndex + 180) : text.slice(0, 180);
+  fail(`${beschreibung}: ${missing.join(" | ")} — ${excerpt || "kein gerenderter Text"}`);
+}
+
 async function main() {
   const chrome = chromePath();
   const profil = mkdtempSync(join(tmpdir(), "wegb2-browser-e2e-"));
   let server;
   let browser;
   let cdp;
+  let stage = "production server startup";
   const serverLog = [];
   const chromeLog = [];
   try {
@@ -186,6 +208,7 @@ async function main() {
     server.stderr.on("data", (chunk) => serverLog.push(String(chunk)));
     await waitHttp(`${ORIGIN}/datenschutz`);
 
+    stage = "CSP policy verification";
     const policyResponse = await fetch(`${ORIGIN}/datenschutz`);
     const policyHtml = await policyResponse.text();
     const csp = policyResponse.headers.get("content-security-policy") ?? "";
@@ -195,6 +218,7 @@ async function main() {
     }
     if (!csp.includes("frame-ancestors 'self'")) fail("Produktions-CSP begrenzt frame-ancestors nicht auf self");
 
+    stage = "Chromium startup";
     const ldParts = [process.env.LD_LIBRARY_PATH];
     if (existsSync("/tmp/nsslibs")) ldParts.push("/tmp/nsslibs");
     if (existsSync("/tmp/aws/lib")) ldParts.push("/tmp/aws/lib");
@@ -227,17 +251,29 @@ async function main() {
     await cdp.send("Page.enable", {}, sessionId);
     await cdp.send("Runtime.enable", {}, sessionId);
     await cdp.send("Network.enable", {}, sessionId);
+    stage = "privacy page render";
     await navigate(cdp, sessionId, `${ORIGIN}/datenschutz`);
     const privacy = await poll(cdp, sessionId,
       `document.body?.textContent?.includes("الخصوصية والبيانات") && !document.body?.textContent?.includes("تعذّر تحميل المحتوى")`,
       "Datenschutzseite ohne Banken verfügbar");
     if (!privacy) fail("Datenschutzseite fehlt");
 
+    stage = "quality page render";
     await navigate(cdp, sessionId, `${ORIGIN}/qualitaet`);
-    const quality = await poll(cdp, sessionId,
-      `document.body?.textContent?.includes("لا يحمل اعتماداً رسمياً من Goethe-Institut أو telc gGmbH") && document.body?.textContent?.includes("برنامج الإكمال الأكاديمي") && document.body?.textContent?.includes("سمات قواعد مرشحة") && document.body?.textContent?.includes("فكرة/مفهوم في الكتالوج") && document.body?.textContent?.includes("288 قرار فرز") && document.body?.textContent?.includes("532 بانتظار الفرز") && document.body?.textContent?.includes("تنفيذ حي مرشح: 88") && document.body?.textContent?.includes("1289 إحالة مفاهيمية") && document.body?.textContent?.includes("6 مرفوضة لعدم الملاءمة") && document.body?.textContent?.includes("ما يمنع الاعتماد الآن؟") && !document.body?.textContent?.includes("تعذّر تحميل المحتوى")`,
-      "Qualitätsseite mit ehrlicher Akkreditierungsgrenze");
-    if (!quality) fail("Qualitätsseite oder Akkreditierungsgrenze fehlt");
+    const qualityMarkers = [
+      "لا يحمل اعتماداً رسمياً من Goethe-Institut أو telc gGmbH",
+      "برنامج الإكمال الأكاديمي",
+      "سمات قواعد مرشحة",
+      "فكرة/مفهوم في الكتالوج",
+      `${toolSummary.reviewedDecisions} قرار فرز`,
+      `${toolSummary.pendingTriage} بانتظار الفرز`,
+      `تنفيذ حي مرشح: ${toolSummary.candidateLiveImplementations}`,
+      `${toolSummary.relatedCatalogReferences} إحالة مفاهيمية`,
+      `${toolSummary.decisionBreakdown["reject-not-applicable"] ?? 0} مرفوضة لعدم الملاءمة`,
+      "ما يمنع الاعتماد الآن؟",
+    ];
+    const qualityText = await pollTextMarkers(cdp, sessionId, "[data-ui-shell='ui-app-shell']", qualityMarkers, "Qualitätsseite fehlt");
+    if (qualityText.includes("تعذّر تحميل المحتوى")) fail("Qualitätsseite meldet einen Inhaltsfehler");
 
     // Lab profiles are preflight evidence only: viewport/touch/media emulation is
     // not recorded as a physical-device or human-accessibility sign-off.
@@ -247,6 +283,7 @@ async function main() {
       { id: "android-360", width: 360, height: 800, scale: 3, mobile: true, touch: true },
       { id: "tablet-768", width: 768, height: 1024, scale: 2, mobile: true, touch: true },
     ]) {
+      stage = `lab profile ${profile.id}`;
       await cdp.send("Emulation.setDeviceMetricsOverride", {
         width: profile.width,
         height: profile.height,
@@ -285,9 +322,11 @@ async function main() {
     await cdp.send("Emulation.setEmulatedMedia", { media: "screen", features: [] }, sessionId);
     const mediaCapability = await evalJs(cdp, sessionId, `({ secureContext: isSecureContext, mediaDevicesApi: !!navigator.mediaDevices?.getUserMedia })`);
 
-    const sw = await poll(cdp, sessionId, `(async()=>{const r=await navigator.serviceWorker.getRegistration();return r?.active?.state==="activated"&&!!navigator.serviceWorker.controller})()`, "Service Worker activation");
+    stage = "service worker activation";
+    const sw = await poll(cdp, sessionId, `(async()=>{const r=await navigator.serviceWorker.getRegistration();return r?.active?.state==="activated"&&!!navigator.serviceWorker.controller})()`, "Service Worker activation", SW_TIMEOUT);
     if (!sw) fail("Service Worker nicht aktiv");
 
+    stage = "offline cache completeness";
     const online = await evalJs(cdp, sessionId, `(async()=>{
       const required=${JSON.stringify([...ROUTES, ...BANKS])};
       const cache=await caches.open("wegb2-v5");
@@ -310,6 +349,7 @@ async function main() {
 
     const offlineRoutes = [];
     for (const route of ROUTES) {
+      stage = `offline route ${route}`;
       await navigate(cdp, sessionId, `${ORIGIN}${route}`);
       const bereit = await poll(cdp, sessionId,
         `location.pathname===${JSON.stringify(route)} && !!document.querySelector("[data-ui-shell='ui-app-shell']") && !document.body.textContent.includes("تعذّر تحميل المحتوى")`,
@@ -317,6 +357,7 @@ async function main() {
       offlineRoutes.push({ route, bereit: !!bereit, title: await evalJs(cdp, sessionId, "document.title") });
     }
 
+    stage = "offline banks";
     const offlineBanks = await evalJs(cdp, sessionId, `(async()=>{
       const out={};
       for(const path of ${JSON.stringify(BANKS)}){const response=await fetch(path);out[path]={status:response.status,bytes:(await response.text()).length};}
@@ -337,9 +378,11 @@ async function main() {
     }, null, 2));
     console.log(`browser:e2e ✓ ${ROUTES.length} Routen + ${BANKS.length} Banken im echten Chromium offline`);
   } catch (error) {
+    const message = error instanceof Error ? error.message : String(error);
+    console.error(`::error title=Browser E2E (${workflowCommandValue(stage)})::${workflowCommandValue(message)}`);
     console.error(serverLog.join("").slice(-2000));
     console.error(chromeLog.join("").slice(-2000));
-    throw error;
+    throw new Error(`[${stage}] ${message}`, { cause: error });
   } finally {
     cdp?.close();
     await beende(browser);

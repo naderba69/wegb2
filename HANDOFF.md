@@ -57,7 +57,7 @@ npm run audit:lighthouse # LHCI 0.16.0، تسعة مسارات، a11y مانعة
 
 | الأمر | النتيجة |
 |---|---|
-| `npm run audit:repo` | **3325 ملفاً · 513803 سطراً · 0 blocker** ✅ |
+| `npm run audit:repo` | **3325 ملفاً · 513846 سطراً · 0 blocker** ✅ |
 | `npm run audit:plan` | **378/378 يوماً · 2500 مهمة فعلية · 0 خطأ/تحذير** ✅ |
 | `npm run audio:qc` | **1099/1099 ملفاً · 0 شذوذ آلي** ✅؛ لا يساوي استماعاً بشرياً |
 | `tsc --noEmit` / `npm run lint` | **نجحا** ✅ |
