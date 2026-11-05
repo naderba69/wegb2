@@ -6146,6 +6146,525 @@
         883
       ]
     },
+    "441": {
+      "classification": "usage-based-acquisition-theory",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "الاكتساب المستند إلى الاستعمال إطار يفسر تشكل المعرفة عبر تاريخ تعرض واستعمال ممتد، ولا يثبته تكرار أمثلة الدرس أو عدّ مدونة التطبيق أو جدولة SRS. لا يتتبع المنتج جرعة الأنماط وسياقاتها ثم يختبر تغير التعميم؛ لذلك يبقى السجل بحثياً ولا يتحول إلى وصف لآلية اكتساب المتعلم.",
+      "candidateEvidence": [
+        "lib/frequenz.ts",
+        "lib/srs.ts",
+        "content/grammar.json"
+      ],
+      "relatedIds": [
+        318,
+        376,
+        437,
+        618,
+        707
+      ]
+    },
+    "442": {
+      "classification": "exemplar-representation-theory",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "نظرية النماذج المثالّية ادعاء عن تمثيل الخبرة واستدعاء حالات جزئية والتعميم منها، وليست مجرد وجود أمثلة مترجمة في الدروس. المنتج لا يقيس تخزين الحالات أو تشابهها أو أثر كثافتها على اختيار المتعلم، لذا لا تعد بطاقات الأمثلة أو سجل المراجعة تنفيذاً للنظرية.",
+      "candidateEvidence": [
+        "content/grammar.json",
+        "content/vocab.json",
+        "lib/srs.ts"
+      ],
+      "relatedIds": [
+        188,
+        265,
+        271,
+        287,
+        619
+      ]
+    },
+    "443": {
+      "classification": "usage-based-learning-construct",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "الترسخ بناء تفسيري عن تقوية الوحدات مع الخبرة وصعوبة تغييرها، ولا يمكن استنتاجه من عدد المراجعات أو الاستقرار الحسابي لبطاقة SRS. لا توجد جرعة تعرض مضبوطة ولا مهمة تقيس سرعة المعالجة أو مقاومة البديل، لذلك يمنع تحويل المؤشرات المحلية إلى درجة Entrenchment للمتعلم.",
+      "candidateEvidence": [
+        "lib/srs.ts",
+        "lib/frequenz.ts",
+        "content/grammar.json"
+      ],
+      "relatedIds": [
+        376,
+        382,
+        395,
+        400,
+        441,
+        618
+      ]
+    },
+    "444": {
+      "classification": "cognitive-abstraction-construct",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "التخطيط التجريدي أو Schematization عملية معرفية يُفترض فيها استخلاص بنية عامة من الاستعمال. عرض قاعدة جاهزة أو مشهد SVG نمطي لا يثبت أن المتعلم بنى مخططاً داخلياً أو يستطيع نقله إلى أمثلة جديدة؛ يلزم نشاط استنباط وقياس تعميم مستقل قبل أي ربط.",
+      "candidateEvidence": [
+        "content/grammar.json",
+        "lib/lesson-scene.ts",
+        "components/akademie/LektionWizard.tsx"
+      ],
+      "relatedIds": [
+        189,
+        275,
+        327,
+        382,
+        441,
+        892
+      ]
+    },
+    "445": {
+      "classification": "cognitive-categorization-construct",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "التصنيف هنا بناء معرفي يتعلق بتكوين الفئات والحدود والنماذج الأولية، وليس تقسيم المفردات إلى حزم أو إضافة وسوم مؤلفة مسبقاً. لا يطلب المنتج من المتعلم بناء فئة أو تبرير الحالات الحدية ولا يقيس تغير بنيتها، لذلك لا تُستنتج قدرة Categorization من تنظيم المحتوى.",
+      "candidateEvidence": [
+        "content/vocab.json",
+        "lib/content.ts",
+        "components/tasks.tsx"
+      ],
+      "relatedIds": [
+        303,
+        305,
+        343,
+        347,
+        444,
+        923
+      ]
+    },
+    "446": {
+      "classification": "figurative-language-awareness-practice",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "candidate-live-implementation",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "medium",
+      "rationaleAr": "يقدم درس B2 الحي تعابير اصطلاحية، يقابل المعنى الحرفي بالمقصود، يذكر مجالات الصورة مثل الجسم والحيوان والنقل، ثم يطلب الاختيار والإكمال والتحويل والإنتاج مع تغذية راجعة؛ وهذه مطابقة مرشحة محدودة للوعي باللغة المجازية. لا يقدم خرائط مصدر/هدف منهجية ولا يثبت وعياً عاماً بالاستعارة أو صلاحية كل تحليل دلالي.",
+      "candidateEvidence": [
+        "content/grammar.json",
+        "lib/plan.ts",
+        "components/akademie/LektionWizard.tsx",
+        "scripts/engine_smoke.ts"
+      ],
+      "relatedIds": [
+        324,
+        325,
+        448,
+        484,
+        644,
+        645
+      ]
+    },
+    "447": {
+      "classification": "metonymy-awareness-practice",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "medium",
+      "rationaleAr": "لم يظهر في النشاط الحي تعريف للكناية أو تمييز بين الجزء والكل أو المنتج والمكان، ولا مطالبة تطلب تفسير العلاقة الكنائية مع تغذية راجعة. وجود تعابير اصطلاحية أو شروح مجازية لا يثبت Metonymy Awareness، لذا يحتاج السجل مادة مسماة وأمثلة مضادة واختبار فهم قبل التوصيل.",
+      "candidateEvidence": [
+        "content/grammar.json",
+        "content/texts.json",
+        "components/tasks.tsx"
+      ],
+      "relatedIds": [
+        324,
+        347,
+        446,
+        448,
+        484,
+        645
+      ]
+    },
+    "448": {
+      "classification": "conceptual-metaphor-theory",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "الاستعارة المفاهيمية إطار تحليلي لروابط نسقية بين مجال مصدر ومجال هدف، وليست مجرد شرح أن عبارة ما غير حرفية. درس التعابير الحي لا يبني خرائط مفاهيمية ولا يقارن امتداداتها أو يقيس التعميم، لذلك يبقى الإطار للبحث بينما يفصل عنه نشاط الوعي المحدود في السجل 446.",
+      "candidateEvidence": [
+        "content/grammar.json",
+        "content/texts.json",
+        "components/akademie/LektionWizard.tsx"
+      ],
+      "relatedIds": [
+        324,
+        446,
+        447,
+        484,
+        645
+      ]
+    },
+    "449": {
+      "classification": "embodied-cognition-theory",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "الإدراك المتجسد نظرية واسعة عن تأصيل المعنى في أنظمة حسية وحركية، ولا يثبته النقر أو الرسم أو ورود أفعال جسمية في الأمثلة. لا يجمع المنتج أداءً حركياً ولا يقارن شرط تجسيد ببديل ولا يقيس فهماً ناتجاً عنه، لذلك لا تُنسب إليه آلية embodied cognition.",
+      "candidateEvidence": [
+        "components/tasks.tsx",
+        "lib/lesson-scene.ts",
+        "lib/silent-way.ts"
+      ],
+      "relatedIds": [
+        196,
+        450,
+        665,
+        666,
+        830,
+        859,
+        860,
+        861,
+        862
+      ]
+    },
+    "450": {
+      "classification": "gesture-supported-learning-activity",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "يوجد نموذج صغير غير موصول في silent-way يذكر الإشارة إلى صورة، لكن لا تستورده واجهة المتعلم ولا توجد تعليمات إيماء مرتبطة بمادة وهدف وتغذية راجعة. يحتاج النشاط اختياراً آمناً، بديلاً لذوي القيود الحركية، وحدود خصوصية إن استُعملت كاميرا؛ ولا يكفي زر أو حركة واجهة لإثبات التعلم بالإيماء.",
+      "candidateEvidence": [
+        "lib/silent-way.ts",
+        "components/tasks.tsx",
+        "lib/plan.ts"
+      ],
+      "relatedIds": [
+        196,
+        307,
+        449,
+        666,
+        830,
+        861,
+        862
+      ]
+    },
+    "451": {
+      "classification": "multimodal-instructional-design",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "candidate-live-implementation",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "تجمع الدروس والمهام الحية نصاً ألمانياً وعربياً ورسماً SVG دلالياً وصوتاً اختيارياً وتفاعلاً، مع عنوان بديل وبعض ضوابط الكشف؛ وهي مطابقة مرشحة لتصميم متعدد الوسائط. لا يثبت جمع القنوات أنها منسقة دلالياً أو تخفض الحمل أو تناسب كل متعلم، وتظل تغطية الصوت والإتاحة والأثر بحاجة إلى مراجعة وأجهزة فعلية.",
+      "candidateEvidence": [
+        "components/akademie/LektionWizard.tsx",
+        "components/akademie/LessonSceneVisual.tsx",
+        "components/tasks.tsx",
+        "lib/speech.ts",
+        "scripts/interaktiv_test.tsx"
+      ],
+      "relatedIds": [
+        187,
+        197,
+        266,
+        267,
+        281,
+        282,
+        283,
+        288,
+        793,
+        846
+      ]
+    },
+    "452": {
+      "classification": "visual-representation-design",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "candidate-live-implementation",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "medium",
+      "rationaleAr": "يعرض Lesson Studio لكل موضوع مشهداً بصرياً حتمياً ذا وصف بديل بجانب القاعدة والأمثلة، وهو تطابق حي مرشح للاستعانة بالتمثيل البصري. المشاهد مولدة من عنوان الموضوع ضمن تسع عائلات ولا تطلب من المتعلم تكوين صورة ذهنية أو رسمها، ولم يُختبر أن الرسم صحيح دلالياً أو يحسن الفهم مقارنة بالنص.",
+      "candidateEvidence": [
+        "components/akademie/LessonSceneVisual.tsx",
+        "lib/lesson-scene.ts",
+        "components/akademie/LektionWizard.tsx",
+        "scripts/engine_smoke.ts"
+      ],
+      "relatedIds": [
+        187,
+        266,
+        273,
+        387,
+        451,
+        453,
+        795,
+        846
+      ]
+    },
+    "453": {
+      "classification": "instructional-diagram-design",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "candidate-live-implementation",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "medium",
+      "rationaleAr": "تتضمن المشاهد الحية خطوط زمن ومسارات وروابط وتحولات وعقداً مرئية مع بديل نصي، وهي مطابقة مرشحة محدودة لاستخدام مخططات في الشرح. اختيار العائلة قائم على كلمات العنوان والرسم غير موسوم بعناصر الدرس التفصيلية، لذلك لا يُدعى أنه مخطط تفسيري دقيق أو أنه حسن الفهم قبل مراجعة بندية واختبار مقارنة.",
+      "candidateEvidence": [
+        "components/akademie/LessonSceneVisual.tsx",
+        "lib/lesson-scene.ts",
+        "components/akademie/LektionWizard.tsx",
+        "scripts/engine_smoke.ts"
+      ],
+      "relatedIds": [
+        266,
+        282,
+        387,
+        451,
+        452,
+        454,
+        795
+      ]
+    },
+    "454": {
+      "classification": "graphic-organizer-activity",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "medium",
+      "rationaleAr": "تعرض الخريطة المنهجية وجداول الدروس معلومات منظمة، لكنها واجهات عرض وتنقل لا منظماً بيانياً يملؤه المتعلم لربط أفكار مادة محددة ثم يتلقى عليه تغذية راجعة. يلزم قالب ذو هدف واضح وحفظ وإتاحة ومعيار تقييم؛ ولا تكفي شبكة CSS أو جدول بيانات لإثبات Graphic Organizers.",
+      "candidateEvidence": [
+        "components/akademie/CurriculumMap.tsx",
+        "components/akademie/LektionWizard.tsx",
+        "content/grammar.json"
+      ],
+      "relatedIds": [
+        187,
+        453,
+        455,
+        456,
+        457,
+        458
+      ]
+    },
+    "455": {
+      "classification": "learner-mind-mapping-activity",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "medium",
+      "rationaleAr": "لا توجد واجهة حية تتيح إنشاء عقد وفروع حرة أو حفظ خريطة ذهنية ومراجعتها. خريطة المنهج تنقل بين أيام ودروس ثابتة، ومشاهد SVG مؤلفة آلياً للعرض؛ وكلاهما لا يمثل Mind Mapping من المتعلم. يحتاج النشاط محرراً قابلاً للوصول وهدفاً لغوياً ومخرجاً قابلاً للتقييم.",
+      "candidateEvidence": [
+        "components/akademie/CurriculumMap.tsx",
+        "components/akademie/LessonSceneVisual.tsx",
+        "lib/lesson-scene.ts"
+      ],
+      "relatedIds": [
+        187,
+        273,
+        454,
+        456,
+        795
+      ]
+    },
+    "456": {
+      "classification": "learner-concept-mapping-activity",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "medium",
+      "rationaleAr": "لا يطلب المنتج من المتعلم ربط مفاهيم بعلاقات مسماة أو تكوين قضايا وفحص الروابط، ولا يحفظ خريطة مفاهيم. عرض متطلبات الدروس وترتيبها في خريطة المنهج دليل تنظيمي مجاور فقط؛ يلزم نموذج عقد/علاقات وتغذية راجعة وبديل لوحة مفاتيح قبل التوصيل.",
+      "candidateEvidence": [
+        "components/akademie/CurriculumMap.tsx",
+        "content/grammar.json",
+        "lib/plan.ts"
+      ],
+      "relatedIds": [
+        363,
+        444,
+        454,
+        455,
+        801,
+        802,
+        803
+      ]
+    },
+    "457": {
+      "classification": "prior-knowledge-reflection-activity",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "medium",
+      "rationaleAr": "لا توجد بطاقة حية تفصل ما يعرفه المتعلم وما يريد معرفته وما تعلمه قبل المادة وبعدها، ولا حفظ لإجابات الأعمدة الثلاثة. الأهداف والملخصات ومؤشرات التقدم لا تنفذ KWL؛ يحتاج النشاط مطالبتين زمنيتين واضحتين ومخرجاً يعاد عرضه دون تحويله إلى قياس معرفة غير صالح.",
+      "candidateEvidence": [
+        "components/akademie/LektionWizard.tsx",
+        "components/akademie/CurriculumMap.tsx",
+        "lib/store.ts"
+      ],
+      "relatedIds": [
+        199,
+        201,
+        304,
+        367,
+        454,
+        458
+      ]
+    },
+    "458": {
+      "classification": "pre-reading-belief-activity",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "medium",
+      "rationaleAr": "لا تعرض مهام القراءة الحية مجموعة عبارات موقف قبل النص ثم تعيدها بعده لطلب الموافقة والدليل والتغير. أسئلة الصواب والخطأ أو التوقع العام بعد عرض المادة ليست Anticipation Guide. يلزم ترتيب قبل/بعد وحفظ الموقف وتغذية راجعة مرتبطة بشاهد من النص.",
+      "candidateEvidence": [
+        "components/tasks.tsx",
+        "content/texts.json",
+        "content/lang/b2-36-40.json"
+      ],
+      "relatedIds": [
+        199,
+        330,
+        331,
+        351,
+        457,
+        459,
+        796
+      ]
+    },
+    "459": {
+      "classification": "questioning-taxonomy-framework",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "تنوع صيغ الأسئلة في المحتوى ووجود حقل Bloom داخل كتالوج الأفكار لا يثبت تطبيق تصنيف أسئلة على الدروس الحية. لا توجد مستويات معلنة أو قواعد ترميز أو تسلسل مقصود أو تدقيق يربط السؤال بعملية معرفية؛ لذلك يبقى التصنيف إطار مراجعة ولا تتحول أسئلة الاختيار والشرح تلقائياً إلى Taxonomy.",
+      "candidateEvidence": [
+        "content/grammar.json",
+        "content/texts.json",
+        "components/exercises.tsx"
+      ],
+      "relatedIds": [
+        186,
+        233,
+        234,
+        264,
+        303,
+        458,
+        460,
+        544,
+        548
+      ]
+    },
+    "460": {
+      "classification": "socratic-dialogue-activity",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "رفيق المحادثة الحي يسأل أسئلة دورية عملية ويطلب أحياناً رأياً أو مثالاً، لكن موجّه النظام يلزمه بالبقاء في سيناريو وتصحيح خطأ لغوي ولا يبني سلسلة سقراطية لفحص الافتراض والدليل والبديل والنتيجة. أسئلة لماذا العامة لا تكفي؛ يلزم بروتوكول محدود وآمن، أثر حوار قابل للمراجعة، واختبار ضد التلقين والهلوسة.",
+      "candidateEvidence": [
+        "lib/sprechbegleiter.ts",
+        "components/sprechbegleiter.tsx",
+        "lib/grader.ts",
+        "scripts/interaktiv_test.tsx"
+      ],
+      "relatedIds": [
+        186,
+        264,
+        330,
+        459,
+        548,
+        806,
+        982
+      ]
+    },
     "840": {
       "classification": "duplicate-catalog-record",
       "decision": "merge-duplicate",
