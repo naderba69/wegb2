@@ -1,13 +1,13 @@
 #!/usr/bin/env tsx
 /** Honest lifecycle gate for the 181–1000 research/tool catalog. */
-import { existsSync, readFileSync } from "node:fs";
+import { existsSync, readFileSync, readdirSync } from "node:fs";
 import { resolve } from "node:path";
 import YAML from "yaml";
 
 type Tool = { id: number; family: string; titleDe: string; titleAr: string; level: string; bloom: string; examRelevant: boolean; fase: string; research?: string; desc?: string; code?: string };
 type Override = { decision?: string; researchStatus?: string; productStatus?: string; automatedTestStatus?: string; fieldValidationStatus?: string; classification?: string; reviewerRole?: string; reviewedAt?: string; risk?: string; rationaleAr?: string; candidateEvidence?: string[]; relatedIds?: number[]; canonicalId?: number };
-type Governance = { schemaVersion: number; catalog: { firstId: number; lastId: number; expectedEntries: number }; claimAr: string; defaultState: Record<string, string>; allowedDecisions: string[]; productionAcceptance: string[]; overrides: Record<string, Override> };
-type Summary = { schemaVersion: number; total: number; firstId: number; lastId: number; citationLabels: number; genericPrototypeModules: number; exactDuplicateTitleGroups: Array<{ title: string; ids: number[] }>; resolvedExactDuplicateGroups: number; decisionBreakdown: Record<string, number>; reviewedDecisions: number; pendingTriage: number; relatedCatalogReferences: number; adopted: number; productIntegrated: number; fieldValidated: number; claimAr: string };
+type Governance = { schemaVersion: number; catalog: { firstId: number; lastId: number; expectedEntries: number }; claimAr: string; defaultState: Record<string, string>; allowedDecisions: string[]; allowedProductStatuses: string[]; productionAcceptance: string[]; overrides: Record<string, Override> };
+type Summary = { schemaVersion: number; total: number; firstId: number; lastId: number; citationLabels: number; genericPrototypeModules: number; exactDuplicateTitleGroups: Array<{ title: string; ids: number[] }>; resolvedExactDuplicateGroups: number; decisionBreakdown: Record<string, number>; reviewedDecisions: number; pendingTriage: number; relatedCatalogReferences: number; candidateLiveImplementations: number; adopted: number; productIntegrated: number; fieldValidated: number; claimAr: string };
 type ReviewItem = { id: number; titleDe: string; titleAr: string; family: string; level: string; bloom: string; citationLabel: string | null; prototypeKind: string; duplicateTitleIds: number[]; status: Record<string, unknown> };
 type ReviewMatrix = { schemaVersion: number; claimAr: string; items: ReviewItem[] };
 
@@ -34,7 +34,19 @@ check(governance.productionAcceptance.length >= 8, "معيار الإنتاج ي
 const overrideIds = Object.keys(governance.overrides);
 check(overrideIds.every((id) => ids.includes(Number(id))), "كل override يعود إلى أداة موجودة");
 check(Object.values(governance.overrides).every((entry) => entry.decision && governance.allowedDecisions.includes(entry.decision)), "كل override يحمل قراراً من الحالات المسموحة");
+check(governance.allowedProductStatuses.includes(governance.defaultState.productStatus) && Object.values(governance.overrides).every((entry) => !entry.productStatus || governance.allowedProductStatuses.includes(entry.productStatus)), "حالات المنتج محصورة في نموذج أولي أو تنفيذ حي مرشح أو تنفيذ مثبت");
 check(Object.entries(governance.overrides).every(([id, entry]) => !entry.relatedIds || (Array.isArray(entry.relatedIds) && new Set(entry.relatedIds).size === entry.relatedIds.length && entry.relatedIds.every((relatedId) => relatedId !== Number(id) && ids.includes(relatedId)))), "كل الإحالات المفاهيمية فريدة وتعود إلى سجلات أخرى موجودة");
+const sourceFilesUnder = (directory: string): string[] => readdirSync(directory, { withFileTypes: true }).flatMap((entry) => {
+  const path = resolve(directory, entry.name);
+  if (entry.isDirectory()) return sourceFilesUnder(path);
+  return /\.(?:ts|tsx|mjs)$/.test(entry.name) && !/[/\\]lib[/\\]tool-\d+\.ts$/.test(path) ? [path] : [];
+});
+const runtimeCatalogImports = ["app", "components", "lib"].flatMap((directory) => sourceFilesUnder(resolve(ROOT, directory))).flatMap((path) => {
+  const found: Array<{ path: string; id: number }> = [];
+  for (const match of readFileSync(path, "utf8").matchAll(/from\s+["'][^"']*tool-(\d+)["']/g)) found.push({ path, id: Number(match[1]) });
+  return found;
+});
+check(runtimeCatalogImports.every(({ id }) => governance.overrides[String(id)]?.productStatus === "wired-and-tested"), `لا يستورد مسار التشغيل نموذج كتالوج قبل إثبات دورة الإنتاج (${runtimeCatalogImports.length} استيراد معتمد)`);
 const generic = tools.filter((tool) => new RegExp(`tool${tool.id}Gain`).test(tool.code ?? "") && new RegExp(`tool${tool.id}Check`).test(tool.code ?? "")).length;
 const citationLabels = tools.filter((tool) => Boolean(tool.research?.trim())).length;
 const titleGroups = new Map<string, number[]>();
@@ -60,6 +72,8 @@ const expectedDecisionBreakdown = tools.reduce<Record<string, number>>((counts, 
 check(summary.reviewedDecisions === reviewedOverrides.length && JSON.stringify(summary.decisionBreakdown) === JSON.stringify(expectedDecisionBreakdown) && summary.pendingTriage === expectedDecisionBreakdown["pending-academic-review"], `قرارات المراجعة محسوبة من السجل البندي (${summary.reviewedDecisions} فرز، ${summary.pendingTriage} معلق)`);
 const relatedCatalogReferences = Object.values(governance.overrides).reduce((count, entry) => count + (entry.relatedIds?.length ?? 0), 0);
 check(summary.relatedCatalogReferences === relatedCatalogReferences, `الإحالات المفاهيمية محسوبة دون تسميتها دمجاً (${relatedCatalogReferences})`);
+const candidateLiveImplementations = Object.values(governance.overrides).filter((entry) => entry.productStatus === "candidate-live-implementation").length;
+check(summary.candidateLiveImplementations === candidateLiveImplementations, `التنفيذات الحية المرشحة مفصولة عن الجاهزية الإنتاجية (${candidateLiveImplementations})`);
 check(summary.productIntegrated === 0 && summary.fieldValidated === 0 && summary.adopted === 0, "لا اكتمال أو تحقق ميداني مصطنع قبل المصدر والتوصيل والاختبار");
 
 const pending = tools.filter((tool) => {

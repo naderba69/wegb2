@@ -587,7 +587,7 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
         "decision": "defer",
@@ -1287,7 +1287,20 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "reading-pathway",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "القراءة الموسعة قابلة للتحويل إلى مسار اختياري، لكن أهداف الكلمات الأسبوعية غير موثقة والمقارنة النصية بين أسماء المستويات لا تقيس سهولة النص؛ يلزم قياس تغطية المفردات واختيار المتعلم وسجل قراءة دون تحويل الكم إلى إتقان.",
+        "candidateEvidence": [
+          "content/texts.json",
+          "lib/lesestoff.ts",
+          "components/lesestoff.tsx"
+        ],
+        "relatedIds": [
+          355
+        ]
       }
     },
     {
@@ -1308,7 +1321,19 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "reading-sequencing",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "القراءة الضيقة قد تعيد تدوير المفردات ضمن موضوع واحد، لكن ثلاثة نصوص ومعامل المكسب أرقام غير مثبتة؛ يلزم تجميع موضوعي حقيقي وقياس التكرار والفهم ومقارنة عدم التكرار قبل إدخالها في الخطة.",
+        "candidateEvidence": [
+          "content/texts.json",
+          "lib/lesestoff.ts"
+        ],
+        "relatedIds": [
+          221
+        ]
       }
     },
     {
@@ -1329,7 +1354,21 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "content-grading",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "القراءات المتدرجة تحتاج تقديراً فعلياً لنسبة الكلمات المعروفة وطولاً مناسباً وحقوق مادة واضحة؛ العتبتان 95 و98 بالمئة وجداول طول الكتاب لا تكفيان، بينما النصوص الداخلية الحالية دليل مرشح لا إثبات لهذا المنهج.",
+        "candidateEvidence": [
+          "content/texts.json",
+          "content/lang",
+          "lib/lesestoff.ts"
+        ],
+        "relatedIds": [
+          221,
+          355
+        ]
       }
     },
     {
@@ -1350,7 +1389,21 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "learner-activity",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "Dictogloss يتطلب استماعاً وتدويناً وإعادة بناء ثم مقارنة، وليس مجرد عنوان يضاف إلى اختبار قبلي. أزيل الربط الشكلي بالنموذج المولد؛ يمكن بناء النشاط لاحقاً من صوت ونص حي مع تقييم إعادة البناء.",
+        "candidateEvidence": [
+          "components/diktat.tsx",
+          "content/texts.json",
+          "lib/dictogloss-var.ts"
+        ],
+        "relatedIds": [
+          420,
+          715
+        ]
       }
     },
     {
@@ -1371,7 +1424,20 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "partner-dependent-activity",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "فجوة المعلومات تعتمد على طرفين يملكان معلومات مختلفة ويتفاوضان للوصول إلى نتيجة؛ إرجاع اسم سيناريو لا يثبت ذلك، ولا توجد حالياً جلسة شريك وهوية وخصوصية وتزامن موثقة.",
+        "candidateEvidence": [
+          "content/muendlich.json",
+          "components/muendlich.tsx",
+          "lib/information-gap-var.ts"
+        ],
+        "relatedIds": [
+          423
+        ]
       }
     },
     {
@@ -1392,7 +1458,21 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "partner-dependent-activity",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "Jigsaw نشاط مجموعات يحتاج توزيعاً صحيحاً للأجزاء وأدوار خبير ومجموعة أصلية وتحققاً من مشاركة الجميع؛ خوارزمية النموذج قد تنتج فهارس غير صالحة ولا توجد بنية مجموعات حقيقية، لذلك لا يعتمد.",
+        "candidateEvidence": [
+          "lib/jigsaw.ts",
+          "lib/jigsaw-var.ts",
+          "content/texts.json"
+        ],
+        "relatedIds": [
+          422,
+          462
+        ]
       }
     },
     {
@@ -1413,7 +1493,23 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "partner-dependent-activity",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "تدريس الأقران يحتاج شريكاً وأسئلة واستجابة ومعياراً لجودة الشرح وحماية من التصحيح الخاطئ؛ الطلب النصي ومعامل 1.35 لا يثبتان تعلماً أو جلسة بشرية، فيبقى التصميم مؤجلاً.",
+        "candidateEvidence": [
+          "lib/peer-teaching-var.ts",
+          "content/muendlich.json"
+        ],
+        "relatedIds": [
+          205,
+          258,
+          545,
+          976,
+          980
+        ]
       }
     },
     {
@@ -1434,7 +1530,24 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "learner-activity",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "السرد نشاط إنتاج مناسب، لكن فرض خمس جمل وبنية واحدة من مقدمة وصراع وحل وأخلاق لا يلائم كل المستويات والأنواع؛ يلزم مطالبات متدرجة وRubric للترابط والزمن ومعالجة بدائل السرد الواقعي.",
+        "candidateEvidence": [
+          "content/writing.json",
+          "lib/mnemonic-story.ts",
+          "lib/storytelling-var.ts"
+        ],
+        "relatedIds": [
+          255,
+          327,
+          328,
+          332,
+          476
+        ]
       }
     },
     {
@@ -1455,7 +1568,20 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "speaking-activity",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "لعب الأدوار ممثل جزئياً في مهام المحادثة، لكن السجل يفترض أن مجرد اختيار سيناريو يعني ممارسة ويضيف مكسباً غير موثق؛ يلزم تحديد الطرف المقابل ومعيار التفاعل وتوثيق جلسة صوتية أو شريك فعلي.",
+        "candidateEvidence": [
+          "content/muendlich.json",
+          "components/muendlich.tsx"
+        ],
+        "relatedIds": [
+          427,
+          428
+        ]
       }
     },
     {
@@ -1476,7 +1602,22 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "exam-speaking-activity",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "توجد موضوعات نقاش B1/B2 مرشحة، لكن صيغة Pro وContra مع مدير وجمهور لا تطابق تلقائياً Goethe أو telc ولا تثبت تفاعلاً زمنياً؛ يلزم ربط كل صيغة بالمصدر الرسمي وRubric وجلسة شريك.",
+        "candidateEvidence": [
+          "content/muendlich.json",
+          "lib/debate-formats.ts",
+          "content/accreditation-alignment.json"
+        ],
+        "relatedIds": [
+          329,
+          426,
+          547
+        ]
       }
     },
     {
@@ -1494,10 +1635,22 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "audio-speech-activity",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "توجد محطة تظليل حية بتسجيل محلي ومقارنة إيقاع وزمن مع إفصاح صريح أنها لا تحكم على النطق، ولها اختبارات آلية؛ تبقى مرشح تنفيذ غير معتمد حتى توثق طريقة النشاط وتختبر الميكروفونات والإتاحة على أجهزة فعلية.",
+        "candidateEvidence": [
+          "lib/shadowing.ts",
+          "components/shadowing.tsx",
+          "scripts/engine_smoke.ts",
+          "scripts/interaktiv_test.tsx"
+        ],
+        "relatedIds": []
       }
     },
     {
@@ -1515,10 +1668,23 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "pronunciation-perception",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "توجد محطة صوتيات حية بأزواج دنيا واختبار تمييز سمعي معلن يعتمد TTS ولا يدعي تقييم النطق؛ يلزم تدقيق الأزواج صوتياً ولغوياً واختبار اختلاف أصوات الأجهزة قبل اعتماد سجل الكتالوج.",
+        "candidateEvidence": [
+          "lib/phonetikdaten.ts",
+          "components/phonetik.tsx",
+          "scripts/interaktiv_test.tsx"
+        ],
+        "relatedIds": [
+          341
+        ]
       }
     },
     {
@@ -1539,7 +1705,20 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "elicitation-technique",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "الاستنباط يمكن أن يصبح مطالبة إنتاج، لكن سؤال كيف نقول ومعامل المكسب لا يحددان سياقاً أو إجابة أو تغذية راجعة؛ يلزم بنك مطالبات ومشتقات صحيحة وفصل الاستنباط التدريسي عن تصحيح الخطأ.",
+        "candidateEvidence": [
+          "lib/elicitation-var.ts",
+          "content/grammar.json"
+        ],
+        "relatedIds": [
+          406,
+          501
+        ]
       }
     },
     {
@@ -1560,7 +1739,16 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "concept-checking",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "سؤال التحقق من المفهوم يجب أن يختبر معنى محدداً دون سؤال هل فهمت، بينما fallback في النموذج يفعل ذلك تماماً؛ يلزم CCQ خاص بكل قاعدة وإجابات متوقعة واختبار يثبت كشف سوء الفهم.",
+        "candidateEvidence": [
+          "content/grammar.json"
+        ],
+        "relatedIds": []
       }
     },
     {
@@ -1581,7 +1769,16 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "instructional-design",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "التحقق من التعليمات أسلوب واجهة وتعليم لا ميزة مستقلة، واعتبار مجرد طرح السؤال نجاحاً لا يقيس الفهم؛ يستخدم لاحقاً لتدقيق وضوح المهام المعقدة واختبارات الاستخدام بدلاً من إدخاله كأداة منفصلة.",
+        "candidateEvidence": [
+          "components/tasks.tsx"
+        ],
+        "relatedIds": []
       }
     },
     {
@@ -1599,10 +1796,24 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "practice-activity",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "يوجد تدريب أنماط حي يولد أسئلة جديدة من أخطاء المتعلم، لكنه لا يثبت أنماط التدريب الجماعي والاستبدال والتحويل المذكورة في السجل؛ يسجل كتنفيذ مرشح جزئي إلى أن تحدد المطابقة والقياس والمصدر.",
+        "candidateEvidence": [
+          "lib/musterdrill.ts",
+          "components/musterdrill.tsx",
+          "components/fehlerlabor.tsx",
+          "scripts/engine_smoke.ts"
+        ],
+        "relatedIds": [
+          279
+        ]
       }
     },
     {
@@ -1620,10 +1831,23 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "diagnostic-assessment",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "يوجد اختبار تحديد مستوى حي لأربع مهارات موضوعية مع اقتراح دخول واختبارات محرك، لكنه لا يقيس الكتابة أو التحدث ولا يمثل اختباراً رسمياً؛ يلزم تحقق معياري وتجربة مستخدم قبل ربطه بالسجل كتشخيص شامل.",
+        "candidateEvidence": [
+          "lib/einstufung.ts",
+          "components/einstufung.tsx",
+          "scripts/engine_smoke.ts"
+        ],
+        "relatedIds": [
+          553
+        ]
       }
     },
     {
@@ -1641,10 +1865,24 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "formative-assessment",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "توجد حلقات يومية وأسبوعية وتغذية راجعة وتكييف من الأخطاء كتنفيذ مرشح، لكن استدعاء formativeGain غير المستخدم أزيل لأنه كان توصيلاً شكلياً؛ يلزم تعريف مؤشر تغير واختبار أن التغذية تعدل المسار فعلاً.",
+        "candidateEvidence": [
+          "lib/plan.ts",
+          "lib/fehler.ts",
+          "components/tasks.tsx",
+          "scripts/engine_smoke.ts"
+        ],
+        "relatedIds": [
+          551
+        ]
       }
     },
     {
@@ -1662,10 +1900,24 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "summative-assessment",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "توجد اختبارات أسبوعية وختامية ومحاكاة في المنتج، لكن أوزان 20 و30 و50 بالمئة ودورية 28 يوماً في النموذج لا تصفها ولا تحمل سنداً؛ يلزم ربط النتيجة بما دُرّس والتحقق من الصدق والثبات.",
+        "candidateEvidence": [
+          "lib/plan.ts",
+          "components/pruefung.tsx",
+          "components/vollpruefung.tsx",
+          "content/accreditation-alignment.json"
+        ],
+        "relatedIds": [
+          552
+        ]
       }
     },
     {
@@ -1683,10 +1935,26 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "self-assessment",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "توجد قوائم أستطيع حية تحفظ اختيار المتعلم، لكنها تقارير ذاتية وليست قياس CEFR، كما أن عتبتي 0.6 و0.8 لا تستندان إلى تحقق؛ يلزم مراجعة الواصفات وربطها بالمصادر وفصل الثقة عن حكم المستوى.",
+        "candidateEvidence": [
+          "content/cando.json",
+          "components/tasks.tsx",
+          "lib/store.ts",
+          "content/grammar-profile-governance.json"
+        ],
+        "relatedIds": [
+          242,
+          495,
+          556
+        ]
       }
     },
     {

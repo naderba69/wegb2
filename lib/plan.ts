@@ -28,18 +28,11 @@ import {
 import { weakTopics } from "./fehler";
 import { dueFehlerPriorisiert } from "./fehlerbank2";
 import { PHASEN, ABSCHLUSS_VON, istPhasenPruefung, lastMinuten, D1_B1_DECKEL_MIN, D1_B2_DECKEL_MIN } from "./phasen";
-import { inSchlafFenster, schlafEmpfehlung } from "./schlaf";
 import { baueStory } from "./mnemonic-story";
 import { palacePosition } from "./memory-palace";
 import { piItemsFor } from "./processing-instruction";
 import { fallFuerLevel } from "./case-study";
 import { projektFuerLevel } from "./project";
-import { getEveningReviewSlot as tool182Slot } from "./tool-182"; // R353
-import { shouldPreTest as tool193Pre } from "./tool-193"; // R354
-import { generationPrompt as tool194Prompt } from "./tool-194"; // R354
-import { contrastHint as tool210Hint } from "./tool-210"; // R355
-import { tbltPrompt as tool216Prompt } from "./tool-216"; // R356 TBLT
-import { dictoglossPrompt as tool224Prompt } from "./tool-224"; // R357 Dictogloss
 import { kapselIds, kapselIdsAdaptiv, kapselQuizAdaptiv } from "./kapsel";
 import { baueFalschFreundAufgabe } from "./falsche-freunde-aufgabe";
 import { baueFvgAufgabe } from "./fvg-aufgabe";
@@ -612,11 +605,6 @@ export function buildDay(day: number, progress: Progress): DayPlan {
         verifyFor: v.lessonId,
       });
     });
-
-  // 011 Schlaf: نافذة المساء — أضف تلميحاً ولو بطاقة مراجعة قصيرة
-  const jetztStunde = new Date().getHours() + new Date().getMinutes() / 60;
-  const schlafOn = inSchlafFenster(jetztStunde) && (progress.settings.schlafReminder !== false);
-  const _schlafTipp = schlafOn ? schlafEmpfehlung(5, jetztStunde) : null; void _schlafTipp;
 
   const tid = (n: number) => `${day}:t${n}`;
   const phaseTopics = PHASE_TOPICS[phase];
@@ -1336,30 +1324,27 @@ export function buildDay(day: number, progress: Progress): DayPlan {
     tasks.push(...(finals[day] ?? finals[378]));
   }
 
-  // R353-182: Evening Sleep slot — 21:00 review if heavy day (R396: لا تضفها مع دَينٍ إلزامي كي لا تكسر بوابة K64f/g 3→4)
-  const sleepSlot = tool182Slot(day);
-  if (sleepSlot && type !== "abschluss" && !progress.plan.debt.length && !tasks.some(t => t.kind === "wiederholen" && t.titleAr.includes("مسائية"))) {
-    tasks.push({ id: tid(32), kind: "wiederholen", titleDe: `Evening Review ${sleepSlot.lernenStart}`, titleAr: `مراجعة مسائية ${sleepSlot.lernenStart} قبل النوم`, minutes: 5, sentenceIds: kapselIdsAdaptiv(progress, day).slice(0,2) });
+  // مراجعة تثبيت دورية قصيرة من المحتوى الحي، بلا ادعاء نوم أو مكسب بحثي غير موثق.
+  // لا تُضاف مع دَين إلزامي كي لا تكسر بوابة الحمل اليومي.
+  const hatKurzWiederholung = day % 3 === 0;
+  if (hatKurzWiederholung && type !== "abschluss" && !progress.plan.debt.length && !tasks.some(t => t.kind === "wiederholen" && t.titleDe === "Kurz-Wiederholung")) {
+    tasks.push({ id: tid(32), kind: "wiederholen", titleDe: "Kurz-Wiederholung", titleAr: "مراجعة تثبيت قصيرة", minutes: 5, sentenceIds: kapselIdsAdaptiv(progress, day).slice(0,2) });
   }
 
-  // اختبار قبلي حقيقي: سؤالان من درس اليوم، لا بطاقة عنوان فارغة.
+  // اختبار قبلي حقيقي: سؤالان من درس اليوم، لا بطاقة عنوان أو مزيج من نماذج الكتالوج.
   // تُعرض الإجابة بعد المحاولة كتهيئة للاستكشاف، ولا تُحتسب دليلاً على إتقان الدرس.
-  if (type === "lerntag" && grammarAssignment?.status === "new" && tool193Pre(day, day - 1)) {
+  if (type === "lerntag" && grammarAssignment?.status === "new") {
     const topic = grammarMap[grammarAssignment.topicId];
     const quiz = (topic?.exercises ?? []).slice(0, 2).map((ex, i) => ({
       ...ex,
       id: `pre-${day}-${i}-${ex.id}`,
     }));
     if (quiz.length > 0) {
-      const prompt = tool194Prompt(topic?.titleDe ?? "Grammatik");
-      const kontrast = tool210Hint(grammarAssignment.topicId);
-      const tblt = tool216Prompt(topic?.titleDe ?? "Aufgabe");
-      const dg = tool224Prompt(topic?.titleDe ?? "Text");
       tasks.push({
         id: tid(33),
         kind: "check",
-        titleDe: `Vortest: ${topic?.titleDe ?? prompt}`,
-        titleAr: `اختبار قبلي قصير — ${kontrast} — ${tblt} — ${dg}`,
+        titleDe: `Vortest: ${topic?.titleDe ?? "Grammatik"}`,
+        titleAr: `اختبار قبلي قصير: ${topic?.titleAr ?? "القواعد"}`,
         minutes: 3,
         quiz,
       });
