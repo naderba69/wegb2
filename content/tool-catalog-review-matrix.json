@@ -4958,10 +4958,39 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "formulaic-language-umbrella",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "توجد أنشطة حية للمتلازمات والتراكيب الوظيفية والتعابير والأمثال، وهي تغطي أجزاء قابلة للمشاهدة من phraseology. يبقى الاسم مظلة واسعة لا نشاطاً واحداً، ولم تُوثق مبادئ اختيار الوحدات أو ترددها وتوزيعها من مدونة خارجية.",
+        "candidateEvidence": [
+          "content/kollok-vertiefung.json",
+          "content/grammar.json",
+          "components/tiefenlex.tsx",
+          "components/kollokproduktion.tsx",
+          "components/tasks.tsx"
+        ],
+        "relatedIds": [
+          320,
+          323,
+          324,
+          325,
+          438,
+          641,
+          643,
+          644,
+          657,
+          838,
+          839,
+          840,
+          841,
+          842,
+          931
+        ]
       }
     },
     {
@@ -4979,10 +5008,29 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "lexico-grammatical-pattern-practice",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "يتدرب المتعلم حياً على فعل مع حرف جر وتراكيب اسمية فعلية ثابتة داخل سياق وتصحيح، وهو تطابق جزئي مرشح للتصاحب النحوي. لا توجد حالياً مدونة تعرض التوزيع النحوي حول الكلمات أو مهمة استقراء تميز colligation عن collocation.",
+        "candidateEvidence": [
+          "components/tiefenlex.tsx",
+          "content/grammar.json",
+          "lib/fvg.ts",
+          "lib/fvg-aufgabe.ts",
+          "components/tasks.tsx"
+        ],
+        "relatedIds": [
+          318,
+          320,
+          321,
+          323,
+          657
+        ]
       }
     },
     {
@@ -5000,10 +5048,38 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "collocation-practice",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "توجد محطة حية تستدعي المتلازم من الذاكرة ثم تكشف الشريك، وتمارين سياقية بأربعة خيارات وشرح عربي ودفتر أخطاء. هذه مطابقة مرشحة للتدريب العميق، لكنها لا تثبت كفاءة متلازمية عامة ولا مصدر تردد خارجي أو انتقالاً إلى إنتاج حر.",
+        "candidateEvidence": [
+          "content/kollok-vertiefung.json",
+          "lib/kollokproduktion.ts",
+          "components/kollokproduktion.tsx",
+          "components/tiefenlex.tsx",
+          "scripts/interaktiv_test.tsx"
+        ],
+        "relatedIds": [
+          218,
+          275,
+          308,
+          320,
+          321,
+          322,
+          438,
+          643,
+          839,
+          840,
+          841,
+          842,
+          893,
+          931
+        ]
       }
     },
     {
@@ -5021,10 +5097,28 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "idiom-practice",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "درس B2 الحي يعرض تعابير اصطلاحية في جمل ويختبر معناها وإكمالها وإعادة الصياغة والترجمة والإنتاج. يبقى البنك محدوداً ومختاراً داخلياً، وتحتاج الملاءمة السياقية والسجل اللهجي والمجاز غير الشفاف إلى مراجعة مصدرية وبشرية.",
+        "candidateEvidence": [
+          "content/grammar.json",
+          "components/tasks.tsx",
+          "scripts/engine_smoke.ts"
+        ],
+        "relatedIds": [
+          308,
+          320,
+          321,
+          325,
+          484,
+          644
+        ]
       }
     },
     {
@@ -5042,10 +5136,26 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "proverb-learning",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "ثمانية أمثال تظهر فعلياً داخل دروسها مع شرح وقاعدة وصوت محلي مطابق واختبار واجهة. هذا تنفيذ مرشح لمادة الأمثال، لا إثباتاً لاختيارها التعليمي أو شيوعها المعاصر أو تكافؤ المقابلات العربية عبر السياقات.",
+        "candidateEvidence": [
+          "content/eselsbruecken.json",
+          "content/sprichwort-audio.json",
+          "components/tasks.tsx",
+          "scripts/interaktiv_test.tsx",
+          "scripts/engine_smoke.ts"
+        ],
+        "relatedIds": [
+          321,
+          324
+        ]
       }
     },
     {
@@ -5066,7 +5176,22 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "humor-pedagogy",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "وجود موقف طريف أو صياغة خفيفة في بطاقة تداولية أو مهمة تعابير لا يثبت تدخلاً تعليمياً قائماً على الفكاهة. يبقى المفهوم مرجعاً بحثياً لأن أثره يعتمد على الثقافة والهوية والسياق، وقد يتحول إلى إقصاء أو إساءة إن عُمم آلياً.",
+        "candidateEvidence": [
+          "lib/pragmatik.ts",
+          "components/pragmatik.tsx",
+          "content/grammar.json"
+        ],
+        "relatedIds": [
+          312,
+          324,
+          869
+        ]
       }
     },
     {
@@ -5084,10 +5209,27 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "story-structure-writing",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "توجد مهام كتابة حية تطلب خطة ثم حدثاً ثم نتيجة، وتسلسلاً زمنياً وخاتمة شعورية، مع قائمة معايير. هذه مطابقة مرشحة لبنية قصة بسيطة، لكنها لا تطبق نموذج Stein بندياً ولا تقيس الهدف والمحاولة والعاقبة والاستجابة الداخلية كاملة.",
+        "candidateEvidence": [
+          "content/writing.json",
+          "components/tasks.tsx",
+          "components/schreiben.tsx"
+        ],
+        "relatedIds": [
+          228,
+          255,
+          328,
+          332,
+          476
+        ]
       }
     },
     {
@@ -5105,10 +5247,29 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "narrative-competence-practice",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "يكتب المتعلم قصص تجارب متدرجة ويستعمل الأزمنة والروابط والخاتمة، ويمكنه مراجعة النص عبر واجهة الكتابة. هذا نشاط سرد حي مرشح، لكنه لا يثبت كفاءة سردية عامة عبر الشفهي والكتابي ولا يقيس الترابط والمرجعية والمنظور لدى مقيمين بشريين.",
+        "candidateEvidence": [
+          "content/writing.json",
+          "components/tasks.tsx",
+          "components/schreiben.tsx",
+          "components/interview2.tsx"
+        ],
+        "relatedIds": [
+          228,
+          255,
+          327,
+          332,
+          476,
+          757
+        ]
       }
     },
     {
@@ -5129,7 +5290,21 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "argumentation-model",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "توجد مهام رأي حية تطلب أطروحة وتعليلاً ومثالاً وحجة مضادة ودحضاً، لكن هذا لا يساوي نموذج Toulmin بعناصر claim وdata وwarrant وbacking وqualifier وrebuttal. يبقى النموذج مرجعاً تحليلياً حتى يوثق المصدر وتبنى مهمة وRubric صريحان.",
+        "candidateEvidence": [
+          "content/writing.json",
+          "content/grammar.json",
+          "lib/kriterien.ts"
+        ],
+        "relatedIds": [
+          230,
+          547
+        ]
       }
     },
     {
@@ -5150,7 +5325,23 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "critical-thinking-construct",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "نصوص فحص المصدر والحجة تدرب سلوكيات قريبة، لكنها لا تبرر تسمية قدرة واسعة مثل التفكير النقدي أو قياسها من إجابات الفهم. يُحتفظ بالبناء للبحث وتصميم المهام، مع منع اشتقاق درجة أو سمة متعلم قبل أداة موثقة وتحقق ميداني.",
+        "candidateEvidence": [
+          "content/texts.json",
+          "content/writing.json",
+          "lib/kriterien.ts"
+        ],
+        "relatedIds": [
+          331,
+          548,
+          796,
+          926
+        ]
       }
     },
     {
@@ -5168,10 +5359,27 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "media-literacy-practice",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "توجد نصوص وتمارين حية عن المصدر والتأطير وتحديد الأجندة والتضليل وفحص الادعاء قبل المشاركة. هي مطابقة مرشحة لمحو الأمية الإعلامية، لكن المواد أمثلة داخلية ثابتة ولا تطلب تحقيقاً فعلياً في مصادر خارجية أو تثبت انتقال الحكم إلى أخبار العالم الحقيقي.",
+        "candidateEvidence": [
+          "content/texts.json",
+          "content/lang/b1-21-25.json",
+          "content/lang/b2-01-10.json",
+          "components/tasks.tsx"
+        ],
+        "relatedIds": [
+          330,
+          796,
+          797,
+          926
+        ]
       }
     },
     {
@@ -5192,7 +5400,26 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "digital-storytelling-production",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "مهام السرد ومسجلات الصوت المحلية تصلح لبنات أولية، لكن لا توجد واجهة تجمع نصاً وصوتاً وصوراً في قصة رقمية واحدة ولا تحرير أو حفظ مشروع أو تصدير مع حقوق وإتاحة. لا يسمى التسجيل المنفرد Digital Storytelling.",
+        "candidateEvidence": [
+          "content/writing.json",
+          "components/sprechkarten.tsx",
+          "components/shadowing.tsx"
+        ],
+        "relatedIds": [
+          228,
+          255,
+          327,
+          328,
+          333,
+          334,
+          476
+        ]
       }
     },
     {
@@ -5213,7 +5440,22 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "audio-production-project",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "يمكن للمتعلم تسجيل كلامه محلياً وتشغيله وتنزيل بعض التسجيلات، لكن لا توجد حلقة podcast بمخطط وتحرير ومقدمة وحقوق ونص بديل ونشر أو feed. تبقى القدرة الصوتية لبنة خصوصية محلية لا إثبات إنتاج بودكاست.",
+        "candidateEvidence": [
+          "components/sprechkarten.tsx",
+          "components/shadowing.tsx",
+          "components/aussprachetrainer.tsx",
+          "app/datenschutz/page.tsx"
+        ],
+        "relatedIds": [
+          332,
+          334
+        ]
       }
     },
     {
@@ -5234,7 +5476,21 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "video-production-project",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "المنتج لا يطلب الكاميرا ولا يسجل فيديو ولا يوفر مونتاجاً أو ترجمة أو مراجعة حقوق وخصوصية للصور؛ أدوات التسجيل الحالية صوتية محلية فقط. يلزم تصميم موافقة وإتاحة وتخزين وتصدير قبل أي تجربة Vlog.",
+        "candidateEvidence": [
+          "components/sprechkarten.tsx",
+          "components/shadowing.tsx",
+          "app/datenschutz/page.tsx"
+        ],
+        "relatedIds": [
+          332,
+          333
+        ]
       }
     },
     {
@@ -5255,7 +5511,24 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "blog-and-eportfolio-project",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "توجد أنواع كتابة للمنتدى والويب ونموذج بيانات Portfolio، لكن نموذج المحفظة غير موصول بواجهة أو حفظ أو تصدير، ولا توجد مدونة منشورة. يلزم فصل التدريب على النوع عن النشر، وتحديد اختيار القطع والموافقة والخصوصية وإتاحة التصدير.",
+        "candidateEvidence": [
+          "content/writing.json",
+          "lib/portfolio.ts",
+          "lib/portfolio-var.ts",
+          "components/schreiben.tsx"
+        ],
+        "relatedIds": [
+          241,
+          317,
+          555,
+          895
+        ]
       }
     },
     {
@@ -5276,7 +5549,22 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "collaborative-authoring",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "Wiki تحتاج مستنداً مشتركاً وهويات وتاريخ مراجعات وتسوية تعارضات وإشرافاً، بينما المنتج فردي محلي بلا حسابات أو خادم تعاون. مهام الكتابة الفردية لا تثبت تأليفاً تعاونياً، فيؤجل التصميم مع متطلبات الخصوصية والسلامة.",
+        "candidateEvidence": [
+          "content/writing.json",
+          "app/datenschutz/page.tsx"
+        ],
+        "relatedIds": [
+          225,
+          227,
+          337,
+          338
+        ]
       }
     },
     {
@@ -5297,7 +5585,24 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "synchronous-human-communication",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "الحوارات والسيناريوهات الحالية محتوى ثابت أو محاكاة فردية، وليست محادثة أصيلة مع إنسان. لا توجد هوية أو مطابقة شركاء أو نقل رسائل أو إشراف أو إبلاغ؛ لذلك لا يُستخدم الحوار الاصطناعي دليلاً على authenticity.",
+        "candidateEvidence": [
+          "content/dialogues.json",
+          "components/dialogszenarien.tsx",
+          "app/datenschutz/page.tsx"
+        ],
+        "relatedIds": [
+          225,
+          229,
+          336,
+          338,
+          993
+        ]
       }
     },
     {
@@ -5318,7 +5623,26 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "cross-site-collaboration",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "المهام الشفهية قد تُستخدم خارج التطبيق مع شريك، لكن لا توجد مؤسسة شريكة أو جلسات متزامنة أو منصة حسابات أو موافقات أو بروتوكول سلامة وتقييم. تبقى telecollaboration مشروعاً خارجياً مؤجلاً ولا تستنتج من مطالبة نصية.",
+        "candidateEvidence": [
+          "content/muendlich.json",
+          "components/muendlich.tsx",
+          "app/datenschutz/page.tsx"
+        ],
+        "relatedIds": [
+          225,
+          336,
+          337,
+          565,
+          568,
+          609,
+          939
+        ]
       }
     },
     {
@@ -5336,10 +5660,28 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "study-abroad-preparation",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "توجد مهام حية لرسالة دافع للدراسة والمنحة وسنة في الخارج، ومسار تونس يعرض التأشيرة والوثائق واللغة مع تحذير التحقق الرسمي. هذه مطابقة مرشحة جزئية؛ لا توجد عملية قبول جامعي متكاملة أو مصادر إجراءات موقعة أو متابعة تكيف قبل السفر وبعده.",
+        "candidateEvidence": [
+          "content/writing.json",
+          "lib/landeskunde.ts",
+          "components/landeskunde.tsx",
+          "components/lebenswelt.tsx"
+        ],
+        "relatedIds": [
+          570,
+          731,
+          737,
+          742,
+          934
+        ]
       }
     },
     {
@@ -5357,10 +5699,28 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "plurilingual-mediation-practice",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "توجد مهام وساطة حية تنقل معنى نص ألماني إلى صديق بالعربية بلا ترجمة حرفية، مع وعي بتداخل العربية والفرنسية والإنجليزية. هذا تطابق مرشح محدود؛ الواجهة ثنائية اللغة أساساً ولا تقيس تعبئة repertoire متعدد اللغات أو كفاءة plurilingual شاملة.",
+        "candidateEvidence": [
+          "lib/lesestoff.ts",
+          "components/lesestoff.tsx",
+          "lib/falsche-freunde.ts"
+        ],
+        "relatedIds": [
+          513,
+          605,
+          639,
+          738,
+          751,
+          798
+        ]
       }
     },
     {
