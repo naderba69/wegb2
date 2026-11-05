@@ -2040,6 +2040,479 @@
         893
       ]
     },
+    "281": {
+      "classification": "instructional-design-theory",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "نظرية العبء المعرفي إطار لتحليل التصميم لا أداة ذات مكسب ثابت 1.2، ولا يقيس المنتج حالياً العبء الداخلي أو الدخيل أو البنّاء. يمكن استعمالها في مراجعة الواجهات، لكن لا يجوز تحويلها إلى نتيجة تعلم أو ضبط آلي بلا أداة قياس ودراسة استخدام.",
+      "candidateEvidence": [
+        "components/akademie/LektionWizard.tsx",
+        "components/tasks.tsx",
+        "app/globals.css"
+      ],
+      "relatedIds": [
+        282,
+        283,
+        284,
+        285,
+        286,
+        287,
+        288,
+        289,
+        536,
+        878
+      ]
+    },
+    "282": {
+      "classification": "multimedia-instructional-design",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "candidate-live-implementation",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "medium",
+      "rationaleAr": "يجمع Lesson Studio القاعدة ومثالها في بطاقة واحدة ويضع الرسم الدلالي والعنوان البديل داخل سياق الدرس، وهو تطابق حي مرشح لتقليل البحث بين مصادر منفصلة. لا يثبت ذلك انخفاض العبء أو الفهم على أجهزة فعلية؛ يلزم اختبار استخدام وإتاحة.",
+      "candidateEvidence": [
+        "components/akademie/LektionWizard.tsx",
+        "components/akademie/LessonSceneVisual.tsx",
+        "app/globals.css",
+        "scripts/engine_smoke.ts"
+      ],
+      "relatedIds": [
+        281,
+        283
+      ]
+    },
+    "283": {
+      "classification": "multimedia-design-theory",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "التكرار الزائد يعتمد على خبرة المتعلم وتعقيد المادة وطريقة العرض؛ عبارة اختر النص أو الصوت دائماً تبسيط غير صالح. المنتج يجعل الصوت اختيارياً ويتيح النص، لكنه لا يقيس الحمل ولا يطبّق قاعدة حذف تلقائية، لذلك يبقى المبدأ للمراجعة فقط.",
+      "candidateEvidence": [
+        "components/akademie/LektionWizard.tsx",
+        "components/tasks.tsx",
+        "lib/speech.ts"
+      ],
+      "relatedIds": [
+        267,
+        281,
+        282,
+        288
+      ]
+    },
+    "284": {
+      "classification": "worked-example-activity",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "candidate-live-implementation",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "medium",
+      "rationaleAr": "يعرض Lesson Studio نموذجاً محلولاً من بنك القواعد قبل التدريب المتدرج ثم التطبيق، وهو تطابق حي مرشح مباشر. لا يثبت تفوق النموذج على الحل لدى كل مبتدئ، كما تحتاج جودة النماذج ومطابقتها للبنود مراجعة لغوية بندية.",
+      "candidateEvidence": [
+        "components/akademie/LektionWizard.tsx",
+        "content/grammar.json",
+        "scripts/engine_smoke.ts",
+        "scripts/interaktiv_test.tsx"
+      ],
+      "relatedIds": [
+        281,
+        285,
+        286
+      ]
+    },
+    "285": {
+      "classification": "scaffolding-progression",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "candidate-live-implementation",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "المسار الحي ينتقل من المشهد والشرح والنموذج المحلول إلى تدريب مصحح ثم تطبيق مستقل وتحقق مؤجل، وهو تطابق مرشح لتلاشي التوجيه. لكن السقالة ليست متكيفة مع خبرة الفرد ولا توجد مقارنة تثبت توقيت الإزالة المناسب.",
+      "candidateEvidence": [
+        "components/akademie/LektionWizard.tsx",
+        "lib/plan.ts",
+        "content/grammar.json",
+        "scripts/engine_smoke.ts"
+      ],
+      "relatedIds": [
+        204,
+        281,
+        284,
+        286,
+        289,
+        363
+      ]
+    },
+    "286": {
+      "classification": "instructional-sequencing",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "candidate-live-implementation",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "medium",
+      "rationaleAr": "يفصل Lesson Studio المشهد والقاعدة والأمثلة أولاً ثم يجمعها في التدريب والتطبيق، وهو تنفيذ حي مرشح للتسلسل من العناصر إلى الكل. لا توجد خريطة صريحة تثبت أن كل قاعدة حُللت إلى عناصرها الضرورية أو أن الفصل يقلل العبء.",
+      "candidateEvidence": [
+        "components/akademie/LektionWizard.tsx",
+        "content/grammar.json",
+        "scripts/engine_smoke.ts"
+      ],
+      "relatedIds": [
+        281,
+        284,
+        285
+      ]
+    },
+    "287": {
+      "classification": "transfer-oriented-design",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "توجد أمثلة وتمارين متعددة داخل موضوعات القواعد، لكن وجود التنوع لا يثبت أنه مضبوط على أبعاد ذات صلة أو أنه يرفع النقل إلى مهمة جديدة. يلزم ترميز نوع التنوع واختبار انتقال مؤجل بدلاً من معامل مكسب ثابت.",
+      "candidateEvidence": [
+        "components/akademie/LektionWizard.tsx",
+        "content/grammar.json",
+        "components/selbsttest.tsx"
+      ],
+      "relatedIds": [
+        271,
+        281,
+        855
+      ]
+    },
+    "288": {
+      "classification": "audio-accessibility-design",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "candidate-live-implementation",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "في التدريب الحي يستطيع المتعلم إظهار نص الحوار وإعادة السطور، وبعد التسليم يفتح وضع الامتحان النص للمراجعة؛ هذا تطابق مرشح لمعالجة المعلومات الصوتية العابرة. يبقى قفل النص أثناء المحاكاة مقصوداً، ويلزم اختبار وصول وأجهزة وصوت فعلي.",
+      "candidateEvidence": [
+        "components/tasks.tsx",
+        "lib/speech.ts",
+        "scripts/interaktiv_test.tsx",
+        "scripts/browser_e2e.mjs"
+      ],
+      "relatedIds": [
+        267,
+        281,
+        283
+      ]
+    },
+    "289": {
+      "classification": "expertise-adaptive-design",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "مستوى CEFR أو عدد التكرارات لا يساوي الخبرة الفعلية بالمهمة، لذلك لا يكفيان لرفع التوجيه أو خفضه. الخطة تراعي المستوى إجمالاً لكنها لا تملك قياساً بندياً للخبرة؛ يبقى السجل مبدأ تدقيق للسقالات لا محركاً.",
+      "candidateEvidence": [
+        "lib/scaffolding-deep.ts",
+        "lib/plan.ts",
+        "components/akademie/LektionWizard.tsx"
+      ],
+      "relatedIds": [
+        204,
+        281,
+        285
+      ]
+    },
+    "290": {
+      "classification": "learner-self-management",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "candidate-live-implementation",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "medium",
+      "rationaleAr": "يملك المتعلم حياً اختيار وتيرة البطاقات وهدف جلسة قابل للإيقاف والحفظ ونية أسبوعية ومراجعة من سجله، وهي مطابقة مرشحة للإدارة الذاتية. لا يثبت ذلك أن المتعلم يدير العبء المعرفي بفعالية؛ يلزم اختبار استخدام وقياس سلوك.",
+      "candidateEvidence": [
+        "app/einstellungen/page.tsx",
+        "app/page.tsx",
+        "components/absicht.tsx",
+        "components/motivation.tsx",
+        "scripts/engine_smoke.ts"
+      ],
+      "relatedIds": [
+        291,
+        304,
+        368,
+        543
+      ]
+    },
+    "291": {
+      "classification": "goal-setting",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "candidate-live-implementation",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "medium",
+      "rationaleAr": "يعرض المنتج هدفاً أسبوعياً مشتقاً من السجل ونية تنفيذ محددة بماذا ومتى وأين مع مراجعة لاحقة، وهو تطابق حي مرشح لتحديد الأهداف والتغذية الراجعة. ادعاء تحسن 20 بالمئة غير موثق، ولا توجد مقارنة ميدانية أو تحقق من ملاءمة صعوبة الهدف.",
+      "candidateEvidence": [
+        "lib/motivation.ts",
+        "components/motivation.tsx",
+        "lib/absicht.ts",
+        "components/absicht.tsx",
+        "app/fortschritt/page.tsx",
+        "scripts/engine_smoke.ts"
+      ],
+      "relatedIds": [
+        290,
+        304,
+        368,
+        543
+      ]
+    },
+    "292": {
+      "classification": "motivational-messaging-theory",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "عقلية النمو بناء نفسي لا تثبته رسالة تشجيع واحدة، ولا ينبغي للتطبيق إصدار حكم عن ذكاء المتعلم أو إرجاع كل تعثر إلى الجهد. توجد صياغة حية غير عقابية عند الخطأ، لكنها سياسة تواصل لا قياساً أو تدخلاً مثبتاً.",
+      "candidateEvidence": [
+        "components/akademie/LektionWizard.tsx",
+        "app/page.tsx"
+      ],
+      "relatedIds": [
+        293,
+        294,
+        964,
+        969
+      ]
+    },
+    "293": {
+      "classification": "attribution-guidance",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "إرجاع النجاح والفشل دائماً إلى الجهد أو الاستراتيجية يتجاهل جودة المحتوى والوقت والصحة والإتاحة وقد يحمّل المتعلم اللوم. الوحدة الحالية غير موصولة، ولا توجد مقابلة أو مقياس عزو؛ يبقى المفهوم إرشاداً لمراجعة نبرة التغذية الراجعة.",
+      "candidateEvidence": [
+        "lib/attribution.ts",
+        "components/berichte.tsx",
+        "components/akademie/LektionWizard.tsx"
+      ],
+      "relatedIds": [
+        292,
+        294
+      ]
+    },
+    "294": {
+      "classification": "learner-belief-theory",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "الكفاءة الذاتية إدراك خاص بالمهمة والسياق ولا تساوي نقاط التقدم أو عدد النجاحات. يعرض المنتج خبرات إنجاز من السجل، لكنه لا يقيس الاعتقاد ولا يثبت سببيته؛ يلزم مقياس صالح وموافقة قبل أي استنتاج نفسي.",
+      "candidateEvidence": [
+        "components/berichte.tsx",
+        "components/motivation.tsx",
+        "lib/sicherheit.ts"
+      ],
+      "relatedIds": [
+        201,
+        292,
+        293,
+        969
+      ]
+    },
+    "295": {
+      "classification": "motivation-theory",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "نظرية التحديد الذاتي إطار يجمع الاستقلالية والكفاءة والترابط، وليست ميزة أو مجموعاً حسابياً. يوفر المنتج بعض الاختيار والتغذية الراجعة لكنه لا يقدم علاقة معلم أو مجتمعاً ولا يقيس الحاجات الثلاث؛ تبقى مرجع حوكمة للتصميم.",
+      "candidateEvidence": [
+        "app/einstellungen/page.tsx",
+        "app/page.tsx",
+        "components/motivation.tsx"
+      ],
+      "relatedIds": [
+        296,
+        297,
+        298,
+        367,
+        577,
+        578,
+        951,
+        955
+      ]
+    },
+    "296": {
+      "classification": "autonomy-support",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "candidate-live-implementation",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "medium",
+      "rationaleAr": "يستطيع المتعلم اختيار وتيرة البطاقات وسرعة الصوت، إيقاف الجلسة وحفظها، وكشف بعض المساندة اختيارياً مع تفسير الحدود؛ هذه مطابقة حية مرشحة لدعم الاستقلالية. لا تثبت الواجهة وحدها شعور الاستقلال أو أثره التعليمي.",
+      "candidateEvidence": [
+        "app/einstellungen/page.tsx",
+        "app/page.tsx",
+        "components/tasks.tsx",
+        "components/akademie/LektionWizard.tsx",
+        "scripts/interaktiv_test.tsx"
+      ],
+      "relatedIds": [
+        290,
+        295,
+        367,
+        960
+      ]
+    },
+    "297": {
+      "classification": "competence-support",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "candidate-live-implementation",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "يوفر Lesson Studio تحدياً متدرجاً وتصحيحاً وشرحاً وتحققاً مؤجلاً، وتفصل البطاقات التعرف عن الإنتاج؛ وهي مطابقة حية مرشحة لدعم الإحساس بالكفاءة. لا يوجد حتى الآن تقدير سيكومتري للتحدي الأمثل أو دراسة تمنع الإحباط أو الثقة الزائفة.",
+      "candidateEvidence": [
+        "components/akademie/LektionWizard.tsx",
+        "components/exercises.tsx",
+        "lib/srs.ts",
+        "components/tasks.tsx",
+        "scripts/engine_smoke.ts"
+      ],
+      "relatedIds": [
+        262,
+        285,
+        295
+      ]
+    },
+    "298": {
+      "classification": "relationship-dependent-support",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "دعم الترابط يحتاج علاقة فعلية آمنة مع معلم أو أقران واستمرارية وموافقة، بينما المنتج محلي بلا حسابات أو خدمة مجتمع. مطالبات الشريك لا تثبت الانتماء أو الاتصال؛ يلزم بروتوكول شريك وحماية وبديل فردي.",
+      "candidateEvidence": [
+        "content/muendlich.json",
+        "content/real-world-validation.json",
+        "app/datenschutz/page.tsx"
+      ],
+      "relatedIds": [
+        225,
+        227,
+        258,
+        295
+      ]
+    },
+    "299": {
+      "classification": "engagement-theory",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "التدفق حالة نفسية لا تنتج تلقائياً من مساواة رقمية بين الصعوبة والمهارة، والقلق لا يُستنتج من فرق حسابي. يكيّف المنتج بعض الوتيرة لكنه لا يقيس التدفق أو المهارة مقابل التحدي؛ يبقى المفهوم بحثياً.",
+      "candidateEvidence": [
+        "lib/plan.ts",
+        "components/selbsttest.tsx"
+      ],
+      "relatedIds": [
+        262,
+        278,
+        295,
+        589,
+        962
+      ]
+    },
+    "300": {
+      "classification": "persistence-theory",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "المثابرة ليست دائماً مرغوبة؛ الاستمرار في مسار غير مناسب قد يضر، ولا يجوز استنتاج سمة شخصية من الحضور أو السلسلة. لا يوجد مقياس موافق عليه أو تدخل مثبت، لذلك يبقى السجل بحثياً مع تشجيع التوقف الآمن وإعادة التخطيط.",
+      "candidateEvidence": [
+        "components/motivation.tsx",
+        "components/absicht.tsx",
+        "app/page.tsx"
+      ],
+      "relatedIds": [
+        292,
+        586,
+        963
+      ]
+    },
     "840": {
       "classification": "duplicate-catalog-record",
       "decision": "merge-duplicate",

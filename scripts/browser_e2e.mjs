@@ -235,7 +235,7 @@ async function main() {
 
     await navigate(cdp, sessionId, `${ORIGIN}/qualitaet`);
     const quality = await poll(cdp, sessionId,
-      `document.body?.textContent?.includes("لا يحمل اعتماداً رسمياً من Goethe-Institut أو telc gGmbH") && document.body?.textContent?.includes("برنامج الإكمال الأكاديمي") && document.body?.textContent?.includes("سمات قواعد مرشحة") && document.body?.textContent?.includes("فكرة/مفهوم في الكتالوج") && document.body?.textContent?.includes("108 قرار فرز") && document.body?.textContent?.includes("712 بانتظار الفرز") && document.body?.textContent?.includes("تنفيذ حي مرشح: 18") && document.body?.textContent?.includes("207 إحالة مفاهيمية") && document.body?.textContent?.includes("6 مرفوضة لعدم الملاءمة") && document.body?.textContent?.includes("ما يمنع الاعتماد الآن؟") && !document.body?.textContent?.includes("تعذّر تحميل المحتوى")`,
+      `document.body?.textContent?.includes("لا يحمل اعتماداً رسمياً من Goethe-Institut أو telc gGmbH") && document.body?.textContent?.includes("برنامج الإكمال الأكاديمي") && document.body?.textContent?.includes("سمات قواعد مرشحة") && document.body?.textContent?.includes("فكرة/مفهوم في الكتالوج") && document.body?.textContent?.includes("128 قرار فرز") && document.body?.textContent?.includes("692 بانتظار الفرز") && document.body?.textContent?.includes("تنفيذ حي مرشح: 27") && document.body?.textContent?.includes("289 إحالة مفاهيمية") && document.body?.textContent?.includes("6 مرفوضة لعدم الملاءمة") && document.body?.textContent?.includes("ما يمنع الاعتماد الآن؟") && !document.body?.textContent?.includes("تعذّر تحميل المحتوى")`,
       "Qualitätsseite mit ehrlicher Akkreditierungsgrenze");
     if (!quality) fail("Qualitätsseite oder Akkreditierungsgrenze fehlt");
 
