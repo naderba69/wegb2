@@ -1,3 +1,4 @@
+import { lokalesDatum } from "./datum";
 import type { SrsState } from "./types";
 import { abrufbarkeit, MAX_REVIEWS_PER_DAY } from "./srs";
 
@@ -23,7 +24,7 @@ export interface Prognose {
   kohorten: Kohorte[];
 }
 
-const tagIso = (d: Date) => d.toISOString().slice(0, 10);
+const tagIso = (d: Date) => lokalesDatum(d);
 
 export function prognose(srs: Record<string, SrsState>, now = new Date(), tage = 7): Prognose {
   const karten = Object.values(srs).filter((st) => st.reps > 0 && st.stab !== undefined);

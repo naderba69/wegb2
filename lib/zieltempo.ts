@@ -10,6 +10,7 @@
  *  يُحتمل مستدامًا قلنا ذلك صراحةً واقترحنا أقرب موعد واقعي.
  * ═══════════════════════════════════════════════════════════════════
  */
+import { lokalesDatum } from "./datum";
 import { planMinBis } from "./plan";
 import { D1_B2_DECKEL_MIN } from "./phasen";
 import { TOTAL_DAYS } from "./types";
@@ -50,7 +51,7 @@ function tageZwischen(heuteIso: string, zielIso: string): number {
 function plusTage(iso: string, n: number): string {
   const d = new Date(iso + "T00:00:00Z");
   d.setUTCDate(d.getUTCDate() + n);
-  return d.toISOString().slice(0, 10);
+  return lokalesDatum(d);
 }
 
 /**

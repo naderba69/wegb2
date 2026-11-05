@@ -13,17 +13,17 @@
 # Natuerlichkeitsurteil. Der gelesene Text ist der Banktext der jeweiligen
 # content/*.json (zeichengleich per Konstruktion der Manifeste).
 #
-# Ausfuehrung (miniaudio+numpy in einem Werkzeug-venv, PEP-668-sicher):
-#   python3 -m venv /tmp/qcenv && /tmp/qcenv/bin/pip install miniaudio numpy
-#   /tmp/qcenv/bin/python scripts/audio_qc_all.py
-# Schreibt docs/audio-qc-all-2026-10-18.json; K304 im Smoke pinnt Bericht,
+# Ausfuehrung (reproduzierbares Werkzeug-venv unter .cache, PEP-668-sicher):
+#   npm run audio:qc
+# Der Wrapper installiert die exakt gepinnten Versionen aus requirements-audio-qc.txt.
+# Schreibt den datierten Vollbericht; Smoke/Repository-Audit pinnen Bericht und Bestand,
 # Abdeckung (jede MP3 auf der Platte genau einmal) und Anomalienzahl.
 import json, math, os, statistics, sys
 import miniaudio
 import numpy as np
 
 ROOT = os.path.join(os.path.dirname(__file__), "..")
-DATUM = "2026-10-18"
+DATUM = "2026-11-04"
 STILLE_SCHWELLE = 104          # |sample| < 104  (~ -50 dBFS) gilt als still
 FENSTER_S = 0.01               # 10-ms-Fenster fuer Loch/An-/Abklang
 
@@ -46,7 +46,7 @@ SCHWELLEN = {
     "hoerneu":    dict(GEMEINSAM, minDauerS=3.0, zeichenProSekunde=[5.0, 22.0]),
 }
 GRUPPEN_DATEIEN = {  # gruppe -> (verzeichnis, erwartete anzahl)
-    "dialog": ("dialog", 164), "diktat": ("diktat", 742), "hoeren": ("hoeren", 157),
+    "dialog": ("dialog", 176), "diktat": ("diktat", 742), "hoeren": ("hoeren", 157),
     "hoerneu": ("hoerneu", 16), "sprichwort": ("sprichwort", 8),
 }
 
@@ -65,9 +65,12 @@ def texte_und_stimmen():
     dlg_de = {d["id"]: " ".join(z["de"] for z in d["lines"]) for d in lade("dialogues.json")}
     for e in lade("dialog-audio.json")["einsaetze"]:
         out[e["file"].split("/")[-1]] = (e["id"], "dialog", e["voice"], dlg_de.get(e["id"], ""))
+    # `texts.json.de` ist der kanonische, zeichengleiche Hörtext. Längere
+    # Lesefassungen leben ausschließlich in content/lang/*.json.
     txt_de = {t["id"]: t["de"] for t in lade("texts.json")}
     for e in lade("hoeren-audio.json")["einsaetze"]:
-        out[e["file"].split("/")[-1]] = (e["id"], "hoeren", e["voice"], txt_de.get(e["id"], ""))
+        text = txt_de.get(e["id"], "")
+        out[e["file"].split("/")[-1]] = (e["id"], "hoeren", e["voice"], text)
     for item in lade("hoerneu.json")["items"]:
         for clip in item["clips"]:
             text = " ".join(item["zeilen"][z]["de"] for z in clip["zeilen"])

@@ -1,5 +1,6 @@
 "use client";
 // 📚 R300: محطة القراءة والحوارات الحرة — نصوص وقصص وحوارات جديدة لكل المستويات (خارج خطة الـ378 يومًا)
+import { lokalesDatum, lokalesDatumPlus } from "@/lib/datum";
 import { useEffect, useMemo, useState } from "react";
 import {
   FREIE_TEXTE,
@@ -177,7 +178,7 @@ export function LeseStoffStation() {
         const parsed: unknown = JSON.parse(raw);
         if (Array.isArray(parsed)) {
           // ترحيل: عناصر بلا تاريخ تُرحَّل بتاريخ اليوم فتستحق الإعادة بعد 7 أيام
-          const heute = new Date().toISOString().slice(0, 10);
+          const heute = lokalesDatum();
           const rec: Record<string, string> = {};
           for (const id of parsed) if (typeof id === "string") rec[id] = heute;
           setFertigAm(rec);
@@ -194,7 +195,7 @@ export function LeseStoffStation() {
 
   const fertig = useMemo(() => Object.keys(fertigAm), [fertigAm]);
   const wiederFaellig = useMemo(() => {
-    const grenze = new Date(Date.now() - 7 * 86400000).toISOString().slice(0, 10);
+    const grenze = lokalesDatumPlus(-7);
     return Object.entries(fertigAm).filter(([, d]) => d <= grenze).map(([id]) => id);
   }, [fertigAm]);
 
@@ -205,7 +206,7 @@ export function LeseStoffStation() {
 
   const markieren = (id: string, kompetenz: "Lesen" | "Hoeren") => {
     setFertigAm((alt) => {
-      const neu = { ...alt, [id]: new Date().toISOString().slice(0, 10) };
+      const neu = { ...alt, [id]: lokalesDatum() };
       try { localStorage.setItem(LS_KEY, JSON.stringify(neu)); } catch { /* تجاهل */ }
       return neu;
     });

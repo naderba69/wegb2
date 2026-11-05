@@ -1,10 +1,11 @@
 "use client";
 /**
  * 🎓 محاكاة الامتحانات (E1/R171 + E2/R172) — صيغ Goethe B2/B1 وtelc B2 وDTZ
- * بأزمنة وعتبات رسمية موثّقة، وبنود من بنوك المشروع حتميًا بالبذرة (lib/simulation.ts).
+ * بأزمنة وعتبات مواءمة مؤقتة تنتظر توقيع مراجعة المصادر الرسمية، وبنود من بنوك المشروع حتميًا بالبذرة (lib/simulation.ts).
  * القراءة والاستماع والبنى تُصحَّح آليًا؛ الكتابة والتحدّث بتقييم ذاتي بشبكة معلنة.
  * محاكاة تدريبية صادقة الاسم: ليست امتحانًا رسميًا ولا توقّع نتيجة.
  */
+import { lokalesDatum } from "@/lib/datum";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useProgress } from "@/lib/store";
 import {
@@ -153,7 +154,7 @@ export default function Simulation() {
       ...p,
       simulationen: [
         ...(p.simulationen ?? []),
-        { datum: new Date().toISOString().slice(0, 10), seed, format, punkte: bewertung.prozent, bestanden: bewertung.bestanden },
+        { datum: lokalesDatum(), seed, format, punkte: bewertung.prozent, bestanden: bewertung.bestanden },
       ].slice(-30),
     }));
   }, [phase, bewertung, seed, format, update]);
@@ -213,7 +214,7 @@ export default function Simulation() {
     return (
       <div data-testid="sim-start">
         <p style={{ lineHeight: 1.9 }}>
-          محاكاة كاملة بصيغة رسمية من بنوك التطبيق: وحدات موقوتة وبنود حقيقية من مستواك.
+          محاكاة تدريبية ببنية مواءمة مؤقتة من بنوك التطبيق: وحدات موقوتة وبنود حقيقية من مستواك.
           القراءة والاستماع والبنى اللغوية تُصحَّح آليًا؛ الكتابة والتحدّث تُقيّمهما أنت بشبكة معايير معلنة
           (والتصحيح الذكي الاختياري في الإعدادات استشاريّ خارج النقاط).
         </p>

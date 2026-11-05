@@ -407,7 +407,22 @@ export const TEMPO_LABEL: Record<Tempo, { de: string; ar: string; cards: number 
 };
 export const NEW_CARDS_PER_DAY: Record<Tempo, number> = { leicht: 3, regelmaessig: 5, intensiv: 10 };
 
+export interface TodayUxDayMetric {
+  /** زمن الجلسة النشط عند أول تسليم؛ لا يشمل بقاء الصفحة مفتوحة أو الخمول. */
+  firstAttemptActiveMs?: number;
+  /** زمن الجلسة النشط عند أول تسليم ناجح (≥80٪)؛ لا يُكتب إن لم يحدث نجاح. */
+  firstSuccessActiveMs?: number;
+  /** هل احتوت خطة ذلك اليوم محطة ⑤ فعلية؟ */
+  hasStep5: boolean;
+  /** زمن أول تسليم داخل محطة ⑤؛ الوصول لا يعني النجاح. */
+  reachedStep5ActiveMs?: number;
+  /** زمن الجلسة عند إغلاق اليوم العادي؛ «اليوم السيئ» لا يُحسب إكمالاً. */
+  closedActiveMs?: number;
+}
+
 export interface Progress {
+  /** قياسات UX محلية لمسار «اليوم»؛ مدد وبلوغ محطات فقط، بلا نصوص إجابة أو شبكة. */
+  todayUx?: { version: 1; days: Record<number, TodayUxDayMetric> };
   /** آخرُ 500 تقييمِ ثقةٍ قبلَ الإجابة — اختياريّ، يُملأ من ExerciseSet */
   sicherheit?: SicherheitsEintrag[];
   v: number;

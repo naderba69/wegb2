@@ -10,6 +10,7 @@ import {
 
 function availabilityText(state: LocalSpeechAvailability): string {
   switch (state) {
+    case "idle": return "لم يُفحَص دعم de-DE المحلي بعد؛ يبدأ الفحص فقط عند طلبك.";
     case "checking": return "جارٍ فحص إتاحة de-DE المحلية…";
     case "available": return "حزمة de-DE المحلية متاحة في هذا المتصفح.";
     case "downloadable": return "يمكن طلب حزمة de-DE المحلية من المتصفح بعد موافقتك المنفصلة.";
@@ -21,7 +22,7 @@ function availabilityText(state: LocalSpeechAvailability): string {
 }
 
 export default function LocalSpeechPilot() {
-  const [availability, setAvailability] = useState<LocalSpeechAvailability>("checking");
+  const [availability, setAvailability] = useState<LocalSpeechAvailability>("idle");
   const [consentToDownload, setConsentToDownload] = useState(false);
   const [installing, setInstalling] = useState(false);
   const [listening, setListening] = useState(false);
@@ -37,13 +38,10 @@ export default function LocalSpeechPilot() {
     setAvailability(result);
   }, []);
 
-  useEffect(() => {
-    void refreshAvailability();
-    return () => {
-      stopRef.current?.();
-      stopRef.current = null;
-    };
-  }, [refreshAvailability]);
+  useEffect(() => () => {
+    stopRef.current?.();
+    stopRef.current = null;
+  }, []);
 
   const downloadLanguage = async () => {
     if (!consentToDownload || installing) return;

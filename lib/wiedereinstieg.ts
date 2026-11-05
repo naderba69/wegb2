@@ -1,3 +1,4 @@
+import { lokalesDatum } from "./datum";
 import { abrufbarkeit } from "./srs";
 import type { DayPlan, Progress } from "./types";
 
@@ -17,7 +18,7 @@ export interface ResumeZustand {
   sitzungen: string[];
 }
 
-const heuteIso = (now: Date) => now.toISOString().slice(0, 10);
+const heuteIso = (now: Date) => lokalesDatum(now);
 const tageZwischen = (von: string, bis: string) =>
   Math.round((new Date(`${bis}T00:00:00Z`).getTime() - new Date(`${von}T00:00:00Z`).getTime()) / 86400000);
 

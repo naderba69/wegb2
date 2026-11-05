@@ -7,7 +7,6 @@
  * التشغيل:  npm run smoke
  */
 
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import {
   rng,
   pickN,
@@ -118,9 +117,19 @@ import { buildSkillKlausur, SKILL_LABELS, type SkillKey } from "../lib/klausur";
 import { karteninCsv, allesInCsv, exportKarten } from "../lib/karten-export";
 import { analysiere, bewerteAussprache, silbenImText, zielDauer } from "../lib/aussprache";
 import { pruefeText, pruefeBrief, bewerteSchreiben, heilUebungen, effektiveSchwere, DISPUT_SCHWELLE } from "../lib/schreibpruefer";
-import { feedbackQuote, fehlerHeilung, pruefungsKurve } from "../lib/metriken";
+import {
+  feedbackQuote,
+  fehlerHeilung,
+  pruefungsKurve,
+  recordTodayUxClosed,
+  recordTodayUxSubmission,
+  todayUxSummary,
+} from "../lib/metriken";
 import { buildModulPruefung, bewerte, darfWiederholen, modulFrei, tagGesperrt, rettungsplan } from "../lib/modulpruefung";
 import { emptyProgress, TOTAL_DAYS, CURRICULUM_SCHEDULE_VERSION, type SrsState, type Tempo } from "../lib/types";
+import { groupTasksByTodayStep, todayStepOf, todayTaskSubmitted } from "../lib/today-steps";
+import { parsePitfallContrast } from "../lib/pitfall";
+import { lessonSceneFor } from "../lib/lesson-scene";
 import { CURRICULUM_SECTIONS, buildCurriculumDay } from "../lib/curriculum";
 import { migrateCurriculumSchedule } from "../lib/curriculum-schedule";
 import {
@@ -137,21 +146,21 @@ import { entdeckungsFrage, induktionMoeglich, ergebnisText, MIN_BEISPIELE, stufe
 import { STIL_PAARE, REGEL_AR, bankPruefen, stilUebungen, registerErkennen, stilProfil } from "../lib/stil";
 import { signaleIn, ablenker, signalRadar, signalDrill, radarAbdeckung, SIGNALE, KATEGORIE_AR } from "../lib/signalwoerter";
 import { kapselIds, kapselSaetze, kapselAusTag, KAPSEL_GROESSE, KAPSEL_LEITER, kapselVerbuche, kapselFaellig, kapselIdsAdaptiv, kapselQuizAdaptiv, kapselQuiz, satzIdAusUebung } from "../lib/kapsel";
-import { EINSTUFUNG_SKILLS, einstufungsFragen, einstufungsPool, einstufungStart, einstufungAktuell, einstufungAntwort, einstiegsVorschlag } from "../lib/einstufung";
-import { schattenEinheiten, huellkurve, kurveAufLaenge, korrelation, pausenZaehlen, vergleicheSchatten } from "../lib/shadowing";
+import { EINSTUFUNG_SKILLS, einstufungsFragen, einstufungStart, einstufungAntwort, einstiegsVorschlag } from "../lib/einstufung";
+import { schattenEinheiten, vergleicheSchatten } from "../lib/shadowing";
 import { wortDiff, diffStatistik } from "../lib/textdiff";
 import { musterDrill } from "../lib/musterdrill";
 import { wochenBilanz, streakAusVerlauf, zielAusVerlauf, wochenMontag } from "../lib/motivation";
 import { lernendenZeile } from "../lib/lehrer";
 import { zielTempo, ZIEL_MINUTEN_OK, ZIEL_MINUTEN_MAX } from "../lib/zieltempo";
 import { ritualUrteil, aufgabeGesperrt, torAufgaben, sperrText } from "../lib/ritual";
-import { PHASEN, PHASE_START, LERNLAST, ABSCHLUSS_VON, levelAmTag, istPhasenPruefung, lastMinuten, PHASEN_PRUEFUNGSTAGE } from "../lib/phasen";
+import { PHASEN, PHASE_START, LERNLAST, ABSCHLUSS_VON, levelAmTag, lastMinuten, PHASEN_PRUEFUNGSTAGE } from "../lib/phasen";
 import { getDialogue, eselsbruecken, getBrueckenFor, vocabMap, sprichwortAudio, sprichwortSrc } from "../lib/content";
 import { buildBrueckeItems, katVonSektion } from "../lib/bruecken";
 import { selbstKorrektur } from "../components/lernstrategie";
 import { planeEinwand } from "../lib/muendlich";
 import { synonymKontexteFuer, synonymKontextAnzahl } from "../lib/synonyme";
-import type { Exercise, Level, Progress, TaskResult, DayTask } from "../lib/types";
+import type { Exercise, Level, Progress, TaskResult, DayTask, GrammarTopic } from "../lib/types";
 import { STUFEN, stufeVonTag, tagVonStufe, ankerVon, wegHeute } from "../lib/weg";
 import { AKTIVITAETEN } from "../lib/aktivitaeten";
 import { gemischteOptionen } from "../lib/optionen";
@@ -504,7 +513,7 @@ const vocabRepeatAudit = (() => {
     const D = (h: number, m = 0) => new Date(2026, 8, 26, h, m, 5); // 2026-09-26 محلي
     const mk = (o: Partial<Progress>): Progress => ({ ...emptyProgress, ...o });
     const p0 = signKontrakt(mk({}), "21:30", "xp30", D(10));
-    ok(p0.kontrakt?.uhrzeit === "21:30" && p0.kontrakt?.seit === "2026-09-26", "K22a التوقيع يختم الساعة ويوم الحسم");
+    ok(p0.kontrakt?.uhrzeit === "21:30" && p0.kontrakt?.seit === "2026-09-26" && tagLokal(D(10)) === "2026-09-26", "K22a التوقيع يختم الساعة ويوم التقويم المحلي بلا انزلاق UTC");
     ok(voidKontrakt(voidKontrakt(p0)).kontrakt === undefined, "K22b الفكّ محو كامل — ومحو بلا عقد لا يغيّر شيئاً (idempotent)");
 
     const aktiv: Progress = { ...p0, plan: { ...p0.plan, days: { 200: { closed: false, score: 30, total: 100, tasksDone: 3, tasksTotal: 8, at: "2026-09-26T20:00:00" } } } };
@@ -563,7 +572,7 @@ const vocabRepeatAudit = (() => {
   /* ===== K24 — معمل الاستماع HörLabor (Modul AF) ===== */
   {
     ok(texts.length >= 40 && texts.every((t) => t.questions.length >= 2), "K24a مادة المعمل هي بنك القراءة نفسه بكل توسعاته — لا محتوى موازٍ ولا فرعٌ منفصل");
-    const r1 = bauHoerRunde(120), r1alt = bauHoerRunde(120), r2 = bauHoerRunde(121);
+    const r1 = bauHoerRunde(120), r1alt = bauHoerRunde(120);
     ok(r1.textId === r1alt.textId && r1.items.map((x) => x.id).join() === r1alt.items.map((x) => x.id).join(), "K24b حتمية الجولة: اليوم نفسه يلد النص والأسئلة بالترتيب نفسه");
     ok(r1.items.every((x) => x.options === null || x.options.length >= 2) && r1.items.every((x) => x.answers.every((a) => a.length > 0)), "K24c كل بند قابل للحكم: خيارات أو صيغ مقبولة");
     ok([1, 5, 60, 120, 121, 200, 300, 377].every((d) => bauHoerRunde(d).level === levelOf(Math.min(d, TOTAL)) && texts.some((t) => t.level === bauHoerRunde(d).level)), "K24d المعمل يعمل على مستوى الخطة في كل يوم — ولكل مستوى نصوصه، بلا جولة فارغة أبداً");
@@ -1261,28 +1270,37 @@ const vocabRepeatAudit = (() => {
   /* K52 · صدقُ المبالغ: كلُّ مبلغِ يورو في الألمانيةِ لهُ مقابلٌ في الترجمة */
   {
     const deZahl: Record<string, number> = { zwei: 2, drei: 3, vier: 4, fünf: 5, sechs: 6, sieben: 7, acht: 8, neun: 9, zehn: 10,
-      elf: 11, zwölf: 12, fünfzehn: 15, zwanzig: 20, fünfundzwanzig: 25, dreißig: 30, vierzig: 40, fünfzig: 50, sechzig: 60, siebzig: 70, achtzig: 80, neunzig: 90, hundert: 100, dreiundachtzig: 83, zweitausendvierhundert: 2400 };
+      elf: 11, zwölf: 12, vierzehn: 14, fünfzehn: 15, achtzehn: 18, zwanzig: 20, fünfundzwanzig: 25, dreißig: 30, vierzig: 40, fünfzig: 50, sechzig: 60, siebzig: 70, achtzig: 80, neunzig: 90, hundert: 100, dreiundachtzig: 83, zweitausendvierhundert: 2400 };
     const arZahl: Record<string, number> = { "اثنان": 2, "يورويْن": 2, "ثلاثة": 3, "أربعة": 4, "خمسة": 5, "ستة": 6, "سبعة": 7,
-      "ثمانية": 8, "تسعة": 9, "عشرة": 10, "خمسة عشر": 15, "عشرين": 20, "عشرون": 20, "خمسة وعشرين": 25, "خمسةٌ وعشرون": 25,
+      "ثمانية": 8, "تسعة": 9, "عشرة": 10, "اثنا عشر": 12, "أربعة عشر": 14, "خمسة عشر": 15, "ثمانية عشر": 18, "عشرين": 20, "عشرون": 20, "خمسة وعشرين": 25, "خمسةٌ وعشرون": 25,
       "ثلاثين": 30, "ثلاثون": 30, "أربعين": 40, "خمسين": 50, "خمسون": 50, "مئة": 100, "مئةِ": 100, "ستّون": 60, "ستين": 60, "سبعين": 70, "ثمانين": 80, "ثمانون": 80, "تسعين": 90, "ثلاثةٌ وثمانون": 83, "نصف": 50, "ونصفًا": 50, "والنصف": 50 };
     const zahlenAus = (s: string, tab: Record<string, number>) => {
       const out = new Set<number>();
-      for (const m of s.matchAll(/\d+/g)) out.add(Number(m[0]));
-      for (const [w, v] of Object.entries(tab)) if (new RegExp(`(^|[^A-Za-zÄÖÜäöüß])${w}([^A-Za-zÄÖÜäöüß]|$)`).test(s)) out.add(v);
+      const normal = s.normalize("NFC").replace(/[\u064B-\u065F\u0670]/g, "");
+      for (const m of normal.matchAll(/\d+/g)) out.add(Number(m[0]));
+      for (const [w, v] of Object.entries(tab)) {
+        const wort = w.normalize("NFC").replace(/[\u064B-\u065F\u0670]/g, "");
+        if (new RegExp(`(^|[^A-Za-zÄÖÜäöüß])${wort}([^A-Za-zÄÖÜäöüß]|$)`).test(normal)) out.add(v);
+      }
       return out;
     };
     const ziffernNur = (s: string) => new Set([...s.matchAll(/\d[\d.]*/g)].map((m) => Number(m[0].replace(/\./g, ""))));
+    const euroZahlenDe = (s: string) => {
+      const out = new Set([...s.matchAll(/(\d[\d.]*)\s*Euro/gi)].map((m) => Number(m[1].replace(/\./g, ""))));
+      for (const [wort, wert] of Object.entries(deZahl)) if (new RegExp(`(^|[^A-Za-zÄÖÜäöüß])${wort}\\s+Euro`, "i").test(s)) out.add(wert);
+      return out;
+    };
     const dial = JSON.parse(readFileSync("content/dialogues.json", "utf8")) as { id: string; lines: { de: string; ar: string }[] }[];
     const schief: string[] = [];
     for (const d of dial) for (const [i, l] of d.lines.entries()) {
       if (!/Euro/.test(l.de)) continue;
-      const dz = ziffernNur(l.de), az = new Set([...ziffernNur(l.ar), ...zahlenAus(l.ar, arZahl)]);
+      const dz = euroZahlenDe(l.de), az = new Set([...ziffernNur(l.ar), ...zahlenAus(l.ar, arZahl)]);
       const fehlt = [...dz].filter((n) => !az.has(n));
       if (fehlt.length) schief.push(`${d.id}:${i} ${fehlt.join(",")}`);
     }
     ok(schief.length === 0, `K52a كلُّ مبلغٍ مكتوبٍ بالخاناتِ في الحواراتِ يردُ في الترجمةِ كما هو (${schief.slice(0, 4).join(" · ") || "لا شيء"})`);
     const txt = texts.filter((t) => /Euro/.test(t.de));
-    const schief2 = txt.filter((t) => { const dz = ziffernNur(t.de), az = new Set([...ziffernNur(t.ar), ...zahlenAus(t.ar, arZahl)]); return [...dz].some((n) => !az.has(n)); }).map((t) => t.id);
+    const schief2 = txt.filter((t) => { const dz = euroZahlenDe(t.de), az = new Set([...ziffernNur(t.ar), ...zahlenAus(t.ar, arZahl)]); return [...dz].some((n) => !az.has(n)); }).map((t) => t.id);
     ok(schief2.length === 0, `K52b وكذلك في نصوصِ القراءة — لا رقمَ يتبدَّلُ في العبور (${schief2.join(",") || "لا شيء"})`);
   }
 
@@ -1671,7 +1689,6 @@ void 0;
   {
     // R145: مهامّ partner (R138–R141) محاكاةُ كلامٍ امتحانية (تعارف/مونولوج/نقاش) = إنتاجٌ شفهيّ بامتياز؛ إخراجها من التصنيف أظهر أيامَ مراجعةٍ كاذبةَ الخلوّ
     const PROD_KINDS = new Set(["schreiben", "sprechen", "grammatik", "partner"]);
-    const REZEPTIV_KINDS = new Set(["lesen", "hoeren", "wiederholen"]);
     // أسئلة quiz من نوع إنتاج تحسب كإنتاج بوزن 0.8 دقيقة/سؤال، mc بصفر.
     const FREE_RE = /"(fill|umformung|order|translate|dictation)"/;
     function produktionsMinuten(d: number): number {
@@ -1726,7 +1743,7 @@ void 0;
     const tag378K = kIds(378);
     ok(tag50K.length === 3 && new Set(tag50K).size === 3 && tag200K.length === 3 && new Set(tag200K).size === 3 && tag378K.length === 3,
       `K90c كبسولةُ الصباحِ دائماً 3 جملٍ فريدة (وسط B1: ${tag200K.length}، يوم 378: ${tag378K.length})`);
-    const quizTypen = new Set(tag50Q.map((q) => q.type));
+    const quizTypen = new Set([...tag50Q, ...tag200Q].map((q) => q.type));
     ok(quizTypen.size >= 2, `K90c أسئلةُ الكبسولةِ متنوّعة النوع (لا سؤال متعدّد ولا نمط وحيد) — أنواع: ${[...quizTypen].join("/")}`);
     // K90d: الكبسولة المتباعدة لا تعيد نفس الجملة من الأمس عندما تتوفر جمل أقدم (بعد اليوم 30 على الأقل)
     const tag100 = kIds(100), tag101 = kIds(101);
@@ -1876,7 +1893,6 @@ void 0;
     const layoutSrc = readFileSync("app/layout.tsx", "utf8");
     const globalsSrc = readFileSync("app/globals.css", "utf8");
     const altOk = existsSync("app/alt/page.tsx");
-    const altSrc = altOk ? readFileSync("app/alt/page.tsx", "utf8") : "";
     const revSrc = existsSync("components/akademie/FehlerRevue.tsx") ? readFileSync("components/akademie/FehlerRevue.tsx", "utf8") : "";
     const klassSrc = readFileSync("components/akademie/Klassenzimmer.tsx", "utf8");
 
@@ -1994,7 +2010,6 @@ void 0;
     // وأن الواجهة تعرض الكبسولة.
     const seite2 = readFileSync("components/akademie/Klassenzimmer.tsx", "utf8");
     ok(seite2.includes("gesternKapsel") || /kapsel/.test(seite2), "K65g وكبسولةُ الأمسِ تقعُ خلفَ قفلِ البوابة: لا جديدَ قبلَ استظهارِها");
-    const w2 = buildDay(2, P).tasks[0];
     const seite = require("fs").readFileSync("app/page.tsx", "utf8"), komp = require("fs").readFileSync("components/kapsel.tsx", "utf8");
     const klassK = require("fs").readFileSync("components/akademie/Klassenzimmer.tsx", "utf8");
     ok(/<TagesKapsel day=\{day\}/.test(klassK) && /<Klassenzimmer/.test(seite) && /data-testid="tageskapsel"/.test(komp) && !/قرأتها"\s*<\/button>/.test(komp) && /speakDe/.test(komp),
@@ -2403,7 +2418,6 @@ void 0;
     ok(zweitRichtig.length === 0, `K73h لا مشتّتَ يظهرُ في متلازماتِ البطاقةِ نفسِها — لا خيارَ ثانٍ صحيحاً (${zweitRichtig.map((u) => u.id).slice(0, 3).join(",")})`);
     const ausnahmen = require("../content/kollok-ausnahmen.json") as Record<string, { de: string; grund: string }>;
     const b2 = alleVokabeln.filter((k) => k.level === "B2");
-    const b2Ohne = b2.filter((k) => !kollokationen[k.id] && !ausnahmen[k.id]).map((k) => k.id);
     ok(Object.keys(ausnahmen).length <= 66 && Object.entries(ausnahmen).every(([id, a]) => ids.has(id) && !kollokationen[id] && a.grund.length > 10 && a.de === ids.get(id)!.de), `K73k قائمةُ الاستثناءِ صريحةٌ ومعلَّلةٌ ومحدودة (${Object.keys(ausnahmen).length} ≤66)، ولا بطاقةَ فيها لها متلازمات — R313: +4 اختصارات (bzw./d.h./vgl./z.B.) بلا متلازمة ممكنة؛ R315: +11 أدواتٍ وظيفيةً من أحرف D-E؛ R316: +3 أدواتٍ وظيفيةً من أحرف F-G-H (falls, genauso, halt) بلا متلازمة ممكنة`);
     const b1 = alleVokabeln.filter((k) => k.level === "B1");
     /** قاعدةٌ آليّة: بطاقةٌ من ≥2 كلمتَي محتوى (in Kauf nehmen, Ich würde sagen) هي متلازمةٌ بذاتِها — تُعرَضُ كما هي ولا تحتاجُ متلازمةً لمتلازمة */
@@ -2911,7 +2925,7 @@ void 0;
 /* ═══ K120 — سجلُّ القواعدِ يفحصُ نفسَه: كلُّ دليلٍ «ملف:سطر» مذكورٍ موجودٌ حرفياً ═══ */
 {
   const rules = readFileSync("RULES.md", "utf8");
-  const re = /`([^`]+\.(?:ts|tsx|json|css|md)):(\d+)`\s*«([^»]+)»/g;
+  const re = /`([^`]+\.(?:ts|tsx|json|css|md|mjs)):(\d+)`\s*«([^»]+)»/g;
   const bad: string[] = [];
   let m: RegExpExecArray | null;
   let n = 0;
@@ -2974,7 +2988,7 @@ void 0;
   const offlineSrc122 = srcOf("components/offline.tsx");
   // R202: الاستثناء الثالث بنفس المنطق حرفيًا — بطاقة عدم الاتصال تجلب بيان الصوت وملفات MP3 من نفس الأصل
   // فقط لتعبئة مخزن المتصفح المحلي؛ لا بيانات مستخدم، ولا رابط خارجي في الملفّ إطلاقًا (يُختبَر أدناه).
-  ok(fetchIn.length === 4 && fetchIn[0] === "components/offline.tsx" && fetchIn[1] === "components/shadowing.tsx" && fetchIn[2] === "lib/bankload.ts" && fetchIn[3] === "lib/grader.ts" && bankSrc.includes('fetch("/banks.json")') && !/https?:\/\//.test(bankSrc) && shadowSrc122.includes("fetch(einheit.audioSrc)") && !/https?:\/\//.test(shadowSrc122) && offlineSrc122.includes('fetch("/audio-manifest.json")') && offlineSrc122.includes("fetch(e.p)") && !/https?:\/\//.test(offlineSrc122), `K122c fetch الخارجيُّ محصورٌ في مصحّح LLM وbankload يجلب /banks.json من نفس الأصل فقط (R163)؛ والاستثناء الوحيد الإضافي منذ R184 هو جلب التظليل لملفّ النموذج من نفس الأصل (einheit.audioSrc، بلا أيّ رابط http) لتحليله موجيًا — لا رفع ولا خادم خارجي؛ ومنذ R202 تجلب بطاقة عدم الاتصال بيان/ملفات الصوت من نفس الأصل لتعبئة مخزن محلي (بلا رابط http في ملفّها إطلاقًا)؛ تنزيلُ حزمة المتصفح محكومٌ بـK135 (${fetchIn.join(",") || "لا شيء"})`);
+  ok(fetchIn.length === 4 && fetchIn[0] === "components/offline.tsx" && fetchIn[1] === "components/shadowing.tsx" && fetchIn[2] === "lib/bankload.ts" && fetchIn[3] === "lib/grader.ts" && bankSrc.includes('fetch("/banks.json")') && !/https?:\/\//.test(bankSrc) && shadowSrc122.includes("fetch(einheit.audioSrc)") && !/https?:\/\//.test(shadowSrc122) && offlineSrc122.includes('fetch("/audio-manifest.json"') && offlineSrc122.includes("fetch(e.p") && !/https?:\/\//.test(offlineSrc122), `K122c fetch الخارجيُّ محصورٌ في مصحّح LLM وbankload يجلب /banks.json من نفس الأصل فقط (R163)؛ والاستثناء الوحيد الإضافي منذ R184 هو جلب التظليل لملفّ النموذج من نفس الأصل (einheit.audioSrc، بلا أيّ رابط http) لتحليله موجيًا — لا رفع ولا خادم خارجي؛ ومنذ R202 تجلب بطاقة عدم الاتصال بيان/ملفات الصوت من نفس الأصل لتعبئة مخزن محلي (بلا رابط http في ملفّها إطلاقًا)؛ تنزيلُ حزمة المتصفح محكومٌ بـK135 (${fetchIn.join(",") || "لا شيء"})`);
   ok(srcOf("app/einstellungen/page.tsx").includes("أُذِنُ بإرسال صوتي") && srcOf("lib/speech.ts").includes("بلا إذنٍ صريحٍ في الإعدادات"),
     "K122d سلسلةُ الموافقةِ السحابية: صياغةُ الإذنِ + شرطُ البوابةِ حاضران");
   const callers = code.filter((f) => f !== "lib/speech.ts" && srcOf(f).includes("listenDe("));
@@ -3436,12 +3450,22 @@ void 0;
     classroomSrc.includes("saveProgress(loadProgress())") && classroomSrc.includes("persistKey={`wegb2:partial:${currentTask.id}`}"),
     "K143d وقت الجلسة المقاس منفصل عن تقديرات المهام؛ المزيد يمدّ الهدف والتوقف يحفظ أحدث الحالة والمسودة دون إغلاق أو دين");
 
-  const pkg = JSON.parse(readFileSync("package.json", "utf8")) as { dependencies: { next: string }; devDependencies: { postcss: string }; overrides: { postcss: string } };
+  const pkg = JSON.parse(readFileSync("package.json", "utf8")) as {
+    dependencies: { next: string };
+    devDependencies: { postcss: string };
+    overrides: { postcss: string; minimatch: string };
+    scripts: { postinstall: string; "audit:deps": string };
+  };
   const lock = JSON.parse(readFileSync("package-lock.json", "utf8")) as { packages: Record<string, { version?: string }> };
-  ok(pkg.dependencies.next === "^15.5.27" && lock.packages["node_modules/next"]?.version === "15.5.27" &&
+  const dependencyPatch = readFileSync("scripts/patch_jsx_a11y_minimatch.mjs", "utf8");
+  ok(pkg.dependencies.next === "15.5.29" && lock.packages["node_modules/next"]?.version === "15.5.29" &&
     pkg.devDependencies.postcss === "^8.5.28" && pkg.overrides.postcss === "$postcss" &&
-    lock.packages["node_modules/postcss"]?.version === "8.5.28",
-    "K143f ترقيع أمني ضمن Next 15: PostCSS موحّد بالـoverride، من دون قفزة رئيسية");
+    lock.packages["node_modules/postcss"]?.version === "8.5.28" &&
+    pkg.overrides.minimatch === "^11.0.4" && lock.packages["node_modules/minimatch"]?.version === "11.0.4" &&
+    pkg.scripts.postinstall === "node scripts/patch_jsx_a11y_minimatch.mjs" &&
+    pkg.scripts["audit:deps"] === "npm audit --audit-level=moderate" &&
+    dependencyPatch.includes("eslint-plugin-jsx-a11y ↔ minimatch 11 ready"),
+    "K143f ترقيع أمني ضمن Next 15: Next 15.5.29 + PostCSS موحّد + minimatch 11 مع رقعة توافق محروسة، من دون قفزة رئيسية");
 
   const auditSrc = readFileSync("scripts/audit_inhalt.ts", "utf8");
   const scripts = JSON.parse(readFileSync("package.json", "utf8")).scripts as Record<string, string>;
@@ -8202,7 +8226,7 @@ void 0;
     "K186i مفاتيح الإجابات التسع محمية ولا انحراف عن اللقطات المراجعة (بما في ذلك ملء schwarzfahren وan)");
 
   ok(correctionsListA2Batch10.every((c: any) => c.field.endsWith(".ar")) &&
-    selectedA2Batch10.every((dialogue) => dialogue.questions.every((q: any, qi: number) => {
+    selectedA2Batch10.every((dialogue) => dialogue.questions.every((q: any) => {
       const snap = itemByIdA2Batch10.get(q.id)?.reviewed;
       return snap && snap.promptDe === q.promptDe &&
         JSON.stringify(snap.answer) === JSON.stringify(q.answer) &&
@@ -10084,7 +10108,7 @@ void 0;
     "K201e d-b2-15: أبلغتُ عن الضرر، فنيُّ الطوارئ، تسوية المطالبة خلال أسبوعين، سلفة (لا عربون)، تأمين المنقولات");
   const dialoguesArr = JSON.parse(readFileSync("content/dialogues.json","utf8")) as any[];
   const locksOk205 = reviewB205.corrections.every((c:any)=>c.unit.endsWith(".ar")) &&
-    ["d-b2-13","d-b2-14","d-b2-15"].every((id,i)=>{
+    ["d-b2-13","d-b2-14","d-b2-15"].every((id)=>{
       const dlg=dialoguesArr.find((x:any)=>x.id===id);
       return dlg.lines.length===8 && dlg.questions.length===3 && dlg.dictation.length===2 &&
         dlg.questions.every((q:any)=>Array.isArray(q.options) && q.options.length===3);
@@ -10113,7 +10137,6 @@ void 0;
 {
   const reviewB206 = JSON.parse(readFileSync("docs/content-review-b2-dialogues-06-2026-10-08.json", "utf8")) as any;
   const reviewB206Md = readFileSync("docs/content-review-b2-dialogues-06-2026-10-08.md", "utf8");
-  const reviewB207Md = readFileSync("docs/content-review-b2-dialogues-07-2026-10-08.md", "utf8");
   const patchB206Src = readFileSync("scripts/patches/review_b2_dialogues_06.py", "utf8");
   ok(reviewB206.reviewRule === "R128" && reviewB206.totals.dialogues === 3 &&
     reviewB206.totals.lines === 24 && reviewB206.totals.questions === 9 && reviewB206.totals.dictation === 6 &&
@@ -10155,30 +10178,6 @@ void 0;
 /* ═══ K203 — سابع دفعة B2 d-b2-19..21 (R129). ═══ */
 {
   const reviewB207 = JSON.parse(readFileSync("docs/content-review-b2-dialogues-07-2026-10-08.json", "utf8")) as any;
-  const reviewB208 = JSON.parse(readFileSync("docs/content-review-b2-dialogues-08-2026-10-08.json", "utf8")) as any;
-  const reviewB209 = JSON.parse(readFileSync("docs/content-review-b2-dialogues-09-2026-10-08.json", "utf8")) as any;
-  const reviewB210 = JSON.parse(readFileSync("docs/content-review-b2-dialogues-10-2026-10-08.json", "utf8")) as any;
-  const reviewFixW5 = JSON.parse(readFileSync("docs/content-review-fix-w5-2026-10-09.json", "utf8")) as any;
-  const reviewA0T1 = JSON.parse(readFileSync("docs/content-review-a0-texts-01-2026-10-09.json", "utf8")) as any;
-  const reviewA1T1 = JSON.parse(readFileSync("docs/content-review-a1-texts-01-2026-10-09.json", "utf8")) as any;
-  const reviewA1T2 = JSON.parse(readFileSync("docs/content-review-a1-texts-02-2026-10-09.json", "utf8")) as any;
-  const reviewA1T3 = JSON.parse(readFileSync("docs/content-review-a1-texts-03-2026-10-09.json", "utf8")) as any;
-  const reviewA2T1 = JSON.parse(readFileSync("docs/content-review-a2-texts-01-2026-10-09.json", "utf8")) as any;
-  const reviewB1T1 = JSON.parse(readFileSync("docs/content-review-b1-texts-01-2026-10-09.json", "utf8")) as any;
-  const reviewB2T1 = JSON.parse(readFileSync("docs/content-review-b2-texts-01-2026-10-09.json", "utf8")) as any;
-  const reviewB2T1Md = readFileSync("docs/content-review-b2-texts-01-2026-10-09.md", "utf8");
-  const reviewB1T1Md = readFileSync("docs/content-review-b1-texts-01-2026-10-09.md", "utf8");
-  const reviewA2T1Md = readFileSync("docs/content-review-a2-texts-01-2026-10-09.md", "utf8");
-  const reviewA1T3Md = readFileSync("docs/content-review-a1-texts-03-2026-10-09.md", "utf8");
-  const reviewA1T2Md = readFileSync("docs/content-review-a1-texts-02-2026-10-09.md", "utf8");
-  const reviewA1T1Md = readFileSync("docs/content-review-a1-texts-01-2026-10-09.md", "utf8");
-  const reviewA0T1Md = readFileSync("docs/content-review-a0-texts-01-2026-10-09.md", "utf8");
-  const reviewFixW5Md = readFileSync("docs/content-review-fix-w5-2026-10-09.md", "utf8");
-  const reviewA001 = JSON.parse(readFileSync("docs/content-review-a0-dialogues-01-2026-10-08.json", "utf8")) as any;
-  const reviewA001Md = readFileSync("docs/content-review-a0-dialogues-01-2026-10-08.md", "utf8");
-  const reviewB210Md = readFileSync("docs/content-review-b2-dialogues-10-2026-10-08.md", "utf8");
-  const reviewB209Md = readFileSync("docs/content-review-b2-dialogues-09-2026-10-08.md", "utf8");
-  const reviewB208Md = readFileSync("docs/content-review-b2-dialogues-08-2026-10-08.md", "utf8");
   const reviewB207Md = readFileSync("docs/content-review-b2-dialogues-07-2026-10-08.md", "utf8");
   const patchB207Src = readFileSync("scripts/patches/review_b2_dialogues_07.py", "utf8");
   ok(reviewB207.reviewRule === "R129" && reviewB207.totals.dialogues === 3 &&
@@ -12548,7 +12547,7 @@ void 0;
   ok(mcAlle.length > 900, `K145a جُمعت أسئلةُ الاختيارِ من البنوكِ كلِّها (${mcAlle.length})`);
   ok(mcAlle.every((q) => {
     const g = gemischteOptionen(q.options, `mc:${q.id}`);
-    return g.length === q.options.length && [...g].sort().join("") === [...q.options].sort().join("") && g.includes(q.answer);
+    return g.length === q.options.length && JSON.stringify([...g].sort()) === JSON.stringify([...q.options].sort()) && g.includes(q.answer);
   }), "K145b الخلطُ تبديلٌ حقيقيٌّ بلا فقدٍ ولا تكرارٍ وجوابُه حاضرٌ دائماً");
   const positionen: Record<number, number> = {};
   let vier = 0;
@@ -12975,16 +12974,18 @@ function collectR262(dir: string, out: string[] = []): string[] {
 // ===== K304 (R272): Vollstaendige maschinelle Audio-QC des gesamten Audio-Bestands
 // (Besitzer-Entscheid: keine menschliche Anhoerung — die Pruefung ist vollautomatisiert
 // und ehrlich als Maschinenmessung gekennzeichnet; scripts/audio_qc_all.py, Bericht
-// docs/audio-qc-all-2026-10-18.json). Jede MP3 auf der Platte genau einmal geprueft. =====
+// docs/audio-qc-all-2026-11-04.json). Jede MP3 auf der Platte genau einmal geprueft. =====
 {
-  const qcAll = JSON.parse(readFileSync("docs/audio-qc-all-2026-10-18.json", "utf8")) as any;
+  const qcAll = JSON.parse(readFileSync("docs/audio-qc-all-2026-11-04.json", "utf8")) as any;
   const verz304 = ["dialog", "diktat", "hoeren", "hoerneu", "sprichwort"];
   const platten304 = new Set<string>();
   for (const v of verz304) for (const f of readdirSync("public/audio/" + v)) if (f.endsWith(".mp3")) platten304.add("/audio/" + v + "/" + f);
   const berichtet304 = new Set<string>(qcAll.dateien.map((d: any) => d.datei));
   const gruppen304 = qcAll.gruppen.dialog.anzahl === 176 && qcAll.gruppen.diktat.anzahl === 742 &&
     qcAll.gruppen.hoeren.anzahl === 157 && qcAll.gruppen.hoerneu.anzahl === 16 && qcAll.gruppen.sprichwort.anzahl === 8;
-  ok(existsSync("scripts/audio_qc_all.py") && qcAll.dateien.length === 1099 && platten304.size === 1099 &&
+  ok(existsSync("scripts/audio_qc_all.py") && existsSync("scripts/run_audio_qc.py") &&
+     existsSync("scripts/requirements-audio-qc.txt") && qcAll.datum === "2026-11-04" &&
+     qcAll.dateien.length === 1099 && platten304.size === 1099 &&
      [...platten304].every((p) => berichtet304.has(p)) && gruppen304 && qcAll.anomalienGesamt === 0 &&
      qcAll.abdeckung.luecken.length === 0 && qcAll.dateien.every((d: any) => d.ok) &&
      qcAll.schwellen.diktat.maxStilleAnteil === 0.65 && qcAll.schwellen.diktat.maxStilleLochS === 4.0 &&
@@ -13604,10 +13605,12 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const sw = readFileSync("public/sw.js", "utf8");
   const offSrc = readFileSync("components/offline.tsx", "utf8");
   const einSrc2 = readFileSync("app/einstellungen/page.tsx", "utf8");
-  ok(/const CACHE = "wegb2-v\d+"/.test(sw) && sw.includes('"/banks.json"') && sw.includes("stale-while-revalidate") &&
-     sw.includes('url.pathname.startsWith("/audio/")') && sw.includes('req.mode === "navigate"') &&
-     sw.includes("url.origin !== self.location.origin") && sw.includes("Promise.allSettled"),
-    "K282a عامل الخدمة v2: غلاف + banks.json بتحديث خلفي + صوتيات cache-first + سقوط ملاحي، ونفس الأصل حصرًا وتثبيت متسامح");
+  ok(/const CACHE = "wegb2-v\d+"/.test(sw) && ["/banks.json", "/banks-vertiefung.json", "/banks-lang.json"].every((p) => sw.includes(`"${p}"`)) &&
+     ["/lernen", "/ueben", "/fortschritt", "/pruefen", "/einstellungen", "/masar", "/drucken"].every((p) => sw.includes(`"${p}"`)) &&
+     sw.includes("speichereRouteMitAssets") && sw.includes('url.pathname.startsWith("/audio/")') && sw.includes('request.mode === "navigate"') &&
+     sw.includes("url.origin !== self.location.origin") && sw.includes("Promise.allSettled") && sw.includes("FULL_AUDIO_PREFIX") &&
+     sw.includes("for (const route of ROUTES)") && sw.includes("for (const url of SHELL)") && sw.includes("Route-Asset fehlt"),
+    "K282a عامل الخدمة v4: الصفحات كلها + البنوك الثلاثة + Next chunks + صوت cache-first محفوظ عند التحديث + سقوط ملاحي ونفس الأصل؛ تثبيت متسلسل لا يعلق CacheStorage ويفشل بدل ادعاء غلاف ناقص");
   ok(einSrc2.includes("<OfflineKarte />") && offSrc.includes("navigator.storage") && offSrc.includes("caches.delete") &&
      offSrc.includes("امسح مخزن عدم الاتصال") && offSrc.includes("لا يُمسّ"),
     "K282b بطاقة عدم الاتصال في الإعدادات: حجم مقاس من المتصفح ومسح بيد المتعلّم مع إبقاء التقدّم");
@@ -13821,9 +13824,10 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const kopier = readFileSync("scripts/copy_banks.mjs", "utf8");
   const offSrc = readFileSync("components/offline.tsx", "utf8");
   ok(kopier.includes("audio-manifest.json") && offSrc.includes('data-testid="offline-voll-download"') &&
-     offSrc.includes("wegb2-audio-voll") && offSrc.includes("audio-manifest.json") &&
-     offSrc.includes("نحو 64 MB") && offSrc.includes(" تقدّمك وبطاقاتك ودفترك لم يُمسّوا"),
-    "K295 تنزيل الصوت الكامل صار قرارًا صريحًا بحجم معلن وبيان مبنيّ من الملفات نفسها — والتقدّم خارج المخزن كعهد K282");
+     offSrc.includes("wegb2-audio-voll-v1") && offSrc.includes("audio-manifest.json") &&
+     offSrc.includes("bytes.byteLength !== e.b") && offSrc.includes("fehler > 0") && offSrc.includes("erstStart.audioMb") &&
+     !offSrc.includes("نحو 64 MB"),
+    "K295 تنزيل الصوت الكامل يتحقق من حجم كل ملف، لا يعلن اكتمالاً مع الفشل، ويعرض الحجم الحي من البيان بلا رقم قديم");
 }
 
 // ===== K296 (R203 · Kenntnisprüfungs-Wissen + Berufsstart-Checkliste):
@@ -14116,11 +14120,11 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const einstSrc2 = readFileSync("app/einstellungen/page.tsx", "utf8");
   ok(einstSrc2.includes("zusatz") && einstSrc2.includes("KOMFORT_KEY") && einstSrc2.includes("weg-lesestoff-v1"), "K328d ب6: التصدير/الاستيراد يحملان عدّاد القراءة الحرّة وإعدادات الراحة");
   const swSrc = readFileSync("public/sw.js", "utf8");
-  ok(swSrc.includes("AUDIO_MAX") && swSrc.includes("trimmeCache") && swSrc.includes('wegb2-v3'), "K328e ب7: سقف لكاش الصوت في SW مع تقليص أقدم الملفات");
+  ok(swSrc.includes("AUDIO_MAX") && swSrc.includes("trimmeCache") && /wegb2-v\d+/.test(swSrc), "K328e ب7: سقف لكاش الصوت في SW مع تقليص أقدم الملفات");
   ok(!readFileSync("components/spiele.tsx", "utf8").includes("void key"), "K328f ب4: لا كود ميّت متبقٍّ في محطة الألعاب");
   const pkg = readFileSync("package.json", "utf8");
   const ci = readFileSync(".github/workflows/ci.yml", "utf8");
-  ok(pkg.includes('"lint": "eslint app components lib"') && ci.includes("npm run lint"), "K328g ب4: ESLint بقاعدة الكود الميّت خطوة إلزامية في CI");
+  ok(pkg.includes('"lint": "eslint app components lib scripts middleware.ts"') && ci.includes("npm run lint"), "K328g ب4: ESLint بقاعدة الكود الميّت يشمل التطبيق وmiddleware والسكريبتات وهو خطوة إلزامية في CI");
 }
 
 
@@ -14155,7 +14159,9 @@ function collectR262(dir: string, out: string[] = []): string[] {
   ok(arabischK330.test(notFoundSrc) && /عُد|العودة|اليوم/.test(notFoundSrc), "K330b ت14: app/not-found.tsx عربي بزرّ عودة — لا صفحة 404 إنجليزية بعد 378 يومًا عربيًا");
   // ت15: زرّ إعادة محاولة حقيقي عند فشل أول تحميل لـ/banks.json (بدل نص "حدّث الصفحة" بلا فعل)
   const bankenStartSrc = readFileSync("components/BankenStart.tsx", "utf8");
-  ok(bankenStartSrc.includes('data-testid="banken-retry"') && bankenStartSrc.includes("initialisiereBanken"), "K330c ت15: زرّ «أعد المحاولة» يستدعي initialisiereBanken() دون تحميل الصفحة كاملة");
+  ok(bankenStartSrc.includes('data-testid="banken-retry"') && bankenStartSrc.includes("initialisiereBanken") &&
+     bankenStartSrc.includes('window.location.pathname === "/datenschutz"'),
+    "K330c ت15: زرّ «أعد المحاولة» يستدعي initialisiereBanken() دون تحميل الصفحة كاملة؛ وبيان الخصوصية يبقى متاحاً عند فشل البنوك");
   // ت16+ب10: بطاقة المفردة (أكثر تفاعل متكرر) بلا تداخل أزرار (axe-core nested-interactive) وبزرّ حقيقي قابل للتبويب
   const tasksSrc = readFileSync("components/tasks.tsx", "utf8");
   ok(!/role="button"\s*\n\s*tabIndex=\{0\}/.test(tasksSrc) && /<button[\s\S]{0,60}onClick=\{\(\) => setFlipped\(true\)\}/.test(tasksSrc), "K330d ت16+ب10: بطاقة المفردة تُقلَب بزرّ حقيقي وحيد — لا role=\"button\"+tabIndex يُغلِّف أزرارًا حقيقية أخرى (axe nested-interactive سابقًا)");
@@ -14171,9 +14177,13 @@ function collectR262(dir: string, out: string[] = []): string[] {
   // ب14: jsx-a11y ضمن تكوين ESLint المسطّح
   const eslintCfg = readFileSync("eslint.config.mjs", "utf8");
   ok(eslintCfg.includes("eslint-plugin-jsx-a11y") && eslintCfg.includes("jsxA11y.flatConfigs.recommended.rules"), "K330h ب14: jsx-a11y مفعَّلة في ESLint — تصطاد مستقبلاً ما كشفه ت16 يدويًا");
-  // ب16: رؤوس أمان CSP فعلية في next.config.mjs
+  // ب16: CSP فعلية بنَفَس request nonce؛ لا script-src unsafe-inline في النسخة المنشورة.
   const nextCfg = readFileSync("next.config.mjs", "utf8");
-  ok(nextCfg.includes("Content-Security-Policy") && nextCfg.includes("default-src 'self'"), "K330i ب16: CSP أساسية مفعَّلة — دفاعٌ إضافي لتسريب مفتاح LLM المخزَّن محليًا");
+  const middlewareSrc = readFileSync("middleware.ts", "utf8");
+  ok(middlewareSrc.includes("Content-Security-Policy") && middlewareSrc.includes("default-src 'self'") &&
+     middlewareSrc.includes("nonce-${nonce}") && middlewareSrc.includes("strict-dynamic") &&
+     !/script-src[^\n]*unsafe-inline/.test(middlewareSrc) && nextCfg.includes("Strict-Transport-Security"),
+    "K330i ب16: CSP per-request nonce بلا script unsafe-inline + HSTS ورؤوس أمان للنسخة المنشورة");
   // ب3: كل مرجع صورة بطاقة في vocab.json صار .webp (لا .png) — 180 صورة محوَّلة فعليًا على القرص
   const vocabRaw = readFileSync("content/vocab.json", "utf8");
   ok(!/\/cards\/[^"]+\.png/.test(vocabRaw) && /\/cards\/[^"]+\.webp/.test(vocabRaw), "K330j ب3: مراجع صور البطاقات في content/vocab.json كلها .webp — صفر .png متبقٍّ");
@@ -14299,10 +14309,213 @@ function collectR262(dir: string, out: string[] = []): string[] {
 }
 
 
-/* ═══ K400 — B2 Prüfungsschema 400 Punkte (R401) ═══ */
+/* ═══ K335 — Unified Today + Lesson Studio 2.0: تجميعٌ حقيقي، لا قفل عقابي، ومحتوى أصيل ═══ */
 {
-  const pruef = JSON.parse(readFileSync("content/pruefung-b2.json","utf8")) as { gesamt:number; bestehen:number; module:{id:string; punkte:number; bestehen:number}[] };
-  ok(pruef.gesamt === 400 && pruef.bestehen === 240 && pruef.module.length === 4 && pruef.module.every((m) => m.punkte === 100 && m.bestehen === 60), "K400 B2-Prüfung 400 Punkte (100×4) Bestehen 240 — haerte 32 + muendlich 24 + pakete 6 stützen es");
+  const probe = (kind: DayTask["kind"], extra: Partial<DayTask> = {}): DayTask => ({
+    id: `probe-${kind}-${extra.verifyFor ?? "normal"}`,
+    kind,
+    titleDe: "Probe",
+    titleAr: "اختبار",
+    minutes: 5,
+    ...extra,
+  });
+  const beispiele = [
+    probe("wiederholen"),
+    probe("check", { verifyFor: "a1-sein-haben" }),
+    probe("grammatik"),
+    probe("lesen"),
+    probe("hoeren"),
+    probe("schreiben"),
+    probe("check"),
+  ];
+  ok(beispiele.map(todayStepOf).join(",") === "1,1,2,3,3,4,5",
+    "K335a اليوم الموحّد يجمع الاسترجاع/التحقق في ①، القاعدة في ②، الاستيعاب في ③، الإنتاج في ④، والفحص في ⑤");
+
+  let gruppierungSauber = true;
+  for (let d = 1; d <= TOTAL_DAYS && gruppierungSauber; d++) {
+    const tasks = buildDay(d, emptyProgress).tasks;
+    const grouped = groupTasksByTodayStep(tasks);
+    const alle = [...grouped.values()].flat();
+    if (alle.length !== tasks.length || new Set(alle.map((t) => t.id)).size !== tasks.length) gruppierungSauber = false;
+    for (const sid of [1, 2, 3, 4, 5] as const) {
+      const soll = tasks.filter((task) => todayStepOf(task) === sid).map((task) => task.id).join("|");
+      const ist = (grouped.get(sid) ?? []).map((task) => task.id).join("|");
+      if (soll !== ist) gruppierungSauber = false;
+    }
+  }
+  ok(gruppierungSauber,
+    "K335b تجميع المحطات يحفظ كل مهمة مرة واحدة وترتيبها الداخلي عبر الأيام 1–378؛ buildDay نفسه لا يتغيّر");
+
+  const fehlversuch = { done: true, passed: false, score: 0, total: 3, attempts: 1 };
+  ok(todayTaskSubmitted(fehlversuch, { score: 0, total: 0 }) &&
+    todayTaskSubmitted(undefined, { score: 0, total: 3 }) &&
+    !todayTaskSubmitted(undefined, { score: 0, total: 0 }),
+    "K335c التسليم يفتح المحطة التالية حتى عند الخطأ؛ المحاولة غير الصحيحة تُرحَّل للعلاج ولا تصبح قفلاً أبدياً");
+
+  const stepperK335 = readFileSync("components/akademie/TodayStepper.tsx", "utf8");
+  const homeK335 = readFileSync("app/page.tsx", "utf8");
+  ok(stepperK335.includes('data-testid="today-stepper"') &&
+    stepperK335.includes("([1, 2, 3, 4, 5] as TodayStepId[])") &&
+    stepperK335.includes('data-testid={`today-step-${sid}`}') &&
+    stepperK335.includes("todayTaskSubmitted(resultOf(task.id), localOf(task.id))") &&
+    homeK335.includes("<TodayStepper") && !homeK335.includes("resultOf={resultOf as any}"),
+    "K335d خريطة اليوم ذات خمس محطات ظاهرة ومربوطة بأنواع آمنة؛ لا cast any ولا قفل مبني على passed وحده");
+
+  const wizardK335 = readFileSync("components/akademie/LektionWizard.tsx", "utf8");
+  const klassK335 = readFileSync("components/akademie/Klassenzimmer.tsx", "utf8");
+  const tasksK335 = readFileSync("components/tasks.tsx", "utf8");
+  ok(wizardK335.includes("lesson-rule--paired") && wizardK335.includes("lesson-table--layered") &&
+    wizardK335.includes('data-testid="wizard-concept-map"') && wizardK335.includes('data-testid="wizard-anwendung-input"') &&
+    wizardK335.includes('data-testid="wizard-kultur"') && wizardK335.includes('data-testid="wizard-complete-today"') &&
+    wizardK335.includes("خطأك الآن = نموّ") && tasksK335.includes("lessonStudio && task.topicId && !task.verifyFor") &&
+    klassK335.includes("lessonStudio") && klassK335.includes("lessonCompleted={localOf(currentTask.id).total > 0}"),
+    "K335e Lesson Studio 2.0 مدمج فعلياً في مهمة قواعد «اليوم»: قاعدة+مثال، كشف متدرج، خريطة مفاهيم، تطبيق سياقي، ورسالة نمو");
+
+  const lernenK335 = readFileSync("app/lernen/page.tsx", "utf8");
+  ok(tasksK335.includes("authentic-reader") && tasksK335.includes("lesen-satz-audio-") &&
+    tasksK335.includes('data-testid="authentic-dialog"') &&
+    lernenK335.includes('data-testid="lernen-search"') && lernenK335.includes("qNorm") &&
+    lernenK335.includes("مكتبة الدروس الـ 87"),
+    "K335f القارئ الأصيل يتيح صوتاً لكل جملة، ومكتبة الدروس الـ87 قابلة للبحث الفوري بالعربية أو الألمانية");
+
+  const pitfallsK335 = (Object.values(grammarMap) as GrammarTopic[]).flatMap((topic) => topic.pitfalls ?? []);
+  const explicitK335 = pitfallsK335.filter((pitfall) => pitfall.de.includes("→"));
+  const contrastsK335 = pitfallsK335.map((pitfall) => parsePitfallContrast(pitfall.de)).filter(Boolean);
+  ok(pitfallsK335.length === 200 && pitfallsK335.every((pitfall) => pitfall.de.trim() && pitfall.ar.trim()) &&
+    explicitK335.every((pitfall) => parsePitfallContrast(pitfall.de) !== null),
+    `K335g كل تنبيه قواعد مكتمل؛ وكل سهم صريح قابل للتحليل بلا زوج فارغ أو متطابق (${explicitK335.length}/${pitfallsK335.length})`);
+  ok(contrastsK335.length >= 155 &&
+    parsePitfallContrast("„das wichtige“ ✗ → „das Wichtige“ ✓")?.rightDe === "„das Wichtige“" &&
+    parsePitfallContrast("„Ja!“ (Antwort) ≠ „Du bist ja müde.“ (Modalpartikel)") === null,
+    `K335h المقارنة الصريحة تعمل في ${contrastsK335.length} تنبيهاً وتحفظ فرق الحرف الكبير؛ فرق الاستعمال بلا سهم لا يتحول إلى صواب مخمّن`);
+  ok(wizardK335.includes("parsePitfallContrast(p.de)") && wizardK335.includes("lesson-pitfall-side--wrong") &&
+    wizardK335.includes("lesson-pitfall-side--right") && wizardK335.includes("lesson-pitfall--note"),
+    "K335i الاستوديو يعرض ✗/✓ فقط للمصدر ذي الزوج الصريح، ويعرض بقية التنبيهات كفروق استعمال صادقة بلا شطبٍ مضلل");
+}
+
+
+/* ═══ K336 — قياس تجربة «اليوم»: زمن نشط محلي، بلا تاريخ مُختلق أو telemetry ═══ */
+{
+  let ux: Progress["todayUx"] = undefined;
+  ux = recordTodayUxSubmission(ux, 1, 30_000, 1, false, true);
+  ux = recordTodayUxSubmission(ux, 1, 60_000, 2, false, true);
+  ux = recordTodayUxSubmission(ux, 1, 90_000, 3, true, true);
+  ux = recordTodayUxSubmission(ux, 1, 180_000, 5, false, true);
+  ux = recordTodayUxClosed(ux, 1, 240_000);
+  ux = recordTodayUxSubmission(ux, 2, 45_000, 3, true, false);
+  ux = recordTodayUxClosed(ux, 2, 120_000);
+
+  const day1 = ux.days[1];
+  ok(day1.firstAttemptActiveMs === 30_000 && day1.firstSuccessActiveMs === 90_000 &&
+    day1.reachedStep5ActiveMs === 180_000 && day1.closedActiveMs === 240_000 && day1.hasStep5,
+    "K336a أول محاولة/نجاح وبلوغ ⑤ والإغلاق تُثبَّت مرةً واحدة بزمن الجلسة النشط لا بتقدير المهمة");
+
+  const uxRepeated = recordTodayUxSubmission(ux, 1, 300_000, 5, true, true);
+  ok(uxRepeated.days[1].firstAttemptActiveMs === 30_000 && uxRepeated.days[1].firstSuccessActiveMs === 90_000 &&
+    uxRepeated.days[1].reachedStep5ActiveMs === 180_000 && uxRepeated.days[1].closedActiveMs === 240_000,
+    "K336b إعادة التسليم لا تعيد كتابة المعالم الأولى ولا تحسّن الأرقام بأثر رجعي");
+
+  const summaryK336 = todayUxSummary({ ...emptyProgress, todayUx: ux } as Progress);
+  ok(summaryK336.attemptedDays === 2 && summaryK336.firstSuccessDays === 2 && summaryK336.medianFirstSuccessMin === 1.1 &&
+    summaryK336.step5EligibleDays === 1 && summaryK336.step5ReachedDays === 1 && summaryK336.step5ReachedPct === 100 &&
+    summaryK336.closedDays === 2 && summaryK336.closedPct === 100,
+    "K336c الملخص يحسب وسيط أول نجاح وعينة ⑤ والإغلاق بمقاماتها الصحيحة؛ الأيام بلا ⑤ لا تخفّض نسبة بلوغها");
+
+  const emptyUxK336 = todayUxSummary(emptyProgress);
+  ok(emptyUxK336.attemptedDays === 0 && emptyUxK336.medianFirstSuccessMin === null &&
+    emptyUxK336.step5ReachedPct === null && emptyUxK336.closedPct === null,
+    "K336d لا بيانات = null وعينة صفر، لا نجاح صفري مضلل ولا تاريخ رجعي مفبرك");
+
+  const pageK336 = readFileSync("app/page.tsx", "utf8");
+  const storeK336 = readFileSync("lib/store.ts", "utf8");
+  const reportK336 = readFileSync("components/berichte.tsx", "utf8");
+  ok(pageK336.includes("activeMs: sessionSnapshot.totalMs") && pageK336.includes("hasStep5: plan.tasks.some") &&
+    storeK336.includes("recordTodayUxSubmission(p.todayUx") && storeK336.includes("recordTodayUxClosed(p.todayUx") &&
+    reportK336.includes('data-testid="today-ux-metrics"') && reportK336.includes("بيانات وصفية محلية"),
+    "K336e المسار الحي يمرّر زمن المؤقت النشط، والتقارير تعرض القياس المحلي وحدوده بلا شبكة أو ادعاء عينة جماعية");
+}
+
+
+/* ═══ K337 — Wort-für-Wort-Audit: nur bestätigte Blocker, ausführbar in CI ═══ */
+{
+  const wordAuditK337 = readFileSync("scripts/wort_fuer_wort_audit.ts", "utf8");
+  const packageK337 = JSON.parse(readFileSync("package.json", "utf8")) as { scripts?: Record<string, string> };
+  const ciK337 = readFileSync(".github/workflows/ci.yml", "utf8");
+  ok(packageK337.scripts?.["audit:words"] === "tsx scripts/wort_fuer_wort_audit.ts" &&
+    ciK337.includes("runs-on: ubuntu-24.04") &&
+    ciK337.includes("uses: actions/checkout@v7") && ciK337.includes("uses: actions/setup-node@v7") &&
+    ciK337.includes("run: npm run audit:words") && wordAuditK337.includes("process.exitCode = 1"),
+    "K337a التدقيق الحرفي أمر قابل لإعادة التشغيل وبوابة CI مانعة على Actions/Node الحديثة عند وجود blocker مؤكد");
+  ok(wordAuditK337.includes("re.lastIndex = 0") && wordAuditK337.includes("Rule regressions:") &&
+    wordAuditK337.includes("tp.examples || []") && wordAuditK337.includes("tp.verify || []") &&
+    wordAuditK337.includes("scanDe(f.falsch, \"fehler.json\", f.id, false)") &&
+    !wordAuditK337.includes('[/من فضلك/g, "من فضلك"]') && !wordAuditK337.includes('[/هراء/g, "هراء"]'),
+    "K337b اختبارات الانحدار تمنع تسرّب lastIndex وقواعد no-op، وتفصل أمثلة الخطأ المقصودة وتغطي examples/verify");
+}
+
+
+/* ═══ K338 — مشهد بصري حتمي لكل درس، بلا 87 أصلاً ثقيلاً أو شبكة ═══ */
+{
+  const scenesK338 = Object.values(grammarMap).map((topic) => lessonSceneFor(topic.id, topic.titleDe, topic.level));
+  const kindsK338 = new Set(scenesK338.map((scene) => scene.kind));
+  ok(scenesK338.length === 87 && new Set(scenesK338.map((scene) => scene.signature)).size === 87 &&
+    kindsK338.size === 9 && scenesK338.every((scene) => scene.markers.length >= 3 && scene.markers.length <= 5 &&
+      scene.markers.every((marker) => marker.x >= 22 && marker.x <= 295 && marker.y >= 12 && marker.y <= 95) &&
+      scene.labelAr.trim().length > 10 && scene.altAr.includes("مشهد بصري رمزي")),
+    "K338a موضوعات القواعد الـ87 لها 87 توقيع مشهد حتمي فريد ضمن تسع عائلات ومع وصف عربي ميسّر");
+
+  const sceneComponentK338 = readFileSync("components/akademie/LessonSceneVisual.tsx", "utf8");
+  const wizardK338 = readFileSync("components/akademie/LektionWizard.tsx", "utf8");
+  const cssK338 = readFileSync("app/globals.css", "utf8");
+  ok(sceneComponentK338.includes('role="img"') && sceneComponentK338.includes("<title id={titleId}") &&
+    sceneComponentK338.includes('data-testid="wizard-scene-visual"') &&
+    !sceneComponentK338.includes("<img") && !sceneComponentK338.includes("fetch(") && !sceneComponentK338.includes("http") &&
+    wizardK338.includes("<LessonSceneVisual topicId={topic.id}") &&
+    cssK338.includes(".lesson-scene-visual[data-level=\"B2\"]") &&
+    cssK338.includes("@media (max-width: 520px)"),
+    "K338b المشهد SVG خفيف وموسوم لقارئ الشاشة، داخل هوية الدرس، متجاوب، وبلا صورة أو طلب خارجي");
+}
+
+
+/* ═══ K339 — تدقيق بنية المستودع الكامل وبوابات CI غير صورية ═══ */
+{
+  const packageK339 = JSON.parse(readFileSync("package.json", "utf8")) as { scripts?: Record<string, string> };
+  const repoAuditK339 = readFileSync("scripts/repo_audit.py", "utf8");
+  const interaktivK339 = readFileSync("scripts/interaktiv_test.tsx", "utf8");
+  const ciK339 = readFileSync(".github/workflows/ci.yml", "utf8");
+  const lighthouseK339 = JSON.parse(readFileSync("lighthouserc.json", "utf8")) as {
+    ci?: { collect?: { startServerCommand?: string; url?: string[] }; assert?: { assertions?: Record<string, [string, { minScore: number }]> }; upload?: { target?: string } };
+  };
+  ok(packageK339.scripts?.["audit:repo"] === "python3 scripts/repo_audit.py" &&
+    packageK339.scripts?.["audit:plan"] === "tsx scripts/student_audit.ts" &&
+    ciK339.includes("npm run audit:repo") && ciK339.includes("npm run audit:plan") && repoAuditK339.includes('"--cached", "--others", "--exclude-standard"') &&
+    repoAuditK339.includes("ast.parse") && repoAuditK339.includes("json.loads") && repoAuditK339.includes("media_header_ok") &&
+    !interaktivK339.includes("temp disabled") && !existsSync(".prod.pid"),
+    "K339a بوابة المستودع تمسح الملفات المتتبعة والجديدة: صياغة Python/JS وJSON/YAML وUTF-8 والروابط المحلية وترويسات 1469 أصلاً؛ لا اختبارات معطلة ولا PID متعقب");
+  ok(packageK339.scripts?.["audit:lighthouse"] === "npx --yes @lhci/cli@0.16.0 autorun" &&
+    lighthouseK339.ci?.collect?.startServerCommand === "npm run start -- -p 3000" &&
+    lighthouseK339.ci?.collect?.url?.length === 9 &&
+    lighthouseK339.ci.collect.url.includes("http://localhost:3000/qualitaet") &&
+    lighthouseK339.ci?.upload?.target === "filesystem" &&
+    lighthouseK339.ci?.assert?.assertions?.["categories:accessibility"]?.[0] === "error" &&
+    !ciK339.includes("LHCI warn") && !ciK339.includes("autorun ||") &&
+    ciK339.indexOf("npm run build") < ciK339.indexOf("npm run audit:lighthouse"),
+    "K339b Lighthouse يعمل بعد build كحاجز وصولية حقيقي لا خطوةً تُحوّل الفشل إلى نجاح، ويحفظ تقريره محلياً بلا رفع عام");
+}
+
+
+/* ═══ K400 — B2 Prüfungsschema: vier getrennte Module (R401/R139). ═══ */
+{
+  const pruef = JSON.parse(readFileSync("content/pruefung-b2.json","utf8")) as { gesamtAnzeige:number; bestehenJeModul:boolean; bestehenProzentJeModul:number; sourceReviewStatus:string; module:{id:string; punkte:number; bestehen:number}[] };
+  ok(pruef.gesamtAnzeige === 400 && pruef.bestehenJeModul && pruef.bestehenProzentJeModul === 60 && pruef.module.length === 4 && pruef.module.every((m) => m.punkte === 100 && m.bestehen === 60) && pruef.sourceReviewStatus === "official-snapshot-pending", "K400 B2-Trainingsschema: 4×100 للعرض، وكل وحدة ≥60 بلا تعويض؛ حالة المصدر الخارجي معلقة بصراحة");
+}
+
+/* ═══ K401 — سجل مواءمة Goethe/telc وبوابة CI بلا ادعاء اعتماد. ═══ */
+{
+  const acc = JSON.parse(readFileSync("content/accreditation-alignment.json", "utf8")) as { scope:string; targets:{id:string; sourceReviewStatus:string}[]; externalGates:{status:string}[] };
+  const pkg = JSON.parse(readFileSync("package.json", "utf8")) as { scripts?: Record<string, string> };
+  const ci = readFileSync(".github/workflows/ci.yml", "utf8");
+  ok(acc.scope === "dual-aligned-exam-preparation" && acc.targets.map((t) => t.id).join() === "goethe-b2,telc-b2" && acc.targets.every((t) => t.sourceReviewStatus === "official-snapshot-pending") && acc.externalGates.every((g) => g.status === "pending-external") && pkg.scripts?.["audit:accreditation"] === "tsx scripts/accreditation_audit.ts" && pkg.scripts?.["audit:accreditation:strict"]?.includes("--strict-official") && ci.includes("npm run audit:accreditation"), "K401 سجل المطابقة الثنائي والبوابة العادية/الصارمة موصولان، وكل التوقيعات الخارجية معلّقة لا مزورة");
 }
 
 

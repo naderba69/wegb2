@@ -40,18 +40,6 @@ import { generationPrompt as tool194Prompt } from "./tool-194"; // R354
 import { contrastHint as tool210Hint } from "./tool-210"; // R355
 import { tbltPrompt as tool216Prompt } from "./tool-216"; // R356 TBLT
 import { dictoglossPrompt as tool224Prompt } from "./tool-224"; // R357 Dictogloss
-import { shadowingDelay as _tool231Delay } from "./tool-231"; // R358 — reserved for future listening stage (N6/N15)
-import { tool281Check as tool281Load } from "./tool-281"; // R363 CLT
-import { tool291Gain as tool291Goal } from "./tool-291"; // R363 Goal
-import { tool311Gain as tool311Intercultural } from "./tool-311"; // R364
-import { tool344Gain as tool344V2 } from "./tool-344"; // R365 V2
-import { tool385Gain as tool385WM } from "./tool-385"; // R366 Working Memory
-import { tool401Gain as tool401Recast } from "./tool-401"; // R367 Recast
-import { tool431Gain as tool431Complexity } from "./tool-431"; // R368 Complexity
-import { tool461Gain as tool461TPS } from "./tool-461"; // R369 TPS
-import { tool491Gain as tool491Needs } from "./tool-491"; // R370 Needs Analysis
-import { tool521Gain as tool521Concept } from "./tool-521"; // R371
-import { injectTools } from "./tool-injector"; // R373 Methodology
 import { kapselIds, kapselIdsAdaptiv, kapselQuizAdaptiv } from "./kapsel";
 import { baueFalschFreundAufgabe } from "./falsche-freunde-aufgabe";
 import { baueFvgAufgabe } from "./fvg-aufgabe";
@@ -1354,32 +1342,32 @@ export function buildDay(day: number, progress: Progress): DayPlan {
     tasks.push({ id: tid(32), kind: "wiederholen", titleDe: `Evening Review ${sleepSlot.lernenStart}`, titleAr: `مراجعة مسائية ${sleepSlot.lernenStart} قبل النوم`, minutes: 5, sentenceIds: kapselIdsAdaptiv(progress, day).slice(0,2) });
   }
 
-  // R354-193 + R355-210 + R356-216 + R357-224: Forward Testing + Contrastive + TBLT + Dictogloss
+  // اختبار قبلي حقيقي: سؤالان من درس اليوم، لا بطاقة عنوان فارغة.
+  // تُعرض الإجابة بعد المحاولة كتهيئة للاستكشاف، ولا تُحتسب دليلاً على إتقان الدرس.
   if (type === "lerntag" && grammarAssignment?.status === "new" && tool193Pre(day, day - 1)) {
-    const prompt = tool194Prompt(grammarMap[grammarAssignment.topicId!]?.titleDe ?? "Grammatik");
-    const kontrast = tool210Hint(grammarAssignment.topicId ?? "");
-    const tblt = tool216Prompt(grammarMap[grammarAssignment.topicId!]?.titleDe ?? "Aufgabe");
-    const dg = tool224Prompt(grammarMap[grammarAssignment.topicId!]?.titleDe ?? "Text");
-    tasks.push({ id: tid(33), kind: "check", titleDe: `Vortest: ${prompt}`, titleAr: `اختبار قبلي: ${prompt} — ${kontrast} — ${tblt} — ${dg}`, minutes: 3, quiz: [] });
+    const topic = grammarMap[grammarAssignment.topicId];
+    const quiz = (topic?.exercises ?? []).slice(0, 2).map((ex, i) => ({
+      ...ex,
+      id: `pre-${day}-${i}-${ex.id}`,
+    }));
+    if (quiz.length > 0) {
+      const prompt = tool194Prompt(topic?.titleDe ?? "Grammatik");
+      const kontrast = tool210Hint(grammarAssignment.topicId);
+      const tblt = tool216Prompt(topic?.titleDe ?? "Aufgabe");
+      const dg = tool224Prompt(topic?.titleDe ?? "Text");
+      tasks.push({
+        id: tid(33),
+        kind: "check",
+        titleDe: `Vortest: ${topic?.titleDe ?? prompt}`,
+        titleAr: `اختبار قبلي قصير — ${kontrast} — ${tblt} — ${dg}`,
+        minutes: 3,
+        quiz,
+      });
+    }
   }
-  // R363-281 + R363-291 + R364-311 + R365-344 + R366-385 + R367-401 + R368-431 + R369-461 + R370-491 + R371-521: + Concept
-  void tool281Load(1); void tool291Goal(true); void tool311Intercultural(true); void tool344V2(true); void tool385WM(true); void tool401Recast(true); void tool431Complexity(true); void tool461TPS(true); void tool491Needs(true); void tool521Concept(true);
 
-  // R373: الحقن المنهجي الاحترافي — كل يوم 1-2 أداة حقيقية وفق CEFR/Goethe/SLA/Bloom
-  // يضمن تغطية 1000 أداة خلال 378 يوماً (حتمي seeded، لا زيادة حمل >10 دقائق)
-  const injected = injectTools(day, level, type);
-  for (const inj of injected) {
-    // R394: أدوات B1/B2 إنتاجية (schreiben/sprechen) كي لا تهبط حصة الإنتاج K90b؛ معرّفات 95+ كي لا تكسر بوابة التعويض K64f/g (الرأس للدَّين الإلزامي فقط)
-    const injKind: DayTask["kind"] = level === "B2" ? "sprechen" : level === "B1" ? "schreiben" : level === "A2" ? "grammatik" : "check";
-    tasks.push({
-      id: tid(95 + (inj.toolId % 50)),
-      kind: injKind,
-      titleDe: inj.titleDe,
-      titleAr: inj.titleAr + ` — ${inj.rationaleAr}`,
-      minutes: inj.minutes,
-      quiz: [], // مهمة تطبيقية مصغّرة — تُستبدل لاحقاً بمحتوى الأداة المحددة
-    });
-  }
+  // سجلّ الأدوات 181–1000 مرجع بحثي للمطوّرين، وليس مهاماً للمتعلّم.
+  // لا نحقن بطاقة بلا سؤال/نص/مرجع في الخطة: وجود اسم أداة لا يساوي نشاطاً تعليمياً.
 
   // 049 Case Study + 050 Project: أضف دراسة حالة أسبوعية ومشروعاً شهرياً في festigung
   if (level !== "A0" && level !== "A1" && wocheInPhase % 2 === 0 && type === "festigung") {
@@ -1522,7 +1510,6 @@ export function buildDay(day: number, progress: Progress): DayPlan {
   //    ويُقطَعُ محتواها بالنسبةِ نفسِها — فالمهمّةُ المعروضةُ أصغرُ فعلاً. لا يُمَسُّ أيُّ بندٍ بنكيٍّ
   //    فريد: القواعدُ والنصوصُ والحواراتُ والكتابةُ والمحادثةُ والامتحاناتُ خارجُ الكشطِ بتاتاً،
   //    والإلزاميّاتُ لا تُخفَّض. ما يُقطَعُ يتكرَّرُ بطبيعتِه في دوراتٍ لاحقة. R392 يوسّع الكاب لـ B1
-  //    لاستيعاب الحقن المنهجي 820 أداة دون تجاوز 240 (كان B1 يُفترض داخل السقف قبل الحقن).
   if (phase === "B1" || phase === "B2") {
     const D1_DECKEL = phase === "B1" ? D1_B1_DECKEL_MIN : D1_B2_DECKEL_MIN;
     const ausgang = new Map(tasks.map((t) => [t, { m: t.minutes, q: t.quiz?.length ?? 0, s: t.sentenceIds?.length ?? 0, f: t.fehlerItems?.length ?? 0 }]));
@@ -1535,25 +1522,13 @@ export function buildDay(day: number, progress: Progress): DayPlan {
       if (t.fehlerItems && u.f > 0) t.fehlerItems = t.fehlerItems.slice(0, Math.max(2, Math.round(u.f * anteil)));
     };
     let summe = tasks.reduce((a, t) => a + t.minutes, 0);
-    // R396: D1 كاب B1/B2 مع الحقن 820 أداة — لا يُمَسُّ البنك الفريد (K260c)
-    // الأدوات المحقونة تُخفض أولاً إلى 1 دقيقة (إيجابية D3) ثم wiederholen يُكشط بعمق. لا يُقطَع lesen/schreiben الجديد.
-    const istInjiziert = (t: DayTask) => /Tool \d+:/.test(t.titleDe) || t.titleAr.includes("أداة") && t.titleAr.includes("—");
-    // 1) خفّض المحقون أولاً إلى 1 دقيقة (إيجابية لـ D3) — R396: يحتاج 5 دقائق للسقف
-    if (summe > D1_DECKEL) {
-      for (const t of tasks.filter(istInjiziert).sort((a, b) => b.minutes - a.minutes)) {
-        if (summe <= D1_DECKEL) break;
-        const spare = t.minutes - 1; // إبقاء 1 دقيقة رمزية (D3) — R396: 5 دقائق حاسمة
-        if (spare > 0) { t.minutes = 1; summe -= spare; }
-      }
-    }
-    // 2) اكشط المراجعة المتكررة بعمق (wiederholen) حتى السقف
+    // اكشط المراجعة المتكررة وفحص اليوم فقط عند الحاجة؛ لا تُمسّ المهام البنكية الفريدة.
     for (const art of ["wiederholen", "check"] as const) {
       if (summe <= D1_DECKEL) break;
       const boden = art === "wiederholen" ? 8 : 5;
       const ziele = tasks
-        .filter((t) => !t.mandatory && !t.exam && t.kind === art && !istInjiziert(t))
+        .filter((t) => !t.mandatory && !t.exam && t.kind === art)
         .sort((a, b) => b.minutes - a.minutes);
-      // wiederholen العادي فقط؛ المحقون صُفّر أعلاه فلا يُمسّ هنا
       if (art === "check" && ziele.length === 0) continue;
       while (summe > D1_DECKEL && ziele.some((t) => t.minutes > boden)) {
         for (const t of ziele) {

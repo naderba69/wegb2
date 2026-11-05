@@ -1,3 +1,4 @@
+import { lokalesDatumPlus } from "./datum";
 import type { Progress } from "./types";
 import { KOMPETENZEN } from "./kompetenz";
 import type { Kompetenz } from "./types";
@@ -13,7 +14,7 @@ export interface SkillBilanz { fenster: "7-tage" | "verlauf"; eintraege: number;
 
 export function skillBilanz(p: Progress, jetzt = new Date()): SkillBilanz {
   const log = p.kompetenzLog ?? [];
-  const grenze = new Date(jetzt.getTime() - 7 * 86400000).toISOString().slice(0, 10);
+  const grenze = lokalesDatumPlus(-7, jetzt);
   const datiert = log.filter((e) => e.d && e.d >= grenze);
   const fenster: SkillBilanz["fenster"] = datiert.length >= 10 ? "7-tage" : "verlauf";
   const basis = fenster === "7-tage" ? datiert : log.slice(-120);

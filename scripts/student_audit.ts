@@ -1,14 +1,13 @@
 // Deep student/auditor QA — iterate all 378 days, check content references and structure.
 import { buildDay } from "../lib/plan";
 import { TOTAL_DAYS, emptyProgress } from "../lib/types";
-import { dialogues, texts, grammarMap, sentences } from "../lib/content";
+import { dialogues, texts, grammarMap, sentences, writingTasks, vocabMap } from "../lib/content";
 import { levelOf } from "../lib/plan";
 
 console.log("=== DEEP STUDENT+AUDITOR QA — ALL 378 DAYS ===\n");
 const errors: string[] = [];
 const warnings: string[] = [];
 const err = (m: string) => errors.push(m);
-const wrn = (m: string) => warnings.push(m);
 
 function findGrammar(id: string, o: any): any {
   if (!o) return null;
@@ -38,6 +37,20 @@ const base: any = JSON.parse(JSON.stringify(emptyProgress));
 const allDIds = new Set(dialogues.map((d:any)=>d.id));
 const allTIds = new Set(texts.map((t:any)=>t.id));
 const allSIds = new Set(sentences.map((s:any)=>s.id));
+const allWIds = new Set(writingTasks.map((w:any)=>w.id));
+const allDeckIds = new Set(Object.keys(vocabMap));
+
+// Architekturvertrag: `de` ist die kompakte/audio-nahe Fassung, `lang` die Lesefassung.
+// Eine angeblich kurze Fassung darf nicht deutlich länger als die Langfassung sein.
+for (const text of texts) {
+  const lang = text.lang?.de;
+  if (!lang) continue;
+  const kurzWoerter = text.de.trim().split(/\s+/).length;
+  const langWoerter = lang.trim().split(/\s+/).length;
+  if (kurzWoerter > langWoerter * 1.2) {
+    err(`${text.id}: Kurzfassung ${kurzWoerter} Wörter > Langfassung ${langWoerter} Wörter`);
+  }
+}
 
 for (let day = 1; day <= TOTAL_DAYS; day++) {
   try {
@@ -58,6 +71,18 @@ for (let day = 1; day <= TOTAL_DAYS; day++) {
       const k = task.kind || "?";
       taskKindCount[k]=(taskKindCount[k]||0)+1;
       if (!task.titleDe && !task.titleAr) err(`Tag ${day}: Aufgabe ohne Titel (kind=${k})`);
+
+      // Ein Titel allein ist keine Aufgabe: jede lernwirksame Art braucht ihren ausführbaren Inhalt.
+      const quizN = Array.isArray(task.quiz) ? task.quiz.length : 0;
+      const satzN = Array.isArray(task.sentenceIds) ? task.sentenceIds.length : 0;
+      if (k === "grammatik" && !task.topicId && quizN === 0) err(`Tag ${day}: Grammatik ohne topicId/quiz (${task.titleDe})`);
+      if (k === "wortschatz" && (!task.deckId || !allDeckIds.has(task.deckId))) err(`Tag ${day}: Wortschatz ohne gültiges deckId (${task.deckId ?? "leer"})`);
+      if (k === "hoeren" && !task.dialogueId) err(`Tag ${day}: Hören ohne dialogueId (${task.titleDe})`);
+      if (k === "lesen" && !task.textId) err(`Tag ${day}: Lesen ohne textId (${task.titleDe})`);
+      if (k === "schreiben" && (!task.writeId || !allWIds.has(task.writeId))) err(`Tag ${day}: Schreiben ohne gültiges writeId (${task.writeId ?? "leer"})`);
+      if ((k === "sprechen" || k === "aussprache") && satzN === 0) err(`Tag ${day}: ${k} ohne Sätze (${task.titleDe})`);
+      if (k === "check" && !task.exam && quizN === 0) err(`Tag ${day}: Check ohne quiz/exam (${task.titleDe})`);
+
       if (task.dialogueId) {
         usedDialogs.add(task.dialogueId);
         if (!allDIds.has(task.dialogueId)) err(`Tag ${day}: nicht-existierender Dialog: ${task.dialogueId}`);

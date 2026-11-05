@@ -1,3 +1,4 @@
+import { lokalesDatum } from "./datum";
 import { KOMPETENZEN } from "./kompetenz";
 import { abrufbarkeit } from "./srs";
 import type { Kompetenz, Progress } from "./types";
@@ -21,7 +22,7 @@ export interface SkillTrend {
   richtung: "schwerer" | "leichter" | "stabil" | "neu";
 }
 
-const tag = (d: Date) => d.toISOString().slice(0, 10);
+const tag = (d: Date) => lokalesDatum(d);
 
 export function skillTrends(p: Progress, jetzt = new Date()): SkillTrend[] {
   const heute = tag(jetzt);
