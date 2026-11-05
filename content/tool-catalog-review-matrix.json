@@ -5738,10 +5738,28 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "segmental-phonology-practice",
+        "risk": "medium",
+        "rationaleAr": "توجد محطة صوتيات حية تشرح طول الحركات والأوملاوت وch وr والنهايات وتدرّب التمييز بأزواج دنيا عبر TTS، وهي مطابقة مرشحة لأجزاء من الصوتيات القطعية. لا تحلل إنتاج المتعلم ولا تضمن الفروق الصوتية بين أصوات الأجهزة، وتحتاج مراجعة صوتية بشرية قبل الاعتماد.",
+        "candidateEvidence": [
+          "lib/phonetikdaten.ts",
+          "components/phonetik.tsx",
+          "scripts/interaktiv_test.tsx"
+        ],
+        "relatedIds": [
+          232,
+          342,
+          618,
+          619,
+          620,
+          621
+        ],
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05"
       }
     },
     {
@@ -5759,10 +5777,31 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "suprasegmental-prosody-practice",
+        "risk": "high",
+        "rationaleAr": "تدرّب المحطة الحية نبر الكلمة، ويقارن التظليل زمن التسجيل والوقفات ومغلف الإيقاع محلياً مع إفصاح أنه لا يقيس الأصوات. هذا تطابق جزئي مرشح لفوق القطعيات، لكنه لا يستخرج منحنى طبقة الصوت أو يحكم على التنغيم والنبر الجملي والمفهومية حكماً شاملاً.",
+        "candidateEvidence": [
+          "lib/phonetikdaten.ts",
+          "components/phonetik.tsx",
+          "lib/shadowing.ts",
+          "components/shadowing.tsx",
+          "scripts/engine_smoke.ts"
+        ],
+        "relatedIds": [
+          231,
+          341,
+          359,
+          618,
+          619,
+          620,
+          621
+        ],
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05"
       }
     },
     {
@@ -5780,10 +5819,27 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "morphological-awareness-practice",
+        "risk": "medium",
+        "rationaleAr": "توجد أنشطة حية تعرض عائلات الكلمات واللواحق وتفكك المركبات من اليمين وتربط Grundwort بالجنس والمعنى، إضافة إلى درس Wortbildung. هذه مطابقة مرشحة للوعي الصرفي، لكن تجميع الجذوع آلي تقريبي لا تحليل اشتقاقي، والمفكك مقيد بما يوجد في معجم التطبيق.",
+        "candidateEvidence": [
+          "lib/wortfamilien.ts",
+          "components/wortfamilien.tsx",
+          "lib/komposita.ts",
+          "components/komposita.tsx",
+          "content/grammar.json"
+        ],
+        "relatedIds": [
+          896,
+          897,
+          898
+        ],
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05"
       }
     },
     {
@@ -5801,10 +5857,26 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "german-v2-syntax-practice",
+        "risk": "medium",
+        "rationaleAr": "يعلّم المسار الحي ترتيب الجملة الألمانية البسيطة ويختبر وضع الفعل المصرف ثانياً بعد الفاعل أو ظرف البداية، كما يعطي كاشف الكتابة تلميحات محدودة. هذه مطابقة مرشحة لـV2، لا محللاً نحوياً عاماً؛ الأنماط المحلية لا تغطي كل الحقول والاعتراضات والجمل المضمنة.",
+        "candidateEvidence": [
+          "content/grammar.json",
+          "lib/plan.ts",
+          "lib/schreibpruefer.ts",
+          "components/akademie/LektionWizard.tsx",
+          "scripts/engine_smoke.ts"
+        ],
+        "relatedIds": [
+          345,
+          346
+        ],
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05"
       }
     },
     {
@@ -5822,10 +5894,26 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "german-subordinate-clause-syntax-practice",
+        "risk": "medium",
+        "rationaleAr": "تدرّب دروس الروابط والأسلوب الحية الجملة الفرعية مع weil/dass/obwohl/wenn وغيرها ووضع الفعل في النهاية، وتوجد تحولات وتلميحات كتابة. هذه مطابقة مرشحة لبنية Nebensatz، لكن الكاشف سطحي ولا يبني شجرة نحوية أو يثبت تغطية جميع أنواع التبعية والتعشيق.",
+        "candidateEvidence": [
+          "content/grammar.json",
+          "lib/plan.ts",
+          "lib/schreibpruefer.ts",
+          "lib/stil.ts",
+          "components/akademie/LektionWizard.tsx"
+        ],
+        "relatedIds": [
+          344,
+          346
+        ],
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05"
       }
     },
     {
@@ -5843,10 +5931,25 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "german-passive-syntax-practice",
+        "risk": "medium",
+        "rationaleAr": "توجد دروس حية للمبني للمجهول في B1 وB2 وتحويلات بين المعلوم والمجهول، وساحة قواعد بأسئلة Passiv ورادار يلتقط بعض صيغ werden مع Partizip II. هذه مطابقة مرشحة، لا تحليلاً شاملاً للفروق بين Vorgangs- وZustandspassiv وبدائل المجهول في إنتاج حر.",
+        "candidateEvidence": [
+          "content/grammar.json",
+          "components/arena.tsx",
+          "lib/grammatikRadar.ts",
+          "scripts/engine_smoke.ts"
+        ],
+        "relatedIds": [
+          344,
+          345
+        ],
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05"
       }
     },
     {
@@ -5867,7 +5970,22 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "lexical-polysemy-framework",
+        "risk": "medium",
+        "rationaleAr": "يعرض المعجم الحي معنى بطاقة داخل جملة وفروق كلمات متقاربة، لكن ذلك لا يدرّب الكلمة الواحدة عبر معنيين مترابطين ولا يميز تعدد المعنى من التجانس. يبقى Polysemy إطاراً لتنظيم بنك معانٍ وسياقات؛ وجود كلمة موصوفة بأنها متعددة المعاني أو ترجمة واحدة ليس تنفيذاً.",
+        "candidateEvidence": [
+          "components/tiefenlex.tsx",
+          "content/vocab.json",
+          "content/synonyme-kontext.json"
+        ],
+        "relatedIds": [
+          391,
+          662,
+          665
+        ],
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05"
       }
     },
     {
@@ -5885,10 +6003,25 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "lexical-connotation-and-register-practice",
+        "risk": "medium",
+        "rationaleAr": "توجد محطة حية تختار مرادفاً بحسب السياق ثم تشرح فرق النبرة والسجل والإيحاء، مثل احتمال إيحاء billig بجودة منخفضة مقابل preiswert. هذه مطابقة مرشحة محدودة للـKonnotation، لكنها لا تقيس الإيحاءات عبر جماعات ومناطق وسياقات، وتحتاج مراجعة لغوية بشرية لكل زوج.",
+        "candidateEvidence": [
+          "content/synonyme-kontext.json",
+          "components/tiefenlex.tsx",
+          "scripts/engine_smoke.ts"
+        ],
+        "relatedIds": [
+          347,
+          391,
+          662
+        ],
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05"
       }
     },
     {
@@ -5909,7 +6042,21 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "pragmatic-implicature-theory",
+        "risk": "high",
+        "rationaleAr": "توجد مواقف حية لاختيار الطلب أو الاعتراض الملائم ونصوص تتطلب بعض الاستنتاج، لكنها لا تعرض قولاً ثم تطلب استنتاج المعنى غير المصرح به أو تختبر مبادئ Grice. لذلك لا تُسمى هذه الأنشطة تدريباً على implicature؛ يبقى المفهوم مرجعاً بحثياً حتى يبنى بنك استدلال وسياق ومفاتيح تفسير.",
+        "candidateEvidence": [
+          "lib/pragmatik.ts",
+          "components/pragmatik.tsx",
+          "content/texts.json"
+        ],
+        "relatedIds": [
+          312,
+          688
+        ],
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05"
       }
     },
     {
@@ -5930,7 +6077,24 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "human-turn-taking-discourse-framework",
+        "risk": "high",
+        "rationaleAr": "تعرض السيناريوهات الفردية أدواراً متتابعة ثابتة وتدرّب عبارة مقاطعة مهذبة، لكنها لا ترصد انتقال الدور أو التداخل أو الإصلاح بين متحدثين حقيقيين. لا يجوز مساواة اختيار رد مكتوب بتناوب أدوار بشري وفق Sacks؛ يلزم شريك وجلسة وتوقيت وتحليل تفاعل وموافقات.",
+        "candidateEvidence": [
+          "lib/dialogszenarien.ts",
+          "components/dialogszenarien.tsx",
+          "content/muendlich.json"
+        ],
+        "relatedIds": [
+          213,
+          315,
+          337,
+          487,
+          821
+        ],
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05"
       }
     },
     {
@@ -5948,10 +6112,29 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "top-down-listening-strategy-practice",
+        "risk": "medium",
+        "rationaleAr": "توجد بطاقة حية قبل الاستماع تطلب توقع نوع المعلومة وتنشيط مفردات الموضوع وقراءة الأسئلة، ثم تربط المرحلة بحالة جولة HörLabor. هذه مطابقة مرشحة للاستماع العلوي، لكن التأشير الذاتي لا يثبت استخدام التوقع ولا أثره، ويلزم قياس فهم يقارن الاستراتيجية بغيرها.",
+        "candidateEvidence": [
+          "lib/hoerstrategien.ts",
+          "components/hoerstrategien.tsx",
+          "components/hoeren.tsx",
+          "scripts/interaktiv_test.tsx"
+        ],
+        "relatedIds": [
+          303,
+          304,
+          305,
+          307,
+          310,
+          352
+        ],
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05"
       }
     },
     {
@@ -5969,10 +6152,29 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "bottom-up-listening-strategy-practice",
+        "risk": "medium",
+        "rationaleAr": "توجّه البطاقة الحية المتعلم أثناء الاستماع إلى الأرقام والأسماء والكلمات المفتاحية والروابط، وبعده إلى مقارنة المواضع الفائتة بالنص. هذه مطابقة جزئية مرشحة للمعالجة السفلية، لكنها لا تدرب تفكيك السلسلة الصوتية أو الأصوات والحدود اللفظية بندياً ولا تقيس انتقال المهارة.",
+        "candidateEvidence": [
+          "lib/hoerstrategien.ts",
+          "components/hoerstrategien.tsx",
+          "components/hoeren.tsx",
+          "scripts/engine_smoke.ts"
+        ],
+        "relatedIds": [
+          303,
+          304,
+          305,
+          307,
+          310,
+          351
+        ],
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05"
       }
     },
     {
@@ -5990,10 +6192,25 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "skimming-reading-strategy-practice",
+        "risk": "medium",
+        "rationaleAr": "توجد محطة حية مؤقتة تطلب تحديد موضوع النص بسرعة، كما تطابق محطة القراءة عناوين الفقرات قبل القراءة التفصيلية. هذه مطابقة مرشحة للتصفح السريع، لكن عنوان النص قد يجعل بعض البنود سهلة ولا يثبت تحسن استخراج الفكرة العامة عبر نصوص جديدة.",
+        "candidateEvidence": [
+          "lib/schnellesen.ts",
+          "components/schnellesen.tsx",
+          "components/lesestoff.tsx",
+          "scripts/interaktiv_test.tsx"
+        ],
+        "relatedIds": [
+          310,
+          354
+        ],
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05"
       }
     },
     {
@@ -6011,10 +6228,25 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "scanning-reading-strategy-practice",
+        "risk": "medium",
+        "rationaleAr": "تولد محطة القراءة السريعة أسئلة تطلب العثور على أرقام مرتبطة بكلمات مفتاحية داخل نص حقيقي وتعمل تحت مؤقت، وهي مطابقة حية مرشحة للمسح الباحث. يبقى التوليد محصوراً بالأرقام والأسماء الرأسمالية ولا يثبت تعميم البحث الانتقائي أو جودة كل سؤال.",
+        "candidateEvidence": [
+          "lib/schnellesen.ts",
+          "components/schnellesen.tsx",
+          "scripts/engine_smoke.ts",
+          "scripts/interaktiv_test.tsx"
+        ],
+        "relatedIds": [
+          310,
+          353
+        ],
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05"
       }
     },
     {
@@ -6035,7 +6267,25 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "intensive-extensive-reading-design",
+        "risk": "medium",
+        "rationaleAr": "يوفر المنتج نصوصاً بأسئلة ومسارد للقراءة المركزة ومحطة قراءة حرة باختيار المستوى وإعادة بعد سبعة أيام، لكن لا توجد واجهة تفصل نمطي intensive وextensive أو حجم موسع وسجل قراءة واختيار سهل موثق. تبقى المطابقة قريبة وتحتاج تصميم مسارين ومقياس فهم وحجم لا مساواة كل قراءة حرة بالقراءة الموسعة.",
+        "candidateEvidence": [
+          "components/leseleiter.tsx",
+          "lib/leseleiter.ts",
+          "components/lesestoff.tsx",
+          "lib/lesestoff.ts"
+        ],
+        "relatedIds": [
+          221,
+          222,
+          223,
+          353,
+          354
+        ],
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05"
       }
     },
     {
@@ -6053,10 +6303,29 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "process-writing-practice",
+        "risk": "high",
+        "rationaleAr": "توجد مهمة كتابة حية بمعايير ومسودة أولى، ثم تصحيح محلي معلن الحدود وإعادة كتابة ومقارنة كلمية بين النسختين وتذكير إعادة لاحق. هذه مطابقة مرشحة لعملية الكتابة الفردية، لكنها لا تضمن مرحلة تخطيط صريحة لكل مهمة ولا حكماً على تحسن الأفكار أو الجودة أو مراجعة بشرية.",
+        "candidateEvidence": [
+          "components/schreiben.tsx",
+          "components/schreibschleife.tsx",
+          "components/wiederschreiben.tsx",
+          "lib/textdiff.ts",
+          "lib/wiederschreiben.ts"
+        ],
+        "relatedIds": [
+          206,
+          238,
+          316,
+          317,
+          357
+        ],
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05"
       }
     },
     {
@@ -6077,7 +6346,25 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "human-peer-review-workflow",
+        "risk": "high",
+        "rationaleAr": "النص الحالي يخضع لتقييم ذاتي وكاشف آلي وإعادة كتابة فردية، وتوجد وحدة Peer Assessment معزولة غير مستوردة؛ لا يوجد تبادل نصوص أو هوية زميل أو Rubric مشترك أو موافقة وإبلاغ. لذلك لا تُعد مراجعة المتعلم لنصه Peer Review، ويلزم مسار بشري آمن قبل التوصيل.",
+        "candidateEvidence": [
+          "lib/peer-assessment.ts",
+          "components/schreiben.tsx",
+          "components/schreibschleife.tsx",
+          "content/writing.json"
+        ],
+        "relatedIds": [
+          206,
+          225,
+          336,
+          356,
+          718
+        ],
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05"
       }
     },
     {
@@ -6098,7 +6385,24 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "complexity-accuracy-fluency-tradeoff-framework",
+        "risk": "high",
+        "rationaleAr": "يقيس المنتج بعض مؤشرات سرعة القراءة وإيقاع التسجيل ويشغّل كواشف شكلية للكتابة، لكن هذه مقاييس منفصلة وليست مهمة أو تجربة تقيس مفاضلة الطلاقة والدقة والتعقيد. لا تُستنتج نظرية trade-off من مؤقت ودرجة محلية؛ يلزم تعريف CAF حسب نمط المهمة وتحليل موثوق وتكرار مقارن.",
+        "candidateEvidence": [
+          "lib/fluenz.ts",
+          "lib/aussprache.ts",
+          "lib/schreibpruefer.ts",
+          "components/schreiben.tsx"
+        ],
+        "relatedIds": [
+          884,
+          946,
+          947,
+          948
+        ],
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05"
       }
     },
     {
@@ -6119,7 +6423,25 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "elf-intelligibility-framework",
+        "risk": "high",
+        "rationaleAr": "تتيح محطات الصوت التسجيل والمقارنة الذاتية وتعلن صراحة أن الإيقاع لا يحكم على الأصوات، ولا يوجد مستمع أو مهمة فهم بين متحدثين من خلفيات مختلفة. لا يجوز تحويل نطاق مدة أو وقفات إلى مفهومية ELF أو تطبيق Jenkins؛ يلزم حكم مستمع ومهمة نقل معنى وعينات ولهجات ومراجعة أخلاقية.",
+        "candidateEvidence": [
+          "lib/aussprache.ts",
+          "components/aussprachetrainer.tsx",
+          "lib/shadowing.ts",
+          "components/shadowing.tsx"
+        ],
+        "relatedIds": [
+          231,
+          232,
+          341,
+          342,
+          912
+        ],
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05"
       }
     },
     {
@@ -6140,7 +6462,43 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "corrective-feedback-taxonomy",
+        "risk": "high",
+        "rationaleAr": "توجد تغذية آلية حية وكاشفات أخطاء، وتوجد ملفات منفصلة لأمثلة recast والتصحيح الصريح وطلب التوضيح والاستنباط والتكرار والتعليق اللغوي، لكنها غير مستوردة في مسار المتعلم ولا يربطها محرك بفئات Lyster أو نوع الخطأ وuptake. تبقى التصنيفات مرجعاً حتى توصل صراحة وتختبر الاستجابة والإصلاح والضرر.",
+        "candidateEvidence": [
+          "lib/feedback-recast.ts",
+          "lib/feedback-explicit.ts",
+          "lib/feedback-clarification.ts",
+          "lib/feedback-elicitation.ts",
+          "lib/feedback-repetition.ts",
+          "lib/feedback-metalinguistic.ts",
+          "lib/grader.ts",
+          "lib/schreibpruefer.ts"
+        ],
+        "relatedIds": [
+          209,
+          361,
+          401,
+          402,
+          403,
+          404,
+          405,
+          406,
+          407,
+          408,
+          409,
+          410,
+          815,
+          816,
+          817,
+          818,
+          819,
+          820,
+          821
+        ],
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05"
       }
     },
     {
