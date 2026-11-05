@@ -30,6 +30,7 @@ type ToolSummary = {
   citationLabels: number;
   genericPrototypeModules: number;
   resolvedExactDuplicateGroups: number;
+  decisionBreakdown: Record<string, number>;
   reviewedDecisions: number;
   pendingTriage: number;
   relatedCatalogReferences: number;
@@ -121,7 +122,7 @@ export default function QualitaetPage() {
           <div className="card" style={{ padding: "0.8rem" }}>
             <strong className="rtl-num">{toolSummary.total}</strong><br />
             فكرة/مفهوم في الكتالوج
-            <br /><small>{toolSummary.reviewedDecisions} قرار فرز · {toolSummary.pendingTriage} بانتظار الفرز · {toolSummary.candidateLiveImplementations} تنفيذات حية مرشحة · {toolSummary.relatedCatalogReferences} إحالة مفاهيمية · {toolSummary.resolvedExactDuplicateGroups}/8 تكرارات حرفية محلولة · {toolSummary.productIntegrated} موصولة بدليل كامل</small>
+            <br /><small>{toolSummary.reviewedDecisions} قرار فرز · {toolSummary.pendingTriage} بانتظار الفرز · تنفيذ حي مرشح: {toolSummary.candidateLiveImplementations} · {toolSummary.relatedCatalogReferences} إحالة مفاهيمية · {toolSummary.resolvedExactDuplicateGroups}/8 تكرارات حرفية محلولة · {toolSummary.productIntegrated} موصولة بدليل كامل</small>
           </div>
           <div className="card" style={{ padding: "0.8rem" }}>
             <strong className="rtl-num">{evidenceDone}/{evidenceUnits.length}</strong><br />
@@ -138,6 +139,9 @@ export default function QualitaetPage() {
           <summary style={{ cursor: "pointer", fontWeight: 800 }}>حدود مصفوفة القواعد وكتالوج 820</summary>
           <p style={{ lineHeight: 1.85 }}>{grammarProfile.claimAr}</p>
           <p style={{ lineHeight: 1.85 }}>{toolSummary.claimAr}</p>
+          <p style={{ color: "var(--color-ink2)" }}>
+            قرارات الفرز: {toolSummary.decisionBreakdown.defer ?? 0} مؤجلة · {toolSummary.decisionBreakdown["research-only"] ?? 0} للبحث فقط · {toolSummary.decisionBreakdown["reject-not-applicable"] ?? 0} مرفوضة لعدم الملاءمة · {toolSummary.decisionBreakdown["merge-duplicate"] ?? 0} دمج تكرار.
+          </p>
           <p style={{ marginBottom: 0, color: "var(--color-ink2)" }}>
             الجرد الحالي كشف {toolSummary.genericPrototypeModules} نموذجاً عاماً و{toolSummary.citationLabels} تسمية مرجع أولية؛ لا تُعد هذه مراجع موثقة أو مزايا إنتاجية.
           </p>

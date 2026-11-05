@@ -1154,6 +1154,441 @@
         556
       ]
     },
+    "241": {
+      "classification": "learner-portfolio",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "ملف الإنجاز قد يجمع كتابات وتسجيلات وتأملات المتعلم، لكن الموجود حالياً نموذج بيانات بلا واجهة أو حفظ متكامل، والأعداد المفروضة لكل مستوى غير موثقة؛ يلزم تصدير آمن وموافقة وخصوصية ومعيار اختيار القطع.",
+      "candidateEvidence": [
+        "lib/portfolio.ts",
+        "lib/portfolio-var.ts",
+        "lib/types.ts",
+        "scripts/engine_smoke.ts"
+      ],
+      "relatedIds": [
+        335,
+        555,
+        895
+      ]
+    },
+    "242": {
+      "classification": "self-assessment",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "التقييم الذاتي بالنجوم ومعامل الارتباط المعلن لا يثبت معايرة المتعلم، كما لا يوجد تقييم معلم حي للمقارنة؛ يبقى منفصلاً عن قائمة CEFR في السجل 240 حتى توثق الأداة وتحدد معنى كل درجة.",
+      "candidateEvidence": [
+        "content/cando.json",
+        "components/tasks.tsx",
+        "lib/self-assessment-var.ts"
+      ],
+      "relatedIds": [
+        201,
+        240,
+        556
+      ]
+    },
+    "243": {
+      "classification": "partner-dependent-assessment",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "تقييم الأقران يحتاج شريكاً وRubric وتدريباً على الحكم وموافقة وخصوصية وآلية اعتراض؛ متوسط الأرقام وحده لا يثبت عدالة أو موثوقية، ولا توجد جلسة أقران حية موثقة.",
+      "candidateEvidence": [
+        "lib/peer-assessment.ts",
+        "lib/peer-assessment-var2.ts",
+        "content/writing.json",
+        "content/muendlich.json"
+      ],
+      "relatedIds": [
+        206,
+        227,
+        357,
+        557,
+        718
+      ]
+    },
+    "244": {
+      "classification": "error-analysis",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "candidate-live-implementation",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "يوجد دفتر أخطاء وأطلس وأنماط مراجعة حية قابلة للربط، لكن مصنف السجل الثنائي يخلط النقل اللغوي بالأخطاء الداخلية ولا يكفي للتشخيص السببي؛ يلزم مخطط ترميز ومراجعة لغوية واتفاق بين المراجعين.",
+      "candidateEvidence": [
+        "lib/fehler.ts",
+        "lib/fehleratlas.ts",
+        "components/fehleratlas.tsx",
+        "components/fehlerlabor.tsx",
+        "scripts/engine_smoke.ts"
+      ],
+      "relatedIds": [
+        210,
+        245
+      ]
+    },
+    "245": {
+      "classification": "contrastive-pedagogy",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "اختزال المسافة بين العربية والألمانية إلى 0.8 وتحويلها مباشرة إلى صعوبة عالية تعميم غير صالح وقد يرسخ تحيزاً؛ تبقى المقارنة التقابلية مرجع تصميم يحتاج بيانات أخطاء فعلية ومراجعاً ثنائي اللغة لا أداة تنبؤ.",
+      "candidateEvidence": [
+        "lib/contrastive-var.ts",
+        "content/grammar.json"
+      ],
+      "relatedIds": [
+        210,
+        244
+      ]
+    },
+    "246": {
+      "classification": "assessment-governance",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "المعايرة المرجعية وعينات المرساة عملية تحديد معيار بشرية وليست تحويل أي نسبة إلى A0–B2 بعتبات ثابتة؛ لا تستخدم الدالة لاتخاذ قرار مستوى قبل دراسة معيارية وعينات ممثلة ومراجعين مؤهلين.",
+      "candidateEvidence": [
+        "content/grammar-profile-governance.json",
+        "content/accreditation-alignment.json",
+        "content/real-world-validation.json"
+      ],
+      "relatedIds": [
+        237,
+        239,
+        240,
+        495
+      ]
+    },
+    "247": {
+      "classification": "assessment-governance",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "الأثر الارتجاعي الإيجابي نتيجة محتملة لتصميم التقييم لا معامل 1.3 ولا ميزة مستقلة؛ يبقى مطلب حوكمة لقياس ما إذا كانت المحاكاة توجه إلى مهارات التواصل دون تضييق المنهج.",
+      "candidateEvidence": [
+        "lib/washback.ts",
+        "lib/washback-var.ts",
+        "content/accreditation-alignment.json"
+      ],
+      "relatedIds": [
+        207,
+        997
+      ]
+    },
+    "248": {
+      "classification": "human-review-process",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "المواءمة بين المصححين تتطلب عدة مراجعين وأعمالاً مرساة ونقاشاً واتفاقاً موثقاً؛ عدد المشاركين أو تباين 0.3 لا يثبت تحسن الحكم، ولا يجوز محاكاة توقيع البشر برمجياً.",
+      "candidateEvidence": [
+        "content/real-world-validation.json",
+        "content/external-evidence.json",
+        "lib/rubric-var.ts"
+      ],
+      "relatedIds": [
+        249,
+        558
+      ]
+    },
+    "249": {
+      "classification": "assessment-design",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "تصميم Rubric عملية مرتبطة بالمهمة والمصدر ولا ينتج بإضافة أربعة عناوين عامة؛ شبكات الكتابة والتحدث الحالية أدلة مرشحة، لكنها تحتاج مراجعة ممتحن وتحليل اتساق قبل اعتماد السجل.",
+      "candidateEvidence": [
+        "content/writing.json",
+        "content/muendlich.json",
+        "content/accreditation-alignment.json",
+        "lib/rubric-var.ts"
+      ],
+      "relatedIds": [
+        243,
+        248
+      ]
+    },
+    "250": {
+      "classification": "product-strategy",
+      "decision": "reject-not-applicable",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "medium",
+      "rationaleAr": "حزمة النقاط والشارات والترتيب والمهام المغامرة ليست هدفاً مطلوباً للمنتج الحالي، وقد تحول الوقت المنجز إلى نقاط زينة؛ يعتمد المنتج بدلاً منها أهدافاً أسبوعية مشتقة من السجل بلا عملات أو منافسة.",
+      "candidateEvidence": [
+        "lib/motivation.ts",
+        "components/motivation.tsx",
+        "lib/gamification-points.ts"
+      ],
+      "relatedIds": [
+        251,
+        252,
+        253,
+        254,
+        989
+      ]
+    },
+    "251": {
+      "classification": "product-strategy",
+      "decision": "reject-not-applicable",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "مستوى اللاعب الناتج من كل مئة نقطة يخلط التقدم التحفيزي بمستويات CEFR ويكافئ أنواع المهام بأوزان غير موثقة؛ يرفض في النطاق الحالي لصالح تقدم مشتق من الأداء والوقت الفعلي.",
+      "candidateEvidence": [
+        "lib/motivation.ts",
+        "lib/gamification-points.ts",
+        "lib/gamification-levels.ts"
+      ],
+      "relatedIds": [
+        250
+      ]
+    },
+    "252": {
+      "classification": "product-strategy",
+      "decision": "reject-not-applicable",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "medium",
+      "rationaleAr": "الشارة الافتراضية المبنية على سلسلة أيام قد تشجع الحضور الشكلي ولا تثبت تعلماً، ولا توجد سياسة إتاحة أو معنى أكاديمي للشارات؛ يرفض النظام الحالي الأوسمة الزخرفية غير المرتبطة بدليل مهارة.",
+      "candidateEvidence": [
+        "lib/gamification-badges.ts",
+        "lib/motivation.ts"
+      ],
+      "relatedIds": [
+        250
+      ]
+    },
+    "253": {
+      "classification": "product-strategy",
+      "decision": "reject-not-applicable",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "لوحة الصدارة تتطلب هويات ودرجات مقارنة وتخلق مخاطر خصوصية وضغطاً اجتماعياً، بينما المنتج محلي فردي بلا حسابات أو خادم؛ لذلك لا تنطبق على النطاق الحالي حتى لو عرضت أفضل نتيجة شخصية.",
+      "candidateEvidence": [
+        "lib/gamification-leaderboard.ts",
+        "lib/motivation.ts",
+        "app/datenschutz/page.tsx"
+      ],
+      "relatedIds": [
+        250
+      ]
+    },
+    "254": {
+      "classification": "optional-real-world-activity",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "medium",
+      "rationaleAr": "يمكن تحويل المهمة المغامرة إلى نشاط اختياري واقعي، لكن طلب البحث في المدينة قد يستبعد بعض المتعلمين ويجمع سياقاً مكانياً، كما أن مكافأة الصعوبة غير موثقة؛ يلزم بديل منزلي وهدف لغوي قابل للقياس.",
+      "candidateEvidence": [
+        "lib/gamification-daily-quest.ts",
+        "lib/project.ts",
+        "content/szenarien.json"
+      ],
+      "relatedIds": [
+        250,
+        255,
+        475
+      ]
+    },
+    "255": {
+      "classification": "narrative-activity",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "medium",
+      "rationaleAr": "القوس السردي قد ينظم نشاطاً كتابياً، لكن قصة البطل والنداء والاختبار ليست مناسبة لكل جمهور أو موضوع، والسيناريوهات الثابتة لا تقيس اللغة؛ يلزم خيار غير قصصي وRubric لغوي قبل التوصيل.",
+      "candidateEvidence": [
+        "lib/narrative-arc.ts",
+        "lib/mnemonic-story.ts",
+        "content/writing.json"
+      ],
+      "relatedIds": [
+        228,
+        254,
+        328,
+        476
+      ]
+    },
+    "256": {
+      "classification": "out-of-scope-technology",
+      "decision": "reject-not-applicable",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "الواقع الافتراضي يتطلب عتاداً ومحتوى 360 واختبارات دوار وإتاحة وحقوق وسلامة، ولا يملك منتج الويب الحالي هذه البنية؛ كما أن مكسب 20 بالمئة غير موثق، لذلك يرفض ضمن النطاق الحالي.",
+      "candidateEvidence": [
+        "content/szenarien.json",
+        "content/real-world-validation.json"
+      ],
+      "relatedIds": [
+        561,
+        741
+      ]
+    },
+    "257": {
+      "classification": "out-of-scope-technology",
+      "decision": "reject-not-applicable",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "تراكب الكاميرا يتطلب إذن تصوير وتصنيف أجسام وحقوق صور وبدائل وصول ومعالجة خصوصية، ولا توجد بنية AR في المنتج؛ إرجاع وصف نصي لا يعد تنفيذاً ولذلك يرفض في النطاق الحالي.",
+      "candidateEvidence": [
+        "app/datenschutz/page.tsx",
+        "content/real-world-validation.json"
+      ],
+      "relatedIds": []
+    },
+    "258": {
+      "classification": "partner-dependent-activity",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "التعلم الثنائي يحتاج مطابقة شريك وهوية وموافقة وأمان وجدولة وتوازناً قابلاً للتحقق بين اللغتين؛ المنتج لا يوفر خدمة شركاء، وتحديد ثلاثين دقيقة أو موضوع بحسب المستوى لا يثبت جلسة.",
+      "candidateEvidence": [
+        "content/muendlich.json",
+        "content/real-world-validation.json"
+      ],
+      "relatedIds": [
+        205,
+        227,
+        479,
+        566,
+        567,
+        743
+      ]
+    },
+    "259": {
+      "classification": "privacy-governance",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "candidate-live-implementation",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "توجد حماية محلية وإفصاحات وموافقات منفصلة وتقليل افتراضي للاتصالات كتنفيذ حي مرشح، لكن اختبار موافقة وإخفاء هوية لا يغطي الأخلاق الرقمية أو المراجعة القانونية؛ يبقى السجل مطلب حوكمة لا ميزة تعلم.",
+      "candidateEvidence": [
+        "app/datenschutz/page.tsx",
+        "app/einstellungen/page.tsx",
+        "lib/grader.ts",
+        "lib/local-speech.ts",
+        "scripts/engine_smoke.ts"
+      ],
+      "relatedIds": [
+        260
+      ]
+    },
+    "260": {
+      "classification": "ai-governance",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "candidate-live-implementation",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "المدرس الذكي اختياري BYOK ومغلق افتراضياً ولا يرسل دون موافقة مع إفصاح المزود، وهي ضوابط حية مرشحة؛ لكنها لا تثبت غياب التحيز أو قابلية التفسير أو مراجعة بشرية، فتظل حوكمة معلقة.",
+      "candidateEvidence": [
+        "lib/sprechbegleiter.ts",
+        "lib/grader.ts",
+        "app/einstellungen/page.tsx",
+        "app/datenschutz/page.tsx",
+        "scripts/engine_smoke.ts"
+      ],
+      "relatedIds": [
+        259,
+        721,
+        992
+      ]
+    },
     "840": {
       "classification": "duplicate-catalog-record",
       "decision": "merge-duplicate",
