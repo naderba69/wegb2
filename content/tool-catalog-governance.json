@@ -1355,66 +1355,80 @@
       ]
     },
     "250": {
-      "classification": "product-strategy",
-      "decision": "reject-not-applicable",
+      "classification": "gamification-product-strategy",
+      "decision": "defer",
       "researchStatus": "citation-label-unverified",
-      "productStatus": "prototype-not-wired",
+      "productStatus": "candidate-live-implementation",
       "automatedTestStatus": "not-demonstrated",
       "fieldValidationStatus": "not-tested",
       "reviewerRole": "internal-methodology-triage",
       "reviewedAt": "2026-11-05",
-      "risk": "medium",
-      "rationaleAr": "حزمة النقاط والشارات والترتيب والمهام المغامرة ليست هدفاً مطلوباً للمنتج الحالي، وقد تحول الوقت المنجز إلى نقاط زينة؛ يعتمد المنتج بدلاً منها أهدافاً أسبوعية مشتقة من السجل بلا عملات أو منافسة.",
+      "risk": "high",
+      "rationaleAr": "صحح الفحص السابق: المنتج يمنح XP حياً، يحسب مستويات تحفيزية، ويمنح أوسمة ويعرضها في التقدم والإعدادات؛ لذلك ليست Gamification Basics مرفوضة وغير موجودة بل تنفيذ حي مرشح يحتاج قراراً علاجياً. لا تثبت هذه الطبقة تعلماً وقد تخلط الإنجاز الأكاديمي بالحضور والمكافأة، فيلزم تدقيق المعايير والتسمية أو إزالة الطبقة.",
       "candidateEvidence": [
-        "lib/motivation.ts",
-        "components/motivation.tsx",
-        "lib/gamification-points.ts"
+        "lib/spiel.ts",
+        "lib/store.ts",
+        "components/wochen.tsx",
+        "app/fortschritt/page.tsx",
+        "scripts/interaktiv_test.tsx"
       ],
       "relatedIds": [
         251,
         252,
         253,
         254,
+        472,
+        474,
         989
       ]
     },
     "251": {
-      "classification": "product-strategy",
-      "decision": "reject-not-applicable",
+      "classification": "xp-level-gamification",
+      "decision": "defer",
       "researchStatus": "citation-label-unverified",
-      "productStatus": "prototype-not-wired",
+      "productStatus": "candidate-live-implementation",
       "automatedTestStatus": "not-demonstrated",
       "fieldValidationStatus": "not-tested",
       "reviewerRole": "internal-methodology-triage",
       "reviewedAt": "2026-11-05",
       "risk": "high",
-      "rationaleAr": "مستوى اللاعب الناتج من كل مئة نقطة يخلط التقدم التحفيزي بمستويات CEFR ويكافئ أنواع المهام بأوزان غير موثقة؛ يرفض في النطاق الحالي لصالح تقدم مشتق من الأداء والوقت الفعلي.",
+      "rationaleAr": "صحح الفحص السابق: XpBar الحي يحول XP إلى ستة مستويات بأسماء منها مبتدئ ومحترف B2 ويعرض المسافة إلى المستوى التالي. هذه مطابقة مرشحة لمستويات اللاعب، لكنها قد تُفهم خطأً كمستوى لغوي CEFR ولا تستند إلى صلاحية تعليمية؛ يلزم فصل التسمية عن الكفاءة واختبار الأثر أو الإزالة.",
       "candidateEvidence": [
-        "lib/motivation.ts",
-        "lib/gamification-points.ts",
-        "lib/gamification-levels.ts"
+        "lib/spiel.ts",
+        "components/wochen.tsx",
+        "app/einstellungen/page.tsx",
+        "lib/store.ts"
       ],
       "relatedIds": [
-        250
+        250,
+        252,
+        472,
+        474
       ]
     },
     "252": {
-      "classification": "product-strategy",
-      "decision": "reject-not-applicable",
+      "classification": "achievement-badge-gamification",
+      "decision": "defer",
       "researchStatus": "citation-label-unverified",
-      "productStatus": "prototype-not-wired",
+      "productStatus": "candidate-live-implementation",
       "automatedTestStatus": "not-demonstrated",
       "fieldValidationStatus": "not-tested",
       "reviewerRole": "internal-methodology-triage",
       "reviewedAt": "2026-11-05",
-      "risk": "medium",
-      "rationaleAr": "الشارة الافتراضية المبنية على سلسلة أيام قد تشجع الحضور الشكلي ولا تثبت تعلماً، ولا توجد سياسة إتاحة أو معنى أكاديمي للشارات؛ يرفض النظام الحالي الأوسمة الزخرفية غير المرتبطة بدليل مهارة.",
+      "risk": "high",
+      "rationaleAr": "صحح الفحص السابق: عشرة أوسمة حية تُمنح آلياً بحسب تسليم المهام والسلسلة والبطاقات والأخطاء والامتحان وتظهر في صفحة التقدم. هذه مطابقة مرشحة للشارات، لكنها تمزج بعض مؤشرات الحضور بالأداء ولا تملك مراجعة معنى أو إتاحة أو أثر تحفيزي؛ يلزم تدقيق كل معيار أو حذف الشارات الزخرفية.",
       "candidateEvidence": [
-        "lib/gamification-badges.ts",
-        "lib/motivation.ts"
+        "lib/spiel.ts",
+        "components/wochen.tsx",
+        "app/fortschritt/page.tsx",
+        "lib/store.ts",
+        "scripts/engine_smoke.ts"
       ],
       "relatedIds": [
-        250
+        250,
+        251,
+        472,
+        474
       ]
     },
     "253": {
@@ -6663,6 +6677,532 @@
         548,
         806,
         982
+      ]
+    },
+    "461": {
+      "classification": "partner-dependent-cooperative-activity",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "يتطلب Think-Pair-Share زمناً فردياً ثم شريكاً بشرياً ثم مشاركة مع مجموعة ومخرجاً مشتركاً. الموجود ثابت صغير غير مستورد يعدد المراحل فقط، ولا تنشئ مهام الشريك أو رفيق الذكاء الاصطناعي زوجاً بشرياً أو مجموعة آمنة؛ يلزم هوية وموافقة وأدوار وتحقق من المشاركة قبل التوصيل.",
+      "candidateEvidence": [
+        "lib/think-pair-share.ts",
+        "content/muendlich.json",
+        "components/sprechbegleiter.tsx"
+      ],
+      "relatedIds": [
+        205,
+        227,
+        258,
+        545,
+        976,
+        979,
+        980
+      ]
+    },
+    "462": {
+      "classification": "partner-dependent-jigsaw-activity",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "خبير التركيب يحتاج توزيع مواد مختلفة على مجموعات خبراء ثم عودة كل خبير إلى مجموعته الأصلية لتجميع نتيجة قابلة للتحقق. المنتج الفردي لا ينشئ مجموعات أو أدواراً أو نسخ معلومات منفصلة، ووحدات jigsaw غير مستوردة؛ فلا تكفي قراءة المقاطع أو إعادة الاستماع لإثبات النشاط.",
+      "candidateEvidence": [
+        "lib/jigsaw.ts",
+        "lib/jigsaw-var.ts",
+        "components/hoeren.tsx",
+        "content/muendlich.json"
+      ],
+      "relatedIds": [
+        205,
+        226,
+        258,
+        422,
+        423,
+        715,
+        976,
+        979,
+        980
+      ]
+    },
+    "463": {
+      "classification": "classroom-cooperative-response-activity",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "Numbered Heads يتطلب فرقاً تتشاور ثم اختيار رقم عشوائي للمساءلة الفردية داخل جواب جماعي. لا توجد في المنتج جلسة صفية أو فرق أو ترقيم مشاركين أو اختيار عضو، ولا يعد اختيار سؤال أو بطاقة رقماً للنشاط؛ يحتاج بروتوكول مجموعة وسلامة وتقييم مشاركة قبل التوصيل.",
+      "candidateEvidence": [
+        "content/muendlich.json",
+        "components/klassenansicht.tsx",
+        "lib/plan.ts"
+      ],
+      "relatedIds": [
+        205,
+        227,
+        461,
+        462,
+        976,
+        979,
+        980
+      ]
+    },
+    "464": {
+      "classification": "classroom-gallery-feedback-activity",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "جولة المعرض تتطلب أعمالاً متعددة منشورة، انتقال المشاركين بينها، وتعليقات أو أسئلة تحفظ لكل عمل. التطبيق المحلي لا يرفع منتجات متعلمين ولا يوفر معرضاً مشتركاً أو تعليقات وهوية وموافقة؛ بطاقات المنهج أو معرض المحتوى ليست أعمال أقران، لذلك يبقى النشاط غير موصول.",
+      "candidateEvidence": [
+        "components/klassenansicht.tsx",
+        "content/writing.json",
+        "app/datenschutz/page.tsx"
+      ],
+      "relatedIds": [
+        205,
+        206,
+        227,
+        332,
+        338,
+        461,
+        980
+      ]
+    },
+    "465": {
+      "classification": "station-rotation-instructional-model",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "medium",
+      "rationaleAr": "يعرض المنتج حياً محطات وخطوات متتابعة لتصنيف مهام المتعلم الفردي، لكنها مسار خطي واحد وليست Station Rotation بجدول يبدل مجموعات أو متعلمين بين محطات متميزة حضورية ورقمية. هذا دليل مجاور مفيد فقط؛ يلزم تعريف شروط التناوب والوقت والمخرج في كل محطة قبل نسبة النموذج.",
+      "candidateEvidence": [
+        "components/stationen.tsx",
+        "components/akademie/TodayStepper.tsx",
+        "lib/today-steps.ts",
+        "app/page.tsx",
+        "scripts/interaktiv_test.tsx"
+      ],
+      "relatedIds": [
+        217,
+        364,
+        466,
+        467,
+        468,
+        985,
+        986
+      ]
+    },
+    "466": {
+      "classification": "out-of-scope-classroom-model",
+      "decision": "reject-not-applicable",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "medium",
+      "rationaleAr": "الصف المقلوب يتطلب مادة قبل لقاء صفّي ثم وقتاً حضورياً موجهاً للتطبيق والتغذية الراجعة. المنتج الحالي مسار تعلم ذاتي على الويب بلا حصة أو معلم وجدول حضور، فلا يمكنه وحده إثبات المرحلتين؛ يُرفض كنموذج منتج حالي مع إمكان استخدام مواده خارجياً دون ادعاء تنفيذ Flipped Classroom.",
+      "candidateEvidence": [
+        "components/akademie/LektionWizard.tsx",
+        "lib/plan.ts",
+        "components/klassenansicht.tsx"
+      ],
+      "relatedIds": [
+        217,
+        465,
+        467,
+        985
+      ]
+    },
+    "467": {
+      "classification": "delivery-program-framework",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "التعلم المدمج إطار برنامج يجمع خبرات رقمية ووجهاً لوجه ضمن تصميم واحد، ولا يساوي كون التطبيق رقمياً وقابلاً للطباعة. يمكن أن يكون WegB2 مكوناً في برنامج مدمج خارجي، لكنه لا يسجل الحضور أو تدخل المعلم أو الربط بين المرحلتين؛ لذلك يبقى الإطار للبحث والتكامل لا ميزة داخلية.",
+      "candidateEvidence": [
+        "app/page.tsx",
+        "components/klassenansicht.tsx",
+        "components/akademie/CurriculumMap.tsx"
+      ],
+      "relatedIds": [
+        465,
+        466,
+        468,
+        469,
+        740,
+        746,
+        985,
+        986
+      ]
+    },
+    "468": {
+      "classification": "out-of-scope-synchronous-classroom-model",
+      "decision": "reject-not-applicable",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "التعلم الهجين المتزامن يحتاج صفاً حضورياً ومشاركين عن بعد وصوتاً أو فيديو وتيسيراً يضمن تكافؤ المشاركة. المنتج لا يملك حسابات أو غرفة بث أو حضوراً متزامناً أو بنية مؤسسة؛ لذا لا ينطبق على نطاق التطبيق المحلي الذاتي، ولا يعد فتح الصفحة من جهازين صفاً هجيناً.",
+      "candidateEvidence": [
+        "components/klassenansicht.tsx",
+        "app/datenschutz/page.tsx",
+        "content/real-world-validation.json"
+      ],
+      "relatedIds": [
+        338,
+        465,
+        467,
+        745,
+        746,
+        940
+      ]
+    },
+    "469": {
+      "classification": "mobile-web-learning-delivery",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "candidate-live-implementation",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "التطبيق PWA متجاوب قابل للتثبيت ويعرض المسار والتدريب على قياسات هاتف ولمس مخبرية، مع Service Worker ووضع بلا اتصال؛ وهي مطابقة حية مرشحة للتعلم عبر الويب الجوال. لا توجد جلسة موثقة على هاتف فعلي أو اختبار قارئ شاشة ولمس وبطارية وإشعارات، لذلك لا تثبت المحاكاة وحدها جودة Mobile Learning.",
+      "candidateEvidence": [
+        "app/manifest.ts",
+        "app/layout.tsx",
+        "components/RegisterSW.tsx",
+        "public/sw.js",
+        "scripts/browser_e2e.mjs",
+        "content/real-world-validation.json"
+      ],
+      "relatedIds": [
+        256,
+        288,
+        467,
+        470,
+        471,
+        746,
+        987
+      ]
+    },
+    "470": {
+      "classification": "microlearning-activity",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "candidate-live-implementation",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "medium",
+      "rationaleAr": "يقدم جناح التدريب جولة ستين ثانية وجلسة مفردات حية محددة بخمس دقائق مع سؤال متكرر وتغذية راجعة ونتيجة، وهو تطابق مرشح لوحدة تعلم مصغرة. الجلسة إنقاذ اختيارية داخل منهج يومي أطول، والمدة وحدها لا تثبت microlearning أو الاحتفاظ؛ يلزم هدف وحدة واضح وقياس مؤجل ومراجعة حمل.",
+      "candidateEvidence": [
+        "components/blitz.tsx",
+        "app/ueben/page.tsx",
+        "scripts/interaktiv_test.tsx",
+        "scripts/engine_smoke.ts"
+      ],
+      "relatedIds": [
+        184,
+        194,
+        250,
+        275,
+        469,
+        471,
+        884
+      ]
+    },
+    "471": {
+      "classification": "mobile-spaced-practice",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "candidate-live-implementation",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "يجمع المنتج فعلياً جدولة FSRS وكبسولات متكيفة بفواصل، ويمكن تشغيل المراجعات داخل PWA المتجاوب بلا اتصال؛ وهذه مطابقة مرشحة للتدريب المتباعد على الجوال. لا توجد إشعارات أو مزامنة خلفية ولا اختبار هاتف فعلي، ولا يثبت تزامن ميزتين أثراً تعليمياً خاصاً بالجوال.",
+      "candidateEvidence": [
+        "lib/srs.ts",
+        "lib/kapsel.ts",
+        "components/kapsel.tsx",
+        "app/manifest.ts",
+        "public/sw.js",
+        "scripts/browser_e2e.mjs"
+      ],
+      "relatedIds": [
+        181,
+        184,
+        191,
+        395,
+        469,
+        470,
+        853,
+        871,
+        872
+      ]
+    },
+    "472": {
+      "classification": "gamified-spaced-repetition",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "candidate-live-implementation",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "تعمل مراجعات SRS الحية داخل مهام تمنح XP وتستدعي الأوسمة، كما توجد أوسمة مرتبطة بعدد بطاقات SRS ومراجعات الأخطاء؛ لذا فالتقاطع بين التكرار المتباعد والتلعيب موجود مرشحاً خلافاً للوحدات المعزولة غير المستوردة. لا يثبت ذلك فائدة التلعيب، وقد يحرف المراجعة نحو النقاط؛ يلزم فصل أثر FSRS عن المكافآت وقرار إبقاء أو إزالة.",
+      "candidateEvidence": [
+        "lib/srs.ts",
+        "components/tasks.tsx",
+        "lib/store.ts",
+        "lib/spiel.ts",
+        "components/wochen.tsx"
+      ],
+      "relatedIds": [
+        181,
+        184,
+        250,
+        251,
+        252,
+        395,
+        471,
+        851,
+        852,
+        853,
+        989
+      ]
+    },
+    "473": {
+      "classification": "leaderboard-ethics-governance",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "لا توجد لوحة صدارة متعددة المستخدمين أو حسابات أو مقارنة اجتماعية؛ الموجود أفضل نتيجة شخصية وXP محلي فقط. أخلاقيات الصدارة مطلب حوكمة يتعلق بالخصوصية والضغط والعدالة إذا أضيفت المنافسة مستقبلاً، لا نشاط تعلم حالي، وتظل الوحدة العامة غير مستوردة.",
+      "candidateEvidence": [
+        "lib/gamification-leaderboard.ts",
+        "app/datenschutz/page.tsx",
+        "components/blitz.tsx",
+        "lib/spiel.ts"
+      ],
+      "relatedIds": [
+        250,
+        251,
+        253,
+        259,
+        472,
+        989
+      ]
+    },
+    "474": {
+      "classification": "duplicate-catalog-record",
+      "decision": "merge-duplicate",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "low",
+      "rationaleAr": "تصميم الشارات هو مسار المنتج نفسه المسجل في 252، وقد كشف الفحص أن الأوسمة الحية ومعايير منحها وعرضها كلها هناك. يُحفظ هذا المعرف للتتبع ولا يطور كنظام ثانٍ؛ أي مراجعة للمعنى والإتاحة والأثر أو الإزالة تتم تحت السجل المرجعي 252.",
+      "candidateEvidence": [],
+      "canonicalId": 252
+    },
+    "475": {
+      "classification": "gamified-quest-design",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "لا توجد مهمة مغامرة متقدمة حية ذات هدف لغوي وسلسلة مراحل واختيارات ومخرج وتقييم؛ الوحدة اليومية المعزولة غير مستوردة، والخطة الإلزامية ليست Quest لمجرد أنها تسمي المهام. يمكن بحث نشاط اختياري ببديل غير قصصي وخصوصية مكانية، لكن لا يعتمد قبل معيار تعلم واختبار إتاحة.",
+      "candidateEvidence": [
+        "lib/gamification-daily-quest.ts",
+        "lib/project.ts",
+        "content/szenarien.json",
+        "lib/plan.ts"
+      ],
+      "relatedIds": [
+        250,
+        254,
+        255,
+        472,
+        476,
+        981,
+        988,
+        989
+      ]
+    },
+    "476": {
+      "classification": "branching-narrative-activity",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "medium",
+      "rationaleAr": "الحوار المتفرع يحتاج عقداً وخيارات تغير الأحداث والنهاية ثم تغذية راجعة على اللغة والقرار. ملف branching-dialogue يعرّف نوعاً فقط ولا يستورد، والسيناريوهات الحية تمر إلى الجولة التالية نفسها مهما كان الاختيار؛ كما أن تفرع الإتقان توصية تدريبية لا سرداً. يلزم محتوى فروع كامل وحفظ وإتاحة قبل التوصيل.",
+      "candidateEvidence": [
+        "lib/branching-dialogue.ts",
+        "components/dialogszenarien.tsx",
+        "lib/dialogszenarien.ts",
+        "components/verzweigung.tsx"
+      ],
+      "relatedIds": [
+        228,
+        255,
+        327,
+        328,
+        332,
+        475
+      ]
+    },
+    "477": {
+      "classification": "out-of-scope-technology",
+      "decision": "reject-not-applicable",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "صف الواقع الافتراضي يحتاج عتاد رأس ومشاهد ثلاثية الأبعاد أو 360 وتفاعل حركة واختبارات دوار وسلامة وإتاحة. المنتج ويب ثنائي الأبعاد ولا يحتوي WebXR أو أصول VR أو اختبار جهاز، لذلك يرفض في النطاق الحالي ولا تسمى السيناريوهات النصية غمراً افتراضياً.",
+      "candidateEvidence": [
+        "content/szenarien.json",
+        "content/real-world-validation.json",
+        "app/datenschutz/page.tsx"
+      ],
+      "relatedIds": [
+        256,
+        561,
+        741,
+        990
+      ]
+    },
+    "478": {
+      "classification": "out-of-scope-technology",
+      "decision": "reject-not-applicable",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "صف الواقع المعزز يحتاج كاميرا وتراكباً مكانياً وأذونات وحقوق صور وبدائل وصول ومراجعة خصوصية. لا توجد في المنتج واجهة AR أو معالجة كاميرا، ومحاكاة viewport أو صور البطاقات لا تنفذ الواقع المعزز؛ لذلك يرفض ضمن النطاق الحالي.",
+      "candidateEvidence": [
+        "app/datenschutz/page.tsx",
+        "content/real-world-validation.json",
+        "public/cards"
+      ],
+      "relatedIds": [
+        257,
+        562,
+        991
+      ]
+    },
+    "479": {
+      "classification": "partner-dependent-online-tandem",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "التعلم الثنائي عبر الإنترنت يحتاج مطابقة شريك وهوية وموافقة وجدولة وقناة اتصال وتوازناً بين اللغتين وآلية بلاغ وأمان. المنتج محلي بلا حسابات أو شبكة شركاء، ومهام الشفهي أو رفيق الذكاء الاصطناعي لا تثبت Tandem بشرياً؛ لذا يبقى المشروع الخارجي مؤجلاً.",
+      "candidateEvidence": [
+        "content/muendlich.json",
+        "components/muendlich.tsx",
+        "components/sprechbegleiter.tsx",
+        "app/datenschutz/page.tsx"
+      ],
+      "relatedIds": [
+        205,
+        225,
+        258,
+        338,
+        480,
+        566,
+        567,
+        743
+      ]
+    },
+    "480": {
+      "classification": "cross-site-virtual-exchange",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "التبادل الافتراضي المتقدم يحتاج مؤسسة أو مجموعة شريكة ومهاماً مشتركة ممتدة وتيسيراً وموافقات وهوية وتقييماً بين ثقافات. لا توجد منصة حسابات أو جلسات مشتركة أو شريك خارجي أو سجل تبادل؛ المطالبة الفردية والذكاء الاصطناعي لا يحققان ذلك، فيبقى تصميم تعاون خارجي مؤجلاً.",
+      "candidateEvidence": [
+        "content/muendlich.json",
+        "components/klassenansicht.tsx",
+        "components/sprechbegleiter.tsx",
+        "app/datenschutz/page.tsx"
+      ],
+      "relatedIds": [
+        258,
+        338,
+        479,
+        564,
+        610,
+        743,
+        745,
+        749,
+        939,
+        940
       ]
     },
     "840": {
