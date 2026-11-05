@@ -8917,7 +8917,26 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "text-reconstruction-activity",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "إعادة بناء النص تتطلب مدخلاً أو أجزاءً أو ملاحظات ناقصة، ثم إنتاج نص مترابط ومقارنته بالمصدر أو معيار المعنى. تمارين ترتيب كلمات الجملة وإعادة كتابة مسودة المتعلم لا تحققان إعادة بناء نص مصدر، وDictogloss غير موصول؛ لذلك لا توجد مطابقة حية للسجل.",
+        "candidateEvidence": [
+          "content/grammar.json",
+          "components/wiederschreiben.tsx",
+          "components/diktat.tsx",
+          "lib/dictogloss-var.ts"
+        ],
+        "relatedIds": [
+          224,
+          356,
+          413,
+          420,
+          436,
+          716
+        ]
       }
     },
     {
@@ -8938,7 +8957,29 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "partner-dependent-jigsaw-listening",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "الاستماع التركيبي يحتاج توزيع مقاطع أو معلومات سمعية متكاملة على متعلمين مختلفين، ثم تبادلاً وتحققاً من الصورة المشتركة. المنتج الفردي يشغّل المادة نفسها ولا ينشئ مجموعات أو أدوار خبير أو توزيعاً منفصلاً؛ وملفات jigsaw الصغيرة غير مستوردة.",
+        "candidateEvidence": [
+          "lib/jigsaw.ts",
+          "lib/jigsaw-var.ts",
+          "components/hoeren.tsx",
+          "content/dialogues.json"
+        ],
+        "relatedIds": [
+          205,
+          225,
+          226,
+          258,
+          309,
+          423,
+          462,
+          715,
+          980
+        ]
       }
     },
     {
@@ -8959,7 +9000,30 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "partner-dependent-information-gap-listening",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "فجوة معلومات الاستماع تتطلب طرفين يملكان مدخلات سمعية مختلفة ويطرحان أسئلة لإكمال نتيجة قابلة للتحقق. إعادة المقطع أو الإجابة الفردية عن سؤال فهم لا تنشئ فجوة موزعة، ولا توجد جلسة شريك أو مزامنة أو موافقة؛ والوحدة المعزولة تسمي أنواعاً فقط.",
+        "candidateEvidence": [
+          "lib/information-gap-var.ts",
+          "components/hoeren.tsx",
+          "content/dialogues.json",
+          "components/sprechbegleiter.tsx"
+        ],
+        "relatedIds": [
+          205,
+          213,
+          225,
+          226,
+          258,
+          309,
+          362,
+          412,
+          422,
+          822
+        ]
       }
     },
     {
@@ -8980,7 +9044,28 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "human-interview-survey-project",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "المقابلة الاستطلاعية تحتاج سؤالاً وعينة وموافقات وجمع إجابات وتحليلاً وعرض حدودها. ساحة المقابلات الحية تدرب المتعلم على وصف استطلاع مفترض ولا تجمع بيانات مشاركين، وبيانات مشروع البيئة لا تُعرض كمراحل؛ فلا يجوز عد الأجوبة المتخيلة استطلاعاً منفذاً.",
+        "candidateEvidence": [
+          "components/interview2.tsx",
+          "lib/project.ts",
+          "content/writing.json",
+          "content/vortrag.json"
+        ],
+        "relatedIds": [
+          205,
+          225,
+          258,
+          309,
+          430,
+          748,
+          980,
+          981
+        ]
       }
     },
     {
@@ -8998,10 +9083,33 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "timed-presentation-practice",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "توفر منصة العرض الحية موضوعات ومحاور وقوالب، وتحضيراً وعرضاً موقوتين، وأسئلة متابعة وتقييماً ذاتياً، كما تتيح بطاقات الشفهي تسجيلاً محلياً وإعادة استماع؛ وهي مطابقة مرشحة لمهارات العرض. لا يوجد مقيم بشري، والتقدير الذاتي لا يثبت جودة الإلقاء أو صحة مواءمة الامتحان.",
+        "candidateEvidence": [
+          "components/vortrag.tsx",
+          "components/sprechkarten.tsx",
+          "lib/sprechkarten.ts",
+          "content/vortrag.json",
+          "content/muendlich.json",
+          "scripts/interaktiv_test.tsx"
+        ],
+        "relatedIds": [
+          230,
+          310,
+          313,
+          315,
+          426,
+          428,
+          547,
+          592
+        ]
       }
     },
     {
@@ -9019,10 +9127,33 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "interactive-debate-practice",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "يوفر رفيق المحادثة الاختياري دور شريك B2 برأي مضاد وجولات متتابعة، وتوفر بطاقات الشفهي موضوعات نقاش وحججاً مساندة؛ وهي مطابقة مرشحة محدودة للنقاش والمناظرة. يعتمد المسار التفاعلي على مفتاح وموافقة لمزوّد خارجي، ولا يطبق صيغة مناظرة رسمية أو جمهوراً أو تحكيماً بشرياً.",
+        "candidateEvidence": [
+          "components/sprechbegleiter.tsx",
+          "lib/sprechbegleiter.ts",
+          "components/sprechkarten.tsx",
+          "content/muendlich.json",
+          "scripts/interaktiv_test.tsx"
+        ],
+        "relatedIds": [
+          229,
+          230,
+          313,
+          315,
+          329,
+          425,
+          427,
+          547,
+          592
+        ]
       }
     },
     {
@@ -9040,10 +9171,32 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "scenario-role-play-practice",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "تتيح سيناريوهات الحياة إخفاء دور وأداءه من الذاكرة، ويقدم الرفيق الاختياري شريكاً ذكياً ثابت الدور عبر جولات؛ وهي مطابقة حية مرشحة للعب الأدوار. وضع علامة الإنجاز ذاتي، والشريك ليس إنساناً، والمسار الذكي مشروط بمفتاح وموافقة ولا يثبت جودة الأداء أو انتقاله.",
+        "candidateEvidence": [
+          "components/szenarien.tsx",
+          "components/sprechbegleiter.tsx",
+          "lib/sprechbegleiter.ts",
+          "content/szenarien.json",
+          "scripts/interaktiv_test.tsx"
+        ],
+        "relatedIds": [
+          229,
+          312,
+          313,
+          337,
+          425,
+          426,
+          428,
+          592
+        ]
       }
     },
     {
@@ -9061,10 +9214,33 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "exam-simulation-practice",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "توجد محاكاة حية متعددة المراحل بصيغ Goethe وtelc وDTZ، بأزمنة وبنوك حقيقية وتصحيح للموضوعي وشبكات ذاتية للكتابة والتحدث وسجل محاولات؛ وهي مطابقة مرشحة للمحاكاة التدريبية. تبقى المواءمة المصدرية الخارجية معلقة، والدرجات الذاتية ليست نتيجة رسمية أو تنبؤاً.",
+        "candidateEvidence": [
+          "components/simulation.tsx",
+          "lib/simulation.ts",
+          "content/accreditation-alignment.json",
+          "content/pruefung-b2.json",
+          "scripts/engine_smoke.ts",
+          "scripts/interaktiv_test.tsx"
+        ],
+        "relatedIds": [
+          229,
+          230,
+          239,
+          310,
+          425,
+          426,
+          427,
+          552
+        ]
       }
     },
     {
@@ -9085,7 +9261,26 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "case-study-activity",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "تعرّف وحدة الحالة سياقاً وسؤال حل، لكن الخطة تستعمل عنوان الحالة ثم تعرض أول نص قراءة عام ولا تمرر السياق أو السؤال، كما أن ملف خطوات variants غير مستورد. هذا ربط عنواني مضلل لا دراسة حالة حية؛ يلزم عرض الحالة وتحليل بدائل وقرار مبرر ومخرج قابل للمراجعة.",
+        "candidateEvidence": [
+          "lib/case-study.ts",
+          "lib/case-study-var.ts",
+          "lib/plan.ts",
+          "components/tasks.tsx"
+        ],
+        "relatedIds": [
+          327,
+          329,
+          330,
+          430,
+          748,
+          984
+        ]
       }
     },
     {
@@ -9106,7 +9301,27 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "multi-stage-project-learning",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "تعرّف وحدة المشروع عناوين وخطوات متعددة الأيام، لكن الخطة تربط العنوان بمهمة كتابة عادية ولا تعرض الخطوات أو تحفظ تقدماً أو مقابلات أو منتجاً نهائياً. المشروع ليس مطالبة واحدة؛ يلزم مراحل ومصادر وملف إنجاز ومراجعة، وشريك آمن حيث يلزم.",
+        "candidateEvidence": [
+          "lib/project.ts",
+          "lib/plan.ts",
+          "components/tasks.tsx",
+          "content/writing.json"
+        ],
+        "relatedIds": [
+          205,
+          424,
+          429,
+          748,
+          980,
+          981,
+          984
+        ]
       }
     },
     {
@@ -9129,7 +9344,29 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "task-complexity-theory",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "تعقيد المهمة وفق Robinson إطار بحثي يميز أبعاداً موجهة للموارد ومشتتة لها، لا مستوى CEFR أو مدة ثابتة. الخطة تدرج مواد متفاوتة لكنها لا تتلاعب بأبعاد محددة ولا تقيس CAF في مهام متكافئة؛ والسجل 942 تكرار حرفي تابع لهذا المعرف.",
+        "candidateEvidence": [
+          "lib/plan.ts",
+          "content/writing.json",
+          "content/muendlich.json"
+        ],
+        "relatedIds": [
+          282,
+          358,
+          432,
+          433,
+          434,
+          812,
+          942,
+          946,
+          947,
+          949
+        ]
       }
     },
     {
@@ -9152,7 +9389,27 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "sla-cognition-hypothesis",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "فرضية الإدراك تتنبأ بعلاقة شروط تعقيد المهمة بالإنتاج والتفاعل، وليست ميزة مستقلة. لا توجد مقارنة مضبوطة لمهمتين أو قياسات تعقيد ودقة وطلاقة وتفاعل، فلا يجوز استنتاج الفرضية من تقدم المستويات أو صعوبة المحتوى؛ والسجل 943 تكرار حرفي تابع.",
+        "candidateEvidence": [
+          "lib/plan.ts",
+          "lib/metriken.ts",
+          "content/writing.json"
+        ],
+        "relatedIds": [
+          358,
+          431,
+          433,
+          434,
+          812,
+          943,
+          946,
+          949
+        ]
       }
     },
     {
@@ -9173,7 +9430,28 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "caf-tradeoff-hypothesis",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "فرضية المقايضة تتطلب قياس التعقيد والدقة والطلاقة في المهمة نفسها وتحت شروط انتباه قابلة للمقارنة. المؤقتات وكواشف الكتابة ومقاييس التسجيل الحالية منفصلة وسطحية، ولا تثبت أن تحسن بعد جاء على حساب بعد آخر؛ لذلك تبقى نظرية بحثية.",
+        "candidateEvidence": [
+          "lib/fluenz.ts",
+          "lib/aussprache.ts",
+          "lib/schreibpruefer.ts",
+          "components/schreiben.tsx"
+        ],
+        "relatedIds": [
+          358,
+          431,
+          432,
+          434,
+          944,
+          946,
+          947,
+          948
+        ]
       }
     },
     {
@@ -9194,7 +9472,27 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "cognitive-capacity-construct",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "السعة المحدودة بناء معرفي لا يمكن اشتقاقه من الخطأ أو البطء أو طول المهمة، وقد تتداخل معه اللغة والجهاز والإتاحة. لا يملك المنتج مقياس ذاكرة عاملة أو تصميم حمل مضبوطاً، لذا تبقى الفكرة قيد البحث ولا تتحول إلى سمة متعلم أو عتبة تكييف.",
+        "candidateEvidence": [
+          "lib/metriken.ts",
+          "lib/plan.ts",
+          "components/lernstrategie.tsx"
+        ],
+        "relatedIds": [
+          282,
+          358,
+          373,
+          431,
+          432,
+          433,
+          812,
+          949
+        ]
       }
     },
     {
@@ -9215,7 +9513,30 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "attention-to-form-construct",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "الانتباه إلى الشكل عملية ذهنية داخل معالجة مدخل ذي معنى، ولا يثبتها تلوين قاعدة أو فتح شرح أو إجابة صحيحة. يوفر المنتج فرص ملاحظة وتصحيحاً صريحاً يمكن دراستها كنشاط، لكنه لا يقيس توزيع الانتباه أو يربطه بلحظة تواصل؛ لذلك يبقى البناء بحثياً.",
+        "candidateEvidence": [
+          "lib/bemerken.ts",
+          "components/bemerken.tsx",
+          "components/akademie/LektionWizard.tsx",
+          "components/exercises.tsx"
+        ],
+        "relatedIds": [
+          212,
+          215,
+          280,
+          373,
+          378,
+          416,
+          436,
+          812,
+          814,
+          883
+        ]
       }
     },
     {
@@ -9233,10 +9554,33 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "noticing-gap-comparison-activity",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "تعرض بطاقة الملاحظة شاهداً وتسأل عن موضع القاعدة، ويعرض مختبر الخطأ وفروق إعادة الكتابة مقارنة بين الناتج والنموذج أو النسختين؛ وهي مطابقة مرشحة لنشاط إظهار الفجوة. لا يثبت العرض أن المتعلم لاحظ ذهنياً أو فهم السبب أو اكتسب الشكل، وبعض الفروق كلمية فقط.",
+        "candidateEvidence": [
+          "lib/bemerken.ts",
+          "components/bemerken.tsx",
+          "components/fehlerlabor.tsx",
+          "components/wiederschreiben.tsx",
+          "lib/textdiff.ts",
+          "scripts/interaktiv_test.tsx"
+        ],
+        "relatedIds": [
+          212,
+          280,
+          356,
+          378,
+          413,
+          435,
+          811,
+          893
+        ]
       }
     },
     {
@@ -9257,7 +9601,28 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "sla-frequency-salience-framework",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "التكرار والبروز عاملان تفسيران يحتاجان تعريف جرعة وشكل مستهدف وسياق ثم قياس تعلم. يعرض المنتج ترددات داخل مدونته الصغيرة ويبرز شواهد بصرية، لكن المسارين منفصلان ولا ينفذان معالجة تجمع التكرار والبروز أو تثبت أثرهما السببي؛ لذلك يبقى السجل إطاراً بحثياً.",
+        "candidateEvidence": [
+          "lib/frequenz.ts",
+          "components/tiefenlex.tsx",
+          "lib/bemerken.ts",
+          "components/bemerken.tsx"
+        ],
+        "relatedIds": [
+          318,
+          376,
+          377,
+          417,
+          519,
+          647,
+          711,
+          893
+        ]
       }
     },
     {
@@ -9277,10 +9642,36 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "formulaic-sequence-practice",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "يتدرب المتعلم حياً على وسائل تعبير متعددة الكلمات ومتلازمات وتراكيب ثابتة عبر الاسترجاع والإكمال والإنتاج داخل مهام التحدث والكتابة؛ وهي مطابقة مرشحة للمتتاليات الصيغية. الاختيار داخلي ولم يستخرج بمعيار مدونة خارجي موثق، ولا يثبت حفظ العبارات كفاءة صيغية عامة.",
+        "candidateEvidence": [
+          "components/redemittel.tsx",
+          "lib/redemittel.ts",
+          "components/kollokproduktion.tsx",
+          "lib/kollokproduktion.ts",
+          "content/redemittel.json",
+          "content/kollokationen.json",
+          "scripts/engine_smoke.ts"
+        ],
+        "relatedIds": [
+          320,
+          321,
+          322,
+          323,
+          641,
+          642,
+          839,
+          840,
+          893,
+          931
+        ]
       }
     },
     {
@@ -9301,7 +9692,27 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "lexical-priming-theory",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "التهيئة المعجمية نظرية عن تراكم تاريخ التعرض والارتباطات السياقية لدى الفرد، وليست عرض كلمة شائعة أو متلازم جاهز. المنتج لا يقيس أزمنة الاستجابة أو تاريخ السياق والتغير في التوقعات، ولا تكفي بيانات SRS أو تردد المدونة لإثبات priming؛ لذلك يبقى السجل بحثياً.",
+        "candidateEvidence": [
+          "lib/frequenz.ts",
+          "lib/srs.ts",
+          "content/kollokationen.json",
+          "components/tiefenlex.tsx"
+        ],
+        "relatedIds": [
+          318,
+          376,
+          437,
+          438,
+          641,
+          647,
+          893
+        ]
       }
     },
     {
@@ -9322,7 +9733,28 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "linguistic-construction-framework",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "نحو البناء إطار لغوي يمثل اقترانات الشكل والمعنى وشبكة العلاقات بينها، وليس مجرد وجود أمثلة قواعد وعبارات. لا يملك المنتج مخزون constructions موثقاً أو روابط تعميم وإنتاجاً يقاس عبرها، فلا تُسمى دروس القواعد الحالية تطبيقاً لنظرية Goldberg.",
+        "candidateEvidence": [
+          "content/grammar.json",
+          "components/akademie/LektionWizard.tsx",
+          "lib/redemittel.ts"
+        ],
+        "relatedIds": [
+          215,
+          343,
+          416,
+          435,
+          441,
+          660,
+          712,
+          814,
+          883
+        ]
       }
     },
     {
