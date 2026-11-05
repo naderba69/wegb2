@@ -2690,7 +2690,21 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "adaptive-engine-comparison",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "اختيار خوارزمية الجدولة يحتاج مقارنة قابلة لإعادة الإنتاج على بيانات مناسبة، لا قسمة زمنين ولا إعلان فائز مسبقاً. المنتج يشغّل FSRS-6 فعلياً، لكن لا توجد تجربة Leitner مقابلة؛ لذلك لا يمثل التنفيذ الحالي مقارنة السجل.",
+        "candidateEvidence": [
+          "lib/srs.ts",
+          "lib/srs-algorithm-compare.ts",
+          "scripts/engine_smoke.ts"
+        ],
+        "relatedIds": [
+          181,
+          184
+        ]
       }
     },
     {
@@ -2711,7 +2725,20 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "learning-science-guidance",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "الصعوبة المرغوبة مبدأ تصميم مشروط بالمهمة والمتعلم والزمن؛ نطاق نجاح ثابت 70–85 بالمئة وضرب الصعوبة في 0.9 أو 1.1 لا يثبت الملاءمة أو أثر الاحتفاظ. يبقى مرجعاً بحثياً حتى تُعرّف وحدة الصعوبة ومقياس النقل.",
+        "candidateEvidence": [
+          "lib/desirable-difficulties.ts",
+          "components/selbsttest.tsx"
+        ],
+        "relatedIds": [
+          399,
+          874
+        ]
       }
     },
     {
@@ -2729,10 +2756,24 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "retrieval-activity",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "يوجد خلاط حي يبدّل بين التداخل والكتل ويجمع ثلاثة مصادر مع تصحيح وتسجيل أخطاء، وهو تطابق مرشح مباشر. لكنه لا يثبت أفضلية 29 بالمئة ولا يختبر النقل المؤجل؛ يلزم اختبار توزيع ومقارنة زمنية قبل الاعتماد.",
+        "candidateEvidence": [
+          "components/selbsttest.tsx",
+          "app/pruefen/page.tsx",
+          "scripts/engine_smoke.ts"
+        ],
+        "relatedIds": [
+          185,
+          854
+        ]
       }
     },
     {
@@ -2753,7 +2794,22 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "learner-explanation-activity",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "سؤال لماذا قابل للتحويل إلى شرح ذاتي مرتبط بقاعدة، لكن مولد العبارة العامة ومعامل 1.25 لا يقدمان معيار إجابة أو تغذية راجعة. يلزم مطالبات محددة وأمثلة قبول ومراجعة لغوية وإتاحة.",
+        "candidateEvidence": [
+          "lib/elaborative-interrogation.ts",
+          "content/grammar.json",
+          "components/akademie/LektionWizard.tsx"
+        ],
+        "relatedIds": [
+          186,
+          540,
+          849
+        ]
       }
     },
     {
@@ -2774,7 +2830,20 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "instructional-design",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "توجد أمثلة قواعد حية داخل الدروس، لكن قالب المثال الواحد ونسبة 2 إلى 1 لا يقيسان صحة المثال أو تنوعه أو انتقاله من المحسوس إلى المجرد. يبقى الربط المرشح دليلاً مجاوراً لا تنفيذ السجل.",
+        "candidateEvidence": [
+          "lib/concrete-examples.ts",
+          "content/grammar.json",
+          "components/akademie/LektionWizard.tsx"
+        ],
+        "relatedIds": [
+          188
+        ]
       }
     },
     {
@@ -2792,10 +2861,28 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "multimodal-design",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "تعرض الدروس مشاهد SVG دلالية مع عنوان بديل وقاعدة وأمثلة، وهي مطابقة حية مرشحة للصورة مع النص. لا توجد صور مفردات بندية ولا دراسة حمل معرفي، ومكسب 50 بالمئة غير موثق؛ يلزم اختبار الفهم وبديل غير بصري.",
+        "candidateEvidence": [
+          "components/akademie/LessonSceneVisual.tsx",
+          "components/akademie/LektionWizard.tsx",
+          "lib/lesson-scene.ts",
+          "scripts/engine_smoke.ts"
+        ],
+        "relatedIds": [
+          187,
+          197,
+          451,
+          793,
+          846
+        ]
       }
     },
     {
@@ -2813,10 +2900,29 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "multimodal-design",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "النصوص والأمثلة الحية تملك أزرار استماع، وهو تطابق مرشح للصوت مع النص. لكن النظام لا يفرض قناتين فقط ولا يثبت أن الجمع يقلل الحمل؛ كما تختلف إتاحة الصوت وجودته حسب البيئة، فتظل مراجعة التكرار والإتاحة لازمة.",
+        "candidateEvidence": [
+          "components/akademie/LektionWizard.tsx",
+          "components/tasks.tsx",
+          "lib/speech.ts",
+          "scripts/engine_smoke.ts"
+        ],
+        "relatedIds": [
+          197,
+          282,
+          418,
+          451,
+          793,
+          846
+        ]
       }
     },
     {
@@ -2834,10 +2940,26 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "retrieval-activity",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "مركز الاختبارات الذاتية يقدم استرجاعاً حراً حياً من العربية إلى الألمانية بلا خيارات مع تصحيح وتسجيل للأخطاء، وهو تطابق مرشح قوي. لا يثبت ذلك أثر Tulving أو صلاحية نسبة التشابه لكل إجابة؛ يلزم تحليل بنود ومراجعة لغوية.",
+        "candidateEvidence": [
+          "components/selbsttest.tsx",
+          "app/pruefen/page.tsx",
+          "scripts/engine_smoke.ts"
+        ],
+        "relatedIds": [
+          184,
+          192,
+          399,
+          852
+        ]
       }
     },
     {
@@ -2855,10 +2977,26 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "retrieval-activity",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "الفجوات النصية المفتوحة في مركز الاختبارات تعطي سياقاً موجهاً بلا بنك كلمات، وهي مطابقة حية مرشحة للاستدعاء الموجه. أما كشف أول حرف ومعامل 1.3 فليسا معيارين مثبتين؛ يلزم ضبط قوة التلميح حسب البند.",
+        "candidateEvidence": [
+          "components/selbsttest.tsx",
+          "app/pruefen/page.tsx",
+          "lib/plan.ts",
+          "scripts/engine_smoke.ts"
+        ],
+        "relatedIds": [
+          184,
+          399,
+          852
+        ]
       }
     },
     {
@@ -2876,10 +3014,26 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "retrieval-progression",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "البطاقات الحية تفصل جولات التعرف عن الإنتاج وتمنع وصف الإنتاج بالمتقن قبل ثبات FSRS ونجاحين إنتاجيين، كما توجد فجوات واسترجاع حر؛ هذا تطابق مرشح. لا تكفي تسمية نوع السؤال وحدها للحكم على صعوبته أو نقله.",
+        "candidateEvidence": [
+          "lib/srs.ts",
+          "components/tasks.tsx",
+          "components/selbsttest.tsx",
+          "scripts/engine_smoke.ts"
+        ],
+        "relatedIds": [
+          184,
+          399,
+          852
+        ]
       }
     },
     {
@@ -2900,7 +3054,22 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "contextual-vocabulary-design",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "يوجد تدريب حي على المعنى والفروق والتلازمات داخل سياقات، لكنه لا يضمن عرض الكلمة نفسها في ثلاثة سياقات متباينة كما يقترح السجل. يلزم معرّف كلمة يربط الأمثلة وقياس نقل إلى سياق جديد.",
+        "candidateEvidence": [
+          "lib/context-variation-deep.ts",
+          "components/SynonymKontext.tsx",
+          "components/tiefenlex.tsx",
+          "content/vocab.json"
+        ],
+        "relatedIds": [
+          856,
+          887
+        ]
       }
     },
     {
@@ -2921,7 +3090,23 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "mnemonic-strategy",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "يحتوي المنتج شفرات وقصصاً عربية واختبارات SRS حية، لكنها ليست تطبيقاً منهجياً لسلسلة كلمة أجنبية ثم كلمة مفتاحية صوتية ثم صورة، وقد لا تناسب كل متعلم. يلزم وسم نوع الحيلة وخيار تعطيل ومراجعة ثقافية.",
+        "candidateEvidence": [
+          "lib/keyword-method-var.ts",
+          "content/eselsbruecken.json",
+          "components/tasks.tsx",
+          "lib/bruecken.ts"
+        ],
+        "relatedIds": [
+          273,
+          308,
+          845
+        ]
       }
     },
     {
@@ -2942,7 +3127,24 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "mnemonic-strategy",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "القصص والشفرات الحالية نصية في الغالب، ولا توجد واجهة تبني صورة ذهنية قابلة للتحقق أو بديلاً واضحاً لمن لا يستفيد من التصور. ادعاء أن الصورة الأغرب أقوى ومعاملاته الرقمية يحتاجان مصدراً واختباراً.",
+        "candidateEvidence": [
+          "lib/image-mnemonic.ts",
+          "lib/mnemonic-story.ts",
+          "content/eselsbruecken.json"
+        ],
+        "relatedIds": [
+          187,
+          272,
+          308,
+          845,
+          846
+        ]
       }
     },
     {
@@ -2963,7 +3165,21 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "mnemonic-strategy",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "تولد الخطة موضع قصر ذاكرة وقصة في بيانات المهمة، لكن الواجهة لا تعرض palaceRaum حالياً، لذلك لا يعد سلوكاً حياً للمتعلم. كما أن سعة 80 عنصراً تختلف عن النموذج المحلي وتحتاج تدريباً وبديل إتاحة وقياساً.",
+        "candidateEvidence": [
+          "lib/loci-advanced.ts",
+          "lib/memory-palace.ts",
+          "lib/plan.ts",
+          "lib/types.ts"
+        ],
+        "relatedIds": [
+          308
+        ]
       }
     },
     {
@@ -2984,7 +3200,18 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "cognitive-load-guidance",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "تقطيع مصفوفة برمجية لا يثبت بناء وحدات ذات معنى، وقاعدة 7±2 لا تصلح وحدها كوصفة تعلم أو لاختيار حجم ثابت 3 أو 4. يجب فصل التكتيل المعرفي عن الحزم المعجمية وقياس الحمل والفهم قبل أي توصيل.",
+        "candidateEvidence": [
+          "lib/chunking-advanced.ts",
+          "components/kartenexport.tsx",
+          "content/vocab.json"
+        ],
+        "relatedIds": []
       }
     },
     {
@@ -3005,7 +3232,21 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "health-guidance",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "النوم عامل صحي وسلوكي حساس؛ وصف ساعة تعلم ونوم واسترجاع أو مضاعف حسب الساعات لا يجوز تقديمه كتحسين مضمون. توجد كبسولة مسائية وإرشادات راحة مجاورة، لكنها لا تقيس النوم ولا تثبت التثبيت.",
+        "candidateEvidence": [
+          "lib/sleep-optimization.ts",
+          "lib/schlaf.ts",
+          "components/kapsel.tsx",
+          "components/gesundheit.tsx"
+        ],
+        "relatedIds": [
+          182
+        ]
       }
     },
     {
@@ -3026,7 +3267,22 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "sla-theory",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "i+1 إطار نظري لا خوارزمية تنتقل خطياً بين مستويات CEFR، ونسبة 95 بالمئة ليست ضماناً عاماً للفهم. اختيار محتوى مناسب للمستوى في الخطة لا يثبت الضبط البندي؛ يلزم مقياس صعوبة وفهم فعلي ومراجعة محتوى.",
+        "candidateEvidence": [
+          "lib/input-1plus.ts",
+          "lib/plan.ts",
+          "content/grammar.json"
+        ],
+        "relatedIds": [
+          363,
+          823,
+          881
+        ]
       }
     },
     {
@@ -3047,7 +3303,25 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "learner-wellbeing-guidance",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "اختزال القلق والدافعية إلى معادلة واعتبار الفكاهة مخفضاً ثابتاً للمرشح لا يصلح للتشخيص. يقدم المنتج تنفساً وخيارات وتوقفاً اختيارياً، لكنها دعم عام لا قياس للقلق ولا إثبات لنظرية المرشح الوجداني.",
+        "candidateEvidence": [
+          "lib/affective-filter-deep.ts",
+          "components/lernstrategie.tsx",
+          "app/page.tsx"
+        ],
+        "relatedIds": [
+          299,
+          301,
+          306,
+          371,
+          583,
+          826
+        ]
       }
     },
     {
@@ -3068,7 +3342,25 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "skill-development-theory",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "عدد التكرارات وحده لا يثبت الانتقال من المعرفة التصريحية إلى الإجرائية أو الأتمتة، وعتبتا 5 و20 اعتباطيتان. FSRS يضبط الاسترجاع ويعرض مراحل إتقان داخلية، لكنه لا يقيس زمن الاستجابة أو الطلاقة الآلية.",
+        "candidateEvidence": [
+          "lib/automatization-deep.ts",
+          "lib/srs.ts",
+          "components/tasks.tsx",
+          "scripts/engine_smoke.ts"
+        ],
+        "relatedIds": [
+          358,
+          383,
+          393,
+          884,
+          947
+        ]
       }
     },
     {
@@ -3086,10 +3378,29 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "noticing-activity",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "تعرض القراءة الحية شاهداً لقاعدة الأسبوع وتسأل المتعلم عن موضعها، كما تقارن أدوات الخطأ بين الناتج والهدف؛ وهي مطابقة حية مرشحة لملاحظة الفجوة. الرصد سطحي ولا يثبت الاكتساب، ويحتاج اختباراً على أخطاء حقيقية.",
+        "candidateEvidence": [
+          "lib/bemerken.ts",
+          "components/bemerken.tsx",
+          "components/tasks.tsx",
+          "components/fehlerlabor.tsx",
+          "scripts/engine_smoke.ts"
+        ],
+        "relatedIds": [
+          212,
+          378,
+          436,
+          811,
+          893
+        ]
       }
     },
     {
