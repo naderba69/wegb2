@@ -4494,6 +4494,537 @@
         819
       ]
     },
+    "381": {
+      "classification": "sla-interface-theory",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "فرضية التداخل تناقش العلاقة بين المعرفة الصريحة والضمنية، وليست ميزة يمكن إثباتها بتتابع شرح ثم تدريب. يعرض Lesson Studio قاعدة وأمثلة وتطبيقاً، لكن لا يقيس نوع المعرفة ولا يبرهن انتقال التصريحي إلى أداء ضمني؛ لذلك يبقى السجل إطاراً بحثياً لا معامل مكسب.",
+      "candidateEvidence": [
+        "components/akademie/LektionWizard.tsx",
+        "lib/automatization-deep.ts"
+      ],
+      "relatedIds": [
+        279,
+        380,
+        382,
+        383,
+        393,
+        532,
+        533
+      ]
+    },
+    "382": {
+      "classification": "skill-acquisition-theory",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "نظرية اكتساب المهارة تصف انتقالاً من المعرفة إلى أداء مضبوط ثم أسرع وأكثر تلقائية. المسار الحي يوفر تدريباً متدرجاً وتحققاً مؤجلاً، لكنه لا يقيس زمن الاستجابة أو التلقائية أو النقل ولا يعزل أثر الممارسة؛ فلا يعد التسلسل وحده تطبيقاً مثبتاً للنظرية.",
+      "candidateEvidence": [
+        "components/akademie/LektionWizard.tsx",
+        "lib/srs.ts",
+        "lib/automatization-deep.ts"
+      ],
+      "relatedIds": [
+        279,
+        381,
+        383,
+        393,
+        884,
+        947
+      ]
+    },
+    "383": {
+      "classification": "declarative-procedural-theory",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "الفصل بين الذاكرة التصريحية والإجرائية بناء تفسيري لا يُستنتج من تسمية بطاقة تعرّف أو إنتاج. مستويات FSRS التشغيلية تصف تاريخ نجاح ومتانة متوقعة، ولا تشخص نظام الذاكرة أو تحول المعرفة؛ يلزم قياس مستقل للسرعة والنقل ونوع المعرفة قبل أي ادعاء.",
+      "candidateEvidence": [
+        "lib/srs.ts",
+        "components/tasks.tsx",
+        "lib/automatization-deep.ts"
+      ],
+      "relatedIds": [
+        279,
+        381,
+        382,
+        384,
+        393
+      ]
+    },
+    "384": {
+      "classification": "memory-systems-theory",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "أنظمة الذاكرة مظلة نظرية عصبية ومعرفية، وليست تصنيفاً يمكن استخراجه من سجل البطاقات. يوفر المنتج استرجاعاً وجدولة وقصصاً وصوتاً، لكنها أنشطة تعلم لا قياسات لنظام ذاكرة بعينه؛ لذلك يمنع تحويل الخطأ أو النجاح إلى تشخيص دلالي أو عرضي أو إجرائي.",
+      "candidateEvidence": [
+        "lib/srs.ts",
+        "components/tasks.tsx",
+        "components/selbsttest.tsx"
+      ],
+      "relatedIds": [
+        308,
+        383,
+        385,
+        386,
+        387,
+        388,
+        389,
+        390,
+        391,
+        392,
+        393
+      ]
+    },
+    "385": {
+      "classification": "cognitive-capacity-construct",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "الذاكرة العاملة سعة وبناء معرفي حساس لا يساوي طول المهمة أو عدد العناصر على الشاشة. تقسيم الدرس والجولات القصيرة قد يقلل العبء عملياً، لكنه لا يقيس السعة ولا يبرهن نموذج Baddeley؛ يلزم أداة قياس صالحة وموافقة وحدود تفسير قبل أي تكييف فردي.",
+      "candidateEvidence": [
+        "components/akademie/LektionWizard.tsx",
+        "components/selbsttest.tsx",
+        "components/tasks.tsx"
+      ],
+      "relatedIds": [
+        275,
+        281,
+        384,
+        386,
+        387,
+        388,
+        389,
+        536,
+        878
+      ]
+    },
+    "386": {
+      "classification": "working-memory-subsystem-theory",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "الحلقة الصوتية مكوّن نظري للذاكرة العاملة، ولا يثبتها وجود استماع أو إملاء أو تكرار صوتي. هذه الأنشطة قد تمرّن المعالجة الصوتية، لكنها لا تقيس مدة الاحتفاظ أو أثر المنع النطقي أو سعة الحلقة؛ لذا تبقى النظرية منفصلة عن وحدات الصوت الحية.",
+      "candidateEvidence": [
+        "components/diktat.tsx",
+        "components/shadowing.tsx",
+        "lib/shadowing.ts"
+      ],
+      "relatedIds": [
+        267,
+        341,
+        342,
+        384,
+        385,
+        387,
+        388,
+        389
+      ]
+    },
+    "387": {
+      "classification": "working-memory-subsystem-theory",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "المفكرة البصرية المكانية مكوّن نظري لا يساوي عرض SVG أو جدول ملون. مشاهد الدروس الحية تتيح تمثيلاً بصرياً مع بديل نصي، لكنها لا تختبر الذاكرة المكانية أو سعتها ولا تثبت أن التعلم خزّن فيها؛ لذلك لا يُبنى عليها ملف متعلم بصري.",
+      "candidateEvidence": [
+        "components/akademie/LessonSceneVisual.tsx",
+        "lib/lesson-scene.ts",
+        "components/akademie/LektionWizard.tsx"
+      ],
+      "relatedIds": [
+        187,
+        266,
+        384,
+        385,
+        386,
+        388,
+        389,
+        846
+      ]
+    },
+    "388": {
+      "classification": "working-memory-subsystem-theory",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "المخزن العرضي مفهوم لدمج المعلومات عبر القنوات والذاكرة طويلة المدى، وليس بطاقة واجهة. جمع النص والصوت والمشهد والقاعدة في الدرس لا يقيس عملية الدمج ولا سعة المخزن، وقد يزيد الحمل بدلاً من خفضه؛ لذا يبقى إطاراً بحثياً مع مراجعة إتاحة وحمل.",
+      "candidateEvidence": [
+        "components/akademie/LektionWizard.tsx",
+        "components/akademie/LessonSceneVisual.tsx",
+        "components/tasks.tsx"
+      ],
+      "relatedIds": [
+        266,
+        267,
+        281,
+        384,
+        385,
+        386,
+        387,
+        389,
+        390
+      ]
+    },
+    "389": {
+      "classification": "working-memory-subsystem-theory",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "المنفذ المركزي بناء للضبط والانتباه لا يمكن استنتاجه من اختيار وتيرة أو إكمال خطة. تنظيم المهام والتوقف والمراقبة الذاتية وظائف واجهة قريبة فقط، ولا تشخص التحكم التنفيذي أو تبديل الانتباه؛ يلزم قياس مستقل وتجنب أي وسم نفسي للمتعلم.",
+      "candidateEvidence": [
+        "app/page.tsx",
+        "components/lernstrategie.tsx",
+        "lib/kalibrierung.ts"
+      ],
+      "relatedIds": [
+        281,
+        304,
+        368,
+        384,
+        385,
+        386,
+        387,
+        388
+      ]
+    },
+    "390": {
+      "classification": "memory-system-construct",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "الذاكرة طويلة المدى بناء واسع لا تساوي فاصل مراجعة أو بقاء بطاقة في السجل. يحسب FSRS احتمال استرجاع تشغيلياً ويجدول حتى 90 يوماً، وتعيد الكبسولة مواد قديمة، لكن ذلك لا يثبت تخزيناً طويل المدى أو احتفاظاً خارج المهمة والسياق.",
+      "candidateEvidence": [
+        "lib/srs.ts",
+        "lib/kapsel.ts",
+        "components/tasks.tsx"
+      ],
+      "relatedIds": [
+        181,
+        184,
+        308,
+        384,
+        391,
+        392,
+        393,
+        395,
+        400
+      ]
+    },
+    "391": {
+      "classification": "memory-system-construct",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "الذاكرة الدلالية بناء للمعرفة العامة والمعاني، ولا يساوي امتلاك بطاقة مفردة أو إجابة معجمية صحيحة. يوفر المعجم والبطاقات علاقات ومعاني وسياقات، لكنها لا تفصل المعرفة الدلالية عن التعرف أو السياق ولا تقيس استقرارها أو تعميمها.",
+      "candidateEvidence": [
+        "components/tiefenlex.tsx",
+        "content/vocab.json",
+        "components/tasks.tsx"
+      ],
+      "relatedIds": [
+        271,
+        308,
+        318,
+        384,
+        390,
+        392,
+        393
+      ]
+    },
+    "392": {
+      "classification": "memory-system-construct",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "الذاكرة العرضية تتعلق بأحداث وخبرات مرتبطة بسياق، ولا تُثبت بمجرد قصة أو سيناريو. توجد قراءات ومواقف وتأملات حية يمكن أن توفر سياقاً غنياً، لكن المنتج لا يستعيد خبرة شخصية ولا يميزها عن معرفة النص؛ لذلك لا يُصنف المستخدم أو الأداء عرضياً.",
+      "candidateEvidence": [
+        "lib/lesestoff.ts",
+        "components/szenarien.tsx",
+        "components/absicht.tsx"
+      ],
+      "relatedIds": [
+        273,
+        308,
+        384,
+        390,
+        391,
+        393
+      ]
+    },
+    "393": {
+      "classification": "memory-system-construct",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "الذاكرة الإجرائية لا تُستنتج من عدد التكرارات أو نجاح إنتاج واحد. المسار يكرر المهارات ويشدد مستوى الإنتاج في FSRS، لكنه لا يقيس أداءً تلقائياً سريعاً أو نقلاً إلى إجراء جديد، ولا يثبت انتقالاً من التصريحي إلى الإجرائي؛ لذلك يبقى البناء بحثياً.",
+      "candidateEvidence": [
+        "lib/srs.ts",
+        "components/tasks.tsx",
+        "lib/automatization-deep.ts"
+      ],
+      "relatedIds": [
+        279,
+        358,
+        381,
+        382,
+        383,
+        384,
+        390,
+        391,
+        392,
+        884,
+        947
+      ]
+    },
+    "394": {
+      "classification": "cognitive-priming-theory",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "التهيئة أثر يعتمد على تعرض سابق وخط أساس وزمن واستجابة لاحقة، وليس مجرد وضع مثال قبل سؤال. أمثلة الدروس والسياقات المعجمية قد تجعل شكلاً متاحاً مؤقتاً، لكن المنتج لا يسجل prime-target ولا يقارن استجابة غير مهيأة؛ فلا يدعي أثراً أو تعلماً.",
+      "candidateEvidence": [
+        "components/akademie/LektionWizard.tsx",
+        "components/tiefenlex.tsx",
+        "lib/context-variation-deep.ts"
+      ],
+      "relatedIds": [
+        376,
+        391,
+        439
+      ]
+    },
+    "395": {
+      "classification": "spaced-practice-design",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "candidate-live-implementation",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "medium",
+      "rationaleAr": "يوفر المنتج مراجعة حية بفواصل FSRS معلنة، وكبسولة تكيفية بدرجات 1/3/7/30/90، ويقدم المستحقات قبل الجديد؛ وهي مطابقة مرشحة مباشرة للممارسة الموزعة. لا تثبت الجدولة وحدها أثر التباعد أو التفوق على الحشد، وتحتاج معايرة خارجية واختبار احتفاظ مؤجل.",
+      "candidateEvidence": [
+        "lib/srs.ts",
+        "lib/kapsel.ts",
+        "lib/plan.ts",
+        "components/tasks.tsx",
+        "scripts/engine_smoke.ts"
+      ],
+      "relatedIds": [
+        181,
+        184,
+        308,
+        390,
+        400,
+        853,
+        871
+      ]
+    },
+    "396": {
+      "classification": "retrieval-practice-design",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "candidate-live-implementation",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "medium",
+      "rationaleAr": "يفرض المسار الحي الاسترجاع قبل المحتوى الجديد، ويوفر استرجاعاً حراً وفجوات بلا خيارات وتصحيحاً وتسجيل أخطاء؛ وهي مطابقة مرشحة لممارسة الاختبار. لا يثبت هذا Testing Effect أو أفضلية على إعادة القراءة، ولا يعزل أثر التغذية الراجعة أو التباعد؛ يلزم قياس مؤجل ومقارنة.",
+      "candidateEvidence": [
+        "lib/ritual.ts",
+        "components/selbsttest.tsx",
+        "components/akademie/TodayStepper.tsx",
+        "components/tasks.tsx",
+        "scripts/interaktiv_test.tsx"
+      ],
+      "relatedIds": [
+        263,
+        269,
+        270,
+        397,
+        399,
+        851,
+        852
+      ]
+    },
+    "397": {
+      "classification": "learner-generation-activity",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "candidate-live-implementation",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "medium",
+      "rationaleAr": "يطلب الاختبار الذاتي الحي توليد الجملة الألمانية من المعنى بلا خيارات، وتوجد مهام تطبيق مستقل وإنتاج متلازمات من الذاكرة؛ وهي مطابقة مرشحة لفعل التوليد. لا يثبت وجود الإنتاج Generation Effect مقارنة بالقراءة، وتحتاج صحة الإجابات الحرة ومساعدة الحروف وضبط الصعوبة مراجعة.",
+      "candidateEvidence": [
+        "components/selbsttest.tsx",
+        "components/akademie/LektionWizard.tsx",
+        "components/kollokproduktion.tsx",
+        "scripts/interaktiv_test.tsx"
+      ],
+      "relatedIds": [
+        186,
+        202,
+        264,
+        269,
+        396,
+        850,
+        864
+      ]
+    },
+    "398": {
+      "classification": "encoding-variation-design",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "medium",
+      "rationaleAr": "تبدل الكبسولة بين فجوة وترجمة للجملة نفسها، وتوجد سياقات متعددة في بعض البنوك، لكن ذلك لا ينشئ خطة موثقة لترميز العنصر نفسه في سياقات دلالية متنوعة. الدالة المعزولة تعيد قوالب وهمية وغير مستوردة؛ يلزم ربط item-context وتتبع التعرض واختبار نقل.",
+      "candidateEvidence": [
+        "lib/kapsel.ts",
+        "lib/context-variation-deep.ts",
+        "content/vocab.json"
+      ],
+      "relatedIds": [
+        271,
+        287,
+        855,
+        856,
+        857
+      ]
+    },
+    "399": {
+      "classification": "retrieval-difficulty-theory",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "جهد الاسترجاع بناء مشروط بالنجاح والزمن والتلميح ولا يساوي صعوبة عامة أو خطأ. توفر الواجهة استرجاعاً حراً وموجهاً ودرجات FSRS، لكنها لا تقيس الجهد ولا تفصل الجهد النافع عن الفشل أو الإحباط؛ لذلك يبقى مرجعاً بحثياً ولا يستخدم لضبط المتعلم نفسياً.",
+      "candidateEvidence": [
+        "components/selbsttest.tsx",
+        "lib/srs.ts",
+        "lib/retrieval-cued-recall.ts",
+        "lib/retrieval-free-recall.ts"
+      ],
+      "relatedIds": [
+        262,
+        269,
+        270,
+        396,
+        852,
+        874
+      ]
+    },
+    "400": {
+      "classification": "memory-decay-theory",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-05",
+      "risk": "high",
+      "rationaleAr": "منحنى النسيان نموذج تاريخي جماعي مبسط، وليس منحنى ثابتاً لكل متعلم أو مادة. يستخدم FSRS ثباتاً وصعوبة واحتمال استرجاع بندياً، وتعيد الكبسولة 1/7/30، لكن ذلك لا يثبت منحنى Ebbinghaus ولا يبرر نسب نسيان عامة؛ كما أن السجل 873 تكرار حرفي تابع لهذا المعرف.",
+      "candidateEvidence": [
+        "lib/srs.ts",
+        "lib/kapsel.ts",
+        "scripts/engine_smoke.ts"
+      ],
+      "relatedIds": [
+        181,
+        184,
+        390,
+        395,
+        853,
+        871,
+        873
+      ]
+    },
     "840": {
       "classification": "duplicate-catalog-record",
       "decision": "merge-duplicate",
