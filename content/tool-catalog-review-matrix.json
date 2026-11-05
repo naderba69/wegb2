@@ -4174,7 +4174,23 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "sensitive-learner-construct",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "قلق اللغة بناء نفسي سياقي لا يجوز استنتاجه من الأخطاء أو الصمت أو نتيجة الامتحان. يوجد بروتوكول تنفس اختياري حي، لكنه لا يقيس القلق ولا يثبت علاجه؛ يبقى السجل مرجعاً لتقليل الضغط ومراجعة اللغة غير الوصمية.",
+        "candidateEvidence": [
+          "components/lernstrategie.tsx",
+          "components/gesundheit.tsx",
+          "app/fortschritt/page.tsx"
+        ],
+        "relatedIds": [
+          306,
+          371,
+          583,
+          595
+        ]
       }
     },
     {
@@ -4195,7 +4211,23 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "communication-disposition-construct",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "إتاحة مهام التحدث أو إكمالها لا تساوي الاستعداد للتواصل؛ قد يتجنب المتعلم التسجيل لأسباب خصوصية أو إتاحة أو سياق. لا يوجد مقياس موافق عليه للرغبة أو الثقة، لذلك لا تُشتق سمة نفسية من سجل الاستعمال.",
+        "candidateEvidence": [
+          "components/dialogszenarien.tsx",
+          "components/sprechbegleiter.tsx",
+          "content/muendlich.json"
+        ],
+        "relatedIds": [
+          307,
+          309,
+          582,
+          950
+        ]
       }
     },
     {
@@ -4216,7 +4248,25 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "learning-strategy-taxonomy",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "تصنيف Oxford مظلة بحثية لا أداة واحدة، ومركز الاستراتيجيات الحي لا يعلن تغطية فئات التصنيف أو صلاحية قياس استعمالها. تُفحص الاستراتيجيات التنفيذية بندياً في سجلاتها بدلاً من احتساب وجود نصائح عامة تطبيقاً للتصنيف كله.",
+        "candidateEvidence": [
+          "components/lernstrategie.tsx",
+          "lib/hoerstrategien.ts",
+          "app/fortschritt/page.tsx"
+        ],
+        "relatedIds": [
+          304,
+          305,
+          306,
+          307,
+          308,
+          309
+        ]
       }
     },
     {
@@ -4234,10 +4284,28 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "metacognitive-learning-support",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "يتيح المنتج تخطيط أسبوع موزون، ومراقبة التقدم من السجل، وتصحيحاً وتقييماً ذاتيين بعد المحاولة؛ وهي مطابقة حية مرشحة للتخطيط والمراقبة والتقييم. لا يثبت ذلك جودة القرار فوق المعرفي أو انتقاله خارج الواجهة.",
+        "candidateEvidence": [
+          "components/lernstrategie.tsx",
+          "components/berichte.tsx",
+          "components/absicht.tsx",
+          "app/fortschritt/page.tsx",
+          "scripts/engine_smoke.ts"
+        ],
+        "relatedIds": [
+          290,
+          303,
+          368,
+          543
+        ]
       }
     },
     {
@@ -4255,10 +4323,29 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "cognitive-learning-strategies",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "توجد استراتيجيات حية قابلة للمشاهدة مثل الاسترجاع والتكرار الموزع، فك الكلمات، الاستعانة بالنص بعد الاستماع، والتصحيح الذاتي. المطابقة جزئية ولا تثبت أن فئات التصنيف مكتملة أو أن الترجمة وإعادة القراءة نافعتان في كل سياق.",
+        "candidateEvidence": [
+          "components/lernstrategie.tsx",
+          "lib/hoerstrategien.ts",
+          "components/tasks.tsx",
+          "lib/srs.ts",
+          "scripts/engine_smoke.ts"
+        ],
+        "relatedIds": [
+          263,
+          303,
+          307,
+          308,
+          542
+        ]
       }
     },
     {
@@ -4279,7 +4366,24 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "socio-affective-strategy-framework",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "يجمع السجل التعاون والتعاطف وخفض القلق في حزمة واسعة، بينما المنتج المحلي لا يوفر مجتمعاً أو علاقة أقران فعلية، وتمرين التنفس لا يثبت أثراً علاجياً. يبقى إطاراً لمراجعة السلامة والنبرة لا تدخلاً اجتماعياً وجدانياً مثبتاً.",
+        "candidateEvidence": [
+          "components/lernstrategie.tsx",
+          "components/dialogszenarien.tsx",
+          "content/real-world-validation.json"
+        ],
+        "relatedIds": [
+          298,
+          301,
+          303,
+          309,
+          371
+        ]
       }
     },
     {
@@ -4297,10 +4401,27 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "communication-compensation-practice",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "تعلّم الواجهة المتعلم التخمين من السياق، تفكيك الكلمات، طلب الإعادة والتوضيح، والاستمرار عند فوات كلمة؛ وهي مطابقة حية مرشحة لبعض استراتيجيات التعويض. لا يوجد بعد تدريب صريح مقاس على الإحاطة اللفظية والإيماءة أو نقلها إلى حديث حر.",
+        "candidateEvidence": [
+          "components/lernstrategie.tsx",
+          "lib/hoerstrategien.ts",
+          "lib/pragmatik.ts",
+          "components/pragmatik.tsx"
+        ],
+        "relatedIds": [
+          302,
+          303,
+          305,
+          489
+        ]
       }
     },
     {
@@ -4318,10 +4439,30 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "memory-learning-strategies",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "يوفر المسار حياً مراجعة مجدولة واسترجاعاً وبطاقات وشفرات تذكّر وتجميعاً معجمياً، وهي مطابقة مرشحة لاستراتيجيات الذاكرة. لا يثبت وجود هذه الآليات أن كل متعلم يستخدم التصوير أو التجميع بفاعلية، ولا أن تصنيف المرجع موثق.",
+        "candidateEvidence": [
+          "lib/srs.ts",
+          "content/mnemonik.json",
+          "components/akademie/FehlerRevue.tsx",
+          "components/tasks.tsx",
+          "scripts/engine_smoke.ts"
+        ],
+        "relatedIds": [
+          263,
+          273,
+          275,
+          303,
+          384,
+          542
+        ]
       }
     },
     {
@@ -4342,7 +4483,25 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "human-social-learning-strategies",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "توجد مطالبات شريك وسيناريوهات بصوت اصطناعي، لكنها لا تنشئ تعاوناً بشرياً أو سؤالاً موجهاً إلى شخص حقيقي ولا تتحقق من الموافقة والسلامة. يلزم بروتوكول شريك وبديل فردي واختبار ميداني قبل عد الاستراتيجية اجتماعية حية.",
+        "candidateEvidence": [
+          "content/muendlich.json",
+          "components/dialogszenarien.tsx",
+          "content/real-world-validation.json",
+          "app/datenschutz/page.tsx"
+        ],
+        "relatedIds": [
+          225,
+          298,
+          303,
+          306,
+          761
+        ]
       }
     },
     {
@@ -4360,10 +4519,30 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "exam-strategy-instruction",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "يعرض مركز الاستراتيجيات تكتيكات قبل وأثناء وبعد المهمة، وتفرض المحاكاة أزمنة الأقسام والتحضير وتدرب على قراءة المطلوب والتخمين السياقي. هذه مطابقة حية مرشحة، لكن بعض النصائح والحدود الزمنية تحتاج مطابقة مصدرية منفصلة حسب Goethe وtelc.",
+        "candidateEvidence": [
+          "components/lernstrategie.tsx",
+          "components/simulation.tsx",
+          "lib/hoerstrategien.ts",
+          "components/hoerstrategien.tsx",
+          "scripts/interaktiv_test.tsx"
+        ],
+        "relatedIds": [
+          303,
+          351,
+          352,
+          353,
+          354,
+          595
+        ]
       }
     },
     {
@@ -4381,10 +4560,28 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "intercultural-reflection-activity",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "يتضمن البنك نصاً حياً عن سوء فهم ثقافي يطلب تفسير التوقعات ويصرح بأنه قصة فردية لا حكماً على بلد، وهو نشاط انعكاس مرشح. لا يكفي نص واحد لإثبات كفاءة بين ثقافية، وتحتاج التعميمات الأخرى مراجعة حساسية وثقافات متعددة.",
+        "candidateEvidence": [
+          "content/texts.json",
+          "content/lang/b2-36-40.json",
+          "components/akademie/LektionWizard.tsx",
+          "components/tasks.tsx"
+        ],
+        "relatedIds": [
+          312,
+          570,
+          692,
+          731,
+          934
+        ]
       }
     },
     {
@@ -4402,10 +4599,32 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "pragmatic-situation-practice",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "توجد بطاقة حية تختار فيها الصيغة الأنسب لموقف اجتماعي مع تفسير، وسيناريوهات تفاوض وشكوى ومقاطعة بتغذية راجعة. هذه مطابقة مرشحة للكفاءة التداولية، لا حكماً شاملاً على الملاءمة عبر المناطق والهويات والسياقات.",
+        "candidateEvidence": [
+          "lib/pragmatik.ts",
+          "components/pragmatik.tsx",
+          "lib/dialogszenarien.ts",
+          "components/dialogszenarien.tsx",
+          "scripts/interaktiv_test.tsx"
+        ],
+        "relatedIds": [
+          307,
+          311,
+          313,
+          314,
+          349,
+          695,
+          697,
+          932
+        ]
       }
     },
     {
@@ -4423,10 +4642,27 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "functional-speech-act-practice",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "يصنف بنك وسائل التعبير عبارات الرأي والتعليل والاعتراض والاقتراح والشكوى والاستفسار، ثم يطلب استرجاعها ويضعها في مواقف. هذا تنفيذ حي مرشح لأفعال كلامية محددة، لكن تغطية الشروط والسياق والقوة الإنجازية لم تُراجع أكاديمياً.",
+        "candidateEvidence": [
+          "content/redemittel.json",
+          "lib/redemittel.ts",
+          "components/redemittel.tsx",
+          "lib/pragmatik.ts",
+          "scripts/engine_smoke.ts"
+        ],
+        "relatedIds": [
+          312,
+          314,
+          689
+        ]
       }
     },
     {
@@ -4447,7 +4683,23 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "politeness-explanatory-theory",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "يتدرب المتعلم فعلاً على طلب ورفض واعتراض مهذب، لكن ذلك لا يثبت تطبيق نظرية التأدب أو مفاهيم الوجه والاستراتيجيات المنسوبة إليها. تبقى النظرية مرجعاً تفسيرياً؛ وتُراجع أمثلة الملاءمة تحت التداولية وأفعال الكلام بلا تعميم ثقافي.",
+        "candidateEvidence": [
+          "lib/pragmatik.ts",
+          "components/pragmatik.tsx",
+          "lib/dialogszenarien.ts",
+          "content/redemittel.json"
+        ],
+        "relatedIds": [
+          312,
+          313,
+          690
+        ]
       }
     },
     {
@@ -4465,10 +4717,29 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "discourse-marker-practice",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "يوفر بنك العبارات روابط ووظائف افتتاح وتعليل ومقارنة وتلخيص، وتطلب مهام الكتابة والتحدث استخدامها في بنى كاملة. هذه مطابقة حية مرشحة لروابط الخطاب، لكن يلزم تدقيق الموقع والسجل والتنوع ومنع الحشو الآلي.",
+        "candidateEvidence": [
+          "content/redemittel.json",
+          "lib/redemittel.ts",
+          "components/redemittel.tsx",
+          "content/writing.json",
+          "components/schreiben.tsx"
+        ],
+        "relatedIds": [
+          313,
+          316,
+          350,
+          672,
+          928
+        ]
       }
     },
     {
@@ -4486,10 +4757,29 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "writing-cohesion-coherence-support",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "تطلب المهام بنية فقرات وروابط، ويعرض التقويم معيار التماسك ويكشف غياب بعض الروابط؛ وهي مطابقة حية مرشحة. الكاشف المحلي يرى أنماطاً سطحية ولا يفهم منطق النص، وأي تقييم لغوي آلي أوسع اختياري وغير معتمد.",
+        "candidateEvidence": [
+          "lib/kriterien.ts",
+          "content/writing.json",
+          "components/schreiben.tsx",
+          "lib/grader.ts",
+          "scripts/engine_smoke.ts"
+        ],
+        "relatedIds": [
+          315,
+          317,
+          681,
+          682,
+          928
+        ]
       }
     },
     {
@@ -4507,10 +4797,28 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "genre-based-writing-practice",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "توجد مهام حية لأنواع رسالة وشكوى واعتذار ومنتدى مع نقاط مطلوبة وقوائم فحص ونموذج لا يفتح قبل المحاولة. هذه مطابقة مرشحة للتعلم القائم على النوع، لكنها لا تثبت تحليل الحركات الخطابية وفق Swales أو اكتمال الأنواع الامتحانية.",
+        "candidateEvidence": [
+          "lib/schreiballtag.ts",
+          "components/schreiballtag.tsx",
+          "content/writing.json",
+          "components/briefe.tsx",
+          "scripts/interaktiv_test.tsx"
+        ],
+        "relatedIds": [
+          315,
+          316,
+          701,
+          706
+        ]
       }
     },
     {
@@ -4528,10 +4836,29 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "internal-corpus-guided-learning",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "يحسب المنتج حياً تردد جذوع الكلمات في نصوصه وحواراته وجمله، ويعرض التصنيف والعدد مع تصريح أنه ليس تردداً ألمانياً عاماً. هذا تطابق مرشح محدود للتعلم المستند إلى مدونة داخلية، بلا concordance أو بيانات خارجية مرخصة.",
+        "candidateEvidence": [
+          "lib/frequenz.ts",
+          "components/kartenexport.tsx",
+          "components/tiefenlex.tsx",
+          "scripts/engine_smoke.ts"
+        ],
+        "relatedIds": [
+          319,
+          517,
+          527,
+          707,
+          889,
+          994
+        ]
       }
     },
     {
@@ -4552,7 +4879,24 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "learner-data-discovery-method",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "شارة التردد من مدونة التطبيق تعرض نتيجة مجمعة فقط ولا تمكّن المتعلم من فحص أمثلة متوافقة أو صياغة فرضية ثم اختبارها؛ لذلك لا تكفي لتسمية النشاط تعلماً مستنداً إلى البيانات. يلزم واجهة استكشاف ومهمة استقراء وقياس.",
+        "candidateEvidence": [
+          "lib/frequenz.ts",
+          "components/kartenexport.tsx",
+          "components/tiefenlex.tsx"
+        ],
+        "relatedIds": [
+          318,
+          527,
+          707,
+          889,
+          890
+        ]
       }
     },
     {
@@ -4570,10 +4914,33 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "formulaic-language-practice",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "يتدرب المتعلم حياً على عبارات وظيفية متعددة الكلمات ومتلازمات ثابتة بالاسترجاع والإنتاج من الذاكرة، وهو تطابق مرشح للحزم المعجمية. لم تُستخرج الحزم وفق معيار مدونة موثق ولم تُراجع حدود التكرار والتوزيع أو التمييز عن المتلازمات.",
+        "candidateEvidence": [
+          "content/redemittel.json",
+          "components/redemittel.tsx",
+          "lib/kollokproduktion.ts",
+          "components/kollokproduktion.tsx",
+          "scripts/interaktiv_test.tsx"
+        ],
+        "relatedIds": [
+          218,
+          275,
+          308,
+          323,
+          642,
+          643,
+          839,
+          841,
+          842
+        ]
       }
     },
     {
