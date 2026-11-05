@@ -6519,7 +6519,26 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "feedback-response-sequence",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "التصحيح الحي وإعادة الكتابة موجودان في مسارات متجاورة، لكن المنتج لا يسجل حلقة محددة من تغذية راجعة ثم استجابة متعلم ثم إصلاح ناجح. لا يجوز عدّ إظهار الجواب أو التصحيح الآلي uptake؛ يلزم معرف محاولة يربط المراحل ومعيار إصلاح واختبار سلوكي.",
+        "candidateEvidence": [
+          "components/exercises.tsx",
+          "components/schreibschleife.tsx",
+          "components/wiederschreiben.tsx"
+        ],
+        "relatedIds": [
+          356,
+          402,
+          410,
+          818,
+          819,
+          820,
+          821
+        ]
       }
     },
     {
@@ -6540,7 +6559,23 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "interaction-process-theory",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "التفاوض على المعنى يتطلب تعثراً قابلاً للرصد وإشارة توضيح أو تحققاً متبادلاً ثم استجابة تعدّل الفهم. عبارات التوضيح الجاهزة أو رفيق المحادثة وحدهما لا يثبتان هذا التسلسل ولا شريكاً بشرياً؛ لذلك يبقى مفهوماً بحثياً حتى تُعرّف الحلقة وخصوصيتها وقياسها.",
+        "candidateEvidence": [
+          "lib/interaction-deep.ts",
+          "components/sprechbegleiter.tsx"
+        ],
+        "relatedIds": [
+          213,
+          411,
+          412,
+          810,
+          822
+        ]
       }
     },
     {
@@ -6561,7 +6596,26 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "sociocultural-learning-theory",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "يقدم Lesson Studio تسلسلاً حياً من المثال المحلول إلى التدريب والتطبيق المستقل، وهو سقالة مجاورة مفيدة، لكنه ثابت نسبياً ولا يقيس ما ينجزه المتعلم وحده مقابل ما ينجزه بالمساعدة. مستوى CEFR أو التكرارات لا يحددان ZPD، لذا لا يعتمد ادعاء الضبط الديناميكي أو optimal challenge.",
+        "candidateEvidence": [
+          "lib/scaffolding-deep.ts",
+          "components/akademie/LektionWizard.tsx",
+          "lib/plan.ts"
+        ],
+        "relatedIds": [
+          204,
+          208,
+          277,
+          285,
+          289,
+          801,
+          823
+        ]
       }
     },
     {
@@ -6579,10 +6633,32 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "differentiated-instruction",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "يوفر المنتج تشخيصاً متكيفاً لأربع مهارات واقتراح نقطة دخول محافظة، واختيار وتيرة، واتجاهات أداء وبطاقات عنيدة من سجل الفرد؛ وهي مطابقة حية مرشحة لبعض تمايز الاستعداد والوتيرة. لا توجد بعد خريطة كاملة للمحتوى والعملية والمخرج حسب ملف متعلم ولا تحقق من عدالة المسارات.",
+        "candidateEvidence": [
+          "lib/einstufung.ts",
+          "components/einstufung.tsx",
+          "app/einstellungen/page.tsx",
+          "lib/kalibrierung.ts",
+          "components/kalibrierung.tsx",
+          "scripts/engine_smoke.ts"
+        ],
+        "relatedIds": [
+          181,
+          183,
+          262,
+          289,
+          290,
+          304,
+          726
+        ]
       }
     },
     {
@@ -6603,7 +6679,16 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "anti-pattern-research-guidance",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "هذا السجل نقد لنماذج مطابقة التعليم لما يسمى نمط تعلم، وليس ميزة تعلم مستقلة. يُحفظ كقيد تصميم يمنع تشخيص المتعلم بصرياً أو سمعياً ومنع تخصيص المسار على اختبار نمط غير صالح؛ أما تعدد الصيغ للإتاحة والاختيار فلا يسمى learning styles.",
+        "candidateEvidence": [],
+        "relatedIds": [
+          366
+        ]
       }
     },
     {
@@ -6624,7 +6709,16 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "anti-pattern-research-guidance",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "نقد الذكاءات المتعددة ليس محرك تخصيص ولا مقياساً نفسياً صالحاً للاستخدام المباشر. يُحفظ إرشاداً يمنع وسم المتعلم بذكاء ثابت أو تحويل كل نشاط إلى درجة ذكاء، مع فصل تنويع الأنشطة العام عن ادعاء تحقق نظرية Gardner أو أثرها.",
+        "candidateEvidence": [],
+        "relatedIds": [
+          365
+        ]
       }
     },
     {
@@ -6642,10 +6736,31 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "learner-autonomy-support",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "يستطيع المتعلم حياً اختيار نقطة الانطلاق والوتيرة وسرعة الصوت، إيقاف الجلسة وحفظها، تحديد نية أسبوعية، ومراجعة تقدمه المحلي؛ وهي مطابقة مرشحة لدعم بعض قرارات التعلم. الخطة الأساسية والبوابات ما زالتا مقيدتين، والاختيارات لا تثبت قدرة أو شعور الاستقلالية ولا انتقالها خارج الواجهة.",
+        "candidateEvidence": [
+          "app/einstellungen/page.tsx",
+          "app/page.tsx",
+          "components/absicht.tsx",
+          "components/motivation.tsx",
+          "app/fortschritt/page.tsx"
+        ],
+        "relatedIds": [
+          290,
+          291,
+          296,
+          304,
+          368,
+          369,
+          960
+        ]
       }
     },
     {
@@ -6663,10 +6778,33 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "self-regulated-learning-support",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "تجمع الواجهة الحية تخطيط النية والأسبوع، ومراقبة الوقت والتقدم واتجاهات المهارات، وتقييماً ذاتياً ومراجعة لاحقة؛ وهي مطابقة مرشحة لدورة التخطيط والمراقبة والتأمل. لا يقيس المنتج جودة التنظيم الذاتي أو الاستراتيجية المختارة، ولا يثبت النموذج الدوري أو أثراً سببياً.",
+        "candidateEvidence": [
+          "lib/absicht.ts",
+          "components/absicht.tsx",
+          "lib/motivation.ts",
+          "components/motivation.tsx",
+          "lib/kalibrierung.ts",
+          "components/kalibrierung.tsx",
+          "components/lernstrategie.tsx"
+        ],
+        "relatedIds": [
+          201,
+          290,
+          291,
+          304,
+          367,
+          369,
+          543
+        ]
       }
     },
     {
@@ -6684,10 +6822,29 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "self-directed-learning-support",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "تتيح المحطات الحرة واختيارات المستوى والمدة والوتيرة والهدف الأسبوعي للمتعلم توجيه أجزاء من مساره ومراجعتها من سجله، وهي مطابقة حية مرشحة للتعلم الموجه ذاتياً. لكنها لا تمنحه تشخيص الاحتياج وصياغة المنهج ومعايير التقييم كاملة، كما أن طابور اليوم يظل موجهاً من المنتج.",
+        "candidateEvidence": [
+          "app/ueben/page.tsx",
+          "components/freiesinput.tsx",
+          "app/einstellungen/page.tsx",
+          "components/absicht.tsx",
+          "app/fortschritt/page.tsx"
+        ],
+        "relatedIds": [
+          290,
+          304,
+          367,
+          368,
+          370
+        ]
       }
     },
     {
@@ -6708,7 +6865,22 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "education-policy-framework",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "التعلم مدى الحياة إطار سياساتي وطولي يتجاوز دورة استعمال تطبيق واحد. سجل الأسابيع والنسخ المحلية وإمكان متابعة الخطة تدعم الاستمرارية فقط، ولا تثبت مشاركة مستدامة عبر مراحل الحياة أو اعترافاً رسمياً أو قابلية نقل بين مؤسسات؛ لذلك لا يعد ميزة مستقلة.",
+        "candidateEvidence": [
+          "lib/motivation.ts",
+          "components/motivation.tsx",
+          "app/einstellungen/page.tsx"
+        ],
+        "relatedIds": [
+          367,
+          368,
+          369
+        ]
       }
     },
     {
@@ -6729,7 +6901,24 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "sla-theory",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "فرضية المرشح الوجداني تفسير نظري وليست قيمة يمكن استنتاجها من الراحة أو الأخطاء. يوفر المنتج لغة غير لومّية وتنفساً اختيارياً وتوقفاً وحفظاً، لكنها دعم عام لا قياس للقلق أو الدافعية ولا إثبات لانخفاض مرشح أو زيادة اكتساب؛ ويُمنع اشتقاق بناء نفسي من السجل.",
+        "candidateEvidence": [
+          "lib/affective-filter-deep.ts",
+          "components/lernstrategie.tsx",
+          "app/page.tsx"
+        ],
+        "relatedIds": [
+          278,
+          301,
+          306,
+          583,
+          826
+        ]
       }
     },
     {
@@ -6750,7 +6939,23 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "input-flood-design",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "جلسة المدخل الحر الحية تجمع تعرضاً ممتداً حسب المستوى والمدة، لكنها لا تختار شكلاً لغوياً مستهدفاً ولا ترفع كثافته وتحسب التعرضات مقارنة بخط أساس؛ لذلك ليست input flood. يلزم مولد أو بنك مراجع يضبط الهدف والكثافة والفهم ويمنع نصوصاً مصطنعة قبل توصيل السجل.",
+        "candidateEvidence": [
+          "lib/freiesinput.ts",
+          "components/freiesinput.tsx",
+          "lib/input-enhancement-deep.ts"
+        ],
+        "relatedIds": [
+          377,
+          378,
+          437,
+          823
+        ]
       }
     },
     {
@@ -6771,7 +6976,21 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "sla-processing-theory",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "مبادئ معالجة المدخل تفسر أولوية المعنى وقيود الانتباه، لكنها لا تتحول إلى درجة انتباه أو فحص برمجي بسيط. وجود سؤال شكل-معنى صغير لا يثبت نموذج VanPatten ولا تغير استراتيجية المعالجة؛ يلزم فصل النظرية عن تدخل Processing Instruction وقياس فهم المعنى فعلياً.",
+        "candidateEvidence": [
+          "lib/processing-instruction.ts",
+          "lib/plan.ts"
+        ],
+        "relatedIds": [
+          374,
+          416,
+          531
+        ]
       }
     },
     {
@@ -6792,7 +7011,23 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "structured-input-activity",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "يحتوي المحرك بنكاً صغيراً لسؤالين يربطان أداة الربط بالمعنى ويضيف نص المطالبة إلى بيانات الخطة، لكن الواجهة لا تعرض piHinweis ولا الجمل والاختيار والتغذية الراجعة للمتعلم. لذلك لا يوجد نشاط structured input حي، ويلزم توصيل بنود متعددة واختبار أن المهمة تفسيرية لا إنتاجية.",
+        "candidateEvidence": [
+          "lib/processing-instruction.ts",
+          "lib/plan.ts",
+          "lib/types.ts",
+          "scripts/engine_smoke.ts"
+        ],
+        "relatedIds": [
+          373,
+          416,
+          531
+        ]
       }
     },
     {
@@ -6813,7 +7048,20 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "error-induction-instructional-design",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "عرض الفخاخ والتباينات الصحيحة في Lesson Studio ليس Garden Path؛ التدخل المقترح يستدرج تعميماً خاطئاً ثم يصححه، ما قد يرسخ الخطأ إن ضعف التصحيح. يلزم تبرير مصدر، وبنود محددة، وتصحيح فوري، واختبار احتفاظ ومراجعة ضرر قبل أي تجربة حية.",
+        "candidateEvidence": [
+          "components/akademie/LektionWizard.tsx",
+          "content/grammar.json"
+        ],
+        "relatedIds": [
+          374,
+          416
+        ]
       }
     },
     {
@@ -6834,7 +7082,25 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "sla-frequency-theory",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "يعرض المنتج تردد الكلمة داخل مدونته الصغيرة مع حد صريح ويتيح الفرز به، لكن هذا لا يثبت أثر التكرار في الاكتساب ولا يساوي تردد الألمانية العام أو تكرار بنية صرفية. تبقى النظرية مرجعاً لتصميم جرعات قابلة للعد، منفصلة عن شارة المدونة وعن سببية التعلم.",
+        "candidateEvidence": [
+          "lib/frequenz.ts",
+          "components/kartenexport.tsx",
+          "components/tiefenlex.tsx",
+          "scripts/engine_smoke.ts"
+        ],
+        "relatedIds": [
+          318,
+          377,
+          437,
+          519,
+          647
+        ]
       }
     },
     {
@@ -6852,10 +7118,29 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "input-salience-design",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "medium",
+        "rationaleAr": "تلوّن بطاقة القراءة الحية أول شاهد لقاعدة الأسبوع وتسميه وتسأل عن الجملة التي تحمله، كما تستخدم جداول الدرس إشارات بصرية؛ وهي مطابقة مرشحة لزيادة البروز الإدراكي. لا يقيس المنتج ما انتبه إليه المتعلم، وقد يكون البروز بصرياً فقط، ولا يثبت أثراً صرفياً أو اكتساباً.",
+        "candidateEvidence": [
+          "lib/bemerken.ts",
+          "components/bemerken.tsx",
+          "components/tasks.tsx",
+          "components/akademie/LektionWizard.tsx",
+          "scripts/interaktiv_test.tsx"
+        ],
+        "relatedIds": [
+          280,
+          318,
+          376,
+          378,
+          437
+        ]
       }
     },
     {
@@ -6876,7 +7161,25 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "sla-noticing-theory",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "بطاقة الملاحظة الحية تبرز شاهداً وتطلب اختيار جملته، لكنها تقيس إجابة على سؤال صريح لا الحالة الذهنية noticing ولا ضرورة الوعي للاكتساب. الفرضية المتقدمة تبقى بحثية؛ تُفصل عن نشاط الملاحظة المرشح وعن التحسن اللاحق ما لم يوجد تصميم قياس ومقارنة.",
+        "candidateEvidence": [
+          "lib/noticing-deep.ts",
+          "lib/bemerken.ts",
+          "components/bemerken.tsx",
+          "scripts/interaktiv_test.tsx"
+        ],
+        "relatedIds": [
+          212,
+          280,
+          377,
+          436,
+          811
+        ]
       }
     },
     {
@@ -6897,7 +7200,22 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "awareness-construct",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "مستويات الانتباه والكشف والفهم بناءات بحثية لا يمكن استنتاجها من النقر أو صحة اختيار واحد. الإبراز والسؤال الحيان قد يوفران فرصة للانتباه، لكنهما لا يصنفان وعي المتعلم ولا يبرهنان verbal report؛ يلزم بروتوكول قياس صالح وموافقة وحدود تفسير قبل أي تصنيف.",
+        "candidateEvidence": [
+          "lib/noticing-deep.ts",
+          "lib/bemerken.ts",
+          "components/bemerken.tsx"
+        ],
+        "relatedIds": [
+          212,
+          378,
+          813
+        ]
       }
     },
     {
@@ -6918,7 +7236,25 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "sla-instruction-comparison",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-05",
+        "risk": "high",
+        "rationaleAr": "يعرض Lesson Studio أمثلة ثم قاعدة صريحة وتدريباً، لكنه لا يقارن تعلماً ضمنياً بتعليم صريح ولا يعزل نوع المعرفة أو زمن الاختبار. التسلسل المختلط ليس دليلاً على أفضلية أحدهما، وتحتاج الادعاءات السببية تعريف المهارة ومقياساً مؤجلاً وتصميماً ميدانياً مناسباً.",
+        "candidateEvidence": [
+          "components/akademie/LektionWizard.tsx",
+          "content/grammar.json"
+        ],
+        "relatedIds": [
+          402,
+          532,
+          533,
+          697,
+          698,
+          818,
+          819
+        ]
       }
     },
     {
