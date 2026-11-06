@@ -19763,10 +19763,30 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "text-connector-cohesion-practice",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "توجد دروس حية للروابط B1/B2 ومهام كتابة تطلب ربط الحجج، كما تعرض لوحة الكتابة عدد روابط محددة والفقرات بوصفها مؤشرات سطحية؛ وهذه مطابقة مرشحة لجزء من التماسك النصي. لا يرمّز المنتج فئات Halliday للإحالة والاستبدال والحذف والتماسك المعجمي ولا يحلل سلاسلها، فلا تُسمى النتيجة تطبيقاً كاملاً لإطار Halliday.",
+        "candidateEvidence": [
+          "content/grammar.json",
+          "content/writing.json",
+          "lib/kriterien.ts",
+          "components/kriterienpanel.tsx",
+          "scripts/engine_smoke.ts"
+        ],
+        "relatedIds": [
+          315,
+          316,
+          682,
+          683,
+          684,
+          928
+        ]
       }
     },
     {
@@ -19787,7 +19807,25 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "text-coherence-cognitive-theory",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "الانسجام عند Kintsch يتعلق ببناء textbase ونموذج موقف ودمج الاستدلالات، ولا يساوي وجود روابط أو فقرات. الكاشف المحلي يعد قائمة ألفاظ وفواصل أسطر ويصرح بأنه مؤشر تدريبي؛ لا يفهم القضايا أو التناقض أو العلاقة بين الأفكار، لذلك لا يثبت نموذج Kintsch أو جودة الانسجام الدلالي.",
+        "candidateEvidence": [
+          "lib/kriterien.ts",
+          "components/kriterienpanel.tsx",
+          "content/writing.json",
+          "lib/grader.ts"
+        ],
+        "relatedIds": [
+          316,
+          487,
+          681,
+          683,
+          928
+        ]
       }
     },
     {
@@ -19808,7 +19846,25 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "thematic-progression-theory",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "التقدم الموضوعاتي يتطلب تعيين theme/rheme وتتبع أنماط مثل الثابت والخطي والمتفرع بين الجمل. توجيهات التمهيد والحجة والخاتمة والروابط الحالية تنظّم النص، لكنها لا تستخرج الموضوع والمحمول ولا تفحص انتقال المعلومة؛ لذلك لا تُساوى بنموذج Daneš.",
+        "candidateEvidence": [
+          "content/writing.json",
+          "content/grammar.json",
+          "lib/kriterien.ts"
+        ],
+        "relatedIds": [
+          316,
+          681,
+          682,
+          684,
+          685,
+          686
+        ]
       }
     },
     {
@@ -19829,7 +19885,24 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "information-structure-theory",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "بنية المعلومات تفسر ترميز المعطى والجديد والموضوع والبؤرة عبر السياق والترتيب والنبر، وليست مجرد ترتيب صحيح للفعل أو وضع رابط في أول الجملة. لا يتتبع المنتج الحالة الخطابية للمرجع ولا يوسم topic/focus أو النبر، فلا تثبت دروس Wortstellung الحالية إطار Lambrecht.",
+        "candidateEvidence": [
+          "content/grammar.json",
+          "content/writing.json",
+          "content/texts.json"
+        ],
+        "relatedIds": [
+          440,
+          683,
+          685,
+          686,
+          712
+        ]
       }
     },
     {
@@ -19850,7 +19923,22 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "topic-focus-theory",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "تمييز الموضوع والبؤرة يحتاج سياقاً يحدد ما يدور عنه الكلام وما يجيب عن سؤال ضمني، مع دلائل تركيبية أو نبرية. وجود عنوان أو موضوع مهمة أو عنصر في Vorfeld لا يحدد هذه الوظائف تلقائياً، ولا توجد أسئلة تقارن قراءات البؤرة؛ لذا يبقى Topic Focus إطاراً بحثياً.",
+        "candidateEvidence": [
+          "content/grammar.json",
+          "content/writing.json",
+          "content/muendlich.json"
+        ],
+        "relatedIds": [
+          683,
+          684,
+          686
+        ]
       }
     },
     {
@@ -19871,7 +19959,22 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "given-new-information-theory",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "المعطى والجديد حالتان خطابيتان تتغيران بحسب معرفة المخاطب والسياق وسلسلة الإحالة، ولا يمكن استنتاجهما من ترتيب الكلمات أو من ظهور معلومة أول مرة في مثال مؤلف. لا يتتبع المنتج قابلية الوصول المرجعي ولا يطلب من المتعلم تبرير اختيار أداة أو نبر وفق الحالة، لذلك لا يطبق نموذج Clark.",
+        "candidateEvidence": [
+          "content/grammar.json",
+          "content/texts.json",
+          "content/writing.json"
+        ],
+        "relatedIds": [
+          683,
+          684,
+          685
+        ]
       }
     },
     {
@@ -19892,7 +19995,21 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "pragmatic-presupposition-theory",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "الافتراض المسبق يتطلب محفزات لغوية واختبار ما يبقى مفترضاً تحت النفي والسؤال وإمكان الإلغاء أو التكييف. لا تعرض الأنشطة الحالية قولاً يطلب كشف الافتراض الكامن أو مقارنة إسقاطه؛ وفهم نص أو معرفة Voraussetzung المعجمية لا علاقة له بهذا البناء التداولي.",
+        "candidateEvidence": [
+          "content/texts.json",
+          "lib/pragmatik.ts",
+          "content/grammar.json"
+        ],
+        "relatedIds": [
+          349,
+          688
+        ]
       }
     },
     {
@@ -19913,7 +20030,22 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "gricean-implicature-theory",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "الاستلزام الحواري عند Grice يحتاج قولاً وسياقاً ومعنى غير مصرح به وتحليلاً للتعاون وقابلية الإلغاء. المواقف الحية تختار جواباً مهذباً، ونص «بين السطور» يدرّب التأطير الإعلامي لا استلزاماً غرايسياً؛ لذلك يطابق هذا السجل قرار 349 ولا يثبت نظرية Grice.",
+        "candidateEvidence": [
+          "lib/pragmatik.ts",
+          "components/pragmatik.tsx",
+          "content/texts.json"
+        ],
+        "relatedIds": [
+          312,
+          349,
+          687
+        ]
       }
     },
     {
@@ -19931,10 +20063,31 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "functional-speech-act-practice",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "medium",
+        "rationaleAr": "يصنف بنك العبارات ويتمرن المتعلم حياً على طلب ورفض واقتراح وشكوى واعتذار واعتراض، وتربط السيناريوهات الصيغة بالفعل المقصود والسياق؛ وهذه مطابقة مرشحة لأفعال كلام محددة. لا يطبق المنتج تصنيف Searle كاملاً أو شروط النجاح والقوة الإنجازية ولا يثبت أداءها في إنتاج حر.",
+        "candidateEvidence": [
+          "content/redemittel.json",
+          "lib/redemittel.ts",
+          "components/redemittel.tsx",
+          "lib/pragmatik.ts",
+          "lib/dialogszenarien.ts"
+        ],
+        "relatedIds": [
+          312,
+          313,
+          314,
+          690,
+          691,
+          699,
+          700
+        ]
       }
     },
     {
@@ -19955,7 +20108,25 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "brown-levinson-politeness-theory",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "توجد ممارسة فعلية للطلب والرفض والنقد بصياغة مهذبة، لكن نظرية Brown وLevinson تفترض وجهاً إيجابياً وسلبياً واستراتيجيات مرتبطة بالمسافة والقوة وثقل الطلب. لا يوسم المنتج هذه المتغيرات أو يختبرها عبر ثقافات، لذلك يبقى السجل نظرياً كما في 314 ولا تتحول الملاءمة المحلية إلى دعوى إطار كامل.",
+        "candidateEvidence": [
+          "lib/pragmatik.ts",
+          "components/pragmatik.tsx",
+          "lib/dialogszenarien.ts",
+          "content/redemittel.json"
+        ],
+        "relatedIds": [
+          312,
+          314,
+          689,
+          691,
+          692
+        ]
       }
     },
     {
@@ -19976,7 +20147,24 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "face-threatening-act-theory",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "الطلبات والرفض والنقد قد تكون أفعالاً مهددة للوجه، لكن وجودها في سيناريو مهذب لا يعني أن المنتج يحلل التهديد نفسه. لا توجد مهمة تعين الوجه المتأثر أو توازن القوة والمسافة وثقل الفعل ولا مراجعة عابرة للثقافات؛ لذلك لا تُستنتج مفاهيم Brown من تصنيف خيار بأنه قوي أو غير مهذب.",
+        "candidateEvidence": [
+          "lib/pragmatik.ts",
+          "lib/dialogszenarien.ts",
+          "components/dialogszenarien.tsx"
+        ],
+        "relatedIds": [
+          312,
+          314,
+          689,
+          690,
+          692
+        ]
       }
     },
     {
@@ -19994,10 +20182,36 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "intercultural-pragmatic-reflection-activity",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "يوجد نص حي متخيّل يقارن تجربة فردية مع النقد المباشر وغير المباشر ويطلب مراجعة التوقعات، مع تصريح صريح بأنه ليس حكماً على شعب؛ وهذه مطابقة مرشحة لانعكاس تداولي بين ثقافي محدود. لا توجد بيانات مقارنة لأفعال الكلام أو مناطق وهويات متعددة، فلا يثبت إطار Blum-Kulka ولا كفاءة عبر ثقافية.",
+        "candidateEvidence": [
+          "content/texts.json",
+          "content/lang/b2-36-40.json",
+          "components/akademie/LektionWizard.tsx",
+          "components/tasks.tsx"
+        ],
+        "relatedIds": [
+          311,
+          312,
+          314,
+          486,
+          490,
+          671,
+          693,
+          694,
+          695,
+          697,
+          731,
+          932,
+          934
+        ]
       }
     },
     {
@@ -20018,7 +20232,30 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "interlanguage-pragmatics-research-field",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "التداولية البينية تدرس كيف يفهم متعلمو اللغة الثانية الأفعال الكلامية وينتجونها ويتطور أداؤهم، ولا يثبتها بنك إجابات مؤلفة مسبقاً. لا يجمع المنتج عينات إنتاج تداولي طولية ولا يقارنها بخط أساس أو يرمز الاختيارات الحرة لدى مقيمين، لذلك تبقى السيناريوهات تدريباً مجاوراً لا بيانات interlanguage.",
+        "candidateEvidence": [
+          "lib/pragmatik.ts",
+          "lib/dialogszenarien.ts",
+          "components/dialogszenarien.tsx",
+          "content/muendlich.json"
+        ],
+        "relatedIds": [
+          312,
+          486,
+          490,
+          692,
+          694,
+          695,
+          696,
+          697,
+          698,
+          932
+        ]
       }
     },
     {
@@ -20039,7 +20276,26 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "pragmatic-transfer-construct",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "النقل التداولي ادعاء سببي عن أثر أنماط اللغة أو الثقافة السابقة في فهم اللغة الهدف أو إنتاجها. قصة سوء فهم ثقافي أو اختيار صيغة حذرة لا يحدد مصدر السلوك ولا يقارن L1 وL2؛ ولا توجد بيانات خط أساس أو ترميز أخطاء، لذلك لا يجوز نسبة أي إجابة إلى transfer.",
+        "candidateEvidence": [
+          "content/texts.json",
+          "content/writing.json",
+          "lib/pragmatik.ts"
+        ],
+        "relatedIds": [
+          311,
+          312,
+          490,
+          692,
+          693,
+          695,
+          924
+        ]
       }
     },
     {
@@ -20057,10 +20313,33 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "pragmatic-awareness-practice",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "تجعل بطاقة البراغماتية والسيناريوهات فروق الطلب والرفض والاعتراض والنقد صريحة، وتشرح بعد الاختيار كيف تغيّر الصيغة أثرها في العلاقة؛ وهذه ممارسة مرشحة للوعي التداولي. الإجابة الصحيحة لا تثبت وعياً ذهنياً مستقراً أو نقلاً إلى سياق جديد، والبنك يحتاج مراجعة تنوع وحساسية بشرية.",
+        "candidateEvidence": [
+          "lib/pragmatik.ts",
+          "components/pragmatik.tsx",
+          "lib/dialogszenarien.ts",
+          "components/dialogszenarien.tsx",
+          "scripts/interaktiv_test.tsx"
+        ],
+        "relatedIds": [
+          212,
+          280,
+          312,
+          671,
+          692,
+          693,
+          696,
+          697,
+          813
+        ]
       }
     },
     {
@@ -20078,10 +20357,35 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "pragmatic-contrast-noticing-activity",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "تعرض الأنشطة الحية ثلاث صيغ متقابلة للموقف نفسه ثم تكشف تفسير اللطف والوضوح والضرر بعد الاختيار؛ وهذا يوفر فرصة ملاحظة تداولية مرشحة. لا يقيس المنتج حركة انتباه أو تقرير ملاحظة قبل الشرح ولا يثبت أن المتعلم لاحظ الخصائص أو اكتسبها، لذلك تُنسب المطابقة للنشاط لا لفرضية noticing.",
+        "candidateEvidence": [
+          "lib/pragmatik.ts",
+          "components/pragmatik.tsx",
+          "lib/dialogszenarien.ts",
+          "components/dialogszenarien.tsx",
+          "scripts/interaktiv_test.tsx"
+        ],
+        "relatedIds": [
+          212,
+          280,
+          378,
+          379,
+          435,
+          436,
+          695,
+          697,
+          698,
+          811,
+          813
+        ]
       }
     },
     {
@@ -20099,10 +20403,28 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "explicit-pragmatic-instruction-practice",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "تقدم بطاقة البراغماتية والسيناريوهات حكماً صريحاً بعد كل اختيار وتفسر عناصر مثل Konjunktiv II والاعتراف الجزئي والبديل والطلب المحدد؛ وهذه مطابقة مرشحة لتعليم تداولي صريح. لا توجد مقارنة تجريبية أو قياس قبلي وبعدي يثبت فعالية طريقة Jeon أو انتقالها إلى إنتاج طبيعي.",
+        "candidateEvidence": [
+          "lib/pragmatik.ts",
+          "components/pragmatik.tsx",
+          "lib/dialogszenarien.ts",
+          "components/dialogszenarien.tsx",
+          "scripts/interaktiv_test.tsx"
+        ],
+        "relatedIds": [
+          312,
+          695,
+          696,
+          698
+        ]
       }
     },
     {
@@ -20123,7 +20445,25 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "implicit-pragmatic-instruction-paradigm",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "التعليم التداولي الضمني يحتاج تعرضاً أو تغذية لا تصرح بالقاعدة مع فصل واضح عن الشرط الصريح. التنفيذ الحالي يسمي الفئة ويبين الخيار القوي ويشرح سبب اللطف والضرر مباشرة، فلا يمثل شرطاً ضمنياً؛ كما لا توجد مقارنة أو قياس تعلم، لذلك يبقى نموذج Taguchi للبحث لا ميزة حية.",
+        "candidateEvidence": [
+          "lib/pragmatik.ts",
+          "components/pragmatik.tsx",
+          "lib/dialogszenarien.ts",
+          "components/dialogszenarien.tsx"
+        ],
+        "relatedIds": [
+          312,
+          693,
+          695,
+          696,
+          697
+        ]
       }
     },
     {
@@ -20141,10 +20481,32 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "conventional-expression-practice",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "medium",
+        "rationaleAr": "يوفر بنك العبارات الحي أكثر من مئة صيغة وظيفية مع مثال وسياق ومستوى، ويطلب استرجاعها ويعرضها داخل مهام الكتابة والتحدث؛ وهذه مطابقة مرشحة للتعابير التداولية المتعارف عليها. البنك داخلي لا يستند إلى مدونة موثقة، والتقييم ذاتي ولا يثبت الاستدعاء السريع أو الاستعمال الملائم في إنتاج حر.",
+        "candidateEvidence": [
+          "content/redemittel.json",
+          "lib/redemittel.ts",
+          "components/redemittel.tsx",
+          "components/schreiben.tsx",
+          "scripts/engine_smoke.ts"
+        ],
+        "relatedIds": [
+          313,
+          438,
+          641,
+          654,
+          689,
+          700,
+          840,
+          931
+        ]
       }
     },
     {
@@ -20162,10 +20524,32 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "routine-formula-practice",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "medium",
+        "rationaleAr": "يتدرب المتعلم حياً على صيغ روتينية للتحية والتعريف والاعتذار والشكر والطلب والختام، عبر دروس وتمارين وبنك استرجاع ورسائل؛ وهذه مطابقة مرشحة لصيغ تواصل محددة. لا يملك المنتج جرد Coulmas موثقاً أو بيانات تكرار وسجل، ولا يثبت الأداء التلقائي أو تغطية الروتينات عبر المجتمعات.",
+        "candidateEvidence": [
+          "content/grammar.json",
+          "content/redemittel.json",
+          "components/redemittel.tsx",
+          "content/writing.json",
+          "components/briefe.tsx"
+        ],
+        "relatedIds": [
+          313,
+          438,
+          641,
+          654,
+          689,
+          699,
+          840,
+          931
+        ]
       }
     },
     {
