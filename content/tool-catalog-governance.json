@@ -8856,6 +8856,556 @@
         849
       ]
     },
+    "541": {
+      "classification": "learner-organization-strategy",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "medium",
+      "rationaleAr": "استراتيجيات التنظيم تعني أن يعيد المتعلم بناء المادة في فئات أو مخطط أو جدول أو خريطة من إنشائه. المنتج يرتب المنهج والأخطاء والعائلات آلياً ويعرض خطة أسبوعية، لكن المتعلم لا ينشئ بنية معرفة أو يحفظ تفسير علاقاتها؛ تنظيم النظام للمواد لا يثبت استعمال المتعلم للاستراتيجية.",
+      "candidateEvidence": [
+        "components/lernstrategie.tsx",
+        "components/wortfamilien.tsx",
+        "components/fehleratlas.tsx",
+        "components/akademie/CurriculumMap.tsx"
+      ],
+      "relatedIds": [
+        303,
+        304,
+        305,
+        454,
+        455,
+        795,
+        894
+      ]
+    },
+    "542": {
+      "classification": "rehearsal-strategy-practice",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "candidate-live-implementation",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "medium",
+      "rationaleAr": "توجد مراجعة حية مجدولة، واسترجاع متكرر للبطاقات والجمل، وترديد صوتي وdrills يمكن للمتعلم إعادة جولاتها؛ وهي مطابقة مرشحة لاستراتيجيات rehearsal. لا يعني التكرار وحده حفظاً فعالاً، ولا تفصل القياسات بين الإعادة الصامتة والاسترجاع المنتج أو تقارن الاحتفاظ المؤجل.",
+      "candidateEvidence": [
+        "lib/srs.ts",
+        "components/tasks.tsx",
+        "components/shadowing.tsx",
+        "components/musterdrill.tsx",
+        "scripts/engine_smoke.ts"
+      ],
+      "relatedIds": [
+        181,
+        184,
+        191,
+        231,
+        236,
+        263,
+        305,
+        308,
+        384
+      ]
+    },
+    "543": {
+      "classification": "metacognitive-regulation-support",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "candidate-live-implementation",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "medium",
+      "rationaleAr": "يجمع المنتج حياً تخطيط نية وأسبوع موزون، ومراقبة التقدم والوقت والمهارات، ومعايرة التوقع بالنتيجة، ومراجعة التنفيذ؛ وهي مطابقة مرشحة لدورة التنظيم فوق المعرفي. لا يقيس جودة القرار أو سبب تغيير الاستراتيجية، ولا يثبت أن المتعلم ينقل التخطيط والمراقبة والتقييم خارج الواجهة.",
+      "candidateEvidence": [
+        "components/absicht.tsx",
+        "components/lernstrategie.tsx",
+        "components/kalibrierung.tsx",
+        "components/berichte.tsx",
+        "app/fortschritt/page.tsx"
+      ],
+      "relatedIds": [
+        201,
+        290,
+        291,
+        303,
+        304,
+        367,
+        368,
+        369
+      ]
+    },
+    "544": {
+      "classification": "advanced-self-explanation-practice",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "candidate-live-implementation",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "medium",
+      "rationaleAr": "محطة فاينمان الحية تختار قاعدة من مستوى المتعلم، تطلب شرحها بكلماته، تكشف أجزاء القاعدة التي لم تظهر وتتيح إعادة الصياغة؛ وهذه مطابقة مرشحة للشرح الذاتي. لكنها لا تطلب تفسير علاقات سببية أو مقارنة حالات متعددة كما يوحي advanced، وفحص الكلمات لا يتحقق من صحة الشرح أو يحتفظ بنصه.",
+      "candidateEvidence": [
+        "components/lernstrategie.tsx",
+        "app/fortschritt/page.tsx",
+        "content/grammar.json",
+        "scripts/engine_smoke.ts"
+      ],
+      "relatedIds": [
+        186,
+        202,
+        264,
+        540,
+        545,
+        546,
+        849
+      ]
+    },
+    "545": {
+      "classification": "partner-dependent-explanation",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "شرح الأقران يحتاج شخصاً حقيقياً يتلقى الشرح ويسأل ويرد، مع معيار جودة وموافقة وأمان من تثبيت تفسير خاطئ. المنتج يقدم شرحاً ذاتياً ومطالبات شريك اختيارية لكنه لا يسجل تبادل شرح أو هوية قرين أو استجابته؛ فلا تسمى مخاطبة مستمع متخيل Peer Explanation.",
+      "candidateEvidence": [
+        "components/lernstrategie.tsx",
+        "content/muendlich.json",
+        "components/muendlich.tsx",
+        "app/datenschutz/page.tsx"
+      ],
+      "relatedIds": [
+        202,
+        205,
+        206,
+        227,
+        258,
+        544,
+        546,
+        976,
+        979
+      ]
+    },
+    "546": {
+      "classification": "collaborative-explanation-workflow",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "الشرح التعاوني يتطلب مشاركين يبنون تفسيراً واحداً، يختلفون ويطلبون توضيحاً ثم يراجعون منتجاً مشتركاً. لا توجد في المنتج جلسة متزامنة أو مساحة مشتركة أو أدوار أو سجل مساهمات؛ والذكاء الاصطناعي أو الاستجابة الفردية لا يثبتان تعاوناً بشرياً.",
+      "candidateEvidence": [
+        "content/muendlich.json",
+        "components/muendlich.tsx",
+        "components/sprechbegleiter.tsx",
+        "app/datenschutz/page.tsx"
+      ],
+      "relatedIds": [
+        205,
+        227,
+        544,
+        545,
+        717,
+        807,
+        976,
+        979
+      ]
+    },
+    "547": {
+      "classification": "argumentation-practice",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "candidate-live-implementation",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "medium",
+      "rationaleAr": "توجد مهام كتابة حية تطلب أطروحة وتعليلاً ومثالاً وحجة مضادة ودحضاً وخلاصة، مع قوائم تحقق ونماذج؛ وهي مطابقة مرشحة لممارسة الحجاج العام. لا تُحلل الواجهة صحة الدليل أو warrant ولا تطبق نموذج Toulmin كاملاً، ولا تثبت جودة التفكير من وجود الكلمات البنائية.",
+      "candidateEvidence": [
+        "content/writing.json",
+        "content/grammar.json",
+        "components/schreiben.tsx",
+        "lib/kriterien.ts",
+        "scripts/engine_smoke.ts"
+      ],
+      "relatedIds": [
+        230,
+        329,
+        330,
+        548,
+        796
+      ]
+    },
+    "548": {
+      "classification": "critical-thinking-construct",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "Critical Thinking Advanced قدرة واسعة تشمل فحص الافتراض والمصدر والدليل والبدائل والاستنتاج. بعض النصوص والمهام تدرب فحص الادعاء والحجة، لكنها أمثلة لغوية ثابتة ولا تبرر درجة تفكير نقدي أو قدرة عامة، ولا توجد أداة موثقة أو انتقال إلى مصادر العالم الحقيقي.",
+      "candidateEvidence": [
+        "content/texts.json",
+        "content/writing.json",
+        "content/lang/b2-01-10.json",
+        "lib/kriterien.ts"
+      ],
+      "relatedIds": [
+        329,
+        330,
+        331,
+        547,
+        549,
+        550,
+        796,
+        926
+      ]
+    },
+    "549": {
+      "classification": "reflective-thinking-construct",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "التفكير التأملي يحتاج وصف خبرة وفحص الافتراضات وربط الدليل بالقرار ثم خطة تعديل محفوظة. توجد مراجعة نية أسبوعية وتقارير ومطالبات عن ما تعلمه المستخدم، لكنها لا تحفظ سلسلة تأمل أو تميزها من التقييم الذاتي؛ فلا يستنتج بناء Reflective Thinking من عرض التقرير.",
+      "candidateEvidence": [
+        "lib/absicht.ts",
+        "components/absicht.tsx",
+        "components/berichte.tsx",
+        "components/elternpaket.tsx",
+        "lib/wochenbericht.ts"
+      ],
+      "relatedIds": [
+        201,
+        241,
+        304,
+        368,
+        540,
+        548,
+        550,
+        555,
+        895
+      ]
+    },
+    "550": {
+      "classification": "creative-thinking-construct",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "الكتابة الحرة والسرد يسمحان بالإبداع، لكن Creative Thinking بناء يتطلب مهمة توليد بدائل ومعايير مثل الطلاقة والمرونة والأصالة مع مراجعة ملائمة. المنتج لا يجمع بدائل متعددة ولا يقيم الأصالة أو يفصل جودة اللغة عن الفكرة؛ لذلك لا يمنح سمة أو درجة إبداع.",
+      "candidateEvidence": [
+        "content/writing.json",
+        "components/schreiben.tsx",
+        "content/muendlich.json",
+        "components/dialogszenarien.tsx"
+      ],
+      "relatedIds": [
+        228,
+        329,
+        330,
+        547,
+        548,
+        549
+      ]
+    },
+    "551": {
+      "classification": "formative-assessment-cycle",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "candidate-live-implementation",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "توجد حلقات حية تجمع محاولة وتغذية راجعة ودفتر أخطاء وتكراراً متكيفاً وتحققاً جديداً، فتطابق تقويماً تكوينياً محدوداً يستخدم الدليل لتوجيه الخطوة التالية. لا توجد مراجعة خارجية لجودة الاستدلال أو تجربة تثبت أن كل تعديل حسن التعلم، ولا يبرر اسم advanced معامل المكسب المولد.",
+      "candidateEvidence": [
+        "lib/plan.ts",
+        "lib/fehler.ts",
+        "components/exercises.tsx",
+        "components/akademie/LektionWizard.tsx",
+        "scripts/engine_smoke.ts"
+      ],
+      "relatedIds": [
+        200,
+        208,
+        238,
+        244,
+        402,
+        543,
+        554
+      ]
+    },
+    "552": {
+      "classification": "summative-assessment-practice",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "candidate-live-implementation",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "يقدم المنتج اختبارات أسبوعية وختامية ومحاكاة Goethe/telc بنتائج ووحدات منفصلة؛ وهي مطابقة حية مرشحة للتقويم الختامي التدريبي. الاختبارات ليست رسمية ولا معايرة، والكتابة والتحدث يعتمدان جزئياً على rubric ذاتية أو آلية، فلا تُستخدم النتائج كشهادة أو معيار مستوى مثبت.",
+      "candidateEvidence": [
+        "lib/plan.ts",
+        "components/pruefung.tsx",
+        "components/vollpruefung.tsx",
+        "components/simulation.tsx",
+        "content/accreditation-alignment.json"
+      ],
+      "relatedIds": [
+        239,
+        246,
+        249,
+        498,
+        499,
+        500,
+        553,
+        559
+      ]
+    },
+    "553": {
+      "classification": "diagnostic-assessment-practice",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "candidate-live-implementation",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "يوجد اختبار تحديد مستوى حي يتكيف عبر القراءة والاستماع والقواعد والمفردات ويقترح نقطة دخول، مع دفتر أخطاء ورادار فجوات؛ وهذه مطابقة مرشحة لتشخيص داخلي. لا يقيس الاختبار كتابة أو تحدثاً إنتاجياً ولا يملك صدقاً أو ثباتاً معيارياً، لذلك لا يسمى تشخيصاً متقدماً أو مستوى CEFR رسمياً.",
+      "candidateEvidence": [
+        "lib/einstufung.ts",
+        "components/einstufung.tsx",
+        "lib/fehler.ts",
+        "components/skillplan.tsx",
+        "scripts/engine_smoke.ts"
+      ],
+      "relatedIds": [
+        199,
+        237,
+        244,
+        491,
+        520,
+        552,
+        559
+      ]
+    },
+    "554": {
+      "classification": "dynamic-assessment-method",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "Dynamic Assessment عند Feuerstein يحتاج وساطة متدرجة مقصودة، توثيق نوع المساعدة واستجابة المتعلم، وفصل الأداء المستقل عن المتغير بالمساعدة. توجد وحدة معزولة تحسب مستوى تلميح لكنها غير مستوردة ولا تملك بنكاً أو واجهة؛ ومحاولات التمرين العادية لا تثبت mediated learning experience.",
+      "candidateEvidence": [
+        "lib/dynamic-assessment.ts",
+        "lib/dynamic-assessment-var.ts",
+        "components/exercises.tsx",
+        "content/real-world-validation.json"
+      ],
+      "relatedIds": [
+        208,
+        238,
+        543,
+        551
+      ]
+    },
+    "555": {
+      "classification": "portfolio-assessment-workflow",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "تقويم المحفظة يحتاج واجهة تجمع قطعاً حقيقية عبر الزمن، اختياراً وتعليلاً وتأملاً وrubric وتصديراً آمناً. الموجود نموذج بيانات ودوال عد تختبر في smoke فقط، بلا استيراد في مسار حي أو حفظ أو اختيار قطع؛ والتقارير أو سجل التقدم ليسا Portfolio Assessment.",
+      "candidateEvidence": [
+        "lib/portfolio.ts",
+        "lib/portfolio-var.ts",
+        "lib/types.ts",
+        "scripts/engine_smoke.ts",
+        "app/datenschutz/page.tsx"
+      ],
+      "relatedIds": [
+        241,
+        335,
+        549,
+        556,
+        895
+      ]
+    },
+    "556": {
+      "classification": "self-assessment-practice",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "candidate-live-implementation",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "يحفظ المنتج تعليم المتعلم على عبارات Can-Do، ويطلب توقع نتيجة اختبارات ذاتية، ويوفر rubrics ذاتية للكتابة والتحدث في المحاكاة؛ وهذه مطابقات حية مرشحة للتقييم الذاتي. الواصفات غير موقعة خارجياً، والثقة ودرجة rubric ليستا قياس كفاءة، ولا توجد مقارنة منتظمة مع مقيم بشري لمعايرة الحكم.",
+      "candidateEvidence": [
+        "content/cando.json",
+        "components/tasks.tsx",
+        "components/selbsttest.tsx",
+        "components/simulation.tsx",
+        "lib/store.ts",
+        "scripts/interaktiv_test.tsx"
+      ],
+      "relatedIds": [
+        201,
+        240,
+        242,
+        495,
+        522,
+        543,
+        555
+      ]
+    },
+    "557": {
+      "classification": "partner-dependent-assessment",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "Peer Assessment المتقدم يحتاج تبادل أعمال بين أقران، rubric مشتركة، تدريباً وأمثلة مرساة، موافقة وخصوصية واعتراضاً. وحدات المتوسط والفئات غير مستوردة ولا توجد حسابات أو شريك حي؛ كما لا تصبح المراجعة الذاتية أو تقييم الذكاء الاصطناعي تقييماً بين الأقران.",
+      "candidateEvidence": [
+        "lib/peer-assessment.ts",
+        "lib/peer-assessment-var2.ts",
+        "content/writing.json",
+        "content/muendlich.json",
+        "app/datenschutz/page.tsx"
+      ],
+      "relatedIds": [
+        206,
+        227,
+        243,
+        357,
+        545,
+        546,
+        718
+      ]
+    },
+    "558": {
+      "classification": "human-rater-moderation-process",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "المواءمة المتقدمة عملية بشرية تقارن أحكام عدة مقيمين على عينات مرساة وتناقش الفروق وتوثق القرار. لا يوجد مقيمون أو عينات تدريب أو توقيعات في المنتج؛ ودالة متوسط درجتين أو تقييم آلي لا يجوز أن ينتحل moderation أو اتفاقاً بين البشر.",
+      "candidateEvidence": [
+        "lib/moderation.ts",
+        "lib/moderation-var.ts",
+        "content/external-evidence.json",
+        "content/real-world-validation.json"
+      ],
+      "relatedIds": [
+        243,
+        248,
+        249,
+        560
+      ]
+    },
+    "559": {
+      "classification": "assessment-standard-setting-governance",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "Standard Setting يحدد حدود أداء عبر طريقة موثقة ولجنة خبراء وبنود أو أعمال مرساة وتحليل أثر القرار. عتبات النجاح الحالية تنقل صيغ التدريب المعلنة ولا تثبت أن المنتج أجرى Angoff أو Bookmark أو دراسة معيار؛ فلا يجوز اشتقاق CEFR أو اعتماد حد جديد برمجياً.",
+      "candidateEvidence": [
+        "content/accreditation-alignment.json",
+        "content/external-evidence.json",
+        "content/real-world-validation.json",
+        "scripts/accreditation_audit.ts"
+      ],
+      "relatedIds": [
+        237,
+        239,
+        246,
+        249,
+        552,
+        553,
+        558,
+        560
+      ]
+    },
+    "560": {
+      "classification": "human-rater-training-process",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "تدريب المقيمين يحتاج مقيمين بشراً، دليل معايير، عينات مرساة، جولات تقدير وتغذية راجعة وحساب اتساق ومراقبة انجراف. المنتج يعرض rubrics للمتعلم ولا يملك دور مقيم أو برنامج تدريب أو نتائج اتفاق؛ والذكاء الاصطناعي ليس بديلاً عن توقيع ممتحن مؤهل.",
+      "candidateEvidence": [
+        "content/accreditation-alignment.json",
+        "content/external-evidence.json",
+        "content/real-world-validation.json",
+        "lib/kriterien.ts"
+      ],
+      "relatedIds": [
+        243,
+        248,
+        249,
+        552,
+        558,
+        559
+      ]
+    },
     "840": {
       "classification": "duplicate-catalog-record",
       "decision": "merge-duplicate",
