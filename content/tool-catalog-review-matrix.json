@@ -27092,7 +27092,14 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "merge-duplicate",
+        "classification": "duplicate-catalog-record",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "low",
+        "rationaleAr": "Enactment Engelkamp يعيد نشاط الفعل والإيماء المسجل في 196 وبوسم Engelkamp 1998 نفسه: أداء معنى الفعل جسدياً عند الترميز. الاسم الإنجليزي لا ينشئ نشاطاً ثانياً؛ يُحفظ المعرف للتتبع ويُدمج في 196، مع بقاء النشاط اختيارياً غير موصول وحاجته إلى بديل حركي وإتاحة واختبار احتفاظ.",
+        "candidateEvidence": [],
+        "canonicalId": 196
       }
     },
     {
@@ -27113,7 +27120,28 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "action-memory-research-construct",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "ذاكرة الفعل بناء تجريبي عن تذكر عبارات الأفعال بعد أدائها ذاتياً أو مشاهدتها مقارنة بترميز لفظي، وهي أوسع من مجرد وجود فعل أو زر أو تمرين أمر. لا يطلب المنتج أداءً حركياً موثقاً ولا يربط الفعل ببند استرجاع لاحق أو شرط مقارنة، ولا ينبغي استعمال كاميرا لإثباته؛ لذلك يبقى مرتبطاً بنشاط 196 وإطار التجسد بحثياً.",
+        "candidateEvidence": [
+          "components/tasks.tsx",
+          "lib/silent-way.ts",
+          "content/grammar.json",
+          "components/komfort.tsx"
+        ],
+        "relatedIds": [
+          196,
+          449,
+          450,
+          665,
+          666,
+          830,
+          860,
+          861
+        ]
       }
     },
     {
@@ -27131,10 +27159,32 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "spoken-production-memory-practice",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "medium",
+        "rationaleAr": "يطلب المنتج حياً قول جمل بصوت مرتفع، ويسمح بتسجيل النطق محلياً وتشغيله ومقارنته بالنموذج، وهي مطابقة مرشحة لفعل الإنتاج الصوتي. لكن Production Effect يتعلق بذاكرة مادة منطوقة مقارنة بقراءتها صامتة، ولا تربط هذه المهام البنود باختبار استرجاع مؤجل أو شرط صامت ولا تفصل تدريب النطق عن أثر الذاكرة؛ لذلك يؤجل الادعاء.",
+        "candidateEvidence": [
+          "components/aussprachetrainer.tsx",
+          "components/tasks.tsx",
+          "components/pflege.tsx",
+          "lib/modulpruefung.ts",
+          "scripts/interaktiv_test.tsx"
+        ],
+        "relatedIds": [
+          269,
+          270,
+          308,
+          396,
+          397,
+          850,
+          852,
+          864
+        ]
       }
     },
     {
@@ -27155,7 +27205,14 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "merge-duplicate",
+        "classification": "duplicate-catalog-record",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "low",
+        "rationaleAr": "Generation Effect 2 يكرر أثر التوليد المسجل في 397 وبوسم Bertsch 2007 نفسه. اللاحقة الرقمية لا تنشئ نشاطاً مستقلاً؛ يُحفظ المعرف للتتبع ويُدمج في 397، حيث فُرز توليد الجملة والمتلازمة كتنفيذ حي مرشح بلا ادعاء تفوق سببي على القراءة.",
+        "candidateEvidence": [],
+        "canonicalId": 397
       }
     },
     {
@@ -27176,7 +27233,28 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "self-reference-memory-effect",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "أثر الإحالة إلى الذات يتطلب معالجة المادة بالنسبة إلى الذات ومقارنتها بترميز دلالي أو متعلق بآخرين ثم قياس الذاكرة، ولا يساوي سؤالاً شخصياً أو حفظ ملف مستخدم. توجد مقابلات وموضوعات إنتاج شخصية، لكنها لا تعيّن الكلمات المستهدفة إلى شروط ترميز ولا تقيس استدعاءها لاحقاً؛ لذلك لا ينسب المنتج أثر Rogers ولا يستنتج سمات حساسة.",
+        "candidateEvidence": [
+          "components/interview2.tsx",
+          "content/muendlich.json",
+          "components/profil.tsx",
+          "lib/profiles.ts"
+        ],
+        "relatedIds": [
+          186,
+          202,
+          264,
+          308,
+          390,
+          538,
+          540,
+          544
+        ]
       }
     },
     {
@@ -27197,7 +27275,26 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "survival-processing-memory-paradigm",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "معالجة البقاء نموذج تجريبي يطلب تقدير ملاءمة عناصر لسيناريو بقاء ثم يقارن تذكرها بشروط ترميز مضبوطة؛ وليست كل مادة حياة يومية أو صحة تطبيقاً له. يحتوي المنتج مواقف حياتية وأماناً عملياً، لكنه لا يقدم سيناريو الترميز أو تقديرات عنصر-بعنصر أو مقارنة واحتفاظاً مؤجلاً؛ لذلك يبقى المفهوم بحثياً.",
+        "candidateEvidence": [
+          "content/lebenswelt.json",
+          "content/texts.json",
+          "components/lebenswelt.tsx",
+          "components/tasks.tsx"
+        ],
+        "relatedIds": [
+          384,
+          390,
+          865,
+          867,
+          868,
+          870
+        ]
       }
     },
     {
@@ -27218,7 +27315,24 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "animacy-memory-effect",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "أثر الحيوية ادعاء عن اختلاف تذكر عناصر حية وغير حية بعد ضبط التردد والألفة والمحسوسية وطول الكلمة، ولا يستنتج من وجود أسماء أشخاص وحيوانات وأشياء في البنك. لا تحمل بطاقات المفردات وسم animacy ولا توجد قوائم متوازنة أو اختبار احتفاظ يقارنها؛ لذلك لا يعاد ترتيب المحتوى أو رفع أولوية كلمات بناءً عليه.",
+        "candidateEvidence": [
+          "content/vocab.json",
+          "components/tasks.tsx",
+          "lib/content.ts"
+        ],
+        "relatedIds": [
+          384,
+          390,
+          866,
+          868,
+          870
+        ]
       }
     },
     {
@@ -27239,7 +27353,29 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "bizarreness-memory-effect",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "أثر الغرابة يحتاج صوراً أو جملاً غريبة مضبوطة ومقارنتها بمادة عادية مع مراعاة تصميم القائمة والاحتفاظ، ولا يثبت بمجرد تسمية قصة «سخيفة». مولد القصة يضع الكلمات نفسها كصور، والخطة تخزن مقتطفه في storyId لا تستهلكه واجهة المتعلم؛ كما لا يوجد ترميز غرابة أو شرط عادي. لذلك يبقى الأثر بحثياً ولا يعتمد ادعاء المكسب في التعليق.",
+        "candidateEvidence": [
+          "lib/mnemonic-story.ts",
+          "lib/plan.ts",
+          "lib/types.ts",
+          "content/eselsbruecken.json",
+          "components/tasks.tsx"
+        ],
+        "relatedIds": [
+          272,
+          273,
+          308,
+          390,
+          866,
+          867,
+          869,
+          870
+        ]
       }
     },
     {
@@ -27260,7 +27396,23 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "humor-memory-effect",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "أثر الفكاهة في الذاكرة يتطلب مادة مضحكة ومادة ضابطة متكافئتين وقياس تذكر مع الانتباه إلى الثقافة والاستجابة الفردية، ولا يساوي وجود مثال تداولي خفيف. يقدم المنتج حالة فكاهة عملية محدودة، لكنه لا يرمز شدة الفكاهة أو القبول ولا يربطها بذاكرة مستهدفة؛ لذلك يبقى منفصلاً عن مرجع 326 ولا يولد نكات آلياً.",
+        "candidateEvidence": [
+          "lib/pragmatik.ts",
+          "components/pragmatik.tsx",
+          "content/grammar.json"
+        ],
+        "relatedIds": [
+          326,
+          866,
+          868,
+          870
+        ]
       }
     },
     {
@@ -27281,7 +27433,27 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "von-restorff-isolation-memory-effect",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "أثر von Restorff يخص تحسن تذكر عنصر مميز داخل مجموعة متجانسة مقارنة بعناصرها، ولا يساوي لون زر نشط أو شارة خطأ أو عنواناً بارزاً. تستخدم الواجهة إبرازاً للحالة والتنقل، لكنها لا تعين عنصراً تعليمياً مميزاً بضبط ولا تقارن ذاكرته أو تمنع أن يصبح كل شيء بارزاً؛ لذلك يبقى الأثر بحثياً وإشارة تصميم لا نتيجة تعلم.",
+        "candidateEvidence": [
+          "components/tasks.tsx",
+          "components/akademie/TodayStepper.tsx",
+          "app/globals.css"
+        ],
+        "relatedIds": [
+          377,
+          390,
+          437,
+          812,
+          866,
+          867,
+          868,
+          869
+        ]
       }
     },
     {
@@ -27302,7 +27474,14 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "merge-duplicate",
+        "classification": "duplicate-catalog-record",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "low",
+        "rationaleAr": "Spacing Effect Ebbinghaus يعيد أثر التباعد وتصميم الممارسة الموزعة المفروز في 395. اختلاف الإحالة التاريخية لا يبرر محرك جدولة أو دورة تحقق ثانية؛ يُحفظ المعرف للتتبع ويُدمج في 395، حيث وُثق FSRS والكبسولة كتنفيذ مرشح يحتاج معايرة ومقارنة بالحشد واحتفاظاً مؤجلاً.",
+        "candidateEvidence": [],
+        "canonicalId": 395
       }
     },
     {
@@ -27320,10 +27499,33 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "lag-sensitive-spaced-practice-design",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "medium",
+        "rationaleAr": "يحسب FSRS الحي فاصل كل بطاقة من الثبات والصعوبة واحتمال الاسترجاع وهدف احتفاظ معلن، وتعيد الكبسولة المواد عبر مدد مختلفة؛ وهي مطابقة مرشحة لتصميم حساس للفاصل. لكن Lag Effect يتعلق بعلاقة فاصل الدراسة بفاصل الاختبار، ولا يقارن المنتج lags مضبوطة ولا يثبت الفاصل الأمثل أو الاحتفاظ البعيد، كما يقيد الجدولة عند 90 يوماً؛ لذلك يؤجل الادعاء.",
+        "candidateEvidence": [
+          "lib/srs.ts",
+          "lib/kapsel.ts",
+          "lib/prognose.ts",
+          "components/tasks.tsx",
+          "scripts/engine_smoke.ts"
+        ],
+        "relatedIds": [
+          181,
+          184,
+          390,
+          395,
+          400,
+          471,
+          853,
+          871,
+          873
+        ]
       }
     },
     {
@@ -27374,7 +27576,14 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "merge-duplicate",
+        "classification": "duplicate-catalog-record",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "low",
+        "rationaleAr": "Desirable Difficulties Bjork يعيد مبدأ الصعوبة المرغوبة المسجل في 262. اختلاف سنة الإحالة وصيغة الجمع لا ينشئ ضابط تكيف آخر؛ يُحفظ المعرف للتتبع ويُدمج في 262، الذي يفصل الاسترجاع والتداخل والتباعد المجاور عن ادعاء أن صعوبة بعينها نافعة للمتعلم والنقل.",
+        "candidateEvidence": [],
+        "canonicalId": 262
       }
     },
     {
@@ -27395,7 +27604,28 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "transfer-appropriate-processing-theory",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "المعالجة الملائمة للنقل تتنبأ بأن التعلم يتحسن حين تتطابق عمليات الترميز مع العمليات المطلوبة في الاختبار، لا حين يتشابه موضوع أو شكل الشاشة فقط. لدى المنتج ممارسة ومهام محاكاة امتحان، لكنه لا يرمز العمليات المعرفية في التعلم والاختبار ولا يقارن شرط تطابق بعدم تطابق أو يقيس نقلاً؛ لذلك لا ينسب النجاح المتوقع إلى إطار Morris.",
+        "candidateEvidence": [
+          "lib/plan.ts",
+          "lib/simulation.ts",
+          "components/klausur.tsx",
+          "content/writing.json"
+        ],
+        "relatedIds": [
+          263,
+          271,
+          287,
+          390,
+          538,
+          855,
+          856,
+          876
+        ]
       }
     },
     {
@@ -27416,7 +27646,27 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "encoding-specificity-memory-theory",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "خصوصية الترميز تتعلق بفاعلية إشارة الاسترجاع بقدر تداخلها مع المعلومات المشفرة عند التعلم، ولا تساوي عرض الكلمة في سياق أو إعادة البطاقة نفسها. لا يحفظ المنتج هوية إشارات الترميز ولا يبدلها منهجياً عند الاختبار ولا يقارن الاسترجاع بإشارة مطابقة وغير مطابقة؛ لذلك يبقى إطار Tulving بحثياً بلا تكييف سياقي.",
+        "candidateEvidence": [
+          "lib/context-variation-deep.ts",
+          "lib/srs.ts",
+          "components/tasks.tsx",
+          "content/vocab.json"
+        ],
+        "relatedIds": [
+          271,
+          390,
+          855,
+          856,
+          857,
+          858,
+          875
+        ]
       }
     },
     {
@@ -27437,7 +27687,14 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "merge-duplicate",
+        "classification": "duplicate-catalog-record",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "low",
+        "rationaleAr": "Levels of Processing 2 يكرر النظرية المسجلة في 539 وبوسم Craik 1972 نفسه. الرقم لا ينشئ مستوى قياس أو نشاطاً مستقلاً؛ يُحفظ المعرف للتتبع ويُدمج في 539، حيث بقي تنوع الشرح والسياق والاسترجاع أدلة مجاورة لا إثباتاً لعمق معالجة أو احتفاظ سببي.",
+        "candidateEvidence": [],
+        "canonicalId": 539
       }
     },
     {
@@ -27458,7 +27715,14 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "merge-duplicate",
+        "classification": "duplicate-catalog-record",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "low",
+        "rationaleAr": "Involvement Load Laufer يعيد فرضية عبء الانخراط المسجلة في 536 وبوسم Laufer 2001 نفسه. إضافة اسم المؤلف لا تنشئ أداة تقييم ثانية؛ يُحفظ المعرف للتتبع ويُدمج في 536، الذي يسجل غياب ترميز الحاجة والبحث والتقييم وقياس الاحتفاظ المقارن.",
+        "candidateEvidence": [],
+        "canonicalId": 536
       }
     },
     {
@@ -27479,7 +27743,31 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "vocabulary-technique-evaluation-framework",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "Technique Feature Analysis عند Nation إطار لتقويم تقنية تعلم مفردات عبر سمات معلنة وأدلة تنفيذ، وليس معامل مكسب ولا حكماً من وجود بطاقة أو بحث. يحتوي المنتج تقنيات مفردات متعددة وتدقيقات بنيوية، لكنه لا يملك rubric موثقاً لهذا الإطار ولا يرمز كل تقنية أو يربط الدرجة بسلوك واحتفاظ؛ لذلك يستخدم كمرجع مراجعة فقط بعد تحقق المصدر.",
+        "candidateEvidence": [
+          "components/tasks.tsx",
+          "lib/plan.ts",
+          "scripts/student_audit.ts",
+          "scripts/audit_inhalt.ts"
+        ],
+        "relatedIds": [
+          218,
+          308,
+          493,
+          519,
+          536,
+          537,
+          647,
+          844,
+          880,
+          885,
+          886
+        ]
       }
     },
     {
@@ -27500,7 +27788,33 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "four-strands-curriculum-framework",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "Four Strands إطار منهجي يوازن تقريباً بين مدخل يركز المعنى ومخرج يركز المعنى وتعلم يركز اللغة وتطوير الطلاقة مع شروط لكل مسار، ولا يكفي وجود قراءة وكتابة وقواعد وتمرين سريع. الخطة الحية تضم أنشطة من الأنواع الأربعة، لكنها لا ترمزها بهذا الإطار ولا تدقق الوقت المتوازن أو كون المادة مألوفة وشروط الطلاقة؛ لذلك لا يدعي المنتج تطبيق Nation.",
+        "candidateEvidence": [
+          "lib/plan.ts",
+          "components/akademie/CurriculumMap.tsx",
+          "content/texts.json",
+          "content/writing.json",
+          "components/leseleiter.tsx"
+        ],
+        "relatedIds": [
+          492,
+          493,
+          521,
+          523,
+          526,
+          775,
+          833,
+          879,
+          881,
+          882,
+          883,
+          884
+        ]
       }
     },
     {
