@@ -9406,6 +9406,599 @@
         559
       ]
     },
+    "561": {
+      "classification": "out-of-scope-technology",
+      "decision": "reject-not-applicable",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "الانغماس الافتراضي المتقدم يحتاج مشاهد ثلاثية الأبعاد أو 360 وWebXR وعتاداً واختبارات حركة ودوار وإتاحة وسلامة. لا يملك المنتج سوى سيناريوهات نصية وملف VR ثابت غير مستورد؛ لذلك لا يُعد فتح موقف تمثيلي واقعاً افتراضياً ويُرفض ضمن نطاق الويب المحلي الحالي.",
+      "candidateEvidence": [
+        "lib/vr-classroom.ts",
+        "content/szenarien.json",
+        "content/real-world-validation.json",
+        "app/datenschutz/page.tsx"
+      ],
+      "relatedIds": [
+        256,
+        477,
+        562,
+        563,
+        741,
+        990
+      ]
+    },
+    "562": {
+      "classification": "out-of-scope-technology",
+      "decision": "reject-not-applicable",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "تعلم اللغة بالواقع المعزز يتطلب كاميرا وتتبعاً مكانياً وتراكباً على العالم الحقيقي وأذونات وحقوق صور وبدائل غير بصرية ومراجعة خصوصية. المنتج يعرض رسوماً ثنائية الأبعاد فقط ولا يطلب الكاميرا أو ينفذ AR؛ لذلك يُرفض ضمن النطاق الحالي ولا تُسمى بطاقات SVG واقعاً معززاً.",
+      "candidateEvidence": [
+        "components/akademie/LessonSceneVisual.tsx",
+        "app/datenschutz/page.tsx",
+        "content/real-world-validation.json"
+      ],
+      "relatedIds": [
+        257,
+        478,
+        561,
+        563,
+        991
+      ]
+    },
+    "563": {
+      "classification": "out-of-scope-immersive-media",
+      "decision": "reject-not-applicable",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "فيديو 360 يحتاج أصلاً بانورامياً مرخصاً ومشغلاً يتيح السحب أو اتجاه الجهاز، مع مسار صوتي ونص بديل وتحكم حركة واختبارات دوار وأجهزة. لا توجد أصول فيديو أو واجهة 360 في المنتج، والصوت والسيناريو النصي لا يثبتان وسائط غامرة؛ لذا يُرفض في نطاق النسخة الحالية.",
+      "candidateEvidence": [
+        "content/szenarien.json",
+        "components/hoeren.tsx",
+        "app/datenschutz/page.tsx",
+        "content/real-world-validation.json"
+      ],
+      "relatedIds": [
+        256,
+        334,
+        451,
+        477,
+        561,
+        562,
+        990
+      ]
+    },
+    "564": {
+      "classification": "cross-site-virtual-exchange",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "التبادل الافتراضي 2.0 يحتاج مجموعة أو مؤسسة شريكة ومهاماً مشتركة ممتدة وتيسيراً وهوية وموافقات وقناة اتصال وتقييماً بين ثقافات. المنتج فردي محلي بلا حسابات أو شريك خارجي أو سجل تبادل؛ المطالبات الشفهية ورفيق الذكاء الاصطناعي لا يمثلان تبادلاً بشرياً، لذلك يُؤجل.",
+      "candidateEvidence": [
+        "content/muendlich.json",
+        "components/klassenansicht.tsx",
+        "components/sprechbegleiter.tsx",
+        "app/datenschutz/page.tsx"
+      ],
+      "relatedIds": [
+        258,
+        338,
+        479,
+        480,
+        565,
+        568,
+        609,
+        610,
+        743,
+        744,
+        745,
+        749,
+        939,
+        940
+      ]
+    },
+    "565": {
+      "classification": "cross-site-human-collaboration",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "التعاون عن بعد المتقدم يتطلب شركاء بشريين وأدواراً ومنتجاً مشتركاً وتبادلاً قابلاً للتتبع وتيسيراً وآليات موافقة وإبلاغ وسلامة. لا توجد جلسة متزامنة أو مساحة مشتركة أو مساهمات متعددة في المنتج؛ وجود مهمة كلام فردية لا يثبت Telecollaboration، فيبقى المشروع مؤجلاً.",
+      "candidateEvidence": [
+        "content/muendlich.json",
+        "components/muendlich.tsx",
+        "components/klassenansicht.tsx",
+        "app/datenschutz/page.tsx"
+      ],
+      "relatedIds": [
+        258,
+        338,
+        479,
+        480,
+        564,
+        568,
+        609,
+        743,
+        749,
+        939,
+        940
+      ]
+    },
+    "566": {
+      "classification": "partner-dependent-online-tandem",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "Tandem 2.0 يحتاج مطابقة متعلمين بلغتين متبادلتين وهوية وموافقة وجدولة وقناة اتصال وتوازناً في الوقت وتصحيحاً آمناً وآلية بلاغ. المنتج لا يطابق شركاء ولا يحفظ جلسات بشرية، والمحادثة مع نموذج أو أداء دور منفرد ليس تعلماً ثنائياً؛ لذلك يبقى غير موصول.",
+      "candidateEvidence": [
+        "content/muendlich.json",
+        "components/muendlich.tsx",
+        "components/sprechbegleiter.tsx",
+        "app/datenschutz/page.tsx"
+      ],
+      "relatedIds": [
+        205,
+        225,
+        258,
+        479,
+        567,
+        743
+      ]
+    },
+    "567": {
+      "classification": "partner-dependent-electronic-tandem",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "الثنائي الإلكتروني ليس مجرد اتصال بالإنترنت؛ يلزم شريك حقيقي يتعلم لغة المتعلم، وتبادل متكافئ وموافقة وهوية وجدولة وسلامة وسجل استجابة. التطبيق محلي بلا شبكة شركاء أو رسائل بين مستخدمين، فلا تُحسب مطالبات الحوار أو الذكاء الاصطناعي E-Tandem ويؤجل التنفيذ.",
+      "candidateEvidence": [
+        "content/muendlich.json",
+        "components/muendlich.tsx",
+        "components/sprechbegleiter.tsx",
+        "app/datenschutz/page.tsx"
+      ],
+      "relatedIds": [
+        205,
+        225,
+        258,
+        479,
+        566,
+        743
+      ]
+    },
+    "568": {
+      "classification": "intercultural-human-telecollaboration",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "التعاون الثقافي عن بعد يحتاج مجموعتين بشريتين مختلفتي السياق ومهام مقارنة وتفاوض وتأملاً ميسراً وموافقة وحماية من التنميط. يوجد نص حي عن سوء فهم ثقافي لكنه قراءة فردية بأسئلة فهم، ولا توجد مجموعة شريكة أو تبادل أو تحليل مشترك؛ لذلك لا يثبت Intercultural Telecollaboration.",
+      "candidateEvidence": [
+        "content/lang/b2-36-40.json",
+        "content/texts.json",
+        "content/muendlich.json",
+        "app/datenschutz/page.tsx"
+      ],
+      "relatedIds": [
+        311,
+        338,
+        480,
+        564,
+        565,
+        569,
+        570,
+        609,
+        610,
+        731,
+        934,
+        939,
+        940
+      ]
+    },
+    "569": {
+      "classification": "intercultural-psychological-construct",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "الذكاء الثقافي بناء متعدد الأبعاد يتعلق بالمعرفة والدافعية والتخطيط والسلوك عبر مواقف ثقافية، وليس درجة تُستنتج من قراءة نص أو اختيار جواب. مواد البلد وسوء الفهم توفر سياقاً تعليمياً فقط؛ لا يوجد مقياس صالح أو مواقف متعددة أو مراجعة بشرية، فلا تُنسب سمة نفسية للمتعلم.",
+      "candidateEvidence": [
+        "content/lang/b2-36-40.json",
+        "content/texts.json",
+        "lib/landeskunde.ts",
+        "components/tasks.tsx"
+      ],
+      "relatedIds": [
+        311,
+        481,
+        568,
+        570,
+        571,
+        572,
+        573,
+        731,
+        732,
+        934,
+        935
+      ]
+    },
+    "570": {
+      "classification": "intercultural-development-construct",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "الحساسية بين الثقافات توجه نمائي يحتاج مواقف متعددة وتأملاً وملاحظة تغير وتقييماً موثقاً، ولا تساوي معرفة نصائح ثقافية أو صحة أسئلة فهم. قصة التواصل الخيالية تحذر من التعميم وتعرض منظوراً واحداً؛ لا تقيس انتقال المتعلم بين مراحل أو مواقف، لذلك تبقى للبحث لا كسمة منتج.",
+      "candidateEvidence": [
+        "content/lang/b2-36-40.json",
+        "content/texts.json",
+        "components/akademie/LektionWizard.tsx",
+        "components/tasks.tsx"
+      ],
+      "relatedIds": [
+        311,
+        481,
+        482,
+        568,
+        569,
+        571,
+        572,
+        573,
+        731,
+        732,
+        934,
+        935
+      ]
+    },
+    "571": {
+      "classification": "intercultural-decentering-practice",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "نزع التمركز يتطلب أن يصرح المتعلم بافتراضه الأول ثم يعيد تفسير موقف من منظور آخر ويقارن التفسيرين. النص الحي عن المباشرة يروي هذا التحول جاهزاً، وأسئلته تسترجع معلومات النص ولا تجمع افتراض المتعلم أو مراجعته؛ فهو نموذج قريب لا نشاط Decentering موصولاً.",
+      "candidateEvidence": [
+        "content/lang/b2-36-40.json",
+        "content/texts.json",
+        "components/tasks.tsx"
+      ],
+      "relatedIds": [
+        311,
+        481,
+        482,
+        568,
+        569,
+        570,
+        572,
+        573,
+        731,
+        934
+      ]
+    },
+    "572": {
+      "classification": "perspective-taking-practice",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "اتخاذ المنظور يحتاج أن يولد المتعلم تفسيراً من موقع شخص آخر مع فصل ما يعرفه كل طرف عن التخمين ومراجعة البدائل. قصص سوء الفهم والتعاطف تعرض دوافع الشخصيات ثم تسأل عن تفاصيل صريحة؛ لا تطلب إنتاج منظور أو تحفظ تبريراً، لذلك لا تعد تنفيذاً حياً بعد.",
+      "candidateEvidence": [
+        "content/texts.json",
+        "content/lang/b2-36-40.json",
+        "components/tasks.tsx"
+      ],
+      "relatedIds": [
+        306,
+        311,
+        481,
+        482,
+        569,
+        570,
+        571,
+        573,
+        967
+      ]
+    },
+    "573": {
+      "classification": "empathic-language-practice",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "التعاطف اللغوي يتطلب الاستماع إلى منظور شخص وصياغة استجابة تعترف بشعوره وحاجته دون افتراض أو حكم، مع معيار يميز التعاطف من الموافقة. النص الحي يعرض سؤالاً متعاطفاً لكنه يختبر فهم القصة فقط؛ لا توجد استجابة متعلم أو تقييم آمن، لذلك يبقى النشاط غير موصول.",
+      "candidateEvidence": [
+        "content/texts.json",
+        "content/muendlich.json",
+        "components/tasks.tsx"
+      ],
+      "relatedIds": [
+        306,
+        311,
+        482,
+        569,
+        570,
+        571,
+        572,
+        597,
+        967,
+        968
+      ]
+    },
+    "574": {
+      "classification": "language-identity-construct",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "الهوية اللغوية علاقة اجتماعية متغيرة بين اللغة والانتماء والموقع والاعتراف، وليست اسم الملف أو موضوعاً عن الهجرة. توجد قراءة حية عن الاندماج دون ترك الأصل ومهام تعريف ذاتي، لكنها أسئلة فهم أو كتابة لغوية ولا تحفظ رواية هوية المتعلم أو تدرس تغيرها؛ فلا تُستنتج سمة.",
+      "candidateEvidence": [
+        "content/lang/b2-26-30.json",
+        "content/texts.json",
+        "content/writing.json",
+        "lib/profiles.ts"
+      ],
+      "relatedIds": [
+        575,
+        576,
+        729,
+        734,
+        736,
+        758,
+        759,
+        760,
+        915
+      ]
+    },
+    "575": {
+      "classification": "learner-investment-construct",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "Investment عند Norton يربط مشاركة متعلم اللغة بهويته ورأس ماله وعلاقات القوة والعائد الاجتماعي المتوقع، ولا يعني دقائق الدراسة أو النقاط أو النية الأسبوعية. يسجل المنتج جهداً وأهدافاً محلية لكنه لا يجمع فرص المشاركة أو العوائق والموارد الاجتماعية، فلا يجوز تحويل السجل إلى درجة استثمار.",
+      "candidateEvidence": [
+        "lib/motivation.ts",
+        "components/motivation.tsx",
+        "components/absicht.tsx",
+        "components/berichte.tsx"
+      ],
+      "relatedIds": [
+        290,
+        294,
+        295,
+        368,
+        574,
+        576,
+        578,
+        759,
+        955
+      ]
+    },
+    "576": {
+      "classification": "imagined-community-construct",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "المجتمعات المتخيلة في تعلم اللغة هي انتماءات مستقبلية يتصورها المتعلم وتوجّه مشاركته واستثماره، وليست شخصيات النص أو جمهوراً مفترضاً. المنتج يعرض مسار دراسة وعمل في ألمانيا لكنه لا يطلب مجتمعاً مرجواً أو يحفظ علاقة هذا التصور بالاختيارات؛ فلا يوجد قياس أو مجتمع حي.",
+      "candidateEvidence": [
+        "lib/landeskunde.ts",
+        "components/landeskunde.tsx",
+        "content/writing.json",
+        "content/texts.json"
+      ],
+      "relatedIds": [
+        574,
+        575,
+        613,
+        734,
+        758,
+        759,
+        760
+      ]
+    },
+    "577": {
+      "classification": "l2-motivation-theory",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "إطار دافعية Dörnyei نظرية تفسر ذواتاً مستقبلية وخبرة تعلم وسياقاً متغيراً، وليس بطاقة سلسلة أيام أو نقاطاً. يعرض المنتج هدفاً أسبوعياً ونية تنفيذ وتقارير من السجل، لكنها دعم سلوكي عام بلا مقياس دافعية أو تصميم منسوب للنظرية أو دليل أثر سببي؛ فيبقى إطار بحث.",
+      "candidateEvidence": [
+        "lib/motivation.ts",
+        "components/motivation.tsx",
+        "components/absicht.tsx",
+        "components/berichte.tsx"
+      ],
+      "relatedIds": [
+        291,
+        294,
+        295,
+        368,
+        575,
+        578,
+        579,
+        580,
+        951,
+        954,
+        955,
+        957,
+        959
+      ]
+    },
+    "578": {
+      "classification": "l2-motivational-self-system-construct",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "نظام الذات الدافعية للغة الثانية يميز الذات المثالية والذات الواجبة وخبرة التعلم ويربطها بسياق المتعلم. المنتج لا يجمع هذه الأبعاد أو يفصل الدافع الداخلي عن ضغط الآخرين؛ الأهداف والنوايا والإنجازات لا تكفي لتشخيص النظام أو تقدير قوته، لذلك لا تُمنح سمة نفسية.",
+      "candidateEvidence": [
+        "lib/motivation.ts",
+        "components/motivation.tsx",
+        "components/absicht.tsx",
+        "content/writing.json"
+      ],
+      "relatedIds": [
+        291,
+        294,
+        295,
+        368,
+        575,
+        577,
+        579,
+        580,
+        951,
+        952,
+        953,
+        954,
+        955,
+        957,
+        959
+      ]
+    },
+    "579": {
+      "classification": "ideal-l2-self-construct",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "الذات المثالية في اللغة الثانية صورة مستقبلية يرغب المتعلم أن يصبحها، وتحتاج استحضاراً شخصياً وتفصيلاً ومراجعة مع الزمن. مهمة لماذا أتعلم الألمانية وسؤال العمل بعد خمس سنوات قد ينتجان أهدافاً، لكنهما لا يميزان صورة ذات لغوية ولا يحفظانها أو يقيسان أثرها؛ فلا تعد ميزة منفذة.",
+      "candidateEvidence": [
+        "content/writing.json",
+        "components/interview2.tsx",
+        "components/absicht.tsx",
+        "lib/motivation.ts"
+      ],
+      "relatedIds": [
+        291,
+        294,
+        295,
+        575,
+        577,
+        578,
+        580,
+        952,
+        953,
+        954,
+        955,
+        957
+      ]
+    },
+    "580": {
+      "classification": "ought-to-l2-self-construct",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "الذات الواجبة تتعلق بتوقعات وضغوط يعتقد المتعلم أن الآخرين يفرضونها، ولا تساوي هدف امتحان أو التزاماً أسبوعياً اختاره بنفسه. لا يسأل المنتج عن مصدر التوقع أو تعارضه مع رغبة المتعلم ولا يوفر موافقة لمعالجة بيانات نفسية؛ لذلك لا يمكن استنتاج هذا البعد من السلوك أو الملف.",
+      "candidateEvidence": [
+        "content/writing.json",
+        "components/interview2.tsx",
+        "components/absicht.tsx",
+        "lib/profiles.ts"
+      ],
+      "relatedIds": [
+        291,
+        294,
+        295,
+        575,
+        577,
+        578,
+        579,
+        952,
+        953,
+        954,
+        955,
+        957
+      ]
+    },
     "840": {
       "classification": "duplicate-catalog-record",
       "decision": "merge-duplicate",
