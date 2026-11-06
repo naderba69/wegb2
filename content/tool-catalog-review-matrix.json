@@ -18117,10 +18117,32 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "formulaic-language-practice",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "medium",
+        "rationaleAr": "يتدرب المتعلم حياً على وسائل تعبير متعددة الكلمات ومتلازمات وتراكيب ثابتة بالاسترجاع والإكمال والإنتاج داخل مهام التحدث والكتابة، وهي مطابقة مرشحة لممارسة اللغة الصيغية. لم تُستخرج الوحدات بمعيار مدونة خارجي موثق ولم يُقَس أثر استرجاعها في الطلاقة أو الإنتاج الحر؛ لذلك لا تُنسب كفاءة Wray عامة.",
+        "candidateEvidence": [
+          "content/redemittel.json",
+          "lib/redemittel.ts",
+          "components/redemittel.tsx",
+          "lib/kollokproduktion.ts",
+          "components/kollokproduktion.tsx"
+        ],
+        "relatedIds": [
+          320,
+          321,
+          438,
+          642,
+          654,
+          839,
+          840,
+          931
+        ]
       }
     },
     {
@@ -18138,10 +18160,32 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "lexical-bundle-practice",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "medium",
+        "rationaleAr": "يقدم البنك الحي عبارات وظيفية متعددة الكلمات مصنفة بحسب وظيفة الخطاب وجزء المهمة، مع تدريب استرجاع واستعمال في الكتابة والتحدث؛ وهذه مطابقة مرشحة ضيقة للحزم المعجمية. لكنها لم تُستخرج بوصفها n-grams وفق تردد ومدى عبر سجلات ومدونات كما في منهج Biber، فلا تُدّعى حزم مدوّنية موثقة.",
+        "candidateEvidence": [
+          "content/redemittel.json",
+          "lib/redemittel.ts",
+          "components/redemittel.tsx",
+          "components/schreiben.tsx",
+          "components/sprechkarten.tsx"
+        ],
+        "relatedIds": [
+          320,
+          321,
+          438,
+          641,
+          654,
+          839,
+          841,
+          842
+        ]
       }
     },
     {
@@ -18159,10 +18203,35 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "collocation-practice",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "medium",
+        "rationaleAr": "توجد آلاف روابط المتلازمات في بنك البطاقات ومحطة حية تطلب استدعاء الكلمة الشريكة وتمارين B2 سياقية مع تصحيح؛ وهذه مطابقة مرشحة لممارسة التصاحب اللفظي. الاختيار داخلي ولا يطبق إحصاء مدونة Sinclair أو عتبات التردد والقوة، ولا تثبت الإجابات المقيدة كفاءة إنتاج حر.",
+        "candidateEvidence": [
+          "content/kollokationen.json",
+          "content/kollok-vertiefung.json",
+          "lib/kollokationen.ts",
+          "lib/kollokproduktion.ts",
+          "components/kollokproduktion.tsx",
+          "components/tiefenlex.tsx"
+        ],
+        "relatedIds": [
+          218,
+          275,
+          308,
+          321,
+          323,
+          519,
+          647,
+          657,
+          839,
+          893
+        ]
       }
     },
     {
@@ -18180,10 +18249,30 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "idiom-elaboration-practice",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "medium",
+        "rationaleAr": "درس B2 الحي يقابل المعنى الحرفي بالمقصود، يجمع بعض الصور في مجالات، ثم يطلب فهم التعبير وإكماله وإعادة صياغته وترجمته وإنتاجه. هذه مطابقة مرشحة محدودة لتعلم التعابير، لكن لا توجد معالجة اشتقاقية أو تاريخية منهجية وفق Boers، والبنك الداخلي يحتاج مراجعة الشيوع والسجل والملاءمة البشرية.",
+        "candidateEvidence": [
+          "content/grammar.json",
+          "components/akademie/LektionWizard.tsx",
+          "components/tasks.tsx",
+          "scripts/engine_smoke.ts"
+        ],
+        "relatedIds": [
+          308,
+          321,
+          324,
+          446,
+          448,
+          484,
+          645
+        ]
       }
     },
     {
@@ -18201,10 +18290,28 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "figurative-metaphor-awareness-practice",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "medium",
+        "rationaleAr": "يعرض درس التعابير الحي فرق المعنى الحرفي والمقصود ويشير إلى مجالات الصورة مثل الجسم والحيوان والنقل، ثم يطلب الاختيار والتحويل والإنتاج؛ وهذه مطابقة مرشحة لوعي استعاري محدود. لا يبني خرائط مصدر وهدف منهجية ولا يقيس تفسير استعارات جديدة أو كفاءة مجازية عامة، وتبقى صحة التحليلات بحاجة إلى مراجعة بشرية.",
+        "candidateEvidence": [
+          "content/grammar.json",
+          "components/akademie/LektionWizard.tsx",
+          "components/tasks.tsx",
+          "scripts/engine_smoke.ts"
+        ],
+        "relatedIds": [
+          324,
+          446,
+          448,
+          484,
+          644
+        ]
       }
     },
     {
@@ -18225,7 +18332,30 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "vocabulary-size-assessment",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "تعرض لوحة المرجع عدد بطاقات المحتوى وتقارنه بأحجام تقريبية معلنة، لكنها لا تقدّر حجم مفردات المتعلم. يحتاج اختبار Nation عينة طبقية من قائمة تردد صالحة، وتصحيح التخمين، وتحويل الدرجة إلى تقدير مع عدم يقين؛ والتشخيص الحالي لا يفعل ذلك، لذلك لا يُعرض رقم حجم مفردات شخصي.",
+        "candidateEvidence": [
+          "lib/referenz.ts",
+          "components/referenz.tsx",
+          "lib/einstufung.ts",
+          "components/einstufung.tsx",
+          "content/vocab.json"
+        ],
+        "relatedIds": [
+          237,
+          246,
+          519,
+          520,
+          647,
+          649,
+          650,
+          651,
+          994
+        ]
       }
     },
     {
@@ -18243,10 +18373,35 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "internal-frequency-list",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "medium",
+        "rationaleAr": "يحسب المنتج ظهور جذوع الكلمات في نصوصه وحواراته وجمله، يعرض فئات التردد، ويرتب بطاقات الحزمة وفقها؛ وهذه قائمة تردد داخلية حية مرشحة. الواجهة تصرح بأنها ليست تردد الألمانية، ولم يُطبق منهج Brezina على مدونة ممثلة أو توزيع الأنواع والمصادر، فلا تستخدم الرتبة لتحديد الشيوع العام أو مستوى CEFR.",
+        "candidateEvidence": [
+          "lib/frequenz.ts",
+          "components/kartenexport.tsx",
+          "components/tiefenlex.tsx",
+          "lib/referenz.ts",
+          "scripts/engine_smoke.ts"
+        ],
+        "relatedIds": [
+          318,
+          319,
+          517,
+          518,
+          519,
+          646,
+          650,
+          889,
+          890,
+          891,
+          994
+        ]
       }
     },
     {
@@ -18267,7 +18422,26 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "word-association-construct",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "يربط المنتج البطاقات آلياً بالسياقات والمتلازمات وعائلات الكلمات، لكنه لا يطلب من المتعلم أول استجابة حرة لمنبهات معجمية ولا يسجل زمنها أو نوعها أو ثباتها. العلاقات المؤلفة أو المحسوبة ليست Word Associations نفسية لغوية، ولا تسمح باستنتاج تنظيم المعجم الذهني.",
+        "candidateEvidence": [
+          "lib/verknuepfung.ts",
+          "components/wortlink.tsx",
+          "lib/wortfamilien.ts",
+          "components/wortfamilien.tsx"
+        ],
+        "relatedIds": [
+          271,
+          308,
+          343,
+          391,
+          649,
+          923
+        ]
       }
     },
     {
@@ -18288,7 +18462,25 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "lexical-availability-assessment",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "التوفر المعجمي يتطلب إنتاج كلمات حراً وموقوتاً داخل مجالات دلالية ثم حساب ترتيبها وتكرارها وانتشارها بين متعلمين. التطبيق يعرض بنوكاً موضوعية ويقيس إجابات داخلية مقيدة، لكنه لا يجمع قوائم الاستدعاء الحرة ولا عينة جماعية؛ لذلك لا يقيس availability ولا يستنتج سرعة النفاذ المعجمي.",
+        "candidateEvidence": [
+          "content/vocab.json",
+          "components/tasks.tsx",
+          "components/erweiterung.tsx",
+          "content/real-world-validation.json"
+        ],
+        "relatedIds": [
+          520,
+          646,
+          648,
+          650,
+          651
+        ]
       }
     },
     {
@@ -18306,10 +18498,29 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "raw-type-token-diversity-indicator",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "تعرض لوحة الكتابة الحية عدد الصيغ المختلفة ونسبة type/token في نص المتعلم، وتصرح بأن المؤشر تقريبي خاصة في النص القصير؛ وهذه مطابقة مرشحة لمؤشر تنوع خام. لا تطبق Malvern D أو MTLD ولا تضبط طول النص والتصريف والأخطاء، لذلك لا يجوز تحويل النسبة إلى مستوى أو درجة تنوع معجمي متحقق منها.",
+        "candidateEvidence": [
+          "lib/kriterien.ts",
+          "components/kriterienpanel.tsx",
+          "components/schreiben.tsx",
+          "scripts/engine_smoke.ts"
+        ],
+        "relatedIds": [
+          246,
+          520,
+          646,
+          647,
+          649,
+          651
+        ]
       }
     },
     {
@@ -18327,10 +18538,31 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "lexical-sophistication-practice",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "توجد تمارين حية لمرادفات السجل الرسمي والمتلازمات الدقيقة وتحويل الأسلوب، فتدعم ممارسة اختيار لفظ أدق أو أرقى في سياق B2. لكنها لا تحسب رقي نص المتعلم مقابل قائمة تردد خارجية ولا تتحقق من الملاءمة تلقائياً؛ وطول الكلمة أو نسبة التنوع ليسا مقياس Laufer للصعوبة المعجمية.",
+        "candidateEvidence": [
+          "content/synonyme-kontext.json",
+          "components/tiefenlex.tsx",
+          "lib/stil.ts",
+          "components/stilwechsler.tsx",
+          "lib/kriterien.ts"
+        ],
+        "relatedIds": [
+          323,
+          446,
+          519,
+          643,
+          650,
+          652,
+          653
+        ]
       }
     },
     {
@@ -18351,7 +18583,26 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "reject-not-applicable",
+        "classification": "out-of-scope-english-academic-word-list",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "قائمة Coxhead الأكاديمية بُنيت لمدونات الإنجليزية، بينما نطاق المنتج تعلم الألمانية ولا يجوز نقل عناصر AWL أو تردداتها إلى الألمانية. وجود موضوعات جامعة وبحث ومفردات B2 ألمانية لا ينفذ Academic Word List الإنجليزية؛ وأي مسار ألماني أكاديمي يحتاج مورداً ألمانياً مستقلاً موثقاً.",
+        "candidateEvidence": [
+          "content/accreditation-alignment.json",
+          "content/vocab.json",
+          "content/texts.json",
+          "lib/plan.ts"
+        ],
+        "relatedIds": [
+          519,
+          646,
+          647,
+          651,
+          653,
+          704
+        ]
       }
     },
     {
@@ -18369,10 +18620,29 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "nursing-technical-vocabulary-practice",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "يوفر مسار التمريض الحي مفردات مهنية متدرجة وحوارات وتوثيقاً وعبارات عمل، وهي مطابقة مرشحة لممارسة مفردات تقنية في مجال الرعاية الصحية فقط. لا تغطي التقنية أو المهن عموماً، والمحتوى داخلي يحتاج مراجعة مختصين ومستخدمين ولا يثبت إتقان Fachsprache أو الجاهزية لامتحان مهني.",
+        "candidateEvidence": [
+          "content/pflege.json",
+          "lib/pflege.ts",
+          "components/pflege.tsx",
+          "lib/fsp.ts",
+          "app/ueben/page.tsx"
+        ],
+        "relatedIds": [
+          519,
+          646,
+          647,
+          651,
+          652
+        ]
       }
     },
     {
@@ -18390,10 +18660,37 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "multiword-unit-practice",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "medium",
+        "rationaleAr": "توجد أنشطة حية لعبارات وظيفية ومتلازمات وتراكيب فعلية اسمية وتعابير اصطلاحية، مع الاسترجاع والإكمال والإنتاج؛ وهذه مطابقة مرشحة لممارسة أنواع من الوحدات متعددة الكلمات. يظل المصطلح مظلة واسعة، ولم يوثق المنتج معيار الحدود أو التردد أو المعالجة كوحدة واحدة من مدونة خارجية.",
+        "candidateEvidence": [
+          "content/redemittel.json",
+          "content/kollokationen.json",
+          "content/grammar.json",
+          "components/redemittel.tsx",
+          "components/kollokproduktion.tsx",
+          "components/tiefenlex.tsx"
+        ],
+        "relatedIds": [
+          320,
+          321,
+          323,
+          438,
+          641,
+          642,
+          643,
+          839,
+          840,
+          841,
+          842,
+          931
+        ]
       }
     },
     {
@@ -18414,7 +18711,27 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "reject-not-applicable",
+        "classification": "out-of-scope-english-phrasal-verbs",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "قائمة Garnier للأفعال المركبة تخص phrasal verbs الإنجليزية، بينما المنتج يعلّم الألمانية. الأفعال الألمانية ذات البادئة المنفصلة والأفعال ذات حرف الجر ظواهر مختلفة ولا يجوز تسميتها تطبيقاً لقائمة إنجليزية؛ لذلك يُرفض السجل من النطاق الحالي بدلاً من مساواة أنظمة لغوية غير متطابقة.",
+        "candidateEvidence": [
+          "content/grammar.json",
+          "content/vocab.json",
+          "lib/plan.ts"
+        ],
+        "relatedIds": [
+          321,
+          322,
+          323,
+          654,
+          656,
+          657,
+          658,
+          659
+        ]
       }
     },
     {
@@ -18432,10 +18749,30 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "prepositional-verb-practice",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "medium",
+        "rationaleAr": "توجد دروس A2 وB1 وتمارين تحقق وإنتاج ومحطة عمق معجمي لأفعال ألمانية بحرف جر ثابت وحالته، وهي مطابقة حية مرشحة لممارسة prepositional verbs. القائمة داخلية ومحدودة، والتصحيح المقيد لا يثبت اختيار الحرف والحالة في إنتاج حر أو اكتمال تغطية الاستعمالات المتعددة.",
+        "candidateEvidence": [
+          "content/grammar.json",
+          "content/tiefenlex.json",
+          "components/tiefenlex.tsx",
+          "lib/grammatikRadar.ts",
+          "scripts/engine_smoke.ts"
+        ],
+        "relatedIds": [
+          322,
+          323,
+          635,
+          657,
+          658,
+          659
+        ]
       }
     },
     {
@@ -18453,10 +18790,32 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "lexico-grammatical-pattern-practice",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "medium",
+        "rationaleAr": "يتدرب المتعلم حياً على أفعال بحروف جر وحالات ثابتة وعلى تراكيب اسمية فعلية ومتلازمات داخل سياق وتصحيح، وهي مطابقة جزئية مرشحة للتصاحب النحوي. لا توجد مدونة تعرض التوزيع النحوي المحيط بالكلمات أو اختبار يميز colligation عن collocation، ولا يطبق المنتج تحليل Hoey.",
+        "candidateEvidence": [
+          "components/tiefenlex.tsx",
+          "content/tiefenlex.json",
+          "content/grammar.json",
+          "lib/fvg.ts",
+          "lib/fvg-aufgabe.ts"
+        ],
+        "relatedIds": [
+          320,
+          321,
+          322,
+          323,
+          643,
+          656,
+          658,
+          659
+        ]
       }
     },
     {
@@ -18474,10 +18833,32 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "lexico-grammatical-pattern-practice",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "medium",
+        "rationaleAr": "تعرض دروس وتمارين حية أنماط الفعل مع حرف الجر والحالة وتراكيب Funktionsverbgefüge وتطلب تطبيقها في جمل؛ وهذه مطابقة مرشحة ضيقة لممارسة نمط معجمي نحوي. لا يملك المنتج معجماً لأنماط Hunston مستخرجاً من مدونة ولا يعلّم التعميم بين المعنى والنمط بوصفه Pattern Grammar متكاملاً.",
+        "candidateEvidence": [
+          "content/grammar.json",
+          "content/tiefenlex.json",
+          "components/tiefenlex.tsx",
+          "lib/fvg.ts",
+          "lib/fvg-aufgabe.ts",
+          "components/tasks.tsx"
+        ],
+        "relatedIds": [
+          322,
+          440,
+          656,
+          657,
+          659,
+          660,
+          712
+        ]
       }
     },
     {
@@ -18495,10 +18876,28 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "verb-complement-pattern-practice",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "medium",
+        "rationaleAr": "تعلّم الدروس الحية الفعل مع حرف الجر والحالة، وتعرض تمارين الفروق تغير Dativ وAkkusativ مع الفعل؛ وهذه مطابقة مرشحة محدودة لأنماط متممات الأفعال. لا يوجد معجم تكافؤ موثق يميز المتممات الإلزامية والاختيارية والأدوار الدلالية أو يطبق نموذج Herbst، فلا تُدّعى تغطية valency عامة.",
+        "candidateEvidence": [
+          "content/grammar.json",
+          "content/tiefenlex.json",
+          "components/tiefenlex.tsx",
+          "lib/grammatikRadar.ts"
+        ],
+        "relatedIds": [
+          322,
+          656,
+          657,
+          658,
+          660
+        ]
       }
     },
     {
@@ -18519,7 +18918,30 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "advanced-construction-grammar-theory",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "نحو البناء المتقدم يمثل اقترانات الشكل والمعنى وشبكات الميراث والتعميم بينها، وليس مجرد وجود أمثلة قواعد وعبارات ثابتة. لا يملك المنتج مخزون constructions موثقاً أو علاقات شبكة أو قياساً لإنتاج بناء جديد، لذلك تبقى صيغة Goldberg المتقدمة نظرية بحثية مثل السجل 440.",
+        "candidateEvidence": [
+          "content/grammar.json",
+          "components/akademie/LektionWizard.tsx",
+          "lib/redemittel.ts",
+          "lib/kollokproduktion.ts"
+        ],
+        "relatedIds": [
+          215,
+          416,
+          435,
+          440,
+          441,
+          658,
+          659,
+          712,
+          814,
+          883
+        ]
       }
     },
     {
