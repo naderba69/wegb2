@@ -624,22 +624,26 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
         "decision": "defer",
-        "classification": "learner-activity",
+        "classification": "self-explanation-practice",
         "reviewerRole": "internal-methodology-triage",
-        "reviewedAt": "2026-11-05",
+        "reviewedAt": "2026-11-06",
         "risk": "medium",
-        "rationaleAr": "الشرح الذاتي نشاط قابل للتصميم، لكنه يتداخل مع أسئلة لماذا في السجل 186، ومعامل 1.3 غير موثق؛ يلزم قالب مرتبط بقاعدة محددة ومعيار استجابة واختبار إتاحة بدلاً من احتساب زر الإقرار تعلماً.",
+        "rationaleAr": "توجد الآن محطة فاينمان حية تختار قاعدة من المستوى، وتطلب من المتعلم شرحها بالعربية بكلماته، وتحسب تغطية كلمات القواعد محلياً، وتعرض ما غاب وتتيح التعديل؛ وهي مطابقة مرشحة للشرح الذاتي. الفحص سطحي بالكلمات ولا يتحقق من صحة العلاقات أو يحفظ نص الشرح، ولا يثبت فهماً أو أثراً سببياً.",
         "candidateEvidence": [
-          "lib/elaborative-interrogation.ts",
-          "content/grammar.json"
+          "components/lernstrategie.tsx",
+          "app/fortschritt/page.tsx",
+          "content/grammar.json",
+          "scripts/engine_smoke.ts"
         ],
         "relatedIds": [
           186,
-          544
+          264,
+          540,
+          849
         ]
       }
     },
@@ -13043,7 +13047,29 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "communicative-language-teaching-framework",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "CLT إطار منهجي يوازن المعنى والشكل والكفايات ويحتاج تواصلاً له غرض ومعلومة غير مشتركة وتفاوضاً واستجابةً غير مكتوبة سلفاً. لدى المنتج حوارات ومهام كلام وكتابة، لكن أغلب التفاعل فردي أو اختيارات معدة، ووحدة CLT المعزولة غير موصولة؛ فلا يثبت وجود أنشطة تواصلية أن المنهج كله CLT Advanced.",
+        "candidateEvidence": [
+          "lib/clt-deep.ts",
+          "content/muendlich.json",
+          "components/muendlich.tsx",
+          "components/dialogszenarien.tsx"
+        ],
+        "relatedIds": [
+          205,
+          213,
+          220,
+          225,
+          229,
+          411,
+          832,
+          971,
+          976
+        ]
       }
     },
     {
@@ -13061,10 +13087,34 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "cefr-action-oriented-practice",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "توجد مهام استعمال مستقل في مواقف جديدة، تحفظ إنتاج المتعلم محلياً، وترتبط بعضُها بهدف Can-Do ثم تحقق مؤجل؛ وهذه مطابقة حية مرشحة محدودة للمقاربة الموجهة بالفعل. لكنها غالباً إنتاج فردي نحوي، لا مشروعاً اجتماعياً بفاعلين ووساطة ومنتج مشترك، كما أن ربط CEFR غير شامل ولا مراجع خارجياً.",
+        "candidateEvidence": [
+          "content/grammar.json",
+          "content/cando.json",
+          "components/akademie/LektionWizard.tsx",
+          "lib/plan.ts",
+          "content/grammar-profile-matrix.json",
+          "scripts/interaktiv_test.tsx"
+        ],
+        "relatedIds": [
+          240,
+          246,
+          492,
+          494,
+          495,
+          496,
+          497,
+          556,
+          937
+        ]
       }
     },
     {
@@ -13085,7 +13135,27 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "task-based-language-teaching-framework",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "TBLT Advanced تصميم منهجي لدورة تبدأ بمهمة معناها أولاً ولها نتيجة غير لغوية، ثم تخطيط وأداء وتأمل أو تركيز على الشكل. الخطة الحالية تحتوي مهام كتابة وتحدث، لكن وجود مهمة لا يثبت دورة TBLT، والنموذج الثلاثي المعزول غير موصول ولا يوثق outcome أو تفاوضاً أو تقويماً قائماً على إنجاز المهمة.",
+        "candidateEvidence": [
+          "lib/tblt-deep.ts",
+          "content/writing.json",
+          "content/muendlich.json",
+          "lib/plan.ts"
+        ],
+        "relatedIds": [
+          215,
+          216,
+          225,
+          329,
+          431,
+          833,
+          942
+        ]
       }
     },
     {
@@ -13106,7 +13176,26 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "content-and-language-integrated-framework",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "CLIL يحتاج أهداف محتوى وأهداف لغة مزدوجة، ومدخلات تخصصية وسقالات وتقويماً يميز تعلم المجال عن الأداء اللغوي. توجد نصوص صحة ومناخ ووحدة تمريض لغوية، لكن الموضوع ليس تلقائياً منهج محتوى، وlib/clil.ts غير مستورد ولا توجد خريطة أهداف أو rubric مزدوجة؛ لذلك يبقى إطاراً بحثياً.",
+        "candidateEvidence": [
+          "lib/clil.ts",
+          "components/pflege.tsx",
+          "components/gesundheit.tsx",
+          "content/texts.json"
+        ],
+        "relatedIds": [
+          521,
+          522,
+          602,
+          773,
+          837,
+          919
+        ]
       }
     },
     {
@@ -13127,7 +13216,27 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "conversation-driven-pedagogy-framework",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "Dogme/Unplugged يقوم على محادثة ناشئة يقودها المتعلم، ومواد خفيفة، ولغة تظهر من التفاعل ويستجيب لها معلم. المنتج ذاتي ذو منهج وبنوك محتوى ثابتة؛ والسيناريوهات والرفيق الاختياري لا ينشئان syllabus ناشئاً أو تدخلاً بشرياً آمناً. يُحفظ كعدسة نقدية لا كميزة منفذة.",
+        "candidateEvidence": [
+          "lib/plan.ts",
+          "components/dialogszenarien.tsx",
+          "components/sprechbegleiter.tsx",
+          "content/muendlich.json"
+        ],
+        "relatedIds": [
+          205,
+          213,
+          220,
+          521,
+          832,
+          971,
+          976
+        ]
       }
     },
     {
@@ -13148,7 +13257,32 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "lexical-approach-framework",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "medium",
+        "rationaleAr": "يعرض المنتج عبارات وظيفية ومتلازمات وحزماً ويطلب استرجاع بعضها وإنتاجها، وهي أنشطة معجمية حية. لكن Lexical Approach منهج ينظم اختيار المحتوى وتسلسله وتدريسه حول وحدات متعددة الكلمات؛ لا تثبت بنوك المتلازمات وحدها أن المنهج كله مصمم وفقه، ولا يوجد مصدر corpus موثق لاختيار الوحدات.",
+        "candidateEvidence": [
+          "content/redemittel.json",
+          "content/kollokationen.json",
+          "components/redemittel.tsx",
+          "components/kollokproduktion.tsx",
+          "components/tiefenlex.tsx"
+        ],
+        "relatedIds": [
+          218,
+          275,
+          308,
+          320,
+          321,
+          323,
+          438,
+          838,
+          839,
+          842,
+          894
+        ]
       }
     },
     {
@@ -13169,7 +13303,29 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "corpus-informed-curriculum-framework",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "التعليم المستند إلى corpus يحتاج توثيق corpus وموازنتها وحقوقها وإجراءات تثبت أن التردد أو النمط غيّر اختيار المنهج أو أمثلته. المنتج يحسب corpus داخلية من مواده بعد تأليفها ويعرض العدد والترتيب، لكنه لا يثبت أن المحتوى صُمم من مدونة ممثلة للألمانية؛ لذلك لا تُرقّى شارة التردد إلى Corpus-Informed Teaching.",
+        "candidateEvidence": [
+          "lib/frequenz.ts",
+          "components/kartenexport.tsx",
+          "components/tiefenlex.tsx",
+          "content/texts.json"
+        ],
+        "relatedIds": [
+          318,
+          319,
+          518,
+          519,
+          528,
+          707,
+          889,
+          890,
+          994
+        ]
       }
     },
     {
@@ -13190,7 +13346,31 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "learner-data-discovery-method",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "medium",
+        "rationaleAr": "DDL المتقدم يتطلب أن يفحص المتعلم أمثلة corpus متعددة أو خطوط KWIC، يصوغ فرضية عن نمط، ثم يختبرها مع سقالات وتغذية راجعة. البحث الحالي يعرض بطاقة أو معنى أو عدداً مجمعاً ولا يعرض وقوعات متوازية أو مهمة استقراء؛ لذا يبقى النشاط مؤجلاً رغم وجود corpus داخلية محدودة.",
+        "candidateEvidence": [
+          "lib/frequenz.ts",
+          "lib/suche.ts",
+          "components/tiefenlex.tsx",
+          "content/texts.json"
+        ],
+        "relatedIds": [
+          318,
+          319,
+          518,
+          519,
+          527,
+          707,
+          889,
+          890,
+          891,
+          892,
+          994
+        ]
       }
     },
     {
@@ -13211,7 +13391,29 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "learner-corpus-pedagogy-framework",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "استخدام مدونة متعلمين يفترض corpus حقيقية ذات نصوص وسياق وmetadata وموافقة وإخفاء هوية واستعلام، ثم نشاطاً يفسر أنماطاً دون وصم المتعلمين. دفتر الأخطاء المحلي مقتطفات فردية ولا يشكل corpus ولا يسمح بالمقارنة أو الاستعلام؛ لذلك لا يوجد Learner Corpus Use حي.",
+        "candidateEvidence": [
+          "lib/fehler.ts",
+          "components/fehlerlabor.tsx",
+          "lib/backup.ts",
+          "app/datenschutz/page.tsx",
+          "content/real-world-validation.json"
+        ],
+        "relatedIds": [
+          319,
+          515,
+          516,
+          517,
+          518,
+          530,
+          707,
+          890
+        ]
       }
     },
     {
@@ -13232,7 +13434,25 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "interlanguage-analysis-framework",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "النسخة المتقدمة من Contrastive Interlanguage تتطلب مدونة متعلمين ومجموعة مرجعية ومقارنة مضبوطة بالمستوى والمهمة وخطة إحصائية. المنتج لا يملك corpus متعلم أو عينة مقارنة؛ وفئات دفتر الأخطاء علاج فردي بقواعد سطحية، فلا تثبت اختلافاً جماعياً أو مسار interlanguage.",
+        "candidateEvidence": [
+          "lib/fehler.ts",
+          "components/fehlerlabor.tsx",
+          "content/real-world-validation.json"
+        ],
+        "relatedIds": [
+          514,
+          515,
+          516,
+          517,
+          529,
+          693
+        ]
       }
     },
     {
@@ -13253,7 +13473,27 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "sla-input-processing-theory",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "Input Processing نظرية عن كيفية ربط المتعلم الشكل بالمعنى وقيود الانتباه، ولا تقاس من صحة اختيار واحد. توجد حالتان حيّتان من Processing Instruction تسألان عن معنى weil/obwohl، لكنهما لا تثبتان تغير استراتيجية المعالجة ولا تنفذان إطاراً متقدماً أو نقلاً مؤجلاً؛ تفصل النظرية عن التدخل المحدود.",
+        "candidateEvidence": [
+          "lib/processing-instruction.ts",
+          "lib/plan.ts",
+          "scripts/engine_smoke.ts",
+          "content/grammar.json"
+        ],
+        "relatedIds": [
+          211,
+          373,
+          374,
+          380,
+          416,
+          532,
+          533
+        ]
       }
     },
     {
@@ -13274,7 +13514,28 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "implicit-learning-construct",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "التعلم الضمني بناء معرفي يحتاج تعرضاً مضبوطاً وقياساً لا يعتمد على شرح القاعدة وتحققاً من الوعي، ولا يعني أن المتعلم شاهد أمثلة قبل القاعدة. Lesson Studio يخلط المثال والشرح والتدريب ولا يعزل معرفة ضمنية أو مجموعة مقارنة، لذلك لا ينسب نجاح النشاط إلى Implicit Learning.",
+        "candidateEvidence": [
+          "components/akademie/LektionWizard.tsx",
+          "content/grammar.json",
+          "lib/metriken.ts"
+        ],
+        "relatedIds": [
+          212,
+          373,
+          380,
+          531,
+          533,
+          534,
+          697,
+          698,
+          819
+        ]
       }
     },
     {
@@ -13295,7 +13556,28 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "explicit-learning-construct",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "يعرض Lesson Studio قواعد وشروحاً وتصحيحاً صريحاً، وهذا دليل على تعليم صريح لا على أن المعرفة المتكونة Explicit Learning أو أنها أفضل سببياً. لا توجد مهمة وعي أو مقارنة شرطية أو قياس مؤجل لنوع المعرفة؛ لذلك تبقى النتيجة المعرفية بحثية رغم وضوح التدريس.",
+        "candidateEvidence": [
+          "components/akademie/LektionWizard.tsx",
+          "content/grammar.json",
+          "components/exercises.tsx"
+        ],
+        "relatedIds": [
+          215,
+          380,
+          402,
+          531,
+          532,
+          535,
+          697,
+          698,
+          818
+        ]
       }
     },
     {
@@ -13316,7 +13598,25 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "incidental-learning-construct",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "التعلم العرضي يُفحص عندما ينشغل المتعلم بمهمة لا تعلن اختبار العنصر المستهدف ثم يقاس اكتسابه لاحقاً. القراءة والنقر على كلمة قد يتيحان تعرضاً، لكن المنتج لا يسجل نية المتعلم ولا يخفي هدفاً بحثياً ولا يجري post-test غير متوقع؛ فلا يجوز عد كل تعلم جانبي Incidental Learning مثبتاً.",
+        "candidateEvidence": [
+          "components/lesestoff.tsx",
+          "components/wortlink.tsx",
+          "components/tasks.tsx",
+          "lib/metriken.ts"
+        ],
+        "relatedIds": [
+          221,
+          277,
+          532,
+          535,
+          536
+        ]
       }
     },
     {
@@ -13337,7 +13637,29 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "intentional-learning-construct",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "البطاقات والمراجعة والأهداف تعلن ما سيدرسه المتعلم وتدعم ممارسة مقصودة قابلة للمشاهدة، لكنها لا تكشف النية النفسية في كل جلسة ولا تثبت أن نتيجة الذاكرة سببها Intentional Learning. يلزم تعريف شرط ومقارنة وقياس مؤجل قبل تحويل نمط الدراسة إلى ادعاء اكتساب.",
+        "candidateEvidence": [
+          "components/tasks.tsx",
+          "lib/srs.ts",
+          "components/absicht.tsx",
+          "components/motivation.tsx"
+        ],
+        "relatedIds": [
+          181,
+          184,
+          201,
+          268,
+          291,
+          532,
+          533,
+          534,
+          536
+        ]
       }
     },
     {
@@ -13358,7 +13680,27 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "task-involvement-load-construct",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "Involvement Load فرضية ترمز الحاجة والبحث والتقييم في مهمة مفردات ثم تربط الدرجة بالاحتفاظ؛ ليست زمناً أو صعوبة واجهة. المنتج لا يرمز المهمات على الأبعاد الثلاثة ولا يتحقق من درجاتها أو يقيس احتفاظاً مقارناً، لذلك لا يستنتج عبء الانخراط من البحث أو الكتابة وحدهما.",
+        "candidateEvidence": [
+          "components/tasks.tsx",
+          "lib/suche.ts",
+          "components/tiefenlex.tsx",
+          "lib/metriken.ts"
+        ],
+        "relatedIds": [
+          262,
+          281,
+          534,
+          535,
+          537,
+          538,
+          878
+        ]
       }
     },
     {
@@ -13379,7 +13721,28 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "need-search-evaluation-framework",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "Need–Search–Evaluation أبعاد تحليل لمهمة المفردات: دافع لاستخدام الكلمة، بحث عن شكل أو معنى، ومقارنة ملاءمة بدائل. التطبيق يقدم بحثاً وتمارين سياق في أماكن منفصلة، لكنه لا يربطها بدورة واحدة ولا يحفظ قرار المتعلم أو يرمز قوة كل بعد؛ فلا يثبت نموذج Laufer/Hulstijn.",
+        "candidateEvidence": [
+          "lib/suche.ts",
+          "components/tiefenlex.tsx",
+          "components/kollokproduktion.tsx",
+          "components/tasks.tsx"
+        ],
+        "relatedIds": [
+          264,
+          319,
+          519,
+          528,
+          536,
+          538,
+          878,
+          889
+        ]
       }
     },
     {
@@ -13400,7 +13763,32 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "depth-of-processing-theory",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "عمق المعالجة وصف نظري لا يُقاس بعدد النقرات أو طول الإجابة، كما أن صعوبة مهمة لا تضمن معالجة دلالية أفضل. توجد أنشطة شرح وسياق وإنتاج، لكنها لا تقارن مستويات معالجة مضبوطة ولا تقيس احتفاظاً مؤجلاً؛ لذلك لا ينسب لها أثر Depth of Processing.",
+        "candidateEvidence": [
+          "components/lernstrategie.tsx",
+          "components/tiefenlex.tsx",
+          "components/tasks.tsx",
+          "lib/metriken.ts"
+        ],
+        "relatedIds": [
+          202,
+          262,
+          264,
+          281,
+          536,
+          537,
+          539,
+          540,
+          847,
+          848,
+          849,
+          877
+        ]
       }
     },
     {
@@ -13423,7 +13811,28 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "levels-of-processing-theory",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "Levels of Processing إطار تفسيري عن نوع المعالجة والذاكرة، وليس سلماً صالحاً لتصنيف كل شاشة تلقائياً. تنوع التعرف والاسترجاع والشرح في المنتج لا يعزل معالجة سطحية ودلالية ولا يساوي دليلاً سببياً؛ يبقى السجل المرجعي، بينما السجل 848 مكرر حرفياً ومندمج فيه.",
+        "candidateEvidence": [
+          "components/tasks.tsx",
+          "components/lernstrategie.tsx",
+          "lib/srs.ts",
+          "lib/metriken.ts"
+        ],
+        "relatedIds": [
+          202,
+          268,
+          270,
+          538,
+          540,
+          847,
+          848,
+          877
+        ]
       }
     },
     {
@@ -13441,10 +13850,29 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "elaborative-self-explanation-practice",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "medium",
+        "rationaleAr": "توجد محطة فاينمان حية تختار قاعدة مناسبة، تطلب شرحها بكلمات المتعلم، تقارن تغطية كلمات القواعد محلياً، تعرض الفجوات وتسمح بالتعديل؛ وهي مطابقة مرشحة محدودة للتفصيل عبر الشرح الذاتي. مطابقة الكلمات لا تقيم صحة العلاقات أو جودة المثال، ولا تثبت عمق معالجة أو احتفاظاً أفضل.",
+        "candidateEvidence": [
+          "components/lernstrategie.tsx",
+          "app/fortschritt/page.tsx",
+          "content/grammar.json",
+          "scripts/engine_smoke.ts"
+        ],
+        "relatedIds": [
+          186,
+          202,
+          264,
+          538,
+          539,
+          849
+        ]
       }
     },
     {
