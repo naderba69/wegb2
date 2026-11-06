@@ -21407,10 +21407,35 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "rule-based-tutoring-workflow",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "يجمع المنتج مساراً متدرجاً وشرحاً وتمارين بمحاولة ثانية وتغذية فورية وسجل مهارات وتوصيات علاجية، مع محادثة نموذجية اختيارية؛ وهذه مطابقة مرشحة لسير تدريس رقمي قائم على قواعد. لا توجد نماذج مجال ومتعلم وتدريس موثقة وفق ITS ولا تتبع خطوات أو مقارنة VanLehn، والدرجات والكاشفات محدودة وغير متحققة.",
+        "candidateEvidence": [
+          "components/akademie/LektionWizard.tsx",
+          "components/exercises.tsx",
+          "lib/kompetenz.ts",
+          "components/berichte.tsx",
+          "components/sprechbegleiter.tsx"
+        ],
+        "relatedIds": [
+          238,
+          259,
+          260,
+          363,
+          402,
+          403,
+          407,
+          720,
+          722,
+          724,
+          992
+        ]
       }
     },
     {
@@ -21428,10 +21453,35 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "local-descriptive-learning-analytics",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "يسجل المنتج محلياً محاولات ومهارات وأخطاء ومراجعات وامتحانات ووقت جلسة نشطاً، ويعرض تقارير واتجاهات وتوازناً وتوصيات قابلة للتصدير؛ وهذه مطابقة مرشحة لتحليلات تعلم وصفية لفرد على جهازه. المؤشرات ليست مقاييس صلاحية أو سببية، ولا توجد تحليلات جماعية أو تحقق عدالة أو مراجعة قانونية، وبعض الدرجات proxies حتمية معلنة الحدود.",
+        "candidateEvidence": [
+          "lib/metriken.ts",
+          "lib/kompetenz.ts",
+          "lib/skillbilanz.ts",
+          "components/berichte.tsx",
+          "app/datenschutz/page.tsx"
+        ],
+        "relatedIds": [
+          238,
+          240,
+          259,
+          289,
+          304,
+          318,
+          721,
+          723,
+          724,
+          725,
+          995
+        ]
       }
     },
     {
@@ -21452,7 +21502,31 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "educational-data-mining-methodology",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "تنقيب البيانات التعليمية يكتشف أو يتحقق من أنماط ونماذج في مجموعات بيانات تعليمية باستخدام خط أنابيب موثق وتقييم خارج العينة. المنتج يحسب مؤشرات وقواعد حتمية من سجل مستخدم محلي، ولا يدرب مصنفاً أو يجمع dataset أو ينفذ clustering أو model validation؛ لذلك لا تسمى التقارير أو FSRS تنقيب بيانات.",
+        "candidateEvidence": [
+          "lib/metriken.ts",
+          "lib/kompetenz.ts",
+          "lib/prognose.ts",
+          "lib/store.ts",
+          "app/datenschutz/page.tsx"
+        ],
+        "relatedIds": [
+          181,
+          238,
+          244,
+          259,
+          318,
+          517,
+          529,
+          722,
+          724,
+          995
+        ]
       }
     },
     {
@@ -21470,10 +21544,38 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "rule-based-adaptive-learning-support",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "يوجد تشخيص متدرج يقدر أربع مهارات ويقترح نقطة دخول محافظة، وجدولة FSRS، وإعادة من الأخطاء، وتوصية بأضعف مهارة وتحويل وقت التدريب الحر؛ وهذه مطابقة مرشحة لتكيف محدود قائم على قواعد. الخطة الأساسية ثابتة ولا يعاد توليد المحتوى أو الصعوبة لحظياً، والعتبات والمؤشرات غير متحققة ولا تثبت فعالية Brusilovsky أو عدالة المسار.",
+        "candidateEvidence": [
+          "lib/einstufung.ts",
+          "components/einstufung.tsx",
+          "lib/srs.ts",
+          "lib/skillplan.ts",
+          "components/berichte.tsx",
+          "scripts/engine_smoke.ts"
+        ],
+        "relatedIds": [
+          181,
+          183,
+          184,
+          238,
+          261,
+          289,
+          304,
+          364,
+          721,
+          722,
+          723,
+          725,
+          726
+        ]
       }
     },
     {
@@ -21491,10 +21593,34 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "local-personalized-learning-support",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "يملك كل ملف تقدماً محلياً مستقلاً، ويختار المتعلم وتيرة ونقطة دخول وموعد هدف، بينما تقترح الواجهة تدريباً وفق مهاراته وأخطائه ومراجعاته؛ وهذه مطابقة مرشحة لدعم تخصيص محدود. لا توجد أهداف أو اهتمامات ومحتويات فردية شاملة ولا مشاركة معلم أو دراسة Pane، ولا يثبت اختلاف المسار تحسن النتيجة أو تكافؤ الفرص.",
+        "candidateEvidence": [
+          "lib/profiles.ts",
+          "lib/einstufung.ts",
+          "app/einstellungen/page.tsx",
+          "lib/skillplan.ts",
+          "lib/weg.ts",
+          "lib/store.ts"
+        ],
+        "relatedIds": [
+          183,
+          240,
+          259,
+          289,
+          304,
+          364,
+          722,
+          724,
+          726
+        ]
       }
     },
     {
@@ -21515,7 +21641,14 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "merge-duplicate",
+        "classification": "duplicate-catalog-record",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "low",
+        "rationaleAr": "التعليم المتمايز وفق Tomlinson هو المسار المفاهيمي نفسه المسجل والمراجع في 364، حيث فُحص التشخيص والوتيرة والتمايز وحدود المحتوى والعملية والمخرج. يُحفظ هذا المعرف للتتبع ويُدمج في 364 حتى لا تتضاعف مطابقة واحدة أو خطة تحقق واحدة بسبب اختلاف سنة المرجع.",
+        "candidateEvidence": [],
+        "canonicalId": 364
       }
     },
     {
@@ -21536,7 +21669,29 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "universal-design-for-learning-framework",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "UDL إطار منهجي لوسائل متعددة في الانخراط والتمثيل والفعل والتعبير مع إزالة حواجز متوقعة، وليس جمع نص وصوت وصورة أو اجتياز فحص إتاحة. توجد بدائل عرض وحجم خط وصوت وكتابة وتفاعل، لكنها غير مخططة أو مدققة بمصفوفة CAST ولا تغطي بدائل كل هدف؛ لذلك تبقى ممارسات الوصول أدلة مجاورة لا تطبيق UDL كاملاً.",
+        "candidateEvidence": [
+          "components/komfort.tsx",
+          "lib/komfort.ts",
+          "components/akademie/LessonSceneVisual.tsx",
+          "components/tasks.tsx",
+          "scripts/browser_e2e.mjs"
+        ],
+        "relatedIds": [
+          197,
+          266,
+          267,
+          288,
+          451,
+          469,
+          728,
+          846
+        ]
       }
     },
     {
@@ -21557,7 +21712,26 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "inclusive-education-framework",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "التعليم الدامج إطار مؤسسي يزيل حواجز المشاركة والتعلم لجميع المتعلمين عبر المنهج والدعم والبيئة والسياسة، ولا يثبت من استجابة CSS أو نص بديل. المنتج فردي بلا بيانات احتياجات أو ترتيبات معقولة أو مشاركة متعلمين ذوي إعاقات ومراجعة بشرية على أجهزة فعلية؛ لذلك لا يدعي Inclusive Education.",
+        "candidateEvidence": [
+          "components/komfort.tsx",
+          "app/globals.css",
+          "scripts/browser_e2e.mjs",
+          "content/real-world-validation.json",
+          "app/datenschutz/page.tsx"
+        ],
+        "relatedIds": [
+          227,
+          451,
+          469,
+          727,
+          729
+        ]
       }
     },
     {
@@ -21578,7 +21752,33 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "multicultural-education-framework",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "تعليم Banks متعدد الثقافات يشمل دمج المحتوى وبناء المعرفة وتقليل التحيز وبيداغوجيا إنصاف وثقافة تمكينية، ولا يساوي ذكر بلدان أو الطعام والهجرة. المحتوى موجه أساساً لمتعلم عربي للألمانية ويضم قصة انعكاس محدودة، بلا تدقيق تمثيل متعدد المجتمعات أو تحليل تحيز ومشاركة أصحابها؛ لذلك يبقى الإطار بحثياً.",
+        "candidateEvidence": [
+          "content/texts.json",
+          "content/lang/b2-36-40.json",
+          "lib/landeskunde.ts",
+          "components/tasks.tsx"
+        ],
+        "relatedIds": [
+          311,
+          568,
+          570,
+          692,
+          728,
+          730,
+          731,
+          732,
+          733,
+          734,
+          735,
+          736,
+          737
+        ]
       }
     },
     {
@@ -21599,7 +21799,27 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "global-citizenship-education-framework",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "المواطنة العالمية تتطلب معرفة نقدية وترابطاً عالمياً وقيماً ومهارات ومشاركة مسؤولة أو فعلاً مدنياً، وليست قراءة موضوع مناخ أو هجرة وسياسة. توجد نصوص وقضايا رأي مفيدة لغوياً، لكنها لا تحدد نتائج مواطنة ولا تجمع مشروع فعل وتأمل أو تقوّم أثره؛ لذا يبقى إطار Oxfam خارج الادعاء الحي.",
+        "candidateEvidence": [
+          "content/texts.json",
+          "content/lang/b2-26-30.json",
+          "content/lang/b2-31-35.json",
+          "content/writing.json"
+        ],
+        "relatedIds": [
+          311,
+          329,
+          569,
+          570,
+          729,
+          731,
+          737
+        ]
       }
     },
     {
@@ -21620,7 +21840,33 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "intercultural-competence-construct",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "نموذج Deardorff يربط المواقف والمعرفة والمهارات بنتائج داخلية وخارجية عبر عملية قابلة للتقويم من مصادر متعددة، ولا تختزل الكفاءة في صحة سؤال ثقافي. لدى المنتج قصة انعكاس وسيناريوهات تداولية مرشحة، لكنها منظور محدود بلا portfolio أو ملاحظ بشري أو مواقف متعددة؛ فلا يمنح درجة كفاءة بين ثقافية.",
+        "candidateEvidence": [
+          "content/texts.json",
+          "content/lang/b2-36-40.json",
+          "lib/pragmatik.ts",
+          "components/dialogszenarien.tsx"
+        ],
+        "relatedIds": [
+          311,
+          568,
+          569,
+          570,
+          692,
+          693,
+          706,
+          729,
+          730,
+          732,
+          734,
+          737,
+          934
+        ]
       }
     },
     {
@@ -21641,7 +21887,30 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "transcultural-competence-construct",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "الكفاءة عبر الثقافية تتعامل مع هويات وممارسات هجينة ومتغيرة وتجاوز حدود ثقافات قومية ثابتة، ولا تثبت بقائمة فروق بين بلدين أو قصة سوء فهم واحدة. لا يجمع المنتج تفاوض المتعلم على انتماءاته ولا إنتاجاً وتأملاً عبر سياقات متعددة أو تقييماً بشرياً؛ لذلك تبقى مواد الثقافة أدلة مجاورة فقط.",
+        "candidateEvidence": [
+          "content/texts.json",
+          "content/lang/b2-36-40.json",
+          "content/writing.json",
+          "lib/pragmatik.ts"
+        ],
+        "relatedIds": [
+          311,
+          569,
+          570,
+          571,
+          729,
+          731,
+          733,
+          734,
+          735,
+          736
+        ]
       }
     },
     {
@@ -21662,7 +21931,28 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "cosmopolitanism-research-construct",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "الكونية عند Hannerz توجه اجتماعي وثقافي نحو الانفتاح والتعامل مع الاختلاف وشبكات عابرة للحدود، وليست مهارة لغوية قابلة للاستنتاج من قراءة قضايا عالمية. لا يقيس المنتج توجهات أو خبرات أو علاقات ولا يطلب مشاركة عابرة للمجتمعات؛ لذا لا يصنف المتعلم كونياً ولا يحول المفهوم إلى درجة.",
+        "candidateEvidence": [
+          "content/texts.json",
+          "content/lang/b2-26-30.json",
+          "content/lang/b2-36-40.json",
+          "content/writing.json"
+        ],
+        "relatedIds": [
+          569,
+          570,
+          729,
+          730,
+          732,
+          734,
+          735,
+          737
+        ]
       }
     },
     {
@@ -21683,7 +21973,31 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "third-space-theoretical-framework",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "الفضاء الثالث عند Kramsch مجال تفاوض رمزي بين أنظمة المعنى والهويات، وليس واجهة ثنائية اللغة أو مقارنة عبارة عربية بألمانية. لا توجد جماعة حوار أو أثر إنتاج يبين إعادة تأطير المعنى وموقع المتعلم بين الخطابات؛ وقصة المباشرة تقدم تفسيراً جاهزاً، لذلك يبقى المفهوم إطاراً بحثياً.",
+        "candidateEvidence": [
+          "content/lang/b2-36-40.json",
+          "content/texts.json",
+          "content/writing.json",
+          "lib/pragmatik.ts"
+        ],
+        "relatedIds": [
+          311,
+          570,
+          571,
+          574,
+          729,
+          731,
+          732,
+          733,
+          735,
+          736,
+          758
+        ]
       }
     },
     {
@@ -21704,7 +22018,30 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "symbolic-competence-construct",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "الكفاءة الرمزية تشمل فهم كيفية صناعة اللغة للمعنى والموقع والقوة وإعادة التأطير عبر الزمان والسياق، ولا تساوي معرفة مفردات أو اختيار سجل مهذب. توجد أنشطة أسلوب وتداولية ونصوص نقد إعلامي، لكنها لا تملك إطار ترميز أو مهام تحول الخطاب أو rubric موثقة؛ فلا تُنسب كفاءة Kramsch.",
+        "candidateEvidence": [
+          "lib/pragmatik.ts",
+          "components/stilwechsler.tsx",
+          "content/lang/b2-31-35.json",
+          "content/writing.json"
+        ],
+        "relatedIds": [
+          490,
+          569,
+          574,
+          729,
+          731,
+          732,
+          733,
+          734,
+          736,
+          758
+        ]
       }
     },
     {
@@ -21725,7 +22062,29 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "languaculture-theoretical-framework",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "Languaculture عند Agar يدرس تشابك اللغة بالمعرفة والممارسات والمعاني الثقافية، وليس مجرد ترجمة عربية أو قسم معلومات بلد. يعرض المنتج سياقات وتداولاً وقصة سوء فهم، لكنه لا يحلل rich points أو يوثق تفاوض المعنى بين جماعات ولا يراجع التمثيل إثنوغرافياً؛ لذلك يبقى إطاراً بحثياً.",
+        "candidateEvidence": [
+          "lib/landeskunde.ts",
+          "lib/pragmatik.ts",
+          "content/texts.json",
+          "content/lang/b2-36-40.json"
+        ],
+        "relatedIds": [
+          311,
+          490,
+          514,
+          729,
+          731,
+          732,
+          734,
+          735,
+          738
+        ]
       }
     },
     {
@@ -21746,7 +22105,27 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "intercultural-citizenship-framework",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "المواطنة بين الثقافات عند Byram تتطلب تحليلاً نقدياً ومشاركة مدنية مع آخرين عبر حدود ثقافية وتأملاً في الفعل، ولا تكفي مناقشة موضوع عام أو معرفة إجراء ألماني. المنتج فردي بلا مجموعة شريكة أو مشروع مجتمعي أو توثيق قرار وفعل وأثر؛ لذا تبقى النصوص السياسية والثقافية إعداداً لغوياً مجاوراً فقط.",
+        "candidateEvidence": [
+          "content/texts.json",
+          "content/lang/b2-26-30.json",
+          "content/lang/b2-36-40.json",
+          "content/writing.json"
+        ],
+        "relatedIds": [
+          311,
+          568,
+          729,
+          730,
+          731,
+          733,
+          934
+        ]
       }
     },
     {
@@ -21767,7 +22146,34 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "plurilingual-education-framework",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "التعليم متعدد اللغات ينظم المنهج لتعبئة repertoire المتعلم عبر لغاته بمرونة، ولا يساوي واجهة ألمانية عربية أو استعمال الترجمة. توجد وساطة نصية حية ووعي محدود بالعربية والفرنسية والإنجليزية، لكن الملف لا يسجل repertoire أو أهدافاً ومسارات بلغات متعددة ولا يقوّم الاختيار حسب الجمهور؛ لذلك تُحفظ الممارسة الضيقة تحت 340 و606 ويبقى الإطار بحثياً.",
+        "candidateEvidence": [
+          "lib/lesestoff.ts",
+          "components/lesestoff.tsx",
+          "lib/falsche-freunde.ts",
+          "lib/i18n.ts",
+          "content/writing.json"
+        ],
+        "relatedIds": [
+          197,
+          219,
+          340,
+          508,
+          509,
+          510,
+          513,
+          605,
+          606,
+          736,
+          740,
+          751,
+          798
+        ]
       }
     },
     {
@@ -21788,7 +22194,14 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "merge-duplicate",
+        "classification": "duplicate-catalog-record",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "low",
+        "rationaleAr": "تكامل المحتوى واللغة هنا هو CLIL وفق Coyle 2010 نفسه المسجل والمراجع في 524. يُحفظ هذا المعرف للتتبع ويُدمج في 524؛ فالنصوص الموضوعية ووحدة lib/clil.ts غير الموصولة لا تصبح تنفيذاً ثانياً، وخطة الأهداف المزدوجة والتقويم التخصصي واحدة.",
+        "candidateEvidence": [],
+        "canonicalId": 524
       }
     },
     {
@@ -21809,7 +22222,31 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "bilingual-education-program-framework",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "التعليم الثنائي عند Baker برنامج يستخدم لغتين منظماً لتعليم المنهج مع أهداف نماء أو حفظ لغوي ونموذج توزيع ومعلمين وتقويم مناسب، وليس شرح الألمانية بالعربية. التطبيق أداة فردية ثنائية الواجهة لتعلم الألمانية ولا يدرس مواد منهجية بالعربية والألمانية ولا يدير مؤسسة أو يثبت نواتج ثنائية؛ لذلك يبقى الإطار بحثياً.",
+        "candidateEvidence": [
+          "lib/i18n.ts",
+          "content/writing.json",
+          "content/texts.json",
+          "lib/profiles.ts"
+        ],
+        "relatedIds": [
+          197,
+          219,
+          340,
+          508,
+          524,
+          628,
+          738,
+          739,
+          780,
+          781,
+          791
+        ]
       }
     },
     {
