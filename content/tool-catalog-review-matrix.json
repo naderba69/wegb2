@@ -17323,7 +17323,26 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "articulatory-phonology-theory",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "تقدم محطة النطق الحية إرشادات منسقة لموضع النطق وأزواجاً دنيا وتسجيلًا وتغذية راجعة من المتصفح، لكنها لا تمثل تنسيق الإيماءات النطقية ولا ترصد حركة لسان المتعلم أو شفتيه أو حنجرته. هذه التمارين لا تنفذ Articulatory Phonology ولا تتحقق من نموذجها؛ لذلك يبقى السجل نظرياً.",
+        "candidateEvidence": [
+          "components/aussprachetrainer.tsx",
+          "components/phonetik.tsx",
+          "lib/aussprache.ts",
+          "lib/phonetikdaten.ts"
+        ],
+        "relatedIds": [
+          232,
+          341,
+          342,
+          618,
+          619,
+          620
+        ]
       }
     },
     {
@@ -17344,7 +17363,26 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "perceptual-assimilation-theory",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "أنشطة الصوت والأزواج الدنيا لا تستنبط تصنيف المتعلم الإدراكي ولا أحكام الالتباس التي تربط أصوات الألمانية بفئات لغته الأولى. قائمة التقابل العربية–الألمانية ثابتة وغير موصولة بمسار حي، فلا تثبت نموذج Perceptual Assimilation ولا نمط استيعاب خاصاً بالمتعلم.",
+        "candidateEvidence": [
+          "components/phonetik.tsx",
+          "lib/arabinterferenz.ts",
+          "lib/aussprache.ts",
+          "lib/phonetikdaten.ts"
+        ],
+        "relatedIds": [
+          232,
+          341,
+          514,
+          621,
+          623,
+          624
+        ]
       }
     },
     {
@@ -17365,7 +17403,28 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "speech-learning-model-theory",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "يمكن لمسار النطق تشغيل أمثلة والتسجيل محلياً وطلب التعرف الصوتي من المتصفح اختيارياً، لكنه لا يملك نموذجاً طولياً لفئات L1/L2 الصوتية ولا تاريخاً لغوياً ولا مخرجات إنتاج وإدراك متحققاً منها. لذلك لا تكفي درجة التدريب أو مطابقة النص لإثبات Speech Learning Model.",
+        "candidateEvidence": [
+          "components/aussprachetrainer.tsx",
+          "lib/aussprache.ts",
+          "lib/phonetikdaten.ts",
+          "app/datenschutz/page.tsx"
+        ],
+        "relatedIds": [
+          232,
+          341,
+          342,
+          359,
+          514,
+          621,
+          622,
+          624
+        ]
       }
     },
     {
@@ -17386,7 +17445,26 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "native-language-magnet-theory",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "يقدم المستودع أصواتاً وإرشادات نطق منسقة، لا أحكاماً بشأن نموذجية الأصوات ولا خرائط فضاء إدراكي ولا دليلاً خاصاً بالمتعلم على جذب نماذج اللغة الأم للأصوات القريبة. لا توجد آلية Native Language Magnet منفذة أو متحقق منها في المحطة.",
+        "candidateEvidence": [
+          "components/phonetik.tsx",
+          "components/aussprachetrainer.tsx",
+          "lib/aussprache.ts",
+          "lib/phonetikdaten.ts"
+        ],
+        "relatedIds": [
+          232,
+          341,
+          514,
+          621,
+          622,
+          623
+        ]
       }
     },
     {
@@ -17407,7 +17485,24 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "critical-period-hypothesis",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "لا يجمع المنتج عمر المتعلم أو عمر بدء التعرض أو مدته أو بيانات تحصيل طولية. تحمل الملفات العائلية اسماً ورمزاً وتاريخ إنشاء فقط، لذلك لا يجوز استنتاج فترة حرجة أو عتبة عمرية من استعمال المهام أو الدرجات الداخلية.",
+        "candidateEvidence": [
+          "lib/profiles.ts",
+          "components/profil.tsx",
+          "app/datenschutz/page.tsx",
+          "content/real-world-validation.json"
+        ],
+        "relatedIds": [
+          626,
+          627,
+          629,
+          630
+        ]
       }
     },
     {
@@ -17428,7 +17523,24 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "age-effects-construct",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "لا يوجد حقل للعمر أو تاريخ الاكتساب، ولا يتضمن سجل التحقق مجموعة عمرية طبقية أو بروتوكولاً طولياً. لذلك لا يستطيع التطبيق تقدير أثر العمر أو عزو فروق التقدم إليه.",
+        "candidateEvidence": [
+          "lib/profiles.ts",
+          "components/profil.tsx",
+          "app/datenschutz/page.tsx",
+          "content/real-world-validation.json"
+        ],
+        "relatedIds": [
+          625,
+          627,
+          629,
+          630
+        ]
       }
     },
     {
@@ -17449,7 +17561,24 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "maturational-constraints-theory",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "تتطلب القيود النضجية دليلاً نمائياً وعمر بدء لا يجمعهما نموذج الملف أو التقدم المحلي. لا يجوز تفسير تدريبات النطق ودرجات الدورة بوصفها آثار نضج بيولوجي من دون تصميم طولي مناسب.",
+        "candidateEvidence": [
+          "lib/profiles.ts",
+          "components/profil.tsx",
+          "components/aussprachetrainer.tsx",
+          "content/real-world-validation.json"
+        ],
+        "relatedIds": [
+          625,
+          626,
+          629,
+          630
+        ]
       }
     },
     {
@@ -17470,7 +17599,25 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "bilingual-first-language-population",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "الواجهة ثنائية اللغة، لكن ملف المتعلم لا يسجل لغتين أوليين ولا توقيت اكتسابهما أو التعرض والاستعمال والكفاءة فيهما. عرض الألمانية والعربية معاً لا يصنف المستخدم مكتسباً ثنائياً منذ الطفولة ولا يثبت نتائج لهذه الفئة.",
+        "candidateEvidence": [
+          "lib/profiles.ts",
+          "components/profil.tsx",
+          "app/datenschutz/page.tsx"
+        ],
+        "relatedIds": [
+          197,
+          508,
+          509,
+          510,
+          513,
+          514
+        ]
       }
     },
     {
@@ -17491,7 +17638,26 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "child-second-language-population",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "لا تجمع الملفات العائلية أو حزمة الوالدين العمر أو عمر البدء أو سيرة لغوية، ولا تثبت أن المتعلم النشط طفل يكتسب لغة ثانية. المحتوى المختلط وسجل التقدم المحلي لا يوفران دليلاً لفئة Child L2.",
+        "candidateEvidence": [
+          "lib/profiles.ts",
+          "components/profil.tsx",
+          "components/elternpaket.tsx",
+          "app/datenschutz/page.tsx"
+        ],
+        "relatedIds": [
+          511,
+          625,
+          626,
+          627,
+          630,
+          631
+        ]
       }
     },
     {
@@ -17512,7 +17678,26 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "adult-second-language-population",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "لا يجمع التطبيق العمر أو تاريخ اللغة الأولى أو عمر بدء الألمانية، لذلك لا تجعل السيناريوهات المهنية المستخدم متعلماً بالغاً للغة ثانية. لا توجد مجموعة بالغين أو نتائج اكتساب خاصة بها في سجل التحقق.",
+        "candidateEvidence": [
+          "lib/profiles.ts",
+          "components/profil.tsx",
+          "app/datenschutz/page.tsx",
+          "content/real-world-validation.json"
+        ],
+        "relatedIds": [
+          511,
+          625,
+          626,
+          627,
+          629,
+          631
+        ]
       }
     },
     {
@@ -17533,7 +17718,24 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "heritage-language-acquisition-framework",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "لا يحدد أي حقل انتقال لغة الأسرة أو التعرض المجتمعي أو الهيمنة أو محو الأمية أو كون الألمانية أو العربية لغة تراثية لهذا المتعلم. الواجهة الثنائية والملف العائلي لا يكفيان لتصنيف اكتساب لغة تراثية.",
+        "candidateEvidence": [
+          "lib/profiles.ts",
+          "components/profil.tsx",
+          "app/datenschutz/page.tsx"
+        ],
+        "relatedIds": [
+          511,
+          512,
+          628,
+          629,
+          630
+        ]
       }
     },
     {
@@ -17554,7 +17756,24 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "advanced-third-language-acquisition-theory",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "لا يسجل المنتج ذخيرة مرتبة L1/L2/L3 ولا توقيت اكتساب اللغات أو الكفاءة فيها، حتى إن ظهرت لغات متعددة في محتوى ثابت. لذلك لا يستطيع تحديد اكتساب لغة ثالثة أو اختبار تفسير متقدم له.",
+        "candidateEvidence": [
+          "lib/profiles.ts",
+          "lib/falsche-freunde.ts",
+          "app/datenschutz/page.tsx"
+        ],
+        "relatedIds": [
+          512,
+          513,
+          514,
+          633,
+          640
+        ]
       }
     },
     {
@@ -17575,7 +17794,31 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "advanced-cross-linguistic-influence-framework",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "قد تساعد الشروح التقابلية وفخاخ الأصدقاء الكاذبين على الملاحظة، لكنها لا ترصد مدونة لغة متعلم ولا تثبت أن لغة معروفة سببت استجابة ألمانية بعينها. قائمة التداخل العربي الثابتة غير مستوردة في مسار حي، ولا توجد سيرة لغوية تدعم نموذج تأثير عبر لغوي متقدم.",
+        "candidateEvidence": [
+          "lib/arabinterferenz.ts",
+          "lib/falsche-freunde.ts",
+          "lib/falsche-freunde-aufgabe.ts",
+          "lib/profiles.ts"
+        ],
+        "relatedIds": [
+          514,
+          515,
+          516,
+          632,
+          634,
+          635,
+          636,
+          637,
+          638,
+          639,
+          640
+        ]
       }
     },
     {
@@ -17596,7 +17839,23 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "transferability-construct",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "يسجل التطبيق الأداء في مهامه الداخلية، لكنه لا يملك بروتوكولاً لسياق غير مدرّب أو قياس تعميم مؤجل أو استعمال مرصود خارج المنتج. لا تثبت الدرجات وإكمال المهام انتقال المعرفة إلى مادة أو موقف جديد.",
+        "candidateEvidence": [
+          "lib/plan.ts",
+          "content/real-world-validation.json"
+        ],
+        "relatedIds": [
+          190,
+          287,
+          514,
+          633,
+          635
+        ]
       }
     },
     {
@@ -17617,7 +17876,26 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "markedness-differential-theory",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "يحتوي أطلس الأخطاء التقابلي أمثلة محررة للخطأ والصواب، لكنه لا يحسب التميز النمطي ولا يختبر تنبؤات صعوبة اتجاهية بين مجموعات متعلمين. لا تثبت وسوم الأخطاء والشروح المؤلفة Markedness Differential Hypothesis.",
+        "candidateEvidence": [
+          "lib/fehleratlas.ts",
+          "components/fehleratlas.tsx",
+          "lib/fehler.ts",
+          "lib/profiles.ts"
+        ],
+        "relatedIds": [
+          344,
+          514,
+          516,
+          633,
+          634,
+          636
+        ]
       }
     },
     {
@@ -17638,7 +17916,26 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "typological-primacy-model",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "لا يجمع المنتج ملف L1/L2/L3 ولا يمثل المسافة النمطية، ولا يختار المحرك مصدر النقل عبر نموذج للأسبقية النمطية. لغات الواجهة ومدخلات الأصدقاء الكاذبين المؤلفة ليست دليلاً على primacy.",
+        "candidateEvidence": [
+          "lib/profiles.ts",
+          "lib/falsche-freunde.ts",
+          "app/datenschutz/page.tsx"
+        ],
+        "relatedIds": [
+          512,
+          514,
+          632,
+          633,
+          637,
+          638,
+          640
+        ]
       }
     },
     {
@@ -17659,7 +17956,26 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "linguistic-proximity-construct",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "لا يحسب المستودع مسافة بنيوية ولا يستنبط التشابه المدرك ولا يربط أياً منهما بسلوك المتعلم. مجرد وجود سلاسل ألمانية وعربية وإنجليزية وفرنسية معاً لا يثبت التقارب اللغوي أو أثره في الاكتساب.",
+        "candidateEvidence": [
+          "lib/profiles.ts",
+          "lib/falsche-freunde.ts",
+          "lib/arabinterferenz.ts"
+        ],
+        "relatedIds": [
+          512,
+          514,
+          632,
+          633,
+          636,
+          638,
+          640
+        ]
       }
     },
     {
@@ -17680,7 +17996,26 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "psychotypology-construct",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "يتطلب Psychotypology علاقات اللغات كما يدركها المتعلم وتوقعاته للنقل، ولا يلتقط نموذج الملف أو المهمة أياً منهما. لا يجوز معاملة المقارنات متعددة اللغات المؤلفة بوصفها اعتقاد المستخدم أو سمة نفسية.",
+        "candidateEvidence": [
+          "lib/profiles.ts",
+          "lib/falsche-freunde.ts",
+          "app/datenschutz/page.tsx"
+        ],
+        "relatedIds": [
+          512,
+          514,
+          632,
+          633,
+          636,
+          637,
+          640
+        ]
       }
     },
     {
@@ -17698,10 +18033,32 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "multilingual-awareness-practice",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "medium",
+        "rationaleAr": "يُجدول تمرين حي للأصدقاء الكاذبين يقابل معنى الألمانية بالعربية وبصيغ موسومة المصدر من الإنجليزية أو الفرنسية أو العربية أو الألمانية، ويعرض أطلس الأخطاء الحي مقارنات عربية–ألمانية إضافية. هذه مطابقة مرشحة ضيقة لممارسة الملاحظة عبر اللغات، لا قياساً لقدرة وعي متعدد اللغات ولا تحققاً من ذخيرة المستخدم؛ وتبقى مراجعة المحتوى البشرية والتحقق مع مستخدمين فعليين معلقين.",
+        "candidateEvidence": [
+          "lib/falsche-freunde.ts",
+          "lib/falsche-freunde-aufgabe.ts",
+          "lib/plan.ts",
+          "lib/fehleratlas.ts",
+          "components/fehleratlas.tsx",
+          "app/ueben/page.tsx"
+        ],
+        "relatedIds": [
+          343,
+          446,
+          484,
+          509,
+          510,
+          513,
+          514
+        ]
       }
     },
     {
@@ -17722,7 +18079,27 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "third-language-modelling-theory",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "لا توجد في وقت التشغيل ذخيرة لغوية مرتبة ولا تاريخ كفاءة ولا اختيار لمصدر النقل ولا نموذج لمتعلم لغة ثالثة. ظهور لغات متعددة في بنك محتوى لا ينفذ نمذجة لغة ثالثة ولا يتحقق منها.",
+        "candidateEvidence": [
+          "lib/profiles.ts",
+          "lib/falsche-freunde.ts",
+          "app/datenschutz/page.tsx"
+        ],
+        "relatedIds": [
+          512,
+          513,
+          514,
+          632,
+          633,
+          636,
+          637,
+          638
+        ]
       }
     },
     {
