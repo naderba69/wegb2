@@ -26353,10 +26353,39 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "formulaic-chunk-practice",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "medium",
+        "rationaleAr": "توجد أنشطة حية لاسترجاع وسائل تعبير ومتلازمات متعددة الكلمات وإكمالها وإنتاجها في الكلام والكتابة، وهي مطابقة مرشحة لممارسة chunks الصيغية. لكن الوحدات لم تُستخرج بمعيار corpus خارجي موثق، ولا تميز الحوكمة chunk عن bundle أو collocation ولا تقيس الاستدعاء كوحدة واحدة أو أثره في الطلاقة؛ لذلك يؤجل ادعاء Boers.",
+        "candidateEvidence": [
+          "content/redemittel.json",
+          "content/kollokationen.json",
+          "components/redemittel.tsx",
+          "components/kollokproduktion.tsx",
+          "components/sprechkarten.tsx"
+        ],
+        "relatedIds": [
+          218,
+          275,
+          308,
+          320,
+          321,
+          323,
+          438,
+          526,
+          641,
+          642,
+          839,
+          840,
+          842,
+          893,
+          931
+        ]
       }
     },
     {
@@ -26374,10 +26403,39 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "lexical-chunk-practice",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "medium",
+        "rationaleAr": "يقدم المنتج حياً عبارات وظيفية ومتلازمات وتراكيب ثابتة مع استرجاع وإكمال وإنتاج، وهو تطابق مرشح لتدريب lexical chunks. لكنه لا يثبت أن المنهج منظم حول chunks وفق Lexical Approach، ولا يملك مصدر تردد ومدى خارجياً أو معيار حدود الوحدة أو قياس انتقال إلى إنتاج حر؛ لذلك تبقى الممارسة مرشحة لا اعتماداً لمنهج Lewis.",
+        "candidateEvidence": [
+          "content/redemittel.json",
+          "content/kollokationen.json",
+          "components/redemittel.tsx",
+          "components/kollokproduktion.tsx",
+          "components/tiefenlex.tsx"
+        ],
+        "relatedIds": [
+          218,
+          275,
+          320,
+          321,
+          323,
+          438,
+          526,
+          641,
+          642,
+          838,
+          839,
+          841,
+          893,
+          894,
+          931
+        ]
       }
     },
     {
@@ -26398,7 +26456,29 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "learner-curated-vocabulary-notebook",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "دفتر المفردات يحتاج أن يضيف المتعلم مدخلاته ويحرر المعنى والسياق والشكل والمصدر ويراجعها ويصدرها أو يحذفها محلياً بوضوح. يوفر المنتج بنكاً ثابتاً وبطاقات SRS وبحثاً ومعجماً عميقاً ودفتر أخطاء، لكنه لا يسمح بإنشاء مدخل معجمي شخصي ولا يميز المحتوى الأصلي من ملاحظة المستخدم؛ لذلك يؤجل مع تصميم ملكية ونسخ احتياطي وخصوصية.",
+        "candidateEvidence": [
+          "components/tiefenlex.tsx",
+          "lib/suche.ts",
+          "components/tasks.tsx",
+          "lib/store.ts",
+          "app/datenschutz/page.tsx"
+        ],
+        "relatedIds": [
+          181,
+          270,
+          308,
+          318,
+          323,
+          647,
+          844,
+          894
+        ]
       }
     },
     {
@@ -26416,10 +26496,33 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "word-card-retrieval-practice",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "medium",
+        "rationaleAr": "تعرض مهام المفردات الحية بطاقة بكلمة ومعنى ومثال وصوت وصورة عند توافرها، وتطلب كشف الجواب ثم تقدير الاسترجاع وتعيد الجدولة عبر SRS؛ وهي مطابقة مرشحة لبطاقات الكلمات. لكن البطاقات ليست من إنشاء المتعلم، ولا يثبت التقليب وحده استرجاعاً قبل الكشف أو احتفاظاً مؤجلاً، وجودة الصورة والمثال غير متجانسة؛ لذلك تبقى مرشحة.",
+        "candidateEvidence": [
+          "components/tasks.tsx",
+          "content/vocab.json",
+          "lib/srs.ts",
+          "lib/store.ts",
+          "scripts/interaktiv_test.tsx"
+        ],
+        "relatedIds": [
+          181,
+          184,
+          269,
+          270,
+          308,
+          395,
+          396,
+          843,
+          852
+        ]
       }
     },
     {
@@ -26440,7 +26543,14 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "merge-duplicate",
+        "classification": "duplicate-catalog-record",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "low",
+        "rationaleAr": "Keyword Method يعيد طريقة الكلمة المفتاحية المسجلة في 272 وبوسم Atkinson 1975 نفسه: ربط اللفظ الأجنبي بكلمة وسيطة متشابهة صوتياً وصورة أو قصة. لا ينشئ الاسم الإنجليزي استراتيجية ثانية؛ يُحفظ المعرف للتتبع ويُدمج في 272، مع بقاء التطبيق المنهجي والملاءمة الثقافية وخيار التعطيل غير مثبتة.",
+        "candidateEvidence": [],
+        "canonicalId": 272
       }
     },
     {
@@ -26461,7 +26571,27 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "dual-coding-theoretical-construct",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "نظرية الترميز المزدوج تفترض أن التمثيلات اللفظية وغير اللفظية يمكن أن تدعم الذاكرة عبر نظامين مترابطين، ولا يثبتها مجرد جمع نص وصوت أو SVG. توجد مشاهد وصوت وبطاقات متعددة الوسائط مرشحة لتصاميم أضيق، لكن لا ترميز لنوع التمثيل أو مقارنة أحادية القناة أو قياس حمل واحتفاظ؛ لذلك لا ينسب المنتج آلية Paivio.",
+        "candidateEvidence": [
+          "components/akademie/LessonSceneVisual.tsx",
+          "components/akademie/LektionWizard.tsx",
+          "components/tasks.tsx",
+          "lib/speech.ts"
+        ],
+        "relatedIds": [
+          187,
+          197,
+          266,
+          267,
+          281,
+          451,
+          793
+        ]
       }
     },
     {
@@ -26482,7 +26612,14 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "merge-duplicate",
+        "classification": "duplicate-catalog-record",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "low",
+        "rationaleAr": "Depth of Processing Craik يكرر البناء نفسه المسجل في 538 وبوسم Craik 1972 نفسه. إضافة اسم المؤلف لا تنشئ مقياساً أو نشاطاً مستقلاً؛ يُحفظ المعرف للتتبع ويُدمج في 538، حيث فُصلت أنشطة الشرح والسياق المجاورة عن ادعاء عمق أو احتفاظ سببي.",
+        "candidateEvidence": [],
+        "canonicalId": 538
       }
     },
     {
@@ -26533,7 +26670,14 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "merge-duplicate",
+        "classification": "duplicate-catalog-record",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "low",
+        "rationaleAr": "Elaboration Craik يعيد مفهوم التفصيل المسجل في 540: إثراء المادة بعلاقات وتفسير ومعنى يتجاوز التكرار السطحي. اختلاف الإحالة لا يبرر ميزة ثانية؛ يُحفظ المعرف للتتبع ويُدمج في 540، الذي يسجل محطة الشرح الذاتي كتنفيذ مرشح محدود بلا إثبات احتفاظ أفضل.",
+        "candidateEvidence": [],
+        "canonicalId": 540
       }
     },
     {
@@ -26554,7 +26698,14 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "merge-duplicate",
+        "classification": "duplicate-catalog-record",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "low",
+        "rationaleAr": "Generation Effect يعيد أثر التوليد المفروز في 397: إنتاج المادة أو الإجابة بدلاً من قراءتها فقط. اختلاف المرجع التاريخي لا ينشئ نشاطاً آخر؛ يُحفظ المعرف للتتبع ويُدمج في 397، حيث وُثق التوليد الحي كمرشح من دون ادعاء أفضلية سببية على القراءة.",
+        "candidateEvidence": [],
+        "canonicalId": 397
       }
     },
     {
@@ -26575,7 +26726,14 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "merge-duplicate",
+        "classification": "duplicate-catalog-record",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "low",
+        "rationaleAr": "Testing Effect Karpicke يكرر أثر الاختبار المسجل في 396، أي تحسن الاحتفاظ المنسوب إلى الاسترجاع الاختباري مقارنة بإعادة الدراسة. اختلاف الإحالة لا ينشئ دورة إنتاج مستقلة؛ يُحفظ المعرف للتتبع ويُدمج في 396، مع بقاء المقارنة والاحتفاظ المؤجل غير مقاسين.",
+        "candidateEvidence": [],
+        "canonicalId": 396
       }
     },
     {
@@ -26593,10 +26751,38 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "retrieval-practice-learning-activity",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "medium",
+        "rationaleAr": "يفرض المسار الحي الاسترجاع قبل المحتوى الجديد، ويقدم بطاقات وفجوات وإنتاجاً بلا خيارات ثم تصحيحاً وجدولة لاحقة؛ وهذه مطابقة مرشحة مباشرة لممارسة الاسترجاع. لكنه لا يضمن محاولة صادقة قبل كل كشف ولا يعزل أثر الاسترجاع عن التباعد والتغذية الراجعة، ولا يقيس احتفاظاً أو نقلاً مؤجلاً؛ لذلك يؤجل الادعاء بالأثر.",
+        "candidateEvidence": [
+          "lib/ritual.ts",
+          "components/selbsttest.tsx",
+          "components/akademie/TodayStepper.tsx",
+          "components/tasks.tsx",
+          "scripts/interaktiv_test.tsx"
+        ],
+        "relatedIds": [
+          181,
+          184,
+          263,
+          269,
+          270,
+          308,
+          395,
+          396,
+          397,
+          399,
+          844,
+          851,
+          853,
+          854
+        ]
       }
     },
     {
@@ -26617,7 +26803,14 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "merge-duplicate",
+        "classification": "duplicate-catalog-record",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "low",
+        "rationaleAr": "Distributed Practice يعيد تصميم الممارسة الموزعة المفروز في 395 مع Cepeda 2006 نفسه: فصل جلسات المادة زمنياً بدلاً من حشدها. لا حاجة لمحرك جدولة ثانٍ؛ يُحفظ المعرف للتتبع ويُدمج في 395، حيث سُجلت FSRS والكبسولة كتنفيذ مرشح يحتاج معايرة وقياس احتفاظ.",
+        "candidateEvidence": [],
+        "canonicalId": 395
       }
     },
     {
@@ -26638,7 +26831,14 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "merge-duplicate",
+        "classification": "duplicate-catalog-record",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "low",
+        "rationaleAr": "Interleaving Rohrer يكرر المقارنة بين التداخل والكتل المسجلة في 263 وبوسم Rohrer 2012 نفسه. لا ينشئ الاسم المختصر نشاطاً آخر؛ يُحفظ المعرف للتتبع ويُدمج في 263، الذي يوثق الخلاط الحي كتنفيذ مرشح بلا إثبات أفضلية أو نقل مؤجل.",
+        "candidateEvidence": [],
+        "canonicalId": 263
       }
     },
     {
@@ -26659,7 +26859,26 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "encoding-variability-memory-construct",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "تنوع الترميز يفترض أن تعدد السمات والسياقات أثناء التعلم يخلق مسارات استرجاع أوسع، ولا يساوي كثرة الأمثلة أو تبدل ألوان الشاشة. يعرض المنتج كلمات وقواعد في أمثلة متنوعة، لكنه لا يضبط أبعاد التنوع ولا يربط البند عبر السياقات ولا يقارن شرطاً ثابتاً أو يقيس نقلاً جديداً؛ لذلك يبقى البناء بحثياً.",
+        "candidateEvidence": [
+          "lib/context-variation-deep.ts",
+          "components/SynonymKontext.tsx",
+          "components/tiefenlex.tsx",
+          "content/vocab.json"
+        ],
+        "relatedIds": [
+          271,
+          287,
+          390,
+          856,
+          875,
+          876
+        ]
       }
     },
     {
@@ -26680,7 +26899,28 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "context-dependent-memory-research-construct",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "الذاكرة المعتمدة على السياق تتعلق بتطابق إشارات البيئة عند الترميز والاسترجاع، ولا تستنتج من موضوع جملة أو صفحة تحمل لوناً مختلفاً. التطبيق لا يسجل المكان أو البيئة الفيزيائية ولا يعيّن المتعلم عشوائياً إلى سياقات مضبوطة ولا يقارن الاسترجاع داخلها وخارجها؛ لذلك لا يوصي بتثبيت سياق ولا يدعي هذا الأثر.",
+        "candidateEvidence": [
+          "lib/context-variation-deep.ts",
+          "components/SynonymKontext.tsx",
+          "components/tasks.tsx",
+          "app/datenschutz/page.tsx"
+        ],
+        "relatedIds": [
+          271,
+          390,
+          855,
+          857,
+          858,
+          875,
+          876,
+          887
+        ]
       }
     },
     {
@@ -26701,7 +26941,27 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "state-dependent-memory-research-construct",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "الذاكرة المعتمدة على الحالة تتطلب تعريف حالة داخلية عند الترميز والاسترجاع وقياس تطابقها تحت ضبط أخلاقي، ولا تساوي التعب أو وقت اليوم أو ضغط زر التنفس. لا يجمع المنتج مؤشرات فسيولوجية أو حالة نفسية موثقة ولا يربطها ببنود الذاكرة؛ لذلك لا يستنتج أثراً ولا يكيف الجدول بناءً على حالة حساسة.",
+        "candidateEvidence": [
+          "components/gesundheit.tsx",
+          "lib/srs.ts",
+          "lib/profiles.ts",
+          "app/datenschutz/page.tsx"
+        ],
+        "relatedIds": [
+          182,
+          276,
+          390,
+          599,
+          856,
+          858,
+          966
+        ]
       }
     },
     {
@@ -26722,7 +26982,27 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "mood-congruent-memory-research-construct",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "تطابق المزاج في الذاكرة ادعاء عن زيادة استدعاء مادة متوافقة وجدانياً مع المزاج، ولا يساوي اختيار رسالة تشجيع أو الإجابة عن موضوع إيجابي. المنتج لا يجمع المزاج ولا يرمز التكافؤ الوجداني للبنود ولا يضبط المعرفة والشدة، وجمع ذلك حساس؛ لذلك لا يصنف المتعلم أو يكيف المحتوى بهذا البناء.",
+        "candidateEvidence": [
+          "components/gesundheit.tsx",
+          "lib/motivation.ts",
+          "lib/profiles.ts",
+          "app/datenschutz/page.tsx"
+        ],
+        "relatedIds": [
+          299,
+          301,
+          306,
+          583,
+          599,
+          857,
+          966
+        ]
       }
     },
     {
@@ -26743,7 +27023,14 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "merge-duplicate",
+        "classification": "duplicate-catalog-record",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "low",
+        "rationaleAr": "Embodied Cognition Glenberg يعيد نظرية الإدراك المتجسد المسجلة في 449: تأصيل المعنى والمعالجة في أنظمة حسية وحركية. اختلاف المؤلف والسنة لا يجعل النقر أو الحركة ميزة نظرية ثانية؛ يُحفظ المعرف للتتبع ويُدمج في 449، حيث سُجل غياب فعل حركي مضبوط ومقارنة وقياس فهم.",
+        "candidateEvidence": [],
+        "canonicalId": 449
       }
     },
     {
@@ -26764,7 +27051,27 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "grounded-cognition-theoretical-construct",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "الإدراك المؤرّض إطار واسع يربط التمثيل بمحاكاة حسية وحركية ومواقف وجسد وبيئة، ولا يثبت من مثال واقعي أو صورة أو صوت أو حركة واجهة. توجد وسائط ومواقف حياة مجاورة، لكن لا يضبط المنتج إعادة التنشيط الحسي أو الفعل ولا يقارن تمثيلاً مجرداً ويقيس المعالجة؛ لذلك يبقى إطار Barsalou بحثياً.",
+        "candidateEvidence": [
+          "components/tasks.tsx",
+          "components/akademie/LessonSceneVisual.tsx",
+          "lib/lesson-scene.ts",
+          "lib/silent-way.ts"
+        ],
+        "relatedIds": [
+          449,
+          450,
+          665,
+          666,
+          859,
+          861,
+          862
+        ]
       }
     },
     {
