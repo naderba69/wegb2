@@ -24003,7 +24003,36 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "subtractive-bilingualism-program-outcome-construct",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "الثنائية الانتقاصية تصف نماء لغة على حساب استعمال اللغة القائمة أو كفايتها أو مكانتها عبر الزمن، ولا تعني أن واجهة B2 تصبح ألمانية تدريجياً. لا يقيس المنتج العربية ولا مجالات استعمالها بين الأسرة والعمل ولا التحول الطولي أو الضغوط المؤسسية؛ لذلك لا يصنف مسار المتعلم subtractive ولا ينسب إليه أثراً.",
+        "candidateEvidence": [
+          "lib/i18n.ts",
+          "lib/profiles.ts",
+          "content/writing.json",
+          "app/datenschutz/page.tsx"
+        ],
+        "relatedIds": [
+          508,
+          511,
+          605,
+          628,
+          738,
+          740,
+          776,
+          777,
+          778,
+          779,
+          780,
+          783,
+          784,
+          789,
+          790,
+          791
+        ]
       }
     },
     {
@@ -24024,7 +24053,35 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "language-conflict-sociolinguistic-construct",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "الصراع اللغوي يتعلق بتنافس جماعات ولغات على المجالات والموارد والشرعية تحت علاقات قوة وسياسات، ولا يساوي صعوبة تعلم الألمانية أو ظهور لغتين في نص. يحتوي المنتج موضوعات هجرة وهوية، لكنه لا يجمع بيانات جماعة أو مؤسسة ولا يوثق نزاعاً وسياسة وأطرافاً وآثاراً؛ لذلك يبقى البناء بحثياً.",
+        "candidateEvidence": [
+          "content/texts.json",
+          "content/writing.json",
+          "content/dialogues.json",
+          "lib/i18n.ts"
+        ],
+        "relatedIds": [
+          574,
+          729,
+          737,
+          762,
+          763,
+          764,
+          765,
+          783,
+          784,
+          785,
+          786,
+          787,
+          788,
+          789,
+          790
+        ]
       }
     },
     {
@@ -24045,7 +24102,34 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "language-shift-sociolinguistic-construct",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "التحول اللغوي تغير جماعي أو بين أجيال في اللغة المستعملة داخل مجالات مثل المنزل والعمل والتعليم، وليس تقدم فرد في الألمانية أو تبديل لغة الواجهة. ملفات المنتج لا تسجل تاريخ الأسرة أو أجيالها أو لغات المجالات ولا تتابعها زمنياً، والنصوص عن الهجرة ليست قياساً مجتمعياً؛ لذلك لا يدعي Language Shift.",
+        "candidateEvidence": [
+          "lib/profiles.ts",
+          "lib/i18n.ts",
+          "content/texts.json",
+          "content/writing.json"
+        ],
+        "relatedIds": [
+          511,
+          574,
+          631,
+          740,
+          762,
+          780,
+          781,
+          782,
+          784,
+          785,
+          786,
+          788,
+          789,
+          790
+        ]
       }
     },
     {
@@ -24066,7 +24150,36 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "language-maintenance-sociolinguistic-construct",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "صون اللغة يعني استمرار استعمالها ونقلها ووظائفها عبر أجيال ومجالات تحت ضغوط التحول، ولا يثبت من بقاء الشرح العربي في تطبيق ألماني. لا يقيس المنتج استعمال العربية وكفايتها ونقلها الأسري أو دعم المؤسسات عبر الزمن؛ لذلك لا يحسب الواجهة أو مهمة ترجمة دليلاً على Language Maintenance.",
+        "candidateEvidence": [
+          "lib/i18n.ts",
+          "lib/profiles.ts",
+          "content/writing.json",
+          "components/elternpaket.tsx"
+        ],
+        "relatedIds": [
+          511,
+          574,
+          628,
+          631,
+          738,
+          740,
+          762,
+          780,
+          781,
+          782,
+          783,
+          785,
+          786,
+          788,
+          789,
+          790
+        ]
       }
     },
     {
@@ -24087,7 +24200,33 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "language-revitalization-community-program-framework",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "إحياء لغة برنامج تقوده جماعة معنية لزيادة المتكلمين والمجالات والنقل والمواد والتعليم وفق أهدافها وحقوقها، وليس إضافة مفردات أو واجهة بلغة ما. المنتج مخصص لتعلم الألمانية فردياً ولا يملك شراكة مع جماعة لغوية أو توثيقاً ومناهج ومعلمين ومؤشرات حيوية؛ لذلك لا يدعي تنفيذ revitalization.",
+        "candidateEvidence": [
+          "content/accreditation-alignment.json",
+          "lib/i18n.ts",
+          "content/texts.json",
+          "content/real-world-validation.json"
+        ],
+        "relatedIds": [
+          511,
+          631,
+          729,
+          738,
+          740,
+          762,
+          783,
+          784,
+          786,
+          787,
+          788,
+          789,
+          790
+        ]
       }
     },
     {
@@ -24108,7 +24247,29 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "endangered-language-population-construct",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "وصف لغة بأنها مهددة يحتاج أدلة خارجية عن عدد المتكلمين والنقل بين الأجيال والمجالات والاتجاهات والضغط المؤسسي، ولا يستنتج من قلة المحتوى أو اختيار المستخدم لغة واجهة. المنتج لا يوثق مجتمعاً لغوياً ولا يجمع هذه المؤشرات، ونطاقه تعلم الألمانية؛ لذلك لا يصنف أي لغة أو متعلم بهذه الصفة.",
+        "candidateEvidence": [
+          "content/accreditation-alignment.json",
+          "lib/i18n.ts",
+          "lib/profiles.ts",
+          "content/real-world-validation.json"
+        ],
+        "relatedIds": [
+          511,
+          631,
+          762,
+          783,
+          784,
+          785,
+          787,
+          788,
+          790
+        ]
       }
     },
     {
@@ -24129,7 +24290,34 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "linguistic-human-rights-normative-framework",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "الحقوق اللغوية إطار معياري وقانوني يتطلب تحديد صاحب الحق والمجال والولاية والمصدر والجهة المسؤولة وسبل الإنصاف، ولا تساوي ترجمة الواجهة أو خيار الصوت امتثالاً قانونياً. توجد ممارسات إتاحة وخصوصية وحدود ادعاء، لكن لا سجل قوانين أو مراجعة حقوقية وخبير مستقل؛ لذلك يبقى الإطار للبحث ولا يمنح المنتج ختم امتثال.",
+        "candidateEvidence": [
+          "app/datenschutz/page.tsx",
+          "content/accreditation-alignment.json",
+          "content/real-world-validation.json",
+          "lib/i18n.ts"
+        ],
+        "relatedIds": [
+          568,
+          727,
+          729,
+          730,
+          737,
+          740,
+          762,
+          782,
+          785,
+          786,
+          788,
+          790,
+          791,
+          792
+        ]
       }
     },
     {
@@ -24150,7 +24338,34 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "language-policy-theoretical-framework",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "سياسة اللغة تشمل ممارسات ومعتقدات وتدبير اللغة داخل جماعة أو مؤسسة وعلاقتها بالسلطة، وليست إعداداً يختار العربية أو الألمانية. لا يجمع المنتج ممارسات مؤسسة أو اتجاهات أصحاب مصلحة ولا ينفذ قراراً رسمياً أو يقيس أثره؛ لذا يبقى التدرج اللغوي قرار تصميم داخلياً لا تطبيقاً لإطار Spolsky.",
+        "candidateEvidence": [
+          "lib/i18n.ts",
+          "lib/profiles.ts",
+          "content/texts.json",
+          "lib/plan.ts"
+        ],
+        "relatedIds": [
+          574,
+          729,
+          730,
+          737,
+          740,
+          762,
+          782,
+          783,
+          784,
+          785,
+          786,
+          787,
+          789,
+          790
+        ]
       }
     },
     {
@@ -24171,7 +24386,33 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "family-language-policy-research-framework",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "سياسة لغة الأسرة تتناول معتقدات أفراد الأسرة وممارساتهم وتدبير اللغات والتفاوض عليها عبر الزمن، ولا يثبتها وجود ملفات عائلية منفصلة أو تقرير للوالدين. الملف يحفظ اسماً ورمزاً وتقدماً فقط، ولا يجمع علاقات الأسرة أو لغاتها وقواعدها أو أصوات الأطفال؛ وجمع ذلك يحتاج ضرورة وموافقة وخصوصية، لذلك يبقى الإطار بحثياً.",
+        "candidateEvidence": [
+          "lib/profiles.ts",
+          "components/profil.tsx",
+          "components/elternpaket.tsx",
+          "app/datenschutz/page.tsx"
+        ],
+        "relatedIds": [
+          511,
+          574,
+          628,
+          631,
+          740,
+          756,
+          762,
+          780,
+          781,
+          783,
+          784,
+          788,
+          790
+        ]
       }
     },
     {
@@ -24192,7 +24433,34 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "heritage-language-policy-framework",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "سياسة اللغة التراثية تتعلق بمكان لغة الجماعة في الأسرة والتعليم والمؤسسات والموارد والاعتراف، وليست افتراض أن العربية لغة تراثية لكل مستخدم. لا يسجل المنتج تاريخ اللغة أو المجتمع أو الهيمنة ولا يقدم برنامج صون أو قراراً مؤسسياً؛ لذلك لا يصنف المتعلم ولا يدعي سياسة تراثية.",
+        "candidateEvidence": [
+          "lib/profiles.ts",
+          "content/texts.json",
+          "content/writing.json",
+          "app/datenschutz/page.tsx"
+        ],
+        "relatedIds": [
+          511,
+          574,
+          628,
+          631,
+          729,
+          738,
+          740,
+          783,
+          784,
+          785,
+          786,
+          787,
+          788,
+          789
+        ]
       }
     },
     {
@@ -24213,7 +24481,31 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "deaf-bilingual-education-framework",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "الثنائية لدى الصم إطار تعليمي ولغوي يجمع لغة إشارة طبيعية ولغة مكتوبة أو منطوقة مع إتاحة مناسبة ومشاركة خبراء من مجتمع الصم، ولا تساوي النصوص المرئية أو بديل الصوت. المنتج لا يقدم لغة إشارة أو فيديوهات موقعة أو ملف تفضيلات واتصالاً بخبراء ومجتمع صم؛ لذلك لا يدعي برنامج Deaf Bilingualism، مع بقاء واجبات الإتاحة العامة مستقلة.",
+        "candidateEvidence": [
+          "components/komfort.tsx",
+          "components/akademie/LessonSceneVisual.tsx",
+          "content/real-world-validation.json",
+          "app/datenschutz/page.tsx"
+        ],
+        "relatedIds": [
+          197,
+          451,
+          605,
+          628,
+          727,
+          740,
+          780,
+          781,
+          787,
+          792,
+          846
+        ]
       }
     },
     {
@@ -24234,7 +24526,27 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "reject-not-applicable",
+        "classification": "out-of-scope-professional-sign-language-interpreting",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "الترجمة الفورية للغة الإشارة خدمة مهنية بين لغات طبيعية تتطلب مترجماً مؤهلاً وكفاءة ثقافية وسياقية ومعايير سرية ودقة، وليست تحويل نص إلى صوت أو إضافة عنوان بديل. لا يضم المنتج لغة إشارة أو بث فيديو أو حجز مترجم أو طرفين متواصلين؛ لذلك تُرفض كميزة في نطاق التعلم المحلي الحالي ولا تُخلط مع متطلبات الإتاحة.",
+        "candidateEvidence": [
+          "components/komfort.tsx",
+          "components/akademie/LessonSceneVisual.tsx",
+          "content/real-world-validation.json",
+          "app/datenschutz/page.tsx"
+        ],
+        "relatedIds": [
+          340,
+          451,
+          606,
+          727,
+          787,
+          791,
+          846
+        ]
       }
     },
     {
@@ -24255,7 +24567,14 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "merge-duplicate",
+        "classification": "duplicate-catalog-record",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "low",
+        "rationaleAr": "Multimodality Kress يسجل البناء متعدد الوسائط نفسه الذي فُرز في 451 مع أدلة الدرس الحي للنص والرسم والصوت والتفاعل وحدود التنسيق والإتاحة. اختلاف اسم المرجع لا ينشئ ميزة أو دورة تحقق ثانية؛ يُحفظ المعرف للتتبع ويُدمج في 451.",
+        "candidateEvidence": [],
+        "canonicalId": 451
       }
     },
     {
@@ -24276,7 +24595,32 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "semiotic-meaning-making-construct",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "السيمياء تدرس كيف تصنع العلامات والأنماط والعلاقات والسياقات المعنى، ولا يثبت تطبيقها من وجود أيقونة أو لون أو SVG. تعرض الدروس رموزاً ورسماً ونصاً وصوتاً، لكنها لا تطلب من المتعلم تحليل الدال والمدلول أو مقارنة موارد سيميائية وسياقاتها ولا ترمز تفسيره؛ لذلك يبقى البناء بحثياً.",
+        "candidateEvidence": [
+          "components/akademie/LessonSceneVisual.tsx",
+          "lib/lesson-scene.ts",
+          "components/tasks.tsx",
+          "content/texts.json"
+        ],
+        "relatedIds": [
+          267,
+          451,
+          452,
+          453,
+          615,
+          735,
+          762,
+          763,
+          765,
+          793,
+          795,
+          800
+        ]
       }
     },
     {
@@ -24297,7 +24641,32 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "visual-literacy-learning-activity",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "المحو البصري يتطلب تفسير كيفية بناء الصورة أو الرسم للمعنى وتقييم الغرض والجمهور والاختيار والتحيز، وربما إنتاج تمثيل مع تبرير؛ ولا يساوي رؤية رسم مساعد أو وصف مشهد متخيل. توجد مشاهد SVG موصولة ونص عن صور منقحة ومطالبات وصف صورة بلا أصل مرئي موثق، لكن لا نشاط تحليل بصري أو rubric وحقوق وبديل غير بصري؛ لذلك يؤجل.",
+        "candidateEvidence": [
+          "components/akademie/LessonSceneVisual.tsx",
+          "lib/lesson-scene.ts",
+          "content/texts.json",
+          "content/muendlich.json",
+          "scripts/engine_smoke.ts"
+        ],
+        "relatedIds": [
+          266,
+          451,
+          452,
+          453,
+          727,
+          763,
+          793,
+          794,
+          796,
+          797,
+          846
+        ]
       }
     },
     {
@@ -24318,7 +24687,30 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "critical-literacy-pedagogical-framework",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "المحو النقدي عند Freire يربط قراءة الكلمة بقراءة العالم ويسائل من يملك الصوت والسلطة ومن يستفيد، مع حوار وفعل انعكاسي؛ ولا يساوي سؤال فهم عن التضليل. يوجد نص حي يشرح التأطير ونقد المصدر ويسأل من يكتب ويمول ويستفيد، لكن إجابات المتعلم تسترجع النص ولا تحلل مادة جديدة أو تعيد كتابة منظور غائب أو تقود فعلاً؛ لذلك يبقى الإطار بحثياً.",
+        "candidateEvidence": [
+          "content/texts.json",
+          "content/lang/b2-31-35.json",
+          "components/tasks.tsx",
+          "content/writing.json"
+        ],
+        "relatedIds": [
+          329,
+          330,
+          331,
+          548,
+          729,
+          730,
+          735,
+          795,
+          797,
+          926
+        ]
       }
     },
     {
@@ -24339,7 +24731,33 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "critical-discourse-analysis-methodology",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "تحليل الخطاب النقدي منهج يربط اختيارات النص وإنتاجه وتداوله بالممارسات الاجتماعية وعلاقات القوة عبر corpus وسياق وإجراء تحليل معلن، وليس عد روابط أو ملاحظة كلمة مشحونة. يعرض نص B2 التأطير والاستقطاب والأجندة، لكن الأسئلة فهم مغلق ولا توجد عينة خطابات وترميز ومقارنة وموقع محلل؛ لذلك لا يدعي المنتج CDA.",
+        "candidateEvidence": [
+          "content/texts.json",
+          "content/lang/b2-31-35.json",
+          "content/writing.json",
+          "lib/kriterien.ts"
+        ],
+        "relatedIds": [
+          315,
+          329,
+          330,
+          331,
+          548,
+          574,
+          729,
+          734,
+          735,
+          795,
+          796,
+          926,
+          928
+        ]
       }
     },
     {
@@ -24360,7 +24778,37 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "multilingual-turn-research-paradigm",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "المنعطف متعدد اللغات تحول نظري ومنهجي يرفض اختزال موارد المتعلم إلى لغات منفصلة كاملة ويعيد تصور التعلم والهوية والممارسة، وليس أداة واحدة أو واجهة ثنائية. توجد وساطة حية وسقالات عربية ووعي بتداخلات محدودة، لكن المنهج والأهداف والتقويم ما زالت موجهة أساساً للألمانية ولا توجد دراسة repertoire؛ لذلك يبقى منظوراً بحثياً.",
+        "candidateEvidence": [
+          "lib/i18n.ts",
+          "lib/lesestoff.ts",
+          "components/lesestoff.tsx",
+          "lib/falsche-freunde.ts",
+          "content/writing.json"
+        ],
+        "relatedIds": [
+          340,
+          509,
+          510,
+          511,
+          513,
+          603,
+          604,
+          605,
+          631,
+          738,
+          750,
+          751,
+          766,
+          769,
+          770,
+          913
+        ]
       }
     },
     {
@@ -24381,7 +24829,14 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "merge-duplicate",
+        "classification": "duplicate-catalog-record",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "low",
+        "rationaleAr": "Complex Systems Larsen هو إطار الأنظمة الديناميكية المعقدة نفسه المفروز في 616؛ اختلاف سنة الإحالة واختصار الاسم لا ينشئ نموذج قياس ثانياً. يُحفظ المعرف للتتبع ويُدمج في 616، حيث سُجل أن الجدولة والتقارير ليست بيانات زمنية كثيفة لنظام اكتساب.",
+        "candidateEvidence": [],
+        "canonicalId": 616
       }
     },
     {
@@ -24402,7 +24857,30 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "ecological-affordance-theoretical-construct",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "الإمكان البيئي علاقة بين ما تتيحه البيئة وما يدركه متعلم بعينه ويمكنه أن يعمل به لتحقيق معنى، وليس مجرد زر أو تمرين متاح في الواجهة. يقدم المنتج مواقف حياة وموارد وخطة، لكنه لا يرصد بيئة المتعلم أو ما لاحظه واستعمله خارج التطبيق ولا يربط الفعل بنتيجة سياقية؛ لذلك لا يحسب المحتوى affordances ولا يقيسها.",
+        "candidateEvidence": [
+          "lib/lebenswelt.ts",
+          "components/lebenswelt.tsx",
+          "lib/plan.ts",
+          "content/real-world-validation.json"
+        ],
+        "relatedIds": [
+          309,
+          611,
+          612,
+          613,
+          615,
+          616,
+          762,
+          763,
+          799,
+          801
+        ]
       }
     },
     {

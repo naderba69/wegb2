@@ -67,15 +67,15 @@
   ],
   "resolvedExactDuplicateGroups": 8,
   "decisionBreakdown": {
-    "defer": 301,
-    "research-only": 272,
-    "reject-not-applicable": 21,
-    "merge-duplicate": 14,
-    "pending-academic-review": 212
+    "defer": 302,
+    "research-only": 288,
+    "reject-not-applicable": 22,
+    "merge-duplicate": 16,
+    "pending-academic-review": 192
   },
-  "reviewedDecisions": 608,
-  "pendingTriage": 212,
-  "relatedCatalogReferences": 3824,
+  "reviewedDecisions": 628,
+  "pendingTriage": 192,
+  "relatedCatalogReferences": 4052,
   "candidateLiveImplementations": 161,
   "adopted": 0,
   "productIntegrated": 0,
