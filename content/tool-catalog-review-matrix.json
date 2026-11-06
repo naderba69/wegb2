@@ -25619,7 +25619,31 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "conversation-repair-sequential-construct",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "الإصلاح في تحليل المحادثة سلسلة حول مصدر تعثر ومبادرة إصلاح وعملية إصلاح ونتيجتها، مع تمييز من بدأ ومن أصلح وموقع الدور؛ ولا يساوي تصحيح جواب أو عرض النموذج. يقدم رفيق الكلام تبادلاً آلياً وملاحظة لغوية، لكن لا توجد محادثة بشرية منسوخة ومقسمة إلى أدوار ولا ترميز للتعثر والإصلاح. لذلك لا يدعي المنتج Repair Schegloff.",
+        "candidateEvidence": [
+          "lib/sprechbegleiter.ts",
+          "components/sprechbegleiter.tsx",
+          "lib/dialogszenarien.ts",
+          "components/dialogszenarien.tsx",
+          "content/muendlich.json"
+        ],
+        "relatedIds": [
+          350,
+          361,
+          362,
+          404,
+          410,
+          488,
+          819,
+          822,
+          930,
+          971
+        ]
       }
     },
     {
@@ -25640,7 +25664,14 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "merge-duplicate",
+        "classification": "duplicate-catalog-record",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "low",
+        "rationaleAr": "Negotiation of Meaning يعيد بناء التفاوض على المعنى المسجل في 362: تعثر فهم ثم طلب توضيح أو تحقق ثم تعديل يختبر الفهم. اختلاف حرف الجر وسنة إحالة Pica لا ينشئ سلوكاً أو قياساً ثانياً؛ يُحفظ المعرف للتتبع ويُدمج في 362، حيث فُصلت النظرية عن مجرد تبادل الرسائل.",
+        "candidateEvidence": [],
+        "canonicalId": 362
       }
     },
     {
@@ -25661,7 +25692,30 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "comprehensible-input-sla-theoretical-construct",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "المدخل المفهوم علاقة بين مادة ومتعلّم في لحظة وسياق، وليس وسم مستوى أو ترجمة أو نجاح سؤال واحد، كما أن فهم الرسالة لا يثبت اكتساباً لاحقاً. يقدم المنتج نصوصاً وحوارات متدرجة وأسئلة فهم، لكنه لا يقيس قابلية فهم كل مدخل قبل عرضه أو تغطيته المعجمية والنحوية لكل متعلم ولا يربطها بتغير مؤجل؛ لذلك يبقى البناء بحثياً.",
+        "candidateEvidence": [
+          "content/texts.json",
+          "content/dialogues.json",
+          "components/tasks.tsx",
+          "lib/plan.ts",
+          "lib/lesestoff.ts"
+        ],
+        "relatedIds": [
+          277,
+          363,
+          371,
+          373,
+          411,
+          825,
+          827,
+          831,
+          881
+        ]
       }
     },
     {
@@ -25682,7 +25736,14 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "merge-duplicate",
+        "classification": "duplicate-catalog-record",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "low",
+        "rationaleAr": "Comprehensible Output Swain يكرر السجل 414 بالاسم والمفهوم ووسم Swain 1985 نفسه. لا تحتاج مهام الكتابة والتحدث دورة نظرية ثانية؛ يُحفظ المعرف للتتبع ويُدمج في 414، حيث سُجل أن إنتاج نص لا يثبت أن مخاطباً فعلياً فهم الرسالة أو أن اكتساباً حدث.",
+        "candidateEvidence": [],
+        "canonicalId": 414
       }
     },
     {
@@ -25703,7 +25764,14 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "merge-duplicate",
+        "classification": "duplicate-catalog-record",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "low",
+        "rationaleAr": "i+1 Krashen يكرر مفهوم Input i+1 المفروز في 277: مدخل يفترض أنه مفهوم ويتجاوز الحالة الحالية بدرجة مناسبة. اختلاف سنة الوسم لا ينشئ خوارزمية أو أداة ثانية؛ يُحفظ المعرف للتتبع ويُدمج في 277، مع بقاء مستوى CEFR ونسبة الكلمات غير كافيين لإثبات i أو +1.",
+        "candidateEvidence": [],
+        "canonicalId": 277
       }
     },
     {
@@ -25724,7 +25792,14 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "merge-duplicate",
+        "classification": "duplicate-catalog-record",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "low",
+        "rationaleAr": "Affective Filter يكرر المرشح الوجداني المسجل في 278 وبوسم Krashen 1982 نفسه. ترجمة العنوان أو حذف الصفة لا ينشئ بناءً نفسياً آخر؛ يُحفظ المعرف للتتبع ويُدمج في 278، حيث مُنع استنتاج القلق أو الدافعية أو الاكتساب من الراحة والأخطاء والسجل.",
+        "candidateEvidence": [],
+        "canonicalId": 278
       }
     },
     {
@@ -25745,7 +25820,29 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "krashen-monitor-model-theoretical-framework",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "نموذج المراقب يميز بين نظام مكتسب ونظام متعلَّم يفترض أنه يراجع الإنتاج الواعي عند توفر الوقت والانتباه إلى الشكل ومعرفة القاعدة. التصحيح الذاتي ووقت الكتابة وإظهار القواعد لا يكشف أي نظام أنتج العبارة ولا يختبر شروط المراقب؛ والمنتج لا يملك بروتوكولاً تجريبياً لهذا الفصل. لذلك لا يصنف المتعلم ولا ينسب تقدمه إلى Monitor Model.",
+        "candidateEvidence": [
+          "components/exercises.tsx",
+          "components/schreibschleife.tsx",
+          "components/lernstrategie.tsx",
+          "lib/store.ts"
+        ],
+        "relatedIds": [
+          277,
+          278,
+          371,
+          823,
+          825,
+          826,
+          828,
+          829,
+          831
+        ]
       }
     },
     {
@@ -25766,7 +25863,27 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "natural-order-hypothesis-research-construct",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "فرضية الترتيب الطبيعي دعوى عن أنماط اكتساب جماعية لبعض البنى، ولا تعني ترتيب كتاب القواعد أو مستويات CEFR ولا تسمح بتوقع مسار فرد. تسلسل المنتج مقرر تربوياً، وسجل الأخطاء انتقائي ومتأثر بما عُرض واختُبر ولا يمثل عينة طولية مستقلة؛ لذلك لا يستنتج ترتيب اكتساب أو يغير المنهج على أساس هذه الفرضية.",
+        "candidateEvidence": [
+          "content/grammar.json",
+          "lib/plan.ts",
+          "content/grammar-profile-matrix.json",
+          "lib/kompetenz.ts"
+        ],
+        "relatedIds": [
+          382,
+          441,
+          627,
+          630,
+          708,
+          827,
+          831
+        ]
       }
     },
     {
@@ -25787,7 +25904,28 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "silent-period-developmental-construct",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "فترة الصمت وصف محتمل لمرحلة يركز فيها بعض المبتدئين على الفهم قبل الإنتاج، وليست مدة موحدة أو تشخيصاً للقلق أو نقص المعرفة. يتيح المنتج الاستماع والقراءة ويطلب إنتاجاً شفهياً مبكراً، لكنه لا يسجل استعداد الكلام أو سبب الصمت ولا يتابع انتقالاً نمائياً؛ لذلك لا يفرض فترة ثابتة ولا يستنتجها.",
+        "candidateEvidence": [
+          "lib/plan.ts",
+          "components/tasks.tsx",
+          "content/muendlich.json",
+          "components/sprechkarten.tsx"
+        ],
+        "relatedIds": [
+          278,
+          301,
+          371,
+          823,
+          826,
+          827,
+          830,
+          831
+        ]
       }
     },
     {
@@ -25808,7 +25946,25 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "total-physical-response-learning-activity",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "الاستجابة الجسدية الكلية تتطلب أمراً مسموعاً ذا معنى يتبعه فعل جسدي قابل للملاحظة قبل التوسع في الإنتاج، مع تدرج وأمان وبدائل إتاحة؛ ولا تساوي تعلم صيغة الأمر على الشاشة. يحتوي المنتج درس Imperativ وصوتاً وتمارين نصية، لكنه لا يقدم حلقة أمر–حركة ولا تحققاً غير متطفل من الفهم. يؤجل إلى نشاط اختياري بلا كاميرا مع بديل حركي وإتاحة واختبار سلوكي.",
+        "candidateEvidence": [
+          "content/grammar.json",
+          "components/tasks.tsx",
+          "lib/speech.ts",
+          "components/komfort.tsx"
+        ],
+        "relatedIds": [
+          451,
+          727,
+          823,
+          829,
+          831
+        ]
       }
     },
     {
@@ -25829,7 +25985,31 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "natural-approach-instructional-framework",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "المقاربة الطبيعية منهج متكامل يعطي الأولوية للفهم والمعنى ومدخل مناسب وضغط وجداني منخفض، ويتيح ظهور الإنتاج تدريجياً؛ ولا يثبت من جمع نصوص سهلة وترجمة وتمرين تنفس. مسار المنتج يدرّس القواعد صراحة ويقيّم إنتاجاً منذ المراحل الأولى ولا يوثق مراحل المنهج أو جرعة المدخل وفهمه؛ لذلك تبقى الأنشطة المجاورة منفصلة عن ادعاء Natural Approach.",
+        "candidateEvidence": [
+          "content/texts.json",
+          "content/dialogues.json",
+          "lib/plan.ts",
+          "components/tasks.tsx",
+          "components/lernstrategie.tsx"
+        ],
+        "relatedIds": [
+          277,
+          278,
+          371,
+          823,
+          825,
+          826,
+          827,
+          828,
+          829,
+          830
+        ]
       }
     },
     {
@@ -25850,7 +26030,14 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "merge-duplicate",
+        "classification": "duplicate-catalog-record",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "low",
+        "rationaleAr": "Communicative Language Teaching يعيد إطار CLT المفروز في 521، حيث تتطلب المهمة غرضاً ومعنى وفجوة معلومات وتفاوضاً واستجابة غير مكتوبة سلفاً. اختلاف اسم المرجع لا ينشئ منهجاً ثانياً في المنتج؛ يُحفظ المعرف للتتبع ويُدمج في 521، مع عدم تحويل وجود حوارات وتمارين كلام إلى ادعاء أن المنهج كله CLT.",
+        "candidateEvidence": [],
+        "canonicalId": 521
       }
     },
     {
@@ -25871,7 +26058,27 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "task-based-language-teaching-framework",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "التعلم القائم على المهام عند Willis يحتاج دورة موثقة حول مهمة ذات هدف ونتيجة غير لغوية، يختار المتعلم لغته لإنجازها ثم يخطط ويبلغ وينتقل إلى تركيز لغوي لاحق؛ ولا تساوي تسمية كل تمرين task. يقدم المنتج مواقف واستعمالاً مستقلاً ومراحل درس، لكنها لا تنفذ دورة Willis ولا تسجل نتيجة مشتركة أو تحليل لغة ناشئة؛ لذلك يبقى الإطار بحثياً.",
+        "candidateEvidence": [
+          "lib/plan.ts",
+          "components/tasks.tsx",
+          "components/akademie/LektionWizard.tsx",
+          "content/cando.json"
+        ],
+        "relatedIds": [
+          431,
+          497,
+          521,
+          522,
+          712,
+          941,
+          942
+        ]
       }
     },
     {
@@ -25892,7 +26099,29 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "content-based-instruction-curricular-framework",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "التعليم المبني على المحتوى ينظم تعلم اللغة حول أهداف ومعرفة مجال حقيقيين وتسلسل مفاهيمه ويقوّم المحتوى واللغة بوضوح، ولا يساوي نصاً عن الصحة أو المناخ. يحتوي المنتج مواد تمريض وموضوعات متنوعة، لكنها موارد لغوية بلا منهج مجال أو أهداف محتوى مستقلة أو خبير تخصص وتقويم مزدوج؛ لذلك لا يدعي Content-Based Instruction.",
+        "candidateEvidence": [
+          "content/texts.json",
+          "components/pflege.tsx",
+          "content/pflege.json",
+          "components/gesundheit.tsx"
+        ],
+        "relatedIds": [
+          524,
+          739,
+          771,
+          773,
+          775,
+          833,
+          835,
+          836,
+          837
+        ]
       }
     },
     {
@@ -25913,7 +26142,27 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "sheltered-instruction-curricular-framework",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "التعليم المحمي يتيح محتوى صفياً أو تخصصياً لدارسي لغة إضافية مع الحفاظ على صرامة المجال وتوفير سقالات لغوية وتفاعلية، وليس تبسيط نصوص دورة لغة. المنتج ليس مقرراً لمادة مدرسية ولا يحدد أهداف محتوى وعبئاً معرفياً وتفاعلاً صفياً وتقويماً للمجال؛ ومواد التمريض تدريب لغوي مهني. لذلك لا يدعي Sheltered Instruction.",
+        "candidateEvidence": [
+          "components/akademie/LektionWizard.tsx",
+          "lib/scaffolding-deep.ts",
+          "components/pflege.tsx",
+          "content/pflege.json"
+        ],
+        "relatedIds": [
+          363,
+          524,
+          611,
+          728,
+          773,
+          834,
+          836
+        ]
       }
     },
     {
@@ -25934,7 +26183,30 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "siop-classroom-observation-and-planning-model",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "SIOP نموذج تخطيط وملاحظة صفية منظم يتطلب أهداف محتوى ولغة ومكونات وسمات تنفيذ وتفاعل ومراجعة وتقويماً موثقاً، ولا يثبت من وجود سقالات أو درس رقمي. لا يوجد في المنتج معلم صفّ أو أداة fidelity وملاحظة مستقلة ولا أهداف تخصصية مزدوجة؛ لذلك لا يحسب واجهة Lesson Studio أو مواد التمريض تطبيقاً لنموذج SIOP.",
+        "candidateEvidence": [
+          "lib/clil.ts",
+          "components/akademie/LektionWizard.tsx",
+          "components/pflege.tsx",
+          "lib/kriterien.ts"
+        ],
+        "relatedIds": [
+          363,
+          524,
+          602,
+          728,
+          773,
+          775,
+          834,
+          835,
+          837,
+          919
+        ]
       }
     },
     {
@@ -25955,7 +26227,14 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "merge-duplicate",
+        "classification": "duplicate-catalog-record",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "low",
+        "rationaleAr": "CLIL 4Cs Coyle 2 يكرر إطار 4Cs المسجل في 775: المحتوى والتواصل والمعرفة والثقافة داخل تخطيط CLIL. اللاحقة 2 وسنة إحالة أخرى لا تنشئ مصفوفة أو دورة تحقق ثانية؛ يُحفظ المعرف للتتبع ويُدمج في 775، حيث سُجل غياب خريطة أهداف وتتابع وتقويم لكل عنصر.",
+        "candidateEvidence": [],
+        "canonicalId": 775
       }
     },
     {
@@ -25976,7 +26255,14 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "merge-duplicate",
+        "classification": "duplicate-catalog-record",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "low",
+        "rationaleAr": "Lexical Approach Lewis يعيد المقاربة المعجمية المفروزة في 526: تنظيم المنهج حول وحدات متعددة الكلمات ومتلازمات وصيغ لا حول مفردات منفردة فقط. اختلاف سنة Lewis لا يجعل بنوك العبارات منهجاً ثانياً؛ يُحفظ المعرف للتتبع ويُدمج في 526، مع بقاء اختيار corpus والتسلسل والقياس غير موثق.",
+        "candidateEvidence": [],
+        "canonicalId": 526
       }
     },
     {
@@ -25997,7 +26283,29 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "collocational-competence-research-construct",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "الكفاءة التصاحبية قدرة أوسع على فهم المتلازمات واختيارها وإنتاجها بملاءمة عبر سياقات، ولا تساوي نتيجة بنك مقيد أو استدعاء شريك كلمة معروف. توجد محطة وتمارين حية مرشحة لممارسة التصاحب، لكن الاختيار داخلي بلا معيار corpus موثق ولا عينة إنتاج حر ومقيمين وثبات وحدود مستوى؛ لذلك لا تحول الدرجات إلى حكم Collocational Competence.",
+        "candidateEvidence": [
+          "content/kollokationen.json",
+          "content/kollok-vertiefung.json",
+          "components/kollokproduktion.tsx",
+          "components/tiefenlex.tsx",
+          "lib/kompetenz.ts"
+        ],
+        "relatedIds": [
+          323,
+          438,
+          526,
+          643,
+          838,
+          840,
+          893,
+          931
+        ]
       }
     },
     {
