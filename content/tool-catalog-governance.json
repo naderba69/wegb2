@@ -10570,6 +10570,602 @@
         966
       ]
     },
+    "601": {
+      "classification": "out-of-scope-english-medium-instruction",
+      "decision": "reject-not-applicable",
+      "researchStatus": "citation-label-unverified",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "productStatus": "prototype-not-wired",
+      "risk": "high",
+      "rationaleAr": "EMI يعني تدريس محتوى تخصصي عبر الإنجليزية، بينما نطاق المنتج هو تعلم الألمانية للناطق بالعربية ولا يقدم مقرراً تخصصياً لغته الإنجليزية. وجود تقرير أسري إنجليزي منفرد أو واجهة ألمانية تدريجية لا ينشئ English-medium curriculum ولا أهداف محتوى؛ لذلك يُرفض من النطاق الحالي بدلاً من تسمية ثنائية الواجهة EMI.",
+      "candidateEvidence": [
+        "components/De.tsx",
+        "lib/i18n.ts",
+        "components/elternpaket.tsx",
+        "content/accreditation-alignment.json"
+      ],
+      "relatedIds": [
+        524,
+        602,
+        704,
+        773,
+        834,
+        837,
+        919
+      ]
+    },
+    "602": {
+      "classification": "clil-dual-domain-assessment",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "productStatus": "prototype-not-wired",
+      "risk": "high",
+      "rationaleAr": "تقويم CLIL يحتاج أهداف محتوى وأهداف لغة منفصلة ومعايير تبين ما إذا كان الضعف معرفياً أم لغوياً. توجد نصوص صحة ومناخ ومادة تمريض، لكن وحدة CLIL غير مستوردة ولا خريطة تعلم للمجال ولا rubric مزدوجة أو مراجع مختص؛ لذلك يؤجل التقويم ولا تُحوّل نتيجة اللغة إلى إتقان للمحتوى.",
+      "candidateEvidence": [
+        "lib/clil.ts",
+        "components/pflege.tsx",
+        "content/texts.json",
+        "lib/kriterien.ts"
+      ],
+      "relatedIds": [
+        238,
+        524,
+        773,
+        837,
+        919,
+        996
+      ]
+    },
+    "603": {
+      "classification": "multilingual-pedagogy",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "productStatus": "prototype-not-wired",
+      "risk": "high",
+      "rationaleAr": "Translanguaging pedagogy تتيح للمتعلم تعبئة موارده اللغوية واختيارها لبناء معنى أو منتج ثم التأمل في الاختيار. العربية الحالية شرح وسقالة من المؤلف، ومهمة الوساطة ثنائية ومحددة الاتجاه؛ لا توجد مهمة يختار فيها المتعلم repertoire متعدد اللغات أو معيار يحترم تنوعه، لذلك يبقى التصميم مؤجلاً.",
+      "candidateEvidence": [
+        "components/De.tsx",
+        "components/tasks.tsx",
+        "lib/lesestoff.ts",
+        "components/lesestoff.tsx"
+      ],
+      "relatedIds": [
+        340,
+        509,
+        510,
+        511,
+        512,
+        513,
+        604,
+        605,
+        606,
+        738,
+        753,
+        769,
+        918
+      ]
+    },
+    "604": {
+      "classification": "multilingual-language-use-phenomenon",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "productStatus": "prototype-not-wired",
+      "risk": "medium",
+      "rationaleAr": "التناوب اللغوي ظاهرة خطابية اجتماعية يختار فيها المتكلم لغة أو أكثر بحسب المشاركين والوظيفة والسياق، ولا يساوي عرض العربية إلى جانب الألمانية أو تبديل لغة الواجهة. لا يجمع المنتج محادثة متعددة اللغات ولا يحلل موضع التناوب ووظيفته، لذلك لا يصنف الاستعمال أو المتعلم آلياً.",
+      "candidateEvidence": [
+        "components/De.tsx",
+        "lib/i18n.ts",
+        "components/tasks.tsx",
+        "content/dialogues.json"
+      ],
+      "relatedIds": [
+        340,
+        509,
+        510,
+        603,
+        605,
+        752,
+        906,
+        907,
+        908,
+        913,
+        914
+      ]
+    },
+    "605": {
+      "classification": "plurilingual-competence-construct",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "productStatus": "prototype-not-wired",
+      "risk": "high",
+      "rationaleAr": "الكفاءة متعددة اللغات لا تُقاس بعدد الترجمات أو نجاح مهمة ألمانية عربية؛ فهي تعبئة مرنة لمخزون لغوي غير متساوٍ بحسب الجمهور والغرض. توجد ممارسة وساطة حية ووعي ببعض التداخلات، لكنهما لا يغطيان لغات المتعلم ولا مواقف متعددة ولا مقياساً صالحاً؛ لذلك لا تُمنح درجة كفاءة plurilingual.",
+      "candidateEvidence": [
+        "lib/lesestoff.ts",
+        "components/lesestoff.tsx",
+        "lib/falsche-freunde.ts",
+        "lib/i18n.ts"
+      ],
+      "relatedIds": [
+        340,
+        509,
+        510,
+        513,
+        603,
+        604,
+        606,
+        638,
+        639,
+        738,
+        751,
+        798,
+        935,
+        936
+      ]
+    },
+    "606": {
+      "classification": "text-mediation-practice",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "productStatus": "candidate-live-implementation",
+      "risk": "high",
+      "rationaleAr": "توجد مهام حية اختيارية في كل نص وحوار حر B1/B2 تطلب نقل المعنى من الألمانية إلى صديق بالعربية، مع كتابة المتعلم ومقارنة ذاتية بنقاط أساسية بلا ادعاء ترجمة حرفية أو تصحيح آلي. هذه مطابقة مرشحة محدودة لوساطة النص؛ لكنها اتجاه واحد بلا محاور بشري، ومصدر CEFR غير موقّع ولا rubric أو تحقق ميداني، وإتمامها لا يثبت كفاءة وساطة أو مستوى CEFR.",
+      "candidateEvidence": [
+        "lib/lesestoff.ts",
+        "components/lesestoff.tsx",
+        "scripts/engine_smoke.ts",
+        "scripts/interaktiv_test.tsx"
+      ],
+      "relatedIds": [
+        240,
+        340,
+        494,
+        510,
+        522,
+        605,
+        803,
+        936,
+        937
+      ]
+    },
+    "607": {
+      "classification": "human-online-interaction",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "productStatus": "prototype-not-wired",
+      "risk": "high",
+      "rationaleAr": "التفاعل عبر الإنترنت وفق واصفات التواصل يحتاج مشاركين بشريين ورسائل أو معاملات متبادلة وتوقيتاً وسياقاً قابلاً للمراجعة. المنتج محلي بلا حسابات أو غرفة أو منتدى؛ الحوارات ثابتة ورفيق الكلام نموذج آلي اختياري لا إنساناً. يلزم هوية وموافقة وإشراف وسلامة وخصوصية قبل أي توصيل أو تقييم.",
+      "candidateEvidence": [
+        "components/sprechbegleiter.tsx",
+        "components/dialogszenarien.tsx",
+        "components/klassenansicht.tsx",
+        "app/datenschutz/page.tsx"
+      ],
+      "relatedIds": [
+        213,
+        225,
+        337,
+        338,
+        350,
+        362,
+        411,
+        412,
+        479,
+        488,
+        609,
+        937,
+        971,
+        976
+      ]
+    },
+    "608": {
+      "classification": "digital-media-literacy-practice",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "productStatus": "candidate-live-implementation",
+      "risk": "high",
+      "rationaleAr": "توجد نصوص وأسئلة حية عن فحص المصدر والتأطير والتضليل والفقاعات والمشاركة بعد التحقق، وهي مطابقة مرشحة لجزء إعلامي من محو الأمية الرقمية. لكنها أمثلة داخلية ثابتة ولا تطلب بحثاً فعلياً خارج التطبيق أو إدارة بيانات وأماناً وإنتاجاً رقمياً؛ فلا يثبت فهم النص كفاءة رقمية عامة أو انتقال الحكم إلى العالم الحقيقي.",
+      "candidateEvidence": [
+        "content/texts.json",
+        "content/lang/b2-01-10.json",
+        "content/lang/b2-31-35.json",
+        "components/tasks.tsx"
+      ],
+      "relatedIds": [
+        330,
+        331,
+        794,
+        795,
+        796,
+        797,
+        926
+      ]
+    },
+    "609": {
+      "classification": "cross-site-human-collaboration",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "productStatus": "prototype-not-wired",
+      "risk": "high",
+      "rationaleAr": "Telecollaboration 2.0 تتطلب مجموعة أو مؤسسة شريكة ومهاماً ممتدة ومنتجاً مشتركاً وتيسيراً وقناة تبادل وهوية وموافقة. لا توجد جلسات بشرية أو حسابات أو مساهمات مشتركة أو شريك خارجي؛ المهام الفردية ورفيق الذكاء وملفات الصف المحلية لا تنشئ تعاوناً عن بعد، لذلك يؤجل المشروع.",
+      "candidateEvidence": [
+        "content/muendlich.json",
+        "components/muendlich.tsx",
+        "components/klassenansicht.tsx",
+        "app/datenschutz/page.tsx"
+      ],
+      "relatedIds": [
+        258,
+        336,
+        337,
+        338,
+        479,
+        480,
+        564,
+        565,
+        568,
+        607,
+        610,
+        743,
+        744,
+        939,
+        940
+      ]
+    },
+    "610": {
+      "classification": "cross-site-exchange-assessment",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "productStatus": "prototype-not-wired",
+      "risk": "high",
+      "rationaleAr": "تقويم التبادل الافتراضي يفترض تبادلاً بشرياً قائماً ثم يقوّم المساهمة والتفاوض والتأمل والتعلم بين الثقافات بعدالة. المنتج لا يملك مجموعة شريكة أو آثار رسائل أو أدواراً أو منتجاً مشتركاً، فلا توجد عينة أداء للتقييم. يلزم أولاً تصميم التبادل والموافقة والحماية ثم rubric ومراجعين واتفاق ثبات.",
+      "candidateEvidence": [
+        "components/klassenansicht.tsx",
+        "content/muendlich.json",
+        "components/sprechbegleiter.tsx",
+        "app/datenschutz/page.tsx"
+      ],
+      "relatedIds": [
+        238,
+        338,
+        480,
+        564,
+        565,
+        568,
+        609,
+        745,
+        939,
+        940,
+        996
+      ]
+    },
+    "611": {
+      "classification": "sociocultural-learning-theory",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "productStatus": "prototype-not-wired",
+      "risk": "high",
+      "rationaleAr": "النظرية الاجتماعية الثقافية إطار يفسر تطور التعلم عبر الوساطة والأدوات والنشاط الاجتماعي والتاريخ، وليست مجرد تلميح أو واجهة أو محادثة آلية. توجد سقالات وتمارين فردية، لكن لا يجمع المنتج تفاعلاً بشرياً أو منطقة نمو أو تحولاً من الأداء المدعوم إلى المستقل؛ لذلك تبقى النظرية مرجعاً بحثياً لا أثر اكتساب مثبتاً.",
+      "candidateEvidence": [
+        "lib/scaffolding-deep.ts",
+        "lib/dynamic-assessment.ts",
+        "components/exercises.tsx",
+        "components/sprechbegleiter.tsx"
+      ],
+      "relatedIds": [
+        208,
+        213,
+        362,
+        411,
+        554,
+        612,
+        613,
+        614,
+        615,
+        801,
+        803,
+        933
+      ]
+    },
+    "612": {
+      "classification": "activity-system-analysis-theory",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "productStatus": "prototype-not-wired",
+      "risk": "high",
+      "rationaleAr": "نظرية النشاط تحلل فاعلاً وموضوعاً وأدوات وقواعد ومجتمعاً وتقسيم عمل وتناقضات ونتائج عبر الزمن. تسمية عناصر التطبيق أنشطة أو وجود خطة ومهام لا يمثل هذا النظام، والمنتج لا يجمع المجتمع أو تقسيم العمل أو التناقضات ولا يختبر تغير النشاط؛ لذلك لا تعد سجلات الإكمال تنفيذاً للنظرية.",
+      "candidateEvidence": [
+        "lib/aktivitaeten.ts",
+        "lib/plan.ts",
+        "lib/types.ts",
+        "components/tasks.tsx"
+      ],
+      "relatedIds": [
+        208,
+        554,
+        611,
+        613,
+        614,
+        615,
+        799,
+        800,
+        801
+      ]
+    },
+    "613": {
+      "classification": "community-learning-construct",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "productStatus": "prototype-not-wired",
+      "risk": "high",
+      "rationaleAr": "مجتمع الممارسة يحتاج مجالاً مشتركاً وعلاقات مشاركة مستمرة ومخزون ممارسة وهوية تتطور بين أعضاء حقيقيين. ملفات متعلمين على جهاز واحد أو مهمة شريك مطبوعة لا توفر تواصلاً أو عضوية أو إنتاجاً مشتركاً، ولا توجد حسابات أو مجتمع أو إشراف؛ لذلك لا يُستنتج الانتماء أو التعلم المجتمعي.",
+      "candidateEvidence": [
+        "components/klassenansicht.tsx",
+        "components/muendlich.tsx",
+        "lib/think-pair-share.ts",
+        "app/datenschutz/page.tsx"
+      ],
+      "relatedIds": [
+        205,
+        258,
+        336,
+        338,
+        576,
+        611,
+        612,
+        614,
+        734,
+        760,
+        971,
+        976
+      ]
+    },
+    "614": {
+      "classification": "situated-participation-construct",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "productStatus": "prototype-not-wired",
+      "risk": "high",
+      "rationaleAr": "المشاركة الطرفية المشروعة تصف دخول وافد إلى ممارسة اجتماعية حقيقية وانتقاله نحو مشاركة أكمل بإتاحة من أعضاء أكثر خبرة. فتح مستوى أو حل مهمة أسهل لا يثبت شرعية العضوية أو تغير الدور، ولا يوجد مجتمع ممارسة أو مسار مساهمات بشرية في المنتج؛ لذلك يبقى المفهوم بحثياً.",
+      "candidateEvidence": [
+        "components/klassenansicht.tsx",
+        "lib/plan.ts",
+        "components/akademie/CurriculumMap.tsx",
+        "app/datenschutz/page.tsx"
+      ],
+      "relatedIds": [
+        205,
+        576,
+        611,
+        612,
+        613,
+        760,
+        801
+      ]
+    },
+    "615": {
+      "classification": "ecological-sla-theory",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "productStatus": "prototype-not-wired",
+      "risk": "high",
+      "rationaleAr": "المقاربة البيئية تدرس علاقة المتعلم بالفرص والقيود في بيئته المادية والاجتماعية وتغيرها، ولا تساوي نصوص الحياة اليومية أو ما تسمح به الواجهة. المنتج يقدم سياقات وتمارين لكنه لا يرصد بيئة المتعلم أو affordances التي يدركها ويستعملها ولا التحول عبر السياقات؛ فلا يثبت Ecological SLA.",
+      "candidateEvidence": [
+        "lib/lebenswelt.ts",
+        "components/lebenswelt.tsx",
+        "content/texts.json",
+        "lib/plan.ts"
+      ],
+      "relatedIds": [
+        611,
+        612,
+        613,
+        616,
+        799,
+        800,
+        801
+      ]
+    },
+    "616": {
+      "classification": "complex-dynamic-systems-theory",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "productStatus": "prototype-not-wired",
+      "risk": "high",
+      "rationaleAr": "نظرية الأنظمة الديناميكية المعقدة تصف تغيراً غير خطي وتفاعلاً بين متغيرات واعتماداً على الشروط الأولية عبر قياسات زمنية كثيفة. الجدولة الحتمية وSRS وتقارير الإكمال نماذج منتج وليست قياساً لنظام اكتساب، ولا توجد سلاسل لغوية متعددة أو تحليل جذب وتباين؛ لذلك لا يُنسب تغير المتعلم للنظرية.",
+      "candidateEvidence": [
+        "lib/plan.ts",
+        "lib/srs.ts",
+        "lib/prognose.ts",
+        "components/berichte.tsx"
+      ],
+      "relatedIds": [
+        431,
+        554,
+        615,
+        617,
+        722,
+        799,
+        946,
+        949
+      ]
+    },
+    "617": {
+      "classification": "dynamic-lexical-systems-theory",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "productStatus": "prototype-not-wired",
+      "risk": "high",
+      "rationaleAr": "منظور الأنظمة الديناميكية للمفردات يتطلب تتبع تغير الشبكة المعجمية والتنوع والعلاقات والتنافس عبر الزمن، لا عدّ بطاقات أو مراجعات. يعرض المنتج تردداً داخلياً وSRS وروابط معجمية، لكنه لا يقيس بنية معجم المتعلم أو تحولها ولا يفصل التعلم من التعرض؛ لذلك لا يثبت دينامية مفردات.",
+      "candidateEvidence": [
+        "lib/frequenz.ts",
+        "lib/srs.ts",
+        "content/vocab.json",
+        "components/tiefenlex.tsx"
+      ],
+      "relatedIds": [
+        318,
+        441,
+        442,
+        520,
+        616,
+        652,
+        707,
+        843,
+        885,
+        886,
+        895
+      ]
+    },
+    "618": {
+      "classification": "usage-based-phonology-theory",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "productStatus": "prototype-not-wired",
+      "risk": "high",
+      "rationaleAr": "الصوتيات القائمة على الاستعمال تفسر تشكل الفئات من تكرار رموز صوتية وتوزعاتها وسياقاتها عبر خبرة ممتدة. محطة الأزواج الدنيا تعرض كلمات قليلة بصوت TTS ولا تضبط جرعة الرموز أو تنوع المتكلمين ولا تختبر تغير التعميم؛ لذلك لا يحول التكرار أو النجاح السمعي النظرية إلى آلية مثبتة.",
+      "candidateEvidence": [
+        "lib/phonetikdaten.ts",
+        "components/phonetik.tsx",
+        "lib/frequenz.ts",
+        "content/dialogues.json"
+      ],
+      "relatedIds": [
+        232,
+        318,
+        341,
+        342,
+        441,
+        619,
+        620,
+        621,
+        707
+      ]
+    },
+    "619": {
+      "classification": "exemplar-phonology-theory",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "productStatus": "prototype-not-wired",
+      "risk": "high",
+      "rationaleAr": "صوتيات النماذج المثالّية تفترض تخزين حالات صوتية غنية وتكوّن فئات بحسب تشابهها وتوزعها، وليست مجرد وجود أمثلة أو أزواج دنيا. أمثلة المنتج محدودة وصوت TTS يختلف حسب الجهاز ولا توجد رموز متعددة المتكلمين أو قياسات تشابه أو اختبار تعميم؛ فلا يُستنتج تمثيل exemplar لدى المتعلم.",
+      "candidateEvidence": [
+        "lib/phonetikdaten.ts",
+        "components/phonetik.tsx",
+        "content/dialogues.json",
+        "lib/srs.ts"
+      ],
+      "relatedIds": [
+        188,
+        232,
+        341,
+        342,
+        442,
+        618,
+        620,
+        621
+      ]
+    },
+    "620": {
+      "classification": "gestural-phonology-theory",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "productStatus": "prototype-not-wired",
+      "risk": "high",
+      "rationaleAr": "الصوتيات الإيمائية تمثل الكلام كإيماءات نطقية متداخلة زمنياً، ولا تُقاس من مدة التسجيل أو عدد الوقفات والمقاطع. توجد إرشادات مكتوبة لبعض مواضع الشفتين والحلق وتسجيل محلي للإيقاع، لكن لا تتبع للسان أو الفك أو الحنجرة ولا تحليل تزامن الإيماءات؛ لذلك لا يصدر حكم نطقي أو ادعاء تنفيذ للنظرية.",
+      "candidateEvidence": [
+        "lib/phonetikdaten.ts",
+        "components/phonetik.tsx",
+        "components/aussprachetrainer.tsx",
+        "lib/aussprache.ts"
+      ],
+      "relatedIds": [
+        232,
+        341,
+        342,
+        618,
+        619,
+        621
+      ]
+    },
     "840": {
       "classification": "duplicate-catalog-record",
       "decision": "merge-duplicate",
