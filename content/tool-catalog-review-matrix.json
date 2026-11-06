@@ -18962,7 +18962,27 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "cognitive-grammar-theory",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "النحو المعرفي عند Langacker إطار يربط البنية اللغوية بالتصور والانتباه وبناء المشهد، وليس اسماً عاماً لدروس القواعد. يعرض المنتج قواعد وأمثلة وتمارين تحويل، لكنه لا يرمّز construal أو profile/base أو يقارن اختيارات تصويرية؛ لذلك لا تُنسب إليه النظرية ولا أثرها المعرفي.",
+        "candidateEvidence": [
+          "content/grammar.json",
+          "components/akademie/LektionWizard.tsx",
+          "lib/lesson-scene.ts"
+        ],
+        "relatedIds": [
+          440,
+          441,
+          444,
+          445,
+          485,
+          660,
+          712,
+          859
+        ]
       }
     },
     {
@@ -18983,7 +19003,24 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "frame-semantics-theory",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "دلالة الإطار تتطلب إطارات معنوية وأدواراً frame elements وعلاقات تكافؤ تربط اللفظ بالمشهد، لا مجرد وضع كلمة أو عبارة داخل موقف. لا يملك المنتج معجم إطارات أو ترميز أدوار أو تمارين تسترجع المشاركين الناقصين، لذا تبقى الأمثلة السياقية أدلة مجاورة ولا تثبت تطبيق Fillmore.",
+        "candidateEvidence": [
+          "content/grammar.json",
+          "content/redemittel.json",
+          "content/tiefenlex.json"
+        ],
+        "relatedIds": [
+          347,
+          440,
+          444,
+          659,
+          712
+        ]
       }
     },
     {
@@ -19004,7 +19041,24 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "conceptual-blending-theory",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "المزج المفاهيمي يفترض فضاءات إدخال وفضاءاً عاماً ومزجاً ناشئاً يمكن تحليل الإسقاطات والضغط فيه. الصور المجازية والتعابير والنماذج الكتابية الحالية لا تبني هذه الشبكة ولا تطلب من المتعلم تفسير بنية ناشئة، فلا تُسمى ممارسة الاستعارة أو الإبداع تطبيقاً لـFauconnier.",
+        "candidateEvidence": [
+          "content/grammar.json",
+          "content/writing.json",
+          "lib/lesson-scene.ts"
+        ],
+        "relatedIds": [
+          446,
+          448,
+          485,
+          645,
+          900
+        ]
       }
     },
     {
@@ -19025,7 +19079,27 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "mental-spaces-theory",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "الفضاءات الذهنية بنية تحليلية لتتبع مجالات الخطاب والروابط بينها والإحالة عبرها، وليست مرادفاً للتخيل أو السياق أو الخريطة الذهنية. لا يوسم المنتج space builders ولا يختبر الإحالة والربط بين الفضاءات، لذلك لا تثبت المشاهد والأمثلة تطبيق نموذج Fauconnier.",
+        "candidateEvidence": [
+          "content/grammar.json",
+          "content/texts.json",
+          "lib/lesson-scene.ts"
+        ],
+        "relatedIds": [
+          275,
+          441,
+          442,
+          443,
+          444,
+          448,
+          455,
+          485
+        ]
       }
     },
     {
@@ -19046,7 +19120,25 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "embodied-semantics-theory",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "الدلالة المتجسدة تدّعي تأصيل معالجة المعنى في المحاكاة الحسية والحركية، ولا يكفي وجود صور أو أفعال جسمية أو نقرات واجهة لإثباتها. لا يسجل المنتج فعلاً حركياً مرتبطاً بالمعنى ولا يقارن شرطاً متجسداً ببديل أو يقيس المعالجة؛ لذا يُربط بالسجل 449 بحثياً فقط.",
+        "candidateEvidence": [
+          "components/tasks.tsx",
+          "lib/lesson-scene.ts",
+          "lib/silent-way.ts"
+        ],
+        "relatedIds": [
+          449,
+          666,
+          859,
+          860,
+          861,
+          862
+        ]
       }
     },
     {
@@ -19067,7 +19159,27 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "gesture-speech-integration-theory",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "إطار McNeill يدرس تكامل الإيماءة والكلام في حدث تعبيري واحد، لا مجرد الإشارة إلى صورة أو حركة زر. توجد ملاحظة نموذجية غير موصولة في silent-way عن إشارة المعلم، لكن لا تُعرض للمتعلم ولا تُلتقط إيماءة أو تُزامن مع الكلام أو تُحلل؛ لذلك تختلف عن نشاط الإيماء المؤجل في 450 وتبقى نظرية بحثية.",
+        "candidateEvidence": [
+          "lib/silent-way.ts",
+          "components/tasks.tsx",
+          "content/muendlich.json"
+        ],
+        "relatedIds": [
+          196,
+          307,
+          449,
+          450,
+          665,
+          830,
+          861,
+          862
+        ]
       }
     },
     {
@@ -19088,7 +19200,25 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "linguistic-iconicity-theory",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "الأيقونية علاقة منهجية بين صورة التعبير وبنية المعنى، وليست استعمال رمز بصري أو رسم توضيحي في الواجهة. لا يقدّم المنتج أزواجاً تقارن الشكل الأيقوني والاعتباطي ولا يطلب اكتشاف علاقة الكمية أو الترتيب أو المسافة؛ لذلك لا تثبت المواد المرئية مفهوم Perniss.",
+        "candidateEvidence": [
+          "lib/lesson-scene.ts",
+          "content/grammar.json",
+          "components/tasks.tsx"
+        ],
+        "relatedIds": [
+          448,
+          452,
+          668,
+          669,
+          670,
+          795
+        ]
       }
     },
     {
@@ -19109,7 +19239,25 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "sound-symbolism-theory",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "الرمزية الصوتية تبحث ارتباطات غير اعتباطية بين خصائص الصوت والمعنى عبر كلمات أو تجارب مضبوطة. دروس النطق والأزواج الدنيا الحالية تدرب تمييز الأصوات فقط ولا تربطها بأبعاد معنى ولا تختبر تعميماً على كلمات جديدة؛ فلا تُعامل الفونتيك أو TTS كتطبيق Dingemanse.",
+        "candidateEvidence": [
+          "content/grammar.json",
+          "lib/phonetikdaten.ts",
+          "components/phonetik.tsx"
+        ],
+        "relatedIds": [
+          232,
+          341,
+          618,
+          667,
+          669,
+          670
+        ]
       }
     },
     {
@@ -19130,7 +19278,22 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "onomatopoeia-language-phenomenon",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "medium",
+        "rationaleAr": "المحاكاة الصوتية فئة معجمية وصوتية محددة تحتاج بنكاً موثقاً يربط اللفظ الألماني بالصوت والاستعمال والسجل. لم يعثر التدقيق على نشاط أو محتوى حي يعلّم أصواتاً مثل Tierlaute أو Geräuschwörter؛ ووجود مواد استماع ونطق عامة لا يثبت هذه الفئة أو اكتسابها.",
+        "candidateEvidence": [
+          "content/vocab.json",
+          "content/hoerneu.json",
+          "content/grammar.json"
+        ],
+        "relatedIds": [
+          667,
+          668,
+          670
+        ]
       }
     },
     {
@@ -19151,7 +19314,22 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "ideophone-language-phenomenon",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "الكلمات التصويرية فئة ذات خصائص صوتية ودلالية وتداولية تختلف عبر اللغات، ولا تساوي الكلمات التعبيرية أو التعابير الاصطلاحية أو المؤثرات الصوتية. لا يملك المنتج قائمة ألمانية مراجعة أو سياقات تبرز الأداء الحسي ولا نشاط تصنيف أو إنتاج، لذلك يبقى المفهوم بحثياً ولا يُستنتج من بنك المفردات.",
+        "candidateEvidence": [
+          "content/vocab.json",
+          "content/tiefenlex.json",
+          "content/grammar.json"
+        ],
+        "relatedIds": [
+          667,
+          668,
+          669
+        ]
       }
     },
     {
@@ -19169,10 +19347,36 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "pragmatic-marker-practice",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "medium",
+        "rationaleAr": "يعرض بنك العبارات الحي صيغاً وظيفية للرأي والاعتراض والتلطيف والانتقال، وتطلب بطاقة البراغماتية اختيارها وفق الموقف مع تفسير؛ وهذه مطابقة مرشحة لممارسة علامات تداولية محددة. لا يرمّز المنتج خصائص Brinton التاريخية والنحوية ولا يقيس تواتر العلامات أو اكتساب كفاءة تداولية عامة.",
+        "candidateEvidence": [
+          "content/redemittel.json",
+          "lib/redemittel.ts",
+          "components/redemittel.tsx",
+          "lib/pragmatik.ts",
+          "components/pragmatik.tsx"
+        ],
+        "relatedIds": [
+          312,
+          313,
+          315,
+          349,
+          486,
+          672,
+          674,
+          675,
+          676,
+          677,
+          692,
+          695
+        ]
       }
     },
     {
@@ -19190,10 +19394,27 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "german-discourse-particle-practice",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "medium",
+        "rationaleAr": "يوجد درس B2 حي يشرح ويدرّب doch وmal وja وdenn وhalt/eben بحسب وظيفة السياق، مع اختيار وإكمال وترتيب وتحويل. هذه مطابقة مرشحة ضيقة لجسيمات خطاب ألمانية، لكنها لا تطبق تصنيف Weydt كاملاً ولا تغطي النبرة والتوزيع في كلام طبيعي أو تثبت طلاقة خطابية.",
+        "candidateEvidence": [
+          "content/grammar.json",
+          "components/akademie/LektionWizard.tsx",
+          "components/exercises.tsx",
+          "scripts/interaktiv_test.tsx"
+        ],
+        "relatedIds": [
+          315,
+          487,
+          671,
+          673
+        ]
       }
     },
     {
@@ -19211,10 +19432,31 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "german-modal-particle-practice",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "medium",
+        "rationaleAr": "درس b2-modalpartikel الحي يميّز وظائف mal وdoch وja وdenn وhalt/eben ويطلب إدراج الجسيم أو تحويل الأمر إلى صيغة ألطف، مع اختبارات تشغيل للمسار. هذه ممارسة مرشحة للجسيمات النمطية، لا تطبيقاً كاملاً لتحليل Thurmair ولا دليلاً على الاستعمال الطبيعي في إنتاج حر.",
+        "candidateEvidence": [
+          "content/grammar.json",
+          "components/akademie/LektionWizard.tsx",
+          "components/exercises.tsx",
+          "scripts/engine_smoke.ts",
+          "scripts/interaktiv_test.tsx"
+        ],
+        "relatedIds": [
+          312,
+          315,
+          672,
+          674,
+          675,
+          679,
+          680
+        ]
       }
     },
     {
@@ -19232,10 +19474,31 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "hedging-language-practice",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "medium",
+        "rationaleAr": "توجد ممارسة حية للتلطيف وعدم اليقين عبر vielleicht وvermutlich وdürfte/könnte وIch bin nicht sicher وKonjunktiv II، وتعرض بطاقة البراغماتية أثر الصيغة في الطلب والنقد. هذا تحوط لغوي محدود، لا نموذج Hyland للخطاب الأكاديمي ولا قياساً منهجياً لقوة الالتزام أو ملاءمة كل سجل.",
+        "candidateEvidence": [
+          "lib/pragmatik.ts",
+          "components/pragmatik.tsx",
+          "content/redemittel.json",
+          "content/grammar.json",
+          "content/muendlich.json"
+        ],
+        "relatedIds": [
+          312,
+          315,
+          671,
+          673,
+          675,
+          676,
+          679
+        ]
       }
     },
     {
@@ -19253,10 +19516,29 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "boosting-language-practice",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "medium",
+        "rationaleAr": "يتضمن بنك العبارات الحي صيغاً ترفع الالتزام مثل Ich bin davon überzeugt وEs lässt sich nicht leugnen، وتظهر صيغ التأكيد في مهام الرأي والكتابة؛ وهذه مطابقة مرشحة لممارسة تعزيز محدودة. لا يوجد تصنيف Hyland مدمج أو مقارنة مضبوطة بين booster وhedge ولا تصحيح لقوة الادعاء في نص حر.",
+        "candidateEvidence": [
+          "content/redemittel.json",
+          "components/redemittel.tsx",
+          "content/writing.json",
+          "content/muendlich.json"
+        ],
+        "relatedIds": [
+          313,
+          315,
+          671,
+          673,
+          674,
+          676
+        ]
       }
     },
     {
@@ -19274,10 +19556,31 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "stance-marker-practice",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "medium",
+        "rationaleAr": "يدرّب بنك العبارات ومهام الكتابة والتحدث علامات موقف صريحة مثل Meiner Meinung nach وIch glaube وIch bin überzeugt وMeiner Ansicht nach، مع استرجاع واستعمال في حجة. هذه ممارسة حية مرشحة، لكنها لا تطبق إطار Biber متعدد الأبعاد ولا تستنتج موقف المتعلم أو شخصيته ولا تقيس تنوع العلامات في إنتاج حر.",
+        "candidateEvidence": [
+          "content/redemittel.json",
+          "components/redemittel.tsx",
+          "content/writing.json",
+          "content/muendlich.json",
+          "components/schreiben.tsx"
+        ],
+        "relatedIds": [
+          313,
+          315,
+          671,
+          674,
+          675,
+          677,
+          679
+        ]
       }
     },
     {
@@ -19295,10 +19598,31 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "engagement-marker-practice",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "تطلب مهام حية مخاطبة القارئ أو الشريك وطرح سؤال عليه وتستعمل صيغاً مثل Ich wende mich an Sie وLass uns وWas hältst du von؛ وهذه مطابقة جزئية لعلامات انخراط موجهة للمخاطب. لا يوسم المنتج أسئلة Hyland وتوجيهاته وضمائر القارئ في خطاب أكاديمي ولا يقيس أثرها أو ملاءمتها، فلا يُدّعى الإطار الكامل.",
+        "candidateEvidence": [
+          "content/redemittel.json",
+          "content/muendlich.json",
+          "content/writing.json",
+          "components/muendlich.tsx",
+          "components/lernstrategie.tsx"
+        ],
+        "relatedIds": [
+          312,
+          313,
+          315,
+          350,
+          671,
+          676,
+          704
+        ]
       }
     },
     {
@@ -19316,10 +19640,30 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "source-attribution-and-reporting-practice",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "يدرّب درس Konjunktiv I الحي نقل قول الغير دون التزام بصحته، وتطلب مهمة تقرير استعمال laut وzufolge وdemzufolge لإسناد المعلومات إلى مصدر. هذه ممارسة مرشحة ضيقة للتأشير على المصدر، لا نظام evidentiality لغوياً كاملاً ولا فحصاً لموثوقية الدليل أو صدق الادعاء.",
+        "candidateEvidence": [
+          "content/grammar.json",
+          "content/writing.json",
+          "content/vortrag.json",
+          "components/akademie/LektionWizard.tsx",
+          "components/schreiben.tsx"
+        ],
+        "relatedIds": [
+          293,
+          313,
+          315,
+          671,
+          679,
+          704
+        ]
       }
     },
     {
@@ -19337,10 +19681,30 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "epistemic-modality-practice",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "medium",
+        "rationaleAr": "يفصل درس B2 الحي بين müssen الاستنتاجية وdürfte وkönnte وsollen الناقلة، ويدرّب Futur II وvermutlich للتخمين؛ وهذه مطابقة مرشحة لدرجات محددة من النمطية المعرفية. النسب الرقمية في الجدول ليست مقياساً متحققاً، ولا يطبق المنتج نسق Palmer كاملاً أو يحكم على يقين المتعلم من الدرجة.",
+        "candidateEvidence": [
+          "content/grammar.json",
+          "content/muendlich.json",
+          "components/akademie/LektionWizard.tsx",
+          "components/exercises.tsx",
+          "scripts/interaktiv_test.tsx"
+        ],
+        "relatedIds": [
+          315,
+          673,
+          674,
+          676,
+          678,
+          680
+        ]
       }
     },
     {
@@ -19358,10 +19722,30 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "deontic-modality-practice",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "medium",
+        "rationaleAr": "تدرّب دروس الأفعال الناقصة الحية معنى الواجب بـmüssen والمنع والإذن بـdürfen والنصيحة بـsollen، وتطلب تحويلات واختيارات سياقية وطلبات مهذبة. هذه ممارسة مرشحة لوظائف إلزامية محددة، لا تحليلاً كاملاً لمصادر السلطة والقوة الإلزامية وفق Palmer ولا دليلاً على كفاءة حرة.",
+        "candidateEvidence": [
+          "content/grammar.json",
+          "lib/pragmatik.ts",
+          "components/akademie/LektionWizard.tsx",
+          "components/exercises.tsx",
+          "scripts/engine_smoke.ts"
+        ],
+        "relatedIds": [
+          312,
+          313,
+          673,
+          679,
+          689,
+          690
+        ]
       }
     },
     {
