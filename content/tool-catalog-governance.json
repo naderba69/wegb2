@@ -15008,6 +15008,604 @@
       "candidateEvidence": [],
       "canonicalId": 576
     },
+    "761": {
+      "classification": "language-socialization-theoretical-framework",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "التنشئة اللغوية تدرس كيف يتعلم المشارك عبر التفاعل مع جماعةٍ طرائق الكلام والقيم والأدوار، وكيف يُنشَّأ باللغة وإلى استعمالها عبر الزمن؛ ولا تساوي قراءة حوار مؤلف أو اختيار رد جاهز. لا يوجد في المنتج مجتمع مشاركين أو ملاحظة طولية أو ترميز تفاعل وسياق، واسم الملف المحلي لا يثبت عضوية اجتماعية؛ لذلك يبقى الإطار بحثياً.",
+      "candidateEvidence": [
+        "content/dialogues.json",
+        "components/dialogszenarien.tsx",
+        "lib/profiles.ts",
+        "app/datenschutz/page.tsx"
+      ],
+      "relatedIds": [
+        309,
+        483,
+        574,
+        756,
+        757
+      ]
+    },
+    "762": {
+      "classification": "language-ecology-theoretical-framework",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "إيكولوجيا اللغة تبحث علاقات اللغات والمتكلمين والمؤسسات والموارد والسلطة داخل بيئة اجتماعية ومادية، لا مجرد وجود لغتين في واجهة. يعرض المنتج العربية والألمانية وسياقات حياة يومية، لكنه لا يرسم استعمال اللغات في الأسرة والعمل والحي أو السياسات والتحولات ولا يجمع بيانات بيئية؛ لذلك لا يدعي تحليلاً إيكولوجياً.",
+      "candidateEvidence": [
+        "lib/i18n.ts",
+        "lib/lebenswelt.ts",
+        "components/lebenswelt.tsx",
+        "content/texts.json"
+      ],
+      "relatedIds": [
+        574,
+        615,
+        738,
+        740,
+        763,
+        764,
+        765,
+        799,
+        800
+      ]
+    },
+    "763": {
+      "classification": "linguistic-landscape-field-activity",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "نشاط المشهد اللغوي يحتاج عينة محددة من اللافتات العامة، وتوثيق اللغة والمكان والجهة والجمهور، ثم مقارنةً وتحليلاً مع قواعد تصوير وخصوصية وإتاحة وحقوق واضحة. توجد مفردات لافتات ووحدة حيّ عامة ومشروع صور أولي غير موصول، لكن لا مطالبة ميدانية أو رفع صور أو مخطط ترميز أو تحقق من الموقع؛ لذلك يؤجل النشاط.",
+      "candidateEvidence": [
+        "lib/landeskunde.ts",
+        "components/landeskunde.tsx",
+        "lib/project.ts",
+        "content/sentences.json",
+        "app/datenschutz/page.tsx"
+      ],
+      "relatedIds": [
+        311,
+        430,
+        483,
+        615,
+        729,
+        762,
+        764,
+        765,
+        917,
+        934
+      ]
+    },
+    "764": {
+      "classification": "superdiversity-sociolinguistic-construct",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "التنوع الفائق لا يعني كثرة الأسماء أو اللغات فقط؛ بل تداخل مسارات الهجرة والوضع القانوني والتعليم والعمل والشبكات ومخزونات اللغة بصورة لا تختزل في فئة واحدة. ملفات المنتج تحفظ اسماً ورمزاً وتقدماً محلياً ولا تجمع هذه المتغيرات أو علاقاتها، والنصوص عن الهجرة ليست بيانات مجتمع؛ لذلك لا يصنف المتعلم أو المحتوى بهذا البناء.",
+      "candidateEvidence": [
+        "lib/profiles.ts",
+        "components/profil.tsx",
+        "content/texts.json",
+        "app/datenschutz/page.tsx"
+      ],
+      "relatedIds": [
+        483,
+        574,
+        615,
+        729,
+        731,
+        762,
+        763,
+        765,
+        916
+      ]
+    },
+    "765": {
+      "classification": "metrolingualism-sociolinguistic-construct",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "Metrolingualism يصف ممارسات حضرية متحركة يمزج فيها أشخاص ذوو موارد وخلفيات مختلفة اللغة بالمكان والعمل والهوية، لا عرض ترجمة عربية بجانب جملة ألمانية. لا يجمع المنتج تفاعلاً حضرياً طبيعياً أو مشاركين أو مواقع ولا يحلل الاختيارات والموارد لحظة بلحظة؛ لذلك تبقى النصوص والحوارات المجاورة مادة لغوية لا دليلاً على البناء.",
+      "candidateEvidence": [
+        "content/dialogues.json",
+        "content/texts.json",
+        "lib/i18n.ts",
+        "lib/profiles.ts"
+      ],
+      "relatedIds": [
+        509,
+        574,
+        603,
+        615,
+        729,
+        762,
+        763,
+        764,
+        916
+      ]
+    },
+    "766": {
+      "classification": "translingual-writing-practice",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "الممارسة عبر اللغوية في الكتابة تفاوضٌ واعٍ مع أعراف اللغة والجمهور، يسمح بتعبئة موارد متعددة ثم مراجعة الاختيارات وأثرها، ولا تساوي السقالة العربية المؤلفة أو الخطأ غير المصحح. مهام الكتابة الحالية تستهدف الألمانية ومعاييرها ولا توفر مطالبة translingual أو تبرير الاختيار أو rubric لا يعاقب التنوع تلقائياً؛ لذلك تؤجل.",
+      "candidateEvidence": [
+        "content/writing.json",
+        "components/schreiben.tsx",
+        "components/De.tsx",
+        "lib/kriterien.ts"
+      ],
+      "relatedIds": [
+        340,
+        509,
+        510,
+        603,
+        604,
+        605,
+        738,
+        750,
+        752,
+        753,
+        769,
+        770,
+        913
+      ]
+    },
+    "767": {
+      "classification": "out-of-scope-english-as-lingua-franca",
+      "decision": "reject-not-applicable",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "English as a Lingua Franca يختص باستعمال الإنجليزية لغة تواصل بين متكلمين متعددي الخلفيات، بينما نطاق المنتج تعلم الألمانية للناطق بالعربية والتحضير لامتحانات ألمانية. وجود كلمات أو دراسة بالإنجليزية في نصوص متفرقة لا ينشئ corpus تفاعل ELF ولا هدفاً لتدريس الإنجليزية؛ لذلك يُرفض من نطاق المنتج الحالي بدل نقل نتائج الإنجليزية إلى الألمانية.",
+      "candidateEvidence": [
+        "content/accreditation-alignment.json",
+        "lib/i18n.ts",
+        "content/texts.json",
+        "content/dialogues.json"
+      ],
+      "relatedIds": [
+        601,
+        652,
+        655,
+        704,
+        768,
+        911,
+        912
+      ]
+    },
+    "768": {
+      "classification": "out-of-scope-world-englishes-framework",
+      "decision": "reject-not-applicable",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "World Englishes إطار لتاريخ الإنجليزية وانتشارها وتنوعاتها وأعرافها ومواقعها الاجتماعية، لا إطاراً عاماً يمكن وضع الألمانية مكانه بلا دليل. المنتج يعلّم الألمانية ولا يقدم تنوعات الإنجليزية أو دوائر Kachru أو تحليلاً لها؛ لذلك يُرفض السجل من النطاق الحالي، ولا تجعل أمثلة إنجليزية عارضة منه مساراً للإنجليزيات العالمية.",
+      "candidateEvidence": [
+        "content/accreditation-alignment.json",
+        "lib/i18n.ts",
+        "content/texts.json",
+        "content/vocab.json"
+      ],
+      "relatedIds": [
+        601,
+        652,
+        655,
+        704,
+        767,
+        911,
+        912
+      ]
+    },
+    "769": {
+      "classification": "translanguaging-space-theoretical-construct",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "فضاء translanguaging بناءٌ اجتماعي يتيح للمتكلمين جمع مواردهم اللغوية والتاريخية والهوياتية والتفاوض عليها في تفاعل، وليس مساحة شاشة تعرض لغتين. العربية والألمانية هنا منظمتان مسبقاً من المؤلف، ولا توجد جماعة يختار أفرادها repertoire أو أثر تفاعل قابل للتحليل؛ لذلك لا تسمى الواجهة فضاءً عبر لغوي.",
+      "candidateEvidence": [
+        "components/De.tsx",
+        "components/tasks.tsx",
+        "components/schreiben.tsx",
+        "lib/lesestoff.ts"
+      ],
+      "relatedIds": [
+        340,
+        509,
+        510,
+        603,
+        604,
+        605,
+        734,
+        752,
+        753,
+        754,
+        766,
+        770,
+        913,
+        918
+      ]
+    },
+    "770": {
+      "classification": "flexible-bilingualism-pedagogical-framework",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "الثنائية المرنة تصف تنظيماً صفياً يسمح باستعمال موارد لغوية متعددة بحسب النشاط والمعنى بدل فصل اللغتين آلياً، وتحتاج ملاحظة أدوار المعلم والمتعلمين ووظائف الاختيار. التدرج الآلي للواجهة والشرح العربي قرارات تأليف ثابتة في تطبيق فردي، لا ممارسة صفية مشتركة ولا اختياراً موثقاً من المتعلم؛ لذلك يبقى الإطار بحثياً.",
+      "candidateEvidence": [
+        "lib/i18n.ts",
+        "components/De.tsx",
+        "components/tasks.tsx",
+        "content/dialogues.json"
+      ],
+      "relatedIds": [
+        340,
+        509,
+        510,
+        603,
+        604,
+        605,
+        738,
+        740,
+        766,
+        769,
+        913
+      ]
+    },
+    "771": {
+      "classification": "pluriliteracies-curricular-framework",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "Pluriliteracies يربط بناء معرفة المحتوى باللغة الخاصة بالمجال والأنماط والأنواع النصية والتفكير والتواصل عبر تقدم مخطط، ولا يساوي قراءة نص صحة أو إكمال مفردات مهنية. توجد مواد تمريض وموضوعات علمية، لكن لا خريطة نمو مفاهيمي وخطابي ولا أهداف محتوى ولغة مزدوجة أو تقويم لها؛ لذلك يبقى إطاراً بحثياً.",
+      "candidateEvidence": [
+        "lib/clil.ts",
+        "components/pflege.tsx",
+        "content/pflege.json",
+        "content/texts.json"
+      ],
+      "relatedIds": [
+        451,
+        524,
+        602,
+        704,
+        772,
+        773,
+        774,
+        775,
+        837,
+        919
+      ]
+    },
+    "772": {
+      "classification": "coyle-deep-learning-curricular-construct",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "Deep Learning عند Coyle ضمن مسار المحتوى واللغة يعني نماءً مفاهيمياً يعبّر عنه المتعلم عبر خطاب المجال وينقله بين سياقات، وليس شبكة عصبية ولا صعوبة السؤال أو ارتفاع الدرجة. المنتج يقدم نصوصاً ومهاماً لغوية ولا يتتبع مفهوماً تخصصياً عبر تمثيلات ومنتجات ونقل موثق؛ لذلك لا يستنتج هذا التعلم من إنجاز المادة.",
+      "candidateEvidence": [
+        "lib/clil.ts",
+        "components/pflege.tsx",
+        "content/pflege.json",
+        "lib/kriterien.ts"
+      ],
+      "relatedIds": [
+        524,
+        602,
+        634,
+        704,
+        771,
+        773,
+        774,
+        775,
+        837
+      ]
+    },
+    "773": {
+      "classification": "clil-matrix-instructional-planning-framework",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "مصفوفة CLIL أداة تخطيط وتحليل يجب أن تعرّف أبعادها المرجعية وتربط المطالب المعرفية واللغوية بمهام متدرجة قابلة للتقويم، لا اسماً يضاف إلى موضوع تخصصي. ملف clil الحالي قائمتان موضوعيتان غير مستوردتين، ومواد التمريض والنصوص لا تحمل مصفوفة موثقة أو أهدافاً مزدوجة وتسلسلاً وrubric؛ لذلك يؤجل التخطيط.",
+      "candidateEvidence": [
+        "lib/clil.ts",
+        "components/pflege.tsx",
+        "content/pflege.json",
+        "lib/kriterien.ts"
+      ],
+      "relatedIds": [
+        524,
+        602,
+        739,
+        771,
+        772,
+        774,
+        775,
+        837,
+        919
+      ]
+    },
+    "774": {
+      "classification": "clil-language-triptych-framework",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "ثلاثية CLIL تميز لغة التعلم اللازمة للمحتوى، واللغة اللازمة للمشاركة في المهمة، واللغة الناشئة عبر التعلم؛ ولا تكفي قائمة مفردات أو شرح ثنائي لإثبات هذه الطبقات. لا تحدد وحدات المنتج لغة المجال ووظائف التفاعل والاحتياجات الناشئة لكل هدف محتوى، ولا تجمع إنتاجاً لتعديل الخطة؛ لذلك يبقى الإطار بحثياً.",
+      "candidateEvidence": [
+        "lib/clil.ts",
+        "components/pflege.tsx",
+        "content/pflege.json",
+        "content/texts.json"
+      ],
+      "relatedIds": [
+        524,
+        602,
+        771,
+        772,
+        773,
+        775,
+        837,
+        919
+      ]
+    },
+    "775": {
+      "classification": "clil-four-cs-curricular-framework",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "إطار 4Cs يخطط المحتوى والتواصل والمعرفة والثقافة بوصفها عناصر مترابطة لوحدة CLIL، لا أربعة عناوين يمكن استنتاجها من تنوع المحتوى. لا توجد في المنتج خريطة 4Cs أو أهداف وتتابع وتقويم لكل عنصر، وlib/clil.ts غير موصول؛ لذلك تبقى مواد الصحة والمناخ أدلة مجاورة لا تطبيقاً للإطار.",
+      "candidateEvidence": [
+        "lib/clil.ts",
+        "components/pflege.tsx",
+        "content/pflege.json",
+        "content/texts.json"
+      ],
+      "relatedIds": [
+        311,
+        524,
+        602,
+        704,
+        771,
+        772,
+        773,
+        774,
+        837,
+        919
+      ]
+    },
+    "776": {
+      "classification": "bics-calp-analytical-distinction",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "التمييز بين BICS وCALP عدسة بحثية وتربوية بين كفاية تواصلية سياقية ومتطلبات لغوية أكاديمية أكثر تجريداً، وليس سلّماً يُستنتج من نجاح حوار وفشل كتابة. المنتج لا يملك اختبارات صالحة منفصلة أو بيانات تعليم مدرسي وزمنية، وتصنيف المهمة اليومية أو الامتحانية لا يشخص كفاية المتعلم؛ لذلك لا يمنح وسم BICS/CALP.",
+      "candidateEvidence": [
+        "content/dialogues.json",
+        "content/writing.json",
+        "lib/plan.ts",
+        "lib/profiles.ts"
+      ],
+      "relatedIds": [
+        317,
+        519,
+        605,
+        704,
+        740,
+        777,
+        778,
+        779,
+        780
+      ]
+    },
+    "777": {
+      "classification": "bilingual-threshold-hypothesis",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "فرضية العتبات ادعاء على مستوى السكان عن ارتباط مستويات الكفاية في اللغتين بنتائج معرفية أو تعليمية، وليست عتبة نجاح B2 أو نسبة إنجاز. لا يقيس المنتج كفاية العربية ولا يملك مجموعات مقارنة أو نتائج معرفية وتصميماً طولياً، كما أن تحويل مستوى CEFR إلى عتبة سببية سيكون مضللاً؛ لذلك تبقى الفرضية بحثية.",
+      "candidateEvidence": [
+        "lib/profiles.ts",
+        "lib/metriken.ts",
+        "content/real-world-validation.json",
+        "content/accreditation-alignment.json"
+      ],
+      "relatedIds": [
+        508,
+        605,
+        628,
+        740,
+        776,
+        778,
+        779,
+        780,
+        781,
+        920
+      ]
+    },
+    "778": {
+      "classification": "linguistic-interdependence-hypothesis",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "فرضية الاعتماد المتبادل تتعلق بإمكان انتقال كفايات مفاهيمية وأكاديمية بين اللغات تحت شروط التعرض والدافعية والتعليم، ولا يثبتها شرح عربي يساعد إجابة ألمانية. لا يوجد خط أساس بالعربية أو مهمة متوازية وانتقال مؤجل أو ضبط للتعليم، وملف المتعلم لا يسجل كفايات اللغات؛ لذلك لا ينسب التحسن إلى الاعتماد المتبادل.",
+      "candidateEvidence": [
+        "lib/i18n.ts",
+        "lib/falsche-freunde.ts",
+        "content/writing.json",
+        "lib/profiles.ts"
+      ],
+      "relatedIds": [
+        190,
+        219,
+        340,
+        508,
+        605,
+        628,
+        634,
+        740,
+        776,
+        777,
+        779,
+        780,
+        781
+      ]
+    },
+    "779": {
+      "classification": "common-underlying-proficiency-theoretical-model",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "الكفاءة الأساسية المشتركة نموذج يفسر اشتراك بعض المعارف والعمليات عبر اللغات، وليست مخزناً برمجياً واحداً أو واجهة ترجمة. المنتج لا يقيس المفهوم نفسه في العربية والألمانية ولا يفصل المعرفة عن الأداء اللغوي أو يختبر انتقالاً ثنائي الاتجاه؛ لذلك لا تُستنتج بنية معرفية مشتركة من التقدم أو الوساطة.",
+      "candidateEvidence": [
+        "lib/i18n.ts",
+        "lib/lesestoff.ts",
+        "content/writing.json",
+        "lib/profiles.ts"
+      ],
+      "relatedIds": [
+        190,
+        219,
+        340,
+        508,
+        605,
+        628,
+        634,
+        740,
+        776,
+        777,
+        778,
+        780,
+        781
+      ]
+    },
+    "780": {
+      "classification": "additive-bilingualism-program-outcome-construct",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "الثنائية الإضافية تعني نماء لغة جديدة مع صون اللغة أو اللغات القائمة وقيمتها ووظائفها، مقابل مسار يزيحها؛ ولا يثبتها وجود شرح عربي أثناء تعلم الألمانية. المنتج لا يقيس كفاية العربية أو استعمالها ومكانتها عبر الزمن ولا يدير برنامجاً ثنائي اللغة أو بيئته، لذلك لا يدعي نتيجة additive ولا يستنتج أثراً من اختيار لغة الواجهة.",
+      "candidateEvidence": [
+        "lib/i18n.ts",
+        "lib/profiles.ts",
+        "content/writing.json",
+        "app/datenschutz/page.tsx"
+      ],
+      "relatedIds": [
+        197,
+        508,
+        605,
+        628,
+        738,
+        740,
+        776,
+        777,
+        778,
+        779,
+        781,
+        791
+      ]
+    },
     "840": {
       "classification": "duplicate-catalog-record",
       "decision": "merge-duplicate",
