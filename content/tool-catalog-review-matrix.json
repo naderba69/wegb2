@@ -24901,7 +24901,14 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "merge-duplicate",
+        "classification": "duplicate-catalog-record",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "low",
+        "rationaleAr": "Sociocultural Scaffolding يعيد بناء السقالة المرتبطة بمنطقة النمو القريبة وبوسم Wood 1976 نفسه المسجل في 363. لا ينشئ تغيير الصفة من advanced إلى sociocultural نشاطاً أو قياساً مستقلاً؛ يُحفظ المعرف للتتبع ويُدمج في 363 وحدوده: التسلسل الحي ثابت نسبياً ولا يقيس الأداء المستقل مقابل المدعوم.",
+        "candidateEvidence": [],
+        "canonicalId": 363
       }
     },
     {
@@ -24922,7 +24929,27 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "zone-of-proximal-development-theoretical-construct",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "منطقة النمو القريبة فرق مشروط بين ما ينجزه المتعلم مستقلاً وما ينجزه بتوجيه كفء، وليست مستوى CEFR أو عدّ تلميحات أو نجاحاً في المحاولة الثانية. يقدم Lesson Studio تدرجاً ثابتاً، لكن لا يعاير مساعدات متتابعة لمهمة واحدة ولا يسجل خط أساس مستقلاً أو انتقالاً لاحقاً؛ لذلك لا يحسب ZPD ولا يشخصها.",
+        "candidateEvidence": [
+          "lib/dynamic-assessment.ts",
+          "lib/scaffolding-deep.ts",
+          "components/akademie/LektionWizard.tsx",
+          "lib/plan.ts"
+        ],
+        "relatedIds": [
+          204,
+          208,
+          363,
+          554,
+          611,
+          801,
+          803
+        ]
       }
     },
     {
@@ -24943,7 +24970,28 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "vygotskian-mediation-theoretical-construct",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "الوساطة عند فيغوتسكي تفسر كيف تعيد الأدوات والعلامات والتفاعل الاجتماعي تنظيم النشاط والوظائف العقلية، ولا تساوي وساطة نص CEFR أو وجود زر أو تلميح أو نموذج ذكاء. توجد أدوات وسقالات وتغذية راجعة مجاورة، لكن لا تحليل لنظام النشاط ولا دليل انتقال من التنظيم المشترك إلى الاستقلال؛ لذلك تبقى بناءً بحثياً منفصلاً عن كفاءة الوساطة التواصلية.",
+        "candidateEvidence": [
+          "lib/scaffolding-deep.ts",
+          "components/akademie/LektionWizard.tsx",
+          "components/exercises.tsx",
+          "components/sprechbegleiter.tsx"
+        ],
+        "relatedIds": [
+          208,
+          363,
+          606,
+          611,
+          612,
+          801,
+          802,
+          936
+        ]
       }
     },
     {
@@ -24964,7 +25012,27 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "private-speech-developmental-construct",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "الكلام الخاص كلام مسموع موجّه إلى الذات يؤدي وظيفة تنظيمية ويتغير مع النمو والسياق، وليس مجرد أمر للمتعلم أن يتحدث بصوت عالٍ أو يجيب في مهمة شفوية. التطبيق لا يميز المخاطَب ولا يسجل الكلام تلقائياً ولا يرمز وظيفته أو مساره؛ والتعرف الصوتي اختياري بإذن صريح. لذلك لا يستنتج private speech من النقر أو النص المفرغ.",
+        "candidateEvidence": [
+          "components/muendlich.tsx",
+          "components/vortrag.tsx",
+          "components/interview2.tsx",
+          "lib/speech.ts"
+        ],
+        "relatedIds": [
+          202,
+          304,
+          368,
+          611,
+          803,
+          805,
+          808
+        ]
       }
     },
     {
@@ -24985,7 +25053,27 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "inner-speech-latent-cognitive-construct",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "الكلام الداخلي نشاط لفظي باطني مختصر لا يمكن رؤيته مباشرة، ولا يجوز استنتاجه من زمن صمت أو كتابة جواب أو اتباع استراتيجية. يوفر المنتج إرشادات للتفكير والشرح والتحدث المسموع لكنه لا يملك بروتوكول استبطان صالحاً أو موافقة ودراسة تربط التقرير بالأداء؛ لذلك يبقى البناء بحثياً ولا يتحول إلى تتبع خفي للحالة الذهنية.",
+        "candidateEvidence": [
+          "components/lernstrategie.tsx",
+          "components/interview2.tsx",
+          "lib/profiles.ts",
+          "app/datenschutz/page.tsx"
+        ],
+        "relatedIds": [
+          202,
+          304,
+          368,
+          611,
+          803,
+          804,
+          808
+        ]
       }
     },
     {
@@ -25006,7 +25094,31 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "dialogic-teaching-workflow",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "التدريس الحواري يحتاج حديثاً جماعياً متبادلاً وداعماً وتراكمياً وهادفاً يديره معلم، بحيث تبني المساهمات اللاحقة على السابقة ويُفحص توزيع الأصوات والاستدلال. رفيق الكلام الآلي يحاكي أدواراً، وبطاقات الشريك تسجل إقراراً فردياً فقط؛ ولا يوجد فصل بشري أو معلم أو سجل مساهمات. يؤجل إلى تصميم إشراف وموافقة وسلامة وrubric واختبار مستقل.",
+        "candidateEvidence": [
+          "components/sprechbegleiter.tsx",
+          "lib/sprechbegleiter.ts",
+          "components/tasks.tsx",
+          "content/muendlich.json",
+          "app/datenschutz/page.tsx"
+        ],
+        "relatedIds": [
+          205,
+          227,
+          350,
+          460,
+          488,
+          607,
+          611,
+          807,
+          971,
+          976
+        ]
       }
     },
     {
@@ -25027,7 +25139,33 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "human-collaborative-dialogue-workflow",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "الحوار التعاوني عند Swain يتطلب متعلمين يواجهون مسألة لغوية مشتركة ويصوغون فرضيات ويختلفون ويصححون ويبنون معرفة معاً عبر أدوار قابلة للرصد. مهام الشريك المطبوعة لا تتحقق من وجود شريك، ورفيق الذكاء ليس تعاون أقران بشرياً؛ ولا توجد مساحة مشتركة أو سجل أدوار ومساهمات. يؤجل إلى جلسة آمنة بموافقة ونسب مساهمات وترميز للحوار وقياس تعلم.",
+        "candidateEvidence": [
+          "components/tasks.tsx",
+          "content/muendlich.json",
+          "components/sprechbegleiter.tsx",
+          "lib/think-pair-share.ts",
+          "app/datenschutz/page.tsx"
+        ],
+        "relatedIds": [
+          205,
+          213,
+          227,
+          362,
+          411,
+          546,
+          611,
+          717,
+          806,
+          808,
+          976,
+          979
+        ]
       }
     },
     {
@@ -25045,10 +25183,36 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "languaging-learning-activity",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "تطلب محطة فاينمان الحية من المتعلم شرح قاعدة بالعربية بكلماته، وتفحص ظهور عناصر القاعدة وتعرض ما غاب وتتيح إعادة الصياغة؛ وهذا تطابق مرشح لسلوك languaging الظاهر، أي استعمال اللغة للتفكير في معرفة لغوية. لكن الفحص سطحي بالكلمات ولا يرمز تحول المفهوم أو حل المشكلة أو الحوار التعاوني، ولا يثبت أن الشرح سبب تعلماً أو يمثل كلاماً خاصاً أو داخلياً؛ لذلك يؤجل الادعاء.",
+        "candidateEvidence": [
+          "components/lernstrategie.tsx",
+          "app/fortschritt/page.tsx",
+          "content/grammar.json",
+          "lib/kompetenz.ts"
+        ],
+        "relatedIds": [
+          202,
+          214,
+          304,
+          368,
+          414,
+          544,
+          546,
+          611,
+          804,
+          805,
+          807,
+          809,
+          824
+        ]
       }
     },
     {
@@ -25069,7 +25233,14 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "merge-duplicate",
+        "classification": "duplicate-catalog-record",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "low",
+        "rationaleAr": "Output Hypothesis Swain يكرر فرضية الإخراج باسم Swain 1985 نفسه في 214. لا ينشئ تبديل ترتيب الكلمات نظرية أو ميزة ثانية؛ يُحفظ المعرف للتتبع ويُدمج في 214، حيث فُصل المبرر النظري عن مهام الإنتاج القابلة للقياس وعن ادعاء الاكتساب.",
+        "candidateEvidence": [],
+        "canonicalId": 214
       }
     },
     {
@@ -25090,7 +25261,14 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "merge-duplicate",
+        "classification": "duplicate-catalog-record",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "low",
+        "rationaleAr": "Interaction Hypothesis Long يكرر فرضية التفاعل المسجلة في 213 مع Long 1996 والمفاهيم نفسها عن التفاوض والتغذية الراجعة. لا توجد دورة إنتاج مستقلة لهذا الاسم الإنجليزي؛ يُحفظ المعرف للتتبع ويُدمج في 213، مع بقاء الحوار الحي منفصلاً عن إثبات أثر النظرية في الاكتساب.",
+        "candidateEvidence": [],
+        "canonicalId": 213
       }
     },
     {
@@ -25111,7 +25289,14 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "merge-duplicate",
+        "classification": "duplicate-catalog-record",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "low",
+        "rationaleAr": "Noticing Schmidt يكرر فرضية الانتباه المسجلة في 212 وبوسم Schmidt 1990 نفسه. بطاقة الملاحظة المجاورة لا تحتاج سجلاً نظرياً ثانياً ولا تثبت الحالة الذهنية؛ يُحفظ المعرف للتتبع ويُدمج في 212.",
+        "candidateEvidence": [],
+        "canonicalId": 212
       }
     },
     {
@@ -25132,7 +25317,30 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "attention-allocation-cognitive-construct",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "الانتباه مورد معرفي محدود يوزع بين المعنى والشكل ومطالب المهمة، ولا يساوي بقاء الصفحة مفتوحة أو تلوين كلمة أو صحة إجابة. يوفر المنتج إبرازاً وأسئلة ملاحظة، لكنه لا يملك قياس عملية صالحاً مثل مهمة مزدوجة أو توقيت مضبوط أو تتبع نظر بموافقة، ولا يفصل الانتباه عن المعرفة السابقة؛ لذلك لا يصنف انتباه المتعلم.",
+        "candidateEvidence": [
+          "lib/bemerken.ts",
+          "components/bemerken.tsx",
+          "components/akademie/LektionWizard.tsx",
+          "components/exercises.tsx"
+        ],
+        "relatedIds": [
+          212,
+          215,
+          373,
+          377,
+          378,
+          379,
+          435,
+          811,
+          813,
+          814
+        ]
       }
     },
     {
@@ -25153,7 +25361,29 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "awareness-consciousness-research-construct",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "الوعي ليس نتيجة ثنائية يمكن اشتقاقها من إجابة صحيحة؛ والتمييز بين التوجه والتنبه والكشف وبين الوعي ذي المحتوى القابل للتقرير يحتاج تعريفاً إجرائياً وبروتوكولاً زمنياً أو تقريراً لفظياً صالحاً. يسأل المنتج عمّا لاحظه المتعلم ويعرض فروقاً، لكنه لا يميز التخمين والمعرفة السابقة ولا يتحقق من التقرير؛ لذلك لا يقيس Awareness Tomlin.",
+        "candidateEvidence": [
+          "lib/noticing-deep.ts",
+          "lib/bemerken.ts",
+          "components/bemerken.tsx",
+          "components/fehlerlabor.tsx"
+        ],
+        "relatedIds": [
+          212,
+          304,
+          378,
+          379,
+          435,
+          436,
+          811,
+          812,
+          926
+        ]
       }
     },
     {
@@ -25174,7 +25404,14 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "merge-duplicate",
+        "classification": "duplicate-catalog-record",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "low",
+        "rationaleAr": "Focus on Form Doughty يعيد مبدأ التركيز العارض على الشكل داخل تواصل ذي معنى المفروز في 215. اختلاف الإحالة من Long إلى Doughty لا ينشئ ميزة ثانية في كتالوج المنتج؛ يُحفظ المعرف للتتبع ويُدمج في 215 وحدوده: لا خريطة موثقة تربط لحظة التواصل بالشكل والتصحيح والاختبار.",
+        "candidateEvidence": [],
+        "canonicalId": 215
       }
     },
     {
@@ -25195,7 +25432,14 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "merge-duplicate",
+        "classification": "duplicate-catalog-record",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "low",
+        "rationaleAr": "Recasts Lyster يكرر تقنية recast المسجلة في 401، أي إعادة قول المعنى بصيغة مصححة من دون إعلان التصحيح. اختلاف سنة وسم Lyster لا ينشئ سلوكاً ثانياً؛ يُحفظ المعرف للتتبع ويُدمج في 401، والوحدة المعزولة الحالية غير موصولة ولا تقيس استجابة المتعلم.",
+        "candidateEvidence": [],
+        "canonicalId": 401
       }
     },
     {
@@ -25216,7 +25460,14 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "merge-duplicate",
+        "classification": "duplicate-catalog-record",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "low",
+        "rationaleAr": "Prompts Lyster يكرر نمط المطالبة التصحيحية المسجل في 403 الذي يدفع المتعلم إلى الإصلاح من دون كشف النموذج. اختلاف سنة الإحالة لا يبرر دورة تحقق ثانية؛ يُحفظ المعرف للتتبع ويُدمج في 403، حيث وُثق التطابق الحي المحدود وحاجته إلى تصنيف وقياس مؤجل.",
+        "candidateEvidence": [],
+        "canonicalId": 403
       }
     },
     {
@@ -25237,7 +25488,14 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "merge-duplicate",
+        "classification": "duplicate-catalog-record",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "low",
+        "rationaleAr": "Corrective Feedback Ellis يعيد مظلة التغذية الراجعة التصحيحية المفروزة في 360 مع فروعها الصريحة والضمنية والمطالبات ونتائج uptake. إضافة اسم Ellis لا تجعلها ميزة مستقلة؛ يُحفظ المعرف للتتبع ويُدمج في 360، ولا تعتمد التصنيفات قبل توصيل المحرك وقياس الإصلاح والضرر.",
+        "candidateEvidence": [],
+        "canonicalId": 360
       }
     },
     {
@@ -25258,7 +25516,14 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "merge-duplicate",
+        "classification": "duplicate-catalog-record",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "low",
+        "rationaleAr": "Explicit Feedback يعيد التصحيح الصريح المسجل في 402: إبلاغ المتعلم بالخطأ وتقديم الصيغة أو الشرح بوضوح. اختلاف وسم Ellis لا ينشئ تقنية أخرى؛ يُحفظ المعرف للتتبع ويُدمج في 402، الذي يحمل دليلاً حياً مرشحاً وحدود التغطية وعدم إثبات الإصلاح أو الاحتفاظ.",
+        "candidateEvidence": [],
+        "canonicalId": 402
       }
     },
     {
@@ -25279,7 +25544,33 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "implicit-corrective-feedback-technique",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "التغذية التصحيحية الضمنية يجب أن تتيح للمتعلم استنتاج القوة التصحيحية من التفاعل من دون إعلان الخطأ أو القاعدة، ثم تُربط استجابته بالإصلاح. عارض التمارين يكشف الحكم والنموذج صراحة في النهاية، ورفيق الكلام يسمّي ملاحظته اللغوية ويعطي الصيغة الصحيحة؛ أما recast المعزول فغير مستورد. لذلك يؤجل تصنيف أي رسالة كضمنية إلى توصيل مقصود واختبار غموض وuptake.",
+        "candidateEvidence": [
+          "lib/feedback-recast.ts",
+          "lib/feedback-clarification.ts",
+          "lib/feedback-repetition.ts",
+          "components/exercises.tsx",
+          "components/sprechbegleiter.tsx"
+        ],
+        "relatedIds": [
+          209,
+          360,
+          361,
+          401,
+          404,
+          405,
+          410,
+          815,
+          817,
+          818,
+          820,
+          821
+        ]
       }
     },
     {
@@ -25300,7 +25591,14 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "merge-duplicate",
+        "classification": "duplicate-catalog-record",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "low",
+        "rationaleAr": "Uptake Lyster يكرر Learner Uptake المسجل في 410: استجابة المتعلم التي تلي تغذية راجعة محددة وقد تتضمن repair أو لا. اختلاف سنة الإحالة لا ينشئ ناتجاً آخر؛ يُحفظ المعرف للتتبع ويُدمج في 410، حيث سُجل غياب حلقة مصنفة تربط الخطأ والتغذية والاستجابة والإصلاح.",
+        "candidateEvidence": [],
+        "canonicalId": 410
       }
     },
     {
