@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-11-05",
+  "updated": "2026-11-06",
   "catalog": {
     "sourcePath": "content/tools.yaml",
     "firstId": 181,
@@ -7760,6 +7760,532 @@
         428,
         498,
         499
+      ]
+    },
+    "501": {
+      "classification": "elicited-imitation-assessment",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "المحاكاة المستثارة تتطلب سماع جمل مضبوطة ثم إعادة إنتاجها بعد قيد ذاكرة وتسجيل الاستجابة وترميز دقتها بمعيار ثابت. الظل والنطق الحاليان يتيحان الترديد أو التعرف الاختياري لكن لا يديران بروتوكولاً موحداً أو يحفظان تسجيلاً أو درجة تركيبية؛ فلا يكفي وجود زر استماع.",
+      "candidateEvidence": [
+        "components/shadowing.tsx",
+        "components/tasks.tsx",
+        "components/LocalSpeechPilot.tsx",
+        "lib/local-speech.ts"
+      ],
+      "relatedIds": [
+        341,
+        342,
+        358,
+        553
+      ]
+    },
+    "502": {
+      "classification": "grammaticality-judgment-practice",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "candidate-live-implementation",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "توجد تمارين حية تعرض صيغاً صحيحة وخاطئة، وتطلب اختيار الحكم أو التصحيح مع شرح وفخاخ صريحة عبر دروس القواعد؛ وهي مطابقة مرشحة لممارسة الحكم النحوي. لكنها أسئلة تعليمية من بنك داخلي لا أداة بحث أو اختبار معرفة ضمنية، ولا توجد معايرة زمن أو ثبات أو قبول بدائل لهجية.",
+      "candidateEvidence": [
+        "content/grammar.json",
+        "components/exercises.tsx",
+        "components/akademie/LektionWizard.tsx",
+        "scripts/engine_smoke.ts",
+        "scripts/interaktiv_test.tsx"
+      ],
+      "relatedIds": [
+        199,
+        343,
+        344,
+        345,
+        346,
+        360,
+        531,
+        532,
+        533
+      ]
+    },
+    "503": {
+      "classification": "psycholinguistic-reading-method",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "Self-Paced Reading البحثية تعرض مقاطع متتابعة وتلتقط زمن كل مقطع تحت بروتوكول وضبط، ولا تعني أن القارئ يستطيع التمرير بسرعته في صفحة عادية. التطبيق يعرض النص كاملاً ولا يجمع أزمنة كلمات أو مناطق ولا موافقة بحثية؛ لذلك تبقى الطريقة خارج ميزات التعلم.",
+      "candidateEvidence": [
+        "components/lesestoff.tsx",
+        "components/tasks.tsx",
+        "lib/metriken.ts"
+      ],
+      "relatedIds": [
+        353,
+        354,
+        355,
+        504
+      ]
+    },
+    "504": {
+      "classification": "out-of-scope-research-instrument",
+      "decision": "reject-not-applicable",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "تتبع العين يحتاج جهازاً أو كاميرا ومعايرة ونقاط تثبيت وموافقة وبيانات بيومترية وبروتوكول تحليل. المنتج لا يطلب كاميرا ولا يسجل النظرات، ومؤقت الصفحة أو النقر لا يمثل fixation أو saccade؛ لذا يرفض كميزة في نطاق التعلم المحلي الحالي.",
+      "candidateEvidence": [
+        "components/lesestoff.tsx",
+        "lib/metriken.ts",
+        "app/datenschutz/page.tsx",
+        "content/real-world-validation.json"
+      ],
+      "relatedIds": [
+        503,
+        505,
+        506,
+        507
+      ]
+    },
+    "505": {
+      "classification": "out-of-scope-neuroscience-instrument",
+      "decision": "reject-not-applicable",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "N400/P600 إشارات ERP تحتاج EEG ومختبراً وتزامن محفزات ومعالجة أثرية وموافقة أخلاقية؛ لا يمكن استنتاجها من صحة إجابة أو زمن متصفح. لا عتاد أو بيانات عصبية في المنتج، لذلك يرفض هذا القياس ضمن نطاقه الحالي.",
+      "candidateEvidence": [
+        "components/tasks.tsx",
+        "lib/metriken.ts",
+        "content/real-world-validation.json",
+        "app/datenschutz/page.tsx"
+      ],
+      "relatedIds": [
+        382,
+        383,
+        504,
+        506,
+        507
+      ]
+    },
+    "506": {
+      "classification": "out-of-scope-neuroscience-instrument",
+      "decision": "reject-not-applicable",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "دراسة اللغة بـfMRI تتطلب ماسحاً وبروتوكول تصوير وتصميماً تجريبياً وخبرة طبية وأخلاقية، وليست وظيفة تطبيق تعلم ويب. لا توجد صور أو عتاد أو جهة بحثية أو موافقات، لذلك يرفض إدراجها كميزة أو دليل اكتساب.",
+      "candidateEvidence": [
+        "content/real-world-validation.json",
+        "app/datenschutz/page.tsx",
+        "lib/metriken.ts"
+      ],
+      "relatedIds": [
+        382,
+        383,
+        504,
+        505,
+        507
+      ]
+    },
+    "507": {
+      "classification": "out-of-scope-clinical-research",
+      "decision": "reject-not-applicable",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "دراسات الآفات بحث سريري على مشاركين وبيانات صحية شديدة الحساسية، وتحتاج مؤسسة وأخلاقيات وتشخيصاً عصبياً؛ لا تنطبق على منتج تعلم ذاتي ولا يمكن محاكاتها من أخطاء المتعلم. تُرفض من النطاق الحالي.",
+      "candidateEvidence": [
+        "content/real-world-validation.json",
+        "app/datenschutz/page.tsx",
+        "components/gesundheit.tsx"
+      ],
+      "relatedIds": [
+        504,
+        505,
+        506
+      ]
+    },
+    "508": {
+      "classification": "contested-bilingualism-theory",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "ميزة ثنائية اللغة فرضية سكانية متنازع على عمومها وتتأثر بالعمر والتعليم والهجرة والقياس، وليست نتيجة يثبتها عرض العربية والألمانية. لا يجمع المنتج تاريخاً لغوياً أو اختبارات تنفيذية أو مجموعة مقارنة، لذلك لا يدعي منفعة معرفية سببية.",
+      "candidateEvidence": [
+        "app/page.tsx",
+        "content/real-world-validation.json",
+        "lib/metriken.ts"
+      ],
+      "relatedIds": [
+        509,
+        510,
+        511,
+        512,
+        513,
+        920,
+        921,
+        922
+      ]
+    },
+    "509": {
+      "classification": "multilingual-language-use-phenomenon",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "medium",
+      "rationaleAr": "التناوب اللغوي ظاهرة استعمال بين لغات داخل خطاب وسياق اجتماعي، ولا يساوي مجرد ترجمة عربية بجانب الألمانية أو تبديل لغة الواجهة. لا توجد مهمة يختار فيها المتعلم مواضع التناوب ويبررها ولا تحليل محادثة، لذلك يبقى مفهوماً بحثياً.",
+      "candidateEvidence": [
+        "components/De.tsx",
+        "components/tasks.tsx",
+        "content/dialogues.json"
+      ],
+      "relatedIds": [
+        508,
+        510,
+        511,
+        512,
+        513,
+        906,
+        907,
+        908,
+        913
+      ]
+    },
+    "510": {
+      "classification": "multilingual-pedagogy",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "Translanguaging pedagogy تصمم مهمة تسمح للمتعلم بتعبئة موارده اللغوية المتعددة للوصول إلى معنى أو منتج ثم تعكس اختياراته. الشرح العربي والترجمة الثنائية سقالات من المؤلف، لا إنتاجاً متعدد اللغة من المتعلم؛ يلزم هدف واضح وخيار لغات وإتاحة وخصوصية قبل التوصيل.",
+      "candidateEvidence": [
+        "components/tasks.tsx",
+        "components/schreiben.tsx",
+        "content/writing.json",
+        "components/De.tsx"
+      ],
+      "relatedIds": [
+        509,
+        511,
+        512,
+        513,
+        605,
+        606,
+        913,
+        918,
+        935
+      ]
+    },
+    "511": {
+      "classification": "learner-population-framework",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "Heritage Language تصف علاقة المتعلم بلغة الأسرة والمجتمع وتنوع الكفاءة والهوية، وليست نشاطاً أو افتراضاً يجوز استخلاصه من العربية. المنتج لا يسأل تاريخاً لغوياً ولا يخصص مسار متعلمي التراث، وجمع هذه الهوية يحتاج ضرورة وخصوصية؛ يبقى الإطار للبحث.",
+      "candidateEvidence": [
+        "lib/profiles.ts",
+        "app/datenschutz/page.tsx",
+        "content/real-world-validation.json"
+      ],
+      "relatedIds": [
+        508,
+        509,
+        510,
+        512,
+        513
+      ]
+    },
+    "512": {
+      "classification": "multilingual-acquisition-theory",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "اكتساب اللغة الثالثة إطار يدرس أثر لغتين سابقتين وخصائصهما وترتيب اكتسابهما، ولا يمكن افتراض أن الألمانية L3 لكل مستخدم عربي. لا يجمع المنتج ملفاً لغوياً ولا يقارن انتقال L1/L2، لذلك لا ينسب تصميمه أو نتائجه إلى هذا الإطار.",
+      "candidateEvidence": [
+        "app/datenschutz/page.tsx",
+        "lib/profiles.ts",
+        "content/real-world-validation.json"
+      ],
+      "relatedIds": [
+        508,
+        509,
+        510,
+        511,
+        513,
+        514
+      ]
+    },
+    "513": {
+      "classification": "multilingual-lexicon-construct",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "المعجم متعدد اللغات بناء معرفي عن تمثيل الكلمات وتنشيطها عبر لغات، ولا يثبته قاموس ألماني-عربي أو بحث نصي. لا توجد مهام priming متعددة اللغات أو قياس زمن واستجابات أو ملف لغوي، لذلك تبقى البطاقات محتوى ثنائياً لا دليلاً على بنية معجمية.",
+      "candidateEvidence": [
+        "content/vocab.json",
+        "components/tiefenlex.tsx",
+        "lib/suche.ts"
+      ],
+      "relatedIds": [
+        318,
+        347,
+        508,
+        509,
+        510,
+        511,
+        512,
+        514,
+        839
+      ]
+    },
+    "514": {
+      "classification": "cross-linguistic-influence-framework",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "توجد وحدة معزولة تقترح أزواج نطق للناطقين بالعربية وبعض شروح تقابلية، لكنها غير مستوردة ولا تجمع لغة المتعلم أو بدائل تفسيرية. الخطأ المشابه للعربية لا يثبت انتقالاً سببياً، ولا تكفي الواجهة الثنائية؛ يلزم تحليل بيانات ممثل ومراجعة لغوية قبل نسبة Cross-Linguistic Influence.",
+      "candidateEvidence": [
+        "lib/arabinterferenz.ts",
+        "components/tasks.tsx",
+        "lib/fehler.ts",
+        "content/real-world-validation.json"
+      ],
+      "relatedIds": [
+        307,
+        343,
+        509,
+        510,
+        512,
+        513,
+        515,
+        923,
+        924,
+        925
+      ]
+    },
+    "515": {
+      "classification": "interlanguage-analysis-framework",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "تحليل interlanguage التقابلي يحتاج مدونة متعلمين مصنفة ومجموعة مرجعية ومقارنة أنماط مع ضبط المستوى والمهمة. دفتر الأخطاء المحلي حالات فردية علاجية ولا يحفظ نصاً كاملاً أو عينة مرجعية، لذلك لا ينفذ Contrastive Interlanguage ولا يثبت مراحل تطور.",
+      "candidateEvidence": [
+        "lib/fehler.ts",
+        "components/fehlerlabor.tsx",
+        "content/real-world-validation.json"
+      ],
+      "relatedIds": [
+        514,
+        516,
+        517,
+        529,
+        530
+      ]
+    },
+    "516": {
+      "classification": "local-error-tagging",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "candidate-live-implementation",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "تسجل محركات عديدة الخطأ والصواب والمصدر وتوسمه ضمن فئات ثابتة، ثم تعرض العائلات والحرارة والمراجعة المتباعدة؛ وهذه مطابقة حية مرشحة لوسم الأخطاء المحلي. بعض الفئات والأسباب تُستنتج بقواعد سطحية وليست ترميزاً لغوياً مراجعاً، ولا توجد موثوقية بين مقيمين أو مدونة مجهلة.",
+      "candidateEvidence": [
+        "lib/fehler.ts",
+        "lib/store.ts",
+        "components/fehler-ui.tsx",
+        "components/fehlerlabor.tsx",
+        "scripts/engine_smoke.ts"
+      ],
+      "relatedIds": [
+        237,
+        303,
+        360,
+        514,
+        515,
+        517,
+        529,
+        530
+      ]
+    },
+    "517": {
+      "classification": "learner-corpus-research-asset",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "مدونة المتعلمين تحتاج نصوصاً أو استجابات محفوظة بمخطط وبيانات وصفية وموافقة وإخفاء هوية وإصداراً قابلاً للاستعلام. المنتج يحفظ تقدم الفرد وأخطاء مقتطعة محلياً ولا يجمعها مركزياً أو يحتفظ بسياق عينة كامل؛ لذلك لا يسمى دفتر الأخطاء Learner Corpus.",
+      "candidateEvidence": [
+        "lib/fehler.ts",
+        "lib/backup.ts",
+        "app/datenschutz/page.tsx",
+        "content/real-world-validation.json"
+      ],
+      "relatedIds": [
+        319,
+        515,
+        516,
+        518,
+        529,
+        530
+      ]
+    },
+    "518": {
+      "classification": "concordance-learning-tool",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "medium",
+      "rationaleAr": "Concordancing يحتاج بحثاً يعرض خطوط KWIC متعددة حول الكلمة مع مصدر وسياق وفرز يسمح باكتشاف النمط. البحث الحي يعرض بطاقة ومعنى وتلازمات وشارة تردد، لكنه لا يستخرج أسطر وقوع متوازية أو كلمات يسار/يمين؛ لذا يبقى التطوير مؤجلاً ولا يسمى البحث Concordancer.",
+      "candidateEvidence": [
+        "lib/suche.ts",
+        "components/tiefenlex.tsx",
+        "lib/frequenz.ts",
+        "content/texts.json"
+      ],
+      "relatedIds": [
+        318,
+        319,
+        517,
+        527,
+        528,
+        889,
+        890,
+        891,
+        892
+      ]
+    },
+    "519": {
+      "classification": "internal-frequency-list",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "candidate-live-implementation",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "medium",
+      "rationaleAr": "يحسب المنتج تكرار جذوع الكلمات في نصوصه وحواراته وجمله، يعرض العدد والفئة، ويمكن ترتيب بطاقات الحزمة به؛ وهذه مطابقة حية مرشحة لقائمة تردد داخلية. التصريح واضح أنها ليست تردد الألمانية، لكن التجذيع الخام وتوزيع الأنواع والمصادر يحتاجان تدقيقاً، ولا يجوز استخدام الرتبة لتقرير CEFR أو الشيوع العام.",
+      "candidateEvidence": [
+        "lib/frequenz.ts",
+        "components/kartenexport.tsx",
+        "components/tiefenlex.tsx",
+        "lib/referenz.ts",
+        "scripts/engine_smoke.ts"
+      ],
+      "relatedIds": [
+        318,
+        319,
+        517,
+        518,
+        527,
+        889,
+        890,
+        891,
+        994
+      ]
+    },
+    "520": {
+      "classification": "vocabulary-size-assessment",
+      "decision": "defer",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "اختبار حجم المفردات يحتاج أخذ عينات طبقية من قائمة تردد خارجية ثم تصحيح تخمين وتحويل الدرجة إلى تقدير بحجم وعدم يقين متحقق. التشخيص الحي يسأل مفردات قليلة لتحديد نقطة دخول ولا يقدر عدد الكلمات، والبنك ذو 6202 بطاقة ليس عينة معيارية؛ لذا لا يُعرض رقم حجم مفردات.",
+      "candidateEvidence": [
+        "lib/einstufung.ts",
+        "components/einstufung.tsx",
+        "content/vocab.json",
+        "lib/frequenz.ts"
+      ],
+      "relatedIds": [
+        237,
+        246,
+        519,
+        553,
+        994
       ]
     },
     "840": {
