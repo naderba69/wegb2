@@ -9999,6 +9999,577 @@
         957
       ]
     },
+    "581": {
+      "classification": "communication-disposition-construct",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "WTC عند MacIntyre استعداد موقفي للتواصل يتغير بحسب الشخص والسياق واللغة والثقة والقلق، وليس عدداً من مهام الكلام أو التسجيلات. المنتج يتيح محاكاة وتدريباً اختيارياً لكنه لا يسأل عن فرصة الكلام وقرار المبادرة في سياقات متعددة ولا يستخدم مقياساً صالحاً؛ فلا تُستنتج سمة.",
+      "candidateEvidence": [
+        "components/sprechkarten.tsx",
+        "components/sprechbegleiter.tsx",
+        "content/muendlich.json",
+        "app/datenschutz/page.tsx"
+      ],
+      "relatedIds": [
+        302,
+        577,
+        582,
+        583,
+        592,
+        950
+      ]
+    },
+    "582": {
+      "classification": "speaking-willingness-construct",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "القدرة على الكلام أو إكمال مهمة شفوية لا تساوي الرغبة في المبادرة بالكلام. قد يترك المتعلم التسجيل بسبب الخصوصية أو الضوضاء أو الإتاحة أو الجهاز، وقد ينفذ المهمة امتثالاً لا اختياراً؛ ولا يوجد قياس موافق عليه للاستعداد حسب الموقف، لذلك لا تُمنح درجة Willingness to Speak.",
+      "candidateEvidence": [
+        "components/muendlich.tsx",
+        "components/sprechkarten.tsx",
+        "components/sprechbegleiter.tsx",
+        "app/datenschutz/page.tsx"
+      ],
+      "relatedIds": [
+        302,
+        426,
+        427,
+        581,
+        583,
+        592,
+        950
+      ]
+    },
+    "583": {
+      "classification": "foreign-language-anxiety-construct",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "قلق اللغة الأجنبية بناء نفسي حساس لا يُشخّص من الخطأ أو الصمت أو النتيجة أو ترك مهمة. يوجد تمرين تنفس اختياري ولغة غير عقابية، لكنهما دعم عام ولا يقيسان القلق أو يثبتان خفضه، كما لا توجد أداة صالحة أو موافقة لمعالجة بيانات نفسية؛ فيبقى المفهوم بحثياً.",
+      "candidateEvidence": [
+        "components/lernstrategie.tsx",
+        "components/gesundheit.tsx",
+        "components/akademie/Klassenzimmer.tsx",
+        "app/fortschritt/page.tsx"
+      ],
+      "relatedIds": [
+        278,
+        301,
+        371,
+        581,
+        582,
+        590,
+        591,
+        592,
+        593,
+        594,
+        595,
+        826
+      ]
+    },
+    "584": {
+      "classification": "positive-language-emotion-construct",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "متعة تعلم اللغة حالة وجدانية لا يثبتها وجود ألعاب أو ألوان أو نقاط أو إكمال متكرر. قد يستعمل المتعلم النشاط رغم عدم استمتاعه أو يتركه لأسباب لا تتعلق بالمتعة، ولا يوجد تقرير ذاتي صالح أو عينات زمنية أو فصل بين المتعة والسهولة؛ لذلك لا تُستنتج Enjoyment من السجل.",
+      "candidateEvidence": [
+        "components/spiele.tsx",
+        "components/motivation.tsx",
+        "components/akademie/LektionWizard.tsx",
+        "lib/spiel.ts"
+      ],
+      "relatedIds": [
+        295,
+        585,
+        588,
+        589,
+        599,
+        600,
+        966
+      ]
+    },
+    "585": {
+      "classification": "language-boredom-construct",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "الملل في تعلم اللغة يتغير داخل المهمة ومع الوقت ولا يساوي بطء النقر أو التوقف أو تكرار المحاولة. قد تعكس هذه السلوكيات صعوبة أو انقطاعاً أو إتاحة أو تفكيراً عميقاً، والمنتج لا يجمع تقريراً ذاتياً أو سياقاً زمنياً صالحاً؛ فلا يجوز تصنيف المتعلم أو النشاط بأنه ممل تلقائياً.",
+      "candidateEvidence": [
+        "components/tasks.tsx",
+        "components/spiele.tsx",
+        "lib/motivation.ts",
+        "components/berichte.tsx"
+      ],
+      "relatedIds": [
+        584,
+        588,
+        589,
+        596,
+        599,
+        600
+      ]
+    },
+    "586": {
+      "classification": "language-grit-construct",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "المثابرة الطويلة المدى ليست سلسلة أيام أو عدد مهام، والاستمرار ليس مرغوباً دائماً إذا كان الهدف أو الحمل غير مناسب. المنتج يشجع التوقف والحفظ وإعادة التخطيط ويتيح يوماً صعباً، لكنه لا يقيس ثبات الاهتمام والجهد عبر زمن وسياقات؛ فلا تُستنتج Grit كسمة شخصية.",
+      "candidateEvidence": [
+        "components/motivation.tsx",
+        "components/absicht.tsx",
+        "app/page.tsx",
+        "components/akademie/Klassenzimmer.tsx"
+      ],
+      "relatedIds": [
+        292,
+        300,
+        587,
+        588,
+        598,
+        963,
+        965
+      ]
+    },
+    "587": {
+      "classification": "academic-buoyancy-construct",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "Academic Buoyancy تعني التعامل مع الانتكاسات الدراسية اليومية المتكررة، وليست مجرد عبور يوم صعب أو العودة بعد انقطاع. مسارا اليوم الصعب والاستئناف يخفضان العبء ولا يجمعان نوع الانتكاسة أو استجابة المتعلم أو انتقالها خارج التطبيق؛ لذلك لا يثبت السجل مرونة أكاديمية أو أثراً سببياً.",
+      "candidateEvidence": [
+        "app/page.tsx",
+        "components/akademie/Klassenzimmer.tsx",
+        "lib/wiedereinstieg.ts",
+        "components/wiedereinstieg.tsx"
+      ],
+      "relatedIds": [
+        300,
+        586,
+        588,
+        597,
+        598,
+        963,
+        965
+      ]
+    },
+    "588": {
+      "classification": "language-learning-engagement-construct",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "انخراط متعلم اللغة قد يكون سلوكياً ومعرفياً ووجدانياً واجتماعياً؛ أما الأيام والدقائق والمهام فتصف استعمالاً مرصوداً فقط. الإكمال قد يكون امتثالاً ولا يكشف الانتباه أو الاستراتيجية أو الشعور أو المشاركة البشرية، ولا توجد أداة متعددة الأبعاد؛ لذلك لا تتحول تحليلات السجل إلى Engagement.",
+      "candidateEvidence": [
+        "lib/motivation.ts",
+        "components/motivation.tsx",
+        "components/berichte.tsx",
+        "app/page.tsx"
+      ],
+      "relatedIds": [
+        290,
+        299,
+        367,
+        368,
+        584,
+        585,
+        586,
+        587,
+        589,
+        599,
+        600,
+        722,
+        961
+      ]
+    },
+    "589": {
+      "classification": "flow-state-construct",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "التدفق حالة تجمع اندماجاً عميقاً وهدفاً واضحاً وتغذية راجعة وتوازناً مدركاً بين التحدي والمهارة، ولا ينتج آلياً من مؤقت أو درجة صعوبة. المنتج يضبط بعض الوتيرة ويعرض تقدماً، لكنه لا يقيس الانغماس أو فقدان الإحساس بالوقت أو التوازن المدرك؛ فيبقى Flow بناء بحثياً.",
+      "candidateEvidence": [
+        "lib/plan.ts",
+        "components/tasks.tsx",
+        "components/selbsttest.tsx",
+        "components/motivation.tsx"
+      ],
+      "relatedIds": [
+        262,
+        278,
+        299,
+        584,
+        585,
+        588,
+        962
+      ]
+    },
+    "590": {
+      "classification": "mindfulness-construct",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "اليقظة الذهنية تتطلب انتباهاً مقصوداً للحظة الراهنة وموقفاً غير حاكم، وليست مرادفاً لأي تنفس أو استراحة. تمرين 4-7-8 وحارس العين يوجهان توقيتاً جسدياً محدداً ولا يقيسان الوعي أو القبول ولا يثبتان علاج القلق؛ لذلك لا يُنسب إليهما Mindfulness أو أثر نفسي.",
+      "candidateEvidence": [
+        "components/lernstrategie.tsx",
+        "components/gesundheit.tsx",
+        "app/page.tsx"
+      ],
+      "relatedIds": [
+        278,
+        301,
+        306,
+        371,
+        583,
+        597,
+        598,
+        599
+      ]
+    },
+    "591": {
+      "classification": "listening-anxiety-construct",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "إعادة المقطع أو الخطأ في سؤال الاستماع أو تجنب الصوت لا يشخص قلق الاستماع؛ فقد يكون السبب السمع أو الضوضاء أو سرعة المادة أو اللغة أو الجهاز أو الإتاحة. لا يجمع المنتج تقريراً ذاتياً خاصاً بالموقف ولا يميز القلق من صعوبة الفهم، لذلك لا تُشتق سمة أو توصية علاجية.",
+      "candidateEvidence": [
+        "components/hoeren.tsx",
+        "components/hoerneu.tsx",
+        "components/tasks.tsx",
+        "components/lernstrategie.tsx"
+      ],
+      "relatedIds": [
+        301,
+        583,
+        592,
+        593,
+        594,
+        595
+      ]
+    },
+    "592": {
+      "classification": "speaking-anxiety-construct",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "عدم التسجيل أو قصر الإجابة أو ضعف نتيجة ذاتية لا يثبت قلق التحدث؛ قد ينتج من الخصوصية أو الميكروفون أو الضوضاء أو الإعاقة أو قلة المعرفة. المحاكاة الفردية والرفيق الذكي يوفران تدريباً منخفض المخاطر لكنهما لا يقيسان القلق أو انتقال الكلام إلى شريك بشري؛ فلا تُستنتج السمة.",
+      "candidateEvidence": [
+        "components/muendlich.tsx",
+        "components/sprechbegleiter.tsx",
+        "components/sprechkarten.tsx",
+        "app/datenschutz/page.tsx"
+      ],
+      "relatedIds": [
+        301,
+        302,
+        426,
+        427,
+        581,
+        582,
+        583,
+        591,
+        593,
+        594,
+        595,
+        950
+      ]
+    },
+    "593": {
+      "classification": "writing-anxiety-construct",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "زمن المسودة أو كثرة التعديل أو ترك نص فارغ لا يقيس قلق الكتابة؛ فقد يعكس التخطيط أو صعوبة المهمة أو الانقطاع أو الكمالية أو الإتاحة. يحفظ المنتج المسودات ويتيح إعادة الكتابة بلا لوم، لكنه لا يجمع استجابة نفسية صالحة ولا يفصل القلق من القدرة؛ لذلك يبقى البناء بحثياً.",
+      "candidateEvidence": [
+        "components/schreiben.tsx",
+        "components/schreibschleife.tsx",
+        "components/schreibkorrektur.tsx",
+        "components/akademie/LektionWizard.tsx"
+      ],
+      "relatedIds": [
+        301,
+        329,
+        583,
+        591,
+        592,
+        594,
+        595,
+        596,
+        704,
+        717
+      ]
+    },
+    "594": {
+      "classification": "reading-anxiety-construct",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "بطء القراءة أو إعادة النص أو أخطاء الفهم لا تساوي قلق القراءة؛ فهي قد تعكس مستوى اللغة أو طول النص أو الخط أو الإتاحة أو استراتيجية متأنية. تقيس بعض المحطات الوتيرة والفهم مع حدود معلنة، لكنها لا تقيس الشعور أو السياق ولا تستخدم مقياساً صالحاً؛ فلا تُمنح درجة قلق.",
+      "candidateEvidence": [
+        "components/leseleiter.tsx",
+        "components/lesestoff.tsx",
+        "components/tasks.tsx",
+        "components/lernstrategie.tsx"
+      ],
+      "relatedIds": [
+        222,
+        301,
+        503,
+        583,
+        591,
+        592,
+        593,
+        595
+      ]
+    },
+    "595": {
+      "classification": "test-anxiety-construct",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "نتيجة المحاكاة أو الوقت أو التخلي عن قسم لا تشخص قلق الاختبار، ولا يكفي تمرين تنفس قبل الامتحان لإثبات علاجه. يحتاج البناء قياساً موافقاً عليه وسياقاً يفرق القلق من نقص الاستعداد والمشكلات الصحية أو التقنية؛ لذلك تظل المحاكاة تدريباً غير رسمي بلا استنتاج نفسي.",
+      "candidateEvidence": [
+        "components/lernstrategie.tsx",
+        "components/simulation.tsx",
+        "components/vollpruefung.tsx",
+        "content/accreditation-alignment.json"
+      ],
+      "relatedIds": [
+        239,
+        246,
+        301,
+        310,
+        552,
+        583,
+        591,
+        592,
+        593,
+        594
+      ]
+    },
+    "596": {
+      "classification": "learner-perfectionism-construct",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "إعادة التحرير أو طلب درجة كاملة أو طول الجلسة لا يثبت الكمالية؛ قد يكون مراجعة مفيدة أو شرط مهمة. توجد رسائل حية تفضل البنية على الكمال وتسمح بالخطأ والتوقف، لكنها سياسة تواصل لا مقياساً لمعايير شخصية أو قلق من الخطأ؛ فلا يُصنف المتعلم نفسياً.",
+      "candidateEvidence": [
+        "components/lernstrategie.tsx",
+        "components/schreibschleife.tsx",
+        "components/schreibkorrektur.tsx",
+        "components/akademie/LektionWizard.tsx"
+      ],
+      "relatedIds": [
+        292,
+        300,
+        585,
+        593,
+        595,
+        597,
+        598
+      ]
+    },
+    "597": {
+      "classification": "self-compassion-construct",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "التعاطف مع الذات بناء يشمل اللطف والإنسانية المشتركة والوعي المتوازن عند التعثر، ولا يساوي زر يوم صعب أو عبارة بلا لوم. المنتج يوفر عبوراً بلا ديون وتوقفاً محفوظاً وإعادة تخطيط، وهي سياسة دعم رحيمة، لكنها لا تقيس استجابة المتعلم لنفسه أو تثبت تغيرها؛ فلا تُستنتج سمة.",
+      "candidateEvidence": [
+        "app/page.tsx",
+        "components/akademie/Klassenzimmer.tsx",
+        "components/absicht.tsx",
+        "components/akademie/LektionWizard.tsx"
+      ],
+      "relatedIds": [
+        292,
+        300,
+        301,
+        573,
+        587,
+        590,
+        596,
+        598,
+        599,
+        967
+      ]
+    },
+    "598": {
+      "classification": "language-learning-resilience-construct",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "الصمود في تعلم اللغة مسار تكيف عبر مخاطر وموارد وزمن، وليس مجرد العودة إلى التطبيق أو الحفاظ على سلسلة. وضعا اليوم الصعب والاستئناف يقللان العبء ويحميان من الديون، لكنهما لا يثبتان تعافياً أو قدرة قابلة للنقل ولا يفسران سبب الغياب؛ لذلك لا تُشتق Resilience.",
+      "candidateEvidence": [
+        "lib/wiedereinstieg.ts",
+        "components/wiedereinstieg.tsx",
+        "app/page.tsx",
+        "components/akademie/Klassenzimmer.tsx"
+      ],
+      "relatedIds": [
+        300,
+        301,
+        586,
+        587,
+        590,
+        597,
+        599,
+        600,
+        965,
+        966
+      ]
+    },
+    "599": {
+      "classification": "learner-wellbeing-construct",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "الرفاه بناء واسع لا يساوي استراحة عين أو سلسلة أو إنجاز مهمة، ولا يجوز استنتاج صحة نفسية من سجل التعلم. يقدم المنتج فواصل ووضع مرض ويوم صعباً بوصفها حماية استعمال عامة، لكنه لا يستخدم مقياس رفاه صالحاً أو مراجعة صحية أو دراسة أثر؛ فلا يصدر حكماً سريرياً أو تنموياً.",
+      "candidateEvidence": [
+        "components/gesundheit.tsx",
+        "app/page.tsx",
+        "components/akademie/Klassenzimmer.tsx",
+        "components/motivation.tsx"
+      ],
+      "relatedIds": [
+        278,
+        301,
+        584,
+        585,
+        587,
+        590,
+        597,
+        598,
+        600,
+        966
+      ]
+    },
+    "600": {
+      "classification": "wellbeing-framework-perma",
+      "decision": "research-only",
+      "researchStatus": "citation-label-unverified",
+      "productStatus": "prototype-not-wired",
+      "automatedTestStatus": "not-demonstrated",
+      "fieldValidationStatus": "not-tested",
+      "reviewerRole": "internal-methodology-triage",
+      "reviewedAt": "2026-11-06",
+      "risk": "high",
+      "rationaleAr": "PERMA إطار للانفعال الإيجابي والانخراط والعلاقات والمعنى والإنجاز، وليس مجموع نقاط أو بطاقة تقدّم. المنتج يعرض بعض الإنجاز ويدعم الاستراحة لكنه لا يقيس الأبعاد الخمسة، ولا يوفر علاقات بشرية أو تحققاً من المعنى والرفاه؛ لذلك يبقى إطاراً بحثياً لا لوحة صحة أو ميزة مثبتة.",
+      "candidateEvidence": [
+        "components/motivation.tsx",
+        "components/berichte.tsx",
+        "components/gesundheit.tsx",
+        "app/datenschutz/page.tsx"
+      ],
+      "relatedIds": [
+        295,
+        584,
+        585,
+        588,
+        589,
+        597,
+        598,
+        599,
+        966
+      ]
+    },
     "840": {
       "classification": "duplicate-catalog-record",
       "decision": "merge-duplicate",
