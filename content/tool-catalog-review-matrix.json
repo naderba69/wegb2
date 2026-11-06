@@ -22267,7 +22267,29 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "immersion-education-program-framework",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "التعليم الانغماسي عند Swain برنامج يدرّس محتوى منهجياً بلغة الهدف مع توزيع لغوي ومعلمين وتقويم للمحتوى واللغة، وليس كثرة الألمانية في تطبيق لغة. تتحول بعض عناوين الواجهة تدريجياً إلى الألمانية وتوجد نصوص وصوت، لكن الشرح العربي مستمر ولا يوجد منهج مواد أو فصل أو نموذج توزيع؛ لذلك لا يدعي المنتج Immersion Education.",
+        "candidateEvidence": [
+          "lib/i18n.ts",
+          "components/akademie/LektionWizard.tsx",
+          "components/tasks.tsx",
+          "content/texts.json"
+        ],
+        "relatedIds": [
+          197,
+          256,
+          267,
+          340,
+          451,
+          524,
+          561,
+          740,
+          742
+        ]
       }
     },
     {
@@ -22288,7 +22310,28 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "study-abroad-learning-context",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "الدراسة في الخارج سياق خبرة اجتماعية ومؤسسية يتغير أثره بحسب السكن والشبكات والهوية وفرص المشاركة، ولا يمكن لتطبيق أن يثبت حدوثه أو نتيجته. توجد مهام رسالة دافع وسنة في الخارج وإرشاد أولي لتونس، وهي إعداد مرشح مسجل في 339، لكن لا قبول أو سفر أو جامعة شريكة أو متابعة قبلية وبعدية؛ لذلك يبقى السياق بحثياً.",
+        "candidateEvidence": [
+          "content/writing.json",
+          "lib/landeskunde.ts",
+          "components/landeskunde.tsx",
+          "components/lebenswelt.tsx"
+        ],
+        "relatedIds": [
+          339,
+          570,
+          731,
+          737,
+          741,
+          745,
+          746,
+          934
+        ]
       }
     },
     {
@@ -22309,7 +22352,32 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "partner-dependent-teletandem",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "Teletandem يتطلب شريكين يتعلمان لغتي بعضهما، وتبادلاً متكافئاً ومهاماً وتأملاً وتيسيراً، مع هوية وموافقة وجدولة وقناة اتصال وإبلاغ. المنتج محلي بلا حسابات أو شبكة شركاء، ومهمة الحوار أو نموذج الذكاء الاصطناعي لا يمثلان شريكاً بشرياً متبادلاً؛ لذلك يبقى المسار غير موصول.",
+        "candidateEvidence": [
+          "content/muendlich.json",
+          "components/muendlich.tsx",
+          "components/sprechbegleiter.tsx",
+          "app/datenschutz/page.tsx"
+        ],
+        "relatedIds": [
+          205,
+          225,
+          258,
+          338,
+          479,
+          480,
+          564,
+          565,
+          566,
+          567,
+          744,
+          749
+        ]
       }
     },
     {
@@ -22330,7 +22398,30 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "partner-institution-etwinning-project",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "eTwinning يحتاج مؤسستين أو صفين مؤهلين ومعلماً ومشاركين بهويات ومشروعاً مشتركاً ومنصة آمنة وحقوقاً وموافقات، لا مجرد موضوع دولي. لا يملك المنتج حسابات أو صفاً شريكاً أو نشر أعمال ومراسلة، وواجهة الصف المحلية ليست مشروع توأمة؛ لذلك يؤجل التكامل المؤسسي ولا يُنتحل اسم المنصة.",
+        "candidateEvidence": [
+          "components/klassenansicht.tsx",
+          "content/muendlich.json",
+          "content/writing.json",
+          "app/datenschutz/page.tsx"
+        ],
+        "relatedIds": [
+          338,
+          464,
+          480,
+          564,
+          565,
+          568,
+          743,
+          745,
+          748,
+          749
+        ]
       }
     },
     {
@@ -22351,7 +22442,31 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "virtual-mobility-program-framework",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "التنقل الافتراضي خبرة دولية منظمة من مؤسسة شريكة تشمل مشاركة وتفاعلاً ونتائج معترفاً بها ودعماً وتقويماً، ولا يساوي فتح PWA أو محادثة نموذجية من المنزل. لا توجد جامعة أو مجموعة خارجية أو تسجيل ومقرر مشترك أو اعتماد أو أثر تبادل؛ يمكن للمنتج أن يكون مورداً لاحقاً لكن لا ينفذ البرنامج.",
+        "candidateEvidence": [
+          "components/klassenansicht.tsx",
+          "content/muendlich.json",
+          "components/sprechbegleiter.tsx",
+          "app/datenschutz/page.tsx"
+        ],
+        "relatedIds": [
+          338,
+          467,
+          468,
+          480,
+          564,
+          568,
+          610,
+          742,
+          744,
+          746,
+          749
+        ]
       }
     },
     {
@@ -22372,7 +22487,27 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "blended-mobility-program-framework",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "التنقل المدمج يجمع تعاونا افتراضياً منظماً بتنقل مادي داخل برنامج مؤسسي ذي أهداف ومشاركين واعتراف ودعم، ولا يثبت من جمع موارد ويب ومواد قابلة للطباعة. المنتج لا يدير سفرًا أو حضوراً أو مؤسسة شريكة ولا يربط المرحلتين أو يقوّمهما؛ لذلك يبقى إطار تكامل خارجي لا ميزة حية.",
+        "candidateEvidence": [
+          "components/klassenansicht.tsx",
+          "content/writing.json",
+          "lib/landeskunde.ts",
+          "content/real-world-validation.json"
+        ],
+        "relatedIds": [
+          339,
+          467,
+          468,
+          469,
+          742,
+          745,
+          749
+        ]
       }
     },
     {
@@ -22393,7 +22528,30 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "community-partner-service-learning-project",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "التعلم الخدمي يربط حاجة يحددها شريك مجتمعي بخدمة حقيقية وأهداف تعلم وتأمل وتقويم منفعة متبادلة، وليس كتابة رأي عن التطوع أو اقتراح حملة نظافة. لا يوجد شريك أو نشاط ميداني أو موافقة وسلامة أو توثيق أثر؛ لذلك تبقى النصوص والمشروع العام لبنات إعداد فقط ويؤجل المسار.",
+        "candidateEvidence": [
+          "content/writing.json",
+          "content/texts.json",
+          "lib/project.ts",
+          "components/klassenansicht.tsx",
+          "app/datenschutz/page.tsx"
+        ],
+        "relatedIds": [
+          227,
+          329,
+          336,
+          430,
+          483,
+          613,
+          730,
+          737,
+          748
+        ]
       }
     },
     {
@@ -22414,7 +22572,35 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "cross-site-global-project-learning",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "المشروع العالمي يحتاج سؤالاً أصيلاً ومراحل ومصادر ومنتجاً قابلاً للمشاركة وشركاء من سياقات مختلفة وتأملاً وتقويماً للمساهمة. تعرف وحدة معزولة عناوين مشاريع، وتوجد موضوعات عالمية ومهام كتابة، لكن لا مسار مراحل محفوظ ولا شريك أو منتج مشترك أو تحقق مصادر؛ لذا لا تسمى المطالبة الواحدة Project-Based Global.",
+        "candidateEvidence": [
+          "lib/project.ts",
+          "content/writing.json",
+          "content/texts.json",
+          "lib/portfolio.ts",
+          "components/klassenansicht.tsx"
+        ],
+        "relatedIds": [
+          228,
+          329,
+          330,
+          331,
+          336,
+          430,
+          483,
+          729,
+          730,
+          737,
+          744,
+          747,
+          749,
+          981
+        ]
       }
     },
     {
@@ -22435,7 +22621,35 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "partner-institution-coil-project",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "COIL يتطلب مقررين أو مؤسستين وميسرين ومجموعات طلابية دولية ومهاماً مشتركة ممتدة ومنتجاً وتأملاً وتقويماً عادلاً، مع مناطق زمنية وموافقة وسلامة. المنتج فردي محلي بلا حسابات أو شريك أو رسائل ومساهمات مشتركة؛ وموضوع دولي أو رفيق آلي لا يحقق التعاون البشري، لذلك يؤجل.",
+        "candidateEvidence": [
+          "components/klassenansicht.tsx",
+          "content/muendlich.json",
+          "content/writing.json",
+          "components/sprechbegleiter.tsx",
+          "app/datenschutz/page.tsx"
+        ],
+        "relatedIds": [
+          258,
+          338,
+          480,
+          564,
+          565,
+          568,
+          610,
+          743,
+          744,
+          745,
+          746,
+          748,
+          939,
+          940
+        ]
       }
     },
     {
@@ -22456,7 +22670,32 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "intercomprehension-learning-activity",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "الفهم المتبادل يدرّب استراتيجيات استقبال لغة قريبة لم يتعلمها المتعلم كاملاً عبر الشفافية والاشتقاق والمقارنة وضبط الفهم. المنتج يعلّم الألمانية بالعربية ويعرض أصدقاء كاذبين من الفرنسية والإنجليزية، لكنه لا يقدم نصوصاً متوازية بلغات مترابطة أو استراتيجية ومهمة فهم وتحقق؛ لذلك النشاط قابل للبحث لكنه غير موصول.",
+        "candidateEvidence": [
+          "lib/falsche-freunde.ts",
+          "lib/falsche-freunde-aufgabe.ts",
+          "lib/lesestoff.ts",
+          "components/lesestoff.tsx"
+        ],
+        "relatedIds": [
+          219,
+          340,
+          510,
+          512,
+          513,
+          603,
+          605,
+          606,
+          639,
+          751,
+          766,
+          798
+        ]
       }
     },
     {
@@ -22477,7 +22716,32 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "receptive-multilingualism-communication-construct",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "التعددية الاستقبالية تصف تواصلاً يستخدم فيه المشاركون لغات مختلفة ويفهم كل منهم لغة الآخر، لا نصاً ألمانياً مع شرح عربي من المؤلف. لا توجد محادثة بشرية متعددة اللغات أو ملف كفاءة استقبال أو ترميز إصلاح وسوء فهم، ومهمة الوساطة أحادية الاتجاه؛ لذلك لا يثبت المنتج هذا النمط التواصلي.",
+        "candidateEvidence": [
+          "lib/lesestoff.ts",
+          "components/lesestoff.tsx",
+          "lib/i18n.ts",
+          "content/dialogues.json"
+        ],
+        "relatedIds": [
+          340,
+          509,
+          510,
+          512,
+          513,
+          603,
+          604,
+          605,
+          606,
+          738,
+          750,
+          798
+        ]
       }
     },
     {
@@ -22498,7 +22762,34 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "learner-code-meshing-writing-activity",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "Code-meshing يدمج بوعي لغات أو تنوعات في نص واحد بحسب الجمهور والغرض ثم يراجع أثر الاختيار، ولا يساوي عرض ترجمة عربية بجانب الألمانية. مهام الكتابة تطلب غالباً الألمانية ولا توفر مطالبة متعددة الأصوات أو حفظ rationale أو rubric تحترم التنوع ولا تخلط المزج بالخطأ؛ لذلك يبقى النشاط غير موصول.",
+        "candidateEvidence": [
+          "content/writing.json",
+          "components/schreiben.tsx",
+          "components/De.tsx",
+          "lib/i18n.ts"
+        ],
+        "relatedIds": [
+          340,
+          509,
+          510,
+          603,
+          604,
+          605,
+          606,
+          738,
+          750,
+          751,
+          753,
+          754,
+          766,
+          913
+        ]
       }
     },
     {
@@ -22519,7 +22810,14 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "merge-duplicate",
+        "classification": "duplicate-catalog-record",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "low",
+        "rationaleAr": "بيداغوجيا translanguaging هنا هي مسار García نفسه المسجل والمراجع في 603، حيث فُصلت سقالة العربية المؤلفة عن تعبئة المتعلم الحرة لموارده اللغوية. يُحفظ المعرف للتتبع ويُدمج في 603 حتى لا تتكرر خطة نشاط وخصوصية وتقويم واحدة بسبب اختلاف سنة المرجع.",
+        "candidateEvidence": [],
+        "canonicalId": 603
       }
     },
     {
@@ -22540,7 +22838,31 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "heteroglossia-theoretical-construct",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "تعدد الأصوات عند Bakhtin يصف تفاعل أصوات ومواقف وخطابات اجتماعية داخل القول والنص، وليس وجود لغتين أو شخصيات حوار. تحتوي البنوك نصوصاً واقتباسات وسجلات مختلفة، لكنها لا تطلب تحليلاً منهجياً للصوت والسلطة والتناص ولا ترمز استجابات المتعلم؛ لذلك يبقى البناء نظرياً.",
+        "candidateEvidence": [
+          "content/texts.json",
+          "content/writing.json",
+          "content/dialogues.json",
+          "lib/pragmatik.ts"
+        ],
+        "relatedIds": [
+          490,
+          509,
+          574,
+          603,
+          604,
+          734,
+          735,
+          752,
+          755,
+          758,
+          915
+        ]
       }
     },
     {
@@ -22561,7 +22883,32 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "writer-voice-and-identity-construct",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "Voice عند Ivanič علاقة بين اختيارات الكاتب وخطاباته وهوياته وموقعه، وليست أسلوباً رسمياً أو عد ضمير المتكلم. توجد مهام رأي وسرد وتبديل أسلوب، لكن الكاشف لا يحلل الصوت ولا يتيح مقارنة مواقع متعددة أو rubric ومراجعين؛ لذلك لا تُستنتج هوية كاتب ولا يثبت إطار Ivanič.",
+        "candidateEvidence": [
+          "content/writing.json",
+          "components/schreiben.tsx",
+          "components/stilwechsler.tsx",
+          "lib/kriterien.ts"
+        ],
+        "relatedIds": [
+          317,
+          329,
+          356,
+          574,
+          701,
+          704,
+          734,
+          735,
+          754,
+          756,
+          757,
+          758
+        ]
       }
     },
     {
@@ -22582,7 +22929,34 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "language-autobiography-reflection-activity",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "السيرة اللغوية تتطلب رواية مسار اللغات واللحظات والأشخاص والمشاعر والتحولات ثم تأملاً في موقع الراوي، ولا تكفي خمس جمل تعريف أو نص هجرة جاهز. توجد مهام ذاتية ونموذج Portfolio مع Biography لكنه غير موصول ولا يحفظ أثراً سردياً؛ يلزم مطالبة آمنة وخيار تخطي وتصدير وخصوصية قبل التوصيل.",
+        "candidateEvidence": [
+          "content/writing.json",
+          "lib/portfolio.ts",
+          "lib/portfolio-var.ts",
+          "content/texts.json",
+          "app/datenschutz/page.tsx"
+        ],
+        "relatedIds": [
+          228,
+          241,
+          327,
+          328,
+          332,
+          335,
+          555,
+          574,
+          575,
+          576,
+          755,
+          757,
+          758
+        ]
       }
     },
     {
@@ -22603,7 +22977,32 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "narrative-inquiry-research-methodology",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "الاستقصاء السردي منهج بحث يجمع روايات المشاركين ويحللها سياقياً وزمنياً وعلاقياً مع موافقة وموقع باحث وحماية هوية، وليس تدريب كتابة قصة. المنتج لا يجري مقابلات أو يجمع corpus سردية أو يرمزها ولا يملك موافقة بحثية ومراجعة أخلاقية؛ لذلك تبقى مهام السرد أدلة مجاورة لا Narrative Inquiry.",
+        "candidateEvidence": [
+          "content/writing.json",
+          "content/texts.json",
+          "lib/portfolio.ts",
+          "app/datenschutz/page.tsx"
+        ],
+        "relatedIds": [
+          228,
+          327,
+          328,
+          332,
+          483,
+          574,
+          575,
+          576,
+          754,
+          755,
+          756,
+          758
+        ]
       }
     },
     {
@@ -22624,7 +23023,14 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "merge-duplicate",
+        "classification": "duplicate-catalog-record",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "low",
+        "rationaleAr": "Language and Identity يعكس عنوان Identity and Language في 574 ويستند كلاهما إلى Norton 2013 ويصفان البناء الاجتماعي المتغير نفسه. يُحفظ هذا المعرف للتتبع ويُدمج في 574 حتى لا تُضاعف قراءة الهجرة أو مهام التعريف دليلاً أو خطة تحقق مستقلة.",
+        "candidateEvidence": [],
+        "canonicalId": 574
       }
     },
     {
@@ -22645,7 +23051,32 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "learner-investment-identity-capital-ideology-construct",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "نموذج Darvin وNorton يربط استثمار المتعلم بتفاعل الهوية ورأس المال والأيديولوجيا داخل علاقات قوة وفرص مشاركة، ولا يساوي الوقت أو XP أو الهدف الأسبوعي. المنتج لا يجمع الموارد الاجتماعية والاقتصادية أو إمكان الوصول والاعتراف أو العوائق المؤسسية، فلا يحسب استثماراً ولا ينسب قراراً فردياً إلى النموذج.",
+        "candidateEvidence": [
+          "lib/motivation.ts",
+          "components/motivation.tsx",
+          "components/absicht.tsx",
+          "components/berichte.tsx",
+          "content/texts.json"
+        ],
+        "relatedIds": [
+          294,
+          295,
+          368,
+          574,
+          575,
+          576,
+          577,
+          578,
+          758,
+          760,
+          955
+        ]
       }
     },
     {
@@ -22666,7 +23097,14 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "merge-duplicate",
+        "classification": "duplicate-catalog-record",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "low",
+        "rationaleAr": "مجتمعات Kanno المتخيلة هنا هي المفهوم نفسه والعنوان المرجعي نفسه المسجل في 576 عن انتماءات مستقبلية توجه المشاركة والاستثمار. يُحفظ المعرف للتتبع ويُدمج في 576، ولا يعد مسار الدراسة والعمل أو جمهور الكتابة مجتمعاً حياً أو قياساً ثانياً.",
+        "candidateEvidence": [],
+        "canonicalId": 576
       }
     },
     {
