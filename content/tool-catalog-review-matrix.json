@@ -20567,10 +20567,30 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "genre-based-writing-practice",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "medium",
+        "rationaleAr": "توجد مهام حية لأنواع رسالة وشكوى واعتراض وتقرير ومنتدى وتعليق، لكل منها غرض ونقاط وبنية ونموذج وقائمة فحص؛ وهذه مطابقة مرشحة لممارسة كتابة قائمة على النوع. لا يستخرج المنتج مجتمعاً خطابياً أو غرضاً تواصلياً من مدونة ولا يطبق تحليل Swales الأكاديمي، فلا يُنسب إليه إطار Genre كاملاً.",
+        "candidateEvidence": [
+          "lib/schreiballtag.ts",
+          "components/schreiballtag.tsx",
+          "content/writing.json",
+          "components/briefe.tsx",
+          "components/schreiben.tsx"
+        ],
+        "relatedIds": [
+          315,
+          316,
+          317,
+          702,
+          704,
+          706
+        ]
       }
     },
     {
@@ -20591,7 +20611,23 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "rhetorical-move-analysis-framework",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "تحليل الحركات عند Swales يتطلب corpus من نوع محدد وترميز الوحدات الوظيفية وحدودها وتكرارها وترتيبها واتفاق المرمزين. توجيهات مثل مقدمة ثم حجتان ثم خاتمة تسند إنتاج النص لكنها لا تجعل المتعلم يحلل moves ولا تثبت إلزامها أو شيوعها؛ لذا تبقى البنى الحالية أدلة مجاورة فقط.",
+        "candidateEvidence": [
+          "content/writing.json",
+          "lib/schreiballtag.ts",
+          "components/schreiballtag.tsx"
+        ],
+        "relatedIds": [
+          317,
+          701,
+          703,
+          704
+        ]
       }
     },
     {
@@ -20612,7 +20648,26 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "rhetorical-structure-theory",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "نظرية البنية البلاغية عند Mann تمثل علاقات nucleus/satellite مثل الدليل والتفصيل والسبب والتنازل في شجرة نص، ولا تساوي عد الروابط أو تقسيم المقال إلى فقرات. لا يرسم المنتج شجرة علاقات ولا يختبر الغموض واتفاق التحليل، لذلك لا تثبت مهام الحجاج تطبيق RST.",
+        "candidateEvidence": [
+          "content/writing.json",
+          "content/grammar.json",
+          "lib/kriterien.ts"
+        ],
+        "relatedIds": [
+          316,
+          681,
+          682,
+          702,
+          704,
+          705,
+          706
+        ]
       }
     },
     {
@@ -20633,7 +20688,31 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "academic-writing-framework",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "كتابة Hyland الأكاديمية تشمل ممارسات التخصص والجمهور والهوية والموقف والانخراط والاستشهاد والأنواع البحثية، وليست مرادفاً لنص B2 الرسمي أو Nominalstil. يقدم المنتج تعليقات وتقارير ورسائل امتحانية ولا يعلّم مراجعة أدبيات أو توثيقاً ومصادر أو حجاجاً تخصصياً، لذلك لا يدعي Academic Writing.",
+        "candidateEvidence": [
+          "content/writing.json",
+          "content/grammar.json",
+          "content/vortrag.json",
+          "components/schreiben.tsx"
+        ],
+        "relatedIds": [
+          317,
+          671,
+          674,
+          675,
+          676,
+          677,
+          701,
+          702,
+          703,
+          717,
+          718
+        ]
       }
     },
     {
@@ -20654,7 +20733,25 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "contrastive-rhetoric-framework",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "البلاغة التقابلية تتطلب عينات كتابة قابلة للمقارنة بين لغات أو مجتمعات مع ضبط النوع والمهمة وتحليل التنظيم والحجاج. الشرح العربي والأمثلة الألمانية وبعض التنبيهات التقابلية النحوية لا تقارن نصوصاً ولا تبرر تعميماً عن أسلوب عربي أو ألماني؛ لذا يبقى إطار Connor بحثياً.",
+        "candidateEvidence": [
+          "content/writing.json",
+          "content/texts.json",
+          "lib/contrastive-var.ts"
+        ],
+        "relatedIds": [
+          245,
+          515,
+          692,
+          703,
+          706,
+          710
+        ]
       }
     },
     {
@@ -20675,7 +20772,28 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "intercultural-rhetoric-framework",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "البلاغة بين الثقافات تدرس تشكل النصوص والحجاج عبر اللغة والنوع والسياق والهوية، ولا يثبتها نص متخيّل عن المباشرة أو مهمة تذكر تجربة من بلد المتعلم. لا توجد مقارنة نصوص أو تحليل جمهور ومؤسسة أو مراجعة ثقافية متعددة الأطراف؛ فلا تُرقى ممارسة النوع أو الانعكاس الثقافي إلى إطار Connor.",
+        "candidateEvidence": [
+          "content/texts.json",
+          "content/lang/b2-36-40.json",
+          "content/writing.json",
+          "lib/schreiballtag.ts"
+        ],
+        "relatedIds": [
+          311,
+          317,
+          692,
+          701,
+          703,
+          705,
+          731,
+          934
+        ]
       }
     },
     {
@@ -20696,7 +20814,31 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "corpus-linguistics-methodology",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "لسانيات المدونة عند Biber تتطلب corpus موثقة وموازنة وبيانات وصفية وأدوات وقوع وتوزيع ومقارنة سجلات وتحليل إحصائي. المنتج يعد جذوع الكلمات في مواده المؤلفة ويصرح بأنها ليست تردد الألمانية، ولا يعرض KWIC أو corpus خارجية؛ لذلك يبقى العداد الداخلي مرشحاً منفصلاً ولا يثبت Corpus Linguistics.",
+        "candidateEvidence": [
+          "lib/frequenz.ts",
+          "components/kartenexport.tsx",
+          "components/tiefenlex.tsx",
+          "lib/referenz.ts"
+        ],
+        "relatedIds": [
+          318,
+          319,
+          517,
+          527,
+          529,
+          647,
+          676,
+          889,
+          890,
+          891,
+          994
+        ]
       }
     },
     {
@@ -20717,7 +20859,28 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "learner-language-construct",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "لغة المتعلم أو interlanguage نظام متغير له أنماط ومراحل، ولا يثبت من سجل أخطاء مقتطفة أو درجة جلسة. يحفظ المنتج محلياً الخطأ والصواب والفئة للعلاج، لكنه لا يحتفظ بعينات إنتاج كاملة أو سياق ومقارنة زمنية مفسرة ولا يميز الخطأ المنهجي من الزلة؛ لذلك لا يستنتج نظام Selinker.",
+        "candidateEvidence": [
+          "lib/fehler.ts",
+          "components/fehlerlabor.tsx",
+          "lib/store.ts",
+          "content/real-world-validation.json"
+        ],
+        "relatedIds": [
+          244,
+          515,
+          516,
+          517,
+          529,
+          530,
+          693,
+          709
+        ]
       }
     },
     {
@@ -20735,10 +20898,30 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "local-error-analysis-practice",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "يسجل المنتج حياً الخطأ والصواب والمصدر والفئة، ويعرض عائلات الأخطاء وحرارتها وتكرار السقوط وخطة مراجعة، كما يقدم أطلساً تقابلياً؛ وهذه مطابقة مرشحة لتحليل أخطاء محلي. لا يطبق خطوات Corder كاملة ولا يميز error من mistake أو يثبت السبب، والفئات والقواعد تحتاج مراجعة واتفاق مرمزين.",
+        "candidateEvidence": [
+          "lib/fehler.ts",
+          "lib/fehleratlas.ts",
+          "components/fehleratlas.tsx",
+          "components/fehlerlabor.tsx",
+          "scripts/engine_smoke.ts"
+        ],
+        "relatedIds": [
+          210,
+          244,
+          245,
+          516,
+          708,
+          710
+        ]
       }
     },
     {
@@ -20759,7 +20942,28 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "contrastive-analysis-framework",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "تحليل Lado يقارن نظامين ويتنبأ بمواطن الصعوبة، لكن التشابه مع العربية لا يثبت سبب خطأ فردي ولا يسمح بتعميم لهجة واحدة على الناطقين بالعربية. توجد تنبيهات وأطلس صغير مؤلف ومفيد علاجياً، إلا أنه بلا وصف ثنائي موثق أو بيانات تحقق؛ لذلك لا يسمى Contrastive Analysis كاملاً ولا أداة تنبؤ.",
+        "candidateEvidence": [
+          "lib/contrastive-var.ts",
+          "lib/fehleratlas.ts",
+          "components/fehleratlas.tsx",
+          "content/grammar.json"
+        ],
+        "relatedIds": [
+          210,
+          245,
+          514,
+          515,
+          530,
+          694,
+          705,
+          709
+        ]
       }
     },
     {
@@ -20777,10 +20981,35 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "textual-input-enhancement-activity",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "medium",
+        "rationaleAr": "تلوّن بطاقة القراءة الحية أول شاهد لقاعدة الأسبوع داخل الجملة وتسمي الشكل وتسأل عن موضعه، كما تبرز جداول الدرس الحالات؛ وهذه مطابقة مرشحة لتعزيز مدخل نصي محدود. الرادار سطحي والتغطية جزئية، ولا يقيس المنتج الانتباه أو الاكتساب ولا يطبق تعزيزاً سمعياً.",
+        "candidateEvidence": [
+          "lib/bemerken.ts",
+          "components/bemerken.tsx",
+          "components/tasks.tsx",
+          "components/akademie/LektionWizard.tsx",
+          "scripts/interaktiv_test.tsx"
+        ],
+        "relatedIds": [
+          211,
+          280,
+          377,
+          378,
+          417,
+          418,
+          419,
+          436,
+          696,
+          714,
+          811
+        ]
       }
     },
     {
@@ -20801,7 +21030,27 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "focus-on-form-instructional-framework",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "Focus on Form عند Long هو توجيه الانتباه العابر إلى شكل لغوي ينشأ أثناء تواصل ذي معنى، وليس درس قاعدة منفصلاً أو تصحيحاً بعده. يحتوي المنتج مهام معنى ودروساً وملاحظة، لكنه لا يربط تدخلاً موثقاً بلحظة تعثر تواصلي داخل المهمة ولا يقيس الأثر؛ لذلك يبقى الإطار بحثياً.",
+        "candidateEvidence": [
+          "lib/focus-on-form-deep.ts",
+          "components/akademie/LektionWizard.tsx",
+          "components/bemerken.tsx",
+          "components/tasks.tsx"
+        ],
+        "relatedIds": [
+          215,
+          416,
+          435,
+          713,
+          714,
+          814,
+          883
+        ]
       }
     },
     {
@@ -20819,10 +21068,29 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "discrete-grammar-forms-practice",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "medium",
+        "rationaleAr": "ينظم المنتج مساراً حياً من 87 موضوع قواعد منفصلاً، لكل منها شرح وأمثلة وتدريب وتحقق وإعادة لاحقة؛ وهذه مطابقة مرشحة لممارسة forms مقررة مسبقاً. لا يثبت وجود السلسلة تفوق نهج Focus on Forms أو فاعليته السببية، ولا يعني أن الخطة كلها تتجاهل المعنى أو التواصل.",
+        "candidateEvidence": [
+          "content/grammar.json",
+          "lib/plan.ts",
+          "components/akademie/LektionWizard.tsx",
+          "components/exercises.tsx",
+          "scripts/engine_smoke.ts"
+        ],
+        "relatedIds": [
+          215,
+          416,
+          712,
+          714,
+          883
+        ]
       }
     },
     {
@@ -20840,10 +21108,35 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "grammar-consciousness-raising-activity",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "medium",
+        "rationaleAr": "يبدأ Lesson Studio بأمثلة ويطلب ملاحظة النمط قبل كشف القاعدة، وتعرض بطاقة القراءة شاهداً حقيقياً وتسأل أي جملة تحمله؛ وهذه مطابقة مرشحة لنشاط رفع وعي نحوي. لا تطلب الواجهة دائماً من المتعلم صياغة القاعدة أو تبريرها، ولا تقيس حالة الوعي أو تثبت أثر Rutherford.",
+        "candidateEvidence": [
+          "components/akademie/LektionWizard.tsx",
+          "lib/bemerken.ts",
+          "components/bemerken.tsx",
+          "scripts/interaktiv_test.tsx"
+        ],
+        "relatedIds": [
+          186,
+          202,
+          280,
+          377,
+          378,
+          379,
+          417,
+          419,
+          711,
+          712,
+          713,
+          923
+        ]
       }
     },
     {
@@ -20864,7 +21157,25 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "dictogloss-activity",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "Dictogloss يتطلب الاستماع إلى نص متصل وتدوين كلمات مفتاحية ثم إعادة بناء المعنى ومقارنة النسخ، وغالباً تفاوضاً تعاونياً. الإملاء الحي يطلب كتابة الجملة كما سُمعت ويكشف المرجع، ولا توجد مرحلة ملاحظات أو إعادة بناء نص أو شريك؛ والوحدة المعزولة تسمي الطريقة فقط، لذا يبقى النشاط غير موصول.",
+        "candidateEvidence": [
+          "lib/dictogloss-var.ts",
+          "components/diktat.tsx",
+          "components/hoeren.tsx",
+          "content/texts.json"
+        ],
+        "relatedIds": [
+          224,
+          396,
+          420,
+          421,
+          716
+        ]
       }
     },
     {
@@ -20885,7 +21196,27 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "collaborative-text-reconstruction-activity",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "إعادة بناء Storch تتطلب مدخلاً ناقصاً أو ملاحظات ثم تفاوضاً على نص مترابط ومقارنته بالمصدر أو معيار معنى. ترتيب كلمات جملة أو إعادة كتابة نص المتعلم نفسه لا يعيد بناء نص مصدر، وDictogloss غير موصول ولا يوجد شريك؛ لذلك تبقى الفكرة نشاطاً مؤجلاً لا تنفيذاً حياً.",
+        "candidateEvidence": [
+          "lib/dictogloss-var.ts",
+          "components/diktat.tsx",
+          "components/wiederschreiben.tsx",
+          "content/grammar.json"
+        ],
+        "relatedIds": [
+          224,
+          356,
+          413,
+          420,
+          421,
+          715,
+          717
+        ]
       }
     },
     {
@@ -20906,7 +21237,27 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "human-collaborative-writing-activity",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "الكتابة التعاونية تتطلب كاتبين أو أكثر يتشاركون التخطيط والصياغة والمراجعة مع سجل مساهمة وموافقة وحدود خصوصية. واجهة الكتابة فردية ومحلية، وحلقة النسختين تخص المتعلم نفسه، ووحدة الأقران غير مستوردة؛ لذلك لا يثبت ذكر العمل الجماعي في نموذج وجود كتابة تعاونية.",
+        "candidateEvidence": [
+          "components/schreiben.tsx",
+          "components/schreibschleife.tsx",
+          "lib/peer-assessment.ts",
+          "app/datenschutz/page.tsx"
+        ],
+        "relatedIds": [
+          206,
+          243,
+          356,
+          357,
+          704,
+          716,
+          718
+        ]
       }
     },
     {
@@ -20927,7 +21278,30 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "human-peer-feedback-workflow",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "تغذية الأقران تحتاج تبادل نصوص مع زميل حقيقي وrubric وتدريباً على الحكم وموافقة وخصوصية وإبلاغاً واعتراضاً. المنتج يقدم تقييماً ذاتياً وكاشفاً آلياً ووحدة peer معزولة غير مستوردة، فلا تصبح مقارنة النص بالنموذج أو رأي الذكاء الاصطناعي Peer Feedback وفق Hyland.",
+        "candidateEvidence": [
+          "lib/peer-assessment.ts",
+          "lib/peer-assessment-var2.ts",
+          "components/schreiben.tsx",
+          "content/writing.json",
+          "app/datenschutz/page.tsx"
+        ],
+        "relatedIds": [
+          206,
+          243,
+          357,
+          408,
+          557,
+          704,
+          717,
+          719,
+          720
+        ]
       }
     },
     {
@@ -20945,10 +21319,32 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "self-feedback-and-revision-practice",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "تطلب الكتابة الحية قائمة فحص ذاتية، وتعرض مؤشرات محلية وحدودها، ثم تسمح بحفظ المسودة وإعادة كتابتها ومقارنة النسختين وإعادة مؤجلة؛ وهذه مطابقة مرشحة لتغذية ذاتية ومراجعة. لا يثبت التعليم الذاتي صحة الحكم أو تحسن الجودة، والمقارنة الكلمية تصف التغيير فقط ولا تقيمه.",
+        "candidateEvidence": [
+          "components/schreiben.tsx",
+          "components/kriterienpanel.tsx",
+          "components/schreibschleife.tsx",
+          "components/wiederschreiben.tsx",
+          "scripts/engine_smoke.ts"
+        ],
+        "relatedIds": [
+          201,
+          240,
+          304,
+          356,
+          409,
+          556,
+          718,
+          720
+        ]
       }
     },
     {
@@ -20966,10 +21362,34 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "automated-form-feedback-practice",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "يوفر المنتج حياً حكماً فورياً وتمارين بمحاولة ثانية وشرحاً، وكاشف كتابة محلياً لأنماط صرف وترتيب وأداة وروابط، مع تقييم خارجي اختياري بموافقة؛ وهذه مطابقة مرشحة لتغذية آلية محدودة. الكواشف لا تفهم المعنى ولا تغطي اللغة، والدرجات غير متحققة ولا يجوز تسميتها تصحيحاً بشرياً أو تحسناً مثبتاً.",
+        "candidateEvidence": [
+          "lib/schreibpruefer.ts",
+          "components/schreibkorrektur.tsx",
+          "components/exercises.tsx",
+          "lib/grader.ts",
+          "scripts/interaktiv_test.tsx"
+        ],
+        "relatedIds": [
+          238,
+          360,
+          402,
+          403,
+          406,
+          407,
+          409,
+          551,
+          718,
+          719
+        ]
       }
     },
     {
