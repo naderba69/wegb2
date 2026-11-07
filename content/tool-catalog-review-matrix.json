@@ -29380,7 +29380,25 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "contested-bilingual-cognitive-advantage-construct",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-07",
+        "risk": "high",
+        "rationaleAr": "الميزة المعرفية المنسوبة للتعدد اللغوي فرضية سكانية تتأثر بالعمر والتعليم والهجرة وطبيعة المهمة والتحيز في النشر، ولا تثبت من نجاح متعلم في تطبيق ثنائي اللغة. لا يجمع المنتج تاريخاً لغوياً أو مجموعة مقارنة أو قياسات معرفية قبلية وبعدية، لذلك لا ينسب أثراً سببياً ولا يحول التقدم في الألمانية إلى Cognitive Advantage.",
+        "candidateEvidence": [
+          "lib/i18n.ts",
+          "lib/metriken.ts",
+          "content/real-world-validation.json",
+          "components/profil.tsx"
+        ],
+        "relatedIds": [
+          508,
+          605,
+          920,
+          922,
+          923
+        ]
       }
     },
     {
@@ -29401,7 +29419,26 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "executive-function-cognitive-construct",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-07",
+        "risk": "high",
+        "rationaleAr": "الوظيفة التنفيذية مظلة تشمل الكف والتحديث والتحويل ضمن مهام نفسية مضبوطة، ولا تساوي إكمال تمرين لغة أو تبديل واجهة. لا ينفذ المنتج اختبارات معيارية أو يقيس زمن الاستجابة والدقة وشروط switch/repeat أو يضبط العمر والتعليم والخبرة اللغوية؛ لذلك لا يستنتج Executive Function أو تحسنها.",
+        "candidateEvidence": [
+          "lib/i18n.ts",
+          "lib/metriken.ts",
+          "content/real-world-validation.json",
+          "components/tasks.tsx"
+        ],
+        "relatedIds": [
+          294,
+          368,
+          508,
+          906,
+          920,
+          921
+        ]
       }
     },
     {
@@ -29419,10 +29456,33 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "metalinguistic-awareness-practice",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-07",
+        "risk": "high",
+        "rationaleAr": "توجد أنشطة حية تسمي بنية نحوية، تلوّن شاهدها داخل نص، وتطلب تمييز الجملة التي تحملها، كما تعرض التغذية الراجعة سبب الخطأ والقاعدة؛ وهي مطابقة مرشحة لممارسة التأمل في شكل اللغة. لكنها تعتمد رادار أنماط سطحي ولا تطلب دائماً صياغة القاعدة أو تبريرها ولا تقيس وعياً فوق لغوي واسعاً أو انتقاله بين المهام.",
+        "candidateEvidence": [
+          "lib/bemerken.ts",
+          "components/bemerken.tsx",
+          "components/exercises.tsx",
+          "content/grammar.json",
+          "scripts/interaktiv_test.tsx"
+        ],
+        "relatedIds": [
+          343,
+          407,
+          419,
+          445,
+          514,
+          714,
+          813,
+          924,
+          925
+        ]
       }
     },
     {
@@ -29440,10 +29500,31 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "cross-linguistic-comparison-awareness-practice",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-07",
+        "risk": "high",
+        "rationaleAr": "يضم المنتج تدريبات حية للأصدقاء الكاذبين تقارن الألمانية بالإنجليزية والفرنسية والعربية مع وسم لغة المصدر وشرح الفرق، وتسجل الخطأ في مسار التدريب؛ وهي مطابقة مرشحة محدودة للوعي عبر اللغات. لكنها قائمة مؤلفة داخلياً لا ملف repertoire للمتعلم، ووحدة التداخل الصوتي العربي غير موصولة، ولا تقيس تعميماً أو أثراً سببياً للغة السابقة.",
+        "candidateEvidence": [
+          "lib/falsche-freunde.ts",
+          "lib/falsche-freunde-aufgabe.ts",
+          "lib/plan.ts",
+          "lib/fehleratlas.ts",
+          "lib/arabinterferenz.ts"
+        ],
+        "relatedIds": [
+          307,
+          343,
+          514,
+          605,
+          694,
+          923,
+          925
+        ]
       }
     },
     {
@@ -29461,10 +29542,33 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "language-awareness-learning-practice",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-07",
+        "risk": "high",
+        "rationaleAr": "تبدأ دروس حية بأمثلة وملاحظة نمط قبل كشف القاعدة، وتربط نص القراءة بقاعدة الأسبوع وتعرض فروقاً معجمية وصرفية؛ وهذه مطابقة مرشحة لجزء من Language Awareness. لا يمثل ذلك منهج Hawkins كاملاً أو مقارنة لغات ومؤسسات، والكشف سطحي ولا يجمع تفسير المتعلم أو يقيس تغير وعيه؛ لذلك يبقى التنفيذ مرشحاً.",
+        "candidateEvidence": [
+          "components/akademie/LektionWizard.tsx",
+          "lib/bemerken.ts",
+          "components/bemerken.tsx",
+          "content/grammar.json",
+          "lib/wortfamilien.ts"
+        ],
+        "relatedIds": [
+          343,
+          407,
+          419,
+          514,
+          714,
+          813,
+          923,
+          924,
+          926
+        ]
       }
     },
     {
@@ -29485,7 +29589,31 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "critical-language-awareness-construct",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-07",
+        "risk": "high",
+        "rationaleAr": "الوعي اللغوي النقدي يحلل كيف تصنع الاختيارات اللغوية التمثيل والسلطة والهوية ومن يملك الصوت، ولا يساوي فهم نص عن التضليل أو عد الروابط. توجد نصوص حية عن المصدر والتأطير والأجندة، لكن أسئلتها غالباً مغلقة ولا توجد عينة خطابات جديدة أو ترميز للفاعلية والتسمية والغياب أو إعادة كتابة منظور مهمش؛ لذلك لا يدعي المنتج CLA.",
+        "candidateEvidence": [
+          "content/texts.json",
+          "content/lang/b2-31-35.json",
+          "content/writing.json",
+          "components/tasks.tsx",
+          "lib/kriterien.ts"
+        ],
+        "relatedIds": [
+          330,
+          331,
+          548,
+          608,
+          729,
+          735,
+          796,
+          797,
+          813,
+          925
+        ]
       }
     },
     {
@@ -29536,7 +29664,27 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "discourse-competence-construct",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-07",
+        "risk": "high",
+        "rationaleAr": "الكفاءة الخطابية قدرة على بناء نص مترابط ومناسب النوع عبر الإحالة والتماسك والانسجام والتنظيم، ولا تثبت من وجود روابط أو نتيجة كاشف سطحي. توجد مهام كتابة وكلام وبنك وسائل تعبير ومؤشرات روابط وفقرات، لكنها لا تفهم علاقات الأفكار أو التناقض ولا تستخدم عينات متعددة ومقيمين وثباتاً؛ لذلك تبقى الممارسات المجاورة بلا حكم كفاءة.",
+        "candidateEvidence": [
+          "content/writing.json",
+          "components/schreiben.tsx",
+          "content/redemittel.json",
+          "lib/kriterien.ts",
+          "content/muendlich.json"
+        ],
+        "relatedIds": [
+          315,
+          316,
+          487,
+          681,
+          682,
+          797
+        ]
       }
     },
     {
@@ -29617,7 +29765,32 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "formulaic-competence-construct",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-07",
+        "risk": "high",
+        "rationaleAr": "الكفاءة الصيغية تتطلب فهم وحدات متعددة الكلمات واستدعاءها وإنتاجها بسرعة وملاءمة عبر سياقات، ولا تساوي إكمال بنك عبارات أو متلازمات معروف. توجد ممارسات حية مرشحة للchunks والعبارات والمتلازمات، لكن الاختيار داخلي بلا معيار corpus، ولا توجد عينة إنتاج حر مؤقتة أو مقيمون أو احتفاظ وانتقال؛ لذلك لا تحول النتائج إلى Formulaic Competence.",
+        "candidateEvidence": [
+          "content/redemittel.json",
+          "content/kollok-vertiefung.json",
+          "components/redemittel.tsx",
+          "components/kollokproduktion.tsx",
+          "components/tiefenlex.tsx"
+        ],
+        "relatedIds": [
+          321,
+          323,
+          438,
+          641,
+          654,
+          699,
+          700,
+          839,
+          841,
+          842,
+          893
+        ]
       }
     },
     {
@@ -29638,7 +29811,14 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "merge-duplicate",
+        "classification": "duplicate-catalog-record",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-07",
+        "risk": "low",
+        "rationaleAr": "Pragmatic Competence Bachman يكرر الكفاءة التداولية المسجلة والمراجعة في 312؛ اختلاف إطار Bachman عن إحالة Thomas لا يبرر أداة منتج ثانية ما دام السجل لا يحدد مقياساً أو بعداً تشغيلياً مختلفاً. يُحفظ المعرف للتتبع ويُدمج في 312، حيث فُصل التدريب الموقفي الحي عن ادعاء الكفاءة العامة.",
+        "candidateEvidence": [],
+        "canonicalId": 312
       }
     },
     {
@@ -29659,7 +29839,28 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "sociocultural-competence-construct",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-07",
+        "risk": "high",
+        "rationaleAr": "الكفاءة الاجتماعية الثقافية تشمل معرفة الأعراف والمؤسسات والهوية والقدرة على تفسيرها والتصرف والتأمل في سياقات متعددة، ولا تثبت من قراءة Landeskunde أو اختيار صيغة مهذبة. توجد مواد حياة يومية وسيناريوهات تداولية وقصة انعكاس ثقافي، لكنها مؤلفة داخلياً وبمنظور محدود بلا أداء حر أو مجتمع مضيف أو مراجعين؛ لذلك لا تمنح درجة كفاءة.",
+        "candidateEvidence": [
+          "lib/landeskunde.ts",
+          "components/landeskunde.tsx",
+          "lib/pragmatik.ts",
+          "components/dialogszenarien.tsx",
+          "content/texts.json"
+        ],
+        "relatedIds": [
+          311,
+          490,
+          611,
+          692,
+          731,
+          934,
+          935
+        ]
       }
     },
     {
@@ -29680,7 +29881,14 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "merge-duplicate",
+        "classification": "duplicate-catalog-record",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-07",
+        "risk": "low",
+        "rationaleAr": "Intercultural Competence 2 يكرر سجل Byram 1997 نفسه في 311؛ اللاحقة 2 لا تنشئ نموذجاً أو نشاطاً مستقلاً. يُحفظ المعرف للتتبع ويُدمج في 311، حيث سُجل نشاط انعكاس حي مرشح مع منع تحويل نص واحد إلى حكم كفاءة بين ثقافية.",
+        "candidateEvidence": [],
+        "canonicalId": 311
       }
     },
     {
@@ -29701,7 +29909,29 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "pluricultural-competence-construct",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-07",
+        "risk": "high",
+        "rationaleAr": "الكفاءة متعددة الثقافات تعبئة repertoire من الخبرات والموارد لتفسير الاختلاف وبناء مساحة مشتركة، ولا تعني معرفة نصائح عن ألمانيا أو عرض العربية والألمانية. توجد قصة انعكاس ومسار حياة ألماني تونسي، لكن لا يجمع المنتج خبرات المتعلم الثقافية أو اختياراته عبر مواقف متعددة ولا يملك rubric ومراجعين؛ لذلك لا يقيس Pluricultural Competence.",
+        "candidateEvidence": [
+          "lib/landeskunde.ts",
+          "components/landeskunde.tsx",
+          "content/lang/b2-36-40.json",
+          "content/texts.json",
+          "lib/i18n.ts"
+        ],
+        "relatedIds": [
+          311,
+          510,
+          569,
+          570,
+          605,
+          731,
+          934,
+          936
+        ]
       }
     },
     {
@@ -29722,7 +29952,29 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "mediation-competence-construct",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-07",
+        "risk": "high",
+        "rationaleAr": "الكفاءة في الوساطة أوسع من إتمام ملخص واحد؛ تشمل تكييف المعنى للجمهور، وتبسيط النص، وربط الأطراف وإدارة التعاون عبر مهام ومستويات. توجد مهام حية مرشحة لوساطة نص ألماني إلى العربية مع مقارنة ذاتية، لكنها اتجاه واحد وبلا محاور بشري أو rubric موثق أو مقيمين وثبات؛ لذلك لا تتحول ممارسة 606 إلى حكم Mediation Competence.",
+        "candidateEvidence": [
+          "lib/lesestoff.ts",
+          "components/lesestoff.tsx",
+          "scripts/engine_smoke.ts",
+          "scripts/interaktiv_test.tsx"
+        ],
+        "relatedIds": [
+          240,
+          340,
+          494,
+          522,
+          605,
+          606,
+          803,
+          935,
+          937
+        ]
       }
     },
     {
@@ -29743,7 +29995,14 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "merge-duplicate",
+        "classification": "duplicate-catalog-record",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-07",
+        "risk": "low",
+        "rationaleAr": "Online Interaction CEFR يكرر Online Interaction المسجل في 607، ويحمل السجلان إحالة Council 2018 نفسها. يُحفظ المعرف للتتبع ويُدمج في 607، حيث وُثق غياب مشاركين بشريين ورسائل متبادلة وهوية وموافقة وإشراف.",
+        "candidateEvidence": [],
+        "canonicalId": 607
       }
     },
     {
@@ -29764,7 +30023,29 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "digital-competence-framework-construct",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-07",
+        "risk": "high",
+        "rationaleAr": "DigComp إطار واسع للمعلومات والبيانات والتواصل والتعاون وإنشاء المحتوى والسلامة وحل المشكلات، ولا يثبت باستعمال تطبيق أو إجابة نص عن التضليل. لدى المنتج ممارسات حية مرشحة لجزء إعلامي من الثقافة الرقمية، لكنه لا يغطي المجالات أو مستويات الإتقان ولا يجمع أداءً خارجياً ومقيّمين؛ لذلك لا يمنح Digital Competence.",
+        "candidateEvidence": [
+          "content/texts.json",
+          "content/lang/b2-01-10.json",
+          "content/lang/b2-31-35.json",
+          "components/tasks.tsx",
+          "app/datenschutz/page.tsx"
+        ],
+        "relatedIds": [
+          331,
+          608,
+          794,
+          795,
+          796,
+          797,
+          926,
+          937
+        ]
       }
     },
     {
@@ -29785,7 +30066,14 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "merge-duplicate",
+        "classification": "duplicate-catalog-record",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-07",
+        "risk": "low",
+        "rationaleAr": "Telecollaboration Assessment يكرر تقويم التبادل الافتراضي المسجل والمراجع في 610؛ المصطلحان هنا يشيران إلى تقويم مساهمة وتفاوض وتأمل داخل تبادل بشري عابر للمواقع، ولا يحدد السجل بُعداً مختلفاً. يُحفظ المعرف للتتبع ويُدمج في 610 حيث سُجل أن عينة التبادل غير موجودة أصلاً.",
+        "candidateEvidence": [],
+        "canonicalId": 610
       }
     },
     {
@@ -29806,7 +30094,32 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "virtual-exchange-instructional-design",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-07",
+        "risk": "high",
+        "rationaleAr": "تصميم التبادل الافتراضي يحتاج مؤسسة أو مجموعة شريكة، أهدافاً مشتركة، أدواراً ومهاماً ممتدة، تيسيراً وقناة اتصال وهوية وموافقة وسلامة وتأملاً وتقويماً عادلاً. المنتج فردي محلي بلا حسابات أو شريك أو مساهمات مشتركة؛ مهام الكلام والكتابة ورفيق الذكاء ليست تبادلاً بشرياً، لذلك يبقى التصميم غير موصول.",
+        "candidateEvidence": [
+          "components/klassenansicht.tsx",
+          "content/muendlich.json",
+          "content/writing.json",
+          "components/sprechbegleiter.tsx",
+          "app/datenschutz/page.tsx"
+        ],
+        "relatedIds": [
+          258,
+          338,
+          480,
+          564,
+          565,
+          568,
+          607,
+          609,
+          610,
+          749,
+          939
+        ]
       }
     },
     {
