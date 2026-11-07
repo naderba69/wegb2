@@ -69,7 +69,7 @@ const expectedDecisionBreakdown = tools.reduce<Record<string, number>>((counts, 
   counts[decision] = (counts[decision] ?? 0) + 1;
   return counts;
 }, {});
-check(summary.reviewedDecisions === reviewedOverrides.length && JSON.stringify(summary.decisionBreakdown) === JSON.stringify(expectedDecisionBreakdown) && summary.pendingTriage === expectedDecisionBreakdown["pending-academic-review"], `قرارات المراجعة محسوبة من السجل البندي (${summary.reviewedDecisions} فرز، ${summary.pendingTriage} معلق)`);
+check(summary.reviewedDecisions === reviewedOverrides.length && JSON.stringify(summary.decisionBreakdown) === JSON.stringify(expectedDecisionBreakdown) && summary.pendingTriage === (expectedDecisionBreakdown["pending-academic-review"] ?? 0), `قرارات المراجعة محسوبة من السجل البندي (${summary.reviewedDecisions} فرز، ${summary.pendingTriage} معلق)`);
 const relatedCatalogReferences = Object.values(governance.overrides).reduce((count, entry) => count + (entry.relatedIds?.length ?? 0), 0);
 check(summary.relatedCatalogReferences === relatedCatalogReferences, `الإحالات المفاهيمية محسوبة دون تسميتها دمجاً (${relatedCatalogReferences})`);
 const candidateLiveImplementations = Object.values(governance.overrides).filter((entry) => entry.productStatus === "candidate-live-implementation").length;

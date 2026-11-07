@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-11-06",
+  "updated": "2026-11-07",
   "sourcePath": "content/tools.yaml",
   "total": 820,
   "firstId": 181,
@@ -67,16 +67,15 @@
   ],
   "resolvedExactDuplicateGroups": 8,
   "decisionBreakdown": {
-    "defer": 336,
-    "research-only": 362,
-    "reject-not-applicable": 23,
-    "merge-duplicate": 79,
-    "pending-academic-review": 20
+    "defer": 342,
+    "research-only": 366,
+    "reject-not-applicable": 25,
+    "merge-duplicate": 87
   },
-  "reviewedDecisions": 800,
-  "pendingTriage": 20,
-  "relatedCatalogReferences": 5059,
-  "candidateLiveImplementations": 181,
+  "reviewedDecisions": 820,
+  "pendingTriage": 0,
+  "relatedCatalogReferences": 5204,
+  "candidateLiveImplementations": 184,
   "adopted": 0,
   "productIntegrated": 0,
   "fieldValidated": 0,
