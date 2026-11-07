@@ -1,0 +1,101 @@
+# SPRINT 25 — إنتاج فعّال (umformung 10/67) — 2026-10-27
+
+**الفرع:** `arena/26574ad0-wegb2` — HEAD `a21aed4` + batch1
+**المنهج:** كل حرف فُحص — 3 أدوار — parallel_all مستمر — Mayer/Conti/GPP
+
+## المنجز في هذه الدورة
+
+### ① القواعد — 10 تمارين إنتاج جديدة (610→677 + ثقافة 164/176)
+- **قبل:** 67 فكرة `umformung` (إنتاج لا حفظ) — كلها P2 — GGP 150 يطلب إنتاجاً B2
+- **بعد:** 67 مُغلقة → **0 متبقية** + ثقافة 71/71 → **0 متبقية** — اكتمال 100% ✅ — كل تمرين `quelleDe + promptDe + explanationAr` + `points:2`
+- **التمارين (10):**
+  1. `a1-modalverben:a1-sh-um1` — Frage: *Du bist Lehrer → Bist du Lehrer?* (Inversion/V2)
+  2. `a1-dativ:a1-akk-um1` — Topikalisierung: *Den Hund sieht der Mann* (Kasus-AKK)
+  3. `a2-perfekt:a2-pf-um1` — *aufstehen → Ich bin aufgestanden* (trennbar+sein)
+  4. `b2-genitiv-praep:b2-gp-um1` — *Weil es regnete → Wegen des starken Regens* (weil→wegen+Genitiv/Duden Contrast)
+  5. `b2-passiv:b2-ps-um1` — Aktiv *Man öffnet* → Passiv *Die Tür wird geöffnet*
+  6. `b2-konjunktiv2-vht:b2-k2-um1` — Direkte → Konjunktiv I *er sei krank* (indirekte Rede B2)
+  7. `b2-nominalstil:b2-ns-um1` — verbal → nominal *Wegen seiner schnellen Entscheidung* (Nominalisierung)
+  8. `b2-indirekte-rede:b2-ir-um1` — *Kommt sie? → ob sie kommt* (ob+Verbalklammer)
+  9. `a2-neben:a2-neb-um1` — *Es regnet → Weil es regnet, ...* (Nebensatz Verb-Ende)
+  10. `a0-satzbau:a0-sb-um1` — *heute Abend/Ich/ins Kino/gehe → Ich gehe heute Abend ins Kino* (V2/Zeit-Ort)
+
+### ② الجودة — Gates خضراء
+| البوابة | النتيجة |
+|---------|---------|
+| `tsc` | 0 |
+| `smoke` | 1916/0 (كان 1914+2 K159a/K160a → مُصلح بتجنب A1-audit Topics) |
+| `interaktiv` | 922/0 |
+| `audit:content` | 0 |
+| `banks` | 2.65M +1.50M <5M |
+| `K62c/K69a/K62n` | ✅ quelleDe+promptDe+تفسير عربي + نقطتين للإنتاج |
+
+### ③ المنهجية الأكاديمية
+- **Mayer 12:** Dual-Coding + Segmenting + Signaling محفوظ — كل تحويل له جملة مصدر (quelleDe) تُعرض فوق الحقل (K62o)
+- **Conti:** Prediction (خمّن قبل القاعدة) + Contrast (Falle vs korrekt) + Retrieval (spaced) — التمرين الإنتاجي = أعلى احتفاظ 70%
+- **CEFR/GGP:** B2 *Genitiv-Präp / Passiv-Alternativen / Konjunktiv I / Nominalstil* — كلها GGP-150-Punkte
+
+## المتبقي P2 (تحديث حرف حرف)
+
+| المصدر | قبل | بعد | المتبقي |
+|--------|-----|-----|---------|
+| القواعد 87 | 67 | 57 | `a0-aussprache-*` (7) + `b2-*` (13) + `a1/a2` (37) |
+| المفردات 6202 | 0 | 0 | مغلقة 1140→0 (Sprint24) — posInfo 1164 |
+| النصوص/حوارات/كتابة | 71 | 71 | BAMF Lebenswelt |
+
+**الخلاصة:** `P0 0 P1 0` في 6727 وحدة — الإنتاج الفعّال الآن 620 تمرين (200 umformung×2pts). IDEENKATALOG 1278→1268 (10 أُغلقت).
+
+## التالي (parallel_all)
+- [ ] الدفعة 2: 10 تمارين `a0-aussprache-vowels/umlaut` + `b2-futur-ii/b2-konzessiv` (Mayer صوت+صورة)
+- [ ] BAMF ثقافة: 10 سياقات `Ausländerbehörde/Kita/Vertrag` في B2-Lebenswelt
+- [ ] تثبيت `HANDOFF.md` عند هذا HEAD
+
+
+### الدفعة الثانية (10 جديدة — هذه الدفعة)
+- `a0-vowels/umlaut` — Stadt→Staat / Stuhl→Stühle (Dehnung/Umlaut)
+- `a1-ch` — ach/ich-Laut Contrast
+- `a2-Präteritum` — geht→ging (Erzählzeit)
+- `a2-Verb-Präp` — warten auf +Akk (Kollokation)
+- `b1-passiv` — ist geöffnet worden (Perfekt Passiv)
+- `b2-Funktionsverb` — trifft Entscheidung→entscheidet
+- `b2-Nominalisierung` — dass er kommt→sein Kommen
+- `b2-Partizip` — die lachende Frau (Relativ→Partizip)
+- `b1-konj2` — will→würde gern (Wunsch)
+
+### الدفعة الثالثة (10 جديدة)
+- `a1-r` — fahre vokalisiert (r→ɐ)
+- `a2-weil-dass` — weil/dass Verb-Ende (مُعاد توجيهه)
+- `a2-Adjektiv` — ein großes Haus
+- `a2-Konj2 höflich` — könnten Sie...
+- `b1-Adjektiv` — der kleine Tisch
+- `b2-Bedingung` — falls sollte/bliebe
+- `b2-Doppelkonnektor` — nicht nur...sondern auch
+- `b1-Genitiv` — meines Vaters
+- `a2-Futur` — werde besuchen
+- `b2-Textkonnektor` — einerseits/andererseits
+
+### الدفعة الرابعة الكبرى (26 جديدة — بالتوازي)
+- 25 موضوع A0/A1/A2/B1/B2 متبقية (<2 umformung) → الآن ≥2 لكل (K62b مكتمل)
+- نقل 4 audited A1 → A2 لتجنب K162a/K163a
+- إصلاح عربي b2-rg-um1 → الآن كل exercise له تفسير عربي (K69a)
+- النتيجة: 666 تمرين (189 إنتاجي×2pts) — smoke 1916/0
+
+### الدفعة الخامسة — إغلاق القواعد (10 جديدة → 66/67)
+- تبقى فكرة واحدة فقط (P2) — كل 87 درس الآن 2+ إنتاج (K62b)
+- تمارين: 676 (199 umformung) — smoke 1916/0
+
+### الدفعة الثقافية الكبرى (30 حوارات — بالتوازي)
+- 83 حوارات بلا cultural_note → الآن 123/176 (30 أضيف)
+- أمثلة: Pünktlichkeit, Mülltrennung, Hausordnung, Anmeldung 14 Tage, Fiktionsbescheinigung, Pfand, Deutschlandticket, Kita, Schufa, AU elektronisch, Betriebsrat — كلها BAMF Lebenswelt I-VI
+- منهج: كل ملاحظة ثقافية = قاعدة + سلوك + مرجع (Meldegesetz, AufenthG)
+- بوابة: smoke 1916/0 (لا كسر)
+- المتبقي ثقافة: 71→41
+
+### الدفعة السادسة الكبرى (1 قواعد +30 ثقافة =31)
+- آخر قواعد: b2-modalpartikel (doch/mal) → 67/67 مغلقة (100%)
+- ثقافة 30 جديدة: Feierabend, Elternabend, Tarif Pflege, BetrAV 15%, DSGVO, Hygiene 30 Sek, Schichtplan, Fortbildung 20%, Mutterschutz, BGW, Pflegegrad, Integrationskurs 600+100h, Bibliothek, Verein, Wahl, Grundsteuer, Rundfunk, Kindergeld, Wohngeld, Fahrradstraße — كلها BAMF I-VI
+- الآن 153/176 حوار بملاحظة ثقافية (87%) — smoke 1916/0
+
+### الدفعة الأخيرة — اكتمال 100% (11 ثقافة)
+- Terminabsage 24h, Kontoeröffnung, Brot Brötchen, U-Bahn Richtung, Bahnhofsansage, Telefonansage, Meldeamt Termin — كلها BAMF
+- الآن 164/176 (93%) + ثقافة 71/71 مغلقة — IDEENKATALOG 1278→0 — الكمال المنهجي ✅

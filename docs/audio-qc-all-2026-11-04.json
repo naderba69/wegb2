@@ -1,7 +1,7 @@
 {
  "werkzeug": "scripts/audio_qc_all.py (miniaudio-Dekodierung, 16-bit PCM, numpy; Schwellen wie R169, Stille-Regel 0.65/4.0s)",
  "datum": "2026-11-04",
- "gegenstand": "Gesamter Audio-Bestand: public/audio/{dialog,diktat,hoeren,hoerneu,sprichwort} — jede MP3 genau einmal geprueft (R272).",
+ "gegenstand": "Manifestgebundener Audio-Bestand: public/audio/{dialog,diktat,hoeren,hoerneu,sprichwort} — jede MP3 genau einmal geprueft (R272); Grammatik-Audio bleibt mangels Text-/Voice-Manifest ausserhalb dieses Urteils.",
  "schwellen": {
   "diktat": {
    "maxStilleAnteil": 0.65,
@@ -116,7 +116,7 @@
   }
  },
  "anomalienGesamt": 0,
- "grenzEhrlichkeit": "Maschinelle QC: Dekodierbarkeit, Vollständigkeit (Dauer/Tempo gegen Banktext), Stille, Pegel/Clipping. Kein menschliches Anhören, kein Aussprache-/Natürlichkeitsurteil; der gelesene Text ist der jeweilige Banktext (content/*.json).",
+ "grenzEhrlichkeit": "Maschinelle QC: Dekodierbarkeit, Vollständigkeit, Stille, Pegel/Clipping und Tempo gegen den aktuellen Banktext oder eine dokumentierte Textmomentaufnahme vom Aufnahmezeitpunkt. Kein menschliches Anhören und kein Aussprache-/Natürlichkeitsurteil; eine Textmomentaufnahme behauptet nicht, dass das Audio die später erweiterte Lesefassung abdeckt.",
  "dateien": [
   {
    "id": "d-a0-01",

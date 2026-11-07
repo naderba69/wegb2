@@ -1,10 +1,11 @@
 "use client";
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { Landeskunde } from "./landeskunde";
 import { lebensweltThemen, umgangBank, BERUFSSTART_SCHRITTE } from "@/lib/lebenswelt";
 import { useEffect } from "react";
 import { speakAny } from "@/lib/speech";
 import { De } from "@/components/De";
+import { useSearchParams } from "next/navigation";
 
 /**
  * 🌍 محطة الحياة في ألمانيا (R200): بطاقات مؤسسات وحياة يومية بعبارات جاهزة،
@@ -13,7 +14,26 @@ import { De } from "@/components/De";
  */
 const BS_KEY = "weg-berufsstart";
 
+const FILTERS: { id: string; label: string; emoji: string; match: (id: string) => boolean }[] = [
+  { id: "alle", label: "الكل", emoji: "✨", match: () => true },
+  { id: "wohnen", label: "السكن", emoji: "🏠", match: (id) => id === "lw-01" || id === "lw-08" },
+  { id: "behoerde", label: "الجهات الرسمية", emoji: "🏛️", match: (id) => id === "lw-02" || id === "lw-03" },
+  { id: "gesundheit", label: "الصحة", emoji: "🏥", match: (id) => id === "lw-04" || id === "lw-11" },
+  { id: "arbeit", label: "العمل", emoji: "💼", match: (id) => ["lw-05", "lw-06", "lw-07", "lw-13"].includes(id) },
+  { id: "familie", label: "العائلة", emoji: "👨‍👩‍👧", match: (id) => id === "lw-09" },
+  { id: "mobilitaet", label: "التنقّل", emoji: "🚃", match: (id) => id === "lw-10" },
+  { id: "alltag", label: "الحياة اليومية", emoji: "📅", match: (id) => id === "lw-12" },
+];
+
 export function LebensweltStation() {
+  const searchParams = useSearchParams();
+  const initialFilter = searchParams?.get("filter") ?? "alle";
+  const [filterId, setFilterId] = useState(initialFilter);
+  useEffect(() => {
+    const f = searchParams?.get("filter");
+    if (f && FILTERS.some((x) => x.id === f)) setFilterId(f);
+  }, [searchParams]);
+  const gefiltert = useMemo(() => lebensweltThemen.filter((t) => FILTERS.find((f) => f.id === filterId)?.match(t.id) ?? true), [filterId]);
   const [umgangOffen, setUmgangOffen] = useState(false);
   const [bsStand, setBsStand] = useState<Record<string, boolean>>({});
   useEffect(() => {
@@ -60,8 +80,29 @@ export function LebensweltStation() {
         </div>
       </section>
 
+      <div data-testid="lebenswelt-filter-bar" style={{ display: "flex", gap: "0.35rem", flexWrap: "wrap", alignItems: "center" }}>
+        {FILTERS.map((f) => (
+          <button
+            key={f.id}
+            type="button"
+            data-testid={`lebenswelt-filter-${f.id}`}
+            onClick={() => setFilterId(f.id)}
+            className="chip"
+            style={{
+              minHeight: "36px",
+              fontWeight: filterId === f.id ? 900 : 600,
+              background: filterId === f.id ? "var(--color-a1)" : undefined,
+              color: filterId === f.id ? "var(--ui-on-accent)" : undefined,
+            }}
+          >
+            {f.emoji} {f.label} {f.id !== "alle" && <span style={{ fontSize: "0.68rem", opacity: 0.8 }}>({lebensweltThemen.filter((x) => f.match(x.id)).length})</span>}
+          </button>
+        ))}
+        <span className="chip" style={{ fontSize: "0.7rem" }}>{gefiltert.length} بطاقة</span>
+      </div>
+
       <section style={{ display: "grid", gap: "0.55rem" }}>
-        {lebensweltThemen.map((t) => (
+        {gefiltert.map((t) => (
           <details key={t.id} className="card" style={{ padding: "0.7rem 0.9rem" }} data-testid={`lebenswelt-${t.id}`}>
             <summary style={{ cursor: "pointer", fontWeight: 800, minHeight: "44px", display: "flex", alignItems: "center", gap: "0.5rem", flexWrap: "wrap" }}>
               <De>{t.titel}</De>

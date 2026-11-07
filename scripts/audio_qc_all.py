@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-# R272: Vollstaendige maschinelle Audio-QC fuer den GESAMTEN Audio-Bestand
-# (public/audio/{dialog,diktat,hoeren,hoerneu,sprichwort} = alle MP3s des Projekts).
+# R272: Vollstaendige maschinelle Audio-QC fuer den manifestgebundenen Audio-Bestand
+# (public/audio/{dialog,diktat,hoeren,hoerneu,sprichwort}; Grammatik-Audio hat kein Text-/Voice-Manifest).
 # Ersetzt fuer den Gesamtbestand die Teilskripte audio_qc_r169.py (nur Dialoge)
 # und audio_qc_hoerneu.py (nur HoerNeu); deren historische Berichte bleiben gueltig.
 #
@@ -77,6 +77,13 @@ def texte_und_stimmen():
             out[clip["datei"].split("/")[-1]] = (item["id"], "hoerneu", clip["stimmeLabel"], text)
     for e in lade("sprichwort-audio.json").values():
         out[e["file"].split("/")[-1]] = (e["id"], "sprichwort", e["voice"], e["de"])
+    # بعض نصوص القراءة/الحوار توسعت بعد تسجيل الصوت. القياس يستخدم لقطة النص
+    # المجمدة عند التسجيل بدلاً من الادعاء أن الملف يقرأ النسخة الموسعة الحالية.
+    for e in lade("audio-transcript-overrides.json")["items"]:
+        datei = e["file"].split("/")[-1]
+        current = out.get(datei)
+        if current and current[0] == e["id"] and current[1] == e["group"]:
+            out[datei] = (current[0], current[1], current[2], e["textDe"])
     return out
 
 
@@ -191,12 +198,12 @@ def main():
     bericht = {
         "werkzeug": "scripts/audio_qc_all.py (miniaudio-Dekodierung, 16-bit PCM, numpy; Schwellen wie R169, Stille-Regel 0.65/4.0s)",
         "datum": DATUM,
-        "gegenstand": "Gesamter Audio-Bestand: public/audio/{dialog,diktat,hoeren,hoerneu,sprichwort} — jede MP3 genau einmal geprueft (R272).",
+        "gegenstand": "Manifestgebundener Audio-Bestand: public/audio/{dialog,diktat,hoeren,hoerneu,sprichwort} — jede MP3 genau einmal geprueft (R272); Grammatik-Audio bleibt mangels Text-/Voice-Manifest ausserhalb dieses Urteils.",
         "schwellen": SCHWELLEN,
         "abdeckung": {"dateienGeprueft": len(dateien), "luecken": abdeckung_fehlt},
         "gruppen": gruppen,
         "anomalienGesamt": len(anomalien),
-        "grenzEhrlichkeit": "Maschinelle QC: Dekodierbarkeit, Vollständigkeit (Dauer/Tempo gegen Banktext), Stille, Pegel/Clipping. Kein menschliches Anhören, kein Aussprache-/Natürlichkeitsurteil; der gelesene Text ist der jeweilige Banktext (content/*.json).",
+        "grenzEhrlichkeit": "Maschinelle QC: Dekodierbarkeit, Vollständigkeit, Stille, Pegel/Clipping und Tempo gegen den aktuellen Banktext oder eine dokumentierte Textmomentaufnahme vom Aufnahmezeitpunkt. Kein menschliches Anhören und kein Aussprache-/Natürlichkeitsurteil; eine Textmomentaufnahme behauptet nicht, dass das Audio die später erweiterte Lesefassung abdeckt.",
         "dateien": dateien,
     }
     out = os.path.join(ROOT, "docs", f"audio-qc-all-{DATUM}.json")

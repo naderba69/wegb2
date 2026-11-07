@@ -178,7 +178,7 @@ export default function ExerciseSet({ items, onPoints, storageKey, onProgress, o
             <span>التقدّم في التمرين</span>
             <span className="rtl-num">{doneN}/{items.length}</span>
           </div>
-          <div className="dirb-ex-bar" role="progressbar" aria-valuenow={doneN} aria-valuemin={0} aria-valuemax={items.length}>
+          <div className="dirb-ex-bar" role="progressbar" aria-label="التقدم في التمرين" aria-valuenow={doneN} aria-valuemin={0} aria-valuemax={items.length}>
             <div className="dirb-ex-fill" style={{ width: `${items.length ? Math.round((doneN / items.length) * 100) : 0}%` }} />
           </div>
         </div>

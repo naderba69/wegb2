@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <rect width="800" height="450" fill="#FFFCF0"/>
+  <rect width="800" height="450" fill="none" stroke="#D4C18F" stroke-opacity="0.35" stroke-width="2" rx="20"/>
+  <text x="400" y="30" text-anchor="middle" font-family="Georgia, serif" font-size="12" font-weight="800" letter-spacing="2" fill="#94845C">WEG · B2 — VERLAG FÜR DEUTSCH — A2</text>
+  <text x="400" y="70" text-anchor="middle" font-family="Georgia, serif" font-size="22" font-weight="900" fill="#0F2A44">Futur I mit „werden“</text>
+  <text x="400" y="100" text-anchor="middle" font-family="system-ui" font-size="14" fill="#1A2E4A">المستقبل الأول (werden + مصدر)</text>
+  <line x1="80" y1="120" x2="720" y2="120" stroke="#113A5F" stroke-width="2" opacity="0.2"/>
+  <g font-family="system-ui" font-size="11"><text x="50" y="280" font-weight="800" fill="#113A5F">Person</text><text x="170" y="280" font-weight="800" fill="#113A5F">werden</text><text x="50" y="300" fill="#1A2E4A">ich</text><text x="170" y="300" fill="#1A2E4A">werde</text><text x="50" y="318" fill="#1A2E4A">du</text><text x="170" y="318" fill="#1A2E4A">wirst</text><text x="50" y="336" fill="#1A2E4A">er/sie/es</text><text x="170" y="336" fill="#1A2E4A">wird</text></g>
+  <text x="400" y="420" text-anchor="middle" font-family="system-ui" font-size="9" fill="#A78BFA">Mayer Dual-Coding · Verlag WEG · a2-futur</text>
+</svg>

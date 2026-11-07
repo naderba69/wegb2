@@ -20,6 +20,7 @@ import { progressKeyActive } from "./profiles";
 import { migrateCurriculumSchedule } from "./curriculum-schedule";
 import { recordTodayUxClosed, recordTodayUxSubmission } from "./metriken";
 import type { TodayStepId } from "./today-steps";
+import { idbGet, idbSet } from "./idb";
 
 export const PROGRESS_EVENT = "weg-progress-changed";
 export const PROGRESS_SAVE_ERROR_EVENT = "weg-progress-save-error";
@@ -99,16 +100,88 @@ export function loadProgress(): Progress {
   }
 }
 
+/** Reduce storage pressure while retaining complete detail for the latest 45 study days. */
+function pruneForQuota(p: Progress): Progress {
+  if (JSON.stringify(p).length < 4_200_000) return p;
+  const days = p.plan.days ?? {};
+  const keys = Object.keys(days).map(Number).filter(Number.isFinite).sort((a, b) => a - b);
+  if (keys.length <= 45) return p;
+  const keep = new Set(keys.slice(-45));
+  const pruned = Object.fromEntries(Object.entries(days).map(([key, day]) => {
+    if (keep.has(Number(key))) return [key, day];
+    return [key, {
+      score: day.score,
+      total: day.total,
+      closed: day.closed,
+      tasksDone: day.tasksDone,
+      tasksTotal: day.tasksTotal,
+      at: day.at,
+    }];
+  })) as typeof days;
+  return { ...p, plan: { ...p.plan, days: pruned } };
+}
+
+function signalSaveError() {
+  if (typeof window !== "undefined") window.dispatchEvent(new Event(PROGRESS_SAVE_ERROR_EVENT));
+}
+
 export function saveProgress(p: Progress): boolean {
+  if (typeof window === "undefined") return false;
+  const key = progressKeyActive();
   try {
-    const migrated = migrateCurriculumSchedule(separateLegacyManualMinutes(p));
-    window.localStorage.setItem(progressKeyActive(), JSON.stringify(migrated));
-    emit();
-    return true;
+    const migrated = migrateCurriculumSchedule(separateLegacyManualMinutes(pruneForQuota(p)));
+    const raw = JSON.stringify(migrated);
+    try {
+      window.localStorage.setItem(key, raw);
+      void idbSet(key, raw); // best-effort mirror; localStorage remains the synchronous source of truth
+      emit();
+      return true;
+    } catch (error) {
+      const quota = error instanceof DOMException && (error.name === "QuotaExceededError" || error.code === 22);
+      if (!quota) throw error;
+      const compact = {
+        ...migrated,
+        kompetenzLog: [],
+        sicherheit: [],
+      } as Progress;
+      const compactRaw = JSON.stringify(pruneForQuota(compact));
+      try {
+        window.localStorage.setItem(key, compactRaw);
+        void idbSet(key, compactRaw);
+        emit();
+        return true;
+      } catch {
+        // Keep the UI honest until IndexedDB confirms persistence, then reload through PROGRESS_EVENT.
+        void idbSet(key, raw).then((saved) => {
+          if (!saved) return;
+          try { window.localStorage.removeItem(key); } catch { /* IndexedDB still contains the data. */ }
+          emit();
+        });
+      }
+    }
   } catch {
-    // لا نعرض نجاحاً وهمياً: كل مستهلك يسمع الحدث، وuseProgress لا يبدّل الحالة المرئية.
-    if (typeof window !== "undefined") window.dispatchEvent(new Event(PROGRESS_SAVE_ERROR_EVENT));
-    return false;
+    // handled below
+  }
+  signalSaveError();
+  return false;
+}
+
+/** Asynchronous fallback used only when no synchronous localStorage record is available. */
+export async function loadProgressAsync(): Promise<Progress> {
+  const sync = loadProgress();
+  if (sync !== emptyProgress) return sync;
+  try {
+    const raw = await idbGet(progressKeyActive());
+    if (!raw) return emptyProgress;
+    const p = JSON.parse(raw) as Progress;
+    return separateLegacyManualMinutes(migrateCurriculumSchedule({
+      ...emptyProgress,
+      ...p,
+      plan: { ...emptyProgress.plan, ...p.plan },
+      settings: { ...emptyProgress.settings, ...p.settings },
+    }));
+  } catch {
+    return emptyProgress;
   }
 }
 
@@ -132,11 +205,27 @@ export function useProgress() {
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
-    setProgress(loadProgress());
-    setReady(true);
-    const onChange = () => setProgress(loadProgress());
-    window.addEventListener(PROGRESS_EVENT, onChange);
-    return () => window.removeEventListener(PROGRESS_EVENT, onChange);
+    let cancelled = false;
+    const refresh = () => {
+      const sync = loadProgress();
+      if (sync !== emptyProgress) {
+        setProgress(sync);
+        setReady(true);
+        return;
+      }
+      void loadProgressAsync().then((loaded) => {
+        if (!cancelled) {
+          setProgress(loaded);
+          setReady(true);
+        }
+      });
+    };
+    refresh();
+    window.addEventListener(PROGRESS_EVENT, refresh);
+    return () => {
+      cancelled = true;
+      window.removeEventListener(PROGRESS_EVENT, refresh);
+    };
   }, []);
 
   const update = useCallback((fn: (p: Progress) => Progress) => {

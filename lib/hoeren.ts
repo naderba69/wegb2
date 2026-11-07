@@ -17,10 +17,10 @@ import type { Level } from "./types";
 import { TOTAL_DAYS } from "./types";
 
 export type Modus = "training" | "pruefung";
-export type Tempo = "lern" | "pruefung";
+export type Tempo = "sehrLangsam" | "lern" | "pruefung" | "schnell";
 
-/** المعدّلان النظاميان وحدهما — لا منزلق فوضى */
-export const RATE: Record<Tempo, number> = { lern: 0.7, pruefung: 0.95 };
+/** المعدّلات — 0.6× للبطيء (Mayer Segmenting) و 1.25× للمراجعة — neben 0.7×/0.95× */
+export const RATE: Record<Tempo, number> = { sehrLangsam: 0.6, lern: 0.7, pruefung: 0.95, schnell: 1.25 };
 
 export interface HoerItem {
   id: string;

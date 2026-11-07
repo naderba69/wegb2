@@ -42,15 +42,24 @@ mkdirSync(join(ROOT,"public"),{recursive:true});
 const main = build(BANK_DATEIEN);
 const vert = build(VERTIEFUNG_DATEIEN);
 const lang = build(LANG_DATEIEN);
-writeFileSync(join(ROOT,"public","banks.json"), main.json);
-writeFileSync(join(ROOT,"public","banks-vertiefung.json"), vert.json);
-writeFileSync(join(ROOT,"public","banks-lang.json"), lang.json);
+import { renameSync } from "fs";
+function atomicWrite(target, data) {
+  if (!data || data.length === 0) throw new Error(`atomicWrite: empty data for ${target}`);
+  const tmp = target + ".tmp";
+  writeFileSync(tmp, data);
+  if (statSync(tmp).size === 0) throw new Error(`atomicWrite: zero size tmp ${tmp}`);
+  renameSync(tmp, target);
+}
+atomicWrite(join(ROOT,"public","banks.json"), main.json);
+atomicWrite(join(ROOT,"public","banks-vertiefung.json"), vert.json);
+atomicWrite(join(ROOT,"public","banks-lang.json"), lang.json);
 console.log(`banks.json: ${main.n} Banken, ${(main.bytes/1048576).toFixed(2)} MB roh -> ${(main.json.length/1048576).toFixed(2)} MB minifiziert (${(main.gz/1048576).toFixed(2)} MB gz)`);
 console.log(`banks-vertiefung.json: ${vert.n} Banken, ${(vert.bytes/1048576).toFixed(2)} MB roh -> ${(vert.json.length/1048576).toFixed(2)} MB minifiziert (${(vert.gz/1048576).toFixed(2)} MB gz) — lazy inkl. vocab-b2+grammar-b2`);
 console.log(`banks-lang.json: ${lang.n} Banken, ${(lang.bytes/1048576).toFixed(2)} MB roh -> ${(lang.json.length/1048576).toFixed(2)} MB minifiziert (${(lang.gz/1048576).toFixed(2)} MB gz) — lazy B2-Lang`);
 {
   const audio=[]; const laufe=(rel)=>{ for(const f of readdirSync(join(ROOT,"public",...rel.split("/"))).sort()){ const r2=`${rel}/${f}`; const st=statSync(join(ROOT,"public",...r2.split("/"))); if(st.isDirectory()) laufe(r2); else if(f.endsWith(".mp3")) audio.push({p:`/${r2}`,b:st.size}); } };
   try{ laufe("audio"); }catch{}
-  writeFileSync(join(ROOT,"public","audio-manifest.json"), JSON.stringify(audio));
-  console.log(`audio-manifest.json: ${audio.length} Dateien, ${(audio.reduce((a,x)=>a+x.b,0)/1048576).toFixed(1)} MB`);
+  const audioJson = JSON.stringify(audio);
+  atomicWrite(join(ROOT,"public","audio-manifest.json"), audioJson);
+  console.log(`audio-manifest.json: ${audio.length} Dateien, ${(audio.reduce((a,x)=>a+x.b,0)/1048576).toFixed(1)} MB — atomic`);
 }

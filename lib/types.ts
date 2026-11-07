@@ -128,6 +128,8 @@ export interface Lesetext {
   lang?: Langfassung;
   /** 🧭 علامة داخلية: فضّل النسخة القصيرة (لتدرّج نسبة النصوص الأصلية) */
   __weg_useShort?: boolean;
+  /** 📚 مصدر النص — إفصاح تربوي (BAMF/Goethe-Muster) — ليس ادعاء مصدر خارجي */
+  quelle?: string;
 }
 
 export interface Langfassung {
@@ -135,6 +137,7 @@ export interface Langfassung {
   /** ملخّص عربي (لا ترجمة كاملة — القارئ في B2 يقرأ الألمانية) */
   ar: string;
   questions: Exercise[];
+  quelle?: string;
 }
 
 export interface DialogLine {
@@ -151,6 +154,8 @@ export interface Hoerdialog {
   lines: DialogLine[];
   questions: Exercise[];
   dictation: string[];
+  /** 📚 مصدر الحوار — إفصاح تربوي */
+  quelle?: string;
 }
 
 export interface Schreibaufgabe {

@@ -31,6 +31,7 @@ import { BriefSchmiede } from "@/components/briefe";
 import { LebensSzenarien } from "@/components/szenarien";
 import { TiefenLexikon } from "@/components/tiefenlex";
 import { KatalogLeiste } from "@/components/katalog";
+import WortReviewErweitert from "@/components/WortReviewErweitert";
 import { EinstufungTest } from "@/components/einstufung";
 import { ShadowingStation } from "@/components/shadowing";
 import { PflegeStation } from "@/components/pflege";
@@ -48,7 +49,7 @@ import { MenuSection } from "@/components/dirb/MenuSection";
  * · زائد التمارين (>3) يَرتحلُ من المعالج إلى «تدريب إضافي» هنا (K114).
  * شاشة واحدة في كل مرة: القائمة أو محطة واحدة بباب رجوع.
  */
-const UEBEN_REIHENFOLGE = "einstufung,zusatz,fehlerlabor,uebungen,blitz,hoeren,hoerneu,lueck,muendlich,begleiter,schatten,phonetik,vortrag,interview,briefe,szenarien,pflege,vollpruefung,leseleiter,redemittel,leben,tiefen,lesestoff,spiele,katalog";
+const UEBEN_REIHENFOLGE = "einstufung,zusatz,fehlerlabor,uebungen,wortreview,blitz,hoeren,hoerneu,lueck,muendlich,begleiter,schatten,phonetik,vortrag,interview,briefe,szenarien,pflege,vollpruefung,leseleiter,redemittel,leben,tiefen,lesestoff,spiele,katalog";
 
 const KARTE: Record<string, { icon: string; titel: string; unter: string }> = {
   einstufung: { icon: "🪪", titel: "تحديد المستوى التكيّفي", unter: "تشخيص بأربع مهارات يقترح يوم دخولٍ آمنًا في الخطة." },
@@ -75,6 +76,7 @@ const KARTE: Record<string, { icon: string; titel: string; unter: string }> = {
   tiefen: { icon: "📖", titel: "معجم المفردات", unter: "ابحث عن كلمة أو معنى عند الحاجة." },
   lesestoff: { icon: "📚", titel: "قراءة وحوارات حرة", unter: "قصص ونصوص وحوارات جديدة لكل المستويات مع أسئلة فهم (R300 — خارج الخطة)." },
   spiele: { icon: "🎮", titel: "ألعاب الكلمات", unter: "شبكة كلمات من مفرداتك، أكمل الحوار، وترجم بكتابتك (R300 — خارج الخطة)." },
+  wortreview: { icon: "🧠", titel: "مراجعة الكلمات الموسعة", unter: "5 أنماط + تصفية + SRS ذكي — كل المفردات 6202 في لوحة واحدة." },
   katalog: { icon: "🗃️", titel: "دليل التدريبات", unter: "استعرض التدريبات المتاحة في الأكاديمية." },
 };
 
@@ -83,7 +85,7 @@ const MENU_GROUPS: { id: string; title: string; description: string; items: stri
     id: "ueben-priority",
     title: "ابدأ بالأهم",
     description: "ابدأ بما بقي من الدرس، ثم راجع الأخطاء.",
-    items: ["einstufung", "zusatz", "fehlerlabor", "uebungen", "blitz"],
+    items: ["einstufung", "zusatz", "fehlerlabor", "uebungen", "wortreview", "blitz"],
   },
   {
     id: "ueben-skills",
@@ -109,6 +111,13 @@ export default function Ueben() {
   useEffect(() => {
     setAbend(localStorage.getItem("weg-abend") === "1");
     setGeladen(true);
+    try {
+      const params = new URLSearchParams(window.location.search);
+      const f = params.get("filter");
+      if (f && ["wohnen","behoerde","gesundheit","arbeit","familie","mobilitaet","alltag"].includes(f)) {
+        setOffen("leben");
+      }
+    } catch {}
   }, []);
 
   const day = progress.plan.day;
@@ -248,6 +257,7 @@ export default function Ueben() {
           {offen === "leben" && <LebensweltStation />}
           {offen === "lesestoff" && <LeseStoffStation />}
           {offen === "spiele" && <SpieleStation />}
+          {offen === "wortreview" && <WortReviewErweitert />}
           {offen === "katalog" && <KatalogLeiste />}
           </FehlerGrenze>
         </section>

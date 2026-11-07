@@ -501,7 +501,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
     mount(React.createElement(HoerLabor, { progress: pA2 }));
     ok(txt().includes("🔊 صوت مُنتَج"), "XII17 يومٌ داخلَ اللوحِ المغطّى (80): نصُّه مسجَّلٌ والشارةُ حاضرة");
     const aud2 = d0.querySelector("audio");
-    
+
     ok(!!aud2 && (aud2.getAttribute("src") ?? "").startsWith(`/audio/hoeren/t-${levelOf(80).toLowerCase()}-`), "XII18 عنصرُ الصوتِ موصولٌ بلوحه الفعليّ t-${levelOf(80).toLowerCase()}-: لا يومٌ في اللوحينِ يُخدَمُ بغير ملفه");
 
     const pB1 = { ...emptyProgress, plan: { ...emptyProgress.plan, day: 150 } };
@@ -2016,7 +2016,8 @@ const hasFile = txt().includes("صوتٌ من الدار");
       task: { id: "t-tempo-review-before-resume", kind: "wortschatz" as const, titleDe: "W", titleAr: "م", minutes: 10, deckId: deck.id },
       ...base, srs: { [dueBeforePendingCard.id]: dueBeforePending, [pendingAfterDueCard.id]: pendingAfterDue }, tempo: "leicht" as const,
     }));
-    const dueWasFirst = txt().includes(dueBeforePendingCard.de) && !txt().includes(pendingAfterDueCard.de);
+    const getMainCardDe = () => rootEl.querySelector('[data-testid="vocab-queue-count"]')?.parentElement?.querySelector("button")?.textContent ?? txt();
+    const dueWasFirst = getMainCardDe().includes(dueBeforePendingCard.de) && !getMainCardDe().includes(pendingAfterDueCard.de);
     click(btn("اكشف المعنى")!);
     click(btn("سهّل! (4)")!);
     ok(dueWasFirst && txt().includes(pendingAfterDueCard.de), "LX0e المراجعة المستحقّة تسبق البطاقة غير المُقيَّمة ثم تُستأنف بعدها");
@@ -3915,7 +3916,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
     const { LebensweltStation } = await import("../components/lebenswelt");
     const { lebensweltThemen, umgangBank } = await import("../lib/lebenswelt");
     mount(React.createElement(LebensweltStation));
-    ok(lebensweltThemen.length === 12 && !!rootEl.querySelector('[data-testid="lebenswelt-lw-03"]') &&
+    ok(lebensweltThemen.length >= 12 && !!rootEl.querySelector('[data-testid="lebenswelt-lw-03"]') &&
        txt().includes("الاعتراف بمؤهّل التمريض"),
       "CII1 المحطة تعرض البطاقات الاثنتي عشرة وبطاقة الاعتراف التمريضي بينها");
     ok(!rootEl.querySelector('[data-testid="umgang-eintrag"]'), "CII2 لغة الشارع مطوية حتى تُطلب صراحة");

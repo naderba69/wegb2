@@ -67,6 +67,19 @@ export const PRUEFUNG_B2_BESTEHEN = 240;
 export const D1_B1_DECKEL_MIN = 240;
 export const D1_B2_DECKEL_MIN = 270;
 
+/** مسارات بديلة لمراعاة العامل بنظام مناوبات — توثيق لا تغيير إجباري للـ 378
+ *  intensiv 180ي = B2 249.3ساعة / 45 يوم = 332د/يوم → يتجاوز السقف لذا يُقطع محتوى مراجعة/أدوات (K260) — للمتفرغ
+ *  normal 378ي = 152د/يوم B2 متوسط (داخل السقف D1_B2_DECKEL_MIN) — الافتراضي الموثق R169
+ *  langsam 600ي = 74د/يوم — للعامل بنظام مناوبات، يمدّد المراجعة ويحافظ على السقف
+ *  الاختيار عبر Einstellungen → Tempo (leicht/regelmaessig/intensiv) يؤثر فعليًا في الحمل اليومي (LERNLAST) وعدد البطاقات الجديدة،
+ *  بينما عدد الأيام الكلي يبقى 378 حتميًا للاختبارات (K63) — المسارات البديلة موثقة هنا كمرجع تربوي لا كتفرع إجباري للخطة.
+ */
+export const ALTERNATIVE_PFADE = {
+  intensiv: { tage: 180, b2Tage: 45, hinweisAr: "مكثف — للمتفرغ، يقطع المراجعة لاحترام السقف" },
+  normal: { tage: 378, b2Tage: 98, hinweisAr: "منتظم — 152د/يوم B2 متوسط داخل السقف (R169)" },
+  langsam: { tage: 600, b2Tage: 160, hinweisAr: "بطيء — للعامل بنظام مناوبات، 74د/يوم" },
+} as const;
+
 /** أول يوم في كل مستوى */
 export const PHASE_START: Record<Level, number> = {
   A0: PHASEN.A0.von, A1: PHASEN.A1.von, A2: PHASEN.A2.von, B1: PHASEN.B1.von, B2: PHASEN.B2.von,

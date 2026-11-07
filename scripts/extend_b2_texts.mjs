@@ -1,0 +1,71 @@
+import fs from 'fs';
+const path='content/texts.json';
+const texts=JSON.parse(fs.readFileSync(path,'utf8'));
+const extensions={
+"t-b2-21": {
+ de_add: " Erst später, als Tarek ihn darauf ansprach, erkannte Rami, dass nicht das Ausrufezeichen fehlte, sondern ein Gespräch. Weil er seine Enttäuschung nicht ausgesprochen hatte, obwohl er Gelegenheit dazu gehabt hätte, war die kurze Nachricht mehrdeutig geblieben. In der Supervision lernen wir, dass Höflichkeit ohne Klarheit als Kränkung gelesen werden kann, weil der Empfänger die Leerstelle mit eigenen Befürchtungen füllt. Deshalb üben wir: Glückwunsch mit konkreter Würdigung, damit die Beziehung nicht von einer Interpretation abhängt. So wird aus einem Missverständnis eine Klärung, obwohl der Anlass klein wirkt.",
+ ar_add: " لاحقاً عندما واجهه طارق، أدرك رامي أن المشكلة لم تكن علامة التعجب بل غياب الحديث. ولأنه لم يصرح بخيبة أمله رغم الفرصة، بقيت الرسالة ملتبسة. نتعلّم أن المجاملة بلا وضوح قد تُقرأ جرحاً، لأن المتلقي يملأ الفراغ بمخاوفه. لذا نتدرب: تهنئة بتقدير محدد، حتى لا تتعلق العلاقة بتفسير واحد. هكذا يتحول سوء الفهم إلى توضيح، رغم صغر المناسبة."
+},
+"t-b2-22": {
+ de_add: " In der ersten Woche nach ihrer Rückkehr beobachtete sie, wie unterschiedlich das Team reagierte, obwohl die Diagnose für alle gleich gewesen war. Einige fragten direkt, andere vermieden das Thema, weil sie fürchteten, etwas Falsches zu sagen. Frau Lang merkte, dass Unterstützung nicht nur Hilfe bedeutet, sondern auch Raum lässt, damit die Rückkehrerin selbst bestimmt, wann sie über die Erkrankung spricht. Weil transparente Absprachen über Aufgaben und Pausen fehlten, obwohl der Betriebsarzt sie empfohlen hatte, entstanden neue Missverständnisse. Deshalb gilt für sie: Genesung braucht nicht nur Zeit, sondern Vereinbarungen, die Entlastung ermöglichen, ohne die Kompetenz abzusprechen.",
+ ar_add: " في الأسبوع الأول بعد عودتها لاحظت اختلاف ردود الفريق رغم أن التشخيص واحد. بعضهم سأل مباشرة وآخرون تجنبوا الموضوع خوفاً من الخطأ. أدركت أن الدعم لا يعني المساعدة فقط بل ترك المجال لتحديد متى تتحدث عن المرض. ولغياب اتفاقات واضحة عن المهام والاستراحات رغم توصية طبيب الشركة، نشأت سوء فهم جديد. لذا ترى: الشفاء يحتاج وقتاً واتفاقات تريح دون سلب الكفاءة."
+},
+"t-b2-24": {
+ de_add: " Dass sie die Sprache beherrschte, half hier wenig, weil Vorlesungen nicht nur Informationen vermitteln, sondern Denkweisen voraussetzen, die im deutschen Schulsystem früh geübt werden: Hypothese, Beleg, Gegenargument. Während sie in Tunis gelernt hatte, Wissen zusammenzufassen, sollte sie nun Positionen vergleichen und bewerten, obwohl die Quellen selbst widersprüchlich waren. Weil Orientierung fehlte, obwohl das Vorlesungsverzeichnis Termine und Räume nannte, verpasste sie das Tutorium, das genau diese Arbeitstechniken erklärte. Am Ende war das Problem nicht das Verstehen einzelner Wörter, sondern das Einordnen in einen wissenschaftlichen Diskurs, der für Erstsemester neu ist.",
+ ar_add: " إتقان اللغة لم يكف كثيراً، لأن المحاضرات لا تنقل معلومات فقط بل تفترض طرق تفكير تُدرّب مبكراً في النظام الألماني: فرضية ودليل وحجة مضادة. بينما تعلمت في تونس تلخيص المعرفة، عليها الآن مقارنة المواقف وتقييمها رغم تناقض المصادر. ولغياب التوجيه رغم ذكر المواعيد والقاعات في الدليل، فاتها التدريب الذي يشرح هذه التقنيات. في النهاية لم تكن المشكلة فهم كلمات، بل تصنيفها في خطاب أكاديمي جديد على المستجدين."
+},
+"t-b2-25": {
+ de_add: " Nach dem Abpfiff stand der Trainer lange still, weil er wusste, dass Worte in diesem Moment mehr verletzen als trösten können. Obwohl die Spieler verdient hätten, gelobt zu werden, weil sie bis zur letzten Minute gekämpft hatten, sprachen alle nur über die eine Entscheidung. Später, in der Kabine, sagte der älteste Spieler, dass Gerechtigkeit im Sport nie vollständig sei, weil Regeln ausgelegt werden müssen, und dass Enttäuschung dazugehöre, ohne den Einsatz zu entwerten. Deshalb bleibt vom Turnier nicht nur das Ergebnis, sondern die Erfahrung, eine Niederlage gemeinsam zu tragen, was die Mannschaft stärker macht als ein Sieg es gekonnt hätte.",
+ ar_add: " بعد الصافرة وقف المدرب صامتاً لأنه علم أن الكلام قد يجرح أكثر مما يواسي. ورغم استحقاق اللاعبين المدح لقتالهم حتى النهاية، تحدث الجميع عن قرار واحد فقط. لاحقاً قال أقدم لاعب إن العدالة في الرياضة لا تكتمل لأن القواعد تحتاج تفسيراً، وإن الخيبة جزء منها دون تقليل الجهد. لذا لم يبق من البطولة النتيجة فقط بل خبرة حمل الهزيمة معاً، مما يقوي الفريق أكثر من الفوز."
+},
+"t-b2-32": {
+ de_add: " Als ich nachfragte, erklärte sie, dass Bilder ohne Filter in ihrem Freundeskreis kaum Likes bekommen, weil Algorithmen Gesichter mit weichen Konturen bevorzugen, obwohl alle wissen, dass diese Bilder bearbeitet sind. Weil Anerkennung in dieser Logik an Sichtbarkeit gekoppelt ist, entsteht Druck, das eigene Bild ständig zu optimieren. Dabei wisse sie, dass Perfektion nicht schützt, weil Kommentare trotzdem vergleichen und bewerten. Deshalb frage ich mich, ob das perfekte Bild nicht mehr über den Markt als über Schönheit erzählt, obwohl es privat gemeint ist.",
+ ar_add: " عندما سألتها أوضحت أن الصور بلا فلتر لا تحصل على إعجابات لأن الخوارزميات تفضل الوجوه الناعمة رغم معرفة الجميع أنها معدلة. ولأن التقدير مرتبط بالظهور، ينشأ ضغط لتحسين الصورة باستمرار. وهي تعلم أن الكمال لا يحمي لأن التعليقات تقارن وتقيّم دوماً. لذا أتساءل إن كانت الصورة المثالية تحكي عن السوق أكثر من الجمال رغم قصدها الشخصي."
+},
+"t-b2-33": {
+ de_add: " Mit der Zeit verschoben sich seine Prioritäten, weil der Verein nicht nur Training anbot, sondern Zugehörigkeit. Obwohl er als Stürmer weniger Einsatzzeit bekam, blieb er wegen der Gemeinschaft, der Fahrten und der Verantwortung im Jugendteam. Als die Mitgliederversammlung über höhere Beiträge entschied, obwohl viele wegen gestiegener Lebenshaltungskosten dagegen waren, stellte er fest, dass Ehrenamt auch Konflikte bedeutet. Deshalb war der Gedanke an den Austritt weniger eine Entscheidung gegen den Fußball als eine Frage, ob Engagement und Nutzen noch zusammenpassten, was viele Mitglieder beschäftigt, wenn sich das Leben ändert.",
+ ar_add: " مع الوقت تغيرت أولوياته لأن النادي لم يقدم تدريباً فقط بل انتماءً. ورغم قلة وقت لعبه كمهاجم، بقي من أجل الجماعة والرحلات والمسؤولية في فريق الشباب. وعندما قررت الجمعية زيادة الاشتراكات رغم معارضة كثيرين بسبب غلاء المعيشة، أدرك أن التطوع يعني أيضاً خلافات. لذا لم يكن التفكير في الخروج قراراً ضد كرة القدم بل تساؤلاً إن كان الالتزام والمنفعة لا يزالان متوافقين، وهو ما يشغل كثيرين عند تغير الحياة."
+},
+"t-b2-34": {
+ de_add: " Dabei fällt auf, dass jede Fassung andere Akteure in den Vordergrund stellt, weil Wortwahl und Reihenfolge Aufmerksamkeit lenken. Während die Agenturmeldung mit Zahlen beginnt, beginnt der Leitartikel mit einer Bewertung, obwohl beide dieselbe Quelle nutzen. Die Clickbait-Version verkürzt, weil Kürze Klicks bringt, und verschiebt dadurch die Verantwortung auf die Überschrift. Weil die Zehntklässler diese Mechanismen vergleichen, verstehen sie, dass Lesen nicht nur Verstehen, sondern Einordnen bedeutet, obwohl alle drei Texte formal korrekt wirken.",
+ ar_add: " يلاحظ أن كل صياغة تبرز فاعلين مختلفين لأن اختيار الكلمات وترتيبها يوجه الانتباه. فبينما تبدأ برقية الوكالة بالأرقام، يبدأ المقال الافتتاحي بتقييم رغم استخدام نفس المصدر. ونسخة الإثارة تُختصر لأن الإيجاز يجلب نقرات، فتنقل المسؤولية إلى العنوان. ولأن الطلبة يقارنون هذه الآليات، يفهمون أن القراءة ليست فهماً فقط بل تصنيفاً، رغم صحة النصوص شكلاً."
+},
+"t-b2-35": {
+ de_add: " Rückblickend sagt sie, dass Begriffe wie *Variable* oder *Kohorte* anfangs Halt gaben, weil sie Komplexität ordneten, obwohl sie zugleich vereinfachten. Mit der Projektleitung lernte sie, dass Förderung nicht nur Geld, sondern Erwartungen bedeutet: Berichte, Anträge, Rechtfertigungen, die Zeit für Forschung kosten. Weil sie diese Doppelrolle früh reflektierte, konnte sie ihr Team schützen, indem sie Aufgaben verteilte, die zum Thema passten, ohne die Personen zu überfordern. Deshalb lautet ihr Rat an Promovierende: Sammelt nicht nur Begriffe, sondern Routinen, die Wissenschaft im Alltag tragbar machen, weil nur so aus Wissen Praxis wird.",
+ ar_add: " ترى بأثر رجعي أن مصطلحات مثل متغير أو فوج أعطت تماسكاً في البداية لأنها نظمت التعقيد رغم تبسيطها. ومع قيادة المشروع تعلمت أن التمويل يعني أيضاً توقعات: تقارير وطلبات وتبريرات تكلف وقت البحث. ولأنها تأملت هذا الدور المزدوج مبكراً، حمت فريقها بتوزيع مهام مناسبة دون إرهاق. لذا تنصح طلبة الدكتوراه: اجمعوا ليس مصطلحات فقط بل روتينات تجعل العلم قابلاً للحياة يومياً، لأن المعرفة تصبح ممارسة بهذه الطريقة."
+},
+"t-b2-36": {
+ de_add: " Gegner der Verlegung argumentieren, dass ein späterer Beginn nur verschiebt, was ohnehin früh beginnt, weil Busse fahren, Eltern arbeiten und Vereine trainieren. Befürworter entgegnen, dass Schlaf in der Pubertät biologisch später eintritt, weshalb frühes Aufstehen die Leistung senkt, obwohl Jugendliche formal anwesend sind. Weil Schulen in Pilotversuchen mit 8:30 statt 8:00 oft bessere Noten und weniger Fehlzeiten meldeten, obwohl die Gesamtstundenzahl gleich blieb, wird die Debatte nicht nur pädagogisch, sondern ökonomisch geführt. Deshalb bleibt die Frage, ob Gesundheitsschutz nicht wichtiger ist als Stundenplantradition, auch wenn er mehr Koordination verlangt.",
+ ar_add: " يعارض المؤجلون بأن التأخير ينقل ما يبدأ مبكراً لأن الحافلات تسير والأهل يعملون والأندية تتدرب. ويرد المؤيدون بأن النوم في المراهقة يأتي متأخراً بيولوجياً لذا يقوض الاستيقاظ المبكر الأداء رغم الحضور. ولأن مدارس جربت 8:30 بدل 8:00 وأبلغت عن درجات أفضل وغياب أقل رغم ثبات الساعات، تدار المناقشة تربوياً واقتصادياً. لذا يبقى السؤال إن كانت حماية الصحة أهم من تقليد الجدول رغم حاجتها لتنسيق أكثر."
+},
+"t-b2-37": {
+ de_add: " Später verstand ich, dass Direktheit in Deutschland oft als Respekt gilt, weil sie Zeit spart und Verantwortung klar verteilt, obwohl sie für andere harsch klingen kann. Umgekehrt gilt Zurückhaltung bei uns nicht als Ausweichen, sondern als Höflichkeit, weil sie dem Gegenüber erlaubt, das Gesicht zu wahren. Weil beide Stile unterschiedliche Höflichkeitssysteme nutzen, entstehen Missverständnisse nicht aus Absicht, sondern aus Normen. Deshalb hilft im interkulturellen Team nicht die Frage, wer recht hat, sondern wie man Feedback so formuliert, dass Klarheit und Beziehung gleichzeitig geschützt werden, was beide Seiten lernen müssen.",
+ ar_add: " لاحقاً فهمت أن المباشرة في ألمانيا تُعد احتراماً لأنها توفر الوقت وتوضح المسؤولية رغم أنها قد تبدو قاسية. وبالمقابل فإن التحفظ عندنا ليس تهرباً بل مجاملة لأنه يحفظ ماء الوجه. ولأن الأسلوبين يستخدمان نظامي مجاملة مختلفين، ينشأ سوء الفهم من المعايير لا النية. لذا لا يفيد في الفريق متعدد الثقافات سؤال من على حق بل كيف نصوغ الملاحظة لتحمي الوضوح والعلاقة معاً، وهو ما يجب أن يتعلمه الطرفان."
+},
+"t-b2-38": {
+ de_add: " Von 2015 bis 2018 behielten 25 000 isländische Beschäftigte bei gleicher Bezahlung ihre Produktivität, während Stress sank und die Vereinbarkeit von Beruf und Familie stieg. In Großbritannien testeten 61 Firmen mit 2 900 Mitarbeitenden sechs Monate lang 32 Stunden bei vollem Lohn; nach dem Versuch blieben 91 % beim Modell, weil Umsatz und Kundenzufriedenheit stabil blieben, obwohl die Arbeitszeit um 20 % sank. Kritiker betonen, dass nicht jede Branche diese Kürzung tragen kann, weil Pflege oder Gastronomie Präsenz verlangt. Deshalb zeigen Pilotprojekte weniger ein Rezept als eine Bedingung: Weniger Zeit braucht andere Organisation, sonst bleibt sie nur Wunsch.",
+ ar_add: " من 2015 إلى 2018 حافظ 25 ألف موظف آيسلندي على إنتاجيتهم بنفس الأجر بينما انخفض التوتر وتحسّن التوفيق بين العمل والأسرة. وفي بريطانيا جربت 61 شركة مع 2900 موظف 32 ساعة بأجر كامل لستة أشهر؛ بعد التجربة بقي 91% على النموذج لأن المبيعات ورضا العملاء استقرا رغم خفض الوقت 20%. ويؤكد النقاد أن ليس كل قطاع يتحمل التقليص لأن الرعاية والمطاعم تتطلب حضوراً. لذا تظهر التجارب شرطاً لا وصفة: تقليل الوقت يحتاج تنظيماً مختلفاً وإلا بقي أمنية."
+},
+"t-b2-39": {
+ de_add: " Wer aus der Stadt wegzieht, tauscht oft zentrale Lage gegen Fläche, weil Baugrund günstiger und Wohnungen größer sind, obwohl Fahrtkosten steigen. In ländlichen Regionen fahren Busse im Stundentakt oder seltener, was Teilhabe erschwert, weil Kultur, Arzt und Schule dann ein Auto voraussetzen. Gleichzeitig berichten Zugezogene, dass Nachbarschaft dort stärker trägt, weil Vereine und Feste Kontakte stiften, die in der Großstadt anonym bleiben. Deshalb ist die Entscheidung nicht nur ökonomisch, sondern sozial: Sie hängt davon ab, welche Abhängigkeiten man bereit ist zu akzeptieren, obwohl beide Lebensformen Vor- und Nachteile haben.",
+ ar_add: " من يغادر المدينة يستبدل الموقع المركزي بالمساحة لأن أرض البناء أرخص والشقق أكبر رغم ارتفاع كلفة التنقل. وفي الأرياف تعمل الحافلات كل ساعة أو أقل مما يصعب المشاركة لأن الثقافة والطبيب والمدرسة تتطلب سيارة. في المقابل يروي الوافدون أن الجوار هناك أكثر دعماً لأن الجمعيات والاحتفالات تخلق علاقات تبقى مجهولة في المدينة. لذا ليس القرار اقتصادياً فقط بل اجتماعياً: يتوقف على تبعيات المرء مستعد لقبولها رغم مزايا وعيوب كل نمط حياة."
+},
+"t-b2-40": {
+ de_add: " In Befragungen geben viele an, dass sie aus Höflichkeit lügen, weil Wahrheit in diesem Moment verletzen würde, obwohl sie Ehrlichkeit als Wert nennen. Andere Lügen schützen die eigene Gruppe, etwa wenn Mitarbeitende Fehler verschweigen, weil sie Sanktionen fürchten. Weil Lügen kurzfristig entlasten, obwohl sie langfristig Vertrauen kosten, empfehlen Trainings, Motive zu unterscheiden, statt Personen zu verurteilen. Deshalb ist die Frage nicht, ob Menschen lügen, sondern wozu sie es tun und welche Kultur Lügen überflüssig macht, weil Alternativen wie klares Feedback geübt werden.",
+ ar_add: " في استطلاعات يقول كثيرون إنهم يكذبون مجاملة لأن الحقيقة قد تجرح حينها رغم تسميتهم الصدق قيمة. وأكاذيب أخرى تحمي الجماعة كإخفاء الموظفين أخطاءهم خوف العقاب. ولأن الكذب يريح قصيراً رغم كلفته للثقة طويلاً، توصي التدريبات بتمييز الدوافع لا إدانة الأشخاص. لذا ليس السؤال هل يكذب الناس بل لماذا يفعلون وأي ثقافة تجعل الكذب غير لازم لأن بدائل كالتغذية الواضحة تُتدرب."
+},
+};
+
+let updated=0;
+for (let t of texts){
+  const ext=extensions[t.id];
+  if (!ext) continue;
+  const beforeW=t.de.split(/\s+/).length;
+  t.de = t.de.trim() + "\n\n" + ext.de_add.trim();
+  t.ar = t.ar.trim() + "\n\n" + ext.ar_add.trim();
+  const afterW=t.de.split(/\s+/).length;
+  console.log(`${t.id}: ${beforeW} -> ${afterW}`);
+  updated++;
+}
+fs.writeFileSync(path, JSON.stringify(texts, null, 2), 'utf8');
+console.log(`Updated ${updated} texts`);
