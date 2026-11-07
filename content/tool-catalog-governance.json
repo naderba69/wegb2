@@ -20595,19 +20595,22 @@
       "decision": "defer",
       "researchStatus": "citation-label-unverified",
       "productStatus": "candidate-live-implementation",
-      "automatedTestStatus": "not-demonstrated",
+      "automatedTestStatus": "verified",
       "fieldValidationStatus": "not-tested",
       "reviewerRole": "internal-methodology-triage",
       "reviewedAt": "2026-11-07",
       "risk": "high",
-      "rationaleAr": "توجد محطة ألعاب حية تشمل شبكة مفردات باسترجاع، وإكمال حوار، وترجمة منتجة مع تغذية راجعة وتسجيل مهارة، وهذا تطابق مرشح لممارسة لغوية داخل ألعاب لا لمجرد نقاط خارجية. لكنها لا توثق مبادئ Gee أو أهدافاً وموازنة صعوبة ونقل تعلم، وتصحيح الترجمة العددي محدود؛ لذلك يؤجل ادعاء Game-Based Learning وأثره.",
+      "rationaleAr": "توجد محطة ألعاب حية تشمل شبكة مفردات باسترجاع، وإكمال حوار، وترجمة منتجة مع تغذية راجعة وتسجيل مهارة، وهذا تطابق مرشح لممارسة لغوية داخل ألعاب لا لمجرد نقاط خارجية. أثبتت دورة TC-988-2026-11-07 سلوك المحركات والمسارات الموجبة والسالبة وحدود القياس والإتاحة الآلية والخصوصية المحلية، لكنها لا توثق مبادئ Gee أو أثر التعلم ولم تُختبر ميدانياً؛ لذلك يبقى الادعاء مؤجلاً ولا يرقى إلى wired-and-tested.",
       "candidateEvidence": [
         "components/spiele.tsx",
         "lib/spiele.ts",
         "app/ueben/page.tsx",
         "lib/kompetenz.ts",
-        "scripts/interaktiv_test.tsx"
+        "scripts/engine_smoke.ts",
+        "scripts/interaktiv_test.tsx",
+        "evidence/tool-catalog/988-game-based-language-practice.json"
       ],
+      "productionEvidence": "evidence/tool-catalog/988-game-based-language-practice.json",
       "relatedIds": [
         188,
         229,

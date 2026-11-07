@@ -4520,6 +4520,50 @@ const hasFile = txt().includes("صوتٌ من الدار");
   act(() => { dom.window.localStorage.removeItem(progressKeyActive()); });
 }
 
+/* ═══ R311 — دورة إثبات السلوك لمحطة الألعاب (Tool 988) ═══ */
+{
+  const { SpieleStation } = await import("../components/spiele");
+  const { vocabMap, dialogues, sentences } = await import("../lib/content");
+  const { baueWortgitter, dialogLuecke, uebersetzRunde } = await import("../lib/spiele");
+  mount(React.createElement(SpieleStation));
+
+  const poolA1 = Object.values(vocabMap)
+    .filter((deck) => deck.level === "A1")
+    .flatMap((deck) => deck.cards.map((card) => ({ wort: card.de, ar: card.ar })));
+  const gitterRunde = baueWortgitter(poolA1, 97 + "A1".charCodeAt(1));
+  const erstesZiel = gitterRunde.treffer[0];
+  ok(!!erstesZiel, "R311-1 دورة الدليل تولّد هدف شبكة حقيقيًا من مفردات A1");
+  if (erstesZiel) {
+    for (const [r, c] of erstesZiel.zellen) click(rootEl.querySelector(`[data-testid="spiel-gitter-zelle-${r}-${c}"]`) as HTMLElement);
+    click(rootEl.querySelector('[data-testid="spiel-gitter-pruefen"]') as HTMLElement);
+    const meldung = rootEl.querySelector('[data-testid="spiel-gitter-meldung"]');
+    ok(!!meldung && (meldung.textContent ?? "").includes(erstesZiel.wort) && meldung.getAttribute("role") === "status", "R311-2 مسار نجاح الشبكة يثبت الكلمة ويعلن التغذية لقارئ الشاشة");
+  }
+
+  click(rootEl.querySelector('[data-testid="spiel-tab-dialog"]') as HTMLElement);
+  const dialogRunde = dialogLuecke(dialogues.filter((dialog) => dialog.level === "A1"), 60);
+  const dialogButtons = Array.from(rootEl.querySelectorAll('[data-testid^="spiel-dialog-opt-"]')) as HTMLButtonElement[];
+  const falscheOption = dialogButtons.find((button) => (button.textContent ?? "").trim().replace(/[✓✗]\s*$/, "").trim() !== dialogRunde?.richtig);
+  ok(!!dialogRunde && !!falscheOption, "R311-3 دورة الدليل تملك مسار خطأ حقيقيًا لا خيارًا صائبًا فقط");
+  if (falscheOption) click(falscheOption);
+  const dialogFeedback = rootEl.querySelector('[data-testid="spiel-dialog-feedback"]');
+  ok(!!dialogFeedback && (dialogFeedback.textContent ?? "").includes("الجملة الصحيحة") && dialogButtons.every((button) => button.disabled), "R311-4 الخطأ يكشف الصواب والمعنى ويقفل الإجابة المكررة");
+
+  click(rootEl.querySelector('[data-testid="spiel-tab-uebersetz"]') as HTMLElement);
+  const uebersetzInput = rootEl.querySelector('[data-testid="spiel-uebersetz-input"]') as HTMLTextAreaElement;
+  const uebersetzPruefen = rootEl.querySelector('[data-testid="spiel-uebersetz-pruefen"]') as HTMLButtonElement;
+  const uebersetzSatz = uebersetzRunde(sentences, "A1", 46);
+  ok(uebersetzPruefen.disabled && !!uebersetzSatz && uebersetzInput.labels?.length === 1, "R311-5 الترجمة الفارغة ممنوعة والحقل يحمل تسمية وصولية صريحة");
+  if (uebersetzSatz) {
+    typeIn(uebersetzInput, uebersetzSatz.de);
+    click(uebersetzPruefen);
+  }
+  const uebersetzErgebnis = rootEl.querySelector('[data-testid="spiel-uebersetz-ergebnis"]');
+  ok(!!uebersetzErgebnis && (uebersetzErgebnis.textContent ?? "").includes("100%") && (uebersetzErgebnis.textContent ?? "").includes("لا يقيّم كل بدائل الترجمة"), "R311-6 المسار الموجب يعطي 100٪ ويعرض حد القياس بدل ادعاء فهم كل ترجمة");
+  ok((rootEl.querySelector('[data-testid="spiele-datenschutz"]')?.textContent ?? "").includes("لا تُرسل ترجمتك") && (rootEl.querySelector('[data-testid="spiele-lernziel"]')?.textContent ?? "").includes("اكتب جملة ألمانية"), "R311-7 هدف اللعبة وحدّ إرسال البيانات ظاهران للمتعلم");
+  await pruefeA11y("R311-8 محطة الألعاب بعد إكمال ترجمة وعرض التغذية");
+}
+
   console.log(`\n${beste} نجح · ${fehler} فشل`);
   if (fails.length) { console.log("الفاشلون:", fails.join(" | ")); process.exit(1); }
 

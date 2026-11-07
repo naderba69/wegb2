@@ -14,10 +14,10 @@ import type { Level } from "@/lib/types";
 
 type Spiel = "gitter" | "dialog" | "uebersetz";
 
-const SPIELE: { id: Spiel; titel: string }[] = [
-  { id: "gitter", titel: "🔤 شبكة الكلمات" },
-  { id: "dialog", titel: "💬 أكمل الحوار" },
-  { id: "uebersetz", titel: "✍️ ترجم بنفسك" },
+const SPIELE: { id: Spiel; titel: string; ziel: string }[] = [
+  { id: "gitter", titel: "🔤 شبكة الكلمات", ziel: "استرجع الكلمة الألمانية من معناها ثم حدّد حروفها بالترتيب." },
+  { id: "dialog", titel: "💬 أكمل الحوار", ziel: "اختر الجملة التي تكمل سياق الحوار ثم راجع معناها." },
+  { id: "uebersetz", titel: "✍️ ترجم بنفسك", ziel: "اكتب جملة ألمانية من دون خيارات ثم قارنها بالنموذج وحدود التصحيح." },
 ];
 
 /* ─────────────────────────── شبكة الكلمات ─────────────────────────── */
@@ -127,7 +127,7 @@ function WortGitterSpiel({ stufe }: { stufe: Level }) {
         <button type="button" className="btn btn-ghost" data-testid="spiel-gitter-neu" style={{ minHeight: "46px" }} onClick={() => setSamen((s) => s + 1)}>🔀 شبكة جديدة</button>
         {auswahl.length > 0 && <De style={{ fontWeight: 700 }}>{auswahl.map(([r, c]) => runde.gitter[r][c]).join("")}</De>}
       </div>
-      {meldung && <div style={{ fontSize: "0.86rem" }} data-testid="spiel-gitter-meldung">{meldung}</div>}
+      {meldung && <div style={{ fontSize: "0.86rem" }} role="status" aria-live="polite" data-testid="spiel-gitter-meldung">{meldung}</div>}
       {gefundene.length === runde.treffer.length && runde.treffer.length > 0 && (
         <div style={{ fontSize: "0.9rem" }}>🏆 وجدتَ كل الكلمات! اضغط «شبكة جديدة» لجولة أخرى.</div>
       )}
@@ -180,7 +180,7 @@ function DialogSpiel({ stufe }: { stufe: Level }) {
         })}
       </div>
       {wahl && (
-        <div style={{ fontSize: "0.86rem", lineHeight: 1.8 }} data-testid="spiel-dialog-feedback">
+        <div style={{ fontSize: "0.86rem", lineHeight: 1.8 }} role="status" aria-live="polite" data-testid="spiel-dialog-feedback">
           {wahl === richtig ? "✅ أحسنت! هذه هي الجملة الأصلية من الحوار." : `💡 الجملة الصحيحة: «${richtig}» — ولاحظ معناها وارتباطها بما قبلها وبعدها.`}
           <div>المعنى: {dialog.lines[loch].ar}</div>
           <div>
@@ -221,7 +221,8 @@ function UebersetzSpiel({ stufe }: { stufe: Level }) {
     <div style={{ display: "grid", gap: "0.6rem" }} data-testid="spiel-uebersetz">
       <div style={{ fontSize: "0.84rem", color: "var(--color-ink2)", lineHeight: 1.8 }}>اكتب الترجمة الألمانية لهذه الجملة بنفسك (بلا خيارات — الإنتاج الحقيقي):</div>
       <div style={{ fontSize: "1.15rem", fontWeight: 800, lineHeight: 1.9 }}>{satz.ar}</div>
-      <textarea value={eingabe} onChange={(e) => { setEingabe(e.target.value); setErgebnis(null); }}
+      <label htmlFor="spiel-uebersetz-eingabe" style={{ fontSize: "0.82rem", fontWeight: 700 }}>ترجمتك بالألمانية</label>
+      <textarea id="spiel-uebersetz-eingabe" value={eingabe} onChange={(e) => { setEingabe(e.target.value); setErgebnis(null); }}
         data-testid="spiel-uebersetz-input" dir="ltr" lang="de" rows={2}
         placeholder="Schreibe den deutschen Satz hier …"
         style={{ width: "100%", padding: "0.6rem", borderRadius: "10px", border: "1px solid var(--color-line)", fontSize: "1rem", textAlign: "left" }} />
@@ -232,7 +233,7 @@ function UebersetzSpiel({ stufe }: { stufe: Level }) {
         <button type="button" className="btn btn-ghost" data-testid="spiel-uebersetz-neu" style={{ minHeight: "46px" }} onClick={() => setSamen((s) => s + 1)}>🔀 جملة أخرى</button>
       </div>
       {ergebnis !== null && (
-        <div style={{ display: "grid", gap: "0.35rem", fontSize: "0.88rem", lineHeight: 1.85 }} data-testid="spiel-uebersetz-ergebnis">
+        <div style={{ display: "grid", gap: "0.35rem", fontSize: "0.88rem", lineHeight: 1.85 }} role="status" aria-live="polite" data-testid="spiel-uebersetz-ergebnis">
           <div>
             تطابق الكلمات: <strong className="rtl-num">{ergebnis}%</strong> —{" "}
             {ergebnis >= 85 ? "🏆 ممتاز! ترجمتك شبه مطابقة." : ergebnis >= 60 ? "👍 قريب جدًا — راجع الكلمات الناقصة." : "💡 قارن مع الجملة النموذجية وحاول مرة أخرى."}
@@ -271,25 +272,33 @@ export function SpieleStation() {
     <section className="card" data-testid="spiele-station" style={{ padding: "1rem 1.1rem", background: "var(--color-paper2)", display: "grid", gap: "0.6rem" }}>
       <strong>🎮 ألعاب الكلمات الحرة (من بنوك التطبيق نفسها)</strong>
       <div style={{ fontSize: "0.84rem", color: "var(--color-ink2)", lineHeight: 1.9 }}>
-        ثلاث ألعاب قصيرة تثبّت ما تعلّمته: ابحث عن الكلمات، أكمِل الحوار، وترجم بكتابتك. للمتعة والثبيت — خارج خطة الـ378 يومًا.
+        ثلاث ألعاب قصيرة تمارس ما تعلّمته: ابحث عن الكلمات، أكمِل الحوار، وترجم بكتابتك. للمتعة والتثبيت — خارج خطة الـ378 يومًا.
       </div>
-      <div style={{ display: "flex", gap: "0.35rem", flexWrap: "wrap" }}>
+      <div style={{ display: "flex", gap: "0.35rem", flexWrap: "wrap" }} role="group" aria-label="اختر لعبة">
         {SPIELE.map((s) => (
           <button key={s.id} type="button" className="chip" data-testid={`spiel-tab-${s.id}`}
+            aria-pressed={spiel === s.id}
             onClick={() => setSpiel(s.id)}
             style={{ cursor: "pointer", minHeight: "44px", background: spiel === s.id ? "var(--color-gold)" : undefined, color: spiel === s.id ? "var(--ui-on-accent)" : undefined }}>
             {s.titel}
           </button>
         ))}
       </div>
+      <div data-testid="spiele-lernziel" style={{ fontSize: "0.82rem", lineHeight: 1.8, padding: "0.45rem 0.65rem", borderRadius: "8px", background: "var(--color-gold-soft)" }}>
+        <strong>هدف الجولة:</strong> {SPIELE.find((s) => s.id === spiel)?.ziel}
+      </div>
       <div style={{ display: "flex", gap: "0.35rem", flexWrap: "wrap" }} role="group" aria-label="المستوى">
         {STOFF_STUFEN.map((s) => (
           <button key={s} type="button" className="chip" data-testid={`spiel-stufe-${s}`}
+            aria-pressed={stufe === s}
             onClick={() => setStufe(s)}
             style={{ cursor: "pointer", minHeight: "40px", background: stufe === s ? "var(--color-gold)" : undefined, color: stufe === s ? "var(--ui-on-accent)" : undefined }}>
             {s}
           </button>
         ))}
+      </div>
+      <div data-testid="spiele-datenschutz" style={{ fontSize: "0.76rem", color: "var(--color-ink2)", lineHeight: 1.75 }}>
+        الخصوصية: تعمل الألعاب والتصحيح الأساسي محليًا. لا تُرسل ترجمتك إلى نموذج خارجي إلا إذا فعّلت مفتاحك وضغطت زر التقييم بالذكاء بنفسك.
       </div>
       {!bereit ? (
         <div style={{ fontSize: "0.86rem" }}>البنوك تُحمَّل… لحظات وتبدأ اللعب.</div>

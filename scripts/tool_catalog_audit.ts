@@ -5,9 +5,10 @@ import { resolve } from "node:path";
 import YAML from "yaml";
 
 type Tool = { id: number; family: string; titleDe: string; titleAr: string; level: string; bloom: string; examRelevant: boolean; fase: string; research?: string; desc?: string; code?: string };
-type Override = { decision?: string; researchStatus?: string; productStatus?: string; automatedTestStatus?: string; fieldValidationStatus?: string; classification?: string; reviewerRole?: string; reviewedAt?: string; risk?: string; rationaleAr?: string; candidateEvidence?: string[]; relatedIds?: number[]; canonicalId?: number };
+type Override = { decision?: string; researchStatus?: string; productStatus?: string; automatedTestStatus?: string; fieldValidationStatus?: string; classification?: string; reviewerRole?: string; reviewedAt?: string; risk?: string; rationaleAr?: string; candidateEvidence?: string[]; productionEvidence?: string; relatedIds?: number[]; canonicalId?: number };
 type Governance = { schemaVersion: number; catalog: { firstId: number; lastId: number; expectedEntries: number }; claimAr: string; defaultState: Record<string, string>; allowedDecisions: string[]; allowedProductStatuses: string[]; productionAcceptance: string[]; overrides: Record<string, Override> };
-type Summary = { schemaVersion: number; total: number; firstId: number; lastId: number; citationLabels: number; genericPrototypeModules: number; exactDuplicateTitleGroups: Array<{ title: string; ids: number[] }>; resolvedExactDuplicateGroups: number; decisionBreakdown: Record<string, number>; reviewedDecisions: number; pendingTriage: number; relatedCatalogReferences: number; candidateLiveImplementations: number; adopted: number; productIntegrated: number; fieldValidated: number; claimAr: string };
+type Summary = { schemaVersion: number; total: number; firstId: number; lastId: number; citationLabels: number; genericPrototypeModules: number; exactDuplicateTitleGroups: Array<{ title: string; ids: number[] }>; resolvedExactDuplicateGroups: number; decisionBreakdown: Record<string, number>; reviewedDecisions: number; pendingTriage: number; relatedCatalogReferences: number; candidateLiveImplementations: number; automatedTested: number; adopted: number; productIntegrated: number; fieldValidated: number; claimAr: string };
+type ProductionEvidence = { schemaVersion: number; toolId: number; cycleId: string; lifecycleStatus: string; claimScopeAr: string; learningDesign: { targetLearnerAr: string; learnerVisibleActivities: string[]; measurableOutcomeAr: string; runtimeEvidence: string[] }; sourceReview: { status: string }; automatedTests: { status: string; commands: string[]; testCases: Array<{ id: string; file: string; coversAr: string }> }; accessibilityPrivacyReview: { status: string; accessibilityEvidence: string[]; privacyEvidence: string[]; limitationsAr: string }; fieldValidation: { status: string }; releaseDecision: { productStatus: string; decision: string; reasonAr: string } };
 type ReviewItem = { id: number; titleDe: string; titleAr: string; family: string; level: string; bloom: string; citationLabel: string | null; prototypeKind: string; duplicateTitleIds: number[]; status: Record<string, unknown> };
 type ReviewMatrix = { schemaVersion: number; claimAr: string; items: ReviewItem[] };
 
@@ -56,13 +57,41 @@ for (const tool of tools) {
 }
 const duplicateGroups = [...titleGroups.entries()].filter(([, groupedIds]) => groupedIds.length > 1);
 check(summary.total === tools.length && summary.firstId === Math.min(...ids) && summary.lastId === Math.max(...ids), "الملخص المولد يطابق النطاق الفعلي");
-const snapshotMarker = `<!-- tool-catalog-snapshot reviewed=${summary.reviewedDecisions} pending=${summary.pendingTriage} defer=${summary.decisionBreakdown.defer ?? 0} research=${summary.decisionBreakdown["research-only"] ?? 0} reject=${summary.decisionBreakdown["reject-not-applicable"] ?? 0} merge=${summary.decisionBreakdown["merge-duplicate"] ?? 0} related=${summary.relatedCatalogReferences} candidate=${summary.candidateLiveImplementations} -->`;
+const snapshotMarker = `<!-- tool-catalog-snapshot reviewed=${summary.reviewedDecisions} pending=${summary.pendingTriage} defer=${summary.decisionBreakdown.defer ?? 0} research=${summary.decisionBreakdown["research-only"] ?? 0} reject=${summary.decisionBreakdown["reject-not-applicable"] ?? 0} merge=${summary.decisionBreakdown["merge-duplicate"] ?? 0} related=${summary.relatedCatalogReferences} candidate=${summary.candidateLiveImplementations} tested=${summary.automatedTested} -->`;
 const governedDocs = ["README.md", "docs/TOOL_CATALOG_GOVERNANCE.md"];
 check(governedDocs.every((path) => readFileSync(resolve(ROOT, path), "utf8").includes(snapshotMarker)), "وثيقتا الكتالوج الحيّتان تطابقان لقطة الملخص المولد");
 check(reviewMatrix.schemaVersion === 1 && reviewMatrix.items.length === tools.length && reviewMatrix.items.every((item, index) => item.id === tools[index].id && item.titleDe === tools[index].titleDe && item.status.productStatus), "مصفوفة المراجعة تفهرس كل فكرة وحالتها بنداً بنداً");
 check(reviewMatrix.items.every((item) => JSON.stringify(item.status) === JSON.stringify({ ...governance.defaultState, ...(governance.overrides[String(item.id)] ?? {}) })), "الحالة المولدة لكل بند تطابق الافتراض وقرار المراجعة المسجل");
 const reviewedOverrides = Object.entries(governance.overrides).filter(([, entry]) => entry.decision && entry.decision !== "pending-academic-review");
 check(reviewedOverrides.every(([, entry]) => Boolean(entry.classification && entry.reviewerRole && entry.reviewedAt && /^\d{4}-\d{2}-\d{2}$/.test(entry.reviewedAt) && entry.risk && ["low", "medium", "high"].includes(entry.risk) && entry.rationaleAr && entry.rationaleAr.length > 40 && Array.isArray(entry.candidateEvidence) && entry.candidateEvidence.every((path) => existsSync(resolve(ROOT, path))))), "كل قرار فرز يحمل تصنيفاً ومبرراً ودور مراجع وتاريخاً ومخاطرة؛ ومسارات الأدلة المرشحة صالحة إن وجدت");
+check(Object.values(governance.overrides).every((entry) => ["citation-label-unverified", "verified"].includes(entry.researchStatus ?? governance.defaultState.researchStatus) && ["not-demonstrated", "verified"].includes(entry.automatedTestStatus ?? governance.defaultState.automatedTestStatus) && ["not-tested", "verified-or-not-required"].includes(entry.fieldValidationStatus ?? governance.defaultState.fieldValidationStatus)), "حالات المصدر والاختبار والميدان محصورة في انتقالات دورة الأدلة المعلنة");
+const productionEvidence = new Map<number, ProductionEvidence>();
+for (const [id, entry] of Object.entries(governance.overrides)) {
+  if (!entry.productionEvidence) continue;
+  const evidencePath = resolve(ROOT, entry.productionEvidence);
+  if (!existsSync(evidencePath)) continue;
+  try {
+    productionEvidence.set(Number(id), JSON.parse(readFileSync(evidencePath, "utf8")) as ProductionEvidence);
+  } catch {
+    // The check below reports malformed or missing evidence without claiming acceptance.
+  }
+}
+check(Object.entries(governance.overrides).every(([id, entry]) => !entry.productionEvidence || (entry.productionEvidence.startsWith("evidence/tool-catalog/") && productionEvidence.get(Number(id))?.schemaVersion === 1 && productionEvidence.get(Number(id))?.toolId === Number(id))), "كل دورة إثبات مسجلة في ملف صالح ومقيدة بمعرف بندها");
+check(Object.entries(governance.overrides).every(([id, entry]) => {
+  if (!entry.productionEvidence) return true;
+  const evidence = productionEvidence.get(Number(id));
+  return Boolean(evidence && evidence.cycleId && evidence.claimScopeAr.length > 80 && evidence.learningDesign.targetLearnerAr.length > 20 && evidence.learningDesign.learnerVisibleActivities.length > 0 && evidence.learningDesign.measurableOutcomeAr.length > 40 && evidence.learningDesign.runtimeEvidence.every((path) => existsSync(resolve(ROOT, path))) && ["pending", "verified"].includes(evidence.sourceReview.status) && ["pending", "verified-or-not-required"].includes(evidence.fieldValidation.status) && evidence.accessibilityPrivacyReview.status && evidence.accessibilityPrivacyReview.accessibilityEvidence.length > 0 && evidence.accessibilityPrivacyReview.privacyEvidence.length > 0 && evidence.accessibilityPrivacyReview.limitationsAr.length > 40 && evidence.releaseDecision.productStatus === entry.productStatus && evidence.releaseDecision.decision === entry.decision && evidence.releaseDecision.reasonAr.length > 40);
+}), "ملفات الإثبات تحدد الادعاء والمتعلم والنشاط والقياس والإتاحة والخصوصية والحدود وقرار الإصدار");
+const automatedVerified = Object.entries(governance.overrides).filter(([, entry]) => entry.automatedTestStatus === "verified");
+check(automatedVerified.every(([id, entry]) => {
+  const evidence = productionEvidence.get(Number(id));
+  return Boolean(entry.productionEvidence && evidence?.automatedTests.status === "verified" && evidence.automatedTests.commands.includes("npm run smoke") && evidence.automatedTests.commands.includes("npm run interaktiv") && evidence.automatedTests.testCases.length >= 3 && evidence.automatedTests.testCases.every((testCase) => existsSync(resolve(ROOT, testCase.file)) && readFileSync(resolve(ROOT, testCase.file), "utf8").includes(testCase.id) && testCase.coversAr.length > 20) && evidence.learningDesign.runtimeEvidence.every((path) => existsSync(resolve(ROOT, path))));
+}), `الاختبار المثبت مدعوم بحالات سلوكية موجبة وسالبة وحدّية قابلة لإعادة التشغيل (${automatedVerified.length})`);
+const wiredAndTested = Object.entries(governance.overrides).filter(([, entry]) => entry.productStatus === "wired-and-tested");
+check(wiredAndTested.every(([id, entry]) => {
+  const evidence = productionEvidence.get(Number(id));
+  return entry.decision === "adopt" && entry.researchStatus === "verified" && entry.automatedTestStatus === "verified" && entry.fieldValidationStatus === "verified-or-not-required" && evidence?.lifecycleStatus === "accepted" && evidence.sourceReview.status === "verified" && evidence.fieldValidation.status === "verified-or-not-required" && evidence.releaseDecision.productStatus === "wired-and-tested" && evidence.releaseDecision.decision === "adopt";
+}), `لا يبلغ wired-and-tested إلا بند أغلق المصدر والاختبار والميدان وقرار الإصدار (${wiredAndTested.length})`);
 check(summary.genericPrototypeModules === generic && generic === 720, `النماذج العامة غير الموصولة معلنة بدقة (${generic})`);
 check(summary.citationLabels === citationLabels && citationLabels === 811, `تسميات المراجع الأولية معدودة دون تسميتها مراجع موثقة (${citationLabels})`);
 check(summary.exactDuplicateTitleGroups.length === duplicateGroups.length, `مجموعات العناوين المتطابقة مكشوفة (${duplicateGroups.length})`);
@@ -78,7 +107,10 @@ const relatedCatalogReferences = Object.values(governance.overrides).reduce((cou
 check(summary.relatedCatalogReferences === relatedCatalogReferences, `الإحالات المفاهيمية محسوبة دون تسميتها دمجاً (${relatedCatalogReferences})`);
 const candidateLiveImplementations = Object.values(governance.overrides).filter((entry) => entry.productStatus === "candidate-live-implementation").length;
 check(summary.candidateLiveImplementations === candidateLiveImplementations, `التنفيذات الحية المرشحة مفصولة عن الجاهزية الإنتاجية (${candidateLiveImplementations})`);
-check(summary.productIntegrated === 0 && summary.fieldValidated === 0 && summary.adopted === 0, "لا اكتمال أو تحقق ميداني مصطنع قبل المصدر والتوصيل والاختبار");
+check(summary.automatedTested === automatedVerified.length, `الإثباتات الآلية محسوبة من السجل البندي دون تضخيمها إلى جاهزية (${automatedVerified.length})`);
+const adopted = Object.values(governance.overrides).filter((entry) => entry.decision === "adopt").length;
+const fieldValidated = Object.values(governance.overrides).filter((entry) => entry.fieldValidationStatus === "verified-or-not-required").length;
+check(summary.productIntegrated === wiredAndTested.length && summary.fieldValidated === fieldValidated && summary.adopted === adopted, `الاعتماد والتوصيل والميدان محسوبة من الأدلة الفعلية (${adopted}/${wiredAndTested.length}/${fieldValidated})`);
 
 const pending = tools.filter((tool) => {
   const override = governance.overrides[String(tool.id)] ?? {};

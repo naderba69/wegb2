@@ -14519,6 +14519,24 @@ function collectR262(dir: string, out: string[] = []): string[] {
 }
 
 
+/* ═══ K402 — دورة إثبات Tool 988: حدود محركات الألعاب ووثيقة الدليل ═══ */
+{
+  const leeresGitterK402 = baueWortgitter([], 7);
+  const kurzerDialogK402 = [{ id: "kurz", level: "A1", titleDe: "Kurz", titleAr: "قصير", questions: [], dictation: [], lines: Array.from({ length: 5 }, (_, i) => ({ who: "A", de: `Satz ${i}`, ar: "جملة" })) }];
+  ok(leeresGitterK402.gitter.length === 10 && leeresGitterK402.treffer.length === 0 && dialogLuecke(kurzerDialogK402 as never, 1) === null,
+    "K402a Tool 988: المدخل الفارغ يبقى شبكة آمنة بلا هدف، والحوار الأقصر من ستة أسطر يُرفض بدل توليد فجوة معيبة");
+  ok(uebersetzQuote("Ich öffne die Tür", "Ich oeffne die Tür") === 100 && uebersetzQuote("ich ich", "ich gehe") === 50 && spielFehlende("ich ich", "ich gehe").join() === "gehe",
+    "K402b Tool 988: التطبيع يقبل كتابة umlaut البديلة ولا يسمح بتكرار كلمة واحدة لتغطية كلمة ناقصة");
+  const tool988EvidenceK402 = JSON.parse(readFileSync("evidence/tool-catalog/988-game-based-language-practice.json", "utf8")) as {
+    toolId: number; lifecycleStatus: string; automatedTests: { status: string; testCases: { id: string }[] }; sourceReview: { status: string }; fieldValidation: { status: string };
+  };
+  ok(tool988EvidenceK402.toolId === 988 && tool988EvidenceK402.lifecycleStatus === "partial-evidence" &&
+    tool988EvidenceK402.automatedTests.status === "verified" && tool988EvidenceK402.automatedTests.testCases.length >= 8 &&
+    tool988EvidenceK402.sourceReview.status === "pending" && tool988EvidenceK402.fieldValidation.status === "pending",
+    "K402c Tool 988: ملف الدليل يثبت الاختبار الآلي فقط ويبقي المصدر والتحقق الميداني معلقين بلا ترقية إنتاجية مصطنعة");
+}
+
+
 /* ═══ K334 — R309: القفل الفعلي الحقيقي — إغلاقُ اليوم عند حدود الوحدة ممنوعٌ لا منصوحٌ به فقط ═══ */
 {
   const homeK334 = readFileSync("app/page.tsx", "utf8");

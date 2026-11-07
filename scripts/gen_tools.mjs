@@ -79,6 +79,7 @@ function genSummary(tools, governance) {
     pendingTriage: states.filter((state) => state.decision === "pending-academic-review").length,
     relatedCatalogReferences: Object.values(overrides).reduce((count, state) => count + (state.relatedIds?.length ?? 0), 0),
     candidateLiveImplementations: states.filter((state) => state.productStatus === "candidate-live-implementation").length,
+    automatedTested: states.filter((state) => state.automatedTestStatus === "verified").length,
     adopted: states.filter((state) => state.decision === "adopt").length,
     productIntegrated: states.filter((state) => state.productStatus === "wired-and-tested").length,
     fieldValidated: states.filter((state) => state.fieldValidationStatus === "verified-or-not-required").length,
