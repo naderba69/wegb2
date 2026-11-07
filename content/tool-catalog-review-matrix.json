@@ -27832,10 +27832,32 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "meaning-focused-input-practice",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "medium",
+        "rationaleAr": "يوفر المنتج حياً نصوصاً وحوارات واستماعاً مع أسئلة معنى ومدخلاً حراً حسب المستوى والمدة، وهي مطابقة مرشحة لمدخل يركز المعنى. لكنه لا يحسب نسبة المفردات المعروفة لكل متعلم ولا يثبت سهولة المادة واهتمامه بها أو حجم تعرض كافياً، وقد تتحول الأسئلة إلى اختبار شكل؛ لذلك لا يدعي استيفاء شروط مسار Nation أو توازنه الرباعي.",
+        "candidateEvidence": [
+          "components/freiesinput.tsx",
+          "components/lesestoff.tsx",
+          "components/hoeren.tsx",
+          "content/texts.json",
+          "content/dialogues.json"
+        ],
+        "relatedIds": [
+          220,
+          221,
+          222,
+          223,
+          277,
+          521,
+          823,
+          880
+        ]
       }
     },
     {
@@ -27853,10 +27875,38 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "meaning-focused-output-practice",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "medium",
+        "rationaleAr": "توجد مهام حية للكتابة والتحدث والحوار والمواقف ذات غرض ومعنى، وتفرض محاولة قبل النموذج في مواضع؛ وهي مطابقة مرشحة للمخرج الذي يركز المعنى. لكن أغلب الأداء فردي بلا مخاطب حقيقي أو فجوة معلومات ونتيجة مشتركة، والتقييم الحر ذاتي أو محدود؛ لذلك لا يثبت التفاوض أو الدفع إلى مخرج أدق ولا تطبيق مسار Nation المتوازن.",
+        "candidateEvidence": [
+          "components/tasks.tsx",
+          "components/muendlich.tsx",
+          "components/schreiben.tsx",
+          "content/muendlich.json",
+          "content/writing.json"
+        ],
+        "relatedIds": [
+          214,
+          216,
+          220,
+          224,
+          225,
+          228,
+          229,
+          230,
+          413,
+          414,
+          415,
+          521,
+          523,
+          880
+        ]
       }
     },
     {
@@ -27874,10 +27924,34 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "language-focused-learning-practice",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "medium",
+        "rationaleAr": "يعرض المسار الحي القواعد والمفردات والنطق صراحةً، يطلب ملاحظة الشكل وتطبيقه ويقدم تصحيحاً واسترجاعاً؛ وهذه مطابقة مرشحة للتعلم المركز على اللغة. لكن وجود الدرس الصريح لا يثبت جودة كل تفسير أو اختيار ما يستحق الانتباه، ولا ترمز الخطة الوقت والمقاصد وفق Four Strands أو تقيس الانتقال إلى استعمال معنوي؛ لذلك يبقى التنفيذ مرشحاً.",
+        "candidateEvidence": [
+          "components/akademie/LektionWizard.tsx",
+          "components/tasks.tsx",
+          "content/grammar.json",
+          "content/vocab.json",
+          "scripts/interaktiv_test.tsx"
+        ],
+        "relatedIds": [
+          215,
+          234,
+          236,
+          308,
+          343,
+          416,
+          435,
+          712,
+          713,
+          880
+        ]
       }
     },
     {
@@ -27895,10 +27969,33 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "fluency-development-practice",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "توجد قراءة موقوتة تعرض كلمات في الدقيقة مع أسئلة فهم، وقياس مدة الكلام والتسجيل والتكرار وتمارين سريعة؛ وهي مطابقة مرشحة لبعض تطوير الطلاقة. لكنها لا تضمن أن المادة معروفة وسهلة أو أن التركيز على الرسالة مع ضغط سرعة آمن، ولا تقيس الطلاقة في المهارات الأربع أو الدقة والمفهومية بشرياً؛ لذلك لا يساوي ارتفاع السرعة تطبيق مسار Nation أو تقدماً عاماً.",
+        "candidateEvidence": [
+          "components/leseleiter.tsx",
+          "components/aussprachetrainer.tsx",
+          "components/blitz.tsx",
+          "lib/sprechziel.ts",
+          "components/berichte.tsx"
+        ],
+        "relatedIds": [
+          221,
+          231,
+          236,
+          279,
+          358,
+          382,
+          393,
+          470,
+          880
+        ]
       }
     },
     {
@@ -27919,7 +28016,31 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "vocabulary-learning-strategy-taxonomy",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "استراتيجيات Gu تصنيف وتحليل لا ميزة واحدة أو معامل مكسب. يوفر المنتج استرجاعاً وسياقاً وشفرات وبحثاً وتنظيماً آلياً، لكنه لا يعلّم المتعلم اختيار استراتيجية لمهمة محددة ثم يراقب استخدامها وتأمله فيها، ولا يرمز السلوك وفق تصنيف موثق؛ لذلك تبقى تسمية Gu مرجعاً بحثياً ولا تستنتج من توفر الأدوات.",
+        "candidateEvidence": [
+          "components/lernstrategie.tsx",
+          "components/tasks.tsx",
+          "components/tiefenlex.tsx",
+          "lib/srs.ts",
+          "content/mnemonik.json"
+        ],
+        "relatedIds": [
+          303,
+          304,
+          307,
+          308,
+          541,
+          617,
+          879,
+          886,
+          887,
+          888
+        ]
       }
     },
     {
@@ -27940,7 +28061,31 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "vocabulary-learning-strategy-taxonomy",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "تصنيف Schmitt ينظم استراتيجيات اكتشاف معنى الكلمة، مثل التحديد والاستعانة الاجتماعية، واستراتيجيات ترسيخها، مثل الذاكرة والمعالجة المعرفية والتخطيط فوق المعرفي؛ ولا يتحقق بمجرد وجود قاموس أو بطاقة SRS. المنصة تقدم سلوكيات مجاورة، لكنها لا تسجل قرار المتعلم واستراتيجية الاستخدام ونجاحها؛ لذلك يبقى إطاراً بحثياً مستقلاً لا نسخة من Gu ولا ادعاء تنفيذ.",
+        "candidateEvidence": [
+          "components/lernstrategie.tsx",
+          "components/tasks.tsx",
+          "components/tiefenlex.tsx",
+          "lib/srs.ts",
+          "lib/suche.ts"
+        ],
+        "relatedIds": [
+          303,
+          304,
+          307,
+          308,
+          541,
+          617,
+          879,
+          885,
+          887,
+          888
+        ]
       }
     },
     {
@@ -27961,7 +28106,29 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "contextual-word-inference-practice",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "medium",
+        "rationaleAr": "تعرض استراتيجية القراءة الحية نصيحة بتخمين معنى الكلمة المجهولة من الجملة، وتوفر النصوص سياقاً ومعجماً داخلياً بعد النقر؛ لكن لا توجد دورة تطلب تخميناً مسجلاً قبل الكشف ثم تقارن المعنى بالدليل والسياق. وجود جملة مثال أو قاموس لا يثبت inference، وقد يثبت المتعلم معنى خاطئاً؛ لذلك يؤجل إلى نشاط بسقالات وثقة وتصحيح.",
+        "candidateEvidence": [
+          "components/lernstrategie.tsx",
+          "components/lesestoff.tsx",
+          "components/tiefenlex.tsx",
+          "content/texts.json"
+        ],
+        "relatedIds": [
+          271,
+          307,
+          308,
+          536,
+          541,
+          856,
+          885,
+          886,
+          888
+        ]
       }
     },
     {
@@ -27979,10 +28146,34 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "internal-dictionary-consultation",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "medium",
+        "rationaleAr": "يمكن للمتعلم حياً النقر على كلمة في النص أو البحث في المعجم العميق للحصول على معنى وبطاقة ومثال وتلازمات متاحة؛ وهي مطابقة مرشحة لاستشارة قاموس داخلي. لكنه بنك محتوى محدود لا قاموساً تحريرياً موثقاً، ولا يعرض النطق والصرف والمعاني المتعددة والمصدر لكل مدخل أو يقيس الاختيار في السياق؛ لذلك لا ينسب إليه أثر Summers.",
+        "candidateEvidence": [
+          "components/lesestoff.tsx",
+          "components/tiefenlex.tsx",
+          "lib/suche.ts",
+          "content/vocab.json",
+          "scripts/interaktiv_test.tsx"
+        ],
+        "relatedIds": [
+          308,
+          318,
+          519,
+          536,
+          647,
+          843,
+          885,
+          886,
+          887,
+          889
+        ]
       }
     },
     {
@@ -28003,7 +28194,34 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "learner-corpus-consultation-workflow",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "medium",
+        "rationaleAr": "يحسب المنتج تكرار الجذوع في corpus داخلية من نصوصه وحواراته ويعرض العدد والترتيب، لكن Corpus Consultation تتطلب أن يرسل المتعلم استعلاماً ويرى وقوعات متعددة بمصدر وسياق ويقارنها. البحث الحالي يعيد بطاقة ومعنى لا KWIC ولا فلاتر سجل أو تصدير شواهد؛ لذلك يؤجل مع توثيق corpus وحقوقها وسقالات تفسير قبل أي ادعاء.",
+        "candidateEvidence": [
+          "lib/frequenz.ts",
+          "lib/suche.ts",
+          "components/tiefenlex.tsx",
+          "components/kartenexport.tsx",
+          "content/texts.json"
+        ],
+        "relatedIds": [
+          318,
+          319,
+          518,
+          519,
+          527,
+          528,
+          537,
+          647,
+          707,
+          890,
+          891,
+          892,
+          994
+        ]
       }
     },
     {
@@ -28024,7 +28242,14 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "merge-duplicate",
+        "classification": "duplicate-catalog-record",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "low",
+        "rationaleAr": "Data-Driven Learning Johns adv يعيد التعلم المستند إلى البيانات المسجل في 319 وبوسم Johns 1991 نفسه. اللاحقة Advanced لا تنشئ سير عمل آخر؛ يُحفظ المعرف للتتبع ويُدمج في 319، حيث وُثقت شارة التردد الداخلية وحدودها وغياب فحص أمثلة corpus وصياغة فرضية واختبارها.",
+        "candidateEvidence": [],
+        "canonicalId": 319
       }
     },
     {
@@ -28045,7 +28270,14 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "merge-duplicate",
+        "classification": "duplicate-catalog-record",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "low",
+        "rationaleAr": "Concordancing Tribble يعيد أداة concordancing المسجلة في 518: استعلام يعرض خطوط وقوع متوازية لاكتشاف النمط. اختلاف الإحالة لا يبرر محرك بحث ثانياً؛ يُحفظ المعرف للتتبع ويُدمج في 518، الذي يسجل غياب KWIC والمصدر والفرز في البحث الحالي.",
+        "candidateEvidence": [],
+        "canonicalId": 518
       }
     },
     {
@@ -28066,7 +28298,29 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "corpus-pattern-discovery-activity",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "medium",
+        "rationaleAr": "صيد الأنماط نشاط استقرائي يفحص فيه المتعلم مجموعة شواهد متوازية ويقترح انتظاماً معجمياً أو نحوياً ثم يختبره. تعرض الواجهة أنماط قواعد جاهزة وتردداً مجمعاً، لكنها لا تعرض concordance أو تسمح بوسم الشواهد وحفظ الفرضية واختبار أمثلة مضادة؛ لذلك يؤجل ولا يسمى زر «لاحظ النمط» وحده Pattern Hunting.",
+        "candidateEvidence": [
+          "lib/frequenz.ts",
+          "lib/suche.ts",
+          "components/tiefenlex.tsx",
+          "components/akademie/LektionWizard.tsx"
+        ],
+        "relatedIds": [
+          318,
+          319,
+          444,
+          518,
+          528,
+          889,
+          890,
+          891,
+          893
+        ]
       }
     },
     {
@@ -28084,10 +28338,40 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "collocation-noticing-practice",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "medium",
+        "rationaleAr": "تعرض المحطات الحية الكلمة مع شريكها في جملة وفراغ وبدائل وشرح، ثم تطلب استدعاء الشريك وإنتاجه؛ وهي مطابقة مرشحة لتوجيه الانتباه إلى collocation. لكن العرض والإجابة لا يثبتان noticing واعياً، والوحدات بلا معيار تردد ومدى خارجي، ولا يقاس الانتقال إلى إنتاج حر أو احتفاظ مؤجل؛ لذلك يبقى التنفيذ مرشحاً.",
+        "candidateEvidence": [
+          "content/kollok-vertiefung.json",
+          "components/tiefenlex.tsx",
+          "components/kollokproduktion.tsx",
+          "lib/kollokproduktion.ts",
+          "scripts/interaktiv_test.tsx"
+        ],
+        "relatedIds": [
+          212,
+          280,
+          308,
+          320,
+          321,
+          323,
+          436,
+          437,
+          438,
+          439,
+          643,
+          839,
+          841,
+          842,
+          892,
+          931
+        ]
       }
     },
     {
@@ -28108,7 +28392,14 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "merge-duplicate",
+        "classification": "duplicate-catalog-record",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "low",
+        "rationaleAr": "Lexical Notebook rev يعيد دفتر المفردات الشخصي المسجل في 843. تغيير Vocabulary إلى Lexical وإضافة rev لا ينشئ مخزناً ثانياً؛ يُحفظ المعرف للتتبع ويُدمج في 843، حيث وُثق أن البنك والبحث وSRS حية لكن إنشاء المتعلم لمدخلاته وتحريرها وتصديرها وحذفها غير موصول.",
+        "candidateEvidence": [],
+        "canonicalId": 843
       }
     },
     {
@@ -28129,7 +28420,28 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "learner-vocabulary-portfolio-workflow",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "محفظة المفردات ينبغي أن تجمع اختيارات المتعلم وأمثلة استعمال ومراجعات وتأملات ودليلاً على تطورها عبر الزمن مع تصدير وحذف آمنين. يوجد نموذج Portfolio عام ودوال إنشاء وعد تختبر في smoke، لكنه بلا واجهة أو حفظ متكامل ولا نوع مدخل مفردة، وبنك SRS ليس محفظة مختارة؛ لذلك يؤجل مع ملكية وخصوصية وrubric واضح.",
+        "candidateEvidence": [
+          "lib/portfolio.ts",
+          "lib/types.ts",
+          "scripts/engine_smoke.ts",
+          "content/vocab.json",
+          "app/datenschutz/page.tsx"
+        ],
+        "relatedIds": [
+          241,
+          335,
+          549,
+          555,
+          617,
+          843,
+          894
+        ]
       }
     },
     {
@@ -28147,10 +28459,31 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "word-formation-awareness-practice",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "medium",
+        "rationaleAr": "يوفر المنتج درس Wortbildung حياً، ومحطة عائلات كلمات تعرض جذوعاً ولواحق وأشكالاً بنكية، وورشة تفكك المركبات؛ وهي مطابقة مرشحة للوعي بتكوين الكلمات. لكن تجميع الجذر آلي تقريبي لا تحليل صرفي أو اشتقاقي موثق، والتغطية لا تميز كل عمليات Bauer ولا تقيس تفسير أو إنتاج كلمة جديدة؛ لذلك يبقى التنفيذ مرشحاً.",
+        "candidateEvidence": [
+          "content/grammar.json",
+          "lib/wortfamilien.ts",
+          "components/wortfamilien.tsx",
+          "lib/komposita.ts",
+          "components/komposita.tsx"
+        ],
+        "relatedIds": [
+          343,
+          440,
+          541,
+          897,
+          898,
+          899,
+          900
+        ]
       }
     },
     {
@@ -28168,10 +28501,28 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "affixation-awareness-practice",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "medium",
+        "rationaleAr": "تعرض محطة عائلات الكلمات لواحق شائعة وتطلب اختيار شكل موجود فعلاً في البنك، ويشرح درس Wortbildung بعض البناء؛ وهي مطابقة مرشحة محدودة للـaffixation. لكن الخوارزمية تقص نهايات سطحياً ولا تفرق اللاحقة الاشتقاقية من التصريف أو التحول الصوتي ولا تعالج السوابق منهجياً، والمشتتات مولدة؛ لذلك تحتاج قائمة محللة ومراجعة لغوية.",
+        "candidateEvidence": [
+          "lib/wortfamilien.ts",
+          "components/wortfamilien.tsx",
+          "content/grammar.json",
+          "scripts/interaktiv_test.tsx"
+        ],
+        "relatedIds": [
+          343,
+          896,
+          898,
+          899,
+          900
+        ]
       }
     },
     {
@@ -28189,10 +28540,29 @@
       "status": {
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
-        "productStatus": "prototype-not-wired",
+        "productStatus": "candidate-live-implementation",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "german-compounding-practice",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "medium",
+        "rationaleAr": "توجد ورشة حية تفكك المركبات الألمانية من اليمين، تدرب جنس Grundwort وحروف الوصل، تسمح بمحاولة كلمة حرة، وتسجل الخطأ؛ وهي مطابقة مرشحة قوية لممارسة compounding. لكنها تعتمد بحثاً جشعاً في معجم التطبيق وتصرح بعدم التحليل عند غياب المكونات، ولا تغطي شفافية المعنى والإنتاجية أو تحقق تحليل Booij؛ لذلك تبقى مرشحة.",
+        "candidateEvidence": [
+          "lib/komposita.ts",
+          "components/komposita.tsx",
+          "lib/komposita-aufgabe.ts",
+          "content/grammar.json",
+          "scripts/interaktiv_test.tsx"
+        ],
+        "relatedIds": [
+          343,
+          896,
+          897,
+          899,
+          900
+        ]
       }
     },
     {
@@ -28213,7 +28583,24 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "conversion-word-formation-construct",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "Conversion في تكوين الكلمات هي انتقال قاعدة إلى فئة معجمية أخرى دون علامة اشتقاق ظاهرة، ولا تساوي عرض أفراد عائلة متشابهة أو تحويل جملة نحوية. المنتج لا يوسم الفئة قبل التحويل وبعده ولا يميز الاشتقاق الصفري من التصيير أو الاسم المصدري ولا يقدم أمثلة وتمريناً محكماً؛ لذلك يبقى البناء بحثياً حتى توثق أمثلته الألمانية ومصدرها.",
+        "candidateEvidence": [
+          "lib/wortfamilien.ts",
+          "components/wortfamilien.tsx",
+          "content/grammar.json"
+        ],
+        "relatedIds": [
+          343,
+          896,
+          897,
+          898,
+          900
+        ]
       }
     },
     {
@@ -28234,7 +28621,26 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "lexical-blending-word-formation-construct",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-06",
+        "risk": "high",
+        "rationaleAr": "Blending الصرفي يبني لفظاً من أجزاء كلمات مثل Kofferwort، وهو غير المزج المفاهيمي في 663 وغير تركيب كلمتين كاملتين. لا يرمز بنك المنتج حدود الأجزاء أو المصادر ولا يعرض مجموعة أمثلة ألمانية موثقة أو مهمة فهم وإنتاج، وورشة Komposita لا تحلل blends؛ لذلك يبقى المفهوم بحثياً ولا يستنتج من أي كلمة مبتكرة.",
+        "candidateEvidence": [
+          "lib/komposita.ts",
+          "components/komposita.tsx",
+          "lib/wortfamilien.ts",
+          "content/vocab.json"
+        ],
+        "relatedIds": [
+          343,
+          663,
+          896,
+          897,
+          898,
+          899
+        ]
       }
     },
     {
