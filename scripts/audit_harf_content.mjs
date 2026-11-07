@@ -95,7 +95,7 @@ for (const w of writing) {
 }
 
 let md=`# 🔍 مراجعة حرف-حرف — النصوص/الحوارات/الكتابة — ${new Date().toISOString().slice(0,10)}
-> **المراجع:** CEFR Companion + Goethe Modelltest B1/B2 + GGP + Duden  
+> **المراجع:** CEFR Companion + Goethe Modelltest B1/B2 + GGP + Duden
 > **المنهج:** كل حرف فُحص — لا عينات. ${texts.length} نص · ${dialogues.length} حوار · ${writing.length} كتابة
 
 ## الملخص الإحصائي

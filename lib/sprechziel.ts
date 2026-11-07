@@ -1,3 +1,4 @@
+import { lokalesDatum } from "./datum";
 import type { Progress } from "./types";
 
 /**
@@ -9,7 +10,7 @@ import type { Progress } from "./types";
 export const SPRECH_ZIEL_SEK = 300; // 5 Minuten aufgezeichnetes Sprechen pro Tag
 
 export function sprechHeute(p: Progress, heuteIso?: string): { sek: number; ziel: number; erreicht: boolean; eintraege: number } {
-  const heute = heuteIso ?? new Date().toISOString().slice(0, 10);
+  const heute = heuteIso ?? lokalesDatum();
   const eintraege = (p.sprechUebungen ?? []).filter((e) => (e.datum ?? "").slice(0, 10) === heute);
   const sek = eintraege.reduce((a, e) => a + Math.max(0, e.dauerS || 0), 0);
   return { sek, ziel: SPRECH_ZIEL_SEK, erreicht: sek >= SPRECH_ZIEL_SEK, eintraege: eintraege.length };

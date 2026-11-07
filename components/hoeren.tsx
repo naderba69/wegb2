@@ -31,45 +31,97 @@ export function HoerLabor({ progress }: { progress: Progress }) {
   const runde = useMemo(() => bauHoerRunde(progress.plan.day + rundeNr * 13), [progress.plan.day, rundeNr]);
   const [plays, setPlays] = useState(0);
   const [started, setStarted] = useState(false);
+  const [laeuft, setLaeuft] = useState(false);
+  const [abgeschlossen, setAbgeschlossen] = useState(false);
+  const [audioFehler, setAudioFehler] = useState("");
   const [antworten, setAntworten] = useState<Record<string, string>>({});
   const [geprueft, setGeprueft] = useState(false);
   const [skript, setSkript] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
+  const wiedergabeIdRef = useRef(0);
+  const audioStartIdRef = useRef(0);
   const mitAudio = !!hoerenAudio[runde.textId];
 
   const reset = (m: Modus) => {
     setModus(m);
+    // Späte ended/error-Ereignisse der alten Runde dürfen die neue nicht öffnen.
+    wiedergabeIdRef.current += 1;
+    audioStartIdRef.current = 0;
     stopSpeech();
     audioRef.current?.pause();
     setPlays(0);
     setStarted(false);
+    setLaeuft(false);
+    setAbgeschlossen(false);
+    setAudioFehler("");
     setAntworten({});
     setGeprueft(false);
     setSkript(false);
   };
 
+  const wiedergabeFertig = (ok: boolean, id: number) => {
+    if (id !== wiedergabeIdRef.current) return;
+    wiedergabeIdRef.current += 1; // genau ein Abschluss pro Start
+    setLaeuft(false);
+    if (ok) {
+      setAbgeschlossen(true);
+      setAudioFehler("");
+    } else {
+      // فشل التشغيل لا يستهلك الاستماعة الامتحانية ولا يفتح الأسئلة.
+      setPlays((n) => Math.max(0, n - 1));
+      setAudioFehler("تعذّر تشغيل الصوت — لم تُحتسب الاستماعة، ويمكنك المحاولة من جديد أو اختيار صوت الجهاز.");
+    }
+  };
+
   const abspielen = () => {
-    if (!darfSpielen(modus, plays)) return;
-    setPlays((n) => n + 1);
+    if (laeuft || !darfSpielen(modus, plays)) return;
+    const wiedergabeId = wiedergabeIdRef.current + 1;
+    wiedergabeIdRef.current = wiedergabeId;
     setStarted(true);
+    setAbgeschlossen(false);
+    setAudioFehler("");
     const el = audioRef.current;
     if (stimme === "geraet") {
       const pitch = profil === "tief" ? 0.8 : profil === "hoch" ? 1.15 : undefined;
       const lang = profil === "tief" || profil === "hoch" ? "de-DE" : profil;
-      speakAny(runde.de, { rate: RATE[tempo], lang, pitch });
+      const begann = speakAny(runde.de, { rate: RATE[tempo], lang, pitch, onEnd: (ok) => wiedergabeFertig(ok, wiedergabeId) });
+      if (begann) {
+        setPlays((n) => n + 1);
+        setLaeuft(true);
+      } else {
+        setAudioFehler("صوت الجهاز غير متاح — لم تُحتسب الاستماعة. اختر الصوت المسجّل أو متصفحًا يدعم النطق الألماني.");
+      }
       return;
     }
     if (mitAudio && el) {
+      audioStartIdRef.current = wiedergabeId;
       el.playbackRate = RATE[tempo];
       el.currentTime = 0;
       const pr = el.play();
-      if (pr && typeof pr.catch === "function") pr.catch(() => {});
+      if (pr && typeof pr.then === "function") {
+        pr.then(() => {
+          if (wiedergabeId !== wiedergabeIdRef.current) return;
+          setPlays((n) => n + 1);
+          setLaeuft(true);
+        }).catch(() => {
+          if (wiedergabeId !== wiedergabeIdRef.current) return;
+          wiedergabeIdRef.current += 1;
+          setLaeuft(false);
+          setAudioFehler("تعذّر تشغيل الصوت — لم تُحتسب الاستماعة، ويمكنك المحاولة من جديد أو اختيار صوت الجهاز.");
+        });
+      }
     } else {
-      speakAny(runde.de, { rate: RATE[tempo] });
+      const begann = speakAny(runde.de, { rate: RATE[tempo], onEnd: (ok) => wiedergabeFertig(ok, wiedergabeId) });
+      if (begann) {
+        setPlays((n) => n + 1);
+        setLaeuft(true);
+      } else {
+        setAudioFehler("لا يتوفر ملف أو صوت جهاز صالح — لم تُحتسب الاستماعة.");
+      }
     }
   };
 
-  const frei = fragenFrei(plays);
+  const frei = fragenFrei(plays) && abgeschlossen;
   const fertig = antworten && Object.keys(antworten).length === runde.items.length;
   const ergebnis = werteRunde(runde.items, antworten);
   const note = hoerNote(Math.round((ergebnis.ok / Math.max(1, ergebnis.n)) * 100));
@@ -137,16 +189,24 @@ export function HoerLabor({ progress }: { progress: Progress }) {
         )}
       </div>
 
-      {mitAudio && <audio ref={audioRef} src={hoerenAudio[runde.textId].file} preload="auto" />}
+      {mitAudio && (
+        <audio
+          ref={audioRef}
+          src={hoerenAudio[runde.textId].file}
+          preload="auto"
+          onEnded={() => wiedergabeFertig(true, audioStartIdRef.current)}
+          onError={() => { if (audioStartIdRef.current > 0) wiedergabeFertig(false, audioStartIdRef.current); }}
+        />
+      )}
       <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap", alignItems: "center", marginBottom: "0.6rem" }}>
         {darfSpielen(modus, plays) ? (
-          <button className="btn btn-gold" onClick={abspielen} disabled={!speechAvailable() && !mitAudio && modus === "pruefung"}>
-            ▶️ {plays === 0 ? "استمع الآن" : `استماعة ${plays + 1}`}
+          <button className="btn btn-gold" onClick={abspielen} disabled={laeuft || (!speechAvailable() && !mitAudio && modus === "pruefung")}>
+            {laeuft ? "⏳ الاستماع جارٍ…" : `▶️ ${plays === 0 ? "استمع الآن" : `استماعة ${plays + 1}`}`}
           </button>
         ) : (
           <span className="chip" style={{ background: "var(--color-cola-soft)", padding: "0.5rem 0.8rem" }}>🔒 استُنفدت الاستماعة — هذه قواعد Goethe، لا مزاج التطبيق</span>
         )}
-        {started && (
+        {started && modus === "training" && (
           <button className="btn btn-ghost" style={{ padding: "0.35rem 0.7rem" }} onClick={() => setSkript((s) => !s)}>
             📜 {skript ? "أخفِ السكربت" : "السكربت (تدريب فقط)"}
           </button>
@@ -155,6 +215,7 @@ export function HoerLabor({ progress }: { progress: Progress }) {
           {modus === "training" ? `استمعت ${plays}×` : plays === 0 ? "بقيت استماعة واحدة" : "الاستماعة صُرفت"}
         </span>
       </div>
+      {audioFehler && <p role="alert" style={{ color: "var(--color-cola)", fontWeight: 700, margin: "0 0 0.6rem" }}>{audioFehler}</p>}
 
       {skript && (
         <div className="card" style={{ padding: "0.8rem 1rem", marginBottom: "0.6rem", fontSize: "0.95rem", lineHeight: 2, direction: "ltr", textAlign: "left" }}>
@@ -166,8 +227,12 @@ export function HoerLabor({ progress }: { progress: Progress }) {
         <div className="card" style={{ padding: "0.85rem 1rem", color: "var(--color-ink2)" }}>
           «{runde.titleDe}» — {runde.titleAr}. اضغط ▶️ أولاً: الأسئلة مُقفلة حتى تسمع، كما في القاعة الحقيقية.
         </div>
+      ) : !frei ? (
+        <div className="card" role="status" aria-live="polite" style={{ padding: "0.85rem 1rem", color: "var(--color-ink2)" }}>
+          {laeuft ? "🎧 استمع حتى النهاية — ستُفتح الأسئلة تلقائياً بعد اكتمال المقطع." : "🔒 لم تكتمل استماعة ناجحة بعد؛ الأسئلة ما زالت مقفلة."}
+        </div>
       ) : !geprueft ? (
-        <div style={{ display: "grid", gap: "0.55rem", opacity: frei || modus === "training" ? 1 : 0.4 }}>
+        <div style={{ display: "grid", gap: "0.55rem" }}>
           {runde.items.map((it, i) => (
             <div key={it.id} className="card" style={{ padding: "0.75rem 0.95rem" }}>
               <div style={{ fontWeight: 700, marginBottom: "0.4rem" }}>

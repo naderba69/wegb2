@@ -70,7 +70,7 @@ export const INTERFERENZ: InterferenzPaar[] = [
     hinweisAr: "W الألمانية تُنطق ڤ (v) لا واو. V الأصلية غالباً f: Vater = فاتر." },
   { id: "b1-v-w", level: "B1", fokus: "pb",
     de1: "Vater", de2: "Water", ar1: "أب", ar2: "ماء (إنكليزي)",
-    hinweisAr: "معظم الكلمات الألمانية التي تبدأ بـV تُنطق f Vater/f، أما外来词 فـv." },
+    hinweisAr: "معظم الكلمات الألمانية التي تبدأ بـV تُنطق f Vater/f، أما الكلمات الدخيلة فتُنطق فيها V غالباً مثل v." },
 ];
 
 /** فلترة الأزواج حسب المستوى */

@@ -68,7 +68,7 @@ candidates.sort((a,b)=> (a.deckId+a.card.id).localeCompare(b.deckId+b.card.id));
 let chosen = candidates.slice(0, LIMIT);
 console.log(`Chosen ${chosen.length} für Sprint 28:`);
 for (const {deckId, card} of chosen) {
-  console.log(` ${card.id} ${card.de} :: ${card.exampleDe} → will add » ${card.de}`);
+  console.log(` ${deckId}/${card.id} ${card.de} :: ${card.exampleDe} → will add » ${card.de}`);
 }
 
 if (DRY) {

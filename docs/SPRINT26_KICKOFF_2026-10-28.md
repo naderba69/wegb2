@@ -82,5 +82,5 @@ npm ci && npm run smoke # 1916/0 تأكيد
 # ابدأ بكتابة scripts/add_images_s26.mjs
 ```
 
-**التوقيع:** تمت مناقشة الخطة بلا كود أولاً كما طُلب 2026-10-27 — المصادر: Mayer Multimedia (Coherence 0.86, Modality 1.00), Goethe B2 Bildbeschreibung, BAMF Medien — ثم نُفذت.  
+**التوقيع:** تمت مناقشة الخطة بلا كود أولاً كما طُلب 2026-10-27 — المصادر: Mayer Multimedia (Coherence 0.86, Modality 1.00), Goethe B2 Bildbeschreibung, BAMF Medien — ثم نُفذت.
 **التالي:** دفع هذه الخطة كـ commit أول على `arena/072e8337-wegb2` + فتح PR `Sprint 26 Kickoff`.

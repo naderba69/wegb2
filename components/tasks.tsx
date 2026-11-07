@@ -1,12 +1,11 @@
 "use client";
 import { useEffect, useMemo, useState } from "react";
+import Image from "next/image";
 import { istPhasenPruefung } from "@/lib/phasen";
 import type { DayTask, Exercise, SrsState, UiLang, VocabCard, GrammarTopic, Eselsbruecke, Tempo } from "@/lib/types";
 import { POS_AR } from "@/lib/types";
 import { eselsbruecken, getBrueckenFor, getBrueckenForWort, getGrammar, sprichwortSrc, getDeck, getText, leseText, getDialogue, getWriting, getSatz, getMnemonik, candoMap, vocabMap, deFormOf, partnerKarten, kontaktKarten, muendlich } from "@/lib/content";
-import { PARTNER_THEMEN, bewerteRubrik, RUBRIK_LABEL } from "@/lib/sprechen-rubrik";
 import { kollokationenFuer, kollokationUebung } from "@/lib/kollokationen";
-import Image from "next/image";
 import { WortLinkText } from "./wortlink";
 import { newCard, reviewCard, isDue, newCardCap, countNewCardsIntroducedToday, wasIntroducedToday, karteStufe, KARTENSTUFE_AR } from "@/lib/srs";
 import { genusCode } from "@/lib/genus";
@@ -29,6 +28,7 @@ import { meldung } from "@/lib/meldungen";
 import { BemerkenKarte } from "./bemerken";
 import { entdeckungsFrage, induktionMoeglich, ergebnisText, type EntdeckungsErgebnis } from "@/lib/induktion";
 import { grammarMap } from "@/lib/content";
+import { LektionWizard } from "@/components/akademie/LektionWizard";
 const alleGrammatik = Object.values(grammarMap);
 const alleVokabelIds = Object.values(vocabMap).flatMap((deck) => deck.cards.map((card) => card.id));
 
@@ -71,6 +71,10 @@ interface TaskProps {
   srs: Record<string, SrsState>;
   onSrs: (cardId: string, state: SrsState) => void;
   onPoints: (points: number, max: number) => void;
+  /** داخل صفحة اليوم، مهمة القواعد تُعرض باستوديو الدرس الكامل بدل البطاقة المختصرة. */
+  lessonStudio?: boolean;
+  /** يمنع احتساب إكمال الاستوديو مرتين قبل تسليم مهمة اليوم. */
+  lessonCompleted?: boolean;
   /** نتيجة استرجاع جملة كبسولة (M1): تُحجز في فواصل المتعلم المتكيفة. */
   onKapselErgebnis?: (satzId: string, ok: boolean) => void;
   voiceName?: string;
@@ -83,7 +87,7 @@ interface TaskProps {
 }
 
 /** عارض مهمة اليوم حسب نوعها — كل شيء داخلي (TTS بدل الملفات) */
-export default function TaskView({ task, lang: _lang, day, srs, onSrs, onPoints, voiceName, rate, tempo = "regelmaessig", persistKey, onKapselErgebnis, bemerkenRegeln }: TaskProps) {
+export default function TaskView({ task, lang: _lang, day, srs, onSrs, onPoints, lessonStudio = false, lessonCompleted = false, voiceName, rate, tempo = "regelmaessig", persistKey, onKapselErgebnis, bemerkenRegeln }: TaskProps) {
   // تسميع الإملاء: مستمع عام يعمل في كل المهام
   useEffect(() => {
     const onSpeak = (e: Event) => {
@@ -97,7 +101,16 @@ export default function TaskView({ task, lang: _lang, day, srs, onSrs, onPoints,
 
   switch (task.kind) {
     case "grammatik":
-      return <GrammarTask task={task} srs={srs} onPoints={onPoints} persistKey={persistKey} />;
+      return lessonStudio && task.topicId && !task.verifyFor ? (
+        <LektionWizard
+          topicId={task.topicId}
+          embedded
+          completedInDay={lessonCompleted}
+          onComplete={() => { if (!lessonCompleted) onPoints(3, 3); }}
+        />
+      ) : (
+        <GrammarTask task={task} srs={srs} onPoints={onPoints} persistKey={persistKey} />
+      );
     case "wortschatz":
       return <VocabTask task={task} srs={srs} onSrs={onSrs} onPoints={onPoints} voiceName={voiceName} rate={rate} tempo={tempo} persistKey={persistKey} />;
     case "hoeren":
@@ -635,7 +648,6 @@ function VocabTask({ task, srs, onSrs, onPoints, voiceName, rate, tempo = "regel
       const newSlots = Math.min(roomForNew, Math.max(0, 10 - pendingToday.length - dueToday.length));
       // المستحقّ أولاً، ثم استأنف البطاقة التي ظهرت ولم تُقيَّم، وأخيراً الجديد ضمن السقف.
       pool = [...dueToday, ...pendingToday, ...fresh.slice(0, newSlots)].slice(0, 10);
-      // DEBUG LX0e
       dueCount = due.length;
       freshCount = fresh.length;
     } else {
@@ -729,15 +741,14 @@ function VocabTask({ task, srs, onSrs, onPoints, voiceName, rate, tempo = "regel
               // alt="" مقصودة: الصورة إيضاح بصريّ مرافق للكلمة المعروضة نصًّا أسفلها مباشرة
               // داخل نفس الزرّ — تكرار النطق عبر alt يُضاعف اسم الزرّ لقارئ الشاشة (axe-core
               // image-redundant-alt، R305/ب10)، والزرّ نفسه يحمل aria-label واضحًا بالفعل.
-              // P1 perf/cards-278MB → next/image + sizes + lazy (LCP 4.2s → <1.5s)
               <Image
                 src={card.img}
                 alt=""
                 width={230}
                 height={150}
-                sizes="(max-width: 768px) 100vw, 230px"
+                sizes="(max-width: 480px) 70vw, 230px"
                 onError={(e) => {
-                  (e.currentTarget as HTMLImageElement).style.display = "none";
+                  e.currentTarget.style.display = "none";
                 }}
                 style={{ display: "block", margin: "0 auto 0.6rem", width: "100%", maxWidth: 230, height: 150, objectFit: "contain", borderRadius: 12, background: "var(--color-card)" }}
               />
@@ -945,11 +956,11 @@ function HoerenTask({ task, onPoints, voiceName, rate, persistKey }: Omit<TaskPr
         )}
       </div>
 
-      <div style={{ display: "grid", gap: "0.35rem", margin: "0.8rem 0" }}>
+      <div className="authentic-reader authentic-dialog" data-testid="authentic-dialog" style={{ display: "grid", gap: "0.35rem", margin: "0.8rem 0" }}>
         {dlg.lines.map((l, i) => (
           <div
             key={i}
-            className="card"
+            className="card authentic-satz"
             style={{
               padding: "0.55rem 0.8rem",
               background: lineIdx === i ? "rgb(34 197 94 / 0.14)" : "transparent",
@@ -960,10 +971,11 @@ function HoerenTask({ task, onPoints, voiceName, rate, persistKey }: Omit<TaskPr
             }}
           >
             <button
-              className="chip"
+              className="chip authentic-satz-audio"
               style={{ cursor: "pointer" }}
               disabled={pruefung && !abgegeben}
               onClick={() => { if (pruefung && !abgegeben) return; speakLine(l.de, undefined, { voiceName, rate }); }}
+              aria-label={`استمع إلى سطر ${l.who}`}
               title="اسمع السطر"
             >
               🔊
@@ -976,11 +988,6 @@ function HoerenTask({ task, onPoints, voiceName, rate, persistKey }: Omit<TaskPr
           </div>
         ))}
       </div>
-      {dlg.quelle && (
-        <div data-testid="hoeren-quelle" style={{ margin: "0.6rem 0", padding: "0.5rem 0.7rem", borderRadius: "6px", background: "var(--color-paper)", borderInlineStart: "3px solid var(--color-ink2)", fontSize: "0.75rem", lineHeight: 1.7, color: "var(--ui-muted)" }}>
-          📚 المصدر: <span lang="de" dir="ltr">{dlg.quelle}</span>
-        </div>
-      )}
 
       <h4 style={{ fontWeight: 800, margin: "0.8rem 0 0.5rem" }}>فهم المسموع</h4>
       <ExerciseSet items={dlg.questions} onPoints={onPoints} storageKey={persistKey ? `${persistKey}:listening` : undefined} />
@@ -999,7 +1006,6 @@ function HoerenTask({ task, onPoints, voiceName, rate, persistKey }: Omit<TaskPr
 function LesenTask({ task, onPoints, voiceName, rate, persistKey, bemerkenRegeln }: Omit<TaskProps, "lang" | "day" | "srs" | "onSrs">) {
   const text = getText(task.textId ?? "");
   const [showTr, setShowTr] = useState(false);
-  const [highlightKonnektor, setHighlightKonnektor] = useState(text?.level === "B2");
   if (!text) return <Empty title={meldung("text-fehlt").titel} aktion={meldung("text-fehlt").aktion} />;
   // 📜 النسخةُ الطويلةُ (طول CEFR حقيقي) إن وُجدت؛ وإلا النصُّ القصير
   const lese = leseText(text);
@@ -1007,10 +1013,6 @@ function LesenTask({ task, onPoints, voiceName, rate, persistKey, bemerkenRegeln
   const woerter = lese.de.split(/\s+/).length;
   const radar = useMemo(() => grammatikImText(lese.de), [lese.de]);
   const splitSaetze = (txt: string) => txt.match(/[^.!?؟。]+[.!?؟۔]+/g)?.map((s) => s.trim()).filter(Boolean) ?? [txt];
-  const highlightKonnektoren = (s: string) => {
-    if (!highlightKonnektor || text!.level !== "B2") return s;
-    return s.replace(/\b(weil|obwohl|während|damit|deshalb|dennoch|trotzdem|Wegen|Obwohl)\b/g, (m) => `__KONN__${m}__KONN__`);
-  };
   return (
     <section className="card fadein dirb-ex" style={{ padding: "1.2rem" }}>
       <Head icon="📖" de={text.titleDe} ar={text.titleAr} />
@@ -1018,12 +1020,6 @@ function LesenTask({ task, onPoints, voiceName, rate, persistKey, bemerkenRegeln
         <div data-testid="lesen-lang" style={{ display: "flex", gap: "0.6rem", alignItems: "center", fontSize: "0.8rem", color: "var(--color-ink2)", marginBottom: "0.5rem" }}>
           <span className="chip">{text.level} · <span className="rtl-num">{woerter}</span> كلمة</span>
           <span>اقرأ مرّتين: الأولى للفكرة، الثانية للأسئلة — الأسئلة تأويلية لا حرفية</span>
-          {text.level === "B2" && (
-            <label style={{ display: "flex", gap: "0.3rem", alignItems: "center", cursor: "pointer", fontSize: "0.72rem" }}>
-              <input type="checkbox" checked={highlightKonnektor} onChange={(e) => setHighlightKonnektor(e.target.checked)} style={{ width: "14px", height: "14px" }} />
-              تظليل Konnektoren
-            </label>
-          )}
         </div>
       )}
       <article className="de authentic-reader" style={{ display: "block", width: "100%", lineHeight: 2.05, background: "var(--color-paper2)", padding: "1rem 1.1rem", borderRadius: "0.8rem", borderInlineStart: text.level === "A0" ? "4px solid #4ade80" : text.level === "A1" ? "4px solid #22c55e" : text.level === "A2" ? "4px solid #60a5fa" : text.level === "B1" ? "4px solid #f2c866" : "4px solid #a78bfa", fontSize: text.level === "B2" ? "0.98rem" : "0.92rem", letterSpacing: "0.01em" }}>
@@ -1031,42 +1027,16 @@ function LesenTask({ task, onPoints, voiceName, rate, persistKey, bemerkenRegeln
           const saetze = splitSaetze(p);
           return (
             <p key={i} style={{ margin: i === 0 ? 0 : "0.9rem 0 0" }}>
-              {saetze.map((satz, si) => {
-                const hl = highlightKonnektoren(satz);
-                const parts = hl.split(/__KONN__/);
-                return (
-                  <span key={si} className="authentic-satz" style={{ display: "inline-flex", gap: "0.35rem", alignItems: "baseline", marginInlineEnd: "0.35rem", marginBottom: "0.2rem" }}>
-                    <button className="chip authentic-satz-audio" aria-label={`استمع للجملة ${si + 1}`} data-testid={`lesen-satz-audio-${i}-${si}`} style={{ cursor: "pointer", minHeight: "28px", minWidth: "32px", padding: "0 0.35rem", fontSize: "0.75rem", flexShrink: 0 }} onClick={() => speakDe(satz, { voiceName, rate: (rate ?? 0.9) * 0.9 })}>🔊</button>
-                    <span style={{ flex: 1 }}>
-                      {parts.length > 1 ? (
-                        <span>
-                          {parts.map((part, pi) =>
-                            pi % 2 === 1 ? (
-                              <span key={pi} className={`b2-konnektor ${part.toLowerCase() === "weil" ? "b2-konnektor--weil" : part.toLowerCase() === "obwohl" || part.toLowerCase() === "während" ? "b2-konnektor--obwohl" : ""}`}>{part}</span>
-                            ) : (
-                              <WortLinkText key={pi} text={part} level={text.level} testid={`wortlink-${i}-${si}-${pi}`} />
-                            )
-                          )}
-                        </span>
-                      ) : (
-                        <WortLinkText text={satz} level={text.level} testid={`wortlink-${i}-${si}`} />
-                      )}
-                    </span>
-                  </span>
-                );
-              })}
+              {saetze.map((satz, si) => (
+                <span key={si} className="authentic-satz" style={{ display: "inline-flex", gap: "0.35rem", alignItems: "baseline", marginInlineEnd: "0.35rem", marginBottom: "0.2rem" }}>
+                  <button className="chip authentic-satz-audio" aria-label={`استمع للجملة ${si + 1}`} data-testid={`lesen-satz-audio-${i}-${si}`} style={{ cursor: "pointer", minHeight: "28px", minWidth: "32px", padding: "0 0.35rem", fontSize: "0.75rem", flexShrink: 0 }} onClick={() => speakDe(satz, { voiceName, rate: (rate ?? 0.9) * 0.9 })}>🔊</button>
+                  <span style={{ flex: 1 }}><WortLinkText text={satz} level={text.level} testid={`wortlink-${i}-${si}`} /></span>
+                </span>
+              ))}
             </p>
           );
         })}
       </article>
-      {highlightKonnektor && text.level === "B2" && (
-        <div data-testid="konnektor-legend" style={{ display: "flex", gap: "0.4rem", flexWrap: "wrap", fontSize: "0.72rem", marginTop: "0.5rem", color: "var(--ui-muted)" }}>
-          <span className="b2-konnektor b2-konnektor--weil">weil</span> سببي ·
-          <span className="b2-konnektor b2-konnektor--obwohl">obwohl</span> تنازلي ·
-          <span className="b2-konnektor">damit/deshalb</span> غاية/نتيجة
-          <span style={{ fontWeight: 700 }}>— أطفئ التظليل من الأعلى إن أزعجك</span>
-        </div>
-      )}
       {bemerkenRegeln && bemerkenRegeln.length > 0 && <BemerkenKarte textDe={lese.de} regeln={bemerkenRegeln} />}
       {radar.length > 0 && (
         <div data-testid="grammatik-radar" style={{ margin: "0.8rem 0 0.4rem", padding: "0.6rem 0.8rem", borderRadius: "8px", background: "var(--color-paper)", borderInlineStart: "4px solid var(--color-b1)", fontSize: "0.82rem" }}>
@@ -1084,12 +1054,7 @@ function LesenTask({ task, onPoints, voiceName, rate, persistKey, bemerkenRegeln
       )}
       {text.level === "B2" && (
         <div style={{ margin: "0.8rem 0", padding: "0.6rem 0.85rem", borderRadius: "0.7rem", background: "rgb(167 139 250 / 0.08)", border: "1px solid rgb(167 139 250 / 0.3)", fontSize: "0.82rem", lineHeight: 1.9 }}>
-          <strong>🌍 في ألمانيا:</strong> هذا النص يعكس أسلوب {text.titleDe.includes("Zeitung") || text.titleDe.includes("Presse") ? "الصحافة الألمانية — جمل длинная و Nominalstil شائع." : text.level === "B2" ? "الكتابة الأكاديمية — انتبه لتحوّل weil → wegen و Passiv → sein + Partizip." : "الحياة اليومية — لاحظ كيف يُستعمل الكلام غير المباشر في التقارير."}
-        </div>
-      )}
-      {text.quelle && (
-        <div data-testid="lesen-quelle" style={{ margin: "0.6rem 0", padding: "0.5rem 0.7rem", borderRadius: "6px", background: "var(--color-paper)", borderInlineStart: "3px solid var(--color-ink2)", fontSize: "0.75rem", lineHeight: 1.7, color: "var(--ui-muted)" }}>
-          📚 المصدر: <span lang="de" dir="ltr">{text.quelle}</span>
+          <strong>🌍 في ألمانيا:</strong> هذا النص يعكس أسلوب {text.titleDe.includes("Zeitung") || text.titleDe.includes("Presse") ? "الصحافة الألمانية — جمل طويلة وأسلوب اسمي (Nominalstil) شائع." : text.level === "B2" ? "الكتابة الأكاديمية — انتبه لتحوّل weil → wegen و Passiv → sein + Partizip." : "الحياة اليومية — لاحظ كيف يُستعمل الكلام غير المباشر في التقارير."}
         </div>
       )}
       <div style={{ display: "flex", gap: "0.5rem", margin: "0.6rem 0", flexWrap: "wrap" }}>
@@ -1303,14 +1268,6 @@ function SprechenTask({ task, onPoints, voiceName, rate, persistKey }: Omit<Task
           📝 مسلَّم كتابياً — إثبات إنجاز لا إثبات نطق.
         </div>
       )}
-      {/* B2 Partner-Simulation — Teil 3 Diskussion mit simuliertem Partner + Rubrik Goethe 4×5 */}
-      <div className="card" style={{ padding: "0.8rem 1rem", margin: "0.7rem 0", background: "rgb(167 139 250 / 0.06)", border: "1px solid rgb(167 139 250 / 0.25)" }} data-testid="sprechen-partner">
-        <div style={{ fontWeight: 800, marginBottom: "0.4rem" }}>🗣️ B2 Diskussion — Teil 3 mit Partner (simuliert)</div>
-        <div style={{ fontSize: "0.82rem", color: "var(--ui-muted)", lineHeight: 1.7, marginBottom: "0.6rem" }}>
-          Goethe B2 Sprechen Teil 3: مناقشة ثنائية ~5 دقائق (300ث) — bot يحاكي شريكًا يختلف معك. اختر ردك، اسمع رده، ثم قيّم نفسك بـ Rubrik الرسمية (4×5 → 100). <span style={{fontWeight:700}}>ليست امتحانًا رسميًا — تدريب على المناقشة.</span> · Branching-dialogue موجود ومُفعّل (Mayer Signaling).
-        </div>
-        <PartnerSim />
-      </div>
       <button
         className="btn btn-primary"
         disabled={doneCount < items.length}
@@ -1319,49 +1276,6 @@ function SprechenTask({ task, onPoints, voiceName, rate, persistKey }: Omit<Task
         أنجزت التدريب الشفهي ({doneCount}/{items.length})
       </button>
     </section>
-  );
-}
-
-function PartnerSim(){
-  const [themaId, setThemaId] = useState(PARTNER_THEMEN[0].id);
-  const thema = PARTNER_THEMEN.find(t=>t.id===themaId) ?? PARTNER_THEMEN[0];
-  const [choice, setChoice] = useState<string | null>(null);
-  const [rubrik, setRubrik] = useState<Record<string, number>>({aufgabenerfuellung:3, kohaerenz:3, wortschatz:3, korrektheit:3});
-  const bew = bewerteRubrik(rubrik as any);
-  const botReply = choice ? (thema.antworten[choice] ?? "Interessanter Punkt — kannst du das begründen?") : null;
-  return (
-    <div style={{display:"grid", gap:"0.6rem"}}>
-      <div style={{display:"flex", gap:"0.4rem", flexWrap:"wrap"}}>
-        {PARTNER_THEMEN.map(t=>(
-          <button key={t.id} className="chip" style={{background: themaId===t.id ? "var(--color-mid)" : "var(--ui-surface-raised)", color: themaId===t.id ? "var(--ui-on-accent)" : undefined, minHeight:"44px"}} onClick={()=>{setThemaId(t.id); setChoice(null);}}>{t.thema}</button>
-        ))}
-      </div>
-      <div style={{padding:"0.6rem 0.8rem", background:"var(--color-paper)", borderRadius:"8px", borderInlineStart:"4px solid var(--color-mid)"}}>
-        <div style={{fontSize:"0.8rem", color:"var(--ui-muted)"}}>Bot ({thema.rolleB}):</div>
-        <div lang="de" dir="ltr" style={{fontWeight:700}}>{thema.startDe}</div>
-        <div style={{fontSize:"0.75rem", color:"var(--ui-muted)", marginTop:"0.2rem"}}>Wendungen: {thema.wendungen.join(" · ")}</div>
-      </div>
-      <div style={{display:"flex", gap:"0.4rem", flexWrap:"wrap"}}>
-        {Object.keys(thema.antworten).map(c=>(
-          <button key={c} className="chip" style={{border: choice===c ? "2px solid var(--color-mid)" : undefined, minHeight:"44px"}} onClick={()=>setChoice(c)}>{c}</button>
-        ))}
-      </div>
-      {botReply && <div style={{padding:"0.6rem 0.8rem", background:"var(--color-paper2)", borderRadius:"8px"}}><strong>Bot:</strong> <span lang="de" dir="ltr">{botReply}</span></div>}
-      <div style={{borderTop:"1px solid var(--color-line)", paddingTop:"0.6rem", marginTop:"0.4rem"}}>
-        <div style={{fontWeight:800, fontSize:"0.85rem"}}>Rubrik Goethe 0-5×4 → {bew.gesamt20}/20 = {bew.gesamt100}/100 {bew.bestanden ? "✅ bestanden (≥60)" : "❌ üben"} </div>
-        <div style={{display:"grid", gridTemplateColumns:"1fr 1fr", gap:"0.5rem", marginTop:"0.5rem"}}>
-          {Object.entries(RUBRIK_LABEL).map(([k,label])=>(
-            <label key={k} style={{display:"flex", flexDirection:"column", gap:"0.2rem", fontSize:"0.8rem"}}>
-              <span>{label.de} — {label.ar}: <strong>{(rubrik as any)[k]}/5</strong></span>
-              <input type="range" min={0} max={5} step={1} value={(rubrik as any)[k]} onChange={e=> setRubrik(r=> ({...r, [k]: Number(e.target.value)}))} style={{ minHeight: "44px" }} />
-            </label>
-          ))}
-        </div>
-        <ul style={{fontSize:"0.78rem", color:"var(--ui-muted)", marginTop:"0.5rem"}}>
-          {bew.feedbackAr.map((f,i)=><li key={i}>{f}</li>)}
-        </ul>
-      </div>
-    </div>
   );
 }
 
@@ -1529,7 +1443,7 @@ function CheckTask({ task, onPoints, persistKey }: { task: DayTask; onPoints: (p
           </div>
         )
       )}
-      <p style={{ color: "var(--color-ink2)", marginBottom: "0.7rem" }}>عتبة النجاح 60% Goethe (80% تميّز) — الفاشل يُعاد ويُرحَّل إن لزم.</p>
+      <p style={{ color: "var(--color-ink2)", marginBottom: "0.7rem" }}>عتبة النجاح 80% — الفاشل يُعاد ويُرحَّل إن لزم.</p>
       <ExerciseSet items={task.quiz ?? []} onPoints={onPoints} storageKey={persistKey ? `${persistKey}:quiz` : undefined} />
     </section>
   );

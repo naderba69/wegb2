@@ -1,5 +1,4 @@
 import fs from 'fs';
-import path from 'path';
 
 // Load existing
 const dialogs = JSON.parse(fs.readFileSync('content/dialogues.json','utf8'));

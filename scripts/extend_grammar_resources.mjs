@@ -5,7 +5,6 @@ import { fileURLToPath } from "url";
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const gPath = join(ROOT,"content/grammar.json");
 let grammar = JSON.parse(readFileSync(gPath,"utf8"));
-let arr = Object.values(grammar);
 
 // Authentic resource mapping — BAMF + Zeitungen + Behörden, CEFR B1/B2 relevant
 const resourceMap = {

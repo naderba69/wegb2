@@ -141,7 +141,7 @@ new_topics = {
             OrderedDict([("de", "weich (ich-Laut): nach i, e, ö, ü, ä, äu, ei, ie, eu, ai, r, l, n (ich, nicht, Kirche, Chemie, Mädchen)"), ("ar", "ناعم بعد i/e/ö/ü/ä والحروف المركبة ei/ie/eu/ai/äu، وبعد r/l/n.")]),
             OrderedDict([("de", "hart (ach-Laut): nach a, o, u, au (ach, Buch, Nacht, Koch, auch)"), ("ar", "خشن بعد a/o/u/au (أحرف خلفيّة).")]),
         ]),
-        ("tables": [
+        ("tables", [
             OrderedDict([
                 ("captionDe", "ich-Laut vs ach-Laut"),
                 ("captionAr", "الناعم والخشن"),
@@ -184,12 +184,12 @@ new_topics = {
             ]),
         ]),
         ("summaryAr", "حرف r الألماني ليس كالراء العربية المفخّمة المطولة، بل رخو من مؤخرة اللسان أو احتكاكي من الحنك. قواعد بسيطة: 1) بداية الكلمة أو المقطع (rot, Frau, richtig) رخو/غُري؛ 2) بعد حرف متحرك قصير (hart, lernen) رخو؛ 3) في نهاية المقطع أو بصيغة -er (Vater, Kinder) يختزل إلى a خفيفة تسمى «a-Schwa».",),
-        ("rules": [
+        ("rules", [
             OrderedDict([("de", "r am Silbenanfang: rot, Reise, Frau, richtig — Zäpfchen-r oder Zungen-r, gerieben, nicht gerollt"), ("ar", "بداية المقطع: راء رخوة (مطاطة قليلاً أو غُرّية)، لا تُرَقّق اللسان كالإسبانية ولا تُفخّم كالعربية.")]),
             OrderedDict([("de", "-er am Silben-/Wortende: Vater, Mutter, Kinder → schwaches a (Schwa)"), ("ar", "نهاية المقطع بصيغة -er: تُختزل إلى a خفيفة.")]),
         ]),
-        ("tables": []),
-        ("examples": [
+        ("tables", []),
+        ("examples", [
             OrderedDict([("de", "Vater [ˈfaːtɐ], Mutter [ˈmʊtɐ], Kinder [ˈkɪndɐ]"), ("ar", "أب/أم/أطفال — -er آخراً = a خفيفة.")]),
         ]),
         ("eselsbruecke", "بدل أن تقرأ Vater «فاتِر»، قلها «فاتَ» وكأن آخرها a خفيفة أو همزة ملساء.")
@@ -218,12 +218,12 @@ new_topics = {
             ]),
         ]),
         ("summaryAr", "قواعد النطق: 1) sch دائماً = «ش» (Schule=شولَ). 2) sp في بداية الكلمة/المقطع = shp (شب)؛ 3) st في بداية الكلمة/المقطع = sht (شت). في وسط الكلمة أو آخرها تنطق سين عادية (best- باست، Fenster- فنستر).",),
-        ("rules": [
+        ("rules", [
             OrderedDict([("de", "sch = sch (immer wie \"ش\"): Schule, schreiben, Fisch"), ("ar", "sch دائماً = ش.")]),
             OrderedDict([("de", "sp im Wort-/Silbenanfang = shp (شب): spielen, sprechen, Stadtpark (sp im Wort → shp)"), ("ar", "sp في بداية الكلمة/المقطع = shp.")]),
             OrderedDict([("de", "st im Wort-/Silbenanfang = sht (شت): Stadt, stehen, verstehen (Ver-stehen → sht)"), ("ar", "st في بداية الكلمة/المقطع = sht.")]),
         ]),
-        ("tables": [
+        ("tables", [
             OrderedDict([
                 ("captionDe", "Beispiele"),
                 ("captionAr", "أمثلة"),
@@ -239,7 +239,7 @@ new_topics = {
                 ])
             ])
         ]),
-        ("examples": []),
+        ("examples", []),
         ("eselsbruecke", "حرف s قبل p أو t في بداية الكلمة يخجل من النطق فيستعين بحرف ش: sp→شب، st→شت.")
     ]),
 
@@ -266,12 +266,12 @@ new_topics = {
             ]),
         ]),
         ("summaryAr", "قاعدة نطقية مهمة جداً: في نهاية الكلمة أو المقطع، لا يوجد جهر بالأحرف: b تُنطَق p، d تُنطَق t، g تُنطَق k. هذا يفسر لماذا Tag (يوم) = تاك وlieb (محبوب) = ليب وKind (طفل) = كينت.",),
-        ("rules": [
+        ("rules", [
             OrderedDict([("de", "b am Ende → p: lieb [li:p], ab [ap]"), ("ar", "b نهاية → p.")]),
             OrderedDict([("de", "d am Ende → t: Kind [kɪnt], Hund [hʊnt]"), ("ar", "d نهاية → t.")]),
             OrderedDict([("de", "g am Ende → k: Tag [ta:k], Weg [ve:k]"), ("ar", "g نهاية → k.")]),
         ]),
-        ("tables": [
+        ("tables", [
             OrderedDict([
                 ("captionDe", "Beispiele"),
                 ("captionAr", "أمثلة"),
@@ -286,7 +286,7 @@ new_topics = {
                 ])
             ])
         ]),
-        ("examples": [
+        ("examples", [
             OrderedDict([("de", "Der Tag ist gut. → [deːɐ̯ ta:k ɪst gu:t]"), ("ar", "اليوم جميل. Tag تاك، gut گوت.")]),
         ]),
         ("eselsbruecke", "الألمان يرهبون الجهر في آخر الكلمة (كأنه يُعِب الحلق): كل مجهور يفقد جهره في النهاية.")

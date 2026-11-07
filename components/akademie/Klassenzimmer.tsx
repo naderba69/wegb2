@@ -432,6 +432,8 @@ export function Klassenzimmer({
               srs={progress.srs}
               onSrs={onSrs}
               onPoints={onPoints}
+              lessonStudio
+              lessonCompleted={localOf(currentTask.id).total > 0}
               voiceName={voiceName}
               rate={rate}
               tempo={progress.settings.tempo}

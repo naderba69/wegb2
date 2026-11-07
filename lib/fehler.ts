@@ -1,4 +1,5 @@
 // محرّك دفتر الأخطاء والتكيّف — «ذاكرة المدرّس» التي لا تنسى أخطاءك
+import { lokalesDatum } from "./datum";
 import { PHASE_START, levelAmTag } from "./phasen";
 import type {
   Exercise,
@@ -35,7 +36,7 @@ export function upsertFehler(p: Progress, e: FehlerEintrag): Progress {
   fehler[key] = {
     ...e,
     key,
-    first: prev?.first ?? new Date().toISOString().slice(0, 10),
+    first: prev?.first ?? lokalesDatum(),
     srs: prev ? reviewCard(prev.srs, 0) : newCard(),
     treffer: (prev?.treffer ?? 0) + 1,
   };
@@ -142,7 +143,7 @@ export function wochenWaerme(p: Progress, wochen = 6): { kat: string[]; zeilen: 
     const e = new Date(s);
     e.setDate(e.getDate() + 7);
     spalten.push(i === 0 ? "هذا الأسبوع" : `قبل ${i}`);
-    grenzen.push([s.toISOString().slice(0, 10), e.toISOString().slice(0, 10)]);
+    grenzen.push([lokalesDatum(s), lokalesDatum(e)]);
   }
   const kat = Object.keys(FEHLER_KAT);
   const zeilen = kat.map(() => spalten.map(() => 0));

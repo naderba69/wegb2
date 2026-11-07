@@ -12,12 +12,13 @@ import Link from "next/link";
 import { grammarMap, getBrueckenFor, candoMap } from "@/lib/content";
 import type { Eselsbruecke } from "@/lib/types";
 import { isDue } from "@/lib/srs";
+import { parsePitfallContrast } from "@/lib/pitfall";
 import { entdeckungsFrage, induktionMoeglich, ergebnisText, type EntdeckungsErgebnis } from "@/lib/induktion";
 import { speakAny } from "@/lib/speech";
 import { useProgress, planeVerifikation } from "@/lib/store";
-import Image from "next/image";
 import { De } from "@/components/De";
 import ExerciseSet, { type ExerciseProgress } from "@/components/exercises";
+import { LessonSceneVisual } from "@/components/akademie/LessonSceneVisual";
 import { ggpForTopic } from "@/lib/ggp";
 import { kulturFuer } from "@/lib/kultur";
 
@@ -208,11 +209,27 @@ function IndependentApplication({
   );
 }
 
-export function LektionWizard({ topicId }: { topicId: string }) {
-  return <LektionWizardContent key={topicId} topicId={topicId} />;
+interface LektionWizardProps {
+  topicId: string;
+  /** داخل «اليوم»: لا تنقّل إلى مسار آخر، بل أبلغ مشغّل المهمة أن الاستوديو اكتمل. */
+  embedded?: boolean;
+  completedInDay?: boolean;
+  onComplete?: () => void;
 }
 
-function LektionWizardContent({ topicId }: { topicId: string }) {
+export function LektionWizard({ topicId, embedded = false, completedInDay = false, onComplete }: LektionWizardProps) {
+  return (
+    <LektionWizardContent
+      key={topicId}
+      topicId={topicId}
+      embedded={embedded}
+      completedInDay={completedInDay}
+      onComplete={onComplete}
+    />
+  );
+}
+
+function LektionWizardContent({ topicId, embedded, completedInDay, onComplete }: Required<Pick<LektionWizardProps, "topicId" | "embedded" | "completedInDay">> & Pick<LektionWizardProps, "onComplete">) {
   const topic = grammarMap[topicId];
   const { progress } = useProgress();
   const day = progress.plan.day;
@@ -268,7 +285,6 @@ function LektionWizardContent({ topicId }: { topicId: string }) {
   }, []);
   const onApplicationSaved = useCallback((saved: boolean) => setAnwendungGespeichert(saved), []);
   const [layeredRevealed, setLayeredRevealed] = useState<Record<number, number>>({});
-  const [pitfallRevealed, setPitfallRevealed] = useState<Record<number, boolean>>({});
 
   if (!topic) {
     return (
@@ -339,36 +355,26 @@ function LektionWizardContent({ topicId }: { topicId: string }) {
       {/* ── هجين 1+3 — Dark Academy (قمة) + Verlag (جسم) ── */}
       <div className="lesson-hero">
         <div className="lesson-hero-dark">
-          <div style={{ position:"relative", zIndex:1, display:"flex", gap:"0.5rem", alignItems:"center", flexWrap:"wrap", fontSize:"0.78rem", fontWeight:800, letterSpacing:"0.04em", opacity:0.9 }}>
-            <span style={{ background:"rgb(255 255 255 / 0.14)", border:"1px solid rgb(255 255 255 / 0.22)", padding:"0.12rem 0.5rem", borderRadius:"999px", fontSize:"0.7rem" }}>📖 WEG VERLAG</span>
-            <span className={`lesson-level-badge ${levelClass}`} style={{ background:"rgb(255 255 255 / 0.12)", color:"#fff", borderColor:"rgb(255 255 255 / 0.28)" }}>{topic.level}</span>
-            <span style={{ color:"#B8C7E0", fontWeight:700 }}>· {topic.id}</span>
-            {topic.voraus && topic.voraus.length > 0 && <span style={{ color:"#C8A84E", fontSize:"0.72rem" }}>→ يبني على {topic.voraus.length}</span>}
+          <div style={{ position: "relative", zIndex: 1, display: "flex", gap: "0.5rem", alignItems: "center", flexWrap: "wrap", fontSize: "0.78rem", fontWeight: 800, letterSpacing: "0.04em", opacity: 0.9 }}>
+            <span style={{ background: "rgb(255 255 255 / 0.14)", border: "1px solid rgb(255 255 255 / 0.22)", padding: "0.12rem 0.5rem", borderRadius: "999px", fontSize: "0.7rem" }}>📖 WEG VERLAG</span>
+            <span className={`lesson-level-badge ${levelClass}`} style={{ background: "rgb(255 255 255 / 0.12)", color: "#fff", borderColor: "rgb(255 255 255 / 0.28)" }}>{topic.level}</span>
+            <span style={{ color: "#B8C7E0", fontWeight: 700 }}>· {topic.id}</span>
+            {topic.voraus && topic.voraus.length > 0 && <span style={{ color: "#C8A84E", fontSize: "0.72rem" }}>→ يبني على {topic.voraus.length}</span>}
           </div>
-          <div className="lesson-title-de" dir="ltr" style={{ position:"relative", zIndex:1, marginTop:"0.55rem" }}>{topic.titleDe}</div>
-          <div className="lesson-title-ar" style={{ position:"relative", zIndex:1 }}>{topic.titleAr}</div>
-          <div style={{ position:"relative", zIndex:1, marginTop:"0.45rem", fontSize:"0.72rem", color:"#9FB2CE", display:"flex", gap:"0.4rem", flexWrap:"wrap" }}>
-            <span style={{ background:"rgb(200 168 78 / 0.18)", color:"#E8D9A8", padding:"0.1rem 0.45rem", borderRadius:"999px", fontWeight:800, border:"1px solid rgb(200 168 78 / 0.3)" }}>Mayer Dual-Coding</span>
-            <span>CEFR {topic.level} · GGP 150 · BAMF</span>
+          <div className="lesson-title-de" dir="ltr" style={{ position: "relative", zIndex: 1, marginTop: "0.55rem" }}>{topic.titleDe}</div>
+          <div className="lesson-title-ar" style={{ position: "relative", zIndex: 1 }}>{topic.titleAr}</div>
+          <div style={{ position: "relative", zIndex: 1, marginTop: "0.45rem", fontSize: "0.72rem", color: "#9FB2CE" }}>
+            CEFR {topic.level} · ملف قواعد داخلي مرشح للمراجعة
           </div>
         </div>
         <div className="lesson-hero-light">
           {topic.ziel && (
-            <div className="lesson-ziel" data-testid="wizard-ziel" style={{ background:'linear-gradient(135deg, #0F1E3A 0%, #162B55 100%)', color:'#E8EEF8', borderInlineStart:'4px solid #C8A84E' }}>
+            <div className="lesson-ziel" data-testid="wizard-ziel">
               <span aria-hidden>🎯</span>
-              <span><strong style={{ color:"#E8D9A8" }}>هدف هذا الدرس:</strong> {topic.ziel}</span>
+              <span><strong>هدف هذا الدرس:</strong> {topic.ziel}</span>
             </div>
           )}
-          {/* Lesson Studio — مشهد بصري (60 JPG + 60 SVG Verlag — 100%) */}
-          <div data-testid="wizard-scene-image" style={{ marginTop: "0.2rem", borderRadius: "0.8rem", overflow: "hidden", border: "1px solid var(--color-line)", background: "var(--color-paper)" }}>
-            <Image src={`/lesson-images/${topic.id}.jpg`} alt={`مشهد ${topic.titleDe}`} width={700} height={220} sizes="(max-width: 768px) 100vw, 700px" style={{ width: "100%", height: "auto", display: "block", maxHeight: "220px", objectFit: "cover" }} onError={(e) => { const img = e.currentTarget as HTMLImageElement; if (!img.dataset.triedSvg) { img.dataset.triedSvg = "1"; img.src = `/lesson-images/${topic.id}.svg`; return; } img.style.display = "none"; const fallback = document.getElementById(`fallback-${topic.id}`); if (fallback) fallback.style.display = "flex"; }} />
-            <div id={`fallback-${topic.id}`} style={{ display: "none", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "0.3rem", padding: "1.2rem", background: "linear-gradient(135deg, #FFFCF0 0%, #FDF8E8 100%)", border: "1px dashed rgb(212 193 143 / 0.5)", borderRadius: "0.6rem", textAlign: "center" }}>
-              <span style={{ fontSize: "1.6rem" }}>🏛️</span>
-              <span style={{ fontWeight: 800, fontSize: "0.85rem", color: "#113A5F" }} dir="ltr">{topic.titleDe}</span>
-              <span style={{ fontSize: "0.75rem", color: "var(--ui-muted)" }}>Verlag WEG · صورة الدرس — Mayer مشهد ذهني</span>
-            </div>
-            <div style={{ padding: "0.4rem 0.6rem", fontSize: "0.72rem", color: "var(--color-ink2)", textAlign: "center" }}>🎨 مشهد الدرس — اربط القاعدة بصورة ذهنية (60/60 Mayer)</div>
-          </div>
+          <LessonSceneVisual topicId={topic.id} titleDe={topic.titleDe} level={topic.level} />
         </div>
       </div>
 
@@ -407,10 +413,10 @@ function LektionWizardContent({ topicId }: { topicId: string }) {
         );
       })()}
 
-      {/* ── GGP 150 — شارة المرجع الأكاديمي (لا بيانات جديدة) ── */}
+      {/* مصفوفة قواعد داخلية مولدة؛ ليست ملف GGP رسمياً أو مراجعة أكاديمية خارجية. */}
       {(() => { const feats = ggpForTopic(topicId); return feats.length ? (
         <div data-testid="wizard-ggp" style={{ display: "flex", gap: "0.35rem", flexWrap: "wrap", alignItems: "center", fontSize: "0.73rem" }}>
-          <span style={{ fontWeight: 900, color: "var(--ui-muted)" }}>📑 GGP:</span>
+          <span style={{ fontWeight: 900, color: "var(--ui-muted)" }}>📑 ملف قواعد داخلي:</span>
           {feats.map((f) => <span key={f.code} className="ggp-chip" title={`${f.titelDe} — ${f.titelAr}`} data-testid={`ggp-${f.code}`}>{f.code} · {f.titelDe}</span>)}
           <span style={{ color: "var(--ui-muted)" }}>· {topic.level} · {feats[0].familie}</span>
         </div>
@@ -418,7 +424,7 @@ function LektionWizardContent({ topicId }: { topicId: string }) {
       {/* Mayer: Signaling — هدف واضح قبل المحتوى */}
       <div data-testid="wizard-mayer-goal" className="lesson-ziel wizard-ziel-bg" style={{ borderInlineStart: "4px solid var(--color-a1)", padding: "0.5rem 0.7rem", borderRadius: "0.5rem", display: "flex", gap: "0.5rem", alignItems: "center" }}>
         <span style={{ fontSize: "1.1rem" }}>🎯</span>
-        <div><strong style={{ fontSize: "0.82rem" }}>{topic.ziel}</strong><div style={{ fontSize: "0.75rem", color: "var(--color-ink2)" }}>Conti: Prediction أولاً — خمّن قبل الشرح (70% نتذكر أكثر)</div></div>
+        <div><strong style={{ fontSize: "0.82rem" }}>{topic.ziel}</strong><div style={{ fontSize: "0.75rem", color: "var(--color-ink2)" }}>خمّن قبل الشرح لتهيئة الانتباه، دون ادعاء نسبة أثر غير متحققة</div></div>
       </div>
       <div data-testid="wizard-voraus" style={{ fontSize: "0.8rem", color: "var(--color-ink2)" }}>
         {topic.voraus && topic.voraus.length > 0
@@ -435,11 +441,11 @@ function LektionWizardContent({ topicId }: { topicId: string }) {
           <div data-testid="wizard-induktion" style={{ display: "grid", gap: "0.65rem" }}>
             <div style={{ display:"flex", gap:"0.5rem", alignItems:"center", flexWrap:"wrap" }}>
               <span style={{ background:"#0F1E3A", color:"#E8D9A8", padding:"0.2rem 0.55rem", borderRadius:"999px", fontWeight:900, fontSize:"0.72rem", border:"1px solid rgb(200 168 78 / 0.35)" }}>🔍 خطوة 1/5 — خمّن</span>
-              <span style={{ fontSize:"0.72rem", color:"var(--color-ink2)" }}>Conti Prediction — نتذكر 70% أكثر</span>
+              <span style={{ fontSize:"0.72rem", color:"var(--color-ink2)" }}>تنبؤ قبل الشرح — لا نسبة أثر مفترضة</span>
             </div>
             <strong style={{ fontSize:"1rem" }}>اكتشف القاعدة قبل أن تقرأها</strong>
             <p style={{ fontSize: "0.85rem", color: "var(--color-ink2)", margin: 0, lineHeight:1.8 }}>
-              اقرأ المشهد ثم خمّن: ما النمط المشترك؟ الخطأ لا يُخصم — بل يجهّز دماغك للشرح (بحث Gianfranco Conti #1).
+              اقرأ المشهد ثم خمّن: ما النمط المشترك؟ الخطأ لا يُخصم؛ هذه خطوة تنبؤ داخلية قبل الشرح، وليست ادعاء أثر تعليمي مثبت.
             </p>
             <div className="lesson-scene">
               <div className="lesson-scene-head">💬 المشهد — القاعدة مختبئة هنا · استمع لكل جملة</div>
@@ -672,63 +678,44 @@ function LektionWizardContent({ topicId }: { topicId: string }) {
               <div style={{ fontSize: "0.75rem", color: "var(--ui-muted)" }}>💡 خريطة مفاهيم سريعة — احفظ النمط، لا النص</div>
             </div>
             {topic.pitfalls && topic.pitfalls.length > 0 && (
-              <div style={{ display: "grid", gap: "0.6rem" }} data-testid="wizard-contrast">
-                <div style={{ display:"flex", gap:"0.5rem", alignItems:"center", flexWrap:"wrap" }}>
-                  <span style={{ background:"#0F1E3A", color:"#E8D9A8", padding:"0.18rem 0.55rem", borderRadius:"999px", fontWeight:900, fontSize:"0.72rem", border:"1px solid rgb(200 168 78 / 0.35)" }}>⚠️ جدار الفخاخ</span>
-                  <span style={{ fontWeight:800, color:"#0F1E3A", fontSize:"0.9rem" }}>Contrast — خطأ vs صواب</span>
-                  <span style={{ fontSize:"0.68rem", color:"var(--ui-muted)", background:"rgb(22 163 74 / 0.1)", padding:"0.12rem 0.4rem", borderRadius:"999px" }}>يثبت 40% أكثر</span>
-                </div>
-                <div style={{ fontSize:"0.73rem", color:"var(--color-ink2)", background:"linear-gradient(180deg, #FFFCF0, #FDF8E8)", padding:"0.4rem 0.6rem", borderRadius:"0.5rem", border:"1px solid rgb(212 193 143 / 0.22)" }}>💡 Conti Contrast + Retrieval: اكتشف الخطأ أولاً — دماغك يبني مساراً، ثم اكشف الصواب ليثبت.</div>
-                {topic.pitfalls.map((p, idx) => {
-                  const hasContrast = p.de.includes("→") || p.de.includes("statt") || p.de.includes("vs");
-                  const revealed = !!pitfallRevealed[idx];
-                  const wrong = p.de.split("→")[0].trim();
-                  const correct = hasContrast ? p.de.split("→")[1]?.trim() : p.ar.split("—")[0]?.trim() || "راجع القاعدة أعلاه";
+              <div style={{ display: "grid", gap: "0.5rem" }}>
+                <div style={{ fontWeight: 800, color: "var(--color-die)", fontSize: "0.9rem" }}>⚠️ جدار الفخاخ — لا تقع فيها</div>
+                {topic.pitfalls.map((p, pitfallIndex) => {
+                  const contrast = parsePitfallContrast(p.de);
                   return (
-                  <div key={p.de} data-testid={`wizard-pitfall-${idx}`} className="lesson-pitfall-premium">
-                    <div className="lesson-pitfall-header">
-                      <span>🎯 فخ {idx+1}</span>
-                      <span style={{ flex:1 }} />
-                      <span style={{ fontSize:"0.65rem", background: revealed ? "#16A34A" : "rgb(255 255 255 / 0.14)", color: revealed ? "#fff" : "#9FB2CE", padding:"0.1rem 0.4rem", borderRadius:"999px" }}>{revealed ? "✓ مكشوف" : "مخفي"}</span>
-                    </div>
-                    <div className="lesson-pitfall-body">
-                      <div style={{ display:"flex", gap:"0.4rem", alignItems:"center", flexWrap:"wrap" }}>
-                        <span style={{ fontSize:"0.68rem", fontWeight:800, background:"rgb(220 38 38 / 0.1)", color:"#DC2626", padding:"0.12rem 0.4rem", borderRadius:"999px", border:"1px solid rgb(220 38 38 / 0.18)" }}>✗ خطأ شائع</span>
-                        <De style={{ fontWeight:700, fontSize:"0.9rem" }}>{wrong}</De>
-                      </div>
-                      {!revealed ? (
-                        <button type="button" className="lesson-reveal-btn" data-testid={`wizard-pitfall-reveal-${idx}`} onClick={() => setPitfallRevealed((m) => ({ ...m, [idx]: true }))} style={{ justifySelf:"start", minHeight:"36px" }}>🔍 أين الخطأ؟ اكشف الصواب →</button>
+                    <div key={`${p.de}-${pitfallIndex}`} className={`lesson-pitfall ${contrast ? "lesson-pitfall--contrast" : "lesson-pitfall--note"}`}>
+                      {contrast ? (
+                        <>
+                          <div className="lesson-pitfall-side lesson-pitfall-side--wrong">
+                            <div className="lesson-pitfall-label">✗ خطأ شائع</div>
+                            <De className="lesson-pitfall-wrong">{contrast.wrongDe}</De>
+                          </div>
+                          <div className="lesson-pitfall-side lesson-pitfall-side--right">
+                            <div className="lesson-pitfall-label">✓ الصواب</div>
+                            <De className="lesson-pitfall-right">{contrast.rightDe}</De>
+                          </div>
+                        </>
                       ) : (
-                        <div style={{ display:"grid", gap:"0.5rem" }}>
-                          <div className="lesson-pitfall-contrast">
-                            <div className="lesson-pitfall-box lesson-pitfall-box--wrong">
-                              <div style={{ fontSize:"0.65rem", fontWeight:800, color:"#DC2626" }}>✗ الخطأ</div>
-                              <De style={{ fontSize:"0.82rem", textDecoration:"line-through", opacity:0.85 }}>{wrong}</De>
-                            </div>
-                            <span style={{ fontWeight:900, color:"#C8A84E", fontSize:"1.2rem", textAlign:"center" }}>→</span>
-                            <div className="lesson-pitfall-box lesson-pitfall-box--right">
-                              <div style={{ fontSize:"0.65rem", fontWeight:800, color:"#16A34A" }}>✓ الصواب</div>
-                              <div style={{ fontSize:"0.85rem", fontWeight:800, color:"#0F1E3A" }}>{correct}</div>
-                            </div>
-                          </div>
-                          <div style={{ fontSize:"0.83rem", color:"var(--color-ink2)", lineHeight:1.7, background:"#FFFCF0", padding:"0.5rem 0.6rem", borderRadius:"0.5rem", border:"1px solid rgb(212 193 143 / 0.22)" }}>
-                            <strong style={{ color:"#0F1E3A" }}>💡 لماذا؟</strong> {p.ar}
-                          </div>
-                          <button type="button" className="btn btn-ghost" data-testid={`wizard-pitfall-hide-${idx}`} onClick={() => setPitfallRevealed((m) => ({ ...m, [idx]: false }))} style={{ justifySelf:"start", minHeight:"32px", fontSize:"0.72rem" }}>إخفاء ←</button>
+                        <div className="lesson-pitfall-side lesson-pitfall-side--note">
+                          <div className="lesson-pitfall-label">⚠️ فرق استعمال</div>
+                          {p.de && <De className="lesson-pitfall-note">{p.de}</De>}
                         </div>
                       )}
+                      <div className="lesson-pitfall-reason">
+                        <div className="lesson-pitfall-label">لماذا؟</div>
+                        <div>{p.ar}</div>
+                      </div>
                     </div>
-                  </div>
                   );
                 })}
               </div>
             )}
             {(() => { const k = kulturFuer(topicId, topic.level); return k ? (
               <div data-testid="wizard-kultur" className="card" style={{ padding: "0.6rem 0.85rem", background: "var(--ui-surface-raised)", borderInlineStart: "5px solid var(--color-b2)", display: "grid", gap: "0.35rem" }}>
-                <strong style={{ fontSize: "0.85rem" }}>🌍 في ألمانيا — لمسة ثقافية {topic.level==="B2" ? "· B2 Lebenswelt" : ""} {topic.level==="B2" ? <span style={{ fontWeight:800, fontSize:"0.68rem", background:"rgb(167 139 250 / 0.14)", padding:"0.12rem 0.45rem", borderRadius:"999px", color:"#a78bfa", border:"1px solid rgb(167 139 250 / 0.3)" }}>BAMF I-VI</span> : null}</strong>
+                <strong style={{ fontSize: "0.85rem" }}>🌍 في ألمانيا — سياق استعمال حياتي {topic.level === "B2" ? "· B2 Lebenswelt" : ""}</strong>
                 <span style={{ fontSize: "0.82rem", lineHeight: 1.85, color: "var(--color-ink2)" }} dir="ltr"><De>{k.de}</De></span>
                 <span style={{ fontSize: "0.82rem", lineHeight: 1.85, color: "var(--color-ink2)" }}>{k.ar}</span>
-                <span style={{ fontSize: "0.75rem", color: "var(--ui-muted)" }}>تلميح سياقي — يُظهر متى يُستعمل النمط، لا يُمتحن. {topic.level==="B2" ? "BAMF Handlungsfeld: Beruf/Alltag — تسجيل (Anmeldung) · تأمين (Krankenkasse) · سكن (Mietvertrag) · عمل (Anerkennung)." : ""}</span>
+                <span style={{ fontSize: "0.75rem", color: "var(--ui-muted)" }}>تلميح سياقي يوضح الاستعمال ولا يمثل اعتماداً خارجياً أو بنداً امتحانياً.</span>
               </div>
             ) : null; })()}
             {(topic as unknown as {resources?: string[]}).resources && ((topic as unknown as {resources?: string[]}).resources!.length>0) && (
@@ -737,7 +724,7 @@ function LektionWizardContent({ topicId }: { topicId: string }) {
                 <div style={{ fontSize:"0.78rem", color:"var(--color-ink2)", lineHeight:1.8 }}>
                   {((topic as unknown as {resources?: string[]}).resources!.slice(0,3).map((r: string)=> <div key={r} style={{ display:"flex", gap:"0.4rem" }}><span>—</span><span dir="ltr">{r}</span></div>))}
                 </div>
-                <div style={{ fontSize:"0.72rem", color:"var(--ui-muted)" }}>Verlag-Stil: المصادر ليست للامتحان بل للاستقلال — Duden · Goethe · BAMF</div>
+                <div style={{ fontSize:"0.72rem", color:"var(--ui-muted)" }}>وسوم مصادر أولية للاستقلال في التعلم؛ تحتاج كل إحالة إلى توثيق ومراجعة مستقلة.</div>
               </div>
             )}
             <BrueckenLessonBlock bruecken={bruecken} srs={progress.srs ?? {}} />
@@ -759,15 +746,38 @@ function LektionWizardContent({ topicId }: { topicId: string }) {
               </div>;
             })()}
             {(!topic.anwendung || anwendungGespeichert) ? (
-              <Link href="/" className="btn btn-primary" data-testid="wizard-zurueck-heute" style={{ minHeight: "44px", textDecoration: "none" }} onClick={() => { if ((topic.verify ?? []).length > 0) planeVerifikation(topicId, day); tuer(4); }}>
-                ✅ أنهيتُ التدريب — عُد إلى «اليوم»
-              </Link>
+              embedded ? (
+                <button
+                  type="button"
+                  className="btn btn-primary"
+                  data-testid="wizard-complete-today"
+                  disabled={completedInDay}
+                  style={{ minHeight: "44px" }}
+                  onClick={() => {
+                    if ((topic.verify ?? []).length > 0) planeVerifikation(topicId, day);
+                    tuer(4);
+                    onComplete?.();
+                  }}
+                >
+                  {completedInDay ? "✓ سُجّل الدرس في مهمة اليوم" : "✅ أنهيتُ الاستوديو — سجّل المهمة"}
+                </button>
+              ) : (
+                <Link href="/" className="btn btn-primary" data-testid="wizard-zurueck-heute" style={{ minHeight: "44px", textDecoration: "none" }} onClick={() => { if ((topic.verify ?? []).length > 0) planeVerifikation(topicId, day); tuer(4); }}>
+                  ✅ أنهيتُ التدريب — عُد إلى «اليوم»
+                </Link>
+              )
             ) : (
               <div className="card" style={{ padding: "0.7rem 0.9rem", background: "var(--color-paper2)" }}>
                 <p style={{ margin: "0 0 0.45rem", fontSize: "0.84rem" }}>احفظ إجابتك كتدريب قبل تسجيل إكمال الدرس وجدولة التحقّق المؤجّل. يمكنك التوقّف الآن؛ سيبقى موضعك ومسودتك محفوظين بلا لوم.</p>
-                <Link href="/" className="btn btn-ghost" data-testid="wizard-pause-today" style={{ minHeight: "44px", textDecoration: "none" }}>
-                  ⏸ أتوقّف الآن — عُد إلى «اليوم»
-                </Link>
+                {embedded ? (
+                  <button type="button" className="btn btn-ghost" data-testid="wizard-pause-embedded" onClick={() => document.getElementById("today-stepper")?.scrollIntoView({ behavior: "smooth", block: "start" })} style={{ minHeight: "44px" }}>
+                    ⏸ أتوقّف الآن — موضعك محفوظ
+                  </button>
+                ) : (
+                  <Link href="/" className="btn btn-ghost" data-testid="wizard-pause-today" style={{ minHeight: "44px", textDecoration: "none" }}>
+                    ⏸ أتوقّف الآن — عُد إلى «اليوم»
+                  </Link>
+                )}
               </div>
             )}
           </div>

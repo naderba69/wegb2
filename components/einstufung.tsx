@@ -4,6 +4,7 @@
  * عند النقر بلا كشفٍ فوري (حتى لا يتأثر الأداء بالتعلّم أثناء الاختبار)،
  * ثم خلاصة بكلّ مهارة ويوم الدخول الآمن مع زرّ تطبيقٍ صريح.
  */
+import { lokalesDatum } from "@/lib/datum";
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import { useProgress } from "@/lib/store";
@@ -72,7 +73,7 @@ export function EinstufungTest() {
         placed: true,
         einstufung: {
           lesen: erg.lesen, hoeren: erg.hoeren, grammatik: erg.grammatik, wortschatz: erg.wortschatz,
-          tag: vorschlag.tag, datum: new Date().toISOString().slice(0, 10),
+          tag: vorschlag.tag, datum: lokalesDatum(),
         },
       },
     }));

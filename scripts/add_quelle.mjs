@@ -50,7 +50,7 @@ for (const f of readdirSync(langDir)) {
   const p = path.join(langDir, f);
   const data = JSON.parse(fs.readFileSync(p, 'utf8'));
   let lc=0;
-  for (const [k,v] of Object.entries(data)) {
+  for (const v of Object.values(data)) {
     if (!v.quelle) {
       v.quelle = quelleText + quelleLangSuffix;
       lc++;

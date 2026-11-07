@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "updated": "2026-11-05",
+  "claimAr": "هذا سجل استقبال الأدلة لا سجل إنجاز. لا تصبح أي خانة verified أو passed لمجرد وجود رابط؛ يلزم ملف محفوظ وبصمة ومراجع مستقل وتوقيع أو محضر مناسب لنوع الدليل.",
+  "sourceArtifacts": [
+    {
+      "id": "goethe-b2-overview",
+      "targetId": "goethe-b2",
+      "officialUrl": "https://www.goethe.de/de/spr/prf/gzb2.html",
+      "status": "pending-source-capture",
+      "artifactPath": null,
+      "retrievedAt": null,
+      "mediaType": null,
+      "sha256": null,
+      "licenseNote": null,
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "signatureArtifact": null
+    },
+    {
+      "id": "telc-b2-overview",
+      "targetId": "telc-b2",
+      "officialUrl": "https://www.telc.net/sprachpruefungen/zertifikatspruefung/deutsch/telc-deutsch-b2/",
+      "status": "pending-source-capture",
+      "artifactPath": null,
+      "retrievedAt": null,
+      "mediaType": null,
+      "sha256": null,
+      "licenseNote": null,
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "signatureArtifact": null
+    }
+  ],
+  "requirementReviews": [
+    { "id": "G-B2-CLAIM", "sourceIds": ["goethe-b2-overview"], "status": "pending-independent-review", "verdict": null, "sourceLocator": null, "reviewedBy": null, "reviewerQualification": null, "reviewedAt": null, "signatureArtifact": null },
+    { "id": "G-B2-MODULES", "sourceIds": ["goethe-b2-overview"], "status": "pending-independent-review", "verdict": null, "sourceLocator": null, "reviewedBy": null, "reviewerQualification": null, "reviewedAt": null, "signatureArtifact": null },
+    { "id": "G-B2-TIMES", "sourceIds": ["goethe-b2-overview"], "status": "pending-independent-review", "verdict": null, "sourceLocator": null, "reviewedBy": null, "reviewerQualification": null, "reviewedAt": null, "signatureArtifact": null },
+    { "id": "G-B2-WRITING", "sourceIds": ["goethe-b2-overview"], "status": "pending-independent-review", "verdict": null, "sourceLocator": null, "reviewedBy": null, "reviewerQualification": null, "reviewedAt": null, "signatureArtifact": null },
+    { "id": "G-B2-FOUR-SKILLS", "sourceIds": ["goethe-b2-overview"], "status": "pending-independent-review", "verdict": null, "sourceLocator": null, "reviewedBy": null, "reviewerQualification": null, "reviewedAt": null, "signatureArtifact": null },
+    { "id": "T-B2-CLAIM", "sourceIds": ["telc-b2-overview"], "status": "pending-independent-review", "verdict": null, "sourceLocator": null, "reviewedBy": null, "reviewerQualification": null, "reviewedAt": null, "signatureArtifact": null },
+    { "id": "T-B2-BLOCKS", "sourceIds": ["telc-b2-overview"], "status": "pending-independent-review", "verdict": null, "sourceLocator": null, "reviewedBy": null, "reviewerQualification": null, "reviewedAt": null, "signatureArtifact": null },
+    { "id": "T-B2-TIMES", "sourceIds": ["telc-b2-overview"], "status": "pending-independent-review", "verdict": null, "sourceLocator": null, "reviewedBy": null, "reviewerQualification": null, "reviewedAt": null, "signatureArtifact": null },
+    { "id": "T-B2-FORMAT", "sourceIds": ["telc-b2-overview"], "status": "pending-independent-review", "verdict": null, "sourceLocator": null, "reviewedBy": null, "reviewerQualification": null, "reviewedAt": null, "signatureArtifact": null },
+    { "id": "T-B2-FOUR-SKILLS", "sourceIds": ["telc-b2-overview"], "status": "pending-independent-review", "verdict": null, "sourceLocator": null, "reviewedBy": null, "reviewerQualification": null, "reviewedAt": null, "signatureArtifact": null }
+  ],
+  "gateReviews": [
+    { "id": "EXT-SOURCE-01", "status": "pending-external", "reviewedBy": null, "reviewerQualification": null, "reviewedAt": null, "evidenceArtifacts": [], "signatureArtifact": null },
+    { "id": "EXT-LANG-01", "status": "pending-external", "reviewedBy": null, "reviewerQualification": null, "reviewedAt": null, "evidenceArtifacts": [], "signatureArtifact": null },
+    { "id": "EXT-EXAM-01", "status": "pending-external", "reviewedBy": null, "reviewerQualification": null, "reviewedAt": null, "evidenceArtifacts": [], "signatureArtifact": null },
+    { "id": "EXT-PILOT-01", "status": "pending-external", "reviewedBy": null, "reviewerQualification": null, "reviewedAt": null, "evidenceArtifacts": [], "signatureArtifact": null },
+    { "id": "EXT-DEVICE-01", "status": "pending-external", "reviewedBy": null, "reviewerQualification": null, "reviewedAt": null, "evidenceArtifacts": [], "signatureArtifact": null },
+    { "id": "EXT-LEGAL-01", "status": "pending-external", "reviewedBy": null, "reviewerQualification": null, "reviewedAt": null, "evidenceArtifacts": [], "signatureArtifact": null },
+    { "id": "EXT-AUTH-01", "status": "pending-external", "reviewedBy": null, "reviewerQualification": null, "reviewedAt": null, "evidenceArtifacts": [], "signatureArtifact": null }
+  ]
+}

@@ -4,10 +4,12 @@
  * الجهاز، وتصدير محلي (JSON للصفّ/للفرد + تقرير HTML للطباعة).
  * لا خادم ولا رفع — الملفّات تُنزَّل على الجهاز وتبقى بيد المعلّم.
  */
+import { lokalesDatum } from "@/lib/datum";
 import { useMemo, useState } from "react";
 import { listProfiles, activeProfile, progressKey } from "@/lib/profiles";
 import { lernendenZeile, type LernendenZeile } from "@/lib/lehrer";
 import type { Progress } from "@/lib/types";
+import { progressFuerExport } from "@/lib/backup";
 
 function ladeProfil(id: string): Progress | null {
   try {
@@ -62,7 +64,7 @@ export function KlassenAnsicht() {
     }
   }, []);
 
-  const datum = new Date().toISOString().slice(0, 10);
+  const datum = lokalesDatum();
 
   const exportKlasseJson = () => {
     herunterladen(`wegb2-klasse-${datum}.json`, JSON.stringify({ exportiertAm: datum, lernende: zeilen }, null, 2), "application/json");
@@ -75,7 +77,7 @@ export function KlassenAnsicht() {
   const exportEinzel = (z: LernendenZeile) => {
     const p = ladeProfil(z.id);
     if (!p) return;
-    herunterladen(`wegb2-lernender-${z.id}-${datum}.json`, JSON.stringify(p, null, 2), "application/json");
+    herunterladen(`wegb2-lernender-${z.id}-${datum}.json`, JSON.stringify(progressFuerExport(p), null, 2), "application/json");
     setMeldung(`نُزّل تقدّم «${z.name}» كاملًا (JSON) — هو ملفّ النسخ الاحتياطي نفسه القابل للاستيراد.`);
   };
 

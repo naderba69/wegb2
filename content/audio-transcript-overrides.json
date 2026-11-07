@@ -1,0 +1,319 @@
+{
+  "schemaVersion": 1,
+  "updated": "2026-11-07",
+  "claimAr": "لقطات نصية مجمدة للملفات التي بقي صوتها ثابتاً بينما توسع نص القراءة أو الحوار لاحقاً. تُستخدم لقياس سرعة التسجيل فقط، وتمنع الادعاء بأن الصوت يقرأ النسخة الموسعة الحالية.",
+  "items": [
+    {
+      "file": "/audio/dialog/d-a0-ht01.mp3",
+      "id": "d-a0-ht01",
+      "group": "dialog",
+      "textDe": "Achtung, Gleis 3! Der Regionalzug nach Bonn fährt heute zehn Minuten später. Der Zug hält auch in Köln-Süd. Bitte steigen Sie erst ein, wenn der Zug steht.",
+      "audioCommit": "bf060b8b1248fb9c12d162d085350f2224380441",
+      "sourcePath": "content/dialogues.json"
+    },
+    {
+      "file": "/audio/dialog/d-a0-ht02.mp3",
+      "id": "d-a0-ht02",
+      "group": "dialog",
+      "textDe": "Liebe Kunden! Heute sind die Bananen im Angebot: ein Kilo für einen Euro. Bitte bezahlen Sie an der Kasse.",
+      "audioCommit": "bf060b8b1248fb9c12d162d085350f2224380441",
+      "sourcePath": "content/dialogues.json"
+    },
+    {
+      "file": "/audio/dialog/d-a2-ht01.mp3",
+      "id": "d-a2-ht01",
+      "group": "dialog",
+      "textDe": "Sehr geehrte Kundinnen und Kunden! Heute erhalten Sie auf alle Winterjacken 30 Prozent Rabatt. Das Angebot gilt nur heute bis Ladenschluss um 20 Uhr. Bitte beachten Sie auch unsere neue Damenabteilung im ersten Stock.",
+      "audioCommit": "bf060b8b1248fb9c12d162d085350f2224380441",
+      "sourcePath": "content/dialogues.json"
+    },
+    {
+      "file": "/audio/dialog/d-a2-ht03.mp3",
+      "id": "d-a2-ht03",
+      "group": "dialog",
+      "textDe": "Die Polizei meldet einen Unfall auf der A3 kurz hinter der Anschlussstelle Lohmar in Fahrtrichtung Frankfurt. Drei Fahrzeuge sind beteiligt, die linke Spur ist gesperrt. Es gibt zurzeit einen Stau von acht Kilometern. Autofahrer werden gebeten, bei der nächsten Ausfahrt abzufahren.",
+      "audioCommit": "bf060b8b1248fb9c12d162d085350f2224380441",
+      "sourcePath": "content/dialogues.json"
+    },
+    {
+      "file": "/audio/dialog/d-b1-ht01.mp3",
+      "id": "d-b1-ht01",
+      "group": "dialog",
+      "textDe": "Am morgigen Dienstag werden Busse und Bahnen in der Stadt wegen eines Warnstreiks einer Gewerkschaft nur eingeschränkt fahren. Besonders die U-Bahn-Linien U1 und U3 sind betroffen. Die S-Bahn soll nach Angaben des Verkehrsunternehmens fast vollständig fahren. Der Streik dauert von 4 bis 10 Uhr morgens.",
+      "audioCommit": "bf060b8b1248fb9c12d162d085350f2224380441",
+      "sourcePath": "content/dialogues.json"
+    },
+    {
+      "file": "/audio/dialog/d-b1-ht02.mp3",
+      "id": "d-b1-ht02",
+      "group": "dialog",
+      "textDe": "Sehr geehrte Fahrgäste, wir bitten Sie, die Verspätung von etwa 15 Minuten zu entschuldigen. Grund sind Personen auf der Strecke, die die Polizei gerade wegschickt. Wir erreichen den Hauptbahnhof voraussichtlich um 17:45 Uhr. Der Anschluss nach Hamburg ist dadurch gefährdet.",
+      "audioCommit": "bf060b8b1248fb9c12d162d085350f2224380441",
+      "sourcePath": "content/dialogues.json"
+    },
+    {
+      "file": "/audio/dialog/d-b2-ht01.mp3",
+      "id": "d-b2-ht01",
+      "group": "dialog",
+      "textDe": "Umweltaktivisten haben heute Morgen eine Autobahn in einer Großstadt blockiert, indem sie sich auf der Fahrbahn festklebten. Die Polizei hat mit der Räumung begonnen. Es kam zu einem langen Stau. Die Straße ist stadteinwärts gesperrt; die Räumung wird voraussichtlich bis zum Mittag dauern.",
+      "audioCommit": "bf060b8b1248fb9c12d162d085350f2224380441",
+      "sourcePath": "content/dialogues.json"
+    },
+    {
+      "file": "/audio/dialog/d-b2-ht02.mp3",
+      "id": "d-b2-ht02",
+      "group": "dialog",
+      "textDe": "Guten Tag, Sie haben unser Büro erreicht. Es ist heute bereits geschlossen. Unsere Öffnungszeiten am Montag sind von 8 bis 17 Uhr. In dringenden Fällen finden Sie die Rufnummer unseres Notdienstes in Ihren Vertragsunterlagen. Vielen Dank für Ihr Verständnis.",
+      "audioCommit": "bf060b8b1248fb9c12d162d085350f2224380441",
+      "sourcePath": "content/dialogues.json"
+    },
+    {
+      "file": "/audio/dialog/d-b2-ht03.mp3",
+      "id": "d-b2-ht03",
+      "group": "dialog",
+      "textDe": "Betrachten wir ein Beispiel: Künstliche Intelligenz könnte berufliche Aufgaben verändern. Einige Tätigkeiten könnten automatisiert werden, während in anderen Bereichen neue Aufgaben entstehen. Besonders betroffen sein könnten wiederkehrende Büro- und Verwaltungsaufgaben. Aus diesem Beispiel lässt sich jedoch keine sichere Zahl künftig wegfallender Stellen ableiten. Entscheidend wären Weiterbildung und die Frage, ob Unternehmen KI unterstützend statt ersetzend einsetzen.",
+      "audioCommit": "bf060b8b1248fb9c12d162d085350f2224380441",
+      "sourcePath": "content/dialogues.json"
+    },
+    {
+      "file": "/audio/dialog/hoer-a1-01.mp3",
+      "id": "hoer-a1-01",
+      "group": "dialog",
+      "textDe": "Achtung, Achtung! Der Zug RE 10 nach Köln fährt heute um 14 Uhr 25 von Gleis 3. Verspätung: circa 10 Minuten. Wir bitten um Ihr Verständnis.",
+      "audioCommit": "bf060b8b1248fb9c12d162d085350f2224380441",
+      "sourcePath": "content/dialogues.json"
+    },
+    {
+      "file": "/audio/dialog/hoer-a1-02.mp3",
+      "id": "hoer-a1-02",
+      "group": "dialog",
+      "textDe": "Sehr geehrte Kunden! Heute sind alle Äpfel im Angebot: ein Kilo für nur 99 Cent. Bananen, Brot und Milch kosten den normalen Preis. Die Öffnungszeiten heute sind von 8 bis 20 Uhr. Vielen Dank für Ihren Besuch!",
+      "audioCommit": "bf060b8b1248fb9c12d162d085350f2224380441",
+      "sourcePath": "content/dialogues.json"
+    },
+    {
+      "file": "/audio/dialog/hoer-a2-02.mp3",
+      "id": "hoer-a2-02",
+      "group": "dialog",
+      "textDe": "Und nun das Wetter für morgen: Im Norden ist es bewölkt mit etwas Regen bei Temperaturen zwischen 12 und 15 Grad. In der Mitte Deutschlands scheint die Sonne bei bis zu 20 Grad. Im Süden bleibt es warm und trocken mit Höchstwerten bis 26 Grad. Am Abend kann es im Westen Gewitter geben.",
+      "audioCommit": "bf060b8b1248fb9c12d162d085350f2224380441",
+      "sourcePath": "content/dialogues.json"
+    },
+    {
+      "file": "/audio/dialog/hoer-b1-01.mp3",
+      "id": "hoer-b1-01",
+      "group": "dialog",
+      "textDe": "Hallo Karim, hier ist Sarah von der Arbeit. Ich rufe an, weil der Termin mit Herrn Becker am Mittwoch leider ausfällt. Er ist krank geworden. Ich habe schon einen neuen Termin für den 18. November um 10 Uhr vorgeschlagen. Bitte sag mir bis morgen Bescheid, ob dir das passt. Ansonsten ruf mich bitte auf dem Handy zurück. Danke, bis dann!",
+      "audioCommit": "bf060b8b1248fb9c12d162d085350f2224380441",
+      "sourcePath": "content/dialogues.json"
+    },
+    {
+      "file": "/audio/hoeren/t-b1-01.mp3",
+      "id": "t-b1-01",
+      "group": "hoeren",
+      "textDe": "In letzter Zeit diskutieren viele über Handys in Schulen. Einerseits sind Handys nützlich, weil Schüler schnell Informationen finden. Andererseits stören sie oft den Unterricht. Meiner Meinung nach sollten Schulen klare Regeln einführen: Handys ja, aber nur in der Pause. So können sich alle besser konzentrieren, trotzdem bleibt die digitale Kompetenz erhalten.",
+      "audioCommit": "bbdf2255c4b84aa3e7938d5f3af1e0c7c1c7d053",
+      "sourcePath": "content/texts.json"
+    },
+    {
+      "file": "/audio/hoeren/t-b1-03.mp3",
+      "id": "t-b1-03",
+      "group": "hoeren",
+      "textDe": "Die Luft in unserer Stadt ist immer schlechter geworden, obwohl die Regierung neue Maßnahmen beschlossen hat. Viele Bürger fordern deshalb mehr Radwege und bessere Busse. Eine Umfrage zeigt: 70 Prozent würden das Auto stehen lassen, wenn der Nahverkehr besser wäre. Die Lösung ist also nicht ein einzelnes Projekt, sondern ein Gesamtkonzept, das alle Bereiche verbindet.",
+      "audioCommit": "bbdf2255c4b84aa3e7938d5f3af1e0c7c1c7d053",
+      "sourcePath": "content/texts.json"
+    },
+    {
+      "file": "/audio/hoeren/t-b1-06.mp3",
+      "id": "t-b1-06",
+      "group": "hoeren",
+      "textDe": "Gesucht wird eine Fachkraft (m/w/d), die Erfahrung in der Logistik mitbringt. Zu den Aufgaben, die Sie übernehmen, gehören Planung und Kontrolle der Lieferketten. Wir bieten eine Stelle, die viel Verantwortung und eigenständiges Arbeiten ermöglicht. Bewerben Sie sich mit Unterlagen, die Ihren Lebenslauf und ein Anschreiben enthalten. Bewerbungsschluss ist der 30. Juni.",
+      "audioCommit": "bbdf2255c4b84aa3e7938d5f3af1e0c7c1c7d053",
+      "sourcePath": "content/texts.json"
+    },
+    {
+      "file": "/audio/hoeren/t-b1-07.mp3",
+      "id": "t-b1-07",
+      "group": "hoeren",
+      "textDe": "Eine Umfrage unter 500 Jugendlichen zeigt ein überraschendes Bild: 45 Prozent würden heute eine Ausbildung einem Studium vorziehen. Als Hauptgrund nennen sie die Praxisnähe. Trotzdem bleibt das Studium bei denjenigen beliebt, die später forschen wollen. Experten raten dazu, zuerst Praktika zu machen: Nur so findet man heraus, was zu einem passt.",
+      "audioCommit": "bbdf2255c4b84aa3e7938d5f3af1e0c7c1c7d053",
+      "sourcePath": "content/texts.json"
+    },
+    {
+      "file": "/audio/hoeren/t-b1-08.mp3",
+      "id": "t-b1-08",
+      "group": "hoeren",
+      "textDe": "In großen Städten ist eine Wohnung teuer. Viele junge Leute teilen sich deshalb eine WG: Jeder hat ein eigenes Zimmer, aber Küche und Bad sind gemeinsam. Das hat Vorteile – man ist nicht allein –, aber auch Nachteile: Lärm und wenig Privatsphäre. Wer ruhig wohnen will, sucht am besten am Stadtrand.",
+      "audioCommit": "bbdf2255c4b84aa3e7938d5f3af1e0c7c1c7d053",
+      "sourcePath": "content/texts.json"
+    },
+    {
+      "file": "/audio/hoeren/t-b1-09.mp3",
+      "id": "t-b1-09",
+      "group": "hoeren",
+      "textDe": "Jeder kann etwas für die Umwelt tun. Zum Beispiel mit dem Rad zur Arbeit fahren statt mit dem Auto, das Licht ausschalten und Müll trennen. In Deutschland werden Papier, Glas und Plastik getrennt gesammelt. Auch beim Einkaufen hilft eine Stofftasche. Kleine Schritte wirken zusammen sehr stark.",
+      "audioCommit": "bbdf2255c4b84aa3e7938d5f3af1e0c7c1c7d053",
+      "sourcePath": "content/texts.json"
+    },
+    {
+      "file": "/audio/hoeren/t-b2-21.mp3",
+      "id": "t-b2-21",
+      "group": "hoeren",
+      "textDe": "Als Rami erfuhr, dass sein Freund Tarek die Stelle bekommen hatte, auf die sie sich beide beworben hatten, sagte er zuerst gar nichts. Später schrieb er eine kurze Nachricht: „Glückwunsch.“ Ohne Ausrufezeichen. Tarek las darin eine Kränkung und antwortete drei Tage lang nicht. So begann ein Missverständnis, das ihr Verhältnis fast beendet hätte.\n\nIn Wahrheit war Rami weder neidisch noch wütend. Er gönnte Tarek den Erfolg, aber die eigene Enttäuschung war an diesem Abend größer als seine Zuneigung. Das ist menschlich, und es wäre kein Problem gewesen, hätte er es einfach gesagt. Stattdessen schwieg er, und Schweigen lässt sich in jede Richtung deuten. Tarek deutete Ramis Schweigen als Neid; seine Schwester vermutete sogar, Tarek habe Rami betrügen wollen, weil Tarek ihm nichts vom Bewerbungsgespräch erzählt hatte.\n\nDass die beiden heute wieder zusammen Fußball spielen, liegt an einer einzigen Frage. Tarek rief an und fragte nicht „Warum bist du so?“, sondern „Wie geht es dir damit?“. Diese Frage zeigt Mitgefühl; man muss dafür weder nachgeben noch sich rechtfertigen. Rami konnte antworten, ohne sein Selbstwertgefühl zu verteidigen. Gelassenheit heißt nicht, nichts zu fühlen; sie heißt, das Gefühl zu benennen, bevor es den anderen enttäuscht.",
+      "audioCommit": "d65c279e3da8376aa75b805fe1e2f2b857a30061",
+      "sourcePath": "content/texts.json"
+    },
+    {
+      "file": "/audio/hoeren/t-b2-22.mp3",
+      "id": "t-b2-22",
+      "group": "hoeren",
+      "textDe": "Nach acht Wochen kehrt Frau Lang ins Büro zurück. Im Frühjahr wurde sie am Knie operiert, danach folgten drei Wochen Reha und eine lange Krankschreibung. Die Genesung verlief gut, sagt sie, aber sie hat etwas gelernt, das mit dem Knie wenig zu tun hat: Wie ein Umfeld auf Krankheit reagiert, sagt mehr über das Arbeitsklima als jede Umfrage.\n\nIhre Kolleginnen hatten in der Zeit ihre Aufgaben still übernommen. Niemand fragte, wann sie „endlich“ zurückkomme. Diese Solidarität war keine Selbstverständlichkeit; in ihrer früheren Firma galt schon eine Erkältung als Schwäche, und wer zur Vorsorge ging, tat das heimlich. Dort war sie, wie sie heute selbst sagt, fast süchtig nach Anerkennung gewesen und hatte jede Pause als verlorene Zeit empfunden.\n\nJetzt dosiert sie die Anstrengung anders. Die Bildschirmarbeit unterbricht sie alle fünfzig Minuten, weil der Physiotherapeut es empfohlen hat, aber auch, weil sie gemerkt hat, dass die Arbeit danach besser wird. Ihr Chef hat das Modell für das ganze Team übernommen. Ob das die Produktivität steigert, weiß niemand genau. Dass es das Klima verbessert hat, merkt man schon an der Kaffeemaschine.",
+      "audioCommit": "d65c279e3da8376aa75b805fe1e2f2b857a30061",
+      "sourcePath": "content/texts.json"
+    },
+    {
+      "file": "/audio/hoeren/t-b2-23.mp3",
+      "id": "t-b2-23",
+      "group": "hoeren",
+      "textDe": "Herr Ben Salem benutzte jahrelang ein einziges Passwort: für das Nutzerkonto beim Online-Händler, für die Cloud mit den Familienfotos und für das Spiel seines Sohnes. Er hielt das für praktisch. Dann kam eine E-Mail, die er für Spam hielt, und zwei Tage später war das Konto beim Händler gehackt. Bestellt wurde nichts Teures; die Angreifer wollten offenbar nur prüfen, wo das Passwort noch passt.\n\nDie Beraterin der Bank erklärte ihm, dass Cyberkriminalität selten wie im Film aussieht. Oft verwenden Angreifer gestohlene Zugangsdaten und probieren sie automatisch bei anderen Onlinediensten aus. Ein Chatbot der Bank hätte ihm dieselbe Antwort gegeben, sagte sie lachend, aber ohne Kaffee. Ihre Empfehlungen waren einfach: für jedes Konto ein eigenes Passwort, die Software regelmäßig aktualisieren, ein Backup außerhalb der Cloud.\n\nZu Hause stellte er fest, dass das letzte Update auf seinem Handy ein Jahr alt war, weil der Speicher voll war und der Akku bei jeder Installation schwächelte. Die Nutzungsbedingungen der Cloud hatte er nie gelesen; dort stand, wie lange die Datenspeicherung nach einer Kündigung weiterläuft. Unter bestimmten Voraussetzungen kann er nach Artikel 17 der DSGVO die Löschung seiner personenbezogenen Daten verlangen. Ob der Cloud-Anbieter sie in diesem Fall löschen muss, hängt von den gesetzlichen Voraussetzungen und möglichen Ausnahmen ab. Er hat die Löschung beantragt, und die Fotos liegen jetzt zusätzlich auf einer kleinen Festplatte in der Küchenschublade.",
+      "audioCommit": "d65c279e3da8376aa75b805fe1e2f2b857a30061",
+      "sourcePath": "content/texts.json"
+    },
+    {
+      "file": "/audio/hoeren/t-b2-24.mp3",
+      "id": "t-b2-24",
+      "group": "hoeren",
+      "textDe": "Mona hatte den Studienplatz erst im zweiten Anlauf bekommen; die Zulassung kam per Post, die Einschreibung musste sie persönlich erledigen. Dann saß sie in der ersten Vorlesung, in einem Hörsaal mit vierhundert Plätzen, und verstand nach zwanzig Minuten kaum noch ein Wort. Nicht wegen der Sprache. Wegen des Tempos.\n\nIn der Sprechstunde riet ihr die Dozentin zu etwas, das Mona zunächst kindisch fand: einem Lerntagebuch. Jeden Abend drei Zeilen: Was habe ich verstanden, was nicht, was mache ich morgen dagegen. Nach zwei Wochen sah Mona ein Muster. Ihre größte Ablenkung war nicht das Handy, sondern die Sorge, nicht gut genug zu sein. Diese Sorge kostete mehr Zeit als jede Nachricht.\n\nFür den ersten Leistungsnachweis, eine Hausarbeit von zwölf Seiten, plante sie rückwärts: Abgabe, Korrektur, Rohfassung, Gliederung, Lesen. Zeitmanagement heißt für sie seitdem nicht, mehr zu schaffen, sondern früher anzufangen. Die Arbeit wurde mit einer Zwei benotet. Die Dozentin schrieb darunter, die Gliederung sei ungewöhnlich klar. Bis zur Abschlussarbeit sind es noch Jahre, aber die Karteikarten mit den Fachbegriffen liegen schon jetzt in einer Schachtel neben dem Bett.",
+      "audioCommit": "d65c279e3da8376aa75b805fe1e2f2b857a30061",
+      "sourcePath": "content/texts.json"
+    },
+    {
+      "file": "/audio/hoeren/t-b2-25.mp3",
+      "id": "t-b2-25",
+      "group": "hoeren",
+      "textDe": "Das Turnier endete für den kleinen Verein aus dem Stadtteil im Halbfinale mit einem Elfmeter in der letzten Minute. Der Schiedsrichter hatte ein Foul gesehen, das die Hälfte der Zuschauer nicht gesehen hatte. Die andere Hälfte jubelte. So ist das bei einem Wettkampf: Dieselbe Szene, zwei Wahrheiten.\n\nInteressanter als die Niederlage war, was danach geschah. Auf der Mitgliederversammlung zwei Wochen später sprach niemand über den Schiedsrichter. Man sprach über Training. Die Trainerin legte Zahlen vor: drei Zerrungen und zwei Prellungen in einer Saison, fast alle in der zweiten Halbzeit. Diese Zahlen gehören zur Trainingsgeschichte; sie sind keine belegte Statistik. Ihre Erklärung war unbequem. Das Ausdauertraining sei gut, das Krafttraining schwach, und vor den Spielen dehne sich kaum jemand länger als zwei Minuten.\n\nDer Verein beschloss, disziplinierter zu werden, ohne strenger zu sein: zwei feste Einheiten pro Woche, ein Aufwärmplan, den jeder kennt, und ein Notizbuch, in dem jede Spielerin ihre Bestleistung selbst einträgt. Seit dem Beschluss verzeichnete der Verein sieben Beitritte. Die meisten neuen Mitglieder waren Eltern, die vorher nur vom Rand aus angefeuert hatten. Ob die Mannschaft nächstes Jahr eine Runde weiterkommt, ist offen. Sicher ist, dass die Mannschaft besser vorbereitet sein wird – ob sie gewinnt oder verliert.",
+      "audioCommit": "d65c279e3da8376aa75b805fe1e2f2b857a30061",
+      "sourcePath": "content/texts.json"
+    },
+    {
+      "file": "/audio/hoeren/t-b2-26.mp3",
+      "id": "t-b2-26",
+      "group": "hoeren",
+      "textDe": "Als das erste Windrad hinter dem Dorf geplant wurde, war die Stimmung angespannt. Man sprach über Schattenwurf am Morgen, über Infraschall und mögliche gesundheitliche Folgen sowie über den Mindestabstand zu den letzten Häusern. Eine vom Umweltbundesamt beauftragte Studie maß an fünf Standorten Infraschallpegel unter der Hörschwelle. Hörversuche an drei Standorten zeigten: Die Lästigkeit stieg mit der Modulationstiefe; schon die Wahrnehmbarkeit der Amplitudenmodulation erhöhte sie. Ein Windpark, hieß es, gehöre aufs Meer, nicht ins Tal.\n\nDie Wende kam mit einem anderen Modell. Statt eines fremden Betreibers gründete eine Gruppe aus dem Ort eine Genossenschaft für den Bürgerwindpark. Interessierte konnten Anteile erwerben; ein Teil möglicher Erträge sollte in der Region bleiben. Frühere Kritiker rechneten mögliche Erlöse durch und prüften, ob eine Einspeisevergütung infrage kam. Sie fragten auch, wann die Anlage Strom ins Netz einspeisen könne. Der Bürgermeister lernte: Akzeptanz kann wachsen, wenn Menschen mitentscheiden und von möglichen Erträgen profitieren; Broschüren allein reichen selten.\n\nGelöst ist damit nicht alles. Ohne Netzausbau lässt sich der Ökostrom aus dem Windpark nicht vollständig in die Stadt transportieren; gegen die geplante Stromtrasse klagt das Nachbardorf. Auf dem Dach der Schule liefert inzwischen Solarenergie Strom für die Küche. Das alte Kraftwerk am Fluss läuft nur noch während der Heizperiode. Erneuerbare Energie beseitigt Konflikte nicht automatisch; auch fossile Subventionen waren Thema der Ortsdebatte. In dieser Geschichte rücken Konflikte näher an die Häuser, sobald Anlagen in der Umgebung geplant werden.",
+      "audioCommit": "dab21d8c22a7498c63f62ecb9f06be7a59bf5982",
+      "sourcePath": "content/texts.json"
+    },
+    {
+      "file": "/audio/hoeren/t-b2-27.mp3",
+      "id": "t-b2-27",
+      "group": "hoeren",
+      "textDe": "Frau Öztürk arbeitet seit zwölf Jahren in einer Verbraucherzentrale. Sie sagt, die Fälle hätten sich kaum verändert; nur die Verpackung sei heute eine andere. Früher kam die Kundschaft mit einem Katalog, heute mit einem Handy. Das Prinzip bleibt: Ein Lockvogel zieht an, das Kleingedruckte holt zurück.\n\nIn ihrer Beratung sei die Abo-Falle besonders häufig: ein kostenloser Probemonat, ein hochwertig aussehendes Angebot, ein Schnäppchen mit Countdown. Nach dem Probezeitraum kann ein kostenpflichtiges Abonnement weiterlaufen, wenn dies wirksam vereinbart wurde und die Kundin oder der Kunde nicht rechtzeitig kündigt. Auch Mogelpackungen seien ein häufiges Thema: gleiche Verpackungsgröße, weniger Inhalt, gleicher Preis. Ob das rechtlich eine Irreführung ist, hängt vom Einzelfall und vom Gesamteindruck der Verpackung ab; eine Füllmengenangabe allein schließt sie nicht automatisch aus.\n\nViele wüssten nicht, dass es beim Kauf im Laden kein allgemeines Rückgaberecht für mangelfreie Ware gibt, nur weil sie später nicht gefällt. Wer einen mangelfreien Pullover umtauschen möchte, weil er ihm nicht gefällt, ist normalerweise auf die Kulanz des Händlers angewiesen. Bei einem Sachmangel kann man reklamieren und gesetzliche Gewährleistungsrechte geltend machen; dafür gelten Fristen und Bedingungen. Ob eine Ware tatsächlich mangelhaft ist oder nur als minderwertig empfunden wird, muss im Einzelfall geprüft werden. Den Unterschied zwischen Umtausch und Reklamation erklärt Frau Öztürk täglich. Bei bestimmten Wettbewerbsverstößen können qualifizierte Verbraucherverbände eine Abmahnung aussprechen. Ob das schneller wirkt als ein Gerichtsverfahren, hängt vom Fall ab, sagt sie.",
+      "audioCommit": "dab21d8c22a7498c63f62ecb9f06be7a59bf5982",
+      "sourcePath": "content/texts.json"
+    },
+    {
+      "file": "/audio/hoeren/t-b2-28.mp3",
+      "id": "t-b2-28",
+      "group": "hoeren",
+      "textDe": "Im Viertel am Bahnhof eröffneten innerhalb von zwei Jahren drei Cafés, ein Yogastudio und ein Laden für Fahrräder, die mehr kosten als ein Kleinwagen. Die Zeitung nannte den Wandel Aufwertung. Eine Familie im dritten Stock, deren Miete nach der Sanierung um ein Drittel gestiegen war, erlebte ihn anders. Gentrifizierung bezeichnet die Aufwertung eines Viertels; Verdrängung kann folgen: Man wird nicht gekündigt, sondern kann sich das Wohnen dort kaum noch leisten.\n\nEin Mietspiegel bietet eine Übersicht über die ortsübliche Vergleichsmiete. Bei bestimmten Erhöhungen bis zur ortsüblichen Vergleichsmiete begrenzt die Kappungsgrenze den Anstieg innerhalb von drei Jahren. Die Stadt kann ihr Vorkaufsrecht nur in gesetzlich geregelten Fällen und zum Wohl der Allgemeinheit ausüben. Ein Zweckentfremdungsverbot kann in einzelnen Kommunen die Ferienvermietung einschränken; die örtlichen Regeln unterscheiden sich. Der Leerstand des alten Postgebäudes dauert seit sieben Jahren an. Bewohner beklagen, dass das Verbot kaum kontrolliert werde.\n\nBeim Bürgerentscheid im Frühjahr ging es um den Bebauungsplan für den letzten freien Platz: Nachverdichtung mit sechzig Wohnungen oder Stadtbegrünung mit Bäumen und einem Spielplatz. Die Gegner warnten vor Versiegelung und der Bebauung einer Frischluftschneise. Die Befürworter fragten, wo die Familien sonst wohnen sollten. Am Ende gewann die Bebauung knapp, mit der Auflage, das Dach zu begrünen. Bürgerbeteiligung garantiert keine Zufriedenheit, soll Betroffenen aber Gehör verschaffen. Ob man ein Viertel aufwerten kann, ohne seine Bewohner zu verlieren, bleibt die eigentliche Frage.",
+      "audioCommit": "dab21d8c22a7498c63f62ecb9f06be7a59bf5982",
+      "sourcePath": "content/texts.json"
+    },
+    {
+      "file": "/audio/hoeren/t-b2-29.mp3",
+      "id": "t-b2-29",
+      "group": "hoeren",
+      "textDe": "Dr. Amani ist vor sechs Jahren nach Deutschland zugewandert. Sie hatte einen Abschluss in Chemie, aber keine Arbeitserlaubnis. Die Gleichwertigkeitsprüfung ihres Diploms dauerte neun Monate; danach brauchte sie ein halbes Jahr Nachqualifizierung, weil ein Fach im deutschen Lehrplan andere Inhalte vorsah. Die Duldung wurde alle sechs Monate verlängert; ihre Bleibeperspektive blieb unklar. Planen konnte sie nichts, nicht einmal einen Zahnarzttermin.\n\nDer Integrationskurs war ihr sprachlich zu leicht; die Behördenbriefe blieben schwierig. Ein Integrationskurszertifikat ist nicht generell Voraussetzung für jeden Familiennachzug. Die Anforderungen hängen vom Aufenthaltstitel und vom Einzelfall ab; beim Sprachnachweis gibt es Ausnahmen. Ihr Mann kam erst im dritten Jahr. Heute besitzt sie eine Blaue Karte EU. Unter weiteren Voraussetzungen kann ihr eine Niederlassungserlaubnis nach 27 Monaten Beschäftigung mit Rentenbeiträgen und einfachen Deutschkenntnissen erteilt werden; bei ausreichenden Deutschkenntnissen bereits nach 21 Monaten. Sie lässt prüfen, ob sie alle Voraussetzungen erfüllt. Ihre Kollegin im Labor erklärte ihr jeden Brief vom Amt. Dr. Amani sagt: „Willkommenskultur ist kein Plakat am Bahnhof, sondern eine Person, die Zeit hat.“\n\nOb sie die deutsche Staatsangehörigkeit (Staatsbürgerschaft) beantragen will, weiß sie noch nicht. Die Einbürgerung wäre ein Schritt, den ihre Eltern nicht verstehen würden. Sie will sich einfügen, ohne die eigene Herkunft aufzugeben, und übt das täglich. Die Mehrheitsgesellschaft bemerkt selten, wie viel Übersetzungsarbeit Integration kostet – nicht nur beim Zweitspracherwerb. Ankommen, sagt sie, ist kein Datum, sondern eine Richtung.",
+      "audioCommit": "dab21d8c22a7498c63f62ecb9f06be7a59bf5982",
+      "sourcePath": "content/texts.json"
+    },
+    {
+      "file": "/audio/hoeren/t-b2-30.mp3",
+      "id": "t-b2-30",
+      "group": "hoeren",
+      "textDe": "Das Beispiel ist erfunden: Vor Haus Nummer 14 liegt seit dem Frühjahr ein kleiner Stolperstein im Gehweg – ein Betonstein mit einer Messingplatte. Auf der Messingplatte stehen Name, Geburtsjahr und Schicksal einer im Nationalsozialismus verfolgten Person. Die Zehntklässlerinnen recherchierten die Geschichte der Familie, die dort einmal wohnte, und hielten bei der Verlegung eine Gedenkminute. Anders als ein großes Mahnmal oder eine Gedenkstätte mit festen Öffnungszeiten erinnert der Stein Passantinnen und Passanten im Alltag. So zeigt das Beispiel Erinnerungskultur im Kleinen.\n\nNicht alle im Haus waren dafür. Ein Bewohner fragte, ob man nicht irgendwann einen Schlussstrich ziehen könne; seine Großeltern seien doch nur Mitläufer gewesen. Die Lehrerin antwortete, Erinnerungsarbeit stelle den Enkeln keine Schuldfrage. Sie frage, wie Menschen Verfolgung unterstützten, duldeten oder sich ihr widersetzten, damit heutige Generationen Warnsignale erkennen könnten. Wer die Vergangenheit relativiert, sagt die Lehrerin, schützt nicht die Großeltern, sondern die eigene Bequemlichkeit.\n\nIn der Geschichte starb der letzte Zeitzeuge aus dieser Straße vor zwei Jahren. Sein Interview, eine Aufnahme von dreiundvierzig Minuten, liegt im Schularchiv. Die Schülerinnen hörten es, bevor der Stolperstein verlegt wurde. Vergangenheitsbewältigung klingt schwer und meint hier eine konkrete Aufgabe: genau hinsehen, das Geschehene aufarbeiten und Erinnerungen weitergeben. Manchmal beginnt Verharmlosung nicht mit einer offenen Lüge, sondern mit einem Wort, das weniger hart klingt als das Geschehene. Die Lehrerin sagt: Wer der Toten gedenkt, tut das nicht für die Toten allein.",
+      "audioCommit": "dab21d8c22a7498c63f62ecb9f06be7a59bf5982",
+      "sourcePath": "content/texts.json"
+    },
+    {
+      "file": "/audio/hoeren/t-b2-31.mp3",
+      "id": "t-b2-31",
+      "group": "hoeren",
+      "textDe": "Dieses Beispiel ist erfunden. Frau Sahli pendelt seit ihrer Beförderung an Arbeitstagen insgesamt siebzig Kilometer zwischen Dorf und Kreisstadt. Um sechs Uhr morgens steht sie im Parkhaus am Bahnhof; abends ist sie meist um sieben zurück. Täglich braucht sie etwa drei Stunden; verpasst sie in der Kreisstadt den Anschluss, sind es vier. Ihr Mann arbeitet im Dorf, die Kinder gehen dort zur Schule, und das Eigenheim ist abbezahlt. Umziehen scheint logisch, doch Arbeit, Schule und das bezahlte Eigenheim binden die Familie ans Dorf.\n\nSie prüfte Alternativen: Eine Mitfahrgelegenheit passte nicht zu ihren Arbeitszeiten; der Fernbus fährt zu selten, ein Nachtzug ist für die kurze Strecke unpraktisch. Das Elektroauto half, bis die einzige Ladestation im Ort drei Wochen ausfiel. „Die Verkehrswende wird in der Stadt geplant und auf dem Land ausgehalten“, sagt sie; sie meint ihren eigenen Alltag. Bei Lastenrädern lächelt sie müde: Auf ihrem ländlichen Arbeitsweg lösen sie das Anschlussproblem nicht.\n\nIhr Kompromiss ist kein Umzug: An zwei Tagen arbeitet sie im Homeoffice, an den drei übrigen Tagen fährt sie mit der Bahn. Im Zug arbeitet sie; ihr Arbeitgeber zählt diese Zeit gemäß Vereinbarung als Arbeitszeit. Die Straßensperrung wegen einer neuen Brücke nimmt sie gelassen, da sie nicht mehr mit dem Auto in die Stadt fährt. Ob das trägt, weiß sie nicht. „Pendeln oder umziehen?“ hat für sie vorerst eine dritte Antwort.",
+      "audioCommit": "0b7a99fd46aee4c2d354298ef8480c923f1a6242",
+      "sourcePath": "content/texts.json"
+    },
+    {
+      "file": "/audio/hoeren/t-b2-32.mp3",
+      "id": "t-b2-32",
+      "group": "hoeren",
+      "textDe": "Dieses Beispiel ist erfunden. Meine Nichte ist sechzehn und braucht morgens etwa vierzig Minuten fürs Make-up, das aussehen soll, als trüge sie keines. Als ich sie fragte, für wen sie sich so zurechtmache, antwortete sie offener, als ich erwartet hatte: „Fürs Selfie. Ohne Filter geht das nicht mehr.“ Sie orientiert sich an einem Schönheitsideal, das sie vor allem auf Bildschirmen sieht. Viele Bilder, die sie dort sieht, sind retuschiert; sie weiß das, doch es verändert ihren Blick auf sich selbst nicht.\n\nIch wollte ihr Eitelkeit vorwerfen, ließ es aber. Eitelkeit ist alt; neu ist vor allem die Reichweite des Vergleichs. Früher verglich man sich vielleicht mit Mitschülerinnen, heute mit Bildern vieler Unbekannter. Manches modische Outfit wird von einem Label gesponsert; ein Styling-Team gestaltet den Look. Was künstlich wirkt, kann am Bildschirm natürlich aussehen; ein unretuschiertes Gesicht erscheint dann unfertig. Das ist eine Beobachtung dieser Geschichte, keine Aussage über alle Jugendlichen.\n\nWir probierten es eine Woche: Sie postete stilvolle Bilder ohne digitale Retusche. Die Likes sanken, Nachrichten von Freundinnen wurden mehr. „Du siehst aus wie du“, schrieb eine. Das Experiment belegt weder die Ursache der Reaktionen noch eine langfristige Veränderung ihres Selbstbewusstseins. „Attraktiv“ sei vielleicht ein Wort für Bilder, sagt sie jetzt; für Menschen brauche man ein anderes.",
+      "audioCommit": "0b7a99fd46aee4c2d354298ef8480c923f1a6242",
+      "sourcePath": "content/texts.json"
+    },
+    {
+      "file": "/audio/hoeren/t-b2-33.mp3",
+      "id": "t-b2-33",
+      "group": "hoeren",
+      "textDe": "Dieses Beispiel ist erfunden. Als Karim dem Verein beigetreten war, wollte er vor allem Fußball spielen. Fünf Jahre später gehörten zu seiner Freizeitgestaltung auch eine Radtour, Camping am See und ein Mountainbike-Wochenende. Jedes Jahr stand er am Rand des Marathons, um die Teilnehmenden anzufeuern; selbst lief er nie mit. Die Unternehmungen der Gruppe füllten seinen Kalender; der Verein war für ihn mehr als ein Wettbewerb.\n\nNach der regulären Spielzeit stand es im Pokal unentschieden. Während der Verlängerung erkannte der Schiedsrichter ein Tor wegen einer Abseitsstellung nicht an; er hatte Abseits gepfiffen. Auf der Wiederholungsaufnahme war die Position für Karim nicht eindeutig. Auch nach der Verlängerung blieb es unentschieden, sodass ein Elfmeterschießen folgte. Die Halle war ausverkauft, die Übertragung lief in zwei Kneipen. Ben beleidigte den Schiedsrichter lautstark; viele in der Halle hörten es.\n\nDer Vorstand verlangte eine Entschuldigung. Ben weigerte sich und erklärte seinen Austritt. Karim fragte sich, ob er mit seinem Freund austreten oder den Regeln treu bleiben sollte. Er blieb – nicht, weil der Schiedsrichter sicher recht hatte, sondern weil ein Verein ohne Regeln nur noch eine Gruppe mit derselben Farbe wäre. Trotzdem wollen Ben und Karim im Mai gemeinsam Rad fahren. Auf dieser Tour gibt es keine Schiedsrichter.",
+      "audioCommit": "0b7a99fd46aee4c2d354298ef8480c923f1a6242",
+      "sourcePath": "content/texts.json"
+    },
+    {
+      "file": "/audio/hoeren/t-b2-34.mp3",
+      "id": "t-b2-34",
+      "group": "hoeren",
+      "textDe": "Dieses Unterrichtsbeispiel ist erfunden. Eine zehnte Klasse liest dieselbe Nachricht in drei Fassungen: Agenturmeldung, Leitartikel und Clickbait-Beitrag mit zugespitzter Überschrift. Die Schüler beschreiben, was jede Version bei den Lesenden bewirkt, statt zu entscheiden, wer recht hat.\n\nSie erkennen rasch die Zuspitzung in der Überschrift und die Untertreibung im Nebensatz. Schwieriger ist das Framing: Derselbe Zahlenwert kann mit „nur“ heruntergespielt oder mit „schon“ als beachtlich gerahmt werden. Noch schwieriger ist die Frage, weshalb gerade dieses Thema erscheint. Die Auswahl beeinflusst mit, welche Themen öffentlich als wichtig gelten; das nennt man Agenda-Setting. Auch Leitmedien müssen auswählen. Ein Schüler sagt „Echokammer“, eine Mitschülerin findet das pauschal. Sie meint, die Filterblase sei nicht das Problem, sondern das Wohlgefühl darin.\n\nIn dieser Reihe kommt der Faktencheck zuletzt, nicht zuerst. „Fake News“ ist ungenau; Desinformation muss nicht vollständig erfunden sein. Auch richtige Zahlen können durch Auswahl oder fehlenden Kontext irreführen. Sie üben Quellenkritik: Wer schreibt, wer bezahlt, welche Belege gibt es, wem nützt der Beitrag? Eine starke Polarisierung der Sprache kann ein Warnsignal sein, aber noch kein Beweis für Meinungsmache. Die Aufmerksamkeitsökonomie kann Reichweite belohnen; hohe Reichweite belegt keine Wahrheit. Deshalb prüfen sie auch die Einordnung. Den Satz hängt die Klasse selbst an die Wand.",
+      "audioCommit": "0b7a99fd46aee4c2d354298ef8480c923f1a6242",
+      "sourcePath": "content/texts.json"
+    },
+    {
+      "file": "/audio/hoeren/t-b2-35.mp3",
+      "id": "t-b2-35",
+      "group": "hoeren",
+      "textDe": "Dieses Beispiel ist erfunden. Als Leila zu promovieren begann, hatte sie einen Karteikasten voller Fachbegriffe und für jeden eine Eselsbrücke. Drei Jahre später leitete sie ein Forschungsprojekt und erhielt eine Förderung für zwei Stellen. Ihre wichtigste Erkenntnis: Zur Wissenschaft gehören neben Wissen auch Fristen, Anträge und Absprachen, die man einhalten muss.\n\nIhr fiktives Projekt untersucht, wie Studentinnen und Studenten mit knapp ausreichender Abiturnote in einem Fach mit Numerus clausus lernen. Leila befragte zweihundert Personen an drei Fakultäten und begleitete eine Gruppe auf einer Exkursion. Dabei beobachtete sie, wie sich Kenntnisse außerhalb des Hörsaals zeigten. In der Auswertung der Beispielstudie zählte neben der Effizienz auch eine Person, die Anfängerfragen ernst nahm. Das gilt für diese erfundene Stichprobe, nicht allgemein. Leila sagt: „Allein kann man effizient lernen; manches versteht man erst im Austausch.“\n\nDie Veröffentlichung dauerte länger als die Studie. Zwei Gutachter wollten mehr Zahlen, ein dritter weniger Deutung. Leila zitiert ihre Betreuerin: „Nachhaltigkeit in der Forschung heißt, dass jemand in zehn Jahren noch etwas mit deinen Daten anfangen kann.“ Fragebogen, Anleitung und – soweit Einwilligungen und Datenschutzbestimmungen es zulassen – anonymisierte Auswertungen liegen im Hochschularchiv. Personenbezogene Rohdaten werden dort nicht öffentlich bereitgestellt. Den Karteikasten wirft sie trotzdem nicht weg.",
+      "audioCommit": "0b7a99fd46aee4c2d354298ef8480c923f1a6242",
+      "sourcePath": "content/texts.json"
+    },
+    {
+      "file": "/audio/hoeren/t-b2-36.mp3",
+      "id": "t-b2-36",
+      "group": "hoeren",
+      "textDe": "Eine mögliche Änderung wäre, den Schulbeginn von 8 auf 9 Uhr zu verlegen. Dafür spricht, dass viele Jugendliche in der Pubertät abends später einschlafen als jüngere Kinder. Sie sind morgens oft noch müde, was ihre Konzentration und ihr Gedächtnis beeinträchtigen kann. Auch für die psychische Gesundheit kann dauerhafter Schlafmangel problematisch sein. Befürworter meinen deshalb, ein späterer Start könne den Schulalltag besser an den Schlafrhythmus vieler Jugendlicher anpassen. Kritiker wenden ein, dass ein späterer Unterrichtsbeginn Eltern vor organisatorische Probleme stellt und mit den Nachmittagsaktivitäten der Jugendlichen kollidieren kann. Wie sich der spätere Beginn auf die schulischen Leistungen auswirkt, sollte man ebenfalls prüfen. Busfahrpläne, Arbeitszeiten der Eltern und die Betreuung jüngerer Geschwister müssten berücksichtigt werden. Ein späteres Schulende könnte zusätzliche Kosten für Räume und Betreuung verursachen.\n\nDennoch halte ich einen Modellversuch an einigen Schulen für sinnvoll. Dabei sollte man nicht nur Noten, sondern auch Schlaf, Wohlbefinden und Unterrichtsbeteiligung beobachten. Arbeitszeiten des Schulpersonals und Angebote am Nachmittag müssen ebenfalls berücksichtigt werden.\n\nZeigt sich, dass Jugendliche ausgeruhter und aufmerksamer sind, sollte man den Schulbeginn neu bewerten, statt den frühen Start um jeden Preis als selbstverständlich hinzunehmen.",
+      "audioCommit": "438f5d7a056210481f95637a79a78ef0549b4f3f",
+      "sourcePath": "content/texts.json"
+    },
+    {
+      "file": "/audio/hoeren/t-b2-37.mp3",
+      "id": "t-b2-37",
+      "group": "hoeren",
+      "textDe": "Das folgende Beispiel ist fiktiv. Als ich vor vier Jahren zum ersten Mal nach Deutschland kam, war ich überrascht, wie direkt Kolleginnen, Kollegen und Nachbarn ihre Meinung äußerten. In der Umgebung, aus der ich komme, galt es oft als höflich, Kritik indirekt zu formulieren und zunächst länger über alltägliche Dinge zu sprechen. Einige sagten etwa «Das funktioniert so nicht» oder «Da bin ich anderer Meinung», ohne unfreundlich wirken zu wollen. Anfangs empfand ich das als Ablehnung. Später verstand ich: Direkte Kommunikation muss nicht respektlos sein; sie kann Transparenz und Effizienz fördern. Meine vorsichtigen Formulierungen galten einigen deutschen Kolleginnen und Kollegen dagegen als unklar oder unentschlossen.\n\nDiese Erfahrung zeigte mir, dass Kommunikation auch kulturell geprägt ist. Missverständnisse werden seltener, wenn man eigene Erwartungen reflektiert und die der anderen ernst nimmt. Heute frage ich nach, wenn ich eine Äußerung nicht richtig verstehe, und formuliere meine eigene Meinung klarer als früher. So spreche ich Unklarheiten früh an. Das kostet manchmal Zeit, kann aber Vertrauen im Team schaffen.\n\nFür mich bedeutet gute Kommunikation nicht, immer einer Meinung zu sein. Wichtig ist, dass beide Seiten ihre Erwartungen erklären können. Die fiktive Geschichte ist kein Urteil über alle Menschen eines Landes. Sie zeigt, wie eine Person ein Missverständnis erlebt und ihre Einschätzung verändert.",
+      "audioCommit": "438f5d7a056210481f95637a79a78ef0549b4f3f",
+      "sourcePath": "content/texts.json"
+    },
+    {
+      "file": "/audio/hoeren/t-b2-38.mp3",
+      "id": "t-b2-38",
+      "group": "hoeren",
+      "textDe": "Vier-Tage-Modelle unterscheiden sich in Arbeitszeit, Lohn und Branche; ihre Ergebnisse sind nur begrenzt übertragbar. In Island blieben laut Alda und Autonomy Produktivität und Dienste trotz kürzerer Arbeitszeit meist stabil oder verbesserten sich; das Wohlbefinden stieg. Im britischen Versuch von 2022 verkürzten 61 Organisationen ihre Arbeitszeit sechs Monate lang ohne Gehaltskürzung. Nur 23 von 61 Organisationen lieferten Umsatzdaten; der nach Größe gewichtete Umsatzdurchschnitt stieg um 1,4 Prozent. Das beweist keine Kausalität. An der deutschen Pilotstudie nahmen 45 Organisationen teil. Beschäftigte berichteten von Verbesserungen ihrer mentalen und körperlichen Gesundheit; die Krankheitstage gingen leicht zurück, der Unterschied war jedoch statistisch nicht signifikant.\n\nDie Projekte waren zeitlich begrenzt und unterschiedlich aufgebaut; manche Ergebnisse beruhen auf Selbstauskünften. Eine Vier-Tage-Woche kann Wochenstunden reduzieren oder dieselben Stunden auf weniger Tage verteilen; die Folgen unterscheiden sich. Öffnungszeiten und Versorgung müssen in manchen Branchen gesichert bleiben.\n\nEin Erfolgsurteil für alle Branchen wäre unangebracht. Versuche sollten Arbeitsbelastung, Servicequalität, Leistung und Wohlbefinden länger erfassen. Ziele vereinbart man vorher mit Beschäftigten; mögliche Nachteile prüft man danach offen. Erst solche Daten zeigen, ob eine kürzere Woche am jeweiligen Arbeitsplatz fair und tragfähig ist.",
+      "audioCommit": "438f5d7a056210481f95637a79a78ef0549b4f3f",
+      "sourcePath": "content/texts.json"
+    },
+    {
+      "file": "/audio/hoeren/t-b2-39.mp3",
+      "id": "t-b2-39",
+      "group": "hoeren",
+      "textDe": "Manche Familien ziehen aus teuren Großstädten ins Umland oder aufs Land. Gründe können hohe Mieten, enge Wohnungen und der Wunsch nach mehr Natur und Ruhe sein. Doch das Landleben passt nicht für alle. Je nach Region fahren öffentliche Verkehrsmittel seltener; Arztpraxen und Schulen können weit entfernt sein, während kulturelle Angebote wie Theater oder Kinos rar sein können. Homeoffice und Videokonferenzen erleichtern manchen Beschäftigten den Umzug. Das setzt jedoch ausreichend schnelles Internet voraus. Ein Staat, der freie Wohnortwahl ermöglichen will, sollte fehlende Infrastruktur ausbauen. Sonst könnte «Stadtflucht» ein Privileg höherer Einkommen bleiben.\n\nVor dem Umzug sollten Familien die Entfernung zu ihren Arbeitsplätzen und verfügbare Kinderbetreuung prüfen. Wer ohne Auto lebt, braucht eine verlässliche Verbindung zur nächsten Stadt. Vereine und gute Nachbarschaftskontakte können Zugezogenen helfen, Anschluss zu finden. Ein ruhiger Wohnort allein löst nicht alle Probleme.\n\nGemeinden sollten deshalb neben Wohnraum auch Verkehr und öffentliche Angebote mitplanen. Welche Lösungen passen, hängt von den Bedingungen vor Ort ab. Wer ländliche Regionen stärken will, sollte die Bedürfnisse der heutigen Bewohner und der neu Zugezogenen berücksichtigen. Solche Lösungen sollten regelmäßig überprüft werden.",
+      "audioCommit": "438f5d7a056210481f95637a79a78ef0549b4f3f",
+      "sourcePath": "content/texts.json"
+    },
+    {
+      "file": "/audio/hoeren/t-b2-40.mp3",
+      "id": "t-b2-40",
+      "group": "hoeren",
+      "textDe": "Lügen gelten vielen Menschen als moralisch verwerflich. Trotzdem sagen Menschen im Alltag manchmal nicht die ganze Wahrheit. Die Motive unterscheiden sich: Manche Unwahrheiten dienen dem Selbstschutz, etwa um Strafe oder Blamage zu vermeiden. Andere sollen Mitmenschen schonen. So kann jemand aus Höflichkeit sagen: «Das Essen hat mir geschmeckt», obwohl die Person es nicht mochte. Wieder andere Unwahrheiten dienen der Selbstdarstellung. In sozialen Medien stellen manche Menschen ihr Leben erfolgreicher oder interessanter dar, als es tatsächlich ist. Problematisch wird es, wenn Lügen Vertrauen zerstören oder andere bewusst manipulieren. Eine kleine Höflichkeitslüge kann zunächst harmlos erscheinen; erfährt die andere Person später die Wahrheit, kann die Lüge eine Beziehung jedoch belasten.\n\nEntscheidend ist auch, wem eine Aussage nützt und wer dadurch Nachteile hat. Die Grenze zwischen höflichem Schweigen und bewusster Täuschung lässt sich nicht immer leicht ziehen. Ein ehrliches Gespräch kann zunächst unangenehm sein, aber spätere Enttäuschungen verhindern.\n\nEine offene Kommunikationskultur, in der Fehler zugegeben werden dürfen, kann dazu beitragen, unnötige Lügen zu verringern. Sie erleichtert es, Probleme direkt anzusprechen, ohne andere absichtlich zu verletzen. Das ist kein Freibrief für jede ungeschminkte Äußerung: Ehrlichkeit braucht Rücksicht und sollte auch daran gemessen werden, ob sie den Beteiligten bei einer Lösung hilft.",
+      "audioCommit": "438f5d7a056210481f95637a79a78ef0549b4f3f",
+      "sourcePath": "content/texts.json"
+    }
+  ]
+}

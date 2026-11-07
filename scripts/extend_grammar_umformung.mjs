@@ -5,7 +5,6 @@ import { fileURLToPath } from "url";
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const gPath = join(ROOT,"content/grammar.json");
 let grammar = JSON.parse(readFileSync(gPath,"utf8")); // object keyed by id
-let arr = Object.values(grammar);
 
 // Map of 29 missing umformung — each B2/A1 expert-crafted, GGP-aligned
 const umformungen = {

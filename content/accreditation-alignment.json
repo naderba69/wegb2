@@ -1,0 +1,250 @@
+{
+  "schemaVersion": 1,
+  "updated": "2026-11-04",
+  "scope": "dual-aligned-exam-preparation",
+  "productClaim": {
+    "de": "Prüfungsvorbereitung mit angestrebter struktureller Ausrichtung an Goethe B2 und telc B2; kein offizielles Prüfungsprodukt und keine Zulassung durch Goethe-Institut oder telc gGmbH.",
+    "ar": "منتج تحضير يستهدف مواءمة بنية Goethe B2 وtelc B2؛ ليس امتحاناً رسمياً ولا يحمل اعتماداً من معهد غوته أو telc gGmbH.",
+    "allowed": [
+      "مواءمة تدريبية قيد مراجعة المصادر الرسمية",
+      "تحضير لامتحاني Goethe B2 وtelc B2",
+      "تقييم ذاتي غير رسمي"
+    ],
+    "forbidden": [
+      "منتج معتمد من غوته",
+      "منتج معتمد من telc",
+      "شهادة رسمية",
+      "نتيجة امتحان رسمية"
+    ]
+  },
+  "targets": [
+    {
+      "id": "goethe-b2",
+      "authority": "Goethe-Institut",
+      "sourceReviewStatus": "official-snapshot-pending",
+      "sources": [
+        {
+          "id": "goethe-b2-overview",
+          "title": "Goethe-Zertifikat B2 — official overview and practice material",
+          "url": "https://www.goethe.de/de/spr/prf/gzb2.html",
+          "snapshot": null,
+          "reviewedBy": null,
+          "reviewedAt": null
+        }
+      ],
+      "requirements": [
+        {
+          "id": "G-B2-CLAIM",
+          "category": "claims",
+          "workingRequirement": "Every learner-facing result remains a training/self-assessment result and never an official Goethe result.",
+          "implementationStatus": "implemented",
+          "sourceReviewStatus": "pending",
+          "automatedCheck": "goethe-disclaimer",
+          "evidence": [
+            "lib/simulation.ts",
+            "lib/vollpruefung.ts",
+            "components/simulation.tsx"
+          ],
+          "workingRequirementAr": "تبقى كل نتيجة ظاهرة للمتعلم تدريباً وتقييماً ذاتياً، ولا تُعرض بوصفها نتيجة Goethe رسمية."
+        },
+        {
+          "id": "G-B2-MODULES",
+          "category": "scoring",
+          "workingRequirement": "Four separately assessed modules: Lesen, Hören, Schreiben, Sprechen; each is passed from 60/100 and cannot be compensated by another module.",
+          "implementationStatus": "implemented",
+          "sourceReviewStatus": "pending",
+          "automatedCheck": "goethe-module-scoring",
+          "evidence": [
+            "content/pruefung-b2.json",
+            "lib/simulation.ts",
+            "scripts/engine_smoke.ts"
+          ],
+          "workingRequirementAr": "أربع وحدات مستقلة: القراءة والاستماع والكتابة والتحدث؛ تنجح كل وحدة من 60/100 ولا تعوّضها وحدة أخرى."
+        },
+        {
+          "id": "G-B2-TIMES",
+          "category": "timing",
+          "workingRequirement": "Training clock models 65 minutes Lesen, 40 Hören, 75 Schreiben, 15 preparation and about 15 Sprechen.",
+          "implementationStatus": "implemented",
+          "sourceReviewStatus": "pending",
+          "automatedCheck": "goethe-timing",
+          "evidence": [
+            "content/pruefung-b2.json",
+            "lib/simulation.ts",
+            "components/simulation.tsx"
+          ],
+          "workingRequirementAr": "تستخدم الساعة التدريبية مؤقتاً 65 دقيقة للقراءة و40 للاستماع و75 للكتابة و15 للتحضير ونحو 15 للتحدث."
+        },
+        {
+          "id": "G-B2-WRITING",
+          "category": "task-format",
+          "workingRequirement": "Writing practice contains two tasks and uses approximate targets of 150 and 100 words without presenting automatic scoring as examiner scoring.",
+          "implementationStatus": "implemented",
+          "sourceReviewStatus": "pending",
+          "automatedCheck": "goethe-writing",
+          "evidence": [
+            "components/simulation.tsx",
+            "lib/simulation.ts",
+            "content/writing.json"
+          ],
+          "workingRequirementAr": "يتضمن تدريب الكتابة مهمتين بهدفين تقريبيين 150 و100 كلمة، ولا يقدم التقييم الآلي بوصفه تقييم ممتحن."
+        },
+        {
+          "id": "G-B2-FOUR-SKILLS",
+          "category": "coverage",
+          "workingRequirement": "The product provides schedulable and assessable material for reading, listening, writing and speaking at B2.",
+          "implementationStatus": "implemented",
+          "sourceReviewStatus": "pending",
+          "automatedCheck": "four-skill-content",
+          "evidence": [
+            "content/texts.json",
+            "content/dialogues.json",
+            "content/writing.json",
+            "content/muendlich.json",
+            "lib/plan.ts"
+          ],
+          "workingRequirementAr": "يوفر المنتج مادة B2 قابلة للجدولة والتقييم في القراءة والاستماع والكتابة والتحدث."
+        }
+      ]
+    },
+    {
+      "id": "telc-b2",
+      "authority": "telc gGmbH",
+      "sourceReviewStatus": "official-snapshot-pending",
+      "sources": [
+        {
+          "id": "telc-b2-overview",
+          "title": "telc Deutsch B2 — official examination overview",
+          "url": "https://www.telc.net/sprachpruefungen/zertifikatspruefung/deutsch/telc-deutsch-b2/",
+          "snapshot": null,
+          "reviewedBy": null,
+          "reviewedAt": null
+        }
+      ],
+      "requirements": [
+        {
+          "id": "T-B2-CLAIM",
+          "category": "claims",
+          "workingRequirement": "Every learner-facing result remains a training/self-assessment result and never an official telc result.",
+          "implementationStatus": "implemented",
+          "sourceReviewStatus": "pending",
+          "automatedCheck": "telc-disclaimer",
+          "evidence": [
+            "lib/simulation.ts",
+            "lib/vollpruefung.ts",
+            "components/simulation.tsx"
+          ],
+          "workingRequirementAr": "تبقى كل نتيجة ظاهرة للمتعلم تدريباً وتقييماً ذاتياً، ولا تُعرض بوصفها نتيجة telc رسمية."
+        },
+        {
+          "id": "T-B2-BLOCKS",
+          "category": "scoring",
+          "workingRequirement": "The provisional model uses a 225-point written block and a 75-point oral block; both must reach 60 percent (135 and 45 points).",
+          "implementationStatus": "implemented",
+          "sourceReviewStatus": "pending",
+          "automatedCheck": "telc-block-scoring",
+          "evidence": [
+            "lib/simulation.ts",
+            "components/simulation.tsx",
+            "scripts/engine_smoke.ts"
+          ],
+          "workingRequirementAr": "يستخدم النموذج المؤقت كتلة مكتوبة من 225 نقطة وشفهية من 75، ويلزم بلوغ 60٪ في كلتيهما: 135 و45."
+        },
+        {
+          "id": "T-B2-TIMES",
+          "category": "timing",
+          "workingRequirement": "The provisional training clock models 60 minutes Lesen, 30 Sprachbausteine, 20 Hören, 30 Schreiben, 20 preparation and about 15 Sprechen.",
+          "implementationStatus": "implemented",
+          "sourceReviewStatus": "pending",
+          "automatedCheck": "telc-timing",
+          "evidence": [
+            "lib/simulation.ts",
+            "components/simulation.tsx"
+          ],
+          "workingRequirementAr": "تستخدم الساعة التدريبية مؤقتاً 60 دقيقة للقراءة و30 للبنى اللغوية و20 للاستماع و30 للكتابة و20 للتحضير ونحو 15 للتحدث."
+        },
+        {
+          "id": "T-B2-FORMAT",
+          "category": "task-format",
+          "workingRequirement": "The telc simulation includes Sprachbausteine, single-play listening flags, one writing task and oral preparation.",
+          "implementationStatus": "implemented",
+          "sourceReviewStatus": "pending",
+          "automatedCheck": "telc-format",
+          "evidence": [
+            "lib/simulation.ts",
+            "components/simulation.tsx",
+            "content/luecken.json"
+          ],
+          "workingRequirementAr": "تتضمن محاكاة telc البنى اللغوية، ووسم الاستماع مرة واحدة، ومهمة كتابة واحدة، وتحضيراً شفهياً."
+        },
+        {
+          "id": "T-B2-FOUR-SKILLS",
+          "category": "coverage",
+          "workingRequirement": "The product provides schedulable and assessable material for reading, listening, writing and speaking at B2.",
+          "implementationStatus": "implemented",
+          "sourceReviewStatus": "pending",
+          "automatedCheck": "four-skill-content",
+          "evidence": [
+            "content/texts.json",
+            "content/dialogues.json",
+            "content/writing.json",
+            "content/muendlich.json",
+            "lib/plan.ts"
+          ],
+          "workingRequirementAr": "يوفر المنتج مادة B2 قابلة للجدولة والتقييم في القراءة والاستماع والكتابة والتحدث."
+        }
+      ]
+    }
+  ],
+  "externalGates": [
+    {
+      "id": "EXT-SOURCE-01",
+      "titleAr": "حفظ النسخ الرسمية الحالية من أوصاف الامتحان ولوائح التنفيذ مع التاريخ والبصمة",
+      "ownerRole": "مسؤول المطابقة",
+      "status": "pending-external",
+      "evidenceRequired": "PDF/HTML رسمي مؤرخ لكل من Goethe B2 وtelc B2، مع SHA-256 وسجل مراجعة بندية"
+    },
+    {
+      "id": "EXT-LANG-01",
+      "titleAr": "مراجعة لغوية بشرية مستقلة للمحتوى الألماني والعربي",
+      "ownerRole": "مراجع ألماني مؤهل + مراجع عربي",
+      "status": "pending-external",
+      "evidenceRequired": "أسماء/مؤهلات المراجعين، بروتوكول العينة ثم المراجعة الكاملة، وسجل التصحيحات والتوقيع"
+    },
+    {
+      "id": "EXT-EXAM-01",
+      "titleAr": "مراجعة صيغة المحاكاة وشبكات الكتابة والتحدث بواسطة ممتحن مؤهل",
+      "ownerRole": "خبير امتحانات Goethe/telc",
+      "status": "pending-external",
+      "evidenceRequired": "محضر مطابقة لكل جزء وتوقيت وتعليمة وشبكة تقييم، دون استعمال مواد امتحانية محمية"
+    },
+    {
+      "id": "EXT-PILOT-01",
+      "titleAr": "دراسة ميدانية وقياس الثبات والتمييز وقابلية الاستخدام",
+      "ownerRole": "باحث تقويم تربوي",
+      "status": "pending-external",
+      "evidenceRequired": "خطة عينة وموافقة وبيانات مجهلة وتحليل بنود وثبات ونتائج قبل/بعد"
+    },
+    {
+      "id": "EXT-DEVICE-01",
+      "titleAr": "مصفوفة أجهزة فعلية وإتاحة وميكروفون وPWA",
+      "ownerRole": "QA بشري",
+      "status": "pending-external",
+      "evidenceRequired": "Android/iOS/Desktop، قارئات شاشة، offline/update/storage pressure، وتوقيع النتائج"
+    },
+    {
+      "id": "EXT-LEGAL-01",
+      "titleAr": "مراجعة قانونية للعلامات والادعاءات والخصوصية وحقوق المواد",
+      "ownerRole": "مستشار قانوني",
+      "status": "pending-external",
+      "evidenceRequired": "رأي مكتوب في استعمال اسمي Goethe/telc، صفحة الادعاءات، سياسة الخصوصية، وتراخيص المحتوى"
+    },
+    {
+      "id": "EXT-AUTH-01",
+      "titleAr": "تأكيد مسار أي ختم أو اعتماد رسمي مباشرةً مع الجهة المانحة",
+      "ownerRole": "مالك المنتج",
+      "status": "pending-external",
+      "evidenceRequired": "رد مكتوب من الجهة يحدد هل تعتمد منتجات التحضير أصلاً، الشروط والرسوم والحق في استعمال الشعار"
+    }
+  ]
+}

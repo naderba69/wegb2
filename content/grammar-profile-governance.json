@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "updated": "2026-11-05",
+  "profileId": "wegb2-internal-german-grammar-coverage-profile",
+  "title": "WegB2 Internal German Grammar Coverage Profile",
+  "titleAr": "ملف WegB2 الداخلي لتغطية القواعد الألمانية",
+  "claimStatus": "internal-evidence-map-not-official-ggp",
+  "claimAr": "هذه مصفوفة داخلية مشتقة من منهج WegB2 لتتبع القواعد والأدلة. لا تدعي مطابقة German Grammar Profile أو أي قائمة خارجية قبل حفظ المصدر المرخص ومراجعته وتوقيع الربط بنداً بنداً.",
+  "derivation": {
+    "sourcePath": "content/grammar.json",
+    "topicUnit": "كل سجل قواعد في المصدر",
+    "candidateFeatureUnit": "كل قاعدة ألمانية/عربية داخل حقل rules",
+    "assessmentScope": "topic-level",
+    "limitation": "تمارين الموضوع دليل على تغطية الموضوع فقط؛ لا تصبح دليلاً مباشراً لكل سمة حتى تُراجع خريطة السؤال إلى السمة يدوياً."
+  },
+  "externalSources": [
+    {
+      "id": "GGP-PRIMARY-PENDING",
+      "role": "feature-and-level-mapping",
+      "title": "مصدر German Grammar Profile مرخص وقابل للاقتباس",
+      "url": null,
+      "snapshot": null,
+      "sha256": null,
+      "license": null,
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "status": "source-not-supplied"
+    },
+    {
+      "id": "CEFR-CONTEXT-PENDING",
+      "role": "level-context-not-grammar-inventory",
+      "title": "CEFR Companion Volume — سياق مستويات فقط وليس قائمة GGP",
+      "url": "https://rm.coe.int/common-european-framework-of-reference-for-languages-learning-teaching/16809ea0d4",
+      "snapshot": null,
+      "sha256": null,
+      "license": null,
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "status": "official-snapshot-pending"
+    }
+  ],
+  "reviewDimensions": [
+    "external-source-mapping",
+    "cefr-level-assignment",
+    "linguistic-accuracy-de",
+    "arabic-explanation-accuracy",
+    "direct-assessment-mapping",
+    "prerequisite-sequencing"
+  ],
+  "acceptance": {
+    "sourceVerified": "لقطة مصدر مؤرخة وبصمة SHA-256 وترخيص أو أساس استخدام ومراجع ثانٍ مستقل",
+    "featureVerified": "مرجع صفحة/بند في المصدر + مراجعة لغوية + مستوى موقع + دليل تعلم مباشر",
+    "officialClaimAllowed": false
+  }
+}

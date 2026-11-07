@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import Link from "next/link";
 import type { Exercise, GrammarTopic, Level, Progress, TaskKind } from "@/lib/types";
 import { CURRICULUM_SCHEDULE_VERSION, TOTAL_DAYS, emptyProgress } from "@/lib/types";
 import { COURSE_TOPIC_ORDER, grammarAssignmentForDay } from "@/lib/plan";
@@ -410,7 +411,7 @@ export function CurriculumMap({ progress }: { progress: Progress }) {
           <span>{pct}%</span>
         </div>
         <div className="curriculum-hero-links">
-          <a className="curriculum-primary-link" href="/">العودة إلى خطة اليوم</a>
+          <Link className="curriculum-primary-link" href="/">العودة إلى خطة اليوم</Link>
           <span>الخريطة للاستكشاف فقط: لا تقدّم اليوم ولا تغيّر التقدم.</span>
         </div>
         {progress.plan.curriculumLegacyThroughDay ? (

@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "toolId": 988,
+  "cycleId": "TC-988-2026-11-07",
+  "updated": "2026-11-07",
+  "lifecycleStatus": "partial-evidence",
+  "claimScopeAr": "محطة حية تضم ثلاث ألعاب قصيرة لممارسة مفردات وحوار وترجمة من بنوك التطبيق المحلية. يقتصر الادعاء على وجود ممارسة لغوية داخل ألعاب ذات هدف وتغذية راجعة؛ ولا يدعي تطبيق مبادئ Gee كاملة أو تحسن التعلم أو انتقاله.",
+  "learningDesign": {
+    "targetLearnerAr": "متعلم الألمانية ذاتياً من A1 إلى B2 بعد توفر بنوك المستوى.",
+    "learnerVisibleActivities": [
+      "شبكة كلمات يمكن حلها من الكلمة أو من المعنى العربي للاسترجاع.",
+      "فجوة داخل حوار مع ثلاثة خيارات وتغذية راجعة بالمعنى.",
+      "ترجمة منتجة بلا خيارات مع مقارنة كلمات معلنة الحدود وتقييم LLM اختياري بمفتاح المتعلم."
+    ],
+    "measurableOutcomeAr": "تسجل الجولة نجاح العثور على هدف الشبكة، وصحة اختيار سطر الحوار، ونسبة مطابقة كلمات الترجمة مع عتبة تدريب داخلية معلنة. هذه مؤشرات أداء للجولة وليست قياساً معيارياً أو دليلاً على أثر تعلم.",
+    "runtimeEvidence": [
+      "components/spiele.tsx",
+      "lib/spiele.ts",
+      "app/ueben/page.tsx",
+      "lib/kompetenz.ts"
+    ]
+  },
+  "sourceReview": {
+    "status": "pending",
+    "citationLabel": "Gee 2003",
+    "blockerAr": "ملصق الاستشهاد وحده ليس مرجعاً كاملاً ولا لقطة مصدر مرخصة، ولم تراجع مطابقة تصميم المحطة لمبادئ Gee بنداً بنداً. لذلك يبقى researchStatus غير موثق وقرار السجل مؤجلاً."
+  },
+  "automatedTests": {
+    "status": "verified",
+    "commands": [
+      "npm run smoke",
+      "npm run interaktiv"
+    ],
+    "testCases": [
+      {
+        "id": "K325g",
+        "file": "scripts/engine_smoke.ts",
+        "coversAr": "كل كلمة موضوعة تطابق حروف خلايا الشبكة."
+      },
+      {
+        "id": "K325i",
+        "file": "scripts/engine_smoke.ts",
+        "coversAr": "فجوة الحوار داخلية وخياراتها الثلاثة فريدة وتتضمن الصواب."
+      },
+      {
+        "id": "K325j",
+        "file": "scripts/engine_smoke.ts",
+        "coversAr": "حدود نسبة الترجمة: مطابق وفارغ وجزئي."
+      },
+      {
+        "id": "K402a",
+        "file": "scripts/engine_smoke.ts",
+        "coversAr": "المدخل الفارغ والحوار القصير يفشلان بأمان."
+      },
+      {
+        "id": "K402b",
+        "file": "scripts/engine_smoke.ts",
+        "coversAr": "تطبيع umlaut ومنع احتساب التكرار بديلاً عن كلمة ناقصة."
+      },
+      {
+        "id": "R311-2",
+        "file": "scripts/interaktiv_test.tsx",
+        "coversAr": "مسار نجاح شبكة حقيقي بالنقر على خلايا الهدف."
+      },
+      {
+        "id": "R311-4",
+        "file": "scripts/interaktiv_test.tsx",
+        "coversAr": "مسار خطأ الحوار يكشف الصواب ويمنع الإجابة المكررة."
+      },
+      {
+        "id": "R311-6",
+        "file": "scripts/interaktiv_test.tsx",
+        "coversAr": "مسار الترجمة الموجب يعرض النتيجة وحد القياس."
+      },
+      {
+        "id": "R311-8",
+        "file": "scripts/interaktiv_test.tsx",
+        "coversAr": "axe-core بعد التفاعل والتغذية الراجعة."
+      }
+    ]
+  },
+  "accessibilityPrivacyReview": {
+    "status": "automated-lab-reviewed",
+    "accessibilityEvidence": [
+      "تسمية صريحة لحقل الترجمة، وحالات aria-pressed لاختيار اللعبة والمستوى، ومناطق status للتغذية الراجعة.",
+      "R305-a11y-6 يفحص العرض الأول وR311-8 يفحص حالة ما بعد التفاعل باستخدام axe-core."
+    ],
+    "privacyEvidence": [
+      "الألعاب والتصحيح العددي يعملان محلياً من بنوك التطبيق.",
+      "إرسال نص الترجمة إلى LLM اختياري ولا يحدث إلا بعد إعداد مفتاح المتعلم وضغط زر منفصل؛ الحد ظاهر داخل المحطة."
+    ],
+    "limitationsAr": "فحص axe-core في jsdom وفحص Chromium العام لا يعوضان قارئ شاشة أو جهاز لمس فعلياً. مراجعة مزود LLM القانونية وسياسة الاحتفاظ خارج نطاق هذه الدورة."
+  },
+  "fieldValidation": {
+    "status": "pending",
+    "blockerAr": "لا توجد جلسة متعلم حقيقية موثقة تقيس قابلية الاستخدام أو موازنة الصعوبة أو التعلم أو الانتقال؛ لذلك لا يسجل هذا الملف نجاحاً ميدانياً ولا not-required."
+  },
+  "releaseDecision": {
+    "productStatus": "candidate-live-implementation",
+    "decision": "defer",
+    "reasonAr": "أثبتت الدورة السلوك الآلي وحدوده وإتاحة المختبر والخصوصية المحلية، لكنها لم تغلق المصدر أو التحقق الميداني؛ لا ترقية إلى wired-and-tested."
+  }
+}

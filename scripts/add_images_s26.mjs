@@ -4,7 +4,7 @@
 // Verwendung: node scripts/add_images_s26.mjs [--dry] [--limit 50]
 // Gate: audit:content 0, smoke 1916/0, build 17/17
 
-import { readFileSync, writeFileSync, existsSync, mkdirSync, statSync, readdirSync, renameSync, copyFileSync } from "fs";
+import { readFileSync, writeFileSync, existsSync, mkdirSync, statSync, renameSync, copyFileSync } from "fs";
 import { join, dirname } from "path";
 import { fileURLToPath } from "url";
 
@@ -66,7 +66,7 @@ if (!existsSync(template)) {
   process.exit(1);
 }
 let created = 0;
-for (const { deckId, card } of chosen) {
+for (const { card } of chosen) {
   // Dateiname: b2-{id}.webp — eindeutig, kein Kollisionsrisiko
   const safeId = card.id.replace(/[^a-z0-9_-]/gi, "_");
   const fileName = `b2-${safeId}.webp`;

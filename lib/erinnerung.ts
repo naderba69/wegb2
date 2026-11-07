@@ -1,3 +1,4 @@
+import { lokalesDatum } from "./datum";
 import { buildDay } from "./plan";
 import type { Progress } from "./types";
 
@@ -40,7 +41,7 @@ export function icsText(p: Progress, jetzt = new Date()): string {
     const start = dt(datum, uhrzeit);
     zeilen.push(
       "BEGIN:VEVENT",
-      `UID:wegb2-tag-${tagPlan}-${datum.toISOString().slice(0, 10)}@lokal`,
+      `UID:wegb2-tag-${tagPlan}-${lokalesDatum(datum)}@lokal`,
       `DTSTAMP:${dt(jetzt, "00:00")}`,
       `DTSTART:${start}`,
       `DTEND:${dtPlusMin(start, plan.zielMin)}`,

@@ -1,4 +1,5 @@
 "use client";
+import { lokalesDatum, lokalesDatumPlus } from "./datum";
 import { useCallback, useEffect, useState } from "react";
 import {
   emptyProgress,
@@ -17,9 +18,12 @@ import { checkAbzeichen } from "./spiel";
 import { logK, KIND_KOMPETENZ, FEHLER_ZU_KOMPETENZ } from "./kompetenz";
 import { progressKeyActive } from "./profiles";
 import { migrateCurriculumSchedule } from "./curriculum-schedule";
-import { idbGet, idbSet, idbDelete } from "./idb";
+import { recordTodayUxClosed, recordTodayUxSubmission } from "./metriken";
+import type { TodayStepId } from "./today-steps";
+import { idbGet, idbSet } from "./idb";
 
 export const PROGRESS_EVENT = "weg-progress-changed";
+export const PROGRESS_SAVE_ERROR_EVENT = "weg-progress-save-error";
 
 /** Move legacy, source-unknown minute totals out of the measured-time field. Before the session timer,
  *  the UI's only way to add time was manual booking, so old totals are self-reported, not measured. */
@@ -96,81 +100,98 @@ export function loadProgress(): Progress {
   }
 }
 
-/** تقليص الحجم عند الاقتراب من حد 5MB: احتفظ بآخر 45 يومًا مفصّلاً، الأقدم يبقى ملخّصه فقط */
+/** Reduce storage pressure while retaining complete detail for the latest 45 study days. */
 function pruneForQuota(p: Progress): Progress {
-  const raw = JSON.stringify(p);
-  if (raw.length < 4_200_000) return p;
+  if (JSON.stringify(p).length < 4_200_000) return p;
   const days = p.plan.days ?? {};
-  const keys = Object.keys(days).map(Number).sort((a,b)=>a-b);
+  const keys = Object.keys(days).map(Number).filter(Number.isFinite).sort((a, b) => a - b);
   if (keys.length <= 45) return p;
   const keep = new Set(keys.slice(-45));
-  const pruned: Record<string, unknown> = {};
-  for (const k of Object.keys(days)) {
-    const nk = Number(k);
-    if (keep.has(nk)) pruned[k] = (days as Record<string, unknown>)[k];
-    else {
-      const d = (days as Record<string, unknown>)[k] as { score?: number; total?: number; closed?: boolean; at?: string };
-      pruned[k] = { score: d.score, total: d.total, closed: d.closed, at: d.at };
-    }
-  }
-  return { ...p, plan: { ...p.plan, days: pruned as typeof days } };
+  const pruned = Object.fromEntries(Object.entries(days).map(([key, day]) => {
+    if (keep.has(Number(key))) return [key, day];
+    return [key, {
+      score: day.score,
+      total: day.total,
+      closed: day.closed,
+      tasksDone: day.tasksDone,
+      tasksTotal: day.tasksTotal,
+      at: day.at,
+    }];
+  })) as typeof days;
+  return { ...p, plan: { ...p.plan, days: pruned } };
 }
 
-export function saveProgress(p: Progress) {
+function signalSaveError() {
+  if (typeof window !== "undefined") window.dispatchEvent(new Event(PROGRESS_SAVE_ERROR_EVENT));
+}
+
+export function saveProgress(p: Progress): boolean {
+  if (typeof window === "undefined") return false;
+  const key = progressKeyActive();
   try {
     const migrated = migrateCurriculumSchedule(separateLegacyManualMinutes(pruneForQuota(p)));
-    const key = progressKeyActive();
     const raw = JSON.stringify(migrated);
     try {
       window.localStorage.setItem(key, raw);
+      void idbSet(key, raw); // best-effort mirror; localStorage remains the synchronous source of truth
       emit();
-      // also mirror to IDB for backup (best-effort, async)
-      idbSet(key, raw).catch(()=>{});
-      return;
-    } catch (e) {
-      const isQuota = e instanceof DOMException && (e.name === "QuotaExceededError" || (e as unknown as { code?: number }).code === 22);
-      if (!isQuota) throw e;
-      // fallback to IDB
-      idbSet(key, raw).then((ok)=>{
-        if (ok) {
-          try { window.localStorage.removeItem(key); } catch {}
-          emit();
-          console.warn("wegb2: localStorage quota exceeded — migrated to IndexedDB");
-        }
-      }).catch(()=>{});
-      // try prune more aggressively and retry localStorage once
+      return true;
+    } catch (error) {
+      const quota = error instanceof DOMException && (error.name === "QuotaExceededError" || error.code === 22);
+      if (!quota) throw error;
+      const compact = {
+        ...migrated,
+        kompetenzLog: [],
+        sicherheit: [],
+      } as Progress;
+      const compactRaw = JSON.stringify(pruneForQuota(compact));
       try {
-        const pruned = pruneForQuota({ ...migrated, plan: { ...migrated.plan, kompetenzLog: [], sicherheit: [] } } as Progress);
-        window.localStorage.setItem(key, JSON.stringify(pruned));
+        window.localStorage.setItem(key, compactRaw);
+        void idbSet(key, compactRaw);
         emit();
-      } catch {}
+        return true;
+      } catch {
+        // Keep the UI honest until IndexedDB confirms persistence, then reload through PROGRESS_EVENT.
+        void idbSet(key, raw).then((saved) => {
+          if (!saved) return;
+          try { window.localStorage.removeItem(key); } catch { /* IndexedDB still contains the data. */ }
+          emit();
+        });
+      }
     }
   } catch {
-    /* التخزين ممتلئ أو محظور — IDB already attempted */
+    // handled below
   }
+  signalSaveError();
+  return false;
 }
 
-/** تحميل مع دعم IndexedDB كـ fallback (يُستدعى async في الـ hook) */
+/** Asynchronous fallback used only when no synchronous localStorage record is available. */
 export async function loadProgressAsync(): Promise<Progress> {
   const sync = loadProgress();
   if (sync !== emptyProgress) return sync;
-  // try IDB
   try {
-    const key = progressKeyActive();
-    const raw = await idbGet(key);
+    const raw = await idbGet(progressKeyActive());
     if (!raw) return emptyProgress;
     const p = JSON.parse(raw) as Progress;
-    return separateLegacyManualMinutes(migrateCurriculumSchedule({ ...emptyProgress, ...p, plan: { ...emptyProgress.plan, ...p.plan }, settings: { ...emptyProgress.settings, ...p.settings } }));
-  } catch { return emptyProgress; }
+    return separateLegacyManualMinutes(migrateCurriculumSchedule({
+      ...emptyProgress,
+      ...p,
+      plan: { ...emptyProgress.plan, ...p.plan },
+      settings: { ...emptyProgress.settings, ...p.settings },
+    }));
+  } catch {
+    return emptyProgress;
+  }
 }
 
 export const MAX_STREAK = 7; // K-StreakCap: لا سلاسل عدوانية — السقف 7 مع حماية «يوم سيّئ»
 
 export function touchStreak(p: Progress): Progress {
-  const today = new Date().toISOString().slice(0, 10);
+  const today = lokalesDatum();
   const last = p.streak.last;
   if (last === today) return p;
-  const yesterday = new Date(Date.now() - 86400000).toISOString().slice(0, 10);
+  const yesterday = lokalesDatumPlus(-1);
   // يوم سيّئ أو غياب معلَن: تُجمَّد السلسلة عند قيمتها الحالية (≤7) بلا كسر
   if (p.badDay === today || p.badDay === yesterday) {
     return { ...p, streak: { last: today, count: Math.min(p.streak.count, MAX_STREAK) } };
@@ -185,39 +206,51 @@ export function useProgress() {
 
   useEffect(() => {
     let cancelled = false;
-    const sync = loadProgress();
-    if (sync !== emptyProgress) {
-      setProgress(sync);
-      setReady(true);
-    } else {
-      // try IDB async (quota fallback)
-      loadProgressAsync().then((p)=>{
-        if (!cancelled) { setProgress(p); setReady(true); }
-      }).catch(()=>{ if(!cancelled) setReady(true); });
-    }
-    const onChange = () => {
-      const s = loadProgress();
-      if (s !== emptyProgress) setProgress(s);
-      else loadProgressAsync().then((p)=>{ if(!cancelled) setProgress(p); });
+    const refresh = () => {
+      const sync = loadProgress();
+      if (sync !== emptyProgress) {
+        setProgress(sync);
+        setReady(true);
+        return;
+      }
+      void loadProgressAsync().then((loaded) => {
+        if (!cancelled) {
+          setProgress(loaded);
+          setReady(true);
+        }
+      });
     };
-    window.addEventListener(PROGRESS_EVENT, onChange);
-    return () => { cancelled = true; window.removeEventListener(PROGRESS_EVENT, onChange); };
+    refresh();
+    window.addEventListener(PROGRESS_EVENT, refresh);
+    return () => {
+      cancelled = true;
+      window.removeEventListener(PROGRESS_EVENT, refresh);
+    };
   }, []);
 
   const update = useCallback((fn: (p: Progress) => Progress) => {
     setProgress((prev) => {
       const next = touchStreak(fn(prev));
-      saveProgress(next);
-      return next;
+      return saveProgress(next) ? next : prev;
     });
   }, []);
 
-  /** تسجيل نتيجة مهمة — النجاح ≥60% (Goethe 60/100) وتميّز ≥80% — مهمةُ التحقق تُغلِق سجلَّ درسِها استقلالاً أو حاجةً */
-    const submitTask = useCallback(
-    (day: number, taskId: string, score: number, total: number, kind?: TaskKind, geplantMin?: number, verifyFor?: string, minutenEffektiv?: number) => {
+  /** تسجيل نتيجة مهمة — النجاح ≥80% (ومهمةُ التحقق تُغلِق سجلَّ درسِها استقلالاً أو حاجةً) */
+  const submitTask = useCallback(
+    (
+      day: number,
+      taskId: string,
+      score: number,
+      total: number,
+      kind?: TaskKind,
+      geplantMin?: number,
+      verifyFor?: string,
+      minutenEffektiv?: number,
+      ux?: { activeMs: number; step: TodayStepId; hasStep5: boolean },
+    ) => {
       update((p) => {
         const prev = p.plan.tasks[taskId];
-        const passed = total > 0 && score / total >= 0.6;
+        const passed = total > 0 && score / total >= 0.8;
         const result: TaskResult = {
           done: true,
           passed: passed || !!prev?.passed,
@@ -241,6 +274,9 @@ export function useProgress() {
             {
               ...p,
               verify,
+              todayUx: ux
+                ? recordTodayUxSubmission(p.todayUx, day, ux.activeMs, ux.step, passed, ux.hasStep5)
+                : p.todayUx,
               xp: (p.xp ?? 0) + (result.passed ? 15 : 5),
               plan: { ...p.plan, tasks: { ...p.plan.tasks, [taskId]: result } },
             },
@@ -261,11 +297,15 @@ export function useProgress() {
       dayTotal: number,
       tasksDone: number,
       tasksTotal: number,
-      debts: DebtItem[]
+      debts: DebtItem[],
+      activeSessionMs?: number,
     ) => {
       update((p) =>
         checkAbzeichen({
           ...p,
+          todayUx: Number.isFinite(activeSessionMs)
+            ? recordTodayUxClosed(p.todayUx, day, activeSessionMs as number)
+            : p.todayUx,
           xp: (p.xp ?? 0) + 30,
           plan: {
             ...p.plan,
@@ -328,7 +368,7 @@ export function useProgress() {
       plan: { ...emptyProgress.plan, ...p.plan },
       settings: { ...emptyProgress.settings, ...p.settings },
     }));
-    saveProgress(merged);
+    if (!saveProgress(merged)) throw new Error("progress-storage-failed");
     setProgress(merged);
   }, []);
 
@@ -340,9 +380,7 @@ export function useProgress() {
         if (key?.startsWith(prefix)) window.localStorage.removeItem(key);
       }
     } catch { /* progress reset still works if optional timer storage is unavailable */ }
-    try { window.localStorage.removeItem(progressKeyActive()); } catch {}
-    idbDelete(progressKeyActive()).catch(()=>{});
-    saveProgress(emptyProgress);
+    if (!saveProgress(emptyProgress)) return;
     setProgress(emptyProgress);
   }, []);
 
@@ -355,7 +393,7 @@ export function recordStudyMinutes(day: number, minutes: number): number {
   try {
     const p = loadProgress();
     const byDay = p.plan.minutenEffektivTage ?? {};
-    saveProgress({
+    const gespeichert = saveProgress({
       ...p,
       plan: {
         ...p.plan,
@@ -364,7 +402,7 @@ export function recordStudyMinutes(day: number, minutes: number): number {
         minutenTrennungVersion: 1,
       },
     });
-    return minutes;
+    return gespeichert ? minutes : 0;
   } catch {
     return 0;
   }
@@ -379,7 +417,7 @@ export function bucheMinuten(minuten: number, day?: number): number {
     const minutenManuellTage = Number.isInteger(day) && (day as number) >= 1
       ? { ...(p.plan.minutenManuellTage ?? {}), [day as number]: ((p.plan.minutenManuellTage ?? {})[day as number] ?? 0) + z }
       : p.plan.minutenManuellTage;
-    saveProgress({
+    if (!saveProgress({
       ...p,
       plan: {
         ...p.plan,
@@ -387,7 +425,7 @@ export function bucheMinuten(minuten: number, day?: number): number {
         minutenManuellTage,
         minutenTrennungVersion: 1,
       },
-    });
+    })) return 0;
   } catch {
     return 0;
   }

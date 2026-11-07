@@ -296,4 +296,3 @@ for w in writing:
 
 open(f"{ROOT}/docs/AUDIT_PEDAGOGY_EXHAUSTIVE_2026-10-28.md","w",encoding='utf-8').write("\n".join(ped))
 print(f"Pedagogy exhaustive: {len(ped)} lines, {len(dialogues)} dialogues, {len(texts)} texts, {len(grammar)} grammar")
-

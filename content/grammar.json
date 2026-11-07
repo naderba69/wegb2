@@ -1520,8 +1520,8 @@
     ],
     "pitfalls": [
       {
-        "de": "Falsch: ich machte · Richtig: ich machte",
-        "ar": "خطأ: machte — الصواب: machte (أبدلت a بـ a لا تستبدلها بغيرها)."
+        "de": "„Ich machtete.“ ✗ → „Ich machte.“ ✓",
+        "ar": "صيغة machen في Präteritum هي machte؛ لا تضف -te مرتين فتقول machtete."
       }
     ],
     "exercises": [
@@ -1664,16 +1664,6 @@
           "sagte"
         ],
         "explanationAr": "sagen فعل ضعيف = sagte، يُستعمل في الحكي أكثر من Perfekt."
-      },
-      {
-        "id": "a2-pr-um1",
-        "type": "umformung",
-        "promptDe": "Forme Präsens → Präteritum (erzählen).",
-        "promptAr": "حوّل المضارع إلى ماضٍ قصصي.",
-        "quelleDe": "Er geht jeden Tag spazieren.",
-        "answer": "Er ging jeden Tag spazieren.",
-        "points": 2,
-        "explanationAr": "Präteritum للسرد المكتوب B1: gehen → ging. Perfekt للمحادثة، Präteritum للقصة — توزيع GGP."
       }
     ]
   },
@@ -1899,40 +1889,6 @@
           "gespielt."
         ],
         "explanationAr": "مشبك الجملة في الماضي Perfekt: الفعل المساعد (haben) في المركز الثاني والتصريف الثالث (gespielt) في النهاية."
-      },
-      {
-        "id": "a2-pf-um1",
-        "type": "umformung",
-        "promptDe": "Forme ins Perfekt um (trennbar + sein).",
-        "promptAr": "حوّل إلى الماضي التام (Perfekt).",
-        "quelleDe": "Ich stehe um 7 Uhr auf.",
-        "answer": "Ich bin um 7 Uhr aufgestanden.",
-        "explanationAr": "الفعل المنفصل aufstehen → Perfekt: auf+ge+standen + الفعل المساعد sein للحركة/المكان. Mayer: صورة ذهنية للحركة.",
-        "points": 2
-      },
-      {
-        "id": "a1-pe-um1",
-        "type": "umformung",
-        "promptDe": "Forme Präsens → Perfekt (haben).",
-        "promptAr": "حوّل إلى ماضٍ تام.",
-        "quelleDe": "Ich spiele Fußball.",
-        "answer": "Ich habe Fußball gespielt.",
-        "points": 2,
-        "explanationAr": "Perfekt: haben + ge-...-t: spielen → gespielt. المحادثة اليومية A1 تستخدم Perfekt لا Präteritum."
-      },
-      {
-        "id": "a2-pf-um2",
-        "type": "umformung",
-        "promptDe": "Perfekt: Ich ___ um 7 Uhr aufgestanden.",
-        "promptAr": "حوّل إلى الماضي التام.",
-        "quelleDe": "Ich stehe um 7 Uhr auf.",
-        "answer": "Ich bin um 7 Uhr aufgestanden.",
-        "alternatives": [],
-        "explanationAr": "aufstehen فعل منفصل يأخذ sein وge- بين المقطعين — شرح عربي.",
-        "explanationDe": "aufstehen فعل منفصل يأخذ sein وge- بين المقطعين — شرح عربي.",
-        "hintAr": "sein + aufgestanden",
-        "points": 2,
-        "level": "A2"
       }
     ]
   },
@@ -2105,44 +2061,6 @@
           "dass"
         ],
         "explanationAr": "dass يربط جملة «أعرف أن …» والفعل في الآخر."
-      },
-      {
-        "id": "a1-wd-um1",
-        "type": "umformung",
-        "promptDe": "Verbinde mit weil/dass (Verb am Ende).",
-        "promptAr": "اربط بـ weil/dass مع الفعل في النهاية.",
-        "quelleDe": "Ich lerne Deutsch. Ich will in Deutschland arbeiten.",
-        "answer": "Ich lerne Deutsch, weil ich in Deutschland arbeiten will.",
-        "points": 2,
-        "explanationAr": "weil/dass = قوس فعلي: الفعل المصرف في النهاية (will). فاصلة إجبارية — خطأ عربي شائع نسيانها."
-      },
-      {
-        "id": "a2-wd-um3",
-        "type": "umformung",
-        "promptDe": "Tausche: Ich will in Deutschland arbeiten, ___ ich Deutsch lerne.",
-        "promptAr": "استخدم weil مع فعل في النهاية.",
-        "quelleDe": "Ich lerne Deutsch, weil ich in Deutschland arbeiten will.",
-        "answer": "weil ich Deutsch lerne",
-        "alternatives": [],
-        "explanationAr": "weil جملة تابعة: فعل في النهاية — شرح عربي.",
-        "explanationDe": "weil جملة تابعة: فعل في النهاية — شرح عربي.",
-        "hintAr": "Verb am Ende",
-        "points": 2,
-        "level": "A2"
-      },
-      {
-        "id": "a2-wd2-um4",
-        "type": "umformung",
-        "promptDe": "Frage: Was denkst du? — dass er kommt",
-        "promptAr": "أكمل dass.",
-        "quelleDe": "Ich denke, dass er kommt.",
-        "answer": "dass er kommt",
-        "alternatives": [],
-        "explanationAr": "dass جملة تابعة فعل آخر — شرح عربي.",
-        "explanationDe": "dass جملة تابعة فعل آخر — شرح عربي.",
-        "hintAr": "dass + Verb Ende",
-        "points": 2,
-        "level": "A2"
       }
     ]
   },
@@ -2311,30 +2229,6 @@
           "auf den Tisch."
         ],
         "explanationAr": "حركة وتغيير مكان (stellen + wohin) تستوجب حالة النصب Akkusativ: auf den Tisch."
-      },
-      {
-        "id": "a2-we2-um1",
-        "type": "umformung",
-        "promptDe": "Forme wo/wohin mit Wechselpräposition.",
-        "promptAr": "ميّز wo/wohin.",
-        "quelleDe": "Ich bin im Kino.",
-        "answer": "Ich gehe ins Kino.",
-        "points": 2,
-        "explanationAr": "im (in+dem) مكان → ins (in+das) اتجاه: wo vs wohin. تحويل حاسم B1."
-      },
-      {
-        "id": "a2-we-um3",
-        "type": "umformung",
-        "promptDe": "Richtung: Die Katze springt auf ___ Stuhl.",
-        "promptAr": "Wo? (مكان) vs Wohin? (وجهة)",
-        "quelleDe": "Die Katze sitzt auf dem Stuhl.",
-        "answer": "auf den Stuhl",
-        "alternatives": [],
-        "explanationAr": "sitz/liegen = مكان Dativ، springen/legen = وجهة Akk — شرح عربي.",
-        "explanationDe": "sitz/liegen = مكان Dativ، springen/legen = وجهة Akk — شرح عربي.",
-        "hintAr": "Wohin Akk",
-        "points": 2,
-        "level": "A2"
       }
     ]
   },
@@ -2495,44 +2389,6 @@
         ],
         "explanationAr": "könnten أدبُ الطلب.",
         "points": 2
-      },
-      {
-        "id": "a2-mod-um1",
-        "type": "umformung",
-        "promptDe": "Forme Erlaubnis mit dürfen → können um.",
-        "promptAr": "حوّل الإذن.",
-        "quelleDe": "Darf ich hier rauchen?",
-        "answer": "Kann ich hier rauchen? (ugs. Erlaubnis)",
-        "points": 2,
-        "explanationAr": "dürfen (إذن رسمي) vs können (قدرة/إذن عامي). فرق تسجيلي B1."
-      },
-      {
-        "id": "a2-mod-um3",
-        "type": "umformung",
-        "promptDe": "Höflich mit Konjunktiv II: Ich ___ gern Arzt werden. (wollen)",
-        "promptAr": "صيغة مهذبة.",
-        "quelleDe": "Ich will Arzt werden.",
-        "answer": "Ich würde gern Arzt werden.",
-        "alternatives": [],
-        "explanationAr": "würde + Infinitiv للتعبير المهذب — شرح عربي.",
-        "explanationDe": "würde + Infinitiv للتعبير المهذب — شرح عربي.",
-        "hintAr": "würde gern",
-        "points": 2,
-        "level": "A2"
-      },
-      {
-        "id": "a2-mod2-um3",
-        "type": "umformung",
-        "promptDe": "Höflich: Ich ___ viel lernen. (sollen)",
-        "promptAr": "بديل مهذب.",
-        "quelleDe": "Ich muss viel lernen.",
-        "answer": "Ich soll viel lernen",
-        "alternatives": [],
-        "explanationAr": "müssen → sollen للتخفيف — شرح عربي.",
-        "explanationDe": "müssen → sollen للتخفيف — شرح عربي.",
-        "hintAr": "sollen",
-        "points": 2,
-        "level": "A2"
       }
     ]
   },
@@ -2713,21 +2569,7 @@
           "reisen."
         ],
         "explanationAr": "صيغة التمني Konjunktiv II: würden في المركز الثاني والمصدر reisen في آخر الجملة."
-      },
-      {
-        "id": "b1-k2-um1",
-        "type": "umformung",
-        "promptDe": "Forme Wunsch mit Konjunktiv II (würde).",
-        "promptAr": "حوّل الرغبة إلى صيغة تخيلية.",
-        "quelleDe": "Ich will in die Ferien fahren.",
-        "answer": "Ich würde gern in die Ferien fahren.",
-        "points": 2,
-        "explanationAr": "Konjunktiv II للرغبة المهذبة B1: will → würde gern. فرق نبرة: طلب مباشر vs تخيل مهذب."
       }
-    ],
-    "resources": [
-      "deutsche-welle-nachrichten",
-      "goethe-institut-b1"
     ]
   },
   "b1-relativ": {
@@ -2879,21 +2721,7 @@
         ],
         "explanationAr": "helfen + Dativ ← der (مؤنث داتيف).",
         "points": 2
-      },
-      {
-        "id": "b1-rel-um1",
-        "type": "umformung",
-        "promptDe": "Forme 2 Sätze → Relativsatz um.",
-        "promptAr": "ادمج جملتين بصلة.",
-        "quelleDe": "Das ist der Mann. Er wohnt nebenan.",
-        "answer": "Das ist der Mann, der nebenan wohnt.",
-        "points": 2,
-        "explanationAr": "Relativsatz: der/die/das حسب جنس الاسم + فعل في النهاية. فاصلة إجبارية."
       }
-    ],
-    "resources": [
-      "tagesschau-leichte-sprache",
-      "bamf-orientierung-leben-in-deutschland"
     ]
   },
   "b1-konnektoren": {
@@ -3042,21 +2870,7 @@
         ],
         "explanationAr": "obwohl وtrotzdem لا يجتمعان.",
         "points": 2
-      },
-      {
-        "id": "b1-ko-um1",
-        "type": "umformung",
-        "promptDe": "Verbinde mit Konnektor deshalb/trotzdem.",
-        "promptAr": "اربط بسبب/رغم.",
-        "quelleDe": "Es regnet. Ich gehe spazieren.",
-        "answer": "Es regnet, trotzdem gehe ich spazieren.",
-        "points": 2,
-        "explanationAr": "trotzdem = Haupt­sat­z (فعل ثانٍ). فرق عن obwohl الجانبية — Contrast."
       }
-    ],
-    "resources": [
-      "zeit-online",
-      "deutsch-perfekt"
     ]
   },
   "b1-plusquamperfekt": {
@@ -3230,25 +3044,7 @@
           "falsch"
         ],
         "promptAr": "هل هذه الجملة Plusquamperfekt؟"
-      },
-      {
-        "id": "b1-plu-um3",
-        "type": "umformung",
-        "promptDe": "Ich hatte das Buch gelesen, bevor du kamst. Frage: Was passiert zuerst? — Lesen (Plusquamperfekt hatte gelesen) vor Kommen",
-        "promptAr": "أي الحدثين أولاً؟",
-        "quelleDe": "Ich hatte das Buch gelesen, bevor du kamst.",
-        "answer": "Lesen vor Kommen (hatte gelesen)",
-        "alternatives": [],
-        "explanationAr": "Plusquamperfekt يدل على الأقدم — شرح عربي.",
-        "explanationDe": "Plusquamperfekt يدل على الأقدم — شرح عربي.",
-        "hintAr": "had gelesen",
-        "points": 2,
-        "level": "B1"
       }
-    ],
-    "resources": [
-      "duden-grammatik",
-      "goethe-b1-modelltest"
     ]
   },
   "b2-indirekte-rede": {
@@ -3333,8 +3129,8 @@
         "ar": "في المنقول الصحافي: «…, die Lage sei stabil» (Konjunktiv I)"
       },
       {
-        "de": "„Sie fragte, ob kannst du kommen?“ ✗ → ob du kommen kannst ✓",
-        "ar": "في السؤال المنقول: الفعل في النهاية مع ob"
+        "de": "„Sie sagt, sie hat keine Zeit.“ ✗ → „Sie sagt, sie habe keine Zeit.“ ✓",
+        "ar": "في النقل الرسمي غير المباشر نستخدم Konjunktiv I: sie habe، لا Indikativ hat."
       }
     ],
     "exercises": [
@@ -3422,21 +3218,7 @@
         ],
         "explanationAr": "habe (Konj. I) والضمير يتحول.",
         "points": 2
-      },
-      {
-        "id": "b2-ir-um1",
-        "type": "umformung",
-        "promptDe": "Bilde indirekte Frage mit ob.",
-        "promptAr": "حوّل إلى سؤال غير مباشر بـ ob.",
-        "quelleDe": "Er fragt: „Kommt sie heute?“",
-        "answer": "Er fragt, ob sie heute kommt.",
-        "explanationAr": "سؤال نعم/لا → سؤال غير مباشر بـ ob + قوس فعلي (الفعل في النهاية). علامة B2 في GGP 150.",
-        "points": 2
       }
-    ],
-    "resources": [
-      "tagesschau-konferenz",
-      "deutschlandfunk-interview"
     ]
   },
   "b2-partizip": {
@@ -3596,39 +3378,7 @@
           "geht in Rente."
         ],
         "explanationAr": "النعت الاسمي المشتق Partizipialattribut: يوضع قبل الاسم موصوفاً مع نهايات الصفات: Der von allen geschätzte Kollege."
-      },
-      {
-        "id": "b2-pa2-um3",
-        "type": "umformung",
-        "promptDe": "Relativ: Die Kinder, die ___, spielen. (lachen)",
-        "promptAr": "حوّل Partizip إلى جملة نسبية.",
-        "quelleDe": "Die lachenden Kinder spielen.",
-        "answer": "Die Kinder, die lachen, spielen",
-        "alternatives": [],
-        "explanationAr": "Partizip I = Nebensatz مع die — شرح عربي.",
-        "explanationDe": "Partizip I = Nebensatz مع die — شرح عربي.",
-        "hintAr": "die lachen",
-        "points": 2,
-        "level": "B2"
-      },
-      {
-        "id": "b2-part-um3",
-        "type": "umformung",
-        "promptDe": "Partizip: Der ___ Zug ist pünktlich. (ankommen)",
-        "promptAr": "اختصر.",
-        "quelleDe": "Der Zug, der ankommt, ist pünktlich.",
-        "answer": "ankommende",
-        "alternatives": [],
-        "explanationAr": "der ankommt → ankommende (Partizip I) — شرح عربي.",
-        "explanationDe": "der ankommt → ankommende (Partizip I) — شرح عربي.",
-        "hintAr": "ankommende",
-        "points": 2,
-        "level": "B2"
       }
-    ],
-    "resources": [
-      "faz-artikel",
-      "bamf-berufssprache"
     ]
   },
   "b2-bedingung": {
@@ -3772,21 +3522,7 @@
         ],
         "explanationAr": "الشرط بلا wenn: الفعل أوّلاً.",
         "points": 2
-      },
-      {
-        "id": "b2-bed-um1",
-        "type": "umformung",
-        "promptDe": "Forme Bedingung mit falls um (Konjunktiv).",
-        "promptAr": "حوّل الشرط بـ falls.",
-        "quelleDe": "Wenn es regnet, bleibe ich zu Hause. (real)",
-        "answer": "Falls es regnen sollte, bliebe ich zu Hause.",
-        "points": 2,
-        "explanationAr": "Bedingung B2: wenn (واقع) → falls + sollte + Konjunktiv II (احتمال). فرق دقيق GGP."
       }
-    ],
-    "resources": [
-      "bundestag-drucksache",
-      "deutsche-welle-wirtschaft"
     ]
   },
   "b2-funktionsverben": {
@@ -3995,35 +3731,7 @@
           "treffen."
         ],
         "explanationAr": "التركيب الفعلي Funktionsverbgefüge: eine Entscheidung treffen مع الفعل المساعد müssen."
-      },
-      {
-        "id": "b2-fv-um1",
-        "type": "umformung",
-        "promptDe": "Forme Funktionsverbgefüge → einfaches Verb um.",
-        "promptAr": "بسّط التعبير الاصطلاحي إلى فعل بسيط.",
-        "quelleDe": "Er trifft eine Entscheidung.",
-        "answer": "Er entscheidet.",
-        "points": 2,
-        "explanationAr": "Funktionsverbgefüge B2: eine Entscheidung treffen → entscheiden. Nominalstil vs Verbalstil — الأكاديمي يفضل البسيط."
-      },
-      {
-        "id": "b2-fv2-um4",
-        "type": "umformung",
-        "promptDe": "Einfach: Er ___. (äußert)",
-        "promptAr": "بدل Funktionsverb.",
-        "quelleDe": "Er bringt es zum Ausdruck.",
-        "answer": "Er äußert es",
-        "alternatives": [],
-        "explanationAr": "zum Ausdruck bringen → äußern — شرح عربي.",
-        "explanationDe": "zum Ausdruck bringen → äußern — شرح عربي.",
-        "hintAr": "äußern",
-        "points": 2,
-        "level": "B2"
       }
-    ],
-    "resources": [
-      "verwaltungssprache-bmi",
-      "arbeitsagentur-berufenet"
     ]
   },
   "b2-infinitiv": {
@@ -4182,35 +3890,7 @@
           "zu lernen."
         ],
         "explanationAr": "جملة المصدر الممتدة مع zu: تأتي zu مباشرة قبل الفعل المصدري في نهاية الجملة: zu lernen."
-      },
-      {
-        "id": "b2-inf-um1",
-        "type": "umformung",
-        "promptDe": "Forme dass-Satz → Infinitiv mit zu um.",
-        "promptAr": "حوّل جملة dass إلى مصدر.",
-        "quelleDe": "Ich hoffe, dass ich bald komme.",
-        "answer": "Ich hoffe, bald zu kommen.",
-        "points": 2,
-        "explanationAr": "dass + فاعل = zu+مصدر لنفس الفاعل: Ich hoffe zu kommen. اختصار مصدري B2."
-      },
-      {
-        "id": "b2-inf-um3",
-        "type": "umformung",
-        "promptDe": "Nominal: Das viele Lernen ist wichtig — Welcher Infinitiv mit zu?",
-        "promptAr": "حدد Infinitivgruppe.",
-        "quelleDe": "Es ist wichtig, viel zu lernen.",
-        "answer": "zu lernen",
-        "alternatives": [],
-        "explanationAr": "Infinitiv mit zu بعد صفة/اسم (wichtig zu …) — شرح عربي.",
-        "explanationDe": "Infinitiv mit zu بعد صفة/اسم (wichtig zu …) — شرح عربي.",
-        "hintAr": "zu + Infinitiv",
-        "points": 2,
-        "level": "B2"
       }
-    ],
-    "resources": [
-      "uni-daad-infoseite",
-      "goethe-b2-training"
     ]
   },
   "a2-dativ": {
@@ -4469,16 +4149,6 @@
           "beim Umzug."
         ],
         "explanationAr": "الفعل helfen يتطلب مجرور Dativ: dem Mann."
-      },
-      {
-        "id": "a2-da-um1",
-        "type": "umformung",
-        "promptDe": "Forme Akkusativ → Dativ mit geben um.",
-        "promptAr": "حوّل إلى حالة الجر مع الإعطاء.",
-        "quelleDe": "Ich sehe den Mann.",
-        "answer": "Ich gebe dem Mann das Buch.",
-        "points": 2,
-        "explanationAr": "geben يطلب Dativ للمستلم: dem Mann (جر) + Akk للمفعول. حالة مزدوجة B1."
       }
     ]
   },
@@ -4702,34 +4372,6 @@
           "kein Geld."
         ],
         "explanationAr": "نفي الأسماء النكرة أو غير المسبوقة بأداة يكون بـ kein: kein Geld."
-      },
-      {
-        "id": "a2-neg-um3",
-        "type": "umformung",
-        "promptDe": "Statt nicht: Ich habe ___ Geld. (kein)",
-        "promptAr": "استخدم kein بدل nicht.",
-        "quelleDe": "Ich habe kein Geld.",
-        "answer": "kein Geld",
-        "alternatives": [],
-        "explanationAr": "kein ينفي الاسم، nicht ينفي الفعل — شرح عربي.",
-        "explanationDe": "kein ينفي الاسم، nicht ينفي الفعل — شرح عربي.",
-        "hintAr": "kein + Nomen",
-        "points": 2,
-        "level": "A2"
-      },
-      {
-        "id": "a2-neg2-um3",
-        "type": "umformung",
-        "promptDe": "Mit kein: Ich esse ___ Fisch.",
-        "promptAr": "استخدم kein.",
-        "quelleDe": "Ich esse nicht gern Fisch.",
-        "answer": "keinen Fisch",
-        "alternatives": [],
-        "explanationAr": "nicht gern ≠ kein: gern مع الفعل، kein مع الاسم — شرح عربي.",
-        "explanationDe": "nicht gern ≠ kein: gern مع الفعل، kein مع الاسم — شرح عربي.",
-        "hintAr": "keinen Akk",
-        "points": 2,
-        "level": "A2"
       }
     ]
   },
@@ -4951,16 +4593,6 @@
           "pünktlich!"
         ],
         "explanationAr": "في صيغة الأمر مع الاحترام (Sie) يبدأ الفعل في المركز الأول ويليه الضمير: Kommen Sie bitte pünktlich!"
-      },
-      {
-        "id": "a1-imp-um1",
-        "type": "umformung",
-        "promptDe": "Forme Aussage → Imperativ du um.",
-        "promptAr": "حوّل إلى أمر.",
-        "quelleDe": "Du kommst bitte her.",
-        "answer": "Komm bitte her!",
-        "points": 2,
-        "explanationAr": "Imperativ du: ohne Endung + حذف الضمير: komm! (nicht kommst). احترام + نبرة."
       }
     ]
   },
@@ -5177,30 +4809,6 @@
           "auf das Wochenende."
         ],
         "explanationAr": "الضمير المنعكس (mich) يأتي مباشرة بعد الفعل في الجملة الرئيسية: Ich freue mich auf das Wochenende."
-      },
-      {
-        "id": "a2-re-um1",
-        "type": "umformung",
-        "promptDe": "Forme nicht-reflexiv → reflexiv (sich) um.",
-        "promptAr": "حوّل إلى فعل منعكس.",
-        "quelleDe": "Ich wasche das Kind.",
-        "answer": "Ich wasche mich.",
-        "points": 2,
-        "explanationAr": "waschen (متعد) vs sich waschen (منعكس: الفاعل هو المفعول). Akk: mich/dich/sich."
-      },
-      {
-        "id": "a2-ref-um3",
-        "type": "umformung",
-        "promptDe": "Frage: Auf ___ freust du dich? (wen)",
-        "promptAr": "انعكاسي مع حرف جر.",
-        "quelleDe": "Ich freue mich auf dich.",
-        "answer": "Auf wen freust du dich?",
-        "alternatives": [],
-        "explanationAr": "sich freuen auf + Akk — شرح عربي.",
-        "explanationDe": "sich freuen auf + Akk — شرح عربي.",
-        "hintAr": "auf wen",
-        "points": 2,
-        "level": "A2"
       }
     ]
   },
@@ -5418,30 +5026,6 @@
           "als ich."
         ],
         "explanationAr": "في المقارنة Komparativ نستخدم الصفة المنتهية بـ -er متبوعة بـ als: größer als ich."
-      },
-      {
-        "id": "a1-plu-um1",
-        "type": "umformung",
-        "promptDe": "Bilde Plural korrekt.",
-        "promptAr": "حوّل إلى الجمع.",
-        "quelleDe": "der Lehrer",
-        "answer": "die Lehrer",
-        "points": 2,
-        "explanationAr": "جمع بدون تغيير لكن مع Artikel die: der Lehrer → die Lehrer. حفظ النمط مع الصورة."
-      },
-      {
-        "id": "a2-st-um2",
-        "type": "umformung",
-        "promptDe": "Komparativ: Dieses Haus ist ___ als jenes.",
-        "promptAr": "استخدم المقارنة.",
-        "quelleDe": "Dieses Haus ist groß.",
-        "answer": "Dieses Haus ist größer als jenes.",
-        "alternatives": [],
-        "explanationAr": "groß→größer مع Umlaut — شرح عربي.",
-        "explanationDe": "groß→größer مع Umlaut — شرح عربي.",
-        "hintAr": "größer",
-        "points": 2,
-        "level": "A2"
       }
     ]
   },
@@ -5661,40 +5245,6 @@
           "reisen."
         ],
         "explanationAr": "مشبك المستقبل Futur I: الفعل المساعد werden في المركز الثاني والمصدر reisen في آخر الجملة."
-      },
-      {
-        "id": "a2-fu-um1",
-        "type": "umformung",
-        "promptDe": "Forme Präsens → Futur I mit werden um.",
-        "promptAr": "حوّل إلى مستقبل بـ werden.",
-        "quelleDe": "Ich besuche dich morgen.",
-        "answer": "Ich werde dich morgen besuchen.",
-        "points": 2,
-        "explanationAr": "Futur I: werden + Infinitiv في النهاية. العربية مستقبل بـ سـ؛ الألمانية قوس فعلي."
-      },
-      {
-        "id": "a1-fu2-um1",
-        "type": "umformung",
-        "promptDe": "Forme Präsens → Futur mit werden um.",
-        "promptAr": "حوّل إلى مستقبل.",
-        "quelleDe": "Ich fahre morgen nach Hamburg.",
-        "answer": "Ich werde morgen nach Hamburg fahren.",
-        "points": 2,
-        "explanationAr": "werden + مصدر في النهاية: fahre → werde ... fahren. المستقبل الألماني قوس فعلي."
-      },
-      {
-        "id": "a2-fut-um3b",
-        "type": "umformung",
-        "promptDe": "Präsens: Morgen ___ es. (regnen)",
-        "promptAr": "مستقبل بمضارع.",
-        "quelleDe": "Morgen wird es regnen.",
-        "answer": "Morgen regnet es",
-        "alternatives": [],
-        "explanationAr": "Futur mit werden يمكن استبداله بمضارع + ظرف — شرح عربي.",
-        "explanationDe": "Futur mit werden يمكن استبداله بمضارع + ظرف — شرح عربي.",
-        "hintAr": "Morgen regnet es",
-        "points": 2,
-        "level": "A2"
       }
     ]
   },
@@ -5820,10 +5370,7 @@
         "ar": "المذكر/المحايد في Genitiv لا بدّ له من نهاية s/es"
       }
     ],
-    "resources": [
-      "grundgesetz-artikel",
-      "einbuergerungstest-fragen"
-    ],
+    "resources": [],
     "exercises": [
       {
         "id": "b1-gen-e1",
@@ -5913,30 +5460,6 @@
           "Vaters."
         ],
         "explanationAr": "المضاف إليه Genitiv للمذكر يأخذ meines والاسم ينتهي بـ -s: meines Vaters."
-      },
-      {
-        "id": "b1-gen-um1",
-        "type": "umformung",
-        "promptDe": "Forme Besitz mit Genitiv-s um.",
-        "promptAr": "حوّل الملكية بـ Genitiv.",
-        "quelleDe": "das Auto von meinem Vater",
-        "answer": "das Auto meines Vaters",
-        "points": 2,
-        "explanationAr": "Genitiv B1: von + Dativ → des + Genitiv-s: meines Vaters. Genitiv حيّ في الكتابة الرسمية."
-      },
-      {
-        "id": "b1-gen-um3",
-        "type": "umformung",
-        "promptDe": "Genitiv → von: Das Auto ___ meinem Vater ist neu. (Alternative)",
-        "promptAr": "حوّل Genitiv إلى von+Dativ.",
-        "quelleDe": "Das Auto meines Vaters ist neu.",
-        "answer": "von meinem Vater",
-        "alternatives": [],
-        "explanationAr": "Genitiv الأدبي = von+Dativ في اللغة المحكية — شرح عربي.",
-        "explanationDe": "Genitiv الأدبي = von+Dativ في اللغة المحكية — شرح عربي.",
-        "hintAr": "von + Dativ",
-        "points": 2,
-        "level": "B1"
       }
     ]
   },
@@ -6092,10 +5615,7 @@
         "ar": "N-Deklination: Kollege يأخذ n في كل الحالات عدا Nominativ"
       }
     ],
-    "resources": [
-      "duden-rechtschreibung",
-      "leo-woerterbuch"
-    ],
+    "resources": [],
     "exercises": [
       {
         "id": "b1-adj-e1",
@@ -6222,30 +5742,6 @@
         "promptDe": "Ich spreche mit sein___ Kollegen.",
         "answer": "em",
         "explanationAr": "بعد sein في Dativ: seinem — والاسم أخذ N-Deklination: Kollegen."
-      },
-      {
-        "id": "b1-adj-um1",
-        "type": "umformung",
-        "promptDe": "Dekliniere Adjektiv nach definitem Artikel.",
-        "promptAr": "صرّف الصفة بعد أداة معرفة.",
-        "quelleDe": "der (klein) Tisch",
-        "answer": "der kleine Tisch",
-        "points": 2,
-        "explanationAr": "بعد der/die/das: الصفة -e فقط (kleine). بعد ein: -er/-e/-es. نظام B1 يحتاج Contrast جدول."
-      },
-      {
-        "id": "b1-adj-um2",
-        "type": "umformung",
-        "promptDe": "Dativ: Ich helfe ___ alten Mann.",
-        "promptAr": "ضع النعت بالنهاية الصحيحة.",
-        "quelleDe": "Der alte Mann liest.",
-        "answer": "Ich helfe dem alten Mann.",
-        "alternatives": [],
-        "explanationAr": "بعد dem تأخذ الصفة -en — شرح عربي.",
-        "explanationDe": "بعد dem تأخذ الصفة -en — شرح عربي.",
-        "hintAr": "dem alten",
-        "points": 2,
-        "level": "B1"
       }
     ]
   },
@@ -6295,12 +5791,8 @@
         "ar": "**القاعدة الذهبية**: الكلمة الأخيرة تعطي الجنس والمعنى الأساس، وما قبلها يخصّص. Klimabewegung هي «حركةٌ» (die) من نوع «مناخ»."
       },
       {
-        "de": "Fugenelemente: -s- (Arbeitszeit), -n- (Straßenbahn), -en- (Studentenheim), -er- (Kinderarzt).",
-        "ar": "أحرف الوصل: -s- كما في Arbeitszeit، و-n- كما في Straßenbahn، و-en- كما في Studentenheim، و-er- كما في Kinderarzt."
-      },
-      {
-        "de": "Oft: Wort auf -ung/-heit/-keit/-schaft/-tät/-ion → -s-: Wohnungsmarkt, Freiheitsstatue.",
-        "ar": "أوثق قاعدة: ما ينتهي بـ -ung/-heit/-keit/-schaft/-tät/-ion يأخذ -s- دائماً: Wohnungsmarkt، Freiheitsstatue."
+        "de": "Fugenelemente: -s- (Arbeitszeit), -n- (Straßenbahn), -en- (Studentenheim), -er- (Kinderarzt), -es- (Tageszeit), -e- (Hundehütte). Oft: Wort auf -ung/-heit/-keit/-schaft/-tät/-ion → -s-.",
+        "ar": "أحرف الوصل تُسهّل النطق. أوثق قاعدة: ما ينتهي بـ -ung/-heit/-keit/-schaft/-tät/-ion يأخذ **-s-** دائماً: Wohnungsmarkt، Freiheitsstatue."
       },
       {
         "de": "Bestimmungswort kann Nomen (Haustür), Verb-Stamm (Waschmaschine), Adjektiv (Kühlschrank) oder Präposition (Vorwort) sein.",
@@ -6574,49 +6066,7 @@
           "auf dem Schreibtisch."
         ],
         "explanationAr": "تركيب الكلمات Komposita مع موضع الفعل الثاني: Die Fahrkarte liegt auf dem Schreibtisch."
-      },
-      {
-        "id": "b1-wb-um1",
-        "type": "umformung",
-        "promptDe": "Bilde Ableitung mit -ung/-heit.",
-        "promptAr": "اشتق اسمًا من فعل.",
-        "quelleDe": "entscheiden (Verb)",
-        "answer": "die Entscheidung",
-        "points": 2,
-        "explanationAr": "اشتقاق B1: entscheiden → Entscheidung (-ung مؤنث). Wortbildung B2 أساس Nominalstil."
-      },
-      {
-        "id": "b1-wb-um3",
-        "type": "umformung",
-        "promptDe": "Nominal: ___ schnelle Entscheidung ist wichtig.",
-        "promptAr": "حوّل الفعل إلى اسم.",
-        "quelleDe": "Er entscheidet schnell.",
-        "answer": "Seine schnelle Entscheidung",
-        "alternatives": [],
-        "explanationAr": "entscheid-en → Entscheidung مع Genitiv — شرح عربي.",
-        "explanationDe": "entscheid-en → Entscheidung مع Genitiv — شرح عربي.",
-        "hintAr": "Entscheidung feminin",
-        "points": 2,
-        "level": "B1"
-      },
-      {
-        "id": "b1-wb2-um4",
-        "type": "umformung",
-        "promptDe": "Verb: Man ___ schnell. (entscheiden)",
-        "promptAr": "من اسم إلى فعل.",
-        "quelleDe": "Die Entscheidung war schnell.",
-        "answer": "Man entschied schnell",
-        "alternatives": [],
-        "explanationAr": "Entscheidung → entscheiden — شرح عربي.",
-        "explanationDe": "Entscheidung → entscheiden — شرح عربي.",
-        "hintAr": "entschied",
-        "points": 2,
-        "level": "B1"
       }
-    ],
-    "resources": [
-      "dwds-komposita",
-      "wortwarte-de"
     ]
   },
   "b1-unbestimmte": {
@@ -6750,10 +6200,7 @@
         "ar": "بعد etwas/nichts تأتي الصفة بالحروف الكبيرة: Neues"
       }
     ],
-    "resources": [
-      "goethe-a2-uebung",
-      "bamf-rahmen-curriculum"
-    ],
+    "resources": [],
     "exercises": [
       {
         "id": "b1-unb-e1",
@@ -6840,30 +6287,6 @@
           "gesehen?"
         ],
         "explanationAr": "سؤال بالفعل (Ja/Nein-Frage): يبدأ الفعل في المركز الأول ويليه الضمير غير المحدد jemand."
-      },
-      {
-        "id": "b1-unb-um1",
-        "type": "umformung",
-        "promptDe": "Forme bestimmt → unbestimmt (Passiv-ähnlich) um.",
-        "promptAr": "حوّل من محدد إلى مبهم.",
-        "quelleDe": "Man sagt, dass es regnet.",
-        "answer": "Es heißt, dass es regnet.",
-        "points": 2,
-        "explanationAr": "Unpersönlich B1: man sagt → es heißt. نائب فاعل ضمني — تلميع أكاديمي."
-      },
-      {
-        "id": "b1-unb-um3",
-        "type": "umformung",
-        "promptDe": "Unbestimmt: Es ___ viel darüber gesprochen. (wird)",
-        "promptAr": "مبني للمجهول غير محدد.",
-        "quelleDe": "Man sagt, es regnet.",
-        "answer": "Es wird viel darüber gesprochen",
-        "alternatives": [],
-        "explanationAr": "man → Passiv unbestimmt — شرح عربي.",
-        "explanationDe": "man → Passiv unbestimmt — شرح عربي.",
-        "hintAr": "Es wird",
-        "points": 2,
-        "level": "B1"
       }
     ]
   },
@@ -7013,10 +6436,7 @@
         "ar": "nachdenken über = يتأمّل؛ denken an = يفكّر في"
       }
     ],
-    "resources": [
-      "pons-verben-mit-praeposition",
-      "arbeitsagentur-bewerbung"
-    ],
+    "resources": [],
     "exercises": [
       {
         "id": "b1-vp-e1",
@@ -7103,20 +6523,6 @@
           "auf den Bus."
         ],
         "explanationAr": "الفعل warten يتطلب حرف الجر auf مع حالة النصب Akkusativ: auf den Bus."
-      },
-      {
-        "id": "b1-vp-um3",
-        "type": "umformung",
-        "promptDe": "Frage: An ___ erinnerst du dich? (wen)",
-        "promptAr": "verb+präp.",
-        "quelleDe": "Ich erinnere mich an dich.",
-        "answer": "an wen",
-        "alternatives": [],
-        "explanationAr": "sich erinnern an + Akk — شرح عربي.",
-        "explanationDe": "sich erinnern an + Akk — شرح عربي.",
-        "hintAr": "an wen",
-        "points": 2,
-        "level": "B1"
       }
     ]
   },
@@ -7259,10 +6665,7 @@
         "ar": "في المجهول المركّب: geworden تفقد ge- وتبقى worden"
       }
     ],
-    "resources": [
-      "tagesschau-video",
-      "industrie-4.0-plattform"
-    ],
+    "resources": [],
     "exercises": [
       {
         "id": "b1-pas-e1",
@@ -7349,30 +6752,6 @@
           "renoviert."
         ],
         "explanationAr": "مشبك المبني للمجهول Passiv: werden في المركز الثاني واسم المفعول renoviert في نهاية الجملة."
-      },
-      {
-        "id": "b1-ps-um1",
-        "type": "umformung",
-        "promptDe": "Forme Aktiv → Passiv Perfekt um.",
-        "promptAr": "حوّل إلى مبني للمجهول تام.",
-        "quelleDe": "Man hat das Fenster geöffnet.",
-        "answer": "Das Fenster ist geöffnet worden.",
-        "points": 2,
-        "explanationAr": "Passiv Perfekt: ist ... worden (ليس geworden). خطأ شائع B1: الخلط بين Aktiv werden و Passiv worden."
-      },
-      {
-        "id": "b1-pa-um2",
-        "type": "umformung",
-        "promptDe": "Passiv: Das Auto ___ repariert.",
-        "promptAr": "مبني للمجهول.",
-        "quelleDe": "Man repariert das Auto.",
-        "answer": "Das Auto wird repariert.",
-        "alternatives": [],
-        "explanationAr": "werden + Partizip II — شرح عربي.",
-        "explanationDe": "werden + Partizip II — شرح عربي.",
-        "hintAr": "wird",
-        "points": 2,
-        "level": "B1"
       }
     ]
   },
@@ -7538,18 +6917,15 @@
         "ar": "الترتيب: بعد الفعل مباشرة، وحدّ أقصى جسيمين في الجملة"
       },
       {
-        "de": "„Bist du da? Ja.“ ≠ „Du bist ja da!“ (جسيم تأكيد)",
-        "ar": "Ja جواب مستقل ≠ ja جسيم بعد الفعل"
+        "de": "„Ja!“ (Antwort) ≠ „Du bist ja müde.“ (Modalpartikel)",
+        "ar": "لا تخلط بين ja جواباً مستقلاً وبين ja جسيمًا يعبّر عن معلومة مشتركة أو واضحة."
       },
       {
         "de": "„Das ist doch.“ ✗",
         "ar": "الجسيم لا يبقى وحده — يرافق معنى دائماً"
       }
     ],
-    "resources": [
-      "spoken-german-corpus",
-      "atlas-alltagssprache"
-    ],
+    "resources": [],
     "exercises": [
       {
         "id": "b2-mp-e1",
@@ -7640,16 +7016,6 @@
           "kein Problem!"
         ],
         "explanationAr": "أداة النبرة doch للتأكيد الودي تأتي في منتصف الجملة (Mittelfeld)."
-      },
-      {
-        "id": "b2-modp-um2",
-        "type": "umformung",
-        "promptDe": "Forme Aussage mit Modalpartikel doch/mal/ja um.",
-        "promptAr": "أضف أداة نبرية لتخفيف الأمر.",
-        "quelleDe": "Komm her!",
-        "answer": "Komm doch mal her!",
-        "points": 2,
-        "explanationAr": "Modalpartikel B2: doch/mal/ja تلطف الأمر — Komm her! (حاد) → Komm doch mal her! (لطيف). فرق نبرة ثقافي."
       }
     ]
   },
@@ -7752,10 +7118,7 @@
         "ar": "أفعال الحركة والتغيّر مع sein حتى في Futur II"
       }
     ],
-    "resources": [
-      "zeit-wissen-futur",
-      "duden-zukunft"
-    ],
+    "resources": [],
     "exercises": [
       {
         "id": "gf2e1",
@@ -7856,16 +7219,6 @@
         ],
         "explanationAr": "الحركة: Partizip II + sein.",
         "points": 2
-      },
-      {
-        "id": "b2-f2-um1",
-        "type": "umformung",
-        "promptDe": "Forme Perfekt → Futur II (Vermutung) um.",
-        "promptAr": "حوّل إلى مستقبل تام للظن.",
-        "quelleDe": "Er hat das sicher gemacht.",
-        "answer": "Er wird das sicher gemacht haben.",
-        "points": 2,
-        "explanationAr": "Futur II للظن: wird ... gemacht haben (ليس Futur زمني). B2 Vermutung vs Tatsache."
       }
     ]
   },
@@ -7968,10 +7321,7 @@
         "ar": "«Wer kommt, der ist willkommen» ✓؛ «Wer kommt, wer…» ✗ تكرار الواصل"
       }
     ],
-    "resources": [
-      "grundgesetz-wer",
-      "goethe-b2-lesen"
-    ],
+    "resources": [],
     "exercises": [
       {
         "id": "grge1",
@@ -8068,20 +7418,6 @@
         ],
         "explanationAr": "was يعود على الجملة كلها.",
         "points": 2
-      },
-      {
-        "id": "b2-rg2-um3",
-        "type": "umformung",
-        "promptDe": "Relativ: ___ du sagst, ist wichtig. (Was)",
-        "promptAr": "نسبي عام.",
-        "quelleDe": "Was du sagst, ist wichtig.",
-        "answer": "Was du sagst",
-        "alternatives": [],
-        "explanationAr": "Was = كل ما (generalisierend) — شرح عربي.",
-        "explanationDe": "Was = كل ما (generalisierend) — شرح عربي.",
-        "hintAr": "Was = ما",
-        "points": 2,
-        "level": "B2"
       }
     ]
   },
@@ -8188,10 +7524,7 @@
         "ar": "النفي داخل الزوج — لا يُضاعف"
       }
     ],
-    "resources": [
-      "deutschlandfunk-kultur",
-      "spiegel-online"
-    ],
+    "resources": [],
     "exercises": [
       {
         "id": "gdke1",
@@ -8286,30 +7619,6 @@
         ],
         "explanationAr": "weder … noch ينفي بلا kein.",
         "points": 2
-      },
-      {
-        "id": "b2-dk-um1",
-        "type": "umformung",
-        "promptDe": "Forme mit Doppelkonnektor um (nicht nur...sondern auch).",
-        "promptAr": "حوّل بـ رابط مزدوج.",
-        "quelleDe": "Er spricht Deutsch und er spricht Englisch.",
-        "answer": "Er spricht nicht nur Deutsch, sondern auch Englisch.",
-        "points": 2,
-        "explanationAr": "Doppelkonnektor B2: nicht nur...sondern auch يركز التركيز — مهارة كتابية أكاديمية."
-      },
-      {
-        "id": "b2-dop-um3",
-        "type": "umformung",
-        "promptDe": "Teile: Er ist ___ klug ___ fleißig. (nicht nur/sondern auch)",
-        "promptAr": "روابط مزدوجة.",
-        "quelleDe": "Er ist nicht nur klug, sondern auch fleißig.",
-        "answer": "nicht nur klug, sondern auch fleißig",
-        "alternatives": [],
-        "explanationAr": "nicht nur ... sondern auch = ليس فقط بل أيضا — شرح عربي.",
-        "explanationDe": "nicht nur ... sondern auch = ليس فقط بل أيضا — شرح عربي.",
-        "hintAr": "nicht nur ... sondern auch",
-        "points": 2,
-        "level": "B2"
       }
     ]
   },
@@ -8604,35 +7913,7 @@
         ],
         "explanationAr": "damit → zur + Verbesserung (مؤنث) + Genitiv للمفعول (der Luft).",
         "points": 2
-      },
-      {
-        "id": "b2-ns-um1",
-        "type": "umformung",
-        "promptDe": "Forme verbal → nominal (Nominalstil) um.",
-        "promptAr": "حوّل من أسلوب فعلي إلى اسمي.",
-        "quelleDe": "Weil er sich schnell entscheidet, gewinnt er Zeit.",
-        "answer": "Wegen seiner schnellen Entscheidung gewinnt er Zeit.",
-        "explanationAr": "التحويل الاسمي الأكاديمي B2: جملة weil الفعلية → عبارة اسمية wegen + Genitiv + تسمية (entscheiden → Entscheidung).",
-        "points": 2
-      },
-      {
-        "id": "b2-nom-um3",
-        "type": "umformung",
-        "promptDe": "Nominal: Wegen ___ schnelle Entscheidung gewann er. (seiner)",
-        "promptAr": "إلى أسلوب اسمي.",
-        "quelleDe": "Weil er schnell entschied, gewann er.",
-        "answer": "Wegen seiner schnellen Entscheidung",
-        "alternatives": [],
-        "explanationAr": "Nominalstil B2: weil-Satz → wegen+Genitiv — شرح عربي.",
-        "explanationDe": "Nominalstil B2: weil-Satz → wegen+Genitiv — شرح عربي.",
-        "hintAr": "Wegen seiner",
-        "points": 2,
-        "level": "B2"
       }
-    ],
-    "resources": [
-      "bundesregierung-presse",
-      "wissenschaftssprache-tubingen"
     ]
   },
   "a0-begrussung": {
@@ -8777,60 +8058,6 @@
         ],
         "explanationAr": "Ich heiße … هو التعبير القياسي لذكر الاسم.",
         "points": 1
-      },
-      {
-        "id": "a0-begrussung-ex07-umformung",
-        "type": "umformung",
-        "quelleDe": "Hallo Nader! Wie geht es dir?",
-        "promptDe": "Formuliere formell mit Sie:",
-        "answer": "Guten Tag Herr Nader! Wie geht es Ihnen?",
-        "mussEnthalten": [
-          "Ihnen"
-        ],
-        "darfNicht": [
-          "dir"
-        ],
-        "explanationAr": "du→Sie: dir (Dativ informell) → Ihnen (رسمي). التحية تتغير: Hallo→Guten Tag.",
-        "points": 2,
-        "promptAr": "حوّل الجملة حسب القاعدة."
-      },
-      {
-        "id": "a0-beg-um1",
-        "type": "umformung",
-        "promptDe": "Forme formell (Sie) statt du um.",
-        "promptAr": "حوّل من مخاطب عادي إلى رسمي.",
-        "quelleDe": "Wie heißt du?",
-        "answer": "Wie heißen Sie?",
-        "points": 2,
-        "explanationAr": "du (عادي) → Sie (رسمي) + فعل جمع: heißt → heißen. فرق ثقافي B1: متى نستخدم Sie؟"
-      },
-      {
-        "id": "a0-beg-um3",
-        "type": "umformung",
-        "promptDe": "Wie antwortest du? Hallo, ___ bin Ahmed.",
-        "promptAr": "أكمل التحية.",
-        "quelleDe": "Hallo, ich bin Sara.",
-        "answer": "ich bin Ahmed",
-        "alternatives": [],
-        "explanationAr": "تحية A0: ich bin + اسم — شرح عربي يوضح.",
-        "explanationDe": "تحية A0: ich bin + اسم — شرح عربي يوضح.",
-        "hintAr": "ich bin",
-        "points": 2,
-        "level": "A0"
-      },
-      {
-        "id": "a0-beg-um4",
-        "type": "umformung",
-        "promptDe": "Antwort: Ich ___ Ahmed. (heiße)",
-        "promptAr": "أجب.",
-        "quelleDe": "Wie heißt du?",
-        "answer": "Ich heiße Ahmed",
-        "alternatives": [],
-        "explanationAr": "A0: Wie heißt du? → Ich heiße ... — شرح عربي.",
-        "explanationDe": "A0: Wie heißt du? → Ich heiße ... — شرح عربي.",
-        "hintAr": "heiße",
-        "points": 2,
-        "level": "A0"
       }
     ],
     "pitfalls": [
@@ -9032,46 +8259,6 @@
         ],
         "answer": "muss",
         "explanationAr": "مع er نستخدم muss؛ ويبقى الفعل الثاني في المصدر في نهاية الجملة: bleiben."
-      },
-      {
-        "id": "a1-modalverben-ex06-umformung",
-        "type": "umformung",
-        "quelleDe": "Ich will heute ins Kino gehen.",
-        "promptDe": "Höflicher mit möchten:",
-        "answer": "Ich möchte heute ins Kino gehen.",
-        "mussEnthalten": [
-          "möchte"
-        ],
-        "darfNicht": [
-          "will"
-        ],
-        "explanationAr": "wollen (إرادة قوية) → möchten (Konjunktiv II مهذب) — نفس القاعدة A2 höflich.",
-        "points": 2,
-        "promptAr": "حوّل الجملة حسب القاعدة."
-      },
-      {
-        "id": "a1-sh-um1",
-        "type": "umformung",
-        "promptDe": "Bilde eine Ja/Nein-Frage im Präsens.",
-        "promptAr": "حوّل إلى سؤال نعم/لا.",
-        "quelleDe": "Du bist Lehrer.",
-        "answer": "Bist du Lehrer?",
-        "explanationAr": "Inversion للسؤال: الفعل أولاً — Bist du ...؟ SVO تصبح VSO. تمرين إنتاج B2.",
-        "points": 2
-      },
-      {
-        "id": "a1-mod-um2",
-        "type": "umformung",
-        "promptDe": "Frage: ___ du gut schwimmen?",
-        "promptAr": "كوّن سؤالاً باستخدام الفعل الناقص.",
-        "quelleDe": "Ich kann gut schwimmen.",
-        "answer": "Kannst du gut schwimmen?",
-        "alternatives": [],
-        "explanationAr": "الفعل الناقص kann يتصرف ويأتي أول الجملة في السؤال — شرح عربي مفصل.",
-        "explanationDe": "الفعل الناقص kann يتصرف ويأتي أول الجملة في السؤال — شرح عربي مفصل.",
-        "hintAr": "Kannst du ...?",
-        "points": 2,
-        "level": "A1"
       }
     ],
     "pitfalls": [
@@ -9256,46 +8443,6 @@
         ],
         "answer": "dem",
         "explanationAr": "mit تأخذ Dativ؛ der Lehrer يصبح dem Lehrer."
-      },
-      {
-        "id": "a1-dativ-ex06-umformung",
-        "type": "umformung",
-        "quelleDe": "Ich fahre zu die Schule.",
-        "promptDe": "Korrigiere den Kasus:",
-        "answer": "Ich fahre zu der Schule.",
-        "mussEnthalten": [
-          "zu der"
-        ],
-        "darfNicht": [
-          "zu die"
-        ],
-        "explanationAr": "zu + Dativ دائماً: die→der. لا تخلط مع nach Berlin (بدون أداة).",
-        "points": 2,
-        "promptAr": "حوّل الجملة حسب القاعدة."
-      },
-      {
-        "id": "a1-akk-um1",
-        "type": "umformung",
-        "promptDe": "Topikalisiere das Objekt (O-V-S).",
-        "promptAr": "قدّم المفعول للتوكيد.",
-        "quelleDe": "Der Mann sieht den Hund.",
-        "answer": "Den Hund sieht der Mann.",
-        "explanationAr": "تقديم المفعول (Akkusativ) للتوكيد: Den Hund (مفعول) → الفعل في المرتبة الثانية (V2). الحالة الإعرابية تميز الوظيفة.",
-        "points": 2
-      },
-      {
-        "id": "a1-dat-um2",
-        "type": "umformung",
-        "promptDe": "Wem hilfst du? — Ich helfe ___ Mutter.",
-        "promptAr": "أكمل بالحالة الصحيحة.",
-        "quelleDe": "Ich helfe meiner Mutter.",
-        "answer": "meiner Mutter",
-        "alternatives": [],
-        "explanationAr": "helfen يطلب Dativ: meiner Mutter — شرح عربي بالقاعدة.",
-        "explanationDe": "helfen يطلب Dativ: meiner Mutter — شرح عربي بالقاعدة.",
-        "hintAr": "Dativ feminin: meiner",
-        "points": 2,
-        "level": "A1"
       }
     ],
     "pitfalls": [
@@ -9469,46 +8616,6 @@
           "dem"
         ],
         "explanationAr": "المكان الثابت يجيب عن Wo؟ ويأخذ Dativ: auf dem Tisch."
-      },
-      {
-        "id": "a1-wechsel-ex06-umformung",
-        "type": "umformung",
-        "quelleDe": "Ich hänge das Bild an die Wand. (Wohin)",
-        "promptDe": "Wo hängt das Bild? (Wo = Dativ)",
-        "answer": "Das Bild hängt an der Wand.",
-        "mussEnthalten": [
-          "an der Wand"
-        ],
-        "darfNicht": [
-          "an die Wand"
-        ],
-        "explanationAr": "Wohin Akk (حركة) → Wo Dativ (ثبات): an die → an der. Wechselpräposition.",
-        "points": 2,
-        "promptAr": "حوّل الجملة حسب القاعدة."
-      },
-      {
-        "id": "a1-wech-um1",
-        "type": "umformung",
-        "promptDe": "Forme WO (Dativ) → WOHIN (Akkusativ) um.",
-        "promptAr": "حوّل من مكان إلى اتجاه.",
-        "quelleDe": "Ich bin in der Küche (WO).",
-        "answer": "Ich gehe in die Küche (WOHIN).",
-        "points": 2,
-        "explanationAr": "Wechselpräposition: in + Dativ (مكان) vs Akkusativ (اتجاه). in der Küche → in die Küche."
-      },
-      {
-        "id": "a1-wech-um2",
-        "type": "umformung",
-        "promptDe": "Bewegung: Ich lege das Buch auf ___ Tisch.",
-        "promptAr": "فرّق بين المكان (Dativ) والوجهة (Akkusativ).",
-        "quelleDe": "Das Buch liegt auf dem Tisch.",
-        "answer": "auf den Tisch",
-        "alternatives": [],
-        "explanationAr": "liegen (مكان) Dativ، legen (حركة) Akkusativ — شرح عربي.",
-        "explanationDe": "liegen (مكان) Dativ، legen (حركة) Akkusativ — شرح عربي.",
-        "hintAr": "Wohin? → Akk",
-        "points": 2,
-        "level": "A1"
       }
     ],
     "pitfalls": [
@@ -9991,21 +9098,6 @@
           "lernen"
         ],
         "explanationAr": "werde + lernen في النهاية."
-      },
-      {
-        "id": "a1-futur-einf-ex07-umformung",
-        "type": "umformung",
-        "quelleDe": "Morgen fahre ich nach Tunis.",
-        "promptDe": "Mit werden + Infinitiv (Futur I):",
-        "answer": "Morgen werde ich nach Tunis fahren.",
-        "mussEnthalten": [
-          "werde",
-          "fahren"
-        ],
-        "darfNicht": [],
-        "explanationAr": "Futur I: werden (مصرف) + مصدر في الآخر. المعنى تنبؤ/خطة.",
-        "points": 2,
-        "promptAr": "حوّل الجملة حسب القاعدة."
       }
     ],
     "pitfalls": [
@@ -10311,34 +9403,6 @@
           "keine Zeit."
         ],
         "explanationAr": "عند البدء بالظرف الزمني (Gestern) يتقدم الفعل إلى الموضع الثاني ويليه الفاعل: Gestern hatte ich keine Zeit."
-      },
-      {
-        "id": "a2-praet-um3",
-        "type": "umformung",
-        "promptDe": "Präsens: Ich ___ heute krank. (war → bin)",
-        "promptAr": "حوّل Präteritum إلى Präsens.",
-        "quelleDe": "Ich war gestern krank.",
-        "answer": "Ich bin heute krank",
-        "alternatives": [],
-        "explanationAr": "Präteritum war (كان) → Präsens bin — شرح عربي.",
-        "explanationDe": "Präteritum war (كان) → Präsens bin — شرح عربي.",
-        "hintAr": "war → bin",
-        "points": 2,
-        "level": "A2"
-      },
-      {
-        "id": "a2-pg-um3",
-        "type": "umformung",
-        "promptDe": "Frage: War er gestern hier? — Ja, er war hier",
-        "promptAr": "سؤال الماضي البسيط.",
-        "quelleDe": "Er war gestern hier.",
-        "answer": "War er gestern hier?",
-        "alternatives": [],
-        "explanationAr": "Präteritum war = كان — شرح عربي.",
-        "explanationDe": "Präteritum war = كان — شرح عربي.",
-        "hintAr": "War er?",
-        "points": 2,
-        "level": "A2"
       }
     ]
   },
@@ -10469,16 +9533,6 @@
           "lachenden"
         ],
         "explanationAr": "Partizip I: lachen + d = lachend؛ وبعد أداة الجمع die تأخذ الصفة النهاية -en: die lachenden Kinder."
-      },
-      {
-        "id": "b1-pa1-um1",
-        "type": "umformung",
-        "promptDe": "Bilde Partizip I als Adjektiv.",
-        "promptAr": "حوّل إلى اسم فاعل صفة.",
-        "quelleDe": "ein Mann, der lacht",
-        "answer": "ein lachender Mann",
-        "points": 2,
-        "explanationAr": "Partizip I: lachen → lachend → lachender (Adjektivendung). اختصار وصفي B1."
       }
     ],
     "pitfalls": [
@@ -10494,10 +9548,6 @@
         "de": "✗ …sehr interessanting. → ✓ …sehr interessant.",
         "ar": "فخ الإنجليزية (-ing): الألمانية -end لا -ing — interesting الإنجليزية = interessant الألمانية"
       }
-    ],
-    "resources": [
-      "vhs-lehrplan",
-      "goethe-b1-hoeren"
     ]
   },
   "b1-indirekte-fragen": {
@@ -10682,20 +9732,6 @@
           "wann"
         ],
         "explanationAr": "سؤال الزمن ← wann: …, wann das Konzert beginnt."
-      },
-      {
-        "id": "b1-ind-um3",
-        "type": "umformung",
-        "promptDe": "Indirekt: Weißt du, ___ er wohnt? (wo)",
-        "promptAr": "حوّل إلى سؤال غير مباشر.",
-        "quelleDe": "Wo wohnst du? → Er fragt, wo ich wohne.",
-        "answer": "wo er wohnt",
-        "alternatives": [],
-        "explanationAr": "Frage غير مباشرة: أداة + فعل في النهاية — شرح عربي.",
-        "explanationDe": "Frage غير مباشرة: أداة + فعل في النهاية — شرح عربي.",
-        "hintAr": "wo ... wohnt",
-        "points": 2,
-        "level": "B1"
       }
     ],
     "pitfalls": [
@@ -10711,10 +9747,6 @@
         "de": "✗ …, wie viel kostet das? → ✓ Kannst du mir sagen, wie viel das kostet?",
         "ar": "حتى في الطلب المهذب (Kannst du mir sagen…) يبقى الفعل في النهاية — الأدب لا يغيّر الترتيب"
       }
-    ],
-    "resources": [
-      "buergeramt-berlin-faq",
-      "auswaertiges-amt-faq"
     ]
   },
   "b2-redew": {
@@ -10995,24 +10027,6 @@
         "explanationAr": "in Kauf nehmen: الفعل nehmen يتبع القاعدة، والجار والمجرور in Kauf في المنتصف — ترتيب ثابت لا يُترجم.",
         "points": 2,
         "promptAr": "رتّب الكلمات لتكوّن جملة صحيحة."
-      },
-      {
-        "id": "b2-red-um3",
-        "type": "umformung",
-        "promptDe": "Indirekt: Er sagt, er ___ müde. (sei)",
-        "promptAr": "نقل غير مباشر B2.",
-        "quelleDe": "Er sagt: „Ich bin müde.“",
-        "answer": "sei müde",
-        "alternatives": [],
-        "explanationAr": "Konjunktiv I للخبر غير المباشر: sei — شرح عربي.",
-        "explanationDe": "Konjunktiv I للخبر غير المباشر: sei — شرح عربي.",
-        "hintAr": "Konj I sei",
-        "points": 2,
-        "level": "B2",
-        "darfNicht": [
-          "Ich bin müde",
-          "ich bin müde"
-        ]
       }
     ],
     "pitfalls": [
@@ -11028,10 +10042,6 @@
         "de": "„Ich verstehe gar nichts“ ✗ (kein Idiom) → „Ich verstehe nur Bahnhof“ ✓",
         "ar": "الفخّ: جملة صحيحة نحويّاً لكنها ليست العبارة الاصطلالية المطلوبة — الامتحان يطلب Wendung لا وصفاً."
       }
-    ],
-    "resources": [
-      "redensarten-index",
-      "duden-redewendungen"
     ]
   },
   "a1-war-hatte": {
@@ -11155,22 +10165,6 @@
           "gehen"
         ],
         "explanationAr": "الصيغة المرجعية: Gestern war ich krank und konnte nicht zur Schule gehen. — استعمل war (كان) وkonnte (استطاع)."
-      },
-      {
-        "id": "a1-war-hatte-ex07-umformung",
-        "type": "umformung",
-        "quelleDe": "Ich habe keine Zeit.",
-        "promptDe": "Präteritum (Erzählung):",
-        "answer": "Ich hatte keine Zeit.",
-        "mussEnthalten": [
-          "hatte"
-        ],
-        "darfNicht": [
-          "habe"
-        ],
-        "explanationAr": "Präsens habe → Präteritum hatte — شائع في Erzählung/Tagebuch.",
-        "points": 2,
-        "promptAr": "حوّل الجملة حسب القاعدة."
       }
     ],
     "pitfalls": [
@@ -11211,24 +10205,16 @@
     ],
     "rules": [
       {
-        "de": "Im gesprochenen Deutsch steht bei sein, haben und Modalverben oft das Präteritum. Viele Vollverben stehen dagegen im Perfekt.",
-        "ar": "في الكلام اليومي يشيع الماضي Präteritum مع sein وhaben والأفعال الناقصة؛ أما كثير من الأفعال التامة فتُروى غالباً بـPerfekt."
-      },
-      {
-        "de": "Das ist eine Gebrauchstendenz, keine starre Regel. Beispiel: Ich war zu Hause; ich habe Brot gekauft.",
-        "ar": "هذا ميلٌ في الاستعمال لا قاعدة صلبة. مثال: Ich war zu Hause؛ ich habe Brot gekauft."
+        "de": "Im gesprochenen Deutsch wird bei sein, haben und Modalverben häufig das Präteritum verwendet. Viele andere Vollverben stehen beim Erzählen oft im Perfekt; das ist eine Gebrauchstendenz, keine starre Regel. Beispiel: Ich war zu Hause; ich habe Brot gekauft.",
+        "ar": "في الكلام اليومي يشيع Präteritum مع sein وhaben والأفعال الناقصة؛ وكثيراً ما تُروى أفعال أخرى بـPerfekt. هذا ميل في الاستعمال لا قاعدة تمنع صيغةً أخرى."
       },
       {
         "de": "ich/er/sie/es → war/hatte/konnte/musste · du → warst/hattest/konntest/musstest · wir/sie (Plural)/Sie (formell) → waren/hatten/konnten/mussten · ihr → wart/hattet/konntet/musstet",
         "ar": "التصريف: ich وer/sie/es لهما الصيغة نفسها؛ du يأخذ -st؛ wir وsie الجمع وSie الرسمية يأخذون -en؛ ihr يأخذ -t. انتبه إلى الصيغ الخاصة wart وhattet."
       },
       {
-        "de": "Präsens → Präteritum (ich): ich bin → ich war · ich habe → ich hatte · ich kann → ich konnte · ich muss → ich musste.",
-        "ar": "الحاضر → الماضي (ich): ich bin → ich war، ich habe → ich hatte، ich kann → ich konnte، ich muss → ich musste."
-      },
-      {
-        "de": "Weiter: ich soll → ich sollte · ich will → ich wollte · ich darf → ich durfte · ich mag → ich mochte.",
-        "ar": "وتكملةً: ich soll → ich sollte، ich will → ich wollte، ich darf → ich durfte، ich mag → ich mochte."
+        "de": "Präsens → Präteritum (ich): ich bin → ich war · ich habe → ich hatte · ich kann → ich konnte · ich muss → ich musste · ich soll → ich sollte · ich will → ich wollte · ich darf → ich durfte · ich mag → ich mochte.",
+        "ar": "مقابلات المفرد بين الحاضر والماضي: ich bin → ich war، ich habe → ich hatte، ich kann → ich konnte، ich muss → ich musste، وهكذا في أمثلة الأفعال الناقصة."
       }
     ],
     "summaryAr": "في الكلام اليومي يشيع Präteritum مع sein وhaben والأفعال الناقصة: war, hatte, konnte, musste. مع الناقص يأتي الفعل الأساسي مصدراً في نهاية الجملة: Ich musste gestern arbeiten. ويمكن أيضاً استعمال Perfekt مع الناقص، مثل Ich habe gestern arbeiten müssen؛ هذا الدرس يركز على صيغة Präteritum."
@@ -11337,61 +10323,6 @@
           "geantwortet"
         ],
         "explanationAr": "الصيغة المرجعية: Ich habe ihm eine Frage gestellt, aber er hat nicht geantwortet."
-      },
-      {
-        "id": "b1-funktionsverben-ex06-umformung",
-        "type": "umformung",
-        "quelleDe": "Ich entscheide heute.",
-        "promptDe": "Als Funktionsverbgefüge:",
-        "answer": "Ich treffe heute eine Entscheidung.",
-        "mussEnthalten": [
-          "treffe",
-          "Entscheidung"
-        ],
-        "darfNicht": [
-          "entscheide"
-        ],
-        "explanationAr": "FVG B1: entscheiden → eine Entscheidung treffen — nominaler أسلوب رسمي.",
-        "points": 2,
-        "promptAr": "حوّل الجملة حسب القاعدة."
-      },
-      {
-        "id": "b1-fv-um1",
-        "type": "umformung",
-        "promptDe": "Funktionsverb → Verb (Vereinfachung).",
-        "promptAr": "بسّط التعبير.",
-        "quelleDe": "Er bringt zum Ausdruck, dass...",
-        "answer": "Er drückt aus, dass...",
-        "points": 2,
-        "explanationAr": "zum Ausdruck bringen → ausdrücken. B1 Funktionsverb: فعل خفيف + اسم قوي — للتكثيف."
-      },
-      {
-        "id": "b1-fv-um3",
-        "type": "umformung",
-        "promptDe": "Einfach: Wir ___. (entscheiden)",
-        "promptAr": "استخدم الفعل البسيط.",
-        "quelleDe": "Wir treffen eine Entscheidung.",
-        "answer": "Wir entscheiden",
-        "alternatives": [],
-        "explanationAr": "Funktionsverb → Vollverb: Entscheidung treffen → entscheiden — شرح عربي.",
-        "explanationDe": "Funktionsverb → Vollverb: Entscheidung treffen → entscheiden — شرح عربي.",
-        "hintAr": "entscheiden",
-        "points": 2,
-        "level": "B1"
-      },
-      {
-        "id": "b1-fv2-um3",
-        "type": "umformung",
-        "promptDe": "Vollverb: Er ___. (fragen)",
-        "promptAr": "بسط Funktionsverb.",
-        "quelleDe": "Er stellt eine Frage.",
-        "answer": "Er fragt",
-        "alternatives": [],
-        "explanationAr": "Frage stellen → fragen — شرح عربي.",
-        "explanationDe": "Frage stellen → fragen — شرح عربي.",
-        "hintAr": "fragen",
-        "points": 2,
-        "level": "B1"
       }
     ],
     "pitfalls": [
@@ -11428,27 +10359,19 @@
     ],
     "rules": [
       {
-        "de": "FVG = Funktionsverb + Substantiv (oft mit Präposition): „eine Entscheidung treffen“, „eine Frage stellen“, „in Bewegung kommen“.",
-        "ar": "تركيب الفعل الوظيفي FVG = فعل وظيفي + اسم (غالباً مع حرف جر): „eine Entscheidung treffen“، „eine Frage stellen“، „in Bewegung kommen“."
+        "de": "Ein Funktionsverbgefüge (FVG) besteht aus einem Funktionsverb (bringen, stellen, nehmen, treffen, kommen, stehen, geben, üben …) und einem Substantiv (oft mit Präposition): z. B. „eine Entscheidung treffen“, „eine Frage stellen“, „in Bewegung kommen“. Das Substantiv trägt die eigentliche Bedeutung; das Funktionsverb bestimmt die „Handlungsart“ (Beginn, Dauer, Ende, Wirkung).",
+        "ar": "تركيب الفعل الوظيفي (FVG) = فعل وظيفي (treffen/stellen/nehmen/kommen …) + اسم (غالباً مع حرف جر) مثل «eine Frage stellen» (طرح سؤال). الاسم يحمل المعنى الأساسي، والفعل الوظيفي يحدد طريقة الحدث (بداية/استمرار/نهاية/تأثير)."
       },
       {
-        "de": "Die Wahl des Funktionsverbs ändert die Bedeutung (nicht beliebig austauschbar): Frage stellen ≠ Frage haben.",
-        "ar": "اختيار الفعل يغيّر المعنى ولا يُبدّل اعتباطاً: Frage stellen ≠ Frage haben."
-      },
-      {
-        "de": "Weiter: Entscheidung treffen ≠ Entscheidung bringen · in Verbindung stehen ≠ in Verbindung bringen.",
-        "ar": "وكذلك: Entscheidung treffen ≠ Entscheidung bringen · in Verbindung stehen ≠ in Verbindung bringen."
+        "de": "Die Wahl des Funktionsverbs ändert die Bedeutung (nicht beliebig austauschbar): Frage stellen ≠ Frage haben · Entscheidung treffen ≠ Entscheidung bringen · in Verbindung stehen ≠ in Verbindung bringen.",
+        "ar": "اختيار الفعل الوظيفي يغيّر المعنى: لا تبدّلها اعتباطاً."
       },
       {
         "de": "In B1 erkennst und verstehst du die häufigsten FVG; produktiv benutzen wirst du sie in B2 (insbesondere in Schrifttexten und offiziellen Briefen).",
         "ar": "في B1 تتعرّف على أشهر التراكيب وتفهمها، ثم تتقن استعمالها إنتاجياً في B2 خاصة في الكتابة الرسمية."
       }
     ],
-    "summaryAr": "تراكيب الأفعال الوظيفية Funktionsverbgefüge",
-    "resources": [
-      "diHK-ausbildung-lexikon",
-      "arbeitsvertrag-musste"
-    ]
+    "summaryAr": "تراكيب الأفعال الوظيفية Funktionsverbgefüge"
   },
   "a0-buchstaben": {
     "id": "a0-buchstaben",
@@ -11584,46 +10507,6 @@
         ],
         "answer": "P (peh)",
         "explanationAr": "في ترتيب الأبجدية يأتي P (peh) مباشرة بعد O."
-      },
-      {
-        "id": "a0-buchstaben-ex06-umformung",
-        "type": "umformung",
-        "quelleDe": "A – L – I",
-        "promptDe": "Als Name:",
-        "answer": "Ali",
-        "mussEnthalten": [
-          "Ali"
-        ],
-        "darfNicht": [
-          "A – L – I"
-        ],
-        "explanationAr": "Buchstabieren A-L-I = Ali. عكس Buchstabiere deinen Namen!",
-        "points": 2,
-        "promptAr": "حوّل الجملة حسب القاعدة."
-      },
-      {
-        "id": "a0-buch-um1",
-        "type": "umformung",
-        "promptDe": "Buchstabiere laut Duden (A wie Anton).",
-        "promptAr": "تهجّ بصيغة ألمانية رسمية.",
-        "quelleDe": "MAIER (Name)",
-        "answer": "M wie Martha, A wie Anton, I wie Ida, E wie Emil, R wie Richard",
-        "points": 2,
-        "explanationAr": "تهجئة B1: M wie Martha — ليس M-A-I-E-R فقط. مهارة BAMF للتسجيل والهاتف."
-      },
-      {
-        "id": "a0-buch-um3",
-        "type": "umformung",
-        "promptDe": "Buchstabiere: Wie schreibt man „Buch“? — B-U-C-H",
-        "promptAr": "تهجئة.",
-        "quelleDe": "Wie schreibt man “Buch”? B-U-C-H",
-        "answer": "B-U-C-H",
-        "alternatives": [],
-        "explanationAr": "تهجئة A0: حرف حرف — شرح عربي.",
-        "explanationDe": "تهجئة A0: حرف حرف — شرح عربي.",
-        "hintAr": "B-U-C-H",
-        "points": 2,
-        "level": "A0"
       }
     ],
     "pitfalls": [
@@ -11785,69 +10668,15 @@
         ],
         "answer": "sieben",
         "explanationAr": "بعد sechs (ستة) يأتي sieben (سبعة)."
-      },
-      {
-        "id": "a0-zahlen-ex06-umformung",
-        "type": "umformung",
-        "quelleDe": "Es ist 13:00 Uhr.",
-        "promptDe": "Umgangssprachlich nachmittags:",
-        "answer": "Es ist ein Uhr mittags.",
-        "mussEnthalten": [
-          "ein Uhr"
-        ],
-        "darfNicht": [
-          "13:00"
-        ],
-        "explanationAr": "13:00 → ein Uhr (12h-System) + mittags. في A0 Uhrzeit دائماً بالألفاظ.",
-        "points": 2,
-        "promptAr": "حوّل الجملة حسب القاعدة."
-      },
-      {
-        "id": "a0-zah-um1",
-        "type": "umformung",
-        "promptDe": "Schreibe Zahl als Wort (21→einundzwanzig).",
-        "promptAr": "اكتب الرقم ككلمة.",
-        "quelleDe": "21 Jahre",
-        "answer": "einundzwanzig Jahre",
-        "points": 2,
-        "explanationAr": "الأرقام الألمانية معكوسة: ein+und+zwanzig. 21 ليس عشرون واحد بل واحد وعشرون."
-      },
-      {
-        "id": "a0-zahl-um3",
-        "type": "umformung",
-        "promptDe": "Zahl: Wie viele Brüder? — zwei",
-        "promptAr": "كم أخ؟",
-        "quelleDe": "Ich habe zwei Brüder.",
-        "answer": "zwei Brüder",
-        "alternatives": [],
-        "explanationAr": "Zahlen A0: zwei = 2 — شرح عربي.",
-        "explanationDe": "Zahlen A0: zwei = 2 — شرح عربي.",
-        "hintAr": "zwei",
-        "points": 2,
-        "level": "A0"
-      },
-      {
-        "id": "a0-z2-um3",
-        "type": "umformung",
-        "promptDe": "Frage: Wie alt bist du? — Ich bin ___ Jahre alt.",
-        "promptAr": "سؤال العمر.",
-        "quelleDe": "Ich bin fünf Jahre alt.",
-        "answer": "fünf Jahre alt",
-        "alternatives": [],
-        "explanationAr": "A0 Zahlen: fünf =5 — شرح عربي.",
-        "explanationDe": "A0 Zahlen: fünf =5 — شرح عربي.",
-        "hintAr": "fünf",
-        "points": 2,
-        "level": "A0"
       }
     ],
     "pitfalls": [
       {
-        "de": "✗ sechzehn → ✓ sechzehn",
+        "de": "„sechszehn“ ✗ → „sechzehn“ ✓",
         "ar": "sechs تفقد الـs قبل -zehn/-zig: sechzehn, sechzig — أشهر خطأ إملائي في الأرقام"
       },
       {
-        "de": "✗ siebzehn → ✓ siebzehn",
+        "de": "„siebenzehn“ ✗ → „siebzehn“ ✓",
         "ar": "sieben تفقد الـ-en: siebzehn, siebzig — احفظ الاستثناءين معاً (6 و7)"
       },
       {
@@ -12006,46 +10835,6 @@
         ],
         "answer": "Ich hätte gern einen Tee.",
         "explanationAr": "للطلَب المهذّب نستخدم hätte gern، لا الماضي hatte ولا الطلب المباشر Ich will."
-      },
-      {
-        "id": "a2-konj2-hoflich-ex06-umformung",
-        "type": "umformung",
-        "quelleDe": "Kannst du mir bitte helfen?",
-        "promptDe": "Höflicher (Konjunktiv II):",
-        "answer": "Könntest du mir bitte helfen?",
-        "mussEnthalten": [
-          "Könntest"
-        ],
-        "darfNicht": [
-          "Kannst"
-        ],
-        "explanationAr": "können → könnten (Konj. II): Kannst→Könntest — أدب A2, ليس ماضي.",
-        "points": 2,
-        "promptAr": "حوّل الجملة حسب القاعدة."
-      },
-      {
-        "id": "a2-k2h-um1",
-        "type": "umformung",
-        "promptDe": "Forme höflich mit Konjunktiv II (würden/könnten).",
-        "promptAr": "حوّل إلى صيغة مهذبة بـ Konjunktiv II.",
-        "quelleDe": "Gib mir bitte das Salz!",
-        "answer": "Könnten Sie mir bitte das Salz geben?",
-        "points": 2,
-        "explanationAr": "مهذب B1: Imperativ → Konjunktiv II: könnten/würden. فرق ثقافة: المباشر وقح في ألمانيا."
-      },
-      {
-        "id": "a2-kh-um3",
-        "type": "umformung",
-        "promptDe": "Direkt: ___ Sie mir bitte? (Können)",
-        "promptAr": "حول المهذب إلى مباشر.",
-        "quelleDe": "Könnten Sie mir helfen?",
-        "answer": "Können Sie mir helfen?",
-        "alternatives": [],
-        "explanationAr": "Könnten (Konj II) أكثر تهذيبا من können — شرح عربي.",
-        "explanationDe": "Könnten (Konj II) أكثر تهذيبا من können — شرح عربي.",
-        "hintAr": "Könnten höflich",
-        "points": 2,
-        "level": "A2"
       }
     ],
     "pitfalls": [
@@ -12211,30 +11000,6 @@
         ],
         "explanationAr": "الجملة الصحيحة: Ich warte auf den Bus.",
         "promptAr": "اربط الجملتين باستخدام warten auf."
-      },
-      {
-        "id": "a2-vp-um1",
-        "type": "umformung",
-        "promptDe": "Ergänze korrekte Präposition + Kasus.",
-        "promptAr": "أكمل الحرف والجارّ المناسب.",
-        "quelleDe": "Ich warte ___ den Bus (Akkusativ).",
-        "answer": "Ich warte auf den Bus.",
-        "points": 2,
-        "explanationAr": "حروف الجر الفعلية: warten auf + Akk (يُحفظ ككتلة). GGP Kollokation — لا قواعد عامة، بل حفظ collocation."
-      },
-      {
-        "id": "a2-vp-um2",
-        "type": "umformung",
-        "promptDe": "Frage: Auf ___ wartest du?",
-        "promptAr": "سؤال مع حرف الجر.",
-        "quelleDe": "Ich warte auf den Bus.",
-        "answer": "Auf wen wartest du?",
-        "alternatives": [],
-        "explanationAr": "auf + Akk: wen — شرح عربي.",
-        "explanationDe": "auf + Akk: wen — شرح عربي.",
-        "hintAr": "wen",
-        "points": 2,
-        "level": "A2"
       }
     ],
     "pitfalls": [
@@ -12247,8 +11012,8 @@
         "ar": "sich freuen über + Akkusativ: der Besuch ← deinen — الحرف ثابت والحالة تُصرَّف"
       },
       {
-        "de": "✗ denken an = denken über →",
-        "ar": "نفس الفعل + حرف مختلف = معنى مختلف: denken an (يفكر في/يشتاق) ≠ denken über (يكّون رأياً حول) — الحرف جزء من المعنى"
+        "de": "„an jemanden denken“ ≠ „über etwas nachdenken“",
+        "ar": "الفعل مع بنيته يغيّر المعنى: denken an يعني يتذكّر أو يفكّر في شخص، وüber etwas nachdenken يعني يتأمل موضوعًا."
       }
     ]
   },
@@ -12420,60 +11185,6 @@
         "answer": "den roten",
         "explanationAr": "Akkusativ مذكر: den roten.",
         "promptAr": "اختر الكلمة الصحيحة لإكمال الجملة."
-      },
-      {
-        "id": "a2-adjektiv-einfach-ex06-umformung",
-        "type": "umformung",
-        "quelleDe": "Das ist ein große Haus.",
-        "promptDe": "Korrigiere die Endung:",
-        "answer": "Das ist ein großes Haus.",
-        "mussEnthalten": [
-          "großes"
-        ],
-        "darfNicht": [
-          "große Haus"
-        ],
-        "explanationAr": "التصحيح: راجع القاعدة وانتبه للنهايات والأدوات — التمرين يدرّب التحويل بدقة.",
-        "points": 2,
-        "promptAr": "حوّل الجملة حسب القاعدة."
-      },
-      {
-        "id": "a2-adj-um1",
-        "type": "umformung",
-        "promptDe": "Setze Adjektiv mit richtiger Endung ein.",
-        "promptAr": "ضع الصفة بالنهاية الإعرابية الصحيحة.",
-        "quelleDe": "ein (groß) Haus",
-        "answer": "ein großes Haus",
-        "points": 2,
-        "explanationAr": "Adjektivendung: ein + Neutrum + -es بعد kein/ein. groß → großes. النهايات B1 ليست تزيينًا بل وظيفة إعرابية."
-      },
-      {
-        "id": "a2-adj2-um3",
-        "type": "umformung",
-        "promptDe": "Adjektiv als Nomen: Der ___ liest. (alt → Alte)",
-        "promptAr": "حوّل الصفة إلى اسم.",
-        "quelleDe": "Der Mann ist alt.",
-        "answer": "Der Alte liest",
-        "alternatives": [],
-        "explanationAr": "alt → der Alte (اسم من صفة) — شرح عربي.",
-        "explanationDe": "alt → der Alte (اسم من صفة) — شرح عربي.",
-        "hintAr": "der Alte",
-        "points": 2,
-        "level": "A2"
-      },
-      {
-        "id": "a2-ae2-um3",
-        "type": "umformung",
-        "promptDe": "Plural: ___ klugen Männer helfen. (Die)",
-        "promptAr": "جمع مع صفة.",
-        "quelleDe": "Ein kluger Mann hilft.",
-        "answer": "Die klugen Männer",
-        "alternatives": [],
-        "explanationAr": "Nomen→Adjektiv كـاسم: der Kluge — شرح عربي.",
-        "explanationDe": "Nomen→Adjektiv كـاسم: der Kluge — شرح عربي.",
-        "hintAr": "klugen",
-        "points": 2,
-        "level": "A2"
       }
     ]
   },
@@ -12586,10 +11297,7 @@
         "ar": "صفات محوَّلة إلى أسماء تُكتب بحرف كبير."
       }
     ],
-    "resources": [
-      "faz-feuilleton",
-      "duden-partizipien"
-    ],
+    "resources": [],
     "exercises": [
       {
         "id": "b2-adj-p1",
@@ -12650,30 +11358,6 @@
         "answer": "Das gestern gelesene Buch war interessant.",
         "hint": "Partizip II كصفة مع نهايتها بعد das",
         "explanationAr": "Partizip II (gelesen) كصفة قبل الاسم: نهايته -e بعد das."
-      },
-      {
-        "id": "b2-ap-um1",
-        "type": "umformung",
-        "promptDe": "Forme Relativsatz → Partizipialattribut um.",
-        "promptAr": "حوّل الصلة إلى صفة مشاركة.",
-        "quelleDe": "Die Frau, die lacht, ist glücklich.",
-        "answer": "Die lachende Frau ist glücklich.",
-        "points": 2,
-        "explanationAr": "Relativsatz → Partizip I كصفة: die lacht → lachende. اختصار B2 — كثافة معلومات أعلى."
-      },
-      {
-        "id": "b2-ap-um3",
-        "type": "umformung",
-        "promptDe": "Partizip: Der ___ Mann ist fröhlich. (lachen)",
-        "promptAr": "اختصر الجملة النسبية.",
-        "quelleDe": "Der Mann, der lacht, ist fröhlich.",
-        "answer": "lachende",
-        "alternatives": [],
-        "explanationAr": "der lacht → lachende (Partizip I صفة) — شرح عربي.",
-        "explanationDe": "der lacht → lachende (Partizip I صفة) — شرح عربي.",
-        "hintAr": "lachende",
-        "points": 2,
-        "level": "B2"
       }
     ]
   },
@@ -12828,21 +11512,6 @@
           "kommt"
         ],
         "explanationAr": "بعد dass: المصرَّف kommt في نهاية الجملة التابعة."
-      },
-      {
-        "id": "a1-weil-dass-ex07-umformung",
-        "type": "umformung",
-        "quelleDe": "Ich bin krank. Deshalb bleibe ich zu Hause.",
-        "promptDe": "Mit weil verbinden:",
-        "answer": "Ich bleibe zu Hause, weil ich krank bin.",
-        "mussEnthalten": [
-          "weil",
-          "krank bin"
-        ],
-        "darfNicht": [],
-        "explanationAr": "التصحيح: راجع القاعدة وانتبه للنهايات والأدوات — التمرين يدرّب التحويل بدقة.",
-        "points": 2,
-        "promptAr": "حوّل الجملة حسب القاعدة."
       }
     ]
   },
@@ -12981,46 +11650,6 @@
           "Schule"
         ],
         "explanationAr": "zu + der (die Schule) ← zur: المؤنّث المفرد يُدمَج مع zu وجوباً."
-      },
-      {
-        "id": "a2-verschmolzene-ex07-umformung",
-        "type": "umformung",
-        "quelleDe": "Ich gehe zu dem Bahnhof.",
-        "promptDe": "Verschmolzen:",
-        "answer": "Ich gehe zum Bahnhof.",
-        "mussEnthalten": [
-          "zum Bahnhof"
-        ],
-        "darfNicht": [
-          "zu dem Bahnhof"
-        ],
-        "explanationAr": "zu+dem→zum, zu+der→zur, an+dem→am. في Dativ الإدغام إلزامي عملياً.",
-        "points": 2,
-        "promptAr": "حوّل الجملة حسب القاعدة."
-      },
-      {
-        "id": "a2-vers-um1",
-        "type": "umformung",
-        "promptDe": "Forme getrennt → verschmolzen (zu dem→zum).",
-        "promptAr": "ادمج الحرف والأداة.",
-        "quelleDe": "Ich gehe zu dem Arzt.",
-        "answer": "Ich gehe zum Arzt.",
-        "points": 2,
-        "explanationAr": "zu + dem = zum, bei + dem = beim. الدمج إلزامي B1 — لا zu dem."
-      },
-      {
-        "id": "a2-ver-um3",
-        "type": "umformung",
-        "promptDe": "Vollform: Ich gehe ___ das Kino. (in)",
-        "promptAr": "فك الإدغام.",
-        "quelleDe": "Ich gehe ins Kino.",
-        "answer": "in das Kino",
-        "alternatives": [],
-        "explanationAr": "ins = in+das (إدغام) — شرح عربي.",
-        "explanationDe": "ins = in+das (إدغام) — شرح عربي.",
-        "hintAr": "in das",
-        "points": 2,
-        "level": "A2"
       }
     ],
     "pitfalls": [
@@ -13621,16 +12250,6 @@
           "falsch"
         ],
         "promptAr": "هل الجملة صحيحة؟ اختر «صح» أو «خطأ»."
-      },
-      {
-        "id": "a2-neb-um1",
-        "type": "umformung",
-        "promptDe": "Verbinde mit weil (Nebensatz Verb am Ende).",
-        "promptAr": "اربط بـ weil مع الفعل في النهاية.",
-        "quelleDe": "Es regnet. Ich bleibe zu Hause.",
-        "answer": "Weil es regnet, bleibe ich zu Hause.",
-        "explanationAr": "ربط جملتين بـ weil: الجملة الجانبية فعلها في النهاية (regnet → ... regnet،) + فاصلة إجبارية. Conti Retrieval.",
-        "points": 2
       }
     ],
     "verify": [
@@ -13832,30 +12451,6 @@
           "falsch"
         ],
         "promptAr": "هل الجملة صحيحة؟ اختر «صح» أو «خطأ»."
-      },
-      {
-        "id": "a2-dem-um1",
-        "type": "umformung",
-        "promptDe": "Forme dieser → jener (Kontrast).",
-        "promptAr": "حوّل هذا إلى ذاك للتباعد.",
-        "quelleDe": "Dieser Mann hier",
-        "answer": "Jener Mann dort",
-        "points": 2,
-        "explanationAr": "dieser (قريب) vs jener (بعيد). فرق مسافة ذهنية — Mayer Bild-Anker."
-      },
-      {
-        "id": "a2-dem-um3",
-        "type": "umformung",
-        "promptDe": "Welches Wort zeigt Nähe? — diesen",
-        "promptAr": "أي ضمير إشارة للقريب؟",
-        "quelleDe": "Ich sehe diesen Mann und jene Frau.",
-        "answer": "diesen Mann",
-        "alternatives": [],
-        "explanationAr": "dieser = قريب، jener = بعيد — شرح عربي.",
-        "explanationDe": "dieser = قريب، jener = بعيد — شرح عربي.",
-        "hintAr": "dieser Nähe",
-        "points": 2,
-        "level": "A2"
       }
     ],
     "verify": [
@@ -14124,16 +12719,6 @@
           "suchst du"
         ],
         "explanationAr": "السؤال عن النوع بـWas für؛ Tasche مؤنث مفعول به، لذا eine."
-      },
-      {
-        "id": "a2-wf-um1",
-        "type": "umformung",
-        "promptDe": "Forme Frage mit was für ein um.",
-        "promptAr": "اسأل عن النوع بـ was für ein.",
-        "quelleDe": "Ich suche ein Buch.",
-        "answer": "Was für ein Buch suchst du?",
-        "points": 2,
-        "explanationAr": "was für ein = أي نوع؟ Kasus يتبع الاسم: was für ein Buch (Akk), was für einer (Nom)."
       }
     ],
     "verify": [
@@ -14320,30 +12905,6 @@
           "falsch"
         ],
         "promptAr": "هل الجملة صحيحة؟ اختر «صح» أو «خطأ»."
-      },
-      {
-        "id": "b1-abs-um1",
-        "type": "umformung",
-        "promptDe": "Forme Absicht mit um...zu / damit um.",
-        "promptAr": "عبّر عن القصد.",
-        "quelleDe": "Ich lerne Deutsch. Ich will arbeiten.",
-        "answer": "Ich lerne Deutsch, um zu arbeiten.",
-        "points": 2,
-        "explanationAr": "um...zu = نفس الفاعل، damit = فاعل مختلف. Absicht B1."
-      },
-      {
-        "id": "b1-abs-um3",
-        "type": "umformung",
-        "promptDe": "Frage: Wozu lernst du Deutsch? — Um in Deutschland zu arbeiten",
-        "promptAr": "ما الهدف؟",
-        "quelleDe": "Ich lerne Deutsch, um in Deutschland zu arbeiten.",
-        "answer": "Um in Deutschland zu arbeiten",
-        "alternatives": [],
-        "explanationAr": "um ... zu يعبر عن القصد — شرح عربي.",
-        "explanationDe": "um ... zu يعبر عن القصد — شرح عربي.",
-        "hintAr": "um zu = لكي",
-        "points": 2,
-        "level": "B1"
       }
     ],
     "verify": [
@@ -14383,10 +12944,6 @@
         "de": "✗ Ich helfe dir, um du bestehst → ✓ …, damit du bestehst",
         "ar": "فاعلان مختلفان ← damit!"
       }
-    ],
-    "resources": [
-      "bamf-integrationskurs-leitfaden",
-      "goethe-b1-brief"
     ]
   },
   "b1-konj2-vergangenheit": {
@@ -14552,30 +13109,6 @@
           "falsch"
         ],
         "promptAr": "هل الجملة صحيحة؟ اختر «صح» أو «خطأ»."
-      },
-      {
-        "id": "b1-k2v-um1",
-        "type": "umformung",
-        "promptDe": "Forme Konjunktiv II Vergangenheit (hätte/wäre).",
-        "promptAr": "حوّل إلى تخيلي ماضٍ.",
-        "quelleDe": "Ich habe nicht gelernt. Ich bin durchgefallen.",
-        "answer": "Hätte ich gelernt, wäre ich nicht durchgefallen.",
-        "points": 2,
-        "explanationAr": "Konjunktiv II ماضٍ: hätte/wäre + Partizip. hätte gelernt, wäre ... — ندم B1."
-      },
-      {
-        "id": "b1-kv2-um3",
-        "type": "umformung",
-        "promptDe": "Wirklichkeit: Ich ___ keine Zeit, deshalb bin ich nicht gekommen. (hatte)",
-        "promptAr": "ما الحقيقة؟",
-        "quelleDe": "Wenn ich Zeit gehabt hätte, wäre ich gekommen.",
-        "answer": "Ich hatte keine Zeit",
-        "alternatives": [],
-        "explanationAr": "Konj II Vergangenheit = hätte/wäre + Partizip — شرح عربي.",
-        "explanationDe": "Konj II Vergangenheit = hätte/wäre + Partizip — شرح عربي.",
-        "hintAr": "hätte gehabt",
-        "points": 2,
-        "level": "B1"
       }
     ],
     "verify": [
@@ -14615,10 +13148,6 @@
         "de": "✗ …, weil ich hätte nicht gelernt → ✓ …, weil ich nicht gelernt hätte",
         "ar": "hätte في نهاية التابع!"
       }
-    ],
-    "resources": [
-      "zeit-geschichte",
-      "spiegel-archiv"
     ]
   },
   "b2-textkonnektoren": {
@@ -14780,30 +13309,6 @@
           "falsch"
         ],
         "promptAr": "هل الجملة صحيحة؟ اختر «صح» أو «خطأ»."
-      },
-      {
-        "id": "b2-tk-um1",
-        "type": "umformung",
-        "promptDe": "Verbinde Argumente mit Textkonnektor (einerseits/andererseits).",
-        "promptAr": "اربط الحجج برابط نصي.",
-        "quelleDe": "Er ist teuer. Er ist gut.",
-        "answer": "Einerseits ist er teuer, andererseits ist er gut.",
-        "points": 2,
-        "explanationAr": "Textkonnektor B2: einerseits/andererseits ينظّم الحجة — مطلوب في كتابة الامتحان B2."
-      },
-      {
-        "id": "b2-tk-um3",
-        "type": "umformung",
-        "promptDe": "Ein Satz: Er arbeitet, ___ er krank ist. (obwohl)",
-        "promptAr": "اربط بجملتين.",
-        "quelleDe": "Er ist krank. Trotzdem arbeitet er.",
-        "answer": "obwohl er krank ist",
-        "alternatives": [],
-        "explanationAr": "trotzdem (رغم) ↔ obwohl (برغم أن) — شرح عربي.",
-        "explanationDe": "trotzdem (رغم) ↔ obwohl (برغم أن) — شرح عربي.",
-        "hintAr": "obwohl + Verb Ende",
-        "points": 2,
-        "level": "B2"
       }
     ],
     "verify": [
@@ -14843,10 +13348,6 @@
         "de": "✗ desweiteren → ✓ des Weiteren",
         "ar": "كبير ومنفصل دائماً!"
       }
-    ],
-    "resources": [
-      "deutschlandfunk-essay",
-      "tagesspiegel-meinung"
     ]
   },
   "a0-artikel": {
@@ -15074,44 +13575,6 @@
         "promptAr": "اكتب جمع Kind.",
         "answer": "Kinder",
         "explanationAr": "جمع das Kind هو die Kinder."
-      },
-      {
-        "id": "a0-artikel-ex06-umformung",
-        "type": "umformung",
-        "quelleDe": "___ Lehrer ist nett. (m)",
-        "promptDe": "Mit Artikel:",
-        "answer": "Der Lehrer ist nett.",
-        "mussEnthalten": [
-          "Der Lehrer"
-        ],
-        "darfNicht": [],
-        "explanationAr": "Lehrer مذكر → der. كل Nomen مع أداة + جمع في A1.",
-        "points": 2,
-        "promptAr": "حوّل الجملة حسب القاعدة."
-      },
-      {
-        "id": "a0-art-um1",
-        "type": "umformung",
-        "promptDe": "Ergänze Artikel (der/die/das) korrekt.",
-        "promptAr": "أكمل أداة التعريف المناسبة.",
-        "quelleDe": "___ Kind spielt im Garten.",
-        "answer": "Das Kind spielt im Garten.",
-        "points": 2,
-        "explanationAr": "Kind Neutrum → das. Artikel يحفظ مع الاسم — لا قاعدة منطقية، بل حفظ مع الصورة Mayer."
-      },
-      {
-        "id": "a0-art-um3",
-        "type": "umformung",
-        "promptDe": "Bestimmt: Das ist ___ Buch. (ein → das)",
-        "promptAr": "حوّل النكرة إلى معرفة.",
-        "quelleDe": "Das ist ein Buch.",
-        "answer": "das Buch",
-        "alternatives": [],
-        "explanationAr": "ein Buch (نكرة) → das Buch (معرفة) — شرح عربي.",
-        "explanationDe": "ein Buch (نكرة) → das Buch (معرفة) — شرح عربي.",
-        "hintAr": "das = المعرفة",
-        "points": 2,
-        "level": "A0"
       }
     ],
     "pitfalls": [
@@ -15304,46 +13767,6 @@
         "promptAr": "أكمل بصيغة المخاطبة غير الرسمية.",
         "answer": "dir",
         "explanationAr": "مع الصديق نستخدم Dativ: Wie geht es dir? أما الرسمي فهو Ihnen."
-      },
-      {
-        "id": "a0-du-sie-ex06-umformung",
-        "type": "umformung",
-        "quelleDe": "Wie heißt du? (formell)",
-        "promptDe": "An Chef/in formell:",
-        "answer": "Wie heißen Sie?",
-        "mussEnthalten": [
-          "heißen Sie"
-        ],
-        "darfNicht": [
-          "heißt du"
-        ],
-        "explanationAr": "du (مفرد غير رسمي) → Sie (رسمي جمعاً/احتراماً): heißt→heißen.",
-        "points": 2,
-        "promptAr": "حوّل الجملة حسب القاعدة."
-      },
-      {
-        "id": "a0-ds-um1",
-        "type": "umformung",
-        "promptDe": "Forme du → Sie (formell) + Verb.",
-        "promptAr": "حوّل من du إلى Sie الرسمية.",
-        "quelleDe": "Wo wohnst du?",
-        "answer": "Wo wohnen Sie?",
-        "points": 2,
-        "explanationAr": "du wohnst (مفرد) → Sie wohnen (جمع شكلي). الضمير الرسمي دائماً كبير Sie."
-      },
-      {
-        "id": "a0-dus-um3",
-        "type": "umformung",
-        "promptDe": "Du-Form: ___ du Herr Müller?",
-        "promptAr": "حوّل Sie إلى du.",
-        "quelleDe": "Sind Sie Herr Müller?",
-        "answer": "Bist du Herr Müller?",
-        "alternatives": [],
-        "explanationAr": "Sie (رسمي) → du (ودي) مع تصريف bist — شرح عربي.",
-        "explanationDe": "Sie (رسمي) → du (ودي) مع تصريف bist — شرح عربي.",
-        "hintAr": "du bist",
-        "points": 2,
-        "level": "A0"
       }
     ],
     "pitfalls": [
@@ -15510,32 +13933,6 @@
         "promptAr": "أي الكلمتين فيها e طويلة: Bett أم ___؟",
         "answer": "Beet",
         "explanationAr": "في Beet تُنطق ee طويلة، وفي Bett الحركة قصيرة."
-      },
-      {
-        "id": "a0-aussprache-vowels-ex06-umformung",
-        "type": "umformung",
-        "quelleDe": "schon (bereits) vs schön (hübsch)",
-        "promptDe": "Welches hat langen Vokal ö? Schreibe schön:",
-        "answer": "schön",
-        "mussEnthalten": [
-          "schön"
-        ],
-        "darfNicht": [
-          "schon"
-        ],
-        "explanationAr": "o→schon (قصير) vs ö→schön (طويل ومُمال). Umlaut يغيّر المعنى تماماً.",
-        "points": 2,
-        "promptAr": "حوّل الجملة حسب القاعدة."
-      },
-      {
-        "id": "a0-av-um2",
-        "type": "umformung",
-        "promptDe": "Schreibe mit langem Vokal (Dehnung).",
-        "promptAr": "اكتب بنفس طويل — غيّر الكتابة.",
-        "quelleDe": "Der Herr wohnt in der Stat (kurzes a).",
-        "answer": "Der Herr wohnt im Staat (langes a: aa).",
-        "points": 2,
-        "explanationAr": "الفرق الصوتي يغيّر المعنى: Stadt (قصير: مدينة) vs Staat (طويل aa: دولة). Mayer: صوت+صورة يثبت التمييز."
       }
     ],
     "pitfalls": [
@@ -15704,46 +14101,6 @@
         "promptAr": "اكتب جمع Sohn مع الأوملاوت.",
         "answer": "Söhne",
         "explanationAr": "في الجمع تتحول o إلى ö: der Sohn, die Söhne."
-      },
-      {
-        "id": "a0-aussprache-umlaut-ex08-umformung",
-        "type": "umformung",
-        "quelleDe": "Mutter und Mütter",
-        "promptDe": "Welche Form hat Umlaut ä? (Plural)",
-        "answer": "Mütter",
-        "mussEnthalten": [
-          "Mütter"
-        ],
-        "darfNicht": [
-          "Mutter"
-        ],
-        "explanationAr": "Mutter→Mütter: Umlaut في الجمع. ä/ö/ü ليست زخرفة بل صرف.",
-        "points": 2,
-        "promptAr": "حوّل الجملة حسب القاعدة."
-      },
-      {
-        "id": "a0-au-um1",
-        "type": "umformung",
-        "promptDe": "Bilde Plural mit Umlaut.",
-        "promptAr": "حوّل إلى الجمع مع تغير صوتي.",
-        "quelleDe": "der Stuhl (Singular)",
-        "answer": "die Stühle",
-        "points": 2,
-        "explanationAr": "جمع umlaut: u → ü. Stuhl → Stühle. ظاهرة صوتية ألمانية — لا تقابلها العربية، لذا ندرّبها إنتاجياً."
-      },
-      {
-        "id": "a0-uml-um3",
-        "type": "umformung",
-        "promptDe": "Umlaut: Mutter → Mütter — Plural",
-        "promptAr": "جمع Mutter.",
-        "quelleDe": "Die Mutter kocht.",
-        "answer": "Mütter",
-        "alternatives": [],
-        "explanationAr": "Mutter→Mütter مع Umlaut ü — شرح عربي.",
-        "explanationDe": "Mutter→Mütter مع Umlaut ü — شرح عربي.",
-        "hintAr": "ü الجمع",
-        "points": 2,
-        "level": "A0"
       }
     ],
     "pitfalls": [
@@ -15923,58 +14280,6 @@
         "promptAr": "أكمل باسم فيه ch الخشنة بعد u.",
         "answer": "Buch",
         "explanationAr": "في Buch يأتي ch بعد u، فيُنطق ach-Laut الخشن."
-      },
-      {
-        "id": "a1-aussprache-ch-ex07-umformung",
-        "type": "umformung",
-        "quelleDe": "Ich spreche Deutsch. (ch nach i)",
-        "promptDe": "Welcher Laut: ich-Laut [ç] oder ach-Laut [x]?",
-        "answer": "ich-Laut",
-        "mussEnthalten": [
-          "ich-Laut"
-        ],
-        "darfNicht": [],
-        "explanationAr": "ch بعد e/i/ä/ö/ü → ich-Laut [ç] (رقيق)، بعد a/o/u → ach-Laut [x] (خ).",
-        "points": 2,
-        "promptAr": "حوّل الجملة حسب القاعدة."
-      },
-      {
-        "id": "a1-ch-um1",
-        "type": "umformung",
-        "promptDe": "Ersetze durch ich-Laut/ch: weich vs hart.",
-        "promptAr": "حوّل ach-Laut إلى ich-Laut.",
-        "quelleDe": "Ich koche nicht (ach-Laut).",
-        "answer": "Ich koche nicht, aber ich spreche weich: ich.",
-        "points": 2,
-        "explanationAr": "ch بعد a/o/u = ach-Laut حلقي؛ بعد i/e/ä/ö/ü = ich-Laut رخو. فرق ألماني خالص — Conti Contrast يثبته."
-      },
-      {
-        "id": "a1-ch-um3",
-        "type": "umformung",
-        "promptDe": "Höre den ach-Laut /x/: Wo hörst du /x/ in „machen“? Schreibe „ach“ oder „ich“.",
-        "promptAr": "أين تسمع صوت ach /x/؟",
-        "quelleDe": "Ich mache das Licht an.",
-        "answer": "ach",
-        "alternatives": [],
-        "explanationAr": "ch بعد a/o/u = ach-Laut /x/ (machen) — شرح عربي يوضح الفرق مع ich-Laut.",
-        "explanationDe": "ch بعد a/o/u = ach-Laut /x/ (machen) — شرح عربي يوضح الفرق مع ich-Laut.",
-        "hintAr": "ach nach a",
-        "points": 2,
-        "level": "A1"
-      },
-      {
-        "id": "a1-ch2-um3",
-        "type": "umformung",
-        "promptDe": "Wo hörst du ich-Laut? — in „ich“",
-        "promptAr": "أين ich-Laut؟",
-        "quelleDe": "Ich spreche Deutsch.",
-        "answer": "in ich",
-        "alternatives": [],
-        "explanationAr": "ich-Laut /ç/ بعد e/i/ä/ö/ü — شرح عربي.",
-        "explanationDe": "ich-Laut /ç/ بعد e/i/ä/ö/ü — شرح عربي.",
-        "hintAr": "ich-Laut",
-        "points": 2,
-        "level": "A1"
       }
     ],
     "pitfalls": [
@@ -16110,44 +14415,6 @@
         "promptAr": "اكتب الكلمة التي تبدأ بصوت r الألماني: Regen أم sehen؟",
         "answer": "Regen",
         "explanationAr": "Regen تبدأ بحرف r، أما sehen فتبدأ بصوت z/ز."
-      },
-      {
-        "id": "a1-aussprache-r-ex06-umformung",
-        "type": "umformung",
-        "quelleDe": "Wir fahren nach Berlin.",
-        "promptDe": "Wie klingt r im Auslaut (fahren)? Vokalisiert?",
-        "answer": "fahren mit vokalisiertem r",
-        "mussEnthalten": [
-          "vokalisiertem"
-        ],
-        "darfNicht": [],
-        "explanationAr": "r في النهاية/بعد a: fahren → [aɐ] مدغم vokalisiert، لا يُلفظ r صريح.",
-        "points": 2,
-        "promptAr": "حوّل الجملة حسب القاعدة."
-      },
-      {
-        "id": "a1-r-um1",
-        "type": "umformung",
-        "promptDe": "Forme mit gerolltem vs vokalisiertem r um.",
-        "promptAr": "حوّل نطق r من مجرور إلى صائت.",
-        "quelleDe": "Ich fahre nach Berlin (gerollt).",
-        "answer": "Ich fahre [faːɐə] nach Berlin (vokalisiert).",
-        "points": 2,
-        "explanationAr": "r في النهاية يُنطق حركة صائتة ɐ (Vokalisierung): fahren → [faːɐən]. فرق سمعي ألماني — لا r عربية قوية."
-      },
-      {
-        "id": "a1-r-um3",
-        "type": "umformung",
-        "promptDe": "Vokalisch: Wie klingt „r“ in „teuer“? — Vokal-r",
-        "promptAr": "كيف يُنطق r في teuer؟",
-        "quelleDe": "Der rote Rock ist teuer.",
-        "answer": "Vokal-r",
-        "alternatives": [],
-        "explanationAr": "r بعد حرف علة يُحذف ويُمطّ العلة (teuer = /tɔɪɐ/) — شرح عربي.",
-        "explanationDe": "r بعد حرف علة يُحذف ويُمطّ العلة (teuer = /tɔɪɐ/) — شرح عربي.",
-        "hintAr": "r nach Vokal",
-        "points": 2,
-        "level": "A1"
       }
     ],
     "pitfalls": [
@@ -16334,44 +14601,6 @@
         "promptAr": "أكمل بالفعل sprechen؛ في بدايته sp تُنطق shp.",
         "answer": "sprechen",
         "explanationAr": "في بداية sprechen تُنطق sp بصوت shp."
-      },
-      {
-        "id": "a1-aussprache-sp-st-ex06-umformung",
-        "type": "umformung",
-        "quelleDe": "Ich spiele im Park.",
-        "promptDe": "Wie spricht man sp am Anfang? (schp)",
-        "answer": "schp",
-        "mussEnthalten": [
-          "schp"
-        ],
-        "darfNicht": [],
-        "explanationAr": "sp→[ʃp] schp, st→[ʃt] scht في بداية المقطع: spielen, Straße.",
-        "points": 2,
-        "promptAr": "حوّل الجملة حسب القاعدة."
-      },
-      {
-        "id": "a1-sps-um1",
-        "type": "umformung",
-        "promptDe": "Forme sp/st → schp/scht (Anlaut).",
-        "promptAr": "حوّل sp إلى schp في البداية.",
-        "quelleDe": "sprechen (Anfang)",
-        "answer": "sprechen [ʃpreçen]",
-        "points": 2,
-        "explanationAr": "sp/st في البداية = schp/scht: sprechen → schprechen صوتياً. ليست s+p."
-      },
-      {
-        "id": "a1-sp-um3",
-        "type": "umformung",
-        "promptDe": "Regel: sp → ʃp, st → ʃt — Wie liest du „sprechen“?",
-        "promptAr": "كيف تُنطق sp/st أول الكلمة؟",
-        "quelleDe": "Ich spreche Deutsch und stehe früh auf.",
-        "answer": "ʃp",
-        "alternatives": [],
-        "explanationAr": "sp/st أول الكلمة تُنطق ʃp/ʃt (sprechen/stehen) — شرح عربي.",
-        "explanationDe": "sp/st أول الكلمة تُنطق ʃp/ʃt (sprechen/stehen) — شرح عربي.",
-        "hintAr": "ʃp am Anfang",
-        "points": 2,
-        "level": "A1"
       }
     ],
     "pitfalls": [
@@ -16554,44 +14783,6 @@
         "promptAr": "كيف يُنطق d في نهاية Kind؟",
         "answer": "t",
         "explanationAr": "في نهاية Kind تُهمس d وتُنطق مثل t."
-      },
-      {
-        "id": "a1-aussprache-auslaut-ex06-umformung",
-        "type": "umformung",
-        "quelleDe": "Der Tag ist schön.",
-        "promptDe": "Wie klingt g am Ende (Tag)?",
-        "answer": "Tag mit k-Laut",
-        "mussEnthalten": [
-          "k"
-        ],
-        "darfNicht": [],
-        "explanationAr": "Auslautverhärtung: b→p, d→t, g→k في النهاية: Tag [tak], Geld [gelt].",
-        "points": 2,
-        "promptAr": "حوّل الجملة حسب القاعدة."
-      },
-      {
-        "id": "a1-ausl-um1",
-        "type": "umformung",
-        "promptDe": "Forme Auslautverhärtung korrekt: b→p/d→t/g→k.",
-        "promptAr": "صحح تصلب النهاية.",
-        "quelleDe": "Ich gebe (b) → Ich gab (p-Ton)",
-        "answer": "Tag [tak] (g→k), gib [gip]",
-        "points": 2,
-        "explanationAr": "b/d/g في النهاية تُنطق p/t/k: Tag = tak. Mayer: صوت+كتابة Contrast يثبت القاعدة."
-      },
-      {
-        "id": "a1-aus-um3",
-        "type": "umformung",
-        "promptDe": "Auslaut: Wie klingt g in „Tag“? — k-Laut",
-        "promptAr": "كيف يُنطق g آخر الكلمة؟",
-        "quelleDe": "Der Tag ist schön.",
-        "answer": "k-Laut",
-        "alternatives": [],
-        "explanationAr": "Auslautverhärtung: Tag /ta:k/ (g→k) — شرح عربي.",
-        "explanationDe": "Auslautverhärtung: Tag /ta:k/ (g→k) — شرح عربي.",
-        "hintAr": "Tag = tak",
-        "points": 2,
-        "level": "A1"
       }
     ],
     "pitfalls": [
@@ -16796,46 +14987,6 @@
         "promptAr": "أكمل أداة Genitiv قبل Sitzung.",
         "answer": "der",
         "explanationAr": "während يأخذ Genitiv؛ Sitzung مؤنث، لذلك während der Sitzung."
-      },
-      {
-        "id": "b2-genitiv-praep-ex06-umformung",
-        "type": "umformung",
-        "quelleDe": "Wegen dem Wetter bleibt er zu Hause.",
-        "promptDe": "Schriftdeutsch (Genitiv):",
-        "answer": "Wegen des Wetters bleibt er zu Hause.",
-        "mussEnthalten": [
-          "Wegen des Wetters"
-        ],
-        "darfNicht": [
-          "Wegen dem"
-        ],
-        "explanationAr": "wegen + Genitiv رسمي: des Wetters. Dativ محكي فقط.",
-        "points": 2,
-        "promptAr": "حوّل الجملة حسب القاعدة."
-      },
-      {
-        "id": "b2-gp-um1",
-        "type": "umformung",
-        "promptDe": "Forme mit Genitivpräposition um (wegen → Genitiv).",
-        "promptAr": "أعد الصياغة بـ wegen + المضاف.",
-        "quelleDe": "Weil es stark regnete, sind wir zu Hause geblieben.",
-        "answer": "Wegen des starken Regens sind wir zu Hause geblieben.",
-        "explanationAr": "weil + جملة جانبية → wegen + مضاف (Genitiv). Duden: wegen des Regens صحيح كتابياً؛ wegen dem Regen عامي مرفوض.",
-        "points": 2
-      },
-      {
-        "id": "b2-gp-um2",
-        "type": "umformung",
-        "promptDe": "Mit wegen: Wegen ___ bleibe ich zu Hause.",
-        "promptAr": "استخدم wegen + Genitiv.",
-        "quelleDe": "Es regnet stark, deshalb bleibe ich zu Hause.",
-        "answer": "Wegen des starken Regens bleibe ich zu Hause.",
-        "alternatives": [],
-        "explanationAr": "weil→wegen + Genitiv: des starken Regens — شرح عربي مع Duden.",
-        "explanationDe": "weil→wegen + Genitiv: des starken Regens — شرح عربي مع Duden.",
-        "hintAr": "des Regens",
-        "points": 2,
-        "level": "B2"
       }
     ],
     "pitfalls": [
@@ -16849,11 +15000,7 @@
       }
     ],
     "eselsbrueckeAr": "تذكير: هذه الأدوات في الكتابة الرسمية تأخذ دائماً Genitiv — كأنها «تُضيف» -s/-en إلى الاسم بعدها كما في الإنجليزية because of the rain.",
-    "pronTippAr": "",
-    "resources": [
-      "verwaltung-bayern-service",
-      "bmi-behoerdendeutsch"
-    ]
+    "pronTippAr": ""
   },
   "b2-konzessiv": {
     "id": "b2-konzessiv",
@@ -17043,46 +15190,6 @@
         "promptAr": "أكمل بالرابط المستقل trotzdem.",
         "answer": "trotzdem",
         "explanationAr": "trotzdem يبدأ جملة رئيسية؛ يأتي الفعل المصرف بعدها في الموقع الثاني."
-      },
-      {
-        "id": "b2-konzessiv-ex06-umformung",
-        "type": "umformung",
-        "quelleDe": "Obwohl es regnet, gehe ich spazieren.",
-        "promptDe": "Mit trotzdem (Hauptsatz):",
-        "answer": "Es regnet, trotzdem gehe ich spazieren.",
-        "mussEnthalten": [
-          "trotzdem"
-        ],
-        "darfNicht": [
-          "obwohl"
-        ],
-        "explanationAr": "التصحيح: راجع القاعدة وانتبه للنهايات والأدوات — التمرين يدرّب التحويل بدقة.",
-        "points": 2,
-        "promptAr": "حوّل الجملة حسب القاعدة."
-      },
-      {
-        "id": "b2-ko-um1",
-        "type": "umformung",
-        "promptDe": "Forme obwohl → trotzdem um.",
-        "promptAr": "حوّل رغم إلى رغم ذلك.",
-        "quelleDe": "Obwohl es regnet, gehen wir spazieren.",
-        "answer": "Es regnet, trotzdem gehen wir spazieren.",
-        "points": 2,
-        "explanationAr": "obwohl (جانبية) → trotzdem (ظرف في المرتبة 1 + فعل 2). trotzdem = Haupt­sat­z."
-      },
-      {
-        "id": "b2-ko-um3",
-        "type": "umformung",
-        "promptDe": "Mit trotzdem: Es regnet, ___ gehen wir spazieren.",
-        "promptAr": "استخدم trotzdem بدل obwohl.",
-        "quelleDe": "Obwohl es regnet, gehen wir spazieren.",
-        "answer": "trotzdem gehen wir spazieren",
-        "alternatives": [],
-        "explanationAr": "obwohl (تابعة) ↔ trotzdem (رئيسية مع Inversion) — شرح عربي.",
-        "explanationDe": "obwohl (تابعة) ↔ trotzdem (رئيسية مع Inversion) — شرح عربي.",
-        "hintAr": "trotzdem = رغم ذلك",
-        "points": 2,
-        "level": "B2"
       }
     ],
     "pitfalls": [
@@ -17096,11 +15203,7 @@
       }
     ],
     "eselsbrueckeAr": "trotzdem = trotzdem هي ظرف لا رابط: تحتاج نقطة/فاصلة قبلها، وبعدها يأتي الفعل ثانياً. أما obwohl فإنه يسحب الفعل إلى آخر الجملة.",
-    "pronTippAr": "",
-    "resources": [
-      "taz-kommentar",
-      "zeit-debatte"
-    ]
+    "pronTippAr": ""
   },
   "b2-relativ-genitiv": {
     "id": "b2-relativ-genitiv",
@@ -17253,47 +15356,6 @@
         "promptAr": "أكمل بضمير الوصل في Genitiv للمؤنث.",
         "answer": "deren",
         "explanationAr": "deren يعود إلى الاسم المؤنث Frau ويعبّر عن الملكية."
-      },
-      {
-        "id": "b2-relativ-genitiv-ex06-umformung",
-        "type": "umformung",
-        "quelleDe": "Der Mann, sein Auto ist kaputt, wartet.",
-        "promptDe": "Mit dessen (Genitiv-Relativ):",
-        "answer": "Der Mann, dessen Auto kaputt ist, wartet.",
-        "mussEnthalten": [
-          "dessen",
-          "kaputt ist"
-        ],
-        "darfNicht": [
-          "sein Auto ist kaputt"
-        ],
-        "explanationAr": "Genitiv-Relativ: dessen (مذكر/محايد) / deren (مؤنث/جمع) + Verb am Ende.",
-        "points": 2,
-        "promptAr": "حوّل الجملة حسب القاعدة."
-      },
-      {
-        "id": "b2-rg-um1",
-        "type": "umformung",
-        "promptDe": "Forme Relativsatz Genitiv (dessen/deren).",
-        "promptAr": "حوّل إلى صلة مضاف.",
-        "quelleDe": "Die Frau. Ihr Auto ist teuer.",
-        "answer": "Die Frau, deren Auto teuer ist, ...",
-        "points": 2,
-        "explanationAr": "صلة المضاف B2: dessen للمذكر/المحايد و deren للمؤنث/الجمع — Die Frau → deren Auto (سيارة المرأة)."
-      },
-      {
-        "id": "b2-rg-um3",
-        "type": "umformung",
-        "promptDe": "Frage: Wessen Auto ist kaputt? — des Mannes",
-        "promptAr": "Genitiv النسبي.",
-        "quelleDe": "Der Mann, dessen Auto kaputt ist, wartet.",
-        "answer": "dessen Auto",
-        "alternatives": [],
-        "explanationAr": "dessen = الذي له (Genitiv) — شرح عربي.",
-        "explanationDe": "dessen = الذي له (Genitiv) — شرح عربي.",
-        "hintAr": "dessen Genitiv",
-        "points": 2,
-        "level": "B2"
       }
     ],
     "pitfalls": [
@@ -17307,11 +15369,7 @@
       }
     ],
     "eselsbrueckeAr": "dessen يُذكّرك بـhis/its (للمفرد)، deren بـher/their (للمؤنث والجمع).",
-    "pronTippAr": "",
-    "resources": [
-      "standesamt-formular",
-      "mietvertrag-berlin"
-    ]
+    "pronTippAr": ""
   },
   "a1-pruefungsstrategie": {
     "id": "a1-pruefungsstrategie",
@@ -17441,45 +15499,6 @@
         "promptAr": "أكمل صيغة الختام في رسالة شخصية: Viele …",
         "answer": "Grüße",
         "explanationAr": "من صيغ الختام الشخصية: Viele Grüße."
-      },
-      {
-        "id": "a1-pruefungsstrategie-ex06-umformung",
-        "type": "umformung",
-        "quelleDe": "Hören Teil 3: Man hört einen Durchsagen-Satz einmal.",
-        "promptDe": "Strategie: Was machst du zuerst?",
-        "answer": "Ich lese die Fragen zuerst.",
-        "mussEnthalten": [
-          "Fragen",
-          "zuerst"
-        ],
-        "darfNicht": [],
-        "explanationAr": "التصحيح: راجع القاعدة وانتبه للنهايات والأدوات — التمرين يدرّب التحويل بدقة.",
-        "points": 2,
-        "promptAr": "حوّل الجملة حسب القاعدة."
-      },
-      {
-        "id": "a1-psg-um1",
-        "type": "umformung",
-        "promptDe": "Forme Prüfungsantwort strategisch (Zeitsparen).",
-        "promptAr": "حوّل إجابة الامتحان باستراتيجية.",
-        "quelleDe": "Keine Ahnung (kein Punkt).",
-        "answer": "Ich bin nicht sicher, aber ich denke: B ist richtig, weil...",
-        "points": 2,
-        "explanationAr": "استراتيجية B1: لا تترك فراغاً — خمّن مع تبرير weil. Conti Prediction: التخمين ينشط الذاكرة."
-      },
-      {
-        "id": "a1-str-um3",
-        "type": "umformung",
-        "promptDe": "Strategie: Was zuerst? Fragen oder Text? — Fragen",
-        "promptAr": "استراتيجية القراءة.",
-        "quelleDe": "Prüfung: Lies zuerst die Fragen, dann den Text.",
-        "answer": "Fragen zuerst",
-        "alternatives": [],
-        "explanationAr": "A1 Leseratten: قراءة السؤال أولاً توفر الوقت — شرح عربي.",
-        "explanationDe": "A1 Leseratten: قراءة السؤال أولاً توفر الوقت — شرح عربي.",
-        "hintAr": "Fragen zuerst",
-        "points": 2,
-        "level": "A1"
       }
     ],
     "pitfalls": [
@@ -17620,30 +15639,6 @@
         "promptAr": "أكمل استراتيجية الاستماع: أركز على معنى … كله.",
         "answer": "Satzes",
         "explanationAr": "السياق ومعنى الجملة كلها يساعدان على فهم الكلمة."
-      },
-      {
-        "id": "a2-pruefungsstrategie-ex06-umformung",
-        "type": "umformung",
-        "quelleDe": "Lesen Teil 2: Anzeigen mit Lücken.",
-        "promptDe": "Strategie (A2):",
-        "answer": "Ich lese die Anzeige und suche Schlüsselwörter.",
-        "mussEnthalten": [
-          "Schlüsselwörter"
-        ],
-        "darfNicht": [],
-        "explanationAr": "Lesen A2: Schlüsselwörter (Datum, Ort, Preis) → Anzeige zuordnen, لا كل كلمة.",
-        "points": 2,
-        "promptAr": "حوّل الجملة حسب القاعدة."
-      },
-      {
-        "id": "a2-psg-um1",
-        "type": "umformung",
-        "promptDe": "Plane Zeit: leicht→schwer (Strategie).",
-        "promptAr": "رتّب الحل: سهل ثم صعب.",
-        "quelleDe": "Ich beginne mit Aufgabe 5 (schwer).",
-        "answer": "Ich beginne mit Aufgabe 1 (leicht), dann 5.",
-        "points": 2,
-        "explanationAr": "استراتيجية A2: ابدأ بالسهل لاكتساب نقاط وثقة. Conti 70/30: نشاط خفيف أولاً."
       }
     ],
     "pitfalls": [
@@ -17784,31 +15779,6 @@
         "promptAr": "أكمل استراتيجية النقاش: ينبغي أن … على مساهمة الشريك.",
         "answer": "reagieren",
         "explanationAr": "يجب أن تتفاعل مع ما يقوله الشريك."
-      },
-      {
-        "id": "b1-pruefungsstrategie-ex06-umformung",
-        "type": "umformung",
-        "quelleDe": "Schreiben B1: E-Mail 80 Wörter.",
-        "promptDe": "Struktur (B1):",
-        "answer": "Anrede, Einleitung, drei Punkte, Schluss und Gruß.",
-        "mussEnthalten": [
-          "Anrede",
-          "Gruß"
-        ],
-        "darfNicht": [],
-        "explanationAr": "B1 Schreiben: 3 Inhaltspunkte + Anrede/Gruß = 5 فقرات. كل نقطة جملة كاملة.",
-        "points": 2,
-        "promptAr": "حوّل الجملة حسب القاعدة."
-      },
-      {
-        "id": "b1-psg-um1",
-        "type": "umformung",
-        "promptDe": "Korrigiere Zeitfehler (Perfekt vs Präteritum).",
-        "promptAr": "صحح زمن الامتحان.",
-        "quelleDe": "Ich war gestern einkaufen gegangen (falsch).",
-        "answer": "Ich bin gestern einkaufen gegangen.",
-        "points": 2,
-        "explanationAr": "Präteritum war لـ sein/haben فقط؛ الحركة Perfekt mit bin: bin gegangen. خطأ B1 شائع."
       }
     ],
     "pitfalls": [
@@ -17822,11 +15792,7 @@
       }
     ],
     "eselsbrueckeAr": "كلمة لإنقاذ نفسك عندما لا تعرف: «Könnten Sie das bitte wiederholen?» و«Ich bin nicht sicher, aber ich glaube,…».",
-    "pronTippAr": "",
-    "resources": [
-      "goethe-modelltest-b1",
-      "telc-uebung-b1"
-    ]
+    "pronTippAr": ""
   },
   "b2-pruefungsstrategie": {
     "id": "b2-pruefungsstrategie",
@@ -17953,30 +15919,6 @@
         "promptAr": "أكمل استراتيجية الكتابة: أدوّن مخططاً قصيراً قبل الكتابة.",
         "answer": "Gliederung",
         "explanationAr": "مخطط قصير يساعد على تنظيم الحجة والنص."
-      },
-      {
-        "id": "b2-pruefungsstrategie-ex06-umformung",
-        "type": "umformung",
-        "quelleDe": "Hören B2: Vortrag 5 Minuten.",
-        "promptDe": "Strategie:",
-        "answer": "Ich notiere Stichpunkte und höre auf Konnektoren.",
-        "mussEnthalten": [
-          "Stichpunkte"
-        ],
-        "darfNicht": [],
-        "explanationAr": "التصحيح: راجع القاعدة وانتبه للنهايات والأدوات — التمرين يدرّب التحويل بدقة.",
-        "points": 2,
-        "promptAr": "حوّل الجملة حسب القاعدة."
-      },
-      {
-        "id": "b2-psg2-um1",
-        "type": "umformung",
-        "promptDe": "Formuliere B2-Prüfung: Einleitungssatz.",
-        "promptAr": "صغ مقدمة كتابة B2.",
-        "quelleDe": "Thema: Umwelt",
-        "answer": "In der heutigen Zeit wird viel über Umwelt diskutiert, weil...",
-        "points": 2,
-        "explanationAr": "مقدمة B2: In der heutigen Zeit ... — قالب يفتح الحجة. BAMF Prüfung 250-500W."
       }
     ],
     "pitfalls": [
@@ -17990,11 +15932,7 @@
       }
     ],
     "eselsbrueckeAr": "في B2 يُقيّم التعقيد المناسب (Konjunktiv II، Nominalstil، Doppelkonnektoren) — لا تكتب جملاً أبسط من مستوى B2.",
-    "pronTippAr": "",
-    "resources": [
-      "goethe-modelltest-b2",
-      "telc-uebung-b2"
-    ]
+    "pronTippAr": ""
   },
   "a0-satzbau": {
     "id": "a0-satzbau",
@@ -18112,46 +16050,6 @@
         "promptAr": "أكمل بالفعل hören في المضارع.",
         "answer": "höre",
         "explanationAr": "بعد Am Morgen يأتي الفعل المصرف في الموقع الثاني: Am Morgen höre ich Musik."
-      },
-      {
-        "id": "a0-satzbau-ex08-umformung",
-        "type": "umformung",
-        "quelleDe": "Ich heiße Anna.",
-        "promptDe": "Als Frage (Inversion):",
-        "answer": "Heißt du Anna?",
-        "mussEnthalten": [
-          "Heißt du"
-        ],
-        "darfNicht": [
-          "Ich heiße"
-        ],
-        "explanationAr": "التصحيح: راجع القاعدة وانتبه للنهايات والأدوات — التمرين يدرّب التحويل بدقة.",
-        "points": 2,
-        "promptAr": "حوّل الجملة حسب القاعدة."
-      },
-      {
-        "id": "a0-sb-um1",
-        "type": "umformung",
-        "promptDe": "Stelle die Wörter korrekt (Satzklammer V2).",
-        "promptAr": "رتّب الكلمات بترتيب ألماني صحيح.",
-        "quelleDe": "heute Abend / Ich / ins Kino / gehe",
-        "answer": "Ich gehe heute Abend ins Kino.",
-        "explanationAr": "قاعدة V2: المرتبة 1 فاعل، 2 فعل مصرف (gehe)، ثم زمان → مكان. Mayer Segmenting: صف واحد كل مرة.",
-        "points": 2
-      },
-      {
-        "id": "a0-sat-um3",
-        "type": "umformung",
-        "promptDe": "Betonung: Heute ___ ich ins Kino. (gehe)",
-        "promptAr": "أعد ترتيب الجملة مع التركيز.",
-        "quelleDe": "Ich gehe heute ins Kino.",
-        "answer": "Heute gehe ich ins Kino",
-        "alternatives": [],
-        "explanationAr": "A0 Satzbau: الفعل ثانياً دائماً — شرح عربي.",
-        "explanationDe": "A0 Satzbau: الفعل ثانياً دائماً — شرح عربي.",
-        "hintAr": "Verb 2. Position",
-        "points": 2,
-        "level": "A0"
       }
     ],
     "commonErrors": [
@@ -18475,35 +16373,7 @@
         "explanationAr": "حالة النصب للأسماء الضعيفة: Polizist → den Polizisten.",
         "points": 2,
         "explanationDe": "حالة النصب للأسماء الضعيفة: Polizist → den Polizisten."
-      },
-      {
-        "id": "b2-nd-um1",
-        "type": "umformung",
-        "promptDe": "Dekliniere N-Nomen korrekt (Genitiv +n).",
-        "promptAr": "صرّف اسم n- مع النهاية.",
-        "quelleDe": "Ich sehe den Student.",
-        "answer": "Ich sehe den Studenten.",
-        "points": 2,
-        "explanationAr": "N-Deklination: Student, Kunde, Kollege → Akk -n: den Studenten. حالة B2 خاصة."
-      },
-      {
-        "id": "b2-n-um3",
-        "type": "umformung",
-        "promptDe": "Welcher Kasus? — den Studenten (Akk N-Deklination)",
-        "promptAr": "حدد حالة N-Deklination.",
-        "quelleDe": "Ich sehe den Studenten.",
-        "answer": "Akk N-Deklination",
-        "alternatives": [],
-        "explanationAr": "Student (مذكر ضعيف) يأخذ -en في Akk/Dat/Gen — شرح عربي.",
-        "explanationDe": "Student (مذكر ضعيف) يأخذ -en في Akk/Dat/Gen — شرح عربي.",
-        "hintAr": "N-Deklination -en",
-        "points": 2,
-        "level": "B2"
       }
-    ],
-    "resources": [
-      "duden-n-deklination",
-      "canoonet-grammatik"
     ]
   },
   "b2-passiv": {
@@ -18626,7 +16496,7 @@
       },
       {
         "de": "„von“ für Täter, „durch“ für Mittel/Grund",
-        "ar": "von den Arbeitern vs durch einen Fehler."
+        "ar": "von يدل على منفّذ الفعل: von den Arbeitern؛ أما durch فيدل على الوسيلة أو السبب: durch einen Fehler."
       }
     ],
     "exercises": [
@@ -18734,35 +16604,7 @@
         "explanationAr": "wurde ثانياً، von + Agens، PII آخراً.",
         "points": 2,
         "promptAr": "أجب حسب القاعدة."
-      },
-      {
-        "id": "b2-ps-um1",
-        "type": "umformung",
-        "promptDe": "Forme ins Passiv Präsens um.",
-        "promptAr": "حوّل إلى المبني للمجهول.",
-        "quelleDe": "Man öffnet jeden Tag die Tür um 8 Uhr.",
-        "answer": "Die Tür wird jeden Tag um 8 Uhr geöffnet.",
-        "explanationAr": "المبني للمجهول: werden + اسم المفعول (geöffnet). نركز على الحدث لا الفاعل — مهارة B2 أساسية.",
-        "points": 2
-      },
-      {
-        "id": "b2-ps-um2",
-        "type": "umformung",
-        "promptDe": "Perfekt Passiv: Der Bericht ___ veröffentlicht worden.",
-        "promptAr": "مبني للمجهول التام.",
-        "quelleDe": "Die Firma hat den Bericht veröffentlicht.",
-        "answer": "Der Bericht ist veröffentlicht worden.",
-        "alternatives": [],
-        "explanationAr": "ist ... worden — شرح عربي.",
-        "explanationDe": "ist ... worden — شرح عربي.",
-        "hintAr": "ist ... worden",
-        "points": 2,
-        "level": "B2"
       }
-    ],
-    "resources": [
-      "tagesschau-bundestag",
-      "bamf-berufsbezogen-b2"
     ]
   },
   "b2-konjunktiv2-vht": {
@@ -18949,35 +16791,7 @@
         "explanationAr": "جملة شرطية ماضية: Hätte ich gewusst, wäre ich geblieben — الترتيب مهم.",
         "points": 2,
         "promptAr": "رتّب كلمات الشرط الماضي."
-      },
-      {
-        "id": "b2-k2-um1",
-        "type": "umformung",
-        "promptDe": "Forme in indirekte Rede mit Konjunktiv I um.",
-        "promptAr": "حوّل إلى غير مباشر بـ Konjunktiv I.",
-        "quelleDe": "Er sagt: „Ich bin krank.“",
-        "answer": "Er sagt, er sei krank.",
-        "explanationAr": "الكلام غير المباشر B2: المباشر „Ich bin krank“ → Konjunktiv I: sei (ليس ist). يدل على نقل كلام الغير.",
-        "points": 2
-      },
-      {
-        "id": "b2-k2v-um3",
-        "type": "umformung",
-        "promptDe": "Wirklich: Ich habe kein Geld, ___ ich nicht reise. (deshalb)",
-        "promptAr": "اربط السبب والنتيجة.",
-        "quelleDe": "Wenn ich Geld hätte, würde ich reisen.",
-        "answer": "deshalb reise ich nicht",
-        "alternatives": [],
-        "explanationAr": "Konjunktiv II يعبر عن غير واقعي — شرح عربي.",
-        "explanationDe": "Konjunktiv II يعبر عن غير واقعي — شرح عربي.",
-        "hintAr": "irreal",
-        "points": 2,
-        "level": "B2"
       }
-    ],
-    "resources": [
-      "zeit-zeugen-interview",
-      "deutschlandfunk-geschichte"
     ]
   },
   "b2-nominalisierung": {
@@ -19166,21 +16980,7 @@
           "Zum Zweck"
         ],
         "explanationAr": "غرض: zum Zweck + Genitiv أو für + حالة نصب — الأسلوب الرسمي."
-      },
-      {
-        "id": "b2-nm-um1",
-        "type": "umformung",
-        "promptDe": "Nominalisiere den dass-Satz.",
-        "promptAr": "حوّل جملة dass إلى اسم.",
-        "quelleDe": "Dass er pünktlich kommt, ist wichtig.",
-        "answer": "Sein pünktliches Kommen ist wichtig.",
-        "points": 2,
-        "explanationAr": "Nominalisierung B2: dass er kommt → sein Kommen. تصغير جملة إلى اسم — مهارة أكاديمية 400UE BAMF."
       }
-    ],
-    "resources": [
-      "bundestag-protokoll",
-      "wissenschaft-de-nominalstil"
     ]
   },
   "b2-partizipial": {
@@ -19366,25 +17166,7 @@
         "darfNicht": [
           "das Kind, das weint"
         ]
-      },
-      {
-        "id": "b2-parti-um3",
-        "type": "umformung",
-        "promptDe": "Partizipial: ___ gegessen, ging er spazieren. (Nach dem Essen)",
-        "promptAr": "حوّل إلى عبارة اسمية.",
-        "quelleDe": "Nachdem er gegessen hatte, ging er spazieren.",
-        "answer": "Nach dem Essen ging er spazieren",
-        "alternatives": [],
-        "explanationAr": "Nebensatz → Nominalphrase: nachdem ... → nach ... — شرح عربي.",
-        "explanationDe": "Nebensatz → Nominalphrase: nachdem ... → nach ... — شرح عربي.",
-        "hintAr": "nach + Dativ",
-        "points": 2,
-        "level": "B2"
       }
-    ],
-    "resources": [
-      "faz-wissenschaft",
-      "uni-leipzig-korpus"
     ]
   }
 }

@@ -24,7 +24,6 @@ for(const d of raw){
   if(!d.cultural_note || d.cultural_note.length>=120) continue;
   const note = d.cultural_note;
   const theme = d.cultural_theme || "";
-  let ext = "";
   if(note.startsWith("Theme:")){
     // extract theme after "Theme: "
     const t = note.replace("Theme:","").trim().split(" - ")[0].trim();

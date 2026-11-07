@@ -16,10 +16,6 @@ const total = ids.length;
 const LEVELS = new Set(["A0","A1","A2","B1","B2"]);
 const ALLOWED_TYPES = new Set(["mc","fill","translate","order","truefalse","dictation","umformung"]);
 
-// Duden تهجئة بسيطة: كلمات ألمانية شائعة يجب أن لا تُكتب خطأ (عينة أولية — تتوسع)
-const KNOWN_TYPO = [
-  {bad:"seid", good:"seid", ctx:"ihr seid"}, // placeholder
-];
 // GGP mapping موجود في lib/ggp.ts — نتحقق أن كل id له ربط
 let ggpRaw = "";
 try { ggpRaw = readFileSync(join(ROOT,"lib/ggp.ts"),"utf8"); } catch {}
@@ -114,7 +110,7 @@ const byLvl = Object.entries(stats.byLevel).sort().map(([k,v])=>`${k}:${v}`).joi
 const ggpMissing = ids.filter(id=>!hasGGP.includes(id));
 
 let md = `# 🔍 مراجعة حرف-حرف — القواعد أولاً (87 درس) — ${new Date().toISOString().slice(0,10)}
-> **المراجع:** GGP 150 + Goethe Wortliste + Duden + CEFR + خطة 378 يوم  
+> **المراجع:** GGP 150 + Goethe Wortliste + Duden + CEFR + خطة 378 يوم
 > **المنهج:** كل حرف فُحص — لا عينات. الأخطاء مصنفة P0/P1/P2 + أفكار تحسينية.
 
 ## الملخص الإحصائي

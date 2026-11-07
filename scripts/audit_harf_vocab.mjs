@@ -96,7 +96,6 @@ for (const [deckId, deck] of Object.entries(vocab)) {
         if (nTk.length>=4 && (nEx.includes(nTk.slice(0,4)) || nEx.includes(nTk.slice(0,3)))) { anyMatch = true; break; }
       }
       // تحقق: فقط إذا كان الجذر >=4 أحرف (كما في الأصل) — تجنب كلمات قصيرة مثل die/das
-      const nRoot = norm(root);
       if (root.length>=4 && !anyMatch) {
         // تسامح إضافي للفعال المنعكسة المنفصلة: sich beeilen → beeilen → beei، قد تظهر في beeile mich
         if (false) {
@@ -136,7 +135,6 @@ let dupEntries=[];
 for (const [de, list] of seenDe.entries()) {
   if (list.length>1) {
     // check if same de appears in multiple levels with same ar (intentional) vs conflicting
-    const levels = new Set(list.map(x=>x.level));
     const ars = new Set(list.map(x=>x.ar));
     if (ars.size>1) dupEntries.push({de, list});
     dupCount++;
@@ -144,7 +142,7 @@ for (const [de, list] of seenDe.entries()) {
 }
 
 let md=`# 🔍 مراجعة حرف-حرف — المفردات (~6200 بطاقة) — ${new Date().toISOString().slice(0,10)}
-> **المراجع:** Goethe Wortliste A1-A2-B1 + Duden + GGP + CEFR 378 يوم  
+> **المراجع:** Goethe Wortliste A1-A2-B1 + Duden + GGP + CEFR 378 يوم
 > **المنهج:** كل حرف فُحص — لا عينات. ${totalDecks} حزمة · ${totalCards} بطاقة
 
 ## الملخص الإحصائي

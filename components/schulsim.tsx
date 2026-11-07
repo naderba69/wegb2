@@ -16,6 +16,7 @@
  * في فكّ الشيفرة يدخل الدفتر — ولا شيء هنا يصدّق بالكلام: كل فحص محلي deterministic.
  */
 
+import { lokalesDatum } from "@/lib/datum";
 import { useMemo, useState } from "react";
 import type { Progress } from "@/lib/types";
 import { useProgress, addFehlerNow } from "@/lib/store";
@@ -41,7 +42,7 @@ function Entschuldigung({ progress: _progress }: { progress: Progress }) {
   const { update } = useProgress();
   const name = activeProfile().name;
   const heute = new Date();
-  const iso = (d: Date) => d.toISOString().slice(0, 10);
+  const iso = (d: Date) => lokalesDatum(d);
   const [kind, setKind] = useState(name);
   const [klasse, setKlasse] = useState("");
   const [lehrer, setLehrer] = useState("");

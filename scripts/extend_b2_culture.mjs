@@ -92,4 +92,3 @@ console.log(`✓ texts patched ${patchedTxt}/3`);
 writeFileSync(dPath, JSON.stringify(dialogues,null,2)+"\n","utf8");
 writeFileSync(tPath, JSON.stringify(texts,null,2)+"\n","utf8");
 console.log("files written");
-

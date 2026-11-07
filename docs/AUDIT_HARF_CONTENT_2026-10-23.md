@@ -1,5 +1,5 @@
 # 🔍 مراجعة حرف-حرف — النصوص/الحوارات/الكتابة — 2026-10-26
-> **المراجع:** CEFR Companion + Goethe Modelltest B1/B2 + GGP + Duden  
+> **المراجع:** CEFR Companion + Goethe Modelltest B1/B2 + GGP + Duden
 > **المنهج:** كل حرف فُحص — لا عينات. 158 نص · 176 حوار · 105 كتابة
 
 ## الملخص الإحصائي

@@ -5,6 +5,7 @@
  * تقدّمك المحلي فقط (آخر ٨ حلقات)، والمقارنة وصفٌ لما تغيّر — لا
  * ادّعاء أنّ النسخة الثانية «صحيحة» ولا أنّ التصحيح بشري.
  */
+import { lokalesDatum } from "@/lib/datum";
 import { useMemo, useState } from "react";
 import { useProgress } from "@/lib/store";
 import { wortDiff, diffStatistik } from "@/lib/textdiff";
@@ -35,7 +36,7 @@ export function SchreibSchleife({ taskId, v1 }: { taskId: string; v1: string }) 
     update((p) => ({
       ...p,
       schreibEntwuerfe: [
-        { id, taskId, datum: new Date().toISOString().slice(0, 10), v1 },
+        { id, taskId, datum: lokalesDatum(), v1 },
         ...(p.schreibEntwuerfe ?? []),
       ].slice(0, MAX_LOOPS),
     }));

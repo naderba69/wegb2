@@ -13,6 +13,7 @@
  * تحديد المستوى — لا أداة مشتتة جديدة، بل نفس البيت موسّعاً.
  */
 
+import { lokalesDatum } from "@/lib/datum";
 import { useEffect, useMemo, useState } from "react";
 import type { Progress } from "@/lib/types";
 import { useProgress, addFehlerNow } from "@/lib/store";
@@ -21,7 +22,7 @@ import { logK, KOMPETENZEN, KOMPETENZ_AR, kompetenzWerte } from "@/lib/kompetenz
 import { checkAbzeichen } from "@/lib/spiel";
 import { grammarMap, alleVokabeln } from "@/lib/content";
 
-const TAG = () => new Date().toISOString().slice(0, 10);
+const TAG = () => lokalesDatum();
 
 /* ------------------------------------------------------ 118 · Teil-Strategien */
 

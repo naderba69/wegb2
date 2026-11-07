@@ -1,4 +1,5 @@
 // محرّك التحفيز — XP وأوسمة (حتمي، محلي بالكامل، بلا خدمات خارجية)
+import { lokalesDatum } from "./datum";
 import type { Progress } from "./types";
 import { PHASE_START } from "./phasen";
 
@@ -112,7 +113,7 @@ export function checkAbzeichen(p: Progress): Progress {
   let changed = false;
   for (const a of ABZEICHEN) {
     if (!owned[a.id] && a.test(p)) {
-      owned[a.id] = new Date().toISOString().slice(0, 10);
+      owned[a.id] = lokalesDatum();
       changed = true;
     }
   }
