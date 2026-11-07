@@ -67,15 +67,15 @@
   ],
   "resolvedExactDuplicateGroups": 8,
   "decisionBreakdown": {
-    "defer": 332,
-    "research-only": 355,
+    "defer": 336,
+    "research-only": 362,
     "reject-not-applicable": 23,
-    "merge-duplicate": 70,
-    "pending-academic-review": 40
+    "merge-duplicate": 79,
+    "pending-academic-review": 20
   },
-  "reviewedDecisions": 780,
-  "pendingTriage": 40,
-  "relatedCatalogReferences": 4926,
+  "reviewedDecisions": 800,
+  "pendingTriage": 20,
+  "relatedCatalogReferences": 5059,
   "candidateLiveImplementations": 181,
   "adopted": 0,
   "productIntegrated": 0,

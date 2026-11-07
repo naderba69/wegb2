@@ -30903,7 +30903,14 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "merge-duplicate",
+        "classification": "duplicate-catalog-record",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-07",
+        "risk": "low",
+        "rationaleAr": "Engagement Philp يكرر بناء انخراط متعلم اللغة المسجل والمراجع في 588؛ اختلاف اسم الباحث لا يحدد بعداً أو أداة مستقلة في السجل المولد. يُحفظ المعرف للتتبع ويُدمج في 588، حيث فُصل الاستعمال المرصود عن الانخراط السلوكي والمعرفي والوجداني والاجتماعي.",
+        "candidateEvidence": [],
+        "canonicalId": 588
       }
     },
     {
@@ -30924,7 +30931,14 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "merge-duplicate",
+        "classification": "duplicate-catalog-record",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-07",
+        "risk": "low",
+        "rationaleAr": "Flow Csikszentmihalyi يكرر Flow Theory المسجل والمراجع في 299 ويحمل إحالة Csikszentmihalyi 1990 نفسها. يُحفظ المعرف للتتبع ويُدمج في 299، حيث وُثق أن موازنة الصعوبة حسابياً أو عرض مؤقت لا يقيس حالة التدفق النفسية.",
+        "candidateEvidence": [],
+        "canonicalId": 299
       }
     },
     {
@@ -30945,7 +30959,14 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "merge-duplicate",
+        "classification": "duplicate-catalog-record",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-07",
+        "risk": "low",
+        "rationaleAr": "Grit Duckworth يكرر Grit & Perseverance المسجل والمراجع في 300 ويحمل إحالة Duckworth 2007 نفسها. يُحفظ المعرف للتتبع ويُدمج في 300، حيث مُنع استنتاج سمة المثابرة من الحضور أو السلسلة دون مقياس صالح وسياق زمني.",
+        "candidateEvidence": [],
+        "canonicalId": 300
       }
     },
     {
@@ -30966,7 +30987,14 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "merge-duplicate",
+        "classification": "duplicate-catalog-record",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-07",
+        "risk": "low",
+        "rationaleAr": "Mindset Dweck يكرر Growth Mindset المسجل والمراجع في 292 ويحمل إحالة Dweck 2006 نفسها. يُحفظ المعرف للتتبع ويُدمج في 292، حيث عُدّت اللغة التشجيعية سياسة تواصل لا قياساً لعقلية المتعلم ولا تدخلاً مثبتاً.",
+        "candidateEvidence": [],
+        "canonicalId": 292
       }
     },
     {
@@ -30987,7 +31015,14 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "merge-duplicate",
+        "classification": "duplicate-catalog-record",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-07",
+        "risk": "low",
+        "rationaleAr": "Resilience Oxford يكرر Resilience المسجل والمراجع في 598 ويحمل إحالة Oxford 2017 نفسها. يُحفظ المعرف للتتبع ويُدمج في 598، حيث فُصل مسارا اليوم الصعب والاستئناف عن إثبات التعافي أو سمة الصمود القابلة للنقل.",
+        "candidateEvidence": [],
+        "canonicalId": 598
       }
     },
     {
@@ -31008,7 +31043,14 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "merge-duplicate",
+        "classification": "duplicate-catalog-record",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-07",
+        "risk": "low",
+        "rationaleAr": "Wellbeing Oxford يكرر بناء رفاه المتعلم المسجل والمراجع في 599؛ اختلاف المرجع لا يحدد في السجل بعداً أو مقياساً مستقلاً عن الرفاه العام. يُحفظ المعرف للتتبع ويُدمج في 599، حيث وُثق أن الاستراحة ووضع المرض والتقدم لا تسمح باستنتاج صحة نفسية أو رفاه.",
+        "candidateEvidence": [],
+        "canonicalId": 599
       }
     },
     {
@@ -31029,7 +31071,14 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "merge-duplicate",
+        "classification": "duplicate-catalog-record",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-07",
+        "risk": "low",
+        "rationaleAr": "Empathy Mercer يكرر التعاطف في تعلم اللغة المسجل والمراجع في 573؛ اختلاف اسم الباحث لا يحدد مهمة أو مقياساً مستقلاً في السجل. يُحفظ المعرف للتتبع ويُدمج في 573، حيث لا يتحول نص عن التعاطف أو سؤال فهم إلى استجابة متعاطفة مولدة ومقوّمة.",
+        "candidateEvidence": [],
+        "canonicalId": 573
       }
     },
     {
@@ -31050,7 +31099,27 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "teacher-empathy-psychological-construct",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-07",
+        "risk": "high",
+        "rationaleAr": "تعاطف المعلم يحتاج معلماً بشرياً وسياقاً تعليمياً وتصورات متعلمين وسلوكيات استماع واستجابة قابلة للملاحظة، مع تمييز التعاطف من اللطف أو الموافقة. يعرض المنتج لوحة ملفات محلية ونبرة دعم ونصوصاً عن التعاطف، لكنه لا يسجل علاقة معلم-متعلم أو تقارير أطراف ولا يقيس الأثر؛ لذلك لا ينسب Teacher Empathy.",
+        "candidateEvidence": [
+          "components/klassenansicht.tsx",
+          "components/akademie/LektionWizard.tsx",
+          "content/texts.json",
+          "app/datenschutz/page.tsx"
+        ],
+        "relatedIds": [
+          292,
+          572,
+          573,
+          597,
+          970,
+          971,
+          974
+        ]
       }
     },
     {
@@ -31071,7 +31140,30 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "learner-beliefs-research-construct",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-07",
+        "risk": "high",
+        "rationaleAr": "معتقدات المتعلم حول اللغة والتعلم والمعلم والقدرة والسياق متعددة ومتحركة وقد تتناقض بين القول والفعل؛ ولا تساوي إعداداً أو هدفاً أو نمط استعمال. لا يجمع المنتج مقابلات أو يوميات أو استبانة صالحة ولا يحلل تغير الاعتقاد زمنياً أو يتيح تصحيحه؛ لذلك لا يشخص Learner Beliefs من السجل.",
+        "candidateEvidence": [
+          "app/einstellungen/page.tsx",
+          "components/absicht.tsx",
+          "components/berichte.tsx",
+          "components/interview2.tsx",
+          "lib/profiles.ts"
+        ],
+        "relatedIds": [
+          292,
+          293,
+          294,
+          303,
+          304,
+          575,
+          577,
+          578,
+          954
+        ]
       }
     },
     {
@@ -31092,7 +31184,26 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "teacher-beliefs-cognition-construct",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-07",
+        "risk": "high",
+        "rationaleAr": "معتقدات المعلم عند Borg تشمل المعرفة السابقة والتكوين والسياق والممارسة وما يقوله المعلم ويفعله، ولا يمكن استنتاجها من محتوى منهج كتبه المطور أو من لوحة تصدير محلية. لا توجد هوية معلم أو تأمل مهني أو مقابلة أو ملاحظة درس ومقارنة بين الاعتقاد والممارسة؛ لذلك يبقى البناء بحثياً.",
+        "candidateEvidence": [
+          "components/klassenansicht.tsx",
+          "lib/lehrer.ts",
+          "components/lehrer.tsx",
+          "content/real-world-validation.json"
+        ],
+        "relatedIds": [
+          968,
+          969,
+          971,
+          972,
+          973,
+          974
+        ]
       }
     },
     {
@@ -31113,7 +31224,35 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "classroom-interaction-analysis-framework",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-07",
+        "risk": "high",
+        "rationaleAr": "تحليل التفاعل الصفي عند Walsh يحتاج سياقاً صفياً وأهداف نمط التفاعل وأدواراً وأخذ دور وتغذية راجعة وإصلاحاً في خطاب طبيعي منسوخ. المنتج ذاتي أساساً؛ حواراته مؤلفة ورفيق الكلام آلي وبطاقات الشريك لا تثبت وجود صف أو مشاركين، فلا تكوّن corpus تفاعل صفي أو تحليلاً قابلاً للمراجعة.",
+        "candidateEvidence": [
+          "content/dialogues.json",
+          "components/dialogszenarien.tsx",
+          "components/sprechbegleiter.tsx",
+          "components/klassenansicht.tsx",
+          "content/muendlich.json"
+        ],
+        "relatedIds": [
+          350,
+          411,
+          488,
+          521,
+          525,
+          607,
+          613,
+          806,
+          821,
+          930,
+          972,
+          973,
+          974,
+          976
+        ]
       }
     },
     {
@@ -31134,7 +31273,27 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "teacher-talk-self-evaluation-framework",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-07",
+        "risk": "high",
+        "rationaleAr": "إطار Walsh لتقويم كلام المعلم ذاتياً يحتاج تسجيل درس حقيقي ونسخه وتحديد نمط التفاعل ومطابقة استعمال اللغة مع الهدف ثم دورة تأمل وتغيير. الملصق SETI غير موثق داخل المنتج، ولا توجد تسجيلات معلم أو ترميزات أو مراجع بشري؛ والتعرف على الكلام أو TTS لا ينفذ هذا الإجراء، لذلك يبقى بحثياً.",
+        "candidateEvidence": [
+          "components/klassenansicht.tsx",
+          "components/lehrer.tsx",
+          "content/dialogues.json",
+          "content/real-world-validation.json",
+          "app/datenschutz/page.tsx"
+        ],
+        "relatedIds": [
+          350,
+          488,
+          806,
+          971,
+          973,
+          974
+        ]
       }
     },
     {
@@ -31155,7 +31314,33 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "classroom-discourse-analysis-framework",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-07",
+        "risk": "high",
+        "rationaleAr": "خطاب الصف عند Seedhouse يربط التنظيم التتابعي ومواضع الإصلاح والأدوار بالهدف التربوي والسياق المؤسسي، ويتطلب بيانات تفاعل طبيعية منسوخة لا حواراً تعليمياً مكتوباً. لا يسجل المنتج صفاً أو أدوار مشاركين ولا يرمز أزواجاً متجاورة أو إصلاحاً؛ لذا لا يدعي Classroom Discourse Analysis.",
+        "candidateEvidence": [
+          "content/dialogues.json",
+          "components/dialogszenarien.tsx",
+          "components/sprechbegleiter.tsx",
+          "components/klassenansicht.tsx",
+          "content/muendlich.json"
+        ],
+        "relatedIds": [
+          350,
+          411,
+          488,
+          613,
+          761,
+          797,
+          806,
+          821,
+          928,
+          971,
+          972,
+          974
+        ]
       }
     },
     {
@@ -31176,7 +31361,30 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "research-only",
+        "classification": "teacher-talk-pedagogical-construct",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-07",
+        "risk": "high",
+        "rationaleAr": "كلام المعلم يحتاج متحدثاً معلماً واستجابات متعلمين وسياقاً يميز الشرح والإدارة والاستثارة والحوار، ولا يساوي تعليمات واجهة أو صوتاً اصطناعياً أو سطور شخصية معلم في نص مؤلف. المنتج لا يسجل خطاب معلم بشرياً ولا يقيس توزيعه أو أثره أو استجابة الصف؛ لذلك يبقى Teacher Talk بناءً بحثياً.",
+        "candidateEvidence": [
+          "components/lehrer.tsx",
+          "content/dialogues.json",
+          "components/dialogszenarien.tsx",
+          "components/klassenansicht.tsx",
+          "lib/speech.ts"
+        ],
+        "relatedIds": [
+          350,
+          521,
+          525,
+          806,
+          968,
+          970,
+          971,
+          972,
+          973
+        ]
       }
     },
     {
@@ -31197,7 +31405,14 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "merge-duplicate",
+        "classification": "duplicate-catalog-record",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-07",
+        "risk": "low",
+        "rationaleAr": "Learner Talk Swain يكرر Collaborative Dialogue المسجل والمراجع في 807 ويحمل إحالة Swain 2000 نفسها؛ ولا يحدد السجل نوع كلام متعلم آخر أو إجراءً مستقلاً. يُحفظ المعرف للتتبع ويُدمج في 807، حيث وُثق غياب شريكين بشريين ومشكلة لغوية مشتركة وسجل مساهمات.",
+        "candidateEvidence": [],
+        "canonicalId": 807
       }
     },
     {
@@ -31218,7 +31433,46 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "human-peer-interaction-workflow",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-07",
+        "risk": "high",
+        "rationaleAr": "تفاعل الأقران يحتاج متعلمين بشريين وتبادلاً متبادلاً يمكن فيه التفاوض وطلب التوضيح والتغذية الراجعة، مع موافقة وأمان وبديل فردي. يجدول المنتج بطاقات شريك ويعرض مطالبات حية، لكن زر الإتمام إقرار فردي ولا يثبت شريكاً أو أدواراً أو كلاماً متبادلاً؛ لذلك يؤجل التوصيل والادعاء.",
+        "candidateEvidence": [
+          "lib/plan.ts",
+          "components/tasks.tsx",
+          "content/muendlich.json",
+          "components/muendlich.tsx",
+          "app/datenschutz/page.tsx"
+        ],
+        "relatedIds": [
+          205,
+          206,
+          227,
+          243,
+          309,
+          350,
+          357,
+          411,
+          461,
+          462,
+          463,
+          521,
+          525,
+          545,
+          546,
+          557,
+          607,
+          613,
+          718,
+          806,
+          807,
+          971,
+          977,
+          978,
+          979
+        ]
       }
     },
     {
@@ -31239,7 +31493,34 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "human-group-work-workflow",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-07",
+        "risk": "high",
+        "rationaleAr": "العمل الجماعي يتطلب ثلاثة مشاركين أو أكثر وهدفاً أو منتجاً مشتركاً وأدواراً وتوزيع مساهمات وتيسيراً يحد من الهيمنة والتهميش. لوحة الصف تعرض ملفات محلية ولا تنشئ مجموعة، وبطاقات الكلام فردية أو ثنائية ولا تحفظ عملية جماعية؛ لذلك يلزم تصميم هوية وموافقة وسلامة وتقويم قبل التوصيل.",
+        "candidateEvidence": [
+          "components/klassenansicht.tsx",
+          "content/muendlich.json",
+          "components/tasks.tsx",
+          "lib/think-pair-share.ts",
+          "app/datenschutz/page.tsx"
+        ],
+        "relatedIds": [
+          205,
+          227,
+          461,
+          462,
+          463,
+          464,
+          546,
+          613,
+          717,
+          749,
+          976,
+          978,
+          979
+        ]
       }
     },
     {
@@ -31260,7 +31541,35 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "human-pair-work-workflow",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-07",
+        "risk": "high",
+        "rationaleAr": "العمل الثنائي يحتاج مشاركين حقيقيين ومهمة تجعل مساهمتيهما ضروريتين وتبادلاً واستجابةً قابلة للرصد، لا مجرد مخاطبة شريك متخيل. بطاقات Partner-Diskussion حية ومجدولة لكنها لا تنشئ غرفة أو تتحقق من الطرف الثاني، وزر الإنجاز تقرير ذاتي فقط؛ لذلك يؤجل الادعاء إلى بروتوكول شريك آمن واختبار ميداني.",
+        "candidateEvidence": [
+          "lib/plan.ts",
+          "components/tasks.tsx",
+          "content/muendlich.json",
+          "components/muendlich.tsx",
+          "app/datenschutz/page.tsx"
+        ],
+        "relatedIds": [
+          205,
+          227,
+          357,
+          461,
+          545,
+          546,
+          607,
+          717,
+          718,
+          806,
+          807,
+          976,
+          977,
+          979
+        ]
       }
     },
     {
@@ -31281,7 +31590,39 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "defer",
+        "classification": "human-collaborative-learning-workflow",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-07",
+        "risk": "high",
+        "rationaleAr": "التعلم التعاوني عند Donato يحتاج بناء معرفة أو سقالة بصورة مشتركة عبر مساهمات متبادلة ومشكلة أو منتج مشترك، ولا يساوي محتوى عن التعاون أو محاولة فردية مع رفيق آلي. لا توجد مساحة مشتركة أو أدوار أو سجل مساهمات ومساءلة أو قياس تعلم جماعي؛ لذلك يؤجل إلى بنية بشرية آمنة قابلة للتقويم.",
+        "candidateEvidence": [
+          "components/tasks.tsx",
+          "content/muendlich.json",
+          "components/sprechbegleiter.tsx",
+          "lib/think-pair-share.ts",
+          "app/datenschutz/page.tsx"
+        ],
+        "relatedIds": [
+          205,
+          227,
+          336,
+          357,
+          363,
+          461,
+          462,
+          463,
+          545,
+          546,
+          611,
+          613,
+          717,
+          806,
+          807,
+          976,
+          977,
+          978
+        ]
       }
     },
     {
@@ -31302,7 +31643,14 @@
         "productStatus": "prototype-not-wired",
         "automatedTestStatus": "not-demonstrated",
         "fieldValidationStatus": "not-tested",
-        "decision": "pending-academic-review"
+        "decision": "merge-duplicate",
+        "classification": "duplicate-catalog-record",
+        "reviewerRole": "internal-methodology-triage",
+        "reviewedAt": "2026-11-07",
+        "risk": "low",
+        "rationaleAr": "Cooperative Learning Johnson يكرر Kooperatives Lernen المسجل والمراجع في 205 ويحمل إحالة Johnson 2009 نفسها. يُحفظ المعرف للتتبع ويُدمج في 205، حيث وُثق أن اختيار حجم مجموعة أو معامل مكسب لا يثبت جلسة تعاونية أو هوية وأدواراً وخصوصية.",
+        "candidateEvidence": [],
+        "canonicalId": 205
       }
     },
     {
