@@ -56,6 +56,9 @@ for (const tool of tools) {
 }
 const duplicateGroups = [...titleGroups.entries()].filter(([, groupedIds]) => groupedIds.length > 1);
 check(summary.total === tools.length && summary.firstId === Math.min(...ids) && summary.lastId === Math.max(...ids), "الملخص المولد يطابق النطاق الفعلي");
+const snapshotMarker = `<!-- tool-catalog-snapshot reviewed=${summary.reviewedDecisions} pending=${summary.pendingTriage} defer=${summary.decisionBreakdown.defer ?? 0} research=${summary.decisionBreakdown["research-only"] ?? 0} reject=${summary.decisionBreakdown["reject-not-applicable"] ?? 0} merge=${summary.decisionBreakdown["merge-duplicate"] ?? 0} related=${summary.relatedCatalogReferences} candidate=${summary.candidateLiveImplementations} -->`;
+const governedDocs = ["README.md", "docs/TOOL_CATALOG_GOVERNANCE.md"];
+check(governedDocs.every((path) => readFileSync(resolve(ROOT, path), "utf8").includes(snapshotMarker)), "وثيقتا الكتالوج الحيّتان تطابقان لقطة الملخص المولد");
 check(reviewMatrix.schemaVersion === 1 && reviewMatrix.items.length === tools.length && reviewMatrix.items.every((item, index) => item.id === tools[index].id && item.titleDe === tools[index].titleDe && item.status.productStatus), "مصفوفة المراجعة تفهرس كل فكرة وحالتها بنداً بنداً");
 check(reviewMatrix.items.every((item) => JSON.stringify(item.status) === JSON.stringify({ ...governance.defaultState, ...(governance.overrides[String(item.id)] ?? {}) })), "الحالة المولدة لكل بند تطابق الافتراض وقرار المراجعة المسجل");
 const reviewedOverrides = Object.entries(governance.overrides).filter(([, entry]) => entry.decision && entry.decision !== "pending-academic-review");
@@ -70,6 +73,7 @@ const expectedDecisionBreakdown = tools.reduce<Record<string, number>>((counts, 
   return counts;
 }, {});
 check(summary.reviewedDecisions === reviewedOverrides.length && JSON.stringify(summary.decisionBreakdown) === JSON.stringify(expectedDecisionBreakdown) && summary.pendingTriage === (expectedDecisionBreakdown["pending-academic-review"] ?? 0), `قرارات المراجعة محسوبة من السجل البندي (${summary.reviewedDecisions} فرز، ${summary.pendingTriage} معلق)`);
+check(reviewedOverrides.length === tools.length && summary.pendingTriage === 0 && overrideIds.length === tools.length, "إغلاق الفرز محفوظ: 820/820 قراراً بندياً ولا سجل معلق");
 const relatedCatalogReferences = Object.values(governance.overrides).reduce((count, entry) => count + (entry.relatedIds?.length ?? 0), 0);
 check(summary.relatedCatalogReferences === relatedCatalogReferences, `الإحالات المفاهيمية محسوبة دون تسميتها دمجاً (${relatedCatalogReferences})`);
 const candidateLiveImplementations = Object.values(governance.overrides).filter((entry) => entry.productStatus === "candidate-live-implementation").length;
