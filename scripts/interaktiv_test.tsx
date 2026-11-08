@@ -4565,6 +4565,59 @@ const hasFile = txt().includes("صوتٌ من الدار");
   await pruefeA11y("R311-8 محطة الألعاب بعد إكمال ترجمة وعرض التغذية");
 }
 
+/* ═══ R312 — دورة إثبات السلوك لبطاقات الكلمات (Tool 844) ═══ */
+{
+  const { default: TaskView } = await import("../components/tasks");
+  const { vocabMap, deFormOf } = await import("../lib/content");
+  const { newCard } = await import("../lib/srs");
+  const { loadProgress, saveProgress } = await import("../lib/store");
+  const deck = Object.values(vocabMap).find((item) => item.cards.some((card) => card.id === "v445"))!;
+  const card = deck.cards.find((item) => item.id === "v445")!;
+  const yesterday = new Date(Date.now() - 86_400_000).toISOString();
+  const productiveState = {
+    ...newCard(), reps: 1, prod: 0, stab: 2, diff: 5, interval: 1,
+    introduced: yesterday, last: yesterday, due: yesterday, learning: false,
+  };
+  const updates: { id: string; state: ReturnType<typeof newCard> }[] = [];
+  const task = { id: "tool-844-word-cards", kind: "wortschatz" as const, titleDe: "Word Cards", titleAr: "بطاقات الكلمات", minutes: 10, deckId: deck.id };
+  const props = {
+    task, lang: "ar" as const, day: 1, srs: { [card.id]: productiveState },
+    onSrs: (id: string, state: ReturnType<typeof newCard>) => { updates.push({ id, state }); },
+    onPoints: () => {}, voiceName: "", rate: 1, tempo: "leicht" as const,
+  };
+
+  mount(React.createElement(TaskView, props));
+  const face = rootEl.querySelector('[aria-label="اكشف اللفظ الألماني"]') as HTMLButtonElement | null;
+  ok(!!face && face.getAttribute("aria-expanded") === "false" && txt().includes(card.ar),
+    "R312-1 Tool 844: جولة الإنتاج تبدأ بالمحفز العربي وزر كشف دلالي غير موسع");
+  ok(!txt().includes(deFormOf(card)) && !rootEl.querySelector('[data-testid="wortkarten-bewertung"]'),
+    "R312-2 اللفظ الألماني وأزرار التقييم محجوبة قبل الاسترجاع؛ تمرين المتلازمة لا يسرّب الهدف");
+  ok((rootEl.querySelector('[data-testid="wortkarten-lernziel"]')?.textContent ?? "").includes("قبل الكشف") &&
+    (rootEl.querySelector('[data-testid="wortkarten-datenschutz"]')?.textContent ?? "").includes("لا تُرسل"),
+    "R312-3 هدف الاسترجاع قبل الكشف وحدّ الخصوصية المحلية ظاهران للمتعلم");
+
+  if (face) click(face);
+  const rating = rootEl.querySelector('[data-testid="wortkarten-bewertung"]');
+  ok(txt().includes(deFormOf(card)) && rating?.getAttribute("role") === "group" && !!btn("لم أعرف (0)") && !!btn("بجهد (2)") && !!btn("سهّل! (4)"),
+    "R312-4 الكشف يعرض الهدف وثلاث درجات تقييم ذاتي داخل مجموعة وصولية صريحة");
+  await pruefeA11y("R312-5 بطاقة الإنتاج بعد الكشف وقبل التقييم");
+  click(btn("سهّل! (4)")!);
+  const success = updates.find((entry) => entry.id === card.id);
+  ok(!!success && success.state.reps === 2 && success.state.prod === 1 && new Date(success.state.due).getTime() > Date.now(),
+    "R312-6 النجاح الإنتاجي يحدّث التكرارات وعدّاد الإنتاج وموعد SRS مستقبلياً ثم يتقدم بالطابور");
+
+  saveProgress({ ...emptyProgress, fehler: {} });
+  mount(React.createElement(TaskView, { ...props, onSrs: () => {} }));
+  click(rootEl.querySelector('[aria-label="اكشف اللفظ الألماني"]') as HTMLElement);
+  click(btn("لم أعرف (0)")!);
+  const fehlerWerte = Object.values(loadProgress().fehler ?? {});
+  const produktivFehler = fehlerWerte.find((entry) => entry.richtig === deFormOf(card));
+  ok(!!produktivFehler && produktivFehler.falsch === card.ar,
+    "R312-7 مسار عدم المعرفة يسجل المحفز العربي والهدف الألماني بالاتجاه الصحيح في دفتر الأخطاء");
+  ok((rootEl.querySelector('[data-testid="vocab-queue-count"]')?.textContent ?? "").includes("2") || txt().includes("أنهيت البطاقات"),
+    "R312-8 بعد التقييم لا تبقى البطاقة نفسها عالقة: يتقدم العداد أو تنتهي الدفعة");
+}
+
   console.log(`\n${beste} نجح · ${fehler} فشل`);
   if (fails.length) { console.log("الفاشلون:", fails.join(" | ")); process.exit(1); }
 

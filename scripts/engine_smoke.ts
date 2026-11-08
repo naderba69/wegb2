@@ -33,6 +33,7 @@ import {
   planStundenGesamt,
 } from "../lib/plan";
 import { newCard, reviewCard, isDue, newCardCap, countNewCardsIntroducedToday, karteStufe, abrufbarkeit } from "../lib/srs";
+import { planeWortkarten } from "../lib/wortkarten";
 import { prognose } from "../lib/prognose";
 import { PHONETIK_EINHEITEN } from "../lib/phonetikdaten";
 import { sprechHeute, SPRECH_ZIEL_SEK } from "../lib/sprechziel";
@@ -3441,11 +3442,13 @@ void 0;
     "K143b w-a2-01 ليس مجدولاً افتراضياً لكنه متاحٌ في ورشة الكتابة البديلة ضمن A2 ويمكن اختياره؛ لا يُضاف تلقائياً إلى اليوم");
 
   const taskSrc = readFileSync("components/tasks.tsx", "utf8");
+  const wortkartenSrc = readFileSync("lib/wortkarten.ts", "utf8");
   const classroomSrc = readFileSync("components/akademie/Klassenzimmer.tsx", "utf8");
   const homeSrc = readFileSync("app/page.tsx", "utf8");
-  ok(taskSrc.includes("newCardCap(tempo)") && taskSrc.includes("countNewCardsIntroducedToday(srs, alleVokabelIds)") &&
-    taskSrc.includes("wasIntroducedToday(srs[c.id])") && taskSrc.includes("تُقدَّم المراجعات المستحقّة أولاً") &&
-    taskSrc.includes("pool = [...dueToday, ...pendingToday") && classroomSrc.includes("tempo={progress.settings.tempo}"),
+  ok(taskSrc.includes("newCardCap(tempo)") && taskSrc.includes("planeWortkarten(deck.cards, srs, alleVokabelIds, tempo)") &&
+    wortkartenSrc.includes("countNewCardsIntroducedToday(srs, allCardIds, now)") &&
+    wortkartenSrc.includes("wasIntroducedToday(srs[card.id], now)") && taskSrc.includes("تُقدَّم المراجعات المستحقّة أولاً") &&
+    wortkartenSrc.includes("queue = [...dueToday, ...pendingToday") && classroomSrc.includes("tempo={progress.settings.tempo}"),
     "K143c سقف الجديد يومي وعابر للحزم، المستحق أولاً ثم البطاقة غير المقيمة، ولا يظهر غير المستحق لملء الحصة");
   ok(homeSrc.includes("session-time-note") && homeSrc.includes("totalMinutes") && homeSrc.includes("session.clock.totalMs") &&
     homeSrc.includes('data-testid="session-more"') && homeSrc.includes('data-testid="session-stop-save"') &&
@@ -14545,6 +14548,60 @@ function collectR262(dir: string, out: string[] = []): string[] {
     tool988EvidenceK402.automatedTests.status === "verified" && tool988EvidenceK402.automatedTests.testCases.length >= 8 &&
     tool988EvidenceK402.sourceReview.status === "pending" && tool988EvidenceK402.fieldValidation.status === "pending",
     "K402c Tool 988: ملف الدليل يثبت الاختبار الآلي فقط ويبقي المصدر والتحقق الميداني معلقين بلا ترقية إنتاجية مصطنعة");
+}
+
+/* ═══ K403 — دورة إثبات Tool 844: تخطيط بطاقات الاسترجاع وحدود الدليل ═══ */
+{
+  const nowK403 = new Date("2026-11-04T12:00:00.000Z");
+  const cardsK403 = vocabMap["a1-start"].cards.slice(0, 5);
+  const [dueK403, pendingK403, futureK403, freshAK403, freshBK403] = cardsK403;
+  const stateK403 = (due: string, reps: number, introduced?: string): SrsState => ({
+    ease: 2.5, interval: reps ? 1 : 0, prod: 0, due, reps, lapses: 0, learning: reps === 0, introduced,
+  });
+  const srsK403: Record<string, SrsState> = {
+    [dueK403.id]: stateK403("2026-11-03T12:00:00.000Z", 2, "2026-10-30T12:00:00.000Z"),
+    [pendingK403.id]: stateK403("2026-11-05T12:00:00.000Z", 0, "2026-11-04T08:00:00.000Z"),
+    [futureK403.id]: stateK403("2026-11-05T12:00:00.000Z", 2, "2026-10-30T12:00:00.000Z"),
+  };
+  const planK403 = planeWortkarten(
+    [...cardsK403, dueK403],
+    srsK403,
+    cardsK403.map((card) => card.id),
+    "leicht",
+    nowK403,
+  );
+  const crowdedCardsK403 = vocabMap["a1-start"].cards.slice(0, 11);
+  const crowdedSrsK403 = Object.fromEntries(crowdedCardsK403.map((card, index) => [
+    card.id,
+    index === 10
+      ? stateK403("2026-11-03T12:00:00.000Z", 2, "2026-10-30T12:00:00.000Z")
+      : stateK403("2026-11-05T12:00:00.000Z", 0, "2026-11-04T08:00:00.000Z"),
+  ]));
+  const crowdedPlanK403 = planeWortkarten(crowdedCardsK403, crowdedSrsK403, crowdedCardsK403.map((card) => card.id), "intensiv", nowK403);
+  ok(planK403.queue.map((card) => card.id).join() === [dueK403.id, pendingK403.id, freshAK403.id, freshBK403.id].join() &&
+    planK403.stats.due === 1 && planK403.stats.pending === 1 && planK403.stats.fresh === 2 && planK403.queue.length === 4 &&
+    crowdedPlanK403.queue[0]?.id === crowdedCardsK403[10].id && crowdedPlanK403.queue.length === 10,
+    "K403a Tool 844: المستحق يسبق غير المقيم حتى عند الازدحام ثم الجديد، والمستقبل والتكرار لا يتسللان إلى الدفعة");
+
+  const capSrsK403: Record<string, SrsState> = {
+    g1: stateK403("2026-11-05T12:00:00.000Z", 0, "2026-11-04T07:00:00.000Z"),
+    g2: stateK403("2026-11-05T12:00:00.000Z", 0, "2026-11-04T08:00:00.000Z"),
+    g3: stateK403("2026-11-05T12:00:00.000Z", 0, "2026-11-04T09:00:00.000Z"),
+  };
+  const cappedK403 = planeWortkarten([freshAK403], capSrsK403, ["g1", "g2", "g3", freshAK403.id], "leicht", nowK403);
+  const zeroK403 = planeWortkarten(cardsK403, srsK403, cardsK403.map((card) => card.id), "intensiv", nowK403, 0);
+  ok(cappedK403.queue.length === 0 && cappedK403.stats.introduced === 3 && cappedK403.stats.cap === 3 && zeroK403.queue.length === 0,
+    "K403b Tool 844: نفاد السقف العالمي يمنع بطاقة جديدة، وحد الدفعة صفر يبقى صفراً بلا تجاوز أو إدخال ضمني");
+
+  const evidenceK403 = JSON.parse(readFileSync("evidence/tool-catalog/844-word-cards.json", "utf8")) as {
+    toolId: number; lifecycleStatus: string; automatedTests: { status: string; testCases: { id: string }[] };
+    sourceReview: { status: string }; fieldValidation: { status: string }; privacy: { status: string };
+  };
+  ok(evidenceK403.toolId === 844 && evidenceK403.lifecycleStatus === "partial-evidence" &&
+    evidenceK403.automatedTests.status === "verified" && evidenceK403.automatedTests.testCases.length >= 8 &&
+    evidenceK403.privacy.status === "verified-local-only" && evidenceK403.sourceReview.status === "pending" &&
+    evidenceK403.fieldValidation.status === "pending",
+    "K403c Tool 844: ملف الدليل يثبت السلوك والخصوصية المحلية فقط ويبقي المصدر والتحقق الميداني معلقين بلا ترقية إنتاجية");
 }
 
 
