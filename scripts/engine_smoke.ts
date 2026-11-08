@@ -2150,7 +2150,7 @@ void 0;
       "K115b بوابةُ الوحداتِ تسبقُ المحاكاةَ في البناءِ والعرض، والشرطُ شرطُ المحرّك modulFrei لا زينة");
 
     // K116: «تقدّمي» سلبيةٌ محضة — عشرُ محطاتٍ وصفر رابط
-    const fortMontiert = ["<BerichteZentrum progress={progress} name={activeProfile().name} />", "<WegWeiser progress={progress} />", "<RadarKarte progress={progress} />", "<Fehlerkartei />", "<AbzeichenKarte progress={progress} />", "<GesundheitsWache progress={progress} />", "<LernStrategieZentrum progress={progress} />", "<ElternPaket progress={progress} name={activeProfile().name} />", "<KontraktCard progress={progress} />", "<Wochenplan progress={progress} />"];
+    const fortMontiert = ["<BerichteZentrum progress={progress} name={activeProfile().name} updateProgress={update} />", "<WegWeiser progress={progress} />", "<RadarKarte progress={progress} />", "<Fehlerkartei />", "<AbzeichenKarte progress={progress} />", "<GesundheitsWache progress={progress} />", "<LernStrategieZentrum progress={progress} />", "<ElternPaket progress={progress} name={activeProfile().name} />", "<KontraktCard progress={progress} />", "<Wochenplan progress={progress} />"];
     const fortNao = fortMontiert.filter((m) => !fort.includes(m));
     ok(fortNao.length === 0, "K116a عشرُ محطاتِ إحصاءٍ مركَّبةٌ في «تقدّمي» — ناقص: " + (fortNao.join(" · ") || "لا شيء"));
     const fortHref = [...fort.matchAll(/href="([^"]+)"/g)].map((x) => x[1]);
@@ -14601,6 +14601,20 @@ function collectR262(dir: string, out: string[] = []): string[] {
   ok(lockK341.packages["node_modules/react"]?.version === "19.3.1" &&
     lockK341.packages["node_modules/react-dom"]?.version === "19.3.1",
     "K341c R138: lockfile يثبت React وReact DOM على رقعة 19.3.1 المتوافقة مع النطاق الحالي");
+}
+
+
+/* ═══ K342 — useProgress: no cross-subscriber event from a React state updater ═══ */
+{
+  const storeK342 = readFileSync("lib/store.ts", "utf8");
+  const kalibrierungK342 = readFileSync("components/kalibrierung.tsx", "utf8");
+  const fortschrittK342 = readFileSync("app/fortschritt/page.tsx", "utf8");
+  ok(storeK342.includes("const progressRef = useRef<Progress>(emptyProgress)") &&
+    storeK342.includes("const next = touchStreak(fn(progressRef.current))") &&
+    storeK342.includes("if (!saveProgress(next)) return") &&
+    !storeK342.includes("setProgress((prev) =>") && !kalibrierungK342.includes("useProgress") &&
+    kalibrierungK342.includes("updateProgress((p)") && fortschrittK342.includes("updateProgress={update}"),
+    "K342 الحفظ وإطلاق حدث Progress يحدثان خارج state updater؛ المرجع يحفظ التحديثات المتتالية، والمكوّن الفرعي يستعمل محدث الأب بلا اشتراك متداخل");
 }
 
 

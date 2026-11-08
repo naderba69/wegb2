@@ -201,7 +201,7 @@ async function main() {
   /* ---------- II — Berichte ← Amtsblatt ---------- */
   {
     const { BerichteZentrum } = await import("../components/berichte");
-    mount(React.createElement(BerichteZentrum, { progress: { ...emptyProgress }, name: "سارة النموذج" }));
+    mount(React.createElement(BerichteZentrum, { progress: { ...emptyProgress }, name: "سارة النموذج", updateProgress: () => {} }));
     const hdr = btn("BerichteZentrum");
     ok(!!hdr, "II0 أكورديون التقارير مركّب");
     if (hdr) click(hdr);
@@ -222,7 +222,7 @@ async function main() {
     const srs281: Record<string, object> = {
       "v-x1": { ease: 2.5, interval: 10, due: new Date(jetztMs + 86400000).toISOString(), reps: 3, lapses: 0, stab: 10, diff: 5, last: new Date(jetztMs - 2 * 86400000).toISOString(), introduced: new Date(jetztMs - 30 * 86400000).toISOString() },
     };
-    mount(React.createElement(BerichteZentrum, { progress: { ...emptyProgress, srs: srs281 } as never, name: "سارة النموذج" }));
+    mount(React.createElement(BerichteZentrum, { progress: { ...emptyProgress, srs: srs281 } as never, name: "سارة النموذج", updateProgress: () => {} }));
     const hdr2 = btn("BerichteZentrum");
     if (hdr2) click(hdr2);
     const panel = rootEl.querySelector('[data-testid="retention-panel"]');
@@ -237,6 +237,7 @@ async function main() {
     ok(txt().includes("Selbsttests"), "III1 مركز التشخيص يركّب ويعرض واجهته");
     const { BriefSchmiede } = await import("../components/briefe");
     mount(React.createElement(BriefSchmiede, { progress: { ...emptyProgress } }));
+    await flushAsync();
     ok(txt().length > 50, "III2 مصهر الرسائل يركّب (نص الواجهة موجود)");
     const { SchulSimulator } = await import("../components/schulsim");
     const { MündlichLabor } = await import("../components/muendlich");
@@ -977,7 +978,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
     mods.push(["Pruefung", React.createElement(P.PruefungsZentrum, { progress: p0 })]);
     mods.push(["Arena", React.createElement(A.GrammatikArena, { progress: p0 })]);
     mods.push(["Diktat", React.createElement(D.DiktatBootcamp, { progress: p0 })]);
-    mods.push(["Berichte", React.createElement(B.BerichteZentrum, { progress: p0, name: "سارة" })]);
+    mods.push(["Berichte", React.createElement(B.BerichteZentrum, { progress: p0, name: "سارة", updateProgress: () => {} })]);
     mods.push(["Blitz", React.createElement(Bl.BlitzDrill, { progress: p0 })]);
     mods.push(["Kontrakt", React.createElement(Ko.KontraktCard, { progress: p0 })]);
     const nackt2: string[] = []; const ohneLabel2: string[] = []; const stumm2: string[] = [];
@@ -1683,7 +1684,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
 
     const p0 = { ...emptyProgress, plan: { ...emptyProgress.plan, day: 100 } };
     act(() => { saveProgress(p0); });
-    mount(React.createElement(BerichteZentrum, { progress: p0, name: "سارة النموذج" }));
+    mount(React.createElement(BerichteZentrum, { progress: p0, name: "سارة النموذج", updateProgress: () => {} }));
     let t = txt();
     ok(t.includes("مركز التقارير"), "XLVI3 المركزُ مرسوم");
     const auf = btn("إظهار");
@@ -2118,7 +2119,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
 
     const { BerichteZentrum } = await import("../components/berichte");
     const progFl = { ...emptyProgress, fluenz: [{ datum: "2026-06-15T10:00:00.000Z", wpm: 82, stufe: 3 }] };
-    mount(React.createElement(BerichteZentrum, { progress: progFl as never, name: "سارة النموذج" }));
+    mount(React.createElement(BerichteZentrum, { progress: progFl as never, name: "سارة النموذج", updateProgress: () => {} }));
     const hdrF = btn("BerichteZentrum");
     if (hdrF) click(hdrF);
     const fl = rootEl.querySelector('[data-testid="metrik-fluenz"]');
@@ -2143,7 +2144,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
     const { BerichteZentrum } = await import("../components/berichte");
     const heute284 = new Date().toISOString().slice(0, 10);
     const prog284 = { ...emptyProgress, kompetenzLog: Array.from({ length: 20 }, () => ({ h: "Lesen" as const, ok: true, d: heute284 })) };
-    mount(React.createElement(BerichteZentrum, { progress: prog284 as never, name: "سارة النموذج" }));
+    mount(React.createElement(BerichteZentrum, { progress: prog284 as never, name: "سارة النموذج", updateProgress: () => {} }));
     const hdr284 = btn("BerichteZentrum");
     if (hdr284) click(hdr284);
     const sbEl = rootEl.querySelector('[data-testid="skill-balance"]');
@@ -2276,9 +2277,13 @@ const hasFile = txt().includes("صوتٌ من الدار");
       saveProgress({ ...loadProgress(), srs: { [ersteKarte.id]: { ease: 2.5, interval: 2, due: jetIso, reps: 5, lapses: 3, introduced: jetIso, stab: 2 } } });
     });
     const { KalibrierungPanel } = await import("../components/kalibrierung");
-    mount(React.createElement(KalibrierungPanel, { progress: loadProgress() as never }));
+    mount(React.createElement(KalibrierungPanel, {
+      progress: loadProgress() as never,
+      updateProgress: (fn) => { saveProgress(fn(loadProgress())); },
+    }));
     ok(!!rootEl.querySelector('[data-testid="kalibrierung-panel"]') && txt().includes(ersteKarte.de), "R288e لوحة المعايرة (M4) تعرض البطاقة العنيدة باسمها وزرَّي إصلاحها");
     click(rootEl.querySelector(`[data-testid="ausreisser-reset-${ersteKarte.id}"]`) as HTMLElement);
+    await flushAsync();
     ok(loadProgress().srs[ersteKarte.id] === undefined, "R288f زر «أعد تعلّمها من الصفر» يعيد ضبط حالة البطاقة فعليًا");
   }
 
@@ -2777,7 +2782,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
         2: { firstAttemptActiveMs: 10_000, firstSuccessActiveMs: 120_000, hasStep5: true },
       } },
     };
-    mount(React.createElement(BerichteZentrum, { progress: prog as never, name: "مقياس" }));
+    mount(React.createElement(BerichteZentrum, { progress: prog as never, name: "مقياس", updateProgress: () => {} }));
     const hdr = btn("BerichteZentrum");
     if (hdr) click(hdr);
     ok(!!rootEl.querySelector('[data-testid="metriken-panel"]'), "LXXI1 لوحةُ المقاييسِ الثلاثةِ حاضرة");
@@ -4562,6 +4567,47 @@ const hasFile = txt().includes("صوتٌ من الدار");
   const verstanden = btn("فهمت");
   if (verstanden) click(verstanden);
   ok(!txt().includes("لم يُحفَظ آخر تغيير"), "R310-3 إنذار الحفظ قابل للإغلاق بعد أن يفهمه المستخدم");
+  act(() => { dom.window.localStorage.removeItem(progressKeyActive()); });
+}
+
+/* ═══ R316 — حفظ Progress لا يطلق تحديث مكوّن آخر من داخل state updater ═══ */
+{
+  const { useProgress, saveProgress, loadProgress } = await import("../lib/store");
+  const { progressKeyActive } = await import("../lib/profiles");
+  act(() => { saveProgress({ ...emptyProgress, xp: 0 }); });
+
+  function ProgressSchreiber() {
+    const { progress, ready, update } = useProgress();
+    return React.createElement("div", null,
+      React.createElement("span", { "data-testid": "progress-xp-schreiber" }, ready ? String(progress.xp ?? 0) : "…"),
+      React.createElement("button", { type: "button", onClick: () => update((p) => ({ ...p, xp: (p.xp ?? 0) + 1 })) }, "XP sicher erhöhen"),
+    );
+  }
+  function ProgressSpiegel() {
+    const { progress, ready } = useProgress();
+    return React.createElement("span", { "data-testid": "progress-xp-spiegel" }, ready ? String(progress.xp ?? 0) : "…");
+  }
+
+  mount(React.createElement(React.Fragment, null, React.createElement(ProgressSchreiber), React.createElement(ProgressSpiegel)));
+  await flushAsync();
+  const reactFehler: string[] = [];
+  const consoleErrorVorher = console.error;
+  console.error = (...args: unknown[]) => { reactFehler.push(args.map(String).join(" ")); };
+  try {
+    const erhoehen = btn("XP sicher erhöhen");
+    if (erhoehen) {
+      click(erhoehen);
+      click(erhoehen);
+    }
+  } finally {
+    console.error = consoleErrorVorher;
+  }
+  const schreiberXp = rootEl.querySelector('[data-testid="progress-xp-schreiber"]')?.textContent;
+  const spiegelXp = rootEl.querySelector('[data-testid="progress-xp-spiegel"]')?.textContent;
+  ok(schreiberXp === "2" && spiegelXp === "2" && (loadProgress().xp ?? 0) === 2,
+    "R316-1 تحديثان متتاليان لا يضيعان، ويصلان إلى المشتركين والتخزين بالقيمة نفسها");
+  ok(reactFehler.length === 0,
+    "R316-2 حدث الحفظ المتزامن لا يطلق أي خطأ React ولا يحدّث مشترك useProgress آخر أثناء تصيير المكوّن الكاتب");
   act(() => { dom.window.localStorage.removeItem(progressKeyActive()); });
 }
 

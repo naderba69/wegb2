@@ -1,6 +1,6 @@
 "use client";
 import { lokalesDatum, lokalesDatumPlus } from "./datum";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import {
   emptyProgress,
   type DebtItem,
@@ -202,6 +202,7 @@ export function touchStreak(p: Progress): Progress {
 
 export function useProgress() {
   const [progress, setProgress] = useState<Progress>(emptyProgress);
+  const progressRef = useRef<Progress>(emptyProgress);
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
@@ -209,12 +210,14 @@ export function useProgress() {
     const refresh = () => {
       const sync = loadProgress();
       if (sync !== emptyProgress) {
+        progressRef.current = sync;
         setProgress(sync);
         setReady(true);
         return;
       }
       void loadProgressAsync().then((loaded) => {
         if (!cancelled) {
+          progressRef.current = loaded;
           setProgress(loaded);
           setReady(true);
         }
@@ -229,10 +232,13 @@ export function useProgress() {
   }, []);
 
   const update = useCallback((fn: (p: Progress) => Progress) => {
-    setProgress((prev) => {
-      const next = touchStreak(fn(prev));
-      return saveProgress(next) ? next : prev;
-    });
+    // Persist outside React's state-updater callback. saveProgress emits a synchronous
+    // cross-hook event; emitting it from inside setProgress(prev => …) makes another
+    // useProgress subscriber update while this component is still rendering.
+    const next = touchStreak(fn(progressRef.current));
+    if (!saveProgress(next)) return;
+    progressRef.current = next;
+    setProgress(next);
   }, []);
 
   /** تسجيل نتيجة مهمة — النجاح ≥80% (ومهمةُ التحقق تُغلِق سجلَّ درسِها استقلالاً أو حاجةً) */
@@ -369,6 +375,7 @@ export function useProgress() {
       settings: { ...emptyProgress.settings, ...p.settings },
     }));
     if (!saveProgress(merged)) throw new Error("progress-storage-failed");
+    progressRef.current = merged;
     setProgress(merged);
   }, []);
 
@@ -381,6 +388,7 @@ export function useProgress() {
       }
     } catch { /* progress reset still works if optional timer storage is unavailable */ }
     if (!saveProgress(emptyProgress)) return;
+    progressRef.current = emptyProgress;
     setProgress(emptyProgress);
   }, []);
 

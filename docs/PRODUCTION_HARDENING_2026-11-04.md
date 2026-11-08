@@ -41,4 +41,8 @@ Changes:
 
 The full gate previously ran once for a feature-branch push and again for the pull-request event at the same commit. CI now runs once per pull request and once on `main` after merge. A concurrency group cancels an older run for the same PR/ref, the workflow has read-only repository permission, and the gate job has a 30-minute ceiling. React and React DOM are refreshed in the lockfile from 19.3.0 to the compatible 19.3.1 patch without widening the declared major range. K341 guards this configuration and lock state.
 
+## Progress-store lifecycle (R140)
+
+`useProgress.update` previously called `saveProgress` from inside a functional React state updater. Because saving synchronously broadcasts the progress event, a second subscriber could update while React was still rendering the writer, producing the runtime warning “Cannot update a component while rendering a different component.” Persistence and event delivery now happen outside the state-updater callback, while a synchronized ref preserves sequential updates and the existing save-failure rollback contract. The calibration panel receives its owner’s updater rather than opening a nested subscription. K342 and R316 cover two immediate writes, two subscribers, persistent equality, and absence of the cross-render warning; the complete interactive suite returns with clean stderr.
+
 Acceptance condition: `npm audit --audit-level=moderate` reports zero known vulnerabilities, followed by TypeScript, lint, smoke, interactive DOM, content audit, generator stability, and production build gates.
