@@ -4714,6 +4714,61 @@ const hasFile = txt().includes("صوتٌ من الدار");
   restoreTestTts();
 }
 
+/* ═══ R314 — دورة إثبات السلوك للشرح الذاتي (Tool 202) ═══ */
+{
+  const { LernStrategieZentrum } = await import("../components/lernstrategie");
+  const { grammarMap } = await import("../lib/content");
+  const { levelOf, pickN, rng } = await import("../lib/plan");
+  const { loadProgress, saveProgress } = await import("../lib/store");
+  const day = 1;
+  const startProgress = { ...emptyProgress, plan: { ...emptyProgress.plan, day }, lernen: undefined, xp: 0, kompetenzLog: [] };
+  saveProgress(startProgress);
+  mount(React.createElement(LernStrategieZentrum, { progress: startProgress }));
+  click(btn("LernStrategien-Zentrum")!);
+  click(Array.from(rootEl.querySelectorAll("button")).find((button) => (button.textContent ?? "").includes("فاينمان")) as HTMLElement);
+  await flushAsync();
+
+  const input = rootEl.querySelector('[data-testid="feynman-text"]') as HTMLTextAreaElement;
+  const submit = rootEl.querySelector('[data-testid="feynman-submit"]') as HTMLButtonElement;
+  ok(!!input && input.labels?.length === 1 && submit.disabled,
+    "R314-1 Tool 202: حقل الشرح يحمل تسمية صريحة ولا يقبل إرسال نص أقصر من الحد الأدنى");
+  const privacy = rootEl.querySelector('[data-testid="feynman-datenschutz"]')?.textContent ?? "";
+  ok(privacy.includes("مؤشر تغطية كلمات فقط") && privacy.includes("لا يُحفظ نصك") && privacy.includes("أول محاولة"),
+    "R314-2 حد القياس والحفظ وقاعدة أول محاولة ظاهرة قبل الإرسال");
+
+  const lvl = levelOf(day);
+  const pool = Object.values(grammarMap).filter((topic) => topic.level === lvl && topic.rules.length >= 2);
+  const topic = pickN(pool.length ? pool : Object.values(grammarMap), 1, rng(day * 887 + 13))[0];
+  const explanation = `${topic.rules.map((rule) => rule.ar).join(". ")} مثال من حياتي يوضح استعمال القاعدة.`;
+  typeIn(input, explanation);
+  ok(!submit.disabled, "R314-3 شرح بطول كاف يفتح زر التقييم المحلي");
+  click(submit);
+
+  const result = rootEl.querySelector('[data-testid="feynman-result"]');
+  ok(!!result && (result.textContent ?? "").includes("100٪") && result.getAttribute("role") === "status",
+    "R314-4 الإرسال الأول يقيس النص الحالي مباشرةً ويعرض 100٪؛ لا يسجل الصفر القديم قبل تحديث React");
+  const afterFirst = loadProgress();
+  const lastLog = afterFirst.kompetenzLog?.at(-1);
+  ok(afterFirst.xp === 3 && !!afterFirst.lernen?.tag && !!afterFirst.lernen.feynman?.includes(topic.id) &&
+    lastLog?.h === "Grammatik" && lastLog.ok === true,
+    "R314-5 المحاولة الأولى فقط تسجل الموضوع ونتيجة الكفاءة الصحيحة وتمنح XP الموافق للنتيجة الفعلية");
+  ok(!JSON.stringify(afterFirst).includes(explanation), "R314-6 نص شرح المتعلم لا يدخل ملف التقدم المحلي");
+  ok(input.readOnly && input.value === explanation, "R314-7 النص والنتيجة يتجمدان معاً بعد الإرسال حتى يطلب المتعلم التعديل صراحةً");
+
+  const xpFirst = afterFirst.xp;
+  const logsFirst = afterFirst.kompetenzLog?.length ?? 0;
+  click(rootEl.querySelector('[data-testid="feynman-edit"]') as HTMLElement);
+  const secondSubmit = rootEl.querySelector('[data-testid="feynman-submit"]') as HTMLButtonElement;
+  ok(!secondSubmit.disabled && !!rootEl.querySelector('[data-testid="feynman-already-rated"]'),
+    "R314-8 إعادة الفحص متاحة للتعلم مع تنبيه أن محاولة اليوم سُجلت بالفعل");
+  click(secondSubmit);
+  const afterSecond = loadProgress();
+  ok(afterSecond.xp === xpFirst && (afterSecond.kompetenzLog?.length ?? 0) === logsFirst &&
+    afterSecond.lernen?.feynman?.filter((id) => id === topic.id).length === 1,
+    "R314-9 إعادة الإرسال لا تضخم XP أو سجل الكفاءة أو معرفات الموضوع");
+  await pruefeA11y("R314-10 محطة الشرح الذاتي بعد التقييم وإعادة الفحص");
+}
+
   console.log(`\n${beste} نجح · ${fehler} فشل`);
   if (fails.length) { console.log("الفاشلون:", fails.join(" | ")); process.exit(1); }
 

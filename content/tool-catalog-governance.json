@@ -357,24 +357,32 @@
       "decision": "defer",
       "researchStatus": "citation-label-unverified",
       "productStatus": "candidate-live-implementation",
-      "automatedTestStatus": "not-demonstrated",
+      "automatedTestStatus": "verified",
       "fieldValidationStatus": "not-tested",
       "reviewerRole": "internal-methodology-triage",
       "reviewedAt": "2026-11-06",
       "risk": "medium",
-      "rationaleAr": "توجد الآن محطة فاينمان حية تختار قاعدة من المستوى، وتطلب من المتعلم شرحها بالعربية بكلماته، وتحسب تغطية كلمات القواعد محلياً، وتعرض ما غاب وتتيح التعديل؛ وهي مطابقة مرشحة للشرح الذاتي. الفحص سطحي بالكلمات ولا يتحقق من صحة العلاقات أو يحفظ نص الشرح، ولا يثبت فهماً أو أثراً سببياً.",
+      "rationaleAr": "محطة فاينمان حية تختار موضوعاً من مستوى المتعلم، وتطلب شرحاً عربياً ومثالاً، ثم تعرض مؤشراً محلياً قابلاً للتفسير لتغطية مفردات القواعد. تثبت دورة TC-202-AUTOMATED-01 التطبيع والحالات الموجبة والسالبة والفارغة، وربط نتيجة النص الحالية بسجل الكفاءة، وعدم حفظ النص، وتجميد النتيجة، ومنع تضخيم XP عند إعادة الإرسال، وفحص axe. المؤشر لا يتحقق من صحة العلاقات أو جودة المثال ويمكن التحايل عليه بالنسخ؛ والمصدر والصدق الدلالي والميدان معلقون، لذلك تبقى candidate-live-implementation.",
       "candidateEvidence": [
         "components/lernstrategie.tsx",
         "app/fortschritt/page.tsx",
         "content/grammar.json",
-        "scripts/engine_smoke.ts"
+        "scripts/engine_smoke.ts",
+        "lib/selbsterklaerung.ts",
+        "lib/types.ts",
+        "lib/store.ts",
+        "lib/kompetenz.ts",
+        "scripts/interaktiv_test.tsx",
+        "evidence/tool-catalog/202-self-explanation-coverage.json"
       ],
       "relatedIds": [
         186,
         264,
         540,
         849
-      ]
+      ],
+      "evidenceCycle": "TC-202-AUTOMATED-01",
+      "productionEvidence": "evidence/tool-catalog/202-self-explanation-coverage.json"
     },
     "203": {
       "classification": "instructional-design",

@@ -540,6 +540,8 @@ export interface Progress {
     tag: string;
     teile?: string[];
     pomoHeute?: number;
+    /** موضوعات شرح فاينمان التي سُجلت محاولتها الأولى اليوم؛ يمنع تضخيم XP بإعادة الإرسال. */
+    feynman?: string[];
   };
   /** الوحدة X — BlitzDrill: أفضل نتيجة إصابات لكل رقعة (اختياري — بلا ترحيل) */
   blitz?: Record<string, number>;
