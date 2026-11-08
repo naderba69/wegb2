@@ -13831,14 +13831,15 @@ function collectR262(dir: string, out: string[] = []): string[] {
     "K293 الحياة في ألمانيا: 12+ بطاقة مؤسسات بعبارات جاهزة وبطاقة الاعتراف التمريضي كاملة المسارات، و16 تعبير شارع بسياقه — توجيه لا استشارة قانونية");
 }
 
-// ===== K294 (R201 · CI): .github/workflows/ci.yml fährt alle Tore bei jedem
-// Push/PR — tsc, smoke, interaktiv, audit, build. Das Fehlen von CI war ein
-// dokumentierter Mangel; die Datei selbst ist hiermit quellengeprüft. =====
+// ===== K294 (R201 · CI): .github/workflows/ci.yml fährt alle Tore einmal pro
+// Pull Request und erneut nach dem Merge auf main — tsc, smoke, interaktiv,
+// audit, build. Das Fehlen von CI war ein dokumentierter Mangel. =====
 {
   const ci = existsSync(".github/workflows/ci.yml") ? readFileSync(".github/workflows/ci.yml", "utf8") : "";
   ok(ci.includes("tsc --noEmit") && ci.includes("npm run smoke") && ci.includes("npm run interaktiv") &&
-     ci.includes("npm run audit:content") && ci.includes("npm run build") && ci.includes("pull_request"),
-    "K294 بوابة CI موجودة وتشغّل البوابات الخمس كلّها على الدفع وطلبات السحب — لا اعتماد على ذاكرة بشرية");
+     ci.includes("npm run audit:content") && ci.includes("npm run build") && ci.includes("pull_request") &&
+     ci.includes("branches:") && ci.includes("- main"),
+    "K294 بوابة CI تشغّل البوابات الخمس لكل طلب سحب ثم على main بعد الدمج — لا اعتماد على ذاكرة بشرية ولا تشغيل مزدوج لفروع PR");
 }
 
 // ===== K295 (R202 · Offline-Voll-Download): Manifest wird aus public/audio
@@ -14584,6 +14585,22 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const leerNachherK340 = todayStepStatuses(nurAbrufK340, () => true, () => false);
   ok(leerVorherK340.get(2) === "locked" && leerNachherK340.get(2) === "done",
     "K340f R137: المحطة الفارغة لا ترفع التقدم قبل أوانها؛ تُعد متجاوزة فقط بعد تسليم المحطة السابقة");
+}
+
+
+/* ═══ K341 — R138: CI إنتاجي مفرد ومحدود الصلاحية + قفل React المصحح ═══ */
+{
+  const ciK341 = readFileSync(".github/workflows/ci.yml", "utf8");
+  const lockK341 = JSON.parse(readFileSync("package-lock.json", "utf8")) as { packages: Record<string, { version?: string }> };
+  ok(ciK341.includes("push:\n    branches:\n      - main") && ciK341.includes("pull_request:") &&
+    ciK341.includes("group: ci-${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}") &&
+    ciK341.includes("cancel-in-progress: true"),
+    "K341a R138: الـCI الثقيل يعمل مرة لكل PR ثم على main، ويلغي التشغيل الأقدم لنفس المرجع بدل مضاعفة الدقائق");
+  ok(ciK341.includes("permissions:\n  contents: read") && ciK341.includes("timeout-minutes: 30"),
+    "K341b R138: صلاحية CI للقراءة فقط وله مهلة صريحة تمنع التشغيل العالق بلا سقف");
+  ok(lockK341.packages["node_modules/react"]?.version === "19.3.1" &&
+    lockK341.packages["node_modules/react-dom"]?.version === "19.3.1",
+    "K341c R138: lockfile يثبت React وReact DOM على رقعة 19.3.1 المتوافقة مع النطاق الحالي");
 }
 
 
