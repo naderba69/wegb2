@@ -38,6 +38,39 @@ let scrollHits: string[] = [];
 };
 
 const g = globalThis as unknown as Record<string, unknown>;
+const gesprocheneTtsTexte: string[] = [];
+class TestSpeechSynthesisUtterance {
+  text: string;
+  lang = "";
+  rate = 1;
+  pitch = 1;
+  voice: null = null;
+  onend: (() => void) | null = null;
+  onerror: (() => void) | null = null;
+  constructor(text: string) { this.text = text; }
+}
+function installiereTestTts(): () => void {
+  const speechDescriptor = Object.getOwnPropertyDescriptor(dom.window, "speechSynthesis");
+  const utteranceVorher = g.SpeechSynthesisUtterance;
+  Object.defineProperty(dom.window, "speechSynthesis", {
+    configurable: true,
+    value: {
+      getVoices: () => [],
+      cancel: () => undefined,
+      speak: (utterance: TestSpeechSynthesisUtterance) => {
+        gesprocheneTtsTexte.push(utterance.text);
+        utterance.onend?.();
+      },
+    },
+  });
+  g.SpeechSynthesisUtterance = TestSpeechSynthesisUtterance;
+  return () => {
+    if (speechDescriptor) Object.defineProperty(dom.window, "speechSynthesis", speechDescriptor);
+    else delete (dom.window as unknown as Record<string, unknown>).speechSynthesis;
+    if (utteranceVorher === undefined) delete g.SpeechSynthesisUtterance;
+    else g.SpeechSynthesisUtterance = utteranceVorher;
+  };
+}
 for (const key of [
   "window", "document", "navigator", "localStorage", "HTMLElement", "HTMLInputElement", "HTMLTextAreaElement",
   "Element", "Node", "Event", "KeyboardEvent", "MouseEvent", "getComputedStyle", "requestAnimationFrame", "cancelAnimationFrame",
@@ -2037,6 +2070,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
 
   /* ═══════════ R282 — A5 صوتيات تفاعلية + A9 قفل وضع الامتحان ═══════════ */
   {
+    const restoreTestTts = installiereTestTts();
     const { PhonetikStation } = await import("../components/phonetik");
     mount(React.createElement(PhonetikStation, {}));
     ok(!!rootEl.querySelector('[data-testid="phonetik-station"]') && txt().includes("طول الحركة"), "R282a محطة الصوتيات تُرسم بوحداتها المتدرجة");
@@ -2060,6 +2094,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
     ok(!!abgabe, "R282g زر التسليم يفتح المراجعة");
     if (abgabe) click(abgabe);
     ok(!!btn("أظهر النص"), "R282h بعد التسليم يُفتح النص للمراجعة");
+    restoreTestTts();
   }
 
   /* ═══════════ R283 — M12 شارة الجنس + A18 خريطة + A11 كتابة عملية + A3 عرض الطلاقة ═══════════ */
@@ -4616,6 +4651,67 @@ const hasFile = txt().includes("صوتٌ من الدار");
     "R312-7 مسار عدم المعرفة يسجل المحفز العربي والهدف الألماني بالاتجاه الصحيح في دفتر الأخطاء");
   ok((rootEl.querySelector('[data-testid="vocab-queue-count"]')?.textContent ?? "").includes("2") || txt().includes("أنهيت البطاقات"),
     "R312-8 بعد التقييم لا تبقى البطاقة نفسها عالقة: يتقدم العداد أو تنتهي الدفعة");
+}
+
+/* ═══ R313 — دورة إثبات السلوك للتباينات الصوتية (Tool 232) ═══ */
+{
+  const restoreTestTts = installiereTestTts();
+  const { PhonetikStation } = await import("../components/phonetik");
+  mount(React.createElement(PhonetikStation));
+  const privacy = rootEl.querySelector('[data-testid="phonetik-datenschutz"]')?.textContent ?? "";
+  ok(txt().includes("ليست كل مجموعة زوجًا أدنى") && privacy.includes("لا تستخدم المحطة الميكروفون") && privacy.includes("لا تحفظ") && privacy.includes("لا ترسل"),
+    "R313-1 Tool 232: حد المصطلح وحدود الميكروفون والحفظ والإرسال ظاهرة بلا ادعاء أزواج دنيا أو خصوصية مبهم");
+
+  const auslautTest = rootEl.querySelector('[data-testid="phonetik-test-ph-a0-auslaut"]') as HTMLButtonElement;
+  const auslautHint = rootEl.querySelector('[data-testid="phonetik-test-hinweis-ph-a0-auslaut"]')?.textContent ?? "";
+  ok(auslautTest.disabled && auslautHint.includes("يتطابق نطق الشكلين") && auslautHint.includes("بلا سياق"),
+    "R313-2 زوجا Rad/Rat المتطابقان سمعياً لا يتحولان إلى سؤال اختيار مستحيل، والسبب ظاهر للمتعلم");
+
+  const a1Filter = Array.from(rootEl.querySelectorAll("button")).find((button) => button.textContent?.trim() === "A1") as HTMLButtonElement;
+  click(a1Filter);
+  ok(a1Filter.getAttribute("aria-pressed") === "true" && txt().includes("الأوملاوت") && !txt().includes("طول الحركة"),
+    "R313-3 مرشح المستوى يحمل aria-pressed ويعرض وحدات A1 دون وحدات A0");
+  const alleFilter = Array.from(rootEl.querySelectorAll("button")).find((button) => button.textContent?.trim() === "الكل") as HTMLButtonElement;
+  click(alleFilter);
+
+  const originalRandom = Math.random;
+  const startGesprochen = gesprocheneTtsTexte.length;
+  try {
+    const zufall = [0, 0];
+    Math.random = () => zufall.shift() ?? 0;
+    click(rootEl.querySelector('[data-testid="phonetik-test-ph-a0-laenge"]') as HTMLElement);
+  } finally {
+    Math.random = originalRandom;
+  }
+  const antwortA = rootEl.querySelector('[data-testid="phonetik-antwort-a"]') as HTMLButtonElement;
+  const antwortB = rootEl.querySelector('[data-testid="phonetik-antwort-b"]') as HTMLButtonElement;
+  const promptFeedback = rootEl.querySelector('[data-testid="phonetik-quiz-feedback"]');
+  ok(gesprocheneTtsTexte.length === startGesprochen + 1 && gesprocheneTtsTexte.at(-1) === "Stadt" &&
+    antwortA.textContent === "Stadt" && antwortB.textContent === "Staat" && promptFeedback?.getAttribute("role") === "status",
+    "R313-4 الجولة الحتمية تنطق الهدف المختار وتعرض خياري الزوج مع منطقة status");
+
+  click(antwortB);
+  const firstFeedback = rootEl.querySelector('[data-testid="phonetik-quiz-feedback"]')?.textContent ?? "";
+  ok(firstFeedback.includes("كانت «Stadt»") && firstFeedback.includes("0/1") && antwortA.disabled && antwortB.disabled,
+    "R313-5 مسار الخطأ يكشف الكلمة الصحيحة ويقفل الإجابة كي لا تتضاعف المحاولة");
+  click(antwortB);
+  ok((rootEl.querySelector('[data-testid="phonetik-quiz-feedback"]')?.textContent ?? "").includes("0/1"),
+    "R313-6 النقر المكرر بعد الإجابة لا يرفع المقام أو يغيّر الدرجة");
+
+  try {
+    const zufall = [0, 0.9];
+    Math.random = () => zufall.shift() ?? 0;
+    click(rootEl.querySelector('[data-testid="phonetik-test-ph-a0-laenge"]') as HTMLElement);
+  } finally {
+    Math.random = originalRandom;
+  }
+  const secondB = rootEl.querySelector('[data-testid="phonetik-antwort-b"]') as HTMLButtonElement;
+  ok(gesprocheneTtsTexte.at(-1) === "Staat" && !secondB.disabled, "R313-7 سؤال جديد يعيد فتح الاختيار وينطق الجهة الجديدة من الزوج");
+  click(secondB);
+  ok((rootEl.querySelector('[data-testid="phonetik-quiz-feedback"]')?.textContent ?? "").includes("1/2"),
+    "R313-8 المسار الصحيح يراكم نجاحاً واحداً من محاولتين دون حفظ نتيجة خارج حالة الجلسة");
+  await pruefeA11y("R313-9 محطة التباينات بعد مساري الخطأ والصواب");
+  restoreTestTts();
 }
 
   console.log(`\n${beste} نجح · ${fehler} فشل`);

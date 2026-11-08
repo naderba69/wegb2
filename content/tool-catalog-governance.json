@@ -985,20 +985,26 @@
       "decision": "defer",
       "researchStatus": "citation-label-unverified",
       "productStatus": "candidate-live-implementation",
-      "automatedTestStatus": "not-demonstrated",
+      "automatedTestStatus": "verified",
       "fieldValidationStatus": "not-tested",
       "reviewerRole": "internal-methodology-triage",
       "reviewedAt": "2026-11-05",
       "risk": "medium",
-      "rationaleAr": "توجد محطة صوتيات حية بأزواج دنيا واختبار تمييز سمعي معلن يعتمد TTS ولا يدعي تقييم النطق؛ يلزم تدقيق الأزواج صوتياً ولغوياً واختبار اختلاف أصوات الأجهزة قبل اعتماد سجل الكتالوج.",
+      "rationaleAr": "محطة حية لثماني وحدات A0–A2 تعرض تباينات صوتية ونطق الجهاز وأسئلة تمييز سمعي قابلة للحسم بلا ميكروفون أو حفظ. تثبت دورة TC-232-AUTOMATED-01 اختيار الهدف، ومساري الصواب والخطأ، ومنع احتساب الإجابة المكررة، واستبعاد أزواج جهر النهاية المتطابقة سمعياً، وحد المصطلح والخصوصية وفحص axe. لا تُعد كل المجموعات أزواجاً دنيا صارمة، ولا توثق الدورة جودة أصوات الأجهزة أو أثراً تعليمياً؛ والمصدر والتدقيق الصوتي والميدان معلقون، لذلك تبقى candidate-live-implementation.",
       "candidateEvidence": [
         "lib/phonetikdaten.ts",
         "components/phonetik.tsx",
-        "scripts/interaktiv_test.tsx"
+        "scripts/interaktiv_test.tsx",
+        "lib/minimalpaare.ts",
+        "lib/speech.ts",
+        "scripts/engine_smoke.ts",
+        "evidence/tool-catalog/232-auditory-contrast-pairs.json"
       ],
       "relatedIds": [
         341
-      ]
+      ],
+      "evidenceCycle": "TC-232-AUTOMATED-01",
+      "productionEvidence": "evidence/tool-catalog/232-auditory-contrast-pairs.json"
     },
     "233": {
       "classification": "elicitation-technique",
