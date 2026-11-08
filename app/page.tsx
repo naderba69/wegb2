@@ -12,7 +12,7 @@ import { grammarMap } from "@/lib/content";
 import { ritualUrteil, aufgabeGesperrt } from "@/lib/ritual";
 import { KindIcon } from "@/components/dirb/icons";
 import TodayStepper from "@/components/akademie/TodayStepper";
-import { todayStepOf } from "@/lib/today-steps";
+import { todayStepOf, todayStepStatuses } from "@/lib/today-steps";
 import { TodayB2Praxis } from "@/components/today-b2-praxis";
 import { stationOfTask, STATIONEN } from "@/components/stationen";
 import { LernPfad } from "@/components/lernpath";
@@ -168,7 +168,22 @@ export default function Today() {
   const resultOf = (id: string) => progress.plan.tasks[id];
   // 🔐 بوابة الجلسة: الجديد لا يُرى قبل تسليم الاسترجاع (lib/ritual.ts)
   const ritual = ritualUrteil(plan, progress);
-  const stepFrei = aufgabeGesperrt(ritual, step) ? Math.max(0, ritual.ersteFreie - 1) : step;
+  const stationsStatus = todayStepStatuses(
+    plan.tasks,
+    (task) => !!resultOf(task.id),
+    (index) => aufgabeGesperrt(ritual, index),
+  );
+  const angeforderterSchritt = Math.min(Math.max(step, 0), Math.max(plan.tasks.length - 1, 0));
+  const angeforderteAufgabe = plan.tasks[angeforderterSchritt];
+  const angeforderteStationGesperrt = angeforderteAufgabe
+    ? stationsStatus.get(todayStepOf(angeforderteAufgabe)) === "locked"
+    : false;
+  const ersteAktiveAufgabe = plan.tasks.findIndex((task) =>
+    stationsStatus.get(todayStepOf(task)) === "active" && !resultOf(task.id));
+  // A position saved by an older release must not reopen a now-locked station.
+  const stepFrei = angeforderteStationGesperrt && ersteAktiveAufgabe >= 0
+    ? ersteAktiveAufgabe
+    : angeforderterSchritt;
   const localOf = (id: string) => points[id] ?? { score: 0, total: 0 };
   const totalMinutes = plan.tasks.reduce((acc, tk) => acc + tk.minutes, 0);
   const zielMin = session.clock.goalMinutes || plan.zielMin;
@@ -181,7 +196,6 @@ export default function Today() {
   // الخطوة الحالية هي الوحيدة في بطاقة المقدمة.
   const held = plan.tasks[stepFrei] ?? plan.tasks[0];
   const heldFertig = held ? !!resultOf(held.id) : false;
-  const heldBestanden = held ? !!resultOf(held.id)?.passed : false;
   const allTodayDone = plan.tasks.length > 0 && plan.tasks.every((task) => !!resultOf(task.id));
   // سبب الاختيار بلغة بسيطة، مع إبقاء معنى الاسترجاع والتحقق المستقل.
   const heldGrund = !held
@@ -233,8 +247,11 @@ export default function Today() {
     }
     session.start();
     setSessionSaved(false);
-    if (heldBestanden) {
-      const next = plan.tasks.findIndex((task, i) => !resultOf(task.id)?.passed && !aufgabeGesperrt(ritual, i));
+    if (heldFertig) {
+      const next = plan.tasks.findIndex((task, i) =>
+        !resultOf(task.id) &&
+        !aufgabeGesperrt(ritual, i) &&
+        stationsStatus.get(todayStepOf(task)) !== "locked");
       if (next >= 0) setStep(next);
     }
     document.getElementById("dirb-training")?.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -335,7 +352,20 @@ export default function Today() {
       const pct = Math.round((local.score / local.total) * 100);
       saveExam(day, pct, pct >= 80);
     }
-    if (step < plan.tasks.length - 1) setStep(step + 1);
+    const aktuelleStation = todayStepOf(task);
+    let naechsterIndex = plan.tasks.findIndex((kandidat) =>
+      kandidat.id !== task.id && !resultOf(kandidat.id) && todayStepOf(kandidat) === aktuelleStation);
+    if (naechsterIndex < 0) {
+      const spaetereOffeneStationen = plan.tasks
+        .filter((kandidat) => kandidat.id !== task.id && !resultOf(kandidat.id) && todayStepOf(kandidat) > aktuelleStation)
+        .map(todayStepOf);
+      const naechsteStation = spaetereOffeneStationen.length > 0 ? Math.min(...spaetereOffeneStationen) : null;
+      if (naechsteStation !== null) {
+        naechsterIndex = plan.tasks.findIndex((kandidat) =>
+          kandidat.id !== task.id && !resultOf(kandidat.id) && todayStepOf(kandidat) === naechsteStation);
+      }
+    }
+    if (naechsterIndex >= 0) setStep(naechsterIndex);
   };
 
   // R309: القفل الفعلي — فتحٌ مباشر لبوّابة الامتحان بدل الإغلاق المحظور، مع تمرير واضح إليها
@@ -479,15 +509,13 @@ export default function Today() {
               ? "راجع نهاية اليوم"
               : goalReached && !session.running
                 ? "اختر المتابعة أو الحفظ"
-                : heldBestanden
+                : heldFertig
                   ? "ابدأ الخطوة التالية"
-                  : heldFertig
-                    ? "حاول مرة أخرى"
-                    : session.running
-                      ? "تابع التعلّم"
-                      : session.clock.totalMs > 0
-                        ? "تابع الجلسة"
-                        : "ابدأ جلسة 90 دقيقة"}
+                  : session.running
+                    ? "تابع التعلّم"
+                    : session.clock.totalMs > 0
+                      ? "تابع الجلسة"
+                      : "ابدأ جلسة 90 دقيقة"}
             <span aria-hidden>←</span>
           </button>
         </section>
@@ -609,7 +637,9 @@ export default function Today() {
         </summary>
         <div className="dirb-minis" role="list" aria-label="مهام اليوم">
           {plan.tasks.map((tk, i) => {
-            const gesperrt = aufgabeGesperrt(ritual, i);
+            const ritualGesperrt = aufgabeGesperrt(ritual, i);
+            const stationGesperrt = stationsStatus.get(todayStepOf(tk)) === "locked";
+            const gesperrt = ritualGesperrt || stationGesperrt;
             const fertig = !!resultOf(tk.id);
             const jetzt = i === stepFrei;
             return (
@@ -622,7 +652,7 @@ export default function Today() {
                   data-testid={`held-mini-${i}`}
                   className={"dirb-mini" + (jetzt ? " dirb-mini-jetzt" : "") + (fertig ? " dirb-mini-fertig" : "")}
                   onClick={() => springeZu(i)}
-                  aria-label={`${SKILL_AR[tk.kind] ?? tk.kind} — ${tk.minutes} دقائق${gesperrt ? " (مقفولة: سلِّم الاسترجاع أولاً)" : fertig ? (progress.schriftlich?.[tk.id] ? " (مسلَّمة كتابياً — إنجاز لا نطق)" : " (مسلَّمة)") : ""}`}
+                  aria-label={`${SKILL_AR[tk.kind] ?? tk.kind} — ${tk.minutes} دقائق${gesperrt ? ritualGesperrt ? " (مقفولة: سلِّم الاسترجاع أولاً)" : " (مقفولة: سلِّم مهام المحطة السابقة أولاً)" : fertig ? (progress.schriftlich?.[tk.id] ? " (مسلَّمة كتابياً — إنجاز لا نطق)" : " (مسلَّمة)") : ""}`}
                 >
                   <KindIcon kind={tk.kind} className="dirb-mini-icon" />
                   <span className="dirb-mini-skill">
@@ -661,6 +691,10 @@ export default function Today() {
           stepFrei={stepFrei}
           setStep={setStep}
           ritual={ritual}
+          stationGesperrt={(index) => {
+            const task = plan.tasks[index];
+            return !!task && stationsStatus.get(todayStepOf(task)) === "locked";
+          }}
           resultOf={resultOf}
           localOf={localOf}
           onPoints={onPoints}

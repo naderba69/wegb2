@@ -6,7 +6,8 @@
 #
 # Geprueft wird pro Datei: Dekodierbarkeit, Dauer, Zeichen-Tempo gegen den
 # Banktext, Stille-Anteil, laengstes Stille-Loch, An-/Abklang, Peak, RMS,
-# Clipping. Schwellen wie R169; die Stille-Regel des Projekts bleibt:
+# Clipping sowie explizite Platzhaltermarker und identische dekodierte PCM-
+# Aufnahmen hinter verschiedenen Dateien. Schwellen wie R169; die Stille-Regel:
 # geflaggt wird nur Stille-Anteil > 0.65 oder ein Loch > 4.0 s.
 # Ehrlichkeitsgrenze: Das ist eine MASCHINELLE Messung (Vollstaendigkeit/
 # Hoerbarkeit/Tempo). Kein menschliches Anhoeren, kein Aussprache-/
@@ -18,7 +19,7 @@
 # Der Wrapper installiert die exakt gepinnten Versionen aus requirements-audio-qc.txt.
 # Schreibt den datierten Vollbericht; Smoke/Repository-Audit pinnen Bericht und Bestand,
 # Abdeckung (jede MP3 auf der Platte genau einmal) und Anomalienzahl.
-import json, math, os, statistics, sys
+import hashlib, json, math, os, statistics, sys
 import miniaudio
 import numpy as np
 
@@ -142,12 +143,14 @@ def analysiere(pfad):
         abklang = ((nf - 1 - idx[-1]) * FENSTER_S) if len(idx) else dauer
     else:
         laengste_s, anklang, abklang = dauer, dauer, dauer
-    return dauer, peak, rms_db, still_anteil, clip_anteil, anklang, abklang, laengste_s
+    pcm_sha256 = hashlib.sha256(mono.astype(np.int16).tobytes()).hexdigest()
+    ist_placeholder = b"placeholder" in roh.lower()
+    return dauer, peak, rms_db, still_anteil, clip_anteil, anklang, abklang, laengste_s, pcm_sha256, ist_placeholder
 
 
 def main():
     meta = texte_und_stimmen()
-    dateien, anomalien = [], []
+    dateien = []
     abdeckung_fehlt = []
     for gruppe, (verz, soll) in GRUPPEN_DATEIEN.items():
         pfad_verz = os.path.join(ROOT, "public", "audio", verz)
@@ -162,10 +165,13 @@ def main():
             schw = SCHWELLEN[gruppe]
             fehler = []
             try:
-                dauer, peak, rms_db, still, clipA, anklang, abklang, loch = analysiere(pfad)
+                dauer, peak, rms_db, still, clipA, anklang, abklang, loch, pcm_sha256, ist_placeholder = analysiere(pfad)
             except Exception as ex:  # Dekodierfehler ist ein Befund, kein Absturz
                 dauer, peak, rms_db, still, clipA, anklang, abklang, loch = 0, 0, -99, 1, 0, 0, 0, 0
+                pcm_sha256, ist_placeholder = "", False
                 fehler.append("dekodierung:" + type(ex).__name__)
+            if ist_placeholder:
+                fehler.append("placeholder")
             zeichen = len(text)
             cps = zeichen / dauer if dauer else 0.0
             if dauer < schw["minDauerS"]: fehler.append("dauer")
@@ -183,9 +189,25 @@ def main():
                  "zeichenProSekunde": round(cps, 2), "peak": round(peak, 3), "rmsDb": round(rms_db, 1),
                  "stilleAnteil": round(still, 3), "laengsteStilleS": round(loch, 2),
                  "clipAnteil": round(clipA, 5), "anklangS": round(anklang, 2), "abklangS": round(abklang, 2),
-                 "ok": not fehler, "fehler": fehler}
+                 "ok": not fehler, "fehler": fehler, "_pcmSha256": pcm_sha256}
             dateien.append(e)
-            if fehler: anomalien.append(e)
+
+    # Different learning content must not hide the same decoded recording behind
+    # renamed files or ID3 tags. This catches placeholders that level/tempo checks miss.
+    nach_pcm = {}
+    for e in dateien:
+        if e["_pcmSha256"]:
+            nach_pcm.setdefault(e["_pcmSha256"], []).append(e)
+    for gleiche in nach_pcm.values():
+        if len(gleiche) > 1:
+            for e in gleiche:
+                if "audio-duplikat" not in e["fehler"]:
+                    e["fehler"].append("audio-duplikat")
+                    e["ok"] = False
+    for e in dateien:
+        e.pop("_pcmSha256", None)
+    anomalien = [e for e in dateien if not e["ok"]]
+
     gruppen = {}
     for gruppe in GRUPPEN_DATEIEN:
         g = [e for e in dateien if e["gruppe"] == gruppe]
@@ -196,14 +218,14 @@ def main():
             "stilleMedian": round(statistics.median(e["stilleAnteil"] for e in g), 3) if g else 0,
         }
     bericht = {
-        "werkzeug": "scripts/audio_qc_all.py (miniaudio-Dekodierung, 16-bit PCM, numpy; Schwellen wie R169, Stille-Regel 0.65/4.0s)",
+        "werkzeug": "scripts/audio_qc_all.py (miniaudio-Dekodierung, 16-bit PCM, numpy; Platzhalter-/PCM-Duplikatprüfung; Schwellen wie R169, Stille-Regel 0.65/4.0s)",
         "datum": DATUM,
         "gegenstand": "Manifestgebundener Audio-Bestand: public/audio/{dialog,diktat,hoeren,hoerneu,sprichwort} — jede MP3 genau einmal geprueft (R272); Grammatik-Audio bleibt mangels Text-/Voice-Manifest ausserhalb dieses Urteils.",
         "schwellen": SCHWELLEN,
         "abdeckung": {"dateienGeprueft": len(dateien), "luecken": abdeckung_fehlt},
         "gruppen": gruppen,
         "anomalienGesamt": len(anomalien),
-        "grenzEhrlichkeit": "Maschinelle QC: Dekodierbarkeit, Vollständigkeit, Stille, Pegel/Clipping und Tempo gegen den aktuellen Banktext oder eine dokumentierte Textmomentaufnahme vom Aufnahmezeitpunkt. Kein menschliches Anhören und kein Aussprache-/Natürlichkeitsurteil; eine Textmomentaufnahme behauptet nicht, dass das Audio die später erweiterte Lesefassung abdeckt.",
+        "grenzEhrlichkeit": "Maschinelle QC: Dekodierbarkeit, Vollständigkeit, Platzhalter/identische PCM-Aufnahmen, Stille, Pegel/Clipping und Tempo gegen den aktuellen Banktext oder eine dokumentierte Textmomentaufnahme vom Aufnahmezeitpunkt. Kein menschliches Anhören und kein Aussprache-/Natürlichkeitsurteil; eine Textmomentaufnahme behauptet nicht, dass das Audio die später erweiterte Lesefassung abdeckt.",
         "dateien": dateien,
     }
     out = os.path.join(ROOT, "docs", f"audio-qc-all-{DATUM}.json")

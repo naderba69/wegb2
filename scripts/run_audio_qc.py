@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import json
 import os
 from pathlib import Path
 import subprocess
@@ -21,11 +22,31 @@ def env_python() -> Path:
     return ENV_DIR / "bin" / "python"
 
 
+def pinned_requirements() -> dict[str, str]:
+    pinned: dict[str, str] = {}
+    for raw_line in REQUIREMENTS.read_text(encoding="utf-8").splitlines():
+        line = raw_line.strip()
+        if not line or line.startswith("#"):
+            continue
+        package, separator, version = line.partition("==")
+        if not separator or not package or not version:
+            raise ValueError(f"audio QC requirement must be pinned with ==: {line!r}")
+        pinned[package] = version
+    return pinned
+
+
 def dependencies_ready(python: Path) -> bool:
     if not python.exists():
         return False
+    expected = pinned_requirements()
+    probe_code = (
+        "import importlib.metadata as metadata, json; "
+        f"expected = json.loads({json.dumps(json.dumps(expected))}); "
+        "actual = {name: metadata.version(name) for name in expected}; "
+        "raise SystemExit(0 if actual == expected else 1)"
+    )
     probe = subprocess.run(
-        [str(python), "-c", "import miniaudio, numpy"],
+        [str(python), "-c", probe_code],
         stdout=subprocess.DEVNULL,
         stderr=subprocess.DEVNULL,
     )
@@ -35,7 +56,7 @@ def dependencies_ready(python: Path) -> bool:
 def main() -> int:
     python = env_python()
     if not dependencies_ready(python):
-        print("audio:qc: preparing isolated tool environment in .cache/audio-qc-venv")
+        print("audio:qc: preparing isolated tool environment in .cache/audio-qc-venv", flush=True)
         if not python.exists():
             venv.EnvBuilder(with_pip=True, clear=False).create(ENV_DIR)
         subprocess.run(

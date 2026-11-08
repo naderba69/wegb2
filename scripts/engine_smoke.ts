@@ -130,7 +130,7 @@ import {
 } from "../lib/metriken";
 import { buildModulPruefung, bewerte, darfWiederholen, modulFrei, tagGesperrt, rettungsplan } from "../lib/modulpruefung";
 import { emptyProgress, TOTAL_DAYS, CURRICULUM_SCHEDULE_VERSION, type SrsState, type Tempo } from "../lib/types";
-import { groupTasksByTodayStep, todayStepOf, todayTaskSubmitted } from "../lib/today-steps";
+import { groupTasksByTodayStep, todayStepOf, todayStepStatuses, todayTaskSubmitted } from "../lib/today-steps";
 import { parsePitfallContrast } from "../lib/pitfall";
 import { lessonSceneFor } from "../lib/lesson-scene";
 import { CURRICULUM_SECTIONS, buildCurriculumDay } from "../lib/curriculum";
@@ -1972,7 +1972,7 @@ void 0;
     ok(alleLerntage.every((d) => ritualUrteil(buildDay(d, P), P).aktiv), "K64i كلُّ أيامِ التعلُّمِ والتثبيتِ في أوّلِ شهرين لها بوابةٌ فعلاً (60 يوماً مفحوصة)");
     const seite = require("fs").readFileSync("app/page.tsx", "utf8");
     const klass = require("fs").readFileSync("components/akademie/Klassenzimmer.tsx", "utf8");
-    ok(/<Klassenzimmer/.test(seite) && /data-testid="ritual-sperre"/.test(klass) && /aufgabeGesperrt\(ritual, i\)/.test(klass) && /stepFrei/.test(klass),
+    ok(/<Klassenzimmer/.test(seite) && /data-testid="ritual-sperre"/.test(klass) && /istGesperrt\(i\)/.test(klass) && /stationGesperrt/.test(klass) && /stepFrei/.test(klass),
       "K64j شاشةُ اليومِ تركّبُ Klassenzimmer الحاملةَ للحكم: لافتةُ قفلٍ حقيقيةٌ (data-testid) + رقائقُ مقفولةٌ في موقعِ الرسم — لا تعليقاتٍ مُصطنعة");
   }
 
@@ -3460,20 +3460,20 @@ void 0;
 
   const pkg = JSON.parse(readFileSync("package.json", "utf8")) as {
     dependencies: { next: string };
-    devDependencies: { postcss: string };
-    overrides: { postcss: string; minimatch: string };
-    scripts: { postinstall: string; "audit:deps": string };
+    devDependencies: { postcss: string; jsdom: string; "@next/eslint-plugin-next": string };
+    overrides: { postcss: string; "@typescript-eslint/typescript-estree": { minimatch: string } };
+    scripts: { "audit:deps": string };
   };
   const lock = JSON.parse(readFileSync("package-lock.json", "utf8")) as { packages: Record<string, { version?: string }> };
-  const dependencyPatch = readFileSync("scripts/patch_jsx_a11y_minimatch.mjs", "utf8");
   ok(pkg.dependencies.next === "15.5.29" && lock.packages["node_modules/next"]?.version === "15.5.29" &&
     pkg.devDependencies.postcss === "^8.5.28" && pkg.overrides.postcss === "$postcss" &&
-    lock.packages["node_modules/postcss"]?.version === "8.5.28" &&
-    pkg.overrides.minimatch === "^11.0.4" && lock.packages["node_modules/minimatch"]?.version === "11.0.4" &&
-    pkg.scripts.postinstall === "node scripts/patch_jsx_a11y_minimatch.mjs" &&
-    pkg.scripts["audit:deps"] === "npm audit --audit-level=moderate" &&
-    dependencyPatch.includes("eslint-plugin-jsx-a11y ↔ minimatch 11 ready"),
-    "K143f ترقيع أمني ضمن Next 15: Next 15.5.29 + PostCSS موحّد + minimatch 11 مع رقعة توافق محروسة، من دون قفزة رئيسية");
+    pkg.devDependencies.jsdom === "30.1.3" && lock.packages["node_modules/jsdom"]?.version === "30.1.3" &&
+    pkg.devDependencies["@next/eslint-plugin-next"] === "15.5.29" && lock.packages["node_modules/postcss"]?.version === "8.5.28" &&
+    pkg.overrides["@typescript-eslint/typescript-estree"].minimatch === "11.0.4" &&
+    lock.packages["node_modules/@typescript-eslint/typescript-estree/node_modules/minimatch"]?.version === "11.0.4" &&
+    lock.packages["node_modules/minimatch"]?.version === "3.1.5" &&
+    pkg.scripts["audit:deps"] === "npm audit --audit-level=moderate",
+    "K143f ترقيع أمني ضمن Next 15: Next 15.5.29 + jsdom 30.1.3 + PostCSS موحّد + minimatch 11 محصور في ESTree، بلا كسر ESLint أو قفزة رئيسية");
 
   const auditSrc = readFileSync("scripts/audit_inhalt.ts", "utf8");
   const scripts = JSON.parse(readFileSync("package.json", "utf8")).scripts as Record<string, string>;
@@ -12997,6 +12997,10 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const transcriptOverridesOk304 = transcripts304.items.length === 39 && transcripts304.items.every((entry) =>
     platten304.has(entry.file) && entry.textDe.trim().length > 0 && /^[0-9a-f]{40}$/.test(entry.audioCommit) &&
     (entry.group === "dialog" || entry.group === "hoeren") && entry.sourcePath.startsWith("content/"));
+  const audioQcSrc304 = readFileSync("scripts/audio_qc_all.py", "utf8");
+  const audioRunner304 = readFileSync("scripts/run_audio_qc.py", "utf8");
+  const audioReq304 = readFileSync("scripts/requirements-audio-qc.txt", "utf8");
+  const package304 = JSON.parse(readFileSync("package.json", "utf8")) as { scripts: Record<string, string> };
   ok(existsSync("scripts/audio_qc_all.py") && existsSync("scripts/run_audio_qc.py") &&
      existsSync("scripts/requirements-audio-qc.txt") && qcAll.datum === "2026-11-04" &&
      qcAll.dateien.length === platten304.size && gruppen304 === platten304.size && hashes304.size === platten304.size &&
@@ -13005,7 +13009,12 @@ function collectR262(dir: string, out: string[] = []): string[] {
      qcAll.anomalienGesamt === 0 && qcAll.abdeckung.luecken.length === 0 &&
      qcAll.dateien.every((d: any) => d.ok) &&
      qcAll.schwellen.diktat.maxStilleAnteil === 0.65 && qcAll.schwellen.diktat.maxStilleLochS === 4.0 &&
-     String(qcAll.grenzEhrlichkeit).includes("Kein menschliches Anhören"),
+     String(qcAll.grenzEhrlichkeit).includes("Kein menschliches Anhören") &&
+     package304.scripts["audio:qc"] === "python3 scripts/run_audio_qc.py" &&
+     audioRunner304.includes("metadata.version(name)") && audioRunner304.includes('"--requirement", str(REQUIREMENTS)') &&
+     audioQcSrc304.includes('fehler.append("placeholder")') && audioQcSrc304.includes('e["fehler"].append("audio-duplikat")') &&
+     audioReq304.includes("miniaudio==1.71") && audioReq304.includes("numpy==2.4.6") &&
+     audioReq304.includes("cffi==2.1.1") && audioReq304.includes("pycparser==3.12"),
     `K304 مراجعةُ الصوتِ الآليةُ R272: ‏${platten304.size}/${platten304.size} ملفاً ذا مانيفستو مفكوكاً ومقيساً وفريد البصمة، مع 39 لقطة نص تسجيل صريحة بلا شذوذ — لا يشمل الحكم 87 ملف قواعد بلا مانيفستو نص/صوت، ولا يساوي استماعاً بشرياً أو حكم نطق`);
 }
 
@@ -13714,7 +13723,7 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const kzSrc2 = readFileSync("components/akademie/Klassenzimmer.tsx", "utf8");
   ok(kzSrc2.includes("useState(true)") && kzSrc2.includes('data-testid="aufgaben-details"') &&
      kzSrc2.includes('data-testid="sitzung-fortschritt"') && kzSrc2.includes('data-testid={`aufgabe-chip-${i}`}') &&
-     kzSrc2.includes("اختر أيّ مهمة بحرّية متى شئت") && kzSrc2.includes('data-testid="sitzung-weiter"'),
+     kzSrc2.includes("اختر من المحطة المفتوحة") && kzSrc2.includes("istGesperrt(i)") && kzSrc2.includes('data-testid="sitzung-weiter"'),
     "K287 المشغّل افتراضي والرقائق مطوية خلف ملخّص صريح مع بقاء كل رقاقة وزرّ التالية — تركيز بلا حجب للحرية");
 }
 
@@ -14364,18 +14373,19 @@ function collectR262(dir: string, out: string[] = []): string[] {
 
   const fehlversuch = { done: true, passed: false, score: 0, total: 3, attempts: 1 };
   ok(todayTaskSubmitted(fehlversuch, { score: 0, total: 0 }) &&
-    todayTaskSubmitted(undefined, { score: 0, total: 3 }) &&
+    !todayTaskSubmitted(undefined, { score: 0, total: 3 }) &&
     !todayTaskSubmitted(undefined, { score: 0, total: 0 }),
-    "K335c التسليم يفتح المحطة التالية حتى عند الخطأ؛ المحاولة غير الصحيحة تُرحَّل للعلاج ولا تصبح قفلاً أبدياً");
+    "K335c النتيجة المحفوظة تفتح التالية حتى عند الخطأ؛ النقاط المحلية وحدها مسودة لا تتنكر كتسليم");
 
   const stepperK335 = readFileSync("components/akademie/TodayStepper.tsx", "utf8");
   const homeK335 = readFileSync("app/page.tsx", "utf8");
   ok(stepperK335.includes('data-testid="today-stepper"') &&
     stepperK335.includes("([1, 2, 3, 4, 5] as TodayStepId[])") &&
     stepperK335.includes('data-testid={`today-step-${sid}`}') &&
-    stepperK335.includes("todayTaskSubmitted(resultOf(task.id), localOf(task.id))") &&
-    homeK335.includes("<TodayStepper") && !homeK335.includes("resultOf={resultOf as any}"),
-    "K335d خريطة اليوم ذات خمس محطات ظاهرة ومربوطة بأنواع آمنة؛ لا cast any ولا قفل مبني على passed وحده");
+    stepperK335.includes("todayStepStatuses(") && stepperK335.includes("disabled={isLocked ||") &&
+    homeK335.includes("<TodayStepper") && homeK335.includes("stationsStatus.get(todayStepOf(tk))") &&
+    !homeK335.includes("resultOf={resultOf as any}"),
+    "K335d خريطة اليوم ذات خمس محطات وحكم مركزي؛ أزرارها وقائمة المهام لا تتجاوز قفل محطة ولا cast any");
 
   const wizardK335 = readFileSync("components/akademie/LektionWizard.tsx", "utf8");
   const klassK335 = readFileSync("components/akademie/Klassenzimmer.tsx", "utf8");
@@ -14517,6 +14527,63 @@ function collectR262(dir: string, out: string[] = []): string[] {
     !ciK339.includes("LHCI warn") && !ciK339.includes("autorun ||") &&
     ciK339.indexOf("npm run build") < ciK339.indexOf("npm run audit:lighthouse"),
     "K339b Lighthouse يعمل بعد build كحاجز وصولية حقيقي لا خطوةً تُحوّل الفشل إلى نجاح، ويحفظ تقريره محلياً بلا رفع عام");
+}
+
+
+/* ═══ K340 — R137: محطات اليوم تُفتح بالتسليم الحقيقي بلا تجاوز أو حبس بعد الإخفاق ═══ */
+{
+  const planK340 = buildDay(2, { ...emptyProgress, plan: { ...emptyProgress.plan, day: 2 } });
+  const ritualK340 = ritualUrteil(planK340, emptyProgress);
+  const statusLeerK340 = todayStepStatuses(
+    planK340.tasks,
+    () => false,
+    (index) => aufgabeGesperrt(ritualK340, index),
+  );
+  ok(statusLeerK340.get(1) === "active" && [2, 3, 4, 5].every((station) => statusLeerK340.get(station as 2 | 3 | 4 | 5) === "locked"),
+    "K340a R137: محطة الاسترجاع وحدها نشطة، وكل المحطات اللاحقة مقفلة فعلياً قبل أي تسليم");
+
+  const stationEinsK340 = groupTasksByTodayStep(planK340.tasks).get(1) ?? [];
+  const abgegebenK340 = new Set(stationEinsK340.map((task) => task.id));
+  const progressK340: Progress = {
+    ...emptyProgress,
+    plan: {
+      ...emptyProgress.plan,
+      day: 2,
+      tasks: Object.fromEntries(stationEinsK340.map((task) => [task.id, {
+        done: true, passed: false, score: 0, total: 1, attempts: 1,
+      }])),
+    },
+  };
+  const ritualNachAbgabeK340 = ritualUrteil(planK340, progressK340);
+  const statusNachFehlerK340 = todayStepStatuses(
+    planK340.tasks,
+    (task) => abgegebenK340.has(task.id),
+    (index) => aufgabeGesperrt(ritualNachAbgabeK340, index),
+  );
+  ok(statusNachFehlerK340.get(1) === "done" && statusNachFehlerK340.get(2) === "active" && statusNachFehlerK340.get(3) === "locked",
+    "K340b R137: محاولة الاسترجاع غير المجتازة تُعد تسليماً وتفتح الدرس؛ تُرحّل للمراجعة ولا تحبس اليوم كله");
+
+  const stationZweiK340 = groupTasksByTodayStep(planK340.tasks).get(2) ?? [];
+  const bisZweiK340 = new Set([...abgegebenK340, ...stationZweiK340.map((task) => task.id)]);
+  const statusBisZweiK340 = todayStepStatuses(planK340.tasks, (task) => bisZweiK340.has(task.id), () => false);
+  ok(statusBisZweiK340.get(2) === "done" && statusBisZweiK340.get(3) === "active" && statusBisZweiK340.get(4) === "locked",
+    "K340c R137: لا يفتح الاستماع/القراءة إلا تسليم الدرس، ثم تبقى محطة الإنتاج اللاحقة مقفلة");
+
+  const pflichtGrammatikK340 = { id: "pflicht", kind: "grammatik", titleDe: "", titleAr: "", minutes: 5, mandatory: true } as DayTask;
+  ok(todayStepOf(pflichtGrammatikK340) === 1 && groupTasksByTodayStep([pflichtGrammatikK340]).get(1)?.[0]?.id === "pflicht",
+    "K340d R137: تعويض القواعد الإلزامي يبقى في محطة الاسترجاع الأولى ولا يتخفّى كدرس جديد قابل للتجاوز");
+
+  const alleK340 = Array.from({ length: TOTAL_DAYS }, (_, index) => buildDay(index + 1, { ...emptyProgress, plan: { ...emptyProgress.plan, day: index + 1 } }));
+  ok(alleK340.every((plan) => {
+    const gruppen = groupTasksByTodayStep(plan.tasks);
+    return [1, 2, 3, 4, 5].reduce((sum, station) => sum + (gruppen.get(station as 1 | 2 | 3 | 4 | 5)?.length ?? 0), 0) === plan.tasks.length;
+  }), "K340e R137: كل مهمة في الأيام 378 تدخل محطة واحدة بالضبط؛ لا سقوط ولا ازدواج عند التجميع");
+
+  const nurAbrufK340 = [{ id: "abruf", kind: "wiederholen", titleDe: "", titleAr: "", minutes: 5 } as DayTask];
+  const leerVorherK340 = todayStepStatuses(nurAbrufK340, () => false, () => false);
+  const leerNachherK340 = todayStepStatuses(nurAbrufK340, () => true, () => false);
+  ok(leerVorherK340.get(2) === "locked" && leerNachherK340.get(2) === "done",
+    "K340f R137: المحطة الفارغة لا ترفع التقدم قبل أوانها؛ تُعد متجاوزة فقط بعد تسليم المحطة السابقة");
 }
 
 

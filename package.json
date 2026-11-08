@@ -34,7 +34,6 @@
     "predev": "npm run banken",
     "audio:qc": "python3 scripts/run_audio_qc.py",
     "lint": "eslint app components lib scripts middleware.ts",
-    "postinstall": "node scripts/patch_jsx_a11y_minimatch.mjs",
     "audit:deps": "npm audit --audit-level=moderate"
   },
   "dependencies": {
@@ -54,16 +53,18 @@
     "eslint": "^9.39.5",
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-react-hooks": "^5.2.0",
-    "jsdom": "^29.1.1",
+    "jsdom": "30.1.3",
     "postcss": "^8.5.28",
     "tailwindcss": "^4.0.0",
     "tsx": "^4.23.15",
     "typescript": "^5.7.0",
-    "typescript-eslint": "^8.72.1",
+    "typescript-eslint": "8.72.1",
     "yaml": "^2.9.1"
   },
   "overrides": {
     "postcss": "$postcss",
-    "minimatch": "^11.0.4"
+    "@typescript-eslint/typescript-estree": {
+      "minimatch": "11.0.4"
+    }
   }
 }

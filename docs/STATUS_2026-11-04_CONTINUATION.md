@@ -36,8 +36,7 @@
 
 - Next.js: `15.5.27 → 15.5.29` لإغلاق ثغرتي RCE/DoS المنشورتين للإصدارات حتى 15.5.27.
 - `undici 7.30.1` و`typescript-eslint 8.72.1` عبر lockfile.
-- فرض `minimatch 11.0.4` لإغلاق `GHSA-g3hv-75wg-m249`.
-- لأن `eslint-plugin-jsx-a11y 6.10.2` لم يدعم تصدير minimatch 11 بعد، أُضيفت رقعة توافق صغيرة، حتمية، قابلة لإعادة التطبيق، وتفشل بصوت عالٍ إن تغيّر upstream: `scripts/patch_jsx_a11y_minimatch.mjs` عبر `postinstall`.
+- حُصر `minimatch 11.0.4` في شجرة `@typescript-eslint/typescript-estree` المتأثرة لإغلاق `GHSA-g3hv-75wg-m249`، بينما بقيت حزم ESLint غير المتوافقة على خط minimatch 3 الآمن؛ لذلك لا توجد رقعة `node_modules` أو خطوة `postinstall`.
 - أُضيف `npm run audit:deps` إلى CI؛ النتيجة الحالية صفر ثغرات حتى مستوى moderate.
 - رُقّيت خطوتا CI إلى `actions/checkout@v7` و`actions/setup-node@v7` لإزالة تحذير runtime Node 20 المتقادم الذي ظهر في أول تشغيل R134.
 - أُضيفت قواعد Next Core Web Vitals إلى ESLint، وأُصلح رابط داخلي خام وصورة مفردات إلى `Link` و`Image`.
