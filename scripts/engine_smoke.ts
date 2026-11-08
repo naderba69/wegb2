@@ -37,6 +37,7 @@ import { planeWortkarten } from "../lib/wortkarten";
 import { prognose } from "../lib/prognose";
 import { PHONETIK_EINHEITEN } from "../lib/phonetikdaten";
 import { bewerteHoerKontrast, pruefbareKontrastIndizes, starteHoerKontrast } from "../lib/minimalpaare";
+import { bewerteSelbsterklaerung, normalisiereErklaertext, schluesselwoerterFuerRegel } from "../lib/selbsterklaerung";
 import { sprechHeute, SPRECH_ZIEL_SEK } from "../lib/sprechziel";
 import { genusCode } from "../lib/genus";
 import { leseWpm, fluenzBand } from "../lib/fluenz";
@@ -14644,6 +14645,44 @@ function collectR262(dir: string, out: string[] = []): string[] {
     evidenceK404.sourceReview.status === "pending" && evidenceK404.fieldValidation.status === "pending" &&
     evidenceK404.releaseDecision.productStatus === "candidate-live-implementation",
     "K404d Tool 232: ملف الدليل يثبت السلوك الآلي فقط ويبقي المصدر والأجهزة والميدان معلقاً بلا ترقية مصطنعة");
+}
+
+/* ═══ K405 — دورة إثبات Tool 202: مؤشر الشرح الذاتي وحدود القياس ═══ */
+{
+  const regelnK405 = [
+    { de: "Das finite Verb steht auf Position zwei.", ar: "يأتي الفعل المصرف في الموقع الثاني من الجملة." },
+    { de: "Im Nebensatz steht das Verb am Ende.", ar: "في الجملة التابعة يأتي الفعل في النهاية." },
+  ];
+  const vollK405 = bewerteSelbsterklaerung(
+    "يأتي الفعل المصرف في الموقع الثاني. وفي الجملة التابعة يأتي الفعل في النهاية.",
+    regelnK405,
+  );
+  ok(vollK405.anteil === 100 && vollK405.getroffen === 2 && vollK405.gesamt === 2 && vollK405.bestanden &&
+    vollK405.details.every((detail) => detail.ok && detail.treffer.length >= 2),
+    "K405a Tool 202: شرح يغطي مفردات القاعدتين يعطي 100٪ بتفاصيل قابلة للتفسير لا حكماً سحرياً على صحة الفهم");
+
+  const falschK405 = bewerteSelbsterklaerung("الفاعل يكتب مثالاً مختلفاً تماماً", regelnK405);
+  const leerK405 = bewerteSelbsterklaerung("", []);
+  ok(falschK405.anteil === 0 && !falschK405.bestanden && falschK405.details.every((detail) => !detail.ok) &&
+    leerK405.anteil === 0 && leerK405.gesamt === 0 && !leerK405.bestanden,
+    "K405b Tool 202: «الفاعل» لا يطابق «الفعل» جزئياً، والمدخل أو بنك القواعد الفارغ لا ينتج نجاحاً زائفاً");
+
+  const mitTashkilK405 = bewerteSelbsterklaerung("أشرح الْمُصَرَّفُ في الْمَوْقِعِ مع مثال واضح", regelnK405);
+  const tokensK405 = normalisiereErklaertext("وَالفِعْلُ، إلى النِّهاية!");
+  const keywordsK405 = schluesselwoerterFuerRegel(regelnK405[0].ar);
+  ok(mitTashkilK405.anteil === 50 && mitTashkilK405.bestanden && tokensK405.includes("فعل") && tokensK405.includes("نهايه") &&
+    keywordsK405.length === 4 && new Set(keywordsK405).size === keywordsK405.length,
+    "K405c Tool 202: التطبيع يعالج التشكيل والهمزات وأل التعريف دون تكرار كلمات المفتاح، والعتبة تبقى معلنة كـ50٪ تغطية");
+
+  const evidenceK405 = JSON.parse(readFileSync("evidence/tool-catalog/202-self-explanation-coverage.json", "utf8")) as {
+    toolId: number; lifecycleStatus: string; automatedTests: { status: string; testCases: { id: string }[] };
+    sourceReview: { status: string }; fieldValidation: { status: string }; releaseDecision: { productStatus: string };
+  };
+  ok(evidenceK405.toolId === 202 && evidenceK405.lifecycleStatus === "partial-evidence" &&
+    evidenceK405.automatedTests.status === "verified" && evidenceK405.automatedTests.testCases.length >= 9 &&
+    evidenceK405.sourceReview.status === "pending" && evidenceK405.fieldValidation.status === "pending" &&
+    evidenceK405.releaseDecision.productStatus === "candidate-live-implementation",
+    "K405d Tool 202: ملف الدليل يثبت مؤشر التغطية والانتقالات فقط ويبقي صحة الشرح والمصدر والميدان معلقاً");
 }
 
 
