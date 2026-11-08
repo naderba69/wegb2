@@ -7,7 +7,8 @@ import { POS_AR } from "@/lib/types";
 import { eselsbruecken, getBrueckenFor, getBrueckenForWort, getGrammar, sprichwortSrc, getDeck, getText, leseText, getDialogue, getWriting, getSatz, getMnemonik, candoMap, vocabMap, deFormOf, partnerKarten, kontaktKarten, muendlich } from "@/lib/content";
 import { kollokationenFuer, kollokationUebung } from "@/lib/kollokationen";
 import { WortLinkText } from "./wortlink";
-import { newCard, reviewCard, isDue, newCardCap, countNewCardsIntroducedToday, wasIntroducedToday, karteStufe, KARTENSTUFE_AR } from "@/lib/srs";
+import { newCard, reviewCard, isDue, newCardCap, karteStufe, KARTENSTUFE_AR } from "@/lib/srs";
+import { planeWortkarten } from "@/lib/wortkarten";
 import { genusCode } from "@/lib/genus";
 import { addFehlerNow, markiereSchriftlich, loadProgress, saveProgress } from "@/lib/store";
 import { speakDe, speakAny, speakLine, stopSpeech, speechAvailable, germanVoices, warmVoices } from "@/lib/speech";
@@ -636,20 +637,11 @@ function VocabTask({ task, srs, onSrs, onPoints, voiceName, rate, tempo = "regel
     let freshCount = 0;
     let introducedToday = 0;
     if (deck) {
-      const pending = deck.cards.filter((c) => srs[c.id]?.reps === 0 && wasIntroducedToday(srs[c.id]));
-      const due = deck.cards.filter((c) => srs[c.id] && isDue(srs[c.id]) && !pending.some((p) => p.id === c.id));
-      const fresh = deck.cards.filter((c) => !srs[c.id]);
-      const alreadyIntroduced = countNewCardsIntroducedToday(srs, alleVokabelIds);
-      introducedToday = alreadyIntroduced;
-      const roomForNew = Math.max(0, newCardCap(tempo) - alreadyIntroduced);
-      const pendingToday = pending.slice(0, 10);
-      const dueSlots = Math.max(0, 10 - pendingToday.length);
-      const dueToday = due.slice(0, dueSlots);
-      const newSlots = Math.min(roomForNew, Math.max(0, 10 - pendingToday.length - dueToday.length));
-      // المستحقّ أولاً، ثم استأنف البطاقة التي ظهرت ولم تُقيَّم، وأخيراً الجديد ضمن السقف.
-      pool = [...dueToday, ...pendingToday, ...fresh.slice(0, newSlots)].slice(0, 10);
-      dueCount = due.length;
-      freshCount = fresh.length;
+      const plan = planeWortkarten(deck.cards, srs, alleVokabelIds, tempo);
+      pool = plan.queue;
+      dueCount = plan.stats.due;
+      freshCount = plan.stats.fresh;
+      introducedToday = plan.stats.introduced;
     } else {
       const all: VocabCard[] = Object.values(vocabMap).flatMap((d) => d.cards);
       pool = all.filter((c) => srs[c.id] && isDue(srs[c.id])).slice(0, 10);
@@ -670,11 +662,13 @@ function VocabTask({ task, srs, onSrs, onPoints, voiceName, rate, tempo = "regel
   }, [card?.id, srs, onSrs]);
 
   const kollokItems = useMemo(() => {
+    // لا نكشف كلمة جولة الإنتاج من تمرين المتلازمة أسفل البطاقة قبل أن يكشفها المتعلم.
+    if (!flipped || !card) return [];
     const alle: VocabCard[] = Object.values(vocabMap).flatMap((d) => d.cards);
     const rand = rng(seedFrom(task.id) + 7);
-    return queue.map((c, i) => kollokationUebung(c, alle, rand, i)).filter(Boolean) as Exercise[];
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [queue.length, task.id]);
+    const item = kollokationUebung(card, alle, rand, doneCount);
+    return item ? [item] : [];
+  }, [card, doneCount, flipped, task.id]);
   const satzItems = useMemo(() => {
     return (task.sentenceIds ?? [])
       .map((sid, i) => {
@@ -692,11 +686,12 @@ function VocabTask({ task, srs, onSrs, onPoints, voiceName, rate, tempo = "regel
     const prev = srs[card.id] ?? newCard();
     onSrs(card.id, reviewCard(prev, q, { produktiv }));
     if (q === 0) {
+      const ziel = produktiv ? deFormOf(card) : card.ar;
       addFehlerNow({
-        falsch: deFormOf(card),
-        richtig: card.ar,
+        falsch: produktiv ? card.ar : deFormOf(card),
+        richtig: ziel,
         art: "wortschatz",
-        ar: card.exampleDe ? `${card.ar} — مثال: ${card.exampleDe}` : card.ar,
+        ar: card.exampleDe ? `${ziel} — مثال: ${card.exampleDe}` : ziel,
         level: card.level,
         quelle: deck?.titleAr ?? "مفردات",
       });
@@ -707,13 +702,16 @@ function VocabTask({ task, srs, onSrs, onPoints, voiceName, rate, tempo = "regel
   };
 
   return (
-    <section className="card fadein dirb-ex" style={{ padding: "1.2rem" }}>
+    <section data-testid="wortkarten-praxis" className="card fadein dirb-ex" style={{ padding: "1.2rem" }}>
       <Head
         icon="🃏"
         de={deck?.titleDe ?? "Wiederholungskarten"}
         ar={`${deck?.titleAr ?? "بطاقات المراجعة المتباعدة"} — سقفُ الجديد اليومي ${newCardCap(tempo)} بطاقات حسب الوتيرة`}
       />
-      <p data-testid="vocab-tempo-cap" style={{ margin: "-0.35rem 0 0.7rem", fontSize: "0.82rem", color: "var(--color-ink2)" }}>
+      <p id={`wortkarten-lernziel-${task.id}`} data-testid="wortkarten-lernziel" style={{ margin: "-0.35rem 0 0.45rem", fontSize: "0.9rem", fontWeight: 700 }}>
+        حاول استرجاع الجواب بصوتك قبل الكشف، ثم قيّم المحاولة كما حدثت فعلاً؛ الكشف وحده لا يُحسب إتقاناً.
+      </p>
+      <p data-testid="vocab-tempo-cap" style={{ margin: "0 0 0.7rem", fontSize: "0.82rem", color: "var(--color-ink2)" }}>
         الحدّ الأقصى للبطاقات الجديدة اليوم: <span className="rtl-num">{newCardCap(tempo)}</span>؛ تُقدَّم المراجعات المستحقّة أولاً.
         <br />
         <strong>بطاقات اليوم:</strong> <span className="rtl-num">{queue.length}</span> في الدفعة الحالية · مراجعات مستحقة إجمالاً: <span className="rtl-num">{queueStats.due}</span> · بطاقات جديدة متبقية في الحزمة: <span className="rtl-num">{queueStats.fresh}</span> · بطاقات جديدة قُدّمت اليوم: <span className="rtl-num">{queueStats.introduced}</span>/<span className="rtl-num">{queueStats.cap}</span>
@@ -728,13 +726,15 @@ function VocabTask({ task, srs, onSrs, onPoints, voiceName, rate, tempo = "regel
         // أصبح ‎<button>‎ حقيقيًّا واحدًا بذاته — قابل للتبويب والتفعيل بالفأرة/اللمس/لوحة
         // المفاتيح أصلًا بلا أي كود إضافي، ولا يحوي أزرارًا أخرى بداخله فلا تداخل إطلاقًا.
         <div className="card" style={{ padding: "1.4rem", textAlign: "center", background: "var(--color-paper2)" }}>
-          <div className="chip" data-testid="vocab-queue-count" style={{ marginBottom: "0.6rem" }}>
+          <div className="chip" data-testid="vocab-queue-count" aria-live="polite" style={{ marginBottom: "0.6rem" }}>
             <span className="rtl-num">{doneCount + 1}</span> / <span className="rtl-num">{doneCount + queue.length}</span>
           </div>
           <button
             type="button"
             onClick={() => setFlipped(true)}
-            aria-label={flipped ? "وجه البطاقة" : produktiv ? "اكشف اللفظ الألماني" : "اكشف المعنى"}
+            aria-label={flipped ? "وجه البطاقة مكشوف" : produktiv ? "اكشف اللفظ الألماني" : "اكشف المعنى"}
+            aria-expanded={flipped}
+            aria-describedby={`wortkarten-lernziel-${task.id}`}
             style={{ display: "block", width: "100%", minHeight: "44px", background: "none", border: "none", padding: 0, margin: 0, font: "inherit", color: "inherit", cursor: "pointer" }}
           >
             {card.img && (
@@ -789,7 +789,7 @@ function VocabTask({ task, srs, onSrs, onPoints, voiceName, rate, tempo = "regel
               <button className="btn btn-primary" onClick={(e) => { e.stopPropagation(); setFlipped(true); }}>{produktiv ? "اكشف اللفظ الألماني" : "اكشف المعنى"}</button>
             </div>
           ) : (
-            <div className="fadein">
+            <div id={`wortkarte-rueckseite-${card.id}`} className="fadein">
               <div style={{ fontSize: "1.15rem", color: "var(--color-cola)" }}>{card.ar}</div>
               <div style={{ marginTop: "0.35rem" }}>
                 <span className="chip" data-testid="karte-stufe" style={{ fontSize: "0.75rem" }}>
@@ -841,7 +841,7 @@ function VocabTask({ task, srs, onSrs, onPoints, voiceName, rate, tempo = "regel
                   ))}
                 </div>
               )}
-              <div style={{ display: "flex", gap: "0.4rem", justifyContent: "center", marginTop: "0.9rem", flexWrap: "wrap" }}>
+              <div role="group" aria-label="قيّم استرجاعك بعد الكشف" data-testid="wortkarten-bewertung" style={{ display: "flex", gap: "0.4rem", justifyContent: "center", marginTop: "0.9rem", flexWrap: "wrap" }}>
                 <button className="btn btn-ghost" onClick={() => rateCard(0)}>لم أعرف (0)</button>
                 <button className="btn btn-gold" onClick={() => rateCard(2)}>بجهد (2)</button>
                 <button className="btn btn-primary" onClick={() => rateCard(4)}>سهّل! (4)</button>
@@ -852,6 +852,9 @@ function VocabTask({ task, srs, onSrs, onPoints, voiceName, rate, tempo = "regel
       ) : (
         <p style={{ textAlign: "center", padding: "0.8rem" }}>✨ أنهيت البطاقات — ستُجدول للمراجعة تلقائياً.</p>
       )}
+      <p data-testid="wortkarten-datenschutz" style={{ margin: "0.7rem 0 0", fontSize: "0.78rem", color: "var(--color-ink2)" }}>
+        🔒 تُحفظ مواعيد المراجعة وتقييماتك على هذا الجهاز ضمن ملفك المحلي، ولا تُرسل إجابة البطاقة إلى خدمة خارجية.
+      </p>
       {kollokItems.length > 0 && (
         <div data-testid="kollok-uebung" style={{ marginTop: "1rem" }}>
           <h4 style={{ fontWeight: 800, margin: "0 0 0.5rem" }}>أكمل المتلازمة</h4>

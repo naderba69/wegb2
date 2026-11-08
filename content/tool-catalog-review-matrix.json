@@ -26497,20 +26497,23 @@
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
         "productStatus": "candidate-live-implementation",
-        "automatedTestStatus": "not-demonstrated",
+        "automatedTestStatus": "verified",
         "fieldValidationStatus": "not-tested",
         "decision": "defer",
         "classification": "word-card-retrieval-practice",
         "reviewerRole": "internal-methodology-triage",
         "reviewedAt": "2026-11-06",
         "risk": "medium",
-        "rationaleAr": "تعرض مهام المفردات الحية بطاقة بكلمة ومعنى ومثال وصوت وصورة عند توافرها، وتطلب كشف الجواب ثم تقدير الاسترجاع وتعيد الجدولة عبر SRS؛ وهي مطابقة مرشحة لبطاقات الكلمات. لكن البطاقات ليست من إنشاء المتعلم، ولا يثبت التقليب وحده استرجاعاً قبل الكشف أو احتفاظاً مؤجلاً، وجودة الصورة والمثال غير متجانسة؛ لذلك تبقى مرشحة.",
+        "rationaleAr": "بطاقات مراجعة حية بوجه تعرّف وإنتاج، كشف مؤجل، تقييم ذاتي 0/2/4، جدولة SRS وحفظ محلي. تثبت دورة TC-844-AUTOMATED-01 ترتيب المستحق وغير المقيم والجديد، سقف الجديد العام، حجب الهدف والتقييم قبل الكشف، انتقال التقييم، اتجاه دفتر الخطأ، الخصوصية المحلية وفحص axe. لا يثبت التقليب أن المتعلم حاول الاسترجاع فعلاً أو احتفاظاً مؤجلاً، والمصدر والتحقق اليدوي والميداني معلقان؛ لذلك تبقى candidate-live-implementation.",
         "candidateEvidence": [
           "components/tasks.tsx",
           "content/vocab.json",
           "lib/srs.ts",
           "lib/store.ts",
-          "scripts/interaktiv_test.tsx"
+          "scripts/interaktiv_test.tsx",
+          "lib/wortkarten.ts",
+          "scripts/engine_smoke.ts",
+          "evidence/tool-catalog/844-word-cards.json"
         ],
         "relatedIds": [
           181,
@@ -26522,7 +26525,9 @@
           396,
           843,
           852
-        ]
+        ],
+        "evidenceCycle": "TC-844-AUTOMATED-01",
+        "productionEvidence": "evidence/tool-catalog/844-word-cards.json"
       }
     },
     {
