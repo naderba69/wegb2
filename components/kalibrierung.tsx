@@ -1,6 +1,5 @@
 "use client";
 // 🎚️ M4 (R288): معايرة من بيانات المتعلم + إصلاح البطاقات العنيدة
-import { useProgress } from "@/lib/store";
 import { KOMPETENZ_AR } from "@/lib/kompetenz";
 import { kartenAusreisser, skillTrends } from "@/lib/kalibrierung";
 import { alleVokabeln } from "@/lib/content";
@@ -13,8 +12,9 @@ const RICHTUNG_AR: Record<string, string> = {
   neu: "· بيانات غير كافية بعد",
 };
 
-export function KalibrierungPanel({ progress }: { progress: Progress }) {
-  const { update } = useProgress();
+export type ProgressUpdater = (fn: (progress: Progress) => Progress) => void;
+
+export function KalibrierungPanel({ progress, updateProgress }: { progress: Progress; updateProgress: ProgressUpdater }) {
   const trends = skillTrends(progress).filter((t) => t.nAktuell + t.nVorher > 0);
   const aus = kartenAusreisser(progress);
   const karteVon = (id: string) => alleVokabeln.find((k) => k.id === id);
@@ -41,8 +41,8 @@ export function KalibrierungPanel({ progress }: { progress: Progress }) {
             return (
               <div key={a.id} style={{ display: "flex", gap: "0.5rem", alignItems: "center", flexWrap: "wrap" }}>
                 <span><span className="de" style={{ fontWeight: 700 }}>{k?.de ?? a.id}</span> — {k?.ar ?? ""} (سقطات {a.lapses} · تكرار {a.reps})</span>
-                <button className="btn" data-testid={`ausreisser-reset-${a.id}`} onClick={() => update((p) => { const srs = { ...p.srs }; delete srs[a.id]; return { ...p, srs }; })}>↺ أعد تعلّمها من الصفر</button>
-                <button className="btn" data-testid={`ausreisser-sicher-${a.id}`} onClick={() => update((p) => ({ ...p, srs: { ...p.srs, [a.id]: { ...p.srs[a.id], stab: 90, interval: 90, due: new Date(Date.now() + 90 * 86400000).toISOString() } } }))}>أعرفها فعلًا — أجلّها ٩٠ يومًا</button>
+                <button className="btn" data-testid={`ausreisser-reset-${a.id}`} onClick={() => updateProgress((p) => { const srs = { ...p.srs }; delete srs[a.id]; return { ...p, srs }; })}>↺ أعد تعلّمها من الصفر</button>
+                <button className="btn" data-testid={`ausreisser-sicher-${a.id}`} onClick={() => updateProgress((p) => ({ ...p, srs: { ...p.srs, [a.id]: { ...p.srs[a.id], stab: 90, interval: 90, due: new Date(Date.now() + 90 * 86400000).toISOString() } } }))}>أعرفها فعلًا — أجلّها ٩٠ يومًا</button>
               </div>
             );
           })}

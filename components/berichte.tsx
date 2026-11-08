@@ -18,7 +18,7 @@ import { sprechHeute } from "@/lib/sprechziel";
 import { FLUENZ_ZIEL } from "@/lib/fluenz";
 import { skillBilanz } from "@/lib/skillbilanz";
 import { wochenBericht } from "@/lib/wochenbericht";
-import { KalibrierungPanel } from "./kalibrierung";
+import { KalibrierungPanel, type ProgressUpdater } from "./kalibrierung";
 import { VerzweigungPanel } from "./verzweigung";
 import { wartungsBericht } from "@/lib/wartung";
 import { wochenBilanz } from "@/lib/motivation";
@@ -213,7 +213,7 @@ ${sb.warnung ? `<p>⚖️ ${sb.warnung}</p>` : ""}
 </body></html>`;
 }
 
-export function BerichteZentrum({ progress, name = "المتعلّم" }: { progress: Progress; name?: string }) {
+export function BerichteZentrum({ progress, name = "المتعلّم", updateProgress }: { progress: Progress; name?: string; updateProgress: ProgressUpdater }) {
   const [open, setOpen] = useState(false);
   const bereit = useMemo(() => pruefungsBereitschaft(progress), [progress]);
   const bb = bereitBand(bereit.gesamt);
@@ -379,7 +379,7 @@ export function BerichteZentrum({ progress, name = "المتعلّم" }: { progr
           })()}
 
           {/* 🎚️ معايرة صعوبة من البيانات + بطاقات عنيدة (M4/R288) */}
-          <KalibrierungPanel progress={progress} />
+          <KalibrierungPanel progress={progress} updateProgress={updateProgress} />
           <VerzweigungPanel progress={progress} />
 
           {/* 🔧 صيانة المستويات المنتهية (A17/R284): ما أُتقن لا يتحلّل بصمت */}

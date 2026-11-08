@@ -58,7 +58,7 @@ const MENU_GROUPS: { id: string; title: string; description: string; items: stri
 ];
 
 export default function Fortschritt() {
-  const { progress } = useProgress();
+  const { progress, update } = useProgress();
   const [offen, setOffen] = useState<string | null>(null);
 
   if (offen) {
@@ -76,7 +76,7 @@ export default function Fortschritt() {
           </div>
         )}
         <section className="dirb-station">
-          {offen === "berichte" && <BerichteZentrum progress={progress} name={activeProfile().name} />}
+          {offen === "berichte" && <BerichteZentrum progress={progress} name={activeProfile().name} updateProgress={update} />}
           {offen === "landkarte" && <LernLandkarte progress={progress} />}
           {offen === "radar" && <RadarKarte progress={progress} />}
           {offen === "wegweiser" && <WegWeiser progress={progress} />}
