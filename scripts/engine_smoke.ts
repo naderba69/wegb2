@@ -36,6 +36,7 @@ import { newCard, reviewCard, isDue, newCardCap, countNewCardsIntroducedToday, k
 import { planeWortkarten } from "../lib/wortkarten";
 import { prognose } from "../lib/prognose";
 import { PHONETIK_EINHEITEN } from "../lib/phonetikdaten";
+import { bewerteHoerKontrast, pruefbareKontrastIndizes, starteHoerKontrast } from "../lib/minimalpaare";
 import { sprechHeute, SPRECH_ZIEL_SEK } from "../lib/sprechziel";
 import { genusCode } from "../lib/genus";
 import { leseWpm, fluenzBand } from "../lib/fluenz";
@@ -14602,6 +14603,47 @@ function collectR262(dir: string, out: string[] = []): string[] {
     evidenceK403.privacy.status === "verified-local-only" && evidenceK403.sourceReview.status === "pending" &&
     evidenceK403.fieldValidation.status === "pending",
     "K403c Tool 844: ملف الدليل يثبت السلوك والخصوصية المحلية فقط ويبقي المصدر والتحقق الميداني معلقين بلا ترقية إنتاجية");
+}
+
+/* ═══ K404 — دورة إثبات Tool 232: تباينات صوتية قابلة للحسم وحدود المحرك ═══ */
+{
+  const idsK404 = PHONETIK_EINHEITEN.map((einheit) => einheit.id);
+  const auslautK404 = PHONETIK_EINHEITEN.find((einheit) => einheit.id === "ph-a0-auslaut")!;
+  ok(PHONETIK_EINHEITEN.length === 8 && new Set(idsK404).size === idsK404.length &&
+    PHONETIK_EINHEITEN.every((einheit) => einheit.paare.length === 4 && einheit.saetze.length === 2 &&
+      einheit.paare.every((paar) => paar.a.trim() && paar.b.trim() && paar.a !== paar.b && paar.aAr.trim() && paar.bAr.trim())) &&
+    auslautK404.quizbar === false && pruefbareKontrastIndizes(auslautK404).length === 0,
+    "K404a Tool 232: ثماني وحدات مكتملة وفريدة؛ وحدة جهر النهاية المتطابقة سمعياً مستبعدة صراحة من سؤال الاختيار المعزول");
+
+  const laengeK404 = PHONETIK_EINHEITEN.find((einheit) => einheit.id === "ph-a0-laenge")!;
+  const nullenK404 = [0, 0];
+  const quizK404 = starteHoerKontrast(laengeK404, null, () => nullenK404.shift() ?? 0)!;
+  const richtigK404 = bewerteHoerKontrast(quizK404, laengeK404, "a");
+  const doppeltK404 = bewerteHoerKontrast(richtigK404.quiz, laengeK404, "a");
+  ok(quizK404.paar === 0 && quizK404.seite === "a" && richtigK404.angenommen && richtigK404.richtig &&
+    richtigK404.quiz.ok === 1 && richtigK404.quiz.versuche === 1 && richtigK404.quiz.beantwortet &&
+    !doppeltK404.angenommen && doppeltK404.quiz.ok === 1 && doppeltK404.quiz.versuche === 1,
+    "K404b Tool 232: الإجابة الصحيحة تحتسب مرة واحدة فقط، والنقر المكرر لا يضخم الدرجة أو عدد المحاولات");
+
+  const einsenK404 = [1, 1];
+  const falschQuizK404 = starteHoerKontrast(laengeK404, null, () => einsenK404.shift() ?? 1)!;
+  const falschK404 = bewerteHoerKontrast(falschQuizK404, laengeK404, "a");
+  const leerK404 = { ...laengeK404, paare: [] };
+  ok(falschQuizK404.paar === laengeK404.paare.length - 1 && falschQuizK404.seite === "b" &&
+    falschK404.angenommen && !falschK404.richtig && falschK404.quiz.ok === 0 && falschK404.quiz.versuche === 1 &&
+    falschK404.quiz.meldung.includes(laengeK404.paare.at(-1)!.b) &&
+    starteHoerKontrast(undefined) === null && starteHoerKontrast(leerK404) === null,
+    "K404c Tool 232: حد العشوائية الأعلى آمن، ومسار الخطأ يكشف الهدف، والوحدة المفقودة أو الفارغة تفشل بلا سؤال زائف");
+
+  const evidenceK404 = JSON.parse(readFileSync("evidence/tool-catalog/232-auditory-contrast-pairs.json", "utf8")) as {
+    toolId: number; lifecycleStatus: string; automatedTests: { status: string; testCases: { id: string }[] };
+    sourceReview: { status: string }; fieldValidation: { status: string }; releaseDecision: { productStatus: string };
+  };
+  ok(evidenceK404.toolId === 232 && evidenceK404.lifecycleStatus === "partial-evidence" &&
+    evidenceK404.automatedTests.status === "verified" && evidenceK404.automatedTests.testCases.length >= 9 &&
+    evidenceK404.sourceReview.status === "pending" && evidenceK404.fieldValidation.status === "pending" &&
+    evidenceK404.releaseDecision.productStatus === "candidate-live-implementation",
+    "K404d Tool 232: ملف الدليل يثبت السلوك الآلي فقط ويبقي المصدر والأجهزة والميدان معلقاً بلا ترقية مصطنعة");
 }
 
 
