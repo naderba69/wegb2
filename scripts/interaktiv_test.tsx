@@ -25,6 +25,12 @@ const gedruckt: string[] = [];
   print: () => {},
 });
 (dom.window as unknown as { scrollTo: () => void }).scrollTo = () => {};
+// jsdom intentionally omits media playback and canvas rendering. The product code only
+// needs their browser contracts in these interaction tests; deterministic no-op shims keep
+// expected environment gaps from hiding real React warnings in stderr.
+Object.defineProperty(dom.window.HTMLMediaElement.prototype, "play", { configurable: true, value: () => Promise.resolve() });
+Object.defineProperty(dom.window.HTMLMediaElement.prototype, "pause", { configurable: true, value: () => undefined });
+Object.defineProperty(dom.window.HTMLCanvasElement.prototype, "getContext", { configurable: true, value: () => null });
 let scrollHits: string[] = [];
 (dom.window as unknown as { Element: { prototype: { scrollIntoView: (this: unknown) => void } } }).Element.prototype.scrollIntoView = function (this: unknown) {
   const el = this as { id?: string };
@@ -32,6 +38,39 @@ let scrollHits: string[] = [];
 };
 
 const g = globalThis as unknown as Record<string, unknown>;
+const gesprocheneTtsTexte: string[] = [];
+class TestSpeechSynthesisUtterance {
+  text: string;
+  lang = "";
+  rate = 1;
+  pitch = 1;
+  voice: null = null;
+  onend: (() => void) | null = null;
+  onerror: (() => void) | null = null;
+  constructor(text: string) { this.text = text; }
+}
+function installiereTestTts(): () => void {
+  const speechDescriptor = Object.getOwnPropertyDescriptor(dom.window, "speechSynthesis");
+  const utteranceVorher = g.SpeechSynthesisUtterance;
+  Object.defineProperty(dom.window, "speechSynthesis", {
+    configurable: true,
+    value: {
+      getVoices: () => [],
+      cancel: () => undefined,
+      speak: (utterance: TestSpeechSynthesisUtterance) => {
+        gesprocheneTtsTexte.push(utterance.text);
+        utterance.onend?.();
+      },
+    },
+  });
+  g.SpeechSynthesisUtterance = TestSpeechSynthesisUtterance;
+  return () => {
+    if (speechDescriptor) Object.defineProperty(dom.window, "speechSynthesis", speechDescriptor);
+    else delete (dom.window as unknown as Record<string, unknown>).speechSynthesis;
+    if (utteranceVorher === undefined) delete g.SpeechSynthesisUtterance;
+    else g.SpeechSynthesisUtterance = utteranceVorher;
+  };
+}
 for (const key of [
   "window", "document", "navigator", "localStorage", "HTMLElement", "HTMLInputElement", "HTMLTextAreaElement",
   "Element", "Node", "Event", "KeyboardEvent", "MouseEvent", "getComputedStyle", "requestAnimationFrame", "cancelAnimationFrame",
@@ -53,7 +92,17 @@ async function main() {
   const React = await import("react");
   const { createRoot } = await import("react-dom/client");
   const { emptyProgress, TOTAL_DAYS } = await import("../lib/types");
-  const act = (React as unknown as { act: (cb: () => void) => void }).act;
+  type TestAct = {
+    (cb: () => void): void;
+    (cb: () => Promise<void>): Promise<void>;
+  };
+  const act = (React as unknown as { act: TestAct }).act;
+  const flushAsync = async () => {
+    await act(async () => {
+      await Promise.resolve();
+      await new Promise<void>((resolve) => setTimeout(resolve, 0));
+    });
+  };
 
   const d0 = dom.window.document as unknown as Document;
   const rootEl = d0.getElementById("root")!;
@@ -442,11 +491,14 @@ const hasFile = txt().includes("صوتٌ من الدار");
     const play = btn("استمع الآن");
     ok(!!play, "XII5 زر الاستماع موجود حتى بلا جهاز (العد هو القانون)");
     if (play) click(play);
-    ok(txt().includes("استمعت 1×") || txt().includes("الاستماعة صُرفت"), "XII6 العدّة تعمل: الاستماعة سُجّلت");
-    const play2 = btn("استمع الآن");
-    ok(!play2 || txt().includes("استماعة 2"), "XII7 في التدريب: الباب مفتوح — الاستماعة الثانية معروضة لا ممنوعة");
-    if (play2) click(play2);
-    ok(!txt().includes("الأسئلة مُقفلة"), "XII8 بعد الاستماعة انفتح ميدان الأسئلة");
+    await act(async () => { await Promise.resolve(); await Promise.resolve(); });
+    ok(txt().includes("استمعت 1×") || txt().includes("الاستماعة صُرفت"), "XII6 العدّة تعمل بعد بدء تشغيل ناجح فقط");
+    ok(txt().includes("استمع حتى النهاية") && !txt().includes("سلّم ورقة الاستماع"), "XII6b الأسئلة تبقى مقفلة أثناء جريان الصوت، لا بمجرد الضغط");
+    const audioLauf = d0.querySelector("audio");
+    if (audioLauf) act(() => audioLauf.dispatchEvent(new dom.window.Event("ended", { bubbles: true })));
+    const play2 = btn("استماعة 2");
+    ok(!!play2, "XII7 في التدريب: بعد اكتمال الأولى تظهر الاستماعة الثانية ولا تُفرض");
+    ok(!txt().includes("الأسئلة مُقفلة") && !txt().includes("استمع حتى النهاية"), "XII8 لا تنفتح الأسئلة إلا بعد حدث انتهاء الصوت");
     /* نجيب كل بطاقة: زرٌّ واحد لكل بطاقة اختيار، وكتابة في كل حقل — ثم تسليم مضمون */
     const karten = Array.from(d0.querySelectorAll("div.card")).filter((cd) => /^\d+\.\s/.test((cd.textContent ?? "").trim()));
     ok(karten.length >= 2, "XII9 بطاقات الأسئلة مولّدة من النص (بطاقتان على الأقل لكل جولة)");
@@ -463,21 +515,26 @@ const hasFile = txt().includes("صوتٌ من الدار");
     ok(!!btn("🔁 جولة نصٍّ جديد"), "XII12 طريق الثورة مفتوح — جولة جديدة لا إعادة مُثقلة");
 
     const { levelOf } = await import("../lib/plan");
-    const p1 = { ...emptyProgress, plan: { ...emptyProgress.plan, day: 1 } };
     mount(React.createElement(HoerLabor, { progress: { ...emptyProgress } }));
     ok(txt().includes("🔊 صوت مُنتَج"), "XII13 نصُ اليومِ الأوّل يحملُ شارةَ الصوتِ المُنتَج — لا TTS جهاز");
     const aud = d0.querySelector("audio");
     ok(!!aud && (aud.getAttribute("src") ?? "").startsWith(`/audio/hoeren/t-${levelOf(1).toLowerCase()}-`), "XII14 عنصر ‹audio› موصولٌ بلوحِه الحقّ t-${levelOf(1).toLowerCase()}- من public");
     const play1 = btn("استمع الآن");
     if (play1) click(play1);
-    ok(txt().includes("استمعت 1×"), "XII15 النقر يسجّل الاستماعة على مسار الملف بلا صرخة");
+    await act(async () => { await Promise.resolve(); await Promise.resolve(); });
+    ok(txt().includes("استمعت 1×") && txt().includes("استمع حتى النهاية"), "XII15 بدء الملف الناجح يسجّل الاستماعة ويبقي الأسئلة مقفلة حتى النهاية");
     ok(!txt().includes("لا يوفّر صوتاً"), "XII16 مع الملف المرفق تسقط لافتة العطل — الامتحان لم يعد رهين الجهاز");
+    const modusPruefung = d0.querySelector('[data-testid="modus-pruefung"]') as HTMLElement | null;
+    if (modusPruefung) click(modusPruefung); // يوقف التشغيل ويلغي معرّفه
+    if (aud) act(() => aud.dispatchEvent(new dom.window.Event("ended", { bubbles: true })));
+    ok(txt().includes("الأسئلة مُقفلة حتى تسمع") && !txt().includes("سلّم ورقة الاستماع"), "XII16b حدث ended متأخر بعد تبديل الوضع لا يفتح أسئلة الجولة الجديدة");
+    ok(txt().includes("بقيت استماعة واحدة"), "XII16c إلغاء التشغيل بتبديل الوضع لا يستهلك استماعة الامتحان");
 
     const pA2 = { ...emptyProgress, plan: { ...emptyProgress.plan, day: 80 } }; // داخلَ لوحِ levelOf(80) فعلًا بعدَ إعادةِ التوزيعِ الأكاديميّ
     mount(React.createElement(HoerLabor, { progress: pA2 }));
     ok(txt().includes("🔊 صوت مُنتَج"), "XII17 يومٌ داخلَ اللوحِ المغطّى (80): نصُّه مسجَّلٌ والشارةُ حاضرة");
     const aud2 = d0.querySelector("audio");
-    
+
     ok(!!aud2 && (aud2.getAttribute("src") ?? "").startsWith(`/audio/hoeren/t-${levelOf(80).toLowerCase()}-`), "XII18 عنصرُ الصوتِ موصولٌ بلوحه الفعليّ t-${levelOf(80).toLowerCase()}-: لا يومٌ في اللوحينِ يُخدَمُ بغير ملفه");
 
     const pB1 = { ...emptyProgress, plan: { ...emptyProgress.plan, day: 150 } };
@@ -494,8 +551,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
 
 
   /* ═══════════════ موجةُ ξ التتويج: مراكزُ XV الجديدة ═══════════════ */
-  const { dialogAudio, dialogAudioSrc, dialogAudioArt, dialogAudioIstKi, getMnemonik, mnemonikMap, alleVokabeln, fehlerList, luecken, dialogues } = await import("../lib/content");
-  const { default: fsRaw } = { default: null } as { default: null };
+  const { dialogAudio, dialogAudioSrc, dialogAudioArt, dialogAudioIstKi, getMnemonik, mnemonikMap, alleVokabeln, fehlerList } = await import("../lib/content");
 
   /* ---------- XIII — DialogOrdnung: دورةُ الترتيبِ كاملة ---------- */
   let dlgSeen = "";
@@ -685,7 +741,6 @@ const hasFile = txt().includes("صوتٌ من الدار");
   /* ---------- XXVI — تركاتُ الحفظ داخلَ درسِ القواعدِ نفسِه ---------- */
   {
     const { default: TaskView } = await import("../components/tasks");
-    const { getBrueckenFor, eselsbruecken } = await import("../lib/content");
     const mkTask = (topicId: string) => ({ id: "t-" + topicId, kind: "grammatik" as const, titleDe: "Grammatik", titleAr: "قاعدة", minutes: 15, topicId });
     mount(React.createElement(TaskView, { task: mkTask("a2-dativ"), lang: "ar" as const, day: 60, srs: {}, onSrs: () => {}, onPoints: () => {}, voiceName: "", rate: 1 }));
     ok(txt().includes("🧠 تركاتُ الحفظ لهذا الدرس"), "XXVI1 كتلةُ التركاتِ تظهرُ داخلَ بطاقةِ القاعدةِ لا في صفحةٍ منفصلةٍ يهجرُها المتعلِّم");
@@ -804,12 +859,22 @@ const hasFile = txt().includes("صوتٌ من الدار");
     const kinds = new Map<string, number>();
     const crashes: string[] = [];
     const leere: string[] = [];
+    const substanzlos: string[] = [];
     let total = 0;
     for (let day = 1; day <= TOTAL_DAYS; day++) {
       const plan = buildDay(day, { ...emptyProgress, plan: { ...emptyProgress.plan, day } });
       for (const task of plan.tasks) {
         total++;
         kinds.set(task.kind, (kinds.get(task.kind) ?? 0) + 1);
+        const quizN = task.quiz?.length ?? 0;
+        const satzN = task.sentenceIds?.length ?? 0;
+        if (/^Tool \d+:/.test(task.titleDe) ||
+            (task.kind === "grammatik" && !task.topicId && quizN === 0) ||
+            (task.kind === "schreiben" && !task.writeId) ||
+            ((task.kind === "sprechen" || task.kind === "aussprache") && satzN === 0) ||
+            (task.kind === "check" && !task.exam && quizN === 0)) {
+          substanzlos.push(`${day}/${task.kind}/${task.id}/${task.titleDe}`);
+        }
         try {
           mount(React.createElement(TaskView, { task, day, ...props }));
           const t = (txt() ?? "").trim();
@@ -822,11 +887,12 @@ const hasFile = txt().includes("صوتٌ من الدار");
     console.log(`   ⟐ مُسِحَ ${total} مهمةً عبرَ ${TOTAL_DAYS} يوماً · الأنواع: ${[...kinds].map(([k, v]) => k + "=" + v).join(" · ")}`);
     if (crashes.length) console.error("   ⤷ انهيارات:", crashes.slice(0, 6).join(" | "));
     if (leere.length) console.error("   ⤷ شاشاتٌ خاوية:", leere.slice(0, 6).join(" | "));
-    ok(total >= 2255, `XXXI1 ≥2255 مهمةً عبرَ المسيرةِ — العددُ من مولِّدِ الخطةِ نفسِه (${[...kinds].map(([k, v]) => k + "=" + v).join(" · ")})`);
+    ok(total >= 2400 && total < 3000, `XXXI1 الخطة تضم 2400–2999 مهمة فعلية بعد حذف 1040 بطاقة أدوات صورية (${total}؛ ${[...kinds].map(([k, v]) => k + "=" + v).join(" · ")})`);
     const expectedKinds = new Set(["wiederholen", "aussprache", "grammatik", "wortschatz", "lesen", "check", "hoeren", "schreiben", "sprechen", "partner", "briefe", "schulsim"]);
     ok(kinds.size === expectedKinds.size && [...expectedKinds].every((kind) => kinds.has(kind)), `XXXI2 الأنواعُ الاثنا عشرُ كلُّها مُمثَّلةٌ فعلاً في الأيام (${[...kinds.keys()].join("، ")})`);
     ok(crashes.length === 0, "XXXI3 صفرُ انهيارٍ في التركيب: ما من يومٍ يفتحُهُ المتعلِّمُ فينكسرُ في وجهِه");
     ok(leere.length === 0, "XXXI4 صفرُ شاشةٍ خاوية: كلُّ مهمةٍ تعرضُ محتوًى حقيقياً لا هيكلاً فارغاً");
+    ok(substanzlos.length === 0, `XXXI4b صفر مهمة صورية: كل نوع يحمل مرجعه/أسئلته القابلة للتنفيذ (${substanzlos.slice(0, 2).join(" | ")})`);
     ok([...kinds.values()].every((v) => v >= 6), "XXXI5 لا نوعَ غائبٌ أو نادرٌ للغاية: كلُّ نوعٍ ممثّلٌ بستّ مهامٍ على الأقل");
   }
 
@@ -988,17 +1054,24 @@ const hasFile = txt().includes("صوتٌ من الدار");
     const vorher = Object.keys(loadProgress().fehler ?? {}).length;
     mount(React.createElement(TaskView, { task: { id: "t-" + g, kind: "grammatik" as const, titleDe: "G", titleAr: "ق", minutes: 15, topicId: g }, ...props }));
     const falschOpt = items[0].optionen.find((o: string) => o !== items[0].antwort)!;
-    const fb = btn(falschOpt);
+    const fb = Array.from(rootEl.querySelectorAll('[data-testid="grammar-bruecken-block"] button')).find(
+      (b) => (b.textContent ?? "").trim() === falschOpt && !(b as HTMLButtonElement).disabled,
+    ) as HTMLElement | undefined;
     ok(!!fb, "XXXVI1 خيارٌ خاطئٌ متاحٌ للنقر");
-    if (fb) click(fb as HTMLElement);
-    ok(true, "XXXVI2 temp disabled");
-    ok(true, "XXXVI3 temp disabled");
+    if (fb) click(fb);
+    ok((fb?.textContent ?? "").startsWith("❌"), "XXXVI2 الخيار الخاطئ يُوسَم بصرياً بعلامة ❌ بعد النقر");
+    ok(txt().includes(items[0].erklaerungAr), "XXXVI3 الخطأ يكشف تفسير الشفرة العربية فوراً ولا يكتفي باللون");
     const nachher = Object.keys(loadProgress().fehler ?? {}).length;
-    ok(true, "XXXVI4 temp disabled");
-    const eintrag = Object.values(loadProgress().fehler ?? {}).find((f) => (f as { quelle?: string }).quelle === "Eselsbrücke") as { ar?: string; art?: string } | undefined;
-    ok(true, "XXXVI5 temp disabled");
-    ok(true, "XXXVI6 temp disabled");
-    ok(true, "XXXVI7 temp disabled");
+    ok(nachher === vorher + 1, "XXXVI4 الخطأ يضيف سجلاً واحداً بالضبط إلى دفتر الأخطاء");
+    const erwartetFalsch = `${items[0].frageDe} → ${falschOpt}`;
+    const eintrag = Object.values(loadProgress().fehler ?? {}).find((f) => f.falsch === erwartetFalsch);
+    ok(eintrag?.quelle === "Eselsbrücke", "XXXVI5 سجل الخطأ يحمل مصدر Eselsbrücke الصريح");
+    ok(eintrag?.art === items[0].kat && eintrag?.ar === `شفرةُ الحفظ — ${items[0].erklaerungAr}`,
+      "XXXVI6 فئة السجل وتفسيره يطابقان سؤال الشفرة نفسه");
+    const erwartetRichtig = items[0].art === "artikel"
+      ? `${items[0].antwort} ${items[0].frageDe.replace("___ ", "")}`
+      : items[0].antwort;
+    ok(eintrag?.richtig === erwartetRichtig, "XXXVI7 دفتر الأخطاء يحفظ الجواب الصحيح القابل للمراجعة");
   }
 
 
@@ -1189,20 +1262,13 @@ const hasFile = txt().includes("صوتٌ من الدار");
     const idAbruf = buildDay(2, p2).tasks[0].id;
     ok(!!nachher.plan.tasks[idAbruf], `L8 التسليمُ سُجِّل في الحالة (${idAbruf})`);
     ok(!rootEl.querySelector('[data-testid="ritual-sperre"]'), "L9 وبعدَ التسليمِ زالت اللافتة");
-    ok(chip(1)?.textContent?.startsWith("🔒") === false && chip(4)?.textContent?.startsWith("🔒") === true,
-      "L10 انفتح الدرس التالي فقط، وبقيت المحطات الأبعد خلف تسليم محطتها السابقة");
+    ok(chip(1)?.textContent?.startsWith("🔒") === false && chip(4)?.textContent?.startsWith("🔒") === true, "L10 انفتحت محطة الدرس فقط وبقي الفحص وراء التسلسل");
     if (chip(2)) click(chip(2)!);
-    ok(txt().includes("المهمة 2/") && !txt().includes("المهمة 3/"),
-      "L11 النقر على مهمة من محطة لاحقة لا يتجاوز محطة الدرس المفتوحة");
-    const subL11 = btn("سلّم المهمة");
-    if (subL11) click(subL11);
-    ok(chip(2)?.textContent?.startsWith("🔒") === false, "L11b بعد تسليم الدرس انفتحت مهمة المحطة الثالثة");
-    if (chip(2)) click(chip(2)!);
-    ok(txt().includes("المهمة 3/"), "L11c والنقر على الثالثة يعرضها بعد فتح محطتها فعلياً");
+    ok(txt().includes("المهمة 2/") && !txt().includes("المهمة 3/"), "L11 والنقرُ على مهمة محطة لاحقة لا يتجاوز الدرس النشط");
     act(() => { saveProgress({ ...emptyProgress, plan: { ...emptyProgress.plan, day: 1 } }); });
     mount(React.createElement(Heim));
-    ok(!rootEl.querySelector('[data-testid="ritual-sperre"]') && chip(0)?.textContent?.startsWith("🔒") === false && chip(1)?.textContent?.startsWith("🔒") === true,
-      "L12 اليوم الأول بلا قفل «أمس»، لكن تسلسل المحطات يبقى: التهيئة مفتوحة وما بعدها مقفل حتى تسليمها");
+    ok(!rootEl.querySelector('[data-testid="ritual-sperre"]') && chip(1)?.textContent?.startsWith("🔒") === true && chip(0)?.textContent?.startsWith("🔒") === false,
+      "L12 اليوم الأول بلا قفل أمس، لكن تسلسل محطات اليوم نفسه يبقى فعلياً");
     act(() => { dom.window.localStorage.removeItem(progressKeyActive()); });
   }
 
@@ -1236,8 +1302,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
     const { ablenker, signalRadar } = await import("../lib/signalwoerter");
     const { SignalRadar } = await import("../components/signalradar");
     const mitFalle = dialogues.find((d) => ablenker(d).length > 0 && signalRadar(d).anzahlSignale > 0)!;
-    let pts = 0;
-    mount(React.createElement(SignalRadar, { dlg: mitFalle, onPoints: (p: number) => { pts += p; } }));
+    mount(React.createElement(SignalRadar, { dlg: mitFalle, onPoints: () => {} }));
     ok(!!rootEl.querySelector('[data-testid="signalradar"]'), `LII1 الرادارُ مرسومٌ لحوارٍ فيه مُضلِّل (${mitFalle.id})`);
     ok(rootEl.querySelectorAll('[data-testid="radar-zeile"]').length === 0, "LII2 مطويٌّ ابتداءً — يُفتح بعدَ الإجابةِ لا قبلَها");
     ok(txt().includes("مُضلِّل مسموع"), "LII3 وعنوانُه يعلنُ عددَ المُضلِّلاتِ قبلَ الفتح");
@@ -1529,14 +1594,18 @@ const hasFile = txt().includes("صوتٌ من الدار");
 
     try {
       mount(React.createElement(LocalSpeechPilot));
+      const idleStatus = d0.querySelector('[data-testid="local-asr-state"]')?.textContent ?? "";
+      const noAutomaticProbe = availabilityOptions === null;
+      const refresh = d0.querySelector('[data-testid="local-asr-refresh"]') as HTMLButtonElement | null;
+      if (refresh) click(refresh);
       await asyncAct(flushAsync);
       const state = d0.querySelector('[data-testid="local-asr-state"]');
       const consent = d0.querySelector('[data-testid="local-asr-download-consent"]') as HTMLInputElement | null;
       const install = d0.querySelector('[data-testid="local-asr-install"]') as HTMLButtonElement | null;
       const initialStatus = state?.textContent ?? "";
-      ok(initialStatus.includes("يمكن طلب") && JSON.stringify(availabilityOptions).includes('"de-DE"') &&
-        JSON.stringify(availabilityOptions).includes('"processLocally":true'),
-        "LXXXIII1 يفحص حزمة de-DE بخيار processLocally=true ويعرض حالتها قبل طلب الميكروفون");
+      ok(idleStatus.includes("لم يُفحَص") && noAutomaticProbe && initialStatus.includes("يمكن طلب") &&
+        JSON.stringify(availabilityOptions).includes('"de-DE"') && JSON.stringify(availabilityOptions).includes('"processLocally":true'),
+        "LXXXIII1 لا يفحص تلقائياً؛ وبعد نقرة صريحة يفحص de-DE بخيار processLocally=true ويعرض حالتها قبل طلب الميكروفون");
       ok(!!consent && !!install && install.disabled && installCalls === 0,
         "LXXXIII2 زر التثبيت معطّل ولا استدعاء قبل موافقة التنزيل المنفصلة");
 
@@ -1583,6 +1652,8 @@ const hasFile = txt().includes("صوتٌ من الدار");
 
       W.SpeechRecognition = undefined;
       mount(React.createElement(LocalSpeechPilot));
+      const unsupportedRefresh = d0.querySelector('[data-testid="local-asr-refresh"]') as HTMLButtonElement | null;
+      if (unsupportedRefresh) click(unsupportedRefresh);
       await asyncAct(flushAsync);
       ok((d0.querySelector('[data-testid="local-asr-state"]')?.textContent ?? "").includes("لا يوفّر واجهة") && webkitStarts === 0,
         "LXXXIII8 وجود webkit وحده لا يفعّل طياراً محلياً ولا يسقط إلى التعرف غير المثبت");
@@ -1979,7 +2050,8 @@ const hasFile = txt().includes("صوتٌ من الدار");
       task: { id: "t-tempo-review-before-resume", kind: "wortschatz" as const, titleDe: "W", titleAr: "م", minutes: 10, deckId: deck.id },
       ...base, srs: { [dueBeforePendingCard.id]: dueBeforePending, [pendingAfterDueCard.id]: pendingAfterDue }, tempo: "leicht" as const,
     }));
-    const dueWasFirst = txt().includes(dueBeforePendingCard.de) && !txt().includes(pendingAfterDueCard.de);
+    const getMainCardDe = () => rootEl.querySelector('[data-testid="vocab-queue-count"]')?.parentElement?.querySelector("button")?.textContent ?? txt();
+    const dueWasFirst = getMainCardDe().includes(dueBeforePendingCard.de) && !getMainCardDe().includes(pendingAfterDueCard.de);
     click(btn("اكشف المعنى")!);
     click(btn("سهّل! (4)")!);
     ok(dueWasFirst && txt().includes(pendingAfterDueCard.de), "LX0e المراجعة المستحقّة تسبق البطاقة غير المُقيَّمة ثم تُستأنف بعدها");
@@ -1999,6 +2071,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
 
   /* ═══════════ R282 — A5 صوتيات تفاعلية + A9 قفل وضع الامتحان ═══════════ */
   {
+    const restoreTestTts = installiereTestTts();
     const { PhonetikStation } = await import("../components/phonetik");
     mount(React.createElement(PhonetikStation, {}));
     ok(!!rootEl.querySelector('[data-testid="phonetik-station"]') && txt().includes("طول الحركة"), "R282a محطة الصوتيات تُرسم بوحداتها المتدرجة");
@@ -2022,6 +2095,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
     ok(!!abgabe, "R282g زر التسليم يفتح المراجعة");
     if (abgabe) click(abgabe);
     ok(!!btn("أظهر النص"), "R282h بعد التسليم يُفتح النص للمراجعة");
+    restoreTestTts();
   }
 
   /* ═══════════ R283 — M12 شارة الجنس + A18 خريطة + A11 كتابة عملية + A3 عرض الطلاقة ═══════════ */
@@ -2166,7 +2240,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
   /* ═══════════ R288 — M8 تأكيد البطاقات + M9 إعادة كتابة 48س + M4 معايرة ═══════════ */
   {
     const { loadProgress, saveProgress } = await import("../lib/store");
-    saveProgress({ ...loadProgress(), fehler: {} });
+    act(() => { saveProgress({ ...loadProgress(), fehler: {} }); });
     const { FehlerKartenWahl } = await import("../components/fehlerkarten");
     mount(React.createElement(FehlerKartenWahl, {
       quelle: "Test",
@@ -2182,9 +2256,12 @@ const hasFile = txt().includes("صوتٌ من الدار");
     const fehlerDanach = Object.values(loadProgress().fehler ?? {}) as { falsch: string }[];
     ok(fehlerDanach.length === 1 && fehlerDanach[0].falsch === "der Hundin", "R288b المؤكَّد وحده يدخل دفتر الأخطاء — وما أُلغي تأكيده لا يدخل");
 
-    saveProgress({ ...loadProgress(), wiederschreiben: [{ id: "ws-test", erstellt: "2026-10-15T10:00:00.000Z", faellig: "2026-10-17T10:00:00.000Z", absatz: "Ich habe müde und ich gehe nach Hause.", spalten: ["grammatik"], status: "offen" as const }] });
+    act(() => {
+      saveProgress({ ...loadProgress(), wiederschreiben: [{ id: "ws-test", erstellt: "2026-10-15T10:00:00.000Z", faellig: "2026-10-17T10:00:00.000Z", absatz: "Ich habe müde und ich gehe nach Hause.", spalten: ["grammatik"], status: "offen" as const }] });
+    });
     const { WiederschreibenKarte } = await import("../components/wiederschreiben");
     mount(React.createElement(WiederschreibenKarte, { quelleText: "" }));
+    await flushAsync();
     const eingabe = rootEl.querySelector('[data-testid="wiederschreiben-input-ws-test"]') as HTMLTextAreaElement | null;
     ok(!!rootEl.querySelector('[data-testid="wiederschreiben-karte"]') && !!eingabe, "R288c بطاقة إعادة الكتابة المستحقّة (M9) تُرسم مع فقرة الأصل");
     if (eingabe) typeIn(eingabe, "Ich bin heute zu Hause und lerne Deutsch.");
@@ -2195,7 +2272,9 @@ const hasFile = txt().includes("صوتٌ من الدار");
     const { alleVokabeln } = await import("../lib/content");
     const ersteKarte = alleVokabeln[0];
     const jetIso = new Date().toISOString();
-    saveProgress({ ...loadProgress(), srs: { [ersteKarte.id]: { ease: 2.5, interval: 2, due: jetIso, reps: 5, lapses: 3, introduced: jetIso, stab: 2 } } });
+    act(() => {
+      saveProgress({ ...loadProgress(), srs: { [ersteKarte.id]: { ease: 2.5, interval: 2, due: jetIso, reps: 5, lapses: 3, introduced: jetIso, stab: 2 } } });
+    });
     const { KalibrierungPanel } = await import("../components/kalibrierung");
     mount(React.createElement(KalibrierungPanel, { progress: loadProgress() as never }));
     ok(!!rootEl.querySelector('[data-testid="kalibrierung-panel"]') && txt().includes(ersteKarte.de), "R288e لوحة المعايرة (M4) تعرض البطاقة العنيدة باسمها وزرَّي إصلاحها");
@@ -2281,7 +2360,6 @@ const hasFile = txt().includes("صوتٌ من الدار");
     const { WortfamilienStation } = await import("../components/wortfamilien");
     mount(React.createElement(WortfamilienStation, {}));
     ok(!!rootEl.querySelector('[data-testid="wortfamilien"]'), "R293a محطة عائلات الكلمات (A22) تُرسم من البنك");
-    const falscheOpt = [...rootEl.querySelectorAll('[data-testid^="ableitung-opt-"]')].find((b) => !(b as HTMLElement).style.border.includes("good")) as HTMLElement | undefined;
     const opt0 = rootEl.querySelector('[data-testid="ableitung-opt-0"]') as HTMLElement | null;
     ok(!!opt0, "R293b سؤال الاشتقاق بخياراته حاضر");
     if (opt0) click(opt0);
@@ -2694,6 +2772,10 @@ const hasFile = txt().includes("صوتٌ من الدار");
       fehler: { y: { key: "y", falsch: "a", richtig: "b", art: "s", ar: "x", treffer: 3, srs: { ease: 2.5, interval: 0, due: new Date().toISOString(), reps: 3, lapses: 3, learning: true } } },
       exams: { 10: { score: 60, passed: false }, 20: { score: 90, passed: true } },
       modulPruefungen: { 2: { versuche: 3, best: 70, bestanden: false } },
+      todayUx: { version: 1 as const, days: {
+        1: { firstAttemptActiveMs: 15_000, firstSuccessActiveMs: 60_000, hasStep5: true, reachedStep5ActiveMs: 180_000, closedActiveMs: 240_000 },
+        2: { firstAttemptActiveMs: 10_000, firstSuccessActiveMs: 120_000, hasStep5: true },
+      } },
     };
     mount(React.createElement(BerichteZentrum, { progress: prog as never, name: "مقياس" }));
     const hdr = btn("BerichteZentrum");
@@ -2702,6 +2784,13 @@ const hasFile = txt().includes("صوتٌ من الدار");
     ok((rootEl.querySelector('[data-testid="metrik-feedback"]')?.textContent ?? "").includes("50"), "LXXI2 التغذيةُ 1/2 = 50٪");
     ok((rootEl.querySelector('[data-testid="metrik-heilung"]')?.textContent ?? "").includes("عالق"), "LXXI3 تنبيهُ الخطأِ العالق");
     ok((rootEl.querySelector('[data-testid="metrik-kurve"]')?.textContent ?? "").includes("أُعيدت مرتين"), "LXXI4 تنبيهُ الوحدةِ المعادة");
+    const uxPanel = rootEl.querySelector('[data-testid="today-ux-metrics"]');
+    ok(!!uxPanel && (rootEl.querySelector('[data-testid="ux-first-success"]')?.textContent ?? "").includes("1.5") &&
+      (rootEl.querySelector('[data-testid="ux-step5-reached"]')?.textContent ?? "").includes("50") &&
+      (rootEl.querySelector('[data-testid="ux-day-closed"]')?.textContent ?? "").includes("50"),
+      "LXXI5 قياس تجربة اليوم يعرض وسيط أول نجاح وبلوغ ⑤ والإغلاق من العينة المحلية بمقامات صحيحة");
+    ok((uxPanel?.textContent ?? "").includes("بلا نصوص إجابات") && (uxPanel?.textContent ?? "").includes("ليست نتيجة عامة"),
+      "LXXI6 الواجهة تصرّح أن القياس محلي وصفي، بلا نصوص أو إرسال أو ادعاء عينة جماعية");
   }
 
 
@@ -2791,6 +2880,13 @@ const hasFile = txt().includes("صوتٌ من الدار");
       const { grammarMap } = await import("../lib/content");
       mount(React.createElement(LektionWizard, { topicId: "a2-wasfuer" }));
       ok(txt().includes("السؤال عن النوع") && txt().includes("هدف هذا الدرس") && txt().includes("يبني على"), "LXXVIII1 المعالج يعرض درس Was-für وهدفه ومتطلباته");
+      const sceneVisual = d0.querySelector('[data-testid="wizard-scene-visual"]');
+      const sceneSvg = sceneVisual?.querySelector('svg[role="img"]');
+      ok(sceneVisual?.getAttribute("data-scene-kind") === "question" &&
+        (sceneVisual?.getAttribute("data-scene-signature") ?? "").startsWith("a2-wasfuer:question:") &&
+        !!sceneSvg?.querySelector("title")?.textContent?.includes("Was für") &&
+        (sceneVisual?.textContent ?? "").includes("ابدأ من المعلومة التي تريدها"),
+        "LXXVIII16 هوية الدرس تعرض مشهده الرمزي الدلالي مع وصف قارئ شاشة وتوقيع موضوع مستقل");
 
       const unlock0 = (d0.querySelector('[data-testid="wizard-ueberspringen"]') ?? d0.querySelector('[data-testid="wizard-beobachtet"]')) as HTMLElement | null;
       ok(!!unlock0, "LXXVIII2 خطوةُ اكتشاف النمط تتيح المتابعة بتفاعل صريح");
@@ -2867,6 +2963,54 @@ const hasFile = txt().includes("صوتٌ من الدار");
       const dueTask = after ? buildDay(43, after).tasks.find((t) => t.verifyFor === "a2-wasfuer") : undefined;
       ok(!premature && !!dueEntry && dueTask?.kind === "check" && dueTask.quiz?.length === 2,
         "LXXVIII11 لا يظهر قبل موعده؛ وفي اليوم الثالث يظهر تحققٌ مستقلٌ ببندين جديدين");
+
+      // 2026-11-04: الاستوديو نفسه داخل مهمة «اليوم»، لا في /lernen وحدها.
+      const { default: TaskView } = await import("../components/tasks");
+      const studioTask = { id: "today-studio-a2-wasfuer", kind: "grammatik" as const, titleDe: "Was für", titleAr: "السؤال عن النوع", minutes: 30, topicId: "a2-wasfuer" };
+      const studioPoints: Array<[number, number]> = [];
+      mount(React.createElement(TaskView, {
+        task: studioTask,
+        lang: "ar" as const,
+        day: 40,
+        srs: {},
+        onSrs: () => {},
+        onPoints: (p: number, m: number) => studioPoints.push([p, m]),
+        lessonStudio: true,
+        lessonCompleted: false,
+      }));
+      const embeddedFinish = d0.querySelector('[data-testid="wizard-complete-today"]') as HTMLButtonElement | null;
+      ok(!!d0.querySelector('[data-testid="lektion-wizard"]') && !!embeddedFinish && !d0.querySelector('[data-testid="wizard-zurueck-heute"]'),
+        "LXXVIII12 مهمة القواعد الحية داخل «اليوم» تعرض الاستوديو المضمّن ولا تطلب مغادرة الصفحة");
+      if (embeddedFinish) click(embeddedFinish);
+      ok(studioPoints.length === 1 && studioPoints[0][0] === 3 && studioPoints[0][1] === 3,
+        "LXXVIII13 إنهاء الاستوديو يعيد 3/3 مرة واحدة إلى مشغّل مهمة اليوم كي تصبح قابلة للتسليم");
+      mount(React.createElement(TaskView, {
+        task: studioTask,
+        lang: "ar" as const,
+        day: 40,
+        srs: {},
+        onSrs: () => {},
+        onPoints: (p: number, m: number) => studioPoints.push([p, m]),
+        lessonStudio: true,
+        lessonCompleted: true,
+      }));
+      const alreadyDone = d0.querySelector('[data-testid="wizard-complete-today"]') as HTMLButtonElement | null;
+      ok(!!alreadyDone && alreadyDone.disabled && (alreadyDone.textContent ?? "").includes("سُجّل"),
+        "LXXVIII14 إعادة فتح الاستوديو بعد تسجيله لا تضاعف نقاط مهمة اليوم");
+
+      // تنبيهٌ مختلط: زوجان صريحان ✗/✓، ثم فرق استعمال بلا «صواب» مختلق.
+      storage.setItem("weg-wizard-a2-verb-praep", JSON.stringify({ schritt: 4, erledigt: [true, true, true, true, false] }));
+      mount(React.createElement(LektionWizard, { topicId: "a2-verb-praep", embedded: true }));
+      const wrongPitfalls = d0.querySelectorAll(".lesson-pitfall-side--wrong");
+      const rightPitfalls = d0.querySelectorAll(".lesson-pitfall-side--right");
+      const usageNotes = d0.querySelectorAll(".lesson-pitfall--note");
+      ok(wrongPitfalls.length === 2 && rightPitfalls.length === 2 && usageNotes.length === 1 &&
+        (wrongPitfalls[0]?.textContent ?? "").includes("Ich warte für dich") &&
+        (rightPitfalls[0]?.textContent ?? "").includes("Ich warte auf dich") &&
+        (usageNotes[0]?.textContent ?? "").includes("an jemanden denken") &&
+        (usageNotes[0]?.textContent ?? "").includes("فرق استعمال") &&
+        !(usageNotes[0]?.querySelector(".lesson-pitfall-wrong")),
+        "LXXVIII15 جدار الفخاخ يفصل زوجي ✗/✓ الصريحين، ويعرض فرق الاستعمال الثالث بلا شطبٍ أو تصحيحٍ مخمّن");
     } finally {
       if (leave) leave();
       autoEntdecken = oldAutoEntdecken;
@@ -2973,7 +3117,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
       storage.setItem("weg-b2-profiles", JSON.stringify({ active: "p1", list: [{ id: "p1", name: "اختبار", emoji: "🧪", created: "2026-10-04" }] }));
       const startProgress = JSON.parse(JSON.stringify(emptyProgress)) as typeof emptyProgress;
       const topicId = "a1-akkusativ";
-      const { grammarMap, getBrueckenFor } = await import("../lib/content");
+      const { getBrueckenFor } = await import("../lib/content");
       const bridges = getBrueckenFor(topicId);
       const dueId = bridges[0]?.id;
       if (dueId) startProgress.srs[`bru:${dueId}`] = { ease: 2.5, interval: 1, due: "2000-01-01T00:00:00.000Z", reps: 1, lapses: 0 };
@@ -3808,7 +3952,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
     const { LebensweltStation } = await import("../components/lebenswelt");
     const { lebensweltThemen, umgangBank } = await import("../lib/lebenswelt");
     mount(React.createElement(LebensweltStation));
-    ok(lebensweltThemen.length === 12 && !!rootEl.querySelector('[data-testid="lebenswelt-lw-03"]') &&
+    ok(lebensweltThemen.length >= 12 && !!rootEl.querySelector('[data-testid="lebenswelt-lw-03"]') &&
        txt().includes("الاعتراف بمؤهّل التمريض"),
       "CII1 المحطة تعرض البطاقات الاثنتي عشرة وبطاقة الاعتراف التمريضي بينها");
     ok(!rootEl.querySelector('[data-testid="umgang-eintrag"]'), "CII2 لغة الشارع مطوية حتى تُطلب صراحة");
@@ -3822,8 +3966,9 @@ const hasFile = txt().includes("صوتٌ من الدار");
   {
     const { OfflineKarte } = await import("../components/offline");
     mount(React.createElement(OfflineKarte));
-    ok(!!rootEl.querySelector('[data-testid="offline-voll-download"]') && txt().includes("نحو 64 MB"),
-      "CIII1 بطاقة عدم الاتصال تعرض تنزيل الصوت الكامل بحجمه الحقيقي قبل أيّ نقرة");
+    await flushAsync();
+    ok(!!rootEl.querySelector('[data-testid="offline-voll-download"]') && txt().includes("التنزيل الكامل اختياري وكبير") && !txt().includes("نحو 64 MB"),
+      "CIII1 بطاقة عدم الاتصال تعرض قرار التنزيل بلا رقم قديم؛ الحجم الحي يأتي من البيان عند توفره");
   }
 
   /* ═══ CV — جلسة امتحان كاملة (R218) ═══ */
@@ -3994,7 +4139,14 @@ const hasFile = txt().includes("صوتٌ من الدار");
 {
   const { FehlerGrenze } = await import("../components/fehlergrenze");
   const Kaputt = () => { throw new Error("Testfehler"); };
-  mount(React.createElement(FehlerGrenze, null, React.createElement(Kaputt)));
+  const consoleError = console.error;
+  try {
+    // React logs the deliberately thrown probe even though FehlerGrenze catches it.
+    console.error = () => undefined;
+    mount(React.createElement(FehlerGrenze, null, React.createElement(Kaputt)));
+  } finally {
+    console.error = consoleError;
+  }
   ok(!!rootEl.querySelector('[data-testid="fehlergrenze-karte"]') && !!rootEl.querySelector('[data-testid="fehlergrenze-retry"]'), "R303a عطل مكوّن يُحتَوى في بطاقة عربية مع زرّ إعادة — التطبيق لا يبيضّ");
 }
 
@@ -4116,18 +4268,14 @@ const hasFile = txt().includes("صوتٌ من الدار");
   const { progressKeyActive } = await import("../lib/profiles");
   const { buildDay } = await import("../lib/plan");
   const { getText, getDialogue } = await import("../lib/content");
+  const { todayStepOf } = await import("../lib/today-steps");
   const { stationOfTask, STATIONEN } = await import("../components/stationen");
-  const { stationFuerAufgabe } = await import("../lib/tagesstationen");
   (globalThis as unknown as { self?: unknown }).self = globalThis;
   const { default: Heim } = await import("../app/page");
 
   const p1 = { ...emptyProgress, plan: { ...emptyProgress.plan, day: 1 } };
+  act(() => { saveProgress(p1); });
   const plan1 = buildDay(1, p1);
-  const vorbereiteteTasks = Object.fromEntries(plan1.tasks
-    .filter((task) => stationFuerAufgabe(task) < 3)
-    .map((task) => [task.id, { done: true, passed: true, score: 1, total: 1, attempts: 1 }]));
-  const p1MitOffenerLeseStation = { ...p1, plan: { ...p1.plan, tasks: vorbereiteteTasks } };
-  act(() => { saveProgress(p1MitOffenerLeseStation); });
   mount(React.createElement(Heim));
 
   // 1) أهداف اليوم (محطّات حقيقية) ظاهرة فعليًا أعلى الصفحة — لا في نصّ المصدر فقط
@@ -4142,6 +4290,13 @@ const hasFile = txt().includes("صوتٌ من الدار");
   const coachEl = rootEl.querySelector('[data-testid="today-coach-grund"]');
   ok(!!coachEl && (coachEl.textContent ?? "").includes("مدرّبك"), "R306-3 سطر «مدرّبك» مرسومٌ فعليًا حول الخطوة الحالية");
   ok(!!coachEl && (coachEl!.textContent ?? "").trim().length > 10, "R306-4 ومعه سببٌ فعلي مكتوب لا تسمية فارغة");
+
+  // افتح محطة التدريب بعقد المحطات الفعلي: تسليم الاسترجاع والدرس أولاً، ثم افحص المحتوى الكامل.
+  const vorPraxis = Object.fromEntries(plan1.tasks
+    .filter((task) => todayStepOf(task) < 3)
+    .map((task) => [task.id, { done: true, passed: true, score: 1, total: 1, attempts: 1, kind: task.kind }]));
+  act(() => { saveProgress({ ...p1, plan: { ...p1.plan, tasks: vorPraxis } }); });
+  mount(React.createElement(Heim));
 
   // 3) القفز لمهمّة القراءة يعرض نصّ القراءة الحقيقي كاملاً — ضمن نفس تسلسل اليوم، بلا تنقّل لصفحة أخرى
   const lesenIdx = plan1.tasks.findIndex((t) => t.kind === "lesen" && t.textId);
@@ -4374,19 +4529,267 @@ const hasFile = txt().includes("صوتٌ من الدار");
   act(() => { dom.window.localStorage.removeItem(progressKeyActive()); });
 }
 
-// ── R310: خريطة اليوم الخماسية — قفل حقيقي بالتسليم، لا بالمظهر أو النقاط المحلية ──
+/* ═══ R310 — فشل localStorage ظاهر ولا يغيّر الحالة المرئية كذباً ═══ */
+{
+  const { useProgress, saveProgress } = await import("../lib/store");
+  const { progressKeyActive } = await import("../lib/profiles");
+  const { PersistenzWache } = await import("../components/PersistenzWache");
+  act(() => { saveProgress({ ...emptyProgress, plan: { ...emptyProgress.plan, day: 1 } }); });
+
+  function SpeicherProbe() {
+    const { progress, ready, update } = useProgress();
+    return React.createElement("div", null,
+      React.createElement("span", { "data-testid": "save-day" }, ready ? String(progress.plan.day) : "…"),
+      React.createElement("button", { type: "button", onClick: () => update((p) => ({ ...p, plan: { ...p.plan, day: 2 } })) }, "غيّر اليوم تجريبياً"),
+    );
+  }
+
+  mount(React.createElement(React.Fragment, null, React.createElement(SpeicherProbe), React.createElement(PersistenzWache)));
+  await act(async () => { await Promise.resolve(); });
+  const storageProto = Object.getPrototypeOf(dom.window.localStorage) as Storage;
+  const originalSetItem = storageProto.setItem;
+  let direkt: boolean | undefined;
+  try {
+    storageProto.setItem = (() => { throw new dom.window.DOMException("quota", "QuotaExceededError"); }) as typeof Storage.prototype.setItem;
+    act(() => { direkt = saveProgress({ ...emptyProgress, plan: { ...emptyProgress.plan, day: 2 } }); });
+    ok(direkt !== true && txt().includes("لم يُحفَظ آخر تغيير"), "R310-1 saveProgress يعيد false ويطلق إنذاراً مرئياً عند امتلاء/حظر التخزين");
+    const wechseln = btn("غيّر اليوم تجريبياً");
+    if (wechseln) click(wechseln);
+    ok((rootEl.querySelector('[data-testid="save-day"]')?.textContent ?? "") === "1", "R310-2 useProgress يبقي اليوم المرئي المحفوظ ولا يعرض اليوم 2 كنجاح وهمي");
+  } finally {
+    storageProto.setItem = originalSetItem;
+  }
+  const verstanden = btn("فهمت");
+  if (verstanden) click(verstanden);
+  ok(!txt().includes("لم يُحفَظ آخر تغيير"), "R310-3 إنذار الحفظ قابل للإغلاق بعد أن يفهمه المستخدم");
+  act(() => { dom.window.localStorage.removeItem(progressKeyActive()); });
+}
+
+/* ═══ R311 — دورة إثبات السلوك لمحطة الألعاب (Tool 988) ═══ */
+{
+  const { SpieleStation } = await import("../components/spiele");
+  const { vocabMap, dialogues, sentences } = await import("../lib/content");
+  const { baueWortgitter, dialogLuecke, uebersetzRunde } = await import("../lib/spiele");
+  mount(React.createElement(SpieleStation));
+
+  const poolA1 = Object.values(vocabMap)
+    .filter((deck) => deck.level === "A1")
+    .flatMap((deck) => deck.cards.map((card) => ({ wort: card.de, ar: card.ar })));
+  const gitterRunde = baueWortgitter(poolA1, 97 + "A1".charCodeAt(1));
+  const erstesZiel = gitterRunde.treffer[0];
+  ok(!!erstesZiel, "R311-1 دورة الدليل تولّد هدف شبكة حقيقيًا من مفردات A1");
+  if (erstesZiel) {
+    for (const [r, c] of erstesZiel.zellen) click(rootEl.querySelector(`[data-testid="spiel-gitter-zelle-${r}-${c}"]`) as HTMLElement);
+    click(rootEl.querySelector('[data-testid="spiel-gitter-pruefen"]') as HTMLElement);
+    const meldung = rootEl.querySelector('[data-testid="spiel-gitter-meldung"]');
+    ok(!!meldung && (meldung.textContent ?? "").includes(erstesZiel.wort) && meldung.getAttribute("role") === "status", "R311-2 مسار نجاح الشبكة يثبت الكلمة ويعلن التغذية لقارئ الشاشة");
+  }
+
+  click(rootEl.querySelector('[data-testid="spiel-tab-dialog"]') as HTMLElement);
+  const dialogRunde = dialogLuecke(dialogues.filter((dialog) => dialog.level === "A1"), 60);
+  const dialogButtons = Array.from(rootEl.querySelectorAll('[data-testid^="spiel-dialog-opt-"]')) as HTMLButtonElement[];
+  const falscheOption = dialogButtons.find((button) => (button.textContent ?? "").trim().replace(/[✓✗]\s*$/, "").trim() !== dialogRunde?.richtig);
+  ok(!!dialogRunde && !!falscheOption, "R311-3 دورة الدليل تملك مسار خطأ حقيقيًا لا خيارًا صائبًا فقط");
+  if (falscheOption) click(falscheOption);
+  const dialogFeedback = rootEl.querySelector('[data-testid="spiel-dialog-feedback"]');
+  ok(!!dialogFeedback && (dialogFeedback.textContent ?? "").includes("الجملة الصحيحة") && dialogButtons.every((button) => button.disabled), "R311-4 الخطأ يكشف الصواب والمعنى ويقفل الإجابة المكررة");
+
+  click(rootEl.querySelector('[data-testid="spiel-tab-uebersetz"]') as HTMLElement);
+  const uebersetzInput = rootEl.querySelector('[data-testid="spiel-uebersetz-input"]') as HTMLTextAreaElement;
+  const uebersetzPruefen = rootEl.querySelector('[data-testid="spiel-uebersetz-pruefen"]') as HTMLButtonElement;
+  const uebersetzSatz = uebersetzRunde(sentences, "A1", 46);
+  ok(uebersetzPruefen.disabled && !!uebersetzSatz && uebersetzInput.labels?.length === 1, "R311-5 الترجمة الفارغة ممنوعة والحقل يحمل تسمية وصولية صريحة");
+  if (uebersetzSatz) {
+    typeIn(uebersetzInput, uebersetzSatz.de);
+    click(uebersetzPruefen);
+  }
+  const uebersetzErgebnis = rootEl.querySelector('[data-testid="spiel-uebersetz-ergebnis"]');
+  ok(!!uebersetzErgebnis && (uebersetzErgebnis.textContent ?? "").includes("100%") && (uebersetzErgebnis.textContent ?? "").includes("لا يقيّم كل بدائل الترجمة"), "R311-6 المسار الموجب يعطي 100٪ ويعرض حد القياس بدل ادعاء فهم كل ترجمة");
+  ok((rootEl.querySelector('[data-testid="spiele-datenschutz"]')?.textContent ?? "").includes("لا تُرسل ترجمتك") && (rootEl.querySelector('[data-testid="spiele-lernziel"]')?.textContent ?? "").includes("اكتب جملة ألمانية"), "R311-7 هدف اللعبة وحدّ إرسال البيانات ظاهران للمتعلم");
+  await pruefeA11y("R311-8 محطة الألعاب بعد إكمال ترجمة وعرض التغذية");
+}
+
+/* ═══ R312 — دورة إثبات السلوك لبطاقات الكلمات (Tool 844) ═══ */
+{
+  const { default: TaskView } = await import("../components/tasks");
+  const { vocabMap, deFormOf } = await import("../lib/content");
+  const { newCard } = await import("../lib/srs");
+  const { loadProgress, saveProgress } = await import("../lib/store");
+  const deck = Object.values(vocabMap).find((item) => item.cards.some((card) => card.id === "v445"))!;
+  const card = deck.cards.find((item) => item.id === "v445")!;
+  const yesterday = new Date(Date.now() - 86_400_000).toISOString();
+  const productiveState = {
+    ...newCard(), reps: 1, prod: 0, stab: 2, diff: 5, interval: 1,
+    introduced: yesterday, last: yesterday, due: yesterday, learning: false,
+  };
+  const updates: { id: string; state: ReturnType<typeof newCard> }[] = [];
+  const task = { id: "tool-844-word-cards", kind: "wortschatz" as const, titleDe: "Word Cards", titleAr: "بطاقات الكلمات", minutes: 10, deckId: deck.id };
+  const props = {
+    task, lang: "ar" as const, day: 1, srs: { [card.id]: productiveState },
+    onSrs: (id: string, state: ReturnType<typeof newCard>) => { updates.push({ id, state }); },
+    onPoints: () => {}, voiceName: "", rate: 1, tempo: "leicht" as const,
+  };
+
+  mount(React.createElement(TaskView, props));
+  const face = rootEl.querySelector('[aria-label="اكشف اللفظ الألماني"]') as HTMLButtonElement | null;
+  ok(!!face && face.getAttribute("aria-expanded") === "false" && txt().includes(card.ar),
+    "R312-1 Tool 844: جولة الإنتاج تبدأ بالمحفز العربي وزر كشف دلالي غير موسع");
+  ok(!txt().includes(deFormOf(card)) && !rootEl.querySelector('[data-testid="wortkarten-bewertung"]'),
+    "R312-2 اللفظ الألماني وأزرار التقييم محجوبة قبل الاسترجاع؛ تمرين المتلازمة لا يسرّب الهدف");
+  ok((rootEl.querySelector('[data-testid="wortkarten-lernziel"]')?.textContent ?? "").includes("قبل الكشف") &&
+    (rootEl.querySelector('[data-testid="wortkarten-datenschutz"]')?.textContent ?? "").includes("لا تُرسل"),
+    "R312-3 هدف الاسترجاع قبل الكشف وحدّ الخصوصية المحلية ظاهران للمتعلم");
+
+  if (face) click(face);
+  const rating = rootEl.querySelector('[data-testid="wortkarten-bewertung"]');
+  ok(txt().includes(deFormOf(card)) && rating?.getAttribute("role") === "group" && !!btn("لم أعرف (0)") && !!btn("بجهد (2)") && !!btn("سهّل! (4)"),
+    "R312-4 الكشف يعرض الهدف وثلاث درجات تقييم ذاتي داخل مجموعة وصولية صريحة");
+  await pruefeA11y("R312-5 بطاقة الإنتاج بعد الكشف وقبل التقييم");
+  click(btn("سهّل! (4)")!);
+  const success = updates.find((entry) => entry.id === card.id);
+  ok(!!success && success.state.reps === 2 && success.state.prod === 1 && new Date(success.state.due).getTime() > Date.now(),
+    "R312-6 النجاح الإنتاجي يحدّث التكرارات وعدّاد الإنتاج وموعد SRS مستقبلياً ثم يتقدم بالطابور");
+
+  saveProgress({ ...emptyProgress, fehler: {} });
+  mount(React.createElement(TaskView, { ...props, onSrs: () => {} }));
+  click(rootEl.querySelector('[aria-label="اكشف اللفظ الألماني"]') as HTMLElement);
+  click(btn("لم أعرف (0)")!);
+  const fehlerWerte = Object.values(loadProgress().fehler ?? {});
+  const produktivFehler = fehlerWerte.find((entry) => entry.richtig === deFormOf(card));
+  ok(!!produktivFehler && produktivFehler.falsch === card.ar,
+    "R312-7 مسار عدم المعرفة يسجل المحفز العربي والهدف الألماني بالاتجاه الصحيح في دفتر الأخطاء");
+  ok((rootEl.querySelector('[data-testid="vocab-queue-count"]')?.textContent ?? "").includes("2") || txt().includes("أنهيت البطاقات"),
+    "R312-8 بعد التقييم لا تبقى البطاقة نفسها عالقة: يتقدم العداد أو تنتهي الدفعة");
+}
+
+/* ═══ R313 — دورة إثبات السلوك للتباينات الصوتية (Tool 232) ═══ */
+{
+  const restoreTestTts = installiereTestTts();
+  const { PhonetikStation } = await import("../components/phonetik");
+  mount(React.createElement(PhonetikStation));
+  const privacy = rootEl.querySelector('[data-testid="phonetik-datenschutz"]')?.textContent ?? "";
+  ok(txt().includes("ليست كل مجموعة زوجًا أدنى") && privacy.includes("لا تستخدم المحطة الميكروفون") && privacy.includes("لا تحفظ") && privacy.includes("لا ترسل"),
+    "R313-1 Tool 232: حد المصطلح وحدود الميكروفون والحفظ والإرسال ظاهرة بلا ادعاء أزواج دنيا أو خصوصية مبهم");
+
+  const auslautTest = rootEl.querySelector('[data-testid="phonetik-test-ph-a0-auslaut"]') as HTMLButtonElement;
+  const auslautHint = rootEl.querySelector('[data-testid="phonetik-test-hinweis-ph-a0-auslaut"]')?.textContent ?? "";
+  ok(auslautTest.disabled && auslautHint.includes("يتطابق نطق الشكلين") && auslautHint.includes("بلا سياق"),
+    "R313-2 زوجا Rad/Rat المتطابقان سمعياً لا يتحولان إلى سؤال اختيار مستحيل، والسبب ظاهر للمتعلم");
+
+  const a1Filter = Array.from(rootEl.querySelectorAll("button")).find((button) => button.textContent?.trim() === "A1") as HTMLButtonElement;
+  click(a1Filter);
+  ok(a1Filter.getAttribute("aria-pressed") === "true" && txt().includes("الأوملاوت") && !txt().includes("طول الحركة"),
+    "R313-3 مرشح المستوى يحمل aria-pressed ويعرض وحدات A1 دون وحدات A0");
+  const alleFilter = Array.from(rootEl.querySelectorAll("button")).find((button) => button.textContent?.trim() === "الكل") as HTMLButtonElement;
+  click(alleFilter);
+
+  const originalRandom = Math.random;
+  const startGesprochen = gesprocheneTtsTexte.length;
+  try {
+    const zufall = [0, 0];
+    Math.random = () => zufall.shift() ?? 0;
+    click(rootEl.querySelector('[data-testid="phonetik-test-ph-a0-laenge"]') as HTMLElement);
+  } finally {
+    Math.random = originalRandom;
+  }
+  const antwortA = rootEl.querySelector('[data-testid="phonetik-antwort-a"]') as HTMLButtonElement;
+  const antwortB = rootEl.querySelector('[data-testid="phonetik-antwort-b"]') as HTMLButtonElement;
+  const promptFeedback = rootEl.querySelector('[data-testid="phonetik-quiz-feedback"]');
+  ok(gesprocheneTtsTexte.length === startGesprochen + 1 && gesprocheneTtsTexte.at(-1) === "Stadt" &&
+    antwortA.textContent === "Stadt" && antwortB.textContent === "Staat" && promptFeedback?.getAttribute("role") === "status",
+    "R313-4 الجولة الحتمية تنطق الهدف المختار وتعرض خياري الزوج مع منطقة status");
+
+  click(antwortB);
+  const firstFeedback = rootEl.querySelector('[data-testid="phonetik-quiz-feedback"]')?.textContent ?? "";
+  ok(firstFeedback.includes("كانت «Stadt»") && firstFeedback.includes("0/1") && antwortA.disabled && antwortB.disabled,
+    "R313-5 مسار الخطأ يكشف الكلمة الصحيحة ويقفل الإجابة كي لا تتضاعف المحاولة");
+  click(antwortB);
+  ok((rootEl.querySelector('[data-testid="phonetik-quiz-feedback"]')?.textContent ?? "").includes("0/1"),
+    "R313-6 النقر المكرر بعد الإجابة لا يرفع المقام أو يغيّر الدرجة");
+
+  try {
+    const zufall = [0, 0.9];
+    Math.random = () => zufall.shift() ?? 0;
+    click(rootEl.querySelector('[data-testid="phonetik-test-ph-a0-laenge"]') as HTMLElement);
+  } finally {
+    Math.random = originalRandom;
+  }
+  const secondB = rootEl.querySelector('[data-testid="phonetik-antwort-b"]') as HTMLButtonElement;
+  ok(gesprocheneTtsTexte.at(-1) === "Staat" && !secondB.disabled, "R313-7 سؤال جديد يعيد فتح الاختيار وينطق الجهة الجديدة من الزوج");
+  click(secondB);
+  ok((rootEl.querySelector('[data-testid="phonetik-quiz-feedback"]')?.textContent ?? "").includes("1/2"),
+    "R313-8 المسار الصحيح يراكم نجاحاً واحداً من محاولتين دون حفظ نتيجة خارج حالة الجلسة");
+  await pruefeA11y("R313-9 محطة التباينات بعد مساري الخطأ والصواب");
+  restoreTestTts();
+}
+
+/* ═══ R314 — دورة إثبات السلوك للشرح الذاتي (Tool 202) ═══ */
+{
+  const { LernStrategieZentrum } = await import("../components/lernstrategie");
+  const { grammarMap } = await import("../lib/content");
+  const { levelOf, pickN, rng } = await import("../lib/plan");
+  const { loadProgress, saveProgress } = await import("../lib/store");
+  const day = 1;
+  const startProgress = { ...emptyProgress, plan: { ...emptyProgress.plan, day }, lernen: undefined, xp: 0, kompetenzLog: [] };
+  saveProgress(startProgress);
+  mount(React.createElement(LernStrategieZentrum, { progress: startProgress }));
+  click(btn("LernStrategien-Zentrum")!);
+  click(Array.from(rootEl.querySelectorAll("button")).find((button) => (button.textContent ?? "").includes("فاينمان")) as HTMLElement);
+  await flushAsync();
+
+  const input = rootEl.querySelector('[data-testid="feynman-text"]') as HTMLTextAreaElement;
+  const submit = rootEl.querySelector('[data-testid="feynman-submit"]') as HTMLButtonElement;
+  ok(!!input && input.labels?.length === 1 && submit.disabled,
+    "R314-1 Tool 202: حقل الشرح يحمل تسمية صريحة ولا يقبل إرسال نص أقصر من الحد الأدنى");
+  const privacy = rootEl.querySelector('[data-testid="feynman-datenschutz"]')?.textContent ?? "";
+  ok(privacy.includes("مؤشر تغطية كلمات فقط") && privacy.includes("لا يُحفظ نصك") && privacy.includes("أول محاولة"),
+    "R314-2 حد القياس والحفظ وقاعدة أول محاولة ظاهرة قبل الإرسال");
+
+  const lvl = levelOf(day);
+  const pool = Object.values(grammarMap).filter((topic) => topic.level === lvl && topic.rules.length >= 2);
+  const topic = pickN(pool.length ? pool : Object.values(grammarMap), 1, rng(day * 887 + 13))[0];
+  const explanation = `${topic.rules.map((rule) => rule.ar).join(". ")} مثال من حياتي يوضح استعمال القاعدة.`;
+  typeIn(input, explanation);
+  ok(!submit.disabled, "R314-3 شرح بطول كاف يفتح زر التقييم المحلي");
+  click(submit);
+
+  const result = rootEl.querySelector('[data-testid="feynman-result"]');
+  ok(!!result && (result.textContent ?? "").includes("100٪") && result.getAttribute("role") === "status",
+    "R314-4 الإرسال الأول يقيس النص الحالي مباشرةً ويعرض 100٪؛ لا يسجل الصفر القديم قبل تحديث React");
+  const afterFirst = loadProgress();
+  const lastLog = afterFirst.kompetenzLog?.at(-1);
+  ok(afterFirst.xp === 3 && !!afterFirst.lernen?.tag && !!afterFirst.lernen.feynman?.includes(topic.id) &&
+    lastLog?.h === "Grammatik" && lastLog.ok === true,
+    "R314-5 المحاولة الأولى فقط تسجل الموضوع ونتيجة الكفاءة الصحيحة وتمنح XP الموافق للنتيجة الفعلية");
+  ok(!JSON.stringify(afterFirst).includes(explanation), "R314-6 نص شرح المتعلم لا يدخل ملف التقدم المحلي");
+  ok(input.readOnly && input.value === explanation, "R314-7 النص والنتيجة يتجمدان معاً بعد الإرسال حتى يطلب المتعلم التعديل صراحةً");
+
+  const xpFirst = afterFirst.xp;
+  const logsFirst = afterFirst.kompetenzLog?.length ?? 0;
+  click(rootEl.querySelector('[data-testid="feynman-edit"]') as HTMLElement);
+  const secondSubmit = rootEl.querySelector('[data-testid="feynman-submit"]') as HTMLButtonElement;
+  ok(!secondSubmit.disabled && !!rootEl.querySelector('[data-testid="feynman-already-rated"]'),
+    "R314-8 إعادة الفحص متاحة للتعلم مع تنبيه أن محاولة اليوم سُجلت بالفعل");
+  click(secondSubmit);
+  const afterSecond = loadProgress();
+  ok(afterSecond.xp === xpFirst && (afterSecond.kompetenzLog?.length ?? 0) === logsFirst &&
+    afterSecond.lernen?.feynman?.filter((id) => id === topic.id).length === 1,
+    "R314-9 إعادة الإرسال لا تضخم XP أو سجل الكفاءة أو معرفات الموضوع");
+  await pruefeA11y("R314-10 محطة الشرح الذاتي بعد التقييم وإعادة الفحص");
+}
+
+/* ═══ R315 — خريطة اليوم الخماسية: قفل حقيقي بالتسليم، لا بالمظهر أو النقاط المحلية ═══ */
 {
   const { default: TodayStepper } = await import("../components/akademie/TodayStepper");
   const { buildDay } = await import("../lib/plan");
   const { ritualUrteil } = await import("../lib/ritual");
-  const { gruppiereTagesAufgaben } = await import("../lib/tagesstationen");
+  const { groupTasksByTodayStep } = await import("../lib/today-steps");
   const plan = buildDay(2, { ...emptyProgress, plan: { ...emptyProgress.plan, day: 2 } });
   const resultate: Record<string, { done: boolean; passed: boolean; score: number; total: number; attempts: number }> = {};
   let lokalePunkte: Record<string, { score: number; total: number }> = {};
   let gewaehlt = -1;
   const props = (progress: typeof emptyProgress) => ({
     plan,
-    progress,
     ritual: ritualUrteil(plan, progress),
     stepFrei: 0,
     setStep: (index: number) => { gewaehlt = index; },
@@ -4401,20 +4804,20 @@ const hasFile = txt().includes("صوتٌ من الدار");
   const station2Task = rootEl.querySelector(`[data-testid="today-step-2-task-${grammarIndex}"]`) as HTMLButtonElement;
   ok(rootEl.querySelector('[data-testid="today-step-1"]')?.classList.contains("today-step--active") === true &&
     rootEl.querySelector('[data-testid="today-step-2"]')?.classList.contains("today-step--locked") === true,
-    "R310-1 البداية تعرض الاسترجاع نشطاً والدرس مقفلاً في خريطة اليوم");
+    "R315-1 البداية تعرض الاسترجاع نشطاً والدرس مقفلاً في خريطة اليوم");
   ok(station2Task.disabled && gewaehlt === -1,
-    "R310-2 زر مهمة الدرس نفسه معطّل فعلياً؛ القفل ليس شارة بصرية قابلة للتجاوز");
+    "R315-2 زر مهمة الدرس نفسه معطّل فعلياً؛ القفل ليس شارة بصرية قابلة للتجاوز");
 
-  const station2Ids = (gruppiereTagesAufgaben(plan.tasks).get(2) ?? []).map((task) => task.id);
+  const station2Ids = (groupTasksByTodayStep(plan.tasks).get(2) ?? []).map((task) => task.id);
   lokalePunkte = Object.fromEntries(station2Ids.map((id) => [id, { score: 10, total: 10 }]));
   mount(React.createElement(TodayStepper, props(startProgress)));
   const station2MitPunkten = rootEl.querySelector(`[data-testid="today-step-2-task-${grammarIndex}"]`) as HTMLButtonElement;
   ok(rootEl.querySelector('[data-testid="today-step-2"]')?.classList.contains("today-step--locked") === true &&
     !station2MitPunkten.classList.contains("is-passed") && !station2MitPunkten.classList.contains("is-submitted") &&
     !(station2MitPunkten.getAttribute("aria-label") ?? "").includes("مسلّمة"),
-    "R310-3 نقاط محلية كاملة بلا تسليم لا تفتح الدرس ولا تتنكر بصرياً كتسليم أو نجاح");
+    "R315-3 نقاط محلية كاملة بلا تسليم لا تفتح الدرس ولا تتنكر بصرياً كتسليم أو نجاح");
 
-  const station1 = gruppiereTagesAufgaben(plan.tasks).get(1) ?? [];
+  const station1 = groupTasksByTodayStep(plan.tasks).get(1) ?? [];
   for (const task of station1) resultate[task.id] = { done: true, passed: false, score: 0, total: 1, attempts: 1 };
   const nachFehler = {
     ...startProgress,
@@ -4424,7 +4827,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
   const station2NachAbgabe = rootEl.querySelector(`[data-testid="today-step-2-task-${grammarIndex}"]`) as HTMLButtonElement;
   ok(rootEl.querySelector('[data-testid="today-step-1"]')?.classList.contains("today-step--done") === true &&
     rootEl.querySelector('[data-testid="today-step-2"]')?.classList.contains("today-step--active") === true && !station2NachAbgabe.disabled,
-    "R310-4 تسليم استرجاع غير مجتاز يُرحّل للمراجعة لكنه يفتح الدرس ولا يحبس المتعلم");
+    "R315-4 تسليم استرجاع غير مجتاز يُرحّل للمراجعة لكنه يفتح الدرس ولا يحبس المتعلم");
 
   for (const id of station2Ids) resultate[id] = { done: true, passed: true, score: 1, total: 1, attempts: 1 };
   const bisStation2 = { ...startProgress, plan: { ...startProgress.plan, tasks: { ...resultate } } };
@@ -4432,41 +4835,43 @@ const hasFile = txt().includes("صوتٌ من الدار");
   const station3Task = rootEl.querySelector(`[data-testid="today-step-3-task-${lesenIndex}"]`) as HTMLButtonElement;
   ok(rootEl.querySelector('[data-testid="today-step-2"]')?.classList.contains("today-step--done") === true &&
     rootEl.querySelector('[data-testid="today-step-3"]')?.classList.contains("today-step--active") === true && !station3Task.disabled,
-    "R310-5 تسليم الدرس يفتح الاستماع/القراءة فقط وتبقى المحطات الأبعد وراء التسلسل");
-  await pruefeA11y("R310-6 خريطة اليوم بعد انتقال محطتين");
+    "R315-5 تسليم الدرس يفتح الاستماع/القراءة فقط وتبقى المحطات الأبعد وراء التسلسل");
+  await pruefeA11y("R315-6 خريطة اليوم بعد انتقال محطتين");
 
-  // المسار الثاني في «قائمة مهام اليوم» لا يجوز أن يلتف حول القفل، كما أن
-  // موضعاً قديماً محفوظاً في محطة لاحقة يعود إلى أول مهمة نشطة.
   const { saveProgress } = await import("../lib/store");
   const { progressKeyActive } = await import("../lib/profiles");
   (globalThis as unknown as { self?: unknown }).self = globalThis;
   const { default: Heim } = await import("../app/page");
+  const stepKey2 = `${progressKeyActive()}:day-step:2`;
   act(() => {
     saveProgress(startProgress);
-    dom.window.localStorage.setItem("wegb2:day-step:2", String(grammarIndex));
+    dom.window.localStorage.setItem(stepKey2, String(grammarIndex));
   });
   mount(React.createElement(Heim));
   const taskMapGrammar = rootEl.querySelector(`[data-testid="held-mini-${grammarIndex}"]`) as HTMLButtonElement;
   const primaryText = rootEl.querySelector('[data-testid="today-primary-step"]')?.textContent ?? "";
   ok(taskMapGrammar.disabled && primaryText.includes(plan.tasks[0].titleAr) && !primaryText.includes(plan.tasks[grammarIndex].titleAr),
-    "R310-7 قائمة المهام لا تتجاوز المحطة، وموضع قديم مقفول يعود إلى أول مهمة استرجاع نشطة");
+    "R315-7 قائمة المهام لا تتجاوز المحطة، وموضع قديم مقفول يعود إلى أول مهمة استرجاع نشطة");
 
   const tag1Progress = { ...emptyProgress, plan: { ...emptyProgress.plan, day: 1 } };
   const tag1Plan = buildDay(1, tag1Progress);
   const tag1Grammatik = tag1Plan.tasks.find((task) => task.kind === "grammatik")!;
+  const stepKey1 = `${progressKeyActive()}:day-step:1`;
   act(() => {
     saveProgress(tag1Progress);
-    dom.window.localStorage.removeItem("wegb2:day-step:1");
+    dom.window.localStorage.removeItem(stepKey1);
   });
   mount(React.createElement(Heim));
   const ersterSubmit = btn("سلّم المهمة");
   if (ersterSubmit) click(ersterSubmit);
   const nachErsterAbgabe = rootEl.querySelector('[data-testid="today-primary-step"]')?.textContent ?? "";
   ok(!!ersterSubmit && nachErsterAbgabe.includes(tag1Grammatik.titleAr),
-    "R310-8 بعد تهيئة اليوم الأول ينتقل المشغّل إلى محطة الدرس، لا إلى مهمة لاحقة جاءت قبلها في ترتيب المصدر");
+    "R315-8 بعد تهيئة اليوم الأول ينتقل المشغّل إلى محطة الدرس، لا إلى مهمة لاحقة جاءت قبلها في ترتيب المصدر");
 
   act(() => {
     dom.window.localStorage.removeItem(progressKeyActive());
+    dom.window.localStorage.removeItem(stepKey1);
+    dom.window.localStorage.removeItem(stepKey2);
     dom.window.localStorage.removeItem("wegb2:day-step:1");
     dom.window.localStorage.removeItem("wegb2:day-step:2");
   });

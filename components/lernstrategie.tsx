@@ -13,6 +13,7 @@
  * تحديد المستوى — لا أداة مشتتة جديدة، بل نفس البيت موسّعاً.
  */
 
+import { lokalesDatum } from "@/lib/datum";
 import { useEffect, useMemo, useState } from "react";
 import type { Progress } from "@/lib/types";
 import { useProgress, addFehlerNow } from "@/lib/store";
@@ -20,8 +21,9 @@ import { levelOf, pickN, rng } from "@/lib/plan";
 import { logK, KOMPETENZEN, KOMPETENZ_AR, kompetenzWerte } from "@/lib/kompetenz";
 import { checkAbzeichen } from "@/lib/spiel";
 import { grammarMap, alleVokabeln } from "@/lib/content";
+import { bewerteSelbsterklaerung, type SelbsterklaerungAuswertung } from "@/lib/selbsterklaerung";
 
-const TAG = () => new Date().toISOString().slice(0, 10);
+const TAG = () => lokalesDatum();
 
 /* ------------------------------------------------------ 118 · Teil-Strategien */
 
@@ -255,20 +257,9 @@ function PomoCoach() {
 
 /* ------------------------------------------------- 123 · فاينمان — اشرح لتفهم */
 
-const AR_STOP = new Set("على عن في من إلى أن إنّ لكن ما هذا التي الذي مع قد لم لن حتى بين عند عن كل بعض كما إذا كان كانت يكون هناك".split(" "));
-
-function arNorm(s: string): string {
-  return s
-    .replace(/[\u064B-\u0652\u0670]/g, "")
-    .replace(/[أإآ]/g, "ا")
-    .replace(/ة/g, "ه")
-    .replace(/[^\p{L}\p{N}\s]/gu, " ")
-    .replace(/\s+/g, " ")
-    .trim();
-}
-
 function Feynman() {
   const { update, progress } = useProgress();
+  const heute = TAG();
   const day = progress.plan.day;
   const lvl = levelOf(day);
   const topic = useMemo(() => {
@@ -277,70 +268,79 @@ function Feynman() {
     return pickN(pool.length ? pool : Object.values(grammarMap), 1, rand)[0];
   }, [day, lvl]);
 
-  const regeln = useMemo(
-    () =>
-      topic.rules.map((r) => {
-        const kws = arNorm(r.ar)
-          .split(" ")
-          .filter((w) => w.length > 3 && !AR_STOP.has(w));
-        return { r, kws: kws.slice(0, 4) };
-      }),
-    [topic]
-  );
-
   const [text, setText] = useState("");
-  const [geprüft, setGeprüft] = useState(false);
+  const [auswertung, setAuswertung] = useState<SelbsterklaerungAuswertung | null>(null);
+  const bereitsGewertet = progress.lernen?.tag === heute && (progress.lernen.feynman ?? []).includes(topic.id);
 
-  const deckung = useMemo(() => {
-    if (!geprüft) return null;
-    const t = " " + arNorm(text) + " ";
-    return regeln.map(({ r, kws }) => {
-      const hit = kws.filter((k) => t.includes(" " + k + " ")).length;
-      return { de: r.de, ok: kws.length > 0 && hit / kws.length >= 0.34 };
-    });
-  }, [geprüft, regeln, text]);
-
-  const getroffen = deckung ? deckung.filter((d) => d.ok).length : 0;
-  const anteil = deckung && deckung.length ? Math.round((100 * getroffen) / deckung.length) : 0;
+  useEffect(() => {
+    setText("");
+    setAuswertung(null);
+  }, [topic.id]);
 
   function prüfen() {
-    setGeprüft(true);
-    const ok = anteil >= 50;
-    update((p) => logK(checkAbzeichen({ ...p, xp: (p.xp ?? 0) + (ok ? 3 : anteil >= 25 ? 1 : 0) }), "Grammatik", ok));
+    const result = bewerteSelbsterklaerung(text, topic.rules);
+    setAuswertung(result);
+    update((p) => {
+      const alt = p.lernen?.tag === heute ? p.lernen : { tag: heute };
+      if ((alt.feynman ?? []).includes(topic.id)) return p;
+      const basis = {
+        ...p,
+        lernen: { ...alt, feynman: [...(alt.feynman ?? []), topic.id] },
+        xp: (p.xp ?? 0) + (result.bestanden ? 3 : result.anteil >= 25 ? 1 : 0),
+      };
+      return logK(checkAbzeichen(basis), "Grammatik", result.bestanden);
+    });
   }
 
   return (
-    <div style={{ display: "grid", gap: "0.6rem" }}>
+    <div data-testid="feynman-station" style={{ display: "grid", gap: "0.6rem" }}>
       <div style={{ background: "var(--color-paper2)", borderRadius: 10, padding: "0.55rem 0.8rem", fontSize: "0.78rem" }} dir="rtl">
-        <b>🧠 طريقة فاينمان:</b> {topic.titleAr} <span className="de" style={{ opacity: 0.7 }}>({topic.titleDe})</span> — اشرح القاعدة بلسانك كأنك تعلّمها لتلميذ في الثانية عشرة. من لا يبسطها لم يملكها.
+        <b>🧠 طريقة فاينمان:</b> {topic.titleAr} <span className="de" style={{ opacity: 0.7 }}>({topic.titleDe})</span> — اشرح القاعدة بلسانك كأنك تعلّمها لتلميذ في الثانية عشرة.
       </div>
       <div style={{ display: "grid", gap: 4 }}>
-        {regeln.map(({ r }, k) => (
+        {topic.rules.map((regel, k) => (
           <div key={k} style={{ border: "1px solid var(--color-line)", borderRadius: 10, padding: "0.4rem 0.7rem", fontSize: "0.78rem" }}>
-            <div className="de" style={{ fontWeight: 800 }}>{r.de}</div>
-            <div style={{ color: "var(--color-ink2)" }} dir="rtl">{r.ar}</div>
+            <div className="de" style={{ fontWeight: 800 }}>{regel.de}</div>
+            <div style={{ color: "var(--color-ink2)" }} dir="rtl">{regel.ar}</div>
           </div>
         ))}
       </div>
-      <textarea className="field" rows={5} style={{ direction: "rtl", width: "100%", resize: "vertical" }} placeholder="اشرح هنا بصوتك أنت — بلا نسخ من الأعلى…" value={text} onChange={(e) => setText(e.target.value)} />
-      {!geprüft ? (
+      <label htmlFor={`feynman-text-${topic.id}`} style={{ fontSize: "0.8rem", fontWeight: 800 }}>
+        اشرح القاعدة بكلماتك وأضف مثالاً من حياتك
+      </label>
+      <textarea
+        id={`feynman-text-${topic.id}`}
+        data-testid="feynman-text"
+        className="field"
+        rows={5}
+        readOnly={auswertung !== null}
+        aria-describedby="feynman-messgrenze"
+        style={{ direction: "rtl", width: "100%", resize: "vertical" }}
+        placeholder="اشرح هنا بأسلوبك أنت — لا تنسخ السطر كما هو…"
+        value={text}
+        onChange={(e) => setText(e.target.value)}
+      />
+      <div id="feynman-messgrenze" data-testid="feynman-datenschutz" style={{ fontSize: "0.72rem", color: "var(--color-ink2)" }} dir="rtl">
+        🔒 الفحص محلي وهو مؤشر تغطية كلمات فقط، لا حكم على صحة العلاقات أو جودة الشرح. لا يُحفظ نصك؛ تُسجّل نتيجة كفاءة أول محاولة لهذا الموضوع اليوم فقط.
+      </div>
+      {!auswertung ? (
         <div style={{ display: "flex", gap: 8, alignItems: "center", flexWrap: "wrap" }}>
-          <button className="btn btn-primary" disabled={text.trim().length < 20} onClick={prüfen}>قيس الشرح ← تغطية القواعد</button>
-          <span style={{ fontSize: "0.7rem", color: "var(--color-ink2)" }}>(الفحص محلي: مدى استعمالك كلمات القواعد المفتاحية)</span>
+          <button type="button" data-testid="feynman-submit" className="btn btn-primary" disabled={text.trim().length < 20} onClick={prüfen}>قيّم تغطية الشرح</button>
+          {bereitsGewertet && <span data-testid="feynman-already-rated" style={{ fontSize: "0.72rem", color: "var(--color-ink2)" }}>سُجلت محاولة هذا الموضوع اليوم؛ التعديل التالي للتعلّم فقط ولن يضيف XP أو نتيجة جديدة.</span>}
         </div>
       ) : (
         <div style={{ display: "grid", gap: 6 }}>
-          <div style={{ fontSize: "0.8rem", fontWeight: 900, color: anteil >= 50 ? "var(--color-a1)" : "var(--color-gold)" }} dir="rtl">
-            غطّيت {anteil}٪ من القواعد بمفرداتك — {anteil >= 50 ? "✓ الشرح يمسك المادة؛ ارفع السقف بشرح جارك الوهمي غداً" : "✗ الشرح عامّ؛ انزل للقاعدة الناقصة بمثال من حياتك"}
+          <div role="status" aria-live="polite" data-testid="feynman-result" style={{ fontSize: "0.8rem", fontWeight: 900, color: auswertung.bestanden ? "var(--color-a1)" : "var(--color-gold)" }} dir="rtl">
+            غطّيت {auswertung.anteil}٪ من القواعد بمفرداتك — {auswertung.bestanden ? "✓ المؤشر وجد مفردات كافية؛ راجع دقة العلاقات والمثال بنفسك" : "✗ التغطية عامة؛ عد إلى القاعدة الناقصة وأضف مثالاً"}
           </div>
-          {deckung?.map((d, k) => (
+          {auswertung.details.map((detail, k) => (
             <div key={k} style={{ fontSize: "0.75rem", display: "flex", gap: 6, alignItems: "baseline" }}>
-              <span style={{ color: d.ok ? "var(--color-a1)" : "#b91c1c", fontWeight: 900 }}>{d.ok ? "✓" : "✗"}</span>
-              <span className="de" style={{ opacity: d.ok ? 0.75 : 1 }}>{d.de}</span>
-              {!d.ok && <span style={{ color: "var(--color-ink2)" }} dir="rtl">— لم تظهر في شرحك</span>}
+              <span style={{ color: detail.ok ? "var(--color-a1)" : "#b91c1c", fontWeight: 900 }}>{detail.ok ? "✓" : "✗"}</span>
+              <span className="de" style={{ opacity: detail.ok ? 0.75 : 1 }}>{detail.de}</span>
+              {!detail.ok && <span style={{ color: "var(--color-ink2)" }} dir="rtl">— لم تظهر مفرداتها في شرحك</span>}
             </div>
           ))}
-          <button className="btn btn-ghost" onClick={() => { setGeprüft(false); }}>↺ عدّل واعد الشرح</button>
+          <button type="button" data-testid="feynman-edit" className="btn btn-ghost" onClick={() => setAuswertung(null)}>↺ عدّل واعد الفحص</button>
         </div>
       )}
     </div>

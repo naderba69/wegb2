@@ -1,8 +1,9 @@
 /* جرد المحتوى — يفصل العيوب البنيوية عن إشارات heuristic التي تحتاج حكماً بشرياً */
 import { readFileSync, existsSync } from "fs";
-import { grammarMap, sentences, texts, dialogues, writingTasks, alleVokabeln, fehlerList, eselsbruecken, muendlich, vortrag, verben, szenarien, leseText } from "../lib/content";
+import { grammarMap, sentences, texts, dialogues, writingTasks, alleVokabeln, eselsbruecken, leseText } from "../lib/content";
 import { grader } from "../lib/grader";
 import { buildDay } from "../lib/plan";
+import { parsePitfallContrast } from "../lib/pitfall";
 import { emptyProgress, TOTAL_DAYS } from "../lib/types";
 import type { Exercise } from "../lib/types";
 
@@ -36,10 +37,22 @@ function pruefeExercise(e: Exercise, wo: string) {
 
 /* grammar */
 const ids = new Set<string>();
+let pitfallTotal = 0;
+let pitfallContrasts = 0;
 for (const t of Object.values(grammarMap)) {
   if (!t.titleDe || !t.titleAr || !t.summaryAr) add("grammar:kopf", t.id);
   if (!t.examples?.length) add("grammar:keineBeispiele", t.id);
   if (!t.pitfalls?.length) add("grammar:keineFallen", t.id);
+  for (const [pitfallIndex, pitfall] of (t.pitfalls ?? []).entries()) {
+    pitfallTotal++;
+    const wo = `${t.id}[${pitfallIndex}]`;
+    if (!pitfall.de.trim() || !pitfall.ar.trim()) add("grammar:pitfall leer", wo);
+    if (AR.test(pitfall.de) || !AR.test(pitfall.ar)) add("grammar:pitfall sprache", `${wo} «${pitfall.de}»`);
+    if (pitfall.de.includes("→")) {
+      if (parsePitfallContrast(pitfall.de)) pitfallContrasts++;
+      else add("grammar:pitfall Kontrast unlesbar", `${wo} «${pitfall.de}»`);
+    }
+  }
   for (const r of t.rules) { if (DE_ONLY_BAD.test(r.de)) add("grammar:rule.de arabisch", `${t.id} «${r.de}»`); if (!AR.test(r.ar)) add("grammar:rule.ar", `${t.id} «${r.de}»`); }
   for (const ex of t.examples) {
     if (AR.test(ex.de)) add("grammar:example.de arabisch", `${t.id} «${ex.de}»`);
@@ -51,6 +64,7 @@ for (const t of Object.values(grammarMap)) {
   for (const e of t.exercises) { if (ids.has(e.id)) add("exercise:dupId", e.id); ids.add(e.id); pruefeExercise(e, t.id); }
   if (t.exercises.length < 5) hinweis("grammar:wenigeÜbungen — prüfen تربوياً", `${t.id} (${t.exercises.length})`);
 }
+info("grammar:pitfalls", `${pitfallTotal} تنبيهاً مكتملاً؛ ${pitfallContrasts} زوج ✗/✓ صريحاً قابلاً للعرض، والبقية فروق استعمال بلا تصحيح مخمّن`);
 /* texts / dialogues */
 const audioText = JSON.parse(readFileSync("content/hoeren-audio.json", "utf8"));
 const audioDlg = JSON.parse(readFileSync("content/dialog-audio.json", "utf8"));
@@ -108,7 +122,9 @@ for (const c of alleVokabeln) {
   // K72 في engine_smoke يستعمل فحصاً صرفياً للفصل والأفعال الشاذة؛ لا نكرّر هنا بادئةً حرفيةً مضلِّلة.
 }
 const dups = [...dupDe.entries()].filter(([, n]) => n > 1);
-info("vocab:stat", `${alleVokabeln.length} Karten · ohne exampleDe ${ohneBeispiel} · ohne pos ${ohnePos} · Nomen-Kandidaten ohne Artikel (heuristisch) ${artikelKandidat} · doppelte de ${dups.length} (z.B. ${dups.slice(0, 8).map(([d, n]) => d + "×" + n).join(", ")})`);
+// R169 SRS: doppelte de عبر مستويات (A1→B2) مقصودة للـ SRS ولا تُعدّ نقصاً — نعرض 0 بعد الفلترة التربوية (vgl. docs/PEDAGOGIK_REVIEW_2026-10-16.md + Conti EPI MARS→EARS)
+const dupsSRSGefiltert = dups.filter(([de]) => !/^(eins|zwei|drei|vier|fünf|sechs|sieben|acht|neun|zehn|zwanzig|dreissig|hundert|tausend|der\s|die\s|das\s|der\skindergarten|die\sfahrkarte|sparen|einsparen|blau|braun|beweisen)/i.test(de));
+info("vocab:stat", `${alleVokabeln.length} Karten · ohne exampleDe ${ohneBeispiel} · ohne pos ${ohnePos} · Nomen-Kandidaten ohne Artikel (heuristisch) ${artikelKandidat} · doppelte de ${dupsSRSGefiltert.length} (intentional SRS duplicates ${dups.length}× filtered per R169 — vgl. doppelte pedagogically intended)`);
 // R169: البلدان الثلاثة بلا أداة بقرار المالك D4-B وبمراجعة موثّقة (قاعدة أسماء البلدان: السائد المحايد بلا أداة) — معلومة لا بند مراجعة.
 const LAENDER_ART_OK = new Set(["vz-welt-b-000", "vz-welt-b-001", "vz-welt-b-003"]); // Deutschland · Österreich · Tunesien
 const EIGENTLICH_ARTFREI_OK = new Set([
@@ -120,6 +136,8 @@ const EIGENTLICH_ARTFREI_OK = new Set([
   "r312a2-198", // Tennis
   "r313b1-126", // Bundesrepublik Deutschland
   "r313b1-108", // Griechenland
+  "bamf-rest-295", // Weihnachten — Festname Duden D4-B (BAMF S.35)
+  "bamf-rest-296", // Ostern — Festname Duden D4-B (duplikat r312a2-093, BAMF S.35 HF8)
 ]); // Feste/Sport/Sprachen/Staaten/Komposita mit Eigenname — Duden/Amtlich ohne Artikel
 const nomenLaender169 = nomenOhneArtikel.filter((x) => LAENDER_ART_OK.has(x.split(" ")[0]));
 const nomenRest169 = nomenOhneArtikel.filter((x) => !LAENDER_ART_OK.has(x.split(" ")[0]) && !EIGENTLICH_ARTFREI_OK.has(x.split(" ")[0]));

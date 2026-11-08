@@ -7,7 +7,8 @@ import { POS_AR } from "@/lib/types";
 import { eselsbruecken, getBrueckenFor, getBrueckenForWort, getGrammar, sprichwortSrc, getDeck, getText, leseText, getDialogue, getWriting, getSatz, getMnemonik, candoMap, vocabMap, deFormOf, partnerKarten, kontaktKarten, muendlich } from "@/lib/content";
 import { kollokationenFuer, kollokationUebung } from "@/lib/kollokationen";
 import { WortLinkText } from "./wortlink";
-import { newCard, reviewCard, isDue, newCardCap, countNewCardsIntroducedToday, wasIntroducedToday, karteStufe, KARTENSTUFE_AR } from "@/lib/srs";
+import { newCard, reviewCard, isDue, newCardCap, karteStufe, KARTENSTUFE_AR } from "@/lib/srs";
+import { planeWortkarten } from "@/lib/wortkarten";
 import { genusCode } from "@/lib/genus";
 import { addFehlerNow, markiereSchriftlich, loadProgress, saveProgress } from "@/lib/store";
 import { speakDe, speakAny, speakLine, stopSpeech, speechAvailable, germanVoices, warmVoices } from "@/lib/speech";
@@ -28,6 +29,7 @@ import { meldung } from "@/lib/meldungen";
 import { BemerkenKarte } from "./bemerken";
 import { entdeckungsFrage, induktionMoeglich, ergebnisText, type EntdeckungsErgebnis } from "@/lib/induktion";
 import { grammarMap } from "@/lib/content";
+import { LektionWizard } from "@/components/akademie/LektionWizard";
 const alleGrammatik = Object.values(grammarMap);
 const alleVokabelIds = Object.values(vocabMap).flatMap((deck) => deck.cards.map((card) => card.id));
 
@@ -70,6 +72,10 @@ interface TaskProps {
   srs: Record<string, SrsState>;
   onSrs: (cardId: string, state: SrsState) => void;
   onPoints: (points: number, max: number) => void;
+  /** داخل صفحة اليوم، مهمة القواعد تُعرض باستوديو الدرس الكامل بدل البطاقة المختصرة. */
+  lessonStudio?: boolean;
+  /** يمنع احتساب إكمال الاستوديو مرتين قبل تسليم مهمة اليوم. */
+  lessonCompleted?: boolean;
   /** نتيجة استرجاع جملة كبسولة (M1): تُحجز في فواصل المتعلم المتكيفة. */
   onKapselErgebnis?: (satzId: string, ok: boolean) => void;
   voiceName?: string;
@@ -82,7 +88,7 @@ interface TaskProps {
 }
 
 /** عارض مهمة اليوم حسب نوعها — كل شيء داخلي (TTS بدل الملفات) */
-export default function TaskView({ task, lang: _lang, day, srs, onSrs, onPoints, voiceName, rate, tempo = "regelmaessig", persistKey, onKapselErgebnis, bemerkenRegeln }: TaskProps) {
+export default function TaskView({ task, lang: _lang, day, srs, onSrs, onPoints, lessonStudio = false, lessonCompleted = false, voiceName, rate, tempo = "regelmaessig", persistKey, onKapselErgebnis, bemerkenRegeln }: TaskProps) {
   // تسميع الإملاء: مستمع عام يعمل في كل المهام
   useEffect(() => {
     const onSpeak = (e: Event) => {
@@ -96,7 +102,16 @@ export default function TaskView({ task, lang: _lang, day, srs, onSrs, onPoints,
 
   switch (task.kind) {
     case "grammatik":
-      return <GrammarTask task={task} srs={srs} onPoints={onPoints} persistKey={persistKey} />;
+      return lessonStudio && task.topicId && !task.verifyFor ? (
+        <LektionWizard
+          topicId={task.topicId}
+          embedded
+          completedInDay={lessonCompleted}
+          onComplete={() => { if (!lessonCompleted) onPoints(3, 3); }}
+        />
+      ) : (
+        <GrammarTask task={task} srs={srs} onPoints={onPoints} persistKey={persistKey} />
+      );
     case "wortschatz":
       return <VocabTask task={task} srs={srs} onSrs={onSrs} onPoints={onPoints} voiceName={voiceName} rate={rate} tempo={tempo} persistKey={persistKey} />;
     case "hoeren":
@@ -622,20 +637,11 @@ function VocabTask({ task, srs, onSrs, onPoints, voiceName, rate, tempo = "regel
     let freshCount = 0;
     let introducedToday = 0;
     if (deck) {
-      const pending = deck.cards.filter((c) => srs[c.id]?.reps === 0 && wasIntroducedToday(srs[c.id]));
-      const due = deck.cards.filter((c) => srs[c.id] && isDue(srs[c.id]) && !pending.some((p) => p.id === c.id));
-      const fresh = deck.cards.filter((c) => !srs[c.id]);
-      const alreadyIntroduced = countNewCardsIntroducedToday(srs, alleVokabelIds);
-      introducedToday = alreadyIntroduced;
-      const roomForNew = Math.max(0, newCardCap(tempo) - alreadyIntroduced);
-      const pendingToday = pending.slice(0, 10);
-      const dueSlots = Math.max(0, 10 - pendingToday.length);
-      const dueToday = due.slice(0, dueSlots);
-      const newSlots = Math.min(roomForNew, Math.max(0, 10 - pendingToday.length - dueToday.length));
-      // المستحقّ أولاً، ثم استأنف البطاقة التي ظهرت ولم تُقيَّم، وأخيراً الجديد ضمن السقف.
-      pool = [...dueToday, ...pendingToday, ...fresh.slice(0, newSlots)].slice(0, 10);
-      dueCount = due.length;
-      freshCount = fresh.length;
+      const plan = planeWortkarten(deck.cards, srs, alleVokabelIds, tempo);
+      pool = plan.queue;
+      dueCount = plan.stats.due;
+      freshCount = plan.stats.fresh;
+      introducedToday = plan.stats.introduced;
     } else {
       const all: VocabCard[] = Object.values(vocabMap).flatMap((d) => d.cards);
       pool = all.filter((c) => srs[c.id] && isDue(srs[c.id])).slice(0, 10);
@@ -656,11 +662,13 @@ function VocabTask({ task, srs, onSrs, onPoints, voiceName, rate, tempo = "regel
   }, [card?.id, srs, onSrs]);
 
   const kollokItems = useMemo(() => {
+    // لا نكشف كلمة جولة الإنتاج من تمرين المتلازمة أسفل البطاقة قبل أن يكشفها المتعلم.
+    if (!flipped || !card) return [];
     const alle: VocabCard[] = Object.values(vocabMap).flatMap((d) => d.cards);
     const rand = rng(seedFrom(task.id) + 7);
-    return queue.map((c, i) => kollokationUebung(c, alle, rand, i)).filter(Boolean) as Exercise[];
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [queue.length, task.id]);
+    const item = kollokationUebung(card, alle, rand, doneCount);
+    return item ? [item] : [];
+  }, [card, doneCount, flipped, task.id]);
   const satzItems = useMemo(() => {
     return (task.sentenceIds ?? [])
       .map((sid, i) => {
@@ -678,11 +686,12 @@ function VocabTask({ task, srs, onSrs, onPoints, voiceName, rate, tempo = "regel
     const prev = srs[card.id] ?? newCard();
     onSrs(card.id, reviewCard(prev, q, { produktiv }));
     if (q === 0) {
+      const ziel = produktiv ? deFormOf(card) : card.ar;
       addFehlerNow({
-        falsch: deFormOf(card),
-        richtig: card.ar,
+        falsch: produktiv ? card.ar : deFormOf(card),
+        richtig: ziel,
         art: "wortschatz",
-        ar: card.exampleDe ? `${card.ar} — مثال: ${card.exampleDe}` : card.ar,
+        ar: card.exampleDe ? `${ziel} — مثال: ${card.exampleDe}` : ziel,
         level: card.level,
         quelle: deck?.titleAr ?? "مفردات",
       });
@@ -693,13 +702,16 @@ function VocabTask({ task, srs, onSrs, onPoints, voiceName, rate, tempo = "regel
   };
 
   return (
-    <section className="card fadein dirb-ex" style={{ padding: "1.2rem" }}>
+    <section data-testid="wortkarten-praxis" className="card fadein dirb-ex" style={{ padding: "1.2rem" }}>
       <Head
         icon="🃏"
         de={deck?.titleDe ?? "Wiederholungskarten"}
         ar={`${deck?.titleAr ?? "بطاقات المراجعة المتباعدة"} — سقفُ الجديد اليومي ${newCardCap(tempo)} بطاقات حسب الوتيرة`}
       />
-      <p data-testid="vocab-tempo-cap" style={{ margin: "-0.35rem 0 0.7rem", fontSize: "0.82rem", color: "var(--color-ink2)" }}>
+      <p id={`wortkarten-lernziel-${task.id}`} data-testid="wortkarten-lernziel" style={{ margin: "-0.35rem 0 0.45rem", fontSize: "0.9rem", fontWeight: 700 }}>
+        حاول استرجاع الجواب بصوتك قبل الكشف، ثم قيّم المحاولة كما حدثت فعلاً؛ الكشف وحده لا يُحسب إتقاناً.
+      </p>
+      <p data-testid="vocab-tempo-cap" style={{ margin: "0 0 0.7rem", fontSize: "0.82rem", color: "var(--color-ink2)" }}>
         الحدّ الأقصى للبطاقات الجديدة اليوم: <span className="rtl-num">{newCardCap(tempo)}</span>؛ تُقدَّم المراجعات المستحقّة أولاً.
         <br />
         <strong>بطاقات اليوم:</strong> <span className="rtl-num">{queue.length}</span> في الدفعة الحالية · مراجعات مستحقة إجمالاً: <span className="rtl-num">{queueStats.due}</span> · بطاقات جديدة متبقية في الحزمة: <span className="rtl-num">{queueStats.fresh}</span> · بطاقات جديدة قُدّمت اليوم: <span className="rtl-num">{queueStats.introduced}</span>/<span className="rtl-num">{queueStats.cap}</span>
@@ -714,13 +726,15 @@ function VocabTask({ task, srs, onSrs, onPoints, voiceName, rate, tempo = "regel
         // أصبح ‎<button>‎ حقيقيًّا واحدًا بذاته — قابل للتبويب والتفعيل بالفأرة/اللمس/لوحة
         // المفاتيح أصلًا بلا أي كود إضافي، ولا يحوي أزرارًا أخرى بداخله فلا تداخل إطلاقًا.
         <div className="card" style={{ padding: "1.4rem", textAlign: "center", background: "var(--color-paper2)" }}>
-          <div className="chip" data-testid="vocab-queue-count" style={{ marginBottom: "0.6rem" }}>
+          <div className="chip" data-testid="vocab-queue-count" aria-live="polite" style={{ marginBottom: "0.6rem" }}>
             <span className="rtl-num">{doneCount + 1}</span> / <span className="rtl-num">{doneCount + queue.length}</span>
           </div>
           <button
             type="button"
             onClick={() => setFlipped(true)}
-            aria-label={flipped ? "وجه البطاقة" : produktiv ? "اكشف اللفظ الألماني" : "اكشف المعنى"}
+            aria-label={flipped ? "وجه البطاقة مكشوف" : produktiv ? "اكشف اللفظ الألماني" : "اكشف المعنى"}
+            aria-expanded={flipped}
+            aria-describedby={`wortkarten-lernziel-${task.id}`}
             style={{ display: "block", width: "100%", minHeight: "44px", background: "none", border: "none", padding: 0, margin: 0, font: "inherit", color: "inherit", cursor: "pointer" }}
           >
             {card.img && (
@@ -775,7 +789,7 @@ function VocabTask({ task, srs, onSrs, onPoints, voiceName, rate, tempo = "regel
               <button className="btn btn-primary" onClick={(e) => { e.stopPropagation(); setFlipped(true); }}>{produktiv ? "اكشف اللفظ الألماني" : "اكشف المعنى"}</button>
             </div>
           ) : (
-            <div className="fadein">
+            <div id={`wortkarte-rueckseite-${card.id}`} className="fadein">
               <div style={{ fontSize: "1.15rem", color: "var(--color-cola)" }}>{card.ar}</div>
               <div style={{ marginTop: "0.35rem" }}>
                 <span className="chip" data-testid="karte-stufe" style={{ fontSize: "0.75rem" }}>
@@ -827,7 +841,7 @@ function VocabTask({ task, srs, onSrs, onPoints, voiceName, rate, tempo = "regel
                   ))}
                 </div>
               )}
-              <div style={{ display: "flex", gap: "0.4rem", justifyContent: "center", marginTop: "0.9rem", flexWrap: "wrap" }}>
+              <div role="group" aria-label="قيّم استرجاعك بعد الكشف" data-testid="wortkarten-bewertung" style={{ display: "flex", gap: "0.4rem", justifyContent: "center", marginTop: "0.9rem", flexWrap: "wrap" }}>
                 <button className="btn btn-ghost" onClick={() => rateCard(0)}>لم أعرف (0)</button>
                 <button className="btn btn-gold" onClick={() => rateCard(2)}>بجهد (2)</button>
                 <button className="btn btn-primary" onClick={() => rateCard(4)}>سهّل! (4)</button>
@@ -838,6 +852,9 @@ function VocabTask({ task, srs, onSrs, onPoints, voiceName, rate, tempo = "regel
       ) : (
         <p style={{ textAlign: "center", padding: "0.8rem" }}>✨ أنهيت البطاقات — ستُجدول للمراجعة تلقائياً.</p>
       )}
+      <p data-testid="wortkarten-datenschutz" style={{ margin: "0.7rem 0 0", fontSize: "0.78rem", color: "var(--color-ink2)" }}>
+        🔒 تُحفظ مواعيد المراجعة وتقييماتك على هذا الجهاز ضمن ملفك المحلي، ولا تُرسل إجابة البطاقة إلى خدمة خارجية.
+      </p>
       {kollokItems.length > 0 && (
         <div data-testid="kollok-uebung" style={{ marginTop: "1rem" }}>
           <h4 style={{ fontWeight: 800, margin: "0 0 0.5rem" }}>أكمل المتلازمة</h4>
@@ -942,11 +959,11 @@ function HoerenTask({ task, onPoints, voiceName, rate, persistKey }: Omit<TaskPr
         )}
       </div>
 
-      <div style={{ display: "grid", gap: "0.35rem", margin: "0.8rem 0" }}>
+      <div className="authentic-reader authentic-dialog" data-testid="authentic-dialog" style={{ display: "grid", gap: "0.35rem", margin: "0.8rem 0" }}>
         {dlg.lines.map((l, i) => (
           <div
             key={i}
-            className="card"
+            className="card authentic-satz"
             style={{
               padding: "0.55rem 0.8rem",
               background: lineIdx === i ? "rgb(34 197 94 / 0.14)" : "transparent",
@@ -957,10 +974,11 @@ function HoerenTask({ task, onPoints, voiceName, rate, persistKey }: Omit<TaskPr
             }}
           >
             <button
-              className="chip"
+              className="chip authentic-satz-audio"
               style={{ cursor: "pointer" }}
               disabled={pruefung && !abgegeben}
               onClick={() => { if (pruefung && !abgegeben) return; speakLine(l.de, undefined, { voiceName, rate }); }}
+              aria-label={`استمع إلى سطر ${l.who}`}
               title="اسمع السطر"
             >
               🔊
@@ -1039,7 +1057,7 @@ function LesenTask({ task, onPoints, voiceName, rate, persistKey, bemerkenRegeln
       )}
       {text.level === "B2" && (
         <div style={{ margin: "0.8rem 0", padding: "0.6rem 0.85rem", borderRadius: "0.7rem", background: "rgb(167 139 250 / 0.08)", border: "1px solid rgb(167 139 250 / 0.3)", fontSize: "0.82rem", lineHeight: 1.9 }}>
-          <strong>🌍 في ألمانيا:</strong> هذا النص يعكس أسلوب {text.titleDe.includes("Zeitung") || text.titleDe.includes("Presse") ? "الصحافة الألمانية — جمل длинная و Nominalstil شائع." : text.level === "B2" ? "الكتابة الأكاديمية — انتبه لتحوّل weil → wegen و Passiv → sein + Partizip." : "الحياة اليومية — لاحظ كيف يُستعمل الكلام غير المباشر في التقارير."}
+          <strong>🌍 في ألمانيا:</strong> هذا النص يعكس أسلوب {text.titleDe.includes("Zeitung") || text.titleDe.includes("Presse") ? "الصحافة الألمانية — جمل طويلة وأسلوب اسمي (Nominalstil) شائع." : text.level === "B2" ? "الكتابة الأكاديمية — انتبه لتحوّل weil → wegen و Passiv → sein + Partizip." : "الحياة اليومية — لاحظ كيف يُستعمل الكلام غير المباشر في التقارير."}
         </div>
       )}
       <div style={{ display: "flex", gap: "0.5rem", margin: "0.6rem 0", flexWrap: "wrap" }}>

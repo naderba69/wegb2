@@ -1,0 +1,1362 @@
+[
+  {
+    "file": "a0-artikel.jpg",
+    "tid": "a0-artikel",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 319280
+  },
+  {
+    "file": "a0-artikel.svg",
+    "tid": "a0-artikel",
+    "type": "SVG",
+    "verified": true,
+    "grammar": true,
+    "size": 1944
+  },
+  {
+    "file": "a0-aussprache-umlaut.jpg",
+    "tid": "a0-aussprache-umlaut",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 332009
+  },
+  {
+    "file": "a0-aussprache-umlaut.svg",
+    "tid": "a0-aussprache-umlaut",
+    "type": "SVG",
+    "verified": true,
+    "grammar": true,
+    "size": 1462
+  },
+  {
+    "file": "a0-aussprache-vowels.jpg",
+    "tid": "a0-aussprache-vowels",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 344369
+  },
+  {
+    "file": "a0-aussprache-vowels.svg",
+    "tid": "a0-aussprache-vowels",
+    "type": "SVG",
+    "verified": true,
+    "grammar": true,
+    "size": 1853
+  },
+  {
+    "file": "a0-begruesung.jpg",
+    "tid": "a0-begruesung",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 231378
+  },
+  {
+    "file": "a0-begrussung.jpg",
+    "tid": "a0-begrussung",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 294729
+  },
+  {
+    "file": "a0-begrussung.svg",
+    "tid": "a0-begrussung",
+    "type": "SVG",
+    "verified": true,
+    "grammar": true,
+    "size": 1559
+  },
+  {
+    "file": "a0-buchstaben.jpg",
+    "tid": "a0-buchstaben",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 342464
+  },
+  {
+    "file": "a0-buchstaben.svg",
+    "tid": "a0-buchstaben",
+    "type": "SVG",
+    "verified": true,
+    "grammar": true,
+    "size": 1631
+  },
+  {
+    "file": "a0-du-sie.jpg",
+    "tid": "a0-du-sie",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 331712
+  },
+  {
+    "file": "a0-du-sie.svg",
+    "tid": "a0-du-sie",
+    "type": "SVG",
+    "verified": true,
+    "grammar": true,
+    "size": 2060
+  },
+  {
+    "file": "a0-satzbau.jpg",
+    "tid": "a0-satzbau",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 296109
+  },
+  {
+    "file": "a0-satzbau.svg",
+    "tid": "a0-satzbau",
+    "type": "SVG",
+    "verified": true,
+    "grammar": true,
+    "size": 1431
+  },
+  {
+    "file": "a0-zahlen.jpg",
+    "tid": "a0-zahlen",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 355023
+  },
+  {
+    "file": "a0-zahlen.svg",
+    "tid": "a0-zahlen",
+    "type": "SVG",
+    "verified": true,
+    "grammar": true,
+    "size": 1659
+  },
+  {
+    "file": "a1-akkusativ.jpg",
+    "tid": "a1-akkusativ",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 62763
+  },
+  {
+    "file": "a1-aussprache-auslaut.jpg",
+    "tid": "a1-aussprache-auslaut",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 232254
+  },
+  {
+    "file": "a1-aussprache-ch.jpg",
+    "tid": "a1-aussprache-ch",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 390922
+  },
+  {
+    "file": "a1-aussprache-r.jpg",
+    "tid": "a1-aussprache-r",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 232922
+  },
+  {
+    "file": "a1-aussprache-sp-st.jpg",
+    "tid": "a1-aussprache-sp-st",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 223970
+  },
+  {
+    "file": "a1-aussprache-sp-st.svg",
+    "tid": "a1-aussprache-sp-st",
+    "type": "SVG",
+    "verified": true,
+    "grammar": true,
+    "size": 1736
+  },
+  {
+    "file": "a1-dativ.jpg",
+    "tid": "a1-dativ",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 286116
+  },
+  {
+    "file": "a1-dativ.svg",
+    "tid": "a1-dativ",
+    "type": "SVG",
+    "verified": true,
+    "grammar": false,
+    "size": 1938
+  },
+  {
+    "file": "a1-futur-einf.jpg",
+    "tid": "a1-futur-einf",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 292238
+  },
+  {
+    "file": "a1-futur-einf.svg",
+    "tid": "a1-futur-einf",
+    "type": "SVG",
+    "verified": true,
+    "grammar": false,
+    "size": 1435
+  },
+  {
+    "file": "a1-imperativ.jpg",
+    "tid": "a1-imperativ",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 304375
+  },
+  {
+    "file": "a1-imperativ.svg",
+    "tid": "a1-imperativ",
+    "type": "SVG",
+    "verified": true,
+    "grammar": false,
+    "size": 1555
+  },
+  {
+    "file": "a1-konj2-einf.jpg",
+    "tid": "a1-konj2-einf",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 304285
+  },
+  {
+    "file": "a1-modalverben.jpg",
+    "tid": "a1-modalverben",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 290809
+  },
+  {
+    "file": "a1-modalverben.svg",
+    "tid": "a1-modalverben",
+    "type": "SVG",
+    "verified": true,
+    "grammar": false,
+    "size": 1921
+  },
+  {
+    "file": "a1-perfekt-einf.jpg",
+    "tid": "a1-perfekt-einf",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 223846
+  },
+  {
+    "file": "a1-plural.jpg",
+    "tid": "a1-plural",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 255656
+  },
+  {
+    "file": "a1-plural.svg",
+    "tid": "a1-plural",
+    "type": "SVG",
+    "verified": true,
+    "grammar": false,
+    "size": 1837
+  },
+  {
+    "file": "a1-praesens.jpg",
+    "tid": "a1-praesens",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 207695
+  },
+  {
+    "file": "a1-pronomen.jpg",
+    "tid": "a1-pronomen",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 461062
+  },
+  {
+    "file": "a1-pronomen.svg",
+    "tid": "a1-pronomen",
+    "type": "SVG",
+    "verified": true,
+    "grammar": false,
+    "size": 2259
+  },
+  {
+    "file": "a1-pruefungsstrategie.jpg",
+    "tid": "a1-pruefungsstrategie",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 139323
+  },
+  {
+    "file": "a1-sein-haben.jpg",
+    "tid": "a1-sein-haben",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 285454
+  },
+  {
+    "file": "a1-trennbar.jpg",
+    "tid": "a1-trennbar",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 226964
+  },
+  {
+    "file": "a1-war-hatte.jpg",
+    "tid": "a1-war-hatte",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 296083
+  },
+  {
+    "file": "a1-war-hatte.svg",
+    "tid": "a1-war-hatte",
+    "type": "SVG",
+    "verified": true,
+    "grammar": false,
+    "size": 1950
+  },
+  {
+    "file": "a1-wechsel.jpg",
+    "tid": "a1-wechsel",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 352171
+  },
+  {
+    "file": "a1-wechsel.svg",
+    "tid": "a1-wechsel",
+    "type": "SVG",
+    "verified": true,
+    "grammar": false,
+    "size": 1844
+  },
+  {
+    "file": "a1-weil-dass.jpg",
+    "tid": "a1-weil-dass",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 248358
+  },
+  {
+    "file": "a1-weil-dass.svg",
+    "tid": "a1-weil-dass",
+    "type": "SVG",
+    "verified": true,
+    "grammar": false,
+    "size": 1773
+  },
+  {
+    "file": "a1-zahlen.jpg",
+    "tid": "a1-zahlen",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 114930
+  },
+  {
+    "file": "a1-zeitpraep.jpg",
+    "tid": "a1-zeitpraep",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 285924
+  },
+  {
+    "file": "a1-zeitpraep.svg",
+    "tid": "a1-zeitpraep",
+    "type": "SVG",
+    "verified": true,
+    "grammar": false,
+    "size": 1708
+  },
+  {
+    "file": "a2-adjektiv-einfach.jpg",
+    "tid": "a2-adjektiv-einfach",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 266004
+  },
+  {
+    "file": "a2-adjektiv-einfach.svg",
+    "tid": "a2-adjektiv-einfach",
+    "type": "SVG",
+    "verified": true,
+    "grammar": false,
+    "size": 2172
+  },
+  {
+    "file": "a2-dativ.jpg",
+    "tid": "a2-dativ",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 201178
+  },
+  {
+    "file": "a2-dativ.svg",
+    "tid": "a2-dativ",
+    "type": "SVG",
+    "verified": true,
+    "grammar": false,
+    "size": 1902
+  },
+  {
+    "file": "a2-demo.jpg",
+    "tid": "a2-demo",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 315474
+  },
+  {
+    "file": "a2-demo.svg",
+    "tid": "a2-demo",
+    "type": "SVG",
+    "verified": true,
+    "grammar": false,
+    "size": 1743
+  },
+  {
+    "file": "a2-futur-einf.jpg",
+    "tid": "a2-futur-einf",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 262931
+  },
+  {
+    "file": "a2-futur.jpg",
+    "tid": "a2-futur",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 209511
+  },
+  {
+    "file": "a2-futur.svg",
+    "tid": "a2-futur",
+    "type": "SVG",
+    "verified": true,
+    "grammar": false,
+    "size": 1465
+  },
+  {
+    "file": "a2-imperativ.jpg",
+    "tid": "a2-imperativ",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 143579
+  },
+  {
+    "file": "a2-imperativ.svg",
+    "tid": "a2-imperativ",
+    "type": "SVG",
+    "verified": true,
+    "grammar": false,
+    "size": 1721
+  },
+  {
+    "file": "a2-konj2-hoflich.jpg",
+    "tid": "a2-konj2-hoflich",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 327256
+  },
+  {
+    "file": "a2-konj2-hoflich.svg",
+    "tid": "a2-konj2-hoflich",
+    "type": "SVG",
+    "verified": true,
+    "grammar": false,
+    "size": 1613
+  },
+  {
+    "file": "a2-modal.jpg",
+    "tid": "a2-modal",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 115011
+  },
+  {
+    "file": "a2-neben.jpg",
+    "tid": "a2-neben",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 336353
+  },
+  {
+    "file": "a2-neben.svg",
+    "tid": "a2-neben",
+    "type": "SVG",
+    "verified": true,
+    "grammar": false,
+    "size": 1752
+  },
+  {
+    "file": "a2-negation.jpg",
+    "tid": "a2-negation",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 223606
+  },
+  {
+    "file": "a2-negation.svg",
+    "tid": "a2-negation",
+    "type": "SVG",
+    "verified": true,
+    "grammar": false,
+    "size": 2094
+  },
+  {
+    "file": "a2-perfekt.jpg",
+    "tid": "a2-perfekt",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 293700
+  },
+  {
+    "file": "a2-praeteritum-grund.jpg",
+    "tid": "a2-praeteritum-grund",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 256031
+  },
+  {
+    "file": "a2-praeteritum-grund.svg",
+    "tid": "a2-praeteritum-grund",
+    "type": "SVG",
+    "verified": true,
+    "grammar": false,
+    "size": 1743
+  },
+  {
+    "file": "a2-praeteritum.jpg",
+    "tid": "a2-praeteritum",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 256074
+  },
+  {
+    "file": "a2-pruefungsstrategie.jpg",
+    "tid": "a2-pruefungsstrategie",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 317363
+  },
+  {
+    "file": "a2-pruefungsstrategie.svg",
+    "tid": "a2-pruefungsstrategie",
+    "type": "SVG",
+    "verified": true,
+    "grammar": false,
+    "size": 1675
+  },
+  {
+    "file": "a2-reflexiv.jpg",
+    "tid": "a2-reflexiv",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 167152
+  },
+  {
+    "file": "a2-reflexiv.svg",
+    "tid": "a2-reflexiv",
+    "type": "SVG",
+    "verified": true,
+    "grammar": false,
+    "size": 1444
+  },
+  {
+    "file": "a2-relativsaetze.jpg",
+    "tid": "a2-relativsaetze",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 274437
+  },
+  {
+    "file": "a2-steigerung.jpg",
+    "tid": "a2-steigerung",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 337442
+  },
+  {
+    "file": "a2-steigerung.svg",
+    "tid": "a2-steigerung",
+    "type": "SVG",
+    "verified": true,
+    "grammar": false,
+    "size": 1707
+  },
+  {
+    "file": "a2-verb-praep.jpg",
+    "tid": "a2-verb-praep",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 237053
+  },
+  {
+    "file": "a2-verb-praep.svg",
+    "tid": "a2-verb-praep",
+    "type": "SVG",
+    "verified": true,
+    "grammar": false,
+    "size": 1462
+  },
+  {
+    "file": "a2-verschmolzene.jpg",
+    "tid": "a2-verschmolzene",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 295926
+  },
+  {
+    "file": "a2-verschmolzene.svg",
+    "tid": "a2-verschmolzene",
+    "type": "SVG",
+    "verified": true,
+    "grammar": false,
+    "size": 1513
+  },
+  {
+    "file": "a2-wasfuer.jpg",
+    "tid": "a2-wasfuer",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 273530
+  },
+  {
+    "file": "a2-wasfuer.svg",
+    "tid": "a2-wasfuer",
+    "type": "SVG",
+    "verified": true,
+    "grammar": false,
+    "size": 2375
+  },
+  {
+    "file": "a2-wechsel-2.jpg",
+    "tid": "a2-wechsel-2",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 322772
+  },
+  {
+    "file": "a2-wechsel.jpg",
+    "tid": "a2-wechsel",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 85240
+  },
+  {
+    "file": "a2-weil-dass-2.jpg",
+    "tid": "a2-weil-dass-2",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 300468
+  },
+  {
+    "file": "a2-weil-dass.jpg",
+    "tid": "a2-weil-dass",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 72572
+  },
+  {
+    "file": "b1-absicht.jpg",
+    "tid": "b1-absicht",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 215949
+  },
+  {
+    "file": "b1-absicht.svg",
+    "tid": "b1-absicht",
+    "type": "SVG",
+    "verified": true,
+    "grammar": false,
+    "size": 1628
+  },
+  {
+    "file": "b1-adjektivendungen.jpg",
+    "tid": "b1-adjektivendungen",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 285078
+  },
+  {
+    "file": "b1-adjektivendungen.svg",
+    "tid": "b1-adjektivendungen",
+    "type": "SVG",
+    "verified": true,
+    "grammar": false,
+    "size": 1985
+  },
+  {
+    "file": "b1-dativ-verb.jpg",
+    "tid": "b1-dativ-verb",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 296425
+  },
+  {
+    "file": "b1-funktionsverben.jpg",
+    "tid": "b1-funktionsverben",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 336355
+  },
+  {
+    "file": "b1-funktionsverben.svg",
+    "tid": "b1-funktionsverben",
+    "type": "SVG",
+    "verified": true,
+    "grammar": false,
+    "size": 1860
+  },
+  {
+    "file": "b1-genitiv.jpg",
+    "tid": "b1-genitiv",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 227760
+  },
+  {
+    "file": "b1-genitiv.svg",
+    "tid": "b1-genitiv",
+    "type": "SVG",
+    "verified": true,
+    "grammar": false,
+    "size": 1881
+  },
+  {
+    "file": "b1-indirekte-fragen.jpg",
+    "tid": "b1-indirekte-fragen",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 232854
+  },
+  {
+    "file": "b1-indirekte-fragen.svg",
+    "tid": "b1-indirekte-fragen",
+    "type": "SVG",
+    "verified": true,
+    "grammar": false,
+    "size": 1603
+  },
+  {
+    "file": "b1-irrealer-wunsch.jpg",
+    "tid": "b1-irrealer-wunsch",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 324731
+  },
+  {
+    "file": "b1-konj2-vergangenheit.jpg",
+    "tid": "b1-konj2-vergangenheit",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 326627
+  },
+  {
+    "file": "b1-konj2-vergangenheit.svg",
+    "tid": "b1-konj2-vergangenheit",
+    "type": "SVG",
+    "verified": true,
+    "grammar": false,
+    "size": 1789
+  },
+  {
+    "file": "b1-konj2.jpg",
+    "tid": "b1-konj2",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 386718
+  },
+  {
+    "file": "b1-konjunktoren2.jpg",
+    "tid": "b1-konjunktoren2",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 284092
+  },
+  {
+    "file": "b1-konnektoren.jpg",
+    "tid": "b1-konnektoren",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 272633
+  },
+  {
+    "file": "b1-nomen-verb.jpg",
+    "tid": "b1-nomen-verb",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 273839
+  },
+  {
+    "file": "b1-partizip1.jpg",
+    "tid": "b1-partizip1",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 223585
+  },
+  {
+    "file": "b1-partizip1.svg",
+    "tid": "b1-partizip1",
+    "type": "SVG",
+    "verified": true,
+    "grammar": false,
+    "size": 1561
+  },
+  {
+    "file": "b1-passiv-einf.jpg",
+    "tid": "b1-passiv-einf",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 292595
+  },
+  {
+    "file": "b1-passiv.jpg",
+    "tid": "b1-passiv",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 240583
+  },
+  {
+    "file": "b1-plusquamperfekt.jpg",
+    "tid": "b1-plusquamperfekt",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 332228
+  },
+  {
+    "file": "b1-plusquamperfekt.svg",
+    "tid": "b1-plusquamperfekt",
+    "type": "SVG",
+    "verified": true,
+    "grammar": false,
+    "size": 1533
+  },
+  {
+    "file": "b1-praep-mit-kasus.jpg",
+    "tid": "b1-praep-mit-kasus",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 308639
+  },
+  {
+    "file": "b1-pruefungsstrategie.jpg",
+    "tid": "b1-pruefungsstrategie",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 338994
+  },
+  {
+    "file": "b1-pruefungsstrategie.svg",
+    "tid": "b1-pruefungsstrategie",
+    "type": "SVG",
+    "verified": true,
+    "grammar": false,
+    "size": 1584
+  },
+  {
+    "file": "b1-relativ.jpg",
+    "tid": "b1-relativ",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 296437
+  },
+  {
+    "file": "b1-unbestimmte.jpg",
+    "tid": "b1-unbestimmte",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 247176
+  },
+  {
+    "file": "b1-unbestimmte.svg",
+    "tid": "b1-unbestimmte",
+    "type": "SVG",
+    "verified": true,
+    "grammar": false,
+    "size": 1743
+  },
+  {
+    "file": "b1-verb-praeposition.jpg",
+    "tid": "b1-verb-praeposition",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 242804
+  },
+  {
+    "file": "b1-verb-praeposition.svg",
+    "tid": "b1-verb-praeposition",
+    "type": "SVG",
+    "verified": true,
+    "grammar": false,
+    "size": 1785
+  },
+  {
+    "file": "b1-wortbildung.jpg",
+    "tid": "b1-wortbildung",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 217362
+  },
+  {
+    "file": "b1-wortbildung.svg",
+    "tid": "b1-wortbildung",
+    "type": "SVG",
+    "verified": true,
+    "grammar": false,
+    "size": 1971
+  },
+  {
+    "file": "b1-zukunft.jpg",
+    "tid": "b1-zukunft",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 283064
+  },
+  {
+    "file": "b2-adjektiv-partizip.jpg",
+    "tid": "b2-adjektiv-partizip",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 346802
+  },
+  {
+    "file": "b2-adjektiv-partizip.svg",
+    "tid": "b2-adjektiv-partizip",
+    "type": "SVG",
+    "verified": true,
+    "grammar": false,
+    "size": 1977
+  },
+  {
+    "file": "b2-bedingung.jpg",
+    "tid": "b2-bedingung",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 337681
+  },
+  {
+    "file": "b2-doppelkonnektoren.jpg",
+    "tid": "b2-doppelkonnektoren",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 322238
+  },
+  {
+    "file": "b2-doppelkonnektoren.svg",
+    "tid": "b2-doppelkonnektoren",
+    "type": "SVG",
+    "verified": true,
+    "grammar": false,
+    "size": 1532
+  },
+  {
+    "file": "b2-funktionsverben.jpg",
+    "tid": "b2-funktionsverben",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 316368
+  },
+  {
+    "file": "b2-futur-ii.jpg",
+    "tid": "b2-futur-ii",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 324878
+  },
+  {
+    "file": "b2-futur-ii.svg",
+    "tid": "b2-futur-ii",
+    "type": "SVG",
+    "verified": true,
+    "grammar": false,
+    "size": 1476
+  },
+  {
+    "file": "b2-genitiv-praep.jpg",
+    "tid": "b2-genitiv-praep",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 295375
+  },
+  {
+    "file": "b2-genitiv-vor.jpg",
+    "tid": "b2-genitiv-vor",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 309221
+  },
+  {
+    "file": "b2-indirekte-rede.jpg",
+    "tid": "b2-indirekte-rede",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 295798
+  },
+  {
+    "file": "b2-infinitiv.jpg",
+    "tid": "b2-infinitiv",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 237339
+  },
+  {
+    "file": "b2-infinitiv.svg",
+    "tid": "b2-infinitiv",
+    "type": "SVG",
+    "verified": true,
+    "grammar": false,
+    "size": 1464
+  },
+  {
+    "file": "b2-k2vht.jpg",
+    "tid": "b2-k2vht",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 348833
+  },
+  {
+    "file": "b2-konditional-bild.jpg",
+    "tid": "b2-konditional-bild",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 335310
+  },
+  {
+    "file": "b2-konjunktiv1.jpg",
+    "tid": "b2-konjunktiv1",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 281156
+  },
+  {
+    "file": "b2-konjunktiv2-vht.jpg",
+    "tid": "b2-konjunktiv2-vht",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 295485
+  },
+  {
+    "file": "b2-konjunktiv2-vht.svg",
+    "tid": "b2-konjunktiv2-vht",
+    "type": "SVG",
+    "verified": true,
+    "grammar": false,
+    "size": 1657
+  },
+  {
+    "file": "b2-konjunktiv2.jpg",
+    "tid": "b2-konjunktiv2",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 267780
+  },
+  {
+    "file": "b2-konzessiv.jpg",
+    "tid": "b2-konzessiv",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 270496
+  },
+  {
+    "file": "b2-konzessiv.svg",
+    "tid": "b2-konzessiv",
+    "type": "SVG",
+    "verified": true,
+    "grammar": false,
+    "size": 2112
+  },
+  {
+    "file": "b2-modalpartikel.jpg",
+    "tid": "b2-modalpartikel",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 298696
+  },
+  {
+    "file": "b2-modalpartikel.svg",
+    "tid": "b2-modalpartikel",
+    "type": "SVG",
+    "verified": true,
+    "grammar": false,
+    "size": 1843
+  },
+  {
+    "file": "b2-n-deklination.jpg",
+    "tid": "b2-n-deklination",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 298093
+  },
+  {
+    "file": "b2-nominal-bild.jpg",
+    "tid": "b2-nominal-bild",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 131959
+  },
+  {
+    "file": "b2-nominalisierung.jpg",
+    "tid": "b2-nominalisierung",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 305750
+  },
+  {
+    "file": "b2-nominalstil.jpg",
+    "tid": "b2-nominalstil",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 315932
+  },
+  {
+    "file": "b2-partizip.jpg",
+    "tid": "b2-partizip",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 273113
+  },
+  {
+    "file": "b2-partizip.svg",
+    "tid": "b2-partizip",
+    "type": "SVG",
+    "verified": true,
+    "grammar": false,
+    "size": 1543
+  },
+  {
+    "file": "b2-partizip1.jpg",
+    "tid": "b2-partizip1",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 300183
+  },
+  {
+    "file": "b2-partizipial.jpg",
+    "tid": "b2-partizipial",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 304027
+  },
+  {
+    "file": "b2-partizipial.svg",
+    "tid": "b2-partizipial",
+    "type": "SVG",
+    "verified": true,
+    "grammar": false,
+    "size": 1534
+  },
+  {
+    "file": "b2-passiv-ersatz.jpg",
+    "tid": "b2-passiv-ersatz",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 347348
+  },
+  {
+    "file": "b2-passiv.jpg",
+    "tid": "b2-passiv",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 313978
+  },
+  {
+    "file": "b2-pruefungsstrategie.jpg",
+    "tid": "b2-pruefungsstrategie",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 318983
+  },
+  {
+    "file": "b2-pruefungsstrategie.svg",
+    "tid": "b2-pruefungsstrategie",
+    "type": "SVG",
+    "verified": true,
+    "grammar": false,
+    "size": 1670
+  },
+  {
+    "file": "b2-redew.jpg",
+    "tid": "b2-redew",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 282765
+  },
+  {
+    "file": "b2-redew.svg",
+    "tid": "b2-redew",
+    "type": "SVG",
+    "verified": true,
+    "grammar": false,
+    "size": 1664
+  },
+  {
+    "file": "b2-relativ-generalisierend.jpg",
+    "tid": "b2-relativ-generalisierend",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 272226
+  },
+  {
+    "file": "b2-relativ-generalisierend.svg",
+    "tid": "b2-relativ-generalisierend",
+    "type": "SVG",
+    "verified": true,
+    "grammar": false,
+    "size": 1348
+  },
+  {
+    "file": "b2-relativ-genitiv.jpg",
+    "tid": "b2-relativ-genitiv",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 256028
+  },
+  {
+    "file": "b2-relativ-genitiv.svg",
+    "tid": "b2-relativ-genitiv",
+    "type": "SVG",
+    "verified": true,
+    "grammar": false,
+    "size": 1854
+  },
+  {
+    "file": "b2-textkonnektoren.jpg",
+    "tid": "b2-textkonnektoren",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 359270
+  },
+  {
+    "file": "b2-textkonnektoren.svg",
+    "tid": "b2-textkonnektoren",
+    "type": "SVG",
+    "verified": true,
+    "grammar": false,
+    "size": 1804
+  },
+  {
+    "file": "b2-wortbildung.jpg",
+    "tid": "b2-wortbildung",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 308665
+  },
+  {
+    "file": "c1-nominalstil.jpg",
+    "tid": "c1-nominalstil",
+    "type": "JPG",
+    "verified": true,
+    "grammar": true,
+    "size": 313334
+  }
+]

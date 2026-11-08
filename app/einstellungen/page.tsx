@@ -1,4 +1,5 @@
 "use client";
+import { lokalesDatum } from "@/lib/datum";
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { useProgress, loadProgress } from "@/lib/store";
@@ -18,7 +19,7 @@ import { KlassenAnsicht } from "@/components/klassenansicht";
 import { ZielTempoKarte } from "@/components/zieltempo";
 import type { UiLang, Tempo, Level } from "@/lib/types";
 import { effektiveRate, rateFuerLevel, rateModus } from "@/lib/rate";
-import { pruefeImportText, sicherungFaellig } from "@/lib/backup";
+import { progressFuerExport, pruefeImportText, sicherungFaellig } from "@/lib/backup";
 import { ErinnerungKarte } from "@/components/erinnerung";
 
 export default function Einstellungen() {
@@ -49,12 +50,16 @@ export default function Einstellungen() {
     try {
       zusatz = { komfort: localStorage.getItem(KOMFORT_KEY), lesestoff: localStorage.getItem("weg-lesestoff-v1") };
     } catch { /* بيئة بلا localStorage — نسخة تقدّم فقط */ }
-    const data = JSON.stringify({ progress: loadProgress(), zusatz }, null, 2);
+    const data = JSON.stringify({
+      progress: progressFuerExport(loadProgress()),
+      zusatz,
+      meta: { format: "wegb2-backup-v2", secretsExcluded: true },
+    }, null, 2);
     const blob = new Blob([data], { type: "application/json" });
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
-    a.download = `weg-b2-progress-${new Date().toISOString().slice(0, 10)}.json`;
+    a.download = `weg-b2-progress-${lokalesDatum()}.json`;
     a.click();
     URL.revokeObjectURL(url);
     update((p) => ({ ...p, letzteSicherung: new Date().toISOString() }));
@@ -108,7 +113,7 @@ export default function Einstellungen() {
         </Link>
         <div className="dirb-kicker">⚙️ ملفّك وإعداداتك</div>
         <h1 className="dirb-title">الإعدادات</h1>
-        <div className="dirb-sub">ملفّك ووتيرتك وصوتك ونسختك — كل شيء محلي في متصفحك</div>
+        <div className="dirb-sub">بيانات ملفّك ووتيرتك ونسختك محلية في متصفحك — والخدمات الاختيارية بإذن منفصل</div>
       </header>
 
       <div className="dirb-hero-anim-2" style={{ display: "grid", gap: "0.9rem" }}>
@@ -298,7 +303,7 @@ export default function Einstellungen() {
           <p style={{ color: "var(--color-ink2)", fontSize: "0.9rem", margin: "0.6rem 0 0.7rem", lineHeight: 1.9 }}>
             مدرِّبُ النطق ومحاكاةُ الامتحان يستطيعان أن يسمعا ما تنطقُ ويقيساه كلمةً كلمة — لكنَّ
             <code> Web Speech API</code> في Chrome/Edge <strong>يُرسِلُ صوتَك إلى خدمةِ المتصفِّحِ الخارجية</strong> ليعيدَه نصًّا.
-            هذا هو الاتصالُ الخارجيُّ الوحيدُ في المشروعِ كلِّه، وهو <strong>بإذنِك وحدَك</strong> ومغلقٌ ما لم تفتحه.
+            هذا هو اتصالُ الصوت الخارجيُّ الوحيد؛ أما إرسالُ نصٍّ إلى مدرس الذكاء الاختياري أدناه فله موافقةٌ منفصلة. كلاهما <strong>بإذنك وحدك</strong> ومغلقٌ ما لم تفتحه.
             الخدمة <strong>مجّانية 100٪</strong> (لا مفاتيح API، لا اشتراك، لا حساب، ولا بيانات تُجمَّع من طرف التطبيق) ولا يُرسَل أيُّ صوتٍ ما دام المفتاحُ مغلقاً.
           </p>
           {/* ♿ R305/ب14: aria-label صريح — النص المرئي متداخل في <strong>/<span> شرطي
@@ -349,6 +354,7 @@ export default function Einstellungen() {
           <summary>💾 التقدّم والنسخ الاحتياطي</summary>
           <p style={{ color: "var(--color-ink2)", fontSize: "0.9rem", margin: "0.6rem 0 0.7rem", lineHeight: 1.9 }}>
             كل شيء في متصفحك — بدون خوادم ولا حسابات. صدّر نسخة قبل تنظيف المتصفح أو تغيير الجهاز.
+            لأمانك لا يتضمن ملف النسخة مفتاح API ولا موافقة الإرسال؛ تُعيد إدخالهما على الجهاز الجديد عند الحاجة.
           </p>
           {sicherungFaellig(progress) && (
             <p data-testid="sicherung-erinnerung" style={{ color: "var(--color-cola)", fontWeight: 700, fontSize: "0.88rem", margin: "0 0 0.6rem" }}>
@@ -500,10 +506,11 @@ export default function Einstellungen() {
             <li><strong>الإيقاع الأسبوعي</strong>: 5 أيام تعلّم · يوم تثبيت (كتابة/تحدّث/أخطاء) · يوم فحص أسبوعي.</li>
             <li><strong>بنية الحصة الثابتة</strong>: استرجاع ← قواعد ← مفردات ← مهارة (تسميع/قراءة/كتابة/تحدّث) ← فحص.</li>
             <li><strong>قفل تسلسلي</strong>: لا غد قبل إغلاق اليوم.</li>
-            <li><strong>التعويض الإلزامي</strong>: ما لم يُتقَن (≥80%) يُرحَّل إلى أول الغد — يتولّاه المحرّك آلياً.</li>
+            <li><strong>التعويض الإلزامي</strong>: ما لم يُنجح (≥60% Goethe — ≥80% تميّز) يُرحَّل إلى أول الغد — يتولّاه المحرّك آلياً.</li>
             <li><strong>حتمية كاملة</strong>: «اليوم 47» يظهر بنفس المهام دائماً — لا عشوائية ولا توهان.</li>
             <li><strong>التكرار المتباعد</strong>: بطاقات مجدولة بخوارزمية SM-2 داخل الحصص اليومية.</li>
             <li><strong>التأسيس العلمي</strong>: CEFR/GERR · استرجاع استباقي · تكرار متباعد · تكامل المهارات الأربع · سُلّم تدريجي من السند إلى الغمر.</li>
+            <li><strong>مسارات بديلة للعامل بنظام مناوبات</strong>: 378ي هو الافتراضي (152د/يوم B2 متوسط داخل السقف D1_B2_DECKEL_MIN · lib/phasen.ts:249.3ساعة/98 يوم) — للمتفرغ <em>مكثف 180ي</em> يقطع المراجعة لاحترام السقف، وللعامل <em>بطيء 600ي</em> (74د/يوم) عبر <code>Tempo leicht/regelmaessig/intensiv</code> (3/5/10 بطاقات/يوم) — كلاهما موثق في <code>ALTERNATIVE_PFADE</code> بلا تغيير إجباري للـ 378.</li>
           </ul>
         </details>
 

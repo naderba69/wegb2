@@ -6,6 +6,8 @@ import RegisterSW from "@/components/RegisterSW";
 import BankenStart from "@/components/BankenStart";
 import { ErinnerungsWache } from "@/components/erinnerung";
 import { KomfortInit } from "@/components/komfort";
+import { PersistenzWache } from "@/components/PersistenzWache";
+import { headers } from "next/headers";
 
 export const metadata: Metadata = {
   title: "طريقي إلى B2 — Mein Weg bis B2",
@@ -19,12 +21,15 @@ export const viewport: Viewport = {
   themeColor: "#0b1020",
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  const nonce = (await headers()).get("x-nonce") ?? undefined;
   return (
     <html lang="ar" dir="rtl">
       <head>
         {/* 🛠️ R303/ب5: تطبيق سمات الراحة قبل أول رسم — لا وميض داكنًا لمستخدم الوضع الفاتح */}
         <script
+          nonce={nonce}
+          suppressHydrationWarning
           dangerouslySetInnerHTML={{
             __html: `(function(){try{var c=JSON.parse(localStorage.getItem("weg-komfort-v1")||"null");if(c){var d=document.documentElement;d.dataset.thema=c.thema==="hell"?"hell":"dunkel";d.dataset.schrift=(c.schrift==="gross"||c.schrift==="sehr")?c.schrift:"normal";}}catch(e){}})();`,
           }}
@@ -43,12 +48,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <a href="/masar" className="ui-footer-link">المسار</a>
             <span aria-hidden className="ui-footer-dot">·</span>
             <a href="/drucken" className="ui-footer-link">ورقة الشفرات</a>
+            <span aria-hidden className="ui-footer-dot">·</span>
+            <a href="/qualitaet" className="ui-footer-link">الجودة والمواءمة</a>
+            <span aria-hidden className="ui-footer-dot">·</span>
+            <a href="/datenschutz" className="ui-footer-link">الخصوصية</a>
           </footer>
         </UiAppShell>
         </BankenStart>
         <RegisterSW />
         <ErinnerungsWache />
         <KomfortInit />
+        <PersistenzWache />
       </body>
     </html>
   );

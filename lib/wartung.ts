@@ -1,3 +1,4 @@
+import { lokalesDatum } from "./datum";
 import type { Progress, Level } from "./types";
 import { PHASEN } from "./phasen";
 import { alleVokabeln } from "./content";
@@ -17,7 +18,7 @@ const LEVELS: Level[] = ["A0", "A1", "A2", "B1", "B2"];
 export function wartungsBericht(p: Progress, now = new Date()): WartungBericht {
   const stufeVon = new Map<string, string>();
   for (const k of alleVokabeln) if (k.level) stufeVon.set(k.id, k.level);
-  const heute = now.toISOString().slice(0, 10);
+  const heute = lokalesDatum(now);
   const zeilen: WartungZeile[] = LEVELS.map((level) => {
     const karten = Object.entries(p.srs ?? {}).filter(([id, st]) => st.reps > 0 && stufeVon.get(id) === level);
     const rs = karten.map(([, st]) => abrufbarkeit(st, now)).filter((x): x is number => x !== null);

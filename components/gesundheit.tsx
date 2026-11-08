@@ -2,6 +2,7 @@
 // 🌿 وحة الصحّة — GesundheitsWache (Modul U): سياسات صحّية مدمجة لا أداة شاردة
 //   👁 قاعدة 20-20-20: كل 20 دقيقة شاشة ← 20 ثانية نظر إلى نحو 6 أمتار
 //   🤒 وضع المريض: حدّ أدنى يومي من 3 خطوات يحفظ السلسلة بلا ضغط ولا كسر
+import { lokalesDatum } from "@/lib/datum";
 import { useEffect, useState } from "react";
 import type { Progress } from "@/lib/types";
 import { sentences } from "@/lib/content";
@@ -11,7 +12,7 @@ import { logK } from "@/lib/kompetenz";
 import { speakAny } from "@/lib/speech";
 import { De } from "./De";
 
-const TAG = () => new Date().toISOString().slice(0, 10);
+const TAG = () => lokalesDatum();
 
 export function GesundheitsWache({ progress }: { progress: Progress }) {
   const { update } = useProgress();

@@ -20,3 +20,6 @@ public/audio-manifest.json
 .audit_tmp3/
 check_*.ts
 check_final_orph.ts
+
+*.pid
+.lighthouseci/

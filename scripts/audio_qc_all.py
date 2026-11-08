@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-# R272: Vollstaendige maschinelle Audio-QC fuer den GESAMTEN Audio-Bestand
-# (public/audio/{dialog,diktat,hoeren,hoerneu,sprichwort} = alle MP3s des Projekts).
+# R272: Vollstaendige maschinelle Audio-QC fuer den manifestgebundenen Audio-Bestand
+# (public/audio/{dialog,diktat,hoeren,hoerneu,sprichwort}; Grammatik-Audio hat kein Text-/Voice-Manifest).
 # Ersetzt fuer den Gesamtbestand die Teilskripte audio_qc_r169.py (nur Dialoge)
 # und audio_qc_hoerneu.py (nur HoerNeu); deren historische Berichte bleiben gueltig.
 #
@@ -12,20 +12,19 @@
 # Ehrlichkeitsgrenze: Das ist eine MASCHINELLE Messung (Vollstaendigkeit/
 # Hoerbarkeit/Tempo). Kein menschliches Anhoeren, kein Aussprache-/
 # Natuerlichkeitsurteil. Der gelesene Text ist der Banktext der jeweiligen
-# content/*.json. Wo eine Aufnahme bewusst nur den ersten Absatz eines spaeter
-# erweiterten Lesetexts enthaelt, deklariert das Audio-Manifest den Scope
-# "first-paragraph" explizit; stilles Erraten anhand von Level/ID ist verboten.
+# content/*.json (zeichengleich per Konstruktion der Manifeste).
 #
-# Ausfuehrung (reproduzierbares, gepinntes Werkzeug-venv, PEP-668-sicher):
+# Ausfuehrung (reproduzierbares Werkzeug-venv unter .cache, PEP-668-sicher):
 #   npm run audio:qc
-# Schreibt docs/audio-qc-all-2026-10-18.json; K304 im Smoke pinnt Bericht,
+# Der Wrapper installiert die exakt gepinnten Versionen aus requirements-audio-qc.txt.
+# Schreibt den datierten Vollbericht; Smoke/Repository-Audit pinnen Bericht und Bestand,
 # Abdeckung (jede MP3 auf der Platte genau einmal) und Anomalienzahl.
 import hashlib, json, math, os, statistics, sys
 import miniaudio
 import numpy as np
 
 ROOT = os.path.join(os.path.dirname(__file__), "..")
-DATUM = "2026-10-18"
+DATUM = "2026-11-04"
 STILLE_SCHWELLE = 104          # |sample| < 104  (~ -50 dBFS) gilt als still
 FENSTER_S = 0.01               # 10-ms-Fenster fuer Loch/An-/Abklang
 
@@ -42,7 +41,7 @@ SCHWELLEN = {
     # Kurze Diktat-Saetze (z. B. "Hallo!") brauchen ehrliche Untergrenzen.
     "diktat":     dict(GEMEINSAM, minDauerS=0.4, zeichenProSekunde=[3.5, 30.0]),
     "sprichwort": dict(GEMEINSAM, minDauerS=0.8, zeichenProSekunde=[3.5, 30.0]),
-    # R402-Stand: alle 176 Dialoge einschließlich der zwölf neuen B2-Dateien.
+    # R169-Stand, dort mit 0 Anomalien an 164 Dialogen belegt.
     "dialog":     dict(GEMEINSAM, minDauerS=3.0, zeichenProSekunde=[5.0, 22.0]),
     "hoeren":     dict(GEMEINSAM, minDauerS=5.0, zeichenProSekunde=[5.0, 22.0]),
     "hoerneu":    dict(GEMEINSAM, minDauerS=3.0, zeichenProSekunde=[5.0, 22.0]),
@@ -67,14 +66,11 @@ def texte_und_stimmen():
     dlg_de = {d["id"]: " ".join(z["de"] for z in d["lines"]) for d in lade("dialogues.json")}
     for e in lade("dialog-audio.json")["einsaetze"]:
         out[e["file"].split("/")[-1]] = (e["id"], "dialog", e["voice"], dlg_de.get(e["id"], ""))
+    # `texts.json.de` ist der kanonische, zeichengleiche Hörtext. Längere
+    # Lesefassungen leben ausschließlich in content/lang/*.json.
     txt_de = {t["id"]: t["de"] for t in lade("texts.json")}
     for e in lade("hoeren-audio.json")["einsaetze"]:
         text = txt_de.get(e["id"], "")
-        scope = e.get("textScope", "full")
-        if scope == "first-paragraph":
-            text = text.split("\n\n", 1)[0]
-        elif scope != "full":
-            raise ValueError(f"Unbekannter textScope {scope!r} fuer {e['id']}")
         out[e["file"].split("/")[-1]] = (e["id"], "hoeren", e["voice"], text)
     for item in lade("hoerneu.json")["items"]:
         for clip in item["clips"]:
@@ -82,6 +78,13 @@ def texte_und_stimmen():
             out[clip["datei"].split("/")[-1]] = (item["id"], "hoerneu", clip["stimmeLabel"], text)
     for e in lade("sprichwort-audio.json").values():
         out[e["file"].split("/")[-1]] = (e["id"], "sprichwort", e["voice"], e["de"])
+    # بعض نصوص القراءة/الحوار توسعت بعد تسجيل الصوت. القياس يستخدم لقطة النص
+    # المجمدة عند التسجيل بدلاً من الادعاء أن الملف يقرأ النسخة الموسعة الحالية.
+    for e in lade("audio-transcript-overrides.json")["items"]:
+        datei = e["file"].split("/")[-1]
+        current = out.get(datei)
+        if current and current[0] == e["id"] and current[1] == e["group"]:
+            out[datei] = (current[0], current[1], current[2], e["textDe"])
     return out
 
 
@@ -189,9 +192,8 @@ def main():
                  "ok": not fehler, "fehler": fehler, "_pcmSha256": pcm_sha256}
             dateien.append(e)
 
-    # Verschiedene Lerninhalte duerfen nicht dieselbe dekodierte Aufnahme hinter
-    # unterschiedlich beschrifteten ID3-Tags verstecken. Genau so konnten zuvor
-    # Platzhalter fuer mehrere neue Dialoge die reine Pegel-/Tempo-QC bestehen.
+    # Different learning content must not hide the same decoded recording behind
+    # renamed files or ID3 tags. This catches placeholders that level/tempo checks miss.
     nach_pcm = {}
     for e in dateien:
         if e["_pcmSha256"]:
@@ -218,16 +220,16 @@ def main():
     bericht = {
         "werkzeug": "scripts/audio_qc_all.py (miniaudio-Dekodierung, 16-bit PCM, numpy; Platzhalter-/PCM-Duplikatprüfung; Schwellen wie R169, Stille-Regel 0.65/4.0s)",
         "datum": DATUM,
-        "gegenstand": "Gesamter Audio-Bestand: public/audio/{dialog,diktat,hoeren,hoerneu,sprichwort} — jede MP3 genau einmal geprueft (R272).",
+        "gegenstand": "Manifestgebundener Audio-Bestand: public/audio/{dialog,diktat,hoeren,hoerneu,sprichwort} — jede MP3 genau einmal geprueft (R272); Grammatik-Audio bleibt mangels Text-/Voice-Manifest ausserhalb dieses Urteils.",
         "schwellen": SCHWELLEN,
         "abdeckung": {"dateienGeprueft": len(dateien), "luecken": abdeckung_fehlt},
         "gruppen": gruppen,
         "anomalienGesamt": len(anomalien),
-        "grenzEhrlichkeit": "Maschinelle QC: Dekodierbarkeit, Vollständigkeit (Dauer/Tempo gegen Banktext bzw. explizit deklarierten Textausschnitt), Platzhalter/identische PCM-Aufnahmen, Stille, Pegel/Clipping. Kein menschliches Anhören, kein Aussprache-/Natürlichkeitsurteil; der gelesene Text stammt aus content/*.json.",
+        "grenzEhrlichkeit": "Maschinelle QC: Dekodierbarkeit, Vollständigkeit, Platzhalter/identische PCM-Aufnahmen, Stille, Pegel/Clipping und Tempo gegen den aktuellen Banktext oder eine dokumentierte Textmomentaufnahme vom Aufnahmezeitpunkt. Kein menschliches Anhören und kein Aussprache-/Natürlichkeitsurteil; eine Textmomentaufnahme behauptet nicht, dass das Audio die später erweiterte Lesefassung abdeckt.",
         "dateien": dateien,
     }
     out = os.path.join(ROOT, "docs", f"audio-qc-all-{DATUM}.json")
-    json.dump(bericht, open(out, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
+    json.dump(bericht, open(out, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     print(json.dumps({"gruppen": gruppen, "anomalienGesamt": len(anomalien),
                       "luecken": abdeckung_fehlt,
                       "anomalien": [a["datei"] + ":" + ",".join(a["fehler"]) for a in anomalien]},

@@ -1,26 +1,14 @@
-// 🛡️ R305/ب16 + R402: رؤوس أمان أساسية — دفاع إضافي لا إصلاح عطل قائم. المفتاح وعنوانه
-// (BYOK) يبقيان بتصميمهما الحالي (المستخدم يختار مزوّده بحرية)، فـconnect-src يسمح
-// بأي https: بدل حصره بمزوّدَين فقط حتى لا يكسر مزوّدًا مخصّصًا يضيفه المستخدم.
-// R402: أضيف frame-ancestors للمتصفح فقط للحماية من clickjacking مع السماح بمعاينة e2b الحيّة.
-// unsafe-inline يبقى لـ Next.js hydration + Tailwind @theme؛ nonce مؤجّل إلى Next 16 middleware.
-const CSP = [
-  "default-src 'self'",
-  "script-src 'self' 'unsafe-inline'",
-  "style-src 'self' 'unsafe-inline'",
-  "img-src 'self' data: blob:",
-  "font-src 'self' data:",
-  "media-src 'self'",
-  "connect-src 'self' https:",
-  "object-src 'none'",
-  "base-uri 'self'",
-  "form-action 'self'",
-  "frame-ancestors 'self' https://*.e2b.app",
-].join("; ");
+// Sicherheitsheader ohne statisches Script-CSP: middleware.ts erzeugt pro HTML-Antwort
+// einen Nonce und entfernt damit script-src 'unsafe-inline'. style-src bleibt wegen der
+// umfangreichen React-Inline-Styles separat erlaubt.
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  // R163: Banken werden im Browser per Fetch geladen; fs/path nur auf dem Server/in Node.
+  // Arena-Live-Preview und lokale Browserprüfungen dürfen in der Entwicklung
+  // Next-HMR-Chunks laden; in Produktions-Builds hat diese Liste keine Wirkung.
+  allowedDevOrigins: ["*.e2b.app", "127.0.0.1", "localhost"],
+  // Banken werden im Browser per Fetch geladen; fs/path nur auf dem Server/in Node.
   webpack: (config, { isServer }) => {
     if (!isServer) {
       config.resolve.fallback = { ...config.resolve.fallback, fs: false, path: false };
@@ -32,10 +20,20 @@ const nextConfig = {
       {
         source: "/:path*",
         headers: [
-          { key: "Content-Security-Policy", value: CSP },
           { key: "X-Content-Type-Options", value: "nosniff" },
           { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
           { key: "Permissions-Policy", value: "microphone=(self), camera=(), geolocation=()" },
+          { key: "Cross-Origin-Opener-Policy", value: "same-origin" },
+          { key: "Strict-Transport-Security", value: "max-age=31536000; includeSubDomains" },
+        ],
+      },
+      // P1 perf/audio-100MB: Range-Streaming + long cache für 1227 MP3 (100.5MB) — kein preload=all, Browser holt per Byte-Range
+      {
+        source: "/audio/:path*",
+        headers: [
+          { key: "Accept-Ranges", value: "bytes" },
+          { key: "Cache-Control", value: "public, max-age=31536000, immutable" },
+          { key: "Content-Type", value: "audio/mpeg" },
         ],
       },
     ];

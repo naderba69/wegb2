@@ -7,6 +7,21 @@ import type { Progress } from "./types";
  */
 export type ImportUrteil = { ok: true } | { ok: false; fehlerAr: string };
 
+/**
+ * نسخ التقدم لا تحمل أسراراً. إعداد المزوّد والنموذج يبقى للتسهيل، أما المفتاح
+ * والموافقة فيُعاد إدخالهما على الجهاز المقصود صراحةً.
+ */
+export function progressFuerExport(p: Progress): Progress {
+  const llm = p.settings.llm;
+  return {
+    ...p,
+    settings: {
+      ...p.settings,
+      llm: llm ? { ...llm, apiKey: "", zugestimmt: false } : undefined,
+    },
+  };
+}
+
 export function pruefeImportText(text: string): ImportUrteil {
   if (!text || text.trim().length < 10) {
     return { ok: false, fehlerAr: "الملف فارغ — اختر ملف النسخة الاحتياطية الذي صدّرته من هذا التطبيق." };

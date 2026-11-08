@@ -440,6 +440,8 @@ export function Klassenzimmer({
               srs={progress.srs}
               onSrs={onSrs}
               onPoints={onPoints}
+              lessonStudio
+              lessonCompleted={localOf(currentTask.id).total > 0}
               voiceName={voiceName}
               rate={rate}
               tempo={progress.settings.tempo}
@@ -564,7 +566,7 @@ export function Klassenzimmer({
             </strong>
           </div>
           <div>
-            <small>الناجحة (≥80%)</small>
+            <small>الناجحة (≥60% Goethe — 80% تميّز)</small>
             <strong className="rtl-num" style={{ color: "var(--color-a1)" }}>
               {plan.tasks.filter((tk) => resultOf(tk.id)?.passed).length} / {plan.tasks.length}
             </strong>
@@ -614,7 +616,7 @@ export function Klassenzimmer({
             <strong>تأكيد إغلاق اليوم {day}:</strong>
             <div style={{ margin: "0.6rem 0", lineHeight: 1.8, fontSize: "0.9rem" }}>
               {unpassed.length === 0 ? (
-                <>✨ أتقنت كل المهام (≥80%) — لا تعويضات! الغد سيبدأ بمحتواه الجديد فقط.</>
+                <>✨ أتقنت كل المهام (≥60% نجاح — 80% تميّز) — لا تعويضات! الغد سيبدأ بمحتواه الجديد فقط.</>
               ) : (
                 <>
                   ⚠️ <strong className="rtl-num">{unpassed.length}</strong> من المهام لم تُتقَن — ستُرحَّل <strong>إلزامية</strong> إلى أول الغد:

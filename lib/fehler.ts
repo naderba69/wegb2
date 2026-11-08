@@ -1,4 +1,5 @@
 // محرّك دفتر الأخطاء والتكيّف — «ذاكرة المدرّس» التي لا تنسى أخطاءك
+import { lokalesDatum } from "./datum";
 import { PHASE_START, levelAmTag } from "./phasen";
 import type {
   Exercise,
@@ -35,7 +36,7 @@ export function upsertFehler(p: Progress, e: FehlerEintrag): Progress {
   fehler[key] = {
     ...e,
     key,
-    first: prev?.first ?? new Date().toISOString().slice(0, 10),
+    first: prev?.first ?? lokalesDatum(),
     srs: prev ? reviewCard(prev.srs, 0) : newCard(),
     treffer: (prev?.treffer ?? 0) + 1,
   };
@@ -142,7 +143,7 @@ export function wochenWaerme(p: Progress, wochen = 6): { kat: string[]; zeilen: 
     const e = new Date(s);
     e.setDate(e.getDate() + 7);
     spalten.push(i === 0 ? "هذا الأسبوع" : `قبل ${i}`);
-    grenzen.push([s.toISOString().slice(0, 10), e.toISOString().slice(0, 10)]);
+    grenzen.push([lokalesDatum(s), lokalesDatum(e)]);
   }
   const kat = Object.keys(FEHLER_KAT);
   const zeilen = kat.map(() => spalten.map(() => 0));
@@ -197,7 +198,7 @@ function lehrerBerichtBasis(p: Progress): string[] {
     const tot = last7.reduce((s, [, r]) => s + Math.max(r.total, 1), 0);
     const pct = Math.round((sc / Math.max(tot, 1)) * 100);
     lines.push(
-      `📊 معدّل آخر ${last7.length} أيام مُغلقة: ${pct}% ${pct >= 80 ? "— أداء متين، واصل" : "— دون عتبة الإتقان 80%: خصّص مراجعة مركّزة"}`
+      `📊 معدّل آخر ${last7.length} أيام مُغلقة: ${pct}% ${pct >= 80 ? "— تميّز (≥80%) — واصل" : pct >= 60 ? "— نجاح رسمي (≥60% Goethe) — 80% للتميّز" : "— دون عتبة النجاح 60% (Goethe): خصّص مراجعة مركّزة"}`
     );
   } else {
     lines.push("📊 لا أيام مُغلقة بعد — أغلق يومك الأول ليبدأ التتبّع.");
@@ -342,10 +343,10 @@ export function elternBrief(p: Progress): { de: string[]; ar: string[] } {
     const tot = last7.reduce((s, [, r]) => s + Math.max(r.total, 1), 0);
     const pct = Math.round((sc / Math.max(tot, 1)) * 100);
     de.push(
-      `Durchschnitt der letzten ${last7.length} Lerntage: ${pct}% ${pct >= 80 ? "(Ziel erreicht – weiter so!)" : "(unter dem Ziel 80% – bitte beim Lernen begleiten)."}`
+      `Durchschnitt der letzten ${last7.length} Lerntage: ${pct}% ${pct >= 80 ? "(Exzellenz ≥80% – weiter so!)" : pct >= 60 ? "(bestanden ≥60% Goethe – 80% für Exzellenz)" : "(unter 60% Goethe – bitte beim Lernen begleiten)."}`
     );
     ar.push(
-      `معدّل آخر ${last7.length} أيام تعلّم: ${pct}% ${pct >= 80 ? "(حقق الهدف — أحسنتم!)" : "(دون هدف 80% — يُستحسن مرافقته في المذاكرة)."}`
+      `معدّل آخر ${last7.length} أيام تعلّم: ${pct}% ${pct >= 80 ? "(تميّز ≥80% — أحسنتم!)" : pct >= 60 ? "(نجاح رسمي ≥60% Goethe — 80% للتميّز)" : "(دون 60% Goethe — يُستحسن المرافقة)."}`
     );
   } else {
     de.push("Noch keine abgeschlossenen Lerntage – mit dem ersten Tag beginnt die Dokumentation.");

@@ -33,7 +33,10 @@ export function pickVoice(name?: string, langPraefix?: string): SpeechSynthesisV
 }
 
 /** ينطق نصاً ألمانياً */
-export function speakDe(text: string, opts?: { rate?: number; voiceName?: string; lang?: string; pitch?: number }): boolean {
+export function speakDe(
+  text: string,
+  opts?: { rate?: number; voiceName?: string; lang?: string; pitch?: number; onEnd?: (ok: boolean) => void },
+): boolean {
   if (!speechAvailable()) return false;
   const u = new SpeechSynthesisUtterance(text);
   u.lang = opts?.lang ?? "de-DE";
@@ -41,6 +44,8 @@ export function speakDe(text: string, opts?: { rate?: number; voiceName?: string
   if (v) { u.voice = v; u.lang = v.lang; }
   if (opts?.pitch) u.pitch = opts.pitch;
   u.rate = opts?.rate ?? 0.9;
+  u.onend = () => opts?.onEnd?.(true);
+  u.onerror = () => opts?.onEnd?.(false);
   window.speechSynthesis.cancel();
   window.speechSynthesis.speak(u);
   return true;
@@ -149,7 +154,7 @@ export function recognitionAvailable(): boolean {
 }
 export function speakAny(
   text: string | string[] | null | undefined,
-  opts?: { rate?: number; voiceName?: string; lang?: string; pitch?: number }
+  opts?: { rate?: number; voiceName?: string; lang?: string; pitch?: number; onEnd?: (ok: boolean) => void }
 ): boolean {
   const s = Array.isArray(text) ? text[0] : text;
   if (!s) return false;

@@ -4,6 +4,7 @@
 export const LOCAL_SPEECH_LANGUAGE = "de-DE" as const;
 
 export type LocalSpeechAvailability =
+  | "idle"
   | "available"
   | "downloadable"
   | "downloading"

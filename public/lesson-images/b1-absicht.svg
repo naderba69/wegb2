@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <rect width="800" height="450" fill="#FFFCF0"/>
+  <rect width="800" height="450" fill="none" stroke="#D4C18F" stroke-opacity="0.35" stroke-width="2" rx="20"/>
+  <text x="400" y="30" text-anchor="middle" font-family="Georgia, serif" font-size="12" font-weight="800" letter-spacing="2" fill="#94845C">WEG · B2 — VERLAG FÜR DEUTSCH — B1</text>
+  <text x="400" y="70" text-anchor="middle" font-family="Georgia, serif" font-size="22" font-weight="900" fill="#0F2A44">Absicht &amp; Zweck: um…zu / damit</text>
+  <text x="400" y="100" text-anchor="middle" font-family="system-ui" font-size="14" fill="#1A2E4A">القصد والغرض</text>
+  <line x1="80" y1="120" x2="720" y2="120" stroke="#113A5F" stroke-width="2" opacity="0.2"/>
+  <g font-family="system-ui" font-size="11"><text x="50" y="280" font-weight="800" fill="#113A5F">الفاعل</text><text x="170" y="280" font-weight="800" fill="#113A5F">الصيغة</text><text x="290" y="280" font-weight="800" fill="#113A5F">مثال</text><text x="50" y="300" fill="#1A2E4A">نفسه</text><text x="170" y="300" fill="#1A2E4A">um…zu + مصدر</text><text x="290" y="300" fill="#1A2E4A">Ich lerne, um zu bestehen.</text><text x="50" y="318" fill="#1A2E4A">مختلف</text><text x="170" y="318" fill="#1A2E4A">damit + فعل مصرف</text><text x="290" y="318" fill="#1A2E4A">Ich helfe dir, damit du bestehst.</text></g>
+  <text x="400" y="420" text-anchor="middle" font-family="system-ui" font-size="9" fill="#A78BFA">Mayer Dual-Coding · Verlag WEG · b1-absicht</text>
+</svg>

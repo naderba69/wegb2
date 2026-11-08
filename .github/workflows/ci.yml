@@ -8,30 +8,57 @@ on:
 
 jobs:
   gates:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
         with:
           node-version: 22
           cache: npm
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: scripts/requirements-audio-qc.txt
       - name: Abhängigkeiten installieren
         run: npm ci
-      - name: Abhängigkeiten auf bekannte Schwachstellen prüfen
-        run: npm run audit:deps
-      - name: Tools-Generator (YAML → lib/ — R402 P2)
-        run: npm run gen:tools && git diff --exit-code lib/ content/tools.yaml
+      - name: Tools-Generator (YAML → lib/ + governance summary)
+        run: npm run gen:tools && git diff --exit-code lib/ content/tool-catalog-summary.json content/tool-catalog-review-matrix.json content/tools.yaml
+      - name: Grammar-Profile-Generator (87 Themen → evidence matrix)
+        run: npm run gen:ggp && git diff --exit-code content/grammar-profile-matrix.json
+      - name: Repository-Audit (alle getrackten Dateien)
+        run: npm run audit:repo
+      - name: Plan-Audit (378 Tage, vollständige Aufgabenreferenzen)
+        run: npm run audit:plan
+      - name: Accreditation-Alignment (Goethe B2 + telc B2، technische Evidenz)
+        run: npm run audit:accreditation
+      - name: External-Evidence-Dossier (2 sources + 10 reviews + 7 gates)
+        run: npm run audit:evidence
+      - name: Grammar-Profile (internal matrix; no unsupported GGP claim)
+        run: npm run audit:ggp
+      - name: Tool-Catalog Governance (820 ideas, evidence lifecycle)
+        run: npm run audit:tools
+      - name: Real-World Validation Program (no simulated human sign-off)
+        run: npm run audit:real-world
+      - name: Audio-QC (1099 Dateien neu dekodieren und messen)
+        run: npm run audio:qc
       - name: TypeScript
         run: ./node_modules/.bin/tsc --noEmit
       - name: ESLint (toter Code, R303)
         run: npm run lint
+      - name: Dependency-Audit (moderate+)
+        run: npm run audit:deps
       - name: Engine-Smoke (Inhalts- und Motor-Tore)
         run: npm run smoke
       - name: Interaktiv-Tests (DOM)
         run: npm run interaktiv
       - name: Inhalts-Audit
         run: npm run audit:content
-      - name: Lighthouse CI (a11y ≥0.9)
-        run: npx --yes @lhci/cli@0.12.x autorun || echo "LHCI warn — requires build artifacts"
+      - name: Wort-für-Wort-Audit (bestätigte Blocker)
+        run: npm run audit:words
       - name: Produktions-Build
         run: npm run build
+      - name: Browser-E2E (echtes Chromium, SW + Offline + CSP)
+        run: npm run e2e:browser
+      - name: Lighthouse CI (9 Hauptseiten، a11y ≥0.9 مانع)
+        run: npm run audit:lighthouse

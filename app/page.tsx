@@ -1,4 +1,5 @@
 "use client";
+import { lokalesDatum } from "@/lib/datum";
 import { useEffect, useMemo, useState, lazy, Suspense } from "react";
 import Link from "next/link";
 import { useProgress, saveProgress, loadProgress, planeVerifikation } from "@/lib/store";
@@ -11,9 +12,13 @@ import { grammarMap } from "@/lib/content";
 import { ritualUrteil, aufgabeGesperrt } from "@/lib/ritual";
 import { KindIcon } from "@/components/dirb/icons";
 import TodayStepper from "@/components/akademie/TodayStepper";
+import { todayStepOf, todayStepStatuses } from "@/lib/today-steps";
+import { TodayB2Praxis } from "@/components/today-b2-praxis";
 import { stationOfTask, STATIONEN } from "@/components/stationen";
 import { LernPfad } from "@/components/lernpath";
 import { ProfilWahl } from "@/components/profil";
+import { progressKeyActive } from "@/lib/profiles";
+import { OnboardingWizard } from "@/components/onboarding-wizard";
 import { Klassenzimmer } from "@/components/akademie/Klassenzimmer";
 import { resumeAusloesen, resumeBedarf, resumePlan, resumeZustand } from "@/lib/wiedereinstieg";
 import { SkillBalancePlan } from "@/components/skillplan";
@@ -23,7 +28,7 @@ import ModulTor from "@/components/modultor";
 import ExerciseSet from "@/components/exercises";
 import { heutigesGrammatikThema, parkedExercisesFor } from "@/lib/parkuebungen";
 import { FehlerGrenze } from "@/components/fehlergrenze";
-import { ermittleStationsStatus, stationFuerAufgabe } from "@/lib/tagesstationen";
+import { progressFuerExport } from "@/lib/backup";
 
 // ⚡ R308: تحميلٌ كسولٌ حقيقي — لا تُجلَب شيفرتا «تدرّب»/«اختبر» الثقيلتان (عشرات المحطات)
 // ضمن حزمة صفحة «اليوم» (الأكثر زيارةً بفارق كبير) إلا عند فتح القسم فعليًا.
@@ -51,16 +56,39 @@ const SKILL_AR: Record<string, string> = {
 };
 
 type TaskPoints = Record<string, { score: number; total: number }>;
-const dayStepKey = (day: number) => `wegb2:day-step:${day}`;
-const dayPointsKey = (day: number) => `wegb2:partial-points:${day}`;
+/** P1 fix code/dayStepKey: مفاتيح per-profile + per-day لتجنب فوق كتابة يوم برقم عبر الملفات أو عند تغيير التاريخ */
+function profilePrefix(): string {
+  try { return progressKeyActive(); } catch { return "weg-b2-progress-p1"; }
+}
+const dayStepKey = (day: number) => `${profilePrefix()}:day-step:${day}`;
+const dayPointsKey = (day: number) => `${profilePrefix()}:partial-points:${day}`;
 function clearPartialTaskState(taskId: string) {
   try {
-    const prefix = `wegb2:partial:${taskId}:`;
+    const prefix = `${profilePrefix()}:partial:${taskId}:`;
+    const legacyPrefix = `wegb2:partial:${taskId}:`;
     for (let i = localStorage.length - 1; i >= 0; i--) {
       const key = localStorage.key(i);
-      if (key?.startsWith(prefix)) localStorage.removeItem(key);
+      if (key?.startsWith(prefix) || key?.startsWith(legacyPrefix)) localStorage.removeItem(key);
     }
   } catch { /* التخزين محظور أو ممتلئ */ }
+}
+function migrateLegacyDayKeys() {
+  // ترحيل لمرة واحدة: انسخ مفاتيح wegb2:day-step:N القديمة إلى المفتاح الجديد per-profile إن لم يوجد
+  try {
+    const prefix = profilePrefix();
+    for (let day = 1; day <= 378; day++) {
+      const legacy = `wegb2:day-step:${day}`;
+      const neu = `${prefix}:day-step:${day}`;
+      if (!localStorage.getItem(neu) && localStorage.getItem(legacy)) {
+        localStorage.setItem(neu, localStorage.getItem(legacy)!);
+      }
+      const legacy2 = `wegb2:partial-points:${day}`;
+      const neu2 = `${prefix}:partial-points:${day}`;
+      if (!localStorage.getItem(neu2) && localStorage.getItem(legacy2)) {
+        localStorage.setItem(neu2, localStorage.getItem(legacy2)!);
+      }
+    }
+  } catch { /* */ }
 }
 
 /** شاشة «اليوم»: مهمة واحدة في المقدمة؛ الأدوات والبدائل قابلة للفتح عند الحاجة. */
@@ -89,6 +117,7 @@ export default function Today() {
 
   useEffect(() => {
     if (!ready) return;
+    migrateLegacyDayKeys();
     let savedStep = 0;
     try {
       const parsed = Number(localStorage.getItem(dayStepKey(day)));
@@ -135,10 +164,11 @@ export default function Today() {
 
   if (!ready) return <div className="today-screen" role="status" aria-live="polite">⏳ جارٍ استعادة خطتك وتقدّمك المحفوظ…</div>;
 
+  const showOnboarding = !(progress as any).settings?.onboardingDone && progress.plan.day <= 3;
   const resultOf = (id: string) => progress.plan.tasks[id];
   // 🔐 بوابة الجلسة: الجديد لا يُرى قبل تسليم الاسترجاع (lib/ritual.ts)
   const ritual = ritualUrteil(plan, progress);
-  const stationsStatus = ermittleStationsStatus(
+  const stationsStatus = todayStepStatuses(
     plan.tasks,
     (task) => !!resultOf(task.id),
     (index) => aufgabeGesperrt(ritual, index),
@@ -146,12 +176,11 @@ export default function Today() {
   const angeforderterSchritt = Math.min(Math.max(step, 0), Math.max(plan.tasks.length - 1, 0));
   const angeforderteAufgabe = plan.tasks[angeforderterSchritt];
   const angeforderteStationGesperrt = angeforderteAufgabe
-    ? stationsStatus.get(stationFuerAufgabe(angeforderteAufgabe)) === "locked"
+    ? stationsStatus.get(todayStepOf(angeforderteAufgabe)) === "locked"
     : false;
   const ersteAktiveAufgabe = plan.tasks.findIndex((task) =>
-    stationsStatus.get(stationFuerAufgabe(task)) === "active" && !resultOf(task.id));
-  // Auch ein aus einer älteren Version gespeicherter Sprung darf keine inzwischen
-  // gesperrte Station im Spieler öffnen. Er fällt auf die erste offene Aufgabe zurück.
+    stationsStatus.get(todayStepOf(task)) === "active" && !resultOf(task.id));
+  // A position saved by an older release must not reopen a now-locked station.
   const stepFrei = angeforderteStationGesperrt && ersteAktiveAufgabe >= 0
     ? ersteAktiveAufgabe
     : angeforderterSchritt;
@@ -167,7 +196,6 @@ export default function Today() {
   // الخطوة الحالية هي الوحيدة في بطاقة المقدمة.
   const held = plan.tasks[stepFrei] ?? plan.tasks[0];
   const heldFertig = held ? !!resultOf(held.id) : false;
-  const heldBestanden = held ? !!resultOf(held.id)?.passed : false;
   const allTodayDone = plan.tasks.length > 0 && plan.tasks.every((task) => !!resultOf(task.id));
   // سبب الاختيار بلغة بسيطة، مع إبقاء معنى الاسترجاع والتحقق المستقل.
   const heldGrund = !held
@@ -219,11 +247,11 @@ export default function Today() {
     }
     session.start();
     setSessionSaved(false);
-    if (heldBestanden) {
+    if (heldFertig) {
       const next = plan.tasks.findIndex((task, i) =>
         !resultOf(task.id) &&
         !aufgabeGesperrt(ritual, i) &&
-        stationsStatus.get(stationFuerAufgabe(task)) !== "locked");
+        stationsStatus.get(todayStepOf(task)) !== "locked");
       if (next >= 0) setStep(next);
     }
     document.getElementById("dirb-training")?.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -291,14 +319,28 @@ export default function Today() {
     localStorage.removeItem("weg-abend"); // أوّلُ مهمّةٍ في اليومِ الجديدِ تُعيدُ قفلَ التدريب الحرّ
     const task = plan.tasks[stepFrei];
     if (!task) return;
-    session.checkpoint();
+    const sessionSnapshot = session.checkpoint();
     const local = localOf(task.id);
     const actualTaskMinutes = session.taskMinutes(task.id);
     // 🎯 إنجازُ تدريبِ درسٍ يجدول تحققَ استقلاله بعد 3 أيام (مهمة جديدة لا إعادة)
     if (task.topicId && (grammarMap[task.topicId]?.verify ?? []).length > 0 && !progress.verify?.[task.topicId]) {
       planeVerifikation(task.topicId, day);
     }
-    submitTask(day, task.id, local.score, local.total, task.kind, task.minutes, task.verifyFor, actualTaskMinutes);
+    submitTask(
+      day,
+      task.id,
+      local.score,
+      local.total,
+      task.kind,
+      task.minutes,
+      task.verifyFor,
+      actualTaskMinutes,
+      {
+        activeMs: sessionSnapshot.totalMs,
+        step: todayStepOf(task),
+        hasStep5: plan.tasks.some((candidate) => todayStepOf(candidate) === 5),
+      },
+    );
     clearPartialTaskState(task.id);
     setPoints((old) => {
       const next = { ...old };
@@ -310,17 +352,17 @@ export default function Today() {
       const pct = Math.round((local.score / local.total) * 100);
       saveExam(day, pct, pct >= 80);
     }
-    const aktuelleStation = stationFuerAufgabe(task);
+    const aktuelleStation = todayStepOf(task);
     let naechsterIndex = plan.tasks.findIndex((kandidat) =>
-      kandidat.id !== task.id && !resultOf(kandidat.id) && stationFuerAufgabe(kandidat) === aktuelleStation);
+      kandidat.id !== task.id && !resultOf(kandidat.id) && todayStepOf(kandidat) === aktuelleStation);
     if (naechsterIndex < 0) {
       const spaetereOffeneStationen = plan.tasks
-        .filter((kandidat) => kandidat.id !== task.id && !resultOf(kandidat.id) && stationFuerAufgabe(kandidat) > aktuelleStation)
-        .map(stationFuerAufgabe);
+        .filter((kandidat) => kandidat.id !== task.id && !resultOf(kandidat.id) && todayStepOf(kandidat) > aktuelleStation)
+        .map(todayStepOf);
       const naechsteStation = spaetereOffeneStationen.length > 0 ? Math.min(...spaetereOffeneStationen) : null;
       if (naechsteStation !== null) {
         naechsterIndex = plan.tasks.findIndex((kandidat) =>
-          kandidat.id !== task.id && !resultOf(kandidat.id) && stationFuerAufgabe(kandidat) === naechsteStation);
+          kandidat.id !== task.id && !resultOf(kandidat.id) && todayStepOf(kandidat) === naechsteStation);
       }
     }
     if (naechsterIndex >= 0) setStep(naechsterIndex);
@@ -336,7 +378,7 @@ export default function Today() {
     // 🔒 R309: لا تُفتَحُ وحدةٌ قبلَ اجتيازِ امتحانِ سابقتِها (lib/modulpruefung.ts) —
     // قفلٌ فعلي حقيقي هنا لا مطالبة إعلامية فقط: الإغلاق يتوقّف فعلًا عند هذه الحدود.
     if (modulGate.gesperrt) { oeffneModulPruefungJetzt(); return; }
-    session.pause();
+    const sessionSnapshot = session.pause();
     const merged: Record<string, { done: boolean; passed: boolean; score: number; total: number; attempts: number }> = {};
     for (const tk of plan.tasks) {
       const r = progress.plan.tasks[tk.id];
@@ -353,7 +395,7 @@ export default function Today() {
     }
     const ds = dayScore(plan, merged as never);
     const debts = debtsFrom(plan, merged as never);
-    closeDay(day, ds.score, Math.max(ds.total, 1), ds.done, ds.tasksTotal, debts);
+    closeDay(day, ds.score, Math.max(ds.total, 1), ds.done, ds.tasksTotal, debts, sessionSnapshot.totalMs);
     for (const task of plan.tasks) clearPartialTaskState(task.id);
     try { localStorage.removeItem(dayPointsKey(day)); } catch { /* التخزين محظور */ }
     localStorage.setItem("weg-abend", "1"); // مساءُ ما بعدِ الإغلاق: بابُ «تدرّب» يُفتح
@@ -377,7 +419,7 @@ export default function Today() {
     // 🔒 R309: «يوم سيّئ» لا يلتف حول بوّابة الوحدة — نفس القفل الحقيقي يسري هنا أيضًا
     if (modulGate.gesperrt) { oeffneModulPruefungJetzt(); return; }
     session.pause();
-    const today = new Date().toISOString().slice(0, 10);
+    const today = lokalesDatum();
     update((p) => ({
       ...p,
       badDay: today,
@@ -406,6 +448,7 @@ export default function Today() {
 
   return (
     <div className="today-screen fadein dirb ui-page ui-page--today" data-testid="today-screen">
+      {showOnboarding && <OnboardingWizard />}
       {modulGate.gesperrt && (
         <section
           id="modul-pruefung-mahnung"
@@ -466,15 +509,13 @@ export default function Today() {
               ? "راجع نهاية اليوم"
               : goalReached && !session.running
                 ? "اختر المتابعة أو الحفظ"
-                : heldBestanden
+                : heldFertig
                   ? "ابدأ الخطوة التالية"
-                  : heldFertig
-                    ? "حاول مرة أخرى"
-                    : session.running
-                      ? "تابع التعلّم"
-                      : session.clock.totalMs > 0
-                        ? "تابع الجلسة"
-                        : "ابدأ جلسة 90 دقيقة"}
+                  : session.running
+                    ? "تابع التعلّم"
+                    : session.clock.totalMs > 0
+                      ? "تابع الجلسة"
+                      : "ابدأ جلسة 90 دقيقة"}
             <span aria-hidden>←</span>
           </button>
         </section>
@@ -483,13 +524,13 @@ export default function Today() {
       {/* 🗺️ Sprint 1B — Unified Today Stepper: 5 خطوات مرئية + مقفلة بصرياً (Hybrid Gated) */}
       <TodayStepper
         plan={plan}
-        progress={progress}
         ritual={ritual}
         stepFrei={stepFrei}
         setStep={setStep}
-        resultOf={resultOf as any}
+        resultOf={resultOf}
         localOf={localOf}
       />
+      <TodayB2Praxis />
 
       <section className="dirb-tagesziel dirb-hero-anim-2" aria-label="هدف الجلسة اليومي" data-testid="session-goal-panel">
         <div className="dirb-tagesziel-top">
@@ -572,11 +613,11 @@ export default function Today() {
               title="تنزيل نسخة احتياطية تحتوي على تقدّمك الحالي"
               onClick={() => {
                 saveProgress(progress);
-                const blob = new Blob([JSON.stringify(progress, null, 2)], { type: "application/json" });
+                const blob = new Blob([JSON.stringify(progressFuerExport(progress), null, 2)], { type: "application/json" });
                 const url = URL.createObjectURL(blob);
                 const a = document.createElement("a");
                 a.href = url;
-                a.download = `wegb2-backup-${new Date().toISOString().slice(0, 10)}.json`;
+                a.download = `wegb2-backup-${lokalesDatum()}.json`;
                 document.body.appendChild(a);
                 a.click();
                 document.body.removeChild(a);
@@ -597,7 +638,7 @@ export default function Today() {
         <div className="dirb-minis" role="list" aria-label="مهام اليوم">
           {plan.tasks.map((tk, i) => {
             const ritualGesperrt = aufgabeGesperrt(ritual, i);
-            const stationGesperrt = stationsStatus.get(stationFuerAufgabe(tk)) === "locked";
+            const stationGesperrt = stationsStatus.get(todayStepOf(tk)) === "locked";
             const gesperrt = ritualGesperrt || stationGesperrt;
             const fertig = !!resultOf(tk.id);
             const jetzt = i === stepFrei;
@@ -628,6 +669,16 @@ export default function Today() {
       <p className="dirb-time-hint" data-testid="zeit-hinweis">هدف 90 دقيقة افتراضي للجلسة فقط؛ مجموع تقديرات الخطة مستقل عنه. احفظ التوقّف وعد لاحقاً؛ لن يتحوّل ما لم تسلّمه إلى فشل أو تعويض.</p>
 
       <SkillBalancePlan progress={progress} />
+      {/* Pflege BSK — مسار مستقل لا يُحتسب في الخطة، لكنه ظاهر لمن اختاره */}
+      <section className="card" data-testid="pflege-bsk-teaser" style={{ padding: "0.75rem 0.95rem", background: "linear-gradient(180deg, #FFFCF0, #FDF8E8)", borderInlineStart: "4px solid #22c55e", display: "grid", gap: "0.45rem" }}>
+        <div style={{ display: "flex", gap: "0.5rem", alignItems: "center", flexWrap: "wrap" }}>
+          <span style={{ fontWeight: 900, color: "#0F2A44" }}>🩺 مسار التمريض BSK — اختياري</span>
+          <span style={{ fontSize: "0.72rem", background: "rgb(34 197 94 / 0.12)", padding: "0.15rem 0.5rem", borderRadius: "999px", fontWeight: 800, color: "#15803d" }}>B2 Pflege</span>
+        </div>
+        <div style={{ fontSize: "0.82rem", lineHeight: 1.8, color: "var(--color-ink2)" }}>
+          115 كلمة مهنية + 8 حوارات طوارئ (Visite/Übergabe) — يفتح في <b>تدرّب → ألمانية التمريض</b>. لا يدخل في الـ 378 يوماً ولا يُغيّر خطتك.
+        </div>
+      </section>
       <WiedereinstiegBanner progress={progress} minuten={totalMinutes} normaleMinuten={basePlan.tasks.reduce((a, t) => a + t.minutes, 0)} />
 
       <LernPfad progress={progress} />
@@ -642,7 +693,7 @@ export default function Today() {
           ritual={ritual}
           stationGesperrt={(index) => {
             const task = plan.tasks[index];
-            return !!task && stationsStatus.get(stationFuerAufgabe(task)) === "locked";
+            return !!task && stationsStatus.get(todayStepOf(task)) === "locked";
           }}
           resultOf={resultOf}
           localOf={localOf}

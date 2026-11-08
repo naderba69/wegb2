@@ -1,10 +1,17 @@
 /**
  * 🔊 A5 (R282, Experten-Audit ← N10): graduierter Phonetik-Pfad A0→A2.
- * Reine Daten (kein Bank-Eintrag): 8 Einheiten mit Minimalpaaren + Beispielsaetzen.
+ * Reine Daten (kein Bank-Eintrag): 8 Einheiten mit Lautkontrasten + Beispielsaetzen.
  * Wiedergabe ueber die Geraete-TTS (speakDe) — ehrlich als solche gekennzeichnet,
  * keine Hausaufnahmen, kein Aussprache-Urteil (nur Hoer-Unterscheidung).
  */
-export interface PhonetikPaar { a: string; b: string; aAr: string; bAr: string }
+export interface PhonetikPaar {
+  a: string;
+  b: string;
+  aAr: string;
+  bAr: string;
+  /** false = der Kontrast ist absichtlich nicht als isolierte Hörfrage lösbar. */
+  auditivPruefbar?: boolean;
+}
 export interface PhonetikEinheit {
   id: string;
   stufe: "A0" | "A1" | "A2";
@@ -13,6 +20,8 @@ export interface PhonetikEinheit {
   regelAr: string;
   paare: PhonetikPaar[];
   saetze: { de: string; ar: string }[];
+  quizbar?: boolean;
+  quizHinweisAr?: string;
 }
 
 export const PHONETIK_EINHEITEN: PhonetikEinheit[] = [
@@ -33,6 +42,8 @@ export const PHONETIK_EINHEITEN: PhonetikEinheit[] = [
   {
     id: "ph-a0-auslaut", stufe: "A0", titelDe: "Auslautverhärtung", titelAr: "النهايات المجهورة تُنطق مهموسة",
     regelAr: "في آخر الكلمة تتحوّل الأصوات المجهورة إلى مهموسة: b→p وd→t وg→k. كلمة Tag تُنطق [ta:k]، وRad وRat تُسمعان متماثلتين [ʁa:t] — المعنى من السياق والكتابة.",
+    quizbar: false,
+    quizHinweisAr: "لا يوجد سؤال اختيار معزول هنا: قد يتطابق نطق الشكلين بسبب جهر النهاية، ولا يمكن حسم الإملاء من الصوت وحده بلا سياق.",
     paare: [
       { a: "Rad", b: "Rat", aAr: "عجلة/دراجة", bAr: "نصيحة/مجلس" },
       { a: "Tod", b: "tot", aAr: "الموت", bAr: "ميّت" },

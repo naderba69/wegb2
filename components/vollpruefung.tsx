@@ -2,6 +2,7 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { De } from "./De";
 import { vpTexte, vpDialoge, vpSchreiben, vpSprechen, type VpFrage } from "@/lib/vollpruefung";
+import { lokalesDatum } from "@/lib/datum";
 
 /**
  * 🧪 جلسة امتحان كاملة (R218): أربعة أقسام بمؤقّت إجمالي واحد ونتيجة مجمّعة.
@@ -61,7 +62,7 @@ export function VollPruefung() {
   const setAntworten = (f: (a: Record<string, string>) => Record<string, string>) => setAntwortenState(f);
 
   const [variante, setVariante] = useState(0);
-  const tagesSamen = useMemo(() => Math.floor(Date.now() / 86400000), []);
+  const tagesSamen = useMemo(() => Number(lokalesDatum().replaceAll("-", "")), []);
   const samen = tagesSamen + variante * 101;
   const pick = useCallback(<T,>(pool: T[], anzahl: number): T[] => {
     if (!pool.length) return [];

@@ -1,3 +1,4 @@
+import { lokalesDatumPlus } from "./datum";
 import { KOMPETENZEN } from "./kompetenz";
 import type { Kompetenz, Progress } from "./types";
 
@@ -17,7 +18,7 @@ export interface SkillUmschichtung {
 }
 
 export function skillUmschichtung(p: Progress, jetzt = new Date()): SkillUmschichtung {
-  const grenze = new Date(jetzt.getTime() - 13 * 86400000).toISOString().slice(0, 10);
+  const grenze = lokalesDatumPlus(-13, jetzt);
   const basis = (p.kompetenzLog ?? []).filter((e) => e.d && e.d >= grenze);
   const leer: SkillUmschichtung = { eintraege: basis.length, dominant: null, anteil: 0, vonMinuten: 0, ziele: [] };
   if (basis.length < 20) return leer;

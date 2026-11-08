@@ -1,3 +1,4 @@
+import { lokalesDatum } from "./datum";
 /**
  * 072 Portfolio — محفظة الأعمال
  * يجمع المتعلم نصوصه/كتاباته/تسجيلاته في محفظة قابلة للتصدير (CEFR Portfolio).
@@ -35,7 +36,7 @@ export function neuerEintrag(
     titelDe,
     titelAr,
     level,
-    datum: new Date().toISOString().slice(0, 10),
+    datum: lokalesDatum(),
     bewertung,
     artefakt,
   };

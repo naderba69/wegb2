@@ -7,16 +7,20 @@
  * سببه) · ≤3 تمارين في التطبيق · الخلاصة تجمع الملخّص والفخاخ وشفرة الحفظ ·
  * موضعك محفوظ (البدء البارد يستأنف مهمّته) · وباب الرجوع الوحيد «اليوم».
  */
-import { useCallback, useEffect, useMemo, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { grammarMap, getBrueckenFor, candoMap } from "@/lib/content";
 import type { Eselsbruecke } from "@/lib/types";
 import { isDue } from "@/lib/srs";
+import { parsePitfallContrast } from "@/lib/pitfall";
 import { entdeckungsFrage, induktionMoeglich, ergebnisText, type EntdeckungsErgebnis } from "@/lib/induktion";
 import { speakAny } from "@/lib/speech";
 import { useProgress, planeVerifikation } from "@/lib/store";
 import { De } from "@/components/De";
 import ExerciseSet, { type ExerciseProgress } from "@/components/exercises";
+import { LessonSceneVisual } from "@/components/akademie/LessonSceneVisual";
+import { ggpForTopic } from "@/lib/ggp";
+import { kulturFuer } from "@/lib/kultur";
 
 /** الخطوات الخمس — الترتيب نفسه هو الميثاق (K108a) */
 const SCHRITTE = ["خمّن", "قاعدة", "أمثلة", "تطبيق", "خلاصة"] as const;
@@ -205,11 +209,27 @@ function IndependentApplication({
   );
 }
 
-export function LektionWizard({ topicId }: { topicId: string }) {
-  return <LektionWizardContent key={topicId} topicId={topicId} />;
+interface LektionWizardProps {
+  topicId: string;
+  /** داخل «اليوم»: لا تنقّل إلى مسار آخر، بل أبلغ مشغّل المهمة أن الاستوديو اكتمل. */
+  embedded?: boolean;
+  completedInDay?: boolean;
+  onComplete?: () => void;
 }
 
-function LektionWizardContent({ topicId }: { topicId: string }) {
+export function LektionWizard({ topicId, embedded = false, completedInDay = false, onComplete }: LektionWizardProps) {
+  return (
+    <LektionWizardContent
+      key={topicId}
+      topicId={topicId}
+      embedded={embedded}
+      completedInDay={completedInDay}
+      onComplete={onComplete}
+    />
+  );
+}
+
+function LektionWizardContent({ topicId, embedded, completedInDay, onComplete }: Required<Pick<LektionWizardProps, "topicId" | "embedded" | "completedInDay">> & Pick<LektionWizardProps, "onComplete">) {
   const topic = grammarMap[topicId];
   const { progress } = useProgress();
   const day = progress.plan.day;
@@ -264,6 +284,7 @@ function LektionWizardContent({ topicId }: { topicId: string }) {
     });
   }, []);
   const onApplicationSaved = useCallback((saved: boolean) => setAnwendungGespeichert(saved), []);
+  const [layeredRevealed, setLayeredRevealed] = useState<Record<number, number>>({});
 
   if (!topic) {
     return (
@@ -297,56 +318,114 @@ function LektionWizardContent({ topicId }: { topicId: string }) {
     return "";
   };
   const hasCase = (headers: string[]) => headers.some((h) => /nominativ|akkusativ|dativ|genitiv/i.test(h));
+  const GENITIV_RE = /\b(wegen|trotz|während|aufgrund|anstatt|statt|innerhalb|außerhalb|dessen|deren|des Regens|des Wetters|des Krieges|des Berichts|eines Briefes)\b/gi;
+  const highlightGenitiv = (text: string) => {
+    const parts: React.ReactNode[] = [];
+    let last = 0;
+    let m: RegExpExecArray | null;
+    GENITIV_RE.lastIndex = 0;
+    while ((m = GENITIV_RE.exec(text)) !== null) {
+      if (m.index > last) parts.push(text.slice(last, m.index));
+      parts.push(<span key={`${m.index}-${m[0]}`} className="case-chip case-chip-gen" style={{ fontSize: "0.82em", padding: "0.08rem 0.3rem" }}>{m[0]}</span>);
+      last = m.index + m[0].length;
+    }
+    if (last < text.length) parts.push(text.slice(last));
+    return parts.length > 1 ? <>{parts}</> : text;
+  };
+  // 🖼️ Mayer Dual-Coding + Paivio: Text + Bildanker in einem (Sprint 13) — مميز لكل نوع
+  const dualCodingInfo = (() => {
+    const id = topicId.toLowerCase();
+    if (id.includes("wechsel") || id.includes("dativ-akk") || id.includes("dativ/akk")) return { icon: "📍➡️", label: "WO? Dativ (Ort) vs WOHIN? Akkusativ (Richtung) — عربي", de: "auf dem Tisch (Dativ, Ort) → auf den Tisch (Akk, Bewegung) — عربي" };
+    if (id.includes("passiv")) return { icon: "🔄", label: "Aktiv → Passiv: Handelnder tritt zurück — عربي", de: "Der Arzt operiert → Es wird operiert (Passiv) — عربي" };
+    if (id.includes("konzessiv") || id.includes("obwohl")) return { icon: "⚖️", label: "Kontrast: obwohl X, trotzdem Y — Konzession — عربي", de: "obwohl krank, kam er zur Arbeit — عربي" };
+    if (id.includes("konjunktiv")) return { icon: "💭", label: "Wunsch / Unsicherheit → würde/könnte/sei — عربي", de: "Er sagt, er sei krank (Konjunktiv I) — عربي" };
+    if (id.includes("relativ")) return { icon: "🔗", label: "Bezug: der/die/das → Nebensatz verbindet — عربي", de: "die Frau, die dort wohnt, … — عربي" };
+    if (id.includes("nominal")) return { icon: "📦", label: "Verb → Nomen: Komprimierung (Nominalstil) — عربي", de: "entscheiden → die Entscheidung treffen — عربي" };
+    if (id.includes("perfekt") || id.includes("praeteritum")) return { icon: "⏳", label: "Zeitachse: Vergangenheit markieren — عربي", de: "gestern habe ich … / ich war … — عربي" };
+    if (id.includes("funktionsverb")) return { icon: "🧩", label: "Funktionsverb: leichtes Verb + starkes Nomen — عربي", de: "eine Entscheidung treffen (statt entscheiden) — عربي" };
+    if (id.includes("genitiv") || id === "b2-n-deklination") return { icon: "👑", label: "Genitiv — Besitz & Zugehörigkeit (des/der) — عربي", de: "wegen des Wetters — trotz des Verbots — عربي" };
+    if (id.includes("konnektor") || id.includes("konzessiv-2") || id.includes("b2-konnekt")) return { icon: "🔀", label: "Konnektoren: weil → obwohl → damit (Grund/Konzession/Zweck) — عربي", de: "weil es regnet, obwohl er Zeit hat, damit er versteht — عربي" };
+    if (topic.level === "A0" || topic.level === "A1") return { icon: "🌱", label: "A0/A1 — أساس بصري + صوت لكل جملة — عربي", de: "Ich bin · Ich habe · Wie heißt du? — عربي" };
+    if (topic.level === "B2") return { icon: "🎓", label: "B2 أكاديمي — Vergleich & Nominalstil — عربي", de: "Verbalstil ↔ Nominalstil — Prüfung: 250-500 Wörter — عربي" };
+    return { icon: "🧠", label: "Muster: Regel → Beispiel → Anwendung — عربي", de: topic.titleDe };
+  })();
 
   return (
     <section className={`card ${levelStage}`} data-testid="lektion-wizard" data-level={topic.level} style={{ padding: "1.1rem 1.2rem", display: "grid", gap: "0.85rem" }}>
-      {/* ── الهوية التحريرية — شارة المستوى + العنوان + الهدف (Lesson Studio) ── */}
+      {/* ── هجين 1+3 — Dark Academy (قمة) + Verlag (جسم) ── */}
       <div className="lesson-hero">
-        <div style={{ fontSize: "0.78rem", fontWeight: 800, color: "var(--color-ink2)", letterSpacing: "0.02em" }}>📖 الدرس — اشرح وافهم القاعدة</div>
-        <div style={{ display: "flex", gap: "0.5rem", alignItems: "center", flexWrap: "wrap" }}>
-          <span className={`lesson-level-badge ${levelClass}`}>{topic.level}</span>
-          <span style={{ fontSize: "0.78rem", color: "var(--color-ink2)", fontWeight: 700 }}>درس {topic.id}</span>
-          {topic.voraus && topic.voraus.length > 0 && (
-            <span style={{ fontSize: "0.72rem", color: "var(--color-ink2)" }}>→ يبني على {topic.voraus.length} درس سابق</span>
-          )}
-        </div>
-        <div className="lesson-title-de" dir="ltr">{topic.titleDe}</div>
-        <div className="lesson-title-ar">{topic.titleAr}</div>
-        {topic.ziel && (
-          <div className="lesson-ziel" data-testid="wizard-ziel">
-            <span aria-hidden>🎯</span>
-            <span><strong>هدف هذا الدرس:</strong> {topic.ziel}</span>
+        <div className="lesson-hero-dark">
+          <div style={{ position: "relative", zIndex: 1, display: "flex", gap: "0.5rem", alignItems: "center", flexWrap: "wrap", fontSize: "0.78rem", fontWeight: 800, letterSpacing: "0.04em", opacity: 0.9 }}>
+            <span style={{ background: "rgb(255 255 255 / 0.14)", border: "1px solid rgb(255 255 255 / 0.22)", padding: "0.12rem 0.5rem", borderRadius: "999px", fontSize: "0.7rem" }}>📖 WEG VERLAG</span>
+            <span className={`lesson-level-badge ${levelClass}`} style={{ background: "rgb(255 255 255 / 0.12)", color: "#fff", borderColor: "rgb(255 255 255 / 0.28)" }}>{topic.level}</span>
+            <span style={{ color: "#B8C7E0", fontWeight: 700 }}>· {topic.id}</span>
+            {topic.voraus && topic.voraus.length > 0 && <span style={{ color: "#C8A84E", fontSize: "0.72rem" }}>→ يبني على {topic.voraus.length}</span>}
           </div>
-        )}
+          <div className="lesson-title-de" dir="ltr" style={{ position: "relative", zIndex: 1, marginTop: "0.55rem" }}>{topic.titleDe}</div>
+          <div className="lesson-title-ar" style={{ position: "relative", zIndex: 1 }}>{topic.titleAr}</div>
+          <div style={{ position: "relative", zIndex: 1, marginTop: "0.45rem", fontSize: "0.72rem", color: "#9FB2CE" }}>
+            CEFR {topic.level} · ملف قواعد داخلي مرشح للمراجعة
+          </div>
+        </div>
+        <div className="lesson-hero-light">
+          {topic.ziel && (
+            <div className="lesson-ziel" data-testid="wizard-ziel">
+              <span aria-hidden>🎯</span>
+              <span><strong>هدف هذا الدرس:</strong> {topic.ziel}</span>
+            </div>
+          )}
+          <LessonSceneVisual topicId={topic.id} titleDe={topic.titleDe} level={topic.level} />
+        </div>
       </div>
 
-      {/* ── مؤشّر الخطوات: مقاعد الطابور لا أبوابٌ متفرّقة ── */}
-      <div style={{ display: "flex", gap: "0.35rem", flexWrap: "wrap" }} role="tablist" aria-label="خطوات الدرس">
-        {SCHRITTE.map((st, i) => (
-          <button
-            key={st}
-            type="button"
-            role="tab"
-            aria-selected={i === schritt}
-            data-testid={`wizard-schritt-${i}`}
-            className="chip"
-            disabled={!kannZu(i)}
-            title={kannZu(i) ? undefined : "أكمل الخطوات السابقة أولًا"}
-            onClick={() => kannZu(i) && setSchritt(i)}
-            style={{
-              minHeight: "44px",
-              cursor: kannZu(i) ? "pointer" : "not-allowed",
-              opacity: kannZu(i) ? 1 : 0.5,
-              fontWeight: i === schritt ? 900 : 600,
-              background: erledigt[i] ? "var(--color-a1)" : i === schritt ? "var(--color-cola)" : undefined,
-              color: erledigt[i] || i === schritt ? "var(--ui-on-accent)" : undefined,
-            }}
-          >
-            {erledigt[i] ? "✓ " : `${i + 1}· `}{st}
-          </button>
-        ))}
-      </div>
+      {/* ── مؤشّر الخطوات الهجين — Verlag + Dark Academy (Premium) ── */}
+      {(() => {
+        const STEP_ICONS = ["🔍","📐","💬","✍️","🧾"];
+        return (
+          <div className="wizard-stepper" role="tablist" aria-label="خطوات الدرس — 5 مراحل">
+            {SCHRITTE.map((st, i) => {
+              const isDone = !!erledigt[i];
+              const isActive = i === schritt;
+              const can = kannZu(i);
+              const state = isDone ? "done" : isActive ? "active" : "locked";
+              return (
+                <React.Fragment key={String(st)}>
+                  <button
+                    type="button"
+                    role="tab"
+                    aria-selected={isActive}
+                    data-testid={`wizard-schritt-${i}`}
+                    disabled={!can}
+                    onClick={() => can && setSchritt(i)}
+                    className={`wizard-stepper-item wizard-stepper-item--${state}`}
+                    title={can ? `${i+1}. ${st}` : "أكمل الخطوات السابقة أولًا"}
+                    style={{ cursor: can ? "pointer" : "not-allowed", opacity: can ? 1 : 0.45, border: isActive ? "1px solid rgb(200 168 78 / 0.45)" : "1px solid transparent" }}
+                  >
+                    <div className="wizard-stepper-dot">{isDone ? "✓" : STEP_ICONS[i]}</div>
+                    <div className="wizard-stepper-label" style={{ fontSize: isActive ? "0.72rem" : "0.68rem" }}>{st}</div>
+                    <div style={{ fontSize:"0.6rem", color: isActive ? "#9FB2CE" : isDone ? "#4ADE80" : "#8A9BB5" }}>{i+1}/5</div>
+                  </button>
+                  {i < SCHRITTE.length - 1 && <div className={`wizard-stepper-line ${isDone ? "wizard-stepper-line--done" : ""}`} aria-hidden />}
+                </React.Fragment>
+              );
+            })}
+          </div>
+        );
+      })()}
 
+      {/* مصفوفة قواعد داخلية مولدة؛ ليست ملف GGP رسمياً أو مراجعة أكاديمية خارجية. */}
+      {(() => { const feats = ggpForTopic(topicId); return feats.length ? (
+        <div data-testid="wizard-ggp" style={{ display: "flex", gap: "0.35rem", flexWrap: "wrap", alignItems: "center", fontSize: "0.73rem" }}>
+          <span style={{ fontWeight: 900, color: "var(--ui-muted)" }}>📑 ملف قواعد داخلي:</span>
+          {feats.map((f) => <span key={f.code} className="ggp-chip" title={`${f.titelDe} — ${f.titelAr}`} data-testid={`ggp-${f.code}`}>{f.code} · {f.titelDe}</span>)}
+          <span style={{ color: "var(--ui-muted)" }}>· {topic.level} · {feats[0].familie}</span>
+        </div>
+      ) : null; })()}
+      {/* Mayer: Signaling — هدف واضح قبل المحتوى */}
+      <div data-testid="wizard-mayer-goal" className="lesson-ziel wizard-ziel-bg" style={{ borderInlineStart: "4px solid var(--color-a1)", padding: "0.5rem 0.7rem", borderRadius: "0.5rem", display: "flex", gap: "0.5rem", alignItems: "center" }}>
+        <span style={{ fontSize: "1.1rem" }}>🎯</span>
+        <div><strong style={{ fontSize: "0.82rem" }}>{topic.ziel}</strong><div style={{ fontSize: "0.75rem", color: "var(--color-ink2)" }}>خمّن قبل الشرح لتهيئة الانتباه، دون ادعاء نسبة أثر غير متحققة</div></div>
+      </div>
       <div data-testid="wizard-voraus" style={{ fontSize: "0.8rem", color: "var(--color-ink2)" }}>
         {topic.voraus && topic.voraus.length > 0
           ? <>🧱 يبني على: {topic.voraus.map((v) => grammarMap[v]?.titleAr ?? v).join(" · ")}</>
@@ -359,17 +438,23 @@ function LektionWizardContent({ topicId }: { topicId: string }) {
       <div data-testid={`wizard-body-${schritt}`} style={{ maxHeight: "52dvh", overflowY: "auto", display: "grid", gap: "0.7rem", paddingInlineEnd: "0.2rem" }}>
         {/* ① خمّن — الاستقراء قبل القاعدة (lib/induktion) */}
         {schritt === 0 && (entdecken && frage ? (
-          <div data-testid="wizard-induktion" style={{ display: "grid", gap: "0.55rem" }}>
-            <strong>🔍 اكتشف القاعدة قبل أن تقرأها</strong>
-            <p style={{ fontSize: "0.85rem", color: "var(--color-ink2)", margin: 0 }}>
-              اقرأ الأمثلة ثم خمّن: ما القاعدة المشتركة؟ الخطأ لا يُخصم — بل يجهّز ذهنك للشرح.
+          <div data-testid="wizard-induktion" style={{ display: "grid", gap: "0.65rem" }}>
+            <div style={{ display:"flex", gap:"0.5rem", alignItems:"center", flexWrap:"wrap" }}>
+              <span style={{ background:"#0F1E3A", color:"#E8D9A8", padding:"0.2rem 0.55rem", borderRadius:"999px", fontWeight:900, fontSize:"0.72rem", border:"1px solid rgb(200 168 78 / 0.35)" }}>🔍 خطوة 1/5 — خمّن</span>
+              <span style={{ fontSize:"0.72rem", color:"var(--color-ink2)" }}>تنبؤ قبل الشرح — لا نسبة أثر مفترضة</span>
+            </div>
+            <strong style={{ fontSize:"1rem" }}>اكتشف القاعدة قبل أن تقرأها</strong>
+            <p style={{ fontSize: "0.85rem", color: "var(--color-ink2)", margin: 0, lineHeight:1.8 }}>
+              اقرأ المشهد ثم خمّن: ما النمط المشترك؟ الخطأ لا يُخصم؛ هذه خطوة تنبؤ داخلية قبل الشرح، وليست ادعاء أثر تعليمي مثبت.
             </p>
             <div className="lesson-scene">
-              <div className="lesson-scene-head">💬 اقرأ المشهد — القاعدة مختبئة هنا</div>
+              <div className="lesson-scene-head">💬 المشهد — القاعدة مختبئة هنا · استمع لكل جملة</div>
+              <audio data-testid="wizard-audio-induktion" controls preload="none" src={`/audio/grammar/${topic.id}-1.mp3`} style={{ width: "100%", height: "32px", margin: "0.35rem 0" }} />
+              <div style={{ fontSize: "0.68rem", color: "var(--color-ink2)", textAlign: "center", marginBottom: "0.25rem" }}>🎧 87 مشهد صوتي جاهز • {topic.id}-1.mp3 · Mayer Dual-Coding</div>
               {topic.examples.slice(0, 3).map((ex, ei) => (
                 <div key={ex.de} className={`lesson-bubble ${ei % 2 === 0 ? "lesson-bubble-a" : "lesson-bubble-b"}`}>
                   <div style={{ display: "flex", gap: "0.35rem", alignItems: "center", justifyContent: "space-between" }}>
-                    <De style={{ fontWeight: 700 }}>{ex.de}</De>
+                    <De style={{ fontWeight: 700 }}>{topic.id.includes("genitiv") || topic.id.includes("relativ-genitiv") ? highlightGenitiv(ex.de) : ex.de}</De>
                     <button type="button" className="chip" style={{ cursor: "pointer", minHeight: "36px" }} onClick={() => speakAny(ex.de)} aria-label="استمع">🔊</button>
                   </div>
                   <div style={{ fontSize: "0.82rem", color: "var(--color-ink2)", marginTop: "0.15rem" }}>{ex.ar}</div>
@@ -381,15 +466,15 @@ function LektionWizardContent({ topicId }: { topicId: string }) {
               <button
                 key={i}
                 type="button"
-                className="btn btn-ghost"
+                className="lesson-option-btn btn btn-ghost"
                 data-testid={`wizard-option-${i}`}
                 disabled={gewaehlt !== null}
-                style={{ textAlign: "start", justifyContent: "flex-start" }}
+                style={{ textAlign: "start", justifyContent: "flex-start", minHeight:"44px", width:"100%" }}
                 onClick={() => waehle(i)}
               >
                 <span>
-                  <De style={{ fontWeight: 700 }}>{o.de}</De>
-                  <span style={{ display: "block", fontSize: "0.8rem", color: "var(--color-ink2)" }}>{o.ar}</span>
+                  <De style={{ fontWeight: 800 }}>{o.de}</De>
+                  <span style={{ display: "block", fontSize: "0.8rem", color: "var(--color-ink2)", marginTop:"0.15rem" }}>{o.ar}</span>
                 </span>
               </button>
             ))}
@@ -408,6 +493,8 @@ function LektionWizardContent({ topicId }: { topicId: string }) {
           <div style={{ display: "grid", gap: "0.5rem" }}>
             <strong>👀 لاحظ النمط — المشهد أمامك</strong>
             <div className="lesson-scene">
+              <audio data-testid="wizard-audio-beobachten" controls preload="none" src={`/audio/grammar/${topic.id}-1.mp3`} style={{ width: "100%", height: "32px", margin: "0.35rem 0" }} />
+              <div style={{ fontSize: "0.68rem", color: "var(--color-ink2)", textAlign: "center", marginBottom: "0.25rem" }}>🎧 اسمع الأمثلة — 87/87</div>
               {topic.examples.slice(0, 3).map((ex, ei2) => (
                 <div key={ex.de} className={`lesson-bubble ${ei2 % 2 === 0 ? "lesson-bubble-a" : "lesson-bubble-b"}`}>
                   <div style={{ display: "flex", gap: "0.35rem", alignItems: "center", justifyContent: "space-between" }}>
@@ -434,7 +521,10 @@ function LektionWizardContent({ topicId }: { topicId: string }) {
               return (
                 <div key={r.de} className="lesson-rule lesson-rule--paired">
                   <div className="lesson-rule-main">
-                    <div className="lesson-rule-pattern"><De>{r.de}</De></div>
+                    <div className="lesson-rule-pattern" style={{ display: "flex", gap: "0.35rem", alignItems: "center", flexWrap: "wrap", justifyContent: "space-between" }}>
+                      <De style={{ flex: "1 1 auto" }}>{r.de}</De>
+                      <button type="button" className="chip" style={{ cursor: "pointer", minHeight: "32px", flexShrink: 0 }} onClick={() => speakAny(r.de)} aria-label={`استمع للقاعدة: ${r.de}`}>🔊</button>
+                    </div>
                     <div className="lesson-rule-arrow">← الشرح</div>
                     <div style={{ fontSize: "0.86rem", color: "var(--color-ink2)", lineHeight: 1.8 }}>{r.ar}</div>
                   </div>
@@ -449,6 +539,15 @@ function LektionWizardContent({ topicId }: { topicId: string }) {
                 </div>
               );
             })}
+            {/* 🖼️ Dual-Coding Bildanker — Mayer: Verbal + Visual in einem (Sprint 13) */}
+            <div data-testid="wizard-dual-coding" className="card wizard-dual-bg" style={{ padding: "0.55rem 0.7rem", borderInlineStart: "4px solid #f59e0b", display: "flex", gap: "0.5rem", alignItems: "center", flexWrap: "wrap" }}>
+              <span style={{ fontSize: "1.25rem" }}>{dualCodingInfo.icon}</span>
+              <div style={{ flex: 1, minWidth: "180px" }}>
+                <div style={{ fontWeight: 900, fontSize: "0.82rem" }}>🖼️ Bild-Anker: {dualCodingInfo.label}</div>
+                <div dir="ltr" style={{ fontSize: "0.82rem", color: "var(--color-ink2)" }}><De style={{ fontWeight: 700 }}>{dualCodingInfo.de}</De></div>
+              </div>
+              <span style={{ fontSize: "0.7rem", background: "rgba(245 158 11 / 0.15)", padding: "0.15rem 0.45rem", borderRadius: "999px", fontWeight: 800, color: "#B45309" }}>Mayer Dual-Coding</span>
+            </div>
             {(topic.tables ?? []).length > 0 && hasCase((topic.tables ?? []).flatMap((t) => t.headers)) && (
               <div style={{ display: "flex", gap: "0.35rem", flexWrap: "wrap", fontSize: "0.72rem", alignItems: "center" }}>
                 <span style={{ fontWeight: 800, color: "var(--ui-muted)" }}>🎨 تلوين الحالات:</span>
@@ -458,9 +557,13 @@ function LektionWizardContent({ topicId }: { topicId: string }) {
                 <span className="case-chip case-chip-gen">Genitiv</span>
               </div>
             )}
-            {(topic.tables ?? []).map((t, ti) => (
-              <div key={`t-${ti}`} style={{ display: "grid", gap: "0.3rem" }}>
+            {(topic.tables ?? []).map((t, ti) => {
+              const revealed = layeredRevealed[ti] ?? 1;
+              const rest = t.rows.length - revealed;
+              return (
+              <div key={`t-${ti}`} data-testid={`wizard-layered-${ti}`} style={{ display: "grid", gap: "0.3rem" }}>
                 {t.captionAr && <strong style={{ fontSize: "0.85rem" }}>{t.captionAr}</strong>}
+                <div style={{ fontSize:"0.74rem", color:"var(--color-ink2)" }}>Mayer Segmenting + Conti Retrieval — صف واحد في كل مرة (اكشف المسار خطوة بخطوة)</div>
                 <div style={{ overflowX: "auto" }}>
                   <table className="lesson-table lesson-table--signaled lesson-table--layered" dir="ltr">
                     <thead><tr>{t.headers.map((h) => {
@@ -468,14 +571,28 @@ function LektionWizardContent({ topicId }: { topicId: string }) {
                       return <th key={h} className={c ? "case-hl" : undefined}><span className={c || undefined} style={c ? undefined : {}}>{h}</span></th>;
                     })}</tr></thead>
                     <tbody>
-                      {t.rows.map((row, ri) => (
-                        <tr key={ri}>{row.map((c, ci) => <td key={ci}>{c}</td>)}</tr>
+                      {t.rows.slice(0, revealed).map((row, ri) => (
+                        <tr key={ri}>{row.map((c, ci) => {
+                          const headerClass = caseChip(t.headers[ci] ?? "");
+                          const cellStyle: React.CSSProperties | undefined = headerClass.includes("case-chip-nom") ? { background: "rgb(96 165 250 / 0.08)" } : headerClass.includes("case-chip-akk") ? { background: "rgb(74 222 128 / 0.08)" } : headerClass.includes("case-chip-dat") ? { background: "rgb(242 200 102 / 0.08)" } : headerClass.includes("case-chip-gen") ? { background: "rgb(167 139 250 / 0.10)" } : undefined;
+                          const cellText = String(c);
+                          return <td key={ci} style={{ ...cellStyle, position: "relative" }}>
+                            {ci===0 ? <><De style={{fontWeight:800}}>{cellText.split("→")[0]}</De>{cellText.includes("→") && <><span style={{color:"var(--color-a1)", fontWeight:900}}> → </span><De style={{color:"var(--color-a1)"}}>{cellText.split("→")[1]}</De></>}</> : cellText}
+                            <button type="button" className="chip" onClick={() => speakAny(cellText)} aria-label={`استمع: ${cellText}`} style={{ cursor: "pointer", minHeight: "24px", minWidth: "26px", padding: "0 0.3rem", fontSize: "0.65rem", marginInlineStart: "0.3rem", verticalAlign: "middle" }}>🔊</button>
+                          </td>;
+                        })}</tr>
                       ))}
                     </tbody>
                   </table>
                 </div>
+                {rest > 0 ? (
+                  <button type="button" className="lesson-reveal-btn" data-testid={`wizard-layered-reveal-${ti}`} onClick={() => setLayeredRevealed((m) => ({ ...m, [ti]: Math.min(t.rows.length, (m[ti] ?? 1) + 1) }))} style={{ justifySelf:"start", minHeight:"36px" }}>▶ اكشف الصف التالي — بقي {rest} · Layered-Reveal</button>
+                ) : (
+                  <span data-testid={`wizard-layered-done-${ti}`} style={{ fontSize:"0.78rem", color:"#16A34A", fontWeight:800, background:"rgb(22 163 74 / 0.1)", padding:"0.2rem 0.55rem", borderRadius:"999px" }}>✓ كل الصفوف مكشوفة — Mayer Segmenting</span>
+                )}
               </div>
-            ))}
+              );
+            })}
             <button type="button" className="btn btn-ghost" data-testid="wizard-regel-gelesen" onClick={() => tuer(1)}>
               راجعتُ الشرح — أرني النموذج المحلول
             </button>
@@ -488,6 +605,7 @@ function LektionWizardContent({ topicId }: { topicId: string }) {
             <strong>🧩 المشهد — كيف تُستعمل في الحياة؟</strong>
             <div className="lesson-scene">
               <div className="lesson-scene-head">💬 حوار مصغر يحمل القاعدة — استمع لكل جملة</div>
+              <audio data-testid="wizard-audio-szene" controls preload="none" src={`/audio/grammar/${topic.id}-1.mp3`} style={{ width: "100%", height: "32px", margin: "0.35rem 0" }} />
               {topic.examples.slice(0, 4).map((ex, i) => (
                 <div key={ex.de} className={`lesson-bubble ${i % 2 === 0 ? "lesson-bubble-a" : "lesson-bubble-b"}`}>
                   <div style={{ display: "flex", gap: "0.4rem", alignItems: "center", justifyContent: "space-between" }}>
@@ -562,27 +680,51 @@ function LektionWizardContent({ topicId }: { topicId: string }) {
             {topic.pitfalls && topic.pitfalls.length > 0 && (
               <div style={{ display: "grid", gap: "0.5rem" }}>
                 <div style={{ fontWeight: 800, color: "var(--color-die)", fontSize: "0.9rem" }}>⚠️ جدار الفخاخ — لا تقع فيها</div>
-                {topic.pitfalls.map((p) => (
-                  <div key={p.de} className="lesson-pitfall">
-                    <div>
-                      <div style={{ fontSize: "0.72rem", fontWeight: 800, color: "var(--ui-muted)" }}>✗ خطأ شائع</div>
-                      <De className="lesson-pitfall-wrong">{p.de}</De>
+                {topic.pitfalls.map((p, pitfallIndex) => {
+                  const contrast = parsePitfallContrast(p.de);
+                  return (
+                    <div key={`${p.de}-${pitfallIndex}`} className={`lesson-pitfall ${contrast ? "lesson-pitfall--contrast" : "lesson-pitfall--note"}`}>
+                      {contrast ? (
+                        <>
+                          <div className="lesson-pitfall-side lesson-pitfall-side--wrong">
+                            <div className="lesson-pitfall-label">✗ خطأ شائع</div>
+                            <De className="lesson-pitfall-wrong">{contrast.wrongDe}</De>
+                          </div>
+                          <div className="lesson-pitfall-side lesson-pitfall-side--right">
+                            <div className="lesson-pitfall-label">✓ الصواب</div>
+                            <De className="lesson-pitfall-right">{contrast.rightDe}</De>
+                          </div>
+                        </>
+                      ) : (
+                        <div className="lesson-pitfall-side lesson-pitfall-side--note">
+                          <div className="lesson-pitfall-label">⚠️ فرق استعمال</div>
+                          {p.de && <De className="lesson-pitfall-note">{p.de}</De>}
+                        </div>
+                      )}
+                      <div className="lesson-pitfall-reason">
+                        <div className="lesson-pitfall-label">لماذا؟</div>
+                        <div>{p.ar}</div>
+                      </div>
                     </div>
-                    <div>
-                      <div style={{ fontSize: "0.72rem", fontWeight: 800, color: "var(--ui-muted)" }}>لماذا؟</div>
-                      <div style={{ fontSize: "0.86rem", color: "var(--color-ink2)", lineHeight: 1.7 }}>{p.ar}</div>
-                    </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             )}
-            {(topic.level === "B1" || topic.level === "B2") && (
-              <div data-testid="wizard-kultur" className="card" style={{ padding: "0.6rem 0.85rem", background: "var(--ui-surface-raised)", borderInlineStart: "5px solid var(--color-b2)", display: "grid", gap: "0.3rem" }}>
-                <strong style={{ fontSize: "0.85rem" }}>🌍 في ألمانيا — لمسة ثقافية</strong>
-                <span style={{ fontSize: "0.82rem", lineHeight: 1.8, color: "var(--color-ink2)" }}>
-                  {topic.level === "B2" ? "في الكتابة الرسمية يُفضَّل Nominalstil ووصلات B2 (deshalb/trotzdem); في المحادثة اليومية يكفي Verbalstil البسيط — الامتحان يقيس المناسب للسياق." : "الألمان يقدّرون الدقة في الرسالة الرسمية: تحية + سبب + طلب واضح + خاتمة مهذبة — هذا النمط يكفيك في B1."}
-                </span>
-                <span style={{ fontSize: "0.75rem", color: "var(--ui-muted)" }}>تلميح ثقافي مختصر — لا يُمتحن، لكنه يقربك من الاستعمال الحقيقي.</span>
+            {(() => { const k = kulturFuer(topicId, topic.level); return k ? (
+              <div data-testid="wizard-kultur" className="card" style={{ padding: "0.6rem 0.85rem", background: "var(--ui-surface-raised)", borderInlineStart: "5px solid var(--color-b2)", display: "grid", gap: "0.35rem" }}>
+                <strong style={{ fontSize: "0.85rem" }}>🌍 في ألمانيا — سياق استعمال حياتي {topic.level === "B2" ? "· B2 Lebenswelt" : ""}</strong>
+                <span style={{ fontSize: "0.82rem", lineHeight: 1.85, color: "var(--color-ink2)" }} dir="ltr"><De>{k.de}</De></span>
+                <span style={{ fontSize: "0.82rem", lineHeight: 1.85, color: "var(--color-ink2)" }}>{k.ar}</span>
+                <span style={{ fontSize: "0.75rem", color: "var(--ui-muted)" }}>تلميح سياقي يوضح الاستعمال ولا يمثل اعتماداً خارجياً أو بنداً امتحانياً.</span>
+              </div>
+            ) : null; })()}
+            {(topic as unknown as {resources?: string[]}).resources && ((topic as unknown as {resources?: string[]}).resources!.length>0) && (
+              <div className="card" data-testid="wizard-quellen" style={{ padding:"0.6rem 0.85rem", background:"var(--color-paper)", borderInlineStart:"4px solid var(--color-ink2)", display:"grid", gap:"0.3rem" }}>
+                <strong style={{ fontSize:"0.85rem" }}>📚 مصادر B2 — اقرأ الأصل</strong>
+                <div style={{ fontSize:"0.78rem", color:"var(--color-ink2)", lineHeight:1.8 }}>
+                  {((topic as unknown as {resources?: string[]}).resources!.slice(0,3).map((r: string)=> <div key={r} style={{ display:"flex", gap:"0.4rem" }}><span>—</span><span dir="ltr">{r}</span></div>))}
+                </div>
+                <div style={{ fontSize:"0.72rem", color:"var(--ui-muted)" }}>وسوم مصادر أولية للاستقلال في التعلم؛ تحتاج كل إحالة إلى توثيق ومراجعة مستقلة.</div>
               </div>
             )}
             <BrueckenLessonBlock bruecken={bruecken} srs={progress.srs ?? {}} />
@@ -604,15 +746,38 @@ function LektionWizardContent({ topicId }: { topicId: string }) {
               </div>;
             })()}
             {(!topic.anwendung || anwendungGespeichert) ? (
-              <Link href="/" className="btn btn-primary" data-testid="wizard-zurueck-heute" style={{ minHeight: "44px", textDecoration: "none" }} onClick={() => { if ((topic.verify ?? []).length > 0) planeVerifikation(topicId, day); tuer(4); }}>
-                ✅ أنهيتُ التدريب — عُد إلى «اليوم»
-              </Link>
+              embedded ? (
+                <button
+                  type="button"
+                  className="btn btn-primary"
+                  data-testid="wizard-complete-today"
+                  disabled={completedInDay}
+                  style={{ minHeight: "44px" }}
+                  onClick={() => {
+                    if ((topic.verify ?? []).length > 0) planeVerifikation(topicId, day);
+                    tuer(4);
+                    onComplete?.();
+                  }}
+                >
+                  {completedInDay ? "✓ سُجّل الدرس في مهمة اليوم" : "✅ أنهيتُ الاستوديو — سجّل المهمة"}
+                </button>
+              ) : (
+                <Link href="/" className="btn btn-primary" data-testid="wizard-zurueck-heute" style={{ minHeight: "44px", textDecoration: "none" }} onClick={() => { if ((topic.verify ?? []).length > 0) planeVerifikation(topicId, day); tuer(4); }}>
+                  ✅ أنهيتُ التدريب — عُد إلى «اليوم»
+                </Link>
+              )
             ) : (
               <div className="card" style={{ padding: "0.7rem 0.9rem", background: "var(--color-paper2)" }}>
                 <p style={{ margin: "0 0 0.45rem", fontSize: "0.84rem" }}>احفظ إجابتك كتدريب قبل تسجيل إكمال الدرس وجدولة التحقّق المؤجّل. يمكنك التوقّف الآن؛ سيبقى موضعك ومسودتك محفوظين بلا لوم.</p>
-                <Link href="/" className="btn btn-ghost" data-testid="wizard-pause-today" style={{ minHeight: "44px", textDecoration: "none" }}>
-                  ⏸ أتوقّف الآن — عُد إلى «اليوم»
-                </Link>
+                {embedded ? (
+                  <button type="button" className="btn btn-ghost" data-testid="wizard-pause-embedded" onClick={() => document.getElementById("today-stepper")?.scrollIntoView({ behavior: "smooth", block: "start" })} style={{ minHeight: "44px" }}>
+                    ⏸ أتوقّف الآن — موضعك محفوظ
+                  </button>
+                ) : (
+                  <Link href="/" className="btn btn-ghost" data-testid="wizard-pause-today" style={{ minHeight: "44px", textDecoration: "none" }}>
+                    ⏸ أتوقّف الآن — عُد إلى «اليوم»
+                  </Link>
+                )}
               </div>
             )}
           </div>

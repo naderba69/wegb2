@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "updated": "2026-11-07",
+  "sourcePath": "content/tools.yaml",
+  "total": 820,
+  "firstId": 181,
+  "lastId": 1000,
+  "citationLabels": 811,
+  "genericPrototypeModules": 720,
+  "exactDuplicateTitleGroups": [
+    {
+      "title": "forgetting curve ebbinghaus",
+      "ids": [
+        400,
+        873
+      ]
+    },
+    {
+      "title": "task complexity robinson",
+      "ids": [
+        431,
+        942
+      ]
+    },
+    {
+      "title": "cognition hypothesis",
+      "ids": [
+        432,
+        943
+      ]
+    },
+    {
+      "title": "formulaic sequences",
+      "ids": [
+        438,
+        840
+      ]
+    },
+    {
+      "title": "interactional competence",
+      "ids": [
+        488,
+        930
+      ]
+    },
+    {
+      "title": "strategic competence",
+      "ids": [
+        489,
+        929
+      ]
+    },
+    {
+      "title": "sociolinguistic competence",
+      "ids": [
+        490,
+        927
+      ]
+    },
+    {
+      "title": "levels of processing",
+      "ids": [
+        539,
+        848
+      ]
+    }
+  ],
+  "resolvedExactDuplicateGroups": 8,
+  "decisionBreakdown": {
+    "defer": 342,
+    "research-only": 366,
+    "reject-not-applicable": 25,
+    "merge-duplicate": 87
+  },
+  "reviewedDecisions": 820,
+  "pendingTriage": 0,
+  "relatedCatalogReferences": 5204,
+  "candidateLiveImplementations": 184,
+  "automatedTested": 4,
+  "adopted": 0,
+  "productIntegrated": 0,
+  "fieldValidated": 0,
+  "claimAr": "السجلات 181–1000 أفكار ومفاهيم ونماذج أولية للبحث والفرز، وليست 820 ميزة مدمجة. لا تُسمى الأداة منفذة إلا بعد مصدر موثق، قرار ملاءمة، نشاط متعلم حي، مخرج قابل للقياس، اختبار آلي، مراجعة إتاحة وخصوصية، ودليل ميداني عند الحاجة."
+}

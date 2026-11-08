@@ -128,6 +128,8 @@ export interface Lesetext {
   lang?: Langfassung;
   /** 🧭 علامة داخلية: فضّل النسخة القصيرة (لتدرّج نسبة النصوص الأصلية) */
   __weg_useShort?: boolean;
+  /** 📚 مصدر النص — إفصاح تربوي (BAMF/Goethe-Muster) — ليس ادعاء مصدر خارجي */
+  quelle?: string;
 }
 
 export interface Langfassung {
@@ -135,6 +137,7 @@ export interface Langfassung {
   /** ملخّص عربي (لا ترجمة كاملة — القارئ في B2 يقرأ الألمانية) */
   ar: string;
   questions: Exercise[];
+  quelle?: string;
 }
 
 export interface DialogLine {
@@ -151,6 +154,8 @@ export interface Hoerdialog {
   lines: DialogLine[];
   questions: Exercise[];
   dictation: string[];
+  /** 📚 مصدر الحوار — إفصاح تربوي */
+  quelle?: string;
 }
 
 export interface Schreibaufgabe {
@@ -407,7 +412,22 @@ export const TEMPO_LABEL: Record<Tempo, { de: string; ar: string; cards: number 
 };
 export const NEW_CARDS_PER_DAY: Record<Tempo, number> = { leicht: 3, regelmaessig: 5, intensiv: 10 };
 
+export interface TodayUxDayMetric {
+  /** زمن الجلسة النشط عند أول تسليم؛ لا يشمل بقاء الصفحة مفتوحة أو الخمول. */
+  firstAttemptActiveMs?: number;
+  /** زمن الجلسة النشط عند أول تسليم ناجح (≥80٪)؛ لا يُكتب إن لم يحدث نجاح. */
+  firstSuccessActiveMs?: number;
+  /** هل احتوت خطة ذلك اليوم محطة ⑤ فعلية؟ */
+  hasStep5: boolean;
+  /** زمن أول تسليم داخل محطة ⑤؛ الوصول لا يعني النجاح. */
+  reachedStep5ActiveMs?: number;
+  /** زمن الجلسة عند إغلاق اليوم العادي؛ «اليوم السيئ» لا يُحسب إكمالاً. */
+  closedActiveMs?: number;
+}
+
 export interface Progress {
+  /** قياسات UX محلية لمسار «اليوم»؛ مدد وبلوغ محطات فقط، بلا نصوص إجابة أو شبكة. */
+  todayUx?: { version: 1; days: Record<number, TodayUxDayMetric> };
   /** آخرُ 500 تقييمِ ثقةٍ قبلَ الإجابة — اختياريّ، يُملأ من ExerciseSet */
   sicherheit?: SicherheitsEintrag[];
   v: number;
@@ -520,6 +540,8 @@ export interface Progress {
     tag: string;
     teile?: string[];
     pomoHeute?: number;
+    /** موضوعات شرح فاينمان التي سُجلت محاولتها الأولى اليوم؛ يمنع تضخيم XP بإعادة الإرسال. */
+    feynman?: string[];
   };
   /** الوحدة X — BlitzDrill: أفضل نتيجة إصابات لكل رقعة (اختياري — بلا ترحيل) */
   blitz?: Record<string, number>;
