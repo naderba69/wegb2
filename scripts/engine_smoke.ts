@@ -14519,7 +14519,7 @@ function collectR262(dir: string, out: string[] = []): string[] {
     repoAuditK339.includes("ast.parse") && repoAuditK339.includes("json.loads") && repoAuditK339.includes("media_header_ok") &&
     !interaktivK339.includes("temp disabled") && !existsSync(".prod.pid"),
     "K339a بوابة المستودع تمسح الملفات المتتبعة والجديدة: صياغة Python/JS وJSON/YAML وUTF-8 والروابط المحلية وترويسات 1469 أصلاً؛ لا اختبارات معطلة ولا PID متعقب");
-  ok(packageK339.scripts?.["audit:lighthouse"] === "npx --yes @lhci/cli@0.16.0 autorun" &&
+  ok(packageK339.scripts?.["audit:lighthouse"] === "lhci autorun" &&
     lighthouseK339.ci?.collect?.startServerCommand === "npm run start -- -p 3000" &&
     lighthouseK339.ci?.collect?.url?.length === 9 &&
     lighthouseK339.ci.collect.url.includes("http://localhost:3000/qualitaet") &&
@@ -14615,6 +14615,23 @@ function collectR262(dir: string, out: string[] = []): string[] {
     !storeK342.includes("setProgress((prev) =>") && !kalibrierungK342.includes("useProgress") &&
     kalibrierungK342.includes("updateProgress((p)") && fortschrittK342.includes("updateProgress={update}"),
     "K342 الحفظ وإطلاق حدث Progress يحدثان خارج state updater؛ المرجع يحفظ التحديثات المتتالية، والمكوّن الفرعي يستعمل محدث الأب بلا اشتراك متداخل");
+}
+
+
+/* ═══ K343 — R141: Lighthouse dependency is lockfile-governed and audited ═══ */
+{
+  const packageK343 = JSON.parse(readFileSync("package.json", "utf8")) as {
+    scripts?: Record<string, string>;
+    devDependencies?: Record<string, string>;
+    overrides?: Record<string, unknown>;
+  };
+  const lockK343 = JSON.parse(readFileSync("package-lock.json", "utf8")) as { packages: Record<string, { version?: string }> };
+  ok(packageK343.scripts?.["audit:lighthouse"] === "lhci autorun" &&
+    packageK343.devDependencies?.["@lhci/cli"] === "0.16.0" &&
+    packageK343.overrides?.["basic-ftp"] === "6.2.6" &&
+    lockK343.packages["node_modules/@lhci/cli"]?.version === "0.16.0" &&
+    lockK343.packages["node_modules/basic-ftp"]?.version === "6.2.6",
+    "K343 R141: Lighthouse مثبت في lockfile وتبع basic-ftp على الرقعة الآمنة؛ لا تنزيل npx خارج تدقيق التبعيات");
 }
 
 

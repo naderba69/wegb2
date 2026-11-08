@@ -23,7 +23,7 @@
     "evidence:hash": "node scripts/evidence_hash.mjs",
     "audit:real-world": "tsx scripts/real_world_audit.ts",
     "audit:real-world:strict": "tsx scripts/real_world_audit.ts --strict-field",
-    "audit:lighthouse": "npx --yes @lhci/cli@0.16.0 autorun",
+    "audit:lighthouse": "lhci autorun",
     "e2e:browser": "node scripts/browser_e2e.mjs",
     "gen:tools": "node scripts/gen_tools.mjs",
     "extract:tools": "node scripts/extract_tools.mjs",
@@ -42,6 +42,7 @@
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
+    "@lhci/cli": "0.16.0",
     "@next/eslint-plugin-next": "15.5.29",
     "@tailwindcss/postcss": "^4.0.0",
     "@types/jsdom": "^30.0.0",
@@ -65,6 +66,7 @@
     "postcss": "$postcss",
     "@typescript-eslint/typescript-estree": {
       "minimatch": "11.0.4"
-    }
+    },
+    "basic-ftp": "6.2.6"
   }
 }
