@@ -427,140 +427,160 @@
       "file": "/audio/hoeren/t-b2-01.mp3",
       "voice": "voice-01 (de)",
       "level": "B2",
-      "bytes": 208997
+      "bytes": 208997,
+      "textScope": "first-paragraph"
     },
     {
       "id": "t-b2-02",
       "file": "/audio/hoeren/t-b2-02.mp3",
       "voice": "voice-01 (de)",
       "level": "B2",
-      "bytes": 169082
+      "bytes": 169082,
+      "textScope": "first-paragraph"
     },
     {
       "id": "t-b2-03",
       "file": "/audio/hoeren/t-b2-03.mp3",
       "voice": "voice-01 (de)",
       "level": "B2",
-      "bytes": 202101
+      "bytes": 202101,
+      "textScope": "first-paragraph"
     },
     {
       "id": "t-b2-04",
       "file": "/audio/hoeren/t-b2-04.mp3",
       "voice": "voice-01 (de)",
       "level": "B2",
-      "bytes": 189144
+      "bytes": 189144,
+      "textScope": "first-paragraph"
     },
     {
       "id": "t-b2-05",
       "file": "/audio/hoeren/t-b2-05.mp3",
       "voice": "voice-01 (de)",
       "level": "B2",
-      "bytes": 182666
+      "bytes": 182666,
+      "textScope": "first-paragraph"
     },
     {
       "id": "t-b2-06",
       "file": "/audio/hoeren/t-b2-06.mp3",
       "voice": "voice-01 (de)",
       "level": "B2",
-      "bytes": 217565
+      "bytes": 217565,
+      "textScope": "first-paragraph"
     },
     {
       "id": "t-b2-07",
       "file": "/audio/hoeren/t-b2-07.mp3",
       "voice": "voice-01 (de)",
       "level": "B2",
-      "bytes": 165738
+      "bytes": 165738,
+      "textScope": "first-paragraph"
     },
     {
       "id": "t-b2-08",
       "file": "/audio/hoeren/t-b2-08.mp3",
       "voice": "voice-01 (de)",
       "level": "B2",
-      "bytes": 130003
+      "bytes": 130003,
+      "textScope": "first-paragraph"
     },
     {
       "id": "t-b2-09",
       "file": "/audio/hoeren/t-b2-09.mp3",
       "voice": "voice-01 (de)",
       "level": "B2",
-      "bytes": 145467
+      "bytes": 145467,
+      "textScope": "first-paragraph"
     },
     {
       "id": "t-b2-10",
       "file": "/audio/hoeren/t-b2-10.mp3",
       "voice": "voice-01 (de)",
       "level": "B2",
-      "bytes": 227387
+      "bytes": 227387,
+      "textScope": "first-paragraph"
     },
     {
       "id": "t-b2-11",
       "file": "/audio/hoeren/t-b2-11.mp3",
       "voice": "voice-01 (de)",
       "level": "B2",
-      "bytes": 218401
+      "bytes": 218401,
+      "textScope": "first-paragraph"
     },
     {
       "id": "t-b2-12",
       "file": "/audio/hoeren/t-b2-12.mp3",
       "voice": "voice-01 (de)",
       "level": "B2",
-      "bytes": 238881
+      "bytes": 238881,
+      "textScope": "first-paragraph"
     },
     {
       "id": "t-b2-13",
       "file": "/audio/hoeren/t-b2-13.mp3",
       "voice": "voice-01 (de)",
       "level": "B2",
-      "bytes": 226760
+      "bytes": 226760,
+      "textScope": "first-paragraph"
     },
     {
       "id": "t-b2-14",
       "file": "/audio/hoeren/t-b2-14.mp3",
       "voice": "voice-01 (de)",
       "level": "B2",
-      "bytes": 230731
+      "bytes": 230731,
+      "textScope": "first-paragraph"
     },
     {
       "id": "t-b2-15",
       "file": "/audio/hoeren/t-b2-15.mp3",
       "voice": "voice-01 (de)",
       "level": "B2",
-      "bytes": 231776
+      "bytes": 231776,
+      "textScope": "first-paragraph"
     },
     {
       "id": "t-b2-16",
       "file": "/audio/hoeren/t-b2-16.mp3",
       "voice": "voice-01 (de)",
       "level": "B2",
-      "bytes": 253719
+      "bytes": 253719,
+      "textScope": "first-paragraph"
     },
     {
       "id": "t-b2-17",
       "file": "/audio/hoeren/t-b2-17.mp3",
       "voice": "voice-01 (de)",
       "level": "B2",
-      "bytes": 214431
+      "bytes": 214431,
+      "textScope": "first-paragraph"
     },
     {
       "id": "t-b2-18",
       "file": "/audio/hoeren/t-b2-18.mp3",
       "voice": "voice-01 (de)",
       "level": "B2",
-      "bytes": 225924
+      "bytes": 225924,
+      "textScope": "first-paragraph"
     },
     {
       "id": "t-b2-19",
       "file": "/audio/hoeren/t-b2-19.mp3",
       "voice": "voice-01 (de)",
       "level": "B2",
-      "bytes": 238881
+      "bytes": 238881,
+      "textScope": "first-paragraph"
     },
     {
       "id": "t-b2-20",
       "file": "/audio/hoeren/t-b2-20.mp3",
       "voice": "voice-01 (de)",
       "level": "B2",
-      "bytes": 222163
+      "bytes": 222163,
+      "textScope": "first-paragraph"
     },
     {
       "id": "t-a0-02",

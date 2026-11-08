@@ -29,6 +29,8 @@ interface KlassenzimmerProps {
   stepFrei: number;
   setStep: (i: number) => void;
   ritual: RitualUrteil;
+  /** R310: Stationssperre zusätzlich zum älteren Abrufritual. */
+  stationGesperrt?: (index: number) => boolean;
   resultOf: (id: string) => TaskResult | undefined;
   localOf: (id: string) => { score: number; total: number };
   onPoints: (p: number, m: number) => void;
@@ -81,6 +83,7 @@ export function Klassenzimmer({
   stepFrei,
   setStep,
   ritual,
+  stationGesperrt,
   resultOf,
   localOf,
   onPoints,
@@ -103,6 +106,10 @@ export function Klassenzimmer({
   const rate = effektiveRate(progress); // M7/R287: Auto-Tempo nach Niveau, manuelle Wahl bleibt
   const lang = progress.settings.uiLang === "auto" ? "ar" : progress.settings.uiLang;
   const [pauseSaved, setPauseSaved] = useState(false);
+  const istGesperrt = (index: number) => aufgabeGesperrt(ritual, index) || !!stationGesperrt?.(index);
+  const sperrGrund = (index: number) => aufgabeGesperrt(ritual, index)
+    ? sperrText(ritual)
+    : "سلّم مهام المحطة السابقة أولاً.";
   // 🎬 R187/U1: وضع الجلسة المتسلسلة — مهمّة ← تسليم ← التالية بزرٍّ واحد، وحرية الرقائق باقية
   const [spieler, setSpieler] = useState(true);
   const savePause = () => {
@@ -130,8 +137,8 @@ export function Klassenzimmer({
   const fertig = plan.tasks.length > 0 && plan.tasks.every((tk) => resultOf(tk.id));
   // 🎬 U1: حسابات شريط المشغّل — من نتائج الخطة ودقائقها المخططة لا من ادّعاء
   const erledigtZahl = plan.tasks.filter((tk) => resultOf(tk.id)).length;
-  const naechsteOffene = plan.tasks.findIndex((tk, i) => i > stepFrei && !resultOf(tk.id) && !aufgabeGesperrt(ritual, i));
-  const naechsteOffeneGesamt = naechsteOffene >= 0 ? naechsteOffene : plan.tasks.findIndex((tk, i) => i !== stepFrei && !resultOf(tk.id) && !aufgabeGesperrt(ritual, i));
+  const naechsteOffene = plan.tasks.findIndex((tk, i) => i > stepFrei && !resultOf(tk.id) && !istGesperrt(i));
+  const naechsteOffeneGesamt = naechsteOffene >= 0 ? naechsteOffene : plan.tasks.findIndex((tk, i) => i !== stepFrei && !resultOf(tk.id) && !istGesperrt(i));
   const restMinuten = plan.tasks.filter((tk) => !resultOf(tk.id)).reduce((s, tk) => s + tk.minutes, 0);
   // 🧭 تقطيع اليوم محطاتٍ قصيرة (R196): موقع المهمة الحالية داخل محطّتها الستّ
   const stationJetzt = currentTask ? stationOfTask(currentTask) : null;
@@ -150,8 +157,8 @@ export function Klassenzimmer({
   const startAktion = () => {
     if (fertig) return scrollNach("dirb-abschluss");
     if (currentTask && resultOf(currentTask.id)?.passed) {
-      const nxt = plan.tasks.findIndex((tk, i) => i > stepFrei && !resultOf(tk.id)?.passed);
-      if (nxt >= 0 && !aufgabeGesperrt(ritual, nxt)) setStep(nxt);
+      const nxt = plan.tasks.findIndex((tk, i) => i > stepFrei && !resultOf(tk.id) && !istGesperrt(i));
+      if (nxt >= 0) setStep(nxt);
     }
     scrollNach("dirb-training");
   };
@@ -221,7 +228,7 @@ export function Klassenzimmer({
           <summary>عرض المهام التالية <span className="rtl-num">({miniListe.length})</span></summary>
           <div className="dirb-mini-grid dirb-hero-anim-3">
           {miniListe.map(({ tk, i }) => {
-            const zu = aufgabeGesperrt(ritual, i);
+            const zu = istGesperrt(i);
             const passed = resultOf(tk.id)?.passed;
             return (
               <button
@@ -229,9 +236,9 @@ export function Klassenzimmer({
                 type="button"
                 className="dirb-mini"
                 disabled={zu}
-                title={zu ? sperrText(ritual) : tk.titleAr}
+                title={zu ? sperrGrund(i) : tk.titleAr}
                 onClick={() => {
-                  if (!aufgabeGesperrt(ritual, i)) {
+                  if (!istGesperrt(i)) {
                     setStep(i);
                     scrollNach("dirb-training");
                   }
@@ -375,20 +382,21 @@ export function Klassenzimmer({
         {/* ── رقائق مهام اليوم: مطوية في وضع الجلسة المركّز، مفتوحة في الوضع الحرّ (R194) ── */}
         <details key={spieler ? "sitzung" : "frei"} data-testid="aufgaben-details" {...(spieler ? {} : { open: true })}>
           <summary style={{ cursor: "pointer", fontWeight: 700, minHeight: "44px", display: "flex", alignItems: "center" }}>
-            🗂️ مهام اليوم ({plan.tasks.length}) — اختر أيّ مهمة بحرّية متى شئت
+            🗂️ مهام اليوم ({plan.tasks.length}) — اختر من المحطة المفتوحة
           </summary>
         <div className="dirb-chiprow" role="list" aria-label="مهام اليوم" style={{ marginTop: "0.4rem" }}>
           {plan.tasks.map((tk, i) => {
             const r = resultOf(tk.id);
             const passed = r?.passed;
-            const zu = aufgabeGesperrt(ritual, i);
+            const zu = istGesperrt(i);
             return (
               <button
                 key={tk.id}
                 className="chip"
                 data-testid={`aufgabe-chip-${i}`}
+                disabled={zu}
                 aria-disabled={zu}
-                title={zu ? sperrText(ritual) : undefined}
+                title={zu ? sperrGrund(i) : undefined}
                 style={{
                   cursor: zu ? "not-allowed" : "pointer",
                   opacity: zu ? 0.55 : 1,
@@ -399,7 +407,7 @@ export function Klassenzimmer({
                   fontWeight: 700,
                 }}
                 onClick={() => {
-                  if (!aufgabeGesperrt(ritual, i)) setStep(i);
+                  if (!istGesperrt(i)) setStep(i);
                 }}
               >
                 {zu ? "🔒" : passed ? "✓" : i + 1}. {tk.titleAr.split(" ")[0]}
@@ -469,15 +477,15 @@ export function Klassenzimmer({
                 <button
                   type="button"
                   className="btn btn-ghost"
-                  disabled={aufgabeGesperrt(ritual, stepFrei + 1)}
-                  title={aufgabeGesperrt(ritual, stepFrei + 1) ? sperrText(ritual) : undefined}
+                  disabled={istGesperrt(stepFrei + 1)}
+                  title={istGesperrt(stepFrei + 1) ? sperrGrund(stepFrei + 1) : undefined}
                   onClick={() => {
-                    if (!aufgabeGesperrt(ritual, stepFrei + 1)) setStep(stepFrei + 1);
+                    if (!istGesperrt(stepFrei + 1)) setStep(stepFrei + 1);
                   }}
                   data-testid="aufgabe-weiter"
                   style={{ minHeight: "48px" }}
                 >
-                  {aufgabeGesperrt(ritual, stepFrei + 1) ? "🔒 التالي" : "التالية ←"}
+                  {istGesperrt(stepFrei + 1) ? "🔒 التالي" : "التالية ←"}
                 </button>
               ) : (
                 <button

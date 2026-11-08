@@ -4,8 +4,15 @@
 import tseslint from "typescript-eslint";
 import reactHooks from "eslint-plugin-react-hooks";
 import jsxA11y from "eslint-plugin-jsx-a11y";
+import nextPlugin from "@next/eslint-plugin-next";
 
 export default [
+  // Next 15 يفحص وجود الإضافة في المستوى الجذري أثناء build؛ الإعلان المحصور
+  // بـfiles يشغّل القواعد لكنه يطلق تحذيراً مضللاً بأن الإضافة غير موجودة.
+  {
+    plugins: { "@next/next": nextPlugin },
+    rules: { "@next/next/google-font-display": "off" },
+  },
   {
     files: ["app/**/*.{ts,tsx}", "components/**/*.{ts,tsx}", "lib/**/*.ts"],
     languageOptions: {
@@ -20,6 +27,8 @@ export default [
     rules: {
       "@typescript-eslint/no-unused-vars": ["error", { argsIgnorePattern: "^_", varsIgnorePattern: "^_", caughtErrors: "none" }],
       "react-hooks/exhaustive-deps": "warn",
+      ...nextPlugin.configs.recommended.rules,
+      ...nextPlugin.configs["core-web-vitals"].rules,
       ...jsxA11y.flatConfigs.recommended.rules,
       // كل <audio> هنا هو محتوى الدرس نفسه (كلمة/جملة/حوار ألماني) لا فيديو تكميلي —
       // والنصّ الألماني معروض دائمًا إلى جانبه على الشاشة (المعادل الوظيفي للترجمة

@@ -1,12 +1,13 @@
 "use client";
 import { useMemo } from "react";
-import type { DayPlan, DayTask, Progress, TaskResult } from "@/lib/types";
+import type { DayPlan, Progress, TaskResult } from "@/lib/types";
 import { KindIcon } from "@/components/dirb/icons";
 import { grammarMap } from "@/lib/content";
 import type { RitualUrteil } from "@/lib/ritual";
 import { aufgabeGesperrt } from "@/lib/ritual";
+import { ermittleStationsStatus, gruppiereTagesAufgaben, type TagesStation } from "@/lib/tagesstationen";
 
-type StepId = 1 | 2 | 3 | 4 | 5;
+type StepId = TagesStation;
 
 const STEP_META: Record<StepId, { icon: string; titleAr: string; titleDe: string; descAr: string }> = {
   1: { icon: "🔁", titleAr: "التهيئة والاسترجاع", titleDe: "Abruf & Aufwärmen", descAr: "استرجاع تراكمي + كبسولة 1/7/30" },
@@ -16,23 +17,6 @@ const STEP_META: Record<StepId, { icon: string; titleAr: string; titleDe: string
   5: { icon: "✅", titleAr: "ثبّت واختبر", titleDe: "Festigen & Prüfen", descAr: "فحص اليوم + دفتر الأخطاء + الإغلاق" },
 };
 
-function stepOf(task: DayTask): StepId {
-  if (task.kind === "wiederholen" || task.verifyFor) return 1;
-  if (task.kind === "grammatik") return 2;
-  if (["wortschatz", "lesen", "hoeren", "aussprache"].includes(task.kind)) return 3;
-  if (["schreiben", "sprechen", "partner", "briefe", "schulsim"].includes(task.kind)) return 4;
-  return 5; // check + injected + fehler etc.
-}
-
-export function groupTasksByStep(tasks: DayTask[]): Map<StepId, DayTask[]> {
-  const map = new Map<StepId, DayTask[]>([[1, []], [2, []], [3, []], [4, []], [5, []]]);
-  for (const t of tasks) {
-    const s = stepOf(t);
-    map.get(s)!.push(t);
-  }
-  return map;
-}
-
 interface Props {
   plan: DayPlan;
   progress: Progress;
@@ -40,55 +24,23 @@ interface Props {
   stepFrei: number;
   setStep: (i: number) => void;
   resultOf: (id: string) => TaskResult | undefined;
-  localOf: (id: string) => { score: number; total: number };
+  /** Bestehende Aufrufer dürfen den lokalen Zwischenstand weiterreichen; die
+   * Stationskarte liest ihn absichtlich nicht als Abgabe oder Erfolg. */
+  localOf?: (id: string) => { score: number; total: number };
 }
 
-export default function TodayStepper({ plan, progress: _progress, ritual, stepFrei, setStep, resultOf, localOf }: Props) {
+export default function TodayStepper({ plan, progress: _progress, ritual, stepFrei, setStep, resultOf }: Props) {
   void _progress;
-  const grouped = useMemo(() => groupTasksByStep(plan.tasks), [plan.tasks]);
+  const grouped = useMemo(() => gruppiereTagesAufgaben(plan.tasks), [plan.tasks]);
 
-  // Determine step status: done/active/locked
-  const stepStatus = useMemo(() => {
-    const status = new Map<StepId, "done" | "active" | "locked">();
-    let foundActive = false;
-    for (let s = 1 as StepId; s <= 5; s = (s + 1) as StepId) {
-      const tasks = grouped.get(s) ?? [];
-      if (tasks.length === 0) {
-        // Empty step: consider done if previous steps done, unless it's step 2 with no grammar => show as empty but not blocking
-        if (s === 2) {
-          status.set(s, foundActive ? "locked" : "done"); // no grammar = skip
-          continue;
-        }
-        status.set(s, foundActive ? "locked" : "done");
-        continue;
-      }
-      const allDone = tasks.every((t) => {
-        const r = resultOf(t.id);
-        if (r) return r.passed;
-        const local = localOf(t.id);
-        return local.total > 0 && local.score / local.total >= 0.8;
-      });
-      // ritual lock: if any task in step is gesperrt, step is locked unless it's step 1
-      const anyGesperrt = tasks.some((_, idx) => {
-        const globalIdx = plan.tasks.indexOf(tasks[idx] as DayTask);
-        return globalIdx >= 0 && aufgabeGesperrt(ritual, globalIdx);
-      });
-      if (s === 1) {
-        status.set(s, allDone ? "done" : "active");
-        if (!allDone) foundActive = true;
-      } else {
-        if (foundActive || anyGesperrt) {
-          status.set(s, "locked");
-        } else if (allDone) {
-          status.set(s, "done");
-        } else {
-          status.set(s, "active");
-          foundActive = true;
-        }
-      }
-    }
-    return status;
-  }, [grouped, resultOf, localOf, ritual, plan.tasks]);
+  // Nur eine echte Abgabe öffnet die nächste Station. Lokale Quizpunkte allein
+  // bleiben ein Zwischenstand; ein nicht bestandener Versuch wird als abgegeben
+  // markiert und vom bestehenden Schulden-/Wiederholungsmodell weitergeführt.
+  const stepStatus = ermittleStationsStatus(
+    plan.tasks,
+    (task) => !!resultOf(task.id),
+    (index) => aufgabeGesperrt(ritual, index),
+  );
 
   const doneCount = Array.from(stepStatus.values()).filter((v) => v === "done").length;
   const totalSteps = 5;
@@ -105,7 +57,7 @@ export default function TodayStepper({ plan, progress: _progress, ritual, stepFr
           </div>
           <span className="today-stepper-pct rtl-num">{doneCount}/{totalSteps}</span>
         </div>
-        <p className="today-stepper-hint">الخطوات الخمس مرئية دائماً — التالية تُفتح بعد إتمام الحالية. لا تخطٍّ بلا إتقان.</p>
+        <p className="today-stepper-hint">الخطوات الخمس مرئية دائماً — التالية تُفتح بعد تسليم مهام الحالية. النتيجة غير المجتازة تنتقل إلى المراجعة ولا تحبسك هنا.</p>
       </div>
 
       {/* Steps */}
@@ -156,9 +108,8 @@ export default function TodayStepper({ plan, progress: _progress, ritual, stepFr
                   <div className="today-step-tasks">
                     {tasks.map((t) => {
                       const r = resultOf(t.id);
-                      const local = localOf(t.id);
-                      const passed = r?.passed ?? (local.total > 0 && local.score / local.total >= 0.8);
-                      const submitted = !!r || local.total > 0;
+                      const passed = r?.passed === true;
+                      const submitted = !!r;
                       const globalIdx = plan.tasks.indexOf(t);
                       const gesperrt = globalIdx >= 0 && aufgabeGesperrt(ritual, globalIdx);
                       const isCurrent = globalIdx === stepFrei;
@@ -167,21 +118,21 @@ export default function TodayStepper({ plan, progress: _progress, ritual, stepFr
                         <button
                           key={t.id}
                           type="button"
-                          disabled={gesperrt && !isDone}
+                          disabled={isLocked || (gesperrt && !isDone)}
                           onClick={() => {
                             if (globalIdx >= 0) {
                               setStep(globalIdx);
                               document.getElementById("aufgabe-spieler")?.scrollIntoView({ behavior: "smooth", block: "start" });
                             }
                           }}
-                          className={`today-step-task ${passed ? "is-passed" : submitted ? "is-submitted" : isCurrent ? "is-current" : ""} ${gesperrt ? "is-gesperrt" : ""}`}
+                          className={`today-step-task ${passed ? "is-passed" : submitted ? "is-submitted" : isCurrent ? "is-current" : ""} ${isLocked || gesperrt ? "is-gesperrt" : ""}`}
                           data-testid={`today-step-${sid}-task-${globalIdx}`}
-                          aria-label={`${t.titleAr} — ${t.minutes} دقيقة${gesperrt ? " مقفلة" : passed ? " منجزة" : ""}`}
+                          aria-label={`${t.titleAr} — ${t.minutes} دقيقة${isLocked || gesperrt ? " مقفلة" : passed ? " منجزة" : submitted ? " مسلّمة" : ""}`}
                         >
                           <KindIcon kind={t.kind} className="today-step-task-icon" />
                           <span className="today-step-task-title">{t.titleAr}</span>
                           <span className="today-step-task-meta rtl-num">{t.minutes}د</span>
-                          <span className="today-step-task-state">{gesperrt ? "🔒" : passed ? "✓" : submitted ? "◐" : "○"}</span>
+                          <span className="today-step-task-state">{isLocked || gesperrt ? "🔒" : passed ? "✓" : submitted ? "◐" : "○"}</span>
                         </button>
                       );
                     })}
@@ -217,7 +168,7 @@ export default function TodayStepper({ plan, progress: _progress, ritual, stepFr
 
                 {isLocked && (
                   <div className="today-step-lock-msg" role="note">
-                    🔒 أتمّ الخطوة السابقة أولاً — {STEP_META[(sid - 1) as StepId]?.titleAr ?? ""}
+                    🔒 سلّم مهام الخطوة السابقة أولاً — {STEP_META[(sid - 1) as StepId]?.titleAr ?? ""}
                   </div>
                 )}
               </div>

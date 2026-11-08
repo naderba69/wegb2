@@ -1189,12 +1189,20 @@ const hasFile = txt().includes("صوتٌ من الدار");
     const idAbruf = buildDay(2, p2).tasks[0].id;
     ok(!!nachher.plan.tasks[idAbruf], `L8 التسليمُ سُجِّل في الحالة (${idAbruf})`);
     ok(!rootEl.querySelector('[data-testid="ritual-sperre"]'), "L9 وبعدَ التسليمِ زالت اللافتة");
-    ok(chip(1)?.textContent?.startsWith("🔒") === false && chip(4)?.textContent?.startsWith("🔒") === false, "L10 وانفتحت كلُّ الرقائق");
+    ok(chip(1)?.textContent?.startsWith("🔒") === false && chip(4)?.textContent?.startsWith("🔒") === true,
+      "L10 انفتح الدرس التالي فقط، وبقيت المحطات الأبعد خلف تسليم محطتها السابقة");
     if (chip(2)) click(chip(2)!);
-    ok(txt().includes("المهمة 3/"), "L11 والنقرُ على الثالثةِ يعرضُها الآن");
+    ok(txt().includes("المهمة 2/") && !txt().includes("المهمة 3/"),
+      "L11 النقر على مهمة من محطة لاحقة لا يتجاوز محطة الدرس المفتوحة");
+    const subL11 = btn("سلّم المهمة");
+    if (subL11) click(subL11);
+    ok(chip(2)?.textContent?.startsWith("🔒") === false, "L11b بعد تسليم الدرس انفتحت مهمة المحطة الثالثة");
+    if (chip(2)) click(chip(2)!);
+    ok(txt().includes("المهمة 3/"), "L11c والنقر على الثالثة يعرضها بعد فتح محطتها فعلياً");
     act(() => { saveProgress({ ...emptyProgress, plan: { ...emptyProgress.plan, day: 1 } }); });
     mount(React.createElement(Heim));
-    ok(!rootEl.querySelector('[data-testid="ritual-sperre"]') && chip(1)?.textContent?.startsWith("🔒") === false, "L12 اليومُ الأوّلُ بلا قفل — لا «أمسَ» يُسترجَع");
+    ok(!rootEl.querySelector('[data-testid="ritual-sperre"]') && chip(0)?.textContent?.startsWith("🔒") === false && chip(1)?.textContent?.startsWith("🔒") === true,
+      "L12 اليوم الأول بلا قفل «أمس»، لكن تسلسل المحطات يبقى: التهيئة مفتوحة وما بعدها مقفل حتى تسليمها");
     act(() => { dom.window.localStorage.removeItem(progressKeyActive()); });
   }
 
@@ -4109,12 +4117,17 @@ const hasFile = txt().includes("صوتٌ من الدار");
   const { buildDay } = await import("../lib/plan");
   const { getText, getDialogue } = await import("../lib/content");
   const { stationOfTask, STATIONEN } = await import("../components/stationen");
+  const { stationFuerAufgabe } = await import("../lib/tagesstationen");
   (globalThis as unknown as { self?: unknown }).self = globalThis;
   const { default: Heim } = await import("../app/page");
 
   const p1 = { ...emptyProgress, plan: { ...emptyProgress.plan, day: 1 } };
-  act(() => { saveProgress(p1); });
   const plan1 = buildDay(1, p1);
+  const vorbereiteteTasks = Object.fromEntries(plan1.tasks
+    .filter((task) => stationFuerAufgabe(task) < 3)
+    .map((task) => [task.id, { done: true, passed: true, score: 1, total: 1, attempts: 1 }]));
+  const p1MitOffenerLeseStation = { ...p1, plan: { ...p1.plan, tasks: vorbereiteteTasks } };
+  act(() => { saveProgress(p1MitOffenerLeseStation); });
   mount(React.createElement(Heim));
 
   // 1) أهداف اليوم (محطّات حقيقية) ظاهرة فعليًا أعلى الصفحة — لا في نصّ المصدر فقط
@@ -4359,6 +4372,104 @@ const hasFile = txt().includes("صوتٌ من الدار");
   ok(loadProgress().plan.day === 6, "R309-15 ويتقدّم اليوم بلا أيّ اعتراضٍ من قفل الوحدة — القفل يسري فقط عند الحافّة الفعلية");
 
   act(() => { dom.window.localStorage.removeItem(progressKeyActive()); });
+}
+
+// ── R310: خريطة اليوم الخماسية — قفل حقيقي بالتسليم، لا بالمظهر أو النقاط المحلية ──
+{
+  const { default: TodayStepper } = await import("../components/akademie/TodayStepper");
+  const { buildDay } = await import("../lib/plan");
+  const { ritualUrteil } = await import("../lib/ritual");
+  const { gruppiereTagesAufgaben } = await import("../lib/tagesstationen");
+  const plan = buildDay(2, { ...emptyProgress, plan: { ...emptyProgress.plan, day: 2 } });
+  const resultate: Record<string, { done: boolean; passed: boolean; score: number; total: number; attempts: number }> = {};
+  let lokalePunkte: Record<string, { score: number; total: number }> = {};
+  let gewaehlt = -1;
+  const props = (progress: typeof emptyProgress) => ({
+    plan,
+    progress,
+    ritual: ritualUrteil(plan, progress),
+    stepFrei: 0,
+    setStep: (index: number) => { gewaehlt = index; },
+    resultOf: (id: string) => resultate[id],
+    localOf: (id: string) => lokalePunkte[id] ?? { score: 0, total: 0 },
+  });
+  const startProgress = { ...emptyProgress, plan: { ...emptyProgress.plan, day: 2 } };
+  mount(React.createElement(TodayStepper, props(startProgress)));
+
+  const grammarIndex = plan.tasks.findIndex((task) => task.kind === "grammatik");
+  const lesenIndex = plan.tasks.findIndex((task) => ["wortschatz", "lesen", "hoeren", "aussprache"].includes(task.kind));
+  const station2Task = rootEl.querySelector(`[data-testid="today-step-2-task-${grammarIndex}"]`) as HTMLButtonElement;
+  ok(rootEl.querySelector('[data-testid="today-step-1"]')?.classList.contains("today-step--active") === true &&
+    rootEl.querySelector('[data-testid="today-step-2"]')?.classList.contains("today-step--locked") === true,
+    "R310-1 البداية تعرض الاسترجاع نشطاً والدرس مقفلاً في خريطة اليوم");
+  ok(station2Task.disabled && gewaehlt === -1,
+    "R310-2 زر مهمة الدرس نفسه معطّل فعلياً؛ القفل ليس شارة بصرية قابلة للتجاوز");
+
+  const station2Ids = (gruppiereTagesAufgaben(plan.tasks).get(2) ?? []).map((task) => task.id);
+  lokalePunkte = Object.fromEntries(station2Ids.map((id) => [id, { score: 10, total: 10 }]));
+  mount(React.createElement(TodayStepper, props(startProgress)));
+  const station2MitPunkten = rootEl.querySelector(`[data-testid="today-step-2-task-${grammarIndex}"]`) as HTMLButtonElement;
+  ok(rootEl.querySelector('[data-testid="today-step-2"]')?.classList.contains("today-step--locked") === true &&
+    !station2MitPunkten.classList.contains("is-passed") && !station2MitPunkten.classList.contains("is-submitted") &&
+    !(station2MitPunkten.getAttribute("aria-label") ?? "").includes("مسلّمة"),
+    "R310-3 نقاط محلية كاملة بلا تسليم لا تفتح الدرس ولا تتنكر بصرياً كتسليم أو نجاح");
+
+  const station1 = gruppiereTagesAufgaben(plan.tasks).get(1) ?? [];
+  for (const task of station1) resultate[task.id] = { done: true, passed: false, score: 0, total: 1, attempts: 1 };
+  const nachFehler = {
+    ...startProgress,
+    plan: { ...startProgress.plan, tasks: { ...resultate } },
+  };
+  mount(React.createElement(TodayStepper, props(nachFehler)));
+  const station2NachAbgabe = rootEl.querySelector(`[data-testid="today-step-2-task-${grammarIndex}"]`) as HTMLButtonElement;
+  ok(rootEl.querySelector('[data-testid="today-step-1"]')?.classList.contains("today-step--done") === true &&
+    rootEl.querySelector('[data-testid="today-step-2"]')?.classList.contains("today-step--active") === true && !station2NachAbgabe.disabled,
+    "R310-4 تسليم استرجاع غير مجتاز يُرحّل للمراجعة لكنه يفتح الدرس ولا يحبس المتعلم");
+
+  for (const id of station2Ids) resultate[id] = { done: true, passed: true, score: 1, total: 1, attempts: 1 };
+  const bisStation2 = { ...startProgress, plan: { ...startProgress.plan, tasks: { ...resultate } } };
+  mount(React.createElement(TodayStepper, props(bisStation2)));
+  const station3Task = rootEl.querySelector(`[data-testid="today-step-3-task-${lesenIndex}"]`) as HTMLButtonElement;
+  ok(rootEl.querySelector('[data-testid="today-step-2"]')?.classList.contains("today-step--done") === true &&
+    rootEl.querySelector('[data-testid="today-step-3"]')?.classList.contains("today-step--active") === true && !station3Task.disabled,
+    "R310-5 تسليم الدرس يفتح الاستماع/القراءة فقط وتبقى المحطات الأبعد وراء التسلسل");
+  await pruefeA11y("R310-6 خريطة اليوم بعد انتقال محطتين");
+
+  // المسار الثاني في «قائمة مهام اليوم» لا يجوز أن يلتف حول القفل، كما أن
+  // موضعاً قديماً محفوظاً في محطة لاحقة يعود إلى أول مهمة نشطة.
+  const { saveProgress } = await import("../lib/store");
+  const { progressKeyActive } = await import("../lib/profiles");
+  (globalThis as unknown as { self?: unknown }).self = globalThis;
+  const { default: Heim } = await import("../app/page");
+  act(() => {
+    saveProgress(startProgress);
+    dom.window.localStorage.setItem("wegb2:day-step:2", String(grammarIndex));
+  });
+  mount(React.createElement(Heim));
+  const taskMapGrammar = rootEl.querySelector(`[data-testid="held-mini-${grammarIndex}"]`) as HTMLButtonElement;
+  const primaryText = rootEl.querySelector('[data-testid="today-primary-step"]')?.textContent ?? "";
+  ok(taskMapGrammar.disabled && primaryText.includes(plan.tasks[0].titleAr) && !primaryText.includes(plan.tasks[grammarIndex].titleAr),
+    "R310-7 قائمة المهام لا تتجاوز المحطة، وموضع قديم مقفول يعود إلى أول مهمة استرجاع نشطة");
+
+  const tag1Progress = { ...emptyProgress, plan: { ...emptyProgress.plan, day: 1 } };
+  const tag1Plan = buildDay(1, tag1Progress);
+  const tag1Grammatik = tag1Plan.tasks.find((task) => task.kind === "grammatik")!;
+  act(() => {
+    saveProgress(tag1Progress);
+    dom.window.localStorage.removeItem("wegb2:day-step:1");
+  });
+  mount(React.createElement(Heim));
+  const ersterSubmit = btn("سلّم المهمة");
+  if (ersterSubmit) click(ersterSubmit);
+  const nachErsterAbgabe = rootEl.querySelector('[data-testid="today-primary-step"]')?.textContent ?? "";
+  ok(!!ersterSubmit && nachErsterAbgabe.includes(tag1Grammatik.titleAr),
+    "R310-8 بعد تهيئة اليوم الأول ينتقل المشغّل إلى محطة الدرس، لا إلى مهمة لاحقة جاءت قبلها في ترتيب المصدر");
+
+  act(() => {
+    dom.window.localStorage.removeItem(progressKeyActive());
+    dom.window.localStorage.removeItem("wegb2:day-step:1");
+    dom.window.localStorage.removeItem("wegb2:day-step:2");
+  });
 }
 
   console.log(`\n${beste} نجح · ${fehler} فشل`);

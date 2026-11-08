@@ -145,6 +145,7 @@ import { wochenBilanz, streakAusVerlauf, zielAusVerlauf, wochenMontag } from "..
 import { lernendenZeile } from "../lib/lehrer";
 import { zielTempo, ZIEL_MINUTEN_OK, ZIEL_MINUTEN_MAX } from "../lib/zieltempo";
 import { ritualUrteil, aufgabeGesperrt, torAufgaben, sperrText } from "../lib/ritual";
+import { ermittleStationsStatus, gruppiereTagesAufgaben, stationFuerAufgabe } from "../lib/tagesstationen";
 import { PHASEN, PHASE_START, LERNLAST, ABSCHLUSS_VON, levelAmTag, istPhasenPruefung, lastMinuten, PHASEN_PRUEFUNGSTAGE } from "../lib/phasen";
 import { getDialogue, eselsbruecken, getBrueckenFor, vocabMap, sprichwortAudio, sprichwortSrc } from "../lib/content";
 import { buildBrueckeItems, katVonSektion } from "../lib/bruecken";
@@ -1951,8 +1952,10 @@ void 0;
     ok(alleLerntage.every((d) => ritualUrteil(buildDay(d, P), P).aktiv), "K64i كلُّ أيامِ التعلُّمِ والتثبيتِ في أوّلِ شهرين لها بوابةٌ فعلاً (60 يوماً مفحوصة)");
     const seite = require("fs").readFileSync("app/page.tsx", "utf8");
     const klass = require("fs").readFileSync("components/akademie/Klassenzimmer.tsx", "utf8");
-    ok(/<Klassenzimmer/.test(seite) && /data-testid="ritual-sperre"/.test(klass) && /aufgabeGesperrt\(ritual, i\)/.test(klass) && /stepFrei/.test(klass),
-      "K64j شاشةُ اليومِ تركّبُ Klassenzimmer الحاملةَ للحكم: لافتةُ قفلٍ حقيقيةٌ (data-testid) + رقائقُ مقفولةٌ في موقعِ الرسم — لا تعليقاتٍ مُصطنعة");
+    ok(/<Klassenzimmer/.test(seite) && /data-testid="ritual-sperre"/.test(klass) &&
+      /const istGesperrt = \(index: number\) => aufgabeGesperrt\(ritual, index\)/.test(klass) &&
+      seite.includes("stationGesperrt={(index) =>") && /stepFrei/.test(klass),
+      "K64j شاشة اليوم تركّب Klassenzimmer بحكم موحد: قفل الاسترجاع وقفل المحطة يصلان إلى الرقائق الفعلية لا إلى شارة منفصلة");
   }
 
 
@@ -3436,12 +3439,28 @@ void 0;
     classroomSrc.includes("saveProgress(loadProgress())") && classroomSrc.includes("persistKey={`wegb2:partial:${currentTask.id}`}"),
     "K143d وقت الجلسة المقاس منفصل عن تقديرات المهام؛ المزيد يمدّ الهدف والتوقف يحفظ أحدث الحالة والمسودة دون إغلاق أو دين");
 
-  const pkg = JSON.parse(readFileSync("package.json", "utf8")) as { dependencies: { next: string }; devDependencies: { postcss: string }; overrides: { postcss: string } };
+  const pkg = JSON.parse(readFileSync("package.json", "utf8")) as {
+    dependencies: { next: string };
+    devDependencies: { postcss: string; jsdom: string; "typescript-eslint": string; "@next/eslint-plugin-next": string };
+    overrides: { postcss: string; "@typescript-eslint/typescript-estree": { minimatch: string } };
+    scripts: { "audit:deps": string };
+  };
   const lock = JSON.parse(readFileSync("package-lock.json", "utf8")) as { packages: Record<string, { version?: string }> };
-  ok(pkg.dependencies.next === "^15.5.27" && lock.packages["node_modules/next"]?.version === "15.5.27" &&
+  const ci = readFileSync(".github/workflows/ci.yml", "utf8");
+  const eslintConfig = readFileSync("eslint.config.mjs", "utf8");
+  ok(pkg.dependencies.next === "^15.5.29" && lock.packages["node_modules/next"]?.version === "15.5.29" &&
     pkg.devDependencies.postcss === "^8.5.28" && pkg.overrides.postcss === "$postcss" &&
-    lock.packages["node_modules/postcss"]?.version === "8.5.28",
-    "K143f ترقيع أمني ضمن Next 15: PostCSS موحّد بالـoverride، من دون قفزة رئيسية");
+    lock.packages["node_modules/postcss"]?.version === "8.5.28" &&
+    pkg.devDependencies.jsdom === "^30.1.3" && lock.packages["node_modules/undici"]?.version === "8.12.4" &&
+    pkg.devDependencies["typescript-eslint"] === "^8.72.1" &&
+    pkg.overrides["@typescript-eslint/typescript-estree"].minimatch === "11.0.4" &&
+    lock.packages["node_modules/@typescript-eslint/typescript-estree/node_modules/minimatch"]?.version === "11.0.4" &&
+    pkg.devDependencies["@next/eslint-plugin-next"] === "^15.5.29" &&
+    lock.packages["node_modules/@next/eslint-plugin-next"]?.version === "15.5.29" &&
+    eslintConfig.includes('plugins: { "@next/next": nextPlugin }') &&
+    eslintConfig.includes('nextPlugin.configs["core-web-vitals"].rules') &&
+    pkg.scripts["audit:deps"] === "npm audit --audit-level=moderate" && ci.includes("run: npm run audit:deps"),
+    "K143f ترقيع أمني ضمن Next 15 وسلسلة أدوات الاختبار، مع بوابة npm audit مانعة ومن دون قفزة Next رئيسية");
 
   const auditSrc = readFileSync("scripts/audit_inhalt.ts", "utf8");
   const scripts = JSON.parse(readFileSync("package.json", "utf8")).scripts as Record<string, string>;
@@ -12448,7 +12467,13 @@ void 0;
     otherHashesR170.diktatAudioSha256Before === otherHashesR170.diktatAudioSha256After;
   const localAudioTotalCurrent = ["hoeren", "dialog", "diktat", "sprichwort"].reduce((sum, folder) =>
     sum + readdirSync(`public/audio/${folder}`).filter((file) => file.endsWith(".mp3")).length, 0);
-  const manifestShaR170 = createHash("sha256").update(readFileSync("content/hoeren-audio.json")).digest("hex");
+  // R170 pins the historical audio facts. Later, non-audio QC metadata may be
+  // added without pretending that the old review produced it.
+  const manifestHistorischR170 = {
+    ...hoerenR170,
+    einsaetze: hoerenR170.einsaetze.map(({ textScope: _textScope, ...entry }: any) => entry),
+  };
+  const manifestShaR170 = createHash("sha256").update(JSON.stringify(manifestHistorischR170, null, 2) + "\n").digest("hex");
   const coverageBeforeR170 = reviewR170.audio.coverage.before;
   const coverageAfterR170 = reviewR170.audio.coverage.after;
   ok(filesR170Valid && otherManifestsR170Valid && hoerenR170.count === 157 && hoerenR170.count === hoerenR170.einsaetze.length &&
@@ -12984,11 +13009,30 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const berichtet304 = new Set<string>(qcAll.dateien.map((d: any) => d.datei));
   const gruppen304 = qcAll.gruppen.dialog.anzahl === 176 && qcAll.gruppen.diktat.anzahl === 742 &&
     qcAll.gruppen.hoeren.anzahl === 157 && qcAll.gruppen.hoerneu.anzahl === 16 && qcAll.gruppen.sprichwort.anzahl === 8;
+  const audioRunner304 = readFileSync("scripts/run_audio_qc.py", "utf8");
+  const audioQcSrc304 = readFileSync("scripts/audio_qc_all.py", "utf8");
+  const audioReq304 = readFileSync("scripts/requirements-audio-qc.txt", "utf8");
+  const package304 = JSON.parse(readFileSync("package.json", "utf8")) as { scripts: Record<string, string> };
+  const hoerManifest304 = JSON.parse(readFileSync("content/hoeren-audio.json", "utf8")) as { einsaetze: { id: string; textScope?: string }[] };
+  const hoerTexte304 = JSON.parse(readFileSync("content/texts.json", "utf8")) as { id: string; de: string }[];
+  const ausschnitte304 = hoerManifest304.einsaetze.filter((e) => e.textScope === "first-paragraph");
+  const berichtNachId304 = new Map<string, any>(qcAll.dateien.map((d: any) => [d.id, d]));
+  const ausschnitteOk304 = ausschnitte304.length === 20 && ausschnitte304.every((e) => {
+    const text = hoerTexte304.find((t) => t.id === e.id)?.de ?? "";
+    return /^t-b2-(?:0[1-9]|1[0-9]|20)$/.test(e.id) && text.includes("\n\n") &&
+      berichtNachId304.get(e.id)?.zeichen === text.split("\n\n", 1)[0].length;
+  }) && hoerManifest304.einsaetze.every((e) => e.textScope === undefined || e.textScope === "first-paragraph");
   ok(existsSync("scripts/audio_qc_all.py") && qcAll.dateien.length === 1099 && platten304.size === 1099 &&
      [...platten304].every((p) => berichtet304.has(p)) && gruppen304 && qcAll.anomalienGesamt === 0 &&
      qcAll.abdeckung.luecken.length === 0 && qcAll.dateien.every((d: any) => d.ok) &&
      qcAll.schwellen.diktat.maxStilleAnteil === 0.65 && qcAll.schwellen.diktat.maxStilleLochS === 4.0 &&
-     String(qcAll.grenzEhrlichkeit).includes("Kein menschliches Anhören"),
+     String(qcAll.grenzEhrlichkeit).includes("Kein menschliches Anhören") &&
+     package304.scripts["audio:qc"] === "python3 scripts/run_audio_qc.py" &&
+     audioRunner304.includes('ENV_DIR = ROOT / ".cache" / "audio-qc-venv"') &&
+     audioRunner304.includes('"--requirement", str(REQUIREMENTS)') && audioRunner304.includes("metadata.version(name)") &&
+     audioQcSrc304.includes('fehler.append("placeholder")') && audioQcSrc304.includes('e["fehler"].append("audio-duplikat")') && ausschnitteOk304 &&
+     audioReq304.includes("miniaudio==1.71") && audioReq304.includes("numpy==2.4.6") &&
+     audioReq304.includes("cffi==2.1.1") && audioReq304.includes("pycparser==3.12"),
     "K304 مراجعةُ الصوتِ الآليةُ الشاملةُ R272: ‏1099/1099 ملفاً مفكوكاً ومقيساً (المدة/الصمت/المستوى/السرعة مقابل نصّ البنك) بلا شذوذٍ ولا ثغراتِ تغطية — قياسٌ آليٌّ مُعلَن، لا استماعَ بشريٌّ ولا حكمَ نطق");
 }
 
@@ -13695,8 +13739,8 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const kzSrc2 = readFileSync("components/akademie/Klassenzimmer.tsx", "utf8");
   ok(kzSrc2.includes("useState(true)") && kzSrc2.includes('data-testid="aufgaben-details"') &&
      kzSrc2.includes('data-testid="sitzung-fortschritt"') && kzSrc2.includes('data-testid={`aufgabe-chip-${i}`}') &&
-     kzSrc2.includes("اختر أيّ مهمة بحرّية متى شئت") && kzSrc2.includes('data-testid="sitzung-weiter"'),
-    "K287 المشغّل افتراضي والرقائق مطوية خلف ملخّص صريح مع بقاء كل رقاقة وزرّ التالية — تركيز بلا حجب للحرية");
+     kzSrc2.includes("اختر من المحطة المفتوحة") && kzSrc2.includes("disabled={zu}") && kzSrc2.includes('data-testid="sitzung-weiter"'),
+    "K287 المشغّل افتراضي والرقائق مطوية خلف ملخّص صريح؛ الاختيار حر داخل المحطة المفتوحة فقط وزر التالية يحترم القفل");
 }
 
 // ===== K288 (R195 · Redesign Etappe 3): Stationsseiten entschlackt — Gruppen
@@ -14296,6 +14340,63 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const pruefenAtK333 = homeK333.indexOf('data-testid="today-pruefen-eingebettet"');
   ok(playerAtK333 >= 0 && uebenAtK333 > playerAtK333 && pruefenAtK333 > uebenAtK333,
     "K333f R308: القسمان المُدمَجان يأتيان بعد مشغّل اليوم — إضافةٌ ذيلية لا تُخلّ بترتيب K136 (خطوة واحدة ← هدف ← مشغّل)");
+}
+
+
+/* ═══ K335 — R310: محطات اليوم تُفتح بالتسليم الحقيقي بلا تجاوز أو حبس بعد الإخفاق ═══ */
+{
+  const planK335 = buildDay(2, emptyProgress);
+  const ritualK335 = ritualUrteil(planK335, emptyProgress);
+  const statusLeerK335 = ermittleStationsStatus(
+    planK335.tasks,
+    () => false,
+    (index) => aufgabeGesperrt(ritualK335, index),
+  );
+  ok(statusLeerK335.get(1) === "active" && [2, 3, 4, 5].every((station) => statusLeerK335.get(station as 2 | 3 | 4 | 5) === "locked"),
+    "K335a R310: في اليوم 2 محطة الاسترجاع وحدها نشطة، وكل المحطات اللاحقة مقفلة فعلياً قبل أي تسليم");
+
+  const stationEinsK335 = gruppiereTagesAufgaben(planK335.tasks).get(1) ?? [];
+  const abgegebenK335 = new Set(stationEinsK335.map((task) => task.id));
+  const progressK335: Progress = {
+    ...emptyProgress,
+    plan: {
+      ...emptyProgress.plan,
+      day: 2,
+      tasks: Object.fromEntries(stationEinsK335.map((task) => [task.id, {
+        done: true, passed: false, score: 0, total: 1, attempts: 1,
+      }])),
+    },
+  };
+  const ritualNachAbgabeK335 = ritualUrteil(planK335, progressK335);
+  const statusNachFehlerK335 = ermittleStationsStatus(
+    planK335.tasks,
+    (task) => abgegebenK335.has(task.id),
+    (index) => aufgabeGesperrt(ritualNachAbgabeK335, index),
+  );
+  ok(statusNachFehlerK335.get(1) === "done" && statusNachFehlerK335.get(2) === "active" && statusNachFehlerK335.get(3) === "locked",
+    "K335b R310: محاولة الاسترجاع غير المجتازة تُعد تسليماً وتفتح الدرس؛ تُرحّل للمراجعة ولا تحبس اليوم كله");
+
+  const stationZweiK335 = gruppiereTagesAufgaben(planK335.tasks).get(2) ?? [];
+  const bisZweiK335 = new Set([...abgegebenK335, ...stationZweiK335.map((task) => task.id)]);
+  const statusBisZweiK335 = ermittleStationsStatus(planK335.tasks, (task) => bisZweiK335.has(task.id), () => false);
+  ok(statusBisZweiK335.get(2) === "done" && statusBisZweiK335.get(3) === "active" && statusBisZweiK335.get(4) === "locked",
+    "K335c R310: لا يفتح الاستماع/القراءة إلا تسليم الدرس، ثم تبقى محطة الإنتاج اللاحقة مقفلة");
+
+  const pflichtGrammatikK335 = { id: "pflicht", kind: "grammatik", titleDe: "", titleAr: "", minutes: 5, mandatory: true } as DayTask;
+  ok(stationFuerAufgabe(pflichtGrammatikK335) === 1 && (gruppiereTagesAufgaben([pflichtGrammatikK335]).get(1)?.[0]?.id === "pflicht"),
+    "K335d R310: تعويض القواعد الإلزامي يبقى في محطة الاسترجاع الأولى ولا يتخفّى كدرس جديد قابل للتجاوز");
+
+  const alleK335 = Array.from({ length: TOTAL_DAYS }, (_, index) => buildDay(index + 1, { ...emptyProgress, plan: { ...emptyProgress.plan, day: index + 1 } }));
+  ok(alleK335.every((plan) => {
+    const gruppen = gruppiereTagesAufgaben(plan.tasks);
+    return [1, 2, 3, 4, 5].reduce((sum, station) => sum + (gruppen.get(station as 1 | 2 | 3 | 4 | 5)?.length ?? 0), 0) === plan.tasks.length;
+  }), "K335e R310: كل مهمة في الأيام 378 تدخل محطة واحدة بالضبط؛ لا سقوط ولا ازدواج عند التجميع");
+
+  const nurAbrufK335 = [{ id: "abruf", kind: "wiederholen", titleDe: "", titleAr: "", minutes: 5 } as DayTask];
+  const leerVorherK335 = ermittleStationsStatus(nurAbrufK335, () => false, () => false);
+  const leerNachherK335 = ermittleStationsStatus(nurAbrufK335, () => true, () => false);
+  ok(leerVorherK335.get(2) === "locked" && leerNachherK335.get(2) === "done",
+    "K335f R310: المحطة الفارغة لا ترفع التقدم قبل أوانها؛ تُعد متجاوزة فقط بعد تسليم المحطة السابقة");
 }
 
 

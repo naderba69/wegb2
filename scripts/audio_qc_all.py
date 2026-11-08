@@ -6,19 +6,21 @@
 #
 # Geprueft wird pro Datei: Dekodierbarkeit, Dauer, Zeichen-Tempo gegen den
 # Banktext, Stille-Anteil, laengstes Stille-Loch, An-/Abklang, Peak, RMS,
-# Clipping. Schwellen wie R169; die Stille-Regel des Projekts bleibt:
+# Clipping sowie explizite Platzhaltermarker und identische dekodierte PCM-
+# Aufnahmen hinter verschiedenen Dateien. Schwellen wie R169; die Stille-Regel:
 # geflaggt wird nur Stille-Anteil > 0.65 oder ein Loch > 4.0 s.
 # Ehrlichkeitsgrenze: Das ist eine MASCHINELLE Messung (Vollstaendigkeit/
 # Hoerbarkeit/Tempo). Kein menschliches Anhoeren, kein Aussprache-/
 # Natuerlichkeitsurteil. Der gelesene Text ist der Banktext der jeweiligen
-# content/*.json (zeichengleich per Konstruktion der Manifeste).
+# content/*.json. Wo eine Aufnahme bewusst nur den ersten Absatz eines spaeter
+# erweiterten Lesetexts enthaelt, deklariert das Audio-Manifest den Scope
+# "first-paragraph" explizit; stilles Erraten anhand von Level/ID ist verboten.
 #
-# Ausfuehrung (miniaudio+numpy in einem Werkzeug-venv, PEP-668-sicher):
-#   python3 -m venv /tmp/qcenv && /tmp/qcenv/bin/pip install miniaudio numpy
-#   /tmp/qcenv/bin/python scripts/audio_qc_all.py
+# Ausfuehrung (reproduzierbares, gepinntes Werkzeug-venv, PEP-668-sicher):
+#   npm run audio:qc
 # Schreibt docs/audio-qc-all-2026-10-18.json; K304 im Smoke pinnt Bericht,
 # Abdeckung (jede MP3 auf der Platte genau einmal) und Anomalienzahl.
-import json, math, os, statistics, sys
+import hashlib, json, math, os, statistics, sys
 import miniaudio
 import numpy as np
 
@@ -40,13 +42,13 @@ SCHWELLEN = {
     # Kurze Diktat-Saetze (z. B. "Hallo!") brauchen ehrliche Untergrenzen.
     "diktat":     dict(GEMEINSAM, minDauerS=0.4, zeichenProSekunde=[3.5, 30.0]),
     "sprichwort": dict(GEMEINSAM, minDauerS=0.8, zeichenProSekunde=[3.5, 30.0]),
-    # R169-Stand, dort mit 0 Anomalien an 164 Dialogen belegt.
+    # R402-Stand: alle 176 Dialoge einschließlich der zwölf neuen B2-Dateien.
     "dialog":     dict(GEMEINSAM, minDauerS=3.0, zeichenProSekunde=[5.0, 22.0]),
     "hoeren":     dict(GEMEINSAM, minDauerS=5.0, zeichenProSekunde=[5.0, 22.0]),
     "hoerneu":    dict(GEMEINSAM, minDauerS=3.0, zeichenProSekunde=[5.0, 22.0]),
 }
 GRUPPEN_DATEIEN = {  # gruppe -> (verzeichnis, erwartete anzahl)
-    "dialog": ("dialog", 164), "diktat": ("diktat", 742), "hoeren": ("hoeren", 157),
+    "dialog": ("dialog", 176), "diktat": ("diktat", 742), "hoeren": ("hoeren", 157),
     "hoerneu": ("hoerneu", 16), "sprichwort": ("sprichwort", 8),
 }
 
@@ -67,7 +69,13 @@ def texte_und_stimmen():
         out[e["file"].split("/")[-1]] = (e["id"], "dialog", e["voice"], dlg_de.get(e["id"], ""))
     txt_de = {t["id"]: t["de"] for t in lade("texts.json")}
     for e in lade("hoeren-audio.json")["einsaetze"]:
-        out[e["file"].split("/")[-1]] = (e["id"], "hoeren", e["voice"], txt_de.get(e["id"], ""))
+        text = txt_de.get(e["id"], "")
+        scope = e.get("textScope", "full")
+        if scope == "first-paragraph":
+            text = text.split("\n\n", 1)[0]
+        elif scope != "full":
+            raise ValueError(f"Unbekannter textScope {scope!r} fuer {e['id']}")
+        out[e["file"].split("/")[-1]] = (e["id"], "hoeren", e["voice"], text)
     for item in lade("hoerneu.json")["items"]:
         for clip in item["clips"]:
             text = " ".join(item["zeilen"][z]["de"] for z in clip["zeilen"])
@@ -132,12 +140,14 @@ def analysiere(pfad):
         abklang = ((nf - 1 - idx[-1]) * FENSTER_S) if len(idx) else dauer
     else:
         laengste_s, anklang, abklang = dauer, dauer, dauer
-    return dauer, peak, rms_db, still_anteil, clip_anteil, anklang, abklang, laengste_s
+    pcm_sha256 = hashlib.sha256(mono.astype(np.int16).tobytes()).hexdigest()
+    ist_placeholder = b"placeholder" in roh.lower()
+    return dauer, peak, rms_db, still_anteil, clip_anteil, anklang, abklang, laengste_s, pcm_sha256, ist_placeholder
 
 
 def main():
     meta = texte_und_stimmen()
-    dateien, anomalien = [], []
+    dateien = []
     abdeckung_fehlt = []
     for gruppe, (verz, soll) in GRUPPEN_DATEIEN.items():
         pfad_verz = os.path.join(ROOT, "public", "audio", verz)
@@ -152,10 +162,13 @@ def main():
             schw = SCHWELLEN[gruppe]
             fehler = []
             try:
-                dauer, peak, rms_db, still, clipA, anklang, abklang, loch = analysiere(pfad)
+                dauer, peak, rms_db, still, clipA, anklang, abklang, loch, pcm_sha256, ist_placeholder = analysiere(pfad)
             except Exception as ex:  # Dekodierfehler ist ein Befund, kein Absturz
                 dauer, peak, rms_db, still, clipA, anklang, abklang, loch = 0, 0, -99, 1, 0, 0, 0, 0
+                pcm_sha256, ist_placeholder = "", False
                 fehler.append("dekodierung:" + type(ex).__name__)
+            if ist_placeholder:
+                fehler.append("placeholder")
             zeichen = len(text)
             cps = zeichen / dauer if dauer else 0.0
             if dauer < schw["minDauerS"]: fehler.append("dauer")
@@ -173,9 +186,26 @@ def main():
                  "zeichenProSekunde": round(cps, 2), "peak": round(peak, 3), "rmsDb": round(rms_db, 1),
                  "stilleAnteil": round(still, 3), "laengsteStilleS": round(loch, 2),
                  "clipAnteil": round(clipA, 5), "anklangS": round(anklang, 2), "abklangS": round(abklang, 2),
-                 "ok": not fehler, "fehler": fehler}
+                 "ok": not fehler, "fehler": fehler, "_pcmSha256": pcm_sha256}
             dateien.append(e)
-            if fehler: anomalien.append(e)
+
+    # Verschiedene Lerninhalte duerfen nicht dieselbe dekodierte Aufnahme hinter
+    # unterschiedlich beschrifteten ID3-Tags verstecken. Genau so konnten zuvor
+    # Platzhalter fuer mehrere neue Dialoge die reine Pegel-/Tempo-QC bestehen.
+    nach_pcm = {}
+    for e in dateien:
+        if e["_pcmSha256"]:
+            nach_pcm.setdefault(e["_pcmSha256"], []).append(e)
+    for gleiche in nach_pcm.values():
+        if len(gleiche) > 1:
+            for e in gleiche:
+                if "audio-duplikat" not in e["fehler"]:
+                    e["fehler"].append("audio-duplikat")
+                    e["ok"] = False
+    for e in dateien:
+        e.pop("_pcmSha256", None)
+    anomalien = [e for e in dateien if not e["ok"]]
+
     gruppen = {}
     for gruppe in GRUPPEN_DATEIEN:
         g = [e for e in dateien if e["gruppe"] == gruppe]
@@ -186,18 +216,18 @@ def main():
             "stilleMedian": round(statistics.median(e["stilleAnteil"] for e in g), 3) if g else 0,
         }
     bericht = {
-        "werkzeug": "scripts/audio_qc_all.py (miniaudio-Dekodierung, 16-bit PCM, numpy; Schwellen wie R169, Stille-Regel 0.65/4.0s)",
+        "werkzeug": "scripts/audio_qc_all.py (miniaudio-Dekodierung, 16-bit PCM, numpy; Platzhalter-/PCM-Duplikatprüfung; Schwellen wie R169, Stille-Regel 0.65/4.0s)",
         "datum": DATUM,
         "gegenstand": "Gesamter Audio-Bestand: public/audio/{dialog,diktat,hoeren,hoerneu,sprichwort} — jede MP3 genau einmal geprueft (R272).",
         "schwellen": SCHWELLEN,
         "abdeckung": {"dateienGeprueft": len(dateien), "luecken": abdeckung_fehlt},
         "gruppen": gruppen,
         "anomalienGesamt": len(anomalien),
-        "grenzEhrlichkeit": "Maschinelle QC: Dekodierbarkeit, Vollständigkeit (Dauer/Tempo gegen Banktext), Stille, Pegel/Clipping. Kein menschliches Anhören, kein Aussprache-/Natürlichkeitsurteil; der gelesene Text ist der jeweilige Banktext (content/*.json).",
+        "grenzEhrlichkeit": "Maschinelle QC: Dekodierbarkeit, Vollständigkeit (Dauer/Tempo gegen Banktext bzw. explizit deklarierten Textausschnitt), Platzhalter/identische PCM-Aufnahmen, Stille, Pegel/Clipping. Kein menschliches Anhören, kein Aussprache-/Natürlichkeitsurteil; der gelesene Text stammt aus content/*.json.",
         "dateien": dateien,
     }
     out = os.path.join(ROOT, "docs", f"audio-qc-all-{DATUM}.json")
-    json.dump(bericht, open(out, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    json.dump(bericht, open(out, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
     print(json.dumps({"gruppen": gruppen, "anomalienGesamt": len(anomalien),
                       "luecken": abdeckung_fehlt,
                       "anomalien": [a["datei"] + ":" + ",".join(a["fehler"]) for a in anomalien]},
