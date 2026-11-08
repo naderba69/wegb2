@@ -41,6 +41,10 @@ Changes:
 
 The full gate previously ran once for a feature-branch push and again for the pull-request event at the same commit. CI now runs once per pull request and once on `main` after merge. A concurrency group cancels an older run for the same PR/ref, the workflow has read-only repository permission, and the gate job has a 30-minute ceiling. React and React DOM are refreshed in the lockfile from 19.3.0 to the compatible 19.3.1 patch without widening the declared major range. K341 guards this configuration and lock state.
 
+## Lighthouse dependency boundary (R141)
+
+Lighthouse CI was invoked through `npx`, so its transitive dependency tree was downloaded outside the repository lockfile and never appeared in the blocking dependency audit. `@lhci/cli` 0.16.0 is now an exact development dependency and the script calls the local `lhci` binary. Once visible to `npm audit`, its proxy chain exposed nine high-severity paths to GHSA-c475-qrg2-pj4r; the affected `basic-ftp` package is overridden to patched 6.2.6. A clean install audits the complete 617-package tree with zero known moderate-or-higher findings. K343 guards the exact LHCI and patched transitive versions.
+
 ## Progress-store lifecycle (R140)
 
 `useProgress.update` previously called `saveProgress` from inside a functional React state updater. Because saving synchronously broadcasts the progress event, a second subscriber could update while React was still rendering the writer, producing the runtime warning “Cannot update a component while rendering a different component.” Persistence and event delivery now happen outside the state-updater callback, while a synchronized ref preserves sequential updates and the existing save-failure rollback contract. The calibration panel receives its owner’s updater rather than opening a nested subscription. K342 and R316 cover two immediate writes, two subscribers, persistent equality, and absence of the cross-render warning; the complete interactive suite returns with clean stderr.
