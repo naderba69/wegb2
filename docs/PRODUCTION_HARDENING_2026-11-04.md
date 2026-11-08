@@ -37,4 +37,8 @@ Changes:
 - twelve files, `d-b2-38`–`d-b2-49`, were not dialogue recordings at all: their ID3 comments said “pending real voice generation” and all decoded to the same audio as `d-b2-01`. They are now actual German recordings with the selected educational voices and corrected manifest bytes;
 - audio QC now rejects explicit placeholder markers and duplicate decoded PCM, so changing only a filename or ID3 tag cannot conceal reused audio. The final machine pass covers 1099/1099 files with zero anomalies. This remains a machine check, not a claim that a human listened to every final recording.
 
+## CI lifecycle (R138)
+
+The full gate previously ran once for a feature-branch push and again for the pull-request event at the same commit. CI now runs once per pull request and once on `main` after merge. A concurrency group cancels an older run for the same PR/ref, the workflow has read-only repository permission, and the gate job has a 30-minute ceiling. React and React DOM are refreshed in the lockfile from 19.3.0 to the compatible 19.3.1 patch without widening the declared major range. K341 guards this configuration and lock state.
+
 Acceptance condition: `npm audit --audit-level=moderate` reports zero known vulnerabilities, followed by TypeScript, lint, smoke, interactive DOM, content audit, generator stability, and production build gates.
