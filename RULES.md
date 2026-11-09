@@ -203,9 +203,11 @@
 | R144 | صيانة npm لا تنتظر مسحاً يدوياً متقطعاً: Dependabot يفحص أسبوعياً التبعيات الإنتاجية والتطويرية، ويجمع تحديثات minor/patch في مجموعتين بحد طلبَي سحب؛ لا دمج آلي ولا major صامت لـNext/React. كل اقتراح يغيّر lockfile/manifest علناً ويمر بـ`npm ci` و`audit:deps` والبوابات الكاملة | `.github/dependabot.yml` «npm / increase-if-necessary / production+development groups / major boundaries» · `scripts/engine_smoke.ts` «K346» | K346a–b + YAML parse + audit:deps + CI كامل | ✅ |
 | R145 | لا يُدمج قفل Dependabot إذا فشل `npm ci`: تحديث Tailwind/PostCSS الأول كُشف قفله الآلي ناقصاً لتبعيات proxy المتداخلة، فأُعيد توليده من `main` مع الحفاظ على القيود. مكوّنات Tailwind الأربعة يجب أن تتطابق ضمن major 4 وتحمل resolved/integrity، وPostCSS يبقى ضمن major 8 | `package-lock.json` «Tailwind 4.3.5 / PostCSS 8.5.32 / complete optional tree» · `scripts/engine_smoke.ts` «K347» | npm ci + K347a–b + audit:deps + build + Browser E2E + Lighthouse | ✅ |
 | R146 | ترقية jsdom الرئيسية لا تُقبل كقفل bot أعمى: يُثبت `31.0.0` بعد 981 تفاعلاً ناجحاً، ويُرفع عقد Node للمشروع إلى `>=22.22.2 <23` وتُثبت CI على `22.22.3` لأن jsdom 31 يرفض Node 22 الأقدم. لا يُدخل canvas أصلياً؛ تظل فجوة الرسم shim حتمية في الاختبار | `package.json` «engines / jsdom 31.0.0» · `.github/workflows/ci.yml` «Node 22.22.3» · `package-lock.json` · `scripts/interaktiv_test.tsx` «canvas no-op» · `scripts/engine_smoke.ts` «K348» | npm ci + K348a–b + 981 interaktiv + audit:deps + CI كامل | ✅ |
+| R147 | تثبيت CI لا ينفّذ lifecycle scripts من حزم npm: يستخدم `npm ci --ignore-scripts` قبل أي مولد، ويجب أن يبقى جرد `hasInstallScript` في lock محصوراً في esbuild المراجع. تعمل بوابات smoke/build لاحقاً من artifacts المقفلة فتثبت أن تعطيل postinstall لم يحجب binary لازماً | `.github/workflows/ci.yml` «npm ci --ignore-scripts» · `package-lock.json` «esbuild only hasInstallScript» · `scripts/engine_smoke.ts` «K349» | clean install بلا scripts + esbuild version + K349a–b + smoke + build + CI كامل | ✅ |
 
 ## سجل القرارات
 
+- 2026-11-04 (R147): أُغلق مسار تنفيذ شيفرة تبعية أثناء `npm ci` قبل وصول التدقيقات: CI يمرر `--ignore-scripts`، والقفل الحالي لا يعلن install script إلا لـesbuild 0.28.2. جُرّب تثبيت نظيف بهذه السياسة ثم عمل esbuild و1974 smoke والبناء من الحزم الثنائية المقفلة؛ أي lifecycle جديد يظهر في K349 للمراجعة ولا يُنفّذ أولاً.
 - 2026-11-04 (R146): استُبدل PR Dependabot #43 بقفل مولّد من `main` بعد أن ورث مشكلة القفل الناقص نفسها. اجتاز jsdom 31.0.0 جناح التفاعل الكامل 981/981؛ رُفع حد Node المعلن وثُبت runner على 22.22.3 وفق حد jsdom، وبقي canvas غير مثبت ومُحاكًى بلا backend أصلي متغير.
 - 2026-11-04 (R145): حُجب PR Dependabot الأحمر #42 لأن lockfile الذي ولّده حذف عقد proxy اختيارية يحتاجها npm للتحقق من شجرة Lighthouse. أُعيد تحديث القفل محلياً من `main` إلى Tailwind 4.3.5 وPostCSS 8.5.32؛ نجح `npm ci` من الصفر. تحرس K347 اتساق عائلة Tailwind وبصمات الحزم دون تجميد كل رقعة مستقبلية.
 - 2026-11-04 (R144): أضيفت صيانة npm الأسبوعية إلى حوكمة Dependabot بدل ترك 617 حزمة بلا قناة تحديث منتظمة. تُجمع الرقع والصغريات حسب production/development ويُحصر الطابور في طلبين؛ ترقيات Next/React الكبرى مستبعدة من هذا المسار وتحتاج دورة توافق صريحة، ولا يوجد دمج آلي يتجاوز تدقيق lockfile والـCI.
@@ -285,7 +287,7 @@
 - 2026-10-03 (R39): دَين موثق — إعادة عدّ محتوى README في المرحلة 2.
 - 2026-10-03 (إصلاح عابر): كسرُ PITFALL_RE بشرطةٍ مزدوجة أثناء التثبيت اكتشفه LXIV (الفخاخ كانت ترجع null) وأُصلح فوراً.
 
-*آخر تحديث: 2026-11-04 · R0–R146 مفهرسة مع بواباتها الحالية (R102 فجوة A1، R113 فجوة A2 28–30 غير محسومتَين؛ W1–W6 تحذيرات محتوى موثقة بانتظار مهامها المنفصلة)؛ يُحدَّث السجل مع كل قاعدة أو تغيّر دليل، والبوابة K120 تحرس التزامن. **اكتملت مراجعة B2 بالكامل (29/29 حواراً).***
+*آخر تحديث: 2026-11-04 · R0–R147 مفهرسة مع بواباتها الحالية (R102 فجوة A1، R113 فجوة A2 28–30 غير محسومتَين؛ W1–W6 تحذيرات محتوى موثقة بانتظار مهامها المنفصلة)؛ يُحدَّث السجل مع كل قاعدة أو تغيّر دليل، والبوابة K120 تحرس التزامن. **اكتملت مراجعة B2 بالكامل (29/29 حواراً).***
 
 ## سجلّ القرارات (الأحدث أولاً)
 

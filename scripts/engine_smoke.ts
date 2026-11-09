@@ -14773,6 +14773,25 @@ function collectR262(dir: string, out: string[] = []): string[] {
 }
 
 
+/* ═══ K349 — R147: dependency install cannot execute unreviewed lifecycle scripts ═══ */
+{
+  const ciK349 = readFileSync(".github/workflows/ci.yml", "utf8");
+  const lockK349 = JSON.parse(readFileSync("package-lock.json", "utf8")) as {
+    packages: Record<string, { version?: string; hasInstallScript?: boolean }>;
+  };
+  const scriptedPackagesK349 = Object.entries(lockK349.packages)
+    .filter(([, entry]) => entry.hasInstallScript)
+    .map(([path, entry]) => `${path}@${entry.version}`);
+  ok(ciK349.includes("run: npm ci --ignore-scripts") &&
+    !ciK349.includes("run: npm ci\n") &&
+    scriptedPackagesK349.join("|") === "node_modules/esbuild@0.28.2",
+    "K349a R147: CI يثبت الشجرة بلا تنفيذ lifecycle، وجرد lock يصرّح أن esbuild وحده يملك install script فلا تدخل شيفرة تثبيت جديدة بصمت");
+  ok(ciK349.indexOf("npm ci --ignore-scripts") < ciK349.indexOf("npm run gen:tools") &&
+    ciK349.includes("run: npm run smoke") && ciK349.includes("run: npm run build"),
+    "K349b R147: منع lifecycle يحدث قبل أي مولد، ثم يثبت smoke/build أن esbuild وحزمة الإنتاج تعملان من artifacts المقفلة بلا postinstall");
+}
+
+
 /* ═══ K400 — B2 Prüfungsschema: vier getrennte Module (R401/R139). ═══ */
 {
   const pruef = JSON.parse(readFileSync("content/pruefung-b2.json","utf8")) as { gesamtAnzeige:number; bestehenJeModul:boolean; bestehenProzentJeModul:number; sourceReviewStatus:string; module:{id:string; punkte:number; bestehen:number}[] };
