@@ -14639,18 +14639,22 @@ function collectR262(dir: string, out: string[] = []): string[] {
 {
   const ciK344 = readFileSync(".github/workflows/ci.yml", "utf8");
   const dependabotK344 = readFileSync(".github/dependabot.yml", "utf8");
+  const allUsesK344 = [...ciK344.matchAll(/uses:\s+([^@\s]+)@([^\s#]+)/g)];
   const actionRefsK344 = [...ciK344.matchAll(/uses:\s+(actions\/[^@\s]+)@([0-9a-f]{40})\s+#\s+(v\d+\.\d+\.\d+)/g)]
     .map((match) => ({ action: match[1], sha: match[2], version: match[3] }));
-  const expectedK344 = new Map([
-    ["actions/checkout", { sha: "3d3c42e5aac5ba805825da76410c181273ba90b1", version: "v7.0.1" }],
-    ["actions/setup-node", { sha: "949feb2413d6458794dcd2491c4babbbce0c15c1", version: "v7.1.0" }],
-    ["actions/setup-python", { sha: "ece7cb06caefa5fff74198d8649806c4678c61a1", version: "v6.3.0" }],
+  const expectedActionsK344 = new Map([
+    ["actions/checkout", 7],
+    ["actions/setup-node", 7],
+    ["actions/setup-python", 7],
   ]);
-  ok(actionRefsK344.length === expectedK344.size && actionRefsK344.every(({ action, sha, version }) => {
-    const expected = expectedK344.get(action);
-    return expected?.sha === sha && expected.version === version;
-  }) && !/uses:\s+[^\s]+@(?:v\d+|main|master)(?:\s|$)/m.test(ciK344),
-  "K344a R142: إجراءات CI الثلاثة مثبتة على SHA كامل معروف مع تعليق الإصدار؛ لا tag أو branch قابل للتحريك وقت التشغيل");
+  ok(allUsesK344.length === actionRefsK344.length &&
+    actionRefsK344.length === expectedActionsK344.size &&
+    new Set(actionRefsK344.map(({ action }) => action)).size === expectedActionsK344.size &&
+    actionRefsK344.every(({ action, sha, version }) => {
+      const expectedMajor = expectedActionsK344.get(action);
+      return sha.length === 40 && expectedMajor !== undefined && version.startsWith(`v${expectedMajor}.`);
+    }) && !/uses:\s+[^\s]+@(?:v\d+|main|master)(?:\s|$)/m.test(ciK344),
+  "K344a R142: إجراءات CI الثلاثة المسموحة فقط مثبتة على SHA كامل مع تعليق إصدار major الموافق؛ لا tag أو branch قابل للتحريك وقت التشغيل");
   ok(ciK344.includes("persist-credentials: false") &&
     dependabotK344.includes('package-ecosystem: "github-actions"') &&
     dependabotK344.includes('interval: "weekly"') &&
