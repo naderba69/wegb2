@@ -3468,13 +3468,13 @@ void 0;
   const lock = JSON.parse(readFileSync("package-lock.json", "utf8")) as { packages: Record<string, { version?: string }> };
   ok(pkg.dependencies.next === "15.5.29" && lock.packages["node_modules/next"]?.version === "15.5.29" &&
     pkg.devDependencies.postcss === "^8.5.28" && pkg.overrides.postcss === "$postcss" &&
-    pkg.devDependencies.jsdom === "30.1.3" && lock.packages["node_modules/jsdom"]?.version === "30.1.3" &&
+    pkg.devDependencies.jsdom === "31.0.0" && lock.packages["node_modules/jsdom"]?.version === "31.0.0" &&
     pkg.devDependencies["@next/eslint-plugin-next"] === "15.5.29" && /^8\.5\.\d+$/.test(lock.packages["node_modules/postcss"]?.version ?? "") &&
     pkg.overrides["@typescript-eslint/typescript-estree"].minimatch === "11.0.4" &&
     lock.packages["node_modules/@typescript-eslint/typescript-estree/node_modules/minimatch"]?.version === "11.0.4" &&
     lock.packages["node_modules/minimatch"]?.version === "3.1.5" &&
     pkg.scripts["audit:deps"] === "npm audit --audit-level=moderate",
-    "K143f ترقيع أمني ضمن Next 15: Next 15.5.29 + jsdom 30.1.3 + PostCSS موحّد + minimatch 11 محصور في ESTree، بلا كسر ESLint أو قفزة رئيسية");
+    "K143f خط أساس التبعيات: Next 15.5.29 + jsdom 31.0.0 + PostCSS 8.5 موحّد + minimatch 11 محصور في ESTree، مع audit مانع");
 
   const auditSrc = readFileSync("scripts/audit_inhalt.ts", "utf8");
   const scripts = JSON.parse(readFileSync("package.json", "utf8")).scripts as Record<string, string>;
@@ -14746,6 +14746,30 @@ function collectR262(dir: string, out: string[] = []): string[] {
   ok(packageK347.devDependencies?.postcss === "^8.5.28" && /^8\.\d+\.\d+$/.test(postcssK347?.version ?? "") &&
     Boolean(postcssK347?.resolved && postcssK347.integrity),
     "K347b R145: PostCSS يبقى ضمن major 8 ويملك resolved/integrity؛ npm ci يحرس اكتمال شجرة lock قبل بقية البوابات");
+}
+
+
+/* ═══ K348 — R146: jsdom 31 major is tied to its Node floor and test contract ═══ */
+{
+  const packageK348 = JSON.parse(readFileSync("package.json", "utf8")) as {
+    engines?: { node?: string };
+    devDependencies?: Record<string, string>;
+    scripts?: Record<string, string>;
+  };
+  const lockK348 = JSON.parse(readFileSync("package-lock.json", "utf8")) as {
+    packages: Record<string, { version?: string; engines?: { node?: string } }>;
+  };
+  const ciK348 = readFileSync(".github/workflows/ci.yml", "utf8");
+  const interaktivK348 = readFileSync("scripts/interaktiv_test.tsx", "utf8");
+  ok(packageK348.engines?.node === ">=22.22.2 <23" && ciK348.includes('node-version: "22.22.3"') &&
+    packageK348.devDependencies?.jsdom === "31.0.0" &&
+    lockK348.packages["node_modules/jsdom"]?.version === "31.0.0" &&
+    lockK348.packages["node_modules/jsdom"]?.engines?.node === "^22.22.2 || ^24.15.0 || >=26.0.0",
+    "K348a R146: jsdom 31 مثبت، وعقد المشروع وCI يفرضان Node 22.22.2+ بدلاً من تشغيل major جديد على runtime أقدم غير مدعوم");
+  ok(packageK348.scripts?.interaktiv?.includes("--external:jsdom") === true &&
+    interaktivK348.includes("Object.defineProperty(dom.window.HTMLCanvasElement.prototype, \"getContext\"") &&
+    !lockK348.packages["node_modules/@napi-rs/canvas"],
+    "K348b R146: جناح DOM يستورد jsdom 31 الفعلي ويُبقي canvas فجوةً مصطنعة حتمية بلا backend أصلي أو بايتات رسم متغيرة");
 }
 
 
