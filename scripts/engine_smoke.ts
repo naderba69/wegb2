@@ -14997,6 +14997,44 @@ function collectR262(dir: string, out: string[] = []): string[] {
     "K334g R309: حوار التأكيد يعرض تنبيه القفل وبطاقة القفل وزرّ «ابدأ اختبار الوحدة الآن» الذي يستدعي oeffneModulPruefung");
 }
 
+/* ═══ K350 — R148: ميزانية صور البطاقات تمنع إعادة أصول PNG المكررة ═══ */
+{
+  const cardDirK350 = "public/cards";
+  const cardAssetsK350 = readdirSync(cardDirK350).sort();
+  const cardAssetBytesK350 = cardAssetsK350.reduce(
+    (sum, name) => sum + readFileSync(`${cardDirK350}/${name}`).byteLength,
+    0,
+  );
+  ok(cardAssetsK350.length > 0 && cardAssetsK350.every((name) => name.endsWith(".webp")) && cardAssetBytesK350 <= 20_000_000,
+    `K350a R148: مخزون البطاقات WebP فقط وبحد 20MB — لا رجوع لنسخ PNG المكررة (${cardAssetsK350.length} ملف/${cardAssetBytesK350} بايت)`);
+
+  const vocabK350 = JSON.parse(readFileSync("content/vocab.json", "utf8")) as unknown;
+  const cardRefsK350: string[] = [];
+  const collectCardRefsK350 = (value: unknown): void => {
+    if (Array.isArray(value)) {
+      for (const item of value) collectCardRefsK350(item);
+      return;
+    }
+    if (!value || typeof value !== "object") return;
+    for (const [key, item] of Object.entries(value)) {
+      if (key === "img" && typeof item === "string") cardRefsK350.push(item);
+      collectCardRefsK350(item);
+    }
+  };
+  collectCardRefsK350(vocabK350);
+  const uniqueCardRefsK350 = [...new Set(cardRefsK350)].sort();
+  const safeCardRefsK350 = uniqueCardRefsK350.every((ref) => /^\/cards\/[a-z0-9._-]+\.webp$/.test(ref));
+  const missingCardRefsK350 = uniqueCardRefsK350.filter((ref) => !existsSync(`public${ref}`));
+  ok(cardRefsK350.length > 0 && safeCardRefsK350 && missingCardRefsK350.length === 0,
+    `K350b R148: كل مراجع vocab صور WebP محلية آمنة وموجودة (${cardRefsK350.length} تصريح/${uniqueCardRefsK350.length} أصل فريد)`);
+
+  const referencedSizesK350 = uniqueCardRefsK350.map((ref) => readFileSync(`public${ref}`).byteLength);
+  const referencedBytesK350 = referencedSizesK350.reduce((sum, bytes) => sum + bytes, 0);
+  const referencedMaxK350 = Math.max(0, ...referencedSizesK350);
+  ok(referencedBytesK350 <= 4_000_000 && referencedMaxK350 <= 120_000,
+    `K350c R148: صور البطاقات الحية ضمن 4MB إجمالاً و120KB للملف (${referencedBytesK350}/${referencedMaxK350} بايت)`);
+}
+
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);
 if (fails.length) {
   for (const f of fails) console.log("  ✗ " + f);
