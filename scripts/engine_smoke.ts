@@ -14664,6 +14664,24 @@ function collectR262(dir: string, out: string[] = []): string[] {
 }
 
 
+/* ═══ K345 — R143: audio-QC Python supply chain is hash-locked and wheel-only ═══ */
+{
+  const requirementsK345 = readFileSync("scripts/requirements-audio-qc.txt", "utf8");
+  const runnerK345 = readFileSync("scripts/run_audio_qc.py", "utf8");
+  const pinsK345 = [...requirementsK345.matchAll(/^([a-z0-9_-]+)==([^\s\\]+)\s*\\$/gmi)]
+    .map((match) => `${match[1]}==${match[2]}`);
+  const hashesK345 = [...requirementsK345.matchAll(/--hash=sha256:([0-9a-f]{64})(?:\s*\\)?$/gm)]
+    .map((match) => match[1]);
+  ok(pinsK345.join("|") === "miniaudio==1.71|numpy==2.4.6|cffi==2.1.1|pycparser==3.12" &&
+    hashesK345.length === 201 && new Set(hashesK345).size === hashesK345.length,
+    "K345a R143: قفل audio-QC يحصر الحزم الأربع ونسخها، ويثبت 201 بصمة wheel فريدة من إصدارات PyPI المنشورة");
+  ok(runnerK345.includes('"--require-hashes"') && runnerK345.includes('"--only-binary=:all:"') &&
+    runnerK345.includes("hash_pattern.fullmatch(line)") && runnerK345.includes("if not pinned or unhashed:") &&
+    runnerK345.indexOf('"--require-hashes"') < runnerK345.indexOf('"--requirement", str(REQUIREMENTS)'),
+    "K345b R143: مشغّل الصوت يتحقق من بنية القفل حتى مع بيئة موجودة، ثم يرفض sdist أو wheel لا تطابق sha256 قبل QC");
+}
+
+
 /* ═══ K400 — B2 Prüfungsschema: vier getrennte Module (R401/R139). ═══ */
 {
   const pruef = JSON.parse(readFileSync("content/pruefung-b2.json","utf8")) as { gesamtAnzeige:number; bestehenJeModul:boolean; bestehenProzentJeModul:number; sourceReviewStatus:string; module:{id:string; punkte:number; bestehen:number}[] };

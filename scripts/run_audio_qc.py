@@ -6,6 +6,7 @@ from __future__ import annotations
 import json
 import os
 from pathlib import Path
+import re
 import subprocess
 import sys
 import venv
@@ -23,15 +24,35 @@ def env_python() -> Path:
 
 
 def pinned_requirements() -> dict[str, str]:
+    """Validate the wheel lock and return the exact package versions it governs."""
     pinned: dict[str, str] = {}
+    hashes: dict[str, set[str]] = {}
+    current_package: str | None = None
+    hash_pattern = re.compile(r"--hash=sha256:([0-9a-f]{64})$")
+
     for raw_line in REQUIREMENTS.read_text(encoding="utf-8").splitlines():
         line = raw_line.strip()
         if not line or line.startswith("#"):
             continue
-        package, separator, version = line.partition("==")
-        if not separator or not package or not version:
-            raise ValueError(f"audio QC requirement must be pinned with ==: {line!r}")
+        line = line.removesuffix("\\").strip()
+        hash_match = hash_pattern.fullmatch(line)
+        if hash_match:
+            if current_package is None:
+                raise ValueError("audio QC hash appears before a pinned requirement")
+            hashes[current_package].add(hash_match.group(1))
+            continue
+
+        requirement = line.split(maxsplit=1)[0]
+        package, separator, version = requirement.partition("==")
+        if not separator or not package or not version or package in pinned:
+            raise ValueError(f"audio QC requirement must be uniquely pinned with ==: {line!r}")
         pinned[package] = version
+        hashes[package] = set()
+        current_package = package
+
+    unhashed = [package for package in pinned if not hashes[package]]
+    if not pinned or unhashed:
+        raise ValueError(f"audio QC requirements must carry sha256 hashes: {unhashed!r}")
     return pinned
 
 
@@ -60,7 +81,13 @@ def main() -> int:
         if not python.exists():
             venv.EnvBuilder(with_pip=True, clear=False).create(ENV_DIR)
         subprocess.run(
-            [str(python), "-m", "pip", "install", "--disable-pip-version-check", "--requirement", str(REQUIREMENTS)],
+            [
+                str(python), "-m", "pip", "install",
+                "--disable-pip-version-check",
+                "--require-hashes",
+                "--only-binary=:all:",
+                "--requirement", str(REQUIREMENTS),
+            ],
             cwd=ROOT,
             check=True,
         )
