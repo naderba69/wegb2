@@ -14470,7 +14470,7 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const ciK337 = readFileSync(".github/workflows/ci.yml", "utf8");
   ok(packageK337.scripts?.["audit:words"] === "tsx scripts/wort_fuer_wort_audit.ts" &&
     ciK337.includes("runs-on: ubuntu-24.04") &&
-    ciK337.includes("uses: actions/checkout@v7") && ciK337.includes("uses: actions/setup-node@v7") &&
+    ciK337.includes("uses: actions/checkout@") && ciK337.includes("uses: actions/setup-node@") &&
     ciK337.includes("run: npm run audit:words") && wordAuditK337.includes("process.exitCode = 1"),
     "K337a التدقيق الحرفي أمر قابل لإعادة التشغيل وبوابة CI مانعة على Actions/Node الحديثة عند وجود blocker مؤكد");
   ok(wordAuditK337.includes("re.lastIndex = 0") && wordAuditK337.includes("Rule regressions:") &&
@@ -14632,6 +14632,31 @@ function collectR262(dir: string, out: string[] = []): string[] {
     lockK343.packages["node_modules/@lhci/cli"]?.version === "0.16.0" &&
     lockK343.packages["node_modules/basic-ftp"]?.version === "6.2.6",
     "K343 R141: Lighthouse مثبت في lockfile وتبع basic-ftp على الرقعة الآمنة؛ لا تنزيل npx خارج تدقيق التبعيات");
+}
+
+
+/* ═══ K344 — R142: GitHub Actions are immutable and update-governed ═══ */
+{
+  const ciK344 = readFileSync(".github/workflows/ci.yml", "utf8");
+  const dependabotK344 = readFileSync(".github/dependabot.yml", "utf8");
+  const actionRefsK344 = [...ciK344.matchAll(/uses:\s+(actions\/[^@\s]+)@([0-9a-f]{40})\s+#\s+(v\d+\.\d+\.\d+)/g)]
+    .map((match) => ({ action: match[1], sha: match[2], version: match[3] }));
+  const expectedK344 = new Map([
+    ["actions/checkout", { sha: "3d3c42e5aac5ba805825da76410c181273ba90b1", version: "v7.0.1" }],
+    ["actions/setup-node", { sha: "949feb2413d6458794dcd2491c4babbbce0c15c1", version: "v7.1.0" }],
+    ["actions/setup-python", { sha: "ece7cb06caefa5fff74198d8649806c4678c61a1", version: "v6.3.0" }],
+  ]);
+  ok(actionRefsK344.length === expectedK344.size && actionRefsK344.every(({ action, sha, version }) => {
+    const expected = expectedK344.get(action);
+    return expected?.sha === sha && expected.version === version;
+  }) && !/uses:\s+[^\s]+@(?:v\d+|main|master)(?:\s|$)/m.test(ciK344),
+  "K344a R142: إجراءات CI الثلاثة مثبتة على SHA كامل معروف مع تعليق الإصدار؛ لا tag أو branch قابل للتحريك وقت التشغيل");
+  ok(ciK344.includes("persist-credentials: false") &&
+    dependabotK344.includes('package-ecosystem: "github-actions"') &&
+    dependabotK344.includes('interval: "weekly"') &&
+    dependabotK344.includes("open-pull-requests-limit: 2") &&
+    dependabotK344.includes("groups:\n      github-actions:"),
+  "K344b R142: checkout لا يترك رمز GitHub في إعداد Git، وDependabot يجمع تحديثات الإجراءات أسبوعياً في PR قابل للمراجعة والبوابات");
 }
 
 

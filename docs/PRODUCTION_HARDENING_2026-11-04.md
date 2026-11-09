@@ -45,6 +45,12 @@ The full gate previously ran once for a feature-branch push and again for the pu
 
 Lighthouse CI was invoked through `npx`, so its transitive dependency tree was downloaded outside the repository lockfile and never appeared in the blocking dependency audit. `@lhci/cli` 0.16.0 is now an exact development dependency and the script calls the local `lhci` binary. Once visible to `npm audit`, its proxy chain exposed nine high-severity paths to GHSA-c475-qrg2-pj4r; the affected `basic-ftp` package is overridden to patched 6.2.6. A clean install audits the complete 617-package tree with zero known moderate-or-higher findings. K343 guards the exact LHCI and patched transitive versions.
 
+## CI action supply chain (R142)
+
+The CI workflow previously referenced `actions/checkout@v7`, `actions/setup-node@v7`, and `actions/setup-python@v6`. Those major tags are convenient but mutable: a later tag move could change executable CI code without any repository diff or review.
+
+The three actions are now pinned to the full commit SHAs corresponding to checkout 7.0.1, setup-node 7.1.0, and setup-python 6.3.0. Checkout also sets `persist-credentials: false`, so the workflow token is removed from Git configuration after the initial read-only checkout. A weekly, grouped GitHub Actions Dependabot configuration preserves maintainability: updates arrive as bounded pull requests and must pass the same production gates before merge. K344 rejects mutable tag/branch references, unexpected action commits, a missing credential restriction, or removal of the update policy.
+
 ## Progress-store lifecycle (R140)
 
 `useProgress.update` previously called `saveProgress` from inside a functional React state updater. Because saving synchronously broadcasts the progress event, a second subscriber could update while React was still rendering the writer, producing the runtime warning “Cannot update a component while rendering a different component.” Persistence and event delivery now happen outside the state-updater callback, while a synchronized ref preserves sequential updates and the existing save-failure rollback contract. The calibration panel receives its owner’s updater rather than opening a nested subscription. K342 and R316 cover two immediate writes, two subscribers, persistent equality, and absence of the cross-render warning; the complete interactive suite returns with clean stderr.
