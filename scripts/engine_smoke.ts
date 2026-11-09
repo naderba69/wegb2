@@ -111,6 +111,7 @@ import { levelOfXp, checkAbzeichen, ABZEICHEN, XP_LEVELS } from "../lib/spiel";
 import { loadProgress, touchStreak, separateLegacyManualMinutes } from "../lib/store";
 import { createHash } from "crypto";
 import { readFileSync, existsSync , readdirSync} from "fs";
+import { parse as parseYaml } from "yaml";
 import { leseText, getSatz, sentences, texts, dialogues, writingTasks, alleVokabeln, fehlerList, grammarMap, verben, szenarien, pakete, haerte, muendlich, vortrag, mnemonikMap, deFormOf, luecken, leseleiter, redemittelBank, hoerneu, kollokVertiefung, synonymVertiefung,
 } from "../lib/content";
 import { hoerenAudio, diktatAudio, diktatSrc, dialogAudioArt, dialogAudioIstKi, dialogAudioSrc } from "../lib/content";
@@ -14679,6 +14680,48 @@ function collectR262(dir: string, out: string[] = []): string[] {
     runnerK345.includes("hash_pattern.fullmatch(line)") && runnerK345.includes("if not pinned or unhashed:") &&
     runnerK345.indexOf('"--require-hashes"') < runnerK345.indexOf('"--requirement", str(REQUIREMENTS)'),
     "K345b R143: مشغّل الصوت يتحقق من بنية القفل حتى مع بيئة موجودة، ثم يرفض sdist أو wheel لا تطابق sha256 قبل QC");
+}
+
+
+/* ═══ K346 — R144: npm dependency updates are bounded and review-governed ═══ */
+{
+  type DependabotGroupK346 = {
+    "dependency-type"?: string;
+    "update-types"?: string[];
+  };
+  type DependabotUpdateK346 = {
+    "package-ecosystem"?: string;
+    directory?: string;
+    schedule?: { interval?: string };
+    "versioning-strategy"?: string;
+    "open-pull-requests-limit"?: number;
+    groups?: Record<string, DependabotGroupK346>;
+    ignore?: Array<{ "dependency-name"?: string; "update-types"?: string[] }>;
+  };
+  const policyK346 = parseYaml(readFileSync(".github/dependabot.yml", "utf8")) as {
+    version?: number;
+    updates?: DependabotUpdateK346[];
+  };
+  const npmK346 = policyK346.updates?.find((update) => update["package-ecosystem"] === "npm");
+  ok(policyK346.version === 2 && npmK346?.directory === "/" &&
+    npmK346.schedule?.interval === "weekly" && npmK346["versioning-strategy"] === "increase-if-necessary" &&
+    npmK346["open-pull-requests-limit"] === 2,
+    "K346a R144: تحديثات npm الأسبوعية مقيدة بطلبَي سحب وتزيد القيد المعلن فقط عند الحاجة، فلا تتجاوز lockfile أو المراجعة");
+
+  const productionK346 = npmK346?.groups?.["npm-production"];
+  const developmentK346 = npmK346?.groups?.["npm-development"];
+  const expectedTypesK346 = "minor|patch";
+  const majorBoundariesK346 = new Set(
+    (npmK346?.ignore ?? [])
+      .filter((rule) => rule["update-types"]?.includes("version-update:semver-major"))
+      .map((rule) => rule["dependency-name"]),
+  );
+  ok(productionK346?.["dependency-type"] === "production" &&
+    productionK346?.["update-types"]?.join("|") === expectedTypesK346 &&
+    developmentK346?.["dependency-type"] === "development" &&
+    developmentK346?.["update-types"]?.join("|") === expectedTypesK346 &&
+    ["next", "react", "react-dom"].every((name) => majorBoundariesK346.has(name)),
+    "K346b R144: رقع/صغريات الإنتاج والتطوير تصل في مجموعتين قابلتين للتدقيق، وترقيات majors للإطار منفصلة عن الصيانة الآلية");
 }
 
 
