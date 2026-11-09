@@ -200,9 +200,11 @@
 | R141 | أداة Lighthouse جزء مثبت من lockfile وتدخل `npm ci` و`audit:deps`؛ يُمنع تنزيلها عبر `npx` خارج جرد التدقيق. النسخة `0.16.0` ثابتة، وتُفرض رقعة `basic-ftp 6.2.6` لإغلاق GHSA-c475-qrg2-pj4r في شجرة proxy التابعة لها | `package.json` «@lhci/cli 0.16.0 / lhci autorun / basic-ftp 6.2.6» · `package-lock.json` · `scripts/engine_smoke.ts` «K339b/K343» · `.github/workflows/ci.yml` | npm ci + audit:deps (0) + K339b + K343 + Lighthouse CI | ✅ |
 | R142 | إجراءات GitHub Actions لا تُنفّذ من tag أو branch قابل للتحريك: checkout وNode وPython مثبتة على SHA كامل مع major موثق، وcheckout لا يترك رمز GitHub في إعداد Git. Dependabot يجمع تحديثات الإجراءات أسبوعياً في PR محدود العدد يمر بالبوابات قبل اعتماده؛ K344 يسمح بتحديث SHA المراجع داخل قائمة الإجراءات الثلاثة فقط بدل قفل لقطة تبطل كل تحديث مشروع | `.github/workflows/ci.yml` «commit SHA / persist-credentials: false» · `.github/dependabot.yml` «github-actions / weekly» · `scripts/engine_smoke.ts` «K344» | K344a–b + audit:repo + CI كامل | ✅ |
 | R143 | بيئة audio-QC لا تكتفي بإصدارات Python ثابتة: كل حزمة مباشرة ومتعدية لها بصمات SHA-256 لعجلات PyPI المنشورة، ويُمنع sdist أو artifact غير مدرج. يتحقق المشغّل من اكتمال القفل حتى إن كانت البيئة موجودة قبل تثبيت `--require-hashes --only-binary=:all:` | `scripts/requirements-audio-qc.txt` «201 wheel hashes» · `scripts/run_audio_qc.py` «hash_pattern / require-hashes / only-binary» · `scripts/engine_smoke.ts` «K345» | K345a–b + audio:qc من بيئة نظيفة + CI كامل | ✅ |
+| R144 | صيانة npm لا تنتظر مسحاً يدوياً متقطعاً: Dependabot يفحص أسبوعياً التبعيات الإنتاجية والتطويرية، ويجمع تحديثات minor/patch في مجموعتين بحد طلبَي سحب؛ لا دمج آلي ولا major صامت لـNext/React. كل اقتراح يغيّر lockfile/manifest علناً ويمر بـ`npm ci` و`audit:deps` والبوابات الكاملة | `.github/dependabot.yml` «npm / increase-if-necessary / production+development groups / major boundaries» · `scripts/engine_smoke.ts` «K346» | K346a–b + YAML parse + audit:deps + CI كامل | ✅ |
 
 ## سجل القرارات
 
+- 2026-11-04 (R144): أضيفت صيانة npm الأسبوعية إلى حوكمة Dependabot بدل ترك 617 حزمة بلا قناة تحديث منتظمة. تُجمع الرقع والصغريات حسب production/development ويُحصر الطابور في طلبين؛ ترقيات Next/React الكبرى مستبعدة من هذا المسار وتحتاج دورة توافق صريحة، ولا يوجد دمج آلي يتجاوز تدقيق lockfile والـCI.
 - 2026-11-04 (R143): حُوّل قفل أدوات audio-QC من نسخ `==` فقط إلى 201 بصمة SHA-256 لكل عجلات الإصدارات الأربعة المنشورة؛ يرفض pip المصدر المبني وأي بايتات غير مدرجة. يتحقق المشغّل من بنية القفل قبل قبول البيئة الحالية، وتحرس K345 الحزم والبصمات وعلمي التنفيذ.
 - 2026-11-04 (R142): ثُبتت إجراءات checkout/setup-node/setup-python على commits كاملة بدل major tags المتحركة، وعُطّل حفظ اعتماد checkout بعد الجلب. أضيف تحديث Dependabot أسبوعي مجمّع كي لا تتحول قابلية التحديث إلى تنفيذ غير مراجع؛ روجع أول اقتراح إلى setup-python 7.1.0 الموقّع، وصارت K344 تحرس قائمة الإجراءات وSHA/major دون لقطة SHA جامدة تجعل كل تحديث مشروع أحمر قبل الاختبار الوظيفي.
 - 2026-11-04 (R141): نُقلت LHCI 0.16.0 من تنزيل `npx` خارج lockfile إلى devDependency مثبتة. كشف إدخالها إلى `npm audit` تسع إصابات high عبر `basic-ftp`، فأُغلقت بoverride إلى 6.2.6؛ صار تثبيت 617 حزمة وتدقيقها صفراً، وتحرس K343 عدم رجوع المسار غير المحكوم.
@@ -279,7 +281,7 @@
 - 2026-10-03 (R39): دَين موثق — إعادة عدّ محتوى README في المرحلة 2.
 - 2026-10-03 (إصلاح عابر): كسرُ PITFALL_RE بشرطةٍ مزدوجة أثناء التثبيت اكتشفه LXIV (الفخاخ كانت ترجع null) وأُصلح فوراً.
 
-*آخر تحديث: 2026-11-04 · R0–R143 مفهرسة مع بواباتها الحالية (R102 فجوة A1، R113 فجوة A2 28–30 غير محسومتَين؛ W1–W6 تحذيرات محتوى موثقة بانتظار مهامها المنفصلة)؛ يُحدَّث السجل مع كل قاعدة أو تغيّر دليل، والبوابة K120 تحرس التزامن. **اكتملت مراجعة B2 بالكامل (29/29 حواراً).***
+*آخر تحديث: 2026-11-04 · R0–R144 مفهرسة مع بواباتها الحالية (R102 فجوة A1، R113 فجوة A2 28–30 غير محسومتَين؛ W1–W6 تحذيرات محتوى موثقة بانتظار مهامها المنفصلة)؛ يُحدَّث السجل مع كل قاعدة أو تغيّر دليل، والبوابة K120 تحرس التزامن. **اكتملت مراجعة B2 بالكامل (29/29 حواراً).***
 
 ## سجلّ القرارات (الأحدث أولاً)
 
