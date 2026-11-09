@@ -3469,7 +3469,7 @@ void 0;
   ok(pkg.dependencies.next === "15.5.29" && lock.packages["node_modules/next"]?.version === "15.5.29" &&
     pkg.devDependencies.postcss === "^8.5.28" && pkg.overrides.postcss === "$postcss" &&
     pkg.devDependencies.jsdom === "30.1.3" && lock.packages["node_modules/jsdom"]?.version === "30.1.3" &&
-    pkg.devDependencies["@next/eslint-plugin-next"] === "15.5.29" && lock.packages["node_modules/postcss"]?.version === "8.5.28" &&
+    pkg.devDependencies["@next/eslint-plugin-next"] === "15.5.29" && /^8\.5\.\d+$/.test(lock.packages["node_modules/postcss"]?.version ?? "") &&
     pkg.overrides["@typescript-eslint/typescript-estree"].minimatch === "11.0.4" &&
     lock.packages["node_modules/@typescript-eslint/typescript-estree/node_modules/minimatch"]?.version === "11.0.4" &&
     lock.packages["node_modules/minimatch"]?.version === "3.1.5" &&
@@ -14722,6 +14722,30 @@ function collectR262(dir: string, out: string[] = []): string[] {
     developmentK346?.["update-types"]?.join("|") === expectedTypesK346 &&
     ["next", "react", "react-dom"].every((name) => majorBoundariesK346.has(name)),
     "K346b R144: رقع/صغريات الإنتاج والتطوير تصل في مجموعتين قابلتين للتدقيق، وترقيات majors للإطار منفصلة عن الصيانة الآلية");
+}
+
+
+/* ═══ K347 — R145: Tailwind/PostCSS lock refresh stays internally coherent ═══ */
+{
+  const packageK347 = JSON.parse(readFileSync("package.json", "utf8")) as {
+    devDependencies?: Record<string, string>;
+  };
+  const lockK347 = JSON.parse(readFileSync("package-lock.json", "utf8")) as {
+    packages: Record<string, { version?: string; resolved?: string; integrity?: string }>;
+  };
+  const tailwindNamesK347 = ["tailwindcss", "@tailwindcss/postcss", "@tailwindcss/node", "@tailwindcss/oxide"];
+  const tailwindEntriesK347 = tailwindNamesK347.map((name) => lockK347.packages[`node_modules/${name}`]);
+  const tailwindVersionK347 = tailwindEntriesK347[0]?.version;
+  ok(packageK347.devDependencies?.tailwindcss === "^4.0.0" &&
+    packageK347.devDependencies?.["@tailwindcss/postcss"] === "^4.0.0" &&
+    typeof tailwindVersionK347 === "string" && /^4\.\d+\.\d+$/.test(tailwindVersionK347) &&
+    tailwindEntriesK347.every((entry) => entry?.version === tailwindVersionK347 && entry.resolved && entry.integrity),
+    "K347a R145: قيد Tailwind يبقى ضمن major 4 ومكوّنات postcss/node/oxide مقفلة على الرقعة نفسها ببصمات registry كاملة");
+
+  const postcssK347 = lockK347.packages["node_modules/postcss"];
+  ok(packageK347.devDependencies?.postcss === "^8.5.28" && /^8\.\d+\.\d+$/.test(postcssK347?.version ?? "") &&
+    Boolean(postcssK347?.resolved && postcssK347.integrity),
+    "K347b R145: PostCSS يبقى ضمن major 8 ويملك resolved/integrity؛ npm ci يحرس اكتمال شجرة lock قبل بقية البوابات");
 }
 
 
