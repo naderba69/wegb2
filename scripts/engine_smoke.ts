@@ -15005,8 +15005,8 @@ function collectR262(dir: string, out: string[] = []): string[] {
     (sum, name) => sum + readFileSync(`${cardDirK350}/${name}`).byteLength,
     0,
   );
-  ok(cardAssetsK350.length > 0 && cardAssetsK350.every((name) => name.endsWith(".webp")) && cardAssetBytesK350 <= 20_000_000,
-    `K350a R148: مخزون البطاقات WebP فقط وبحد 20MB — لا رجوع لنسخ PNG المكررة (${cardAssetsK350.length} ملف/${cardAssetBytesK350} بايت)`);
+  ok(cardAssetsK350.length > 0 && cardAssetsK350.every((name) => name.endsWith(".webp")) && cardAssetBytesK350 <= 4_000_000,
+    `K350a R148/R149: مخزون البطاقات WebP فقط وبحد 4MB — لا رجوع لنسخ PNG أو مخزون غير حي (${cardAssetsK350.length} ملف/${cardAssetBytesK350} بايت)`);
 
   const vocabK350 = JSON.parse(readFileSync("content/vocab.json", "utf8")) as unknown;
   const cardRefsK350: string[] = [];
@@ -15033,6 +15033,11 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const referencedMaxK350 = Math.max(0, ...referencedSizesK350);
   ok(referencedBytesK350 <= 4_000_000 && referencedMaxK350 <= 120_000,
     `K350c R148: صور البطاقات الحية ضمن 4MB إجمالاً و120KB للملف (${referencedBytesK350}/${referencedMaxK350} بايت)`);
+
+  const referencedAssetNamesK351 = new Set(uniqueCardRefsK350.map((ref) => ref.slice("/cards/".length)));
+  const orphanCardAssetsK351 = cardAssetsK350.filter((name) => !referencedAssetNamesK351.has(name));
+  ok(orphanCardAssetsK351.length === 0 && referencedAssetNamesK351.size === cardAssetsK350.length,
+    `K351 R149: كل ملف في public/cards مُشار إليه فعلياً من vocab — صفر أصول يتيمة (${cardAssetsK350.length}/${referencedAssetNamesK351.size})`);
 }
 
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);
