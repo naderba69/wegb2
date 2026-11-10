@@ -342,7 +342,8 @@ async function main() {
       const result = await evalJs(cdp, sessionId, `(async()=>{
         const nav=document.querySelector('[data-testid="bottom-nav"]');
         const actions=[...document.querySelectorAll('main button:not([disabled])')]
-          .filter((element)=>element.getClientRects().length&&getComputedStyle(element).visibility!=="hidden");
+          .filter((element)=>element.getClientRects().length&&!element.closest('details:not([open])')&&
+            getComputedStyle(element).visibility!=="hidden");
         const target=actions.at(-1);
         if(!nav||!target)return {error:"missing nav/action"};
         target.scrollIntoView({block:"end",inline:"nearest",behavior:"instant"});
