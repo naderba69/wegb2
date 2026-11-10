@@ -39,6 +39,9 @@ import { baueFvgAufgabe } from "./fvg-aufgabe";
 import { baueKompositaWoche } from "./komposita-aufgabe";
 import { legacyThroughDayFor } from "./curriculum-schedule";
 import { beiBankenBereit, beiVertiefungBereit } from "./bankload";
+import { rng, seededShuffle } from "./seeded-rng";
+
+export { rng } from "./seeded-rng";
 
 /**
  * محرّك الخطة اليومية — قلب المشروع المنهجي
@@ -50,36 +53,14 @@ import { beiBankenBereit, beiVertiefungBereit } from "./bankload";
  * التعويض: مهام غير مُنجَزة تُرحَّل إلزامية إلى أول الغد.
  */
 
-// ── حتمية العشوائية (LCG ببذرة ثابتة لكل يوم) ─────────────────────────
-// P1 fix code/lcg-rng — Math.abs()% كان يفقد حتمية المنصات مع seed سالب (rng(-7) ≠)
-// الحل: modulo آمن + نطاق [1, MOD-1] بلا abs، Park-Miller 16807 حتمي عبر Node/Browser
-export function rng(seed: number) {
-  const MOD = 2147483647;
-  let s = Math.floor(seed) % MOD;
-  if (s <= 0) s += MOD - 1; // يحوّل 0→MOD-1 و السالب→موجب بلا فقدان
-  if (s <= 0 || s >= MOD) s = 1; // احتياط
-  return () => {
-    s = (s * 16807) % MOD;
-    return (s - 1) / (MOD - 1);
-  };
-}
-/** خلط بلا طفرة — ينسخ أولاً ثم يخلط (P1 code/shuffle-mutate fix) */
+// ── حتمية العشوائية — مصدر مشترك مستقل يمنع plan↔مولّد circular dependency ──
+/** خلط بلا طفرة — ينسخ أولاً ثم يخلط (P1 code/shuffle-mutate fix). */
 function shuffleArr<T>(arr: T[], rand: () => number): T[] {
-  const out = [...arr];
-  for (let i = out.length - 1; i > 0; i--) {
-    const j = Math.floor(rand() * (i + 1));
-    [out[i], out[j]] = [out[j], out[i]];
-  }
-  return out;
+  return seededShuffle(arr, rand);
 }
 
 export function pickN<T>(arr: T[], n: number, rand: () => number): T[] {
-  const copy = [...arr];
-  for (let i = copy.length - 1; i > 0; i--) {
-    const j = Math.floor(rand() * (i + 1));
-    [copy[i], copy[j]] = [copy[j], copy[i]];
-  }
-  return copy.slice(0, Math.min(n, copy.length));
+  return seededShuffle(arr, rand).slice(0, Math.min(n, arr.length));
 }
 
 // ── خرائط المناهج حسب المرحلة ─────────────────────────────────────────

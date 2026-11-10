@@ -32,6 +32,7 @@ import {
   planStundenBis,
   planStundenGesamt,
 } from "../lib/plan";
+import { seededShuffle } from "../lib/seeded-rng";
 import { newCard, reviewCard, isDue, newCardCap, countNewCardsIntroducedToday, karteStufe, abrufbarkeit } from "../lib/srs";
 import { planeWortkarten } from "../lib/wortkarten";
 import { punkteFuerRichtigenVersuch } from "../lib/exercise-scoring";
@@ -95,7 +96,7 @@ import {
   elternBrief,
   FEHLER_KAT,
 } from "../lib/fehler";
-import { normalize, diffWoerter, konfidenz, grader, deepReview, noteFromPct, LLM_ANBIETER } from "../lib/grader";
+import { normalize, diffWoerter, konfidenz, grader, deepReview, noteFromPct, LLM_ANBIETER, erstesJsonObjekt } from "../lib/grader";
 import { SIM_FORM, SIM_FORMATE, baueSimulation, antwortRichtig, punkteAusAnteil, modulBestanden, simulationBestanden, rubrikPunkte, schreibenZuKurz, schreibenPunkte, bewerteSimulation } from "../lib/simulation";
 import { fertigkeitenBilanz, schwaechsteFertigkeit, bereitschaftsFazit, tageBisExamen } from "../lib/bereitschaft";
 import { bewerteKriterien } from "../lib/kriterien";
@@ -1152,6 +1153,9 @@ const vocabRepeatAudit = (() => {
     ok(fund("Ich fahre mit den Bus.", "الداتيف"), "K58d ويمسكُ «mit den» — حرفٌ يفرضُ الداتيف");
     ok(fund("Das ist für dem Mann.", "الأكوزاتيف"), "K58e ويمسكُ «für dem» — حرفٌ يفرضُ الأكوزاتيف");
     ok(fund("Ich aufstehe um sieben Uhr.", "تنفصل"), "K58f ويمسكُ البادئةَ المنفصلةَ الملتصقة");
+    const trennbarFund = (t: string) => pruefeText(t).some((f) => f.meldungAr.includes("البادئةُ"));
+    ok(!trennbarFund("Ich wiederhole die Frage.") && !trennbarFund("Ich hinterfrage das Ergebnis."),
+      "K58f2 تشابهُ البادئة وحده لا يدين فعلاً غير موسوم بالانفصال في بنك التصريف");
     const genusFund = (t: string) => pruefeText(t).some((f) => f.meldungAr.includes("جنسُ"));
     ok(genusFund("Das Information ist gut.") && genusFund("Die Mann ist hier."), "K58g يمسكُ مخالفةَ جنسِ الاسمِ في سياق فاعلٍ آمن");
     ok(["mit der Bahn", "für den Kurs", "wegen des Wetters", "mit dem Zug"].every((phrase) => !genusFund(`Ich fahre ${phrase}.`))
@@ -1172,6 +1176,15 @@ const vocabRepeatAudit = (() => {
     ok(punkteFuerRichtigenVersuch(1, 2) === 0.5 && punkteFuerRichtigenVersuch(4, 2) === 2
       && punkteFuerRichtigenVersuch(1, 1) === 1,
       "K58o المحاولة الثانية تمنح نصف النقاط الحقيقي: 1←0.5 و4←2 بلا تقريب");
+    const jsonSauber = erstesJsonObjekt('{"korrigiert":"Text","notizen":[],"bewertung":"gut"}');
+    const jsonMitNachlauf = erstesJsonObjekt('```json\n{"korrigiert":"A {B}","notizen":[]}\n``` Danach {kein json}');
+    const jsonNachFehler = erstesJsonObjekt('Vorspann {kaputt} dann {"kriterien":[1,2,3,4],"fazit":"ok"} Schluss');
+    ok(jsonSauber?.korrigiert === "Text" && jsonMitNachlauf?.korrigiert === "A {B}" &&
+      Array.isArray(jsonNachFehler?.kriterien) && !erstesJsonObjekt("kein Objekt"),
+      "K58p قارئ LLM يلتقط أول JSON متوازن: نظيف، داخل Markdown مع نص لاحق، وبعد كتلة معيبة");
+    const schreibQuelle = readFileSync("lib/schreibpruefer.ts", "utf8");
+    ok(!schreibQuelle.includes("f.falsch.length") && schreibQuelle.includes("trennbarFehler(x") && !schreibQuelle.includes("TRENNBAR.find"),
+      "K58q لا فلتر طول صامت لبنك الأخطاء، وكشف الانفصال من تصريف البنك لا startsWith عام");
   }
 
 
@@ -15085,6 +15098,33 @@ function collectR262(dir: string, out: string[] = []): string[] {
     browserK352.includes('option[value="b2-indirekte-rede"]') &&
     browserK352.includes("Tatsächliche B2-Lektion nach Bank-Nachladung"),
     "K352c R150: بوابة Chromium تنتظر 87/87 ثم تفتح درس B2 فعلياً بعد التحميل المرحلي");
+}
+
+/* K353 · TLD-11/12: مصدر حتمي واحد ومكتبة ESM ذات تصفية memoized */
+{
+  const quelle = [1, 2, 3, 4, 5];
+  const minusA = seededShuffle(quelle, -7);
+  const minusB = seededShuffle(quelle, -7);
+  const plus = seededShuffle(quelle, 7);
+  ok(JSON.stringify(minusA) === JSON.stringify(minusB) && JSON.stringify(minusA) !== JSON.stringify(plus) &&
+    JSON.stringify(quelle) === "[1,2,3,4,5]",
+    "K353a R154: الخلط المشترك حتمي للبذرة السالبة، يميز ±seed، ولا يطفّر المصدر");
+
+  const rngGeneratoren = ["lib/falsche-freunde-aufgabe.ts", "lib/fvg-aufgabe.ts", "lib/komposita-aufgabe.ts"]
+    .map((path) => readFileSync(path, "utf8"));
+  const planK353 = readFileSync("lib/plan.ts", "utf8");
+  ok(rngGeneratoren.every((source) => source.includes('from "./seeded-rng"') && source.includes("seededShuffle(") &&
+      !source.includes("16807") && !source.includes('from "./plan"')) &&
+    planK353.includes('export { rng } from "./seeded-rng"') && !planK353.includes("export function rng(seed"),
+    "K353b R154: المولدات الثلاثة وplan تستعمل utility مستقلة واحدة بلا LCG مكرر أو circular dependency");
+
+  const lernenK353 = readFileSync("app/lernen/page.tsx", "utf8");
+  const browserK353 = readFileSync("scripts/browser_e2e.mjs", "utf8");
+  ok(!lernenK353.includes("require(") && lernenK353.includes("const familieTopicIds = useMemo") &&
+    lernenK353.includes("const visibleByLevel = useMemo") && lernenK353.includes("bankGeneration") &&
+    browserK353.includes("memoized lesson library filters") && browserK353.includes('counter.includes("16 / 87")') &&
+    browserK353.includes('counter.includes("1 / 87")'),
+    "K353c R155: مكتبة الدروس ESM خالصة، تعيد حساب النتائج مرة لكل جيل/مرشح، وChromium يحرس العائلة والبحث");
 }
 
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);

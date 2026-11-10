@@ -3,6 +3,7 @@
  * ضمن دروس اليوم من المستوى A1 فصاعداً.
  */
 import { FALSCHE_FREUNDE, freundeByLevel, type FalscherFreund } from "./falsche-freunde";
+import { seededShuffle } from "./seeded-rng";
 import type { Level } from "./types";
 
 export type FalschFreundExercise = {
@@ -20,17 +21,6 @@ function pick<T>(arr: T[], day: number): T {
   return arr[Math.abs(day * 2654435761) % arr.length];
 }
 
-function shuffle<T>(arr: T[], seed: number): T[] {
-  const a = [...arr];
-  let s = Math.abs(seed) % 2147483647 || 1;
-  for (let i = a.length - 1; i > 0; i--) {
-    s = (s * 16807) % 2147483647;
-    const j = Math.floor(((s - 1) / 2147483646) * (i + 1));
-    [a[i], a[j]] = [a[j], a[i]];
-  }
-  return a;
-}
-
 /** يبني تمريناً واحداً لليوم (إن وُجد صديق مناسب) */
 export function baueFalschFreundAufgabe(day: number, level: Level): FalschFreundExercise | null {
   const pool = freundeByLevel(level as "A1"|"A2"|"B1"|"B2", 20);
@@ -39,11 +29,11 @@ export function baueFalschFreundAufgabe(day: number, level: Level): FalschFreund
   const richtig = `${f.de} = ${f.ar}`;
   const fall = `${f.de} ← يخطئ: بمعنى «${f.falschBedeutet}» (${f.falschesWort})`;
   // اثنان مُشتِّتان آخران من البنك
-  const ablenker = shuffle(
+  const ablenker = seededShuffle(
     FALSCHE_FREUNDE.filter((x) => x.de !== f.de).map((x) => `${x.de} = ${x.ar}`),
     day
   ).slice(0, 2);
-  const opts = shuffle([richtig, fall, ...ablenker], day + 7);
+  const opts = seededShuffle([richtig, fall, ...ablenker], day + 7);
   const answer = opts.indexOf(richtig);
   return {
     id: `ff-${day}`,

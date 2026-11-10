@@ -330,6 +330,26 @@ async function main() {
       return counter.includes("87 / 87")&&option?.textContent?.includes("Indirekte Rede")
         ? {counter:counter.trim(),b2Option:option.textContent.trim()} : false;
     })()`, "Vollständige 87-Lektionen-Bibliothek nach lazy core+B2", SW_TIMEOUT);
+
+    stage = "memoized lesson library filters";
+    await evalJs(cdp, sessionId, `document.querySelector('[data-testid="ggp-familie-Satzbau"]')?.click()`);
+    const familyFilterCount = await poll(cdp, sessionId, `(()=>{
+      const counter=document.querySelector('[data-testid="bibliothek-zaehler"]')?.textContent??"";
+      return counter.includes("16 / 87") ? counter.trim() : false;
+    })()`, "Satzbau-Familienfilter zählt die zugeordneten Lektionen");
+    await evalJs(cdp, sessionId, `(()=>{
+      const input=document.querySelector('[data-testid="lernen-search"]');
+      const setter=Object.getOwnPropertyDescriptor(HTMLInputElement.prototype,"value")?.set;
+      setter?.call(input,"Indirekte Rede");
+      input?.dispatchEvent(new Event("input",{bubbles:true}));
+      return input?.value;
+    })()`);
+    const searchFilterCount = await poll(cdp, sessionId, `(()=>{
+      const counter=document.querySelector('[data-testid="bibliothek-zaehler"]')?.textContent??"";
+      const card=document.querySelector('[data-testid="bibliothek-card-b2-indirekte-rede"]');
+      return counter.includes("1 / 87")&&card ? counter.trim() : false;
+    })()`, "Suche und Familienfilter teilen dieselbe memoized Ergebnisliste");
+
     await evalJs(cdp, sessionId, `(()=>{
       const select=document.querySelector('select[data-testid="lektion-wahl"]');
       select.value="b2-indirekte-rede";
@@ -392,6 +412,7 @@ async function main() {
       labProfiles,
       mediaCapability: { ...mediaCapability, limitation: "API-presence-only-no-real-microphone" },
       bankReadiness: { ...bankReadiness, b2LessonRendered: !!b2LessonRendered },
+      libraryFilters: { familyFilterCount, searchFilterCount },
       serviceWorker: { active: true, caches: online.entries, missing: online.missing },
       offlineRoutes,
       offlineBanks,
