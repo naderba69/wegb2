@@ -336,6 +336,7 @@ async function main() {
         screenHeight: profile.height,
       }, sessionId);
       await cdp.send("Emulation.setTouchEmulationEnabled", { enabled: true, maxTouchPoints: 5 }, sessionId);
+      await evalJs(cdp, sessionId, `localStorage.setItem("weg-abend","1")`);
       await navigate(cdp, sessionId, `${ORIGIN}/ueben`);
       await poll(cdp, sessionId, `!!document.querySelector('[data-testid="ueben-liste"]')`, `Übungsseite für ${profile.id}`, SW_TIMEOUT);
       const result = await evalJs(cdp, sessionId, `(async()=>{
