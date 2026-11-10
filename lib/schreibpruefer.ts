@@ -2,7 +2,7 @@
 // صدقُ الادّعاء: هذا **كاشفُ أنماطٍ** يرى الشكلَ ولا يرى المعنى. كلُّ قاعدةٍ هنا مكتوبةٌ صراحةً،
 // ولا يوجدُ نموذجٌ لغويٌّ ولا اتصالٌ بالشبكة.
 import { vocabMap } from "./content";
-import { bankRoh, beiBankenBereit } from "./bankload";
+import { bankRoh, beiBankenBereit, beiVertiefungBereit } from "./bankload";
 
 export type Spalte = "grammatik" | "syntax" | "wortwahl";
 export type Schwere = "sicher" | "wahrscheinlich" | "stil";
@@ -44,18 +44,21 @@ export const SYNONYM_MATRIX: Record<string, { ersatz: string[]; hinweisAr: strin
   kriegen: { ersatz: ["erhalten", "bekommen", "beziehen"], hinweisAr: "«kriegen» عاميّةٌ صِرفة" },
 };
 
-/* خريطةُ الأجناسِ من دفترِ المفردات — 3356 بطاقةً تصنعُ المسطرة. */
-const GENUS: Record<string, string> = (() => {
-  const m: Record<string, string> = {};
+/* خريطةُ الأجناسِ من دفترِ المفردات — تُعاد بعد core وB2 كي لا تتجمّد فارغةً في المتصفح. */
+const GENUS: Record<string, string> = {};
+function fuelleGenus(): void {
+  for (const key of Object.keys(GENUS)) delete GENUS[key];
   for (const deck of Object.values(vocabMap as unknown as Record<string, { cards: { de: string; article?: string }[] }>)) {
     for (const c of deck.cards) {
       if (!c.article) continue;
       const nomen = c.de.split(" ").slice(1).join(" ");
-      if (nomen && !nomen.includes(" ")) m[nomen.toLowerCase()] = c.article;
+      if (nomen && !nomen.includes(" ")) GENUS[nomen.toLowerCase()] = c.article;
     }
   }
-  return m;
-})();
+}
+fuelleGenus();
+beiBankenBereit(fuelleGenus);
+beiVertiefungBereit(fuelleGenus);
 
 type FehlerZeile = { id: string; kat: string; falsch: string; richtig: string; ar: string };
 const FEHLER: FehlerZeile[] = [];
@@ -68,6 +71,19 @@ fuelleFehler();
 beiBankenBereit(fuelleFehler);
 const woerter = (s: string) => s.split(/\s+/).filter(Boolean);
 const rein = (w: string) => w.replace(/[.,;:!?»«"()]/g, "");
+const KOPULA = ["ist", "sind", "war", "waren", "bleibt", "bleiben", "wird", "werden"];
+
+/**
+ * لا تُقارن أداةُ المعجم إلا في موضع اسمي آمن نسبياً. بعد حرف جر لا تمثّل
+ * der/die/das الجنس بالضرورة بل الحالة؛ لذلك يُستبعد السياق كله. نسمح بفاعل
+ * في أول الجملة (مع استبعاد der→die الملتبس بالداتيف/الجينيتيف)، أو بخبر قصير
+ * يأتي مباشرةً بعد رابط إسنادي وينتهي عند الاسم.
+ */
+function istSichererGenusKontext(woerterListe: string[], klein: string[], index: number, richtig: string): boolean {
+  if (index === 0) return !(klein[index] === "der" && richtig === "die");
+  const nachNomenZuEnde = index + 2 >= woerterListe.length || /[.!?;:]$/.test(woerterListe[index + 1] ?? "");
+  return KOPULA.includes(klein[index - 1] ?? "") && nachNomenZuEnde;
+}
 
 /** الفحصُ الكامل — يرجعُ قائمةَ المرصودِ مصنَّفةً في الأعمدةِ الثلاثة. */
 export function pruefeText(text: string): Befund[] {
@@ -91,7 +107,7 @@ export function pruefeText(text: string): Befund[] {
       const art = klein[i], nomen = rein(w[i + 1]);
       if (["der", "die", "das"].includes(art) && GENUS[nomen.toLowerCase()]) {
         const richtig = GENUS[nomen.toLowerCase()];
-        if (richtig !== art && /^[A-ZÄÖÜ]/.test(nomen)) {
+        if (richtig !== art && /^[A-ZÄÖÜ]/.test(nomen) && istSichererGenusKontext(w, klein, i, richtig)) {
           b.push({ spalte: "grammatik", schwere: "sicher", stelle: `${w[i]} ${nomen}`,
             meldungAr: `جنسُ «${nomen}» في دفترِك هو ${richtig}`, vorschlagDe: `${richtig} ${nomen}`, regelId: "a1-akkusativ" });
         }

@@ -11,6 +11,7 @@ import { speakAny } from "@/lib/speech";
 import { VertrauensBalken, AntwortDiff } from "./ui";
 import { LehrerDiff } from "./lehrer";
 import { De } from "./De";
+import { punkteFuerRichtigenVersuch } from "@/lib/exercise-scoring";
 
 export interface ExerciseProgress {
   checked: number;
@@ -117,7 +118,7 @@ export default function ExerciseSet({ items, onPoints, storageKey, onProgress, o
         feedback: halb ? "✅ أصبتَ من المحاولة الثانية — نصف النقاط" : res.feedbackAr,
         sicher: st?.sicher,
       });
-      if (!gezaehlt) onPoints?.(halb ? Math.round(res.maxPoints / 2) : res.points, res.maxPoints);
+      if (!gezaehlt) onPoints?.(punkteFuerRichtigenVersuch(res.maxPoints, versuche + 1), res.maxPoints);
       if (!gezaehlt) onErgebnis?.(ex, !halb);
       if (!gezaehlt && ex.type === "mc" && st?.sicher !== undefined) logSicherheitNow({ t: new Date().toISOString(), id: stateId, sicher: st.sicher, correct: !halb });
       return;

@@ -12,7 +12,7 @@ import type {
   Tiefenlex,
   Eselsbruecke,
 } from "./types";
-import { bankRoh, beiBankenBereit, beiVertiefungBereit, BANK_DATEIEN, VERTIEFUNG_DATEIEN, LANG_DATEIEN } from "./bankload";
+import { bankRoh, beiBankenBereit, beiVertiefungBereit, beiLangBankenBereit, BANK_DATEIEN, VERTIEFUNG_DATEIEN, LANG_DATEIEN } from "./bankload";
 
 export const grammarMap = {} as Record<string, GrammarTopic>;
 export const vocabMap = {} as Record<
@@ -363,3 +363,4 @@ function fuelleAusBanken(): void {
 fuelleAusBanken();
 beiBankenBereit(fuelleAusBanken);
 beiVertiefungBereit(fuelleAusBanken);
+beiLangBankenBereit(fuelleAusBanken);

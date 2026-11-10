@@ -40,6 +40,7 @@ import { LebensweltStation } from "@/components/lebenswelt";
 import { VollPruefung } from "@/components/vollpruefung";
 import { PhonetikStation } from "@/components/phonetik";
 import { MenuSection } from "@/components/dirb/MenuSection";
+import { useBankGeneration } from "@/lib/use-bank-generation";
 
 /**
  * 💪 وجهة «تدرّب» (P3):
@@ -102,6 +103,7 @@ const MENU_GROUPS: { id: string; title: string; description: string; items: stri
 ];
 
 export default function Ueben() {
+  const bankGeneration = useBankGeneration();
   const { progress } = useProgress();
   const [abend, setAbend] = useState(false);
   const [offen, setOffen] = useState<string | null>(null);
@@ -121,7 +123,10 @@ export default function Ueben() {
   }, []);
 
   const day = progress.plan.day;
-  const plan = useMemo(() => buildDay(day, progress), [day, progress]);
+  const plan = useMemo(() => {
+    void bankGeneration;
+    return buildDay(day, progress);
+  }, [day, progress, bankGeneration]);
   const offenBleibt = plan.tasks.some((tk) => !progress.plan.tasks[tk.id]);
 
   // المَرتحَل: زائدُ تمارينِ درسِ اليوم (weg-park- يكتبه المعالج) — مُستخرَجٌ الآن

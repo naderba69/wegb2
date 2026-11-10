@@ -29,6 +29,7 @@ import ExerciseSet from "@/components/exercises";
 import { heutigesGrammatikThema, parkedExercisesFor } from "@/lib/parkuebungen";
 import { FehlerGrenze } from "@/components/fehlergrenze";
 import { progressFuerExport } from "@/lib/backup";
+import { useBankGeneration } from "@/lib/use-bank-generation";
 
 // ⚡ R308: تحميلٌ كسولٌ حقيقي — لا تُجلَب شيفرتا «تدرّب»/«اختبر» الثقيلتان (عشرات المحطات)
 // ضمن حزمة صفحة «اليوم» (الأكثر زيارةً بفارق كبير) إلا عند فتح القسم فعليًا.
@@ -93,9 +94,13 @@ function migrateLegacyDayKeys() {
 
 /** شاشة «اليوم»: مهمة واحدة في المقدمة؛ الأدوات والبدائل قابلة للفتح عند الحاجة. */
 export default function Today() {
+  const bankGeneration = useBankGeneration();
   const { progress, ready, submitTask, closeDay, setSrs, saveExam, update } = useProgress();
   const day = progress.plan.day;
-  const basePlan = useMemo(() => buildDay(day, progress), [day, progress]);
+  const basePlan = useMemo(() => {
+    void bankGeneration; // Bank-Layer sind mutable Container; Generation invalidiert ihre Ableitungen.
+    return buildDay(day, progress);
+  }, [day, progress, bankGeneration]);
   const resumeAktiv = resumeZustand(progress).aktiv;
   const plan = useMemo(
     () => (resumeAktiv ? resumePlan(basePlan, progress) : basePlan),

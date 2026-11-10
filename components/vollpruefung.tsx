@@ -3,6 +3,7 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import { De } from "./De";
 import { vpTexte, vpDialoge, vpSchreiben, vpSprechen, type VpFrage } from "@/lib/vollpruefung";
 import { lokalesDatum } from "@/lib/datum";
+import { useBankGeneration } from "@/lib/use-bank-generation";
 
 /**
  * 🧪 جلسة امتحان كاملة (R218): أربعة أقسام بمؤقّت إجمالي واحد ونتيجة مجمّعة.
@@ -54,6 +55,7 @@ function FragenBlock({ fragen, praefix, antworten, setAntworten, zeigen }: {
 }
 
 export function VollPruefung() {
+  const bankGeneration = useBankGeneration();
   const [stufe, setStufe] = useState<string>("B1");
   const [phase, setPhase] = useState<Phase>("start");
   const [antworten, setAntwortenState] = useState<Record<string, string>>({});
@@ -69,10 +71,23 @@ export function VollPruefung() {
     const start = (samen * 7) % pool.length;
     return Array.from({ length: Math.min(anzahl, pool.length) }, (_, i) => pool[(start + i) % pool.length]);
   }, [samen]);
-  const texte = useMemo(() => pick(vpTexte.filter((t) => t.level === stufe), 2), [stufe, pick]);
-  const dialoge = useMemo(() => pick(vpDialoge.filter((d) => d.level === stufe), 2), [stufe, pick]);
-  const schreibAufgabe = useMemo(() => pick(vpSchreiben.filter((w) => w.level === stufe), 1)[0], [stufe, pick]);
-  const sprechKarte = useMemo(() => pick(vpSprechen.filter((k) => !k.level || k.level === stufe), 1)[0] ?? vpSprechen[samen % Math.max(1, vpSprechen.length)], [stufe, pick, samen]);
+  const texte = useMemo(() => {
+    void bankGeneration;
+    return pick(vpTexte.filter((t) => t.level === stufe), 2);
+  }, [stufe, pick, bankGeneration]);
+  const dialoge = useMemo(() => {
+    void bankGeneration;
+    return pick(vpDialoge.filter((d) => d.level === stufe), 2);
+  }, [stufe, pick, bankGeneration]);
+  const schreibAufgabe = useMemo(() => {
+    void bankGeneration;
+    return pick(vpSchreiben.filter((w) => w.level === stufe), 1)[0];
+  }, [stufe, pick, bankGeneration]);
+  const sprechKarte = useMemo(() => {
+    void bankGeneration;
+    return pick(vpSprechen.filter((k) => !k.level || k.level === stufe), 1)[0]
+      ?? vpSprechen[samen % Math.max(1, vpSprechen.length)];
+  }, [stufe, pick, samen, bankGeneration]);
 
   const laueft = phase !== "start" && phase !== "ergebnis";
   useEffect(() => {

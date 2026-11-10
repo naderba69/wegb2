@@ -7,6 +7,7 @@ import { grammarMap } from "@/lib/content";
 import { GGP_FEATURES, GGP_FAMILIEN } from "@/lib/ggp";
 import { LektionWizard } from "@/components/akademie/LektionWizard";
 import { FehlerGrenze } from "@/components/fehlergrenze";
+import { useBankGeneration } from "@/lib/use-bank-generation";
 
 /**
  * 📖 وجهة «الدرس» (P2): بابُ المعالج الخمسي.
@@ -16,6 +17,7 @@ import { FehlerGrenze } from "@/components/fehlergrenze";
  * وفوقه منتقي دروسٍ صريح يفتح أيَّ درسٍ من المنهج دون أن يمسّ الخطة.
  */
 export default function Lernen() {
+  useBankGeneration();
   const { progress } = useProgress();
   const day = progress.plan.day;
   const plan = buildDay(day, progress);

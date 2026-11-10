@@ -19,6 +19,7 @@ import {
 } from "@/lib/content";
 import { planPct } from "@/lib/plan";
 import { UiPageHeading } from "@/components/dirb/DesignSystem";
+import { useBankGeneration } from "@/lib/use-bank-generation";
 
 const LEVEL_ORDER: Level[] = ["A0", "A1", "A2", "B1", "B2"];
 const LEVEL_TITLE: Record<Level, string> = {
@@ -388,6 +389,7 @@ function pathProgressWithSavedState(pathProgress: Progress, savedProgress: Progr
 }
 
 export function CurriculumMap({ progress }: { progress: Progress }) {
+  useBankGeneration();
   const [tab, setTab] = useState<"lessons" | "days">("lessons");
   const pct = planPct(progress);
 

@@ -322,6 +322,25 @@ async function main() {
     await cdp.send("Emulation.setEmulatedMedia", { media: "screen", features: [] }, sessionId);
     const mediaCapability = await evalJs(cdp, sessionId, `({ secureContext: isSecureContext, mediaDevicesApi: !!navigator.mediaDevices?.getUserMedia })`);
 
+    stage = "lazy bank readiness on /lernen";
+    await navigate(cdp, sessionId, `${ORIGIN}/lernen`);
+    const bankReadiness = await poll(cdp, sessionId, `(()=>{
+      const counter=document.querySelector('[data-testid="bibliothek-zaehler"]')?.textContent??"";
+      const option=document.querySelector('select[data-testid="lektion-wahl"] option[value="b2-indirekte-rede"]');
+      return counter.includes("87 / 87")&&option?.textContent?.includes("Indirekte Rede")
+        ? {counter:counter.trim(),b2Option:option.textContent.trim()} : false;
+    })()`, "Vollständige 87-Lektionen-Bibliothek nach lazy core+B2", SW_TIMEOUT);
+    await evalJs(cdp, sessionId, `(()=>{
+      const select=document.querySelector('select[data-testid="lektion-wahl"]');
+      select.value="b2-indirekte-rede";
+      select.dispatchEvent(new Event("change",{bubbles:true}));
+      return select.value;
+    })()`);
+    const b2LessonRendered = await poll(cdp, sessionId,
+      `document.querySelector('[data-testid="lektion-wizard"]')?.getAttribute('data-level')==="B2" && document.querySelector('[data-testid="lektion-wizard"]')?.textContent?.includes("Indirekte Rede")`,
+      "Tatsächliche B2-Lektion nach Bank-Nachladung");
+    if (!b2LessonRendered) fail("B2-Lektion wurde trotz vollständiger Bibliothek nicht gerendert");
+
     stage = "service worker activation";
     const sw = await poll(cdp, sessionId, `(async()=>{const r=await navigator.serviceWorker.getRegistration();return r?.active?.state==="activated"&&!!navigator.serviceWorker.controller})()`, "Service Worker activation", SW_TIMEOUT);
     if (!sw) fail("Service Worker nicht aktiv");
@@ -372,6 +391,7 @@ async function main() {
       csp: { nonce: true, scriptUnsafeInline: false, frameAncestorsSelf: true },
       labProfiles,
       mediaCapability: { ...mediaCapability, limitation: "API-presence-only-no-real-microphone" },
+      bankReadiness: { ...bankReadiness, b2LessonRendered: !!b2LessonRendered },
       serviceWorker: { active: true, caches: online.entries, missing: online.missing },
       offlineRoutes,
       offlineBanks,
