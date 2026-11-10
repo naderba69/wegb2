@@ -345,10 +345,16 @@ async function main() {
           .filter((element)=>element.getClientRects().length&&getComputedStyle(element).visibility!=="hidden");
         const target=actions.at(-1);
         if(!nav||!target)return {error:"missing nav/action"};
-        target.scrollIntoView({block:"end",inline:"nearest"});
-        await new Promise((resolve)=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));
-        const targetRect=target.getBoundingClientRect();
-        const navRect=nav.getBoundingClientRect();
+        target.scrollIntoView({block:"end",inline:"nearest",behavior:"instant"});
+        await new Promise((resolve)=>requestAnimationFrame(resolve));
+        let targetRect=target.getBoundingClientRect();
+        let navRect=nav.getBoundingClientRect();
+        if(targetRect.bottom>navRect.top){
+          scrollBy({top:targetRect.bottom-navRect.top+1,behavior:"instant"});
+          await new Promise((resolve)=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));
+          targetRect=target.getBoundingClientRect();
+          navRect=nav.getBoundingClientRect();
+        }
         return {
           target:target.getAttribute("data-testid")||target.textContent?.trim().slice(0,40)||"button",
           targetBottom:targetRect.bottom,

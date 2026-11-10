@@ -15194,6 +15194,7 @@ function collectR262(dir: string, out: string[] = []): string[] {
     "K356a R159: حجز الشريط السفلي مصدره متغير واحد آمن للـsafe-area ويطبّق على التمرير وتذييل shell");
   ok(browserK356.includes("bottom navigation clearance") && browserK356.includes("phone-360x640") &&
     browserK356.includes("phone-390x844") && browserK356.includes('localStorage.setItem("weg-abend","1")') &&
+    browserK356.includes('behavior:"instant"') && browserK356.includes("scrollBy({top:targetRect.bottom-navRect.top+1") &&
     browserK356.includes("result.overlap > 0.5") && browserK356.includes("scrollPaddingBottom"),
     "K356b Chromium يقيس مستطيل زر فعلي مقابل الشريط على 360×640 و390×844 ويفشل عند أي تقاطع");
 }
