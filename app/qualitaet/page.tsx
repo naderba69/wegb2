@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
+import { zaehleVpDialogPool } from "@/lib/vollpruefung-pool";
 
 type Alignment = {
   productClaim: { ar: string };
@@ -51,6 +52,13 @@ type RealWorldProgram = {
   testCases: Array<{ status: string }>;
 };
 
+type DialogBank = Array<{
+  id: string;
+  level: string;
+  questions?: Array<{ options?: string[]; answer?: string }>;
+}>;
+type DialogAudio = { einsaetze: Array<{ id: string; file: string }> };
+
 function readJson<T>(name: string): T {
   return JSON.parse(readFileSync(join(process.cwd(), "content", name), "utf8")) as T;
 }
@@ -60,6 +68,9 @@ const grammarProfile = readJson<GrammarProfile>("grammar-profile-matrix.json");
 const toolSummary = readJson<ToolSummary>("tool-catalog-summary.json");
 const externalEvidence = readJson<ExternalEvidence>("external-evidence.json");
 const realWorld = readJson<RealWorldProgram>("real-world-validation.json");
+const dialogBank = readJson<DialogBank>("dialogues.json");
+const dialogAudio = readJson<DialogAudio>("dialog-audio.json");
+const dialogPool = zaehleVpDialogPool(dialogBank, new Set(dialogAudio.einsaetze.map((einsatz) => einsatz.id)));
 
 export const metadata: Metadata = {
   title: "الجودة والمواءمة — WegB2",
@@ -146,6 +157,28 @@ export default function QualitaetPage() {
             الجرد الحالي كشف {toolSummary.genericPrototypeModules} نموذجاً عاماً و{toolSummary.citationLabels} تسمية مرجع أولية؛ لا تُعد هذه مراجع موثقة أو مزايا إنتاجية.
           </p>
         </details>
+      </section>
+
+      <section className="card" data-testid="dialog-pool-transparenz" style={{ padding: "1rem", display: "grid", gap: "0.7rem" }}>
+        <h2 style={{ margin: 0 }}>شفافية مخزون الاستماع المصغّر</h2>
+        <p style={{ margin: 0, lineHeight: 1.85 }}>
+          يدخل الحوار جولة التدريب إذا كان له صوت وسؤال اختيار من متعدد واحد صالح على الأقل؛ لم يعد الحوار ذو السؤال الواحد يُقصى صامتاً.
+        </p>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(170px, 1fr))", gap: "0.7rem" }}>
+          <div className="card" style={{ padding: "0.8rem" }}><strong className="rtl-num">{dialogPool.gesamt.akzeptiert}/{dialogPool.gesamt.gesamt}</strong><br />حواراً مقبولاً في المخزون</div>
+          <div className="card" style={{ padding: "0.8rem" }}><strong className="rtl-num">{dialogPool.gesamt.ausgeschlossen}</strong><br />حواراً مقصى مع سبب</div>
+          <div className="card" style={{ padding: "0.8rem" }}><strong className="rtl-num">{dialogPool.gesamt.mitEinerMc}</strong><br />حواراً له سؤال MC واحد</div>
+          <div className="card" style={{ padding: "0.8rem" }}><strong className="rtl-num">{dialogPool.gesamt.mcFragen}</strong><br />سؤال MC صالح · {dialogPool.gesamt.sonstigeFragen} سؤالاً خارج مسار MC</div>
+        </div>
+        <div style={{ display: "flex", gap: "0.45rem", flexWrap: "wrap" }}>
+          {["A0", "A1", "A2", "B1", "B2"].map((level) => {
+            const pool = dialogPool.nachStufe[level];
+            return pool ? <span className="chip" key={level}>{level}: {pool.akzeptiert}/{pool.gesamt} مقبول</span> : null;
+          })}
+        </div>
+        <p style={{ margin: 0, color: "var(--color-ink2)", lineHeight: 1.8 }}>
+          القبول في المخزون لا يعني أن الجولة الحالية محاكاة رسمية كاملة: الجولة تنتقي حوارين فقط وتعرض عدد بنودها الفعلي، بينما يظل هدف B2 المرجعي 30 بنداً في أربعة أجزاء بانتظار توسعة موثقة.
+        </p>
       </section>
 
       {alignment.targets.map((target) => (
