@@ -106,6 +106,7 @@ import { REDE_FUNKTIONEN, REDE_TEILE, redemittelFuerTeil, drillRunde } from "../
 import { kollokationen, kollokationenFuer, partnerWort, kollokationUebung } from "../lib/kollokationen";
 import { bankenBereit, bankRoh, BANK_DATEIEN, VERTIEFUNG_DATEIEN, LANG_DATEIEN } from "../lib/bankload";
 import { VP_B2_REFERENZ_ITEMS, zaehleVpDialogPool } from "../lib/vollpruefung-pool";
+import { exakteAntwortLecks } from "../lib/exercise-hints";
 import { logSicherheit, sicherheitsStatistik, sicherheitsZeile, MAX_EINTRAEGE } from "../lib/sicherheit";
 import { karteFuerWort, verknuepfung, verwaiste, abdeckung, stammVon } from "../lib/verknuepfung";
 import { dueFehlerPriorisiert, verwandteKarte, transferUebung, beispielUebung, istUeberkonfident } from "../lib/fehlerbank2";
@@ -4588,7 +4589,7 @@ void 0;
     modalTopic.rules[3]?.de.includes("Im Aussagesatz") &&
     getExercise("a1-modalverben", "a1-modalverben-ex01")?.promptDe.includes("(können)") &&
     getExercise("a1-modalverben", "a1-modalverben-ex02")?.promptDe.includes("(müssen)") &&
-    getExercise("a1-modalverben", "a1-modalverben-ex04")?.promptDe.includes("(sprechen)") &&
+    getExercise("a1-modalverben", "a1-modalverben-ex04")?.promptDe.includes("(mündlich kommunizieren)") &&
     modalVerify?.promptDe === "___ Sie mir bitte helfen? (können, höfliche Bitte)" &&
     Array.isArray(modalVerify?.answer) && modalVerify.answer[0] === "Können" &&
     (dativeTopic as unknown as { eselsbrueckeAr?: string }).eselsbrueckeAr?.includes("mit · bei · zu · aus · nach · von · seit") &&
@@ -15159,6 +15160,42 @@ function collectR262(dir: string, out: string[] = []): string[] {
     qualitaetK354.includes('data-testid="dialog-pool-transparenz"') &&
     browserK354.includes("transparent mini exam scope") && browserK354.includes('pool.includes("49/49")'),
     "K354c واجهة الجولة تعرض عدد بنودها مقابل 30/30 وتصرح بأنها مصغّرة، وصفحة الجودة وChromium يحارسان المقبول/المقصى");
+}
+
+/* K355 · PED-03: لا يكرر تلميح القوس الجواب المقبول حرفياً */
+{
+  type HintExerciseK355 = { id?: string; promptDe?: string; text?: string; answer?: unknown };
+  const exercisesK355 = Object.values(grammarMap).flatMap((topic) => [
+    ...((topic.exercises ?? []) as HintExerciseK355[]),
+    ...(((topic as typeof topic & { verify?: HintExerciseK355[] }).verify ?? [])),
+  ]);
+  const leaksK355 = exercisesK355.flatMap((exercise) =>
+    exakteAntwortLecks(exercise).map((hint) => `${exercise.id ?? "?"}:${hint}`));
+  ok(exercisesK355.length >= 581 && leaksK355.length === 0,
+    `K355a R158: لا تلميحاً قوسياً يساوي جواباً مقبولاً حرفياً في بنك القواعد (${leaksK355.join(", ") || "0"})`);
+
+  const wordsAuditK355 = readFileSync("scripts/wort_fuer_wort_audit.ts", "utf8");
+  const patchK355 = readFileSync("scripts/patches/fix_exact_answer_hints.py", "utf8");
+  ok(exakteAntwortLecks({ promptDe: "Ich ___ hier. (wohne)", answer: ["wohne"] }).length === 1 &&
+    exakteAntwortLecks({ promptDe: "Ich ___ hier. (wohnen)", answer: ["wohne"] }).length === 0 &&
+    wordsAuditK355.includes("answer-leak-exact") && patchK355.includes("CHANGES:") &&
+    patchK355.includes('"a2-reflexiv-v1"') && patchK355.includes('"b2-nom-e8"'),
+    "K355b كاشف PED-03 يميز التسريب الحرفي من السقالة الاشتقاقية، وaudit:words والرقعة المحروسة موصولان به");
+}
+
+/* K356 · TLD-02: مساحة ثابتة للشريط السفلي وبوابة هاتف بلا تقاطع */
+{
+  const cssK356 = readFileSync("app/globals.css", "utf8");
+  const browserK356 = readFileSync("scripts/browser_e2e.mjs", "utf8");
+  ok(cssK356.includes("--ui-bottom-nav-clearance: calc(4.75rem + env(safe-area-inset-bottom, 0px))") &&
+    cssK356.includes("scroll-padding-bottom: var(--ui-bottom-nav-clearance)") &&
+    cssK356.includes("padding: 0.75rem 0 var(--ui-bottom-nav-clearance)") &&
+    !cssK356.includes("main { padding-bottom: 0; }"),
+    "K356a R159: حجز الشريط السفلي مصدره متغير واحد آمن للـsafe-area ويطبّق على التمرير وتذييل shell");
+  ok(browserK356.includes("bottom navigation clearance") && browserK356.includes("phone-360x640") &&
+    browserK356.includes("phone-390x844") && browserK356.includes("result.overlap > 0.5") &&
+    browserK356.includes("scrollPaddingBottom"),
+    "K356b Chromium يقيس مستطيل زر فعلي مقابل الشريط على 360×640 و390×844 ويفشل عند أي تقاطع");
 }
 
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);

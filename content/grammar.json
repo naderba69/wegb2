@@ -4616,8 +4616,8 @@
       {
         "id": "a2-reflexiv-v1",
         "type": "fill",
-        "promptDe": "Ich freue ___ auf den Urlaub. (mich)",
-        "text": "Ich freue ___ auf den Urlaub. (mich)",
+        "promptDe": "Ich freue ___ auf den Urlaub. (Reflexivpronomen zu „ich“)",
+        "text": "Ich freue ___ auf den Urlaub. (Reflexivpronomen zu „ich“)",
         "answer": [
           "mich"
         ],
@@ -6707,7 +6707,7 @@
       {
         "id": "b1-pas-e5",
         "type": "fill",
-        "promptDe": "Das lässt sich ___. (machen)",
+        "promptDe": "Das lässt sich ___. (Synonym: tun)",
         "answer": "machen",
         "explanationAr": "lassen sich + مصدر"
       },
@@ -8037,7 +8037,7 @@
       {
         "id": "a0-begrussung-f4",
         "type": "fill",
-        "promptDe": "Ich ___ aus Tunesien. (komme)",
+        "promptDe": "Ich ___ aus Tunesien. (kommen)",
         "answer": [
           "komme",
           "Komme"
@@ -8240,7 +8240,7 @@
       {
         "id": "a1-modalverben-ex04",
         "type": "fill",
-        "promptDe": "Ich kann gut Deutsch ___. (sprechen)",
+        "promptDe": "Ich kann gut Deutsch ___. (mündlich kommunizieren)",
         "answer": [
           "sprechen"
         ],
@@ -8743,7 +8743,7 @@
       {
         "id": "a1-imp-n1",
         "type": "mc",
-        "promptDe": "___ Sie bitte Platz! (nehmen)",
+        "promptDe": "___ Sie bitte Platz!",
         "options": [
           "Nehmen",
           "Nimm",
@@ -9657,7 +9657,7 @@
       {
         "id": "b1-indir-n2",
         "type": "fill",
-        "promptDe": "Sag mir bitte, ___ du wohnst. (wo)",
+        "promptDe": "Sag mir bitte, ___ du wohnst. (Ort)",
         "text": "Sag mir bitte, ___ du wohnst.",
         "answer": [
           "wo"
@@ -9726,7 +9726,7 @@
       {
         "id": "b1-indir-n7",
         "type": "fill",
-        "promptDe": "Weißt du, ___ das Konzert beginnt? (wann)",
+        "promptDe": "Weißt du, ___ das Konzert beginnt? (Zeitpunkt)",
         "text": "Weißt du, ___ das Konzert beginnt?",
         "answer": [
           "wann"
@@ -9892,7 +9892,7 @@
       {
         "id": "b2-redew-f2",
         "type": "fill",
-        "promptDe": "Die Nachricht hat mich völlig aus der ___ gebracht. (Ruhe)",
+        "promptDe": "Die Nachricht hat mich völlig aus der ___ gebracht. (innere Gelassenheit)",
         "answer": [
           "Ruhe",
           "ruhe"
@@ -9903,7 +9903,7 @@
       {
         "id": "b2-redew-f3",
         "type": "fill",
-        "promptDe": "Es ist höchste ___, dass wir anfangen. (Zeit)",
+        "promptDe": "Es ist höchste ___, dass wir anfangen. (es wird dringend)",
         "answer": [
           "Zeit",
           "zeit"
@@ -9915,7 +9915,7 @@
         "id": "b2-redew-f4",
         "type": "fill",
         "points": 1,
-        "promptDe": "Seine Rede hat mir den ___ gegeben, Deutsch zu lernen. (Anstoß)",
+        "promptDe": "Seine Rede hat mir den ___ gegeben, Deutsch zu lernen. (Impuls)",
         "answer": [
           "Anstoß"
         ],
@@ -10872,8 +10872,8 @@
       {
         "id": "a2-verb-praep-v1",
         "type": "fill",
-        "promptDe": "Ich warte ___ den Bus. (auf)",
-        "text": "Ich warte ___ den Bus. (auf)",
+        "promptDe": "Ich warte ___ den Bus. (erwartete Ankunft)",
+        "text": "Ich warte ___ den Bus. (erwartete Ankunft)",
         "answer": [
           "auf"
         ],
@@ -10963,7 +10963,7 @@
         "id": "a2-verb-praep-q2",
         "type": "fill",
         "points": 1,
-        "promptDe": "Wir sprechen ___ das Wochenende. (über)",
+        "promptDe": "Wir sprechen ___ das Wochenende. (Thema)",
         "answer": [
           "über"
         ],
@@ -10973,7 +10973,7 @@
         "id": "a2-verb-praep-q3",
         "type": "fill",
         "points": 1,
-        "promptDe": "Ich denke oft ___ dich. (an)",
+        "promptDe": "Ich denke oft ___ dich. (Bezug auf eine Person)",
         "answer": [
           "an"
         ],
@@ -11459,7 +11459,7 @@
       {
         "id": "a1-weil-e2",
         "type": "fill",
-        "promptDe": "Wir fahren nicht nach Berlin, weil wir kein Geld ___. (haben)",
+        "promptDe": "Wir fahren nicht nach Berlin, weil wir kein Geld ___. (Besitz ausdrücken)",
         "answer": [
           "haben"
         ],
@@ -12181,7 +12181,7 @@
       {
         "id": "a2-neben-n2",
         "type": "fill",
-        "promptDe": "Wir bleiben zu Hause, ___ es regnet. (denn)",
+        "promptDe": "Wir bleiben zu Hause, ___ es regnet. (Grund, Hauptsatzwortstellung)",
         "text": "Wir bleiben zu Hause, ___ es regnet.",
         "answer": [
           "denn"
@@ -12232,7 +12232,7 @@
       {
         "id": "a2-neben-n6",
         "type": "fill",
-        "promptDe": "Er ist müde, ___ er schläft nicht. (aber)",
+        "promptDe": "Er ist müde, ___ er schläft nicht. (Gegensatz)",
         "text": "Er ist müde, ___ er schläft nicht.",
         "answer": [
           "aber"
@@ -12268,7 +12268,7 @@
       {
         "id": "a2-neben-v2",
         "type": "fill",
-        "promptDe": "Sie lernt viel, ___ sie will bestehen. (denn)",
+        "promptDe": "Sie lernt viel, ___ sie will bestehen. (Grund, Hauptsatzwortstellung)",
         "text": "Sie lernt viel, ___ sie will bestehen.",
         "answer": [
           "denn"
@@ -12367,7 +12367,7 @@
       {
         "id": "a2-demo-n1",
         "type": "mc",
-        "promptDe": "___ Mann ist mein Vater. (dieser)",
+        "promptDe": "___ Mann ist mein Vater.",
         "options": [
           "Dieser",
           "Diesen",
@@ -12832,7 +12832,7 @@
       {
         "id": "b1-absicht-n2",
         "type": "fill",
-        "promptDe": "Ich helfe dir, ___ du bestehst. (damit)",
+        "promptDe": "Ich helfe dir, ___ du bestehst. (Ziel, verschiedene Subjekte)",
         "text": "Ich helfe dir, ___ du bestehst.",
         "answer": [
           "damit"
@@ -12911,7 +12911,7 @@
       {
         "id": "b1-absicht-v1",
         "type": "fill",
-        "promptDe": "Lern fleißig, ___ du bestehst! (damit)",
+        "promptDe": "Lern fleißig, ___ du bestehst! (Ziel, verschiedene Subjekte)",
         "text": "Lern fleißig, ___ du bestehst!",
         "answer": [
           "damit"
@@ -13025,7 +13025,7 @@
       {
         "id": "b1-konj2-vergangenheit-n1",
         "type": "mc",
-        "promptDe": "Ich ___ gelernt. (hätte)",
+        "promptDe": "Ich ___ gelernt.",
         "options": [
           "hätte",
           "wäre",
@@ -13038,7 +13038,7 @@
       {
         "id": "b1-konj2-vergangenheit-n2",
         "type": "mc",
-        "promptDe": "Ich ___ gegangen. (wäre)",
+        "promptDe": "Ich ___ gegangen.",
         "options": [
           "wäre",
           "hätte",
@@ -13115,7 +13115,7 @@
       {
         "id": "b1-konj2-vergangenheit-v1",
         "type": "fill",
-        "promptDe": "Ohne dich ___ ich versagt. (hätte)",
+        "promptDe": "Ohne dich ___ ich versagt. (haben, Konjunktiv II Vergangenheit)",
         "text": "Ohne dich ___ ich versagt.",
         "answer": [
           "hätte"
@@ -13237,7 +13237,7 @@
       {
         "id": "b2-textkonnektoren-n2",
         "type": "fill",
-        "promptDe": "Er ___ blieb zu Hause. (hingegen)",
+        "promptDe": "Er ___ blieb zu Hause. (Gegensatz nach dem Subjekt)",
         "text": "Er ___ blieb zu Hause.",
         "answer": [
           "hingegen"
@@ -13288,7 +13288,7 @@
       {
         "id": "b2-textkonnektoren-n6",
         "type": "mc",
-        "promptDe": "___ regnete es, aber wir gingen. (zwar)",
+        "promptDe": "___ regnete es, aber wir gingen.",
         "options": [
           "Zwar",
           "Wenngleich",
@@ -13315,7 +13315,7 @@
       {
         "id": "b2-textkonnektoren-v1",
         "type": "fill",
-        "promptDe": "___ er müde war, arbeitete er. (Obgleich)",
+        "promptDe": "___ er müde war, arbeitete er. (Konzessivkonnektor)",
         "text": "___ er müde war, arbeitete er.",
         "answer": [
           "Obgleich"
@@ -16093,7 +16093,7 @@
       {
         "id": "a0-satzbau-v1",
         "type": "fill",
-        "promptDe": "Heute ___ ich Kaffee. (trinke)",
+        "promptDe": "Heute ___ ich Kaffee. (trinken)",
         "text": "Heute ___ ich Kaffee.",
         "answer": [
           "trinke"
@@ -16661,7 +16661,7 @@
       {
         "id": "b2-k2vht-v1",
         "type": "fill",
-        "promptDe": "Ohne dich ___ ich versagt. (hätte)",
+        "promptDe": "Ohne dich ___ ich versagt. (haben, Konjunktiv II Vergangenheit)",
         "text": "Ohne dich ___ ich versagt.",
         "answer": [
           "hätte"
@@ -16705,7 +16705,7 @@
       {
         "id": "b2-k2vht-e2",
         "type": "fill",
-        "promptDe": "Wäre er nicht krank gewesen, ___ er teilgenommen. (hätte)",
+        "promptDe": "Wäre er nicht krank gewesen, ___ er teilgenommen. (haben, Konjunktiv II Vergangenheit)",
         "text": "Wäre er nicht krank gewesen, ___ er teilgenommen.",
         "answer": [
           "hätte"
@@ -16769,7 +16769,7 @@
       {
         "id": "b2-k2vht-e7",
         "type": "fill",
-        "promptDe": "Ohne deine Hilfe ___ ich es nicht geschafft. (hätte)",
+        "promptDe": "Ohne deine Hilfe ___ ich es nicht geschafft. (haben, Konjunktiv II Vergangenheit)",
         "text": "Ohne deine Hilfe ___ ich es nicht geschafft.",
         "answer": [
           "hätte"
@@ -16899,7 +16899,7 @@
       {
         "id": "b2-nom-e2",
         "type": "fill",
-        "promptDe": "___ seiner Erfahrung bekam er den Job. (aufgrund)",
+        "promptDe": "___ seiner Erfahrung bekam er den Job. (Grund)",
         "text": "___ seiner Erfahrung bekam er den Job.",
         "answer": [
           "Aufgrund"
@@ -16974,7 +16974,7 @@
       {
         "id": "b2-nom-e8",
         "type": "fill",
-        "promptDe": "___ der Prüfung lernte er viel. (zum Zweck)",
+        "promptDe": "___ der Prüfung lernte er viel. (Ziel)",
         "text": "___ der Prüfung lernte er viel.",
         "answer": [
           "Zum Zweck"
