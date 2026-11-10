@@ -1889,6 +1889,20 @@ const hasFile = txt().includes("صوتٌ من الدار");
     }
   }
 
+  /* ═══════════ LVb½ — نصف نقطة حقيقي في المحاولة الثانية، بلا تقريب إلى نقطة كاملة ═══════════ */
+  {
+    const { default: ExerciseSet } = await import("../components/exercises");
+    const items = [{ id: "half-point-1", type: "fill" as const, promptDe: "Ich ___ bereit.", answer: ["bin"], points: 1 }];
+    let vergeben = -1;
+    mount(React.createElement(ExerciseSet, { items, onPoints: (punkte: number) => { vergeben = punkte; } }));
+    const feld = rootEl.querySelector("input.field") as HTMLInputElement;
+    typeIn(feld, "bist");
+    click(btn("تحقّق")!);
+    typeIn(feld, "bin");
+    click(btn("تحقّق")!);
+    ok(vergeben === 0.5 && txt().includes("نصف النقاط"), "LVb½ المحاولة الثانية لتمرين من نقطة واحدة تمنح 0.5 فعلياً وتعرض ذلك");
+  }
+
   /* ═══════════ LVc — مسودّة التمرين الجاري تعود بعد إغلاق المشغّل وفتحه ═══════════ */
   {
     const { default: ExerciseSet } = await import("../components/exercises");

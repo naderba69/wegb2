@@ -34,6 +34,7 @@ import {
 } from "../lib/plan";
 import { newCard, reviewCard, isDue, newCardCap, countNewCardsIntroducedToday, karteStufe, abrufbarkeit } from "../lib/srs";
 import { planeWortkarten } from "../lib/wortkarten";
+import { punkteFuerRichtigenVersuch } from "../lib/exercise-scoring";
 import { prognose } from "../lib/prognose";
 import { PHONETIK_EINHEITEN } from "../lib/phonetikdaten";
 import { bewerteHoerKontrast, pruefbareKontrastIndizes, starteHoerKontrast } from "../lib/minimalpaare";
@@ -129,7 +130,7 @@ import {
   recordTodayUxSubmission,
   todayUxSummary,
 } from "../lib/metriken";
-import { buildModulPruefung, bewerte, darfWiederholen, modulFrei, tagGesperrt, rettungsplan } from "../lib/modulpruefung";
+import { buildModulPruefung, bewerte, darfWiederholen, modulFrei, tagGesperrt, rettungsplan, GESAMT_SCHWELLE, FACH_SCHWELLE } from "../lib/modulpruefung";
 import { emptyProgress, TOTAL_DAYS, CURRICULUM_SCHEDULE_VERSION, type SrsState, type Tempo } from "../lib/types";
 import { groupTasksByTodayStep, todayStepOf, todayStepStatuses, todayTaskSubmitted } from "../lib/today-steps";
 import { parsePitfallContrast } from "../lib/pitfall";
@@ -1151,7 +1152,11 @@ const vocabRepeatAudit = (() => {
     ok(fund("Ich fahre mit den Bus.", "الداتيف"), "K58d ويمسكُ «mit den» — حرفٌ يفرضُ الداتيف");
     ok(fund("Das ist für dem Mann.", "الأكوزاتيف"), "K58e ويمسكُ «für dem» — حرفٌ يفرضُ الأكوزاتيف");
     ok(fund("Ich aufstehe um sieben Uhr.", "تنفصل"), "K58f ويمسكُ البادئةَ المنفصلةَ الملتصقة");
-    ok(pruefeText("Das Information ist gut.").some((f) => f.spalte === "grammatik"), "K58g ويمسكُ الأداةَ المخالفةَ لجنسِ الاسمِ في الدفتر");
+    const genusFund = (t: string) => pruefeText(t).some((f) => f.meldungAr.includes("جنسُ"));
+    ok(genusFund("Das Information ist gut.") && genusFund("Die Mann ist hier."), "K58g يمسكُ مخالفةَ جنسِ الاسمِ في سياق فاعلٍ آمن");
+    ok(["mit der Bahn", "für den Kurs", "wegen des Wetters", "mit dem Zug"].every((phrase) => !genusFund(`Ich fahre ${phrase}.`))
+      && !genusFund("Der Frau helfe ich."),
+      "K58g2 لا يصحّح جنسَ الأداة داخل تركيب حرف جر أو حالة der الملتبسة");
     ok(pruefeText("Ich mache viele Sachen.").some((f) => f.spalte === "wortwahl"), "K58h ومصفوفةُ المرادفاتِ تلتقطُ «machen/Sachen»");
     ok(pruefeText("gut").some((f) => f.meldungAr.includes("ausgezeichnet")), "K58i وتعرضُ ثلاثةَ بدائلَ راقيةً لا نصيحةً عامّة");
 
@@ -1164,6 +1169,9 @@ const vocabRepeatAudit = (() => {
     ok(bewerteSchreiben(drei) === 92, "K58m وكلُّ خطأٍ مؤكَّدٍ يخصمُ ثمانيَ نقاط");
     ok(heilUebungen({ spalte: "syntax", schwere: "sicher", stelle: "morgen ich gehe", meldungAr: "", vorschlagDe: "morgen gehe ich" } as never).length === 3,
       "K58n وكلُّ خطأٍ يولّدُ ثلاثةَ تمارينَ علاجيةٍ من نصِّهِ لا نصيحةً عامّة");
+    ok(punkteFuerRichtigenVersuch(1, 2) === 0.5 && punkteFuerRichtigenVersuch(4, 2) === 2
+      && punkteFuerRichtigenVersuch(1, 1) === 1,
+      "K58o المحاولة الثانية تمنح نصف النقاط الحقيقي: 1←0.5 و4←2 بلا تقريب");
   }
 
 
@@ -1187,7 +1195,7 @@ const vocabRepeatAudit = (() => {
     ok(JSON.stringify(buildModulPruefung(5, 2)) === JSON.stringify(buildModulPruefung(5, 2)), "K57e وحتميةٌ: الوحدةُ والمحاولةُ نفسُهما = الورقةُ نفسُها");
 
     ok(bewerte({ lesen: 100, hoeren: 100, schreiben: 100, sprechen: 100 }).bestanden, "K57f المئةُ تعبر");
-    ok(!bewerte({ lesen: 100, hoeren: 100, schreiben: 55, sprechen: 100 }).bestanden, "K57g ولا عبورَ بمهارةٍ دونَ ٦٠٪ ولو كانَ المجموعُ ٨٩٪ — قاعدةُ الامتحانِ الرسميّ");
+    ok(!bewerte({ lesen: 100, hoeren: 100, schreiben: 55, sprechen: 100 }).bestanden, "K57g ولا عبورَ بمهارةٍ دونَ ٦٠٪ ولو كانَ المجموعُ ٨٩٪ — معيارُ الإتقان الداخلي");
     ok(!bewerte({ lesen: 75, hoeren: 75, schreiben: 75, sprechen: 75 }).bestanden, "K57h ولا عبورَ بمجموعٍ دونَ ٨٠٪");
     ok(bewerte({ lesen: 90, hoeren: 80, schreiben: 70, sprechen: 80 }).bestanden, "K57i ويعبرُ مَن بلغَ ٨٠٪ ولم تسقطْ لهُ مهارة");
     const schwach = bewerte({ lesen: 90, hoeren: 40, schreiben: 30, sprechen: 90 });
@@ -1202,6 +1210,12 @@ const vocabRepeatAudit = (() => {
     ok(!darfWiederholen(frisch).erlaubt && darfWiederholen(frisch).restStunden > 0, "K57n وتهدئةُ ٢٤ ساعةً بعدَ الرسوبِ فاعلة");
     const alt = { versuche: 1, best: 40, bestanden: false, zuletzt: new Date(Date.now() - 25 * 3600_000).toISOString() };
     ok(darfWiederholen(alt).erlaubt, "K57o وتنقضي فتنفتحُ الإعادة");
+    const lehrerPruefung = readFileSync("components/lehrer.tsx", "utf8");
+    ok(GESAMT_SCHWELLE === 80 && FACH_SCHWELLE === 60
+      && lehrerPruefung.includes("pct >= GESAMT_SCHWELLE && schwach.length === 0")
+      && lehrerPruefung.includes("هذه ليست نتيجة Goethe رسمية")
+      && !lehrerPruefung.includes("عتبة النجاح في الخطة 60% (Goethe)"),
+      "K57p امتحان المدرّس يستهلك عتبتَي 80/60 المشتركتين ويفصل معيار الإتقان عن ادعاء Goethe الرسمي");
   }
 
 
@@ -15038,6 +15052,39 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const orphanCardAssetsK351 = cardAssetsK350.filter((name) => !referencedAssetNamesK351.has(name));
   ok(orphanCardAssetsK351.length === 0 && referencedAssetNamesK351.size === cardAssetsK350.length,
     `K351 R149: كل ملف في public/cards مُشار إليه فعلياً من vocab — صفر أصول يتيمة (${cardAssetsK350.length}/${referencedAssetNamesK351.size})`);
+}
+
+/* ═══ K352 — R150: البنوك الكسولة تُبطل كل المشتقات وتوقظ مستهلكي React ═══ */
+{
+  const bankloadK352 = readFileSync("lib/bankload.ts", "utf8");
+  const contentK352 = readFileSync("lib/content.ts", "utf8");
+  const hookK352 = readFileSync("lib/use-bank-generation.ts", "utf8");
+  ok(bankloadK352.includes("const aenderungsAbonnenten = new Set") &&
+    bankloadK352.includes("export function bankGenerationSnapshot") &&
+    (bankloadK352.match(/meldeBankAenderung\(\);/g) ?? []).length === 3 &&
+    contentK352.includes("beiLangBankenBereit(fuelleAusBanken)") &&
+    hookK352.includes("useSyncExternalStore(abonniereBankAenderung, bankGenerationSnapshot"),
+    "K352a R150: core وB2 وlang ترفع جيلاً رتيباً بعد إعادة ملء content، وReact يشترك بعقد useSyncExternalStore");
+
+  const ableitungenK352 = [
+    ["lib/plan.ts", "beiVertiefungBereit(aktualisierePlanAbleitungen)"],
+    ["lib/komposita-aufgabe.ts", "beiVertiefungBereit(aktualisiereKompositaLexikon)"],
+    ["lib/schreibpruefer.ts", "beiVertiefungBereit(fuelleGenus)"],
+    ["components/tasks.tsx", "useBankGeneration()"],
+  ] as const;
+  const consumersK352 = [
+    "app/page.tsx", "app/lernen/page.tsx", "app/ueben/page.tsx",
+    "components/today-b2-praxis.tsx", "components/akademie/CurriculumMap.tsx", "components/vollpruefung.tsx",
+  ];
+  ok(ableitungenK352.every(([path, anchor]) => readFileSync(path, "utf8").includes(anchor)) &&
+    consumersK352.every((path) => readFileSync(path, "utf8").includes("useBankGeneration")),
+    "K352b R150: مشتقات الخطة والمركبات والجنس والمهام يعاد بناؤها، وكل واجهة تعتمدها مرتبطة بجيل البنك");
+
+  const browserK352 = readFileSync("scripts/browser_e2e.mjs", "utf8");
+  ok(browserK352.includes('counter.includes("87 / 87")') &&
+    browserK352.includes('option[value="b2-indirekte-rede"]') &&
+    browserK352.includes("Tatsächliche B2-Lektion nach Bank-Nachladung"),
+    "K352c R150: بوابة Chromium تنتظر 87/87 ثم تفتح درس B2 فعلياً بعد التحميل المرحلي");
 }
 
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);

@@ -32,8 +32,21 @@ const roh: Record<string, unknown> = {};
 let bereit = false;
 let vertiefungBereit = false;
 let langBereit = false;
+let bankGeneration = 0;
 const wartende: (() => void)[] = [];
 const vertiefungWartende: (() => void)[] = [];
+const langWartende: (() => void)[] = [];
+const aenderungsAbonnenten = new Set<() => void>();
+
+function entferneWartenden(liste: (() => void)[], fn: () => void): void {
+  const index = liste.indexOf(fn);
+  if (index >= 0) liste.splice(index, 1);
+}
+
+function meldeBankAenderung(): void {
+  bankGeneration += 1;
+  for (const fn of aenderungsAbonnenten) fn();
+}
 
 const fsDa = typeof readFileSync === "function";
 
@@ -65,6 +78,7 @@ function ladeSync(): boolean {
       roh[name] = JSON.parse(readFileSync(join(process.cwd(), "content", ...name.split("/")), "utf8"));
     }
     bereit = true; vertiefungBereit = true; langBereit = true;
+    bankGeneration = 3;
     return true;
   } catch { return false; }
 }
@@ -74,8 +88,28 @@ export function bankRoh(name: string): unknown { return roh[name]; }
 export function bankenBereit(): boolean { return bereit; }
 export function vertiefungBereitF(): boolean { return vertiefungBereit; }
 export function langBankenBereit(): boolean { return langBereit; }
-export function beiBankenBereit(fn: () => void): void { if (bereit) fn(); else wartende.push(fn); }
-export function beiVertiefungBereit(fn: () => void): void { if (vertiefungBereit) fn(); else vertiefungWartende.push(fn); }
+/** رقمٌ رتيب يتغيّر بعد اكتمال كل طبقة بنك؛ يصلح snapshot لـuseSyncExternalStore. */
+export function bankGenerationSnapshot(): number { return bankGeneration; }
+/** اشتراكٌ في تغيّر طبقات البنوك، مع تنظيفٍ صريح عند فك تركيب المستهلك. */
+export function abonniereBankAenderung(fn: () => void): () => void {
+  aenderungsAbonnenten.add(fn);
+  return () => aenderungsAbonnenten.delete(fn);
+}
+export function beiBankenBereit(fn: () => void): () => void {
+  if (bereit) { fn(); return () => undefined; }
+  wartende.push(fn);
+  return () => entferneWartenden(wartende, fn);
+}
+export function beiVertiefungBereit(fn: () => void): () => void {
+  if (vertiefungBereit) { fn(); return () => undefined; }
+  vertiefungWartende.push(fn);
+  return () => entferneWartenden(vertiefungWartende, fn);
+}
+export function beiLangBankenBereit(fn: () => void): () => void {
+  if (langBereit) { fn(); return () => undefined; }
+  langWartende.push(fn);
+  return () => entferneWartenden(langWartende, fn);
+}
 
 /** Browser-Bootstrap: lädt /banks.json (core) sofort, vertiefung/lang lazy */
 export async function initialisiereBanken(): Promise<void> {
@@ -88,6 +122,7 @@ export async function initialisiereBanken(): Promise<void> {
   if (roh["grammar-core.json"] && !roh["grammar.json"]) roh["grammar.json"] = roh["grammar-core.json"];
   bereit = true;
   for (const fn of wartende.splice(0)) fn();
+  meldeBankAenderung();
   initialisiereVertiefung().catch(() => {});
   setTimeout(() => { initialisiereLangBanken().catch(() => {}); }, 3000);
 }
@@ -107,6 +142,7 @@ export async function initialisiereVertiefung(): Promise<void> {
     }
     vertiefungBereit = true;
     for (const fn of vertiefungWartende.splice(0)) fn();
+    meldeBankAenderung();
   } catch {}
 }
 
@@ -118,5 +154,7 @@ export async function initialisiereLangBanken(): Promise<void> {
     const alle = (await res.json()) as Record<string, unknown>;
     for (const name of LANG_DATEIEN) roh[name] = alle[name];
     langBereit = true;
+    for (const fn of langWartende.splice(0)) fn();
+    meldeBankAenderung();
   } catch {}
 }

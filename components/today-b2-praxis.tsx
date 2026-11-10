@@ -4,6 +4,7 @@ import { useMemo } from "react";
 import { useProgress } from "@/lib/store";
 import { buildDay } from "@/lib/plan";
 import { texts as alleTexte, writingTasks as alleWriting } from "@/lib/content";
+import { useBankGeneration } from "@/lib/use-bank-generation";
 
 const BAMF_MAP: Record<string, { id: string; label: string; emoji: string; filter: string }> = {
   wohnen: { id: "wohnen", label: "السكن", emoji: "🏠", filter: "wohnen" },
@@ -28,15 +29,20 @@ function bamfForTask(titleDe: string): (typeof BAMF_MAP)[string] | null {
 }
 
 export function TodayB2Praxis() {
+  const bankGeneration = useBankGeneration();
   const { progress } = useProgress();
-  const plan = useMemo(() => buildDay(progress.plan.day, progress), [progress]);
+  const plan = useMemo(() => {
+    void bankGeneration;
+    return buildDay(progress.plan.day, progress);
+  }, [progress, bankGeneration]);
   const b2Counts = useMemo(() => {
+    void bankGeneration;
     const b2Texte = (alleTexte as any[]).filter((t:any)=>t.level==="B2");
     const b2Write = (alleWriting as any[]).filter((w:any)=>w.level==="B2");
     // B2 texts 250-500w approximation: text length proxy
     const long = b2Texte.filter((t:any)=> (t.wortCount?? (t.text??"").split(/\s+/).length) >= 180).length;
     return { b2Texte: b2Texte.length, b2Write: b2Write.length, long };
-  }, []);
+  }, [bankGeneration]);
   const themes = useMemo(() => {
     const seen = new Set<string>();
     const out: { taskId: string; titleDe: string; bamf: (typeof BAMF_MAP)[string] }[] = [];

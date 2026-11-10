@@ -22,6 +22,7 @@ import { speakLine, speakAny, stopSpeech } from "@/lib/speech";
 import ExerciseSet from "./exercises";
 import { De } from "./De";
 import { FehlerKartenWahl } from "./fehlerkarten";
+import { FACH_SCHWELLE, GESAMT_SCHWELLE } from "@/lib/modulpruefung";
 
 // ═══════════════ صحّح الخطأ — تدريب على الصيغ الألمانية ═══════════════
 
@@ -532,13 +533,21 @@ export function Pruefung({
       Struktur: "القواعد والمفردات",
       Schreiben: "الكتابة",
     };
-    for (const [k, v] of Object.entries(teile)) {
+    const erwarteteTeile = [
+      text ? "Lesen" : null,
+      dlg ? "Hören" : null,
+      strukturItems.length > 0 ? "Struktur" : null,
+      wr ? "Schreiben" : null,
+    ].filter((teil): teil is string => teil !== null);
+    for (const k of erwarteteTeile) {
+      const v = teile[k] ?? { s: 0, t: 0 };
       s += v.s;
       t += v.t;
-      if (v.t > 0 && v.s / v.t < 0.7) schwach.push(namen[k] ?? k);
+      const teilPct = v.t > 0 ? (v.s / v.t) * 100 : 0;
+      if (teilPct < FACH_SCHWELLE) schwach.push(namen[k] ?? k);
     }
     const pct = t ? Math.round((s / t) * 100) : 0;
-    setReport({ pct, note: noteFromPct(pct), passed: pct >= 80, schwach });
+    setReport({ pct, note: noteFromPct(pct), passed: pct >= GESAMT_SCHWELLE && schwach.length === 0, schwach });
   };
 
   const teilPct = (k: string) => {
@@ -550,7 +559,7 @@ export function Pruefung({
     <section className="card fadein" style={{ padding: "1.2rem" }}>
       <h3 style={{ fontWeight: 800, marginBottom: "0.2rem" }}>📝 {task.titleDe}</h3>
       <div style={{ color: "var(--color-ink2)", marginBottom: "0.8rem" }}>
-        {task.titleAr} — أربعة أقسام، ورقة واحدة، عتبة النجاح في الخطة 60% (Goethe) — 80% تميّز. التزم الصدق في التقييم الذاتي.
+        {task.titleAr} — أربعة أقسام، ورقة واحدة. معيار الإتقان الداخلي: {GESAMT_SCHWELLE}% إجمالاً و{FACH_SCHWELLE}% على الأقل في كل قسم؛ هذه ليست نتيجة Goethe رسمية. التزم الصدق في التقييم الذاتي.
       </div>
 
       {text && (
@@ -672,7 +681,9 @@ export function Pruefung({
           </div>
           <div style={{ fontWeight: 800, fontSize: "1.05rem" }}>الدرجة: {report.note}</div>
           <div style={{ marginTop: "0.3rem" }}>
-            {report.passed ? "🎉 ناجح — أنت جاهز للمستوى التالي!" : "⚠️ دون عتبة 60% Goethe — سيرفع المحرّك ما لم يُتقَن تعويضاً إلزامياً."}
+            {report.passed
+              ? "🎉 حققتَ معيار الإتقان الداخلي — أنت جاهز للمستوى التالي!"
+              : `⚠️ لم يتحقق معيار الإتقان الداخلي (${GESAMT_SCHWELLE}% إجمالاً و${FACH_SCHWELLE}% لكل قسم).`}
           </div>
           {report.schwach.length > 0 && (
             <div style={{ marginTop: "0.5rem", fontSize: "0.92rem", textAlign: "start" }}>

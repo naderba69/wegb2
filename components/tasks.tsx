@@ -30,8 +30,7 @@ import { BemerkenKarte } from "./bemerken";
 import { entdeckungsFrage, induktionMoeglich, ergebnisText, type EntdeckungsErgebnis } from "@/lib/induktion";
 import { grammarMap } from "@/lib/content";
 import { LektionWizard } from "@/components/akademie/LektionWizard";
-const alleGrammatik = Object.values(grammarMap);
-const alleVokabelIds = Object.values(vocabMap).flatMap((deck) => deck.cards.map((card) => card.id));
+import { useBankGeneration } from "@/lib/use-bank-generation";
 
 /** مسودّة محلية للمهمة الجارية؛ تبقى حتى التسليم أو الإغلاق الصريح لليوم. */
 function useTaskDraft<T>(persistKey: string | undefined, slot: string, initial: T) {
@@ -443,10 +442,15 @@ function TriplePractice({ topic, seed, onPoints, persistKey }: { topic: GrammarT
 
 // ── شرح القواعد + تمارينه ───────────────────────────────────────────────
 function GrammarTask({ task, srs, onPoints, persistKey }: { task: DayTask; srs: SrsState2; onPoints: (p: number, m: number) => void; persistKey?: string }) {
+  const bankGeneration = useBankGeneration();
   const topic = getGrammar(task.topicId ?? "");
+  const alleGrammatik = useMemo(() => {
+    void bankGeneration;
+    return Object.values(grammarMap);
+  }, [bankGeneration]);
   // 🔍 الاستقراء قبل القاعدة: أمثلة ← تخمين ← كشف (lib/induktion.ts)
   const seed = Array.from(task.id).reduce((h, c) => (h * 31 + c.charCodeAt(0)) >>> 0, 11);
-  const frage = useMemo(() => (topic ? entdeckungsFrage(topic, alleGrammatik, seed) : null), [topic, seed]);
+  const frage = useMemo(() => (topic ? entdeckungsFrage(topic, alleGrammatik, seed) : null), [topic, alleGrammatik, seed]);
   const [ergebnis, setErgebnis] = useState<EntdeckungsErgebnis | null>(null);
   const [gewaehlt, setGewaehlt] = useState<number | null>(null);
   if (!topic) {
@@ -624,7 +628,13 @@ function GrammarTask({ task, srs, onPoints, persistKey }: { task: DayTask; srs: 
 
 // ── مفردات + بنك جمل ────────────────────────────────────────────────────
 function VocabTask({ task, srs, onSrs, onPoints, voiceName, rate, tempo = "regelmaessig", persistKey }: Omit<TaskProps, "lang" | "day">) {
+  const bankGeneration = useBankGeneration();
   const deck = getDeck(task.deckId ?? "");
+  const alleVokabelIds = useMemo(() => {
+    void bankGeneration;
+    return Object.values(vocabMap).flatMap((vocabDeck) => vocabDeck.cards.map((card) => card.id));
+  }, [bankGeneration]);
+  const vocabBankKey = `${deck?.id ?? "kein-deck"}:${deck?.cards.length ?? 0}:${alleVokabelIds.length}`;
   const [queue, setQueue] = useState<VocabCard[]>([]);
   const [flipped, setFlipped] = useState(false);
   const [doneCount, setDoneCount] = useState(0);
@@ -652,8 +662,9 @@ function VocabTask({ task, srs, onSrs, onPoints, voiceName, rate, tempo = "regel
     // R138/P-15: نُعرِض إحصائيات البطاقات (مستحقة/جديدة/مقدمة اليوم) في الـ state لكي تظهَر في الواجهة.
     setQueueStats({ due: dueCount, fresh: freshCount, cap: newCardCap(tempo), introduced: introducedToday });
     // تُثبَّت الوتيرة عند بدء المهمة؛ تغيّرُ SRS داخل الطابور لا يعيدُ البطاقةَ الحالية.
+    // تُعاد حين يتغيّر محتوى بنك المفردات نفسه (core ثم B2)، لا عند وصول lang كي لا تُصفّر جولةً جارية.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [task.id, tempo]);
+  }, [task.id, tempo, vocabBankKey]);
 
   // إدخال البطاقة في SRS عند ظهورها فعلاً، لا عند تحميل طابورٍ قد لا يراه المتعلّم.
   useEffect(() => {

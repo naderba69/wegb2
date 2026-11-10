@@ -38,6 +38,7 @@ import { baueFalschFreundAufgabe } from "./falsche-freunde-aufgabe";
 import { baueFvgAufgabe } from "./fvg-aufgabe";
 import { baueKompositaWoche } from "./komposita-aufgabe";
 import { legacyThroughDayFor } from "./curriculum-schedule";
+import { beiBankenBereit, beiVertiefungBereit } from "./bankload";
 
 /**
  * محرّك الخطة اليومية — قلب المشروع المنهجي
@@ -207,6 +208,17 @@ export function phaseOf(day: number): Phase {
 // لا المحتوى، فتبقى صحيحةً مهما تغيّر حجمُ البنك (التدوير modulo عند السحب نفسه).
 const schreibBasisCache = new Map<string, number[]>();
 let schreibReplay: { tag: number; zaehler: number } | null = null;
+
+/** Rekonstruiert importzeitliche Lehrplan-Ableitungen nach jeder lazy geladenen Bank-Schicht. */
+function aktualisierePlanAbleitungen(): void {
+  for (const level of LEVEL_SEQUENCE) {
+    COURSE_TOPIC_ORDER[level].splice(0, COURSE_TOPIC_ORDER[level].length, ...orderCourseTopics(level));
+  }
+  schreibBasisCache.clear();
+}
+beiBankenBereit(aktualisierePlanAbleitungen);
+beiVertiefungBereit(aktualisierePlanAbleitungen);
+
 function schreibBasis(day: number, level: Level): number {
   const range = PHASE_RANGES.find((p) => p.level === level);
   if (!range) return 0;
