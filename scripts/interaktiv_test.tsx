@@ -3995,11 +3995,20 @@ const hasFile = txt().includes("صوتٌ من الدار");
     const { VollPruefung } = await import("../components/vollpruefung");
     mount(React.createElement(VollPruefung));
     const startBtn = rootEl.querySelector('[data-testid="vollpruefung-start"]') as HTMLButtonElement | null;
-    ok(!!startBtn && !startBtn.disabled, "CV1 جلسة الامتحان الكاملة تُركَّب وزرّ بدئها مفعّل بالبنوك المحمّلة");
+    ok(!!startBtn && !startBtn.disabled && txt().includes("تدريب امتحاني مصغّر"),
+      "CV1 التدريب المصغّر يُركَّب وزرّ بدئه مفعّل بالبنوك المحمّلة بلا ادعاء جلسة كاملة");
+    const b2 = rootEl.querySelector('[data-testid="vollpruefung-stufe-B2"]') as HTMLElement | null;
+    if (b2) click(b2);
+    await flushAsync();
+    const umfang = rootEl.querySelector('[data-testid="vollpruefung-umfang"]')?.textContent ?? "";
+    const poolText = rootEl.querySelector('[data-testid="vollpruefung-dialog-pool"]')?.textContent ?? "";
+    ok(umfang.includes("/30") && umfang.includes("لا تغطي أجزاء الامتحان الرسمية كاملة") &&
+      poolText.includes("49/49") && poolText.includes("0 مقصى"),
+      "CV1b مستوى B2 يعرض عدد بنود الجولة مقابل 30/30 ومخزون الاستماع المقبول/المقصى");
     if (startBtn) click(startBtn);
     const radios = rootEl.querySelectorAll('input[type="radio"]');
     ok(radios.length >= 3 && !!rootEl.querySelector('[data-testid="vollpruefung"]'),
-      `CV2 بدء الجلسة يعرض أسئلة القسم الأول فورًا (${radios.length} خيارًا)`);
+      `CV2 بدء التدريب يعرض أسئلة القسم الأول فورًا (${radios.length} خيارًا)`);
   }
 
   /* ═══ CIV — معرفة مهنية + قائمة بدء مهني (R203) ═══ */

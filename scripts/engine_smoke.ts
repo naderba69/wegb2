@@ -105,6 +105,7 @@ import { LEITER_STUFEN, fehlendeWoerter, stufeFrei, stufeAbgeschlossen, textBest
 import { REDE_FUNKTIONEN, REDE_TEILE, redemittelFuerTeil, drillRunde } from "../lib/redemittel";
 import { kollokationen, kollokationenFuer, partnerWort, kollokationUebung } from "../lib/kollokationen";
 import { bankenBereit, bankRoh, BANK_DATEIEN, VERTIEFUNG_DATEIEN, LANG_DATEIEN } from "../lib/bankload";
+import { VP_B2_REFERENZ_ITEMS, zaehleVpDialogPool } from "../lib/vollpruefung-pool";
 import { logSicherheit, sicherheitsStatistik, sicherheitsZeile, MAX_EINTRAEGE } from "../lib/sicherheit";
 import { karteFuerWort, verknuepfung, verwaiste, abdeckung, stammVon } from "../lib/verknuepfung";
 import { dueFehlerPriorisiert, verwandteKarte, transferUebung, beispielUebung, istUeberkonfident } from "../lib/fehlerbank2";
@@ -2120,7 +2121,7 @@ void 0;
 
     // K112: ترتيبُ الأولوية معلنٌ حرفياً — الأخطاء أولاً ثم التدريب الحرّ ثم المهارات
     ok(ueben.includes('const UEBEN_REIHENFOLGE = "einstufung,zusatz,fehlerlabor,uebungen,wortreview,blitz,hoeren,hoerneu,lueck,muendlich,begleiter,schatten,phonetik,vortrag,interview,briefe,szenarien,pflege,vollpruefung,leseleiter,redemittel,leben,tiefen,lesestoff,spiele,katalog"'),
-      // R218: محطة «vollpruefung» (جلسة امتحان كاملة) أُدرجت بعد التمريض — امتداد موثّق للترتيب
+      // R218/R157: محطة «vollpruefung» (تدريب امتحاني مصغّر) أُدرجت بعد التمريض — امتداد موثّق للترتيب
       // R300: محطتا «lesestoff» (قراءة وحوارات حرة) و«spiele» (ألعاب كلمات) أُدرجتا قبل الكاتالوج بطلب صريح من المالك — امتداد بنيوي موثّق، دون مساس بالترتيب الأصلي ولا بالخطة
       "K112a ترتيبُ الأولويةِ معلنٌ حرفياً: تحديد المستوى (R183) ← الزائد ← أخطاؤك ← التدريب الحرّ ← برقّ ← استماع ← استماع متنوّع ← فجوات ← كلام ← رفيق محادثة ذكي (R198) ← تظليل صوتي (R184) ← عرض ← مقابلة ← رسائل ← سيناريوهات ← تمريض (R197) ← سلّم قراءة ← وسائل تعبير ← حياة في ألمانيا (R200: امتداد بنيوي موثّق في المراجع) ← معجم ← قراءة وحوارات حرة (R300) ← ألعاب كلمات (R300) ← كاتالوج");
     const montiert = ["<FehlerLabor progress={progress} />", "<UebungenCard progress={progress} />", "<BlitzDrill progress={progress} />", "<HoerLabor progress={progress} />", "<LueckDiktat progress={progress} />", "<MündlichLabor progress={progress} />", "<VortragsBühne progress={progress} />", "<InterviewArena progress={progress} />", "<BriefSchmiede progress={progress} />", "<LebensSzenarien progress={progress} />", "<LeseLeiter />", "<RedemittelBank />", "<HoerNeu />", "<TiefenLexikon progress={progress} />", "<KatalogLeiste />", "<EinstufungTest />", "<ShadowingStation />"];
@@ -13944,9 +13945,9 @@ function collectR262(dir: string, out: string[] = []): string[] {
     "K299 سلّم التوثيق مدرّج فعليًا: كل نموذج موسوم بمستواه، والمستويات الأربع ممثّلة، وقمّة B2 بالمبني للمجهول والأسلوب الاسمي، وحوارا تمريض على A2");
 }
 
-// ===== K302 (R218 · Vollprüfung): Eine komplette Simulationssitzung
+// ===== K302 (R218/R157): Eine interne Mini-Prüfungsrunde
 // (Lesen+Hören+Schreiben+Sprechen) mit einem Gesamttimer und Sammelergebnis,
-// aus den echten Banken montiert, ehrlich intern markiert, ohne Plan-Schreibung. =====
+// aus den echten Banken montiert, mit sichtbarem Umfang, ohne Plan-Schreibung. =====
 {
   const vpSrc = readFileSync("components/vollpruefung.tsx", "utf8");
   const vpLib = readFileSync("lib/vollpruefung.ts", "utf8");
@@ -13955,7 +13956,7 @@ function collectR262(dir: string, out: string[] = []): string[] {
      vpSrc.includes('data-testid="vollpruefung-ergebnis"') && !vpSrc.includes("useProgress") && !vpSrc.includes("speichere") &&
      vpLib.includes('bankRoh("texts.json")') && vpLib.includes('bankRoh("dialogues.json")') &&
      vpLib.includes('bankRoh("writing.json")') && vpLib.includes('bankRoh("muendlich.json")'),
-    "K302 جلسة الامتحان الكاملة مركّبة من البنوك الحقيقية (نصوص/حوارات/كتابة/شفوي) بمؤقّت ونتيجة مجمّعة — محاكاة داخلية لا تكتب في الخطة ولا تدّعي رسمية");
+    "K302 جولة التدريب المصغّرة مركّبة من البنوك الحقيقية (نصوص/حوارات/كتابة/شفوي) بمؤقّت ونتيجة مجمّعة — داخلية لا تكتب في الخطة ولا تدّعي رسمية");
 }
 
 // ===== K301 (R215 · Schreib-/Sprech-Simulation mit Timer): Vier getimte
@@ -14093,7 +14094,7 @@ function collectR262(dir: string, out: string[] = []): string[] {
   ok(begleiterSrc.includes("begleiter-bewerten") && begleiterSrc.includes("begleiter-bewertung") && begleiterSrc.includes("ولا يقيس النطق أبدًا"), "K324e زرّ إنهاء وتقييم ولوحته بإعلان «لا نطق» في الرفيق");
   const hoerenSrc324 = readFileSync("components/hoeren.tsx", "utf8");
   ok(hoerenSrc324.includes("stimme-profil-") && hoerenSrc324.includes("\"de-AT\"") && hoerenSrc324.includes("\"de-CH\""), "K324f ملامح صوت الجهاز (نمساوي/سويسري) في مختبر السماع");
-  ok(readFileSync("components/vollpruefung.tsx", "utf8").includes("vollpruefung-variante"), "K324g زرّ تشكيلة امتحان أخرى في المحاكاة الكاملة");
+  ok(readFileSync("components/vollpruefung.tsx", "utf8").includes("vollpruefung-variante"), "K324g زرّ تشكيلة أخرى في جولة التدريب المصغّرة");
   ok(readFileSync("components/lehrer.tsx", "utf8").includes("lehrer-verbessert"), "K324h زرّ نسخة بأسلوب أعلى بعد تصحيح المدرّس الذكي");
 }
 
@@ -15125,6 +15126,39 @@ function collectR262(dir: string, out: string[] = []): string[] {
     browserK353.includes("memoized lesson library filters") && browserK353.includes('counter.includes("16 / 87")') &&
     browserK353.includes('counter.includes("1 / 87")'),
     "K353c R155: مكتبة الدروس ESM خالصة، تعيد حساب النتائج مرة لكل جيل/مرشح، وChromium يحرس العائلة والبحث");
+}
+
+/* K354 · PED-09/32: حجم الجولة ظاهر، وحوار السؤال الواحد لا يُقصى صامتاً */
+{
+  type DialogK354 = { id: string; level: string; questions?: { options?: string[]; answer?: string }[] };
+  const dialogeK354 = bankRoh("dialogues.json") as DialogK354[];
+  const audioK354 = bankRoh("dialog-audio.json") as { einsaetze: { id: string; file: string }[] };
+  const audioIdsK354 = new Set(audioK354.einsaetze.map((einsatz) => einsatz.id));
+  const poolK354 = zaehleVpDialogPool(dialogeK354, audioIdsK354);
+  ok(poolK354.gesamt.gesamt === 176 && poolK354.gesamt.akzeptiert === 176 && poolK354.gesamt.ausgeschlossen === 0 &&
+    poolK354.gesamt.mitEinerMc === 52 && poolK354.gesamt.mcFragen === 339 && poolK354.gesamt.sonstigeFragen === 85 &&
+    poolK354.nachStufe.B2?.gesamt === 49 && poolK354.nachStufe.B2?.akzeptiert === 49 && poolK354.nachStufe.B2?.mitEinerMc === 14,
+    "K354a R157: عداد واحد يثبت 176/176 حواراً مقبولاً، صفر إقصاء، و52 حوار سؤال واحد (B2: ‏49/49 و14 أحادي)");
+
+  const zweiPlusAusgeschlossenK354 = dialogeK354.filter((dialog) =>
+    (dialog.questions ?? []).filter((frage) => (frage.options?.length ?? 0) >= 3 && !!frage.answer).length >= 2 &&
+    !audioIdsK354.has(dialog.id));
+  ok(zweiPlusAusgeschlossenK354.length === 0,
+    "K354b لا حوار يملك سؤالَي MC صالحين أو أكثر يُقصى من المخزون (الصوت والقبول محروسان)");
+
+  const schemaK354 = JSON.parse(readFileSync("content/pruefung-b2.json", "utf8")) as { module: { id: string; items: number }[] };
+  const zielK354 = Object.fromEntries(schemaK354.module.map((modul) => [modul.id, modul.items]));
+  const libK354 = readFileSync("lib/vollpruefung.ts", "utf8");
+  const uiK354 = readFileSync("components/vollpruefung.tsx", "utf8");
+  const qualitaetK354 = readFileSync("app/qualitaet/page.tsx", "utf8");
+  const browserK354 = readFileSync("scripts/browser_e2e.mjs", "utf8");
+  ok(zielK354.lesen === VP_B2_REFERENZ_ITEMS.lesen && zielK354.hoeren === VP_B2_REFERENZ_ITEMS.hoeren &&
+    VP_B2_REFERENZ_ITEMS.lesen === 30 && VP_B2_REFERENZ_ITEMS.hoeren === 30 && libK354.includes("fragen.length >= 1") &&
+    uiK354.includes('data-testid="vollpruefung-umfang"') && uiK354.includes("تدريب امتحاني مصغّر") &&
+    uiK354.includes("لا تغطي أجزاء الامتحان الرسمية كاملة") && uiK354.includes("ابدأ التدريب المصغّر") &&
+    qualitaetK354.includes('data-testid="dialog-pool-transparenz"') &&
+    browserK354.includes("transparent mini exam scope") && browserK354.includes('pool.includes("49/49")'),
+    "K354c واجهة الجولة تعرض عدد بنودها مقابل 30/30 وتصرح بأنها مصغّرة، وصفحة الجودة وChromium يحارسان المقبول/المقصى");
 }
 
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);

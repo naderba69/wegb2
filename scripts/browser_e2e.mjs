@@ -270,6 +270,9 @@ async function main() {
       `تنفيذ حي مرشح: ${toolSummary.candidateLiveImplementations}`,
       `${toolSummary.relatedCatalogReferences} إحالة مفاهيمية`,
       `${toolSummary.decisionBreakdown["reject-not-applicable"] ?? 0} مرفوضة لعدم الملاءمة`,
+      "شفافية مخزون الاستماع المصغّر",
+      "176/176",
+      "حواراً له سؤال MC واحد",
       "ما يمنع الاعتماد الآن؟",
     ];
     const qualityText = await pollTextMarkers(cdp, sessionId, "[data-ui-shell='ui-app-shell']", qualityMarkers, "Qualitätsseite fehlt");
@@ -361,6 +364,23 @@ async function main() {
       "Tatsächliche B2-Lektion nach Bank-Nachladung");
     if (!b2LessonRendered) fail("B2-Lektion wurde trotz vollständiger Bibliothek nicht gerendert");
 
+    stage = "transparent mini exam scope";
+    await evalJs(cdp, sessionId, `localStorage.setItem("weg-abend","1")`);
+    await navigate(cdp, sessionId, `${ORIGIN}/ueben`);
+    await poll(cdp, sessionId, `!!document.querySelector('[data-testid="ueben-karte-vollpruefung"]')`, "Mini-Prüfungskarte");
+    await evalJs(cdp, sessionId, `document.querySelector('[data-testid="ueben-karte-vollpruefung"]')?.click()`);
+    await poll(cdp, sessionId, `!!document.querySelector('[data-testid="vollpruefung-stufe-B2"]')`, "Mini-Prüfung geöffnet");
+    await evalJs(cdp, sessionId, `document.querySelector('[data-testid="vollpruefung-stufe-B2"]')?.click()`);
+    const miniTrainingScope = await poll(cdp, sessionId, `(()=>{
+      const root=document.querySelector('[data-testid="vollpruefung"]')?.textContent??"";
+      const umfang=document.querySelector('[data-testid="vollpruefung-umfang"]')?.textContent??"";
+      const pool=document.querySelector('[data-testid="vollpruefung-dialog-pool"]')?.textContent??"";
+      const start=document.querySelector('[data-testid="vollpruefung-start"]')?.textContent??"";
+      return root.includes("تدريب امتحاني مصغّر")&&umfang.includes("/30")&&umfang.includes("لا تغطي أجزاء الامتحان الرسمية كاملة")&&
+        pool.includes("49/49")&&pool.includes("0 مقصى")&&start.includes("ابدأ التدريب المصغّر")
+        ? {umfang:umfang.trim(),pool:pool.trim()} : false;
+    })()`, "Tatsächlicher Umfang statt Vollprüfung-Behauptung", SW_TIMEOUT);
+
     stage = "service worker activation";
     const sw = await poll(cdp, sessionId, `(async()=>{const r=await navigator.serviceWorker.getRegistration();return r?.active?.state==="activated"&&!!navigator.serviceWorker.controller})()`, "Service Worker activation", SW_TIMEOUT);
     if (!sw) fail("Service Worker nicht aktiv");
@@ -413,6 +433,7 @@ async function main() {
       mediaCapability: { ...mediaCapability, limitation: "API-presence-only-no-real-microphone" },
       bankReadiness: { ...bankReadiness, b2LessonRendered: !!b2LessonRendered },
       libraryFilters: { familyFilterCount, searchFilterCount },
+      miniTrainingScope,
       serviceWorker: { active: true, caches: online.entries, missing: online.missing },
       offlineRoutes,
       offlineBanks,

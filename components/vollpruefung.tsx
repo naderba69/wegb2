@@ -1,17 +1,18 @@
 "use client";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { De } from "./De";
-import { vpTexte, vpDialoge, vpSchreiben, vpSprechen, type VpFrage } from "@/lib/vollpruefung";
+import { vpTexte, vpDialoge, vpSchreiben, vpSprechen, vpDialogPoolTransparenz, type VpFrage } from "@/lib/vollpruefung";
+import { VP_B2_REFERENZ_ITEMS } from "@/lib/vollpruefung-pool";
 import { lokalesDatum } from "@/lib/datum";
 import { useBankGeneration } from "@/lib/use-bank-generation";
 
 /**
- * 🧪 جلسة امتحان كاملة (R218): أربعة أقسام بمؤقّت إجمالي واحد ونتيجة مجمّعة.
+ * 🧪 تدريب امتحاني مصغّر (R218/R157): أربعة أقسام بمؤقّت داخلي واحد ونتيجة مجمّعة.
  * القراءة والاستماع بتصحيح آلي من البنوك؛ الكتابة والتحدّث بتقييم ذاتي معلَن
  * (نموذج ومعايير)، فلا تُحتسب لهما درجة آلية زائفة. لا يُكتب أي تقدّم في الخطة.
  */
 const STUFEN = ["A2", "B1", "B2"] as const;
-const GESAMT_MIN: Record<string, number> = { A2: 100, B1: 130, B2: 160 };
+const TRAININGS_MIN: Record<string, number> = { A2: 100, B1: 130, B2: 160 };
 type Phase = "start" | "lesen" | "hoeren" | "schreiben" | "sprechen" | "ergebnis";
 const PHASEN: Phase[] = ["lesen", "hoeren", "schreiben", "sprechen", "ergebnis"];
 const PHASEN_NAME: Record<Phase, string> = {
@@ -60,7 +61,7 @@ export function VollPruefung() {
   const [phase, setPhase] = useState<Phase>("start");
   const [antworten, setAntwortenState] = useState<Record<string, string>>({});
   const [selbst, setSelbst] = useState<Record<string, boolean>>({});
-  const [sekunden, setSekunden] = useState(GESAMT_MIN.B1 * 60);
+  const [sekunden, setSekunden] = useState(TRAININGS_MIN.B1 * 60);
   const setAntworten = (f: (a: Record<string, string>) => Record<string, string>) => setAntwortenState(f);
 
   const [variante, setVariante] = useState(0);
@@ -88,6 +89,9 @@ export function VollPruefung() {
     return pick(vpSprechen.filter((k) => !k.level || k.level === stufe), 1)[0]
       ?? vpSprechen[samen % Math.max(1, vpSprechen.length)];
   }, [stufe, pick, samen, bankGeneration]);
+  const lesenItems = texte.reduce((summe, text) => summe + text.fragen.length, 0);
+  const hoerenItems = dialoge.reduce((summe, dialog) => summe + dialog.fragen.length, 0);
+  const dialogPool = vpDialogPoolTransparenz.nachStufe[stufe];
 
   const laueft = phase !== "start" && phase !== "ergebnis";
   useEffect(() => {
@@ -126,7 +130,7 @@ export function VollPruefung() {
   const start = () => {
     setAntwortenState({});
     setSelbst({});
-    setSekunden(GESAMT_MIN[stufe] * 60);
+    setSekunden(TRAININGS_MIN[stufe] * 60);
     setPhase("lesen");
   };
   const weiter = () => {
@@ -137,10 +141,10 @@ export function VollPruefung() {
 
   return (
     <section data-testid="vollpruefung" style={{ display: "grid", gap: "0.8rem" }}>
-      <h3 style={{ fontWeight: 800, margin: 0 }}>🧪 جلسة امتحان كاملة تجريبية — أربعة أقسام بمؤقّت واحد</h3>
+      <h3 style={{ fontWeight: 800, margin: 0 }}>🧪 تدريب امتحاني مصغّر — أربعة أقسام بمؤقّت داخلي واحد</h3>
       <p style={{ fontSize: "0.86rem", color: "var(--color-ink2)", margin: 0 }}>
-        محاكاة داخلية مجمّعة من بنوك الأكاديمية نفسها (نصوص وحوارات ومهام كتابة وبطاقات تحدّث حقيقية من مستواك)،
-        بنتيجة مجمّعة في النهاية. <b>ليست نتيجة Goethe أو telc رسمية</b>، ولا تُسجَّل في خطتك.
+        تدريب داخلي مجمّع من بنوك الأكاديمية نفسها (نصوص وحوارات ومهام كتابة وبطاقات تحدّث حقيقية من مستواك)،
+        بنتيجة مجمّعة في النهاية. <b>ليس امتحان تحمّل كاملاً</b>، وهذه <b>ليست نتيجة Goethe أو telc رسمية</b>، ولا يُسجَّل في خطتك.
         القراءة والاستماع بتصحيح آلي؛ الكتابة والتحدّث ب<b>تقييم ذاتي</b> بالنموذج والمعايير — لا درجة آلية زائفة.
       </p>
 
@@ -148,21 +152,32 @@ export function VollPruefung() {
         <div className="card" style={{ padding: "0.8rem 1rem", display: "grid", gap: "0.6rem" }}>
           <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }} role="group" aria-label="المستوى">
             {STUFEN.map((s) => (
-              <button key={s} type="button" className={stufe === s ? "btn btn-primary" : "btn btn-ghost"}
+              <button key={s} type="button" data-testid={`vollpruefung-stufe-${s}`} className={stufe === s ? "btn btn-primary" : "btn btn-ghost"}
                 style={{ minHeight: "44px" }} onClick={() => setStufe(s)}>{s}</button>
             ))}
           </div>
+          <div data-testid="vollpruefung-umfang" style={{ fontSize: "0.88rem", lineHeight: 1.8 }}>
+            <strong>حجم هذه التشكيلة:</strong> القراءة {lesenItems} بنداً · الاستماع {hoerenItems} بنداً.
+            {stufe === "B2" && (
+              <>
+                <br />المخطط المرجعي المؤقت: القراءة {VP_B2_REFERENZ_ITEMS.lesen} بنداً والاستماع {VP_B2_REFERENZ_ITEMS.hoeren} بنداً؛
+                أي أن هذه الجولة {lesenItems}/{VP_B2_REFERENZ_ITEMS.lesen} و{hoerenItems}/{VP_B2_REFERENZ_ITEMS.hoeren} فقط، ولا تغطي أجزاء الامتحان الرسمية كاملة.
+              </>
+            )}
+          </div>
+          <div data-testid="vollpruefung-dialog-pool" style={{ fontSize: "0.82rem", color: "var(--color-ink2)", lineHeight: 1.7 }}>
+            مخزون الاستماع للمستوى: {dialogPool ? `${dialogPool.akzeptiert}/${dialogPool.gesamt} حواراً مقبولاً · ${dialogPool.ausgeschlossen} مقصى · ${dialogPool.mitEinerMc} بسؤال اختيار واحد` : "يُحمَّل…"}.
+          </div>
           <div style={{ fontSize: "0.88rem" }}>
-            ⏱️ الوقت الإجمالي المقترح: {GESAMT_MIN[stufe]} دقيقة للجلسة كلها (قراءة ثم استماع ثم كتابة ثم تحدّث).
-            وزّع وقتك بنفسك كما في الامتحان الحقيقي.
+            ⏱️ سقف وقت التدريب الداخلي: {TRAININGS_MIN[stufe]} دقيقة للأقسام الأربعة. هذا ليس الزمن الرسمي ولا اختبار تحمّل كاملاً.
           </div>
           <button type="button" className="btn btn-primary" style={{ minHeight: "48px" }}
             data-testid="vollpruefung-start" onClick={start} disabled={!bereit}>
-            ▶ ابدأ الجلسة الكاملة ({stufe})
+            ▶ ابدأ التدريب المصغّر ({stufe})
           </button>
           <button type="button" className="btn btn-ghost" style={{ minHeight: "44px" }}
             data-testid="vollpruefung-variante" onClick={() => setVariante((x) => x + 1)}>
-            🔀 تشكيلة امتحان أخرى (رقم {variante + 1}) — نصوص وحوارات مختلفة من البنوك
+            🔀 تشكيلة تدريب أخرى (رقم {variante + 1}) — نصوص وحوارات مختلفة من البنوك
           </button>
           {!bereit && <div style={{ fontSize: "0.82rem" }}>البنوك تُحمَّل… أعد المحاولة بعد لحظات.</div>}
         </div>

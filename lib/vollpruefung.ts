@@ -1,8 +1,9 @@
 import { bankRoh, beiBankenBereit, beiVertiefungBereit } from "./bankload";
+import { istVpMcFrage, zaehleVpDialogPool, type VpDialogPoolTransparenz } from "./vollpruefung-pool";
 
 /**
- * 🧪 جلسة امتحان كاملة تجريبية (R218): Lesen + Hören + Schreiben + Sprechen
- * في جلسة واحدة بمؤقّت إجمالي ونتيجة مجمّعة — تُركَّب من البنوك الموجودة
+ * 🧪 جولة تدريب امتحاني مصغّرة (R218/R157): Lesen + Hören + Schreiben + Sprechen
+ * في جلسة واحدة بمؤقّت داخلي ونتيجة مجمّعة — تُركَّب من البنوك الموجودة
  * (نصوص/حوارات/كتابة/شفوي) دون أن تكتب أي تقدّم في الخطة. محاكاة داخلية،
  * لا نتيجة Goethe/telc رسمية؛ الكتابة والتحدّث بتقييم ذاتي معلَن.
  */
@@ -16,10 +17,11 @@ export const vpTexte: VpText[] = [];
 export const vpDialoge: VpDialog[] = [];
 export const vpSchreiben: VpSchreiben[] = [];
 export const vpSprechen: VpSprechen[] = [];
+export let vpDialogPoolTransparenz: VpDialogPoolTransparenz = zaehleVpDialogPool([], new Set());
 
 interface RohFrage { type?: string; promptDe: string; promptAr: string; options?: string[]; answer: string; explanationAr?: string }
 const nurMc = (fragen: RohFrage[] = []): VpFrage[] =>
-  fragen.filter((f) => f.options && f.options.length >= 3 && f.answer)
+  fragen.filter(istVpMcFrage)
     .map((f) => ({ promptDe: f.promptDe, promptAr: f.promptAr, options: f.options as string[], answer: f.answer, explanationAr: f.explanationAr ?? "" }));
 
 function fuelle(): void {
@@ -33,11 +35,14 @@ function fuelle(): void {
   const audio = bankRoh("dialog-audio.json") as { einsaetze: { id: string; file: string }[] } | undefined;
   const audioMap = new Map((audio?.einsaetze ?? []).map((e) => [e.id, e.file]));
   const dialoge = bankRoh("dialogues.json") as { id: string; level: string; titleDe: string; titleAr: string; lines: { who: string; de: string }[]; questions: RohFrage[] }[] | undefined;
-  if (dialoge?.length && vpDialoge.length === 0) {
-    for (const d of dialoge) {
-      const fragen = nurMc(d.questions);
-      if (fragen.length >= 2 && audioMap.has(d.id)) {
-        vpDialoge.push({ id: d.id, level: d.level, titleDe: d.titleDe, titleAr: d.titleAr, audio: audioMap.get(d.id) ?? null, zeilen: d.lines.map((l) => ({ who: l.who, de: l.de })), fragen: fragen.slice(0, 4) });
+  if (dialoge?.length) {
+    vpDialogPoolTransparenz = zaehleVpDialogPool(dialoge, new Set(audioMap.keys()));
+    if (vpDialoge.length === 0) {
+      for (const d of dialoge) {
+        const fragen = nurMc(d.questions);
+        if (fragen.length >= 1 && audioMap.has(d.id)) {
+          vpDialoge.push({ id: d.id, level: d.level, titleDe: d.titleDe, titleAr: d.titleAr, audio: audioMap.get(d.id) ?? null, zeilen: d.lines.map((l) => ({ who: l.who, de: l.de })), fragen: fragen.slice(0, 4) });
+        }
       }
     }
   }
