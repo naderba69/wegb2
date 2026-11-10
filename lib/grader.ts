@@ -448,6 +448,45 @@ export async function llmVerbindungTesten(cfg: LlmCfg): Promise<LlmTestErgebnis>
   }
 }
 
+type JsonObjekt = Record<string, unknown>;
+
+/**
+ * Liest das erste syntaktisch ausgewogene JSON-Objekt aus Modelltext.
+ * Beachtet Strings und Escape-Zeichen, ignoriert Markdown/Text davor und danach
+ * und probiert nach einem ungültigen Objekt den nächsten Block statt gierig bis
+ * zur letzten Klammer zu greifen.
+ */
+export function erstesJsonObjekt(raw: string): JsonObjekt | null {
+  for (let start = 0; start < raw.length; start++) {
+    if (raw[start] !== "{") continue;
+    let tiefe = 0;
+    let inString = false;
+    let escaped = false;
+    for (let index = start; index < raw.length; index++) {
+      const zeichen = raw[index];
+      if (inString) {
+        if (escaped) escaped = false;
+        else if (zeichen === "\\") escaped = true;
+        else if (zeichen === '"') inString = false;
+        continue;
+      }
+      if (zeichen === '"') { inString = true; continue; }
+      if (zeichen === "{") tiefe += 1;
+      else if (zeichen === "}") {
+        tiefe -= 1;
+        if (tiefe === 0) {
+          try {
+            const parsed: unknown = JSON.parse(raw.slice(start, index + 1));
+            if (parsed && typeof parsed === "object" && !Array.isArray(parsed)) return parsed as JsonObjekt;
+          } catch { /* nächsten möglichen Block versuchen */ }
+          break;
+        }
+      }
+    }
+  }
+  return null;
+}
+
 export interface LlmKorrektur {
   korrigiert: string;
   notizen: string[];
@@ -487,9 +526,8 @@ export async function llmKorrigieren(
     if (!res.ok) return null;
     const data = await res.json();
     const raw: string = data?.choices?.[0]?.message?.content ?? "";
-    const m = raw.match(/\{[\s\S]*\}/);
-    if (!m) return null;
-    const p = JSON.parse(m[0]);
+    const p = erstesJsonObjekt(raw);
+    if (!p) return null;
     return {
       korrigiert: String(p.korrigiert ?? ""),
       notizen: Array.isArray(p.notizen) ? p.notizen.map(String) : [],
@@ -585,9 +623,8 @@ export async function llmKriterien(
     if (!res.ok) return null;
     const data = await res.json();
     const raw: string = data?.choices?.[0]?.message?.content ?? "";
-    const m = raw.match(/\{[\s\S]*\}/);
-    if (!m) return null;
-    const p = JSON.parse(m[0]);
+    const p = erstesJsonObjekt(raw);
+    if (!p) return null;
     const liste: LlmKriterien[] = (Array.isArray(p.kriterien) ? p.kriterien : [])
       .map((k: { name?: unknown; punkte?: unknown; kommentar?: unknown }) => ({
         name: String(k?.name ?? ""),

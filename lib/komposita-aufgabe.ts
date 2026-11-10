@@ -6,6 +6,7 @@
 import { baueAufgaben, baueLexikon, type KompositaAufgabe } from "./komposita";
 import { alleVokabeln } from "./content";
 import { beiBankenBereit, beiVertiefungBereit } from "./bankload";
+import { seededShuffle } from "./seeded-rng";
 import type { Exercise, Level } from "./types";
 
 let lexikon = baueLexikon(alleVokabeln);
@@ -14,17 +15,6 @@ function aktualisiereKompositaLexikon(): void {
 }
 beiBankenBereit(aktualisiereKompositaLexikon);
 beiVertiefungBereit(aktualisiereKompositaLexikon);
-
-function shuffle<T>(arr: T[], seed: number): T[] {
-  const a = [...arr];
-  let s = Math.abs(seed) % 2147483647 || 1;
-  for (let i = a.length - 1; i > 0; i--) {
-    s = (s * 16807) % 2147483647;
-    const j = Math.floor(((s - 1) / 2147483646) * (i + 1));
-    [a[i], a[j]] = [a[j], a[i]];
-  }
-  return a;
-}
 
 /**
  * حقنة أسبوعية للمركَّبات من B1 فصاعداً.
@@ -44,7 +34,7 @@ export function baueKompositaWoche(day: number, level: Level, wochencheck: boole
       type: "mc" as const,
       promptDe: `die / der / das … ${a.wort}? Welcher Artikel ist richtig?`,
       promptAr: `ما أداةُ المركَّب «${a.wort}»؟ (تذكَّر قاعدةَ الكلمةِ الأخيرة!)`,
-      options: shuffle([...a.optionen], day + i * 7),
+      options: seededShuffle([...a.optionen], day + i * 7),
       answer: a.article,
       explanationAr: erklaerung,
       hint: `${a.article} ${a.wort}`,

@@ -1,13 +1,15 @@
 "use client";
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { useProgress } from "@/lib/store";
 import { buildDay, grammarAssignmentForDay, COURSE_TOPIC_ORDER } from "@/lib/plan";
 import { grammarMap } from "@/lib/content";
-import { GGP_FEATURES, GGP_FAMILIEN } from "@/lib/ggp";
+import { GGP_FEATURES, GGP_FAMILIEN, TOPIC_GGP, ggpForTopic } from "@/lib/ggp";
 import { LektionWizard } from "@/components/akademie/LektionWizard";
 import { FehlerGrenze } from "@/components/fehlergrenze";
 import { useBankGeneration } from "@/lib/use-bank-generation";
+
+const BIBLIOTHEK_LEVELS = Object.keys(COURSE_TOPIC_ORDER) as (keyof typeof COURSE_TOPIC_ORDER)[];
 
 /**
  * 📖 وجهة «الدرس» (P2): بابُ المعالج الخمسي.
@@ -17,7 +19,7 @@ import { useBankGeneration } from "@/lib/use-bank-generation";
  * وفوقه منتقي دروسٍ صريح يفتح أيَّ درسٍ من المنهج دون أن يمسّ الخطة.
  */
 export default function Lernen() {
-  useBankGeneration();
+  const bankGeneration = useBankGeneration();
   const { progress } = useProgress();
   const day = progress.plan.day;
   const plan = buildDay(day, progress);
@@ -26,6 +28,34 @@ export default function Lernen() {
   const [ggpFilter, setGgpFilter] = useState<string>("");
   const [familieFilter, setFamilieFilter] = useState<string>("");
   const qNorm = q.trim().toLowerCase();
+  const familieTopicIds = useMemo(() => {
+    if (!familieFilter) return null;
+    const codes = new Set(GGP_FEATURES.filter((feature) => feature.familie === familieFilter).map((feature) => feature.code));
+    return new Set(Object.entries(TOPIC_GGP)
+      .filter(([, topicCodes]) => topicCodes.some((code) => codes.has(code)))
+      .map(([topicId]) => topicId));
+  }, [familieFilter]);
+  const visibleByLevel = useMemo(() => {
+    void bankGeneration; // neue Bank-Schicht invalidiert die mutierten Content-Container
+    const sichtbar = {} as Record<keyof typeof COURSE_TOPIC_ORDER, string[]>;
+    for (const level of BIBLIOTHEK_LEVELS) {
+      sichtbar[level] = ggpFilter && level !== ggpFilter
+        ? []
+        : COURSE_TOPIC_ORDER[level].filter((id) => {
+          if (familieTopicIds && !familieTopicIds.has(id)) return false;
+          if (!qNorm) return true;
+          const topic = grammarMap[id];
+          const haystack = `${topic?.titleAr ?? ""} ${topic?.titleDe ?? ""} ${topic?.id ?? ""} ${level}`.toLowerCase();
+          return haystack.includes(qNorm);
+        });
+    }
+    return sichtbar;
+  // bankGeneration invalidiert die aus stufenweise mutierten Banken gelesenen Ableitungen.
+  }, [bankGeneration, familieTopicIds, ggpFilter, qNorm]);
+  const filteredByAll = useMemo(
+    () => BIBLIOTHEK_LEVELS.flatMap((level) => visibleByLevel[level] ?? []),
+    [visibleByLevel]
+  );
   useEffect(() => {
     try {
       const g = localStorage.getItem("weg-lernen-ggp");
@@ -109,25 +139,7 @@ export default function Lernen() {
         </div>
       </div>
       {/* ── Sprint 3D — المكتبة البحثية: شبكة بطاقات فورية + العداد ── */}
-      {(() => {
-        const allLevels = Object.keys(COURSE_TOPIC_ORDER) as (keyof typeof COURSE_TOPIC_ORDER)[];
-        const filteredByAll = allLevels.flatMap((lvl) => {
-          if (ggpFilter && lvl !== ggpFilter) return [];
-          return COURSE_TOPIC_ORDER[lvl].filter((id) => {
-            if (familieFilter) {
-              const feats = GGP_FEATURES.filter((f) => f.familie === familieFilter).map((f) => f.code);
-              const { TOPIC_GGP } = require("@/lib/ggp") as { TOPIC_GGP: Record<string, string[]> };
-              const hasFam = (TOPIC_GGP[id] ?? []).some((c: string) => feats.includes(c));
-              if (!hasFam) return false;
-            }
-            if (!qNorm) return true;
-            const t = grammarMap[id];
-            const hay = `${t?.titleAr ?? ""} ${t?.titleDe ?? ""} ${t?.id ?? ""} ${lvl}`.toLowerCase();
-            return hay.includes(qNorm);
-          });
-        });
-        return (
-          <>
+      <>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", margin: "0.7rem 0 0.3rem", fontSize: "0.8rem", color: "var(--ui-muted)" }}>
               <span data-testid="bibliothek-zaehler">📚 {filteredByAll.length} / 87 درساً {qNorm || ggpFilter || familieFilter ? "· مفلتر" : ""}</span>
               <span>{filteredByAll.length < 87 && "✨ بحث فوري"}</span>
@@ -142,20 +154,8 @@ export default function Lernen() {
                 style={{ minHeight: "48px", width: "100%" }}
               >
                 <option value="">درس اليوم / آخر درس وصلتَ إليه</option>
-                {allLevels.map((lvl) => {
-                  if (ggpFilter && lvl !== ggpFilter) return null;
-                  const visible = COURSE_TOPIC_ORDER[lvl].filter((id) => {
-                    if (familieFilter) {
-                      const feats = GGP_FEATURES.filter((f) => f.familie === familieFilter).map((f) => f.code);
-                      const { TOPIC_GGP } = require("@/lib/ggp") as { TOPIC_GGP: Record<string, string[]> };
-                      const hasFam = (TOPIC_GGP[id] ?? []).some((c: string) => feats.includes(c));
-                      if (!hasFam) return false;
-                    }
-                    if (!qNorm) return true;
-                    const t = grammarMap[id];
-                    const hay = `${t?.titleAr ?? ""} ${t?.titleDe ?? ""} ${t?.id ?? ""} ${lvl}`.toLowerCase();
-                    return hay.includes(qNorm);
-                  });
+                {BIBLIOTHEK_LEVELS.map((lvl) => {
+                  const visible = visibleByLevel[lvl] ?? [];
                   if (visible.length === 0) return null;
                   return (
                     <optgroup key={lvl} label={`المستوى ${lvl} — ${visible.length}`}>
@@ -194,7 +194,7 @@ export default function Lernen() {
                   >
                     <span style={{ display: "flex", gap: "0.35rem", alignItems: "center", flexWrap: "wrap" }}>
                       <span className={`lesson-level-badge lesson-level-${t.level}`} style={{ fontSize: "0.68rem", padding: "0.1rem 0.35rem" }}>{t.level}</span>
-                      <span className="ggp-chip" style={{ fontSize: "0.62rem" }}>{(require("@/lib/ggp") as { ggpForTopic: (x: string) => { code: string }[] }).ggpForTopic(id)[0]?.code ?? "GGP"}</span>
+                      <span className="ggp-chip" style={{ fontSize: "0.62rem" }}>{ggpForTopic(id)[0]?.code ?? "GGP"}</span>
                       {active && <span style={{ fontSize: "0.7rem", color: "var(--ui-green)", fontWeight: 800 }}>● مفتوح</span>}
                     </span>
                     <span style={{ fontWeight: 800, fontSize: "0.86rem", lineHeight: 1.4 }}>{t.titleAr}</span>
@@ -204,9 +204,7 @@ export default function Lernen() {
               })}
             </div>
             {filteredByAll.length > 48 && <div style={{ fontSize: "0.78rem", color: "var(--ui-muted)", textAlign: "center", marginBottom: "0.6rem" }}>+ {filteredByAll.length - 48} نتيجة أخرى — ضيّق البحث لرؤيتها</div>}
-          </>
-        );
-      })()}
+      </>
       <FehlerGrenze><LektionWizard topicId={topicId} /></FehlerGrenze>
     </div>
   );

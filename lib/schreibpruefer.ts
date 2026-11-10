@@ -1,7 +1,7 @@
 // ✍️ كاشفُ الكتابة ثلاثيُّ الأعمدة — [قواعد] · [ترتيبُ الجملة] · [اختيارُ المفردة]
 // صدقُ الادّعاء: هذا **كاشفُ أنماطٍ** يرى الشكلَ ولا يرى المعنى. كلُّ قاعدةٍ هنا مكتوبةٌ صراحةً،
 // ولا يوجدُ نموذجٌ لغويٌّ ولا اتصالٌ بالشبكة.
-import { vocabMap } from "./content";
+import { vocabMap, verben } from "./content";
 import { bankRoh, beiBankenBereit, beiVertiefungBereit } from "./bankload";
 
 export type Spalte = "grammatik" | "syntax" | "wortwahl";
@@ -29,7 +29,9 @@ const DAT_PRAEP = ["mit", "bei", "seit", "von", "zu", "aus", "nach", "gegenüber
 const NEBEN_KONJ = ["weil", "dass", "wenn", "obwohl", "damit", "während", "seitdem", "bevor", "nachdem", "sobald", "falls", "ob"];
 const POSITION_ANFANG = ["morgen", "heute", "gestern", "jetzt", "dann", "danach", "später", "manchmal", "oft", "immer", "vielleicht", "leider", "deshalb", "trotzdem", "zuerst"];
 const PRONOMEN = ["ich", "du", "er", "sie", "es", "wir", "ihr", "man"];
-const TRENNBAR = ["auf", "an", "aus", "ein", "mit", "vor", "zu", "ab", "nach", "zurück", "weiter", "los", "her", "hin"];
+const PRONOMEN_FORMEN: Record<string, number[]> = {
+  ich: [0], du: [1], er: [2], sie: [2, 5], es: [2], man: [2], wir: [3], ihr: [4],
+};
 
 /** مصفوفةُ المرادفات: الكلمةُ المبتذلة ← ثلاثةُ بدائلَ راقية. */
 export const SYNONYM_MATRIX: Record<string, { ersatz: string[]; hinweisAr: string }> = {
@@ -85,6 +87,19 @@ function istSichererGenusKontext(woerterListe: string[], klein: string[], index:
   return KOPULA.includes(klein[index - 1] ?? "") && nachNomenZuEnde;
 }
 
+/** يثبت الخطأ من تصريف فعلٍ موسوم trenn في البنك، لا من تشابه بادئة عابر. */
+function trennbarFehler(form: string, pronomen: string): { praefix: string; stamm: string } | null {
+  const formen = PRONOMEN_FORMEN[pronomen] ?? [];
+  for (const verb of verben) {
+    if (!verb.trenn) continue;
+    for (const formIndex of formen) {
+      const stamm = (verb.präs[formIndex] ?? "").split(/\s+/)[0]?.toLowerCase();
+      if (stamm && `${verb.trenn.toLowerCase()}${stamm}` === form) return { praefix: verb.trenn, stamm };
+    }
+  }
+  return null;
+}
+
 /** الفحصُ الكامل — يرجعُ قائمةَ المرصودِ مصنَّفةً في الأعمدةِ الثلاثة. */
 export function pruefeText(text: string): Befund[] {
   const b: Befund[] = [];
@@ -92,7 +107,7 @@ export function pruefeText(text: string): Befund[] {
 
   // ① أنماطٌ لغويةٌ قابلةٌ للفحص — 128 نمطاً من البنك
   for (const f of FEHLER) {
-    if (f.falsch.length > 6 && text.toLowerCase().includes(f.falsch.toLowerCase())) {
+    if (text.toLowerCase().includes(f.falsch.toLowerCase())) {
       b.push({ spalte: f.kat === "wortstellung" ? "syntax" : f.kat === "wortschatz" || f.kat === "falsche-freunde" ? "wortwahl" : "grammatik",
         schwere: "sicher", stelle: f.falsch, meldungAr: f.ar, vorschlagDe: f.richtig.split(" — ")[0] });
     }
@@ -190,14 +205,14 @@ export function pruefeText(text: string): Befund[] {
       }
     }
 
-    // ⑦ البادئةُ المنفصلةُ بقيت ملتصقة: «Ich aufstehe»
+    // ⑦ البادئةُ المنفصلةُ بقيت ملتصقة: «Ich aufstehe» — من بنك التصريف فقط، لا startsWith عام.
     for (let i = 0; i < w.length; i++) {
       const x = rein(w[i]).toLowerCase();
-      const pre = TRENNBAR.find((p) => x.startsWith(p) && x.length > p.length + 3);
-      if (pre && /^(ich|du|er|sie|es|wir)$/.test(klein[i - 1] ?? "") && /(e|st|t|en)$/.test(x)) {
+      const treffer = trennbarFehler(x, klein[i - 1] ?? "");
+      if (treffer) {
         b.push({ spalte: "syntax", schwere: "wahrscheinlich", stelle: w[i],
-          meldungAr: `البادئةُ «${pre}» تنفصلُ وتذهبُ إلى آخرِ الجملة`,
-          vorschlagDe: `${x.slice(pre.length)} … ${pre}`, regelId: "a1-trennbar" });
+          meldungAr: `البادئةُ «${treffer.praefix}» تنفصلُ وتذهبُ إلى آخرِ الجملة`,
+          vorschlagDe: `${treffer.stamm} … ${treffer.praefix}`, regelId: "a1-trennbar" });
       }
     }
 
