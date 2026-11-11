@@ -107,6 +107,7 @@ import { kollokationen, kollokationenFuer, partnerWort, kollokationUebung } from
 import { bankenBereit, bankRoh, BANK_DATEIEN, VERTIEFUNG_DATEIEN, LANG_DATEIEN } from "../lib/bankload";
 import { VP_B2_REFERENZ_ITEMS, zaehleVpDialogPool } from "../lib/vollpruefung-pool";
 import { exakteAntwortLecks } from "../lib/exercise-hints";
+import { calculateScaffoldMetrics, hasParentheticalMarker, isBlankLinkedScaffoldCandidate } from "../lib/scaffold-metrics";
 import { logSicherheit, sicherheitsStatistik, sicherheitsZeile, MAX_EINTRAEGE } from "../lib/sicherheit";
 import { karteFuerWort, verknuepfung, verwaiste, abdeckung, stammVon } from "../lib/verknuepfung";
 import { dueFehlerPriorisiert, verwandteKarte, transferUebung, beispielUebung, istUeberkonfident } from "../lib/fehlerbank2";
@@ -15198,6 +15199,48 @@ function collectR262(dir: string, out: string[] = []): string[] {
     browserK356.includes("scrollBy({top:targetRect.bottom-navRect.top+1") &&
     browserK356.includes("result.overlap > 0.5") && browserK356.includes("scrollPaddingBottom"),
     "K356b Chromium يقيس مستطيل زر فعلي مقابل الشريط على 360×640 و390×844 ويفشل عند أي تقاطع");
+}
+
+/* K357 · PED-91: خط أساس غير مانع لكثافة السقالة القوسية حسب CEFR */
+{
+  const syntheticK357 = {
+    A0: { level: "A0", exercises: [
+      { id: "context", promptDe: "Formuliere höflicher (Konjunktiv II).", answer: "Könnten Sie helfen?" },
+      { id: "blank", promptDe: "Du ___ hier. (wohnen)", text: "Du ___ hier. (wohnen)", answer: "wohnst" },
+      { id: "plain", promptDe: "Schreibe einen Satz.", answer: "Ich lerne." },
+    ] },
+  };
+  const syntheticMetricsK357 = calculateScaffoldMetrics(syntheticK357);
+  ok(hasParentheticalMarker(syntheticK357.A0.exercises[0]) &&
+    !isBlankLinkedScaffoldCandidate(syntheticK357.A0.exercises[0]) &&
+    isBlankLinkedScaffoldCandidate(syntheticK357.A0.exercises[1]) &&
+    syntheticMetricsK357.items === 3 && syntheticMetricsK357.parenthetical === 2 &&
+    syntheticMetricsK357.blankLinked === 1 && syntheticMetricsK357.exactLeaks === 0,
+    "K357a R160: المقياس يميز العلامة القوسية العامة من مرشح الفراغ، ولا يضاعف promptDe/text المتطابقين أو يدينهما كعيب");
+
+  const metricsK357 = calculateScaffoldMetrics(grammarMap);
+  const expectedLevelsK357 = {
+    A0: [8, 63, 8, 7, 12.7], A1: [19, 150, 58, 39, 38.7], A2: [22, 202, 82, 62, 40.6],
+    B1: [15, 143, 35, 24, 24.5], B2: [23, 200, 62, 48, 31],
+  } as const;
+  ok(metricsK357.topics === 87 && metricsK357.items === 758 && metricsK357.parenthetical === 245 &&
+    metricsK357.blankLinked === 180 && metricsK357.exactLeaks === 0 &&
+    Object.entries(expectedLevelsK357).every(([level, expected]) => {
+      const metric = metricsK357.byLevel[level as keyof typeof metricsK357.byLevel];
+      return [metric.topics, metric.items, metric.parenthetical, metric.blankLinked, metric.parentheticalPct]
+        .every((value, index) => value === expected[index]);
+    }),
+    "K357b خط الأساس يعيد إنتاج 87 درساً/758 بنداً و245 علامة و180 مرشح فراغ وصفر تسريب، موزعة على المستويات الخمسة");
+
+  const qualityK357 = readFileSync("app/qualitaet/page.tsx", "utf8");
+  const auditK357 = readFileSync("scripts/scaffold_audit.ts", "utf8");
+  const ciK357 = readFileSync(".github/workflows/ci.yml", "utf8");
+  const browserK357 = readFileSync("scripts/browser_e2e.mjs", "utf8");
+  const baselineK357 = JSON.parse(readFileSync("content/scaffold-metrics-baseline.json", "utf8")) as { reviewRule?: string; nonBlockingRatios?: boolean };
+  ok(qualityK357.includes('data-testid="scaffold-transparency"') && qualityK357.includes("إشارات مراجعة وليست عيوباً مؤكدة") &&
+    auditK357.includes("review signals, not confirmed defects") && ciK357.includes("npm run audit:scaffolds") &&
+    browserK357.includes('"245/758"') && baselineK357.reviewRule === "R160" && baselineK357.nonBlockingRatios === true,
+    "K357c صفحة الجودة والتدقيق وCI وChromium تعرض خط الأساس بوصفه إشارة غير مانعة، لا قائمة أخطاء مؤكدة");
 }
 
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);
