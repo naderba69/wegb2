@@ -320,6 +320,56 @@ async function main() {
       }
       labProfiles.push({ ...profile, ...result, limitation: "emulation-not-physical-device" });
     }
+
+    const bottomNavClearance = [];
+    for (const profile of [
+      { id: "phone-360x640", width: 360, height: 640, scale: 3 },
+      { id: "phone-390x844", width: 390, height: 844, scale: 3 },
+    ]) {
+      stage = `bottom navigation clearance ${profile.id}`;
+      await cdp.send("Emulation.setDeviceMetricsOverride", {
+        width: profile.width,
+        height: profile.height,
+        deviceScaleFactor: profile.scale,
+        mobile: true,
+        screenWidth: profile.width,
+        screenHeight: profile.height,
+      }, sessionId);
+      await cdp.send("Emulation.setTouchEmulationEnabled", { enabled: true, maxTouchPoints: 5 }, sessionId);
+      await evalJs(cdp, sessionId, `localStorage.setItem("weg-abend","1")`);
+      await navigate(cdp, sessionId, `${ORIGIN}/ueben`);
+      await poll(cdp, sessionId, `!!document.querySelector('[data-testid="ueben-liste"]')`, `Übungsseite für ${profile.id}`, SW_TIMEOUT);
+      const result = await evalJs(cdp, sessionId, `(async()=>{
+        const nav=document.querySelector('[data-testid="bottom-nav"]');
+        const actions=[...document.querySelectorAll('main button:not([disabled])')]
+          .filter((element)=>element.getClientRects().length&&!element.closest('details:not([open])')&&
+            getComputedStyle(element).visibility!=="hidden");
+        const target=actions.at(-1);
+        if(!nav||!target)return {error:"missing nav/action"};
+        target.scrollIntoView({block:"end",inline:"nearest",behavior:"instant"});
+        await new Promise((resolve)=>requestAnimationFrame(resolve));
+        let targetRect=target.getBoundingClientRect();
+        let navRect=nav.getBoundingClientRect();
+        if(targetRect.bottom>navRect.top){
+          scrollBy({top:targetRect.bottom-navRect.top+1,behavior:"instant"});
+          await new Promise((resolve)=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));
+          targetRect=target.getBoundingClientRect();
+          navRect=nav.getBoundingClientRect();
+        }
+        return {
+          target:target.getAttribute("data-testid")||target.textContent?.trim().slice(0,40)||"button",
+          targetBottom:targetRect.bottom,
+          navTop:navRect.top,
+          navHeight:navRect.height,
+          scrollPaddingBottom:parseFloat(getComputedStyle(document.documentElement).scrollPaddingBottom)||0,
+          overlap:Math.max(0,targetRect.bottom-navRect.top)
+        };
+      })()`);
+      if (result.error || result.overlap > 0.5 || result.scrollPaddingBottom + 0.5 < result.navHeight) {
+        fail(`Bottom-Navigation überdeckt Aktion bei ${profile.id}: ${JSON.stringify(result)}`);
+      }
+      bottomNavClearance.push({ ...profile, ...result, limitation: "emulation-not-physical-device" });
+    }
     await cdp.send("Emulation.clearDeviceMetricsOverride", {}, sessionId);
     await cdp.send("Emulation.setTouchEmulationEnabled", { enabled: false }, sessionId);
     await cdp.send("Emulation.setEmulatedMedia", { media: "screen", features: [] }, sessionId);
@@ -430,6 +480,7 @@ async function main() {
       chrome,
       csp: { nonce: true, scriptUnsafeInline: false, frameAncestorsSelf: true },
       labProfiles,
+      bottomNavClearance,
       mediaCapability: { ...mediaCapability, limitation: "API-presence-only-no-real-microphone" },
       bankReadiness: { ...bankReadiness, b2LessonRendered: !!b2LessonRendered },
       libraryFilters: { familyFilterCount, searchFilterCount },

@@ -4,6 +4,7 @@
  * ═══════════════════════════════════════════════════════════════════
  */
 import { grammarMap, dialogues, texts, sentences, alleVokabeln, writingTasks, fehlerList } from "../lib/content";
+import { exakteAntwortLecks } from "../lib/exercise-hints";
 
 const issues: Array<{ file: string; id: string; kind: string; msg: string; ctx?: string }> = [];
 const add = (file: string, id: string, kind: string, msg: string, ctx?: string) => {
@@ -120,6 +121,9 @@ function assertRuleRegressions() {
     ["unambiguous German errors are detected", germanTypoMatches("Ich sind hier und du bin dort.").length === 2],
     ["intentional contrast is not a defect", germanTypoMatches("✗ Ich sind hier. → ✓ Ich bin hier.").length === 0],
     ["global regex state is deterministic", arabicTypoMatches("لاكن الان").length === 2 && arabicTypoMatches("لاكن الان").length === 2],
+    ["exact parenthetical answer leak is detected", exakteAntwortLecks({ promptDe: "Ich ___ hier. (wohne)", answer: ["wohne"] }).length === 1],
+    ["case and punctuation do not hide an exact leak", exakteAntwortLecks({ promptDe: "___ bitte. (Nehmen!)", answer: "nehmen" }).length === 1],
+    ["derivational scaffold is not auto-condemned", exakteAntwortLecks({ promptDe: "Ich ___ hier. (wohnen)", answer: ["wohne"] }).length === 0],
   ];
   const failed = checks.filter(([, ok]) => !ok).map(([name]) => name);
   if (failed.length) throw new Error(`Wort-für-Wort regression failed: ${failed.join(", ")}`);
@@ -132,6 +136,9 @@ assertRuleRegressions();
 function scanExercise(ex: any, parentId: string, file: string) {
   if (!ex) return;
   const id = ex.id || parentId;
+  for (const leak of exakteAntwortLecks(ex)) {
+    add(file, id, "answer-leak-exact", `parenthetical hint repeats accepted answer: ${leak}`, ex.promptDe ?? ex.text);
+  }
   scanAr(ex.promptAr, file, id);
   scanAr(ex.explanationAr, file, id);
   scanDe(ex.promptDe, file, id, false);
