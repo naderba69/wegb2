@@ -19,7 +19,7 @@ function check(condition: boolean, message: string): void {
   if (!condition) failures.push(message);
 }
 
-check(baseline.reviewRule === "R160" && baseline.nonBlockingRatios === true && /^\d{4}-\d{2}-\d{2}$/u.test(baseline.asOf),
+check(baseline.reviewRule === "R161" && baseline.nonBlockingRatios === true && /^\d{4}-\d{2}-\d{2}$/u.test(baseline.asOf),
   "baseline governance metadata is missing or malformed");
 check(baseline.method.includes("review signals, not confirmed defects"),
   "baseline must preserve the non-defect interpretation of scanner candidates");

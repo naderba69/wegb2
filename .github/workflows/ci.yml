@@ -71,6 +71,8 @@ jobs:
         run: npm run audit:words
       - name: Scaffold-Observability (CEFR baseline; candidates are not defects)
         run: npm run audit:scaffolds
+      - name: Scaffold-Review (B1/B2 item decisions; no simulated expert sign-off)
+        run: npm run audit:scaffold-review
       - name: Produktions-Build
         run: npm run build
       - name: Browser-E2E (echtes Chromium, SW + Offline + CSP)

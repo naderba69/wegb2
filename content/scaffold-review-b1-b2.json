@@ -1,0 +1,2096 @@
+{
+  "reviewRule": "R161",
+  "asOf": "2026-11-04",
+  "scope": {
+    "levels": [
+      "B1",
+      "B2"
+    ],
+    "buckets": [
+      "exercises",
+      "verify"
+    ],
+    "candidateDefinition": "Any non-empty parenthetical marker in promptDe or text before the R161 edits."
+  },
+  "claimBoundary": {
+    "reviewKind": "internal-agent-editorial",
+    "independentHumanReview": false,
+    "candidateIsConfirmedDefect": false,
+    "noteAr": "هذه مراجعة تحريرية داخلية حالةً بحالة، لا توقيع خبير تربوي مستقل. المرشح لا يعد خطأً إلا بقرار صريح أدناه."
+  },
+  "summary": {
+    "reviewed": 97,
+    "retained": 94,
+    "removedRedundant": 3,
+    "byLevel": {
+      "B1": 35,
+      "B2": 62
+    },
+    "byClassification": {
+      "redundant-with-options": 3,
+      "retain-bounded-options": 1,
+      "retain-choice-disambiguator": 2,
+      "retain-context-label": 3,
+      "retain-derivational-lemma": 29,
+      "retain-grammar-target": 15,
+      "retain-semantic-cue": 21,
+      "retain-source-components": 1,
+      "retain-token-bank": 8,
+      "retain-transformation-target": 14
+    }
+  },
+  "items": [
+    {
+      "id": "b1-absicht-n2",
+      "level": "B1",
+      "topicId": "b1-absicht",
+      "bucket": "exercises",
+      "type": "fill",
+      "markersBefore": [
+        "Ziel, verschiedene Subjekte"
+      ],
+      "promptDeBefore": "Ich helfe dir, ___ du bestehst. (Ziel, verschiedene Subjekte)",
+      "promptDeAfter": "Ich helfe dir, ___ du bestehst. (Ziel, verschiedene Subjekte)",
+      "textBefore": "Ich helfe dir, ___ du bestehst.",
+      "textAfter": "Ich helfe dir, ___ du bestehst.",
+      "answer": [
+        "damit"
+      ],
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-semantic-cue",
+      "rationaleAr": "القوس قيد دلالي أو وظيفي يحدد المعنى المقصود ولا يعطي الصيغة المقبولة حرفياً."
+    },
+    {
+      "id": "b1-absicht-n6",
+      "level": "B1",
+      "topicId": "b1-absicht",
+      "bucket": "exercises",
+      "type": "mc",
+      "markersBefore": [
+        "anfangen"
+      ],
+      "promptDeBefore": "Ich lerne, um ___. (anfangen)",
+      "promptDeAfter": "Ich lerne, um ___.",
+      "textBefore": null,
+      "textAfter": null,
+      "answer": "anzufangen",
+      "options": [
+        "anzufangen",
+        "an zu fangen",
+        "zu anfangen"
+      ],
+      "decision": "remove-redundant",
+      "classification": "redundant-with-options",
+      "rationaleAr": "كل خيارات MC تحمل الـlexeme نفسها؛ لذلك لا يضيف القوس قيداً تعليمياً ويكرر معلومة ظاهرة في الخيارات."
+    },
+    {
+      "id": "b1-absicht-v1",
+      "level": "B1",
+      "topicId": "b1-absicht",
+      "bucket": "verify",
+      "type": "fill",
+      "markersBefore": [
+        "Ziel, verschiedene Subjekte"
+      ],
+      "promptDeBefore": "Lern fleißig, ___ du bestehst! (Ziel, verschiedene Subjekte)",
+      "promptDeAfter": "Lern fleißig, ___ du bestehst! (Ziel, verschiedene Subjekte)",
+      "textBefore": "Lern fleißig, ___ du bestehst!",
+      "textAfter": "Lern fleißig, ___ du bestehst!",
+      "answer": [
+        "damit"
+      ],
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-semantic-cue",
+      "rationaleAr": "القوس قيد دلالي أو وظيفي يحدد المعنى المقصود ولا يعطي الصيغة المقبولة حرفياً."
+    },
+    {
+      "id": "b1-adj-e11",
+      "level": "B1",
+      "topicId": "b1-adjektivendungen",
+      "bucket": "exercises",
+      "type": "umformung",
+      "markersBefore": [
+        "Dativ"
+      ],
+      "promptDeBefore": "Korrigiere den Satz (Dativ): Ich helfe ein jung Mann.",
+      "promptDeAfter": "Korrigiere den Satz (Dativ): Ich helfe ein jung Mann.",
+      "textBefore": null,
+      "textAfter": null,
+      "answer": "Ich helfe dem jungen Mann.",
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-transformation-target",
+      "rationaleAr": "القوس يحدد التحويل أو القيد النحوي المطلوب كي لا تصبح مهمة الإنتاج مفتوحة بلا معيار."
+    },
+    {
+      "id": "b1-adj-e2",
+      "level": "B1",
+      "topicId": "b1-adjektivendungen",
+      "bucket": "exercises",
+      "type": "fill",
+      "markersBefore": [
+        "Nominativ"
+      ],
+      "promptDeBefore": "ein gut___ Mann (Nominativ)",
+      "promptDeAfter": "ein gut___ Mann (Nominativ)",
+      "textBefore": null,
+      "textAfter": null,
+      "answer": "er",
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-grammar-target",
+      "rationaleAr": "القوس يحدد الفئة أو الحالة النحوية التي يقيسها التمرين، بينما تبقى الصيغة المطلوب إنتاجها على المتعلم."
+    },
+    {
+      "id": "b1-fvg-e3",
+      "level": "B1",
+      "topicId": "b1-funktionsverben",
+      "bucket": "exercises",
+      "type": "fill",
+      "markersBefore": [
+        "nehmen/geben/machen"
+      ],
+      "promptDeBefore": "Wir müssen Abschied von ihm ___. (nehmen/geben/machen)",
+      "promptDeAfter": "Wir müssen Abschied von ihm ___. (nehmen/geben/machen)",
+      "textBefore": null,
+      "textAfter": null,
+      "answer": "nehmen",
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-bounded-options",
+      "rationaleAr": "القوس يعلن مجموعة اختيار محدودة لازمة لقياس التركيب المقصود ولا يكرر الجواب المصرف."
+    },
+    {
+      "id": "b1-gen-e1",
+      "level": "B1",
+      "topicId": "b1-genitiv",
+      "bucket": "exercises",
+      "type": "fill",
+      "markersBefore": [
+        "der Mann"
+      ],
+      "promptDeBefore": "Das ist das Auto ___ Mannes (der Mann).",
+      "promptDeAfter": "Das ist das Auto ___ Mannes (der Mann).",
+      "textBefore": null,
+      "textAfter": null,
+      "answer": "des",
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-derivational-lemma",
+      "rationaleAr": "القوس يعطي lexeme لازمة في تمرين تصريف/اشتقاق محدد؛ لا يساوي الجواب المصرف، وحذفه يجعل الفراغ معجمياً ملتبساً."
+    },
+    {
+      "id": "b1-gen-e2",
+      "level": "B1",
+      "topicId": "b1-genitiv",
+      "bucket": "exercises",
+      "type": "fill",
+      "markersBefore": [
+        "das Auto"
+      ],
+      "promptDeBefore": "die Farbe ___ Autos (das Auto)",
+      "promptDeAfter": "die Farbe ___ Autos (das Auto)",
+      "textBefore": null,
+      "textAfter": null,
+      "answer": "des",
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-derivational-lemma",
+      "rationaleAr": "القوس يعطي lexeme لازمة في تمرين تصريف/اشتقاق محدد؛ لا يساوي الجواب المصرف، وحذفه يجعل الفراغ معجمياً ملتبساً."
+    },
+    {
+      "id": "b1-gen-e5",
+      "level": "B1",
+      "topicId": "b1-genitiv",
+      "bucket": "exercises",
+      "type": "fill",
+      "markersBefore": [
+        "آنا"
+      ],
+      "promptDeBefore": "___ Haus (آنا) ist groß.",
+      "promptDeAfter": "___ Haus (آنا) ist groß.",
+      "textBefore": null,
+      "textAfter": null,
+      "answer": "Annas",
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-semantic-cue",
+      "rationaleAr": "القوس قيد دلالي أو وظيفي يحدد المعنى المقصود ولا يعطي الصيغة المقبولة حرفياً."
+    },
+    {
+      "id": "b1-genitiv-v1",
+      "level": "B1",
+      "topicId": "b1-genitiv",
+      "bucket": "verify",
+      "type": "fill",
+      "markersBefore": [
+        "mein"
+      ],
+      "promptDeBefore": "Das ist das Auto ___ Vaters. (mein)",
+      "promptDeAfter": "Das ist das Auto ___ Vaters. (mein)",
+      "textBefore": "Das ist das Auto ___ Vaters. (mein)",
+      "textAfter": "Das ist das Auto ___ Vaters. (mein)",
+      "answer": [
+        "meines"
+      ],
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-derivational-lemma",
+      "rationaleAr": "القوس يعطي lexeme لازمة في تمرين تصريف/اشتقاق محدد؛ لا يساوي الجواب المصرف، وحذفه يجعل الفراغ معجمياً ملتبساً."
+    },
+    {
+      "id": "b1-indir-n2",
+      "level": "B1",
+      "topicId": "b1-indirekte-fragen",
+      "bucket": "exercises",
+      "type": "fill",
+      "markersBefore": [
+        "Ort"
+      ],
+      "promptDeBefore": "Sag mir bitte, ___ du wohnst. (Ort)",
+      "promptDeAfter": "Sag mir bitte, ___ du wohnst. (Ort)",
+      "textBefore": "Sag mir bitte, ___ du wohnst.",
+      "textAfter": "Sag mir bitte, ___ du wohnst.",
+      "answer": [
+        "wo"
+      ],
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-semantic-cue",
+      "rationaleAr": "القوس قيد دلالي أو وظيفي يحدد المعنى المقصود ولا يعطي الصيغة المقبولة حرفياً."
+    },
+    {
+      "id": "b1-indir-n6",
+      "level": "B1",
+      "topicId": "b1-indirekte-fragen",
+      "bucket": "exercises",
+      "type": "translate",
+      "markersBefore": [
+        "هو"
+      ],
+      "promptDeBefore": "ترجم: «لا أعرف أين يسكن» (هو).",
+      "promptDeAfter": "ترجم: «لا أعرف أين يسكن» (هو).",
+      "textBefore": null,
+      "textAfter": null,
+      "answer": "Ich weiß nicht, wo er wohnt.",
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-context-label",
+      "rationaleAr": "القوس يصف سياق المهمة أو قسمها ولا يزوّد فراغاً بجواب."
+    },
+    {
+      "id": "b1-indir-n7",
+      "level": "B1",
+      "topicId": "b1-indirekte-fragen",
+      "bucket": "exercises",
+      "type": "fill",
+      "markersBefore": [
+        "Zeitpunkt"
+      ],
+      "promptDeBefore": "Weißt du, ___ das Konzert beginnt? (Zeitpunkt)",
+      "promptDeAfter": "Weißt du, ___ das Konzert beginnt? (Zeitpunkt)",
+      "textBefore": "Weißt du, ___ das Konzert beginnt?",
+      "textAfter": "Weißt du, ___ das Konzert beginnt?",
+      "answer": [
+        "wann"
+      ],
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-semantic-cue",
+      "rationaleAr": "القوس قيد دلالي أو وظيفي يحدد المعنى المقصود ولا يعطي الصيغة المقبولة حرفياً."
+    },
+    {
+      "id": "b1-konj2-u2",
+      "level": "B1",
+      "topicId": "b1-konj2",
+      "bucket": "exercises",
+      "type": "umformung",
+      "markersBefore": [
+        "Konjunktiv II"
+      ],
+      "promptDeBefore": "Formuliere höflicher (Konjunktiv II).",
+      "promptDeAfter": "Formuliere höflicher (Konjunktiv II).",
+      "textBefore": null,
+      "textAfter": null,
+      "answer": "Könnten Sie mir bitte helfen?",
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-transformation-target",
+      "rationaleAr": "القوس يحدد التحويل أو القيد النحوي المطلوب كي لا تصبح مهمة الإنتاج مفتوحة بلا معيار."
+    },
+    {
+      "id": "g11e3",
+      "level": "B1",
+      "topicId": "b1-konj2",
+      "bucket": "exercises",
+      "type": "fill",
+      "markersBefore": [
+        "was würdest du empfehlen?"
+      ],
+      "promptDeBefore": "Ich ___ dir raten, früher aufzustehen. (was würdest du empfehlen?)",
+      "promptDeAfter": "Ich ___ dir raten, früher aufzustehen. (was würdest du empfehlen?)",
+      "textBefore": null,
+      "textAfter": null,
+      "answer": [
+        "würde",
+        "wuerde"
+      ],
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-derivational-lemma",
+      "rationaleAr": "القوس يعطي lexeme لازمة في تمرين تصريف/اشتقاق محدد؛ لا يساوي الجواب المصرف، وحذفه يجعل الفراغ معجمياً ملتبساً."
+    },
+    {
+      "id": "b1-konj2-vergangenheit-n3",
+      "level": "B1",
+      "topicId": "b1-konj2-vergangenheit",
+      "bucket": "exercises",
+      "type": "fill",
+      "markersBefore": [
+        "lernen → PII"
+      ],
+      "promptDeBefore": "Hätte ich doch mehr ___! (lernen → PII)",
+      "promptDeAfter": "Hätte ich doch mehr ___! (lernen → PII)",
+      "textBefore": "Hätte ich doch mehr ___!",
+      "textAfter": "Hätte ich doch mehr ___!",
+      "answer": [
+        "gelernt"
+      ],
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-grammar-target",
+      "rationaleAr": "القوس يحدد الفئة أو الحالة النحوية التي يقيسها التمرين، بينما تبقى الصيغة المطلوب إنتاجها على المتعلم."
+    },
+    {
+      "id": "b1-konj2-vergangenheit-v1",
+      "level": "B1",
+      "topicId": "b1-konj2-vergangenheit",
+      "bucket": "verify",
+      "type": "fill",
+      "markersBefore": [
+        "haben, Konjunktiv II Vergangenheit"
+      ],
+      "promptDeBefore": "Ohne dich ___ ich versagt. (haben, Konjunktiv II Vergangenheit)",
+      "promptDeAfter": "Ohne dich ___ ich versagt. (haben, Konjunktiv II Vergangenheit)",
+      "textBefore": "Ohne dich ___ ich versagt.",
+      "textAfter": "Ohne dich ___ ich versagt.",
+      "answer": [
+        "hätte"
+      ],
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-grammar-target",
+      "rationaleAr": "القوس يحدد الفئة أو الحالة النحوية التي يقيسها التمرين، بينما تبقى الصيغة المطلوب إنتاجها على المتعلم."
+    },
+    {
+      "id": "g13e2",
+      "level": "B1",
+      "topicId": "b1-konnektoren",
+      "bucket": "exercises",
+      "type": "order",
+      "markersBefore": [
+        "trotzdem / gegangen / wir / spazieren / sind"
+      ],
+      "promptDeBefore": "Bilde einen Satz: (trotzdem / gegangen / wir / spazieren / sind)",
+      "promptDeAfter": "Bilde einen Satz: (trotzdem / gegangen / wir / spazieren / sind)",
+      "textBefore": null,
+      "textAfter": null,
+      "answer": [
+        "Trotzdem",
+        "sind wir",
+        "spazieren",
+        "gegangen"
+      ],
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-token-bank",
+      "rationaleAr": "القوس هو بنك القطع المطلوب ترتيبها، لا تلميح جواب مستقل؛ حذفه يلغي مادة المهمة."
+    },
+    {
+      "id": "g13e3",
+      "level": "B1",
+      "topicId": "b1-konnektoren",
+      "bucket": "exercises",
+      "type": "fill",
+      "markersBefore": [
+        "ومع ذلك"
+      ],
+      "promptDeBefore": "Er hatte kein Geld. ___ hat er das Auto gekauft. (ومع ذلك)",
+      "promptDeAfter": "Er hatte kein Geld. ___ hat er das Auto gekauft. (ومع ذلك)",
+      "textBefore": null,
+      "textAfter": null,
+      "answer": [
+        "trotzdem",
+        "Trotzdem"
+      ],
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-semantic-cue",
+      "rationaleAr": "القوس قيد دلالي أو وظيفي يحدد المعنى المقصود ولا يعطي الصيغة المقبولة حرفياً."
+    },
+    {
+      "id": "b1-konnektoren-v2",
+      "level": "B1",
+      "topicId": "b1-konnektoren",
+      "bucket": "verify",
+      "type": "umformung",
+      "markersBefore": [
+        "Hauptsatz"
+      ],
+      "promptDeBefore": "Verbinde mit trotzdem (Hauptsatz).",
+      "promptDeAfter": "Verbinde mit trotzdem (Hauptsatz).",
+      "textBefore": null,
+      "textAfter": null,
+      "answer": "Er war krank, trotzdem kam er zur Arbeit.",
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-transformation-target",
+      "rationaleAr": "القوس يحدد التحويل أو القيد النحوي المطلوب كي لا تصبح مهمة الإنتاج مفتوحة بلا معيار."
+    },
+    {
+      "id": "b1-pas-e2",
+      "level": "B1",
+      "topicId": "b1-passiv",
+      "bucket": "exercises",
+      "type": "fill",
+      "markersBefore": [
+        "عملية سابقة"
+      ],
+      "promptDeBefore": "Das Auto ist repariert ___. (عملية سابقة)",
+      "promptDeAfter": "Das Auto ist repariert ___. (عملية سابقة)",
+      "textBefore": null,
+      "textAfter": null,
+      "answer": "worden",
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-semantic-cue",
+      "rationaleAr": "القوس قيد دلالي أو وظيفي يحدد المعنى المقصود ولا يعطي الصيغة المقبولة حرفياً."
+    },
+    {
+      "id": "b1-pas-e5",
+      "level": "B1",
+      "topicId": "b1-passiv",
+      "bucket": "exercises",
+      "type": "fill",
+      "markersBefore": [
+        "Synonym: tun"
+      ],
+      "promptDeBefore": "Das lässt sich ___. (Synonym: tun)",
+      "promptDeAfter": "Das lässt sich ___. (Synonym: tun)",
+      "textBefore": null,
+      "textAfter": null,
+      "answer": "machen",
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-semantic-cue",
+      "rationaleAr": "القوس قيد دلالي أو وظيفي يحدد المعنى المقصود ولا يعطي الصيغة المقبولة حرفياً."
+    },
+    {
+      "id": "b1-passiv-u2",
+      "level": "B1",
+      "topicId": "b1-passiv",
+      "bucket": "exercises",
+      "type": "umformung",
+      "markersBefore": [
+        "fertig"
+      ],
+      "promptDeBefore": "Korrigiere: Zustandspassiv (fertig).",
+      "promptDeAfter": "Korrigiere: Zustandspassiv (fertig).",
+      "textBefore": null,
+      "textAfter": null,
+      "answer": "Das Haus ist gebaut.",
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-transformation-target",
+      "rationaleAr": "القوس يحدد التحويل أو القيد النحوي المطلوب كي لا تصبح مهمة الإنتاج مفتوحة بلا معيار."
+    },
+    {
+      "id": "b1-passiv-v1",
+      "level": "B1",
+      "topicId": "b1-passiv",
+      "bucket": "verify",
+      "type": "fill",
+      "markersBefore": [
+        "werden, Präsens"
+      ],
+      "promptDeBefore": "Das Auto ___ repariert. (werden, Präsens)",
+      "promptDeAfter": "Das Auto ___ repariert. (werden, Präsens)",
+      "textBefore": "Das Auto ___ repariert. (werden, Präsens)",
+      "textAfter": "Das Auto ___ repariert. (werden, Präsens)",
+      "answer": [
+        "wird"
+      ],
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-grammar-target",
+      "rationaleAr": "القوس يحدد الفئة أو الحالة النحوية التي يقيسها التمرين، بينما تبقى الصيغة المطلوب إنتاجها على المتعلم."
+    },
+    {
+      "id": "g14e2",
+      "level": "B1",
+      "topicId": "b1-plusquamperfekt",
+      "bucket": "exercises",
+      "type": "order",
+      "markersBefore": [
+        "Nachdem / wir / gegessen hatten / gingen / wir / spazieren"
+      ],
+      "promptDeBefore": "Bilde einen Satz: (Nachdem / wir / gegessen hatten / gingen / wir / spazieren)",
+      "promptDeAfter": "Bilde einen Satz: (Nachdem / wir / gegessen hatten / gingen / wir / spazieren)",
+      "textBefore": null,
+      "textAfter": null,
+      "answer": [
+        "Nachdem",
+        "wir",
+        "gegessen hatten",
+        "gingen",
+        "wir",
+        "spazieren"
+      ],
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-token-bank",
+      "rationaleAr": "القوس هو بنك القطع المطلوب ترتيبها، لا تلميح جواب مستقل؛ حذفه يلغي مادة المهمة."
+    },
+    {
+      "id": "g14e3",
+      "level": "B1",
+      "topicId": "b1-plusquamperfekt",
+      "bucket": "exercises",
+      "type": "fill",
+      "markersBefore": [
+        "abfahren"
+      ],
+      "promptDeBefore": "Als ich ankam, ___ der Zug schon ___. (abfahren)",
+      "promptDeAfter": "Als ich ankam, ___ der Zug schon ___. (abfahren)",
+      "textBefore": null,
+      "textAfter": null,
+      "answer": [
+        "war abgefahren",
+        "war … abgefahren"
+      ],
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-derivational-lemma",
+      "rationaleAr": "القوس يعطي lexeme لازمة في تمرين تصريف/اشتقاق محدد؛ لا يساوي الجواب المصرف، وحذفه يجعل الفراغ معجمياً ملتبساً."
+    },
+    {
+      "id": "b1-plusquamperfekt-v1",
+      "level": "B1",
+      "topicId": "b1-plusquamperfekt",
+      "bucket": "verify",
+      "type": "fill",
+      "markersBefore": [
+        "sein"
+      ],
+      "promptDeBefore": "Als ich kam, ___ er schon gegangen. (sein)",
+      "promptDeAfter": "Als ich kam, ___ er schon gegangen. (sein)",
+      "textBefore": "Als ich kam, ___ er schon gegangen. (sein)",
+      "textAfter": "Als ich kam, ___ er schon gegangen. (sein)",
+      "answer": [
+        "war"
+      ],
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-derivational-lemma",
+      "rationaleAr": "القوس يعطي lexeme لازمة في تمرين تصريف/اشتقاق محدد؛ لا يساوي الجواب المصرف، وحذفه يجعل الفراغ معجمياً ملتبساً."
+    },
+    {
+      "id": "b1-pruefungsstrategie-r141e-e03",
+      "level": "B1",
+      "topicId": "b1-pruefungsstrategie",
+      "bucket": "exercises",
+      "type": "mc",
+      "markersBefore": [
+        "Kontakt"
+      ],
+      "promptDeBefore": "Wenn Sie im Sprechen Teil 1 (Kontakt) ein Wort nicht wissen, was tun Sie?",
+      "promptDeAfter": "Wenn Sie im Sprechen Teil 1 (Kontakt) ein Wort nicht wissen, was tun Sie?",
+      "textBefore": null,
+      "textAfter": null,
+      "answer": "Umschreiben (Paraphrase)",
+      "options": [
+        "Schweigen",
+        "Auf Arabisch sagen",
+        "Umschreiben (Paraphrase)",
+        "Den Satz abbrechen"
+      ],
+      "decision": "retain",
+      "classification": "retain-context-label",
+      "rationaleAr": "القوس يصف سياق المهمة أو قسمها ولا يزوّد فراغاً بجواب."
+    },
+    {
+      "id": "b1-unb-e2",
+      "level": "B1",
+      "topicId": "b1-unbestimmte",
+      "bucket": "exercises",
+      "type": "fill",
+      "markersBefore": [
+        "niemand"
+      ],
+      "promptDeBefore": "Ich kenne hier ___. (niemand)",
+      "promptDeAfter": "Ich kenne hier ___. (niemand)",
+      "textBefore": null,
+      "textAfter": null,
+      "answer": "niemanden",
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-derivational-lemma",
+      "rationaleAr": "القوس يعطي lexeme لازمة في تمرين تصريف/اشتقاق محدد؛ لا يساوي الجواب المصرف، وحذفه يجعل الفراغ معجمياً ملتبساً."
+    },
+    {
+      "id": "b1-unb-e4",
+      "level": "B1",
+      "topicId": "b1-unbestimmte",
+      "bucket": "exercises",
+      "type": "fill",
+      "markersBefore": [
+        "neu"
+      ],
+      "promptDeBefore": "Das ist nichts ___. (neu)",
+      "promptDeAfter": "Das ist nichts ___. (neu)",
+      "textBefore": null,
+      "textAfter": null,
+      "answer": "Neues",
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-derivational-lemma",
+      "rationaleAr": "القوس يعطي lexeme لازمة في تمرين تصريف/اشتقاق محدد؛ لا يساوي الجواب المصرف، وحذفه يجعل الفراغ معجمياً ملتبساً."
+    },
+    {
+      "id": "b1-unbestimmte-u1",
+      "level": "B1",
+      "topicId": "b1-unbestimmte",
+      "bucket": "exercises",
+      "type": "umformung",
+      "markersBefore": [
+        "alle"
+      ],
+      "promptDeBefore": "Sage: Es sind … Leute da (alle).",
+      "promptDeAfter": "Sage: Es sind … Leute da (alle).",
+      "textBefore": null,
+      "textAfter": null,
+      "answer": "Es sind alle Leute da.",
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-transformation-target",
+      "rationaleAr": "القوس يحدد التحويل أو القيد النحوي المطلوب كي لا تصبح مهمة الإنتاج مفتوحة بلا معيار."
+    },
+    {
+      "id": "b1-verb-praeposition-u1",
+      "level": "B1",
+      "topicId": "b1-verb-praeposition",
+      "bucket": "exercises",
+      "type": "umformung",
+      "markersBefore": [
+        "denken an"
+      ],
+      "promptDeBefore": "Sage: Ich vermisse dich (denken an).",
+      "promptDeAfter": "Sage: Ich vermisse dich (denken an).",
+      "textBefore": null,
+      "textAfter": null,
+      "answer": "Ich denke an dich.",
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-transformation-target",
+      "rationaleAr": "القوس يحدد التحويل أو القيد النحوي المطلوب كي لا تصبح مهمة الإنتاج مفتوحة بلا معيار."
+    },
+    {
+      "id": "b1-vp-e5",
+      "level": "B1",
+      "topicId": "b1-verb-praeposition",
+      "bucket": "exercises",
+      "type": "fill",
+      "markersBefore": [
+        "جمع"
+      ],
+      "promptDeBefore": "Sie hat Angst ___ Hunden. (جمع)",
+      "promptDeAfter": "Sie hat Angst ___ Hunden. (جمع)",
+      "textBefore": null,
+      "textAfter": null,
+      "answer": "vor",
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-semantic-cue",
+      "rationaleAr": "القوس قيد دلالي أو وظيفي يحدد المعنى المقصود ولا يعطي الصيغة المقبولة حرفياً."
+    },
+    {
+      "id": "b1-wortbildung-e2",
+      "level": "B1",
+      "topicId": "b1-wortbildung",
+      "bucket": "exercises",
+      "type": "mc",
+      "markersBefore": [
+        "die Tür + das Schloss"
+      ],
+      "promptDeBefore": "___ Türschloss (die Tür + das Schloss)",
+      "promptDeAfter": "___ Türschloss (die Tür + das Schloss)",
+      "textBefore": null,
+      "textAfter": null,
+      "answer": "das",
+      "options": [
+        "der",
+        "die",
+        "das"
+      ],
+      "decision": "retain",
+      "classification": "retain-source-components",
+      "rationaleAr": "القوس يقدم مكوّنَي المركب اللذين تُشتق منهما الأداة؛ وهما مادة السؤال الأساسية."
+    },
+    {
+      "id": "b1-wortbildung-u1",
+      "level": "B1",
+      "topicId": "b1-wortbildung",
+      "bucket": "exercises",
+      "type": "umformung",
+      "markersBefore": [
+        "Haus ist das Grundwort"
+      ],
+      "promptDeBefore": "Bilde das Kompositum (Haus ist das Grundwort).",
+      "promptDeAfter": "Bilde das Kompositum (Haus ist das Grundwort).",
+      "textBefore": null,
+      "textAfter": null,
+      "answer": "das Türhaus",
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-transformation-target",
+      "rationaleAr": "القوس يحدد التحويل أو القيد النحوي المطلوب كي لا تصبح مهمة الإنتاج مفتوحة بلا معيار."
+    },
+    {
+      "id": "b1-partizip1-f2",
+      "level": "B2",
+      "topicId": "b1-partizip1",
+      "bucket": "exercises",
+      "type": "fill",
+      "markersBefore": [
+        "weinen"
+      ],
+      "promptDeBefore": "Das ___ Kind schläft. (weinen)",
+      "promptDeAfter": "Das ___ Kind schläft. (weinen)",
+      "textBefore": null,
+      "textAfter": null,
+      "answer": [
+        "weinende",
+        "weinend"
+      ],
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-derivational-lemma",
+      "rationaleAr": "القوس يعطي lexeme لازمة في تمرين تصريف/اشتقاق محدد؛ لا يساوي الجواب المصرف، وحذفه يجعل الفراغ معجمياً ملتبساً."
+    },
+    {
+      "id": "b1-partizip1-r143-e05",
+      "level": "B2",
+      "topicId": "b1-partizip1",
+      "bucket": "exercises",
+      "type": "fill",
+      "markersBefore": [
+        "lachen"
+      ],
+      "promptDeBefore": "Die ___ Kinder spielen im Garten. (lachen)",
+      "promptDeAfter": "Die ___ Kinder spielen im Garten. (lachen)",
+      "textBefore": null,
+      "textAfter": null,
+      "answer": [
+        "lachenden"
+      ],
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-derivational-lemma",
+      "rationaleAr": "القوس يعطي lexeme لازمة في تمرين تصريف/اشتقاق محدد؛ لا يساوي الجواب المصرف، وحذفه يجعل الفراغ معجمياً ملتبساً."
+    },
+    {
+      "id": "b2-adjektiv-partizip-v1",
+      "level": "B2",
+      "topicId": "b2-adjektiv-partizip",
+      "bucket": "verify",
+      "type": "fill",
+      "markersBefore": [
+        "lieben, Partizip II"
+      ],
+      "promptDeBefore": "die von allen ___ Sängerin (lieben, Partizip II)",
+      "promptDeAfter": "die von allen ___ Sängerin (lieben, Partizip II)",
+      "textBefore": "die von allen ___ Sängerin (lieben, Partizip II)",
+      "textAfter": "die von allen ___ Sängerin (lieben, Partizip II)",
+      "answer": [
+        "geliebte"
+      ],
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-grammar-target",
+      "rationaleAr": "القوس يحدد الفئة أو الحالة النحوية التي يقيسها التمرين، بينما تبقى الصيغة المطلوب إنتاجها على المتعلم."
+    },
+    {
+      "id": "b2-bedingung-u2",
+      "level": "B2",
+      "topicId": "b2-bedingung",
+      "bucket": "exercises",
+      "type": "umformung",
+      "markersBefore": [
+        "Verb an Position 1"
+      ],
+      "promptDeBefore": "Schreibe ohne „wenn“ (Verb an Position 1).",
+      "promptDeAfter": "Schreibe ohne „wenn“ (Verb an Position 1).",
+      "textBefore": null,
+      "textAfter": null,
+      "answer": "Hätte ich Zeit, käme ich.",
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-transformation-target",
+      "rationaleAr": "القوس يحدد التحويل أو القيد النحوي المطلوب كي لا تصبح مهمة الإنتاج مفتوحة بلا معيار."
+    },
+    {
+      "id": "g17e1",
+      "level": "B2",
+      "topicId": "b2-bedingung",
+      "bucket": "exercises",
+      "type": "order",
+      "markersBefore": [
+        "Wenn ich Zeit hätte / würde / ich / nach Wien reisen"
+      ],
+      "promptDeBefore": "Bilde einen Satz: (Wenn ich Zeit hätte / würde / ich / nach Wien reisen)",
+      "promptDeAfter": "Bilde einen Satz: (Wenn ich Zeit hätte / würde / ich / nach Wien reisen)",
+      "textBefore": null,
+      "textAfter": null,
+      "answer": [
+        "Wenn ich Zeit hätte",
+        "würde",
+        "ich",
+        "nach Wien reisen"
+      ],
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-token-bank",
+      "rationaleAr": "القوس هو بنك القطع المطلوب ترتيبها، لا تلميح جواب مستقل؛ حذفه يلغي مادة المهمة."
+    },
+    {
+      "id": "g17e2",
+      "level": "B2",
+      "topicId": "b2-bedingung",
+      "bucket": "exercises",
+      "type": "fill",
+      "markersBefore": [
+        "kommen",
+        "Typ 3"
+      ],
+      "promptDeBefore": "Wenn ich (kommen) ___ wäre, hätte ich dich gesehen. (Typ 3)",
+      "promptDeAfter": "Wenn ich (kommen) ___ wäre, hätte ich dich gesehen. (Typ 3)",
+      "textBefore": "Wenn ich ___ wäre, hätte ich dich gesehen.",
+      "textAfter": "Wenn ich ___ wäre, hätte ich dich gesehen.",
+      "answer": [
+        "gekommen"
+      ],
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-grammar-target",
+      "rationaleAr": "القوس يحدد الفئة أو الحالة النحوية التي يقيسها التمرين، بينما تبقى الصيغة المطلوب إنتاجها على المتعلم."
+    },
+    {
+      "id": "b2-bedingung-v1",
+      "level": "B2",
+      "topicId": "b2-bedingung",
+      "bucket": "verify",
+      "type": "fill",
+      "markersBefore": [
+        "haben, K II"
+      ],
+      "promptDeBefore": "Wenn ich Zeit ___, käme ich mit. (haben, K II)",
+      "promptDeAfter": "Wenn ich Zeit ___, käme ich mit. (haben, K II)",
+      "textBefore": "Wenn ich Zeit ___, käme ich mit. (haben, K II)",
+      "textAfter": "Wenn ich Zeit ___, käme ich mit. (haben, K II)",
+      "answer": [
+        "hätte"
+      ],
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-derivational-lemma",
+      "rationaleAr": "القوس يعطي lexeme لازمة في تمرين تصريف/اشتقاق محدد؛ لا يساوي الجواب المصرف، وحذفه يجعل الفراغ معجمياً ملتبساً."
+    },
+    {
+      "id": "b2-bedingung-v2",
+      "level": "B2",
+      "topicId": "b2-bedingung",
+      "bucket": "verify",
+      "type": "umformung",
+      "markersBefore": [
+        "Typ 1"
+      ],
+      "promptDeBefore": "Verbinde real (Typ 1): Wenn …",
+      "promptDeAfter": "Verbinde real (Typ 1): Wenn …",
+      "textBefore": null,
+      "textAfter": null,
+      "answer": "Wenn du lernst, bestehst du.",
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-transformation-target",
+      "rationaleAr": "القوس يحدد التحويل أو القيد النحوي المطلوب كي لا تصبح مهمة الإنتاج مفتوحة بلا معيار."
+    },
+    {
+      "id": "gdke3",
+      "level": "B2",
+      "topicId": "b2-doppelkonnektoren",
+      "bucket": "exercises",
+      "type": "order",
+      "markersBefore": [
+        "Entweder / übst / du /, / oder / das / Zertifikat / wartet / nicht"
+      ],
+      "promptDeBefore": "Bilde einen Satz: (Entweder / übst / du /, / oder / das / Zertifikat / wartet / nicht)",
+      "promptDeAfter": "Bilde einen Satz: (Entweder / übst / du /, / oder / das / Zertifikat / wartet / nicht)",
+      "textBefore": null,
+      "textAfter": null,
+      "answer": [
+        "Entweder",
+        "übst",
+        "du",
+        ",",
+        "oder",
+        "das",
+        "Zertifikat",
+        "wartet",
+        "nicht"
+      ],
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-token-bank",
+      "rationaleAr": "القوس هو بنك القطع المطلوب ترتيبها، لا تلميح جواب مستقل؛ حذفه يلغي مادة المهمة."
+    },
+    {
+      "id": "gdke5",
+      "level": "B2",
+      "topicId": "b2-doppelkonnektoren",
+      "bucket": "exercises",
+      "type": "fill",
+      "markersBefore": [
+        "Zusatzkosten für Heizung u. a."
+      ],
+      "promptDeBefore": "Nicht nur die Mieten stiegen, sondern auch die ___. (Zusatzkosten für Heizung u. a.)",
+      "promptDeAfter": "Nicht nur die Mieten stiegen, sondern auch die ___. (Zusatzkosten für Heizung u. a.)",
+      "textBefore": "Nicht nur die Mieten stiegen, sondern auch die ___.",
+      "textAfter": "Nicht nur die Mieten stiegen, sondern auch die ___.",
+      "answer": [
+        "Nebenkosten"
+      ],
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-semantic-cue",
+      "rationaleAr": "القوس قيد دلالي أو وظيفي يحدد المعنى المقصود ولا يعطي الصيغة المقبولة حرفياً."
+    },
+    {
+      "id": "g18e2",
+      "level": "B2",
+      "topicId": "b2-funktionsverben",
+      "bucket": "exercises",
+      "type": "fill",
+      "markersBefore": [
+        "spielen"
+      ],
+      "promptDeBefore": "Dieses Problem ___ eine große Rolle. (spielen)",
+      "promptDeAfter": "Dieses Problem ___ eine große Rolle. (spielen)",
+      "textBefore": "Dieses Problem ___ eine große Rolle.",
+      "textAfter": "Dieses Problem ___ eine große Rolle.",
+      "answer": [
+        "spielt"
+      ],
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-derivational-lemma",
+      "rationaleAr": "القوس يعطي lexeme لازمة في تمرين تصريف/اشتقاق محدد؛ لا يساوي الجواب المصرف، وحذفه يجعل الفراغ معجمياً ملتبساً."
+    },
+    {
+      "id": "b2-futur-ii-u1",
+      "level": "B2",
+      "topicId": "b2-futur-ii",
+      "bucket": "exercises",
+      "type": "umformung",
+      "markersBefore": [
+        "Vermutung über Abgeschlossenes"
+      ],
+      "promptDeBefore": "Setze ins Futur II (Vermutung über Abgeschlossenes).",
+      "promptDeAfter": "Setze ins Futur II (Vermutung über Abgeschlossenes).",
+      "textBefore": null,
+      "textAfter": null,
+      "answer": "Ich werde den Bericht bis morgen fertig gemacht haben.",
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-transformation-target",
+      "rationaleAr": "القوس يحدد التحويل أو القيد النحوي المطلوب كي لا تصبح مهمة الإنتاج مفتوحة بلا معيار."
+    },
+    {
+      "id": "gf2e1",
+      "level": "B2",
+      "topicId": "b2-futur-ii",
+      "bucket": "exercises",
+      "type": "fill",
+      "markersBefore": [
+        "lösen"
+      ],
+      "promptDeBefore": "Bis 20 Uhr ___ ich die Aufgabe ___ ___. (lösen)",
+      "promptDeAfter": "Bis 20 Uhr ___ ich die Aufgabe ___ ___. (lösen)",
+      "textBefore": "Bis 20 Uhr ___ ich die Aufgabe ___ ___.",
+      "textAfter": "Bis 20 Uhr ___ ich die Aufgabe ___ ___.",
+      "answer": [
+        "werde",
+        "gelöst",
+        "haben"
+      ],
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-derivational-lemma",
+      "rationaleAr": "القوس يعطي lexeme لازمة في تمرين تصريف/اشتقاق محدد؛ لا يساوي الجواب المصرف، وحذفه يجعل الفراغ معجمياً ملتبساً."
+    },
+    {
+      "id": "gf2e3",
+      "level": "B2",
+      "topicId": "b2-futur-ii",
+      "bucket": "exercises",
+      "type": "order",
+      "markersBefore": [
+        "Bis Montag / werden / wir / die Recherche / abgeschlossen / haben"
+      ],
+      "promptDeBefore": "Bilde einen Satz: (Bis Montag / werden / wir / die Recherche / abgeschlossen / haben)",
+      "promptDeAfter": "Bilde einen Satz: (Bis Montag / werden / wir / die Recherche / abgeschlossen / haben)",
+      "textBefore": null,
+      "textAfter": null,
+      "answer": [
+        "Bis Montag",
+        "werden",
+        "wir",
+        "die Recherche",
+        "abgeschlossen",
+        "haben"
+      ],
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-token-bank",
+      "rationaleAr": "القوس هو بنك القطع المطلوب ترتيبها، لا تلميح جواب مستقل؛ حذفه يلغي مادة المهمة."
+    },
+    {
+      "id": "gf2e4",
+      "level": "B2",
+      "topicId": "b2-futur-ii",
+      "bucket": "exercises",
+      "type": "fill",
+      "markersBefore": [
+        "beginnen"
+      ],
+      "promptDeBefore": "Wenn wir ankommen, ___ der Film schon ___ ___. (beginnen)",
+      "promptDeAfter": "Wenn wir ankommen, ___ der Film schon ___ ___. (beginnen)",
+      "textBefore": "Wenn wir ankommen, ___ der Film schon ___ ___.",
+      "textAfter": "Wenn wir ankommen, ___ der Film schon ___ ___.",
+      "answer": [
+        "wird",
+        "begonnen",
+        "haben"
+      ],
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-derivational-lemma",
+      "rationaleAr": "القوس يعطي lexeme لازمة في تمرين تصريف/اشتقاق محدد؛ لا يساوي الجواب المصرف، وحذفه يجعل الفراغ معجمياً ملتبساً."
+    },
+    {
+      "id": "b2-indirekte-rede-u1",
+      "level": "B2",
+      "topicId": "b2-indirekte-rede",
+      "bucket": "exercises",
+      "type": "umformung",
+      "markersBefore": [
+        "Konjunktiv I"
+      ],
+      "promptDeBefore": "Schreibe in indirekter Rede (Konjunktiv I).",
+      "promptDeAfter": "Schreibe in indirekter Rede (Konjunktiv I).",
+      "textBefore": null,
+      "textAfter": null,
+      "answer": "Er sagte, die Lage sei stabil.",
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-transformation-target",
+      "rationaleAr": "القوس يحدد التحويل أو القيد النحوي المطلوب كي لا تصبح مهمة الإنتاج مفتوحة بلا معيار."
+    },
+    {
+      "id": "g15e1",
+      "level": "B2",
+      "topicId": "b2-indirekte-rede",
+      "bucket": "exercises",
+      "type": "fill",
+      "markersBefore": [
+        "sein"
+      ],
+      "promptDeBefore": "Der Minister sagte, die Wirtschaft ___ (sein) stabil.",
+      "promptDeAfter": "Der Minister sagte, die Wirtschaft ___ (sein) stabil.",
+      "textBefore": "Der Minister sagte, die Wirtschaft ___ stabil.",
+      "textAfter": "Der Minister sagte, die Wirtschaft ___ stabil.",
+      "answer": [
+        "sei",
+        "sei stabil"
+      ],
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-derivational-lemma",
+      "rationaleAr": "القوس يعطي lexeme لازمة في تمرين تصريف/اشتقاق محدد؛ لا يساوي الجواب المصرف، وحذفه يجعل الفراغ معجمياً ملتبساً."
+    },
+    {
+      "id": "g15e2",
+      "level": "B2",
+      "topicId": "b2-indirekte-rede",
+      "bucket": "exercises",
+      "type": "fill",
+      "markersBefore": [
+        "haben"
+      ],
+      "promptDeBefore": "Sie erklärte, sie ___ (haben) keine Zeit.",
+      "promptDeAfter": "Sie erklärte, sie ___ (haben) keine Zeit.",
+      "textBefore": "Sie erklärte, sie ___ keine Zeit.",
+      "textAfter": "Sie erklärte, sie ___ keine Zeit.",
+      "answer": [
+        "habe",
+        "hätte"
+      ],
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-derivational-lemma",
+      "rationaleAr": "القوس يعطي lexeme لازمة في تمرين تصريف/اشتقاق محدد؛ لا يساوي الجواب المصرف، وحذفه يجعل الفراغ معجمياً ملتبساً."
+    },
+    {
+      "id": "g15e4",
+      "level": "B2",
+      "topicId": "b2-indirekte-rede",
+      "bucket": "exercises",
+      "type": "order",
+      "markersBefore": [
+        "er / gesagt / er komme morgen"
+      ],
+      "promptDeBefore": "Bilde einen Satz: (er / gesagt / er komme morgen)",
+      "promptDeAfter": "Bilde einen Satz: (er / gesagt / er komme morgen)",
+      "textBefore": null,
+      "textAfter": null,
+      "answer": [
+        "Er",
+        "sagte,",
+        "er komme",
+        "morgen"
+      ],
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-token-bank",
+      "rationaleAr": "القوس هو بنك القطع المطلوب ترتيبها، لا تلميح جواب مستقل؛ حذفه يلغي مادة المهمة."
+    },
+    {
+      "id": "g19e2",
+      "level": "B2",
+      "topicId": "b2-infinitiv",
+      "bucket": "exercises",
+      "type": "fill",
+      "markersBefore": [
+        "anfangen"
+      ],
+      "promptDeBefore": "Ich habe ___, den Bericht zu schreiben. (anfangen)",
+      "promptDeAfter": "Ich habe ___, den Bericht zu schreiben. (anfangen)",
+      "textBefore": "Ich habe ___, den Bericht zu schreiben.",
+      "textAfter": "Ich habe ___, den Bericht zu schreiben.",
+      "answer": [
+        "angefangen"
+      ],
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-derivational-lemma",
+      "rationaleAr": "القوس يعطي lexeme لازمة في تمرين تصريف/اشتقاق محدد؛ لا يساوي الجواب المصرف، وحذفه يجعل الفراغ معجمياً ملتبساً."
+    },
+    {
+      "id": "b2-k2vht-e1",
+      "level": "B2",
+      "topicId": "b2-konjunktiv2-vht",
+      "bucket": "exercises",
+      "type": "fill",
+      "markersBefore": [
+        "anrufen"
+      ],
+      "promptDeBefore": "Hätte ich nur früher ___! (anrufen)",
+      "promptDeAfter": "Hätte ich nur früher ___! (anrufen)",
+      "textBefore": "Hätte ich nur früher ___!",
+      "textAfter": "Hätte ich nur früher ___!",
+      "answer": [
+        "angerufen"
+      ],
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-derivational-lemma",
+      "rationaleAr": "القوس يعطي lexeme لازمة في تمرين تصريف/اشتقاق محدد؛ لا يساوي الجواب المصرف، وحذفه يجعل الفراغ معجمياً ملتبساً."
+    },
+    {
+      "id": "b2-k2vht-e2",
+      "level": "B2",
+      "topicId": "b2-konjunktiv2-vht",
+      "bucket": "exercises",
+      "type": "fill",
+      "markersBefore": [
+        "haben, Konjunktiv II Vergangenheit"
+      ],
+      "promptDeBefore": "Wäre er nicht krank gewesen, ___ er teilgenommen. (haben, Konjunktiv II Vergangenheit)",
+      "promptDeAfter": "Wäre er nicht krank gewesen, ___ er teilgenommen. (haben, Konjunktiv II Vergangenheit)",
+      "textBefore": "Wäre er nicht krank gewesen, ___ er teilgenommen.",
+      "textAfter": "Wäre er nicht krank gewesen, ___ er teilgenommen.",
+      "answer": [
+        "hätte"
+      ],
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-grammar-target",
+      "rationaleAr": "القوس يحدد الفئة أو الحالة النحوية التي يقيسها التمرين، بينما تبقى الصيغة المطلوب إنتاجها على المتعلم."
+    },
+    {
+      "id": "b2-k2vht-e7",
+      "level": "B2",
+      "topicId": "b2-konjunktiv2-vht",
+      "bucket": "exercises",
+      "type": "fill",
+      "markersBefore": [
+        "haben, Konjunktiv II Vergangenheit"
+      ],
+      "promptDeBefore": "Ohne deine Hilfe ___ ich es nicht geschafft. (haben, Konjunktiv II Vergangenheit)",
+      "promptDeAfter": "Ohne deine Hilfe ___ ich es nicht geschafft. (haben, Konjunktiv II Vergangenheit)",
+      "textBefore": "Ohne deine Hilfe ___ ich es nicht geschafft.",
+      "textAfter": "Ohne deine Hilfe ___ ich es nicht geschafft.",
+      "answer": [
+        "hätte"
+      ],
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-grammar-target",
+      "rationaleAr": "القوس يحدد الفئة أو الحالة النحوية التي يقيسها التمرين، بينما تبقى الصيغة المطلوب إنتاجها على المتعلم."
+    },
+    {
+      "id": "b2-k2vht-v1",
+      "level": "B2",
+      "topicId": "b2-konjunktiv2-vht",
+      "bucket": "verify",
+      "type": "fill",
+      "markersBefore": [
+        "haben, Konjunktiv II Vergangenheit"
+      ],
+      "promptDeBefore": "Ohne dich ___ ich versagt. (haben, Konjunktiv II Vergangenheit)",
+      "promptDeAfter": "Ohne dich ___ ich versagt. (haben, Konjunktiv II Vergangenheit)",
+      "textBefore": "Ohne dich ___ ich versagt.",
+      "textAfter": "Ohne dich ___ ich versagt.",
+      "answer": [
+        "hätte"
+      ],
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-grammar-target",
+      "rationaleAr": "القوس يحدد الفئة أو الحالة النحوية التي يقيسها التمرين، بينما تبقى الصيغة المطلوب إنتاجها على المتعلم."
+    },
+    {
+      "id": "b2-mp-e3",
+      "level": "B2",
+      "topicId": "b2-modalpartikel",
+      "bucket": "exercises",
+      "type": "fill",
+      "markersBefore": [
+        "حتمية"
+      ],
+      "promptDeBefore": "Es ist ___ so. (حتمية)",
+      "promptDeAfter": "Es ist ___ so. (حتمية)",
+      "textBefore": null,
+      "textAfter": null,
+      "answer": "halt",
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-semantic-cue",
+      "rationaleAr": "القوس قيد دلالي أو وظيفي يحدد المعنى المقصود ولا يعطي الصيغة المقبولة حرفياً."
+    },
+    {
+      "id": "b2-mp-e5",
+      "level": "B2",
+      "topicId": "b2-modalpartikel",
+      "bucket": "exercises",
+      "type": "fill",
+      "markersBefore": [
+        "معلوم مشترك"
+      ],
+      "promptDeBefore": "Du bist ___ müde, oder? (معلوم مشترك)",
+      "promptDeAfter": "Du bist ___ müde, oder? (معلوم مشترك)",
+      "textBefore": null,
+      "textAfter": null,
+      "answer": "ja",
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-semantic-cue",
+      "rationaleAr": "القوس قيد دلالي أو وظيفي يحدد المعنى المقصود ولا يعطي الصيغة المقبولة حرفياً."
+    },
+    {
+      "id": "b2-modalpartikel-v1",
+      "level": "B2",
+      "topicId": "b2-modalpartikel",
+      "bucket": "verify",
+      "type": "fill",
+      "markersBefore": [
+        "freundlich"
+      ],
+      "promptDeBefore": "Komm ___ her! (freundlich)",
+      "promptDeAfter": "Komm ___ her! (freundlich)",
+      "textBefore": "Komm ___ her! (freundlich)",
+      "textAfter": "Komm ___ her! (freundlich)",
+      "answer": [
+        "mal"
+      ],
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-semantic-cue",
+      "rationaleAr": "القوس قيد دلالي أو وظيفي يحدد المعنى المقصود ولا يعطي الصيغة المقبولة حرفياً."
+    },
+    {
+      "id": "b2-n-dekl-e1",
+      "level": "B2",
+      "topicId": "b2-n-deklination",
+      "bucket": "exercises",
+      "type": "fill",
+      "markersBefore": [
+        "der Praktikant"
+      ],
+      "promptDeBefore": "Ich suche ___ (der Praktikant) aus Hamburg.",
+      "promptDeAfter": "Ich suche ___ (der Praktikant) aus Hamburg.",
+      "textBefore": "Ich suche ___ (der Praktikant) aus Hamburg.",
+      "textAfter": "Ich suche ___ (der Praktikant) aus Hamburg.",
+      "answer": [
+        "den Praktikanten"
+      ],
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-derivational-lemma",
+      "rationaleAr": "القوس يعطي lexeme لازمة في تمرين تصريف/اشتقاق محدد؛ لا يساوي الجواب المصرف، وحذفه يجعل الفراغ معجمياً ملتبساً."
+    },
+    {
+      "id": "b2-n-dekl-e2",
+      "level": "B2",
+      "topicId": "b2-n-deklination",
+      "bucket": "exercises",
+      "type": "fill",
+      "markersBefore": [
+        "der Experte"
+      ],
+      "promptDeBefore": "Die Meinung ___ (der Experte) ist wichtig.",
+      "promptDeAfter": "Die Meinung ___ (der Experte) ist wichtig.",
+      "textBefore": "Die Meinung ___ (der Experte) ist wichtig.",
+      "textAfter": "Die Meinung ___ (der Experte) ist wichtig.",
+      "answer": [
+        "des Experten"
+      ],
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-derivational-lemma",
+      "rationaleAr": "القوس يعطي lexeme لازمة في تمرين تصريف/اشتقاق محدد؛ لا يساوي الجواب المصرف، وحذفه يجعل الفراغ معجمياً ملتبساً."
+    },
+    {
+      "id": "b2-n-dekl-e3",
+      "level": "B2",
+      "topicId": "b2-n-deklination",
+      "bucket": "exercises",
+      "type": "fill",
+      "markersBefore": [
+        "der Kunde"
+      ],
+      "promptDeBefore": "Wir sprechen mit ___ (der Kunde) über den Vertrag.",
+      "promptDeAfter": "Wir sprechen mit ___ (der Kunde) über den Vertrag.",
+      "textBefore": "Wir sprechen mit ___ (der Kunde) über den Vertrag.",
+      "textAfter": "Wir sprechen mit ___ (der Kunde) über den Vertrag.",
+      "answer": [
+        "dem Kunden"
+      ],
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-derivational-lemma",
+      "rationaleAr": "القوس يعطي lexeme لازمة في تمرين تصريف/اشتقاق محدد؛ لا يساوي الجواب المصرف، وحذفه يجعل الفراغ معجمياً ملتبساً."
+    },
+    {
+      "id": "b2-n-dekl-e4",
+      "level": "B2",
+      "topicId": "b2-n-deklination",
+      "bucket": "exercises",
+      "type": "fill",
+      "markersBefore": [
+        "der Kollege"
+      ],
+      "promptDeBefore": "Hast du ___ (der Kollege) gesehen?",
+      "promptDeAfter": "Hast du ___ (der Kollege) gesehen?",
+      "textBefore": "Hast du ___ (der Kollege) gesehen?",
+      "textAfter": "Hast du ___ (der Kollege) gesehen?",
+      "answer": [
+        "den Kollegen"
+      ],
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-derivational-lemma",
+      "rationaleAr": "القوس يعطي lexeme لازمة في تمرين تصريف/اشتقاق محدد؛ لا يساوي الجواب المصرف، وحذفه يجعل الفراغ معجمياً ملتبساً."
+    },
+    {
+      "id": "b2-n-dekl-v1",
+      "level": "B2",
+      "topicId": "b2-n-deklination",
+      "bucket": "verify",
+      "type": "fill",
+      "markersBefore": [
+        "der Nachbar"
+      ],
+      "promptDeBefore": "Ich helfe ___ (der Nachbar) beim Umzug.",
+      "promptDeAfter": "Ich helfe ___ (der Nachbar) beim Umzug.",
+      "textBefore": "Ich helfe ___ (der Nachbar) beim Umzug.",
+      "textAfter": "Ich helfe ___ (der Nachbar) beim Umzug.",
+      "answer": [
+        "dem Nachbarn"
+      ],
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-derivational-lemma",
+      "rationaleAr": "القوس يعطي lexeme لازمة في تمرين تصريف/اشتقاق محدد؛ لا يساوي الجواب المصرف، وحذفه يجعل الفراغ معجمياً ملتبساً."
+    },
+    {
+      "id": "b2-n-dekl-v2",
+      "level": "B2",
+      "topicId": "b2-n-deklination",
+      "bucket": "verify",
+      "type": "mc",
+      "markersBefore": [
+        "der Kollege"
+      ],
+      "promptDeBefore": "Kennst du ___ (der Kollege) von Anna?",
+      "promptDeAfter": "Kennst du ___ von Anna?",
+      "textBefore": null,
+      "textAfter": null,
+      "answer": "den Kollegen",
+      "options": [
+        "den Kollege",
+        "den Kollegen",
+        "dem Kollegen"
+      ],
+      "decision": "remove-redundant",
+      "classification": "redundant-with-options",
+      "rationaleAr": "كل خيارات MC تحمل الـlexeme نفسها؛ لذلك لا يضيف القوس قيداً تعليمياً ويكرر معلومة ظاهرة في الخيارات."
+    },
+    {
+      "id": "b2-nom-e2",
+      "level": "B2",
+      "topicId": "b2-nominalisierung",
+      "bucket": "exercises",
+      "type": "fill",
+      "markersBefore": [
+        "Grund"
+      ],
+      "promptDeBefore": "___ seiner Erfahrung bekam er den Job. (Grund)",
+      "promptDeAfter": "___ seiner Erfahrung bekam er den Job. (Grund)",
+      "textBefore": "___ seiner Erfahrung bekam er den Job.",
+      "textAfter": "___ seiner Erfahrung bekam er den Job.",
+      "answer": [
+        "Aufgrund"
+      ],
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-semantic-cue",
+      "rationaleAr": "القوس قيد دلالي أو وظيفي يحدد المعنى المقصود ولا يعطي الصيغة المقبولة حرفياً."
+    },
+    {
+      "id": "b2-nom-e4",
+      "level": "B2",
+      "topicId": "b2-nominalisierung",
+      "bucket": "exercises",
+      "type": "fill",
+      "markersBefore": [
+        "wichtig"
+      ],
+      "promptDeBefore": "Die ___ (wichtig) des Themas ist klar.",
+      "promptDeAfter": "Die ___ (wichtig) des Themas ist klar.",
+      "textBefore": "Die ___ des Themas ist klar.",
+      "textAfter": "Die ___ des Themas ist klar.",
+      "answer": [
+        "Wichtigkeit"
+      ],
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-derivational-lemma",
+      "rationaleAr": "القوس يعطي lexeme لازمة في تمرين تصريف/اشتقاق محدد؛ لا يساوي الجواب المصرف، وحذفه يجعل الفراغ معجمياً ملتبساً."
+    },
+    {
+      "id": "b2-nom-e8",
+      "level": "B2",
+      "topicId": "b2-nominalisierung",
+      "bucket": "exercises",
+      "type": "fill",
+      "markersBefore": [
+        "Ziel"
+      ],
+      "promptDeBefore": "___ der Prüfung lernte er viel. (Ziel)",
+      "promptDeAfter": "___ der Prüfung lernte er viel. (Ziel)",
+      "textBefore": "___ der Prüfung lernte er viel.",
+      "textAfter": "___ der Prüfung lernte er viel.",
+      "answer": [
+        "Zum Zweck"
+      ],
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-semantic-cue",
+      "rationaleAr": "القوس قيد دلالي أو وظيفي يحدد المعنى المقصود ولا يعطي الصيغة المقبولة حرفياً."
+    },
+    {
+      "id": "b2-nominalstil-u1",
+      "level": "B2",
+      "topicId": "b2-nominalstil",
+      "bucket": "exercises",
+      "type": "umformung",
+      "markersBefore": [
+        "trotz + Genitiv"
+      ],
+      "promptDeBefore": "Schreibe im Nominalstil (trotz + Genitiv):",
+      "promptDeAfter": "Schreibe im Nominalstil (trotz + Genitiv):",
+      "textBefore": null,
+      "textAfter": null,
+      "answer": "Trotz des starken Regens fand das Konzert statt.",
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-transformation-target",
+      "rationaleAr": "القوس يحدد التحويل أو القيد النحوي المطلوب كي لا تصبح مهمة الإنتاج مفتوحة بلا معيار."
+    },
+    {
+      "id": "b2-nominalstil-u2",
+      "level": "B2",
+      "topicId": "b2-nominalstil",
+      "bucket": "exercises",
+      "type": "umformung",
+      "markersBefore": [
+        "wenn + Nebensatz"
+      ],
+      "promptDeBefore": "Schreibe im Verbalstil (wenn + Nebensatz):",
+      "promptDeAfter": "Schreibe im Verbalstil (wenn + Nebensatz):",
+      "textBefore": null,
+      "textAfter": null,
+      "answer": "Wenn es regnet, findet das Fest in der Halle statt.",
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-transformation-target",
+      "rationaleAr": "القوس يحدد التحويل أو القيد النحوي المطلوب كي لا تصبح مهمة الإنتاج مفتوحة بلا معيار."
+    },
+    {
+      "id": "b2-nominalstil-u3",
+      "level": "B2",
+      "topicId": "b2-nominalstil",
+      "bucket": "exercises",
+      "type": "umformung",
+      "markersBefore": [
+        "zur + Nomen"
+      ],
+      "promptDeBefore": "Schreibe im Nominalstil (zur + Nomen):",
+      "promptDeAfter": "Schreibe im Nominalstil (zur + Nomen):",
+      "textBefore": null,
+      "textAfter": null,
+      "answer": "Die Stadt baut Radwege zur Verbesserung der Luft.",
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-transformation-target",
+      "rationaleAr": "القوس يحدد التحويل أو القيد النحوي المطلوب كي لا تصبح مهمة الإنتاج مفتوحة بلا معيار."
+    },
+    {
+      "id": "b2-nominalstil-v1",
+      "level": "B2",
+      "topicId": "b2-nominalstil",
+      "bucket": "verify",
+      "type": "fill",
+      "markersBefore": [
+        "durchführen → Nomen"
+      ],
+      "promptDeBefore": "die ___ der Prüfung (durchführen → Nomen)",
+      "promptDeAfter": "die ___ der Prüfung (durchführen → Nomen)",
+      "textBefore": "die ___ der Prüfung (durchführen → Nomen)",
+      "textAfter": "die ___ der Prüfung (durchführen → Nomen)",
+      "answer": [
+        "Durchführung"
+      ],
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-grammar-target",
+      "rationaleAr": "القوس يحدد الفئة أو الحالة النحوية التي يقيسها التمرين، بينما تبقى الصيغة المطلوب إنتاجها على المتعلم."
+    },
+    {
+      "id": "g16e1",
+      "level": "B2",
+      "topicId": "b2-partizip",
+      "bucket": "exercises",
+      "type": "fill",
+      "markersBefore": [
+        "sich entschuldigen"
+      ],
+      "promptDeBefore": "Er kam, ohne ___ (sich entschuldigen).",
+      "promptDeAfter": "Er kam, ohne ___ (sich entschuldigen).",
+      "textBefore": "Er kam, ohne ___.",
+      "textAfter": "Er kam, ohne ___.",
+      "answer": [
+        "sich zu entschuldigen"
+      ],
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-derivational-lemma",
+      "rationaleAr": "القوس يعطي lexeme لازمة في تمرين تصريف/اشتقاق محدد؛ لا يساوي الجواب المصرف، وحذفه يجعل الفراغ معجمياً ملتبساً."
+    },
+    {
+      "id": "g16e2",
+      "level": "B2",
+      "topicId": "b2-partizip",
+      "bucket": "exercises",
+      "type": "mc",
+      "markersBefore": [
+        "beschließen"
+      ],
+      "promptDeBefore": "die von Experten ___ (beschließen) Pläne",
+      "promptDeAfter": "die von Experten ___ Pläne",
+      "textBefore": null,
+      "textAfter": null,
+      "answer": "beschlossenen",
+      "options": [
+        "beschlossenen",
+        "beschlossende",
+        "beschließen"
+      ],
+      "decision": "remove-redundant",
+      "classification": "redundant-with-options",
+      "rationaleAr": "كل خيارات MC تحمل الـlexeme نفسها؛ لذلك لا يضيف القوس قيداً تعليمياً ويكرر معلومة ظاهرة في الخيارات."
+    },
+    {
+      "id": "g16e3",
+      "level": "B2",
+      "topicId": "b2-partizip",
+      "bucket": "exercises",
+      "type": "fill",
+      "markersBefore": [
+        "للغاية"
+      ],
+      "promptDeBefore": "Sie spart Geld, ___ ein Auto zu kaufen. (للغاية)",
+      "promptDeAfter": "Sie spart Geld, ___ ein Auto zu kaufen. (للغاية)",
+      "textBefore": null,
+      "textAfter": null,
+      "answer": [
+        "um"
+      ],
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-semantic-cue",
+      "rationaleAr": "القوس قيد دلالي أو وظيفي يحدد المعنى المقصود ولا يعطي الصيغة المقبولة حرفياً."
+    },
+    {
+      "id": "b2-partizip-v1",
+      "level": "B2",
+      "topicId": "b2-partizip",
+      "bucket": "verify",
+      "type": "fill",
+      "markersBefore": [
+        "ankommen, Partizip II"
+      ],
+      "promptDeBefore": "der gestern ___ Brief (ankommen, Partizip II)",
+      "promptDeAfter": "der gestern ___ Brief (ankommen, Partizip II)",
+      "textBefore": "der gestern ___ Brief (ankommen, Partizip II)",
+      "textAfter": "der gestern ___ Brief (ankommen, Partizip II)",
+      "answer": [
+        "angekommene"
+      ],
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-grammar-target",
+      "rationaleAr": "القوس يحدد الفئة أو الحالة النحوية التي يقيسها التمرين، بينما تبقى الصيغة المطلوب إنتاجها على المتعلم."
+    },
+    {
+      "id": "b2-ptz-e2",
+      "level": "B2",
+      "topicId": "b2-partizipial",
+      "bucket": "exercises",
+      "type": "fill",
+      "markersBefore": [
+        "lesen, Partizip I"
+      ],
+      "promptDeBefore": "der ___ Mann (lesen, Partizip I)",
+      "promptDeAfter": "der ___ Mann (lesen, Partizip I)",
+      "textBefore": "der ___ Mann",
+      "textAfter": "der ___ Mann",
+      "answer": [
+        "lesende"
+      ],
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-grammar-target",
+      "rationaleAr": "القوس يحدد الفئة أو الحالة النحوية التي يقيسها التمرين، بينما تبقى الصيغة المطلوب إنتاجها على المتعلم."
+    },
+    {
+      "id": "b2-ptz-e6",
+      "level": "B2",
+      "topicId": "b2-partizipial",
+      "bucket": "exercises",
+      "type": "fill",
+      "markersBefore": [
+        "lachen"
+      ],
+      "promptDeBefore": "Die ___ (lachen) Kinder spielten.",
+      "promptDeAfter": "Die ___ (lachen) Kinder spielten.",
+      "textBefore": "Die ___ Kinder spielten.",
+      "textAfter": "Die ___ Kinder spielten.",
+      "answer": [
+        "lachenden"
+      ],
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-derivational-lemma",
+      "rationaleAr": "القوس يعطي lexeme لازمة في تمرين تصريف/اشتقاق محدد؛ لا يساوي الجواب المصرف، وحذفه يجعل الفراغ معجمياً ملتبساً."
+    },
+    {
+      "id": "b2-ptz-v1",
+      "level": "B2",
+      "topicId": "b2-partizipial",
+      "bucket": "verify",
+      "type": "fill",
+      "markersBefore": [
+        "ankommen"
+      ],
+      "promptDeBefore": "der gestern ___ Brief (ankommen)",
+      "promptDeAfter": "der gestern ___ Brief (ankommen)",
+      "textBefore": "der gestern ___ Brief",
+      "textAfter": "der gestern ___ Brief",
+      "answer": [
+        "angekommene"
+      ],
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-derivational-lemma",
+      "rationaleAr": "القوس يعطي lexeme لازمة في تمرين تصريف/اشتقاق محدد؛ لا يساوي الجواب المصرف، وحذفه يجعل الفراغ معجمياً ملتبساً."
+    },
+    {
+      "id": "b2-passiv-e2",
+      "level": "B2",
+      "topicId": "b2-passiv",
+      "bucket": "exercises",
+      "type": "fill",
+      "markersBefore": [
+        "werden, Präteritum"
+      ],
+      "promptDeBefore": "Die Fabrik ___ 2019 geschlossen. (werden, Präteritum)",
+      "promptDeAfter": "Die Fabrik ___ 2019 geschlossen. (werden, Präteritum)",
+      "textBefore": "Die Fabrik ___ 2019 geschlossen.",
+      "textAfter": "Die Fabrik ___ 2019 geschlossen.",
+      "answer": [
+        "wurde"
+      ],
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-grammar-target",
+      "rationaleAr": "القوس يحدد الفئة أو الحالة النحوية التي يقيسها التمرين، بينما تبقى الصيغة المطلوب إنتاجها على المتعلم."
+    },
+    {
+      "id": "b2-passiv-e3",
+      "level": "B2",
+      "topicId": "b2-passiv",
+      "bucket": "exercises",
+      "type": "fill",
+      "markersBefore": [
+        "sein, Perfekt Passiv"
+      ],
+      "promptDeBefore": "Das Auto ___ gestohlen ___. (sein, Perfekt Passiv)",
+      "promptDeAfter": "Das Auto ___ gestohlen ___. (sein, Perfekt Passiv)",
+      "textBefore": "Das Auto ___ gestohlen ___.",
+      "textAfter": "Das Auto ___ gestohlen ___.",
+      "answer": [
+        "ist worden",
+        "ist ... worden"
+      ],
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-grammar-target",
+      "rationaleAr": "القوس يحدد الفئة أو الحالة النحوية التي يقيسها التمرين، بينما تبقى الصيغة المطلوب إنتاجها على المتعلم."
+    },
+    {
+      "id": "b2-passiv-e6",
+      "level": "B2",
+      "topicId": "b2-passiv",
+      "bucket": "exercises",
+      "type": "fill",
+      "markersBefore": [
+        "Genitivpräp trotzdem?"
+      ],
+      "promptDeBefore": "___ des Berichts wurde Kritik geübt. (Genitivpräp trotzdem?)",
+      "promptDeAfter": "___ des Berichts wurde Kritik geübt. (Genitivpräp trotzdem?)",
+      "textBefore": "___ des Berichts wurde Kritik geübt.",
+      "textAfter": "___ des Berichts wurde Kritik geübt.",
+      "answer": [
+        "Trotz"
+      ],
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-grammar-target",
+      "rationaleAr": "القوس يحدد الفئة أو الحالة النحوية التي يقيسها التمرين، بينما تبقى الصيغة المطلوب إنتاجها على المتعلم."
+    },
+    {
+      "id": "b2-passiv-v2",
+      "level": "B2",
+      "topicId": "b2-passiv",
+      "bucket": "verify",
+      "type": "mc",
+      "markersBefore": [
+        "Zustand"
+      ],
+      "promptDeBefore": "Die Tür ___ geöffnet. (Zustand)",
+      "promptDeAfter": "Die Tür ___ geöffnet. (Zustand)",
+      "textBefore": null,
+      "textAfter": null,
+      "answer": "ist",
+      "options": [
+        "wird",
+        "ist",
+        "wurde"
+      ],
+      "decision": "retain",
+      "classification": "retain-choice-disambiguator",
+      "rationaleAr": "القوس يميّز الهدف بين خيارات تظل لغوياً ممكنة بدونه، ولا يكرر الخيار الصحيح حرفياً."
+    },
+    {
+      "id": "b2-pruefungsstrategie-r141e-e03",
+      "level": "B2",
+      "topicId": "b2-pruefungsstrategie",
+      "bucket": "exercises",
+      "type": "mc",
+      "markersBefore": [
+        "Teil 2"
+      ],
+      "promptDeBefore": "Wie lang soll die Vorbereitung auf die Präsentation (Teil 2) sein?",
+      "promptDeAfter": "Wie lang soll die Vorbereitung auf die Präsentation (Teil 2) sein?",
+      "textBefore": null,
+      "textAfter": null,
+      "answer": "3 Minuten",
+      "options": [
+        "1 Minute",
+        "3 Minuten",
+        "10 Minuten",
+        "Keine Vorbereitung"
+      ],
+      "decision": "retain",
+      "classification": "retain-context-label",
+      "rationaleAr": "القوس يصف سياق المهمة أو قسمها ولا يزوّد فراغاً بجواب."
+    },
+    {
+      "id": "b2-redew-f2",
+      "level": "B2",
+      "topicId": "b2-redew",
+      "bucket": "exercises",
+      "type": "fill",
+      "markersBefore": [
+        "innere Gelassenheit"
+      ],
+      "promptDeBefore": "Die Nachricht hat mich völlig aus der ___ gebracht. (innere Gelassenheit)",
+      "promptDeAfter": "Die Nachricht hat mich völlig aus der ___ gebracht. (innere Gelassenheit)",
+      "textBefore": null,
+      "textAfter": null,
+      "answer": [
+        "Ruhe",
+        "ruhe"
+      ],
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-semantic-cue",
+      "rationaleAr": "القوس قيد دلالي أو وظيفي يحدد المعنى المقصود ولا يعطي الصيغة المقبولة حرفياً."
+    },
+    {
+      "id": "b2-redew-f3",
+      "level": "B2",
+      "topicId": "b2-redew",
+      "bucket": "exercises",
+      "type": "fill",
+      "markersBefore": [
+        "es wird dringend"
+      ],
+      "promptDeBefore": "Es ist höchste ___, dass wir anfangen. (es wird dringend)",
+      "promptDeAfter": "Es ist höchste ___, dass wir anfangen. (es wird dringend)",
+      "textBefore": null,
+      "textAfter": null,
+      "answer": [
+        "Zeit",
+        "zeit"
+      ],
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-semantic-cue",
+      "rationaleAr": "القوس قيد دلالي أو وظيفي يحدد المعنى المقصود ولا يعطي الصيغة المقبولة حرفياً."
+    },
+    {
+      "id": "b2-redew-f4",
+      "level": "B2",
+      "topicId": "b2-redew",
+      "bucket": "exercises",
+      "type": "fill",
+      "markersBefore": [
+        "Impuls"
+      ],
+      "promptDeBefore": "Seine Rede hat mir den ___ gegeben, Deutsch zu lernen. (Impuls)",
+      "promptDeAfter": "Seine Rede hat mir den ___ gegeben, Deutsch zu lernen. (Impuls)",
+      "textBefore": null,
+      "textAfter": null,
+      "answer": [
+        "Anstoß"
+      ],
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-semantic-cue",
+      "rationaleAr": "القوس قيد دلالي أو وظيفي يحدد المعنى المقصود ولا يعطي الصيغة المقبولة حرفياً."
+    },
+    {
+      "id": "b2-redew-f6",
+      "level": "B2",
+      "topicId": "b2-redew",
+      "bucket": "exercises",
+      "type": "fill",
+      "markersBefore": [
+        "Kauf"
+      ],
+      "promptDeBefore": "Die lärmenden Nachbarn nehme ich bis zum Umbauende ___. (Kauf)",
+      "promptDeAfter": "Die lärmenden Nachbarn nehme ich bis zum Umbauende ___. (Kauf)",
+      "textBefore": null,
+      "textAfter": null,
+      "answer": [
+        "in Kauf"
+      ],
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-semantic-cue",
+      "rationaleAr": "القوس قيد دلالي أو وظيفي يحدد المعنى المقصود ولا يعطي الصيغة المقبولة حرفياً."
+    },
+    {
+      "id": "b2-redew-o1",
+      "level": "B2",
+      "topicId": "b2-redew",
+      "bucket": "exercises",
+      "type": "order",
+      "markersBefore": [
+        "ich / nehme / die lärmenden Nachbarn / in Kauf"
+      ],
+      "promptDeBefore": "Bilde einen Satz: (ich / nehme / die lärmenden Nachbarn / in Kauf)",
+      "promptDeAfter": "Bilde einen Satz: (ich / nehme / die lärmenden Nachbarn / in Kauf)",
+      "textBefore": null,
+      "textAfter": null,
+      "answer": [
+        "Ich",
+        "nehme",
+        "die lärmenden Nachbarn",
+        "in Kauf"
+      ],
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-token-bank",
+      "rationaleAr": "القوس هو بنك القطع المطلوب ترتيبها، لا تلميح جواب مستقل؛ حذفه يلغي مادة المهمة."
+    },
+    {
+      "id": "b2-redew-v2",
+      "level": "B2",
+      "topicId": "b2-redew",
+      "bucket": "verify",
+      "type": "fill",
+      "markersBefore": [
+        "sterben — umgangssprachlich"
+      ],
+      "promptDeBefore": "Ins Gras ___ (sterben — umgangssprachlich).",
+      "promptDeAfter": "Ins Gras ___ (sterben — umgangssprachlich).",
+      "textBefore": "Ins Gras ___ (sterben — umgangssprachlich).",
+      "textAfter": "Ins Gras ___ (sterben — umgangssprachlich).",
+      "answer": [
+        "beißen"
+      ],
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-derivational-lemma",
+      "rationaleAr": "القوس يعطي lexeme لازمة في تمرين تصريف/اشتقاق محدد؛ لا يساوي الجواب المصرف، وحذفه يجعل الفراغ معجمياً ملتبساً."
+    },
+    {
+      "id": "grge4",
+      "level": "B2",
+      "topicId": "b2-relativ-generalisierend",
+      "bucket": "exercises",
+      "type": "order",
+      "markersBefore": [
+        "Wer / nicht / lernt /, / der / verliert / die Zukunft"
+      ],
+      "promptDeBefore": "Bilde einen Satz: (Wer / nicht / lernt /, / der / verliert / die Zukunft)",
+      "promptDeAfter": "Bilde einen Satz: (Wer / nicht / lernt /, / der / verliert / die Zukunft)",
+      "textBefore": null,
+      "textAfter": null,
+      "answer": [
+        "Wer",
+        "nicht",
+        "lernt",
+        ",",
+        "der",
+        "verliert",
+        "die",
+        "Zukunft"
+      ],
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-token-bank",
+      "rationaleAr": "القوس هو بنك القطع المطلوب ترتيبها، لا تلميح جواب مستقل؛ حذفه يلغي مادة المهمة."
+    },
+    {
+      "id": "b2-textkonnektoren-n1",
+      "level": "B2",
+      "topicId": "b2-textkonnektoren",
+      "bucket": "exercises",
+      "type": "mc",
+      "markersBefore": [
+        "gehoben"
+      ],
+      "promptDeBefore": "___ es regnete, gingen wir. (gehoben)",
+      "promptDeAfter": "___ es regnete, gingen wir. (gehoben)",
+      "textBefore": null,
+      "textAfter": null,
+      "answer": "Wenngleich",
+      "options": [
+        "Wenngleich",
+        "Weil",
+        "Denn"
+      ],
+      "decision": "retain",
+      "classification": "retain-choice-disambiguator",
+      "rationaleAr": "القوس يميّز الهدف بين خيارات تظل لغوياً ممكنة بدونه، ولا يكرر الخيار الصحيح حرفياً."
+    },
+    {
+      "id": "b2-textkonnektoren-n2",
+      "level": "B2",
+      "topicId": "b2-textkonnektoren",
+      "bucket": "exercises",
+      "type": "fill",
+      "markersBefore": [
+        "Gegensatz nach dem Subjekt"
+      ],
+      "promptDeBefore": "Er ___ blieb zu Hause. (Gegensatz nach dem Subjekt)",
+      "promptDeAfter": "Er ___ blieb zu Hause. (Gegensatz nach dem Subjekt)",
+      "textBefore": "Er ___ blieb zu Hause.",
+      "textAfter": "Er ___ blieb zu Hause.",
+      "answer": [
+        "hingegen"
+      ],
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-semantic-cue",
+      "rationaleAr": "القوس قيد دلالي أو وظيفي يحدد المعنى المقصود ولا يعطي الصيغة المقبولة حرفياً."
+    },
+    {
+      "id": "b2-textkonnektoren-v1",
+      "level": "B2",
+      "topicId": "b2-textkonnektoren",
+      "bucket": "verify",
+      "type": "fill",
+      "markersBefore": [
+        "Konzessivkonnektor"
+      ],
+      "promptDeBefore": "___ er müde war, arbeitete er. (Konzessivkonnektor)",
+      "promptDeAfter": "___ er müde war, arbeitete er. (Konzessivkonnektor)",
+      "textBefore": "___ er müde war, arbeitete er.",
+      "textAfter": "___ er müde war, arbeitete er.",
+      "answer": [
+        "Obgleich"
+      ],
+      "options": null,
+      "decision": "retain",
+      "classification": "retain-derivational-lemma",
+      "rationaleAr": "القوس يعطي lexeme لازمة في تمرين تصريف/اشتقاق محدد؛ لا يساوي الجواب المصرف، وحذفه يجعل الفراغ معجمياً ملتبساً."
+    }
+  ]
+}

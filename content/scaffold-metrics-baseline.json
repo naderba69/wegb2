@@ -1,18 +1,19 @@
 {
-  "reviewRule": "R160",
+  "reviewRule": "R161",
   "asOf": "2026-11-04",
   "nonBlockingRatios": true,
   "method": "Count each grammar exercise and delayed verification once. A parenthetical marker is any non-empty (...) in promptDe or text; a blank-linked candidate also contains a ___ blank. Candidates are review signals, not confirmed defects.",
   "topics": 87,
   "items": 758,
-  "parenthetical": 245,
-  "blankLinked": 180,
+  "parenthetical": 242,
+  "blankLinked": 177,
   "exactLeaks": 0,
   "byLevel": {
     "A0": { "level": "A0", "topics": 8, "items": 63, "parenthetical": 8, "blankLinked": 7, "exactLeaks": 0, "parentheticalPct": 12.7 },
     "A1": { "level": "A1", "topics": 19, "items": 150, "parenthetical": 58, "blankLinked": 39, "exactLeaks": 0, "parentheticalPct": 38.7 },
     "A2": { "level": "A2", "topics": 22, "items": 202, "parenthetical": 82, "blankLinked": 62, "exactLeaks": 0, "parentheticalPct": 40.6 },
-    "B1": { "level": "B1", "topics": 15, "items": 143, "parenthetical": 35, "blankLinked": 24, "exactLeaks": 0, "parentheticalPct": 24.5 },
-    "B2": { "level": "B2", "topics": 23, "items": 200, "parenthetical": 62, "blankLinked": 48, "exactLeaks": 0, "parentheticalPct": 31 }
-  }
+    "B1": { "level": "B1", "topics": 15, "items": 143, "parenthetical": 34, "blankLinked": 23, "exactLeaks": 0, "parentheticalPct": 23.8 },
+    "B2": { "level": "B2", "topics": 23, "items": 200, "parenthetical": 60, "blankLinked": 46, "exactLeaks": 0, "parentheticalPct": 30 }
+  },
+  "previousBaseline": { "reviewRule": "R160", "parenthetical": 245, "blankLinked": 180 }
 }

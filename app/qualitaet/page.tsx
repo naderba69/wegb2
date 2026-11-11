@@ -60,6 +60,11 @@ type DialogBank = Array<{
 }>;
 type DialogAudio = { einsaetze: Array<{ id: string; file: string }> };
 type ScaffoldBaseline = { reviewRule: string; asOf: string; nonBlockingRatios: boolean };
+type ScaffoldReview = {
+  reviewRule: string;
+  claimBoundary: { independentHumanReview: boolean; candidateIsConfirmedDefect: boolean };
+  summary: { reviewed: number; retained: number; removedRedundant: number; byLevel: Record<string, number> };
+};
 
 function readJson<T>(name: string): T {
   return JSON.parse(readFileSync(join(process.cwd(), "content", name), "utf8")) as T;
@@ -74,6 +79,7 @@ const dialogBank = readJson<DialogBank>("dialogues.json");
 const dialogAudio = readJson<DialogAudio>("dialog-audio.json");
 const grammarBank = readJson<Record<string, ScaffoldTopic>>("grammar.json");
 const scaffoldBaseline = readJson<ScaffoldBaseline>("scaffold-metrics-baseline.json");
+const scaffoldReview = readJson<ScaffoldReview>("scaffold-review-b1-b2.json");
 const dialogPool = zaehleVpDialogPool(dialogBank, new Set(dialogAudio.einsaetze.map((einsatz) => einsatz.id)));
 const scaffoldMetrics = calculateScaffoldMetrics(grammarBank);
 
@@ -167,7 +173,7 @@ export default function QualitaetPage() {
       <section className="card" data-testid="scaffold-transparency" style={{ padding: "1rem", display: "grid", gap: "0.7rem" }}>
         <h2 style={{ margin: 0 }}>شفافية السقالة القوسية حسب المستوى</h2>
         <p style={{ margin: 0, lineHeight: 1.85 }}>
-          هذا مقياس رصد غير مانع: يحصي كل علامة <span className="de">(...)</span> في سؤال القواعد مرة واحدة، ولا يحكم بأنها خطأ. المرشح المرتبط بفراغ يحتاج مراجعة بشرية حالةً بحالة؛ أما تكرار الجواب حرفياً فعيب مستقل يجب أن يبقى صفراً.
+          هذا مقياس رصد غير مانع: يحصي كل علامة <span className="de">(...)</span> في سؤال القواعد مرة واحدة، ولا يحكم بأنها خطأ. المرشح المرتبط بفراغ يحتاج قراراً تحريرياً حالةً بحالة؛ أما تكرار الجواب حرفياً فعيب مستقل يجب أن يبقى صفراً.
         </p>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: "0.7rem" }}>
           <div className="card" style={{ padding: "0.8rem" }}>
@@ -189,6 +195,9 @@ export default function QualitaetPage() {
             return <span className="chip" key={level}>{level}: {metric.parenthetical}/{metric.items} ({metric.parentheticalPct.toFixed(1)}%)</span>;
           })}
         </div>
+        <p data-testid="scaffold-review-summary" style={{ margin: 0, lineHeight: 1.8 }}>
+          مراجعة {scaffoldReview.reviewRule}: {scaffoldReview.summary.reviewed}/{scaffoldReview.summary.reviewed} حالة B1/B2 لها قرار صريح؛ احتُفظ بـ{scaffoldReview.summary.retained} وأزيلت {scaffoldReview.summary.removedRedundant} أقواس زائدة كررت معلومات خيارات MC. هذه مراجعة تحريرية داخلية وليست توقيع خبير تربوي مستقل.
+        </p>
         <p style={{ margin: 0, color: "var(--color-ink2)", lineHeight: 1.8 }}>
           خط الأساس {scaffoldBaseline.reviewRule} مؤرخ في {scaffoldBaseline.asOf}: هذه إشارات مراجعة وليست عيوباً مؤكدة، ولا نفرض عتبات CEFR اعتباطية قبل دليل تربوي مستقل.
         </p>
