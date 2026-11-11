@@ -3,6 +3,7 @@ import Link from "next/link";
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { zaehleVpDialogPool } from "@/lib/vollpruefung-pool";
+import { calculateScaffoldMetrics, SCAFFOLD_LEVELS, type ScaffoldTopic } from "@/lib/scaffold-metrics";
 
 type Alignment = {
   productClaim: { ar: string };
@@ -58,6 +59,7 @@ type DialogBank = Array<{
   questions?: Array<{ options?: string[]; answer?: string }>;
 }>;
 type DialogAudio = { einsaetze: Array<{ id: string; file: string }> };
+type ScaffoldBaseline = { reviewRule: string; asOf: string; nonBlockingRatios: boolean };
 
 function readJson<T>(name: string): T {
   return JSON.parse(readFileSync(join(process.cwd(), "content", name), "utf8")) as T;
@@ -70,7 +72,10 @@ const externalEvidence = readJson<ExternalEvidence>("external-evidence.json");
 const realWorld = readJson<RealWorldProgram>("real-world-validation.json");
 const dialogBank = readJson<DialogBank>("dialogues.json");
 const dialogAudio = readJson<DialogAudio>("dialog-audio.json");
+const grammarBank = readJson<Record<string, ScaffoldTopic>>("grammar.json");
+const scaffoldBaseline = readJson<ScaffoldBaseline>("scaffold-metrics-baseline.json");
 const dialogPool = zaehleVpDialogPool(dialogBank, new Set(dialogAudio.einsaetze.map((einsatz) => einsatz.id)));
+const scaffoldMetrics = calculateScaffoldMetrics(grammarBank);
 
 export const metadata: Metadata = {
   title: "الجودة والمواءمة — WegB2",
@@ -157,6 +162,36 @@ export default function QualitaetPage() {
             الجرد الحالي كشف {toolSummary.genericPrototypeModules} نموذجاً عاماً و{toolSummary.citationLabels} تسمية مرجع أولية؛ لا تُعد هذه مراجع موثقة أو مزايا إنتاجية.
           </p>
         </details>
+      </section>
+
+      <section className="card" data-testid="scaffold-transparency" style={{ padding: "1rem", display: "grid", gap: "0.7rem" }}>
+        <h2 style={{ margin: 0 }}>شفافية السقالة القوسية حسب المستوى</h2>
+        <p style={{ margin: 0, lineHeight: 1.85 }}>
+          هذا مقياس رصد غير مانع: يحصي كل علامة <span className="de">(...)</span> في سؤال القواعد مرة واحدة، ولا يحكم بأنها خطأ. المرشح المرتبط بفراغ يحتاج مراجعة بشرية حالةً بحالة؛ أما تكرار الجواب حرفياً فعيب مستقل يجب أن يبقى صفراً.
+        </p>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: "0.7rem" }}>
+          <div className="card" style={{ padding: "0.8rem" }}>
+            <strong className="rtl-num">{scaffoldMetrics.parenthetical}/{scaffoldMetrics.items}</strong><br />
+            بنداً يحمل علامة قوسية
+          </div>
+          <div className="card" style={{ padding: "0.8rem" }}>
+            <strong className="rtl-num">{scaffoldMetrics.blankLinked}</strong><br />
+            مرشحاً مرتبطاً بفراغ
+          </div>
+          <div className="card" style={{ padding: "0.8rem" }}>
+            <strong className="rtl-num">{scaffoldMetrics.exactLeaks}</strong><br />
+            تسريباً حرفياً مؤكداً
+          </div>
+        </div>
+        <div style={{ display: "flex", gap: "0.45rem", flexWrap: "wrap" }}>
+          {SCAFFOLD_LEVELS.map((level) => {
+            const metric = scaffoldMetrics.byLevel[level];
+            return <span className="chip" key={level}>{level}: {metric.parenthetical}/{metric.items} ({metric.parentheticalPct.toFixed(1)}%)</span>;
+          })}
+        </div>
+        <p style={{ margin: 0, color: "var(--color-ink2)", lineHeight: 1.8 }}>
+          خط الأساس {scaffoldBaseline.reviewRule} مؤرخ في {scaffoldBaseline.asOf}: هذه إشارات مراجعة وليست عيوباً مؤكدة، ولا نفرض عتبات CEFR اعتباطية قبل دليل تربوي مستقل.
+        </p>
       </section>
 
       <section className="card" data-testid="dialog-pool-transparenz" style={{ padding: "1rem", display: "grid", gap: "0.7rem" }}>

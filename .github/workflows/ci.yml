@@ -69,6 +69,8 @@ jobs:
         run: npm run audit:content
       - name: Wort-für-Wort-Audit (bestätigte Blocker)
         run: npm run audit:words
+      - name: Scaffold-Observability (CEFR baseline; candidates are not defects)
+        run: npm run audit:scaffolds
       - name: Produktions-Build
         run: npm run build
       - name: Browser-E2E (echtes Chromium, SW + Offline + CSP)
