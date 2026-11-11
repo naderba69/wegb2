@@ -65,6 +65,12 @@ type ScaffoldReview = {
   claimBoundary: { independentHumanReview: boolean; candidateIsConfirmedDefect: boolean };
   summary: { reviewed: number; retained: number; removedRedundant: number; byLevel: Record<string, number> };
 };
+type PluralReview = {
+  reviewRule: string;
+  claimBoundary: { independentHumanReview: boolean; scannerCandidateIsConfirmedDefect: boolean; massDeletionUsed: boolean };
+  summary: { reviewed: number; replace: number; removeNonNoun: number; removeNoPluralInSense: number; retainValid: number; changed: number };
+  protectedCards: Record<string, string>;
+};
 
 function readJson<T>(name: string): T {
   return JSON.parse(readFileSync(join(process.cwd(), "content", name), "utf8")) as T;
@@ -80,6 +86,7 @@ const dialogAudio = readJson<DialogAudio>("dialog-audio.json");
 const grammarBank = readJson<Record<string, ScaffoldTopic>>("grammar.json");
 const scaffoldBaseline = readJson<ScaffoldBaseline>("scaffold-metrics-baseline.json");
 const scaffoldReview = readJson<ScaffoldReview>("scaffold-review-b1-b2.json");
+const pluralReview = readJson<PluralReview>("plural-review-r162.json");
 const dialogPool = zaehleVpDialogPool(dialogBank, new Set(dialogAudio.einsaetze.map((einsatz) => einsatz.id)));
 const scaffoldMetrics = calculateScaffoldMetrics(grammarBank);
 
@@ -203,8 +210,19 @@ export default function QualitaetPage() {
         </p>
       </section>
 
+      <section className="card" data-testid="plural-review-summary" style={{ padding: "1rem", display: "grid", gap: "0.7rem" }}>
+        <h2 style={{ margin: 0 }}>مراجعة الجمع حالةً بحالة</h2>
+        <p style={{ margin: 0, lineHeight: 1.85 }}>
+          مراجعة {pluralReview.reviewRule}: لكل واحد من {pluralReview.summary.reviewed}/{pluralReview.summary.reviewed} مرشحاً قرار محفوظ، لا حكم جماعي من الماسح.
+          صُححت {pluralReview.summary.replace} صيغة، وحُذف {pluralReview.summary.removeNonNoun} حقلاً من فعل/صفة و{pluralReview.summary.removeNoPluralInSense} من اسم لا يلائم الجمعُ معناه المعروض، وأُبقيت {pluralReview.summary.retainValid} حالات صحيحة.
+        </p>
+        <p style={{ margin: 0, color: "var(--color-ink2)", lineHeight: 1.8 }}>
+          هذه مراجعة تحريرية داخلية لا توقيع خبير مستقل؛ بطاقة <span className="de">die Möbel</span> بقيت جمعاً كما هي، والرقعة محصورة بالمعرّفات وقابلة لإعادة التشغيل.
+        </p>
+      </section>
+
       <section className="card" data-testid="dialog-pool-transparenz" style={{ padding: "1rem", display: "grid", gap: "0.7rem" }}>
-        <h2 style={{ margin: 0 }}>شفافية مخزون الاستماع المصغّر</h2>
+        <h2 style={{ margin: 0 }}>شفافية مخزون وجولة الاستماع 30/4</h2>
         <p style={{ margin: 0, lineHeight: 1.85 }}>
           يدخل الحوار جولة التدريب إذا كان له صوت وسؤال اختيار من متعدد واحد صالح على الأقل؛ لم يعد الحوار ذو السؤال الواحد يُقصى صامتاً.
         </p>
@@ -221,7 +239,7 @@ export default function QualitaetPage() {
           })}
         </div>
         <p style={{ margin: 0, color: "var(--color-ink2)", lineHeight: 1.8 }}>
-          القبول في المخزون لا يعني أن الجولة الحالية محاكاة رسمية كاملة: الجولة تنتقي حوارين فقط وتعرض عدد بنودها الفعلي، بينما يظل هدف B2 المرجعي 30 بنداً في أربعة أجزاء بانتظار توسعة موثقة.
+          تبني الجولة الآن 30 بنداً فعلياً في أربعة أجزاء تدريبية (8+7+8+7) بلا إعادة حوار أو سؤال. هذا يثبت حجم التدريب وتصحيحه، لا مطابقة أسماء الأجزاء أو تواتر الاستماع لصيغة رسمية؛ تبقى تلك التفاصيل بانتظار مراجعة المصدر الخارجية الموقعة.
         </p>
       </section>
 

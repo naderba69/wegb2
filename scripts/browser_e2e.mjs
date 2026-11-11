@@ -278,9 +278,14 @@ async function main() {
       "احتُفظ بـ94 وأزيلت 3 أقواس زائدة",
       "ليست توقيع خبير تربوي مستقل",
       "هذه إشارات مراجعة وليست عيوباً مؤكدة",
-      "شفافية مخزون الاستماع المصغّر",
+      "مراجعة الجمع حالةً بحالة",
+      "147/147 مرشحاً قرار محفوظ",
+      "أُبقيت 11 حالات صحيحة",
+      "die Möbel بقيت جمعاً كما هي",
+      "شفافية مخزون وجولة الاستماع 30/4",
       "176/176",
       "حواراً له سؤال MC واحد",
+      "30 بنداً فعلياً في أربعة أجزاء تدريبية (8+7+8+7)",
       "ما يمنع الاعتماد الآن؟",
     ];
     const qualityText = await pollTextMarkers(cdp, sessionId, "[data-ui-shell='ui-app-shell']", qualityMarkers, "Qualitätsseite fehlt");
@@ -422,22 +427,34 @@ async function main() {
       "Tatsächliche B2-Lektion nach Bank-Nachladung");
     if (!b2LessonRendered) fail("B2-Lektion wurde trotz vollständiger Bibliothek nicht gerendert");
 
-    stage = "transparent mini exam scope";
+    stage = "30 item four part listening round";
     await evalJs(cdp, sessionId, `localStorage.setItem("weg-abend","1")`);
     await navigate(cdp, sessionId, `${ORIGIN}/ueben`);
-    await poll(cdp, sessionId, `!!document.querySelector('[data-testid="ueben-karte-vollpruefung"]')`, "Mini-Prüfungskarte");
+    await poll(cdp, sessionId, `!!document.querySelector('[data-testid="ueben-karte-vollpruefung"]')`, "Prüfungstrainingskarte");
     await evalJs(cdp, sessionId, `document.querySelector('[data-testid="ueben-karte-vollpruefung"]')?.click()`);
-    await poll(cdp, sessionId, `!!document.querySelector('[data-testid="vollpruefung-stufe-B2"]')`, "Mini-Prüfung geöffnet");
+    await poll(cdp, sessionId, `!!document.querySelector('[data-testid="vollpruefung-stufe-B2"]')`, "Prüfungstraining geöffnet");
     await evalJs(cdp, sessionId, `document.querySelector('[data-testid="vollpruefung-stufe-B2"]')?.click()`);
-    const miniTrainingScope = await poll(cdp, sessionId, `(()=>{
+    const fullListeningScope = await poll(cdp, sessionId, `(()=>{
       const root=document.querySelector('[data-testid="vollpruefung"]')?.textContent??"";
       const umfang=document.querySelector('[data-testid="vollpruefung-umfang"]')?.textContent??"";
       const pool=document.querySelector('[data-testid="vollpruefung-dialog-pool"]')?.textContent??"";
       const start=document.querySelector('[data-testid="vollpruefung-start"]')?.textContent??"";
-      return root.includes("تدريب امتحاني مصغّر")&&umfang.includes("/30")&&umfang.includes("لا تغطي أجزاء الامتحان الرسمية كاملة")&&
-        pool.includes("49/49")&&pool.includes("0 مقصى")&&start.includes("ابدأ التدريب المصغّر")
+      return root.includes("تدريب امتحاني داخلي")&&umfang.includes("الاستماع 30 بنداً في 4 أجزاء")&&
+        umfang.includes("30/30")&&umfang.includes("8+7+8+7")&&root.includes("ليست نتيجة Goethe أو telc رسمية")&&
+        pool.includes("49/49")&&pool.includes("0 مقصى")&&start.includes("ابدأ التدريب الداخلي")
         ? {umfang:umfang.trim(),pool:pool.trim()} : false;
-    })()`, "Tatsächlicher Umfang statt Vollprüfung-Behauptung", SW_TIMEOUT);
+    })()`, "30 tatsächliche Höritems mit ehrlicher Formatgrenze", SW_TIMEOUT);
+    if (!fullListeningScope) fail("30/4-Hörumfang wurde nicht transparent gerendert");
+    await evalJs(cdp, sessionId, `document.querySelector('[data-testid="vollpruefung-start"]')?.click()`);
+    await poll(cdp, sessionId, `!!document.querySelector('[data-testid="vollpruefung-weiter"]')`, "Leseteil gestartet");
+    await evalJs(cdp, sessionId, `document.querySelector('[data-testid="vollpruefung-weiter"]')?.click()`);
+    const renderedListeningParts = await poll(cdp, sessionId, `(()=>{
+      const parts=[...document.querySelectorAll('[data-testid^="vollpruefung-hoerteil-"]')];
+      const items=parts.reduce((sum,part)=>sum+part.querySelectorAll("fieldset").length,0);
+      const labels=parts.every((part,index)=>(part.textContent??"").includes("الجزء "+(index+1)));
+      return parts.length===4&&items===30&&labels?{parts:parts.length,items}:false;
+    })()`, "Vier markierte Hörteile mit 30 Aufgaben", SW_TIMEOUT);
+    if (!renderedListeningParts) fail("Hörphase enthält nicht 30 Aufgaben in vier markierten Teilen");
 
     stage = "service worker activation";
     const sw = await poll(cdp, sessionId, `(async()=>{const r=await navigator.serviceWorker.getRegistration();return r?.active?.state==="activated"&&!!navigator.serviceWorker.controller})()`, "Service Worker activation", SW_TIMEOUT);

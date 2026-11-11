@@ -1,15 +1,15 @@
 "use client";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { De } from "./De";
-import { vpTexte, vpDialoge, vpSchreiben, vpSprechen, vpDialogPoolTransparenz, type VpFrage } from "@/lib/vollpruefung";
+import { baueVpHoerteile, vpTexte, vpDialoge, vpSchreiben, vpSprechen, vpDialogPoolTransparenz, type VpFrage } from "@/lib/vollpruefung";
 import { VP_B2_REFERENZ_ITEMS } from "@/lib/vollpruefung-pool";
 import { lokalesDatum } from "@/lib/datum";
 import { useBankGeneration } from "@/lib/use-bank-generation";
 
 /**
- * 🧪 تدريب امتحاني مصغّر (R218/R157): أربعة أقسام بمؤقّت داخلي واحد ونتيجة مجمّعة.
- * القراءة والاستماع بتصحيح آلي من البنوك؛ الكتابة والتحدّث بتقييم ذاتي معلَن
- * (نموذج ومعايير)، فلا تُحتسب لهما درجة آلية زائفة. لا يُكتب أي تقدّم في الخطة.
+ * 🧪 تدريب امتحاني داخلي (R218/R157/R162): أربعة أقسام بمؤقّت واحد ونتيجة مجمّعة.
+ * الاستماع 30 بنداً فعلياً في 4 أجزاء تدريبية؛ القراءة جولة بنك أقصر. كلاهما
+ * بتصحيح آلي، والكتابة والتحدّث بتقييم ذاتي معلَن. لا يُكتب تقدّم في الخطة.
  */
 const STUFEN = ["A2", "B1", "B2"] as const;
 const TRAININGS_MIN: Record<string, number> = { A2: 100, B1: 130, B2: 160 };
@@ -76,10 +76,10 @@ export function VollPruefung() {
     void bankGeneration;
     return pick(vpTexte.filter((t) => t.level === stufe), 2);
   }, [stufe, pick, bankGeneration]);
-  const dialoge = useMemo(() => {
+  const hoerteile = useMemo(() => {
     void bankGeneration;
-    return pick(vpDialoge.filter((d) => d.level === stufe), 2);
-  }, [stufe, pick, bankGeneration]);
+    return baueVpHoerteile(vpDialoge, stufe, samen);
+  }, [stufe, samen, bankGeneration]);
   const schreibAufgabe = useMemo(() => {
     void bankGeneration;
     return pick(vpSchreiben.filter((w) => w.level === stufe), 1)[0];
@@ -90,7 +90,10 @@ export function VollPruefung() {
       ?? vpSprechen[samen % Math.max(1, vpSprechen.length)];
   }, [stufe, pick, samen, bankGeneration]);
   const lesenItems = texte.reduce((summe, text) => summe + text.fragen.length, 0);
-  const hoerenItems = dialoge.reduce((summe, dialog) => summe + dialog.fragen.length, 0);
+  const hoerenItems = hoerteile.reduce((summe, teil) =>
+    summe + teil.dialoge.reduce((teilSumme, dialog) => teilSumme + dialog.fragen.length, 0), 0);
+  const hoerteileVollstaendig = hoerteile.length === 4 && hoerteile.every((teil) =>
+    teil.dialoge.reduce((summe, dialog) => summe + dialog.fragen.length, 0) === teil.zielItems);
   const dialogPool = vpDialogPoolTransparenz.nachStufe[stufe];
 
   const laueft = phase !== "start" && phase !== "ergebnis";
@@ -112,7 +115,12 @@ export function VollPruefung() {
     return { richtig, gesamt };
   };
   const lesenZ = zaehle(texte, (i) => `lesen${i}`);
-  const hoerenZ = zaehle(dialoge, (i) => `hoeren${i}`);
+  const hoerTeilErgebnisse = hoerteile.map((teil, teilIndex) =>
+    zaehle(teil.dialoge, (dialogIndex) => `hoeren${teilIndex}-${dialogIndex}`));
+  const hoerenZ = hoerTeilErgebnisse.reduce((gesamt, teilErgebnis) => ({
+    richtig: gesamt.richtig + teilErgebnis.richtig,
+    gesamt: gesamt.gesamt + teilErgebnis.gesamt,
+  }), { richtig: 0, gesamt: 0 });
   const schreibKriterien = schreibAufgabe?.criteria ?? [];
   const schreibOk = schreibKriterien.filter((_, i) => selbst[`schreiben-${i}`]).length;
   const sprechKriterien = ["بدأت بجمل كاملة واضحة", "استعملت وسيلتي تعبير على الأقل من الداعمة", "التزمت بالوقت وختمت بخلاصة أو سؤال"];
@@ -137,15 +145,15 @@ export function VollPruefung() {
     const idx = PHASEN.indexOf(phase as Phase);
     setPhase(PHASEN[Math.min(PHASEN.length - 1, idx + 1)]);
   };
-  const bereit = texte.length >= 1 && dialoge.length >= 1 && !!schreibAufgabe;
+  const bereit = texte.length >= 1 && hoerenItems === 30 && hoerteileVollstaendig && !!schreibAufgabe;
 
   return (
     <section data-testid="vollpruefung" style={{ display: "grid", gap: "0.8rem" }}>
-      <h3 style={{ fontWeight: 800, margin: 0 }}>🧪 تدريب امتحاني مصغّر — أربعة أقسام بمؤقّت داخلي واحد</h3>
+      <h3 style={{ fontWeight: 800, margin: 0 }}>🧪 تدريب امتحاني داخلي — أربعة أقسام بمؤقّت واحد</h3>
       <p style={{ fontSize: "0.86rem", color: "var(--color-ink2)", margin: 0 }}>
-        تدريب داخلي مجمّع من بنوك الأكاديمية نفسها (نصوص وحوارات ومهام كتابة وبطاقات تحدّث حقيقية من مستواك)،
-        بنتيجة مجمّعة في النهاية. <b>ليس امتحان تحمّل كاملاً</b>، وهذه <b>ليست نتيجة Goethe أو telc رسمية</b>، ولا يُسجَّل في خطتك.
-        القراءة والاستماع بتصحيح آلي؛ الكتابة والتحدّث ب<b>تقييم ذاتي</b> بالنموذج والمعايير — لا درجة آلية زائفة.
+        تدريب مجمّع من بنوك الأكاديمية نفسها بنتيجة داخلية في النهاية. الاستماع جولة فعلية من <b>30 بنداً في 4 أجزاء تدريبية موسومة</b>،
+        أما القراءة فهي جولة بنك أقصر وليست محاكاة كاملة. هذه <b>ليست نتيجة Goethe أو telc رسمية</b> ولا ادعاءً بصيغة رسمية، ولا يُسجَّل شيء في خطتك.
+        القراءة والاستماع بتصحيح آلي واضح؛ الكتابة والتحدّث ب<b>تقييم ذاتي</b> بالنموذج والمعايير — لا درجة آلية زائفة.
       </p>
 
       {phase === "start" && (
@@ -157,11 +165,12 @@ export function VollPruefung() {
             ))}
           </div>
           <div data-testid="vollpruefung-umfang" style={{ fontSize: "0.88rem", lineHeight: 1.8 }}>
-            <strong>حجم هذه التشكيلة:</strong> القراءة {lesenItems} بنداً · الاستماع {hoerenItems} بنداً.
+            <strong>حجم هذه التشكيلة:</strong> القراءة {lesenItems} بنداً · الاستماع {hoerenItems} بنداً في {hoerteile.length} أجزاء.
             {stufe === "B2" && (
               <>
                 <br />المخطط المرجعي المؤقت: القراءة {VP_B2_REFERENZ_ITEMS.lesen} بنداً والاستماع {VP_B2_REFERENZ_ITEMS.hoeren} بنداً؛
-                أي أن هذه الجولة {lesenItems}/{VP_B2_REFERENZ_ITEMS.lesen} و{hoerenItems}/{VP_B2_REFERENZ_ITEMS.hoeren} فقط، ولا تغطي أجزاء الامتحان الرسمية كاملة.
+                الاستماع هنا {hoerenItems}/{VP_B2_REFERENZ_ITEMS.hoeren} موزع 8+7+8+7، بينما القراءة {lesenItems}/{VP_B2_REFERENZ_ITEMS.lesen} فقط.
+                أسماء الأجزاء تنظيم تدريبي داخلي إلى أن تكتمل مراجعة الصيغة الخارجية الموقعة.
               </>
             )}
           </div>
@@ -173,7 +182,7 @@ export function VollPruefung() {
           </div>
           <button type="button" className="btn btn-primary" style={{ minHeight: "48px" }}
             data-testid="vollpruefung-start" onClick={start} disabled={!bereit}>
-            ▶ ابدأ التدريب المصغّر ({stufe})
+            ▶ ابدأ التدريب الداخلي ({stufe})
           </button>
           <button type="button" className="btn btn-ghost" style={{ minHeight: "44px" }}
             data-testid="vollpruefung-variante" onClick={() => setVariante((x) => x + 1)}>
@@ -200,14 +209,26 @@ export function VollPruefung() {
         </article>
       ))}
 
-      {phase === "hoeren" && dialoge.map((d, i) => (
-        <article key={d.id} className="card" style={{ padding: "0.8rem 1rem" }}>
-          <div style={{ fontWeight: 800 }}><De>{d.titleDe}</De> <span style={{ fontSize: "0.82rem", color: "var(--color-ink2)" }}>{d.titleAr}</span></div>
-          <p style={{ fontSize: "0.84rem", color: "var(--color-ink2)" }}>استمع أولًا ثم أجب؛ النص المكتوب يظهر في النتيجة كما في الامتحان.</p>
-          {d.audio && <audio controls src={d.audio} style={{ width: "100%" }} aria-label={d.titleDe} />}
-          <FragenBlock fragen={d.fragen} praefix={`hoeren${i}`} antworten={antworten} setAntworten={setAntworten} zeigen={false} />
-        </article>
-      ))}
+      {phase === "hoeren" && hoerteile.map((teil, teilIndex) => {
+        const teilItems = teil.dialoge.reduce((summe, dialog) => summe + dialog.fragen.length, 0);
+        return (
+          <section key={teil.id} data-testid={`vollpruefung-hoerteil-${teilIndex + 1}`} className="card" style={{ padding: "0.8rem 1rem" }}>
+            <h4 style={{ margin: 0 }}>{teil.labelAr} — {teilItems}/{teil.zielItems} بنود</h4>
+            <p style={{ fontSize: "0.82rem", color: "var(--color-ink2)" }}>
+              تسمية تدريبية داخلية؛ استمع أولًا ثم أجب. يظهر النص المكتوب بعد إنهاء الجلسة للمراجعة.
+            </p>
+            <div style={{ display: "grid", gap: "0.8rem" }}>
+              {teil.dialoge.map((d, dialogIndex) => (
+                <article key={d.id} style={{ borderTop: dialogIndex ? "1px solid var(--color-line)" : undefined, paddingTop: dialogIndex ? "0.8rem" : 0 }}>
+                  <div style={{ fontWeight: 800 }}><De>{d.titleDe}</De> <span style={{ fontSize: "0.82rem", color: "var(--color-ink2)" }}>{d.titleAr}</span></div>
+                  {d.audio && <audio controls src={d.audio} style={{ width: "100%" }} aria-label={d.titleDe} />}
+                  <FragenBlock fragen={d.fragen} praefix={`hoeren${teilIndex}-${dialogIndex}`} antworten={antworten} setAntworten={setAntworten} zeigen={false} />
+                </article>
+              ))}
+            </div>
+          </section>
+        );
+      })}
 
       {phase === "schreiben" && schreibAufgabe && (
         <article className="card" style={{ padding: "0.8rem 1rem", display: "grid", gap: "0.5rem" }}>
@@ -236,7 +257,7 @@ export function VollPruefung() {
       )}
 
       {laueft && (
-        <button type="button" className="btn btn-primary" style={{ minHeight: "48px" }} onClick={weiter}>
+        <button type="button" className="btn btn-primary" style={{ minHeight: "48px" }} data-testid="vollpruefung-weiter" onClick={weiter}>
           {phase === "sprechen" ? "🏁 إنهاء الجلسة وعرض النتيجة" : "القسم التالي ←"}
         </button>
       )}
@@ -292,16 +313,21 @@ export function VollPruefung() {
               </div>
             ))}
           </article>
-          <article className="card" style={{ padding: "0.8rem 1rem" }}>
-            <div style={{ fontWeight: 800 }}>🎧 مراجعة الاستماع (مع النص المسموع)</div>
-            {dialoge.map((d, i) => (
-              <div key={d.id} style={{ marginTop: "0.5rem" }}>
-                <div style={{ fontWeight: 700 }}><De>{d.titleDe}</De></div>
-                <div style={{ fontSize: "0.88rem", lineHeight: 1.9 }}>
-                  {d.zeilen.map((z, zi) => <div key={zi}><b>{z.who}:</b> <De>{z.de}</De></div>)}
-                </div>
-                <FragenBlock fragen={d.fragen} praefix={`hoeren${i}`} antworten={antworten} setAntworten={setAntworten} zeigen />
-              </div>
+          <article className="card" style={{ padding: "0.8rem 1rem" }} data-testid="vollpruefung-hoeren-auswertung">
+            <div style={{ fontWeight: 800 }}>🎧 مراجعة الاستماع — {hoerenZ.richtig}/{hoerenZ.gesamt} (مع النص المسموع)</div>
+            {hoerteile.map((teil, teilIndex) => (
+              <section key={teil.id} style={{ marginTop: "0.8rem" }}>
+                <h4 style={{ margin: 0 }}>{teil.labelAr} — {hoerTeilErgebnisse[teilIndex].richtig}/{hoerTeilErgebnisse[teilIndex].gesamt}</h4>
+                {teil.dialoge.map((d, dialogIndex) => (
+                  <div key={d.id} style={{ marginTop: "0.5rem" }}>
+                    <div style={{ fontWeight: 700 }}><De>{d.titleDe}</De></div>
+                    <div style={{ fontSize: "0.88rem", lineHeight: 1.9 }}>
+                      {d.zeilen.map((z, zi) => <div key={zi}><b>{z.who}:</b> <De>{z.de}</De></div>)}
+                    </div>
+                    <FragenBlock fragen={d.fragen} praefix={`hoeren${teilIndex}-${dialogIndex}`} antworten={antworten} setAntworten={setAntworten} zeigen />
+                  </div>
+                ))}
+              </section>
             ))}
           </article>
           <button type="button" className="btn btn-ghost" style={{ minHeight: "44px" }} onClick={() => setPhase("start")}>

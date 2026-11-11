@@ -106,6 +106,7 @@ import { REDE_FUNKTIONEN, REDE_TEILE, redemittelFuerTeil, drillRunde } from "../
 import { kollokationen, kollokationenFuer, partnerWort, kollokationUebung } from "../lib/kollokationen";
 import { bankenBereit, bankRoh, BANK_DATEIEN, VERTIEFUNG_DATEIEN, LANG_DATEIEN } from "../lib/bankload";
 import { VP_B2_REFERENZ_ITEMS, zaehleVpDialogPool } from "../lib/vollpruefung-pool";
+import { VP_HOERTEIL_PLAN, baueVpHoerteile, vpDialoge } from "../lib/vollpruefung";
 import { exakteAntwortLecks } from "../lib/exercise-hints";
 import { calculateScaffoldMetrics, hasParentheticalMarker, isBlankLinkedScaffoldCandidate, parentheticalMarkers } from "../lib/scaffold-metrics";
 import { logSicherheit, sicherheitsStatistik, sicherheitsZeile, MAX_EINTRAEGE } from "../lib/sicherheit";
@@ -15156,11 +15157,11 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const browserK354 = readFileSync("scripts/browser_e2e.mjs", "utf8");
   ok(zielK354.lesen === VP_B2_REFERENZ_ITEMS.lesen && zielK354.hoeren === VP_B2_REFERENZ_ITEMS.hoeren &&
     VP_B2_REFERENZ_ITEMS.lesen === 30 && VP_B2_REFERENZ_ITEMS.hoeren === 30 && libK354.includes("fragen.length >= 1") &&
-    uiK354.includes('data-testid="vollpruefung-umfang"') && uiK354.includes("تدريب امتحاني مصغّر") &&
-    uiK354.includes("لا تغطي أجزاء الامتحان الرسمية كاملة") && uiK354.includes("ابدأ التدريب المصغّر") &&
+    uiK354.includes('data-testid="vollpruefung-umfang"') && uiK354.includes("تدريب امتحاني داخلي") &&
+    uiK354.includes("أسماء الأجزاء تنظيم تدريبي داخلي") && uiK354.includes("ابدأ التدريب الداخلي") &&
     qualitaetK354.includes('data-testid="dialog-pool-transparenz"') &&
-    browserK354.includes("transparent mini exam scope") && browserK354.includes('pool.includes("49/49")'),
-    "K354c واجهة الجولة تعرض عدد بنودها مقابل 30/30 وتصرح بأنها مصغّرة، وصفحة الجودة وChromium يحارسان المقبول/المقصى");
+    browserK354.includes("30 item four part listening round") && browserK354.includes('pool.includes("49/49")'),
+    "K354c واجهة الجولة تعرض الحجم الحقيقي وحد الصيغة، وصفحة الجودة وChromium يحارسان المقبول/المقصى");
 }
 
 /* K355 · PED-03: لا يكرر تلميح القوس الجواب المقبول حرفياً */
@@ -15290,6 +15291,66 @@ function collectR262(dir: string, out: string[] = []): string[] {
     qualityK358.includes('data-testid="scaffold-review-summary"') && browserK358.includes("97/97 حالة B1/B2") &&
     readFileSync("docs/PED31_B1_B2_REVIEW_2026-11-04.md", "utf8").includes("97/97"),
     "K358d الرقعة المحروسة والتدقيق وواجهة الجودة وCI وChromium وتقرير القرار موصولة بالعقد نفسه");
+}
+
+/* K359 · R162: مراجعة الجمع حالةً بحالة، واستماع PED-09 من 30 بنداً/4 أجزاء */
+{
+  type PluralReviewItemK359 = {
+    id: string; pos: string; before: string; decision: string; after: string | null;
+  };
+  const reviewK359 = JSON.parse(readFileSync("content/plural-review-r162.json", "utf8")) as {
+    reviewRule: string;
+    claimBoundary: { independentHumanReview: boolean; scannerCandidateIsConfirmedDefect: boolean; massDeletionUsed: boolean };
+    summary: { reviewed: number; replace: number; removeNonNoun: number; removeNoPluralInSense: number; retainValid: number; changed: number };
+    protectedCards: Record<string, string>;
+    items: PluralReviewItemK359[];
+  };
+  const vocabK359 = JSON.parse(readFileSync("content/vocab.json", "utf8")) as Record<string, { cards: { id: string; de: string; pos: string; plural?: string }[] }>;
+  const cardsK359 = Object.values(vocabK359).flatMap((deck) => deck.cards);
+  const cardByIdK359 = new Map(cardsK359.map((card) => [card.id, card]));
+  const reviewIdsK359 = new Set(reviewK359.items.map((item) => item.id));
+  ok(reviewK359.reviewRule === "R162" && reviewK359.summary.reviewed === 147 &&
+    reviewK359.summary.replace === 75 && reviewK359.summary.removeNonNoun === 37 &&
+    reviewK359.summary.removeNoPluralInSense === 24 && reviewK359.summary.retainValid === 11 &&
+    reviewK359.summary.changed === 136 && reviewK359.items.length === 147 && reviewIdsK359.size === 147,
+    "K359a R162: مصفوفة قرار فريدة تغطي 147/147 مرشحاً: 75 تصحيحاً و61 حذفاً مسبباً و11 إبقاءً");
+  ok(reviewK359.claimBoundary.independentHumanReview === false &&
+    reviewK359.claimBoundary.scannerCandidateIsConfirmedDefect === false &&
+    reviewK359.claimBoundary.massDeletionUsed === false &&
+    reviewK359.items.every((item) => {
+      const card = cardByIdK359.get(item.id);
+      if (!card) return false;
+      if (item.decision === "replace" || item.decision === "retain-valid") return card.plural === item.after;
+      return item.after === null && card.plural === undefined;
+    }) && cardsK359.every((card) => card.pos === "Nomen" || card.plural === undefined),
+    "K359b كل قرار يطابق بطاقته الحية، ولا يبقى plural على غير الاسم؛ المرشح ليس خطأً آلياً ولا استُعمل حذف جماعي");
+  const moebelK359 = cardsK359.find((card) => card.de === "die Möbel");
+  const patchK359 = readFileSync("scripts/patches/review_plural_r162.py", "utf8");
+  ok(moebelK359?.id === "r311a1-064" && moebelK359.plural === undefined &&
+    reviewK359.protectedCards["die Möbel"] === "unchanged" &&
+    patchK359.includes("guarded lemma/POS drifted") && patchK359.includes("expected 136 reviewed edits") &&
+    !patchK359.includes('"r311a1-064"'),
+    "K359c بطاقة die Möbel بقيت جمعاً كما هي وخارج الرقعة؛ الرقعة ID-scoped محروسة وقابلة للإعادة");
+
+  const hoerteileK359 = baueVpHoerteile(vpDialoge, "B2", 20261104);
+  const teilCountsK359 = hoerteileK359.map((teil) => teil.dialoge.reduce((summe, dialog) => summe + dialog.fragen.length, 0));
+  const dialogIdsK359 = hoerteileK359.flatMap((teil) => teil.dialoge.map((dialog) => dialog.id));
+  const fragenK359 = hoerteileK359.flatMap((teil) => teil.dialoge.flatMap((dialog) => dialog.fragen));
+  ok(VP_HOERTEIL_PLAN.length === 4 && VP_HOERTEIL_PLAN.reduce((summe, teil) => summe + teil.zielItems, 0) === 30 &&
+    teilCountsK359.join(",") === "8,7,8,7" && fragenK359.length === 30 &&
+    new Set(dialogIdsK359).size === dialogIdsK359.length && new Set(fragenK359).size === 30,
+    "K359d باني PED-09 ينتج 30 سؤالاً فعلياً بتوزيع 8+7+8+7 في أربعة أجزاء، بلا إعادة حوار أو سؤال");
+  const uiK359 = readFileSync("components/vollpruefung.tsx", "utf8");
+  const qualityK359 = readFileSync("app/qualitaet/page.tsx", "utf8");
+  const interaktivK359 = readFileSync("scripts/interaktiv_test.tsx", "utf8");
+  const browserK359 = readFileSync("scripts/browser_e2e.mjs", "utf8");
+  ok(uiK359.includes('data-testid={`vollpruefung-hoerteil-${teilIndex + 1}`}') &&
+    uiK359.includes('data-testid="vollpruefung-hoeren-auswertung"') && uiK359.includes("hoerenZ.richtig") &&
+    uiK359.includes("أسماء الأجزاء تنظيم تدريبي داخلي") &&
+    qualityK359.includes('data-testid="plural-review-summary"') && qualityK359.includes("30 بنداً فعلياً في أربعة أجزاء تدريبية") &&
+    interaktivK359.includes("hoerteile.length === 4 && hoerFragen === 30") &&
+    browserK359.includes("Vier markierte Hörteile mit 30 Aufgaben"),
+    "K359e الواجهة تعرض الأجزاء الأربعة ونتيجة الاستماع 30 بنداً، وتحرسها jsdom وChromium مع حد الادعاء الرسمي");
 }
 
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);
