@@ -3317,7 +3317,7 @@
       {
         "id": "g16e2",
         "type": "mc",
-        "promptDe": "die von Experten ___ (beschließen) Pläne",
+        "promptDe": "die von Experten ___ Pläne",
         "options": [
           "beschlossenen",
           "beschlossende",
@@ -12884,7 +12884,7 @@
       {
         "id": "b1-absicht-n6",
         "type": "mc",
-        "promptDe": "Ich lerne, um ___. (anfangen)",
+        "promptDe": "Ich lerne, um ___.",
         "options": [
           "anzufangen",
           "an zu fangen",
@@ -16146,7 +16146,7 @@
       {
         "id": "b2-n-dekl-v2",
         "type": "mc",
-        "promptDe": "Kennst du ___ (der Kollege) von Anna?",
+        "promptDe": "Kennst du ___ von Anna?",
         "options": [
           "den Kollege",
           "den Kollegen",

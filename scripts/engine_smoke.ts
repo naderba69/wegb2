@@ -107,7 +107,7 @@ import { kollokationen, kollokationenFuer, partnerWort, kollokationUebung } from
 import { bankenBereit, bankRoh, BANK_DATEIEN, VERTIEFUNG_DATEIEN, LANG_DATEIEN } from "../lib/bankload";
 import { VP_B2_REFERENZ_ITEMS, zaehleVpDialogPool } from "../lib/vollpruefung-pool";
 import { exakteAntwortLecks } from "../lib/exercise-hints";
-import { calculateScaffoldMetrics, hasParentheticalMarker, isBlankLinkedScaffoldCandidate } from "../lib/scaffold-metrics";
+import { calculateScaffoldMetrics, hasParentheticalMarker, isBlankLinkedScaffoldCandidate, parentheticalMarkers } from "../lib/scaffold-metrics";
 import { logSicherheit, sicherheitsStatistik, sicherheitsZeile, MAX_EINTRAEGE } from "../lib/sicherheit";
 import { karteFuerWort, verknuepfung, verwaiste, abdeckung, stammVon } from "../lib/verknuepfung";
 import { dueFehlerPriorisiert, verwandteKarte, transferUebung, beispielUebung, istUeberkonfident } from "../lib/fehlerbank2";
@@ -15221,16 +15221,16 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const metricsK357 = calculateScaffoldMetrics(grammarMap);
   const expectedLevelsK357 = {
     A0: [8, 63, 8, 7, 12.7], A1: [19, 150, 58, 39, 38.7], A2: [22, 202, 82, 62, 40.6],
-    B1: [15, 143, 35, 24, 24.5], B2: [23, 200, 62, 48, 31],
+    B1: [15, 143, 34, 23, 23.8], B2: [23, 200, 60, 46, 30],
   } as const;
-  ok(metricsK357.topics === 87 && metricsK357.items === 758 && metricsK357.parenthetical === 245 &&
-    metricsK357.blankLinked === 180 && metricsK357.exactLeaks === 0 &&
+  ok(metricsK357.topics === 87 && metricsK357.items === 758 && metricsK357.parenthetical === 242 &&
+    metricsK357.blankLinked === 177 && metricsK357.exactLeaks === 0 &&
     Object.entries(expectedLevelsK357).every(([level, expected]) => {
       const metric = metricsK357.byLevel[level as keyof typeof metricsK357.byLevel];
       return [metric.topics, metric.items, metric.parenthetical, metric.blankLinked, metric.parentheticalPct]
         .every((value, index) => value === expected[index]);
     }),
-    "K357b خط الأساس يعيد إنتاج 87 درساً/758 بنداً و245 علامة و180 مرشح فراغ وصفر تسريب، موزعة على المستويات الخمسة");
+    "K357b خط الأساس الحالي يعيد إنتاج 87 درساً/758 بنداً و242 علامة و177 مرشح فراغ وصفر تسريب، موزعة على المستويات الخمسة");
 
   const qualityK357 = readFileSync("app/qualitaet/page.tsx", "utf8");
   const auditK357 = readFileSync("scripts/scaffold_audit.ts", "utf8");
@@ -15239,8 +15239,57 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const baselineK357 = JSON.parse(readFileSync("content/scaffold-metrics-baseline.json", "utf8")) as { reviewRule?: string; nonBlockingRatios?: boolean };
   ok(qualityK357.includes('data-testid="scaffold-transparency"') && qualityK357.includes("إشارات مراجعة وليست عيوباً مؤكدة") &&
     auditK357.includes("review signals, not confirmed defects") && ciK357.includes("npm run audit:scaffolds") &&
-    browserK357.includes('"245/758"') && baselineK357.reviewRule === "R160" && baselineK357.nonBlockingRatios === true,
-    "K357c صفحة الجودة والتدقيق وCI وChromium تعرض خط الأساس بوصفه إشارة غير مانعة، لا قائمة أخطاء مؤكدة");
+    browserK357.includes('"242/758"') && baselineK357.reviewRule === "R161" && baselineK357.nonBlockingRatios === true,
+    "K357c صفحة الجودة والتدقيق وCI وChromium تعرض خط الأساس المحدث بوصفه إشارة غير مانعة، لا قائمة أخطاء مؤكدة");
+}
+
+/* K358 · PED-31: قرار صريح لكل مرشح B1/B2، وتعديل الأقواس الزائدة فقط */
+{
+  type ReviewItemK358 = { id: string; decision: string; classification: string };
+  const reviewK358 = JSON.parse(readFileSync("content/scaffold-review-b1-b2.json", "utf8")) as {
+    reviewRule: string;
+    claimBoundary: { reviewKind: string; independentHumanReview: boolean; candidateIsConfirmedDefect: boolean };
+    summary: { reviewed: number; retained: number; removedRedundant: number; byLevel: Record<string, number> };
+    items: ReviewItemK358[];
+  };
+  const reviewedIdsK358 = new Set(reviewK358.items.map((item) => item.id));
+  ok(reviewK358.reviewRule === "R161" && reviewK358.summary.reviewed === 97 &&
+    reviewK358.summary.retained === 94 && reviewK358.summary.removedRedundant === 3 &&
+    reviewK358.summary.byLevel.B1 === 35 && reviewK358.summary.byLevel.B2 === 62 &&
+    reviewK358.items.length === 97 && reviewedIdsK358.size === 97,
+    "K358a R161: لكل واحدة من 35 حالة B1 و62 حالة B2 قرار محفوظ؛ 94 إبقاء و3 إزالة زائدة");
+  ok(reviewK358.claimBoundary.reviewKind === "internal-agent-editorial" &&
+    reviewK358.claimBoundary.independentHumanReview === false && reviewK358.claimBoundary.candidateIsConfirmedDefect === false &&
+    reviewK358.items.every((item) => item.decision === "retain" ||
+      (item.decision === "remove-redundant" && item.classification === "redundant-with-options")),
+    "K358b المصفوفة لا تنتحل توقيع خبير مستقل ولا تحول مرشحات الماسح كلها إلى أخطاء");
+
+  const exercisesK358 = Object.values(grammarMap).flatMap((topic) => [
+    ...(topic.exercises ?? []), ...((topic as typeof topic & { verify?: typeof topic.exercises }).verify ?? []),
+  ]);
+  const byIdK358 = new Map(exercisesK358.map((exercise) => [exercise.id, exercise]));
+  const revisedK358 = [
+    ["b1-absicht-n6", "Ich lerne, um ___.", "anzufangen"],
+    ["g16e2", "die von Experten ___ Pläne", "beschlossenen"],
+    ["b2-n-dekl-v2", "Kennst du ___ von Anna?", "den Kollegen"],
+  ] as const;
+  ok(revisedK358.every(([id, prompt, answer]) => {
+    const exercise = byIdK358.get(id);
+    return exercise?.promptDe === prompt && exercise.answer === answer &&
+      (exercise.options?.length ?? 0) === 3 && parentheticalMarkers(exercise).length === 0;
+  }),
+    "K358c الأقواس الثلاثة الزائدة وحدها حُذفت، بينما بقيت الإجابات وخيارات MC الثلاثة وعقد التمرين ثابتة");
+
+  const patchK358 = readFileSync("scripts/patches/review_scaffolds_r161.py", "utf8");
+  const auditK358 = readFileSync("scripts/scaffold_review_audit.ts", "utf8");
+  const qualityK358 = readFileSync("app/qualitaet/page.tsx", "utf8");
+  const ciK358 = readFileSync(".github/workflows/ci.yml", "utf8");
+  const browserK358 = readFileSync("scripts/browser_e2e.mjs", "utf8");
+  ok(revisedK358.every(([id]) => patchK358.includes(`\"${id}\"`)) && patchK358.includes("answer/options guard failed") &&
+    auditK358.includes("97 unique pre-edit B1/B2 decisions") && ciK358.includes("npm run audit:scaffold-review") &&
+    qualityK358.includes('data-testid="scaffold-review-summary"') && browserK358.includes("97/97 حالة B1/B2") &&
+    readFileSync("docs/PED31_B1_B2_REVIEW_2026-11-04.md", "utf8").includes("97/97"),
+    "K358d الرقعة المحروسة والتدقيق وواجهة الجودة وCI وChromium وتقرير القرار موصولة بالعقد نفسه");
 }
 
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);
