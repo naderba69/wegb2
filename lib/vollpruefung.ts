@@ -2,16 +2,51 @@ import { bankRoh, beiBankenBereit, beiVertiefungBereit } from "./bankload";
 import { istVpMcFrage, zaehleVpDialogPool, type VpDialogPoolTransparenz } from "./vollpruefung-pool";
 
 /**
- * 🧪 جولة تدريب امتحاني مصغّرة (R218/R157): Lesen + Hören + Schreiben + Sprechen
+ * 🧪 تدريب امتحاني داخلي (R218/R157/R162): Lesen + Hören + Schreiben + Sprechen
  * في جلسة واحدة بمؤقّت داخلي ونتيجة مجمّعة — تُركَّب من البنوك الموجودة
- * (نصوص/حوارات/كتابة/شفوي) دون أن تكتب أي تقدّم في الخطة. محاكاة داخلية،
- * لا نتيجة Goethe/telc رسمية؛ الكتابة والتحدّث بتقييم ذاتي معلَن.
+ * دون أن تكتب أي تقدّم في الخطة. الاستماع جولة 30 بنداً/4 أجزاء تدريبية؛
+ * لا نتيجة Goethe/telc رسمية ولا ادعاء صيغة رسمية. الكتابة والتحدّث بتقييم ذاتي معلَن.
  */
 export interface VpFrage { promptDe: string; promptAr: string; options: string[]; answer: string; explanationAr: string }
 export interface VpText { id: string; level: string; titleDe: string; titleAr: string; de: string; fragen: VpFrage[] }
 export interface VpDialog { id: string; level: string; titleDe: string; titleAr: string; audio: string | null; zeilen: { who: string; de: string }[]; fragen: VpFrage[] }
+export interface VpHoerteil { id: string; labelAr: string; zielItems: number; dialoge: VpDialog[] }
 export interface VpSchreiben { id: string; level: string; titleDe: string; titleAr: string; taskDe: string; taskAr: string; criteria: string[]; sample: string; zielWort?: number }
 export interface VpSprechen { id: string; level: string; titel_de: string; titel_ar: string; auftrag_de: string; stuetzen: string[]; kriterien: string[]; zeit_s: number }
+
+/**
+ * تنظيم تدريبي داخلي لا تسمية رسمية لأنواع أجزاء Goethe. مجموع الأهداف 30.
+ * يستعمل الباني حواراً مرة واحدة فقط، وقد يأخذ بعض أسئلته عند بلوغ حد الجزء.
+ */
+export const VP_HOERTEIL_PLAN = [
+  { id: "teil-1", labelAr: "الجزء 1 — مجموعة الاستماع الأولى", zielItems: 8 },
+  { id: "teil-2", labelAr: "الجزء 2 — مجموعة الاستماع الثانية", zielItems: 7 },
+  { id: "teil-3", labelAr: "الجزء 3 — مجموعة الاستماع الثالثة", zielItems: 8 },
+  { id: "teil-4", labelAr: "الجزء 4 — مجموعة الاستماع الرابعة", zielItems: 7 },
+] as const;
+
+export function baueVpHoerteile(dialoge: readonly VpDialog[], stufe: string, samen: number): VpHoerteil[] {
+  const pool = dialoge.filter((dialog) => dialog.level === stufe && dialog.fragen.length > 0);
+  if (!pool.length) return VP_HOERTEIL_PLAN.map((teil) => ({ ...teil, dialoge: [] }));
+  const start = ((samen % pool.length) + pool.length) % pool.length;
+  const geordnet = Array.from({ length: pool.length }, (_, index) => pool[(start + index) % pool.length]);
+  let dialogIndex = 0;
+
+  return VP_HOERTEIL_PLAN.map((teil) => {
+    const ausgewaehlt: VpDialog[] = [];
+    let itemAnzahl = 0;
+    while (itemAnzahl < teil.zielItems && dialogIndex < geordnet.length) {
+      const dialog = geordnet[dialogIndex++];
+      const rest = teil.zielItems - itemAnzahl;
+      const fragen = dialog.fragen.slice(0, rest);
+      if (fragen.length > 0) {
+        ausgewaehlt.push({ ...dialog, fragen });
+        itemAnzahl += fragen.length;
+      }
+    }
+    return { ...teil, dialoge: ausgewaehlt };
+  });
+}
 
 export const vpTexte: VpText[] = [];
 export const vpDialoge: VpDialog[] = [];

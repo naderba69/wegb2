@@ -3990,25 +3990,39 @@ const hasFile = txt().includes("صوتٌ من الدار");
       "CIII1 بطاقة عدم الاتصال تعرض قرار التنزيل بلا رقم قديم؛ الحجم الحي يأتي من البيان عند توفره");
   }
 
-  /* ═══ CV — جلسة امتحان كاملة (R218) ═══ */
+  /* ═══ CV — تدريب المهارات والاستماع 30/4 (R218/R162) ═══ */
   {
     const { VollPruefung } = await import("../components/vollpruefung");
     mount(React.createElement(VollPruefung));
-    const startBtn = rootEl.querySelector('[data-testid="vollpruefung-start"]') as HTMLButtonElement | null;
-    ok(!!startBtn && !startBtn.disabled && txt().includes("تدريب امتحاني مصغّر"),
-      "CV1 التدريب المصغّر يُركَّب وزرّ بدئه مفعّل بالبنوك المحمّلة بلا ادعاء جلسة كاملة");
     const b2 = rootEl.querySelector('[data-testid="vollpruefung-stufe-B2"]') as HTMLElement | null;
     if (b2) click(b2);
     await flushAsync();
+    const startBtn = rootEl.querySelector('[data-testid="vollpruefung-start"]') as HTMLButtonElement | null;
     const umfang = rootEl.querySelector('[data-testid="vollpruefung-umfang"]')?.textContent ?? "";
     const poolText = rootEl.querySelector('[data-testid="vollpruefung-dialog-pool"]')?.textContent ?? "";
-    ok(umfang.includes("/30") && umfang.includes("لا تغطي أجزاء الامتحان الرسمية كاملة") &&
+    ok(!!startBtn && !startBtn.disabled && txt().includes("تدريب امتحاني داخلي") &&
+      umfang.includes("الاستماع 30 بنداً في 4 أجزاء") && umfang.includes("30/30") && umfang.includes("8+7+8+7") &&
       poolText.includes("49/49") && poolText.includes("0 مقصى"),
-      "CV1b مستوى B2 يعرض عدد بنود الجولة مقابل 30/30 ومخزون الاستماع المقبول/المقصى");
+      "CV1 مستوى B2 يعلن جولة الاستماع الفعلية 30/30 في أربعة أجزاء، مع حدود الصيغة ومخزونها");
     if (startBtn) click(startBtn);
-    const radios = rootEl.querySelectorAll('input[type="radio"]');
-    ok(radios.length >= 3 && !!rootEl.querySelector('[data-testid="vollpruefung"]'),
-      `CV2 بدء التدريب يعرض أسئلة القسم الأول فورًا (${radios.length} خيارًا)`);
+    const lesenRadios = rootEl.querySelectorAll('input[type="radio"]');
+    ok(lesenRadios.length >= 3 && !!rootEl.querySelector('[data-testid="vollpruefung"]'),
+      `CV2 بدء التدريب يعرض أسئلة القراءة فورًا (${lesenRadios.length} خيارًا)`);
+    const weiter = rootEl.querySelector('[data-testid="vollpruefung-weiter"]') as HTMLElement | null;
+    if (weiter) click(weiter);
+    const hoerteile = rootEl.querySelectorAll('[data-testid^="vollpruefung-hoerteil-"]');
+    const hoerFragen = Array.from(hoerteile).reduce((summe, teil) => summe + teil.querySelectorAll("fieldset").length, 0);
+    ok(hoerteile.length === 4 && hoerFragen === 30 &&
+      Array.from(hoerteile).every((teil, index) => (teil.textContent ?? "").includes(`الجزء ${index + 1}`)),
+      "CV3 الانتقال إلى الاستماع يعرض 30 بنداً فعلياً داخل أربعة أجزاء موسومة بلا تكرار DOM");
+    for (let schritt = 0; schritt < 3; schritt++) {
+      const naechster = rootEl.querySelector('[data-testid="vollpruefung-weiter"]') as HTMLElement | null;
+      if (naechster) click(naechster);
+    }
+    const auswertung = rootEl.querySelector('[data-testid="vollpruefung-hoeren-auswertung"]')?.textContent ?? "";
+    ok((rootEl.querySelector('[data-testid="vollpruefung-ergebnis"]')?.textContent ?? "").includes("0/30") &&
+      auswertung.includes("0/30") && [1, 2, 3, 4].every((teil) => auswertung.includes(`الجزء ${teil}`)),
+      "CV4 النتيجة تجمع الاستماع بوضوح على 30 وتراجع الأجزاء الأربعة بإجاباتها وشروحها");
   }
 
   /* ═══ CIV — معرفة مهنية + قائمة بدء مهني (R203) ═══ */

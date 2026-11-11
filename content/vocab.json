@@ -1416,7 +1416,6 @@
     "ar": "الدواء",
     "pos": "Nomen",
     "article": "die",
-    "plural": "die Medikamente",
     "level": "A2",
     "tags": [
      "gesundheit"
@@ -6686,7 +6685,6 @@
     "aussprache": "ie = «إي» ممدودة · z = «تس»",
     "exampleDe": "Wir ziehen im März um, zwei Straßen weiter.",
     "exampleAr": "ننتقل في مارس، على بعد شارعين.",
-    "plural": "die Kooperationen",
     "posInfo": "zieht um, zog um, ist umgezogen"
    },
    {
@@ -6741,7 +6739,7 @@
      "wohnen"
     ],
     "article": "der",
-    "plural": "die Strategien",
+    "plural": "die Stadtteile",
     "farbe": "BLAU",
     "aussprache": "ei = «آي» لا «إي» · sp/st في البداية = «شب/شت»",
     "exampleDe": "Der Stadtteil im Norden ist günstiger, aber schlechter angebunden.",
@@ -6835,7 +6833,7 @@
      "wohnen"
     ],
     "article": "die",
-    "plural": "die Institutionen",
+    "plural": "die Hypotheken",
     "farbe": "ROT",
     "exampleDe": "Die Hypothek läuft noch zwanzig Jahre.",
     "exampleAr": "الرهن العقاري ما زال يستمر عشرين سنة."
@@ -6923,7 +6921,7 @@
      "wohnen"
     ],
     "article": "die",
-    "plural": "die Reformen",
+    "plural": "die Besichtigungen",
     "farbe": "ROT",
     "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
     "exampleDe": "Bei der Besichtigung waren zwanzig andere Interessenten da.",
@@ -6985,7 +6983,6 @@
     ],
     "exampleDe": "Nach der Probezeit wurde die Stelle unbefristet.",
     "exampleAr": "بعد فترة التجربة صار المنصب غير محدود المدة.",
-    "plural": "die Petitionen",
     "ant": [
      "befristet"
     ]
@@ -7064,8 +7061,7 @@
     "farbe": "BLAU",
     "aussprache": "w = «ڤ»",
     "exampleDe": "Leere Büros könnten neuen Wohnraum schaffen, wenn der Plan es erlaubt.",
-    "exampleAr": "المكاتب الفارغة قد توفّر حيّز سكن جديداً إن سمح المخطط.",
-    "plural": "die Resolutionen"
+    "exampleAr": "المكاتب الفارغة قد توفّر حيّز سكن جديداً إن سمح المخطط."
    },
    {
     "id": "v356",
@@ -7140,7 +7136,7 @@
     "aussprache": "ie = «إي» ممدودة · ö = بينَ الضمّةِ والكسرة",
     "exampleDe": "Die Möblierung bleibt: Herd, Spüle und Schränke.",
     "exampleAr": "التأثيث يبقى: موقد وحوض وخزائن.",
-    "plural": "die Konferenzen"
+    "plural": "die Möblierungen"
    },
    {
     "id": "v361",
@@ -7212,7 +7208,6 @@
     "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين · -er في الآخر = «أَ» خفيفة",
     "exampleDe": "Ich möchte mich über den Lärm der Baustelle beschweren.",
     "exampleAr": "أريد أن أشتكي من ضجيج الورشة.",
-    "plural": "die Debatten",
     "posInfo": "beschwert sich über, beschwerte sich über, hat sich beschwert über"
    },
    {
@@ -7278,7 +7273,7 @@
      "digital"
     ],
     "article": "die",
-    "plural": "die Fraktionen",
+    "plural": "die Plattformen",
     "farbe": "ROT",
     "exampleDe": "Die Plattform vermittelt Zimmer, haftet aber nicht für Schäden.",
     "exampleAr": "المنصّة تتوسّط في الغرف لكنها لا تتحمّل الأضرار."
@@ -7353,7 +7348,7 @@
      "digital"
     ],
     "article": "der",
-    "plural": "die Koalitionen",
+    "plural": "die Bildschirme",
     "farbe": "BLAU",
     "aussprache": "sch = «ش»",
     "exampleDe": "Ich sitze zu lange vor dem Bildschirm, deshalb tun die Augen weh.",
@@ -7430,7 +7425,7 @@
      "digital"
     ],
     "article": "das",
-    "plural": "die Abgeordneten",
+    "plural": "die Nutzerkonten",
     "farbe": "GRÜN",
     "aussprache": "z = «تس»",
     "exampleDe": "Ohne Nutzerkonto kann man die Kündigung nicht digital einreichen.",
@@ -7506,8 +7501,7 @@
     "farbe": "ROT",
     "aussprache": "v = «ف»",
     "exampleDe": "Laut DSGVO darf man die Löschung seiner Daten verlangen.",
-    "exampleAr": "حسب لائحة حماية البيانات الأوروبية يحق للمرء طلب حذف بياناته.",
-    "plural": "die Ministerien"
+    "exampleAr": "حسب لائحة حماية البيانات الأوروبية يحق للمرء طلب حذف بياناته."
    },
    {
     "id": "v386",
@@ -7580,7 +7574,7 @@
      "digital"
     ],
     "article": "die",
-    "plural": "die Behörden",
+    "plural": "die Klüfte",
     "farbe": "ROT",
     "exampleDe": "Die digitale Kluft verläuft heute weniger nach Alter als nach Einkommen.",
     "exampleAr": "الفجوة الرقمية تسير اليوم حسب الدخل أكثر من العمر."
@@ -7660,8 +7654,7 @@
     "article": "der",
     "farbe": "BLAU",
     "exampleDe": "Der Online-Handel muss die Versandkosten bei Widerruf erstatten.",
-    "exampleAr": "التجارة الإلكترونية ملزمة بردّ تكاليف الشحن عند التراجع.",
-    "plural": "die Verträge"
+    "exampleAr": "التجارة الإلكترونية ملزمة بردّ تكاليف الشحن عند التراجع."
    },
    {
     "id": "v396",
@@ -7731,7 +7724,7 @@
      "digital"
     ],
     "article": "die",
-    "plural": "die Vereinbarungen",
+    "plural": "die Clouds",
     "farbe": "ROT",
     "exampleDe": "Die Fotos liegen in der Cloud, nicht mehr auf dem Handy.",
     "exampleAr": "الصور في السحابة، ولم تعد على الهاتف."
@@ -7804,7 +7797,7 @@
      "digital"
     ],
     "article": "der",
-    "plural": "die Verhandlungen",
+    "plural": "die Nutzer",
     "farbe": "BLAU",
     "aussprache": "z = «تس» · -er في الآخر = «أَ» خفيفة",
     "exampleDe": "Jeder Nutzer braucht ein eigenes Passwort.",
@@ -7879,7 +7872,7 @@
      "digital"
     ],
     "article": "die",
-    "plural": "die Richtlinien",
+    "plural": "die Influencerinnen",
     "farbe": "ROT",
     "exampleDe": "Die Influencerin kennzeichnet bezahlte Beiträge mit „Werbung“.",
     "exampleAr": "المؤثِّرة تسم المنشورات المدفوعة بكلمة «إعلان»."
@@ -7949,7 +7942,6 @@
     "aussprache": "sch = «ش»",
     "exampleDe": "Sie forscht seit Jahren zu Schlaf und Gedächtnis.",
     "exampleAr": "هي تبحث منذ سنوات في النوم والذاكرة.",
-    "plural": "die Maßnahmen",
     "posInfo": "forscht, forschte, hat geforscht"
    },
    {
@@ -8023,7 +8015,7 @@
      "wissenschaft"
     ],
     "article": "das",
-    "plural": "die Initiativen",
+    "plural": "die Experimente",
     "farbe": "GRÜN",
     "exampleDe": "Das Experiment wurde dreimal wiederholt, mit gleichem Ergebnis.",
     "exampleAr": "التجربة أُعيدت ثلاث مرات بنفس النتيجة."
@@ -8100,7 +8092,7 @@
      "wissenschaft"
     ],
     "article": "das",
-    "plural": "die Kampagnen",
+    "plural": "die Labore",
     "farbe": "GRÜN",
     "exampleDe": "Im Labor werden die Proben bei minus achtzig Grad gelagert.",
     "exampleAr": "في المختبر تُخزَّن العيّنات عند ثمانين درجة تحت الصفر."
@@ -8176,7 +8168,7 @@
      "wissenschaft"
     ],
     "article": "die",
-    "plural": "die Proteste",
+    "plural": "die Auswertungen",
     "farbe": "ROT",
     "aussprache": "w = «ڤ»",
     "exampleDe": "Die Auswertung dauert länger als die Befragung selbst.",
@@ -8239,7 +8231,6 @@
     "aussprache": "ie = «إي» ممدودة · z = «تس»",
     "exampleDe": "Wer zitiert, muss die Quelle mit Seitenzahl angeben.",
     "exampleAr": "من يقتبس عليه ذكر المصدر مع رقم الصفحة.",
-    "plural": "die Demonstrationen",
     "posInfo": "zitiert, zitierte, hat zitiert"
    },
    {
@@ -8295,7 +8286,7 @@
      "wissenschaft"
     ],
     "article": "das",
-    "plural": "die Kundgebungen",
+    "plural": "die Studien",
     "farbe": "GRÜN",
     "aussprache": "sp/st في البداية = «شب/شت»",
     "exampleDe": "Nach der Ausbildung kann sie immer noch ein Studium beginnen.",
@@ -8378,7 +8369,6 @@
     "aussprache": "ei = «آي» لا «إي»",
     "exampleDe": "Wer die Frist nicht einhalten kann, zahlt eine neue Gebühr.",
     "exampleAr": "من لا يستطيع الالتزام بالمهلة يدفع رسوماً جديدة.",
-    "plural": "die Streiks",
     "posInfo": "hält ein, hielt ein, hat eingehalten"
    },
    {
@@ -8455,8 +8445,7 @@
     "farbe": "ROT",
     "aussprache": "ei = «آي» لا «إي» · ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
     "exampleDe": "Nachhaltigkeit steht im Bericht, aber nicht im Budget.",
-    "exampleAr": "الاستدامة موجودة في التقرير لا في الميزانية.",
-    "plural": "die Versammlungen"
+    "exampleAr": "الاستدامة موجودة في التقرير لا في الميزانية."
    },
    {
     "id": "v451",
@@ -8530,8 +8519,7 @@
     "farbe": "ROT",
     "aussprache": "ei = «آي» لا «إي» · w = «ڤ» · ü = ضمّةٌ بشفتَينِ مستديرتَين",
     "exampleDe": "Die Glaubwürdigkeit der Quelle hängt von ihrer Unabhängigkeit ab.",
-    "exampleAr": "مصداقية المصدر تتوقف على استقلاليته.",
-    "plural": "die Beschlüsse"
+    "exampleAr": "مصداقية المصدر تتوقف على استقلاليته."
    },
    {
     "id": "v456",
@@ -8633,7 +8621,6 @@
     "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
     "exampleDe": "Das neue Gebäude finden viele hässlich, ich mag es.",
     "exampleAr": "المبنى الجديد يراه كثيرون قبيحاً، أنا أحبه.",
-    "plural": "die Anträge",
     "ant": [
      "schön"
     ]
@@ -8709,8 +8696,7 @@
     "article": "die",
     "farbe": "ROT",
     "exampleDe": "Die Pflege des Vaters übernimmt Hedi am Morgen.",
-    "exampleAr": "العناية بالأب يتولّاها هادي صباحاً.",
-    "plural": "die Urteile"
+    "exampleAr": "العناية بالأب يتولّاها هادي صباحاً."
    },
    {
     "id": "v466",
@@ -8783,8 +8769,7 @@
     "farbe": "GRÜN",
     "aussprache": "-er في الآخر = «أَ» خفيفة",
     "exampleDe": "Im Alter braucht man mehr Zeit für den Alltag.",
-    "exampleAr": "في الكِبَر يحتاج المرء وقتاً أطول لشؤونه اليومية.",
-    "plural": "die Gutachten"
+    "exampleAr": "في الكِبَر يحتاج المرء وقتاً أطول لشؤونه اليومية."
    },
    {
     "id": "v471",
@@ -8855,7 +8840,6 @@
     "aussprache": "sch = «ش»",
     "exampleDe": "Der Mantel ist modisch, aber für den Winter zu dünn.",
     "exampleAr": "المعطف على الموضة لكنه رقيق جداً للشتاء.",
-    "plural": "die Berichte",
     "ant": [
      "unmodisch"
     ],
@@ -8932,7 +8916,7 @@
      "schoenheit"
     ],
     "article": "die",
-    "plural": "die Protokolle",
+    "plural": "die Marken",
     "farbe": "ROT",
     "exampleDe": "Die Marke ist teuer, die Qualität nicht unbedingt besser.",
     "exampleAr": "البراند غالٍ، والجودة ليست بالضرورة أفضل."
@@ -9010,7 +8994,6 @@
     "aussprache": "sp/st في البداية = «شب/شت» · v = «ف»",
     "exampleDe": "Das Café ist stilvoll eingerichtet, ohne teuer zu wirken.",
     "exampleAr": "المقهى مؤثَّث بأناقة دون أن يبدو غالياً.",
-    "plural": "die Zeugenaussagen",
     "ant": [
      "stillos"
     ]
@@ -9090,7 +9073,6 @@
     "aussprache": "ie = «إي» ممدودة · sch = «ش»",
     "exampleDe": "Viele Magazine retuschieren Haut und Figur, ohne es zu kennzeichnen.",
     "exampleAr": "مجلات كثيرة تنمّق البشرة والقوام دون وسم ذلك.",
-    "plural": "die Ermittlungen",
     "posInfo": "retuschiert, retuschierte, hat retuschiert"
    },
    {
@@ -9164,7 +9146,6 @@
     "aussprache": "ei = «آي» لا «إي»",
     "exampleDe": "Ihr ruhiges Auftreten hat die Personalchefin beeindruckt.",
     "exampleAr": "حضورها الهادئ أبهر مديرة الموارد البشرية.",
-    "plural": "die Sanktionen",
     "posInfo": "beeindruckt, beeindruckte, hat beeindruckt"
    },
    {
@@ -9241,7 +9222,6 @@
     "aussprache": "ei = «آي» لا «إي» · ü = ضمّةٌ بشفتَينِ مستديرتَين",
     "exampleDe": "Die Überschrift übertreibt, der Text selbst ist vorsichtig.",
     "exampleAr": "العنوان يبالغ، والنص نفسه حذر.",
-    "plural": "die Geldstrafen",
     "posInfo": "übertreibt, übertrieb, hat übertrieben"
    },
    {
@@ -9324,7 +9304,7 @@
      "kunst-kultur"
     ],
     "article": "das",
-    "plural": "die Verwarnungen",
+    "plural": "die Museen",
     "farbe": "GRÜN",
     "aussprache": "eu/äu = «أوي»",
     "exampleDe": "Am Sonntag ist der Eintritt ins Museum frei.",
@@ -9398,7 +9378,7 @@
      "kunst-kultur"
     ],
     "article": "die",
-    "plural": "die Bußgelder",
+    "plural": "die Skulpturen",
     "farbe": "ROT",
     "exampleDe": "Die Skulptur vor dem Bahnhof ist aus altem Stahl.",
     "exampleAr": "المنحوتة أمام المحطة من فولاذ قديم."
@@ -9475,7 +9455,7 @@
      "kunst-kultur"
     ],
     "article": "die",
-    "plural": "die Auflagen",
+    "plural": "die Opern",
     "farbe": "ROT",
     "aussprache": "-er في الآخر = «أَ» خفيفة",
     "exampleDe": "In der Oper habe ich zum ersten Mal Mozart gehört.",
@@ -9551,7 +9531,6 @@
     ],
     "exampleDe": "Der Regisseur hat den Film in nur drei Wochen gedreht.",
     "exampleAr": "المخرج صوّر الفيلم في ثلاثة أسابيع فقط.",
-    "plural": "die Bestimmungen",
     "posInfo": "dreht, drehte, hat gedreht"
    },
    {
@@ -9627,7 +9606,7 @@
      "kunst-kultur"
     ],
     "article": "die",
-    "plural": "die Vorschriften",
+    "plural": "die Rollen",
     "farbe": "ROT",
     "exampleDe": "Die Hauptfigur spielt eine schwierige Rolle zwischen zwei Familien.",
     "exampleAr": "الشخصية الرئيسية تلعب دوراً صعباً بين عائلتين."
@@ -9705,7 +9684,6 @@
     "aussprache": "ie = «إي» ممدودة",
     "exampleDe": "Sie kritisiert den Plan sachlich, ohne laut zu werden.",
     "exampleAr": "هي تنتقد الخطة بموضوعية دون رفع صوتها.",
-    "plural": "die Normen",
     "posInfo": "kritisiert, kritisierte, hat kritisiert"
    },
    {
@@ -9781,8 +9759,7 @@
     "article": "die",
     "farbe": "ROT",
     "exampleDe": "Lyrik lese ich laut, sonst verstehe ich den Rhythmus nicht.",
-    "exampleAr": "الشعر الغنائي أقرؤه بصوت عالٍ وإلا لا أفهم الإيقاع.",
-    "plural": "die Kriterien"
+    "exampleAr": "الشعر الغنائي أقرؤه بصوت عالٍ وإلا لا أفهم الإيقاع."
    },
    {
     "id": "v536",
@@ -9856,7 +9833,7 @@
      "kunst-kultur"
     ],
     "article": "das",
-    "plural": "die Richtwerte",
+    "plural": "die Kapitel",
     "farbe": "GRÜN",
     "exampleDe": "Das dritte Kapitel ist das längste und das spannendste.",
     "exampleAr": "الفصل الثالث هو الأطول والأكثر تشويقاً."
@@ -9932,7 +9909,7 @@
      "kunst-kultur"
     ],
     "article": "die",
-    "plural": "die Grenzwerte",
+    "plural": "die Traditionen",
     "farbe": "ROT",
     "exampleDe": "Am Freitag zusammen zu essen ist Tradition in unserer Familie.",
     "exampleAr": "الأكل معاً يوم الجمعة تقليد في عائلتنا."
@@ -10017,7 +9994,7 @@
      "arbeit-beruf"
     ],
     "article": "die",
-    "plural": "die Schätzungen",
+    "plural": "die Weiterbildungen",
     "farbe": "ROT",
     "aussprache": "ei = «آي» لا «إي» · w = «ڤ»",
     "exampleDe": "Die Firma zahlt einen Teil der Weiterbildung, mit Rückzahlungsklausel.",
@@ -10101,7 +10078,7 @@
     "aussprache": "v = «ف» · ü = ضمّةٌ بشفتَينِ مستديرتَين",
     "exampleDe": "Die Vergütung für Überstunden steht im Tarifvertrag.",
     "exampleAr": "المكافأة عن الساعات الإضافية مذكورة في الاتفاقية الجماعية.",
-    "plural": "die Prognosen"
+    "plural": "die Vergütungen"
    },
    {
     "id": "v556",
@@ -10178,8 +10155,7 @@
     "farbe": "ROT",
     "aussprache": "ei = «آي» لا «إي» · v = «ف» · z = «تس»",
     "exampleDe": "In Vollzeit wären es vierzig Stunden pro Woche.",
-    "exampleAr": "بالدوام الكامل ستكون أربعين ساعة أسبوعياً.",
-    "plural": "die Berechnungen"
+    "exampleAr": "بالدوام الكامل ستكون أربعين ساعة أسبوعياً."
    },
    {
     "id": "v561",
@@ -10254,7 +10230,7 @@
      "arbeit-beruf"
     ],
     "article": "die",
-    "plural": "die Statistiken",
+    "plural": "die Konferenzen",
     "farbe": "ROT",
     "aussprache": "z = «تس»",
     "exampleDe": "Auf der Konferenz hielt sie einen Vortrag über Lärmschutz.",
@@ -10331,7 +10307,7 @@
      "arbeit-beruf"
     ],
     "article": "der",
-    "plural": "die Umfragen",
+    "plural": "die Arbeitsplätze",
     "farbe": "BLAU",
     "aussprache": "ei = «آي» لا «إي» · z = «تس»",
     "exampleDe": "Mein Arbeitsplatz ist ein kleines Büro in der Stadtmitte.",
@@ -10413,7 +10389,7 @@
     "farbe": "GRÜN",
     "exampleDe": "Das Burnout kam nicht plötzlich, sondern nach Monaten ohne Pause.",
     "exampleAr": "الاحتراق الوظيفي لم يأتِ فجأة بل بعد أشهر بلا استراحة.",
-    "plural": "die Studien"
+    "plural": "die Burnouts"
    },
    {
     "id": "v576",
@@ -10484,7 +10460,7 @@
      "arbeit-beruf"
     ],
     "article": "das",
-    "plural": "die Analysen",
+    "plural": "die Einkommen",
     "farbe": "GRÜN",
     "exampleDe": "Das Elterngeld hängt vom Einkommen der letzten zwölf Monate ab.",
     "exampleAr": "منحة الوالدين تتوقف على دخل الأشهر الاثني عشر الأخيرة."
@@ -10563,7 +10539,6 @@
     "aussprache": "ei = «آي» لا «إي» · sp/st في البداية = «شب/شت»",
     "exampleDe": "Die Lokführer streiken seit Montag, die Züge fahren nicht.",
     "exampleAr": "سائقو القطارات مضربون منذ الاثنين، والقطارات لا تسير.",
-    "plural": "die Auswertungen",
     "posInfo": "streikt, streikte, hat gestreikt"
    },
    {
@@ -10637,7 +10612,7 @@
      "arbeit-beruf"
     ],
     "article": "der",
-    "plural": "die Synthesen",
+    "plural": "die Quereinsteiger",
     "farbe": "BLAU",
     "aussprache": "ei = «آي» لا «إي» · -er في الآخر = «أَ» خفيفة",
     "exampleDe": "Als Quereinsteiger aus der Gastronomie kam er in die Pflege.",
@@ -10720,8 +10695,7 @@
     "article": "der",
     "farbe": "BLAU",
     "exampleDe": "Im Ruhestand engagiert er sich ehrenamtlich in der Bibliothek.",
-    "exampleAr": "في التقاعد يتطوّع في المكتبة.",
-    "plural": "die Schlussfolgerungen"
+    "exampleAr": "في التقاعد يتطوّع في المكتبة."
    },
    {
     "id": "v596",
@@ -11179,7 +11153,6 @@
     "aussprache": "sch = «ش» · v = «ف» · z = «تس»",
     "exampleDe": "Der Fluss war früher stark verschmutzt, heute kann man baden.",
     "exampleAr": "النهر كان ملوّثاً بشدة سابقاً، واليوم يمكن السباحة فيه.",
-    "plural": "die Publikationen",
     "ant": [
      "sauber"
     ]
@@ -11256,8 +11229,7 @@
     "farbe": "BLAU",
     "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
     "exampleDe": "Der Plastikmüll im Meer stammt zum großen Teil vom Land.",
-    "exampleAr": "النفايات البلاستيكية في البحر مصدرها الأكبر اليابسة.",
-    "plural": "die Veröffentlichungen"
+    "exampleAr": "النفايات البلاستيكية في البحر مصدرها الأكبر اليابسة."
    },
    {
     "id": "v606",
@@ -11331,7 +11303,6 @@
     "aussprache": "sp/st في البداية = «شب/شت»",
     "exampleDe": "Wer sparsam heizt, spart im Jahr mehrere hundert Euro.",
     "exampleAr": "من يدفّئ باقتصاد يوفّر مئات اليورو سنوياً.",
-    "plural": "die Beiträge",
     "ant": [
      "verschwenderisch"
     ]
@@ -11408,7 +11379,7 @@
      "umwelt-klima"
     ],
     "article": "das",
-    "plural": "die Kommentare",
+    "plural": "die Windräder",
     "farbe": "GRÜN",
     "aussprache": "w = «ڤ»",
     "exampleDe": "Das Windrad am Ortsrand ist nachts kaum zu hören.",
@@ -11484,7 +11455,6 @@
      "umwelt-klima"
     ],
     "article": "das",
-    "plural": "die Rezensionen",
     "farbe": "GRÜN",
     "exampleDe": "Viele Wohnungen werden noch mit Erdgas geheizt.",
     "exampleAr": "شقق كثيرة ما زالت تُدفّأ بالغاز الطبيعي."
@@ -11562,8 +11532,7 @@
     "farbe": "GRÜN",
     "aussprache": "ei = «آي» لا «إي» · w = «ڤ»",
     "exampleDe": "Umweltbewusstsein zeigt sich beim Einkauf, nicht in Umfragen.",
-    "exampleAr": "الوعي البيئي يظهر عند الشراء لا في الاستطلاعات.",
-    "plural": "die Dokumentationen"
+    "exampleAr": "الوعي البيئي يظهر عند الشراء لا في الاستطلاعات."
    },
    {
     "id": "v626",
@@ -11637,8 +11606,7 @@
     "farbe": "BLAU",
     "aussprache": "sch = «ش» · z = «تس»",
     "exampleDe": "Naturschutz und Windkraft geraten hier in Konflikt.",
-    "exampleAr": "حماية الطبيعة وطاقة الرياح تتصادمان هنا.",
-    "plural": "die Archive"
+    "exampleAr": "حماية الطبيعة وطاقة الرياح تتصادمان هنا."
    },
    {
     "id": "v631",
@@ -11710,8 +11678,7 @@
     "farbe": "ROT",
     "aussprache": "v = «ف»",
     "exampleDe": "Die Biodiversität im Garten steigt, wenn man weniger mäht.",
-    "exampleAr": "التنوع الحيوي في الحديقة يزداد حين يقلّ القصّ.",
-    "plural": "die Verzeichnisse"
+    "exampleAr": "التنوع الحيوي في الحديقة يزداد حين يقلّ القصّ."
    },
    {
     "id": "v636",
@@ -11785,7 +11752,7 @@
      "umwelt-klima"
     ],
     "article": "die",
-    "plural": "die Register",
+    "plural": "die Dürren",
     "farbe": "ROT",
     "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
     "exampleDe": "Die Dürre hat die Ernte der Bauern halbiert.",
@@ -11863,7 +11830,7 @@
      "umwelt-klima"
     ],
     "article": "der",
-    "plural": "die Karteien",
+    "plural": "die Regenwälder",
     "farbe": "BLAU",
     "aussprache": "w = «ڤ»",
     "exampleDe": "Der Regenwald speichert Kohlenstoff, solange er steht.",
@@ -11940,7 +11907,7 @@
      "umwelt-klima"
     ],
     "article": "das",
-    "plural": "die Datenbanken",
+    "plural": "die Klimaziele",
     "farbe": "GRÜN",
     "aussprache": "ie = «إي» ممدودة · z = «تس»",
     "exampleDe": "Das Klimaziel für 2030 ist ohne weniger Verkehr kaum zu erreichen.",
@@ -12016,7 +11983,7 @@
      "umwelt-klima"
     ],
     "article": "die",
-    "plural": "die Plattformen",
+    "plural": "die Landschaften",
     "farbe": "ROT",
     "aussprache": "sch = «ش»",
     "exampleDe": "Im Zug war alles neu: die Ansagen, die Menschen, die Landschaft.",
@@ -12100,7 +12067,7 @@
      "konsum-geld"
     ],
     "article": "die",
-    "plural": "die Netzwerke",
+    "plural": "die Überweisungen",
     "farbe": "ROT",
     "aussprache": "ei = «آي» لا «إي» · w = «ڤ» · ü = ضمّةٌ بشفتَينِ مستديرتَين",
     "exampleDe": "Die Überweisung dauert innerhalb Europas einen Werktag.",
@@ -12180,7 +12147,6 @@
     "aussprache": "eu/äu = «أوي» · v = «ف»",
     "exampleDe": "Auch Einnahmen aus Nebenjobs muss man versteuern.",
     "exampleAr": "حتى دخل الأعمال الجانبية يخضع للضريبة.",
-    "plural": "die Portale",
     "posInfo": "versteuert, versteuerte, hat versteuert"
    },
    {
@@ -12254,7 +12220,6 @@
     ],
     "exampleDe": "Ich hebe am Automaten hundert Euro ab.",
     "exampleAr": "أسحب من الصرّاف مائة يورو.",
-    "plural": "die Anwendungen",
     "posInfo": "hebt ab, hob ab, hat abgehoben"
    },
    {
@@ -12326,8 +12291,7 @@
     "farbe": "ROT",
     "aussprache": "sch = «ش»",
     "exampleDe": "Nach dem Studium hatte er zehntausend Euro Schulden.",
-    "exampleAr": "بعد الدراسة كان عليه عشرة آلاف يورو ديون.",
-    "plural": "die Schnittstellen"
+    "exampleAr": "بعد الدراسة كان عليه عشرة آلاف يورو ديون."
    },
    {
     "id": "v676",
@@ -12402,7 +12366,7 @@
      "konsum-geld"
     ],
     "article": "der",
-    "plural": "die Algorithmen",
+    "plural": "die Kunden",
     "farbe": "BLAU",
     "exampleDe": "Der Kunde verlangt die Versandgebühr zurück.",
     "exampleAr": "الزبون يطلب استرداد رسوم الشحن."
@@ -12478,7 +12442,7 @@
      "konsum-geld"
     ],
     "article": "die",
-    "plural": "die Systeme",
+    "plural": "die Qualitäten",
     "farbe": "ROT",
     "exampleDe": "Das Brot aus der Bäckerei hat eine bessere Qualität.",
     "exampleAr": "خبز المخبز جودته أفضل."
@@ -12558,7 +12522,6 @@
     "aussprache": "w = «ڤ»",
     "exampleDe": "Viele Firmen werben mit kostenloser Lieferung.",
     "exampleAr": "شركات كثيرة تروّج بالتوصيل المجاني.",
-    "plural": "die Strukturen",
     "posInfo": "wirbt, warb, hat geworben"
    },
    {
@@ -12631,7 +12594,7 @@
      "konsum-geld"
     ],
     "article": "der",
-    "plural": "die Prozesse",
+    "plural": "die Haushaltspläne",
     "farbe": "BLAU",
     "exampleDe": "Im Haushaltsplan stehen Miete, Strom und zweihundert Euro Reserve.",
     "exampleAr": "في ميزانية البيت: الإيجار والكهرباء ومئتا يورو احتياط."
@@ -12706,7 +12669,7 @@
      "konsum-geld"
     ],
     "article": "die",
-    "plural": "die Abläufe",
+    "plural": "die Garantien",
     "farbe": "ROT",
     "aussprache": "ie = «إي» ممدودة",
     "exampleDe": "Auf den Wasserkocher gibt es zwei Jahre Garantie.",
@@ -12783,7 +12746,6 @@
     "aussprache": "z = «تس» · ü = ضمّةٌ بشفتَينِ مستديرتَين",
     "exampleDe": "Den Pullover kann ich mit Kassenzettel zurückgeben.",
     "exampleAr": "يمكنني إعادة البلوفر مع الإيصال.",
-    "plural": "die Methoden",
     "posInfo": "gibt zurück, gab zurück, hat zurückgegeben"
    },
    {
@@ -12855,7 +12817,7 @@
      "konsum-geld"
     ],
     "article": "der",
-    "plural": "die Verfahren",
+    "plural": "die Geldautomaten",
     "farbe": "BLAU",
     "exampleDe": "Am Geldautomaten am Hauptbahnhof habe ich die Karte zuletzt benutzt.",
     "exampleAr": "في الصرّاف الآلي بالمحطة الرئيسية استعملت البطاقة آخر مرة."
@@ -12931,7 +12893,7 @@
      "konsum-geld"
     ],
     "article": "die",
-    "plural": "die Konzepte",
+    "plural": "die Insolvenzen",
     "farbe": "ROT",
     "aussprache": "v = «ف» · z = «تس»",
     "exampleDe": "Nach der Insolvenz wurden dreißig Mitarbeiter entlassen.",
@@ -13016,7 +12978,7 @@
      "mobilitaet-verkehr"
     ],
     "article": "das",
-    "plural": "die Modelle",
+    "plural": "die Elektroautos",
     "farbe": "GRÜN",
     "exampleDe": "Das Elektroauto lädt über Nacht an der Wallbox in der Garage.",
     "exampleAr": "السيارة الكهربائية تُشحن ليلاً على الشاحن الجداري في المرآب."
@@ -13090,7 +13052,7 @@
      "mobilitaet-verkehr"
     ],
     "article": "das",
-    "plural": "die Entwürfe",
+    "plural": "die Tickets",
     "farbe": "GRÜN",
     "exampleDe": "Ich habe das Ticket online gekauft, es ist auf dem Handy.",
     "exampleAr": "اشتريت التذكرة عبر الإنترنت، وهي على الهاتف."
@@ -13164,7 +13126,7 @@
      "mobilitaet-verkehr"
     ],
     "article": "das",
-    "plural": "die Pläne",
+    "plural": "die Gleise",
     "farbe": "GRÜN",
     "aussprache": "ei = «آي» لا «إي»",
     "exampleDe": "Der Zug nach Köln fährt heute von Gleis fünf, nicht von Gleis drei.",
@@ -13242,7 +13204,7 @@
      "mobilitaet-verkehr"
     ],
     "article": "die",
-    "plural": "die Projekte",
+    "plural": "die Ampeln",
     "farbe": "ROT",
     "exampleDe": "Gehen Sie geradeaus bis zur Ampel, dann rechts.",
     "exampleAr": "امشِ مستقيماً حتى إشارة المرور ثم يميناً."
@@ -13320,7 +13282,7 @@
      "mobilitaet-verkehr"
     ],
     "article": "die",
-    "plural": "die Programme",
+    "plural": "die Mitfahrgelegenheiten",
     "farbe": "ROT",
     "aussprache": "ei = «آي» لا «إي»",
     "exampleDe": "Über die App fand ich eine Mitfahrgelegenheit nach Hamburg für fünfzehn Euro.",
@@ -13396,8 +13358,7 @@
     "article": "die",
     "farbe": "ROT",
     "exampleDe": "Mobilität ohne eigenes Auto ist in der Stadt kein Problem.",
-    "exampleAr": "التنقّل بلا سيارة خاصة ليس مشكلة في المدينة.",
-    "plural": "die Module"
+    "exampleAr": "التنقّل بلا سيارة خاصة ليس مشكلة في المدينة."
    },
    {
     "id": "v746",
@@ -13471,7 +13432,7 @@
      "mobilitaet-verkehr"
     ],
     "article": "das",
-    "plural": "die Einheiten",
+    "plural": "die Tempolimits",
     "farbe": "GRÜN",
     "exampleDe": "Das Tempolimit hat die Unfälle auf dem Ring um ein Drittel gesenkt.",
     "exampleAr": "حد السرعة خفّض الحوادث على الطريق الدائري بمقدار الثلث."
@@ -13544,7 +13505,7 @@
      "mobilitaet-verkehr"
     ],
     "article": "das",
-    "plural": "die Komponenten",
+    "plural": "die Parkhäuser",
     "farbe": "GRÜN",
     "exampleDe": "Das Parkhaus am Bahnhof kostet zwei Euro pro Stunde.",
     "exampleAr": "موقف السيارات البرجي عند المحطة بيورهين للساعة."
@@ -13623,7 +13584,7 @@
      "mobilitaet-verkehr"
     ],
     "article": "der",
-    "plural": "die Faktoren",
+    "plural": "die Führerscheine",
     "farbe": "BLAU",
     "aussprache": "ei = «آي» لا «إي» · sch = «ش» · ü = ضمّةٌ بشفتَينِ مستديرتَين",
     "exampleDe": "Ich mache gerade den Führerschein, nächste Woche ist die Prüfung.",
@@ -13701,7 +13662,7 @@
      "mobilitaet-verkehr"
     ],
     "article": "die",
-    "plural": "die Aspekte",
+    "plural": "die Fluggesellschaften",
     "farbe": "ROT",
     "aussprache": "sch = «ش»",
     "exampleDe": "Die Fluggesellschaft muss bei Annullierung den Preis erstatten.",
@@ -13775,7 +13736,6 @@
      "mobilitaet-verkehr"
     ],
     "article": "die",
-    "plural": "die Dimensionen",
     "farbe": "ROT",
     "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
     "exampleDe": "Nach der Rückkehr aus Tunis brauchte ich zwei Tage, um anzukommen.",
@@ -13862,7 +13822,7 @@
      "staat-recht"
     ],
     "article": "das",
-    "plural": "die Perspektiven",
+    "plural": "die Grundgesetze",
     "farbe": "GRÜN",
     "aussprache": "z = «تس»",
     "exampleDe": "Artikel eins des Grundgesetzes schützt die Würde des Menschen.",
@@ -13939,7 +13899,7 @@
      "staat-recht"
     ],
     "article": "die",
-    "plural": "die Ansätze",
+    "plural": "die Behörden",
     "farbe": "ROT",
     "aussprache": "ö = بينَ الضمّةِ والكسرة",
     "exampleDe": "Die Behörde antwortet innerhalb von vier Wochen schriftlich.",
@@ -14016,7 +13976,6 @@
     "aussprache": "w = «ڤ»",
     "exampleDe": "Der Antrag auf Wohngeld wurde nach sechs Wochen bewilligt.",
     "exampleAr": "طلب إعانة السكن ووفق عليه بعد ستة أسابيع.",
-    "plural": "die Theorien",
     "posInfo": "bewilligt, bewilligte, hat bewilligt"
    },
    {
@@ -14087,7 +14046,7 @@
      "staat-recht"
     ],
     "article": "das",
-    "plural": "die Thesen",
+    "plural": "die Verbote",
     "farbe": "GRÜN",
     "aussprache": "v = «ف»",
     "exampleDe": "Das Verbot gilt nur für Musik nach zweiundzwanzig Uhr.",
@@ -14162,7 +14121,7 @@
      "staat-recht"
     ],
     "article": "der",
-    "plural": "die Hypothesen",
+    "plural": "die Widersprüche",
     "farbe": "BLAU",
     "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · w = «ڤ»",
     "exampleDe": "Der Widerspruch muss schriftlich und fristgerecht eingehen.",
@@ -14236,7 +14195,7 @@
      "staat-recht"
     ],
     "article": "der",
-    "plural": "die Prämissen",
+    "plural": "die Richter",
     "farbe": "BLAU",
     "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · -er في الآخر = «أَ» خفيفة",
     "exampleDe": "Der Richter hat den Vergleich mit einer Frist bestätigt.",
@@ -14316,7 +14275,7 @@
      "staat-recht"
     ],
     "article": "die",
-    "plural": "die Argumente",
+    "plural": "die Anwältinnen",
     "farbe": "ROT",
     "aussprache": "w = «ڤ»",
     "exampleDe": "Die Anwältin riet, zuerst schriftlich Widerspruch einzulegen.",
@@ -14397,8 +14356,7 @@
     "farbe": "ROT",
     "aussprache": "ei = «آي» لا «إي»",
     "exampleDe": "Pressefreiheit heißt auch, unbequeme Fragen stellen zu dürfen.",
-    "exampleAr": "حرية الصحافة تعني أيضاً الحق في طرح أسئلة محرجة.",
-    "plural": "die Einwände"
+    "exampleAr": "حرية الصحافة تعني أيضاً الحق في طرح أسئلة محرجة."
    },
    {
     "id": "v811",
@@ -14474,7 +14432,7 @@
     "aussprache": "sch = «ش» · ü = ضمّةٌ بشفتَينِ مستديرتَين",
     "exampleDe": "Für die Staatsbürgerschaft braucht man B1 und einen Einbürgerungstest.",
     "exampleAr": "للجنسية يحتاج المرء B1 واختبار تجنيس.",
-    "plural": "die Gegenvorschläge"
+    "plural": "die Staatsbürgerschaften"
    },
    {
     "id": "v816",
@@ -14544,7 +14502,7 @@
      "staat-recht"
     ],
     "article": "die",
-    "plural": "die Alternativen",
+    "plural": "die Abschiebungen",
     "farbe": "ROT",
     "aussprache": "ie = «إي» ممدودة · sch = «ش»",
     "exampleDe": "Die Abschiebung wurde vom Gericht vorläufig gestoppt.",
@@ -14619,7 +14577,7 @@
      "staat-recht"
     ],
     "article": "die",
-    "plural": "die Optionen",
+    "plural": "die Straftaten",
     "farbe": "ROT",
     "aussprache": "sp/st في البداية = «شب/شت»",
     "exampleDe": "Schon der Versuch ist eine Straftat.",
@@ -14700,8 +14658,7 @@
     "article": "die",
     "farbe": "ROT",
     "exampleDe": "Korruption beginnt oft mit kleinen Gefälligkeiten.",
-    "exampleAr": "الفساد يبدأ غالباً بخدمات صغيرة.",
-    "plural": "die Präferenzen"
+    "exampleAr": "الفساد يبدأ غالباً بخدمات صغيرة."
    },
    {
     "id": "v831",
@@ -14772,7 +14729,7 @@
      "staat-recht"
     ],
     "article": "die",
-    "plural": "die Prioritäten",
+    "plural": "die Bescheinigungen",
     "farbe": "ROT",
     "aussprache": "ei = «آي» لا «إي» · sch = «ش»",
     "exampleDe": "Die Bescheinigung der Uni reicht als Nachweis für den Termin.",
@@ -14845,7 +14802,7 @@
      "staat-recht"
     ],
     "article": "die",
-    "plural": "die Ziele",
+    "plural": "die Beglaubigungen",
     "farbe": "ROT",
     "exampleDe": "Die Beglaubigung kostet fünf Euro pro Seite im Rathaus.",
     "exampleAr": "التصديق يكلّف خمسة يورو للصفحة في البلدية."
@@ -14965,7 +14922,6 @@
     "aussprache": "z = «تس»",
     "exampleDe": "Die Uni will nur Bewerber mit B2-Zertifikat zulassen.",
     "exampleAr": "الجامعة لا تريد قبول إلا المتقدمين بشهادة B2.",
-    "plural": "die Vorgaben",
     "posInfo": "lasst zu, lasste zu, hat zugelasst"
    },
    {
@@ -15040,7 +14996,7 @@
      "studium-lernen"
     ],
     "article": "die",
-    "plural": "die Erwartungen",
+    "plural": "die Klausuren",
     "farbe": "ROT",
     "exampleDe": "Die Klausur dauert neunzig Minuten, ohne Wörterbuch.",
     "exampleAr": "الاختبار المكتوب يستغرق تسعين دقيقة بلا قاموس."
@@ -15116,7 +15072,7 @@
      "studium-lernen"
     ],
     "article": "die",
-    "plural": "die Anforderungen",
+    "plural": "die Noten",
     "farbe": "ROT",
     "exampleDe": "In Deutschland ist die Note eins die beste.",
     "exampleAr": "في ألمانيا الدرجة واحد هي الأفضل."
@@ -15192,7 +15148,6 @@
     "aussprache": "ei = «آي» لا «إي» · sch = «ش»",
     "exampleDe": "Sie schreibt sich für Informatik ein, im Wintersemester.",
     "exampleAr": "تسجّل في الإعلامية في الفصل الشتوي.",
-    "plural": "die Bedingungen",
     "posInfo": "schreibt ein, schreibte ein, hat eingeschreibt"
    },
    {
@@ -15264,7 +15219,7 @@
      "studium-lernen"
     ],
     "article": "die",
-    "plural": "die Voraussetzungen",
+    "plural": "die Leihfristen",
     "farbe": "ROT",
     "aussprache": "ei = «آي» لا «إي»",
     "exampleDe": "Die Leihfrist lässt sich online zweimal verlängern.",
@@ -15340,7 +15295,7 @@
      "studium-lernen"
     ],
     "article": "die",
-    "plural": "die Qualifikationen",
+    "plural": "die Wiederholungen",
     "farbe": "ROT",
     "aussprache": "ie = «إي» ممدودة · w = «ڤ»",
     "exampleDe": "Ohne Wiederholung nach drei Tagen ist das meiste wieder weg.",
@@ -15420,7 +15375,6 @@
     ],
     "exampleDe": "Das Handy auf dem Tisch lenkt ab, auch wenn es stumm ist.",
     "exampleAr": "الهاتف على الطاولة يشتّت حتى وهو صامت.",
-    "plural": "die Kompetenzen",
     "posInfo": "lenkt ab, lenkte ab, hat abgelenkt"
    },
    {
@@ -15496,7 +15450,6 @@
     "aussprache": "ie = «إي» ممدودة · z = «تس»",
     "exampleDe": "Kurze Einheiten sind effizienter als ein langer Abend.",
     "exampleAr": "الوحدات القصيرة أجدى من مساء طويل.",
-    "plural": "die Fähigkeiten",
     "ant": [
      "ineffizient"
     ]
@@ -15574,7 +15527,6 @@
     "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
     "exampleDe": "Ich überprüfe mich jeden Sonntag mit den Karten der Woche.",
     "exampleAr": "أختبر نفسي كل أحد ببطاقات الأسبوع.",
-    "plural": "die Fertigkeiten",
     "posInfo": "prüft über, prüfte über, hat überprüft"
    },
    {
@@ -15649,8 +15601,7 @@
     "farbe": "ROT",
     "aussprache": "ei = «آي» لا «إي» · sch = «ش»",
     "exampleDe": "Die Rechtschreibung von „dass“ und „das“ verwechseln viele.",
-    "exampleAr": "إملاء «dass» و«das» يخلط بينهما كثيرون.",
-    "plural": "die Talente"
+    "exampleAr": "إملاء «dass» و«das» يخلط بينهما كثيرون."
    },
    {
     "id": "v891",
@@ -15724,7 +15675,7 @@
      "studium-lernen"
     ],
     "article": "die",
-    "plural": "die Begabungen",
+    "plural": "die Dozentinnen",
     "farbe": "ROT",
     "aussprache": "z = «تس»",
     "exampleDe": "Die Dozentin erwartet die Hausarbeit bis Ende März.",
@@ -15800,7 +15751,7 @@
      "studium-lernen"
     ],
     "article": "die",
-    "plural": "die Neigungen",
+    "plural": "die Abschlussarbeiten",
     "farbe": "ROT",
     "aussprache": "ei = «آي» لا «إي» · sch = «ش»",
     "exampleDe": "Für die Abschlussarbeit hat sie sechs Monate Zeit.",
@@ -15933,7 +15884,6 @@
     ],
     "exampleDe": "Ich bin stolz auf meine Tochter, sie hat die Prüfung bestanden.",
     "exampleAr": "أنا فخور بابنتي، فقد نجحت في الامتحان.",
-    "plural": "die Interessen",
     "ant": [
      "beschämt über"
     ]
@@ -16010,7 +15960,6 @@
     "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
     "exampleDe": "Es ist ärgerlich, wenn der Zug ohne Ansage ausfällt.",
     "exampleAr": "من المغيظ أن يُلغى القطار بلا إعلان.",
-    "plural": "die Motive",
     "ant": [
      "erfreulich"
     ]
@@ -16086,7 +16035,6 @@
     ],
     "exampleDe": "Vor dem Vorstellungsgespräch war sie angespannt, aber vorbereitet.",
     "exampleAr": "قبل مقابلة التوظيف كانت مشدودة الأعصاب لكنها مستعدة.",
-    "plural": "die Beweggründe",
     "ant": [
      "entspannt"
     ]
@@ -16163,7 +16111,6 @@
     "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · -er في الآخر = «أَ» خفيفة",
     "exampleDe": "Am Anfang war ich unsicher, ob mein Deutsch reicht.",
     "exampleAr": "في البداية كنت متردداً هل تكفي ألمانيتي.",
-    "plural": "die Ursachen",
     "ant": [
      "sicher"
     ]
@@ -16239,7 +16186,6 @@
     ],
     "exampleDe": "Die Frage nach der Lücke im Lebenslauf belastet ihn noch immer.",
     "exampleAr": "سؤال الفجوة في السيرة الذاتية ما زال يثقل عليه.",
-    "plural": "die Anlässe",
     "posInfo": "belastet, belastete, hat belastt"
    },
    {
@@ -16308,7 +16254,7 @@
      "gefuehle-psyche"
     ],
     "article": "die",
-    "plural": "die Auslöser",
+    "plural": "die Stimmungen",
     "farbe": "ROT",
     "aussprache": "sp/st في البداية = «شب/شت»",
     "exampleDe": "Die Stimmung im Team ist seit dem runden Tisch besser.",
@@ -16387,7 +16333,6 @@
     "aussprache": "ie = «إي» ممدودة",
     "exampleDe": "Wer die Frist ignoriert, riskiert den Verlust des Anspruchs.",
     "exampleAr": "من يتجاهل المهلة يخاطر بفقدان الحق.",
-    "plural": "die Impulse",
     "posInfo": "riskiert, riskierte, hat geriskiert"
    },
    {
@@ -16465,7 +16410,6 @@
     ],
     "exampleDe": "Von der Straßensperrung sind auch die Läden betroffen.",
     "exampleAr": "من إغلاق الشارع تتضرر المتاجر أيضاً.",
-    "plural": "die Reize",
     "ant": [
      "unbeteiligt"
     ]
@@ -16545,8 +16489,7 @@
     "farbe": "ROT",
     "aussprache": "ei = «آي» لا «إي» · ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · ü = ضمّةٌ بشفتَينِ مستديرتَين",
     "exampleDe": "Gleichgültigkeit ist für einen Verein gefährlicher als Streit.",
-    "exampleAr": "اللامبالاة أخطر على الجمعية من الخلاف.",
-    "plural": "die Reaktionen"
+    "exampleAr": "اللامبالاة أخطر على الجمعية من الخلاف."
    },
    {
     "id": "v946",
@@ -16615,7 +16558,7 @@
      "gefuehle-psyche"
     ],
     "article": "die",
-    "plural": "die Folgen",
+    "plural": "die Kränkungen",
     "farbe": "ROT",
     "exampleDe": "Die Kränkung saß tiefer als der eigentliche Fehler.",
     "exampleAr": "الإهانة كانت أعمق من الخطأ نفسه."
@@ -16690,7 +16633,7 @@
      "gefuehle-psyche"
     ],
     "article": "die",
-    "plural": "die Konsequenzen",
+    "plural": "die Sehnsüchte",
     "farbe": "ROT",
     "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
     "exampleDe": "Die Sehnsucht nach dem Meer holt ihn jeden Sommer ein.",
@@ -16767,7 +16710,6 @@
     ],
     "exampleDe": "In der kleinen Wohnung fühlte sie sich geborgen wie nie zuvor.",
     "exampleAr": "في الشقة الصغيرة شعرت بأمان لم تشعر به من قبل.",
-    "plural": "die Wirkungen",
     "ant": [
      "schutzlos"
     ]
@@ -16842,7 +16784,6 @@
     ],
     "exampleDe": "Der Lehrer lobt Sara, weil sie viel Fortschritte gemacht hat.",
     "exampleAr": "المعلّم يمدح سارة لأنها تقدّمت كثيراً.",
-    "plural": "die Effekte",
     "posInfo": "lobt, lobte, hat gelobt"
    },
    {
@@ -16910,7 +16851,7 @@
      "gefuehle-psyche"
     ],
     "article": "der",
-    "plural": "die Resultate",
+    "plural": "die Vorwürfe",
     "farbe": "BLAU",
     "aussprache": "v = «ف» · w = «ڤ»",
     "exampleDe": "Der Vorwurf war berechtigt, der Ton nicht.",
@@ -16985,7 +16926,7 @@
      "gefuehle-psyche"
     ],
     "article": "die",
-    "plural": "die Ergebnisse",
+    "plural": "die Sorgen",
     "farbe": "ROT",
     "exampleDe": "Die größte Sorge der Eltern ist die Miete.",
     "exampleAr": "أكبر همّ للوالدين هو الإيجار."
@@ -17069,8 +17010,7 @@
     "article": "die",
     "farbe": "ROT",
     "exampleDe": "Für den Halbmarathon fehlt mir noch die Kondition.",
-    "exampleAr": "لنصف الماراثون تنقصني اللياقة بعد.",
-    "plural": "die Erträge"
+    "exampleAr": "لنصف الماراثون تنقصني اللياقة بعد."
    },
    {
     "id": "v981",
@@ -17138,7 +17078,6 @@
     ],
     "exampleDe": "Das Training macht Spaß, auch wenn es anstrengend ist.",
     "exampleAr": "التمرين ممتع حتى لو كان مُجهداً.",
-    "plural": "die Gewinne",
     "ant": [
      "erholsam"
     ]
@@ -17211,7 +17150,7 @@
      "sport-freizeit"
     ],
     "article": "die",
-    "plural": "die Verluste",
+    "plural": "die Grenzen",
     "farbe": "ROT",
     "aussprache": "z = «تس»",
     "exampleDe": "Beim Marathon habe ich meine Grenze deutlich gespürt.",
@@ -17286,7 +17225,7 @@
      "sport-freizeit"
     ],
     "article": "die",
-    "plural": "die Risiken",
+    "plural": "die Dosen",
     "farbe": "ROT",
     "exampleDe": "Die Dosis für Kinder richtet sich nach dem Gewicht.",
     "exampleAr": "الجرعة للأطفال تُحدَّد حسب الوزن."
@@ -17362,7 +17301,7 @@
      "sport-freizeit"
     ],
     "article": "der",
-    "plural": "die Gefahren",
+    "plural": "die Wettkämpfe",
     "farbe": "BLAU",
     "aussprache": "w = «ڤ»",
     "exampleDe": "Vor dem Wettkampf isst er nur leicht und schläft früh.",
