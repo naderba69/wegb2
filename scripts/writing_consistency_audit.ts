@@ -15,15 +15,38 @@ const tasks = JSON.parse(
 ) as WritingTask[];
 const byId = new Map(tasks.map((task) => [task.id, task]));
 const errors: string[] = [];
+const wordRiskIds = new Set([
+  "w-b2-07", "w-b2-11", "w-a2-12", "w-a2-17", "w-b1-23",
+  "w-b1-24", "w-b1-25", "w-b2-24", "w-b2-26", "w-b2-28",
+]);
+const sentenceRiskIds = new Set([
+  "w-a1-01", "w-a1-06", "w-a2-06", "w-a1-08", "w-a0-06",
+]);
+const words = (text: string): number =>
+  text.match(/[\p{L}\p{N}]+(?:['’\-][\p{L}\p{N}]+)*/gu)?.length ?? 0;
 
 for (const task of tasks) {
   const visibleWordTarget = task.taskDe.match(/ca\.\s*(\d+)\s*Wörter/);
-  if (!visibleWordTarget) continue;
-  const expected = Number(visibleWordTarget[1]);
-  if (task.zielWort !== expected) {
-    errors.push(
-      `${task.id}: taskDe asks ca. ${expected} words but zielWort=${task.zielWort ?? "missing"}`,
-    );
+  if (visibleWordTarget) {
+    const expected = Number(visibleWordTarget[1]);
+    if (task.zielWort !== expected) {
+      errors.push(
+        `${task.id}: taskDe asks ca. ${expected} words but zielWort=${task.zielWort ?? "missing"}`,
+      );
+    }
+  }
+
+  if (wordRiskIds.has(task.id)) {
+    if (!task.zielWort) {
+      errors.push(`${task.id}: missing zielWort for reviewed sample-length risk`);
+    } else {
+      const ratio = words(task.sample) / task.zielWort;
+      if (ratio < 0.8 || ratio > 1.2) {
+        errors.push(
+          `${task.id}: reviewed sample has ${words(task.sample)} words for target ${task.zielWort} (${(ratio * 100).toFixed(1)}%)`,
+        );
+      }
+    }
   }
 }
 
@@ -31,6 +54,26 @@ const count = (text: string, fragment: string): number =>
   text.split(fragment).length - 1;
 const sentenceMarks = (text: string): number =>
   text.match(/[.!?](?=\s|$)/g)?.length ?? 0;
+const sentenceRange = (taskDe: string): [number, number] | null => {
+  const range = taskDe.match(/(\d+)[–-](\d+)\s+Sätze/);
+  if (range) return [Number(range[1]), Number(range[2])];
+  const exact = taskDe.match(/(\d+)\s+Sätze/);
+  return exact ? [Number(exact[1]), Number(exact[1])] : null;
+};
+for (const id of sentenceRiskIds) {
+  const task = byId.get(id);
+  if (!task) {
+    errors.push(`missing reviewed sentence-count task ${id}`);
+    continue;
+  }
+  const range = sentenceRange(task.taskDe);
+  const actual = sentenceMarks(task.sample);
+  if (!range || actual < range[0] || actual > range[1]) {
+    errors.push(
+      `${id}: reviewed sample has ${actual} sentence marks; expected ${range?.join("–") ?? "an explicit range"}`,
+    );
+  }
+}
 const requireTask = (id: string): WritingTask => {
   const task = byId.get(id);
   if (!task) throw new Error(`missing writing task ${id}`);
@@ -86,8 +129,8 @@ if (errors.length) {
 }
 
 console.log(
-  "✅ Writing consistency: visible ca.-word targets match zielWort; 5 manually reviewed task/criterion/sample/note fixes remain intact.",
+  "✅ Writing consistency: visible ca.-word targets match zielWort; all 42 reviewed PA-035 findings remain fixed.",
 );
 console.log(
-  "ℹ️ This gate checks confirmed PA-035 conflicts only; it does not certify all writing models or exam claims.",
+  "ℹ️ This gate checks the reviewed target, sample-length, sentence-count, and task/criterion/sample/note corrections; it does not certify all writing models or exam claims.",
 );

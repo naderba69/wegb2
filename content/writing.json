@@ -56,11 +56,11 @@
       "أصل البلد بدون ein: aus Syrien",
       "جملة ختامية عن تعلّمك الألمانية"
     ],
-    "sample": "Guten Tag! Ich heiße Youssef. Ich bin 27 Jahre alt. Ich komme aus Tunesien und wohne in Tunis. Ich bin Ingenieur und arbeite in einer Firma. Ich spreche Arabisch, Französisch und Englisch. Jetzt lerne ich Deutsch, weil ich in Deutschland arbeiten möchte.",
+    "sample": "Guten Tag! Ich heiße Youssef und bin 27 Jahre alt. Ich komme aus Tunesien und wohne in Tunis. Ich bin Ingenieur, habe eine Stelle und spreche Arabisch. Jetzt lerne ich Deutsch.",
     "noteAr": [
-      "الفعل الثاني محروس في كل جملة: heiße / bin / komme…wohne / bin…arbeite / spreche / lerne — ست فقرات، ست إجابات عن الامتحان نفسه",
+      "خمس جمل واضحة: تحية، اسم وعمر، أصل وسكن، مهنة ولغة، ثم جملة عن تعلّم الألمانية",
       "«aus Tunesien» بلا أداة: قاعدةُ الأصل معلَّمةٌ بالمثال لا بالوعظ",
-      "الجملة الختامية بسببٍ (weil) ترفع النصَّ من قائمةٍ إلى فقرة — حيلةٌ تصلح لغير الألفيين أيضًا"
+      "الجملة الختامية قصيرة ومناسبة لـA1: Jetzt lerne ich Deutsch."
     ],
     "zielWort": 30
   },
@@ -502,10 +502,10 @@
       "نشاط واحد على الأقل",
       "خاتمة ودّية"
     ],
-    "sample": "Liebe Salma! Ich bin jetzt in Hammamet. Das Wetter ist schön und sonnig. Jeden Tag gehe ich zum Strand und schwimme im Meer. Das Essen ist sehr lecker. Am Abend sitze ich im Café am Meer und lese ein Buch. Viele Grüße, Sami. Ich schicke dir bald ein Foto!",
+    "sample": "Liebe Salma! Ich bin jetzt in Hammamet. Das Wetter ist schön und sonnig. Jeden Tag schwimme ich im Meer. Am Abend esse ich im Café am Strand. Viele Grüße, Sami",
     "noteAr": [
       "بطاقةُ بريده صغيرةٌ كعنوانها: خمسُ جمل لا تتزاحم",
-      "الطقسُ جملة، النشاطُ جملة — معيارُ «واحدٌ على الأقل» مُنجَزٌ بالضبط، لا بالإفراط",
+      "الطقسُ جملة، والنشاطان واضحان: السباحة ثم الأكل في المقهى",
       "Viele Grüße + اسم — خاتمةُ البطاقة قارةٌ لا تُساوَم"
     ],
     "zielWort": 30
@@ -524,7 +524,7 @@
       "طلب محدد واحد",
       "بريد كامل بمقدمة وخاتمة"
     ],
-    "sample": "Sehr geehrte Damen und Herren, ich habe letzte Woche in Ihrem Hotel übernachtet. Leider hat das Zimmer neben dem Aufzug sehr viel Lärm gemacht. Der Lärm hat um zweiundzwanzig Uhr angefangen und bis drei Uhr gedauert. Ich habe drei Nächte schlecht geschlafen. Ich habe an der Rezeption angerufen, aber niemand hat geantwortet. Bitte erstatten Sie mir einen Teil des Preises. Mit freundlichen Grüßen, N. Mansour",
+    "sample": "Sehr geehrte Damen und Herren, ich habe letzte Woche in Ihrem Hotel übernachtet. Leider hat das Zimmer neben dem Aufzug sehr viel Lärm gemacht. Der Lärm hat um zweiundzwanzig Uhr angefangen und bis drei Uhr gedauert. Ich habe drei Nächte schlecht geschlafen. Ich habe an der Rezeption angerufen, aber niemand hat geantwortet. Bitte erstatten Sie mir einen Teil des Preises. Mit freundlichen Grüßen, Nadia Mansour",
     "noteAr": [
       "شكوى بلا غضب: leider + وصفٌ هادئ — النبرةُ تُقرَأ قبل الحجج",
       "Perfekt في صدر الوقائع: habe…übernachtet / hat…gemacht — الماضي المُنجَز لا المستمر",
@@ -682,10 +682,10 @@
       "مطلب واضح مع أجل",
       "خاتمة رسمية"
     ],
-    "sample": "Sehr geehrte Damen und Herren, am 3. Mai habe ich Ihren Online-Kurs „Deutsch B2“ gekauft (Bestellnummer 4471, Rechnung 2210). Leider funktioniert der Zugang bis heute nicht: Trotz zweimaliger Rücksetzung erhalte ich ständig die Meldung „Passwort falsch“ – ein Fehler, den Ihr Support telefonisch bestätigt, aber bisher nicht behoben hat. Ich bitte Sie, den Zugang bis zum kommenden Freitag, den 22. Mai, freizuschalten. Andernfalls trete ich vom Vertrag zurück und bitte um vollständige Rückerstattung des Kursbetrags von 89 Euro binnen weiterer vierzehn Tage. Ich habe den Support am 10. Mai schriftlich kontaktiert und am 15. Mai erneut angerufen, jedoch ohne Erfolg. Der Fehler liegt nachweislich nicht bei meinem Gerät, da der Login auf zwei verschiedenen Browsern scheitert. Die Belege zu Zahlung und Supportanfragen halte ich bereit und reiche sie auf Wunsch nach. Mit freundlichen Grüßen, Layla Haddad",
+    "sample": "Sehr geehrte Damen und Herren, am 3. Mai habe ich Ihren Online-Kurs „Deutsch B2“ gekauft (Bestellnummer 4471). Leider funktioniert der Zugang bis heute nicht. Trotz zweimaliger Rücksetzung erscheint weiterhin die Meldung „Passwort falsch“. Ihren Support habe ich am 10. Mai schriftlich kontaktiert, jedoch ohne Erfolg. Bitte schalten Sie meinen Zugang bis Freitag, den 22. Mai, frei. Sollte das nicht möglich sein, trete ich vom Vertrag zurück und bitte um die vollständige Rückerstattung von 89 Euro innerhalb von vierzehn Tagen. Der Fehler tritt auf zwei Geräten und in verschiedenen Browsern auf. Die Zahlungsbestätigung und meine Supportanfrage kann ich Ihnen gern zusenden. Mit freundlichen Grüßen, Layla Haddad",
     "noteAr": [
       "أرقام وأرقامٌ عكسية: طلب + أجل محدد (bis Freitag) ثم شرطان (Rücktritt / Erstattung binnen vierzehn Tagen) — الشكوىُ قانونٌ مُهذَّب",
-      "دقة الوقائع: رقم طلب، رقم فاتورة، رسالة الخطأ حرفياً — لا «الوصولُ لا يعمل» بلا جثة دليل",
+      "دقة الوقائع: رقم طلب، رسالة الخطأ حرفياً، وتجربتها على جهازين — لا «الوصولُ لا يعمل» بلا جثة دليل",
       "«Belege halte ich bereit» — ورقةُ القوة الأخيرة تُلْمَح ولا تُلَوَّح: آدابُ الضغط الرسمي",
       "غوته B2 الكتابة: رسالة رسمية ~100 كلمة — 30 دقيقة الجزء 2/2"
     ],
@@ -732,7 +732,7 @@
       "جملة بـ«kann … nicht kommen» (الفعل المساعد + المصدر في النهاية)",
       "سؤال واحد بعلامة استفهام"
     ],
-    "sample": "Liebe Frau Klein, ich bin krank und habe Fieber und Halsschmerzen. Ich kann heute und morgen nicht zum Kurs kommen. Der Arzt sagt, ich soll zwei Tage zu Hause bleiben. Was sind die Hausaufgaben für Donnerstag? Vielen Dank für Ihr Verständnis! Viele Grüße, Omar",
+    "sample": "Liebe Frau Klein, ich bin krank und habe Fieber. Ich kann heute und morgen nicht zum Kurs kommen. Der Arzt sagt, ich soll zwei Tage zu Hause bleiben. Was sind die Hausaufgaben für Donnerstag? Viele Grüße, Omar",
     "noteAr": [
       "«kann … kommen»: قوس الفعل المساعد والمصدر — أهمّ بنية في رسائل A1",
       "السؤال في النهاية يجعل الرسالة تواصلاً لا إعلاناً"
@@ -981,7 +981,7 @@
       "موقف صريح مع تعليل (Ich bin der Ansicht, dass …, weil …)",
       "اقتراح بديل أو تعديل؛ Nominalisierungen وPassiv مناسبان لـB2"
     ],
-    "sample": "Der Vorschlag, alle Schülerinnen und Schüler der Oberstufe zu vierzig Stunden Ehrenamt zu verpflichten, klingt zunächst widersprüchlich: Kann Freiwilligkeit verordnet werden? Ein Blick auf die Argumente lohnt sich dennoch.\n\nFür den Vorschlag spricht, dass viele Jugendliche ohne einen solchen Anstoß nie erfahren würden, wie ein Verein, eine Tafel oder ein Pflegeheim von innen aussieht. Zudem entstehen Kontakte über die eigene soziale Gruppe hinaus, was der Integration aller Beteiligten dient. Dagegen lässt sich einwenden, dass erzwungenes Engagement schnell zur bloßen Pflichtübung wird und dass Schüler mit Nebenjob oder Betreuungsaufgaben zusätzlich belastet würden.\n\nIch bin der Ansicht, dass die Idee richtig, die Form aber falsch ist. Statt einer Pflicht mit Stundenzahl sollte die Schule ein Wahlpflichtfach „Engagement“ anbieten, das anerkannt und benotet wird, aber Raum für eigene Projekte lässt. So bliebe der Kern des Ehrenamts erhalten: dass man es selbst gewählt hat.",
+    "sample": "Der Vorschlag, alle Schülerinnen und Schüler der Oberstufe zu vierzig Stunden Ehrenamt zu verpflichten, klingt zunächst widersprüchlich: Kann Freiwilligkeit verordnet werden? Ein Blick auf die Argumente lohnt sich dennoch.\n\nFür den Vorschlag spricht, dass viele Jugendliche ohne einen solchen Anstoß nie erfahren würden, wie ein Verein, eine Tafel oder ein Pflegeheim von innen aussieht. Zudem entstehen Kontakte über die eigene soziale Gruppe hinaus, was der Integration aller Beteiligten dient. Außerdem müsste geklärt werden, wer die Jugendlichen betreut und wie Fahrtkosten sowie Versicherung geregelt werden. Dagegen lässt sich einwenden, dass erzwungenes Engagement schnell zur bloßen Pflichtübung wird und dass Schüler mit Nebenjob oder Betreuungsaufgaben zusätzlich belastet würden.\n\nIch bin der Ansicht, dass die Idee richtig, die Form aber falsch ist. Statt einer Pflicht mit Stundenzahl sollte die Schule ein Wahlpflichtfach „Engagement“ anbieten, das anerkannt und benotet wird, aber Raum für eigene Projekte lässt. So bliebe der Kern des Ehrenamts erhalten: dass man es selbst gewählt hat.",
     "noteAr": [
       "Stellungnahme في B2: الموقف يأتي بعد الموازنة لا قبلها",
       "«Kann Freiwilligkeit verordnet werden?» سؤال بلاغي في المقدمة — أداة أسلوبية تُحتسب في B2",
@@ -1203,7 +1203,7 @@
       "مكان السكن mit in …",
       "هواية واحدة بسيطة"
     ],
-    "sample": "Hallo! Ich heiße Sara. Ich bin 22 Jahre alt. Ich wohne in Tunis. Ich schwimme gern.",
+    "sample": "Hallo! Ich heiße Sara und bin 22 Jahre alt. Ich wohne in Tunis. Ich schwimme gern.",
     "noteAr": [
       "في بطاقة A0 اكتفِ بجمل قصيرة من فاعل وفعل؛ لا حاجة إلى جمل موصولة أو ثانوية.",
       "تحقق من وجود المعلومات الأربع: الاسم، والعمر مع Jahre alt، والسكن مع in، وهواية واحدة."
@@ -1245,7 +1245,7 @@
       "Konkrete Forderung",
       "Freundliche Schlussformel"
     ],
-    "sample": "Betreff: Probleme während meines Aufenthalts\n\nSehr geehrte Damen und Herren,\n\nich war vom 3. bis 5. Oktober in Ihrem Hotel in München, Zimmer 214. Leider war es in meinem Zimmer sehr kalt, weil die Heizung nicht funktionierte. Außerdem hatte ich während des ganzen Wochenendes kein WLAN. Ich habe das Problem am Samstagmorgen an der Rezeption gemeldet, aber leider konnte mir niemand helfen. Deshalb war ich mit meinem Aufenthalt nicht zufrieden. Bitte entschuldigen Sie die Unannehmlichkeiten. Ich bitte um eine teilweise Rückerstattung von 50 Euro. Bitte bestätigen Sie mir kurz, ob das möglich ist.\n\nMit freundlichen Grüßen\nAli Mahdi",
+    "sample": "Betreff: Probleme während meines Aufenthalts\n\nSehr geehrte Damen und Herren,\n\nich war vom 3. bis 5. Oktober in Ihrem Hotel in München, Zimmer 214. Leider war es in meinem Zimmer sehr kalt, weil die Heizung nicht funktionierte. Außerdem hatte ich am Wochenende kein WLAN. Ich habe das Problem am Samstagmorgen an der Rezeption gemeldet, aber leider konnte mir niemand helfen. Deshalb war ich mit meinem Aufenthalt nicht zufrieden. Bitte entschuldigen Sie die Unannehmlichkeiten. Ich bitte um eine teilweise Rückerstattung von 50 Euro. Bitte bestätigen Sie mir kurz, ob das möglich ist.\n\nMit freundlichen Grüßen\nAli Mahdi",
     "noteAr": [
       "ابدأ بسطر موضوع، ثم اذكر تاريخ الإقامة ورقم الغرفة، واشرح المشكلتين بوقائع محددة: التدفئة والواي فاي.",
       "اطلب بوضوح اعتذاراً أو استرداداً جزئياً بمبلغ معلوم، واختم بصيغة مهذبة؛ استخدم الماضي لوصف الإقامة."
@@ -1820,7 +1820,7 @@
       "سبب قصير (ich muss arbeiten)",
       "طلب موعد جديد بأدب"
     ],
-    "sample": "Sehr geehrte Damen und Herren, ich habe am Montag um 9 Uhr einen Termin bei Dr. Weber. Leider muss ich an diesem Tag arbeiten und kann nicht kommen. Ich bitte um einen neuen Termin, gern am Nachmittag. Der neue Termin sollte möglichst nächste Woche sein, weil ich danach verreise. Bitte sagen Sie mir, welche Zeiten noch frei sind. Ich rufe auch gern noch einmal an. Vielen Dank für Ihr Verständnis. Mit freundlichen Grüßen Lina Mansour",
+    "sample": "Sehr geehrte Damen und Herren, ich habe am Montag um 9 Uhr einen Termin bei Dr. Weber. Leider muss ich arbeiten und kann nicht kommen. Könnten Sie mir bitte einen neuen Termin am Nachmittag geben? Vielen Dank für Ihr Verständnis. Mit freundlichen Grüßen Lina Mansour",
     "noteAr": [
       "إلغاء صريح من أول جملة (ich habe … leider muss ich)",
       "تفضيل بديل مرن (gern am Nachmittag) يسهّل الحل",
@@ -2025,7 +2025,7 @@
       "طلب موعد بديل بإطار زمني واضح",
       "خاتمة رسمية (Mit freundlichen Grüßen)"
     ],
-    "sample": "Sehr geehrte Damen und Herren,\n\nich habe am Dienstag um 10 Uhr einen Termin in Ihrem Bürgeramt. Leider kann ich diesen Termin nicht wahrnehmen, weil ich an diesem Tag beruflich verreisen muss. Ich entschuldige mich für die kurzfristige Absage.\n\nKönnten Sie mir bitte einen neuen Termin in der folgenden Woche geben? Am Vormittag würde es mir besonders gut passen. Ich bringe alle Unterlagen vollständig mit.\n\nVielen Dank für Ihr Verständnis. Ich freue mich auf Ihre Rückmeldung.\n\nMit freundlichen Grüßen\nAhmed Benali",
+    "sample": "Sehr geehrte Damen und Herren,\n\nich habe am Dienstag um 10 Uhr einen Termin in Ihrem Bürgeramt. Leider kann ich diesen Termin nicht wahrnehmen, weil ich an diesem Tag beruflich verreisen muss. Ich entschuldige mich für die kurzfristige Absage.\n\nKönnten Sie mir bitte einen neuen Termin in der folgenden Woche geben? Am Vormittag würde es mir besonders gut passen, weil ich nachmittags arbeite. Falls kein Vormittag frei ist, könnte ich auch am Donnerstag ab 16 Uhr kommen. Ich bringe alle Unterlagen vollständig mit.\n\nVielen Dank für Ihr Verständnis. Ich freue mich auf Ihre Rückmeldung.\n\nMit freundlichen Grüßen\nAhmed Benali",
     "noteAr": [
       "سبب واحد محدد بدل أعذار غامضة",
       "طلب بديل مرن (الأسبوع التالي، صباحًا)",
@@ -2048,7 +2048,7 @@
       "وقائع لا آراء فقط",
       "جملة ختامية بما تعلّمته"
     ],
-    "sample": "Gestern war mein erster Tag im Pflegepraktikum in einem Seniorenheim. Zuerst hat mich die Leiterin, Frau Krüger, freundlich begrüßt und mir die Station gezeigt. Danach habe ich eine erfahrene Pflegekraft begleitet. Ich habe gesehen, wie sie Blutdruck gemessen und mit den Bewohnern gesprochen hat. Am Anfang war ich nervös, aber alle waren sehr nett zu mir. Ein Bewohner hat mir von seinem früheren Beruf erzählt. Das fand ich besonders interessant. Am Ende des Tages war ich müde, aber auch glücklich. Ich habe gelernt, dass Pflege viel Geduld und ein offenes Ohr braucht.",
+    "sample": "Gestern war mein erster Tag im Pflegepraktikum in einem Seniorenheim. Zuerst hat mich die Leiterin, Frau Krüger, freundlich begrüßt und mir die Station gezeigt. Danach habe ich eine erfahrene Pflegekraft begleitet. Ich habe gesehen, wie sie Blutdruck gemessen und mit den Bewohnern gesprochen hat. Am Anfang war ich nervös, aber alle waren sehr nett zu mir. Unter Anleitung durfte ich außerdem Getränke verteilen und ein Zimmer vorbereiten. Ein Bewohner hat mir von seinem früheren Beruf erzählt. Das fand ich besonders interessant. Am Ende des Tages war ich müde, aber auch glücklich. Ich habe gelernt, dass Pflege viel Geduld und ein offenes Ohr braucht.",
     "noteAr": [
       "افتتاح بالمكان والزمان",
       "تفاصيل مشاهَدة بعين المتدرب",
@@ -2071,7 +2071,7 @@
       "طلب رد كتابي مؤرّخ",
       "نبرة مهذّبة دون تهديد"
     ],
-    "sample": "Sehr geehrte Damen und Herren,\n\nich habe Ihre Rechnung für meine Behandlung im März erhalten. Meine Versichertennummer steht oben in diesem Schreiben. Einen Betrag verstehe ich leider nicht: Für die Untersuchung werden mir 45 Euro berechnet, obwohl mir vorher gesagt wurde, dass die Kasse diese Kosten übernimmt.\n\nKönnten Sie mir bitte schriftlich erklären, wie sich dieser Betrag genau zusammensetzt? Falls ein Fehler vorliegt, bitte ich Sie um eine neue Rechnung.\n\nVielen Dank für Ihre freundliche Hilfe.\n\nMit freundlichen Grüßen\nSara Haddad",
+    "sample": "Sehr geehrte Damen und Herren,\n\nich habe Ihre Rechnung für meine Behandlung im März erhalten. Meine Versichertennummer ist A123456789, die Rechnungsnummer lautet R-3187. Einen Betrag verstehe ich leider nicht: Für die Untersuchung werden mir 45 Euro berechnet, obwohl mir vorher gesagt wurde, dass die Kasse diese Kosten übernimmt.\n\nKönnten Sie mir bitte schriftlich erklären, wie sich dieser Betrag genau zusammensetzt? Falls ein Fehler vorliegt, bitte ich Sie um eine neue Rechnung. Bitte senden Sie mir Ihre schriftliche Antwort bis zum 15. April zu.\n\nVielen Dank für Ihre freundliche Hilfe.\n\nMit freundlichen Grüßen\nSara Haddad",
     "noteAr": [
       "مرجع دقيق (الشهر والمبلغ) دون سنوات قابلة للتكذيب",
       "طلب تصحيح مشروط بهدوء (falls)",
@@ -2140,7 +2140,7 @@
       "مخاطر حقيقية لا شعارات",
       "موقف متوازن مشروط في الختام"
     ],
-    "sample": "Tablets statt Papierakten, digitale Dienstpläne, Werte direkt am Bett eintragen: Die Digitalisierung verändert die Pflege schnell. Ob sie sie besser macht, hängt davon ab, wie man sie einführt.\n\nEinerseits spart die digitale Dokumentation Zeit. Werte sind sofort für alle sichtbar, Fehler durch unleserliche Handschrift werden seltener. Andererseits entstehen neue Risiken: Patientendaten sind sensibel und brauchen starken Schutz. Außerdem darf der Bildschirm nicht wichtiger werden als der Mensch. Ein Tablet kann kein Gespräch ersetzen.\n\nMeiner Ansicht nach gilt: Technik soll der Pflege dienen, nicht umgekehrt. Wenn digitale Werkzeuge Zeit für Gespräche freimachen und sicher sind, verbessern sie die Versorgung. Ohne Schulung und Datenschutz bleibt sie jedoch ein Risiko. Entscheidend ist also nicht die Technik selbst, sondern ihr verantwortungsvoller Einsatz im Alltag.",
+    "sample": "Tablets statt Papierakten, digitale Dienstpläne, Werte direkt am Bett eintragen: Die Digitalisierung verändert die Pflege schnell. Ob sie sie besser macht, hängt davon ab, wie man sie einführt.\n\nEinerseits spart die digitale Dokumentation Zeit. So bleibt im Idealfall mehr Zeit für Gespräche, Mobilisierung und Beratung. Werte sind sofort für alle sichtbar, Fehler durch unleserliche Handschrift werden seltener. Andererseits entstehen neue Risiken: Patientendaten sind sensibel und brauchen starken Schutz. Ein Systemausfall kann zudem wichtige Abläufe verzögern. Außerdem darf der Bildschirm nicht wichtiger werden als der Mensch. Ein Tablet kann kein Gespräch ersetzen.\n\nMeiner Ansicht nach gilt: Technik soll der Pflege dienen, nicht umgekehrt. Wenn digitale Werkzeuge Zeit für Gespräche freimachen und sicher sind, verbessern sie die Versorgung. Ohne Schulung und Datenschutz bleibt sie jedoch ein Risiko. Entscheidend ist also nicht die Technik selbst, sondern ihr verantwortungsvoller Einsatz im Alltag.",
     "noteAr": [
       "بنية einerseits/andererseits كاملة",
       "حجة الإنسانية مقابل حجة الكفاءة",
@@ -2192,7 +2192,7 @@
       "ربط كل محور بأثره العملي",
       "ترتيب أولويات مبرَّر في الختام"
     ],
-    "sample": "Der Mangel an Pflegekräften ist eines der größten Probleme unseres Gesundheitssystems. Um den Beruf attraktiver zu machen, werden oft drei Wege genannt: mehr Gehalt, bessere Arbeitszeiten und mehr Anerkennung.\n\nEin faires Gehalt ist ohne Zweifel wichtig. Wer Verantwortung für Menschen trägt, muss davon gut leben können. Doch Geld allein hält niemanden in einem Beruf, der körperlich und seelisch erschöpft. Planbare Dienste, echte Pausen und genug Personal pro Schicht entscheiden darüber, ob Pflegekräfte gesund bleiben. Hinzu kommt die Anerkennung: Pflege ist eine hochqualifizierte Arbeit und keine bloße Hilfstätigkeit.\n\nMeiner Meinung nach steht die Arbeitszeit an erster Stelle, gefolgt von Bezahlung und Anerkennung. Denn nur wer den Beruf langfristig gesund ausüben kann, bleibt — und genau das brauchen die Patienten am meisten.",
+    "sample": "Der Mangel an Pflegekräften ist eines der größten Probleme unseres Gesundheitssystems. Um den Beruf attraktiver zu machen, werden oft drei Wege genannt: mehr Gehalt, bessere Arbeitszeiten und mehr Anerkennung.\n\nEin faires Gehalt ist ohne Zweifel wichtig. Zuschläge für Nacht- und Wochenenddienste müssen transparent und verlässlich sein. Wer Verantwortung für Menschen trägt, muss davon gut leben können. Doch Geld allein hält niemanden in einem Beruf, der körperlich und seelisch erschöpft. Planbare Dienste, echte Pausen und genug Personal pro Schicht entscheiden darüber, ob Pflegekräfte gesund bleiben. Auch verlässliche Dienstpläne und mehr Personal würden Familien entlasten und kurzfristiges Einspringen begrenzen. Hinzu kommt die Anerkennung: Pflege ist schließlich eine hochqualifizierte und unverzichtbare Arbeit und keine bloße Hilfstätigkeit.\n\nMeiner Meinung nach steht die Arbeitszeit an erster Stelle, gefolgt von Bezahlung und Anerkennung. Denn nur wer den Beruf langfristig gesund ausüben kann, bleibt — und genau das brauchen die Patienten am meisten.",
     "noteAr": [
       "تمييز بين الجذب والبقاء في المهنة",
       "كل محور مرتبط بنتيجة عملية",
@@ -2244,7 +2244,7 @@
       "ملاحظة ختامية تنقل صورة المهنة",
       "لغة تقرير لا يوميات عاطفية"
     ],
-    "sample": "Für unsere Schülerzeitung durfte ich einen Tag auf der Pflegestation eines Krankenhauses verbringen. Um sieben Uhr begann der Dienst mit der Übergabe: Das Nachtteam berichtete über jeden Patienten. Danach begleitete ich eine Pflegefachkraft bei ihrer Runde.\n\nZuerst half sie einer älteren Patientin beim Waschen und Anziehen. Dabei sprach sie ruhig und erklärte jeden Schritt. Später maß sie Blutdruck und Puls, trug die Werte in die Dokumentation ein und beantwortete die Fragen eines besorgten Angehörigen am Telefon. Ich war überrascht, wie viel Organisation und Wissen hinter jeder kleinen Tätigkeit steckt.\n\nAm Ende des Tages war mir klar: Pflege bedeutet nicht nur Medizin, sondern vor allem Zeit, Geduld und Respekt für jeden Menschen. Dieser Tag hat meinen Respekt vor dem Beruf deutlich wachsen lassen.",
+    "sample": "Für unsere Schülerzeitung durfte ich einen Tag auf der Pflegestation eines Krankenhauses verbringen. Um sieben Uhr begann der Dienst mit der Übergabe: Das Nachtteam berichtete über jeden Patienten. Danach begleitete ich eine Pflegefachkraft bei ihrer Runde. Vor jedem Zimmer prüfte sie den Plan und besprach Änderungen mit dem Team.\n\nZuerst half sie einer älteren Patientin beim Waschen und Anziehen. Dabei sprach sie ruhig und erklärte jeden Schritt. Später maß sie Blutdruck und Puls, trug die Werte in die Dokumentation ein und beantwortete die Fragen eines besorgten Angehörigen am Telefon. Ich war überrascht, wie viel Organisation und Wissen hinter jeder kleinen Tätigkeit steckt. Gleichzeitig musste sie aufmerksam zuhören und Entscheidungen verständlich erklären.\n\nAm Ende des Tages war mir klar: Pflege bedeutet nicht nur Medizin, sondern vor allem Zeit, Geduld und Respekt für jeden Menschen. Dieser Tag hat meinen Respekt vor dem Beruf deutlich wachsen lassen.",
     "noteAr": [
       "مشاهد متسلسلة بمنطق الوردية",
       "توازن بين التقني والإنساني",

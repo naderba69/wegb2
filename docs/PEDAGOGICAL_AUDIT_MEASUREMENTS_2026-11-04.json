@@ -236,11 +236,12 @@
     "register": "docs/PEDAGOGICAL_AUDIT_WRITING_CONSISTENCY_2026-11-04.csv",
     "wordCountMethod": "Unicode word-token regex; ±20% is an audit triage band, not an exam scoring rule",
     "sentenceCountMethod": "sentence-final punctuation count; treated as pedagogical risk because greetings may not count as sentences",
-    "fixedFindings": 27,
-    "openReviewFindings": 15,
+    "fixedFindings": 42,
+    "openReviewFindings": 0,
     "fixedConfirmedErrors": 25,
     "currentPromptConfigWordTargetConflicts": 0,
-    "regressionGate": "npm run audit:writing-consistency"
+    "regressionGate": "npm run audit:writing-consistency",
+    "fixedPedagogicalRisks": 17
   },
   "inventorySnapshot": {
     "indexedTrackedFilesAndAuditArtifacts": 3531,
