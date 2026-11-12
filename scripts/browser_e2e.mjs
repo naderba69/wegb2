@@ -450,6 +450,55 @@ async function main() {
     })()`, "Abrufstation öffnet live und hält Lösungen vor der Abgabe zurück", SW_TIMEOUT);
     if (!retrievalPractice) fail("Abrufstation wurde nicht als echte verdeckte Aufgabe geöffnet");
 
+    stage = "learner-declared local profile signal";
+    await navigate(cdp, sessionId, `${ORIGIN}/einstellungen`);
+    await poll(cdp, sessionId, `!!document.querySelector('[data-testid="lernziel-arbeit"]')`, "Lernziel-Auswahl in Einstellungen", SW_TIMEOUT);
+    // useProgress kann bei einem noch nie gespeicherten Profil zunächst den IndexedDB-Fallback laden.
+    // Erst danach klicken, sonst würde dessen Abschluss die sehr frühe Eingabe wieder überschreiben.
+    await evalJs(cdp, sessionId, `new Promise((resolve)=>setTimeout(resolve,1000))`);
+    await evalJs(cdp, sessionId, `document.querySelector('[data-testid="lernziel-arbeit"]')?.click()`);
+    const profileGoalSaved = await poll(cdp, sessionId,
+      `document.querySelector('[data-testid="lernziel-arbeit"]')?.getAttribute("aria-pressed")==="true"`,
+      "Gespeichertes Lernziel Arbeit", SW_TIMEOUT);
+    await evalJs(cdp, sessionId, `document.querySelector('[data-testid="tempo-leicht"]')?.click()`);
+    const profilePaceSaved = await poll(cdp, sessionId,
+      `document.querySelector('[data-testid="tempo-leicht"]')?.getAttribute("aria-pressed")==="true"`,
+      "Gespeichertes leichtes Kartentempo", SW_TIMEOUT);
+    await evalJs(cdp, sessionId, `(()=>{
+      const input=document.querySelector('[data-testid="exam-date"]');
+      const setter=Object.getOwnPropertyDescriptor(HTMLInputElement.prototype,"value")?.set;
+      setter?.call(input,"2099-12-31");
+      input?._valueTracker?.setValue("");
+      input?.dispatchEvent(new Event("input",{bubbles:true}));
+      input?.dispatchEvent(new Event("change",{bubbles:true}));
+      return input?.value;
+    })()`);
+    const profileDateSaved = await poll(cdp, sessionId, `(()=>{
+      const inputOk=document.querySelector('[data-testid="exam-date"]')?.value==="2099-12-31";
+      const storageOk=Object.keys(localStorage).some((key)=>{try{return JSON.parse(localStorage.getItem(key)??"null")?.settings?.examDate==="2099-12-31"}catch{return false}});
+      return inputOk&&storageOk;
+    })()`, "Gespeicherter externer Prüfungstermin im aktiven lokalen Profil", SW_TIMEOUT);
+    const profileSettings = await poll(cdp, sessionId, `(()=>{
+      const privacy=document.querySelector('[data-testid="lernprofil-privacy"]');
+      return privacy?.textContent?.includes("على جهازك")&&privacy.textContent.includes("تُرسل هذه القيم")
+        ? {goal:"arbeit",pace:"leicht",date:"2099-12-31",localOnly:true}:false;
+    })()`, "Lokale Datenschutzaussage für Lernziel, Kartentempo und Termin", SW_TIMEOUT);
+    if (!profileGoalSaved || !profilePaceSaved || !profileDateSaved) fail("Lernprofil-Werte wurden nicht über die echten Bedienelemente gespeichert");
+    if (!profileSettings) fail("Lernprofil-Einstellungen wurden nicht transparent gespeichert");
+    await navigate(cdp, sessionId, `${ORIGIN}/ueben`);
+    const profileRecommendation = await poll(cdp, sessionId, `(()=>{
+      const button=document.querySelector('[data-testid="ueben-empfehlung-vollpruefung"]');
+      return button ? {station:"vollpruefung",text:(button.textContent??"").trim()}:false;
+    })()`, "Lokale Profil-Empfehlung für bestehende Prüfungsstation", SW_TIMEOUT);
+    if (!profileRecommendation || !profileRecommendation.text.includes("عمل / تدريب مهني") ||
+      !profileRecommendation.text.includes("حتى 3 بطاقات") || !profileRecommendation.text.includes("موعد الامتحان") ||
+      !profileRecommendation.text.includes("لا يضغط الخطة")) {
+      fail(`Lernprofil-Signal wurde nicht nachvollziehbar gerendert: ${JSON.stringify(profileRecommendation)}`);
+    }
+    await evalJs(cdp, sessionId, `document.querySelector('[data-testid="ueben-empfehlung-vollpruefung"]')?.click()`);
+    const profileStationOpened = await poll(cdp, sessionId, `!!document.querySelector('[data-testid="vollpruefung-stufe-B2"]')`, "Profil-Empfehlung öffnet bestehende Prüfungsstation");
+    if (!profileStationOpened) fail("Profil-Empfehlung öffnete nicht die bestehende Station");
+
     stage = "30 item four part listening round";
     await navigate(cdp, sessionId, `${ORIGIN}/ueben`);
     await poll(cdp, sessionId, `!!document.querySelector('[data-testid="ueben-karte-vollpruefung"]')`, "Prüfungstrainingskarte");
@@ -533,6 +582,7 @@ async function main() {
       libraryFilters: { familyFilterCount, searchFilterCount },
       practiceNavigator,
       retrievalPractice,
+      learnerProfile: { settings: profileSettings, recommendation: profileRecommendation, stationOpened: !!profileStationOpened },
       fullListeningScope,
       renderedListeningParts,
       serviceWorker: { active: true, caches: online.entries, missing: online.missing },

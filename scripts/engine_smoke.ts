@@ -15448,6 +15448,87 @@ function collectR262(dir: string, out: string[] = []): string[] {
     "K361c دليل 852 يغلق الاختبار الآلي فقط ويبقي المصدر والإتاحة اليدوية والميدان والادعاء السببي معلقة");
 }
 
+/* K362 · R165: هدف/إيقاع/موعد محلي شفاف داخل الملاح الحي، بلا تغيير خطة */
+{
+  const nowK362 = new Date("2026-11-04T12:00:00.000Z");
+  const zielK362: Progress = {
+    ...emptyProgress,
+    settings: { ...emptyProgress.settings, placed: true, lernziel: "pflege", tempo: "leicht" },
+  };
+  const zielVorherK362 = JSON.stringify(zielK362);
+  const zielRecK362 = baueUebungsEmpfehlungen(zielK362, { now: nowK362 });
+  const zielSignalK362 = zielRecK362.find((entry) => entry.signal === "learning-profile");
+  ok(zielRecK362.map((entry) => entry.station).join(",") === "selbsttest,pflege,blitz" && !!zielSignalK362 &&
+    zielSignalK362.messwertAr.includes("تمريض / عمل مناوبات") && zielSignalK362.messwertAr.includes("حتى 3 بطاقات") &&
+    zielSignalK362.grundAr.includes("ليست حكماً") && JSON.stringify(zielK362) === zielVorherK362,
+    "K362a هدف التمريض يضيف محطة Pflege الحية بعد الاسترجاع مع الهدف وحد البطاقات والحد الادعائي، بلا طفرة في الملف");
+
+  const terminK362: Progress = {
+    ...emptyProgress,
+    settings: {
+      ...emptyProgress.settings,
+      placed: true,
+      lernziel: "arbeit",
+      tempo: "intensiv",
+      examDate: "2026-11-20",
+      examName: "B2 داخلي",
+    },
+  };
+  const terminRecK362 = baueUebungsEmpfehlungen(terminK362, { now: nowK362 });
+  ok(terminRecK362[0]?.station === "vollpruefung" && terminRecK362[0]?.signal === "learning-profile" &&
+    terminRecK362[0]?.messwertAr.includes("عمل / تدريب مهني") && terminRecK362[0]?.messwertAr.includes("حتى 10 بطاقات") &&
+    terminRecK362[0]?.messwertAr.includes("بعد 16 يوماً") && terminRecK362[0]?.grundAr.includes("لا يضغط الخطة") &&
+    terminK362.plan.day === emptyProgress.plan.day && terminK362.plan.tasks === emptyProgress.plan.tasks,
+    "K362b الموعد القريب يرفع التدريب الامتحاني الداخلي اختيارياً ويعرض الهدف والإيقاع والعد التنازلي، من دون تعديل يوم أو مهام الخطة");
+
+  const vergangenK362: Progress = {
+    ...emptyProgress,
+    settings: { ...emptyProgress.settings, placed: true, lernziel: "bamf", examDate: "2026-10-20" },
+  };
+  const vergangenRecK362 = baueUebungsEmpfehlungen(vergangenK362, { now: nowK362 });
+  const vergangenSignalK362 = vergangenRecK362.find((entry) => entry.signal === "learning-profile");
+  ok(vergangenSignalK362?.station === "leben" && vergangenSignalK362.messwertAr.includes("مضى منذ 15 يوماً") &&
+    vergangenSignalK362.prioritaet === 46,
+    "K362c الموعد المنقضي لا يصنع استعجالاً وهمياً ولا يحوّل الهدف إلى امتحان؛ تبقى محطة BAMF السياقية وسبب انتهاء الموعد ظاهرين");
+
+  const ungueltigK362: Progress = {
+    ...emptyProgress,
+    settings: { ...emptyProgress.settings, placed: true, lernziel: "allgemein", examDate: "2026-02-31" },
+  };
+  const ungueltigRecK362 = baueUebungsEmpfehlungen(ungueltigK362, { now: nowK362 });
+  ok(!ungueltigRecK362.some((entry) => entry.signal === "learning-profile") &&
+    ungueltigRecK362.map((entry) => entry.station).join(",") === "selbsttest,blitz",
+    "K362d تاريخ فاسد مع هدف عام لا يتحول إلى توصية أو أولوية مختلقة، ويبقى fallback السابق كما هو");
+
+  const typenK362 = readFileSync("lib/types.ts", "utf8");
+  const wizardK362 = readFileSync("components/onboarding-wizard.tsx", "utf8");
+  const settingsK362 = readFileSync("app/einstellungen/page.tsx", "utf8");
+  const uebenK362 = readFileSync("app/ueben/page.tsx", "utf8");
+  ok(typenK362.includes("onboardingDone?: boolean") && typenK362.includes("lernziel?: Lernziel") &&
+    !wizardK362.includes("p: any") && !wizardK362.includes("progress as any") && !wizardK362.includes("o.id as any") &&
+    wizardK362.includes('data-testid="onboarding-profil-grenze"') &&
+    settingsK362.includes('data-testid="lernprofil-einstellungen"') && settingsK362.includes('data-testid="lernprofil-privacy"') &&
+    uebenK362.includes("هدفك وإيقاع البطاقات وموعدك المعلن") && !uebenK362.includes("tool-725"),
+    "K362e فجوة typing مغلقة، والهدف قابل للتعديل مع حدود الخطة والخصوصية في البداية والإعدادات والملاح، بلا استيراد نموذج 725");
+
+  const evidenceK362 = JSON.parse(readFileSync("evidence/tool-catalog/725-local-personalized-learning-support.json", "utf8")) as {
+    toolId: number;
+    automatedTests: { status: string; testCases: unknown[] };
+    sourceReview: { status: string };
+    fieldValidation: { status: string };
+    accessibilityPrivacyReview: { status: string; limitationsAr: string };
+    releaseDecision: { productStatus: string; decision: string };
+  };
+  ok(evidenceK362.toolId === 725 && evidenceK362.automatedTests.status === "verified" &&
+    evidenceK362.automatedTests.testCases.length >= 8 && evidenceK362.sourceReview.status === "pending" &&
+    evidenceK362.fieldValidation.status === "pending" &&
+    evidenceK362.accessibilityPrivacyReview.status === "automated-lab-reviewed" &&
+    evidenceK362.accessibilityPrivacyReview.limitationsAr.includes("لا يثبت") &&
+    evidenceK362.releaseDecision.productStatus === "candidate-live-implementation" &&
+    evidenceK362.releaseDecision.decision === "defer",
+    "K362f دليل 725 يغلق السلوك الآلي المحلي فقط ويبقي المصدر والإتاحة اليدوية والعدالة والأثر والميدان معلقة");
+}
+
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);
 if (fails.length) {
   for (const f of fails) console.log("  ✗ " + f);

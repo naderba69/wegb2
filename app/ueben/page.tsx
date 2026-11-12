@@ -328,7 +328,7 @@ export default function Ueben() {
         <div>
           <h2 id="ueben-empfehlungen-titel" style={{ margin: 0, fontSize: "1rem" }}>🧭 مقترح الآن</h2>
           <p className="tiny muted" style={{ margin: "0.2rem 0 0", lineHeight: 1.7 }}>
-            ترتيب محلي حتمي يجمع درس اليوم ودفتر الأخطاء وSRS وشبكة المهارات. لا يغيّر خطتك ولا يرسل بياناتك.
+            ترتيب محلي حتمي يجمع درس اليوم ودفتر الأخطاء وSRS وشبكة المهارات، ثم هدفك وإيقاع البطاقات وموعدك المعلن. لا يغيّر خطتك أو أقفالها ولا يرسل بياناتك.
           </p>
         </div>
         <div style={{ display: "grid", gap: "0.45rem" }}>

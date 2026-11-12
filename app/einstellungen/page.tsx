@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useProgress, loadProgress } from "@/lib/store";
 import { LANG_LABEL, effectiveLang } from "@/lib/i18n";
 import { noteFromPct, LLM_ANBIETER } from "@/lib/grader";
-import { TEMPO_LABEL } from "@/lib/types";
+import { LERNZIEL_LABEL, TEMPO_LABEL } from "@/lib/types";
 import { Fehlerkartei, Lernstrategien } from "@/components/fehler-ui";
 import { AbzeichenKarte, ElternBriefView, XpBar } from "@/components/wochen";
 import { ProfilVerwaltung } from "@/components/profil";
@@ -17,13 +17,13 @@ import { PHASE_START, levelAmTag } from "@/lib/phasen";
 import { OfflineKarte } from "@/components/offline";
 import { KlassenAnsicht } from "@/components/klassenansicht";
 import { ZielTempoKarte } from "@/components/zieltempo";
-import type { UiLang, Tempo, Level } from "@/lib/types";
+import type { UiLang, Tempo, Level, Lernziel } from "@/lib/types";
 import { effektiveRate, rateFuerLevel, rateModus } from "@/lib/rate";
 import { progressFuerExport, pruefeImportText, sicherungFaellig } from "@/lib/backup";
 import { ErinnerungKarte } from "@/components/erinnerung";
 
 export default function Einstellungen() {
-  const { progress, update, importProgress, reset } = useProgress();
+  const { progress, update, importProgress, reset, ready } = useProgress();
   const fileRef = useRef<HTMLInputElement>(null);
   const [msg, setMsg] = useState("");
   const [voices, setVoices] = useState<SpeechSynthesisVoice[]>([]);
@@ -43,6 +43,10 @@ export default function Einstellungen() {
   useEffect(() => {
     warmVoices((vs) => setVoices(vs));
   }, []);
+
+  if (!ready) {
+    return <div className="today-screen" role="status" aria-live="polite">⏳ جارٍ استعادة إعدادات ملفك المحلي…</div>;
+  }
 
   const exportJson = () => {
     // R303/ب6: النسخة تحمل أيضًا عدّاد القراءة الحرّة وإعدادات الراحة (مفاتيح weg-* الفرعية)
@@ -149,6 +153,43 @@ export default function Einstellungen() {
           </div>
         </details>
 
+        <details className="dirb-details" open data-testid="lernprofil-einstellungen">
+          <summary>🎯 هدف التعلم وإشارة الاقتراح</summary>
+          <p id="lernziel-hinweis" style={{ color: "var(--color-ink2)", fontSize: "0.9rem", margin: "0.6rem 0 0.8rem", lineHeight: 1.9 }}>
+            اختر السياق الذي تريد دعمه. يستعمل ملاح «تدرّب» هذا الاختيار محلياً ليقترح محطة موجودة مع السبب؛ لا يغيّر خطة 378 يوماً أو أقفالها، ولا يثبت أن الاقتراح يحسّن التعلم.
+          </p>
+          <div role="group" aria-label="هدف التعلم" aria-describedby="lernziel-hinweis" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(10rem, 1fr))", gap: "0.55rem" }}>
+            {([
+              { id: "bamf", icon: "🏛️" },
+              { id: "pflege", icon: "🩺" },
+              { id: "studium", icon: "🎓" },
+              { id: "arbeit", icon: "🔧" },
+              { id: "allgemein", icon: "🌍" },
+            ] as Array<{ id: Lernziel; icon: string }>).map(({ id, icon }) => (
+              <button
+                key={id}
+                type="button"
+                className="btn"
+                data-testid={`lernziel-${id}`}
+                aria-pressed={progress.settings.lernziel === id}
+                onClick={() => update((p) => ({ ...p, settings: { ...p.settings, lernziel: id } }))}
+                style={{
+                  minHeight: "48px",
+                  textAlign: "start",
+                  background: progress.settings.lernziel === id ? "rgb(34 197 94 / 0.14)" : "transparent",
+                  border: `2px solid ${progress.settings.lernziel === id ? "#22c55e" : "var(--color-line)"}`,
+                }}
+              >
+                <span aria-hidden>{icon} </span>{LERNZIEL_LABEL[id].ar}
+                <span className="tiny muted" style={{ display: "block" }}>{LERNZIEL_LABEL[id].de}</span>
+              </button>
+            ))}
+          </div>
+          <p className="tiny muted" data-testid="lernprofil-privacy" style={{ margin: "0.7rem 0 0", lineHeight: 1.8 }}>
+            🔒 الهدف والإيقاع والموعد محفوظة في هذا الملف على جهازك. تُشتق التوصية عند العرض ولا تُرسل هذه القيم إلى شبكة.
+          </p>
+        </details>
+
         <details className="dirb-details" open>
           <summary>🎚️ إيقاع المحتوى اليومي</summary>
           <p style={{ color: "var(--color-ink2)", fontSize: "0.9rem", margin: "0.6rem 0 0.8rem", lineHeight: 1.9 }}>
@@ -159,7 +200,10 @@ export default function Einstellungen() {
             {(["leicht", "regelmaessig", "intensiv"] as Tempo[]).map((v) => (
               <button
                 key={v}
+                type="button"
                 className="btn"
+                data-testid={`tempo-${v}`}
+                aria-pressed={progress.settings.tempo === v}
                 onClick={() => update((p) => ({ ...p, settings: { ...p.settings, tempo: v } }))}
                 style={{
                   padding: "0.85rem 0.6rem",
@@ -188,12 +232,16 @@ export default function Einstellungen() {
             <input
               className="field"
               type="date"
+              data-testid="exam-date"
+              aria-label="تاريخ الامتحان الخارجي"
               value={progress.settings.examDate ?? ""}
               onChange={(e) => update((p) => ({ ...p, settings: { ...p.settings, examDate: e.target.value || undefined } }))}
             />
             <input
               className="field"
               style={{ flex: 1, minWidth: "10rem" }}
+              data-testid="exam-name"
+              aria-label="اسم الامتحان الخارجي"
               placeholder="الاسم — مثلاً: Goethe-Zertifikat B2"
               value={progress.settings.examName ?? ""}
               onChange={(e) => update((p) => ({ ...p, settings: { ...p.settings, examName: e.target.value || undefined } }))}

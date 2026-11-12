@@ -403,6 +403,16 @@ export interface Kontrakt {
 /** تقييمُ الثقةِ قبلَ الإجابة (Modul: Metakognition): سجلٌّ خامٌّ يُشتقُّ منه مؤشّرُ «الثقةِ الخاطئة» */
 export interface SicherheitsEintrag { t: string; id: string; sicher: boolean; correct: boolean }
 
+/** هدف يختاره المتعلم بنفسه؛ يوجّه اقتراحاً اختيارياً فقط ولا يغيّر الخطة أو يثبت أثراً تعليمياً. */
+export type Lernziel = "bamf" | "pflege" | "studium" | "arbeit" | "allgemein";
+export const LERNZIEL_LABEL: Record<Lernziel, { de: string; ar: string }> = {
+  bamf: { de: "BAMF Integrationskurs", ar: "اندماج BAMF + جنسية" },
+  pflege: { de: "Pflege / Arbeit", ar: "تمريض / عمل مناوبات" },
+  studium: { de: "Studium", ar: "دراسة جامعية" },
+  arbeit: { de: "Arbeit / Ausbildung", ar: "عمل / تدريب مهني" },
+  allgemein: { de: "Allgemein B2", ar: "لغة عامة B2" },
+};
+
 /** إيقاع المحتوى الذي يختاره المستخدم؛ لا يحدد هدف الجلسة ولا يغيّر تقدير دقائق المهام. */
 export type Tempo = "leicht" | "regelmaessig" | "intensiv";
 export const TEMPO_LABEL: Record<Tempo, { de: string; ar: string; cards: number }> = {
@@ -476,6 +486,10 @@ export interface Progress {
     cloudSpeech?: boolean;
     /** 011 Schlaf-Reminder aktiv */
     schlafReminder?: boolean;
+    /** اكتملت خطوة البداية المحلية؛ لا تعني اجتياز تشخيص أو تحققاً من ملاءمة الهدف. */
+    onboardingDone?: boolean;
+    /** الهدف الذي صرّح به المتعلم؛ يستعمله ملاح التدريب لإشارة اختيارية شفافة فقط. */
+    lernziel?: Lernziel;
     /** أُكِّد اختبار تحديد المستوى */
     placed?: boolean;
     /** 🪪 نتيجة التشخيص التكيّفي (M3/R183): تقدير كلّ مهارة واليوم المطبَّق وتاريخه — تقدير آلي من بنوك التطبيق لا اختبار رسمي */

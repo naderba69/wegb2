@@ -2,27 +2,27 @@
 import { useState } from "react";
 import { useProgress } from "@/lib/store";
 import { speakAny } from "@/lib/speech";
+import type { Lernziel, Tempo } from "@/lib/types";
 
-type Ziel = "bamf" | "pflege" | "studium" | "arbeit" | "allgemein";
-const ZIELE: { id: Ziel; labelDe: string; labelAr: string; descAr: string; icon: string }[] = [
-  { id: "bamf", labelDe: "BAMF Integrationskurs", labelAr: "اندماج BAMF + جنسية", descAr: "700UE (600 لغة + 100 Orientierung) — مسارنا 378ي يغطيها", icon: "🏛️" },
-  { id: "pflege", labelDe: "Pflege / Arbeit", labelAr: "تمريض / عمل مناوبات", descAr: "نظام مناوبات — اختر Tempo leicht (600ي / 74د/يوم) أو langsam", icon: "🩺" },
-  { id: "studium", labelDe: "Studium", labelAr: "دراسة جامعية", descAr: "B2 أكاديمي + Nominalstil — مسار regelmaessig 378ي", icon: "🎓" },
-  { id: "arbeit", labelDe: "Arbeit / Ausbildung", labelAr: "عمل / تدريب مهني", descAr: "B1-B2 مهني — intensiv 180ي للمتفرغ", icon: "🔧" },
-  { id: "allgemein", labelDe: "Allgemein B2", labelAr: "لغة عامة B2", descAr: "هدف مفتوح — اختر الوتيرة التي تناسبك", icon: "🌍" },
+const ZIELE: { id: Lernziel; labelDe: string; labelAr: string; descAr: string; icon: string }[] = [
+  { id: "bamf", labelDe: "BAMF Integrationskurs", labelAr: "اندماج BAMF + جنسية", descAr: "تدريب اختياري على مؤسسات الحياة والاندماج", icon: "🏛️" },
+  { id: "pflege", labelDe: "Pflege / Arbeit", labelAr: "تمريض / عمل مناوبات", descAr: "تدريب اختياري على لغة الرعاية والعمل", icon: "🩺" },
+  { id: "studium", labelDe: "Studium", labelAr: "دراسة جامعية", descAr: "قراءة وكتابة إضافيتان للسياق الأكاديمي", icon: "🎓" },
+  { id: "arbeit", labelDe: "Arbeit / Ausbildung", labelAr: "عمل / تدريب مهني", descAr: "مقابلات ومواقف مهنية اختيارية", icon: "🔧" },
+  { id: "allgemein", labelDe: "Allgemein B2", labelAr: "لغة عامة B2", descAr: "هدف مفتوح مع بقاء الخطة الأساسية كما هي", icon: "🌍" },
 ];
 
 export function OnboardingWizard() {
   const { progress, update, ready } = useProgress();
   const [step, setStep] = useState(1);
-  const [ziel, setZiel] = useState<Ziel | null>(null);
-  const [tempo, setTempo] = useState<"leicht" | "regelmaessig" | "intensiv">("regelmaessig");
+  const [ziel, setZiel] = useState<Lernziel | null>(null);
+  const [tempo, setTempo] = useState<Tempo>("regelmaessig");
   if (!ready) return null;
-  const done = (progress as any).settings?.onboardingDone;
+  const done = progress.settings.onboardingDone;
   if (done) return null;
 
   const speichern = () => {
-    update((p: any) => ({
+    update((p) => ({
       ...p,
       settings: { ...p.settings, tempo, onboardingDone: true, lernziel: ziel ?? "allgemein" },
     }));
@@ -50,11 +50,11 @@ export function OnboardingWizard() {
         {step === 1 && (
           <>
             <p style={{ fontSize: "0.88rem", color: "var(--color-ink2)", margin: "0.2rem 0 0.6rem" }}>
-              378 يوم = 152د/يوم B2 (داخل السقف D1_B2_DECKEL_MIN) — ليس سباقاً. اختر هدفك لنرشّح لك الوتيرة والمسار (BAMF 100UE Orientierung + B2).
+              خطتك الأساسية 378 يوماً وليست سباقاً. اختر هدفك لنُظهر محطة تدريب اختيارية مناسبة مع سببها؛ الاختيار لا يحذف درساً ولا يفتح قفلاً.
             </p>
-            <div style={{ display: "grid", gap: "0.45rem" }}>
+            <div role="group" aria-label="اختر هدف التعلم" style={{ display: "grid", gap: "0.45rem" }}>
               {ZIELE.map(z => (
-                <button key={z.id} onClick={() => setZiel(z.id)} className="dirb-menu-btn" style={{ width: "100%", textAlign: "start", borderColor: ziel === z.id ? "var(--ui-green)" : undefined, background: ziel === z.id ? "var(--ui-green-soft)" : undefined, padding: "0.6rem 0.8rem", borderRadius: "0.8rem", display: "flex", gap: "0.6rem", alignItems: "center", cursor: "pointer", minHeight: "44px" }}>
+                <button key={z.id} type="button" data-testid={`onboarding-lernziel-${z.id}`} aria-pressed={ziel === z.id} onClick={() => setZiel(z.id)} className="dirb-menu-btn" style={{ width: "100%", textAlign: "start", borderColor: ziel === z.id ? "var(--ui-green)" : undefined, background: ziel === z.id ? "var(--ui-green-soft)" : undefined, padding: "0.6rem 0.8rem", borderRadius: "0.8rem", display: "flex", gap: "0.6rem", alignItems: "center", cursor: "pointer", minHeight: "44px" }}>
                   <span style={{ fontSize: "1.2rem" }}>{z.icon}</span>
                   <span style={{ flex: 1 }}>
                     <b style={{ display: "block", fontSize: "0.92rem" }}>{z.labelAr} — {z.labelDe}</b>
@@ -73,28 +73,22 @@ export function OnboardingWizard() {
 
         {step === 2 && (
           <>
-            <p style={{ fontSize: "0.88rem", fontWeight: 800 }}>اختر وتيرتك اليومية (تؤثر في بطاقات اليوم وحمله):</p>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "0.5rem", margin: "0.5rem 0" }}>
+            <p style={{ fontSize: "0.88rem", fontWeight: 800 }}>اختر إيقاع البطاقات الجديدة:</p>
+            <div role="group" aria-label="اختر إيقاع البطاقات الجديدة" style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "0.5rem", margin: "0.5rem 0" }}>
               {([
-                { id: "leicht", label: "leicht", sub: "3 بطاقات/يوم · 600ي", desc: "74د/يوم — لمناوبات" },
-                { id: "regelmaessig", label: "regelmaessig", sub: "5 بطاقات/يوم · 378ي", desc: "152د/يوم — افتراضي" },
-                { id: "intensiv", label: "intensiv", sub: "10 بطاقات/يوم · 180ي", desc: "332د/يوم مكثف" },
+                { id: "leicht", label: "leicht", sub: "حتى 3 بطاقات/يوم", desc: "خفيف" },
+                { id: "regelmaessig", label: "regelmaessig", sub: "حتى 5 بطاقات/يوم", desc: "افتراضي" },
+                { id: "intensiv", label: "intensiv", sub: "حتى 10 بطاقات/يوم", desc: "مكثّف" },
               ] as const).map(o => (
-                <button key={o.id} onClick={() => setTempo(o.id as any)} style={{ padding: "0.6rem 0.4rem", borderRadius: "0.7rem", border: `2px solid ${tempo === o.id ? "#22c55e" : "var(--color-line)"}`, background: tempo === o.id ? "rgb(34 197 94 / 0.14)" : "transparent", cursor: "pointer", minHeight: "72px" }}>
+                <button key={o.id} type="button" data-testid={`onboarding-tempo-${o.id}`} aria-pressed={tempo === o.id} onClick={() => setTempo(o.id)} style={{ padding: "0.6rem 0.4rem", borderRadius: "0.7rem", border: `2px solid ${tempo === o.id ? "#22c55e" : "var(--color-line)"}`, background: tempo === o.id ? "rgb(34 197 94 / 0.14)" : "transparent", cursor: "pointer", minHeight: "72px" }}>
                   <b style={{ display: "block", fontSize: "0.82rem" }}>{o.label}</b>
                   <span style={{ fontSize: "0.7rem", color: "var(--color-ink2)" }}>{o.sub}</span>
                   <span style={{ fontSize: "0.68rem", display: "block", color: "var(--color-ink2)" }}>{o.desc}</span>
                 </button>
               ))}
             </div>
-            <div className="card" style={{ padding: "0.6rem 0.8rem", background: "var(--color-paper2)", fontSize: "0.8rem", lineHeight: 1.7 }}>
-              <b>مسارات بديلة (للعامل بنظام مناوبات):</b>
-              <ul style={{ margin: "0.2rem 0 0 1rem", paddingInlineStart: "1rem" }}>
-                <li><b>378ي</b> — افتراضي (152د/يوم B2 داخل السقف D1_B2_DECKEL_MIN) — <code>ALTERNATIVE_PFADE.normal</code></li>
-                <li><b>180ي مكثف</b> — للمتفرغ يقطع مراجعة (332د/يوم) — <code>intensiv 45ي B2</code></li>
-                <li><b>600ي بطيء</b> — للمناوبات 74د/يوم — <code>langsam 160ي B2</code></li>
-              </ul>
-              <span style={{ color: "var(--color-ink2)" }}>الخطة تبقى 378ي حتمياً للاختبارات (K63) — الوتيرة تغيّر الحمل اليومي فقط (LERNLAST).</span>
+            <div className="card" data-testid="onboarding-profil-grenze" style={{ padding: "0.6rem 0.8rem", background: "var(--color-paper2)", fontSize: "0.8rem", lineHeight: 1.7 }}>
+              الهدف والإيقاع يظلان في ملفك المحلي ويؤثران في اقتراح اختياري وفي حدّ البطاقات الجديدة فقط. لا يغيّران ترتيب خطة 378 يوماً أو أقفالها أو تقدير دقائق مهامها، ولا يرسلان بياناتك إلى شبكة.
             </div>
             <div style={{ display: "flex", gap: "0.5rem", marginTop: "0.7rem" }}>
               <button className="btn btn-ghost" onClick={() => setStep(1)} style={{ minHeight: "44px" }}>← رجوع</button>

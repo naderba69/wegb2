@@ -169,7 +169,7 @@ export default function Today() {
 
   if (!ready) return <div className="today-screen" role="status" aria-live="polite">⏳ جارٍ استعادة خطتك وتقدّمك المحفوظ…</div>;
 
-  const showOnboarding = !(progress as any).settings?.onboardingDone && progress.plan.day <= 3;
+  const showOnboarding = !progress.settings.onboardingDone && progress.plan.day <= 3;
   const resultOf = (id: string) => progress.plan.tasks[id];
   // 🔐 بوابة الجلسة: الجديد لا يُرى قبل تسليم الاسترجاع (lib/ritual.ts)
   const ritual = ritualUrteil(plan, progress);
