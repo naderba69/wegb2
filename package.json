@@ -15,6 +15,7 @@
     "audit:writing-consistency": "tsx scripts/writing_consistency_audit.ts",
     "audit:learning-state": "tsx scripts/learning_state_audit.ts",
     "audit:assessment-integrity": "tsx scripts/assessment_integrity_audit.ts",
+    "audit:evidence-provenance": "tsx scripts/evidence_provenance_audit.ts",
     "audit:words": "tsx scripts/wort_fuer_wort_audit.ts",
     "audit:scaffolds": "tsx scripts/scaffold_audit.ts",
     "audit:scaffold-review": "tsx scripts/scaffold_review_audit.ts",

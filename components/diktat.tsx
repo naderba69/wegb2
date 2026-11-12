@@ -9,7 +9,7 @@ import { normalize } from "@/lib/grader";
 import { addFehlerNow, useProgress } from "@/lib/store";
 import { effektiveRate } from "@/lib/rate";
 import { checkAbzeichen } from "@/lib/spiel";
-import { logK } from "@/lib/kompetenz";
+import { logMeasuredK } from "@/lib/kompetenz";
 import { speakAny } from "@/lib/speech";
 import { konfidenz } from "@/lib/grader";
 import { VertrauensBalken, AntwortDiff } from "./ui";
@@ -50,7 +50,7 @@ export function DiktatBootcamp({ progress }: { progress: Progress }) {
     const ok = normalize(inp) === normalize(it.de);
     setState({ ok });
     setScore((sc) => ({ s: sc.s + (ok ? 1 : 0), t: sc.t + 1 }));
-    update((p) => logK(checkAbzeichen({ ...p, xp: (p.xp ?? 0) + (ok ? 3 : 1) }), "Schreiben", ok));
+    update((p) => logMeasuredK(checkAbzeichen({ ...p, xp: (p.xp ?? 0) + (ok ? 3 : 1) }), "Schreiben", ok));
     if (!ok) {
       addFehlerNow({
         falsch: inp.trim() || "(leer)",

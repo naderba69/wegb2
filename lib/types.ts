@@ -17,8 +17,21 @@ export type TaskKind =
   | "check";
 export type DayType = "lerntag" | "festigung" | "wochencheck" | "abschluss";
 
-/** شبكة كفاءات CEFR الموحّدة — خط أنابيب التقويم الثالث */
+/** مجالات التدريب الستة؛ لا تحمل وحدها حكماً CEFR أو جاهزية امتحان. */
 export type Kompetenz = "Lesen" | "Hoeren" | "Schreiben" | "Sprechen" | "Grammatik" | "Wortschatz";
+export type KompetenzEvidenceType = "measured" | "self_report" | "activity" | "external_review";
+export interface KompetenzLogEintrag {
+  h: Kompetenz;
+  ok: boolean;
+  d?: string;
+  /** نوع الدليل؛ غيابه في البيانات القديمة يُعامل activity لا measured. */
+  evidenceType?: KompetenzEvidenceType;
+  /** مستوى البند إن كان معلوماً؛ لا يُستنتج من نجاح ثنائي. */
+  level?: Level;
+  assisted?: boolean;
+  method?: string;
+  sourceId?: string;
+}
 
 export interface Exercise {
   id: string;
@@ -549,8 +562,8 @@ export interface Progress {
   portfolio?: { eintraege: { id: string; typ: string; level: string; datum: string; titelDe: string }[] };
   /** الأوسمة المكسوبة: id ← تاريخ المنح */
   abzeichen?: Record<string, string>;
-  /** سجلّ الكفاءات الموحّد: محاولات موزّعة على شبكة CEFR (logK) */
-  kompetenzLog?: { h: Kompetenz; ok: boolean; d?: string }[];
+  /** سجلّ مجالات التدريب مع provenance؛ لا يشكّل وحده حكماً CEFR. */
+  kompetenzLog?: KompetenzLogEintrag[];
   /** صحّة التعلّم (Modul U): حارس 20-20-20 ووضع المريض */
   gesundheit?: {
     augenPause?: boolean;

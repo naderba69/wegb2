@@ -113,7 +113,7 @@ import { calculateScaffoldMetrics, hasParentheticalMarker, isBlankLinkedScaffold
 import { logSicherheit, sicherheitsStatistik, sicherheitsZeile, MAX_EINTRAEGE } from "../lib/sicherheit";
 import { karteFuerWort, verknuepfung, verwaiste, abdeckung, stammVon } from "../lib/verknuepfung";
 import { dueFehlerPriorisiert, verwandteKarte, transferUebung, beispielUebung, istUeberkonfident } from "../lib/fehlerbank2";
-import { logK, kompetenzWerte, band, b2Score, pruefungsBereitschaft, bereitBand, KOMPETENZEN } from "../lib/kompetenz";
+import { logK, kompetenzWerte, evidenzUebersicht, evidenceTypeOf, KOMPETENZEN } from "../lib/kompetenz";
 import { levelOfXp, checkAbzeichen, ABZEICHEN, XP_LEVELS } from "../lib/spiel";
 import { loadProgress, touchStreak, separateLegacyManualMinutes } from "../lib/store";
 import { createHash } from "crypto";
@@ -460,31 +460,48 @@ const vocabRepeatAudit = (() => {
   ok(noteFromPct(-10).startsWith("6 ") && noteFromPct(111).startsWith("1 "), "G17 حدود ما بعد الصفر/المئة");
 }
 
-/* ═══ H · شبكة الكفاءات ═══ */
+/* ═══ H · سجل التدريب وprovenance الدليل ═══ */
 {
   const w0 = kompetenzWerte(empty());
-  ok(KOMPETENZEN.every((h) => Number.isFinite(w0[h].wert) && w0[h].wert >= 0 && w0[h].wert <= 100 && w0[h].kern === null), "H1 فارغ: قيم مقيدة وkern=null تحت 8 محاولات");
-  let p = empty();
-  for (let i = 0; i < 200; i++) p = logK(p, KOMPETENZEN[i % 6], i % 3 !== 0);
-  const w = kompetenzWerte(p);
-  ok(KOMPETENZEN.every((h) => w[h].wert >= 0 && w[h].wert <= 100 && w[h].versuche >= 8), "H2 200 تسجيل: kern يشتعل وكل قيمة في النطاق");
-  ok((p.kompetenzLog?.length ?? 0) <= 600, "H3 سجل الكفاءات مقصوص عند 600");
+  ok(KOMPETENZEN.every((h) => w0[h].wert === null && w0[h].status === "unknown" && w0[h].versuche === 0), "H1 الفراغ unknown بلا نقاط مفبركة");
+  let activityOnly = empty();
+  for (let i = 0; i < 200; i++) activityOnly = logK(activityOnly, KOMPETENZEN[i % 6], true);
+  const wa = kompetenzWerte(activityOnly);
+  ok(KOMPETENZEN.every((h) => wa[h].wert === null && wa[h].measured === 0 && wa[h].status === "insufficient"), "H2 logK الافتراضي نشاط لا أداء مقاس");
+  ok((activityOnly.kompetenzLog?.length ?? 0) <= 600, "H3 سجل المجالات مقصوص عند 600");
   let allOk = empty();
-  for (let i = 0; i < 80; i++) allOk = logK(allOk, "Wortschatz", true);
-  ok(kompetenzWerte(allOk).Wortschatz.wert >= 70, "H4 نجاح تام ← محور مرتفع");
+  for (let i = 0; i < 8; i++) allOk = logK(allOk, "Wortschatz", true, { evidenceType: "measured", method: "test" });
+  ok(kompetenzWerte(allOk).Wortschatz.wert === 100, "H4 ثمانية أدلة measured صريحة ← أداء تدريبي 100");
   let allBad = empty();
-  for (let i = 0; i < 80; i++) allBad = logK(allBad, "Grammatik", false);
-  ok(kompetenzWerte(allBad).Grammatik.wert <= 30, "H5 فشل تام بلا بيانات أخرى ← محور متدنٍّ");
-  for (const v of [0, 34, 35, 54, 55, 74, 75, 100]) ok(typeof band(v).name === "string" && typeof band(v).farbe === "string", `H6 band(${v})`);
-  ok(b2Score(empty()) === 0 || b2Score(empty()) > 0, "H7 b2Score عدد");
-  const pb = pruefungsBereitschaft(empty());
-  ok(pb.teile.length === 4 && pb.teile.every((t) => t.wert >= 0 && t.wert <= 100), "H8 الجاهزية رباعية الأجزاء");
-  const recalc = Math.max(0, Math.min(100, Math.round(pb.teile.reduce((s, t) => s + t.wert * t.gewicht, 0))));
-  ok(pb.gesamt === recalc, `H9 الجاهزية = Σ(وزن×قيمة) — قال ${pb.gesamt} والحساب ${recalc}`);
-  ok(Math.abs(pb.teile.reduce((s, t) => s + t.gewicht, 0) - 1) < 1e-9, "H10 الأوزان 40/25/20/15 تجمع لواحد");
-  const pbRich = pruefungsBereitschaft(p);
-  ok(pbRich.gesamt >= 0 && pbRich.gesamt <= 100, "H11 جاهزية على بيانات غنية");
-  ok(typeof bereitBand(0).name === "string" && typeof bereitBand(100).name === "string", "H12 bereitBand الحواف");
+  for (let i = 0; i < 8; i++) allBad = logK(allBad, "Grammatik", false, { evidenceType: "measured", method: "test" });
+  ok(kompetenzWerte(allBad).Grammatik.wert === 0, "H5 ثمانية أدلة measured فاشلة ← أداء تدريبي 0");
+  let selfReport = empty();
+  for (let i = 0; i < 20; i++) selfReport = logK(selfReport, "Schreiben", true, { evidenceType: "self_report" });
+  ok(kompetenzWerte(selfReport).Schreiben.wert === null && kompetenzWerte(selfReport).Schreiben.selfReported === 20, "H6 التقييم الذاتي منفصل ولا يرفع الأداء");
+  let assisted = empty();
+  for (let i = 0; i < 20; i++) assisted = logK(assisted, "Sprechen", true, { evidenceType: "measured", assisted: true });
+  ok(kompetenzWerte(assisted).Sprechen.wert === null && kompetenzWerte(assisted).Sprechen.measured === 0, "H7 الدليل المساعد لا يدخل الأداء");
+  const oldEntry = { h: "Lesen" as const, ok: true };
+  ok(evidenceTypeOf(oldEntry) === "activity", "H8 السجل القديم بلا provenance يُعامل نشاطاً");
+  const emptyEvidence = evidenzUebersicht(empty());
+  ok(emptyEvidence.completeTrainingPerformance === null && emptyEvidence.examReadiness === "not_assessed", "H9 لا متوسط كامل ولا جاهزية من الفراغ");
+  const richActivity = { ...activityOnly, xp: 99999, plan: { ...activityOnly.plan, day: 300 }, canDo: { a: true, b: true } };
+  const richEvidence = evidenzUebersicht(richActivity);
+  ok(richEvidence.completeTrainingPerformance === null && richEvidence.examReadiness === "not_assessed", "H10 XP والأيام وCan-Do لا تصنع أداءً أو جاهزية");
+  let complete = empty();
+  for (const hand of KOMPETENZEN) for (let i = 0; i < 8; i++) complete = logK(complete, hand, true, { evidenceType: "measured" });
+  const completeEvidence = evidenzUebersicht(complete);
+  ok(completeEvidence.completeTrainingPerformance === 100 && completeEvidence.measuredSkills === 6, "H11 المتوسط الداخلي لا يظهر قبل اكتمال المجالات الستة");
+  ok(completeEvidence.examReadiness === "not_assessed", "H12 حتى الأداء التدريبي الكامل لا يتحول إلى حكم جاهزية");
+  ok(evidenzUebersicht(selfReport).selfReportedEntries === 20, "H13 الملخص يجمع self_report في عداد مستقل");
+  ok(evidenzUebersicht(activityOnly).activityEntries === 200, "H14 الملخص يجمع activity من دون تحويله إلى أداء");
+  let external = empty();
+  for (let i = 0; i < 8; i++) external = logK(external, "Schreiben", true, { evidenceType: "external_review", sourceId: `ext-${i}` });
+  ok(kompetenzWerte(external).Schreiben.wert === 100 && kompetenzWerte(external).Schreiben.externalReviewed === 8, "H15 external_review المؤهل ظاهر المصدر ويدخل الأداء التدريبي");
+  ok(kompetenzWerte(allOk).Wortschatz.status === "measured", "H16 المجال المؤهل يحمل status=measured");
+  ok(kompetenzWerte(selfReport).Schreiben.status === "insufficient", "H17 self_report وحده يبقى insufficient لا measured");
+  ok(allOk.kompetenzLog?.every((entry) => entry.method === "test" && entry.evidenceType === "measured") === true, "H18 metadata القياس محفوظ في السجل");
+  ok(external.kompetenzLog?.every((entry) => entry.sourceId?.startsWith("ext-")) === true, "H19 sourceId للمراجعة الخارجية محفوظ وقابل للأثر");
 }
 
 /* ═══ I · XP والأوسمة ═══ */
@@ -13270,7 +13287,7 @@ function collectR262(dir: string, out: string[] = []): string[] {
 // ===== K313 (R288 · M4+M8+M9): Daten-Kalibrierung, Fehlerkarten-Bestätigung, 48h-Wiederschreiben =====
 {
   const jetzt313 = new Date("2026-10-18T10:00:00Z");
-  const eintrag313 = (d: string, ok313: boolean) => ({ h: "Lesen" as const, ok: ok313, d });
+  const eintrag313 = (d: string, ok313: boolean) => ({ h: "Lesen" as const, ok: ok313, d, evidenceType: "measured" as const });
   const log313 = [
     ...Array.from({ length: 10 }, (_, i) => eintrag313("2026-10-10", i < 9)),
     ...Array.from({ length: 10 }, (_, i) => eintrag313("2026-09-25", i < 4)),
@@ -15451,17 +15468,17 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const weakK360: Progress = {
     ...emptyProgress,
     settings: { ...emptyProgress.settings, placed: true },
-    kompetenzLog: Array.from({ length: 8 }, () => ({ h: "Hoeren" as const, ok: false, d: "2026-11-04" })),
+    kompetenzLog: Array.from({ length: 8 }, () => ({ h: "Hoeren" as const, ok: false, d: "2026-11-04", evidenceType: "measured" as const })),
   };
   const weakRecK360 = baueUebungsEmpfehlungen(weakK360, { now: nowK360 });
   ok(weakRecK360[0]?.station === "hoeren" && weakRecK360[0]?.signal === "weak-skill" &&
     weakRecK360[0]?.messwertAr.includes("8 محاولات"),
-    "K360c بعد ثماني محاولات فقط تتحول أضعف كفاءة ملاحظة إلى محطة مطابقة مع سبب وقياس ظاهرين");
+    "K360c بعد ثمانية أدلة measured فقط يتحول أدنى أداء تدريبي مقاس إلى محطة مطابقة مع سبب وقياس ظاهرين");
 
   const dedupK360: Progress = {
     ...weakK360,
     srs: { due: dueK360 },
-    kompetenzLog: Array.from({ length: 8 }, () => ({ h: "Wortschatz" as const, ok: false, d: "2026-11-04" })),
+    kompetenzLog: Array.from({ length: 8 }, () => ({ h: "Wortschatz" as const, ok: false, d: "2026-11-04", evidenceType: "measured" as const })),
   };
   const dedupRecK360 = baueUebungsEmpfehlungen(dedupK360, { now: nowK360, limit: 99 });
   ok(dedupRecK360.length <= 3 && dedupRecK360.filter((entry) => entry.station === "wortreview").length === 1 &&

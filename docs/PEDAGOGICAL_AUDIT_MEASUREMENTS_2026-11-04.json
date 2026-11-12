@@ -126,21 +126,54 @@
     "method": "MPEG-1 Layer III frame count: 344 × 1152 / 44100"
   },
   "competenceProbe": {
-    "emptyProgress": {
-      "Lesen": 0,
-      "Hoeren": 30,
-      "Schreiben": 40,
-      "Sprechen": 25,
-      "Grammatik": 55,
-      "Wortschatz": 0,
-      "b2Score": 25,
-      "readiness": 30,
-      "errorHealthWithoutAnyObservedErrors": 100
+    "initial": {
+      "emptyProgress": {
+        "Lesen": 0,
+        "Hoeren": 30,
+        "Schreiben": 40,
+        "Sprechen": 25,
+        "Grammatik": 55,
+        "Wortschatz": 0,
+        "b2Score": 25,
+        "readiness": 30,
+        "errorHealthWithoutAnyObservedErrors": 100
+      },
+      "eightBinarySpeakingSuccessesWithoutLevelOrQualityEvidence": {
+        "Sprechen": 78,
+        "bandName": "B2 sicher",
+        "bandAr": "جاهز للامتحان"
+      }
     },
-    "eightBinarySpeakingSuccessesWithoutLevelOrQualityEvidence": {
-      "Sprechen": 78,
-      "bandName": "B2 sicher",
-      "bandAr": "جاهز للامتحان"
+    "current": {
+      "evidenceTypes": [
+        "measured",
+        "self_report",
+        "activity",
+        "external_review"
+      ],
+      "legacyOrUnspecifiedEvidenceType": "activity",
+      "minimumEligibleMeasuredItemsPerSkill": 8,
+      "emptyProgress": {
+        "allSkillValues": null,
+        "allSkillStatus": "unknown",
+        "completeTrainingPerformance": null,
+        "examReadiness": "not_assessed"
+      },
+      "twentyActivityOrSelfReportedSuccesses": {
+        "skillValue": null,
+        "countsRemainSeparated": true
+      },
+      "eightEligibleMeasuredSuccessesInOneSkill": {
+        "internalTrainingPerformance": 100,
+        "cefrBand": null,
+        "examReadiness": "not_assessed"
+      },
+      "eightEligibleMeasuredSuccessesInAllSixSkills": {
+        "completeInternalTrainingPerformance": 100,
+        "cefrBand": null,
+        "examReadiness": "not_assessed"
+      },
+      "guard": "npm run audit:evidence-provenance"
     }
   },
   "gradingProbe": {
@@ -249,8 +282,8 @@
     "fixedPedagogicalRisks": 17
   },
   "inventorySnapshot": {
-    "indexedTrackedFilesAndAuditArtifacts": 3533,
-    "manual_complete": 20,
+    "indexedTrackedFilesAndAuditArtifacts": 3534,
+    "manual_complete": 21,
     "manual_targeted": 33,
     "not_started": 3476,
     "audit_artifact": 4

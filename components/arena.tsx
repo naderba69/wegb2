@@ -6,7 +6,7 @@ import { arenaMap } from "@/lib/content";
 import { pickN, rng } from "@/lib/plan";
 import { addFehlerNow, useProgress } from "@/lib/store";
 import { checkAbzeichen } from "@/lib/spiel";
-import { logK } from "@/lib/kompetenz";
+import { logMeasuredK } from "@/lib/kompetenz";
 import { speakAny } from "@/lib/speech";
 import { gemischteOptionen } from "@/lib/optionen";
 import { De } from "./De";
@@ -100,7 +100,7 @@ export function GrammatikArena({ progress: _progress }: { progress: Progress }) 
     const ok = choice === it.answer;
     setState({ choice, ok });
     setScore((sc) => ({ s: sc.s + (ok ? 1 : 0), t: sc.t + 1 }));
-    update((p) => logK(checkAbzeichen({ ...p, xp: (p.xp ?? 0) + (ok ? 3 : 1) }), "Grammatik", ok));
+    update((p) => logMeasuredK(checkAbzeichen({ ...p, xp: (p.xp ?? 0) + (ok ? 3 : 1) }), "Grammatik", ok));
     if (!ok) {
       addFehlerNow({
         falsch: `${it.promptDe} → ${choice}`,

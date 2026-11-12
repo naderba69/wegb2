@@ -6,7 +6,7 @@
  *  صناعي، ينقر الأزرار، يكتب في الحقول، ويقرأ ما ظهر للمستخدم.
  *  يغطي الجولة التفاعلية الجارية: 🥵 العينة الأصعب (Blitz كامل
  *  الدورة · إدخال رقم خيار ← خطأ ← التالي ← البطاقة التالية)،
- *  الورقة الرسمية A4 (Amtsblatt ← نافذة الطباعة الملتقطة)،
+ *  إثبات التدريب A4 غير الرسمي (Lernnachweis ← نافذة الطباعة الملتقطة)،
  *  وتركيب دخان لثلاثة مراكز أخرى.
  *  التشغيل: npm run interaktiv  (يبنيه esbuild ثم يشغّله node)
  * ============================================================ */
@@ -206,16 +206,16 @@ async function main() {
     ok(!!hdr, "II0 أكورديون التقارير مركّب");
     if (hdr) click(hdr);
     ok(txt().includes("إخفاء"), "II0b النقر يفتح مركز التقارير");
-    ok(txt().includes("الورقة الرسمية"), "II1 زر الورقة الرسمية A4 في شريط التصدير");
-    const b = btn("الورقة الرسمية");
+    ok(txt().includes("إثبات تدريب A4"), "II1 زر إثبات التدريب الوصفي في شريط التصدير");
+    const b = btn("إثبات تدريب A4");
     if (b) click(b);
     ok(gedruckt.length === 1, "II2 نافذة الطباعة فُتحت وكتب فيها مرة واحدة");
     const html = gedruckt[0] ?? "";
-    ok(html.includes("Amtliches Notblatt"), "II3 عنوان رسمي في الورقة");
-    ok(html.includes("سارة النموذج"), "II4 اسم الحامل مُدرج");
-    ok(/WB2-\d{3}-\d{4}/.test(html), "II5 ختم التحقق الحتمي WB2-xxx-xxxx");
-    ok(html.includes("جاهزية الامتحان") && html.includes("انضباط الخطة"), "II6 إحصاءات الجاهزية والانضباط");
-    ok(html.includes("Grammatik") || html.includes("قواعد") || html.includes("(grammatik)"), "II7 جدول الكفاءات بخمسة أسطر");
+    ok(html.includes("Lernnachweis") && html.includes("إثبات تدريب داخلي"), "II3 عنوان وصفي غير رسمي في الورقة");
+    ok(html.includes("سارة النموذج"), "II4 اسم المتعلّم مُدرج");
+    ok(!/WB2-\d{3}-\d{4}/.test(html) && html.includes("ليست شهادة مستوى"), "II5 لا ختم تحقق وهمي ولا ادعاء شهادة");
+    ok(html.includes("جاهزية الامتحان غير مقاسة") && html.includes("إكمال الخطة"), "II6 فصل الجاهزية غير المقاسة عن إكمال الخطة");
+    ok(html.includes("Grammatik") || html.includes("قواعد") || html.includes("(grammatik)"), "II7 جدول المجالات الستة ومصدر الدليل");
 
     // R281 (A2/A13): Retentions-Panel aus FSRS-Zustaenden
     const jetztMs = Date.now();
@@ -2858,7 +2858,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
     mount(React.createElement(KatalogLeiste));
     ok(txt().includes("دليل الأجنحة"), "LXXIV1 الدليل يُعرض مباشرة");
     mount(React.createElement(RadarKarte, { progress: { ...emptyProgress } }));
-    ok(!!rootEl.querySelector('svg[aria-label="شبكة الكفاءات"]'), "LXXIV2 شبكة الكفاءات SVG حاضرة");
+    ok(!!rootEl.querySelector('svg[aria-label^="الأداء التدريبي المقاس"]') && txt().includes("العينة غير مكتملة") && txt().includes("جاهزية الامتحان: غير مقاسة"), "LXXIV2 سجل الدليل يعرض unknown ولا يستنتج جاهزية من الفراغ");
   }
 
   /* ═══ LXXV — العمق المعجمي (V17) ═══ */

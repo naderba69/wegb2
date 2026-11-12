@@ -75,6 +75,8 @@ jobs:
         run: npm run audit:learning-state
       - name: Assessment and interface integrity (PA-004/005/012/019/024/028)
         run: npm run audit:assessment-integrity
+      - name: Evidence provenance and no inferred readiness (PA-001–PA-003)
+        run: npm run audit:evidence-provenance
       - name: Wort-für-Wort-Audit (bestätigte Blocker)
         run: npm run audit:words
       - name: Scaffold-Observability (CEFR baseline; candidates are not defects)

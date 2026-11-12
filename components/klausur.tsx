@@ -166,7 +166,7 @@ function KlausurApp({ progress, onClose, skill }: { progress: Progress; onClose:
           quelle: "Probeklausur",
         });
       }
-      // توصيل شبكة الكفاءات: كل قسم يغذّي كفاءته (خط أنابيب ③) — النجاح ≥60%
+      // تسجيل نشاط القسم فقط عبر logKN؛ لا يتحول حد التدريب الداخلي إلى مستوى أو جاهزية.
       for (const row of per) {
         const h: Kompetenz =
           row.key === "Lesen" ? "Lesen" : row.key === "Hören" ? "Hoeren" : row.key === "Schreiben" ? "Schreiben" : "Grammatik";

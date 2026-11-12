@@ -368,19 +368,32 @@ const TASK_FUER: Record<string, string> = {
 function WochenPlan({ progress }: { progress: Progress }) {
   const [min, setMin] = useState(180);
   const werte = kompetenzWerte(progress);
-  const gew = KOMPETENZEN.map((h) => ({ h, g: Math.max(18, 112 - (werte[h]?.wert ?? 50)), wert: Math.round(werte[h]?.wert ?? 0) }));
+  const maxAktivitaet = Math.max(1, ...KOMPETENZEN.map((h) => werte[h].versuche));
+  const gew = KOMPETENZEN.map((h) => {
+    const wert = werte[h].wert;
+    // بلا أداء مقاس نوزّع بحسب قلة النشاط، لا نفبرك 0٪ أو «ضعفاً».
+    const g = wert === null
+      ? 40 + (maxAktivitaet - werte[h].versuche)
+      : Math.max(18, 112 - wert);
+    return { h, g, wert, aktivitaet: werte[h].versuche };
+  });
   const sum = gew.reduce((a, x) => a + x.g, 0);
   const verteil = gew.map((x) => ({ ...x, min: Math.max(10, Math.round((min * x.g) / sum)) }));
-  const schwach = [...verteil].sort((a, b) => a.wert - b.wert).slice(0, 2);
+  const schwach = [...verteil].sort((a, b) => {
+    if (a.wert !== null && b.wert !== null) return a.wert - b.wert;
+    if (a.wert !== null) return -1;
+    if (b.wert !== null) return 1;
+    return a.aktivitaet - b.aktivitaet;
+  }).slice(0, 2);
 
   function drucke() {
     const html = `<!doctype html><html dir="rtl"><head><meta charset="utf-8"><title>الأسبوع الموزون — Weg nach B2</title>
 <style>body{font-family:system-ui,sans-serif;padding:1.4rem;color:#1c1917}td,th{border-bottom:1px solid #ddd;padding:.4rem;font-size:.9rem}h1{font-size:1.1rem}@media print{button{display:none}}</style></head><body>
 <h1>📅 خطتي الأسبوعية الموزونة — ${min} دقيقة</h1>
 <table style="width:100%;border-collapse:collapse"><tr><th>الكفاءة</th><th>مستواك الآن</th><th>دقائق الأسبوع</th><th>المهمة</th></tr>
-${verteil.map((x) => `<tr><td>${KOMPETENZ_AR[x.h]} (${x.h})</td><td>${x.wert}٪</td><td><b>${x.min}</b></td><td style="font-size:.8rem">${TASK_FUER[x.h]}</td></tr>`).join("")}
+${verteil.map((x) => `<tr><td>${KOMPETENZ_AR[x.h]} (${x.h})</td><td>${x.wert === null ? "غير مقاس" : x.wert + "٪ تدريبية"}</td><td><b>${x.min}</b></td><td style="font-size:.8rem">${TASK_FUER[x.h]}</td></tr>`).join("")}
 </table>
-<p style="font-size:.8rem;color:#57534e">وُلّدت من رادارك: ${schwach.map((x) => `«${KOMPETENZ_AR[x.h]}» الأضعف (${x.wert}٪) — يأخذ حصة الأسد`).join("، ")} · عدّل الخطة أسبوعاً أسبوعاً فتتبعك.</p>
+<p style="font-size:.8rem;color:#57534e">وُلّدت من سجل التدريب: ${schwach.map((x) => x.wert === null ? `«${KOMPETENZ_AR[x.h]}» أقل نشاطاً (${x.aktivitaet} أحداث)، لا أضعف حكماً` : `«${KOMPETENZ_AR[x.h]}» أدنى أداء تدريبي مقاس (${x.wert}٪)`).join("، ")} · التوزيع اقتراح تدريب لا تشخيص مستوى.</p>
 <button onclick="print()" style="margin-top:1rem">🖨 طباعة</button></body></html>`;
     const win = window.open("", "_blank");
     if (!win) return;
@@ -391,7 +404,7 @@ ${verteil.map((x) => `<tr><td>${KOMPETENZ_AR[x.h]} (${x.h})</td><td>${x.wert}٪<
   return (
     <div style={{ display: "grid", gap: "0.6rem" }}>
       <div style={{ fontSize: "0.78rem" }} dir="rtl">
-        كم دقيقة أسبوعياً تملك فعلاً؟ نوزّعها على رادارك — <b>الأضعف يأخذ الأكثر</b>، لا ما تحب.
+        كم دقيقة أسبوعياً تملك فعلاً؟ نوزّعها حسب أدنى أداء مقاس، أو حسب قلة النشاط عند غياب القياس — <b>من دون اختلاق مستوى</b>.
       </div>
       <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
         {MINUTE_POOL.map(([m, label]) => (
@@ -412,7 +425,7 @@ ${verteil.map((x) => `<tr><td>${KOMPETENZ_AR[x.h]} (${x.h})</td><td>${x.wert}٪<
           {verteil.map((x, k) => (
             <tr key={x.h} style={{ background: schwach.some((s) => s.h === x.h) ? "var(--color-gold-soft)" : undefined }}>
               <td style={{ padding: "0.35rem 0.4rem", borderBottom: "1px solid var(--color-line)", fontWeight: 800 }}>
-                {KOMPETENZ_AR[x.h]} <span style={{ opacity: 0.6, fontWeight: 600 }}>({x.wert}٪)</span>
+                {KOMPETENZ_AR[x.h]} <span style={{ opacity: 0.6, fontWeight: 600 }}>({x.wert === null ? `${x.aktivitaet} نشاط` : `${x.wert}٪ تدريبي`})</span>
               </td>
               <td style={{ padding: "0.35rem 0.4rem", borderBottom: "1px solid var(--color-line)", whiteSpace: "nowrap" }}>
                 {["السبت", "الأحد", "الاثنين", "الثلاثاء", "الأربعاء", "الخميس", "الجمعة"][k % 7]}

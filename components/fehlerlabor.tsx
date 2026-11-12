@@ -5,7 +5,7 @@
 //   👨‍👩‍👧 شجرة عائلات الخطأ (فئات FEHLER_KAT) + تدريب فوري على أي عائلة
 //   🌡️ شبكة حرارة: الفئات × آخر 6 أسابيع (من تواريخ first)
 //   🛡️ الخطأ المقاوم + «خطأ الشهر» + بروتوكول علاج من 3 خطوات
-// التقييم الذاتي يمرّ عبر gradeFehlerNow ← SRS + شبكة الكفاءات تلقائياً.
+// التقييم الذاتي يمرّ عبر gradeFehlerNow ← SRS + self_report منفصل، لا أداء مقاس.
 import { useState } from "react";
 import type { FehlerState, Progress } from "@/lib/types";
 import { FEHLER_KAT } from "@/lib/fehler";
@@ -36,7 +36,7 @@ function FehlerZeile({ f, offen }: { f: FehlerState; offen: boolean }) {
   );
 }
 
-/** تدريب عائلي: يكشف الصواب ثم تقيّم نفسك — SRS + شبكة الكفاءات تتحرّكان */
+/** تدريب عائلي: يكشف الصواب ثم تقيّم نفسك — SRS + self_report يتحركان منفصلين */
 function FamilienDrill({ mitglieder }: { mitglieder: FehlerState[] }) {
   const [i, setI] = useState(0);
   const [offen, setOffen] = useState(false);

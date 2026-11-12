@@ -5,7 +5,7 @@
 //   🪞 Nuancen: الفروق الدقيقة بين المتقارب (سجل لغوي · حالة · اتجاه)
 //   🔗 Verb+Präp: أفعال مع حروف جرّها الثابتة وحالاتها (20 صيغة)
 //   🧩 Funktionsverbgefüge: التراكيب الخفيفة الرسمية (12 تعبيراً)
-// كل خطأ ← دفتر الأخطاء بفئته · كل جولة ← شبكة الكفاءات (Wortschatz).
+// كل خطأ ← دفتر الأخطاء بفئته · كل جولة ← سجل نشاط المفردات (لا حكم مستوى).
 import { useMemo, useState } from "react";
 import type { Level, Progress } from "@/lib/types";
 import { sentences, tiefenlex, alleVokabeln, kollokVertiefung, synonymVertiefung } from "@/lib/content";

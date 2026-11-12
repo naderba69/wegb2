@@ -287,7 +287,15 @@ export function useProgress() {
               plan: { ...p.plan, tasks: { ...p.plan.tasks, [taskId]: result } },
             },
             KIND_KOMPETENZ[kind ?? prev?.kind ?? "check"] ?? "Grammatik",
-            result.passed
+            result.passed,
+            {
+              // مهام الإنتاج تُصحَّح ذاتياً في مسار اليوم؛ غيرها يبقى حدث نشاط
+              // ما لم يسجّل محرك تقويم صريح دليلاً measured عند مصدره.
+              evidenceType: (["schreiben", "sprechen", "aussprache", "schulsim", "briefe", "partner"] as TaskKind[])
+                .includes(kind ?? prev?.kind ?? "check") ? "self_report" : "activity",
+              method: "plan_submission",
+              sourceId: taskId,
+            },
           )
         );
       });
@@ -470,11 +478,15 @@ export function disputeRegel(regelId: string) {
   saveProgress({ ...p, disputiert: { ...(p.disputiert ?? {}), [regelId]: n } });
 }
 
-/** تقييم مراجعة خطأ في الدفتر فوراً — ويُسجَّل على شبكة الكفاءات المتأثرة */
+/** تقييم ذاتي لمراجعة خطأ: يحرك SRS ويُحفظ self_report، لا أداءً مقاساً. */
 export function gradeFehlerNow(key: string, ok: boolean) {
   const p = gradeFehlerIn(loadProgress(), key, ok);
   const art = p.fehler?.[key]?.art ?? "sonst";
-  saveProgress(logK(p, FEHLER_ZU_KOMPETENZ[art] ?? "Grammatik", ok));
+  saveProgress(logK(p, FEHLER_ZU_KOMPETENZ[art] ?? "Grammatik", ok, {
+    evidenceType: "self_report",
+    method: "error_retrieval_self_report",
+    sourceId: key,
+  }));
 }
 
 /** تسجيل محاولة كفاءة مباشرة (للمحركات خارج حلقة update) */

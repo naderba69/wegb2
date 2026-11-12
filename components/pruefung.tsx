@@ -5,7 +5,7 @@
 //   ② ترتيب حوار (استعادة تسلسل الأدوار)
 //   ③ اختبار أسبوعي تراكمي (مادة الأسابيع الفائتة مجتمعة)
 //   ④ محاكاة شهرية ببذرة رقمية (نفس البذرة ← نفس النموذج)
-// كل محاولة تمرّ بخطّي الأنبوب: شبكة الكفاءات (logK) ودفتر الأخطاء (addFehlerNow).
+// كل محاولة مصححة محلياً تسجل measured مع بقاء النتيجة تدريبية، وتغذي دفتر الأخطاء.
 import { useMemo, useRef, useState } from "react";
 import type { Exercise, Level, Progress, Satz, VocabCard } from "@/lib/types";
 import { sentences, texts, dialogues, grammarMap, vocabMap, dialogAudioSrc, dialogAudioIstKi, leseText } from "@/lib/content";
@@ -14,7 +14,7 @@ import { normalize, konfidenz } from "@/lib/grader";
 import { klausurNote } from "@/lib/klausur";
 import { addFehlerNow, useProgress } from "@/lib/store";
 import { checkAbzeichen } from "@/lib/spiel";
-import { logK, KOMPETENZ_AR } from "@/lib/kompetenz";
+import { logMeasuredK, KOMPETENZ_AR } from "@/lib/kompetenz";
 import { speakAny } from "@/lib/speech";
 import { gemischteOptionen } from "@/lib/optionen";
 import { VertrauensBalken, AntwortDiff } from "./ui";
@@ -118,7 +118,7 @@ function WahrFalsch({ level, onFertig }: { level: Level; onFertig: (ok: number, 
     setAntwort(mein);
     if (ok) setOkN((n) => n + 1);
     update((p) =>
-      logK(checkAbzeichen({ ...p, xp: (p.xp ?? 0) + (ok ? 2 : 1) }), a.art === "wortschatz" ? "Wortschatz" : "Grammatik", ok)
+      logMeasuredK(checkAbzeichen({ ...p, xp: (p.xp ?? 0) + (ok ? 2 : 1) }), a.art === "wortschatz" ? "Wortschatz" : "Grammatik", ok)
     );
     if (!ok) {
       addFehlerNow({
@@ -206,7 +206,7 @@ export function DialogOrdnung({ level, onFertig }: { level: Level; onFertig: (ok
   const pruefe = () => {
     setGeprueft(true);
     const ok = punkte / n >= 0.6;
-    update((p) => logK(checkAbzeichen({ ...p, xp: (p.xp ?? 0) + (punkte === n ? 10 : 4) }), "Lesen", ok));
+    update((p) => logMeasuredK(checkAbzeichen({ ...p, xp: (p.xp ?? 0) + (punkte === n ? 10 : 4) }), "Lesen", ok));
     if (punkte < n) {
       addFehlerNow({
         falsch: `ترتيب حوار: ${punkte}/${n} مراكز صحيحة`,
@@ -338,8 +338,8 @@ function WochenTest({ level, woche, onFertig }: { level: Level; woche: number; o
     const wN = items.filter((q) => q.kat === "Wortschatz").length;
     const gN = items.length - wN;
     update((p) => {
-      let q0 = logK(checkAbzeichen({ ...p, xp: (p.xp ?? 0) + 12 + okN }), "Wortschatz", wN > 0 && wOk / wN >= 0.6);
-      return logK(q0, "Grammatik", gN > 0 && gOk / gN >= 0.6);
+      let q0 = logMeasuredK(checkAbzeichen({ ...p, xp: (p.xp ?? 0) + 12 + okN }), "Wortschatz", wN > 0 && wOk / wN >= 0.6);
+      return logMeasuredK(q0, "Grammatik", gN > 0 && gOk / gN >= 0.6);
     });
     onFertig(okN, items.length);
   };
@@ -485,7 +485,7 @@ function MonatsMock({ level, tag }: { level: Level; tag: number }) {
       for (const sec of ["Lesen", "Grammatik", "Hoeren"] as const) {
         const teile = items.filter((q) => q.sec === sec);
         const okN = teile.filter((q) => gradeItem(q.ex, antworten[q.ex.id] ?? "")).length;
-        if (teile.length) q0 = logK(q0, sec === "Hoeren" ? "Hoeren" : sec, okN / teile.length >= 0.6);
+        if (teile.length) q0 = logMeasuredK(q0, sec === "Hoeren" ? "Hoeren" : sec, okN / teile.length >= 0.6);
       }
       return checkAbzeichen({ ...q0, xp: (q0.xp ?? 0) + 20 });
     });
@@ -618,7 +618,7 @@ export function PruefungsZentrum({ progress }: { progress: Progress }) {
         <span className="chip">{open ? "إخفاء ▲" : "إظهار ▼"}</span>
       </button>
       <div style={{ fontSize: "0.8rem", color: "var(--color-ink2)", margin: "0.2rem 0 0.6rem" }}>
-        أربعة أنماط في محرّك واحد: عبارات مزوَّرة · ترتيب حوار · اختبار أسبوعي تراكمي · محاكاة ببذرة رقمية — كلها تُغذّي شبكة الكفاءات ودفتر الأخطاء.
+        أربعة أنماط في محرّك واحد: عبارات مزوَّرة · ترتيب حوار · اختبار أسبوعي تراكمي · محاكاة ببذرة رقمية — نتائجها المصححة تغذّي أداءً تدريبياً داخلياً ودفتر الأخطاء، لا مستوى CEFR.
       </div>
       {stat.n > 0 && (
         <div style={{ fontSize: "0.78rem", color: "var(--color-ink2)", marginBottom: "0.4rem" }}>

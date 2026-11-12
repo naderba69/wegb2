@@ -1,5 +1,5 @@
 import { lokalesDatum } from "./datum";
-import { KOMPETENZEN } from "./kompetenz";
+import { isMeasuredEvidence, KOMPETENZEN } from "./kompetenz";
 import { abrufbarkeit } from "./srs";
 import type { Kompetenz, Progress } from "./types";
 
@@ -28,7 +28,8 @@ export function skillTrends(p: Progress, jetzt = new Date()): SkillTrend[] {
   const heute = tag(jetzt);
   const vor14 = tag(new Date(jetzt.getTime() - 14 * 86400000));
   const vor28 = tag(new Date(jetzt.getTime() - 28 * 86400000));
-  const log = (p.kompetenzLog ?? []).filter((e) => e.d);
+  // اتجاه النجاح لا يستعمل أزرار الإكمال أو التقييم الذاتي أو الأدلة المساعدة.
+  const log = (p.kompetenzLog ?? []).filter((e) => e.d && isMeasuredEvidence(e));
   return KOMPETENZEN.map((hand) => {
     const aktuellE = log.filter((e) => e.h === hand && e.d! > vor14 && e.d! <= heute);
     const vorherE = log.filter((e) => e.h === hand && e.d! > vor28 && e.d! <= vor14);
