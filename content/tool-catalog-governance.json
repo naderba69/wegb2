@@ -17389,18 +17389,23 @@
       "decision": "defer",
       "researchStatus": "citation-label-unverified",
       "productStatus": "candidate-live-implementation",
-      "automatedTestStatus": "not-demonstrated",
+      "automatedTestStatus": "verified",
       "fieldValidationStatus": "not-tested",
       "reviewerRole": "internal-methodology-triage",
       "reviewedAt": "2026-11-06",
       "risk": "medium",
-      "rationaleAr": "يفرض المسار الحي الاسترجاع قبل المحتوى الجديد، ويقدم بطاقات وفجوات وإنتاجاً بلا خيارات ثم تصحيحاً وجدولة لاحقة؛ وهذه مطابقة مرشحة مباشرة لممارسة الاسترجاع. لكنه لا يضمن محاولة صادقة قبل كل كشف ولا يعزل أثر الاسترجاع عن التباعد والتغذية الراجعة، ولا يقيس احتفاظاً أو نقلاً مؤجلاً؛ لذلك يؤجل الادعاء بالأثر.",
+      "rationaleAr": "يفرض المسار الحي الاسترجاع قبل المحتوى الجديد، ويعرض بعد إغلاق اليوم مختبراً موحداً من استرجاع حر وفجوات وتداخل بلا خيارات؛ يفتح الملاح المحطة الحية نفسها، وتحجب ستة حلول حتى التسليم مع اختبارات محرك وواجهة وChromium وإتاحة آلية. هذه مطابقة مرشحة لممارسة الاسترجاع، لكنها لا تضمن محاولة ذهنية صادقة ولا تعزل أثر الاسترجاع أو تقيس احتفاظاً مؤجلاً، والمصدر والإتاحة اليدوية والميدان معلقة.",
       "candidateEvidence": [
         "lib/ritual.ts",
         "components/selbsttest.tsx",
         "components/akademie/TodayStepper.tsx",
         "components/tasks.tsx",
-        "scripts/interaktiv_test.tsx"
+        "scripts/interaktiv_test.tsx",
+        "lib/uebungsnavigator.ts",
+        "app/ueben/page.tsx",
+        "scripts/engine_smoke.ts",
+        "scripts/browser_e2e.mjs",
+        "evidence/tool-catalog/852-retrieval-practice.json"
       ],
       "relatedIds": [
         181,
@@ -17417,7 +17422,9 @@
         851,
         853,
         854
-      ]
+      ],
+      "evidenceCycle": "TC-852-AUTOMATED-01",
+      "productionEvidence": "evidence/tool-catalog/852-retrieval-practice.json"
     },
     "853": {
       "classification": "duplicate-catalog-record",

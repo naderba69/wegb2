@@ -233,8 +233,27 @@ async function main() {
   /* ---------- III — دخان التركيب لثلاثة مراكز ---------- */
   {
     const { SelbstTestZentrum } = await import("../components/selbsttest");
-    mount(React.createElement(SelbstTestZentrum, { progress: { ...emptyProgress } }));
-    ok(txt().includes("Selbsttests"), "III1 مركز التشخيص يركّب ويعرض واجهته");
+    mount(React.createElement(SelbstTestZentrum, { progress: { ...emptyProgress }, startOffen: true }));
+    await flushAsync();
+    const selbsttestToggle = rootEl.querySelector('[data-testid="selbsttest-toggle"]');
+    ok(txt().includes("Selbsttests") && selbsttestToggle?.getAttribute("aria-expanded") === "true" &&
+      !!rootEl.querySelector('[data-testid="selbsttest-inhalt"]'),
+      "III1 مختبر الاسترجاع يركّب مفتوحاً عند دخوله من محطة التدريب، وزرّه يعلن حالة التوسيع");
+    const selbsttestInputs = rootEl.querySelectorAll('input[placeholder="Dein Satz aus dem Gedächtnis…"]');
+    ok(selbsttestInputs.length === 6 && !rootEl.querySelector('[data-testid^="selbsttest-frei-loesung-"]'),
+      "III1a الجولة الحية تعرض ست محاولات من الذاكرة ولا تكشف جواباً ألمانياً قبل التسليم");
+    await pruefeA11y("III1b مختبر الاسترجاع المفتوح قبل التسليم");
+    const selbsttestSubmit = rootEl.querySelector('[data-testid="selbsttest-frei-submit"]') as HTMLElement | null;
+    if (selbsttestSubmit) {
+      await act(async () => {
+        selbsttestSubmit.dispatchEvent(new dom.window.MouseEvent("click", { bubbles: true, cancelable: true }));
+        await Promise.resolve();
+      });
+      await flushAsync();
+    }
+    ok(!!selbsttestSubmit && rootEl.querySelectorAll('[data-testid^="selbsttest-frei-loesung-"]').length === 6 &&
+      Array.from(selbsttestInputs).every((input) => (input as HTMLInputElement).disabled),
+      "III1c التسليم يكشف المقارنة ويجمّد المحاولة؛ لا زر كشف سابق يحوّل النشاط إلى تعرّف");
     const { BriefSchmiede } = await import("../components/briefe");
     mount(React.createElement(BriefSchmiede, { progress: { ...emptyProgress } }));
     await flushAsync();

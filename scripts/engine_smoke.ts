@@ -2124,13 +2124,13 @@ void 0;
     const wiz = existsSync("components/akademie/LektionWizard.tsx") ? readFileSync("components/akademie/LektionWizard.tsx", "utf8") : "";
 
     // K112: ترتيبُ الأولوية معلنٌ حرفياً — الأخطاء أولاً ثم التدريب الحرّ ثم المهارات
-    ok(ueben.includes('const UEBEN_REIHENFOLGE = "einstufung,zusatz,fehlerlabor,uebungen,wortreview,blitz,hoeren,hoerneu,lueck,muendlich,begleiter,schatten,phonetik,vortrag,interview,briefe,szenarien,pflege,vollpruefung,leseleiter,redemittel,leben,tiefen,lesestoff,spiele,katalog"'),
+    ok(ueben.includes('const UEBEN_REIHENFOLGE = "einstufung,zusatz,fehlerlabor,uebungen,wortreview,selbsttest,blitz,hoeren,hoerneu,lueck,muendlich,begleiter,schatten,phonetik,vortrag,interview,briefe,szenarien,pflege,vollpruefung,leseleiter,redemittel,leben,tiefen,lesestoff,spiele,katalog"'),
       // R218/R157: محطة «vollpruefung» (تدريب امتحاني مصغّر) أُدرجت بعد التمريض — امتداد موثّق للترتيب
       // R300: محطتا «lesestoff» (قراءة وحوارات حرة) و«spiele» (ألعاب كلمات) أُدرجتا قبل الكاتالوج بطلب صريح من المالك — امتداد بنيوي موثّق، دون مساس بالترتيب الأصلي ولا بالخطة
-      "K112a ترتيبُ الأولويةِ معلنٌ حرفياً: تحديد المستوى (R183) ← الزائد ← أخطاؤك ← التدريب الحرّ ← برقّ ← استماع ← استماع متنوّع ← فجوات ← كلام ← رفيق محادثة ذكي (R198) ← تظليل صوتي (R184) ← عرض ← مقابلة ← رسائل ← سيناريوهات ← تمريض (R197) ← سلّم قراءة ← وسائل تعبير ← حياة في ألمانيا (R200: امتداد بنيوي موثّق في المراجع) ← معجم ← قراءة وحوارات حرة (R300) ← ألعاب كلمات (R300) ← كاتالوج");
-    const montiert = ["<FehlerLabor progress={progress} />", "<UebungenCard progress={progress} />", "<BlitzDrill progress={progress} />", "<HoerLabor progress={progress} />", "<LueckDiktat progress={progress} />", "<MündlichLabor progress={progress} />", "<VortragsBühne progress={progress} />", "<InterviewArena progress={progress} />", "<BriefSchmiede progress={progress} />", "<LebensSzenarien progress={progress} />", "<LeseLeiter />", "<RedemittelBank />", "<HoerNeu />", "<TiefenLexikon progress={progress} />", "<KatalogLeiste />", "<EinstufungTest />", "<ShadowingStation />"];
+      "K112a ترتيبُ الأولويةِ معلنٌ حرفياً: تحديد المستوى ← الزائد ← أخطاؤك ← التدريب الحرّ/الكلمات ← مختبر الاسترجاع (R164/852) ← الجولة السريعة ← المهارات ← المحطات المرجعية");
+    const montiert = ["<FehlerLabor progress={progress} />", "<UebungenCard progress={progress} />", "<BlitzDrill progress={progress} />", "<HoerLabor progress={progress} />", "<LueckDiktat progress={progress} />", "<MündlichLabor progress={progress} />", "<VortragsBühne progress={progress} />", "<InterviewArena progress={progress} />", "<BriefSchmiede progress={progress} />", "<LebensSzenarien progress={progress} />", "<LeseLeiter />", "<RedemittelBank />", "<HoerNeu />", "<TiefenLexikon progress={progress} />", "<KatalogLeiste />", "<EinstufungTest />", "<ShadowingStation />", "<SelbstTestZentrum progress={progress} startOffen />"];
     const naoMontiert = montiert.filter((m) => !ueben.includes(m));
-    ok(naoMontiert.length === 0, "K112b اثنتا عشرةُ محطّةُ تدريبٍ مركَّبةٌ فعلاً في التبويب — ناقص: " + (naoMontiert.join(" · ") || "لا شيء"));
+    ok(naoMontiert.length === 0, "K112b المحطات الحية ومنها مختبر الاسترجاع مركَّبة فعلاً في التبويب — ناقص: " + (naoMontiert.join(" · ") || "لا شيء"));
 
     // K113: بوابةُ ما بعدِ الإغلاق — العلامة تُوقَعُ عندِ الإغلاق وتُرفعُ عندَ أوّلِ مهمّة
     const setN = (heim.match(/localStorage\.setItem\("weg-abend"/g) ?? []).length;
@@ -15409,6 +15409,43 @@ function collectR262(dir: string, out: string[] = []): string[] {
   ok(dedupRecK360.length <= 3 && dedupRecK360.filter((entry) => entry.station === "wortreview").length === 1 &&
     dedupRecK360[0]?.signal === "due-cards" && JSON.stringify(multiK360) === multiBeforeK360,
     "K360d المحطة المتقاطعة تُعرض مرة واحدة بإشارتها الأعلى، والسقف ثلاثة، والمحرك لا يطفّر ملف المتعلم");
+}
+
+/* K361 · R164: دورة إثبات 852 تعيد استعمال الاسترجاع الحي داخل الملاح، بلا محرك كتالوج موازٍ */
+{
+  const cleanK361: Progress = {
+    ...emptyProgress,
+    settings: { ...emptyProgress.settings, placed: true },
+  };
+  const cleanRecK361 = baueUebungsEmpfehlungen(cleanK361, { now: new Date("2026-11-04T12:00:00.000Z") });
+  ok(cleanRecK361.map((entry) => entry.station).join(",") === "selbsttest,blitz" &&
+    cleanRecK361[0]?.signal === "retrieval-practice" && cleanRecK361[0]?.messwertAr.includes("3 أنماط"),
+    "K361a عند غياب إشارة أعلى يقترح الملاح مختبر الاسترجاع الحي قبل الجولة القصيرة، مع نطاق النشاط الظاهر");
+
+  const uebenK361 = readFileSync("app/ueben/page.tsx", "utf8");
+  const selbstK361 = readFileSync("components/selbsttest.tsx", "utf8");
+  ok(uebenK361.includes('offen === "selbsttest" && <SelbstTestZentrum progress={progress} startOffen />') &&
+    uebenK361.includes('ueben-karte-${id}') && selbstK361.includes('data-testid="selbsttest-inhalt"') &&
+    selbstK361.includes('data-testid="selbsttest-frei-submit"') && !uebenK361.includes("tool-852") &&
+    !selbstK361.includes("tool-852"),
+    "K361b توصية 852 تفتح SelbstTestZentrum نفسه مفتوحاً وتحجب الحل إلى التسليم؛ لا استيراد لنموذج مولد أو محرك موازٍ");
+
+  const evidenceK361 = JSON.parse(readFileSync("evidence/tool-catalog/852-retrieval-practice.json", "utf8")) as {
+    toolId: number;
+    automatedTests: { status: string; testCases: unknown[] };
+    sourceReview: { status: string };
+    fieldValidation: { status: string };
+    accessibilityPrivacyReview: { status: string; limitationsAr: string };
+    releaseDecision: { productStatus: string; decision: string };
+  };
+  ok(evidenceK361.toolId === 852 && evidenceK361.automatedTests.status === "verified" &&
+    evidenceK361.automatedTests.testCases.length >= 7 && evidenceK361.sourceReview.status === "pending" &&
+    evidenceK361.fieldValidation.status === "pending" &&
+    evidenceK361.accessibilityPrivacyReview.status === "automated-lab-reviewed" &&
+    evidenceK361.accessibilityPrivacyReview.limitationsAr.includes("لا يضمن") &&
+    evidenceK361.releaseDecision.productStatus === "candidate-live-implementation" &&
+    evidenceK361.releaseDecision.decision === "defer",
+    "K361c دليل 852 يغلق الاختبار الآلي فقط ويبقي المصدر والإتاحة اليدوية والميدان والادعاء السببي معلقة");
 }
 
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);
