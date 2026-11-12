@@ -1,0 +1,243 @@
+{
+  "schema": "wegb2-pedagogical-audit-measurements-v1",
+  "date": "2026-11-04",
+  "commit": "e936657da72b08cecd152d6f46304932eea175b5",
+  "scopeNoteAr": "هذه قياسات قابلة لإعادة التشغيل وليست شهادة صحة لغوية أو بيداغوجية.",
+  "baseline": {
+    "smoke": {
+      "passed": 2022,
+      "failed": 0
+    },
+    "interactiveJsdom": {
+      "passed": 995,
+      "failed": 0,
+      "plannedTasksTraversed": 2500,
+      "interactiveElementsTouched": 22549
+    },
+    "contentStructuralAudit": {
+      "exitCode": 0,
+      "confirmedStructuralDefectsReported": 0
+    },
+    "wordRegexAudit": {
+      "exitCode": 0,
+      "confirmedBlockersReported": 0,
+      "ruleRegressions": "10/10"
+    },
+    "planAudit": {
+      "exitCode": 0,
+      "errorsReported": 0,
+      "warningsReported": 0
+    },
+    "strictEvidenceGates": {
+      "accreditation": {
+        "technical": "pass",
+        "signed": 0,
+        "pending": 19,
+        "exitCode": 2
+      },
+      "grammarProfile": {
+        "technical": "pass",
+        "verifiedSources": 0,
+        "totalSources": 2,
+        "fullyReviewedFeatures": 0,
+        "totalFeatures": 313,
+        "exitCode": 2
+      },
+      "externalEvidence": {
+        "structure": "pass",
+        "signed": 0,
+        "pending": 19,
+        "exitCode": 2
+      },
+      "realWorld": {
+        "structure": "pass",
+        "executedSessions": 0,
+        "plannedSessions": 23,
+        "exitCode": 2
+      },
+      "toolCatalog": {
+        "structure": "pass",
+        "productionReady": 0,
+        "total": 820,
+        "automatedEvidence": 7,
+        "candidateLive": 184,
+        "exitCode": 2
+      }
+    }
+  },
+  "defaultPlan": {
+    "days": 378,
+    "tasks": 2500,
+    "taskMinutesTotal": 71595,
+    "taskHoursTotal": 1193.25,
+    "taskMinutesMeanPerDay": 189.4048,
+    "defaultSessionGoalMinutes": 90,
+    "levels": {
+      "A0": {
+        "days": 10,
+        "tasks": 86,
+        "taskMinutes": 1000,
+        "meanMinutesPerDay": 100,
+        "explicitPronunciationTasks": 2
+      },
+      "A1": {
+        "days": 84,
+        "tasks": 523,
+        "taskMinutes": 10280,
+        "meanMinutesPerDay": 122.381,
+        "explicitPronunciationTasks": 12
+      },
+      "A2": {
+        "days": 84,
+        "tasks": 518,
+        "taskMinutes": 13110,
+        "meanMinutesPerDay": 156.0714,
+        "explicitPronunciationTasks": 11
+      },
+      "B1": {
+        "days": 98,
+        "tasks": 655,
+        "taskMinutes": 20560,
+        "meanMinutesPerDay": 209.7959,
+        "explicitPronunciationTasks": 0
+      },
+      "B2": {
+        "days": 102,
+        "tasks": 718,
+        "taskMinutes": 26645,
+        "meanMinutesPerDay": 261.2255,
+        "explicitPronunciationTasks": 0
+      }
+    },
+    "explicitPronunciation": {
+      "taskCount": 25,
+      "daysWithTask": 25,
+      "lastTaskDay": 167,
+      "daysWithoutExplicitTaskAfterLast": 211
+    }
+  },
+  "onboardingAudio": {
+    "path": "public/willkommen-60s.mp3",
+    "bytes": 71907,
+    "mpegFrames": 344,
+    "sampleRateHz": 44100,
+    "meanBitrateKbps": 64,
+    "calculatedDurationSeconds": 8.99,
+    "method": "MPEG-1 Layer III frame count: 344 × 1152 / 44100"
+  },
+  "competenceProbe": {
+    "emptyProgress": {
+      "Lesen": 0,
+      "Hoeren": 30,
+      "Schreiben": 40,
+      "Sprechen": 25,
+      "Grammatik": 55,
+      "Wortschatz": 0,
+      "b2Score": 25,
+      "readiness": 30,
+      "errorHealthWithoutAnyObservedErrors": 100
+    },
+    "eightBinarySpeakingSuccessesWithoutLevelOrQualityEvidence": {
+      "Sprechen": 78,
+      "bandName": "B2 sicher",
+      "bandAr": "جاهز للامتحان"
+    }
+  },
+  "gradingProbe": {
+    "exerciseId": "b2-k2vht-e6",
+    "expected": "Wärst du nur gekommen!",
+    "keywords": [
+      "wärst",
+      "gekommen"
+    ],
+    "submitted": "gekommen wärst",
+    "accepted": true,
+    "feedbackAr": "ترجمة سليمة — كل الكلمات المفتاحية في مكانها.",
+    "keywordTranslationExercisesFoundInLoadedContent": 39
+  },
+  "schemaProbe": {
+    "exercisePromptDeContainingArabic": 67,
+    "knownArabicTypoExample": {
+      "id": "a2-imp-e4",
+      "value": "اساعدوا صديقكم!",
+      "expectedStart": "ساعدوا"
+    }
+  },
+  "mediationBank": {
+    "path": "content/mediation.json",
+    "tasks": 10,
+    "levels": {
+      "B2": 10
+    },
+    "distinctSamples": 1,
+    "pageHasLearnerInput": false,
+    "pageHasRubricControls": false,
+    "pageHasSubmission": false
+  },
+  "canDoBank": {
+    "path": "content/cando.json",
+    "descriptors": 44,
+    "counts": {
+      "A0": 11,
+      "A1": 8,
+      "A2": 9,
+      "B1": 8,
+      "B2": 8
+    },
+    "savedCheckboxStateRendered": false,
+    "allCheckedDescriptorsAddedToReadingProxy": true,
+    "allCheckedDescriptorsAddedToVocabularyProxy": true
+  },
+  "vocabularyPosInfoAudit": {
+    "path": "content/vocab.json",
+    "cardsTotal": 6202,
+    "cardsWithPosInfo": 1164,
+    "threeFormPosInfo": 1140,
+    "manualConfirmedMalformedCards": 110,
+    "levels": {
+      "A0": 3,
+      "A1": 13,
+      "A2": 10,
+      "B1": 64,
+      "B2": 20
+    },
+    "overlappingIssueTags": {
+      "present_malformed": 53,
+      "preterite_malformed": 106,
+      "perfect_malformed": 99,
+      "garbled_multiword_head": 19
+    },
+    "confirmedRegister": "docs/PEDAGOGICAL_AUDIT_VOCAB_POSINFO_2026-11-04.csv",
+    "automatedReferenceComparison": {
+      "exactSingleHeadwordsMatched": 833,
+      "participleReferenceMismatches": 432,
+      "alreadyInManualConfirmedSet": 68,
+      "additionalCandidatesPendingHumanContextReview": 364,
+      "caveatAr": "مرشحات فقط؛ لا تعتمد المكتبة وحدها في المساعد haben/sein أو قابلية الفصل أو تعدد المعنى."
+    }
+  },
+  "writingBankConsistencyAudit": {
+    "path": "content/writing.json",
+    "tasks": 105,
+    "registeredFindings": 42,
+    "uniqueTasksWithRegisteredFinding": 35,
+    "confirmedErrors": 25,
+    "pedagogicalRisks": 17,
+    "categories": {
+      "promptConfigWordTargetConflict": 20,
+      "sampleOutside20PercentAuditBand": 10,
+      "sampleSentencePunctuationCountConflict": 7,
+      "humanConfirmedTaskCriteriaSampleNoteConflicts": 5
+    },
+    "register": "docs/PEDAGOGICAL_AUDIT_WRITING_CONSISTENCY_2026-11-04.csv",
+    "wordCountMethod": "Unicode word-token regex; ±20% is an audit triage band, not an exam scoring rule",
+    "sentenceCountMethod": "sentence-final punctuation count; treated as pedagogical risk because greetings may not count as sentences"
+  },
+  "inventorySnapshot": {
+    "indexedTrackedFilesAndAuditArtifacts": 3528,
+    "manual_complete": 15,
+    "manual_targeted": 24,
+    "not_started": 3485,
+    "audit_artifact": 4
+  }
+}

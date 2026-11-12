@@ -1,0 +1,111 @@
+id,deck,level,posInfo_line,de,posInfo,issue_patterns,classification,review_status
+v838,h05-staat-recht,B2,14780,nachweisen,"weist nach, weiste nach, hat nachgeweist",preterite_malformed;perfect_malformed,confirmed_error,manual_confirmed
+v845,h06-studium-lernen,B2,14925,zulassen,"lasst zu, lasste zu, hat zugelasst",present_malformed;preterite_malformed;perfect_malformed,confirmed_error,manual_confirmed
+v856,h06-studium-lernen,B2,15092,durchfallen,"fallt durch, fallte durch, ist durchgefallt",present_malformed;preterite_malformed;perfect_malformed,confirmed_error,manual_confirmed
+v857,h06-studium-lernen,B2,15106,zurücktreten,"rücktretet zu, rücktretete zu, hat zugerücktrett",preterite_malformed;perfect_malformed,confirmed_error,manual_confirmed
+v860,h06-studium-lernen,B2,15151,sich einschreiben,"schreibt ein, schreibte ein, hat eingeschreibt",preterite_malformed;perfect_malformed,confirmed_error,manual_confirmed
+v878,h06-studium-lernen,B2,15423,unterbrechen,"brecht unter, brechte unter, hat unterbrecht",present_malformed;preterite_malformed;perfect_malformed,confirmed_error,manual_confirmed
+v1020,h08-sport-freizeit,B2,17612,beitreten,"tretet bei, tretete bei, hat beitrett",present_malformed;preterite_malformed;perfect_malformed,confirmed_error,manual_confirmed
+v1022,h08-sport-freizeit,B2,17640,austreten,"tretet aus, tretete aus, hat ausgetrett",present_malformed;preterite_malformed;perfect_malformed,confirmed_error,manual_confirmed
+v1395,i08-erinnerungskultur,B2,23490,gedenken,"gedenkt, gedenkte, hat gedenkt",perfect_malformed,confirmed_error,manual_confirmed
+vw-a1sta-022,a1-stadt-wege,A1,25353,ankommen,"kommt an, kommte an, ist angekommt",preterite_malformed,confirmed_error,manual_confirmed
+r311a1-051,a1-stadt-wege,A1,25869,mitnehmen,"nehmt mit, nehmte mit, hat mitgenehmt",present_malformed;preterite_malformed;perfect_malformed,confirmed_error,manual_confirmed
+vw-a2arb-038,a2-arbeit-buero,A2,26033,bestehen,"besteht, bestehte, hat besteht",preterite_malformed;perfect_malformed,confirmed_error,manual_confirmed
+vx-haus--028,a1-haus-schule,A1,29147,lesen,"lest, leste, hat gelest",present_malformed;preterite_malformed;perfect_malformed,confirmed_error,manual_confirmed
+vx-haus--029,a1-haus-schule,A1,29164,schreiben,"schreibt, schreibte, hat geschreibt",preterite_malformed;perfect_malformed,confirmed_error,manual_confirmed
+vx-haus--032,a1-haus-schule,A1,29207,gehen,"geht, gehte, ist geht",preterite_malformed,confirmed_error,manual_confirmed
+vx-haus--034,a1-haus-schule,A1,29234,geben,"gebt, gebte, hat gebt",present_malformed;preterite_malformed,confirmed_error,manual_confirmed
+vx-haus--035,a1-haus-schule,A1,29247,nehmen,"nehmt, nehmte, hat genehmt",present_malformed;preterite_malformed;perfect_malformed,confirmed_error,manual_confirmed
+vx-haus--042,a1-haus-schule,A1,29349,denken,"denkt, denkte, hat gedenkt",preterite_malformed;perfect_malformed,confirmed_error,manual_confirmed
+vx-haus--045,a1-haus-schule,A1,29391,schließen,"schließt, schließte, hat geschließt",preterite_malformed;perfect_malformed,confirmed_error,manual_confirmed
+vy-leben-045,a2-leben-technik,A2,31601,abnehmen,"nehmt ab, nehmte ab, hat abgenehmt",present_malformed;preterite_malformed;perfect_malformed,confirmed_error,manual_confirmed
+vy-leben-046,a2-leben-technik,A2,31615,zunehmen,"nehmt zu, nehmte zu, hat zugenehmt",present_malformed;preterite_malformed;perfect_malformed,confirmed_error,manual_confirmed
+vz-welt-b-037,a1-welt-beruf,A1,32524,fallen,"fallt, fallte, ist gefallt",present_malformed;preterite_malformed;perfect_malformed,confirmed_error,manual_confirmed
+vz-welt-b-040,a1-welt-beruf,A1,32565,mitkommen,"kommt mit, kommte mit, ist mitgekommt",preterite_malformed;perfect_malformed,confirmed_error,manual_confirmed
+vz-welt-b-041,a1-welt-beruf,A1,32579,zurückkommen,"rückkommt zu, rückkommte zu, ist zugerückkommt",preterite_malformed,confirmed_error,manual_confirmed
+vz-welt-b-042,a1-welt-beruf,A1,32593,weggehen,"geht weg, gehte weg, ist weggegeht",preterite_malformed;perfect_malformed,confirmed_error,manual_confirmed
+vz-schrei-026,a2-schreiben-dienste,A2,33742,teilnehmen,"teilnehmt, teilnehmte, hat geteilnehmt",present_malformed;preterite_malformed;perfect_malformed,confirmed_error,manual_confirmed
+vc-mensc-802,a2-mensch-beziehung,A2,36790,sich verlassen auf,"verlasst, verlasste, hat verlasst",present_malformed;preterite_malformed;perfect_malformed,confirmed_error,manual_confirmed
+vc-medien-031,a2-medien-bildung,A2,38477,denken an,"denkt, denkte, hat gedenkt",preterite_malformed;perfect_malformed,confirmed_error,manual_confirmed
+ve-erzaehl-020,a2-erzaehlen-zeit,A2,41066,sich entwickeln,"entwicket, entwickete, hat entwickeln",present_malformed;preterite_malformed;perfect_malformed;garbled_multiword_head,confirmed_error,manual_confirmed
+r312a2-165,a2-arbeit-umwelt,A2,42179,ausgehen,"geht aus, gehte aus, ist ausgegeht",preterite_malformed,confirmed_error,manual_confirmed
+vf-kultd-304,a2-kultur-digital,A2,43240,abgeben,"gebt ab, gebte ab, hat abgegebt",present_malformed;preterite_malformed;perfect_malformed,confirmed_error,manual_confirmed
+vf-kultd-309,a2-kultur-digital,A2,43312,aufgeben,"gebt auf, gebte auf, hat aufgegebt",present_malformed;preterite_malformed;perfect_malformed,confirmed_error,manual_confirmed
+vg-arbeit--005,b1-karriere-psyche,B1,45141,sich weiterentwickeln,"entwicket weiter, entwickete weiter, hat weitergeentwicket",present_malformed;preterite_malformed;perfect_malformed;garbled_multiword_head,confirmed_error,manual_confirmed
+vh-technik-022,b1-gesundheit-technik,B1,46774,zunehmen an,"nehmt zu, nehmte zu, hat zugenehmt",present_malformed;preterite_malformed;perfect_malformed,confirmed_error,manual_confirmed
+vh-technik-023,b1-gesundheit-technik,B1,46787,abnehmen an,"nehmt ab, nehmte ab, hat abgenehmt",present_malformed;preterite_malformed;perfect_malformed,confirmed_error,manual_confirmed
+vi-funktio-003,b1-funktionsverben,B1,47405,bestehen aus,"besteht, bestehte, hat besteht",preterite_malformed;perfect_malformed,confirmed_error,manual_confirmed
+vi-funktio-004,b1-funktionsverben,B1,47418,bestehen auf,"besteht, bestehte, hat besteht",preterite_malformed;perfect_malformed,confirmed_error,manual_confirmed
+vi-funktio-008,b1-funktionsverben,B1,47470,teilnehmen an,"teilnehmt, teilnehmte, hat geteilnehmt",present_malformed;preterite_malformed;perfect_malformed,confirmed_error,manual_confirmed
+vi-funktio-009,b1-funktionsverben,B1,47483,hinweisen auf,"weist hin, weiste hin, hat hingeweist",preterite_malformed;perfect_malformed,confirmed_error,manual_confirmed
+vi-funktio-015,b1-funktionsverben,B1,47564,sich eignen für,"eignt, eignte, hat geeignt",present_malformed;preterite_malformed;perfect_malformed,confirmed_error,manual_confirmed
+vi-funktio-016,b1-funktionsverben,B1,47577,in Kauf nehmen,"it, ite, hat geit",preterite_malformed;perfect_malformed;garbled_multiword_head,confirmed_error,manual_confirmed
+vi-funktio-017,b1-funktionsverben,B1,47591,zur Verfügung stellen,"zurt, zurte, hat gezurt",preterite_malformed;perfect_malformed;garbled_multiword_head,confirmed_error,manual_confirmed
+vi-funktio-018,b1-funktionsverben,B1,47604,in Anspruch nehmen,"it, ite, hat geit",preterite_malformed;perfect_malformed;garbled_multiword_head,confirmed_error,manual_confirmed
+vi-funktio-022,b1-funktionsverben,B1,47658,in Frage kommen,"it, ite, ist geit",preterite_malformed;perfect_malformed;garbled_multiword_head,confirmed_error,manual_confirmed
+vi-funkv-706,b1-funktionsverben,B1,47776,in Betracht ziehen,"it, ite, ist geit",preterite_malformed;perfect_malformed;garbled_multiword_head,confirmed_error,manual_confirmed
+vi-funkv-709,b1-funktionsverben,B1,47817,zur Sprache bringen,"zurt, zurte, hat gezurt",preterite_malformed;perfect_malformed;garbled_multiword_head,confirmed_error,manual_confirmed
+vk-b1x-025,b1-dienst-natur-bild,B1,49031,teilnehmen am Wettbewerb,"teilnehmt, teilnehmte, hat geteilnehmt",present_malformed;preterite_malformed;perfect_malformed,confirmed_error,manual_confirmed
+vm-b1z-018,b1-wissen-zeit-wendungen,B1,50264,in Verzug geraten,"it, ite, hat geit",preterite_malformed;perfect_malformed;garbled_multiword_head,confirmed_error,manual_confirmed
+vm-b1z-028,b1-wissen-zeit-wendungen,B1,50399,auf etwas hinauslaufen,"auft, aufte, hat geauft",preterite_malformed;perfect_malformed;garbled_multiword_head,confirmed_error,manual_confirmed
+vm-b1z-030,b1-wissen-zeit-wendungen,B1,50427,auf jemanden zugehen,"auft, aufte, ist geauft",preterite_malformed;perfect_malformed;garbled_multiword_head,confirmed_error,manual_confirmed
+vm-b1z-034,b1-wissen-zeit-wendungen,B1,50480,auf dem Laufenden bleiben,"auft, aufte, hat geauft",preterite_malformed;perfect_malformed;garbled_multiword_head,confirmed_error,manual_confirmed
+vm-b1z-037,b1-wissen-zeit-wendungen,B1,50520,zur Sprache kommen,"zurt, zurte, ist gezurt",preterite_malformed;perfect_malformed;garbled_multiword_head,confirmed_error,manual_confirmed
+vp-b1u-027,b1-job-auto-praefix,B1,52296,aufschreiben,"schreibt auf, schreibte auf, hat aufgeschreibt",preterite_malformed;perfect_malformed,confirmed_error,manual_confirmed
+vp-b1u-028,b1-job-auto-praefix,B1,52309,unterschreiben lassen,"schreibt unter, schreibte unter, hat unterschreibt",preterite_malformed;perfect_malformed,confirmed_error,manual_confirmed
+vp-b1u-029,b1-job-auto-praefix,B1,52323,zuschreiben,"schreibt zu, schreibte zu, hat zugeschreibt",preterite_malformed;perfect_malformed,confirmed_error,manual_confirmed
+vp-b1u-030,b1-job-auto-praefix,B1,52337,bestehen bleiben,"besteht, bestehte, hat besteht",preterite_malformed;perfect_malformed,confirmed_error,manual_confirmed
+vs-b1r-029,b1-pruefung-text-reflexiv,B1,54274,sich verlassen können auf,"verlasst, verlasste, hat verlasst",present_malformed;preterite_malformed;perfect_malformed,confirmed_error,manual_confirmed
+vu-b1p-024,b1-medien-reise-verben,B1,55661,aufkommen für,"kommt auf, kommte auf, ist aufgekommt",preterite_malformed,confirmed_error,manual_confirmed
+vu-b1p-025,b1-medien-reise-verben,B1,55674,"hinweisen darauf, dass","weist hin, weiste hin, hat hingeweist",preterite_malformed;perfect_malformed,confirmed_error,manual_confirmed
+vu-b1p-031,b1-medien-reise-verben,B1,55753,in Kraft treten,"it, ite, hat geit",preterite_malformed;perfect_malformed;garbled_multiword_head,confirmed_error,manual_confirmed
+vu-b1p-032,b1-medien-reise-verben,B1,55766,zur Folge haben,"zurt, zurte, hat gezurt",preterite_malformed;perfect_malformed;garbled_multiword_head,confirmed_error,manual_confirmed
+vu-b1p-034,b1-medien-reise-verben,B1,55792,zur Kenntnis nehmen,"zurt, zurte, hat gezurt",preterite_malformed;perfect_malformed;garbled_multiword_head,confirmed_error,manual_confirmed
+vv-verwal-014,b1-verwaltung-handwerk,B1,56236,in Kraft bleiben,"it, ite, hat geit",preterite_malformed;perfect_malformed;garbled_multiword_head,confirmed_error,manual_confirmed
+vv-gefueh-016,b1-verwaltung-handwerk,B1,56765,zugeben,"gebt zu, gebte zu, hat zugegebt",present_malformed;preterite_malformed;perfect_malformed,confirmed_error,manual_confirmed
+vv-gefueh-019,b1-verwaltung-handwerk,B1,56805,offenlassen,"offenlasst, offenlasste, hat geoffenlasst",preterite_malformed;perfect_malformed,confirmed_error,manual_confirmed
+a0-klassenzimmer-017,a0-klassenzimmer,A0,59791,schließen,"schließt, schließte, hat geschließt",preterite_malformed;perfect_malformed,confirmed_error,manual_confirmed
+a0-klassenzimmer-018,a0-klassenzimmer,A0,59805,schreiben,"schreibt, schreibte, hat geschreibt",preterite_malformed;perfect_malformed,confirmed_error,manual_confirmed
+a0-klassenzimmer-019,a0-klassenzimmer,A0,59819,lesen,"lest, leste, hat gelest",present_malformed;preterite_malformed;perfect_malformed,confirmed_error,manual_confirmed
+j01-arbeit-vertieft-008,j01-arbeit-vertieft,B2,59950,sich eignen,"eignt, eignte, hat geeignt",present_malformed;preterite_malformed;perfect_malformed,confirmed_error,manual_confirmed
+j01-arbeit-vertieft-034,j01-arbeit-vertieft,B2,60327,vertreten,"vertretet, vertretete, hat vertrett",present_malformed;preterite_malformed,confirmed_error,manual_confirmed
+j01-arbeit-vertieft-039,j01-arbeit-vertieft,B2,60392,ausfallen,"fallt aus, fallte aus, ist ausgefallt",present_malformed;preterite_malformed;perfect_malformed,confirmed_error,manual_confirmed
+j04-gesundheit-pflege-052,j04-gesundheit-pflege,B2,62562,einnehmen,"nehmt ein, nehmte ein, hat eingenehmt",present_malformed;preterite_malformed;perfect_malformed,confirmed_error,manual_confirmed
+j05-bildung-wissenschaft-031,j05-bildung-wissenschaft,B2,63458,annehmen,"nehmt an, nehmte an, hat angenehmt",present_malformed;preterite_malformed;perfect_malformed,confirmed_error,manual_confirmed
+j05-bildung-wissenschaft-037,j05-bildung-wissenschaft,B2,63536,sich aneignen,"eignt an, eignte an, hat angeeignt",present_malformed;preterite_malformed;perfect_malformed,confirmed_error,manual_confirmed
+j07-geld-wirtschaft-036,j07-geld-wirtschaft,B2,65215,ausgeben,"gebt aus, gebte aus, hat ausgegebt",present_malformed;preterite_malformed;perfect_malformed,confirmed_error,manual_confirmed
+j08-gefuehle-beziehungen-036,j08-gefuehle-beziehungen,B2,65998,auskommen mit,"kommt aus, kommte aus, ist ausgekommt",preterite_malformed;perfect_malformed,confirmed_error,manual_confirmed
+j10-meinung-diskussion-042,j10-meinung-diskussion,B2,67517,schließen aus,"schließt, schließte, hat geschließt",preterite_malformed;perfect_malformed,confirmed_error,manual_confirmed
+j14-kultur-freizeit-040,j14-kultur-freizeit,B2,71518,vorlesen,"lest vor, leste vor, hat vorgelest",present_malformed;preterite_malformed;perfect_malformed,confirmed_error,manual_confirmed
+j14-kultur-freizeit-041,j14-kultur-freizeit,B2,71531,antreten,"tretet an, tretete an, hat angetrett",present_malformed;preterite_malformed;perfect_malformed,confirmed_error,manual_confirmed
+r314b1-004,b1-az-a,B1,72957,abschreiben,"schreibt ab, schreibte ab, hat abgeschreibt",preterite_malformed;perfect_malformed,confirmed_error,manual_confirmed
+r314b1-034,b1-az-a,B1,73374,anhaben,"habt an, habte an, hat angehabt",present_malformed;preterite_malformed,confirmed_error,manual_confirmed
+r314b1-038,b1-az-a,B1,73428,anschließen,"schließt an, schließte an, hat angeschließt",preterite_malformed;perfect_malformed,confirmed_error,manual_confirmed
+r314b1-055,b1-az-a,B1,73666,auffallen,"fallt auf, fallte auf, ist aufgefallt",present_malformed;preterite_malformed;perfect_malformed,confirmed_error,manual_confirmed
+r314b1-062,b1-az-a,B1,73761,aufnehmen,"nehmt auf, nehmte auf, hat aufgenehmt",present_malformed;preterite_malformed;perfect_malformed,confirmed_error,manual_confirmed
+r314b1-076,b1-az-a,B1,73957,ausschließen,"schließt aus, schließte aus, hat ausgeschließt",preterite_malformed;perfect_malformed,confirmed_error,manual_confirmed
+r314b1-117,b1-az-b,B1,74522,bekommen,"bekommt, bekommte, ist bekommt",preterite_malformed;perfect_malformed,confirmed_error,manual_confirmed
+r314b1-132,b1-az-b,B1,74727,beschließen,"beschließt, beschließte, hat beschließt",preterite_malformed;perfect_malformed,confirmed_error,manual_confirmed
+r314b1-159,b1-az-b,B1,75091,brechen,"brecht, brechte, hat gebrecht",present_malformed;preterite_malformed;perfect_malformed,confirmed_error,manual_confirmed
+r315b1-050,b1-az-e,B1,76162,einbrechen,"brecht ein, brechte ein, hat eingebrecht",present_malformed;preterite_malformed;perfect_malformed,confirmed_error,manual_confirmed
+r315b1-054,b1-az-e,B1,76220,einfallen,"fallt ein, fallte ein, ist eingefallt",present_malformed;preterite_malformed;perfect_malformed,confirmed_error,manual_confirmed
+r315b1-067,b1-az-e,B1,76400,eintreten,"tretet ein, tretete ein, hat eingetrett",present_malformed;preterite_malformed;perfect_malformed,confirmed_error,manual_confirmed
+r315b1-083,b1-az-e,B1,76618,entgegenkommen,"entgegenkommt, entgegenkommte, ist entgegenkommt",preterite_malformed;perfect_malformed,confirmed_error,manual_confirmed
+r315b1-086,b1-az-e,B1,76656,entlassen,"entlasst, entlasste, hat entlasst",present_malformed;preterite_malformed;perfect_malformed,confirmed_error,manual_confirmed
+r315b1-090,b1-az-e,B1,76709,entwickeln,"entwicket, entwickete, hat entwickeln",present_malformed;preterite_malformed;perfect_malformed;garbled_multiword_head,confirmed_error,manual_confirmed
+r315b1-091,b1-az-e,B1,76722,sich ereignen,"ereignt, ereignte, hat ereignt",present_malformed;perfect_malformed,confirmed_error,manual_confirmed
+r316b1-023,b1-az-f,B1,77434,festnehmen,"festnehmt, festnehmte, hat gefestnehmt",present_malformed;preterite_malformed;perfect_malformed,confirmed_error,manual_confirmed
+r316b1-071,b1-az-g,B1,78127,gefallen,"gefallt, gefallte, ist gefallt",present_malformed;perfect_malformed,confirmed_error,manual_confirmed
+r316b1-112,b1-az-h,B1,78708,haben,"habt, habte, hat gehabt",present_malformed;preterite_malformed,confirmed_error,manual_confirmed
+r316b1-140,b1-az-h,B1,79093,hinterlassen,"terlasst hin, terlasste hin, hat hingeterlasst",garbled_multiword_head,confirmed_error,manual_confirmed
+r316b1-142,b1-az-h,B1,79118,hinweisen,"weist hin, weiste hin, hat hingeweist",preterite_malformed;perfect_malformed,confirmed_error,manual_confirmed
+r317b1-114,b1-az-l,B1,80930,lassen,"lasst, lasste, hat gelasst",present_malformed;preterite_malformed;perfect_malformed,confirmed_error,manual_confirmed
+r318b1-054,b1-az-n,B1,82108,nachdenken,"denkt nach, denkte nach, hat nachgedenkt",preterite_malformed;perfect_malformed,confirmed_error,manual_confirmed
+r322b1-046,b1-az-t,B1,86450,treten,"tretet, tretete, hat getrett",present_malformed;preterite_malformed;perfect_malformed,confirmed_error,manual_confirmed
+r322b1-070,b1-az-u,B1,86787,umgehen,"geht um, gehte um, ist umgegeht",preterite_malformed;perfect_malformed,confirmed_error,manual_confirmed
+r322b1-084,b1-az-u,B1,86969,unterlassen,"lasst unter, lasste unter, hat unterlasst",present_malformed;preterite_malformed;perfect_malformed,confirmed_error,manual_confirmed
+r323b1-024,b1-az-v,B1,87423,verlassen,"verlasst, verlasste, hat verlasst",present_malformed;preterite_malformed;perfect_malformed,confirmed_error,manual_confirmed
+r323b1-061,b1-az-v,B1,87923,vorhaben,"habt vor, habte vor, hat vorgehabt",present_malformed;preterite_malformed,confirmed_error,manual_confirmed
+r323b1-064,b1-az-v,B1,87960,vorkommen,"kommt vor, kommte vor, ist vorgekommt",preterite_malformed;perfect_malformed,confirmed_error,manual_confirmed
+r325b1-025,b1-az-z,B1,89067,zugehen,"geht zu, gehte zu, ist zugegeht",preterite_malformed;perfect_malformed,confirmed_error,manual_confirmed
+r325b1-030,b1-az-z,B1,89134,zurechtkommen,"rechtkommt zu, rechtkommte zu, ist zugerechtkommt",preterite_malformed;perfect_malformed,confirmed_error,manual_confirmed
