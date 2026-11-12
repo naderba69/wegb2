@@ -2,7 +2,7 @@
   "name": "weg-nach-b2",
   "version": "1.0.0",
   "private": true,
-  "description": "طريقي إلى B2 — المدرّس الافتراضي الوحيد لتعلّم الألمانية A0→B2",
+  "description": "طريقي إلى B2 — مسار تعلّم محلي للألمانية من A0 نحو B2",
   "engines": {
     "node": ">=22.22.2 <23"
   },
@@ -14,6 +14,7 @@
     "audit:vocab-posinfo": "tsx scripts/vocab_posinfo_audit.ts",
     "audit:writing-consistency": "tsx scripts/writing_consistency_audit.ts",
     "audit:learning-state": "tsx scripts/learning_state_audit.ts",
+    "audit:assessment-integrity": "tsx scripts/assessment_integrity_audit.ts",
     "audit:words": "tsx scripts/wort_fuer_wort_audit.ts",
     "audit:scaffolds": "tsx scripts/scaffold_audit.ts",
     "audit:scaffold-review": "tsx scripts/scaffold_review_audit.ts",

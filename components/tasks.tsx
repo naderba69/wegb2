@@ -151,7 +151,7 @@ export default function TaskView({ task, lang: _lang, day, srs, onSrs, onPoints,
 
 type SrsState2 = Record<string, SrsState>;
 
-// ── 🔁 مراجعةُ الشفرات بفواصلَ متباعدة: التركةُ بطاقةٌ في دورةِ SM-2 كالمفردة ──
+// ── 🔁 مراجعةُ الشفرات بفواصلَ متباعدة: التركةُ بطاقةٌ في دورةِ FSRS-6 المتكيفة كالمفردة ──
 function BrueckenSRS({ srs, onSrs, onPoints }: { srs: SrsState2; onSrs: (id: string, s: SrsState) => void; onPoints: (p: number, m: number) => void }) {
   const [i, setI] = useState(0);
   const [offen, setOffen] = useState(false);
@@ -1249,7 +1249,7 @@ function SprechenTask({ task, onPoints, voiceName, rate, persistKey }: Omit<Task
         ))}
       </div>
       <p style={{ color: "var(--color-ink2)", fontSize: "0.88rem", margin: "0.7rem 0" }}>
-        💡 قاعدة الظل اللغوي: استمع للجملة ← انسخ نغمة المتحدث بحذف اللامام ← سجّل صوتك بالهاتف واستمع كل 3 أيام لتلاحظ تقدّمك.
+        💡 قاعدة الظل اللغوي: استمع للجملة ← حاكِ نغمة المتحدث وإيقاعه ← سجّل صوتك بالهاتف واستمع كل 3 أيام لتلاحظ تقدّمك.
       </p>
       {!schriftAb ? (
         <div className="card" style={{ padding: "0.7rem 0.9rem", margin: "0 0 0.7rem", background: "var(--color-paper2)" }}>

@@ -4532,7 +4532,7 @@
       {
         "id": "a2-imp-e4",
         "type": "translate",
-        "promptDe": "اساعدوا صديقكم!",
+        "promptDe": "ساعدوا صديقكم!",
         "answer": [
           "Helft eurem Freund!"
         ],

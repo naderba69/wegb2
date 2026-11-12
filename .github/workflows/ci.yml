@@ -73,6 +73,8 @@ jobs:
         run: npm run audit:writing-consistency
       - name: Learning-state integrity (PA-006–PA-008 regression gate)
         run: npm run audit:learning-state
+      - name: Assessment and interface integrity (PA-004/005/012/019/024/028)
+        run: npm run audit:assessment-integrity
       - name: Wort-für-Wort-Audit (bestätigte Blocker)
         run: npm run audit:words
       - name: Scaffold-Observability (CEFR baseline; candidates are not defects)

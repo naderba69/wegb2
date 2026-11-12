@@ -437,10 +437,16 @@ const vocabRepeatAudit = (() => {
   const fill: Exercise = { id: "t2", type: "fill", promptDe: "___ Haus", answer: ["das", "der"] };
   ok(grader.grade(fill, "Das").correct === true, "G7 fill يقبل كل البدائل بلا حالة");
   const tr: Exercise = { id: "t3", type: "translate", promptDe: "قل: أتعلم", answer: "Ich lerne", keywords: ["lerne"] };
-  ok(grader.grade(tr, "Ich lerne Deutsch seit Jahr.").correct === true, "G8 translate بمفاتيح");
+  const trPartial = grader.grade(tr, "Ich lerne Deutsch seit Jahr.");
+  ok(grader.grade(tr, "Ich lerne").correct === true && !trPartial.correct && trPartial.points === 0.5,
+    "G8 translate يقبل النموذج المعلن فقط؛ وجود المفتاح يمنح دليلاً جزئياً لا صحة كاملة");
+  const trOrder: Exercise = { id: "t3b", type: "translate", promptDe: "x", answer: "Wärst du nur gekommen", keywords: ["wärst", "du", "nur", "gekommen"] };
+  ok(!grader.grade(trOrder, "gekommen nur du wärst").correct,
+    "G8b الكلمات نفسها بترتيب ألماني خاطئ لا تنال صحة كاملة");
   const di: Exercise = { id: "t4", type: "dictation", promptDe: "x", answer: "Ich habe das Haus" };
   ok(grader.grade(di, "ich habe das haus!").correct === true, "G9 dictation تطابق مطبّع");
-  ok(grader.grade(di, "ich haus").correct === false, "G10 dictation نسبة أقل من 85 تُرفض");
+  ok(grader.grade(di, "ich haus").correct === false && !grader.grade(di, "Haus das habe ich").correct,
+    "G10 dictation دون 85% أو بترتيب مقلوب يُرفض");
   const ord: Exercise = { id: "t5", type: "order", promptDe: "x", answer: ["ich", "lerne", "deutsch"] };
   ok(grader.grade(ord, ["ich", "Lerne", "Deutsch!"]).correct === true, "G11 order يتسامح حالة/ترقيم");
   ok(grader.grade(ord, ["lerne", "ich", "deutsch"]).correct === false, "G12 order الموضع الخاطئ مرفوض");

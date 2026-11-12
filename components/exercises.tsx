@@ -128,14 +128,17 @@ export default function ExerciseSet({ items, onPoints, storageKey, onProgress, o
       // 🔁 خانئ — إعادة محاولة أخيرة بلا كشف
       // للتحويل: التشخيصُ الموجَّهُ («ما زلتَ تكتبُ …» / «ينقصك …») يُعطى الآن — هو تلميحٌ لا كشف؛
       // أمّا رسالةُ «النموذج: …» فتكشفُ الجوابَ فلا تُعرَضُ قبلَ المحاولةِ الأخيرة
-      const hinweis = ex.type === "umformung" && res.feedbackAr && !res.feedbackAr.includes("النموذج:") ? res.feedbackAr : undefined;
+      const hinweis = (
+        (ex.type === "umformung" && res.feedbackAr && !res.feedbackAr.includes("النموذج:"))
+        || (ex.type === "translate" && res.points > 0 && res.feedbackAr)
+      ) ? res.feedbackAr : undefined;
       setState(stateId, { response, checked: false, correct: false, versuche: 1, gezaehlt, retry: true, hinweis, sicher: st?.sicher });
       return;
     }
 
     // ❌ الكشف النهائي: Diff + ثقة + فحص المدرّس + دفتر الأخطاء
     setState(stateId, { response, checked: true, correct: false, versuche, gezaehlt: true, feedback: res.feedbackAr, sicher: st?.sicher });
-    if (!gezaehlt) onPoints?.(0, res.maxPoints);
+    if (!gezaehlt) onPoints?.(Math.max(0, Math.min(res.maxPoints, res.points)), res.maxPoints);
     if (!gezaehlt) onErgebnis?.(ex, false);
     const ueberkonfident = ex.type === "mc" && st?.sicher === true;
     if (!gezaehlt && ex.type === "mc" && st?.sicher !== undefined) logSicherheitNow({ t: new Date().toISOString(), id: stateId, sicher: st.sicher, correct: false });

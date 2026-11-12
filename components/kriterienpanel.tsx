@@ -1,5 +1,5 @@
 "use client";
-// 🎓 لوحة معايير Goethe الأربعة (E4/R173): مؤشرات آلية محلية + مستشار ذكاء اصطناعي اختياري (R170).
+// 🎓 شبكة تدريب داخلية بأربعة محاور: مؤشرات آلية محلية + مساعد ذكاء اصطناعي اختياري غير رسمي.
 import { useMemo, useState } from "react";
 import { KRITERIEN, bewerteKriterien } from "@/lib/kriterien";
 import { llmBereit, llmKriterien, type LlmKriterienErgebnis } from "@/lib/grader";
@@ -43,7 +43,7 @@ export function KriterienPanel({
 
   return (
     <div style={{ marginTop: "0.8rem" }}>
-      <h4 style={{ fontWeight: 800, margin: "0 0 0.3rem" }}>🎓 نصّك بمعايير Goethe الأربعة</h4>
+      <h4 style={{ fontWeight: 800, margin: "0 0 0.3rem" }}>🎓 تقدير تدريبي داخلي بأربعة محاور</h4>
       <div style={{ fontSize: "0.82rem", color: "var(--color-ink2)", marginBottom: "0.5rem", lineHeight: 1.8 }}>
         إنجاز المهمة · المفردات · التراكيب · التماسك — هذه مؤشرات آلية تُحسب من نصّك نفسه (روابط وجدتها، جمل فرعية، تنوّع كلمات)،
         وهي تقديرٌ تدريبي لدعم حكمك، وليست درجة مصحّح بشري ولا نتيجة رسمية.

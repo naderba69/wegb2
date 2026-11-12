@@ -77,7 +77,7 @@ export function OnboardingWizard() {
             <div role="group" aria-label="اختر إيقاع البطاقات الجديدة" style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "0.5rem", margin: "0.5rem 0" }}>
               {([
                 { id: "leicht", label: "leicht", sub: "حتى 3 بطاقات/يوم", desc: "خفيف" },
-                { id: "regelmaessig", label: "regelmaessig", sub: "حتى 5 بطاقات/يوم", desc: "افتراضي" },
+                { id: "regelmaessig", label: "regelmäßig", sub: "حتى 5 بطاقات/يوم", desc: "افتراضي" },
                 { id: "intensiv", label: "intensiv", sub: "حتى 10 بطاقات/يوم", desc: "مكثّف" },
               ] as const).map(o => (
                 <button key={o.id} type="button" data-testid={`onboarding-tempo-${o.id}`} aria-pressed={tempo === o.id} onClick={() => setTempo(o.id)} style={{ padding: "0.6rem 0.4rem", borderRadius: "0.7rem", border: `2px solid ${tempo === o.id ? "#22c55e" : "var(--color-line)"}`, background: tempo === o.id ? "rgb(34 197 94 / 0.14)" : "transparent", cursor: "pointer", minHeight: "72px" }}>

@@ -325,7 +325,7 @@ export default function WortReviewErweitert() {
       </div>
 
       <div style={{ fontSize: "0.72rem", color: "#888", textAlign: "center", lineHeight: 1.6 }}>
-        مراجعة موسعة — Hybrid 5 خطوات + SRS FSRS-6 (احتفاظ 90%) · German Verlag Design · كل حرف مدقق — لا عينات
+        مراجعة موسعة — 5 خطوات + FSRS-6 (هدف احتفاظ 90%) · فحوص بنيوية آلية ومراجعة بشرية جارية
       </div>
     </div>
   );

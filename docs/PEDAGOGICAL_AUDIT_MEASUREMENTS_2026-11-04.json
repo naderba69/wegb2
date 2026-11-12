@@ -5,7 +5,7 @@
   "scopeNoteAr": "هذه قياسات قابلة لإعادة التشغيل وليست شهادة صحة لغوية أو بيداغوجية.",
   "baseline": {
     "smoke": {
-      "passed": 2029,
+      "passed": 2030,
       "failed": 0
     },
     "interactiveJsdom": {
@@ -151,16 +151,21 @@
       "gekommen"
     ],
     "submitted": "gekommen wärst",
-    "accepted": true,
-    "feedbackAr": "ترجمة سليمة — كل الكلمات المفتاحية في مكانها.",
-    "keywordTranslationExercisesFoundInLoadedContent": 39
+    "keywordTranslationExercisesFoundInLoadedContent": 39,
+    "initialAccepted": true,
+    "initialFeedbackAr": "ترجمة سليمة — كل الكلمات المفتاحية في مكانها.",
+    "currentAccepted": false,
+    "currentPoints": 0.5,
+    "currentFeedbackAr": "الكلمات المطلوبة موجودة، لكن ترتيب الجملة وتصريفها لم يطابقا نموذجاً أو بديلاً معلناً؛ هذه مفردات جزئية لا صحة كاملة."
   },
   "schemaProbe": {
     "exercisePromptDeContainingArabic": 67,
     "knownArabicTypoExample": {
       "id": "a2-imp-e4",
-      "value": "اساعدوا صديقكم!",
-      "expectedStart": "ساعدوا"
+      "expectedStart": "ساعدوا",
+      "initialValue": "اساعدوا صديقكم!",
+      "correctedValue": "ساعدوا صديقكم!",
+      "fixed": true
     }
   },
   "mediationBank": {
@@ -244,10 +249,10 @@
     "fixedPedagogicalRisks": 17
   },
   "inventorySnapshot": {
-    "indexedTrackedFilesAndAuditArtifacts": 3532,
-    "manual_complete": 19,
-    "manual_targeted": 27,
-    "not_started": 3482,
+    "indexedTrackedFilesAndAuditArtifacts": 3533,
+    "manual_complete": 20,
+    "manual_targeted": 33,
+    "not_started": 3476,
     "audit_artifact": 4
   },
   "learningStateCorrections": {
@@ -276,5 +281,25 @@
     ],
     "dailyReviewCap": 150,
     "regressionGate": "npm run audit:learning-state"
+  },
+  "assessmentIntegrityCorrections": {
+    "findings": [
+      "PA-004",
+      "PA-005",
+      "PA-012",
+      "PA-019",
+      "PA-024",
+      "PA-028"
+    ],
+    "translationFullCredit": "declared answer or alternative only",
+    "keywordOnlyCredit": 0.5,
+    "dictationComparison": "order-preserving token LCS at 85 percent",
+    "dailyMasteryThreshold": 0.8,
+    "dailyThresholdIsExamClaim": false,
+    "srsUiAlgorithm": "FSRS-6 adaptive; no fixed interval promise",
+    "llmRole": "unofficial training assistant; no accreditation or score prediction",
+    "confirmedCopyErrorsFixed": 3,
+    "unsupportedMarketingClaimsRemoved": 2,
+    "regressionGate": "npm run audit:assessment-integrity"
   }
 }

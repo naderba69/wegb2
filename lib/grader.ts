@@ -34,6 +34,27 @@ function normalizeForExercise(s: string, ex: Exercise): string {
   return normalizeText(s, !ex.strictEszett);
 }
 
+/** تشابه تسلسلي يحفظ ترتيب الكلمات (LCS)؛ بخلاف كيس الكلمات لا يكافئ قلب الجملة. */
+function tokenSequenceSimilarity(given: string, target: string): number {
+  const a = given.split(" ").filter(Boolean);
+  const b = target.split(" ").filter(Boolean);
+  if (a.length === 0 || b.length === 0) return 0;
+  const row = new Array<number>(b.length + 1).fill(0);
+  for (const token of a) {
+    let diagonal = 0;
+    for (let j = 1; j <= b.length; j++) {
+      const previous = row[j];
+      row[j] = token === b[j - 1] ? diagonal + 1 : Math.max(row[j], row[j - 1]);
+      diagonal = previous;
+    }
+  }
+  return row[b.length] / Math.max(a.length, b.length);
+}
+
+function containsNormalizedPhrase(text: string, phrase: string): boolean {
+  return (` ${text} `).includes(` ${phrase} `);
+}
+
 export type DiffToken = { w: string; s: "ok" | "falsch" | "fehlt" | "extra" };
 
 /** مقارنة كلمةً كلمة بين الإجابة والنموذج — Diff view (Modul S) */
@@ -98,15 +119,12 @@ export class DeterministicGrader implements Grader {
     if (ex.type === "dictation") {
       const answers = (Array.isArray(ex.answer) ? ex.answer : [ex.answer]).map(normalize);
       const given = normalize(Array.isArray(response) ? response.join(" ") : response);
-      // التسميع: مطابقة كاملة بعد التطبيع، أو نسبة كلمات ≥ 85%
+      // التسميع: مطابقة كاملة أو تشابه تسلسلي ≥85%؛ قلب الكلمات لا يُحسب كتابة صحيحة.
       const okExact = answers.includes(given) && given.length > 0;
       if (okExact) return this.result(true, maxPoints, ex, "سماع ممتاز — الكتابة مطابقة!");
-      const target = answers[0].split(" ");
-      const got = given.split(" ");
-      const matched = target.filter((w) => got.includes(w)).length;
-      const ratio = target.length ? matched / target.length : 0;
+      const ratio = Math.max(0, ...answers.map((answer) => tokenSequenceSimilarity(given, answer)));
       const ok = ratio >= 0.85 && given.length > 0;
-      return this.result(ok, maxPoints, ex, ok ? "قريب جداً — الكلمات الأساسية صحيحة." : `النص الصحيح: ${ex.answer}`);
+      return this.result(ok, maxPoints, ex, ok ? "قريب جداً — تسلسل الكلمات مطابق تقريباً." : `النص الصحيح: ${ex.answer}`);
     }
 
     if (ex.type === "umformung") {
@@ -129,31 +147,36 @@ export class DeterministicGrader implements Grader {
 
     if (ex.type === "translate") {
       const given = normalizeForExercise(Array.isArray(response) ? response.join(" ") : response, ex);
+      const accepted = [
+        ...(Array.isArray(ex.answer) ? ex.answer : [ex.answer]),
+        ...(ex.alternativen ?? []),
+      ].map((answer) => normalizeForExercise(answer, ex));
+      if (given.length > 0 && accepted.includes(given)) {
+        return this.result(true, maxPoints, ex, "ترجمة تطابق النموذج أو بديلاً معلناً.");
+      }
+
       const keys = ex.keywords ?? [];
       if (keys.length === 0) {
-        const accepted = [
-          ...(Array.isArray(ex.answer) ? ex.answer : [ex.answer]),
-          ...(ex.alternativen ?? []),
-        ].map((answer) => normalizeForExercise(answer, ex));
-        const ok = given.length > 0 && accepted.includes(given);
-        return this.result(
-          ok,
-          maxPoints,
-          ex,
-          ok ? "ترجمة تطابق النموذج أو بديلاً معلناً." : "لم تطابق الترجمة نموذجاً أو بديلاً معلناً."
-        );
+        return this.result(false, maxPoints, ex, "لم تطابق الترجمة نموذجاً أو بديلاً معلناً.");
       }
-      const missing = keys.filter((k) => !given.includes(normalizeForExercise(k, ex)));
-      const ok = given.length > 0 && missing.length === 0;
+      const missing = keys.filter((keyword) => {
+        const normalized = normalizeForExercise(keyword, ex);
+        return !containsNormalizedPhrase(given, normalized);
+      });
+      if (given.length > 0 && missing.length === 0) {
+        return {
+          correct: false,
+          points: maxPoints * 0.5,
+          maxPoints,
+          feedbackAr: "الكلمات المطلوبة موجودة، لكن ترتيب الجملة وتصريفها لم يطابقا نموذجاً أو بديلاً معلناً؛ هذه مفردات جزئية لا صحة كاملة.",
+          feedbackDe: "Schlüsselwörter vorhanden; Satzbau und Flexion sind nicht bestätigt.",
+        };
+      }
       return this.result(
-        ok,
+        false,
         maxPoints,
         ex,
-        ok
-          ? "ترجمة سليمة — كل الكلمات المفتاحية في مكانها."
-          : missing.length
-          ? `ينقصك: ${missing.join(" · ")}`
-          : "حاول مرة أخرى."
+        missing.length ? `ينقصك: ${missing.join(" · ")}` : "حاول مرة أخرى."
       );
     }
 
@@ -568,10 +591,10 @@ export async function llmGespraech(
   }
 }
 
-/* ── E4/R173: تقييم اختياري بمعايير Goethe الأربعة عبر المدرّس الذكي (BYOK + موافقة فقط) ── */
+/* ── E4/R173: تقدير تدريبي اختياري بأربعة محاور داخلية عبر مساعد ذكي غير رسمي (BYOK + موافقة فقط) ── */
 
 export interface LlmKriterien {
-  /** اسم المعيار بالألمانية كما في شبكة Goethe */
+  /** اسم المحور بالألمانية كما في الشبكة التدريبية الداخلية */
   name: string;
   /** 0..100 */
   punkte: number;
@@ -611,7 +634,7 @@ export async function llmKriterien(
           {
             role: "system",
             content:
-              'أنت مصحّح معتمد لامتحانات Goethe للناطقين بالعربية. قيّم نص المتعلم بالمعايير الأربعة الرسمية: Erfüllung (إنجاز المهمة والطول)، Wortschatz (المفردات)، Strukturen (التراكيب)، Kohärenz (التماسك). كل معيار 0-100 نقطة؛ ودون نصف عدد الكلمات المطلوب يكون Erfüllung صفرًا. علّق بالعربية بلطف ودقّة. أعد JSON فقط: {"kriterien":[{"name":"Erfüllung","punkte":0,"kommentar":"..."},{"name":"Wortschatz","punkte":0,"kommentar":"..."},{"name":"Strukturen","punkte":0,"kommentar":"..."},{"name":"Kohärenz","punkte":0,"kommentar":"..."}],"fazit":"جملة ختامية بالعربية"}',
+              'أنت مساعد تدريب غير رسمي للكتابة الألمانية، ولست ممتحناً معتمداً ولا تتنبأ بنتيجة امتحان. طبّق شبكة داخلية من أربعة محاور: Erfüllung (إنجاز المهمة والطول)، Wortschatz (المفردات)، Strukturen (التراكيب)، Kohärenz (التماسك). كل محور 0-100 نقطة تدريبية؛ ودون نصف عدد الكلمات المطلوب يكون Erfüllung صفرًا. علّق بالعربية بلطف ودقّة، واذكر في الخلاصة أن التقدير آلي غير رسمي. أعد JSON فقط: {"kriterien":[{"name":"Erfüllung","punkte":0,"kommentar":"..."},{"name":"Wortschatz","punkte":0,"kommentar":"..."},{"name":"Strukturen","punkte":0,"kommentar":"..."},{"name":"Kohärenz","punkte":0,"kommentar":"..."}],"fazit":"جملة ختامية بالعربية"}',
           },
           {
             role: "user",
