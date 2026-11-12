@@ -274,6 +274,8 @@ export interface DayTask {
   exam?: boolean;
   /** من التعويضات المُرحَّلة من أيام سابقة */
   mandatory?: boolean;
+  /** معرّف الدين الأصلي؛ يتيح إزالته فقط بعد النجاح وإعادته للطابور عند الفشل. */
+  debtId?: string;
   from?: number;
   /** دفتر الأخطاء: مفاتيح أخطاء للمراجعة المتباعدة */
   fehlerKeys?: string[];
@@ -299,6 +301,8 @@ export interface DayPlan {
   tasks: DayTask[];
   tempo: Tempo;
   zielMin: number;
+  /** لقطة طابور التعويض الكامل؛ المعروض في اليوم لا يتجاوز مهمتين لكن الباقي لا يُحذف. */
+  debtBacklog?: DebtItem[];
   /** المحطات الست للدرس (إحماء، نطق/ظل، مفردات، قواعد استقرائية، استماع/قراءة، إنتاج) */
   stationen?: Array<{ id: string; titelAr: string; titelDe: string; min: number }>;
 }
@@ -330,6 +334,8 @@ export interface DayResult {
 }
 
 export interface DebtItem {
+  /** معرّف ثابت للدين؛ اختياري فقط لترحيل بيانات الإصدارات القديمة. */
+  id?: string;
   kind: TaskKind;
   titleDe: string;
   titleAr: string;
@@ -359,6 +365,8 @@ export interface SrsState {
   prod?: number;
   /** تاريخ إدخال البطاقة (لمراجعة أولى بعد 24 ساعة) */
   introduced?: string;
+  /** عدد النجاحات المتتالية الحقيقي؛ منفصل عن عدد المحاولات الكلي. */
+  successStreak?: number;
   /** 010 Overlearning: مواعيد الترسيخ الزائد الإضافية (أيام) */
   overDue?: string[];
 }

@@ -33,7 +33,7 @@ import {
   planStundenGesamt,
 } from "../lib/plan";
 import { seededShuffle } from "../lib/seeded-rng";
-import { newCard, reviewCard, isDue, newCardCap, countNewCardsIntroducedToday, karteStufe, abrufbarkeit } from "../lib/srs";
+import { newCard, reviewCard, isDue, newCardCap, countNewCardsIntroducedToday, karteStufe, abrufbarkeit, todayDeck } from "../lib/srs";
 import { planeWortkarten } from "../lib/wortkarten";
 import { baueUebungsEmpfehlungen } from "../lib/uebungsnavigator";
 import { punkteFuerRichtigenVersuch } from "../lib/exercise-scoring";
@@ -282,8 +282,24 @@ const vocabRepeatAudit = (() => {
   const failState: Record<string, TaskResult> = Object.fromEntries(p1.tasks.map((t) => [t.id, { done: true, passed: false, score: 0, total: 5, attempts: 2 }]));
   ok(dayScore(p1, failState).done === 0, "D5 يوم فاشل بلا إتقان");
   const debts = debtsFrom(p1, failState);
-  ok(debts.length <= 2, `D6 سقف الديون مهمّتان كحدّ أقصى (وُجد ${debts.length})`);
-  ok(debts.every((x) => !String(x.titleDe).startsWith("Nachholen: ")), "D7 عناوين الديون مجرّدة من البادئة");
+  const failedDebtCandidates = p1.tasks.filter((task) => !task.mandatory).length;
+  ok(debts.length === failedDebtCandidates && debts.length > 2,
+    `D6 كل الديون ${debts.length}/${failedDebtCandidates} تُحفظ، وسقف المهمتين يخص العرض لا التخزين`);
+  ok(debts.every((x) => !!x.id && !String(x.titleDe).startsWith("Nachholen: ")) && new Set(debts.map((x) => x.id)).size === debts.length,
+    "D7 الديون تحمل معرفات فريدة وعناوين مجردة من البادئة");
+  const debtPlan = buildDay(51, R({ ...empty(), plan: { ...empty().plan, debt: debts } }));
+  const scheduledDebts = debtPlan.tasks.filter((task) => !!task.debtId);
+  ok(scheduledDebts.length === 2 && debtPlan.debtBacklog?.length === debts.length,
+    "D7a يُعرض أقدم دينين فقط ويبقى الطابور الكامل في لقطة الخطة");
+  const debtResults: Record<string, TaskResult> = Object.fromEntries(
+    debtPlan.tasks.map((task) => [task.id, { done: true, passed: true, score: 5, total: 5, attempts: 1 }]),
+  );
+  debtResults[scheduledDebts[1].id] = { done: true, passed: false, score: 0, total: 5, attempts: 2 };
+  const carriedDebts = debtsFrom(debtPlan, debtResults);
+  ok(carriedDebts.length === debts.length - 1
+    && !carriedDebts.some((debt) => debt.id === scheduledDebts[0].debtId)
+    && carriedDebts.some((debt) => debt.id === scheduledDebts[1].debtId),
+  "D7b النجاح وحده يستهلك الدين؛ الفشل يعيده، والديون غير المعروضة لا تضيع");
   const passState: Record<string, TaskResult> = Object.fromEntries(p1.tasks.map((t) => [t.id, { done: true, passed: true, score: 5, total: 5, attempts: 1 }]));
   const sc = dayScore(p1, passState);
   ok(sc.done === p1.tasks.length && sc.score === sc.total, "D8 يوم مثالي كامل النقاط");
@@ -304,9 +320,13 @@ const vocabRepeatAudit = (() => {
   const e3int = c.interval;
   c = reviewCard(c, 4);
   ok(c.interval > e3int && c.interval <= 90, `E4 الثالثة: الفاصل يتّسع FSRS (${e3int}←${c.interval}، جاء ${c.interval})`);
+  ok(c.successStreak === 3 && c.overDue?.length === 2,
+    "E4a ثلاثة نجاحات حقيقية فقط تنشئ موعدي overlearning");
   const before = c;
   c = reviewCard(c, 0);
-  ok(c.interval === 0 && c.lapses === before.lapses + 1 && c.learning === true, "E5 سقوط: تصفير + lapses + وضع تعلّم");
+  ok(c.interval === 0 && c.lapses === before.lapses + 1 && c.learning === true
+    && c.successStreak === 0 && !c.overDue,
+  "E5 سقوط: تصفير + lapses + وضع تعلّم، مع تصفير streak وإلغاء مواعيد الإتقان");
   let x = newCard();
   for (let i = 0; i < 100; i++) x = reviewCard(x, 2);
   ok(x.ease >= 1.3 && x.reps === 100 && Number.isFinite(x.interval), "E6 100 مراجعات بجهد: سقف ease وصحة reps");
@@ -324,6 +344,38 @@ const vocabRepeatAudit = (() => {
   };
   ok(countNewCardsIntroducedToday(introduced, ["v1", "v2", "old", "v1"], now) === 2,
     "E10 عدّاد البطاقات الجديدة فريدٌ، يوميٌّ، ويحسب ما أُدخل حتى بعد أول مراجعة");
+
+  const t0 = new Date("2026-01-01T12:00:00.000Z");
+  const day = (n: number) => new Date(t0.getTime() + n * 86400000);
+  let timed = newCard(t0);
+  timed = reviewCard(timed, 2, { now: t0 });
+  timed = reviewCard(timed, 2, { now: day(1) });
+  timed = reviewCard(timed, 2, { now: day(2) });
+  ok(timed.introduced === t0.toISOString()
+    && timed.overDue?.join(",") === [day(4).toISOString(), day(9).toISOString()].join(","),
+  "E11 newCard وoverlearning يستعملان now المحقون حتمياً (+2/+7 من الإتقان)");
+  timed = reviewCard(timed, 2, { now: day(4) });
+  ok(timed.overDue?.join(",") === day(9).toISOString() && !isDue(timed, day(4)),
+    "E12 المراجعة تستهلك موعد overlearning الحالّ ولا تجعل البطاقة مستحقة دائماً");
+
+  const priorityNow = day(30);
+  const priorityBase = (due: Date, lapses = 0): SrsState => ({
+    ...newCard(t0), reps: 2, lapses, due: due.toISOString(), last: day(20).toISOString(),
+  });
+  const priorityDeck = todayDeck({
+    "base-old": priorityBase(day(20)),
+    "extra-oldest": { ...priorityBase(day(40)), overDue: [day(10).toISOString()] },
+    "tie-low": priorityBase(day(25), 0),
+    "tie-high": priorityBase(day(25), 5),
+  }, "leicht", priorityNow).due;
+  ok(priorityDeck.join(",") === "extra-oldest,base-old,tie-high,tie-low",
+    "E13 ترتيب المستحق: أقدم موعد فعلي ثم أعلى lapses عند التعادل، والمعرّف آخر كاسر تعادل");
+  const cappedStates: Record<string, SrsState> = {};
+  for (let i = 0; i < 151; i++) cappedStates[`card-${String(i).padStart(3, "0")}`] = priorityBase(day(29));
+  cappedStates.oldest = priorityBase(day(1));
+  const capped = todayDeck(cappedStates, "regelmaessig", priorityNow).due;
+  ok(capped.length === 150 && capped[0] === "oldest",
+    "E14 سقف 150 يحافظ على الأقدم استحقاقاً ولا يختار أبجدياً");
 }
 
 /* ═══ F · دفتر الأخطاء ═══ */

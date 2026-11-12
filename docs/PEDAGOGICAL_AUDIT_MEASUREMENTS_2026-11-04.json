@@ -5,7 +5,7 @@
   "scopeNoteAr": "هذه قياسات قابلة لإعادة التشغيل وليست شهادة صحة لغوية أو بيداغوجية.",
   "baseline": {
     "smoke": {
-      "passed": 2022,
+      "passed": 2029,
       "failed": 0
     },
     "interactiveJsdom": {
@@ -244,10 +244,37 @@
     "fixedPedagogicalRisks": 17
   },
   "inventorySnapshot": {
-    "indexedTrackedFilesAndAuditArtifacts": 3531,
-    "manual_complete": 18,
-    "manual_targeted": 26,
-    "not_started": 3483,
+    "indexedTrackedFilesAndAuditArtifacts": 3532,
+    "manual_complete": 19,
+    "manual_targeted": 27,
+    "not_started": 3482,
     "audit_artifact": 4
+  },
+  "learningStateCorrections": {
+    "findings": [
+      "PA-006",
+      "PA-007",
+      "PA-008"
+    ],
+    "debtBacklog": {
+      "persistent": true,
+      "scheduledPerDay": 2,
+      "removal": "passed only",
+      "stableIds": true
+    },
+    "overlearning": {
+      "realSuccessStreak": true,
+      "usesInjectedNow": true,
+      "consumesDueDatesOnReview": true,
+      "clearsOnFailure": true
+    },
+    "reviewPriority": [
+      "oldestEffectiveDue",
+      "lowestRetrievability",
+      "highestLapses",
+      "idTieBreak"
+    ],
+    "dailyReviewCap": 150,
+    "regressionGate": "npm run audit:learning-state"
   }
 }

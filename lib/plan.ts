@@ -553,6 +553,25 @@ export function dueVerify(progress: Progress, day: number): { lessonId: string; 
     .sort((a, b) => a.dueDay - b.dueDay);
 }
 
+function debtStableId(debt: DebtItem): string {
+  if (debt.id) return debt.id;
+  const source = debt.topicId ?? debt.deckId ?? debt.textId ?? debt.dialogueId
+    ?? debt.writeId ?? debt.sentenceIds?.join("+") ?? debt.titleDe;
+  return `debt:${debt.from}:${debt.kind}:${source}`;
+}
+
+function normalizeDebtBacklog(debts: DebtItem[]): DebtItem[] {
+  const seen = new Set<string>();
+  const normalized: DebtItem[] = [];
+  for (const debt of debts) {
+    const id = debtStableId(debt);
+    if (seen.has(id)) continue;
+    seen.add(id);
+    normalized.push({ ...debt, id });
+  }
+  return normalized;
+}
+
 // ── مولّد اليوم ─────────────────────────────────────────────────────────
 export function buildDay(day: number, progress: Progress): DayPlan {
   const week = Math.ceil(day / 7);
@@ -566,8 +585,9 @@ export function buildDay(day: number, progress: Progress): DayPlan {
   const wocheInPhase = Math.max(1, Math.ceil((day - phaseStart + 1) / 7));
   const level = levelOf(day);
 
-  // (1) التعويضات الإلزامية أولاً — «ما لم يُنجز أمس يُنجز اليوم»
-  progress.plan.debt.forEach((d, i) => {
+  // (1) التعويضات الإلزامية أولاً — نعرض أقدم مهمتين فقط، مع إبقاء الطابور كاملاً.
+  const debtBacklog = normalizeDebtBacklog(progress.plan.debt ?? []);
+  debtBacklog.slice(0, 2).forEach((d, i) => {
     tasks.push({
       id: `${day}:debt:${i}`,
       kind: d.kind,
@@ -582,6 +602,7 @@ export function buildDay(day: number, progress: Progress): DayPlan {
       sentenceIds: d.sentenceIds,
       exam: d.exam,
       mandatory: true,
+      debtId: d.id,
       from: d.from,
     });
   });
@@ -1538,7 +1559,7 @@ export function buildDay(day: number, progress: Progress): DayPlan {
     }
   }
   const tempo = progress.settings.tempo ?? "regelmaessig";
-  return { day, week, weekday, phase, type, tasks, tempo, zielMin: DEFAULT_SESSION_GOAL_MINUTES };
+  return { day, week, weekday, phase, type, tasks, tempo, zielMin: DEFAULT_SESSION_GOAL_MINUTES, debtBacklog };
 }
 
 // ── منطق القفل والتعويض ────────────────────────────────────────────────
@@ -1570,33 +1591,61 @@ export function dayScore(plan: DayPlan, taskState: Record<string, TaskResult>) {
   return { score, total, done, tasksTotal: plan.tasks.length };
 }
 
-/** المهام غير المُتقَنة تتحول إلى ديون تعويضية للغد
- *  K-DebtCap: سقف الديون = مهمّتان كحد أقصى، وما زاد يُدمَج في مراجعة نهاية الأسبوع.
- *  K-A0noDebt: في مرحلة A0 لا تُولَّد ديون على الإطلاق (لا عقاب، بلا إخفاق). */
+/** المهام غير المُتقَنة تتحول إلى طابور تعويض دائم.
+ *  يُعرض أقدم دينين في اليوم، لكن غير المعروض يبقى في `debtBacklog`، والدين المعروض
+ *  لا يُحذف إلا بعد النجاح. A0 يبقى مرحلة تهيئة بلا ديون جديدة. */
 export function debtsFrom(plan: DayPlan, taskState: Record<string, TaskResult>): DebtItem[] {
-  if (plan.phase === "A0") return []; // A0 تهيئة صرفة: لا ديون ولا تقييم
-  const debts: DebtItem[] = [];
-  for (const t of plan.tasks) {
-    if (t.mandatory) continue; // الديون القديمة نفسها تُعالَج في الختام لا تضاف مرة أخرى
-    const r = taskState[t.id];
-    if (!isPassed(r)) {
-      debts.push({
-        kind: t.kind,
-        titleDe: t.titleDe.replace(/^Nachholen: /, ""),
-        titleAr: t.titleAr,
-        topicId: t.topicId,
-        deckId: t.deckId,
-        textId: t.textId,
-        dialogueId: t.dialogueId,
-        writeId: t.writeId,
-        sentenceIds: t.sentenceIds,
-        exam: t.exam,
-        from: t.from ?? plan.day,
-      });
+  if (plan.phase === "A0") return [];
+
+  const backlog = normalizeDebtBacklog(plan.debtBacklog ?? []);
+  const scheduledIds = new Set(
+    plan.tasks.map((task) => task.debtId).filter((id): id is string => !!id),
+  );
+  // ابدأ بالديون القديمة التي لم تُعرض اليوم؛ لا يجوز أن تختفي بسبب سقف العرض.
+  const next: DebtItem[] = backlog.filter((debt) => !scheduledIds.has(debt.id as string));
+  const oldById = new Map(backlog.map((debt) => [debt.id as string, debt]));
+
+  for (const task of plan.tasks) {
+    const result = taskState[task.id];
+    if (task.debtId) {
+      // نجاح الدين يستهلكه؛ فشله يعيده إلى ذيل الطابور كي لا يحجب بقية الديون دائماً.
+      if (!isPassed(result)) {
+        const old = oldById.get(task.debtId);
+        next.push(old ?? {
+          id: task.debtId,
+          kind: task.kind,
+          titleDe: task.titleDe.replace(/^Nachholen: /, ""),
+          titleAr: task.titleAr,
+          topicId: task.topicId,
+          deckId: task.deckId,
+          textId: task.textId,
+          dialogueId: task.dialogueId,
+          writeId: task.writeId,
+          sentenceIds: task.sentenceIds,
+          exam: task.exam,
+          from: task.from ?? plan.day,
+        });
+      }
+      continue;
     }
+    // تحققات الاستقلال الإلزامية ليست ديناً قديماً، ولا تتحول تلقائياً إلى دين جديد.
+    if (task.mandatory || isPassed(result)) continue;
+    next.push({
+      id: `debt:${plan.day}:${task.id}`,
+      kind: task.kind,
+      titleDe: task.titleDe.replace(/^Nachholen: /, ""),
+      titleAr: task.titleAr,
+      topicId: task.topicId,
+      deckId: task.deckId,
+      textId: task.textId,
+      dialogueId: task.dialogueId,
+      writeId: task.writeId,
+      sentenceIds: task.sentenceIds,
+      exam: task.exam,
+      from: task.from ?? plan.day,
+    });
   }
-  // كحد أقصى مهمّتا دين تُرحَّلان للغد؛ الباقي ينتظر مراجعة نهاية الأسبوع
-  return debts.slice(0, 2);
+  return normalizeDebtBacklog(next);
 }
 
 /** تقدّم الخطة الكلي */

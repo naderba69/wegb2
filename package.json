@@ -13,6 +13,7 @@
     "audit:content": "esbuild scripts/audit_inhalt.ts --bundle --platform=node --format=cjs --tsconfig=tsconfig.json --outfile=.cache/audit.cjs --log-level=warning && node .cache/audit.cjs",
     "audit:vocab-posinfo": "tsx scripts/vocab_posinfo_audit.ts",
     "audit:writing-consistency": "tsx scripts/writing_consistency_audit.ts",
+    "audit:learning-state": "tsx scripts/learning_state_audit.ts",
     "audit:words": "tsx scripts/wort_fuer_wort_audit.ts",
     "audit:scaffolds": "tsx scripts/scaffold_audit.ts",
     "audit:scaffold-review": "tsx scripts/scaffold_review_audit.ts",
