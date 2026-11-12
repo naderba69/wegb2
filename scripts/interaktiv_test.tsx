@@ -4480,6 +4480,15 @@ const hasFile = txt().includes("صوتٌ من الدار");
   await oeffneDetails(uebenDetails2);
   ok(!!rootEl.querySelector('[data-testid="ueben-liste"]') && !!rootEl.querySelector('[data-testid="ueben-karte-blitz"]'),
     "R308-5 بعد فتح باب «المساء»، كل محطّات «تدرّب» (بما فيها بطاقاتها الحقيقية) ظاهرة هنا فعليًا داخل صفحة اليوم");
+  const navigatorKarte = rootEl.querySelector('[data-testid="ueben-empfehlungen"]');
+  ok(!!navigatorKarte && navigatorKarte.textContent!.includes("ترتيب محلي حتمي") && navigatorKarte.textContent!.includes("لا يغيّر خطتك"),
+    "R315-1 ملاح التدريب الموحّد ظاهر داخل «اليوم/تدرّب» ويعلن محليته وحد عدم تعديل الخطة");
+  const einstufungEmpfehlung = rootEl.querySelector('[data-testid="ueben-empfehlung-einstufung"]') as HTMLElement | null;
+  ok(!!einstufungEmpfehlung && einstufungEmpfehlung.textContent!.includes("الأولوية الأولى") && einstufungEmpfehlung.textContent!.includes("لا يوجد تشخيص"),
+    "R315-2 ملف بلا تشخيص يرى سبب الأولوية والقياس الفعلي، لا توصية مبهمة أو ضعفاً مخترعاً");
+  if (einstufungEmpfehlung) click(einstufungEmpfehlung);
+  ok(!!rootEl.querySelector('[data-testid="einstufung"]'),
+    "R315-3 نقر توصية الملاح يفتح محطة التشخيص الحية نفسها داخل التدفق الموحّد");
   act(() => { dom.window.localStorage.removeItem("weg-abend"); });
 
   // 4) فتح «اختبر» يعرض بوّابة الوحدة والمحاكاة الحقيقية كاملة، من نفس الصفحة

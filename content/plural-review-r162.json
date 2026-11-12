@@ -1,6 +1,6 @@
 {
   "reviewRule": "R162",
-  "reviewedAt": "2026-11-04",
+  "reviewedAt": "2026-11-11",
   "source": "wegb2_scan_results.json/plural_mismatch",
   "claimBoundary": {
     "reviewKind": "internal-agent-editorial",

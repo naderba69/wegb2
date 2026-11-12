@@ -41,6 +41,7 @@ import { VollPruefung } from "@/components/vollpruefung";
 import { PhonetikStation } from "@/components/phonetik";
 import { MenuSection } from "@/components/dirb/MenuSection";
 import { useBankGeneration } from "@/lib/use-bank-generation";
+import { baueUebungsEmpfehlungen } from "@/lib/uebungsnavigator";
 
 /**
  * 💪 وجهة «تدرّب» (P3):
@@ -134,6 +135,10 @@ export default function Ueben() {
   const topicId = useMemo(() => heutigesGrammatikThema(plan), [plan]);
   const parkExercises = useMemo(() => parkedExercisesFor(topicId), [topicId]);
   const hatZusatz = parkExercises.length > 0;
+  const empfehlungen = useMemo(
+    () => baueUebungsEmpfehlungen(progress, { hatZusatz, limit: 3 }),
+    [progress, hatZusatz],
+  );
 
   if (!geladen) {
     return (
@@ -310,6 +315,42 @@ export default function Ueben() {
           مهامّ اليوم ما زالت مفتوحة؛ أنجزها من <Link href="/">صفحة اليوم</Link> ثم تابع التدريب هنا.
         </div>
       )}
+
+      <section
+        className="card dirb-hero-anim-2"
+        data-testid="ueben-empfehlungen"
+        aria-labelledby="ueben-empfehlungen-titel"
+        style={{ padding: "0.9rem", marginBottom: "0.8rem", display: "grid", gap: "0.6rem" }}
+      >
+        <div>
+          <h2 id="ueben-empfehlungen-titel" style={{ margin: 0, fontSize: "1rem" }}>🧭 مقترح الآن</h2>
+          <p className="tiny muted" style={{ margin: "0.2rem 0 0", lineHeight: 1.7 }}>
+            ترتيب محلي حتمي يجمع درس اليوم ودفتر الأخطاء وSRS وشبكة المهارات. لا يغيّر خطتك ولا يرسل بياناتك.
+          </p>
+        </div>
+        <div style={{ display: "grid", gap: "0.45rem" }}>
+          {empfehlungen.map((empfehlung, index) => {
+            const k = KARTE[empfehlung.station];
+            return (
+              <button
+                key={empfehlung.station}
+                type="button"
+                className="dirb-menu-btn"
+                data-testid={`ueben-empfehlung-${empfehlung.station}`}
+                onClick={() => setOffen(empfehlung.station)}
+                aria-label={`${index === 0 ? "الأولوية الأولى: " : ""}${k.titel} — ${empfehlung.messwertAr}`}
+              >
+                <span className="dirb-menu-ico" aria-hidden>{k.icon}</span>
+                <span className="dirb-menu-txt">
+                  <b>{index === 0 ? "الأولوية الأولى · " : ""}{k.titel}</b>
+                  <span>{empfehlung.messwertAr} — {empfehlung.grundAr}</span>
+                </span>
+                <span className="dirb-chev" aria-hidden>←</span>
+              </button>
+            );
+          })}
+        </div>
+      </section>
 
       <div style={{ marginBottom: "0.7rem" }}>
         <input

@@ -427,9 +427,20 @@ async function main() {
       "Tatsächliche B2-Lektion nach Bank-Nachladung");
     if (!b2LessonRendered) fail("B2-Lektion wurde trotz vollständiger Bibliothek nicht gerendert");
 
-    stage = "30 item four part listening round";
+    stage = "local practice navigator";
     await evalJs(cdp, sessionId, `localStorage.setItem("weg-abend","1")`);
     await navigate(cdp, sessionId, `${ORIGIN}/ueben`);
+    const practiceNavigator = await poll(cdp, sessionId, `(()=>{
+      const root=document.querySelector('[data-testid="ueben-empfehlungen"]');
+      const buttons=[...document.querySelectorAll('[data-testid^="ueben-empfehlung-"]')];
+      const ids=buttons.map((button)=>button.getAttribute("data-testid"));
+      return root?.textContent?.includes("ترتيب محلي حتمي")&&root.textContent.includes("لا يغيّر خطتك")&&
+        buttons.length>=1&&buttons.length<=3&&new Set(ids).size===ids.length&&buttons.every((button)=>button.textContent?.includes("—"))
+        ? {count:buttons.length,ids}:false;
+    })()`, "Lokaler Übungsnavigator mit Gründen und höchstens drei eindeutigen Stationen", SW_TIMEOUT);
+    if (!practiceNavigator) fail("Übungsnavigator wurde nicht transparent und begrenzt gerendert");
+
+    stage = "30 item four part listening round";
     await poll(cdp, sessionId, `!!document.querySelector('[data-testid="ueben-karte-vollpruefung"]')`, "Prüfungstrainingskarte");
     await evalJs(cdp, sessionId, `document.querySelector('[data-testid="ueben-karte-vollpruefung"]')?.click()`);
     await poll(cdp, sessionId, `!!document.querySelector('[data-testid="vollpruefung-stufe-B2"]')`, "Prüfungstraining geöffnet");
@@ -509,6 +520,7 @@ async function main() {
       mediaCapability: { ...mediaCapability, limitation: "API-presence-only-no-real-microphone" },
       bankReadiness: { ...bankReadiness, b2LessonRendered: !!b2LessonRendered },
       libraryFilters: { familyFilterCount, searchFilterCount },
+      practiceNavigator,
       fullListeningScope,
       renderedListeningParts,
       serviceWorker: { active: true, caches: online.entries, missing: online.missing },

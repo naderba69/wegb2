@@ -35,6 +35,7 @@ import {
 import { seededShuffle } from "../lib/seeded-rng";
 import { newCard, reviewCard, isDue, newCardCap, countNewCardsIntroducedToday, karteStufe, abrufbarkeit } from "../lib/srs";
 import { planeWortkarten } from "../lib/wortkarten";
+import { baueUebungsEmpfehlungen } from "../lib/uebungsnavigator";
 import { punkteFuerRichtigenVersuch } from "../lib/exercise-scoring";
 import { prognose } from "../lib/prognose";
 import { PHONETIK_EINHEITEN } from "../lib/phonetikdaten";
@@ -15300,6 +15301,7 @@ function collectR262(dir: string, out: string[] = []): string[] {
   };
   const reviewK359 = JSON.parse(readFileSync("content/plural-review-r162.json", "utf8")) as {
     reviewRule: string;
+    reviewedAt: string;
     claimBoundary: { independentHumanReview: boolean; scannerCandidateIsConfirmedDefect: boolean; massDeletionUsed: boolean };
     summary: { reviewed: number; replace: number; removeNonNoun: number; removeNoPluralInSense: number; retainValid: number; changed: number };
     protectedCards: Record<string, string>;
@@ -15309,11 +15311,13 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const cardsK359 = Object.values(vocabK359).flatMap((deck) => deck.cards);
   const cardByIdK359 = new Map(cardsK359.map((card) => [card.id, card]));
   const reviewIdsK359 = new Set(reviewK359.items.map((item) => item.id));
-  ok(reviewK359.reviewRule === "R162" && reviewK359.summary.reviewed === 147 &&
+  const reportK359 = readFileSync("docs/R162_PLURAL_PED09_2026-11-11.md", "utf8");
+  ok(reviewK359.reviewRule === "R162" && reviewK359.reviewedAt === "2026-11-11" &&
+    reportK359.includes("**التاريخ:** 2026-11-11") && reviewK359.summary.reviewed === 147 &&
     reviewK359.summary.replace === 75 && reviewK359.summary.removeNonNoun === 37 &&
     reviewK359.summary.removeNoPluralInSense === 24 && reviewK359.summary.retainValid === 11 &&
     reviewK359.summary.changed === 136 && reviewK359.items.length === 147 && reviewIdsK359.size === 147,
-    "K359a R162: مصفوفة قرار فريدة تغطي 147/147 مرشحاً: 75 تصحيحاً و61 حذفاً مسبباً و11 إبقاءً");
+    "K359a R162: أثر 2026-11-11 ومصفوفة قرار فريدة تغطي 147/147 مرشحاً: 75 تصحيحاً و61 حذفاً مسبباً و11 إبقاءً");
   ok(reviewK359.claimBoundary.independentHumanReview === false &&
     reviewK359.claimBoundary.scannerCandidateIsConfirmedDefect === false &&
     reviewK359.claimBoundary.massDeletionUsed === false &&
@@ -15349,8 +15353,62 @@ function collectR262(dir: string, out: string[] = []): string[] {
     uiK359.includes("أسماء الأجزاء تنظيم تدريبي داخلي") &&
     qualityK359.includes('data-testid="plural-review-summary"') && qualityK359.includes("30 بنداً فعلياً في أربعة أجزاء تدريبية") &&
     interaktivK359.includes("hoerteile.length === 4 && hoerFragen === 30") &&
-    browserK359.includes("Vier markierte Hörteile mit 30 Aufgaben"),
+    browserK359.includes("Vier markierte Hörteile mit 30 Aufgaben") &&
+    reportK359.includes("`43120716116` خلال **11m54s**"),
     "K359e الواجهة تعرض الأجزاء الأربعة ونتيجة الاستماع 30 بنداً، وتحرسها jsdom وChromium مع حد الادعاء الرسمي");
+}
+
+/* K360 · R163: ملاح تدريب موحّد يجمع إشارات المحركات الحية بلا تعديل الخطة */
+{
+  const nowK360 = new Date("2026-11-04T12:00:00.000Z");
+  const dueK360: SrsState = {
+    ease: 2.5, interval: 1, due: "2026-11-03T12:00:00.000Z", reps: 1, lapses: 0,
+  };
+  const futureK360: SrsState = {
+    ease: 2.5, interval: 7, due: "2026-11-12T12:00:00.000Z", reps: 2, lapses: 0,
+  };
+  const unplacedK360: Progress = {
+    ...emptyProgress,
+    settings: { ...emptyProgress.settings, placed: undefined },
+  };
+  const startK360 = baueUebungsEmpfehlungen(unplacedK360, { now: nowK360 });
+  ok(startK360[0]?.station === "einstufung" && startK360[0]?.signal === "placement" &&
+    startK360.some((entry) => entry.station === "blitz") && !startK360.some((entry) => entry.signal === "weak-skill"),
+    "K360a الملاح يبدأ بالتشخيص عند غياب نقطة الدخول، ويعرض fallback قصيراً بلا اختلاق ضعف من صفر محاولات");
+
+  const multiK360: Progress = {
+    ...emptyProgress,
+    settings: { ...emptyProgress.settings, placed: true },
+    srs: { due: dueK360, future: futureK360 },
+    fehler: {
+      f1: { key: "f1", falsch: "x", richtig: "y", art: "wortstellung", ar: "ترتيب", srs: dueK360, treffer: 1 },
+    },
+  };
+  const multiBeforeK360 = JSON.stringify(multiK360);
+  const multiRecK360 = baueUebungsEmpfehlungen(multiK360, { hatZusatz: true, now: nowK360, limit: 3 });
+  ok(multiRecK360.map((entry) => entry.station).join(",") === "zusatz,fehlerlabor,wortreview" &&
+    multiRecK360[1]?.messwertAr.includes("1") && multiRecK360[2]?.messwertAr.includes("1"),
+    "K360b التدريب المرحّل ثم الخطأ المستحق ثم بطاقة SRS المستحقة تتقدم بترتيب حتمي، والمستقبل لا يُحسب");
+
+  const weakK360: Progress = {
+    ...emptyProgress,
+    settings: { ...emptyProgress.settings, placed: true },
+    kompetenzLog: Array.from({ length: 8 }, () => ({ h: "Hoeren" as const, ok: false, d: "2026-11-04" })),
+  };
+  const weakRecK360 = baueUebungsEmpfehlungen(weakK360, { now: nowK360 });
+  ok(weakRecK360[0]?.station === "hoeren" && weakRecK360[0]?.signal === "weak-skill" &&
+    weakRecK360[0]?.messwertAr.includes("8 محاولات"),
+    "K360c بعد ثماني محاولات فقط تتحول أضعف كفاءة ملاحظة إلى محطة مطابقة مع سبب وقياس ظاهرين");
+
+  const dedupK360: Progress = {
+    ...weakK360,
+    srs: { due: dueK360 },
+    kompetenzLog: Array.from({ length: 8 }, () => ({ h: "Wortschatz" as const, ok: false, d: "2026-11-04" })),
+  };
+  const dedupRecK360 = baueUebungsEmpfehlungen(dedupK360, { now: nowK360, limit: 99 });
+  ok(dedupRecK360.length <= 3 && dedupRecK360.filter((entry) => entry.station === "wortreview").length === 1 &&
+    dedupRecK360[0]?.signal === "due-cards" && JSON.stringify(multiK360) === multiBeforeK360,
+    "K360d المحطة المتقاطعة تُعرض مرة واحدة بإشارتها الأعلى، والسقف ثلاثة، والمحرك لا يطفّر ملف المتعلم");
 }
 
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);

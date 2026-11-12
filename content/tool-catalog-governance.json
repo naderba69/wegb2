@@ -13967,19 +13967,24 @@
       "decision": "defer",
       "researchStatus": "citation-label-unverified",
       "productStatus": "candidate-live-implementation",
-      "automatedTestStatus": "not-demonstrated",
+      "automatedTestStatus": "verified",
       "fieldValidationStatus": "not-tested",
       "reviewerRole": "internal-methodology-triage",
       "reviewedAt": "2026-11-06",
       "risk": "high",
-      "rationaleAr": "يوجد تشخيص متدرج يقدر أربع مهارات ويقترح نقطة دخول محافظة، وجدولة FSRS، وإعادة من الأخطاء، وتوصية بأضعف مهارة وتحويل وقت التدريب الحر؛ وهذه مطابقة مرشحة لتكيف محدود قائم على قواعد. الخطة الأساسية ثابتة ولا يعاد توليد المحتوى أو الصعوبة لحظياً، والعتبات والمؤشرات غير متحققة ولا تثبت فعالية Brusilovsky أو عدالة المسار.",
+      "rationaleAr": "يوجد تشخيص متدرج وFSRS وإعادة من الأخطاء وشبكة كفاءات؛ ويجمع الملاح الحي الآن تمارين الدرس والأخطاء والبطاقات والمهارة المرصودة والجاهزية في ثلاث توصيات اختيارية محلية مع سبب وقياس واختبارات موجبة وسالبة وحدية. هذه مطابقة مرشحة لتكيف قواعدي محدود فقط: الخطة الأساسية ثابتة، والعتبات والمصدر والعدالة والأثر غير متحققة ميدانياً.",
       "candidateEvidence": [
         "lib/einstufung.ts",
         "components/einstufung.tsx",
         "lib/srs.ts",
         "lib/skillplan.ts",
         "components/berichte.tsx",
-        "scripts/engine_smoke.ts"
+        "scripts/engine_smoke.ts",
+        "lib/uebungsnavigator.ts",
+        "app/ueben/page.tsx",
+        "scripts/interaktiv_test.tsx",
+        "evidence/tool-catalog/724-local-practice-navigator.json",
+        "scripts/browser_e2e.mjs"
       ],
       "relatedIds": [
         181,
@@ -13995,7 +14000,8 @@
         723,
         725,
         726
-      ]
+      ],
+      "productionEvidence": "evidence/tool-catalog/724-local-practice-navigator.json"
     },
     "725": {
       "classification": "local-personalized-learning-support",
