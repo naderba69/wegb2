@@ -67,6 +67,10 @@ jobs:
         run: npm run interaktiv
       - name: Inhalts-Audit
         run: npm run audit:content
+      - name: Reviewed vocabulary morphology (PA-034 regression gate)
+        run: npm run audit:vocab-posinfo
+      - name: Writing prompt/scoring consistency (PA-035 regression gate)
+        run: npm run audit:writing-consistency
       - name: Wort-für-Wort-Audit (bestätigte Blocker)
         run: npm run audit:words
       - name: Scaffold-Observability (CEFR baseline; candidates are not defects)

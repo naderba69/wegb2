@@ -210,11 +210,15 @@
     "confirmedRegister": "docs/PEDAGOGICAL_AUDIT_VOCAB_POSINFO_2026-11-04.csv",
     "automatedReferenceComparison": {
       "exactSingleHeadwordsMatched": 833,
-      "participleReferenceMismatches": 432,
-      "alreadyInManualConfirmedSet": 68,
-      "additionalCandidatesPendingHumanContextReview": 364,
-      "caveatAr": "مرشحات فقط؛ لا تعتمد المكتبة وحدها في المساعد haben/sein أو قابلية الفصل أو تعدد المعنى."
-    }
+      "caveatAr": "مرشحات فقط؛ لا تعتمد المكتبة وحدها في المساعد haben/sein أو قابلية الفصل أو تعدد المعنى.",
+      "remainingAdditionalCandidatesPendingHumanContextReview": 364,
+      "initialParticipleReferenceMismatches": 432,
+      "initialAlreadyInManualConfirmedSet": 68
+    },
+    "correctedCards": 110,
+    "openConfirmedCards": 0,
+    "regressionFixture": "scripts/fixtures/vocab-posinfo-reviewed.json",
+    "regressionGate": "npm run audit:vocab-posinfo"
   },
   "writingBankConsistencyAudit": {
     "path": "content/writing.json",
@@ -231,13 +235,18 @@
     },
     "register": "docs/PEDAGOGICAL_AUDIT_WRITING_CONSISTENCY_2026-11-04.csv",
     "wordCountMethod": "Unicode word-token regex; ±20% is an audit triage band, not an exam scoring rule",
-    "sentenceCountMethod": "sentence-final punctuation count; treated as pedagogical risk because greetings may not count as sentences"
+    "sentenceCountMethod": "sentence-final punctuation count; treated as pedagogical risk because greetings may not count as sentences",
+    "fixedFindings": 27,
+    "openReviewFindings": 15,
+    "fixedConfirmedErrors": 25,
+    "currentPromptConfigWordTargetConflicts": 0,
+    "regressionGate": "npm run audit:writing-consistency"
   },
   "inventorySnapshot": {
-    "indexedTrackedFilesAndAuditArtifacts": 3528,
-    "manual_complete": 15,
-    "manual_targeted": 24,
-    "not_started": 3485,
+    "indexedTrackedFilesAndAuditArtifacts": 3531,
+    "manual_complete": 18,
+    "manual_targeted": 26,
+    "not_started": 3483,
     "audit_artifact": 4
   }
 }
