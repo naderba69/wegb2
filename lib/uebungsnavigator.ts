@@ -12,6 +12,7 @@ export type UebungsStationId =
   | "zusatz"
   | "fehlerlabor"
   | "wortreview"
+  | "selbsttest"
   | "hoeren"
   | "lesestoff"
   | "briefe"
@@ -27,6 +28,7 @@ export type UebungsSignal =
   | "due-cards"
   | "weak-skill"
   | "exam-practice"
+  | "retrieval-practice"
   | "quick-fallback";
 
 export interface UebungsEmpfehlung {
@@ -145,6 +147,14 @@ export function baueUebungsEmpfehlungen(
       messwertAr: `مؤشر الجاهزية الداخلي: ${bereit}/100`,
     });
   }
+
+  kandidaten.push({
+    station: "selbsttest",
+    signal: "retrieval-practice",
+    prioritaet: 50,
+    grundAr: "استرجع من الذاكرة بلا خيارات قبل إعادة القراءة، ثم قارن بعد التسليم.",
+    messwertAr: "3 أنماط: استرجاع حر، فجوات، وتداخل",
+  });
 
   kandidaten.push({
     station: "blitz",

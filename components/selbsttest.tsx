@@ -276,9 +276,12 @@ function FreieWiedergabe({ tag, day }: { tag: number; day: number }) {
               <span className="rtl-num">{k + 1}.</span> {it.ar}
             </div>
             <div style={{ display: "flex", gap: 6, alignItems: "center", marginTop: 6 }}>
-              <input className="field" style={feld} value={gaben[k] ?? ""} onChange={(e) => setGaben((g) => ({ ...g, [k]: e.target.value }))} disabled={fertig} placeholder="Dein Satz aus dem Gedächtnis…" />
+              <input className="field" style={feld} value={gaben[k] ?? ""} onChange={(e) => setGaben((g) => ({ ...g, [k]: e.target.value }))} disabled={fertig} placeholder="Dein Satz aus dem Gedächtnis…" aria-label={`الجملة الألمانية من الذاكرة، السؤال ${k + 1}`} />
               <button
+                type="button"
                 title="اكشف الحروف الأولى (تُسجَّل مساعدة)"
+                aria-label={`${tipp[k] ? "أخفِ" : "اكشف"} الحروف الأولى للسؤال ${k + 1}`}
+                aria-pressed={!!tipp[k]}
                 onClick={() => setTipp((t) => ({ ...t, [k]: !t[k] }))}
                 style={{ border: "1px solid var(--ui-border)", background: "var(--color-card)", borderRadius: 10, padding: "0.35rem 0.5rem", cursor: "pointer", fontSize: "0.85rem" }}
               >
@@ -292,12 +295,12 @@ function FreieWiedergabe({ tag, day }: { tag: number; day: number }) {
             )}
             {b && (
               <>
-                <div style={{ background: "var(--color-paper)", borderRadius: 8, padding: "0.25rem 0.5rem", fontSize: "0.74rem", fontWeight: 800, marginTop: 4 }}>
+                <div data-testid={`selbsttest-frei-loesung-${k}`} style={{ background: "var(--color-paper)", borderRadius: 8, padding: "0.25rem 0.5rem", fontSize: "0.74rem", fontWeight: 800, marginTop: 4 }}>
                   <span className="de">{it.de}</span>
                 </div>
                 <div dir="rtl" style={{ fontSize: "0.72rem", fontWeight: 800, marginTop: 3, color: b.ok ? "var(--color-a1)" : b.teil ? "var(--color-gold)" : "#b91c1c" }}>
                   {b.ok
-                    ? "✓ استرجاع نظيف — الذاكرة تثبيتت"
+                    ? "✓ استرجاع نظيف — الذاكرة تثبّتت"
                     : b.teil
                     ? `~ قريب (${Math.round(b.o * 100)}٪) — ناقصٌ سيقوّيه الدفتر`
                     : `✗ ${Math.round(b.o * 100)}٪ فقط — دخل دفتر الأخطاء، راجعه غداً`}
@@ -309,7 +312,7 @@ function FreieWiedergabe({ tag, day }: { tag: number; day: number }) {
       })}
       {!fertig && <Eichstreifen n={items.length} erwartet={erwartet} gesetzt={setErwartet} />}
       {!fertig ? (
-        <button className="btn btn-primary" onClick={abgeben}>سلّم الجولة · تصحيح ذاتي</button>
+        <button type="button" className="btn btn-primary" data-testid="selbsttest-frei-submit" onClick={abgeben}>سلّم الجولة · تصحيح ذاتي</button>
       ) : (
         <EichErgebnis n={items.length} richtig={richtig} erwartet={erwartet} />
       )}
@@ -494,15 +497,22 @@ function InterleavingMischer({ tag, day }: { tag: number; day: number }) {
 
 /* --------------------------------------------------------------- المركز */
 
-export function SelbstTestZentrum({ progress }: { progress: Progress }) {
-  const [open, setOpen] = useState(false);
+export function SelbstTestZentrum({ progress, startOffen = false }: { progress: Progress; startOffen?: boolean }) {
+  const [open, setOpen] = useState(startOffen);
   const [tab, setTab] = useState<"frei" | "luecken" | "mischer">("frei");
   const day = progress.plan.day;
   const tag = day;
 
   return (
-    <div className="card fadein" id="selbsttest" style={{ padding: "1.1rem 1.3rem", borderInlineStart: "5px solid var(--color-a1)" }}>
-      <button style={{ background: "none", border: 0, cursor: "pointer", display: "flex", justifyContent: "space-between", width: "100%", alignItems: "center", minHeight: "44px", font: "inherit", color: "inherit", textAlign: "start" }} onClick={() => setOpen((o) => !o)}>
+    <div className="card fadein" id="selbsttest" data-testid="selbsttest-zentrum" style={{ padding: "1.1rem 1.3rem", borderInlineStart: "5px solid var(--color-a1)" }}>
+      <button
+        type="button"
+        data-testid="selbsttest-toggle"
+        aria-expanded={open}
+        aria-controls="selbsttest-inhalt"
+        style={{ background: "none", border: 0, cursor: "pointer", display: "flex", justifyContent: "space-between", width: "100%", alignItems: "center", minHeight: "44px", font: "inherit", color: "inherit", textAlign: "start" }}
+        onClick={() => setOpen((o) => !o)}
+      >
         <span style={{ fontWeight: 900, fontSize: "1.05rem", color: "var(--color-cola)" }}>
           🧠 مختبر الاختبارات الذاتية — Selbsttests <span style={{ fontSize: "0.75rem", color: "var(--color-ink2)" }}>(Modul W)</span>
         </span>
@@ -512,8 +522,8 @@ export function SelbstTestZentrum({ progress }: { progress: Progress }) {
         استرجاع حر · فجوات نصّية بلا خيارات · تداخل المصادر — ثم تخبرني كم تتوقّع أن تصيب؟ المعايرة الصادقة قبل الامتحان تنقذك من «وهم الإتقان».
       </div>
       {open && (
-        <div style={{ display: "grid", gap: "0.7rem" }}>
-          <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
+        <div id="selbsttest-inhalt" data-testid="selbsttest-inhalt" style={{ display: "grid", gap: "0.7rem" }}>
+          <div role="group" aria-label="نوع تدريب الاسترجاع" style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
             {(
               [
                 ["frei", "🕊️ استرجاع حر"],
@@ -521,7 +531,15 @@ export function SelbstTestZentrum({ progress }: { progress: Progress }) {
                 ["mischer", "🔀 الخلّاط المتداخل"],
               ] as const
             ).map(([id, label]) => (
-              <button key={id} className="chip" style={{ cursor: "pointer", background: tab === id ? "var(--color-cola)" : "var(--ui-surface-raised)", color: tab === id ? "var(--ui-on-accent)" : undefined }} onClick={() => setTab(id)}>
+              <button
+                key={id}
+                type="button"
+                className="chip"
+                data-testid={`selbsttest-tab-${id}`}
+                aria-pressed={tab === id}
+                style={{ cursor: "pointer", background: tab === id ? "var(--color-cola)" : "var(--ui-surface-raised)", color: tab === id ? "var(--ui-on-accent)" : undefined }}
+                onClick={() => setTab(id)}
+              >
                 {label}
               </button>
             ))}

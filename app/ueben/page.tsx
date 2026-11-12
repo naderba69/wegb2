@@ -39,6 +39,7 @@ import { SprechBegleiter } from "@/components/sprechbegleiter";
 import { LebensweltStation } from "@/components/lebenswelt";
 import { VollPruefung } from "@/components/vollpruefung";
 import { PhonetikStation } from "@/components/phonetik";
+import { SelbstTestZentrum } from "@/components/selbsttest";
 import { MenuSection } from "@/components/dirb/MenuSection";
 import { useBankGeneration } from "@/lib/use-bank-generation";
 import { baueUebungsEmpfehlungen } from "@/lib/uebungsnavigator";
@@ -51,7 +52,7 @@ import { baueUebungsEmpfehlungen } from "@/lib/uebungsnavigator";
  * · زائد التمارين (>3) يَرتحلُ من المعالج إلى «تدريب إضافي» هنا (K114).
  * شاشة واحدة في كل مرة: القائمة أو محطة واحدة بباب رجوع.
  */
-const UEBEN_REIHENFOLGE = "einstufung,zusatz,fehlerlabor,uebungen,wortreview,blitz,hoeren,hoerneu,lueck,muendlich,begleiter,schatten,phonetik,vortrag,interview,briefe,szenarien,pflege,vollpruefung,leseleiter,redemittel,leben,tiefen,lesestoff,spiele,katalog";
+const UEBEN_REIHENFOLGE = "einstufung,zusatz,fehlerlabor,uebungen,wortreview,selbsttest,blitz,hoeren,hoerneu,lueck,muendlich,begleiter,schatten,phonetik,vortrag,interview,briefe,szenarien,pflege,vollpruefung,leseleiter,redemittel,leben,tiefen,lesestoff,spiele,katalog";
 
 const KARTE: Record<string, { icon: string; titel: string; unter: string }> = {
   einstufung: { icon: "🪪", titel: "تحديد المستوى التكيّفي", unter: "تشخيص بأربع مهارات يقترح يوم دخولٍ آمنًا في الخطة." },
@@ -79,6 +80,7 @@ const KARTE: Record<string, { icon: string; titel: string; unter: string }> = {
   lesestoff: { icon: "📚", titel: "قراءة وحوارات حرة", unter: "قصص ونصوص وحوارات جديدة لكل المستويات مع أسئلة فهم (R300 — خارج الخطة)." },
   spiele: { icon: "🎮", titel: "ألعاب الكلمات", unter: "شبكة كلمات من مفرداتك، أكمل الحوار، وترجم بكتابتك (R300 — خارج الخطة)." },
   wortreview: { icon: "🧠", titel: "مراجعة الكلمات الموسعة", unter: "5 أنماط + تصفية + SRS ذكي — كل المفردات 6202 في لوحة واحدة." },
+  selbsttest: { icon: "🕊️", titel: "مختبر الاسترجاع", unter: "استرجاع حر وفجوات وتداخل بلا خيارات؛ لا يظهر الحل قبل التسليم." },
   katalog: { icon: "🗃️", titel: "دليل التدريبات", unter: "استعرض التدريبات المتاحة في الأكاديمية." },
 };
 
@@ -87,7 +89,7 @@ const MENU_GROUPS: { id: string; title: string; description: string; items: stri
     id: "ueben-priority",
     title: "ابدأ بالأهم",
     description: "ابدأ بما بقي من الدرس، ثم راجع الأخطاء.",
-    items: ["einstufung", "zusatz", "fehlerlabor", "uebungen", "wortreview", "blitz"],
+    items: ["einstufung", "zusatz", "fehlerlabor", "uebungen", "wortreview", "selbsttest", "blitz"],
   },
   {
     id: "ueben-skills",
@@ -268,6 +270,7 @@ export default function Ueben() {
           {offen === "lesestoff" && <LeseStoffStation />}
           {offen === "spiele" && <SpieleStation />}
           {offen === "wortreview" && <WortReviewErweitert />}
+          {offen === "selbsttest" && <SelbstTestZentrum progress={progress} startOffen />}
           {offen === "katalog" && <KatalogLeiste />}
           </FehlerGrenze>
         </section>

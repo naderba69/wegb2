@@ -435,12 +435,23 @@ async function main() {
       const buttons=[...document.querySelectorAll('[data-testid^="ueben-empfehlung-"]')];
       const ids=buttons.map((button)=>button.getAttribute("data-testid"));
       return root?.textContent?.includes("ترتيب محلي حتمي")&&root.textContent.includes("لا يغيّر خطتك")&&
-        buttons.length>=1&&buttons.length<=3&&new Set(ids).size===ids.length&&buttons.every((button)=>button.textContent?.includes("—"))
+        buttons.length>=1&&buttons.length<=3&&new Set(ids).size===ids.length&&ids.includes("ueben-empfehlung-selbsttest")&&
+        buttons.every((button)=>button.textContent?.includes("—"))
         ? {count:buttons.length,ids}:false;
-    })()`, "Lokaler Übungsnavigator mit Gründen und höchstens drei eindeutigen Stationen", SW_TIMEOUT);
+    })()`, "Lokaler Übungsnavigator mit Gründen, Abrufstation und höchstens drei eindeutigen Stationen", SW_TIMEOUT);
     if (!practiceNavigator) fail("Übungsnavigator wurde nicht transparent und begrenzt gerendert");
+    await evalJs(cdp, sessionId, `document.querySelector('[data-testid="ueben-empfehlung-selbsttest"]')?.click()`);
+    const retrievalPractice = await poll(cdp, sessionId, `(()=>{
+      const toggle=document.querySelector('[data-testid="selbsttest-toggle"]');
+      const inputs=[...document.querySelectorAll('input[placeholder="Dein Satz aus dem Gedächtnis…"]')];
+      const solutions=document.querySelectorAll('[data-testid^="selbsttest-frei-loesung-"]');
+      return toggle?.getAttribute("aria-expanded")==="true"&&document.querySelector('[data-testid="selbsttest-inhalt"]')&&
+        inputs.length===6&&solutions.length===0 ? {inputs:inputs.length,solutions:solutions.length,expanded:true}:false;
+    })()`, "Abrufstation öffnet live und hält Lösungen vor der Abgabe zurück", SW_TIMEOUT);
+    if (!retrievalPractice) fail("Abrufstation wurde nicht als echte verdeckte Aufgabe geöffnet");
 
     stage = "30 item four part listening round";
+    await navigate(cdp, sessionId, `${ORIGIN}/ueben`);
     await poll(cdp, sessionId, `!!document.querySelector('[data-testid="ueben-karte-vollpruefung"]')`, "Prüfungstrainingskarte");
     await evalJs(cdp, sessionId, `document.querySelector('[data-testid="ueben-karte-vollpruefung"]')?.click()`);
     await poll(cdp, sessionId, `!!document.querySelector('[data-testid="vollpruefung-stufe-B2"]')`, "Prüfungstraining geöffnet");
@@ -521,6 +532,7 @@ async function main() {
       bankReadiness: { ...bankReadiness, b2LessonRendered: !!b2LessonRendered },
       libraryFilters: { familyFilterCount, searchFilterCount },
       practiceNavigator,
+      retrievalPractice,
       fullListeningScope,
       renderedListeningParts,
       serviceWorker: { active: true, caches: online.entries, missing: online.missing },
