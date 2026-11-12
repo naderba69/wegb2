@@ -1,6 +1,7 @@
 import { isDue } from "./srs";
 import { kompetenzWerte, KOMPETENZEN, KOMPETENZ_AR, pruefungsBereitschaft } from "./kompetenz";
-import type { Kompetenz, Progress } from "./types";
+import { LERNZIEL_LABEL, TEMPO_LABEL } from "./types";
+import type { Kompetenz, Lernziel, Progress, Tempo } from "./types";
 
 /**
  * محرك محلي شفاف لترتيب محطات التدريب الاختيارية بعد إغلاق اليوم.
@@ -19,6 +20,9 @@ export type UebungsStationId =
   | "muendlich"
   | "uebungen"
   | "vollpruefung"
+  | "pflege"
+  | "leben"
+  | "interview"
   | "blitz";
 
 export type UebungsSignal =
@@ -28,6 +32,7 @@ export type UebungsSignal =
   | "due-cards"
   | "weak-skill"
   | "exam-practice"
+  | "learning-profile"
   | "retrieval-practice"
   | "quick-fallback";
 
@@ -53,6 +58,66 @@ const STATION_FUER_KOMPETENZ: Record<Kompetenz, UebungsStationId> = {
   Grammatik: "uebungen",
   Wortschatz: "wortreview",
 };
+
+const STATION_FUER_LERNZIEL: Partial<Record<Lernziel, UebungsStationId>> = {
+  bamf: "leben",
+  pflege: "pflege",
+  studium: "lesestoff",
+  arbeit: "interview",
+};
+
+/** فرق أيام تقويمي محلي؛ التاريخ الفاسد لا يتحول إلى استعجال وهمي. */
+function tageBisPruefung(raw: string | undefined, now: Date): number | null {
+  const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(raw ?? "");
+  if (!match) return null;
+  const jahr = Number(match[1]);
+  const monat = Number(match[2]);
+  const tag = Number(match[3]);
+  const ziel = Date.UTC(jahr, monat - 1, tag);
+  const kontrollDatum = new Date(ziel);
+  if (kontrollDatum.getUTCFullYear() !== jahr || kontrollDatum.getUTCMonth() !== monat - 1 || kontrollDatum.getUTCDate() !== tag) return null;
+  const heute = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate());
+  return Math.round((ziel - heute) / 86_400_000);
+}
+
+function terminMesswert(tage: number | null, name: string | undefined): string {
+  if (tage === null) return "بلا موعد امتحان صالح";
+  const titel = name?.trim() ? `موعد ${name.trim()}` : "موعد الامتحان";
+  if (tage === 0) return `${titel}: اليوم`;
+  if (tage > 0) return `${titel}: بعد ${tage} يوماً`;
+  return `${titel}: مضى منذ ${Math.abs(tage)} يوماً`;
+}
+
+/**
+ * يحوّل اختيارات المتعلم المعلنة إلى إشارة واحدة قابلة للتفسير. الموعد
+ * القريب يرفع تدريب الامتحان الداخلي الاختياري فقط؛ لا يضغط الخطة ولا
+ * يحذف تغطية، وإيقاع البطاقات ظاهر في السبب لكنه لا يُعاد تفسيره كوقت دراسة.
+ */
+function lernprofilEmpfehlung(p: Progress, now: Date): UebungsEmpfehlung | null {
+  const ziel = p.settings.lernziel;
+  const tage = tageBisPruefung(p.settings.examDate, now);
+  const hatKommendenTermin = tage !== null && tage >= 0;
+  const station = hatKommendenTermin
+    ? "vollpruefung"
+    : ziel ? STATION_FUER_LERNZIEL[ziel] : undefined;
+  if (!station) return null;
+
+  const effektivesZiel = ziel ?? "allgemein";
+  const tempo: Tempo = p.settings.tempo in TEMPO_LABEL ? p.settings.tempo : "regelmaessig";
+  let prioritaet = hatKommendenTermin ? 52 : 46;
+  if (tage !== null && tage >= 0 && tage <= 30) prioritaet = 60;
+  else if (tage !== null && tage >= 0 && tage <= 90) prioritaet = 56;
+
+  return {
+    station,
+    signal: "learning-profile",
+    prioritaet,
+    grundAr: hatKommendenTermin
+      ? "الموعد يرفع تدريباً امتحانياً داخلياً اختيارياً فقط؛ لا يضغط الخطة ولا يحذف تغطيتها، ونتيجته ليست رسمية."
+      : "هذه مطابقة محلية لاختيارك مع محطة موجودة؛ ليست حكماً على مستواك ولا دليلاً على تحسن التعلم.",
+    messwertAr: `الهدف المعلن: ${LERNZIEL_LABEL[effektivesZiel].ar} · إيقاع البطاقات: ${TEMPO_LABEL[tempo].ar} · ${terminMesswert(tage, p.settings.examName)}`,
+  };
+}
 
 function faelligeSrsAnzahl(p: Progress, now: Date): number {
   return Object.values(p.srs ?? {}).filter((state) => state.reps > 0 && isDue(state, now)).length;
@@ -147,6 +212,9 @@ export function baueUebungsEmpfehlungen(
       messwertAr: `مؤشر الجاهزية الداخلي: ${bereit}/100`,
     });
   }
+
+  const lernprofil = lernprofilEmpfehlung(p, now);
+  if (lernprofil) kandidaten.push(lernprofil);
 
   kandidaten.push({
     station: "selbsttest",

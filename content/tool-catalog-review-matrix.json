@@ -21614,21 +21614,28 @@
         "catalogStatus": "catalogued",
         "researchStatus": "citation-label-unverified",
         "productStatus": "candidate-live-implementation",
-        "automatedTestStatus": "not-demonstrated",
+        "automatedTestStatus": "verified",
         "fieldValidationStatus": "not-tested",
         "decision": "defer",
         "classification": "local-personalized-learning-support",
         "reviewerRole": "internal-methodology-triage",
-        "reviewedAt": "2026-11-06",
+        "reviewedAt": "2026-11-04",
         "risk": "high",
-        "rationaleAr": "يملك كل ملف تقدماً محلياً مستقلاً، ويختار المتعلم وتيرة ونقطة دخول وموعد هدف، بينما تقترح الواجهة تدريباً وفق مهاراته وأخطائه ومراجعاته؛ وهذه مطابقة مرشحة لدعم تخصيص محدود. لا توجد أهداف أو اهتمامات ومحتويات فردية شاملة ولا مشاركة معلم أو دراسة Pane، ولا يثبت اختلاف المسار تحسن النتيجة أو تكافؤ الفرص.",
+        "rationaleAr": "يحفظ كل ملف محلي هدف المتعلم المعلن وإيقاع البطاقات وموعد الامتحان، ويجمع الملاح الحي هذه القيم مع التشخيص والأخطاء وSRS والمهارة المرصودة في توصية اختيارية تعرض السبب والقياس وتفتح محطة موجودة من دون تغيير خطة 378 يوماً أو أقفالها. هذه مطابقة مرشحة لدعم تخصيص محلي محدود فقط؛ لا توجد دراسة Pane موثقة السياق أو صلاحية لخرائط الهدف والموعد أو مراجعة عدالة وإتاحة يدوية أو أثر تعلمي وميداني.",
         "candidateEvidence": [
           "lib/profiles.ts",
           "lib/einstufung.ts",
+          "components/onboarding-wizard.tsx",
           "app/einstellungen/page.tsx",
           "lib/skillplan.ts",
           "lib/weg.ts",
-          "lib/store.ts"
+          "lib/store.ts",
+          "lib/uebungsnavigator.ts",
+          "app/ueben/page.tsx",
+          "scripts/engine_smoke.ts",
+          "scripts/interaktiv_test.tsx",
+          "scripts/browser_e2e.mjs",
+          "evidence/tool-catalog/725-local-personalized-learning-support.json"
         ],
         "relatedIds": [
           183,
@@ -21640,7 +21647,9 @@
           722,
           724,
           726
-        ]
+        ],
+        "evidenceCycle": "TC-725-AUTOMATED-01",
+        "productionEvidence": "evidence/tool-catalog/725-local-personalized-learning-support.json"
       }
     },
     {

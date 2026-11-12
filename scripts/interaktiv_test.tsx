@@ -4988,6 +4988,55 @@ const hasFile = txt().includes("صوتٌ من الدار");
   });
 }
 
+/* ═══ TC725 — الهدف والإيقاع في البداية: حالة typed ومحلية وحدود واضحة ═══ */
+{
+  const storage = dom.window.localStorage;
+  const saved = Array.from({ length: storage.length }, (_, i) => {
+    const key = storage.key(i)!;
+    return [key, storage.getItem(key)!] as const;
+  });
+  try {
+    storage.clear();
+    storage.setItem("weg-b2-profiles", JSON.stringify({
+      active: "profil-r316",
+      list: [{ id: "profil-r316", name: "اختبار الملف", emoji: "🧪", created: "2026-11-04" }],
+    }));
+    const { saveProgress, loadProgress } = await import("../lib/store");
+    const { OnboardingWizard } = await import("../components/onboarding-wizard");
+    act(() => saveProgress({
+      ...emptyProgress,
+      settings: { ...emptyProgress.settings, onboardingDone: false, lernziel: undefined, tempo: "regelmaessig" },
+    }));
+    mount(React.createElement(OnboardingWizard));
+    const pflege = rootEl.querySelector('[data-testid="onboarding-lernziel-pflege"]') as HTMLElement | null;
+    ok(!!pflege && pflege.getAttribute("aria-pressed") === "false",
+      "TC725-1 معالج البداية يعرض هدفاً قابلاً للاختيار وحالته الوصولية غير مضغوطة أولاً");
+    if (pflege) click(pflege);
+    ok(pflege?.getAttribute("aria-pressed") === "true", "TC725-2 اختيار هدف التمريض ينعكس عبر aria-pressed لا اللون وحده");
+    const weiter = btn("التالي — اختر وتيرتك");
+    if (weiter) click(weiter);
+    const intensiv = rootEl.querySelector('[data-testid="onboarding-tempo-intensiv"]') as HTMLElement | null;
+    if (intensiv) click(intensiv);
+    const grenze = rootEl.querySelector('[data-testid="onboarding-profil-grenze"]');
+    ok(!!intensiv && intensiv.getAttribute("aria-pressed") === "true" &&
+      (grenze?.textContent ?? "").includes("لا يغيّران ترتيب خطة 378 يوماً") &&
+      (grenze?.textContent ?? "").includes("لا يرسلان بياناتك"),
+      "TC725-3 الإيقاع يعلن حالته وحدّ أثره: بطاقات فقط، بلا تغيير الخطة أو إرسال شبكة");
+    await pruefeA11y("TC725-4 معالج الهدف والإيقاع قبل الحفظ");
+    const speichern = btn("ابدأ رحلتك 378ي");
+    if (speichern) click(speichern);
+    await flushAsync();
+    const gespeichert = loadProgress();
+    ok(!!speichern && gespeichert.settings.onboardingDone === true && gespeichert.settings.lernziel === "pflege" &&
+      gespeichert.settings.tempo === "intensiv" && rootEl.querySelector('[role="dialog"]') === null,
+      "TC725-5 الحفظ يكتب الهدف والإيقاع typed في الملف النشط ثم يغلق المعالج");
+  } finally {
+    if (leave) leave();
+    storage.clear();
+    for (const [key, value] of saved) storage.setItem(key, value);
+  }
+}
+
   console.log(`\n${beste} نجح · ${fehler} فشل`);
   if (fails.length) { console.log("الفاشلون:", fails.join(" | ")); process.exit(1); }
 
