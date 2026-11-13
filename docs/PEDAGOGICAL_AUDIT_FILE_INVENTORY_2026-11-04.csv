@@ -1,7 +1,7 @@
 path,domain,bytes,lines,sha256,manual_review_status,scope_note
 .config/nextjs-nodejs/config.json,.config,185,6,b68ec20dab75fb461a28d6ad2a24f1c56551b7106af3bf6737c0cbf0e34bae17,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 .github/dependabot.yml,.github,1112,41,ad1d3030df9333f855ed3256450e7e7685a4259a917f718d7f9cda78077e2be3,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
-.github/workflows/ci.yml,.github,4988,107,1195ad558b5fa548fabdde0abf3e890ab7dcc9ae7503b96071cd82902230c716,manual_targeted,رُوجعت مقاطع أو حقول مرتبطة بنتائج محددة؛ ليست مراجعة كاملة للملف
+.github/workflows/ci.yml,.github,5099,109,919ba562064b92799d23ece0753e9f30fcc4afc550cc9d4d53b10be96e305245,manual_targeted,رُوجعت مقاطع أو حقول مرتبطة بنتائج محددة؛ ليست مراجعة كاملة للملف
 .gitignore,root,396,25,2c5c76b409b4eda37130e67ae54726e64db6da20bfb4e53a4c2fe1d3ac2fbed0,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 HANDOFF.md,root,75474,363,9ad53bab7ceea74ed1b2138496721bf267b185c3ee41a8f5d289662ec4905f31,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 README.md,root,44417,252,4bde91afa7108a671fe83332f8017fee94abce403171333d67c5f871521f61eb,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
@@ -124,7 +124,7 @@ components/stationen.tsx,components,4269,96,080414d205efdee28e81d5d624836ec66613
 components/stilwechsler.tsx,components,5693,87,a1ee2f4e25983ec6c154161d892a0a31b9895a0cd9ef90bcba50f2aa2079e7fc,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 components/stundenvertrag.tsx,components,12974,189,14c9bf6ab21a255183b43cf9523b1df8f143ca7552aa8adc1ba6f3e89ef0ea05,manual_complete,قُرئ الملف كاملاً بشرياً في هذه الدورة ضمن النطاق المبيّن في التقرير
 components/szenarien.tsx,components,15680,298,177741f0bf6bd48301fa46edeabf3405759bb72b57784f57b5cbd2cbd7d31604,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
-components/tasks.tsx,components,89296,1576,14713b0567dd69bafdc893e1fe8b4cfdfa5eeb260c8042c40d9570ce6ed21ebd,manual_targeted,رُوجعت مقاطع أو حقول مرتبطة بنتائج محددة؛ ليست مراجعة كاملة للملف
+components/tasks.tsx,components,90675,1598,9a82c9311bed9256506d7df85de9140fa9c044724abaea6f7d3c3d728ace3d1b,manual_targeted,رُوجعت مقاطع أو حقول مرتبطة بنتائج محددة؛ ليست مراجعة كاملة للملف
 components/tiefenlex.tsx,components,14873,314,35f22200db94a76242d087e94a39af9f0000dfd56ee49101a0aa700b34f9200b,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 components/today-b2-praxis.tsx,components,6192,114,6cf02258aaf264d33ed08880c38224bf1cd91639f058479df22be53e4b047c88,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 components/trainer.tsx,components,14135,300,0de0fd3ee7d905eb55f7b466c3d8cdd030aece892b3cc0ce56bcf0e07227714b,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
@@ -145,7 +145,7 @@ content/antonyme.json,content,10045,773,c44e1294ca56985975ad424ef248218a83a638a5
 content/arena.json,content,10359,425,a7f16eddde5141ebd2675be7aade20abe4fc0085684b705a448149b070f11def,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 content/audio-transcript-overrides.json,content,44536,319,71b5fdeb3d4cb303d3a68b43034dae6d436196b24a04def9a81e8ffb801815a8,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 content/beispiele-batches.json,content,23452,1446,0e550340e1448e4453f616177fa440c04046ac0cf3ebb58bb9cc150b49f4697d,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
-content/cando.json,content,8618,232,7bf8c829061d00873665ae581a4ba5690255c7547f3267d6f32d1314ac971a52,manual_complete,قُرئ الملف كاملاً بشرياً في هذه الدورة ضمن النطاق المبيّن في التقرير
+content/cando.json,content,16206,499,1e46de654922b2c957edafc9ff55171a59574795b313f94773336338bdf407b8,manual_complete,قُرئ الملف كاملاً بشرياً في هذه الدورة ضمن النطاق المبيّن في التقرير
 content/dialog-audio.json,content,30670,1413,534a84afc9b0448b26fc0942ea5fee6282ca8124fc3e7a57f5956b8e7a56389f,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 content/dialogues.json,content,587180,14450,2e57b8e2bd49fa0f53d4c47fd8eb50f5b5cd5ec0be3121067ea60eb1a4ac7832,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 content/diktat-audio.json,content,100413,5198,0a10d2aad474edc0c665abb86842231ece7399b1ed2d5a8ecc0b6a7f3135a05c,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
@@ -253,7 +253,7 @@ docs/PED91_SCAFFOLD_BASELINE_2026-11-04.md,docs,4022,47,683d764f35c01354ab9df87e
 docs/PEDAGOGICAL_AUDIT_MEASUREMENTS_2026-11-04.json,docs,17134,587,677ff7010be6edd91f50c0e6d2f6451a69e715b6cf50e29dc87e9f5899bb1bc1,audit_artifact,ناتج هذه الدورة، لا يُعدّ مصدراً تعليمياً مراجعاً
 docs/PEDAGOGICAL_AUDIT_VOCAB_POSINFO_2026-11-04.csv,docs,28316,111,e3ad08a02f40d55e446f91ed812e0993244f3910764f0802fad1cae1a6f6fe56,audit_artifact,ناتج هذه الدورة، لا يُعدّ مصدراً تعليمياً مراجعاً
 docs/PEDAGOGICAL_AUDIT_WRITING_CONSISTENCY_2026-11-04.csv,docs,8219,43,3d41a0de3477f0d268b22f849dc5ae33febd13ef957b783f4306802dff881962,audit_artifact,ناتج هذه الدورة، لا يُعدّ مصدراً تعليمياً مراجعاً
-docs/PEDAGOGICAL_EXPERT_AUDIT_2026-11-04.md,docs,78184,544,a13b916683f4b950c6af763338eb92e07c5a5d99ccea0a37af4d227146c7a80b,audit_artifact,ناتج هذه الدورة، لا يُعدّ مصدراً تعليمياً مراجعاً
+docs/PEDAGOGICAL_EXPERT_AUDIT_2026-11-04.md,docs,80214,549,1dc48cbf6d01ef84b17051fab2ceaa4d6ed19c3163ce0ab67f9ec08478c59b7a,audit_artifact,ناتج هذه الدورة، لا يُعدّ مصدراً تعليمياً مراجعاً
 docs/PEDAGOGIK_REVIEW_2026-10-16.md,docs,9032,57,92732191b521f9ced7dfa152b545b25d110473ee951a298647e595425377f50d,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 docs/PERFORMANCE_BUDGET.md,docs,2466,20,22bfc95e4bcccb33c929dbb0412f0ccd40cd4aa05012f39d76a14d9c2b40587c,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 docs/PLAN_HARF_HARF_2026-10-23.md,docs,3316,49,f4907c8757f631a1e89c63fe6042b67fcdf33024e68629b4bc30e9b1efe9ab33,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
@@ -559,7 +559,7 @@ lib/chunking-advanced.ts,lib,224,4,8c70bd4c5d6231256b7afff94e22d40c1acfa1ebf7f16
 lib/clil.ts,lib,626,10,beba134e8959152a73e8cdf256846a81500cd0f7faf2a0e1a83829d82f69c564,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 lib/clt-deep.ts,lib,191,4,1cc4b18a2a382dea89e5458cc282acf0a642900cc962ae014f98f10caebaa8d0,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 lib/concrete-examples.ts,lib,143,4,b5b3ce3d846dfc1be89eee295e340fa1e65db27ad5a143fb57c9951bf4bdbc93,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
-lib/content.ts,lib,18894,366,6ec71410f00dd488379b7d4173b4a8fcdd3d2bfdfca17c5af078f5fef6c07591,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
+lib/content.ts,lib,18884,364,67d4d922ba7a5d0ca1d662d97e9aea097a648ebe3816675b1ea31b7cc75a532f,manual_targeted,رُوجع عقد تحميل أوصاف Can-Do وربطه بالأنواع؛ ليست مراجعة كاملة للملف
 lib/context-variation-deep.ts,lib,256,4,0b8aa10e17d95ed7271717a2c991a8755b5cdabc36d3cdd1ce51ab501df23bf1,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 lib/contrastive-var.ts,lib,157,4,e08ca0da51705c7fd98fe4b7cba8052abcb6ce5f40d1fea5e736ab68570849e4,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 lib/curriculum-schedule.ts,lib,2289,57,4f280a85a934612713eca3474a0d0ad75a7e0fe657158dacf0ce1e2b8b8eabf2,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
@@ -1573,7 +1573,7 @@ lib/tool-998.ts,lib,577,18,a22c3ba78b029d48758511496f215444dcff2969a1a10cf72ec12
 lib/tool-999.ts,lib,590,18,55c4be67e29cbf26ecabac9b51cbac07c15e6ab6b50b58b0027d3222a5c98a41,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 lib/tool-catalog.ts,lib,117611,830,9f1e945fb4000388fd0bd2fbd80adfe78fbb33c0f6549f3fa460c8c0dcd1228c,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 lib/tpr.ts,lib,539,11,1df8eda57a7493167aaa43872e1feb0db229c4d871a4ef25b562310f1a0e7b97,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
-lib/types.ts,lib,30330,686,85219ed9931a6caf53e58d7eaf2d546f87c2b815c4496cfeb1166e3bca3b3f47,manual_targeted,رُوجعت مقاطع أو حقول مرتبطة بنتائج محددة؛ ليست مراجعة كاملة للملف
+lib/types.ts,lib,30725,698,3f7c7b5f938c46e37579fe9a270259079364dcf929cf52186e26cb6f6696d5e9,manual_targeted,رُوجعت مقاطع أو حقول مرتبطة بنتائج محددة؛ ليست مراجعة كاملة للملف
 lib/uebungsnavigator.ts,lib,9467,233,fc16ffdba4fbe0359c7eea63b71556e6b3133c3853224519a9afcb521039635b,manual_targeted,رُوجعت مقاطع أو حقول مرتبطة بنتائج محددة؛ ليست مراجعة كاملة للملف
 lib/use-bank-generation.ts,lib,502,13,f490a8afdf4de74a2b48605cfce3e055115cf58519e2b3aa87d1aafcd2199715,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 lib/verknuepfung.ts,lib,12114,149,2c33285d27938eae10ad04721cf56fc2eb642aaf93ad73be8a6df3a4f1438d3e,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
@@ -1596,7 +1596,7 @@ lighthouserc.json,root,830,27,cf46e4ff6e99284864b422685aaf4933af6d521d868eff0110
 middleware.ts,root,1282,38,a6504bbc084b9b703cdc273d11dbd6bdd64d94c40c481b6b1682598f54cc1895,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 next.config.mjs,root,1762,43,855d2d3ed1e43c25646b5b1270fbaaa71ea54345d1fd2496e30091358a321d16,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 package-lock.json,root,270221,8888,1d00f3bb9d34ead8f860a46745f3d71a2066816b433a9b89b778fb9b0520b7c4,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
-package.json,root,4315,90,db1aea07a975764ee4882727ed28e824481a697dde63dec9ad60e0361bb659ac,manual_complete,قُرئ الملف كاملاً بشرياً في هذه الدورة ضمن النطاق المبيّن في التقرير
+package.json,root,4384,91,24ef612a8bfc1518f0c245d6f29a6ddf4cefa6d4116e9a4dd97747a8db2daf71,manual_complete,قُرئ الملف كاملاً بشرياً في هذه الدورة ضمن النطاق المبيّن في التقرير
 postcss.config.mjs,root,94,7,dfac7ac2d86d326a0e5adb024e7943c181393ed17a5fcb8f0315b24c7da6ddde,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 public/audio-manifest.json,public,54042,0,20b5a30e8171171e51a3aa5fb85fad6c4b56c0c00afbeb5a8563f90379714a9d,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 public/audio/dialog/d-a0-01.mp3,public,139206,566,706c49b90ef44d8e9bd8c5a8a44fcc0ffc348f86041ec91032f3169d3fa77a42,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
@@ -3211,12 +3211,13 @@ scripts/audit_harf_vocab.mjs,scripts,12606,200,2aefcd599213c3c8c3bfb75c736b4f78f
 scripts/audit_inhalt.ts,scripts,17592,228,721f2796763a81a79f6545e4ecb9e894d449790f01a14fa1f1b874b8b987ab35,manual_targeted,رُوجعت مقاطع أو حقول مرتبطة بنتائج محددة؛ ليست مراجعة كاملة للملف
 scripts/audit_render.tsx,scripts,3997,49,b3b3e941bd4fbf4f9ccf00f9910c4f809f90b1631839d31d7b947f6c1e2ef140,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 scripts/browser_e2e.mjs,scripts,33233,610,e3f4d2f711476cf8d3b8d67122be416461d935f0f22e9737cc33e2367631482a,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
+scripts/cando_integrity_audit.ts,scripts,4143,51,71e87075dcc1d1c9e7e579c2e536b03c51149d887970c02921b0466681fa6a8d,manual_complete,قُرئت بوابة سلامة Can-Do كاملةً ضمن معالجة PA-031/PA-032
 scripts/close_cultural_generic.mjs,scripts,5502,61,4100dbb2368bf4efd380487a9d9d6de99dd345c629200a4d9b6d59160505b10e,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 scripts/competency_evidence_audit.ts,scripts,5918,83,e6f288b0da762ed7c71dcd367d3ca6f1e36a268c788c2be0ecd3fb81ace73934,manual_complete,قُرئ الملف كاملاً بشرياً في هذه الدورة ضمن النطاق المبيّن في التقرير
 scripts/copy_banks.mjs,scripts,3914,65,c395ed3d86d158b831b338c725d4fda55787f93072705818525986d123957f49,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 scripts/deep_audit.py,scripts,5435,166,11bbfdecdbf80a7a51dbf93d0751fbee771a3504627deb5262a99eca7be31945,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 scripts/dialoge_welle.py,scripts,14365,131,d3fb94919d0fc672d18585589fd8ec6932639d2379dcf24f3645defb542ce425,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
-scripts/engine_smoke.ts,scripts,1351574,15646,dfd80dfadda2c018962b8d31cee89fe667e677c12602b2c0b131982ca6ddd56d,manual_targeted,رُوجعت مقاطع أو حقول مرتبطة بنتائج محددة؛ ليست مراجعة كاملة للملف
+scripts/engine_smoke.ts,scripts,1351671,15646,118d7fd40bcf40da9e6678e75e7b9ec558d058ef55a4f253c6c86c4706bdf365,manual_targeted,رُوجعت مقاطع أو حقول مرتبطة بنتائج محددة؛ ليست مراجعة كاملة للملف
 scripts/evidence_hash.mjs,scripts,1184,36,95e649e69e90b46f0e95cbc932ad267aaba97bd6c2353fbe38782dd4fb7baee1,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 scripts/evidence_provenance_audit.ts,scripts,5609,115,8086f3b5baabdcdbcea23521123b7064ec0529da63b30ac23249eb17e993d9d3,manual_complete,قُرئ الملف كاملاً بشرياً في هذه الدورة ضمن النطاق المبيّن في التقرير
 scripts/expand_grammar.py,scripts,11430,93,f06828581108e63fa7abda9d9e2e3a0ab16f8f24dcf96c050907855d24cf476c,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
@@ -3242,7 +3243,7 @@ scripts/gen_tools.mjs,scripts,7459,123,f282c64f02a62f026483443585ac5f92be22a6e3b
 scripts/generate_exhaustive_audit.py,scripts,27343,415,e092283a7abc565ee301694f775a357eafc83d60ce5f54b7282ec44e37038d01,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 scripts/generate_exhaustive_full.py,scripts,17466,298,41a921e23b91640f9ac4ca398fd5814ab19c8b6dcc1faa40e2d265bb33ae21bc,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 scripts/grammar_profile_audit.ts,scripts,7238,76,466013d748803c6887af3ff40fd3ad5c65227f75fce0bcec7e79203c6904b7a8,manual_targeted,رُوجعت مقاطع أو حقول مرتبطة بنتائج محددة؛ ليست مراجعة كاملة للملف
-scripts/interaktiv_test.tsx,scripts,411026,5183,8a56fd324544f32d41191682ae15623b0938f90b69a5a2cf4a1c3add696fd41d,manual_targeted,رُوجعت مقاطع أو حقول مرتبطة بنتائج محددة؛ ليست مراجعة كاملة للملف
+scripts/interaktiv_test.tsx,scripts,412396,5204,4d65329481d11b4e9306f09c5fc00897d7ebe42aa21b6f50233b40dc4f8f88d8,manual_targeted,رُوجعت مقاطع أو حقول مرتبطة بنتائج محددة؛ ليست مراجعة كاملة للملف
 scripts/language_direction_audit.ts,scripts,5798,112,ad4f2b9a1eb83bd8f244c0eb03d6d5a8ed64de1c710a3cb0633ee05a0fee97e5,manual_complete,قُرئ الملف كاملاً بشرياً في هذه الدورة ضمن النطاق المبيّن في التقرير
 scripts/learning_state_audit.ts,scripts,3082,75,2c97dc4e7ea575b65facbd886df5a248747a9c344217830c866dc19a4b64a086,manual_complete,قُرئ الملف كاملاً بشرياً في هذه الدورة ضمن النطاق المبيّن في التقرير
 scripts/lexical_inventory_audit.ts,scripts,3852,58,cef251f53f24d6f45b729edee85e18ad3f68e6db32ed174681d2d31bfda1f990,manual_complete,قُرئ الملف كاملاً بشرياً في هذه الدورة ضمن النطاق المبيّن في التقرير

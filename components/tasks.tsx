@@ -10,7 +10,7 @@ import { WortLinkText } from "./wortlink";
 import { newCard, reviewCard, isDue, newCardCap, karteStufe, KARTENSTUFE_AR } from "@/lib/srs";
 import { planeWortkarten } from "@/lib/wortkarten";
 import { genusCode } from "@/lib/genus";
-import { addFehlerNow, markiereSchriftlich, loadProgress, saveProgress } from "@/lib/store";
+import { addFehlerNow, markiereSchriftlich, loadProgress, PROGRESS_EVENT, saveProgress } from "@/lib/store";
 import { speakDe, speakAny, speakLine, stopSpeech, speechAvailable, germanVoices, warmVoices } from "@/lib/speech";
 import { levelOf, clozeFromSatz, rng } from "@/lib/plan";
 import { buildBrueckeItems } from "@/lib/bruecken";
@@ -26,6 +26,7 @@ import { SignalRadar } from "./signalradar";
 import { StilWechsler } from "./stilwechsler";
 import { grammatikImText } from "@/lib/grammatikRadar";
 import { meldung } from "@/lib/meldungen";
+import { KOMPETENZ_AR } from "@/lib/kompetenz";
 import { BemerkenKarte } from "./bemerken";
 import { entdeckungsFrage, induktionMoeglich, ergebnisText, type EntdeckungsErgebnis } from "@/lib/induktion";
 import { grammarMap } from "@/lib/content";
@@ -1409,18 +1410,29 @@ function seedFrom(id: string): number {
 
 function CanDoList({ level, full }: { level: "A0" | "A1" | "A2" | "B1" | "B2"; full?: boolean }) {
   const items = candoMap[level] ?? [];
+  const [selected, setSelected] = useState<Record<string, boolean>>({});
+  useEffect(() => {
+    const refresh = () => setSelected({ ...loadProgress().canDo });
+    refresh();
+    window.addEventListener(PROGRESS_EVENT, refresh);
+    return () => window.removeEventListener(PROGRESS_EVENT, refresh);
+  }, []);
   const toggleCanDoNow = (id: string) => {
     const progress = loadProgress();
     const canDo = { ...progress.canDo };
     if (canDo[id]) delete canDo[id];
     else canDo[id] = true;
-    saveProgress({ ...progress, canDo });
+    if (saveProgress({ ...progress, canDo })) setSelected(canDo);
   };
   return (
-    <div style={{ marginTop: "1.2rem" }}>
-      <h4 style={{ fontWeight: 800, margin: "0.4rem 0 0.5rem" }}>
-        ✅ أستطيع أن… {full ? "— تقرير نهاية المرحلة (القائمة الكاملة)" : "(علّم ما أتقنته)"}
+    <div style={{ marginTop: "1.2rem" }} data-testid="cando-self-report">
+      <h4 style={{ fontWeight: 800, margin: "0.4rem 0 0.25rem" }}>
+        ✅ أستطيع أن… {full ? "— تقرير نهاية المرحلة (القائمة الكاملة)" : "(تقييم ذاتي وصفي)"}
       </h4>
+      <div id={`cando-boundary-${level}`} data-testid="cando-boundary" style={{ fontSize: "0.76rem", color: "var(--color-ink2)", lineHeight: 1.75, marginBottom: "0.5rem" }}>
+        أوصاف تواصلية داخلية للتأمل، غير منسوبة إلى CEFR ولا تدخل الأداء المقاس أو حكم الجاهزية.
+        {level === "A0" && <> تسمية A0 داخلية لمرحلة تمهيدية قبل A1 (<span lang="de" dir="ltr">Pre-A1</span>).</>}
+      </div>
       <div style={{ display: "grid", gap: "0.35rem" }}>
         {(full ? items : items.slice(0, 4)).map((c) => (
           <label
@@ -1428,10 +1440,20 @@ function CanDoList({ level, full }: { level: "A0" | "A1" | "A2" | "B1" | "B2"; f
             aria-label={`${c.de} — ${c.ar}`}
             style={{ display: "flex", gap: "0.5rem", alignItems: "flex-start", cursor: "pointer", border: "1px solid var(--color-line)", borderRadius: "0.6rem", padding: "0.5rem 0.7rem" }}
           >
-            <input type="checkbox" onChange={() => toggleCanDoNow(c.id)} style={{ marginTop: "0.25rem" }} />
+            <input
+              type="checkbox"
+              checked={selected[c.id] === true}
+              onChange={() => toggleCanDoNow(c.id)}
+              aria-describedby={`cando-boundary-${level}`}
+              data-testid={`cando-checkbox-${c.id}`}
+              style={{ marginTop: "0.25rem" }}
+            />
             <span>
               <De>{c.de}</De>
               <div style={{ fontSize: "0.8rem", color: "var(--color-ink2)" }}>{c.ar}</div>
+              <div style={{ fontSize: "0.7rem", color: "var(--color-ink2)", marginTop: "0.2rem" }}>
+                {c.skills.map((skill) => KOMPETENZ_AR[skill]).join(" + ")} · {c.levelLabel} · مصدر داخلي
+              </div>
             </span>
           </label>
         ))}

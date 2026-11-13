@@ -3583,9 +3583,9 @@ void 0;
     auditSrc.includes("if (keys.length === 0)") && auditSrc.includes("if (keys.length > 0) process.exitCode = 1") &&
     auditSrc.includes("wA201AlternativeReachable") && auditSrc.includes("abdeckung:writing-alternative"),
     "K143g تدقيق المحتوى يفصل البنيوي عن التربوي ويصنّف w-a2-01 كمعلومة حين تثبت إتاحته البديلة");
-  ok(taskSrc.includes("const toggleCanDoNow = (id: string) =>") && taskSrc.includes("const progress = loadProgress()") &&
-    !taskSrc.includes("useProgressMini"),
-    "K143h قائمة الاستطاعة لا تنشئ اشتراك Progress ثانياً أثناء عرض Today، وتظل تكتب التبديل للمخزن");
+  ok(taskSrc.includes("const toggleCanDoNow = (id: string) =>") && taskSrc.includes("checked={selected[c.id] === true}") &&
+    taskSrc.includes("PROGRESS_EVENT") && taskSrc.includes('data-testid="cando-boundary"') && !taskSrc.includes("useProgressMini"),
+    "K143h/PA031 قائمة الاستطاعة مضبوطة من الحالة المحفوظة وتستجيب لتغيّر الملف مع حد self-report داخلي");
 }
 
 /* ═══ K144 — مرادفات السياق: تقارب محدود بأمثلة عربية/ألمانية، بلا استبدال عام ═══ */

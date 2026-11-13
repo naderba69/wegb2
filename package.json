@@ -24,6 +24,7 @@
     "audit:simulation-provenance": "tsx scripts/simulation_provenance_audit.ts",
     "audit:lexical-inventory": "tsx scripts/lexical_inventory_audit.ts",
     "audit:personalization": "tsx scripts/personalization_audit.ts",
+    "audit:cando-integrity": "tsx scripts/cando_integrity_audit.ts",
     "audit:words": "tsx scripts/wort_fuer_wort_audit.ts",
     "audit:scaffolds": "tsx scripts/scaffold_audit.ts",
     "audit:scaffold-review": "tsx scripts/scaffold_review_audit.ts",

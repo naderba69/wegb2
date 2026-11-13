@@ -54,6 +54,18 @@ export interface SkillRemediationCycle {
   sourceWindowDays: number;
 }
 
+export type CanDoSkill = "Lesen" | "Hoeren" | "Schreiben" | "Sprechen";
+/** تقرير ذاتي وصفي داخلي؛ لا يدخل الأداء المقاس ولا يدّعي إسناداً خارجياً. */
+export interface CanDoDescriptor {
+  id: string;
+  de: string;
+  ar: string;
+  skills: CanDoSkill[];
+  kind: "communicative_self_report";
+  source: "internal";
+  levelLabel: string;
+}
+
 /** وصف construct قابل للأثر لمهمة الخطة؛ الوزن داخل المهمة وليس معايرة سيكومترية. */
 export interface TaskEvidenceDescriptor {
   construct: Kompetenz;

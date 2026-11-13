@@ -3348,7 +3348,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
     }
   }
 
-  /* ═══ LXXXV — تبديل قائمة «أستطيع» يحفظ مباشرةً بلا اشتراك Progress متداخل ═══ */
+  /* ═══ LXXXV — قائمة «أستطيع» مضبوطة من التخزين وتتزامن مع تبديل الملف ═══ */
   {
     const storage = dom.window.localStorage;
     const saved = Array.from({ length: storage.length }, (_, i) => {
@@ -3357,22 +3357,43 @@ const hasFile = txt().includes("صوتٌ من الدار");
     });
     try {
       storage.clear();
-      storage.setItem("weg-b2-profiles", JSON.stringify({ active: "p1", list: [{ id: "p1", name: "اختبار", emoji: "🧪", created: "2026-10-04" }] }));
+      storage.setItem("weg-b2-profiles", JSON.stringify({
+        active: "p1",
+        list: [
+          { id: "p1", name: "اختبار 1", emoji: "🧪", created: "2026-10-04" },
+          { id: "p2", name: "اختبار 2", emoji: "🔬", created: "2026-10-04" },
+        ],
+      }));
       const { default: TaskView } = await import("../components/tasks");
       const { loadProgress } = await import("../lib/store");
+      const { switchProfile } = await import("../lib/profiles");
       const { candoMap } = await import("../lib/content");
       const first = candoMap.A0[0];
       mount(React.createElement(TaskView, {
         task: { id: "cando-toggle-test", kind: "wiederholen" as const, titleDe: "Wiederholung", titleAr: "استرجاع", minutes: 5, sentenceIds: [], quiz: [] },
         lang: "ar" as const, day: 1, srs: {}, onSrs: () => {}, onPoints: () => {}, voiceName: "", rate: 1,
       }));
-      const checkbox = d0.querySelector('input[type="checkbox"]') as HTMLInputElement | null;
+      let checkbox = d0.querySelector(`[data-testid="cando-checkbox-${first.id}"]`) as HTMLInputElement | null;
+      const initiallyUnchecked = checkbox?.checked === false;
       if (checkbox) click(checkbox);
-      const enabled = loadProgress().canDo[first.id] === true;
+      const enabled = loadProgress().canDo[first.id] === true && checkbox?.checked === true;
+      act(() => switchProfile("p2"));
+      const uncheckedAfterProfileSwitch = checkbox?.checked === false;
+      act(() => switchProfile("p1"));
+      const restoredAfterProfileSwitch = checkbox?.checked === true;
+      mount(React.createElement(TaskView, {
+        task: { id: "cando-toggle-test", kind: "wiederholen" as const, titleDe: "Wiederholung", titleAr: "استرجاع", minutes: 5, sentenceIds: [], quiz: [] },
+        lang: "ar" as const, day: 1, srs: {}, onSrs: () => {}, onPoints: () => {}, voiceName: "", rate: 1,
+      }));
+      checkbox = d0.querySelector(`[data-testid="cando-checkbox-${first.id}"]`) as HTMLInputElement | null;
+      const restoredChecked = checkbox?.checked === true;
       if (checkbox) click(checkbox);
-      const disabled = !loadProgress().canDo[first.id];
-      ok(!!first && !!checkbox && enabled && disabled,
-        "LXXXV تبديل «أستطيع» يحفظ حالته في الملف ويعكسها عند النقر الثاني دون تحديث حالة مكررة في الابن");
+      const disabled = !loadProgress().canDo[first.id] && checkbox?.checked === false;
+      const boundary = d0.querySelector('[data-testid="cando-boundary"]');
+      ok(!!first && !!checkbox && initiallyUnchecked && enabled && uncheckedAfterProfileSwitch &&
+        restoredAfterProfileSwitch && restoredChecked && disabled &&
+        (boundary?.textContent ?? "").includes("غير منسوبة إلى CEFR") && (boundary?.textContent ?? "").includes("Pre-A1"),
+        "PA031/032 قائمة «أستطيع» مضبوطة من الحالة المحفوظة وتتزامن مع الملف، وتعرض حد التقرير الداخلي وPre-A1");
     } finally {
       if (leave) leave();
       storage.clear();

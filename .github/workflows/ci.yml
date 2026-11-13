@@ -93,6 +93,8 @@ jobs:
         run: npm run audit:lexical-inventory
       - name: Safe remedial personalization (PA-021)
         run: npm run audit:personalization
+      - name: Reactive Can-Do self-report integrity (PA-031/PA-032)
+        run: npm run audit:cando-integrity
       - name: Wort-für-Wort-Audit (bestätigte Blocker)
         run: npm run audit:words
       - name: Scaffold-Observability (CEFR baseline; candidates are not defects)
