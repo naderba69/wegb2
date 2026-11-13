@@ -1,15 +1,15 @@
 {
   "schema": "wegb2-pedagogical-audit-measurements-v1",
   "date": "2026-11-04",
-  "commit": "e936657da72b08cecd152d6f46304932eea175b5",
+  "commit": "c5ba0445a79893eecdfc2a59f624fceffdc0055e",
   "scopeNoteAr": "هذه قياسات قابلة لإعادة التشغيل وليست شهادة صحة لغوية أو بيداغوجية.",
   "baseline": {
     "smoke": {
-      "passed": 2030,
+      "passed": 2029,
       "failed": 0
     },
     "interactiveJsdom": {
-      "passed": 995,
+      "passed": 1014,
       "failed": 0,
       "plannedTasksTraversed": 2500,
       "interactiveElementsTouched": 22549
@@ -63,6 +63,27 @@
         "candidateLive": 184,
         "exitCode": 2
       }
+    },
+    "mediationAudit": {
+      "passed": 9,
+      "failed": 0,
+      "tasks": 12
+    },
+    "languageFieldAudit": {
+      "passed": 7,
+      "failed": 0,
+      "migratedFields": 67
+    },
+    "scaffoldAudit": {
+      "passed": 8,
+      "failed": 0,
+      "parenthetical": 238,
+      "items": 758,
+      "blankLinked": 176
+    },
+    "build": {
+      "routesGenerated": 19,
+      "routesFailed": 0
     }
   },
   "defaultPlan": {
@@ -117,13 +138,12 @@
     }
   },
   "onboardingAudio": {
-    "path": "public/willkommen-60s.mp3",
-    "bytes": 71907,
-    "mpegFrames": 344,
-    "sampleRateHz": 44100,
-    "meanBitrateKbps": 64,
-    "calculatedDurationSeconds": 8.99,
-    "method": "MPEG-1 Layer III frame count: 344 × 1152 / 44100"
+    "formerPath": "public/willkommen-60s.mp3",
+    "formerCalculatedDurationSeconds": 8.99,
+    "removed": true,
+    "replacement": "Browser speech synthesis on explicit request",
+    "voiceDisclosure": "automatic browser voice, not a human recording",
+    "claimBoundary": "The plan supports progress toward B2; time does not prove a CEFR level."
   },
   "competenceProbe": {
     "initial": {
@@ -192,25 +212,46 @@
     "currentFeedbackAr": "الكلمات المطلوبة موجودة، لكن ترتيب الجملة وتصريفها لم يطابقا نموذجاً أو بديلاً معلناً؛ هذه مفردات جزئية لا صحة كاملة."
   },
   "schemaProbe": {
-    "exercisePromptDeContainingArabic": 67,
+    "initialExercisePromptDeContainingArabic": 67,
+    "currentExercisePromptDeContainingArabic": 0,
+    "migratedFields": 67,
+    "targetFields": {
+      "german": "promptDe",
+      "arabic": "promptAr"
+    },
+    "rendererContract": {
+      "german": "lang=de, dir=ltr",
+      "arabic": "lang=ar, dir=rtl"
+    },
+    "regressionGate": "npm run audit:language-fields",
     "knownArabicTypoExample": {
       "id": "a2-imp-e4",
-      "expectedStart": "ساعدوا",
       "initialValue": "اساعدوا صديقكم!",
       "correctedValue": "ساعدوا صديقكم!",
+      "currentField": "promptAr",
+      "promptDe": "Übersetze den arabischen Satz ins Deutsche.",
       "fixed": true
     }
   },
   "mediationBank": {
     "path": "content/mediation.json",
-    "tasks": 10,
+    "tasks": 12,
     "levels": {
-      "B2": 10
+      "A2": 3,
+      "B1": 4,
+      "B2": 5
     },
-    "distinctSamples": 1,
-    "pageHasLearnerInput": false,
-    "pageHasRubricControls": false,
-    "pageHasSubmission": false
+    "distinctInputs": 12,
+    "distinctSamples": 12,
+    "pageHasLearnerInput": true,
+    "pageHasRubricControls": true,
+    "pageHasStructuralFeedback": true,
+    "pageHasOptionalModel": true,
+    "pageHasSecondDraft": true,
+    "pageHasProfileScopedLocalSave": true,
+    "automatedCefrScore": false,
+    "externalHumanReviewClaimed": false,
+    "regressionGate": "npm run audit:mediation"
   },
   "canDoBank": {
     "path": "content/cando.json",
@@ -282,10 +323,10 @@
     "fixedPedagogicalRisks": 17
   },
   "inventorySnapshot": {
-    "indexedTrackedFilesAndAuditArtifacts": 3534,
-    "manual_complete": 22,
-    "manual_targeted": 35,
-    "not_started": 3473,
+    "indexedTrackedFilesAndAuditArtifacts": 3537,
+    "manual_complete": 25,
+    "manual_targeted": 44,
+    "not_started": 3464,
     "audit_artifact": 4
   },
   "learningStateCorrections": {
@@ -334,5 +375,32 @@
     "confirmedCopyErrorsFixed": 3,
     "unsupportedMarketingClaimsRemoved": 2,
     "regressionGate": "npm run audit:assessment-integrity"
+  },
+  "implementationScope": "PA-013/PA-025/PA-026 applied on arena/67af4146-wegb2 after the recorded base commit; exact release commit is tracked by Git history.",
+  "languageDirectionCorrections": {
+    "findings": [
+      "PA-025",
+      "PA-026"
+    ],
+    "migratedPromptFields": 67,
+    "remainingArabicInPromptDe": 0,
+    "mediationGermanRuns": "de/ltr",
+    "mediationArabicRuns": "ar/rtl",
+    "exerciseInput": "de/ltr",
+    "automatedDomChecks": true,
+    "realScreenReaderSession": false,
+    "regressionGate": "npm run audit:language-fields + npm run interaktiv"
+  },
+  "scaffoldSignalAfterLanguageMigration": {
+    "before": {
+      "parenthetical": 242,
+      "blankLinked": 177
+    },
+    "after": {
+      "parenthetical": 238,
+      "blankLinked": 176
+    },
+    "reason": "Arabic cues moved out of German-labelled fields; learner support remains in promptAr.",
+    "confirmedAnswerLeaks": 0
   }
 }

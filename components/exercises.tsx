@@ -217,11 +217,11 @@ export default function ExerciseSet({ items, onPoints, storageKey, onProgress, o
               </span>{" "}
               <De>{ex.promptDe}</De>
               {ex.promptAr ? (
-                <div style={{ fontSize: "0.85rem", color: "var(--color-ink2)", marginTop: "0.2rem" }}>
+                <div lang="ar" dir="rtl" style={{ fontSize: "0.85rem", color: "var(--color-ink2)", marginTop: "0.2rem" }}>
                   {ex.promptAr}
                 </div>
               ) : (
-                <div style={{ fontSize: "0.8rem", color: "var(--color-ink3)", marginTop: "0.2rem" }}>
+                <div lang="ar" dir="rtl" style={{ fontSize: "0.8rem", color: "var(--color-ink3)", marginTop: "0.2rem" }}>
                   {ex.type === "mc" ? "اختر الإجابة الصحيحة." : ex.type === "fill" ? "اكتب الكلمة الناقصة." : ex.type === "translate" ? "ترجم إلى الألمانية." : ex.type === "truefalse" ? "هل الجملة صحيحة؟" : ex.type === "dictation" ? "اسمع واكتب ما سمعته." : ex.type === "umformung" ? "حوّل/صُغ الجملة حسب المطلوب." : ex.type === "order" ? "رتّب الكلمات لتكوين جملة صحيحة." : ""}
                 </div>
               )}
@@ -251,8 +251,9 @@ export default function ExerciseSet({ items, onPoints, storageKey, onProgress, o
                         textAlign: "start",
                         background: selected ? "rgb(34 197 94 / 0.14)" : "transparent",
                         borderColor: selected ? "#22c55e" : undefined,
-                        direction: "ltr",
                       }}
+                      lang={/[\u0600-\u06ff]/u.test(opt) ? "ar" : "de"}
+                      dir={/[\u0600-\u06ff]/u.test(opt) ? "rtl" : "ltr"}
                       disabled={st?.checked}
                       onClick={() => setState(stateId, { ...emptySt(st), response: opt, sicher: st?.sicher })}
                     >
@@ -272,6 +273,8 @@ export default function ExerciseSet({ items, onPoints, storageKey, onProgress, o
                       key={opt}
                       className="btn btn-ghost dirb-ex-opt"
                       style={{ flex: 1, background: selected ? "rgb(34 197 94 / 0.14)" : "transparent", borderColor: selected ? "#22c55e" : undefined }}
+                      lang="de"
+                      dir="ltr"
                       disabled={st?.checked}
                       onClick={() => setState(stateId, { ...emptySt(st), response: opt, sicher: st?.sicher })}
                     >
@@ -317,7 +320,9 @@ export default function ExerciseSet({ items, onPoints, storageKey, onProgress, o
                 )}
                 <input
                   className="field"
-                  style={{ direction: "ltr", maxWidth: "30rem" }}
+                  lang="de"
+                  dir="ltr"
+                  style={{ maxWidth: "30rem" }}
                   placeholder={ex.type === "dictation" ? "Schreibe, was du hörst …" : ex.type === "translate" ? "Übersetze hier …" : ex.type === "umformung" ? "Schreibe den umgeformten Satz …" : "Antwort …"}
                   value={(st?.response as string) ?? ""}
                   disabled={st?.checked}
@@ -457,6 +462,8 @@ function OrderWords({
   return (
     <div>
       <div
+        lang="de"
+        dir="ltr"
         style={{
           minHeight: "3rem",
           border: "1px dashed var(--color-line)",
@@ -486,7 +493,7 @@ function OrderWords({
           </button>
         ))}
       </div>
-      <div style={{ display: "flex", flexWrap: "wrap", gap: "0.4rem", direction: "ltr" }}>
+      <div lang="de" dir="ltr" style={{ display: "flex", flexWrap: "wrap", gap: "0.4rem" }}>
         {pool.map(({ w, i }) => (
           <button
             key={`${w}-${i}`}

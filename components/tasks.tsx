@@ -936,7 +936,7 @@ function HoerenTask({ task, onPoints, voiceName, rate, persistKey }: Omit<TaskPr
   const dictationEx: Exercise[] = dlg.dictation.map((s, i) => ({
     id: `${dlg.id}-di${i}`,
     type: "dictation",
-    promptDe: "اسمع واكتب",
+    promptDe: "Höre zu und schreibe den Satz auf.",
     promptAr: "اضغط 🔊 ثم اكتب ما سمعته بالألمانية",
     answer: [s],
     explanationDe: s,

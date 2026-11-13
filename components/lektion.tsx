@@ -92,7 +92,7 @@ function bauLektion(p: Progress, lvl: Level, runde: number): Lektion {
     min: 5,
     kat: "Hoeren",
     label: d?.titleAr ?? "إملاء",
-    ex: { id: "l-h-0", type: "dictation", promptDe: "اسمع واكتب:", promptAr: d?.titleAr, answer: [zeile], explanationDe: zeile },
+    ex: { id: "l-h-0", type: "dictation", promptDe: "Höre zu und schreibe den Satz auf.", promptAr: `اسمع واكتب${d?.titleAr ? ` — ${d.titleAr}` : ""}`, answer: [zeile], explanationDe: zeile },
   }];
 
   // ④ إنتاج (10′) — حسب أخطائك أنت

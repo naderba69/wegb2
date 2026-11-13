@@ -5,15 +5,64 @@
   "method": "Count each grammar exercise and delayed verification once. A parenthetical marker is any non-empty (...) in promptDe or text; a blank-linked candidate also contains a ___ blank. Candidates are review signals, not confirmed defects.",
   "topics": 87,
   "items": 758,
-  "parenthetical": 242,
-  "blankLinked": 177,
+  "parenthetical": 238,
+  "blankLinked": 176,
   "exactLeaks": 0,
   "byLevel": {
-    "A0": { "level": "A0", "topics": 8, "items": 63, "parenthetical": 8, "blankLinked": 7, "exactLeaks": 0, "parentheticalPct": 12.7 },
-    "A1": { "level": "A1", "topics": 19, "items": 150, "parenthetical": 58, "blankLinked": 39, "exactLeaks": 0, "parentheticalPct": 38.7 },
-    "A2": { "level": "A2", "topics": 22, "items": 202, "parenthetical": 82, "blankLinked": 62, "exactLeaks": 0, "parentheticalPct": 40.6 },
-    "B1": { "level": "B1", "topics": 15, "items": 143, "parenthetical": 34, "blankLinked": 23, "exactLeaks": 0, "parentheticalPct": 23.8 },
-    "B2": { "level": "B2", "topics": 23, "items": 200, "parenthetical": 60, "blankLinked": 46, "exactLeaks": 0, "parentheticalPct": 30 }
+    "A0": {
+      "level": "A0",
+      "topics": 8,
+      "items": 63,
+      "parenthetical": 8,
+      "blankLinked": 7,
+      "exactLeaks": 0,
+      "parentheticalPct": 12.7
+    },
+    "A1": {
+      "level": "A1",
+      "topics": 19,
+      "items": 150,
+      "parenthetical": 57,
+      "blankLinked": 39,
+      "exactLeaks": 0,
+      "parentheticalPct": 38.0
+    },
+    "A2": {
+      "level": "A2",
+      "topics": 22,
+      "items": 202,
+      "parenthetical": 79,
+      "blankLinked": 61,
+      "exactLeaks": 0,
+      "parentheticalPct": 39.1
+    },
+    "B1": {
+      "level": "B1",
+      "topics": 15,
+      "items": 143,
+      "parenthetical": 34,
+      "blankLinked": 23,
+      "exactLeaks": 0,
+      "parentheticalPct": 23.8
+    },
+    "B2": {
+      "level": "B2",
+      "topics": 23,
+      "items": 200,
+      "parenthetical": 60,
+      "blankLinked": 46,
+      "exactLeaks": 0,
+      "parentheticalPct": 30
+    }
   },
-  "previousBaseline": { "reviewRule": "R160", "parenthetical": 245, "blankLinked": 180 }
+  "previousBaseline": {
+    "reviewRule": "R161-pre-PA-025",
+    "parenthetical": 242,
+    "blankLinked": 177
+  },
+  "languageFieldMigration": {
+    "finding": "PA-025",
+    "migratedPromptDeFields": 67,
+    "note": "Four Arabic parenthetical runs and one blank-linked cue moved out of German-labelled grammar prompts; this is a language-schema correction, not reduced learner support."
+  }
 }

@@ -210,14 +210,17 @@
         "آنا"
       ],
       "promptDeBefore": "___ Haus (آنا) ist groß.",
-      "promptDeAfter": "___ Haus (آنا) ist groß.",
+      "promptDeAfter": "___ Haus (Anna) ist groß.",
       "textBefore": null,
       "textAfter": null,
       "answer": "Annas",
       "options": null,
       "decision": "retain",
       "classification": "retain-semantic-cue",
-      "rationaleAr": "القوس قيد دلالي أو وظيفي يحدد المعنى المقصود ولا يعطي الصيغة المقبولة حرفياً."
+      "rationaleAr": "القوس قيد دلالي أو وظيفي يحدد المعنى المقصود ولا يعطي الصيغة المقبولة حرفياً.",
+      "markersAfter": [
+        "Anna"
+      ]
     },
     {
       "id": "b1-genitiv-v1",
@@ -271,14 +274,17 @@
         "هو"
       ],
       "promptDeBefore": "ترجم: «لا أعرف أين يسكن» (هو).",
-      "promptDeAfter": "ترجم: «لا أعرف أين يسكن» (هو).",
+      "promptDeAfter": "Formuliere eine indirekte Frage auf Deutsch (Subjekt: er).",
       "textBefore": null,
       "textAfter": null,
       "answer": "Ich weiß nicht, wo er wohnt.",
       "options": null,
       "decision": "retain",
       "classification": "retain-context-label",
-      "rationaleAr": "القوس يصف سياق المهمة أو قسمها ولا يزوّد فراغاً بجواب."
+      "rationaleAr": "القوس يصف سياق المهمة أو قسمها ولا يزوّد فراغاً بجواب.",
+      "markersAfter": [
+        "Subjekt: er"
+      ]
     },
     {
       "id": "b1-indir-n7",
@@ -418,7 +424,7 @@
         "ومع ذلك"
       ],
       "promptDeBefore": "Er hatte kein Geld. ___ hat er das Auto gekauft. (ومع ذلك)",
-      "promptDeAfter": "Er hatte kein Geld. ___ hat er das Auto gekauft. (ومع ذلك)",
+      "promptDeAfter": "Er hatte kein Geld. ___ hat er das Auto gekauft. (Gegensatz)",
       "textBefore": null,
       "textAfter": null,
       "answer": [
@@ -428,7 +434,10 @@
       "options": null,
       "decision": "retain",
       "classification": "retain-semantic-cue",
-      "rationaleAr": "القوس قيد دلالي أو وظيفي يحدد المعنى المقصود ولا يعطي الصيغة المقبولة حرفياً."
+      "rationaleAr": "القوس قيد دلالي أو وظيفي يحدد المعنى المقصود ولا يعطي الصيغة المقبولة حرفياً.",
+      "markersAfter": [
+        "Gegensatz"
+      ]
     },
     {
       "id": "b1-konnektoren-v2",
@@ -459,14 +468,17 @@
         "عملية سابقة"
       ],
       "promptDeBefore": "Das Auto ist repariert ___. (عملية سابقة)",
-      "promptDeAfter": "Das Auto ist repariert ___. (عملية سابقة)",
+      "promptDeAfter": "Das Auto ist repariert ___. (abgeschlossener Vorgang)",
       "textBefore": null,
       "textAfter": null,
       "answer": "worden",
       "options": null,
       "decision": "retain",
       "classification": "retain-semantic-cue",
-      "rationaleAr": "القوس قيد دلالي أو وظيفي يحدد المعنى المقصود ولا يعطي الصيغة المقبولة حرفياً."
+      "rationaleAr": "القوس قيد دلالي أو وظيفي يحدد المعنى المقصود ولا يعطي الصيغة المقبولة حرفياً.",
+      "markersAfter": [
+        "abgeschlossener Vorgang"
+      ]
     },
     {
       "id": "b1-pas-e5",
@@ -706,14 +718,17 @@
         "جمع"
       ],
       "promptDeBefore": "Sie hat Angst ___ Hunden. (جمع)",
-      "promptDeAfter": "Sie hat Angst ___ Hunden. (جمع)",
+      "promptDeAfter": "Sie hat Angst ___ Hunden. (Plural)",
       "textBefore": null,
       "textAfter": null,
       "answer": "vor",
       "options": null,
       "decision": "retain",
       "classification": "retain-semantic-cue",
-      "rationaleAr": "القوس قيد دلالي أو وظيفي يحدد المعنى المقصود ولا يعطي الصيغة المقبولة حرفياً."
+      "rationaleAr": "القوس قيد دلالي أو وظيفي يحدد المعنى المقصود ولا يعطي الصيغة المقبولة حرفياً.",
+      "markersAfter": [
+        "Plural"
+      ]
     },
     {
       "id": "b1-wortbildung-e2",
@@ -1290,14 +1305,17 @@
         "حتمية"
       ],
       "promptDeBefore": "Es ist ___ so. (حتمية)",
-      "promptDeAfter": "Es ist ___ so. (حتمية)",
+      "promptDeAfter": "Es ist ___ so. (Unvermeidlichkeit)",
       "textBefore": null,
       "textAfter": null,
       "answer": "halt",
       "options": null,
       "decision": "retain",
       "classification": "retain-semantic-cue",
-      "rationaleAr": "القوس قيد دلالي أو وظيفي يحدد المعنى المقصود ولا يعطي الصيغة المقبولة حرفياً."
+      "rationaleAr": "القوس قيد دلالي أو وظيفي يحدد المعنى المقصود ولا يعطي الصيغة المقبولة حرفياً.",
+      "markersAfter": [
+        "Unvermeidlichkeit"
+      ]
     },
     {
       "id": "b2-mp-e5",
@@ -1309,14 +1327,17 @@
         "معلوم مشترك"
       ],
       "promptDeBefore": "Du bist ___ müde, oder? (معلوم مشترك)",
-      "promptDeAfter": "Du bist ___ müde, oder? (معلوم مشترك)",
+      "promptDeAfter": "Du bist ___ müde, oder? (gemeinsames Wissen)",
       "textBefore": null,
       "textAfter": null,
       "answer": "ja",
       "options": null,
       "decision": "retain",
       "classification": "retain-semantic-cue",
-      "rationaleAr": "القوس قيد دلالي أو وظيفي يحدد المعنى المقصود ولا يعطي الصيغة المقبولة حرفياً."
+      "rationaleAr": "القوس قيد دلالي أو وظيفي يحدد المعنى المقصود ولا يعطي الصيغة المقبولة حرفياً.",
+      "markersAfter": [
+        "gemeinsames Wissen"
+      ]
     },
     {
       "id": "b2-modalpartikel-v1",
@@ -1662,7 +1683,7 @@
         "للغاية"
       ],
       "promptDeBefore": "Sie spart Geld, ___ ein Auto zu kaufen. (للغاية)",
-      "promptDeAfter": "Sie spart Geld, ___ ein Auto zu kaufen. (للغاية)",
+      "promptDeAfter": "Sie spart Geld, ___ ein Auto zu kaufen. (Absicht)",
       "textBefore": null,
       "textAfter": null,
       "answer": [
@@ -1671,7 +1692,10 @@
       "options": null,
       "decision": "retain",
       "classification": "retain-semantic-cue",
-      "rationaleAr": "القوس قيد دلالي أو وظيفي يحدد المعنى المقصود ولا يعطي الصيغة المقبولة حرفياً."
+      "rationaleAr": "القوس قيد دلالي أو وظيفي يحدد المعنى المقصود ولا يعطي الصيغة المقبولة حرفياً.",
+      "markersAfter": [
+        "Absicht"
+      ]
     },
     {
       "id": "b2-partizip-v1",

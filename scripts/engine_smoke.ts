@@ -2801,8 +2801,8 @@ void 0;
     const alleUeb = Object.entries(grammarMap).flatMap(([k, t]) => t.exercises.map((e) => ({ k, e })));
     const ohneAr = alleUeb.filter(({ e }) => !AR.test(e.explanationAr ?? "")).map(({ e }) => e.id);
     ok(ohneAr.length === 0, `K69a كلُّ تمرينِ قواعدَ له شرحٌ عربيّ (ناقص: ${ohneAr.join(",")})`);
-    const arImDe = alleUeb.filter(({ e }) => e.type !== "translate" && e.type !== "fill" && !/bedeutet/.test(e.promptDe) && AR.test(e.promptDe)).map(({ e }) => e.id);
-    ok(arImDe.length === 0, `K69b لا عربيةَ في promptDe لتمارينِ order/mc/truefalse — التعليمةُ في promptAr (${arImDe.slice(0, 5).join(",")})`);
+    const arImDe = alleUeb.filter(({ e }) => AR.test(e.promptDe)).map(({ e }) => e.id);
+    ok(arImDe.length === 0, `K69b لا عربيةَ في أي promptDe؛ المصدر/التعليمة العربية في promptAr (${arImDe.slice(0, 5).join(",")})`);
     const leerToken = alleUeb.filter(({ e }) => Array.isArray(e.answer) && e.answer.some((x) => !String(x).trim())).map(({ e }) => e.id);
     ok(leerToken.length === 0, `K69c لا رمزَ فارغاً في إجاباتِ الترتيب (${leerToken.join(",")})`);
     const typo = alleUeb.filter(({ e }) => /___ \./.test(e.promptDe)).map(({ e }) => e.id);
@@ -4763,7 +4763,7 @@ void 0;
     perfektExercise2?.promptDe.includes("(arbeiten)") &&
     perfektOrder?.promptDe.includes("Beginne mit „Ich“") &&
     perfektVerify1?.promptDe === "Heute habe ich viel ___. (lernen)" && perfektVerify1.text === perfektVerify1.promptDe &&
-    perfektVerify2?.promptDe.includes("بـPerfekt")),
+    perfektVerify2?.promptDe === "Formuliere den Satz im Perfekt." && perfektVerify2.promptAr?.includes("لعبت كرة القدم أمس")),
     "K162d تحديد قرائن Perfekt والتمييز بين الجملة الرئيسية والتابعة وتصحيح اختيار sein وترقيم الفراغات");
 
   const futurTopic = grammarMap["a1-futur-einf"];
@@ -4776,7 +4776,7 @@ void 0;
     futurTopic.summaryAr.includes("Präsens") && futurTopic.summaryAr.includes("الجملة الخبرية الرئيسية") &&
     futurExercise1?.promptDe.includes("(werden)") && futurExercise3?.promptDe.includes("(werden)") &&
     futurOrder?.promptDe.includes("Beginne mit „Wir“") && futurOrder.promptDe.includes("Zeitangabe steht vor der Ortsangabe") &&
-    futurTranslation?.promptDe.includes("بـFutur I") &&
+    futurTranslation?.promptDe === "Formuliere den Satz im Futur I." && futurTranslation.promptAr?.includes("سأتعلّم الألمانية") &&
     futurVerify2?.promptDe.includes("für nächstes Jahr") && futurVerify2.promptDe.includes("Futur I") &&
     futurVerify2.answer === "Ich werde nächstes Jahr Deutsch lernen."),
     "K162e تقييد Futur I بجملة رئيسية وإضافة Sie والتنبيه إلى Präsens وحسم تلميحات التمارين");
@@ -15288,17 +15288,17 @@ function collectR262(dir: string, out: string[] = []): string[] {
 
   const metricsK357 = calculateScaffoldMetrics(grammarMap);
   const expectedLevelsK357 = {
-    A0: [8, 63, 8, 7, 12.7], A1: [19, 150, 58, 39, 38.7], A2: [22, 202, 82, 62, 40.6],
+    A0: [8, 63, 8, 7, 12.7], A1: [19, 150, 57, 39, 38], A2: [22, 202, 79, 61, 39.1],
     B1: [15, 143, 34, 23, 23.8], B2: [23, 200, 60, 46, 30],
   } as const;
-  ok(metricsK357.topics === 87 && metricsK357.items === 758 && metricsK357.parenthetical === 242 &&
-    metricsK357.blankLinked === 177 && metricsK357.exactLeaks === 0 &&
+  ok(metricsK357.topics === 87 && metricsK357.items === 758 && metricsK357.parenthetical === 238 &&
+    metricsK357.blankLinked === 176 && metricsK357.exactLeaks === 0 &&
     Object.entries(expectedLevelsK357).every(([level, expected]) => {
       const metric = metricsK357.byLevel[level as keyof typeof metricsK357.byLevel];
       return [metric.topics, metric.items, metric.parenthetical, metric.blankLinked, metric.parentheticalPct]
         .every((value, index) => value === expected[index]);
     }),
-    "K357b خط الأساس الحالي يعيد إنتاج 87 درساً/758 بنداً و242 علامة و177 مرشح فراغ وصفر تسريب، موزعة على المستويات الخمسة");
+    "K357b خط الأساس الحالي يعيد إنتاج 87 درساً/758 بنداً و238 علامة و176 مرشح فراغ وصفر تسريب، موزعة على المستويات الخمسة");
 
   const qualityK357 = readFileSync("app/qualitaet/page.tsx", "utf8");
   const auditK357 = readFileSync("scripts/scaffold_audit.ts", "utf8");
@@ -15307,7 +15307,7 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const baselineK357 = JSON.parse(readFileSync("content/scaffold-metrics-baseline.json", "utf8")) as { reviewRule?: string; nonBlockingRatios?: boolean };
   ok(qualityK357.includes('data-testid="scaffold-transparency"') && qualityK357.includes("إشارات مراجعة وليست عيوباً مؤكدة") &&
     auditK357.includes("review signals, not confirmed defects") && ciK357.includes("npm run audit:scaffolds") &&
-    browserK357.includes('"242/758"') && baselineK357.reviewRule === "R161" && baselineK357.nonBlockingRatios === true,
+    browserK357.includes('"238/758"') && baselineK357.reviewRule === "R161" && baselineK357.nonBlockingRatios === true,
     "K357c صفحة الجودة والتدقيق وCI وChromium تعرض خط الأساس المحدث بوصفه إشارة غير مانعة، لا قائمة أخطاء مؤكدة");
 }
 

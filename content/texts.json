@@ -1315,12 +1315,12 @@
       {
         "id": "t-b2-05-q3",
         "type": "fill",
-        "promptDe": "…, ___ der formalen Voraussetzungen. (= بغض النظر عن)",
+        "promptDe": "…, ___ der formalen Voraussetzungen.",
         "answer": [
           "ungeachtet"
         ],
         "explanationAr": "الدليل حرفياً: «Wer diese Zusammenhänge plausibel macht, überzeugt — ungeachtet der formalen Voraussetzungen.» — ungeachtet + Genitiv = بغضّ النظر عن.",
-        "promptAr": "___ المتطلبات الشكلية."
+        "promptAr": "___ المتطلبات الشكلية. تلميح المعنى: بغض النظر عن."
       },
       {
         "id": "t-b2-05-q4",
@@ -1718,12 +1718,12 @@
       {
         "id": "t-b2-07-q1",
         "type": "fill",
-        "promptDe": "Als sei sie ___. (= غاية بذاتها)",
+        "promptDe": "Als sei sie ___.",
         "answer": [
           "Selbstzweck"
         ],
         "explanationAr": "الدليل حرفياً: «Die forcierte Digitalisierung wird gefeiert, als sei sie Selbstzweck.» — غاية بذاتها.",
-        "promptAr": "كأنها ___ في ذاتها."
+        "promptAr": "كأنها ___ في ذاتها. تلميح المعنى: غاية بذاتها."
       },
       {
         "id": "t-b2-07-q2",

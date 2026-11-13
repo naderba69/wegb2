@@ -12,12 +12,12 @@ export function De({
   style?: CSSProperties;
 }) {
   return (
-    <span className={`de ${className}`} lang="de" style={style}>
+    <span className={`de ${className}`} lang="de" dir="ltr" style={style}>
       {children}
     </span>
   );
 }
 
 export function DeBlock({ children, className = "" }: { children: ReactNode; className?: string }) {
-  return <div className={`de ${className}`} lang="de" style={{ display: "block", width: "100%" }}>{children}</div>;
+  return <div className={`de ${className}`} lang="de" dir="ltr" style={{ display: "block", width: "100%" }}>{children}</div>;
 }

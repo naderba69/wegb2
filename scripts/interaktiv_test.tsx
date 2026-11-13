@@ -4994,6 +4994,77 @@ const hasFile = txt().includes("صوتٌ من الدار");
   });
 }
 
+/* ═══ PA-025 — فصل promptDe/promptAr ووسم حقول التمرين في DOM ═══ */
+{
+  const { default: ExerciseSet } = await import("../components/exercises");
+  const { grammarMap } = await import("../lib/content");
+  const migrated = grammarMap["a1-perfekt-einf"].exercises.find((exercise) => exercise.id === "a1-perf-n3")!;
+  mount(React.createElement(ExerciseSet, { items: [migrated] }));
+  const dePrompt = rootEl.querySelector(".dirb-ex-item .de") as HTMLElement | null;
+  const arPrompt = rootEl.querySelector('.dirb-ex-item [lang="ar"][dir="rtl"]') as HTMLElement | null;
+  const answerInput = rootEl.querySelector(".dirb-ex-item input.field") as HTMLInputElement | null;
+  ok(dePrompt?.getAttribute("lang") === "de" && dePrompt.getAttribute("dir") === "ltr" &&
+    !/[\u0600-\u06ff]/u.test(dePrompt.textContent ?? ""),
+    "LANG1 promptDe المنقول ألماني فقط وموسوم de/ltr في DOM");
+  ok(arPrompt?.textContent?.includes("لعبتُ أمس كرة القدم") === true &&
+    arPrompt.getAttribute("lang") === "ar" && arPrompt.getAttribute("dir") === "rtl",
+    "LANG2 المصدر العربي محفوظ في promptAr وموسوم ar/rtl في DOM");
+  ok(answerInput?.getAttribute("lang") === "de" && answerInput.getAttribute("dir") === "ltr",
+    "LANG3 حقل الإجابة الألمانية يعلن اللغة والاتجاه صراحة");
+  await pruefeA11y("LANG4 تمرين ثنائي اللغة بعد فصل الحقول");
+}
+
+/* ═══ MED-013 — دورة الوساطة: مدخل → مسودة → rubric → مراجعة → نسخة محفوظة ═══ */
+{
+  const { default: MediationPage } = await import("../app/mediation/page");
+  const { mediationStorageKey } = await import("../lib/mediation");
+  const { progressKeyActive } = await import("../lib/profiles");
+  const key = mediationStorageKey(progressKeyActive());
+  dom.window.localStorage.removeItem(key);
+  mount(React.createElement(MediationPage));
+  const first = rootEl.querySelector('[data-testid="mediation-task-m-01"]') as HTMLDetailsElement | null;
+  const summary = first?.querySelector("summary") as HTMLElement | null;
+  if (summary) click(summary);
+  const inputDe = rootEl.querySelector('[data-testid="mediation-input-de-m-01"]');
+  const taskDe = rootEl.querySelector('[data-testid="mediation-task-de-m-01"]');
+  ok(!!first && inputDe?.getAttribute("lang") === "de" && inputDe.getAttribute("dir") === "ltr" &&
+    taskDe?.getAttribute("lang") === "de" && taskDe.getAttribute("dir") === "ltr",
+    "MED1 المدخل والمهمة الألمانيان موجودان وموسومان de/ltr داخل أول مهمة A2");
+  ok(!rootEl.querySelector('[data-testid="mediation-model-m-01"]'),
+    "MED2 النموذج محجوب قبل المحاولة ولا يسرّب الإجابة الممكنة");
+  const draft = rootEl.querySelector('[data-testid="mediation-draft-m-01"]') as HTMLTextAreaElement | null;
+  if (draft) typeIn(draft, "Am Dienstag gibt es im Haus kein Wasser. Bitte bereiten Sie Trinkwasser vor.");
+  const review = rootEl.querySelector('[data-testid="mediation-review-m-01"]') as HTMLButtonElement | null;
+  ok(!!draft && !!review && !review.disabled, "MED3 مسودة حقيقية تفتح الانتقال إلى المراجعة الذاتية");
+  if (review) click(review);
+  const rubric = rootEl.querySelector('[data-testid="mediation-rubric-m-01"]');
+  const checks = rubric ? Array.from(rubric.querySelectorAll('input[type="checkbox"]')) as HTMLInputElement[] : [];
+  ok(!!rubric && checks.length === 4 && !!rootEl.querySelector('[data-testid="mediation-feedback-m-01"]'),
+    "MED4 شبكة المحاور الأربعة وملاحظات المراجعة البنيوية تظهران بعد المسودة");
+  const modelToggle = rootEl.querySelector('[data-testid="mediation-model-toggle-m-01"]') as HTMLElement | null;
+  if (modelToggle) click(modelToggle);
+  ok(!!rootEl.querySelector('[data-testid="mediation-model-m-01"]') &&
+    (rootEl.querySelector('[data-testid="mediation-model-m-01"]')?.textContent ?? "").includes("Herr Lehmann"),
+    "MED5 النموذج الخاص بالمهمة يظهر بطلب صريح ويطابق مدخلها لا placeholder مكرراً");
+  for (const checkbox of checks) click(checkbox);
+  const revision = rootEl.querySelector('[data-testid="mediation-revision-m-01"]') as HTMLTextAreaElement | null;
+  if (revision) typeIn(revision, "Herr Lehmann, am Dienstag fehlt das Wasser von acht bis dreizehn Uhr. Bitte füllen Sie vorher Trinkwasser ab und lassen Sie die Wasserhähne geschlossen.");
+  const save = rootEl.querySelector('[data-testid="mediation-save-m-01"]') as HTMLButtonElement | null;
+  ok(!!revision && !!save && !save.disabled, "MED6 فحص المحاور ونسخة ثانية حقيقية يفتحان الحفظ المحلي");
+  if (save) click(save);
+  await flushAsync();
+  const stored = JSON.parse(dom.window.localStorage.getItem(key) ?? "{}") as Record<string, { phase?: string; revision?: string }>;
+  ok(stored["m-01"]?.phase === "saved" && (stored["m-01"]?.revision ?? "").includes("Herr Lehmann") &&
+    (rootEl.querySelector('[data-testid="mediation-completion"]')?.textContent ?? "").includes("1 من 12"),
+    "MED7 النسخة الثانية وحالة الإنجاز محفوظتان محلياً ويظهر العدّاد 1/12");
+  await pruefeA11y("MED8 ورشة الوساطة المفتوحة بعد دورة المراجعة");
+  mount(React.createElement(MediationPage));
+  await flushAsync();
+  ok((rootEl.querySelector('[data-testid="mediation-task-m-01"] summary')?.textContent ?? "").includes("نسخة ثانية محفوظة"),
+    "MED9 إعادة التركيب تستعيد الحالة المحفوظة بدلاً من إخفائها أو عكسها");
+  dom.window.localStorage.removeItem(key);
+}
+
 /* ═══ TC725 — الهدف والإيقاع في البداية: حالة typed ومحلية وحدود واضحة ═══ */
 {
   const storage = dom.window.localStorage;

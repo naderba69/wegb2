@@ -294,7 +294,7 @@ export function platzierungsFragen(gmap: Record<string, GrammarTopic>): Exercise
   out.push({
     id: "pl-hoer-a2",
     type: "mc",
-    promptDe: "🎧 Hören (▶ اضغط 🔊 على الجملة): „Am Samstag gehe ich mit meiner Freundin ins Kino. Wir sehen einen neuen französischen Film.“ — Wohin geht die Person am Samstag?",
+    promptDe: "🎧 Hören: „Am Samstag gehe ich mit meiner Freundin ins Kino. Wir sehen einen neuen französischen Film.“ — Wohin geht die Person am Samstag?",
     promptAr: "🎧 استماع (مستوى A2): اضغط 🔊 على زر الاستماع في الأسفل ثم أجب: إلى أين تذهب المتكلمة يوم السبت؟",
     text: "Am Samstag gehe ich mit meiner Freundin ins Kino. Wir sehen einen neuen französischen Film.",
     options: ["ins Theater", "ins Kino", "in die Schule", "zur Arbeit"],
@@ -305,7 +305,7 @@ export function platzierungsFragen(gmap: Record<string, GrammarTopic>): Exercise
   out.push({
     id: "pl-hoer-b2",
     type: "truefalse",
-    promptDe: "🎧 Hören (▶ اضغط 🔊): „Wenn ich mehr Zeit hätte, würde ich jeden Tag Klavier spielen, aber mein Studium nimmt fast den ganzen Tag in Anspruch.“ — Aussage: Die Person spielt jeden Tag Klavier. Richtig oder falsch?",
+    promptDe: "🎧 Hören: „Wenn ich mehr Zeit hätte, würde ich jeden Tag Klavier spielen, aber mein Studium nimmt fast den ganzen Tag in Anspruch.“ — Aussage: Die Person spielt jeden Tag Klavier. Richtig oder falsch?",
     promptAr: "🎧 استماع (مستوى B2): الجملة تتحدث عن أمنية بلا تحقق. العبارة: «الشخص يعزف البيانو كل يوم» — هل هي صحيحة؟",
     text: "Wenn ich mehr Zeit hätte, würde ich jeden Tag Klavier spielen, aber mein Studium nimmt fast den ganzen Tag in Anspruch.",
     options: ["richtig", "falsch"],

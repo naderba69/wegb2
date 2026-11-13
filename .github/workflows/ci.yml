@@ -79,6 +79,10 @@ jobs:
         run: npm run audit:evidence-provenance
       - name: Workload source and non-inferential time claims (PA-009–PA-011)
         run: npm run audit:time-model
+      - name: Executable mediation cycle (PA-013)
+        run: npm run audit:mediation
+      - name: Language-labelled fields and RTL/LTR direction (PA-025/PA-026)
+        run: npm run audit:language-fields
       - name: Wort-für-Wort-Audit (bestätigte Blocker)
         run: npm run audit:words
       - name: Scaffold-Observability (CEFR baseline; candidates are not defects)

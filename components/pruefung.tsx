@@ -440,7 +440,7 @@ function bauMock(saat: number, lvl: Level): MockItem[] {
   if (d) for (const zeile of d.dictation.slice(0, 3)) {
     out.push({
       sec: "Hoeren",
-      ex: { id: `m-h-${d.id}-${zeile.slice(0, 8)}`, type: "dictation", promptDe: "اسمع واكتب:", promptAr: d.titleAr, answer: [zeile], explanationDe: zeile },
+      ex: { id: `m-h-${d.id}-${zeile.slice(0, 8)}`, type: "dictation", promptDe: "Höre zu und schreibe den Satz auf.", promptAr: `اسمع واكتب — ${d.titleAr}`, answer: [zeile], explanationDe: zeile },
     });
   }
   return out;

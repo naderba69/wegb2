@@ -56,32 +56,19 @@ fs.mkdirSync(path.join(ROOT, 'content'), {recursive:true});
 fs.writeFileSync(path.join(ROOT, 'content/orientierung.json'), JSON.stringify(orientierung, null, 2)+'\n');
 console.log(`orientierung.json ${orientierung.length}`);
 
-// Mediation: 10 tasks CEFR 2020 M19 — e.g., summary, relay, translate
-const mediation = [
-  { id: "m-01", titleDe: "Zusammenfassung für Kollegin", titleAr: "تلخيص لزميلة", de: "Du hast einen Artikel über Homeoffice gelesen. Kollegin Aisha hat keine Zeit. Fasse die Vor- und Nachteile in fünf Sätzen auf Deutsch zusammen. Nutze Alltagssprache. Nenne Quelle kurz.", ar: "لخص مقالة عن العمل المنزلي لزميلة لا وقت لها.", quelle: "CEFR Companion 2020 Mediation — Zusammenfassen" },
-  { id: "m-02", titleDe: "Ankündigung erklären", titleAr: "شرح إعلان", de: "An der Haustür hängt eine Ankündigung: Morgen kein Wasser wegen Reparatur. Erkläre Nachbar Herrn Lehmann auf Deutsch, was passiert und was er tun soll.", ar: "اشرح إعلان انقطاع الماء لجار.", quelle: "CEFR Mediation — Informationen weitergeben" },
-  { id: "m-03", titleDe: "Grafik erklären", titleAr: "شرح رسم بياني", de: "Eine Grafik zeigt: 70 von 100 Jugendlichen nutzen täglich Soziale Medien, 30 lesen täglich Bücher. Erkläre die Grafik in einfachen Worten für Großmutter.", ar: "اشرح رسمًا بيانيًا لجدّة.", quelle: "CEFR Mediation — Grafik vermitteln" },
-  { id: "m-04", titleDe: "Nachricht vereinfachen", titleAr: "تبسيط رسالة", de: "Behörde schreibt: Ihr Antrag ist unvollständig, reichen Sie Einkommensnachweis nach. Formuliere die Nachricht einfacher für Freund Yusuf.", ar: "بسّط رسالة رسمية لصديق.", quelle: "CEFR Mediation — Vereinfachen" },
-  { id: "m-05", titleDe: "Streit schlichten", titleAr: "تهدئة خلاف", de: "Zwei Kursteilnehmende streiten über Pünktlichkeit. Höre beiden zu und formuliere einen Vorschlag, der beide respektiert.", ar: "اقترح حلاً يحترم الطرفين.", quelle: "CEFR Mediation — Konflikte" },
-  { id: "m-06", titleDe: "Einladung weiterleiten", titleAr: "تمرير دعوة", de: "Du erhältst Einladung zu Fest im Hof. Leite sie an Nachbarin weiter und füge hinzu, was mitzubringen ist.", ar: "مرّر دعوة مع إضافة.", quelle: "CEFR Mediation — Weiterleiten" },
-  { id: "m-07", titleDe: "Kleingedrucktes erklären", titleAr: "شرح البنود الصغيرة", de: "Mietvertrag sagt: Kaution drei Monatskaltmieten, Rückzahlung nach Auszug. Erkläre das für Freundin ohne Juradeutsch.", ar: "اشرح بند الكفالة بلغة يومية.", quelle: "CEFR Mediation — Fachsprache" },
-  { id: "m-08", titleDe: "Meinung zusammenführen", titleAr: "جمع الآراء", de: "Drei Personen diskutieren Vier-Tage-Woche. Fasse ihre Argumente neutral zusammen und schlage Kompromiss vor.", ar: "لخص ثلاث وجهات نظر واقترح حلاً وسطًا.", quelle: "CEFR Mediation — Zusammenführen" },
-  { id: "m-09", titleDe: "Online-Chat moderieren", titleAr: "إدارة دردشة", de: "In Gruppenchat schreiben Teilnehmende gleichzeitig. Fasse bisherigen Stand zusammen und stelle nächste Frage klar.", ar: "لخص الدردشة واطرح السؤال التالي.", quelle: "CEFR Online Interaction" },
-  { id: "m-10", titleDe: "Plurilinguale Brücke", titleAr: "جسر لغوي", de: "Mutter versteht nur Arabisch, Kind nur Deutsch. Vermittle zwischen beiden bei Anmeldung im Sportverein.", ar: "كُن وسيطًا بين أم وطفل بلغتين.", quelle: "CEFR Plurilingual" },
-].map(m=> ({
-  id: m.id,
-  level: "B2",
-  titleDe: m.titleDe,
-  titleAr: m.titleAr,
-  taskDe: m.de,
-  taskAr: m.ar,
-  quelle: m.quelle,
-  criteria: ["Aufgabenerfüllung","Kommunikationsstrategie","Sprachmittel","Kohärenz"],
-  sample: "Beispiel: Liebe Aisha, im Artikel steht... Viele Grüße"
-}));
-
-fs.writeFileSync(path.join(ROOT, 'content/mediation.json'), JSON.stringify(mediation, null, 2)+'\n');
-console.log(`mediation.json ${mediation.length}`);
+// Mediation is now a manually reviewed, executable 12-task bank with unique inputs,
+// rubrics, key points, and models. This historical generator must never overwrite it
+// with the former repeated placeholder sample; verify the maintained bank instead.
+const mediationPath = path.join(ROOT, 'content/mediation.json');
+const mediation = JSON.parse(fs.readFileSync(mediationPath, 'utf8'));
+if (!Array.isArray(mediation) || mediation.length !== 12) {
+  throw new Error('mediation.json must contain the maintained 12-task progression');
+}
+if (new Set(mediation.map((task) => task.inputDe)).size !== mediation.length ||
+    new Set(mediation.map((task) => task.sampleDe)).size !== mediation.length) {
+  throw new Error('mediation.json contains repeated input or model text');
+}
+console.log(`mediation.json verified ${mediation.length}`);
 
 // update bankload
 const bankPath = path.join(ROOT, 'lib/bankload.ts');
