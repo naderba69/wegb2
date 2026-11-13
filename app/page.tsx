@@ -31,6 +31,7 @@ import { heutigesGrammatikThema, parkedExercisesFor } from "@/lib/parkuebungen";
 import { FehlerGrenze } from "@/components/fehlergrenze";
 import { progressFuerExport } from "@/lib/backup";
 import { useBankGeneration } from "@/lib/use-bank-generation";
+import { corePathMinutes, deepeningMinutes, isCoreTask, CORE_PATH_MAX_MINUTES } from "@/lib/day-path";
 
 // ⚡ R308: تحميلٌ كسولٌ حقيقي — لا تُجلَب شيفرتا «تدرّب»/«اختبر» الثقيلتان (عشرات المحطات)
 // ضمن حزمة صفحة «اليوم» (الأكثر زيارةً بفارق كبير) إلا عند فتح القسم فعليًا.
@@ -172,6 +173,11 @@ export default function Today() {
 
   const showOnboarding = !progress.settings.onboardingDone && progress.plan.day <= 3;
   const resultOf = (id: string) => progress.plan.tasks[id];
+  const coreTasks = plan.tasks.filter(isCoreTask);
+  const deepeningTasks = plan.tasks.filter((task) => !isCoreTask(task));
+  const coreMinutes = corePathMinutes(plan.tasks);
+  const optionalMinutes = deepeningMinutes(plan.tasks);
+  const coreCompleted = coreTasks.length > 0 && coreTasks.every((task) => !!resultOf(task.id));
   // 🔐 بوابة الجلسة: الجديد لا يُرى قبل تسليم الاسترجاع (lib/ritual.ts)
   const ritual = ritualUrteil(plan, progress);
   const stationsStatus = todayStepStatuses(
@@ -185,9 +191,12 @@ export default function Today() {
     ? stationsStatus.get(todayStepOf(angeforderteAufgabe)) === "locked"
     : false;
   const ersteAktiveAufgabe = plan.tasks.findIndex((task) =>
-    stationsStatus.get(todayStepOf(task)) === "active" && !resultOf(task.id));
-  // A position saved by an older release must not reopen a now-locked station.
-  const stepFrei = angeforderteStationGesperrt && ersteAktiveAufgabe >= 0
+    isCoreTask(task) && stationsStatus.get(todayStepOf(task)) === "active" && !resultOf(task.id));
+  const angeforderteVertiefungGesperrt = !!angeforderteAufgabe
+    && !isCoreTask(angeforderteAufgabe)
+    && !coreCompleted;
+  // A saved position cannot reopen a locked station or skip the unfinished core route.
+  const stepFrei = (angeforderteStationGesperrt || angeforderteVertiefungGesperrt) && ersteAktiveAufgabe >= 0
     ? ersteAktiveAufgabe
     : angeforderterSchritt;
   const localOf = (id: string) => points[id] ?? { score: 0, total: 0 };
@@ -206,7 +215,9 @@ export default function Today() {
   // سبب الاختيار بلغة بسيطة، مع إبقاء معنى الاسترجاع والتحقق المستقل.
   const heldGrund = !held
     ? ""
-    : held.verifyFor
+    : !isCoreTask(held)
+      ? "تعميق اختياري بعد المسار الأساسي؛ تركه لا يصنع فشلاً أو تعويضاً."
+      : held.verifyFor
       ? "مهمة جديدة للتأكد من ثبات ما تعلّمته."
       : held.mandatory
         ? `مراجعة لم تكتمل في اليوم ${held.from}؛ نبدأ بها اليوم.`
@@ -256,6 +267,7 @@ export default function Today() {
     if (heldFertig) {
       const next = plan.tasks.findIndex((task, i) =>
         !resultOf(task.id) &&
+        (coreCompleted || isCoreTask(task)) &&
         !aufgabeGesperrt(ritual, i) &&
         stationsStatus.get(todayStepOf(task)) !== "locked");
       if (next >= 0) setStep(next);
@@ -359,18 +371,23 @@ export default function Today() {
       saveExam(day, pct, pct >= 80);
     }
     const aktuelleStation = todayStepOf(task);
-    let naechsterIndex = plan.tasks.findIndex((kandidat) =>
-      kandidat.id !== task.id && !resultOf(kandidat.id) && todayStepOf(kandidat) === aktuelleStation);
+    const offene = plan.tasks
+      .map((kandidat, index) => ({ kandidat, index }))
+      .filter(({ kandidat }) => kandidat.id !== task.id && !resultOf(kandidat.id));
+    const offeneKernaufgaben = offene.filter(({ kandidat }) => isCoreTask(kandidat));
+    // لا تقفز إلى التعميق ما دام في المسار الأساسي شيء غير مسلّم.
+    const pool = offeneKernaufgaben.length > 0 ? offeneKernaufgaben : offene;
+    let naechsterIndex = pool.find(({ kandidat }) => todayStepOf(kandidat) === aktuelleStation)?.index ?? -1;
     if (naechsterIndex < 0) {
-      const spaetereOffeneStationen = plan.tasks
-        .filter((kandidat) => kandidat.id !== task.id && !resultOf(kandidat.id) && todayStepOf(kandidat) > aktuelleStation)
-        .map(todayStepOf);
+      const spaetereOffeneStationen = pool
+        .filter(({ kandidat }) => todayStepOf(kandidat) > aktuelleStation)
+        .map(({ kandidat }) => todayStepOf(kandidat));
       const naechsteStation = spaetereOffeneStationen.length > 0 ? Math.min(...spaetereOffeneStationen) : null;
       if (naechsteStation !== null) {
-        naechsterIndex = plan.tasks.findIndex((kandidat) =>
-          kandidat.id !== task.id && !resultOf(kandidat.id) && todayStepOf(kandidat) === naechsteStation);
+        naechsterIndex = pool.find(({ kandidat }) => todayStepOf(kandidat) === naechsteStation)?.index ?? -1;
       }
     }
+    if (naechsterIndex < 0 && pool.length > 0) naechsterIndex = pool[0].index;
     if (naechsterIndex >= 0) setStep(naechsterIndex);
   };
 
@@ -388,6 +405,8 @@ export default function Today() {
     const merged: Record<string, { done: boolean; passed: boolean; score: number; total: number; attempts: number }> = {};
     for (const tk of plan.tasks) {
       const r = progress.plan.tasks[tk.id];
+      // التعميق غير المُسلَّم لا يتحول إلى نتيجة صفرية ولا إلى دين عند الإغلاق.
+      if (!isCoreTask(tk) && !r) continue;
       const local = points[tk.id] ?? { score: 0, total: 0 };
       const total = r?.total ?? local.total;
       const score = r?.score ?? local.score;
@@ -418,7 +437,7 @@ export default function Today() {
     setSessionSaved(true);
   };
 
-  const allSubmitted = plan.tasks.every((tk) => resultOf(tk.id) || localOf(tk.id).total > 0);
+  const allSubmitted = coreTasks.every((task) => resultOf(task.id) || localOf(task.id).total > 0);
 
   /** 🧘 «يوم سيّئ»: تجميد السلسلة وعبور اليوم بلا ديون ولا عقاب (K-badDay) */
   const badDayToday = () => {
@@ -447,6 +466,8 @@ export default function Today() {
   };
   const unpassed = plan.tasks.filter((tk) => {
     const r = resultOf(tk.id);
+    // التعميق الذي لم يُسلَّم لا يدخل حكم الإغلاق؛ الفاشل بعد التسليم يبقى علاجياً.
+    if (!isCoreTask(tk) && !r) return false;
     const local = localOf(tk.id);
     const passed = r?.passed ?? (local.total > 0 && local.score / local.total >= 0.8);
     return !passed;
@@ -498,6 +519,22 @@ export default function Today() {
         )}
       </header>
 
+      <section className="card dirb-hero-anim-2" data-testid="daily-path-summary" style={{ padding: "0.8rem 1rem", display: "grid", gap: "0.35rem", borderInlineStart: "5px solid var(--color-a1)" }}>
+        <div style={{ display: "flex", gap: "0.5rem", alignItems: "center", flexWrap: "wrap" }}>
+          <strong>🟢 المسار الأساسي: <span className="rtl-num">{coreMinutes}</span> دقيقة</strong>
+          <span className="chip"><span className="rtl-num">{coreTasks.length}</span> مهام لإغلاق اليوم</span>
+          {optionalMinutes > 0 && <span className="chip">➕ تعميق اختياري: <span className="rtl-num">{optionalMinutes}</span> دقيقة</span>}
+        </div>
+        <div style={{ fontSize: "0.82rem", color: "var(--color-ink2)", lineHeight: 1.8 }}>
+          ابدأ بالمسار الأساسي؛ بعد تسليمه يمكنك إغلاق اليوم. التعميق يفتح بعده: تركه محايد، أما ما تسلّمه ولا تجتازه فيبقى علاجياً.
+          {coreMinutes > CORE_PATH_MAX_MINUTES && <> هذا اليوم استثناء معلن لأن فيه امتحاناً أو التزاماً غير قابل للتقسيم أطول من نافذة <span className="rtl-num">45–90</span> دقيقة الداخلية.</>}
+          {optionalMinutes === 0 && <> لا توجد حزمة تعميق منفصلة في هذا اليوم.</>}
+        </div>
+        <div style={{ fontSize: "0.74rem", color: "var(--color-ink2)" }}>
+          نافذة <span className="rtl-num">45–90</span> دقيقة قرار تخطيط داخلي محافظ، وليست نتيجة دراسة التزام أو تعب ميدانية.
+        </div>
+      </section>
+
       {held && (
         <section className="dirb-held dirb-hero-anim-2" aria-label="خطوتك التالية" data-testid="today-primary-step">
           <div style={{ fontSize: "0.78rem", fontWeight: 800, color: "var(--color-ink2)", letterSpacing: "0.02em" }}>📋 مهمة اليوم — نفّذ الآن</div>
@@ -506,7 +543,7 @@ export default function Today() {
           <div className="dirb-held-ar">{held.titleAr}</div>
           <div className="dirb-held-lektion" lang="de" dir="ltr">{held.titleDe}</div>
           <div className="dirb-held-meta">
-            ⏱ <span className="rtl-num">{held.minutes}</span> دقيقة · <span lang="de" dir="ltr">{plan.phase}</span>
+            ⏱ <span className="rtl-num">{held.minutes}</span> دقيقة · <span lang="de" dir="ltr">{plan.phase}</span> · {isCoreTask(held) ? "مسار أساسي" : "تعميق اختياري"}
           </div>
           <div className="dirb-held-grund" data-testid="today-coach-grund">🧑‍🏫 <strong>مدرّبك:</strong> {heldGrund}</div>
           {heldFertig && <div className="dirb-held-done">✓ أُنجزت هذه الخطوة</div>}
@@ -551,7 +588,7 @@ export default function Today() {
           </div>
         </div>
         <p data-testid="session-time-note" style={{ margin: "0.5rem 0 0", fontSize: "0.82rem", color: "var(--color-ink2)", lineHeight: 1.85 }}>
-          المؤقّت يقيس وقت الجلسة الفعلي والصفحة ظاهرة؛ الهدف الحالي <span className="rtl-num">{zielMin}</span> دقيقة (والافتراضي <span className="rtl-num">{plan.zielMin}</span>). مجموع تقديرات مهام اليوم الكامل <span className="rtl-num">{totalMinutes}</span> دقيقة عبر <span className="rtl-num">{plan.tasks.length}</span> مهام — رقم مستقل لا يغيّر المؤقّت، وبلوغ هدف الجلسة لا يعني إكمال القائمة.
+          المؤقّت يقيس وقت الجلسة الفعلي والصفحة ظاهرة؛ الهدف الحالي <span className="rtl-num">{zielMin}</span> دقيقة (والافتراضي <span className="rtl-num">{plan.zielMin}</span>). المسار الأساسي اليوم <span className="rtl-num">{coreMinutes}</span> دقيقة، والتعميق الاختياري <span className="rtl-num">{optionalMinutes}</span> دقيقة؛ مجموعهما <span className="rtl-num">{totalMinutes}</span> دقيقة. هذه تقديرات مستقلة لا تغيّر المؤقّت، وبلوغ هدف الجلسة وحده لا يعني إكمال المسار.
         </p>
         {session.running ? (
           <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap", alignItems: "center", marginTop: "0.55rem" }}>
@@ -639,13 +676,14 @@ export default function Today() {
       <details className="dirb-task-map" data-testid="today-task-map">
         <summary>
           <span>قائمة مهام اليوم</span>
-          <span className="dirb-extra-hint">{plan.tasks.length} مهام · تنقّل عند الحاجة</span>
+          <span className="dirb-extra-hint">{coreTasks.length} أساسية · {deepeningTasks.length} تعميق اختياري</span>
         </summary>
         <div className="dirb-minis" role="list" aria-label="مهام اليوم">
           {plan.tasks.map((tk, i) => {
             const ritualGesperrt = aufgabeGesperrt(ritual, i);
             const stationGesperrt = stationsStatus.get(todayStepOf(tk)) === "locked";
-            const gesperrt = ritualGesperrt || stationGesperrt;
+            const vertiefungGesperrt = !isCoreTask(tk) && !coreCompleted;
+            const gesperrt = ritualGesperrt || stationGesperrt || vertiefungGesperrt;
             const fertig = !!resultOf(tk.id);
             const jetzt = i === stepFrei;
             return (
@@ -658,12 +696,12 @@ export default function Today() {
                   data-testid={`held-mini-${i}`}
                   className={"dirb-mini" + (jetzt ? " dirb-mini-jetzt" : "") + (fertig ? " dirb-mini-fertig" : "")}
                   onClick={() => springeZu(i)}
-                  aria-label={`${SKILL_AR[tk.kind] ?? tk.kind} — ${tk.minutes} دقائق${gesperrt ? ritualGesperrt ? " (مقفولة: سلِّم الاسترجاع أولاً)" : " (مقفولة: سلِّم مهام المحطة السابقة أولاً)" : fertig ? (progress.schriftlich?.[tk.id] ? " (مسلَّمة كتابياً — إنجاز لا نطق)" : " (مسلَّمة)") : ""}`}
+                  aria-label={`${SKILL_AR[tk.kind] ?? tk.kind} — ${tk.minutes} دقائق — ${isCoreTask(tk) ? "مسار أساسي" : "تعميق اختياري"}${gesperrt ? vertiefungGesperrt ? " (مقفولة حتى تسليم المسار الأساسي)" : ritualGesperrt ? " (مقفولة: سلِّم الاسترجاع أولاً)" : " (مقفولة: سلِّم مهام المحطة السابقة أولاً)" : fertig ? (progress.schriftlich?.[tk.id] ? " (مسلَّمة كتابياً — إنجاز لا نطق)" : " (مسلَّمة)") : ""}`}
                 >
                   <KindIcon kind={tk.kind} className="dirb-mini-icon" />
                   <span className="dirb-mini-skill">
                     {gesperrt ? "🔒 " : fertig ? "✓ " : ""}
-                    {SKILL_AR[tk.kind] ?? tk.kind}
+                    {isCoreTask(tk) ? "أساسي" : "اختياري"} · {SKILL_AR[tk.kind] ?? tk.kind}
                   </span>
                   <span className="dirb-mini-min"><span className="rtl-num">{tk.minutes}</span> دقيقة</span>
                 </button>
@@ -672,7 +710,7 @@ export default function Today() {
           })}
         </div>
       </details>
-      <p className="dirb-time-hint" data-testid="zeit-hinweis">هدف <span className="rtl-num">{plan.zielMin}</span> دقيقة افتراضي للجلسة فقط؛ تقدير مهام اليوم الكامل <span className="rtl-num">{totalMinutes}</span> دقيقة ومستقل عنه. احفظ التوقف وعد لاحقاً؛ لن يتحول ما لم تسلمه إلى فشل أو تعويض.</p>
+      <p className="dirb-time-hint" data-testid="zeit-hinweis">هدف <span className="rtl-num">{plan.zielMin}</span> دقيقة افتراضي للجلسة فقط؛ المسار الأساسي <span className="rtl-num">{coreMinutes}</span> دقيقة، وبعده تعميق اختياري <span className="rtl-num">{optionalMinutes}</span> دقيقة. احفظ التوقف وعد لاحقاً؛ التعميق غير المُسلَّم لا يتحول إلى فشل أو تعويض.</p>
 
       <SkillBalancePlan progress={progress} onRecordDose={(hand) => update((p) => registriereSkillDosis(p, hand))} />
       {/* Pflege BSK — مسار مستقل لا يُحتسب في الخطة، لكنه ظاهر لمن اختاره */}

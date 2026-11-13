@@ -552,15 +552,17 @@ export default function Einstellungen() {
         <details className="dirb-details">
           <summary>📐 الميثاق المنهجي للخطة</summary>
           <ul style={{ lineHeight: 1.9, fontSize: "0.92rem", paddingInlineStart: "1.2rem", margin: "0.6rem 0 0.2rem" }}>
-            <li><strong>{arbeitslast.tage} يوماً بأقسام ثابتة</strong>: A0 ‏(1–10) ← A1 ‏(11–94) ← A2 ‏(95–178) ← B1 ‏(179–276) ← B2 ‏(277–374) ← ختام (375–378). مجموع تقديرات المهام <strong>{arbeitslast.stunden.toFixed(1)} ساعة</strong>، بمتوسط <strong>{arbeitslast.durchschnittMinutenProTag.toFixed(1)} دقيقة/يوم</strong>، محسوب مباشرة من المهام الحالية.</li>
+            <li><strong>{arbeitslast.tage} يوماً بأقسام ثابتة</strong>: A0 ‏(1–10) ← A1 ‏(11–94) ← A2 ‏(95–178) ← B1 ‏(179–276) ← B2 ‏(277–374) ← ختام (375–378). المسار الأساسي المحسوب <strong>{arbeitslast.kernStunden.toFixed(1)} ساعة</strong> بمتوسط <strong>{arbeitslast.durchschnittKernMinutenProTag.toFixed(1)} دقيقة/يوم</strong>. التعميق الاختياري <strong>{arbeitslast.vertiefungStunden.toFixed(1)} ساعة</strong>؛ مجموع الكتالوج كله <strong>{arbeitslast.stunden.toFixed(1)} ساعة</strong>.</li>
             <li><strong>الإيقاع الأسبوعي</strong>: 5 أيام تعلّم · يوم تثبيت (كتابة/تحدّث/أخطاء) · يوم فحص أسبوعي.</li>
-            <li><strong>بنية الحصة الثابتة</strong>: استرجاع ← قواعد ← مفردات ← مهارة (تسميع/قراءة/كتابة/تحدّث) ← فحص.</li>
-            <li><strong>قفل تسلسلي</strong>: لا غد قبل إغلاق اليوم.</li>
-            <li><strong>التعويض الإلزامي</strong>: ما لم يحقق عتبة الإتقان اليومية الداخلية (≥80%) يُرحَّل إلى أول الغد — وهي ليست عتبة امتحان رسمي.</li>
+            <li><strong>مساران واضحان</strong>: مسار أساسي داخلي يستهدف 45–90 دقيقة في اليوم العادي، ثم تعميق اختياري يفتح بعده. امتحان الختام غير القابل للتقسيم استثناء معلن.</li>
+            <li><strong>بنية الحصة</strong>: استرجاع ثم تركيز يومي يدور بين القواعد والمفردات والأداء التواصلي؛ لا يُطلب الكتالوج كله لإغلاق اليوم.</li>
+            <li><strong>قفل تسلسلي</strong>: لا غد قبل إغلاق اليوم، والتعميق لا يقفل المسار الأساسي.</li>
+            <li><strong>التعويض الإلزامي</strong>: غير المتقن من المسار الأساسي يُرحَّل إلى أول الغد. التعميق غير المُسلَّم محايد؛ وإذا سُلِّم ولم يُجتز يبقى علاجياً. عتبة اليوم الداخلية (≥80%) ليست عتبة امتحان رسمي.</li>
             <li><strong>حتمية كاملة</strong>: «اليوم 47» يظهر بنفس المهام دائماً — لا عشوائية ولا توهان.</li>
             <li><strong>التكرار المتباعد</strong>: بطاقات مجدولة بخوارزمية FSRS-6 بتقدير متكيف وهدف احتفاظ 90%، لا بفواصل ثابتة مضمونة.</li>
             <li><strong>التأسيس العلمي</strong>: CEFR/GERR · استرجاع استباقي · تكرار متباعد · تكامل المهارات الأربع · سُلّم تدريجي من السند إلى الغمر.</li>
-            <li><strong>لا مسار زمني بديل منفذ حالياً</strong>: إيقاع البطاقات يغير عدد البطاقات الجديدة فقط، ولا يحول الخطة إلى مدة أخرى. متوسط تقدير مهام قسم B2 الحالي <strong>{arbeitslast.phasen.B2.durchschnittMinutenProTag.toFixed(1)} دقيقة/يوم</strong>؛ يمكنك تقسيم مهام اليوم على أكثر من جلسة والتوقف والحفظ.</li>
+            <li><strong>قسم B2</strong>: متوسط المسار الأساسي <strong>{arbeitslast.phasen.B2.durchschnittKernMinutenProTag.toFixed(1)} دقيقة/يوم</strong>، والتعميق الاختياري <strong>{arbeitslast.phasen.B2.durchschnittVertiefungMinutenProTag.toFixed(1)} دقيقة/يوم</strong>. يمكنك تقسيم الأساسي على جلسات والتوقف والحفظ.</li>
+            <li><strong>حد الإثبات</strong>: نافذة 45–90 دقيقة قرار تخطيط داخلي محافظ؛ لم تُثبت بعد على 20–30 متعلماً ولا تدّعي خفض التعب أو التسرّب.</li>
             <li><strong>حدود الأرقام</strong>: الوقت والحضور لا يثبتان مستوى CEFR أو جاهزية امتحان؛ ذلك يحتاج أداءً متعدد المهارات وتقويماً مناسباً.</li>
           </ul>
         </details>

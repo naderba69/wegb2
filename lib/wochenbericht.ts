@@ -1,6 +1,7 @@
 import { lokalesDatum } from "./datum";
 import { alleVokabeln } from "./content";
 import { buildDay } from "./plan";
+import { corePathMinutes, deepeningMinutes } from "./day-path";
 import type { Progress, TaskKind } from "./types";
 
 /**
@@ -16,7 +17,7 @@ export interface WochenBericht {
   minutenProArt: { art: string; minuten: number }[];
   produktivNeu: { anzahl: number; woerter: string[] };
   fehlerWiederholt: { falsch: string; richtig: string; treffer: number }[];
-  naechsteWoche: { day: number; typ: string; phase: string; minuten: number }[];
+  naechsteWoche: { day: number; typ: string; phase: string; kernMinuten: number; vertiefungMinuten: number; minuten: number }[];
 }
 
 const ART_AR: Partial<Record<TaskKind, string>> = {
@@ -62,7 +63,9 @@ export function wochenBericht(p: Progress, jetzt = new Date()): WochenBericht {
   const naechsteWoche: WochenBericht["naechsteWoche"] = [];
   for (let d = p.plan.day + 1; d <= Math.min(p.plan.day + 7, 378); d++) {
     const plan = buildDay(d, p);
-    naechsteWoche.push({ day: d, typ: plan.type, phase: plan.phase, minuten: plan.tasks.reduce((a, t) => a + t.minutes, 0) });
+    const kernMinuten = corePathMinutes(plan.tasks);
+    const vertiefungMinuten = deepeningMinutes(plan.tasks);
+    naechsteWoche.push({ day: d, typ: plan.type, phase: plan.phase, kernMinuten, vertiefungMinuten, minuten: kernMinuten + vertiefungMinuten });
   }
 
   return {

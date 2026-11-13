@@ -311,12 +311,16 @@ export interface WiederEintrag {
   vergleich?: { behoben: string[]; geblieben: string[]; neuHinzu: string[] };
 }
 
+export type DayTaskPath = "core" | "deepening";
+
 export interface DayTask {
   id: string;
   kind: TaskKind;
   titleDe: string;
   titleAr: string;
   minutes: number;
+  /** PA-022: الأساسي يُغلق اليوم؛ التعميق غير المُسلَّم محايد، والمُسلَّم غير المجتاز يبقى علاجياً. */
+  path?: DayTaskPath;
   topicId?: string;
   deckId?: string;
   textId?: string;

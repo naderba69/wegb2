@@ -1,13 +1,19 @@
 "use client";
 /**
  * مقارنة الحمل الزمني الإرشادية.
- * تفصل بين هدف الجلسة، وتقدير مهام اليوم الكامل، والوقت الذي قاسه المؤقت.
+ * تفصل بين هدف الجلسة، والمسار الأساسي، والتعميق الاختياري، والوقت المقاس.
  * نطاقات الدورات سياق تخطيطي فقط ولا تُحوَّل إلى مستوى CEFR أو جاهزية امتحان.
  */
 import { useEffect, useState } from "react";
 import type { Progress } from "@/lib/types";
 import { TOTAL_DAYS } from "@/lib/types";
-import { planArbeitslast, planStundenBis, planTagesMinuten } from "@/lib/plan";
+import {
+  planArbeitslast,
+  planKernStundenBis,
+  planKernTagesMinuten,
+  planTagesMinuten,
+  planVertiefungTagesMinuten,
+} from "@/lib/plan";
 import { PHASEN, LERNLAST } from "@/lib/phasen";
 import {
   ZEITLAST_POSITION_AR,
@@ -31,11 +37,13 @@ export function StundenVertrag({ progress }: { progress: Progress }) {
   const stand = live ?? progress;
 
   const arbeitslast = planArbeitslast();
-  const vergleich = vergleicheZeitlast(planStundenBis);
+  const vergleich = vergleicheZeitlast(planKernStundenBis);
   const tag = Math.min(Math.max(stand.plan.day | 0, 1), TOTAL_DAYS);
   const tagesSchaetzung = planTagesMinuten(tag);
+  const kernSchaetzung = planKernTagesMinuten(tag);
+  const vertiefungSchaetzung = planVertiefungTagesMinuten(tag);
   const heuteGemessen = Math.max(0, stand.plan.minutenEffektivTage?.[tag] ?? 0);
-  const stdBisher = planStundenBis(tag);
+  const stdBisher = planKernStundenBis(tag);
   const effektiv = minutenEffektiv(stand);
   const stdEffektiv = minutenZuStunden(effektiv);
   const manuell = Math.max(0, stand.plan.minutenManuell ?? 0);
@@ -51,7 +59,7 @@ export function StundenVertrag({ progress }: { progress: Progress }) {
     <section className="card" style={{ padding: "1.1rem 1.2rem" }} data-testid="stundenvertrag">
       <h2 style={{ fontWeight: 800, marginBottom: "0.35rem" }}>⏱️ مقارنة الحمل الزمني الإرشادية</h2>
       <p style={{ color: "var(--color-ink2)", fontSize: "0.88rem", marginBottom: "0.8rem", lineHeight: 1.8 }}>
-        هذه ثلاثة أرقام مختلفة: هدف جلسة اختياري، وتقدير مهام اليوم الكامل، ووقت قاسه المؤقت. بلوغ هدف الجلسة لا يعني إكمال قائمة اليوم، وأي إدخال يدوي يبقى منفصلاً عن القياس.
+        هذه أرقام مختلفة: هدف جلسة، ومسار أساسي يغلق اليوم، وتعميق اختياري، ووقت قاسه المؤقت. بلوغ هدف الجلسة لا يثبت إكمال الأساسي، وأي إدخال يدوي يبقى منفصلاً عن القياس.
       </p>
 
       {/* هدف الجلسة · حمل اليوم الكامل · القياس الفعلي */}
@@ -60,9 +68,13 @@ export function StundenVertrag({ progress }: { progress: Progress }) {
           <div style={{ fontSize: "0.78rem", color: "var(--color-ink2)" }}>هدف الجلسة الافتراضي — التوقف قبله مسموح</div>
           <div style={{ fontSize: "1.45rem", fontWeight: 800 }} className="rtl-num" data-testid="sitzungsziel-minuten">{arbeitslast.sitzungszielMinuten} د</div>
         </div>
+        <div style={{ background: "var(--color-paper2)", borderRadius: "8px", padding: "0.7rem 0.85rem", borderInlineStart: "3px solid var(--color-a1)" }}>
+          <div style={{ fontSize: "0.78rem", color: "var(--color-ink2)" }}>المسار الأساسي لليوم {tag} — يدخل الإغلاق</div>
+          <div style={{ fontSize: "1.45rem", fontWeight: 800 }} className="rtl-num" data-testid="kernlast-minuten">{kernSchaetzung} د</div>
+        </div>
         <div style={{ background: "var(--color-paper2)", borderRadius: "8px", padding: "0.7rem 0.85rem" }}>
-          <div style={{ fontSize: "0.78rem", color: "var(--color-ink2)" }}>تقدير مهام اليوم {tag} كاملة</div>
-          <div style={{ fontSize: "1.45rem", fontWeight: 800 }} className="rtl-num" data-testid="tageslast-minuten">{tagesSchaetzung} د</div>
+          <div style={{ fontSize: "0.78rem", color: "var(--color-ink2)" }}>التعميق الاختياري / الكتالوج الكامل</div>
+          <div style={{ fontSize: "1.45rem", fontWeight: 800 }} className="rtl-num" data-testid="tageslast-minuten">+{vertiefungSchaetzung} / {tagesSchaetzung} د</div>
         </div>
         <div style={{ background: "var(--color-paper2)", borderRadius: "8px", padding: "0.7rem 0.85rem" }}>
           <div style={{ fontSize: "0.78rem", color: "var(--color-ink2)" }}>وقت اليوم الذي قاسه المؤقت</div>
@@ -72,8 +84,11 @@ export function StundenVertrag({ progress }: { progress: Progress }) {
 
       <div className="grid2" style={{ gap: "0.6rem", marginBottom: "0.9rem" }}>
         <div style={{ background: "var(--color-paper2)", borderRadius: "8px", padding: "0.7rem 0.85rem" }}>
-          <div style={{ fontSize: "0.78rem", color: "var(--color-ink2)" }}>مجموع تقديرات الخطة ({arbeitslast.tage} يوماً · متوسط {arbeitslast.durchschnittMinutenProTag.toFixed(1)} د/يوم)</div>
-          <div style={{ fontSize: "1.35rem", fontWeight: 800 }} className="rtl-num" data-testid="stunden-plan">{arbeitslast.stunden.toFixed(1)} س</div>
+          <div style={{ fontSize: "0.78rem", color: "var(--color-ink2)" }}>المسار الأساسي ({arbeitslast.tage} يوماً · متوسط {arbeitslast.durchschnittKernMinutenProTag.toFixed(1)} د/يوم)</div>
+          <div style={{ fontSize: "1.35rem", fontWeight: 800 }} className="rtl-num" data-testid="stunden-plan">{arbeitslast.kernStunden.toFixed(1)} س</div>
+          <div style={{ fontSize: "0.78rem", color: "var(--color-ink2)", marginTop: "0.2rem" }}>
+            التعميق الاختياري: <span className="rtl-num">{arbeitslast.vertiefungStunden.toFixed(1)} س</span> · الكتالوج الكامل: <span className="rtl-num">{arbeitslast.stunden.toFixed(1)} س</span>
+          </div>
         </div>
         <div style={{ background: "var(--color-paper2)", borderRadius: "8px", padding: "0.7rem 0.85rem" }}>
           <div style={{ fontSize: "0.78rem", color: "var(--color-ink2)" }}>مجموع الوقت الذي قاسه المؤقت</div>
@@ -87,11 +102,11 @@ export function StundenVertrag({ progress }: { progress: Progress }) {
       {/* مقارنة زمنية وصفية لا حكم كفاءة */}
       <div style={{ overflowX: "auto", marginBottom: "0.7rem" }}>
         <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.85rem" }}>
-          <caption style={{ textAlign: "start", fontWeight: 700, paddingBottom: "0.35rem" }}>سياق زمني: تقدير خطتنا ونطاقات ساعات دورات Goethe المنشورة</caption>
+          <caption style={{ textAlign: "start", fontWeight: 700, paddingBottom: "0.35rem" }}>سياق زمني: تقدير المسار الأساسي ونطاقات ساعات دورات Goethe المنشورة</caption>
           <thead>
             <tr style={{ borderBottom: "2px solid var(--color-line)", textAlign: "start" }}>
               <th style={{ padding: "0.35rem 0.4rem", textAlign: "start" }}>قسم الخطة</th>
-              <th style={{ padding: "0.35rem 0.4rem", textAlign: "start" }}>تقدير خطتنا التراكمي</th>
+              <th style={{ padding: "0.35rem 0.4rem", textAlign: "start" }}>المسار الأساسي التراكمي</th>
               <th style={{ padding: "0.35rem 0.4rem", textAlign: "start" }}>نطاق ساعات الدورة</th>
               <th style={{ padding: "0.35rem 0.4rem", textAlign: "start" }}>مقارنة وصفية</th>
             </tr>
@@ -112,7 +127,7 @@ export function StundenVertrag({ progress }: { progress: Progress }) {
       </div>
 
       <div style={{ background: "var(--color-paper2)", borderInlineStart: "3px solid var(--color-mid)", borderRadius: "6px", padding: "0.7rem 0.85rem", marginBottom: "0.9rem", fontSize: "0.88rem", lineHeight: 1.8 }} data-testid="stunden-einordnung">
-        <strong>حدود المقارنة:</strong> الساعات تصف حملاً زمنياً ولا تقيس الكفاءة. لا يمكن استنتاج أنك بلغت A1 أو A2 أو B1 أو B2 من الوقت أو النشاط وحدهما. إثبات المستوى يحتاج أداءً متعدد المهارات وتقويماً مناسباً، وجاهزية الامتحان غير مقاسة هنا.
+        <strong>حدود المقارنة:</strong> الساعات تصف حملاً زمنياً ولا تقيس الكفاءة. نافذة المسار الأساسي 45–90 دقيقة قرار تخطيط داخلي غير مُثبت بعد بدراسة التزام/تعب ميدانية. لا يمكن استنتاج أنك بلغت A1 أو A2 أو B1 أو B2 من الوقت أو النشاط وحدهما؛ إثبات المستوى يحتاج أداءً متعدد المهارات وتقويماً مناسباً، وجاهزية الامتحان غير مقاسة هنا.
       </div>
 
       <div style={{ marginBottom: "0.9rem" }} data-testid="phasen-verteilung">
@@ -127,7 +142,9 @@ export function StundenVertrag({ progress }: { progress: Progress }) {
               <th style={{ padding: "0.3rem 0.4rem", textAlign: "start" }}>الأيام</th>
               <th style={{ padding: "0.3rem 0.4rem", textAlign: "start" }}>أسابيع</th>
               <th style={{ padding: "0.3rem 0.4rem", textAlign: "start" }}>معامل التقدير</th>
-              <th style={{ padding: "0.3rem 0.4rem", textAlign: "start" }}>متوسط د/يوم</th>
+              <th style={{ padding: "0.3rem 0.4rem", textAlign: "start" }}>الأساسي د/يوم</th>
+              <th style={{ padding: "0.3rem 0.4rem", textAlign: "start" }}>الاختياري د/يوم</th>
+              <th style={{ padding: "0.3rem 0.4rem", textAlign: "start" }}>الكل د/يوم</th>
             </tr>
           </thead>
           <tbody>
@@ -139,6 +156,8 @@ export function StundenVertrag({ progress }: { progress: Progress }) {
                   <td style={{ padding: "0.3rem 0.4rem" }} className="rtl-num">{phase.von}–{phase.bis}</td>
                   <td style={{ padding: "0.3rem 0.4rem" }} className="rtl-num">{PHASEN[level].wochen}{level === "B2" ? " + ختام" : ""}</td>
                   <td style={{ padding: "0.3rem 0.4rem" }} className="rtl-num">×{LERNLAST[level].toFixed(2)}</td>
+                  <td style={{ padding: "0.3rem 0.4rem" }} className="rtl-num">{phase.durchschnittKernMinutenProTag.toFixed(1)}</td>
+                  <td style={{ padding: "0.3rem 0.4rem" }} className="rtl-num">{phase.durchschnittVertiefungMinutenProTag.toFixed(1)}</td>
                   <td style={{ padding: "0.3rem 0.4rem" }} className="rtl-num">{phase.durchschnittMinutenProTag.toFixed(1)}</td>
                 </tr>
               );
@@ -149,7 +168,7 @@ export function StundenVertrag({ progress }: { progress: Progress }) {
 
       <div style={{ fontSize: "0.85rem", marginBottom: "0.9rem" }}>
         <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "0.25rem", gap: "0.5rem", flexWrap: "wrap" }}>
-          <span>الوقت المقاس مقابل تقديرات المهام حتى اليوم {tag}</span>
+          <span>الوقت المقاس مقابل تقدير المسار الأساسي حتى اليوم {tag}</span>
           <strong className="rtl-num">{stdEffektiv.toFixed(1)} س / {stdBisher.toFixed(1)} س · {quote}٪</strong>
         </div>
         <div style={{ height: "8px", background: "var(--color-paper2)", borderRadius: "4px", overflow: "hidden" }}>

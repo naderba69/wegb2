@@ -41,6 +41,7 @@ import { legacyThroughDayFor } from "./curriculum-schedule";
 import { beiBankenBereit, beiVertiefungBereit } from "./bankload";
 import { rng, seededShuffle } from "./seeded-rng";
 import { evidenceForTask } from "./task-evidence";
+import { assignDailyPaths, isCoreTask } from "./day-path";
 
 export { rng } from "./seeded-rng";
 
@@ -1576,8 +1577,11 @@ export function buildDay(day: number, progress: Progress): DayPlan {
     }
   }
   const tempo = progress.settings.tempo ?? "regelmaessig";
+  // PA-022: keep the complete inventory, but make only a bounded 45–90 minute route
+  // day-closing. Remaining tasks are explicit optional deepening and never silent debt.
+  const tasksWithPath = assignDailyPaths(tasks, day);
   // PA-016: every emitted task is routed by attached material, not by its coarse kind label.
-  const tasksWithEvidence = tasks.map((task) => ({
+  const tasksWithEvidence = tasksWithPath.map((task) => ({
     ...task,
     evidence: evidenceForTask(task, levelOf(task.from ?? day)),
   }));
@@ -1602,15 +1606,19 @@ export function dayScore(plan: DayPlan, taskState: Record<string, TaskResult>) {
   let score = 0;
   let total = 0;
   let done = 0;
+  let tasksTotal = 0;
   for (const t of plan.tasks) {
     const r = taskState[t.id];
+    // المسار الأساسي يدخل ملخص اليوم دائماً؛ التعميق لا يدخل إلا إذا سُلِّم فعلاً.
+    if (!isCoreTask(t) && !r) continue;
+    tasksTotal += 1;
     if (r) {
       score += r.score;
       total += r.total;
       if (r.passed) done += 1;
     }
   }
-  return { score, total, done, tasksTotal: plan.tasks.length };
+  return { score, total, done, tasksTotal };
 }
 
 /** المهام غير المُتقَنة تتحول إلى طابور تعويض دائم.
@@ -1650,6 +1658,8 @@ export function debtsFrom(plan: DayPlan, taskState: Record<string, TaskResult>):
       }
       continue;
     }
+    // التعميق غير المُسلَّم محايد؛ إذا اختاره المتعلم وسلّمه ثم لم يجتزْه يبقى علاجياً.
+    if (!isCoreTask(task) && !result) continue;
     // تحققات الاستقلال الإلزامية ليست ديناً قديماً، ولا تتحول تلقائياً إلى دين جديد.
     if (task.mandatory || isPassed(result)) continue;
     next.push({
@@ -1681,35 +1691,73 @@ export function planPct(progress: Progress): number {
    كل واجهة تعرض إجمالي الخطة أو متوسط اليوم أو حمل مرحلة تستعمل الملخص أدناه
    بدلاً من نسخ أرقام قديمة في النصوص. */
 let PLAN_MIN_KUM: number[] | null = null;
+let PLAN_KERN_MIN_KUM: number[] | null = null;
 
-/** الدقائق المقدّرة للمهام من اليوم 1 حتى اليوم `day` ضمناً. */
-export function planMinBis(day: number): number {
-  if (!PLAN_MIN_KUM) {
-    const basis: Progress = emptyProgress;
-    const arr: number[] = [0];
-    let sum = 0;
-    for (let d = 1; d <= TOTAL_DAYS; d++) {
-      sum += buildDay(d, basis).tasks.filter(t => !/Tool \d+:/.test(t.titleDe)).reduce((a, t) => a + (t.minutes || 0), 0);
-      arr[d] = sum;
-    }
-    PLAN_MIN_KUM = arr;
+function ensurePlanMinuten(): void {
+  if (PLAN_MIN_KUM && PLAN_KERN_MIN_KUM) return;
+  const basis: Progress = emptyProgress;
+  const gesamt: number[] = [0];
+  const kern: number[] = [0];
+  let gesamtSumme = 0;
+  let kernSumme = 0;
+  for (let d = 1; d <= TOTAL_DAYS; d++) {
+    const tasks = buildDay(d, basis).tasks.filter((task) => !/Tool \d+:/.test(task.titleDe));
+    gesamtSumme += tasks.reduce((sum, task) => sum + (task.minutes || 0), 0);
+    kernSumme += tasks.filter(isCoreTask).reduce((sum, task) => sum + (task.minutes || 0), 0);
+    gesamt[d] = gesamtSumme;
+    kern[d] = kernSumme;
   }
-  const d = Math.min(Math.max(day | 0, 0), TOTAL_DAYS);
-  return PLAN_MIN_KUM[d] ?? 0;
+  PLAN_MIN_KUM = gesamt;
+  PLAN_KERN_MIN_KUM = kern;
 }
 
-/** تقدير مهام يوم واحد؛ مستقل عن هدف الجلسة وعن الوقت الذي قاسه المؤقت. */
+/** الدقائق المقدّرة لكل المهام، الأساسية والاختيارية، حتى اليوم `day`. */
+export function planMinBis(day: number): number {
+  ensurePlanMinuten();
+  const d = Math.min(Math.max(day | 0, 0), TOTAL_DAYS);
+  return PLAN_MIN_KUM?.[d] ?? 0;
+}
+
+/** دقائق المسار الأساسي المغلق لليوم حتى اليوم `day`. */
+export function planKernMinBis(day: number): number {
+  ensurePlanMinuten();
+  const d = Math.min(Math.max(day | 0, 0), TOTAL_DAYS);
+  return PLAN_KERN_MIN_KUM?.[d] ?? 0;
+}
+
+/** دقائق التعميق الاختياري التراكمية. */
+export function planVertiefungMinBis(day: number): number {
+  return planMinBis(day) - planKernMinBis(day);
+}
+
+/** تقدير كل مهام يوم واحد؛ مستقل عن هدف الجلسة وعن الوقت الذي قاسه المؤقت. */
 export function planTagesMinuten(day: number): number {
   const d = Math.min(Math.max(day | 0, 1), TOTAL_DAYS);
   return planMinBis(d) - planMinBis(d - 1);
 }
 
-/** ساعات تقديرات المهام حتى يوم معين، للعرض الزمني فقط. */
+/** تقدير المسار الأساسي ليوم واحد. */
+export function planKernTagesMinuten(day: number): number {
+  const d = Math.min(Math.max(day | 0, 1), TOTAL_DAYS);
+  return planKernMinBis(d) - planKernMinBis(d - 1);
+}
+
+/** تقدير التعميق الاختياري ليوم واحد. */
+export function planVertiefungTagesMinuten(day: number): number {
+  return planTagesMinuten(day) - planKernTagesMinuten(day);
+}
+
+/** ساعات تقديرات كل المهام حتى يوم معين، للعرض الزمني فقط. */
 export function planStundenBis(day: number): number {
   return planMinBis(day) / 60;
 }
 
-/** إجمالي ساعات تقديرات المهام في الخطة كاملة. */
+/** ساعات المسار الأساسي حتى يوم معين. */
+export function planKernStundenBis(day: number): number {
+  return planKernMinBis(day) / 60;
+}
+
+/** إجمالي ساعات كل المهام في الخطة كاملة. */
 export function planStundenGesamt(): number {
   return planStundenBis(TOTAL_DAYS);
 }
@@ -1719,16 +1767,30 @@ export interface PlanPhasenArbeitslast {
   von: number;
   bis: number;
   tage: number;
+  /** كامل الكتالوج المتاح: أساسي + تعميق. */
   minuten: number;
   stunden: number;
   durchschnittMinutenProTag: number;
+  kernMinuten: number;
+  kernStunden: number;
+  durchschnittKernMinutenProTag: number;
+  vertiefungMinuten: number;
+  vertiefungStunden: number;
+  durchschnittVertiefungMinutenProTag: number;
 }
 
 export interface PlanArbeitslast {
   tage: number;
+  /** كامل الكتالوج المتاح: أساسي + تعميق. */
   minuten: number;
   stunden: number;
   durchschnittMinutenProTag: number;
+  kernMinuten: number;
+  kernStunden: number;
+  durchschnittKernMinutenProTag: number;
+  vertiefungMinuten: number;
+  vertiefungStunden: number;
+  durchschnittVertiefungMinutenProTag: number;
   /** هدف جلسة قابل للتوقف قبله؛ ليس شرطاً لإغلاق اليوم ولا حملاً يومياً كاملاً. */
   sitzungszielMinuten: number;
   phasen: Record<Level, PlanPhasenArbeitslast>;
@@ -1744,6 +1806,8 @@ export function planArbeitslast(): PlanArbeitslast {
     const bis = PHASE_END_DAY[level];
     const tage = bis - von + 1;
     const minuten = planMinBis(bis) - planMinBis(von - 1);
+    const kernMinuten = planKernMinBis(bis) - planKernMinBis(von - 1);
+    const vertiefungMinuten = minuten - kernMinuten;
     return [level, {
       level,
       von,
@@ -1752,14 +1816,28 @@ export function planArbeitslast(): PlanArbeitslast {
       minuten,
       stunden: minuten / 60,
       durchschnittMinutenProTag: minuten / tage,
+      kernMinuten,
+      kernStunden: kernMinuten / 60,
+      durchschnittKernMinutenProTag: kernMinuten / tage,
+      vertiefungMinuten,
+      vertiefungStunden: vertiefungMinuten / 60,
+      durchschnittVertiefungMinutenProTag: vertiefungMinuten / tage,
     } satisfies PlanPhasenArbeitslast];
   })) as Record<Level, PlanPhasenArbeitslast>;
   const minuten = planMinBis(TOTAL_DAYS);
+  const kernMinuten = planKernMinBis(TOTAL_DAYS);
+  const vertiefungMinuten = minuten - kernMinuten;
   PLAN_ARBEITSLAST = {
     tage: TOTAL_DAYS,
     minuten,
     stunden: minuten / 60,
     durchschnittMinutenProTag: minuten / TOTAL_DAYS,
+    kernMinuten,
+    kernStunden: kernMinuten / 60,
+    durchschnittKernMinutenProTag: kernMinuten / TOTAL_DAYS,
+    vertiefungMinuten,
+    vertiefungStunden: vertiefungMinuten / 60,
+    durchschnittVertiefungMinutenProTag: vertiefungMinuten / TOTAL_DAYS,
     sitzungszielMinuten: DEFAULT_SESSION_GOAL_MINUTES,
     phasen,
   };

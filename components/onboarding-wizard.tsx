@@ -94,8 +94,9 @@ export function OnboardingWizard() {
 
   if (!ready || done) return null;
   const arbeitslast = planArbeitslast();
-  const durchschnitt = Math.round(arbeitslast.durchschnittMinutenProTag);
-  const b2Durchschnitt = Math.round(arbeitslast.phasen.B2.durchschnittMinutenProTag);
+  const kernDurchschnitt = Math.round(arbeitslast.durchschnittKernMinutenProTag);
+  const vollDurchschnitt = Math.round(arbeitslast.durchschnittMinutenProTag);
+  const b2KernDurchschnitt = Math.round(arbeitslast.phasen.B2.durchschnittKernMinutenProTag);
 
   const speichern = () => {
     update((p) => ({
@@ -114,7 +115,7 @@ export function OnboardingWizard() {
       },
     }));
   };
-  const ttsText = `Willkommen bei Weg nach B2. Der Lernplan umfasst ${arbeitslast.tage} Tage und unterstützt deinen Weg in Richtung B2, garantiert aber kein Sprachniveau. Die geschätzte Aufgabenzeit liegt im Durchschnitt bei ${durchschnitt} Minuten pro Tag und im B2-Abschnitt bei ${b2Durchschnitt} Minuten. Das Standardziel einer Sitzung beträgt ${arbeitslast.sitzungszielMinuten} Minuten und ist davon unabhängig. Wähle jetzt dein Ziel und dein Kartentempo.`;
+  const ttsText = `Willkommen bei Weg nach B2. Der Lernplan umfasst ${arbeitslast.tage} Tage und unterstützt deinen Weg in Richtung B2, garantiert aber kein Sprachniveau. Der tägliche Kernpfad liegt intern bei 45 bis 90 Minuten und umfasst im Durchschnitt ${kernDurchschnitt} Minuten, im B2-Abschnitt ${b2KernDurchschnitt} Minuten. Weitere Aufgaben sind freiwillige Vertiefung; zusammen läge der vollständige Katalog im Durchschnitt bei ${vollDurchschnitt} Minuten pro Tag. Diese Aufteilung ist noch nicht in einer Feldstudie validiert.`;
 
   return (
     <div
@@ -141,7 +142,7 @@ export function OnboardingWizard() {
         <div data-testid="onboarding-zeitmodell" style={{ background: "var(--color-paper2)", border: "1px solid var(--color-line)", borderRadius: "0.7rem", padding: "0.6rem 0.8rem", marginBottom: "0.6rem" }}>
           <div style={{ fontWeight: 800, fontSize: "0.85rem" }}>⏱️ ماذا تعني أرقام الوقت في الخطة؟</div>
           <div style={{ fontSize: "0.78rem", color: "var(--color-ink2)", lineHeight: 1.75 }}>
-            الخطة {arbeitslast.tage} يوماً وتدعم التقدّم نحو B2 ولا تضمن بلوغه. متوسط تقدير مهام اليوم الكامل <strong>{durchschnitt} دقيقة</strong>، وفي قسم B2 <strong>{b2Durchschnitt} دقيقة</strong>. هدف الجلسة الافتراضي <strong>{arbeitslast.sitzungszielMinuten} دقيقة</strong> منفصل عن حمل اليوم؛ بلوغه لا يثبت مستوىً ولا يغلق كل مهام اليوم تلقائياً.
+            الخطة {arbeitslast.tage} يوماً وتدعم التقدّم نحو B2 ولا تضمن بلوغه. المسار الأساسي الداخلي بين <strong>45–90 دقيقة</strong> في الأيام العادية، ومتوسطه المحسوب <strong>{kernDurchschnitt} دقيقة</strong>، وفي قسم B2 <strong>{b2KernDurchschnitt} دقيقة</strong>. ما بعده تعميق اختياري؛ ولو أُنجز الكتالوج كله صار المتوسط <strong>{vollDurchschnitt} دقيقة</strong>. التقسيم لم يُثبت بعد بدراسة التزام أو تعب ميدانية.
           </div>
           <button type="button" className="btn btn-ghost" style={{ marginTop: "0.35rem", width: "100%", minHeight: "44px" }} onClick={() => speakAny(ttsText, { rate: 0.95 })}>▶ استمع إلى الشرح الألماني بصوت المتصفح</button>
           <div style={{ fontSize: "0.70rem", color: "var(--color-ink2)", marginTop: "0.25rem" }}>الصوت مولّد آلياً عند الطلب عبر TTS في متصفحك؛ ليس تسجيلاً بشرياً.</div>

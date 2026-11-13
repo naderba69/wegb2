@@ -29,12 +29,16 @@ import {
   debtsFrom,
   planPct,
   planMinBis,
+  planKernMinBis,
   planTagesMinuten,
+  planKernTagesMinuten,
   planStundenBis,
+  planKernStundenBis,
   planStundenGesamt,
   planArbeitslast,
 } from "../lib/plan";
 import { seededShuffle } from "../lib/seeded-rng";
+import { CORE_PATH_MAX_MINUTES, CORE_PATH_MIN_MINUTES, corePathMinutes, deepeningMinutes, isCoreTask } from "../lib/day-path";
 import { newCard, reviewCard, isDue, newCardCap, countNewCardsIntroducedToday, karteStufe, abrufbarkeit, todayDeck } from "../lib/srs";
 import { planeWortkarten } from "../lib/wortkarten";
 import { baueUebungsEmpfehlungen } from "../lib/uebungsnavigator";
@@ -281,18 +285,29 @@ const vocabRepeatAudit = (() => {
     const ids = plan.tasks.map((t) => taskKey(d, t));
     ok(new Set(ids).size === ids.length, `D2 يوم ${d}: مفاتيح فريدة`);
     ok(plan.tasks.every((t) => t.minutes > 0), `D3 يوم ${d}: دقائق موجبة`);
+    ok(plan.tasks.every((t) => t.path === "core" || t.path === "deepening"), `D3a يوم ${d}: كل مهمة موسومة بمسار`);
+    ok(corePathMinutes(plan.tasks) + deepeningMinutes(plan.tasks) === plan.tasks.reduce((sum, task) => sum + task.minutes, 0), `D3b يوم ${d}: التقسيم يحفظ حمل اليوم كاملاً`);
   }
   const p1 = buildDay(50, empty());
   ok(JSON.stringify(p1) === JSON.stringify(buildDay(50, empty())), "D4 buildDay حتمي تماماً");
 
   const failState: Record<string, TaskResult> = Object.fromEntries(p1.tasks.map((t) => [t.id, { done: true, passed: false, score: 0, total: 5, attempts: 2 }]));
-  ok(dayScore(p1, failState).done === 0, "D5 يوم فاشل بلا إتقان");
+  ok(dayScore(p1, failState).done === 0 && dayScore(p1, failState).tasksTotal === p1.tasks.length,
+    "D5 نتيجة اليوم تحاسب الأساسي والتعميق الذي سُلِّم");
+  ok(dayScore(p1, {}).tasksTotal === p1.tasks.filter(isCoreTask).length,
+    "D5a التعميق غير المُسلَّم لا يدخل مقام نتيجة اليوم");
   const debts = debtsFrom(p1, failState);
   const failedDebtCandidates = p1.tasks.filter((task) => !task.mandatory).length;
   ok(debts.length === failedDebtCandidates && debts.length > 2,
-    `D6 كل الديون ${debts.length}/${failedDebtCandidates} تُحفظ، وسقف المهمتين يخص العرض لا التخزين`);
-  ok(debts.every((x) => !!x.id && !String(x.titleDe).startsWith("Nachholen: ")) && new Set(debts.map((x) => x.id)).size === debts.length,
-    "D7 الديون تحمل معرفات فريدة وعناوين مجردة من البادئة");
+    `D6 التعميق المُسلَّم الفاشل يبقى علاجياً مع الأساسي: ${debts.length}/${failedDebtCandidates}`);
+  const coreOnlyFailState: Record<string, TaskResult> = Object.fromEntries(p1.tasks.filter(isCoreTask).map((t) => [t.id, { done: true, passed: false, score: 0, total: 5, attempts: 2 }]));
+  const coreOnlyDebts = debtsFrom(p1, coreOnlyFailState);
+  ok(coreOnlyDebts.length === p1.tasks.filter((task) => isCoreTask(task) && !task.mandatory).length &&
+    coreOnlyDebts.every((debt) => p1.tasks.filter(isCoreTask).some((task) => debt.id === `debt:${p1.day}:${task.id}`)),
+    "D6a التعميق غير المُسلَّم محايد ولا ينشئ ديناً");
+  const expectedDebtIds = new Set(p1.tasks.filter((task) => !task.mandatory).map((task) => `debt:${p1.day}:${task.id}`));
+  ok(debts.every((x) => !!x.id && expectedDebtIds.has(x.id) && !String(x.titleDe).startsWith("Nachholen: ")) && new Set(debts.map((x) => x.id)).size === debts.length,
+    "D7 الديون تحمل معرفات فريدة مرتبطة بمصادرها وعناوين مجردة من البادئة");
   const debtPlan = buildDay(51, R({ ...empty(), plan: { ...empty().plan, debt: debts } }));
   const scheduledDebts = debtPlan.tasks.filter((task) => !!task.debtId);
   ok(scheduledDebts.length === 2 && debtPlan.debtBacklog?.length === debts.length,
@@ -308,10 +323,35 @@ const vocabRepeatAudit = (() => {
   "D7b النجاح وحده يستهلك الدين؛ الفشل يعيده، والديون غير المعروضة لا تضيع");
   const passState: Record<string, TaskResult> = Object.fromEntries(p1.tasks.map((t) => [t.id, { done: true, passed: true, score: 5, total: 5, attempts: 1 }]));
   const sc = dayScore(p1, passState);
-  ok(sc.done === p1.tasks.length && sc.score === sc.total, "D8 يوم مثالي كامل النقاط");
+  ok(sc.done === p1.tasks.length && sc.tasksTotal === p1.tasks.length && sc.score === sc.total,
+    "D8 اليوم المثالي يحصي الأساسي وكل تعميق سُلِّم");
   ok(canCloseDay(p1, {}) === true && isPassed(undefined) === false, "D9 بوابة الإغلاق وisPassed");
   ok(planPct(R({ ...empty(), plan: { ...empty().plan, day: 1 } })) === 0, "D10 planPct(يوم 1)=0");
   ok(planPct(R({ ...empty(), plan: { ...empty().plan, day: TOTAL + 5 } })) === 100, "D11 planPct مقصوص عند 100");
+
+  let kernGesamt = 0;
+  let vollGesamt = 0;
+  let vertiefungsTage = 0;
+  let fensterTage = 0;
+  for (let d = 1; d <= TOTAL; d++) {
+    const plan = buildDay(d, empty());
+    const kern = corePathMinutes(plan.tasks);
+    const vertiefung = deepeningMinutes(plan.tasks);
+    kernGesamt += kern;
+    vollGesamt += kern + vertiefung;
+    if (vertiefung > 0) vertiefungsTage++;
+    ok(plan.tasks.filter((task) => task.mandatory || task.exam).every(isCoreTask), `D12 يوم ${d}: الإلزامي والامتحاني أساسيان`);
+    if (d === TOTAL) {
+      const unsplittableExam = plan.tasks.filter(isCoreTask);
+      ok(kern === 120 && unsplittableExam.length === 1 && unsplittableExam[0].exam === true,
+        "D13 يوم 378 استثناء امتحاني واحد غير قابل للتقسيم (120د)");
+    } else {
+      if (kern >= CORE_PATH_MIN_MINUTES && kern <= CORE_PATH_MAX_MINUTES) fensterTage++;
+    }
+  }
+  ok(fensterTage === TOTAL - 1, `D14 المسار الأساسي داخل ${CORE_PATH_MIN_MINUTES}–${CORE_PATH_MAX_MINUTES}د في ${fensterTage}/${TOTAL - 1} يوماً عادياً`);
+  ok(kernGesamt === 24_495 && vollGesamt === 71_595 && vertiefungsTage === 369,
+    `D15 التقسيم يحفظ الكتالوج: أساسي ${kernGesamt}د + تعميق ${vollGesamt - kernGesamt}د = ${vollGesamt}د؛ ${vertiefungsTage} يوم تعميق`);
 }
 
 /* ═══ E · SRS FSRS-6 (R280/M1 — ersetzt SM-2; Schwellen mit dem echten Umbau umgepinnt) ═══ */
@@ -1174,10 +1214,15 @@ const vocabRepeatAudit = (() => {
       "K60g حمل اليوم الكامل مشتق من المنحنى نفسه لا من هدف الجلسة");
     ok(last.minuten === 71595 && Math.abs(last.durchschnittMinutenProTag - 189.4) < 0.1 &&
       last.phasen.B2.minuten === 26645 && Math.abs(last.phasen.B2.durchschnittMinutenProTag - 261.2) < 0.1 &&
+      last.kernMinuten === 24495 && last.vertiefungMinuten === 47100 &&
+      Math.abs(last.durchschnittKernMinutenProTag - 64.8) < 0.1 && last.phasen.B2.kernMinuten === 6990 &&
       last.sitzungszielMinuten === DEFAULT_SESSION_GOAL_MINUTES,
-      "K60h خط الأساس الحالي 71595د/189.4د يومياً وB2 ‏26645د/261.2د، وهدف الجلسة مستقل");
+      "K60h الكتالوج محفوظ 71595د؛ الأساسي 24495د/64.8د يومياً والتعميق 47100د، وهدف الجلسة مستقل");
+    ok(planKernMinBis(TOTAL) === last.kernMinuten && planKernStundenBis(TOTAL) === last.kernStunden &&
+      planKernTagesMinuten(378) === 120,
+      "K60h1 منحنى المسار الأساسي ومجموع ساعاته ويوم الامتحان مشتقة من buildDay");
 
-    const vgl = vergleicheZeitlast(planStundenBis);
+    const vgl = vergleicheZeitlast(planKernStundenBis);
     ok(vgl.length === 4 && vgl.every((v) => v.planStd > 0 && v.kursSpanne[0] < v.kursSpanne[1]),
       "K60i المقارنة الزمنية تنتج أربعة صفوف وصفية بلا مستوى مستنتج");
     ok(zeitlastPosition(59, GOETHE_KURSSTUNDEN.A1) === "unterhalb" &&
@@ -1211,7 +1256,7 @@ const vocabRepeatAudit = (() => {
       manualBookingSource.includes("minutenManuell") && !manualBookingSource.includes("minutenEffektiv:"),
       "K60t الإدخال اليدوي يمرّ عبر clampMinuten ويُخزَّن منفصلاً؛ لا يكتب في حقل الوقت المقاس");
     const zeitlastUi = readFileSync("components/stundenvertrag.tsx", "utf8");
-    ok(zeitlastUi.includes("planArbeitslast") && zeitlastUi.includes("planTagesMinuten") &&
+    ok(zeitlastUi.includes("planArbeitslast") && zeitlastUi.includes("planKernTagesMinuten") && zeitlastUi.includes("planVertiefungTagesMinuten") &&
       zeitlastUi.includes("vergleicheZeitlast") && zeitlastUi.includes('data-testid="zeitmodell-drei-zahlen"') &&
       !zeitlastUi.includes("erreichbaresNiveau") && !zeitlastUi.includes("بهذا الحملِ المخطَّط تبلغ"),
       "K60u اللوحة تستهلك مصدر الحمل الواحد وتفصل الأرقام بلا استنتاج مستوى");
@@ -4925,7 +4970,7 @@ void 0;
   const removeProfileSource = profilesSource.slice(profilesSource.indexOf("export function removeProfile"));
   ok(taskSource.includes("⚠️ انتبه إلى هذه الأمثلة") && !taskSource.includes("أخطاء شائعة عند العرب") &&
     todaySource.includes("data-testid=\"session-goal-choice\"") && todaySource.includes("data-testid=\"session-more\"") &&
-    todaySource.includes("data-testid=\"session-stop-save\"") && todaySource.includes("مجموع تقديرات مهام اليوم") &&
+    todaySource.includes("data-testid=\"session-stop-save\"") && todaySource.includes("المسار الأساسي اليوم") && todaySource.includes("هذه تقديرات مستقلة لا تغيّر المؤقّت") &&
     clockHook.includes("SESSION_IDLE_TIMEOUT_MS") && clockHook.includes("PROFILE_WILL_CHANGE") &&
     clockHook.includes("recordStudyMinutes") && addProfileSource.includes("dispatchEvent(new Event(PROFILE_WILL_CHANGE))") &&
     addProfileSource.indexOf("dispatchEvent(new Event(PROFILE_WILL_CHANGE))") < addProfileSource.indexOf("d.active = id") &&
@@ -13726,7 +13771,7 @@ function collectR262(dir: string, out: string[] = []): string[] {
   ok(kzSrc.includes('data-testid="sitzung-modus"') && kzSrc.includes('data-testid="sitzung-spieler"') &&
      kzSrc.includes('data-testid="sitzung-weiter"') && kzSrc.includes("naechsteOffeneGesamt") &&
      kzSrc.includes('data-testid={`aufgabe-chip-${i}`}') && kzSrc.includes("submitCurrent") &&
-     kzSrc.includes("اختر أيّ رقاقة متى شئت"),
+     kzSrc.includes("المسار الأساسي متسلسل") && kzSrc.includes("التعميق المتاح"),
     "K280 مشغّل الجلسة حاضر بشريطه وزرّ التالية، ورقائق الاختيار الحرّ وزرّ التسليم القائمان لم يُمسّا");
 }
 
@@ -13811,12 +13856,12 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const zEng = zielTempo(mkP(1, "2027-04-14"), "2026-10-14");
   const zUnreal = zielTempo(mkP(300, "2026-10-24"), "2026-10-14");
   const zKein = zielTempo(mkP(50), "2026-10-14");
-  const restMin = planMinBis(TOTAL_DAYS) - planMinBis(0);
+  const restMin = planKernMinBis(TOTAL_DAYS) - planKernMinBis(0);
   ok(zRuhig.status === "ruhig" && zRuhig.restPlanTage === 378 && zRuhig.minutenProTag <= ZIEL_MINUTEN_OK &&
      zEng.status === "eng" && zEng.minutenProTag > ZIEL_MINUTEN_OK && zEng.minutenProTag <= ZIEL_MINUTEN_MAX &&
      zUnreal.status === "unrealistisch" && !!zUnreal.fruehestesRuhigesDatum && zUnreal.fruehestesRuhigesDatum > "2026-10-24" &&
      zKein.status === "kein-datum" && Math.abs(zRuhig.minutenJePlanTag - restMin / 378) < 2,
-    "K285a الإيقاع مشتقّ من دقائق الخطة الكلية: سنة كاملة هادئة، ونصف سنة مشدود، و١٠ أيام لبقية B2 غير واقعية مع أقرب موعد أمين مقترح");
+    "K285a الإيقاع مشتقّ من دقائق المسار الأساسي: سنة كاملة داخل الحد المحافظ، ونصف سنة فوقه، و١٠ أيام لبقية B2 خارج الحد مع أقرب موعد أمين");
   // إعادة الإيقاع لا تلمس الخطة أبدًا: دقائق كلّ يوم وسقوفه ثابتة مهما كان التاريخ
   let deckelOk = true; let maxB1 = 0; let maxB2 = 0;
   for (let d = 2; d <= TOTAL_DAYS; d++) {
@@ -13830,10 +13875,10 @@ function collectR262(dir: string, out: string[] = []): string[] {
   ok(deckelOk, `K285b سقفا اليوم كما هما بعد كلّ جولات الإيقاع: B1 ‏${maxB1}≤240 وB2 ‏${maxB2}≤270 دقيقة مخططة`);
   const ztSrc = readFileSync("components/zieltempo.tsx", "utf8");
   const einSrc4 = readFileSync("app/einstellungen/page.tsx", "utf8");
-  ok(einSrc4.includes("<ZielTempoKarte progress={progress} />") && ztSrc.includes("لا نعرضه كخطة"),
-    "K285c بطاقة الإيقاع في قسم الموعد وتحذير الاستحالة الصريح حاضر");
-  ok(ztSrc.includes("لن نكسر سقوف الأيام ولا نحذف تغطية") && ztSrc.includes("تقديرات الخطة المخطّطة"),
-    "K285d الإفصاحان ملازمان: لا كسر سقوف/لا حذف تغطية، والدقائق تقديرات مخططة لا وعود");
+  ok(einSrc4.includes("<ZielTempoKarte progress={progress} />") && ztSrc.includes("خارج حدنا الداخلي"),
+    "K285c بطاقة الإيقاع في قسم الموعد وتحذير تجاوز الحد الداخلي حاضر");
+  ok(ztSrc.includes("لن نضغط الأيام أو نحذف محتوى") && ztSrc.includes("تقديرات المسار الأساسي") && ztSrc.includes("لا توجد بعد دراسة التزام ميدانية"),
+    "K285d الإفصاحات ملازمة: لا ضغط/حذف، والدقائق تقديرات أساسية لا وعود ولا دليل ميداني");
 }
 
 // ===== K286 (R193 · Redesign Etappe 1): Startseite ist ein Lernpfad — die 17
@@ -14526,7 +14571,7 @@ function collectR262(dir: string, out: string[] = []): string[] {
   ok(stepperK335.includes('data-testid="today-stepper"') &&
     stepperK335.includes("([1, 2, 3, 4, 5] as TodayStepId[])") &&
     stepperK335.includes('data-testid={`today-step-${sid}`}') &&
-    stepperK335.includes("todayStepStatuses(") && stepperK335.includes("disabled={isLocked ||") &&
+    stepperK335.includes("todayStepStatuses(") && stepperK335.includes("disabled={taskLocked}") && stepperK335.includes("optionalLocked") &&
     homeK335.includes("<TodayStepper") && homeK335.includes("stationsStatus.get(todayStepOf(tk))") &&
     !homeK335.includes("resultOf={resultOf as any}"),
     "K335d خريطة اليوم ذات خمس محطات وحكم مركزي؛ أزرارها وقائمة المهام لا تتجاوز قفل محطة ولا cast any");
@@ -14704,14 +14749,14 @@ function collectR262(dir: string, out: string[] = []): string[] {
     (task) => abgegebenK340.has(task.id),
     (index) => aufgabeGesperrt(ritualNachAbgabeK340, index),
   );
-  ok(statusNachFehlerK340.get(1) === "done" && statusNachFehlerK340.get(2) === "active" && statusNachFehlerK340.get(3) === "locked",
-    "K340b R137: محاولة الاسترجاع غير المجتازة تُعد تسليماً وتفتح الدرس؛ تُرحّل للمراجعة ولا تحبس اليوم كله");
+  ok(statusNachFehlerK340.get(1) === "done" && statusNachFehlerK340.get(2) === "done" && statusNachFehlerK340.get(3) === "active" && statusNachFehlerK340.get(4) === "locked",
+    "K340b R137: محاولة الاسترجاع غير المجتازة تُعد تسليماً وتفتح محطة الأساسي التالية؛ التعميق لا يحبس اليوم");
 
-  const stationZweiK340 = groupTasksByTodayStep(planK340.tasks).get(2) ?? [];
-  const bisZweiK340 = new Set([...abgegebenK340, ...stationZweiK340.map((task) => task.id)]);
-  const statusBisZweiK340 = todayStepStatuses(planK340.tasks, (task) => bisZweiK340.has(task.id), () => false);
-  ok(statusBisZweiK340.get(2) === "done" && statusBisZweiK340.get(3) === "active" && statusBisZweiK340.get(4) === "locked",
-    "K340c R137: لا يفتح الاستماع/القراءة إلا تسليم الدرس، ثم تبقى محطة الإنتاج اللاحقة مقفلة");
+  const stationDreiK340 = groupTasksByTodayStep(planK340.tasks).get(3)?.filter(isCoreTask) ?? [];
+  const bisDreiK340 = new Set([...abgegebenK340, ...stationDreiK340.map((task) => task.id)]);
+  const statusBisDreiK340 = todayStepStatuses(planK340.tasks, (task) => bisDreiK340.has(task.id), () => false);
+  ok(statusBisDreiK340.get(3) === "done" && statusBisDreiK340.get(4) === "active" && statusBisDreiK340.get(5) === "locked",
+    "K340c R137: تسليم محطة الاستيعاب الأساسية يفتح الإنتاج، وتبقى المحطة الأبعد مقفلة");
 
   const pflichtGrammatikK340 = { id: "pflicht", kind: "grammatik", titleDe: "", titleAr: "", minutes: 5, mandatory: true } as DayTask;
   ok(todayStepOf(pflichtGrammatikK340) === 1 && groupTasksByTodayStep([pflichtGrammatikK340]).get(1)?.[0]?.id === "pflicht",

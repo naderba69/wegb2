@@ -2,7 +2,14 @@
 /** PA-009–PA-011: regression gate for one workload source and non-inferential time claims. */
 import assert from "node:assert/strict";
 import { existsSync, readFileSync } from "node:fs";
-import { planArbeitslast, planMinBis, planTagesMinuten } from "../lib/plan";
+import {
+  planArbeitslast,
+  planKernMinBis,
+  planKernStundenBis,
+  planKernTagesMinuten,
+  planMinBis,
+  planTagesMinuten,
+} from "../lib/plan";
 import { DEFAULT_SESSION_GOAL_MINUTES } from "../lib/session-clock";
 import { vergleicheZeitlast } from "../lib/cefr";
 
@@ -28,21 +35,28 @@ test("single computed workload baseline", () => {
   assert.equal(Number(workload.durchschnittMinutenProTag.toFixed(1)), 189.4);
   assert.equal(workload.phasen.B2.minuten, 26_645);
   assert.equal(Number(workload.phasen.B2.durchschnittMinutenProTag.toFixed(1)), 261.2);
+  assert.equal(workload.kernMinuten, 24_495);
+  assert.equal(workload.vertiefungMinuten, 47_100);
+  assert.equal(Number(workload.durchschnittKernMinutenProTag.toFixed(1)), 64.8);
+  assert.equal(workload.phasen.B2.kernMinuten, 6_990);
+  assert.equal(Number(workload.phasen.B2.durchschnittKernMinutenProTag.toFixed(1)), 68.5);
   assert.equal(workload.sitzungszielMinuten, DEFAULT_SESSION_GOAL_MINUTES);
 });
 
-test("session goal, full-day estimate, and measured time stay distinct", () => {
+test("session goal, core path, deepening, full-day estimate, and measured time stay distinct", () => {
   const workload = planArbeitslast();
-  assert.notEqual(workload.sitzungszielMinuten, workload.durchschnittMinutenProTag);
+  assert.notEqual(workload.sitzungszielMinuten, workload.durchschnittKernMinutenProTag);
   assert.equal(planTagesMinuten(378), planMinBis(378) - planMinBis(377));
+  assert.equal(planKernTagesMinuten(378), planKernMinBis(378) - planKernMinBis(377));
+  assert.equal(planKernStundenBis(378), 408.25);
   const ui = source("components/stundenvertrag.tsx");
-  for (const testId of ["sitzungsziel-minuten", "tageslast-minuten", "heute-gemessen-minuten"]) {
+  for (const testId of ["sitzungsziel-minuten", "kernlast-minuten", "tageslast-minuten", "heute-gemessen-minuten"]) {
     assert.match(ui, new RegExp(`data-testid=["']${testId}["']`));
   }
 });
 
 test("time comparison cannot return an inferred CEFR level", () => {
-  const rows = vergleicheZeitlast((day) => planMinBis(day) / 60);
+  const rows = vergleicheZeitlast(planKernStundenBis);
   assert.deepEqual(rows.map((row) => row.level), ["A1", "A2", "B1", "B2"]);
   assert.ok(rows.every((row) => ["unterhalb", "innerhalb", "oberhalb"].includes(row.position)));
   assert.ok(rows.every((row) => !("niveau" in row) && !("examReadiness" in row) && !("urteil" in row)));

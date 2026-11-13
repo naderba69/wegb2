@@ -208,7 +208,7 @@ export function wochenKarteHtml(p: Progress, name: string): string {
   const bericht = wochenBericht(p);
   const minRows = bericht.minutenProArt.map((m) => `<tr><td>${m.art}</td><td class="n">${m.minuten}</td></tr>`).join("");
   const fehlerRows = bericht.fehlerWiederholt.map((f) => `<tr><td>${f.falsch}</td><td>${f.richtig}</td><td class="n">${f.treffer}</td></tr>`).join("");
-  const planRows = bericht.naechsteWoche.map((d) => `<tr><td class="n">${d.day}</td><td>${d.phase}</td><td>${d.typ}</td><td class="n">${d.minuten}</td></tr>`).join("");
+  const planRows = bericht.naechsteWoche.map((d) => `<tr><td class="n">${d.day}</td><td>${d.phase}</td><td>${d.typ}</td><td class="n">${d.kernMinuten}</td><td class="n">${d.vertiefungMinuten}</td><td class="n">${d.minuten}</td></tr>`).join("");
   const rows = sb.zeilen.map((z) => `<tr><td>${KOMPETENZ_AR[z.hand] ?? z.hand}</td><td class="n">${z.versuche}</td><td class="n">${z.gemessen}</td><td class="n">${Math.round(z.anteil * 100)}٪</td><td class="n">${z.quote === null ? "—" : z.quote + "٪"}</td></tr>`).join("");
   return `<!doctype html><html dir="rtl"><head><meta charset="utf-8"><title>بطاقة تقدّم الأسبوع — ${name}</title>
 <style>body{font-family:system-ui,sans-serif;margin:2rem;color:#222}table{border-collapse:collapse;width:100%}td,th{border:1px solid #bbb;padding:.4rem .6rem;text-align:right}td.n{text-align:center}h1{font-size:1.3rem}</style></head><body>
@@ -226,7 +226,7 @@ ${sb.warnung ? `<p>⚖️ ${sb.warnung}</p>` : ""}
 <h2>أخطاء متكررة (ظهرت مرتين فأكثر)</h2>
 <table><tr><th>خطأك</th><th>الصواب</th><th>مرات</th></tr>${fehlerRows || '<tr><td colspan="3">لا أخطاء متكررة هذا الأسبوع</td></tr>'}</table>
 <h2>خطة الأسبوع القادم (من اليوم ${p.plan.day + 1})</h2>
-<table><tr><th>اليوم</th><th>المستوى</th><th>النوع</th><th>دقائق مخططة</th></tr>${planRows}</table>
+<table><tr><th>اليوم</th><th>المستوى</th><th>النوع</th><th>أساسي</th><th>تعميق اختياري</th><th>الكل</th></tr>${planRows}</table>
 </body></html>`;
 }
 

@@ -21,6 +21,7 @@ import { speakDe } from "@/lib/speech";
 import { aufgabeGesperrt, sperrText, type RitualUrteil } from "@/lib/ritual";
 import { De } from "@/components/De";
 import { KindIcon } from "@/components/dirb/icons";
+import { isCoreTask } from "@/lib/day-path";
 
 interface KlassenzimmerProps {
   progress: Progress;
@@ -106,10 +107,22 @@ export function Klassenzimmer({
   const rate = effektiveRate(progress); // M7/R287: Auto-Tempo nach Niveau, manuelle Wahl bleibt
   const lang = progress.settings.uiLang === "auto" ? "ar" : progress.settings.uiLang;
   const [pauseSaved, setPauseSaved] = useState(false);
-  const istGesperrt = (index: number) => aufgabeGesperrt(ritual, index) || !!stationGesperrt?.(index);
-  const sperrGrund = (index: number) => aufgabeGesperrt(ritual, index)
-    ? sperrText(ritual)
-    : "سلّم مهام المحطة السابقة أولاً.";
+  const kernAufgaben = plan.tasks.filter(isCoreTask);
+  const vertiefungAufgaben = plan.tasks.filter((task) => !isCoreTask(task));
+  const kernFertig = kernAufgaben.length > 0 && kernAufgaben.every((task) => !!resultOf(task.id));
+  const istGesperrt = (index: number) => {
+    const task = plan.tasks[index];
+    return aufgabeGesperrt(ritual, index)
+      || !!stationGesperrt?.(index)
+      || (!!task && !isCoreTask(task) && !kernFertig);
+  };
+  const sperrGrund = (index: number) => {
+    const task = plan.tasks[index];
+    if (task && !isCoreTask(task) && !kernFertig) return "سلّم المسار الأساسي أولاً؛ بعدها يفتح التعميق الاختياري.";
+    return aufgabeGesperrt(ritual, index)
+      ? sperrText(ritual)
+      : "سلّم مهام المحطة السابقة أولاً.";
+  };
   // 🎬 R187/U1: وضع الجلسة المتسلسلة — مهمّة ← تسليم ← التالية بزرٍّ واحد، وحرية الرقائق باقية
   const [spieler, setSpieler] = useState(true);
   const savePause = () => {
@@ -135,11 +148,12 @@ export function Klassenzimmer({
   const warmupSaetze = day > 1 ? kapselSaetzeAbend(day - 1) : [];
 
   const fertig = plan.tasks.length > 0 && plan.tasks.every((tk) => resultOf(tk.id));
-  // 🎬 U1: حسابات شريط المشغّل — من نتائج الخطة ودقائقها المخططة لا من ادّعاء
-  const erledigtZahl = plan.tasks.filter((tk) => resultOf(tk.id)).length;
+  // 🎬 U1: حسابات شريط المشغّل — المسار الأساسي أولاً، والتعميق بعده فقط.
+  const erledigtZahl = kernAufgaben.filter((tk) => resultOf(tk.id)).length;
   const naechsteOffene = plan.tasks.findIndex((tk, i) => i > stepFrei && !resultOf(tk.id) && !istGesperrt(i));
   const naechsteOffeneGesamt = naechsteOffene >= 0 ? naechsteOffene : plan.tasks.findIndex((tk, i) => i !== stepFrei && !resultOf(tk.id) && !istGesperrt(i));
-  const restMinuten = plan.tasks.filter((tk) => !resultOf(tk.id)).reduce((s, tk) => s + tk.minutes, 0);
+  const restMinuten = kernAufgaben.filter((tk) => !resultOf(tk.id)).reduce((s, tk) => s + tk.minutes, 0);
+  const restVertiefungMinuten = vertiefungAufgaben.filter((tk) => !resultOf(tk.id)).reduce((s, tk) => s + tk.minutes, 0);
   // 🧭 تقطيع اليوم محطاتٍ قصيرة (R196): موقع المهمة الحالية داخل محطّتها الستّ
   const stationJetzt = currentTask ? stationOfTask(currentTask) : null;
   const stationAlle = stationJetzt ? plan.tasks.filter((tk) => stationOfTask(tk) === stationJetzt) : [];
@@ -147,7 +161,9 @@ export function Klassenzimmer({
   const kicker = !currentTask
     ? "🎉 لا مهامَّ اليوم"
     : fertig
-      ? "🎉 أتممتَ مهامَّ اليوم"
+      ? "🎉 أتممتَ المسار الأساسي والتعميق"
+      : !isCoreTask(currentTask)
+        ? "➕ تعميق اختياري"
       : currentTask.mandatory
         ? "📌 تعويض إلزامي أوّلاً"
         : currentTask.kind === "wiederholen"
@@ -164,11 +180,11 @@ export function Klassenzimmer({
   };
 
   // 🎯 أهداف اليوم الثلاثة — مشتقّة من مهام الخطة نفسها
-  const gramTask = plan.tasks.find((t) => t.kind === "grammatik" && t.topicId);
+  const gramTask = kernAufgaben.find((t) => t.kind === "grammatik" && t.topicId);
   const gramTitel = gramTask?.topicId ? grammarMap[gramTask.topicId]?.titleAr : undefined;
-  const vokTask = plan.tasks.find((t) => t.kind === "wortschatz" && t.deckId);
+  const vokTask = kernAufgaben.find((t) => t.kind === "wortschatz" && t.deckId);
   const vokZahl = vokTask?.deckId ? getDeck(vokTask.deckId)?.cards.length : undefined;
-  const fertigkeiten = plan.tasks
+  const fertigkeiten = kernAufgaben
     .map((t) => t.kind)
     .filter((k) => k === "hoeren" || k === "lesen" || k === "schreiben" || k === "sprechen" || k === "aussprache")
     .filter((k, i, arr) => arr.indexOf(k) === i)
@@ -204,6 +220,7 @@ export function Klassenzimmer({
           <div className="dirb-hero-meta">
             ⏱ <span className="rtl-num">{currentTask.minutes}</span> دقيقة ·{" "}
             <span style={{ color: LEVEL_COLORS[plan.phase], fontWeight: 800 }}>{plan.phase}</span> · {KIND_AR[currentTask.kind] ?? currentTask.kind}
+            {isCoreTask(currentTask) ? " · 🟢 أساسي" : " · ➕ اختياري"}
             {resultOf(currentTask.id)?.passed ? " · ✓ مُتقَنة" : ""}
           </div>
           <button type="button" className="dirb-start" onClick={startAktion}>
@@ -326,10 +343,11 @@ export function Klassenzimmer({
         {spieler && (
           <div className="dirb-hero-anim-2" data-testid="sitzung-spieler" style={{ display: "grid", gap: "0.45rem", marginBottom: "0.6rem" }}>
             <div style={{ fontSize: "0.92rem" }}>
-              🎬 <strong>جلسة اليوم متسلسلة:</strong> أنجزت <span className="rtl-num">{erledigtZahl}</span> من{" "}
-              <span className="rtl-num">{plan.tasks.length}</span> مهام
-              {restMinuten > 0 && <> · متبقٍّ مخططًا نحو <span className="rtl-num">{restMinuten}</span> دقيقة</>}
-              {" "}· اختر أيّ رقاقة متى شئت — التسلسل لا يلغي حريتك.
+              🎬 <strong>المسار الأساسي متسلسل:</strong> أنجزت <span className="rtl-num">{erledigtZahl}</span> من{" "}
+              <span className="rtl-num">{kernAufgaben.length}</span> مهام أساسية
+              {restMinuten > 0 && <> · متبقٍّ أساسي نحو <span className="rtl-num">{restMinuten}</span> دقيقة</>}
+              {kernFertig && restVertiefungMinuten > 0 && <> · التعميق المتاح <span className="rtl-num">{restVertiefungMinuten}</span> دقيقة اختيارية</>}
+              {" "}· التعميق لا يبدأ قبل إتمام الأساسي؛ غير المُسلَّم منه لا يدخل التعويض.
             </div>
             {stationJetzt && (
               <div data-testid="sitzung-station" style={{ fontSize: "0.85rem", fontWeight: 700 }}>
@@ -382,7 +400,7 @@ export function Klassenzimmer({
         {/* ── رقائق مهام اليوم: مطوية في وضع الجلسة المركّز، مفتوحة في الوضع الحرّ (R194) ── */}
         <details key={spieler ? "sitzung" : "frei"} data-testid="aufgaben-details" {...(spieler ? {} : { open: true })}>
           <summary style={{ cursor: "pointer", fontWeight: 700, minHeight: "44px", display: "flex", alignItems: "center" }}>
-            🗂️ مهام اليوم ({plan.tasks.length}) — اختر من المحطة المفتوحة
+            🗂️ مهام اليوم ({kernAufgaben.length} أساسية · {vertiefungAufgaben.length} اختيارية) — اختر من المحطة المفتوحة
           </summary>
         <div className="dirb-chiprow" role="list" aria-label="مهام اليوم" style={{ marginTop: "0.4rem" }}>
           {plan.tasks.map((tk, i) => {
@@ -410,7 +428,7 @@ export function Klassenzimmer({
                   if (!istGesperrt(i)) setStep(i);
                 }}
               >
-                {zu ? "🔒" : passed ? "✓" : i + 1}. {tk.titleAr.split(" ")[0]}
+                {zu ? "🔒" : passed ? "✓" : i + 1}. {isCoreTask(tk) ? "🟢" : "➕"} {tk.titleAr.split(" ")[0]}
               </button>
             );
           })}
@@ -425,7 +443,7 @@ export function Klassenzimmer({
               </strong>
               <div>
                 <small>
-                  {currentTask.titleAr} · ⏱ <span className="rtl-num">{currentTask.minutes}</span> دقيقة
+                  {currentTask.titleAr} · ⏱ <span className="rtl-num">{currentTask.minutes}</span> دقيقة · {isCoreTask(currentTask) ? "🟢 مسار أساسي" : "➕ تعميق اختياري"}
                   {currentTask.mandatory && " · تعويض إلزامي"}
                 </small>
               </div>
@@ -472,7 +490,7 @@ export function Klassenzimmer({
               ) : (
                 <span className="dirb-score">
                   النتيجة: <span className="rtl-num">{resultOf(currentTask.id)?.score} / {resultOf(currentTask.id)?.total}</span>
-                  {" "}{resultOf(currentTask.id)?.passed ? "ناجحة ✅" : "ستُرحَّل تعويضاً ⚠️"}
+                  {" "}{resultOf(currentTask.id)?.passed ? "ناجحة ✅" : isCoreTask(currentTask) ? "ستُرحَّل تعويضاً ⚠️" : "اختيارية، لكنها ستبقى علاجية بعد هذا التسليم ⚠️"}
                 </span>
               )}
               {stepFrei < plan.tasks.length - 1 ? (
@@ -545,9 +563,11 @@ export function Klassenzimmer({
 
       {allSubmitted && !confirmClose && (
         <div className="card fadein" data-testid="stop-panel" style={{ padding: "0.8rem 1rem", borderInlineStart: "5px solid var(--color-a1)" }}>
-          <div style={{ fontWeight: 900 }}>🛑 توقف هنا — يومك مكتمل.</div>
+          <div style={{ fontWeight: 900 }}>🛑 المسار الأساسي مكتمل — يمكنك إغلاق اليوم.</div>
           <div style={{ fontSize: "0.85rem", color: "var(--color-ink2)", marginTop: "0.25rem" }}>
-            ➕ نشاط إضافي محدود (اختياري): راجع كبسولة المساء أعلاه أو بطاقة واحدة من دفتر الأخطاء — ثم أغلق اليوم.
+            {vertiefungAufgaben.length > 0
+              ? <>➕ بقي <span className="rtl-num">{restVertiefungMinuten}</span> دقيقة تعميق اختيارية. يمكنك تنفيذها الآن أو تركها؛ المتروك محايد، والمُسلَّم غير المجتاز يبقى علاجياً.</>
+              : <>لا توجد مهام تعميق منفصلة اليوم؛ يمكنك مراجعة كبسولة المساء ثم الإغلاق.</>}
           </div>
         </div>
       )}
@@ -560,15 +580,21 @@ export function Klassenzimmer({
         </h2>
         <div className="dirb-close-stats">
           <div>
-            <small>المهام المنجزة</small>
+            <small>المسار الأساسي المُسلَّم</small>
             <strong className="rtl-num">
-              {plan.tasks.filter((tk) => resultOf(tk.id)).length} / {plan.tasks.length}
+              {kernAufgaben.filter((tk) => resultOf(tk.id)).length} / {kernAufgaben.length}
             </strong>
           </div>
           <div>
-            <small>المتقنة وفق عتبة اليوم الداخلية (≥80%)</small>
+            <small>الأساسي المتقن وفق عتبة اليوم الداخلية (≥80%)</small>
             <strong className="rtl-num" style={{ color: "var(--color-a1)" }}>
-              {plan.tasks.filter((tk) => resultOf(tk.id)?.passed).length} / {plan.tasks.length}
+              {kernAufgaben.filter((tk) => resultOf(tk.id)?.passed).length} / {kernAufgaben.length}
+            </strong>
+          </div>
+          <div>
+            <small>التعميق الاختياري المُسلَّم</small>
+            <strong className="rtl-num">
+              {vertiefungAufgaben.filter((tk) => resultOf(tk.id)).length} / {vertiefungAufgaben.length}
             </strong>
           </div>
           <div>
@@ -606,8 +632,8 @@ export function Klassenzimmer({
             ) : (
               <small style={{ color: "var(--color-ink2)", fontSize: "0.8rem" }}>
                 {allSubmitted
-                  ? "كل المهام مُسلَّمة. أغلق اليوم لفتح الغد."
-                  : "يمكنك الإغلاق الآن وسيُرحَّل ما لم يُنجز؛ أو استعمل «يوم سيّئ» لليالي الصعبة بلا ديون."}
+                  ? "كل مهام المسار الأساسي مُسلَّمة. أغلق اليوم لفتح الغد؛ التعميق غير المُسلَّم لا يُرحَّل."
+                  : "يمكنك الإغلاق الآن؛ سيُرحَّل غير المُتقن من الأساسي، وكذلك التعميق الذي سُلِّم ولم يُجتز. التعميق المتروك محايد، و«يوم سيّئ» يعبر بلا ديون."}
               </small>
             )}
           </div>
@@ -616,7 +642,7 @@ export function Klassenzimmer({
             <strong>تأكيد إغلاق اليوم {day}:</strong>
             <div style={{ margin: "0.6rem 0", lineHeight: 1.8, fontSize: "0.9rem" }}>
               {unpassed.length === 0 ? (
-                <>✨ أتقنت كل المهام وفق عتبة اليوم الداخلية (≥80%) — لا تعويضات! الغد سيبدأ بمحتواه الجديد فقط.</>
+                <>✨ أتقنت كل ما سُلِّم من المسار الأساسي والتعميق وفق عتبة اليوم الداخلية (≥80%) — لا تعويضات!</>
               ) : (
                 <>
                   ⚠️ <strong className="rtl-num">{unpassed.length}</strong> من المهام لم تُتقَن — ستُرحَّل <strong>إلزامية</strong> إلى أول الغد:

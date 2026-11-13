@@ -6,6 +6,7 @@ import { buildDay } from "@/lib/plan";
 import { elternBrief } from "@/lib/fehler";
 import { levelOfXp, ABZEICHEN } from "@/lib/spiel";
 import { ArbeitsblattButton } from "./blatt";
+import { corePathMinutes, deepeningMinutes, isCoreTask } from "@/lib/day-path";
 
 const TYPE_LABEL: Record<DayType, string> = {
   lerntag: "يوم تعلّم",
@@ -98,7 +99,8 @@ export function Wochenplan({ progress }: { progress: Progress }) {
           const r = progress.plan.days[d];
           const isNow = d === progress.plan.day;
           const closed = !!r?.closed;
-          const minutes = p.tasks.reduce((a, t) => a + t.minutes, 0);
+          const coreMinutes = corePathMinutes(p.tasks);
+          const optionalMinutes = deepeningMinutes(p.tasks);
           return (
             <div
               key={d}
@@ -117,10 +119,10 @@ export function Wochenplan({ progress }: { progress: Progress }) {
                 <span>{closed ? "✅" : isNow ? "▶️" : d < progress.plan.day ? "⌛" : "🔒"}</span>
               </div>
               <div style={{ fontSize: "0.75rem", color: "var(--color-ink2)", margin: "0.15rem 0" }}>
-                {TYPE_ICON[p.type]} {TYPE_LABEL[p.type]} · {p.phase} · <span className="rtl-num">{minutes}</span>د
+                {TYPE_ICON[p.type]} {TYPE_LABEL[p.type]} · {p.phase} · 🟢 <span className="rtl-num">{coreMinutes}</span>د{optionalMinutes > 0 && <> · ➕ <span className="rtl-num">{optionalMinutes}</span>د</>}
               </div>
               <div style={{ fontSize: "0.9rem", letterSpacing: 1 }}>
-                {p.tasks.slice(0, 6).map((t) => kindIcon(t.kind)).join(" ")}
+                {p.tasks.filter(isCoreTask).slice(0, 6).map((t) => kindIcon(t.kind)).join(" ")}
               </div>
               {closed && (
                 <div className="rtl-num" style={{ fontSize: "0.75rem", fontWeight: 700, color: "var(--color-a1)" }}>
@@ -137,7 +139,7 @@ export function Wochenplan({ progress }: { progress: Progress }) {
         })}
       </div>
       <div style={{ fontSize: "0.78rem", color: "var(--color-ink2)", marginTop: "0.5rem" }}>
-        ✅ مُغلق · ▶️ يومك الحالي · ⌛ انقضى دون إغلاق · 🔒 لم يحن بعد — الخطة حتمية: كل يوم يظهر بنفس مهامه.
+        ✅ مُغلق · ▶️ يومك الحالي · ⌛ انقضى دون إغلاق · 🔒 لم يحن بعد · 🟢 مسار أساسي · ➕ تعميق اختياري.
       </div>
       <ArbeitsblattButton progress={progress} />
     </details>

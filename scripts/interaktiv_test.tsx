@@ -1282,9 +1282,10 @@ const hasFile = txt().includes("صوتٌ من الدار");
     const idAbruf = buildDay(2, p2).tasks[0].id;
     ok(!!nachher.plan.tasks[idAbruf], `L8 التسليمُ سُجِّل في الحالة (${idAbruf})`);
     ok(!rootEl.querySelector('[data-testid="ritual-sperre"]'), "L9 وبعدَ التسليمِ زالت اللافتة");
-    ok(chip(1)?.textContent?.startsWith("🔒") === false && chip(4)?.textContent?.startsWith("🔒") === true, "L10 انفتحت محطة الدرس فقط وبقي الفحص وراء التسلسل");
-    if (chip(2)) click(chip(2)!);
-    ok(txt().includes("المهمة 2/") && !txt().includes("المهمة 3/"), "L11 والنقرُ على مهمة محطة لاحقة لا يتجاوز الدرس النشط");
+    ok(chip(1)?.textContent?.startsWith("🔒") === true && chip(2)?.textContent?.startsWith("🔒") === false && chip(3)?.textContent?.startsWith("🔒") === true,
+      "L10 انفتحت محطة الأساسي التالية، وبقي التعميق والإنتاج اللاحق خلف القفل");
+    if (chip(3)) click(chip(3)!);
+    ok(txt().includes("المهمة 3/") && !txt().includes("المهمة 4/"), "L11 والنقرُ على مهمة محطة لاحقة لا يتجاوز محطة الأساسي النشطة");
     act(() => { saveProgress({ ...emptyProgress, plan: { ...emptyProgress.plan, day: 1 } }); });
     mount(React.createElement(Heim));
     ok(!rootEl.querySelector('[data-testid="ritual-sperre"]') && chip(1)?.textContent?.startsWith("🔒") === true && chip(0)?.textContent?.startsWith("🔒") === false,
@@ -1684,17 +1685,17 @@ const hasFile = txt().includes("صوتٌ من الدار");
     }
   }
 
-  /* ---------- XLVI — مقارنة الحمل: هدف جلسة ≠ حمل يوم ≠ وقت مقاس ---------- */
+  /* ---------- XLVI — مقارنة الحمل: جلسة ≠ أساسي ≠ تعميق ≠ وقت مقاس ---------- */
   {
     const { BerichteZentrum } = await import("../components/berichte");
-    const { planStundenGesamt, planStundenBis, planMinBis, planTagesMinuten, planArbeitslast } = await import("../lib/plan");
+    const { planStundenGesamt, planKernStundenBis, planMinBis, planTagesMinuten, planKernTagesMinuten, planVertiefungTagesMinuten, planArbeitslast } = await import("../lib/plan");
     const { vergleicheZeitlast, MAX_MIN_PRO_TASK } = await import("../lib/cefr");
     const { loadProgress, saveProgress, bucheMinuten, recordStudyMinutes } = await import("../lib/store");
     const { progressKeyActive } = await import("../lib/profiles");
 
     const ges = planStundenGesamt();
     const last = planArbeitslast();
-    const vgl = vergleicheZeitlast(planStundenBis);
+    const vgl = vergleicheZeitlast(planKernStundenBis);
 
     ok(Number.isFinite(ges) && ges > 0 && Math.abs(ges - planMinBis(TOTAL_DAYS) / 60) < 0.01,
       `XLVI1 مجموعُ تقديراتِ مهام الخطة ${ges.toFixed(1)} س مستمدٌ من المحرك، لا من هدف الجلسة ولا من الوقت المقاس`);
@@ -1715,12 +1716,14 @@ const hasFile = txt().includes("صوتٌ من الدار");
     ok(!!d0.querySelector('[data-testid="stundenvertrag"]'), "XLVI5 لوحة مقارنة الحمل عنصر حقيقي في الشجرة");
     ok(t.includes("مقارنة الحمل الزمني الإرشادية"), "XLVI6 عنوانها يعلن أنها مقارنة إرشادية لا حكم مستوى");
     const planEl = d0.querySelector('[data-testid="stunden-plan"]');
-    ok(!!planEl && planEl.textContent!.includes(String(Math.round(ges * 10) / 10).split(".")[0]),
-      `XLVI7 مجموع ساعات تقديرات الخطة معروض (${planEl?.textContent}) ومطابق للمحرك (${ges.toFixed(1)})`);
+    ok(!!planEl && planEl.textContent!.includes(String(last.kernStunden.toFixed(1)).split(".")[0]),
+      `XLVI7 ساعات المسار الأساسي معروضة (${planEl?.textContent}) ومطابقة للمحرك (${last.kernStunden.toFixed(1)})`);
     ok((d0.querySelector('[data-testid="sitzungsziel-minuten"]')?.textContent ?? "").includes(String(last.sitzungszielMinuten)) &&
+      (d0.querySelector('[data-testid="kernlast-minuten"]')?.textContent ?? "").includes(String(planKernTagesMinuten(100))) &&
+      (d0.querySelector('[data-testid="tageslast-minuten"]')?.textContent ?? "").includes(String(planVertiefungTagesMinuten(100))) &&
       (d0.querySelector('[data-testid="tageslast-minuten"]')?.textContent ?? "").includes(String(planTagesMinuten(100))) &&
       (d0.querySelector('[data-testid="heute-gemessen-minuten"]')?.textContent ?? "").includes("0.0"),
-      "XLVI8 الأرقام الثلاثة منفصلة: هدف الجلسة، تقدير اليوم الكامل، والوقت المقاس اليوم");
+      "XLVI8 الأرقام منفصلة: هدف الجلسة، الأساسي، التعميق، الكتالوج الكامل، والوقت المقاس");
     for (const L of ["A1", "A2", "B1", "B2"]) {
       const z = d0.querySelector(`[data-testid="cefr-zeile-${L}"]`);
       ok(!!z && (z.textContent ?? "").includes(L) && (z.textContent ?? "").includes("س"),
@@ -3262,11 +3265,11 @@ const hasFile = txt().includes("صوتٌ من الدار");
       const goalReadout = d0.querySelector('[data-testid="session-goal-progress"]');
       const bar = d0.querySelector('[aria-label="التقدّم نحو هدف الجلسة"]');
       const remaining = dayPlan.tasks.length - Object.keys(completed).length;
-      ok(!!note && (note.textContent ?? "").includes(`مجموع تقديرات مهام اليوم الكامل ${totalMinutes} دقيقة`) &&
+      ok(!!note && (note.textContent ?? "").includes(`مجموعهما ${totalMinutes} دقيقة`) &&
         (note.textContent ?? "").includes(`الهدف الحالي ${targetMinutes} دقيقة`) &&
-        (note.textContent ?? "").includes("بلوغ هدف الجلسة لا يعني إكمال القائمة") &&
+        (note.textContent ?? "").includes("بلوغ هدف الجلسة وحده لا يعني إكمال المسار") &&
         !!d0.querySelector('[data-testid="session-goal-choice"]') && remaining > 0,
-        `LXXXIV1 المؤقّت المقاس له هدف ${targetMinutes} د مستقل عن مجموع تقديرات الخطة ${totalMinutes} د؛ تبقى ${remaining} مهام غير فاشلة`);
+        `LXXXIV1 المؤقّت المقاس له هدف ${targetMinutes} د مستقل عن الأساسي والتعميق (معاً ${totalMinutes} د)؛ تبقى ${remaining} مهام غير فاشلة`);
       ok(!!goalReadout && (goalReadout.textContent ?? "").includes(`${targetMinutes}.0 من ${targetMinutes} دقيقة مقاسة`) &&
         !!bar && bar.getAttribute("aria-valuenow") === "100" && remaining > 0 &&
         !!d0.querySelector('[data-testid="session-more"]') && !!d0.querySelector('[data-testid="session-goal-stop"]'),
@@ -4370,7 +4373,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
   const { progressKeyActive } = await import("../lib/profiles");
   const { buildDay } = await import("../lib/plan");
   const { getText, getDialogue } = await import("../lib/content");
-  const { todayStepOf } = await import("../lib/today-steps");
+  const { isCoreTask } = await import("../lib/day-path");
   const { stationOfTask, STATIONEN } = await import("../components/stationen");
   (globalThis as unknown as { self?: unknown }).self = globalThis;
   const { default: Heim } = await import("../app/page");
@@ -4395,7 +4398,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
 
   // افتح محطة التدريب بعقد المحطات الفعلي: تسليم الاسترجاع والدرس أولاً، ثم افحص المحتوى الكامل.
   const vorPraxis = Object.fromEntries(plan1.tasks
-    .filter((task) => todayStepOf(task) < 3)
+    .filter(isCoreTask)
     .map((task) => [task.id, { done: true, passed: true, score: 1, total: 1, attempts: 1, kind: task.kind }]));
   act(() => { saveProgress({ ...p1, plan: { ...p1.plan, tasks: vorPraxis } }); });
   mount(React.createElement(Heim));
@@ -4954,8 +4957,9 @@ const hasFile = txt().includes("صوتٌ من الدار");
   const { default: TodayStepper } = await import("../components/akademie/TodayStepper");
   const { buildDay } = await import("../lib/plan");
   const { ritualUrteil } = await import("../lib/ritual");
-  const { groupTasksByTodayStep } = await import("../lib/today-steps");
-  const plan = buildDay(2, { ...emptyProgress, plan: { ...emptyProgress.plan, day: 2 } });
+  const { groupTasksByTodayStep, todayStepOf } = await import("../lib/today-steps");
+  const { isCoreTask } = await import("../lib/day-path");
+  const plan = buildDay(3, { ...emptyProgress, plan: { ...emptyProgress.plan, day: 3 } });
   const resultate: Record<string, { done: boolean; passed: boolean; score: number; total: number; attempts: number }> = {};
   let lokalePunkte: Record<string, { score: number; total: number }> = {};
   let gewaehlt = -1;
@@ -4967,11 +4971,12 @@ const hasFile = txt().includes("صوتٌ من الدار");
     resultOf: (id: string) => resultate[id],
     localOf: (id: string) => lokalePunkte[id] ?? { score: 0, total: 0 },
   });
-  const startProgress = { ...emptyProgress, plan: { ...emptyProgress.plan, day: 2 } };
+  const startProgress = { ...emptyProgress, plan: { ...emptyProgress.plan, day: 3 } };
   mount(React.createElement(TodayStepper, props(startProgress)));
 
   const grammarIndex = plan.tasks.findIndex((task) => task.kind === "grammatik");
-  const lesenIndex = plan.tasks.findIndex((task) => ["wortschatz", "lesen", "hoeren", "aussprache"].includes(task.kind));
+  const lesenIndex = plan.tasks.findIndex((task) => isCoreTask(task) && ["wortschatz", "lesen", "hoeren", "aussprache"].includes(task.kind));
+  const optionalIndex = plan.tasks.findIndex((task) => !isCoreTask(task));
   const station2Task = rootEl.querySelector(`[data-testid="today-step-2-task-${grammarIndex}"]`) as HTMLButtonElement;
   ok(rootEl.querySelector('[data-testid="today-step-1"]')?.classList.contains("today-step--active") === true &&
     rootEl.querySelector('[data-testid="today-step-2"]')?.classList.contains("today-step--locked") === true,
@@ -5007,13 +5012,22 @@ const hasFile = txt().includes("صوتٌ من الدار");
   ok(rootEl.querySelector('[data-testid="today-step-2"]')?.classList.contains("today-step--done") === true &&
     rootEl.querySelector('[data-testid="today-step-3"]')?.classList.contains("today-step--active") === true && !station3Task.disabled,
     "R315-5 تسليم الدرس يفتح الاستماع/القراءة فقط وتبقى المحطات الأبعد وراء التسلسل");
-  await pruefeA11y("R315-6 خريطة اليوم بعد انتقال محطتين");
+
+  for (const task of plan.tasks.filter(isCoreTask)) resultate[task.id] = { done: true, passed: true, score: 1, total: 1, attempts: 1 };
+  const nachKern = { ...startProgress, plan: { ...startProgress.plan, tasks: { ...resultate } } };
+  mount(React.createElement(TodayStepper, props(nachKern)));
+  const optionalStation = todayStepOf(plan.tasks[optionalIndex]);
+  const optionalNachKern = rootEl.querySelector(`[data-testid="today-step-${optionalStation}-task-${optionalIndex}"]`) as HTMLButtonElement;
+  ok(!optionalNachKern.disabled && optionalNachKern.dataset.path === "deepening" &&
+    (optionalNachKern.getAttribute("aria-label") ?? "").includes("تعميق اختياري") && txt().includes("أساسي") && txt().includes("اختياري"),
+    "R315-6 بعد اكتمال الأساسي يُفتح التعميق وتبقى هوية المسارين مرئية ووصولية");
+  await pruefeA11y("R315-6a خريطة اليوم بعد فتح التعميق");
 
   const { saveProgress } = await import("../lib/store");
   const { progressKeyActive } = await import("../lib/profiles");
   (globalThis as unknown as { self?: unknown }).self = globalThis;
   const { default: Heim } = await import("../app/page");
-  const stepKey2 = `${progressKeyActive()}:day-step:2`;
+  const stepKey2 = `${progressKeyActive()}:day-step:3`;
   act(() => {
     saveProgress(startProgress);
     dom.window.localStorage.setItem(stepKey2, String(grammarIndex));
@@ -5027,6 +5041,8 @@ const hasFile = txt().includes("صوتٌ من الدار");
   const tag1Progress = { ...emptyProgress, plan: { ...emptyProgress.plan, day: 1 } };
   const tag1Plan = buildDay(1, tag1Progress);
   const tag1Grammatik = tag1Plan.tasks.find((task) => task.kind === "grammatik")!;
+  const tag1NextCore = tag1Plan.tasks.find((task, index) => index > 0 && isCoreTask(task))!;
+  const tag1GrammatikIndex = tag1Plan.tasks.indexOf(tag1Grammatik);
   const stepKey1 = `${progressKeyActive()}:day-step:1`;
   act(() => {
     saveProgress(tag1Progress);
@@ -5036,8 +5052,9 @@ const hasFile = txt().includes("صوتٌ من الدار");
   const ersterSubmit = btn("سلّم المهمة");
   if (ersterSubmit) click(ersterSubmit);
   const nachErsterAbgabe = rootEl.querySelector('[data-testid="today-primary-step"]')?.textContent ?? "";
-  ok(!!ersterSubmit && nachErsterAbgabe.includes(tag1Grammatik.titleAr),
-    "R315-8 بعد تهيئة اليوم الأول ينتقل المشغّل إلى محطة الدرس، لا إلى مهمة لاحقة جاءت قبلها في ترتيب المصدر");
+  const optionalGrammarButton = rootEl.querySelector(`[data-testid="held-mini-${tag1GrammatikIndex}"]`) as HTMLButtonElement | null;
+  ok(!!ersterSubmit && nachErsterAbgabe.includes(tag1NextCore.titleAr) && !nachErsterAbgabe.includes(tag1Grammatik.titleAr) && optionalGrammarButton?.disabled === true,
+    "R315-8 بعد أول تسليم ينتقل المشغّل إلى المهمة الأساسية التالية ويبقي التعميق مقفولاً حتى اكتمال الأساسي");
 
   act(() => {
     dom.window.localStorage.removeItem(progressKeyActive());
@@ -5045,6 +5062,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
     dom.window.localStorage.removeItem(stepKey2);
     dom.window.localStorage.removeItem("wegb2:day-step:1");
     dom.window.localStorage.removeItem("wegb2:day-step:2");
+    dom.window.localStorage.removeItem("wegb2:day-step:3");
   });
 }
 
@@ -5166,9 +5184,9 @@ const hasFile = txt().includes("صوتٌ من الدار");
     if (pflege) click(pflege);
     ok(pflege?.getAttribute("aria-pressed") === "true", "TC725-6 اختيار هدف التمريض ينعكس عبر aria-pressed لا اللون وحده");
     const zeitmodell = rootEl.querySelector('[data-testid="onboarding-zeitmodell"]')?.textContent ?? "";
-    ok(zeitmodell.includes("189") && zeitmodell.includes("261") && zeitmodell.includes("لا تضمن بلوغه") &&
-      zeitmodell.includes("ليس تسجيلاً بشرياً"),
-      "TC725-7 نموذج الوقت يعرض الأرقام الحية ويفصح عن TTS ولا يضمن B2");
+    ok(zeitmodell.includes("45–90") && zeitmodell.includes("65") && zeitmodell.includes("69") && zeitmodell.includes("189") &&
+      zeitmodell.includes("لا تضمن بلوغه") && zeitmodell.includes("لم يُثبت") && zeitmodell.includes("ليس تسجيلاً بشرياً"),
+      "TC725-7 نموذج الوقت يفصل الأساسي والتعميق، يعلن حد الإثبات وTTS، ولا يضمن B2");
     const weiter = btn("التالي — اختر وتيرتك");
     if (weiter) click(weiter);
     const intensiv = rootEl.querySelector('[data-testid="onboarding-tempo-intensiv"]') as HTMLElement | null;
