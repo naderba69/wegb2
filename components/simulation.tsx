@@ -154,7 +154,11 @@ export default function Simulation() {
       ...p,
       simulationen: [
         ...(p.simulationen ?? []),
-        { datum: lokalesDatum(), seed, format, punkte: bewertung.prozent, bestanden: bewertung.bestanden },
+        {
+          datum: lokalesDatum(), seed, format, punkte: bewertung.prozent,
+          objektiv: bewertung.objektiv, selbstbericht: bewertung.selbstbericht,
+          gesamtUrteil: bewertung.gesamtUrteil,
+        },
       ].slice(-30),
     }));
   }, [phase, bewertung, seed, format, update]);
@@ -215,8 +219,8 @@ export default function Simulation() {
       <div data-testid="sim-start">
         <p style={{ lineHeight: 1.9 }}>
           محاكاة تدريبية ببنية مواءمة مؤقتة من بنوك التطبيق: وحدات موقوتة وبنود حقيقية من مستواك.
-          القراءة والاستماع والبنى اللغوية تُصحَّح آليًا؛ الكتابة والتحدّث تُقيّمهما أنت بشبكة معايير معلنة
-          (والتصحيح الذكي الاختياري في الإعدادات استشاريّ خارج النقاط).
+          القراءة والاستماع والبنى اللغوية تُصحَّح محليًا آليًا؛ الكتابة والتحدّث تقريران ذاتيان بشبكة معلنة.
+          يُعرض النوعان منفصلين ولا تُركّب منهما نتيجة نجاح أو مستوى كلي.
         </p>
         <div style={{ display: "grid", gap: "0.5rem" }} role="radiogroup" aria-label="صيغة الامتحان">
           {SIM_FORMATE.map((fm) => (
@@ -248,8 +252,8 @@ export default function Simulation() {
           <li>🗣️ التحدّث: {plan.zeiten.vorbereitung} دقيقة تحضير ثم عرض ونقاش ({plan.zeiten.sprechen} دقيقة)</li>
         </ul>
         <p style={{ fontSize: "0.88rem", color: "var(--color-ink2)", lineHeight: 1.8 }}>
-          ⚠️ محاكاة تدريبية من موادّ التطبيق — ليست امتحانًا رسميًا ولا توقّعًا لنتيجتك؛ غايتها قياس جاهزيتك بصدق.
-          الصيغة المختارة: {f.titelAr}.
+          ⚠️ محاكاة تدريبية من موادّ التطبيق — ليست امتحانًا رسميًا ولا توقّعًا لنتيجتك ولا قياسًا لجاهزيتك.
+          الأقسام الآلية تدريب داخلي، والإنتاج تقرير ذاتي غير مراجع. الصيغة المختارة: {f.titelAr}.
         </p>
         <button type="button" className="btn btn-primary" data-testid="sim-starten" style={{ minHeight: "48px" }} onClick={() => setPhase("lesen")}>
           ▶️ ابدأ المحاكاة
@@ -259,8 +263,8 @@ export default function Simulation() {
             <h4 style={{ margin: "0 0 0.4rem" }}>محاكاة سابقة ({historik.length})</h4>
             {historik.slice(-5).reverse().map((h, i) => (
               <div key={i} style={{ fontSize: "0.9rem", lineHeight: 1.9 }}>
-                <span className="rtl-num">{h.datum}</span> · {formatById((h.format as SimFormatId) ?? "goethe-b2").titelAr} — قراءة {h.punkte.lesen}% · استماع {h.punkte.hoeren}% · كتابة {h.punkte.schreiben}% · تحدّث {h.punkte.sprechen}%{" "}
-                {h.bestanden ? "✅ مستوفية بصيغتها" : "— دون عتبة صيغتها"}
+                <span className="rtl-num">{h.datum}</span> · {formatById((h.format as SimFormatId) ?? "goethe-b2").titelAr} —
+                آلي: قراءة {h.punkte.lesen}% · استماع {h.punkte.hoeren}% — ذاتي: كتابة {h.punkte.schreiben}% · تحدث {h.punkte.sprechen}% · لا حكم شامل
               </div>
             ))}
           </div>
@@ -479,8 +483,11 @@ export default function Simulation() {
   // ende
   return (
     <div data-testid="sim-ergebnis">
-      <h3 style={{ marginTop: 0 }}>{bewertung.bestanden ? "🏆 مستوفية لعتبات صيغتها" : "📋 دون عتبات صيغتها"}</h3>
+      <h3 style={{ marginTop: 0 }}>📋 لا حكم نجاح شامل</h3>
       <div style={{ fontWeight: 700, marginBottom: "0.3rem" }}>{formatById(format).titelAr}</div>
+      <p data-testid="sim-provenance-boundary" style={{ fontSize: "0.9rem", lineHeight: 1.8 }}>
+        النتائج الموسومة «تصحيح محلي آلي» منفصلة عن «تقرير ذاتي غير مراجع». لا يُجمع النوعان لإصدار نجاح أو رسوب أو مستوى.
+      </p>
       {bewertung.zeilen.map((z) => (
         <div key={z.titelAr} style={{ display: "flex", justifyContent: "space-between", padding: "0.45rem 0", borderBottom: "1px solid var(--color-line)", fontWeight: z.stark ? 800 : undefined }}>
           <span>{z.titelAr}</span>
@@ -489,8 +496,8 @@ export default function Simulation() {
       ))}
       <p style={{ fontSize: "0.9rem", lineHeight: 1.85, marginTop: "0.7rem" }}>{bewertung.fazitAr}</p>
       <p style={{ fontSize: "0.88rem", color: "var(--color-ink2)", lineHeight: 1.8 }}>
-        هذه محاكاة من موادّ التطبيق لتقدير جاهزيتك — ليست نتيجة امتحان رسمي ولا توقّعًا.
-        حُفظت المحاولة في سجلّك (شاشة البدء).
+        هذه محاكاة تدريبية من مواد التطبيق، وليست نتيجة امتحان رسمي أو قياس جاهزية أو توقعًا.
+        حُفظت الأقسام الآلية والتقارير الذاتية منفصلة في سجلّك.
       </p>
       <button type="button" className="btn btn-primary" style={{ minHeight: "48px" }} onClick={neuStarten}>
         🔁 محاكاة جديدة بموادّ أخرى

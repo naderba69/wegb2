@@ -2250,6 +2250,10 @@ const hasFile = txt().includes("صوتٌ من الدار");
     mount(React.createElement(Bereitschaft, { progress: progSim as never }));
     const band = rootEl.querySelector('[data-testid="sim-band"]');
     ok(!!band && (band.textContent ?? "").includes("70"), "R286c مجال تذبذب المحاكاة (M5) يعرض المتوسط والمجال من محاولات المتعلم");
+    const noOverall = rootEl.querySelector('[data-testid="simulation-overall-not-assessed"]');
+    ok(!!noOverall && (noOverall.textContent ?? "").includes("غير مقاس") &&
+      (band?.textContent ?? "").includes("تصحيح محلي آلي") && (band?.textContent ?? "").includes("تقرير ذاتي"),
+    "PA017 واجهة التحليلات تفصل الآلي عن التقرير الذاتي ولا تعرض حكماً شاملاً");
   }
 
   /* ═══════════ R287 — M3 اقتراح إعادة توزيع + M15 لافتة استئناف + M7 وتيرة ═══════════ */

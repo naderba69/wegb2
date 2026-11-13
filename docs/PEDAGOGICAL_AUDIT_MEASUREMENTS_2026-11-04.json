@@ -9,7 +9,7 @@
       "failed": 0
     },
     "interactiveJsdom": {
-      "passed": 1017,
+      "passed": 1018,
       "failed": 0,
       "plannedTasksTraversed": 2500,
       "interactiveElementsTouched": 22549
@@ -98,6 +98,12 @@
       "failed": 0,
       "generatedTasksAnnotated": 2500,
       "coarseKindMapPresent": false
+    },
+    "simulationProvenanceAudit": {
+      "passed": 12,
+      "failed": 0,
+      "formatsChecked": 4,
+      "overallVerdict": "not_assessed"
     }
   },
   "defaultPlan": {
@@ -337,10 +343,10 @@
     "fixedPedagogicalRisks": 17
   },
   "inventorySnapshot": {
-    "indexedTrackedFilesAndAuditArtifacts": 3540,
-    "manual_complete": 29,
-    "manual_targeted": 45,
-    "not_started": 3462,
+    "indexedTrackedFilesAndAuditArtifacts": 3541,
+    "manual_complete": 35,
+    "manual_targeted": 44,
+    "not_started": 3458,
     "audit_artifact": 4
   },
   "learningStateCorrections": {
@@ -469,5 +475,34 @@
     "expertConstructValidationClaimed": false,
     "cefrOrExamValidityClaimed": false,
     "regressionGate": "npm run audit:competency-evidence"
+  },
+  "simulationProvenanceCorrections": {
+    "finding": "PA-017",
+    "formats": [
+      "goethe-b2",
+      "telc-b2",
+      "goethe-b1",
+      "dtz"
+    ],
+    "objectiveSections": [
+      "lesen",
+      "hoeren",
+      "sprachbausteine"
+    ],
+    "selfReportedSections": [
+      "schreiben",
+      "sprechen"
+    ],
+    "overallVerdict": "not_assessed",
+    "perfectScoresCanCreateOverallPass": false,
+    "telcWrittenOrOverallPassComposed": false,
+    "dtzLevelInferred": false,
+    "legacyBestandenUsedByAnalytics": false,
+    "recommendationUsesSelfReport": false,
+    "externalExaminerReviewPresent": false,
+    "officialValidityClaimed": false,
+    "accreditationTechnicalChecks": 49,
+    "externalSignoffsPending": 19,
+    "regressionGate": "npm run audit:simulation-provenance"
   }
 }

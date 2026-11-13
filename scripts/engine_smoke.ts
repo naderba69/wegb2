@@ -100,7 +100,7 @@ import {
   FEHLER_KAT,
 } from "../lib/fehler";
 import { normalize, diffWoerter, konfidenz, grader, deepReview, noteFromPct, LLM_ANBIETER, erstesJsonObjekt } from "../lib/grader";
-import { SIM_FORM, SIM_FORMATE, baueSimulation, antwortRichtig, punkteAusAnteil, modulBestanden, simulationBestanden, rubrikPunkte, schreibenZuKurz, schreibenPunkte, bewerteSimulation } from "../lib/simulation";
+import { SIM_FORM, SIM_FORMATE, baueSimulation, antwortRichtig, punkteAusAnteil, modulBestanden, rubrikPunkte, schreibenZuKurz, schreibenPunkte, bewerteSimulation } from "../lib/simulation";
 import { fertigkeitenBilanz, schwaechsteFertigkeit, bereitschaftsFazit, tageBisExamen } from "../lib/bereitschaft";
 import { bewerteKriterien } from "../lib/kriterien";
 import { baueSprechRunde, selbstPunkte, SPRECH_KRITERIEN } from "../lib/sprechkarten";
@@ -12869,11 +12869,10 @@ function collectR262(dir: string, out: string[] = []): string[] {
     "K263b الكتابة مهمّتان مختلفتان من B2، والتحدّث عرضُ Teil 2 ونقاشُ Teil 3 من B2");
   ok(SIM_FORM.lesenMinuten === 65 && SIM_FORM.hoerenMinuten === 40 && SIM_FORM.schreibenMinuten === 75 &&
      SIM_FORM.sprechenVorbereitungMinuten === 15 && SIM_FORM.passPunkte === 60 &&
-     simulationBestanden({ lesen: 60, hoeren: 60, schreiben: 60, sprechen: 60 }) &&
-     !simulationBestanden({ lesen: 100, hoeren: 100, schreiben: 100, sprechen: 59 }) &&
+     bewerteSimulation("goethe-b2", { lesenAnteil: 1, sprachAnteil: 0, hoerenAnteil: 1, schreibenRubrik: 100, schreibenZuKurz: false, sprechenRubrik: 100 }).gesamtUrteil === "not_assessed" &&
      rubrikPunkte([0, 0, 0, 0]) === 100 && schreibenZuKurz(74, 150) && !schreibenZuKurz(75, 150) &&
      schreibenPunkte(100, true, false) === 59 && punkteAusAnteil(0.6) === 60 && modulBestanden(60) && !modulBestanden(59),
-    "K263c الصيغة الرسمية والحكم: أزمنة Goethe (65/40/75+15) وعتبة 60، ولا تعويض بين الوحدات، وقاعدة نصف الطول تسقف الكتابة");
+    "K263c الأزمنة وقاعدة الطول وعتبة القسم الآلي ثابتة، لكن اكتمال التقرير الذاتي لا يصدر حكماً شاملاً");
   let richtig = 0, falschOk = true;
   for (const g of p1.lesen) {
     const t = texts.find((x) => x.id === g.textId)!;
@@ -12912,9 +12911,10 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const btSchwach = bewerteSimulation("telc-b2", { ...roh, sprechenRubrik: 40 });
   const bd = bewerteSimulation("dtz", roh);
   const bdA2 = bewerteSimulation("dtz", { ...roh, lesenAnteil: 0.5, sprachAnteil: 0.5, hoerenAnteil: 0.5, schreibenRubrik: 50, sprechenRubrik: 50 });
-  ok(bt.bestanden && !btSchwach.bestanden && bd.bestanden && !bdA2.bestanden &&
-     bd.zeilen.some((z) => z.wert === "B1") && bdA2.zeilen.some((z) => z.wert === "A2"),
-    "K264d أحكام الصيغ: telc تشترط الكتلتين (مكتوب 135 + شفهي 45) وDTZ يمنح مستوى B1/A2 لا نقطة");
+  ok([bt, btSchwach, bd, bdA2].every((result) => result.gesamtUrteil === "not_assessed") &&
+     [bd, bdA2].every((result) => result.zeilen.some((z) => z.titelAr === "مستوى DTZ الكلي" && z.wert === "غير مقاس")) &&
+     bt.zeilen.some((z) => z.titelAr.includes("المجموع المصحح آلياً فقط")),
+    "K264d الصيغ تفصل المصحح آلياً عن التقرير الذاتي؛ لا نجاح telc كلي ولا مستوى DTZ من المزيج");
 }
 
 /* ═══ K265 · R173 (E3): تحليلات الاستعداد — من السجلّ فقط، بلا تنبؤ ═══ */
@@ -12922,8 +12922,9 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const leerB = fertigkeitenBilanz(emptyProgress);
   const fazitLeer = bereitschaftsFazit(emptyProgress);
   ok(leerB.every((b) => b.versuche === 0 && b.mittel === null) && fazitLeer.versucheGesamt === 0 &&
-     fazitLeer.empfehlungAr === null && schwaechsteFertigkeit(leerB) === null && tageBisExamen(emptyProgress) === null,
-    "K265a بلا سجلّ: لا أرقام مخترعة ولا توصية — الحقول فارغة بصراحة");
+     fazitLeer.gesamtUrteil === "not_assessed" && fazitLeer.empfehlungAr === null &&
+     schwaechsteFertigkeit(leerB) === null && tageBisExamen(emptyProgress) === null,
+    "K265a بلا سجلّ: لا أرقام مخترعة ولا توصية ولا حكم شامل");
   const datum = (t: number) => new Date(Date.UTC(2026, 0, t)).toISOString();
   const simP = { ...emptyProgress, simulationen: [60, 80, 90, 95].map((l, i) => ({
     datum: datum(i + 1), seed: i, format: "goethe-b2",
@@ -12937,10 +12938,10 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const mitTermin = { ...emptyProgress, settings: { ...emptyProgress.settings, examDate: fmtD(new Date(2026, 5, 25)) } };
   const libB = readFileSync("lib/bereitschaft.ts", "utf8");
   const compB = readFileSync("components/bereitschaft.tsx", "utf8");
-  ok(tageBisExamen(mitTermin as never, new Date(2026, 5, 15)) === 10 && les.bandAr.includes("ثابتة فوق خطّ النجاح") &&
-     !/wahrscheinlichkeit/i.test(libB + compB) && compB.includes("وليست تنبؤًا") && !compB.includes("احتمال نجاح") &&
-     libB.includes("خطّ النجاح المرجعي = 60"),
-    "K265c عدّاد أيامٍ وصفيّ فقط، والنطاقات تسمّي السجلّ بخطّ 60 الرسمي — لا لغة تنبؤ في المصدرين");
+  ok(tageBisExamen(mitTermin as never, new Date(2026, 5, 15)) === 10 && les.bandAr.includes("الخط المرجعي الداخلي") &&
+     !/wahrscheinlichkeit/i.test(libB + compB) && compB.includes("لا يحسب نجاحاً كلياً") && !compB.includes("احتمال نجاح") &&
+     libB.includes("لا تنبؤ أو حكم نجاح/جاهزية شامل"),
+    "K265c عدّاد وصفي فقط، وخط 60 داخلي للأقسام الآلية؛ لا خلط أو تنبؤ أو حكم جاهزية");
 }
 
 /* ═══ K266 · R173 (E4): تقييم الكتابة بمعايير Goethe — إشارات آلية وقاعدة نصف الطول ═══ */

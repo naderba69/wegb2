@@ -565,8 +565,18 @@ export interface Progress {
     examDate?: string;
     examName?: string;
   };
-  /** 🎓 نتائج محاكاة الامتحان (E1/R171): أحدث 30 محاولة بنقاط الوحدات الأربع وحكمها — محاكاة لا نتيجة رسمية */
-  simulationen?: { datum: string; seed: number; format?: string; punkte: { lesen: number; hoeren: number; schreiben: number; sprechen: number }; bestanden: boolean }[];
+  /** 🎓 أحدث 30 محاكاة: الآلي منفصل عن التقرير الذاتي، ولا حكم نجاح شامل. `bestanden` باقٍ للتوافق مع السجلات القديمة فقط ولا يُنشأ مجدداً. */
+  simulationen?: Array<{
+    datum: string;
+    seed: number;
+    format?: string;
+    punkte: { lesen: number; hoeren: number; schreiben: number; sprechen: number };
+    objektiv?: { lesen: number; hoeren: number; sprachbausteine: number | null };
+    selbstbericht?: { schreiben: number; sprechen: number };
+    gesamtUrteil?: "not_assessed";
+    /** حقل تراثي قبل PA-017؛ لا يُستعمل حكماً حالياً. */
+    bestanden?: boolean;
+  }>;
   /** 🎙️ سجلّ بطاقات المحادثة المسجّلة (E5): بيانات وصفية فقط (بطاقة/تقدير ذاتي/مدّة) — الصوت نفسه لا يُخزَّن أبداً */
   sprechUebungen?: { datum: string; level: string; teil: number; karteId: string; dauerS: number; punkte: number }[];
   /** ⏱️ A3/R283: قياسات سرعة القراءة (كلمات/دقيقة) من سلّم القراءة — قياس زمني آلي لا حكم مستوى رسمي */
