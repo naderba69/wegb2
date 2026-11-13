@@ -83,6 +83,8 @@ jobs:
         run: npm run audit:mediation
       - name: Language-labelled fields and RTL/LTR direction (PA-025/PA-026)
         run: npm run audit:language-fields
+      - name: Conservative receptive/form placement (PA-014)
+        run: npm run audit:placement
       - name: Wort-für-Wort-Audit (bestätigte Blocker)
         run: npm run audit:words
       - name: Scaffold-Observability (CEFR baseline; candidates are not defects)

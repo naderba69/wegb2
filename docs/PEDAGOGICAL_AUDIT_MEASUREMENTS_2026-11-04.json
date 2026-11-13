@@ -5,11 +5,11 @@
   "scopeNoteAr": "هذه قياسات قابلة لإعادة التشغيل وليست شهادة صحة لغوية أو بيداغوجية.",
   "baseline": {
     "smoke": {
-      "passed": 2029,
+      "passed": 2030,
       "failed": 0
     },
     "interactiveJsdom": {
-      "passed": 1014,
+      "passed": 1017,
       "failed": 0,
       "plannedTasksTraversed": 2500,
       "interactiveElementsTouched": 22549
@@ -84,6 +84,14 @@
     "build": {
       "routesGenerated": 19,
       "routesFailed": 0
+    },
+    "placementAudit": {
+      "passed": 7,
+      "failed": 0,
+      "domains": 4,
+      "itemsPerLevel": 4,
+      "passThreshold": "3/4",
+      "maxItemsPerDomain": 16
     }
   },
   "defaultPlan": {
@@ -323,10 +331,10 @@
     "fixedPedagogicalRisks": 17
   },
   "inventorySnapshot": {
-    "indexedTrackedFilesAndAuditArtifacts": 3537,
-    "manual_complete": 25,
-    "manual_targeted": 44,
-    "not_started": 3464,
+    "indexedTrackedFilesAndAuditArtifacts": 3538,
+    "manual_complete": 27,
+    "manual_targeted": 45,
+    "not_started": 3462,
     "audit_artifact": 4
   },
   "learningStateCorrections": {
@@ -402,5 +410,35 @@
     },
     "reason": "Arabic cues moved out of German-labelled fields; learner support remains in promptAr.",
     "confirmedAnswerLeaks": 0
+  },
+  "placementCorrections": {
+    "finding": "PA-014",
+    "scope": "receptive-form-only-v1",
+    "domains": [
+      "lesen",
+      "hoeren",
+      "grammatik",
+      "wortschatz"
+    ],
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2"
+    ],
+    "itemsPerLevelAndDomain": 4,
+    "distinctSourcesPerLevelAndDomain": 4,
+    "minimumOptionsPerItem": 3,
+    "passThresholdCorrect": 3,
+    "passThresholdTotal": 4,
+    "oneCorrectCanAdvance": false,
+    "twoCorrectCanAdvance": false,
+    "rawBandEvidencePersisted": true,
+    "rawItemIdsSourcesAndOutcomesPersisted": true,
+    "writingSampleIncluded": false,
+    "speakingSampleIncluded": false,
+    "cefrLevelClaimed": false,
+    "psychometricCalibrationClaimed": false,
+    "regressionGate": "npm run audit:placement"
   }
 }

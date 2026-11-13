@@ -159,7 +159,10 @@ import { entdeckungsFrage, induktionMoeglich, ergebnisText, MIN_BEISPIELE, stufe
 import { STIL_PAARE, REGEL_AR, bankPruefen, stilUebungen, registerErkennen, stilProfil } from "../lib/stil";
 import { signaleIn, ablenker, signalRadar, signalDrill, radarAbdeckung, SIGNALE, KATEGORIE_AR } from "../lib/signalwoerter";
 import { kapselIds, kapselSaetze, kapselAusTag, KAPSEL_GROESSE, KAPSEL_LEITER, kapselVerbuche, kapselFaellig, kapselIdsAdaptiv, kapselQuizAdaptiv, kapselQuiz, satzIdAusUebung } from "../lib/kapsel";
-import { EINSTUFUNG_SKILLS, einstufungsFragen, einstufungStart, einstufungAntwort, einstiegsVorschlag } from "../lib/einstufung";
+import {
+  EINSTUFUNG_BESTANDEN_AB, EINSTUFUNG_ITEMS_PRO_STUFE, EINSTUFUNG_SCOPE, EINSTUFUNG_SKILLS,
+  einstufungsBandErgebnisse, einstufungsFragen, einstufungStart, einstufungAntwort, einstiegsVorschlag,
+} from "../lib/einstufung";
 import { schattenEinheiten, vergleicheSchatten } from "../lib/shadowing";
 import { wortDiff, diffStatistik } from "../lib/textdiff";
 import { musterDrill } from "../lib/musterdrill";
@@ -13565,35 +13568,55 @@ function collectR262(dir: string, out: string[] = []): string[] {
     "K275c زمن الافتتاحية ومبدؤها معلنان للمتعلم في رأس اليوم دائمًا");
 }
 
-// ===== K276 (R183 · M3): Adaptives Niveau je Fertigkeit. Pools nur aus der Bank der
-// Stufe, Treppe steigt bei >= 1/2 und stoppt bei 0/2, Schaetzung monoton in den
-// Antworten, Einstieg = schwächste Fertigkeit, nie über eine unbestandene Prüfung. =====
+// ===== K276 (R183 · M3 / PA-014): Vier verschiedene Quellen je Stufe. Ein einzelner
+// Treffer oder 2/4 reichen nie; Aufstieg erst ab 3/4. Das Ergebnis bleibt eine interne
+// rezeptiv-formbezogene Einstiegsempfehlung, keine CEFR- oder Produktionsmessung. =====
 {
-  const poolsOk = EINSTUFUNG_SKILLS.every((sk) =>
-    einstufungsFragen(sk).length === 8 &&
-    einstufungsFragen(sk).every((f, i) => f.stufe === (["A1", "A1", "A2", "A2", "B1", "B1", "B2", "B2"] as const)[i]) &&
-    einstufungsFragen(sk).every((f) => f.ex.type === "mc" && (f.ex.options?.length ?? 0) >= 2 && f.ex.options!.includes(String(f.ex.answer))) &&
-    (sk !== "hoeren" || einstufungsFragen(sk).every((f) => typeof f.audioSrc === "string" || !!f.ex.text)));
-  ok(poolsOk, "K276a لكلِّ مهارة 8 أسئلة (زوج لكلّ مستوى A1..B2) من بنك مستواها، خيارات صالحة والجواب بينها، وللسماع صوت أو نص بديل");
-  // Monotonie-Fuzz: kein Antwortmuster darf bei einer Verbesserung sinken
-  const schaetzungFuer = (sk: (typeof EINSTUFUNG_SKILLS)[number], muster: boolean[]) => {
-    let lauf = einstufungStart(sk);
-    for (const okk of muster) { if (lauf.fertig) break; lauf = einstufungAntwort(lauf, okk); }
-    return ["A0", "A1", "A2", "B1", "B2"].indexOf(lauf.schaetzung ?? "A0");
+  const erwarteteStufen = ["A1", "A2", "B1", "B2"] as const;
+  const poolsOk = EINSTUFUNG_SKILLS.every((skill) => {
+    const fragen = einstufungsFragen(skill);
+    return fragen.length === 16 && erwarteteStufen.every((stufe, stufeIndex) => {
+      const band = fragen.slice(stufeIndex * 4, stufeIndex * 4 + 4);
+      return band.length === 4 && band.every((frage) => frage.stufe === stufe) &&
+        new Set(band.map((frage) => frage.sourceId)).size === 4;
+    }) && fragen.every((frage) => frage.ex.type === "mc" && (frage.ex.options?.length ?? 0) >= 3 &&
+      frage.ex.options!.includes(String(frage.ex.answer))) &&
+      (skill !== "hoeren" || fragen.every((frage) => typeof frage.audioSrc === "string" || !!frage.ex.text));
+  });
+  ok(poolsOk && EINSTUFUNG_ITEMS_PRO_STUFE === 4 && EINSTUFUNG_BESTANDEN_AB === 3,
+    "K276a لكل مجال 16 بنداً: أربعة مصادر مختلفة لكل حزمة A1..B2، ≥3 خيارات والجواب بينها، وللسماع صوت أو نص بديل");
+
+  const laufFuer = (skill: (typeof EINSTUFUNG_SKILLS)[number], muster: boolean[]) => {
+    let lauf = einstufungStart(skill);
+    for (const antwort of muster) { if (lauf.fertig) break; lauf = einstufungAntwort(lauf, antwort); }
+    return lauf;
   };
+  const einTreffer = laufFuer("lesen", [true, false, false, false]);
+  const zweiTreffer = laufFuer("lesen", [true, true, false, false]);
+  const dreiTreffer = laufFuer("lesen", [true, true, true, false, false, false, true, true]);
+  const voll = laufFuer("lesen", Array.from({ length: 16 }, (_, index) => index % 4 !== 3));
+  ok(einTreffer.fertig && einTreffer.schaetzung === "A0" && zweiTreffer.fertig && zweiTreffer.schaetzung === "A0" &&
+    dreiTreffer.fertig && dreiTreffer.schaetzung === "A1" && voll.fertig && voll.schaetzung === "B2" &&
+    einstufungsBandErgebnisse(voll).every((band) => band.gesamt === 4 && band.richtig === 3 && band.bestanden),
+    "K276b تخمين 1/4 أو 2/4 لا يصعد؛ 3/4 يجتاز الحزمة فقط، وأربع رباعيات 3/4 تبلغ حزمة B2 مع سجل خام قابل للتتبع");
+
+  // Monotonie-Fuzz: تحسين إجابة لا يُنزل حزمة الدخول المقترحة.
+  const schaetzungFuer = (skill: (typeof EINSTUFUNG_SKILLS)[number], muster: boolean[]) =>
+    ["A0", "A1", "A2", "B1", "B2"].indexOf(laufFuer(skill, muster).schaetzung ?? "A0");
   let monoton = true;
-  for (const sk of EINSTUFUNG_SKILLS) {
-    for (let m = 0; m < 256 && monoton; m++) {
-      const muster = Array.from({ length: 8 }, (_, i) => !!(m & (1 << i)));
-      const basis = schaetzungFuer(sk, muster);
-      for (let i = 0; i < 8; i++) {
-        if (muster[i]) continue;
-        const besser = [...muster]; besser[i] = true;
-        if (schaetzungFuer(sk, besser) < basis) { monoton = false; break; }
+  const zufall = rng(276);
+  for (const skill of EINSTUFUNG_SKILLS) {
+    for (let fall = 0; fall < 1024 && monoton; fall++) {
+      const muster = Array.from({ length: 16 }, () => zufall() >= 0.5);
+      const basis = schaetzungFuer(skill, muster);
+      for (let index = 0; index < 16; index++) {
+        if (muster[index]) continue;
+        const besser = [...muster]; besser[index] = true;
+        if (schaetzungFuer(skill, besser) < basis) { monoton = false; break; }
       }
     }
   }
-  ok(monoton, "K276b رتابة صارمة: تحسين أيّ إجابة في أيّ نمط (256×4 مهارة) لا يُنزل التقدير أبدًا");
+  ok(monoton, "K276c رتابة صارمة: تحسين أي إجابة في 1024 نمطاً×4 مجالات لا ينزل حزمة الدخول");
   const alle = (v: string) => ({ lesen: v, hoeren: v, grammatik: v, wortschatz: v } as Record<(typeof EINSTUFUNG_SKILLS)[number], "A1">);
   const vLeer = einstiegsVorschlag(alle("B2") as never, emptyProgress);
   const vMitte = einstiegsVorschlag({ ...alle("B2"), lesen: "A2" } as never, emptyProgress);
@@ -13602,12 +13625,15 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const alleBestanden = { ...emptyProgress, exams: { 10: { score: 90, passed: true }, 94: { score: 90, passed: true }, 178: { score: 90, passed: true }, 276: { score: 90, passed: true } } };
   const vFrei = einstiegsVorschlag(alle("B2") as never, alleBestanden as typeof emptyProgress);
   ok(vLeer.tag === 10 && vLeer.pruefungsTag === 10 && vMitte.tag === 10 && vOffen.tag === 276 && vOffen.pruefungsTag === 276 && vFrei.tag === 277 && vFrei.pruefungsTag === undefined,
-    "K276c القفز الآمن: بلا امتحانات مجتازة يقف الاقتراح عند أوّل امتحان (يوم 10) مهما علت المهارات، وبعد A0–A2 عند امتحان B1 (276)، وبعد الكلّ عند 277 بلا سقف");
+    "K276d القفز الآمن: بلا امتحانات مجتازة يقف الاقتراح عند أوّل امتحان (يوم 10) مهما علت الحزم، وبعد A0–A2 عند امتحان B1 (276)، وبعد الكلّ عند 277 بلا سقف");
   const eSrc = readFileSync("components/einstufung.tsx", "utf8");
   const uSrc2 = readFileSync("app/ueben/page.tsx", "utf8");
   const setSrc = readFileSync("app/einstellungen/page.tsx", "utf8");
-  ok(uSrc2.includes('offen === "einstufung"') && eSrc.includes("einstiegsVorschlag") && eSrc.includes("ليس اختبار Goethe/telc رسميًا") && setSrc.includes("التشخيص التكيّفي"),
-    "K276d المحطة مركّبة في /ueben، تطبّق الاقتراح، بإفصاح «ليس اختبارًا رسميًا»، ومربوطة من الإعدادات");
+  ok(uSrc2.includes('offen === "einstufung"') && eSrc.includes("einstiegsVorschlag") &&
+    eSrc.includes("لا توجد هنا عينة كتابة أو تحدث") && eSrc.includes("لا تصدر النتيجة مستوى CEFR") &&
+    eSrc.includes("3 من 4") && eSrc.includes("4–16 بندًا") && eSrc.includes("scope: EINSTUFUNG_SCOPE") &&
+    EINSTUFUNG_SCOPE === "receptive-form-only-v1" && setSrc.includes("فرز الدخول الاستقبالي"),
+    "K276e المحطة مركبة وتصرح بغياب الكتابة/التحدث وعدم حكم CEFR، تعرض 3/4 و4–16، وتحفظ نطاق الدليل مع الاقتراح");
 }
 
 // ===== K277 (R184 · M4): Shadowing-Vergleich ist reine Wellen-/Zeit-Metrik an

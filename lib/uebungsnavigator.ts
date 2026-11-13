@@ -164,8 +164,8 @@ export function baueUebungsEmpfehlungen(
       station: "einstufung",
       signal: "placement",
       prioritaet: 96,
-      grundAr: "ابدأ بتقدير نقطة دخول محافظة قبل أن تختار تدريباً عشوائياً.",
-      messwertAr: "لا يوجد تشخيص مستوى مطبّق بعد",
+      grundAr: "ابدأ بفرز دخول محافظ للقراءة والسماع والقواعد والمفردات قبل تدريب عشوائي؛ لا يقيس الإنتاج أو CEFR.",
+      messwertAr: "لا يوجد فرز دخول استقبالي مطبّق بعد",
     });
   }
 

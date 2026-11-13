@@ -4509,11 +4509,30 @@ const hasFile = txt().includes("صوتٌ من الدار");
   ok(!!navigatorKarte && navigatorKarte.textContent!.includes("ترتيب محلي حتمي") && navigatorKarte.textContent!.includes("لا يغيّر خطتك"),
     "R315-1 ملاح التدريب الموحّد ظاهر داخل «اليوم/تدرّب» ويعلن محليته وحد عدم تعديل الخطة");
   const einstufungEmpfehlung = rootEl.querySelector('[data-testid="ueben-empfehlung-einstufung"]') as HTMLElement | null;
-  ok(!!einstufungEmpfehlung && einstufungEmpfehlung.textContent!.includes("الأولوية الأولى") && einstufungEmpfehlung.textContent!.includes("لا يوجد تشخيص"),
+  ok(!!einstufungEmpfehlung && einstufungEmpfehlung.textContent!.includes("الأولوية الأولى") && einstufungEmpfehlung.textContent!.includes("لا يوجد فرز دخول"),
     "R315-2 ملف بلا تشخيص يرى سبب الأولوية والقياس الفعلي، لا توصية مبهمة أو ضعفاً مخترعاً");
   if (einstufungEmpfehlung) click(einstufungEmpfehlung);
   ok(!!rootEl.querySelector('[data-testid="einstufung"]'),
     "R315-3 نقر توصية الملاح يفتح محطة التشخيص الحية نفسها داخل التدفق الموحّد");
+  const scopeEinstufung = rootEl.querySelector('[data-testid="einstufung-scope"]');
+  ok(!!scopeEinstufung && scopeEinstufung.textContent!.includes("لا توجد هنا عينة كتابة أو تحدث") &&
+    scopeEinstufung.textContent!.includes("لا تصدر النتيجة مستوى CEFR"),
+    "PA014-1 واجهة الفرز تعلن قبل البدء أنها استقبال/صيغة بلا كتابة أو تحدث ولا حكم CEFR");
+  const startEinstufung = btn("ابدأ التشخيص");
+  if (startEinstufung) click(startEinstufung);
+  for (let antwort = 0; antwort < 2; antwort++) {
+    const option = rootEl.querySelector('[data-testid="einstufung-lauf"] button') as HTMLElement | null;
+    if (option) click(option);
+  }
+  ok((rootEl.querySelector('[data-testid="einstufung-lauf"]')?.textContent ?? "").includes("بند 3/4"),
+    "PA014-2 لا يصدر قرار بعد بندين؛ الرباعية الكاملة مطلوبة مهما كانت الإجابتان");
+  for (let antwort = 0; antwort < 2; antwort++) {
+    const option = rootEl.querySelector('[data-testid="einstufung-lauf"] button') as HTMLElement | null;
+    if (option) click(option);
+  }
+  ok((rootEl.querySelector('[data-testid="einstufung-lauf"]')?.textContent ?? "").includes("بند 1/4") ||
+    !!rootEl.querySelector('[data-testid="einstufung-ergebnis"]'),
+    "PA014-3 القرار لا يحدث إلا بعد 4/4، ثم يبدأ نطاق جديد أو يعرض اقتراح الدخول");
   act(() => { dom.window.localStorage.removeItem("weg-abend"); });
 
   // 4) فتح «اختبر» يعرض بوّابة الوحدة والمحاكاة الحقيقية كاملة، من نفس الصفحة

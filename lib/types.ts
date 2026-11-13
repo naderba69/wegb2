@@ -511,10 +511,23 @@ export interface Progress {
     onboardingDone?: boolean;
     /** الهدف الذي صرّح به المتعلم؛ يستعمله ملاح التدريب لإشارة اختيارية شفافة فقط. */
     lernziel?: Lernziel;
-    /** أُكِّد اختبار تحديد المستوى */
+    /** اختيرت نقطة الانطلاق يدوياً أو طُبّق اقتراح فرز الدخول الداخلي. */
     placed?: boolean;
-    /** 🪪 نتيجة التشخيص التكيّفي (M3/R183): تقدير كلّ مهارة واليوم المطبَّق وتاريخه — تقدير آلي من بنوك التطبيق لا اختبار رسمي */
-    einstufung?: { lesen: string; hoeren: string; grammatik: string; wortschatz: string; tag: number; datum: string };
+    /** 🪪 فرز دخول استقبالي/شكلي داخلي؛ لا يقيس الكتابة/التحدث ولا يثبت مستوى CEFR. */
+    einstufung?: {
+      lesen: string;
+      hoeren: string;
+      grammatik: string;
+      wortschatz: string;
+      tag: number;
+      datum: string;
+      scope?: "receptive-form-only-v1";
+      evidence?: Partial<Record<"lesen" | "hoeren" | "grammatik" | "wortschatz", {
+        totalItems: number;
+        bands: Array<{ stufe: Level; richtig: number; gesamt: number; bestanden: boolean }>;
+        items: Array<{ stufe: Level; ok: boolean; itemId: string; sourceId: string }>;
+      }>>;
+    };
     /** 🔔 A27/R293: تذكير يومي محلي بإشعار متصفح (بلا خادم) */
     erinnerung?: { aktiv: boolean; uhrzeit: string };
     /** موعد الامتحان الخارجي (YYYY-MM-DD) + اسمه */

@@ -136,7 +136,7 @@ export default function Einstellungen() {
             الانتقال يغيّر موضعك في الخطة فقط — بطاقاتك ودفتر أخطائك ونقاطك تبقى كما هي، ويمكنك العودة متى شئت.
           </p>
           <p style={{ margin: "0 0 0.6rem" }}>
-            <Link href="/ueben">🪪 أو حدّد مستواك بالتشخيص التكيّفي (أربع مهارات، دقائق معدودة) ←</Link>
+            <Link href="/ueben">🪪 أو استخدم فرز الدخول الاستقبالي (لا يقيس الكتابة/التحدث ولا يثبت CEFR) ←</Link>
           </p>
           <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }} data-testid="einstieg-wahl">
             {(["A1", "A2", "B1", "B2"] as Level[]).map((lvl) => (
