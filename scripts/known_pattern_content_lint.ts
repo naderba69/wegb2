@@ -1,7 +1,9 @@
 /**
  * ═══════════════════════════════════════════════════════════════════
- *  كلمة-كلمة Wort-für-Wort Audit v2 — German + Arabic (confirmed blockers only)
+ *  Known-pattern content lint — German + Arabic
  * ═══════════════════════════════════════════════════════════════════
+ * فاحص regex محدود لأنماط معروفة في البنوك الموصولة أدناه. ليس مراجعة
+ * كلمةً كلمة، ولا يفهم المعنى أو المستوى أو دقة الترجمة، ولا يفحص كل واجهة.
  */
 import { grammarMap, dialogues, texts, sentences, alleVokabeln, writingTasks, fehlerList } from "../lib/content";
 import { exakteAntwortLecks } from "../lib/exercise-hints";
@@ -126,8 +128,8 @@ function assertRuleRegressions() {
     ["derivational scaffold is not auto-condemned", exakteAntwortLecks({ promptDe: "Ich ___ hier. (wohnen)", answer: ["wohne"] }).length === 0],
   ];
   const failed = checks.filter(([, ok]) => !ok).map(([name]) => name);
-  if (failed.length) throw new Error(`Wort-für-Wort regression failed: ${failed.join(", ")}`);
-  console.log(`Rule regressions: ${checks.length}/${checks.length}`);
+  if (failed.length) throw new Error(`Known-pattern lint regression failed: ${failed.join(", ")}`);
+  console.log(`Known-pattern rule regressions: ${checks.length}/${checks.length}`);
 }
 
 assertRuleRegressions();
@@ -255,22 +257,25 @@ for (const f of fehlerList) {
   scanDe(f.richtig, "fehler.json", f.id);
 }
 
-// ═══ تقرير ═══
+// ═══ تقرير محدود النطاق ═══
 const byKind: Record<string, number> = {};
 const byFile: Record<string, number> = {};
 for (const i of issues) {
   byKind[i.kind] = (byKind[i.kind] || 0) + 1;
   byFile[i.file] = (byFile[i.file] || 0) + 1;
 }
-console.log("=== WORT-FÜR-WORT AUDIT v2 — " + issues.length + " confirmed blockers ===");
+const scannedBanks = ["grammar", "dialogues", "texts", "sentences", "vocab", "writing", "fehler"];
+console.log(`=== KNOWN-PATTERN CONTENT LINT — ${issues.length} current rule matches ===`);
+console.log(`Scope: ${scannedBanks.join(", ")} · regex/schema checks only`);
+console.log("Out of scope: complete word-by-word review, meaning, CEFR level, translation quality, and unlisted UI/content files.");
 if (issues.length === 0) {
-  console.log("✓ Keine bestätigten Wort-, Struktur- oder Kodierungsfehler.");
+  console.log("✓ 0 matches for the currently implemented rules; no broader content-validity claim.");
 } else {
-  console.log("\nBy kind:");
+  console.log("\nBy rule kind:");
   for (const [k, n] of Object.entries(byKind).sort((a: any, b: any) => b[1] - a[1])) console.log("  " + k + ": " + n);
-  console.log("\nBy file:");
+  console.log("\nBy scanned source:");
   for (const [f, n] of Object.entries(byFile).sort((a: any, b: any) => b[1] - a[1])) console.log("  " + f + ": " + n);
-  console.log("\n=== All blockers ===");
+  console.log("\n=== Current rule matches ===");
   for (const i of issues) {
     console.log("  ✗ [" + i.kind + "] " + i.file + "/" + i.id + ": " + i.msg);
     if (i.ctx) console.log("       «" + i.ctx.slice(0, 160).replace(/\s+/g, " ") + "»");

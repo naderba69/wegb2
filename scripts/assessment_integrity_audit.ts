@@ -62,5 +62,11 @@ assert.match(read("components/onboarding-wizard.tsx"), /label: "regelmäßig"/);
 assert.doesNotMatch(read("package.json") + read("lib/i18n.ts"), /المدرّس الافتراضي الوحيد/);
 assert.doesNotMatch(read("components/WortReviewErweitert.tsx"), /كل حرف مدقق — لا عينات/);
 
-console.log("✅ Assessment integrity: ordered translation/dictation grading, 80% daily mastery language, FSRS disclosure, AI-role honesty, and confirmed copy fixes are intact.");
-console.log("ℹ️ This gate guards PA-004, PA-005, PA-012, PA-019, PA-024, and PA-028; it does not certify exam validity or external accreditation.");
+const settingsSource = read("app/einstellungen/page.tsx");
+assert.doesNotMatch(settingsSource, /D1_B[12]_DECKEL_MIN|ALTERNATIVE_PFADE|lib\/phasen\.ts|180\s*(?:\/|–|—|إلى)\s*600|(?:180|600)\s*(?:يوماً|يوم|Tage?)/);
+assert.match(settingsSource, /مساران واضحان/);
+assert.match(settingsSource, /مسار أساسي داخلي يستهدف 45–90 دقيقة/);
+assert.match(settingsSource, /التعميق الاختياري/);
+
+console.log("✅ Assessment integrity: ordered grading, mastery/SRS/AI honesty, confirmed copy fixes, and learner-facing methodology without internal decision codes are intact.");
+console.log("ℹ️ This gate guards PA-004, PA-005, PA-012, PA-019, PA-024, PA-028, and PA-030; it does not certify exam validity or external accreditation.");

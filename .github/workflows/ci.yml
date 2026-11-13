@@ -97,8 +97,8 @@ jobs:
         run: npm run audit:personalization
       - name: Reactive Can-Do self-report integrity (PA-031/PA-032)
         run: npm run audit:cando-integrity
-      - name: Wort-für-Wort-Audit (bestätigte Blocker)
-        run: npm run audit:words
+      - name: Known-pattern content lint (limited regex/schema rules)
+        run: npm run lint:known-content-patterns
       - name: Scaffold-Observability (CEFR baseline; candidates are not defects)
         run: npm run audit:scaffolds
       - name: Scaffold-Review (B1/B2 item decisions; no simulated expert sign-off)

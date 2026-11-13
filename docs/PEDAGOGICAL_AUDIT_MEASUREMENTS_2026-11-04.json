@@ -18,10 +18,12 @@
       "exitCode": 0,
       "confirmedStructuralDefectsReported": 0
     },
-    "wordRegexAudit": {
+    "knownPatternContentLint": {
       "exitCode": 0,
-      "confirmedBlockersReported": 0,
-      "ruleRegressions": "10/10"
+      "currentRuleMatches": 0,
+      "ruleRegressions": "10/10",
+      "scannedBanks": 7,
+      "claimBoundary": "regex/schema patterns only; no complete word-by-word, meaning, CEFR-level, translation, or unlisted-file review"
     },
     "planAudit": {
       "exitCode": 0,

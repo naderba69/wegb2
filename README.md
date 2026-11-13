@@ -157,7 +157,7 @@ npm run smoke      # 1937 نجاحاً، 0 فشل
 npm run audit:accreditation # 49/49 تقنياً؛ يعلن 19 توقيعاً خارجياً معلقاً
 npm run audit:accreditation:strict # متوقع حالياً exit 2 حتى اكتمال التوقيعات
 npm run interaktiv # R138: 936 نجاحاً، 0 فشل؛ 22838 عنصراً ملموساً بلا عنصر عارٍ/أخرس/بلا عنوان
-npm run audit:content && npm run audit:words && npm run audit:repo
+npm run audit:content && npm run lint:known-content-patterns && npm run audit:repo
 npm run e2e:browser      # Chromium إنتاجي حقيقي: CSP + SW + 10 مسارات و3 بنوك بلا شبكة
 npm run audit:lighthouse # LHCI 0.16.0 معزول؛ 9 مسارات، الوصولية مانعة ≥0.9
 ```

@@ -14652,21 +14652,25 @@ function collectR262(dir: string, out: string[] = []): string[] {
 }
 
 
-/* ═══ K337 — Wort-für-Wort-Audit: nur bestätigte Blocker, ausführbar in CI ═══ */
+/* ═══ K337 — PA-029: فاحص الأنماط المعروفة محدود الاسم والادعاء ومانع في CI ═══ */
 {
-  const wordAuditK337 = readFileSync("scripts/wort_fuer_wort_audit.ts", "utf8");
+  const patternLintK337 = readFileSync("scripts/known_pattern_content_lint.ts", "utf8");
   const packageK337 = JSON.parse(readFileSync("package.json", "utf8")) as { scripts?: Record<string, string> };
   const ciK337 = readFileSync(".github/workflows/ci.yml", "utf8");
-  ok(packageK337.scripts?.["audit:words"] === "tsx scripts/wort_fuer_wort_audit.ts" &&
+  ok(packageK337.scripts?.["lint:known-content-patterns"] === "tsx scripts/known_pattern_content_lint.ts" &&
+    packageK337.scripts?.["audit:words"] === "npm run lint:known-content-patterns" &&
+    !existsSync("scripts/wort_fuer_wort_audit.ts") &&
     ciK337.includes("runs-on: ubuntu-24.04") &&
     ciK337.includes("uses: actions/checkout@") && ciK337.includes("uses: actions/setup-node@") &&
-    ciK337.includes("run: npm run audit:words") && wordAuditK337.includes("process.exitCode = 1"),
-    "K337a التدقيق الحرفي أمر قابل لإعادة التشغيل وبوابة CI مانعة على Actions/Node الحديثة عند وجود blocker مؤكد");
-  ok(wordAuditK337.includes("re.lastIndex = 0") && wordAuditK337.includes("Rule regressions:") &&
-    wordAuditK337.includes("tp.examples || []") && wordAuditK337.includes("tp.verify || []") &&
-    wordAuditK337.includes("scanDe(f.falsch, \"fehler.json\", f.id, false)") &&
-    !wordAuditK337.includes('[/من فضلك/g, "من فضلك"]') && !wordAuditK337.includes('[/هراء/g, "هراء"]'),
-    "K337b اختبارات الانحدار تمنع تسرّب lastIndex وقواعد no-op، وتفصل أمثلة الخطأ المقصودة وتغطي examples/verify");
+    ciK337.includes("run: npm run lint:known-content-patterns") && patternLintK337.includes("process.exitCode = 1"),
+    "K337a PA-029: الاسم الدقيق هو فاحص أنماط معروفة، والاسم القديم تفويض توافق فقط، وCI يفشل عند مطابقة قاعدة حالية");
+  ok(patternLintK337.includes("re.lastIndex = 0") && patternLintK337.includes("Known-pattern rule regressions:") &&
+    patternLintK337.includes("current rule matches") && patternLintK337.includes("Out of scope:") &&
+    patternLintK337.includes("complete word-by-word review") && patternLintK337.includes("unlisted UI/content files") &&
+    patternLintK337.includes("tp.examples || []") && patternLintK337.includes("tp.verify || []") &&
+    patternLintK337.includes("scanDe(f.falsch, \"fehler.json\", f.id, false)") &&
+    !patternLintK337.includes('[/من فضلك/g, "من فضلك"]') && !patternLintK337.includes('[/هراء/g, "هراء"]'),
+    "K337b PA-029: التقرير يعلن المطابقات والنطاق والاستثناءات، والانحدارات تمنع lastIndex وقواعد no-op مع تغطية examples/verify");
 }
 
 
@@ -15368,13 +15372,13 @@ function collectR262(dir: string, out: string[] = []): string[] {
   ok(exercisesK355.length >= 581 && leaksK355.length === 0,
     `K355a R158: لا تلميحاً قوسياً يساوي جواباً مقبولاً حرفياً في بنك القواعد (${leaksK355.join(", ") || "0"})`);
 
-  const wordsAuditK355 = readFileSync("scripts/wort_fuer_wort_audit.ts", "utf8");
+  const patternLintK355 = readFileSync("scripts/known_pattern_content_lint.ts", "utf8");
   const patchK355 = readFileSync("scripts/patches/fix_exact_answer_hints.py", "utf8");
   ok(exakteAntwortLecks({ promptDe: "Ich ___ hier. (wohne)", answer: ["wohne"] }).length === 1 &&
     exakteAntwortLecks({ promptDe: "Ich ___ hier. (wohnen)", answer: ["wohne"] }).length === 0 &&
-    wordsAuditK355.includes("answer-leak-exact") && patchK355.includes("CHANGES:") &&
+    patternLintK355.includes("answer-leak-exact") && patchK355.includes("CHANGES:") &&
     patchK355.includes('"a2-reflexiv-v1"') && patchK355.includes('"b2-nom-e8"'),
-    "K355b كاشف PED-03 يميز التسريب الحرفي من السقالة الاشتقاقية، وaudit:words والرقعة المحروسة موصولان به");
+    "K355b كاشف PED-03 يميز التسريب الحرفي من السقالة الاشتقاقية، وفاحص الأنماط والرقعة المحروسة موصولان به");
 }
 
 /* K356 · TLD-02: مساحة ثابتة للشريط السفلي وبوابة هاتف بلا تقاطع */
