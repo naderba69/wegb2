@@ -675,7 +675,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
   /* ---------- XIX — الرقعةُ 1415: لا يتيمةٌ ولا مزدوجة ---------- */
   {
     const bare = new Set(alleVokabeln.map((c: { de: string }) => c.de.replace(/^(der|die|das)\s+/, "").trim()));
-    ok(alleVokabeln.length === 6202, "XIX1 بنكُ المفرداتِ 6202 بطاقةً كما في الجرد الحيّ (R322: +93 بطاقة B1 لسدّ فجوة Goethe-Wortliste الأبجدية T+U Tabelle–ursprünglich؛ كانت 5860 منذ R321)");
+    ok(alleVokabeln.length === 6202, "XIX1 البنك الخام 6202 بطاقة كما في الجرد الحي؛ لا يساوي هذا عدداً من headwords أو تغطية Goethe/CEFR");
     ok(Object.keys(mnemonikMap).every((w) => bare.has(w)), "XIX2 لا حيلةٌ تُعلَّمُ بلا بطاقةٍ تُذكَرُ عليها");
     const neu = alleVokabeln.filter((c: { id: string }) => /^v14\d\d$/.test(c.id)) as { id: string; de: string; article?: string; pos?: string }[];
     const falschMarkiert = neu.filter((c) => c.pos === "Nomen"
@@ -2467,7 +2467,9 @@ const hasFile = txt().includes("صوتٌ من الدار");
 
     const { ReferenzPanel } = await import("../components/referenz");
     mount(React.createElement(ReferenzPanel, { progress: { ...emptyProgress } as never }));
-    ok(!!rootEl.querySelector('[data-testid="referenz-panel"]') && txt().includes("فجوة محتوى"), "R295d لوحة الفحص المرجعي (A21) تعلن فجوة سقف B2 (A29) بلا إخفاء");
+    ok(!!rootEl.querySelector('[data-testid="referenz-panel"]') && !!rootEl.querySelector('[data-testid="lexical-scope-boundary"]') &&
+      txt().includes("تغطية مدوّنة التطبيق") && txt().includes("التغطية الخارجية") && txt().includes("غير مقاس"),
+    "PA020 لوحة الجرد تعرض الوحدات الفريدة وتغطية مدونة التطبيق بلا مقارنة headword أو ادعاء إنتاج");
   }
 
   /* ═══════════ LXI — تقييمُ الثقةِ قبلَ الإجابة: الزرّانِ قبلَ الخيارات، التسجيلُ في Progress، رسالةُ «ثقة خاطئة» ═══════════ */
@@ -4127,11 +4129,11 @@ const hasFile = txt().includes("صوتٌ من الدار");
 }
 
 
-// ── R298: محطة توسعة B2 الاستقبالية ──
+// ── R298/PA-020: محطة تدريب استقبال بطاقات B2 ──
 {
   const { ErweiterungStation } = await import("../components/erweiterung");
   mount(React.createElement(ErweiterungStation));
-  ok(!!rootEl.querySelector('[data-testid="erweiterung-station"]') && txt().includes("توسعة B2 الاستقبالية"), "R298a محطة التوسعة تُعرض بحزمها الست عشرة");
+  ok(!!rootEl.querySelector('[data-testid="erweiterung-station"]') && txt().includes("توسعة تدريب B2 الاستقبالي") && txt().includes("ليست 912 headword خارجية"), "R298a محطة التوسعة تعرض 16 حزمة مع حد البطاقة/headword");
   ok(!!rootEl.querySelector('[data-testid="erweiterung-deck-j01-arbeit-vertieft"]'), "R298b زرّ أول حزمة توسعة موجود");
   click(rootEl.querySelector('[data-testid="erweiterung-deck-j01-arbeit-vertieft"]') as HTMLElement);
   ok(!!rootEl.querySelector('[data-testid="erweiterung-frage"]'), "R298c اختيار حزمة يفتح سؤال تعرّف");

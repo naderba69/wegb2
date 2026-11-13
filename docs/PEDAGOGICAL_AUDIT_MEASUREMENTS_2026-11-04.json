@@ -104,6 +104,13 @@
       "failed": 0,
       "formatsChecked": 4,
       "overallVerdict": "not_assessed"
+    },
+    "lexicalInventoryAudit": {
+      "passed": 11,
+      "failed": 0,
+      "rawCards": 6202,
+      "uniqueUnits": 6044,
+      "externalCoverage": "not_assessed"
     }
   },
   "defaultPlan": {
@@ -343,10 +350,10 @@
     "fixedPedagogicalRisks": 17
   },
   "inventorySnapshot": {
-    "indexedTrackedFilesAndAuditArtifacts": 3541,
-    "manual_complete": 35,
-    "manual_targeted": 44,
-    "not_started": 3458,
+    "indexedTrackedFilesAndAuditArtifacts": 3542,
+    "manual_complete": 37,
+    "manual_targeted": 47,
+    "not_started": 3454,
     "audit_artifact": 4
   },
   "learningStateCorrections": {
@@ -504,5 +511,33 @@
     "accreditationTechnicalChecks": 49,
     "externalSignoffsPending": 19,
     "regressionGate": "npm run audit:simulation-provenance"
+  },
+  "lexicalInventoryCorrections": {
+    "finding": "PA-020",
+    "rawCards": 6202,
+    "normalizedUniqueUnits": 6044,
+    "singleWordUnits": 5266,
+    "multiwordUnits": 778,
+    "normalizationScope": "conservative display-form normalization; not a full German morphological lemmatizer",
+    "duplicateInflationRemoved": 158,
+    "firstIntroductionLevelPartition": {
+      "A0": 107,
+      "A1": 681,
+      "A2": 860,
+      "B1": 2508,
+      "B2": 1888
+    },
+    "strictAppCorpusAttestation": {
+      "corpus": "German fields in app reading texts, dialogue lines, and sentences",
+      "attestedUniqueUnits": 4092,
+      "totalUniqueUnits": 6044,
+      "percent": 67.7,
+      "singleWordMatching": "exact normalized surface token",
+      "multiwordMatching": "exact normalized contiguous phrase"
+    },
+    "productiveVocabularyAssessed": false,
+    "externalGoetheOrCefrCoverage": "not_assessed",
+    "rawCardReferenceComparisonRemoved": true,
+    "regressionGate": "npm run audit:lexical-inventory"
   }
 }

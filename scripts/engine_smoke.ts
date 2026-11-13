@@ -74,7 +74,7 @@ import { DIALOGSZENARIEN } from "../lib/dialogszenarien";
 import { FEHLERATLAS, atlasEintraege } from "../lib/fehleratlas";
 import { FSP_AUSRICHTUNG } from "../lib/fsp";
 import { kollokProduktion, partnerOk } from "../lib/kollokproduktion";
-import { b2Luecke, referenzBericht, schnellsteRezeptiv } from "../lib/referenz";
+import { lexikEinheiten, lexikUebersicht, normalisiereLemma, referenzBericht, schnellsteRezeptiv } from "../lib/referenz";
 import { inputPaket } from "../lib/freiesinput";
 import { erweiterungDecks, erweiterungSitzung, erweiterungFortschritt , erweiterungLuecken } from "../lib/erweiterung";
 import { parseSprechBewertung, SPRECH_KRITERIEN as BEWERTUNG_KRITERIEN, sprechBand, KRITERIUM_SCHRITT } from "../lib/sprechbewertung";
@@ -548,7 +548,7 @@ const vocabRepeatAudit = (() => {
     ["texts", texts.filter((t) => !(t as { neu?: boolean }).neu).length >= 80 ? texts.filter((t) => !(t as { neu?: boolean }).neu).length : 0, texts.filter((t) => !(t as { neu?: boolean }).neu).length],
     ["dialogues", dialogues.filter((d) => !(d as { neu?: boolean }).neu).length >= 80 ? dialogues.filter((d) => !(d as { neu?: boolean }).neu).length : 0, dialogues.filter((d) => !(d as { neu?: boolean }).neu).length],
     ["writing", writingTasks.filter((w) => !(w as { neu?: boolean }).neu).length >= 30 ? writingTasks.filter((w) => !(w as { neu?: boolean }).neu).length : 0, writingTasks.filter((w) => !(w as { neu?: boolean }).neu).length],
-    ["vocab", alleVokabeln.length, 6202], // R323: +69 بطاقة B1 لسدّ فجوة Goethe-Wortliste الأبجدية V (Vase–Vortrag) — Bestand 6202 (كان 5953 منذ R322)
+    ["vocab", alleVokabeln.length, 6202], // Raw cards only; PA-020 keeps this separate from headwords/external coverage.
     ["fehler", fehlerList.length, 196],
     ["grammar", Object.keys(grammarMap).length, Object.keys(grammarMap).length >= 38 ? Object.keys(grammarMap).length : 0],
     ["verben", verben.length, 126],
@@ -13436,17 +13436,19 @@ function collectR262(dir: string, out: string[] = []): string[] {
 {
   const prod320 = kollokProduktion(5, 6);
   const bericht320 = referenzBericht();
-  const b1Zeile320 = bericht320.find((z) => z.level === "B1");
-  const luecke320 = b2Luecke();
+  const u320 = lexikUebersicht();
+  const einheiten320 = lexikEinheiten();
   const schnell320 = schnellsteRezeptiv(emptyProgress as Progress, 5);
   ok(prod320.length === 6 && prod320.every((x) => x.rahmen.includes("_____") && x.kollok.includes(x.partner)) &&
      partnerOk("  wort ", "wort") && !partnerOk("laufen", "treffen") && partnerOk("treffen", "treffen") &&
-     bericht320.length === 5 && !!b1Zeile320 && b1Zeile320.kumuliert === 4262 && b1Zeile320.status === "darueber" &&
-     luecke320.kumuliert === 6202 && luecke320.luecke === 0 &&
-     schnell320.length === 5 && schnell320.every((x) => x.n > 0) &&
+     bericht320.length === 5 && bericht320.at(-1)?.kumuliertEindeutig === u320.eindeutigeEinheiten &&
+     u320.roheKarten > u320.eindeutigeEinheiten && u320.einzelwoerter + u320.mehrwortEinheiten === u320.eindeutigeEinheiten &&
+     u320.rezeptivImAppKorpus < u320.eindeutigeEinheiten && u320.produktivAusgewiesen === null && u320.externeAbdeckung === "not_assessed" &&
+     normalisiereLemma("das Ergebnis, -se") === "ergebnis" && new Set(einheiten320.map((e) => e.lemma)).size === einheiten320.length &&
+     schnell320.length === 5 && new Set(schnell320.map((x) => normalisiereLemma(x.karte.de))).size === 5 &&
      readFileSync("app/ueben/page.tsx", "utf8").includes("KollokProduktionStation") &&
      readFileSync("app/ueben/page.tsx", "utf8").includes("ReferenzPanel"),
-    `K320 ثلاثية R295 كما حُدّثت في R322: ست متلازمات إنتاج بإطارات مبتورة الشريك (A14)، تراكمي B1 عند ${b1Zeile320?.kumuliert} فوق مرجعه المنشور (A21)، وسقف B2 الاستقبالي عند ${luecke320.kumuliert} — الفجوة التي كانت معلنة أُغلقت بحزم التوسعة (A29)`);
+    `K320: ست متلازمات إنتاج؛ ${u320.roheKarten} بطاقة تطبّع إلى ${u320.eindeutigeEinheiten} وحدة فريدة (${u320.einzelwoerter} كلمة/${u320.mehrwortEinheiten} عبارة)، والتغطية الداخلية ${u320.rezeptivAbdeckungPct}% بلا مقارنة خارجية أو ادعاء إنتاج`);
 }
 
 
@@ -14163,7 +14165,7 @@ function collectR262(dir: string, out: string[] = []): string[] {
 }
 
 
-// ── K323 (R298): توسعة B2 الاستقبالية — سدّ فجوة A29 بالكامل ببطاقات حقيقية ──
+// ── K323 (R298/PA-020): توسعة B2 مع جرد وحدات صادق بلا مساواة البطاقة بالـheadword ──
 {
   const jDecks = Object.entries(vocabMap).filter(([id]) => id.startsWith("j"));
   const jKarten = jDecks.flatMap(([, g]) => g.cards);
@@ -14172,7 +14174,10 @@ function collectR262(dir: string, out: string[] = []): string[] {
   ok(jKarten.filter((k) => k.pos === "Nomen").every((k) => !!k.article && !!k.farbe && ((k.article === "der" && k.farbe === "BLAU") || (k.article === "die" && k.farbe === "ROT") || (k.article === "das" && k.farbe === "GRÜN"))), "K323c أسماء التوسعة بأدواتها وترميز لون الجنس الصحيح");
   const alleIds = alleVokabeln.map((k) => k.id);
   ok(new Set(alleIds).size === alleIds.length, "K323d معرّفات كل البطاقات وحيدة بلا تكرار");
-  ok(b2Luecke().luecke === 0 && b2Luecke().kumuliert >= 4500, "K323e فجوة السقف الاستقبالي مغلقة: التراكمي " + b2Luecke().kumuliert + " ≥ 4500");
+  const lex323 = lexikUebersicht();
+  ok(lex323.roheKarten === alleVokabeln.length && lex323.eindeutigeEinheiten < lex323.roheKarten &&
+    lex323.externeAbdeckung === "not_assessed" && lex323.produktivAusgewiesen === null,
+  `K323e التوسعة تدخل جرداً مطبّعاً (${lex323.eindeutigeEinheiten} وحدة من ${lex323.roheKarten} بطاقة) بلا ادعاء سد قائمة خارجية أو إنتاج مقاس`);
   const decks323 = erweiterungDecks();
   const sitzung323 = erweiterungSitzung(decks323[0].id, emptyProgress as Progress, 3);
   ok(decks323.length === 16 && sitzung323.length === 8 && sitzung323.every((f) => f.optionen.length === 4 && new Set(f.optionen).size === 4 && f.optionen.includes(f.richtig)), "K323f جلسة التوسعة: 8 أسئلة × 4 خيارات وحيدة بلا تكرار، والصحيح بينها دائمًا");

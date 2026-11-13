@@ -22,6 +22,7 @@
     "audit:placement": "tsx scripts/placement_audit.ts",
     "audit:competency-evidence": "tsx scripts/competency_evidence_audit.ts",
     "audit:simulation-provenance": "tsx scripts/simulation_provenance_audit.ts",
+    "audit:lexical-inventory": "tsx scripts/lexical_inventory_audit.ts",
     "audit:words": "tsx scripts/wort_fuer_wort_audit.ts",
     "audit:scaffolds": "tsx scripts/scaffold_audit.ts",
     "audit:scaffold-review": "tsx scripts/scaffold_review_audit.ts",

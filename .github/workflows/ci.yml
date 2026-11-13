@@ -89,6 +89,8 @@ jobs:
         run: npm run audit:competency-evidence
       - name: Simulation evidence provenance (PA-017)
         run: npm run audit:simulation-provenance
+      - name: Deduplicated lexical inventory (PA-020)
+        run: npm run audit:lexical-inventory
       - name: Wort-für-Wort-Audit (bestätigte Blocker)
         run: npm run audit:words
       - name: Scaffold-Observability (CEFR baseline; candidates are not defects)

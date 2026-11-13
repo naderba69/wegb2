@@ -1,5 +1,5 @@
 "use client";
-// 📚 R298: محطة توسعة B2 الاستقبالية — تعرّف على كلمات الحزم الجديدة وأدخلها في مراجعتك
+// 📚 R298/PA-020: تدريب استقبال بطاقات B2؛ لا تُساوى البطاقات برؤوس كلمات خارجية.
 import { useMemo, useState } from "react";
 import { useProgress } from "@/lib/store";
 import { erweiterungDecks, erweiterungFortschritt, erweiterungSitzung, erweiterungLuecken } from "@/lib/erweiterung";
@@ -57,7 +57,7 @@ export function ErweiterungStation() {
 
   return (
     <section className="card" data-testid="erweiterung-station" style={{ padding: "1rem 1.1rem", background: "var(--color-paper2)", display: "grid", gap: "0.6rem" }}>
-      <strong>📚 توسعة B2 الاستقبالية (912 كلمة جديدة في 16 حزمة موضوعية)</strong>
+      <strong>📚 توسعة تدريب B2 الاستقبالي (912 بطاقة في 16 حزمة موضوعية؛ ليست 912 headword خارجية)</strong>
       <div style={{ fontSize: "0.84rem", color: "var(--color-ink2)", lineHeight: 1.9 }}>
         أغلقنا فجوة الكلمات التي كانت معلنة: اختر حزمة وتعرّف على كلماتها. كل إجابة صحيحة تُدخل الكلمة
         في مراجعتك المتباعدة كمعرفة استقبالية (تقرأها فتفهمها). الإتقان الإنتاجي يبقى من بطاقات الخطة ومحطات الإنتاج.
