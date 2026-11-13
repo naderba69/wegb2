@@ -27,7 +27,7 @@ import {
 } from "./content";
 import { weakTopics } from "./fehler";
 import { dueFehlerPriorisiert } from "./fehlerbank2";
-import { PHASEN, ABSCHLUSS_VON, istPhasenPruefung, lastMinuten, D1_B1_DECKEL_MIN, D1_B2_DECKEL_MIN } from "./phasen";
+import { PHASEN, PHASE_END_DAY, ABSCHLUSS_VON, istPhasenPruefung, lastMinuten, D1_B1_DECKEL_MIN, D1_B2_DECKEL_MIN } from "./phasen";
 import { baueStory } from "./mnemonic-story";
 import { palacePosition } from "./memory-palace";
 import { piItemsFor } from "./processing-instruction";
@@ -1653,13 +1653,14 @@ export function planPct(progress: Progress): number {
   return Math.min(100, Math.round(((progress.plan.day - 1) / TOTAL_DAYS) * 100));
 }
 
-/* ═══ ⏱️ منحنى الساعات المخطَّطة — أساسُ عقد CEFR ═══
-   الخطةُ حتميةٌ (بذرةُ كلِّ يومٍ رقمُه)، فمنحنى الدقائقِ المخطَّطةِ ثابتٌ
-   ولا يتأثَّر بما أنجزَه المتعلِّم. لذلك يُحسَبُ مرّةً واحدةً ويُحفَظ.
-   بدونه كان قولُ «378 يوماً تكفي لـB2» رأياً بلا رقم. */
+/* ═══ ⏱️ منحنى حمل الخطة الزمني ═══
+   تقديرات المهام حتمية مع ملف أساس فارغ، لذلك يُحسب المنحنى مرة ويُحفظ.
+   هذه الأرقام تصف وقت المهام المخطط فقط؛ لا تثبت كفاءة CEFR ولا جاهزية امتحان.
+   كل واجهة تعرض إجمالي الخطة أو متوسط اليوم أو حمل مرحلة تستعمل الملخص أدناه
+   بدلاً من نسخ أرقام قديمة في النصوص. */
 let PLAN_MIN_KUM: number[] | null = null;
 
-/** الدقائق المخطَّطة من اليوم 1 حتى اليوم `day` ضمناً */
+/** الدقائق المقدّرة للمهام من اليوم 1 حتى اليوم `day` ضمناً. */
 export function planMinBis(day: number): number {
   if (!PLAN_MIN_KUM) {
     const basis: Progress = emptyProgress;
@@ -1675,12 +1676,70 @@ export function planMinBis(day: number): number {
   return PLAN_MIN_KUM[d] ?? 0;
 }
 
-/** ساعاتُ الخطةِ حتى يومٍ معيَّن — تُستعمل مرجعاً لمقارنة CEFR */
+/** تقدير مهام يوم واحد؛ مستقل عن هدف الجلسة وعن الوقت الذي قاسه المؤقت. */
+export function planTagesMinuten(day: number): number {
+  const d = Math.min(Math.max(day | 0, 1), TOTAL_DAYS);
+  return planMinBis(d) - planMinBis(d - 1);
+}
+
+/** ساعات تقديرات المهام حتى يوم معين، للعرض الزمني فقط. */
 export function planStundenBis(day: number): number {
   return planMinBis(day) / 60;
 }
 
-/** إجمالي ساعات الخطة كاملةً (378 يوماً) */
+/** إجمالي ساعات تقديرات المهام في الخطة كاملة. */
 export function planStundenGesamt(): number {
   return planStundenBis(TOTAL_DAYS);
+}
+
+export interface PlanPhasenArbeitslast {
+  level: Level;
+  von: number;
+  bis: number;
+  tage: number;
+  minuten: number;
+  stunden: number;
+  durchschnittMinutenProTag: number;
+}
+
+export interface PlanArbeitslast {
+  tage: number;
+  minuten: number;
+  stunden: number;
+  durchschnittMinutenProTag: number;
+  /** هدف جلسة قابل للتوقف قبله؛ ليس شرطاً لإغلاق اليوم ولا حملاً يومياً كاملاً. */
+  sitzungszielMinuten: number;
+  phasen: Record<Level, PlanPhasenArbeitslast>;
+}
+
+let PLAN_ARBEITSLAST: PlanArbeitslast | null = null;
+
+/** المصدر الحسابي الوحيد لكل أرقام حمل الخطة الظاهرة للمستخدم. */
+export function planArbeitslast(): PlanArbeitslast {
+  if (PLAN_ARBEITSLAST) return PLAN_ARBEITSLAST;
+  const phasen = Object.fromEntries(LEVEL_SEQUENCE.map((level) => {
+    const von = PHASEN[level].von;
+    const bis = PHASE_END_DAY[level];
+    const tage = bis - von + 1;
+    const minuten = planMinBis(bis) - planMinBis(von - 1);
+    return [level, {
+      level,
+      von,
+      bis,
+      tage,
+      minuten,
+      stunden: minuten / 60,
+      durchschnittMinutenProTag: minuten / tage,
+    } satisfies PlanPhasenArbeitslast];
+  })) as Record<Level, PlanPhasenArbeitslast>;
+  const minuten = planMinBis(TOTAL_DAYS);
+  PLAN_ARBEITSLAST = {
+    tage: TOTAL_DAYS,
+    minuten,
+    stunden: minuten / 60,
+    durchschnittMinutenProTag: minuten / TOTAL_DAYS,
+    sitzungszielMinuten: DEFAULT_SESSION_GOAL_MINUTES,
+    phasen,
+  };
+  return PLAN_ARBEITSLAST;
 }

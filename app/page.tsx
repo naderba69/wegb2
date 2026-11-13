@@ -520,7 +520,7 @@ export default function Today() {
                     ? "تابع التعلّم"
                     : session.clock.totalMs > 0
                       ? "تابع الجلسة"
-                      : "ابدأ جلسة 90 دقيقة"}
+                      : `ابدأ جلسة ${plan.zielMin} دقيقة`}
             <span aria-hidden>←</span>
           </button>
         </section>
@@ -539,7 +539,7 @@ export default function Today() {
 
       <section className="dirb-tagesziel dirb-hero-anim-2" aria-label="هدف الجلسة اليومي" data-testid="session-goal-panel">
         <div className="dirb-tagesziel-top">
-          <span className="dirb-tagesziel-title">هدف الجلسة — 90 دقيقة افتراضياً</span>
+          <span className="dirb-tagesziel-title">هدف الجلسة — <span className="rtl-num">{plan.zielMin}</span> دقيقة افتراضياً</span>
           <span className="dirb-tagesziel-min" data-testid="session-goal-progress">
             <span className="rtl-num">{measuredMin.toFixed(1)}</span> من <span className="rtl-num">{zielMin}</span> دقيقة مقاسة
           </span>
@@ -550,7 +550,7 @@ export default function Today() {
           </div>
         </div>
         <p data-testid="session-time-note" style={{ margin: "0.5rem 0 0", fontSize: "0.82rem", color: "var(--color-ink2)", lineHeight: 1.85 }}>
-          المؤقّت يقيس وقت الجلسة الفعلي والصفحة ظاهرة؛ الهدف الحالي <span className="rtl-num">{zielMin}</span> دقيقة (والافتراضي 90). مجموع تقديرات مهام اليوم <span className="rtl-num">{totalMinutes}</span> دقيقة عبر <span className="rtl-num">{plan.tasks.length}</span> مهام — رقم مستقل لا يغيّر المؤقّت ولا يلزمك بإكمال القائمة في جلسة واحدة.
+          المؤقّت يقيس وقت الجلسة الفعلي والصفحة ظاهرة؛ الهدف الحالي <span className="rtl-num">{zielMin}</span> دقيقة (والافتراضي <span className="rtl-num">{plan.zielMin}</span>). مجموع تقديرات مهام اليوم الكامل <span className="rtl-num">{totalMinutes}</span> دقيقة عبر <span className="rtl-num">{plan.tasks.length}</span> مهام — رقم مستقل لا يغيّر المؤقّت، وبلوغ هدف الجلسة لا يعني إكمال القائمة.
         </p>
         {session.running ? (
           <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap", alignItems: "center", marginTop: "0.55rem" }}>
@@ -560,7 +560,7 @@ export default function Today() {
         ) : !goalReached && !allTodayDone ? (
           <button type="button" className="btn btn-primary" data-testid="session-start" disabled={!session.loaded}
             onClick={() => { session.start(); setSessionSaved(false); }} style={{ marginTop: "0.55rem" }}>
-            {session.clock.totalMs > 0 ? "تابع الجلسة" : "ابدأ جلسة 90 دقيقة"}
+            {session.clock.totalMs > 0 ? "تابع الجلسة" : `ابدأ جلسة ${plan.zielMin} دقيقة`}
           </button>
         ) : null}
         {session.pauseReason === "idle" && !goalReached && (
@@ -671,7 +671,7 @@ export default function Today() {
           })}
         </div>
       </details>
-      <p className="dirb-time-hint" data-testid="zeit-hinweis">هدف 90 دقيقة افتراضي للجلسة فقط؛ مجموع تقديرات الخطة مستقل عنه. احفظ التوقّف وعد لاحقاً؛ لن يتحوّل ما لم تسلّمه إلى فشل أو تعويض.</p>
+      <p className="dirb-time-hint" data-testid="zeit-hinweis">هدف <span className="rtl-num">{plan.zielMin}</span> دقيقة افتراضي للجلسة فقط؛ تقدير مهام اليوم الكامل <span className="rtl-num">{totalMinutes}</span> دقيقة ومستقل عنه. احفظ التوقف وعد لاحقاً؛ لن يتحول ما لم تسلمه إلى فشل أو تعويض.</p>
 
       <SkillBalancePlan progress={progress} />
       {/* Pflege BSK — مسار مستقل لا يُحتسب في الخطة، لكنه ظاهر لمن اختاره */}

@@ -77,6 +77,8 @@ jobs:
         run: npm run audit:assessment-integrity
       - name: Evidence provenance and no inferred readiness (PA-001–PA-003)
         run: npm run audit:evidence-provenance
+      - name: Workload source and non-inferential time claims (PA-009–PA-011)
+        run: npm run audit:time-model
       - name: Wort-für-Wort-Audit (bestätigte Blocker)
         run: npm run audit:words
       - name: Scaffold-Observability (CEFR baseline; candidates are not defects)

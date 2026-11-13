@@ -1684,17 +1684,17 @@ const hasFile = txt().includes("صوتٌ من الدار");
     }
   }
 
-  /* ---------- XLVI — عقدُ الساعات: لوحةٌ تُفتَح، ورقمٌ يُحجَز، وحكمٌ يُعلَن ---------- */
+  /* ---------- XLVI — مقارنة الحمل: هدف جلسة ≠ حمل يوم ≠ وقت مقاس ---------- */
   {
     const { BerichteZentrum } = await import("../components/berichte");
-    const { planStundenGesamt, planStundenBis, planMinBis } = await import("../lib/plan");
-    const { vergleichePlan, erreichbaresNiveau, MAX_MIN_PRO_TASK } = await import("../lib/cefr");
+    const { planStundenGesamt, planStundenBis, planMinBis, planTagesMinuten, planArbeitslast } = await import("../lib/plan");
+    const { vergleicheZeitlast, MAX_MIN_PRO_TASK } = await import("../lib/cefr");
     const { loadProgress, saveProgress, bucheMinuten, recordStudyMinutes } = await import("../lib/store");
     const { progressKeyActive } = await import("../lib/profiles");
 
     const ges = planStundenGesamt();
-    const vgl = vergleichePlan(planStundenBis);
-    const niv = erreichbaresNiveau(vgl);
+    const last = planArbeitslast();
+    const vgl = vergleicheZeitlast(planStundenBis);
 
     ok(Number.isFinite(ges) && ges > 0 && Math.abs(ges - planMinBis(TOTAL_DAYS) / 60) < 0.01,
       `XLVI1 مجموعُ تقديراتِ مهام الخطة ${ges.toFixed(1)} س مستمدٌ من المحرك، لا من هدف الجلسة ولا من الوقت المقاس`);
@@ -1712,26 +1712,30 @@ const hasFile = txt().includes("صوتٌ من الدار");
     await new Promise((r) => setTimeout(r, 30));
     t = txt();
 
-    ok(!!d0.querySelector('[data-testid="stundenvertrag"]'), "XLVI5 لوحةُ عقدِ الساعاتِ عنصرٌ حقيقيٌّ في الشجرة");
-    ok(t.includes("عقد الساعات"), "XLVI6 وعنوانُها ظاهرٌ للمتعلِّم");
+    ok(!!d0.querySelector('[data-testid="stundenvertrag"]'), "XLVI5 لوحة مقارنة الحمل عنصر حقيقي في الشجرة");
+    ok(t.includes("مقارنة الحمل الزمني الإرشادية"), "XLVI6 عنوانها يعلن أنها مقارنة إرشادية لا حكم مستوى");
     const planEl = d0.querySelector('[data-testid="stunden-plan"]');
-    ok(!!planEl && planEl!.textContent!.includes(String(Math.round(ges * 10) / 10).split(".")[0]),
-      `XLVI7 ورقمُ ساعاتِ الخطةِ معروضٌ (${planEl?.textContent}) ومطابقٌ للمحرِّك (${ges.toFixed(1)})`);
+    ok(!!planEl && planEl.textContent!.includes(String(Math.round(ges * 10) / 10).split(".")[0]),
+      `XLVI7 مجموع ساعات تقديرات الخطة معروض (${planEl?.textContent}) ومطابق للمحرك (${ges.toFixed(1)})`);
+    ok((d0.querySelector('[data-testid="sitzungsziel-minuten"]')?.textContent ?? "").includes(String(last.sitzungszielMinuten)) &&
+      (d0.querySelector('[data-testid="tageslast-minuten"]')?.textContent ?? "").includes(String(planTagesMinuten(100))) &&
+      (d0.querySelector('[data-testid="heute-gemessen-minuten"]')?.textContent ?? "").includes("0.0"),
+      "XLVI8 الأرقام الثلاثة منفصلة: هدف الجلسة، تقدير اليوم الكامل، والوقت المقاس اليوم");
     for (const L of ["A1", "A2", "B1", "B2"]) {
       const z = d0.querySelector(`[data-testid="cefr-zeile-${L}"]`);
-      ok(!!z && (z!.textContent ?? "").includes(L) && (z!.textContent ?? "").includes("س"),
-        `XLVI8${L} صفُّ ${L} موجودٌ وفيه ساعاتُه ومرجعُه`);
+      ok(!!z && (z.textContent ?? "").includes(L) && (z.textContent ?? "").includes("س"),
+        `XLVI8${L} صف ${L} موجود وفيه تقدير الخطة ونطاق الدورة`);
     }
-    const urt = d0.querySelector('[data-testid="stunden-urteil"]');
-    ok(!!urt && (urt!.textContent ?? "").includes("الحكمُ الصريح"), "XLVI9 والحكمُ الصريحُ مكتوبٌ لا مُضمَر");
-    ok((urt?.textContent ?? "").includes(niv), `XLVI10 ويسمِّي المستوى المبلوغَ فعلاً: ${niv}`);
-    if (vgl[3].urteil === "darunter" || vgl[3].urteil === "weitDarunter") {
-      ok((urt!.textContent ?? "").includes("ينقصُها") || (urt!.textContent ?? "").includes(String(vgl[3].fehlendBisMinimum)),
-        `XLVI11 ونقصُ B2 معلنٌ بالأرقام (${vgl[3].fehlendBisMinimum} س) — لا وعدَ بلا ثمن`);
-    } else {
-      ok(true, "XLVI11 لا نقصَ في B2 فلا ادّعاءَ بنقص");
-    }
-    ok(t.includes("Goethe-Institut") && t.includes("نطاقات"), "XLVI12 والمرجعُ مسمًّى وموصوفٌ بأنه نطاقٌ لا رقمٌ حاسم");
+    const einordnung = d0.querySelector('[data-testid="stunden-einordnung"]');
+    ok(!!einordnung && (einordnung.textContent ?? "").includes("لا يمكن استنتاج") &&
+      (einordnung.textContent ?? "").includes("أداءً متعدد المهارات"),
+      "XLVI9 حدود المقارنة تمنع استنتاج CEFR من الساعات وتطلب أداء متعدد المهارات");
+    ok(!(einordnung?.textContent ?? "").includes("بلغت B2") && !t.includes("الحكم الصريح"),
+      "XLVI10 لا مستوى مبلوغ ولا حكم كفاءة مشتق من الزمن في الواجهة");
+    ok(vgl.length === 4 && vgl.every((row) => ["unterhalb", "innerhalb", "oberhalb"].includes(row.position)),
+      "XLVI11 محرك المقارنة يعيد موضعاً زمنياً وصفياً فقط");
+    ok(t.includes("Goethe-Institut") && t.includes("ساعات الدورات"),
+      "XLVI12 المصدر مسمى كنطاق ساعات دورات، لا معيار تحويل فردي");
 
     /* XLIX — التوزيع الأكاديمي ظاهرٌ على اللوحة لا في الكود فقط */
     const { PHASEN, LERNLAST, PHASE_END_DAY } = await import("../lib/phasen");
@@ -1740,8 +1744,10 @@ const hasFile = txt().includes("صوتٌ من الدار");
     const zA1 = d0.querySelector('[data-testid="phase-zeile-A1"]')?.textContent ?? "", zB2 = d0.querySelector('[data-testid="phase-zeile-B2"]')?.textContent ?? "";
     ok(zA1.includes(`${PHASEN.A1.von}–${PHASE_END_DAY.A1}`) && zA1.includes(`×${LERNLAST.A1.toFixed(2)}`), `XLIX2 صفُّ A1 يعرضُ أيامَ عقدِه ${PHASEN.A1.von}–${PHASE_END_DAY.A1} ومعاملَه ×${LERNLAST.A1.toFixed(2)} — من جدولِ العقدِ نفسِه (${zA1.trim().slice(0, 40)})`);
     ok(zB2.includes(`${PHASEN.B2.von}–${PHASE_END_DAY.B2}`) && zB2.includes(`×${LERNLAST.B2.toFixed(2)}`) && zB2.includes("ختام"), `XLIX3 صفُّ B2 يعرضُ ${PHASEN.B2.von}–${PHASE_END_DAY.B2} و×${LERNLAST.B2.toFixed(2)} والختام (${zB2.trim().slice(0, 50)})`);
-    ok((vert?.textContent ?? "").includes("لا بالتساوي"), "XLIX4 والمبدأُ مكتوبٌ للمتعلِّم: بأوزانِ CEFR لا بالتساوي");
-    ok(!(d0.querySelector('[data-testid="stunden-urteil"]')?.textContent ?? "").includes("ينقصُها"), "XLIX5 والحكمُ الصريحُ لم يعدْ يعلنُ نقصاً في B2 — لأنَّ النقصَ زال حساباً لا كلاماً");
+    ok((vert?.textContent ?? "").includes("محسوبة من المهام الحالية") || (vert?.textContent ?? "").includes("يتغير حسب قسم الخطة"),
+      "XLIX4 التوزيع يعلن أن المتوسطات مشتقة من المهام الحالية");
+    ok((d0.querySelector('[data-testid="stunden-einordnung"]')?.textContent ?? "").includes("غير مقاسة هنا"),
+      "XLIX5 المقارنة لا تحول حمل B2 إلى ادعاء جاهزية امتحان");
 
     /* إدخال يدوي منفصل عن وقت المؤقّت */
     ok(minutenEffektivTest(loadProgress()) === 0, "XLVI13 الأصلُ صفرُ دقيقةٍ مقاسة");
@@ -3242,9 +3248,9 @@ const hasFile = txt().includes("صوتٌ من الدار");
       const goalReadout = d0.querySelector('[data-testid="session-goal-progress"]');
       const bar = d0.querySelector('[aria-label="التقدّم نحو هدف الجلسة"]');
       const remaining = dayPlan.tasks.length - Object.keys(completed).length;
-      ok(!!note && (note.textContent ?? "").includes(`مجموع تقديرات مهام اليوم ${totalMinutes} دقيقة`) &&
+      ok(!!note && (note.textContent ?? "").includes(`مجموع تقديرات مهام اليوم الكامل ${totalMinutes} دقيقة`) &&
         (note.textContent ?? "").includes(`الهدف الحالي ${targetMinutes} دقيقة`) &&
-        (note.textContent ?? "").includes("لا يلزمك بإكمال القائمة في جلسة واحدة") &&
+        (note.textContent ?? "").includes("بلوغ هدف الجلسة لا يعني إكمال القائمة") &&
         !!d0.querySelector('[data-testid="session-goal-choice"]') && remaining > 0,
         `LXXXIV1 المؤقّت المقاس له هدف ${targetMinutes} د مستقل عن مجموع تقديرات الخطة ${totalMinutes} د؛ تبقى ${remaining} مهام غير فاشلة`);
       ok(!!goalReadout && (goalReadout.textContent ?? "").includes(`${targetMinutes}.0 من ${targetMinutes} دقيقة مقاسة`) &&
@@ -5007,29 +5013,56 @@ const hasFile = txt().includes("صوتٌ من الدار");
       ...emptyProgress,
       settings: { ...emptyProgress.settings, onboardingDone: false, lernziel: undefined, tempo: "regelmaessig" },
     }));
-    mount(React.createElement(OnboardingWizard));
+    const restoreTrigger = d0.createElement("button");
+    restoreTrigger.textContent = "قبل الحوار";
+    d0.body.appendChild(restoreTrigger);
+    restoreTrigger.focus();
+    mount(React.createElement(React.Fragment, null,
+      React.createElement("button", { "data-testid": "onboarding-background" }, "خلفية الصفحة"),
+      React.createElement(OnboardingWizard),
+    ));
+    const dialog = rootEl.querySelector('[role="dialog"]') as HTMLElement | null;
+    const heading = rootEl.querySelector("#onboarding-title") as HTMLElement | null;
+    const background = rootEl.querySelector('[data-testid="onboarding-background"]') as HTMLElement | null;
+    ok(!!dialog && dialog.getAttribute("aria-labelledby") === "onboarding-title" &&
+      dialog.getAttribute("aria-describedby") === "onboarding-description" && d0.activeElement === heading,
+      "TC725-1 الحوار مربوط بعنوان ووصف وينقل التركيز الأولي إلى عنوانه");
+    ok(background?.hasAttribute("inert") === true && background.getAttribute("aria-hidden") === "true",
+      "TC725-2 خلفية الحوار inert ومخفية عن شجرة الوصول");
+    const skip = rootEl.querySelector('[data-testid="onboarding-skip"]') as HTMLElement | null;
+    d0.dispatchEvent(new dom.window.KeyboardEvent("keydown", { key: "Tab", bubbles: true, cancelable: true }));
+    ok(d0.activeElement === skip, "TC725-3 Tab من العنوان يبقى داخل الحوار وينتقل إلى أول عنصر تفاعلي");
+    d0.dispatchEvent(new dom.window.KeyboardEvent("keydown", { key: "Tab", shiftKey: true, bubbles: true, cancelable: true }));
+    ok(!!dialog && dialog.contains(d0.activeElement), "TC725-4 Shift+Tab من أول عنصر يلتف إلى آخر عنصر داخل الحوار");
+
     const pflege = rootEl.querySelector('[data-testid="onboarding-lernziel-pflege"]') as HTMLElement | null;
     ok(!!pflege && pflege.getAttribute("aria-pressed") === "false",
-      "TC725-1 معالج البداية يعرض هدفاً قابلاً للاختيار وحالته الوصولية غير مضغوطة أولاً");
+      "TC725-5 معالج البداية يعرض هدفاً قابلاً للاختيار وحالته الوصولية غير مضغوطة أولاً");
     if (pflege) click(pflege);
-    ok(pflege?.getAttribute("aria-pressed") === "true", "TC725-2 اختيار هدف التمريض ينعكس عبر aria-pressed لا اللون وحده");
+    ok(pflege?.getAttribute("aria-pressed") === "true", "TC725-6 اختيار هدف التمريض ينعكس عبر aria-pressed لا اللون وحده");
+    const zeitmodell = rootEl.querySelector('[data-testid="onboarding-zeitmodell"]')?.textContent ?? "";
+    ok(zeitmodell.includes("189") && zeitmodell.includes("261") && zeitmodell.includes("لا تضمن بلوغه") &&
+      zeitmodell.includes("ليس تسجيلاً بشرياً"),
+      "TC725-7 نموذج الوقت يعرض الأرقام الحية ويفصح عن TTS ولا يضمن B2");
     const weiter = btn("التالي — اختر وتيرتك");
     if (weiter) click(weiter);
     const intensiv = rootEl.querySelector('[data-testid="onboarding-tempo-intensiv"]') as HTMLElement | null;
     if (intensiv) click(intensiv);
     const grenze = rootEl.querySelector('[data-testid="onboarding-profil-grenze"]');
     ok(!!intensiv && intensiv.getAttribute("aria-pressed") === "true" &&
-      (grenze?.textContent ?? "").includes("لا يغيّران ترتيب خطة 378 يوماً") &&
+      (grenze?.textContent ?? "").includes("لا يغيران ترتيب خطة 378 يوماً") &&
       (grenze?.textContent ?? "").includes("لا يرسلان بياناتك"),
-      "TC725-3 الإيقاع يعلن حالته وحدّ أثره: بطاقات فقط، بلا تغيير الخطة أو إرسال شبكة");
-    await pruefeA11y("TC725-4 معالج الهدف والإيقاع قبل الحفظ");
-    const speichern = btn("ابدأ رحلتك 378ي");
+      "TC725-8 الإيقاع يعلن حالته وحد أثره: بطاقات فقط، بلا تغيير الخطة أو إرسال شبكة");
+    await pruefeA11y("TC725-9 معالج الهدف والإيقاع قبل الحفظ");
+    const speichern = btn("احفظ وابدأ الخطة");
     if (speichern) click(speichern);
     await flushAsync();
     const gespeichert = loadProgress();
     ok(!!speichern && gespeichert.settings.onboardingDone === true && gespeichert.settings.lernziel === "pflege" &&
-      gespeichert.settings.tempo === "intensiv" && rootEl.querySelector('[role="dialog"]') === null,
-      "TC725-5 الحفظ يكتب الهدف والإيقاع typed في الملف النشط ثم يغلق المعالج");
+      gespeichert.settings.tempo === "intensiv" && rootEl.querySelector('[role="dialog"]') === null &&
+      d0.activeElement === restoreTrigger && !background?.hasAttribute("inert"),
+      "TC725-10 الحفظ يغلق الحوار ويعيد التركيز وينظف inert ويحفظ الملف النشط");
+    restoreTrigger.remove();
   } finally {
     if (leave) leave();
     storage.clear();

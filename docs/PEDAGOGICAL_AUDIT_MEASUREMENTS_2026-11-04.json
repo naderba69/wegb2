@@ -283,9 +283,9 @@
   },
   "inventorySnapshot": {
     "indexedTrackedFilesAndAuditArtifacts": 3534,
-    "manual_complete": 21,
-    "manual_targeted": 33,
-    "not_started": 3476,
+    "manual_complete": 22,
+    "manual_targeted": 35,
+    "not_started": 3473,
     "audit_artifact": 4
   },
   "learningStateCorrections": {

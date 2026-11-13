@@ -29,8 +29,10 @@ import {
   debtsFrom,
   planPct,
   planMinBis,
+  planTagesMinuten,
   planStundenBis,
   planStundenGesamt,
+  planArbeitslast,
 } from "../lib/plan";
 import { seededShuffle } from "../lib/seeded-rng";
 import { newCard, reviewCard, isDue, newCardCap, countNewCardsIntroducedToday, karteStufe, abrufbarkeit, todayDeck } from "../lib/srs";
@@ -150,8 +152,8 @@ import {
 } from "../lib/session-clock";
 import { baueLexikon, zerlege, baueAufgaben, erklaereAr, kopfwort, FUGEN } from "../lib/komposita";
 import {
-  CEFR_STUNDEN, PHASE_END_DAY, LEVEL_ORDER, urteileStunden, vergleichePlan,
-  erreichbaresNiveau, minutenEffektiv, clampMinuten, MAX_MIN_PRO_TASK, minutenZuStunden,
+  GOETHE_KURSSTUNDEN, PHASE_END_DAY, KURS_LEVELS, zeitlastPosition, vergleicheZeitlast,
+  minutenEffektiv, clampMinuten, MAX_MIN_PRO_TASK, minutenZuStunden,
 } from "../lib/cefr";
 import { entdeckungsFrage, induktionMoeglich, ergebnisText, MIN_BEISPIELE, stufenAbstand } from "../lib/induktion";
 import { STIL_PAARE, REGEL_AR, bankPruefen, stilUebungen, registerErkennen, stilProfil } from "../lib/stil";
@@ -212,7 +214,8 @@ const vocabRepeatAudit = (() => {
     const item = declared.get(lemma);
     if (!item) { valid = false; continue; }
     const ids = cards.map((card) => card.id).sort();
-    const levels = [...new Set(cards.map((card) => card.level))].sort((a, b) => LEVEL_ORDER.indexOf(a) - LEVEL_ORDER.indexOf(b));
+    const levelOrder: Level[] = ["A0", "A1", "A2", "B1", "B2"];
+    const levels = [...new Set(cards.map((card) => card.level))].sort((a, b) => levelOrder.indexOf(a) - levelOrder.indexOf(b));
     const examples = cards.map((card) => card.exampleDe?.trim() ?? "");
     const translations = cards.map((card) => card.exampleAr?.trim() ?? "");
     if (item.ids.slice().sort().join("|") !== ids.join("|") ||
@@ -1148,50 +1151,42 @@ const vocabRepeatAudit = (() => {
       "K61t والورشةُ مركَّبةٌ داخلَ درسِها — لا محرِّكَ بلا مستهلِك");
   }
 
-  /* ═══ K60 · عقدُ الساعات: الوعدُ يُقابَلُ بمرجعٍ لا بنفسِه ═══
-     وُجدت هذه الكتلة لأنَّ المشروعَ كان يَعِدُ «A0→B2 في 378 يوماً»
-     وهو لا يعرف كم ساعةً يخطِّط، ولا يسجِّل دقيقةً قضَاها المتعلِّم. */
+  /* ═══ K60 · نموذج الوقت: هدف جلسة ≠ حمل يوم ≠ وقت مقاس ═══ */
   {
-    /* المرجع */
-    ok(LEVEL_ORDER.every((l) => Array.isArray(CEFR_STUNDEN[l]) && CEFR_STUNDEN[l].length === 2 && CEFR_STUNDEN[l][0] < CEFR_STUNDEN[l][1]),
-      "K60a مرجعُ CEFR نطاقاتٌ [أدنى,أعلى] لكلِّ المستوياتِ الأربعة — لا رقمٌ حاسمٌ يُدَّعى");
-    ok(CEFR_STUNDEN.B2[0] >= 450 && CEFR_STUNDEN.B1[0] >= 260 && CEFR_STUNDEN.A2[0] >= 150 && CEFR_STUNDEN.A1[0] >= 60, // R169: عتباتُ Goethe بالساعات الحقيقية (450/260) لا أرقام UE ‏à45 المخلوطة قديماً (600/350) — تصحيحُ وحداتٍ بسجلّ RULES
-      "K60b والنطاقاتُ مطابقةٌ لمرجعِ Goethe/telc التراكميِّ من الصفر");
+    ok(KURS_LEVELS.every((level) => GOETHE_KURSSTUNDEN[level][0] < GOETHE_KURSSTUNDEN[level][1]),
+      "K60a نطاقات ساعات دورات Goethe بنية سياقية سليمة للمستويات الأربعة");
     ok(PHASE_END_DAY.A1 === PHASEN.A1.bis && PHASE_END_DAY.A2 === PHASEN.A2.bis && PHASE_END_DAY.B1 === PHASEN.B1.bis && PHASE_END_DAY.B2 === TOTAL && levelOf(PHASEN.A1.bis) === "A1" && levelOf(PHASEN.A1.bis + 1) === "A2" && levelOf(PHASEN.B1.bis + 1) === "B2",
-      "K60c ونهاياتُ المراحلِ هي حدودُ الخطةِ نفسِها — لا تقويمٌ موازٍ");
+      "K60b نهايات الأقسام هي حدود الخطة نفسها — لا تقويم موازٍ");
 
-    /* منحنى الخطة */
     const ges = planStundenGesamt();
-    ok(Number.isFinite(ges) && ges > 0 && Math.abs(ges - planMinBis(TOTAL_DAYS) / 60) < 0.01,
-      `K60d مجموعُ تقديراتِ المهام محسوبٌ من buildDay مستقلاً عن هدف الجلسة (${ges.toFixed(1)} س)`);
-    ok(planMinBis(0) === 0 && planMinBis(TOTAL) === planMinBis(TOTAL_DAYS), "K60e المنحنى يبدأُ من الصفرِ وينتهي عند آخرِ يوم");
+    const last = planArbeitslast();
+    ok(Number.isFinite(ges) && ges > 0 && Math.abs(ges - planMinBis(TOTAL_DAYS) / 60) < 0.01 && last.stunden === ges,
+      `K60c مجموع تقديرات المهام محسوب من buildDay عبر مصدر واحد (${ges.toFixed(1)} س)`);
+    ok(planMinBis(0) === 0 && planMinBis(TOTAL) === planMinBis(TOTAL_DAYS), "K60d المنحنى يبدأ من الصفر وينتهي عند آخر يوم");
     let mono = true; for (let d = 1; d <= TOTAL_DAYS; d++) if (planMinBis(d) < planMinBis(d - 1)) { mono = false; break; }
-    ok(mono, "K60f والمنحنى رتيبٌ لا ينقص — الدقائقُ تُجمَعُ لا تُطرَح");
+    ok(mono, "K60e المنحنى رتيب لا ينقص — الدقائق تجمع ولا تطرح");
     ok(planStundenBis(PHASEN.A1.bis) < planStundenBis(PHASEN.A2.bis) && planStundenBis(PHASEN.A2.bis) < planStundenBis(PHASEN.B1.bis) && planStundenBis(PHASEN.B1.bis) < planStundenBis(TOTAL),
-      "K60g وكلُّ مرحلةٍ تزيدُ على سابقتِها — لا مرحلةَ صفرية");
-    ok(planMinBis(TOTAL) === planMinBis(TOTAL) && planStundenBis(100) === planStundenBis(100),
-      "K60h والحسابُ محفوظٌ فلا يُعادُ اشتقاقُ 378 يوماً عند كلِّ نقر");
+      "K60f كل قسم يضيف وقت مهام إلى المجموع التراكمي");
+    ok(planTagesMinuten(1) === planMinBis(1) && planTagesMinuten(TOTAL_DAYS) === planMinBis(TOTAL_DAYS) - planMinBis(TOTAL_DAYS - 1),
+      "K60g حمل اليوم الكامل مشتق من المنحنى نفسه لا من هدف الجلسة");
+    ok(last.minuten === 71595 && Math.abs(last.durchschnittMinutenProTag - 189.4) < 0.1 &&
+      last.phasen.B2.minuten === 26645 && Math.abs(last.phasen.B2.durchschnittMinutenProTag - 261.2) < 0.1 &&
+      last.sitzungszielMinuten === DEFAULT_SESSION_GOAL_MINUTES,
+      "K60h خط الأساس الحالي 71595د/189.4د يومياً وB2 ‏26645د/261.2د، وهدف الجلسة مستقل");
 
-    /* صدقُ الوعد — البوابةُ الأهمّ في هذه الكتلة */
-    const vgl = vergleichePlan(planStundenBis);
-    ok(vgl.length >= 4 && vgl.slice(0,4).every((v) => v.planStd > 0 && v.deckungProzent > 0), "K60i المقارنةُ تُنتِجُ أربعةَ صفوفٍ بأرقامٍ حيّة");
-    const niv = erreichbaresNiveau(vgl);
-    const b2v = vgl[3];
-    ok(b2v.urteil === "erreicht" || niv === "B2" || b2v.fehlendBisMinimum > 0,
-      "K60j منطقُ الحكمِ متماسك: إمّا B2 وافٍ، أو مستوىً أدنى مُعلَن، أو نقصٌ محسوب — لا حالةٌ رابعةٌ صامتة");
-    if (b2v.urteil === "weitDarunter" || b2v.urteil === "darunter") {
-      ok(niv !== "B2", `K60k الصدقُ الإلزامي: ساعاتُ B2 (${b2v.planStd}) دون نطاقِها (${b2v.ref[0]}–${b2v.ref[1]}) فلا يُدَّعى B2 — المستوى المبلغُ ${niv}`);
-      ok(b2v.fehlendBisMinimum >= b2v.ref[0] - b2v.planStd - 0.11, `K60l والنقصُ محسوبٌ لا مُقدَّر (${b2v.fehlendBisMinimum} س)`);
-    } else {
-      ok(niv === "B2", "K60m وإن وُفّيَ المرجعُ صار B2 هو المُعلَن — الحكمُ يتبعُ الرقمَ لا العكس");
-    }
-    ok(urteileStunden(CEFR_STUNDEN.B2[1], CEFR_STUNDEN.B2) === "erreicht"
-      && urteileStunden(CEFR_STUNDEN.B2[0], CEFR_STUNDEN.B2) === "imBereich"
-      && urteileStunden(CEFR_STUNDEN.B2[0] * 0.75, CEFR_STUNDEN.B2) === "darunter"
-      && urteileStunden(CEFR_STUNDEN.B2[0] * 0.25, CEFR_STUNDEN.B2) === "weitDarunter",
-      "K60n وسلَّمُ الأحكامِ الأربعةِ يعملُ عند حدودِه لا في وسطِه فحسب");
+    const vgl = vergleicheZeitlast(planStundenBis);
+    ok(vgl.length === 4 && vgl.every((v) => v.planStd > 0 && v.kursSpanne[0] < v.kursSpanne[1]),
+      "K60i المقارنة الزمنية تنتج أربعة صفوف وصفية بلا مستوى مستنتج");
+    ok(zeitlastPosition(59, GOETHE_KURSSTUNDEN.A1) === "unterhalb" &&
+      zeitlastPosition(100, GOETHE_KURSSTUNDEN.A1) === "innerhalb" &&
+      zeitlastPosition(151, GOETHE_KURSSTUNDEN.A1) === "oberhalb",
+      "K60j موقع الرقم داخل النطاق وصفي عند الحدود ولا يقرر كفاءة");
+    const cefrSource = readFileSync("lib/cefr.ts", "utf8");
+    ok(!cefrSource.includes("erreichbaresNiveau") && !cefrSource.includes("examReadiness") &&
+      cefrSource.includes("لا تستنتج هذه") && cefrSource.includes("أداءً مقاساً في مهارات"),
+      "K60k وحدة المقارنة لا تصدر مستوى أو جاهزية من الوقت");
 
-    /* قياسُ الوقتِ الفعلي */
+    /* قياس الوقت الفعلي */
     ok(minutenEffektiv(emptyProgress) === 0, "K60o الأصلُ صفر: لا وقتَ مقاساً قبل تشغيل المؤقّت");
     ok(minutenEffektiv({ ...emptyProgress, plan: { ...emptyProgress.plan, minutenEffektiv: 1234 } }) === 1234, "K60p الوقتُ المسجَّلُ من المؤقّت يُقرأ كما كُتب");
     ok(minutenEffektiv({ ...emptyProgress, plan: { ...emptyProgress.plan, minutenEffektiv: -50 } }) === 0
@@ -1212,10 +1207,11 @@ const vocabRepeatAudit = (() => {
     ok(storeSource.includes("export function bucheMinuten") && manualBookingSource.includes("clampMinuten(minuten)") &&
       manualBookingSource.includes("minutenManuell") && !manualBookingSource.includes("minutenEffektiv:"),
       "K60t الإدخال اليدوي يمرّ عبر clampMinuten ويُخزَّن منفصلاً؛ لا يكتب في حقل الوقت المقاس");
-    ok(readFileSync("components/stundenvertrag.tsx", "utf8").includes("planStundenGesamt")
-      && readFileSync("components/stundenvertrag.tsx", "utf8").includes("vergleichePlan")
-      && readFileSync("components/stundenvertrag.tsx", "utf8").includes("erreichbaresNiveau"),
-      "K60u واللوحةُ تستهلكُ المحرِّكَ فعلاً — لا محرِّكَ بلا مستهلِك");
+    const zeitlastUi = readFileSync("components/stundenvertrag.tsx", "utf8");
+    ok(zeitlastUi.includes("planArbeitslast") && zeitlastUi.includes("planTagesMinuten") &&
+      zeitlastUi.includes("vergleicheZeitlast") && zeitlastUi.includes('data-testid="zeitmodell-drei-zahlen"') &&
+      !zeitlastUi.includes("erreichbaresNiveau") && !zeitlastUi.includes("بهذا الحملِ المخطَّط تبلغ"),
+      "K60u اللوحة تستهلك مصدر الحمل الواحد وتفصل الأرقام بلا استنتاج مستوى");
     ok(readFileSync("components/berichte.tsx", "utf8").includes("<StundenVertrag progress={progress} />"),
       "K60v واللوحةُ مركَّبةٌ في مركزِ التقارير — ظاهرةٌ لا مدفونة");
   }
@@ -1726,9 +1722,8 @@ const vocabRepeatAudit = (() => {
 
 /* ═══ الخلاصة ═══ */
 
-  /* ═══ K63 — التوزيع الأكاديمي للمراحل (lib/phasen.ts) ═══
-     كان: 70·70·70·60 يوماً بحملٍ ثابت ⇒ B2 = 517.6 س < 600 (الوعد لا يتحقّق).
-     صار: أيامٌ بأوزان زيادة CEFR (12·12·14·14 أسبوعاً بعد A0 10 أيام) + حملٌ يوميٌّ تصاعدي. */
+  /* ═══ K63 — حدود الأقسام وحمل المهام (lib/phasen.ts + lib/plan.ts) ═══
+     الحدود ثابتة، أما المجاميع والمتوسطات فتُشتق من المهام ولا تُحوّل إلى حكم CEFR. */
   {
     const L = ["A1", "A2", "B1", "B2"] as const;
     ok(PHASEN.A0.von === 1 && L.every((l, i) => i === 0 || PHASEN[l].von === PHASEN[L[i - 1]].bis + 1) && PHASEN.B2.bis + 1 === ABSCHLUSS_VON && ABSCHLUSS_VON + (TOTAL - ABSCHLUSS_VON) === TOTAL,
@@ -1740,32 +1735,28 @@ const vocabRepeatAudit = (() => {
     });
     // يومُ نهاية A0 لا فحص (تهيئة)؛ أما باقي المراحل فينتهي بيوم فحص/وخطة ما قبل الختام.
     ok(weeksOk, "K63b كلُّ مرحلةٍ أسابيعُ كاملةٌ وتنتهي بيومِ الفحصِ الأسبوعيِّ — الإيقاعُ محفوظ");
-    const tage = L.map((l) => PHASEN[l].wochen);
-    ok(tage.every((t, i) => i === 0 || t >= tage[i - 1]) && PHASEN.B2.wochen >= PHASEN.A1.wochen,
-      "K63c الأيامُ تتصاعدُ مع المستوى وB2 أكثرُ من ضعفِ A1 — لا التساوي القديم");
-    // K63d: منتصف النطاق — نسمح بانحراف ≤10 نقاط مئوية لكل مستوى ليعكس التوزيع 12/12/14/14 (4 أسابيع/مرحلة لزيادة التثبيت).
-    const mid = { A0: 0, A1: 105, A2: 120, B1: 200, B2: 275 };
-    const midTotal = mid.A1 + mid.A2 + mid.B1 + mid.B2;
-    const anteilRef = L.map((l) => mid[l] / midTotal);
-    const wsum = L.reduce((a, l) => a + PHASEN[l].wochen, 0);
-    const anteilPlan = L.map((l) => PHASEN[l].wochen / wsum);
-    const abw = Math.max(...anteilPlan.map((p, i) => Math.abs(p - anteilRef[i])));
-    ok(abw < 0.15, `K63d (منتصفُ النطاق) بانحرافٍ < 15 نقطة بعد إعادة التوازن 12/12/14/14 أسبوعاً (${anteilPlan.map((x) => Math.round(x * 100)).join("/")}% مقابل ${anteilRef.map((x) => Math.round(x * 100)).join("/")}%)`);
+    const tage = L.map((level) => PHASEN[level].wochen);
+    ok(tage.every((weeks, i) => i === 0 || weeks >= tage[i - 1]),
+      "K63c مدد الأقسام لا تنكمش لاحقاً: 12/12/14/14 أسبوعاً");
+    ok(PHASEN.A1.wochen === 12 && PHASEN.A2.wochen === 12 && PHASEN.B1.wochen === 14 && PHASEN.B2.wochen === 14,
+      "K63d توزيع الأسابيع المثبت مطابق لحدود الأيام، بلا اشتقاق كفاءة من الساعات");
     ok(L.every((l, i) => i === 0 || LERNLAST[l] >= LERNLAST[L[i - 1]]) && LERNLAST.A1 === 1 && LERNLAST.B2 <= 2.2,
       "K63e معاملُ الحملِ تصاعديٌّ يبدأُ من 1.0 ولا يتجاوز 2.2 في B2؛ تقديرات المهام تُعرض مستقلّةً عن هدف الجلسة");
     ok(lastMinuten(30, "A1") === 30 && lastMinuten(30, "B2") === 65 && lastMinuten(3, "A1") === 5 && lastMinuten(35, "B1") === 60,
       "K63f التطبيقُ يقرِّبُ إلى 5 دقائق ولا ينزلُ تحتَ 5 — ومعامل الحمل يعطي دقائق مكثفة في B2 (30→65، 35→60)");
 // ملاحظة: lastMinuten(30,B2)=65 عند LERNLAST.B2=2.15؛ عند LERNLAST=2.2 = 65 أيضاً (تقريب لـ5).
 void 0;
-    const v = vergleichePlan(planStundenBis);
-    const bandOk = v.every((x) => x.level === "A0" || x.urteil === "erreicht" || x.urteil === "imBereich" || x.urteil === "darunter");
-    ok(bandOk, `K63g **كلُّ مرحلةٍ داخلَ نطاقِ CEFR** — ${v.map((x) => `${x.level} ${x.planStd.toFixed(0)}h (${x.urteil})`).join(" · ")}`);
-    const b2v = v.find((x) => x.level === "B2")!;
-    ok(b2v.planStd >= 600 + 20, `K63h B2 فوقَ أدنى الحدِّ (600) بهامشٍ ≥ 20 ساعة — الوعدُ يتحقّقُ بالحملِ المخطَّط لا بالأمنيات (${b2v.planStd.toFixed(0)}h)`);
-    const proTag = L.map((l) => (planStundenBis(PHASE_END_DAY[l]) - planStundenBis(PHASEN[l].von - 1)) / (PHASE_END_DAY[l] - PHASEN[l].von + 1));
-    ok(proTag.every((h, i) => Number.isFinite(h) && h > 0 && (i === 0 || h >= proTag[i - 1] - 0.01)) &&
-      DEFAULT_SESSION_GOAL_MINUTES === 90,
-      `K63i تقديراتُ مجموع مهام اليوم تصاعدية بحسب المرحلة، ومستقلة عن هدف الجلسة (${proTag.map((h) => h.toFixed(2)).join(" → ")} س/يوم؛ الهدف 90 د)`);
+    const lastK63 = planArbeitslast();
+    const phasenMinutenK63 = L.map((level) => lastK63.phasen[level].minuten);
+    ok(phasenMinutenK63.every((minuten) => minuten > 0) &&
+      Object.values(lastK63.phasen).reduce((sum, phase) => sum + phase.minuten, 0) === lastK63.minuten,
+      `K63g كل قسم له حمل مهام موجب ومجموع الأقسام يساوي إجمالي الخطة (${phasenMinutenK63.join("/")} د)`);
+    ok(lastK63.minuten === 71595 && lastK63.phasen.B2.minuten === 26645,
+      "K63h خط أساس الحمل الحالي محروس من المصدر الحسابي: 71595د إجمالاً و26645د في B2");
+    const proTag = L.map((level) => lastK63.phasen[level].durchschnittMinutenProTag / 60);
+    ok(proTag.every((hours, i) => Number.isFinite(hours) && hours > 0 && (i === 0 || hours >= proTag[i - 1] - 0.01)) &&
+      lastK63.sitzungszielMinuten === DEFAULT_SESSION_GOAL_MINUTES,
+      `K63i متوسطات مهام الأقسام تصاعدية ومستقلة عن هدف الجلسة (${proTag.map((hours) => hours.toFixed(2)).join(" → ")} س/يوم؛ الهدف ${lastK63.sitzungszielMinuten} د)`);
     // K63j: الوحدات التدريسية (دكات المفردات) عبر المراحل الأربع — 11+16+22+25 = 74 حزمة، والأربعُ الكبرى (التي توازي الوحدات) ≥4 لكل مستوى ⇒ 16 على الأقل.
     function decksIn(von: number, bis: number): Set<string> {
       const s = new Set<string>();
@@ -4064,12 +4055,12 @@ void 0;
   const playerAt = home.indexOf("<Klassenzimmer");
   ok(primaryAt >= 0 && goalAt > primaryAt && playerAt > goalAt && home.includes("heldGrund") &&
     home.includes('data-testid="held-start"') && home.includes("onClick={startToday}") &&
-    home.includes('document.getElementById("dirb-training")') && home.includes('"ابدأ جلسة 90 دقيقة"') &&
+    home.includes('document.getElementById("dirb-training")') && home.includes('`ابدأ جلسة ${plan.zielMin} دقيقة`') &&
     home.includes('"اختر المتابعة أو الحفظ"') && home.includes('"راجع نهاية اليوم"'),
     "K136a شاشةُ اليوم تبدأ بخطوةٍ واحدةٍ وسببها وزرٍ عربي، قبل الهدف والمشغّل");
   ok(!home.includes("XpBar") && (home.match(/role="progressbar"/g) ?? []).length === 1 &&
-    home.includes('data-testid="zeit-hinweis"') && home.includes("هدف 90 دقيقة افتراضي للجلسة فقط؛ مجموع تقديرات الخطة مستقل عنه"),
-    "K136b مؤشرُ هدفٍ واحدٌ فقط؛ لا شريط XP مكرّر، وهدف الجلسة منفصل عن تقديرات الخطة والوقت المقاس");
+    home.includes('data-testid="zeit-hinweis"') && home.includes("{plan.zielMin}") && home.includes("{totalMinutes}"),
+    "K136b مؤشر هدف واحد فقط؛ رقم هدف الجلسة وحمل اليوم يأتيان من الخطة ويظلان منفصلين عن القياس");
   ok(home.includes('<details className="dirb-extra" data-testid="today-extra">') &&
     home.includes('<details className="dirb-task-map" data-testid="today-task-map">') &&
     home.includes('href="/drucken"') && home.includes('href="/einstellungen"') &&
