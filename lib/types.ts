@@ -332,6 +332,8 @@ export interface DayTask {
   monologId?: string;
   /** R141e: Karte für beliebigen Sprechteil (insbesondere Teil 3 Diskussion). */
   muendlichId?: string;
+  /** PA-015: وحدة نبر/إيقاع B1/B2 لدورة مقارنة قبل/بعد محلية. */
+  pronunciationId?: string;
   /** R138/P-13: نمط فهم المسموع — global (فهم عام) / detailliert (تفاصيل) / selektiv (معلومات محددة) */
   hoerenModus?: "global" | "detailliert" | "selektiv";
   quiz?: Exercise[];

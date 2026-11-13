@@ -45,6 +45,7 @@ import { baueUebungsEmpfehlungen } from "../lib/uebungsnavigator";
 import { punkteFuerRichtigenVersuch } from "../lib/exercise-scoring";
 import { prognose } from "../lib/prognose";
 import { PHONETIK_EINHEITEN } from "../lib/phonetikdaten";
+import { PROSODIE_EINHEITEN, getProsodieEinheit } from "../lib/prosodie";
 import { bewerteHoerKontrast, pruefbareKontrastIndizes, starteHoerKontrast } from "../lib/minimalpaare";
 import { bewerteSelbsterklaerung, normalisiereErklaertext, schluesselwoerterFuerRegel } from "../lib/selbsterklaerung";
 import { sprechHeute, SPRECH_ZIEL_SEK } from "../lib/sprechziel";
@@ -3171,7 +3172,7 @@ void 0;
   ok(seite.includes("اكتملت الرحلة — {TOTAL_DAYS}") && seite.includes("${closedDays.length}/${TOTAL_DAYS}"),
     "K123b شاشةُ النهايةِ تستخدمُ TOTAL_DAYS لا رقماً مزروعاً");
   const inter = readFileSync("scripts/interaktiv_test.tsx", "utf8");
-  ok((inter.match(/day <= TOTAL_DAYS/g) ?? []).length === 2, "K123c المسحُ التركيبيُّ يغطي الخطةَ كاملةً عبر TOTAL_DAYS");
+  ok((inter.match(/day <= TOTAL_DAYS/g) ?? []).length >= 2, "K123c المسوحُ التركيبية تغطي الخطةَ كاملةً عبر TOTAL_DAYS");
 }
 
 /* ═══ K124 — بوابات المرحلة 1: المؤقت والاعتراض والبديل والتوقف (R11/R33/R16/R19/R20) ═══ */
@@ -15142,6 +15143,41 @@ function collectR262(dir: string, out: string[] = []): string[] {
     evidenceK405.sourceReview.status === "pending" && evidenceK405.fieldValidation.status === "pending" &&
     evidenceK405.releaseDecision.productStatus === "candidate-live-implementation",
     "K405d Tool 202: ملف الدليل يثبت مؤشر التغطية والانتقالات فقط ويبقي صحة الشرح والمصدر والميدان معلقاً");
+}
+
+/* ═══ K406 — PA-015: مسار نبر وإيقاع B1/B2 بمقارنة قبل/بعد ═══ */
+{
+  const fokusK406 = new Set(PROSODIE_EINHEITEN.map((einheit) => einheit.fokus));
+  ok(PROSODIE_EINHEITEN.length === 12 && new Set(PROSODIE_EINHEITEN.map((einheit) => einheit.id)).size === 12 &&
+    ["B1", "B2"].every((level) => PROSODIE_EINHEITEN.filter((einheit) => einheit.level === level).length === 6) &&
+    ["satzakzent", "rhythmus", "reduktion", "verbindung", "intonation", "arabisch-transfer"].every((fokus) => fokusK406.has(fokus as never)),
+    "K406a PA-015: اثنتا عشرة وحدة فريدة تغطي النبر والإيقاع والاختزال والوصل والتنغيم وتداخل العربية في B1/B2 بالتساوي");
+
+  const tasksK406: Array<{ day: number; task: DayTask }> = [];
+  let totalK406 = 0;
+  for (let day = 1; day <= TOTAL_DAYS; day++) {
+    const plan = buildDay(day, emptyProgress);
+    totalK406 += plan.tasks.length;
+    for (const task of plan.tasks) if (task.pronunciationId) tasksK406.push({ day, task });
+  }
+  ok(totalK406 === 2500 && tasksK406.length === 14 &&
+    tasksK406.filter(({ day }) => day >= 179 && day <= 276).length === 7 &&
+    tasksK406.filter(({ day }) => day >= 277 && day <= 374).length === 7 &&
+    tasksK406.every(({ day, task }) => day > 167 && task.kind === "aussprache" &&
+      !!getProsodieEinheit(task.pronunciationId) && task.sentenceIds?.length === 4),
+    "K406b PA-015: سبع مقارنات في كل من B1/B2 بعد اليوم 167 مع إبقاء 2500 مهمة وأربع جمل نقل لكل خانة");
+
+  const tageK406 = tasksK406.map(({ day }) => day);
+  ok(tageK406[0] === 188 && tageK406.at(-1) === 370 &&
+    tageK406.slice(1).every((day, index) => day - tageK406[index] === 14),
+    "K406c PA-015: المسار يمتد من مطلع B1 إلى آخر أسبوع B2 عادي بلا فجوة تتجاوز 14 يوماً");
+
+  const uiK406 = readFileSync("components/tasks.tsx", "utf8");
+  const trainerK406 = readFileSync("components/aussprachetrainer.tsx", "utf8");
+  ok(uiK406.includes('data-testid="prosodie-before"') && uiK406.includes('data-testid="prosodie-after"') &&
+    uiK406.includes('data-testid="prosodie-comparison"') && uiK406.includes("فرق تقدير الإيقاع الداخلي") &&
+    uiK406.includes("لا يقيس الفونيمات أو اللكنة") && trainerK406.includes("الإيقاع والوقفات والمقاطع فقط"),
+    "K406d PA-015: الواجهة تفرض دورة قبل→إرشاد→بعد→مقارنة وتحد القياس بالإيقاع؛ لا checkbox أو حكم فونيمي/لكنة");
 }
 
 

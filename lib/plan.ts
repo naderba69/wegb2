@@ -42,6 +42,7 @@ import { beiBankenBereit, beiVertiefungBereit } from "./bankload";
 import { rng, seededShuffle } from "./seeded-rng";
 import { evidenceForTask } from "./task-evidence";
 import { assignDailyPaths, isCoreTask } from "./day-path";
+import { prosodieEinheitFuerWoche } from "./prosodie";
 
 export { rng } from "./seeded-rng";
 
@@ -1026,15 +1027,21 @@ export function buildDay(day: number, progress: Progress): DayPlan {
         writeId: nextWrite()?.id,
       });
     }
+    // PA-015: في أسبوعٍ من اثنين داخل B1/B2 تتحول خانة الترديد القديمة نفسها
+    // إلى مقارنة نبر/إيقاع قبل/بعد؛ العدد والدقائق والجمل الأصلية لا تتغير.
+    const prosodie = (level === "B1" || level === "B2") && wocheInPhase % 2 === 0
+      ? prosodieEinheitFuerWoche(level, Math.floor(wocheInPhase / 2) - 1)
+      : undefined;
     // K-SilentPeriod: لا تحدّث حر قبل أواخر A2
     if (level === "B1" || level === "B2" || day >= PHASEN.A2.bis - 7) {
       tasks.push({
         id: tid(3),
-        kind: "sprechen",
-        titleDe: "Freies Sprechen",
-        titleAr: "تحدّث حرّ (سجّل نفسك)",
+        kind: prosodie ? "aussprache" : "sprechen",
+        titleDe: prosodie ? `Prosodie-Vergleich: ${prosodie.titelDe}` : "Freies Sprechen",
+        titleAr: prosodie ? `مقارنة نبر وإيقاع: ${prosodie.titelAr}` : "تحدّث حرّ (سجّل نفسك)",
         minutes: 20,
         sentenceIds: pickN(satzOfLevel, 4, rand).map((s) => s.id),
+        pronunciationId: prosodie?.id,
       });
     } else {
       tasks.push({

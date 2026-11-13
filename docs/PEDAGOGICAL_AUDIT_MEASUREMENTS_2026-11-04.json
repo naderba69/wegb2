@@ -120,6 +120,15 @@
       "maximumConcurrentDoses": 2,
       "verificationDelayDays": 3,
       "verificationMinimumWeight": 3
+    },
+    "pronunciationPathAudit": {
+      "passed": 11,
+      "failed": 0,
+      "internalUnits": 12,
+      "scheduledComparisons": 14,
+      "measurementScope": "session rhythm, pauses, syllable estimate, and speech ratio only",
+      "phonemeOrAccentValidity": "not_assessed",
+      "externalExpertReview": "pending"
     }
   },
   "defaultPlan": {
@@ -156,21 +165,23 @@
         "tasks": 655,
         "taskMinutes": 20560,
         "meanMinutesPerDay": 209.7959,
-        "explicitPronunciationTasks": 0
+        "explicitPronunciationTasks": 7
       },
       "B2": {
         "days": 102,
         "tasks": 718,
         "taskMinutes": 26645,
         "meanMinutesPerDay": 261.2255,
-        "explicitPronunciationTasks": 0
+        "explicitPronunciationTasks": 7
       }
     },
     "explicitPronunciation": {
-      "taskCount": 25,
-      "daysWithTask": 25,
-      "lastTaskDay": 167,
-      "daysWithoutExplicitTaskAfterLast": 211
+      "taskCount": 39,
+      "daysWithTask": 39,
+      "lastTaskDay": 370,
+      "daysWithoutExplicitTaskAfterLast": 8,
+      "advancedComparisonTasks": 14,
+      "advancedMaximumGapDays": 14
     }
   },
   "onboardingAudio": {

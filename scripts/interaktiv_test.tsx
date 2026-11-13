@@ -3945,6 +3945,62 @@ const hasFile = txt().includes("صوتٌ من الدار");
     }
   }
 
+  /* ═══ PA-015 — B1/B2: نبر وإيقاع بمقارنة قبل/بعد لا checkbox ═══ */
+  {
+    const { default: TaskView } = await import("../components/tasks");
+    const { buildDay } = await import("../lib/plan");
+    const { getSatz } = await import("../lib/content");
+    let advanced: { day: number; task: ReturnType<typeof buildDay>["tasks"][number] } | undefined;
+    for (let day = 168; day <= TOTAL_DAYS && !advanced; day++) {
+      const task = buildDay(day, { ...emptyProgress, plan: { ...emptyProgress.plan, day } }).tasks.find((item) => !!item.pronunciationId);
+      if (task) advanced = { day, task };
+    }
+    ok(!!advanced && advanced.day > 167 && advanced.task.kind === "aussprache", "PA015-1 أول مهمة نبر صريحة تظهر بعد A2 ضمن خطة B1");
+    const points: [number, number][] = [];
+    if (advanced) {
+      mount(React.createElement(TaskView, {
+        task: advanced.task,
+        lang: "ar" as const,
+        day: advanced.day,
+        srs: {},
+        onSrs: () => {},
+        onPoints: (score: number, max: number) => points.push([score, max]),
+      }));
+      ok(!!rootEl.querySelector('[data-testid="prosodie-vergleich-task"]') &&
+        txt().includes("مقارنة قبل/بعد") && txt().includes("لا يقيس الفونيمات أو اللكنة"),
+        "PA015-2 المهمة تعرض هدف النبر وحد القياس بصدق");
+      ok(!!rootEl.querySelector('[data-testid="prosodie-transfer"]') &&
+        (advanced.task.sentenceIds ?? []).every((id) => {
+          const sentence = getSatz(id);
+          return !!sentence && txt().includes(sentence.de);
+        }),
+        "PA015-3 جمل النقل الأربع الأصلية باقية داخل المهمة بعد إضافة المقارنة");
+
+      const before = rootEl.querySelector('[data-testid="prosodie-before"]') as HTMLElement | null;
+      const beforeAttest = before?.querySelector('[data-testid="aussprache-self-attest"]') as HTMLElement | null;
+      if (beforeAttest) click(beforeAttest);
+      ok(!!beforeAttest && !!rootEl.querySelector('[data-testid="prosodie-coaching"]') && !!rootEl.querySelector('[data-testid="prosodie-after"]'),
+        "PA015-4 إتمام المحاولة الأولى يفتح الإرشاد ثم محاولة ثانية مستقلة");
+
+      const after = rootEl.querySelector('[data-testid="prosodie-after"]') as HTMLElement | null;
+      const afterAttest = after?.querySelector('[data-testid="aussprache-self-attest"]') as HTMLElement | null;
+      if (afterAttest) click(afterAttest);
+      const completeBeforeObservation = rootEl.querySelector('[data-testid="prosodie-task-complete"]') as HTMLButtonElement | null;
+      ok(!!afterAttest && !!rootEl.querySelector('[data-testid="prosodie-comparison"]') && completeBeforeObservation?.disabled === true,
+        "PA015-5 المحاولة الثانية تفتح المقارنة، ولا يكفي نقر المحاولتين للتسليم دون ملاحظة فرق");
+
+      const observation = rootEl.querySelector('[data-testid="prosodie-observation-unklar"]') as HTMLButtonElement | null;
+      if (observation) click(observation);
+      const complete = rootEl.querySelector('[data-testid="prosodie-task-complete"]') as HTMLButtonElement | null;
+      ok(observation?.getAttribute("aria-pressed") === "true" && complete?.disabled === false,
+        "PA015-6 المقارنة الذاتية الصريحة — بما فيها عدم ملاحظة فرق — مطلوبة ومعلنة وصولياً");
+      if (complete) click(complete);
+      ok(points.length === 1 && points[0][0] === 1 && points[0][1] === 1 && txt().includes("دون قياس رقمي كامل"),
+        "PA015-7 التسليم يسجل إكمال دورة المقارنة فقط ولا يختلق درجة نطق عند غياب الميكروفون");
+      await pruefeA11y("PA015-8 مهمة النبر بعد المقارنة غير المقاسة");
+    }
+  }
+
   /* ═══ XCV — مشغّل الجلسة المتسلسلة (U1/R187): مهمّة ← تسليم ← التالية، والحرية باقية ═══ */
   {
     const { Klassenzimmer } = await import("../components/akademie/Klassenzimmer");

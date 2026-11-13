@@ -85,6 +85,8 @@ jobs:
         run: npm run audit:language-fields
       - name: Conservative receptive/form placement (PA-014)
         run: npm run audit:placement
+      - name: B1/B2 prosody before/after path (PA-015)
+        run: npm run audit:pronunciation-path
       - name: Construct-aware competency evidence (PA-016)
         run: npm run audit:competency-evidence
       - name: Simulation evidence provenance (PA-017)
