@@ -91,6 +91,8 @@ jobs:
         run: npm run audit:simulation-provenance
       - name: Deduplicated lexical inventory (PA-020)
         run: npm run audit:lexical-inventory
+      - name: Safe remedial personalization (PA-021)
+        run: npm run audit:personalization
       - name: Wort-für-Wort-Audit (bestätigte Blocker)
         run: npm run audit:words
       - name: Scaffold-Observability (CEFR baseline; candidates are not defects)

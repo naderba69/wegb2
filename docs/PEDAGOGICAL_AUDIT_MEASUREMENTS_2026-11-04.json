@@ -111,6 +111,15 @@
       "rawCards": 6202,
       "uniqueUnits": 6044,
       "externalCoverage": "not_assessed"
+    },
+    "personalizationAudit": {
+      "passed": 13,
+      "failed": 0,
+      "windowDays": 28,
+      "minimumEligibleMeasuredWeight": 8,
+      "maximumConcurrentDoses": 2,
+      "verificationDelayDays": 3,
+      "verificationMinimumWeight": 3
     }
   },
   "defaultPlan": {
@@ -350,10 +359,10 @@
     "fixedPedagogicalRisks": 17
   },
   "inventorySnapshot": {
-    "indexedTrackedFilesAndAuditArtifacts": 3542,
-    "manual_complete": 37,
+    "indexedTrackedFilesAndAuditArtifacts": 3543,
+    "manual_complete": 40,
     "manual_targeted": 47,
-    "not_started": 3454,
+    "not_started": 3452,
     "audit_artifact": 4
   },
   "learningStateCorrections": {
@@ -539,5 +548,40 @@
     "externalGoetheOrCefrCoverage": "not_assessed",
     "rawCardReferenceComparisonRemoved": true,
     "regressionGate": "npm run audit:lexical-inventory"
+  },
+  "personalizationCorrections": {
+    "finding": "PA-021",
+    "evidenceWindowDays": 28,
+    "eligibleEvidenceTypes": [
+      "measured",
+      "external_review"
+    ],
+    "assistedEvidenceEligible": false,
+    "activityOrSelfReportEligible": false,
+    "minimumEligibleMeasuredWeightPerSkill": 8,
+    "internalTargetScore": 80,
+    "maximumConcurrentDoses": 2,
+    "doseMinutesByInternalScore": {
+      "below50": 20,
+      "50to64": 15,
+      "65to79": 10
+    },
+    "corePlanTasksDeletedOrReordered": false,
+    "doseCompletionEvidenceType": "activity_only",
+    "verification": {
+      "delayCalendarDays": 3,
+      "minimumFreshEligibleWeight": 3,
+      "immediateEvidenceEligible": false,
+      "assistedEvidenceEligible": false,
+      "outcomes": [
+        "waiting",
+        "due",
+        "passed",
+        "repeat"
+      ]
+    },
+    "cefrOrExamReadinessClaimed": false,
+    "externalEffectivenessClaimed": false,
+    "regressionGate": "npm run audit:personalization"
   }
 }

@@ -22,6 +22,7 @@ import { OnboardingWizard } from "@/components/onboarding-wizard";
 import { Klassenzimmer } from "@/components/akademie/Klassenzimmer";
 import { resumeAusloesen, resumeBedarf, resumePlan, resumeZustand } from "@/lib/wiedereinstieg";
 import { SkillBalancePlan } from "@/components/skillplan";
+import { registriereSkillDosis } from "@/lib/skillplan";
 import { WiedereinstiegBanner } from "@/components/wiedereinstieg";
 import { tagGesperrt } from "@/lib/modulpruefung";
 import ModulTor from "@/components/modultor";
@@ -673,7 +674,7 @@ export default function Today() {
       </details>
       <p className="dirb-time-hint" data-testid="zeit-hinweis">هدف <span className="rtl-num">{plan.zielMin}</span> دقيقة افتراضي للجلسة فقط؛ تقدير مهام اليوم الكامل <span className="rtl-num">{totalMinutes}</span> دقيقة ومستقل عنه. احفظ التوقف وعد لاحقاً؛ لن يتحول ما لم تسلمه إلى فشل أو تعويض.</p>
 
-      <SkillBalancePlan progress={progress} />
+      <SkillBalancePlan progress={progress} onRecordDose={(hand) => update((p) => registriereSkillDosis(p, hand))} />
       {/* Pflege BSK — مسار مستقل لا يُحتسب في الخطة، لكنه ظاهر لمن اختاره */}
       <section className="card" data-testid="pflege-bsk-teaser" style={{ padding: "0.75rem 0.95rem", background: "linear-gradient(180deg, #FFFCF0, #FDF8E8)", borderInlineStart: "4px solid #22c55e", display: "grid", gap: "0.45rem" }}>
         <div style={{ display: "flex", gap: "0.5rem", alignItems: "center", flexWrap: "wrap" }}>

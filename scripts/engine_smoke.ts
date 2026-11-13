@@ -56,7 +56,7 @@ import { frequenzVonWort, frequenzStufe } from "../lib/frequenz";
 import { sucheAlles } from "../lib/suche";
 import { simBand } from "../lib/simband";
 import { effektiveRate, rateFuerLevel } from "../lib/rate";
-import { skillUmschichtung } from "../lib/skillplan";
+import { registriereSkillDosis, skillFoerderplan, skillVerifikationen } from "../lib/skillplan";
 import { kritischeKarten as kritKarten312, resumeAusloesen, resumePlan, resumeZustand } from "../lib/wiedereinstieg";
 import { kartenAusreisser, skillTrends } from "../lib/kalibrierung";
 import { erledigeWiederschreiben, planeWiederschreiben } from "../lib/wiederschreiben";
@@ -13256,28 +13256,40 @@ function collectR262(dir: string, out: string[] = []): string[] {
      readFileSync("components/kartenexport.tsx", "utf8").includes('data-testid="kartenexport-frequenz"'),
     `K311 ثلاثية R286: مجال ثقة المحاكاة (M5) قراءة ${lesen311?.mittel}±${lesen311?.band} من محاولتين، تردد مدونة التطبيق (M11) — «${haeufig311?.k.de}» ظهر ${haeufig311?.f.n} مرة، وبحث موحّد (M14) يعيد ${suche311.trefferGesamt} نتيجة لـ«Haus»`);
 }
-// ===== K312 (R287 · M3+M7+M15): Skill-Umschichtung, Niveau-Tempo, Wiedereinstieg =====
+// ===== K312 (R287/PA-021 · M3+M7+M15): sichere Förderdosis, Niveau-Tempo, Wiedereinstieg =====
 {
   const jetzt312 = new Date("2026-10-18T10:00:00Z");
-  const mkEintrag = (h: string, n: number) => Array.from({ length: n }, () => ({ h: h as never, ok: true, d: "2026-10-12" }));
-  const pM3 = { ...emptyProgress, kompetenzLog: [...mkEintrag("Lesen", 26), ...mkEintrag("Wortschatz", 7), ...mkEintrag("Hoeren", 7)] } as Progress;
-  const schicht312 = skillUmschichtung(pM3, jetzt312);
+  const mkEintrag = (h: string, n: number, richtig: number, evidenceType: "measured" | "self_report" = "measured") =>
+    Array.from({ length: n }, (_, i) => ({ h: h as never, ok: i < richtig, d: "2026-10-12", evidenceType, assisted: false }));
+  const pM3 = { ...emptyProgress, kompetenzLog: [
+    ...mkEintrag("Lesen", 10, 9),
+    ...mkEintrag("Hoeren", 10, 4),
+    ...mkEintrag("Grammatik", 20, 0, "self_report"),
+  ] } as Progress;
+  const foerder312 = skillFoerderplan(pM3, jetzt312);
+  const geplant312 = registriereSkillDosis(pM3, "Hoeren", jetzt312);
+  const warten312 = skillVerifikationen(geplant312, jetzt312)[0];
+  const bestanden312 = skillVerifikationen({ ...geplant312, kompetenzLog: [
+    ...(geplant312.kompetenzLog ?? []),
+    ...Array.from({ length: 3 }, (_, i) => ({ h: "Hoeren" as const, ok: true, d: "2026-10-21", evidenceType: "measured" as const, assisted: false, sourceId: `verify-${i}` })),
+  ] }, new Date("2026-10-22T10:00:00Z"))[0];
   const pB2 = { ...emptyProgress, plan: { ...emptyProgress.plan, day: 300 } } as Progress;
   const pB2Manuell = { ...pB2, settings: { ...pB2.settings, rateMode: "manual" as const, rate: 0.8 } } as Progress;
   const pRueck = { ...emptyProgress, streak: { last: "2026-10-10", count: 9 } } as Progress;
   const pRueckAktiv = resumeAusloesen(pRueck, jetzt312);
   const voll312 = buildDay(60, pRueckAktiv);
   const reduz312 = resumePlan(voll312, pRueckAktiv, jetzt312);
-  ok(schicht312.dominant === "Lesen" && schicht312.anteil > 0.6 && schicht312.vonMinuten === 20 && schicht312.ziele.length === 2 &&
+  ok(foerder312.dosen.length === 1 && foerder312.dosen[0].hand === "Hoeren" && foerder312.dosen[0].minuten === 20 &&
+     warten312?.status === "waiting" && warten312.cycle.verifyDueDate === "2026-10-21" && bestanden312?.status === "passed" &&
      rateFuerLevel("A1") === 0.9 && rateFuerLevel("B2") === 1.05 && effektiveRate(pB2) === 1.05 && effektiveRate(pB2Manuell) === 0.8 &&
      resumeZustand(pRueckAktiv, jetzt312).aktiv && resumeZustand(pRueckAktiv, jetzt312).sitzung === 1 &&
      reduz312.tasks.length < voll312.tasks.length && reduz312.tasks.every((t) => t.mandatory || t.exam || t.kind === "wiederholen") &&
      reduz312.zielMin === Math.ceil(voll312.zielMin / 2) && kritKarten312(pRueckAktiv, jetzt312) === 0 &&
      readFileSync("app/einstellungen/page.tsx", "utf8").includes('data-testid="rate-auto"') &&
      readFileSync("app/page.tsx", "utf8").includes("resumePlan") &&
-     readFileSync("components/skillplan.tsx", "utf8").includes('data-testid="skill-balance-plan"') &&
+     readFileSync("components/skillplan.tsx", "utf8").includes('data-testid="skill-remediation-plan"') &&
      readFileSync("components/wiedereinstieg.tsx", "utf8").includes('data-testid="wiedereinstieg-banner"'),
-    `K312 ثلاثية R287: هيمنة قراءة ${(schicht312.anteil * 100).toFixed(0)}٪ في 14 يومًا تُنتج إعادة توزيع 20 دقيقة (M3)، وتيرة B2 تلقائية ${effektiveRate(pB2)}× واليدوية محفوظة (M7)، وخطة استئناف ${reduz312.tasks.length}/${voll312.tasks.length} مهمة مراجعة فقط بعد غياب (M15)`);
+    `K312/PA-021: ضعف استماع مقاس يولّد جرعة ${foerder312.dosen[0]?.minuten}د بلا اعتماد self-report وتحققاً مؤجلاً ناجحاً؛ وتيرة B2 ${effektiveRate(pB2)}× وخطة الاستئناف ${reduz312.tasks.length}/${voll312.tasks.length}`);
 }
 // ===== K313 (R288 · M4+M8+M9): Daten-Kalibrierung, Fehlerkarten-Bestätigung, 48h-Wiederschreiben =====
 {

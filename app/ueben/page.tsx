@@ -118,8 +118,10 @@ export default function Ueben() {
     setGeladen(true);
     try {
       const params = new URLSearchParams(window.location.search);
+      const station = params.get("station");
       const f = params.get("filter");
-      if (f && ["wohnen","behoerde","gesundheit","arbeit","familie","mobilitaet","alltag"].includes(f)) {
+      if (station && Object.hasOwn(KARTE, station)) setOffen(station);
+      else if (f && ["wohnen","behoerde","gesundheit","arbeit","familie","mobilitaet","alltag"].includes(f)) {
         setOffen("leben");
       }
     } catch {}

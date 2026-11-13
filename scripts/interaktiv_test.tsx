@@ -2256,18 +2256,26 @@ const hasFile = txt().includes("صوتٌ من الدار");
     "PA017 واجهة التحليلات تفصل الآلي عن التقرير الذاتي ولا تعرض حكماً شاملاً");
   }
 
-  /* ═══════════ R287 — M3 اقتراح إعادة توزيع + M15 لافتة استئناف + M7 وتيرة ═══════════ */
+  /* ═══════════ R287/PA-021 — جرعة علاجية آمنة + M15 لافتة استئناف + M7 وتيرة ═══════════ */
   {
     const { SkillBalancePlan } = await import("../components/skillplan");
     const heute287 = new Date().toISOString().slice(0, 10);
     const log287 = [
-      ...Array.from({ length: 26 }, () => ({ h: "Lesen" as const, ok: true, d: heute287 })),
-      ...Array.from({ length: 7 }, () => ({ h: "Wortschatz" as const, ok: true, d: heute287 })),
-      ...Array.from({ length: 7 }, () => ({ h: "Hoeren" as const, ok: true, d: heute287 })),
+      ...Array.from({ length: 10 }, (_, i) => ({ h: "Lesen" as const, ok: i < 9, d: heute287, evidenceType: "measured" as const, assisted: false })),
+      ...Array.from({ length: 10 }, (_, i) => ({ h: "Hoeren" as const, ok: i < 4, d: heute287, evidenceType: "measured" as const, assisted: false })),
+      ...Array.from({ length: 20 }, () => ({ h: "Grammatik" as const, ok: false, d: heute287, evidenceType: "self_report" as const })),
     ];
-    mount(React.createElement(SkillBalancePlan, { progress: { ...emptyProgress, kompetenzLog: log287 } as never }));
-    const bp = rootEl.querySelector('[data-testid="skill-balance-plan"]');
-    ok(!!bp && (bp.textContent ?? "").includes("إعادة توزيع") && (bp.textContent ?? "").includes("65"), "R287a اقتراح إعادة التوزيع (M3) يظهر بالسبب والنسبة عند هيمنة مهارة فوق 60٪");
+    let recorded287 = "";
+    mount(React.createElement(SkillBalancePlan, {
+      progress: { ...emptyProgress, kompetenzLog: log287 } as never,
+      onRecordDose: (hand: string) => { recorded287 = hand; },
+    } as never));
+    const bp = rootEl.querySelector('[data-testid="skill-remediation-plan"]');
+    const doseButton = rootEl.querySelector('[data-testid="skill-dose-complete-Hoeren"]') as HTMLElement | null;
+    if (doseButton) click(doseButton);
+    ok(!!bp && (bp.textContent ?? "").includes("جرعات علاجية") && (bp.textContent ?? "").includes("40/100") &&
+      !!bp.querySelector('a[href="/ueben?station=hoeren"]') && !rootEl.querySelector('[data-testid="skill-dose-Grammatik"]') && recorded287 === "Hoeren",
+    "PA021 الجرعة العلاجية تنشأ من ضعف مقاس فقط؛ self-report لا يخصص الخطة وزر الإنجاز يجدول التحقق");
 
     const { WiedereinstiegBanner } = await import("../components/wiedereinstieg");
     const letzte = new Date(Date.now() - 8 * 86400000).toISOString().slice(0, 10);

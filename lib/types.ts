@@ -45,6 +45,15 @@ export interface KompetenzLogEintrag {
   sourceId?: string;
 }
 
+/** دورة تخصيص محدودة: إنجاز الجرعة تقرير نشاط، والتحقق المؤجل يحتاج دليلاً مقاساً جديداً. */
+export interface SkillRemediationCycle {
+  completedDate: string;
+  verifyDueDate: string;
+  baselineScore: number;
+  doseMinutes: 10 | 15 | 20;
+  sourceWindowDays: number;
+}
+
 /** وصف construct قابل للأثر لمهمة الخطة؛ الوزن داخل المهمة وليس معايرة سيكومترية. */
 export interface TaskEvidenceDescriptor {
   construct: Kompetenz;
@@ -618,6 +627,8 @@ export interface Progress {
   abzeichen?: Record<string, string>;
   /** سجلّ مجالات التدريب مع provenance؛ لا يشكّل وحده حكماً CEFR. */
   kompetenzLog?: KompetenzLogEintrag[];
+  /** دورات جرعات علاجية اختيارية؛ لا تحذف أهداف الخطة ولا تجعل الإكمال أداءً مقاساً. */
+  skillRemediation?: Partial<Record<Kompetenz, SkillRemediationCycle>>;
   /** صحّة التعلّم (Modul U): حارس 20-20-20 ووضع المريض */
   gesundheit?: {
     augenPause?: boolean;
