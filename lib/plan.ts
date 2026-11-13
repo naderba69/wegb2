@@ -40,6 +40,7 @@ import { baueKompositaWoche } from "./komposita-aufgabe";
 import { legacyThroughDayFor } from "./curriculum-schedule";
 import { beiBankenBereit, beiVertiefungBereit } from "./bankload";
 import { rng, seededShuffle } from "./seeded-rng";
+import { evidenceForTask } from "./task-evidence";
 
 export { rng } from "./seeded-rng";
 
@@ -400,6 +401,8 @@ export function clozeFromSatz(s: Satz, idx: number, rand: () => number): Exercis
     answer: [answer, answer.toLowerCase()],
     explanationAr: `الجملة كاملة: ${s.ar}`,
     explanationDe: s.de,
+    evidenceLevel: s.level,
+    evidenceConstruct: "mixed",
   };
 }
 
@@ -418,6 +421,8 @@ export function translateFromSatz(s: Satz, idx: number): Exercise {
     keywords: pickN(keyWords, Math.min(4, keyWords.length), rng(idx * 31 + 7)),
     explanationDe: s.de,
     explanationAr: "الترجمة المرجعية بالأعلى — قارن كلماتك المفتاحية.",
+    evidenceLevel: s.level,
+    evidenceConstruct: "mixed",
   };
 }
 
@@ -439,6 +444,8 @@ function mcFromCards(cards: VocabCard[], idx: number, rand: () => number): Exerc
     explanationAr: correct.exampleDe
       ? `${correct.ar} — مثال: ${correct.exampleDe}`
       : correct.ar,
+    evidenceLevel: correct.level,
+    evidenceConstruct: "Wortschatz",
   };
 }
 
@@ -471,7 +478,11 @@ function buildQuiz(day: number, phase: Phase, count: number, progress: Progress,
   for (const tid of phaseTopics) {
     if (!gelehrteThemen.has(tid)) continue;
     const topic = grammarMap[tid];
-    if (topic) pool.push(...topic.exercises);
+    if (topic) pool.push(...topic.exercises.map((exercise) => ({
+      ...exercise,
+      evidenceLevel: topic.level,
+      evidenceConstruct: "Grammatik" as const,
+    })));
   }
 
   // جمل المستويات الأدنى مضمونة التدريس (كلها مَرت على الطالب سابقاً).
@@ -534,6 +545,8 @@ function buildQuiz(day: number, phase: Phase, count: number, progress: Progress,
           promptAr: `${c.ar}`,
           answer: [c.article ? `${c.article} ${c.de}` : c.de, c.de],
           explanationAr: c.exampleDe ? `${c.ar} — مثال: ${c.exampleDe}` : c.ar,
+          evidenceLevel: c.level,
+          evidenceConstruct: "Wortschatz",
         });
       } else {
         picked.push(mcFromCards([c, ...shuffled.filter((x) => x.id !== c.id)], i, rand));
@@ -1357,6 +1370,8 @@ export function buildDay(day: number, progress: Progress): DayPlan {
     const quiz = (topic?.exercises ?? []).slice(0, 2).map((ex, i) => ({
       ...ex,
       id: `pre-${day}-${i}-${ex.id}`,
+      evidenceLevel: topic?.level,
+      evidenceConstruct: "Grammatik" as const,
     }));
     if (quiz.length > 0) {
       tasks.push({
@@ -1457,6 +1472,8 @@ export function buildDay(day: number, progress: Progress): DayPlan {
           const added = pickN(extra, Math.min(2, extra.length), r2).map((e, i) => ({
             ...e,
             id: `w${day}-${i}-${e.id}`,
+            evidenceLevel: level,
+            evidenceConstruct: "Grammatik" as const,
           }));
           t.quiz = [...added, ...t.quiz];
         }
@@ -1559,7 +1576,12 @@ export function buildDay(day: number, progress: Progress): DayPlan {
     }
   }
   const tempo = progress.settings.tempo ?? "regelmaessig";
-  return { day, week, weekday, phase, type, tasks, tempo, zielMin: DEFAULT_SESSION_GOAL_MINUTES, debtBacklog };
+  // PA-016: every emitted task is routed by attached material, not by its coarse kind label.
+  const tasksWithEvidence = tasks.map((task) => ({
+    ...task,
+    evidence: evidenceForTask(task, levelOf(task.from ?? day)),
+  }));
+  return { day, week, weekday, phase, type, tasks: tasksWithEvidence, tempo, zielMin: DEFAULT_SESSION_GOAL_MINUTES, debtBacklog };
 }
 
 // ── منطق القفل والتعويض ────────────────────────────────────────────────

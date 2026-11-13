@@ -92,6 +92,12 @@
       "itemsPerLevel": 4,
       "passThreshold": "3/4",
       "maxItemsPerDomain": 16
+    },
+    "competencyEvidenceAudit": {
+      "passed": 18,
+      "failed": 0,
+      "generatedTasksAnnotated": 2500,
+      "coarseKindMapPresent": false
     }
   },
   "defaultPlan": {
@@ -331,8 +337,8 @@
     "fixedPedagogicalRisks": 17
   },
   "inventorySnapshot": {
-    "indexedTrackedFilesAndAuditArtifacts": 3538,
-    "manual_complete": 27,
+    "indexedTrackedFilesAndAuditArtifacts": 3540,
+    "manual_complete": 29,
     "manual_targeted": 45,
     "not_started": 3462,
     "audit_artifact": 4
@@ -440,5 +446,28 @@
     "cefrLevelClaimed": false,
     "psychometricCalibrationClaimed": false,
     "regressionGate": "npm run audit:placement"
+  },
+  "competencyEvidenceCorrections": {
+    "finding": "PA-016",
+    "generatedTasksAnnotated": 2500,
+    "descriptorFields": [
+      "construct",
+      "level",
+      "weight",
+      "evidenceType",
+      "assisted",
+      "responseMode",
+      "method",
+      "sourceId"
+    ],
+    "taskKindFallbackRemoved": true,
+    "mixedTasksExplicit": true,
+    "weightsNormalizedPerTask": true,
+    "taskResultSnapshotPersisted": true,
+    "effectiveMeasuredWeightControlsMinimumSample": true,
+    "planSubmissionCanCreateMeasuredEvidence": false,
+    "expertConstructValidationClaimed": false,
+    "cefrOrExamValidityClaimed": false,
+    "regressionGate": "npm run audit:competency-evidence"
   }
 }

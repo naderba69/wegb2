@@ -85,6 +85,8 @@ jobs:
         run: npm run audit:language-fields
       - name: Conservative receptive/form placement (PA-014)
         run: npm run audit:placement
+      - name: Construct-aware competency evidence (PA-016)
+        run: npm run audit:competency-evidence
       - name: Wort-für-Wort-Audit (bestätigte Blocker)
         run: npm run audit:words
       - name: Scaffold-Observability (CEFR baseline; candidates are not defects)

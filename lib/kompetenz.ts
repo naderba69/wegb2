@@ -6,10 +6,10 @@ import { lokalesDatum } from "./datum";
 import type {
   Progress,
   Kompetenz,
+  KompetenzEvidenceLevel,
   KompetenzEvidenceType,
   KompetenzLogEintrag,
-  Level,
-  TaskKind,
+  KompetenzResponseMode,
 } from "./types";
 
 export const KOMPETENZEN: Kompetenz[] = ["Lesen", "Hoeren", "Schreiben", "Sprechen", "Grammatik", "Wortschatz"];
@@ -22,22 +22,6 @@ export const KOMPETENZ_AR: Record<Kompetenz, string> = {
   Sprechen: "محادثة",
   Grammatik: "قواعد",
   Wortschatz: "مفردات",
-};
-
-/** أنواع مهام الخطة ← مجال التدريب المستهدف. لا يعني هذا الربط أن الإكمال قياس أداء. */
-export const KIND_KOMPETENZ: Record<TaskKind, Kompetenz> = {
-  wiederholen: "Wortschatz",
-  grammatik: "Grammatik",
-  wortschatz: "Wortschatz",
-  hoeren: "Hoeren",
-  lesen: "Lesen",
-  schreiben: "Schreiben",
-  sprechen: "Sprechen",
-  aussprache: "Sprechen",
-  schulsim: "Schreiben",
-  briefe: "Schreiben",
-  partner: "Sprechen",
-  check: "Grammatik",
 };
 
 /** فئات الأخطاء ← مجال التدريب المتأثر. */
@@ -56,8 +40,10 @@ export const FEHLER_ZU_KOMPETENZ: Record<string, Kompetenz> = {
 
 export type KompetenzEvidenceMeta = {
   evidenceType?: KompetenzEvidenceType;
-  level?: Level;
+  level?: KompetenzEvidenceLevel;
+  weight?: number;
   assisted?: boolean;
+  responseMode?: KompetenzResponseMode;
   method?: string;
   sourceId?: string;
 };
@@ -78,7 +64,9 @@ export function logK(
     d: lokalesDatum(),
     evidenceType: meta.evidenceType ?? "activity",
     level: meta.level,
+    weight: meta.weight,
     assisted: meta.assisted,
+    responseMode: meta.responseMode,
     method: meta.method,
     sourceId: meta.sourceId,
   };
@@ -109,16 +97,25 @@ export function isMeasuredEvidence(entry: KompetenzLogEintrag): boolean {
   return (typ === "measured" || typ === "external_review") && entry.assisted !== true;
 }
 
+/** Legacy entries keep neutral weight 1; malformed/non-positive weights cannot erase evidence. */
+export function evidenceWeightOf(entry: KompetenzLogEintrag): number {
+  return typeof entry.weight === "number" && Number.isFinite(entry.weight) && entry.weight > 0
+    ? Math.min(entry.weight, 1)
+    : 1;
+}
+
 const clamp = (n: number) => Math.max(0, Math.min(100, Math.round(n)));
 
 export type KompetenzWert = {
   /** نسبة أداء تدريبي داخلي، أو null حتى تتوافر العينة الدنيا الصريحة. */
   wert: number | null;
   kern: number | null;
-  /** كل أحداث المجال، بما فيها النشاط والتقييم الذاتي. */
+  /** وحدات الدليل الموزونة في المجال؛ المهمة المختلطة لا تُحسب كاملةً في كل مجال. */
   versuche: number;
   /** الأدلة المقاسة المؤهلة فقط؛ assisted لا يدخل النسبة. */
   measured: number;
+  /** مجموع أوزان الأدلة المقاسة؛ هو الذي يحقق حد العينة الدنيا. */
+  measuredWeight: number;
   selfReported: number;
   activity: number;
   externalReviewed: number;
@@ -137,14 +134,15 @@ export function kompetenzWerte(p: Progress): Record<Kompetenz, KompetenzWert> {
     const selfReported = log.filter((entry) => evidenceTypeOf(entry) === "self_report").length;
     const activity = log.filter((entry) => evidenceTypeOf(entry) === "activity").length;
     const externalReviewed = log.filter((entry) => evidenceTypeOf(entry) === "external_review" && entry.assisted !== true).length;
+    const measuredWeight = measured.reduce((sum, entry) => sum + evidenceWeightOf(entry), 0);
 
     let kern: number | null = null;
-    if (measured.length >= MIN_MEASURED_PER_SKILL) {
+    if (measuredWeight >= MIN_MEASURED_PER_SKILL) {
       const last = measured.slice(-40);
       let gewichtSumme = 0;
       let erfolgSumme = 0;
       last.forEach((entry, index) => {
-        const gewicht = 1 + index / last.length;
+        const gewicht = (1 + index / last.length) * evidenceWeightOf(entry);
         gewichtSumme += gewicht;
         erfolgSumme += (entry.ok ? 1 : 0) * gewicht;
       });
@@ -154,8 +152,9 @@ export function kompetenzWerte(p: Progress): Record<Kompetenz, KompetenzWert> {
     out[h] = {
       wert: kern,
       kern,
-      versuche: log.length,
+      versuche: Math.round(log.reduce((sum, entry) => sum + evidenceWeightOf(entry), 0) * 1000) / 1000,
       measured: measured.length,
+      measuredWeight,
       selfReported,
       activity,
       externalReviewed,

@@ -20,17 +20,41 @@ export type DayType = "lerntag" | "festigung" | "wochencheck" | "abschluss";
 /** مجالات التدريب الستة؛ لا تحمل وحدها حكماً CEFR أو جاهزية امتحان. */
 export type Kompetenz = "Lesen" | "Hoeren" | "Schreiben" | "Sprechen" | "Grammatik" | "Wortschatz";
 export type KompetenzEvidenceType = "measured" | "self_report" | "activity" | "external_review";
+export type KompetenzEvidenceLevel = Level | "mixed" | "unknown";
+export type KompetenzResponseMode =
+  | "selected_response"
+  | "short_constructed_response"
+  | "extended_written_response"
+  | "spoken_response"
+  | "mixed_response"
+  | "activity_completion";
 export interface KompetenzLogEintrag {
   h: Kompetenz;
   ok: boolean;
   d?: string;
   /** نوع الدليل؛ غيابه في البيانات القديمة يُعامل activity لا measured. */
   evidenceType?: KompetenzEvidenceType;
-  /** مستوى البند إن كان معلوماً؛ لا يُستنتج من نجاح ثنائي. */
-  level?: Level;
+  /** مستوى البند/الحزمة؛ mixed صريح عند جمع مستويات متعددة، ولا يُستنتج من النجاح. */
+  level?: KompetenzEvidenceLevel;
+  /** وزن construct داخل المهمة؛ افتراض السجلات القديمة 1. */
+  weight?: number;
+  /** هل أُنجز الحدث في سياق يقدم مساعدة تعليمية؟ */
   assisted?: boolean;
+  responseMode?: KompetenzResponseMode;
   method?: string;
   sourceId?: string;
+}
+
+/** وصف construct قابل للأثر لمهمة الخطة؛ الوزن داخل المهمة وليس معايرة سيكومترية. */
+export interface TaskEvidenceDescriptor {
+  construct: Kompetenz;
+  level: KompetenzEvidenceLevel;
+  weight: number;
+  evidenceType: KompetenzEvidenceType;
+  assisted: boolean;
+  responseMode: KompetenzResponseMode;
+  method: "plan_submission";
+  sourceId: string;
 }
 
 export interface Exercise {
@@ -57,6 +81,9 @@ export interface Exercise {
   explanationAr?: string;
   explanationDe?: string;
   points?: number;
+  /** PA-016: provenance داخلي للبنود المولدة داخل فحوص الخطة. */
+  evidenceLevel?: Level;
+  evidenceConstruct?: Kompetenz | "mixed";
 }
 
 export interface VocabCard {
@@ -303,6 +330,8 @@ export interface DayTask {
   schlafTipp?: string;
   /** 🎯 تحقق استقلال: ID الدرس الذي تتحقق منه هذه المهمة (مهمة جديدة لا إعادة) */
   verifyFor?: string;
+  /** PA-016: constructs ومستويات وأوزان ونمط دليل/استجابة صريحة؛ يضيفها مولد الخطة لكل مهمة. */
+  evidence?: TaskEvidenceDescriptor[];
 }
 
 export interface DayPlan {
@@ -333,6 +362,8 @@ export interface TaskResult {
   geplantMin?: number;
   /** ⏱️ الدقائق الفعلية المقضية — تُقاس عند التسليم، لا تُفتَرَض */
   minutenEffektiv?: number;
+  /** لقطة وصف الدليل وقت التسليم حتى لا يتغير السجل بتغير مولد الخطة لاحقاً. */
+  evidence?: TaskEvidenceDescriptor[];
 }
 
 export interface DayResult {

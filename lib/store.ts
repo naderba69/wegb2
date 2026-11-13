@@ -5,17 +5,17 @@ import {
   emptyProgress,
   type DebtItem,
   type FehlerEintrag,
+  type DayTask,
   type Kompetenz,
   type Progress,
   type SrsState,
-  type TaskKind,
   type TaskResult,
 } from "./types";
 import { clampMinuten } from "./cefr";
 import { logSicherheit } from "./sicherheit";
 import { upsertFehler, gradeFehlerIn } from "./fehler";
 import { checkAbzeichen } from "./spiel";
-import { logK, KIND_KOMPETENZ, FEHLER_ZU_KOMPETENZ } from "./kompetenz";
+import { logK, FEHLER_ZU_KOMPETENZ } from "./kompetenz";
 import { progressKeyActive } from "./profiles";
 import { migrateCurriculumSchedule } from "./curriculum-schedule";
 import { recordTodayUxClosed, recordTodayUxSubmission } from "./metriken";
@@ -248,7 +248,7 @@ export function useProgress() {
       taskId: string,
       score: number,
       total: number,
-      kind?: TaskKind,
+      task?: DayTask,
       geplantMin?: number,
       verifyFor?: string,
       minutenEffektiv?: number,
@@ -263,41 +263,42 @@ export function useProgress() {
           score: Math.max(score, prev?.score ?? 0),
           total,
           attempts: (prev?.attempts ?? 0) + 1,
-          kind: kind ?? prev?.kind,
+          kind: task?.kind ?? prev?.kind,
           at: new Date().toISOString(),
           geplantMin: geplantMin ?? prev?.geplantMin,
           minutenEffektiv: Number.isFinite(minutenEffektiv)
             ? Math.max(prev?.minutenEffektiv ?? 0, Math.max(0, minutenEffektiv as number))
             : prev?.minutenEffektiv,
+          evidence: task?.evidence ?? prev?.evidence,
         };
         const rec = verifyFor ? p.verify?.[verifyFor] : undefined;
         const verify =
           verifyFor && rec && rec.doneDay === undefined
             ? { ...(p.verify ?? {}), [verifyFor]: { ...rec, doneDay: day, passed: result.passed } }
             : p.verify;
-        return checkAbzeichen(
-          logK(
-            {
-              ...p,
-              verify,
-              todayUx: ux
-                ? recordTodayUxSubmission(p.todayUx, day, ux.activeMs, ux.step, passed, ux.hasStep5)
-                : p.todayUx,
-              xp: (p.xp ?? 0) + (result.passed ? 15 : 5),
-              plan: { ...p.plan, tasks: { ...p.plan.tasks, [taskId]: result } },
-            },
-            KIND_KOMPETENZ[kind ?? prev?.kind ?? "check"] ?? "Grammatik",
-            result.passed,
-            {
-              // مهام الإنتاج تُصحَّح ذاتياً في مسار اليوم؛ غيرها يبقى حدث نشاط
-              // ما لم يسجّل محرك تقويم صريح دليلاً measured عند مصدره.
-              evidenceType: (["schreiben", "sprechen", "aussprache", "schulsim", "briefe", "partner"] as TaskKind[])
-                .includes(kind ?? prev?.kind ?? "check") ? "self_report" : "activity",
-              method: "plan_submission",
-              sourceId: taskId,
-            },
-          )
-        );
+        let next: Progress = {
+          ...p,
+          verify,
+          todayUx: ux
+            ? recordTodayUxSubmission(p.todayUx, day, ux.activeMs, ux.step, passed, ux.hasStep5)
+            : p.todayUx,
+          xp: (p.xp ?? 0) + (result.passed ? 15 : 5),
+          plan: { ...p.plan, tasks: { ...p.plan.tasks, [taskId]: result } },
+        };
+        // PA-016: route the submission through explicit construct descriptors. A missing
+        // descriptor creates no skill evidence rather than reviving a coarse kind fallback.
+        for (const descriptor of result.evidence ?? []) {
+          next = logK(next, descriptor.construct, result.passed, {
+            evidenceType: descriptor.evidenceType,
+            level: descriptor.level,
+            weight: descriptor.weight,
+            assisted: descriptor.assisted,
+            responseMode: descriptor.responseMode,
+            method: descriptor.method,
+            sourceId: descriptor.sourceId,
+          });
+        }
+        return checkAbzeichen(next);
       });
     },
     [update]

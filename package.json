@@ -20,6 +20,7 @@
     "audit:mediation": "tsx scripts/mediation_audit.ts",
     "audit:language-fields": "tsx scripts/language_direction_audit.ts",
     "audit:placement": "tsx scripts/placement_audit.ts",
+    "audit:competency-evidence": "tsx scripts/competency_evidence_audit.ts",
     "audit:words": "tsx scripts/wort_fuer_wort_audit.ts",
     "audit:scaffolds": "tsx scripts/scaffold_audit.ts",
     "audit:scaffold-review": "tsx scripts/scaffold_review_audit.ts",

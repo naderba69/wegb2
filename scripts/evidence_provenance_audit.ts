@@ -77,11 +77,13 @@ assert.match(competenceSource, /meta\.evidenceType \?\? "activity"/);
 assert.match(competenceSource, /entry\.evidenceType \?\? "activity"/);
 
 const storeSource = read("lib/store.ts");
-for (const productiveKind of ["schreiben", "sprechen", "aussprache", "schulsim", "briefe", "partner"]) {
-  assert.match(storeSource, new RegExp(`"${productiveKind}"`));
-}
-assert.match(storeSource, /"self_report" : "activity"/);
-assert.match(storeSource, /method: "plan_submission"/);
+assert.doesNotMatch(storeSource, /KIND_KOMPETENZ/);
+assert.match(storeSource, /for \(const descriptor of result\.evidence \?\? \[\]\)/);
+assert.match(storeSource, /evidenceType: descriptor\.evidenceType/);
+assert.match(storeSource, /responseMode: descriptor\.responseMode/);
+const taskEvidenceSource = read("lib/task-evidence.ts");
+assert.match(taskEvidenceSource, /pureProductive \? "self_report" : "activity"/);
+assert.match(taskEvidenceSource, /method: "plan_submission"/);
 const lessonSource = read("components/lektion.tsx");
 assert.match(lessonSource, /logMeasuredK\(q0, kat/);
 assert.match(lessonSource, /evidenceType: "self_report"/);

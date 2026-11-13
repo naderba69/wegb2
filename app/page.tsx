@@ -336,7 +336,7 @@ export default function Today() {
       task.id,
       local.score,
       local.total,
-      task.kind,
+      task,
       task.minutes,
       task.verifyFor,
       actualTaskMinutes,
