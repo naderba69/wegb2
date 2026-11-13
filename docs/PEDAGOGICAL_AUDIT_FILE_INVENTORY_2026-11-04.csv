@@ -3209,7 +3209,7 @@ scripts/audit_harf_grammar.mjs,scripts,11578,153,eca09dd54b2fe7669610fa19d06ec19
 scripts/audit_harf_vocab.mjs,scripts,12606,200,2aefcd599213c3c8c3bfb75c736b4f78f93ffe3fea359c191660a309259ea12c,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 scripts/audit_inhalt.ts,scripts,17592,228,721f2796763a81a79f6545e4ecb9e894d449790f01a14fa1f1b874b8b987ab35,manual_targeted,رُوجعت مقاطع أو حقول مرتبطة بنتائج محددة؛ ليست مراجعة كاملة للملف
 scripts/audit_render.tsx,scripts,3997,49,b3b3e941bd4fbf4f9ccf00f9910c4f809f90b1631839d31d7b947f6c1e2ef140,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
-scripts/browser_e2e.mjs,scripts,33233,610,a0ed28c0736f03832faaa98167072e799f39499c310c039742cd89e4484f0f97,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
+scripts/browser_e2e.mjs,scripts,33233,610,e3f4d2f711476cf8d3b8d67122be416461d935f0f22e9737cc33e2367631482a,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 scripts/close_cultural_generic.mjs,scripts,5502,61,4100dbb2368bf4efd380487a9d9d6de99dd345c629200a4d9b6d59160505b10e,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 scripts/copy_banks.mjs,scripts,3914,65,c395ed3d86d158b831b338c725d4fda55787f93072705818525986d123957f49,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 scripts/deep_audit.py,scripts,5435,166,11bbfdecdbf80a7a51dbf93d0751fbee771a3504627deb5262a99eca7be31945,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
