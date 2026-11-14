@@ -18539,7 +18539,7 @@
     "aussprache": "ei = «آي» لا «إي»",
     "exampleDe": "Eine gute Redaktion ordnet die Zahl in den Zeitraum ein.",
     "exampleAr": "التحرير الجيد يضع الرقم في سياقه الزمني.",
-    "posInfo": "ordnt ein, ordnte ein, hat eingeordnt"
+    "posInfo": "ordnet ein, ordnete ein, hat eingeordnet"
    },
    {
     "id": "v1082",
@@ -30723,7 +30723,7 @@
     "syn": [
      "verreisen"
     ],
-    "posInfo": "reist, reiste, hat gereist"
+    "posInfo": "reist, reiste, ist gereist"
    },
    {
     "id": "vy-natur-034",
@@ -34177,7 +34177,7 @@
      "modal"
     ],
     "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · ö = بينَ الضمّةِ والكسرة",
-    "posInfo": "möchtet, möchtete, hat gemöchtt"
+    "posInfo": "Konjunktiv II von mögen: ich möchte · du möchtest · wir/Sie möchten"
    },
    {
     "id": "va-modort-006",
@@ -38036,7 +38036,7 @@
     "tags": [
      "reise"
     ],
-    "posInfo": "verreist, verreiste, hat verreist"
+    "posInfo": "verreist, verreiste, ist verreist"
    },
    {
     "id": "r312a2-100",
@@ -62702,7 +62702,7 @@
     ],
     "exampleDe": "Der Schnitt verheilt ohne Probleme.",
     "exampleAr": "يلتئم الجرح بلا مشاكل.",
-    "posInfo": "verheilt, verheilte, hat verheilt"
+    "posInfo": "verheilt, verheilte, ist verheilt"
    },
    {
     "id": "j04-gesundheit-pflege-064",
@@ -62715,7 +62715,7 @@
     ],
     "exampleDe": "Die Wunde heilt langsam, aber gut.",
     "exampleAr": "يلتئم الجرح ببطء لكن جيدًا.",
-    "posInfo": "heilt, heilte, hat geheilt"
+    "posInfo": "heilt, heilte, ist geheilt"
    },
    {
     "id": "j04-gesundheit-pflege-065",
@@ -64466,7 +64466,7 @@
     ],
     "exampleDe": "Er abonniert den Kanal seit Jahren.",
     "exampleAr": "يشترك في القناة منذ سنوات.",
-    "posInfo": "onniert ab, onnierte ab, hat abgeonniert"
+    "posInfo": "abonniert, abonnierte, hat abonniert"
    },
    {
     "id": "j06-medien-digital-045",
@@ -68382,7 +68382,7 @@
     ],
     "exampleDe": "Er trocknet die Gläser ab.",
     "exampleAr": "يجفّف الأكواب.",
-    "posInfo": "trocknt ab, trocknte ab, hat abgetrocknt"
+    "posInfo": "trocknet ab, trocknete ab, hat abgetrocknet"
    },
    {
     "id": "j11-alltag-haus-034",
@@ -69505,7 +69505,7 @@
     ],
     "exampleDe": "Ohne Wasser welken die Blumen.",
     "exampleAr": "بلا ماء تذبل الزهور.",
-    "posInfo": "welkt, welkte, hat gewelkt"
+    "posInfo": "welkt, welkte, ist gewelkt"
    },
    {
     "id": "j12-natur-tiere-048",
@@ -69609,7 +69609,7 @@
     ],
     "exampleDe": "Im Frühling taut der Schnee.",
     "exampleAr": "يذوب الثلج في الربيع.",
-    "posInfo": "taut, taute, hat getaut"
+    "posInfo": "taut, taute, ist getaut"
    },
    {
     "id": "j12-natur-tiere-056",
@@ -73246,7 +73246,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "alysiert an, alysierte an, hat angealysiert"
+    "posInfo": "analysiert, analysierte, hat analysiert"
    },
    {
     "id": "r314b1-026",
@@ -73786,7 +73786,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "wacht auf, wachte auf, hat aufgewacht"
+    "posInfo": "wacht auf, wachte auf, ist aufgewacht"
    },
    {
     "id": "r314b1-065",
@@ -77602,7 +77602,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "folgt, folgte, hat gefolgt"
+    "posInfo": "folgt, folgte, ist gefolgt"
    },
    {
     "id": "r316b1-036",
@@ -77775,7 +77775,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "fühlt, fühlte, ist gefühlt"
+    "posInfo": "fühlt, fühlte, hat gefühlt"
    },
    {
     "id": "r316b1-048",
@@ -79964,7 +79964,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "kaputtmacht, kaputtmachte, hat gekaputtmacht"
+    "posInfo": "macht kaputt, machte kaputt, hat kaputtgemacht"
    },
    {
     "id": "r317b1-048",
@@ -85706,7 +85706,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "stürzt, stürzte, hat gestürzt"
+    "posInfo": "stürzt, stürzte, ist gestürzt"
    },
    {
     "id": "r321b1-057",

@@ -41,6 +41,7 @@ const fixturePaths = [
   "vocab-posinfo-reviewed-07.json",
   "vocab-posinfo-reviewed-08.json",
   "vocab-posinfo-reviewed-09.json",
+  "vocab-posinfo-reviewed-10.json",
 ];
 const fixtures = fixturePaths.map((name) => JSON.parse(
   fs.readFileSync(path.join(root, "scripts", "fixtures", name), "utf8"),
@@ -57,6 +58,7 @@ const [
   seventhFixture,
   eighthFixture,
   ninthFixture,
+  tenthFixture,
 ] = fixtures;
 if (firstFixture.schema !== "wegb2-reviewed-vocab-posinfo-v1"
   || firstFixture.entries.length !== 110) {
@@ -101,6 +103,11 @@ if (ninthFixture.schema !== "wegb2-reviewed-vocab-posinfo-batch-v1"
   || ninthFixture.batch !== "PA-034-09"
   || ninthFixture.entries.length !== 49) {
   errors.push(`unexpected PA-034 batch 09 fixture: ${ninthFixture.schema}/${ninthFixture.batch}/${ninthFixture.entries.length}`);
+}
+if (tenthFixture.schema !== "wegb2-reviewed-vocab-posinfo-batch-v1"
+  || tenthFixture.batch !== "PA-034-10"
+  || tenthFixture.entries.length !== 16) {
+  errors.push(`unexpected PA-034 batch 10 fixture: ${tenthFixture.schema}/${tenthFixture.batch}/${tenthFixture.entries.length}`);
 }
 if (fixtures.some((fixture) => !/not (?:an )?external linguistic sign-off/.test(fixture.scope))) {
   errors.push("every review fixture must deny external linguistic sign-off");
@@ -214,8 +221,17 @@ if (JSON.stringify(ninthLevelCounts) !== JSON.stringify({ B2: 49 })
   || ninthReflexiveHeads.length !== 37) {
   errors.push(`PA-034-09 must remain bounded to 49 B2 multiword heads, including 37 reflexive heads: ${JSON.stringify(ninthLevelCounts)}/${ninthReflexiveHeads.length}`);
 }
-if (reviewedIds.size !== 698) {
-  errors.push(`review fixtures must contain 698 unique entries, got ${reviewedIds.size}`);
+const tenthLevelCounts = countLevels(tenthFixture);
+const tenthSpecial = tenthFixture.entries.filter((entry) => entry.id === "va-modort-005");
+if (JSON.stringify(tenthLevelCounts) !== JSON.stringify({ B2: 7, A1: 2, A2: 1, B1: 6 })
+  || tenthFixture.entries.some((entry) => entry.de.includes(" "))
+  || tenthFixture.entries.filter((entry) => entry.posInfo.split(",").length === 3).length !== 15
+  || tenthSpecial.length !== 1
+  || tenthSpecial[0]?.posInfo !== "Konjunktiv II von mögen: ich möchte · du möchtest · wir/Sie möchten") {
+  errors.push(`PA-034-10 must remain bounded to 15 single-head principal-part corrections plus the explicit möchten representation: ${JSON.stringify(tenthLevelCounts)}/${tenthSpecial.length}`);
+}
+if (reviewedIds.size !== 714) {
+  errors.push(`review fixtures must contain 714 unique entries, got ${reviewedIds.size}`);
 }
 
 if (errors.length) {
@@ -225,7 +241,7 @@ if (errors.length) {
 }
 
 console.log(
-  `✅ Reviewed vocabulary morphology: ${reviewedIds.size}/${reviewedIds.size} corrected cards match nine bounded internal-review fixtures (${fixtures.map((fixture) => fixture.reviewedAt).join(", ")}).`,
+  `✅ Reviewed vocabulary morphology: ${reviewedIds.size}/${reviewedIds.size} corrected cards match ten bounded internal-review fixtures (${fixtures.map((fixture) => fixture.reviewedAt).join(", ")}).`,
 );
 console.log(
   "ℹ️ This gate prevents regression only for the reviewed PA-034 batches; it does not certify every posInfo field or provide external linguistic sign-off.",
