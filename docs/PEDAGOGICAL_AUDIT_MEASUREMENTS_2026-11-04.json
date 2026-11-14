@@ -1,0 +1,744 @@
+{
+  "schema": "wegb2-pedagogical-audit-measurements-v1",
+  "date": "2026-11-04",
+  "commit": "c5ba0445a79893eecdfc2a59f624fceffdc0055e",
+  "scopeNoteAr": "هذه قياسات قابلة لإعادة التشغيل وليست شهادة صحة لغوية أو بيداغوجية.",
+  "baseline": {
+    "smoke": {
+      "passed": 2474,
+      "failed": 0
+    },
+    "interactiveJsdom": {
+      "passed": 1027,
+      "failed": 0,
+      "plannedTasksTraversed": 2500,
+      "interactiveElementsTouched": 22534
+    },
+    "contentStructuralAudit": {
+      "exitCode": 0,
+      "confirmedStructuralDefectsReported": 0
+    },
+    "knownPatternContentLint": {
+      "exitCode": 0,
+      "currentRuleMatches": 0,
+      "ruleRegressions": "10/10",
+      "scannedBanks": 7,
+      "claimBoundary": "regex/schema patterns only; no complete word-by-word, meaning, CEFR-level, translation, or unlisted-file review"
+    },
+    "highRiskContentGovernance": {
+      "exitCode": 0,
+      "passed": 11,
+      "failed": 0,
+      "surfaces": 4,
+      "registeredItems": 301,
+      "groups": 14,
+      "factualGroupsPendingExternalVerification": 7,
+      "fictionalGroups": 7,
+      "specialistReview": "pending",
+      "fieldValidation": "pending",
+      "claimBoundary": "programmatic classification and learner warnings only; no medical, legal, civic, or specialist validation"
+    },
+    "planAudit": {
+      "exitCode": 0,
+      "errorsReported": 0,
+      "warningsReported": 0
+    },
+    "strictEvidenceGates": {
+      "accreditation": {
+        "technical": "pass",
+        "signed": 0,
+        "pending": 19,
+        "exitCode": 2
+      },
+      "grammarProfile": {
+        "technical": "pass",
+        "verifiedSources": 0,
+        "totalSources": 2,
+        "fullyReviewedFeatures": 0,
+        "totalFeatures": 313,
+        "exitCode": 2
+      },
+      "externalEvidence": {
+        "structure": "pass",
+        "signed": 0,
+        "pending": 19,
+        "exitCode": 2
+      },
+      "realWorld": {
+        "structure": "pass",
+        "executedSessions": 0,
+        "plannedSessions": 23,
+        "exitCode": 2
+      },
+      "toolCatalog": {
+        "structure": "pass",
+        "productionReady": 0,
+        "total": 820,
+        "automatedEvidence": 7,
+        "candidateLive": 184,
+        "exitCode": 2
+      }
+    },
+    "mediationAudit": {
+      "passed": 9,
+      "failed": 0,
+      "tasks": 12
+    },
+    "languageFieldAudit": {
+      "passed": 7,
+      "failed": 0,
+      "migratedFields": 67
+    },
+    "scaffoldAudit": {
+      "passed": 8,
+      "failed": 0,
+      "parenthetical": 238,
+      "items": 758,
+      "blankLinked": 176
+    },
+    "build": {
+      "routesGenerated": 19,
+      "routesFailed": 0
+    },
+    "placementAudit": {
+      "passed": 7,
+      "failed": 0,
+      "domains": 4,
+      "itemsPerLevel": 4,
+      "passThreshold": "3/4",
+      "maxItemsPerDomain": 16
+    },
+    "competencyEvidenceAudit": {
+      "passed": 18,
+      "failed": 0,
+      "generatedTasksAnnotated": 2500,
+      "coarseKindMapPresent": false
+    },
+    "simulationProvenanceAudit": {
+      "passed": 12,
+      "failed": 0,
+      "formatsChecked": 4,
+      "overallVerdict": "not_assessed"
+    },
+    "lexicalInventoryAudit": {
+      "passed": 11,
+      "failed": 0,
+      "rawCards": 6202,
+      "uniqueUnits": 6044,
+      "externalCoverage": "not_assessed"
+    },
+    "personalizationAudit": {
+      "passed": 13,
+      "failed": 0,
+      "windowDays": 28,
+      "minimumEligibleMeasuredWeight": 8,
+      "maximumConcurrentDoses": 2,
+      "verificationDelayDays": 3,
+      "verificationMinimumWeight": 3
+    },
+    "pronunciationPathAudit": {
+      "passed": 11,
+      "failed": 0,
+      "internalUnits": 12,
+      "scheduledComparisons": 14,
+      "measurementScope": "session rhythm, pauses, syllable estimate, and speech ratio only",
+      "phonemeOrAccentValidity": "not_assessed",
+      "externalExpertReview": "pending"
+    }
+  },
+  "defaultPlan": {
+    "days": 378,
+    "tasks": 2500,
+    "taskMinutesTotal": 71595,
+    "taskHoursTotal": 1193.25,
+    "taskMinutesMeanPerDay": 189.4048,
+    "defaultSessionGoalMinutes": 90,
+    "levels": {
+      "A0": {
+        "days": 10,
+        "tasks": 86,
+        "taskMinutes": 1000,
+        "meanMinutesPerDay": 100,
+        "explicitPronunciationTasks": 2
+      },
+      "A1": {
+        "days": 84,
+        "tasks": 523,
+        "taskMinutes": 10280,
+        "meanMinutesPerDay": 122.381,
+        "explicitPronunciationTasks": 12
+      },
+      "A2": {
+        "days": 84,
+        "tasks": 518,
+        "taskMinutes": 13110,
+        "meanMinutesPerDay": 156.0714,
+        "explicitPronunciationTasks": 11
+      },
+      "B1": {
+        "days": 98,
+        "tasks": 655,
+        "taskMinutes": 20560,
+        "meanMinutesPerDay": 209.7959,
+        "explicitPronunciationTasks": 7
+      },
+      "B2": {
+        "days": 102,
+        "tasks": 718,
+        "taskMinutes": 26645,
+        "meanMinutesPerDay": 261.2255,
+        "explicitPronunciationTasks": 7
+      }
+    },
+    "explicitPronunciation": {
+      "taskCount": 39,
+      "daysWithTask": 39,
+      "lastTaskDay": 370,
+      "daysWithoutExplicitTaskAfterLast": 8,
+      "advancedComparisonTasks": 14,
+      "advancedMaximumGapDays": 14
+    }
+  },
+  "onboardingAudio": {
+    "formerPath": "public/willkommen-60s.mp3",
+    "formerCalculatedDurationSeconds": 8.99,
+    "removed": true,
+    "replacement": "Browser speech synthesis on explicit request",
+    "voiceDisclosure": "automatic browser voice, not a human recording",
+    "claimBoundary": "The plan supports progress toward B2; time does not prove a CEFR level."
+  },
+  "competenceProbe": {
+    "initial": {
+      "emptyProgress": {
+        "Lesen": 0,
+        "Hoeren": 30,
+        "Schreiben": 40,
+        "Sprechen": 25,
+        "Grammatik": 55,
+        "Wortschatz": 0,
+        "b2Score": 25,
+        "readiness": 30,
+        "errorHealthWithoutAnyObservedErrors": 100
+      },
+      "eightBinarySpeakingSuccessesWithoutLevelOrQualityEvidence": {
+        "Sprechen": 78,
+        "bandName": "B2 sicher",
+        "bandAr": "جاهز للامتحان"
+      }
+    },
+    "current": {
+      "evidenceTypes": [
+        "measured",
+        "self_report",
+        "activity",
+        "external_review"
+      ],
+      "legacyOrUnspecifiedEvidenceType": "activity",
+      "minimumEligibleMeasuredItemsPerSkill": 8,
+      "emptyProgress": {
+        "allSkillValues": null,
+        "allSkillStatus": "unknown",
+        "completeTrainingPerformance": null,
+        "examReadiness": "not_assessed"
+      },
+      "twentyActivityOrSelfReportedSuccesses": {
+        "skillValue": null,
+        "countsRemainSeparated": true
+      },
+      "eightEligibleMeasuredSuccessesInOneSkill": {
+        "internalTrainingPerformance": 100,
+        "cefrBand": null,
+        "examReadiness": "not_assessed"
+      },
+      "eightEligibleMeasuredSuccessesInAllSixSkills": {
+        "completeInternalTrainingPerformance": 100,
+        "cefrBand": null,
+        "examReadiness": "not_assessed"
+      },
+      "guard": "npm run audit:evidence-provenance"
+    }
+  },
+  "gradingProbe": {
+    "exerciseId": "b2-k2vht-e6",
+    "expected": "Wärst du nur gekommen!",
+    "keywords": [
+      "wärst",
+      "gekommen"
+    ],
+    "submitted": "gekommen wärst",
+    "keywordTranslationExercisesFoundInLoadedContent": 39,
+    "initialAccepted": true,
+    "initialFeedbackAr": "ترجمة سليمة — كل الكلمات المفتاحية في مكانها.",
+    "currentAccepted": false,
+    "currentPoints": 0.5,
+    "currentFeedbackAr": "الكلمات المطلوبة موجودة، لكن ترتيب الجملة وتصريفها لم يطابقا نموذجاً أو بديلاً معلناً؛ هذه مفردات جزئية لا صحة كاملة."
+  },
+  "schemaProbe": {
+    "initialExercisePromptDeContainingArabic": 67,
+    "currentExercisePromptDeContainingArabic": 0,
+    "migratedFields": 67,
+    "targetFields": {
+      "german": "promptDe",
+      "arabic": "promptAr"
+    },
+    "rendererContract": {
+      "german": "lang=de, dir=ltr",
+      "arabic": "lang=ar, dir=rtl"
+    },
+    "regressionGate": "npm run audit:language-fields",
+    "knownArabicTypoExample": {
+      "id": "a2-imp-e4",
+      "initialValue": "اساعدوا صديقكم!",
+      "correctedValue": "ساعدوا صديقكم!",
+      "currentField": "promptAr",
+      "promptDe": "Übersetze den arabischen Satz ins Deutsche.",
+      "fixed": true
+    }
+  },
+  "mediationBank": {
+    "path": "content/mediation.json",
+    "tasks": 12,
+    "levels": {
+      "A2": 3,
+      "B1": 4,
+      "B2": 5
+    },
+    "distinctInputs": 12,
+    "distinctSamples": 12,
+    "pageHasLearnerInput": true,
+    "pageHasRubricControls": true,
+    "pageHasStructuralFeedback": true,
+    "pageHasOptionalModel": true,
+    "pageHasSecondDraft": true,
+    "pageHasProfileScopedLocalSave": true,
+    "automatedCefrScore": false,
+    "externalHumanReviewClaimed": false,
+    "regressionGate": "npm run audit:mediation"
+  },
+  "canDoBank": {
+    "path": "content/cando.json",
+    "descriptors": 44,
+    "counts": {
+      "A0": 11,
+      "A1": 8,
+      "A2": 9,
+      "B1": 8,
+      "B2": 8
+    },
+    "savedCheckboxStateRendered": false,
+    "allCheckedDescriptorsAddedToReadingProxy": true,
+    "allCheckedDescriptorsAddedToVocabularyProxy": true
+  },
+  "vocabularyPosInfoAudit": {
+    "path": "content/vocab.json",
+    "cardsTotal": 6202,
+    "cardsWithPosInfo": 1164,
+    "threeFormPosInfo": 1139,
+    "manualConfirmedMalformedCards": 714,
+    "levels": {
+      "A0": 4,
+      "A1": 81,
+      "A2": 110,
+      "B1": 314,
+      "B2": 205
+    },
+    "batch02": {
+      "correctedCards": 59,
+      "scope": "single-head, three-principal-part contextual internal review",
+      "levels": {
+        "A1": 26,
+        "A2": 9,
+        "B1": 16,
+        "B2": 8
+      },
+      "fixture": "scripts/fixtures/vocab-posinfo-reviewed-02.json",
+      "patch": "scripts/patches/apply_vocab_posinfo_review_pa034_02.py",
+      "externalLinguisticSignOff": false
+    },
+    "batch03": {
+      "correctedCards": 80,
+      "scope": "single-head, three-principal-part item-by-item contextual internal review",
+      "levels": {
+        "A1": 10,
+        "A2": 8,
+        "B1": 40,
+        "B2": 22
+      },
+      "fixture": "scripts/fixtures/vocab-posinfo-reviewed-03.json",
+      "patch": "scripts/patches/apply_vocab_posinfo_review_pa034_03.py",
+      "externalLinguisticSignOff": false
+    },
+    "batch04": {
+      "correctedCards": 90,
+      "scope": "single-head, three-principal-part item-by-item contextual internal review; suffix grouping used for triage only",
+      "levels": {
+        "A1": 6,
+        "A2": 16,
+        "B1": 32,
+        "B2": 36
+      },
+      "fixture": "scripts/fixtures/vocab-posinfo-reviewed-04.json",
+      "patch": "scripts/patches/apply_vocab_posinfo_review_pa034_04.py",
+      "externalLinguisticSignOff": false
+    },
+    "batch05": {
+      "correctedCards": 86,
+      "scope": "single-head, three-principal-part item-by-item contextual internal review; orthographic anomaly grouping used for triage only",
+      "levels": {
+        "A1": 3,
+        "A2": 11,
+        "B1": 42,
+        "B2": 30
+      },
+      "fixture": "scripts/fixtures/vocab-posinfo-reviewed-05.json",
+      "patch": "scripts/patches/apply_vocab_posinfo_review_pa034_05.py",
+      "externalLinguisticSignOff": false
+    },
+    "batch06": {
+      "correctedCards": 75,
+      "scope": "three-principal-part item-by-item contextual internal review; 69 single heads and 6 reflexive heads; morphology and prefix grouping used for triage only",
+      "levels": {
+        "A0": 1,
+        "A1": 8,
+        "A2": 8,
+        "B1": 26,
+        "B2": 32
+      },
+      "fixture": "scripts/fixtures/vocab-posinfo-reviewed-06.json",
+      "patch": "scripts/patches/apply_vocab_posinfo_review_pa034_06.py",
+      "externalLinguisticSignOff": false
+    },
+    "batch07": {
+      "correctedCards": 62,
+      "scope": "three-principal-part item-by-item contextual internal review; 60 multiword heads including 22 reflexive heads, plus 2 inseparable single heads; lower-level and string-shape grouping used for triage only",
+      "levels": {
+        "A1": 13,
+        "A2": 47,
+        "B1": 1,
+        "B2": 1
+      },
+      "fixture": "scripts/fixtures/vocab-posinfo-reviewed-07.json",
+      "patch": "scripts/patches/apply_vocab_posinfo_review_pa034_07.py",
+      "externalLinguisticSignOff": false
+    },
+    "batch08": {
+      "correctedCards": 87,
+      "scope": "item-by-item contextual internal review of all 94 remaining unguarded B1 multiword three-form heads; 87 corrections including 49 heads containing sich, with 7 deliberate non-corrections; grouping used for triage only",
+      "levels": {
+        "B1": 87
+      },
+      "deliberatelyUnchangedHeads": 7,
+      "fixture": "scripts/fixtures/vocab-posinfo-reviewed-08.json",
+      "patch": "scripts/patches/apply_vocab_posinfo_review_pa034_08.py",
+      "externalLinguisticSignOff": false
+    },
+    "batch09": {
+      "correctedCards": 49,
+      "scope": "item-by-item contextual internal review of all 68 remaining unguarded B2 multiword three-form heads; 49 corrections including 37 heads containing sich, with 19 deliberate non-corrections; grouping used for triage only",
+      "levels": {
+        "B2": 49
+      },
+      "deliberatelyUnchangedHeads": 19,
+      "fixture": "scripts/fixtures/vocab-posinfo-reviewed-09.json",
+      "patch": "scripts/patches/apply_vocab_posinfo_review_pa034_09.py",
+      "externalLinguisticSignOff": false
+    },
+    "batch10": {
+      "correctedCards": 16,
+      "scope": "item-by-item contextual internal review of 16 residual single heads; 15 principal-part corrections plus one explicit non-principal-part pedagogical representation for möchten; auxiliary and string-shape grouping used for triage only",
+      "levels": {
+        "A1": 2,
+        "A2": 1,
+        "B1": 6,
+        "B2": 7
+      },
+      "principalPartCorrections": 15,
+      "nonPrincipalPartRepresentations": 1,
+      "fixture": "scripts/fixtures/vocab-posinfo-reviewed-10.json",
+      "patch": "scripts/patches/apply_vocab_posinfo_review_pa034_10.py",
+      "externalLinguisticSignOff": false
+    },
+    "batch01OverlappingIssueTags": {
+      "present_malformed": 53,
+      "preterite_malformed": 106,
+      "perfect_malformed": 99,
+      "garbled_multiword_head": 19
+    },
+    "confirmedRegister": "docs/PEDAGOGICAL_AUDIT_VOCAB_POSINFO_2026-11-04.csv",
+    "automatedReferenceComparison": {
+      "exactSingleHeadwordsMatched": 833,
+      "caveatAr": "مرشحات فقط؛ لا تعتمد المكتبة وحدها في المساعد haben/sein أو قابلية الفصل أو تعدد المعنى.",
+      "remainingAdditionalCandidatesPendingContextReview": null,
+      "initialParticipleReferenceMismatches": 432,
+      "initialAlreadyInManualConfirmedSet": 68,
+      "candidateCountStatus": "The former 49 was a bounded triage-list remainder, not a global defect count; broader triage superseded it in PA-034-06."
+    },
+    "correctedCards": 714,
+    "openConfirmedCards": 0,
+    "remainingCandidateCards": null,
+    "regressionFixtures": [
+      "scripts/fixtures/vocab-posinfo-reviewed.json",
+      "scripts/fixtures/vocab-posinfo-reviewed-02.json",
+      "scripts/fixtures/vocab-posinfo-reviewed-03.json",
+      "scripts/fixtures/vocab-posinfo-reviewed-04.json",
+      "scripts/fixtures/vocab-posinfo-reviewed-05.json",
+      "scripts/fixtures/vocab-posinfo-reviewed-06.json",
+      "scripts/fixtures/vocab-posinfo-reviewed-07.json",
+      "scripts/fixtures/vocab-posinfo-reviewed-08.json",
+      "scripts/fixtures/vocab-posinfo-reviewed-09.json",
+      "scripts/fixtures/vocab-posinfo-reviewed-10.json"
+    ],
+    "regressionGate": "npm run audit:vocab-posinfo",
+    "claimBoundary": "714 bounded internal decisions only; 450 other posInfo fields and external linguistic validation are not certified",
+    "unguardedPosInfoCards": 450
+  },
+  "writingBankConsistencyAudit": {
+    "path": "content/writing.json",
+    "tasks": 105,
+    "registeredFindings": 42,
+    "uniqueTasksWithRegisteredFinding": 35,
+    "confirmedErrors": 25,
+    "pedagogicalRisks": 17,
+    "categories": {
+      "promptConfigWordTargetConflict": 20,
+      "sampleOutside20PercentAuditBand": 10,
+      "sampleSentencePunctuationCountConflict": 7,
+      "humanConfirmedTaskCriteriaSampleNoteConflicts": 5
+    },
+    "register": "docs/PEDAGOGICAL_AUDIT_WRITING_CONSISTENCY_2026-11-04.csv",
+    "wordCountMethod": "Unicode word-token regex; ±20% is an audit triage band, not an exam scoring rule",
+    "sentenceCountMethod": "sentence-final punctuation count; treated as pedagogical risk because greetings may not count as sentences",
+    "fixedFindings": 42,
+    "openReviewFindings": 0,
+    "fixedConfirmedErrors": 25,
+    "currentPromptConfigWordTargetConflicts": 0,
+    "regressionGate": "npm run audit:writing-consistency",
+    "fixedPedagogicalRisks": 17
+  },
+  "inventorySnapshot": {
+    "indexedTrackedFilesAndAuditArtifacts": 3579,
+    "manual_complete": 55,
+    "manual_targeted": 64,
+    "not_started": 3441,
+    "audit_artifact": 19
+  },
+  "learningStateCorrections": {
+    "findings": [
+      "PA-006",
+      "PA-007",
+      "PA-008"
+    ],
+    "debtBacklog": {
+      "persistent": true,
+      "scheduledPerDay": 2,
+      "removal": "passed only",
+      "stableIds": true
+    },
+    "overlearning": {
+      "realSuccessStreak": true,
+      "usesInjectedNow": true,
+      "consumesDueDatesOnReview": true,
+      "clearsOnFailure": true
+    },
+    "reviewPriority": [
+      "oldestEffectiveDue",
+      "lowestRetrievability",
+      "highestLapses",
+      "idTieBreak"
+    ],
+    "dailyReviewCap": 150,
+    "regressionGate": "npm run audit:learning-state"
+  },
+  "assessmentIntegrityCorrections": {
+    "findings": [
+      "PA-004",
+      "PA-005",
+      "PA-012",
+      "PA-019",
+      "PA-024",
+      "PA-028"
+    ],
+    "translationFullCredit": "declared answer or alternative only",
+    "keywordOnlyCredit": 0.5,
+    "dictationComparison": "order-preserving token LCS at 85 percent",
+    "dailyMasteryThreshold": 0.8,
+    "dailyThresholdIsExamClaim": false,
+    "srsUiAlgorithm": "FSRS-6 adaptive; no fixed interval promise",
+    "llmRole": "unofficial training assistant; no accreditation or score prediction",
+    "confirmedCopyErrorsFixed": 3,
+    "unsupportedMarketingClaimsRemoved": 2,
+    "regressionGate": "npm run audit:assessment-integrity"
+  },
+  "implementationScope": "PA-013/PA-025/PA-026 applied on arena/67af4146-wegb2 after the recorded base commit; exact release commit is tracked by Git history.",
+  "languageDirectionCorrections": {
+    "findings": [
+      "PA-025",
+      "PA-026"
+    ],
+    "migratedPromptFields": 67,
+    "remainingArabicInPromptDe": 0,
+    "mediationGermanRuns": "de/ltr",
+    "mediationArabicRuns": "ar/rtl",
+    "exerciseInput": "de/ltr",
+    "automatedDomChecks": true,
+    "realScreenReaderSession": false,
+    "regressionGate": "npm run audit:language-fields + npm run interaktiv"
+  },
+  "scaffoldSignalAfterLanguageMigration": {
+    "before": {
+      "parenthetical": 242,
+      "blankLinked": 177
+    },
+    "after": {
+      "parenthetical": 238,
+      "blankLinked": 176
+    },
+    "reason": "Arabic cues moved out of German-labelled fields; learner support remains in promptAr.",
+    "confirmedAnswerLeaks": 0
+  },
+  "placementCorrections": {
+    "finding": "PA-014",
+    "scope": "receptive-form-only-v1",
+    "domains": [
+      "lesen",
+      "hoeren",
+      "grammatik",
+      "wortschatz"
+    ],
+    "levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2"
+    ],
+    "itemsPerLevelAndDomain": 4,
+    "distinctSourcesPerLevelAndDomain": 4,
+    "minimumOptionsPerItem": 3,
+    "passThresholdCorrect": 3,
+    "passThresholdTotal": 4,
+    "oneCorrectCanAdvance": false,
+    "twoCorrectCanAdvance": false,
+    "rawBandEvidencePersisted": true,
+    "rawItemIdsSourcesAndOutcomesPersisted": true,
+    "writingSampleIncluded": false,
+    "speakingSampleIncluded": false,
+    "cefrLevelClaimed": false,
+    "psychometricCalibrationClaimed": false,
+    "regressionGate": "npm run audit:placement"
+  },
+  "competencyEvidenceCorrections": {
+    "finding": "PA-016",
+    "generatedTasksAnnotated": 2500,
+    "descriptorFields": [
+      "construct",
+      "level",
+      "weight",
+      "evidenceType",
+      "assisted",
+      "responseMode",
+      "method",
+      "sourceId"
+    ],
+    "taskKindFallbackRemoved": true,
+    "mixedTasksExplicit": true,
+    "weightsNormalizedPerTask": true,
+    "taskResultSnapshotPersisted": true,
+    "effectiveMeasuredWeightControlsMinimumSample": true,
+    "planSubmissionCanCreateMeasuredEvidence": false,
+    "expertConstructValidationClaimed": false,
+    "cefrOrExamValidityClaimed": false,
+    "regressionGate": "npm run audit:competency-evidence"
+  },
+  "simulationProvenanceCorrections": {
+    "finding": "PA-017",
+    "formats": [
+      "goethe-b2",
+      "telc-b2",
+      "goethe-b1",
+      "dtz"
+    ],
+    "objectiveSections": [
+      "lesen",
+      "hoeren",
+      "sprachbausteine"
+    ],
+    "selfReportedSections": [
+      "schreiben",
+      "sprechen"
+    ],
+    "overallVerdict": "not_assessed",
+    "perfectScoresCanCreateOverallPass": false,
+    "telcWrittenOrOverallPassComposed": false,
+    "dtzLevelInferred": false,
+    "legacyBestandenUsedByAnalytics": false,
+    "recommendationUsesSelfReport": false,
+    "externalExaminerReviewPresent": false,
+    "officialValidityClaimed": false,
+    "accreditationTechnicalChecks": 49,
+    "externalSignoffsPending": 19,
+    "regressionGate": "npm run audit:simulation-provenance"
+  },
+  "lexicalInventoryCorrections": {
+    "finding": "PA-020",
+    "rawCards": 6202,
+    "normalizedUniqueUnits": 6044,
+    "singleWordUnits": 5266,
+    "multiwordUnits": 778,
+    "normalizationScope": "conservative display-form normalization; not a full German morphological lemmatizer",
+    "duplicateInflationRemoved": 158,
+    "firstIntroductionLevelPartition": {
+      "A0": 107,
+      "A1": 681,
+      "A2": 860,
+      "B1": 2508,
+      "B2": 1888
+    },
+    "strictAppCorpusAttestation": {
+      "corpus": "German fields in app reading texts, dialogue lines, and sentences",
+      "attestedUniqueUnits": 4092,
+      "totalUniqueUnits": 6044,
+      "percent": 67.7,
+      "singleWordMatching": "exact normalized surface token",
+      "multiwordMatching": "exact normalized contiguous phrase"
+    },
+    "productiveVocabularyAssessed": false,
+    "externalGoetheOrCefrCoverage": "not_assessed",
+    "rawCardReferenceComparisonRemoved": true,
+    "regressionGate": "npm run audit:lexical-inventory"
+  },
+  "personalizationCorrections": {
+    "finding": "PA-021",
+    "evidenceWindowDays": 28,
+    "eligibleEvidenceTypes": [
+      "measured",
+      "external_review"
+    ],
+    "assistedEvidenceEligible": false,
+    "activityOrSelfReportEligible": false,
+    "minimumEligibleMeasuredWeightPerSkill": 8,
+    "internalTargetScore": 80,
+    "maximumConcurrentDoses": 2,
+    "doseMinutesByInternalScore": {
+      "below50": 20,
+      "50to64": 15,
+      "65to79": 10
+    },
+    "corePlanTasksDeletedOrReordered": false,
+    "doseCompletionEvidenceType": "activity_only",
+    "verification": {
+      "delayCalendarDays": 3,
+      "minimumFreshEligibleWeight": 3,
+      "immediateEvidenceEligible": false,
+      "assistedEvidenceEligible": false,
+      "outcomes": [
+        "waiting",
+        "due",
+        "passed",
+        "repeat"
+      ]
+    },
+    "cefrOrExamReadinessClaimed": false,
+    "externalEffectivenessClaimed": false,
+    "regressionGate": "npm run audit:personalization"
+  }
+}

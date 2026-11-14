@@ -1,0 +1,43 @@
+id,level,source_line,field,category,classification,detail,review_status,resolution
+w-b1-01,B1,277,zielWort,prompt_config_word_target_conflict,confirmed_error,taskDe asks ca. 80 words; zielWort=100; sample token count=88,manual_corrected_and_regression_guarded,fixed
+w-b1-03,B1,321,zielWort,prompt_config_word_target_conflict,confirmed_error,taskDe asks ca. 80 words; zielWort=100; sample token count=84,manual_corrected_and_regression_guarded,fixed
+w-b2-02,B2,412,zielWort,prompt_config_word_target_conflict,confirmed_error,taskDe asks ca. 120 words; zielWort=100; sample token count=142,manual_corrected_and_regression_guarded,fixed
+w-b2-05,B2,487,zielWort,prompt_config_word_target_conflict,confirmed_error,taskDe asks ca. 150 words; zielWort=100; sample token count=122,manual_corrected_and_regression_guarded,fixed
+w-b1-07,B1,669,zielWort,prompt_config_word_target_conflict,confirmed_error,taskDe asks ca. 80 words; zielWort=100; sample token count=83,manual_corrected_and_regression_guarded,fixed
+w-b2-08,B2,717,zielWort,prompt_config_word_target_conflict,confirmed_error,taskDe asks ca. 100 words; zielWort=150; sample token count=119,manual_corrected_and_regression_guarded,fixed
+w-b2-09,B2,941,zielWort,prompt_config_word_target_conflict,confirmed_error,taskDe asks ca. 150 words; zielWort=100; sample token count=138,manual_corrected_and_regression_guarded,fixed
+w-b2-10,B2,966,zielWort,prompt_config_word_target_conflict,confirmed_error,taskDe asks ca. 150 words; zielWort=100; sample token count=132,manual_corrected_and_regression_guarded,fixed
+w-b2-11,B2,992,zielWort,prompt_config_word_target_conflict,confirmed_error,taskDe asks ca. 180 words; zielWort=150; sample token count=140,manual_corrected_and_regression_guarded,fixed
+w-b1-11,B1,1119,zielWort,prompt_config_word_target_conflict,confirmed_error,taskDe asks ca. 100 words; zielWort=110; sample token count=117,manual_corrected_and_regression_guarded,fixed
+w-b1-12,B1,1140,zielWort,prompt_config_word_target_conflict,confirmed_error,taskDe asks ca. 100 words; zielWort=110; sample token count=115,manual_corrected_and_regression_guarded,fixed
+w-b2-13,B2,1188,zielWort,prompt_config_word_target_conflict,confirmed_error,taskDe asks ca. 150 words; zielWort=100; sample token count=145,manual_corrected_and_regression_guarded,fixed
+w-b2-14,B2,1296,zielWort,prompt_config_word_target_conflict,confirmed_error,taskDe asks ca. 160 words; zielWort=150; sample token count=150,manual_corrected_and_regression_guarded,fixed
+w-b2-22,B2,1521,zielWort,prompt_config_word_target_conflict,confirmed_error,taskDe asks ca. 150 words; zielWort=100; sample token count=129,manual_corrected_and_regression_guarded,fixed
+w-b1-23,B1,2034,zielWort,prompt_config_word_target_conflict,confirmed_error,taskDe asks ca. 110 words; zielWort=100; sample token count=81,manual_corrected_and_regression_guarded,fixed
+w-b2-24,B2,2150,zielWort,prompt_config_word_target_conflict,confirmed_error,taskDe asks ca. 170 words; zielWort=150; sample token count=120,manual_corrected_and_regression_guarded,fixed
+w-b2-25,B2,2176,zielWort,prompt_config_word_target_conflict,confirmed_error,taskDe asks ca. 140 words; zielWort=100; sample token count=128,manual_corrected_and_regression_guarded,fixed
+w-b2-26,B2,2202,zielWort,prompt_config_word_target_conflict,confirmed_error,taskDe asks ca. 180 words; zielWort=150; sample token count=119,manual_corrected_and_regression_guarded,fixed
+w-b2-27,B2,2228,zielWort,prompt_config_word_target_conflict,confirmed_error,taskDe asks ca. 160 words; zielWort=100; sample token count=128,manual_corrected_and_regression_guarded,fixed
+w-b2-28,B2,2254,zielWort,prompt_config_word_target_conflict,confirmed_error,taskDe asks ca. 170 words; zielWort=150; sample token count=122,manual_corrected_and_regression_guarded,fixed
+w-b2-07,B2,685,sample,sample_outside_20pct_of_prompt_target,pedagogical_risk,taskDe target=100; corrected sample token count=94; ratio=94.0%,manual_corrected_and_regression_guarded,fixed
+w-b2-11,B2,984,sample,sample_outside_20pct_of_prompt_target,pedagogical_risk,taskDe target=180; corrected sample token count=155; ratio=86.1%,manual_corrected_and_regression_guarded,fixed
+w-a2-12,A2,1248,sample,sample_outside_20pct_of_prompt_target,pedagogical_risk,taskDe target=80; corrected sample token count=96; ratio=120.0%,manual_corrected_and_regression_guarded,fixed
+w-a2-17,A2,1823,sample,sample_outside_20pct_of_prompt_target,pedagogical_risk,taskDe target=50; corrected sample token count=45; ratio=90.0%,manual_corrected_and_regression_guarded,fixed
+w-b1-23,B1,2028,sample,sample_outside_20pct_of_prompt_target,pedagogical_risk,taskDe target=110; corrected sample token count=99; ratio=90.0%,manual_corrected_and_regression_guarded,fixed
+w-b1-24,B1,2051,sample,sample_outside_20pct_of_prompt_target,pedagogical_risk,taskDe target=120; corrected sample token count=103; ratio=85.8%,manual_corrected_and_regression_guarded,fixed
+w-b1-25,B1,2074,sample,sample_outside_20pct_of_prompt_target,pedagogical_risk,taskDe target=110; corrected sample token count=94; ratio=85.5%,manual_corrected_and_regression_guarded,fixed
+w-b2-24,B2,2143,sample,sample_outside_20pct_of_prompt_target,pedagogical_risk,taskDe target=170; corrected sample token count=138; ratio=81.2%,manual_corrected_and_regression_guarded,fixed
+w-b2-26,B2,2195,sample,sample_outside_20pct_of_prompt_target,pedagogical_risk,taskDe target=180; corrected sample token count=145; ratio=80.6%,manual_corrected_and_regression_guarded,fixed
+w-b2-28,B2,2247,sample,sample_outside_20pct_of_prompt_target,pedagogical_risk,taskDe target=170; corrected sample token count=144; ratio=84.7%,manual_corrected_and_regression_guarded,fixed
+w-a1-01,A1,59,sample,sample_sentence_count_conflict,pedagogical_risk,taskDe asks 4–5 sentences; corrected sample has 5 sentence-final punctuation marks,manual_corrected_and_regression_guarded,fixed
+w-a2-01,A2,165,sample,sample_sentence_count_conflict,pedagogical_risk,taskDe asks 6–6 sentences; sample has 7 sentence-final punctuation marks,manual_corrected_and_regression_guarded,fixed
+w-a2-02,A2,186,sample,sample_sentence_count_conflict,pedagogical_risk,taskDe asks 5–6 sentences; sample has 7 sentence-final punctuation marks,manual_corrected_and_regression_guarded,fixed
+w-a1-06,A1,505,sample,sample_sentence_count_conflict,pedagogical_risk,taskDe asks 4–5 sentences; corrected sample has 5 sentence-final punctuation marks,manual_corrected_and_regression_guarded,fixed
+w-a2-06,A2,527,sample,sample_sentence_count_conflict,pedagogical_risk,taskDe asks 6–6 sentences; corrected sample has 6 sentence-final punctuation marks,manual_corrected_and_regression_guarded,fixed
+w-a1-08,A1,735,sample,sample_sentence_count_conflict,pedagogical_risk,taskDe asks 3–4 sentences; corrected sample has 4 sentence-final punctuation marks,manual_corrected_and_regression_guarded,fixed
+w-a0-06,A0,1206,sample,sample_sentence_count_conflict,pedagogical_risk,taskDe asks 3–4 sentences; corrected sample has 4 sentence-final punctuation marks,manual_corrected_and_regression_guarded,fixed
+w-a1-02,A1,75,criteria,criteria_sample_conflict,confirmed_error,"criterion requires numbers written in German words, but the sample uses digits for age, date, address and telephone",manual_corrected_and_regression_guarded,fixed
+w-a1-04,A1,122,sample,criterion_sample_conflict,confirmed_error,criterion requires at least 3 separable verbs and note claims three; sample contains only stehe…auf and kaufe…ein,manual_corrected_and_regression_guarded,fixed
+w-a1-05,A1,144,noteAr,note_sample_hallucination,confirmed_error,note claims four sentences and an explicit Möchtest du invitation; sample has seven sentence-final marks and contains no Möchtest du,manual_corrected_and_regression_guarded,fixed
+w-a2-01,A2,166,noteAr,note_sample_hallucination,confirmed_error,note claims six sentences and five Perfekt forms; sample has seven sentences and nine Perfekt verb groups,manual_corrected_and_regression_guarded,fixed
+w-a2-02,A2,187,noteAr,task_sample_note_conflict,confirmed_error,"task asks 5–6 sentences, exactly 2× weil and 1× dass; sample has seven sentences, 2× weil and 2× dass; note calls it five lines",manual_corrected_and_regression_guarded,fixed

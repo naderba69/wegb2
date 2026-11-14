@@ -198,7 +198,7 @@ function lehrerBerichtBasis(p: Progress): string[] {
     const tot = last7.reduce((s, [, r]) => s + Math.max(r.total, 1), 0);
     const pct = Math.round((sc / Math.max(tot, 1)) * 100);
     lines.push(
-      `📊 معدّل آخر ${last7.length} أيام مُغلقة: ${pct}% ${pct >= 80 ? "— تميّز (≥80%) — واصل" : pct >= 60 ? "— نجاح رسمي (≥60% Goethe) — 80% للتميّز" : "— دون عتبة النجاح 60% (Goethe): خصّص مراجعة مركّزة"}`
+      `📊 معدّل آخر ${last7.length} أيام مُغلقة: ${pct}% ${pct >= 80 ? "— بلغ عتبة الإتقان اليومية الداخلية (≥80%)" : pct >= 60 ? "— تقدّم جزئي؛ لا يمثل نجاح امتحان" : "— يحتاج مراجعة مركّزة؛ لا يمثل حكماً امتحانياً"}`
     );
   } else {
     lines.push("📊 لا أيام مُغلقة بعد — أغلق يومك الأول ليبدأ التتبّع.");
@@ -294,7 +294,7 @@ export function platzierungsFragen(gmap: Record<string, GrammarTopic>): Exercise
   out.push({
     id: "pl-hoer-a2",
     type: "mc",
-    promptDe: "🎧 Hören (▶ اضغط 🔊 على الجملة): „Am Samstag gehe ich mit meiner Freundin ins Kino. Wir sehen einen neuen französischen Film.“ — Wohin geht die Person am Samstag?",
+    promptDe: "🎧 Hören: „Am Samstag gehe ich mit meiner Freundin ins Kino. Wir sehen einen neuen französischen Film.“ — Wohin geht die Person am Samstag?",
     promptAr: "🎧 استماع (مستوى A2): اضغط 🔊 على زر الاستماع في الأسفل ثم أجب: إلى أين تذهب المتكلمة يوم السبت؟",
     text: "Am Samstag gehe ich mit meiner Freundin ins Kino. Wir sehen einen neuen französischen Film.",
     options: ["ins Theater", "ins Kino", "in die Schule", "zur Arbeit"],
@@ -305,7 +305,7 @@ export function platzierungsFragen(gmap: Record<string, GrammarTopic>): Exercise
   out.push({
     id: "pl-hoer-b2",
     type: "truefalse",
-    promptDe: "🎧 Hören (▶ اضغط 🔊): „Wenn ich mehr Zeit hätte, würde ich jeden Tag Klavier spielen, aber mein Studium nimmt fast den ganzen Tag in Anspruch.“ — Aussage: Die Person spielt jeden Tag Klavier. Richtig oder falsch?",
+    promptDe: "🎧 Hören: „Wenn ich mehr Zeit hätte, würde ich jeden Tag Klavier spielen, aber mein Studium nimmt fast den ganzen Tag in Anspruch.“ — Aussage: Die Person spielt jeden Tag Klavier. Richtig oder falsch?",
     promptAr: "🎧 استماع (مستوى B2): الجملة تتحدث عن أمنية بلا تحقق. العبارة: «الشخص يعزف البيانو كل يوم» — هل هي صحيحة؟",
     text: "Wenn ich mehr Zeit hätte, würde ich jeden Tag Klavier spielen, aber mein Studium nimmt fast den ganzen Tag in Anspruch.",
     options: ["richtig", "falsch"],
@@ -343,10 +343,10 @@ export function elternBrief(p: Progress): { de: string[]; ar: string[] } {
     const tot = last7.reduce((s, [, r]) => s + Math.max(r.total, 1), 0);
     const pct = Math.round((sc / Math.max(tot, 1)) * 100);
     de.push(
-      `Durchschnitt der letzten ${last7.length} Lerntage: ${pct}% ${pct >= 80 ? "(Exzellenz ≥80% – weiter so!)" : pct >= 60 ? "(bestanden ≥60% Goethe – 80% für Exzellenz)" : "(unter 60% Goethe – bitte beim Lernen begleiten)."}`
+      `Durchschnitt der letzten ${last7.length} Lerntage: ${pct}% ${pct >= 80 ? "(interne Tages-Mastery-Schwelle ≥80% erreicht)" : pct >= 60 ? "(Teilfortschritt; keine Prüfungsbewertung)" : "(gezielte Wiederholung empfohlen; keine Prüfungsbewertung)."}`
     );
     ar.push(
-      `معدّل آخر ${last7.length} أيام تعلّم: ${pct}% ${pct >= 80 ? "(تميّز ≥80% — أحسنتم!)" : pct >= 60 ? "(نجاح رسمي ≥60% Goethe — 80% للتميّز)" : "(دون 60% Goethe — يُستحسن المرافقة)."}`
+      `معدّل آخر ${last7.length} أيام تعلّم: ${pct}% ${pct >= 80 ? "(بلغ عتبة الإتقان اليومية الداخلية ≥80%)" : pct >= 60 ? "(تقدّم جزئي؛ ليس تقييماً امتحانياً)" : "(يُستحسن دعم المراجعة؛ ليس حكماً امتحانياً)."}`
     );
   } else {
     de.push("Noch keine abgeschlossenen Lerntage – mit dem ersten Tag beginnt die Dokumentation.");

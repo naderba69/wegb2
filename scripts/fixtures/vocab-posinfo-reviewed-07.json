@@ -1,0 +1,504 @@
+{
+  "schema": "wegb2-reviewed-vocab-posinfo-batch-v1",
+  "batch": "PA-034-07",
+  "reviewedAt": "2026-11-04",
+  "scope": "62 additional high-confidence contextual corrections after item-by-item internal review of 60 multiword or reflexive heads and two inseparable single heads; lower-level prioritization and string-shape grouping were triage only and not external linguistic sign-off.",
+  "entries": [
+    {
+      "id": "vb-abschl-009",
+      "deck": "a1-menschen-abschluss",
+      "level": "A1",
+      "de": "laut lesen",
+      "previousPosInfo": "lautet, lautete, hat gelautt",
+      "posInfo": "liest laut, las laut, hat laut gelesen"
+    },
+    {
+      "id": "vb-abschl-010",
+      "deck": "a1-menschen-abschluss",
+      "level": "A1",
+      "de": "auswendig lernen",
+      "previousPosInfo": "auswendigt, auswendigte, hat geauswendigt",
+      "posInfo": "lernt auswendig, lernte auswendig, hat auswendig gelernt"
+    },
+    {
+      "id": "vb-abschl-027",
+      "deck": "a1-menschen-abschluss",
+      "level": "A1",
+      "de": "pünktlich sein",
+      "previousPosInfo": "pünktlicht, pünktlichte, hat gepünktlicht",
+      "posInfo": "ist pünktlich, war pünktlich, ist pünktlich gewesen"
+    },
+    {
+      "id": "vb-abschl-050",
+      "deck": "a1-menschen-abschluss",
+      "level": "A1",
+      "de": "zusammen wohnen",
+      "previousPosInfo": "sammt zu, sammte zu, hat zugesammt",
+      "posInfo": "wohnt zusammen, wohnte zusammen, hat zusammengewohnt"
+    },
+    {
+      "id": "va-modort-006",
+      "deck": "a1-modal-ort",
+      "level": "A1",
+      "de": "nicht müssen",
+      "previousPosInfo": "nichtet, nichtete, hat genichtt",
+      "posInfo": "muss nicht, musste nicht, hat nicht gemusst"
+    },
+    {
+      "id": "va-modort-007",
+      "deck": "a1-modal-ort",
+      "level": "A1",
+      "de": "nicht dürfen",
+      "previousPosInfo": "nichtet, nichtete, hat genichtt",
+      "posInfo": "darf nicht, durfte nicht, hat nicht gedurft"
+    },
+    {
+      "id": "va-modort-067",
+      "deck": "a1-modal-ort",
+      "level": "A1",
+      "de": "sich ausruhen",
+      "previousPosInfo": "ruht aus, ruhte aus, hat ausgeruht",
+      "posInfo": "ruht sich aus, ruhte sich aus, hat sich ausgeruht"
+    },
+    {
+      "id": "va-modort-078",
+      "deck": "a1-modal-ort",
+      "level": "A1",
+      "de": "bar bezahlen",
+      "previousPosInfo": "bart, barte, hat gebart",
+      "posInfo": "bezahlt bar, bezahlte bar, hat bar bezahlt"
+    },
+    {
+      "id": "va-modort-079",
+      "deck": "a1-modal-ort",
+      "level": "A1",
+      "de": "mit Karte zahlen",
+      "previousPosInfo": "mitet, mitete, hat gemitt",
+      "posInfo": "zahlt mit Karte, zahlte mit Karte, hat mit Karte gezahlt"
+    },
+    {
+      "id": "vy-natur-036",
+      "deck": "a1-natur-freizeit",
+      "level": "A1",
+      "de": "spazieren gehen",
+      "previousPosInfo": "spaziert, spazierte, ist gespaziert",
+      "posInfo": "geht spazieren, ging spazieren, ist spazieren gegangen"
+    },
+    {
+      "id": "vy-natur-049",
+      "deck": "a1-natur-freizeit",
+      "level": "A1",
+      "de": "Angst haben",
+      "previousPosInfo": "angstet, angstete, hat geangstt",
+      "posInfo": "hat Angst, hatte Angst, hat Angst gehabt"
+    },
+    {
+      "id": "vz-welt-b-016",
+      "deck": "a1-welt-beruf",
+      "level": "A1",
+      "de": "wiederholen bitte",
+      "previousPosInfo": "holt wieder, holte wieder, hat wiederholt",
+      "posInfo": "wiederholt, wiederholte, hat wiederholt"
+    },
+    {
+      "id": "vz-welt-b-017",
+      "deck": "a1-welt-beruf",
+      "level": "A1",
+      "de": "langsamer sprechen",
+      "previousPosInfo": "langsamert, langsamerte, hat gelangsamert",
+      "posInfo": "spricht langsamer, sprach langsamer, hat langsamer gesprochen"
+    },
+    {
+      "id": "vw-a2all-021",
+      "deck": "a2-alltag-dienste",
+      "level": "A2",
+      "de": "Bescheid sagen",
+      "previousPosInfo": "bescheidet, bescheidete, hat bescheid",
+      "posInfo": "sagt Bescheid, sagte Bescheid, hat Bescheid gesagt"
+    },
+    {
+      "id": "vw-a2all-026",
+      "deck": "a2-alltag-dienste",
+      "level": "A2",
+      "de": "absagen müssen",
+      "previousPosInfo": "sagt ab, sagte ab, hat abgesagt",
+      "posInfo": "muss absagen, musste absagen, hat absagen müssen"
+    },
+    {
+      "id": "vw-a2all-068",
+      "deck": "a2-alltag-dienste",
+      "level": "A2",
+      "de": "sich beschweren",
+      "previousPosInfo": "beschwert, beschwerte, hat beschwert",
+      "posInfo": "beschwert sich, beschwerte sich, hat sich beschwert"
+    },
+    {
+      "id": "vw-a2all-080",
+      "deck": "a2-alltag-dienste",
+      "level": "A2",
+      "de": "sich bedanken",
+      "previousPosInfo": "bedankt, bedankte, hat bedankt",
+      "posInfo": "bedankt sich, bedankte sich, hat sich bedankt"
+    },
+    {
+      "id": "vw-a2arb-018",
+      "deck": "a2-arbeit-buero",
+      "level": "A2",
+      "de": "sich bewerben",
+      "previousPosInfo": "bewerbt, bewerbte, hat bewerbt",
+      "posInfo": "bewirbt sich, bewarb sich, hat sich beworben"
+    },
+    {
+      "id": "vw-a2arb-083",
+      "deck": "a2-arbeit-buero",
+      "level": "A2",
+      "de": "sich melden",
+      "previousPosInfo": "meldet, meldete, hat gemeldt",
+      "posInfo": "meldet sich, meldete sich, hat sich gemeldet"
+    },
+    {
+      "id": "ve-umwelt--006",
+      "deck": "a2-arbeit-umwelt",
+      "level": "A2",
+      "de": "sparsam heizen",
+      "previousPosInfo": "sparsamt, sparsamte, hat gesparsamt",
+      "posInfo": "heizt sparsam, heizte sparsam, hat sparsam geheizt"
+    },
+    {
+      "id": "ve-umwelt--024",
+      "deck": "a2-arbeit-umwelt",
+      "level": "A2",
+      "de": "beitragen zu",
+      "previousPosInfo": "tragt bei, tragte bei, hat beitragt",
+      "posInfo": "trägt zu ... bei, trug zu ... bei, hat zu ... beigetragen"
+    },
+    {
+      "id": "ve-erzaeh-805",
+      "deck": "a2-erzaehlen-zeit",
+      "level": "A2",
+      "de": "sich gewöhnen",
+      "previousPosInfo": "gewöhnt, gewöhnte, hat gewöhnt",
+      "posInfo": "gewöhnt sich, gewöhnte sich, hat sich gewöhnt"
+    },
+    {
+      "id": "ve-erzaeh-808",
+      "deck": "a2-erzaehlen-zeit",
+      "level": "A2",
+      "de": "stolz erzählen",
+      "previousPosInfo": "stolzt, stolzte, hat gestolzt",
+      "posInfo": "erzählt stolz, erzählte stolz, hat stolz erzählt"
+    },
+    {
+      "id": "ve-erzaehl-021",
+      "deck": "a2-erzaehlen-zeit",
+      "level": "A2",
+      "de": "sich verändern",
+      "previousPosInfo": "verändet, verändete, hat verändern",
+      "posInfo": "verändert sich, veränderte sich, hat sich verändert"
+    },
+    {
+      "id": "vd-geld-k-022",
+      "deck": "a2-geld-gesundheit",
+      "level": "A2",
+      "de": "sich etwas leisten",
+      "previousPosInfo": "etwast, etwaste, hat geetwast",
+      "posInfo": "leistet sich etwas, leistete sich etwas, hat sich etwas geleistet"
+    },
+    {
+      "id": "vd-gesund-009",
+      "deck": "a2-geld-gesundheit",
+      "level": "A2",
+      "de": "sich verletzen",
+      "previousPosInfo": "verletzt, verletzte, hat verletzt",
+      "posInfo": "verletzt sich, verletzte sich, hat sich verletzt"
+    },
+    {
+      "id": "vd-gesund-028",
+      "deck": "a2-geld-gesundheit",
+      "level": "A2",
+      "de": "rauchen aufhören",
+      "previousPosInfo": "raucht, rauchte, hat geraucht",
+      "posInfo": "hört mit dem Rauchen auf, hörte mit dem Rauchen auf, hat mit dem Rauchen aufgehört"
+    },
+    {
+      "id": "ve-kueche--005",
+      "deck": "a2-kueche-haushalt",
+      "level": "A2",
+      "de": "kochen lassen",
+      "previousPosInfo": "kocht, kochte, hat gekocht",
+      "posInfo": "lässt kochen, ließ kochen, hat kochen lassen"
+    },
+    {
+      "id": "ve-kueche-806",
+      "deck": "a2-kueche-haushalt",
+      "level": "A2",
+      "de": "abtropfen lassen",
+      "previousPosInfo": "tropft ab, tropfte ab, hat abgetropft",
+      "posInfo": "lässt abtropfen, ließ abtropfen, hat abtropfen lassen"
+    },
+    {
+      "id": "vf-kultd-313",
+      "deck": "a2-kultur-digital",
+      "level": "A2",
+      "de": "flüssig sprechen",
+      "previousPosInfo": "flüssigt, flüssigte, hat geflüssigt",
+      "posInfo": "spricht flüssig, sprach flüssig, hat flüssig gesprochen"
+    },
+    {
+      "id": "vf-kultd-331",
+      "deck": "a2-kultur-digital",
+      "level": "A2",
+      "de": "Widerspruch einlegen",
+      "previousPosInfo": "widersprucht, widerspruchte, hat gewidersprucht",
+      "posInfo": "legt Widerspruch ein, legte Widerspruch ein, hat Widerspruch eingelegt"
+    },
+    {
+      "id": "vf-kultd-502",
+      "deck": "a2-kultur-digital",
+      "level": "A2",
+      "de": "zuständig sein für",
+      "previousPosInfo": "zuständigt, zuständigte, hat gezuständigt",
+      "posInfo": "ist für ... zuständig, war für ... zuständig, ist für ... zuständig gewesen"
+    },
+    {
+      "id": "vf-kultur-012",
+      "deck": "a2-kultur-digital",
+      "level": "A2",
+      "de": "bequem sitzen",
+      "previousPosInfo": "bequemt, bequemte, hat bequem",
+      "posInfo": "sitzt bequem, saß bequem, hat bequem gesessen"
+    },
+    {
+      "id": "vf-kultur-032",
+      "deck": "a2-kultur-digital",
+      "level": "A2",
+      "de": "sich einloggen",
+      "previousPosInfo": "loggt ein, loggte ein, hat eingeloggt",
+      "posInfo": "loggt sich ein, loggte sich ein, hat sich eingeloggt"
+    },
+    {
+      "id": "vy-leben-008",
+      "deck": "a2-leben-technik",
+      "level": "A2",
+      "de": "sich entscheiden",
+      "previousPosInfo": "entscheidet, entscheidete, hat entscheidt",
+      "posInfo": "entscheidet sich, entschied sich, hat sich entschieden"
+    },
+    {
+      "id": "vy-leben-014",
+      "deck": "a2-leben-technik",
+      "level": "A2",
+      "de": "sich gewöhnen an",
+      "previousPosInfo": "gewöhnt, gewöhnte, hat gewöhnt",
+      "posInfo": "gewöhnt sich an, gewöhnte sich an, hat sich an ... gewöhnt"
+    },
+    {
+      "id": "vy-leben-016",
+      "deck": "a2-leben-technik",
+      "level": "A2",
+      "de": "sich interessieren für",
+      "previousPosInfo": "interessiert, interessierte, hat geinteressiert",
+      "posInfo": "interessiert sich für, interessierte sich für, hat sich für ... interessiert"
+    },
+    {
+      "id": "vy-leben-017",
+      "deck": "a2-leben-technik",
+      "level": "A2",
+      "de": "achten auf",
+      "previousPosInfo": "achtet, achtete, hat geachtt",
+      "posInfo": "achtet auf, achtete auf, hat auf ... geachtet"
+    },
+    {
+      "id": "vc-medien-026",
+      "deck": "a2-medien-bildung",
+      "level": "A2",
+      "de": "sich konzentrieren auf",
+      "previousPosInfo": "konzentriert, konzentrierte, hat gekonzentriert",
+      "posInfo": "konzentriert sich auf, konzentrierte sich auf, hat sich auf ... konzentriert"
+    },
+    {
+      "id": "vc-medien-027",
+      "deck": "a2-medien-bildung",
+      "level": "A2",
+      "de": "sich vorbereiten auf",
+      "previousPosInfo": "bereitet vor, bereitete vor, hat vorgebereitt",
+      "posInfo": "bereitet sich auf ... vor, bereitete sich auf ... vor, hat sich auf ... vorbereitet"
+    },
+    {
+      "id": "vc-medien-028",
+      "deck": "a2-medien-bildung",
+      "level": "A2",
+      "de": "warten auf",
+      "previousPosInfo": "wartet, wartete, hat gewartt",
+      "posInfo": "wartet auf, wartete auf, hat auf ... gewartet"
+    },
+    {
+      "id": "vc-medien-030",
+      "deck": "a2-medien-bildung",
+      "level": "A2",
+      "de": "sich freuen über",
+      "previousPosInfo": "freut, freute, hat gefreut",
+      "posInfo": "freut sich über, freute sich über, hat sich über ... gefreut"
+    },
+    {
+      "id": "vc-medien-032",
+      "deck": "a2-medien-bildung",
+      "level": "A2",
+      "de": "sprechen über",
+      "previousPosInfo": "sprecht, sprechte, hat gesprecht",
+      "posInfo": "spricht über, sprach über, hat über ... gesprochen"
+    },
+    {
+      "id": "vc-medien-034",
+      "deck": "a2-medien-bildung",
+      "level": "A2",
+      "de": "bitten um",
+      "previousPosInfo": "bittet, bittete, hat gebittt",
+      "posInfo": "bittet um, bat um, hat um ... gebeten"
+    },
+    {
+      "id": "vc-medien-036",
+      "deck": "a2-medien-bildung",
+      "level": "A2",
+      "de": "Angst haben vor",
+      "previousPosInfo": "angstet, angstete, hat geangstt",
+      "posInfo": "hat Angst vor, hatte Angst vor, hat Angst vor ... gehabt"
+    },
+    {
+      "id": "vc-medien-037",
+      "deck": "a2-medien-bildung",
+      "level": "A2",
+      "de": "zufrieden sein mit",
+      "previousPosInfo": "friedet zu, friedete zu, hat zugefriedt",
+      "posInfo": "ist mit ... zufrieden, war mit ... zufrieden, ist mit ... zufrieden gewesen"
+    },
+    {
+      "id": "vc-medien-038",
+      "deck": "a2-medien-bildung",
+      "level": "A2",
+      "de": "sich erinnern an",
+      "previousPosInfo": "erinnet, erinnete, hat erinnern",
+      "posInfo": "erinnert sich an, erinnerte sich an, hat sich an ... erinnert"
+    },
+    {
+      "id": "vc-medien-039",
+      "deck": "a2-medien-bildung",
+      "level": "A2",
+      "de": "abhängen von",
+      "previousPosInfo": "hängt ab, hängte ab, hat abgehängt",
+      "posInfo": "hängt von ... ab, hing von ... ab, hat von ... abgehangen"
+    },
+    {
+      "id": "vc-mensc-806",
+      "deck": "a2-mensch-beziehung",
+      "level": "A2",
+      "de": "sich Sorgen machen",
+      "previousPosInfo": "sorgt, sorgte, hat gesorgt",
+      "posInfo": "macht sich Sorgen, machte sich Sorgen, hat sich Sorgen gemacht"
+    },
+    {
+      "id": "vc-mensch-017",
+      "deck": "a2-mensch-beziehung",
+      "level": "A2",
+      "de": "sich verstehen",
+      "previousPosInfo": "versteht, verstehte, hat versteht",
+      "posInfo": "versteht sich, verstand sich, hat sich verstanden"
+    },
+    {
+      "id": "vc-mensch-029",
+      "deck": "a2-mensch-beziehung",
+      "level": "A2",
+      "de": "sich entschuldigen für",
+      "previousPosInfo": "entschuldigt, entschuldigte, hat entschuldigt",
+      "posInfo": "entschuldigt sich für, entschuldigte sich für, hat sich für ... entschuldigt"
+    },
+    {
+      "id": "vc-reise--015",
+      "deck": "a2-reise-feste",
+      "level": "A2",
+      "de": "sich verlaufen",
+      "previousPosInfo": "verlauft, verlaufte, hat verlauft",
+      "posInfo": "verläuft sich, verlief sich, hat sich verlaufen"
+    },
+    {
+      "id": "vc-reise--023",
+      "deck": "a2-reise-feste",
+      "level": "A2",
+      "de": "gratulieren zum Fest",
+      "previousPosInfo": "gratuliert, gratulierte, hat gegratuliert",
+      "posInfo": "gratuliert zum Fest, gratulierte zum Fest, hat zum Fest gratuliert"
+    },
+    {
+      "id": "vc-reise--024",
+      "deck": "a2-reise-feste",
+      "level": "A2",
+      "de": "einladen zu",
+      "previousPosInfo": "ladet ein, ladete ein, hat eingeladt",
+      "posInfo": "lädt zu ... ein, lud zu ... ein, hat zu ... eingeladen"
+    },
+    {
+      "id": "vc-reise-806",
+      "deck": "a2-reise-feste",
+      "level": "A2",
+      "de": "satt werden",
+      "previousPosInfo": "sattet, sattete, hat gesattt",
+      "posInfo": "wird satt, wurde satt, ist satt geworden"
+    },
+    {
+      "id": "vz-schr-907",
+      "deck": "a2-schreiben-dienste",
+      "level": "A2",
+      "de": "Korrektur lesen",
+      "previousPosInfo": "korrekturt, korrekturte, hat gekorrekturt",
+      "posInfo": "liest Korrektur, las Korrektur, hat Korrektur gelesen"
+    },
+    {
+      "id": "vz-schrei-007",
+      "deck": "a2-schreiben-dienste",
+      "level": "A2",
+      "de": "höflich formulieren",
+      "previousPosInfo": "höflicht, höflichte, hat gehöflicht",
+      "posInfo": "formuliert höflich, formulierte höflich, hat höflich formuliert"
+    },
+    {
+      "id": "vz-schrei-025",
+      "deck": "a2-schreiben-dienste",
+      "level": "A2",
+      "de": "sich informieren",
+      "previousPosInfo": "informiert, informierte, hat geinformiert",
+      "posInfo": "informiert sich, informierte sich, hat sich informiert"
+    },
+    {
+      "id": "vz-schrei-035",
+      "deck": "a2-schreiben-dienste",
+      "level": "A2",
+      "de": "bestellen und abholen",
+      "previousPosInfo": "bestellt, bestellte, hat bestellt",
+      "posInfo": "bestellt und holt ab, bestellte und holte ab, hat bestellt und abgeholt"
+    },
+    {
+      "id": "vd-wohnv-805",
+      "deck": "a2-wohnen-vertrag",
+      "level": "A2",
+      "de": "ausziehen aus",
+      "previousPosInfo": "zieht aus, ziehte aus, ist ausgezieht",
+      "posInfo": "zieht aus ... aus, zog aus ... aus, ist aus ... ausgezogen"
+    },
+    {
+      "id": "r322b1-067",
+      "deck": "b1-az-u",
+      "level": "B1",
+      "de": "umarmen",
+      "previousPosInfo": "armt um, armte um, hat umgearmt",
+      "posInfo": "umarmt, umarmte, hat umarmt"
+    },
+    {
+      "id": "j02-gesellschaft-recht-017",
+      "deck": "j02-gesellschaft-recht",
+      "level": "B2",
+      "de": "unterstützen",
+      "previousPosInfo": "stützt unter, stützte unter, hat unterstützt",
+      "posInfo": "unterstützt, unterstützte, hat unterstützt"
+    }
+  ]
+}

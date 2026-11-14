@@ -1,0 +1,696 @@
+{
+  "schema": "wegb2-reviewed-vocab-posinfo-batch-v1",
+  "batch": "PA-034-05",
+  "reviewedAt": "2026-11-04",
+  "scope": "86 additional high-confidence single-head principal-part corrections after item-by-item contextual internal review; orthographic anomaly grouping is triage only and not external linguistic sign-off.",
+  "entries": [
+    {
+      "id": "vx-haus--049",
+      "deck": "a1-haus-schule",
+      "level": "A1",
+      "de": "erinnern",
+      "previousPosInfo": "erinnet, erinnete, hat erinnern",
+      "posInfo": "erinnert, erinnerte, hat erinnert"
+    },
+    {
+      "id": "vw-a1koe-036",
+      "deck": "a1-koerper-kleidung",
+      "level": "A1",
+      "de": "kosten",
+      "previousPosInfo": "kostet, kostete, hat gekostt",
+      "posInfo": "kostet, kostete, hat gekostet"
+    },
+    {
+      "id": "vb-abschl-006",
+      "deck": "a1-menschen-abschluss",
+      "level": "A1",
+      "de": "antworten",
+      "previousPosInfo": "twortet an, twortete an, hat angetwortt",
+      "posInfo": "antwortet, antwortete, hat geantwortet"
+    },
+    {
+      "id": "vw-a2all-066",
+      "deck": "a2-alltag-dienste",
+      "level": "A2",
+      "de": "lüften",
+      "previousPosInfo": "lüftet, lüftete, hat gelüftt",
+      "posInfo": "lüftet, lüftete, hat gelüftet"
+    },
+    {
+      "id": "vw-a2all-073",
+      "deck": "a2-alltag-dienste",
+      "level": "A2",
+      "de": "weiterleiten",
+      "previousPosInfo": "leitet weiter, leitete weiter, hat weitergeleitt",
+      "posInfo": "leitet weiter, leitete weiter, hat weitergeleitet"
+    },
+    {
+      "id": "r312a2-016",
+      "deck": "a2-arbeit-buero",
+      "level": "A2",
+      "de": "beantworten",
+      "previousPosInfo": "beantwortet, beantwortete, hat beantwortt",
+      "posInfo": "beantwortet, beantwortete, hat beantwortet"
+    },
+    {
+      "id": "r312a2-167",
+      "deck": "a2-arbeit-umwelt",
+      "level": "A2",
+      "de": "beenden",
+      "previousPosInfo": "beendet, beendete, hat beendt",
+      "posInfo": "beendet, beendete, hat beendet"
+    },
+    {
+      "id": "ve-arbeits-017",
+      "deck": "a2-arbeit-umwelt",
+      "level": "A2",
+      "de": "melden",
+      "previousPosInfo": "meldet, meldete, hat gemeldt",
+      "posInfo": "meldet, meldete, hat gemeldet"
+    },
+    {
+      "id": "ve-umwelt--013",
+      "deck": "a2-arbeit-umwelt",
+      "level": "A2",
+      "de": "wiederverwenden",
+      "previousPosInfo": "verwendet wieder, verwendete wieder, hat wiederverwendt",
+      "posInfo": "verwendet wieder, verwendete wieder, hat wiederverwendet"
+    },
+    {
+      "id": "ve-erzaeh-807",
+      "deck": "a2-erzaehlen-zeit",
+      "level": "A2",
+      "de": "überwinden",
+      "previousPosInfo": "windet über, windete über, hat überwindt",
+      "posInfo": "überwindet, überwand, hat überwunden"
+    },
+    {
+      "id": "vd-geld-k-013",
+      "deck": "a2-geld-gesundheit",
+      "level": "A2",
+      "de": "verschwenden",
+      "previousPosInfo": "verschwendet, verschwendete, hat verschwendt",
+      "posInfo": "verschwendet, verschwendete, hat verschwendet"
+    },
+    {
+      "id": "vf-kultd-329",
+      "deck": "a2-kultur-digital",
+      "level": "A2",
+      "de": "verlängern",
+      "previousPosInfo": "verlänget, verlängete, hat verlängern",
+      "posInfo": "verlängert, verlängerte, hat verlängert"
+    },
+    {
+      "id": "vy-leben-011",
+      "deck": "a2-leben-technik",
+      "level": "A2",
+      "de": "bedeuten",
+      "previousPosInfo": "bedeutet, bedeutete, hat bedeutt",
+      "posInfo": "bedeutet, bedeutete, hat bedeutet"
+    },
+    {
+      "id": "vc-mensc-807",
+      "deck": "a2-mensch-beziehung",
+      "level": "A2",
+      "de": "trösten",
+      "previousPosInfo": "tröstet, tröstete, hat getröstt",
+      "posInfo": "tröstet, tröstete, hat getröstet"
+    },
+    {
+      "id": "r314b1-044",
+      "deck": "b1-az-a",
+      "level": "B1",
+      "de": "anwenden",
+      "previousPosInfo": "wendet an, wendete an, hat angewendt",
+      "posInfo": "wendet an, wandte an, hat angewandt"
+    },
+    {
+      "id": "r314b1-075",
+      "deck": "b1-az-a",
+      "level": "B1",
+      "de": "ausrichten",
+      "previousPosInfo": "richtet aus, richtete aus, hat ausgerichtt",
+      "posInfo": "richtet aus, richtete aus, hat ausgerichtet"
+    },
+    {
+      "id": "r314b1-090",
+      "deck": "b1-az-b",
+      "level": "B1",
+      "de": "baden",
+      "previousPosInfo": "badet, badete, hat gebadt",
+      "posInfo": "badet, badete, hat gebadet"
+    },
+    {
+      "id": "r314b1-102",
+      "deck": "b1-az-b",
+      "level": "B1",
+      "de": "beachten",
+      "previousPosInfo": "beachtet, beachtete, hat beachtt",
+      "posInfo": "beachtet, beachtete, hat beachtet"
+    },
+    {
+      "id": "r314b1-111",
+      "deck": "b1-az-b",
+      "level": "B1",
+      "de": "behindern",
+      "previousPosInfo": "behindet, behindete, hat behindern",
+      "posInfo": "behindert, behinderte, hat behindert"
+    },
+    {
+      "id": "r314b1-156",
+      "deck": "b1-az-b",
+      "level": "B1",
+      "de": "bluten",
+      "previousPosInfo": "blutet, blutete, hat geblutt",
+      "posInfo": "blutet, blutete, hat geblutet"
+    },
+    {
+      "id": "r315b1-062",
+      "deck": "b1-az-e",
+      "level": "B1",
+      "de": "einrichten",
+      "previousPosInfo": "richtet ein, richtete ein, hat eingerichtt",
+      "posInfo": "richtet ein, richtete ein, hat eingerichtet"
+    },
+    {
+      "id": "r315b1-093",
+      "deck": "b1-az-e",
+      "level": "B1",
+      "de": "erfordern",
+      "previousPosInfo": "erfordet, erfordete, hat erfordern",
+      "posInfo": "erfordert, erforderte, hat erfordert"
+    },
+    {
+      "id": "r315b1-101",
+      "deck": "b1-az-e",
+      "level": "B1",
+      "de": "erleichtern",
+      "previousPosInfo": "erleichtet, erleichtete, hat erleichtern",
+      "posInfo": "erleichtert, erleichterte, hat erleichtert"
+    },
+    {
+      "id": "r327b1-001",
+      "deck": "b1-az-final",
+      "level": "B1",
+      "de": "anmelden",
+      "previousPosInfo": "meldet an, meldete an, hat angemeldt",
+      "posInfo": "meldet an, meldete an, hat angemeldet"
+    },
+    {
+      "id": "r317b1-109",
+      "deck": "b1-az-l",
+      "level": "B1",
+      "de": "landen",
+      "previousPosInfo": "landet, landete, hat gelandt",
+      "posInfo": "landet, landete, ist gelandet"
+    },
+    {
+      "id": "r317b1-124",
+      "deck": "b1-az-l",
+      "level": "B1",
+      "de": "leisten",
+      "previousPosInfo": "leistet, leistete, hat geleistt",
+      "posInfo": "leistet, leistete, hat geleistet"
+    },
+    {
+      "id": "r317b1-125",
+      "deck": "b1-az-l",
+      "level": "B1",
+      "de": "leiten",
+      "previousPosInfo": "leitet, leitete, hat geleitt",
+      "posInfo": "leitet, leitete, hat geleitet"
+    },
+    {
+      "id": "r318b1-027",
+      "deck": "b1-az-m",
+      "level": "B1",
+      "de": "mieten",
+      "previousPosInfo": "mietet, mietete, hat gemiett",
+      "posInfo": "mietet, mietete, hat gemietet"
+    },
+    {
+      "id": "r319b1-023",
+      "deck": "b1-az-qr",
+      "level": "B1",
+      "de": "reden",
+      "previousPosInfo": "redet, redete, hat geredt",
+      "posInfo": "redet, redete, hat geredet"
+    },
+    {
+      "id": "r319b1-037",
+      "deck": "b1-az-qr",
+      "level": "B1",
+      "de": "retten",
+      "previousPosInfo": "rettet, rettete, hat gerettt",
+      "posInfo": "rettet, rettete, hat gerettet"
+    },
+    {
+      "id": "r320b1-041",
+      "deck": "b1-az-s1",
+      "level": "B1",
+      "de": "senden",
+      "previousPosInfo": "sendet, sendete, hat gesendt",
+      "posInfo": "sendet, sendete, hat gesendet"
+    },
+    {
+      "id": "r321b1-030",
+      "deck": "b1-az-s2",
+      "level": "B1",
+      "de": "starten",
+      "previousPosInfo": "startet, startete, hat gestartt",
+      "posInfo": "startet, startete, ist gestartet"
+    },
+    {
+      "id": "r322b1-026",
+      "deck": "b1-az-t",
+      "level": "B1",
+      "de": "testen",
+      "previousPosInfo": "testet, testete, hat getestt",
+      "posInfo": "testet, testete, hat getestet"
+    },
+    {
+      "id": "r322b1-060",
+      "deck": "b1-az-u",
+      "level": "B1",
+      "de": "überreden",
+      "previousPosInfo": "redet über, redete über, hat überredt",
+      "posInfo": "überredet, überredete, hat überredet"
+    },
+    {
+      "id": "r322b1-087",
+      "deck": "b1-az-u",
+      "level": "B1",
+      "de": "unterrichten",
+      "previousPosInfo": "richtet unter, richtete unter, hat unterrichtt",
+      "posInfo": "unterrichtet, unterrichtete, hat unterrichtet"
+    },
+    {
+      "id": "r323b1-002",
+      "deck": "b1-az-v",
+      "level": "B1",
+      "de": "verabreden",
+      "previousPosInfo": "verabredet, verabredete, hat verabredt",
+      "posInfo": "verabredet, verabredete, hat verabredet"
+    },
+    {
+      "id": "r323b1-004",
+      "deck": "b1-az-v",
+      "level": "B1",
+      "de": "verabschieden",
+      "previousPosInfo": "verabschiedet, verabschiedete, hat verabschiedt",
+      "posInfo": "verabschiedet, verabschiedete, hat verabschiedet"
+    },
+    {
+      "id": "r323b1-005",
+      "deck": "b1-az-v",
+      "level": "B1",
+      "de": "verändern",
+      "previousPosInfo": "verändet, verändete, hat verändern",
+      "posInfo": "verändert, veränderte, hat verändert"
+    },
+    {
+      "id": "r323b1-018",
+      "deck": "b1-az-v",
+      "level": "B1",
+      "de": "vergrößern",
+      "previousPosInfo": "vergrößet, vergrößete, hat vergrößern",
+      "posInfo": "vergrößert, vergrößerte, hat vergrößert"
+    },
+    {
+      "id": "r323b1-019",
+      "deck": "b1-az-v",
+      "level": "B1",
+      "de": "verhaften",
+      "previousPosInfo": "verhaftet, verhaftete, hat verhaftt",
+      "posInfo": "verhaftet, verhaftete, hat verhaftet"
+    },
+    {
+      "id": "r323b1-037",
+      "deck": "b1-az-v",
+      "level": "B1",
+      "de": "verschwinden",
+      "previousPosInfo": "verschwindet, verschwindete, hat verschwindt",
+      "posInfo": "verschwindet, verschwand, ist verschwunden"
+    },
+    {
+      "id": "r323b1-038",
+      "deck": "b1-az-v",
+      "level": "B1",
+      "de": "versichern",
+      "previousPosInfo": "versichet, versichete, hat versichern",
+      "posInfo": "versichert, versicherte, hat versichert"
+    },
+    {
+      "id": "r323b1-046",
+      "deck": "b1-az-v",
+      "level": "B1",
+      "de": "verwechseln",
+      "previousPosInfo": "verwechset, verwechsete, hat verwechseln",
+      "posInfo": "verwechselt, verwechselte, hat verwechselt"
+    },
+    {
+      "id": "r323b1-047",
+      "deck": "b1-az-v",
+      "level": "B1",
+      "de": "verwenden",
+      "previousPosInfo": "verwendet, verwendete, hat verwendt",
+      "posInfo": "verwendet, verwendete, hat verwendet"
+    },
+    {
+      "id": "r324b1-018",
+      "deck": "b1-az-w",
+      "level": "B1",
+      "de": "wenden",
+      "previousPosInfo": "wendet, wendete, hat gewendt",
+      "posInfo": "wendet, wendete, hat gewendet"
+    },
+    {
+      "id": "r324b1-026",
+      "deck": "b1-az-w",
+      "level": "B1",
+      "de": "wetten",
+      "previousPosInfo": "wettet, wettete, hat gewettt",
+      "posInfo": "wettet, wettete, hat gewettet"
+    },
+    {
+      "id": "r325b1-012",
+      "deck": "b1-az-z",
+      "level": "B1",
+      "de": "zelten",
+      "previousPosInfo": "zeltet, zeltete, hat gezeltt",
+      "posInfo": "zeltet, zeltete, hat gezeltet"
+    },
+    {
+      "id": "vk-b1x-011",
+      "deck": "b1-dienst-natur-bild",
+      "level": "B1",
+      "de": "erstatten",
+      "previousPosInfo": "erstattet, erstattete, hat erstattt",
+      "posInfo": "erstattet, erstattete, hat erstattet"
+    },
+    {
+      "id": "vg-arbeit--021",
+      "deck": "b1-karriere-psyche",
+      "level": "B1",
+      "de": "verhandeln",
+      "previousPosInfo": "verhandet, verhandete, hat verhandeln",
+      "posInfo": "verhandelt, verhandelte, hat verhandelt"
+    },
+    {
+      "id": "vg-psyche--024",
+      "deck": "b1-karriere-psyche",
+      "level": "B1",
+      "de": "vermitteln",
+      "previousPosInfo": "vermittet, vermittete, hat vermitteln",
+      "posInfo": "vermittelt, vermittelte, hat vermittelt"
+    },
+    {
+      "id": "vu-b1p-030",
+      "deck": "b1-medien-reise-verben",
+      "level": "B1",
+      "de": "hinauszögern",
+      "previousPosInfo": "auszöget hin, auszögete hin, hat hingeauszöget",
+      "posInfo": "zögert hinaus, zögerte hinaus, hat hinausgezögert"
+    },
+    {
+      "id": "vh-projekt-017",
+      "deck": "b1-projekt-rede",
+      "level": "B1",
+      "de": "verbessern",
+      "previousPosInfo": "verbesset, verbessete, hat verbessern",
+      "posInfo": "verbessert, verbesserte, hat verbessert"
+    },
+    {
+      "id": "r313b1-091",
+      "deck": "b1-pruefung-text-reflexiv",
+      "level": "B1",
+      "de": "zuordnen",
+      "previousPosInfo": "ordnt zu, ordnte zu, hat zugeordnt",
+      "posInfo": "ordnet zu, ordnete zu, hat zugeordnet"
+    },
+    {
+      "id": "vi-geld-re-024",
+      "deck": "b1-stadt-recht",
+      "level": "B1",
+      "de": "pfänden",
+      "previousPosInfo": "pfändet, pfändete, hat gepfändt",
+      "posInfo": "pfändet, pfändete, hat gepfändet"
+    },
+    {
+      "id": "vv-gefueh-011",
+      "deck": "b1-verwaltung-handwerk",
+      "level": "B1",
+      "de": "vermuten",
+      "previousPosInfo": "vermutet, vermutete, hat vermutt",
+      "posInfo": "vermutet, vermutete, hat vermutet"
+    },
+    {
+      "id": "vv-gefueh-012",
+      "deck": "b1-verwaltung-handwerk",
+      "level": "B1",
+      "de": "bezweifeln",
+      "previousPosInfo": "bezweifet, bezweifete, hat bezweifeln",
+      "posInfo": "bezweifelt, bezweifelte, hat bezweifelt"
+    },
+    {
+      "id": "v1438",
+      "deck": "b2-wissenschaft-zukunft",
+      "level": "B2",
+      "de": "untermauern",
+      "previousPosInfo": "mauet unter, mauete unter, hat untermauern",
+      "posInfo": "untermauert, untermauerte, hat untermauert"
+    },
+    {
+      "id": "v854",
+      "deck": "h06-studium-lernen",
+      "level": "B2",
+      "de": "benoten",
+      "previousPosInfo": "benotet, benotete, hat benott",
+      "posInfo": "benotet, benotete, hat benotet"
+    },
+    {
+      "id": "v925",
+      "deck": "h07-gefuehle-psyche",
+      "level": "B2",
+      "de": "belasten",
+      "previousPosInfo": "belastet, belastete, hat belastt",
+      "posInfo": "belastet, belastete, hat belastet"
+    },
+    {
+      "id": "v1077",
+      "deck": "i01-medien-meinung",
+      "level": "B2",
+      "de": "behaupten",
+      "previousPosInfo": "behauptet, behauptete, hat behauptt",
+      "posInfo": "behauptet, behauptete, hat behauptet"
+    },
+    {
+      "id": "v1175",
+      "deck": "i03-sozialstaat-ehrenamt",
+      "level": "B2",
+      "de": "spenden",
+      "previousPosInfo": "spendet, spendete, hat gespendt",
+      "posInfo": "spendet, spendete, hat gespendet"
+    },
+    {
+      "id": "v1310",
+      "deck": "i06-stadtentwicklung",
+      "level": "B2",
+      "de": "verdichten",
+      "previousPosInfo": "verdichtet, verdichtete, hat verdichtt",
+      "posInfo": "verdichtet, verdichtete, hat verdichtet"
+    },
+    {
+      "id": "v1313",
+      "deck": "i06-stadtentwicklung",
+      "level": "B2",
+      "de": "aufwerten",
+      "previousPosInfo": "wertet auf, wertete auf, hat aufgewertt",
+      "posInfo": "wertet auf, wertete auf, hat aufgewertet"
+    },
+    {
+      "id": "v1397",
+      "deck": "i08-erinnerungskultur",
+      "level": "B2",
+      "de": "aufarbeiten",
+      "previousPosInfo": "arbeitet auf, arbeitete auf, hat aufgearbeitt",
+      "posInfo": "arbeitet auf, arbeitete auf, hat aufgearbeitet"
+    },
+    {
+      "id": "j01-arbeit-vertieft-005",
+      "deck": "j01-arbeit-vertieft",
+      "level": "B2",
+      "de": "befördern",
+      "previousPosInfo": "befördet, befördete, hat befördern",
+      "posInfo": "befördert, beförderte, hat befördert"
+    },
+    {
+      "id": "j02-gesellschaft-recht-013",
+      "deck": "j02-gesellschaft-recht",
+      "level": "B2",
+      "de": "ermitteln",
+      "previousPosInfo": "ermittet, ermittete, hat ermitteln",
+      "posInfo": "ermittelt, ermittelte, hat ermittelt"
+    },
+    {
+      "id": "j03-umwelt-energie-042",
+      "deck": "j03-umwelt-energie",
+      "level": "B2",
+      "de": "wiederverwerten",
+      "previousPosInfo": "verwertet wieder, verwertete wieder, hat wiederverwertt",
+      "posInfo": "verwertet wieder, verwertete wieder, hat wiederverwertet"
+    },
+    {
+      "id": "j04-gesundheit-pflege-057",
+      "deck": "j04-gesundheit-pflege",
+      "level": "B2",
+      "de": "abtasten",
+      "previousPosInfo": "tastet ab, tastete ab, hat abgetastt",
+      "posInfo": "tastet ab, tastete ab, hat abgetastet"
+    },
+    {
+      "id": "j05-bildung-wissenschaft-034",
+      "deck": "j05-bildung-wissenschaft",
+      "level": "B2",
+      "de": "zusammenfassen",
+      "previousPosInfo": "sammenfasst zu, sammenfasste zu, hat zugesammenfasst",
+      "posInfo": "fasst zusammen, fasste zusammen, hat zusammengefasst"
+    },
+    {
+      "id": "j05-bildung-wissenschaft-039",
+      "deck": "j05-bildung-wissenschaft",
+      "level": "B2",
+      "de": "erweitern",
+      "previousPosInfo": "erweitet, erweitete, hat erweitern",
+      "posInfo": "erweitert, erweiterte, hat erweitert"
+    },
+    {
+      "id": "j08-gefuehle-beziehungen-025",
+      "deck": "j08-gefuehle-beziehungen",
+      "level": "B2",
+      "de": "verzweifeln",
+      "previousPosInfo": "verzweifet, verzweifete, hat verzweifeln",
+      "posInfo": "verzweifelt, verzweifelte, ist verzweifelt"
+    },
+    {
+      "id": "j08-gefuehle-beziehungen-030",
+      "deck": "j08-gefuehle-beziehungen",
+      "level": "B2",
+      "de": "beneiden",
+      "previousPosInfo": "beneidet, beneidete, hat beneidt",
+      "posInfo": "beneidet, beneidete, hat beneidet"
+    },
+    {
+      "id": "j08-gefuehle-beziehungen-031",
+      "deck": "j08-gefuehle-beziehungen",
+      "level": "B2",
+      "de": "bewundern",
+      "previousPosInfo": "bewundet, bewundete, hat bewundern",
+      "posInfo": "bewundert, bewunderte, hat bewundert"
+    },
+    {
+      "id": "j08-gefuehle-beziehungen-032",
+      "deck": "j08-gefuehle-beziehungen",
+      "level": "B2",
+      "de": "verachten",
+      "previousPosInfo": "verachtet, verachtete, hat verachtt",
+      "posInfo": "verachtet, verachtete, hat verachtet"
+    },
+    {
+      "id": "j09-stadt-wohnen-verkehr-025",
+      "deck": "j09-stadt-wohnen-verkehr",
+      "level": "B2",
+      "de": "übernachten",
+      "previousPosInfo": "nachtet über, nachtete über, hat übernachtt",
+      "posInfo": "übernachtet, übernachtete, hat übernachtet"
+    },
+    {
+      "id": "j10-meinung-diskussion-037",
+      "deck": "j10-meinung-diskussion",
+      "level": "B2",
+      "de": "befürworten",
+      "previousPosInfo": "befürwortet, befürwortete, hat befürwortt",
+      "posInfo": "befürwortet, befürwortete, hat befürwortet"
+    },
+    {
+      "id": "j10-meinung-diskussion-039",
+      "deck": "j10-meinung-diskussion",
+      "level": "B2",
+      "de": "hinzufügen",
+      "previousPosInfo": "zufügt hin, zufügte hin, hat hingezufügt",
+      "posInfo": "fügt hinzu, fügte hinzu, hat hinzugefügt"
+    },
+    {
+      "id": "j10-meinung-diskussion-049",
+      "deck": "j10-meinung-diskussion",
+      "level": "B2",
+      "de": "verringern",
+      "previousPosInfo": "verringet, verringete, hat verringern",
+      "posInfo": "verringert, verringerte, hat verringert"
+    },
+    {
+      "id": "j11-alltag-haus-035",
+      "deck": "j11-alltag-haus",
+      "level": "B2",
+      "de": "zusammenlegen",
+      "previousPosInfo": "sammenlegt zu, sammenlegte zu, hat zugesammenlegt",
+      "posInfo": "legt zusammen, legte zusammen, hat zusammengelegt"
+    },
+    {
+      "id": "j12-natur-tiere-048",
+      "deck": "j12-natur-tiere",
+      "level": "B2",
+      "de": "ernten",
+      "previousPosInfo": "erntet, erntete, hat erntt",
+      "posInfo": "erntet, erntete, hat geerntet"
+    },
+    {
+      "id": "j13-koerper-zeit-053",
+      "deck": "j13-koerper-zeit",
+      "level": "B2",
+      "de": "herrschen",
+      "previousPosInfo": "rscht her, rschte her, hat hergerscht",
+      "posInfo": "herrscht, herrschte, hat geherrscht"
+    },
+    {
+      "id": "j13-koerper-zeit-054",
+      "deck": "j13-koerper-zeit",
+      "level": "B2",
+      "de": "erobern",
+      "previousPosInfo": "erobet, erobete, hat erobern",
+      "posInfo": "erobert, eroberte, hat erobert"
+    },
+    {
+      "id": "j14-kultur-freizeit-038",
+      "deck": "j14-kultur-freizeit",
+      "level": "B2",
+      "de": "gestalten",
+      "previousPosInfo": "gestaltet, gestaltete, hat gestaltt",
+      "posInfo": "gestaltet, gestaltete, hat gestaltet"
+    },
+    {
+      "id": "j15-berufe-dienste-035",
+      "deck": "j15-berufe-dienste",
+      "level": "B2",
+      "de": "beliefern",
+      "previousPosInfo": "beliefet, beliefete, hat beliefern",
+      "posInfo": "beliefert, belieferte, hat beliefert"
+    },
+    {
+      "id": "j16-wege-ziele-006",
+      "deck": "j16-wege-ziele",
+      "level": "B2",
+      "de": "verhindern",
+      "previousPosInfo": "verhindet, verhindete, hat verhindern",
+      "posInfo": "verhindert, verhinderte, hat verhindert"
+    },
+    {
+      "id": "j16-wege-ziele-014",
+      "deck": "j16-wege-ziele",
+      "level": "B2",
+      "de": "enden",
+      "previousPosInfo": "endet, endete, hat geendt",
+      "posInfo": "endet, endete, hat geendet"
+    }
+  ]
+}

@@ -12,7 +12,7 @@ import { normalize, konfidenz } from "@/lib/grader";
 import { fehlerFamilien, fehlerDesMonats } from "@/lib/fehler";
 import { addFehlerNow, useProgress } from "@/lib/store";
 import { checkAbzeichen } from "@/lib/spiel";
-import { logK } from "@/lib/kompetenz";
+import { logK, logMeasuredK } from "@/lib/kompetenz";
 import { speakAny } from "@/lib/speech";
 import { VertrauensBalken, AntwortDiff } from "./ui";
 import { De } from "./De";
@@ -92,7 +92,7 @@ function bauLektion(p: Progress, lvl: Level, runde: number): Lektion {
     min: 5,
     kat: "Hoeren",
     label: d?.titleAr ?? "إملاء",
-    ex: { id: "l-h-0", type: "dictation", promptDe: "اسمع واكتب:", promptAr: d?.titleAr, answer: [zeile], explanationDe: zeile },
+    ex: { id: "l-h-0", type: "dictation", promptDe: "Höre zu und schreibe den Satz auf.", promptAr: `اسمع واكتب${d?.titleAr ? ` — ${d.titleAr}` : ""}`, answer: [zeile], explanationDe: zeile },
   }];
 
   // ④ إنتاج (10′) — حسب أخطائك أنت
@@ -160,9 +160,12 @@ function LektionsGenerator({ progress }: { progress: Progress }) {
       for (const kat of ["Grammatik", "Wortschatz", "Hoeren"] as const) {
         const teile = alle.filter((q) => q.kat === kat);
         const okT = teile.filter((q) => gradeItem(q.ex, antworten[q.ex.id] ?? "")).length;
-        if (teile.length) q0 = logK(q0, kat, okT / teile.length >= 0.6);
+        if (teile.length) q0 = logMeasuredK(q0, kat, okT / teile.length >= 0.6, { method: "lesson_auto_grader" });
       }
-      q0 = logK(q0, "Schreiben", prod.trim().length >= (L.produktion.ziel ?? 8));
+      q0 = logK(q0, "Schreiben", prod.trim().length >= (L.produktion.ziel ?? 8), {
+        evidenceType: "self_report",
+        method: "lesson_production_completion",
+      });
       return checkAbzeichen({ ...q0, xp: (q0.xp ?? 0) + (prod.trim().length >= 8 ? 3 : 1) });
     });
   };
@@ -238,7 +241,7 @@ function LektionsGenerator({ progress }: { progress: Progress }) {
         <div style={{ fontWeight: 700, fontSize: "0.95rem" }}><De>{L.produktion.prompt}</De></div>
         <div style={{ fontSize: "0.8rem", color: "var(--color-ink2)", margin: "0.3rem 0", whiteSpace: "pre-line" }}>{L.produktion.hilfe}</div>
         <textarea className="input" style={{ width: "100%", minHeight: "5rem" }} value={prod} disabled={done} placeholder="إنتاجك أنت هنا… (جملة تصحيحية أو فقرة)" onChange={(e) => setProd(e.target.value)} />
-        <div style={{ fontSize: "0.75rem", color: "var(--color-ink2)", marginTop: "0.2rem" }}>الهدف: ≥{L.produktion.ziel} حرفاً/كلمة حسب المهمة · قيّم نفسك بصدق — التقدير يدخل شبكة الكفاءات.</div>
+        <div style={{ fontSize: "0.75rem", color: "var(--color-ink2)", marginTop: "0.2rem" }}>الهدف: ≥{L.produktion.ziel} حرفاً/كلمة حسب المهمة · قيّم نفسك بصدق — يُحفظ كتقييم ذاتي ولا يدخل أداء الكتابة المقاس.</div>
       </div>
       {!done ? (
         <button className="btn btn-gold" disabled={!beantwortet || !prod.trim()} onClick={abgeben}>سلّم الحصة ({okN}/{alle.length} + إنتاج) ✓</button>

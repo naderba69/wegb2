@@ -17,8 +17,66 @@ export type TaskKind =
   | "check";
 export type DayType = "lerntag" | "festigung" | "wochencheck" | "abschluss";
 
-/** شبكة كفاءات CEFR الموحّدة — خط أنابيب التقويم الثالث */
+/** مجالات التدريب الستة؛ لا تحمل وحدها حكماً CEFR أو جاهزية امتحان. */
 export type Kompetenz = "Lesen" | "Hoeren" | "Schreiben" | "Sprechen" | "Grammatik" | "Wortschatz";
+export type KompetenzEvidenceType = "measured" | "self_report" | "activity" | "external_review";
+export type KompetenzEvidenceLevel = Level | "mixed" | "unknown";
+export type KompetenzResponseMode =
+  | "selected_response"
+  | "short_constructed_response"
+  | "extended_written_response"
+  | "spoken_response"
+  | "mixed_response"
+  | "activity_completion";
+export interface KompetenzLogEintrag {
+  h: Kompetenz;
+  ok: boolean;
+  d?: string;
+  /** نوع الدليل؛ غيابه في البيانات القديمة يُعامل activity لا measured. */
+  evidenceType?: KompetenzEvidenceType;
+  /** مستوى البند/الحزمة؛ mixed صريح عند جمع مستويات متعددة، ولا يُستنتج من النجاح. */
+  level?: KompetenzEvidenceLevel;
+  /** وزن construct داخل المهمة؛ افتراض السجلات القديمة 1. */
+  weight?: number;
+  /** هل أُنجز الحدث في سياق يقدم مساعدة تعليمية؟ */
+  assisted?: boolean;
+  responseMode?: KompetenzResponseMode;
+  method?: string;
+  sourceId?: string;
+}
+
+/** دورة تخصيص محدودة: إنجاز الجرعة تقرير نشاط، والتحقق المؤجل يحتاج دليلاً مقاساً جديداً. */
+export interface SkillRemediationCycle {
+  completedDate: string;
+  verifyDueDate: string;
+  baselineScore: number;
+  doseMinutes: 10 | 15 | 20;
+  sourceWindowDays: number;
+}
+
+export type CanDoSkill = "Lesen" | "Hoeren" | "Schreiben" | "Sprechen";
+/** تقرير ذاتي وصفي داخلي؛ لا يدخل الأداء المقاس ولا يدّعي إسناداً خارجياً. */
+export interface CanDoDescriptor {
+  id: string;
+  de: string;
+  ar: string;
+  skills: CanDoSkill[];
+  kind: "communicative_self_report";
+  source: "internal";
+  levelLabel: string;
+}
+
+/** وصف construct قابل للأثر لمهمة الخطة؛ الوزن داخل المهمة وليس معايرة سيكومترية. */
+export interface TaskEvidenceDescriptor {
+  construct: Kompetenz;
+  level: KompetenzEvidenceLevel;
+  weight: number;
+  evidenceType: KompetenzEvidenceType;
+  assisted: boolean;
+  responseMode: KompetenzResponseMode;
+  method: "plan_submission";
+  sourceId: string;
+}
 
 export interface Exercise {
   id: string;
@@ -44,6 +102,9 @@ export interface Exercise {
   explanationAr?: string;
   explanationDe?: string;
   points?: number;
+  /** PA-016: provenance داخلي للبنود المولدة داخل فحوص الخطة. */
+  evidenceLevel?: Level;
+  evidenceConstruct?: Kompetenz | "mixed";
 }
 
 export interface VocabCard {
@@ -250,12 +311,16 @@ export interface WiederEintrag {
   vergleich?: { behoben: string[]; geblieben: string[]; neuHinzu: string[] };
 }
 
+export type DayTaskPath = "core" | "deepening";
+
 export interface DayTask {
   id: string;
   kind: TaskKind;
   titleDe: string;
   titleAr: string;
   minutes: number;
+  /** PA-022: الأساسي يُغلق اليوم؛ التعميق غير المُسلَّم محايد، والمُسلَّم غير المجتاز يبقى علاجياً. */
+  path?: DayTaskPath;
   topicId?: string;
   deckId?: string;
   textId?: string;
@@ -267,6 +332,8 @@ export interface DayTask {
   monologId?: string;
   /** R141e: Karte für beliebigen Sprechteil (insbesondere Teil 3 Diskussion). */
   muendlichId?: string;
+  /** PA-015: وحدة نبر/إيقاع B1/B2 لدورة مقارنة قبل/بعد محلية. */
+  pronunciationId?: string;
   /** R138/P-13: نمط فهم المسموع — global (فهم عام) / detailliert (تفاصيل) / selektiv (معلومات محددة) */
   hoerenModus?: "global" | "detailliert" | "selektiv";
   quiz?: Exercise[];
@@ -274,6 +341,8 @@ export interface DayTask {
   exam?: boolean;
   /** من التعويضات المُرحَّلة من أيام سابقة */
   mandatory?: boolean;
+  /** معرّف الدين الأصلي؛ يتيح إزالته فقط بعد النجاح وإعادته للطابور عند الفشل. */
+  debtId?: string;
   from?: number;
   /** دفتر الأخطاء: مفاتيح أخطاء للمراجعة المتباعدة */
   fehlerKeys?: string[];
@@ -288,6 +357,8 @@ export interface DayTask {
   schlafTipp?: string;
   /** 🎯 تحقق استقلال: ID الدرس الذي تتحقق منه هذه المهمة (مهمة جديدة لا إعادة) */
   verifyFor?: string;
+  /** PA-016: constructs ومستويات وأوزان ونمط دليل/استجابة صريحة؛ يضيفها مولد الخطة لكل مهمة. */
+  evidence?: TaskEvidenceDescriptor[];
 }
 
 export interface DayPlan {
@@ -299,6 +370,8 @@ export interface DayPlan {
   tasks: DayTask[];
   tempo: Tempo;
   zielMin: number;
+  /** لقطة طابور التعويض الكامل؛ المعروض في اليوم لا يتجاوز مهمتين لكن الباقي لا يُحذف. */
+  debtBacklog?: DebtItem[];
   /** المحطات الست للدرس (إحماء، نطق/ظل، مفردات، قواعد استقرائية، استماع/قراءة، إنتاج) */
   stationen?: Array<{ id: string; titelAr: string; titelDe: string; min: number }>;
 }
@@ -316,6 +389,8 @@ export interface TaskResult {
   geplantMin?: number;
   /** ⏱️ الدقائق الفعلية المقضية — تُقاس عند التسليم، لا تُفتَرَض */
   minutenEffektiv?: number;
+  /** لقطة وصف الدليل وقت التسليم حتى لا يتغير السجل بتغير مولد الخطة لاحقاً. */
+  evidence?: TaskEvidenceDescriptor[];
 }
 
 export interface DayResult {
@@ -330,6 +405,8 @@ export interface DayResult {
 }
 
 export interface DebtItem {
+  /** معرّف ثابت للدين؛ اختياري فقط لترحيل بيانات الإصدارات القديمة. */
+  id?: string;
   kind: TaskKind;
   titleDe: string;
   titleAr: string;
@@ -359,6 +436,8 @@ export interface SrsState {
   prod?: number;
   /** تاريخ إدخال البطاقة (لمراجعة أولى بعد 24 ساعة) */
   introduced?: string;
+  /** عدد النجاحات المتتالية الحقيقي؛ منفصل عن عدد المحاولات الكلي. */
+  successStreak?: number;
   /** 010 Overlearning: مواعيد الترسيخ الزائد الإضافية (أيام) */
   overDue?: string[];
 }
@@ -490,18 +569,41 @@ export interface Progress {
     onboardingDone?: boolean;
     /** الهدف الذي صرّح به المتعلم؛ يستعمله ملاح التدريب لإشارة اختيارية شفافة فقط. */
     lernziel?: Lernziel;
-    /** أُكِّد اختبار تحديد المستوى */
+    /** اختيرت نقطة الانطلاق يدوياً أو طُبّق اقتراح فرز الدخول الداخلي. */
     placed?: boolean;
-    /** 🪪 نتيجة التشخيص التكيّفي (M3/R183): تقدير كلّ مهارة واليوم المطبَّق وتاريخه — تقدير آلي من بنوك التطبيق لا اختبار رسمي */
-    einstufung?: { lesen: string; hoeren: string; grammatik: string; wortschatz: string; tag: number; datum: string };
+    /** 🪪 فرز دخول استقبالي/شكلي داخلي؛ لا يقيس الكتابة/التحدث ولا يثبت مستوى CEFR. */
+    einstufung?: {
+      lesen: string;
+      hoeren: string;
+      grammatik: string;
+      wortschatz: string;
+      tag: number;
+      datum: string;
+      scope?: "receptive-form-only-v1";
+      evidence?: Partial<Record<"lesen" | "hoeren" | "grammatik" | "wortschatz", {
+        totalItems: number;
+        bands: Array<{ stufe: Level; richtig: number; gesamt: number; bestanden: boolean }>;
+        items: Array<{ stufe: Level; ok: boolean; itemId: string; sourceId: string }>;
+      }>>;
+    };
     /** 🔔 A27/R293: تذكير يومي محلي بإشعار متصفح (بلا خادم) */
     erinnerung?: { aktiv: boolean; uhrzeit: string };
     /** موعد الامتحان الخارجي (YYYY-MM-DD) + اسمه */
     examDate?: string;
     examName?: string;
   };
-  /** 🎓 نتائج محاكاة الامتحان (E1/R171): أحدث 30 محاولة بنقاط الوحدات الأربع وحكمها — محاكاة لا نتيجة رسمية */
-  simulationen?: { datum: string; seed: number; format?: string; punkte: { lesen: number; hoeren: number; schreiben: number; sprechen: number }; bestanden: boolean }[];
+  /** 🎓 أحدث 30 محاكاة: الآلي منفصل عن التقرير الذاتي، ولا حكم نجاح شامل. `bestanden` باقٍ للتوافق مع السجلات القديمة فقط ولا يُنشأ مجدداً. */
+  simulationen?: Array<{
+    datum: string;
+    seed: number;
+    format?: string;
+    punkte: { lesen: number; hoeren: number; schreiben: number; sprechen: number };
+    objektiv?: { lesen: number; hoeren: number; sprachbausteine: number | null };
+    selbstbericht?: { schreiben: number; sprechen: number };
+    gesamtUrteil?: "not_assessed";
+    /** حقل تراثي قبل PA-017؛ لا يُستعمل حكماً حالياً. */
+    bestanden?: boolean;
+  }>;
   /** 🎙️ سجلّ بطاقات المحادثة المسجّلة (E5): بيانات وصفية فقط (بطاقة/تقدير ذاتي/مدّة) — الصوت نفسه لا يُخزَّن أبداً */
   sprechUebungen?: { datum: string; level: string; teil: number; karteId: string; dauerS: number; punkte: number }[];
   /** ⏱️ A3/R283: قياسات سرعة القراءة (كلمات/دقيقة) من سلّم القراءة — قياس زمني آلي لا حكم مستوى رسمي */
@@ -541,8 +643,10 @@ export interface Progress {
   portfolio?: { eintraege: { id: string; typ: string; level: string; datum: string; titelDe: string }[] };
   /** الأوسمة المكسوبة: id ← تاريخ المنح */
   abzeichen?: Record<string, string>;
-  /** سجلّ الكفاءات الموحّد: محاولات موزّعة على شبكة CEFR (logK) */
-  kompetenzLog?: { h: Kompetenz; ok: boolean; d?: string }[];
+  /** سجلّ مجالات التدريب مع provenance؛ لا يشكّل وحده حكماً CEFR. */
+  kompetenzLog?: KompetenzLogEintrag[];
+  /** دورات جرعات علاجية اختيارية؛ لا تحذف أهداف الخطة ولا تجعل الإكمال أداءً مقاساً. */
+  skillRemediation?: Partial<Record<Kompetenz, SkillRemediationCycle>>;
   /** صحّة التعلّم (Modul U): حارس 20-20-20 ووضع المريض */
   gesundheit?: {
     augenPause?: boolean;

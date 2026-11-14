@@ -67,8 +67,40 @@ jobs:
         run: npm run interaktiv
       - name: Inhalts-Audit
         run: npm run audit:content
-      - name: Wort-für-Wort-Audit (bestätigte Blocker)
-        run: npm run audit:words
+      - name: Reviewed vocabulary morphology (PA-034 regression gate)
+        run: npm run audit:vocab-posinfo
+      - name: Writing prompt/scoring consistency (PA-035 regression gate)
+        run: npm run audit:writing-consistency
+      - name: Learning-state integrity (PA-006–PA-008 regression gate)
+        run: npm run audit:learning-state
+      - name: Assessment and interface integrity (PA-004/005/012/019/024/028)
+        run: npm run audit:assessment-integrity
+      - name: Evidence provenance and no inferred readiness (PA-001–PA-003)
+        run: npm run audit:evidence-provenance
+      - name: Workload source and non-inferential time claims (PA-009–PA-011)
+        run: npm run audit:time-model
+      - name: Executable mediation cycle (PA-013)
+        run: npm run audit:mediation
+      - name: Language-labelled fields and RTL/LTR direction (PA-025/PA-026)
+        run: npm run audit:language-fields
+      - name: Conservative receptive/form placement (PA-014)
+        run: npm run audit:placement
+      - name: B1/B2 prosody before/after path (PA-015)
+        run: npm run audit:pronunciation-path
+      - name: Construct-aware competency evidence (PA-016)
+        run: npm run audit:competency-evidence
+      - name: Simulation evidence provenance (PA-017)
+        run: npm run audit:simulation-provenance
+      - name: Deduplicated lexical inventory (PA-020)
+        run: npm run audit:lexical-inventory
+      - name: Safe remedial personalization (PA-021)
+        run: npm run audit:personalization
+      - name: Reactive Can-Do self-report integrity (PA-031/PA-032)
+        run: npm run audit:cando-integrity
+      - name: High-risk content governance (PA-033 programmatic safeguards)
+        run: npm run audit:high-risk-content
+      - name: Known-pattern content lint (limited regex/schema rules)
+        run: npm run lint:known-content-patterns
       - name: Scaffold-Observability (CEFR baseline; candidates are not defects)
         run: npm run audit:scaffolds
       - name: Scaffold-Review (B1/B2 item decisions; no simulated expert sign-off)

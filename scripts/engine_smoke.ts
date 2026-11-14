@@ -29,16 +29,24 @@ import {
   debtsFrom,
   planPct,
   planMinBis,
+  planKernMinBis,
+  planTagesMinuten,
+  planKernTagesMinuten,
   planStundenBis,
+  planKernStundenBis,
   planStundenGesamt,
+  planArbeitslast,
 } from "../lib/plan";
 import { seededShuffle } from "../lib/seeded-rng";
-import { newCard, reviewCard, isDue, newCardCap, countNewCardsIntroducedToday, karteStufe, abrufbarkeit } from "../lib/srs";
+import { CORE_PATH_MAX_MINUTES, CORE_PATH_MIN_MINUTES, corePathMinutes, deepeningMinutes, isCoreTask } from "../lib/day-path";
+import { newCard, reviewCard, isDue, newCardCap, countNewCardsIntroducedToday, karteStufe, abrufbarkeit, todayDeck } from "../lib/srs";
 import { planeWortkarten } from "../lib/wortkarten";
 import { baueUebungsEmpfehlungen } from "../lib/uebungsnavigator";
 import { punkteFuerRichtigenVersuch } from "../lib/exercise-scoring";
 import { prognose } from "../lib/prognose";
 import { PHONETIK_EINHEITEN } from "../lib/phonetikdaten";
+import { PROSODIE_EINHEITEN, getProsodieEinheit } from "../lib/prosodie";
+import { HIGH_RISK_GOVERNANCE, highRiskGovernanceFor } from "../lib/high-risk-governance";
 import { bewerteHoerKontrast, pruefbareKontrastIndizes, starteHoerKontrast } from "../lib/minimalpaare";
 import { bewerteSelbsterklaerung, normalisiereErklaertext, schluesselwoerterFuerRegel } from "../lib/selbsterklaerung";
 import { sprechHeute, SPRECH_ZIEL_SEK } from "../lib/sprechziel";
@@ -54,7 +62,7 @@ import { frequenzVonWort, frequenzStufe } from "../lib/frequenz";
 import { sucheAlles } from "../lib/suche";
 import { simBand } from "../lib/simband";
 import { effektiveRate, rateFuerLevel } from "../lib/rate";
-import { skillUmschichtung } from "../lib/skillplan";
+import { registriereSkillDosis, skillFoerderplan, skillVerifikationen } from "../lib/skillplan";
 import { kritischeKarten as kritKarten312, resumeAusloesen, resumePlan, resumeZustand } from "../lib/wiedereinstieg";
 import { kartenAusreisser, skillTrends } from "../lib/kalibrierung";
 import { erledigeWiederschreiben, planeWiederschreiben } from "../lib/wiederschreiben";
@@ -72,7 +80,7 @@ import { DIALOGSZENARIEN } from "../lib/dialogszenarien";
 import { FEHLERATLAS, atlasEintraege } from "../lib/fehleratlas";
 import { FSP_AUSRICHTUNG } from "../lib/fsp";
 import { kollokProduktion, partnerOk } from "../lib/kollokproduktion";
-import { b2Luecke, referenzBericht, schnellsteRezeptiv } from "../lib/referenz";
+import { lexikEinheiten, lexikUebersicht, normalisiereLemma, referenzBericht, schnellsteRezeptiv } from "../lib/referenz";
 import { inputPaket } from "../lib/freiesinput";
 import { erweiterungDecks, erweiterungSitzung, erweiterungFortschritt , erweiterungLuecken } from "../lib/erweiterung";
 import { parseSprechBewertung, SPRECH_KRITERIEN as BEWERTUNG_KRITERIEN, sprechBand, KRITERIUM_SCHRITT } from "../lib/sprechbewertung";
@@ -98,7 +106,7 @@ import {
   FEHLER_KAT,
 } from "../lib/fehler";
 import { normalize, diffWoerter, konfidenz, grader, deepReview, noteFromPct, LLM_ANBIETER, erstesJsonObjekt } from "../lib/grader";
-import { SIM_FORM, SIM_FORMATE, baueSimulation, antwortRichtig, punkteAusAnteil, modulBestanden, simulationBestanden, rubrikPunkte, schreibenZuKurz, schreibenPunkte, bewerteSimulation } from "../lib/simulation";
+import { SIM_FORM, SIM_FORMATE, baueSimulation, antwortRichtig, punkteAusAnteil, modulBestanden, rubrikPunkte, schreibenZuKurz, schreibenPunkte, bewerteSimulation } from "../lib/simulation";
 import { fertigkeitenBilanz, schwaechsteFertigkeit, bereitschaftsFazit, tageBisExamen } from "../lib/bereitschaft";
 import { bewerteKriterien } from "../lib/kriterien";
 import { baueSprechRunde, selbstPunkte, SPRECH_KRITERIEN } from "../lib/sprechkarten";
@@ -113,7 +121,7 @@ import { calculateScaffoldMetrics, hasParentheticalMarker, isBlankLinkedScaffold
 import { logSicherheit, sicherheitsStatistik, sicherheitsZeile, MAX_EINTRAEGE } from "../lib/sicherheit";
 import { karteFuerWort, verknuepfung, verwaiste, abdeckung, stammVon } from "../lib/verknuepfung";
 import { dueFehlerPriorisiert, verwandteKarte, transferUebung, beispielUebung, istUeberkonfident } from "../lib/fehlerbank2";
-import { logK, kompetenzWerte, band, b2Score, pruefungsBereitschaft, bereitBand, KOMPETENZEN } from "../lib/kompetenz";
+import { logK, kompetenzWerte, evidenzUebersicht, evidenceTypeOf, KOMPETENZEN } from "../lib/kompetenz";
 import { levelOfXp, checkAbzeichen, ABZEICHEN, XP_LEVELS } from "../lib/spiel";
 import { loadProgress, touchStreak, separateLegacyManualMinutes } from "../lib/store";
 import { createHash } from "crypto";
@@ -150,14 +158,17 @@ import {
 } from "../lib/session-clock";
 import { baueLexikon, zerlege, baueAufgaben, erklaereAr, kopfwort, FUGEN } from "../lib/komposita";
 import {
-  CEFR_STUNDEN, PHASE_END_DAY, LEVEL_ORDER, urteileStunden, vergleichePlan,
-  erreichbaresNiveau, minutenEffektiv, clampMinuten, MAX_MIN_PRO_TASK, minutenZuStunden,
+  GOETHE_KURSSTUNDEN, PHASE_END_DAY, KURS_LEVELS, zeitlastPosition, vergleicheZeitlast,
+  minutenEffektiv, clampMinuten, MAX_MIN_PRO_TASK, minutenZuStunden,
 } from "../lib/cefr";
 import { entdeckungsFrage, induktionMoeglich, ergebnisText, MIN_BEISPIELE, stufenAbstand } from "../lib/induktion";
 import { STIL_PAARE, REGEL_AR, bankPruefen, stilUebungen, registerErkennen, stilProfil } from "../lib/stil";
 import { signaleIn, ablenker, signalRadar, signalDrill, radarAbdeckung, SIGNALE, KATEGORIE_AR } from "../lib/signalwoerter";
 import { kapselIds, kapselSaetze, kapselAusTag, KAPSEL_GROESSE, KAPSEL_LEITER, kapselVerbuche, kapselFaellig, kapselIdsAdaptiv, kapselQuizAdaptiv, kapselQuiz, satzIdAusUebung } from "../lib/kapsel";
-import { EINSTUFUNG_SKILLS, einstufungsFragen, einstufungStart, einstufungAntwort, einstiegsVorschlag } from "../lib/einstufung";
+import {
+  EINSTUFUNG_BESTANDEN_AB, EINSTUFUNG_ITEMS_PRO_STUFE, EINSTUFUNG_SCOPE, EINSTUFUNG_SKILLS,
+  einstufungsBandErgebnisse, einstufungsFragen, einstufungStart, einstufungAntwort, einstiegsVorschlag,
+} from "../lib/einstufung";
 import { schattenEinheiten, vergleicheSchatten } from "../lib/shadowing";
 import { wortDiff, diffStatistik } from "../lib/textdiff";
 import { musterDrill } from "../lib/musterdrill";
@@ -212,7 +223,8 @@ const vocabRepeatAudit = (() => {
     const item = declared.get(lemma);
     if (!item) { valid = false; continue; }
     const ids = cards.map((card) => card.id).sort();
-    const levels = [...new Set(cards.map((card) => card.level))].sort((a, b) => LEVEL_ORDER.indexOf(a) - LEVEL_ORDER.indexOf(b));
+    const levelOrder: Level[] = ["A0", "A1", "A2", "B1", "B2"];
+    const levels = [...new Set(cards.map((card) => card.level))].sort((a, b) => levelOrder.indexOf(a) - levelOrder.indexOf(b));
     const examples = cards.map((card) => card.exampleDe?.trim() ?? "");
     const translations = cards.map((card) => card.exampleAr?.trim() ?? "");
     if (item.ids.slice().sort().join("|") !== ids.join("|") ||
@@ -275,21 +287,73 @@ const vocabRepeatAudit = (() => {
     const ids = plan.tasks.map((t) => taskKey(d, t));
     ok(new Set(ids).size === ids.length, `D2 يوم ${d}: مفاتيح فريدة`);
     ok(plan.tasks.every((t) => t.minutes > 0), `D3 يوم ${d}: دقائق موجبة`);
+    ok(plan.tasks.every((t) => t.path === "core" || t.path === "deepening"), `D3a يوم ${d}: كل مهمة موسومة بمسار`);
+    ok(corePathMinutes(plan.tasks) + deepeningMinutes(plan.tasks) === plan.tasks.reduce((sum, task) => sum + task.minutes, 0), `D3b يوم ${d}: التقسيم يحفظ حمل اليوم كاملاً`);
   }
   const p1 = buildDay(50, empty());
   ok(JSON.stringify(p1) === JSON.stringify(buildDay(50, empty())), "D4 buildDay حتمي تماماً");
 
   const failState: Record<string, TaskResult> = Object.fromEntries(p1.tasks.map((t) => [t.id, { done: true, passed: false, score: 0, total: 5, attempts: 2 }]));
-  ok(dayScore(p1, failState).done === 0, "D5 يوم فاشل بلا إتقان");
+  ok(dayScore(p1, failState).done === 0 && dayScore(p1, failState).tasksTotal === p1.tasks.length,
+    "D5 نتيجة اليوم تحاسب الأساسي والتعميق الذي سُلِّم");
+  ok(dayScore(p1, {}).tasksTotal === p1.tasks.filter(isCoreTask).length,
+    "D5a التعميق غير المُسلَّم لا يدخل مقام نتيجة اليوم");
   const debts = debtsFrom(p1, failState);
-  ok(debts.length <= 2, `D6 سقف الديون مهمّتان كحدّ أقصى (وُجد ${debts.length})`);
-  ok(debts.every((x) => !String(x.titleDe).startsWith("Nachholen: ")), "D7 عناوين الديون مجرّدة من البادئة");
+  const failedDebtCandidates = p1.tasks.filter((task) => !task.mandatory).length;
+  ok(debts.length === failedDebtCandidates && debts.length > 2,
+    `D6 التعميق المُسلَّم الفاشل يبقى علاجياً مع الأساسي: ${debts.length}/${failedDebtCandidates}`);
+  const coreOnlyFailState: Record<string, TaskResult> = Object.fromEntries(p1.tasks.filter(isCoreTask).map((t) => [t.id, { done: true, passed: false, score: 0, total: 5, attempts: 2 }]));
+  const coreOnlyDebts = debtsFrom(p1, coreOnlyFailState);
+  ok(coreOnlyDebts.length === p1.tasks.filter((task) => isCoreTask(task) && !task.mandatory).length &&
+    coreOnlyDebts.every((debt) => p1.tasks.filter(isCoreTask).some((task) => debt.id === `debt:${p1.day}:${task.id}`)),
+    "D6a التعميق غير المُسلَّم محايد ولا ينشئ ديناً");
+  const expectedDebtIds = new Set(p1.tasks.filter((task) => !task.mandatory).map((task) => `debt:${p1.day}:${task.id}`));
+  ok(debts.every((x) => !!x.id && expectedDebtIds.has(x.id) && !String(x.titleDe).startsWith("Nachholen: ")) && new Set(debts.map((x) => x.id)).size === debts.length,
+    "D7 الديون تحمل معرفات فريدة مرتبطة بمصادرها وعناوين مجردة من البادئة");
+  const debtPlan = buildDay(51, R({ ...empty(), plan: { ...empty().plan, debt: debts } }));
+  const scheduledDebts = debtPlan.tasks.filter((task) => !!task.debtId);
+  ok(scheduledDebts.length === 2 && debtPlan.debtBacklog?.length === debts.length,
+    "D7a يُعرض أقدم دينين فقط ويبقى الطابور الكامل في لقطة الخطة");
+  const debtResults: Record<string, TaskResult> = Object.fromEntries(
+    debtPlan.tasks.map((task) => [task.id, { done: true, passed: true, score: 5, total: 5, attempts: 1 }]),
+  );
+  debtResults[scheduledDebts[1].id] = { done: true, passed: false, score: 0, total: 5, attempts: 2 };
+  const carriedDebts = debtsFrom(debtPlan, debtResults);
+  ok(carriedDebts.length === debts.length - 1
+    && !carriedDebts.some((debt) => debt.id === scheduledDebts[0].debtId)
+    && carriedDebts.some((debt) => debt.id === scheduledDebts[1].debtId),
+  "D7b النجاح وحده يستهلك الدين؛ الفشل يعيده، والديون غير المعروضة لا تضيع");
   const passState: Record<string, TaskResult> = Object.fromEntries(p1.tasks.map((t) => [t.id, { done: true, passed: true, score: 5, total: 5, attempts: 1 }]));
   const sc = dayScore(p1, passState);
-  ok(sc.done === p1.tasks.length && sc.score === sc.total, "D8 يوم مثالي كامل النقاط");
+  ok(sc.done === p1.tasks.length && sc.tasksTotal === p1.tasks.length && sc.score === sc.total,
+    "D8 اليوم المثالي يحصي الأساسي وكل تعميق سُلِّم");
   ok(canCloseDay(p1, {}) === true && isPassed(undefined) === false, "D9 بوابة الإغلاق وisPassed");
   ok(planPct(R({ ...empty(), plan: { ...empty().plan, day: 1 } })) === 0, "D10 planPct(يوم 1)=0");
   ok(planPct(R({ ...empty(), plan: { ...empty().plan, day: TOTAL + 5 } })) === 100, "D11 planPct مقصوص عند 100");
+
+  let kernGesamt = 0;
+  let vollGesamt = 0;
+  let vertiefungsTage = 0;
+  let fensterTage = 0;
+  for (let d = 1; d <= TOTAL; d++) {
+    const plan = buildDay(d, empty());
+    const kern = corePathMinutes(plan.tasks);
+    const vertiefung = deepeningMinutes(plan.tasks);
+    kernGesamt += kern;
+    vollGesamt += kern + vertiefung;
+    if (vertiefung > 0) vertiefungsTage++;
+    ok(plan.tasks.filter((task) => task.mandatory || task.exam).every(isCoreTask), `D12 يوم ${d}: الإلزامي والامتحاني أساسيان`);
+    if (d === TOTAL) {
+      const unsplittableExam = plan.tasks.filter(isCoreTask);
+      ok(kern === 120 && unsplittableExam.length === 1 && unsplittableExam[0].exam === true,
+        "D13 يوم 378 استثناء امتحاني واحد غير قابل للتقسيم (120د)");
+    } else {
+      if (kern >= CORE_PATH_MIN_MINUTES && kern <= CORE_PATH_MAX_MINUTES) fensterTage++;
+    }
+  }
+  ok(fensterTage === TOTAL - 1, `D14 المسار الأساسي داخل ${CORE_PATH_MIN_MINUTES}–${CORE_PATH_MAX_MINUTES}د في ${fensterTage}/${TOTAL - 1} يوماً عادياً`);
+  ok(kernGesamt === 24_495 && vollGesamt === 71_595 && vertiefungsTage === 369,
+    `D15 التقسيم يحفظ الكتالوج: أساسي ${kernGesamt}د + تعميق ${vollGesamt - kernGesamt}د = ${vollGesamt}د؛ ${vertiefungsTage} يوم تعميق`);
 }
 
 /* ═══ E · SRS FSRS-6 (R280/M1 — ersetzt SM-2; Schwellen mit dem echten Umbau umgepinnt) ═══ */
@@ -304,9 +368,13 @@ const vocabRepeatAudit = (() => {
   const e3int = c.interval;
   c = reviewCard(c, 4);
   ok(c.interval > e3int && c.interval <= 90, `E4 الثالثة: الفاصل يتّسع FSRS (${e3int}←${c.interval}، جاء ${c.interval})`);
+  ok(c.successStreak === 3 && c.overDue?.length === 2,
+    "E4a ثلاثة نجاحات حقيقية فقط تنشئ موعدي overlearning");
   const before = c;
   c = reviewCard(c, 0);
-  ok(c.interval === 0 && c.lapses === before.lapses + 1 && c.learning === true, "E5 سقوط: تصفير + lapses + وضع تعلّم");
+  ok(c.interval === 0 && c.lapses === before.lapses + 1 && c.learning === true
+    && c.successStreak === 0 && !c.overDue,
+  "E5 سقوط: تصفير + lapses + وضع تعلّم، مع تصفير streak وإلغاء مواعيد الإتقان");
   let x = newCard();
   for (let i = 0; i < 100; i++) x = reviewCard(x, 2);
   ok(x.ease >= 1.3 && x.reps === 100 && Number.isFinite(x.interval), "E6 100 مراجعات بجهد: سقف ease وصحة reps");
@@ -324,6 +392,38 @@ const vocabRepeatAudit = (() => {
   };
   ok(countNewCardsIntroducedToday(introduced, ["v1", "v2", "old", "v1"], now) === 2,
     "E10 عدّاد البطاقات الجديدة فريدٌ، يوميٌّ، ويحسب ما أُدخل حتى بعد أول مراجعة");
+
+  const t0 = new Date("2026-01-01T12:00:00.000Z");
+  const day = (n: number) => new Date(t0.getTime() + n * 86400000);
+  let timed = newCard(t0);
+  timed = reviewCard(timed, 2, { now: t0 });
+  timed = reviewCard(timed, 2, { now: day(1) });
+  timed = reviewCard(timed, 2, { now: day(2) });
+  ok(timed.introduced === t0.toISOString()
+    && timed.overDue?.join(",") === [day(4).toISOString(), day(9).toISOString()].join(","),
+  "E11 newCard وoverlearning يستعملان now المحقون حتمياً (+2/+7 من الإتقان)");
+  timed = reviewCard(timed, 2, { now: day(4) });
+  ok(timed.overDue?.join(",") === day(9).toISOString() && !isDue(timed, day(4)),
+    "E12 المراجعة تستهلك موعد overlearning الحالّ ولا تجعل البطاقة مستحقة دائماً");
+
+  const priorityNow = day(30);
+  const priorityBase = (due: Date, lapses = 0): SrsState => ({
+    ...newCard(t0), reps: 2, lapses, due: due.toISOString(), last: day(20).toISOString(),
+  });
+  const priorityDeck = todayDeck({
+    "base-old": priorityBase(day(20)),
+    "extra-oldest": { ...priorityBase(day(40)), overDue: [day(10).toISOString()] },
+    "tie-low": priorityBase(day(25), 0),
+    "tie-high": priorityBase(day(25), 5),
+  }, "leicht", priorityNow).due;
+  ok(priorityDeck.join(",") === "extra-oldest,base-old,tie-high,tie-low",
+    "E13 ترتيب المستحق: أقدم موعد فعلي ثم أعلى lapses عند التعادل، والمعرّف آخر كاسر تعادل");
+  const cappedStates: Record<string, SrsState> = {};
+  for (let i = 0; i < 151; i++) cappedStates[`card-${String(i).padStart(3, "0")}`] = priorityBase(day(29));
+  cappedStates.oldest = priorityBase(day(1));
+  const capped = todayDeck(cappedStates, "regelmaessig", priorityNow).due;
+  ok(capped.length === 150 && capped[0] === "oldest",
+    "E14 سقف 150 يحافظ على الأقدم استحقاقاً ولا يختار أبجدياً");
 }
 
 /* ═══ F · دفتر الأخطاء ═══ */
@@ -385,10 +485,16 @@ const vocabRepeatAudit = (() => {
   const fill: Exercise = { id: "t2", type: "fill", promptDe: "___ Haus", answer: ["das", "der"] };
   ok(grader.grade(fill, "Das").correct === true, "G7 fill يقبل كل البدائل بلا حالة");
   const tr: Exercise = { id: "t3", type: "translate", promptDe: "قل: أتعلم", answer: "Ich lerne", keywords: ["lerne"] };
-  ok(grader.grade(tr, "Ich lerne Deutsch seit Jahr.").correct === true, "G8 translate بمفاتيح");
+  const trPartial = grader.grade(tr, "Ich lerne Deutsch seit Jahr.");
+  ok(grader.grade(tr, "Ich lerne").correct === true && !trPartial.correct && trPartial.points === 0.5,
+    "G8 translate يقبل النموذج المعلن فقط؛ وجود المفتاح يمنح دليلاً جزئياً لا صحة كاملة");
+  const trOrder: Exercise = { id: "t3b", type: "translate", promptDe: "x", answer: "Wärst du nur gekommen", keywords: ["wärst", "du", "nur", "gekommen"] };
+  ok(!grader.grade(trOrder, "gekommen nur du wärst").correct,
+    "G8b الكلمات نفسها بترتيب ألماني خاطئ لا تنال صحة كاملة");
   const di: Exercise = { id: "t4", type: "dictation", promptDe: "x", answer: "Ich habe das Haus" };
   ok(grader.grade(di, "ich habe das haus!").correct === true, "G9 dictation تطابق مطبّع");
-  ok(grader.grade(di, "ich haus").correct === false, "G10 dictation نسبة أقل من 85 تُرفض");
+  ok(grader.grade(di, "ich haus").correct === false && !grader.grade(di, "Haus das habe ich").correct,
+    "G10 dictation دون 85% أو بترتيب مقلوب يُرفض");
   const ord: Exercise = { id: "t5", type: "order", promptDe: "x", answer: ["ich", "lerne", "deutsch"] };
   ok(grader.grade(ord, ["ich", "Lerne", "Deutsch!"]).correct === true, "G11 order يتسامح حالة/ترقيم");
   ok(grader.grade(ord, ["lerne", "ich", "deutsch"]).correct === false, "G12 order الموضع الخاطئ مرفوض");
@@ -402,31 +508,48 @@ const vocabRepeatAudit = (() => {
   ok(noteFromPct(-10).startsWith("6 ") && noteFromPct(111).startsWith("1 "), "G17 حدود ما بعد الصفر/المئة");
 }
 
-/* ═══ H · شبكة الكفاءات ═══ */
+/* ═══ H · سجل التدريب وprovenance الدليل ═══ */
 {
   const w0 = kompetenzWerte(empty());
-  ok(KOMPETENZEN.every((h) => Number.isFinite(w0[h].wert) && w0[h].wert >= 0 && w0[h].wert <= 100 && w0[h].kern === null), "H1 فارغ: قيم مقيدة وkern=null تحت 8 محاولات");
-  let p = empty();
-  for (let i = 0; i < 200; i++) p = logK(p, KOMPETENZEN[i % 6], i % 3 !== 0);
-  const w = kompetenzWerte(p);
-  ok(KOMPETENZEN.every((h) => w[h].wert >= 0 && w[h].wert <= 100 && w[h].versuche >= 8), "H2 200 تسجيل: kern يشتعل وكل قيمة في النطاق");
-  ok((p.kompetenzLog?.length ?? 0) <= 600, "H3 سجل الكفاءات مقصوص عند 600");
+  ok(KOMPETENZEN.every((h) => w0[h].wert === null && w0[h].status === "unknown" && w0[h].versuche === 0), "H1 الفراغ unknown بلا نقاط مفبركة");
+  let activityOnly = empty();
+  for (let i = 0; i < 200; i++) activityOnly = logK(activityOnly, KOMPETENZEN[i % 6], true);
+  const wa = kompetenzWerte(activityOnly);
+  ok(KOMPETENZEN.every((h) => wa[h].wert === null && wa[h].measured === 0 && wa[h].status === "insufficient"), "H2 logK الافتراضي نشاط لا أداء مقاس");
+  ok((activityOnly.kompetenzLog?.length ?? 0) <= 600, "H3 سجل المجالات مقصوص عند 600");
   let allOk = empty();
-  for (let i = 0; i < 80; i++) allOk = logK(allOk, "Wortschatz", true);
-  ok(kompetenzWerte(allOk).Wortschatz.wert >= 70, "H4 نجاح تام ← محور مرتفع");
+  for (let i = 0; i < 8; i++) allOk = logK(allOk, "Wortschatz", true, { evidenceType: "measured", method: "test" });
+  ok(kompetenzWerte(allOk).Wortschatz.wert === 100, "H4 ثمانية أدلة measured صريحة ← أداء تدريبي 100");
   let allBad = empty();
-  for (let i = 0; i < 80; i++) allBad = logK(allBad, "Grammatik", false);
-  ok(kompetenzWerte(allBad).Grammatik.wert <= 30, "H5 فشل تام بلا بيانات أخرى ← محور متدنٍّ");
-  for (const v of [0, 34, 35, 54, 55, 74, 75, 100]) ok(typeof band(v).name === "string" && typeof band(v).farbe === "string", `H6 band(${v})`);
-  ok(b2Score(empty()) === 0 || b2Score(empty()) > 0, "H7 b2Score عدد");
-  const pb = pruefungsBereitschaft(empty());
-  ok(pb.teile.length === 4 && pb.teile.every((t) => t.wert >= 0 && t.wert <= 100), "H8 الجاهزية رباعية الأجزاء");
-  const recalc = Math.max(0, Math.min(100, Math.round(pb.teile.reduce((s, t) => s + t.wert * t.gewicht, 0))));
-  ok(pb.gesamt === recalc, `H9 الجاهزية = Σ(وزن×قيمة) — قال ${pb.gesamt} والحساب ${recalc}`);
-  ok(Math.abs(pb.teile.reduce((s, t) => s + t.gewicht, 0) - 1) < 1e-9, "H10 الأوزان 40/25/20/15 تجمع لواحد");
-  const pbRich = pruefungsBereitschaft(p);
-  ok(pbRich.gesamt >= 0 && pbRich.gesamt <= 100, "H11 جاهزية على بيانات غنية");
-  ok(typeof bereitBand(0).name === "string" && typeof bereitBand(100).name === "string", "H12 bereitBand الحواف");
+  for (let i = 0; i < 8; i++) allBad = logK(allBad, "Grammatik", false, { evidenceType: "measured", method: "test" });
+  ok(kompetenzWerte(allBad).Grammatik.wert === 0, "H5 ثمانية أدلة measured فاشلة ← أداء تدريبي 0");
+  let selfReport = empty();
+  for (let i = 0; i < 20; i++) selfReport = logK(selfReport, "Schreiben", true, { evidenceType: "self_report" });
+  ok(kompetenzWerte(selfReport).Schreiben.wert === null && kompetenzWerte(selfReport).Schreiben.selfReported === 20, "H6 التقييم الذاتي منفصل ولا يرفع الأداء");
+  let assisted = empty();
+  for (let i = 0; i < 20; i++) assisted = logK(assisted, "Sprechen", true, { evidenceType: "measured", assisted: true });
+  ok(kompetenzWerte(assisted).Sprechen.wert === null && kompetenzWerte(assisted).Sprechen.measured === 0, "H7 الدليل المساعد لا يدخل الأداء");
+  const oldEntry = { h: "Lesen" as const, ok: true };
+  ok(evidenceTypeOf(oldEntry) === "activity", "H8 السجل القديم بلا provenance يُعامل نشاطاً");
+  const emptyEvidence = evidenzUebersicht(empty());
+  ok(emptyEvidence.completeTrainingPerformance === null && emptyEvidence.examReadiness === "not_assessed", "H9 لا متوسط كامل ولا جاهزية من الفراغ");
+  const richActivity = { ...activityOnly, xp: 99999, plan: { ...activityOnly.plan, day: 300 }, canDo: { a: true, b: true } };
+  const richEvidence = evidenzUebersicht(richActivity);
+  ok(richEvidence.completeTrainingPerformance === null && richEvidence.examReadiness === "not_assessed", "H10 XP والأيام وCan-Do لا تصنع أداءً أو جاهزية");
+  let complete = empty();
+  for (const hand of KOMPETENZEN) for (let i = 0; i < 8; i++) complete = logK(complete, hand, true, { evidenceType: "measured" });
+  const completeEvidence = evidenzUebersicht(complete);
+  ok(completeEvidence.completeTrainingPerformance === 100 && completeEvidence.measuredSkills === 6, "H11 المتوسط الداخلي لا يظهر قبل اكتمال المجالات الستة");
+  ok(completeEvidence.examReadiness === "not_assessed", "H12 حتى الأداء التدريبي الكامل لا يتحول إلى حكم جاهزية");
+  ok(evidenzUebersicht(selfReport).selfReportedEntries === 20, "H13 الملخص يجمع self_report في عداد مستقل");
+  ok(evidenzUebersicht(activityOnly).activityEntries === 200, "H14 الملخص يجمع activity من دون تحويله إلى أداء");
+  let external = empty();
+  for (let i = 0; i < 8; i++) external = logK(external, "Schreiben", true, { evidenceType: "external_review", sourceId: `ext-${i}` });
+  ok(kompetenzWerte(external).Schreiben.wert === 100 && kompetenzWerte(external).Schreiben.externalReviewed === 8, "H15 external_review المؤهل ظاهر المصدر ويدخل الأداء التدريبي");
+  ok(kompetenzWerte(allOk).Wortschatz.status === "measured", "H16 المجال المؤهل يحمل status=measured");
+  ok(kompetenzWerte(selfReport).Schreiben.status === "insufficient", "H17 self_report وحده يبقى insufficient لا measured");
+  ok(allOk.kompetenzLog?.every((entry) => entry.method === "test" && entry.evidenceType === "measured") === true, "H18 metadata القياس محفوظ في السجل");
+  ok(external.kompetenzLog?.every((entry) => entry.sourceId?.startsWith("ext-")) === true, "H19 sourceId للمراجعة الخارجية محفوظ وقابل للأثر");
 }
 
 /* ═══ I · XP والأوسمة ═══ */
@@ -467,7 +590,7 @@ const vocabRepeatAudit = (() => {
     ["texts", texts.filter((t) => !(t as { neu?: boolean }).neu).length >= 80 ? texts.filter((t) => !(t as { neu?: boolean }).neu).length : 0, texts.filter((t) => !(t as { neu?: boolean }).neu).length],
     ["dialogues", dialogues.filter((d) => !(d as { neu?: boolean }).neu).length >= 80 ? dialogues.filter((d) => !(d as { neu?: boolean }).neu).length : 0, dialogues.filter((d) => !(d as { neu?: boolean }).neu).length],
     ["writing", writingTasks.filter((w) => !(w as { neu?: boolean }).neu).length >= 30 ? writingTasks.filter((w) => !(w as { neu?: boolean }).neu).length : 0, writingTasks.filter((w) => !(w as { neu?: boolean }).neu).length],
-    ["vocab", alleVokabeln.length, 6202], // R323: +69 بطاقة B1 لسدّ فجوة Goethe-Wortliste الأبجدية V (Vase–Vortrag) — Bestand 6202 (كان 5953 منذ R322)
+    ["vocab", alleVokabeln.length, 6202], // Raw cards only; PA-020 keeps this separate from headwords/external coverage.
     ["fehler", fehlerList.length, 196],
     ["grammar", Object.keys(grammarMap).length, Object.keys(grammarMap).length >= 38 ? Object.keys(grammarMap).length : 0],
     ["verben", verben.length, 126],
@@ -1073,50 +1196,47 @@ const vocabRepeatAudit = (() => {
       "K61t والورشةُ مركَّبةٌ داخلَ درسِها — لا محرِّكَ بلا مستهلِك");
   }
 
-  /* ═══ K60 · عقدُ الساعات: الوعدُ يُقابَلُ بمرجعٍ لا بنفسِه ═══
-     وُجدت هذه الكتلة لأنَّ المشروعَ كان يَعِدُ «A0→B2 في 378 يوماً»
-     وهو لا يعرف كم ساعةً يخطِّط، ولا يسجِّل دقيقةً قضَاها المتعلِّم. */
+  /* ═══ K60 · نموذج الوقت: هدف جلسة ≠ حمل يوم ≠ وقت مقاس ═══ */
   {
-    /* المرجع */
-    ok(LEVEL_ORDER.every((l) => Array.isArray(CEFR_STUNDEN[l]) && CEFR_STUNDEN[l].length === 2 && CEFR_STUNDEN[l][0] < CEFR_STUNDEN[l][1]),
-      "K60a مرجعُ CEFR نطاقاتٌ [أدنى,أعلى] لكلِّ المستوياتِ الأربعة — لا رقمٌ حاسمٌ يُدَّعى");
-    ok(CEFR_STUNDEN.B2[0] >= 450 && CEFR_STUNDEN.B1[0] >= 260 && CEFR_STUNDEN.A2[0] >= 150 && CEFR_STUNDEN.A1[0] >= 60, // R169: عتباتُ Goethe بالساعات الحقيقية (450/260) لا أرقام UE ‏à45 المخلوطة قديماً (600/350) — تصحيحُ وحداتٍ بسجلّ RULES
-      "K60b والنطاقاتُ مطابقةٌ لمرجعِ Goethe/telc التراكميِّ من الصفر");
+    ok(KURS_LEVELS.every((level) => GOETHE_KURSSTUNDEN[level][0] < GOETHE_KURSSTUNDEN[level][1]),
+      "K60a نطاقات ساعات دورات Goethe بنية سياقية سليمة للمستويات الأربعة");
     ok(PHASE_END_DAY.A1 === PHASEN.A1.bis && PHASE_END_DAY.A2 === PHASEN.A2.bis && PHASE_END_DAY.B1 === PHASEN.B1.bis && PHASE_END_DAY.B2 === TOTAL && levelOf(PHASEN.A1.bis) === "A1" && levelOf(PHASEN.A1.bis + 1) === "A2" && levelOf(PHASEN.B1.bis + 1) === "B2",
-      "K60c ونهاياتُ المراحلِ هي حدودُ الخطةِ نفسِها — لا تقويمٌ موازٍ");
+      "K60b نهايات الأقسام هي حدود الخطة نفسها — لا تقويم موازٍ");
 
-    /* منحنى الخطة */
     const ges = planStundenGesamt();
-    ok(Number.isFinite(ges) && ges > 0 && Math.abs(ges - planMinBis(TOTAL_DAYS) / 60) < 0.01,
-      `K60d مجموعُ تقديراتِ المهام محسوبٌ من buildDay مستقلاً عن هدف الجلسة (${ges.toFixed(1)} س)`);
-    ok(planMinBis(0) === 0 && planMinBis(TOTAL) === planMinBis(TOTAL_DAYS), "K60e المنحنى يبدأُ من الصفرِ وينتهي عند آخرِ يوم");
+    const last = planArbeitslast();
+    ok(Number.isFinite(ges) && ges > 0 && Math.abs(ges - planMinBis(TOTAL_DAYS) / 60) < 0.01 && last.stunden === ges,
+      `K60c مجموع تقديرات المهام محسوب من buildDay عبر مصدر واحد (${ges.toFixed(1)} س)`);
+    ok(planMinBis(0) === 0 && planMinBis(TOTAL) === planMinBis(TOTAL_DAYS), "K60d المنحنى يبدأ من الصفر وينتهي عند آخر يوم");
     let mono = true; for (let d = 1; d <= TOTAL_DAYS; d++) if (planMinBis(d) < planMinBis(d - 1)) { mono = false; break; }
-    ok(mono, "K60f والمنحنى رتيبٌ لا ينقص — الدقائقُ تُجمَعُ لا تُطرَح");
+    ok(mono, "K60e المنحنى رتيب لا ينقص — الدقائق تجمع ولا تطرح");
     ok(planStundenBis(PHASEN.A1.bis) < planStundenBis(PHASEN.A2.bis) && planStundenBis(PHASEN.A2.bis) < planStundenBis(PHASEN.B1.bis) && planStundenBis(PHASEN.B1.bis) < planStundenBis(TOTAL),
-      "K60g وكلُّ مرحلةٍ تزيدُ على سابقتِها — لا مرحلةَ صفرية");
-    ok(planMinBis(TOTAL) === planMinBis(TOTAL) && planStundenBis(100) === planStundenBis(100),
-      "K60h والحسابُ محفوظٌ فلا يُعادُ اشتقاقُ 378 يوماً عند كلِّ نقر");
+      "K60f كل قسم يضيف وقت مهام إلى المجموع التراكمي");
+    ok(planTagesMinuten(1) === planMinBis(1) && planTagesMinuten(TOTAL_DAYS) === planMinBis(TOTAL_DAYS) - planMinBis(TOTAL_DAYS - 1),
+      "K60g حمل اليوم الكامل مشتق من المنحنى نفسه لا من هدف الجلسة");
+    ok(last.minuten === 71595 && Math.abs(last.durchschnittMinutenProTag - 189.4) < 0.1 &&
+      last.phasen.B2.minuten === 26645 && Math.abs(last.phasen.B2.durchschnittMinutenProTag - 261.2) < 0.1 &&
+      last.kernMinuten === 24495 && last.vertiefungMinuten === 47100 &&
+      Math.abs(last.durchschnittKernMinutenProTag - 64.8) < 0.1 && last.phasen.B2.kernMinuten === 6990 &&
+      last.sitzungszielMinuten === DEFAULT_SESSION_GOAL_MINUTES,
+      "K60h الكتالوج محفوظ 71595د؛ الأساسي 24495د/64.8د يومياً والتعميق 47100د، وهدف الجلسة مستقل");
+    ok(planKernMinBis(TOTAL) === last.kernMinuten && planKernStundenBis(TOTAL) === last.kernStunden &&
+      planKernTagesMinuten(378) === 120,
+      "K60h1 منحنى المسار الأساسي ومجموع ساعاته ويوم الامتحان مشتقة من buildDay");
 
-    /* صدقُ الوعد — البوابةُ الأهمّ في هذه الكتلة */
-    const vgl = vergleichePlan(planStundenBis);
-    ok(vgl.length >= 4 && vgl.slice(0,4).every((v) => v.planStd > 0 && v.deckungProzent > 0), "K60i المقارنةُ تُنتِجُ أربعةَ صفوفٍ بأرقامٍ حيّة");
-    const niv = erreichbaresNiveau(vgl);
-    const b2v = vgl[3];
-    ok(b2v.urteil === "erreicht" || niv === "B2" || b2v.fehlendBisMinimum > 0,
-      "K60j منطقُ الحكمِ متماسك: إمّا B2 وافٍ، أو مستوىً أدنى مُعلَن، أو نقصٌ محسوب — لا حالةٌ رابعةٌ صامتة");
-    if (b2v.urteil === "weitDarunter" || b2v.urteil === "darunter") {
-      ok(niv !== "B2", `K60k الصدقُ الإلزامي: ساعاتُ B2 (${b2v.planStd}) دون نطاقِها (${b2v.ref[0]}–${b2v.ref[1]}) فلا يُدَّعى B2 — المستوى المبلغُ ${niv}`);
-      ok(b2v.fehlendBisMinimum >= b2v.ref[0] - b2v.planStd - 0.11, `K60l والنقصُ محسوبٌ لا مُقدَّر (${b2v.fehlendBisMinimum} س)`);
-    } else {
-      ok(niv === "B2", "K60m وإن وُفّيَ المرجعُ صار B2 هو المُعلَن — الحكمُ يتبعُ الرقمَ لا العكس");
-    }
-    ok(urteileStunden(CEFR_STUNDEN.B2[1], CEFR_STUNDEN.B2) === "erreicht"
-      && urteileStunden(CEFR_STUNDEN.B2[0], CEFR_STUNDEN.B2) === "imBereich"
-      && urteileStunden(CEFR_STUNDEN.B2[0] * 0.75, CEFR_STUNDEN.B2) === "darunter"
-      && urteileStunden(CEFR_STUNDEN.B2[0] * 0.25, CEFR_STUNDEN.B2) === "weitDarunter",
-      "K60n وسلَّمُ الأحكامِ الأربعةِ يعملُ عند حدودِه لا في وسطِه فحسب");
+    const vgl = vergleicheZeitlast(planKernStundenBis);
+    ok(vgl.length === 4 && vgl.every((v) => v.planStd > 0 && v.kursSpanne[0] < v.kursSpanne[1]),
+      "K60i المقارنة الزمنية تنتج أربعة صفوف وصفية بلا مستوى مستنتج");
+    ok(zeitlastPosition(59, GOETHE_KURSSTUNDEN.A1) === "unterhalb" &&
+      zeitlastPosition(100, GOETHE_KURSSTUNDEN.A1) === "innerhalb" &&
+      zeitlastPosition(151, GOETHE_KURSSTUNDEN.A1) === "oberhalb",
+      "K60j موقع الرقم داخل النطاق وصفي عند الحدود ولا يقرر كفاءة");
+    const cefrSource = readFileSync("lib/cefr.ts", "utf8");
+    ok(!cefrSource.includes("erreichbaresNiveau") && !cefrSource.includes("examReadiness") &&
+      cefrSource.includes("لا تستنتج هذه") && cefrSource.includes("أداءً مقاساً في مهارات"),
+      "K60k وحدة المقارنة لا تصدر مستوى أو جاهزية من الوقت");
 
-    /* قياسُ الوقتِ الفعلي */
+    /* قياس الوقت الفعلي */
     ok(minutenEffektiv(emptyProgress) === 0, "K60o الأصلُ صفر: لا وقتَ مقاساً قبل تشغيل المؤقّت");
     ok(minutenEffektiv({ ...emptyProgress, plan: { ...emptyProgress.plan, minutenEffektiv: 1234 } }) === 1234, "K60p الوقتُ المسجَّلُ من المؤقّت يُقرأ كما كُتب");
     ok(minutenEffektiv({ ...emptyProgress, plan: { ...emptyProgress.plan, minutenEffektiv: -50 } }) === 0
@@ -1137,10 +1257,11 @@ const vocabRepeatAudit = (() => {
     ok(storeSource.includes("export function bucheMinuten") && manualBookingSource.includes("clampMinuten(minuten)") &&
       manualBookingSource.includes("minutenManuell") && !manualBookingSource.includes("minutenEffektiv:"),
       "K60t الإدخال اليدوي يمرّ عبر clampMinuten ويُخزَّن منفصلاً؛ لا يكتب في حقل الوقت المقاس");
-    ok(readFileSync("components/stundenvertrag.tsx", "utf8").includes("planStundenGesamt")
-      && readFileSync("components/stundenvertrag.tsx", "utf8").includes("vergleichePlan")
-      && readFileSync("components/stundenvertrag.tsx", "utf8").includes("erreichbaresNiveau"),
-      "K60u واللوحةُ تستهلكُ المحرِّكَ فعلاً — لا محرِّكَ بلا مستهلِك");
+    const zeitlastUi = readFileSync("components/stundenvertrag.tsx", "utf8");
+    ok(zeitlastUi.includes("planArbeitslast") && zeitlastUi.includes("planKernTagesMinuten") && zeitlastUi.includes("planVertiefungTagesMinuten") &&
+      zeitlastUi.includes("vergleicheZeitlast") && zeitlastUi.includes('data-testid="zeitmodell-drei-zahlen"') &&
+      !zeitlastUi.includes("erreichbaresNiveau") && !zeitlastUi.includes("بهذا الحملِ المخطَّط تبلغ"),
+      "K60u اللوحة تستهلك مصدر الحمل الواحد وتفصل الأرقام بلا استنتاج مستوى");
     ok(readFileSync("components/berichte.tsx", "utf8").includes("<StundenVertrag progress={progress} />"),
       "K60v واللوحةُ مركَّبةٌ في مركزِ التقارير — ظاهرةٌ لا مدفونة");
   }
@@ -1651,9 +1772,8 @@ const vocabRepeatAudit = (() => {
 
 /* ═══ الخلاصة ═══ */
 
-  /* ═══ K63 — التوزيع الأكاديمي للمراحل (lib/phasen.ts) ═══
-     كان: 70·70·70·60 يوماً بحملٍ ثابت ⇒ B2 = 517.6 س < 600 (الوعد لا يتحقّق).
-     صار: أيامٌ بأوزان زيادة CEFR (12·12·14·14 أسبوعاً بعد A0 10 أيام) + حملٌ يوميٌّ تصاعدي. */
+  /* ═══ K63 — حدود الأقسام وحمل المهام (lib/phasen.ts + lib/plan.ts) ═══
+     الحدود ثابتة، أما المجاميع والمتوسطات فتُشتق من المهام ولا تُحوّل إلى حكم CEFR. */
   {
     const L = ["A1", "A2", "B1", "B2"] as const;
     ok(PHASEN.A0.von === 1 && L.every((l, i) => i === 0 || PHASEN[l].von === PHASEN[L[i - 1]].bis + 1) && PHASEN.B2.bis + 1 === ABSCHLUSS_VON && ABSCHLUSS_VON + (TOTAL - ABSCHLUSS_VON) === TOTAL,
@@ -1665,32 +1785,28 @@ const vocabRepeatAudit = (() => {
     });
     // يومُ نهاية A0 لا فحص (تهيئة)؛ أما باقي المراحل فينتهي بيوم فحص/وخطة ما قبل الختام.
     ok(weeksOk, "K63b كلُّ مرحلةٍ أسابيعُ كاملةٌ وتنتهي بيومِ الفحصِ الأسبوعيِّ — الإيقاعُ محفوظ");
-    const tage = L.map((l) => PHASEN[l].wochen);
-    ok(tage.every((t, i) => i === 0 || t >= tage[i - 1]) && PHASEN.B2.wochen >= PHASEN.A1.wochen,
-      "K63c الأيامُ تتصاعدُ مع المستوى وB2 أكثرُ من ضعفِ A1 — لا التساوي القديم");
-    // K63d: منتصف النطاق — نسمح بانحراف ≤10 نقاط مئوية لكل مستوى ليعكس التوزيع 12/12/14/14 (4 أسابيع/مرحلة لزيادة التثبيت).
-    const mid = { A0: 0, A1: 105, A2: 120, B1: 200, B2: 275 };
-    const midTotal = mid.A1 + mid.A2 + mid.B1 + mid.B2;
-    const anteilRef = L.map((l) => mid[l] / midTotal);
-    const wsum = L.reduce((a, l) => a + PHASEN[l].wochen, 0);
-    const anteilPlan = L.map((l) => PHASEN[l].wochen / wsum);
-    const abw = Math.max(...anteilPlan.map((p, i) => Math.abs(p - anteilRef[i])));
-    ok(abw < 0.15, `K63d (منتصفُ النطاق) بانحرافٍ < 15 نقطة بعد إعادة التوازن 12/12/14/14 أسبوعاً (${anteilPlan.map((x) => Math.round(x * 100)).join("/")}% مقابل ${anteilRef.map((x) => Math.round(x * 100)).join("/")}%)`);
+    const tage = L.map((level) => PHASEN[level].wochen);
+    ok(tage.every((weeks, i) => i === 0 || weeks >= tage[i - 1]),
+      "K63c مدد الأقسام لا تنكمش لاحقاً: 12/12/14/14 أسبوعاً");
+    ok(PHASEN.A1.wochen === 12 && PHASEN.A2.wochen === 12 && PHASEN.B1.wochen === 14 && PHASEN.B2.wochen === 14,
+      "K63d توزيع الأسابيع المثبت مطابق لحدود الأيام، بلا اشتقاق كفاءة من الساعات");
     ok(L.every((l, i) => i === 0 || LERNLAST[l] >= LERNLAST[L[i - 1]]) && LERNLAST.A1 === 1 && LERNLAST.B2 <= 2.2,
       "K63e معاملُ الحملِ تصاعديٌّ يبدأُ من 1.0 ولا يتجاوز 2.2 في B2؛ تقديرات المهام تُعرض مستقلّةً عن هدف الجلسة");
     ok(lastMinuten(30, "A1") === 30 && lastMinuten(30, "B2") === 65 && lastMinuten(3, "A1") === 5 && lastMinuten(35, "B1") === 60,
       "K63f التطبيقُ يقرِّبُ إلى 5 دقائق ولا ينزلُ تحتَ 5 — ومعامل الحمل يعطي دقائق مكثفة في B2 (30→65، 35→60)");
 // ملاحظة: lastMinuten(30,B2)=65 عند LERNLAST.B2=2.15؛ عند LERNLAST=2.2 = 65 أيضاً (تقريب لـ5).
 void 0;
-    const v = vergleichePlan(planStundenBis);
-    const bandOk = v.every((x) => x.level === "A0" || x.urteil === "erreicht" || x.urteil === "imBereich" || x.urteil === "darunter");
-    ok(bandOk, `K63g **كلُّ مرحلةٍ داخلَ نطاقِ CEFR** — ${v.map((x) => `${x.level} ${x.planStd.toFixed(0)}h (${x.urteil})`).join(" · ")}`);
-    const b2v = v.find((x) => x.level === "B2")!;
-    ok(b2v.planStd >= 600 + 20, `K63h B2 فوقَ أدنى الحدِّ (600) بهامشٍ ≥ 20 ساعة — الوعدُ يتحقّقُ بالحملِ المخطَّط لا بالأمنيات (${b2v.planStd.toFixed(0)}h)`);
-    const proTag = L.map((l) => (planStundenBis(PHASE_END_DAY[l]) - planStundenBis(PHASEN[l].von - 1)) / (PHASE_END_DAY[l] - PHASEN[l].von + 1));
-    ok(proTag.every((h, i) => Number.isFinite(h) && h > 0 && (i === 0 || h >= proTag[i - 1] - 0.01)) &&
-      DEFAULT_SESSION_GOAL_MINUTES === 90,
-      `K63i تقديراتُ مجموع مهام اليوم تصاعدية بحسب المرحلة، ومستقلة عن هدف الجلسة (${proTag.map((h) => h.toFixed(2)).join(" → ")} س/يوم؛ الهدف 90 د)`);
+    const lastK63 = planArbeitslast();
+    const phasenMinutenK63 = L.map((level) => lastK63.phasen[level].minuten);
+    ok(phasenMinutenK63.every((minuten) => minuten > 0) &&
+      Object.values(lastK63.phasen).reduce((sum, phase) => sum + phase.minuten, 0) === lastK63.minuten,
+      `K63g كل قسم له حمل مهام موجب ومجموع الأقسام يساوي إجمالي الخطة (${phasenMinutenK63.join("/")} د)`);
+    ok(lastK63.minuten === 71595 && lastK63.phasen.B2.minuten === 26645,
+      "K63h خط أساس الحمل الحالي محروس من المصدر الحسابي: 71595د إجمالاً و26645د في B2");
+    const proTag = L.map((level) => lastK63.phasen[level].durchschnittMinutenProTag / 60);
+    ok(proTag.every((hours, i) => Number.isFinite(hours) && hours > 0 && (i === 0 || hours >= proTag[i - 1] - 0.01)) &&
+      lastK63.sitzungszielMinuten === DEFAULT_SESSION_GOAL_MINUTES,
+      `K63i متوسطات مهام الأقسام تصاعدية ومستقلة عن هدف الجلسة (${proTag.map((hours) => hours.toFixed(2)).join(" → ")} س/يوم؛ الهدف ${lastK63.sitzungszielMinuten} د)`);
     // K63j: الوحدات التدريسية (دكات المفردات) عبر المراحل الأربع — 11+16+22+25 = 74 حزمة، والأربعُ الكبرى (التي توازي الوحدات) ≥4 لكل مستوى ⇒ 16 على الأقل.
     function decksIn(von: number, bis: number): Set<string> {
       const s = new Set<string>();
@@ -2735,8 +2851,8 @@ void 0;
     const alleUeb = Object.entries(grammarMap).flatMap(([k, t]) => t.exercises.map((e) => ({ k, e })));
     const ohneAr = alleUeb.filter(({ e }) => !AR.test(e.explanationAr ?? "")).map(({ e }) => e.id);
     ok(ohneAr.length === 0, `K69a كلُّ تمرينِ قواعدَ له شرحٌ عربيّ (ناقص: ${ohneAr.join(",")})`);
-    const arImDe = alleUeb.filter(({ e }) => e.type !== "translate" && e.type !== "fill" && !/bedeutet/.test(e.promptDe) && AR.test(e.promptDe)).map(({ e }) => e.id);
-    ok(arImDe.length === 0, `K69b لا عربيةَ في promptDe لتمارينِ order/mc/truefalse — التعليمةُ في promptAr (${arImDe.slice(0, 5).join(",")})`);
+    const arImDe = alleUeb.filter(({ e }) => AR.test(e.promptDe)).map(({ e }) => e.id);
+    ok(arImDe.length === 0, `K69b لا عربيةَ في أي promptDe؛ المصدر/التعليمة العربية في promptAr (${arImDe.slice(0, 5).join(",")})`);
     const leerToken = alleUeb.filter(({ e }) => Array.isArray(e.answer) && e.answer.some((x) => !String(x).trim())).map(({ e }) => e.id);
     ok(leerToken.length === 0, `K69c لا رمزَ فارغاً في إجاباتِ الترتيب (${leerToken.join(",")})`);
     const typo = alleUeb.filter(({ e }) => /___ \./.test(e.promptDe)).map(({ e }) => e.id);
@@ -3057,7 +3173,7 @@ void 0;
   ok(seite.includes("اكتملت الرحلة — {TOTAL_DAYS}") && seite.includes("${closedDays.length}/${TOTAL_DAYS}"),
     "K123b شاشةُ النهايةِ تستخدمُ TOTAL_DAYS لا رقماً مزروعاً");
   const inter = readFileSync("scripts/interaktiv_test.tsx", "utf8");
-  ok((inter.match(/day <= TOTAL_DAYS/g) ?? []).length === 2, "K123c المسحُ التركيبيُّ يغطي الخطةَ كاملةً عبر TOTAL_DAYS");
+  ok((inter.match(/day <= TOTAL_DAYS/g) ?? []).length >= 2, "K123c المسوحُ التركيبية تغطي الخطةَ كاملةً عبر TOTAL_DAYS");
 }
 
 /* ═══ K124 — بوابات المرحلة 1: المؤقت والاعتراض والبديل والتوقف (R11/R33/R16/R19/R20) ═══ */
@@ -3514,9 +3630,9 @@ void 0;
     auditSrc.includes("if (keys.length === 0)") && auditSrc.includes("if (keys.length > 0) process.exitCode = 1") &&
     auditSrc.includes("wA201AlternativeReachable") && auditSrc.includes("abdeckung:writing-alternative"),
     "K143g تدقيق المحتوى يفصل البنيوي عن التربوي ويصنّف w-a2-01 كمعلومة حين تثبت إتاحته البديلة");
-  ok(taskSrc.includes("const toggleCanDoNow = (id: string) =>") && taskSrc.includes("const progress = loadProgress()") &&
-    !taskSrc.includes("useProgressMini"),
-    "K143h قائمة الاستطاعة لا تنشئ اشتراك Progress ثانياً أثناء عرض Today، وتظل تكتب التبديل للمخزن");
+  ok(taskSrc.includes("const toggleCanDoNow = (id: string) =>") && taskSrc.includes("checked={selected[c.id] === true}") &&
+    taskSrc.includes("PROGRESS_EVENT") && taskSrc.includes('data-testid="cando-boundary"') && !taskSrc.includes("useProgressMini"),
+    "K143h/PA031 قائمة الاستطاعة مضبوطة من الحالة المحفوظة وتستجيب لتغيّر الملف مع حد self-report داخلي");
 }
 
 /* ═══ K144 — مرادفات السياق: تقارب محدود بأمثلة عربية/ألمانية، بلا استبدال عام ═══ */
@@ -3989,12 +4105,12 @@ void 0;
   const playerAt = home.indexOf("<Klassenzimmer");
   ok(primaryAt >= 0 && goalAt > primaryAt && playerAt > goalAt && home.includes("heldGrund") &&
     home.includes('data-testid="held-start"') && home.includes("onClick={startToday}") &&
-    home.includes('document.getElementById("dirb-training")') && home.includes('"ابدأ جلسة 90 دقيقة"') &&
+    home.includes('document.getElementById("dirb-training")') && home.includes('`ابدأ جلسة ${plan.zielMin} دقيقة`') &&
     home.includes('"اختر المتابعة أو الحفظ"') && home.includes('"راجع نهاية اليوم"'),
     "K136a شاشةُ اليوم تبدأ بخطوةٍ واحدةٍ وسببها وزرٍ عربي، قبل الهدف والمشغّل");
   ok(!home.includes("XpBar") && (home.match(/role="progressbar"/g) ?? []).length === 1 &&
-    home.includes('data-testid="zeit-hinweis"') && home.includes("هدف 90 دقيقة افتراضي للجلسة فقط؛ مجموع تقديرات الخطة مستقل عنه"),
-    "K136b مؤشرُ هدفٍ واحدٌ فقط؛ لا شريط XP مكرّر، وهدف الجلسة منفصل عن تقديرات الخطة والوقت المقاس");
+    home.includes('data-testid="zeit-hinweis"') && home.includes("{plan.zielMin}") && home.includes("{totalMinutes}"),
+    "K136b مؤشر هدف واحد فقط؛ رقم هدف الجلسة وحمل اليوم يأتيان من الخطة ويظلان منفصلين عن القياس");
   ok(home.includes('<details className="dirb-extra" data-testid="today-extra">') &&
     home.includes('<details className="dirb-task-map" data-testid="today-task-map">') &&
     home.includes('href="/drucken"') && home.includes('href="/einstellungen"') &&
@@ -4697,7 +4813,7 @@ void 0;
     perfektExercise2?.promptDe.includes("(arbeiten)") &&
     perfektOrder?.promptDe.includes("Beginne mit „Ich“") &&
     perfektVerify1?.promptDe === "Heute habe ich viel ___. (lernen)" && perfektVerify1.text === perfektVerify1.promptDe &&
-    perfektVerify2?.promptDe.includes("بـPerfekt")),
+    perfektVerify2?.promptDe === "Formuliere den Satz im Perfekt." && perfektVerify2.promptAr?.includes("لعبت كرة القدم أمس")),
     "K162d تحديد قرائن Perfekt والتمييز بين الجملة الرئيسية والتابعة وتصحيح اختيار sein وترقيم الفراغات");
 
   const futurTopic = grammarMap["a1-futur-einf"];
@@ -4710,7 +4826,7 @@ void 0;
     futurTopic.summaryAr.includes("Präsens") && futurTopic.summaryAr.includes("الجملة الخبرية الرئيسية") &&
     futurExercise1?.promptDe.includes("(werden)") && futurExercise3?.promptDe.includes("(werden)") &&
     futurOrder?.promptDe.includes("Beginne mit „Wir“") && futurOrder.promptDe.includes("Zeitangabe steht vor der Ortsangabe") &&
-    futurTranslation?.promptDe.includes("بـFutur I") &&
+    futurTranslation?.promptDe === "Formuliere den Satz im Futur I." && futurTranslation.promptAr?.includes("سأتعلّم الألمانية") &&
     futurVerify2?.promptDe.includes("für nächstes Jahr") && futurVerify2.promptDe.includes("Futur I") &&
     futurVerify2.answer === "Ich werde nächstes Jahr Deutsch lernen."),
     "K162e تقييد Futur I بجملة رئيسية وإضافة Sie والتنبيه إلى Präsens وحسم تلميحات التمارين");
@@ -4856,7 +4972,7 @@ void 0;
   const removeProfileSource = profilesSource.slice(profilesSource.indexOf("export function removeProfile"));
   ok(taskSource.includes("⚠️ انتبه إلى هذه الأمثلة") && !taskSource.includes("أخطاء شائعة عند العرب") &&
     todaySource.includes("data-testid=\"session-goal-choice\"") && todaySource.includes("data-testid=\"session-more\"") &&
-    todaySource.includes("data-testid=\"session-stop-save\"") && todaySource.includes("مجموع تقديرات مهام اليوم") &&
+    todaySource.includes("data-testid=\"session-stop-save\"") && todaySource.includes("المسار الأساسي اليوم") && todaySource.includes("هذه تقديرات مستقلة لا تغيّر المؤقّت") &&
     clockHook.includes("SESSION_IDLE_TIMEOUT_MS") && clockHook.includes("PROFILE_WILL_CHANGE") &&
     clockHook.includes("recordStudyMinutes") && addProfileSource.includes("dispatchEvent(new Event(PROFILE_WILL_CHANGE))") &&
     addProfileSource.indexOf("dispatchEvent(new Event(PROFILE_WILL_CHANGE))") < addProfileSource.indexOf("d.active = id") &&
@@ -12800,11 +12916,10 @@ function collectR262(dir: string, out: string[] = []): string[] {
     "K263b الكتابة مهمّتان مختلفتان من B2، والتحدّث عرضُ Teil 2 ونقاشُ Teil 3 من B2");
   ok(SIM_FORM.lesenMinuten === 65 && SIM_FORM.hoerenMinuten === 40 && SIM_FORM.schreibenMinuten === 75 &&
      SIM_FORM.sprechenVorbereitungMinuten === 15 && SIM_FORM.passPunkte === 60 &&
-     simulationBestanden({ lesen: 60, hoeren: 60, schreiben: 60, sprechen: 60 }) &&
-     !simulationBestanden({ lesen: 100, hoeren: 100, schreiben: 100, sprechen: 59 }) &&
+     bewerteSimulation("goethe-b2", { lesenAnteil: 1, sprachAnteil: 0, hoerenAnteil: 1, schreibenRubrik: 100, schreibenZuKurz: false, sprechenRubrik: 100 }).gesamtUrteil === "not_assessed" &&
      rubrikPunkte([0, 0, 0, 0]) === 100 && schreibenZuKurz(74, 150) && !schreibenZuKurz(75, 150) &&
      schreibenPunkte(100, true, false) === 59 && punkteAusAnteil(0.6) === 60 && modulBestanden(60) && !modulBestanden(59),
-    "K263c الصيغة الرسمية والحكم: أزمنة Goethe (65/40/75+15) وعتبة 60، ولا تعويض بين الوحدات، وقاعدة نصف الطول تسقف الكتابة");
+    "K263c الأزمنة وقاعدة الطول وعتبة القسم الآلي ثابتة، لكن اكتمال التقرير الذاتي لا يصدر حكماً شاملاً");
   let richtig = 0, falschOk = true;
   for (const g of p1.lesen) {
     const t = texts.find((x) => x.id === g.textId)!;
@@ -12843,9 +12958,10 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const btSchwach = bewerteSimulation("telc-b2", { ...roh, sprechenRubrik: 40 });
   const bd = bewerteSimulation("dtz", roh);
   const bdA2 = bewerteSimulation("dtz", { ...roh, lesenAnteil: 0.5, sprachAnteil: 0.5, hoerenAnteil: 0.5, schreibenRubrik: 50, sprechenRubrik: 50 });
-  ok(bt.bestanden && !btSchwach.bestanden && bd.bestanden && !bdA2.bestanden &&
-     bd.zeilen.some((z) => z.wert === "B1") && bdA2.zeilen.some((z) => z.wert === "A2"),
-    "K264d أحكام الصيغ: telc تشترط الكتلتين (مكتوب 135 + شفهي 45) وDTZ يمنح مستوى B1/A2 لا نقطة");
+  ok([bt, btSchwach, bd, bdA2].every((result) => result.gesamtUrteil === "not_assessed") &&
+     [bd, bdA2].every((result) => result.zeilen.some((z) => z.titelAr === "مستوى DTZ الكلي" && z.wert === "غير مقاس")) &&
+     bt.zeilen.some((z) => z.titelAr.includes("المجموع المصحح آلياً فقط")),
+    "K264d الصيغ تفصل المصحح آلياً عن التقرير الذاتي؛ لا نجاح telc كلي ولا مستوى DTZ من المزيج");
 }
 
 /* ═══ K265 · R173 (E3): تحليلات الاستعداد — من السجلّ فقط، بلا تنبؤ ═══ */
@@ -12853,8 +12969,9 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const leerB = fertigkeitenBilanz(emptyProgress);
   const fazitLeer = bereitschaftsFazit(emptyProgress);
   ok(leerB.every((b) => b.versuche === 0 && b.mittel === null) && fazitLeer.versucheGesamt === 0 &&
-     fazitLeer.empfehlungAr === null && schwaechsteFertigkeit(leerB) === null && tageBisExamen(emptyProgress) === null,
-    "K265a بلا سجلّ: لا أرقام مخترعة ولا توصية — الحقول فارغة بصراحة");
+     fazitLeer.gesamtUrteil === "not_assessed" && fazitLeer.empfehlungAr === null &&
+     schwaechsteFertigkeit(leerB) === null && tageBisExamen(emptyProgress) === null,
+    "K265a بلا سجلّ: لا أرقام مخترعة ولا توصية ولا حكم شامل");
   const datum = (t: number) => new Date(Date.UTC(2026, 0, t)).toISOString();
   const simP = { ...emptyProgress, simulationen: [60, 80, 90, 95].map((l, i) => ({
     datum: datum(i + 1), seed: i, format: "goethe-b2",
@@ -12868,10 +12985,10 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const mitTermin = { ...emptyProgress, settings: { ...emptyProgress.settings, examDate: fmtD(new Date(2026, 5, 25)) } };
   const libB = readFileSync("lib/bereitschaft.ts", "utf8");
   const compB = readFileSync("components/bereitschaft.tsx", "utf8");
-  ok(tageBisExamen(mitTermin as never, new Date(2026, 5, 15)) === 10 && les.bandAr.includes("ثابتة فوق خطّ النجاح") &&
-     !/wahrscheinlichkeit/i.test(libB + compB) && compB.includes("وليست تنبؤًا") && !compB.includes("احتمال نجاح") &&
-     libB.includes("خطّ النجاح المرجعي = 60"),
-    "K265c عدّاد أيامٍ وصفيّ فقط، والنطاقات تسمّي السجلّ بخطّ 60 الرسمي — لا لغة تنبؤ في المصدرين");
+  ok(tageBisExamen(mitTermin as never, new Date(2026, 5, 15)) === 10 && les.bandAr.includes("الخط المرجعي الداخلي") &&
+     !/wahrscheinlichkeit/i.test(libB + compB) && compB.includes("لا يحسب نجاحاً كلياً") && !compB.includes("احتمال نجاح") &&
+     libB.includes("لا تنبؤ أو حكم نجاح/جاهزية شامل"),
+    "K265c عدّاد وصفي فقط، وخط 60 داخلي للأقسام الآلية؛ لا خلط أو تنبؤ أو حكم جاهزية");
 }
 
 /* ═══ K266 · R173 (E4): تقييم الكتابة بمعايير Goethe — إشارات آلية وقاعدة نصف الطول ═══ */
@@ -13186,33 +13303,45 @@ function collectR262(dir: string, out: string[] = []): string[] {
      readFileSync("components/kartenexport.tsx", "utf8").includes('data-testid="kartenexport-frequenz"'),
     `K311 ثلاثية R286: مجال ثقة المحاكاة (M5) قراءة ${lesen311?.mittel}±${lesen311?.band} من محاولتين، تردد مدونة التطبيق (M11) — «${haeufig311?.k.de}» ظهر ${haeufig311?.f.n} مرة، وبحث موحّد (M14) يعيد ${suche311.trefferGesamt} نتيجة لـ«Haus»`);
 }
-// ===== K312 (R287 · M3+M7+M15): Skill-Umschichtung, Niveau-Tempo, Wiedereinstieg =====
+// ===== K312 (R287/PA-021 · M3+M7+M15): sichere Förderdosis, Niveau-Tempo, Wiedereinstieg =====
 {
   const jetzt312 = new Date("2026-10-18T10:00:00Z");
-  const mkEintrag = (h: string, n: number) => Array.from({ length: n }, () => ({ h: h as never, ok: true, d: "2026-10-12" }));
-  const pM3 = { ...emptyProgress, kompetenzLog: [...mkEintrag("Lesen", 26), ...mkEintrag("Wortschatz", 7), ...mkEintrag("Hoeren", 7)] } as Progress;
-  const schicht312 = skillUmschichtung(pM3, jetzt312);
+  const mkEintrag = (h: string, n: number, richtig: number, evidenceType: "measured" | "self_report" = "measured") =>
+    Array.from({ length: n }, (_, i) => ({ h: h as never, ok: i < richtig, d: "2026-10-12", evidenceType, assisted: false }));
+  const pM3 = { ...emptyProgress, kompetenzLog: [
+    ...mkEintrag("Lesen", 10, 9),
+    ...mkEintrag("Hoeren", 10, 4),
+    ...mkEintrag("Grammatik", 20, 0, "self_report"),
+  ] } as Progress;
+  const foerder312 = skillFoerderplan(pM3, jetzt312);
+  const geplant312 = registriereSkillDosis(pM3, "Hoeren", jetzt312);
+  const warten312 = skillVerifikationen(geplant312, jetzt312)[0];
+  const bestanden312 = skillVerifikationen({ ...geplant312, kompetenzLog: [
+    ...(geplant312.kompetenzLog ?? []),
+    ...Array.from({ length: 3 }, (_, i) => ({ h: "Hoeren" as const, ok: true, d: "2026-10-21", evidenceType: "measured" as const, assisted: false, sourceId: `verify-${i}` })),
+  ] }, new Date("2026-10-22T10:00:00Z"))[0];
   const pB2 = { ...emptyProgress, plan: { ...emptyProgress.plan, day: 300 } } as Progress;
   const pB2Manuell = { ...pB2, settings: { ...pB2.settings, rateMode: "manual" as const, rate: 0.8 } } as Progress;
   const pRueck = { ...emptyProgress, streak: { last: "2026-10-10", count: 9 } } as Progress;
   const pRueckAktiv = resumeAusloesen(pRueck, jetzt312);
   const voll312 = buildDay(60, pRueckAktiv);
   const reduz312 = resumePlan(voll312, pRueckAktiv, jetzt312);
-  ok(schicht312.dominant === "Lesen" && schicht312.anteil > 0.6 && schicht312.vonMinuten === 20 && schicht312.ziele.length === 2 &&
+  ok(foerder312.dosen.length === 1 && foerder312.dosen[0].hand === "Hoeren" && foerder312.dosen[0].minuten === 20 &&
+     warten312?.status === "waiting" && warten312.cycle.verifyDueDate === "2026-10-21" && bestanden312?.status === "passed" &&
      rateFuerLevel("A1") === 0.9 && rateFuerLevel("B2") === 1.05 && effektiveRate(pB2) === 1.05 && effektiveRate(pB2Manuell) === 0.8 &&
      resumeZustand(pRueckAktiv, jetzt312).aktiv && resumeZustand(pRueckAktiv, jetzt312).sitzung === 1 &&
      reduz312.tasks.length < voll312.tasks.length && reduz312.tasks.every((t) => t.mandatory || t.exam || t.kind === "wiederholen") &&
      reduz312.zielMin === Math.ceil(voll312.zielMin / 2) && kritKarten312(pRueckAktiv, jetzt312) === 0 &&
      readFileSync("app/einstellungen/page.tsx", "utf8").includes('data-testid="rate-auto"') &&
      readFileSync("app/page.tsx", "utf8").includes("resumePlan") &&
-     readFileSync("components/skillplan.tsx", "utf8").includes('data-testid="skill-balance-plan"') &&
+     readFileSync("components/skillplan.tsx", "utf8").includes('data-testid="skill-remediation-plan"') &&
      readFileSync("components/wiedereinstieg.tsx", "utf8").includes('data-testid="wiedereinstieg-banner"'),
-    `K312 ثلاثية R287: هيمنة قراءة ${(schicht312.anteil * 100).toFixed(0)}٪ في 14 يومًا تُنتج إعادة توزيع 20 دقيقة (M3)، وتيرة B2 تلقائية ${effektiveRate(pB2)}× واليدوية محفوظة (M7)، وخطة استئناف ${reduz312.tasks.length}/${voll312.tasks.length} مهمة مراجعة فقط بعد غياب (M15)`);
+    `K312/PA-021: ضعف استماع مقاس يولّد جرعة ${foerder312.dosen[0]?.minuten}د بلا اعتماد self-report وتحققاً مؤجلاً ناجحاً؛ وتيرة B2 ${effektiveRate(pB2)}× وخطة الاستئناف ${reduz312.tasks.length}/${voll312.tasks.length}`);
 }
 // ===== K313 (R288 · M4+M8+M9): Daten-Kalibrierung, Fehlerkarten-Bestätigung, 48h-Wiederschreiben =====
 {
   const jetzt313 = new Date("2026-10-18T10:00:00Z");
-  const eintrag313 = (d: string, ok313: boolean) => ({ h: "Lesen" as const, ok: ok313, d });
+  const eintrag313 = (d: string, ok313: boolean) => ({ h: "Lesen" as const, ok: ok313, d, evidenceType: "measured" as const });
   const log313 = [
     ...Array.from({ length: 10 }, (_, i) => eintrag313("2026-10-10", i < 9)),
     ...Array.from({ length: 10 }, (_, i) => eintrag313("2026-09-25", i < 4)),
@@ -13366,17 +13495,19 @@ function collectR262(dir: string, out: string[] = []): string[] {
 {
   const prod320 = kollokProduktion(5, 6);
   const bericht320 = referenzBericht();
-  const b1Zeile320 = bericht320.find((z) => z.level === "B1");
-  const luecke320 = b2Luecke();
+  const u320 = lexikUebersicht();
+  const einheiten320 = lexikEinheiten();
   const schnell320 = schnellsteRezeptiv(emptyProgress as Progress, 5);
   ok(prod320.length === 6 && prod320.every((x) => x.rahmen.includes("_____") && x.kollok.includes(x.partner)) &&
      partnerOk("  wort ", "wort") && !partnerOk("laufen", "treffen") && partnerOk("treffen", "treffen") &&
-     bericht320.length === 5 && !!b1Zeile320 && b1Zeile320.kumuliert === 4262 && b1Zeile320.status === "darueber" &&
-     luecke320.kumuliert === 6202 && luecke320.luecke === 0 &&
-     schnell320.length === 5 && schnell320.every((x) => x.n > 0) &&
+     bericht320.length === 5 && bericht320.at(-1)?.kumuliertEindeutig === u320.eindeutigeEinheiten &&
+     u320.roheKarten > u320.eindeutigeEinheiten && u320.einzelwoerter + u320.mehrwortEinheiten === u320.eindeutigeEinheiten &&
+     u320.rezeptivImAppKorpus < u320.eindeutigeEinheiten && u320.produktivAusgewiesen === null && u320.externeAbdeckung === "not_assessed" &&
+     normalisiereLemma("das Ergebnis, -se") === "ergebnis" && new Set(einheiten320.map((e) => e.lemma)).size === einheiten320.length &&
+     schnell320.length === 5 && new Set(schnell320.map((x) => normalisiereLemma(x.karte.de))).size === 5 &&
      readFileSync("app/ueben/page.tsx", "utf8").includes("KollokProduktionStation") &&
      readFileSync("app/ueben/page.tsx", "utf8").includes("ReferenzPanel"),
-    `K320 ثلاثية R295 كما حُدّثت في R322: ست متلازمات إنتاج بإطارات مبتورة الشريك (A14)، تراكمي B1 عند ${b1Zeile320?.kumuliert} فوق مرجعه المنشور (A21)، وسقف B2 الاستقبالي عند ${luecke320.kumuliert} — الفجوة التي كانت معلنة أُغلقت بحزم التوسعة (A29)`);
+    `K320: ست متلازمات إنتاج؛ ${u320.roheKarten} بطاقة تطبّع إلى ${u320.eindeutigeEinheiten} وحدة فريدة (${u320.einzelwoerter} كلمة/${u320.mehrwortEinheiten} عبارة)، والتغطية الداخلية ${u320.rezeptivAbdeckungPct}% بلا مقارنة خارجية أو ادعاء إنتاج`);
 }
 
 
@@ -13499,35 +13630,55 @@ function collectR262(dir: string, out: string[] = []): string[] {
     "K275c زمن الافتتاحية ومبدؤها معلنان للمتعلم في رأس اليوم دائمًا");
 }
 
-// ===== K276 (R183 · M3): Adaptives Niveau je Fertigkeit. Pools nur aus der Bank der
-// Stufe, Treppe steigt bei >= 1/2 und stoppt bei 0/2, Schaetzung monoton in den
-// Antworten, Einstieg = schwächste Fertigkeit, nie über eine unbestandene Prüfung. =====
+// ===== K276 (R183 · M3 / PA-014): Vier verschiedene Quellen je Stufe. Ein einzelner
+// Treffer oder 2/4 reichen nie; Aufstieg erst ab 3/4. Das Ergebnis bleibt eine interne
+// rezeptiv-formbezogene Einstiegsempfehlung, keine CEFR- oder Produktionsmessung. =====
 {
-  const poolsOk = EINSTUFUNG_SKILLS.every((sk) =>
-    einstufungsFragen(sk).length === 8 &&
-    einstufungsFragen(sk).every((f, i) => f.stufe === (["A1", "A1", "A2", "A2", "B1", "B1", "B2", "B2"] as const)[i]) &&
-    einstufungsFragen(sk).every((f) => f.ex.type === "mc" && (f.ex.options?.length ?? 0) >= 2 && f.ex.options!.includes(String(f.ex.answer))) &&
-    (sk !== "hoeren" || einstufungsFragen(sk).every((f) => typeof f.audioSrc === "string" || !!f.ex.text)));
-  ok(poolsOk, "K276a لكلِّ مهارة 8 أسئلة (زوج لكلّ مستوى A1..B2) من بنك مستواها، خيارات صالحة والجواب بينها، وللسماع صوت أو نص بديل");
-  // Monotonie-Fuzz: kein Antwortmuster darf bei einer Verbesserung sinken
-  const schaetzungFuer = (sk: (typeof EINSTUFUNG_SKILLS)[number], muster: boolean[]) => {
-    let lauf = einstufungStart(sk);
-    for (const okk of muster) { if (lauf.fertig) break; lauf = einstufungAntwort(lauf, okk); }
-    return ["A0", "A1", "A2", "B1", "B2"].indexOf(lauf.schaetzung ?? "A0");
+  const erwarteteStufen = ["A1", "A2", "B1", "B2"] as const;
+  const poolsOk = EINSTUFUNG_SKILLS.every((skill) => {
+    const fragen = einstufungsFragen(skill);
+    return fragen.length === 16 && erwarteteStufen.every((stufe, stufeIndex) => {
+      const band = fragen.slice(stufeIndex * 4, stufeIndex * 4 + 4);
+      return band.length === 4 && band.every((frage) => frage.stufe === stufe) &&
+        new Set(band.map((frage) => frage.sourceId)).size === 4;
+    }) && fragen.every((frage) => frage.ex.type === "mc" && (frage.ex.options?.length ?? 0) >= 3 &&
+      frage.ex.options!.includes(String(frage.ex.answer))) &&
+      (skill !== "hoeren" || fragen.every((frage) => typeof frage.audioSrc === "string" || !!frage.ex.text));
+  });
+  ok(poolsOk && EINSTUFUNG_ITEMS_PRO_STUFE === 4 && EINSTUFUNG_BESTANDEN_AB === 3,
+    "K276a لكل مجال 16 بنداً: أربعة مصادر مختلفة لكل حزمة A1..B2، ≥3 خيارات والجواب بينها، وللسماع صوت أو نص بديل");
+
+  const laufFuer = (skill: (typeof EINSTUFUNG_SKILLS)[number], muster: boolean[]) => {
+    let lauf = einstufungStart(skill);
+    for (const antwort of muster) { if (lauf.fertig) break; lauf = einstufungAntwort(lauf, antwort); }
+    return lauf;
   };
+  const einTreffer = laufFuer("lesen", [true, false, false, false]);
+  const zweiTreffer = laufFuer("lesen", [true, true, false, false]);
+  const dreiTreffer = laufFuer("lesen", [true, true, true, false, false, false, true, true]);
+  const voll = laufFuer("lesen", Array.from({ length: 16 }, (_, index) => index % 4 !== 3));
+  ok(einTreffer.fertig && einTreffer.schaetzung === "A0" && zweiTreffer.fertig && zweiTreffer.schaetzung === "A0" &&
+    dreiTreffer.fertig && dreiTreffer.schaetzung === "A1" && voll.fertig && voll.schaetzung === "B2" &&
+    einstufungsBandErgebnisse(voll).every((band) => band.gesamt === 4 && band.richtig === 3 && band.bestanden),
+    "K276b تخمين 1/4 أو 2/4 لا يصعد؛ 3/4 يجتاز الحزمة فقط، وأربع رباعيات 3/4 تبلغ حزمة B2 مع سجل خام قابل للتتبع");
+
+  // Monotonie-Fuzz: تحسين إجابة لا يُنزل حزمة الدخول المقترحة.
+  const schaetzungFuer = (skill: (typeof EINSTUFUNG_SKILLS)[number], muster: boolean[]) =>
+    ["A0", "A1", "A2", "B1", "B2"].indexOf(laufFuer(skill, muster).schaetzung ?? "A0");
   let monoton = true;
-  for (const sk of EINSTUFUNG_SKILLS) {
-    for (let m = 0; m < 256 && monoton; m++) {
-      const muster = Array.from({ length: 8 }, (_, i) => !!(m & (1 << i)));
-      const basis = schaetzungFuer(sk, muster);
-      for (let i = 0; i < 8; i++) {
-        if (muster[i]) continue;
-        const besser = [...muster]; besser[i] = true;
-        if (schaetzungFuer(sk, besser) < basis) { monoton = false; break; }
+  const zufall = rng(276);
+  for (const skill of EINSTUFUNG_SKILLS) {
+    for (let fall = 0; fall < 1024 && monoton; fall++) {
+      const muster = Array.from({ length: 16 }, () => zufall() >= 0.5);
+      const basis = schaetzungFuer(skill, muster);
+      for (let index = 0; index < 16; index++) {
+        if (muster[index]) continue;
+        const besser = [...muster]; besser[index] = true;
+        if (schaetzungFuer(skill, besser) < basis) { monoton = false; break; }
       }
     }
   }
-  ok(monoton, "K276b رتابة صارمة: تحسين أيّ إجابة في أيّ نمط (256×4 مهارة) لا يُنزل التقدير أبدًا");
+  ok(monoton, "K276c رتابة صارمة: تحسين أي إجابة في 1024 نمطاً×4 مجالات لا ينزل حزمة الدخول");
   const alle = (v: string) => ({ lesen: v, hoeren: v, grammatik: v, wortschatz: v } as Record<(typeof EINSTUFUNG_SKILLS)[number], "A1">);
   const vLeer = einstiegsVorschlag(alle("B2") as never, emptyProgress);
   const vMitte = einstiegsVorschlag({ ...alle("B2"), lesen: "A2" } as never, emptyProgress);
@@ -13536,12 +13687,15 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const alleBestanden = { ...emptyProgress, exams: { 10: { score: 90, passed: true }, 94: { score: 90, passed: true }, 178: { score: 90, passed: true }, 276: { score: 90, passed: true } } };
   const vFrei = einstiegsVorschlag(alle("B2") as never, alleBestanden as typeof emptyProgress);
   ok(vLeer.tag === 10 && vLeer.pruefungsTag === 10 && vMitte.tag === 10 && vOffen.tag === 276 && vOffen.pruefungsTag === 276 && vFrei.tag === 277 && vFrei.pruefungsTag === undefined,
-    "K276c القفز الآمن: بلا امتحانات مجتازة يقف الاقتراح عند أوّل امتحان (يوم 10) مهما علت المهارات، وبعد A0–A2 عند امتحان B1 (276)، وبعد الكلّ عند 277 بلا سقف");
+    "K276d القفز الآمن: بلا امتحانات مجتازة يقف الاقتراح عند أوّل امتحان (يوم 10) مهما علت الحزم، وبعد A0–A2 عند امتحان B1 (276)، وبعد الكلّ عند 277 بلا سقف");
   const eSrc = readFileSync("components/einstufung.tsx", "utf8");
   const uSrc2 = readFileSync("app/ueben/page.tsx", "utf8");
   const setSrc = readFileSync("app/einstellungen/page.tsx", "utf8");
-  ok(uSrc2.includes('offen === "einstufung"') && eSrc.includes("einstiegsVorschlag") && eSrc.includes("ليس اختبار Goethe/telc رسميًا") && setSrc.includes("التشخيص التكيّفي"),
-    "K276d المحطة مركّبة في /ueben، تطبّق الاقتراح، بإفصاح «ليس اختبارًا رسميًا»، ومربوطة من الإعدادات");
+  ok(uSrc2.includes('offen === "einstufung"') && eSrc.includes("einstiegsVorschlag") &&
+    eSrc.includes("لا توجد هنا عينة كتابة أو تحدث") && eSrc.includes("لا تصدر النتيجة مستوى CEFR") &&
+    eSrc.includes("3 من 4") && eSrc.includes("4–16 بندًا") && eSrc.includes("scope: EINSTUFUNG_SCOPE") &&
+    EINSTUFUNG_SCOPE === "receptive-form-only-v1" && setSrc.includes("فرز الدخول الاستقبالي"),
+    "K276e المحطة مركبة وتصرح بغياب الكتابة/التحدث وعدم حكم CEFR، تعرض 3/4 و4–16، وتحفظ نطاق الدليل مع الاقتراح");
 }
 
 // ===== K277 (R184 · M4): Shadowing-Vergleich ist reine Wellen-/Zeit-Metrik an
@@ -13619,7 +13773,7 @@ function collectR262(dir: string, out: string[] = []): string[] {
   ok(kzSrc.includes('data-testid="sitzung-modus"') && kzSrc.includes('data-testid="sitzung-spieler"') &&
      kzSrc.includes('data-testid="sitzung-weiter"') && kzSrc.includes("naechsteOffeneGesamt") &&
      kzSrc.includes('data-testid={`aufgabe-chip-${i}`}') && kzSrc.includes("submitCurrent") &&
-     kzSrc.includes("اختر أيّ رقاقة متى شئت"),
+     kzSrc.includes("المسار الأساسي متسلسل") && kzSrc.includes("التعميق المتاح"),
     "K280 مشغّل الجلسة حاضر بشريطه وزرّ التالية، ورقائق الاختيار الحرّ وزرّ التسليم القائمان لم يُمسّا");
 }
 
@@ -13704,12 +13858,12 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const zEng = zielTempo(mkP(1, "2027-04-14"), "2026-10-14");
   const zUnreal = zielTempo(mkP(300, "2026-10-24"), "2026-10-14");
   const zKein = zielTempo(mkP(50), "2026-10-14");
-  const restMin = planMinBis(TOTAL_DAYS) - planMinBis(0);
+  const restMin = planKernMinBis(TOTAL_DAYS) - planKernMinBis(0);
   ok(zRuhig.status === "ruhig" && zRuhig.restPlanTage === 378 && zRuhig.minutenProTag <= ZIEL_MINUTEN_OK &&
      zEng.status === "eng" && zEng.minutenProTag > ZIEL_MINUTEN_OK && zEng.minutenProTag <= ZIEL_MINUTEN_MAX &&
      zUnreal.status === "unrealistisch" && !!zUnreal.fruehestesRuhigesDatum && zUnreal.fruehestesRuhigesDatum > "2026-10-24" &&
      zKein.status === "kein-datum" && Math.abs(zRuhig.minutenJePlanTag - restMin / 378) < 2,
-    "K285a الإيقاع مشتقّ من دقائق الخطة الكلية: سنة كاملة هادئة، ونصف سنة مشدود، و١٠ أيام لبقية B2 غير واقعية مع أقرب موعد أمين مقترح");
+    "K285a الإيقاع مشتقّ من دقائق المسار الأساسي: سنة كاملة داخل الحد المحافظ، ونصف سنة فوقه، و١٠ أيام لبقية B2 خارج الحد مع أقرب موعد أمين");
   // إعادة الإيقاع لا تلمس الخطة أبدًا: دقائق كلّ يوم وسقوفه ثابتة مهما كان التاريخ
   let deckelOk = true; let maxB1 = 0; let maxB2 = 0;
   for (let d = 2; d <= TOTAL_DAYS; d++) {
@@ -13723,10 +13877,10 @@ function collectR262(dir: string, out: string[] = []): string[] {
   ok(deckelOk, `K285b سقفا اليوم كما هما بعد كلّ جولات الإيقاع: B1 ‏${maxB1}≤240 وB2 ‏${maxB2}≤270 دقيقة مخططة`);
   const ztSrc = readFileSync("components/zieltempo.tsx", "utf8");
   const einSrc4 = readFileSync("app/einstellungen/page.tsx", "utf8");
-  ok(einSrc4.includes("<ZielTempoKarte progress={progress} />") && ztSrc.includes("لا نعرضه كخطة"),
-    "K285c بطاقة الإيقاع في قسم الموعد وتحذير الاستحالة الصريح حاضر");
-  ok(ztSrc.includes("لن نكسر سقوف الأيام ولا نحذف تغطية") && ztSrc.includes("تقديرات الخطة المخطّطة"),
-    "K285d الإفصاحان ملازمان: لا كسر سقوف/لا حذف تغطية، والدقائق تقديرات مخططة لا وعود");
+  ok(einSrc4.includes("<ZielTempoKarte progress={progress} />") && ztSrc.includes("خارج حدنا الداخلي"),
+    "K285c بطاقة الإيقاع في قسم الموعد وتحذير تجاوز الحد الداخلي حاضر");
+  ok(ztSrc.includes("لن نضغط الأيام أو نحذف محتوى") && ztSrc.includes("تقديرات المسار الأساسي") && ztSrc.includes("لا توجد بعد دراسة التزام ميدانية"),
+    "K285d الإفصاحات ملازمة: لا ضغط/حذف، والدقائق تقديرات أساسية لا وعود ولا دليل ميداني");
 }
 
 // ===== K286 (R193 · Redesign Etappe 1): Startseite ist ein Lernpfad — die 17
@@ -13806,8 +13960,8 @@ function collectR262(dir: string, out: string[] = []): string[] {
      pf.dokumentation.length === 11 && pf.dokumentation.every((d) => d.muster.length > 80 && d.punkte.length >= 3) &&
      pf.pruefung.length === 3,
     "K290a بنك التمريض مكتمل البنية: 133 كلمة بمثال (R199 تعميق + R204 أزواج لاتينية ومصطلحات دقيقة)، 10 حوارات ثنائية اللغة (R212: +2 على A2)، 11 نموذج توثيق مدرّجًا بقوائم فحص (R211)، 3 بطاقات صيغة");
-  ok(pfSrc.includes('data-testid="pflege-station"') && pfSrc.includes("ليست امتحانًا رسميًا") &&
-     !planSrc2.includes("pflege") && readFileSync("app/ueben/page.tsx", "utf8").includes('<PflegeStation />'),
+  ok(pfSrc.includes('data-testid="pflege-station"') && pfSrc.includes("لا يمنح تأهيلاً مهنياً") &&
+     pfSrc.includes('surfaceId="pflege"') && !planSrc2.includes("pflege") && readFileSync("app/ueben/page.tsx", "utf8").includes('<PflegeStation />'),
     "K290b المحطة مركّبة في /ueben كإضافة اختيارية، والخطة ذات الـ378 يومًا لا تعرف عنها شيئًا — الجسر لا يهزّ العمود الفقري");
 }
 
@@ -13901,7 +14055,7 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const lwSrc2 = readFileSync("components/lebenswelt.tsx", "utf8");
   ok(pf3.fachwissen.length === 40 && pf3.fachwissen.every((f) => f.optionen.length === 3 && f.richtig >= 0 && f.richtig < 3 && f.erklaerungAr.length > 30) &&
      new Set(pf3.fachwissen.map((f) => f.frage)).size === 40 && // R216: بنك المعرفة 20→40 سؤالًا
-     pfSrc3.includes('data-testid="pflege-fachwissen"') && pfSrc3.includes("تحدّدها ولايتك"),
+     pfSrc3.includes('data-testid="pflege-fachwissen"') && pfSrc3.includes("لدى ولايتك وجهتك الحالية") && pfSrc3.includes("ليست كفاءة مهنية"),
     "K296a بنك المعرفة المهنية: 40 سؤالًا فريدًا (R216: +20 في الوضعيات الجانبية والوقايات والحقوق والقيم) بسليم الخيارات وشرح عربي، موسومًا تدريبًا لا أسئلة ولاية رسمية");
   ok(lwSrc2.includes('data-testid="berufsstart"') && lwSrc2.includes("weg-berufsstart") &&
      !lwSrc2.includes("saveProgress") && !lwSrc2.includes("update(") &&
@@ -13929,7 +14083,7 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const satzIds = (bankRoh("sentences.json") as { id: string }[]).map((s) => s.id).filter((i) => i.startsWith("s-pfl-"));
   const pfSrc4 = readFileSync("components/pflege.tsx", "utf8");
   ok(vpfl.length === 93 && new Set(vpfl.map((k) => k.id)).size === 93 && satzIds.length === 64 &&
-     pfSrc4.includes("منسوجة أيضًا في حزم مفرداتك اليومية"),
+     pfSrc4.includes("مسار لغوي إضافي اختياري") && pfSrc4.includes("كل الحالات والنماذج أمثلة تدريبية داخلية"),
     "K298 التمريض منسوج في العام: 93 بطاقة vpfl (R206–R213) داخل حزم الصحة/العمل اليومية و64 جملة s-pfl (53 تغطيةً مكثّفة ≥3 بطاقات/جملة وفق K83b + 11 عبارة سرير مريض A1 من R209/R214) — كل كلمات المحطة الـ133 في التدفق العام في بنك الجمل — تصل في المهام العادية لا في محطة منفصلة فقط");
 }
 
@@ -14070,7 +14224,7 @@ function collectR262(dir: string, out: string[] = []): string[] {
 }
 
 
-// ── K323 (R298): توسعة B2 الاستقبالية — سدّ فجوة A29 بالكامل ببطاقات حقيقية ──
+// ── K323 (R298/PA-020): توسعة B2 مع جرد وحدات صادق بلا مساواة البطاقة بالـheadword ──
 {
   const jDecks = Object.entries(vocabMap).filter(([id]) => id.startsWith("j"));
   const jKarten = jDecks.flatMap(([, g]) => g.cards);
@@ -14079,7 +14233,10 @@ function collectR262(dir: string, out: string[] = []): string[] {
   ok(jKarten.filter((k) => k.pos === "Nomen").every((k) => !!k.article && !!k.farbe && ((k.article === "der" && k.farbe === "BLAU") || (k.article === "die" && k.farbe === "ROT") || (k.article === "das" && k.farbe === "GRÜN"))), "K323c أسماء التوسعة بأدواتها وترميز لون الجنس الصحيح");
   const alleIds = alleVokabeln.map((k) => k.id);
   ok(new Set(alleIds).size === alleIds.length, "K323d معرّفات كل البطاقات وحيدة بلا تكرار");
-  ok(b2Luecke().luecke === 0 && b2Luecke().kumuliert >= 4500, "K323e فجوة السقف الاستقبالي مغلقة: التراكمي " + b2Luecke().kumuliert + " ≥ 4500");
+  const lex323 = lexikUebersicht();
+  ok(lex323.roheKarten === alleVokabeln.length && lex323.eindeutigeEinheiten < lex323.roheKarten &&
+    lex323.externeAbdeckung === "not_assessed" && lex323.produktivAusgewiesen === null,
+  `K323e التوسعة تدخل جرداً مطبّعاً (${lex323.eindeutigeEinheiten} وحدة من ${lex323.roheKarten} بطاقة) بلا ادعاء سد قائمة خارجية أو إنتاج مقاس`);
   const decks323 = erweiterungDecks();
   const sitzung323 = erweiterungSitzung(decks323[0].id, emptyProgress as Progress, 3);
   ok(decks323.length === 16 && sitzung323.length === 8 && sitzung323.every((f) => f.optionen.length === 4 && new Set(f.optionen).size === 4 && f.optionen.includes(f.richtig)), "K323f جلسة التوسعة: 8 أسئلة × 4 خيارات وحيدة بلا تكرار، والصحيح بينها دائمًا");
@@ -14416,7 +14573,7 @@ function collectR262(dir: string, out: string[] = []): string[] {
   ok(stepperK335.includes('data-testid="today-stepper"') &&
     stepperK335.includes("([1, 2, 3, 4, 5] as TodayStepId[])") &&
     stepperK335.includes('data-testid={`today-step-${sid}`}') &&
-    stepperK335.includes("todayStepStatuses(") && stepperK335.includes("disabled={isLocked ||") &&
+    stepperK335.includes("todayStepStatuses(") && stepperK335.includes("disabled={taskLocked}") && stepperK335.includes("optionalLocked") &&
     homeK335.includes("<TodayStepper") && homeK335.includes("stationsStatus.get(todayStepOf(tk))") &&
     !homeK335.includes("resultOf={resultOf as any}"),
     "K335d خريطة اليوم ذات خمس محطات وحكم مركزي؛ أزرارها وقائمة المهام لا تتجاوز قفل محطة ولا cast any");
@@ -14496,21 +14653,25 @@ function collectR262(dir: string, out: string[] = []): string[] {
 }
 
 
-/* ═══ K337 — Wort-für-Wort-Audit: nur bestätigte Blocker, ausführbar in CI ═══ */
+/* ═══ K337 — PA-029: فاحص الأنماط المعروفة محدود الاسم والادعاء ومانع في CI ═══ */
 {
-  const wordAuditK337 = readFileSync("scripts/wort_fuer_wort_audit.ts", "utf8");
+  const patternLintK337 = readFileSync("scripts/known_pattern_content_lint.ts", "utf8");
   const packageK337 = JSON.parse(readFileSync("package.json", "utf8")) as { scripts?: Record<string, string> };
   const ciK337 = readFileSync(".github/workflows/ci.yml", "utf8");
-  ok(packageK337.scripts?.["audit:words"] === "tsx scripts/wort_fuer_wort_audit.ts" &&
+  ok(packageK337.scripts?.["lint:known-content-patterns"] === "tsx scripts/known_pattern_content_lint.ts" &&
+    packageK337.scripts?.["audit:words"] === "npm run lint:known-content-patterns" &&
+    !existsSync("scripts/wort_fuer_wort_audit.ts") &&
     ciK337.includes("runs-on: ubuntu-24.04") &&
     ciK337.includes("uses: actions/checkout@") && ciK337.includes("uses: actions/setup-node@") &&
-    ciK337.includes("run: npm run audit:words") && wordAuditK337.includes("process.exitCode = 1"),
-    "K337a التدقيق الحرفي أمر قابل لإعادة التشغيل وبوابة CI مانعة على Actions/Node الحديثة عند وجود blocker مؤكد");
-  ok(wordAuditK337.includes("re.lastIndex = 0") && wordAuditK337.includes("Rule regressions:") &&
-    wordAuditK337.includes("tp.examples || []") && wordAuditK337.includes("tp.verify || []") &&
-    wordAuditK337.includes("scanDe(f.falsch, \"fehler.json\", f.id, false)") &&
-    !wordAuditK337.includes('[/من فضلك/g, "من فضلك"]') && !wordAuditK337.includes('[/هراء/g, "هراء"]'),
-    "K337b اختبارات الانحدار تمنع تسرّب lastIndex وقواعد no-op، وتفصل أمثلة الخطأ المقصودة وتغطي examples/verify");
+    ciK337.includes("run: npm run lint:known-content-patterns") && patternLintK337.includes("process.exitCode = 1"),
+    "K337a PA-029: الاسم الدقيق هو فاحص أنماط معروفة، والاسم القديم تفويض توافق فقط، وCI يفشل عند مطابقة قاعدة حالية");
+  ok(patternLintK337.includes("re.lastIndex = 0") && patternLintK337.includes("Known-pattern rule regressions:") &&
+    patternLintK337.includes("current rule matches") && patternLintK337.includes("Out of scope:") &&
+    patternLintK337.includes("complete word-by-word review") && patternLintK337.includes("unlisted UI/content files") &&
+    patternLintK337.includes("tp.examples || []") && patternLintK337.includes("tp.verify || []") &&
+    patternLintK337.includes("scanDe(f.falsch, \"fehler.json\", f.id, false)") &&
+    !patternLintK337.includes('[/من فضلك/g, "من فضلك"]') && !patternLintK337.includes('[/هراء/g, "هراء"]'),
+    "K337b PA-029: التقرير يعلن المطابقات والنطاق والاستثناءات، والانحدارات تمنع lastIndex وقواعد no-op مع تغطية examples/verify");
 }
 
 
@@ -14594,14 +14755,14 @@ function collectR262(dir: string, out: string[] = []): string[] {
     (task) => abgegebenK340.has(task.id),
     (index) => aufgabeGesperrt(ritualNachAbgabeK340, index),
   );
-  ok(statusNachFehlerK340.get(1) === "done" && statusNachFehlerK340.get(2) === "active" && statusNachFehlerK340.get(3) === "locked",
-    "K340b R137: محاولة الاسترجاع غير المجتازة تُعد تسليماً وتفتح الدرس؛ تُرحّل للمراجعة ولا تحبس اليوم كله");
+  ok(statusNachFehlerK340.get(1) === "done" && statusNachFehlerK340.get(2) === "done" && statusNachFehlerK340.get(3) === "active" && statusNachFehlerK340.get(4) === "locked",
+    "K340b R137: محاولة الاسترجاع غير المجتازة تُعد تسليماً وتفتح محطة الأساسي التالية؛ التعميق لا يحبس اليوم");
 
-  const stationZweiK340 = groupTasksByTodayStep(planK340.tasks).get(2) ?? [];
-  const bisZweiK340 = new Set([...abgegebenK340, ...stationZweiK340.map((task) => task.id)]);
-  const statusBisZweiK340 = todayStepStatuses(planK340.tasks, (task) => bisZweiK340.has(task.id), () => false);
-  ok(statusBisZweiK340.get(2) === "done" && statusBisZweiK340.get(3) === "active" && statusBisZweiK340.get(4) === "locked",
-    "K340c R137: لا يفتح الاستماع/القراءة إلا تسليم الدرس، ثم تبقى محطة الإنتاج اللاحقة مقفلة");
+  const stationDreiK340 = groupTasksByTodayStep(planK340.tasks).get(3)?.filter(isCoreTask) ?? [];
+  const bisDreiK340 = new Set([...abgegebenK340, ...stationDreiK340.map((task) => task.id)]);
+  const statusBisDreiK340 = todayStepStatuses(planK340.tasks, (task) => bisDreiK340.has(task.id), () => false);
+  ok(statusBisDreiK340.get(3) === "done" && statusBisDreiK340.get(4) === "active" && statusBisDreiK340.get(5) === "locked",
+    "K340c R137: تسليم محطة الاستيعاب الأساسية يفتح الإنتاج، وتبقى المحطة الأبعد مقفلة");
 
   const pflichtGrammatikK340 = { id: "pflicht", kind: "grammatik", titleDe: "", titleAr: "", minutes: 5, mandatory: true } as DayTask;
   ok(todayStepOf(pflichtGrammatikK340) === 1 && groupTasksByTodayStep([pflichtGrammatikK340]).get(1)?.[0]?.id === "pflicht",
@@ -14989,6 +15150,425 @@ function collectR262(dir: string, out: string[] = []): string[] {
     "K405d Tool 202: ملف الدليل يثبت مؤشر التغطية والانتقالات فقط ويبقي صحة الشرح والمصدر والميدان معلقاً");
 }
 
+/* ═══ K406 — PA-015: مسار نبر وإيقاع B1/B2 بمقارنة قبل/بعد ═══ */
+{
+  const fokusK406 = new Set(PROSODIE_EINHEITEN.map((einheit) => einheit.fokus));
+  ok(PROSODIE_EINHEITEN.length === 12 && new Set(PROSODIE_EINHEITEN.map((einheit) => einheit.id)).size === 12 &&
+    ["B1", "B2"].every((level) => PROSODIE_EINHEITEN.filter((einheit) => einheit.level === level).length === 6) &&
+    ["satzakzent", "rhythmus", "reduktion", "verbindung", "intonation", "arabisch-transfer"].every((fokus) => fokusK406.has(fokus as never)),
+    "K406a PA-015: اثنتا عشرة وحدة فريدة تغطي النبر والإيقاع والاختزال والوصل والتنغيم وتداخل العربية في B1/B2 بالتساوي");
+
+  const tasksK406: Array<{ day: number; task: DayTask }> = [];
+  let totalK406 = 0;
+  for (let day = 1; day <= TOTAL_DAYS; day++) {
+    const plan = buildDay(day, emptyProgress);
+    totalK406 += plan.tasks.length;
+    for (const task of plan.tasks) if (task.pronunciationId) tasksK406.push({ day, task });
+  }
+  ok(totalK406 === 2500 && tasksK406.length === 14 &&
+    tasksK406.filter(({ day }) => day >= 179 && day <= 276).length === 7 &&
+    tasksK406.filter(({ day }) => day >= 277 && day <= 374).length === 7 &&
+    tasksK406.every(({ day, task }) => day > 167 && task.kind === "aussprache" &&
+      !!getProsodieEinheit(task.pronunciationId) && task.sentenceIds?.length === 4),
+    "K406b PA-015: سبع مقارنات في كل من B1/B2 بعد اليوم 167 مع إبقاء 2500 مهمة وأربع جمل نقل لكل خانة");
+
+  const tageK406 = tasksK406.map(({ day }) => day);
+  ok(tageK406[0] === 188 && tageK406.at(-1) === 370 &&
+    tageK406.slice(1).every((day, index) => day - tageK406[index] === 14),
+    "K406c PA-015: المسار يمتد من مطلع B1 إلى آخر أسبوع B2 عادي بلا فجوة تتجاوز 14 يوماً");
+
+  const uiK406 = readFileSync("components/tasks.tsx", "utf8");
+  const trainerK406 = readFileSync("components/aussprachetrainer.tsx", "utf8");
+  ok(uiK406.includes('data-testid="prosodie-before"') && uiK406.includes('data-testid="prosodie-after"') &&
+    uiK406.includes('data-testid="prosodie-comparison"') && uiK406.includes("فرق تقدير الإيقاع الداخلي") &&
+    uiK406.includes("لا يقيس الفونيمات أو اللكنة") && trainerK406.includes("الإيقاع والوقفات والمقاطع فقط"),
+    "K406d PA-015: الواجهة تفرض دورة قبل→إرشاد→بعد→مقارنة وتحد القياس بالإيقاع؛ لا checkbox أو حكم فونيمي/لكنة");
+}
+
+/* ═══ K407 — PA-033: حوكمة المحتوى الطبي/القانوني/المدني عالي المخاطر ═══ */
+{
+  const idsK407 = HIGH_RISK_GOVERNANCE.surfaces.map((surface) => surface.id);
+  const groupsK407 = HIGH_RISK_GOVERNANCE.surfaces.flatMap((surface) => surface.groups);
+  ok(idsK407.join(",") === "pflege,orientierung,lebenswelt,szenarien" &&
+    new Set(idsK407).size === 4 && groupsK407.reduce((sum, group) => sum + group.count, 0) === 301 &&
+    HIGH_RISK_GOVERNANCE.surfaces.every((surface) => surface.professionalReview === "pending" && surface.fieldValidation === "pending"),
+    "K407a PA-033: سجل واحد يحكم الأسطح الأربعة و301 عنصراً مع إبقاء مراجعة المختص والميدان معلقتين");
+
+  const factualK407 = groupsK407.filter((group) => group.source.status === "pending-external-verification");
+  ok(factualK407.length === 7 && factualK407.every((group) => group.source.url === null && group.source.asOf === null) &&
+    highRiskGovernanceFor("pflege").noticeAr.includes("ليست مرجعاً طبياً") &&
+    highRiskGovernanceFor("szenarien").noticeAr.includes("مواقف وشخصيات ونماذج خيالية"),
+    "K407b PA-033: نقص المصدر والتاريخ ظاهر كـnull لا مرجع مخترع، والطب/السيناريوهات تحمل حدود استعمال صريحة");
+
+  const noticeK407 = readFileSync("components/high-risk-notice.tsx", "utf8");
+  const auditK407 = readFileSync("scripts/high_risk_content_audit.ts", "utf8");
+  const packageK407 = JSON.parse(readFileSync("package.json", "utf8")) as { scripts?: Record<string, string> };
+  const ciK407 = readFileSync(".github/workflows/ci.yml", "utf8");
+  ok(noticeK407.includes("مراجعة تصنيف المخاطر:") && noticeK407.includes("ليست مراجعة للوقائع") &&
+    noticeK407.includes("المصدر الرسمي وتاريخ الصلاحية") && noticeK407.includes("مراجعة مختص: معلّقة") &&
+    packageK407.scripts?.["audit:high-risk-content"] === "tsx scripts/high_risk_content_audit.ts" &&
+    ciK407.includes("run: npm run audit:high-risk-content") && auditK407.includes("external specialist review remains pending"),
+    "K407c PA-033: التحذير المشترك والبوابة المستقلة موصولان بـCI ويمنعان تحويل الحراسة إلى توقيع اختصاصي");
+}
+
+/* ═══ K408 — PA-034-02: الدفعة الثانية المحدودة لمراجعة تصريف المفردات ═══ */
+{
+  const reviewK408 = JSON.parse(readFileSync("scripts/fixtures/vocab-posinfo-reviewed-02.json", "utf8")) as {
+    schema: string;
+    batch: string;
+    scope: string;
+    entries: { id: string; deck: string; level: string; de: string; previousPosInfo: string; posInfo: string }[];
+  };
+  const vocabK408 = bankRoh("vocab.json") as Record<string, { cards: { id: string; de: string; posInfo?: string }[] }>;
+  const cardsK408 = new Map(Object.entries(vocabK408).flatMap(([deck, value]) =>
+    value.cards.map((card) => [card.id, { deck, ...card }] as const)));
+  const levelsK408 = reviewK408.entries.reduce<Record<string, number>>((counts, entry) => {
+    counts[entry.level] = (counts[entry.level] ?? 0) + 1;
+    return counts;
+  }, {});
+  ok(reviewK408.schema === "wegb2-reviewed-vocab-posinfo-batch-v1" && reviewK408.batch === "PA-034-02" &&
+    reviewK408.entries.length === 59 && new Set(reviewK408.entries.map((entry) => entry.id)).size === 59 &&
+    JSON.stringify(levelsK408) === JSON.stringify({ A1: 26, A2: 9, B1: 16, B2: 8 }),
+    "K408a PA-034-02: سجل القرار الثاني محدود بـ59 بطاقة فريدة وتوزيعه A1=26/A2=9/B1=16/B2=8");
+  ok(reviewK408.entries.every((entry) => {
+    const card = cardsK408.get(entry.id);
+    return card?.deck === entry.deck && card.de === entry.de && card.posInfo === entry.posInfo &&
+      entry.previousPosInfo !== entry.posInfo && !entry.de.includes(" ") && entry.posInfo.split(",").length === 3;
+  }),
+    "K408b PA-034-02: كل قرار مربوط بالمعرف/البنك والرأس المفرد وثلاث صيغ مصححة تختلف عن القيمة السابقة");
+  const patchK408 = readFileSync("scripts/patches/apply_vocab_posinfo_review_pa034_02.py", "utf8");
+  const auditK408 = readFileSync("scripts/vocab_posinfo_audit.ts", "utf8");
+  ok(patchK408.includes("current == entry[\"posInfo\"]") && patchK408.includes("current != entry[\"previousPosInfo\"]") &&
+    auditK408.includes("reviewedIds.size !== 714") && auditK408.includes("does not certify every posInfo field") &&
+    reviewK408.scope.includes("not external linguistic sign-off"),
+    "K408c PA-034-02: الرقعة قابلة للإعادة ومقفلة بالقيمة السابقة، والبوابة تبقي الإجمالي الحالي محدوداً بلا اعتماد بقية الحقول");
+}
+
+/* ═══ K409 — PA-034-03: الدفعة الثالثة المحدودة لمراجعة تصريف المفردات ═══ */
+{
+  const reviewK409 = JSON.parse(readFileSync("scripts/fixtures/vocab-posinfo-reviewed-03.json", "utf8")) as {
+    schema: string;
+    batch: string;
+    scope: string;
+    entries: { id: string; deck: string; level: string; de: string; previousPosInfo: string; posInfo: string }[];
+  };
+  const vocabK409 = bankRoh("vocab.json") as Record<string, { cards: { id: string; de: string; posInfo?: string }[] }>;
+  const cardsK409 = new Map(Object.entries(vocabK409).flatMap(([deck, value]) =>
+    value.cards.map((card) => [card.id, { deck, ...card }] as const)));
+  const levelsK409 = reviewK409.entries.reduce<Record<string, number>>((counts, entry) => {
+    counts[entry.level] = (counts[entry.level] ?? 0) + 1;
+    return counts;
+  }, {});
+  ok(reviewK409.schema === "wegb2-reviewed-vocab-posinfo-batch-v1" && reviewK409.batch === "PA-034-03" &&
+    reviewK409.entries.length === 80 && new Set(reviewK409.entries.map((entry) => entry.id)).size === 80 &&
+    JSON.stringify(levelsK409) === JSON.stringify({ A1: 10, A2: 8, B1: 40, B2: 22 }),
+    "K409a PA-034-03: سجل القرار الثالث محدود بـ80 بطاقة فريدة وتوزيعه A1=10/A2=8/B1=40/B2=22");
+  ok(reviewK409.entries.every((entry) => {
+    const card = cardsK409.get(entry.id);
+    return card?.deck === entry.deck && card.de === entry.de && card.posInfo === entry.posInfo &&
+      entry.previousPosInfo !== entry.posInfo && !entry.de.includes(" ") && entry.posInfo.split(",").length === 3;
+  }),
+    "K409b PA-034-03: كل قرار مربوط بالمعرف/البنك والرأس المفرد وثلاث صيغ مصححة تختلف عن القيمة السابقة");
+  const patchK409 = readFileSync("scripts/patches/apply_vocab_posinfo_review_pa034_03.py", "utf8");
+  const auditK409 = readFileSync("scripts/vocab_posinfo_audit.ts", "utf8");
+  ok(patchK409.includes("current == entry[\"posInfo\"]") && patchK409.includes("current != entry[\"previousPosInfo\"]") &&
+    auditK409.includes("reviewedIds.size !== 714") && auditK409.includes("does not certify every posInfo field") &&
+    reviewK409.scope.includes("not external linguistic sign-off"),
+    "K409c PA-034-03: الرقعة قابلة للإعادة ومقفلة بالقيمة السابقة، والبوابة تبقي الإجمالي الحالي محدوداً بلا اعتماد بقية الحقول");
+}
+
+/* ═══ K410 — PA-034-04: الدفعة الرابعة المحدودة لمراجعة تصريف المفردات ═══ */
+{
+  const reviewK410 = JSON.parse(readFileSync("scripts/fixtures/vocab-posinfo-reviewed-04.json", "utf8")) as {
+    schema: string;
+    batch: string;
+    scope: string;
+    entries: { id: string; deck: string; level: string; de: string; previousPosInfo: string; posInfo: string }[];
+  };
+  const vocabK410 = bankRoh("vocab.json") as Record<string, { cards: { id: string; de: string; posInfo?: string }[] }>;
+  const cardsK410 = new Map(Object.entries(vocabK410).flatMap(([deck, value]) =>
+    value.cards.map((card) => [card.id, { deck, ...card }] as const)));
+  const levelsK410 = reviewK410.entries.reduce<Record<string, number>>((counts, entry) => {
+    counts[entry.level] = (counts[entry.level] ?? 0) + 1;
+    return counts;
+  }, {});
+  const ierenK410 = reviewK410.entries.filter((entry) => entry.de.endsWith("ieren") && entry.de !== "frieren");
+  ok(reviewK410.schema === "wegb2-reviewed-vocab-posinfo-batch-v1" && reviewK410.batch === "PA-034-04" &&
+    reviewK410.entries.length === 90 && new Set(reviewK410.entries.map((entry) => entry.id)).size === 90 &&
+    JSON.stringify(levelsK410) === JSON.stringify({ A1: 6, A2: 16, B1: 32, B2: 36 }) && ierenK410.length === 49,
+    "K410a PA-034-04: سجل القرار الرابع محدود بـ90 بطاقة فريدة، منها 49 فعل -ieren، وتوزيعه A1=6/A2=16/B1=32/B2=36");
+  ok(reviewK410.entries.every((entry) => {
+    const card = cardsK410.get(entry.id);
+    return card?.deck === entry.deck && card.de === entry.de && card.posInfo === entry.posInfo &&
+      entry.previousPosInfo !== entry.posInfo && !entry.de.includes(" ") && entry.posInfo.split(",").length === 3;
+  }) && !reviewK410.entries.some((entry) => entry.de === "frieren") &&
+    ierenK410.every((entry) => !entry.posInfo.split(",")[2].trim().split(" ").at(-1)?.startsWith("ge")) &&
+    reviewK410.entries.some((entry) => entry.de === "passieren" && entry.posInfo === "passiert, passierte, ist passiert"),
+    "K410b PA-034-04: القرارات تطابق البنك، و49 فعل -ieren بلا ge-، مع استبعاد frieren وحسم passieren سياقياً");
+  const patchK410 = readFileSync("scripts/patches/apply_vocab_posinfo_review_pa034_04.py", "utf8");
+  const auditK410 = readFileSync("scripts/vocab_posinfo_audit.ts", "utf8");
+  ok(patchK410.includes("current == entry[\"posInfo\"]") && patchK410.includes("current != entry[\"previousPosInfo\"]") &&
+    auditK410.includes("reviewedIds.size !== 714") && auditK410.includes("does not certify every posInfo field") &&
+    reviewK410.scope.includes("not external linguistic sign-off"),
+    "K410c PA-034-04: الرقعة قابلة للإعادة ومقفلة بالقيمة السابقة، والبوابة تبقي الإجمالي الحالي محدوداً بلا اعتماد بقية الحقول");
+}
+
+/* ═══ K411 — PA-034-05: الدفعة الخامسة المحدودة لمراجعة تصريف المفردات ═══ */
+{
+  const reviewK411 = JSON.parse(readFileSync("scripts/fixtures/vocab-posinfo-reviewed-05.json", "utf8")) as {
+    schema: string;
+    batch: string;
+    scope: string;
+    entries: { id: string; deck: string; level: string; de: string; previousPosInfo: string; posInfo: string }[];
+  };
+  const vocabK411 = bankRoh("vocab.json") as Record<string, { cards: { id: string; de: string; posInfo?: string }[] }>;
+  const cardsK411 = new Map(Object.entries(vocabK411).flatMap(([deck, value]) =>
+    value.cards.map((card) => [card.id, { deck, ...card }] as const)));
+  const levelsK411 = reviewK411.entries.reduce<Record<string, number>>((counts, entry) => {
+    counts[entry.level] = (counts[entry.level] ?? 0) + 1;
+    return counts;
+  }, {});
+  const decisionsK411 = new Map(reviewK411.entries.map((entry) => [entry.de, entry.posInfo]));
+  ok(reviewK411.schema === "wegb2-reviewed-vocab-posinfo-batch-v1" && reviewK411.batch === "PA-034-05" &&
+    reviewK411.entries.length === 86 && new Set(reviewK411.entries.map((entry) => entry.id)).size === 86 &&
+    JSON.stringify(levelsK411) === JSON.stringify({ A1: 3, A2: 11, B1: 42, B2: 30 }),
+    "K411a PA-034-05: سجل القرار الخامس محدود بـ86 بطاقة فريدة وتوزيعه A1=3/A2=11/B1=42/B2=30");
+  ok(reviewK411.entries.every((entry) => {
+    const card = cardsK411.get(entry.id);
+    return card?.deck === entry.deck && card.de === entry.de && card.posInfo === entry.posInfo &&
+      entry.previousPosInfo !== entry.posInfo && !entry.de.includes(" ") && entry.posInfo.split(",").length === 3;
+  }) && decisionsK411.get("anwenden") === "wendet an, wandte an, hat angewandt" &&
+    decisionsK411.get("landen") === "landet, landete, ist gelandet" &&
+    decisionsK411.get("starten") === "startet, startete, ist gestartet" &&
+    decisionsK411.get("senden") === "sendet, sendete, hat gesendet" &&
+    decisionsK411.get("wenden") === "wendet, wendete, hat gewendet" &&
+    decisionsK411.get("verzweifeln") === "verzweifelt, verzweifelte, ist verzweifelt",
+    "K411b PA-034-05: القرارات تطابق البنك وتحرس بدائل wenden/senden والمساعد السياقي للحركة وتغير الحالة");
+  const patchK411 = readFileSync("scripts/patches/apply_vocab_posinfo_review_pa034_05.py", "utf8");
+  const auditK411 = readFileSync("scripts/vocab_posinfo_audit.ts", "utf8");
+  ok(patchK411.includes("current == entry[\"posInfo\"]") && patchK411.includes("current != entry[\"previousPosInfo\"]") &&
+    auditK411.includes("reviewedIds.size !== 714") && auditK411.includes("does not certify every posInfo field") &&
+    reviewK411.scope.includes("not external linguistic sign-off"),
+    "K411c PA-034-05: الرقعة قابلة للإعادة ومقفلة بالقيمة السابقة، والبوابة تبقي الإجمالي الحالي محدوداً بلا اعتماد بقية الحقول");
+}
+
+/* ═══ K412 — PA-034-06: الدفعة السادسة السياقية لمراجعة تصريف المفردات ═══ */
+{
+  const reviewK412 = JSON.parse(readFileSync("scripts/fixtures/vocab-posinfo-reviewed-06.json", "utf8")) as {
+    schema: string;
+    batch: string;
+    scope: string;
+    entries: { id: string; deck: string; level: string; de: string; previousPosInfo: string; posInfo: string }[];
+  };
+  const vocabK412 = bankRoh("vocab.json") as Record<string, { cards: { id: string; de: string; posInfo?: string }[] }>;
+  const cardsK412 = new Map(Object.entries(vocabK412).flatMap(([deck, value]) =>
+    value.cards.map((card) => [card.id, { deck, ...card }] as const)));
+  const levelsK412 = reviewK412.entries.reduce<Record<string, number>>((counts, entry) => {
+    counts[entry.level] = (counts[entry.level] ?? 0) + 1;
+    return counts;
+  }, {});
+  const decisionsK412 = new Map(reviewK412.entries.map((entry) => [entry.id, entry.posInfo]));
+  const reflexiveK412 = reviewK412.entries.filter((entry) => entry.de.startsWith("sich "));
+  ok(reviewK412.schema === "wegb2-reviewed-vocab-posinfo-batch-v1" && reviewK412.batch === "PA-034-06" &&
+    reviewK412.entries.length === 75 && new Set(reviewK412.entries.map((entry) => entry.id)).size === 75 &&
+    JSON.stringify(levelsK412) === JSON.stringify({ A0: 1, A1: 8, A2: 8, B1: 26, B2: 32 }) &&
+    reflexiveK412.length === 6,
+    "K412a PA-034-06: سجل القرار السادس محدود بـ75 بطاقة فريدة، منها 6 انعكاسية، وتوزيعه A0=1/A1=8/A2=8/B1=26/B2=32");
+  ok(reviewK412.entries.every((entry) => {
+    const card = cardsK412.get(entry.id);
+    return card?.deck === entry.deck && card.de === entry.de && card.posInfo === entry.posInfo &&
+      entry.previousPosInfo !== entry.posInfo && entry.posInfo.split(",").length === 3;
+  }) && decisionsK412.get("v1437") === "beweist, bewies, hat bewiesen" &&
+    decisionsK412.get("j12-natur-tiere-054") === "friert, fror, hat gefroren" &&
+    decisionsK412.get("vy-natur-024") === "schwimmt, schwamm, ist geschwommen" &&
+    decisionsK412.get("ve-kueche--019") === "verdirbt, verdarb, ist verdorben" &&
+    decisionsK412.get("r324b1-029") === "wiegt, wog, hat gewogen" &&
+    decisionsK412.get("j09-stadt-wohnen-verkehr-020") === "überholt, überholte, hat überholt" &&
+    decisionsK412.get("vz-welt-b-014") === "übersetzt, übersetzte, hat übersetzt" &&
+    decisionsK412.get("r317b1-080") === "konzentriert sich, konzentrierte sich, hat sich konzentriert",
+    "K412b PA-034-06: القرارات تطابق البنك وتحرس القوي والمساعد السياقي وعدم فصل über- وإدراج الضمير الانعكاسي");
+  const patchK412 = readFileSync("scripts/patches/apply_vocab_posinfo_review_pa034_06.py", "utf8");
+  const auditK412 = readFileSync("scripts/vocab_posinfo_audit.ts", "utf8");
+  ok(patchK412.includes("current == entry[\"posInfo\"]") && patchK412.includes("current != entry[\"previousPosInfo\"]") &&
+    auditK412.includes("reviewedIds.size !== 714") && auditK412.includes("does not certify every posInfo field") &&
+    reviewK412.scope.includes("triage only") && reviewK412.scope.includes("not external linguistic sign-off"),
+    "K412c PA-034-06: الرقعة قابلة للإعادة ومقفلة بالقيمة السابقة، والبوابة تبقي الإجمالي الحالي محدوداً بلا اعتماد بقية الحقول");
+}
+
+/* ═══ K413 — PA-034-07: الدفعة السابعة للرؤوس المركبة والانعكاسية ═══ */
+{
+  const reviewK413 = JSON.parse(readFileSync("scripts/fixtures/vocab-posinfo-reviewed-07.json", "utf8")) as {
+    schema: string;
+    batch: string;
+    scope: string;
+    entries: { id: string; deck: string; level: string; de: string; previousPosInfo: string; posInfo: string }[];
+  };
+  const vocabK413 = bankRoh("vocab.json") as Record<string, { cards: { id: string; de: string; posInfo?: string }[] }>;
+  const cardsK413 = new Map(Object.entries(vocabK413).flatMap(([deck, value]) =>
+    value.cards.map((card) => [card.id, { deck, ...card }] as const)));
+  const levelsK413 = reviewK413.entries.reduce<Record<string, number>>((counts, entry) => {
+    counts[entry.level] = (counts[entry.level] ?? 0) + 1;
+    return counts;
+  }, {});
+  const decisionsK413 = new Map(reviewK413.entries.map((entry) => [entry.id, entry.posInfo]));
+  const multiwordK413 = reviewK413.entries.filter((entry) => entry.de.includes(" "));
+  const reflexiveK413 = reviewK413.entries.filter((entry) => entry.de.startsWith("sich "));
+  ok(reviewK413.schema === "wegb2-reviewed-vocab-posinfo-batch-v1" && reviewK413.batch === "PA-034-07" &&
+    reviewK413.entries.length === 62 && new Set(reviewK413.entries.map((entry) => entry.id)).size === 62 &&
+    JSON.stringify(levelsK413) === JSON.stringify({ A1: 13, A2: 47, B1: 1, B2: 1 }) &&
+    multiwordK413.length === 60 && reflexiveK413.length === 22,
+    "K413a PA-034-07: سجل القرار السابع محدود بـ62 بطاقة؛ 60 رأساً مركباً و22 انعكاسياً، وتوزيعه A1=13/A2=47/B1=1/B2=1");
+  ok(reviewK413.entries.every((entry) => {
+    const card = cardsK413.get(entry.id);
+    return card?.deck === entry.deck && card.de === entry.de && card.posInfo === entry.posInfo &&
+      entry.previousPosInfo !== entry.posInfo && entry.posInfo.split(",").length === 3;
+  }) && decisionsK413.get("va-modort-006") === "muss nicht, musste nicht, hat nicht gemusst" &&
+    decisionsK413.get("vw-a2all-026") === "muss absagen, musste absagen, hat absagen müssen" &&
+    decisionsK413.get("ve-kueche--005") === "lässt kochen, ließ kochen, hat kochen lassen" &&
+    decisionsK413.get("vc-medien-027") === "bereitet sich auf ... vor, bereitete sich auf ... vor, hat sich auf ... vorbereitet" &&
+    decisionsK413.get("vc-medien-039") === "hängt von ... ab, hing von ... ab, hat von ... abgehangen" &&
+    decisionsK413.get("r322b1-067") === "umarmt, umarmte, hat umarmt" &&
+    decisionsK413.get("j02-gesellschaft-recht-017") === "unterstützt, unterstützte, hat unterstützt",
+    "K413b PA-034-07: القرارات تطابق البنك وتحرس Ersatzinfinitiv والانعكاس ومعنى abhängen وعدم فصل umarmen/unterstützen");
+  const patchK413 = readFileSync("scripts/patches/apply_vocab_posinfo_review_pa034_07.py", "utf8");
+  const auditK413 = readFileSync("scripts/vocab_posinfo_audit.ts", "utf8");
+  ok(patchK413.includes("current == entry[\"posInfo\"]") && patchK413.includes("current != entry[\"previousPosInfo\"]") &&
+    auditK413.includes("reviewedIds.size !== 714") && auditK413.includes("does not certify every posInfo field") &&
+    reviewK413.scope.includes("triage only") && reviewK413.scope.includes("not external linguistic sign-off"),
+    "K413c PA-034-07: الرقعة قابلة للإعادة ومقفلة بالقيمة السابقة، والبوابة تعلن 714 قراراً داخلياً فقط بلا اعتماد بقية الحقول");
+}
+
+/* ═══ K414 — PA-034-08: الدفعة الثامنة للرؤوس المركبة B1 ═══ */
+{
+  const reviewK414 = JSON.parse(readFileSync("scripts/fixtures/vocab-posinfo-reviewed-08.json", "utf8")) as {
+    schema: string;
+    batch: string;
+    scope: string;
+    entries: { id: string; deck: string; level: string; de: string; previousPosInfo: string; posInfo: string }[];
+  };
+  const vocabK414 = bankRoh("vocab.json") as Record<string, { cards: { id: string; de: string; posInfo?: string }[] }>;
+  const cardsK414 = new Map(Object.entries(vocabK414).flatMap(([deck, value]) =>
+    value.cards.map((card) => [card.id, { deck, ...card }] as const)));
+  const decisionsK414 = new Map(reviewK414.entries.map((entry) => [entry.id, entry.posInfo]));
+  const reflexiveK414 = reviewK414.entries.filter((entry) => entry.de.split(" ").includes("sich"));
+  const deliberatelyUnchangedK414 = [
+    "vh-projekt-016", "vi-stadt-u-016", "vi-funktio-000", "vi-funktio-010",
+    "vi-funktio-014", "vv-verwal-012", "vv-gefueh-013",
+  ];
+  ok(reviewK414.schema === "wegb2-reviewed-vocab-posinfo-batch-v1" && reviewK414.batch === "PA-034-08" &&
+    reviewK414.entries.length === 87 && new Set(reviewK414.entries.map((entry) => entry.id)).size === 87 &&
+    reviewK414.entries.every((entry) => entry.level === "B1" && entry.de.includes(" ")) &&
+    reflexiveK414.length === 49 && deliberatelyUnchangedK414.every((id) => !decisionsK414.has(id)),
+    "K414a PA-034-08: سجل القرار الثامن محدود بـ87 رأس B1 مركباً، منها 49 انعكاسياً، ولا يحوّل الرؤوس السبعة المستبعدة إلى تصحيحات");
+  ok(reviewK414.entries.every((entry) => {
+    const card = cardsK414.get(entry.id);
+    return card?.deck === entry.deck && card.de === entry.de && card.posInfo === entry.posInfo &&
+      entry.previousPosInfo !== entry.posInfo && entry.posInfo.split(",").length === 3;
+  }) && decisionsK414.get("vg-staatx-701") === "bleibt sachlich, blieb sachlich, ist sachlich geblieben" &&
+    decisionsK414.get("vi-funktio-005") === "bezieht sich auf, bezog sich auf, hat sich auf ... bezogen" &&
+    decisionsK414.get("vi-funktio-013") === "gilt als, galt als, hat als ... gegolten" &&
+    decisionsK414.get("vm-b1z-020") === "lässt sich ablenken, ließ sich ablenken, hat sich ablenken lassen" &&
+    decisionsK414.get("vu-b1p-027") === "lässt es darauf ankommen, ließ es darauf ankommen, hat es darauf ankommen lassen" &&
+    decisionsK414.get("r316b1-065") === "wird geboren, wurde geboren, ist geboren worden" &&
+    decisionsK414.get("r321b1-047") === "stößt sich, stieß sich, hat sich gestoßen",
+    "K414b PA-034-08: القرارات تطابق البنك وتحرس الفعل الحامل والانعكاس والقوة وErsatzinfinitiv والمبني للمجهول");
+  const patchK414 = readFileSync("scripts/patches/apply_vocab_posinfo_review_pa034_08.py", "utf8");
+  const auditK414 = readFileSync("scripts/vocab_posinfo_audit.ts", "utf8");
+  ok(patchK414.includes("current == entry[\"posInfo\"]") && patchK414.includes("current != entry[\"previousPosInfo\"]") &&
+    auditK414.includes("reviewedIds.size !== 714") && auditK414.includes("does not certify every posInfo field") &&
+    reviewK414.scope.includes("triage only") && reviewK414.scope.includes("seven other B1 heads") &&
+    reviewK414.scope.includes("not external linguistic sign-off"),
+    "K414c PA-034-08: الرقعة قابلة للإعادة ومقفلة بالقيمة السابقة، والبوابة تعلن 714 قراراً داخلياً مع حفظ الاستبعادات وحدود الادعاء");
+}
+
+/* ═══ K415 — PA-034-09: الدفعة التاسعة للرؤوس المركبة B2 ═══ */
+{
+  const reviewK415 = JSON.parse(readFileSync("scripts/fixtures/vocab-posinfo-reviewed-09.json", "utf8")) as {
+    schema: string;
+    batch: string;
+    scope: string;
+    entries: { id: string; deck: string; level: string; de: string; previousPosInfo: string; posInfo: string }[];
+  };
+  const vocabK415 = bankRoh("vocab.json") as Record<string, { cards: { id: string; de: string; posInfo?: string }[] }>;
+  const cardsK415 = new Map(Object.entries(vocabK415).flatMap(([deck, value]) =>
+    value.cards.map((card) => [card.id, { deck, ...card }] as const)));
+  const decisionsK415 = new Map(reviewK415.entries.map((entry) => [entry.id, entry.posInfo]));
+  const reflexiveK415 = reviewK415.entries.filter((entry) => entry.de.split(" ").includes("sich"));
+  const deliberatelyUnchangedK415 = [
+    "v188", "v189", "v193", "v198", "v235", "v246", "v265", "v266", "v278", "v381",
+    "v467", "v478", "v596", "v674", "v693", "v718", "v728", "v753", "j10-meinung-diskussion-044",
+  ];
+  ok(reviewK415.schema === "wegb2-reviewed-vocab-posinfo-batch-v1" && reviewK415.batch === "PA-034-09" &&
+    reviewK415.entries.length === 49 && new Set(reviewK415.entries.map((entry) => entry.id)).size === 49 &&
+    reviewK415.entries.every((entry) => entry.level === "B2" && entry.de.includes(" ")) &&
+    reflexiveK415.length === 37 && deliberatelyUnchangedK415.every((id) => !decisionsK415.has(id)),
+    "K415a PA-034-09: سجل القرار التاسع محدود بـ49 رأس B2 مركباً، منها 37 انعكاسياً، ولا يحوّل الرؤوس الـ19 المستبعدة إلى تصحيحات");
+  ok(reviewK415.entries.every((entry) => {
+    const card = cardsK415.get(entry.id);
+    return card?.deck === entry.deck && card.de === entry.de && card.posInfo === entry.posInfo &&
+      entry.previousPosInfo !== entry.posInfo && entry.posInfo.split(",").length === 3;
+  }) && decisionsK415.get("v204") === "kümmert sich um, kümmerte sich um, hat sich um ... gekümmert" &&
+    decisionsK415.get("v969") === "wirft jdm etwas vor, warf jdm etwas vor, hat jdm etwas vorgeworfen" &&
+    decisionsK415.get("v1131") === "bleibt sitzen, blieb sitzen, ist sitzen geblieben" &&
+    decisionsK415.get("j03-umwelt-energie-052") === "steigt auf ... um, stieg auf ... um, ist auf ... umgestiegen" &&
+    decisionsK415.get("j04-gesundheit-pflege-050") === "lässt sich impfen, ließ sich impfen, hat sich impfen lassen" &&
+    decisionsK415.get("j08-gefuehle-beziehungen-029") === "ist stolz auf, war stolz auf, ist stolz auf ... gewesen" &&
+    decisionsK415.get("j10-meinung-diskussion-031") === "sieht ... als ... an, sah ... als ... an, hat ... als ... angesehen",
+    "K415b PA-034-09: القرارات تطابق البنك وتحرس المكمل والانعكاس والقوة وErsatzinfinitiv والمساعد والفعل الحامل");
+  const patchK415 = readFileSync("scripts/patches/apply_vocab_posinfo_review_pa034_09.py", "utf8");
+  const auditK415 = readFileSync("scripts/vocab_posinfo_audit.ts", "utf8");
+  ok(patchK415.includes("current == entry[\"posInfo\"]") && patchK415.includes("current != entry[\"previousPosInfo\"]") &&
+    auditK415.includes("reviewedIds.size !== 714") && auditK415.includes("does not certify every posInfo field") &&
+    reviewK415.scope.includes("triage only") && reviewK415.scope.includes("19 other heads") &&
+    reviewK415.scope.includes("not external linguistic sign-off"),
+    "K415c PA-034-09: الرقعة قابلة للإعادة ومقفلة بالقيمة السابقة، والبوابة تعلن 714 قراراً داخلياً مع حفظ الاستبعادات وحدود الادعاء");
+}
+
+/* ═══ K416 — PA-034-10: الدفعة العاشرة للرؤوس المفردة المتبقية وتمثيل möchten ═══ */
+{
+  const reviewK416 = JSON.parse(readFileSync("scripts/fixtures/vocab-posinfo-reviewed-10.json", "utf8")) as {
+    schema: string;
+    batch: string;
+    scope: string;
+    entries: { id: string; deck: string; level: string; de: string; previousPosInfo: string; posInfo: string }[];
+  };
+  const vocabK416 = bankRoh("vocab.json") as Record<string, { cards: { id: string; de: string; posInfo?: string }[] }>;
+  const cardsK416 = new Map(Object.entries(vocabK416).flatMap(([deck, value]) =>
+    value.cards.map((card) => [card.id, { deck, ...card }] as const)));
+  const levelsK416 = reviewK416.entries.reduce<Record<string, number>>((counts, entry) => {
+    counts[entry.level] = (counts[entry.level] ?? 0) + 1;
+    return counts;
+  }, {});
+  const decisionsK416 = new Map(reviewK416.entries.map((entry) => [entry.id, entry.posInfo]));
+  const specialK416 = reviewK416.entries.filter((entry) => entry.id === "va-modort-005");
+  ok(reviewK416.schema === "wegb2-reviewed-vocab-posinfo-batch-v1" && reviewK416.batch === "PA-034-10" &&
+    reviewK416.entries.length === 16 && new Set(reviewK416.entries.map((entry) => entry.id)).size === 16 &&
+    reviewK416.entries.every((entry) => !entry.de.includes(" ")) &&
+    JSON.stringify(levelsK416) === JSON.stringify({ B2: 7, A1: 2, A2: 1, B1: 6 }) &&
+    reviewK416.entries.filter((entry) => entry.posInfo.split(",").length === 3).length === 15 && specialK416.length === 1,
+    "K416a PA-034-10: سجل القرار العاشر محدود بـ16 رأساً مفرداً موزعة A1=2/A2=1/B1=6/B2=7؛ 15 تصريفاً وتمثيل möchten خاص واحد");
+  ok(reviewK416.entries.every((entry) => {
+    const card = cardsK416.get(entry.id);
+    return card?.deck === entry.deck && card.de === entry.de && card.posInfo === entry.posInfo &&
+      entry.previousPosInfo !== entry.posInfo;
+  }) && decisionsK416.get("va-modort-005") === "Konjunktiv II von mögen: ich möchte · du möchtest · wir/Sie möchten" &&
+    decisionsK416.get("vy-natur-033") === "reist, reiste, ist gereist" &&
+    decisionsK416.get("r314b1-025") === "analysiert, analysierte, hat analysiert" &&
+    decisionsK416.get("r314b1-064") === "wacht auf, wachte auf, ist aufgewacht" &&
+    decisionsK416.get("r316b1-047") === "fühlt, fühlte, hat gefühlt" &&
+    decisionsK416.get("r317b1-047") === "macht kaputt, machte kaputt, hat kaputtgemacht" &&
+    decisionsK416.get("v1081") === "ordnet ein, ordnete ein, hat eingeordnet" &&
+    decisionsK416.get("j11-alltag-haus-033") === "trocknet ab, trocknete ab, hat abgetrocknet" &&
+    decisionsK416.get("j12-natur-tiere-055") === "taut, taute, ist getaut",
+    "K416b PA-034-10: القرارات تطابق البنك وتحرس möchten والمساعد والفصل والاشتقاق والحروف الناقصة");
+  const patchK416 = readFileSync("scripts/patches/apply_vocab_posinfo_review_pa034_10.py", "utf8");
+  const auditK416 = readFileSync("scripts/vocab_posinfo_audit.ts", "utf8");
+  ok(patchK416.includes("current == entry[\"posInfo\"]") && patchK416.includes("current != entry[\"previousPosInfo\"]") &&
+    auditK416.includes("reviewedIds.size !== 714") && auditK416.includes("does not certify every posInfo field") &&
+    reviewK416.scope.includes("triage only") && reviewK416.scope.includes("one explicit non-principal-part") &&
+    reviewK416.scope.includes("not external linguistic sign-off"),
+    "K416c PA-034-10: الرقعة قابلة للإعادة ومقفلة بالقيمة السابقة، والبوابة تعلن 714 قراراً داخلياً وتحفظ استثناء möchten وحدود الادعاء");
+}
 
 /* ═══ K334 — R309: القفل الفعلي الحقيقي — إغلاقُ اليوم عند حدود الوحدة ممنوعٌ لا منصوحٌ به فقط ═══ */
 {
@@ -15177,13 +15757,13 @@ function collectR262(dir: string, out: string[] = []): string[] {
   ok(exercisesK355.length >= 581 && leaksK355.length === 0,
     `K355a R158: لا تلميحاً قوسياً يساوي جواباً مقبولاً حرفياً في بنك القواعد (${leaksK355.join(", ") || "0"})`);
 
-  const wordsAuditK355 = readFileSync("scripts/wort_fuer_wort_audit.ts", "utf8");
+  const patternLintK355 = readFileSync("scripts/known_pattern_content_lint.ts", "utf8");
   const patchK355 = readFileSync("scripts/patches/fix_exact_answer_hints.py", "utf8");
   ok(exakteAntwortLecks({ promptDe: "Ich ___ hier. (wohne)", answer: ["wohne"] }).length === 1 &&
     exakteAntwortLecks({ promptDe: "Ich ___ hier. (wohnen)", answer: ["wohne"] }).length === 0 &&
-    wordsAuditK355.includes("answer-leak-exact") && patchK355.includes("CHANGES:") &&
+    patternLintK355.includes("answer-leak-exact") && patchK355.includes("CHANGES:") &&
     patchK355.includes('"a2-reflexiv-v1"') && patchK355.includes('"b2-nom-e8"'),
-    "K355b كاشف PED-03 يميز التسريب الحرفي من السقالة الاشتقاقية، وaudit:words والرقعة المحروسة موصولان به");
+    "K355b كاشف PED-03 يميز التسريب الحرفي من السقالة الاشتقاقية، وفاحص الأنماط والرقعة المحروسة موصولان به");
 }
 
 /* K356 · TLD-02: مساحة ثابتة للشريط السفلي وبوابة هاتف بلا تقاطع */
@@ -15222,17 +15802,17 @@ function collectR262(dir: string, out: string[] = []): string[] {
 
   const metricsK357 = calculateScaffoldMetrics(grammarMap);
   const expectedLevelsK357 = {
-    A0: [8, 63, 8, 7, 12.7], A1: [19, 150, 58, 39, 38.7], A2: [22, 202, 82, 62, 40.6],
+    A0: [8, 63, 8, 7, 12.7], A1: [19, 150, 57, 39, 38], A2: [22, 202, 79, 61, 39.1],
     B1: [15, 143, 34, 23, 23.8], B2: [23, 200, 60, 46, 30],
   } as const;
-  ok(metricsK357.topics === 87 && metricsK357.items === 758 && metricsK357.parenthetical === 242 &&
-    metricsK357.blankLinked === 177 && metricsK357.exactLeaks === 0 &&
+  ok(metricsK357.topics === 87 && metricsK357.items === 758 && metricsK357.parenthetical === 238 &&
+    metricsK357.blankLinked === 176 && metricsK357.exactLeaks === 0 &&
     Object.entries(expectedLevelsK357).every(([level, expected]) => {
       const metric = metricsK357.byLevel[level as keyof typeof metricsK357.byLevel];
       return [metric.topics, metric.items, metric.parenthetical, metric.blankLinked, metric.parentheticalPct]
         .every((value, index) => value === expected[index]);
     }),
-    "K357b خط الأساس الحالي يعيد إنتاج 87 درساً/758 بنداً و242 علامة و177 مرشح فراغ وصفر تسريب، موزعة على المستويات الخمسة");
+    "K357b خط الأساس الحالي يعيد إنتاج 87 درساً/758 بنداً و238 علامة و176 مرشح فراغ وصفر تسريب، موزعة على المستويات الخمسة");
 
   const qualityK357 = readFileSync("app/qualitaet/page.tsx", "utf8");
   const auditK357 = readFileSync("scripts/scaffold_audit.ts", "utf8");
@@ -15241,7 +15821,7 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const baselineK357 = JSON.parse(readFileSync("content/scaffold-metrics-baseline.json", "utf8")) as { reviewRule?: string; nonBlockingRatios?: boolean };
   ok(qualityK357.includes('data-testid="scaffold-transparency"') && qualityK357.includes("إشارات مراجعة وليست عيوباً مؤكدة") &&
     auditK357.includes("review signals, not confirmed defects") && ciK357.includes("npm run audit:scaffolds") &&
-    browserK357.includes('"242/758"') && baselineK357.reviewRule === "R161" && baselineK357.nonBlockingRatios === true,
+    browserK357.includes('"238/758"') && baselineK357.reviewRule === "R161" && baselineK357.nonBlockingRatios === true,
     "K357c صفحة الجودة والتدقيق وCI وChromium تعرض خط الأساس المحدث بوصفه إشارة غير مانعة، لا قائمة أخطاء مؤكدة");
 }
 
@@ -15393,17 +15973,17 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const weakK360: Progress = {
     ...emptyProgress,
     settings: { ...emptyProgress.settings, placed: true },
-    kompetenzLog: Array.from({ length: 8 }, () => ({ h: "Hoeren" as const, ok: false, d: "2026-11-04" })),
+    kompetenzLog: Array.from({ length: 8 }, () => ({ h: "Hoeren" as const, ok: false, d: "2026-11-04", evidenceType: "measured" as const })),
   };
   const weakRecK360 = baueUebungsEmpfehlungen(weakK360, { now: nowK360 });
   ok(weakRecK360[0]?.station === "hoeren" && weakRecK360[0]?.signal === "weak-skill" &&
     weakRecK360[0]?.messwertAr.includes("8 محاولات"),
-    "K360c بعد ثماني محاولات فقط تتحول أضعف كفاءة ملاحظة إلى محطة مطابقة مع سبب وقياس ظاهرين");
+    "K360c بعد ثمانية أدلة measured فقط يتحول أدنى أداء تدريبي مقاس إلى محطة مطابقة مع سبب وقياس ظاهرين");
 
   const dedupK360: Progress = {
     ...weakK360,
     srs: { due: dueK360 },
-    kompetenzLog: Array.from({ length: 8 }, () => ({ h: "Wortschatz" as const, ok: false, d: "2026-11-04" })),
+    kompetenzLog: Array.from({ length: 8 }, () => ({ h: "Wortschatz" as const, ok: false, d: "2026-11-04", evidenceType: "measured" as const })),
   };
   const dedupRecK360 = baueUebungsEmpfehlungen(dedupK360, { now: nowK360, limit: 99 });
   ok(dedupRecK360.length <= 3 && dedupRecK360.filter((entry) => entry.station === "wortreview").length === 1 &&

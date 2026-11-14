@@ -900,13 +900,14 @@
       {
         "id": "a1-zahlen-v2",
         "type": "translate",
-        "promptDe": "أجب عن السؤال: Welches Datum ist heute? (3 أكتوبر)",
+        "promptDe": "Welches Datum ist heute?",
         "answer": "der dritte Oktober",
         "keywords": [
           "dritte",
           "oktober"
         ],
-        "explanationAr": "إذا كان السؤال Welches Datum ist heute? نقول der dritte Oktober؛ أما مع سؤال Wann? فنقول am dritten Oktober."
+        "explanationAr": "إذا كان السؤال Welches Datum ist heute? نقول der dritte Oktober؛ أما مع سؤال Wann? فنقول am dritten Oktober.",
+        "promptAr": "أجب عن السؤال واستخدم التاريخ: 3 أكتوبر."
       }
     ],
     "summaryAr": "من 13–19 ينتهي العدد بـ -zehn، ومن 20–90 بوحدات مركّبة: واحد وعشرون = einundzwanzig («واحد» أولاً ثم «و» ثم العشرة!). للساعة: «Es ist ein Uhr» (الواحدة)، أمّا باقي الدقائق فبـ nach (بعد) وvor (قبل): fünf nach zehn (10:05)، وفي بعض المناطق zehn vor halb acht (7:20).",
@@ -1264,13 +1265,14 @@
       {
         "id": "a2-praeteritum-v2",
         "type": "translate",
-        "promptDe": "ترجم بـPräteritum: ذهبنا إلى السوق واشترينا خبزاً.",
+        "promptDe": "Formuliere den Satz im Präteritum.",
         "answer": "Wir gingen zum Markt und kauften Brot.",
         "keywords": [
           "gingen",
           "kauften"
         ],
-        "explanationAr": "gehen شاذّ (gingen) و kaufen منتظم (kauften)."
+        "explanationAr": "gehen شاذّ (gingen) و kaufen منتظم (kauften).",
+        "promptAr": "ذهبنا إلى السوق واشترينا خبزاً."
       }
     ],
     "summaryAr": "بعد أن تعرّفتَ war و hatte في A1، يأتي هنا الماضي البسيط كاملاً: المنتظم (-te) والشاذّ (تغيير في الجذر)، ومتى تستعمله ومتى تستعمل Perfekt. هذا هو **زمن الكتابة والسرد**: به تكتب رسالةً عن عطلة، وبه تُحكى قصة في امتحان A2 وB1، وبه كُتبت كل رواية ألمانية تقرؤها.",
@@ -1579,13 +1581,14 @@
       {
         "id": "a2-praeteritum-e6",
         "type": "translate",
-        "promptDe": "ترجم إلى الألمانية بـPräteritum: «كان الطقس جميلاً، فسافرنا بالسيارة.»",
+        "promptDe": "Formuliere den Satz im Präteritum.",
         "answer": "Das Wetter war schön, also fuhren wir mit dem Auto.",
         "keywords": [
           "war",
           "fuhren"
         ],
-        "explanationAr": "war من sein، و fuhren من fahren. كلاهما شاذّ وبلا te."
+        "explanationAr": "war من sein، و fuhren من fahren. كلاهما شاذّ وبلا te.",
+        "promptAr": "كان الطقس جميلاً، فسافرنا بالسيارة."
       },
       {
         "id": "a2-praeteritum-e7",
@@ -2096,13 +2099,14 @@
       {
         "id": "a2-wechsel-v2",
         "type": "translate",
-        "promptDe": "قُل: الصورة معلقة على الجدار.",
+        "promptDe": "Übersetze den arabischen Satz ins Deutsche.",
         "answer": "Das Bild hängt an der Wand.",
         "keywords": [
           "hängt",
           "wand"
         ],
-        "explanationAr": "hängen (سكون) + an + Dativ: an der Wand."
+        "explanationAr": "hängen (سكون) + an + Dativ: an der Wand.",
+        "promptAr": "قُل: الصورة معلقة على الجدار."
       }
     ],
     "summaryAr": "في A1 تعلّمت القاعدة البصرية: مكان ثابت Dativ، حركة Akkusativ. في A2 تضيف: (1) حروف جر إضافية تستخدم مع وصف الطريق: über (يعبر/فوق), durch (عبر), entlang (على طول — غالباً مع Dativ بعد الاسم), um … herum (حول). (2) أين نضع حرف الجر إذا كان هناك ظرف مكان (gehen Sie die Straße entlang). (3) أفعى تفرض اتجاهاً: stellen/legen/setzen/hängen دائماً Akkusativ (حركة)، بينما stehen/liegen/sitzen/hängen ثابتة.",
@@ -2422,13 +2426,14 @@
       {
         "id": "b1-konj2-v2",
         "type": "translate",
-        "promptDe": "تمنَّ بالألمانية: لو كان عندي وقت لسافرت إلى برلين.",
+        "promptDe": "Formuliere einen Wunsch auf Deutsch.",
         "answer": "Wenn ich Zeit hätte, würde ich nach Berlin reisen.",
         "keywords": [
           "hätte",
           "würde"
         ],
-        "explanationAr": "hätte من haben في جملة الشرط، و würde + مصدر في الجواب."
+        "explanationAr": "hätte من haben في جملة الشرط، و würde + مصدر في الجواب.",
+        "promptAr": "لو كان عندي وقت لسافرت إلى برلين."
       }
     ],
     "summaryAr": "لثلاثة استعمالات: (1) الرجاء المهذّب: «Könnten Sie mir helfen?» (2) النصيحة: «Ich würde an deiner Stelle …» (3) الشرط غير الواقعي والأمنيات: «Wenn ich Zeit hätte, würde ich reisen». صيغتان تُحفظان: würde + مصدر (لباقي الأفعال)، والأهم الأشكال الشاذة hätte/wäre/könnte/müsste/dürfte.",
@@ -2830,12 +2835,13 @@
       {
         "id": "g13e3",
         "type": "fill",
-        "promptDe": "Er hatte kein Geld. ___ hat er das Auto gekauft. (ومع ذلك)",
+        "promptDe": "Er hatte kein Geld. ___ hat er das Auto gekauft. (Gegensatz)",
         "answer": [
           "trotzdem",
           "Trotzdem"
         ],
-        "explanationAr": "trotzdem = ومع ذلك."
+        "explanationAr": "trotzdem = ومع ذلك.",
+        "promptAr": "تلميح المعنى: ومع ذلك."
       },
       {
         "id": "b1-konnektoren-u1",
@@ -2904,13 +2910,14 @@
       {
         "id": "b1-plusquamperfekt-v2",
         "type": "translate",
-        "promptDe": "قُل: بعد أن أكلنا خرجنا.",
+        "promptDe": "Formuliere den Satz mit dem Plusquamperfekt.",
         "answer": "Nachdem wir gegessen hatten, gingen wir aus.",
         "keywords": [
           "gegessen",
           "hatten"
         ],
-        "explanationAr": "nachdem + Plusquamperfekt ثم Präteritum."
+        "explanationAr": "nachdem + Plusquamperfekt ثم Präteritum.",
+        "promptAr": "بعد أن أكلنا خرجنا."
       }
     ],
     "summaryAr": "لترتيب الأحداث في الماضي: الأحدث بالـ Perfekt، والأقدم بالـ Plusquamperfekt (war/hatte + التصريف الثالث). «Als ich ankam, hatte er schon gegessen.» أمّا السؤال المنقول فبالفعل للنهاية مثل dass: «Ich weiß nicht, wann der Zug kommt.»",
@@ -3330,11 +3337,12 @@
       {
         "id": "g16e3",
         "type": "fill",
-        "promptDe": "Sie spart Geld, ___ ein Auto zu kaufen. (للغاية)",
+        "promptDe": "Sie spart Geld, ___ ein Auto zu kaufen. (Absicht)",
         "answer": [
           "um"
         ],
-        "explanationAr": "um zu = للغاية."
+        "explanationAr": "um zu = للغاية.",
+        "promptAr": "تلميح الوظيفة: التعبير عن الغاية أو الهدف."
       },
       {
         "id": "b2-partizip-u1",
@@ -3924,13 +3932,14 @@
       {
         "id": "a2-dativ-v2",
         "type": "translate",
-        "promptDe": "قُل: رأسي يؤلمني.",
+        "promptDe": "Übersetze den arabischen Satz ins Deutsche.",
         "answer": "Mein Kopf tut mir weh.",
         "keywords": [
           "kopf",
           "weh"
         ],
-        "explanationAr": "wehtun + Dativ: Mir tut der Kopf weh."
+        "explanationAr": "wehtun + Dativ: Mir tut der Kopf weh.",
+        "promptAr": "قُل: رأسي يؤلمني."
       }
     ],
     "summaryAr": "بعد أن تعلّمت حروف جر Dativ في A1، يأتي دور الأفعال التي تأخذ Dativ دائماً: helfen (يساعد)، danken (يشكر)، gefallen (يعجب)، gehören (يعود/يملك)، antworten (يجيب)، passen (يناسب)، fehlen (يغيب/ينقص)، schmecken (يستلذ/يؤكل جيداً), glauben (يصدّق), wehtun (يؤلم). تذكير: هذه الأفعال لا تأخذ Akkusativ لشخص المخاطَب.",
@@ -4097,12 +4106,13 @@
       {
         "id": "a2-dativ-e4",
         "type": "translate",
-        "promptDe": "أجيب صديقي.",
+        "promptDe": "Übersetze den arabischen Satz ins Deutsche.",
         "answer": [
           "Ich antworte meinem Freund.",
           "Ich antworte meinem Freund"
         ],
-        "explanationAr": "antworten يأخذ Dativ: meinem Freund. (antworten + Dativ: meinem Freund)"
+        "explanationAr": "antworten يأخذ Dativ: meinem Freund. (antworten + Dativ: meinem Freund)",
+        "promptAr": "أجيب صديقي."
       },
       {
         "id": "a2-dativ-e5",
@@ -4317,12 +4327,13 @@
       {
         "id": "a2-neg-e4",
         "type": "translate",
-        "promptDe": "لا أتكلم الألمانية.",
+        "promptDe": "Übersetze den arabischen Satz ins Deutsche.",
         "answer": [
           "Ich spreche kein Deutsch.",
           "Ich spreche kein Deutsch"
         ],
-        "explanationAr": "Deutsch اسم غير معرّف ← kein Deutsch"
+        "explanationAr": "Deutsch اسم غير معرّف ← kein Deutsch",
+        "promptAr": "لا أتكلم الألمانية."
       },
       {
         "id": "a2-neg-e5",
@@ -4532,11 +4543,12 @@
       {
         "id": "a2-imp-e4",
         "type": "translate",
-        "promptDe": "اساعدوا صديقكم!",
+        "promptDe": "Übersetze den arabischen Satz ins Deutsche.",
         "answer": [
           "Helft eurem Freund!"
         ],
-        "explanationAr": "أمر ihr = صيغة ihr بلا ضمير: Helft، وhelfen يأخذ Dativ: eurem Freund. (ihr-order + helfen + Dativ)"
+        "explanationAr": "أمر ihr = صيغة ihr بلا ضمير: Helft، وhelfen يأخذ Dativ: eurem Freund. (ihr-order + helfen + Dativ)",
+        "promptAr": "ساعدوا صديقكم!"
       },
       {
         "id": "a2-imp-e5",
@@ -4727,9 +4739,10 @@
       {
         "id": "a2-ref-e1",
         "type": "fill",
-        "promptDe": "Ich freue mich ___ das Wochenende (المستقبل).",
+        "promptDe": "Ich freue mich ___ das Wochenende.",
         "answer": "auf",
-        "explanationAr": "sich freuen auf + Akkusativ (تطلّع)"
+        "explanationAr": "sich freuen auf + Akkusativ (تطلّع)",
+        "promptAr": "تلميح الزمن: المستقبل."
       },
       {
         "id": "a2-ref-e2",
@@ -4754,12 +4767,13 @@
       {
         "id": "a2-ref-e4",
         "type": "translate",
-        "promptDe": "أنا مسرور بهديتك.",
+        "promptDe": "Übersetze den arabischen Satz ins Deutsche.",
         "answer": [
           "Ich freue mich über dein Geschenk.",
           "Ich freue mich über dein Geschenk"
         ],
-        "explanationAr": "السبب = über"
+        "explanationAr": "السبب = über",
+        "promptAr": "أنا مسرور بهديتك."
       },
       {
         "id": "a2-ref-e5",
@@ -4842,12 +4856,13 @@
       {
         "id": "a2-steigerung-v2",
         "type": "translate",
-        "promptDe": "قُل: أختي أطول مني.",
+        "promptDe": "Übersetze den arabischen Satz ins Deutsche.",
         "answer": "Meine Schwester ist größer als ich.",
         "keywords": [
           "größer"
         ],
-        "explanationAr": "المقارنة: Komparativ + als."
+        "explanationAr": "المقارنة: Komparativ + als.",
+        "promptAr": "قُل: أختي أطول مني."
       }
     ],
     "summaryAr": "الصفة + er = أفعل (Komparativ)، am + صفة + sten = الأفعل (Superlativ): groß → größer → am größten. شذوذ: gut/besser/am besten · viel/mehr/am meisten · gern/lieber/am liebsten · hoch/höher/am höchsten (حذف ch).",
@@ -4969,12 +4984,13 @@
       {
         "id": "a2-stg-e4",
         "type": "translate",
-        "promptDe": "أنا أفضّل الشاي على القهوة.",
+        "promptDe": "Übersetze den arabischen Satz ins Deutsche.",
         "answer": [
           "Ich trinke lieber Tee als Kaffee.",
           "Ich trinke lieber Tee als Kaffee"
         ],
-        "explanationAr": "gern → lieber، والمقارنة بـals: lieber Tee als Kaffee. (lieber … als (gern→lieber))"
+        "explanationAr": "gern → lieber، والمقارنة بـals: lieber Tee als Kaffee. (lieber … als (gern→lieber))",
+        "promptAr": "أنا أفضّل الشاي على القهوة."
       },
       {
         "id": "a2-stg-e5",
@@ -5188,12 +5204,13 @@
       {
         "id": "a2-fut-e4",
         "type": "translate",
-        "promptDe": "غداً لن أعمل.",
+        "promptDe": "Übersetze den arabischen Satz ins Deutsche.",
         "answer": [
           "Morgen werde ich nicht arbeiten.",
           "Morgen werde ich nicht arbeiten"
         ],
-        "explanationAr": "نفي المستقبل: nicht قبل المصدر"
+        "explanationAr": "نفي المستقبل: nicht قبل المصدر",
+        "promptAr": "غداً لن أعمل."
       },
       {
         "id": "a2-fut-e5",
@@ -5278,13 +5295,14 @@
       {
         "id": "b1-genitiv-v2",
         "type": "translate",
-        "promptDe": "قُل: بسبب الطقس بقينا في البيت.",
+        "promptDe": "Übersetze den arabischen Satz ins Deutsche.",
         "answer": "Wegen des Wetters blieben wir zu Hause.",
         "keywords": [
           "wegen",
           "wetters"
         ],
-        "explanationAr": "wegen + Genitiv: des Wetters."
+        "explanationAr": "wegen + Genitiv: des Wetters.",
+        "promptAr": "قُل: بسبب الطقس بقينا في البيت."
       }
     ],
     "summaryAr": "Genitiv هي حالة الملكية: das Auto des Mannes (سيارة الرجل). الأدوات: des (der/das) و der (die)؛ والاسم المذكر/المحايد يأخذ -s/-es. وفي الحديث اليومي يحلّ von + Dativ محلّها: das Auto von dem Mann — لكن الكتابة والامتحانات تطلب Genitiv!",
@@ -5402,19 +5420,21 @@
       {
         "id": "b1-gen-e4",
         "type": "translate",
-        "promptDe": "هذا كتاب أختي.",
+        "promptDe": "Übersetze den arabischen Satz ins Deutsche.",
         "answer": [
           "Das ist das Buch meiner Schwester.",
           "Das ist das Buch meiner Schwester"
         ],
-        "explanationAr": "Genitiv المؤنّث: die → der: meiner Schwester. (die → der: meiner Schwester)"
+        "explanationAr": "Genitiv المؤنّث: die → der: meiner Schwester. (die → der: meiner Schwester)",
+        "promptAr": "هذا كتاب أختي."
       },
       {
         "id": "b1-gen-e5",
         "type": "fill",
-        "promptDe": "___ Haus (آنا) ist groß.",
+        "promptDe": "___ Haus (Anna) ist groß.",
         "answer": "Annas",
-        "explanationAr": "العلم + s بلا أداة"
+        "explanationAr": "العلم + s بلا أداة",
+        "promptAr": "صاحبة البيت هي آنا."
       },
       {
         "id": "b1-genitiv-u1",
@@ -5654,12 +5674,13 @@
       {
         "id": "b1-adj-e5",
         "type": "translate",
-        "promptDe": "هي ترتدي فستاناً أزرق.",
+        "promptDe": "Übersetze den arabischen Satz ins Deutsche.",
         "answer": [
           "Sie trägt ein blaues Kleid.",
           "Sie trägt ein blaues Kleid"
         ],
-        "explanationAr": "بعد ein: Akkusativ das = -es"
+        "explanationAr": "بعد ein: Akkusativ das = -es",
+        "promptAr": "هي ترتدي فستاناً أزرق."
       },
       {
         "id": "b1-adjektivendungen-u1",
@@ -5775,12 +5796,13 @@
       {
         "id": "b1-wortbildung-v2",
         "type": "translate",
-        "promptDe": "ترجم مركّباً: غرفة المعيشة.",
+        "promptDe": "Bilde ein deutsches Kompositum.",
         "answer": "das Wohnzimmer",
         "keywords": [
           "wohnzimmer"
         ],
-        "explanationAr": "wohnen + Zimmer = das Wohnzimmer (محايد)."
+        "explanationAr": "wohnen + Zimmer = das Wohnzimmer (محايد).",
+        "promptAr": "غرفة المعيشة."
       }
     ],
     "summaryAr": "الألمانية تبني كلمة جديدة بلصق كلمتين أو أكثر: Klima + Bewegung = Klimabewegung. العربية لا تفعل هذا، فالمتعلّم العربي يحفظ الكلمة الطويلة كتلةً عمياء. هذا الدرس يعطيك **آلية فكّ الشفرة**: القاعدة الذهبية (الأخيرة تحكم)، وأحرف الوصل السبعة، وكيف تخمّن جنس كلمة لم ترها قط.",
@@ -6006,12 +6028,13 @@
       {
         "id": "b1-wortbildung-e8",
         "type": "translate",
-        "promptDe": "ترجم بمركّب واحد: «كتاب الطبخ»",
+        "promptDe": "Bilde ein einziges deutsches Kompositum.",
         "answer": "das Kochbuch",
         "keywords": [
           "Kochbuch"
         ],
-        "explanationAr": "جذر الفعل kochen + das Buch = das Kochbuch. الجنس من Buch."
+        "explanationAr": "جذر الفعل kochen + das Buch = das Kochbuch. الجنس من Buch.",
+        "promptAr": "كتاب الطبخ."
       },
       {
         "id": "b1-wortbildung-e9",
@@ -6099,13 +6122,14 @@
       {
         "id": "b1-unbestimmte-v2",
         "type": "translate",
-        "promptDe": "قُل: لا أحد يعرف الجواب.",
+        "promptDe": "Übersetze den arabischen Satz ins Deutsche.",
         "answer": "Niemand kennt die Antwort.",
         "keywords": [
           "niemand",
           "antwort"
         ],
-        "explanationAr": "niemand = لا أحد (نفي كامل بلا nicht)."
+        "explanationAr": "niemand = لا أحد (نفي كامل بلا nicht).",
+        "promptAr": "قُل: لا أحد يعرف الجواب."
       }
     ],
     "summaryAr": "man (الواحد/المرء) للقواعد العامة وبنبرة محايدة؛ jemand/niemand (أحد/لا أحد)، etwas/nichts (شيء/لا شيء)، einer/keiner وأشكالها للتوكيد والنفي. مع man يُصاغ الفعل دائماً للمفرد الغائب — وفي العربية «يُفعل/الناس».",
@@ -6239,12 +6263,13 @@
       {
         "id": "b1-unb-e5",
         "type": "translate",
-        "promptDe": "أحد يطرق الباب.",
+        "promptDe": "Übersetze den arabischen Satz ins Deutsche.",
         "answer": [
           "Jemand klopft an.",
           "Jemand klopft an"
         ],
-        "explanationAr": "jemand + فعل مفرد"
+        "explanationAr": "jemand + فعل مفرد",
+        "promptAr": "أحد يطرق الباب."
       },
       {
         "id": "b1-unbestimmte-u1",
@@ -6320,13 +6345,14 @@
       {
         "id": "b1-verb-praeposition-v2",
         "type": "translate",
-        "promptDe": "قُل: أشارك في الدورة.",
+        "promptDe": "Übersetze den arabischen Satz ins Deutsche.",
         "answer": "Ich nehme am Kurs teil.",
         "keywords": [
           "nehme",
           "teil"
         ],
-        "explanationAr": "teilnehmen an + Dativ: am Kurs."
+        "explanationAr": "teilnehmen an + Dativ: am Kurs.",
+        "promptAr": "قُل: أشارك في الدورة."
       }
     ],
     "summaryAr": "بعض الأفعال ترتبط بحرف جرّ لا يقبل التغيير، ويأتي بعده حالة ثابتة: warten auf + Akk، denken an + Akk، sich freuen auf + Akk، helfen mit + Dat، teilnehmen an + Dat. احفظ الكلمة الثلاثية: الفعل + الجارّ + الحالة — فهذه الأسئلة مضمونة في كل امتحان.",
@@ -6468,18 +6494,20 @@
       {
         "id": "b1-vp-e4",
         "type": "translate",
-        "promptDe": "بماذا تفكّر؟",
+        "promptDe": "Übersetze den arabischen Satz ins Deutsche.",
         "answer": [
           "Woran denkst du?"
         ],
-        "explanationAr": "سؤال عن شيء مع حرف جرّ: wo + r + an = woran. (an + was = woran)"
+        "explanationAr": "سؤال عن شيء مع حرف جرّ: wo + r + an = woran. (an + was = woran)",
+        "promptAr": "بماذا تفكّر؟"
       },
       {
         "id": "b1-vp-e5",
         "type": "fill",
-        "promptDe": "Sie hat Angst ___ Hunden. (جمع)",
+        "promptDe": "Sie hat Angst ___ Hunden. (Plural)",
         "answer": "vor",
-        "explanationAr": "Angst haben vor + Dativ: vor Hunden (جمع). (Angst haben vor + Dativ)"
+        "explanationAr": "Angst haben vor + Dativ: vor Hunden (جمع). (Angst haben vor + Dativ)",
+        "promptAr": "الكلمة التالية جمع."
       },
       {
         "id": "b1-verb-praeposition-u1",
@@ -6677,9 +6705,10 @@
       {
         "id": "b1-pas-e2",
         "type": "fill",
-        "promptDe": "Das Auto ist repariert ___. (عملية سابقة)",
+        "promptDe": "Das Auto ist repariert ___. (abgeschlossener Vorgang)",
         "answer": "worden",
-        "explanationAr": "المركب: ist … worden (بلا ge-)"
+        "explanationAr": "المركب: ist … worden (بلا ge-)",
+        "promptAr": "المقصود عملية اكتملت في الماضي."
       },
       {
         "id": "b1-pas-e3",
@@ -6697,12 +6726,13 @@
       {
         "id": "b1-pas-e4",
         "type": "translate",
-        "promptDe": "هنا يُتكلّم الألمانية.",
+        "promptDe": "Übersetze den arabischen Satz ins Deutsche.",
         "answer": [
           "Hier wird Deutsch gesprochen.",
           "Hier wird Deutsch gesprochen"
         ],
-        "explanationAr": "مجهول بلا فاعل: Hier wird Deutsch gesprochen. (werden + P.II)"
+        "explanationAr": "مجهول بلا فاعل: Hier wird Deutsch gesprochen. (werden + P.II)",
+        "promptAr": "هنا يُتكلّم الألمانية."
       },
       {
         "id": "b1-pas-e5",
@@ -6956,25 +6986,28 @@
       {
         "id": "b2-mp-e3",
         "type": "fill",
-        "promptDe": "Es ist ___ so. (حتمية)",
+        "promptDe": "Es ist ___ so. (Unvermeidlichkeit)",
         "answer": "halt",
-        "explanationAr": "halt/eben للحتمية الواقعية"
+        "explanationAr": "halt/eben للحتمية الواقعية",
+        "promptAr": "تلميح المعنى: حتمية أو واقع لا يتغيّر."
       },
       {
         "id": "b2-mp-e4",
         "type": "translate",
-        "promptDe": "جرّبه فحسب!",
+        "promptDe": "Übersetze den arabischen Satz ins Deutsche.",
         "answer": [
           "Probier es einfach!"
         ],
-        "explanationAr": "einfach للتبسيط"
+        "explanationAr": "einfach للتبسيط",
+        "promptAr": "جرّبه فحسب!"
       },
       {
         "id": "b2-mp-e5",
         "type": "fill",
-        "promptDe": "Du bist ___ müde, oder? (معلوم مشترك)",
+        "promptDe": "Du bist ___ müde, oder? (gemeinsames Wissen)",
         "answer": "ja",
-        "explanationAr": "ja كجسيم = «كما تعلم»"
+        "explanationAr": "ja كجسيم = «كما تعلم»",
+        "promptAr": "تلميح المعنى: معلومة مشتركة بين المتحدثين."
       },
       {
         "id": "b2-modalpartikel-u1",
@@ -7945,14 +7978,15 @@
       {
         "id": "a0-begrussung-v2",
         "type": "translate",
-        "promptDe": "قدّم نفسك بالألمانية: اذكر اسمك وبلدك.",
+        "promptDe": "Stelle dich auf Deutsch vor.",
         "answer": "Ich heiße Anna und komme aus Tunesien.",
         "keywords": [
           "heiße",
           "komme",
           "aus"
         ],
-        "explanationAr": "التعريف الثابت: Ich heiße … und komme aus …"
+        "explanationAr": "التعريف الثابت: Ich heiße … und komme aus …",
+        "promptAr": "قدّم نفسك: اذكر اسمك وبلدك."
       }
     ],
     "summaryAr": "أول ما تحتاجه: قل مرحباً، واسمك وبلدك، واسأل عن الحال. تتدرّب على الضمائر الأساسية وأفعال sein وheißen وkommen وwohnen، وعلى سؤال Wie geht es dir?",
@@ -8048,7 +8082,7 @@
       {
         "id": "a0-begrussung-t1",
         "type": "translate",
-        "promptDe": "ترجم: «اسمي علي.»",
+        "promptDe": "Übersetze den arabischen Satz ins Deutsche.",
         "answer": [
           "Ich heiße Ali.",
           "Ich heisse Ali."
@@ -8057,7 +8091,8 @@
           "Ich bin Ali."
         ],
         "explanationAr": "Ich heiße … هو التعبير القياسي لذكر الاسم.",
-        "points": 1
+        "points": 1,
+        "promptAr": "ترجم: «اسمي علي.»"
       }
     ],
     "pitfalls": [
@@ -8306,14 +8341,15 @@
       {
         "id": "a1-dativ-v2",
         "type": "translate",
-        "promptDe": "قُل: أسكن عند أخي.",
+        "promptDe": "Übersetze den arabischen Satz ins Deutsche.",
         "answer": "Ich wohne bei meinem Bruder.",
         "keywords": [
           "bei",
           "meinem",
           "bruder"
         ],
-        "explanationAr": "bei + Dativ: mein Bruder ← bei meinem Bruder."
+        "explanationAr": "bei + Dativ: mein Bruder ← bei meinem Bruder.",
+        "promptAr": "قُل: أسكن عند أخي."
       }
     ],
     "summaryAr": "حالة الجر (Dativ) تُستخدم بعد أدوات جر معيّنة ومع أفعال مثل gefallen/helfen/danken/gehören. أدوات التعريف تصبح dem (مذكر/محايد) و der (مؤنث) و den (جمع).",
@@ -8826,13 +8862,14 @@
       {
         "id": "a1-perfekt-einf-v2",
         "type": "translate",
-        "promptDe": "قُلْ بـPerfekt: «لعبت كرة القدم أمس.»",
+        "promptDe": "Formuliere den Satz im Perfekt.",
         "answer": "Ich habe gestern Fußball gespielt.",
         "keywords": [
           "habe",
           "gespielt"
         ],
-        "explanationAr": "spielen منتظم: gespielt. أمس = gestern."
+        "explanationAr": "spielen منتظم: gespielt. أمس = gestern.",
+        "promptAr": "لعبت كرة القدم أمس."
       }
     ],
     "summaryAr": "هذه مقدمة للأفعال المنتظمة المختارة مع haben: يتكوّن Partizip II غالباً من ge- + الجذر + -t/-et. في الجملة الخبرية الرئيسية يأتي haben المصرف في الموضع الثاني وPartizip II في نهاية الإطار الفعلي؛ أما الجملة التابعة فيختلف فيها ترتيب الأفعال. توجد أفعال تأخذ sein وأفعال قوية لها Partizip II غير منتظم.",
@@ -8922,13 +8959,14 @@
       {
         "id": "a1-perf-n3",
         "type": "translate",
-        "promptDe": "ترجم بـPerfekt: «لعبتُ أمس كرة القدم.»",
+        "promptDe": "Formuliere den Satz im Perfekt.",
         "answer": "Ich habe gestern Fußball gespielt.",
         "keywords": [
           "habe",
           "gespielt"
         ],
-        "explanationAr": "haben + gespielt في النهاية."
+        "explanationAr": "haben + gespielt في النهاية.",
+        "promptAr": "لعبتُ أمس كرة القدم."
       },
       {
         "id": "a1-perf-n4",
@@ -9091,13 +9129,14 @@
       {
         "id": "a1-fut-n3",
         "type": "translate",
-        "promptDe": "ترجم بـFutur I: «سأتعلّم الألمانية.»",
+        "promptDe": "Formuliere den Satz im Futur I.",
         "answer": "Ich werde Deutsch lernen.",
         "keywords": [
           "werde",
           "lernen"
         ],
-        "explanationAr": "werde + lernen في النهاية."
+        "explanationAr": "werde + lernen في النهاية.",
+        "promptAr": "سأتعلّم الألمانية."
       }
     ],
     "pitfalls": [
@@ -9145,13 +9184,14 @@
       {
         "id": "a2-praeteritum-grund-v2",
         "type": "translate",
-        "promptDe": "قُل: اضطررنا للانتظار طويلاً.",
+        "promptDe": "Übersetze den arabischen Satz ins Deutsche.",
         "answer": "Wir mussten lange warten.",
         "keywords": [
           "mussten",
           "warten"
         ],
-        "explanationAr": "müssen في الماضي: mussten + مصدر."
+        "explanationAr": "müssen في الماضي: mussten + مصدر.",
+        "promptAr": "قُل: اضطررنا للانتظار طويلاً."
       }
     ],
     "summaryAr": "في السرد المكتوب والرواية نستخدم Präteritum لـ sein, haben, werden والأفعال الناقصة بدلاً من Perfekt. باقي الأفعال تبقى في Perfekt حتى B1.",
@@ -9714,14 +9754,15 @@
       {
         "id": "b1-indir-n6",
         "type": "translate",
-        "promptDe": "ترجم: «لا أعرف أين يسكن» (هو).",
+        "promptDe": "Formuliere eine indirekte Frage auf Deutsch (Subjekt: er).",
         "answer": "Ich weiß nicht, wo er wohnt.",
         "keywords": [
           "weiß",
           "wo",
           "wohnt"
         ],
-        "explanationAr": "wo + er + wohnt في النهاية."
+        "explanationAr": "wo + er + wohnt في النهاية.",
+        "promptAr": "لا أعرف أين يسكن."
       },
       {
         "id": "b1-indir-n7",
@@ -9988,13 +10029,14 @@
       {
         "id": "b2-redew-t1",
         "type": "translate",
-        "promptDe": "ترجم: نبقى على اطلاع بكل ما يخصّ هذا المشروع.",
+        "promptDe": "Übersetze den arabischen Satz ins Deutsche.",
         "answer": "Wir bleiben über das Projekt auf dem Laufenden.",
         "keywords": [
           "auf dem Laufenden",
           "Projekt"
         ],
-        "explanationAr": "auf dem Laufenden bleiben مع ja للمعرفة: über das Projekt — الحرف والمعرفة لا يُهملان."
+        "explanationAr": "auf dem Laufenden bleiben مع ja للمعرفة: über das Projekt — الحرف والمعرفة لا يُهملان.",
+        "promptAr": "ترجم: نبقى على اطلاع بكل ما يخصّ هذا المشروع."
       },
       {
         "id": "b2-redew-u2",
@@ -10072,13 +10114,14 @@
       {
         "id": "a1-war-hatte-v2",
         "type": "translate",
-        "promptDe": "قُل: لم أستطع النوم أمس.",
+        "promptDe": "Übersetze den arabischen Satz ins Deutsche.",
         "answer": "Ich konnte gestern nicht schlafen.",
         "keywords": [
           "konnte",
           "schlafen"
         ],
-        "explanationAr": "können في الماضي: konnte + مصدر."
+        "explanationAr": "können في الماضي: konnte + مصدر.",
+        "promptAr": "قُل: لم أستطع النوم أمس."
       }
     ],
     "titleDe": "war · hatte · konnte · musste (Präteritum der Hilfs-/Modalverben im A1)",
@@ -10154,7 +10197,7 @@
       {
         "id": "a1-war-hatte-e6",
         "type": "translate",
-        "promptDe": "ترجم إلى الألمانية: «البارحة كنتُ مريضاً ولم أستطع الذهاب إلى المدرسة.»",
+        "promptDe": "Übersetze den arabischen Satz ins Deutsche.",
         "answer": "Gestern war ich krank und konnte nicht zur Schule gehen.",
         "keywords": [
           "gestern",
@@ -10164,7 +10207,8 @@
           "Schule",
           "gehen"
         ],
-        "explanationAr": "الصيغة المرجعية: Gestern war ich krank und konnte nicht zur Schule gehen. — استعمل war (كان) وkonnte (استطاع)."
+        "explanationAr": "الصيغة المرجعية: Gestern war ich krank und konnte nicht zur Schule gehen. — استعمل war (كان) وkonnte (استطاع).",
+        "promptAr": "ترجم إلى الألمانية: «البارحة كنتُ مريضاً ولم أستطع الذهاب إلى المدرسة.»"
       }
     ],
     "pitfalls": [
@@ -10315,14 +10359,15 @@
       {
         "id": "b1-fvg-e5",
         "type": "translate",
-        "promptDe": "ترجم: «طرحتُ عليه سؤالاً لكنه لم يجب».",
+        "promptDe": "Übersetze den arabischen Satz ins Deutsche.",
         "answer": "Ich habe ihm eine Frage gestellt, aber er hat nicht geantwortet.",
         "keywords": [
           "Frage",
           "gestellt",
           "geantwortet"
         ],
-        "explanationAr": "الصيغة المرجعية: Ich habe ihm eine Frage gestellt, aber er hat nicht geantwortet."
+        "explanationAr": "الصيغة المرجعية: Ich habe ihm eine Frage gestellt, aber er hat nicht geantwortet.",
+        "promptAr": "ترجم: «طرحتُ عليه سؤالاً لكنه لم يجب»."
       }
     ],
     "pitfalls": [
@@ -10487,12 +10532,13 @@
         "id": "a0-buchstaben-q4",
         "type": "translate",
         "points": 1,
-        "promptDe": "ترجم: «Buchstabiere deinen Namen!»",
+        "promptDe": "Buchstabiere deinen Namen!",
         "answer": [
           "هجِّ اسمك!",
           "هجّئ اسمك!"
         ],
-        "explanationAr": "«Buchstabiere» (فعل أمر من buchstabieren) = هجِّ/هجِّئ."
+        "explanationAr": "«Buchstabiere» (فعل أمر من buchstabieren) = هجِّ/هجِّئ.",
+        "promptAr": "ترجم الجملة الألمانية إلى العربية."
       },
       {
         "id": "a0-buchstaben-r143-e05",
@@ -10554,13 +10600,14 @@
       {
         "id": "a0-zahlen-v2",
         "type": "translate",
-        "promptDe": "قُل الوقت: 3:30.",
+        "promptDe": "Nenne die Uhrzeit auf Deutsch.",
         "answer": "Es ist halb vier.",
         "keywords": [
           "halb",
           "vier"
         ],
-        "explanationAr": "النصف يُنسب للساعة القادمة: halb vier = الثالثة والنصف."
+        "explanationAr": "النصف يُنسب للساعة القادمة: halb vier = الثالثة والنصف.",
+        "promptAr": "قُل الوقت: 3:30."
       }
     ],
     "summaryAr": "الأرقام من 1 إلى 100، السؤال عن العمر وثمن الشيء، قراءة التاريخ بالأشهر الألمانية، والسؤال عن الساعة.",
@@ -10645,7 +10692,7 @@
         "id": "a0-zahlen-q4",
         "type": "translate",
         "points": 1,
-        "promptDe": "ترجم: «كم الساعة؟»",
+        "promptDe": "Übersetze den arabischen Satz ins Deutsche.",
         "answer": [
           "Wie spät ist es?",
           "Wie viel Uhr ist es?"
@@ -10653,7 +10700,8 @@
         "alternativen": [
           "Wie spät ist es"
         ],
-        "explanationAr": "الصيغتان القياسيتان: Wie spät ist es؟ / Wie viel Uhr ist es؟"
+        "explanationAr": "الصيغتان القياسيتان: Wie spät ist es؟ / Wie viel Uhr ist es؟",
+        "promptAr": "ترجم: «كم الساعة؟»"
       },
       {
         "id": "a0-zahlen-r143-e05",
@@ -10797,7 +10845,7 @@
         "id": "a2-konj2-hoflich-q3",
         "type": "translate",
         "points": 1,
-        "promptDe": "ترجم: «هل معك قلم من فضلك؟» (بصيغة مهذّبة مع Hätten)",
+        "promptDe": "Formuliere höflich mit „hätten“.",
         "answer": [
           "Hätten Sie einen Kugelschreiber bitte?",
           "Hätten Sie einen Stift bitte?"
@@ -10805,7 +10853,8 @@
         "alternativen": [
           "Hätten Sie bitte einen Stift?"
         ],
-        "explanationAr": "طلب شيء مهذّباً = Hätten Sie …؟"
+        "explanationAr": "طلب شيء مهذّباً = Hätten Sie …؟",
+        "promptAr": "هل معك قلم من فضلك؟"
       },
       {
         "id": "a2-konj2-hoflich-q4",
@@ -10882,13 +10931,14 @@
       {
         "id": "a2-verb-praep-v2",
         "type": "translate",
-        "promptDe": "قُل: أعاني من الصداع.",
+        "promptDe": "Übersetze den arabischen Satz ins Deutsche.",
         "answer": "Ich leide an Kopfschmerzen.",
         "keywords": [
           "leide",
           "kopfschmerzen"
         ],
-        "explanationAr": "leiden an + Dativ: an Kopfschmerzen."
+        "explanationAr": "leiden an + Dativ: an Kopfschmerzen.",
+        "promptAr": "قُل: أعاني من الصداع."
       }
     ],
     "summaryAr": "أفعال كثيرة لا تعمل وحدها: تنتظر حرف جر بعينه. على سبيل المثال warten auf, sprechen über, denken an. هذا الدرس يعطي القاعدة الأساسية لثمانية أفعال شائعة.",
@@ -10983,11 +11033,12 @@
         "id": "a2-verb-praep-q4",
         "type": "translate",
         "points": 1,
-        "promptDe": "ترجم: «أنا سعيدةٌ بالخبر» (sich freuen über)",
+        "promptDe": "Formuliere mit „sich freuen über“.",
         "answer": [
           "Ich freue mich über die Nachricht."
         ],
-        "explanationAr": "السعادة بشيء حصل = sich freuen über + Akk."
+        "explanationAr": "السعادة بشيء حصل = sich freuen über + Akk.",
+        "promptAr": "أنا سعيدةٌ بالخبر."
       },
       {
         "id": "a2-verb-praep-q5",
@@ -11218,13 +11269,14 @@
       {
         "id": "b2-adjektiv-partizip-v2",
         "type": "translate",
-        "promptDe": "ترجم: الطالب المقيم في برلين.",
+        "promptDe": "Formuliere mit einem Partizip als Adjektiv.",
         "answer": "der in Berlin wohnende Student",
         "keywords": [
           "wohnende",
           "student"
         ],
-        "explanationAr": "Partizip I ممدود: in Berlin wohnende + نهاية."
+        "explanationAr": "Partizip I ممدود: in Berlin wohnende + نهاية.",
+        "promptAr": "الطالب المقيم في برلين."
       }
     ],
     "summaryAr": "في مستوى B2 تُستخدَم صيغتا Partizip I (laufend) وPartizip II (gelaufen) كصفات طويلة قبل الاسم، كما تُحوَّل الصفات إلى أسماء بكتابة الحرف كبير (der Alte, das Gute). كلها تُصرَّف كنهايات الصفات العادية.",
@@ -11354,10 +11406,11 @@
       {
         "id": "b2-adj-p6",
         "type": "translate",
-        "promptDe": "ترجم: الكتاب الذي قُرِئ البارحة كان ممتعاً.",
+        "promptDe": "Formuliere mit einem Partizip als Adjektiv.",
         "answer": "Das gestern gelesene Buch war interessant.",
         "hint": "Partizip II كصفة مع نهايتها بعد das",
-        "explanationAr": "Partizip II (gelesen) كصفة قبل الاسم: نهايته -e بعد das."
+        "explanationAr": "Partizip II (gelesen) كصفة قبل الاسم: نهايته -e بعد das.",
+        "promptAr": "الكتاب الذي قُرِئ البارحة كان ممتعاً."
       }
     ]
   },
@@ -11496,13 +11549,14 @@
       {
         "id": "a1-weil-e5",
         "type": "translate",
-        "promptDe": "ترجم إلى الألمانية باستعمال weil: «أبقى في البيت لأنّ الجو ممطر.»",
+        "promptDe": "Verbinde den Satz mit „weil“.",
         "answer": "Ich bleibe zu Hause, weil es regnet.",
         "keywords": [
           "weil",
           "regnet"
         ],
-        "explanationAr": "الترتيب الصحيح: …, weil es regnet — regnet في نهاية التابعة."
+        "explanationAr": "الترتيب الصحيح: …, weil es regnet — regnet في نهاية التابعة.",
+        "promptAr": "أبقى في البيت لأنّ الجو ممطر."
       },
       {
         "id": "a1-weil-e6",
@@ -11643,13 +11697,14 @@
       {
         "id": "a2-versch-n3",
         "type": "translate",
-        "promptDe": "ترجم: «نذهب إلى المدرسة.»",
+        "promptDe": "Übersetze den arabischen Satz ins Deutsche.",
         "answer": "Wir gehen zur Schule.",
         "keywords": [
           "zur",
           "Schule"
         ],
-        "explanationAr": "zu + der (die Schule) ← zur: المؤنّث المفرد يُدمَج مع zu وجوباً."
+        "explanationAr": "zu + der (die Schule) ← zur: المؤنّث المفرد يُدمَج مع zu وجوباً.",
+        "promptAr": "ترجم: «نذهب إلى المدرسة.»"
       }
     ],
     "pitfalls": [
@@ -11810,13 +11865,14 @@
       {
         "id": "a1-plural-n5",
         "type": "translate",
-        "promptDe": "ترجم: «السيارات سريعة.»",
+        "promptDe": "Übersetze den arabischen Satz ins Deutsche.",
         "answer": "Die Autos sind schnell.",
         "keywords": [
           "autos",
           "schnell"
         ],
-        "explanationAr": "Auto دخيل ← -s: Die Autos sind schnell."
+        "explanationAr": "Auto دخيل ← -s: Die Autos sind schnell.",
+        "promptAr": "ترجم: «السيارات سريعة.»"
       },
       {
         "id": "a1-plural-n6",
@@ -12028,14 +12084,15 @@
       {
         "id": "a1-zeitpraep-n6",
         "type": "translate",
-        "promptDe": "ترجم: «ألعب بعد المدرسة.»",
+        "promptDe": "Übersetze den arabischen Satz ins Deutsche.",
         "answer": "Ich spiele nach der Schule.",
         "keywords": [
           "spiele",
           "nach",
           "schule"
         ],
-        "explanationAr": "بعد = nach + الجر: nach der Schule."
+        "explanationAr": "بعد = nach + الجر: nach der Schule.",
+        "promptAr": "ترجم: «ألعب بعد المدرسة.»"
       },
       {
         "id": "a1-zeitpraep-n7",
@@ -12220,14 +12277,15 @@
       {
         "id": "a2-neben-n5",
         "type": "translate",
-        "promptDe": "ترجم: «أشرب الشاي لكنه يشرب القهوة.»",
+        "promptDe": "Übersetze den arabischen Satz ins Deutsche.",
         "answer": "Ich trinke Tee, aber er trinkt Kaffee.",
         "keywords": [
           "trinke",
           "aber",
           "trinkt"
         ],
-        "explanationAr": "تضاد ← aber والفعل ثانٍ في الجملتين."
+        "explanationAr": "تضاد ← aber والفعل ثانٍ في الجملتين.",
+        "promptAr": "ترجم: «أشرب الشاي لكنه يشرب القهوة.»"
       },
       {
         "id": "a2-neben-n6",
@@ -12431,14 +12489,15 @@
       {
         "id": "a2-demo-n6",
         "type": "translate",
-        "promptDe": "ترجم: «كل طفل يلعب.»",
+        "promptDe": "Übersetze den arabischen Satz ins Deutsche.",
         "answer": "Jedes Kind spielt.",
         "keywords": [
           "jedes",
           "kind",
           "spielt"
         ],
-        "explanationAr": "كلّ + مفرد: Jedes Kind spielt."
+        "explanationAr": "كلّ + مفرد: Jedes Kind spielt.",
+        "promptAr": "ترجم: «كل طفل يلعب.»"
       },
       {
         "id": "a2-demo-n7",
@@ -12711,14 +12770,15 @@
       {
         "id": "a2-wf-e10",
         "type": "translate",
-        "promptDe": "ترجم إلى الألمانية: «ما نوع الحقيبة التي تبحث عنها؟»",
+        "promptDe": "Übersetze den arabischen Satz ins Deutsche.",
         "answer": "Was für eine Tasche suchst du?",
         "keywords": [
           "was für eine",
           "tasche",
           "suchst du"
         ],
-        "explanationAr": "السؤال عن النوع بـWas für؛ Tasche مؤنث مفعول به، لذا eine."
+        "explanationAr": "السؤال عن النوع بـWas für؛ Tasche مؤنث مفعول به، لذا eine.",
+        "promptAr": "ترجم إلى الألمانية: «ما نوع الحقيبة التي تبحث عنها؟»"
       }
     ],
     "verify": [
@@ -12872,14 +12932,15 @@
       {
         "id": "b1-absicht-n5",
         "type": "translate",
-        "promptDe": "ترجم: «أساعدك لكي تنجح.»",
+        "promptDe": "Übersetze den arabischen Satz ins Deutsche.",
         "answer": "Ich helfe dir, damit du bestehst.",
         "keywords": [
           "helfe",
           "damit",
           "bestehst"
         ],
-        "explanationAr": "فاعلان مختلفان ← damit + فعل مصرف."
+        "explanationAr": "فاعلان مختلفان ← damit + فعل مصرف.",
+        "promptAr": "ترجم: «أساعدك لكي تنجح.»"
       },
       {
         "id": "b1-absicht-n6",
@@ -13090,13 +13151,14 @@
       {
         "id": "b1-konj2-vergangenheit-n6",
         "type": "translate",
-        "promptDe": "ترجم: «ليتك جئت!»",
+        "promptDe": "Übersetze den arabischen Satz ins Deutsche.",
         "answer": "Wärst du nur gekommen!",
         "keywords": [
           "wärst",
           "gekommen"
         ],
-        "explanationAr": "لوم ماضٍ: Wärst du nur gekommen!"
+        "explanationAr": "لوم ماضٍ: Wärst du nur gekommen!",
+        "promptAr": "ترجم: «ليتك جئت!»"
       },
       {
         "id": "b1-konj2-vergangenheit-n7",
@@ -13277,13 +13339,14 @@
       {
         "id": "b2-textkonnektoren-n5",
         "type": "translate",
-        "promptDe": "ترجم: «وعلاوة على ذلك، يبقى.»",
+        "promptDe": "Übersetze den arabischen Satz ins Deutsche.",
         "answer": "Des Weiteren bleibt er.",
         "keywords": [
           "weiteren",
           "bleibt"
         ],
-        "explanationAr": "des Weiteren: كبير ومنفصل دائماً."
+        "explanationAr": "des Weiteren: كبير ومنفصل دائماً.",
+        "promptAr": "ترجم: «وعلاوة على ذلك، يبقى.»"
       },
       {
         "id": "b2-textkonnektoren-n6",
@@ -16103,14 +16166,15 @@
       {
         "id": "a0-satzbau-v2",
         "type": "translate",
-        "promptDe": "قُل بالألمانية: أنا أسكن في برلين.",
+        "promptDe": "Formuliere den Satz auf Deutsch.",
         "answer": "Ich wohne in Berlin.",
         "keywords": [
           "wohne",
           "in",
           "Berlin"
         ],
-        "explanationAr": "الترتيب الثابت: فاعل ثم فعل ثم المكان: Ich wohne in Berlin."
+        "explanationAr": "الترتيب الثابت: فاعل ثم فعل ثم المكان: Ich wohne in Berlin.",
+        "promptAr": "أنا أسكن في برلين."
       }
     ]
   },
@@ -16758,13 +16822,14 @@
       {
         "id": "b2-k2vht-e6",
         "type": "translate",
-        "promptDe": "ترجم: ليتك جئت!",
+        "promptDe": "Übersetze den arabischen Satz ins Deutsche.",
         "answer": "Wärst du nur gekommen!",
         "keywords": [
           "wärst",
           "gekommen"
         ],
-        "explanationAr": "لوم ماضٍ: Wärst du nur gekommen!"
+        "explanationAr": "لوم ماضٍ: Wärst du nur gekommen!",
+        "promptAr": "ترجم: ليتك جئت!"
       },
       {
         "id": "b2-k2vht-e7",

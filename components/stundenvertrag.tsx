@@ -1,43 +1,33 @@
 "use client";
 /**
- * ⏱️ عقد الساعات — StundenVertrag
- * ═══════════════════════════════════════════════════════════════
- *  يعرض للمتعلّم ثلاثة أرقام لا رقماً واحداً:
- *    (١) ما تخطِّطُه له الخطةُ فعلاً (محسوب من buildDay، لا مكتوب يدوياً)
- *    (٢) ما يطلبُه مرجعُ CEFR لكل مستوى
- *    (٣) ما قضاه هو فعلاً (محجوز بيده — فلا قياس بلا تسجيل)
- *  ثم يقول له بصراحة أيَّ مستوى يبلغُه بهذا الحمل.
- *
- *  لماذا هذه اللوحة موجودة: لأنَّ وعداً لا يُقابَلُ بمرجعٍ هو ادّعاء.
- *  والخطةُ كانت تعدُ B2 وهي تخطِّط 517.6 ساعة، ومرجعُ B2 يبدأ من 600.
- *  هذا لا يُصلَحُ بإخفائه — يُصلَحُ بقولِه وبفتحِ طريقٍ أثقل لمن أراده.
- * ═══════════════════════════════════════════════════════════════
+ * مقارنة الحمل الزمني الإرشادية.
+ * تفصل بين هدف الجلسة، والمسار الأساسي، والتعميق الاختياري، والوقت المقاس.
+ * نطاقات الدورات سياق تخطيطي فقط ولا تُحوَّل إلى مستوى CEFR أو جاهزية امتحان.
  */
 import { useEffect, useState } from "react";
 import type { Progress } from "@/lib/types";
 import { TOTAL_DAYS } from "@/lib/types";
-import { planStundenBis, planStundenGesamt } from "@/lib/plan";
-import { PHASEN, LERNLAST, PHASE_END_DAY } from "@/lib/phasen";
 import {
-  CEFR_STUNDEN,
-  URTEIL_AR,
-  vergleichePlan,
-  erreichbaresNiveau,
+  planArbeitslast,
+  planKernStundenBis,
+  planKernTagesMinuten,
+  planTagesMinuten,
+  planVertiefungTagesMinuten,
+} from "@/lib/plan";
+import { PHASEN, LERNLAST } from "@/lib/phasen";
+import {
+  ZEITLAST_POSITION_AR,
+  vergleicheZeitlast,
   minutenEffektiv,
   minutenZuStunden,
   MAX_MIN_PRO_TASK,
 } from "@/lib/cefr";
 import { bucheMinuten, loadProgress, PROGRESS_EVENT } from "@/lib/store";
 
-/** الصياغة العربية للحكم — واحدة في كل المشروع حتى لا تختلف الشاشات */
-export function urteilZeile(u: ReturnType<typeof vergleichePlan>[number]): string {
-  return `${u.level}: خطَّتنا ${u.planStd} س · مرجع CEFR ${u.ref[0]}–${u.ref[1]} س · ${URTEIL_AR[u.urteil].emoji} ${URTEIL_AR[u.urteil].text}`;
-}
-
 export function StundenVertrag({ progress }: { progress: Progress }) {
   const [eingabe, setEingabe] = useState("");
-  /* الإدخالُ اليدويُّ يُحدِّث السجل المنفصل مباشرةً عبر bucheMinuten؛ والأبُ لا يُمرِّر prop جديدة.
-     لذلك تشتركُ اللوحةُ في حدث الحالة لتعرض آخر رقمٍ مُبلَّغ عنه من دون لمس قياس المؤقّت. */
+  /* الإدخال اليدوي يحدث السجل مباشرة؛ نتابع حدث الحالة كي يتحدث العرض من دون
+     خلطه بدقائق المؤقت المقاسة. */
   const [live, setLive] = useState<Progress | null>(null);
   useEffect(() => {
     const onChange = () => setLive(loadProgress());
@@ -46,13 +36,14 @@ export function StundenVertrag({ progress }: { progress: Progress }) {
   }, []);
   const stand = live ?? progress;
 
-  const vergleich = vergleichePlan(planStundenBis);
-  const gesamt = planStundenGesamt();
-  const niveau = erreichbaresNiveau(vergleich);
-  const b2 = vergleich[3];
-
+  const arbeitslast = planArbeitslast();
+  const vergleich = vergleicheZeitlast(planKernStundenBis);
   const tag = Math.min(Math.max(stand.plan.day | 0, 1), TOTAL_DAYS);
-  const stdBisher = planStundenBis(tag);
+  const tagesSchaetzung = planTagesMinuten(tag);
+  const kernSchaetzung = planKernTagesMinuten(tag);
+  const vertiefungSchaetzung = planVertiefungTagesMinuten(tag);
+  const heuteGemessen = Math.max(0, stand.plan.minutenEffektivTage?.[tag] ?? 0);
+  const stdBisher = planKernStundenBis(tag);
   const effektiv = minutenEffektiv(stand);
   const stdEffektiv = minutenZuStunden(effektiv);
   const manuell = Math.max(0, stand.plan.minutenManuell ?? 0);
@@ -66,36 +57,58 @@ export function StundenVertrag({ progress }: { progress: Progress }) {
 
   return (
     <section className="card" style={{ padding: "1.1rem 1.2rem" }} data-testid="stundenvertrag">
-      <h2 style={{ fontWeight: 800, marginBottom: "0.35rem" }}>⏱️ عقد الساعات — Stundenvertrag</h2>
-      <p style={{ color: "var(--color-ink2)", fontSize: "0.88rem", marginBottom: "0.8rem" }}>
-        مجموعُ الخطة هو تقديرُ مهامها، أمّا الوقتُ الفعلي فيُسجّله مؤقّتُ الجلسة. أيُّ إدخالٍ يدويّ يُحفظُ منفصلاً ولا يُعرَض كوقتٍ مقاس.
+      <h2 style={{ fontWeight: 800, marginBottom: "0.35rem" }}>⏱️ مقارنة الحمل الزمني الإرشادية</h2>
+      <p style={{ color: "var(--color-ink2)", fontSize: "0.88rem", marginBottom: "0.8rem", lineHeight: 1.8 }}>
+        هذه أرقام مختلفة: هدف جلسة، ومسار أساسي يغلق اليوم، وتعميق اختياري، ووقت قاسه المؤقت. بلوغ هدف الجلسة لا يثبت إكمال الأساسي، وأي إدخال يدوي يبقى منفصلاً عن القياس.
       </p>
 
-      {/* ── الأرقام الثلاثة ── */}
-      <div className="grid2" style={{ gap: "0.6rem", marginBottom: "0.9rem" }}>
+      {/* هدف الجلسة · حمل اليوم الكامل · القياس الفعلي */}
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(10rem, 1fr))", gap: "0.6rem", marginBottom: "0.7rem" }} data-testid="zeitmodell-drei-zahlen">
         <div style={{ background: "var(--color-paper2)", borderRadius: "8px", padding: "0.7rem 0.85rem" }}>
-          <div style={{ fontSize: "0.78rem", color: "var(--color-ink2)" }}>ما تخطِّطُه الخطةُ كلَّها ({TOTAL_DAYS} يوماً)</div>
-          <div style={{ fontSize: "1.5rem", fontWeight: 800 }} className="rtl-num" data-testid="stunden-plan">{gesamt.toFixed(1)} س</div>
+          <div style={{ fontSize: "0.78rem", color: "var(--color-ink2)" }}>هدف الجلسة الافتراضي — التوقف قبله مسموح</div>
+          <div style={{ fontSize: "1.45rem", fontWeight: 800 }} className="rtl-num" data-testid="sitzungsziel-minuten">{arbeitslast.sitzungszielMinuten} د</div>
+        </div>
+        <div style={{ background: "var(--color-paper2)", borderRadius: "8px", padding: "0.7rem 0.85rem", borderInlineStart: "3px solid var(--color-a1)" }}>
+          <div style={{ fontSize: "0.78rem", color: "var(--color-ink2)" }}>المسار الأساسي لليوم {tag} — يدخل الإغلاق</div>
+          <div style={{ fontSize: "1.45rem", fontWeight: 800 }} className="rtl-num" data-testid="kernlast-minuten">{kernSchaetzung} د</div>
         </div>
         <div style={{ background: "var(--color-paper2)", borderRadius: "8px", padding: "0.7rem 0.85rem" }}>
-          <div style={{ fontSize: "0.78rem", color: "var(--color-ink2)" }}>وقتٌ قاسه مؤقّت الجلسة</div>
-          <div style={{ fontSize: "1.5rem", fontWeight: 800 }} className="rtl-num" data-testid="stunden-effektiv">{stdEffektiv.toFixed(1)} س</div>
+          <div style={{ fontSize: "0.78rem", color: "var(--color-ink2)" }}>التعميق الاختياري / الكتالوج الكامل</div>
+          <div style={{ fontSize: "1.45rem", fontWeight: 800 }} className="rtl-num" data-testid="tageslast-minuten">+{vertiefungSchaetzung} / {tagesSchaetzung} د</div>
+        </div>
+        <div style={{ background: "var(--color-paper2)", borderRadius: "8px", padding: "0.7rem 0.85rem" }}>
+          <div style={{ fontSize: "0.78rem", color: "var(--color-ink2)" }}>وقت اليوم الذي قاسه المؤقت</div>
+          <div style={{ fontSize: "1.45rem", fontWeight: 800 }} className="rtl-num" data-testid="heute-gemessen-minuten">{heuteGemessen.toFixed(1)} د</div>
+        </div>
+      </div>
+
+      <div className="grid2" style={{ gap: "0.6rem", marginBottom: "0.9rem" }}>
+        <div style={{ background: "var(--color-paper2)", borderRadius: "8px", padding: "0.7rem 0.85rem" }}>
+          <div style={{ fontSize: "0.78rem", color: "var(--color-ink2)" }}>المسار الأساسي ({arbeitslast.tage} يوماً · متوسط {arbeitslast.durchschnittKernMinutenProTag.toFixed(1)} د/يوم)</div>
+          <div style={{ fontSize: "1.35rem", fontWeight: 800 }} className="rtl-num" data-testid="stunden-plan">{arbeitslast.kernStunden.toFixed(1)} س</div>
           <div style={{ fontSize: "0.78rem", color: "var(--color-ink2)", marginTop: "0.2rem" }}>
-            وقتٌ أُبلغ عنه يدوياً، غيرُ مقاس: <span className="rtl-num" data-testid="stunden-manuell">{stdManuell.toFixed(1)} س</span>
+            التعميق الاختياري: <span className="rtl-num">{arbeitslast.vertiefungStunden.toFixed(1)} س</span> · الكتالوج الكامل: <span className="rtl-num">{arbeitslast.stunden.toFixed(1)} س</span>
+          </div>
+        </div>
+        <div style={{ background: "var(--color-paper2)", borderRadius: "8px", padding: "0.7rem 0.85rem" }}>
+          <div style={{ fontSize: "0.78rem", color: "var(--color-ink2)" }}>مجموع الوقت الذي قاسه المؤقت</div>
+          <div style={{ fontSize: "1.35rem", fontWeight: 800 }} className="rtl-num" data-testid="stunden-effektiv">{stdEffektiv.toFixed(1)} س</div>
+          <div style={{ fontSize: "0.78rem", color: "var(--color-ink2)", marginTop: "0.2rem" }}>
+            مُبلّغ عنه يدوياً، غير مقاس: <span className="rtl-num" data-testid="stunden-manuell">{stdManuell.toFixed(1)} س</span>
           </div>
         </div>
       </div>
 
-      {/* ── جدول المقارنة ── */}
-      <div style={{ overflowX: "auto", marginBottom: "0.9rem" }}>
+      {/* مقارنة زمنية وصفية لا حكم كفاءة */}
+      <div style={{ overflowX: "auto", marginBottom: "0.7rem" }}>
         <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.85rem" }}>
+          <caption style={{ textAlign: "start", fontWeight: 700, paddingBottom: "0.35rem" }}>سياق زمني: تقدير المسار الأساسي ونطاقات ساعات دورات Goethe المنشورة</caption>
           <thead>
             <tr style={{ borderBottom: "2px solid var(--color-line)", textAlign: "start" }}>
-              <th style={{ padding: "0.35rem 0.4rem", textAlign: "start" }}>المستوى</th>
-              <th style={{ padding: "0.35rem 0.4rem", textAlign: "start" }}>ساعاتُ خطَّتنا (تراكمية)</th>
-              <th style={{ padding: "0.35rem 0.4rem", textAlign: "start" }}>مرجع CEFR</th>
-              <th style={{ padding: "0.35rem 0.4rem", textAlign: "start" }}>التغطية</th>
-              <th style={{ padding: "0.35rem 0.4rem", textAlign: "start" }}>الحكم</th>
+              <th style={{ padding: "0.35rem 0.4rem", textAlign: "start" }}>قسم الخطة</th>
+              <th style={{ padding: "0.35rem 0.4rem", textAlign: "start" }}>المسار الأساسي التراكمي</th>
+              <th style={{ padding: "0.35rem 0.4rem", textAlign: "start" }}>نطاق ساعات الدورة</th>
+              <th style={{ padding: "0.35rem 0.4rem", textAlign: "start" }}>مقارنة وصفية</th>
             </tr>
           </thead>
           <tbody>
@@ -103,15 +116,9 @@ export function StundenVertrag({ progress }: { progress: Progress }) {
               <tr key={u.level} style={{ borderBottom: "1px solid var(--color-line)" }} data-testid={`cefr-zeile-${u.level}`}>
                 <td style={{ padding: "0.4rem", fontWeight: 700 }}>{u.level}</td>
                 <td style={{ padding: "0.4rem" }} className="rtl-num">{u.planStd} س</td>
-                <td style={{ padding: "0.4rem" }} className="rtl-num">{u.ref[0]}–{u.ref[1]} س</td>
-                <td style={{ padding: "0.4rem" }} className="rtl-num">{u.deckungProzent}٪</td>
-                <td style={{ padding: "0.4rem", color: URTEIL_AR[u.urteil].farb, fontSize: "0.82rem" }}>
-                  {URTEIL_AR[u.urteil].emoji} {URTEIL_AR[u.urteil].text}
-                  {u.fehlendBisMinimum > 0 && (
-                    <span style={{ display: "block", color: "var(--color-ink2)" }}>
-                      ينقصُ {u.fehlendBisMinimum} س للوصولِ إلى أدنى النطاق
-                    </span>
-                  )}
+                <td style={{ padding: "0.4rem" }} className="rtl-num">{u.kursSpanne[0]}–{u.kursSpanne[1]} س</td>
+                <td style={{ padding: "0.4rem", color: ZEITLAST_POSITION_AR[u.position].farb, fontSize: "0.82rem" }}>
+                  {ZEITLAST_POSITION_AR[u.position].text}
                 </td>
               </tr>
             ))}
@@ -119,50 +126,39 @@ export function StundenVertrag({ progress }: { progress: Progress }) {
         </table>
       </div>
 
-      {/* ── الحكم الصريح ── */}
-      <div style={{ background: URTEIL_AR[b2.urteil].farb === "var(--color-cola)" ? "var(--color-cola-soft)" : "var(--color-paper2)", borderInlineStart: `3px solid ${URTEIL_AR[b2.urteil].farb}`, borderRadius: "6px", padding: "0.7rem 0.85rem", marginBottom: "0.9rem", fontSize: "0.88rem" }} data-testid="stunden-urteil">
-        <strong>الحكمُ الصريح:</strong> بهذا الحملِ المخطَّط تبلغُ <strong>{niveau}</strong> بمستوى مرجعِ CEFR.
-        {b2.urteil === "weitDarunter" || b2.urteil === "darunter" ? (
-          <>
-            {" "}و<b>B2 يحتاج {CEFR_STUNDEN.B2[0]}–{CEFR_STUNDEN.B2[1]} ساعة</b>، وخطَّتنا تنتهي عند {gesamt.toFixed(1)} س —
-            أي ينقصُها <b>{b2.fehlendBisMinimum} ساعة</b> على الأقل.
-            <span style={{ display: "block", marginTop: "0.35rem" }}>
-              هذا ليس تقصيراً منك ولا من المحتوى — بل في <b>توزيعِ الساعات</b>: مرحلتا A1 وA2 وافيتان،
-              ومرحلةُ B2 أقصرُ المراحلِ وهي أثقلُها مطلباً. الطريقُ إلى B2 يمرُّ بزيادةِ الحملِ اليوميِّ أو إطالةِ المرحلة، وكلاهما قرارُك.
-            </span>
-          </>
-        ) : (
-          <> والحملُ المخطَّطُ يفي بالمرجع في كلِّ مرحلة.</>
-        )}
+      <div style={{ background: "var(--color-paper2)", borderInlineStart: "3px solid var(--color-mid)", borderRadius: "6px", padding: "0.7rem 0.85rem", marginBottom: "0.9rem", fontSize: "0.88rem", lineHeight: 1.8 }} data-testid="stunden-einordnung">
+        <strong>حدود المقارنة:</strong> الساعات تصف حملاً زمنياً ولا تقيس الكفاءة. نافذة المسار الأساسي 45–90 دقيقة قرار تخطيط داخلي غير مُثبت بعد بدراسة التزام/تعب ميدانية. لا يمكن استنتاج أنك بلغت A1 أو A2 أو B1 أو B2 من الوقت أو النشاط وحدهما؛ إثبات المستوى يحتاج أداءً متعدد المهارات وتقويماً مناسباً، وجاهزية الامتحان غير مقاسة هنا.
       </div>
 
-      {/* ── التوزيع الأكاديمي: كيف وُزِّعت الأيام والحمل ── */}
       <div style={{ marginBottom: "0.9rem" }} data-testid="phasen-verteilung">
-        <div style={{ fontWeight: 700, fontSize: "0.9rem", marginBottom: "0.3rem" }}>📐 التوزيع الأكاديمي للأيام والحمل</div>
+        <div style={{ fontWeight: 700, fontSize: "0.9rem", marginBottom: "0.3rem" }}>📐 توزيع الأيام وتقديرات المهام</div>
         <p style={{ fontSize: "0.82rem", color: "var(--color-ink2)", margin: "0 0 0.45rem" }}>
-          الأيامُ موزَّعةٌ بأوزانِ زيادةِ ساعاتِ CEFR بين المستويات (لا بالتساوي)، والحملُ اليوميُّ يتصاعدُ مع المستوى — المبتدئُ أخفّ، وB2 أطولُ وأثقل.
+          تقدير مهام اليوم يتغير حسب قسم الخطة؛ هذه القيم محسوبة من المهام الحالية وليست ساعات يجب تحويلها إلى حكم لغوي.
         </p>
         <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.86rem" }}>
           <thead>
             <tr style={{ borderBottom: "2px solid var(--color-line)" }}>
-              <th style={{ padding: "0.3rem 0.4rem", textAlign: "start" }}>المستوى</th>
+              <th style={{ padding: "0.3rem 0.4rem", textAlign: "start" }}>القسم</th>
               <th style={{ padding: "0.3rem 0.4rem", textAlign: "start" }}>الأيام</th>
               <th style={{ padding: "0.3rem 0.4rem", textAlign: "start" }}>أسابيع</th>
-              <th style={{ padding: "0.3rem 0.4rem", textAlign: "start" }}>معامل الحمل</th>
-              <th style={{ padding: "0.3rem 0.4rem", textAlign: "start" }}>ساعة/يوم</th>
+              <th style={{ padding: "0.3rem 0.4rem", textAlign: "start" }}>معامل التقدير</th>
+              <th style={{ padding: "0.3rem 0.4rem", textAlign: "start" }}>الأساسي د/يوم</th>
+              <th style={{ padding: "0.3rem 0.4rem", textAlign: "start" }}>الاختياري د/يوم</th>
+              <th style={{ padding: "0.3rem 0.4rem", textAlign: "start" }}>الكل د/يوم</th>
             </tr>
           </thead>
           <tbody>
-            {(["A1", "A2", "B1", "B2"] as const).map((L) => {
-              const von = PHASEN[L].von, bis = PHASE_END_DAY[L];
-              const proTag = (planStundenBis(bis) - planStundenBis(von - 1)) / (bis - von + 1);
+            {(["A1", "A2", "B1", "B2"] as const).map((level) => {
+              const phase = arbeitslast.phasen[level];
               return (
-                <tr key={L} style={{ borderBottom: "1px solid var(--color-line)" }} data-testid={`phase-zeile-${L}`}>
-                  <td style={{ padding: "0.3rem 0.4rem", fontWeight: 700 }}>{L}</td>
-                  <td style={{ padding: "0.3rem 0.4rem" }} className="rtl-num">{von}–{bis}</td>
-                  <td style={{ padding: "0.3rem 0.4rem" }} className="rtl-num">{PHASEN[L].wochen}{L === "B2" ? " + ختام" : ""}</td>
-                  <td style={{ padding: "0.3rem 0.4rem" }} className="rtl-num">×{LERNLAST[L].toFixed(2)}</td>
-                  <td style={{ padding: "0.3rem 0.4rem" }} className="rtl-num">{proTag.toFixed(1)} س</td>
+                <tr key={level} style={{ borderBottom: "1px solid var(--color-line)" }} data-testid={`phase-zeile-${level}`}>
+                  <td style={{ padding: "0.3rem 0.4rem", fontWeight: 700 }}>{level}</td>
+                  <td style={{ padding: "0.3rem 0.4rem" }} className="rtl-num">{phase.von}–{phase.bis}</td>
+                  <td style={{ padding: "0.3rem 0.4rem" }} className="rtl-num">{PHASEN[level].wochen}{level === "B2" ? " + ختام" : ""}</td>
+                  <td style={{ padding: "0.3rem 0.4rem" }} className="rtl-num">×{LERNLAST[level].toFixed(2)}</td>
+                  <td style={{ padding: "0.3rem 0.4rem" }} className="rtl-num">{phase.durchschnittKernMinutenProTag.toFixed(1)}</td>
+                  <td style={{ padding: "0.3rem 0.4rem" }} className="rtl-num">{phase.durchschnittVertiefungMinutenProTag.toFixed(1)}</td>
+                  <td style={{ padding: "0.3rem 0.4rem" }} className="rtl-num">{phase.durchschnittMinutenProTag.toFixed(1)}</td>
                 </tr>
               );
             })}
@@ -170,27 +166,21 @@ export function StundenVertrag({ progress }: { progress: Progress }) {
         </table>
       </div>
 
-      {/* ── نسبة التحقيق ── */}
       <div style={{ fontSize: "0.85rem", marginBottom: "0.9rem" }}>
-        <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "0.25rem" }}>
-          <span>ما قضيتَه مقابلَ ما خُطِّط حتى يومِك ({tag})</span>
+        <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "0.25rem", gap: "0.5rem", flexWrap: "wrap" }}>
+          <span>الوقت المقاس مقابل تقدير المسار الأساسي حتى اليوم {tag}</span>
           <strong className="rtl-num">{stdEffektiv.toFixed(1)} س / {stdBisher.toFixed(1)} س · {quote}٪</strong>
         </div>
         <div style={{ height: "8px", background: "var(--color-paper2)", borderRadius: "4px", overflow: "hidden" }}>
-          <div style={{ width: `${Math.min(100, quote)}%`, height: "100%", background: quote >= 80 ? "var(--color-ok)" : quote >= 50 ? "var(--color-gold)" : "var(--color-cola)" }} />
+          <div style={{ width: `${Math.min(100, quote)}%`, height: "100%", background: "var(--color-mid)" }} />
         </div>
         <div style={{ color: "var(--color-ink2)", fontSize: "0.78rem", marginTop: "0.3rem" }}>
-          {quote < 50
-            ? "أقلُّ من نصفِ المخطَّط — الساعاتُ المرجعيةُ لا تتحقَّقُ بهذا الإيقاع، والوعدُ ينسحبُ على من أتمَّ حملَه."
-            : quote < 80
-              ? "تسيرُ دون المخطَّط — لا بأس إن كان مقصوداً، لكنَّ الرقمَ أعلاه سيتأخَّر عن المرجع."
-              : "أنت عند الحملِ المخطَّط أو فوقه — الرقمُ أعلاه صادقٌ بحقّك."}
+          هذه نسبة زمنية وصفية فقط: اختلافها قد يعني توقفات أو عملاً خارج المؤقت أو اختلاف سرعة التعلم، ولا يعني نجاحاً أو فشلاً أو مستوىً لغوياً.
         </div>
       </div>
 
-      {/* ── إدخال يدوي منفصل عن القياس ── */}
       <div style={{ display: "flex", gap: "0.5rem", alignItems: "center", flexWrap: "wrap", paddingTop: "0.6rem", borderTop: "1px solid var(--color-line)" }} data-testid="stunden-manual-entry">
-        <label htmlFor="minuten-buchen" style={{ fontSize: "0.85rem", fontWeight: 700 }}>أدخل وقتاً أبلغتَ عنه اليوم (غير مقاس):</label>
+        <label htmlFor="minuten-buchen" style={{ fontSize: "0.85rem", fontWeight: 700 }}>أدخل وقتاً أبلغت عنه اليوم (غير مقاس):</label>
         <input
           id="minuten-buchen"
           className="field"
@@ -203,16 +193,15 @@ export function StundenVertrag({ progress }: { progress: Progress }) {
           style={{ width: "7rem", minHeight: "44px" }}
         />
         <button className="btn btn-primary" data-testid="manual-time-add" onClick={buchen} disabled={!(Number(eingabe) > 0)} style={{ minHeight: "44px" }}>
-          أضِف إلى الإدخال اليدوي
+          أضف إلى الإدخال اليدوي
         </button>
         <span style={{ fontSize: "0.78rem", color: "var(--color-ink2)" }}>
-          الحدُّ {MAX_MIN_PRO_TASK} دقيقةً في الإدخال الواحد؛ لن يزيدَ وقتَ المؤقّت أو ساعاتِ القياس.
+          الحد {MAX_MIN_PRO_TASK} دقيقة في الإدخال الواحد؛ لن يزيد وقت المؤقت المقاس.
         </span>
       </div>
 
-      <p style={{ fontSize: "0.78rem", color: "var(--color-ink2)", marginTop: "0.7rem" }}>
-        مرجعُ الساعات: نطاقاتُ Goethe-Institut / telc التراكمية من الصفر. وهي <strong>نطاقات</strong> لا أرقامٌ حاسمة،
-        تختلفُ باختلافِ خلفيةِ كلِّ متعلّم وخبرتهِ ووقتِ الممارسة؛ ولا يُستنتجُ ذلك من اللغةِ الأمِّ وحدها.
+      <p style={{ fontSize: "0.78rem", color: "var(--color-ink2)", marginTop: "0.7rem", lineHeight: 1.8 }}>
+        المصدر السياقي: تقديرات Goethe-Institut لساعات الدورات التراكمية من الصفر. تختلف الخبرة والنتائج بين المتعلمين؛ CEFR يصف أداءً لغوياً، لا عدداً من الساعات.
       </p>
     </section>
   );

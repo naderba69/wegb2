@@ -19,7 +19,7 @@ import type { Progress } from "@/lib/types";
 import { useProgress, gradeFehlerNow } from "@/lib/store";
 import { normalize } from "@/lib/grader";
 import { levelOf, pickN, rng } from "@/lib/plan";
-import { logK } from "@/lib/kompetenz";
+import { logMeasuredK } from "@/lib/kompetenz";
 import { checkAbzeichen } from "@/lib/spiel";
 import { alleVokabeln, grammarMap, verben, haerte } from "@/lib/content";
 import { ProgressBar } from "./ui";
@@ -224,7 +224,7 @@ export function BlitzDrill({ progress }: { progress: Progress }) {
       const alt = p.blitz?.[deck] ?? 0;
       const xp = Math.min(12, hits) + (hits >= 10 ? 3 : 0);
       const q: Progress = { ...p, blitz: { ...(p.blitz ?? {}), [deck]: Math.max(alt, hits) }, xp: (p.xp ?? 0) + xp };
-      return meta.comp ? logK(checkAbzeichen(q), meta.comp, hits >= Math.max(5, Math.round(n * 0.6))) : checkAbzeichen(q);
+      return meta.comp ? logMeasuredK(checkAbzeichen(q), meta.comp, hits >= Math.max(5, Math.round(n * 0.6))) : checkAbzeichen(q);
     });
   }
 
@@ -397,7 +397,7 @@ export function KurzSession({ progress }: { progress: Progress }) {
       setPhase("ende");
       if (!geloggtRef.current && score.n > 0) {
         geloggtRef.current = true;
-        update((p) => logK(p, "Wortschatz", score.n > 0 && score.hits / score.n >= 0.6));
+        update((p) => logMeasuredK(p, "Wortschatz", score.n > 0 && score.hits / score.n >= 0.6));
       }
     }
   }, [rest, phase, score, update]);

@@ -5,17 +5,17 @@ import {
   emptyProgress,
   type DebtItem,
   type FehlerEintrag,
+  type DayTask,
   type Kompetenz,
   type Progress,
   type SrsState,
-  type TaskKind,
   type TaskResult,
 } from "./types";
 import { clampMinuten } from "./cefr";
 import { logSicherheit } from "./sicherheit";
 import { upsertFehler, gradeFehlerIn } from "./fehler";
 import { checkAbzeichen } from "./spiel";
-import { logK, KIND_KOMPETENZ, FEHLER_ZU_KOMPETENZ } from "./kompetenz";
+import { logK, FEHLER_ZU_KOMPETENZ } from "./kompetenz";
 import { progressKeyActive } from "./profiles";
 import { migrateCurriculumSchedule } from "./curriculum-schedule";
 import { recordTodayUxClosed, recordTodayUxSubmission } from "./metriken";
@@ -248,7 +248,7 @@ export function useProgress() {
       taskId: string,
       score: number,
       total: number,
-      kind?: TaskKind,
+      task?: DayTask,
       geplantMin?: number,
       verifyFor?: string,
       minutenEffektiv?: number,
@@ -263,33 +263,42 @@ export function useProgress() {
           score: Math.max(score, prev?.score ?? 0),
           total,
           attempts: (prev?.attempts ?? 0) + 1,
-          kind: kind ?? prev?.kind,
+          kind: task?.kind ?? prev?.kind,
           at: new Date().toISOString(),
           geplantMin: geplantMin ?? prev?.geplantMin,
           minutenEffektiv: Number.isFinite(minutenEffektiv)
             ? Math.max(prev?.minutenEffektiv ?? 0, Math.max(0, minutenEffektiv as number))
             : prev?.minutenEffektiv,
+          evidence: task?.evidence ?? prev?.evidence,
         };
         const rec = verifyFor ? p.verify?.[verifyFor] : undefined;
         const verify =
           verifyFor && rec && rec.doneDay === undefined
             ? { ...(p.verify ?? {}), [verifyFor]: { ...rec, doneDay: day, passed: result.passed } }
             : p.verify;
-        return checkAbzeichen(
-          logK(
-            {
-              ...p,
-              verify,
-              todayUx: ux
-                ? recordTodayUxSubmission(p.todayUx, day, ux.activeMs, ux.step, passed, ux.hasStep5)
-                : p.todayUx,
-              xp: (p.xp ?? 0) + (result.passed ? 15 : 5),
-              plan: { ...p.plan, tasks: { ...p.plan.tasks, [taskId]: result } },
-            },
-            KIND_KOMPETENZ[kind ?? prev?.kind ?? "check"] ?? "Grammatik",
-            result.passed
-          )
-        );
+        let next: Progress = {
+          ...p,
+          verify,
+          todayUx: ux
+            ? recordTodayUxSubmission(p.todayUx, day, ux.activeMs, ux.step, passed, ux.hasStep5)
+            : p.todayUx,
+          xp: (p.xp ?? 0) + (result.passed ? 15 : 5),
+          plan: { ...p.plan, tasks: { ...p.plan.tasks, [taskId]: result } },
+        };
+        // PA-016: route the submission through explicit construct descriptors. A missing
+        // descriptor creates no skill evidence rather than reviving a coarse kind fallback.
+        for (const descriptor of result.evidence ?? []) {
+          next = logK(next, descriptor.construct, result.passed, {
+            evidenceType: descriptor.evidenceType,
+            level: descriptor.level,
+            weight: descriptor.weight,
+            assisted: descriptor.assisted,
+            responseMode: descriptor.responseMode,
+            method: descriptor.method,
+            sourceId: descriptor.sourceId,
+          });
+        }
+        return checkAbzeichen(next);
       });
     },
     [update]
@@ -470,11 +479,15 @@ export function disputeRegel(regelId: string) {
   saveProgress({ ...p, disputiert: { ...(p.disputiert ?? {}), [regelId]: n } });
 }
 
-/** تقييم مراجعة خطأ في الدفتر فوراً — ويُسجَّل على شبكة الكفاءات المتأثرة */
+/** تقييم ذاتي لمراجعة خطأ: يحرك SRS ويُحفظ self_report، لا أداءً مقاساً. */
 export function gradeFehlerNow(key: string, ok: boolean) {
   const p = gradeFehlerIn(loadProgress(), key, ok);
   const art = p.fehler?.[key]?.art ?? "sonst";
-  saveProgress(logK(p, FEHLER_ZU_KOMPETENZ[art] ?? "Grammatik", ok));
+  saveProgress(logK(p, FEHLER_ZU_KOMPETENZ[art] ?? "Grammatik", ok, {
+    evidenceType: "self_report",
+    method: "error_retrieval_self_report",
+    sourceId: key,
+  }));
 }
 
 /** تسجيل محاولة كفاءة مباشرة (للمحركات خارج حلقة update) */

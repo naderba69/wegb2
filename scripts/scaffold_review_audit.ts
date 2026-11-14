@@ -10,6 +10,8 @@ type ReviewItem = {
   bucket: Bucket;
   type: string;
   markersBefore: string[];
+  /** Optional post-migration markers when a cue was translated out of a wrongly German-labelled Arabic run. */
+  markersAfter?: string[];
   promptDeBefore: string;
   promptDeAfter: string;
   textBefore: string | null;
@@ -102,8 +104,8 @@ for (const item of review.items) {
   const beforeMarkers = parentheticalMarkers({ promptDe: item.promptDeBefore, text: item.textBefore });
   if (!same(beforeMarkers, item.markersBefore)) failures.push(`${item.id}: before-marker evidence is inconsistent`);
   const afterMarkers = parentheticalMarkers(exercise);
-  if (item.decision === "retain" && !same(afterMarkers, item.markersBefore)) {
-    failures.push(`${item.id}: retained marker changed without a new decision`);
+  if (item.decision === "retain" && !same(afterMarkers, item.markersAfter ?? item.markersBefore)) {
+    failures.push(`${item.id}: retained marker changed without a recorded post-migration decision`);
   }
   if (item.decision === "remove-redundant" && (afterMarkers.length !== 0 || item.classification !== "redundant-with-options")) {
     failures.push(`${item.id}: redundant marker was not removed cleanly`);

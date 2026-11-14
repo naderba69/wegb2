@@ -1,0 +1,480 @@
+{
+  "schema": "wegb2-reviewed-vocab-posinfo-batch-v1",
+  "batch": "PA-034-02",
+  "reviewedAt": "2026-11-04",
+  "scope": "59 additional high-confidence single-head principal-part corrections after contextual internal review; candidate generation is not external linguistic sign-off.",
+  "entries": [
+    {
+      "id": "vw-a1ess-037",
+      "deck": "a1-essen-trinken",
+      "level": "A1",
+      "de": "backen",
+      "previousPosInfo": "backt, backte, hat gebackt",
+      "posInfo": "backt, backte, hat gebacken"
+    },
+    {
+      "id": "vw-a1koe-032",
+      "deck": "a1-koerper-kleidung",
+      "level": "A1",
+      "de": "tragen",
+      "previousPosInfo": "tragt, tragte, hat getragt",
+      "posInfo": "trägt, trug, hat getragen"
+    },
+    {
+      "id": "vw-a1koe-049",
+      "deck": "a1-koerper-kleidung",
+      "level": "A1",
+      "de": "waschen",
+      "previousPosInfo": "wascht, waschte, hat gewascht",
+      "posInfo": "wäscht, wusch, hat gewaschen"
+    },
+    {
+      "id": "vw-a1sta-019",
+      "deck": "a1-stadt-wege",
+      "level": "A1",
+      "de": "fahren",
+      "previousPosInfo": "fahrt, fahrte, ist gefahrt",
+      "posInfo": "fährt, fuhr, ist gefahren"
+    },
+    {
+      "id": "vw-a1sta-020",
+      "deck": "a1-stadt-wege",
+      "level": "A1",
+      "de": "laufen",
+      "previousPosInfo": "lauft, laufte, hat gelauft",
+      "posInfo": "läuft, lief, ist gelaufen"
+    },
+    {
+      "id": "vw-a1sta-021",
+      "deck": "a1-stadt-wege",
+      "level": "A1",
+      "de": "fliegen",
+      "previousPosInfo": "fliegt, fliegte, ist gefliegt",
+      "posInfo": "fliegt, flog, ist geflogen"
+    },
+    {
+      "id": "vw-a1sta-023",
+      "deck": "a1-stadt-wege",
+      "level": "A1",
+      "de": "abfahren",
+      "previousPosInfo": "fahrt ab, fahrte ab, ist abgefahrt",
+      "posInfo": "fährt ab, fuhr ab, ist abgefahren"
+    },
+    {
+      "id": "vw-a1sta-038",
+      "deck": "a1-stadt-wege",
+      "level": "A1",
+      "de": "finden",
+      "previousPosInfo": "findet, findete, hat gefindt",
+      "posInfo": "findet, fand, hat gefunden"
+    },
+    {
+      "id": "vw-a2arb-024",
+      "deck": "a2-arbeit-buero",
+      "level": "A2",
+      "de": "verschieben",
+      "previousPosInfo": "verschiebt, verschiebte, hat verschiebt",
+      "posInfo": "verschiebt, verschob, hat verschoben"
+    },
+    {
+      "id": "vw-a2all-016",
+      "deck": "a2-alltag-dienste",
+      "level": "A2",
+      "de": "anrufen",
+      "previousPosInfo": "ruft an, rufte an, hat angeruft",
+      "posInfo": "ruft an, rief an, hat angerufen"
+    },
+    {
+      "id": "vw-a2all-025",
+      "deck": "a2-alltag-dienste",
+      "level": "A2",
+      "de": "einladen",
+      "previousPosInfo": "ladet ein, ladete ein, hat eingeladt",
+      "posInfo": "lädt ein, lud ein, hat eingeladen"
+    },
+    {
+      "id": "vx-haus--031",
+      "deck": "a1-haus-schule",
+      "level": "A1",
+      "de": "sehen",
+      "previousPosInfo": "seht, sehte, hat geseht",
+      "posInfo": "sieht, sah, hat gesehen"
+    },
+    {
+      "id": "vx-haus--038",
+      "deck": "a1-haus-schule",
+      "level": "A1",
+      "de": "helfen",
+      "previousPosInfo": "helft, helfte, hat gehelft",
+      "posInfo": "hilft, half, hat geholfen"
+    },
+    {
+      "id": "vx-haus--040",
+      "deck": "a1-haus-schule",
+      "level": "A1",
+      "de": "wissen",
+      "previousPosInfo": "wisst, wisste, hat gewisst",
+      "posInfo": "weiß, wusste, hat gewusst"
+    },
+    {
+      "id": "vx-haus--041",
+      "deck": "a1-haus-schule",
+      "level": "A1",
+      "de": "kennen",
+      "previousPosInfo": "kennt, kennte, hat gekennt",
+      "posInfo": "kennt, kannte, hat gekannt"
+    },
+    {
+      "id": "vx-haus--043",
+      "deck": "a1-haus-schule",
+      "level": "A1",
+      "de": "bleiben",
+      "previousPosInfo": "bleibt, bleibte, hat gebleibt",
+      "posInfo": "bleibt, blieb, ist geblieben"
+    },
+    {
+      "id": "vx-haus--046",
+      "deck": "a1-haus-schule",
+      "level": "A1",
+      "de": "anfangen",
+      "previousPosInfo": "fangt an, fangte an, hat angefangt",
+      "posInfo": "fängt an, fing an, hat angefangen"
+    },
+    {
+      "id": "vx-haus--048",
+      "deck": "a1-haus-schule",
+      "level": "A1",
+      "de": "vergessen",
+      "previousPosInfo": "vergesst, vergesste, hat vergesst",
+      "posInfo": "vergisst, vergaß, hat vergessen"
+    },
+    {
+      "id": "vx-haus--050",
+      "deck": "a1-haus-schule",
+      "level": "A1",
+      "de": "warten",
+      "previousPosInfo": "wartet, wartete, hat gewartt",
+      "posInfo": "wartet, wartete, hat gewartet"
+    },
+    {
+      "id": "vy-natur-026",
+      "deck": "a1-natur-freizeit",
+      "level": "A1",
+      "de": "singen",
+      "previousPosInfo": "singt, singte, hat gesingt",
+      "posInfo": "singt, sang, hat gesungen"
+    },
+    {
+      "id": "vy-natur-035",
+      "deck": "a1-natur-freizeit",
+      "level": "A1",
+      "de": "treffen",
+      "previousPosInfo": "trefft, treffte, hat getrefft",
+      "posInfo": "trifft, traf, hat getroffen"
+    },
+    {
+      "id": "vy-leben-019",
+      "deck": "a2-leben-technik",
+      "level": "A2",
+      "de": "versprechen",
+      "previousPosInfo": "versprecht, versprechte, hat versprecht",
+      "posInfo": "verspricht, versprach, hat versprochen"
+    },
+    {
+      "id": "vz-welt-b-030",
+      "deck": "a1-welt-beruf",
+      "level": "A1",
+      "de": "stehen",
+      "previousPosInfo": "steht, stehte, hat gesteht",
+      "posInfo": "steht, stand, hat gestanden"
+    },
+    {
+      "id": "r311a1-030",
+      "deck": "a1-welt-beruf",
+      "level": "A1",
+      "de": "anbieten",
+      "previousPosInfo": "bietet an, bietete an, hat angebiett",
+      "posInfo": "bietet an, bot an, hat angeboten"
+    },
+    {
+      "id": "va-modort-000",
+      "deck": "a1-modal-ort",
+      "level": "A1",
+      "de": "können",
+      "previousPosInfo": "könnt, könnte, hat gekönnt",
+      "posInfo": "kann, konnte, hat gekonnt"
+    },
+    {
+      "id": "va-modort-001",
+      "deck": "a1-modal-ort",
+      "level": "A1",
+      "de": "müssen",
+      "previousPosInfo": "müsst, müsste, hat gemüsst",
+      "posInfo": "muss, musste, hat gemusst"
+    },
+    {
+      "id": "va-modort-002",
+      "deck": "a1-modal-ort",
+      "level": "A1",
+      "de": "dürfen",
+      "previousPosInfo": "dürft, dürfte, hat gedürft",
+      "posInfo": "darf, durfte, hat gedurft"
+    },
+    {
+      "id": "va-modort-003",
+      "deck": "a1-modal-ort",
+      "level": "A1",
+      "de": "wollen",
+      "previousPosInfo": "wollt, wollte, hat gewollt",
+      "posInfo": "will, wollte, hat gewollt"
+    },
+    {
+      "id": "va-modort-004",
+      "deck": "a1-modal-ort",
+      "level": "A1",
+      "de": "sollen",
+      "previousPosInfo": "sollt, sollte, hat gesollt",
+      "posInfo": "soll, sollte, hat gesollt"
+    },
+    {
+      "id": "va-modort-088",
+      "deck": "a1-modal-ort",
+      "level": "A1",
+      "de": "mitbringen",
+      "previousPosInfo": "bringt mit, bringte mit, hat mitgebringt",
+      "posInfo": "bringt mit, brachte mit, hat mitgebracht"
+    },
+    {
+      "id": "vc-reise--029",
+      "deck": "a2-reise-feste",
+      "level": "A2",
+      "de": "vorbereiten",
+      "previousPosInfo": "bereitet vor, bereitete vor, hat vorgebereitt",
+      "posInfo": "bereitet vor, bereitete vor, hat vorbereitet"
+    },
+    {
+      "id": "vd-gesund-006",
+      "deck": "a2-geld-gesundheit",
+      "level": "A2",
+      "de": "gewinnen",
+      "previousPosInfo": "gewinnt, gewinnte, hat gewinnt",
+      "posInfo": "gewinnt, gewann, hat gewonnen"
+    },
+    {
+      "id": "vd-gesund-007",
+      "deck": "a2-geld-gesundheit",
+      "level": "A2",
+      "de": "verlieren",
+      "previousPosInfo": "verliert, verlierte, hat verliert",
+      "posInfo": "verliert, verlor, hat verloren"
+    },
+    {
+      "id": "ve-kueche--004",
+      "deck": "a2-kueche-haushalt",
+      "level": "A2",
+      "de": "braten",
+      "previousPosInfo": "bratet, bratete, hat gebratt",
+      "posInfo": "brät, briet, hat gebraten"
+    },
+    {
+      "id": "r312a2-152",
+      "deck": "a2-erzaehlen-zeit",
+      "level": "A2",
+      "de": "lügen",
+      "previousPosInfo": "lügt, lügte, hat gelügt",
+      "posInfo": "lügt, log, hat gelogen"
+    },
+    {
+      "id": "vg-arbeit--011",
+      "deck": "b1-karriere-psyche",
+      "level": "B1",
+      "de": "gründen",
+      "previousPosInfo": "gründet, gründete, hat gegründt",
+      "posInfo": "gründet, gründete, hat gegründet"
+    },
+    {
+      "id": "j01-arbeit-vertieft-006",
+      "deck": "j01-arbeit-vertieft",
+      "level": "B2",
+      "de": "verzichten",
+      "previousPosInfo": "verzichtet, verzichtete, hat verzichtt",
+      "posInfo": "verzichtet, verzichtete, hat verzichtet"
+    },
+    {
+      "id": "j03-umwelt-energie-048",
+      "deck": "j03-umwelt-energie",
+      "level": "B2",
+      "de": "sinken",
+      "previousPosInfo": "sinkt, sinkte, hat gesinkt",
+      "posInfo": "sinkt, sank, ist gesunken"
+    },
+    {
+      "id": "j04-gesundheit-pflege-054",
+      "deck": "j04-gesundheit-pflege",
+      "level": "B2",
+      "de": "messen",
+      "previousPosInfo": "messt, messte, hat gemesst",
+      "posInfo": "misst, maß, hat gemessen"
+    },
+    {
+      "id": "j08-gefuehle-beziehungen-024",
+      "deck": "j08-gefuehle-beziehungen",
+      "level": "B2",
+      "de": "zweifeln",
+      "previousPosInfo": "zweifet, zweifete, hat gezweifet",
+      "posInfo": "zweifelt, zweifelte, hat gezweifelt"
+    },
+    {
+      "id": "j09-stadt-wohnen-verkehr-017",
+      "deck": "j09-stadt-wohnen-verkehr",
+      "level": "B2",
+      "de": "einsteigen",
+      "previousPosInfo": "steigt ein, steigte ein, ist eingesteigt",
+      "posInfo": "steigt ein, stieg ein, ist eingestiegen"
+    },
+    {
+      "id": "j12-natur-tiere-051",
+      "deck": "j12-natur-tiere",
+      "level": "B2",
+      "de": "fließen",
+      "previousPosInfo": "fließt, fließte, hat gefließt",
+      "posInfo": "fließt, floss, ist geflossen"
+    },
+    {
+      "id": "j12-natur-tiere-058",
+      "deck": "j12-natur-tiere",
+      "level": "B2",
+      "de": "springen",
+      "previousPosInfo": "springt, springte, hat gespringt",
+      "posInfo": "springt, sprang, ist gesprungen"
+    },
+    {
+      "id": "j16-wege-ziele-013",
+      "deck": "j16-wege-ziele",
+      "level": "B2",
+      "de": "beginnen",
+      "previousPosInfo": "beginnt, beginnte, hat beginnt",
+      "posInfo": "beginnt, begann, hat begonnen"
+    },
+    {
+      "id": "r314b1-010",
+      "deck": "b1-az-a",
+      "level": "B1",
+      "de": "achten",
+      "previousPosInfo": "achtet, achtete, hat geachtt",
+      "posInfo": "achtet, achtete, hat geachtet"
+    },
+    {
+      "id": "r314b1-114",
+      "deck": "b1-az-b",
+      "level": "B1",
+      "de": "beißen",
+      "previousPosInfo": "ßt bei, ßte bei, hat beißt",
+      "posInfo": "beißt, biss, hat gebissen"
+    },
+    {
+      "id": "r314b1-146",
+      "deck": "b1-az-b",
+      "level": "B1",
+      "de": "bieten",
+      "previousPosInfo": "bietet, bietete, hat gebiett",
+      "posInfo": "bietet, bot, hat geboten"
+    },
+    {
+      "id": "r316b1-009",
+      "deck": "b1-az-f",
+      "level": "B1",
+      "de": "fangen",
+      "previousPosInfo": "fangt, fangte, hat gefangt",
+      "posInfo": "fängt, fing, hat gefangen"
+    },
+    {
+      "id": "r316b1-017",
+      "deck": "b1-az-f",
+      "level": "B1",
+      "de": "fernsehen",
+      "previousPosInfo": "seht fern, sehte fern, hat ferngeseht",
+      "posInfo": "sieht fern, sah fern, hat ferngesehen"
+    },
+    {
+      "id": "r317b1-008",
+      "deck": "b1-az-i",
+      "level": "B1",
+      "de": "informieren",
+      "previousPosInfo": "informiert, informierte, hat geinformiert",
+      "posInfo": "informiert, informierte, hat informiert"
+    },
+    {
+      "id": "r317b1-066",
+      "deck": "b1-az-k",
+      "level": "B1",
+      "de": "klingen",
+      "previousPosInfo": "klingt, klingte, hat geklingt",
+      "posInfo": "klingt, klang, hat geklungen"
+    },
+    {
+      "id": "r317b1-122",
+      "deck": "b1-az-l",
+      "level": "B1",
+      "de": "leiden",
+      "previousPosInfo": "leidet, leidete, hat geleidt",
+      "posInfo": "leidet, litt, hat gelitten"
+    },
+    {
+      "id": "r319b1-033",
+      "deck": "b1-az-qr",
+      "level": "B1",
+      "de": "rennen",
+      "previousPosInfo": "rennt, rennte, hat gerennt",
+      "posInfo": "rennt, rannte, ist gerannt"
+    },
+    {
+      "id": "r320b1-006",
+      "deck": "b1-az-s1",
+      "level": "B1",
+      "de": "sammeln",
+      "previousPosInfo": "sammet, sammete, hat gesammet",
+      "posInfo": "sammelt, sammelte, hat gesammelt"
+    },
+    {
+      "id": "r321b1-038",
+      "deck": "b1-az-s2",
+      "level": "B1",
+      "de": "stehlen",
+      "previousPosInfo": "stehlt, stehlte, hat gestehlt",
+      "posInfo": "stiehlt, stahl, hat gestohlen"
+    },
+    {
+      "id": "r324b1-021",
+      "deck": "b1-az-w",
+      "level": "B1",
+      "de": "werden",
+      "previousPosInfo": "werdet, werdete, hat gewerdt",
+      "posInfo": "wird, wurde, ist geworden"
+    },
+    {
+      "id": "r324b1-022",
+      "deck": "b1-az-w",
+      "level": "B1",
+      "de": "werfen",
+      "previousPosInfo": "werft, werfte, hat gewerft",
+      "posInfo": "wirft, warf, hat geworfen"
+    },
+    {
+      "id": "r327b1-014",
+      "deck": "b1-az-final",
+      "level": "B1",
+      "de": "sein",
+      "previousPosInfo": "seit, seite, hat geseit",
+      "posInfo": "ist, war, ist gewesen"
+    },
+    {
+      "id": "r327b1-019",
+      "deck": "b1-az-final",
+      "level": "B1",
+      "de": "streiten",
+      "previousPosInfo": "streitet, streitete, hat gestreitt",
+      "posInfo": "streitet, stritt, hat gestritten"
+    }
+  ]
+}

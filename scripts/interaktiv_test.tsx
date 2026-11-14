@@ -6,7 +6,7 @@
  *  صناعي، ينقر الأزرار، يكتب في الحقول، ويقرأ ما ظهر للمستخدم.
  *  يغطي الجولة التفاعلية الجارية: 🥵 العينة الأصعب (Blitz كامل
  *  الدورة · إدخال رقم خيار ← خطأ ← التالي ← البطاقة التالية)،
- *  الورقة الرسمية A4 (Amtsblatt ← نافذة الطباعة الملتقطة)،
+ *  إثبات التدريب A4 غير الرسمي (Lernnachweis ← نافذة الطباعة الملتقطة)،
  *  وتركيب دخان لثلاثة مراكز أخرى.
  *  التشغيل: npm run interaktiv  (يبنيه esbuild ثم يشغّله node)
  * ============================================================ */
@@ -206,16 +206,16 @@ async function main() {
     ok(!!hdr, "II0 أكورديون التقارير مركّب");
     if (hdr) click(hdr);
     ok(txt().includes("إخفاء"), "II0b النقر يفتح مركز التقارير");
-    ok(txt().includes("الورقة الرسمية"), "II1 زر الورقة الرسمية A4 في شريط التصدير");
-    const b = btn("الورقة الرسمية");
+    ok(txt().includes("إثبات تدريب A4"), "II1 زر إثبات التدريب الوصفي في شريط التصدير");
+    const b = btn("إثبات تدريب A4");
     if (b) click(b);
     ok(gedruckt.length === 1, "II2 نافذة الطباعة فُتحت وكتب فيها مرة واحدة");
     const html = gedruckt[0] ?? "";
-    ok(html.includes("Amtliches Notblatt"), "II3 عنوان رسمي في الورقة");
-    ok(html.includes("سارة النموذج"), "II4 اسم الحامل مُدرج");
-    ok(/WB2-\d{3}-\d{4}/.test(html), "II5 ختم التحقق الحتمي WB2-xxx-xxxx");
-    ok(html.includes("جاهزية الامتحان") && html.includes("انضباط الخطة"), "II6 إحصاءات الجاهزية والانضباط");
-    ok(html.includes("Grammatik") || html.includes("قواعد") || html.includes("(grammatik)"), "II7 جدول الكفاءات بخمسة أسطر");
+    ok(html.includes("Lernnachweis") && html.includes("إثبات تدريب داخلي"), "II3 عنوان وصفي غير رسمي في الورقة");
+    ok(html.includes("سارة النموذج"), "II4 اسم المتعلّم مُدرج");
+    ok(!/WB2-\d{3}-\d{4}/.test(html) && html.includes("ليست شهادة مستوى"), "II5 لا ختم تحقق وهمي ولا ادعاء شهادة");
+    ok(html.includes("جاهزية الامتحان غير مقاسة") && html.includes("إكمال الخطة"), "II6 فصل الجاهزية غير المقاسة عن إكمال الخطة");
+    ok(html.includes("Grammatik") || html.includes("قواعد") || html.includes("(grammatik)"), "II7 جدول المجالات الستة ومصدر الدليل");
 
     // R281 (A2/A13): Retentions-Panel aus FSRS-Zustaenden
     const jetztMs = Date.now();
@@ -640,7 +640,8 @@ const hasFile = txt().includes("صوتٌ من الدار");
     const hdr = btn("إظهار ▼");
     ok(!!hdr, "XVII1 الأكورديونُ مُطوًى ابتداءً");
     if (hdr) click(hdr);
-    ok(txt().includes("اثنتا عشرة ساحة"), "XVII2 الوصفُ يُحدِّثُ نفسَه بنفسِه — لا «ستّة» العتيقة");
+    ok(txt().includes("اثنا عشر موقفاً خيالياً") && !!rootEl.querySelector('[data-testid="high-risk-notice-szenarien"]') && txt().includes("ليست تعليمات طوارئ"),
+      "XVII2 السيناريوهات الاثنا عشر موسومة خيالية، والتحذير ظاهر قبل النماذج والإجراءات");
     for (const nm of ["عِوَضُ المواطنة", "بدلُ السكنِ", "بدلُ الأطفالِ", "صندوقُ المرض", "دعمُ الدراسةِ", "الرقمُ الضريبيُّ"])
       ok(txt().includes(nm), "XVII3 ذراعُ ξ8 حاضرٌ في الرفوف: " + nm);
     const szn = btn("🧾 عِوَضُ المواطنة");
@@ -675,7 +676,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
   /* ---------- XIX — الرقعةُ 1415: لا يتيمةٌ ولا مزدوجة ---------- */
   {
     const bare = new Set(alleVokabeln.map((c: { de: string }) => c.de.replace(/^(der|die|das)\s+/, "").trim()));
-    ok(alleVokabeln.length === 6202, "XIX1 بنكُ المفرداتِ 6202 بطاقةً كما في الجرد الحيّ (R322: +93 بطاقة B1 لسدّ فجوة Goethe-Wortliste الأبجدية T+U Tabelle–ursprünglich؛ كانت 5860 منذ R321)");
+    ok(alleVokabeln.length === 6202, "XIX1 البنك الخام 6202 بطاقة كما في الجرد الحي؛ لا يساوي هذا عدداً من headwords أو تغطية Goethe/CEFR");
     ok(Object.keys(mnemonikMap).every((w) => bare.has(w)), "XIX2 لا حيلةٌ تُعلَّمُ بلا بطاقةٍ تُذكَرُ عليها");
     const neu = alleVokabeln.filter((c: { id: string }) => /^v14\d\d$/.test(c.id)) as { id: string; de: string; article?: string; pos?: string }[];
     const falschMarkiert = neu.filter((c) => c.pos === "Nomen"
@@ -1282,9 +1283,10 @@ const hasFile = txt().includes("صوتٌ من الدار");
     const idAbruf = buildDay(2, p2).tasks[0].id;
     ok(!!nachher.plan.tasks[idAbruf], `L8 التسليمُ سُجِّل في الحالة (${idAbruf})`);
     ok(!rootEl.querySelector('[data-testid="ritual-sperre"]'), "L9 وبعدَ التسليمِ زالت اللافتة");
-    ok(chip(1)?.textContent?.startsWith("🔒") === false && chip(4)?.textContent?.startsWith("🔒") === true, "L10 انفتحت محطة الدرس فقط وبقي الفحص وراء التسلسل");
-    if (chip(2)) click(chip(2)!);
-    ok(txt().includes("المهمة 2/") && !txt().includes("المهمة 3/"), "L11 والنقرُ على مهمة محطة لاحقة لا يتجاوز الدرس النشط");
+    ok(chip(1)?.textContent?.startsWith("🔒") === true && chip(2)?.textContent?.startsWith("🔒") === false && chip(3)?.textContent?.startsWith("🔒") === true,
+      "L10 انفتحت محطة الأساسي التالية، وبقي التعميق والإنتاج اللاحق خلف القفل");
+    if (chip(3)) click(chip(3)!);
+    ok(txt().includes("المهمة 3/") && !txt().includes("المهمة 4/"), "L11 والنقرُ على مهمة محطة لاحقة لا يتجاوز محطة الأساسي النشطة");
     act(() => { saveProgress({ ...emptyProgress, plan: { ...emptyProgress.plan, day: 1 } }); });
     mount(React.createElement(Heim));
     ok(!rootEl.querySelector('[data-testid="ritual-sperre"]') && chip(1)?.textContent?.startsWith("🔒") === true && chip(0)?.textContent?.startsWith("🔒") === false,
@@ -1684,17 +1686,17 @@ const hasFile = txt().includes("صوتٌ من الدار");
     }
   }
 
-  /* ---------- XLVI — عقدُ الساعات: لوحةٌ تُفتَح، ورقمٌ يُحجَز، وحكمٌ يُعلَن ---------- */
+  /* ---------- XLVI — مقارنة الحمل: جلسة ≠ أساسي ≠ تعميق ≠ وقت مقاس ---------- */
   {
     const { BerichteZentrum } = await import("../components/berichte");
-    const { planStundenGesamt, planStundenBis, planMinBis } = await import("../lib/plan");
-    const { vergleichePlan, erreichbaresNiveau, MAX_MIN_PRO_TASK } = await import("../lib/cefr");
+    const { planStundenGesamt, planKernStundenBis, planMinBis, planTagesMinuten, planKernTagesMinuten, planVertiefungTagesMinuten, planArbeitslast } = await import("../lib/plan");
+    const { vergleicheZeitlast, MAX_MIN_PRO_TASK } = await import("../lib/cefr");
     const { loadProgress, saveProgress, bucheMinuten, recordStudyMinutes } = await import("../lib/store");
     const { progressKeyActive } = await import("../lib/profiles");
 
     const ges = planStundenGesamt();
-    const vgl = vergleichePlan(planStundenBis);
-    const niv = erreichbaresNiveau(vgl);
+    const last = planArbeitslast();
+    const vgl = vergleicheZeitlast(planKernStundenBis);
 
     ok(Number.isFinite(ges) && ges > 0 && Math.abs(ges - planMinBis(TOTAL_DAYS) / 60) < 0.01,
       `XLVI1 مجموعُ تقديراتِ مهام الخطة ${ges.toFixed(1)} س مستمدٌ من المحرك، لا من هدف الجلسة ولا من الوقت المقاس`);
@@ -1712,26 +1714,32 @@ const hasFile = txt().includes("صوتٌ من الدار");
     await new Promise((r) => setTimeout(r, 30));
     t = txt();
 
-    ok(!!d0.querySelector('[data-testid="stundenvertrag"]'), "XLVI5 لوحةُ عقدِ الساعاتِ عنصرٌ حقيقيٌّ في الشجرة");
-    ok(t.includes("عقد الساعات"), "XLVI6 وعنوانُها ظاهرٌ للمتعلِّم");
+    ok(!!d0.querySelector('[data-testid="stundenvertrag"]'), "XLVI5 لوحة مقارنة الحمل عنصر حقيقي في الشجرة");
+    ok(t.includes("مقارنة الحمل الزمني الإرشادية"), "XLVI6 عنوانها يعلن أنها مقارنة إرشادية لا حكم مستوى");
     const planEl = d0.querySelector('[data-testid="stunden-plan"]');
-    ok(!!planEl && planEl!.textContent!.includes(String(Math.round(ges * 10) / 10).split(".")[0]),
-      `XLVI7 ورقمُ ساعاتِ الخطةِ معروضٌ (${planEl?.textContent}) ومطابقٌ للمحرِّك (${ges.toFixed(1)})`);
+    ok(!!planEl && planEl.textContent!.includes(String(last.kernStunden.toFixed(1)).split(".")[0]),
+      `XLVI7 ساعات المسار الأساسي معروضة (${planEl?.textContent}) ومطابقة للمحرك (${last.kernStunden.toFixed(1)})`);
+    ok((d0.querySelector('[data-testid="sitzungsziel-minuten"]')?.textContent ?? "").includes(String(last.sitzungszielMinuten)) &&
+      (d0.querySelector('[data-testid="kernlast-minuten"]')?.textContent ?? "").includes(String(planKernTagesMinuten(100))) &&
+      (d0.querySelector('[data-testid="tageslast-minuten"]')?.textContent ?? "").includes(String(planVertiefungTagesMinuten(100))) &&
+      (d0.querySelector('[data-testid="tageslast-minuten"]')?.textContent ?? "").includes(String(planTagesMinuten(100))) &&
+      (d0.querySelector('[data-testid="heute-gemessen-minuten"]')?.textContent ?? "").includes("0.0"),
+      "XLVI8 الأرقام منفصلة: هدف الجلسة، الأساسي، التعميق، الكتالوج الكامل، والوقت المقاس");
     for (const L of ["A1", "A2", "B1", "B2"]) {
       const z = d0.querySelector(`[data-testid="cefr-zeile-${L}"]`);
-      ok(!!z && (z!.textContent ?? "").includes(L) && (z!.textContent ?? "").includes("س"),
-        `XLVI8${L} صفُّ ${L} موجودٌ وفيه ساعاتُه ومرجعُه`);
+      ok(!!z && (z.textContent ?? "").includes(L) && (z.textContent ?? "").includes("س"),
+        `XLVI8${L} صف ${L} موجود وفيه تقدير الخطة ونطاق الدورة`);
     }
-    const urt = d0.querySelector('[data-testid="stunden-urteil"]');
-    ok(!!urt && (urt!.textContent ?? "").includes("الحكمُ الصريح"), "XLVI9 والحكمُ الصريحُ مكتوبٌ لا مُضمَر");
-    ok((urt?.textContent ?? "").includes(niv), `XLVI10 ويسمِّي المستوى المبلوغَ فعلاً: ${niv}`);
-    if (vgl[3].urteil === "darunter" || vgl[3].urteil === "weitDarunter") {
-      ok((urt!.textContent ?? "").includes("ينقصُها") || (urt!.textContent ?? "").includes(String(vgl[3].fehlendBisMinimum)),
-        `XLVI11 ونقصُ B2 معلنٌ بالأرقام (${vgl[3].fehlendBisMinimum} س) — لا وعدَ بلا ثمن`);
-    } else {
-      ok(true, "XLVI11 لا نقصَ في B2 فلا ادّعاءَ بنقص");
-    }
-    ok(t.includes("Goethe-Institut") && t.includes("نطاقات"), "XLVI12 والمرجعُ مسمًّى وموصوفٌ بأنه نطاقٌ لا رقمٌ حاسم");
+    const einordnung = d0.querySelector('[data-testid="stunden-einordnung"]');
+    ok(!!einordnung && (einordnung.textContent ?? "").includes("لا يمكن استنتاج") &&
+      (einordnung.textContent ?? "").includes("أداءً متعدد المهارات"),
+      "XLVI9 حدود المقارنة تمنع استنتاج CEFR من الساعات وتطلب أداء متعدد المهارات");
+    ok(!(einordnung?.textContent ?? "").includes("بلغت B2") && !t.includes("الحكم الصريح"),
+      "XLVI10 لا مستوى مبلوغ ولا حكم كفاءة مشتق من الزمن في الواجهة");
+    ok(vgl.length === 4 && vgl.every((row) => ["unterhalb", "innerhalb", "oberhalb"].includes(row.position)),
+      "XLVI11 محرك المقارنة يعيد موضعاً زمنياً وصفياً فقط");
+    ok(t.includes("Goethe-Institut") && t.includes("ساعات الدورات"),
+      "XLVI12 المصدر مسمى كنطاق ساعات دورات، لا معيار تحويل فردي");
 
     /* XLIX — التوزيع الأكاديمي ظاهرٌ على اللوحة لا في الكود فقط */
     const { PHASEN, LERNLAST, PHASE_END_DAY } = await import("../lib/phasen");
@@ -1740,8 +1748,10 @@ const hasFile = txt().includes("صوتٌ من الدار");
     const zA1 = d0.querySelector('[data-testid="phase-zeile-A1"]')?.textContent ?? "", zB2 = d0.querySelector('[data-testid="phase-zeile-B2"]')?.textContent ?? "";
     ok(zA1.includes(`${PHASEN.A1.von}–${PHASE_END_DAY.A1}`) && zA1.includes(`×${LERNLAST.A1.toFixed(2)}`), `XLIX2 صفُّ A1 يعرضُ أيامَ عقدِه ${PHASEN.A1.von}–${PHASE_END_DAY.A1} ومعاملَه ×${LERNLAST.A1.toFixed(2)} — من جدولِ العقدِ نفسِه (${zA1.trim().slice(0, 40)})`);
     ok(zB2.includes(`${PHASEN.B2.von}–${PHASE_END_DAY.B2}`) && zB2.includes(`×${LERNLAST.B2.toFixed(2)}`) && zB2.includes("ختام"), `XLIX3 صفُّ B2 يعرضُ ${PHASEN.B2.von}–${PHASE_END_DAY.B2} و×${LERNLAST.B2.toFixed(2)} والختام (${zB2.trim().slice(0, 50)})`);
-    ok((vert?.textContent ?? "").includes("لا بالتساوي"), "XLIX4 والمبدأُ مكتوبٌ للمتعلِّم: بأوزانِ CEFR لا بالتساوي");
-    ok(!(d0.querySelector('[data-testid="stunden-urteil"]')?.textContent ?? "").includes("ينقصُها"), "XLIX5 والحكمُ الصريحُ لم يعدْ يعلنُ نقصاً في B2 — لأنَّ النقصَ زال حساباً لا كلاماً");
+    ok((vert?.textContent ?? "").includes("محسوبة من المهام الحالية") || (vert?.textContent ?? "").includes("يتغير حسب قسم الخطة"),
+      "XLIX4 التوزيع يعلن أن المتوسطات مشتقة من المهام الحالية");
+    ok((d0.querySelector('[data-testid="stunden-einordnung"]')?.textContent ?? "").includes("غير مقاسة هنا"),
+      "XLIX5 المقارنة لا تحول حمل B2 إلى ادعاء جاهزية امتحان");
 
     /* إدخال يدوي منفصل عن وقت المؤقّت */
     ok(minutenEffektivTest(loadProgress()) === 0, "XLVI13 الأصلُ صفرُ دقيقةٍ مقاسة");
@@ -2244,20 +2254,32 @@ const hasFile = txt().includes("صوتٌ من الدار");
     mount(React.createElement(Bereitschaft, { progress: progSim as never }));
     const band = rootEl.querySelector('[data-testid="sim-band"]');
     ok(!!band && (band.textContent ?? "").includes("70"), "R286c مجال تذبذب المحاكاة (M5) يعرض المتوسط والمجال من محاولات المتعلم");
+    const noOverall = rootEl.querySelector('[data-testid="simulation-overall-not-assessed"]');
+    ok(!!noOverall && (noOverall.textContent ?? "").includes("غير مقاس") &&
+      (band?.textContent ?? "").includes("تصحيح محلي آلي") && (band?.textContent ?? "").includes("تقرير ذاتي"),
+    "PA017 واجهة التحليلات تفصل الآلي عن التقرير الذاتي ولا تعرض حكماً شاملاً");
   }
 
-  /* ═══════════ R287 — M3 اقتراح إعادة توزيع + M15 لافتة استئناف + M7 وتيرة ═══════════ */
+  /* ═══════════ R287/PA-021 — جرعة علاجية آمنة + M15 لافتة استئناف + M7 وتيرة ═══════════ */
   {
     const { SkillBalancePlan } = await import("../components/skillplan");
     const heute287 = new Date().toISOString().slice(0, 10);
     const log287 = [
-      ...Array.from({ length: 26 }, () => ({ h: "Lesen" as const, ok: true, d: heute287 })),
-      ...Array.from({ length: 7 }, () => ({ h: "Wortschatz" as const, ok: true, d: heute287 })),
-      ...Array.from({ length: 7 }, () => ({ h: "Hoeren" as const, ok: true, d: heute287 })),
+      ...Array.from({ length: 10 }, (_, i) => ({ h: "Lesen" as const, ok: i < 9, d: heute287, evidenceType: "measured" as const, assisted: false })),
+      ...Array.from({ length: 10 }, (_, i) => ({ h: "Hoeren" as const, ok: i < 4, d: heute287, evidenceType: "measured" as const, assisted: false })),
+      ...Array.from({ length: 20 }, () => ({ h: "Grammatik" as const, ok: false, d: heute287, evidenceType: "self_report" as const })),
     ];
-    mount(React.createElement(SkillBalancePlan, { progress: { ...emptyProgress, kompetenzLog: log287 } as never }));
-    const bp = rootEl.querySelector('[data-testid="skill-balance-plan"]');
-    ok(!!bp && (bp.textContent ?? "").includes("إعادة توزيع") && (bp.textContent ?? "").includes("65"), "R287a اقتراح إعادة التوزيع (M3) يظهر بالسبب والنسبة عند هيمنة مهارة فوق 60٪");
+    let recorded287 = "";
+    mount(React.createElement(SkillBalancePlan, {
+      progress: { ...emptyProgress, kompetenzLog: log287 } as never,
+      onRecordDose: (hand: string) => { recorded287 = hand; },
+    } as never));
+    const bp = rootEl.querySelector('[data-testid="skill-remediation-plan"]');
+    const doseButton = rootEl.querySelector('[data-testid="skill-dose-complete-Hoeren"]') as HTMLElement | null;
+    if (doseButton) click(doseButton);
+    ok(!!bp && (bp.textContent ?? "").includes("جرعات علاجية") && (bp.textContent ?? "").includes("40/100") &&
+      !!bp.querySelector('a[href="/ueben?station=hoeren"]') && !rootEl.querySelector('[data-testid="skill-dose-Grammatik"]') && recorded287 === "Hoeren",
+    "PA021 الجرعة العلاجية تنشأ من ضعف مقاس فقط؛ self-report لا يخصص الخطة وزر الإنجاز يجدول التحقق");
 
     const { WiedereinstiegBanner } = await import("../components/wiedereinstieg");
     const letzte = new Date(Date.now() - 8 * 86400000).toISOString().slice(0, 10);
@@ -2457,7 +2479,9 @@ const hasFile = txt().includes("صوتٌ من الدار");
 
     const { ReferenzPanel } = await import("../components/referenz");
     mount(React.createElement(ReferenzPanel, { progress: { ...emptyProgress } as never }));
-    ok(!!rootEl.querySelector('[data-testid="referenz-panel"]') && txt().includes("فجوة محتوى"), "R295d لوحة الفحص المرجعي (A21) تعلن فجوة سقف B2 (A29) بلا إخفاء");
+    ok(!!rootEl.querySelector('[data-testid="referenz-panel"]') && !!rootEl.querySelector('[data-testid="lexical-scope-boundary"]') &&
+      txt().includes("تغطية مدوّنة التطبيق") && txt().includes("التغطية الخارجية") && txt().includes("غير مقاس"),
+    "PA020 لوحة الجرد تعرض الوحدات الفريدة وتغطية مدونة التطبيق بلا مقارنة headword أو ادعاء إنتاج");
   }
 
   /* ═══════════ LXI — تقييمُ الثقةِ قبلَ الإجابة: الزرّانِ قبلَ الخيارات، التسجيلُ في Progress، رسالةُ «ثقة خاطئة» ═══════════ */
@@ -2858,7 +2882,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
     mount(React.createElement(KatalogLeiste));
     ok(txt().includes("دليل الأجنحة"), "LXXIV1 الدليل يُعرض مباشرة");
     mount(React.createElement(RadarKarte, { progress: { ...emptyProgress } }));
-    ok(!!rootEl.querySelector('svg[aria-label="شبكة الكفاءات"]'), "LXXIV2 شبكة الكفاءات SVG حاضرة");
+    ok(!!rootEl.querySelector('svg[aria-label^="الأداء التدريبي المقاس"]') && txt().includes("العينة غير مكتملة") && txt().includes("جاهزية الامتحان: غير مقاسة"), "LXXIV2 سجل الدليل يعرض unknown ولا يستنتج جاهزية من الفراغ");
   }
 
   /* ═══ LXXV — العمق المعجمي (V17) ═══ */
@@ -3242,11 +3266,11 @@ const hasFile = txt().includes("صوتٌ من الدار");
       const goalReadout = d0.querySelector('[data-testid="session-goal-progress"]');
       const bar = d0.querySelector('[aria-label="التقدّم نحو هدف الجلسة"]');
       const remaining = dayPlan.tasks.length - Object.keys(completed).length;
-      ok(!!note && (note.textContent ?? "").includes(`مجموع تقديرات مهام اليوم ${totalMinutes} دقيقة`) &&
+      ok(!!note && (note.textContent ?? "").includes(`مجموعهما ${totalMinutes} دقيقة`) &&
         (note.textContent ?? "").includes(`الهدف الحالي ${targetMinutes} دقيقة`) &&
-        (note.textContent ?? "").includes("لا يلزمك بإكمال القائمة في جلسة واحدة") &&
+        (note.textContent ?? "").includes("بلوغ هدف الجلسة وحده لا يعني إكمال المسار") &&
         !!d0.querySelector('[data-testid="session-goal-choice"]') && remaining > 0,
-        `LXXXIV1 المؤقّت المقاس له هدف ${targetMinutes} د مستقل عن مجموع تقديرات الخطة ${totalMinutes} د؛ تبقى ${remaining} مهام غير فاشلة`);
+        `LXXXIV1 المؤقّت المقاس له هدف ${targetMinutes} د مستقل عن الأساسي والتعميق (معاً ${totalMinutes} د)؛ تبقى ${remaining} مهام غير فاشلة`);
       ok(!!goalReadout && (goalReadout.textContent ?? "").includes(`${targetMinutes}.0 من ${targetMinutes} دقيقة مقاسة`) &&
         !!bar && bar.getAttribute("aria-valuenow") === "100" && remaining > 0 &&
         !!d0.querySelector('[data-testid="session-more"]') && !!d0.querySelector('[data-testid="session-goal-stop"]'),
@@ -3328,7 +3352,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
     }
   }
 
-  /* ═══ LXXXV — تبديل قائمة «أستطيع» يحفظ مباشرةً بلا اشتراك Progress متداخل ═══ */
+  /* ═══ LXXXV — قائمة «أستطيع» مضبوطة من التخزين وتتزامن مع تبديل الملف ═══ */
   {
     const storage = dom.window.localStorage;
     const saved = Array.from({ length: storage.length }, (_, i) => {
@@ -3337,22 +3361,43 @@ const hasFile = txt().includes("صوتٌ من الدار");
     });
     try {
       storage.clear();
-      storage.setItem("weg-b2-profiles", JSON.stringify({ active: "p1", list: [{ id: "p1", name: "اختبار", emoji: "🧪", created: "2026-10-04" }] }));
+      storage.setItem("weg-b2-profiles", JSON.stringify({
+        active: "p1",
+        list: [
+          { id: "p1", name: "اختبار 1", emoji: "🧪", created: "2026-10-04" },
+          { id: "p2", name: "اختبار 2", emoji: "🔬", created: "2026-10-04" },
+        ],
+      }));
       const { default: TaskView } = await import("../components/tasks");
       const { loadProgress } = await import("../lib/store");
+      const { switchProfile } = await import("../lib/profiles");
       const { candoMap } = await import("../lib/content");
       const first = candoMap.A0[0];
       mount(React.createElement(TaskView, {
         task: { id: "cando-toggle-test", kind: "wiederholen" as const, titleDe: "Wiederholung", titleAr: "استرجاع", minutes: 5, sentenceIds: [], quiz: [] },
         lang: "ar" as const, day: 1, srs: {}, onSrs: () => {}, onPoints: () => {}, voiceName: "", rate: 1,
       }));
-      const checkbox = d0.querySelector('input[type="checkbox"]') as HTMLInputElement | null;
+      let checkbox = d0.querySelector(`[data-testid="cando-checkbox-${first.id}"]`) as HTMLInputElement | null;
+      const initiallyUnchecked = checkbox?.checked === false;
       if (checkbox) click(checkbox);
-      const enabled = loadProgress().canDo[first.id] === true;
+      const enabled = loadProgress().canDo[first.id] === true && checkbox?.checked === true;
+      act(() => switchProfile("p2"));
+      const uncheckedAfterProfileSwitch = checkbox?.checked === false;
+      act(() => switchProfile("p1"));
+      const restoredAfterProfileSwitch = checkbox?.checked === true;
+      mount(React.createElement(TaskView, {
+        task: { id: "cando-toggle-test", kind: "wiederholen" as const, titleDe: "Wiederholung", titleAr: "استرجاع", minutes: 5, sentenceIds: [], quiz: [] },
+        lang: "ar" as const, day: 1, srs: {}, onSrs: () => {}, onPoints: () => {}, voiceName: "", rate: 1,
+      }));
+      checkbox = d0.querySelector(`[data-testid="cando-checkbox-${first.id}"]`) as HTMLInputElement | null;
+      const restoredChecked = checkbox?.checked === true;
       if (checkbox) click(checkbox);
-      const disabled = !loadProgress().canDo[first.id];
-      ok(!!first && !!checkbox && enabled && disabled,
-        "LXXXV تبديل «أستطيع» يحفظ حالته في الملف ويعكسها عند النقر الثاني دون تحديث حالة مكررة في الابن");
+      const disabled = !loadProgress().canDo[first.id] && checkbox?.checked === false;
+      const boundary = d0.querySelector('[data-testid="cando-boundary"]');
+      ok(!!first && !!checkbox && initiallyUnchecked && enabled && uncheckedAfterProfileSwitch &&
+        restoredAfterProfileSwitch && restoredChecked && disabled &&
+        (boundary?.textContent ?? "").includes("غير منسوبة إلى CEFR") && (boundary?.textContent ?? "").includes("Pre-A1"),
+        "PA031/032 قائمة «أستطيع» مضبوطة من الحالة المحفوظة وتتزامن مع الملف، وتعرض حد التقرير الداخلي وPre-A1");
     } finally {
       if (leave) leave();
       storage.clear();
@@ -3901,6 +3946,62 @@ const hasFile = txt().includes("صوتٌ من الدار");
     }
   }
 
+  /* ═══ PA-015 — B1/B2: نبر وإيقاع بمقارنة قبل/بعد لا checkbox ═══ */
+  {
+    const { default: TaskView } = await import("../components/tasks");
+    const { buildDay } = await import("../lib/plan");
+    const { getSatz } = await import("../lib/content");
+    let advanced: { day: number; task: ReturnType<typeof buildDay>["tasks"][number] } | undefined;
+    for (let day = 168; day <= TOTAL_DAYS && !advanced; day++) {
+      const task = buildDay(day, { ...emptyProgress, plan: { ...emptyProgress.plan, day } }).tasks.find((item) => !!item.pronunciationId);
+      if (task) advanced = { day, task };
+    }
+    ok(!!advanced && advanced.day > 167 && advanced.task.kind === "aussprache", "PA015-1 أول مهمة نبر صريحة تظهر بعد A2 ضمن خطة B1");
+    const points: [number, number][] = [];
+    if (advanced) {
+      mount(React.createElement(TaskView, {
+        task: advanced.task,
+        lang: "ar" as const,
+        day: advanced.day,
+        srs: {},
+        onSrs: () => {},
+        onPoints: (score: number, max: number) => points.push([score, max]),
+      }));
+      ok(!!rootEl.querySelector('[data-testid="prosodie-vergleich-task"]') &&
+        txt().includes("مقارنة قبل/بعد") && txt().includes("لا يقيس الفونيمات أو اللكنة"),
+        "PA015-2 المهمة تعرض هدف النبر وحد القياس بصدق");
+      ok(!!rootEl.querySelector('[data-testid="prosodie-transfer"]') &&
+        (advanced.task.sentenceIds ?? []).every((id) => {
+          const sentence = getSatz(id);
+          return !!sentence && txt().includes(sentence.de);
+        }),
+        "PA015-3 جمل النقل الأربع الأصلية باقية داخل المهمة بعد إضافة المقارنة");
+
+      const before = rootEl.querySelector('[data-testid="prosodie-before"]') as HTMLElement | null;
+      const beforeAttest = before?.querySelector('[data-testid="aussprache-self-attest"]') as HTMLElement | null;
+      if (beforeAttest) click(beforeAttest);
+      ok(!!beforeAttest && !!rootEl.querySelector('[data-testid="prosodie-coaching"]') && !!rootEl.querySelector('[data-testid="prosodie-after"]'),
+        "PA015-4 إتمام المحاولة الأولى يفتح الإرشاد ثم محاولة ثانية مستقلة");
+
+      const after = rootEl.querySelector('[data-testid="prosodie-after"]') as HTMLElement | null;
+      const afterAttest = after?.querySelector('[data-testid="aussprache-self-attest"]') as HTMLElement | null;
+      if (afterAttest) click(afterAttest);
+      const completeBeforeObservation = rootEl.querySelector('[data-testid="prosodie-task-complete"]') as HTMLButtonElement | null;
+      ok(!!afterAttest && !!rootEl.querySelector('[data-testid="prosodie-comparison"]') && completeBeforeObservation?.disabled === true,
+        "PA015-5 المحاولة الثانية تفتح المقارنة، ولا يكفي نقر المحاولتين للتسليم دون ملاحظة فرق");
+
+      const observation = rootEl.querySelector('[data-testid="prosodie-observation-unklar"]') as HTMLButtonElement | null;
+      if (observation) click(observation);
+      const complete = rootEl.querySelector('[data-testid="prosodie-task-complete"]') as HTMLButtonElement | null;
+      ok(observation?.getAttribute("aria-pressed") === "true" && complete?.disabled === false,
+        "PA015-6 المقارنة الذاتية الصريحة — بما فيها عدم ملاحظة فرق — مطلوبة ومعلنة وصولياً");
+      if (complete) click(complete);
+      ok(points.length === 1 && points[0][0] === 1 && points[0][1] === 1 && txt().includes("دون قياس رقمي كامل"),
+        "PA015-7 التسليم يسجل إكمال دورة المقارنة فقط ولا يختلق درجة نطق عند غياب الميكروفون");
+      await pruefeA11y("PA015-8 مهمة النبر بعد المقارنة غير المقاسة");
+    }
+  }
+
   /* ═══ XCV — مشغّل الجلسة المتسلسلة (U1/R187): مهمّة ← تسليم ← التالية، والحرية باقية ═══ */
   {
     const { Klassenzimmer } = await import("../components/akademie/Klassenzimmer");
@@ -3966,8 +4067,9 @@ const hasFile = txt().includes("صوتٌ من الدار");
     mount(React.createElement(PflegeStation));
     ok(pflegeWoerter.length === 133 && !!rootEl.querySelector('[data-testid="pflege-station"]') && // R213: +Pflegedokumentation/Patientenakte
        !!rootEl.querySelector('[data-testid="pflege-phrasen"]') &&
-       !!rootEl.querySelector('[data-testid="pflege-wort-pf-k01"]') && !!rootEl.querySelector('[data-testid="pflege-medizin-start"]'),
-      "XCIX1 محطة التمريض تعرض بنكها المهني المعمّق (133 كلمة مع الأزواج اللاتينية) وعبارات A1 وزرّ بدء محاكاة Medizin منذ أول تركيب");
+       !!rootEl.querySelector('[data-testid="pflege-wort-pf-k01"]') && !!rootEl.querySelector('[data-testid="pflege-medizin-start"]') &&
+       !!rootEl.querySelector('[data-testid="high-risk-notice-pflege"]') && txt().includes("ليست مرجعاً طبياً"),
+      "XCIX1 محطة التمريض تعرض 133 كلمة وعبارات ومحاكاة، وتسبقها حدود طبية ومهنية صريحة");
     ok(rootEl.querySelectorAll('[data-testid="pflege-zeile"]').length === (pflegeDialoge[0]?.zeilen.length ?? 0),
       "XCIX2 حوار الجولة الطبية معروض بكل سطوره ثنائية اللغة");
     const musterBtn = rootEl.querySelector('[data-testid="pflege-muster-pf-w1"]') as HTMLElement | null;
@@ -3991,8 +4093,9 @@ const hasFile = txt().includes("صوتٌ من الدار");
     const { lebensweltThemen, umgangBank } = await import("../lib/lebenswelt");
     mount(React.createElement(LebensweltStation));
     ok(lebensweltThemen.length >= 12 && !!rootEl.querySelector('[data-testid="lebenswelt-lw-03"]') &&
-       txt().includes("الاعتراف بمؤهّل التمريض"),
-      "CII1 المحطة تعرض البطاقات الاثنتي عشرة وبطاقة الاعتراف التمريضي بينها");
+       !!rootEl.querySelector('[data-testid="high-risk-notice-lebenswelt"]') && txt().includes("الاعتراف بمؤهّل التمريض") &&
+       txt().includes("المصدر الرسمي وتاريخ الصلاحية: غير مثبتين"),
+      "CII1 المحطة تعرض بطاقات الحياة والاعتراف مع تحذير الإجراء والمصدر والتاريخ غير المثبتين");
     ok(!rootEl.querySelector('[data-testid="umgang-eintrag"]'), "CII2 لغة الشارع مطوية حتى تُطلب صراحة");
     const tog = rootEl.querySelector('[data-testid="umgang-toggle"]') as HTMLElement | null;
     if (tog) click(tog);
@@ -4117,11 +4220,11 @@ const hasFile = txt().includes("صوتٌ من الدار");
 }
 
 
-// ── R298: محطة توسعة B2 الاستقبالية ──
+// ── R298/PA-020: محطة تدريب استقبال بطاقات B2 ──
 {
   const { ErweiterungStation } = await import("../components/erweiterung");
   mount(React.createElement(ErweiterungStation));
-  ok(!!rootEl.querySelector('[data-testid="erweiterung-station"]') && txt().includes("توسعة B2 الاستقبالية"), "R298a محطة التوسعة تُعرض بحزمها الست عشرة");
+  ok(!!rootEl.querySelector('[data-testid="erweiterung-station"]') && txt().includes("توسعة تدريب B2 الاستقبالي") && txt().includes("ليست 912 headword خارجية"), "R298a محطة التوسعة تعرض 16 حزمة مع حد البطاقة/headword");
   ok(!!rootEl.querySelector('[data-testid="erweiterung-deck-j01-arbeit-vertieft"]'), "R298b زرّ أول حزمة توسعة موجود");
   click(rootEl.querySelector('[data-testid="erweiterung-deck-j01-arbeit-vertieft"]') as HTMLElement);
   ok(!!rootEl.querySelector('[data-testid="erweiterung-frage"]'), "R298c اختيار حزمة يفتح سؤال تعرّف");
@@ -4329,7 +4432,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
   const { progressKeyActive } = await import("../lib/profiles");
   const { buildDay } = await import("../lib/plan");
   const { getText, getDialogue } = await import("../lib/content");
-  const { todayStepOf } = await import("../lib/today-steps");
+  const { isCoreTask } = await import("../lib/day-path");
   const { stationOfTask, STATIONEN } = await import("../components/stationen");
   (globalThis as unknown as { self?: unknown }).self = globalThis;
   const { default: Heim } = await import("../app/page");
@@ -4354,7 +4457,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
 
   // افتح محطة التدريب بعقد المحطات الفعلي: تسليم الاسترجاع والدرس أولاً، ثم افحص المحتوى الكامل.
   const vorPraxis = Object.fromEntries(plan1.tasks
-    .filter((task) => todayStepOf(task) < 3)
+    .filter(isCoreTask)
     .map((task) => [task.id, { done: true, passed: true, score: 1, total: 1, attempts: 1, kind: task.kind }]));
   act(() => { saveProgress({ ...p1, plan: { ...p1.plan, tasks: vorPraxis } }); });
   mount(React.createElement(Heim));
@@ -4503,11 +4606,30 @@ const hasFile = txt().includes("صوتٌ من الدار");
   ok(!!navigatorKarte && navigatorKarte.textContent!.includes("ترتيب محلي حتمي") && navigatorKarte.textContent!.includes("لا يغيّر خطتك"),
     "R315-1 ملاح التدريب الموحّد ظاهر داخل «اليوم/تدرّب» ويعلن محليته وحد عدم تعديل الخطة");
   const einstufungEmpfehlung = rootEl.querySelector('[data-testid="ueben-empfehlung-einstufung"]') as HTMLElement | null;
-  ok(!!einstufungEmpfehlung && einstufungEmpfehlung.textContent!.includes("الأولوية الأولى") && einstufungEmpfehlung.textContent!.includes("لا يوجد تشخيص"),
+  ok(!!einstufungEmpfehlung && einstufungEmpfehlung.textContent!.includes("الأولوية الأولى") && einstufungEmpfehlung.textContent!.includes("لا يوجد فرز دخول"),
     "R315-2 ملف بلا تشخيص يرى سبب الأولوية والقياس الفعلي، لا توصية مبهمة أو ضعفاً مخترعاً");
   if (einstufungEmpfehlung) click(einstufungEmpfehlung);
   ok(!!rootEl.querySelector('[data-testid="einstufung"]'),
     "R315-3 نقر توصية الملاح يفتح محطة التشخيص الحية نفسها داخل التدفق الموحّد");
+  const scopeEinstufung = rootEl.querySelector('[data-testid="einstufung-scope"]');
+  ok(!!scopeEinstufung && scopeEinstufung.textContent!.includes("لا توجد هنا عينة كتابة أو تحدث") &&
+    scopeEinstufung.textContent!.includes("لا تصدر النتيجة مستوى CEFR"),
+    "PA014-1 واجهة الفرز تعلن قبل البدء أنها استقبال/صيغة بلا كتابة أو تحدث ولا حكم CEFR");
+  const startEinstufung = btn("ابدأ التشخيص");
+  if (startEinstufung) click(startEinstufung);
+  for (let antwort = 0; antwort < 2; antwort++) {
+    const option = rootEl.querySelector('[data-testid="einstufung-lauf"] button') as HTMLElement | null;
+    if (option) click(option);
+  }
+  ok((rootEl.querySelector('[data-testid="einstufung-lauf"]')?.textContent ?? "").includes("بند 3/4"),
+    "PA014-2 لا يصدر قرار بعد بندين؛ الرباعية الكاملة مطلوبة مهما كانت الإجابتان");
+  for (let antwort = 0; antwort < 2; antwort++) {
+    const option = rootEl.querySelector('[data-testid="einstufung-lauf"] button') as HTMLElement | null;
+    if (option) click(option);
+  }
+  ok((rootEl.querySelector('[data-testid="einstufung-lauf"]')?.textContent ?? "").includes("بند 1/4") ||
+    !!rootEl.querySelector('[data-testid="einstufung-ergebnis"]'),
+    "PA014-3 القرار لا يحدث إلا بعد 4/4، ثم يبدأ نطاق جديد أو يعرض اقتراح الدخول");
   act(() => { dom.window.localStorage.removeItem("weg-abend"); });
 
   // 4) فتح «اختبر» يعرض بوّابة الوحدة والمحاكاة الحقيقية كاملة، من نفس الصفحة
@@ -4894,8 +5016,9 @@ const hasFile = txt().includes("صوتٌ من الدار");
   const { default: TodayStepper } = await import("../components/akademie/TodayStepper");
   const { buildDay } = await import("../lib/plan");
   const { ritualUrteil } = await import("../lib/ritual");
-  const { groupTasksByTodayStep } = await import("../lib/today-steps");
-  const plan = buildDay(2, { ...emptyProgress, plan: { ...emptyProgress.plan, day: 2 } });
+  const { groupTasksByTodayStep, todayStepOf } = await import("../lib/today-steps");
+  const { isCoreTask } = await import("../lib/day-path");
+  const plan = buildDay(3, { ...emptyProgress, plan: { ...emptyProgress.plan, day: 3 } });
   const resultate: Record<string, { done: boolean; passed: boolean; score: number; total: number; attempts: number }> = {};
   let lokalePunkte: Record<string, { score: number; total: number }> = {};
   let gewaehlt = -1;
@@ -4907,11 +5030,12 @@ const hasFile = txt().includes("صوتٌ من الدار");
     resultOf: (id: string) => resultate[id],
     localOf: (id: string) => lokalePunkte[id] ?? { score: 0, total: 0 },
   });
-  const startProgress = { ...emptyProgress, plan: { ...emptyProgress.plan, day: 2 } };
+  const startProgress = { ...emptyProgress, plan: { ...emptyProgress.plan, day: 3 } };
   mount(React.createElement(TodayStepper, props(startProgress)));
 
   const grammarIndex = plan.tasks.findIndex((task) => task.kind === "grammatik");
-  const lesenIndex = plan.tasks.findIndex((task) => ["wortschatz", "lesen", "hoeren", "aussprache"].includes(task.kind));
+  const lesenIndex = plan.tasks.findIndex((task) => isCoreTask(task) && ["wortschatz", "lesen", "hoeren", "aussprache"].includes(task.kind));
+  const optionalIndex = plan.tasks.findIndex((task) => !isCoreTask(task));
   const station2Task = rootEl.querySelector(`[data-testid="today-step-2-task-${grammarIndex}"]`) as HTMLButtonElement;
   ok(rootEl.querySelector('[data-testid="today-step-1"]')?.classList.contains("today-step--active") === true &&
     rootEl.querySelector('[data-testid="today-step-2"]')?.classList.contains("today-step--locked") === true,
@@ -4947,13 +5071,22 @@ const hasFile = txt().includes("صوتٌ من الدار");
   ok(rootEl.querySelector('[data-testid="today-step-2"]')?.classList.contains("today-step--done") === true &&
     rootEl.querySelector('[data-testid="today-step-3"]')?.classList.contains("today-step--active") === true && !station3Task.disabled,
     "R315-5 تسليم الدرس يفتح الاستماع/القراءة فقط وتبقى المحطات الأبعد وراء التسلسل");
-  await pruefeA11y("R315-6 خريطة اليوم بعد انتقال محطتين");
+
+  for (const task of plan.tasks.filter(isCoreTask)) resultate[task.id] = { done: true, passed: true, score: 1, total: 1, attempts: 1 };
+  const nachKern = { ...startProgress, plan: { ...startProgress.plan, tasks: { ...resultate } } };
+  mount(React.createElement(TodayStepper, props(nachKern)));
+  const optionalStation = todayStepOf(plan.tasks[optionalIndex]);
+  const optionalNachKern = rootEl.querySelector(`[data-testid="today-step-${optionalStation}-task-${optionalIndex}"]`) as HTMLButtonElement;
+  ok(!optionalNachKern.disabled && optionalNachKern.dataset.path === "deepening" &&
+    (optionalNachKern.getAttribute("aria-label") ?? "").includes("تعميق اختياري") && txt().includes("أساسي") && txt().includes("اختياري"),
+    "R315-6 بعد اكتمال الأساسي يُفتح التعميق وتبقى هوية المسارين مرئية ووصولية");
+  await pruefeA11y("R315-6a خريطة اليوم بعد فتح التعميق");
 
   const { saveProgress } = await import("../lib/store");
   const { progressKeyActive } = await import("../lib/profiles");
   (globalThis as unknown as { self?: unknown }).self = globalThis;
   const { default: Heim } = await import("../app/page");
-  const stepKey2 = `${progressKeyActive()}:day-step:2`;
+  const stepKey2 = `${progressKeyActive()}:day-step:3`;
   act(() => {
     saveProgress(startProgress);
     dom.window.localStorage.setItem(stepKey2, String(grammarIndex));
@@ -4967,6 +5100,8 @@ const hasFile = txt().includes("صوتٌ من الدار");
   const tag1Progress = { ...emptyProgress, plan: { ...emptyProgress.plan, day: 1 } };
   const tag1Plan = buildDay(1, tag1Progress);
   const tag1Grammatik = tag1Plan.tasks.find((task) => task.kind === "grammatik")!;
+  const tag1NextCore = tag1Plan.tasks.find((task, index) => index > 0 && isCoreTask(task))!;
+  const tag1GrammatikIndex = tag1Plan.tasks.indexOf(tag1Grammatik);
   const stepKey1 = `${progressKeyActive()}:day-step:1`;
   act(() => {
     saveProgress(tag1Progress);
@@ -4976,8 +5111,9 @@ const hasFile = txt().includes("صوتٌ من الدار");
   const ersterSubmit = btn("سلّم المهمة");
   if (ersterSubmit) click(ersterSubmit);
   const nachErsterAbgabe = rootEl.querySelector('[data-testid="today-primary-step"]')?.textContent ?? "";
-  ok(!!ersterSubmit && nachErsterAbgabe.includes(tag1Grammatik.titleAr),
-    "R315-8 بعد تهيئة اليوم الأول ينتقل المشغّل إلى محطة الدرس، لا إلى مهمة لاحقة جاءت قبلها في ترتيب المصدر");
+  const optionalGrammarButton = rootEl.querySelector(`[data-testid="held-mini-${tag1GrammatikIndex}"]`) as HTMLButtonElement | null;
+  ok(!!ersterSubmit && nachErsterAbgabe.includes(tag1NextCore.titleAr) && !nachErsterAbgabe.includes(tag1Grammatik.titleAr) && optionalGrammarButton?.disabled === true,
+    "R315-8 بعد أول تسليم ينتقل المشغّل إلى المهمة الأساسية التالية ويبقي التعميق مقفولاً حتى اكتمال الأساسي");
 
   act(() => {
     dom.window.localStorage.removeItem(progressKeyActive());
@@ -4985,7 +5121,79 @@ const hasFile = txt().includes("صوتٌ من الدار");
     dom.window.localStorage.removeItem(stepKey2);
     dom.window.localStorage.removeItem("wegb2:day-step:1");
     dom.window.localStorage.removeItem("wegb2:day-step:2");
+    dom.window.localStorage.removeItem("wegb2:day-step:3");
   });
+}
+
+/* ═══ PA-025 — فصل promptDe/promptAr ووسم حقول التمرين في DOM ═══ */
+{
+  const { default: ExerciseSet } = await import("../components/exercises");
+  const { grammarMap } = await import("../lib/content");
+  const migrated = grammarMap["a1-perfekt-einf"].exercises.find((exercise) => exercise.id === "a1-perf-n3")!;
+  mount(React.createElement(ExerciseSet, { items: [migrated] }));
+  const dePrompt = rootEl.querySelector(".dirb-ex-item .de") as HTMLElement | null;
+  const arPrompt = rootEl.querySelector('.dirb-ex-item [lang="ar"][dir="rtl"]') as HTMLElement | null;
+  const answerInput = rootEl.querySelector(".dirb-ex-item input.field") as HTMLInputElement | null;
+  ok(dePrompt?.getAttribute("lang") === "de" && dePrompt.getAttribute("dir") === "ltr" &&
+    !/[\u0600-\u06ff]/u.test(dePrompt.textContent ?? ""),
+    "LANG1 promptDe المنقول ألماني فقط وموسوم de/ltr في DOM");
+  ok(arPrompt?.textContent?.includes("لعبتُ أمس كرة القدم") === true &&
+    arPrompt.getAttribute("lang") === "ar" && arPrompt.getAttribute("dir") === "rtl",
+    "LANG2 المصدر العربي محفوظ في promptAr وموسوم ar/rtl في DOM");
+  ok(answerInput?.getAttribute("lang") === "de" && answerInput.getAttribute("dir") === "ltr",
+    "LANG3 حقل الإجابة الألمانية يعلن اللغة والاتجاه صراحة");
+  await pruefeA11y("LANG4 تمرين ثنائي اللغة بعد فصل الحقول");
+}
+
+/* ═══ MED-013 — دورة الوساطة: مدخل → مسودة → rubric → مراجعة → نسخة محفوظة ═══ */
+{
+  const { default: MediationPage } = await import("../app/mediation/page");
+  const { mediationStorageKey } = await import("../lib/mediation");
+  const { progressKeyActive } = await import("../lib/profiles");
+  const key = mediationStorageKey(progressKeyActive());
+  dom.window.localStorage.removeItem(key);
+  mount(React.createElement(MediationPage));
+  const first = rootEl.querySelector('[data-testid="mediation-task-m-01"]') as HTMLDetailsElement | null;
+  const summary = first?.querySelector("summary") as HTMLElement | null;
+  if (summary) click(summary);
+  const inputDe = rootEl.querySelector('[data-testid="mediation-input-de-m-01"]');
+  const taskDe = rootEl.querySelector('[data-testid="mediation-task-de-m-01"]');
+  ok(!!first && inputDe?.getAttribute("lang") === "de" && inputDe.getAttribute("dir") === "ltr" &&
+    taskDe?.getAttribute("lang") === "de" && taskDe.getAttribute("dir") === "ltr",
+    "MED1 المدخل والمهمة الألمانيان موجودان وموسومان de/ltr داخل أول مهمة A2");
+  ok(!rootEl.querySelector('[data-testid="mediation-model-m-01"]'),
+    "MED2 النموذج محجوب قبل المحاولة ولا يسرّب الإجابة الممكنة");
+  const draft = rootEl.querySelector('[data-testid="mediation-draft-m-01"]') as HTMLTextAreaElement | null;
+  if (draft) typeIn(draft, "Am Dienstag gibt es im Haus kein Wasser. Bitte bereiten Sie Trinkwasser vor.");
+  const review = rootEl.querySelector('[data-testid="mediation-review-m-01"]') as HTMLButtonElement | null;
+  ok(!!draft && !!review && !review.disabled, "MED3 مسودة حقيقية تفتح الانتقال إلى المراجعة الذاتية");
+  if (review) click(review);
+  const rubric = rootEl.querySelector('[data-testid="mediation-rubric-m-01"]');
+  const checks = rubric ? Array.from(rubric.querySelectorAll('input[type="checkbox"]')) as HTMLInputElement[] : [];
+  ok(!!rubric && checks.length === 4 && !!rootEl.querySelector('[data-testid="mediation-feedback-m-01"]'),
+    "MED4 شبكة المحاور الأربعة وملاحظات المراجعة البنيوية تظهران بعد المسودة");
+  const modelToggle = rootEl.querySelector('[data-testid="mediation-model-toggle-m-01"]') as HTMLElement | null;
+  if (modelToggle) click(modelToggle);
+  ok(!!rootEl.querySelector('[data-testid="mediation-model-m-01"]') &&
+    (rootEl.querySelector('[data-testid="mediation-model-m-01"]')?.textContent ?? "").includes("Herr Lehmann"),
+    "MED5 النموذج الخاص بالمهمة يظهر بطلب صريح ويطابق مدخلها لا placeholder مكرراً");
+  for (const checkbox of checks) click(checkbox);
+  const revision = rootEl.querySelector('[data-testid="mediation-revision-m-01"]') as HTMLTextAreaElement | null;
+  if (revision) typeIn(revision, "Herr Lehmann, am Dienstag fehlt das Wasser von acht bis dreizehn Uhr. Bitte füllen Sie vorher Trinkwasser ab und lassen Sie die Wasserhähne geschlossen.");
+  const save = rootEl.querySelector('[data-testid="mediation-save-m-01"]') as HTMLButtonElement | null;
+  ok(!!revision && !!save && !save.disabled, "MED6 فحص المحاور ونسخة ثانية حقيقية يفتحان الحفظ المحلي");
+  if (save) click(save);
+  await flushAsync();
+  const stored = JSON.parse(dom.window.localStorage.getItem(key) ?? "{}") as Record<string, { phase?: string; revision?: string }>;
+  ok(stored["m-01"]?.phase === "saved" && (stored["m-01"]?.revision ?? "").includes("Herr Lehmann") &&
+    (rootEl.querySelector('[data-testid="mediation-completion"]')?.textContent ?? "").includes("1 من 12"),
+    "MED7 النسخة الثانية وحالة الإنجاز محفوظتان محلياً ويظهر العدّاد 1/12");
+  await pruefeA11y("MED8 ورشة الوساطة المفتوحة بعد دورة المراجعة");
+  mount(React.createElement(MediationPage));
+  await flushAsync();
+  ok((rootEl.querySelector('[data-testid="mediation-task-m-01"] summary')?.textContent ?? "").includes("نسخة ثانية محفوظة"),
+    "MED9 إعادة التركيب تستعيد الحالة المحفوظة بدلاً من إخفائها أو عكسها");
+  dom.window.localStorage.removeItem(key);
 }
 
 /* ═══ TC725 — الهدف والإيقاع في البداية: حالة typed ومحلية وحدود واضحة ═══ */
@@ -5007,29 +5215,56 @@ const hasFile = txt().includes("صوتٌ من الدار");
       ...emptyProgress,
       settings: { ...emptyProgress.settings, onboardingDone: false, lernziel: undefined, tempo: "regelmaessig" },
     }));
-    mount(React.createElement(OnboardingWizard));
+    const restoreTrigger = d0.createElement("button");
+    restoreTrigger.textContent = "قبل الحوار";
+    d0.body.appendChild(restoreTrigger);
+    restoreTrigger.focus();
+    mount(React.createElement(React.Fragment, null,
+      React.createElement("button", { "data-testid": "onboarding-background" }, "خلفية الصفحة"),
+      React.createElement(OnboardingWizard),
+    ));
+    const dialog = rootEl.querySelector('[role="dialog"]') as HTMLElement | null;
+    const heading = rootEl.querySelector("#onboarding-title") as HTMLElement | null;
+    const background = rootEl.querySelector('[data-testid="onboarding-background"]') as HTMLElement | null;
+    ok(!!dialog && dialog.getAttribute("aria-labelledby") === "onboarding-title" &&
+      dialog.getAttribute("aria-describedby") === "onboarding-description" && d0.activeElement === heading,
+      "TC725-1 الحوار مربوط بعنوان ووصف وينقل التركيز الأولي إلى عنوانه");
+    ok(background?.hasAttribute("inert") === true && background.getAttribute("aria-hidden") === "true",
+      "TC725-2 خلفية الحوار inert ومخفية عن شجرة الوصول");
+    const skip = rootEl.querySelector('[data-testid="onboarding-skip"]') as HTMLElement | null;
+    d0.dispatchEvent(new dom.window.KeyboardEvent("keydown", { key: "Tab", bubbles: true, cancelable: true }));
+    ok(d0.activeElement === skip, "TC725-3 Tab من العنوان يبقى داخل الحوار وينتقل إلى أول عنصر تفاعلي");
+    d0.dispatchEvent(new dom.window.KeyboardEvent("keydown", { key: "Tab", shiftKey: true, bubbles: true, cancelable: true }));
+    ok(!!dialog && dialog.contains(d0.activeElement), "TC725-4 Shift+Tab من أول عنصر يلتف إلى آخر عنصر داخل الحوار");
+
     const pflege = rootEl.querySelector('[data-testid="onboarding-lernziel-pflege"]') as HTMLElement | null;
     ok(!!pflege && pflege.getAttribute("aria-pressed") === "false",
-      "TC725-1 معالج البداية يعرض هدفاً قابلاً للاختيار وحالته الوصولية غير مضغوطة أولاً");
+      "TC725-5 معالج البداية يعرض هدفاً قابلاً للاختيار وحالته الوصولية غير مضغوطة أولاً");
     if (pflege) click(pflege);
-    ok(pflege?.getAttribute("aria-pressed") === "true", "TC725-2 اختيار هدف التمريض ينعكس عبر aria-pressed لا اللون وحده");
+    ok(pflege?.getAttribute("aria-pressed") === "true", "TC725-6 اختيار هدف التمريض ينعكس عبر aria-pressed لا اللون وحده");
+    const zeitmodell = rootEl.querySelector('[data-testid="onboarding-zeitmodell"]')?.textContent ?? "";
+    ok(zeitmodell.includes("45–90") && zeitmodell.includes("65") && zeitmodell.includes("69") && zeitmodell.includes("189") &&
+      zeitmodell.includes("لا تضمن بلوغه") && zeitmodell.includes("لم يُثبت") && zeitmodell.includes("ليس تسجيلاً بشرياً"),
+      "TC725-7 نموذج الوقت يفصل الأساسي والتعميق، يعلن حد الإثبات وTTS، ولا يضمن B2");
     const weiter = btn("التالي — اختر وتيرتك");
     if (weiter) click(weiter);
     const intensiv = rootEl.querySelector('[data-testid="onboarding-tempo-intensiv"]') as HTMLElement | null;
     if (intensiv) click(intensiv);
     const grenze = rootEl.querySelector('[data-testid="onboarding-profil-grenze"]');
     ok(!!intensiv && intensiv.getAttribute("aria-pressed") === "true" &&
-      (grenze?.textContent ?? "").includes("لا يغيّران ترتيب خطة 378 يوماً") &&
+      (grenze?.textContent ?? "").includes("لا يغيران ترتيب خطة 378 يوماً") &&
       (grenze?.textContent ?? "").includes("لا يرسلان بياناتك"),
-      "TC725-3 الإيقاع يعلن حالته وحدّ أثره: بطاقات فقط، بلا تغيير الخطة أو إرسال شبكة");
-    await pruefeA11y("TC725-4 معالج الهدف والإيقاع قبل الحفظ");
-    const speichern = btn("ابدأ رحلتك 378ي");
+      "TC725-8 الإيقاع يعلن حالته وحد أثره: بطاقات فقط، بلا تغيير الخطة أو إرسال شبكة");
+    await pruefeA11y("TC725-9 معالج الهدف والإيقاع قبل الحفظ");
+    const speichern = btn("احفظ وابدأ الخطة");
     if (speichern) click(speichern);
     await flushAsync();
     const gespeichert = loadProgress();
     ok(!!speichern && gespeichert.settings.onboardingDone === true && gespeichert.settings.lernziel === "pflege" &&
-      gespeichert.settings.tempo === "intensiv" && rootEl.querySelector('[role="dialog"]') === null,
-      "TC725-5 الحفظ يكتب الهدف والإيقاع typed في الملف النشط ثم يغلق المعالج");
+      gespeichert.settings.tempo === "intensiv" && rootEl.querySelector('[role="dialog"]') === null &&
+      d0.activeElement === restoreTrigger && !background?.hasAttribute("inert"),
+      "TC725-10 الحفظ يغلق الحوار ويعيد التركيز وينظف inert ويحفظ الملف النشط");
+    restoreTrigger.remove();
   } finally {
     if (leave) leave();
     storage.clear();

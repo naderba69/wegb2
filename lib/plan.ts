@@ -27,7 +27,7 @@ import {
 } from "./content";
 import { weakTopics } from "./fehler";
 import { dueFehlerPriorisiert } from "./fehlerbank2";
-import { PHASEN, ABSCHLUSS_VON, istPhasenPruefung, lastMinuten, D1_B1_DECKEL_MIN, D1_B2_DECKEL_MIN } from "./phasen";
+import { PHASEN, PHASE_END_DAY, ABSCHLUSS_VON, istPhasenPruefung, lastMinuten, D1_B1_DECKEL_MIN, D1_B2_DECKEL_MIN } from "./phasen";
 import { baueStory } from "./mnemonic-story";
 import { palacePosition } from "./memory-palace";
 import { piItemsFor } from "./processing-instruction";
@@ -40,6 +40,9 @@ import { baueKompositaWoche } from "./komposita-aufgabe";
 import { legacyThroughDayFor } from "./curriculum-schedule";
 import { beiBankenBereit, beiVertiefungBereit } from "./bankload";
 import { rng, seededShuffle } from "./seeded-rng";
+import { evidenceForTask } from "./task-evidence";
+import { assignDailyPaths, isCoreTask } from "./day-path";
+import { prosodieEinheitFuerWoche } from "./prosodie";
 
 export { rng } from "./seeded-rng";
 
@@ -400,6 +403,8 @@ export function clozeFromSatz(s: Satz, idx: number, rand: () => number): Exercis
     answer: [answer, answer.toLowerCase()],
     explanationAr: `الجملة كاملة: ${s.ar}`,
     explanationDe: s.de,
+    evidenceLevel: s.level,
+    evidenceConstruct: "mixed",
   };
 }
 
@@ -418,6 +423,8 @@ export function translateFromSatz(s: Satz, idx: number): Exercise {
     keywords: pickN(keyWords, Math.min(4, keyWords.length), rng(idx * 31 + 7)),
     explanationDe: s.de,
     explanationAr: "الترجمة المرجعية بالأعلى — قارن كلماتك المفتاحية.",
+    evidenceLevel: s.level,
+    evidenceConstruct: "mixed",
   };
 }
 
@@ -439,6 +446,8 @@ function mcFromCards(cards: VocabCard[], idx: number, rand: () => number): Exerc
     explanationAr: correct.exampleDe
       ? `${correct.ar} — مثال: ${correct.exampleDe}`
       : correct.ar,
+    evidenceLevel: correct.level,
+    evidenceConstruct: "Wortschatz",
   };
 }
 
@@ -471,7 +480,11 @@ function buildQuiz(day: number, phase: Phase, count: number, progress: Progress,
   for (const tid of phaseTopics) {
     if (!gelehrteThemen.has(tid)) continue;
     const topic = grammarMap[tid];
-    if (topic) pool.push(...topic.exercises);
+    if (topic) pool.push(...topic.exercises.map((exercise) => ({
+      ...exercise,
+      evidenceLevel: topic.level,
+      evidenceConstruct: "Grammatik" as const,
+    })));
   }
 
   // جمل المستويات الأدنى مضمونة التدريس (كلها مَرت على الطالب سابقاً).
@@ -534,6 +547,8 @@ function buildQuiz(day: number, phase: Phase, count: number, progress: Progress,
           promptAr: `${c.ar}`,
           answer: [c.article ? `${c.article} ${c.de}` : c.de, c.de],
           explanationAr: c.exampleDe ? `${c.ar} — مثال: ${c.exampleDe}` : c.ar,
+          evidenceLevel: c.level,
+          evidenceConstruct: "Wortschatz",
         });
       } else {
         picked.push(mcFromCards([c, ...shuffled.filter((x) => x.id !== c.id)], i, rand));
@@ -553,6 +568,25 @@ export function dueVerify(progress: Progress, day: number): { lessonId: string; 
     .sort((a, b) => a.dueDay - b.dueDay);
 }
 
+function debtStableId(debt: DebtItem): string {
+  if (debt.id) return debt.id;
+  const source = debt.topicId ?? debt.deckId ?? debt.textId ?? debt.dialogueId
+    ?? debt.writeId ?? debt.sentenceIds?.join("+") ?? debt.titleDe;
+  return `debt:${debt.from}:${debt.kind}:${source}`;
+}
+
+function normalizeDebtBacklog(debts: DebtItem[]): DebtItem[] {
+  const seen = new Set<string>();
+  const normalized: DebtItem[] = [];
+  for (const debt of debts) {
+    const id = debtStableId(debt);
+    if (seen.has(id)) continue;
+    seen.add(id);
+    normalized.push({ ...debt, id });
+  }
+  return normalized;
+}
+
 // ── مولّد اليوم ─────────────────────────────────────────────────────────
 export function buildDay(day: number, progress: Progress): DayPlan {
   const week = Math.ceil(day / 7);
@@ -566,8 +600,9 @@ export function buildDay(day: number, progress: Progress): DayPlan {
   const wocheInPhase = Math.max(1, Math.ceil((day - phaseStart + 1) / 7));
   const level = levelOf(day);
 
-  // (1) التعويضات الإلزامية أولاً — «ما لم يُنجز أمس يُنجز اليوم»
-  progress.plan.debt.forEach((d, i) => {
+  // (1) التعويضات الإلزامية أولاً — نعرض أقدم مهمتين فقط، مع إبقاء الطابور كاملاً.
+  const debtBacklog = normalizeDebtBacklog(progress.plan.debt ?? []);
+  debtBacklog.slice(0, 2).forEach((d, i) => {
     tasks.push({
       id: `${day}:debt:${i}`,
       kind: d.kind,
@@ -582,6 +617,7 @@ export function buildDay(day: number, progress: Progress): DayPlan {
       sentenceIds: d.sentenceIds,
       exam: d.exam,
       mandatory: true,
+      debtId: d.id,
       from: d.from,
     });
   });
@@ -812,7 +848,7 @@ export function buildDay(day: number, progress: Progress): DayPlan {
         id: tid(5),
         kind: "check",
         titleDe: "Tagescheck",
-        titleAr: "فحص اليوم (60% نجاح رسمي — 80% تميّز)",
+        titleAr: "فحص اليوم (إتقان يومي داخلي ≥80%)",
         minutes: 15,
         quiz: buildQuiz(day, phase, 8, progress, "tc"),
       });
@@ -884,7 +920,7 @@ export function buildDay(day: number, progress: Progress): DayPlan {
         id: tid(5),
         kind: "check",
         titleDe: "Tagescheck",
-        titleAr: "فحص اليوم (60% نجاح رسمي — 80% تميّز)",
+        titleAr: "فحص اليوم (إتقان يومي داخلي ≥80%)",
         minutes: 15,
         quiz: buildQuiz(day, phase, 8, progress, "tc2"),
       });
@@ -951,7 +987,7 @@ export function buildDay(day: number, progress: Progress): DayPlan {
         id: tid(5),
         kind: "check",
         titleDe: "Tagescheck",
-        titleAr: "فحص اليوم (60% نجاح رسمي — 80% تميّز)",
+        titleAr: "فحص اليوم (إتقان يومي داخلي ≥80%)",
         minutes: 15,
         quiz: buildQuiz(day, phase, 10, progress, "tc3"),
       });
@@ -991,15 +1027,21 @@ export function buildDay(day: number, progress: Progress): DayPlan {
         writeId: nextWrite()?.id,
       });
     }
+    // PA-015: في أسبوعٍ من اثنين داخل B1/B2 تتحول خانة الترديد القديمة نفسها
+    // إلى مقارنة نبر/إيقاع قبل/بعد؛ العدد والدقائق والجمل الأصلية لا تتغير.
+    const prosodie = (level === "B1" || level === "B2") && wocheInPhase % 2 === 0
+      ? prosodieEinheitFuerWoche(level, Math.floor(wocheInPhase / 2) - 1)
+      : undefined;
     // K-SilentPeriod: لا تحدّث حر قبل أواخر A2
     if (level === "B1" || level === "B2" || day >= PHASEN.A2.bis - 7) {
       tasks.push({
         id: tid(3),
-        kind: "sprechen",
-        titleDe: "Freies Sprechen",
-        titleAr: "تحدّث حرّ (سجّل نفسك)",
+        kind: prosodie ? "aussprache" : "sprechen",
+        titleDe: prosodie ? `Prosodie-Vergleich: ${prosodie.titelDe}` : "Freies Sprechen",
+        titleAr: prosodie ? `مقارنة نبر وإيقاع: ${prosodie.titelAr}` : "تحدّث حرّ (سجّل نفسك)",
         minutes: 20,
         sentenceIds: pickN(satzOfLevel, 4, rand).map((s) => s.id),
+        pronunciationId: prosodie?.id,
       });
     } else {
       tasks.push({
@@ -1336,6 +1378,8 @@ export function buildDay(day: number, progress: Progress): DayPlan {
     const quiz = (topic?.exercises ?? []).slice(0, 2).map((ex, i) => ({
       ...ex,
       id: `pre-${day}-${i}-${ex.id}`,
+      evidenceLevel: topic?.level,
+      evidenceConstruct: "Grammatik" as const,
     }));
     if (quiz.length > 0) {
       tasks.push({
@@ -1436,6 +1480,8 @@ export function buildDay(day: number, progress: Progress): DayPlan {
           const added = pickN(extra, Math.min(2, extra.length), r2).map((e, i) => ({
             ...e,
             id: `w${day}-${i}-${e.id}`,
+            evidenceLevel: level,
+            evidenceConstruct: "Grammatik" as const,
           }));
           t.quiz = [...added, ...t.quiz];
         }
@@ -1538,7 +1584,15 @@ export function buildDay(day: number, progress: Progress): DayPlan {
     }
   }
   const tempo = progress.settings.tempo ?? "regelmaessig";
-  return { day, week, weekday, phase, type, tasks, tempo, zielMin: DEFAULT_SESSION_GOAL_MINUTES };
+  // PA-022: keep the complete inventory, but make only a bounded 45–90 minute route
+  // day-closing. Remaining tasks are explicit optional deepening and never silent debt.
+  const tasksWithPath = assignDailyPaths(tasks, day);
+  // PA-016: every emitted task is routed by attached material, not by its coarse kind label.
+  const tasksWithEvidence = tasksWithPath.map((task) => ({
+    ...task,
+    evidence: evidenceForTask(task, levelOf(task.from ?? day)),
+  }));
+  return { day, week, weekday, phase, type, tasks: tasksWithEvidence, tempo, zielMin: DEFAULT_SESSION_GOAL_MINUTES, debtBacklog };
 }
 
 // ── منطق القفل والتعويض ────────────────────────────────────────────────
@@ -1559,44 +1613,78 @@ export function dayScore(plan: DayPlan, taskState: Record<string, TaskResult>) {
   let score = 0;
   let total = 0;
   let done = 0;
+  let tasksTotal = 0;
   for (const t of plan.tasks) {
     const r = taskState[t.id];
+    // المسار الأساسي يدخل ملخص اليوم دائماً؛ التعميق لا يدخل إلا إذا سُلِّم فعلاً.
+    if (!isCoreTask(t) && !r) continue;
+    tasksTotal += 1;
     if (r) {
       score += r.score;
       total += r.total;
       if (r.passed) done += 1;
     }
   }
-  return { score, total, done, tasksTotal: plan.tasks.length };
+  return { score, total, done, tasksTotal };
 }
 
-/** المهام غير المُتقَنة تتحول إلى ديون تعويضية للغد
- *  K-DebtCap: سقف الديون = مهمّتان كحد أقصى، وما زاد يُدمَج في مراجعة نهاية الأسبوع.
- *  K-A0noDebt: في مرحلة A0 لا تُولَّد ديون على الإطلاق (لا عقاب، بلا إخفاق). */
+/** المهام غير المُتقَنة تتحول إلى طابور تعويض دائم.
+ *  يُعرض أقدم دينين في اليوم، لكن غير المعروض يبقى في `debtBacklog`، والدين المعروض
+ *  لا يُحذف إلا بعد النجاح. A0 يبقى مرحلة تهيئة بلا ديون جديدة. */
 export function debtsFrom(plan: DayPlan, taskState: Record<string, TaskResult>): DebtItem[] {
-  if (plan.phase === "A0") return []; // A0 تهيئة صرفة: لا ديون ولا تقييم
-  const debts: DebtItem[] = [];
-  for (const t of plan.tasks) {
-    if (t.mandatory) continue; // الديون القديمة نفسها تُعالَج في الختام لا تضاف مرة أخرى
-    const r = taskState[t.id];
-    if (!isPassed(r)) {
-      debts.push({
-        kind: t.kind,
-        titleDe: t.titleDe.replace(/^Nachholen: /, ""),
-        titleAr: t.titleAr,
-        topicId: t.topicId,
-        deckId: t.deckId,
-        textId: t.textId,
-        dialogueId: t.dialogueId,
-        writeId: t.writeId,
-        sentenceIds: t.sentenceIds,
-        exam: t.exam,
-        from: t.from ?? plan.day,
-      });
+  if (plan.phase === "A0") return [];
+
+  const backlog = normalizeDebtBacklog(plan.debtBacklog ?? []);
+  const scheduledIds = new Set(
+    plan.tasks.map((task) => task.debtId).filter((id): id is string => !!id),
+  );
+  // ابدأ بالديون القديمة التي لم تُعرض اليوم؛ لا يجوز أن تختفي بسبب سقف العرض.
+  const next: DebtItem[] = backlog.filter((debt) => !scheduledIds.has(debt.id as string));
+  const oldById = new Map(backlog.map((debt) => [debt.id as string, debt]));
+
+  for (const task of plan.tasks) {
+    const result = taskState[task.id];
+    if (task.debtId) {
+      // نجاح الدين يستهلكه؛ فشله يعيده إلى ذيل الطابور كي لا يحجب بقية الديون دائماً.
+      if (!isPassed(result)) {
+        const old = oldById.get(task.debtId);
+        next.push(old ?? {
+          id: task.debtId,
+          kind: task.kind,
+          titleDe: task.titleDe.replace(/^Nachholen: /, ""),
+          titleAr: task.titleAr,
+          topicId: task.topicId,
+          deckId: task.deckId,
+          textId: task.textId,
+          dialogueId: task.dialogueId,
+          writeId: task.writeId,
+          sentenceIds: task.sentenceIds,
+          exam: task.exam,
+          from: task.from ?? plan.day,
+        });
+      }
+      continue;
     }
+    // التعميق غير المُسلَّم محايد؛ إذا اختاره المتعلم وسلّمه ثم لم يجتزْه يبقى علاجياً.
+    if (!isCoreTask(task) && !result) continue;
+    // تحققات الاستقلال الإلزامية ليست ديناً قديماً، ولا تتحول تلقائياً إلى دين جديد.
+    if (task.mandatory || isPassed(result)) continue;
+    next.push({
+      id: `debt:${plan.day}:${task.id}`,
+      kind: task.kind,
+      titleDe: task.titleDe.replace(/^Nachholen: /, ""),
+      titleAr: task.titleAr,
+      topicId: task.topicId,
+      deckId: task.deckId,
+      textId: task.textId,
+      dialogueId: task.dialogueId,
+      writeId: task.writeId,
+      sentenceIds: task.sentenceIds,
+      exam: task.exam,
+      from: task.from ?? plan.day,
+    });
   }
-  // كحد أقصى مهمّتا دين تُرحَّلان للغد؛ الباقي ينتظر مراجعة نهاية الأسبوع
-  return debts.slice(0, 2);
+  return normalizeDebtBacklog(next);
 }
 
 /** تقدّم الخطة الكلي */
@@ -1604,34 +1692,161 @@ export function planPct(progress: Progress): number {
   return Math.min(100, Math.round(((progress.plan.day - 1) / TOTAL_DAYS) * 100));
 }
 
-/* ═══ ⏱️ منحنى الساعات المخطَّطة — أساسُ عقد CEFR ═══
-   الخطةُ حتميةٌ (بذرةُ كلِّ يومٍ رقمُه)، فمنحنى الدقائقِ المخطَّطةِ ثابتٌ
-   ولا يتأثَّر بما أنجزَه المتعلِّم. لذلك يُحسَبُ مرّةً واحدةً ويُحفَظ.
-   بدونه كان قولُ «378 يوماً تكفي لـB2» رأياً بلا رقم. */
+/* ═══ ⏱️ منحنى حمل الخطة الزمني ═══
+   تقديرات المهام حتمية مع ملف أساس فارغ، لذلك يُحسب المنحنى مرة ويُحفظ.
+   هذه الأرقام تصف وقت المهام المخطط فقط؛ لا تثبت كفاءة CEFR ولا جاهزية امتحان.
+   كل واجهة تعرض إجمالي الخطة أو متوسط اليوم أو حمل مرحلة تستعمل الملخص أدناه
+   بدلاً من نسخ أرقام قديمة في النصوص. */
 let PLAN_MIN_KUM: number[] | null = null;
+let PLAN_KERN_MIN_KUM: number[] | null = null;
 
-/** الدقائق المخطَّطة من اليوم 1 حتى اليوم `day` ضمناً */
-export function planMinBis(day: number): number {
-  if (!PLAN_MIN_KUM) {
-    const basis: Progress = emptyProgress;
-    const arr: number[] = [0];
-    let sum = 0;
-    for (let d = 1; d <= TOTAL_DAYS; d++) {
-      sum += buildDay(d, basis).tasks.filter(t => !/Tool \d+:/.test(t.titleDe)).reduce((a, t) => a + (t.minutes || 0), 0);
-      arr[d] = sum;
-    }
-    PLAN_MIN_KUM = arr;
+function ensurePlanMinuten(): void {
+  if (PLAN_MIN_KUM && PLAN_KERN_MIN_KUM) return;
+  const basis: Progress = emptyProgress;
+  const gesamt: number[] = [0];
+  const kern: number[] = [0];
+  let gesamtSumme = 0;
+  let kernSumme = 0;
+  for (let d = 1; d <= TOTAL_DAYS; d++) {
+    const tasks = buildDay(d, basis).tasks.filter((task) => !/Tool \d+:/.test(task.titleDe));
+    gesamtSumme += tasks.reduce((sum, task) => sum + (task.minutes || 0), 0);
+    kernSumme += tasks.filter(isCoreTask).reduce((sum, task) => sum + (task.minutes || 0), 0);
+    gesamt[d] = gesamtSumme;
+    kern[d] = kernSumme;
   }
-  const d = Math.min(Math.max(day | 0, 0), TOTAL_DAYS);
-  return PLAN_MIN_KUM[d] ?? 0;
+  PLAN_MIN_KUM = gesamt;
+  PLAN_KERN_MIN_KUM = kern;
 }
 
-/** ساعاتُ الخطةِ حتى يومٍ معيَّن — تُستعمل مرجعاً لمقارنة CEFR */
+/** الدقائق المقدّرة لكل المهام، الأساسية والاختيارية، حتى اليوم `day`. */
+export function planMinBis(day: number): number {
+  ensurePlanMinuten();
+  const d = Math.min(Math.max(day | 0, 0), TOTAL_DAYS);
+  return PLAN_MIN_KUM?.[d] ?? 0;
+}
+
+/** دقائق المسار الأساسي المغلق لليوم حتى اليوم `day`. */
+export function planKernMinBis(day: number): number {
+  ensurePlanMinuten();
+  const d = Math.min(Math.max(day | 0, 0), TOTAL_DAYS);
+  return PLAN_KERN_MIN_KUM?.[d] ?? 0;
+}
+
+/** دقائق التعميق الاختياري التراكمية. */
+export function planVertiefungMinBis(day: number): number {
+  return planMinBis(day) - planKernMinBis(day);
+}
+
+/** تقدير كل مهام يوم واحد؛ مستقل عن هدف الجلسة وعن الوقت الذي قاسه المؤقت. */
+export function planTagesMinuten(day: number): number {
+  const d = Math.min(Math.max(day | 0, 1), TOTAL_DAYS);
+  return planMinBis(d) - planMinBis(d - 1);
+}
+
+/** تقدير المسار الأساسي ليوم واحد. */
+export function planKernTagesMinuten(day: number): number {
+  const d = Math.min(Math.max(day | 0, 1), TOTAL_DAYS);
+  return planKernMinBis(d) - planKernMinBis(d - 1);
+}
+
+/** تقدير التعميق الاختياري ليوم واحد. */
+export function planVertiefungTagesMinuten(day: number): number {
+  return planTagesMinuten(day) - planKernTagesMinuten(day);
+}
+
+/** ساعات تقديرات كل المهام حتى يوم معين، للعرض الزمني فقط. */
 export function planStundenBis(day: number): number {
   return planMinBis(day) / 60;
 }
 
-/** إجمالي ساعات الخطة كاملةً (378 يوماً) */
+/** ساعات المسار الأساسي حتى يوم معين. */
+export function planKernStundenBis(day: number): number {
+  return planKernMinBis(day) / 60;
+}
+
+/** إجمالي ساعات كل المهام في الخطة كاملة. */
 export function planStundenGesamt(): number {
   return planStundenBis(TOTAL_DAYS);
+}
+
+export interface PlanPhasenArbeitslast {
+  level: Level;
+  von: number;
+  bis: number;
+  tage: number;
+  /** كامل الكتالوج المتاح: أساسي + تعميق. */
+  minuten: number;
+  stunden: number;
+  durchschnittMinutenProTag: number;
+  kernMinuten: number;
+  kernStunden: number;
+  durchschnittKernMinutenProTag: number;
+  vertiefungMinuten: number;
+  vertiefungStunden: number;
+  durchschnittVertiefungMinutenProTag: number;
+}
+
+export interface PlanArbeitslast {
+  tage: number;
+  /** كامل الكتالوج المتاح: أساسي + تعميق. */
+  minuten: number;
+  stunden: number;
+  durchschnittMinutenProTag: number;
+  kernMinuten: number;
+  kernStunden: number;
+  durchschnittKernMinutenProTag: number;
+  vertiefungMinuten: number;
+  vertiefungStunden: number;
+  durchschnittVertiefungMinutenProTag: number;
+  /** هدف جلسة قابل للتوقف قبله؛ ليس شرطاً لإغلاق اليوم ولا حملاً يومياً كاملاً. */
+  sitzungszielMinuten: number;
+  phasen: Record<Level, PlanPhasenArbeitslast>;
+}
+
+let PLAN_ARBEITSLAST: PlanArbeitslast | null = null;
+
+/** المصدر الحسابي الوحيد لكل أرقام حمل الخطة الظاهرة للمستخدم. */
+export function planArbeitslast(): PlanArbeitslast {
+  if (PLAN_ARBEITSLAST) return PLAN_ARBEITSLAST;
+  const phasen = Object.fromEntries(LEVEL_SEQUENCE.map((level) => {
+    const von = PHASEN[level].von;
+    const bis = PHASE_END_DAY[level];
+    const tage = bis - von + 1;
+    const minuten = planMinBis(bis) - planMinBis(von - 1);
+    const kernMinuten = planKernMinBis(bis) - planKernMinBis(von - 1);
+    const vertiefungMinuten = minuten - kernMinuten;
+    return [level, {
+      level,
+      von,
+      bis,
+      tage,
+      minuten,
+      stunden: minuten / 60,
+      durchschnittMinutenProTag: minuten / tage,
+      kernMinuten,
+      kernStunden: kernMinuten / 60,
+      durchschnittKernMinutenProTag: kernMinuten / tage,
+      vertiefungMinuten,
+      vertiefungStunden: vertiefungMinuten / 60,
+      durchschnittVertiefungMinutenProTag: vertiefungMinuten / tage,
+    } satisfies PlanPhasenArbeitslast];
+  })) as Record<Level, PlanPhasenArbeitslast>;
+  const minuten = planMinBis(TOTAL_DAYS);
+  const kernMinuten = planKernMinBis(TOTAL_DAYS);
+  const vertiefungMinuten = minuten - kernMinuten;
+  PLAN_ARBEITSLAST = {
+    tage: TOTAL_DAYS,
+    minuten,
+    stunden: minuten / 60,
+    durchschnittMinutenProTag: minuten / TOTAL_DAYS,
+    kernMinuten,
+    kernStunden: kernMinuten / 60,
+    durchschnittKernMinutenProTag: kernMinuten / TOTAL_DAYS,
+    vertiefungMinuten,
+    vertiefungStunden: vertiefungMinuten / 60,
+    durchschnittVertiefungMinutenProTag: vertiefungMinuten / TOTAL_DAYS,
+    sitzungszielMinuten: DEFAULT_SESSION_GOAL_MINUTES,
+    phasen,
+  };
+  return PLAN_ARBEITSLAST;
 }

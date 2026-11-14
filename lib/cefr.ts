@@ -1,119 +1,80 @@
 /**
- * ═══════════════════════════════════════════════════════════════════
- *  عقد الساعات — CEFR-Stundenvertrag
- * ═══════════════════════════════════════════════════════════════════
- *  المشكلة التي وُجدت هذه الوحدة لسدّها:
- *    المشروع يَعِدُ بـ «A0 → B2 في 378 يوماً»، لكنّه كان
- *      (١) لا يعرف كم ساعةً يخطِّط فعلاً — الرقمُ لم يُحسَب قط،
- *      (٢) لا يسجِّل دقيقةً واحدةً قضَاها المتعلِّم — فلا يستطيع الإثبات،
- *      (٣) لا يقارن ذلك بمرجع CEFR — فلا يعرف إن كان الوعدُ قابلاً للتحقيق.
+ * مقارنة حمل زمني إرشادية + أدوات سجل الوقت.
  *
- *  المبدأ الحاكم (من ثقافة المشروع): كلُّ رقمٍ تراه مشتقٌّ بصيغةٍ موثَّقة،
- *  ولا أرقامَ زينة. فإن كان الوعدُ لا يتحقَّق بالحملِ المخطَّط، يُقال ذلك
- *  صراحةً على الشاشة — لأنَّ أداةً تدَّعي أنَّها «المدرِّس المسؤول» ثم تُسلِّمُ
- *  متعلِّمَها إلى قاعةِ B2 وهو في B1 تكونُ قد ضرَّتْه ضرراً حقيقياً.
- *
- *  المصادر المرجعية للساعات التراكمية (ساعات 60 دقيقة؛ ما يقابلها من UE ‏à 45 د
- *  مذكور عند CEFR_STUNDEN): Goethe-Institut / telc — وهي **نطاقات** لا أرقامٌ حاسمة،
- *  وتختلف باختلاف اللغة الأم والخبرة السابقة بالتعلّم.
- * ═══════════════════════════════════════════════════════════════════
+ * نطاقات الساعات أدناه تقديرات تراكمية منشورة لدورات Goethe-Institut
+ * (ساعات 60 دقيقة محوّلة من وحدات تدريسية طولها 45 دقيقة). هي سياق تخطيطي
+ * للمؤسسات، وليست سلماً يحوّل الوقت الفردي إلى مستوى CEFR. لا تستنتج هذه
+ * الوحدة مستوى المتعلم أو جاهزيته للامتحان؛ ذلك يحتاج أداءً مقاساً في مهارات
+ * متعددة ومعايير تقويم مناسبة.
  */
 
 import type { Level, Progress } from "./types";
 import { PHASE_END_DAY } from "./phasen";
 export { PHASE_END_DAY };
 
-/** ساعات CEFR **التراكمية** من الصفر — [أدنى, أعلى]، بساعات 60 دقيقة حقيقية.
- *  R169: صُحّح خلطُ الوحدات — كانت B1/B2 أرقامَ وحداتٍ تدريسية (UE ‏à 45 د: ‏350–650 / 600–800)
- *  تُقارَن بساعاتِ خطةٍ من 60 دقيقة. المرجعُ الآن ساعاتُ Goethe-Institut الرسمية (FAQ الدورات):
- *  A1 ‏60–150 · A2 ‏150–260 · B1 ‏260–490 · B2 ‏450–600 ساعة (تقابلها 80–200/200–350/350–650/600–800 UE).
- *  Cambridge (ساعات إرشاد تراكمية): A1 ‏90–100 · A2 ‏180–200 · B1 ‏350–400 · B2 ‏500–600 — داخلَ نطاقات Goethe. */
-export const CEFR_STUNDEN: Record<Level, [number, number]> = {
-  A0: [0, 40],
+export type KursLevel = Exclude<Level, "A0">;
+
+/** تقديرات ساعات دورات Goethe التراكمية من الصفر، بساعات 60 دقيقة حقيقية. */
+export const GOETHE_KURSSTUNDEN: Record<KursLevel, readonly [number, number]> = {
   A1: [60, 150],
   A2: [150, 260],
   B1: [260, 490],
   B2: [450, 600],
 };
 
-/** ترتيب المستويات للمقارنة */
-export const LEVEL_ORDER: Level[] = ["A0", "A1", "A2", "B1", "B2"];
+export const KURS_LEVELS: KursLevel[] = ["A1", "A2", "B1", "B2"];
 
+export type ZeitlastPosition = "unterhalb" | "innerhalb" | "oberhalb";
 
-export type StundenUrteil =
-  | "erreicht"   // تجاوز أعلى النطاق المرجعي
-  | "imBereich"  // داخل النطاق
-  | "darunter"   // دون أدنى النطاق
-  | "weitDarunter"; // دون نصف أدنى النطاق — خطر حقيقي
-
-export interface CefrVergleich {
-  level: Level;
-  /** ساعات الخطة التراكمية حتى نهاية هذه المرحلة */
+export interface ZeitlastVergleich {
+  level: KursLevel;
+  /** تقدير ساعات مهام الخطة التراكمي حتى نهاية القسم. */
   planStd: number;
-  /** النطاق المرجعي التراكمي */
-  ref: [number, number];
-  urteil: StundenUrteil;
-  /** كم ساعة تنقص للوصول إلى أدنى النطاق (0 إن وُفّي) */
-  fehlendBisMinimum: number;
-  /** نسبة التغطية من أدنى النطاق */
-  deckungProzent: number;
+  /** نطاق تقديري لساعات دورة مؤسسية؛ لا عتبة كفاءة فردية. */
+  kursSpanne: readonly [number, number];
+  position: ZeitlastPosition;
 }
 
-/**
- * الحكم على ساعةٍ مخطَّطة مقابل نطاق CEFR — القاعدة موثَّقة هنا لا في الواجهة.
- * `weitDarunter` عند أقلّ من نصف أدنى النطاق: هناك لا ينفع «قرِّبْت»، بل إعادة تصميم.
- */
-export function urteileStunden(planStd: number, ref: [number, number]): StundenUrteil {
-  const [min, max] = ref;
-  if (planStd >= max) return "erreicht";
-  if (planStd >= min) return "imBereich";
-  if (planStd >= min / 2) return "darunter";
-  return "weitDarunter";
-}
-
-export const URTEIL_AR: Record<StundenUrteil, { text: string; emoji: string; farb: string }> = {
-  erreicht:     { text: "يفي بمرجع CEFR ويتجاوزه",       emoji: "🟢", farb: "var(--color-ok)" },
-  imBereich:    { text: "داخل نطاق CEFR المرجعي",         emoji: "🟢", farb: "var(--color-ok)" },
-  darunter:     { text: "دون أدنى النطاق — يحتاج زيادة",  emoji: "🟡", farb: "var(--color-gold)" },
-  weitDarunter: { text: "ناقص نقصاً جوهرياً — الوعد لا يتحقّق بهذا الحمل", emoji: "🔴", farb: "var(--color-cola)" },
+export const ZEITLAST_POSITION_AR: Record<ZeitlastPosition, { text: string; farb: string }> = {
+  unterhalb: { text: "أقل من نطاق ساعات الدورة المنشور", farb: "var(--color-ink2)" },
+  innerhalb: { text: "ضمن نطاق ساعات الدورة المنشور", farb: "var(--color-ink2)" },
+  oberhalb: { text: "أعلى من نطاق ساعات الدورة المنشور", farb: "var(--color-ink2)" },
 };
 
+/** موقع رقم زمني داخل نطاق زمني، بلا تحويله إلى حكم على المتعلم. */
+export function zeitlastPosition(planStd: number, spanne: readonly [number, number]): ZeitlastPosition {
+  if (planStd < spanne[0]) return "unterhalb";
+  if (planStd > spanne[1]) return "oberhalb";
+  return "innerhalb";
+}
+
 /**
- * مقارنة كل مرحلة بما خُطِّط لها تراكمياً.
- * `stundenBis` يجب أن تكون دالةً تراكمية: تُعطى يوماً فتردُّ ساعات الخطة حتى ذلك اليوم.
+ * يقارن تقدير وقت الخطة بنطاقات دورات مؤسسية لأغراض السياق فقط.
+ * لا تعيد الدالة مستوى «قابلاً للتحقيق» ولا نتيجة نجاح/رسوب.
  */
-export function vergleichePlan(stundenBis: (day: number) => number): CefrVergleich[] {
-  return LEVEL_ORDER.map((level) => {
-    const planStd = stundenBis(PHASE_END_DAY[level]);
-    const ref = CEFR_STUNDEN[level];
+export function vergleicheZeitlast(stundenBis: (day: number) => number): ZeitlastVergleich[] {
+  return KURS_LEVELS.map((level) => {
+    const planStd = Math.round(stundenBis(PHASE_END_DAY[level]) * 10) / 10;
+    const kursSpanne = GOETHE_KURSSTUNDEN[level];
     return {
       level,
-      planStd: Math.round(planStd * 10) / 10,
-      ref,
-      urteil: urteileStunden(planStd, ref),
-      fehlendBisMinimum: Math.max(0, Math.round((ref[0] - planStd) * 10) / 10),
-      deckungProzent: Math.round((planStd / ref[0]) * 100),
+      planStd,
+      kursSpanne,
+      position: zeitlastPosition(planStd, kursSpanne),
     };
   });
 }
 
-/** أعمق مستوى يصل إليه المتعلّم بهذا الحمل — مشتقّ لا مُدَّعى */
-export function erreichbaresNiveau(v: CefrVergleich[]): Level {
-  let out: Level = "A1";
-  for (const x of v) if (x.urteil === "erreicht" || x.urteil === "imBereich") out = x.level;
-  return out;
-}
+/* ── الوقت الفعلي: قياس منفصل عن تقدير المهام ─────────────────────── */
 
-/* ── الوقت الفعلي: ما لا يُقاس لا يُدَّعى ─────────────────────────── */
-
-/** دقائق فعلية مسجَّلة في كل الخطة (تُملأ من تسليم المهام) */
+/** مجموع الدقائق التي قاسها مؤقت الجلسة في الخطة كلها. */
 export function minutenEffektiv(p: Progress): number {
   const q = p.plan.minutenEffektiv;
   if (typeof q === "number" && Number.isFinite(q) && q >= 0) return q;
   return 0;
 }
 
-/** دقائق مخططة مُنجَزة: مجموع دقائق المهام التي أُغلقت فعلاً */
+/** دقائق المهام المقدّرة التي أغلقت فعلاً؛ ليست وقتاً مقاساً. */
 export function minutenGeplantErledigt(p: Progress): number {
   let sum = 0;
   for (const key of Object.keys(p.plan.tasks)) {
@@ -125,10 +86,7 @@ export function minutenGeplantErledigt(p: Progress): number {
 
 export const minutenZuStunden = (m: number) => Math.round((m / 60) * 10) / 10;
 
-/**
- * تسجيل دقائق فعلية — يُستدعى عند تسليم مهمة.
- * لا يزيد إلا بمقدار موجب محدود: ساعة في تسليم واحد = قياس كاذب أو تبويب مفتوح ومنسيّ.
- */
+/** سقف حماية للإدخال اليدوي الواحد؛ الإدخال يبقى منفصلاً عن قياس المؤقت. */
 export const MAX_MIN_PRO_TASK = 90;
 
 export function clampMinuten(min: number): number {
@@ -136,7 +94,7 @@ export function clampMinuten(min: number): number {
   return Math.min(MAX_MIN_PRO_TASK, Math.round(min));
 }
 
-/** صياغة عربية صادقة للساعات — لا «≈» بلا مرجع */
+/** صياغة عربية للساعات مع منزلة عشرية واحدة عند الحاجة. */
 export function stundenTextAr(std: number): string {
   const s = Math.round(std * 10) / 10;
   return `${s} ساعة`;

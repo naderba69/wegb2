@@ -140,7 +140,10 @@ const goethePlan = baueSimulation(20261104, "goethe-b2");
 check(goethePlan.zeiten.lesen === 65 && goethePlan.zeiten.hoeren === 40 && goethePlan.zeiten.schreiben === 75 && goethePlan.zeiten.vorbereitung === 15 && goethePlan.zeiten.sprechen === 15, "Goethe: مولد المحاكاة يطبق الأزمنة المسجلة");
 const goethePass = bewerteSimulation("goethe-b2", { lesenAnteil: 0.6, sprachAnteil: 0, hoerenAnteil: 0.6, schreibenRubrik: 60, schreibenZuKurz: false, sprechenRubrik: 60 });
 const goetheNoCompensation = bewerteSimulation("goethe-b2", { lesenAnteil: 1, sprachAnteil: 0, hoerenAnteil: 1, schreibenRubrik: 100, schreibenZuKurz: false, sprechenRubrik: 59 });
-check(goethePass.bestanden && !goetheNoCompensation.bestanden, "Goethe: حد 60 ينجح ولا تعويض لو بقيت وحدة عند 59");
+check(goethePass.gesamtUrteil === "not_assessed" && goetheNoCompensation.gesamtUrteil === "not_assessed" &&
+  goethePass.zeilen.filter((row) => row.ok !== undefined).length === 2 &&
+  goethePass.zeilen.filter((row) => row.titelAr.includes("تقرير ذاتي")).every((row) => row.ok === undefined),
+"Goethe: خط الوحدة ظاهر للقسمين الآليين فقط؛ الإنتاج الذاتي لا يصدر نجاحاً كلياً");
 check(Boolean(goethePlan.schreiben.teil1 && goethePlan.schreiben.teil2) && simulationUiSource.includes("≈150 + ‏≈100 كلمة"), "Goethe: مهمتا الكتابة وهدفا 150/100 موصولان بالواجهة");
 
 const telcPlan = baueSimulation(20261104, "telc-b2");
@@ -149,7 +152,10 @@ check(telcPlan.sprachbausteine.length === 2 && telcPlan.sprachbausteine.every((b
 const telcPass = bewerteSimulation("telc-b2", { lesenAnteil: 0.6, sprachAnteil: 0.6, hoerenAnteil: 0.6, schreibenRubrik: 60, schreibenZuKurz: false, sprechenRubrik: 60 });
 const telcWrittenFail = bewerteSimulation("telc-b2", { lesenAnteil: 0.59, sprachAnteil: 0.6, hoerenAnteil: 0.6, schreibenRubrik: 60, schreibenZuKurz: false, sprechenRubrik: 100 });
 const telcOralFail = bewerteSimulation("telc-b2", { lesenAnteil: 1, sprachAnteil: 1, hoerenAnteil: 1, schreibenRubrik: 100, schreibenZuKurz: false, sprechenRubrik: 59 });
-check(telcPass.bestanden && !telcWrittenFail.bestanden && !telcOralFail.bestanden, "telc: الكتلتان 135/225 و45/75 مطلوبتان بلا تعويض بينهما");
+check([telcPass, telcWrittenFail, telcOralFail].every((result) => result.gesamtUrteil === "not_assessed") &&
+  telcPass.zeilen.some((row) => row.titelAr === "المجموع المصحح آلياً فقط") &&
+  telcPass.zeilen.every((row) => !row.titelAr.includes("المكتوب كاملًا")),
+"telc: المجموع الآلي منفصل؛ لا تُركب كتلة مكتوبة أو نتيجة كلية من التقرير الذاتي");
 
 const b2Texts = texts.filter((item) => item.level === "B2").length;
 const b2Dialogues = dialogues.filter((item) => item.level === "B2").length;
