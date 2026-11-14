@@ -1,0 +1,881 @@
+{
+  "schema": "wegb2-reviewed-vocab-posinfo-decision-batch-v1",
+  "batch": "PA-034-15",
+  "reviewedAt": "2026-11-04",
+  "scope": "Item-by-item internal review of all final 97 residual unguarded B2 posInfo cards in h05-h07, i01/i04/i05/i08, and j01-j16 after reading every head, example, and current value: 0 corrections and 97 explicit confirmed-current decisions; deck and external-reference grouping were triage only, not correction generators, and this is not external linguistic sign-off.",
+  "entries": [
+    {
+      "id": "v779",
+      "deck": "h05-staat-recht",
+      "level": "B2",
+      "de": "vorschreiben",
+      "decision": "confirmed-current",
+      "previousPosInfo": "schreibt vor, schrieb vor, hat vorgeschrieben",
+      "posInfo": "schreibt vor, schrieb vor, hat vorgeschrieben"
+    },
+    {
+      "id": "v784",
+      "deck": "h05-staat-recht",
+      "level": "B2",
+      "de": "beantragen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "beantragt, beantragte, hat beantragt",
+      "posInfo": "beantragt, beantragte, hat beantragt"
+    },
+    {
+      "id": "v785",
+      "deck": "h05-staat-recht",
+      "level": "B2",
+      "de": "bewilligen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "bewilligt, bewilligte, hat bewilligt",
+      "posInfo": "bewilligt, bewilligte, hat bewilligt"
+    },
+    {
+      "id": "v788",
+      "deck": "h05-staat-recht",
+      "level": "B2",
+      "de": "genehmigen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "genehmigt, genehmigte, hat genehmigt",
+      "posInfo": "genehmigt, genehmigte, hat genehmigt"
+    },
+    {
+      "id": "v789",
+      "deck": "h05-staat-recht",
+      "level": "B2",
+      "de": "verbieten",
+      "decision": "confirmed-current",
+      "previousPosInfo": "verbietet, verbot, hat verboten",
+      "posInfo": "verbietet, verbot, hat verboten"
+    },
+    {
+      "id": "v792",
+      "deck": "h05-staat-recht",
+      "level": "B2",
+      "de": "ablehnen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "lehnt ab, lehnte ab, hat abgelehnt",
+      "posInfo": "lehnt ab, lehnte ab, hat abgelehnt"
+    },
+    {
+      "id": "v796",
+      "deck": "h05-staat-recht",
+      "level": "B2",
+      "de": "widersprechen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "widerspricht, widersprach, hat widersprochen",
+      "posInfo": "widerspricht, widersprach, hat widersprochen"
+    },
+    {
+      "id": "v798",
+      "deck": "h05-staat-recht",
+      "level": "B2",
+      "de": "klagen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "klagt, klagte, hat geklagt",
+      "posInfo": "klagt, klagte, hat geklagt"
+    },
+    {
+      "id": "v834",
+      "deck": "h05-staat-recht",
+      "level": "B2",
+      "de": "fälschen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "fälscht, fälschte, hat gefälscht",
+      "posInfo": "fälscht, fälschte, hat gefälscht"
+    },
+    {
+      "id": "v836",
+      "deck": "h05-staat-recht",
+      "level": "B2",
+      "de": "bescheinigen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "bescheinigt, bescheinigte, hat bescheinigt",
+      "posInfo": "bescheinigt, bescheinigte, hat bescheinigt"
+    },
+    {
+      "id": "v839",
+      "deck": "h05-staat-recht",
+      "level": "B2",
+      "de": "beglaubigen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "beglaubigt, beglaubigte, hat beglaubigt",
+      "posInfo": "beglaubigt, beglaubigte, hat beglaubigt"
+    },
+    {
+      "id": "v875",
+      "deck": "h06-studium-lernen",
+      "level": "B2",
+      "de": "ablenken",
+      "decision": "confirmed-current",
+      "previousPosInfo": "lenkt ab, lenkte ab, hat abgelenkt",
+      "posInfo": "lenkt ab, lenkte ab, hat abgelenkt"
+    },
+    {
+      "id": "v889",
+      "deck": "h06-studium-lernen",
+      "level": "B2",
+      "de": "betonen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "betont, betonte, hat betont",
+      "posInfo": "betont, betonte, hat betont"
+    },
+    {
+      "id": "v901",
+      "deck": "h06-studium-lernen",
+      "level": "B2",
+      "de": "betreuen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "betreut, betreute, hat betreut",
+      "posInfo": "betreut, betreute, hat betreut"
+    },
+    {
+      "id": "v928",
+      "deck": "h07-gefuehle-psyche",
+      "level": "B2",
+      "de": "beruhigen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "beruhigt, beruhigte, hat beruhigt",
+      "posInfo": "beruhigt, beruhigte, hat beruhigt"
+    },
+    {
+      "id": "v951",
+      "deck": "h07-gefuehle-psyche",
+      "level": "B2",
+      "de": "kränken",
+      "decision": "confirmed-current",
+      "previousPosInfo": "kränkt, kränkte, hat gekränkt",
+      "posInfo": "kränkt, kränkte, hat gekränkt"
+    },
+    {
+      "id": "v965",
+      "deck": "h07-gefuehle-psyche",
+      "level": "B2",
+      "de": "loben",
+      "decision": "confirmed-current",
+      "previousPosInfo": "lobt, lobte, hat gelobt",
+      "posInfo": "lobt, lobte, hat gelobt"
+    },
+    {
+      "id": "v1080",
+      "deck": "i01-medien-meinung",
+      "level": "B2",
+      "de": "zuspitzen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "spitzt zu, spitzte zu, hat zugespitzt",
+      "posInfo": "spitzt zu, spitzte zu, hat zugespitzt"
+    },
+    {
+      "id": "v1213",
+      "deck": "i04-energie-wende",
+      "level": "B2",
+      "de": "einspeisen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "speist ein, speiste ein, hat eingespeist",
+      "posInfo": "speist ein, speiste ein, hat eingespeist"
+    },
+    {
+      "id": "v1265",
+      "deck": "i05-ernaehrung-verbraucherschutz",
+      "level": "B2",
+      "de": "abmahnen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "mahnt ab, mahnte ab, hat abgemahnt",
+      "posInfo": "mahnt ab, mahnte ab, hat abgemahnt"
+    },
+    {
+      "id": "v1396",
+      "deck": "i08-erinnerungskultur",
+      "level": "B2",
+      "de": "verdrängen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "verdrängt, verdrängte, hat verdrängt",
+      "posInfo": "verdrängt, verdrängte, hat verdrängt"
+    },
+    {
+      "id": "j01-arbeit-vertieft-003",
+      "deck": "j01-arbeit-vertieft",
+      "level": "B2",
+      "de": "einsetzen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "setzt ein, setzte ein, hat eingesetzt",
+      "posInfo": "setzt ein, setzte ein, hat eingesetzt"
+    },
+    {
+      "id": "j01-arbeit-vertieft-007",
+      "deck": "j01-arbeit-vertieft",
+      "level": "B2",
+      "de": "erledigen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "erledigt, erledigte, hat erledigt",
+      "posInfo": "erledigt, erledigte, hat erledigt"
+    },
+    {
+      "id": "j01-arbeit-vertieft-035",
+      "deck": "j01-arbeit-vertieft",
+      "level": "B2",
+      "de": "einplanen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "plant ein, plante ein, hat eingeplant",
+      "posInfo": "plant ein, plante ein, hat eingeplant"
+    },
+    {
+      "id": "j01-arbeit-vertieft-040",
+      "deck": "j01-arbeit-vertieft",
+      "level": "B2",
+      "de": "verkürzen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "verkürzt, verkürzte, hat verkürzt",
+      "posInfo": "verkürzt, verkürzte, hat verkürzt"
+    },
+    {
+      "id": "j02-gesellschaft-recht-011",
+      "deck": "j02-gesellschaft-recht",
+      "level": "B2",
+      "de": "einreichen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "reicht ein, reichte ein, hat eingereicht",
+      "posInfo": "reicht ein, reichte ein, hat eingereicht"
+    },
+    {
+      "id": "j02-gesellschaft-recht-012",
+      "deck": "j02-gesellschaft-recht",
+      "level": "B2",
+      "de": "bestrafen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "bestraft, bestrafte, hat bestraft",
+      "posInfo": "bestraft, bestrafte, hat bestraft"
+    },
+    {
+      "id": "j02-gesellschaft-recht-014",
+      "deck": "j02-gesellschaft-recht",
+      "level": "B2",
+      "de": "bezeugen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "bezeugt, bezeugte, hat bezeugt",
+      "posInfo": "bezeugt, bezeugte, hat bezeugt"
+    },
+    {
+      "id": "j02-gesellschaft-recht-018",
+      "deck": "j02-gesellschaft-recht",
+      "level": "B2",
+      "de": "benachteiligen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "benachteiligt, benachteiligte, hat benachteiligt",
+      "posInfo": "benachteiligt, benachteiligte, hat benachteiligt"
+    },
+    {
+      "id": "j03-umwelt-energie-038",
+      "deck": "j03-umwelt-energie",
+      "level": "B2",
+      "de": "verursachen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "verursacht, verursachte, hat verursacht",
+      "posInfo": "verursacht, verursachte, hat verursacht"
+    },
+    {
+      "id": "j03-umwelt-energie-040",
+      "deck": "j03-umwelt-energie",
+      "level": "B2",
+      "de": "einsparen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "spart ein, sparte ein, hat eingespart",
+      "posInfo": "spart ein, sparte ein, hat eingespart"
+    },
+    {
+      "id": "j03-umwelt-energie-041",
+      "deck": "j03-umwelt-energie",
+      "level": "B2",
+      "de": "schonen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "schont, schonte, hat geschont",
+      "posInfo": "schont, schonte, hat geschont"
+    },
+    {
+      "id": "j03-umwelt-energie-043",
+      "deck": "j03-umwelt-energie",
+      "level": "B2",
+      "de": "entsorgen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "entsorgt, entsorgte, hat entsorgt",
+      "posInfo": "entsorgt, entsorgte, hat entsorgt"
+    },
+    {
+      "id": "j03-umwelt-energie-044",
+      "deck": "j03-umwelt-energie",
+      "level": "B2",
+      "de": "dämmen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "dämmt, dämmte, hat gedämmt",
+      "posInfo": "dämmt, dämmte, hat gedämmt"
+    },
+    {
+      "id": "j03-umwelt-energie-045",
+      "deck": "j03-umwelt-energie",
+      "level": "B2",
+      "de": "heizen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "heizt, heizte, hat geheizt",
+      "posInfo": "heizt, heizte, hat geheizt"
+    },
+    {
+      "id": "j03-umwelt-energie-049",
+      "deck": "j03-umwelt-energie",
+      "level": "B2",
+      "de": "bedrohen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "bedroht, bedrohte, hat bedroht",
+      "posInfo": "bedroht, bedrohte, hat bedroht"
+    },
+    {
+      "id": "j03-umwelt-energie-051",
+      "deck": "j03-umwelt-energie",
+      "level": "B2",
+      "de": "zerstören",
+      "decision": "confirmed-current",
+      "previousPosInfo": "zerstört, zerstörte, hat zerstört",
+      "posInfo": "zerstört, zerstörte, hat zerstört"
+    },
+    {
+      "id": "j04-gesundheit-pflege-049",
+      "deck": "j04-gesundheit-pflege",
+      "level": "B2",
+      "de": "impfen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "impft, impfte, hat geimpft",
+      "posInfo": "impft, impfte, hat geimpft"
+    },
+    {
+      "id": "j04-gesundheit-pflege-051",
+      "deck": "j04-gesundheit-pflege",
+      "level": "B2",
+      "de": "verabreichen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "verabreicht, verabreichte, hat verabreicht",
+      "posInfo": "verabreicht, verabreichte, hat verabreicht"
+    },
+    {
+      "id": "j04-gesundheit-pflege-053",
+      "deck": "j04-gesundheit-pflege",
+      "level": "B2",
+      "de": "absetzen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "setzt ab, setzte ab, hat abgesetzt",
+      "posInfo": "setzt ab, setzte ab, hat abgesetzt"
+    },
+    {
+      "id": "j04-gesundheit-pflege-058",
+      "deck": "j04-gesundheit-pflege",
+      "level": "B2",
+      "de": "abhören",
+      "decision": "confirmed-current",
+      "previousPosInfo": "hört ab, hörte ab, hat abgehört",
+      "posInfo": "hört ab, hörte ab, hat abgehört"
+    },
+    {
+      "id": "j04-gesundheit-pflege-061",
+      "deck": "j04-gesundheit-pflege",
+      "level": "B2",
+      "de": "betäuben",
+      "decision": "confirmed-current",
+      "previousPosInfo": "betäubt, betäubte, hat betäubt",
+      "posInfo": "betäubt, betäubte, hat betäubt"
+    },
+    {
+      "id": "j04-gesundheit-pflege-062",
+      "deck": "j04-gesundheit-pflege",
+      "level": "B2",
+      "de": "nähen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "näht, nähte, hat genäht",
+      "posInfo": "näht, nähte, hat genäht"
+    },
+    {
+      "id": "j04-gesundheit-pflege-066",
+      "deck": "j04-gesundheit-pflege",
+      "level": "B2",
+      "de": "anreichen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "reicht an, reichte an, hat angereicht",
+      "posInfo": "reicht an, reichte an, hat angereicht"
+    },
+    {
+      "id": "j05-bildung-wissenschaft-038",
+      "deck": "j05-bildung-wissenschaft",
+      "level": "B2",
+      "de": "vertiefen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "vertieft, vertiefte, hat vertieft",
+      "posInfo": "vertieft, vertiefte, hat vertieft"
+    },
+    {
+      "id": "j06-medien-digital-039",
+      "deck": "j06-medien-digital",
+      "level": "B2",
+      "de": "ausstrahlen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "strahlt aus, strahlte aus, hat ausgestrahlt",
+      "posInfo": "strahlt aus, strahlte aus, hat ausgestrahlt"
+    },
+    {
+      "id": "j06-medien-digital-040",
+      "deck": "j06-medien-digital",
+      "level": "B2",
+      "de": "beeinflussen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "beeinflusst, beeinflusste, hat beeinflusst",
+      "posInfo": "beeinflusst, beeinflusste, hat beeinflusst"
+    },
+    {
+      "id": "j06-medien-digital-042",
+      "deck": "j06-medien-digital",
+      "level": "B2",
+      "de": "anklicken",
+      "decision": "confirmed-current",
+      "previousPosInfo": "klickt an, klickte an, hat angeklickt",
+      "posInfo": "klickt an, klickte an, hat angeklickt"
+    },
+    {
+      "id": "j06-medien-digital-046",
+      "deck": "j06-medien-digital",
+      "level": "B2",
+      "de": "einstellen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "stellt ein, stellte ein, hat eingestellt",
+      "posInfo": "stellt ein, stellte ein, hat eingestellt"
+    },
+    {
+      "id": "j07-geld-wirtschaft-044",
+      "deck": "j07-geld-wirtschaft",
+      "level": "B2",
+      "de": "feilschen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "feilscht, feilschte, hat gefeilscht",
+      "posInfo": "feilscht, feilschte, hat gefeilscht"
+    },
+    {
+      "id": "j08-gefuehle-beziehungen-023",
+      "deck": "j08-gefuehle-beziehungen",
+      "level": "B2",
+      "de": "vermissen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "vermisst, vermisste, hat vermisst",
+      "posInfo": "vermisst, vermisste, hat vermisst"
+    },
+    {
+      "id": "j09-stadt-wohnen-verkehr-016",
+      "deck": "j09-stadt-wohnen-verkehr",
+      "level": "B2",
+      "de": "verpassen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "verpasst, verpasste, hat verpasst",
+      "posInfo": "verpasst, verpasste, hat verpasst"
+    },
+    {
+      "id": "j09-stadt-wohnen-verkehr-018",
+      "deck": "j09-stadt-wohnen-verkehr",
+      "level": "B2",
+      "de": "durchsagen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "sagt durch, sagte durch, hat durchgesagt",
+      "posInfo": "sagt durch, sagte durch, hat durchgesagt"
+    },
+    {
+      "id": "j09-stadt-wohnen-verkehr-019",
+      "deck": "j09-stadt-wohnen-verkehr",
+      "level": "B2",
+      "de": "parken",
+      "decision": "confirmed-current",
+      "previousPosInfo": "parkt, parkte, hat geparkt",
+      "posInfo": "parkt, parkte, hat geparkt"
+    },
+    {
+      "id": "j09-stadt-wohnen-verkehr-021",
+      "deck": "j09-stadt-wohnen-verkehr",
+      "level": "B2",
+      "de": "bremsen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "bremst, bremste, hat gebremst",
+      "posInfo": "bremst, bremste, hat gebremst"
+    },
+    {
+      "id": "j09-stadt-wohnen-verkehr-022",
+      "deck": "j09-stadt-wohnen-verkehr",
+      "level": "B2",
+      "de": "beschleunigen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "beschleunigt, beschleunigte, hat beschleunigt",
+      "posInfo": "beschleunigt, beschleunigte, hat beschleunigt"
+    },
+    {
+      "id": "j10-meinung-diskussion-034",
+      "deck": "j10-meinung-diskussion",
+      "level": "B2",
+      "de": "meinen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "meint, meinte, hat gemeint",
+      "posInfo": "meint, meinte, hat gemeint"
+    },
+    {
+      "id": "j10-meinung-diskussion-035",
+      "deck": "j10-meinung-diskussion",
+      "level": "B2",
+      "de": "schätzen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "schätzt, schätzte, hat geschätzt",
+      "posInfo": "schätzt, schätzte, hat geschätzt"
+    },
+    {
+      "id": "j10-meinung-diskussion-040",
+      "deck": "j10-meinung-diskussion",
+      "level": "B2",
+      "de": "ergänzen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "ergänzt, ergänzte, hat ergänzt",
+      "posInfo": "ergänzt, ergänzte, hat ergänzt"
+    },
+    {
+      "id": "j10-meinung-diskussion-043",
+      "deck": "j10-meinung-diskussion",
+      "level": "B2",
+      "de": "bewirken",
+      "decision": "confirmed-current",
+      "previousPosInfo": "bewirkt, bewirkte, hat bewirkt",
+      "posInfo": "bewirkt, bewirkte, hat bewirkt"
+    },
+    {
+      "id": "j10-meinung-diskussion-044",
+      "deck": "j10-meinung-diskussion",
+      "level": "B2",
+      "de": "führen zu",
+      "decision": "confirmed-current",
+      "previousPosInfo": "führt, führte, hat geführt",
+      "posInfo": "führt, führte, hat geführt"
+    },
+    {
+      "id": "j10-meinung-diskussion-045",
+      "deck": "j10-meinung-diskussion",
+      "level": "B2",
+      "de": "auslösen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "löst aus, löste aus, hat ausgelöst",
+      "posInfo": "löst aus, löste aus, hat ausgelöst"
+    },
+    {
+      "id": "j10-meinung-diskussion-047",
+      "deck": "j10-meinung-diskussion",
+      "level": "B2",
+      "de": "senken",
+      "decision": "confirmed-current",
+      "previousPosInfo": "senkt, senkte, hat gesenkt",
+      "posInfo": "senkt, senkte, hat gesenkt"
+    },
+    {
+      "id": "j10-meinung-diskussion-048",
+      "deck": "j10-meinung-diskussion",
+      "level": "B2",
+      "de": "erhöhen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "erhöht, erhöhte, hat erhöht",
+      "posInfo": "erhöht, erhöhte, hat erhöht"
+    },
+    {
+      "id": "j11-alltag-haus-029",
+      "deck": "j11-alltag-haus",
+      "level": "B2",
+      "de": "aufwischen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "wischt auf, wischte auf, hat aufgewischt",
+      "posInfo": "wischt auf, wischte auf, hat aufgewischt"
+    },
+    {
+      "id": "j11-alltag-haus-030",
+      "deck": "j11-alltag-haus",
+      "level": "B2",
+      "de": "staubsaugen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "staubsaugt, staubsaugte, hat gestaubsaugt",
+      "posInfo": "staubsaugt, staubsaugte, hat gestaubsaugt"
+    },
+    {
+      "id": "j11-alltag-haus-031",
+      "deck": "j11-alltag-haus",
+      "level": "B2",
+      "de": "wischen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "wischt, wischte, hat gewischt",
+      "posInfo": "wischt, wischte, hat gewischt"
+    },
+    {
+      "id": "j11-alltag-haus-032",
+      "deck": "j11-alltag-haus",
+      "level": "B2",
+      "de": "spülen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "spült, spülte, hat gespült",
+      "posInfo": "spült, spülte, hat gespült"
+    },
+    {
+      "id": "j11-alltag-haus-034",
+      "deck": "j11-alltag-haus",
+      "level": "B2",
+      "de": "aufhängen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "hängt auf, hängte auf, hat aufgehängt",
+      "posInfo": "hängt auf, hängte auf, hat aufgehängt"
+    },
+    {
+      "id": "j11-alltag-haus-036",
+      "deck": "j11-alltag-haus",
+      "level": "B2",
+      "de": "rühren",
+      "decision": "confirmed-current",
+      "previousPosInfo": "rührt, rührte, hat gerührt",
+      "posInfo": "rührt, rührte, hat gerührt"
+    },
+    {
+      "id": "j11-alltag-haus-037",
+      "deck": "j11-alltag-haus",
+      "level": "B2",
+      "de": "schälen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "schält, schälte, hat geschält",
+      "posInfo": "schält, schälte, hat geschält"
+    },
+    {
+      "id": "j11-alltag-haus-038",
+      "deck": "j11-alltag-haus",
+      "level": "B2",
+      "de": "abschmecken",
+      "decision": "confirmed-current",
+      "previousPosInfo": "schmeckt ab, schmeckte ab, hat abgeschmeckt",
+      "posInfo": "schmeckt ab, schmeckte ab, hat abgeschmeckt"
+    },
+    {
+      "id": "j11-alltag-haus-040",
+      "deck": "j11-alltag-haus",
+      "level": "B2",
+      "de": "knöpfen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "knöpft, knöpfte, hat geknöpft",
+      "posInfo": "knöpft, knöpfte, hat geknöpft"
+    },
+    {
+      "id": "j12-natur-tiere-046",
+      "deck": "j12-natur-tiere",
+      "level": "B2",
+      "de": "blühen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "blüht, blühte, hat geblüht",
+      "posInfo": "blüht, blühte, hat geblüht"
+    },
+    {
+      "id": "j12-natur-tiere-049",
+      "deck": "j12-natur-tiere",
+      "level": "B2",
+      "de": "pflanzen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "pflanzt, pflanzte, hat gepflanzt",
+      "posInfo": "pflanzt, pflanzte, hat gepflanzt"
+    },
+    {
+      "id": "j12-natur-tiere-052",
+      "deck": "j12-natur-tiere",
+      "level": "B2",
+      "de": "wehen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "weht, wehte, hat geweht",
+      "posInfo": "weht, wehte, hat geweht"
+    },
+    {
+      "id": "j12-natur-tiere-056",
+      "deck": "j12-natur-tiere",
+      "level": "B2",
+      "de": "jagen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "jagt, jagte, hat gejagt",
+      "posInfo": "jagt, jagte, hat gejagt"
+    },
+    {
+      "id": "j13-koerper-zeit-039",
+      "deck": "j13-koerper-zeit",
+      "level": "B2",
+      "de": "niesen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "niest, nieste, hat geniest",
+      "posInfo": "niest, nieste, hat geniest"
+    },
+    {
+      "id": "j13-koerper-zeit-040",
+      "deck": "j13-koerper-zeit",
+      "level": "B2",
+      "de": "schlucken",
+      "decision": "confirmed-current",
+      "previousPosInfo": "schluckt, schluckte, hat geschluckt",
+      "posInfo": "schluckt, schluckte, hat geschluckt"
+    },
+    {
+      "id": "j13-koerper-zeit-041",
+      "deck": "j13-koerper-zeit",
+      "level": "B2",
+      "de": "kauen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "kaut, kaute, hat gekaut",
+      "posInfo": "kaut, kaute, hat gekaut"
+    },
+    {
+      "id": "j13-koerper-zeit-045",
+      "deck": "j13-koerper-zeit",
+      "level": "B2",
+      "de": "winken",
+      "decision": "confirmed-current",
+      "previousPosInfo": "winkt, winkte, hat gewinkt",
+      "posInfo": "winkt, winkte, hat gewinkt"
+    },
+    {
+      "id": "j13-koerper-zeit-046",
+      "deck": "j13-koerper-zeit",
+      "level": "B2",
+      "de": "nicken",
+      "decision": "confirmed-current",
+      "previousPosInfo": "nickt, nickte, hat genickt",
+      "posInfo": "nickt, nickte, hat genickt"
+    },
+    {
+      "id": "j13-koerper-zeit-052",
+      "deck": "j13-koerper-zeit",
+      "level": "B2",
+      "de": "ausrutschen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "rutscht aus, rutschte aus, ist ausgerutscht",
+      "posInfo": "rutscht aus, rutschte aus, ist ausgerutscht"
+    },
+    {
+      "id": "j13-koerper-zeit-055",
+      "deck": "j13-koerper-zeit",
+      "level": "B2",
+      "de": "befreien",
+      "decision": "confirmed-current",
+      "previousPosInfo": "befreit, befreite, hat befreit",
+      "posInfo": "befreit, befreite, hat befreit"
+    },
+    {
+      "id": "j13-koerper-zeit-057",
+      "deck": "j13-koerper-zeit",
+      "level": "B2",
+      "de": "entdecken",
+      "decision": "confirmed-current",
+      "previousPosInfo": "entdeckt, entdeckte, hat entdeckt",
+      "posInfo": "entdeckt, entdeckte, hat entdeckt"
+    },
+    {
+      "id": "j14-kultur-freizeit-034",
+      "deck": "j14-kultur-freizeit",
+      "level": "B2",
+      "de": "proben",
+      "decision": "confirmed-current",
+      "previousPosInfo": "probt, probte, hat geprobt",
+      "posInfo": "probt, probte, hat geprobt"
+    },
+    {
+      "id": "j14-kultur-freizeit-036",
+      "deck": "j14-kultur-freizeit",
+      "level": "B2",
+      "de": "ausstellen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "stellt aus, stellte aus, hat ausgestellt",
+      "posInfo": "stellt aus, stellte aus, hat ausgestellt"
+    },
+    {
+      "id": "j15-berufe-dienste-027",
+      "deck": "j15-berufe-dienste",
+      "level": "B2",
+      "de": "austauschen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "tauscht aus, tauschte aus, hat ausgetauscht",
+      "posInfo": "tauscht aus, tauschte aus, hat ausgetauscht"
+    },
+    {
+      "id": "j15-berufe-dienste-028",
+      "deck": "j15-berufe-dienste",
+      "level": "B2",
+      "de": "ersetzen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "ersetzt, ersetzte, hat ersetzt",
+      "posInfo": "ersetzt, ersetzte, hat ersetzt"
+    },
+    {
+      "id": "j15-berufe-dienste-030",
+      "deck": "j15-berufe-dienste",
+      "level": "B2",
+      "de": "beauftragen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "beauftragt, beauftragte, hat beauftragt",
+      "posInfo": "beauftragt, beauftragte, hat beauftragt"
+    },
+    {
+      "id": "j15-berufe-dienste-031",
+      "deck": "j15-berufe-dienste",
+      "level": "B2",
+      "de": "klären",
+      "decision": "confirmed-current",
+      "previousPosInfo": "klärt, klärte, hat geklärt",
+      "posInfo": "klärt, klärte, hat geklärt"
+    },
+    {
+      "id": "j15-berufe-dienste-033",
+      "deck": "j15-berufe-dienste",
+      "level": "B2",
+      "de": "vereinbaren",
+      "decision": "confirmed-current",
+      "previousPosInfo": "vereinbart, vereinbarte, hat vereinbart",
+      "posInfo": "vereinbart, vereinbarte, hat vereinbart"
+    },
+    {
+      "id": "j16-wege-ziele-005",
+      "deck": "j16-wege-ziele",
+      "level": "B2",
+      "de": "ermöglichen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "ermöglicht, ermöglichte, hat ermöglicht",
+      "posInfo": "ermöglicht, ermöglichte, hat ermöglicht"
+    },
+    {
+      "id": "j16-wege-ziele-007",
+      "deck": "j16-wege-ziele",
+      "level": "B2",
+      "de": "wagen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "wagt, wagte, hat gewagt",
+      "posInfo": "wagt, wagte, hat gewagt"
+    },
+    {
+      "id": "j16-wege-ziele-008",
+      "deck": "j16-wege-ziele",
+      "level": "B2",
+      "de": "versuchen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "versucht, versuchte, hat versucht",
+      "posInfo": "versucht, versuchte, hat versucht"
+    },
+    {
+      "id": "j16-wege-ziele-009",
+      "deck": "j16-wege-ziele",
+      "level": "B2",
+      "de": "schaffen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "schafft, schaffte, hat geschafft",
+      "posInfo": "schafft, schaffte, hat geschafft"
+    },
+    {
+      "id": "j16-wege-ziele-012",
+      "deck": "j16-wege-ziele",
+      "level": "B2",
+      "de": "fortsetzen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "setzt fort, setzte fort, hat fortgesetzt",
+      "posInfo": "setzt fort, setzte fort, hat fortgesetzt"
+    }
+  ]
+}

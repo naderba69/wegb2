@@ -47,6 +47,7 @@ const fixturePaths = [
   "vocab-posinfo-reviewed-12.json",
   "vocab-posinfo-reviewed-13.json",
   "vocab-posinfo-reviewed-14.json",
+  "vocab-posinfo-reviewed-15.json",
 ];
 const fixtures = fixturePaths.map((name) => JSON.parse(
   fs.readFileSync(path.join(root, "scripts", "fixtures", name), "utf8"),
@@ -68,6 +69,7 @@ const [
   twelfthFixture,
   thirteenthFixture,
   fourteenthFixture,
+  fifteenthFixture,
 ] = fixtures;
 if (firstFixture.schema !== "wegb2-reviewed-vocab-posinfo-v1"
   || firstFixture.entries.length !== 110) {
@@ -137,6 +139,11 @@ if (fourteenthFixture.schema !== "wegb2-reviewed-vocab-posinfo-decision-batch-v1
   || fourteenthFixture.batch !== "PA-034-14"
   || fourteenthFixture.entries.length !== 109) {
   errors.push(`unexpected PA-034 batch 14 fixture: ${fourteenthFixture.schema}/${fourteenthFixture.batch}/${fourteenthFixture.entries.length}`);
+}
+if (fifteenthFixture.schema !== "wegb2-reviewed-vocab-posinfo-decision-batch-v1"
+  || fifteenthFixture.batch !== "PA-034-15"
+  || fifteenthFixture.entries.length !== 97) {
+  errors.push(`unexpected PA-034 batch 15 fixture: ${fifteenthFixture.schema}/${fifteenthFixture.batch}/${fifteenthFixture.entries.length}`);
 }
 if (fixtures.some((fixture) => !/not (?:an )?external linguistic sign-off/.test(fixture.scope))) {
   errors.push("every review fixture must deny external linguistic sign-off");
@@ -320,14 +327,32 @@ if (JSON.stringify(fourteenthLevelCounts) !== JSON.stringify({ B2: 109 })
   || fourteenthFixture.entries.some((entry) => entry.posInfo.split(",").length !== 3)) {
   errors.push(`PA-034-14 must remain bounded to 109 residual B2 cards in the declared decks with 1 correction and 108 confirmed-current decisions: ${JSON.stringify(fourteenthLevelCounts)}/${fourteenthCorrections.length}/${fourteenthConfirmedCurrent.length}`);
 }
-if (reviewedIds.size !== 1067) {
-  errors.push(`review fixtures must contain 1067 unique entries, got ${reviewedIds.size}`);
+const fifteenthLevelCounts = countLevels(fifteenthFixture);
+const fifteenthCorrections = fifteenthFixture.entries.filter((entry) => entry.decision === "corrected");
+const fifteenthConfirmedCurrent = fifteenthFixture.entries.filter((entry) => entry.decision === "confirmed-current");
+const fifteenthDecks = [...new Set(fifteenthFixture.entries.map((entry) => entry.deck ?? ""))].sort();
+const expectedFifteenthDecks = [
+  "h05-staat-recht", "h06-studium-lernen", "h07-gefuehle-psyche",
+  "i01-medien-meinung", "i04-energie-wende", "i05-ernaehrung-verbraucherschutz", "i08-erinnerungskultur",
+  "j01-arbeit-vertieft", "j02-gesellschaft-recht", "j03-umwelt-energie", "j04-gesundheit-pflege",
+  "j05-bildung-wissenschaft", "j06-medien-digital", "j07-geld-wirtschaft", "j08-gefuehle-beziehungen",
+  "j09-stadt-wohnen-verkehr", "j10-meinung-diskussion", "j11-alltag-haus", "j12-natur-tiere",
+  "j13-koerper-zeit", "j14-kultur-freizeit", "j15-berufe-dienste", "j16-wege-ziele",
+];
+if (JSON.stringify(fifteenthLevelCounts) !== JSON.stringify({ B2: 97 })
+  || fifteenthCorrections.length !== 0
+  || fifteenthConfirmedCurrent.length !== 97
+  || JSON.stringify(fifteenthDecks) !== JSON.stringify(expectedFifteenthDecks)
+  || fifteenthFixture.entries.some((entry) => entry.posInfo.split(",").length !== 3)) {
+  errors.push(`PA-034-15 must remain bounded to all final 97 residual B2 cards in the declared decks with 0 corrections and 97 confirmed-current decisions: ${JSON.stringify(fifteenthLevelCounts)}/${fifteenthCorrections.length}/${fifteenthConfirmedCurrent.length}`);
+}
+if (reviewedIds.size !== 1164) {
+  errors.push(`review fixtures must contain 1164 unique entries, got ${reviewedIds.size}`);
 }
 const unreviewedPosInfo = cards.filter((item) =>
   item.card.id && item.card.posInfo !== undefined && !reviewedIds.has(item.card.id));
-if (unreviewedPosInfo.length !== 97
-  || unreviewedPosInfo.some((item) => item.level !== "B2")) {
-  errors.push(`remaining review gap must stay bounded to 97 B2 posInfo cards, got ${unreviewedPosInfo.length}`);
+if (unreviewedPosInfo.length !== 0) {
+  errors.push(`all current posInfo cards must have bounded internal decisions, got ${unreviewedPosInfo.length} unreviewed cards`);
 }
 
 if (errors.length) {
@@ -337,8 +362,8 @@ if (errors.length) {
 }
 
 console.log(
-  `✅ Reviewed vocabulary morphology: ${reviewedIds.size}/${reviewedIds.size} reviewed decisions match fourteen bounded internal-review fixtures (${fixtures.map((fixture) => fixture.reviewedAt).join(", ")}).`,
+  `✅ Reviewed vocabulary morphology: ${reviewedIds.size}/${reviewedIds.size} reviewed decisions match fifteen bounded internal-review fixtures (${fixtures.map((fixture) => fixture.reviewedAt).join(", ")}).`,
 );
 console.log(
-  "ℹ️ This gate prevents regression only for the reviewed PA-034 batches; it does not certify every posInfo field or provide external linguistic sign-off.",
+  "ℹ️ Complete internal decision coverage does not certify every posInfo field linguistically, certify other card fields, or provide external linguistic sign-off.",
 );

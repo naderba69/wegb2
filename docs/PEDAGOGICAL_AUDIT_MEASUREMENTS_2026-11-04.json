@@ -5,7 +5,7 @@
   "scopeNoteAr": "هذه قياسات قابلة لإعادة التشغيل وليست شهادة صحة لغوية أو بيداغوجية.",
   "baseline": {
     "smoke": {
-      "passed": 2486,
+      "passed": 2489,
       "failed": 0
     },
     "interactiveJsdom": {
@@ -340,7 +340,7 @@
       "A1": 131,
       "A2": 177,
       "B1": 435,
-      "B2": 319
+      "B2": 416
     },
     "batch02": {
       "correctedCards": 59,
@@ -512,6 +512,19 @@
       "patch": "scripts/patches/apply_vocab_posinfo_review_pa034_14.py",
       "externalLinguisticSignOff": false
     },
+    "batch15": {
+      "reviewedCards": 97,
+      "scope": "item-by-item internal review of all final residual B2 posInfo cards in h05-h07, i01/i04/i05/i08, and j01-j16; deck and external-reference grouping used for triage only",
+      "levels": {
+        "B2": 97
+      },
+      "reviewedDecks": 23,
+      "correctedCards": 0,
+      "confirmedCurrentCards": 97,
+      "fixture": "scripts/fixtures/vocab-posinfo-reviewed-15.json",
+      "patch": "scripts/patches/apply_vocab_posinfo_review_pa034_15.py",
+      "externalLinguisticSignOff": false
+    },
     "batch01OverlappingIssueTags": {
       "present_malformed": 53,
       "preterite_malformed": 106,
@@ -544,17 +557,16 @@
       "scripts/fixtures/vocab-posinfo-reviewed-11.json",
       "scripts/fixtures/vocab-posinfo-reviewed-12.json",
       "scripts/fixtures/vocab-posinfo-reviewed-13.json",
-      "scripts/fixtures/vocab-posinfo-reviewed-14.json"
+      "scripts/fixtures/vocab-posinfo-reviewed-14.json",
+      "scripts/fixtures/vocab-posinfo-reviewed-15.json"
     ],
     "regressionGate": "npm run audit:vocab-posinfo",
-    "claimBoundary": "1067 bounded internal decisions (746 changed, 321 confirmed-current) only; 97 other B2 posInfo fields and external linguistic validation are not certified",
-    "unguardedPosInfoCards": 97,
-    "boundedInternalDecisions": 1067,
+    "claimBoundary": "1164 bounded internal decisions (746 changed, 418 confirmed-current) cover every current posInfo field; this is not external linguistic validation and does not certify other card fields",
+    "unguardedPosInfoCards": 0,
+    "boundedInternalDecisions": 1164,
     "legacyShorthandExpansions": 24,
-    "confirmedCurrentCards": 321,
-    "unguardedLevels": {
-      "B2": 97
-    }
+    "confirmedCurrentCards": 418,
+    "unguardedLevels": {}
   },
   "writingBankConsistencyAudit": {
     "path": "content/writing.json",
@@ -580,11 +592,11 @@
     "fixedPedagogicalRisks": 17
   },
   "inventorySnapshot": {
-    "indexedTrackedFilesAndAuditArtifacts": 3591,
+    "indexedTrackedFilesAndAuditArtifacts": 3594,
     "manual_complete": 55,
-    "manual_targeted": 68,
+    "manual_targeted": 69,
     "not_started": 3441,
-    "audit_artifact": 27
+    "audit_artifact": 29
   },
   "learningStateCorrections": {
     "findings": [
