@@ -15239,7 +15239,7 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const patchK408 = readFileSync("scripts/patches/apply_vocab_posinfo_review_pa034_02.py", "utf8");
   const auditK408 = readFileSync("scripts/vocab_posinfo_audit.ts", "utf8");
   ok(patchK408.includes("current == entry[\"posInfo\"]") && patchK408.includes("current != entry[\"previousPosInfo\"]") &&
-    auditK408.includes("reviewedIds.size !== 500") && auditK408.includes("does not certify every posInfo field") &&
+    auditK408.includes("reviewedIds.size !== 562") && auditK408.includes("does not certify every posInfo field") &&
     reviewK408.scope.includes("not external linguistic sign-off"),
     "K408c PA-034-02: الرقعة قابلة للإعادة ومقفلة بالقيمة السابقة، والبوابة تبقي الإجمالي الحالي محدوداً بلا اعتماد بقية الحقول");
 }
@@ -15272,7 +15272,7 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const patchK409 = readFileSync("scripts/patches/apply_vocab_posinfo_review_pa034_03.py", "utf8");
   const auditK409 = readFileSync("scripts/vocab_posinfo_audit.ts", "utf8");
   ok(patchK409.includes("current == entry[\"posInfo\"]") && patchK409.includes("current != entry[\"previousPosInfo\"]") &&
-    auditK409.includes("reviewedIds.size !== 500") && auditK409.includes("does not certify every posInfo field") &&
+    auditK409.includes("reviewedIds.size !== 562") && auditK409.includes("does not certify every posInfo field") &&
     reviewK409.scope.includes("not external linguistic sign-off"),
     "K409c PA-034-03: الرقعة قابلة للإعادة ومقفلة بالقيمة السابقة، والبوابة تبقي الإجمالي الحالي محدوداً بلا اعتماد بقية الحقول");
 }
@@ -15308,7 +15308,7 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const patchK410 = readFileSync("scripts/patches/apply_vocab_posinfo_review_pa034_04.py", "utf8");
   const auditK410 = readFileSync("scripts/vocab_posinfo_audit.ts", "utf8");
   ok(patchK410.includes("current == entry[\"posInfo\"]") && patchK410.includes("current != entry[\"previousPosInfo\"]") &&
-    auditK410.includes("reviewedIds.size !== 500") && auditK410.includes("does not certify every posInfo field") &&
+    auditK410.includes("reviewedIds.size !== 562") && auditK410.includes("does not certify every posInfo field") &&
     reviewK410.scope.includes("not external linguistic sign-off"),
     "K410c PA-034-04: الرقعة قابلة للإعادة ومقفلة بالقيمة السابقة، والبوابة تبقي الإجمالي الحالي محدوداً بلا اعتماد بقية الحقول");
 }
@@ -15347,7 +15347,7 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const patchK411 = readFileSync("scripts/patches/apply_vocab_posinfo_review_pa034_05.py", "utf8");
   const auditK411 = readFileSync("scripts/vocab_posinfo_audit.ts", "utf8");
   ok(patchK411.includes("current == entry[\"posInfo\"]") && patchK411.includes("current != entry[\"previousPosInfo\"]") &&
-    auditK411.includes("reviewedIds.size !== 500") && auditK411.includes("does not certify every posInfo field") &&
+    auditK411.includes("reviewedIds.size !== 562") && auditK411.includes("does not certify every posInfo field") &&
     reviewK411.scope.includes("not external linguistic sign-off"),
     "K411c PA-034-05: الرقعة قابلة للإعادة ومقفلة بالقيمة السابقة، والبوابة تبقي الإجمالي الحالي محدوداً بلا اعتماد بقية الحقول");
 }
@@ -15390,9 +15390,52 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const patchK412 = readFileSync("scripts/patches/apply_vocab_posinfo_review_pa034_06.py", "utf8");
   const auditK412 = readFileSync("scripts/vocab_posinfo_audit.ts", "utf8");
   ok(patchK412.includes("current == entry[\"posInfo\"]") && patchK412.includes("current != entry[\"previousPosInfo\"]") &&
-    auditK412.includes("reviewedIds.size !== 500") && auditK412.includes("does not certify every posInfo field") &&
+    auditK412.includes("reviewedIds.size !== 562") && auditK412.includes("does not certify every posInfo field") &&
     reviewK412.scope.includes("triage only") && reviewK412.scope.includes("not external linguistic sign-off"),
-    "K412c PA-034-06: الرقعة قابلة للإعادة ومقفلة بالقيمة السابقة، والبوابة تعلن 500 قرار داخلي فقط بلا اعتماد بقية الحقول");
+    "K412c PA-034-06: الرقعة قابلة للإعادة ومقفلة بالقيمة السابقة، والبوابة تبقي الإجمالي الحالي محدوداً بلا اعتماد بقية الحقول");
+}
+
+/* ═══ K413 — PA-034-07: الدفعة السابعة للرؤوس المركبة والانعكاسية ═══ */
+{
+  const reviewK413 = JSON.parse(readFileSync("scripts/fixtures/vocab-posinfo-reviewed-07.json", "utf8")) as {
+    schema: string;
+    batch: string;
+    scope: string;
+    entries: { id: string; deck: string; level: string; de: string; previousPosInfo: string; posInfo: string }[];
+  };
+  const vocabK413 = bankRoh("vocab.json") as Record<string, { cards: { id: string; de: string; posInfo?: string }[] }>;
+  const cardsK413 = new Map(Object.entries(vocabK413).flatMap(([deck, value]) =>
+    value.cards.map((card) => [card.id, { deck, ...card }] as const)));
+  const levelsK413 = reviewK413.entries.reduce<Record<string, number>>((counts, entry) => {
+    counts[entry.level] = (counts[entry.level] ?? 0) + 1;
+    return counts;
+  }, {});
+  const decisionsK413 = new Map(reviewK413.entries.map((entry) => [entry.id, entry.posInfo]));
+  const multiwordK413 = reviewK413.entries.filter((entry) => entry.de.includes(" "));
+  const reflexiveK413 = reviewK413.entries.filter((entry) => entry.de.startsWith("sich "));
+  ok(reviewK413.schema === "wegb2-reviewed-vocab-posinfo-batch-v1" && reviewK413.batch === "PA-034-07" &&
+    reviewK413.entries.length === 62 && new Set(reviewK413.entries.map((entry) => entry.id)).size === 62 &&
+    JSON.stringify(levelsK413) === JSON.stringify({ A1: 13, A2: 47, B1: 1, B2: 1 }) &&
+    multiwordK413.length === 60 && reflexiveK413.length === 22,
+    "K413a PA-034-07: سجل القرار السابع محدود بـ62 بطاقة؛ 60 رأساً مركباً و22 انعكاسياً، وتوزيعه A1=13/A2=47/B1=1/B2=1");
+  ok(reviewK413.entries.every((entry) => {
+    const card = cardsK413.get(entry.id);
+    return card?.deck === entry.deck && card.de === entry.de && card.posInfo === entry.posInfo &&
+      entry.previousPosInfo !== entry.posInfo && entry.posInfo.split(",").length === 3;
+  }) && decisionsK413.get("va-modort-006") === "muss nicht, musste nicht, hat nicht gemusst" &&
+    decisionsK413.get("vw-a2all-026") === "muss absagen, musste absagen, hat absagen müssen" &&
+    decisionsK413.get("ve-kueche--005") === "lässt kochen, ließ kochen, hat kochen lassen" &&
+    decisionsK413.get("vc-medien-027") === "bereitet sich auf ... vor, bereitete sich auf ... vor, hat sich auf ... vorbereitet" &&
+    decisionsK413.get("vc-medien-039") === "hängt von ... ab, hing von ... ab, hat von ... abgehangen" &&
+    decisionsK413.get("r322b1-067") === "umarmt, umarmte, hat umarmt" &&
+    decisionsK413.get("j02-gesellschaft-recht-017") === "unterstützt, unterstützte, hat unterstützt",
+    "K413b PA-034-07: القرارات تطابق البنك وتحرس Ersatzinfinitiv والانعكاس ومعنى abhängen وعدم فصل umarmen/unterstützen");
+  const patchK413 = readFileSync("scripts/patches/apply_vocab_posinfo_review_pa034_07.py", "utf8");
+  const auditK413 = readFileSync("scripts/vocab_posinfo_audit.ts", "utf8");
+  ok(patchK413.includes("current == entry[\"posInfo\"]") && patchK413.includes("current != entry[\"previousPosInfo\"]") &&
+    auditK413.includes("reviewedIds.size !== 562") && auditK413.includes("does not certify every posInfo field") &&
+    reviewK413.scope.includes("triage only") && reviewK413.scope.includes("not external linguistic sign-off"),
+    "K413c PA-034-07: الرقعة قابلة للإعادة ومقفلة بالقيمة السابقة، والبوابة تعلن 562 قراراً داخلياً فقط بلا اعتماد بقية الحقول");
 }
 
 /* ═══ K334 — R309: القفل الفعلي الحقيقي — إغلاقُ اليوم عند حدود الوحدة ممنوعٌ لا منصوحٌ به فقط ═══ */

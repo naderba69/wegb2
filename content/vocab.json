@@ -25905,7 +25905,7 @@
      "arbeit"
     ],
     "aussprache": "w = «ڤ»",
-    "posInfo": "bewerbt, bewerbte, hat bewerbt"
+    "posInfo": "bewirbt sich, bewarb sich, hat sich beworben"
    },
    {
     "id": "vw-a2arb-019",
@@ -26383,7 +26383,7 @@
     "tags": [
      "arbeit"
     ],
-    "posInfo": "meldet, meldete, hat gemeldt"
+    "posInfo": "meldet sich, meldete sich, hat sich gemeldet"
    },
    {
     "id": "vw-a2arb-085",
@@ -26872,7 +26872,7 @@
     "tags": [
      "kommunikation"
     ],
-    "posInfo": "bescheidet, bescheidete, hat bescheid"
+    "posInfo": "sagt Bescheid, sagte Bescheid, hat Bescheid gesagt"
    },
    {
     "id": "vw-a2all-023",
@@ -26914,7 +26914,7 @@
      "sozial"
     ],
     "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
-    "posInfo": "sagt ab, sagte ab, hat abgesagt"
+    "posInfo": "muss absagen, musste absagen, hat absagen müssen"
    },
    {
     "id": "vw-a2all-028",
@@ -27322,7 +27322,7 @@
      "wohnen"
     ],
     "aussprache": "sch = «ش» · w = «ڤ»",
-    "posInfo": "beschwert, beschwerte, hat beschwert"
+    "posInfo": "beschwert sich, beschwerte sich, hat sich beschwert"
    },
    {
     "id": "vw-a2all-069",
@@ -27473,7 +27473,7 @@
     "tags": [
      "sozial"
     ],
-    "posInfo": "bedankt, bedankte, hat bedankt"
+    "posInfo": "bedankt sich, bedankte sich, hat sich bedankt"
    },
    {
     "id": "vw-a2all-081",
@@ -30769,7 +30769,7 @@
     "tags": [
      "freizeit"
     ],
-    "posInfo": "spaziert, spazierte, ist gespaziert"
+    "posInfo": "geht spazieren, ging spazieren, ist spazieren gegangen"
    },
    {
     "id": "vy-natur-037",
@@ -30979,7 +30979,7 @@
     "tags": [
      "gefuehl"
     ],
-    "posInfo": "angstet, angstete, hat geangstt"
+    "posInfo": "hat Angst, hatte Angst, hat Angst gehabt"
    },
    {
     "id": "vy-natur-050",
@@ -31313,7 +31313,7 @@
      "meinung"
     ],
     "aussprache": "ei = «آي» لا «إي» · sch = «ش»",
-    "posInfo": "entscheidet, entscheidete, hat entscheidt"
+    "posInfo": "entscheidet sich, entschied sich, hat sich entschieden"
    },
    {
     "id": "vy-leben-010",
@@ -31367,7 +31367,7 @@
     "tags": [
      "alltag"
     ],
-    "posInfo": "gewöhnt, gewöhnte, hat gewöhnt"
+    "posInfo": "gewöhnt sich an, gewöhnte sich an, hat sich an ... gewöhnt"
    },
    {
     "id": "vy-leben-016",
@@ -31381,7 +31381,7 @@
      "alltag"
     ],
     "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
-    "posInfo": "interessiert, interessierte, hat geinteressiert"
+    "posInfo": "interessiert sich für, interessierte sich für, hat sich für ... interessiert"
    },
    {
     "id": "vy-leben-017",
@@ -31394,7 +31394,7 @@
     "tags": [
      "alltag"
     ],
-    "posInfo": "achtet, achtete, hat geachtt"
+    "posInfo": "achtet auf, achtete auf, hat auf ... geachtet"
    },
    {
     "id": "vy-leben-018",
@@ -32237,7 +32237,7 @@
      "sprache"
     ],
     "img": "/cards/bitte.webp",
-    "posInfo": "holt wieder, holte wieder, hat wiederholt"
+    "posInfo": "wiederholt, wiederholte, hat wiederholt"
    },
    {
     "id": "vz-welt-b-017",
@@ -32252,7 +32252,7 @@
     ],
     "img": "/cards/sprechen.webp",
     "aussprache": "sp/st في البداية = «شب/شت» · ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
-    "posInfo": "langsamert, langsamerte, hat gelangsamert"
+    "posInfo": "spricht langsamer, sprach langsamer, hat langsamer gesprochen"
    },
    {
     "id": "vz-welt-b-018",
@@ -33522,7 +33522,7 @@
      "schreiben"
     ],
     "aussprache": "ie = «إي» ممدودة",
-    "posInfo": "höflicht, höflichte, hat gehöflicht"
+    "posInfo": "formuliert höflich, formulierte höflich, hat höflich formuliert"
    },
    {
     "id": "vz-schrei-009",
@@ -33725,7 +33725,7 @@
      "alltag"
     ],
     "aussprache": "ie = «إي» ممدودة",
-    "posInfo": "informiert, informierte, hat geinformiert"
+    "posInfo": "informiert sich, informierte sich, hat sich informiert"
    },
    {
     "id": "vz-schrei-026",
@@ -33800,7 +33800,7 @@
     "tags": [
      "einkauf"
     ],
-    "posInfo": "bestellt, bestellte, hat bestellt"
+    "posInfo": "bestellt und holt ab, bestellte und holte ab, hat bestellt und abgeholt"
    },
    {
     "id": "vz-schrei-036",
@@ -33956,7 +33956,7 @@
     "tags": [
      "schreiben"
     ],
-    "posInfo": "korrekturt, korrekturte, hat gekorrekturt"
+    "posInfo": "liest Korrektur, las Korrektur, hat Korrektur gelesen"
    },
    {
     "id": "r312a2-054",
@@ -34191,7 +34191,7 @@
      "modal"
     ],
     "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
-    "posInfo": "nichtet, nichtete, hat genichtt"
+    "posInfo": "muss nicht, musste nicht, hat nicht gemusst"
    },
    {
     "id": "va-modort-007",
@@ -34205,7 +34205,7 @@
      "modal"
     ],
     "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
-    "posInfo": "nichtet, nichtete, hat genichtt"
+    "posInfo": "darf nicht, durfte nicht, hat nicht gedurft"
    },
    {
     "id": "va-modort-008",
@@ -34931,7 +34931,7 @@
     "tags": [
      "arzt"
     ],
-    "posInfo": "ruht aus, ruhte aus, hat ausgeruht"
+    "posInfo": "ruht sich aus, ruhte sich aus, hat sich ausgeruht"
    },
    {
     "id": "va-modort-068",
@@ -35072,7 +35072,7 @@
     ],
     "img": "/cards/bezahlen.webp",
     "aussprache": "z = «تس»",
-    "posInfo": "bart, barte, hat gebart"
+    "posInfo": "bezahlt bar, bezahlte bar, hat bar bezahlt"
    },
    {
     "id": "va-modort-079",
@@ -35086,7 +35086,7 @@
      "bank"
     ],
     "aussprache": "z = «تس»",
-    "posInfo": "mitet, mitete, hat gemitt"
+    "posInfo": "zahlt mit Karte, zahlte mit Karte, hat mit Karte gezahlt"
    },
    {
     "id": "va-modort-081",
@@ -35778,7 +35778,7 @@
     "tags": [
      "schule"
     ],
-    "posInfo": "lautet, lautete, hat gelautt"
+    "posInfo": "liest laut, las laut, hat laut gelesen"
    },
    {
     "id": "vb-abschl-010",
@@ -35792,7 +35792,7 @@
      "schule"
     ],
     "img": "/cards/lernen.webp",
-    "posInfo": "auswendigt, auswendigte, hat geauswendigt"
+    "posInfo": "lernt auswendig, lernte auswendig, hat auswendig gelernt"
    },
    {
     "id": "vb-abschl-011",
@@ -36033,7 +36033,7 @@
      "verkehr"
     ],
     "aussprache": "ei = «آي» لا «إي»",
-    "posInfo": "pünktlicht, pünktlichte, hat gepünktlicht"
+    "posInfo": "ist pünktlich, war pünktlich, ist pünktlich gewesen"
    },
    {
     "id": "vb-abschl-029",
@@ -36375,7 +36375,7 @@
     ],
     "img": "/cards/wohnen.webp",
     "aussprache": "w = «ڤ»",
-    "posInfo": "sammt zu, sammte zu, hat zugesammt"
+    "posInfo": "wohnt zusammen, wohnte zusammen, hat zusammengewohnt"
    },
    {
     "id": "vb-abschl-052",
@@ -36640,7 +36640,7 @@
     ],
     "img": "/cards/verstehen.webp",
     "aussprache": "v = «ف»",
-    "posInfo": "versteht, verstehte, hat versteht"
+    "posInfo": "versteht sich, verstand sich, hat sich verstanden"
    },
    {
     "id": "vc-mensch-020",
@@ -36747,7 +36747,7 @@
      "person"
     ],
     "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
-    "posInfo": "entschuldigt, entschuldigte, hat entschuldigt"
+    "posInfo": "entschuldigt sich für, entschuldigte sich für, hat sich für ... entschuldigt"
    },
    {
     "id": "vc-mensc-800",
@@ -36843,7 +36843,7 @@
      "person"
     ],
     "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
-    "posInfo": "sorgt, sorgte, hat gesorgt"
+    "posInfo": "macht sich Sorgen, machte sich Sorgen, hat sich Sorgen gemacht"
    },
    {
     "id": "vc-mensc-807",
@@ -37607,7 +37607,7 @@
      "reise"
     ],
     "aussprache": "v = «ف»",
-    "posInfo": "verlauft, verlaufte, hat verlauft"
+    "posInfo": "verläuft sich, verlief sich, hat sich verlaufen"
    },
    {
     "id": "vc-reise--016",
@@ -37710,7 +37710,7 @@
     "tags": [
      "fest"
     ],
-    "posInfo": "gratuliert, gratulierte, hat gegratuliert"
+    "posInfo": "gratuliert zum Fest, gratulierte zum Fest, hat zum Fest gratuliert"
    },
    {
     "id": "vc-reise--024",
@@ -37724,7 +37724,7 @@
      "fest"
     ],
     "aussprache": "z = «تس»",
-    "posInfo": "ladet ein, ladete ein, hat eingeladt"
+    "posInfo": "lädt zu ... ein, lud zu ... ein, hat zu ... eingeladen"
    },
    {
     "id": "vc-reise--025",
@@ -37898,7 +37898,7 @@
      "fest"
     ],
     "aussprache": "w = «ڤ»",
-    "posInfo": "sattet, sattete, hat gesattt"
+    "posInfo": "wird satt, wurde satt, ist satt geworden"
    },
    {
     "id": "vc-reise-807",
@@ -38421,7 +38421,7 @@
     "tags": [
      "schule"
     ],
-    "posInfo": "konzentriert, konzentrierte, hat gekonzentriert"
+    "posInfo": "konzentriert sich auf, konzentrierte sich auf, hat sich auf ... konzentriert"
    },
    {
     "id": "vc-medien-027",
@@ -38434,7 +38434,7 @@
     "tags": [
      "schule"
     ],
-    "posInfo": "bereitet vor, bereitete vor, hat vorgebereitt"
+    "posInfo": "bereitet sich auf ... vor, bereitete sich auf ... vor, hat sich auf ... vorbereitet"
    },
    {
     "id": "vc-medien-028",
@@ -38447,7 +38447,7 @@
     "tags": [
      "praep"
     ],
-    "posInfo": "wartet, wartete, hat gewartt"
+    "posInfo": "wartet auf, wartete auf, hat auf ... gewartet"
    },
    {
     "id": "vc-medien-030",
@@ -38461,7 +38461,7 @@
      "praep"
     ],
     "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين · -er في الآخر = «أَ» خفيفة",
-    "posInfo": "freut, freute, hat gefreut"
+    "posInfo": "freut sich über, freute sich über, hat sich über ... gefreut"
    },
    {
     "id": "vc-medien-031",
@@ -38488,7 +38488,7 @@
      "praep"
     ],
     "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين · -er في الآخر = «أَ» خفيفة",
-    "posInfo": "sprecht, sprechte, hat gesprecht"
+    "posInfo": "spricht über, sprach über, hat über ... gesprochen"
    },
    {
     "id": "vc-medien-034",
@@ -38501,7 +38501,7 @@
     "tags": [
      "praep"
     ],
-    "posInfo": "bittet, bittete, hat gebittt"
+    "posInfo": "bittet um, bat um, hat um ... gebeten"
    },
    {
     "id": "vc-medien-035",
@@ -38529,7 +38529,7 @@
      "praep"
     ],
     "aussprache": "v = «ف»",
-    "posInfo": "angstet, angstete, hat geangstt"
+    "posInfo": "hat Angst vor, hatte Angst vor, hat Angst vor ... gehabt"
    },
    {
     "id": "vc-medien-037",
@@ -38542,7 +38542,7 @@
     "tags": [
      "praep"
     ],
-    "posInfo": "friedet zu, friedete zu, hat zugefriedt"
+    "posInfo": "ist mit ... zufrieden, war mit ... zufrieden, ist mit ... zufrieden gewesen"
    },
    {
     "id": "vc-medien-038",
@@ -38555,7 +38555,7 @@
     "tags": [
      "praep"
     ],
-    "posInfo": "erinnet, erinnete, hat erinnern"
+    "posInfo": "erinnert sich an, erinnerte sich an, hat sich an ... erinnert"
    },
    {
     "id": "vc-medien-039",
@@ -38569,7 +38569,7 @@
      "praep"
     ],
     "aussprache": "v = «ف»",
-    "posInfo": "hängt ab, hängte ab, hat abgehängt"
+    "posInfo": "hängt von ... ab, hing von ... ab, hat von ... abgehangen"
    },
    {
     "id": "vc-medie-800",
@@ -39266,7 +39266,7 @@
     "tags": [
      "wohnen"
     ],
-    "posInfo": "zieht aus, ziehte aus, ist ausgezieht"
+    "posInfo": "zieht aus ... aus, zog aus ... aus, ist aus ... ausgezogen"
    },
    {
     "id": "vd-wohnv-900",
@@ -39629,7 +39629,7 @@
      "geld"
     ],
     "aussprache": "ei = «آي» لا «إي»",
-    "posInfo": "etwast, etwaste, hat geetwast"
+    "posInfo": "leistet sich etwas, leistete sich etwas, hat sich etwas geleistet"
    },
    {
     "id": "vd-geld-k-023",
@@ -39718,7 +39718,7 @@
      "sport"
     ],
     "aussprache": "v = «ف» · z = «تس»",
-    "posInfo": "verletzt, verletzte, hat verletzt"
+    "posInfo": "verletzt sich, verletzte sich, hat sich verletzt"
    },
    {
     "id": "vd-gesund-012",
@@ -39935,7 +39935,7 @@
      "gesundheit"
     ],
     "aussprache": "ö = بينَ الضمّةِ والكسرة",
-    "posInfo": "raucht, rauchte, hat geraucht"
+    "posInfo": "hört mit dem Rauchen auf, hörte mit dem Rauchen auf, hat mit dem Rauchen aufgehört"
    },
    {
     "id": "vpfl-01",
@@ -40196,7 +40196,7 @@
     "tags": [
      "kueche"
     ],
-    "posInfo": "kocht, kochte, hat gekocht"
+    "posInfo": "lässt kochen, ließ kochen, hat kochen lassen"
    },
    {
     "id": "ve-kueche--006",
@@ -40567,7 +40567,7 @@
     "tags": [
      "kueche"
     ],
-    "posInfo": "tropft ab, tropfte ab, hat abgetropft"
+    "posInfo": "lässt abtropfen, ließ abtropfen, hat abtropfen lassen"
    },
    {
     "id": "ve-kueche-807",
@@ -41077,7 +41077,7 @@
      "erzaehlen"
     ],
     "aussprache": "v = «ف»",
-    "posInfo": "verändet, verändete, hat verändern"
+    "posInfo": "verändert sich, veränderte sich, hat sich verändert"
    },
    {
     "id": "ve-erzaehl-022",
@@ -41198,7 +41198,7 @@
      "erzaehlen"
     ],
     "aussprache": "w = «ڤ» · ö = بينَ الضمّةِ والكسرة",
-    "posInfo": "gewöhnt, gewöhnte, hat gewöhnt"
+    "posInfo": "gewöhnt sich, gewöhnte sich, hat sich gewöhnt"
    },
    {
     "id": "ve-erzaeh-806",
@@ -41242,7 +41242,7 @@
      "erzaehlen"
     ],
     "aussprache": "z = «تس»",
-    "posInfo": "stolzt, stolzte, hat gestolzt"
+    "posInfo": "erzählt stolz, erzählte stolz, hat stolz erzählt"
    },
    {
     "id": "ve-erzaeh-809",
@@ -41831,7 +41831,7 @@
      "umwelt"
     ],
     "aussprache": "ei = «آي» لا «إي» · z = «تس»",
-    "posInfo": "sparsamt, sparsamte, hat gesparsamt"
+    "posInfo": "heizt sparsam, heizte sparsam, hat sparsam geheizt"
    },
    {
     "id": "ve-umwelt--007",
@@ -42005,7 +42005,7 @@
      "umwelt"
     ],
     "aussprache": "z = «تس»",
-    "posInfo": "tragt bei, tragte bei, hat beitragt"
+    "posInfo": "trägt zu ... bei, trug zu ... bei, hat zu ... beigetragen"
    },
    {
     "id": "r312a2-154",
@@ -42960,7 +42960,7 @@
      "aussehen"
     ],
     "aussprache": "z = «تس»",
-    "posInfo": "bequemt, bequemte, hat bequem"
+    "posInfo": "sitzt bequem, saß bequem, hat bequem gesessen"
    },
    {
     "id": "vf-kultur-013",
@@ -43088,7 +43088,7 @@
      "digital"
     ],
     "aussprache": "ei = «آي» لا «إي»",
-    "posInfo": "loggt ein, loggte ein, hat eingeloggt"
+    "posInfo": "loggt sich ein, loggte sich ein, hat sich eingeloggt"
    },
    {
     "id": "vf-kultur-033",
@@ -43366,7 +43366,7 @@
      "bildung"
     ],
     "aussprache": "sp/st في البداية = «شب/شت» · ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
-    "posInfo": "flüssigt, flüssigte, hat geflüssigt"
+    "posInfo": "spricht flüssig, sprach flüssig, hat flüssig gesprochen"
    },
    {
     "id": "vf-kultd-314",
@@ -43632,7 +43632,7 @@
      "behoerde"
     ],
     "aussprache": "ei = «آي» لا «إي»",
-    "posInfo": "widersprucht, widerspruchte, hat gewidersprucht"
+    "posInfo": "legt Widerspruch ein, legte Widerspruch ein, hat Widerspruch eingelegt"
    },
    {
     "id": "vf-kultd-332",
@@ -43744,7 +43744,7 @@
      "behoerde"
     ],
     "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
-    "posInfo": "zuständigt, zuständigte, hat gezuständigt"
+    "posInfo": "ist für ... zuständig, war für ... zuständig, ist für ... zuständig gewesen"
    },
    {
     "id": "vf-kultd-503",
@@ -60757,7 +60757,7 @@
     ],
     "exampleDe": "Der Staat unterstützt Familien mit wenig Geld.",
     "exampleAr": "تدعم الدولة العائلات قليلة المال.",
-    "posInfo": "stützt unter, stützte unter, hat unterstützt"
+    "posInfo": "unterstützt, unterstützte, hat unterstützt"
    },
    {
     "id": "j02-gesellschaft-recht-018",
@@ -86743,7 +86743,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "armt um, armte um, hat umgearmt"
+    "posInfo": "umarmt, umarmte, hat umarmt"
    },
    {
     "id": "r322b1-068",
