@@ -1,0 +1,400 @@
+{
+  "schema": "wegb2-reviewed-vocab-posinfo-batch-v1",
+  "batch": "PA-034-09",
+  "reviewedAt": "2026-11-04",
+  "scope": "49 additional high-confidence B2 multiword-head corrections after item-by-item internal review of all 68 remaining unguarded B2 multiword three-form heads; 19 other heads with already-correct carrier forms were deliberately unchanged, grouping was triage only, and this is not external linguistic sign-off.",
+  "entries": [
+    {
+      "id": "v204",
+      "deck": "g01-beziehungen",
+      "level": "B2",
+      "de": "sich kümmern um",
+      "previousPosInfo": "kümmert sich um, kümmerte sich um, hat sich gekümmert um",
+      "posInfo": "kümmert sich um, kümmerte sich um, hat sich um ... gekümmert"
+    },
+    {
+      "id": "v208",
+      "deck": "g01-beziehungen",
+      "level": "B2",
+      "de": "sich unterhalten über",
+      "previousPosInfo": "unterhält sich über, unterhielt sich über, hat sich unterhalten über",
+      "posInfo": "unterhält sich über, unterhielt sich über, hat sich über ... unterhalten"
+    },
+    {
+      "id": "v214",
+      "deck": "g01-beziehungen",
+      "level": "B2",
+      "de": "sich freuen auf",
+      "previousPosInfo": "freut sich auf, freute sich auf, hat sich gefreut auf",
+      "posInfo": "freut sich auf, freute sich auf, hat sich auf ... gefreut"
+    },
+    {
+      "id": "v221",
+      "deck": "g01-beziehungen",
+      "level": "B2",
+      "de": "sich einigen auf",
+      "previousPosInfo": "einigt sich auf, einigte sich auf, hat sich geeinigt auf",
+      "posInfo": "einigt sich auf, einigte sich auf, hat sich auf ... geeinigt"
+    },
+    {
+      "id": "v365",
+      "deck": "g04-wohnen",
+      "level": "B2",
+      "de": "sich beschweren über",
+      "previousPosInfo": "beschwert sich über, beschwerte sich über, hat sich beschwert über",
+      "posInfo": "beschwert sich über, beschwerte sich über, hat sich über ... beschwert"
+    },
+    {
+      "id": "v494",
+      "deck": "g07-schoenheit",
+      "level": "B2",
+      "de": "wirken auf",
+      "previousPosInfo": "wirkt auf, wirkte auf, hat gewirkt auf",
+      "posInfo": "wirkt auf, wirkte auf, hat auf ... gewirkt"
+    },
+    {
+      "id": "v578",
+      "deck": "h01-arbeit-beruf",
+      "level": "B2",
+      "de": "sich bewerben um",
+      "previousPosInfo": "bewirbt sich um, bewarb sich um, hat sich beworben um",
+      "posInfo": "bewirbt sich um, bewarb sich um, hat sich um ... beworben"
+    },
+    {
+      "id": "v885",
+      "deck": "h06-studium-lernen",
+      "level": "B2",
+      "de": "sich überprüfen",
+      "previousPosInfo": "prüft über, prüfte über, hat überprüft",
+      "posInfo": "überprüft sich, überprüfte sich, hat sich überprüft"
+    },
+    {
+      "id": "v891",
+      "deck": "h06-studium-lernen",
+      "level": "B2",
+      "de": "sich vertippen",
+      "previousPosInfo": "vertippt, vertippte, hat vertippt",
+      "posInfo": "vertippt sich, vertippte sich, hat sich vertippt"
+    },
+    {
+      "id": "v908",
+      "deck": "h07-gefuehle-psyche",
+      "level": "B2",
+      "de": "sich ärgern über",
+      "previousPosInfo": "ärget, ärgete, hat geärget",
+      "posInfo": "ärgert sich über, ärgerte sich über, hat sich über ... geärgert"
+    },
+    {
+      "id": "v929",
+      "deck": "h07-gefuehle-psyche",
+      "level": "B2",
+      "de": "sich beruhigen",
+      "previousPosInfo": "beruhigt, beruhigte, hat beruhigt",
+      "posInfo": "beruhigt sich, beruhigte sich, hat sich beruhigt"
+    },
+    {
+      "id": "v948",
+      "deck": "h07-gefuehle-psyche",
+      "level": "B2",
+      "de": "sich schämen",
+      "previousPosInfo": "schämt, schämte, hat geschämt",
+      "posInfo": "schämt sich, schämte sich, hat sich geschämt"
+    },
+    {
+      "id": "v949",
+      "deck": "h07-gefuehle-psyche",
+      "level": "B2",
+      "de": "jdn bloßstellen",
+      "previousPosInfo": "jdet, jdete, hat gejdt",
+      "posInfo": "stellt jdn bloß, stellte jdn bloß, hat jdn bloßgestellt"
+    },
+    {
+      "id": "v956",
+      "deck": "h07-gefuehle-psyche",
+      "level": "B2",
+      "de": "sich sehnen nach",
+      "previousPosInfo": "sehnt, sehnte, hat gesehnt",
+      "posInfo": "sehnt sich nach, sehnte sich nach, hat sich nach ... gesehnt"
+    },
+    {
+      "id": "v969",
+      "deck": "h07-gefuehle-psyche",
+      "level": "B2",
+      "de": "jdm etwas vorwerfen",
+      "previousPosInfo": "jdmt, jdmte, hat gejdmt",
+      "posInfo": "wirft jdm etwas vor, warf jdm etwas vor, hat jdm etwas vorgeworfen"
+    },
+    {
+      "id": "v974",
+      "deck": "h07-gefuehle-psyche",
+      "level": "B2",
+      "de": "sich sorgen um",
+      "previousPosInfo": "sorgt, sorgte, hat gesorgt",
+      "posInfo": "sorgt sich um, sorgte sich um, hat sich um ... gesorgt"
+    },
+    {
+      "id": "v983",
+      "deck": "h08-sport-freizeit",
+      "level": "B2",
+      "de": "sich dehnen",
+      "previousPosInfo": "dehnt, dehnte, hat gedehnt",
+      "posInfo": "dehnt sich, dehnte sich, hat sich gedehnt"
+    },
+    {
+      "id": "v989",
+      "deck": "h08-sport-freizeit",
+      "level": "B2",
+      "de": "sich erholen",
+      "previousPosInfo": "erholt, erholte, ist erholt",
+      "posInfo": "erholt sich, erholte sich, hat sich erholt"
+    },
+    {
+      "id": "v991",
+      "deck": "h08-sport-freizeit",
+      "level": "B2",
+      "de": "an seine Grenzen stoßen",
+      "previousPosInfo": "at, ate, hat geat",
+      "posInfo": "stößt an seine Grenzen, stieß an seine Grenzen, ist an seine Grenzen gestoßen"
+    },
+    {
+      "id": "v1017",
+      "deck": "h08-sport-freizeit",
+      "level": "B2",
+      "de": "sich engagieren",
+      "previousPosInfo": "engagiert, engagierte, hat geengagiert",
+      "posInfo": "engagiert sich, engagierte sich, hat sich engagiert"
+    },
+    {
+      "id": "v1131",
+      "deck": "i02-bildung-politik",
+      "level": "B2",
+      "de": "sitzen bleiben",
+      "previousPosInfo": "sitzt, sitzte, hat gesitzt",
+      "posInfo": "bleibt sitzen, blieb sitzen, ist sitzen geblieben"
+    },
+    {
+      "id": "v1351",
+      "deck": "i07-migration-integration",
+      "level": "B2",
+      "de": "sich einleben",
+      "previousPosInfo": "lebt ein, lebte ein, hat eingelebt",
+      "posInfo": "lebt sich ein, lebte sich ein, hat sich eingelebt"
+    },
+    {
+      "id": "v1352",
+      "deck": "i07-migration-integration",
+      "level": "B2",
+      "de": "sich einfügen",
+      "previousPosInfo": "fügt ein, fügte ein, hat eingefügt",
+      "posInfo": "fügt sich ein, fügte sich ein, hat sich eingefügt"
+    },
+    {
+      "id": "j01-arbeit-vertieft-033",
+      "deck": "j01-arbeit-vertieft",
+      "level": "B2",
+      "de": "sich einarbeiten",
+      "previousPosInfo": "arbeitet ein, arbeitete ein, hat eingearbeitt",
+      "posInfo": "arbeitet sich ein, arbeitete sich ein, hat sich eingearbeitet"
+    },
+    {
+      "id": "j02-gesellschaft-recht-015",
+      "deck": "j02-gesellschaft-recht",
+      "level": "B2",
+      "de": "sich beteiligen",
+      "previousPosInfo": "beteiligt, beteiligte, hat beteiligt",
+      "posInfo": "beteiligt sich, beteiligte sich, hat sich beteiligt"
+    },
+    {
+      "id": "j03-umwelt-energie-052",
+      "deck": "j03-umwelt-energie",
+      "level": "B2",
+      "de": "umsteigen auf",
+      "previousPosInfo": "steigt um, steigte um, ist umgesteigt",
+      "posInfo": "steigt auf ... um, stieg auf ... um, ist auf ... umgestiegen"
+    },
+    {
+      "id": "j04-gesundheit-pflege-050",
+      "deck": "j04-gesundheit-pflege",
+      "level": "B2",
+      "de": "sich impfen lassen",
+      "previousPosInfo": "impft, impfte, hat geimpft",
+      "posInfo": "lässt sich impfen, ließ sich impfen, hat sich impfen lassen"
+    },
+    {
+      "id": "j04-gesundheit-pflege-067",
+      "deck": "j04-gesundheit-pflege",
+      "level": "B2",
+      "de": "sich anstecken",
+      "previousPosInfo": "steckt an, steckte an, hat angesteckt",
+      "posInfo": "steckt sich an, steckte sich an, hat sich angesteckt"
+    },
+    {
+      "id": "j04-gesundheit-pflege-069",
+      "deck": "j04-gesundheit-pflege",
+      "level": "B2",
+      "de": "sich ausbreiten",
+      "previousPosInfo": "breitet aus, breitete aus, hat ausgebreitt",
+      "posInfo": "breitet sich aus, breitete sich aus, hat sich ausgebreitet"
+    },
+    {
+      "id": "j07-geld-wirtschaft-037",
+      "deck": "j07-geld-wirtschaft",
+      "level": "B2",
+      "de": "sich leisten",
+      "previousPosInfo": "leistet, leistete, hat geleistt",
+      "posInfo": "leistet sich, leistete sich, hat sich geleistet"
+    },
+    {
+      "id": "j07-geld-wirtschaft-042",
+      "deck": "j07-geld-wirtschaft",
+      "level": "B2",
+      "de": "sich lohnen",
+      "previousPosInfo": "lohnt, lohnte, hat gelohnt",
+      "posInfo": "lohnt sich, lohnte sich, hat sich gelohnt"
+    },
+    {
+      "id": "j08-gefuehle-beziehungen-022",
+      "deck": "j08-gefuehle-beziehungen",
+      "level": "B2",
+      "de": "sich sehnen",
+      "previousPosInfo": "sehnt, sehnte, hat gesehnt",
+      "posInfo": "sehnt sich, sehnte sich, hat sich gesehnt"
+    },
+    {
+      "id": "j08-gefuehle-beziehungen-026",
+      "deck": "j08-gefuehle-beziehungen",
+      "level": "B2",
+      "de": "sich erleichtern",
+      "previousPosInfo": "erleichtet, erleichtete, hat erleichtern",
+      "posInfo": "erleichtert sich, erleichterte sich, hat sich erleichtert"
+    },
+    {
+      "id": "j08-gefuehle-beziehungen-027",
+      "deck": "j08-gefuehle-beziehungen",
+      "level": "B2",
+      "de": "sich aufregen",
+      "previousPosInfo": "regt auf, regte auf, hat aufgeregt",
+      "posInfo": "regt sich auf, regte sich auf, hat sich aufgeregt"
+    },
+    {
+      "id": "j08-gefuehle-beziehungen-028",
+      "deck": "j08-gefuehle-beziehungen",
+      "level": "B2",
+      "de": "sich anspannen",
+      "previousPosInfo": "spannt an, spannte an, hat angespannt",
+      "posInfo": "spannt sich an, spannte sich an, hat sich angespannt"
+    },
+    {
+      "id": "j08-gefuehle-beziehungen-029",
+      "deck": "j08-gefuehle-beziehungen",
+      "level": "B2",
+      "de": "stolz sein auf",
+      "previousPosInfo": "stolzt, stolzte, hat gestolzt",
+      "posInfo": "ist stolz auf, war stolz auf, ist stolz auf ... gewesen"
+    },
+    {
+      "id": "j08-gefuehle-beziehungen-034",
+      "deck": "j08-gefuehle-beziehungen",
+      "level": "B2",
+      "de": "sich scheiden lassen",
+      "previousPosInfo": "scheidet, scheidete, hat gescheidt",
+      "posInfo": "lässt sich scheiden, ließ sich scheiden, hat sich scheiden lassen"
+    },
+    {
+      "id": "j08-gefuehle-beziehungen-035",
+      "deck": "j08-gefuehle-beziehungen",
+      "level": "B2",
+      "de": "sich verlieben",
+      "previousPosInfo": "verliebt, verliebte, hat verliebt",
+      "posInfo": "verliebt sich, verliebte sich, hat sich verliebt"
+    },
+    {
+      "id": "j08-gefuehle-beziehungen-037",
+      "deck": "j08-gefuehle-beziehungen",
+      "level": "B2",
+      "de": "sich verstehen mit",
+      "previousPosInfo": "versteht, verstehte, hat versteht",
+      "posInfo": "versteht sich mit, verstand sich mit, hat sich mit ... verstanden"
+    },
+    {
+      "id": "j09-stadt-wohnen-verkehr-015",
+      "deck": "j09-stadt-wohnen-verkehr",
+      "level": "B2",
+      "de": "sich ummelden",
+      "previousPosInfo": "meldet um, meldete um, hat umgemeldt",
+      "posInfo": "meldet sich um, meldete sich um, hat sich umgemeldet"
+    },
+    {
+      "id": "j09-stadt-wohnen-verkehr-024",
+      "deck": "j09-stadt-wohnen-verkehr",
+      "level": "B2",
+      "de": "geradeaus fahren",
+      "previousPosInfo": "geradeaust, geradeauste, ist geradeaus",
+      "posInfo": "fährt geradeaus, fuhr geradeaus, ist geradeaus gefahren"
+    },
+    {
+      "id": "j10-meinung-diskussion-031",
+      "deck": "j10-meinung-diskussion",
+      "level": "B2",
+      "de": "ansehen als",
+      "previousPosInfo": "seht an, sehte an, hat angeseht",
+      "posInfo": "sieht ... als ... an, sah ... als ... an, hat ... als ... angesehen"
+    },
+    {
+      "id": "j10-meinung-diskussion-032",
+      "deck": "j10-meinung-diskussion",
+      "level": "B2",
+      "de": "betrachten als",
+      "previousPosInfo": "betrachtet, betrachtete, hat betrachtt",
+      "posInfo": "betrachtet ... als ..., betrachtete ... als ..., hat ... als ... betrachtet"
+    },
+    {
+      "id": "j10-meinung-diskussion-033",
+      "deck": "j10-meinung-diskussion",
+      "level": "B2",
+      "de": "halten für",
+      "previousPosInfo": "haltet, haltete, hat gehaltt",
+      "posInfo": "hält ... für ..., hielt ... für ..., hat ... für ... gehalten"
+    },
+    {
+      "id": "j10-meinung-diskussion-036",
+      "deck": "j10-meinung-diskussion",
+      "level": "B2",
+      "de": "zweifeln an",
+      "previousPosInfo": "zweifet, zweifete, hat gezweifet",
+      "posInfo": "zweifelt an, zweifelte an, hat an ... gezweifelt"
+    },
+    {
+      "id": "j10-meinung-diskussion-050",
+      "deck": "j10-meinung-diskussion",
+      "level": "B2",
+      "de": "sich verschlechtern",
+      "previousPosInfo": "verschlechtet, verschlechtete, hat verschlechtern",
+      "posInfo": "verschlechtert sich, verschlechterte sich, hat sich verschlechtert"
+    },
+    {
+      "id": "j13-koerper-zeit-047",
+      "deck": "j13-koerper-zeit",
+      "level": "B2",
+      "de": "sich hinlegen",
+      "previousPosInfo": "legt hin, legte hin, hat hingelegt",
+      "posInfo": "legt sich hin, legte sich hin, hat sich hingelegt"
+    },
+    {
+      "id": "j13-koerper-zeit-048",
+      "deck": "j13-koerper-zeit",
+      "level": "B2",
+      "de": "sich bücken",
+      "previousPosInfo": "bückt, bückte, hat gebückt",
+      "posInfo": "bückt sich, bückte sich, hat sich gebückt"
+    },
+    {
+      "id": "j14-kultur-freizeit-042",
+      "deck": "j14-kultur-freizeit",
+      "level": "B2",
+      "de": "sich qualifizieren",
+      "previousPosInfo": "qualifiziert, qualifizierte, hat gequalifiziert",
+      "posInfo": "qualifiziert sich, qualifizierte sich, hat sich qualifiziert"
+    }
+  ]
+}

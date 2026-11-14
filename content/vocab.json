@@ -4060,7 +4060,7 @@
     ],
     "exampleDe": "Hedi kümmert sich um seinen Vater nach dem Schlaganfall.",
     "exampleAr": "هادي يرعى والده بعد الجلطة.",
-    "posInfo": "kümmert sich um, kümmerte sich um, hat sich gekümmert um"
+    "posInfo": "kümmert sich um, kümmerte sich um, hat sich um ... gekümmert"
    },
    {
     "id": "v205",
@@ -4121,7 +4121,7 @@
     "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين · -er في الآخر = «أَ» خفيفة",
     "exampleDe": "Wir haben uns lange über den Film unterhalten.",
     "exampleAr": "تحدثنا طويلاً عن الفيلم.",
-    "posInfo": "unterhält sich über, unterhielt sich über, hat sich unterhalten über"
+    "posInfo": "unterhält sich über, unterhielt sich über, hat sich über ... unterhalten"
    },
    {
     "id": "v209",
@@ -4209,7 +4209,7 @@
     ],
     "exampleDe": "Ich freue mich schon auf den Urlaub an der Ostsee.",
     "exampleAr": "أترقّب بفرح العطلة على بحر البلطيق.",
-    "posInfo": "freut sich auf, freute sich auf, hat sich gefreut auf"
+    "posInfo": "freut sich auf, freute sich auf, hat sich auf ... gefreut"
    },
    {
     "id": "v215",
@@ -4312,7 +4312,7 @@
     ],
     "exampleDe": "Die beiden Seiten haben sich auf eine Frist von zwei Wochen geeinigt.",
     "exampleAr": "اتّفق الطرفان على مهلة أسبوعين.",
-    "posInfo": "einigt sich auf, einigte sich auf, hat sich geeinigt auf"
+    "posInfo": "einigt sich auf, einigte sich auf, hat sich auf ... geeinigt"
    }
   ]
  },
@@ -7208,7 +7208,7 @@
     "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين · -er في الآخر = «أَ» خفيفة",
     "exampleDe": "Ich möchte mich über den Lärm der Baustelle beschweren.",
     "exampleAr": "أريد أن أشتكي من ضجيج الورشة.",
-    "posInfo": "beschwert sich über, beschwerte sich über, hat sich beschwert über"
+    "posInfo": "beschwert sich über, beschwerte sich über, hat sich über ... beschwert"
    },
    {
     "id": "v366",
@@ -9132,7 +9132,7 @@
     ],
     "exampleDe": "Ruhige Stimmen wirken auf Kunden überzeugender als laute.",
     "exampleAr": "الأصوات الهادئة تؤثّر في الزبائن أكثر إقناعاً من الصاخبة.",
-    "posInfo": "wirkt auf, wirkte auf, hat gewirkt auf"
+    "posInfo": "wirkt auf, wirkte auf, hat auf ... gewirkt"
    },
    {
     "id": "v495",
@@ -10432,7 +10432,7 @@
     ],
     "exampleDe": "Ich bewerbe mich um die Stelle als Techniker.",
     "exampleAr": "أتقدّم لوظيفة فنّي.",
-    "posInfo": "bewirbt sich um, bewarb sich um, hat sich beworben um"
+    "posInfo": "bewirbt sich um, bewarb sich um, hat sich um ... beworben"
    },
    {
     "id": "v579",
@@ -15527,7 +15527,7 @@
     "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
     "exampleDe": "Ich überprüfe mich jeden Sonntag mit den Karten der Woche.",
     "exampleAr": "أختبر نفسي كل أحد ببطاقات الأسبوع.",
-    "posInfo": "prüft über, prüfte über, hat überprüft"
+    "posInfo": "überprüft sich, überprüfte sich, hat sich überprüft"
    },
    {
     "id": "v886",
@@ -15615,7 +15615,7 @@
     "aussprache": "v = «ف»",
     "exampleDe": "Ich habe mich vertippt, es sollte „Frist“ heißen.",
     "exampleAr": "أخطأت على لوحة المفاتيح، كان المقصود «Frist».",
-    "posInfo": "vertippt, vertippte, hat vertippt"
+    "posInfo": "vertippt sich, vertippte sich, hat sich vertippt"
    },
    {
     "id": "v892",
@@ -15931,7 +15931,7 @@
     "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين · -er في الآخر = «أَ» خفيفة",
     "exampleDe": "Ich ärgere mich über den Chat statt einer klaren Mail.",
     "exampleAr": "يغيظني الشات بدل إيميل واضح.",
-    "posInfo": "ärget, ärgete, hat geärget"
+    "posInfo": "ärgert sich über, ärgerte sich über, hat sich über ... geärgert"
    },
    {
     "id": "v909",
@@ -16242,7 +16242,7 @@
     ],
     "exampleDe": "Nach zehn Minuten hat sich das Kind beruhigt.",
     "exampleAr": "بعد عشر دقائق هدأ الطفل.",
-    "posInfo": "beruhigt, beruhigte, hat beruhigt"
+    "posInfo": "beruhigt sich, beruhigte sich, hat sich beruhigt"
    },
    {
     "id": "v930",
@@ -16532,7 +16532,7 @@
     "aussprache": "sch = «ش»",
     "exampleDe": "Er schämt sich für seinen Akzent, dabei versteht ihn jeder.",
     "exampleAr": "يخجل من لكنته مع أن الجميع يفهمه.",
-    "posInfo": "schämt, schämte, hat geschämt"
+    "posInfo": "schämt sich, schämte sich, hat sich geschämt"
    },
    {
     "id": "v949",
@@ -16546,7 +16546,7 @@
     "aussprache": "ß = «س» مشدَّدة",
     "exampleDe": "Wer einen Kollegen vor allen bloßstellt, zerstört das Arbeitsklima.",
     "exampleAr": "من يفضح زميلاً أمام الجميع يدمّر المناخ المهني.",
-    "posInfo": "jdet, jdete, hat gejdt"
+    "posInfo": "stellt jdn bloß, stellte jdn bloß, hat jdn bloßgestellt"
    },
    {
     "id": "v950",
@@ -16651,7 +16651,7 @@
     "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
     "exampleDe": "Nach zwei Jahren sehnt er sich nach dem Freitagsessen bei den Eltern.",
     "exampleAr": "بعد سنتين يتوق إلى غداء الجمعة عند الوالدين.",
-    "posInfo": "sehnt, sehnte, hat gesehnt"
+    "posInfo": "sehnt sich nach, sehnte sich nach, hat sich nach ... gesehnt"
    },
    {
     "id": "v957",
@@ -16839,7 +16839,7 @@
     "aussprache": "v = «ف» · w = «ڤ»",
     "exampleDe": "Nadia möchte ihm nicht vorwerfen, die Absprache gebrochen zu haben.",
     "exampleAr": "نادية لا تريد أن تعاتبه على خرق الاتفاق.",
-    "posInfo": "jdmt, jdmte, hat gejdmt"
+    "posInfo": "wirft jdm etwas vor, warf jdm etwas vor, hat jdm etwas vorgeworfen"
    },
    {
     "id": "v970",
@@ -16914,7 +16914,7 @@
     ],
     "exampleDe": "Meine Mutter sorgt sich um mich, wenn ich nicht anrufe.",
     "exampleAr": "أمي تقلق عليّ إذا لم أتصل.",
-    "posInfo": "sorgt, sorgte, hat gesorgt"
+    "posInfo": "sorgt sich um, sorgte sich um, hat sich um ... gesorgt"
    },
    {
     "id": "v975",
@@ -17051,7 +17051,7 @@
     ],
     "exampleDe": "Vor dem Laufen dehne ich mich zehn Minuten.",
     "exampleAr": "قبل الجري أمطّ عضلاتي عشر دقائق.",
-    "posInfo": "dehnt, dehnte, hat gedehnt"
+    "posInfo": "dehnt sich, dehnte sich, hat sich gedehnt"
    },
    {
     "id": "v984",
@@ -17138,7 +17138,7 @@
     ],
     "exampleDe": "Von der Erkältung hat er sich in einer Woche erholt.",
     "exampleAr": "من الزكام تعافى في أسبوع.",
-    "posInfo": "erholt, erholte, ist erholt"
+    "posInfo": "erholt sich, erholte sich, hat sich erholt"
    },
    {
     "id": "v990",
@@ -17168,7 +17168,7 @@
     "aussprache": "sp/st في البداية = «شب/شت» · ß = «س» مشدَّدة",
     "exampleDe": "Beim Marathon kann man bei Kilometer dreißig an seine Grenzen stoßen.",
     "exampleAr": "في الماراثون قد يبلغ المرء أقصى ما يستطيع عند الكيلومتر الثلاثين.",
-    "posInfo": "at, ate, hat geat"
+    "posInfo": "stößt an seine Grenzen, stieß an seine Grenzen, ist an seine Grenzen gestoßen"
    },
    {
     "id": "v992",
@@ -17563,7 +17563,7 @@
     "aussprache": "ie = «إي» ممدودة",
     "exampleDe": "Sie engagiert sich seit zwei Jahren im Verein für Nachhilfe.",
     "exampleAr": "هي منخرطة منذ سنتين في جمعية للدروس الخصوصية.",
-    "posInfo": "engagiert, engagierte, hat geengagiert"
+    "posInfo": "engagiert sich, engagierte sich, hat sich engagiert"
    },
    {
     "id": "v1018",
@@ -19315,7 +19315,7 @@
     "aussprache": "ei = «آي» لا «إي»",
     "exampleDe": "Wer in zwei Hauptfächern mangelhaft steht, kann sitzen bleiben.",
     "exampleAr": "من يكون ضعيفاً في مادتين رئيسيتين قد يرسب.",
-    "posInfo": "sitzt, sitzte, hat gesitzt"
+    "posInfo": "bleibt sitzen, blieb sitzen, ist sitzen geblieben"
    },
    {
     "id": "v1132",
@@ -22805,7 +22805,7 @@
     "aussprache": "ei = «آي» لا «إي»",
     "exampleDe": "Nach einem Jahr habe ich mich in Leipzig eingelebt.",
     "exampleAr": "بعد سنة استأنست في لايبزغ.",
-    "posInfo": "lebt ein, lebte ein, hat eingelebt"
+    "posInfo": "lebt sich ein, lebte sich ein, hat sich eingelebt"
    },
    {
     "id": "v1352",
@@ -22819,7 +22819,7 @@
     "aussprache": "ei = «آي» لا «إي» · ü = ضمّةٌ بشفتَينِ مستديرتَين",
     "exampleDe": "Sie hat sich schnell in das Team eingefügt, ohne sich zu verbiegen.",
     "exampleAr": "اندمجت بسرعة في الفريق دون أن تتنازل عن نفسها.",
-    "posInfo": "fügt ein, fügte ein, hat eingefügt"
+    "posInfo": "fügt sich ein, fügte sich ein, hat sich eingefügt"
    },
    {
     "id": "v1353",
@@ -60311,7 +60311,7 @@
     ],
     "exampleDe": "Sie arbeitet sich gerade in die neue Station ein.",
     "exampleAr": "تندمج حاليًا في القسم الجديد.",
-    "posInfo": "arbeitet ein, arbeitete ein, hat eingearbeitt"
+    "posInfo": "arbeitet sich ein, arbeitete sich ein, hat sich eingearbeitet"
    },
    {
     "id": "j01-arbeit-vertieft-034",
@@ -60731,7 +60731,7 @@
     ],
     "exampleDe": "Viele Bürger beteiligen sich an der Aktion.",
     "exampleAr": "يشارك مواطنون كثيرون في الحملة.",
-    "posInfo": "beteiligt, beteiligte, hat beteiligt"
+    "posInfo": "beteiligt sich, beteiligte sich, hat sich beteiligt"
    },
    {
     "id": "j02-gesellschaft-recht-016",
@@ -61603,7 +61603,7 @@
     ],
     "exampleDe": "Viele steigen auf ein Elektroauto um.",
     "exampleAr": "ينتقل كثيرون إلى سيارة كهربائية.",
-    "posInfo": "steigt um, steigte um, ist umgesteigt"
+    "posInfo": "steigt auf ... um, stieg auf ... um, ist auf ... umgestiegen"
    },
    {
     "id": "j03-umwelt-energie-053",
@@ -62533,7 +62533,7 @@
     ],
     "exampleDe": "Sie wollte sich gegen Grippe impfen lassen.",
     "exampleAr": "أرادت أن تتلقّى لقاح الإنفلونزا.",
-    "posInfo": "impft, impfte, hat geimpft"
+    "posInfo": "lässt sich impfen, ließ sich impfen, hat sich impfen lassen"
    },
    {
     "id": "j04-gesundheit-pflege-051",
@@ -62754,7 +62754,7 @@
     ],
     "exampleDe": "Im Winter stecken sich viele an.",
     "exampleAr": "في الشتاء يُصاب كثيرون بالعدوى.",
-    "posInfo": "steckt an, steckte an, hat angesteckt"
+    "posInfo": "steckt sich an, steckte sich an, hat sich angesteckt"
    },
    {
     "id": "j04-gesundheit-pflege-068",
@@ -62780,7 +62780,7 @@
     ],
     "exampleDe": "Die Grippe breitet sich schnell aus.",
     "exampleAr": "تنتشر الإنفلونزا بسرعة.",
-    "posInfo": "breitet aus, breitete aus, hat ausgebreitt"
+    "posInfo": "breitet sich aus, breitete sich aus, hat sich ausgebreitet"
    },
    {
     "id": "j04-gesundheit-pflege-070",
@@ -65225,7 +65225,7 @@
     ],
     "exampleDe": "Das neue Auto können wir uns nicht leisten.",
     "exampleAr": "لا نستطيع تحمّل ثمن السيارة الجديدة.",
-    "posInfo": "leistet, leistete, hat geleistt"
+    "posInfo": "leistet sich, leistete sich, hat sich geleistet"
    },
    {
     "id": "j07-geld-wirtschaft-038",
@@ -65290,7 +65290,7 @@
     ],
     "exampleDe": "Der weite Weg lohnt sich für den Preis.",
     "exampleAr": "يستحق الطريق الطويل هذا السعر.",
-    "posInfo": "lohnt, lohnte, hat gelohnt"
+    "posInfo": "lohnt sich, lohnte sich, hat sich gelohnt"
    },
    {
     "id": "j07-geld-wirtschaft-043",
@@ -65813,7 +65813,7 @@
     ],
     "exampleDe": "Sie sehnt sich nach ihrer Heimat.",
     "exampleAr": "تحنّ إلى وطنها.",
-    "posInfo": "sehnt, sehnte, hat gesehnt"
+    "posInfo": "sehnt sich, sehnte sich, hat sich gesehnt"
    },
    {
     "id": "j08-gefuehle-beziehungen-023",
@@ -65865,7 +65865,7 @@
     ],
     "exampleDe": "Nach dem Anruf erleichterte sie sich.",
     "exampleAr": "بعد المكالمة ارتاحت.",
-    "posInfo": "erleichtet, erleichtete, hat erleichtern"
+    "posInfo": "erleichtert sich, erleichterte sich, hat sich erleichtert"
    },
    {
     "id": "j08-gefuehle-beziehungen-027",
@@ -65878,7 +65878,7 @@
     ],
     "exampleDe": "Reg dich nicht so auf!",
     "exampleAr": "لا تنفعل هكذا!",
-    "posInfo": "regt auf, regte auf, hat aufgeregt"
+    "posInfo": "regt sich auf, regte sich auf, hat sich aufgeregt"
    },
    {
     "id": "j08-gefuehle-beziehungen-028",
@@ -65891,7 +65891,7 @@
     ],
     "exampleDe": "Vor der Prüfung spannt er sich an.",
     "exampleAr": "قبل الامتحان يتوتّر.",
-    "posInfo": "spannt an, spannte an, hat angespannt"
+    "posInfo": "spannt sich an, spannte sich an, hat sich angespannt"
    },
    {
     "id": "j08-gefuehle-beziehungen-029",
@@ -65904,7 +65904,7 @@
     ],
     "exampleDe": "Sie kann stolz auf ihre Kinder sein.",
     "exampleAr": "يمكنها أن تفخر بأطفالها.",
-    "posInfo": "stolzt, stolzte, hat gestolzt"
+    "posInfo": "ist stolz auf, war stolz auf, ist stolz auf ... gewesen"
    },
    {
     "id": "j08-gefuehle-beziehungen-030",
@@ -65969,7 +65969,7 @@
     ],
     "exampleDe": "Sie lassen sich nach zehn Jahren scheiden.",
     "exampleAr": "يتطلّقان بعد عشر سنوات.",
-    "posInfo": "scheidet, scheidete, hat gescheidt"
+    "posInfo": "lässt sich scheiden, ließ sich scheiden, hat sich scheiden lassen"
    },
    {
     "id": "j08-gefuehle-beziehungen-035",
@@ -65982,7 +65982,7 @@
     ],
     "exampleDe": "Er verliebte sich beim ersten Treffen.",
     "exampleAr": "وقع في الحب من أول لقاء.",
-    "posInfo": "verliebt, verliebte, hat verliebt"
+    "posInfo": "verliebt sich, verliebte sich, hat sich verliebt"
    },
    {
     "id": "j08-gefuehle-beziehungen-036",
@@ -66008,7 +66008,7 @@
     ],
     "exampleDe": "Sie versteht sich gut mit ihm.",
     "exampleAr": "تتفاهم معه جيدًا.",
-    "posInfo": "versteht, verstehte, hat versteht"
+    "posInfo": "versteht sich mit, verstand sich mit, hat sich mit ... verstanden"
    },
    {
     "id": "j08-gefuehle-beziehungen-038",
@@ -66512,7 +66512,7 @@
     ],
     "exampleDe": "Nach dem Umzug musst du dich ummelden.",
     "exampleAr": "بعد الانتقال يجب إعادة تسجيل سكنك.",
-    "posInfo": "meldet um, meldete um, hat umgemeldt"
+    "posInfo": "meldet sich um, meldete sich um, hat sich umgemeldet"
    },
    {
     "id": "j09-stadt-wohnen-verkehr-016",
@@ -66629,7 +66629,7 @@
     ],
     "exampleDe": "Fahren Sie einfach geradeaus.",
     "exampleAr": "سِرْ مستقيمًا فقط.",
-    "posInfo": "geradeaust, geradeauste, ist geradeaus"
+    "posInfo": "fährt geradeaus, fuhr geradeaus, ist geradeaus gefahren"
    },
    {
     "id": "j09-stadt-wohnen-verkehr-025",
@@ -67371,7 +67371,7 @@
     ],
     "exampleDe": "Wir sehen den Kurs als große Chance an.",
     "exampleAr": "نرى الدورة فرصة كبيرة.",
-    "posInfo": "seht an, sehte an, hat angeseht"
+    "posInfo": "sieht ... als ... an, sah ... als ... an, hat ... als ... angesehen"
    },
    {
     "id": "j10-meinung-diskussion-032",
@@ -67384,7 +67384,7 @@
     ],
     "exampleDe": "Er betrachtet das als Fehler.",
     "exampleAr": "يعدّ ذلك خطأ.",
-    "posInfo": "betrachtet, betrachtete, hat betrachtt"
+    "posInfo": "betrachtet ... als ..., betrachtete ... als ..., hat ... als ... betrachtet"
    },
    {
     "id": "j10-meinung-diskussion-033",
@@ -67397,7 +67397,7 @@
     ],
     "exampleDe": "Ich halte ihn für ehrlich.",
     "exampleAr": "أراه صادقًا.",
-    "posInfo": "haltet, haltete, hat gehaltt"
+    "posInfo": "hält ... für ..., hielt ... für ..., hat ... für ... gehalten"
    },
    {
     "id": "j10-meinung-diskussion-034",
@@ -67436,7 +67436,7 @@
     ],
     "exampleDe": "Er zweifelt an der Wahrheit der Geschichte.",
     "exampleAr": "يشكّ في صدق القصة.",
-    "posInfo": "zweifet, zweifete, hat gezweifet"
+    "posInfo": "zweifelt an, zweifelte an, hat an ... gezweifelt"
    },
    {
     "id": "j10-meinung-diskussion-037",
@@ -67618,7 +67618,7 @@
     ],
     "exampleDe": "Das Wetter verschlechtert sich morgen.",
     "exampleAr": "سيسوء الطقس غدًا.",
-    "posInfo": "verschlechtet, verschlechtete, hat verschlechtern"
+    "posInfo": "verschlechtert sich, verschlechterte sich, hat sich verschlechtert"
    },
    {
     "id": "j10-meinung-diskussion-051",
@@ -70609,7 +70609,7 @@
     ],
     "exampleDe": "Leg dich kurz hin und ruh dich aus.",
     "exampleAr": "استلقِ قليلًا واسترح.",
-    "posInfo": "legt hin, legte hin, hat hingelegt"
+    "posInfo": "legt sich hin, legte sich hin, hat sich hingelegt"
    },
    {
     "id": "j13-koerper-zeit-048",
@@ -70622,7 +70622,7 @@
     ],
     "exampleDe": "Sie bückt sich nach dem Ball.",
     "exampleAr": "تنحني لتأخذ الكرة.",
-    "posInfo": "bückt, bückte, hat gebückt"
+    "posInfo": "bückt sich, bückte sich, hat sich gebückt"
    },
    {
     "id": "j13-koerper-zeit-049",
@@ -71541,7 +71541,7 @@
     ],
     "exampleDe": "Das Team qualifizierte sich für das Finale.",
     "exampleAr": "تأهل الفريق للنهائي.",
-    "posInfo": "qualifiziert, qualifizierte, hat gequalifiziert"
+    "posInfo": "qualifiziert sich, qualifizierte sich, hat sich qualifiziert"
    },
    {
     "id": "j14-kultur-freizeit-043",
