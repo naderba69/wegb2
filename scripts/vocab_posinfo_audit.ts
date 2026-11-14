@@ -37,13 +37,14 @@ const fixturePaths = [
   "vocab-posinfo-reviewed-03.json",
   "vocab-posinfo-reviewed-04.json",
   "vocab-posinfo-reviewed-05.json",
+  "vocab-posinfo-reviewed-06.json",
 ];
 const fixtures = fixturePaths.map((name) => JSON.parse(
   fs.readFileSync(path.join(root, "scripts", "fixtures", name), "utf8"),
 ) as ReviewFixture);
 
 const errors: string[] = [];
-const [firstFixture, secondFixture, thirdFixture, fourthFixture, fifthFixture] = fixtures;
+const [firstFixture, secondFixture, thirdFixture, fourthFixture, fifthFixture, sixthFixture] = fixtures;
 if (firstFixture.schema !== "wegb2-reviewed-vocab-posinfo-v1"
   || firstFixture.entries.length !== 110) {
   errors.push(`unexpected PA-034 batch 01 fixture: ${firstFixture.schema}/${firstFixture.entries.length}`);
@@ -67,6 +68,11 @@ if (fifthFixture.schema !== "wegb2-reviewed-vocab-posinfo-batch-v1"
   || fifthFixture.batch !== "PA-034-05"
   || fifthFixture.entries.length !== 86) {
   errors.push(`unexpected PA-034 batch 05 fixture: ${fifthFixture.schema}/${fifthFixture.batch}/${fifthFixture.entries.length}`);
+}
+if (sixthFixture.schema !== "wegb2-reviewed-vocab-posinfo-batch-v1"
+  || sixthFixture.batch !== "PA-034-06"
+  || sixthFixture.entries.length !== 75) {
+  errors.push(`unexpected PA-034 batch 06 fixture: ${sixthFixture.schema}/${sixthFixture.batch}/${sixthFixture.entries.length}`);
 }
 if (fixtures.some((fixture) => !/not (?:an )?external linguistic sign-off/.test(fixture.scope))) {
   errors.push("every review fixture must deny external linguistic sign-off");
@@ -139,13 +145,23 @@ const fifthLevelCounts = countLevels(fifthFixture);
 if (JSON.stringify(fifthLevelCounts) !== JSON.stringify({ A1: 3, A2: 11, B1: 42, B2: 30 })) {
   errors.push(`unexpected PA-034-05 level distribution: ${JSON.stringify(fifthLevelCounts)}`);
 }
+const sixthLevelCounts = countLevels(sixthFixture);
+if (JSON.stringify(sixthLevelCounts) !== JSON.stringify({ A0: 1, A1: 8, A2: 8, B1: 26, B2: 32 })) {
+  errors.push(`unexpected PA-034-06 level distribution: ${JSON.stringify(sixthLevelCounts)}`);
+}
 for (const fixture of [secondFixture, thirdFixture, fourthFixture, fifthFixture]) {
   if (fixture.entries.some((entry) => entry.de.includes(" ") || entry.posInfo.split(",").length !== 3)) {
     errors.push(`${fixture.batch} must remain a bounded single-head, three-principal-part batch`);
   }
 }
-if (reviewedIds.size !== 425) {
-  errors.push(`review fixtures must contain 425 unique entries, got ${reviewedIds.size}`);
+const sixthReflexiveHeads = sixthFixture.entries.filter((entry) => entry.de.startsWith("sich "));
+if (sixthFixture.entries.some((entry) => entry.posInfo.split(",").length !== 3)
+  || sixthReflexiveHeads.length !== 6
+  || sixthFixture.entries.some((entry) => entry.de.includes(" ") && !entry.de.startsWith("sich "))) {
+  errors.push("PA-034-06 must remain bounded to three principal parts, with exactly six reflexive multiword heads");
+}
+if (reviewedIds.size !== 500) {
+  errors.push(`review fixtures must contain 500 unique entries, got ${reviewedIds.size}`);
 }
 
 if (errors.length) {
@@ -155,7 +171,7 @@ if (errors.length) {
 }
 
 console.log(
-  `✅ Reviewed vocabulary morphology: ${reviewedIds.size}/${reviewedIds.size} corrected cards match five bounded internal-review fixtures (${fixtures.map((fixture) => fixture.reviewedAt).join(", ")}).`,
+  `✅ Reviewed vocabulary morphology: ${reviewedIds.size}/${reviewedIds.size} corrected cards match six bounded internal-review fixtures (${fixtures.map((fixture) => fixture.reviewedAt).join(", ")}).`,
 );
 console.log(
   "ℹ️ This gate prevents regression only for the reviewed PA-034 batches; it does not certify every posInfo field or provide external linguistic sign-off.",

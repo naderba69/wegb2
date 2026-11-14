@@ -14461,7 +14461,7 @@
     "aussprache": "ei = «آي» لا «إي» · ü = ضمّةٌ بشفتَينِ مستديرتَين",
     "exampleDe": "Letztes Jahr wurden in der Stadt achthundert Menschen eingebürgert.",
     "exampleAr": "السنة الماضية جُنّس في المدينة ثمانمائة شخص.",
-    "posInfo": "bürget ein, bürgete ein, hat eingebürget"
+    "posInfo": "bürgert ein, bürgerte ein, hat eingebürgert"
    },
    {
     "id": "v818",
@@ -16022,7 +16022,7 @@
     "aussprache": "sch = «ش» · ü = ضمّةٌ بشفتَينِ مستديرتَين",
     "exampleDe": "Wir wollen Karim zum Geburtstag überraschen.",
     "exampleAr": "نريد مفاجأة كريم في عيد ميلاده.",
-    "posInfo": "rascht über, raschte über, hat überrascht"
+    "posInfo": "überrascht, überraschte, hat überrascht"
    },
    {
     "id": "v915",
@@ -16811,7 +16811,7 @@
     ],
     "exampleDe": "Die Lehrerin tadelt selten, aber wenn, dann deutlich.",
     "exampleAr": "المعلّمة نادراً ما توبّخ، وحين تفعل فبوضوح.",
-    "posInfo": "tadet, tadete, hat getadet"
+    "posInfo": "tadelt, tadelte, hat getadelt"
    },
    {
     "id": "v968",
@@ -17351,7 +17351,7 @@
     "aussprache": "eu/äu = «أوي»",
     "exampleDe": "Die Familie kam und feuerte die Mannschaft vom Rand aus an.",
     "exampleAr": "العائلة جاءت وشجّعت الفريق من حافة الملعب.",
-    "posInfo": "feuet an, feuete an, hat angefeuet"
+    "posInfo": "feuert an, feuerte an, hat angefeuert"
    },
    {
     "id": "v1004",
@@ -17364,7 +17364,7 @@
     ],
     "exampleDe": "Als das Tor fiel, jubelten selbst die ruhigsten Zuschauer.",
     "exampleAr": "حين سُجّل الهدف صاح فرحاً حتى أهدأ المتفرجين.",
-    "posInfo": "jubet, jubete, hat gejubet"
+    "posInfo": "jubelt, jubelte, hat gejubelt"
    },
    {
     "id": "v1005",
@@ -17697,7 +17697,7 @@
     "aussprache": "w = «ڤ»",
     "exampleDe": "Am Sonntag wandern wir drei Stunden in den Bergen.",
     "exampleAr": "يوم الأحد نتنزّه مشياً ثلاث ساعات في الجبال.",
-    "posInfo": "wandet, wandete, hat gewandet"
+    "posInfo": "wandert, wanderte, ist gewandert"
    },
    {
     "id": "v1027",
@@ -18497,7 +18497,7 @@
     "aussprache": "w = «ڤ»",
     "exampleDe": "Die zweite Studie widerlegt die These der ersten.",
     "exampleAr": "الدراسة الثانية تدحض أطروحة الأولى.",
-    "posInfo": "widerlegt, widerlegte, hat gewiderlegt"
+    "posInfo": "widerlegt, widerlegte, hat widerlegt"
    },
    {
     "id": "v1079",
@@ -20674,7 +20674,7 @@
     ],
     "exampleDe": "Bei zu viel Wind muss der Betreiber die Anlagen abregeln.",
     "exampleAr": "عند الرياح الزائدة يجب على المشغّل كبح المنشآت.",
-    "posInfo": "reget ab, regete ab, hat abgereget"
+    "posInfo": "regelt ab, regelte ab, hat abgeregelt"
    },
    {
     "id": "v1217",
@@ -21426,7 +21426,7 @@
     "aussprache": "ei = «آي» لا «إي» · ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · z = «تس»",
     "exampleDe": "Hersteller müssen Zucker und Fett auf der Packung kennzeichnen.",
     "exampleAr": "على المصنّعين وسم السكر والدهون على العبوة.",
-    "posInfo": "kennzeichnt, kennzeichnte, hat gekennzeichnt"
+    "posInfo": "kennzeichnet, kennzeichnete, hat gekennzeichnet"
    },
    {
     "id": "v1265",
@@ -22193,7 +22193,7 @@
     "aussprache": "w = «ڤ»",
     "exampleDe": "Die Stadt will leere Büros in Wohnungen umwandeln.",
     "exampleAr": "المدينة تريد تحويل المكاتب الفارغة إلى شقق.",
-    "posInfo": "wandet um, wandete um, hat umgewandet"
+    "posInfo": "wandelt um, wandelte um, hat umgewandelt"
    },
    {
     "id": "v1313",
@@ -26044,7 +26044,7 @@
      "bildung"
     ],
     "aussprache": "ie = «إي» ممدودة · w = «ڤ»",
-    "posInfo": "holt wieder, holte wieder, hat wiederholt"
+    "posInfo": "wiederholt, wiederholte, hat wiederholt"
    },
    {
     "id": "vw-a2arb-041",
@@ -26356,7 +26356,7 @@
      "arbeit"
     ],
     "aussprache": "v = «ف»",
-    "posInfo": "stellt vor, stellte vor, hat vorgestellt"
+    "posInfo": "stellt sich vor, stellte sich vor, hat sich vorgestellt"
    },
    {
     "id": "vw-a2arb-082",
@@ -26928,7 +26928,7 @@
      "sozial"
     ],
     "aussprache": "sch = «ش»",
-    "posInfo": "entschuldigt, entschuldigte, hat entschuldigt"
+    "posInfo": "entschuldigt sich, entschuldigte sich, hat sich entschuldigt"
    },
    {
     "id": "vw-a2all-030",
@@ -26973,7 +26973,7 @@
      "sozial"
     ],
     "aussprache": "ei = «آي» لا «إي» · ie = «إي» ممدودة",
-    "posInfo": "feiet, feiete, hat gefeiet"
+    "posInfo": "feiert, feierte, hat gefeiert"
    },
    {
     "id": "vw-a2all-035",
@@ -29374,7 +29374,7 @@
      "verb"
     ],
     "aussprache": "ö = بينَ الضمّةِ والكسرة",
-    "posInfo": "öffnt, öffnte, hat geöffnt"
+    "posInfo": "öffnet, öffnete, hat geöffnet"
    },
    {
     "id": "vx-haus--045",
@@ -30617,7 +30617,7 @@
      "freizeit"
     ],
     "aussprache": "sch = «ش» · w = «ڤ»",
-    "posInfo": "schwimmt, schwimmte, hat geschwimmt"
+    "posInfo": "schwimmt, schwamm, ist geschwommen"
    },
    {
     "id": "vy-natur-025",
@@ -31083,7 +31083,7 @@
      "haushalt"
     ],
     "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
-    "posInfo": "büget, bügete, hat gebüget"
+    "posInfo": "bügelt, bügelte, hat gebügelt"
    },
    {
     "id": "vy-natur-057",
@@ -32209,7 +32209,7 @@
      "sprache"
     ],
     "aussprache": "z = «تس» · ü = ضمّةٌ بشفتَينِ مستديرتَين",
-    "posInfo": "setzt über, setzte über, hat übersetzt"
+    "posInfo": "übersetzt, übersetzte, hat übersetzt"
    },
    {
     "id": "vz-welt-b-015",
@@ -33398,7 +33398,7 @@
     "tags": [
      "phrase"
     ],
-    "posInfo": "kennenlernt, kennenlernte, hat gekennenlernt"
+    "posInfo": "lernt kennen, lernte kennen, hat kennengelernt"
    },
    {
     "id": "r311a1-030",
@@ -35176,7 +35176,7 @@
      "alltag"
     ],
     "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · w = «ڤ»",
-    "posInfo": "wechset, wechsete, hat gewechset"
+    "posInfo": "wechselt, wechselte, hat gewechselt"
    },
    {
     "id": "va-modort-088",
@@ -36431,7 +36431,7 @@
      "alltag",
      "Wiederholung"
     ],
-    "posInfo": "freut, freute, hat gefreut"
+    "posInfo": "freut sich, freute sich, hat sich gefreut"
    },
    {
     "id": "r311a1-079",
@@ -36444,7 +36444,7 @@
     "tags": [
      "alltag"
     ],
-    "posInfo": "kümmet, kümmete, hat gekümmet"
+    "posInfo": "kümmert sich, kümmerte sich, hat sich gekümmert"
    }
   ]
  },
@@ -40394,7 +40394,7 @@
      "kueche"
     ],
     "aussprache": "v = «ف»",
-    "posInfo": "verderbt, verderbte, hat verderbt"
+    "posInfo": "verdirbt, verdarb, ist verdorben"
    },
    {
     "id": "ve-kueche--020",
@@ -42770,7 +42770,7 @@
     "tags": [
      "rede"
     ],
-    "posInfo": "rechnt, rechnte, hat gerechnt"
+    "posInfo": "rechnet, rechnete, hat gerechnet"
    },
    {
     "id": "r312a2-176",
@@ -43974,7 +43974,7 @@
     "tags": [
      "kultur"
     ],
-    "posInfo": "bastet, bastete, hat gebastet"
+    "posInfo": "bastelt, bastelte, hat gebastelt"
    },
    {
     "id": "r312a2-194",
@@ -44013,7 +44013,7 @@
     "tags": [
      "kultur"
     ],
-    "posInfo": "reitet, reitete, hat gereitt"
+    "posInfo": "reitet, ritt, ist geritten"
    },
    {
     "id": "r312a2-197",
@@ -45226,7 +45226,7 @@
      "karriere"
     ],
     "aussprache": "ei = «آي» لا «إي» · sch = «ش»",
-    "posInfo": "scheitet, scheitete, hat gescheitet"
+    "posInfo": "scheitert, scheiterte, ist gescheitert"
    },
    {
     "id": "vg-arbeit--014",
@@ -45563,7 +45563,7 @@
      "psyche"
     ],
     "aussprache": "ei = «آي» لا «إي» · v = «ف» · z = «تس»",
-    "posInfo": "verzeiht, verzeihte, hat verzeiht"
+    "posInfo": "verzeiht, verzieh, hat verziehen"
    },
    {
     "id": "vg-psyche--018",
@@ -53851,7 +53851,7 @@
     "tags": [
      "digital"
     ],
-    "posInfo": "twittet, twittete, hat getwittet"
+    "posInfo": "twittert, twitterte, hat getwittert"
    },
    {
     "id": "r313b1-016",
@@ -53864,7 +53864,7 @@
     "tags": [
      "digital"
     ],
-    "posInfo": "googet, googete, hat gegooget"
+    "posInfo": "googelt, googelte, hat gegoogelt"
    },
    {
     "id": "r313b1-017",
@@ -56789,7 +56789,7 @@
     "tags": [
      "mein2"
     ],
-    "posInfo": "nahelegt, nahelegte, hat genahelegt"
+    "posInfo": "legt nahe, legte nahe, hat nahegelegt"
    },
    {
     "id": "vv-gefueh-019",
@@ -58223,7 +58223,7 @@
     ],
     "exampleDe": "Die Studie konnte die Wirkung noch nicht beweisen.",
     "exampleAr": "لم تستطع الدراسة إثبات التأثير بعد.",
-    "posInfo": "beweist, beweiste, hat beweist"
+    "posInfo": "beweist, bewies, hat bewiesen"
    },
    {
     "id": "v1438",
@@ -59774,7 +59774,7 @@
      "Wiederholung"
     ],
     "pos": "Verb",
-    "posInfo": "öffnt, öffnte, hat geöffnt"
+    "posInfo": "öffnet, öffnete, hat geöffnet"
    },
    {
     "de": "schließen",
@@ -59895,7 +59895,7 @@
     ],
     "exampleDe": "Wir handeln die Bedingungen gemeinsam aus.",
     "exampleAr": "نتفاوض على الشروط معًا.",
-    "posInfo": "handet aus, handete aus, hat ausgehandet"
+    "posInfo": "handelt aus, handelte aus, hat ausgehandelt"
    },
    {
     "id": "j01-arbeit-vertieft-005",
@@ -60744,7 +60744,7 @@
     ],
     "exampleDe": "Die Gewerkschaft fordert mehr Personal.",
     "exampleAr": "تطالب النقابة بمزيد من العاملين.",
-    "posInfo": "fordet, fordete, hat gefordet"
+    "posInfo": "fordert, forderte, hat gefordert"
    },
    {
     "id": "j02-gesellschaft-recht-017",
@@ -61525,7 +61525,7 @@
     ],
     "exampleDe": "Die Wäsche trocknet draußen schnell.",
     "exampleAr": "يجفّ الغسيل في الخارج بسرعة.",
-    "posInfo": "trocknt, trocknte, hat getrocknt"
+    "posInfo": "trocknet, trocknete, ist getrocknet"
    },
    {
     "id": "j03-umwelt-energie-047",
@@ -62611,7 +62611,7 @@
     ],
     "exampleDe": "Der Arzt stellt eine Entzündung fest.",
     "exampleAr": "يلاحظ الطبيب وجود التهاب.",
-    "posInfo": "feststellt, feststellte, hat gefeststellt"
+    "posInfo": "stellt fest, stellte fest, hat festgestellt"
    },
    {
     "id": "j04-gesundheit-pflege-057",
@@ -63442,7 +63442,7 @@
     ],
     "exampleDe": "Daraus kann man schlussfolgern, dass Übung hilft.",
     "exampleAr": "من هذا نستنتج أن التمرين يساعد.",
-    "posInfo": "schlussfolget, schlussfolgete, hat geschlussfolget"
+    "posInfo": "schlussfolgert, schlussfolgerte, hat geschlussfolgert"
    },
    {
     "id": "j05-bildung-wissenschaft-031",
@@ -63468,7 +63468,7 @@
     ],
     "exampleDe": "Er kann die Lage gut darstellen.",
     "exampleAr": "يستطيع عرض الوضع جيدًا.",
-    "posInfo": "darstellt, darstellte, hat gedarstellt"
+    "posInfo": "stellt dar, stellte dar, hat dargestellt"
    },
    {
     "id": "j05-bildung-wissenschaft-033",
@@ -63507,7 +63507,7 @@
     ],
     "exampleDe": "Sie gliedert ihren Text in drei Teile.",
     "exampleAr": "تقسّم نصّها إلى ثلاثة أجزاء.",
-    "posInfo": "gliedet, gliedete, hat gegliedet"
+    "posInfo": "gliedert, gliederte, hat gegliedert"
    },
    {
     "id": "j05-bildung-wissenschaft-036",
@@ -65277,7 +65277,7 @@
     ],
     "exampleDe": "Die Firma liefert innerhalb von drei Tagen.",
     "exampleAr": "توصّل الشركة خلال ثلاثة أيام.",
-    "posInfo": "liefet, liefete, hat geliefet"
+    "posInfo": "liefert, lieferte, hat geliefert"
    },
    {
     "id": "j07-geld-wirtschaft-042",
@@ -65303,7 +65303,7 @@
     ],
     "exampleDe": "Auf dem Markt kann man noch handeln.",
     "exampleAr": "في السوق يمكن المساومة بعد.",
-    "posInfo": "handet, handete, hat gehandet"
+    "posInfo": "handelt, handelte, hat gehandelt"
    },
    {
     "id": "j07-geld-wirtschaft-044",
@@ -66577,7 +66577,7 @@
     ],
     "exampleDe": "Der Lkw überholt langsam den Bus.",
     "exampleAr": "تتجاوز الشاحنة الحافلة ببطء.",
-    "posInfo": "holt über, holte über, hat überholt"
+    "posInfo": "überholt, überholte, hat überholt"
    },
    {
     "id": "j09-stadt-wohnen-verkehr-021",
@@ -67501,7 +67501,7 @@
     ],
     "exampleDe": "Daraus folgt, dass wir warten müssen.",
     "exampleAr": "من هذا يستنتج أننا يجب أن ننتظر.",
-    "posInfo": "folget, folgete, hat gefolget"
+    "posInfo": "folgert, folgerte, hat gefolgert"
    },
    {
     "id": "j10-meinung-diskussion-042",
@@ -67566,7 +67566,7 @@
     ],
     "exampleDe": "Übung steigert die Leistung langsam.",
     "exampleAr": "يرفع التمرين الأداء ببطء.",
-    "posInfo": "steiget, steigete, hat gesteiget"
+    "posInfo": "steigert, steigerte, hat gesteigert"
    },
    {
     "id": "j10-meinung-diskussion-047",
@@ -69596,7 +69596,7 @@
     ],
     "exampleDe": "Im Winter friert der See zu.",
     "exampleAr": "في الشتاء يتجمّد سطح البحيرة.",
-    "posInfo": "friert, frierte, hat gefriert"
+    "posInfo": "friert, fror, hat gefroren"
    },
    {
     "id": "j12-natur-tiere-055",
@@ -70492,7 +70492,7 @@
     ],
     "exampleDe": "Atme tief durch die Nase.",
     "exampleAr": "تنفّس بعمق من الأنف.",
-    "posInfo": "atmt, atmte, hat geatmt"
+    "posInfo": "atmet, atmete, hat geatmet"
    },
    {
     "id": "j13-koerper-zeit-039",
@@ -70544,7 +70544,7 @@
     ],
     "exampleDe": "Sie lächelt freundlich in die Kamera.",
     "exampleAr": "تبتسم بودّ إلى الكاميرا.",
-    "posInfo": "lächet, lächete, hat gelächet"
+    "posInfo": "lächelt, lächelte, hat gelächelt"
    },
    {
     "id": "j13-koerper-zeit-043",
@@ -70570,7 +70570,7 @@
     ],
     "exampleDe": "Sie flüstert ihm etwas ins Ohr.",
     "exampleAr": "تهمس له بشيء في أذنه.",
-    "posInfo": "flüstet, flüstete, hat geflüstet"
+    "posInfo": "flüstert, flüsterte, hat geflüstert"
    },
    {
     "id": "j13-koerper-zeit-045",
@@ -70635,7 +70635,7 @@
     ],
     "exampleDe": "Er kniet vor dem Regal.",
     "exampleAr": "يركع أمام الرفّ.",
-    "posInfo": "knit, knite, hat geknit"
+    "posInfo": "kniet, kniete, hat gekniet"
    },
    {
     "id": "j13-koerper-zeit-050",
@@ -70648,7 +70648,7 @@
     ],
     "exampleDe": "Die Kinder klettern auf den Baum.",
     "exampleAr": "يتسلق الأطفال الشجرة.",
-    "posInfo": "klettet, klettete, hat geklettet"
+    "posInfo": "klettert, kletterte, ist geklettert"
    },
    {
     "id": "j13-koerper-zeit-051",
@@ -70661,7 +70661,7 @@
     ],
     "exampleDe": "Er stolperte über einen Stein.",
     "exampleAr": "تعثّر بحجر.",
-    "posInfo": "stolpet, stolpete, hat gestolpet"
+    "posInfo": "stolpert, stolperte, ist gestolpert"
    },
    {
     "id": "j13-koerper-zeit-052",
@@ -71476,7 +71476,7 @@
     ],
     "exampleDe": "Das Kind zeichnet ein Haus.",
     "exampleAr": "يرسم الطفل بيتًا.",
-    "posInfo": "zeichnt, zeichnte, hat gezeichnt"
+    "posInfo": "zeichnet, zeichnete, hat gezeichnet"
    },
    {
     "id": "j14-kultur-freizeit-038",
@@ -72229,7 +72229,7 @@
     ],
     "exampleDe": "Ein Vertrag regelt die Zusammenarbeit.",
     "exampleAr": "ينظّم العقد التعاون.",
-    "posInfo": "reget, regete, hat gereget"
+    "posInfo": "regelt, regelte, hat geregelt"
    },
    {
     "id": "j15-berufe-dienste-033",
@@ -73274,7 +73274,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "ändet, ändete, hat geändet"
+    "posInfo": "ändert, änderte, hat geändert"
    },
    {
     "id": "r314b1-028",
@@ -73676,7 +73676,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "fordet auf, fordete auf, hat aufgefordet"
+    "posInfo": "fordert auf, forderte auf, hat aufgefordert"
    },
    {
     "id": "r314b1-057",
@@ -74388,7 +74388,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "begegnt, begegnte, hat begegnt"
+    "posInfo": "begegnet, begegnete, ist begegnet"
    },
    {
     "id": "r314b1-108",
@@ -74613,7 +74613,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "berechnt, berechnte, hat berechnt"
+    "posInfo": "berechnet, berechnete, hat berechnet"
    },
    {
     "id": "r314b1-125",
@@ -75584,7 +75584,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "dauet, dauete, hat gedauet"
+    "posInfo": "dauert, dauerte, hat gedauert"
    },
    {
     "id": "r315b1-010",
@@ -75881,7 +75881,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "donnet, donnete, hat gedonnet"
+    "posInfo": "donnert, donnerte, hat gedonnert"
    },
    {
     "id": "r315b1-031",
@@ -77418,7 +77418,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "festlegt, festlegte, hat gefestlegt"
+    "posInfo": "legt fest, legte fest, hat festgelegt"
    },
    {
     "id": "r316b1-023",
@@ -77444,7 +77444,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "festsetzt, festsetzte, hat gefestsetzt"
+    "posInfo": "setzt fest, setzte fest, hat festgesetzt"
    },
    {
     "id": "r316b1-025",
@@ -77831,7 +77831,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "füttet, füttete, hat gefüttet"
+    "posInfo": "füttert, fütterte, hat gefüttert"
    }
   ]
  },
@@ -78747,7 +78747,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "haget, hagete, hat gehaget"
+    "posInfo": "hagelt, hagelte, hat gehagelt"
    },
    {
     "id": "r316b1-116",
@@ -80228,7 +80228,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "klinget, klingete, hat geklinget"
+    "posInfo": "klingelt, klingelte, hat geklingelt"
    },
    {
     "id": "r317b1-066",
@@ -80438,7 +80438,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "konzentriert, konzentrierte, hat gekonzentriert"
+    "posInfo": "konzentriert sich, konzentrierte sich, hat sich konzentriert"
    },
    {
     "id": "r317b1-081",
@@ -82634,7 +82634,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "ordnt, ordnte, hat geordnt"
+    "posInfo": "ordnet, ordnete, hat geordnet"
    },
    {
     "id": "r318b1-092",
@@ -84507,7 +84507,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "schüttet, schüttete, hat geschüttet"
+    "posInfo": "schüttelt, schüttelte, hat geschüttelt"
    },
    {
     "id": "r320b1-031",
@@ -84733,7 +84733,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "sichet, sichete, hat gesichet"
+    "posInfo": "sichert, sicherte, hat gesichert"
    },
    {
     "id": "r320b1-047",
@@ -86593,7 +86593,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "legt über, legte über, hat überlegt"
+    "posInfo": "überlegt, überlegte, hat überlegt"
    },
    {
     "id": "r322b1-057",
@@ -86606,7 +86606,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "prüft über, prüfte über, hat überprüft"
+    "posInfo": "überprüft, überprüfte, hat überprüft"
    },
    {
     "id": "r322b1-058",
@@ -86619,7 +86619,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "quert über, querte über, hat überquert"
+    "posInfo": "überquert, überquerte, hat überquert"
    },
    {
     "id": "r322b1-059",
@@ -88208,7 +88208,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "weiget, weigete, hat geweiget"
+    "posInfo": "weigert sich, weigerte sich, hat sich geweigert"
    },
    {
     "id": "r324b1-014",
@@ -88419,7 +88419,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "wiegt, wiegte, hat gewiegt"
+    "posInfo": "wiegt, wog, hat gewogen"
    },
    {
     "id": "r324b1-030",
@@ -90298,7 +90298,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "ärget, ärgete, hat geärget"
+    "posInfo": "ärgert, ärgerte, hat geärgert"
    },
    {
     "id": "r327b1-004",

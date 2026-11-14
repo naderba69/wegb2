@@ -5,7 +5,7 @@
   "scopeNoteAr": "هذه قياسات قابلة لإعادة التشغيل وليست شهادة صحة لغوية أو بيداغوجية.",
   "baseline": {
     "smoke": {
-      "passed": 2459,
+      "passed": 2462,
       "failed": 0
     },
     "interactiveJsdom": {
@@ -334,13 +334,13 @@
     "cardsTotal": 6202,
     "cardsWithPosInfo": 1164,
     "threeFormPosInfo": 1140,
-    "manualConfirmedMalformedCards": 425,
+    "manualConfirmedMalformedCards": 500,
     "levels": {
-      "A0": 3,
-      "A1": 58,
-      "A2": 54,
-      "B1": 194,
-      "B2": 116
+      "A0": 4,
+      "A1": 66,
+      "A2": 62,
+      "B1": 220,
+      "B2": 148
     },
     "batch02": {
       "correctedCards": 59,
@@ -394,6 +394,20 @@
       "patch": "scripts/patches/apply_vocab_posinfo_review_pa034_05.py",
       "externalLinguisticSignOff": false
     },
+    "batch06": {
+      "correctedCards": 75,
+      "scope": "three-principal-part item-by-item contextual internal review; 69 single heads and 6 reflexive heads; morphology and prefix grouping used for triage only",
+      "levels": {
+        "A0": 1,
+        "A1": 8,
+        "A2": 8,
+        "B1": 26,
+        "B2": 32
+      },
+      "fixture": "scripts/fixtures/vocab-posinfo-reviewed-06.json",
+      "patch": "scripts/patches/apply_vocab_posinfo_review_pa034_06.py",
+      "externalLinguisticSignOff": false
+    },
     "batch01OverlappingIssueTags": {
       "present_malformed": 53,
       "preterite_malformed": 106,
@@ -404,22 +418,25 @@
     "automatedReferenceComparison": {
       "exactSingleHeadwordsMatched": 833,
       "caveatAr": "مرشحات فقط؛ لا تعتمد المكتبة وحدها في المساعد haben/sein أو قابلية الفصل أو تعدد المعنى.",
-      "remainingAdditionalCandidatesPendingContextReview": 49,
+      "remainingAdditionalCandidatesPendingContextReview": null,
       "initialParticipleReferenceMismatches": 432,
-      "initialAlreadyInManualConfirmedSet": 68
+      "initialAlreadyInManualConfirmedSet": 68,
+      "candidateCountStatus": "The former 49 was a bounded triage-list remainder, not a global defect count; broader triage superseded it in PA-034-06."
     },
-    "correctedCards": 425,
+    "correctedCards": 500,
     "openConfirmedCards": 0,
-    "remainingCandidateCards": 49,
+    "remainingCandidateCards": null,
     "regressionFixtures": [
       "scripts/fixtures/vocab-posinfo-reviewed.json",
       "scripts/fixtures/vocab-posinfo-reviewed-02.json",
       "scripts/fixtures/vocab-posinfo-reviewed-03.json",
       "scripts/fixtures/vocab-posinfo-reviewed-04.json",
-      "scripts/fixtures/vocab-posinfo-reviewed-05.json"
+      "scripts/fixtures/vocab-posinfo-reviewed-05.json",
+      "scripts/fixtures/vocab-posinfo-reviewed-06.json"
     ],
     "regressionGate": "npm run audit:vocab-posinfo",
-    "claimBoundary": "425 bounded internal decisions only; remaining posInfo fields and external linguistic validation are not certified"
+    "claimBoundary": "500 bounded internal decisions only; 664 other posInfo fields and external linguistic validation are not certified",
+    "unguardedPosInfoCards": 664
   },
   "writingBankConsistencyAudit": {
     "path": "content/writing.json",
@@ -445,11 +462,11 @@
     "fixedPedagogicalRisks": 17
   },
   "inventorySnapshot": {
-    "indexedTrackedFilesAndAuditArtifacts": 3543,
-    "manual_complete": 40,
-    "manual_targeted": 47,
-    "not_started": 3452,
-    "audit_artifact": 4
+    "indexedTrackedFilesAndAuditArtifacts": 3567,
+    "manual_complete": 55,
+    "manual_targeted": 60,
+    "not_started": 3441,
+    "audit_artifact": 11
   },
   "learningStateCorrections": {
     "findings": [
