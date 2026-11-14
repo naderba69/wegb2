@@ -46,6 +46,7 @@ import { punkteFuerRichtigenVersuch } from "../lib/exercise-scoring";
 import { prognose } from "../lib/prognose";
 import { PHONETIK_EINHEITEN } from "../lib/phonetikdaten";
 import { PROSODIE_EINHEITEN, getProsodieEinheit } from "../lib/prosodie";
+import { HIGH_RISK_GOVERNANCE, highRiskGovernanceFor } from "../lib/high-risk-governance";
 import { bewerteHoerKontrast, pruefbareKontrastIndizes, starteHoerKontrast } from "../lib/minimalpaare";
 import { bewerteSelbsterklaerung, normalisiereErklaertext, schluesselwoerterFuerRegel } from "../lib/selbsterklaerung";
 import { sprechHeute, SPRECH_ZIEL_SEK } from "../lib/sprechziel";
@@ -13959,8 +13960,8 @@ function collectR262(dir: string, out: string[] = []): string[] {
      pf.dokumentation.length === 11 && pf.dokumentation.every((d) => d.muster.length > 80 && d.punkte.length >= 3) &&
      pf.pruefung.length === 3,
     "K290a بنك التمريض مكتمل البنية: 133 كلمة بمثال (R199 تعميق + R204 أزواج لاتينية ومصطلحات دقيقة)، 10 حوارات ثنائية اللغة (R212: +2 على A2)، 11 نموذج توثيق مدرّجًا بقوائم فحص (R211)، 3 بطاقات صيغة");
-  ok(pfSrc.includes('data-testid="pflege-station"') && pfSrc.includes("ليست امتحانًا رسميًا") &&
-     !planSrc2.includes("pflege") && readFileSync("app/ueben/page.tsx", "utf8").includes('<PflegeStation />'),
+  ok(pfSrc.includes('data-testid="pflege-station"') && pfSrc.includes("لا يمنح تأهيلاً مهنياً") &&
+     pfSrc.includes('surfaceId="pflege"') && !planSrc2.includes("pflege") && readFileSync("app/ueben/page.tsx", "utf8").includes('<PflegeStation />'),
     "K290b المحطة مركّبة في /ueben كإضافة اختيارية، والخطة ذات الـ378 يومًا لا تعرف عنها شيئًا — الجسر لا يهزّ العمود الفقري");
 }
 
@@ -14054,7 +14055,7 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const lwSrc2 = readFileSync("components/lebenswelt.tsx", "utf8");
   ok(pf3.fachwissen.length === 40 && pf3.fachwissen.every((f) => f.optionen.length === 3 && f.richtig >= 0 && f.richtig < 3 && f.erklaerungAr.length > 30) &&
      new Set(pf3.fachwissen.map((f) => f.frage)).size === 40 && // R216: بنك المعرفة 20→40 سؤالًا
-     pfSrc3.includes('data-testid="pflege-fachwissen"') && pfSrc3.includes("تحدّدها ولايتك"),
+     pfSrc3.includes('data-testid="pflege-fachwissen"') && pfSrc3.includes("لدى ولايتك وجهتك الحالية") && pfSrc3.includes("ليست كفاءة مهنية"),
     "K296a بنك المعرفة المهنية: 40 سؤالًا فريدًا (R216: +20 في الوضعيات الجانبية والوقايات والحقوق والقيم) بسليم الخيارات وشرح عربي، موسومًا تدريبًا لا أسئلة ولاية رسمية");
   ok(lwSrc2.includes('data-testid="berufsstart"') && lwSrc2.includes("weg-berufsstart") &&
      !lwSrc2.includes("saveProgress") && !lwSrc2.includes("update(") &&
@@ -14082,7 +14083,7 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const satzIds = (bankRoh("sentences.json") as { id: string }[]).map((s) => s.id).filter((i) => i.startsWith("s-pfl-"));
   const pfSrc4 = readFileSync("components/pflege.tsx", "utf8");
   ok(vpfl.length === 93 && new Set(vpfl.map((k) => k.id)).size === 93 && satzIds.length === 64 &&
-     pfSrc4.includes("منسوجة أيضًا في حزم مفرداتك اليومية"),
+     pfSrc4.includes("مسار لغوي إضافي اختياري") && pfSrc4.includes("كل الحالات والنماذج أمثلة تدريبية داخلية"),
     "K298 التمريض منسوج في العام: 93 بطاقة vpfl (R206–R213) داخل حزم الصحة/العمل اليومية و64 جملة s-pfl (53 تغطيةً مكثّفة ≥3 بطاقات/جملة وفق K83b + 11 عبارة سرير مريض A1 من R209/R214) — كل كلمات المحطة الـ133 في التدفق العام في بنك الجمل — تصل في المهام العادية لا في محطة منفصلة فقط");
 }
 
@@ -15182,6 +15183,32 @@ function collectR262(dir: string, out: string[] = []): string[] {
     uiK406.includes('data-testid="prosodie-comparison"') && uiK406.includes("فرق تقدير الإيقاع الداخلي") &&
     uiK406.includes("لا يقيس الفونيمات أو اللكنة") && trainerK406.includes("الإيقاع والوقفات والمقاطع فقط"),
     "K406d PA-015: الواجهة تفرض دورة قبل→إرشاد→بعد→مقارنة وتحد القياس بالإيقاع؛ لا checkbox أو حكم فونيمي/لكنة");
+}
+
+/* ═══ K407 — PA-033: حوكمة المحتوى الطبي/القانوني/المدني عالي المخاطر ═══ */
+{
+  const idsK407 = HIGH_RISK_GOVERNANCE.surfaces.map((surface) => surface.id);
+  const groupsK407 = HIGH_RISK_GOVERNANCE.surfaces.flatMap((surface) => surface.groups);
+  ok(idsK407.join(",") === "pflege,orientierung,lebenswelt,szenarien" &&
+    new Set(idsK407).size === 4 && groupsK407.reduce((sum, group) => sum + group.count, 0) === 301 &&
+    HIGH_RISK_GOVERNANCE.surfaces.every((surface) => surface.professionalReview === "pending" && surface.fieldValidation === "pending"),
+    "K407a PA-033: سجل واحد يحكم الأسطح الأربعة و301 عنصراً مع إبقاء مراجعة المختص والميدان معلقتين");
+
+  const factualK407 = groupsK407.filter((group) => group.source.status === "pending-external-verification");
+  ok(factualK407.length === 7 && factualK407.every((group) => group.source.url === null && group.source.asOf === null) &&
+    highRiskGovernanceFor("pflege").noticeAr.includes("ليست مرجعاً طبياً") &&
+    highRiskGovernanceFor("szenarien").noticeAr.includes("مواقف وشخصيات ونماذج خيالية"),
+    "K407b PA-033: نقص المصدر والتاريخ ظاهر كـnull لا مرجع مخترع، والطب/السيناريوهات تحمل حدود استعمال صريحة");
+
+  const noticeK407 = readFileSync("components/high-risk-notice.tsx", "utf8");
+  const auditK407 = readFileSync("scripts/high_risk_content_audit.ts", "utf8");
+  const packageK407 = JSON.parse(readFileSync("package.json", "utf8")) as { scripts?: Record<string, string> };
+  const ciK407 = readFileSync(".github/workflows/ci.yml", "utf8");
+  ok(noticeK407.includes("مراجعة تصنيف المخاطر:") && noticeK407.includes("ليست مراجعة للوقائع") &&
+    noticeK407.includes("المصدر الرسمي وتاريخ الصلاحية") && noticeK407.includes("مراجعة مختص: معلّقة") &&
+    packageK407.scripts?.["audit:high-risk-content"] === "tsx scripts/high_risk_content_audit.ts" &&
+    ciK407.includes("run: npm run audit:high-risk-content") && auditK407.includes("external specialist review remains pending"),
+    "K407c PA-033: التحذير المشترك والبوابة المستقلة موصولان بـCI ويمنعان تحويل الحراسة إلى توقيع اختصاصي");
 }
 
 

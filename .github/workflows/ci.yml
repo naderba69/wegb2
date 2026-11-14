@@ -97,6 +97,8 @@ jobs:
         run: npm run audit:personalization
       - name: Reactive Can-Do self-report integrity (PA-031/PA-032)
         run: npm run audit:cando-integrity
+      - name: High-risk content governance (PA-033 programmatic safeguards)
+        run: npm run audit:high-risk-content
       - name: Known-pattern content lint (limited regex/schema rules)
         run: npm run lint:known-content-patterns
       - name: Scaffold-Observability (CEFR baseline; candidates are not defects)

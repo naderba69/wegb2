@@ -5,14 +5,14 @@
   "scopeNoteAr": "هذه قياسات قابلة لإعادة التشغيل وليست شهادة صحة لغوية أو بيداغوجية.",
   "baseline": {
     "smoke": {
-      "passed": 2030,
+      "passed": 2447,
       "failed": 0
     },
     "interactiveJsdom": {
-      "passed": 1018,
+      "passed": 1027,
       "failed": 0,
       "plannedTasksTraversed": 2500,
-      "interactiveElementsTouched": 22549
+      "interactiveElementsTouched": 22534
     },
     "contentStructuralAudit": {
       "exitCode": 0,
@@ -24,6 +24,19 @@
       "ruleRegressions": "10/10",
       "scannedBanks": 7,
       "claimBoundary": "regex/schema patterns only; no complete word-by-word, meaning, CEFR-level, translation, or unlisted-file review"
+    },
+    "highRiskContentGovernance": {
+      "exitCode": 0,
+      "passed": 11,
+      "failed": 0,
+      "surfaces": 4,
+      "registeredItems": 301,
+      "groups": 14,
+      "factualGroupsPendingExternalVerification": 7,
+      "fictionalGroups": 7,
+      "specialistReview": "pending",
+      "fieldValidation": "pending",
+      "claimBoundary": "programmatic classification and learner warnings only; no medical, legal, civic, or specialist validation"
     },
     "planAudit": {
       "exitCode": 0,

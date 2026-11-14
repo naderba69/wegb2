@@ -640,7 +640,8 @@ const hasFile = txt().includes("صوتٌ من الدار");
     const hdr = btn("إظهار ▼");
     ok(!!hdr, "XVII1 الأكورديونُ مُطوًى ابتداءً");
     if (hdr) click(hdr);
-    ok(txt().includes("اثنتا عشرة ساحة"), "XVII2 الوصفُ يُحدِّثُ نفسَه بنفسِه — لا «ستّة» العتيقة");
+    ok(txt().includes("اثنا عشر موقفاً خيالياً") && !!rootEl.querySelector('[data-testid="high-risk-notice-szenarien"]') && txt().includes("ليست تعليمات طوارئ"),
+      "XVII2 السيناريوهات الاثنا عشر موسومة خيالية، والتحذير ظاهر قبل النماذج والإجراءات");
     for (const nm of ["عِوَضُ المواطنة", "بدلُ السكنِ", "بدلُ الأطفالِ", "صندوقُ المرض", "دعمُ الدراسةِ", "الرقمُ الضريبيُّ"])
       ok(txt().includes(nm), "XVII3 ذراعُ ξ8 حاضرٌ في الرفوف: " + nm);
     const szn = btn("🧾 عِوَضُ المواطنة");
@@ -4066,8 +4067,9 @@ const hasFile = txt().includes("صوتٌ من الدار");
     mount(React.createElement(PflegeStation));
     ok(pflegeWoerter.length === 133 && !!rootEl.querySelector('[data-testid="pflege-station"]') && // R213: +Pflegedokumentation/Patientenakte
        !!rootEl.querySelector('[data-testid="pflege-phrasen"]') &&
-       !!rootEl.querySelector('[data-testid="pflege-wort-pf-k01"]') && !!rootEl.querySelector('[data-testid="pflege-medizin-start"]'),
-      "XCIX1 محطة التمريض تعرض بنكها المهني المعمّق (133 كلمة مع الأزواج اللاتينية) وعبارات A1 وزرّ بدء محاكاة Medizin منذ أول تركيب");
+       !!rootEl.querySelector('[data-testid="pflege-wort-pf-k01"]') && !!rootEl.querySelector('[data-testid="pflege-medizin-start"]') &&
+       !!rootEl.querySelector('[data-testid="high-risk-notice-pflege"]') && txt().includes("ليست مرجعاً طبياً"),
+      "XCIX1 محطة التمريض تعرض 133 كلمة وعبارات ومحاكاة، وتسبقها حدود طبية ومهنية صريحة");
     ok(rootEl.querySelectorAll('[data-testid="pflege-zeile"]').length === (pflegeDialoge[0]?.zeilen.length ?? 0),
       "XCIX2 حوار الجولة الطبية معروض بكل سطوره ثنائية اللغة");
     const musterBtn = rootEl.querySelector('[data-testid="pflege-muster-pf-w1"]') as HTMLElement | null;
@@ -4091,8 +4093,9 @@ const hasFile = txt().includes("صوتٌ من الدار");
     const { lebensweltThemen, umgangBank } = await import("../lib/lebenswelt");
     mount(React.createElement(LebensweltStation));
     ok(lebensweltThemen.length >= 12 && !!rootEl.querySelector('[data-testid="lebenswelt-lw-03"]') &&
-       txt().includes("الاعتراف بمؤهّل التمريض"),
-      "CII1 المحطة تعرض البطاقات الاثنتي عشرة وبطاقة الاعتراف التمريضي بينها");
+       !!rootEl.querySelector('[data-testid="high-risk-notice-lebenswelt"]') && txt().includes("الاعتراف بمؤهّل التمريض") &&
+       txt().includes("المصدر الرسمي وتاريخ الصلاحية: غير مثبتين"),
+      "CII1 المحطة تعرض بطاقات الحياة والاعتراف مع تحذير الإجراء والمصدر والتاريخ غير المثبتين");
     ok(!rootEl.querySelector('[data-testid="umgang-eintrag"]'), "CII2 لغة الشارع مطوية حتى تُطلب صراحة");
     const tog = rootEl.querySelector('[data-testid="umgang-toggle"]') as HTMLElement | null;
     if (tog) click(tog);

@@ -10,6 +10,7 @@ import { addFehlerNow, useProgress } from "@/lib/store";
 import { checkAbzeichen } from "@/lib/spiel";
 import { logK } from "@/lib/kompetenz";
 import { speakAny } from "@/lib/speech";
+import { HighRiskContentNotice } from "@/components/high-risk-notice";
 import { De } from "./De";
 
 type Tab = "saetze" | "dialoge" | "formular" | "rolle";
@@ -243,8 +244,9 @@ export function LebensSzenarien({ progress: _progress }: { progress: Progress })
         <span className="chip">{open ? "إخفاء ▲" : "إظهار ▼"}</span>
       </button>
       <div style={{ fontSize: "0.8rem", color: "var(--color-ink2)", margin: "0.2rem 0 0.6rem" }}>
-        اثنتا عشرة ساحةً تُدار بالألمانية: طوارئ · بلدية · بنك · سكن · عمل · جامعة — وبجناح ξ8: عِوَضُ المواطنة · بدلُ السكن · بدلُ الأطفال · صندوقُ المرضى · دعمُ الدراسة · الرقمُ الضريبي — لكل حزمة: جُمل مسموعة + حواران بأدوار + نموذج طلب + دور مُصاغ.
+        اثنا عشر موقفاً خيالياً لتدريب الألمانية في الطوارئ والبلدية والبنك والسكن والعمل والجامعة. النماذج والأدوار للتعبير اللغوي فقط وليست إجراءات أو استمارات رسمية.
       </div>
+      <HighRiskContentNotice surfaceId="szenarien" compact />
       {open && (
         <>
           <div style={{ display: "flex", gap: "0.35rem", flexWrap: "wrap", marginBottom: "0.6rem" }}>
