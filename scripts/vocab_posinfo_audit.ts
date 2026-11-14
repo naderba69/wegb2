@@ -36,13 +36,14 @@ const fixturePaths = [
   "vocab-posinfo-reviewed-02.json",
   "vocab-posinfo-reviewed-03.json",
   "vocab-posinfo-reviewed-04.json",
+  "vocab-posinfo-reviewed-05.json",
 ];
 const fixtures = fixturePaths.map((name) => JSON.parse(
   fs.readFileSync(path.join(root, "scripts", "fixtures", name), "utf8"),
 ) as ReviewFixture);
 
 const errors: string[] = [];
-const [firstFixture, secondFixture, thirdFixture, fourthFixture] = fixtures;
+const [firstFixture, secondFixture, thirdFixture, fourthFixture, fifthFixture] = fixtures;
 if (firstFixture.schema !== "wegb2-reviewed-vocab-posinfo-v1"
   || firstFixture.entries.length !== 110) {
   errors.push(`unexpected PA-034 batch 01 fixture: ${firstFixture.schema}/${firstFixture.entries.length}`);
@@ -61,6 +62,11 @@ if (fourthFixture.schema !== "wegb2-reviewed-vocab-posinfo-batch-v1"
   || fourthFixture.batch !== "PA-034-04"
   || fourthFixture.entries.length !== 90) {
   errors.push(`unexpected PA-034 batch 04 fixture: ${fourthFixture.schema}/${fourthFixture.batch}/${fourthFixture.entries.length}`);
+}
+if (fifthFixture.schema !== "wegb2-reviewed-vocab-posinfo-batch-v1"
+  || fifthFixture.batch !== "PA-034-05"
+  || fifthFixture.entries.length !== 86) {
+  errors.push(`unexpected PA-034 batch 05 fixture: ${fifthFixture.schema}/${fifthFixture.batch}/${fifthFixture.entries.length}`);
 }
 if (fixtures.some((fixture) => !/not (?:an )?external linguistic sign-off/.test(fixture.scope))) {
   errors.push("every review fixture must deny external linguistic sign-off");
@@ -129,13 +135,17 @@ const fourthLevelCounts = countLevels(fourthFixture);
 if (JSON.stringify(fourthLevelCounts) !== JSON.stringify({ A1: 6, A2: 16, B1: 32, B2: 36 })) {
   errors.push(`unexpected PA-034-04 level distribution: ${JSON.stringify(fourthLevelCounts)}`);
 }
-for (const fixture of [secondFixture, thirdFixture, fourthFixture]) {
+const fifthLevelCounts = countLevels(fifthFixture);
+if (JSON.stringify(fifthLevelCounts) !== JSON.stringify({ A1: 3, A2: 11, B1: 42, B2: 30 })) {
+  errors.push(`unexpected PA-034-05 level distribution: ${JSON.stringify(fifthLevelCounts)}`);
+}
+for (const fixture of [secondFixture, thirdFixture, fourthFixture, fifthFixture]) {
   if (fixture.entries.some((entry) => entry.de.includes(" ") || entry.posInfo.split(",").length !== 3)) {
     errors.push(`${fixture.batch} must remain a bounded single-head, three-principal-part batch`);
   }
 }
-if (reviewedIds.size !== 339) {
-  errors.push(`review fixtures must contain 339 unique entries, got ${reviewedIds.size}`);
+if (reviewedIds.size !== 425) {
+  errors.push(`review fixtures must contain 425 unique entries, got ${reviewedIds.size}`);
 }
 
 if (errors.length) {
@@ -145,7 +155,7 @@ if (errors.length) {
 }
 
 console.log(
-  `✅ Reviewed vocabulary morphology: ${reviewedIds.size}/${reviewedIds.size} corrected cards match four bounded internal-review fixtures (${fixtures.map((fixture) => fixture.reviewedAt).join(", ")}).`,
+  `✅ Reviewed vocabulary morphology: ${reviewedIds.size}/${reviewedIds.size} corrected cards match five bounded internal-review fixtures (${fixtures.map((fixture) => fixture.reviewedAt).join(", ")}).`,
 );
 console.log(
   "ℹ️ This gate prevents regression only for the reviewed PA-034 batches; it does not certify every posInfo field or provide external linguistic sign-off.",

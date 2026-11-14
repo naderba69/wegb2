@@ -15060,7 +15060,7 @@
     ],
     "exampleDe": "Die Dozentin benotet die Arbeit nach Struktur, Quellen und Sprache.",
     "exampleAr": "المحاضِرة تمنح العلامة حسب البنية والمصادر واللغة.",
-    "posInfo": "benotet, benotete, hat benott"
+    "posInfo": "benotet, benotete, hat benotet"
    },
    {
     "id": "v855",
@@ -16186,7 +16186,7 @@
     ],
     "exampleDe": "Die Frage nach der Lücke im Lebenslauf belastet ihn noch immer.",
     "exampleAr": "سؤال الفجوة في السيرة الذاتية ما زال يثقل عليه.",
-    "posInfo": "belastet, belastete, hat belastt"
+    "posInfo": "belastet, belastete, hat belastet"
    },
    {
     "id": "v926",
@@ -18483,7 +18483,7 @@
     ],
     "exampleDe": "Der Artikel behauptet, der Konzern habe die Zahlen geschönt.",
     "exampleAr": "المقال يدّعي أن الشركة جمّلت الأرقام.",
-    "posInfo": "behauptet, behauptete, hat behauptt"
+    "posInfo": "behauptet, behauptete, hat behauptet"
    },
    {
     "id": "v1078",
@@ -20036,7 +20036,7 @@
     "aussprache": "sp/st في البداية = «شب/شت»",
     "exampleDe": "Am Ende des Jahres spenden wir an die Tafel.",
     "exampleAr": "في نهاية السنة نتبرع لمائدة المتطوعين.",
-    "posInfo": "spendet, spendete, hat gespendt"
+    "posInfo": "spendet, spendete, hat gespendet"
    },
    {
     "id": "v1176",
@@ -22165,7 +22165,7 @@
     "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · v = «ف»",
     "exampleDe": "Die Stadt will das Viertel verdichten, ohne Grünflächen zu opfern.",
     "exampleAr": "المدينة تريد حشو الحي بالبناء دون التضحية بالمساحات الخضراء.",
-    "posInfo": "verdichtet, verdichtete, hat verdichtt"
+    "posInfo": "verdichtet, verdichtete, hat verdichtet"
    },
    {
     "id": "v1311",
@@ -22207,7 +22207,7 @@
     "aussprache": "w = «ڤ»",
     "exampleDe": "Wer ein Viertel aufwertet, muss an die alten Mieter denken.",
     "exampleAr": "من يرتقي بحي عليه التفكير في المستأجرين القدامى.",
-    "posInfo": "wertet auf, wertete auf, hat aufgewertt"
+    "posInfo": "wertet auf, wertete auf, hat aufgewertet"
    },
    {
     "id": "v1314",
@@ -23515,7 +23515,7 @@
     "aussprache": "ei = «آي» لا «إي»",
     "exampleDe": "Der Verein will seine eigene Geschichte aufarbeiten, mit Historikern.",
     "exampleAr": "الجمعية تريد استقصاء تاريخها الخاص مع مؤرخين.",
-    "posInfo": "arbeitet auf, arbeitete auf, hat aufgearbeitt"
+    "posInfo": "arbeitet auf, arbeitete auf, hat aufgearbeitet"
    },
    {
     "id": "v1398",
@@ -24823,7 +24823,7 @@
     "tags": [
      "kleidung"
     ],
-    "posInfo": "kostet, kostete, hat gekostt"
+    "posInfo": "kostet, kostete, hat gekostet"
    },
    {
     "id": "vw-a1koe-037",
@@ -26679,7 +26679,7 @@
     "tags": [
      "arbeit"
     ],
-    "posInfo": "beantwortet, beantwortete, hat beantwortt"
+    "posInfo": "beantwortet, beantwortete, hat beantwortet"
    }
   ]
  },
@@ -27294,7 +27294,7 @@
      "wohnen"
     ],
     "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
-    "posInfo": "lüftet, lüftete, hat gelüftt"
+    "posInfo": "lüftet, lüftete, hat gelüftet"
    },
    {
     "id": "vw-a2all-067",
@@ -27398,7 +27398,7 @@
      "kommunikation"
     ],
     "aussprache": "ei = «آي» لا «إي» · w = «ڤ»",
-    "posInfo": "leitet weiter, leitete weiter, hat weitergeleitt"
+    "posInfo": "leitet weiter, leitete weiter, hat weitergeleitet"
    },
    {
     "id": "vw-a2all-074",
@@ -29445,7 +29445,7 @@
     "tags": [
      "verb"
     ],
-    "posInfo": "erinnet, erinnete, hat erinnern"
+    "posInfo": "erinnert, erinnerte, hat erinnert"
    },
    {
     "id": "vx-haus--050",
@@ -31341,7 +31341,7 @@
      "meinung"
     ],
     "aussprache": "eu/äu = «أوي»",
-    "posInfo": "bedeutet, bedeutete, hat bedeutt"
+    "posInfo": "bedeutet, bedeutete, hat bedeutet"
    },
    {
     "id": "vy-leben-012",
@@ -35734,7 +35734,7 @@
     "syn": [
      "beantworten"
     ],
-    "posInfo": "twortet an, twortete an, hat angetwortt"
+    "posInfo": "antwortet, antwortete, hat geantwortet"
    },
    {
     "id": "vb-abschl-007",
@@ -36857,7 +36857,7 @@
      "person"
     ],
     "aussprache": "ö = بينَ الضمّةِ والكسرة",
-    "posInfo": "tröstet, tröstete, hat getröstt"
+    "posInfo": "tröstet, tröstete, hat getröstet"
    },
    {
     "id": "vc-mensc-808",
@@ -39524,7 +39524,7 @@
      "geld"
     ],
     "aussprache": "sch = «ش» · v = «ف» · w = «ڤ»",
-    "posInfo": "verschwendet, verschwendete, hat verschwendt"
+    "posInfo": "verschwendet, verschwendete, hat verschwendet"
    },
    {
     "id": "vd-geld-k-014",
@@ -41228,7 +41228,7 @@
      "erzaehlen"
     ],
     "aussprache": "w = «ڤ» · ü = ضمّةٌ بشفتَينِ مستديرتَين",
-    "posInfo": "windet über, windete über, hat überwindt"
+    "posInfo": "überwindet, überwand, hat überwunden"
    },
    {
     "id": "ve-erzaeh-808",
@@ -41709,7 +41709,7 @@
     "tags": [
      "schutz"
     ],
-    "posInfo": "meldet, meldete, hat gemeldt"
+    "posInfo": "meldet, meldete, hat gemeldet"
    },
    {
     "id": "ve-arbeits-018",
@@ -41886,7 +41886,7 @@
      "umwelt"
     ],
     "aussprache": "ie = «إي» ممدودة · v = «ف» · w = «ڤ»",
-    "posInfo": "verwendet wieder, verwendete wieder, hat wiederverwendt"
+    "posInfo": "verwendet wieder, verwendete wieder, hat wiederverwendet"
    },
    {
     "id": "ve-umwelt--014",
@@ -42202,7 +42202,7 @@
     "tags": [
      "umwelt"
     ],
-    "posInfo": "beendet, beendete, hat beendt"
+    "posInfo": "beendet, beendete, hat beendet"
    }
   ]
  },
@@ -43602,7 +43602,7 @@
      "behoerde"
     ],
     "aussprache": "v = «ف»",
-    "posInfo": "verlänget, verlängete, hat verlängern"
+    "posInfo": "verlängert, verlängerte, hat verlängert"
    },
    {
     "id": "vf-kultd-330",
@@ -45331,7 +45331,7 @@
      "karriere"
     ],
     "aussprache": "v = «ف»",
-    "posInfo": "verhandet, verhandete, hat verhandeln"
+    "posInfo": "verhandelt, verhandelte, hat verhandelt"
    },
    {
     "id": "vg-arbeit--023",
@@ -45635,7 +45635,7 @@
      "konflikt"
     ],
     "aussprache": "v = «ف»",
-    "posInfo": "vermittet, vermittete, hat vermitteln"
+    "posInfo": "vermittelt, vermittelte, hat vermittelt"
    },
    {
     "id": "vg-psyche--025",
@@ -45935,7 +45935,7 @@
      "projekt"
     ],
     "aussprache": "v = «ف»",
-    "posInfo": "verbesset, verbessete, hat verbessern"
+    "posInfo": "verbessert, verbesserte, hat verbessert"
    },
    {
     "id": "vh-projekt-018",
@@ -47354,7 +47354,7 @@
     "tags": [
      "geld1"
     ],
-    "posInfo": "pfändet, pfändete, hat gepfändt"
+    "posInfo": "pfändet, pfändete, hat gepfändet"
    }
   ]
  },
@@ -48866,7 +48866,7 @@
     "tags": [
      "dienst"
     ],
-    "posInfo": "erstattet, erstattete, hat erstattt"
+    "posInfo": "erstattet, erstattete, hat erstattet"
    },
    {
     "id": "vk-b1x-012",
@@ -54511,7 +54511,7 @@
     "tags": [
      "pruefung"
     ],
-    "posInfo": "ordnt zu, ordnte zu, hat zugeordnt"
+    "posInfo": "ordnet zu, ordnete zu, hat zugeordnet"
    },
    {
     "id": "r313b1-092",
@@ -55737,7 +55737,7 @@
      "verb2"
     ],
     "aussprache": "z = «تس» · ö = بينَ الضمّةِ والكسرة",
-    "posInfo": "auszöget hin, auszögete hin, hat hingeauszöget"
+    "posInfo": "zögert hinaus, zögerte hinaus, hat hinausgezögert"
    },
    {
     "id": "vu-b1p-031",
@@ -56721,7 +56721,7 @@
      "mein2"
     ],
     "aussprache": "v = «ف»",
-    "posInfo": "vermutet, vermutete, hat vermutt"
+    "posInfo": "vermutet, vermutete, hat vermutet"
    },
    {
     "id": "vv-gefueh-012",
@@ -56735,7 +56735,7 @@
      "mein2"
     ],
     "aussprache": "ei = «آي» لا «إي» · w = «ڤ» · z = «تس»",
-    "posInfo": "bezweifet, bezweifete, hat bezweifeln"
+    "posInfo": "bezweifelt, bezweifelte, hat bezweifelt"
    },
    {
     "id": "vv-gefueh-013",
@@ -58237,7 +58237,7 @@
     ],
     "exampleDe": "Die Ergebnisse untermauern die zentrale These der Studie.",
     "exampleAr": "تدعم النتائج الأطروحة الأساسية للدراسة بالأدلة.",
-    "posInfo": "mauet unter, mauete unter, hat untermauern"
+    "posInfo": "untermauert, untermauerte, hat untermauert"
    },
    {
     "id": "v1439",
@@ -59908,7 +59908,7 @@
     ],
     "exampleDe": "Die Firma befördert sie zur Stationsleiterin.",
     "exampleAr": "الشركة ترقّيها إلى رئيسة قسم.",
-    "posInfo": "befördet, befördete, hat befördern"
+    "posInfo": "befördert, beförderte, hat befördert"
    },
    {
     "id": "j01-arbeit-vertieft-006",
@@ -60705,7 +60705,7 @@
     ],
     "exampleDe": "Die Polizei ermittelt in diesem Fall.",
     "exampleAr": "تحقّق الشرطة في هذه القضية.",
-    "posInfo": "ermittet, ermittete, hat ermitteln"
+    "posInfo": "ermittelt, ermittelte, hat ermittelt"
    },
    {
     "id": "j02-gesellschaft-recht-014",
@@ -61473,7 +61473,7 @@
     ],
     "exampleDe": "Alte Flaschen werden wiederverwertet.",
     "exampleAr": "تُعاد إعادة استعمال القوارير القديمة.",
-    "posInfo": "verwertet wieder, verwertete wieder, hat wiederverwertt"
+    "posInfo": "verwertet wieder, verwertete wieder, hat wiederverwertet"
    },
    {
     "id": "j03-umwelt-energie-043",
@@ -62624,7 +62624,7 @@
     ],
     "exampleDe": "Sie tastet den Bauch vorsichtig ab.",
     "exampleAr": "تجسّ البطن بحذر.",
-    "posInfo": "tastet ab, tastete ab, hat abgetastt"
+    "posInfo": "tastet ab, tastete ab, hat abgetastet"
    },
    {
     "id": "j04-gesundheit-pflege-058",
@@ -63494,7 +63494,7 @@
     ],
     "exampleDe": "Kannst du den Artikel kurz zusammenfassen?",
     "exampleAr": "هل تستطيع تلخيص المقال باختصار؟",
-    "posInfo": "sammenfasst zu, sammenfasste zu, hat zugesammenfasst"
+    "posInfo": "fasst zusammen, fasste zusammen, hat zusammengefasst"
    },
    {
     "id": "j05-bildung-wissenschaft-035",
@@ -63559,7 +63559,7 @@
     ],
     "exampleDe": "Lesen erweitert den Wortschatz.",
     "exampleAr": "القراءة توسّع المفردات.",
-    "posInfo": "erweitet, erweitete, hat erweitern"
+    "posInfo": "erweitert, erweiterte, hat erweitert"
    },
    {
     "id": "j05-bildung-wissenschaft-040",
@@ -65852,7 +65852,7 @@
     ],
     "exampleDe": "Verzweifle nicht, es gibt eine Lösung.",
     "exampleAr": "لا تيأس، يوجد حلّ.",
-    "posInfo": "verzweifet, verzweifete, hat verzweifeln"
+    "posInfo": "verzweifelt, verzweifelte, ist verzweifelt"
    },
    {
     "id": "j08-gefuehle-beziehungen-026",
@@ -65917,7 +65917,7 @@
     ],
     "exampleDe": "Er beneidet ihn um sein ruhiges Leben.",
     "exampleAr": "يحسده على حياته الهادئة.",
-    "posInfo": "beneidet, beneidete, hat beneidt"
+    "posInfo": "beneidet, beneidete, hat beneidet"
    },
    {
     "id": "j08-gefuehle-beziehungen-031",
@@ -65930,7 +65930,7 @@
     ],
     "exampleDe": "Ich bewundere deine Geduld.",
     "exampleAr": "أُعجب بصبرك.",
-    "posInfo": "bewundet, bewundete, hat bewundern"
+    "posInfo": "bewundert, bewunderte, hat bewundert"
    },
    {
     "id": "j08-gefuehle-beziehungen-032",
@@ -65943,7 +65943,7 @@
     ],
     "exampleDe": "Er verachtet Lüge und Verrat.",
     "exampleAr": "يحتقر الكذب والخيانة.",
-    "posInfo": "verachtet, verachtete, hat verachtt"
+    "posInfo": "verachtet, verachtete, hat verachtet"
    },
    {
     "id": "j08-gefuehle-beziehungen-033",
@@ -66642,7 +66642,7 @@
     ],
     "exampleDe": "Wir übernachten bei Freunden in Köln.",
     "exampleAr": "نبيت عند أصدقاء في كولونيا.",
-    "posInfo": "nachtet über, nachtete über, hat übernachtt"
+    "posInfo": "übernachtet, übernachtete, hat übernachtet"
    },
    {
     "id": "j09-stadt-wohnen-verkehr-026",
@@ -67449,7 +67449,7 @@
     ],
     "exampleDe": "Ich befürworte den Vorschlag voll.",
     "exampleAr": "أؤيّد الاقتراح تمامًا.",
-    "posInfo": "befürwortet, befürwortete, hat befürwortt"
+    "posInfo": "befürwortet, befürwortete, hat befürwortet"
    },
    {
     "id": "j10-meinung-diskussion-038",
@@ -67475,7 +67475,7 @@
     ],
     "exampleDe": "Sie möchte das noch hinzufügen.",
     "exampleAr": "تريد أن تضيف هذا بعد.",
-    "posInfo": "zufügt hin, zufügte hin, hat hingezufügt"
+    "posInfo": "fügt hinzu, fügte hinzu, hat hinzugefügt"
    },
    {
     "id": "j10-meinung-diskussion-040",
@@ -67605,7 +67605,7 @@
     ],
     "exampleDe": "Weniger Zucker verringert das Risiko.",
     "exampleAr": "يقلّل السكر الأقل الخطر.",
-    "posInfo": "verringet, verringete, hat verringern"
+    "posInfo": "verringert, verringerte, hat verringert"
    },
    {
     "id": "j10-meinung-diskussion-050",
@@ -68408,7 +68408,7 @@
     ],
     "exampleDe": "Die Hemden lege ich zusammen.",
     "exampleAr": "أطوي القمصان.",
-    "posInfo": "sammenlegt zu, sammenlegte zu, hat zugesammenlegt"
+    "posInfo": "legt zusammen, legte zusammen, hat zusammengelegt"
    },
    {
     "id": "j11-alltag-haus-036",
@@ -69518,7 +69518,7 @@
     ],
     "exampleDe": "Im Herbst erntet man die Äpfel.",
     "exampleAr": "في الخريف تُحصد التفاحات.",
-    "posInfo": "erntet, erntete, hat erntt"
+    "posInfo": "erntet, erntete, hat geerntet"
    },
    {
     "id": "j12-natur-tiere-049",
@@ -70687,7 +70687,7 @@
     ],
     "exampleDe": "Damals herrschte ein König über das Land.",
     "exampleAr": "آنذاك حكم ملك البلاد.",
-    "posInfo": "rscht her, rschte her, hat hergerscht"
+    "posInfo": "herrscht, herrschte, hat geherrscht"
    },
    {
     "id": "j13-koerper-zeit-054",
@@ -70700,7 +70700,7 @@
     ],
     "exampleDe": "Die Armee eroberte die Stadt.",
     "exampleAr": "احتلّ الجيش المدينة.",
-    "posInfo": "erobet, erobete, hat erobern"
+    "posInfo": "erobert, eroberte, hat erobert"
    },
    {
     "id": "j13-koerper-zeit-055",
@@ -71489,7 +71489,7 @@
     ],
     "exampleDe": "Er gestaltet das Plakat neu.",
     "exampleAr": "يصمم الملصق من جديد.",
-    "posInfo": "gestaltet, gestaltete, hat gestaltt"
+    "posInfo": "gestaltet, gestaltete, hat gestaltet"
    },
    {
     "id": "j14-kultur-freizeit-039",
@@ -72268,7 +72268,7 @@
     ],
     "exampleDe": "Die Firma beliefert fünfzig Läden.",
     "exampleAr": "تزوّد الشركة خمسين متجرًا.",
-    "posInfo": "beliefet, beliefete, hat beliefern"
+    "posInfo": "beliefert, belieferte, hat beliefert"
    },
    {
     "id": "j15-berufe-dienste-036",
@@ -72555,7 +72555,7 @@
     ],
     "exampleDe": "Ein Zaun verhindert Unfälle.",
     "exampleAr": "يمنع السياج الحوادث.",
-    "posInfo": "verhindet, verhindete, hat verhindern"
+    "posInfo": "verhindert, verhinderte, hat verhindert"
    },
    {
     "id": "j16-wege-ziele-007",
@@ -72659,7 +72659,7 @@
     ],
     "exampleDe": "Der Film endet um Mitternacht.",
     "exampleAr": "ينتهي الفيلم في منتصف الليل.",
-    "posInfo": "endet, endete, hat geendt"
+    "posInfo": "endet, endete, hat geendet"
    },
    {
     "id": "j16-wege-ziele-015",
@@ -73503,7 +73503,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "wendet an, wendete an, hat angewendt"
+    "posInfo": "wendet an, wandte an, hat angewandt"
    },
    {
     "id": "r314b1-045",
@@ -73941,7 +73941,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "richtet aus, richtete aus, hat ausgerichtt"
+    "posInfo": "richtet aus, richtete aus, hat ausgerichtet"
    },
    {
     "id": "r314b1-076",
@@ -74147,7 +74147,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "badet, badete, hat gebadt"
+    "posInfo": "badet, badete, hat gebadet"
    },
    {
     "id": "r314b1-091",
@@ -74323,7 +74323,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "beachtet, beachtete, hat beachtt"
+    "posInfo": "beachtet, beachtete, hat beachtet"
    },
    {
     "id": "r314b1-103",
@@ -74441,7 +74441,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "behindet, behindete, hat behindern"
+    "posInfo": "behindert, behinderte, hat behindert"
    },
    {
     "id": "r314b1-112",
@@ -75045,7 +75045,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "blutet, blutete, hat geblutt"
+    "posInfo": "blutet, blutete, hat geblutet"
    },
    {
     "id": "r314b1-157",
@@ -76326,7 +76326,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "richtet ein, richtete ein, hat eingerichtt"
+    "posInfo": "richtet ein, richtete ein, hat eingerichtet"
    },
    {
     "id": "r315b1-063",
@@ -76747,7 +76747,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "erfordet, erfordete, hat erfordern"
+    "posInfo": "erfordert, erforderte, hat erfordert"
    },
    {
     "id": "r315b1-094",
@@ -76855,7 +76855,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "erleichtet, erleichtete, hat erleichtern"
+    "posInfo": "erleichtert, erleichterte, hat erleichtert"
    },
    {
     "id": "r315b1-102",
@@ -80862,7 +80862,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "landet, landete, hat gelandt"
+    "posInfo": "landet, landete, ist gelandet"
    },
    {
     "id": "r317b1-110",
@@ -81068,7 +81068,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "leistet, leistete, hat geleistt"
+    "posInfo": "leistet, leistete, hat geleistet"
    },
    {
     "id": "r317b1-125",
@@ -81081,7 +81081,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "leitet, leitete, hat geleitt"
+    "posInfo": "leitet, leitete, hat geleitet"
    },
    {
     "id": "r317b1-126",
@@ -81709,7 +81709,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "mietet, mietete, hat gemiett"
+    "posInfo": "mietet, mietete, hat gemietet"
    },
    {
     "id": "r318b1-028",
@@ -83718,7 +83718,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "redet, redete, hat geredt"
+    "posInfo": "redet, redete, hat geredet"
    },
    {
     "id": "r319b1-024",
@@ -83917,7 +83917,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "rettet, rettete, hat gerettt"
+    "posInfo": "rettet, rettete, hat gerettet"
    },
    {
     "id": "r319b1-038",
@@ -84660,7 +84660,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "sendet, sendete, hat gesendt"
+    "posInfo": "sendet, sendete, hat gesendet"
    },
    {
     "id": "r320b1-042",
@@ -85337,7 +85337,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "startet, startete, hat gestartt"
+    "posInfo": "startet, startete, ist gestartet"
    },
    {
     "id": "r321b1-031",
@@ -86158,7 +86158,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "testet, testete, hat getestt"
+    "posInfo": "testet, testete, hat getestet"
    },
    {
     "id": "r322b1-027",
@@ -86647,7 +86647,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "redet über, redete über, hat überredt"
+    "posInfo": "überredet, überredete, hat überredet"
    },
    {
     "id": "r322b1-061",
@@ -87009,7 +87009,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "richtet unter, richtete unter, hat unterrichtt"
+    "posInfo": "unterrichtet, unterrichtete, hat unterrichtet"
    },
    {
     "id": "r322b1-088",
@@ -87124,7 +87124,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "verabredet, verabredete, hat verabredt"
+    "posInfo": "verabredet, verabredete, hat verabredet"
    },
    {
     "id": "r323b1-003",
@@ -87150,7 +87150,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "verabschiedet, verabschiedete, hat verabschiedt"
+    "posInfo": "verabschiedet, verabschiedete, hat verabschiedet"
    },
    {
     "id": "r323b1-005",
@@ -87163,7 +87163,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "verändet, verändete, hat verändern"
+    "posInfo": "verändert, veränderte, hat verändert"
    },
    {
     "id": "r323b1-006",
@@ -87339,7 +87339,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "vergrößet, vergrößete, hat vergrößern"
+    "posInfo": "vergrößert, vergrößerte, hat vergrößert"
    },
    {
     "id": "r323b1-019",
@@ -87352,7 +87352,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "verhaftet, verhaftete, hat verhaftt"
+    "posInfo": "verhaftet, verhaftete, hat verhaftet"
    },
    {
     "id": "r323b1-020",
@@ -87599,7 +87599,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "verschwindet, verschwindete, hat verschwindt"
+    "posInfo": "verschwindet, verschwand, ist verschwunden"
    },
    {
     "id": "r323b1-038",
@@ -87612,7 +87612,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "versichet, versichete, hat versichern"
+    "posInfo": "versichert, versicherte, hat versichert"
    },
    {
     "id": "r323b1-039",
@@ -87720,7 +87720,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "verwechset, verwechsete, hat verwechseln"
+    "posInfo": "verwechselt, verwechselte, hat verwechselt"
    },
    {
     "id": "r323b1-047",
@@ -87733,7 +87733,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "verwendet, verwendete, hat verwendt"
+    "posInfo": "verwendet, verwendete, hat verwendet"
    },
    {
     "id": "r323b1-048",
@@ -88274,7 +88274,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "wendet, wendete, hat gewendt"
+    "posInfo": "wendet, wendete, hat gewendet"
    },
    {
     "id": "r324b1-019",
@@ -88376,7 +88376,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "wettet, wettete, hat gewettt"
+    "posInfo": "wettet, wettete, hat gewettet"
    },
    {
     "id": "r324b1-027",
@@ -88882,7 +88882,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "zeltet, zeltete, hat gezeltt"
+    "posInfo": "zeltet, zeltete, hat gezeltet"
    },
    {
     "id": "r325b1-013",
@@ -90270,7 +90270,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "meldet an, meldete an, hat angemeldt"
+    "posInfo": "meldet an, meldete an, hat angemeldet"
    },
    {
     "id": "r327b1-002",
