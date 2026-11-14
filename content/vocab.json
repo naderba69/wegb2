@@ -76,7 +76,7 @@
     "de": "heißen",
     "ar": "يُدعى",
     "pos": "Verb",
-    "posInfo": "unregelmäßig",
+    "posInfo": "heißt, hieß, hat geheißen",
     "exampleDe": "Ich heiße Omar.",
     "exampleAr": "اسمي عمر.",
     "level": "A1",
@@ -126,7 +126,7 @@
     "de": "sprechen",
     "ar": "يتحدث",
     "pos": "Verb",
-    "posInfo": "spricht",
+    "posInfo": "spricht, sprach, hat gesprochen",
     "exampleDe": "Sprechen Sie Deutsch?",
     "exampleAr": "هل تتحدث الألمانية؟",
     "level": "A1",
@@ -144,7 +144,7 @@
     "de": "verstehen",
     "ar": "يفهم",
     "pos": "Verb",
-    "posInfo": "versteht",
+    "posInfo": "versteht, verstand, hat verstanden",
     "exampleDe": "Ich verstehe das nicht.",
     "exampleAr": "لا أفهم هذا.",
     "level": "A1",
@@ -753,7 +753,7 @@
     "de": "aufstehen",
     "ar": "يقوم من النوم (منفصل)",
     "pos": "Verb",
-    "posInfo": "steht auf",
+    "posInfo": "steht auf, stand auf, ist aufgestanden",
     "exampleDe": "Ich stehe um 7 Uhr auf.",
     "exampleAr": "أقوم في السابعة.",
     "level": "A1",
@@ -767,7 +767,7 @@
     "de": "schlafen",
     "ar": "ينام",
     "pos": "Verb",
-    "posInfo": "schläft",
+    "posInfo": "schläft, schlief, hat geschlafen",
     "exampleDe": "Er schläft früh.",
     "exampleAr": "ينام مبكراً.",
     "level": "A1",
@@ -782,7 +782,7 @@
     "de": "essen",
     "ar": "يأكل",
     "pos": "Verb",
-    "posInfo": "isst",
+    "posInfo": "isst, aß, hat gegessen",
     "exampleDe": "Wir essen Brot und Käse.",
     "exampleAr": "نأكل الخبز والجبن.",
     "level": "A1",
@@ -796,7 +796,7 @@
     "de": "trinken",
     "ar": "يشرب",
     "pos": "Verb",
-    "posInfo": "trinkt",
+    "posInfo": "trinkt, trank, hat getrunken",
     "level": "A1",
     "tags": [
      "alltag"
@@ -1368,7 +1368,7 @@
     "de": "weh tun",
     "ar": "يؤلم",
     "pos": "Verb",
-    "posInfo": "tut weh",
+    "posInfo": "tut weh, tat weh, hat wehgetan",
     "exampleDe": "Mein Kopf tut weh.",
     "exampleAr": "رأس يؤلمني.",
     "level": "A2",
@@ -1480,7 +1480,7 @@
     "de": "umsteigen",
     "ar": "يبدّل وسيلة النقل (منفصل)",
     "pos": "Verb",
-    "posInfo": "steigt um",
+    "posInfo": "steigt um, stieg um, ist umgestiegen",
     "level": "A2",
     "tags": [
      "reise"
@@ -1593,7 +1593,7 @@
     "de": "regnen",
     "ar": "تمطر",
     "pos": "Verb",
-    "posInfo": "es regnet",
+    "posInfo": "es regnet, es regnete, es hat geregnet",
     "level": "A2",
     "tags": [
      "natur"
@@ -1689,7 +1689,7 @@
     "de": "einkaufen",
     "ar": "يتسوّق (منفصل)",
     "pos": "Verb",
-    "posInfo": "kauft ein",
+    "posInfo": "kauft ein, kaufte ein, hat eingekauft",
     "level": "A2",
     "tags": [
      "alltag"
@@ -1803,7 +1803,7 @@
     "de": "sich beeilen",
     "ar": "يسرع (متعدد اللواحق)",
     "pos": "Verb",
-    "posInfo": "beeilt sich",
+    "posInfo": "beeilt sich, beeilte sich, hat sich beeilt",
     "exampleDe": "Wir müssen uns beeilen!",
     "exampleAr": "علينا الإسراع!",
     "level": "A2",
@@ -2038,7 +2038,7 @@
     "de": "sich freuen",
     "ar": "يفرح (متعدد اللواحق)",
     "pos": "Verb",
-    "posInfo": "+auf / über",
+    "posInfo": "freut sich auf/über, freute sich auf/über, hat sich auf/über ... gefreut",
     "exampleDe": "Ich freue mich auf das Wochenende.",
     "exampleAr": "أتطلّع بفرح إلى نهاية الأسبوع.",
     "level": "A2",
@@ -2053,7 +2053,7 @@
     "de": "sich ärgern",
     "ar": "يغضب/يضايق",
     "pos": "Verb",
-    "posInfo": "+über",
+    "posInfo": "ärgert sich über, ärgerte sich über, hat sich über ... geärgert",
     "level": "A2",
     "tags": [
      "gefuehl"
@@ -2100,7 +2100,7 @@
     "de": "entschuldigen",
     "ar": "يعتذر",
     "pos": "Verb",
-    "posInfo": "sich ~",
+    "posInfo": "entschuldigt sich, entschuldigte sich, hat sich entschuldigt",
     "exampleDe": "Ich möchte mich entschuldigen.",
     "exampleAr": "أودّ أن أعتذر.",
     "level": "A2",
@@ -2178,7 +2178,7 @@
     "de": "berichten",
     "ar": "يبلّغ/ينبّئ عن",
     "pos": "Verb",
-    "posInfo": "+über / von",
+    "posInfo": "berichtet über/von, berichtete über/von, hat über/von ... berichtet",
     "level": "A2",
     "tags": [
      "medien"
@@ -2193,7 +2193,7 @@
     "de": "erzählen",
     "ar": "يسرد/يحكي",
     "pos": "Verb",
-    "posInfo": "+Dativ von",
+    "posInfo": "erzählt jemandem von, erzählte jemandem von, hat jemandem von ... erzählt",
     "level": "A2",
     "tags": [
      "erzaehlen"
@@ -2259,7 +2259,7 @@
     "de": "hoffen",
     "ar": "يأمل",
     "pos": "Verb",
-    "posInfo": "+dass",
+    "posInfo": "hofft, hoffte, hat gehofft",
     "level": "A2",
     "tags": [
      "plan"
@@ -2290,7 +2290,7 @@
     "de": "empfehlen",
     "ar": "يوصي بـ",
     "pos": "Verb",
-    "posInfo": "empfiehlt",
+    "posInfo": "empfiehlt, empfahl, hat empfohlen",
     "level": "A2",
     "tags": [
      "rat"
@@ -2935,7 +2935,7 @@
     "de": "auftreten",
     "ar": "يظهر/يتصرّف (منفصل)",
     "pos": "Verb",
-    "posInfo": "tritt auf",
+    "posInfo": "tritt auf, trat auf, ist aufgetreten",
     "exampleDe": "Er ist überzeugend aufgetreten.",
     "exampleAr": "ظهر مقنعاً.",
     "level": "B1",
@@ -3312,7 +3312,7 @@
     "de": "übernehmen",
     "ar": "يستلم/يتبنّى/يتحمّل",
     "pos": "Verb",
-    "posInfo": "übernimmt",
+    "posInfo": "übernimmt, übernahm, hat übernommen",
     "exampleDe": "Er übernimmt die Verantwortung.",
     "exampleAr": "يتحمّل المسؤولية.",
     "level": "B2",
@@ -3393,7 +3393,7 @@
     "de": "angeben",
     "ar": "يذكر/يدّعي",
     "pos": "Verb",
-    "posInfo": "gibt an",
+    "posInfo": "gibt an, gab an, hat angegeben",
     "exampleDe": "Der Bericht gibt die Quellen an.",
     "exampleAr": "يذكر التقرير المصادر.",
     "level": "B2",
@@ -3424,7 +3424,7 @@
     "de": "abschließen",
     "ar": "يُنهي/يُبرم",
     "pos": "Verb",
-    "posInfo": "schließt ab",
+    "posInfo": "schließt ab, schloss ab, hat abgeschlossen",
     "exampleDe": "Sie hat das Studium abgeschlossen.",
     "exampleAr": "أنهت دراستها الجامعية.",
     "level": "B2",
@@ -3486,7 +3486,7 @@
     "de": "umdenken",
     "ar": "يعيد التفكير (منفصل)",
     "pos": "Verb",
-    "posInfo": "denkt um",
+    "posInfo": "denkt um, dachte um, hat umgedacht",
     "level": "B2",
     "tags": [
      "gesellschaft"
@@ -42974,7 +42974,7 @@
      "aussehen"
     ],
     "aussprache": "ie = «إي» ممدودة",
-    "posInfo": "probiert an, probierte an, hat angeprobiert"
+    "posInfo": "probiert an, probierte an, hat anprobiert"
    },
    {
     "id": "vf-kultur-014",
@@ -46985,7 +46985,7 @@
     "tags": [
      "stadt1"
     ],
-    "posInfo": "protestiert, protestierte, hat geprotestiert"
+    "posInfo": "protestiert gegen, protestierte gegen, hat gegen ... protestiert"
    },
    {
     "id": "vi-stadt-u-017",
@@ -65238,7 +65238,7 @@
     ],
     "exampleDe": "Sie bezahlt den Kredit in fünf Jahren ab.",
     "exampleAr": "تسدّد القرض خلال خمس سنوات.",
-    "posInfo": "bezahlt ab, bezahlte ab, hat abgebezahlt"
+    "posInfo": "bezahlt ab, bezahlte ab, hat abbezahlt"
    },
    {
     "id": "j07-geld-wirtschaft-039",

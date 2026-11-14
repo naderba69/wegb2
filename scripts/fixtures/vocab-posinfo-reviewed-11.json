@@ -1,0 +1,224 @@
+{
+  "schema": "wegb2-reviewed-vocab-posinfo-batch-v1",
+  "batch": "PA-034-11",
+  "reviewedAt": "2026-11-04",
+  "scope": "27 additional item-by-item internal decisions after reading every head, example, and current value: all 24 residual legacy shorthand posInfo fields were expanded into contextual three-form representations and 3 high-confidence malformed participles were corrected; string-shape and external-reference comparison were triage only, not correction generators, and this is not external linguistic sign-off.",
+  "entries": [
+    {
+      "id": "v006",
+      "deck": "a1-start",
+      "level": "A1",
+      "de": "heißen",
+      "previousPosInfo": "unregelmäßig",
+      "posInfo": "heißt, hieß, hat geheißen"
+    },
+    {
+      "id": "v009",
+      "deck": "a1-start",
+      "level": "A1",
+      "de": "sprechen",
+      "previousPosInfo": "spricht",
+      "posInfo": "spricht, sprach, hat gesprochen"
+    },
+    {
+      "id": "v010",
+      "deck": "a1-start",
+      "level": "A1",
+      "de": "verstehen",
+      "previousPosInfo": "versteht",
+      "posInfo": "versteht, verstand, hat verstanden"
+    },
+    {
+      "id": "v036",
+      "deck": "a1-familie-alltag",
+      "level": "A1",
+      "de": "aufstehen",
+      "previousPosInfo": "steht auf",
+      "posInfo": "steht auf, stand auf, ist aufgestanden"
+    },
+    {
+      "id": "v037",
+      "deck": "a1-familie-alltag",
+      "level": "A1",
+      "de": "schlafen",
+      "previousPosInfo": "schläft",
+      "posInfo": "schläft, schlief, hat geschlafen"
+    },
+    {
+      "id": "v038",
+      "deck": "a1-familie-alltag",
+      "level": "A1",
+      "de": "essen",
+      "previousPosInfo": "isst",
+      "posInfo": "isst, aß, hat gegessen"
+    },
+    {
+      "id": "v039",
+      "deck": "a1-familie-alltag",
+      "level": "A1",
+      "de": "trinken",
+      "previousPosInfo": "trinkt",
+      "posInfo": "trinkt, trank, hat getrunken"
+    },
+    {
+      "id": "v050",
+      "deck": "a2-komplett",
+      "level": "A2",
+      "de": "weh tun",
+      "previousPosInfo": "tut weh",
+      "posInfo": "tut weh, tat weh, hat wehgetan"
+    },
+    {
+      "id": "v057",
+      "deck": "a2-komplett",
+      "level": "A2",
+      "de": "umsteigen",
+      "previousPosInfo": "steigt um",
+      "posInfo": "steigt um, stieg um, ist umgestiegen"
+    },
+    {
+      "id": "v064",
+      "deck": "a2-komplett",
+      "level": "A2",
+      "de": "regnen",
+      "previousPosInfo": "es regnet",
+      "posInfo": "es regnet, es regnete, es hat geregnet"
+    },
+    {
+      "id": "v070",
+      "deck": "a2-komplett",
+      "level": "A2",
+      "de": "einkaufen",
+      "previousPosInfo": "kauft ein",
+      "posInfo": "kauft ein, kaufte ein, hat eingekauft"
+    },
+    {
+      "id": "v161",
+      "deck": "a2-komplett",
+      "level": "A2",
+      "de": "sich beeilen",
+      "previousPosInfo": "beeilt sich",
+      "posInfo": "beeilt sich, beeilte sich, hat sich beeilt"
+    },
+    {
+      "id": "v076",
+      "deck": "a2-b1-bruecke",
+      "level": "A2",
+      "de": "sich freuen",
+      "previousPosInfo": "+auf / über",
+      "posInfo": "freut sich auf/über, freute sich auf/über, hat sich auf/über ... gefreut"
+    },
+    {
+      "id": "v077",
+      "deck": "a2-b1-bruecke",
+      "level": "A2",
+      "de": "sich ärgern",
+      "previousPosInfo": "+über",
+      "posInfo": "ärgert sich über, ärgerte sich über, hat sich über ... geärgert"
+    },
+    {
+      "id": "v080",
+      "deck": "a2-b1-bruecke",
+      "level": "A2",
+      "de": "entschuldigen",
+      "previousPosInfo": "sich ~",
+      "posInfo": "entschuldigt sich, entschuldigte sich, hat sich entschuldigt"
+    },
+    {
+      "id": "v085",
+      "deck": "a2-b1-bruecke",
+      "level": "A2",
+      "de": "berichten",
+      "previousPosInfo": "+über / von",
+      "posInfo": "berichtet über/von, berichtete über/von, hat über/von ... berichtet"
+    },
+    {
+      "id": "v086",
+      "deck": "a2-b1-bruecke",
+      "level": "A2",
+      "de": "erzählen",
+      "previousPosInfo": "+Dativ von",
+      "posInfo": "erzählt jemandem von, erzählte jemandem von, hat jemandem von ... erzählt"
+    },
+    {
+      "id": "v090",
+      "deck": "a2-b1-bruecke",
+      "level": "A2",
+      "de": "hoffen",
+      "previousPosInfo": "+dass",
+      "posInfo": "hofft, hoffte, hat gehofft"
+    },
+    {
+      "id": "v092",
+      "deck": "a2-b1-bruecke",
+      "level": "A2",
+      "de": "empfehlen",
+      "previousPosInfo": "empfiehlt",
+      "posInfo": "empfiehlt, empfahl, hat empfohlen"
+    },
+    {
+      "id": "v172",
+      "deck": "b1-gesellschaft",
+      "level": "B1",
+      "de": "auftreten",
+      "previousPosInfo": "tritt auf",
+      "posInfo": "tritt auf, trat auf, ist aufgetreten"
+    },
+    {
+      "id": "v137",
+      "deck": "b2-medien-schule",
+      "level": "B2",
+      "de": "übernehmen",
+      "previousPosInfo": "übernimmt",
+      "posInfo": "übernimmt, übernahm, hat übernommen"
+    },
+    {
+      "id": "v142",
+      "deck": "b2-medien-schule",
+      "level": "B2",
+      "de": "angeben",
+      "previousPosInfo": "gibt an",
+      "posInfo": "gibt an, gab an, hat angegeben"
+    },
+    {
+      "id": "v144",
+      "deck": "b2-medien-schule",
+      "level": "B2",
+      "de": "abschließen",
+      "previousPosInfo": "schließt ab",
+      "posInfo": "schließt ab, schloss ab, hat abgeschlossen"
+    },
+    {
+      "id": "v178",
+      "deck": "b2-medien-schule",
+      "level": "B2",
+      "de": "umdenken",
+      "previousPosInfo": "denkt um",
+      "posInfo": "denkt um, dachte um, hat umgedacht"
+    },
+    {
+      "id": "vf-kultur-013",
+      "deck": "a2-kultur-digital",
+      "level": "A2",
+      "de": "anprobieren",
+      "previousPosInfo": "probiert an, probierte an, hat angeprobiert",
+      "posInfo": "probiert an, probierte an, hat anprobiert"
+    },
+    {
+      "id": "vi-stadt-u-016",
+      "deck": "b1-stadt-recht",
+      "level": "B1",
+      "de": "protestieren gegen",
+      "previousPosInfo": "protestiert, protestierte, hat geprotestiert",
+      "posInfo": "protestiert gegen, protestierte gegen, hat gegen ... protestiert"
+    },
+    {
+      "id": "j07-geld-wirtschaft-038",
+      "deck": "j07-geld-wirtschaft",
+      "level": "B2",
+      "de": "abbezahlen",
+      "previousPosInfo": "bezahlt ab, bezahlte ab, hat abgebezahlt",
+      "posInfo": "bezahlt ab, bezahlte ab, hat abbezahlt"
+    }
+  ]
+}

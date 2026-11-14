@@ -42,6 +42,7 @@ const fixturePaths = [
   "vocab-posinfo-reviewed-08.json",
   "vocab-posinfo-reviewed-09.json",
   "vocab-posinfo-reviewed-10.json",
+  "vocab-posinfo-reviewed-11.json",
 ];
 const fixtures = fixturePaths.map((name) => JSON.parse(
   fs.readFileSync(path.join(root, "scripts", "fixtures", name), "utf8"),
@@ -59,6 +60,7 @@ const [
   eighthFixture,
   ninthFixture,
   tenthFixture,
+  eleventhFixture,
 ] = fixtures;
 if (firstFixture.schema !== "wegb2-reviewed-vocab-posinfo-v1"
   || firstFixture.entries.length !== 110) {
@@ -108,6 +110,11 @@ if (tenthFixture.schema !== "wegb2-reviewed-vocab-posinfo-batch-v1"
   || tenthFixture.batch !== "PA-034-10"
   || tenthFixture.entries.length !== 16) {
   errors.push(`unexpected PA-034 batch 10 fixture: ${tenthFixture.schema}/${tenthFixture.batch}/${tenthFixture.entries.length}`);
+}
+if (eleventhFixture.schema !== "wegb2-reviewed-vocab-posinfo-batch-v1"
+  || eleventhFixture.batch !== "PA-034-11"
+  || eleventhFixture.entries.length !== 27) {
+  errors.push(`unexpected PA-034 batch 11 fixture: ${eleventhFixture.schema}/${eleventhFixture.batch}/${eleventhFixture.entries.length}`);
 }
 if (fixtures.some((fixture) => !/not (?:an )?external linguistic sign-off/.test(fixture.scope))) {
   errors.push("every review fixture must deny external linguistic sign-off");
@@ -230,8 +237,21 @@ if (JSON.stringify(tenthLevelCounts) !== JSON.stringify({ B2: 7, A1: 2, A2: 1, B
   || tenthSpecial[0]?.posInfo !== "Konjunktiv II von mögen: ich möchte · du möchtest · wir/Sie möchten") {
   errors.push(`PA-034-10 must remain bounded to 15 single-head principal-part corrections plus the explicit möchten representation: ${JSON.stringify(tenthLevelCounts)}/${tenthSpecial.length}`);
 }
-if (reviewedIds.size !== 714) {
-  errors.push(`review fixtures must contain 714 unique entries, got ${reviewedIds.size}`);
+const eleventhLevelCounts = countLevels(eleventhFixture);
+const eleventhLegacyShorthand = eleventhFixture.entries.filter(
+  (entry) => entry.previousPosInfo?.split(",").length !== 3,
+);
+const eleventhMalformedParticiples = eleventhFixture.entries.filter(
+  (entry) => entry.previousPosInfo?.split(",").length === 3,
+);
+if (JSON.stringify(eleventhLevelCounts) !== JSON.stringify({ A1: 7, A2: 13, B1: 2, B2: 5 })
+  || eleventhLegacyShorthand.length !== 24
+  || eleventhMalformedParticiples.length !== 3
+  || eleventhFixture.entries.some((entry) => entry.posInfo.split(",").length !== 3)) {
+  errors.push(`PA-034-11 must remain bounded to 24 expanded legacy shorthands and 3 malformed-participle corrections: ${JSON.stringify(eleventhLevelCounts)}/${eleventhLegacyShorthand.length}/${eleventhMalformedParticiples.length}`);
+}
+if (reviewedIds.size !== 741) {
+  errors.push(`review fixtures must contain 741 unique entries, got ${reviewedIds.size}`);
 }
 
 if (errors.length) {
@@ -241,7 +261,7 @@ if (errors.length) {
 }
 
 console.log(
-  `✅ Reviewed vocabulary morphology: ${reviewedIds.size}/${reviewedIds.size} corrected cards match ten bounded internal-review fixtures (${fixtures.map((fixture) => fixture.reviewedAt).join(", ")}).`,
+  `✅ Reviewed vocabulary morphology: ${reviewedIds.size}/${reviewedIds.size} corrected cards match eleven bounded internal-review fixtures (${fixtures.map((fixture) => fixture.reviewedAt).join(", ")}).`,
 );
 console.log(
   "ℹ️ This gate prevents regression only for the reviewed PA-034 batches; it does not certify every posInfo field or provide external linguistic sign-off.",
