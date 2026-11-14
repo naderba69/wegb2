@@ -5,7 +5,7 @@
   "scopeNoteAr": "هذه قياسات قابلة لإعادة التشغيل وليست شهادة صحة لغوية أو بيداغوجية.",
   "baseline": {
     "smoke": {
-      "passed": 2483,
+      "passed": 2486,
       "failed": 0
     },
     "interactiveJsdom": {
@@ -334,13 +334,13 @@
     "cardsTotal": 6202,
     "cardsWithPosInfo": 1164,
     "threeFormPosInfo": 1163,
-    "manualConfirmedMalformedCards": 721,
+    "manualConfirmedMalformedCards": 722,
     "levels": {
       "A0": 5,
       "A1": 131,
       "A2": 177,
       "B1": 435,
-      "B2": 210
+      "B2": 319
     },
     "batch02": {
       "correctedCards": 59,
@@ -499,6 +499,19 @@
       "patch": "scripts/patches/apply_vocab_posinfo_review_pa034_13.py",
       "externalLinguisticSignOff": false
     },
+    "batch14": {
+      "reviewedCards": 109,
+      "scope": "item-by-item internal review of residual unguarded B2 posInfo cards in b2-medien-schule, g01-g08, and h01-h04; deck and external-reference grouping used for triage only",
+      "levels": {
+        "B2": 109
+      },
+      "reviewedDecks": 13,
+      "correctedCards": 1,
+      "confirmedCurrentCards": 108,
+      "fixture": "scripts/fixtures/vocab-posinfo-reviewed-14.json",
+      "patch": "scripts/patches/apply_vocab_posinfo_review_pa034_14.py",
+      "externalLinguisticSignOff": false
+    },
     "batch01OverlappingIssueTags": {
       "present_malformed": 53,
       "preterite_malformed": 106,
@@ -514,7 +527,7 @@
       "initialAlreadyInManualConfirmedSet": 68,
       "candidateCountStatus": "The former 49 was a bounded triage-list remainder, not a global defect count; broader triage superseded it in PA-034-06."
     },
-    "correctedCards": 745,
+    "correctedCards": 746,
     "openConfirmedCards": 0,
     "remainingCandidateCards": null,
     "regressionFixtures": [
@@ -530,16 +543,17 @@
       "scripts/fixtures/vocab-posinfo-reviewed-10.json",
       "scripts/fixtures/vocab-posinfo-reviewed-11.json",
       "scripts/fixtures/vocab-posinfo-reviewed-12.json",
-      "scripts/fixtures/vocab-posinfo-reviewed-13.json"
+      "scripts/fixtures/vocab-posinfo-reviewed-13.json",
+      "scripts/fixtures/vocab-posinfo-reviewed-14.json"
     ],
     "regressionGate": "npm run audit:vocab-posinfo",
-    "claimBoundary": "958 bounded internal decisions (745 changed, 213 confirmed-current) only; 206 other B2 posInfo fields and external linguistic validation are not certified",
-    "unguardedPosInfoCards": 206,
-    "boundedInternalDecisions": 958,
+    "claimBoundary": "1067 bounded internal decisions (746 changed, 321 confirmed-current) only; 97 other B2 posInfo fields and external linguistic validation are not certified",
+    "unguardedPosInfoCards": 97,
+    "boundedInternalDecisions": 1067,
     "legacyShorthandExpansions": 24,
-    "confirmedCurrentCards": 213,
+    "confirmedCurrentCards": 321,
     "unguardedLevels": {
-      "B2": 206
+      "B2": 97
     }
   },
   "writingBankConsistencyAudit": {
@@ -566,11 +580,11 @@
     "fixedPedagogicalRisks": 17
   },
   "inventorySnapshot": {
-    "indexedTrackedFilesAndAuditArtifacts": 3588,
+    "indexedTrackedFilesAndAuditArtifacts": 3591,
     "manual_complete": 55,
-    "manual_targeted": 67,
+    "manual_targeted": 68,
     "not_started": 3441,
-    "audit_artifact": 25
+    "audit_artifact": 27
   },
   "learningStateCorrections": {
     "findings": [

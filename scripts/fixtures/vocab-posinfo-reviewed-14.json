@@ -1,0 +1,989 @@
+{
+  "schema": "wegb2-reviewed-vocab-posinfo-decision-batch-v1",
+  "batch": "PA-034-14",
+  "reviewedAt": "2026-11-04",
+  "scope": "Item-by-item internal review of all 109 residual unguarded B2 posInfo cards in b2-medien-schule, g01-g08, and h01-h04 after reading every head, example, and current value: 1 context-specific auxiliary correction and 108 explicit confirmed-current decisions; deck and external-reference grouping were triage only, not correction generators, and this is not external linguistic sign-off.",
+  "entries": [
+    {
+      "id": "v125",
+      "deck": "b2-medien-schule",
+      "level": "B2",
+      "de": "recherchieren",
+      "decision": "confirmed-current",
+      "previousPosInfo": "recherchiert, recherchierte, hat recherchiert",
+      "posInfo": "recherchiert, recherchierte, hat recherchiert"
+    },
+    {
+      "id": "v135",
+      "deck": "b2-medien-schule",
+      "level": "B2",
+      "de": "bewerten",
+      "decision": "confirmed-current",
+      "previousPosInfo": "bewertet, bewertete, hat bewertet",
+      "posInfo": "bewertet, bewertete, hat bewertet"
+    },
+    {
+      "id": "v139",
+      "deck": "b2-medien-schule",
+      "level": "B2",
+      "de": "voraussetzen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "setzt voraus, setzte voraus, hat vorausgesetzt",
+      "posInfo": "setzt voraus, setzte voraus, hat vorausgesetzt"
+    },
+    {
+      "id": "v179",
+      "deck": "b2-medien-schule",
+      "level": "B2",
+      "de": "greifen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "greift, griff, hat gegriffen",
+      "posInfo": "greift, griff, hat gegriffen"
+    },
+    {
+      "id": "v188",
+      "deck": "g01-beziehungen",
+      "level": "B2",
+      "de": "sich streiten",
+      "decision": "confirmed-current",
+      "previousPosInfo": "streitet sich, stritt sich, hat sich gestritten",
+      "posInfo": "streitet sich, stritt sich, hat sich gestritten"
+    },
+    {
+      "id": "v189",
+      "deck": "g01-beziehungen",
+      "level": "B2",
+      "de": "sich versöhnen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "versöhnt sich, versöhnte sich, hat sich versöhnt",
+      "posInfo": "versöhnt sich, versöhnte sich, hat sich versöhnt"
+    },
+    {
+      "id": "v193",
+      "deck": "g01-beziehungen",
+      "level": "B2",
+      "de": "sich trennen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "trennt sich, trennte sich, hat sich getrennt",
+      "posInfo": "trennt sich, trennte sich, hat sich getrennt"
+    },
+    {
+      "id": "v198",
+      "deck": "g01-beziehungen",
+      "level": "B2",
+      "de": "sich verabreden",
+      "decision": "confirmed-current",
+      "previousPosInfo": "verabredet sich, verabredete sich, hat sich verabredet",
+      "posInfo": "verabredet sich, verabredete sich, hat sich verabredet"
+    },
+    {
+      "id": "v201",
+      "deck": "g01-beziehungen",
+      "level": "B2",
+      "de": "kommunizieren",
+      "decision": "confirmed-current",
+      "previousPosInfo": "kommuniziert, kommunizierte, hat kommuniziert",
+      "posInfo": "kommuniziert, kommunizierte, hat kommuniziert"
+    },
+    {
+      "id": "v209",
+      "deck": "g01-beziehungen",
+      "level": "B2",
+      "de": "betrügen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "betrügt, betrog, hat betrogen",
+      "posInfo": "betrügt, betrog, hat betrogen"
+    },
+    {
+      "id": "v212",
+      "deck": "g01-beziehungen",
+      "level": "B2",
+      "de": "enttäuschen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "enttäuscht, enttäuschte, hat enttäuscht",
+      "posInfo": "enttäuscht, enttäuschte, hat enttäuscht"
+    },
+    {
+      "id": "v216",
+      "deck": "g01-beziehungen",
+      "level": "B2",
+      "de": "gönnen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "gönnt, gönnte, hat gegönnt",
+      "posInfo": "gönnt, gönnte, hat gegönnt"
+    },
+    {
+      "id": "v220",
+      "deck": "g01-beziehungen",
+      "level": "B2",
+      "de": "nachgeben",
+      "decision": "confirmed-current",
+      "previousPosInfo": "gibt nach, gab nach, hat nachgegeben",
+      "posInfo": "gibt nach, gab nach, hat nachgegeben"
+    },
+    {
+      "id": "v235",
+      "deck": "g02-gesundheit",
+      "level": "B2",
+      "de": "sich fühlen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "fühlt sich, fühlte sich, hat sich gefühlt",
+      "posInfo": "fühlt sich, fühlte sich, hat sich gefühlt"
+    },
+    {
+      "id": "v239",
+      "deck": "g02-gesundheit",
+      "level": "B2",
+      "de": "behandeln",
+      "decision": "confirmed-current",
+      "previousPosInfo": "behandelt, behandelte, hat behandelt",
+      "posInfo": "behandelt, behandelte, hat behandelt"
+    },
+    {
+      "id": "v241",
+      "deck": "g02-gesundheit",
+      "level": "B2",
+      "de": "operieren",
+      "decision": "confirmed-current",
+      "previousPosInfo": "operiert, operierte, hat operiert",
+      "posInfo": "operiert, operierte, hat operiert"
+    },
+    {
+      "id": "v243",
+      "deck": "g02-gesundheit",
+      "level": "B2",
+      "de": "gesunden",
+      "decision": "confirmed-current",
+      "previousPosInfo": "gesundet, gesundete, ist gesundet",
+      "posInfo": "gesundet, gesundete, ist gesundet"
+    },
+    {
+      "id": "v246",
+      "deck": "g02-gesundheit",
+      "level": "B2",
+      "de": "sich krankmelden",
+      "decision": "confirmed-current",
+      "previousPosInfo": "meldet sich krank, meldete sich krank, hat sich krankgemeldet",
+      "posInfo": "meldet sich krank, meldete sich krank, hat sich krankgemeldet"
+    },
+    {
+      "id": "v257",
+      "deck": "g02-gesundheit",
+      "level": "B2",
+      "de": "mobben",
+      "decision": "confirmed-current",
+      "previousPosInfo": "mobbt, mobbte, hat gemobbt",
+      "posInfo": "mobbt, mobbte, hat gemobbt"
+    },
+    {
+      "id": "v265",
+      "deck": "g02-gesundheit",
+      "level": "B2",
+      "de": "fit halten",
+      "decision": "confirmed-current",
+      "previousPosInfo": "hält fit, hielt fit, hat fit gehalten",
+      "posInfo": "hält fit, hielt fit, hat fit gehalten"
+    },
+    {
+      "id": "v266",
+      "deck": "g02-gesundheit",
+      "level": "B2",
+      "de": "sich ernähren",
+      "decision": "confirmed-current",
+      "previousPosInfo": "ernährt sich, ernährte sich, hat sich ernährt",
+      "posInfo": "ernährt sich, ernährte sich, hat sich ernährt"
+    },
+    {
+      "id": "vpfl-64",
+      "deck": "g02-gesundheit",
+      "level": "B2",
+      "de": "desinfizieren",
+      "decision": "confirmed-current",
+      "previousPosInfo": "desinfiziert, desinfizierte, hat desinfiziert",
+      "posInfo": "desinfiziert, desinfizierte, hat desinfiziert"
+    },
+    {
+      "id": "vpfl-65",
+      "deck": "g02-gesundheit",
+      "level": "B2",
+      "de": "beobachten",
+      "decision": "confirmed-current",
+      "previousPosInfo": "beobachtet, beobachtete, hat beobachtet",
+      "posInfo": "beobachtet, beobachtete, hat beobachtet"
+    },
+    {
+      "id": "vpfl-66",
+      "deck": "g02-gesundheit",
+      "level": "B2",
+      "de": "begleiten",
+      "decision": "confirmed-current",
+      "previousPosInfo": "begleitet, begleitete, hat begleitet",
+      "posInfo": "begleitet, begleitete, hat begleitet"
+    },
+    {
+      "id": "v278",
+      "deck": "g03-gesellschaft",
+      "level": "B2",
+      "de": "sich integrieren",
+      "decision": "confirmed-current",
+      "previousPosInfo": "integriert sich, integrierte sich, hat sich integriert",
+      "posInfo": "integriert sich, integrierte sich, hat sich integriert"
+    },
+    {
+      "id": "v281",
+      "deck": "g03-gesellschaft",
+      "level": "B2",
+      "de": "diskriminieren",
+      "decision": "confirmed-current",
+      "previousPosInfo": "diskriminiert, diskriminierte, hat diskriminiert",
+      "posInfo": "diskriminiert, diskriminierte, hat diskriminiert"
+    },
+    {
+      "id": "v285",
+      "deck": "g03-gesellschaft",
+      "level": "B2",
+      "de": "akzeptieren",
+      "decision": "confirmed-current",
+      "previousPosInfo": "akzeptiert, akzeptierte, hat akzeptiert",
+      "posInfo": "akzeptiert, akzeptierte, hat akzeptiert"
+    },
+    {
+      "id": "v291",
+      "deck": "g03-gesellschaft",
+      "level": "B2",
+      "de": "demonstrieren",
+      "decision": "confirmed-current",
+      "previousPosInfo": "demonstriert, demonstrierte, hat demonstriert",
+      "posInfo": "demonstriert, demonstrierte, hat demonstriert"
+    },
+    {
+      "id": "v294",
+      "deck": "g03-gesellschaft",
+      "level": "B2",
+      "de": "unterschreiben",
+      "decision": "confirmed-current",
+      "previousPosInfo": "unterschreibt, unterschrieb, hat unterschrieben",
+      "posInfo": "unterschreibt, unterschrieb, hat unterschrieben"
+    },
+    {
+      "id": "v296",
+      "deck": "g03-gesellschaft",
+      "level": "B2",
+      "de": "wählen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "wählt, wählte, hat gewählt",
+      "posInfo": "wählt, wählte, hat gewählt"
+    },
+    {
+      "id": "v306",
+      "deck": "g03-gesellschaft",
+      "level": "B2",
+      "de": "wegwerfen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "wirft weg, warf weg, hat weggeworfen",
+      "posInfo": "wirft weg, warf weg, hat weggeworfen"
+    },
+    {
+      "id": "v315",
+      "deck": "g03-gesellschaft",
+      "level": "B2",
+      "de": "bewältigen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "bewältigt, bewältigte, hat bewältigt",
+      "posInfo": "bewältigt, bewältigte, hat bewältigt"
+    },
+    {
+      "id": "v322",
+      "deck": "g04-wohnen",
+      "level": "B2",
+      "de": "vermieten",
+      "decision": "confirmed-current",
+      "previousPosInfo": "vermietet, vermietete, hat vermietet",
+      "posInfo": "vermietet, vermietete, hat vermietet"
+    },
+    {
+      "id": "v330",
+      "deck": "g04-wohnen",
+      "level": "B2",
+      "de": "umziehen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "zieht um, zog um, ist umgezogen",
+      "posInfo": "zieht um, zog um, ist umgezogen"
+    },
+    {
+      "id": "v331",
+      "deck": "g04-wohnen",
+      "level": "B2",
+      "de": "ausziehen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "zieht aus, zog aus, ist ausgezogen",
+      "posInfo": "zieht aus, zog aus, ist ausgezogen"
+    },
+    {
+      "id": "v332",
+      "deck": "g04-wohnen",
+      "level": "B2",
+      "de": "einziehen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "zieht ein, zog ein, ist eingezogen",
+      "posInfo": "zieht ein, zog ein, ist eingezogen"
+    },
+    {
+      "id": "v341",
+      "deck": "g04-wohnen",
+      "level": "B2",
+      "de": "finanzieren",
+      "decision": "confirmed-current",
+      "previousPosInfo": "finanziert, finanzierte, hat finanziert",
+      "posInfo": "finanziert, finanzierte, hat finanziert"
+    },
+    {
+      "id": "v343",
+      "deck": "g04-wohnen",
+      "level": "B2",
+      "de": "renovieren",
+      "decision": "confirmed-current",
+      "previousPosInfo": "renoviert, renovierte, hat renoviert",
+      "posInfo": "renoviert, renovierte, hat renoviert"
+    },
+    {
+      "id": "v344",
+      "deck": "g04-wohnen",
+      "level": "B2",
+      "de": "modernisieren",
+      "decision": "confirmed-current",
+      "previousPosInfo": "modernisiert, modernisierte, hat modernisiert",
+      "posInfo": "modernisiert, modernisierte, hat modernisiert"
+    },
+    {
+      "id": "v347",
+      "deck": "g04-wohnen",
+      "level": "B2",
+      "de": "besichtigen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "besichtigt, besichtigte, hat besichtigt",
+      "posInfo": "besichtigt, besichtigte, hat besichtigt"
+    },
+    {
+      "id": "v351",
+      "deck": "g04-wohnen",
+      "level": "B2",
+      "de": "kündigen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "kündigt, kündigte, hat gekündigt",
+      "posInfo": "kündigt, kündigte, hat gekündigt"
+    },
+    {
+      "id": "v357",
+      "deck": "g04-wohnen",
+      "level": "B2",
+      "de": "zusammenleben",
+      "decision": "confirmed-current",
+      "previousPosInfo": "lebt zusammen, lebte zusammen, hat zusammengelebt",
+      "posInfo": "lebt zusammen, lebte zusammen, hat zusammengelebt"
+    },
+    {
+      "id": "v361",
+      "deck": "g04-wohnen",
+      "level": "B2",
+      "de": "ausstatten",
+      "decision": "confirmed-current",
+      "previousPosInfo": "stattet aus, stattete aus, hat ausgestattet",
+      "posInfo": "stattet aus, stattete aus, hat ausgestattet"
+    },
+    {
+      "id": "v372",
+      "deck": "g05-digital",
+      "level": "B2",
+      "de": "chatten",
+      "decision": "confirmed-current",
+      "previousPosInfo": "chattet, chattete, hat gechattet",
+      "posInfo": "chattet, chattete, hat gechattet"
+    },
+    {
+      "id": "v378",
+      "deck": "g05-digital",
+      "level": "B2",
+      "de": "streamen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "streamt, streamte, hat gestreamt",
+      "posInfo": "streamt, streamte, hat gestreamt"
+    },
+    {
+      "id": "v381",
+      "deck": "g05-digital",
+      "level": "B2",
+      "de": "sich anmelden",
+      "decision": "confirmed-current",
+      "previousPosInfo": "meldet sich an, meldete sich an, hat sich angemeldet",
+      "posInfo": "meldet sich an, meldete sich an, hat sich angemeldet"
+    },
+    {
+      "id": "v383",
+      "deck": "g05-digital",
+      "level": "B2",
+      "de": "speichern",
+      "decision": "confirmed-current",
+      "previousPosInfo": "speichert, speicherte, hat gespeichert",
+      "posInfo": "speichert, speicherte, hat gespeichert"
+    },
+    {
+      "id": "v397",
+      "deck": "g05-digital",
+      "level": "B2",
+      "de": "hacken",
+      "decision": "confirmed-current",
+      "previousPosInfo": "hackt, hackte, hat gehackt",
+      "posInfo": "hackt, hackte, hat gehackt"
+    },
+    {
+      "id": "v403",
+      "deck": "g05-digital",
+      "level": "B2",
+      "de": "aufladen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "lädt auf, lud auf, hat aufgeladen",
+      "posInfo": "lädt auf, lud auf, hat aufgeladen"
+    },
+    {
+      "id": "v407",
+      "deck": "g05-digital",
+      "level": "B2",
+      "de": "aktualisieren",
+      "decision": "confirmed-current",
+      "previousPosInfo": "aktualisiert, aktualisierte, hat aktualisiert",
+      "posInfo": "aktualisiert, aktualisierte, hat aktualisiert"
+    },
+    {
+      "id": "v415",
+      "deck": "g06-wissenschaft",
+      "level": "B2",
+      "de": "forschen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "forscht, forschte, hat geforscht",
+      "posInfo": "forscht, forschte, hat geforscht"
+    },
+    {
+      "id": "v417",
+      "deck": "g06-wissenschaft",
+      "level": "B2",
+      "de": "untersuchen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "untersucht, untersuchte, hat untersucht",
+      "posInfo": "untersucht, untersuchte, hat untersucht"
+    },
+    {
+      "id": "v429",
+      "deck": "g06-wissenschaft",
+      "level": "B2",
+      "de": "auswerten",
+      "decision": "confirmed-current",
+      "previousPosInfo": "wertet aus, wertete aus, hat ausgewertet",
+      "posInfo": "wertet aus, wertete aus, hat ausgewertet"
+    },
+    {
+      "id": "v432",
+      "deck": "g06-wissenschaft",
+      "level": "B2",
+      "de": "befragen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "befragt, befragte, hat befragt",
+      "posInfo": "befragt, befragte, hat befragt"
+    },
+    {
+      "id": "v435",
+      "deck": "g06-wissenschaft",
+      "level": "B2",
+      "de": "zitieren",
+      "decision": "confirmed-current",
+      "previousPosInfo": "zitiert, zitierte, hat zitiert",
+      "posInfo": "zitiert, zitierte, hat zitiert"
+    },
+    {
+      "id": "v437",
+      "deck": "g06-wissenschaft",
+      "level": "B2",
+      "de": "belegen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "belegt, belegte, hat belegt",
+      "posInfo": "belegt, belegte, hat belegt"
+    },
+    {
+      "id": "v438",
+      "deck": "g06-wissenschaft",
+      "level": "B2",
+      "de": "beweisen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "beweist, bewies, hat bewiesen",
+      "posInfo": "beweist, bewies, hat bewiesen"
+    },
+    {
+      "id": "v445",
+      "deck": "g06-wissenschaft",
+      "level": "B2",
+      "de": "einhalten",
+      "decision": "confirmed-current",
+      "previousPosInfo": "hält ein, hielt ein, hat eingehalten",
+      "posInfo": "hält ein, hielt ein, hat eingehalten"
+    },
+    {
+      "id": "v448",
+      "deck": "g06-wissenschaft",
+      "level": "B2",
+      "de": "fördern",
+      "decision": "confirmed-current",
+      "previousPosInfo": "fördert, förderte, hat gefördert",
+      "posInfo": "fördert, förderte, hat gefördert"
+    },
+    {
+      "id": "v451",
+      "deck": "g06-wissenschaft",
+      "level": "B2",
+      "de": "promovieren",
+      "decision": "confirmed-current",
+      "previousPosInfo": "promoviert, promovierte, hat promoviert",
+      "posInfo": "promoviert, promovierte, hat promoviert"
+    },
+    {
+      "id": "v453",
+      "deck": "g06-wissenschaft",
+      "level": "B2",
+      "de": "publizieren",
+      "decision": "confirmed-current",
+      "previousPosInfo": "publiziert, publizierte, hat publiziert",
+      "posInfo": "publiziert, publizierte, hat publiziert"
+    },
+    {
+      "id": "v464",
+      "deck": "g07-schoenheit",
+      "level": "B2",
+      "de": "pflegen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "pflegt, pflegte, hat gepflegt",
+      "posInfo": "pflegt, pflegte, hat gepflegt"
+    },
+    {
+      "id": "v467",
+      "deck": "g07-schoenheit",
+      "level": "B2",
+      "de": "sich schminken",
+      "decision": "confirmed-current",
+      "previousPosInfo": "schminkt sich, schminkte sich, hat sich geschminkt",
+      "posInfo": "schminkt sich, schminkte sich, hat sich geschminkt"
+    },
+    {
+      "id": "v472",
+      "deck": "g07-schoenheit",
+      "level": "B2",
+      "de": "altern",
+      "decision": "confirmed-current",
+      "previousPosInfo": "altert, alterte, ist gealtert",
+      "posInfo": "altert, alterte, ist gealtert"
+    },
+    {
+      "id": "v478",
+      "deck": "g07-schoenheit",
+      "level": "B2",
+      "de": "sich anziehen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "zieht sich an, zog sich an, hat sich angezogen",
+      "posInfo": "zieht sich an, zog sich an, hat sich angezogen"
+    },
+    {
+      "id": "v490",
+      "deck": "g07-schoenheit",
+      "level": "B2",
+      "de": "retuschieren",
+      "decision": "confirmed-current",
+      "previousPosInfo": "retuschiert, retuschierte, hat retuschiert",
+      "posInfo": "retuschiert, retuschierte, hat retuschiert"
+    },
+    {
+      "id": "v495",
+      "deck": "g07-schoenheit",
+      "level": "B2",
+      "de": "beeindrucken",
+      "decision": "confirmed-current",
+      "previousPosInfo": "beeindruckt, beeindruckte, hat beeindruckt",
+      "posInfo": "beeindruckt, beeindruckte, hat beeindruckt"
+    },
+    {
+      "id": "v500",
+      "deck": "g07-schoenheit",
+      "level": "B2",
+      "de": "übertreiben",
+      "decision": "confirmed-current",
+      "previousPosInfo": "übertreibt, übertrieb, hat übertrieben",
+      "posInfo": "übertreibt, übertrieb, hat übertrieben"
+    },
+    {
+      "id": "v508",
+      "deck": "g08-kunst-kultur",
+      "level": "B2",
+      "de": "malen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "malt, malte, hat gemalt",
+      "posInfo": "malt, malte, hat gemalt"
+    },
+    {
+      "id": "v520",
+      "deck": "g08-kunst-kultur",
+      "level": "B2",
+      "de": "drehen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "dreht, drehte, hat gedreht",
+      "posInfo": "dreht, drehte, hat gedreht"
+    },
+    {
+      "id": "v528",
+      "deck": "g08-kunst-kultur",
+      "level": "B2",
+      "de": "aufführen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "führt auf, führte auf, hat aufgeführt",
+      "posInfo": "führt auf, führte auf, hat aufgeführt"
+    },
+    {
+      "id": "v530",
+      "deck": "g08-kunst-kultur",
+      "level": "B2",
+      "de": "kritisieren",
+      "decision": "confirmed-current",
+      "previousPosInfo": "kritisiert, kritisierte, hat kritisiert",
+      "posInfo": "kritisiert, kritisierte, hat kritisiert"
+    },
+    {
+      "id": "v531",
+      "deck": "g08-kunst-kultur",
+      "level": "B2",
+      "de": "rezensieren",
+      "decision": "confirmed-current",
+      "previousPosInfo": "rezensiert, rezensierte, hat rezensiert",
+      "posInfo": "rezensiert, rezensierte, hat rezensiert"
+    },
+    {
+      "id": "v569",
+      "deck": "h01-arbeit-beruf",
+      "level": "B2",
+      "de": "aufsteigen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "steigt auf, stieg auf, ist aufgestiegen",
+      "posInfo": "steigt auf, stieg auf, ist aufgestiegen"
+    },
+    {
+      "id": "v585",
+      "deck": "h01-arbeit-beruf",
+      "level": "B2",
+      "de": "streiken",
+      "decision": "confirmed-current",
+      "previousPosInfo": "streikt, streikte, hat gestreikt",
+      "posInfo": "streikt, streikte, hat gestreikt"
+    },
+    {
+      "id": "v588",
+      "deck": "h01-arbeit-beruf",
+      "level": "B2",
+      "de": "beurteilen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "beurteilt, beurteilte, hat beurteilt",
+      "posInfo": "beurteilt, beurteilte, hat beurteilt"
+    },
+    {
+      "id": "v596",
+      "deck": "h01-arbeit-beruf",
+      "level": "B2",
+      "de": "in den Ruhestand gehen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "geht in den Ruhestand, ging in den Ruhestand, ist in den Ruhestand gegangen",
+      "posInfo": "geht in den Ruhestand, ging in den Ruhestand, ist in den Ruhestand gegangen"
+    },
+    {
+      "id": "vpfl-89",
+      "deck": "h01-arbeit-beruf",
+      "level": "B2",
+      "de": "eintragen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "trägt ein, trug ein, hat eingetragen",
+      "posInfo": "trägt ein, trug ein, hat eingetragen"
+    },
+    {
+      "id": "vpfl-90",
+      "deck": "h01-arbeit-beruf",
+      "level": "B2",
+      "de": "lagern",
+      "decision": "confirmed-current",
+      "previousPosInfo": "lagert, lagerte, hat gelagert",
+      "posInfo": "lagert, lagerte, hat gelagert"
+    },
+    {
+      "id": "vpfl-91",
+      "deck": "h01-arbeit-beruf",
+      "level": "B2",
+      "de": "alarmieren",
+      "decision": "confirmed-current",
+      "previousPosInfo": "alarmiert, alarmierte, hat alarmiert",
+      "posInfo": "alarmiert, alarmierte, hat alarmiert"
+    },
+    {
+      "id": "v599",
+      "deck": "h02-umwelt-klima",
+      "level": "B2",
+      "de": "verschmutzen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "verschmutzt, verschmutzte, hat verschmutzt",
+      "posInfo": "verschmutzt, verschmutzte, hat verschmutzt"
+    },
+    {
+      "id": "v602",
+      "deck": "h02-umwelt-klima",
+      "level": "B2",
+      "de": "recyceln",
+      "decision": "confirmed-current",
+      "previousPosInfo": "recycelt, recycelte, hat recycelt",
+      "posInfo": "recycelt, recycelte, hat recycelt"
+    },
+    {
+      "id": "v607",
+      "deck": "h02-umwelt-klima",
+      "level": "B2",
+      "de": "verpacken",
+      "decision": "confirmed-current",
+      "previousPosInfo": "verpackt, verpackte, hat verpackt",
+      "posInfo": "verpackt, verpackte, hat verpackt"
+    },
+    {
+      "id": "v609",
+      "deck": "h02-umwelt-klima",
+      "level": "B2",
+      "de": "verbrauchen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "verbraucht, verbrauchte, hat verbraucht",
+      "posInfo": "verbraucht, verbrauchte, hat verbraucht"
+    },
+    {
+      "id": "v622",
+      "deck": "h02-umwelt-klima",
+      "level": "B2",
+      "de": "ausstoßen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "stößt aus, stieß aus, hat ausgestoßen",
+      "posInfo": "stößt aus, stieß aus, hat ausgestoßen"
+    },
+    {
+      "id": "v628",
+      "deck": "h02-umwelt-klima",
+      "level": "B2",
+      "de": "schädigen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "schädigt, schädigte, hat geschädigt",
+      "posInfo": "schädigt, schädigte, hat geschädigt"
+    },
+    {
+      "id": "v629",
+      "deck": "h02-umwelt-klima",
+      "level": "B2",
+      "de": "gefährden",
+      "decision": "confirmed-current",
+      "previousPosInfo": "gefährdet, gefährdete, hat gefährdet",
+      "posInfo": "gefährdet, gefährdete, hat gefährdet"
+    },
+    {
+      "id": "v632",
+      "deck": "h02-umwelt-klima",
+      "level": "B2",
+      "de": "schützen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "schützt, schützte, hat geschützt",
+      "posInfo": "schützt, schützte, hat geschützt"
+    },
+    {
+      "id": "v633",
+      "deck": "h02-umwelt-klima",
+      "level": "B2",
+      "de": "aussterben",
+      "decision": "confirmed-current",
+      "previousPosInfo": "stirbt aus, starb aus, ist ausgestorben",
+      "posInfo": "stirbt aus, starb aus, ist ausgestorben"
+    },
+    {
+      "id": "v646",
+      "deck": "h02-umwelt-klima",
+      "level": "B2",
+      "de": "abholzen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "holzt ab, holzte ab, hat abgeholzt",
+      "posInfo": "holzt ab, holzte ab, hat abgeholzt"
+    },
+    {
+      "id": "v657",
+      "deck": "h02-umwelt-klima",
+      "level": "B2",
+      "de": "protestieren",
+      "decision": "confirmed-current",
+      "previousPosInfo": "protestiert, protestierte, hat protestiert",
+      "posInfo": "protestiert, protestierte, hat protestiert"
+    },
+    {
+      "id": "v659",
+      "deck": "h03-konsum-geld",
+      "level": "B2",
+      "de": "überweisen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "überweist, überwies, hat überwiesen",
+      "posInfo": "überweist, überwies, hat überwiesen"
+    },
+    {
+      "id": "v665",
+      "deck": "h03-konsum-geld",
+      "level": "B2",
+      "de": "versteuern",
+      "decision": "confirmed-current",
+      "previousPosInfo": "versteuert, versteuerte, hat versteuert",
+      "posInfo": "versteuert, versteuerte, hat versteuert"
+    },
+    {
+      "id": "v668",
+      "deck": "h03-konsum-geld",
+      "level": "B2",
+      "de": "eröffnen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "eröffnet, eröffnete, hat eröffnet",
+      "posInfo": "eröffnet, eröffnete, hat eröffnet"
+    },
+    {
+      "id": "v670",
+      "deck": "h03-konsum-geld",
+      "level": "B2",
+      "de": "abheben",
+      "decision": "confirmed-current",
+      "previousPosInfo": "hebt ab, hob ab, hat abgehoben",
+      "posInfo": "hebt ab, hob ab, hat abgehoben"
+    },
+    {
+      "id": "v671",
+      "deck": "h03-konsum-geld",
+      "level": "B2",
+      "de": "einzahlen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "zahlt ein, zahlte ein, hat eingezahlt",
+      "posInfo": "zahlt ein, zahlte ein, hat eingezahlt"
+    },
+    {
+      "id": "v674",
+      "deck": "h03-konsum-geld",
+      "level": "B2",
+      "de": "ins Minus rutschen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "rutscht ins Minus, rutschte ins Minus, ist ins Minus gerutscht",
+      "posInfo": "rutscht ins Minus, rutschte ins Minus, ist ins Minus gerutscht"
+    },
+    {
+      "id": "v690",
+      "deck": "h03-konsum-geld",
+      "level": "B2",
+      "de": "werben",
+      "decision": "confirmed-current",
+      "previousPosInfo": "wirbt, warb, hat geworben",
+      "posInfo": "wirbt, warb, hat geworben"
+    },
+    {
+      "id": "v693",
+      "deck": "h03-konsum-geld",
+      "level": "B2",
+      "de": "sich leisten können",
+      "decision": "confirmed-current",
+      "previousPosInfo": "kann sich leisten, konnte sich leisten, hat sich leisten können",
+      "posInfo": "kann sich leisten, konnte sich leisten, hat sich leisten können"
+    },
+    {
+      "id": "v699",
+      "deck": "h03-konsum-geld",
+      "level": "B2",
+      "de": "umtauschen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "tauscht um, tauschte um, hat umgetauscht",
+      "posInfo": "tauscht um, tauschte um, hat umgetauscht"
+    },
+    {
+      "id": "v702",
+      "deck": "h03-konsum-geld",
+      "level": "B2",
+      "de": "reklamieren",
+      "decision": "confirmed-current",
+      "previousPosInfo": "reklamiert, reklamierte, hat reklamiert",
+      "posInfo": "reklamiert, reklamierte, hat reklamiert"
+    },
+    {
+      "id": "v705",
+      "deck": "h03-konsum-geld",
+      "level": "B2",
+      "de": "zurückgeben",
+      "decision": "confirmed-current",
+      "previousPosInfo": "gibt zurück, gab zurück, hat zurückgegeben",
+      "posInfo": "gibt zurück, gab zurück, hat zurückgegeben"
+    },
+    {
+      "id": "v706",
+      "deck": "h03-konsum-geld",
+      "level": "B2",
+      "de": "konsumieren",
+      "decision": "confirmed-current",
+      "previousPosInfo": "konsumiert, konsumierte, hat konsumiert",
+      "posInfo": "konsumiert, konsumierte, hat konsumiert"
+    },
+    {
+      "id": "v718",
+      "deck": "h04-mobilitaet-verkehr",
+      "level": "B2",
+      "de": "sich fortbewegen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "bewegt sich fort, bewegte sich fort, hat sich fortbewegt",
+      "posInfo": "bewegt sich fort, bewegte sich fort, hat sich fortbewegt"
+    },
+    {
+      "id": "v726",
+      "deck": "h04-mobilitaet-verkehr",
+      "level": "B2",
+      "de": "entwerten",
+      "decision": "confirmed-current",
+      "previousPosInfo": "entwertet, entwertete, hat entwertet",
+      "posInfo": "entwertet, entwertete, hat entwertet"
+    },
+    {
+      "id": "v728",
+      "deck": "h04-mobilitaet-verkehr",
+      "level": "B2",
+      "de": "sich verspäten",
+      "decision": "confirmed-current",
+      "previousPosInfo": "verspätet sich, verspätete sich, hat sich verspätet",
+      "posInfo": "verspätet sich, verspätete sich, hat sich verspätet"
+    },
+    {
+      "id": "v743",
+      "deck": "h04-mobilitaet-verkehr",
+      "level": "B2",
+      "de": "pendeln",
+      "decision": "corrected",
+      "previousPosInfo": "pendelt, pendelte, hat gependelt",
+      "posInfo": "pendelt, pendelte, ist gependelt"
+    },
+    {
+      "id": "v753",
+      "deck": "h04-mobilitaet-verkehr",
+      "level": "B2",
+      "de": "sich an die Verkehrsregeln halten",
+      "decision": "confirmed-current",
+      "previousPosInfo": "hält sich an die Verkehrsregeln, hielt sich an die Verkehrsregeln, hat sich an die Verkehrsregeln gehalten",
+      "posInfo": "hält sich an die Verkehrsregeln, hielt sich an die Verkehrsregeln, hat sich an die Verkehrsregeln gehalten"
+    },
+    {
+      "id": "v766",
+      "deck": "h04-mobilitaet-verkehr",
+      "level": "B2",
+      "de": "einchecken",
+      "decision": "confirmed-current",
+      "previousPosInfo": "checkt ein, checkte ein, hat eingecheckt",
+      "posInfo": "checkt ein, checkte ein, hat eingecheckt"
+    }
+  ]
+}
