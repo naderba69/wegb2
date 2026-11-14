@@ -45,6 +45,7 @@ const fixturePaths = [
   "vocab-posinfo-reviewed-10.json",
   "vocab-posinfo-reviewed-11.json",
   "vocab-posinfo-reviewed-12.json",
+  "vocab-posinfo-reviewed-13.json",
 ];
 const fixtures = fixturePaths.map((name) => JSON.parse(
   fs.readFileSync(path.join(root, "scripts", "fixtures", name), "utf8"),
@@ -64,6 +65,7 @@ const [
   tenthFixture,
   eleventhFixture,
   twelfthFixture,
+  thirteenthFixture,
 ] = fixtures;
 if (firstFixture.schema !== "wegb2-reviewed-vocab-posinfo-v1"
   || firstFixture.entries.length !== 110) {
@@ -123,6 +125,11 @@ if (twelfthFixture.schema !== "wegb2-reviewed-vocab-posinfo-decision-batch-v1"
   || twelfthFixture.batch !== "PA-034-12"
   || twelfthFixture.entries.length !== 98) {
   errors.push(`unexpected PA-034 batch 12 fixture: ${twelfthFixture.schema}/${twelfthFixture.batch}/${twelfthFixture.entries.length}`);
+}
+if (thirteenthFixture.schema !== "wegb2-reviewed-vocab-posinfo-decision-batch-v1"
+  || thirteenthFixture.batch !== "PA-034-13"
+  || thirteenthFixture.entries.length !== 119) {
+  errors.push(`unexpected PA-034 batch 13 fixture: ${thirteenthFixture.schema}/${thirteenthFixture.batch}/${thirteenthFixture.entries.length}`);
 }
 if (fixtures.some((fixture) => !/not (?:an )?external linguistic sign-off/.test(fixture.scope))) {
   errors.push("every review fixture must deny external linguistic sign-off");
@@ -278,20 +285,25 @@ if (JSON.stringify(twelfthLevelCounts) !== JSON.stringify({ A1: 43, A2: 54, A0: 
   || twelfthFixture.entries.some((entry) => !["A0", "A1", "A2"].includes(entry.level ?? ""))) {
   errors.push(`PA-034-12 must remain bounded to all 98 residual A0-A2 cards with 2 corrections and 96 confirmed-current decisions: ${JSON.stringify(twelfthLevelCounts)}/${twelfthCorrections.length}/${twelfthConfirmedCurrent.length}`);
 }
-if (reviewedIds.size !== 839) {
-  errors.push(`review fixtures must contain 839 unique entries, got ${reviewedIds.size}`);
+const thirteenthLevelCounts = countLevels(thirteenthFixture);
+const thirteenthCorrections = thirteenthFixture.entries.filter((entry) => entry.decision === "corrected");
+const thirteenthConfirmedCurrent = thirteenthFixture.entries.filter((entry) => entry.decision === "confirmed-current");
+if (JSON.stringify(thirteenthLevelCounts) !== JSON.stringify({ B1: 119 })
+  || thirteenthCorrections.length !== 2
+  || thirteenthConfirmedCurrent.length !== 117
+  || JSON.stringify(thirteenthCorrections.map((entry) => entry.id).sort())
+    !== JSON.stringify(["r315b1-048", "vi-funktio-000"])
+  || thirteenthFixture.entries.some((entry) => entry.posInfo.split(",").length !== 3)) {
+  errors.push(`PA-034-13 must remain bounded to all 119 residual B1 cards with 2 corrections and 117 confirmed-current decisions: ${JSON.stringify(thirteenthLevelCounts)}/${thirteenthCorrections.length}/${thirteenthConfirmedCurrent.length}`);
+}
+if (reviewedIds.size !== 958) {
+  errors.push(`review fixtures must contain 958 unique entries, got ${reviewedIds.size}`);
 }
 const unreviewedPosInfo = cards.filter((item) =>
   item.card.id && item.card.posInfo !== undefined && !reviewedIds.has(item.card.id));
-const unreviewedLevelCounts = {
-  B1: unreviewedPosInfo.filter((item) => item.level === "B1").length,
-  B2: unreviewedPosInfo.filter((item) => item.level === "B2").length,
-};
-if (unreviewedPosInfo.length !== 325
-  || unreviewedPosInfo.some((item) => !["B1", "B2"].includes(item.level ?? ""))
-  || unreviewedLevelCounts.B1 !== 119
-  || unreviewedLevelCounts.B2 !== 206) {
-  errors.push(`remaining review gap must stay bounded to 325 B1/B2 posInfo cards (119/206), got ${unreviewedPosInfo.length} ${JSON.stringify(unreviewedLevelCounts)}`);
+if (unreviewedPosInfo.length !== 206
+  || unreviewedPosInfo.some((item) => item.level !== "B2")) {
+  errors.push(`remaining review gap must stay bounded to 206 B2 posInfo cards, got ${unreviewedPosInfo.length}`);
 }
 
 if (errors.length) {
@@ -301,7 +313,7 @@ if (errors.length) {
 }
 
 console.log(
-  `✅ Reviewed vocabulary morphology: ${reviewedIds.size}/${reviewedIds.size} reviewed decisions match twelve bounded internal-review fixtures (${fixtures.map((fixture) => fixture.reviewedAt).join(", ")}).`,
+  `✅ Reviewed vocabulary morphology: ${reviewedIds.size}/${reviewedIds.size} reviewed decisions match thirteen bounded internal-review fixtures (${fixtures.map((fixture) => fixture.reviewedAt).join(", ")}).`,
 );
 console.log(
   "ℹ️ This gate prevents regression only for the reviewed PA-034 batches; it does not certify every posInfo field or provide external linguistic sign-off.",
