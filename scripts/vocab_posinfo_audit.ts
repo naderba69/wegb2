@@ -4,70 +4,112 @@ import path from "node:path";
 type VocabCard = {
   id?: string;
   de?: string;
+  level?: string;
   posInfo?: string;
 };
 
 type VocabDeck = {
+  level?: string;
   cards?: VocabCard[];
+};
+
+type ReviewEntry = Required<Pick<VocabCard, "id" | "de" | "posInfo">> & {
+  deck?: string;
+  level?: string;
+  previousPosInfo?: string;
 };
 
 type ReviewFixture = {
   schema: string;
+  batch?: string;
   reviewedAt: string;
   scope: string;
-  entries: Array<Required<Pick<VocabCard, "id" | "de" | "posInfo">>>;
+  entries: ReviewEntry[];
 };
 
 const root = process.cwd();
 const vocab = JSON.parse(
   fs.readFileSync(path.join(root, "content", "vocab.json"), "utf8"),
 ) as Record<string, VocabDeck>;
-const fixture = JSON.parse(
-  fs.readFileSync(
-    path.join(root, "scripts", "fixtures", "vocab-posinfo-reviewed.json"),
-    "utf8",
-  ),
-) as ReviewFixture;
+const fixturePaths = [
+  "vocab-posinfo-reviewed.json",
+  "vocab-posinfo-reviewed-02.json",
+];
+const fixtures = fixturePaths.map((name) => JSON.parse(
+  fs.readFileSync(path.join(root, "scripts", "fixtures", name), "utf8"),
+) as ReviewFixture);
 
 const errors: string[] = [];
-if (fixture.schema !== "wegb2-reviewed-vocab-posinfo-v1") {
-  errors.push(`unknown fixture schema: ${fixture.schema}`);
+const [firstFixture, secondFixture] = fixtures;
+if (firstFixture.schema !== "wegb2-reviewed-vocab-posinfo-v1"
+  || firstFixture.entries.length !== 110) {
+  errors.push(`unexpected PA-034 batch 01 fixture: ${firstFixture.schema}/${firstFixture.entries.length}`);
+}
+if (secondFixture.schema !== "wegb2-reviewed-vocab-posinfo-batch-v1"
+  || secondFixture.batch !== "PA-034-02"
+  || secondFixture.entries.length !== 59) {
+  errors.push(`unexpected PA-034 batch 02 fixture: ${secondFixture.schema}/${secondFixture.batch}/${secondFixture.entries.length}`);
+}
+if (fixtures.some((fixture) => !/not (?:an )?external linguistic sign-off/.test(fixture.scope))) {
+  errors.push("every review fixture must deny external linguistic sign-off");
 }
 
-const cards = Object.values(vocab).flatMap((deck) => deck.cards ?? []);
-const byId = new Map<string, VocabCard>();
-for (const card of cards) {
-  if (!card.id) continue;
-  if (byId.has(card.id)) errors.push(`duplicate vocab id: ${card.id}`);
-  byId.set(card.id, card);
+const cards = Object.entries(vocab).flatMap(([deck, value]) =>
+  (value.cards ?? []).map((card) => ({ deck, level: value.level ?? card.level, card })));
+const byId = new Map<string, { deck: string; level?: string; card: VocabCard }>();
+for (const item of cards) {
+  if (!item.card.id) continue;
+  if (byId.has(item.card.id)) errors.push(`duplicate vocab id: ${item.card.id}`);
+  byId.set(item.card.id, item);
 }
 
 const reviewedIds = new Set<string>();
-for (const expected of fixture.entries) {
-  if (reviewedIds.has(expected.id)) {
-    errors.push(`duplicate reviewed id: ${expected.id}`);
-    continue;
-  }
-  reviewedIds.add(expected.id);
-  const actual = byId.get(expected.id);
-  if (!actual) {
-    errors.push(`reviewed card missing from vocab bank: ${expected.id}`);
-    continue;
-  }
-  if (actual.de !== expected.de) {
-    errors.push(
-      `${expected.id}: de changed; expected «${expected.de}», got «${actual.de ?? ""}»`,
-    );
-  }
-  if (actual.posInfo !== expected.posInfo) {
-    errors.push(
-      `${expected.id}: posInfo changed; expected «${expected.posInfo}», got «${actual.posInfo ?? ""}»`,
-    );
+for (const fixture of fixtures) {
+  for (const expected of fixture.entries) {
+    if (reviewedIds.has(expected.id)) {
+      errors.push(`duplicate reviewed id across fixtures: ${expected.id}`);
+      continue;
+    }
+    reviewedIds.add(expected.id);
+    const actual = byId.get(expected.id);
+    if (!actual) {
+      errors.push(`reviewed card missing from vocab bank: ${expected.id}`);
+      continue;
+    }
+    if (actual.card.de !== expected.de) {
+      errors.push(
+        `${expected.id}: de changed; expected «${expected.de}», got «${actual.card.de ?? ""}»`,
+      );
+    }
+    if (actual.card.posInfo !== expected.posInfo) {
+      errors.push(
+        `${expected.id}: posInfo changed; expected «${expected.posInfo}», got «${actual.card.posInfo ?? ""}»`,
+      );
+    }
+    if (expected.deck && actual.deck !== expected.deck) {
+      errors.push(`${expected.id}: deck changed; expected ${expected.deck}, got ${actual.deck}`);
+    }
+    if (expected.level && actual.level !== expected.level) {
+      errors.push(`${expected.id}: level changed; expected ${expected.level}, got ${actual.level ?? ""}`);
+    }
+    if (expected.previousPosInfo !== undefined && expected.previousPosInfo === expected.posInfo) {
+      errors.push(`${expected.id}: batch 02 previous and corrected posInfo must differ`);
+    }
   }
 }
 
-if (fixture.entries.length !== 110) {
-  errors.push(`review fixture must contain 110 entries, got ${fixture.entries.length}`);
+const levelCounts = secondFixture.entries.reduce<Record<string, number>>((counts, entry) => {
+  counts[entry.level ?? ""] = (counts[entry.level ?? ""] ?? 0) + 1;
+  return counts;
+}, {});
+if (JSON.stringify(levelCounts) !== JSON.stringify({ A1: 26, A2: 9, B1: 16, B2: 8 })) {
+  errors.push(`unexpected PA-034-02 level distribution: ${JSON.stringify(levelCounts)}`);
+}
+if (secondFixture.entries.some((entry) => entry.de.includes(" ") || entry.posInfo.split(",").length !== 3)) {
+  errors.push("PA-034-02 must remain the bounded single-head, three-principal-part batch");
+}
+if (reviewedIds.size !== 169) {
+  errors.push(`review fixtures must contain 169 unique entries, got ${reviewedIds.size}`);
 }
 
 if (errors.length) {
@@ -77,8 +119,8 @@ if (errors.length) {
 }
 
 console.log(
-  `✅ Reviewed vocabulary morphology: ${fixture.entries.length}/${fixture.entries.length} fixed cards match the internal manual-review fixture (${fixture.reviewedAt}).`,
+  `✅ Reviewed vocabulary morphology: ${reviewedIds.size}/${reviewedIds.size} corrected cards match two bounded internal-review fixtures (${fixtures.map((fixture) => fixture.reviewedAt).join(", ")}).`,
 );
 console.log(
-  "ℹ️ This gate prevents regression only for the reviewed PA-034 set; it does not certify every posInfo field.",
+  "ℹ️ This gate prevents regression only for the reviewed PA-034 batches; it does not certify every posInfo field or provide external linguistic sign-off.",
 );

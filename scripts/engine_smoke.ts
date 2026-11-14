@@ -15211,6 +15211,39 @@ function collectR262(dir: string, out: string[] = []): string[] {
     "K407c PA-033: التحذير المشترك والبوابة المستقلة موصولان بـCI ويمنعان تحويل الحراسة إلى توقيع اختصاصي");
 }
 
+/* ═══ K408 — PA-034-02: الدفعة الثانية المحدودة لمراجعة تصريف المفردات ═══ */
+{
+  const reviewK408 = JSON.parse(readFileSync("scripts/fixtures/vocab-posinfo-reviewed-02.json", "utf8")) as {
+    schema: string;
+    batch: string;
+    scope: string;
+    entries: { id: string; deck: string; level: string; de: string; previousPosInfo: string; posInfo: string }[];
+  };
+  const vocabK408 = bankRoh("vocab.json") as Record<string, { cards: { id: string; de: string; posInfo?: string }[] }>;
+  const cardsK408 = new Map(Object.entries(vocabK408).flatMap(([deck, value]) =>
+    value.cards.map((card) => [card.id, { deck, ...card }] as const)));
+  const levelsK408 = reviewK408.entries.reduce<Record<string, number>>((counts, entry) => {
+    counts[entry.level] = (counts[entry.level] ?? 0) + 1;
+    return counts;
+  }, {});
+  ok(reviewK408.schema === "wegb2-reviewed-vocab-posinfo-batch-v1" && reviewK408.batch === "PA-034-02" &&
+    reviewK408.entries.length === 59 && new Set(reviewK408.entries.map((entry) => entry.id)).size === 59 &&
+    JSON.stringify(levelsK408) === JSON.stringify({ A1: 26, A2: 9, B1: 16, B2: 8 }),
+    "K408a PA-034-02: سجل القرار الثاني محدود بـ59 بطاقة فريدة وتوزيعه A1=26/A2=9/B1=16/B2=8");
+  ok(reviewK408.entries.every((entry) => {
+    const card = cardsK408.get(entry.id);
+    return card?.deck === entry.deck && card.de === entry.de && card.posInfo === entry.posInfo &&
+      entry.previousPosInfo !== entry.posInfo && !entry.de.includes(" ") && entry.posInfo.split(",").length === 3;
+  }),
+    "K408b PA-034-02: كل قرار مربوط بالمعرف/البنك والرأس المفرد وثلاث صيغ مصححة تختلف عن القيمة السابقة");
+  const patchK408 = readFileSync("scripts/patches/apply_vocab_posinfo_review_pa034_02.py", "utf8");
+  const auditK408 = readFileSync("scripts/vocab_posinfo_audit.ts", "utf8");
+  ok(patchK408.includes("current == entry[\"posInfo\"]") && patchK408.includes("current != entry[\"previousPosInfo\"]") &&
+    auditK408.includes("reviewedIds.size !== 169") && auditK408.includes("does not certify every posInfo field") &&
+    reviewK408.scope.includes("not external linguistic sign-off"),
+    "K408c PA-034-02: الرقعة قابلة للإعادة ومقفلة بالقيمة السابقة، والبوابة تعلن 169 فقط بلا اعتماد بقية الحقول");
+}
+
 
 /* ═══ K334 — R309: القفل الفعلي الحقيقي — إغلاقُ اليوم عند حدود الوحدة ممنوعٌ لا منصوحٌ به فقط ═══ */
 {

@@ -5,7 +5,7 @@
   "scopeNoteAr": "هذه قياسات قابلة لإعادة التشغيل وليست شهادة صحة لغوية أو بيداغوجية.",
   "baseline": {
     "smoke": {
-      "passed": 2447,
+      "passed": 2450,
       "failed": 0
     },
     "interactiveJsdom": {
@@ -334,15 +334,28 @@
     "cardsTotal": 6202,
     "cardsWithPosInfo": 1164,
     "threeFormPosInfo": 1140,
-    "manualConfirmedMalformedCards": 110,
+    "manualConfirmedMalformedCards": 169,
     "levels": {
       "A0": 3,
-      "A1": 13,
-      "A2": 10,
-      "B1": 64,
-      "B2": 20
+      "A1": 39,
+      "A2": 19,
+      "B1": 80,
+      "B2": 28
     },
-    "overlappingIssueTags": {
+    "batch02": {
+      "correctedCards": 59,
+      "scope": "single-head, three-principal-part contextual internal review",
+      "levels": {
+        "A1": 26,
+        "A2": 9,
+        "B1": 16,
+        "B2": 8
+      },
+      "fixture": "scripts/fixtures/vocab-posinfo-reviewed-02.json",
+      "patch": "scripts/patches/apply_vocab_posinfo_review_pa034_02.py",
+      "externalLinguisticSignOff": false
+    },
+    "batch01OverlappingIssueTags": {
       "present_malformed": 53,
       "preterite_malformed": 106,
       "perfect_malformed": 99,
@@ -352,14 +365,19 @@
     "automatedReferenceComparison": {
       "exactSingleHeadwordsMatched": 833,
       "caveatAr": "مرشحات فقط؛ لا تعتمد المكتبة وحدها في المساعد haben/sein أو قابلية الفصل أو تعدد المعنى.",
-      "remainingAdditionalCandidatesPendingHumanContextReview": 364,
+      "remainingAdditionalCandidatesPendingContextReview": 305,
       "initialParticipleReferenceMismatches": 432,
       "initialAlreadyInManualConfirmedSet": 68
     },
-    "correctedCards": 110,
+    "correctedCards": 169,
     "openConfirmedCards": 0,
-    "regressionFixture": "scripts/fixtures/vocab-posinfo-reviewed.json",
-    "regressionGate": "npm run audit:vocab-posinfo"
+    "remainingCandidateCards": 305,
+    "regressionFixtures": [
+      "scripts/fixtures/vocab-posinfo-reviewed.json",
+      "scripts/fixtures/vocab-posinfo-reviewed-02.json"
+    ],
+    "regressionGate": "npm run audit:vocab-posinfo",
+    "claimBoundary": "169 bounded internal decisions only; remaining posInfo fields and external linguistic validation are not certified"
   },
   "writingBankConsistencyAudit": {
     "path": "content/writing.json",

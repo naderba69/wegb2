@@ -23936,7 +23936,7 @@
     "tags": [
      "essen"
     ],
-    "posInfo": "backt, backte, hat gebackt"
+    "posInfo": "backt, backte, hat gebacken"
    },
    {
     "id": "vw-a1ess-038",
@@ -24783,7 +24783,7 @@
     "tags": [
      "kleidung"
     ],
-    "posInfo": "tragt, tragte, hat getragt"
+    "posInfo": "trägt, trug, hat getragen"
    },
    {
     "id": "vw-a1koe-033",
@@ -25005,7 +25005,7 @@
      "kleidung"
     ],
     "aussprache": "sch = «ش» · w = «ڤ»",
-    "posInfo": "wascht, waschte, hat gewascht"
+    "posInfo": "wäscht, wusch, hat gewaschen"
    },
    {
     "id": "vw-a1koe-050",
@@ -25310,7 +25310,7 @@
     "tags": [
      "verkehr"
     ],
-    "posInfo": "fahrt, fahrte, ist gefahrt"
+    "posInfo": "fährt, fuhr, ist gefahren"
    },
    {
     "id": "vw-a1sta-020",
@@ -25323,7 +25323,7 @@
     "tags": [
      "verkehr"
     ],
-    "posInfo": "lauft, laufte, hat gelauft"
+    "posInfo": "läuft, lief, ist gelaufen"
    },
    {
     "id": "vw-a1sta-021",
@@ -25337,7 +25337,7 @@
      "verkehr"
     ],
     "aussprache": "ie = «إي» ممدودة",
-    "posInfo": "fliegt, fliegte, ist gefliegt"
+    "posInfo": "fliegt, flog, ist geflogen"
    },
    {
     "id": "vw-a1sta-022",
@@ -25363,7 +25363,7 @@
     "tags": [
      "verkehr"
     ],
-    "posInfo": "fahrt ab, fahrte ab, ist abgefahrt"
+    "posInfo": "fährt ab, fuhr ab, ist abgefahren"
    },
    {
     "id": "vw-a1sta-026",
@@ -25538,7 +25538,7 @@
     "syn": [
      "entdecken"
     ],
-    "posInfo": "findet, findete, hat gefindt"
+    "posInfo": "findet, fand, hat gefunden"
    },
    {
     "id": "vw-a1sta-040",
@@ -25961,7 +25961,7 @@
      "buero"
     ],
     "aussprache": "ie = «إي» ممدودة · sch = «ش» · v = «ف»",
-    "posInfo": "verschiebt, verschiebte, hat verschiebt"
+    "posInfo": "verschiebt, verschob, hat verschoben"
    },
    {
     "id": "vw-a2arb-025",
@@ -26831,7 +26831,7 @@
     "tags": [
      "kommunikation"
     ],
-    "posInfo": "ruft an, rufte an, hat angeruft"
+    "posInfo": "ruft an, rief an, hat angerufen"
    },
    {
     "id": "vw-a2all-019",
@@ -26900,7 +26900,7 @@
      "sozial"
     ],
     "aussprache": "ei = «آي» لا «إي»",
-    "posInfo": "ladet ein, ladete ein, hat eingeladt"
+    "posInfo": "lädt ein, lud ein, hat eingeladen"
    },
    {
     "id": "vw-a2all-026",
@@ -29191,7 +29191,7 @@
     "syn": [
      "schauen"
     ],
-    "posInfo": "seht, sehte, hat geseht"
+    "posInfo": "sieht, sah, hat gesehen"
    },
    {
     "id": "vx-haus--032",
@@ -29289,7 +29289,7 @@
     "syn": [
      "unterstützen"
     ],
-    "posInfo": "helft, helfte, hat gehelft"
+    "posInfo": "hilft, half, hat geholfen"
    },
    {
     "id": "vx-haus--039",
@@ -29317,7 +29317,7 @@
      "verb"
     ],
     "aussprache": "w = «ڤ»",
-    "posInfo": "wisst, wisste, hat gewisst"
+    "posInfo": "weiß, wusste, hat gewusst"
    },
    {
     "id": "vx-haus--041",
@@ -29330,7 +29330,7 @@
     "tags": [
      "verb"
     ],
-    "posInfo": "kennt, kennte, hat gekennt"
+    "posInfo": "kennt, kannte, hat gekannt"
    },
    {
     "id": "vx-haus--042",
@@ -29360,7 +29360,7 @@
      "verb"
     ],
     "aussprache": "ei = «آي» لا «إي»",
-    "posInfo": "bleibt, bleibte, hat gebleibt"
+    "posInfo": "bleibt, blieb, ist geblieben"
    },
    {
     "id": "vx-haus--044",
@@ -29404,7 +29404,7 @@
     "syn": [
      "beginnen"
     ],
-    "posInfo": "fangt an, fangte an, hat angefangt"
+    "posInfo": "fängt an, fing an, hat angefangen"
    },
    {
     "id": "vx-haus--047",
@@ -29432,7 +29432,7 @@
      "verb"
     ],
     "aussprache": "v = «ف»",
-    "posInfo": "vergesst, vergesste, hat vergesst"
+    "posInfo": "vergisst, vergaß, hat vergessen"
    },
    {
     "id": "vx-haus--049",
@@ -29459,7 +29459,7 @@
      "verb"
     ],
     "aussprache": "w = «ڤ»",
-    "posInfo": "wartet, wartete, hat gewartt"
+    "posInfo": "wartet, wartete, hat gewartet"
    },
    {
     "id": "vx-haus--051",
@@ -30644,7 +30644,7 @@
     "tags": [
      "freizeit"
     ],
-    "posInfo": "singt, singte, hat gesingt"
+    "posInfo": "singt, sang, hat gesungen"
    },
    {
     "id": "vy-natur-027",
@@ -30756,7 +30756,7 @@
     "syn": [
      "begegnen"
     ],
-    "posInfo": "trefft, treffte, hat getrefft"
+    "posInfo": "trifft, traf, hat getroffen"
    },
    {
     "id": "vy-natur-036",
@@ -31421,7 +31421,7 @@
      "alltag"
     ],
     "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · v = «ف»",
-    "posInfo": "versprecht, versprechte, hat versprecht"
+    "posInfo": "verspricht, versprach, hat versprochen"
    },
    {
     "id": "vy-leben-021",
@@ -32426,7 +32426,7 @@
      "bewegung"
     ],
     "aussprache": "sp/st في البداية = «شب/شت»",
-    "posInfo": "steht, stehte, hat gesteht"
+    "posInfo": "steht, stand, hat gestanden"
    },
    {
     "id": "vz-welt-b-031",
@@ -33411,7 +33411,7 @@
     "tags": [
      "beruf"
     ],
-    "posInfo": "bietet an, bietete an, hat angebiett"
+    "posInfo": "bietet an, bot an, hat angeboten"
    }
   ]
  },
@@ -34108,7 +34108,7 @@
      "modal"
     ],
     "aussprache": "ö = بينَ الضمّةِ والكسرة",
-    "posInfo": "könnt, könnte, hat gekönnt"
+    "posInfo": "kann, konnte, hat gekonnt"
    },
    {
     "id": "va-modort-001",
@@ -34122,7 +34122,7 @@
      "modal"
     ],
     "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
-    "posInfo": "müsst, müsste, hat gemüsst"
+    "posInfo": "muss, musste, hat gemusst"
    },
    {
     "id": "va-modort-002",
@@ -34136,7 +34136,7 @@
      "modal"
     ],
     "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
-    "posInfo": "dürft, dürfte, hat gedürft"
+    "posInfo": "darf, durfte, hat gedurft"
    },
    {
     "id": "va-modort-003",
@@ -34150,7 +34150,7 @@
      "modal"
     ],
     "aussprache": "w = «ڤ»",
-    "posInfo": "wollt, wollte, hat gewollt"
+    "posInfo": "will, wollte, hat gewollt"
    },
    {
     "id": "va-modort-004",
@@ -34163,7 +34163,7 @@
     "tags": [
      "modal"
     ],
-    "posInfo": "sollt, sollte, hat gesollt"
+    "posInfo": "soll, sollte, hat gesollt"
    },
    {
     "id": "va-modort-005",
@@ -35189,7 +35189,7 @@
     "tags": [
      "alltag"
     ],
-    "posInfo": "bringt mit, bringte mit, hat mitgebringt"
+    "posInfo": "bringt mit, brachte mit, hat mitgebracht"
    },
    {
     "id": "va-modort-089",
@@ -37797,7 +37797,7 @@
      "fest"
     ],
     "aussprache": "ei = «آي» لا «إي» · v = «ف»",
-    "posInfo": "bereitet vor, bereitete vor, hat vorgebereitt"
+    "posInfo": "bereitet vor, bereitete vor, hat vorbereitet"
    },
    {
     "id": "vc-reise-800",
@@ -39674,7 +39674,7 @@
     "syn": [
      "siegen"
     ],
-    "posInfo": "gewinnt, gewinnte, hat gewinnt"
+    "posInfo": "gewinnt, gewann, hat gewonnen"
    },
    {
     "id": "vd-gesund-007",
@@ -39688,7 +39688,7 @@
      "sport"
     ],
     "aussprache": "ie = «إي» ممدودة · v = «ف»",
-    "posInfo": "verliert, verlierte, hat verliert"
+    "posInfo": "verliert, verlor, hat verloren"
    },
    {
     "id": "vd-gesund-008",
@@ -40183,7 +40183,7 @@
     "tags": [
      "kueche"
     ],
-    "posInfo": "bratet, bratete, hat gebratt"
+    "posInfo": "brät, briet, hat gebraten"
    },
    {
     "id": "ve-kueche--005",
@@ -41471,7 +41471,7 @@
     "tags": [
      "erzaehlen"
     ],
-    "posInfo": "lügt, lügte, hat gelügt"
+    "posInfo": "lügt, log, hat gelogen"
    },
    {
     "id": "r312a2-153",
@@ -45199,7 +45199,7 @@
      "karriere"
     ],
     "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
-    "posInfo": "gründet, gründete, hat gegründt"
+    "posInfo": "gründet, gründete, hat gegründet"
    },
    {
     "id": "vg-arbeit--012",
@@ -59921,7 +59921,7 @@
     ],
     "exampleDe": "Er verzichtet auf die Pause.",
     "exampleAr": "يستغني عن الاستراحة.",
-    "posInfo": "verzichtet, verzichtete, hat verzichtt"
+    "posInfo": "verzichtet, verzichtete, hat verzichtet"
    },
    {
     "id": "j01-arbeit-vertieft-007",
@@ -61551,7 +61551,7 @@
     ],
     "exampleDe": "Die Temperaturen sinken in der Nacht.",
     "exampleAr": "تنخفض درجات الحرارة في الليل.",
-    "posInfo": "sinkt, sinkte, hat gesinkt"
+    "posInfo": "sinkt, sank, ist gesunken"
    },
    {
     "id": "j03-umwelt-energie-049",
@@ -62585,7 +62585,7 @@
     ],
     "exampleDe": "Wir messen den Blutdruck zweimal am Tag.",
     "exampleAr": "نقيس ضغط الدم مرتين يوميًا.",
-    "posInfo": "messt, messte, hat gemesst"
+    "posInfo": "misst, maß, hat gemessen"
    },
    {
     "id": "j04-gesundheit-pflege-055",
@@ -65839,7 +65839,7 @@
     ],
     "exampleDe": "Ich zweifle an seinem Plan.",
     "exampleAr": "أشكّ في خطته.",
-    "posInfo": "zweifet, zweifete, hat gezweifet"
+    "posInfo": "zweifelt, zweifelte, hat gezweifelt"
    },
    {
     "id": "j08-gefuehle-beziehungen-025",
@@ -66538,7 +66538,7 @@
     ],
     "exampleDe": "Bitte schnell einsteigen, der Zug fährt ab.",
     "exampleAr": "اركبوا بسرعة من فضلكم، القطار يتحرك.",
-    "posInfo": "steigt ein, steigte ein, ist eingesteigt"
+    "posInfo": "steigt ein, stieg ein, ist eingestiegen"
    },
    {
     "id": "j09-stadt-wohnen-verkehr-018",
@@ -69557,7 +69557,7 @@
     ],
     "exampleDe": "Der Fluss fließt ins Meer.",
     "exampleAr": "يتدفق النهر إلى البحر.",
-    "posInfo": "fließt, fließte, hat gefließt"
+    "posInfo": "fließt, floss, ist geflossen"
    },
    {
     "id": "j12-natur-tiere-052",
@@ -69648,7 +69648,7 @@
     ],
     "exampleDe": "Der Frosch springt ins Wasser.",
     "exampleAr": "يقفز الضفدع إلى الماء.",
-    "posInfo": "springt, springte, hat gespringt"
+    "posInfo": "springt, sprang, ist gesprungen"
    },
    {
     "id": "j12-natur-tiere-059",
@@ -72646,7 +72646,7 @@
     ],
     "exampleDe": "Der Kurs beginnt um neun Uhr.",
     "exampleAr": "تبدأ الدورة في التاسعة.",
-    "posInfo": "beginnt, beginnte, hat beginnt"
+    "posInfo": "beginnt, begann, hat begonnen"
    },
    {
     "id": "j16-wege-ziele-014",
@@ -73032,7 +73032,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "achtet, achtete, hat geachtt"
+    "posInfo": "achtet, achtete, hat geachtet"
    },
    {
     "id": "r314b1-011",
@@ -74478,7 +74478,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "ßt bei, ßte bei, hat beißt"
+    "posInfo": "beißt, biss, hat gebissen"
    },
    {
     "id": "r314b1-115",
@@ -74913,7 +74913,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "bietet, bietete, hat gebiett"
+    "posInfo": "bietet, bot, hat geboten"
    },
    {
     "id": "r314b1-147",
@@ -77236,7 +77236,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "fangt, fangte, hat gefangt"
+    "posInfo": "fängt, fing, hat gefangen"
    },
    {
     "id": "r316b1-010",
@@ -77349,7 +77349,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "seht fern, sehte fern, hat ferngeseht"
+    "posInfo": "sieht fern, sah fern, hat ferngesehen"
    },
    {
     "id": "r316b1-018",
@@ -79421,7 +79421,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "informiert, informierte, hat geinformiert"
+    "posInfo": "informiert, informierte, hat informiert"
    },
    {
     "id": "r317b1-009",
@@ -80241,7 +80241,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "klingt, klingte, hat geklingt"
+    "posInfo": "klingt, klang, hat geklungen"
    },
    {
     "id": "r317b1-067",
@@ -81042,7 +81042,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "leidet, leidete, hat geleidt"
+    "posInfo": "leidet, litt, hat gelitten"
    },
    {
     "id": "r317b1-123",
@@ -83862,7 +83862,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "rennt, rennte, hat gerennt"
+    "posInfo": "rennt, rannte, ist gerannt"
    },
    {
     "id": "r319b1-034",
@@ -84161,7 +84161,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "sammet, sammete, hat gesammet"
+    "posInfo": "sammelt, sammelte, hat gesammelt"
    },
    {
     "id": "r320b1-007",
@@ -85448,7 +85448,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "stehlt, stehlte, hat gestehlt"
+    "posInfo": "stiehlt, stahl, hat gestohlen"
    },
    {
     "id": "r321b1-039",
@@ -88312,7 +88312,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "werdet, werdete, hat gewerdt"
+    "posInfo": "wird, wurde, ist geworden"
    },
    {
     "id": "r324b1-022",
@@ -88325,7 +88325,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "werft, werfte, hat gewerft"
+    "posInfo": "wirft, warf, hat geworfen"
    },
    {
     "id": "r324b1-023",
@@ -90443,7 +90443,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "seit, seite, hat geseit"
+    "posInfo": "ist, war, ist gewesen"
    },
    {
     "id": "r327b1-015",
@@ -90514,7 +90514,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "streitet, streitete, hat gestreitt"
+    "posInfo": "streitet, stritt, hat gestritten"
    },
    {
     "id": "r327b1-020",
