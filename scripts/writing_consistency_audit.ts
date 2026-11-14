@@ -3,16 +3,37 @@ import path from "node:path";
 
 type WritingTask = {
   id: string;
+  level?: string;
   taskDe: string;
+  taskAr?: string;
   criteria: string[];
   sample: string;
   noteAr: string[];
   zielWort?: number;
+  [key: string]: unknown;
+};
+
+type WritingReviewEntry = {
+  id: string;
+  level: string;
+  decision: "corrected" | "confirmed-current";
+  previous: WritingTask;
+  current: WritingTask;
+};
+
+type WritingReviewFixture = {
+  schema: string;
+  batch: string;
+  scope: string;
+  entries: WritingReviewEntry[];
 };
 
 const tasks = JSON.parse(
   fs.readFileSync(path.join(process.cwd(), "content", "writing.json"), "utf8"),
 ) as WritingTask[];
+const review02 = JSON.parse(
+  fs.readFileSync(path.join(process.cwd(), "scripts", "fixtures", "writing-reviewed-02.json"), "utf8"),
+) as WritingReviewFixture;
 const byId = new Map(tasks.map((task) => [task.id, task]));
 const errors: string[] = [];
 const wordRiskIds = new Set([
@@ -122,6 +143,87 @@ if (count(a202.sample, "weil") !== 2 || count(a202.sample, "dass") !== 1) {
   );
 }
 
+const review02Ids = new Set(review02.entries.map((entry) => entry.id));
+const review02Corrected = review02.entries.filter((entry) => entry.decision === "corrected");
+const review02Confirmed = review02.entries.filter((entry) => entry.decision === "confirmed-current");
+const review02Levels = review02.entries.reduce<Record<string, number>>((counts, entry) => {
+  counts[entry.level] = (counts[entry.level] ?? 0) + 1;
+  return counts;
+}, {});
+if (review02.schema !== "wegb2-reviewed-writing-decision-batch-v1"
+  || review02.batch !== "PA-035-02"
+  || review02.entries.length !== 25
+  || review02Ids.size !== 25
+  || review02Corrected.length !== 17
+  || review02Confirmed.length !== 8
+  || JSON.stringify(review02Levels) !== JSON.stringify({ A0: 6, A1: 19 })) {
+  errors.push(
+    `unexpected PA-035-02 fixture scope/counts: ${review02.schema}/${review02.batch}/${review02.entries.length}/${review02Ids.size}/${review02Corrected.length}/${review02Confirmed.length}/${JSON.stringify(review02Levels)}`,
+  );
+}
+if (!review02.scope.includes("triage only")
+  || !review02.scope.includes("not correction generators")
+  || !review02.scope.includes("not independent linguistic, exam, or CEFR sign-off")) {
+  errors.push("PA-035-02 fixture must preserve its triage and external-sign-off claim boundary");
+}
+for (const entry of review02.entries) {
+  const actual = byId.get(entry.id);
+  if (!actual) {
+    errors.push(`missing PA-035-02 writing task ${entry.id}`);
+    continue;
+  }
+  if (actual.level !== entry.level
+    || entry.previous.id !== entry.id
+    || entry.current.id !== entry.id
+    || entry.previous.level !== entry.level
+    || entry.current.level !== entry.level
+    || JSON.stringify(actual) !== JSON.stringify(entry.current)) {
+    errors.push(`${entry.id}: PA-035-02 identity or reviewed task content drifted`);
+  }
+  if (entry.decision === "corrected" && JSON.stringify(entry.previous) === JSON.stringify(entry.current)) {
+    errors.push(`${entry.id}: corrected PA-035-02 decision has no change`);
+  }
+  if (entry.decision === "confirmed-current" && JSON.stringify(entry.previous) !== JSON.stringify(entry.current)) {
+    errors.push(`${entry.id}: confirmed-current PA-035-02 decision changes the task`);
+  }
+  const target = entry.current.zielWort;
+  if (!target) {
+    errors.push(`${entry.id}: PA-035-02 task has no internal word target`);
+  } else {
+    const ratio = words(entry.current.sample) / target;
+    if (ratio < 0.8 || ratio > 1.2) {
+      errors.push(
+        `${entry.id}: PA-035-02 sample has ${words(entry.current.sample)} words for target ${target} (${(ratio * 100).toFixed(1)}%)`,
+      );
+    }
+  }
+  const range = sentenceRange(entry.current.taskDe);
+  if (range) {
+    const actualMarks = sentenceMarks(entry.current.sample);
+    if (actualMarks < range[0] || actualMarks > range[1]) {
+      errors.push(`${entry.id}: PA-035-02 sample has ${actualMarks} sentence marks; expected ${range.join("–")}`);
+    }
+  }
+}
+if (sentenceMarks(requireTask("w-a0-02").sample) !== 3) {
+  errors.push("w-a0-02: reviewed model must remain exactly three simple sentences");
+}
+if (requireTask("w-a0-01").zielWort !== 60
+  || requireTask("w-a0-04").zielWort !== 40
+  || requireTask("w-a0-05").zielWort !== 40
+  || requireTask("w-a1-12").zielWort !== 50
+  || !requireTask("w-a1-03").taskAr?.toString().includes("أدوات الملكية")
+  || !requireTask("w-a1-10").sample.includes("Geburtsdatum: 12.03.1998")
+  || requireTask("w-a1-10").sample.includes("sechsundzwanzig Jahre alt")) {
+  errors.push("PA-035-02 guarded target, Arabic-alignment, or form-date corrections regressed");
+}
+const review02CurrentText = JSON.stringify(review02.entries.map((entry) => entry.current));
+for (const stale of ["الألفية الثانية", "كما تُلْمَز", "قارةٌ لا تُساوَم", "يُفحصان في الامتحان"]) {
+  if (review02CurrentText.includes(stale)) {
+    errors.push(`PA-035-02 stale or unsupported note text returned: ${stale}`);
+  }
+}
+
 if (errors.length) {
   console.error("❌ Writing consistency audit failed:");
   for (const error of errors) console.error(`- ${error}`);
@@ -129,8 +231,8 @@ if (errors.length) {
 }
 
 console.log(
-  "✅ Writing consistency: visible ca.-word targets match zielWort; all 42 reviewed PA-035 findings remain fixed.",
+  "✅ Writing consistency: 42 registered PA-035 findings remain fixed; all 25 bounded A0/A1 full-card decisions match (17 corrected, 8 confirmed-current).",
 );
 console.log(
-  "ℹ️ This gate checks the reviewed target, sample-length, sentence-count, and task/criterion/sample/note corrections; it does not certify all writing models or exam claims.",
+  "ℹ️ This gate checks the reviewed target, sample-length, sentence-count, task/Arabic/criterion/model/note, and identity decisions; it does not certify the remaining 80 writing cards or provide independent linguistic, exam, or CEFR sign-off.",
 );

@@ -2767,7 +2767,8 @@ void 0;
     ok(["A1", "A2", "B1", "B2"].every((L) => writingTasks.filter((w) => w.level === L).length >= 10), `K85a مهامُّ الكتابةِ لكلِّ مستوى ≥10 (${["A1", "A2", "B1", "B2"].map((L) => writingTasks.filter((w) => w.level === L).length).join("/")})`);
     const LEN: Record<string, [number, number]> = { A1: [25, 80], A2: [50, 130], B1: [80, 170], B2: [120, 260] };
     ok(neuW.length === 22 && neuW.every((w) => w.criteria.length >= 3 && w.criteria.every((c) => /[\u0600-\u06FF]/.test(c)) && /[\u0600-\u06FF]/.test(w.taskAr) && !/[\u0600-\u06FF]/.test(w.sample) && w.sample.split(/\s+/).length >= LEN[w.level][0] && w.sample.split(/\s+/).length <= LEN[w.level][1]), "K85b 22 مهمةً جديدة: ≥3 معاييرَ عربيّة، نموذجٌ ألمانيٌّ بطولِ المستوى") // R217: +10 مهام B1/B2 بنماذج كاملة (22، كانت 12);
-    ok(neuW.every((w) => !/\d{1,3}\s?(%|Prozent)|\b(1[89]\d\d|20[0-4]\d)\b/.test(w.sample)), "K85c لا نسبَ ولا سنواتٍ في نماذجِ الكتابةِ الجديدة");
+    const withoutFormBirthDatesK85 = (sample: string) => sample.replace(/\bGeburtsdatum:\s*\d{1,2}\.\d{1,2}\.(?:1[89]\d\d|20[0-4]\d)\b/g, "Geburtsdatum: [FORM-DATE]");
+    ok(neuW.every((w) => !/\d{1,3}\s?(%|Prozent)|\b(1[89]\d\d|20[0-4]\d)\b/.test(withoutFormBirthDatesK85(w.sample))), "K85c لا نسبَ ولا سنواتِ ادعاءٍ في النماذج الجديدة؛ تاريخ الميلاد الخيالي في حقل الاستمارة مستثنى");
     ok(new Set(writingTasks.map((w) => w.id)).size === writingTasks.length, "K85d معرِّفاتُ الكتابةِ فريدة");
   }
 
@@ -15783,6 +15784,45 @@ function collectR262(dir: string, out: string[] = []): string[] {
     reviewK421.scope.includes("triage only") && reviewK421.scope.includes("not correction generators") &&
     reviewK421.scope.includes("not external linguistic sign-off"),
     "K421c PA-034-15: رقعة الإبقاء ترفض الانجراف، والبوابة تحرس 1164/1164 مع إبقاء الاعتماد اللغوي وبقية الحقول خارج الادعاء");
+}
+
+/* ═══ K422 — PA-035-02: مراجعة بطاقات الكتابة A0/A1 بندياً ═══ */
+{
+  const reviewK422 = JSON.parse(readFileSync("scripts/fixtures/writing-reviewed-02.json", "utf8")) as {
+    schema: string;
+    batch: string;
+    scope: string;
+    entries: { id: string; level: string; decision: "corrected" | "confirmed-current"; previous: Record<string, unknown>; current: Record<string, unknown> }[];
+  };
+  const writingK422 = bankRoh("writing.json") as Record<string, unknown>[];
+  const tasksK422 = new Map(writingK422.map((task) => [String(task.id), task]));
+  const correctedK422 = reviewK422.entries.filter((entry) => entry.decision === "corrected");
+  const confirmedK422 = reviewK422.entries.filter((entry) => entry.decision === "confirmed-current");
+  const currentK422 = new Map(reviewK422.entries.map((entry) => [entry.id, entry.current]));
+  ok(reviewK422.schema === "wegb2-reviewed-writing-decision-batch-v1" && reviewK422.batch === "PA-035-02" &&
+    reviewK422.entries.length === 25 && new Set(reviewK422.entries.map((entry) => entry.id)).size === 25 &&
+    reviewK422.entries.filter((entry) => entry.level === "A0").length === 6 &&
+    reviewK422.entries.filter((entry) => entry.level === "A1").length === 19 &&
+    correctedK422.length === 17 && confirmedK422.length === 8 &&
+    confirmedK422.every((entry) => JSON.stringify(entry.previous) === JSON.stringify(entry.current)) &&
+    correctedK422.every((entry) => JSON.stringify(entry.previous) !== JSON.stringify(entry.current)),
+    "K422a PA-035-02: سجل القرار يغطي بطاقات الكتابة A0/A1 كلها (25): 17 تصحيحاً محدوداً و8 قرارات إبقاء صريحة");
+  ok(reviewK422.entries.every((entry) => JSON.stringify(tasksK422.get(entry.id)) === JSON.stringify(entry.current)) &&
+    currentK422.get("w-a0-01")?.zielWort === 60 && currentK422.get("w-a0-04")?.zielWort === 40 &&
+    currentK422.get("w-a0-05")?.zielWort === 40 && currentK422.get("w-a1-12")?.zielWort === 50 &&
+    String(currentK422.get("w-a1-03")?.taskAr).includes("أدوات الملكية") &&
+    String(currentK422.get("w-a1-10")?.sample).includes("Geburtsdatum: 12.03.1998") &&
+    !JSON.stringify([...currentK422.values()]).includes("الألفية الثانية"),
+    "K422b PA-035-02: القرارات تطابق البنك وتحرس الهدف الداخلي والنموذج والتاريخ والمحاذاة العربية وإزالة الشرح المهلوس");
+  const patchK422 = readFileSync("scripts/patches/apply_writing_review_pa035_02.py", "utf8");
+  const auditK422 = readFileSync("scripts/writing_consistency_audit.ts", "utf8");
+  ok(patchK422.includes('current == reviewed') && patchK422.includes('current != previous') &&
+    patchK422.includes("unexpected current writing task") &&
+    auditK422.includes("review02.entries.length !== 25") && auditK422.includes("review02Corrected.length !== 17") &&
+    auditK422.includes("does not certify the remaining 80 writing cards") &&
+    reviewK422.scope.includes("triage only") && reviewK422.scope.includes("not correction generators") &&
+    reviewK422.scope.includes("not independent linguistic, exam, or CEFR sign-off"),
+    "K422c PA-035-02: الرقعة مقفلة بالمهمة الكاملة والبوابة تحرس القرارات مع إبقاء 80 بطاقة والتوقيع المستقل خارج الادعاء");
 }
 
 /* ═══ K334 — R309: القفل الفعلي الحقيقي — إغلاقُ اليوم عند حدود الوحدة ممنوعٌ لا منصوحٌ به فقط ═══ */

@@ -41,3 +41,28 @@ w-a1-04,A1,122,sample,criterion_sample_conflict,confirmed_error,criterion requir
 w-a1-05,A1,144,noteAr,note_sample_hallucination,confirmed_error,note claims four sentences and an explicit Möchtest du invitation; sample has seven sentence-final marks and contains no Möchtest du,manual_corrected_and_regression_guarded,fixed
 w-a2-01,A2,166,noteAr,note_sample_hallucination,confirmed_error,note claims six sentences and five Perfekt forms; sample has seven sentences and nine Perfekt verb groups,manual_corrected_and_regression_guarded,fixed
 w-a2-02,A2,187,noteAr,task_sample_note_conflict,confirmed_error,"task asks 5–6 sentences, exactly 2× weil and 1× dass; sample has seven sentences, 2× weil and 2× dass; note calls it five lines",manual_corrected_and_regression_guarded,fixed
+w-a0-01,A0,3,full_task,full_card_review,internal_review_decision,zielWort aligned with alphabet/list model; sample remains within internal triage band,manual_corrected_and_regression_guarded,fixed_pa035_02
+w-a0-02,A0,25,full_task,full_card_review,internal_review_decision,three-sentence model expanded while preserving simple A0 structure,manual_corrected_and_regression_guarded,fixed_pa035_02
+w-a0-03,A0,997,full_task,full_card_review,internal_review_decision,reviewed in full; no bounded correction justified,manual_corrected_and_regression_guarded,fixed_pa035_02
+w-a0-04,A0,1018,full_task,full_card_review,internal_review_decision,criterion wording aligned and internal model target set to 40,manual_corrected_and_regression_guarded,fixed_pa035_02
+w-a0-05,A0,1039,full_task,full_card_review,internal_review_decision,Arabic criterion corrected to article usage and internal target set to 40,manual_corrected_and_regression_guarded,fixed_pa035_02
+w-a0-06,A0,1193,full_task,full_card_review,internal_review_decision,model expanded within explicit three-to-four-sentence task,manual_corrected_and_regression_guarded,fixed_pa035_02
+w-a1-01,A1,46,full_task,full_card_review,internal_review_decision,reviewed in full; prior corrected five-sentence model retained,manual_confirmed_current_and_regression_guarded,confirmed_current_pa035_02
+w-a1-02,A1,68,full_task,full_card_review,internal_review_decision,form date changed to numeric field notation; consistency wording and Arabic notes corrected,manual_corrected_and_regression_guarded,fixed_pa035_02
+w-a1-03,A1,89,full_task,full_card_review,internal_review_decision,Arabic possessive-article terminology and unsupported rhetorical notes corrected,manual_corrected_and_regression_guarded,fixed_pa035_02
+w-a1-04,A1,110,full_task,full_card_review,internal_review_decision,unsupported rhetorical notes replaced with model-grounded separable-verb guidance,manual_corrected_and_regression_guarded,fixed_pa035_02
+w-a1-05,A1,131,full_task,full_card_review,internal_review_decision,reviewed in full; prior corrected invitation model retained,manual_confirmed_current_and_regression_guarded,confirmed_current_pa035_02
+w-a1-06,A1,492,full_task,full_card_review,internal_review_decision,postcard notes rewritten to match five sentences and supported closing,manual_corrected_and_regression_guarded,fixed_pa035_02
+w-a1-07,A1,584,full_task,full_card_review,internal_review_decision,reviewed in full; no bounded correction justified,manual_confirmed_current_and_regression_guarded,confirmed_current_pa035_02
+w-a1-08,A1,722,full_task,full_card_review,internal_review_decision,sick-note model shortened to fit internal target while retaining required modal and question,manual_corrected_and_regression_guarded,fixed_pa035_02
+w-a1-09,A1,744,full_task,full_card_review,internal_review_decision,unsupported exam-check claim removed from Arabic note,manual_corrected_and_regression_guarded,fixed_pa035_02
+w-a1-10,A1,766,full_task,full_card_review,internal_review_decision,birth date separated from age and rendered as non-factual JJJJ form placeholder,manual_corrected_and_regression_guarded,fixed_pa035_02
+w-a1-11,A1,1059,full_task,full_card_review,internal_review_decision,reviewed in full; no bounded correction justified,manual_confirmed_current_and_regression_guarded,confirmed_current_pa035_02
+w-a1-12,A1,1080,full_task,full_card_review,internal_review_decision,internal model target corrected from 80 to 50,manual_corrected_and_regression_guarded,fixed_pa035_02
+w-a1-13,A1,1214,full_task,full_card_review,internal_review_decision,invitation line breaks closing and signature aligned,manual_corrected_and_regression_guarded,fixed_pa035_02
+w-a1-14,A1,1895,full_task,full_card_review,internal_review_decision,reviewed in full; no bounded correction justified,manual_confirmed_current_and_regression_guarded,confirmed_current_pa035_02
+w-a1-15,A1,1915,full_task,full_card_review,internal_review_decision,informal greeting normalized from duplicated Hallo liebe to Liebe,manual_corrected_and_regression_guarded,fixed_pa035_02
+w-a1-16,A1,1935,full_task,full_card_review,internal_review_decision,reviewed in full; no bounded correction justified,manual_confirmed_current_and_regression_guarded,confirmed_current_pa035_02
+w-a1-17,A1,1955,full_task,full_card_review,internal_review_decision,apartment location phrase corrected to bei mir in Wohnung 12,manual_corrected_and_regression_guarded,fixed_pa035_02
+w-a1-18,A1,1975,full_task,full_card_review,internal_review_decision,reviewed in full; no bounded correction justified,manual_confirmed_current_and_regression_guarded,confirmed_current_pa035_02
+w-a1-19,A1,1995,full_task,full_card_review,internal_review_decision,reviewed in full; no bounded correction justified,manual_confirmed_current_and_regression_guarded,confirmed_current_pa035_02
