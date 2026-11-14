@@ -15239,9 +15239,42 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const patchK408 = readFileSync("scripts/patches/apply_vocab_posinfo_review_pa034_02.py", "utf8");
   const auditK408 = readFileSync("scripts/vocab_posinfo_audit.ts", "utf8");
   ok(patchK408.includes("current == entry[\"posInfo\"]") && patchK408.includes("current != entry[\"previousPosInfo\"]") &&
-    auditK408.includes("reviewedIds.size !== 169") && auditK408.includes("does not certify every posInfo field") &&
+    auditK408.includes("reviewedIds.size !== 249") && auditK408.includes("does not certify every posInfo field") &&
     reviewK408.scope.includes("not external linguistic sign-off"),
-    "K408c PA-034-02: الرقعة قابلة للإعادة ومقفلة بالقيمة السابقة، والبوابة تعلن 169 فقط بلا اعتماد بقية الحقول");
+    "K408c PA-034-02: الرقعة قابلة للإعادة ومقفلة بالقيمة السابقة، والبوابة تبقي الإجمالي الحالي محدوداً بلا اعتماد بقية الحقول");
+}
+
+/* ═══ K409 — PA-034-03: الدفعة الثالثة المحدودة لمراجعة تصريف المفردات ═══ */
+{
+  const reviewK409 = JSON.parse(readFileSync("scripts/fixtures/vocab-posinfo-reviewed-03.json", "utf8")) as {
+    schema: string;
+    batch: string;
+    scope: string;
+    entries: { id: string; deck: string; level: string; de: string; previousPosInfo: string; posInfo: string }[];
+  };
+  const vocabK409 = bankRoh("vocab.json") as Record<string, { cards: { id: string; de: string; posInfo?: string }[] }>;
+  const cardsK409 = new Map(Object.entries(vocabK409).flatMap(([deck, value]) =>
+    value.cards.map((card) => [card.id, { deck, ...card }] as const)));
+  const levelsK409 = reviewK409.entries.reduce<Record<string, number>>((counts, entry) => {
+    counts[entry.level] = (counts[entry.level] ?? 0) + 1;
+    return counts;
+  }, {});
+  ok(reviewK409.schema === "wegb2-reviewed-vocab-posinfo-batch-v1" && reviewK409.batch === "PA-034-03" &&
+    reviewK409.entries.length === 80 && new Set(reviewK409.entries.map((entry) => entry.id)).size === 80 &&
+    JSON.stringify(levelsK409) === JSON.stringify({ A1: 10, A2: 8, B1: 40, B2: 22 }),
+    "K409a PA-034-03: سجل القرار الثالث محدود بـ80 بطاقة فريدة وتوزيعه A1=10/A2=8/B1=40/B2=22");
+  ok(reviewK409.entries.every((entry) => {
+    const card = cardsK409.get(entry.id);
+    return card?.deck === entry.deck && card.de === entry.de && card.posInfo === entry.posInfo &&
+      entry.previousPosInfo !== entry.posInfo && !entry.de.includes(" ") && entry.posInfo.split(",").length === 3;
+  }),
+    "K409b PA-034-03: كل قرار مربوط بالمعرف/البنك والرأس المفرد وثلاث صيغ مصححة تختلف عن القيمة السابقة");
+  const patchK409 = readFileSync("scripts/patches/apply_vocab_posinfo_review_pa034_03.py", "utf8");
+  const auditK409 = readFileSync("scripts/vocab_posinfo_audit.ts", "utf8");
+  ok(patchK409.includes("current == entry[\"posInfo\"]") && patchK409.includes("current != entry[\"previousPosInfo\"]") &&
+    auditK409.includes("reviewedIds.size !== 249") && auditK409.includes("does not certify every posInfo field") &&
+    reviewK409.scope.includes("not external linguistic sign-off"),
+    "K409c PA-034-03: الرقعة قابلة للإعادة ومقفلة بالقيمة السابقة، والبوابة تعلن 249 فقط بلا اعتماد بقية الحقول");
 }
 
 

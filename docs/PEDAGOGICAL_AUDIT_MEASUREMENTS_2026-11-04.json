@@ -5,7 +5,7 @@
   "scopeNoteAr": "هذه قياسات قابلة لإعادة التشغيل وليست شهادة صحة لغوية أو بيداغوجية.",
   "baseline": {
     "smoke": {
-      "passed": 2450,
+      "passed": 2453,
       "failed": 0
     },
     "interactiveJsdom": {
@@ -334,13 +334,13 @@
     "cardsTotal": 6202,
     "cardsWithPosInfo": 1164,
     "threeFormPosInfo": 1140,
-    "manualConfirmedMalformedCards": 169,
+    "manualConfirmedMalformedCards": 249,
     "levels": {
       "A0": 3,
-      "A1": 39,
-      "A2": 19,
-      "B1": 80,
-      "B2": 28
+      "A1": 49,
+      "A2": 27,
+      "B1": 120,
+      "B2": 50
     },
     "batch02": {
       "correctedCards": 59,
@@ -355,6 +355,19 @@
       "patch": "scripts/patches/apply_vocab_posinfo_review_pa034_02.py",
       "externalLinguisticSignOff": false
     },
+    "batch03": {
+      "correctedCards": 80,
+      "scope": "single-head, three-principal-part item-by-item contextual internal review",
+      "levels": {
+        "A1": 10,
+        "A2": 8,
+        "B1": 40,
+        "B2": 22
+      },
+      "fixture": "scripts/fixtures/vocab-posinfo-reviewed-03.json",
+      "patch": "scripts/patches/apply_vocab_posinfo_review_pa034_03.py",
+      "externalLinguisticSignOff": false
+    },
     "batch01OverlappingIssueTags": {
       "present_malformed": 53,
       "preterite_malformed": 106,
@@ -365,19 +378,20 @@
     "automatedReferenceComparison": {
       "exactSingleHeadwordsMatched": 833,
       "caveatAr": "مرشحات فقط؛ لا تعتمد المكتبة وحدها في المساعد haben/sein أو قابلية الفصل أو تعدد المعنى.",
-      "remainingAdditionalCandidatesPendingContextReview": 305,
+      "remainingAdditionalCandidatesPendingContextReview": 225,
       "initialParticipleReferenceMismatches": 432,
       "initialAlreadyInManualConfirmedSet": 68
     },
-    "correctedCards": 169,
+    "correctedCards": 249,
     "openConfirmedCards": 0,
-    "remainingCandidateCards": 305,
+    "remainingCandidateCards": 225,
     "regressionFixtures": [
       "scripts/fixtures/vocab-posinfo-reviewed.json",
-      "scripts/fixtures/vocab-posinfo-reviewed-02.json"
+      "scripts/fixtures/vocab-posinfo-reviewed-02.json",
+      "scripts/fixtures/vocab-posinfo-reviewed-03.json"
     ],
     "regressionGate": "npm run audit:vocab-posinfo",
-    "claimBoundary": "169 bounded internal decisions only; remaining posInfo fields and external linguistic validation are not certified"
+    "claimBoundary": "249 bounded internal decisions only; remaining posInfo fields and external linguistic validation are not certified"
   },
   "writingBankConsistencyAudit": {
     "path": "content/writing.json",
