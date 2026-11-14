@@ -17,6 +17,7 @@ type ReviewEntry = Required<Pick<VocabCard, "id" | "de" | "posInfo">> & {
   deck?: string;
   level?: string;
   previousPosInfo?: string;
+  decision?: "corrected" | "confirmed-current";
 };
 
 type ReviewFixture = {
@@ -43,6 +44,7 @@ const fixturePaths = [
   "vocab-posinfo-reviewed-09.json",
   "vocab-posinfo-reviewed-10.json",
   "vocab-posinfo-reviewed-11.json",
+  "vocab-posinfo-reviewed-12.json",
 ];
 const fixtures = fixturePaths.map((name) => JSON.parse(
   fs.readFileSync(path.join(root, "scripts", "fixtures", name), "utf8"),
@@ -61,6 +63,7 @@ const [
   ninthFixture,
   tenthFixture,
   eleventhFixture,
+  twelfthFixture,
 ] = fixtures;
 if (firstFixture.schema !== "wegb2-reviewed-vocab-posinfo-v1"
   || firstFixture.entries.length !== 110) {
@@ -116,6 +119,11 @@ if (eleventhFixture.schema !== "wegb2-reviewed-vocab-posinfo-batch-v1"
   || eleventhFixture.entries.length !== 27) {
   errors.push(`unexpected PA-034 batch 11 fixture: ${eleventhFixture.schema}/${eleventhFixture.batch}/${eleventhFixture.entries.length}`);
 }
+if (twelfthFixture.schema !== "wegb2-reviewed-vocab-posinfo-decision-batch-v1"
+  || twelfthFixture.batch !== "PA-034-12"
+  || twelfthFixture.entries.length !== 98) {
+  errors.push(`unexpected PA-034 batch 12 fixture: ${twelfthFixture.schema}/${twelfthFixture.batch}/${twelfthFixture.entries.length}`);
+}
 if (fixtures.some((fixture) => !/not (?:an )?external linguistic sign-off/.test(fixture.scope))) {
   errors.push("every review fixture must deny external linguistic sign-off");
 }
@@ -158,8 +166,18 @@ for (const fixture of fixtures) {
     if (expected.level && actual.level !== expected.level) {
       errors.push(`${expected.id}: level changed; expected ${expected.level}, got ${actual.level ?? ""}`);
     }
-    if (expected.previousPosInfo !== undefined && expected.previousPosInfo === expected.posInfo) {
-      errors.push(`${expected.id}: reviewed previous and corrected posInfo must differ`);
+    if (expected.decision !== undefined
+      && expected.decision !== "corrected"
+      && expected.decision !== "confirmed-current") {
+      errors.push(`${expected.id}: unknown review decision ${String(expected.decision)}`);
+    }
+    if (expected.previousPosInfo !== undefined) {
+      if (expected.decision === "confirmed-current" && expected.previousPosInfo !== expected.posInfo) {
+        errors.push(`${expected.id}: confirmed-current decision must preserve posInfo`);
+      }
+      if (expected.decision !== "confirmed-current" && expected.previousPosInfo === expected.posInfo) {
+        errors.push(`${expected.id}: corrected previous and current posInfo must differ`);
+      }
     }
   }
 }
@@ -250,8 +268,30 @@ if (JSON.stringify(eleventhLevelCounts) !== JSON.stringify({ A1: 7, A2: 13, B1: 
   || eleventhFixture.entries.some((entry) => entry.posInfo.split(",").length !== 3)) {
   errors.push(`PA-034-11 must remain bounded to 24 expanded legacy shorthands and 3 malformed-participle corrections: ${JSON.stringify(eleventhLevelCounts)}/${eleventhLegacyShorthand.length}/${eleventhMalformedParticiples.length}`);
 }
-if (reviewedIds.size !== 741) {
-  errors.push(`review fixtures must contain 741 unique entries, got ${reviewedIds.size}`);
+const twelfthLevelCounts = countLevels(twelfthFixture);
+const twelfthCorrections = twelfthFixture.entries.filter((entry) => entry.decision === "corrected");
+const twelfthConfirmedCurrent = twelfthFixture.entries.filter((entry) => entry.decision === "confirmed-current");
+if (JSON.stringify(twelfthLevelCounts) !== JSON.stringify({ A1: 43, A2: 54, A0: 1 })
+  || twelfthCorrections.length !== 2
+  || twelfthConfirmedCurrent.length !== 96
+  || twelfthFixture.entries.some((entry) => entry.posInfo.split(",").length !== 3)
+  || twelfthFixture.entries.some((entry) => !["A0", "A1", "A2"].includes(entry.level ?? ""))) {
+  errors.push(`PA-034-12 must remain bounded to all 98 residual A0-A2 cards with 2 corrections and 96 confirmed-current decisions: ${JSON.stringify(twelfthLevelCounts)}/${twelfthCorrections.length}/${twelfthConfirmedCurrent.length}`);
+}
+if (reviewedIds.size !== 839) {
+  errors.push(`review fixtures must contain 839 unique entries, got ${reviewedIds.size}`);
+}
+const unreviewedPosInfo = cards.filter((item) =>
+  item.card.id && item.card.posInfo !== undefined && !reviewedIds.has(item.card.id));
+const unreviewedLevelCounts = {
+  B1: unreviewedPosInfo.filter((item) => item.level === "B1").length,
+  B2: unreviewedPosInfo.filter((item) => item.level === "B2").length,
+};
+if (unreviewedPosInfo.length !== 325
+  || unreviewedPosInfo.some((item) => !["B1", "B2"].includes(item.level ?? ""))
+  || unreviewedLevelCounts.B1 !== 119
+  || unreviewedLevelCounts.B2 !== 206) {
+  errors.push(`remaining review gap must stay bounded to 325 B1/B2 posInfo cards (119/206), got ${unreviewedPosInfo.length} ${JSON.stringify(unreviewedLevelCounts)}`);
 }
 
 if (errors.length) {
@@ -261,7 +301,7 @@ if (errors.length) {
 }
 
 console.log(
-  `✅ Reviewed vocabulary morphology: ${reviewedIds.size}/${reviewedIds.size} corrected cards match eleven bounded internal-review fixtures (${fixtures.map((fixture) => fixture.reviewedAt).join(", ")}).`,
+  `✅ Reviewed vocabulary morphology: ${reviewedIds.size}/${reviewedIds.size} reviewed decisions match twelve bounded internal-review fixtures (${fixtures.map((fixture) => fixture.reviewedAt).join(", ")}).`,
 );
 console.log(
   "ℹ️ This gate prevents regression only for the reviewed PA-034 batches; it does not certify every posInfo field or provide external linguistic sign-off.",
