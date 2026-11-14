@@ -44688,7 +44688,7 @@
      "argum"
     ],
     "aussprache": "ei = «آي» لا «إي»",
-    "posInfo": "sachlicht, sachlichte, hat gesachlicht"
+    "posInfo": "bleibt sachlich, blieb sachlich, ist sachlich geblieben"
    },
    {
     "id": "r313b1-114",
@@ -45418,7 +45418,7 @@
      "karriere"
     ],
     "aussprache": "ei = «آي» لا «إي»",
-    "posInfo": "belastbart, belastbarte, hat belastbar"
+    "posInfo": "bleibt belastbar, blieb belastbar, ist belastbar geblieben"
    },
    {
     "id": "vg-psyche--000",
@@ -45491,7 +45491,7 @@
      "psyche"
     ],
     "aussprache": "w = «ڤ» · ü = ضمّةٌ بشفتَينِ مستديرتَين",
-    "posInfo": "wohlfühlt, wohlfühlte, hat gewohlfühlt"
+    "posInfo": "fühlt sich wohl, fühlte sich wohl, hat sich wohlgefühlt"
    },
    {
     "id": "vg-psyche--013",
@@ -45621,7 +45621,7 @@
      "konflikt"
     ],
     "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · z = «تس»",
-    "posInfo": "setzt durch, setzte durch, hat durchgesetzt"
+    "posInfo": "setzt sich durch, setzte sich durch, hat sich durchgesetzt"
    },
    {
     "id": "vg-psyche--024",
@@ -46024,7 +46024,7 @@
     "tags": [
      "projekt"
     ],
-    "posInfo": "stimmt ab, stimmte ab, hat abgestimmt"
+    "posInfo": "stimmt sich ab, stimmte sich ab, hat sich abgestimmt"
    },
    {
     "id": "vh-projekt-024",
@@ -46445,7 +46445,7 @@
      "leben"
     ],
     "aussprache": "v = «ف»",
-    "posInfo": "etwast, etwaste, hat geetwast"
+    "posInfo": "nimmt sich etwas vor, nahm sich etwas vor, hat sich etwas vorgenommen"
    },
    {
     "id": "vh-gesundh-015",
@@ -47132,7 +47132,7 @@
      "recht"
     ],
     "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
-    "posInfo": "haftet, haftete, hat gehaftt"
+    "posInfo": "haftet, haftete, hat gehaftet"
    },
    {
     "id": "vi-geld-re-009",
@@ -47285,7 +47285,7 @@
      "geld1"
     ],
     "aussprache": "sch = «ش» · v = «ف»",
-    "posInfo": "verschuldet, verschuldete, hat verschuldt"
+    "posInfo": "verschuldet sich, verschuldete sich, hat sich verschuldet"
    },
    {
     "id": "vi-geld-re-020",
@@ -47428,7 +47428,7 @@
     "tags": [
      "verb1"
     ],
-    "posInfo": "bezieht, beziehte, ist bezieht"
+    "posInfo": "bezieht sich auf, bezog sich auf, hat sich auf ... bezogen"
    },
    {
     "id": "vi-funktio-006",
@@ -47441,7 +47441,7 @@
     "tags": [
      "verb1"
     ],
-    "posInfo": "verzichtet, verzichtete, hat verzichtt"
+    "posInfo": "verzichtet auf, verzichtete auf, hat auf ... verzichtet"
    },
    {
     "id": "vi-funktio-007",
@@ -47454,7 +47454,7 @@
     "tags": [
      "verb1"
     ],
-    "posInfo": "beteiligt, beteiligte, hat beteiligt"
+    "posInfo": "beteiligt sich an, beteiligte sich an, hat sich an ... beteiligt"
    },
    {
     "id": "vi-funktio-008",
@@ -47507,7 +47507,7 @@
     "tags": [
      "verb1"
     ],
-    "posInfo": "wirkt aus, wirkte aus, hat ausgewirkt"
+    "posInfo": "wirkt sich auf ... aus, wirkte sich auf ... aus, hat sich auf ... ausgewirkt"
    },
    {
     "id": "vi-funktio-012",
@@ -47520,7 +47520,7 @@
     "tags": [
      "verb1"
     ],
-    "posInfo": "rückführt zu, rückführte zu, hat zugerückführt"
+    "posInfo": "führt ... auf ... zurück, führte ... auf ... zurück, hat ... auf ... zurückgeführt"
    },
    {
     "id": "vi-funktio-013",
@@ -47533,7 +47533,7 @@
     "tags": [
      "verb1"
     ],
-    "posInfo": "geltet, geltete, hat geltt"
+    "posInfo": "gilt als, galt als, hat als ... gegolten"
    },
    {
     "id": "vi-funktio-014",
@@ -47614,7 +47614,7 @@
     "tags": [
      "verb1"
     ],
-    "posInfo": "rücksichtet, rücksichtete, hat gerücksichtt"
+    "posInfo": "nimmt Rücksicht auf, nahm Rücksicht auf, hat Rücksicht auf ... genommen"
    },
    {
     "id": "vi-funktio-020",
@@ -47641,7 +47641,7 @@
      "verb1"
     ],
     "img": "/cards/kommen.webp",
-    "posInfo": "zut, zute, ist gezut"
+    "posInfo": "kommt zu dem Schluss, kam zu dem Schluss, ist zu dem Schluss gekommen"
    },
    {
     "id": "vi-funktio-022",
@@ -47668,7 +47668,7 @@
     "tags": [
      "verb1"
     ],
-    "posInfo": "wertet, wertete, hat gewertt"
+    "posInfo": "legt Wert auf, legte Wert auf, hat Wert auf ... gelegt"
    },
    {
     "id": "vi-funktio-024",
@@ -47681,7 +47681,7 @@
     "tags": [
      "verb1"
     ],
-    "posInfo": "mühet, mühete, hat gemühet"
+    "posInfo": "gibt sich Mühe, gab sich Mühe, hat sich Mühe gegeben"
    },
    {
     "id": "vi-funkv-700",
@@ -47694,7 +47694,7 @@
     "tags": [
      "verb1"
     ],
-    "posInfo": "bezugt, bezugte, hat bezug"
+    "posInfo": "nimmt Bezug auf, nahm Bezug auf, hat Bezug auf ... genommen"
    },
    {
     "id": "vi-funkv-701",
@@ -47708,7 +47708,7 @@
      "verb1"
     ],
     "aussprache": "v = «ف»",
-    "posInfo": "abstandet, abstandete, hat geabstandt"
+    "posInfo": "nimmt Abstand von, nahm Abstand von, hat Abstand von ... genommen"
    },
    {
     "id": "vi-funkv-702",
@@ -47721,7 +47721,7 @@
     "tags": [
      "verb1"
     ],
-    "posInfo": "kritikt, kritikte, hat gekritikt"
+    "posInfo": "übt Kritik an, übte Kritik an, hat Kritik an ... geübt"
    },
    {
     "id": "vi-funkv-703",
@@ -47734,7 +47734,7 @@
     "tags": [
      "verb1"
     ],
-    "posInfo": "einflusst, einflusste, hat geeinflusst"
+    "posInfo": "nimmt Einfluss auf, nahm Einfluss auf, hat Einfluss auf ... genommen"
    },
    {
     "id": "vi-funkv-704",
@@ -47759,7 +47759,7 @@
     "tags": [
      "verb1"
     ],
-    "posInfo": "zumt, zumte, hat gezumt"
+    "posInfo": "bringt ... zum Ausdruck, brachte ... zum Ausdruck, hat ... zum Ausdruck gebracht"
    },
    {
     "id": "vi-funkv-706",
@@ -47787,7 +47787,7 @@
      "verb1"
     ],
     "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
-    "posInfo": "verantwortungt, verantwortungte, hat verantwortung"
+    "posInfo": "trägt Verantwortung für, trug Verantwortung für, hat Verantwortung für ... getragen"
    },
    {
     "id": "vi-funkv-708",
@@ -47801,7 +47801,7 @@
      "verb1"
     ],
     "aussprache": "sp/st في البداية = «شب/شت»",
-    "posInfo": "untert, unterte, hat unter"
+    "posInfo": "steht unter Druck, stand unter Druck, hat unter Druck gestanden"
    },
    {
     "id": "vi-funkv-709",
@@ -47827,7 +47827,7 @@
     "tags": [
      "verb1"
     ],
-    "posInfo": "erfolgt, erfolgte, hat erfolg"
+    "posInfo": "hat Erfolg mit, hatte Erfolg mit, hat Erfolg mit ... gehabt"
    }
   ]
  },
@@ -48103,7 +48103,7 @@
      "mig"
     ],
     "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · z = «تس»",
-    "posInfo": "rechtfindet zu, rechtfindete zu, hat zugerechtfindt"
+    "posInfo": "findet sich zurecht, fand sich zurecht, hat sich zurechtgefunden"
    },
    {
     "id": "vj-migrati-009",
@@ -48145,7 +48145,7 @@
      "mig"
     ],
     "aussprache": "ei = «آي» لا «إي»",
-    "posInfo": "beschwert, beschwerte, hat beschwert"
+    "posInfo": "beschwert sich bei, beschwerte sich bei, hat sich bei ... beschwert"
    },
    {
     "id": "vj-migrati-013",
@@ -49054,7 +49054,7 @@
      "natur1"
     ],
     "aussprache": "w = «ڤ»",
-    "posInfo": "wärmt auf, wärmte auf, hat aufgewärmt"
+    "posInfo": "wärmt sich auf, wärmte sich auf, hat sich aufgewärmt"
    },
    {
     "id": "vk-b1x-028",
@@ -49221,7 +49221,7 @@
      "bild"
     ],
     "aussprache": "ei = «آي» لا «إي» · sp/st في البداية = «شب/شت»",
-    "posInfo": "deutlicht, deutlichte, ist gedeutlicht"
+    "posInfo": "steigt deutlich, stieg deutlich, ist deutlich gestiegen"
    },
    {
     "id": "vk-b1x-041",
@@ -49234,7 +49234,7 @@
     "tags": [
      "bild"
     ],
-    "posInfo": "leichtet, leichtete, hat geleichtt"
+    "posInfo": "sinkt leicht, sank leicht, ist leicht gesunken"
    },
    {
     "id": "vk-b1x-042",
@@ -49248,7 +49248,7 @@
      "bild"
     ],
     "aussprache": "ei = «آي» لا «إي»",
-    "posInfo": "konstantet, konstantete, hat gekonstantt"
+    "posInfo": "bleibt konstant, blieb konstant, ist konstant geblieben"
    },
    {
     "id": "vk-b1x-043",
@@ -49589,7 +49589,7 @@
     "tags": [
      "brief"
     ],
-    "posInfo": "umt, umte, hat geumt"
+    "posInfo": "bittet um Rückmeldung, bat um Rückmeldung, hat um Rückmeldung gebeten"
    },
    {
     "id": "vl-b1y-005",
@@ -49628,7 +49628,7 @@
     "tags": [
      "brief"
     ],
-    "posInfo": "widersprucht, widerspruchte, hat gewidersprucht"
+    "posInfo": "legt Widerspruch gegen ... ein, legte Widerspruch gegen ... ein, hat Widerspruch gegen ... eingelegt"
    },
    {
     "id": "vl-b1y-008",
@@ -49789,7 +49789,7 @@
      "wirt"
     ],
     "aussprache": "ie = «إي» ممدودة",
-    "posInfo": "rentiert, rentierte, hat gerentiert"
+    "posInfo": "rentiert sich, rentierte sich, hat sich rentiert"
    },
    {
     "id": "vl-b1y-021",
@@ -50288,7 +50288,7 @@
     "tags": [
      "zeit1"
     ],
-    "posInfo": "lenkt ab, lenkte ab, hat abgelenkt"
+    "posInfo": "lässt sich ablenken, ließ sich ablenken, hat sich ablenken lassen"
    },
    {
     "id": "vm-b1z-021",
@@ -50302,7 +50302,7 @@
      "zeit1"
     ],
     "aussprache": "ei = «آي» لا «إي»",
-    "posInfo": "konzentriertet, konzentriertete, hat gekonzentriertt"
+    "posInfo": "bleibt konzentriert, blieb konzentriert, ist konzentriert geblieben"
    },
    {
     "id": "vm-b1z-022",
@@ -50354,7 +50354,7 @@
      "zeit1"
     ],
     "aussprache": "sch = «ش» · ü = ضمّةٌ بشفتَينِ مستديرتَين",
-    "posInfo": "dranbleibt, dranbleibte, hat gedranbleibt"
+    "posInfo": "bleibt trotz Rückschlag dran, blieb trotz Rückschlag dran, ist trotz Rückschlag drangeblieben"
    },
    {
     "id": "vm-b1z-026",
@@ -50383,7 +50383,7 @@
     "tags": [
      "bew"
     ],
-    "posInfo": "etwast, etwaste, hat geetwast"
+    "posInfo": "nimmt etwas in Angriff, nahm etwas in Angriff, hat etwas in Angriff genommen"
    },
    {
     "id": "vm-b1z-028",
@@ -50410,7 +50410,7 @@
      "bew"
     ],
     "aussprache": "sp/st في البداية = «شب/شت»",
-    "posInfo": "hintert, hinterte, hat gehintert"
+    "posInfo": "steht hinter etwas, stand hinter etwas, hat hinter etwas gestanden"
    },
    {
     "id": "vm-b1z-030",
@@ -50437,7 +50437,7 @@
     "tags": [
      "bew"
     ],
-    "posInfo": "aust, auste, ist geaust"
+    "posInfo": "geht ... aus dem Weg, ging ... aus dem Weg, ist ... aus dem Weg gegangen"
    },
    {
     "id": "vm-b1z-032",
@@ -50463,7 +50463,7 @@
     "tags": [
      "bew"
     ],
-    "posInfo": "inst, inste, hat geinst"
+    "posInfo": "gerät ins Stocken, geriet ins Stocken, ist ins Stocken geraten"
    },
    {
     "id": "vm-b1z-034",
@@ -50490,7 +50490,7 @@
     "tags": [
      "bew"
     ],
-    "posInfo": "untert, unterte, hat unter"
+    "posInfo": "bringt ... unter einen Hut, brachte ... unter einen Hut, hat ... unter einen Hut gebracht"
    },
    {
     "id": "vm-b1z-036",
@@ -52361,7 +52361,7 @@
      "praefix"
     ],
     "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
-    "posInfo": "versteht, verstehte, hat versteht"
+    "posInfo": "versteht sich, verstand sich, hat sich verstanden"
    },
    {
     "id": "vp-b1u-033",
@@ -52815,7 +52815,7 @@
      "gem"
     ],
     "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
-    "posInfo": "setzt ein, setzte ein, hat eingesetzt"
+    "posInfo": "setzt sich für ... ein, setzte sich für ... ein, hat sich für ... eingesetzt"
    },
    {
     "id": "vq-b1t-022",
@@ -54244,7 +54244,7 @@
     "tags": [
      "refl"
     ],
-    "posInfo": "bemüht, bemühte, hat bemüht"
+    "posInfo": "bemüht sich um, bemühte sich um, hat sich um ... bemüht"
    },
    {
     "id": "vs-b1r-026",
@@ -54258,7 +54258,7 @@
      "refl"
     ],
     "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
-    "posInfo": "erkundigt, erkundigte, hat erkundigt"
+    "posInfo": "erkundigt sich nach, erkundigte sich nach, hat sich nach ... erkundigt"
    },
    {
     "id": "vs-b1r-029",
@@ -54284,7 +54284,7 @@
     "tags": [
      "refl"
     ],
-    "posInfo": "gewöhnt, gewöhnte, hat gewöhnt"
+    "posInfo": "gewöhnt sich an den Rhythmus, gewöhnte sich an den Rhythmus, hat sich an den Rhythmus gewöhnt"
    },
    {
     "id": "vs-b1r-031",
@@ -54298,7 +54298,7 @@
      "refl"
     ],
     "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
-    "posInfo": "zeitet, zeitete, hat gezeitt"
+    "posInfo": "nimmt sich Zeit für, nahm sich Zeit für, hat sich Zeit für ... genommen"
    },
    {
     "id": "vs-b1r-032",
@@ -54312,7 +54312,7 @@
      "refl"
     ],
     "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
-    "posInfo": "notizt, notizte, hat genotizt"
+    "posInfo": "macht sich Notizen, machte sich Notizen, hat sich Notizen gemacht"
    },
    {
     "id": "vs-b1r-033",
@@ -54325,7 +54325,7 @@
     "tags": [
      "refl"
     ],
-    "posInfo": "etwast, etwaste, hat geetwast"
+    "posInfo": "merkt sich etwas, merkte sich etwas, hat sich etwas gemerkt"
    },
    {
     "id": "vs-b1r-034",
@@ -54338,7 +54338,7 @@
     "tags": [
      "refl"
     ],
-    "posInfo": "verbesset, verbessete, hat verbessern"
+    "posInfo": "verbessert sich in, verbesserte sich in, hat sich in ... verbessert"
    },
    {
     "id": "vs-b1r-900",
@@ -54352,7 +54352,7 @@
      "refl"
     ],
     "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
-    "posInfo": "bereitet vor, bereitete vor, hat vorgebereitt"
+    "posInfo": "bereitet sich auf die Prüfung vor, bereitete sich auf die Prüfung vor, hat sich auf die Prüfung vorbereitet"
    },
    {
     "id": "vs-b1r-901",
@@ -54366,7 +54366,7 @@
      "refl"
     ],
     "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
-    "posInfo": "meldet an, meldete an, hat angemeldt"
+    "posInfo": "meldet sich zur Prüfung an, meldete sich zur Prüfung an, hat sich zur Prüfung angemeldet"
    },
    {
     "id": "r313b1-082",
@@ -55397,7 +55397,7 @@
      "med2"
     ],
     "aussprache": "ie = «إي» ممدودة",
-    "posInfo": "teilt, teilte, ist geteilt"
+    "posInfo": "teilt und kommentiert, teilte und kommentierte, hat geteilt und kommentiert"
    },
    {
     "id": "vu-b1p-005",
@@ -55453,7 +55453,7 @@
     "tags": [
      "med2"
     ],
-    "posInfo": "zut, zute, hat gezut"
+    "posInfo": "gibt zu bedenken, gab zu bedenken, hat zu bedenken gegeben"
    },
    {
     "id": "vu-b1p-010",
@@ -55631,7 +55631,7 @@
     "tags": [
      "verb2"
     ],
-    "posInfo": "kennt aus, kennte aus, hat ausgekennt"
+    "posInfo": "kennt sich mit ... aus, kannte sich mit ... aus, hat sich mit ... ausgekannt"
    },
    {
     "id": "vu-b1p-023",
@@ -55644,7 +55644,7 @@
     "tags": [
      "verb2"
     ],
-    "posInfo": "est, este, hat geest"
+    "posInfo": "kommt auf ... an, kam auf ... an, ist auf ... angekommen"
    },
    {
     "id": "vu-b1p-024",
@@ -55684,7 +55684,7 @@
     "tags": [
      "verb2"
     ],
-    "posInfo": "wirkt aus, wirkte aus, hat ausgewirkt"
+    "posInfo": "wirkt sich auf die Kosten aus, wirkte sich auf die Kosten aus, hat sich auf die Kosten ausgewirkt"
    },
    {
     "id": "vu-b1p-027",
@@ -55697,7 +55697,7 @@
     "tags": [
      "verb2"
     ],
-    "posInfo": "darauft, daraufte, ist gedarauft"
+    "posInfo": "lässt es darauf ankommen, ließ es darauf ankommen, hat es darauf ankommen lassen"
    },
    {
     "id": "vu-b1p-028",
@@ -55710,7 +55710,7 @@
     "tags": [
      "verb2"
     ],
-    "posInfo": "ausstellt her, ausstellte her, hat hergeausstellt"
+    "posInfo": "stellt sich als ... heraus, stellte sich als ... heraus, hat sich als ... herausgestellt"
    },
    {
     "id": "vu-b1p-029",
@@ -55723,7 +55723,7 @@
     "tags": [
      "verb2"
     ],
-    "posInfo": "rückgreift zu, rückgreifte zu, hat zugerückgreift"
+    "posInfo": "greift auf ... zurück, griff auf ... zurück, hat auf ... zurückgegriffen"
    },
    {
     "id": "vu-b1p-030",
@@ -55776,7 +55776,7 @@
     "tags": [
      "verb2"
     ],
-    "posInfo": "abstandet, abstandete, hat geabstandt"
+    "posInfo": "hält Abstand, hielt Abstand, hat Abstand gehalten"
    },
    {
     "id": "vu-b1p-034",
@@ -73233,7 +73233,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "amüsiert, amüsierte, hat geamüsiert"
+    "posInfo": "amüsiert sich, amüsierte sich, hat sich amüsiert"
    },
    {
     "id": "r314b1-025",
@@ -73490,7 +73490,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "strengt an, strengte an, hat angestrengt"
+    "posInfo": "strengt sich an, strengte sich an, hat sich angestrengt"
    },
    {
     "id": "r314b1-044",
@@ -74018,7 +74018,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "sucht aus, suchte aus, hat ausgesucht"
+    "posInfo": "sucht sich etwas aus, suchte sich etwas aus, hat sich etwas ausgesucht"
    },
    {
     "id": "r314b1-082",
@@ -74098,7 +74098,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "passt an, passte an, hat angepasst"
+    "posInfo": "passt sich an, passte sich an, hat sich angepasst"
    },
    {
     "id": "r314b1-088",
@@ -74126,7 +74126,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "einandersetzt aus, einandersetzte aus, hat ausgeeinandersetzt"
+    "posInfo": "setzt sich auseinander, setzte sich auseinander, hat sich auseinandergesetzt"
    }
   ]
  },
@@ -74363,7 +74363,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "befindet, befindete, hat befindt"
+    "posInfo": "befindet sich, befand sich, hat sich befunden"
    },
    {
     "id": "r314b1-106",
@@ -74506,7 +74506,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "bekanntet, bekanntete, hat bekannt"
+    "posInfo": "gibt bekannt, gab bekannt, hat bekannt gegeben"
    },
    {
     "id": "r314b1-117",
@@ -74560,7 +74560,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "bemüht, bemühte, hat bemüht"
+    "posInfo": "bemüht sich, bemühte sich, hat sich bemüht"
    },
    {
     "id": "r314b1-121",
@@ -74711,7 +74711,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "bescheidet, bescheidete, hat bescheid"
+    "posInfo": "gibt Bescheid, gab Bescheid, hat Bescheid gegeben"
    },
    {
     "id": "r314b1-132",
@@ -75336,7 +75336,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "beklagt, beklagte, hat beklagt"
+    "posInfo": "beklagt sich, beklagte sich, hat sich beklagt"
    },
    {
     "id": "r314b1-177",
@@ -75349,7 +75349,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "beschäftigt, beschäftigte, hat beschäftigt"
+    "posInfo": "beschäftigt sich, beschäftigte sich, hat sich beschäftigt"
    },
    {
     "id": "r314b1-178",
@@ -75377,7 +75377,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "beschränkt, beschränkte, hat beschränkt"
+    "posInfo": "beschränkt sich, beschränkte sich, hat sich beschränkt"
    },
    {
     "id": "r314b1-180",
@@ -76313,7 +76313,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "igt ein, igte ein, hat eingeigt"
+    "posInfo": "einigt sich, einigte sich, hat sich geeinigt"
    },
    {
     "id": "r315b1-062",
@@ -76773,7 +76773,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "erkältet, erkältete, hat erkältt"
+    "posInfo": "erkältet sich, erkältete sich, hat sich erkältet"
    },
    {
     "id": "r315b1-096",
@@ -76829,7 +76829,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "erkundigt, erkundigte, hat erkundigt"
+    "posInfo": "erkundigt sich, erkundigte sich, hat sich erkundigt"
    },
    {
     "id": "r315b1-100",
@@ -78038,7 +78038,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "gebort, geborte, hat gebort"
+    "posInfo": "wird geboren, wurde geboren, ist geboren worden"
    },
    {
     "id": "r316b1-066",
@@ -79629,7 +79629,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "irrt, irrte, hat geirrt"
+    "posInfo": "irrt sich, irrte sich, hat sich geirrt"
    },
    {
     "id": "r317b1-025",
@@ -80914,7 +80914,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "langweilt, langweilte, hat gelangweilt"
+    "posInfo": "langweilt sich, langweilte sich, hat sich gelangweilt"
    },
    {
     "id": "r317b1-114",
@@ -82187,7 +82187,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "nähet, nähete, hat genähet"
+    "posInfo": "nähert sich, näherte sich, hat sich genähert"
    },
    {
     "id": "r318b1-061",
@@ -83488,7 +83488,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "rasiert, rasierte, hat gerasiert"
+    "posInfo": "rasiert sich, rasierte sich, hat sich rasiert"
    },
    {
     "id": "r319b1-008",
@@ -85573,7 +85573,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "stoßt, stoßte, hat gestoßt"
+    "posInfo": "stößt sich, stieß sich, hat sich gestoßen"
    },
    {
     "id": "r321b1-048",
@@ -88646,7 +88646,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "wundet, wundete, hat gewundet"
+    "posInfo": "wundert sich, wunderte sich, hat sich gewundert"
    },
    {
     "id": "r324b1-046",
@@ -89309,7 +89309,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "zwingt, zwingte, hat gezwingt"
+    "posInfo": "zwingt sich, zwang sich, hat sich gezwungen"
    },
    {
     "id": "r325b1-044",
@@ -89553,7 +89553,7 @@
     "tags": [
      "grundwortschatz-az"
     ],
-    "posInfo": "interessiert, interessierte, hat geinteressiert"
+    "posInfo": "interessiert sich, interessierte sich, hat sich interessiert"
    },
    {
     "id": "r326b1-018",

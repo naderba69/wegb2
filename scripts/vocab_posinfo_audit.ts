@@ -39,6 +39,7 @@ const fixturePaths = [
   "vocab-posinfo-reviewed-05.json",
   "vocab-posinfo-reviewed-06.json",
   "vocab-posinfo-reviewed-07.json",
+  "vocab-posinfo-reviewed-08.json",
 ];
 const fixtures = fixturePaths.map((name) => JSON.parse(
   fs.readFileSync(path.join(root, "scripts", "fixtures", name), "utf8"),
@@ -53,6 +54,7 @@ const [
   fifthFixture,
   sixthFixture,
   seventhFixture,
+  eighthFixture,
 ] = fixtures;
 if (firstFixture.schema !== "wegb2-reviewed-vocab-posinfo-v1"
   || firstFixture.entries.length !== 110) {
@@ -87,6 +89,11 @@ if (seventhFixture.schema !== "wegb2-reviewed-vocab-posinfo-batch-v1"
   || seventhFixture.batch !== "PA-034-07"
   || seventhFixture.entries.length !== 62) {
   errors.push(`unexpected PA-034 batch 07 fixture: ${seventhFixture.schema}/${seventhFixture.batch}/${seventhFixture.entries.length}`);
+}
+if (eighthFixture.schema !== "wegb2-reviewed-vocab-posinfo-batch-v1"
+  || eighthFixture.batch !== "PA-034-08"
+  || eighthFixture.entries.length !== 87) {
+  errors.push(`unexpected PA-034 batch 08 fixture: ${eighthFixture.schema}/${eighthFixture.batch}/${eighthFixture.entries.length}`);
 }
 if (fixtures.some((fixture) => !/not (?:an )?external linguistic sign-off/.test(fixture.scope))) {
   errors.push("every review fixture must deny external linguistic sign-off");
@@ -186,8 +193,15 @@ if (seventhFixture.entries.some((entry) => entry.posInfo.split(",").length !== 3
     !== JSON.stringify(["umarmen", "unterstützen"])) {
   errors.push("PA-034-07 must remain bounded to 60 multiword heads and the two reviewed inseparable single heads");
 }
-if (reviewedIds.size !== 562) {
-  errors.push(`review fixtures must contain 562 unique entries, got ${reviewedIds.size}`);
+const eighthLevelCounts = countLevels(eighthFixture);
+const eighthReflexiveHeads = eighthFixture.entries.filter((entry) => entry.de.split(" ").includes("sich"));
+if (JSON.stringify(eighthLevelCounts) !== JSON.stringify({ B1: 87 })
+  || eighthFixture.entries.some((entry) => !entry.de.includes(" ") || entry.posInfo.split(",").length !== 3)
+  || eighthReflexiveHeads.length !== 49) {
+  errors.push(`PA-034-08 must remain bounded to 87 B1 multiword heads, including 49 reflexive heads: ${JSON.stringify(eighthLevelCounts)}/${eighthReflexiveHeads.length}`);
+}
+if (reviewedIds.size !== 649) {
+  errors.push(`review fixtures must contain 649 unique entries, got ${reviewedIds.size}`);
 }
 
 if (errors.length) {
@@ -197,7 +211,7 @@ if (errors.length) {
 }
 
 console.log(
-  `✅ Reviewed vocabulary morphology: ${reviewedIds.size}/${reviewedIds.size} corrected cards match seven bounded internal-review fixtures (${fixtures.map((fixture) => fixture.reviewedAt).join(", ")}).`,
+  `✅ Reviewed vocabulary morphology: ${reviewedIds.size}/${reviewedIds.size} corrected cards match eight bounded internal-review fixtures (${fixtures.map((fixture) => fixture.reviewedAt).join(", ")}).`,
 );
 console.log(
   "ℹ️ This gate prevents regression only for the reviewed PA-034 batches; it does not certify every posInfo field or provide external linguistic sign-off.",

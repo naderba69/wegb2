@@ -1,0 +1,704 @@
+{
+  "schema": "wegb2-reviewed-vocab-posinfo-batch-v1",
+  "batch": "PA-034-08",
+  "reviewedAt": "2026-11-04",
+  "scope": "87 additional high-confidence B1 multiword-head corrections after item-by-item internal review of each head and example; multiword grouping was triage only, seven other B1 heads with already-correct carrier forms or ambiguous combined-head semantics were deliberately unchanged, and this is not external linguistic sign-off.",
+  "entries": [
+    {
+      "id": "vg-staatx-701",
+      "deck": "b1-staat-argument",
+      "level": "B1",
+      "de": "sachlich bleiben",
+      "previousPosInfo": "sachlicht, sachlichte, hat gesachlicht",
+      "posInfo": "bleibt sachlich, blieb sachlich, ist sachlich geblieben"
+    },
+    {
+      "id": "vg-arbeit--029",
+      "deck": "b1-karriere-psyche",
+      "level": "B1",
+      "de": "belastbar bleiben",
+      "previousPosInfo": "belastbart, belastbarte, hat belastbar",
+      "posInfo": "bleibt belastbar, blieb belastbar, ist belastbar geblieben"
+    },
+    {
+      "id": "vg-psyche--012",
+      "deck": "b1-karriere-psyche",
+      "level": "B1",
+      "de": "sich wohlfühlen",
+      "previousPosInfo": "wohlfühlt, wohlfühlte, hat gewohlfühlt",
+      "posInfo": "fühlt sich wohl, fühlte sich wohl, hat sich wohlgefühlt"
+    },
+    {
+      "id": "vg-psyche--022",
+      "deck": "b1-karriere-psyche",
+      "level": "B1",
+      "de": "sich durchsetzen",
+      "previousPosInfo": "setzt durch, setzte durch, hat durchgesetzt",
+      "posInfo": "setzt sich durch, setzte sich durch, hat sich durchgesetzt"
+    },
+    {
+      "id": "vh-projekt-023",
+      "deck": "b1-projekt-rede",
+      "level": "B1",
+      "de": "sich abstimmen",
+      "previousPosInfo": "stimmt ab, stimmte ab, hat abgestimmt",
+      "posInfo": "stimmt sich ab, stimmte sich ab, hat sich abgestimmt"
+    },
+    {
+      "id": "vh-gesundh-014",
+      "deck": "b1-gesundheit-technik",
+      "level": "B1",
+      "de": "sich etwas vornehmen",
+      "previousPosInfo": "etwast, etwaste, hat geetwast",
+      "posInfo": "nimmt sich etwas vor, nahm sich etwas vor, hat sich etwas vorgenommen"
+    },
+    {
+      "id": "vi-geld-re-005",
+      "deck": "b1-stadt-recht",
+      "level": "B1",
+      "de": "haften für",
+      "previousPosInfo": "haftet, haftete, hat gehaftt",
+      "posInfo": "haftet, haftete, hat gehaftet"
+    },
+    {
+      "id": "vi-geld-re-019",
+      "deck": "b1-stadt-recht",
+      "level": "B1",
+      "de": "sich verschulden",
+      "previousPosInfo": "verschuldet, verschuldete, hat verschuldt",
+      "posInfo": "verschuldet sich, verschuldete sich, hat sich verschuldet"
+    },
+    {
+      "id": "vi-funktio-005",
+      "deck": "b1-funktionsverben",
+      "level": "B1",
+      "de": "sich beziehen auf",
+      "previousPosInfo": "bezieht, beziehte, ist bezieht",
+      "posInfo": "bezieht sich auf, bezog sich auf, hat sich auf ... bezogen"
+    },
+    {
+      "id": "vi-funktio-006",
+      "deck": "b1-funktionsverben",
+      "level": "B1",
+      "de": "verzichten auf",
+      "previousPosInfo": "verzichtet, verzichtete, hat verzichtt",
+      "posInfo": "verzichtet auf, verzichtete auf, hat auf ... verzichtet"
+    },
+    {
+      "id": "vi-funktio-007",
+      "deck": "b1-funktionsverben",
+      "level": "B1",
+      "de": "sich beteiligen an",
+      "previousPosInfo": "beteiligt, beteiligte, hat beteiligt",
+      "posInfo": "beteiligt sich an, beteiligte sich an, hat sich an ... beteiligt"
+    },
+    {
+      "id": "vi-funktio-011",
+      "deck": "b1-funktionsverben",
+      "level": "B1",
+      "de": "sich auswirken auf",
+      "previousPosInfo": "wirkt aus, wirkte aus, hat ausgewirkt",
+      "posInfo": "wirkt sich auf ... aus, wirkte sich auf ... aus, hat sich auf ... ausgewirkt"
+    },
+    {
+      "id": "vi-funktio-012",
+      "deck": "b1-funktionsverben",
+      "level": "B1",
+      "de": "zurückführen auf",
+      "previousPosInfo": "rückführt zu, rückführte zu, hat zugerückführt",
+      "posInfo": "führt ... auf ... zurück, führte ... auf ... zurück, hat ... auf ... zurückgeführt"
+    },
+    {
+      "id": "vi-funktio-013",
+      "deck": "b1-funktionsverben",
+      "level": "B1",
+      "de": "gelten als",
+      "previousPosInfo": "geltet, geltete, hat geltt",
+      "posInfo": "gilt als, galt als, hat als ... gegolten"
+    },
+    {
+      "id": "vi-funktio-019",
+      "deck": "b1-funktionsverben",
+      "level": "B1",
+      "de": "Rücksicht nehmen auf",
+      "previousPosInfo": "rücksichtet, rücksichtete, hat gerücksichtt",
+      "posInfo": "nimmt Rücksicht auf, nahm Rücksicht auf, hat Rücksicht auf ... genommen"
+    },
+    {
+      "id": "vi-funktio-021",
+      "deck": "b1-funktionsverben",
+      "level": "B1",
+      "de": "zu dem Schluss kommen",
+      "previousPosInfo": "zut, zute, ist gezut",
+      "posInfo": "kommt zu dem Schluss, kam zu dem Schluss, ist zu dem Schluss gekommen"
+    },
+    {
+      "id": "vi-funktio-023",
+      "deck": "b1-funktionsverben",
+      "level": "B1",
+      "de": "Wert legen auf",
+      "previousPosInfo": "wertet, wertete, hat gewertt",
+      "posInfo": "legt Wert auf, legte Wert auf, hat Wert auf ... gelegt"
+    },
+    {
+      "id": "vi-funktio-024",
+      "deck": "b1-funktionsverben",
+      "level": "B1",
+      "de": "sich Mühe geben",
+      "previousPosInfo": "mühet, mühete, hat gemühet",
+      "posInfo": "gibt sich Mühe, gab sich Mühe, hat sich Mühe gegeben"
+    },
+    {
+      "id": "vi-funkv-700",
+      "deck": "b1-funktionsverben",
+      "level": "B1",
+      "de": "Bezug nehmen auf",
+      "previousPosInfo": "bezugt, bezugte, hat bezug",
+      "posInfo": "nimmt Bezug auf, nahm Bezug auf, hat Bezug auf ... genommen"
+    },
+    {
+      "id": "vi-funkv-701",
+      "deck": "b1-funktionsverben",
+      "level": "B1",
+      "de": "Abstand nehmen von",
+      "previousPosInfo": "abstandet, abstandete, hat geabstandt",
+      "posInfo": "nimmt Abstand von, nahm Abstand von, hat Abstand von ... genommen"
+    },
+    {
+      "id": "vi-funkv-702",
+      "deck": "b1-funktionsverben",
+      "level": "B1",
+      "de": "Kritik üben an",
+      "previousPosInfo": "kritikt, kritikte, hat gekritikt",
+      "posInfo": "übt Kritik an, übte Kritik an, hat Kritik an ... geübt"
+    },
+    {
+      "id": "vi-funkv-703",
+      "deck": "b1-funktionsverben",
+      "level": "B1",
+      "de": "Einfluss nehmen auf",
+      "previousPosInfo": "einflusst, einflusste, hat geeinflusst",
+      "posInfo": "nimmt Einfluss auf, nahm Einfluss auf, hat Einfluss auf ... genommen"
+    },
+    {
+      "id": "vi-funkv-705",
+      "deck": "b1-funktionsverben",
+      "level": "B1",
+      "de": "zum Ausdruck bringen",
+      "previousPosInfo": "zumt, zumte, hat gezumt",
+      "posInfo": "bringt ... zum Ausdruck, brachte ... zum Ausdruck, hat ... zum Ausdruck gebracht"
+    },
+    {
+      "id": "vi-funkv-707",
+      "deck": "b1-funktionsverben",
+      "level": "B1",
+      "de": "Verantwortung tragen für",
+      "previousPosInfo": "verantwortungt, verantwortungte, hat verantwortung",
+      "posInfo": "trägt Verantwortung für, trug Verantwortung für, hat Verantwortung für ... getragen"
+    },
+    {
+      "id": "vi-funkv-708",
+      "deck": "b1-funktionsverben",
+      "level": "B1",
+      "de": "unter Druck stehen",
+      "previousPosInfo": "untert, unterte, hat unter",
+      "posInfo": "steht unter Druck, stand unter Druck, hat unter Druck gestanden"
+    },
+    {
+      "id": "vi-funkv-710",
+      "deck": "b1-funktionsverben",
+      "level": "B1",
+      "de": "Erfolg haben mit",
+      "previousPosInfo": "erfolgt, erfolgte, hat erfolg",
+      "posInfo": "hat Erfolg mit, hatte Erfolg mit, hat Erfolg mit ... gehabt"
+    },
+    {
+      "id": "vj-migrati-008",
+      "deck": "b1-bildung-migration-familie",
+      "level": "B1",
+      "de": "sich zurechtfinden",
+      "previousPosInfo": "rechtfindet zu, rechtfindete zu, hat zugerechtfindt",
+      "posInfo": "findet sich zurecht, fand sich zurecht, hat sich zurechtgefunden"
+    },
+    {
+      "id": "vj-migrati-012",
+      "deck": "b1-bildung-migration-familie",
+      "level": "B1",
+      "de": "sich beschweren bei",
+      "previousPosInfo": "beschwert, beschwerte, hat beschwert",
+      "posInfo": "beschwert sich bei, beschwerte sich bei, hat sich bei ... beschwert"
+    },
+    {
+      "id": "vk-b1x-027",
+      "deck": "b1-dienst-natur-bild",
+      "level": "B1",
+      "de": "sich aufwärmen",
+      "previousPosInfo": "wärmt auf, wärmte auf, hat aufgewärmt",
+      "posInfo": "wärmt sich auf, wärmte sich auf, hat sich aufgewärmt"
+    },
+    {
+      "id": "vk-b1x-040",
+      "deck": "b1-dienst-natur-bild",
+      "level": "B1",
+      "de": "deutlich steigen",
+      "previousPosInfo": "deutlicht, deutlichte, ist gedeutlicht",
+      "posInfo": "steigt deutlich, stieg deutlich, ist deutlich gestiegen"
+    },
+    {
+      "id": "vk-b1x-041",
+      "deck": "b1-dienst-natur-bild",
+      "level": "B1",
+      "de": "leicht sinken",
+      "previousPosInfo": "leichtet, leichtete, hat geleichtt",
+      "posInfo": "sinkt leicht, sank leicht, ist leicht gesunken"
+    },
+    {
+      "id": "vk-b1x-042",
+      "deck": "b1-dienst-natur-bild",
+      "level": "B1",
+      "de": "konstant bleiben",
+      "previousPosInfo": "konstantet, konstantete, hat gekonstantt",
+      "posInfo": "bleibt konstant, blieb konstant, ist konstant geblieben"
+    },
+    {
+      "id": "vl-b1y-004",
+      "deck": "b1-brief-wirtschaft",
+      "level": "B1",
+      "de": "um Rückmeldung bitten",
+      "previousPosInfo": "umt, umte, hat geumt",
+      "posInfo": "bittet um Rückmeldung, bat um Rückmeldung, hat um Rückmeldung gebeten"
+    },
+    {
+      "id": "vl-b1y-007",
+      "deck": "b1-brief-wirtschaft",
+      "level": "B1",
+      "de": "Widerspruch einlegen gegen",
+      "previousPosInfo": "widersprucht, widerspruchte, hat gewidersprucht",
+      "posInfo": "legt Widerspruch gegen ... ein, legte Widerspruch gegen ... ein, hat Widerspruch gegen ... eingelegt"
+    },
+    {
+      "id": "vl-b1y-020",
+      "deck": "b1-brief-wirtschaft",
+      "level": "B1",
+      "de": "sich rentieren",
+      "previousPosInfo": "rentiert, rentierte, hat gerentiert",
+      "posInfo": "rentiert sich, rentierte sich, hat sich rentiert"
+    },
+    {
+      "id": "vm-b1z-020",
+      "deck": "b1-wissen-zeit-wendungen",
+      "level": "B1",
+      "de": "sich ablenken lassen",
+      "previousPosInfo": "lenkt ab, lenkte ab, hat abgelenkt",
+      "posInfo": "lässt sich ablenken, ließ sich ablenken, hat sich ablenken lassen"
+    },
+    {
+      "id": "vm-b1z-021",
+      "deck": "b1-wissen-zeit-wendungen",
+      "level": "B1",
+      "de": "konzentriert bleiben",
+      "previousPosInfo": "konzentriertet, konzentriertete, hat gekonzentriertt",
+      "posInfo": "bleibt konzentriert, blieb konzentriert, ist konzentriert geblieben"
+    },
+    {
+      "id": "vm-b1z-025",
+      "deck": "b1-wissen-zeit-wendungen",
+      "level": "B1",
+      "de": "dranbleiben trotz Rückschlag",
+      "previousPosInfo": "dranbleibt, dranbleibte, hat gedranbleibt",
+      "posInfo": "bleibt trotz Rückschlag dran, blieb trotz Rückschlag dran, ist trotz Rückschlag drangeblieben"
+    },
+    {
+      "id": "vm-b1z-027",
+      "deck": "b1-wissen-zeit-wendungen",
+      "level": "B1",
+      "de": "etwas in Angriff nehmen",
+      "previousPosInfo": "etwast, etwaste, hat geetwast",
+      "posInfo": "nimmt etwas in Angriff, nahm etwas in Angriff, hat etwas in Angriff genommen"
+    },
+    {
+      "id": "vm-b1z-029",
+      "deck": "b1-wissen-zeit-wendungen",
+      "level": "B1",
+      "de": "hinter etwas stehen",
+      "previousPosInfo": "hintert, hinterte, hat gehintert",
+      "posInfo": "steht hinter etwas, stand hinter etwas, hat hinter etwas gestanden"
+    },
+    {
+      "id": "vm-b1z-031",
+      "deck": "b1-wissen-zeit-wendungen",
+      "level": "B1",
+      "de": "aus dem Weg gehen",
+      "previousPosInfo": "aust, auste, ist geaust",
+      "posInfo": "geht ... aus dem Weg, ging ... aus dem Weg, ist ... aus dem Weg gegangen"
+    },
+    {
+      "id": "vm-b1z-033",
+      "deck": "b1-wissen-zeit-wendungen",
+      "level": "B1",
+      "de": "ins Stocken geraten",
+      "previousPosInfo": "inst, inste, hat geinst",
+      "posInfo": "gerät ins Stocken, geriet ins Stocken, ist ins Stocken geraten"
+    },
+    {
+      "id": "vm-b1z-035",
+      "deck": "b1-wissen-zeit-wendungen",
+      "level": "B1",
+      "de": "unter einen Hut bringen",
+      "previousPosInfo": "untert, unterte, hat unter",
+      "posInfo": "bringt ... unter einen Hut, brachte ... unter einen Hut, hat ... unter einen Hut gebracht"
+    },
+    {
+      "id": "vp-b1u-032",
+      "deck": "b1-job-auto-praefix",
+      "level": "B1",
+      "de": "verstehen sich",
+      "previousPosInfo": "versteht, verstehte, hat versteht",
+      "posInfo": "versteht sich, verstand sich, hat sich verstanden"
+    },
+    {
+      "id": "vq-b1t-021",
+      "deck": "b1-geld-gemeinschaft-adj",
+      "level": "B1",
+      "de": "sich einsetzen für",
+      "previousPosInfo": "setzt ein, setzte ein, hat eingesetzt",
+      "posInfo": "setzt sich für ... ein, setzte sich für ... ein, hat sich für ... eingesetzt"
+    },
+    {
+      "id": "vs-b1r-025",
+      "deck": "b1-pruefung-text-reflexiv",
+      "level": "B1",
+      "de": "sich bemühen um",
+      "previousPosInfo": "bemüht, bemühte, hat bemüht",
+      "posInfo": "bemüht sich um, bemühte sich um, hat sich um ... bemüht"
+    },
+    {
+      "id": "vs-b1r-026",
+      "deck": "b1-pruefung-text-reflexiv",
+      "level": "B1",
+      "de": "sich erkundigen nach",
+      "previousPosInfo": "erkundigt, erkundigte, hat erkundigt",
+      "posInfo": "erkundigt sich nach, erkundigte sich nach, hat sich nach ... erkundigt"
+    },
+    {
+      "id": "vs-b1r-030",
+      "deck": "b1-pruefung-text-reflexiv",
+      "level": "B1",
+      "de": "sich gewöhnen an den Rhythmus",
+      "previousPosInfo": "gewöhnt, gewöhnte, hat gewöhnt",
+      "posInfo": "gewöhnt sich an den Rhythmus, gewöhnte sich an den Rhythmus, hat sich an den Rhythmus gewöhnt"
+    },
+    {
+      "id": "vs-b1r-031",
+      "deck": "b1-pruefung-text-reflexiv",
+      "level": "B1",
+      "de": "sich Zeit nehmen für",
+      "previousPosInfo": "zeitet, zeitete, hat gezeitt",
+      "posInfo": "nimmt sich Zeit für, nahm sich Zeit für, hat sich Zeit für ... genommen"
+    },
+    {
+      "id": "vs-b1r-032",
+      "deck": "b1-pruefung-text-reflexiv",
+      "level": "B1",
+      "de": "sich Notizen machen",
+      "previousPosInfo": "notizt, notizte, hat genotizt",
+      "posInfo": "macht sich Notizen, machte sich Notizen, hat sich Notizen gemacht"
+    },
+    {
+      "id": "vs-b1r-033",
+      "deck": "b1-pruefung-text-reflexiv",
+      "level": "B1",
+      "de": "sich etwas merken",
+      "previousPosInfo": "etwast, etwaste, hat geetwast",
+      "posInfo": "merkt sich etwas, merkte sich etwas, hat sich etwas gemerkt"
+    },
+    {
+      "id": "vs-b1r-034",
+      "deck": "b1-pruefung-text-reflexiv",
+      "level": "B1",
+      "de": "sich verbessern in",
+      "previousPosInfo": "verbesset, verbessete, hat verbessern",
+      "posInfo": "verbessert sich in, verbesserte sich in, hat sich in ... verbessert"
+    },
+    {
+      "id": "vs-b1r-900",
+      "deck": "b1-pruefung-text-reflexiv",
+      "level": "B1",
+      "de": "sich vorbereiten auf die Prüfung",
+      "previousPosInfo": "bereitet vor, bereitete vor, hat vorgebereitt",
+      "posInfo": "bereitet sich auf die Prüfung vor, bereitete sich auf die Prüfung vor, hat sich auf die Prüfung vorbereitet"
+    },
+    {
+      "id": "vs-b1r-901",
+      "deck": "b1-pruefung-text-reflexiv",
+      "level": "B1",
+      "de": "sich anmelden zur Prüfung",
+      "previousPosInfo": "meldet an, meldete an, hat angemeldt",
+      "posInfo": "meldet sich zur Prüfung an, meldete sich zur Prüfung an, hat sich zur Prüfung angemeldet"
+    },
+    {
+      "id": "vu-b1p-004",
+      "deck": "b1-medien-reise-verben",
+      "level": "B1",
+      "de": "teilen und kommentieren",
+      "previousPosInfo": "teilt, teilte, ist geteilt",
+      "posInfo": "teilt und kommentiert, teilte und kommentierte, hat geteilt und kommentiert"
+    },
+    {
+      "id": "vu-b1p-009",
+      "deck": "b1-medien-reise-verben",
+      "level": "B1",
+      "de": "zu bedenken geben",
+      "previousPosInfo": "zut, zute, hat gezut",
+      "posInfo": "gibt zu bedenken, gab zu bedenken, hat zu bedenken gegeben"
+    },
+    {
+      "id": "vu-b1p-022",
+      "deck": "b1-medien-reise-verben",
+      "level": "B1",
+      "de": "sich auskennen mit",
+      "previousPosInfo": "kennt aus, kennte aus, hat ausgekennt",
+      "posInfo": "kennt sich mit ... aus, kannte sich mit ... aus, hat sich mit ... ausgekannt"
+    },
+    {
+      "id": "vu-b1p-023",
+      "deck": "b1-medien-reise-verben",
+      "level": "B1",
+      "de": "es kommt an auf",
+      "previousPosInfo": "est, este, hat geest",
+      "posInfo": "kommt auf ... an, kam auf ... an, ist auf ... angekommen"
+    },
+    {
+      "id": "vu-b1p-026",
+      "deck": "b1-medien-reise-verben",
+      "level": "B1",
+      "de": "sich auswirken auf die Kosten",
+      "previousPosInfo": "wirkt aus, wirkte aus, hat ausgewirkt",
+      "posInfo": "wirkt sich auf die Kosten aus, wirkte sich auf die Kosten aus, hat sich auf die Kosten ausgewirkt"
+    },
+    {
+      "id": "vu-b1p-027",
+      "deck": "b1-medien-reise-verben",
+      "level": "B1",
+      "de": "darauf ankommen lassen",
+      "previousPosInfo": "darauft, daraufte, ist gedarauft",
+      "posInfo": "lässt es darauf ankommen, ließ es darauf ankommen, hat es darauf ankommen lassen"
+    },
+    {
+      "id": "vu-b1p-028",
+      "deck": "b1-medien-reise-verben",
+      "level": "B1",
+      "de": "sich herausstellen als",
+      "previousPosInfo": "ausstellt her, ausstellte her, hat hergeausstellt",
+      "posInfo": "stellt sich als ... heraus, stellte sich als ... heraus, hat sich als ... herausgestellt"
+    },
+    {
+      "id": "vu-b1p-029",
+      "deck": "b1-medien-reise-verben",
+      "level": "B1",
+      "de": "zurückgreifen auf",
+      "previousPosInfo": "rückgreift zu, rückgreifte zu, hat zugerückgreift",
+      "posInfo": "greift auf ... zurück, griff auf ... zurück, hat auf ... zurückgegriffen"
+    },
+    {
+      "id": "vu-b1p-033",
+      "deck": "b1-medien-reise-verben",
+      "level": "B1",
+      "de": "Abstand halten",
+      "previousPosInfo": "abstandet, abstandete, hat geabstandt",
+      "posInfo": "hält Abstand, hielt Abstand, hat Abstand gehalten"
+    },
+    {
+      "id": "r314b1-024",
+      "deck": "b1-az-a",
+      "level": "B1",
+      "de": "sich amüsieren",
+      "previousPosInfo": "amüsiert, amüsierte, hat geamüsiert",
+      "posInfo": "amüsiert sich, amüsierte sich, hat sich amüsiert"
+    },
+    {
+      "id": "r314b1-043",
+      "deck": "b1-az-a",
+      "level": "B1",
+      "de": "sich anstrengen",
+      "previousPosInfo": "strengt an, strengte an, hat angestrengt",
+      "posInfo": "strengt sich an, strengte sich an, hat sich angestrengt"
+    },
+    {
+      "id": "r314b1-081",
+      "deck": "b1-az-a",
+      "level": "B1",
+      "de": "sich aussuchen",
+      "previousPosInfo": "sucht aus, suchte aus, hat ausgesucht",
+      "posInfo": "sucht sich etwas aus, suchte sich etwas aus, hat sich etwas ausgesucht"
+    },
+    {
+      "id": "r314b1-087",
+      "deck": "b1-az-a",
+      "level": "B1",
+      "de": "sich anpassen",
+      "previousPosInfo": "passt an, passte an, hat angepasst",
+      "posInfo": "passt sich an, passte sich an, hat sich angepasst"
+    },
+    {
+      "id": "r314b1-089",
+      "deck": "b1-az-a",
+      "level": "B1",
+      "de": "sich auseinandersetzen",
+      "previousPosInfo": "einandersetzt aus, einandersetzte aus, hat ausgeeinandersetzt",
+      "posInfo": "setzt sich auseinander, setzte sich auseinander, hat sich auseinandergesetzt"
+    },
+    {
+      "id": "r314b1-105",
+      "deck": "b1-az-b",
+      "level": "B1",
+      "de": "sich befinden",
+      "previousPosInfo": "befindet, befindete, hat befindt",
+      "posInfo": "befindet sich, befand sich, hat sich befunden"
+    },
+    {
+      "id": "r314b1-116",
+      "deck": "b1-az-b",
+      "level": "B1",
+      "de": "bekannt geben",
+      "previousPosInfo": "bekanntet, bekanntete, hat bekannt",
+      "posInfo": "gibt bekannt, gab bekannt, hat bekannt gegeben"
+    },
+    {
+      "id": "r314b1-120",
+      "deck": "b1-az-b",
+      "level": "B1",
+      "de": "sich bemühen",
+      "previousPosInfo": "bemüht, bemühte, hat bemüht",
+      "posInfo": "bemüht sich, bemühte sich, hat sich bemüht"
+    },
+    {
+      "id": "r314b1-131",
+      "deck": "b1-az-b",
+      "level": "B1",
+      "de": "Bescheid geben",
+      "previousPosInfo": "bescheidet, bescheidete, hat bescheid",
+      "posInfo": "gibt Bescheid, gab Bescheid, hat Bescheid gegeben"
+    },
+    {
+      "id": "r314b1-176",
+      "deck": "b1-az-b",
+      "level": "B1",
+      "de": "sich beklagen",
+      "previousPosInfo": "beklagt, beklagte, hat beklagt",
+      "posInfo": "beklagt sich, beklagte sich, hat sich beklagt"
+    },
+    {
+      "id": "r314b1-177",
+      "deck": "b1-az-b",
+      "level": "B1",
+      "de": "sich beschäftigen",
+      "previousPosInfo": "beschäftigt, beschäftigte, hat beschäftigt",
+      "posInfo": "beschäftigt sich, beschäftigte sich, hat sich beschäftigt"
+    },
+    {
+      "id": "r314b1-179",
+      "deck": "b1-az-b",
+      "level": "B1",
+      "de": "sich beschränken",
+      "previousPosInfo": "beschränkt, beschränkte, hat beschränkt",
+      "posInfo": "beschränkt sich, beschränkte sich, hat sich beschränkt"
+    },
+    {
+      "id": "r315b1-061",
+      "deck": "b1-az-e",
+      "level": "B1",
+      "de": "sich einigen",
+      "previousPosInfo": "igt ein, igte ein, hat eingeigt",
+      "posInfo": "einigt sich, einigte sich, hat sich geeinigt"
+    },
+    {
+      "id": "r315b1-095",
+      "deck": "b1-az-e",
+      "level": "B1",
+      "de": "sich erkälten",
+      "previousPosInfo": "erkältet, erkältete, hat erkältt",
+      "posInfo": "erkältet sich, erkältete sich, hat sich erkältet"
+    },
+    {
+      "id": "r315b1-099",
+      "deck": "b1-az-e",
+      "level": "B1",
+      "de": "sich erkundigen",
+      "previousPosInfo": "erkundigt, erkundigte, hat erkundigt",
+      "posInfo": "erkundigt sich, erkundigte sich, hat sich erkundigt"
+    },
+    {
+      "id": "r316b1-065",
+      "deck": "b1-az-g",
+      "level": "B1",
+      "de": "geboren werden",
+      "previousPosInfo": "gebort, geborte, hat gebort",
+      "posInfo": "wird geboren, wurde geboren, ist geboren worden"
+    },
+    {
+      "id": "r317b1-024",
+      "deck": "b1-az-i",
+      "level": "B1",
+      "de": "sich irren",
+      "previousPosInfo": "irrt, irrte, hat geirrt",
+      "posInfo": "irrt sich, irrte sich, hat sich geirrt"
+    },
+    {
+      "id": "r317b1-113",
+      "deck": "b1-az-l",
+      "level": "B1",
+      "de": "sich langweilen",
+      "previousPosInfo": "langweilt, langweilte, hat gelangweilt",
+      "posInfo": "langweilt sich, langweilte sich, hat sich gelangweilt"
+    },
+    {
+      "id": "r318b1-060",
+      "deck": "b1-az-n",
+      "level": "B1",
+      "de": "sich nähern",
+      "previousPosInfo": "nähet, nähete, hat genähet",
+      "posInfo": "nähert sich, näherte sich, hat sich genähert"
+    },
+    {
+      "id": "r319b1-007",
+      "deck": "b1-az-qr",
+      "level": "B1",
+      "de": "sich rasieren",
+      "previousPosInfo": "rasiert, rasierte, hat gerasiert",
+      "posInfo": "rasiert sich, rasierte sich, hat sich rasiert"
+    },
+    {
+      "id": "r321b1-047",
+      "deck": "b1-az-s2",
+      "level": "B1",
+      "de": "sich stoßen",
+      "previousPosInfo": "stoßt, stoßte, hat gestoßt",
+      "posInfo": "stößt sich, stieß sich, hat sich gestoßen"
+    },
+    {
+      "id": "r324b1-045",
+      "deck": "b1-az-w",
+      "level": "B1",
+      "de": "sich wundern",
+      "previousPosInfo": "wundet, wundete, hat gewundet",
+      "posInfo": "wundert sich, wunderte sich, hat sich gewundert"
+    },
+    {
+      "id": "r325b1-043",
+      "deck": "b1-az-z",
+      "level": "B1",
+      "de": "sich zwingen",
+      "previousPosInfo": "zwingt, zwingte, hat gezwingt",
+      "posInfo": "zwingt sich, zwang sich, hat sich gezwungen"
+    },
+    {
+      "id": "r326b1-017",
+      "deck": "b1-az-rest",
+      "level": "B1",
+      "de": "sich interessieren",
+      "previousPosInfo": "interessiert, interessierte, hat geinteressiert",
+      "posInfo": "interessiert sich, interessierte sich, hat sich interessiert"
+    }
+  ]
+}
