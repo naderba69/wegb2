@@ -15819,10 +15819,10 @@ function collectR262(dir: string, out: string[] = []): string[] {
   ok(patchK422.includes('current == reviewed') && patchK422.includes('current != previous') &&
     patchK422.includes("unexpected current writing task") &&
     auditK422.includes("review02.entries.length !== 25") && auditK422.includes("review02Corrected.length !== 17") &&
-    auditK422.includes("does not certify the remaining 33 B2 writing cards") &&
+    auditK422.includes("does not provide independent linguistic, exam, or CEFR sign-off") &&
     reviewK422.scope.includes("triage only") && reviewK422.scope.includes("not correction generators") &&
     reviewK422.scope.includes("not independent linguistic, exam, or CEFR sign-off"),
-    "K422c PA-035-02: الرقعة مقفلة بالمهمة الكاملة والبوابة تحرس القرارات مع إبقاء 80 بطاقة والتوقيع المستقل خارج الادعاء");
+    "K422c PA-035-02: الرقعة التاريخية مقفلة بالمهمة الكاملة والبوابة الحالية تحرس سجل القرارات كله مع إبقاء التوقيع المستقل خارج الادعاء");
 }
 
 /* ═══ K423 — PA-035-03: مراجعة بطاقات الكتابة A2 بندياً ═══ */
@@ -15859,10 +15859,10 @@ function collectR262(dir: string, out: string[] = []): string[] {
   ok(patchK423.includes('current == reviewed') && patchK423.includes('current != previous') &&
     patchK423.includes("unexpected current writing task") &&
     auditK423.includes("review03.entries.length !== 20") && auditK423.includes("review03Corrected.length !== 18") &&
-    auditK423.includes("does not certify the remaining 33 B2 writing cards") &&
+    auditK423.includes("does not provide independent linguistic, exam, or CEFR sign-off") &&
     reviewK423.scope.includes("triage only") && reviewK423.scope.includes("not correction generators") &&
     reviewK423.scope.includes("not independent linguistic, exam, or CEFR sign-off"),
-    "K423c PA-035-03: الرقعة مقفلة بالمهمة الكاملة والبوابة تحرس 45 قراراً مع إبقاء B1/B2 والتوقيع المستقل خارج الادعاء");
+    "K423c PA-035-03: الرقعة التاريخية مقفلة بالمهمة الكاملة والبوابة الحالية تحرس سجل القرارات كله مع إبقاء التوقيع المستقل خارج الادعاء");
 }
 
 /* ═══ K424 — PA-035-04: مراجعة بطاقات الكتابة B1 بندياً ═══ */
@@ -15899,10 +15899,56 @@ function collectR262(dir: string, out: string[] = []): string[] {
   ok(patchK424.includes('current == reviewed') && patchK424.includes('current != previous') &&
     patchK424.includes("unexpected current writing task") &&
     auditK424.includes("review04.entries.length !== 27") && auditK424.includes("review04Corrected.length !== 22") &&
-    auditK424.includes("does not certify the remaining 33 B2 writing cards") &&
+    auditK424.includes("does not provide independent linguistic, exam, or CEFR sign-off") &&
     reviewK424.scope.includes("triage only") && reviewK424.scope.includes("not correction generators") &&
     reviewK424.scope.includes("not independent linguistic, exam, or CEFR sign-off"),
-    "K424c PA-035-04: الرقعة مقفلة بالمهمة الكاملة والبوابة تحرس 72 قراراً مع إبقاء B2 والتوقيع المستقل خارج الادعاء");
+    "K424c PA-035-04: الرقعة التاريخية مقفلة بالمهمة الكاملة والبوابة الحالية تحرس سجل القرارات كله مع إبقاء التوقيع المستقل خارج الادعاء");
+}
+
+/* ═══ K425 — PA-035-05: مراجعة بطاقات الكتابة B2 بندياً ═══ */
+{
+  const reviewK425 = JSON.parse(readFileSync("scripts/fixtures/writing-reviewed-05.json", "utf8")) as {
+    schema: string;
+    batch: string;
+    scope: string;
+    entries: { id: string; level: string; decision: "corrected" | "confirmed-current"; rationale: string; previous: Record<string, unknown>; current: Record<string, unknown> }[];
+  };
+  const writingK425 = bankRoh("writing.json") as Record<string, unknown>[];
+  const tasksK425 = new Map(writingK425.map((task) => [String(task.id), task]));
+  const correctedK425 = reviewK425.entries.filter((entry) => entry.decision === "corrected");
+  const confirmedK425 = reviewK425.entries.filter((entry) => entry.decision === "confirmed-current");
+  const expectedK425 = new Set([
+    ...Array.from({ length: 28 }, (_, index) => `w-b2-${String(index + 1).padStart(2, "0")}`),
+    ...Array.from({ length: 5 }, (_, index) => `w-b2-${index + 41}`),
+  ]);
+  const currentK425 = new Map(reviewK425.entries.map((entry) => [entry.id, entry.current]));
+  ok(reviewK425.schema === "wegb2-reviewed-writing-decision-batch-v1" && reviewK425.batch === "PA-035-05" &&
+    reviewK425.entries.length === 33 && new Set(reviewK425.entries.map((entry) => entry.id)).size === 33 &&
+    [...expectedK425].every((id) => currentK425.has(id)) &&
+    reviewK425.entries.every((entry) => entry.level === "B2" && entry.rationale.trim().length > 0) &&
+    correctedK425.length === 33 && confirmedK425.length === 0 &&
+    correctedK425.every((entry) => JSON.stringify(entry.previous) !== JSON.stringify(entry.current)),
+    "K425a PA-035-05: سجل القرار يغطي بطاقات B2 الثلاث والثلاثين كلها بتصحيحات محدودة ومبررات بندية");
+  ok(reviewK425.entries.every((entry) => JSON.stringify(tasksK425.get(entry.id)) === JSON.stringify(entry.current)) &&
+    !String(currentK425.get("w-b2-06")?.sample).includes("sechzig Prozent") &&
+    String(currentK425.get("w-b2-07")?.sample).endsWith("Mit freundlichen Grüßen\nLayla Haddad") &&
+    String(currentK425.get("w-b2-19")?.sample).endsWith("Mit freundlichen Grüßen\nKarim Benali") &&
+    String(currentK425.get("w-b2-21")?.sample).endsWith("Vielen Dank und herzliche Grüße\nOmar Haddad") &&
+    String(currentK425.get("w-b2-23")?.taskDe).includes("mindestens 150 Wörter") &&
+    String(currentK425.get("w-b2-41")?.sample).includes("die Vorgaben seien") &&
+    String(currentK425.get("w-b2-43")?.sample).includes("Dinge ersetzt werden") &&
+    String(currentK425.get("w-b2-45")?.sample).endsWith("gemeinsam wahrnehmen?"),
+    "K425b PA-035-05: القرارات تطابق البنك وتحرس الحد الوقائعي وبنية الرسائل والحد الأدنى والروابط والنقل والمبني للمجهول والخاتمة");
+  const patchK425 = readFileSync("scripts/patches/apply_writing_review_pa035_05.py", "utf8");
+  const auditK425 = readFileSync("scripts/writing_consistency_audit.ts", "utf8");
+  ok(patchK425.includes('current == reviewed') && patchK425.includes('current != previous') &&
+    patchK425.includes("unexpected current writing task") &&
+    auditK425.includes("review05.entries.length !== 33") && auditK425.includes("review05Corrected.length !== 33") &&
+    auditK425.includes("all 105 bounded A0/A1/A2/B1/B2 full-card decisions match") &&
+    auditK425.includes("does not provide independent linguistic, exam, or CEFR sign-off") &&
+    reviewK425.scope.includes("triage only") && reviewK425.scope.includes("not correction generators") &&
+    reviewK425.scope.includes("not independent linguistic, exam, or CEFR sign-off"),
+    "K425c PA-035-05: الرقعة مقفلة بالمهمة الكاملة وقابلة للإعادة والبوابة تحرس القرارات الـ105 مع إبقاء التوقيع المستقل خارج الادعاء");
 }
 
 /* ═══ K334 — R309: القفل الفعلي الحقيقي — إغلاقُ اليوم عند حدود الوحدة ممنوعٌ لا منصوحٌ به فقط ═══ */

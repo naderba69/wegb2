@@ -41,6 +41,9 @@ const review03 = JSON.parse(
 const review04 = JSON.parse(
   fs.readFileSync(path.join(process.cwd(), "scripts", "fixtures", "writing-reviewed-04.json"), "utf8"),
 ) as WritingReviewFixture;
+const review05 = JSON.parse(
+  fs.readFileSync(path.join(process.cwd(), "scripts", "fixtures", "writing-reviewed-05.json"), "utf8"),
+) as WritingReviewFixture;
 const byId = new Map(tasks.map((task) => [task.id, task]));
 const errors: string[] = [];
 const wordRiskIds = new Set([
@@ -412,6 +415,96 @@ for (const stale of [
   }
 }
 
+const review05Ids = new Set(review05.entries.map((entry) => entry.id));
+const review05Corrected = review05.entries.filter((entry) => entry.decision === "corrected");
+const review05Confirmed = review05.entries.filter((entry) => entry.decision === "confirmed-current");
+const expectedB2Ids = new Set([
+  ...Array.from({ length: 28 }, (_, index) => `w-b2-${String(index + 1).padStart(2, "0")}`),
+  ...Array.from({ length: 5 }, (_, index) => `w-b2-${index + 41}`),
+]);
+if (review05.schema !== "wegb2-reviewed-writing-decision-batch-v1"
+  || review05.batch !== "PA-035-05"
+  || review05.entries.length !== 33
+  || review05Ids.size !== 33
+  || [...expectedB2Ids].some((id) => !review05Ids.has(id))
+  || review05Corrected.length !== 33
+  || review05Confirmed.length !== 0
+  || review05.entries.some((entry) => entry.level !== "B2" || !entry.rationale?.trim())) {
+  errors.push(
+    `unexpected PA-035-05 fixture scope/counts: ${review05.schema}/${review05.batch}/${review05.entries.length}/${review05Ids.size}/${review05Corrected.length}/${review05Confirmed.length}`,
+  );
+}
+if (!review05.scope.includes("triage only")
+  || !review05.scope.includes("not correction generators")
+  || !review05.scope.includes("not independent linguistic, exam, or CEFR sign-off")) {
+  errors.push("PA-035-05 fixture must preserve its triage and external-sign-off claim boundary");
+}
+for (const entry of review05.entries) {
+  const actual = byId.get(entry.id);
+  if (!actual) {
+    errors.push(`missing PA-035-05 writing task ${entry.id}`);
+    continue;
+  }
+  if (actual.level !== "B2"
+    || entry.previous.id !== entry.id
+    || entry.current.id !== entry.id
+    || entry.previous.level !== "B2"
+    || entry.current.level !== "B2"
+    || JSON.stringify(actual) !== JSON.stringify(entry.current)) {
+    errors.push(`${entry.id}: PA-035-05 identity or reviewed task content drifted`);
+  }
+  if (entry.decision !== "corrected" || JSON.stringify(entry.previous) === JSON.stringify(entry.current)) {
+    errors.push(`${entry.id}: PA-035-05 corrected decision has no change or unexpected status`);
+  }
+  const target = entry.current.zielWort;
+  if (!target) {
+    errors.push(`${entry.id}: PA-035-05 task has no internal word target`);
+  } else {
+    const actualWords = words(entry.current.sample);
+    const ratio = actualWords / target;
+    if (ratio < 0.8 || ratio > 1.2) {
+      errors.push(
+        `${entry.id}: PA-035-05 sample has ${actualWords} words for target ${target} (${(ratio * 100).toFixed(1)}%)`,
+      );
+    }
+  }
+}
+const b2Guard05 = JSON.stringify(review05.entries.map((entry) => entry.current));
+if (!requireTask("w-b2-02").sample.includes("Interesse an der ausgeschriebenen Stelle bekunden")
+  || !requireTask("w-b2-02").sample.endsWith("Mit freundlichen Grüßen\nAmina Mansour")
+  || !requireTask("w-b2-06").sample.includes("Demzufolge waren sich die Beteiligten")
+  || !requireTask("w-b2-07").sample.endsWith("Mit freundlichen Grüßen\nLayla Haddad")
+  || !requireTask("w-b2-16").sample.startsWith("Ich bin dafür, soziale Medien grundsätzlich erst ab 16 Jahren")
+  || !requireTask("w-b2-19").sample.endsWith("Mit freundlichen Grüßen\nKarim Benali")
+  || !requireTask("w-b2-20").sample.endsWith("Mit freundlichen Grüßen\nSara Amri")
+  || !requireTask("w-b2-21").sample.endsWith("Vielen Dank und herzliche Grüße\nOmar Haddad")
+  || words(requireTask("w-b2-23").sample) < 150
+  || !requireTask("w-b2-41").sample.includes("die Vorgaben seien")
+  || !requireTask("w-b2-42").sample.includes("weil sie sehr kurzfristig eingeführt wurde")
+  || !requireTask("w-b2-43").sample.includes("Dinge ersetzt werden")
+  || !requireTask("w-b2-44").sample.endsWith("Mit freundlichen Grüßen\nNora Al-Hadi")
+  || !requireTask("w-b2-45").sample.endsWith("gemeinsam wahrnehmen?")) {
+  errors.push("PA-035-05 guarded factual-boundary, register, layout, task, or model corrections regressed");
+}
+for (const stale of [
+  "sechzig Prozent der Lehrkräfte",
+  "viele Produktivitätsstudien",
+  "viele Studien zeigen",
+  "Die Forschung zeigt zugleich",
+  "Schulen berichten außerdem",
+  "Erfahrungen aus anderen Städten zeigen",
+  "Diese Darstellung, so die Mieterin, sei irreführend",
+  "Das Gespräch bietet zudem die Chance",
+  "Diese Entwicklung verdient mehr Aufmerksamkeit",
+  "غوته B2 الكتابة",
+  "telc-Format",
+  "صيغة telc",
+]) {
+  if (b2Guard05.includes(stale)) {
+    errors.push(`PA-035-05 stale, malformed, unsupported, or externally attributed text returned: ${stale}`);
+  }
+}
+
 if (errors.length) {
   console.error("❌ Writing consistency audit failed:");
   for (const error of errors) console.error(`- ${error}`);
@@ -419,8 +512,8 @@ if (errors.length) {
 }
 
 console.log(
-  "✅ Writing consistency: 42 registered findings remain fixed; all 72 bounded A0/A1/A2/B1 full-card decisions match (57 corrected, 15 confirmed-current).",
+  "✅ Writing consistency: 42 registered findings remain fixed; all 105 bounded A0/A1/A2/B1/B2 full-card decisions match (90 corrected, 15 confirmed-current).",
 );
 console.log(
-  "ℹ️ This gate checks reviewed targets, sample length, sentence count, task/Arabic/criterion/model/note alignment, and identity decisions; it does not certify the remaining 33 B2 writing cards or provide independent linguistic, exam, or CEFR sign-off.",
+  "ℹ️ This gate checks reviewed targets, sample length, sentence count, task/Arabic/criterion/model/note alignment, and identity decisions; it does not provide independent linguistic, exam, or CEFR sign-off.",
 );

@@ -586,17 +586,21 @@
     "sentenceCountMethod": "sentence-final punctuation count; treated as pedagogical risk because greetings may not count as sentences",
     "fixedFindings": 42,
     "openReviewFindings": 0,
+    "fullCardReviewDecisions": 105,
+    "correctedFullCardDecisions": 90,
+    "confirmedCurrentFullCardDecisions": 15,
+    "reviewedLevels": ["A0", "A1", "A2", "B1", "B2"],
     "fixedConfirmedErrors": 25,
     "currentPromptConfigWordTargetConflicts": 0,
     "regressionGate": "npm run audit:writing-consistency",
     "fixedPedagogicalRisks": 17
   },
   "inventorySnapshot": {
-    "indexedTrackedFilesAndAuditArtifacts": 3594,
-    "manual_complete": 55,
-    "manual_targeted": 69,
+    "indexedTrackedFilesAndAuditArtifacts": 3602,
+    "manual_complete": 56,
+    "manual_targeted": 68,
     "not_started": 3441,
-    "audit_artifact": 29
+    "audit_artifact": 37
   },
   "learningStateCorrections": {
     "findings": [
