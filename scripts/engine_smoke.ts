@@ -11354,9 +11354,11 @@ void 0;
       Array.isArray(q.options) && q.options.length >= 2 && new Set(q.options).size === q.options.length && q.options.includes(q.answer)));
   ok(tasksValid, "K229b نصوص B1 الخمسة وأسئلتها العشرة مكتملة؛ خيارات MC فريدة والمفاتيح صالحة");
   const rent = batch[0], diet = batch[1], interview = batch[2], accident = batch[3], letter = batch[4];
-  ok(rent.questions[1].explanationAr.includes("الإيجارات الأقل مقارنة بهامبورغ") &&
-    diet.questions[1].promptAr === "ما الذي يجب أن تنتبه إليه؟" &&
-    diet.questions[1].explanationAr.includes("كمية كافية من الحديد والبروتين") &&
+  ok(rent.de.includes("die für mich günstigeren Mieten im Vergleich zu Hamburg") &&
+    rent.questions[1].answer === "Die vielen Grünflächen und die für sie günstigeren Mieten" &&
+    diet.questions[1].promptAr === "على ماذا أحرص بعد الاستشارة؟" &&
+    diet.questions[1].explanationAr.includes("genügend Eisen und Eiweiß aufnehme") &&
+    diet.de.includes("Ob diese Veränderungen allein an meiner Ernährung liegen") &&
     interview.ar.includes("لم أتلقَّ عرض عمل بعد") &&
     accident.ar.includes("كان يقود دراجته في خط مستقيم") && accident.ar.includes("أُصيب إصابة طفيفة في ركبته") &&
     accident.ar.includes("نبّه رجل آخر السائقين إلى الحادث") &&
@@ -12005,17 +12007,20 @@ void 0;
   const reviewR165Md = readFileSync("docs/content-review-b1-audio-08-2026-10-12.md", "utf8");
   const patchR165 = readFileSync("scripts/patches/add_hoeren_audio_r165.py", "utf8");
   const textsArr = JSON.parse(readFileSync("content/texts.json", "utf8")) as any[];
+  const reviewPa03704 = JSON.parse(readFileSync("scripts/fixtures/texts-reviewed-04.json", "utf8")) as any;
   const ids = Array.from({ length: 10 }, (_, index) => `t-b1-${index + 21}`);
   const batch = ids.map((id) => textsArr.find((text:any) => text.id === id));
+  const historicalBatch = ids.map((id) => reviewPa03704.entries.find((entry:any) => entry.id === id)?.previous);
   const wordCounts = [171, 201, 191, 204, 192, 186, 195, 214, 195, 211];
   const arabicWordCounts = [161, 188, 153, 205, 177, 161, 176, 198, 147, 175];
-  const wordTotal = batch.reduce((sum:number, text:any) => sum + text.de.split(/\s+/).filter(Boolean).length, 0);
-  const sentenceEndMarks = batch.reduce((sum:number, text:any) => sum + (text.de.match(/[.!?]/g) ?? []).length, 0);
-  const countsValid = batch.every((text:any, index:number) => text && text.de.split(/\s+/).filter(Boolean).length === wordCounts[index] &&
+  const wordTotal = historicalBatch.reduce((sum:number, text:any) => sum + text.de.split(/\s+/).filter(Boolean).length, 0);
+  const sentenceEndMarks = historicalBatch.reduce((sum:number, text:any) => sum + (text.de.match(/[.!?]/g) ?? []).length, 0);
+  const countsValid = historicalBatch.every((text:any, index:number) => text && text.de.split(/\s+/).filter(Boolean).length === wordCounts[index] &&
     text.ar.split(/\s+/).filter(Boolean).length === arabicWordCounts[index] &&
     reviewR165.resources.find((resource:any) => resource.id === text.id)?.germanWords === wordCounts[index] &&
     reviewR165.resources.find((resource:any) => resource.id === text.id)?.arabicWords === arabicWordCounts[index]);
-  ok(reviewR165.reviewRule === "R165" && JSON.stringify(reviewR165.targetIds) === JSON.stringify(ids) &&
+  ok(reviewR165.reviewRule === "R165" && reviewPa03704.batch === "PA-037-04" &&
+    JSON.stringify(reviewR165.targetIds) === JSON.stringify(ids) &&
     reviewR165.sourceReview.priorTextReviewRule === "R140" && reviewR165.sourceReview.laterB1TextReviewRule === "R158" &&
     reviewR165.totals.texts === 10 && wordTotal === 1960 && reviewR165.totals.germanWords === 1960 &&
     sentenceEndMarks === 153 && reviewR165.totals.sentenceEndMarks === 153 && reviewR165.totals.questions === 40 &&
@@ -12043,10 +12048,11 @@ void 0;
     environmentText?.de.includes("schlecht gedämmt") && environmentText?.de.includes("Kommt die Heizenergie aus Kohle oder Erdgas? Ist das schädlich?") &&
     environmentText?.de.includes("Dazu hatte die Gruppe keine Daten") && environmentText?.de.includes("Starkregen") && environmentText?.de.includes("konsumieren") &&
     environmentText?.de.includes("Wir hoffen, dass die Pflanzen den Boden schützen und mehr Regenwasser dort versickert") &&
-    healthText?.de.includes("Therapie mit Tabletten") && healthText?.de.includes("Ob sein Immunsystem dadurch stärker geworden ist, kann er nicht sagen") &&
+    healthText?.de.includes("bevor er über eine weitere Therapie entschied") &&
+    healthText?.de.includes("Ob das mit seinen Änderungen zusammenhängt oder sein Immunsystem dadurch stärker geworden ist, kann er nicht sagen") &&
     cityText?.de.includes("ob für die Bänke eine Baugenehmigung nötig sei") &&
     theaterText?.de.includes("Ein großes Orchester gab es nicht") && theaterText?.de.includes("ein kleines Ensemble") && theaterText?.de.includes("aus Tunis gewohnt") &&
-    businessText?.de.includes("Bargeld abheben") && businessText?.de.includes("auf mein Konto einzahlen") &&
+    businessText?.de.includes("Für Taxifahrten und andere kleine Ausgaben brauchte ich Bargeld") && businessText?.de.includes("auf mein Konto einzahlen") &&
     teenQuestion?.promptDe.includes("wofür die Tochter ihr Taschengeld ausgibt") && teenQuestion?.answer === "falsch" &&
     reviewR165.sources.some((source:any) => source.url.includes("__651h.html")) &&
     reviewR165.sources.some((source:any) => source.url.includes("package-holiday")) &&
@@ -12081,7 +12087,7 @@ void 0;
     reviewR165.audio.validation.humanListening === false && reviewR165.audio.validation.pronunciationQualityJudged === false &&
     reviewR165.audio.otherManifests.dialogAudioEntriesForTargets === 0 && reviewR165.audio.otherManifests.diktatAudioEntriesForTargets === 0,
     "K234d لقطتا R165/R166 التاريخيتان سليمتان؛ عدد المانيفستو الحي متسق والمانيفستات الأخرى مستقلة");
-  const sourceHashesValid = batch.every((text:any) => {
+  const sourceHashesValid = historicalBatch.every((text:any) => {
     const digest = createHash("sha256").update(text.de, "utf8").digest("hex");
     return patchR165.includes(`"${text.id}": "${digest}"`);
   });
@@ -12102,22 +12108,25 @@ void 0;
   const reviewR166Md = readFileSync("docs/content-review-b1-audio-09-2026-10-13.md", "utf8");
   const patchR166 = readFileSync("scripts/patches/add_hoeren_audio_r166.py", "utf8");
   const textsArr = JSON.parse(readFileSync("content/texts.json", "utf8")) as any[];
+  const reviewPa03704 = JSON.parse(readFileSync("scripts/fixtures/texts-reviewed-04.json", "utf8")) as any;
   const ids = Array.from({ length: 5 }, (_, index) => `t-b1-${index + 31}`);
   const batch = ids.map((id) => textsArr.find((text:any) => text.id === id));
+  const historicalBatch = ids.map((id) => reviewPa03704.entries.find((entry:any) => entry.id === id)?.previous);
   const wordCounts = [181, 180, 169, 172, 169];
   const arabicWordCounts = [137, 154, 130, 142, 142];
   const sentenceEndCounts = [14, 13, 15, 16, 12];
-  const sourceHashesValid = batch.every((text:any) => {
+  const sourceHashesValid = historicalBatch.every((text:any) => {
     const digest = createHash("sha256").update(text.de, "utf8").digest("hex");
     return patchR166.includes(`"${text.id}": "${digest}"`);
   });
-  const countsValid = batch.every((text:any, index:number) => text &&
+  const countsValid = historicalBatch.every((text:any, index:number) => text &&
     text.de.split(/\s+/).filter(Boolean).length === wordCounts[index] &&
     text.ar.split(/\s+/).filter(Boolean).length === arabicWordCounts[index] &&
     (text.de.match(/[.!?]/g) ?? []).length === sentenceEndCounts[index] &&
     reviewR166.resources.find((resource:any) => resource.id === text.id)?.germanWords === wordCounts[index] &&
     reviewR166.resources.find((resource:any) => resource.id === text.id)?.arabicWords === arabicWordCounts[index]);
-  ok(reviewR166.reviewRule === "R166" && reviewR166.sourceReview.priorTextReviewRule === "R158" &&
+  ok(reviewR166.reviewRule === "R166" && reviewPa03704.batch === "PA-037-04" &&
+    reviewR166.sourceReview.priorTextReviewRule === "R158" &&
     JSON.stringify(reviewR166.targetIds) === JSON.stringify(ids) && reviewR166.totals.texts === 5 &&
     reviewR166.totals.germanWords === 871 && reviewR166.totals.arabicWords === 705 &&
     reviewR166.totals.sentenceEndMarks === 70 && reviewR166.totals.questions === 10 &&
@@ -12137,9 +12146,10 @@ void 0;
   const diet = batch.find((text:any) => text.id === "t-b1-32");
   const accident = batch.find((text:any) => text.id === "t-b1-34");
   const letter = batch.find((text:any) => text.id === "t-b1-35");
-  ok(questionsValid && rent?.questions[1].options[1] === "Die vielen Grünflächen und die günstigen Mieten" &&
+  ok(questionsValid && rent?.questions[1].options[1] === "Die vielen Grünflächen und die für sie günstigeren Mieten" &&
     rent?.questions[1].answer === rent?.questions[1].options[1] &&
-    diet?.ar.includes("لأن عائلتي، بحكم عاداتها، تطهو اللحم كثيراً") &&
+    diet?.ar.includes("لا أعرف إن كانت هذه التغيرات ناتجة عن نظامي الغذائي وحده") &&
+    diet?.de.includes("Ich habe mich beraten lassen") &&
     accident?.ar.includes("وذكّرني هذا الحادث مجدداً") &&
     letter?.questions[1].promptAr === "ما الإجراء الآخر الذي تقترحه كاتبة الرسالة؟",
     "K235b أسئلة B1 العشرة كاملة؛ أداة التعريف والترجمة الدقيقة وتأنيث كاتبة الرسالة متطابقة");
@@ -16226,11 +16236,11 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const ciK431 = readFileSync(".github/workflows/ci.yml", "utf8");
   ok(patchK431.includes("current == reviewed") && patchK431.includes("current != previous") &&
     patchK431.includes("unexpected current reading text") &&
-    auditK431.includes("all 82 bounded A0–A2 full-text decisions match") && auditK431.includes("75 B1–B2 texts") &&
+    auditK431.includes("all 117 bounded A0–B1 full-text decisions match") && auditK431.includes("40 B2 texts") &&
     packageK431.includes('"audit:text-content-review"') && ciK431.includes("npm run audit:text-content-review") &&
     reviewK431.scope.includes("triage only") && reviewK431.scope.includes("not correction generators") &&
     reviewK431.scope.includes("not independent linguistic, translation, CEFR, or exam sign-off"),
-    "K431c PA-037-01: الرقعة مقفلة بالنص الكامل وقابلة للإعادة والبوابة موصولة بـCI؛ توسعت لاحقاً إلى 82 قراراً وبقي التوقيع المستقل خارج الادعاء");
+    "K431c PA-037-01: الرقعة مقفلة بالنص الكامل وقابلة للإعادة والبوابة موصولة بـCI؛ توسعت لاحقاً إلى 117 قراراً وبقي التوقيع المستقل خارج الادعاء");
 }
 
 /* ═══ K432 — PA-037-02: مراجعة نصوص القراءة A1 بندياً ═══ */
@@ -16280,11 +16290,11 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const auditK432 = readFileSync("scripts/text_content_review_audit.ts", "utf8");
   ok(patchK432.includes("current == reviewed") && patchK432.includes("current != previous") &&
     patchK432.includes("unexpected current reading text") &&
-    auditK432.includes("all 82 bounded A0–A2 full-text decisions match") && auditK432.includes("75 B1–B2 texts") &&
+    auditK432.includes("all 117 bounded A0–B1 full-text decisions match") && auditK432.includes("40 B2 texts") &&
     auditK432.includes("audio revalidation") && reviewK432.scope.includes("triage only") &&
     reviewK432.scope.includes("not correction generators") &&
     reviewK432.scope.includes("not independent linguistic, translation, CEFR, audio, or exam sign-off"),
-    "K432c PA-037-02: الرقعة مقفلة بالنص الكامل وقابلة للإعادة والبوابة تحرس الآن 82 قراراً مع إبقاء 75 نصاً وإعادة تحقق الصوت والتوقيع المستقل خارج الادعاء");
+    "K432c PA-037-02: الرقعة مقفلة بالنص الكامل وقابلة للإعادة والبوابة تحرس الآن 117 قراراً مع إبقاء 40 نصاً وإعادة تحقق الصوت والتوقيع المستقل خارج الادعاء");
 }
 
 /* ═══ K433 — PA-037-03: مراجعة نصوص القراءة A2 بندياً ═══ */
@@ -16333,11 +16343,55 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const auditK433 = readFileSync("scripts/text_content_review_audit.ts", "utf8");
   ok(patchK433.includes("current == reviewed") && patchK433.includes("current != previous") &&
     patchK433.includes("unexpected current reading text") &&
-    auditK433.includes("all 82 bounded A0–A2 full-text decisions match") && auditK433.includes("75 B1–B2 texts") &&
+    auditK433.includes("all 117 bounded A0–B1 full-text decisions match") && auditK433.includes("40 B2 texts") &&
     auditK433.includes("audio revalidation") && reviewK433.scope.includes("triage only") &&
     reviewK433.scope.includes("not correction generators") &&
     reviewK433.scope.includes("not independent linguistic, translation, CEFR, audio, or exam sign-off"),
-    "K433c PA-037-03: الرقعة مقفلة بالنص الكامل وقابلة للإعادة والبوابة تحرس 82 قراراً مع إبقاء 75 نصاً وإعادة تحقق الصوت والتوقيع المستقل خارج الادعاء");
+    "K433c PA-037-03: الرقعة مقفلة بالنص الكامل وقابلة للإعادة والبوابة تحرس الآن 117 قراراً مع إبقاء 40 نصاً وإعادة تحقق الصوت والتوقيع المستقل خارج الادعاء");
+}
+
+/* ═══ K434 — PA-037-04: مراجعة نصوص القراءة B1 بندياً ═══ */
+{
+  const reviewK434 = JSON.parse(readFileSync("scripts/fixtures/texts-reviewed-04.json", "utf8")) as {
+    schema: string;
+    batch: string;
+    scope: string;
+    entries: { id: string; level: string; decision: "corrected" | "confirmed-current"; rationale: string; previous: Record<string, unknown>; current: Record<string, unknown> }[];
+  };
+  const textsK434 = JSON.parse(readFileSync("content/texts.json", "utf8")) as Array<Record<string, unknown>>;
+  const byIdK434 = new Map(textsK434.map((text) => [String(text.id), text]));
+  const expectedK434 = new Set(Array.from({ length: 35 }, (_, index) => `t-b1-${String(index + 1).padStart(2, "0")}`));
+  const correctedK434 = reviewK434.entries.filter((entry) => entry.decision === "corrected");
+  const confirmedK434 = reviewK434.entries.filter((entry) => entry.decision === "confirmed-current");
+  const expectedConfirmedK434 = new Set(["t-b1-21", "t-b1-23", "t-b1-28", "t-b1-33", "t-b1-34"]);
+  ok(reviewK434.schema === "wegb2-reviewed-text-decision-batch-v1" && reviewK434.batch === "PA-037-04" &&
+    reviewK434.entries.length === 35 && new Set(reviewK434.entries.map((entry) => entry.id)).size === 35 &&
+    reviewK434.entries.every((entry) => expectedK434.has(entry.id) && entry.level === "B1" && entry.rationale.trim().length > 0) &&
+    correctedK434.length === 30 && confirmedK434.length === 5 &&
+    correctedK434.every((entry) => JSON.stringify(entry.previous) !== JSON.stringify(entry.current)) &&
+    confirmedK434.every((entry) => expectedConfirmedK434.has(entry.id) && JSON.stringify(entry.previous) === JSON.stringify(entry.current)),
+    "K434a PA-037-04: سجل القرار يغطي نصوص B1 الخمسة والثلاثين كاملة بـ30 تصحيحاً و5 قرارات إبقاء مبررة");
+  const currentK434 = JSON.stringify([...expectedK434].map((id) => byIdK434.get(id)));
+  ok(reviewK434.entries.every((entry) => JSON.stringify(byIdK434.get(entry.id)) === JSON.stringify(entry.current)) &&
+    String(byIdK434.get("t-b1-02")?.de).startsWith("Bevor ich nach Deutschland kam") &&
+    !String(byIdK434.get("t-b1-03")?.de).includes("70 Prozent") &&
+    !String(byIdK434.get("t-b1-07")?.de).includes("45 Prozent") &&
+    String(byIdK434.get("t-b1-11")?.titleAr) === "التطوع في بنك الطعام" &&
+    String(byIdK434.get("t-b1-24")?.de).includes("Ob das mit seinen Änderungen zusammenhängt") &&
+    String(byIdK434.get("t-b1-29")?.de).startsWith("Als Mutter war ich") &&
+    Number(byIdK434.get("t-b1-32")?.wordCountDe) === 195 &&
+    !currentK434.includes("Lief Hassan") && !currentK434.includes("Immerhin hundertmal") &&
+    !currentK434.includes("Salma hatte gerade dieses Ende beeindruckt") && !currentK434.includes("Obwohl es genug Mülleimer gibt"),
+    "K434b PA-037-04: القرارات تطابق البنك وتحرس المنظور والتسلسل والادعاءات القانونية والصحية والبيئية والمفاتيح والعدّ");
+  const patchK434 = readFileSync("scripts/patches/apply_text_review_pa037_04.py", "utf8");
+  const auditK434 = readFileSync("scripts/text_content_review_audit.ts", "utf8");
+  ok(patchK434.includes("current == reviewed") && patchK434.includes("current != previous") &&
+    patchK434.includes("unexpected current reading text") &&
+    auditK434.includes("all 117 bounded A0–B1 full-text decisions match") && auditK434.includes("40 B2 texts") &&
+    auditK434.includes("audio revalidation") && reviewK434.scope.includes("triage only") &&
+    reviewK434.scope.includes("not correction generators") &&
+    reviewK434.scope.includes("not independent linguistic, translation, legal, medical, environmental, CEFR, audio, or exam sign-off"),
+    "K434c PA-037-04: الرقعة مقفلة بالنص الكامل وقابلة للإعادة والبوابة تحرس 117 قراراً مع إبقاء 40 نصاً وإعادة تحقق الصوت والتوقيع المستقل خارج الادعاء");
 }
 
 /* ═══ K334 — R309: القفل الفعلي الحقيقي — إغلاقُ اليوم عند حدود الوحدة ممنوعٌ لا منصوحٌ به فقط ═══ */

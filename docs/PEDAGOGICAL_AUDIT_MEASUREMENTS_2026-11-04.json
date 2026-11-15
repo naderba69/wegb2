@@ -946,27 +946,36 @@
         "confirmedCurrentTexts": 6,
         "fixture": "scripts/fixtures/texts-reviewed-03.json",
         "patch": "scripts/patches/apply_text_review_pa037_03.py"
+      },
+      {
+        "batch": "PA-037-04",
+        "level": "B1",
+        "reviewedTexts": 35,
+        "correctedTexts": 30,
+        "confirmedCurrentTexts": 5,
+        "fixture": "scripts/fixtures/texts-reviewed-04.json",
+        "patch": "scripts/patches/apply_text_review_pa037_04.py"
       }
     ],
-    "reviewedTexts": 82,
+    "reviewedTexts": 117,
     "reviewedLevels": [
       "A0",
       "A1",
-      "A2"
+      "A2",
+      "B1"
     ],
-    "correctedTexts": 63,
-    "confirmedCurrentTexts": 19,
-    "remainingTexts": 75,
+    "correctedTexts": 93,
+    "confirmedCurrentTexts": 24,
+    "remainingTexts": 40,
     "remainingLevels": [
-      "B1",
       "B2"
     ],
-    "scope": "item-by-item internal full-text review of German and Arabic titles and passages, metadata, questions, options, answers, explanations, narrator perspective, duplication, chronology, and factual or register claim boundaries; heuristic scans used for triage only",
+    "scope": "item-by-item internal full-text review of German and Arabic titles and passages, metadata, questions, options, answers, explanations, narrator perspective, duplication, chronology, ambiguity, and factual, legal, health, environmental, or register claim boundaries; heuristic scans used for triage only",
     "regressionGate": "npm run audit:text-content-review",
     "independentLinguisticSignOff": false,
     "independentTranslationSignOff": false,
     "externalCefrOrExamValidation": false,
-    "claimBoundary": "82 bounded internal A0–A2 decisions; 75 B1–B2 texts, all 176 dialogues, re-synthesis/listening checks for 13 changed German audio-source passages, independent review, field validation, and external linguistic, translation, CEFR, or exam sign-off remain pending",
+    "claimBoundary": "117 bounded internal A0–B1 decisions; 40 B2 texts, all 176 dialogues, re-synthesis/listening checks for 39 changed German audio-source passages, independent review, field validation, and external linguistic, translation, legal, medical, environmental, CEFR, or exam sign-off remain pending",
     "audioSourcePassagesChanged": [
       "t-a0-06",
       "t-a1-09",
@@ -980,7 +989,33 @@
       "t-a2-07",
       "t-a2-14",
       "t-a2-15",
-      "t-a2-19"
+      "t-a2-19",
+      "t-b1-01",
+      "t-b1-02",
+      "t-b1-03",
+      "t-b1-04",
+      "t-b1-07",
+      "t-b1-08",
+      "t-b1-09",
+      "t-b1-10",
+      "t-b1-11",
+      "t-b1-13",
+      "t-b1-14",
+      "t-b1-15",
+      "t-b1-16",
+      "t-b1-17",
+      "t-b1-18",
+      "t-b1-19",
+      "t-b1-22",
+      "t-b1-24",
+      "t-b1-25",
+      "t-b1-26",
+      "t-b1-27",
+      "t-b1-29",
+      "t-b1-30",
+      "t-b1-31",
+      "t-b1-32",
+      "t-b1-35"
     ],
     "audioRevalidationCompleted": false
   }

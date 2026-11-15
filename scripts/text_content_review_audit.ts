@@ -57,6 +57,7 @@ const texts = readJson<ReadingText[]>("content/texts.json");
 const review01 = readJson<ReviewFixture>("scripts/fixtures/texts-reviewed-01.json");
 const review02 = readJson<ReviewFixture>("scripts/fixtures/texts-reviewed-02.json");
 const review03 = readJson<ReviewFixture>("scripts/fixtures/texts-reviewed-03.json");
+const review04 = readJson<ReviewFixture>("scripts/fixtures/texts-reviewed-04.json");
 const byId = new Map(texts.map((text) => [text.id, text]));
 const errors: string[] = [];
 const expectedA0 = new Set([
@@ -82,10 +83,20 @@ const expectedA2 = new Set([
   "t-a2-26", "t-a2-27", "t-a2-28", "t-a2-29", "t-a2-30",
   "t-a2-031", "t-a2-032",
 ]);
+const expectedB1 = new Set([
+  "t-b1-01", "t-b1-02", "t-b1-03", "t-b1-04", "t-b1-05",
+  "t-b1-06", "t-b1-07", "t-b1-08", "t-b1-09", "t-b1-10",
+  "t-b1-11", "t-b1-12", "t-b1-13", "t-b1-14", "t-b1-15",
+  "t-b1-16", "t-b1-17", "t-b1-18", "t-b1-19", "t-b1-20",
+  "t-b1-21", "t-b1-22", "t-b1-23", "t-b1-24", "t-b1-25",
+  "t-b1-26", "t-b1-27", "t-b1-28", "t-b1-29", "t-b1-30",
+  "t-b1-31", "t-b1-32", "t-b1-33", "t-b1-34", "t-b1-35",
+]);
 const expectations: BatchExpectation[] = [
   { fixture: review01, batch: "PA-037-01", level: "A0", ids: expectedA0, corrected: 12, confirmed: 3 },
   { fixture: review02, batch: "PA-037-02", level: "A1", ids: expectedA1, corrected: 25, confirmed: 10 },
   { fixture: review03, batch: "PA-037-03", level: "A2", ids: expectedA2, corrected: 26, confirmed: 6 },
+  { fixture: review04, batch: "PA-037-04", level: "B1", ids: expectedB1, corrected: 30, confirmed: 5 },
 ];
 
 if (texts.length !== 157 || byId.size !== 157) {
@@ -94,6 +105,7 @@ if (texts.length !== 157 || byId.size !== 157) {
 const a0Texts = texts.filter((text) => text.level === "A0");
 const a1Texts = texts.filter((text) => text.level === "A1");
 const a2Texts = texts.filter((text) => text.level === "A2");
+const b1Texts = texts.filter((text) => text.level === "B1");
 if (a0Texts.length !== 15 || a0Texts.reduce((sum, text) => sum + text.questions.length, 0) !== 45) {
   errors.push("A0 reading scope drifted from 15 complete texts and 45 questions");
 }
@@ -102,6 +114,9 @@ if (a1Texts.length !== 35 || a1Texts.reduce((sum, text) => sum + text.questions.
 }
 if (a2Texts.length !== 32 || a2Texts.reduce((sum, text) => sum + text.questions.length, 0) !== 104) {
   errors.push("A2 reading scope drifted from 32 complete texts and 104 questions");
+}
+if (b1Texts.length !== 35 || b1Texts.reduce((sum, text) => sum + text.questions.length, 0) !== 110) {
+  errors.push("B1 reading scope drifted from 35 complete texts and 110 questions");
 }
 
 const reviewedIds = new Set<string>();
@@ -153,7 +168,9 @@ for (const expectation of expectations) {
     }
     const questionIds = entry.current.questions.map((question) => question.id);
     const expectedQuestionCount = level === "A0" ? 3
-      : entry.id.match(/^t-a[12]-(?:0[1-9]|1[0-9]|20)$/) ? 4 : 2;
+      : entry.id.match(/^t-a[12]-(?:0[1-9]|1[0-9]|20)$/) ? 4
+        : entry.id.match(/^t-b1-(?:0[1-9]|1[0-9]|20)$/) ? 3
+          : entry.id.match(/^t-b1-(?:2[1-9]|30)$/) ? 4 : 2;
     if (entry.current.questions.length !== expectedQuestionCount
       || new Set(questionIds).size !== expectedQuestionCount
       || entry.current.questions.some((question) => !question.promptDe.trim()
@@ -174,7 +191,7 @@ for (const expectation of expectations) {
     }
   }
 }
-if (reviewedIds.size !== 82) errors.push(`PA-037 reviewed identity total drifted from 82 to ${reviewedIds.size}`);
+if (reviewedIds.size !== 117) errors.push(`PA-037 reviewed identity total drifted from 117 to ${reviewedIds.size}`);
 
 const text = (id: string): ReadingText => {
   const value = byId.get(id);
@@ -303,6 +320,54 @@ if (!text("t-a2-22").ar.includes("عندما تكون مستيقظة")
   errors.push("A2 extended set: Arabic timing, perspective, deadline, title, unpacking, or aufstehen alignment regressed");
 }
 
+if (!text("t-b1-01").de.includes("und trotzdem bleibt")
+  || !text("t-b1-02").de.startsWith("Bevor ich nach Deutschland kam")
+  || text("t-b1-03").de.includes("70 Prozent")
+  || question("t-b1-03", "t-b1-03-q2")?.answer !== "wenn der Nahverkehr besser wäre"
+  || !text("t-b1-04").de.startsWith("Lieber Hassan")
+  || question("t-b1-05", "t-b1-05-q3")?.answer !== "einen höflichen Rat"
+  || question("t-b1-06", "t-b1-06-q3")?.answer?.length !== 3
+  || text("t-b1-07").de.includes("45 Prozent")) {
+  errors.push("B1 first set: syntax, chronology, unsourced percentages, salutation, meaning, or duplicate-answer decisions regressed");
+}
+if (!text("t-b1-08").de.includes("Wohnungen oft teuer")
+  || !text("t-b1-09").de.includes("die Regeln unterscheiden sich je nach Ort")
+  || !text("t-b1-10").de.includes("meine Ideen in der Besprechung als seine eigenen")
+  || text("t-b1-11").titleAr !== "التطوع في بنك الطعام"
+  || !text("t-b1-12").ar.includes("كنا كلانا نعرف القدر نفسه")
+  || !text("t-b1-13").de.includes("etwas von seiner Schärfe nehmen")
+  || text("t-b1-14").titleAr !== "المكتبة مكاناً للدراسة") {
+  errors.push("B1 daily-life set: claim qualification, recycling scope, ownership, Tafel terminology, Arabic number, or title alignment regressed");
+}
+if (!text("t-b1-15").de.includes("Bequemlichkeit allein ist nicht entscheidend")
+  || !text("t-b1-16").de.includes("Für mich gehören Missverständnisse")
+  || !text("t-b1-17").de.includes("die Reifenheber")
+  || !text("t-b1-18").ar.includes("قرابة الواحدة والنصف")
+  || text("t-b1-19").de.includes("Millionen Menschen")
+  || !text("t-b1-19").de.includes("reguläre Stellen nicht ersetzen darf")
+  || question("t-b1-20", "t-b1-20-q3")?.promptDe !== "Wie beurteile ich den Umzug heute?") {
+  errors.push("B1 experience set: absolute claims, narrator perspective, repair logic, time alignment, or volunteering boundaries regressed");
+}
+if (!text("t-b1-22").de.includes("Beide fühlten sich im Recht")
+  || !text("t-b1-24").de.includes("Ob das mit seinen Änderungen zusammenhängt")
+  || text("t-b1-25").titleAr !== "مساحات خضراء أكثر وضجيج أقلّ"
+  || !text("t-b1-26").de.includes("Gerade dieses Ende hatte Salma beeindruckt")
+  || !text("t-b1-27").de.includes("Energie-, Wasser- und Verpackungsverbrauch")
+  || !text("t-b1-29").de.startsWith("Als Mutter war ich")
+  || !text("t-b1-30").de.includes("weil ich keine Firmenkreditkarte hatte")) {
+  errors.push("B1 extended set: dispute logic, health non-causality, title, word order, environmental scope, narrator identity, or travel rationale regressed");
+}
+if (text("t-b1-31").wordCountDe !== 183
+  || !text("t-b1-31").de.includes("für mich günstigeren Mieten")
+  || text("t-b1-32").wordCountDe !== 195
+  || !text("t-b1-32").de.includes("Ob diese Veränderungen allein an meiner Ernährung liegen")
+  || text("t-b1-33").wordCountDe !== 169
+  || text("t-b1-34").wordCountDe !== 172
+  || text("t-b1-35").wordCountDe !== 171
+  || !text("t-b1-35").de.includes("an mehreren Stellen Mülleimer")) {
+  errors.push("B1 final set: word counts, rent and health boundaries, confirmed examples, or bin-placement consistency regressed");
+}
+
 const currentReviewed = JSON.stringify(expectations.flatMap(({ fixture }) => fixture.entries.map((entry) => entry.current)));
 for (const stale of [
   "Die Zahlen 1–10", "ماذا يعمل كريم؟", "Im Kurs sind 12 Studenten",
@@ -312,7 +377,8 @@ for (const stale of [
   "في المتوسط يكلف كل شيء", "الماء العذب كل صباح", "Heute habe ich Geburtstag und bin dreißig Jahre alt.",
   "استلمنا على الشاطئ", "انتظارٌ كبير", "Dreimal pro Woche eine halbe Stunde bewegen reicht schon.",
   "In der Werkstatt hat man mir zwei Möglichkeiten:", "الأجرة الشاملة مع التدفئة", "أخرجت الصناديق ورتبت المطبخ",
-
+  "Lief Hassan", "45 Prozent würden heute eine Ausbildung", "Millionen Menschen ehrenamtlich",
+  "Immerhin hundertmal", "Salma hatte gerade dieses Ende beeindruckt", "Obwohl es genug Mülleimer gibt",
 ]) {
   if (currentReviewed.includes(stale)) {
     errors.push(`PA-037 stale, duplicate, mistranslated, or perspective-drifting content returned: ${stale}`);
@@ -326,8 +392,8 @@ if (errors.length) {
 }
 
 console.log(
-  "✅ Reading-text content review: all 82 bounded A0–A2 full-text decisions match (63 corrected, 19 confirmed-current).",
+  "✅ Reading-text content review: all 117 bounded A0–B1 full-text decisions match (93 corrected, 24 confirmed-current).",
 );
 console.log(
-  "ℹ️ This gate protects reviewed titles, German and Arabic passages, metadata, questions, options, answers, explanations, narrator perspective, ambiguity, duplication decisions, and claim boundaries; 75 B1–B2 texts, all 176 dialogues, independent linguistic/translation review, audio revalidation, CEFR calibration, and exam sign-off remain outside these batches.",
+  "ℹ️ This gate protects reviewed titles, German and Arabic passages, metadata, questions, options, answers, explanations, narrator perspective, ambiguity, duplication decisions, and claim boundaries; 40 B2 texts, all 176 dialogues, independent linguistic/translation, legal, medical, or environmental review, audio revalidation, CEFR calibration, and exam sign-off remain outside these batches.",
 );
