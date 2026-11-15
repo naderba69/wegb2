@@ -4425,12 +4425,13 @@ void 0;
     (a0Greeting.pitfalls ?? []).some((item) => item.de.includes("Ich bin aus Tunis.") && item.ar.includes("كلتا الصيغتين ممكنة")) &&
     !!a0Letters && a0Letters.rules.some((rule) => rule.de.includes("C (tseh)")) &&
     a0Letters.rules.some((rule) => rule.de.includes("X (iks)") && rule.de.includes("Z (tset)")) &&
-    pronunciationTip.includes("bed") && pronunciationTip.includes("bird") && pronunciationTip.includes("tu") &&
-    !!letterExample && (letterExample.explanationAr ?? "").includes("من أمثلة التهجئة") &&
+    pronunciationTip.includes("ß") && pronunciationTip.includes("دوّر الشفتين") && !pronunciationTip.includes("bird") &&
+    !!letterExample && letterExample.promptDe.includes("___ wie Computer") &&
+    (letterExample.explanationAr ?? "").includes("توضيح الحرف") &&
     !!alphabetExerciseQ2 && alphabetExerciseQ2.promptDe.startsWith("Buchstabiere") &&
-    !!a0DuSie && a0DuSie.summaryAr.includes("الرسمي") &&
+    !!a0DuSie && a0DuSie.summaryAr.includes("العرف والعلاقة والموقف") &&
     a0Prompts.length === 45 && new Set(a0Prompts).size === a0Prompts.length, // R148: 15 نصاً × 3 أسئلة فريدة
-    "K158e تصحيحات التحيات والحروف، وأمثلة DIN، والأسئلة غير المكررة، وتوضيح Sie في الترجمة");
+    "K158e تصحيحات التحيات والحروف وأمثلة التهجئة والأسئلة غير المكررة وحدود اختيار Sie السياقية");
 
   const checkedDialogues = ["d-a0-02", "d-a0-03"].map((id) => a0Dialogues.find((dialogue) => dialogue.id === id));
   const spellingLine = a0Dialogues.find((dialogue) => dialogue.id === "d-a0-03")?.lines[1];
@@ -15949,6 +15950,44 @@ function collectR262(dir: string, out: string[] = []): string[] {
     reviewK425.scope.includes("triage only") && reviewK425.scope.includes("not correction generators") &&
     reviewK425.scope.includes("not independent linguistic, exam, or CEFR sign-off"),
     "K425c PA-035-05: الرقعة مقفلة بالمهمة الكاملة وقابلة للإعادة والبوابة تحرس القرارات الـ105 مع إبقاء التوقيع المستقل خارج الادعاء");
+}
+
+/* ═══ K426 — PA-036-01: مراجعة موضوعات قواعد A0 بندياً ═══ */
+{
+  const reviewK426 = JSON.parse(readFileSync("scripts/fixtures/grammar-reviewed-01.json", "utf8")) as {
+    schema: string;
+    batch: string;
+    scope: string;
+    entries: { id: string; level: string; decision: "corrected" | "confirmed-current"; rationale: string; previous: Record<string, unknown>; current: Record<string, unknown> }[];
+  };
+  const grammarK426 = JSON.parse(readFileSync("content/grammar.json", "utf8")) as Record<string, Record<string, unknown>>;
+  const expectedK426 = new Set([
+    "a0-begrussung", "a0-buchstaben", "a0-zahlen", "a0-artikel",
+    "a0-du-sie", "a0-aussprache-vowels", "a0-aussprache-umlaut", "a0-satzbau",
+  ]);
+  const correctedK426 = reviewK426.entries.filter((entry) => entry.decision === "corrected");
+  ok(reviewK426.schema === "wegb2-reviewed-grammar-decision-batch-v1" && reviewK426.batch === "PA-036-01" &&
+    reviewK426.entries.length === 8 && new Set(reviewK426.entries.map((entry) => entry.id)).size === 8 &&
+    reviewK426.entries.every((entry) => expectedK426.has(entry.id) && entry.level === "A0" && entry.rationale.trim().length > 0) &&
+    correctedK426.length === 8 && correctedK426.every((entry) => JSON.stringify(entry.previous) !== JSON.stringify(entry.current)),
+    "K426a PA-036-01: سجل القرار يغطي موضوعات قواعد A0 الثمانية كاملة بتصحيحات محدودة ومبررات بندية");
+  ok(reviewK426.entries.every((entry) => JSON.stringify(grammarK426[entry.id]) === JSON.stringify(entry.current)) &&
+    JSON.stringify(grammarK426["a0-buchstaben"]?.anwendung).includes("Ziffer für Ziffer") &&
+    JSON.stringify(grammarK426["a0-zahlen"]?.rules).includes("Dezember") &&
+    String(grammarK426["a0-artikel"]?.ziel).includes("10–12") &&
+    JSON.stringify(grammarK426["a0-du-sie"]?.rules).includes("Können wir uns duzen?") &&
+    String(grammarK426["a0-satzbau"]?.titleDe) === "Der einfache Aussagesatz: Verb auf Position 2" &&
+    !JSON.stringify([...expectedK426].map((id) => grammarK426[id])).includes("Welches Satz ist richtig?"),
+    "K426b PA-036-01: القرارات تطابق البنك وتحرس التهجئة السويسرية والأرقام والجنس والسجل والنطق وقاعدة V2");
+  const patchK426 = readFileSync("scripts/patches/apply_grammar_review_pa036_01.py", "utf8");
+  const auditK426 = readFileSync("scripts/grammar_content_review_audit.ts", "utf8");
+  ok(patchK426.includes("current == reviewed") && patchK426.includes("current != previous") &&
+    patchK426.includes("unexpected current grammar topic") &&
+    auditK426.includes("review01.entries.length !== 8") &&
+    auditK426.includes("79 A1–B2 topics") &&
+    reviewK426.scope.includes("triage only") && reviewK426.scope.includes("not correction generators") &&
+    reviewK426.scope.includes("not independent linguistic, phonetic, CEFR, or exam sign-off"),
+    "K426c PA-036-01: الرقعة مقفلة بالموضوع الكامل وقابلة للإعادة والبوابة تصرّح ببقاء 79 موضوعاً والتوقيع المستقل خارج الادعاء");
 }
 
 /* ═══ K334 — R309: القفل الفعلي الحقيقي — إغلاقُ اليوم عند حدود الوحدة ممنوعٌ لا منصوحٌ به فقط ═══ */

@@ -8016,7 +8016,7 @@
       }
     ],
     "eselsbrueckeAr": "احفظ هذه الجمل كعبارات جاهزة (Chunks) — لا تفككها إلى كلمات في أول لقاء.",
-    "pronTippAr": "ch في ich يخرج من وسط اللسان ملامساً سقف الحلق (ich-Laut) وليس «ش» أو «خ».",
+    "pronTippAr": "في ich يقترب وسط اللسان من الحنك من دون ملامسة كاملة، ويخرج الهواء عبر تضييق؛ لا تحوّل الصوت إلى «ش» أو «خ» عربية.",
     "exercises": [
       {
         "id": "a0-begrussung-ex01",
@@ -8055,7 +8055,7 @@
         ],
         "answer": "dir",
         "explanationAr": "بعد wie geht es نستخدم Dativ: dir.",
-        "promptAr": "ما التحية/السؤال المناسب هنا؟"
+        "promptAr": "اختر ضمير Dativ المناسب في سؤال الحال."
       },
       {
         "id": "a0-begrussung-ex04",
@@ -8105,7 +8105,7 @@
         "ar": "كلتا الصيغتين ممكنة للتعبير عن الأصل؛ «Ich komme aus …» هي الصيغة المستهدفة هنا، فلا نعدّ «Ich bin aus …» خطأً."
       },
       {
-        "de": "✗ Wie heißt du? → Mir geht's gut. → ✓ Wie geht's dir? → Mir geht's gut.",
+        "de": "✗ Wie heißt du? — Mir geht's gut. / ✓ Wie geht's dir? — Mir geht's gut.",
         "ar": "لا تخلط: Wie heißt du (الاسم) ≠ Wie geht's (الحال) — سؤالآن مختلفان تماماً"
       }
     ]
@@ -10428,8 +10428,8 @@
       "a0-begrussung"
     ],
     "anwendung": {
-      "ar": "أملِ اسمك ورقم هاتفك حرفاً حرفاً (A wie Anton …) ثم اكتب ما أملاه عليك زميلك.",
-      "de": "Buchstabiere deinen Namen und deine Telefonnummer (A wie Anton …).",
+      "ar": "تهجَّ اسمك حرفاً حرفاً (A wie Apfel …)، ثم اذكر رقم هاتفك رقماً رقماً، واكتب ما يمليه عليك زميلك.",
+      "de": "Buchstabiere deinen Namen (A wie Apfel …) und nenne deine Telefonnummer Ziffer für Ziffer.",
       "candoIds": [
         "a0-2"
       ]
@@ -10438,12 +10438,12 @@
       {
         "id": "a0-buchstaben-v1",
         "type": "fill",
-        "promptDe": "A wie Anton, B wie Berta, ___ wie Cäsar.",
-        "text": "A wie Anton, B wie Berta, ___ wie Cäsar.",
+        "promptDe": "A wie Apfel, B wie Berlin, ___ wie Computer.",
+        "text": "A wie Apfel, B wie Berlin, ___ wie Computer.",
         "answer": [
           "C"
         ],
-        "explanationAr": "الحرف الثالث C، وينطق تقريباً «تسيه». ومن أمثلة التهجئة: A wie Anton."
+        "explanationAr": "الحرف الثالث هو C، ويمكن توضيح الحرف بنمط «C wie Computer»."
       },
       {
         "id": "a0-buchstaben-v2",
@@ -10454,7 +10454,7 @@
           "ß"
         ],
         "strictEszett": true,
-        "explanationAr": "في الإملاء القياسي بألمانيا: Straße. وفي سويسرا تُكتب Straße؛ لذا يحدّد السؤال النمط المقصود."
+        "explanationAr": "في الإملاء القياسي بألمانيا نكتب Straße؛ أما في سويسرا فتُكتب Strasse بلا ß، لذلك يحدّد السؤال ألمانيا."
       }
     ],
     "summaryAr": "ستة وعشرون حرفاً لاتينياً + ثلاثة Umlaute (ä, ö, ü) وحرف ß إس-تسيت. تعلم نطق الحروف ونطق أسماء الناس بالتهجئة.",
@@ -10488,7 +10488,7 @@
       }
     ],
     "eselsbrueckeAr": "احفظ Y «ypsilon» مثل كلمة «إبسيلون» في الإغريقية، وW تنطق «ڤه» لا «دبليو».",
-    "pronTippAr": "ß يُنطق مثل s في See. Ä تقارب e الإنجليزية في bed، وÖ تقارب i في bird مع تدوير الشفتين، وÜ تقارب u الفرنسية في tu مع تدوير الشفتين.",
+    "pronTippAr": "يُنطق ß مثل s مهموسة. لتقريب ö ابدأ بصوت e ثم دوّر الشفتين، ولتقريب ü ابدأ بصوت i ثم دوّر الشفتين مع إبقاء اللسان في موضعه.",
     "exercises": [
       {
         "id": "a0-buchstaben-q1",
@@ -10519,13 +10519,13 @@
         "id": "a0-buchstaben-q3",
         "type": "truefalse",
         "points": 1,
-        "promptDe": "«W» wird wie das englische «V» ausgesprochen.",
+        "promptDe": "Das w in „Wasser“ klingt wie das englische v.",
         "options": [
           "richtig",
           "falsch"
         ],
         "answer": "richtig",
-        "explanationAr": "W الألمانية تُنطق /v/ مثل v الإنجليزية؛ تبدأ Wasser بهذا الصوت، لا بصوت w الإنجليزية. أما الحرف V الألماني فيختلف نطقه بحسب الكلمة.",
+        "explanationAr": "في الكلمات الألمانية يُنطق w غالباً /v/، كما في Wasser؛ أمّا اسم الحرف نفسه فهو weh.",
         "promptAr": "هل الجملة صحيحة؟ اختر «صح» أو «خطأ»."
       },
       {
@@ -10561,12 +10561,12 @@
         "ar": "W الألمانية صوتها /v/ مثل v الإنجليزية (Wasser). أما V فكثيراً ما يُنطق /f/ في Vater، وقد يُنطق /v/ في كلمات دخيلة مثل Vase."
       },
       {
-        "de": "✗ Z = «",
-        "ar": "Z تُنطق «تس» لا «ز»: Zeit = «تسايت» — والـS وحدها هي «ز» بين حركتين"
+        "de": "✗ Z = /z/ → ✓ Z = /ts/, zum Beispiel in Zeit.",
+        "ar": "يبدأ Zeit بصوت /ts/؛ لذلك لا تنطق Z كصوت «ز» منفرد."
       },
       {
-        "de": "✗ ie =",
-        "ar": "ie صوت واحد طويل لا حرفين: Brief = «بريف» بمدّ — عكس ei تماماً (Mein = «ماين»)"
+        "de": "✗ ie = zwei getrennte Laute → ✓ ie = meist ein langes i, zum Beispiel in Brief.",
+        "ar": "في كلمات مثل Brief تمثل ie غالباً صوت i طويلاً، بينما ei في mein تُنطق على نحو مختلف."
       }
     ]
   },
@@ -10631,21 +10631,25 @@
       {
         "de": "«Wie spät ist es?» — «Es ist drei Uhr.»",
         "ar": "السؤال عن الساعة: «كم الساعة؟» والجواب «Es ist … Uhr.»"
+      },
+      {
+        "de": "Januar · Februar · März · April · Mai · Juni · Juli · August · September · Oktober · November · Dezember",
+        "ar": "أشهر السنة. للتاريخ نقول مثلاً: Heute ist der fünfte Oktober؛ وبعد am: am fünften Oktober."
       }
     ],
     "tables": [],
     "examples": [
       {
         "de": "Heute ist Montag, der 5. Oktober.",
-        "ar": "اليوم اثنين، 5 أكتوبر."
+        "ar": "اليوم الاثنين، الخامس من أكتوبر."
       },
       {
         "de": "Es ist halb vier.",
         "ar": "الساعة الثالثة والنصف (halb vier = 15:30، انتبه: نصف الساعة التالية)."
       }
     ],
-    "eselsbrueckeAr": "واحد وعشرون تُنطق «واحد وعشرين» حرفياً: einundzwanzig. وفي الساعة «halb vier» = الثالثة والنصف (لا الرابعة).",
-    "pronTippAr": "ch في sechs وacht هو ch حلقي (مثل أخ)، أما ch في ich فيخرج من وسط اللسان.",
+    "eselsbrueckeAr": "في einundzwanzig تأتي الآحاد أولاً، ثم und، ثم العشرات. وفي الساعة تشير halb إلى الساعة التالية: halb vier = الثالثة والنصف.",
+    "pronTippAr": "في sechs تمثل المجموعة chs صوت /ks/، أمّا ch في acht فهو ach-Laut يخرج من مؤخر الفم. وفي ich نسمع ich-Laut الأمامي.",
     "exercises": [
       {
         "id": "a0-zahlen-q1",
@@ -10660,7 +10664,7 @@
         ],
         "answer": "acht",
         "explanationAr": "5 + 3 = 8 acht (آخت).",
-        "promptAr": "اختر الكلمة الصحيحة لإكمال الجملة."
+        "promptAr": "احسب خمسة زائد ثلاثة واختر العدد الألماني الصحيح."
       },
       {
         "id": "a0-zahlen-q2",
@@ -10686,7 +10690,7 @@
         ],
         "answer": "Ich bin dreißig Jahre alt.",
         "explanationAr": "السؤال عن العمر تُجيب بـ«Ich bin … Jahre alt»، لا بالاسم ولا بلد المنشأ.",
-        "promptAr": "اختر الكلمة الصحيحة لإكمال الجملة."
+        "promptAr": "اختر الجواب المناسب عن سؤال العمر."
       },
       {
         "id": "a0-zahlen-q4",
@@ -10721,11 +10725,11 @@
     "pitfalls": [
       {
         "de": "„sechszehn“ ✗ → „sechzehn“ ✓",
-        "ar": "sechs تفقد الـs قبل -zehn/-zig: sechzehn, sechzig — أشهر خطأ إملائي في الأرقام"
+        "ar": "تفقد sechs حرف s قبل -zehn و-zig: sechzehn، sechzig."
       },
       {
         "de": "„siebenzehn“ ✗ → „siebzehn“ ✓",
-        "ar": "sieben تفقد الـ-en: siebzehn, siebzig — احفظ الاستثناءين معاً (6 و7)"
+        "ar": "تفقد sieben النهاية -en قبل -zehn و-zig: siebzehn، siebzig."
       },
       {
         "de": "✗ zwanzig-eins → ✓ einundzwanzig",
@@ -13418,7 +13422,7 @@
     "titleDe": "der · die · das — Geschlecht der Nomen",
     "titleAr": "أدوات التعريف: der/die/das وجنس الاسم",
     "level": "A0",
-    "ziel": "تتعرّف على أن كل اسم ألماني له جنس (مذكر/مؤنث/محايد) وتحفظ مع كل كلمة أداة التعريف معها من اليوم الأول، وتجمع أول 20 اسماً جمعاً بسيطاً.",
+    "ziel": "تتعرّف على أن لكل اسم ألماني جنساً نحوياً، وتحفظ مجموعة أولية من 10–12 اسماً مع أداة التعريف وصيغة الجمع.",
     "voraus": [
       "a0-buchstaben"
     ],
@@ -13467,7 +13471,7 @@
         "explanationAr": "Kind محايد → das Kind."
       }
     ],
-    "summaryAr": "الدرس الأهم في الألمانية: كل اسم له جنس دائماً يُحفظ مع الكلمة من أول مرة (der/die/das)، لا تُحفظ الاسم وحده. الجمع يُحفظ مع الأداة die جمعاً. أهم شيفرة: الأسماء المنتهية بـ -er/-en/-ig/-ling غالباً مذكر؛ -in/-ung/-heit/-keit/-schaft/-ei/-tion مؤنثة؛ -chen/-lein/-um/-ium محايدة.",
+    "summaryAr": "لكل اسم ألماني جنس نحوي يُحفظ مع الكلمة: der أو die أو das، وتستعمل die مع الجمع. قد تساعد بعض النهايات المنتظمة، مثل -ung و-heit للمؤنث و-chen للمحايد، لكنها ليست بديلاً عن حفظ الأداة وصيغة الجمع مع كل اسم.",
     "rules": [
       {
         "de": "der = Maskulinum · die = Femininum · das = Neutrum · Plural: die",
@@ -13656,9 +13660,9 @@
   "a0-du-sie": {
     "id": "a0-du-sie",
     "titleDe": "du · ihr · Sie — formell und informell",
-    "titleAr": "أنتَ وأنتم وأنتم (الرسمي): du وihr وSie",
+    "titleAr": "المخاطبة غير الرسمية والرسمية: du وihr وSie",
     "level": "A0",
-    "ziel": "تميّز بين مخاطبة الصديق/الطفل بـ du، مجموعة أصدقاء بـ ihr، والغرباء والكبار بـ Sie (صيغة رسمية دائماً كبيرة).",
+    "ziel": "تميّز في مواقف واضحة بين du للمفرد غير الرسمي، وihr للجمع غير الرسمي، وSie للمخاطبة الرسمية للمفرد والجمع، مع الانتباه إلى أن الاختيار يتبع السياق.",
     "voraus": [
       "a0-begrussung",
       "a0-buchstaben"
@@ -13682,7 +13686,7 @@
           "Ihnen"
         ],
         "answer": "Ihnen",
-        "explanationAr": "مع Frau Schmidt (شخص أكبر/غريب) نستخدم الصيغة الرسمية: Wie geht es Ihnen?"
+        "explanationAr": "وجود اللقب Frau والتحية الرسمية في هذا المثال يوجهان إلى: Wie geht es Ihnen?"
       },
       {
         "id": "a0-du-sie-v2-check",
@@ -13709,7 +13713,7 @@
         "explanationAr": "لمجموعة أصدقاء (أنتما/أنتم غير الرسمي) نستخدم ihr: Woher kommt ihr?"
       }
     ],
-    "summaryAr": "في الألمانية ثلاث صيغ للمخاطب: du (أنتَ/أنتِ غير الرسمي للأصدقاء والأطفال)، ihr (أنتم غير الرسمي لمجموعة أصدقاء)، Sie (أنتم الرسمي — دائماً بحرف كبير! — للغرباء والكبار وزملاء العمل والرؤساء والطبيب والموظفين). متى Sie؟ أول لقاء، أكبر سناً، لقب رسمي (Herr/Frau/Dr.). متى du؟ الأصدقاء، الطلبة، الأطفال، أفراد الأسرة.",
+    "summaryAr": "تستعمل du للمفرد وihr للجمع في السياق غير الرسمي، وتستعمل Sie للمفرد والجمع في السياق الرسمي وتكتبها بحرف كبير. يعتمد الاختيار على العرف والعلاقة والموقف؛ عند الشك يمكن البدء بصيغة Sie أو سؤال الطرف الآخر عن الصيغة المناسبة.",
     "rules": [
       {
         "de": "du = informell, Singular (Freunde, Kinder, Familie)",
@@ -13724,8 +13728,8 @@
         "ar": "Sie للمخاطبة الرسمية للمفرد والجمع، وتُكتب دائماً بحرف كبير."
       },
       {
-        "de": "Faustregel: Bei ersten Begegnungen immer Sie — der Partner sagt schnell \"Du kannst du sagen\".",
-        "ar": "قاعدة ذهبية: في أول لقاء استخدم Sie دائماً، والطرف الآخر سيقول فوراً «بإمكانك قول du» إذا أراد الصداقة."
+        "de": "Bei Unsicherheit kann man zunächst Sie verwenden oder fragen: „Können wir uns duzen?“",
+        "ar": "عند الشك يمكنك البدء بـSie أو السؤال بأدب: «هل يمكن أن نستعمل du؟» ولا توجد قاعدة عمرية مطلقة لكل المواقف."
       }
     ],
     "tables": [
@@ -13774,7 +13778,7 @@
         "ar": "أين تسكنان يا آنا وعلي؟"
       }
     ],
-    "eselsbruecke": "تخيل «Sie» مثل «سيادتك» — تبدأ بحرف S كبير دائماً لأن الشخص يستحق احتراماً زائداً. مع الأصدقاء الصغار: du (أنتَ صغير = du = كلمتان قصيرتان).",
+    "eselsbruecke": "Sie الرسمية تُكتب بحرف كبير، أما sie الصغيرة فقد تعني «هي» أو «هم». اربط du وihr بالسياق غير الرسمي، لا بعمر الشخص وحده.",
     "exercises": [
       {
         "id": "a0-du-sie-v1",
@@ -13786,7 +13790,7 @@
           "Ihnen"
         ],
         "answer": "Ihnen",
-        "explanationAr": "مع Frau Schmidt (شخص أكبر/غريب) نستخدم الصيغة الرسمية: Wie geht es Ihnen?",
+        "explanationAr": "وجود اللقب Frau والتحية الرسمية في هذا المثال يوجهان إلى: Wie geht es Ihnen?",
         "promptAr": "اختر الإجابة الصحيحة."
       },
       {
@@ -13842,7 +13846,7 @@
         "ar": "لا تخلط التحية الرسمية Frau Meier مع ضمير المخاطبة غير الرسمي dir؛ استعمل Ihnen."
       }
     ],
-    "eselsbrueckeAr": "تخيل «Sie» مثل «سيادتك» — تبدأ بحرف S كبير دائماً لأن الشخص يستحق احتراماً زائداً. مع الأصدقاء الصغار: du (أنتَ صغير = du = كلمتان قصيرتان).",
+    "eselsbrueckeAr": "تُكتب Sie الرسمية بحرف كبير. اربط du وihr بالسياق غير الرسمي وSie بالسياق الرسمي، مع مراعاة العرف والعلاقة.",
     "pronTippAr": ""
   },
   "a0-aussprache-vowels": {
@@ -13885,15 +13889,15 @@
         "explanationAr": "bin i قصيرة (أنا)؛ ihm/ihn بـ ih طويلة."
       }
     ],
-    "summaryAr": "الحركات الألمانية طويلة أو قصيرة، والطول يُغيّر المعنى. قاعدة سريعة: الحرف متبوع بـ h أو مكرر (ie/aa/ee/oo) → طويل؛ قبل عدة حروف ساكنة → قصير غالباً (Stadt, offen, Hütte, bin).",
+    "summaryAr": "الحركات الألمانية قد تكون طويلة أو قصيرة، وقد يغيّر الطول معنى الكلمة. من إشارات الطول الشائعة h بعد الحركة أو تكرارها مثل aa/ee/oo وie؛ ومن إشارات القِصر تضعيف الحرف الساكن. هذه إشارات إملائية لها استثناءات، لذلك تعلّم الكلمة مع نطقها.",
     "rules": [
       {
         "de": "lang: ie, ih, ieh, aa, ee, oo, uh, ah, eh, öh, üh",
-        "ar": "طويل: إذا تبع الحرف h أو جاء مكرراً (aa/ee/oo) أو جاء بعده حرف ساكن واحد."
+        "ar": "من إشارات الطول الشائعة: h بعد الحركة، أو aa/ee/oo، أو ie؛ لكنها ليست قاعدة بلا استثناءات."
       },
       {
         "de": "kurz: vor mehreren Konsonanten (Stadt, offen, Hütte, bin)",
-        "ar": "قصير: قبل عدة حروف ساكنة."
+        "ar": "تأتي الحركة قصيرة غالباً قبل حرف ساكن مضاعف أو مجموعة حروف ساكنة، مثل Bett وoffen وStadt."
       }
     ],
     "tables": [
@@ -13914,12 +13918,12 @@
           [
             "offen (مفتوح)",
             "Ofen (فرن)",
-            "o قصيرة vs oh طويلة"
+            "o قصيرة مقابل o طويلة"
           ],
           [
             "Hütte (كوخ)",
             "Hüte (قبعات)",
-            "ü قصيرة vs üh طويلة"
+            "ü قصيرة مقابل ü طويلة"
           ],
           [
             "bin (أنا)",
@@ -13939,7 +13943,7 @@
         "ar": "سرير — حوض زهور (e قصيرة في Bett وطويلة في Beet)."
       }
     ],
-    "eselsbruecke": "تخيّل الحرف h علامة مطّ (طويل)، تماماً كما في العربية: دام vs دامـه.",
+    "eselsbruecke": "Dehnungs-h und doppelte Vokale sind häufige Hinweise auf Länge; doppelte Konsonanten weisen oft auf einen kurzen Vokal hin.",
     "exercises": [
       {
         "id": "a0-av-v1",
@@ -13973,7 +13977,7 @@
         "promptAr": "أي حرف علة قصير؟",
         "options": [
           "der Bann",
-          "der Bahn",
+          "die Bahn",
           "der Sohn",
           "die Uhr"
         ],
@@ -14000,15 +14004,15 @@
     ],
     "pitfalls": [
       {
-        "de": "„Im Wort „Stadt“ ist das a lang.“ ✗ → „Im Wort „Stadt“ ist das a kurz.“ ✓",
+        "de": "✗ „In Stadt ist das a lang.“ → ✓ „In Stadt ist das a kurz.“",
         "ar": "في زوج الحد الأدنى Stadt–Staat يتغير طول الحركة؛ في Stadt قصيرة وفي Staat طويلة."
       },
       {
-        "de": "„Im Wort „Bett“ ist das e lang.“ ✗ → „Im Wort „Bett“ ist das e kurz.“ ✓",
+        "de": "✗ „In Bett ist das e lang.“ → ✓ „In Bett ist das e kurz.“",
         "ar": "قارن Bett ذات e القصيرة بـBeet ذات ee الطويلة؛ الكتابة والصوت يساعدان على التمييز."
       }
     ],
-    "eselsbrueckeAr": "تخيّل الحرف h علامة مطّ (طويل)، تماماً كما في العربية: دام vs دامـه.",
+    "eselsbrueckeAr": "اعتبر h بعد الحركة أو تكرار الحركة إشارة محتملة للطول، والحرف الساكن المضاعف إشارة شائعة للقِصر، ثم ثبّت النطق بالسماع.",
     "pronTippAr": ""
   },
   "a0-aussprache-umlaut": {
@@ -14016,7 +14020,7 @@
     "titleDe": "Aussprache: Umlaute ä, ö, ü",
     "titleAr": "نطق علامات الإمالة: ä / ö / ü",
     "level": "A0",
-    "ziel": "تُنطِق ä/ö/ü بشكل صحيح، لا تخلط بين u/ü أو o/ö.",
+    "ziel": "تتدرّب على التمييز بين ä/ö/ü وعلى عدم خلط u بـü أو o بـö في الكلمات المعروضة.",
     "voraus": [
       "a0-buchstaben",
       "a0-aussprache-vowels"
@@ -14052,11 +14056,11 @@
         "explanationAr": "Tür فيها ü (باب)؛ Tor بـ o وTag بـ a — لا تخلط بين ü وu/o."
       }
     ],
-    "summaryAr": "ä ≈ e مفتوحة (Männer). ö ≈ e مع استدارة الشفاه (hören). ü = i مع استدارة الشفاه (Tür = تِيُور).",
+    "summaryAr": "يقترب ä القصير غالباً من e المفتوحة كما في Männer. لتقريب ö انطق e مع تدوير الشفتين، ولتقريب ü انطق i مع تدوير الشفتين. يختلف الطول بحسب الكلمة.",
     "rules": [
       {
-        "de": "ä = offenes e (ähnlich wie Bett)",
-        "ar": "ä مثل e مفتوحة."
+        "de": "Kurzes ä klingt häufig ähnlich wie ein offenes e, zum Beispiel in Männer.",
+        "ar": "يقترب ä القصير غالباً من e المفتوحة، مثل Männer."
       },
       {
         "de": "ö = e mit runden Lippen",
@@ -14078,7 +14082,7 @@
         "ar": "قبعة — قبعات · بالفعل/جميل (أمثلة على u/ü وo/ö)."
       }
     ],
-    "eselsbruecke": "طريقة مجرّبة: انطق e ثم دوّر شفتيك — تسمع ö. انطق i ثم دوّر شفتيك — تسمع ü.",
+    "eselsbruecke": "Artikulationsübung: Sprich e und runde dann die Lippen für ö; sprich i und runde die Lippen für ü.",
     "exercises": [
       {
         "id": "a0-au-v1",
@@ -14118,7 +14122,7 @@
           "Fuß"
         ],
         "answer": "Männer",
-        "explanationAr": "Männer = مِنَر، فيها ä.",
+        "explanationAr": "تحتوي Männer على ä قصيرة تقارب e المفتوحة.",
         "id": "a0-aussprache-umlaut-r141e-e03"
       },
       {
@@ -14176,7 +14180,7 @@
         "ar": "schon تعني «بالفعل»، أما schön فتعني «جميل»؛ الأوملاوت يغيّر الكلمة والمعنى."
       }
     ],
-    "eselsbrueckeAr": "طريقة مجرّبة: انطق e ثم دوّر شفتيك — تسمع ö. انطق i ثم دوّر شفتيك — تسمع ü.",
+    "eselsbrueckeAr": "تمرين نطقي: انطق e ثم دوّر الشفتين لتقريب ö، وانطق i ثم دوّر الشفتين لتقريب ü. استمع إلى النموذج وقارن.",
     "pronTippAr": ""
   },
   "a1-aussprache-ch": {
@@ -16000,15 +16004,15 @@
   "a0-satzbau": {
     "id": "a0-satzbau",
     "level": "A0",
-    "titleDe": "Der einfache Satz: Wer → Verb → Was?",
-    "titleAr": "الجملة البسيطة: مَن → فِعل → ماذا؟",
+    "titleDe": "Der einfache Aussagesatz: Verb auf Position 2",
+    "titleAr": "الجملة الخبرية البسيطة: الفعل في الموقع الثاني",
     "ziel": "تُكوِّن جملةً ألمانية قصيرة صحيحة الترتيب: الفعل في الموقع الثاني.",
     "voraus": [
       "a0-begrussung",
       "a0-artikel"
     ],
-    "summaryDe": "Im deutschen Hauptsatz steht das konjugierte Verb an zweiter Stelle. Subjekt, Verb, Rest.",
-    "summaryAr": "في الجملة الألمانية الرئيسية، الفعل المُصرَّف في الموقع الثاني: فاعل → فعل → بقية.",
+    "summaryDe": "Im deutschen Aussagesatz steht das konjugierte Verb an zweiter Position. Vor dem Verb kann das Subjekt oder ein anderes Satzglied stehen.",
+    "summaryAr": "في الجملة الخبرية الألمانية يأتي الفعل المصرف في الموقع الثاني. يمكن أن يسبق الفعلَ الفاعلُ أو عنصر آخر مثل ظرف الزمان، ثم يأتي الفاعل بعده.",
     "rules": [
       {
         "de": "Ich heiße Ali.",
@@ -16072,7 +16076,7 @@
       },
       {
         "type": "mc",
-        "promptDe": "Welches Satz ist richtig?",
+        "promptDe": "Welcher Satz ist richtig?",
         "promptAr": "أي الجمل صحيح؟",
         "options": [
           "Morgen ich gehe zum Arzt.",
@@ -16119,13 +16123,13 @@
       {
         "falsch": "*Heute ich trinke Kaffee.",
         "richtig": "Heute trinke ich Kaffee.",
-        "ar": "عند البدء بظرف، الفعل يبقى في الموقع الثاني."
+        "ar": "عند البدء بظرف مثل Heute يأتي الفعل المصرف بعده مباشرة، ثم يأتي الفاعل."
       }
     ],
     "pitfalls": [
       {
-        "de": "Der häufigste Anfängerfehler: Verb an letzter Stelle oder nach dem Subjekt nach einem Adverb.",
-        "ar": "الأكثر شيوعاً: وضع الفعل في غير المرتبة الثانية."
+        "de": "Nach einem vorangestellten Adverb bleibt das konjugierte Verb auf Position 2: Heute trinke ich Kaffee.",
+        "ar": "إذا بدأنا بظرف، يبقى الفعل المصرف في الموقع الثاني ويأتي الفاعل بعده."
       }
     ],
     "anwendung": {
@@ -16144,8 +16148,8 @@
         "ar": "اسمي سارة — الفعل في الموقع الثاني بعد الفاعل."
       },
       {
-        "de": "Heute wohne ich in Tunis.",
-        "ar": "أسكن اليوم في تونس — بعد Heute يأتي الفعل ثم الفاعل."
+        "de": "Heute lerne ich Deutsch.",
+        "ar": "أتعلم الألمانية اليوم — بعد Heute يأتي الفعل ثم الفاعل."
       },
       {
         "de": "Am Morgen trinke ich Tee.",
@@ -16161,7 +16165,7 @@
         "answer": [
           "trinke"
         ],
-        "explanationAr": "حين يبدأ الظرف الجملة يأتي الفعل أولاً ثم الفاعل: Heute trinke ich … ولا نقول Heute ich trinke."
+        "explanationAr": "حين يبدأ الظرف الجملة يأتي الفعل المصرف بعده مباشرة ثم الفاعل: Heute trinke ich … ولا نقول Heute ich trinke."
       },
       {
         "id": "a0-satzbau-v2",

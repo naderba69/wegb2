@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
   "generatedFrom": "content/grammar.json",
-  "sourceSha256": "294491f9c139646348028c716205802a631f20f1b383be7caa6243332c115365",
+  "sourceSha256": "a60e7ce1ffd9d7971223389e8bc9dbb6b20b7829f352a298f4af6add52d87b1b",
   "updated": "2026-11-05",
   "profileId": "wegb2-internal-german-grammar-coverage-profile",
   "claimStatus": "internal-evidence-map-not-official-ggp",
   "claimAr": "هذه مصفوفة داخلية مشتقة من منهج WegB2 لتتبع القواعد والأدلة. لا تدعي مطابقة German Grammar Profile أو أي قائمة خارجية قبل حفظ المصدر المرخص ومراجعته وتوقيع الربط بنداً بنداً.",
   "summary": {
     "topics": 87,
-    "candidateFeatures": 313,
-    "rules": 313,
+    "candidateFeatures": 314,
+    "rules": 314,
     "examples": 285,
     "pitfalls": 200,
     "verifyItems": 177,
@@ -50,7 +50,7 @@
       "A2": 84,
       "B1": 54,
       "B2": 89,
-      "A0": 28
+      "A0": 29
     }
   },
   "externalSources": [
@@ -2120,8 +2120,8 @@
         "canDoIds": [
           "a0-2"
         ],
-        "applicationDe": "Buchstabiere deinen Namen und deine Telefonnummer (A wie Anton …).",
-        "applicationAr": "أملِ اسمك ورقم هاتفك حرفاً حرفاً (A wie Anton …) ثم اكتب ما أملاه عليك زميلك.",
+        "applicationDe": "Buchstabiere deinen Namen (A wie Apfel …) und nenne deine Telefonnummer Ziffer für Ziffer.",
+        "applicationAr": "تهجَّ اسمك حرفاً حرفاً (A wie Apfel …)، ثم اذكر رقم هاتفك رقماً رقماً، واكتب ما يمليه عليك زميلك.",
         "rules": 4,
         "examples": 2,
         "pitfalls": 3
@@ -2160,7 +2160,7 @@
         ],
         "applicationDe": "Rufe ein Geschäft an: Frage nach drei Preisen und der Schließzeit.",
         "applicationAr": "اتصل وهمياً بمتجر: اسأل عن سعر ثلاثة أشياء وموعد الإغلاق، واكتب الأرقام التي تسمعها.",
-        "rules": 5,
+        "rules": 6,
         "examples": 2,
         "pitfalls": 3
       },
@@ -2719,7 +2719,7 @@
       "level": "A0",
       "titleDe": "der · die · das — Geschlecht der Nomen",
       "titleAr": "أدوات التعريف: der/die/das وجنس الاسم",
-      "goalAr": "تتعرّف على أن كل اسم ألماني له جنس (مذكر/مؤنث/محايد) وتحفظ مع كل كلمة أداة التعريف معها من اليوم الأول، وتجمع أول 20 اسماً جمعاً بسيطاً.",
+      "goalAr": "تتعرّف على أن لكل اسم ألماني جنساً نحوياً، وتحفظ مجموعة أولية من 10–12 اسماً مع أداة التعريف وصيغة الجمع.",
       "prerequisiteTopicIds": [
         "a0-buchstaben"
       ],
@@ -2757,8 +2757,8 @@
       "id": "a0-du-sie",
       "level": "A0",
       "titleDe": "du · ihr · Sie — formell und informell",
-      "titleAr": "أنتَ وأنتم وأنتم (الرسمي): du وihr وSie",
-      "goalAr": "تميّز بين مخاطبة الصديق/الطفل بـ du، مجموعة أصدقاء بـ ihr، والغرباء والكبار بـ Sie (صيغة رسمية دائماً كبيرة).",
+      "titleAr": "المخاطبة غير الرسمية والرسمية: du وihr وSie",
+      "goalAr": "تميّز في مواقف واضحة بين du للمفرد غير الرسمي، وihr للجمع غير الرسمي، وSie للمخاطبة الرسمية للمفرد والجمع، مع الانتباه إلى أن الاختيار يتبع السياق.",
       "prerequisiteTopicIds": [
         "a0-begrussung",
         "a0-buchstaben"
@@ -2835,7 +2835,7 @@
       "level": "A0",
       "titleDe": "Aussprache: Umlaute ä, ö, ü",
       "titleAr": "نطق علامات الإمالة: ä / ö / ü",
-      "goalAr": "تُنطِق ä/ö/ü بشكل صحيح، لا تخلط بين u/ü أو o/ö.",
+      "goalAr": "تتدرّب على التمييز بين ä/ö/ü وعلى عدم خلط u بـü أو o بـö في الكلمات المعروضة.",
       "prerequisiteTopicIds": [
         "a0-buchstaben",
         "a0-aussprache-vowels"
@@ -3275,8 +3275,8 @@
     {
       "id": "a0-satzbau",
       "level": "A0",
-      "titleDe": "Der einfache Satz: Wer → Verb → Was?",
-      "titleAr": "الجملة البسيطة: مَن → فِعل → ماذا؟",
+      "titleDe": "Der einfache Aussagesatz: Verb auf Position 2",
+      "titleAr": "الجملة الخبرية البسيطة: الفعل في الموقع الثاني",
       "goalAr": "تُكوِّن جملةً ألمانية قصيرة صحيحة الترتيب: الفعل في الموقع الثاني.",
       "prerequisiteTopicIds": [
         "a0-begrussung",
@@ -6483,6 +6483,22 @@
       }
     },
     {
+      "id": "IGGP-a0-zahlen-R06",
+      "topicId": "a0-zahlen",
+      "ruleIndex": 6,
+      "level": "A0",
+      "descriptorDe": "Januar · Februar · März · April · Mai · Juni · Juli · August · September · Oktober · November · Dezember",
+      "descriptorAr": "أشهر السنة. للتاريخ نقول مثلاً: Heute ist der fünfte Oktober؛ وبعد am: am fünften Oktober.",
+      "sourceRefs": [],
+      "status": {
+        "definition": "derived-from-current-curriculum",
+        "externalSourceMapping": "pending",
+        "cefrLevelAssignment": "pending-external-review",
+        "linguisticReview": "pending-human-review",
+        "directAssessmentEvidence": "pending-item-level-map"
+      }
+    },
+    {
       "id": "IGGP-a2-konj2-hoflich-R01",
       "topicId": "a2-konj2-hoflich",
       "ruleIndex": 1,
@@ -7463,8 +7479,8 @@
       "topicId": "a0-du-sie",
       "ruleIndex": 4,
       "level": "A0",
-      "descriptorDe": "Faustregel: Bei ersten Begegnungen immer Sie — der Partner sagt schnell \"Du kannst du sagen\".",
-      "descriptorAr": "قاعدة ذهبية: في أول لقاء استخدم Sie دائماً، والطرف الآخر سيقول فوراً «بإمكانك قول du» إذا أراد الصداقة.",
+      "descriptorDe": "Bei Unsicherheit kann man zunächst Sie verwenden oder fragen: „Können wir uns duzen?“",
+      "descriptorAr": "عند الشك يمكنك البدء بـSie أو السؤال بأدب: «هل يمكن أن نستعمل du؟» ولا توجد قاعدة عمرية مطلقة لكل المواقف.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -7480,7 +7496,7 @@
       "ruleIndex": 1,
       "level": "A0",
       "descriptorDe": "lang: ie, ih, ieh, aa, ee, oo, uh, ah, eh, öh, üh",
-      "descriptorAr": "طويل: إذا تبع الحرف h أو جاء مكرراً (aa/ee/oo) أو جاء بعده حرف ساكن واحد.",
+      "descriptorAr": "من إشارات الطول الشائعة: h بعد الحركة، أو aa/ee/oo، أو ie؛ لكنها ليست قاعدة بلا استثناءات.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -7496,7 +7512,7 @@
       "ruleIndex": 2,
       "level": "A0",
       "descriptorDe": "kurz: vor mehreren Konsonanten (Stadt, offen, Hütte, bin)",
-      "descriptorAr": "قصير: قبل عدة حروف ساكنة.",
+      "descriptorAr": "تأتي الحركة قصيرة غالباً قبل حرف ساكن مضاعف أو مجموعة حروف ساكنة، مثل Bett وoffen وStadt.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -7511,8 +7527,8 @@
       "topicId": "a0-aussprache-umlaut",
       "ruleIndex": 1,
       "level": "A0",
-      "descriptorDe": "ä = offenes e (ähnlich wie Bett)",
-      "descriptorAr": "ä مثل e مفتوحة.",
+      "descriptorDe": "Kurzes ä klingt häufig ähnlich wie ein offenes e, zum Beispiel in Männer.",
+      "descriptorAr": "يقترب ä القصير غالباً من e المفتوحة، مثل Männer.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",

@@ -5,7 +5,7 @@
   "scopeNoteAr": "هذه قياسات قابلة لإعادة التشغيل وليست شهادة صحة لغوية أو بيداغوجية.",
   "baseline": {
     "smoke": {
-      "passed": 2489,
+      "passed": 2504,
       "failed": 0
     },
     "interactiveJsdom": {
@@ -55,7 +55,7 @@
         "verifiedSources": 0,
         "totalSources": 2,
         "fullyReviewedFeatures": 0,
-        "totalFeatures": 313,
+        "totalFeatures": 314,
         "exitCode": 2
       },
       "externalEvidence": {
@@ -589,18 +589,48 @@
     "fullCardReviewDecisions": 105,
     "correctedFullCardDecisions": 90,
     "confirmedCurrentFullCardDecisions": 15,
-    "reviewedLevels": ["A0", "A1", "A2", "B1", "B2"],
+    "reviewedLevels": [
+      "A0",
+      "A1",
+      "A2",
+      "B1",
+      "B2"
+    ],
     "fixedConfirmedErrors": 25,
     "currentPromptConfigWordTargetConflicts": 0,
     "regressionGate": "npm run audit:writing-consistency",
     "fixedPedagogicalRisks": 17
   },
+  "grammarBankReviewAudit": {
+    "path": "content/grammar.json",
+    "topics": 87,
+    "batch": "PA-036-01",
+    "reviewedTopics": 8,
+    "reviewedLevel": "A0",
+    "correctedTopics": 8,
+    "confirmedCurrentTopics": 0,
+    "remainingTopics": 79,
+    "remainingLevels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2"
+    ],
+    "scope": "item-by-item internal full-topic review of objectives, summaries, rules, tables, examples, pitfalls, checks, exercises, and pronunciation guidance; heuristic scans used for triage only",
+    "fixture": "scripts/fixtures/grammar-reviewed-01.json",
+    "patch": "scripts/patches/apply_grammar_review_pa036_01.py",
+    "regressionGate": "npm run audit:grammar-content-review",
+    "independentLinguisticSignOff": false,
+    "phoneticValidation": false,
+    "externalCefrOrExamValidation": false,
+    "claimBoundary": "8 bounded internal A0 decisions; 79 A1–B2 topics, independent review, field validation, and external linguistic, phonetic, CEFR, or exam sign-off remain pending"
+  },
   "inventorySnapshot": {
-    "indexedTrackedFilesAndAuditArtifacts": 3602,
-    "manual_complete": 56,
+    "indexedTrackedFilesAndAuditArtifacts": 3605,
+    "manual_complete": 57,
     "manual_targeted": 68,
     "not_started": 3441,
-    "audit_artifact": 37
+    "audit_artifact": 39
   },
   "learningStateCorrections": {
     "findings": [
