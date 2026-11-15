@@ -14603,7 +14603,7 @@ function collectR262(dir: string, out: string[] = []): string[] {
   ok(pitfallsK335.length === 200 && pitfallsK335.every((pitfall) => pitfall.de.trim() && pitfall.ar.trim()) &&
     explicitK335.every((pitfall) => parsePitfallContrast(pitfall.de) !== null),
     `K335g كل تنبيه قواعد مكتمل؛ وكل سهم صريح قابل للتحليل بلا زوج فارغ أو متطابق (${explicitK335.length}/${pitfallsK335.length})`);
-  ok(contrastsK335.length >= 155 &&
+  ok(contrastsK335.length === explicitK335.length && contrastsK335.length >= 149 &&
     parsePitfallContrast("„das wichtige“ ✗ → „das Wichtige“ ✓")?.rightDe === "„das Wichtige“" &&
     parsePitfallContrast("„Ja!“ (Antwort) ≠ „Du bist ja müde.“ (Modalpartikel)") === null,
     `K335h المقارنة الصريحة تعمل في ${contrastsK335.length} تنبيهاً وتحفظ فرق الحرف الكبير؛ فرق الاستعمال بلا سهم لا يتحول إلى صواب مخمّن`);
@@ -15984,11 +15984,11 @@ function collectR262(dir: string, out: string[] = []): string[] {
   ok(patchK426.includes("current == reviewed") && patchK426.includes("current != previous") &&
     patchK426.includes("unexpected current grammar topic") &&
     auditK426.includes('validateBatch(review01, "PA-036-01", expectedA0, "A0", 8, 0)') &&
-    auditK426.includes("all 27 bounded A0/A1 full-topic decisions match") &&
-    auditK426.includes("60 A2–B2 topics") &&
+    auditK426.includes("all 49 bounded A0–A2 full-topic decisions match") &&
+    auditK426.includes("38 B1–B2 topics") &&
     reviewK426.scope.includes("triage only") && reviewK426.scope.includes("not correction generators") &&
     reviewK426.scope.includes("not independent linguistic, phonetic, CEFR, or exam sign-off"),
-    "K426c PA-036-01: الرقعة مقفلة بالموضوع الكامل وقابلة للإعادة والبوابة المجمعة تحرس الدفعتين مع إبقاء 60 موضوعاً والتوقيع المستقل خارج الادعاء");
+    "K426c PA-036-01: الرقعة مقفلة بالموضوع الكامل وقابلة للإعادة والبوابة المجمعة تحرس الدفعات الثلاث مع إبقاء 38 موضوعاً والتوقيع المستقل خارج الادعاء");
 }
 
 /* ═══ K427 — PA-036-02: مراجعة موضوعات قواعد A1 بندياً ═══ */
@@ -16030,10 +16030,56 @@ function collectR262(dir: string, out: string[] = []): string[] {
   ok(patchK427.includes("current == reviewed") && patchK427.includes("current != previous") &&
     patchK427.includes("confirmed-current grammar topic drifted") && patchK427.includes("unexpected current grammar topic") &&
     auditK427.includes('validateBatch(review02, "PA-036-02", expectedA1, "A1", 16, 3)') &&
-    auditK427.includes("all 27 bounded A0/A1 full-topic decisions match") && auditK427.includes("60 A2–B2 topics") &&
+    auditK427.includes("all 49 bounded A0–A2 full-topic decisions match") && auditK427.includes("38 B1–B2 topics") &&
     reviewK427.scope.includes("triage only") && reviewK427.scope.includes("not correction generators") &&
     reviewK427.scope.includes("not independent linguistic, phonetic, CEFR, or exam sign-off"),
-    "K427c PA-036-02: الرقعة مقفلة بالموضوع وقابلة للإعادة والبوابة تحرس 27 قراراً وتبقي 60 موضوعاً والتوقيع المستقل خارج الادعاء");
+    "K427c PA-036-02: الرقعة مقفلة بالموضوع وقابلة للإعادة والبوابة تحرس 49 قراراً وتبقي 38 موضوعاً والتوقيع المستقل خارج الادعاء");
+}
+
+/* ═══ K428 — PA-036-03: مراجعة موضوعات قواعد A2 بندياً ═══ */
+{
+  const reviewK428 = JSON.parse(readFileSync("scripts/fixtures/grammar-reviewed-03.json", "utf8")) as {
+    schema: string;
+    batch: string;
+    scope: string;
+    entries: { id: string; level: string; decision: "corrected" | "confirmed-current"; rationale: string; previous: Record<string, unknown>; current: Record<string, unknown> }[];
+  };
+  const grammarK428 = JSON.parse(readFileSync("content/grammar.json", "utf8")) as Record<string, Record<string, unknown>>;
+  const expectedK428 = new Set([
+    "a2-praeteritum", "a2-perfekt", "a2-weil-dass", "a2-wechsel", "a2-modal",
+    "a2-dativ", "a2-negation", "a2-imperativ", "a2-reflexiv", "a2-steigerung",
+    "a2-futur", "a1-futur-einf", "a2-praeteritum-grund", "a2-konj2-hoflich",
+    "a2-verb-praep", "a2-adjektiv-einfach", "a1-weil-dass", "a2-verschmolzene",
+    "a2-neben", "a2-demo", "a2-wasfuer", "a2-pruefungsstrategie",
+  ]);
+  const correctedK428 = reviewK428.entries.filter((entry) => entry.decision === "corrected");
+  const confirmedK428 = reviewK428.entries.filter((entry) => entry.decision === "confirmed-current");
+  ok(reviewK428.schema === "wegb2-reviewed-grammar-decision-batch-v1" && reviewK428.batch === "PA-036-03" &&
+    reviewK428.entries.length === 22 && new Set(reviewK428.entries.map((entry) => entry.id)).size === 22 &&
+    reviewK428.entries.every((entry) => expectedK428.has(entry.id) && entry.level === "A2" && entry.rationale.trim().length > 0) &&
+    correctedK428.length === 18 && confirmedK428.length === 4 &&
+    correctedK428.every((entry) => JSON.stringify(entry.previous) !== JSON.stringify(entry.current)) &&
+    confirmedK428.every((entry) => JSON.stringify(entry.previous) === JSON.stringify(entry.current)),
+    "K428a PA-036-03: سجل القرار يغطي موضوعات A2 الاثنتين والعشرين كاملة بـ18 تصحيحاً و4 قرارات إبقاء مبررة");
+  const currentK428 = JSON.stringify([...expectedK428].map((id) => grammarK428[id]));
+  ok(reviewK428.entries.every((entry) => JSON.stringify(grammarK428[entry.id]) === JSON.stringify(entry.current)) &&
+    String(grammarK428["a2-perfekt"]?.summaryAr).includes("لا تكفي كلمة «حركة»") &&
+    JSON.stringify(grammarK428["a2-wechsel"]?.rules).includes("entlang steht nach dem Nomen meist mit Akkusativ") &&
+    JSON.stringify(grammarK428["a2-dativ"]?.pitfalls).includes("beide grammatisch") &&
+    JSON.stringify(grammarK428["a2-futur"]?.pitfalls).includes("Ich werde müde“ ist korrekt") &&
+    String(grammarK428["a2-pruefungsstrategie"]?.titleDe).startsWith("Interne Prüfungsstrategie") &&
+    !currentK428.includes("Goethe A2") && !currentK428.includes("100 + 100") &&
+    !currentK428.includes("Gehst du mit ___ Strand") && !currentK428.includes("✗ Jeden Tag gehe ich"),
+    "K428b PA-036-03: القرارات تطابق البنك وتحرس sein/Perfekt وحالة entlang وترتيب Dativ وwerden والاندماج والحد الامتحاني");
+  const patchK428 = readFileSync("scripts/patches/apply_grammar_review_pa036_03.py", "utf8");
+  const auditK428 = readFileSync("scripts/grammar_content_review_audit.ts", "utf8");
+  ok(patchK428.includes("current == reviewed") && patchK428.includes("current != previous") &&
+    patchK428.includes("confirmed-current grammar topic drifted") && patchK428.includes("unexpected current grammar topic") &&
+    auditK428.includes('validateBatch(review03, "PA-036-03", expectedA2, "A2", 18, 4)') &&
+    auditK428.includes("all 49 bounded A0–A2 full-topic decisions match") && auditK428.includes("38 B1–B2 topics") &&
+    reviewK428.scope.includes("triage only") && reviewK428.scope.includes("not correction generators") &&
+    reviewK428.scope.includes("not independent linguistic, phonetic, CEFR, or exam sign-off"),
+    "K428c PA-036-03: الرقعة مقفلة بالموضوع وقابلة للإعادة والبوابة تحرس 49 قراراً وتبقي 38 موضوعاً والتوقيع المستقل خارج الادعاء");
 }
 
 /* ═══ K334 — R309: القفل الفعلي الحقيقي — إغلاقُ اليوم عند حدود الوحدة ممنوعٌ لا منصوحٌ به فقط ═══ */

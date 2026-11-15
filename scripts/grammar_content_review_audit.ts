@@ -39,6 +39,7 @@ const readJson = <T>(relativePath: string): T => JSON.parse(
 const grammar = readJson<Record<string, GrammarTopic>>("content/grammar.json");
 const review01 = readJson<ReviewFixture>("scripts/fixtures/grammar-reviewed-01.json");
 const review02 = readJson<ReviewFixture>("scripts/fixtures/grammar-reviewed-02.json");
+const review03 = readJson<ReviewFixture>("scripts/fixtures/grammar-reviewed-03.json");
 const errors: string[] = [];
 const expectedA0 = new Set([
   "a0-begrussung", "a0-buchstaben", "a0-zahlen", "a0-artikel",
@@ -50,6 +51,13 @@ const expectedA1 = new Set([
   "a1-perfekt-einf", "a1-war-hatte", "a1-plural", "a1-zeitpraep",
   "a1-aussprache-ch", "a1-aussprache-r", "a1-aussprache-sp-st",
   "a1-aussprache-auslaut", "a1-pruefungsstrategie",
+]);
+const expectedA2 = new Set([
+  "a2-praeteritum", "a2-perfekt", "a2-weil-dass", "a2-wechsel", "a2-modal",
+  "a2-dativ", "a2-negation", "a2-imperativ", "a2-reflexiv", "a2-steigerung",
+  "a2-futur", "a1-futur-einf", "a2-praeteritum-grund", "a2-konj2-hoflich",
+  "a2-verb-praep", "a2-adjektiv-einfach", "a1-weil-dass", "a2-verschmolzene",
+  "a2-neben", "a2-demo", "a2-wasfuer", "a2-pruefungsstrategie",
 ]);
 
 const validateBatch = (
@@ -109,9 +117,11 @@ if (Object.keys(grammar).length !== 87) {
 }
 validateBatch(review01, "PA-036-01", expectedA0, "A0", 8, 0);
 validateBatch(review02, "PA-036-02", expectedA1, "A1", 16, 3);
-const reviewedIds = [...review01.entries, ...review02.entries].map((entry) => entry.id);
-if (new Set(reviewedIds).size !== 27) {
-  errors.push("PA-036 decision batches overlap or do not contain 27 unique topics");
+validateBatch(review03, "PA-036-03", expectedA2, "A2", 18, 4);
+const reviewedIds = [...review01.entries, ...review02.entries, ...review03.entries]
+  .map((entry) => entry.id);
+if (new Set(reviewedIds).size !== 49) {
+  errors.push("PA-036 decision batches overlap or do not contain 49 unique topics");
 }
 
 const topic = (id: string): GrammarTopic => {
@@ -230,6 +240,62 @@ if (!topic("a1-pruefungsstrategie").titleDe.startsWith("Interne Prüfungsstrateg
   errors.push("a1-pruefungsstrategie: internal scope or removal of unverified official numbers regressed");
 }
 
+// PA-036-03: bounded A2 regression anchors.
+if (!topic("a2-praeteritum").summaryAr.includes("لا على تقسيم مطلق")
+  || !JSON.stringify(topic("a2-praeteritum").tables).includes("Perfekt أو Präteritum")
+  || !topic("a2-perfekt").summaryAr.includes("لا تكفي كلمة «حركة»")
+  || !JSON.stringify(topic("a2-perfekt").tables).includes("studieren → studiert")) {
+  errors.push("A2 past: reviewed register split, auxiliary boundary, or participle patterns regressed");
+}
+if (!topic("a2-weil-dass").summaryAr.includes("استعمالات محكية مخصوصة")
+  || !JSON.stringify(topic("a2-weil-dass").rules).includes("Modalverb + Infinitiv")
+  || !JSON.stringify(topic("a2-wechsel").rules).includes("entlang steht nach dem Nomen meist mit Akkusativ")
+  || !String(verify("a2-wechsel", "a2-wechsel-v1")?.promptDe).includes("von draußen")) {
+  errors.push("A2 clauses/location: standard-clause or destination/case boundary regressed");
+}
+if (!JSON.stringify(topic("a2-modal").anwendung).includes("konnte/musste/sollte/wollte/durfte")
+  || verify("a2-modal", "a2-modal-v2")?.answer !== "Du musstest gestern lange arbeiten."
+  || !JSON.stringify(topic("a2-dativ").pitfalls).includes("beide grammatisch")
+  || !topic("a2-dativ").summaryAr.includes("ليس كل Dativ")) {
+  errors.push("A2 modal/Dativ: aligned past production or complement/order boundary regressed");
+}
+if (!topic("a2-negation").summaryAr.includes("نطاق النفي")
+  || !JSON.stringify(topic("a2-negation").pitfalls).includes("kontrastiver Korrektur")
+  || !topic("a2-imperativ").summaryAr.includes("Arbeite!")
+  || !String(verify("a2-imperativ", "a2-imperativ-v2")?.alternativen).includes("Rufe")) {
+  errors.push("A2 negation/imperative: scope-sensitive nicht or valid imperative variants regressed");
+}
+if (verify("a2-reflexiv", "a2-reflexiv-v2")?.promptDe !== "Formuliere den Satz ausdrücklich reflexiv."
+  || !JSON.stringify(topic("a2-reflexiv").pitfalls).includes("mir/dir/sich/uns/euch/sich")
+  || !JSON.stringify(topic("a2-steigerung").examples).includes("Heute ist es kälter")
+  || !topic("a2-steigerung").summaryAr.includes("لا تكفي قاعدة إضافة واحدة")) {
+  errors.push("A2 reflexive/comparison: optional reflexive, body-part Dativ, or bounded comparison regressed");
+}
+if (!JSON.stringify(topic("a2-futur").pitfalls).includes("Ich werde müde“ ist korrekt")
+  || topic("a2-praeteritum-grund").titleDe !== "Präteritum von sein und haben: war und hatte"
+  || !JSON.stringify(topic("a2-praeteritum-grund").pitfalls).includes("Ich bin krank gewesen")
+  || String(topic("a2-praeteritum-grund").titleDe).includes("Modalverben")) {
+  errors.push("A2 werden/war-hatte: lexical werden or bounded past-form scope regressed");
+}
+if (!JSON.stringify(topic("a2-konj2-hoflich").pitfalls).includes("ist eine korrekte Bitte")
+  || String(topic("a2-konj2-hoflich").pronTippAr) !== ""
+  || !JSON.stringify(topic("a2-verb-praep").rules).includes("leiden an + Dativ")
+  || String(topic("a2-verb-praep").pronTippAr) !== "") {
+  errors.push("A2 politeness/prepositions: register boundary, complete inventory, or unsupported respelling regressed");
+}
+if (!topic("a2-adjektiv-einfach").summaryAr.includes("Akkusativ المذكر")
+  || exercise("a2-verschmolzene", "a2-versch-n2")?.promptDe !== "Gehst du mit ___ Meer? (an + das)"
+  || !JSON.stringify(topic("a2-demo").pitfalls).includes("temporaler Akkusativ")
+  || topic("a2-demo").titleDe !== "Begleiter: dieser/jeder/alle") {
+  errors.push("A2 adjective/contraction/determiner: endings, ans Meer, or Jeden Tag boundary regressed");
+}
+if (!topic("a2-pruefungsstrategie").titleDe.startsWith("Interne Prüfungsstrategie")
+  || !topic("a2-pruefungsstrategie").summaryAr.includes("لا تُعامل هذه الصفحة مصدراً رسمياً")
+  || JSON.stringify(topic("a2-pruefungsstrategie")).includes("Goethe")
+  || JSON.stringify(topic("a2-pruefungsstrategie")).includes("100 + 100")) {
+  errors.push("a2-pruefungsstrategie: internal scope or removal of unverified provider claims regressed");
+}
+
 const currentTextA0 = JSON.stringify(review01.entries.map((entry) => entry.current));
 for (const stale of [
   "وفي سويسرا تُكتب Straße", "Buchstabiere deinen Namen und deine Telefonnummer",
@@ -252,6 +318,19 @@ for (const stale of [
     errors.push(`PA-036-02 stale, malformed, or overgeneralized content returned: ${stale}`);
   }
 }
+const currentTextA2 = JSON.stringify(review03.entries.map((entry) => entry.current));
+for (const stale of [
+  "gesprochen → Perfekt, geschrieben → Präteritum", "entlang + Dativ",
+  "laufen = حركة ← Akkusativ", "اكتب أمنياتك الثلاث", "„Ich gebe das Buch meinem Bruder.“ ✗",
+  "„Ich kenne nicht diesen Mann.“ ✗", "„Ich werde müde.“ ✗",
+  "Präteritum von sein, haben, werden und Modalverben", "✗ Können Sie mir helfen?",
+  "über بحرف ü ممدود «يوبا»", "في B2 يصبح استخدامها واجباً", "Gehst du mit ___ Strand",
+  "✗ Jeden Tag gehe ich", "Goethe A2", "100 + 100",
+]) {
+  if (currentTextA2.includes(stale)) {
+    errors.push(`PA-036-03 stale, malformed, or overgeneralized content returned: ${stale}`);
+  }
+}
 
 if (errors.length) {
   console.error("❌ Grammar content review audit failed:");
@@ -260,8 +339,8 @@ if (errors.length) {
 }
 
 console.log(
-  "✅ Grammar content review: all 27 bounded A0/A1 full-topic decisions match (24 corrected, 3 confirmed-current).",
+  "✅ Grammar content review: all 49 bounded A0–A2 full-topic decisions match (42 corrected, 7 confirmed-current).",
 );
 console.log(
-  "ℹ️ This gate protects the reviewed A0/A1 objectives, explanations, rules, tables, examples, pitfalls, checks, exercises, pronunciation guidance, and internal exam-strategy boundary; 60 A2–B2 topics and independent linguistic, phonetic, CEFR, or exam sign-off remain outside these batches.",
+  "ℹ️ This gate protects the reviewed A0–A2 objectives, explanations, rules, tables, examples, pitfalls, checks, exercises, pronunciation guidance, and internal exam-strategy boundary; 38 B1–B2 topics and independent linguistic, phonetic, CEFR, or exam sign-off remain outside these batches.",
 );

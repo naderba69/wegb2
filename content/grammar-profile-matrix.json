@@ -1,24 +1,25 @@
 {
   "schemaVersion": 1,
   "generatedFrom": "content/grammar.json",
-  "sourceSha256": "9f475bf0285e3c463e80ca367286027b99225e592814a54ff290e240049287b5",
+  "sourceSha256": "166a63ab1f9fe084f0bb756596b064c32b608d03cdc71f20ab872cc409bf5a0a",
   "updated": "2026-11-05",
   "profileId": "wegb2-internal-german-grammar-coverage-profile",
   "claimStatus": "internal-evidence-map-not-official-ggp",
   "claimAr": "هذه مصفوفة داخلية مشتقة من منهج WegB2 لتتبع القواعد والأدلة. لا تدعي مطابقة German Grammar Profile أو أي قائمة خارجية قبل حفظ المصدر المرخص ومراجعته وتوقيع الربط بنداً بنداً.",
   "summary": {
     "topics": 87,
-    "candidateFeatures": 314,
-    "rules": 314,
-    "examples": 285,
+    "candidateFeatures": 316,
+    "rules": 316,
+    "examples": 286,
     "pitfalls": 200,
     "verifyItems": 177,
     "exerciseItems": 581,
-    "topicsWithCanDo": 62,
+    "topicsWithCanDo": 61,
     "topicsWithoutCanDo": [
       "a2-negation",
       "a2-imperativ",
       "b1-indirekte-fragen",
+      "a2-verschmolzene",
       "a1-plural",
       "a1-zeitpraep",
       "a2-neben",
@@ -47,7 +48,7 @@
     "humanReviewedFeatures": 0,
     "byLevel": {
       "A1": 58,
-      "A2": 84,
+      "A2": 86,
       "B1": 54,
       "B2": 89,
       "A0": 29
@@ -353,8 +354,8 @@
         "canDoIds": [
           "A2-C9"
         ],
-        "applicationDe": "Schreibe 6 Sätze über deinen letzten Urlaub im Präteritum.",
-        "applicationAr": "اكتب 6 جمل عن عطلتك الماضية بصيغة Präteritum (war, hatte, ging, sah…) — هذا أسلوب السرد الكتابي.",
+        "applicationDe": "Schreibe eine kurze Erzählung mit sechs Sätzen und verwende die geübten Präteritumformen.",
+        "applicationAr": "اكتب سرداً قصيراً من 6 جمل عن رحلة أو حدث سابق، واستعمل فيه صيغ Präteritum المستهدفة (war, hatte, ging, sah…).",
         "rules": 4,
         "examples": 5,
         "pitfalls": 1
@@ -452,7 +453,7 @@
       "level": "A2",
       "titleDe": "Wechselpräpositionen in Wegbeschreibung & Bewegung",
       "titleAr": "حروف الجر المتغيرة في وصف الطريق والحركة",
-      "goalAr": "تستخدم حروف Wechsel في وصف الطريق والوجهة: über, durch, entlang, um … herum، بالإضافة إلى التمييز بين wo/wohin في السياقات المعقدة.",
+      "goalAr": "تختار Akkusativ أو Dativ مع حروف الجر المتغيرة بحسب الوجهة أو الموقع، وتستعمل حروف الطريق الثابتة مثل durch وentlang بالحالة الصحيحة.",
       "prerequisiteTopicIds": [
         "a1-wechsel",
         "a1-akkusativ",
@@ -514,10 +515,10 @@
         "canDoIds": [
           "A2-C8"
         ],
-        "applicationDe": "Schreibe deine drei Wünsche: Ich möchte … / Ich will … — mit Begründung.",
-        "applicationAr": "اكتب أمنياتك الثلاث: Ich möchte … / Ich will … مع التعليل.",
+        "applicationDe": "Schreibe fünf Sätze über deine Kindheit oder einen früheren Tag mit konnte, musste, sollte, wollte und durfte.",
+        "applicationAr": "اكتب 5 جمل عن طفولتك أو يوم سابق مستخدماً konnte/musste/sollte/wollte/durfte مع مصدر.",
         "rules": 2,
-        "examples": 4,
+        "examples": 5,
         "pitfalls": 2
       },
       "review": {
@@ -885,7 +886,7 @@
       "level": "A2",
       "titleDe": "Dativ-Verben (helfen, danken, gefallen …)",
       "titleAr": "أفعال Dativ (helfen/danken/gefallen/gehören/antworten/fehlen/passen/schmecken)",
-      "goalAr": "تتقن الأفعال التي تجرّ دائماً المفعول به غير المباشر (Dativ) — وهي مجموعة صغيرة شائعة جداً لا يمكن قول جمل صحيحة من دونها. لا تعيد درس Dativ الأساسي من A1، بل تضيف الأفعال وحدها.",
+      "goalAr": "تستعمل أفعالاً شائعة تتطلب مكمّلاً في Dativ مثل helfen/danken/gefallen، وتميّز هذا المكمّل من Akkusativ؛ من دون افتراض أنه دائماً «مفعول غير مباشر» بالمعنى نفسه.",
       "prerequisiteTopicIds": [
         "a1-dativ",
         "a1-akkusativ"
@@ -1087,7 +1088,7 @@
       "level": "A2",
       "titleDe": "Futur I mit „werden“",
       "titleAr": "المستقبل الأول (werden + مصدر)",
-      "goalAr": "تستخدم Futur I للتنبؤ والوعد، وتميّزه عن المضارع بظرف مستقبلي.",
+      "goalAr": "تستخدم Futur I للتنبؤ والوعد، وتتعرف إلى إمكان التعبير عن المستقبل بالمضارع مع قرينة زمنية، وتميّز werden المساعد من werden بمعنى «يصير».",
       "prerequisiteTopicIds": [
         "a1-futur-einf"
       ],
@@ -1855,9 +1856,9 @@
     {
       "id": "a2-praeteritum-grund",
       "level": "A2",
-      "titleDe": "Präteritum von sein, haben, werden und Modalverben",
-      "titleAr": "ماضي الأفعال المساعدة والناقصة",
-      "goalAr": "تصرّف war/hatte/wurde وkonnte/musste/wollte في السرد.",
+      "titleDe": "Präteritum von sein und haben: war und hatte",
+      "titleAr": "ماضي sein وhaben: war وhatte",
+      "goalAr": "تصرّف war وhatte وتستعملهما في وصف حالة أو مكان أو امتلاك سابق.",
       "prerequisiteTopicIds": [
         "a1-war-hatte"
       ],
@@ -1882,8 +1883,8 @@
         "canDoIds": [
           "A2-C9"
         ],
-        "applicationDe": "Erzähle von einem alten Schultag: 4 Sätze mit war/hatte/mussten.",
-        "applicationAr": "احكِ يوماً مدرسياً قديماً: war/hatte/mussten — 4 جمل.",
+        "applicationDe": "Erzähle in vier Sätzen von einem früheren Schultag und verwende war und hatte.",
+        "applicationAr": "احكِ عن يوم مدرسي قديم في 4 جمل مستخدماً war وhatte.",
         "rules": 3,
         "examples": 5,
         "pitfalls": 3
@@ -2196,8 +2197,8 @@
         "canDoIds": [
           "A2-C3"
         ],
-        "applicationDe": "Buche schriftlich ein Hotelzimmer: höfliche Bitten (Könnten Sie …؟).",
-        "applicationAr": "احجز غرفة فندقية كتابةً بطلبات مهذبة (Könnten Sie …؟ Ich hätte gern …).",
+        "applicationDe": "Buche schriftlich ein Hotelzimmer: höfliche Bitten (Könnten Sie …?).",
+        "applicationAr": "احجز غرفة فندقية كتابةً بطلبات مهذبة (Könnten Sie …? Ich hätte gern …).",
         "rules": 4,
         "examples": 3,
         "pitfalls": 3
@@ -2214,7 +2215,7 @@
       "level": "A2",
       "titleDe": "Verben mit festen Präpositionen (Grundlage)",
       "titleAr": "أفعال بحروف جرّ ثابتة (أساسيات A2)",
-      "goalAr": "تحفظ الأفعال مع حروفها (warten auf, leiden an) والحالة المطلوبة.",
+      "goalAr": "تستعمل أفعالاً شائعة مع حرف الجر والحالة اللذين يتطلبهما كل استعمال، مثل warten auf وleiden an.",
       "prerequisiteTopicIds": [
         "a2-dativ"
       ],
@@ -2234,9 +2235,9 @@
         "canDoIds": [
           "A2-C2"
         ],
-        "applicationDe": "Erkläre dem Arzt deine Symptome: 4 Sätze mit festen Präpositionen.",
-        "applicationAr": "اشرح أعراضك للطبيب: Ich leide an … / Ich denke an … — 4 جمل.",
-        "rules": 8,
+        "applicationDe": "Schreibe fünf Alltagssätze mit verschiedenen festen Verbindungen, zum Beispiel warten auf, denken an, fragen nach und teilnehmen an.",
+        "applicationAr": "اكتب 5 جمل يومية مستعملاً تراكيب ثابتة مختلفة، مثل warten auf وdenken an وfragen nach وteilnehmen an.",
+        "rules": 9,
         "examples": 3,
         "pitfalls": 3
       },
@@ -2252,7 +2253,7 @@
       "level": "A2",
       "titleDe": "Adjektivendungen nach der/die/das",
       "titleAr": "نهايات الصفات بعد أدوات التعريف (der/die/das)",
-      "goalAr": "تضيف نهاية الصفة الصحيحة بعد أداة التعريف في كل الحالات.",
+      "goalAr": "تضيف نهاية الصفة الصحيحة بعد أداة التعريف أو der-Wort في Nominativ وAkkusativ وDativ.",
       "prerequisiteTopicIds": [
         "a1-akkusativ",
         "a1-dativ"
@@ -2388,11 +2389,9 @@
           "a2-versch-n2",
           "a2-versch-n3"
         ],
-        "canDoIds": [
-          "B2-C6"
-        ],
-        "applicationDe": "Schreibe einen formellen Termin: 3 Verschmelzungen.",
-        "applicationAr": "اكتب موعداً رسمياً: 3 اندماجات (zum nächstmöglichen Zeitpunkt …).",
+        "canDoIds": [],
+        "applicationDe": "Schreibe vier Alltagssätze über Ziel, Ort oder Zeit mit zum, zur, am, im, ans oder ins.",
+        "applicationAr": "اكتب 4 جمل يومية عن وجهة أو مكان أو وقت مستخدماً zum/zur/am/im/ans/ins.",
         "rules": 2,
         "examples": 2,
         "pitfalls": 3
@@ -2522,9 +2521,9 @@
     {
       "id": "a2-demo",
       "level": "A2",
-      "titleDe": "Demonstrativa: dieser/jeder/alle",
+      "titleDe": "Begleiter: dieser/jeder/alle",
       "titleAr": "الإشارة والتعميم",
-      "goalAr": "تشير بـdieser وتعمم بـjeder/alle مع التصريف الصحيح في الرفع والنصب.",
+      "goalAr": "تشير بـdieser وتعمم بـjeder/alle مع تصريف الصيغ الاسمية الصحيح في الرفع والنصب.",
       "prerequisiteTopicIds": [
         "a1-pronomen"
       ],
@@ -3164,9 +3163,9 @@
     {
       "id": "a2-pruefungsstrategie",
       "level": "A2",
-      "titleDe": "Prüfungsstrategie: Goethe A2",
-      "titleAr": "استراتيجية امتحان Goethe A2 — 100 كلمة رسائل، فهم المقالات والاستماع",
-      "goalAr": "تتقن بنية امتحان A2، توزيع الوقت، بناء رسالة خاصة 100 كلمة ورسالة رسمية 100 كلمة، وتقنيات التخمين الذكي.",
+      "titleDe": "Interne Prüfungsstrategie: A2-Übungsformat",
+      "titleAr": "استراتيجية داخلية لتدريبات A2 — القراءة والاستماع والكتابة",
+      "goalAr": "تتدرّب على قراءة المطلوب، وتوزيع الوقت، وتغطية نقاط الكتابة، ومراجعة الإجابة؛ من دون اعتبار الدرس وصفاً رسمياً لامتحان أو جهة بعينها.",
       "prerequisiteTopicIds": [
         "a2-futur",
         "a2-weil-dass"
@@ -3185,9 +3184,9 @@
           "a2-pruefungsstrategie-r141e-prod2"
         ],
         "canDoIds": [],
-        "applicationDe": "Schreibe eine private E-Mail (100 Wörter) und eine formelle E-Mail (100 Wörter) in 30 Minuten.",
-        "applicationAr": "اكتب رسالة إلى صديق (100 كلمة) ورسالة رسمية (100 كلمة) خلال 30 دقيقة.",
-        "rules": 3,
+        "applicationDe": "Bearbeite ein internes A2-Übungsset mit Zeitlimit, schreibe eine Nachricht zu allen geforderten Punkten und kontrolliere sie. Prüfe vor einer echten Prüfung die aktuellen offiziellen Vorgaben deines Anbieters und Formats.",
+        "applicationAr": "نفّذ مجموعة A2 داخلية بوقت محدد، واكتب رسالة تغطي كل النقاط المطلوبة، ثم راجعها. قبل امتحان حقيقي ارجع إلى التعليمات الرسمية الحالية للجهة والنموذج الذي سجلت فيه.",
+        "rules": 4,
         "examples": 2,
         "pitfalls": 2
       },
@@ -3847,8 +3846,8 @@
       "topicId": "a2-praeteritum",
       "ruleIndex": 3,
       "level": "A2",
-      "descriptorDe": "Arbeitsteilung: gesprochen → Perfekt, geschrieben → Präteritum. Aber sein/haben/Modale → immer Präteritum.",
-      "descriptorAr": "**قاعدة التقسيم الذهبية**: في الكلام Perfekt، وفي الكتابة Präteritum. لكن sein و haben والأفعال الناقصة تبقى Präteritum حتى في الكلام.",
+      "descriptorDe": "In Erzählungen und Berichten ist das Präteritum häufig; im Gespräch und in informellen Texten ist oft das Perfekt üblich. Die Verteilung hängt auch von Verb, Region und Textsorte ab.",
+      "descriptorAr": "يكثر Präteritum في السرد والتقارير، ويكثر Perfekt في الحديث والنصوص غير الرسمية؛ لكن هذا اتجاه استعمال لا قاعدة مطلقة.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -3863,8 +3862,8 @@
       "topicId": "a2-praeteritum",
       "ruleIndex": 4,
       "level": "A2",
-      "descriptorDe": "Modalverben im Präteritum sind kürzer und natürlicher: „Ich musste arbeiten“ statt „Ich habe arbeiten müssen“.",
-      "descriptorAr": "مع الناقصة، Präteritum أقصر وأوضح: musste بدل habe arbeiten müssen. ولهذا تُفضَّل دائماً.",
+      "descriptorDe": "Modalverben stehen auch mündlich oft im Präteritum: „Ich musste arbeiten“; das Perfekt „Ich habe arbeiten müssen“ ist ebenfalls grammatisch.",
+      "descriptorAr": "مع الأفعال الناقصة تكون صيغة Präteritum مثل musste شائعة وموجزة في الكلام؛ وصيغة Perfekt المقابلة صحيحة أيضاً.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -3895,8 +3894,8 @@
       "topicId": "a2-perfekt",
       "ruleIndex": 2,
       "level": "A2",
-      "descriptorDe": "sein + Partizip II: gegangen, gefahren, gekommen, aufgestanden, geblieben",
-      "descriptorAr": "الحركة (gehen, fahren, fliegen…) وتغيّر الحالة (aufstehen, einschlafen, sterben…) مع sein",
+      "descriptorDe": "sein + Partizip II besonders bei intransitivem Orts- oder Zustandswechsel: gegangen, angekommen, eingeschlafen; außerdem: gewesen, geblieben, geworden.",
+      "descriptorAr": "يأتي sein خصوصاً مع فعل لازم يعبّر عن انتقال مكاني أو تغيّر حالة، ومع sein/bleiben/werden. ليست كل حركة سبباً كافياً لاختيار sein.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -3911,8 +3910,8 @@
       "topicId": "a2-perfekt",
       "ruleIndex": 3,
       "level": "A2",
-      "descriptorDe": "Partizip II: ge-…-t · ge-…-en · gemacht, gesagt, gekauft",
-      "descriptorAr": "الأفعال الشاذة تُحفظ من ملف الـ 204 أفعال — Partizip II: ge-…-t (منتظم) · ge-…-en (شاذ) · غيروهم: gemacht, gesagt, gekauft",
+      "descriptorDe": "Partizip II: schwach oft ge-…-t, stark oft ge-…-en; untrennbare Präfixe und -ieren ohne ge-. Mischverben und Einzelverben müssen mitgelernt werden.",
+      "descriptorAr": "المنتظم غالباً ge-…-t، والقوي غالباً ge-…-en؛ ولا تأتي ge- مع السوابق غير المنفصلة أو -ieren. توجد أفعال مختلطة وصيغ تُحفظ مع الفعل.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -3943,8 +3942,8 @@
       "topicId": "a2-weil-dass",
       "ruleIndex": 2,
       "level": "A2",
-      "descriptorDe": "Bei zwei Verben geht nur das Hilfsverb ans Ende: …, weil ich schlafen will.",
-      "descriptorAr": "عندَ فعلَين: المساعدُ وحدَهُ يذهبُ إلى النهاية — …, weil ich nach Hause gehen will (وليس: will gehen) — الفعل المساعد (في الازدواج) يذهب وحده للنهاية",
+      "descriptorDe": "Bei Modalverb + Infinitiv steht der Infinitiv vor dem finiten Modalverb am Ende: …, weil ich schlafen will.",
+      "descriptorAr": "مع فعل ناقص ومصدر، يأتي المصدر ثم الفعل الناقص المصرّف في نهاية التابعة: …, weil ich nach Hause gehen will.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -3959,8 +3958,8 @@
       "topicId": "a2-weil-dass",
       "ruleIndex": 3,
       "level": "A2",
-      "descriptorDe": "Wenn es regnet, bleibe ich zu Hause.",
-      "descriptorAr": "عند البدء بالتابعة تأتي الفاعلية ثانية في الجملة الرئيسية — يمكن بدء الجملة بالتابعة: Wenn es regnet, bleibe ich zu Hause.",
+      "descriptorDe": "Wenn es regnet, bleibe ich zu Hause: Der ganze Nebensatz besetzt Position 1; danach folgt das finite Verb des Hauptsatzes.",
+      "descriptorAr": "إذا بدأت بالتابعة فإنها تشغل الموضع الأول كله؛ وبعد الفاصلة يأتي الفعل المصرّف في الرئيسية ثم الفاعل: bleibe ich.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -3975,8 +3974,8 @@
       "topicId": "a2-wechsel",
       "ruleIndex": 1,
       "level": "A2",
-      "descriptorDe": "entlang + Dativ nach dem Nomen: Gehen Sie die Straße entlang.",
-      "descriptorAr": "entlang يأتي غالباً بعد الاسم ومع Dativ.",
+      "descriptorDe": "entlang steht nach dem Nomen meist mit Akkusativ: Gehen Sie die Straße entlang.",
+      "descriptorAr": "عندما يأتي entlang بعد الاسم، يستعمل غالباً Akkusativ: die Straße entlang.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -3991,8 +3990,8 @@
       "topicId": "a2-wechsel",
       "ruleIndex": 2,
       "level": "A2",
-      "descriptorDe": "über + Akk. (Bewegung): Gehen Sie über die Brücke.",
-      "descriptorAr": "über مع Akkusativ = يعبر فوق.",
+      "descriptorDe": "über + Akkusativ bei einer gerichteten Strecke: Gehen Sie über die Brücke. Bei einer Lage kann über + Dativ stehen: Die Lampe hängt über dem Tisch.",
+      "descriptorAr": "عند عبور مسار موجّه: über + Akkusativ؛ وعند وصف موقع مع حرف الجر المتغير يمكن استعمال Dativ.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -4039,8 +4038,8 @@
       "topicId": "a2-wechsel",
       "ruleIndex": 5,
       "level": "A2",
-      "descriptorDe": "stellen/legen/setzen/hängen + Akk. (Bewegung →)",
-      "descriptorAr": "أفعال الوضع المتحركة: يضع شيئاً في مكان ما → حركة → Akkusativ.",
+      "descriptorDe": "stellen/legen/setzen/hängen + Zielangabe: meist Akkusativ (wohin?): Ich stelle die Tasse auf den Tisch.",
+      "descriptorAr": "أفعال الوضع مع وجهة تجيب عن wohin، ولذلك تأتي عبارة حرف الجر المتغير في Akkusativ.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -4055,8 +4054,8 @@
       "topicId": "a2-wechsel",
       "ruleIndex": 6,
       "level": "A2",
-      "descriptorDe": "stehen/liegen/sitzen/hängen + Dat./Nominativ (Zustand)",
-      "descriptorAr": "أفعال الوجود/الثبات → حالة ثابتة → Dativ (مع حرف جر).",
+      "descriptorDe": "stehen/liegen/sitzen/hängen + Ortsangabe: meist Dativ (wo?): Die Tasse steht auf dem Tisch.",
+      "descriptorAr": "أفعال الحالة مع موقع يجيب عن wo، ولذلك تأتي عبارة حرف الجر المتغير في Dativ.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -4071,8 +4070,8 @@
       "topicId": "a2-modal",
       "ruleIndex": 1,
       "level": "A2",
-      "descriptorDe": "Modalverb auf Position 2, Vollverb im Infinitiv am Satzende: Ich muss heute arbeiten.",
-      "descriptorAr": "مثل الأداة المساعدة في العربية: أريد أن أذهب → ich will gehen (وليس: will zu gehen!) — Modalverb في الموضع الثاني + الفعل الرئيسي للنهاية",
+      "descriptorDe": "Modalverb im Präteritum auf Position 2, Vollverb im Infinitiv am Satzende: Ich musste gestern arbeiten.",
+      "descriptorAr": "الفعل الناقص في Präteritum في الموضع الثاني، والمصدر في نهاية الإطار: Ich musste gestern arbeiten.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -4088,7 +4087,7 @@
       "ruleIndex": 2,
       "level": "A2",
       "descriptorDe": "Präteritum: konnte, musste, durfte, wollte, sollte",
-      "descriptorAr": "حروف الجرّ الشاذة: ich konnte, du konntest, er konnte, wir konnten…",
+      "descriptorAr": "صيغ Präteritum الشائعة: ich konnte, musste, durfte, wollte, sollte؛ ومع du نضيف -st: konntest…",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -4663,7 +4662,7 @@
       "topicId": "a2-negation",
       "ruleIndex": 1,
       "level": "A2",
-      "descriptorDe": "kein +: Ich trinke keinen Kaffee.",
+      "descriptorDe": "kein + Nomen ohne bestimmten Artikel: Ich trinke keinen Kaffee.",
       "descriptorAr": "نفي «شيء ما» غير معرّف ← kein (تصريفه ك ein) — kein + اسم بلا أداة: Ich trinke keinen Kaffee.",
       "sourceRefs": [],
       "status": {
@@ -4679,8 +4678,8 @@
       "topicId": "a2-negation",
       "ruleIndex": 2,
       "level": "A2",
-      "descriptorDe": "nicht verneint Verben, Adjektive und bestimmte Nomen: Ich komme nicht.",
-      "descriptorAr": "Ich arbeite nicht heute. · Das ist nicht mein Auto. — nicht ينفي الأفعال والصفات والأسماء المعرّفة",
+      "descriptorDe": "nicht verneint unter anderem Verben, Adjektive und bestimmte oder bereits determinierte Nominalgruppen: Das ist nicht mein Auto.",
+      "descriptorAr": "يستعمل nicht لنفي الفعل أو الصفة أو مجموعة اسمية محددة، مثل: Das ist nicht mein Auto.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -4695,8 +4694,8 @@
       "topicId": "a2-negation",
       "ruleIndex": 3,
       "level": "A2",
-      "descriptorDe": "Stellung von nicht: am Satzende oder direkt vor dem verneinten Teil: Ich fahre nicht nach Köln.",
-      "descriptorAr": "Ich lerne nicht morgen، بل: Ich lerne morgen nicht. — موقع nicht: آخر الجملة البسيطة، أو قبل المكان/الزمان المنفي",
+      "descriptorDe": "Die Stellung hängt vom Skopus ab: Heute arbeite ich nicht. · Ich fahre nicht nach Köln, sondern nach Bonn. · Ich komme nicht heute, sondern morgen.",
+      "descriptorAr": "الموضع يحدده نطاق النفي: عند نفي الفعل يأتي nicht قرب نهاية المجال، وعند المقابلة يأتي مباشرة قبل العنصر المنفي.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -4711,8 +4710,8 @@
       "topicId": "a2-imperativ",
       "ruleIndex": 1,
       "level": "A2",
-      "descriptorDe": "du-Form: Verbstamm ohne Endung: Sprich! · Komm! · Lies!",
-      "descriptorAr": "احذف -st من المضارع ثم احذف -e أو أبقِها",
+      "descriptorDe": "du-Form meist aus dem Stamm: Komm!; -e ist teils möglich oder nötig: Komme! · Arbeite!; Stammwechsel beachten: Sprich! · Nimm! · Lies!",
+      "descriptorAr": "صيغة du غالباً من الجذر، لكن -e ليست اختيارية في كل فعل، وتوجد تغيّرات جذرية يجب حفظها مثل sprich/nimm/lies.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -4823,8 +4822,8 @@
       "topicId": "a2-steigerung",
       "ruleIndex": 1,
       "level": "A2",
-      "descriptorDe": "alt → älter → am ältesten",
-      "descriptorAr": "الهمزة: a→ä, o→ö, u→ü في المقارنة غالباً",
+      "descriptorDe": "Manche häufigen einsilbigen Adjektive haben Umlaut: alt → älter → am ältesten; aber nicht jedes Adjektiv mit a, o oder u.",
+      "descriptorAr": "تأخذ بعض الصفات الأحادية الشائعة Umlaut في المقارنة، مثل alt → älter؛ ولا نعمم ذلك على كل صفة فيها a/o/u.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -6056,7 +6055,7 @@
       "ruleIndex": 1,
       "level": "A2",
       "descriptorDe": "sein → Präteritum: war. „Ich bin müde“ (jetzt) → „Ich war müde“ (gestern).",
-      "descriptorAr": "sein يصير war في الماضي. «أنا متعب الآن» ← «كنت متعباً». لا تقل «Ich bin müde gewesen» في الحديث — ثقيلة ومقبولة لكنها ليست الطبيعية.",
+      "descriptorAr": "sein يصير war في Präteritum: «كنت متعباً». صيغة Ich bin müde gewesen صحيحة أيضاً، لكن war أوجز وأكثر شيوعاً في مواقف كثيرة.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -6087,8 +6086,8 @@
       "topicId": "a2-praeteritum-grund",
       "ruleIndex": 3,
       "level": "A2",
-      "descriptorDe": "In A1 erkennst du war/hatte — du musst sie noch nicht frei produzieren.",
-      "descriptorAr": "المطلوب منك الآن أن **تسمعها فتفهمها** وتقرأها فلا تتلعثم. الإنتاج المنظَّم في A2.",
+      "descriptorDe": "war und hatte sind in Alltagssprache und schriftlichen Texten sehr häufig; die Wahl der Vergangenheitsform hängt trotzdem vom Kontext ab.",
+      "descriptorAr": "war وhatte شائعتان جداً في الحديث والكتابة، لكن لا نحكم على كل صيغة Perfekt المقابلة بأنها خطأ.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -6536,7 +6535,7 @@
       "ruleIndex": 3,
       "level": "A2",
       "descriptorDe": "Hätten Sie …? ≈ Do you have (polite)?",
-      "descriptorAr": "لطلب شيء: Hätten Sie einen Stift؟ — هل معك قلم؟",
+      "descriptorAr": "لطلب شيء: Hätten Sie einen Stift? — هل معك قلم؟",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -6552,7 +6551,7 @@
       "ruleIndex": 4,
       "level": "A2",
       "descriptorDe": "„bitte“",
-      "descriptorAr": "تأتي bitte بعد الفاعل أو في آخر الجملة.",
+      "descriptorAr": "موضع bitte مرن بحسب التركيز؛ من المواضع الشائعة بعد الفاعل أو قرب نهاية الطلب.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -6681,6 +6680,22 @@
       "level": "A2",
       "descriptorDe": "teilnehmen an + Dat",
       "descriptorAr": "أشارك في الدورة: Ich nehme am Kurs teil.",
+      "sourceRefs": [],
+      "status": {
+        "definition": "derived-from-current-curriculum",
+        "externalSourceMapping": "pending",
+        "cefrLevelAssignment": "pending-external-review",
+        "linguisticReview": "pending-human-review",
+        "directAssessmentEvidence": "pending-item-level-map"
+      }
+    },
+    {
+      "id": "IGGP-a2-verb-praep-R09",
+      "topicId": "a2-verb-praep",
+      "ruleIndex": 9,
+      "level": "A2",
+      "descriptorDe": "leiden an + Dativ: Sie leidet an einer chronischen Krankheit.",
+      "descriptorAr": "leiden an + Dativ لوصف مرض أو حالة: تعاني من مرض مزمن.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -6888,7 +6903,7 @@
       "ruleIndex": 2,
       "level": "A2",
       "descriptorDe": "Ich gehe zum Arzt. · Wir sind im Kino.",
-      "descriptorAr": "أمثلة شائعة.",
+      "descriptorAr": "أمثلة يومية شائعة على الاندماج القياسي.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -7080,7 +7095,7 @@
       "ruleIndex": 1,
       "level": "A2",
       "descriptorDe": "dieser/diese/dieses + Nomen: Dieser Mann · diese Frau · dieses Kind",
-      "descriptorAr": "dieser للإشارة القريبة (هذا) ويتصرف كأداة التعريف.",
+      "descriptorAr": "dieser يشير إلى شخص أو شيء محدد في السياق، ويتصرف هنا بنهايات نمط أداة التعريف.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -7975,8 +7990,8 @@
       "topicId": "a2-pruefungsstrategie",
       "ruleIndex": 1,
       "level": "A2",
-      "descriptorDe": "Lies zuerst die Aufgabenstellung und markiere dann gezielt passende Schlüsselwörter.",
-      "descriptorAr": "اقرأ المطلوب أولاً ثم ابحث في النص عن الكلمات المفتاحية المناسبة.",
+      "descriptorDe": "Lies zuerst die konkrete Aufgabenstellung und markiere, welche Informationen du finden oder formulieren musst.",
+      "descriptorAr": "اقرأ المهمة المحددة أولاً وحدد المعلومات التي يجب العثور عليها أو صياغتها.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -7991,8 +8006,8 @@
       "topicId": "a2-pruefungsstrategie",
       "ruleIndex": 2,
       "level": "A2",
-      "descriptorDe": "Beantworte beim Schreiben jeden vorgegebenen Punkt.",
-      "descriptorAr": "أجب في الكتابة عن كل نقطة مطلوبة.",
+      "descriptorDe": "Beantworte beim Schreiben jeden vorgegebenen Punkt und beachte Register, Wortzahl und Zeit der konkreten Aufgabe.",
+      "descriptorAr": "أجب عن كل نقطة، وراعِ مستوى الرسمية وعدد الكلمات والزمن المذكور في المهمة نفسها.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -8007,8 +8022,24 @@
       "topicId": "a2-pruefungsstrategie",
       "ruleIndex": 3,
       "level": "A2",
-      "descriptorDe": "Wenn ein Wort im Hörtext unbekannt ist, höre auf den Sinn des ganzen Satzes.",
-      "descriptorAr": "إذا جهلت كلمة في المسموع، فركّز على معنى الجملة كلها.",
+      "descriptorDe": "Wenn ein Wort im Hörtext unbekannt ist, höre weiter und nutze Satz, Situation und Schlüsselwörter.",
+      "descriptorAr": "إذا جهلت كلمة في المسموع، فتابع واستعمل معنى الجملة والموقف والكلمات المفتاحية.",
+      "sourceRefs": [],
+      "status": {
+        "definition": "derived-from-current-curriculum",
+        "externalSourceMapping": "pending",
+        "cefrLevelAssignment": "pending-external-review",
+        "linguisticReview": "pending-human-review",
+        "directAssessmentEvidence": "pending-item-level-map"
+      }
+    },
+    {
+      "id": "IGGP-a2-pruefungsstrategie-R04",
+      "topicId": "a2-pruefungsstrategie",
+      "ruleIndex": 4,
+      "level": "A2",
+      "descriptorDe": "Prüfe offizielle Prüfungsdaten nur in den aktuellen Unterlagen des jeweiligen Anbieters.",
+      "descriptorAr": "تحقق من بنية الامتحان ومدده حصراً في المواد الرسمية الحالية للجهة المعنية.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",

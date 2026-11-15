@@ -3060,19 +3060,19 @@ const hasFile = txt().includes("صوتٌ من الدار");
       ok(!!alreadyDone && alreadyDone.disabled && (alreadyDone.textContent ?? "").includes("سُجّل"),
         "LXXVIII14 إعادة فتح الاستوديو بعد تسجيله لا تضاعف نقاط مهمة اليوم");
 
-      // تنبيهٌ مختلط: زوجان صريحان ✗/✓، ثم فرق استعمال بلا «صواب» مختلق.
+      // تنبيهٌ مختلط: زوجٌ صريح ✗/✓، وفرقا استعمال بلا «صواب» مختلق.
       storage.setItem("weg-wizard-a2-verb-praep", JSON.stringify({ schritt: 4, erledigt: [true, true, true, true, false] }));
       mount(React.createElement(LektionWizard, { topicId: "a2-verb-praep", embedded: true }));
       const wrongPitfalls = d0.querySelectorAll(".lesson-pitfall-side--wrong");
       const rightPitfalls = d0.querySelectorAll(".lesson-pitfall-side--right");
       const usageNotes = d0.querySelectorAll(".lesson-pitfall--note");
-      ok(wrongPitfalls.length === 2 && rightPitfalls.length === 2 && usageNotes.length === 1 &&
-        (wrongPitfalls[0]?.textContent ?? "").includes("Ich warte für dich") &&
-        (rightPitfalls[0]?.textContent ?? "").includes("Ich warte auf dich") &&
-        (usageNotes[0]?.textContent ?? "").includes("an jemanden denken") &&
-        (usageNotes[0]?.textContent ?? "").includes("فرق استعمال") &&
-        !(usageNotes[0]?.querySelector(".lesson-pitfall-wrong")),
-        "LXXVIII15 جدار الفخاخ يفصل زوجي ✗/✓ الصريحين، ويعرض فرق الاستعمال الثالث بلا شطبٍ أو تصحيحٍ مخمّن");
+      ok(wrongPitfalls.length === 1 && rightPitfalls.length === 1 && usageNotes.length === 2 &&
+        (usageNotes[0]?.textContent ?? "").includes("Ich warte für dich") &&
+        (usageNotes[0]?.textContent ?? "").includes("Ich warte auf dich") &&
+        (usageNotes[1]?.textContent ?? "").includes("an jemanden denken") &&
+        Array.from(usageNotes).every((note) => (note.textContent ?? "").includes("فرق استعمال") &&
+          !note.querySelector(".lesson-pitfall-wrong")),
+        "LXXVIII15 جدار الفخاخ يفصل زوج ✗/✓ الصريح، ويعرض فرقي الاستعمال بلا شطبٍ أو تصحيحٍ مخمّن");
     } finally {
       if (leave) leave();
       autoEntdecken = oldAutoEntdecken;

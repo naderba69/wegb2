@@ -1240,8 +1240,8 @@
       "a1-praesens"
     ],
     "anwendung": {
-      "ar": "اكتب 6 جمل عن عطلتك الماضية بصيغة Präteritum (war, hatte, ging, sah…) — هذا أسلوب السرد الكتابي.",
-      "de": "Schreibe 6 Sätze über deinen letzten Urlaub im Präteritum.",
+      "ar": "اكتب سرداً قصيراً من 6 جمل عن رحلة أو حدث سابق، واستعمل فيه صيغ Präteritum المستهدفة (war, hatte, ging, sah…).",
+      "de": "Schreibe eine kurze Erzählung mit sechs Sätzen und verwende die geübten Präteritumformen.",
       "candoIds": [
         "A2-C9"
       ]
@@ -1275,8 +1275,8 @@
         "promptAr": "ذهبنا إلى السوق واشترينا خبزاً."
       }
     ],
-    "summaryAr": "بعد أن تعرّفتَ war و hatte في A1، يأتي هنا الماضي البسيط كاملاً: المنتظم (-te) والشاذّ (تغيير في الجذر)، ومتى تستعمله ومتى تستعمل Perfekt. هذا هو **زمن الكتابة والسرد**: به تكتب رسالةً عن عطلة، وبه تُحكى قصة في امتحان A2 وB1، وبه كُتبت كل رواية ألمانية تقرؤها.",
-    "summaryDe": "Das Präteritum ist die Erzählzeit der geschriebenen Sprache: regelmäßige Bildung mit -te, unregelmäßige mit Stammwechsel, und eine klare Arbeitsteilung mit dem Perfekt.",
+    "summaryAr": "يُستعمل Präteritum كثيراً في السرد والتقارير المكتوبة، ويكثر في الكلام أيضاً مع sein وhaben والأفعال الناقصة. أمّا Perfekt فشائع جداً في الحديث والكتابة غير الرسمية. الاختيار بين الزمنين يتأثر بالفعل ونوع النص والمنطقة؛ لذلك نتدرّب هنا على بناء المنتظم (-te) والقوي أو غير المنتظم (تغيّر الجذر)، لا على تقسيم مطلق بين الكلام والكتابة.",
+    "summaryDe": "Das Präteritum ist besonders in schriftlichen Erzählungen und Berichten häufig; sein, haben und Modalverben stehen auch mündlich oft im Präteritum. Das Perfekt bleibt in Gesprächen und informellen Texten sehr verbreitet.",
     "rules": [
       {
         "de": "Regelmäßige Verben: Stamm + -te + Personalendung. machen → ich machte, du machtest, er machte.",
@@ -1287,12 +1287,12 @@
         "ar": "الشاذّ: يتغيّر الجذر بلا te. تُحفَظ كأعمدة التصريف الثلاثة (gehen–ging–gegangen)."
       },
       {
-        "de": "Arbeitsteilung: gesprochen → Perfekt, geschrieben → Präteritum. Aber sein/haben/Modale → immer Präteritum.",
-        "ar": "**قاعدة التقسيم الذهبية**: في الكلام Perfekt، وفي الكتابة Präteritum. لكن sein و haben والأفعال الناقصة تبقى Präteritum حتى في الكلام."
+        "de": "In Erzählungen und Berichten ist das Präteritum häufig; im Gespräch und in informellen Texten ist oft das Perfekt üblich. Die Verteilung hängt auch von Verb, Region und Textsorte ab.",
+        "ar": "يكثر Präteritum في السرد والتقارير، ويكثر Perfekt في الحديث والنصوص غير الرسمية؛ لكن هذا اتجاه استعمال لا قاعدة مطلقة."
       },
       {
-        "de": "Modalverben im Präteritum sind kürzer und natürlicher: „Ich musste arbeiten“ statt „Ich habe arbeiten müssen“.",
-        "ar": "مع الناقصة، Präteritum أقصر وأوضح: musste بدل habe arbeiten müssen. ولهذا تُفضَّل دائماً."
+        "de": "Modalverben stehen auch mündlich oft im Präteritum: „Ich musste arbeiten“; das Perfekt „Ich habe arbeiten müssen“ ist ebenfalls grammatisch.",
+        "ar": "مع الأفعال الناقصة تكون صيغة Präteritum مثل musste شائعة وموجزة في الكلام؛ وصيغة Perfekt المقابلة صحيحة أيضاً."
       }
     ],
     "tables": [
@@ -1468,7 +1468,7 @@
         ]
       },
       {
-        "captionAr": "متى أيّهما؟ — القرار في ثلاثة أسطر",
+        "captionAr": "اختيار شائع بحسب السياق — لا قاعدة مطلقة",
         "headers": [
           "الموقف",
           "الزمن المختار",
@@ -1477,23 +1477,23 @@
         "rows": [
           [
             "حوار يومي شفوي",
-            "Perfekt",
-            "هكذا يتكلم الألمان فعلاً"
+            "غالباً Perfekt",
+            "مع اختلاف الفعل والمنطقة"
           ],
           [
-            "رسالة / بريد / سرد مكتوب",
-            "Präteritum",
-            "زمن الكتابة المعتمد"
+            "رسالة أو بريد غير رسمي",
+            "Perfekt أو Präteritum",
+            "بحسب الأسلوب ونوع السرد"
           ],
           [
-            "sein · haben · Modale في أي موقف",
-            "Präteritum",
-            "استثناء ثابت حتى شفوياً"
+            "sein · haben · Modalverben",
+            "كثيراً Präteritum",
+            "شائعة أيضاً في الكلام"
           ],
           [
-            "خبر صحفي / رواية / تقرير",
-            "Präteritum",
-            "لغة السرد الرسمية"
+            "خبر أو رواية أو تقرير سردي",
+            "غالباً Präteritum",
+            "أسلوب سرد مكتوب شائع"
           ]
         ]
       }
@@ -1512,12 +1512,12 @@
         "ar": "فتح النافذة لأن الجو كان دافئاً أكثر من اللازم. فتحَ (منتظم) و كان (شاذّ) في جملة واحدة."
       },
       {
-        "de": "„Hast du den Film gesehen?“ — „Ja, ich sah ihn letzte Woche.“",
-        "ar": "السؤال شفوي فاستعمل Perfekt، والجواب سردي فاستعمل Präteritum. هذا هو التقسيم الطبيعي."
+        "de": "Im Bericht stand: „Der Zug kam verspätet an, und die Reisenden warteten lange.“",
+        "ar": "ورد في التقرير: «وصل القطار متأخراً وانتظر المسافرون طويلاً». هذا سياق سرد مكتوب يشيع فيه Präteritum."
       },
       {
-        "de": "Es war einmal eine Frau, die hatte einen kleinen Laden. Jeden Morgen stand sie um fünf auf.",
-        "ar": "كان يا ما كان امرأةٌ كان لها متجر صغير. كل صباح كانت تقوم في الخامسة. بداية حكاية كلاسيكية بثلاثة أفعال ماضية."
+        "de": "Es war einmal eine Frau, die einen kleinen Laden hatte. Jeden Morgen stand sie um fünf auf.",
+        "ar": "كان يا ما كان امرأةٌ كان لها متجر صغير. كل صباح كانت تنهض في الخامسة؛ صيغ سردية في Präteritum."
       }
     ],
     "pitfalls": [
@@ -1532,7 +1532,7 @@
         "type": "fill",
         "promptDe": "Gestern ___ ich früh aufstehen. (müssen)",
         "answer": "musste",
-        "explanationAr": "müssen في Präteritum مع ich = musste. الناقصة تُستعمل Präteritum حتى شفوياً."
+        "explanationAr": "müssen في Präteritum مع ich = musste؛ وهذه الصيغة شائعة أيضاً في الكلام."
       },
       {
         "id": "a2-praeteritum-e2",
@@ -1645,7 +1645,7 @@
           "muss",
           "gemusst"
         ],
-        "explanationAr": "الناقصة تُستعمل Präteritum حتى شفوياً: musste.",
+        "explanationAr": "صيغة Präteritum من müssen هي musste، وهي شائعة وموجزة في الحديث أيضاً.",
         "points": 2
       },
       {
@@ -1695,7 +1695,7 @@
         "answer": [
           "sind"
         ],
-        "explanationAr": "fahren = حركة ← sein: wir sind … gefahren."
+        "explanationAr": "fahren هنا انتقال لازم إلى برلين، لذا: wir sind … gefahren."
       },
       {
         "id": "a2-perfekt-v2",
@@ -1714,19 +1714,19 @@
         "points": 2
       }
     ],
-    "summaryAr": "في الألمانية المحكية يُحكى الماضي بالـ Perfekt وليس بالماضي البسيط (Präteritum) إلا مع war/hatte/konnte. التركيب: الفعل المساعد (haben أو sein في المضارع) في الموضع الثاني + التصريف الثالث في نهاية الجملة. القاعدة الذهبية: أفعال الحركة وتغيّر الحالة مع sein، وغيرها مع haben.",
+    "summaryAr": "يشيع Perfekt في الحديث وفي كثير من النصوص غير الرسمية: فعل مساعد مصرّف (haben أو sein) + Partizip II في نهاية الإطار الفعلي. تأخذ أغلبية الأفعال haben. ويأتي sein خصوصاً مع أفعال لازمة تعبّر عن انتقال إلى مكان آخر أو تغيّر حالة، ومع أفعال شائعة مثل sein وbleiben وwerden؛ ولا تكفي كلمة «حركة» وحدها لتحديد المساعد.",
     "rules": [
       {
         "de": "haben + Partizip II: gemacht, gekauft, gelesen",
         "ar": "الأغلبية مع haben"
       },
       {
-        "de": "sein + Partizip II: gegangen, gefahren, gekommen, aufgestanden, geblieben",
-        "ar": "الحركة (gehen, fahren, fliegen…) وتغيّر الحالة (aufstehen, einschlafen, sterben…) مع sein"
+        "de": "sein + Partizip II besonders bei intransitivem Orts- oder Zustandswechsel: gegangen, angekommen, eingeschlafen; außerdem: gewesen, geblieben, geworden.",
+        "ar": "يأتي sein خصوصاً مع فعل لازم يعبّر عن انتقال مكاني أو تغيّر حالة، ومع sein/bleiben/werden. ليست كل حركة سبباً كافياً لاختيار sein."
       },
       {
-        "de": "Partizip II: ge-…-t · ge-…-en · gemacht, gesagt, gekauft",
-        "ar": "الأفعال الشاذة تُحفظ من ملف الـ 204 أفعال — Partizip II: ge-…-t (منتظم) · ge-…-en (شاذ) · غيروهم: gemacht, gesagt, gekauft"
+        "de": "Partizip II: schwach oft ge-…-t, stark oft ge-…-en; untrennbare Präfixe und -ieren ohne ge-. Mischverben und Einzelverben müssen mitgelernt werden.",
+        "ar": "المنتظم غالباً ge-…-t، والقوي غالباً ge-…-en؛ ولا تأتي ge- مع السوابق غير المنفصلة أو -ieren. توجد أفعال مختلطة وصيغ تُحفظ مع الفعل."
       }
     ],
     "tables": [
@@ -1740,23 +1740,28 @@
         "rows": [
           [
             "منتظم",
-            "ge + جذع + t",
+            "غالباً ge + جذع + t",
             "machen → gemacht"
           ],
           [
             "منفصل",
-            "ge في المنتصف",
+            "ge بعد السابقة",
             "anrufen → angerufen"
           ],
           [
-            "غير منفصل (be-, ver-, er-…)",
+            "غير منفصل أو منتهٍ بـ-ieren",
             "بدون ge",
-            "besuchen → besucht"
+            "besuchen → besucht · studieren → studiert"
           ],
           [
-            "شاذ",
-            "ge + جذع مغيّر + en",
-            "fahren → gefahren, lesen → gelesen"
+            "قوي",
+            "غالباً ge + جذع مغيّر + en",
+            "fahren → gefahren · lesen → gelesen"
+          ],
+          [
+            "مختلط",
+            "جذر مغيّر + t",
+            "bringen → gebracht"
           ]
         ]
       }
@@ -1827,7 +1832,7 @@
           "sind gefahren",
           "sind … gefahren"
         ],
-        "explanationAr": "أفعال الحركة تأخذ sein: sind gefahren. (fahren ← sein + gefahren.)"
+        "explanationAr": "fahren هنا انتقال لازم إلى تونس، لذا نستخدم sein: sind gefahren."
       },
       {
         "id": "g7e4",
@@ -1860,7 +1865,7 @@
         "darfNicht": [
           "habe"
         ],
-        "explanationAr": "أفعال الحركة تأخذ sein لا haben.",
+        "explanationAr": "gehen هنا انتقال إلى وجهة، لذلك يأتي Perfekt مع sein: bin gegangen.",
         "points": 2
       },
       {
@@ -1932,23 +1937,23 @@
           "wenn",
           "bleiben"
         ],
-        "explanationAr": "wenn الشرطية: الفعل بعد الفاصلة مباشرة (bleiben …).",
+        "explanationAr": "في التابعة: es regnet؛ وبعد التابعة يأتي فعل الرئيسية المصرّف مباشرة: bleiben wir.",
         "points": 2
       }
     ],
-    "summaryAr": "أهم قاعدة نحوية في A2 وأصل أخطاء B1: مع weil / dass / wenn / ob / obwohl يذهب الفعل المصرَّف إلى نهاية الجملة التابعة! «Ich lerne Deutsch, weil ich in Berlin arbeiten will.» لاحظ will في النهاية. في هذه البنية لا يبقى الفعل المصرَّف في المركز الثاني؛ بل يأتي في نهاية الجملة التابعة.",
+    "summaryAr": "في الجمل التابعة المعيارية التي يتدرّب عليها هذا الدرس، تأتي weil/dass/wenn/ob/obwohl ثم بقية الجملة، ويقع الفعل المصرّف في نهاية التابعة: «…, weil ich in Berlin arbeiten will.» وعند تقديم التابعة تشغل كلها الموضع الأول، فيأتي الفعل المصرّف في الرئيسية مباشرة بعد الفاصلة. قد يظهر weil بترتيب V2 في استعمالات محكية مخصوصة، لكنه ليس البناء المستهدف هنا. في هذه البنية لا يبقى الفعل المصرَّف في المركز الثاني داخل التابعة؛ بل يأتي في نهايتها.",
     "rules": [
       {
         "de": "Das konjugierte Verb steht am Ende des Nebensatzes: …, weil ich müde bin.",
         "ar": "الفعلُ المصرَّفُ في نهايةِ الجملةِ التابعة — weil/dass/wenn/ob/obwohl + … + [الفعل] — الفعل المصرَّف في نهاية الجملة التابعة"
       },
       {
-        "de": "Bei zwei Verben geht nur das Hilfsverb ans Ende: …, weil ich schlafen will.",
-        "ar": "عندَ فعلَين: المساعدُ وحدَهُ يذهبُ إلى النهاية — …, weil ich nach Hause gehen will (وليس: will gehen) — الفعل المساعد (في الازدواج) يذهب وحده للنهاية"
+        "de": "Bei Modalverb + Infinitiv steht der Infinitiv vor dem finiten Modalverb am Ende: …, weil ich schlafen will.",
+        "ar": "مع فعل ناقص ومصدر، يأتي المصدر ثم الفعل الناقص المصرّف في نهاية التابعة: …, weil ich nach Hause gehen will."
       },
       {
-        "de": "Wenn es regnet, bleibe ich zu Hause.",
-        "ar": "عند البدء بالتابعة تأتي الفاعلية ثانية في الجملة الرئيسية — يمكن بدء الجملة بالتابعة: Wenn es regnet, bleibe ich zu Hause."
+        "de": "Wenn es regnet, bleibe ich zu Hause: Der ganze Nebensatz besetzt Position 1; danach folgt das finite Verb des Hauptsatzes.",
+        "ar": "إذا بدأت بالتابعة فإنها تشغل الموضع الأول كله؛ وبعد الفاصلة يأتي الفعل المصرّف في الرئيسية ثم الفاعل: bleibe ich."
       }
     ],
     "examples": [
@@ -1967,8 +1972,8 @@
     ],
     "pitfalls": [
       {
-        "de": "„weil ich bin müde“ ✗ → „weil ich müde bin“ ✓",
-        "ar": "أشهر خطأ عند المتعلمين العرب — تدرب عليه حتى يصبح تلقائياً!"
+        "de": "In der hier geübten Standardsprache: „…, weil ich bin müde“ ✗ → „…, weil ich müde bin“ ✓",
+        "ar": "في البناء المعياري المستهدف يأتي الفعل المصرّف في نهاية التابعة. توجد تراكيب محكية مخصوصة مع weil وV2، لكنها ليست نموذج هذا التمرين."
       }
     ],
     "exercises": [
@@ -2072,7 +2077,7 @@
     "titleDe": "Wechselpräpositionen in Wegbeschreibung & Bewegung",
     "titleAr": "حروف الجر المتغيرة في وصف الطريق والحركة",
     "level": "A2",
-    "ziel": "تستخدم حروف Wechsel في وصف الطريق والوجهة: über, durch, entlang, um … herum، بالإضافة إلى التمييز بين wo/wohin في السياقات المعقدة.",
+    "ziel": "تختار Akkusativ أو Dativ مع حروف الجر المتغيرة بحسب الوجهة أو الموقع، وتستعمل حروف الطريق الثابتة مثل durch وentlang بالحالة الصحيحة.",
     "voraus": [
       "a1-wechsel",
       "a1-akkusativ",
@@ -2089,12 +2094,12 @@
       {
         "id": "a2-wechsel-v1",
         "type": "fill",
-        "promptDe": "Die Kinder laufen in ___ Garten. (der)",
-        "text": "Die Kinder laufen in ___ Garten. (der)",
+        "promptDe": "Die Kinder laufen von draußen in ___ Garten. (der; Wohin?)",
+        "text": "Die Kinder laufen von draußen in ___ Garten. (der; Wohin?)",
         "answer": [
           "den"
         ],
-        "explanationAr": "laufen = حركة ← Akkusativ: in den Garten."
+        "explanationAr": "الانتقال من الخارج إلى داخل الحديقة يجيب عن wohin، لذا: in den Garten."
       },
       {
         "id": "a2-wechsel-v2",
@@ -2109,15 +2114,15 @@
         "promptAr": "قُل: الصورة معلقة على الجدار."
       }
     ],
-    "summaryAr": "في A1 تعلّمت القاعدة البصرية: مكان ثابت Dativ، حركة Akkusativ. في A2 تضيف: (1) حروف جر إضافية تستخدم مع وصف الطريق: über (يعبر/فوق), durch (عبر), entlang (على طول — غالباً مع Dativ بعد الاسم), um … herum (حول). (2) أين نضع حرف الجر إذا كان هناك ظرف مكان (gehen Sie die Straße entlang). (3) أفعى تفرض اتجاهاً: stellen/legen/setzen/hängen دائماً Akkusativ (حركة)، بينما stehen/liegen/sitzen/hängen ثابتة.",
+    "summaryAr": "مع حروف الجر المتغيرة an/auf/hinter/in/neben/über/unter/vor/zwischen نسأل: هل تعبّر العبارة عن وجهة أو تغيّر موقع (wohin؟ ← Akkusativ)، أم عن موقع يقع فيه الحدث (wo؟ ← Dativ)؟ مجرد وجود حركة لا يحسم الحالة: Die Kinder laufen im Garten تعني أنهم يركضون داخل الحديقة، وin den Garten تعني أنهم يدخلون إليها. أمّا durch فمع Akkusativ دائماً، وentlang بعد الاسم يأتي غالباً مع Akkusativ: die Straße entlang.",
     "rules": [
       {
-        "de": "entlang + Dativ nach dem Nomen: Gehen Sie die Straße entlang.",
-        "ar": "entlang يأتي غالباً بعد الاسم ومع Dativ."
+        "de": "entlang steht nach dem Nomen meist mit Akkusativ: Gehen Sie die Straße entlang.",
+        "ar": "عندما يأتي entlang بعد الاسم، يستعمل غالباً Akkusativ: die Straße entlang."
       },
       {
-        "de": "über + Akk. (Bewegung): Gehen Sie über die Brücke.",
-        "ar": "über مع Akkusativ = يعبر فوق."
+        "de": "über + Akkusativ bei einer gerichteten Strecke: Gehen Sie über die Brücke. Bei einer Lage kann über + Dativ stehen: Die Lampe hängt über dem Tisch.",
+        "ar": "عند عبور مسار موجّه: über + Akkusativ؛ وعند وصف موقع مع حرف الجر المتغير يمكن استعمال Dativ."
       },
       {
         "de": "durch + Akk.: Gehen Sie durch den Park.",
@@ -2128,12 +2133,12 @@
         "ar": "um … herum = حول."
       },
       {
-        "de": "stellen/legen/setzen/hängen + Akk. (Bewegung →)",
-        "ar": "أفعال الوضع المتحركة: يضع شيئاً في مكان ما → حركة → Akkusativ."
+        "de": "stellen/legen/setzen/hängen + Zielangabe: meist Akkusativ (wohin?): Ich stelle die Tasse auf den Tisch.",
+        "ar": "أفعال الوضع مع وجهة تجيب عن wohin، ولذلك تأتي عبارة حرف الجر المتغير في Akkusativ."
       },
       {
-        "de": "stehen/liegen/sitzen/hängen + Dat./Nominativ (Zustand)",
-        "ar": "أفعال الوجود/الثبات → حالة ثابتة → Dativ (مع حرف جر)."
+        "de": "stehen/liegen/sitzen/hängen + Ortsangabe: meist Dativ (wo?): Die Tasse steht auf dem Tisch.",
+        "ar": "أفعال الحالة مع موقع يجيب عن wo، ولذلك تأتي عبارة حرف الجر المتغير في Dativ."
       }
     ],
     "examples": [
@@ -2152,8 +2157,8 @@
     ],
     "pitfalls": [
       {
-        "de": "„Ich gehe in der Schule.“ ✗",
-        "ar": "للذهاب إلى المدرسة: in die Schule (اتجاه) — فرّق بينهما!"
+        "de": "Für das Ziel gilt: „Ich gehe in die Schule.“ Für den Ort ist auch „Ich gehe in der Schule“ möglich, zum Beispiel wenn ich mich im Gebäude bewege.",
+        "ar": "لا تجعل الحركة وحدها معياراً: in die Schule = إلى المدرسة، أما in der Schule فيمكن أن تصف المشي داخل مبناها."
       }
     ],
     "exercises": [
@@ -2167,8 +2172,8 @@
           "der"
         ],
         "answer": "die",
-        "explanationAr": "اتجاه (أين يعلّق؟) ← Akkusativ: an die Wand.",
-        "promptAr": "اختر حالة Dativ/أكوزاتيف معلقة (حركة)."
+        "explanationAr": "تعليق الصورة على وجهة يجيب عن wohin، لذا Akkusativ: an die Wand.",
+        "promptAr": "اختر الحالة المناسبة لعبارة الوجهة مع an."
       },
       {
         "id": "g9e2",
@@ -2196,7 +2201,7 @@
         "id": "a2-wechsel-u1",
         "type": "umformung",
         "quelleDe": "Ich gehe in der Schule.",
-        "promptDe": "Korrigiere: Bewegung → Akkusativ.",
+        "promptDe": "Korrigiere für die Bedeutung „zur Schule gehen“ (Ziel → Akkusativ).",
         "answer": "Ich gehe in die Schule.",
         "mussEnthalten": [
           "in die schule"
@@ -2204,7 +2209,7 @@
         "darfNicht": [
           "in der schule"
         ],
-        "explanationAr": "الحركة نحو الهدف: Akkusativ.",
+        "explanationAr": "عند قصد الوجهة «إلى المدرسة» نستعمل Akkusativ: in die Schule؛ أما in der Schule فقد تكون صحيحة لمعنى «داخل المدرسة».",
         "points": 2
       },
       {
@@ -2219,7 +2224,7 @@
         "darfNicht": [
           "auf dem tisch"
         ],
-        "explanationAr": "legen = حركة ← Akkusativ.",
+        "explanationAr": "legen يحدد هنا وجهة الكتاب (wohin؟)، لذا Akkusativ: auf den Tisch.",
         "points": 2
       },
       {
@@ -2232,7 +2237,7 @@
           "die Lampe",
           "auf den Tisch."
         ],
-        "explanationAr": "حركة وتغيير مكان (stellen + wohin) تستوجب حالة النصب Akkusativ: auf den Tisch."
+        "explanationAr": "stellen مع وجهة تجيب عن wohin يستوجب Akkusativ في عبارة حرف الجر المتغير: auf den Tisch."
       }
     ]
   },
@@ -2247,8 +2252,8 @@
       "a2-praeteritum-grund"
     ],
     "anwendung": {
-      "ar": "اكتب أمنياتك الثلاث: Ich möchte … / Ich will … مع التعليل.",
-      "de": "Schreibe deine drei Wünsche: Ich möchte … / Ich will … — mit Begründung.",
+      "ar": "اكتب 5 جمل عن طفولتك أو يوم سابق مستخدماً konnte/musste/sollte/wollte/durfte مع مصدر.",
+      "de": "Schreibe fünf Sätze über deine Kindheit oder einen früheren Tag mit konnte, musste, sollte, wollte und durfte.",
       "candoIds": [
         "A2-C8"
       ]
@@ -2267,71 +2272,76 @@
       {
         "id": "a2-modal-v2",
         "type": "umformung",
-        "quelleDe": "Du rauchst hier.",
-        "promptDe": "Verbiete es (dürfen + nicht).",
-        "answer": "Du darfst hier nicht rauchen.",
+        "quelleDe": "Du musst heute lange arbeiten.",
+        "promptDe": "Setze den Satz mit „gestern“ ins Präteritum.",
+        "answer": "Du musstest gestern lange arbeiten.",
         "mussEnthalten": [
-          "darfst",
-          "rauchen"
+          "musstest",
+          "arbeiten"
         ],
         "darfNicht": [
-          "rauchst"
+          "musst",
+          "gemusst"
         ],
-        "explanationAr": "المنع: dürfen + nicht + مصدر.",
+        "explanationAr": "Präteritum من müssen مع du هو musstest، ويبقى المصدر arbeiten في النهاية.",
         "points": 2
       }
     ],
     "summaryAr": "هذا الدرس لا يعيد تصريف الأفعال الناقصة في المضارع (انظر a1-modalverben)، بل يدرس فقط Präteritum: ich konnte, ich musste, ich sollte, ich wollte, ich durfte. في اللغة المنطوقة تُستعمل هذه الصيغ أكثر من Perfekt للأفعال الناقصة.",
     "rules": [
       {
-        "de": "Modalverb auf Position 2, Vollverb im Infinitiv am Satzende: Ich muss heute arbeiten.",
-        "ar": "مثل الأداة المساعدة في العربية: أريد أن أذهب → ich will gehen (وليس: will zu gehen!) — Modalverb في الموضع الثاني + الفعل الرئيسي للنهاية"
+        "de": "Modalverb im Präteritum auf Position 2, Vollverb im Infinitiv am Satzende: Ich musste gestern arbeiten.",
+        "ar": "الفعل الناقص في Präteritum في الموضع الثاني، والمصدر في نهاية الإطار: Ich musste gestern arbeiten."
       },
       {
         "de": "Präteritum: konnte, musste, durfte, wollte, sollte",
-        "ar": "حروف الجرّ الشاذة: ich konnte, du konntest, er konnte, wir konnten…"
+        "ar": "صيغ Präteritum الشائعة: ich konnte, musste, durfte, wollte, sollte؛ ومع du نضيف -st: konntest…"
       }
     ],
     "examples": [
       {
-        "de": "Ich muss heute arbeiten.",
-        "ar": "يجب أن أعمل اليوم. — müssen"
+        "de": "Als Kind konnte ich gut schwimmen.",
+        "ar": "حين كنت طفلاً كنت أستطيع السباحة جيداً. — konnte"
       },
       {
-        "de": "Wir wollen am Wochenende fahren.",
-        "ar": "نريد أن نسافر نهاية الأسبوع. — wollen"
+        "de": "Gestern mussten wir länger arbeiten.",
+        "ar": "أمس اضطررنا إلى العمل مدة أطول. — mussten"
       },
       {
-        "de": "Gestern musste ich länger bleiben.",
-        "ar": "أمس اضطررت للبقاء أطول. — musste (ماضٍ شائع!)"
+        "de": "Wir wollten am Wochenende wegfahren.",
+        "ar": "أردنا السفر في عطلة نهاية الأسبوع. — wollten"
       },
       {
-        "de": "Darf ich hier sitzen?",
-        "ar": "هل يُسمح لي بالجلوس هنا؟ — dürfen = طلب إذن"
+        "de": "Früher durfte ich nicht so lange aufbleiben.",
+        "ar": "في الماضي لم يكن مسموحاً لي أن أبقى مستيقظاً كل هذا الوقت. — durfte"
+      },
+      {
+        "de": "Du solltest den Arzt anrufen.",
+        "ar": "كان ينبغي لك الاتصال بالطبيب. — solltest"
       }
     ],
     "pitfalls": [
       {
-        "de": "„Ich will zu gehen“ ✗ → „Ich will gehen“ ✓",
-        "ar": "لا zu مع الأفعال الناقصة!"
+        "de": "„Ich wollte zu gehen“ ✗ → „Ich wollte gehen“ ✓",
+        "ar": "لا تأتي zu بعد الفعل الناقص؛ يبقى المصدر في النهاية بلا zu."
       },
       {
-        "de": "„Ich möchte gehen“ ✓ ≠ „Ich will gehen\"",
-        "ar": "möchte مهذّبة وألطف في الطلب"
+        "de": "„Gestern muss ich arbeiten“ ✗ → „Gestern musste ich arbeiten“ ✓",
+        "ar": "عند الإحالة إلى الماضي نحتاج هنا صيغة Präteritum: musste."
       }
     ],
     "exercises": [
       {
         "id": "g10e1",
         "type": "order",
-        "promptDe": "Bilde einen Satz: (heute / ich / arbeiten / muss)",
+        "promptDe": "Bilde einen Satz: (gestern / ich / arbeiten / musste)",
         "answer": [
-          "Ich",
-          "muss",
-          "heute",
+          "Gestern",
+          "musste",
+          "ich",
           "arbeiten"
         ],
-        "explanationAr": "muss ثانياً، arbeiten أخراً.",
+        "explanationAr": "عند البدء بـGestern يأتي musste ثانياً، والمصدر arbeiten في النهاية.",
         "promptAr": "رتّب الكلمات لتكوّن جملة صحيحة."
       },
       {
@@ -2350,48 +2360,49 @@
       {
         "id": "g10e3",
         "type": "mc",
-        "promptDe": "___ ich das Fenster öffnen?",
+        "promptDe": "___ ich als Kind länger aufbleiben?",
         "options": [
-          "Darf",
-          "Muss",
-          "Soll"
+          "Durfte",
+          "Musste",
+          "Wollte"
         ],
-        "answer": "Darf",
-        "explanationAr": "طلب إذن ← dürfen.",
-        "promptAr": "صيغة السؤال بـ dürfen."
+        "answer": "Durfte",
+        "explanationAr": "السؤال عن الإذن في الماضي: durfte.",
+        "promptAr": "اختر صيغة Präteritum المناسبة للسؤال عن الإذن."
       },
       {
         "id": "a2-modal-u1",
         "type": "umformung",
-        "quelleDe": "Ich gehe nach Hause.",
-        "promptDe": "Füge „müssen“ ein.",
-        "answer": "Ich muss nach Hause gehen.",
+        "quelleDe": "Ich muss heute früh aufstehen.",
+        "promptDe": "Setze mit „gestern“ ins Präteritum.",
+        "answer": "Ich musste gestern früh aufstehen.",
         "mussEnthalten": [
-          "muss",
-          "gehen"
+          "musste",
+          "aufstehen"
         ],
         "darfNicht": [
-          "zu gehen"
+          "muss",
+          "gemusst"
         ],
-        "explanationAr": "الناقصة ثانياً والمصدر آخراً بلا zu.",
+        "explanationAr": "müssen في Präteritum: musste، والمصدر المنفصل يبقى كاملاً في النهاية: aufstehen.",
         "points": 2
       },
       {
         "id": "a2-modal-u2",
         "type": "umformung",
-        "quelleDe": "Kannst du mir helfen?",
-        "promptDe": "Formuliere höflicher mit „könnten“.",
-        "answer": "Könnten Sie mir helfen?",
-        "alternativen": [
-          "Könntest du mir helfen?"
-        ],
+        "quelleDe": "Ich will Pilot werden.",
+        "promptDe": "Setze ins Präteritum.",
+        "answer": "Ich wollte Pilot werden.",
+        "alternativen": [],
         "mussEnthalten": [
-          "könnte"
+          "wollte",
+          "werden"
         ],
         "darfNicht": [
-          "kannst"
+          "will",
+          "gewollt"
         ],
-        "explanationAr": "könnten أدبُ الطلب.",
+        "explanationAr": "Präteritum من wollen هو wollte، ويبقى المصدر werden في النهاية.",
         "points": 2
       }
     ]
@@ -3906,7 +3917,7 @@
     "titleDe": "Dativ-Verben (helfen, danken, gefallen …)",
     "titleAr": "أفعال Dativ (helfen/danken/gefallen/gehören/antworten/fehlen/passen/schmecken)",
     "level": "A2",
-    "ziel": "تتقن الأفعال التي تجرّ دائماً المفعول به غير المباشر (Dativ) — وهي مجموعة صغيرة شائعة جداً لا يمكن قول جمل صحيحة من دونها. لا تعيد درس Dativ الأساسي من A1، بل تضيف الأفعال وحدها.",
+    "ziel": "تستعمل أفعالاً شائعة تتطلب مكمّلاً في Dativ مثل helfen/danken/gefallen، وتميّز هذا المكمّل من Akkusativ؛ من دون افتراض أنه دائماً «مفعول غير مباشر» بالمعنى نفسه.",
     "voraus": [
       "a1-dativ",
       "a1-akkusativ"
@@ -3942,7 +3953,7 @@
         "promptAr": "قُل: رأسي يؤلمني."
       }
     ],
-    "summaryAr": "بعد أن تعلّمت حروف جر Dativ في A1، يأتي دور الأفعال التي تأخذ Dativ دائماً: helfen (يساعد)، danken (يشكر)، gefallen (يعجب)، gehören (يعود/يملك)، antworten (يجيب)، passen (يناسب)، fehlen (يغيب/ينقص)، schmecken (يستلذ/يؤكل جيداً), glauben (يصدّق), wehtun (يؤلم). تذكير: هذه الأفعال لا تأخذ Akkusativ لشخص المخاطَب.",
+    "summaryAr": "تتطلب أفعال شائعة مكمّلاً في Dativ، منها helfen وdanken وgefallen وgehören وantworten وpassen وfehlen وschmecken وwehtun. يختلف دور هذا المكمّل باختلاف الفعل؛ فليس كل Dativ «مفعولاً غير مباشر» بالمعنى الدلالي نفسه. ومع بعض الأفعال توجد أيضاً أبنية أخرى، مثل auf eine Frage antworten.",
     "rules": [
       {
         "de": "helfen + Dativ: Ich helfe dem Kind.",
@@ -4070,8 +4081,8 @@
         "ar": "mit + Dativ دائماً: die تصبح der"
       },
       {
-        "de": "„Ich gebe das Buch meinem Bruder.“ ✗",
-        "ar": "الشخص (Dativ) يسبق الشيء (Akkusativ) في الأصل"
+        "de": "„Ich gebe das Buch meinem Bruder“ und „Ich gebe meinem Bruder das Buch“ sind beide grammatisch; bei zwei nominalen Objekten ist Dativ vor Akkusativ oft die neutrale Reihenfolge.",
+        "ar": "الجملتان صحيحتان؛ وعندما يكون المفعولان اسمين يكون ترتيب الشخص في Dativ قبل الشيء في Akkusativ شائعاً ومحايداً، لكنه ليس الشرط الوحيد للصحة."
       }
     ],
     "resources": [],
@@ -4140,12 +4151,12 @@
         "id": "a2-dativ-u2",
         "type": "umformung",
         "quelleDe": "Ich gebe das Buch meinem Bruder.",
-        "promptDe": "Stelle um: Person vor Sache.",
+        "promptDe": "Stelle in eine häufige neutrale Reihenfolge um: Person vor Sache.",
         "answer": "Ich gebe meinem Bruder das Buch.",
         "mussEnthalten": [
           "meinem bruder das buch"
         ],
-        "explanationAr": "الترتيب الطبيعي: Dativ (شخص) قبل Akkusativ (شيء).",
+        "explanationAr": "الجملة الأصلية صحيحة أيضاً؛ والمطلوب هنا التدريب على الترتيب المحايد الشائع: Dativ (شخص) قبل Akkusativ (شيء).",
         "points": 2
       },
       {
@@ -4203,19 +4214,19 @@
         "points": 2
       }
     ],
-    "summaryAr": "kein تنفي الأسماء غير المحددة (مثل a/an في الإنجليزية): Ich habe kein Auto. أما nicht فتنفي كل ما عدا ذلك: الأفعال، الصفات، الأسماء المعرّفة، الظروف. وموقع nicht في آخر الجملة الفعلية أو قبل الجزء المنفي بدقة.",
+    "summaryAr": "ينفي kein اسماً بلا أداة تعريف أو مع أداة نكرة: Ich habe kein Auto. أما nicht فينفي جملة أو فعلاً أو صفة أو عنصراً محدداً. موضع nicht يتبع نطاق النفي وبنية الجملة: قد يأتي قرب نهاية المجال الأوسط عند نفي الجملة، أو مباشرة قبل العنصر المراد مقابلته؛ لذلك لا توجد قاعدة «آخر الجملة دائماً».",
     "rules": [
       {
-        "de": "kein +: Ich trinke keinen Kaffee.",
+        "de": "kein + Nomen ohne bestimmten Artikel: Ich trinke keinen Kaffee.",
         "ar": "نفي «شيء ما» غير معرّف ← kein (تصريفه ك ein) — kein + اسم بلا أداة: Ich trinke keinen Kaffee."
       },
       {
-        "de": "nicht verneint Verben, Adjektive und bestimmte Nomen: Ich komme nicht.",
-        "ar": "Ich arbeite nicht heute. · Das ist nicht mein Auto. — nicht ينفي الأفعال والصفات والأسماء المعرّفة"
+        "de": "nicht verneint unter anderem Verben, Adjektive und bestimmte oder bereits determinierte Nominalgruppen: Das ist nicht mein Auto.",
+        "ar": "يستعمل nicht لنفي الفعل أو الصفة أو مجموعة اسمية محددة، مثل: Das ist nicht mein Auto."
       },
       {
-        "de": "Stellung von nicht: am Satzende oder direkt vor dem verneinten Teil: Ich fahre nicht nach Köln.",
-        "ar": "Ich lerne nicht morgen، بل: Ich lerne morgen nicht. — موقع nicht: آخر الجملة البسيطة، أو قبل المكان/الزمان المنفي"
+        "de": "Die Stellung hängt vom Skopus ab: Heute arbeite ich nicht. · Ich fahre nicht nach Köln, sondern nach Bonn. · Ich komme nicht heute, sondern morgen.",
+        "ar": "الموضع يحدده نطاق النفي: عند نفي الفعل يأتي nicht قرب نهاية المجال، وعند المقابلة يأتي مباشرة قبل العنصر المنفي."
       }
     ],
     "tables": [
@@ -4248,7 +4259,7 @@
             "keinem",
             "keiner",
             "keinem",
-            "keinen"
+            "keinen (+ -n للاسم إن أمكن)"
           ]
         ]
       }
@@ -4285,8 +4296,8 @@
         "ar": "الملكية المستقلة: meins/deins/seins وليس mein"
       },
       {
-        "de": "„Ich kenne nicht diesen Mann.“ ✗ → „Ich kenne diesen Mann nicht.“ ✓",
-        "ar": "nicht يأتي قبل المفعول المعرّف في آخر الجملة"
+        "de": "„Ich kenne diesen Mann nicht“ verneint die Aussage neutral; „Ich kenne nicht diesen Mann, sondern den anderen“ ist bei kontrastiver Korrektur möglich.",
+        "ar": "الموضع يغيّر النطاق: بعد المفعول يكون نفي الجملة محايداً، وقبل diesen Mann يمكن أن يكون صحيحاً عند مقابلة هذا الرجل بآخر."
       }
     ],
     "resources": [],
@@ -4309,7 +4320,7 @@
         "type": "mc",
         "promptDe": "Das ist ___ mein Auto.",
         "answer": "nicht",
-        "explanationAr": "أداة معرّفة (mein Auto) ← nicht",
+        "explanationAr": "مجموعة الملكية mein Auto محددة، لذا ننفيها هنا بـnicht.",
         "options": [
           "nicht",
           "kein",
@@ -4422,18 +4433,20 @@
           "an"
         ],
         "darfNicht": [
-          "rufst",
-          "rufe"
+          "rufst"
         ],
-        "explanationAr": "الأمر: الجذر Ruf + … + السابقة an في الآخر.",
-        "points": 2
+        "explanationAr": "في الأمر تنفصل السابقة an؛ وصيغتا Ruf … an وRufe … an صحيحتان.",
+        "points": 2,
+        "alternativen": [
+          "Rufe mich morgen an!"
+        ]
       }
     ],
-    "summaryAr": "الأمر للشخص المخاطب: احذف النهاية -st وأضف -e (اختيارية في du): Komm! / Komme! · للجمع: حذف ihr فقط: Kommt! · للـSie: بقية الصيغة كما هي: Kommen Sie! وفي الجملة الناقصة: kein Problem! النبرة أهم من الشكل.",
+    "summaryAr": "لصيغة du يُحذف الضمير وتُبنى الصيغة غالباً من الجذر: Komm! وقد تظهر -e أو تلزم في أنماط معيّنة: Komm(e)! لكن Arbeite! بعض الأفعال تغيّر الجذر: gib, nimm, iss, lies, sprich. لصيغة ihr نحذف الضمير من صيغة المضارع: Ihr kommt → Kommt! ولصيغة الاحترام يتقدم الفعل ويبقى Sie: Kommen Sie!",
     "rules": [
       {
-        "de": "du-Form: Verbstamm ohne Endung: Sprich! · Komm! · Lies!",
-        "ar": "احذف -st من المضارع ثم احذف -e أو أبقِها"
+        "de": "du-Form meist aus dem Stamm: Komm!; -e ist teils möglich oder nötig: Komme! · Arbeite!; Stammwechsel beachten: Sprich! · Nimm! · Lies!",
+        "ar": "صيغة du غالباً من الجذر، لكن -e ليست اختيارية في كل فعل، وتوجد تغيّرات جذرية يجب حفظها مثل sprich/nimm/lies."
       },
       {
         "de": "ihr → (Stamm + t): Kommt bitte pünktlich!",
@@ -4459,8 +4472,8 @@
         "rows": [
           [
             "du",
-            "Stamm (+e)",
-            "Fahr(e) langsam!"
+            "Stamm, teils +e; ggf. Stammwechsel",
+            "Fahr(e)! · Arbeite! · Sprich!"
           ],
           [
             "ihr",
@@ -4469,7 +4482,7 @@
           ],
           [
             "Sie",
-            "Sie + فعل",
+            "Infinitiv + Sie",
             "Fahren Sie langsam!"
           ]
         ]
@@ -4499,8 +4512,8 @@
     ],
     "pitfalls": [
       {
-        "de": "„Kommst du bitte!“ ✗ → „Komm bitte!“ ✓",
-        "ar": "الأمر ليس سؤالاً — لا فعل في البداية كالمضارع"
+        "de": "Als Imperativ: „Komm bitte!“; „Kommst du bitte?“ ist dagegen eine als Frage formulierte Bitte und nicht die du-Imperativform.",
+        "ar": "Komm bitte صيغة أمر، أما Kommst du bitte? فهي طلب بصيغة سؤال ويمكن أن تكون صحيحة في سياقها؛ لا تخلط بين البنيتين."
       },
       {
         "de": "„Kommt Sie!“ ✗ → „Kommen Sie!“ ✓",
@@ -4517,8 +4530,11 @@
         "id": "a2-imp-e1",
         "type": "fill",
         "promptDe": "(du) ___ bitte die Tür auf! (aufmachen)",
-        "answer": "Mach",
-        "explanationAr": "أمر du: Stamm mach + (e)"
+        "answer": [
+          "Mach",
+          "Mache"
+        ],
+        "explanationAr": "في أمر du من aufmachen تنفصل السابقة: Mach/Mache … auf. الصيغة بلا -e أشيع هنا."
       },
       {
         "id": "a2-imp-e2",
@@ -4639,16 +4655,16 @@
         "id": "a2-reflexiv-v2",
         "type": "umformung",
         "quelleDe": "Er duscht.",
-        "promptDe": "Ergänze das Reflexivpronomen.",
+        "promptDe": "Formuliere den Satz ausdrücklich reflexiv.",
         "answer": "Er duscht sich.",
         "mussEnthalten": [
           "sich"
         ],
-        "explanationAr": "duschen انعكاسي: Er duscht sich.",
+        "explanationAr": "الصيغة الانعكاسية: Er duscht sich. والجملة Er duscht صحيحة أيضاً بصيغة لازمة.",
         "points": 2
       }
     ],
-    "summaryAr": "الفعل الانعكاسي يعود على الفاعل نفسه: sich freuen (يفرح)، sich waschen (يغتسل). الضمير الانعكاسي في Akkusativ (mich/dich/sich/uns/euch/sich) ما لم يطلبه الفعل بحالة أخرى: sich freuen auf + Akkusativ (يترقّب)، sich freuen über + Akkusativ (يفرح لأجل).",
+    "summaryAr": "في البناء الانعكاسي يعود الضمير على الفاعل: sich freuen، sich waschen. تكون الصيغة غالباً Akkusativ (mich/dich/sich/uns/euch/sich). وإذا وُجد مفعول Akkusativ آخر، كما مع أعضاء الجسم، يأتي الضمير الانعكاسي غالباً في Dativ: Ich wasche mir die Hände. بعض الأفعال مثل duschen يمكن أن تأتي أيضاً بلا ضمير: Er duscht.",
     "rules": [
       {
         "de": "sich waschen: Ich wasche mich. · Du wäschst dich.",
@@ -4726,12 +4742,12 @@
         "ar": "freuen يحتاج حرف الجر: auf للمستقبل، über للسبب"
       },
       {
-        "de": "„Ich setze auf den Stuhl.“ ✗",
-        "ar": "setzen انعكاسي = يجلس؛ بلا sich = يضع شيئاً"
+        "de": "Für die Bedeutung „Platz nehmen“: „Ich setze mich auf den Stuhl.“ Ohne Reflexivpronomen hat setzen andere Konstruktionen, etwa „Ich setze das Kind auf den Stuhl.“",
+        "ar": "لمعنى «أجلس» نستعمل sich setzen؛ أما setzen بلا ضمير فله أبنية ومعانٍ أخرى، فلا نعلّم الجملة خارج سياق معناها على أنها خطأ مطلق."
       },
       {
-        "de": "„Wäschst du dich die Hände?“ ✗ → „Wäschst du dir die Hände? ✓",
-        "ar": "أطراف الجسد مع Dativ الانعكاسي: mir/dich dir"
+        "de": "„Wäschst du dich die Hände?“ ✗ → „Wäschst du dir die Hände?“ ✓",
+        "ar": "مع مفعول به لعضو الجسم تأتي الضمائر الانعكاسية في Dativ: mir/dir/sich/uns/euch/sich."
       }
     ],
     "resources": [],
@@ -4809,7 +4825,7 @@
         "darfNicht": [
           "freut über"
         ],
-        "explanationAr": "freuen انعكاسي دائماً: sich freuen über + Akkusativ.",
+        "explanationAr": "في معنى «يفرح بالهدية» يأتي الفعل انعكاسياً: sich über das Geschenk freuen. وللفعل freuen أبنية أخرى مثل Das freut mich.",
         "points": 2
       },
       {
@@ -4865,11 +4881,11 @@
         "promptAr": "قُل: أختي أطول مني."
       }
     ],
-    "summaryAr": "الصفة + er = أفعل (Komparativ)، am + صفة + sten = الأفعل (Superlativ): groß → größer → am größten. شذوذ: gut/besser/am besten · viel/mehr/am meisten · gern/lieber/am liebsten · hoch/höher/am höchsten (حذف ch).",
+    "summaryAr": "يُبنى Komparativ غالباً بإضافة -er: klein → kleiner. ويُبنى Superlativ الظرفي أو الخبري غالباً بـam + -sten/-esten: am kleinsten, am ältesten. قد يتغير الجذر أو تُحذف حروف في بعض الصفات، لذلك لا تكفي قاعدة إضافة واحدة لكل الكلمات: gut/besser/am besten · viel/mehr/am meisten · gern/lieber/am liebsten · hoch/höher/am höchsten.",
     "rules": [
       {
-        "de": "alt → älter → am ältesten",
-        "ar": "الهمزة: a→ä, o→ö, u→ü في المقارنة غالباً"
+        "de": "Manche häufigen einsilbigen Adjektive haben Umlaut: alt → älter → am ältesten; aber nicht jedes Adjektiv mit a, o oder u.",
+        "ar": "تأخذ بعض الصفات الأحادية الشائعة Umlaut في المقارنة، مثل alt → älter؛ ولا نعمم ذلك على كل صفة فيها a/o/u."
       },
       {
         "de": "als: größer als ich",
@@ -4926,16 +4942,16 @@
         "ar": "هذا أفضل مطعم في المدينة (Superlativ + أداة)"
       },
       {
-        "de": "Ich fahre gern Zug, aber ich fahre lieber Auto.",
-        "ar": "أحب السفر بالقطار، لكن أفضّ السيارة (gern→lieber)"
+        "de": "Ich fahre gern mit dem Zug, aber lieber mit dem Auto.",
+        "ar": "أحب السفر بالقطار، لكنني أفضّل السفر بالسيارة (gern → lieber)."
       },
       {
         "de": "Er ist so alt wie sein Bruder.",
         "ar": "هو في مثل عمر أخيه"
       },
       {
-        "de": "Heute ist kälter als gestern.",
-        "ar": "اليوم أبرد من الأمس"
+        "de": "Heute ist es kälter als gestern.",
+        "ar": "الجو اليوم أبرد من الأمس."
       }
     ],
     "pitfalls": [
@@ -5028,7 +5044,7 @@
           "teuerste",
           "meist"
         ],
-        "explanationAr": "التفضيل الخبري بعد sein: am + الصفة + -sten.",
+        "explanationAr": "التفضيل الخبري هنا: am + الصفة + -sten → am teuersten.",
         "points": 2
       },
       {
@@ -5050,7 +5066,7 @@
     "titleDe": "Futur I mit „werden“",
     "titleAr": "المستقبل الأول (werden + مصدر)",
     "level": "A2",
-    "ziel": "تستخدم Futur I للتنبؤ والوعد، وتميّزه عن المضارع بظرف مستقبلي.",
+    "ziel": "تستخدم Futur I للتنبؤ والوعد، وتتعرف إلى إمكان التعبير عن المستقبل بالمضارع مع قرينة زمنية، وتميّز werden المساعد من werden بمعنى «يصير».",
     "voraus": [
       "a1-futur-einf"
     ],
@@ -5086,7 +5102,7 @@
         "points": 2
       }
     ],
-    "summaryAr": "werden (يصبح) فعل مساعد للمستقبل + المصدر في آخر الجملة: Ich werde morgen arbeiten. وفي الحوار يُستعمل كثيراً بمعنى الآن: Ich werde gerade fertig (أوشكت الانتهاء). وwerden نفسه = يتحوّل/يصبح: Das Wetter wird besser.",
+    "summaryAr": "يتكوّن Futur I من werden المصرّف + مصدر في نهاية الإطار: Ich werde morgen arbeiten. ويستعمل خصوصاً للتنبؤ أو الوعد أو إبراز المستقبل، بينما يمكن للمضارع مع قرينة زمنية واضحة أن يعبّر عن المستقبل أيضاً. أمّا werden من دون مصدر فقد يكون فعلاً معجمياً بمعنى «يصير»، كما في Das Wetter wird besser؛ وfertig werden تعبير يعني «ينتهي/يُتمّ».",
     "rules": [
       {
         "de": "ich werde · du wirst · er wird · wir werden · ihr werdet · sie werden",
@@ -5155,21 +5171,21 @@
       },
       {
         "de": "Ich werde gerade fertig.",
-        "ar": "أوشكت على الانتهاء الآن (استعمال لحظي)"
+        "ar": "أنا أنتهي الآن/أوشك على الانتهاء؛ fertig werden هنا تعبير بمعنى «ينتهي»، وليس Futur I."
       }
     ],
     "pitfalls": [
       {
         "de": "„Ich werde morgen arbeiten nicht.“ ✗ → „Ich werde morgen nicht arbeiten.“ ✓",
-        "ar": "المصدر في آخر الجملة، وnicht قبله مباشرة"
+        "ar": "في هذا المثال ينفي nicht عبارة المصدر arbeiten ويأتي قبلها؛ موضع nicht يتبع نطاق النفي، لا قاعدة «قبل كل مصدر دائماً»."
       },
       {
-        "de": "„Ich werde müde.“ ✗",
-        "ar": "werden + صفة = يصبح (تحول) وليس «أكون الآن»"
+        "de": "„Ich werde müde“ ist korrekt und bedeutet „Ich beginne, müde zu sein“; für den aktuellen Zustand: „Ich bin müde.“",
+        "ar": "Ich werde müde جملة صحيحة بمعنى «أصير متعباً»؛ أما وصف الحالة الحالية فهو Ich bin müde."
       },
       {
         "de": "„Du hast recht werden.“ ✗ → „Du wirst recht haben.“ ✓",
-        "ar": "werden ناقل يسبق الماضي المركّب: wirst … haben"
+        "ar": "في Futur I يأتي مصدر التركيب recht haben في النهاية: wirst … recht haben؛ وليس هذا وصفاً لـPerfekt."
       }
     ],
     "resources": [],
@@ -5209,7 +5225,7 @@
           "Morgen werde ich nicht arbeiten.",
           "Morgen werde ich nicht arbeiten"
         ],
-        "explanationAr": "نفي المستقبل: nicht قبل المصدر",
+        "explanationAr": "في هذه الجملة ينفي nicht فعل العمل المستقبلي: Morgen werde ich nicht arbeiten.",
         "promptAr": "غداً لن أعمل."
       },
       {
@@ -9156,16 +9172,16 @@
   },
   "a2-praeteritum-grund": {
     "id": "a2-praeteritum-grund",
-    "titleDe": "Präteritum von sein, haben, werden und Modalverben",
-    "titleAr": "ماضي الأفعال المساعدة والناقصة",
+    "titleDe": "Präteritum von sein und haben: war und hatte",
+    "titleAr": "ماضي sein وhaben: war وhatte",
     "level": "A2",
-    "ziel": "تصرّف war/hatte/wurde وkonnte/musste/wollte في السرد.",
+    "ziel": "تصرّف war وhatte وتستعملهما في وصف حالة أو مكان أو امتلاك سابق.",
     "voraus": [
       "a1-war-hatte"
     ],
     "anwendung": {
-      "ar": "احكِ يوماً مدرسياً قديماً: war/hatte/mussten — 4 جمل.",
-      "de": "Erzähle von einem alten Schultag: 4 Sätze mit war/hatte/mussten.",
+      "ar": "احكِ عن يوم مدرسي قديم في 4 جمل مستخدماً war وhatte.",
+      "de": "Erzähle in vier Sätzen von einem früheren Schultag und verwende war und hatte.",
       "candoIds": [
         "A2-C9"
       ]
@@ -9185,34 +9201,34 @@
         "id": "a2-praeteritum-grund-v2",
         "type": "translate",
         "promptDe": "Übersetze den arabischen Satz ins Deutsche.",
-        "answer": "Wir mussten lange warten.",
+        "answer": "Wir hatten wenig Zeit.",
         "keywords": [
-          "mussten",
-          "warten"
+          "hatten",
+          "Zeit"
         ],
-        "explanationAr": "müssen في الماضي: mussten + مصدر.",
-        "promptAr": "قُل: اضطررنا للانتظار طويلاً."
+        "explanationAr": "haben في Präteritum مع wir هو hatten.",
+        "promptAr": "قُل: كان لدينا وقت قليل."
       }
     ],
-    "summaryAr": "في السرد المكتوب والرواية نستخدم Präteritum لـ sein, haben, werden والأفعال الناقصة بدلاً من Perfekt. باقي الأفعال تبقى في Perfekt حتى B1.",
-    "summaryDe": "Zwei Verben bilden im Deutschen eine Ausnahme: sein und haben stehen auch in der gesprochenen Sprache im Präteritum (war / hatte), nicht im Perfekt.",
+    "summaryAr": "تشيع صيغتا Präteritum من sein وhaben — war وhatte — في الكلام والكتابة: Gestern war ich krank. Ich hatte keine Zeit. نتدرّب هنا على تصريفهما واستعمالهما؛ أما الأفعال الناقصة وwerden وبقية الأفعال فلها دروس منفصلة. وصيغ Perfekt مثل bin gewesen وhabe gehabt صحيحة أيضاً بحسب السياق، وإن كان war/hatte أكثر إيجازاً وشيوعاً في مواقف كثيرة.",
+    "summaryDe": "sein und haben stehen im Deutschen auch in der gesprochenen Sprache sehr häufig im Präteritum: war und hatte. Ihre Perfektformen sind ebenfalls grammatisch und je nach Kontext möglich.",
     "rules": [
       {
         "de": "sein → Präteritum: war. „Ich bin müde“ (jetzt) → „Ich war müde“ (gestern).",
-        "ar": "sein يصير war في الماضي. «أنا متعب الآن» ← «كنت متعباً». لا تقل «Ich bin müde gewesen» في الحديث — ثقيلة ومقبولة لكنها ليست الطبيعية."
+        "ar": "sein يصير war في Präteritum: «كنت متعباً». صيغة Ich bin müde gewesen صحيحة أيضاً، لكن war أوجز وأكثر شيوعاً في مواقف كثيرة."
       },
       {
         "de": "haben → Präteritum: hatte. „Ich habe Zeit“ → „Ich hatte Zeit“.",
         "ar": "haben يصير hatte. لاحظ سقوط الـb كما في المضارع hast/hat — الجذر واحد."
       },
       {
-        "de": "In A1 erkennst du war/hatte — du musst sie noch nicht frei produzieren.",
-        "ar": "المطلوب منك الآن أن **تسمعها فتفهمها** وتقرأها فلا تتلعثم. الإنتاج المنظَّم في A2."
+        "de": "war und hatte sind in Alltagssprache und schriftlichen Texten sehr häufig; die Wahl der Vergangenheitsform hängt trotzdem vom Kontext ab.",
+        "ar": "war وhatte شائعتان جداً في الحديث والكتابة، لكن لا نحكم على كل صيغة Perfekt المقابلة بأنها خطأ."
       }
     ],
     "tables": [
       {
-        "captionAr": "التصريفان الكاملان — احفظهما كالأذكار",
+        "captionAr": "تصريف war وhatte",
         "headers": [
           "Person",
           "sein → war",
@@ -9252,7 +9268,7 @@
         ]
       },
       {
-        "captionAr": "المواضع الخمسة التي لا غنى لك فيها عن war/hatte منذ اليوم الأول",
+        "captionAr": "سياقات يومية شائعة مع war وhatte",
         "headers": [
           "الاستعمال",
           "مثال",
@@ -9262,27 +9278,27 @@
           [
             "السؤال عن الحال",
             "Wie war dein Tag?",
-            "الألماني لا يسأل «Wie ist dein Tag gewesen»"
+            "صيغة شائعة وموجزة للسؤال عن تجربة منتهية"
           ],
           [
             "الطقس في الماضي",
             "Gestern war es kalt.",
-            "وصف الجو يقفز مباشرة إلى war"
+            "وصف مباشر للطقس السابق"
           ],
           [
             "المكان",
             "Ich war zu Hause.",
-            "أول جملة يقولها المتعلّم عن يومه"
+            "وصف مكان سابق"
           ],
           [
             "الامتلاك السابق",
             "Er hatte keine Zeit.",
-            "شكوى يومية لا تُقال إلا بـhatte"
+            "وصف عدم توفر الوقت"
           ],
           [
             "الوجود",
             "Es gab / Das war schön.",
-            "الحكم على تجربة منتهية"
+            "عبارات سردية شائعة"
           ]
         ]
       }
@@ -9290,7 +9306,7 @@
     "examples": [
       {
         "de": "Gestern war ich krank, aber heute bin ich wieder fit.",
-        "ar": "أمس كنت مريضاً، لكنني اليوم بخير again. لاحظ المقابلة: war (أمس) ← bin (اليوم)."
+        "ar": "أمس كنت مريضاً، لكنني اليوم بخير من جديد. لاحظ المقابلة: war (أمس) وbin (اليوم)."
       },
       {
         "de": "Wie war das Wetter in Hammamet? — Es war sonnig und warm.",
@@ -9305,18 +9321,18 @@
         "ar": "هل كنتم مرة في برلين؟ — نعم، كنّا هناك في 2019."
       },
       {
-        "de": "Es war einmal ein König, der hatte drei Söhne.",
-        "ar": "«كان يا ما كان ملكٌ كان له ثلاثة أبناء» — بداية كل حكاية ألمانية. war + hatte معاً في جملة واحدة."
+        "de": "Es war einmal eine Frau, die einen kleinen Laden hatte.",
+        "ar": "كان يا ما كان امرأةٌ كان لها متجر صغير؛ war وhatte في افتتاح سردي."
       }
     ],
     "pitfalls": [
       {
-        "de": "„Ich habe krank gewesen“ ✗ → „Ich war krank“ ✓",
-        "ar": "أشهر خطأ عربي في الماضي الألماني: ترجمة «كنت مريضاً» حرفياً بـPerfekt. sein لا يُصرَف بـgewesen في الحديث اليومي — له war."
+        "de": "„Ich habe krank gewesen“ ✗ → „Ich war krank“ ✓ oder „Ich bin krank gewesen“ ✓",
+        "ar": "Perfekt من sein يأخذ sein لا haben: bin gewesen. وفي هذا السياق تكون war الصيغة الأوجز والأشيع غالباً."
       },
       {
-        "de": "„Wie ist dein Wochenende gewesen?“ △ → „Wie war dein Wochenende?“ ✓",
-        "ar": "الصيغة الأولى ليست خطأً نحوياً لكنها ثقيلة ومدرسية. الألماني يسأل بـwar مباشرة."
+        "de": "„Wie ist dein Wochenende gewesen?“ ist grammatisch; im neutralen Alltagsgebrauch ist „Wie war dein Wochenende?“ oft kürzer und üblicher.",
+        "ar": "الصيغتان صحيحتان نحوياً؛ ويكون السؤال بـwar أوجز وأكثر شيوعاً غالباً."
       },
       {
         "de": "„er warst“ / „ich hattest“ ✗ → er war · ich hatte ✓",
@@ -9329,7 +9345,7 @@
         "type": "fill",
         "promptDe": "Gestern ___ ich im Sprachkurs. (sein)",
         "answer": "war",
-        "explanationAr": "sein في الماضي مع ich = war. لا تستعمل gewesen في الحديث."
+        "explanationAr": "sein في Präteritum مع ich = war؛ وهي الصيغة المستهدفة هنا."
       },
       {
         "id": "a2-prae-grund-e2",
@@ -9366,7 +9382,7 @@
           "Wie hast du dein Wochenende?"
         ],
         "answer": "Wie war dein Wochenende?",
-        "explanationAr": "الألماني يسأل بـwar مباشرة. الصيغة الثانية صحيحة نحوياً لكنها ثقيلة، والثالثة خاطئة لأن الزمن حاضر.",
+        "explanationAr": "Wie war dein Wochenende? صيغة يومية موجزة وشائعة؛ وصيغة ist … gewesen صحيحة نحوياً أيضاً.",
         "promptAr": "أي سؤال عن نهاية الأسبوع طبيعي؟"
       },
       {
@@ -9410,7 +9426,7 @@
           "bin",
           "gewesen"
         ],
-        "explanationAr": "sein ← war. لا تقل „bin gewesen“ في الحديث.",
+        "explanationAr": "المطلوب Präteritum من sein: war. أما bin gewesen فهي صيغة Perfekt صحيحة لكنها ليست الزمن المطلوب.",
         "points": 2
       },
       {
@@ -9429,7 +9445,7 @@
           "hat",
           "gehabt"
         ],
-        "explanationAr": "haben في الماضي يصير hatte — كما يصير sein إلى war.",
+        "explanationAr": "المطلوب Präteritum من haben: hatte. أما habe gehabt فهي صيغة Perfekt صحيحة لكنها ليست الزمن المطلوب.",
         "points": 2
       },
       {
@@ -10747,8 +10763,8 @@
       "a1-modalverben"
     ],
     "anwendung": {
-      "ar": "احجز غرفة فندقية كتابةً بطلبات مهذبة (Könnten Sie …؟ Ich hätte gern …).",
-      "de": "Buche schriftlich ein Hotelzimmer: höfliche Bitten (Könnten Sie …؟).",
+      "ar": "احجز غرفة فندقية كتابةً بطلبات مهذبة (Könnten Sie …? Ich hätte gern …).",
+      "de": "Buche schriftlich ein Hotelzimmer: höfliche Bitten (Könnten Sie …?).",
       "candoIds": [
         "A2-C3"
       ]
@@ -10762,7 +10778,7 @@
         "answer": [
           "Könnten"
         ],
-        "explanationAr": "الطلب المهذّب: Könnten Sie …؟"
+        "explanationAr": "الطلب المهذّب: Könnten Sie …?"
       },
       {
         "id": "a2-konj2-hoflich-v2",
@@ -10778,11 +10794,11 @@
         "darfNicht": [
           "gib"
         ],
-        "explanationAr": "الطلب المهذّب: Würdest du …؟ أو Würden Sie …؟",
+        "explanationAr": "الطلب المهذّب: Würdest du …? أو Würden Sie …?",
         "points": 2
       }
     ],
-    "summaryAr": "في الألمانية لا نقول Gib mir! للغرباء أو الكبار. نستخدم صيغ Konjunktiv II المهذّبة: «Könnten Sie mir bitte helfen؟» و«Würden Sie bitte langsamer sprechen؟» و«Hätten Sie einen Moment Zeit؟» — دون الدخول في القواعد الكاملة للشرط غير الواقعي (يأتي ذلك في B1).",
+    "summaryAr": "تتيح صيغ Konjunktiv II مثل könnten/würden/hätten صياغة طلبات أكثر تحفظاً أو مسافةً: «Könnten Sie mir bitte helfen?» و«Würden Sie bitte langsamer sprechen?» و«Hätten Sie einen Moment Zeit?». توجد أيضاً طلبات صحيحة بـKönnen Sie…? وبصيغة الأمر مع bitte؛ درجة الملاءمة تتبع العلاقة والموقف والنبرة.",
     "rules": [
       {
         "de": "Könnten Sie …? ≈ Could you (polite) …?",
@@ -10794,11 +10810,11 @@
       },
       {
         "de": "Hätten Sie …? ≈ Do you have (polite)?",
-        "ar": "لطلب شيء: Hätten Sie einen Stift؟ — هل معك قلم؟"
+        "ar": "لطلب شيء: Hätten Sie einen Stift? — هل معك قلم؟"
       },
       {
         "de": "„bitte“",
-        "ar": "تأتي bitte بعد الفاعل أو في آخر الجملة."
+        "ar": "موضع bitte مرن بحسب التركيز؛ من المواضع الشائعة بعد الفاعل أو قرب نهاية الطلب."
       }
     ],
     "tables": [],
@@ -10816,8 +10832,8 @@
         "ar": "هل لديك لحظة من فضلك؟"
       }
     ],
-    "eselsbrueckeAr": "القاعدة الذهبية: للغرباء والخدمات استخدم دائماً Könnten/Würden/Hätten بدلاً من الصيغ المباشرة.",
-    "pronTippAr": "تنطق könnten بكسر ö مثل «كُنتن» و Würden مثل «ڤوردن»، وكلاهما بصيغة الجمع المهذب (Sie).",
+    "eselsbrueckeAr": "عندما تريد زيادة التحفظ أو المسافة في موقف خدمة أو مع شخص لا تعرفه، اختر Könnten/Würden/Hätten؛ ولا تُحوّل ذلك إلى حكم بأن كل طلب مباشر خطأ.",
+    "pronTippAr": "",
     "exercises": [
       {
         "id": "a2-konj2-hoflich-q1",
@@ -10840,10 +10856,9 @@
         "points": 1,
         "promptDe": "«___ Sie bitte langsamer sprechen?» (würde)",
         "answer": [
-          "Würden",
-          "würden"
+          "Würden"
         ],
-        "explanationAr": "طلب فعل بأدب = Würden Sie bitte …؟"
+        "explanationAr": "طلب فعل بأدب = Würden Sie bitte …?"
       },
       {
         "id": "a2-konj2-hoflich-q3",
@@ -10851,13 +10866,13 @@
         "points": 1,
         "promptDe": "Formuliere höflich mit „hätten“.",
         "answer": [
-          "Hätten Sie einen Kugelschreiber bitte?",
-          "Hätten Sie einen Stift bitte?"
-        ],
-        "alternativen": [
+          "Hätten Sie bitte einen Kugelschreiber?",
           "Hätten Sie bitte einen Stift?"
         ],
-        "explanationAr": "طلب شيء مهذّباً = Hätten Sie …؟",
+        "alternativen": [
+          "Hätten Sie vielleicht einen Stift?"
+        ],
+        "explanationAr": "طلب شيء مهذّباً = Hätten Sie …?",
         "promptAr": "هل معك قلم من فضلك؟"
       },
       {
@@ -10892,16 +10907,16 @@
     ],
     "pitfalls": [
       {
-        "de": "✗ Ich will einen Kaffee.",
-        "ar": "الطلب المهذب ليس wollen بل hätte gern / würde gern — «أريد» المباشرة وقحة في المطعم والمكتب"
+        "de": "„Ich will einen Kaffee“ ist grammatisch, kann als Bestellung aber sehr direkt wirken; neutraler: „Ich hätte gern einen Kaffee.“",
+        "ar": "الصيغة بـwollen صحيحة نحوياً لكنها قد تبدو مباشرة في الطلب؛ hätte gern ألطف في كثير من مواقف الخدمة."
       },
       {
-        "de": "✗ Können Sie mir helfen?",
-        "ar": "الأدب = Konjunktiv II: könnten/würden لا können/werden — حرف واحد (Umlaut) يصنع الفرق"
+        "de": "„Können Sie mir helfen?“ ist eine korrekte Bitte; „Könnten Sie mir helfen?“ wirkt meist zurückhaltender.",
+        "ar": "الصيغتان صحيحتان؛ Konjunktiv II يزيد التحفظ عادةً، وليس حرف Umlaut وحده فاصلاً بين الأدب والخطأ."
       },
       {
-        "de": "✗ An deiner Stelle, du solltest… → ✓ An deiner Stelle würde ich…",
-        "ar": "النصيحة المهذبة: An deiner Stelle + würde ich (لو كنت مكانك لفعلتُ) — لا تأمر من تنصحه بلطف"
+        "de": "„Du solltest …“ kann ein korrekter Rat sein; „An deiner Stelle würde ich …“ formuliert denselben Rat oft indirekter.",
+        "ar": "solltest صيغة نصيحة صحيحة، بينما würde ich تجعلها أكثر غير مباشرة؛ الاختيار يتبع السياق."
       }
     ]
   },
@@ -10910,13 +10925,13 @@
     "titleDe": "Verben mit festen Präpositionen (Grundlage)",
     "titleAr": "أفعال بحروف جرّ ثابتة (أساسيات A2)",
     "level": "A2",
-    "ziel": "تحفظ الأفعال مع حروفها (warten auf, leiden an) والحالة المطلوبة.",
+    "ziel": "تستعمل أفعالاً شائعة مع حرف الجر والحالة اللذين يتطلبهما كل استعمال، مثل warten auf وleiden an.",
     "voraus": [
       "a2-dativ"
     ],
     "anwendung": {
-      "ar": "اشرح أعراضك للطبيب: Ich leide an … / Ich denke an … — 4 جمل.",
-      "de": "Erkläre dem Arzt deine Symptome: 4 Sätze mit festen Präpositionen.",
+      "ar": "اكتب 5 جمل يومية مستعملاً تراكيب ثابتة مختلفة، مثل warten auf وdenken an وfragen nach وteilnehmen an.",
+      "de": "Schreibe fünf Alltagssätze mit verschiedenen festen Verbindungen, zum Beispiel warten auf, denken an, fragen nach und teilnehmen an.",
       "candoIds": [
         "A2-C2"
       ]
@@ -10945,7 +10960,7 @@
         "promptAr": "قُل: أعاني من الصداع."
       }
     ],
-    "summaryAr": "أفعال كثيرة لا تعمل وحدها: تنتظر حرف جر بعينه. على سبيل المثال warten auf, sprechen über, denken an. هذا الدرس يعطي القاعدة الأساسية لثمانية أفعال شائعة.",
+    "summaryAr": "ترتبط أفعال كثيرة بحرف جر معين وحالة معينة في استعمال محدد. يقدّم هذا الدرس تسعة تراكيب شائعة: warten auf، sprechen über، denken an، sich freuen auf/über، fragen nach، träumen von، teilnehmen an، leiden an. تُحفظ البنية مع معناها، لأن تغيير حرف الجر قد يغيّر المعنى.",
     "rules": [
       {
         "de": "warten auf + Akk",
@@ -10978,6 +10993,10 @@
       {
         "de": "teilnehmen an + Dat",
         "ar": "أشارك في الدورة: Ich nehme am Kurs teil."
+      },
+      {
+        "de": "leiden an + Dativ: Sie leidet an einer chronischen Krankheit.",
+        "ar": "leiden an + Dativ لوصف مرض أو حالة: تعاني من مرض مزمن."
       }
     ],
     "tables": [],
@@ -10996,7 +11015,7 @@
       }
     ],
     "eselsbrueckeAr": "حروف جر هذه الأفعال تُحفظ مع الفعل ككتلة واحدة لا تتغيّر.",
-    "pronTippAr": "auf تُنطَق «أوف» لا «أبف»، وüber بحرف ü ممدود «يوبا».",
+    "pronTippAr": "",
     "exercises": [
       {
         "id": "a2-verb-praep-q1",
@@ -11059,12 +11078,12 @@
     ],
     "pitfalls": [
       {
-        "de": "✗ Ich warte für dich. → ✓ Ich warte auf dich (+Akk).",
-        "ar": "حرف الجر يُحفظ مع الفعل كتلةً (warten auf) — الترجمة من العربية (أنتظر لـ/على) تخذلك دائماً"
+        "de": "Für die Bedeutung „auf jemanden warten“: „Ich warte auf dich.“ „Ich warte für dich“ kann in anderem Kontext „an deiner Stelle/für deinen Zweck warten“ bedeuten.",
+        "ar": "لمعنى انتظار وصول شخص نستعمل warten auf؛ أما für فقد يظهر في معنى مختلف، لذلك لا نصف كل تركيب خارج السياق بأنه مستحيل."
       },
       {
-        "de": "✗ …über deine Besuch. → ✓ Ich freue mich über deinen Besuch.",
-        "ar": "sich freuen über + Akkusativ: der Besuch ← deinen — الحرف ثابت والحالة تُصرَّف"
+        "de": "„Ich freue mich über deine Besuch.“ ✗ → „Ich freue mich über deinen Besuch.“ ✓",
+        "ar": "sich freuen über + Akkusativ؛ وBesuch مذكر، لذلك نقول deinen Besuch."
       },
       {
         "de": "„an jemanden denken“ ≠ „über etwas nachdenken“",
@@ -11077,7 +11096,7 @@
     "titleDe": "Adjektivendungen nach der/die/das",
     "titleAr": "نهايات الصفات بعد أدوات التعريف (der/die/das)",
     "level": "A2",
-    "ziel": "تضيف نهاية الصفة الصحيحة بعد أداة التعريف في كل الحالات.",
+    "ziel": "تضيف نهاية الصفة الصحيحة بعد أداة التعريف أو der-Wort في Nominativ وAkkusativ وDativ.",
     "voraus": [
       "a1-akkusativ",
       "a1-dativ"
@@ -11116,7 +11135,7 @@
         "points": 2
       }
     ],
-    "summaryAr": "بعد أداة تعريف (der/die/das/dieser/jeder) القاعدة الذهبية بسيطة: في حالة الرفع (Nominativ) والنصب (Akkusativ) المفرد تنتهي الصفة بـ-e، وكل ما عداها تنتهي بـ-en. لا تحتاج أكثر من ذلك للتعبير اليومي.",
+    "summaryAr": "بعد أداة التعريف أو كلمة من نمط der مثل dieser تكون النهاية -e في Nominativ المفرد كله، وكذلك في Akkusativ المؤنث والمحايد. أمّا Akkusativ المذكر، وDativ، والجمع في الحالات المعروضة فتأخذ الصفة -en: der kleine Mann، den kleinen Mann، die kleine Frau، mit den kleinen Kindern.",
     "rules": [
       {
         "de": "der kleine Mann · die kleine Frau · das kleine Kind",
@@ -11584,11 +11603,9 @@
       "a1-akkusativ"
     ],
     "anwendung": {
-      "ar": "اكتب موعداً رسمياً: 3 اندماجات (zum nächstmöglichen Zeitpunkt …).",
-      "de": "Schreibe einen formellen Termin: 3 Verschmelzungen.",
-      "candoIds": [
-        "B2-C6"
-      ]
+      "ar": "اكتب 4 جمل يومية عن وجهة أو مكان أو وقت مستخدماً zum/zur/am/im/ans/ins.",
+      "de": "Schreibe vier Alltagssätze über Ziel, Ort oder Zeit mit zum, zur, am, im, ans oder ins.",
+      "candoIds": []
     },
     "verify": [
       {
@@ -11617,7 +11634,7 @@
         "points": 2
       }
     ],
-    "summaryAr": "في اللغة المكتوبة الرسمية واللغة المحكية ندمج حرف الجر مع أداة التعريف التالية: zu+dem=zum، zu+der=zur، an+dem=am، in+dem=im، وهكذا. في B2 يصبح استخدامها واجباً لطبيعية الأسلوب.",
+    "summaryAr": "تندمج بعض حروف الجر مع صيغ من أداة التعريف: zu+dem=zum، zu+der=zur، an+dem=am، in+dem=im، an+das=ans، in+das=ins. تكون هذه الصيغ قياسية وشائعة، وتكون هي الصيغة المعتادة أو المطلوبة في تراكيب كثيرة. وقد تبقى الكلمتان منفصلتين عند الإشارة أو المقابلة أو في تراكيب لا تملك اندماجاً؛ لذلك لا نعمم الدمج على كل حرف وأداة.",
     "rules": [
       {
         "de": "zum = zu + dem · zur = zu + der · am = an + dem · im = in + dem · ans = an + das · ins = in + das",
@@ -11625,7 +11642,7 @@
       },
       {
         "de": "Ich gehe zum Arzt. · Wir sind im Kino.",
-        "ar": "أمثلة شائعة."
+        "ar": "أمثلة يومية شائعة على الاندماج القياسي."
       }
     ],
     "tables": [],
@@ -11639,7 +11656,7 @@
         "ar": "هي في البيت نهاية الأسبوع."
       }
     ],
-    "eselsbrueckeAr": "كلمة واحدة بدل كلمتين — في الكتابة الأكاديمية لا تُفكك.",
+    "eselsbrueckeAr": "احفظ الاندماجات القياسية مع أمثلتها، وانتبه إلى جنس الاسم وحالته؛ فليس لكل حرف جر وأداة شكل مندمج.",
     "pronTippAr": "",
     "exercises": [
       {
@@ -11691,12 +11708,12 @@
       {
         "id": "a2-versch-n2",
         "type": "fill",
-        "promptDe": "Gehst du mit ___ Strand? (an + das)",
-        "text": "Gehst du mit ___ Strand?",
+        "promptDe": "Gehst du mit ___ Meer? (an + das)",
+        "text": "Gehst du mit ___ Meer?",
         "answer": [
           "ans"
         ],
-        "explanationAr": "an + das ← ans (حركة نحو الهدف)."
+        "explanationAr": "das Meer محايد، ومع الاتجاه: an + das = ans → ans Meer."
       },
       {
         "id": "a2-versch-n3",
@@ -11707,22 +11724,22 @@
           "zur",
           "Schule"
         ],
-        "explanationAr": "zu + der (die Schule) ← zur: المؤنّث المفرد يُدمَج مع zu وجوباً.",
+        "explanationAr": "في الاستعمال المحايد القياسي: zu + der Schule → zur Schule.",
         "promptAr": "ترجم: «نذهب إلى المدرسة.»"
       }
     ],
     "pitfalls": [
       {
-        "de": "✗ Ich gehe zu dem Arzt. → ✓ Ich gehe zum Arzt.",
-        "ar": "zu + dem تُدمج وجوباً: zum (لا zu dem في الكلام العادي) — الدمج إلزامي لا اختياري"
+        "de": "Im neutralen Gebrauch: „Ich gehe zum Arzt.“ Getrenntes „zu dem Arzt“ ist bei besonderem Hinweis oder Kontrast möglich: „zu dem Arzt, den du empfohlen hast“.",
+        "ar": "zum هي الصيغة المحايدة المعتادة، لكن الفصل ممكن عند الإشارة أو المقابلة؛ فلا نحكم عليه بالخطأ المطلق."
       },
       {
-        "de": "✗ Ich bin in das Kino. → ✓ Ich bin im Kino.",
-        "ar": "in + dem ← im (سكون): لا تخلط مع in + das ← ins (حركة) — الدمج يتبع الحالة"
+        "de": "Ort: „Ich bin im Kino“ (in + dem); Ziel: „Ich gehe ins Kino“ (in + das).",
+        "ar": "الاندماج يتبع الحالة والمعنى: im للموقع، وins للوجهة في هذين المثالين."
       },
       {
-        "de": "✗ an dem Wochenende → ✓ am Wochenende",
-        "ar": "an + dem ← am دائماً في التعبير الزمني: am Montag, am Wochenende — احفظها كتلاً"
+        "de": "Neutral meist „am Wochenende“; getrennt ist ein bestimmter Bezug möglich: „an dem Wochenende, an dem wir uns trafen“.",
+        "ar": "am Wochenende هو التعبير المحايد الشائع؛ وقد ينفصل an dem عند تحديد عطلة بعينها بجملة تابعة."
       }
     ]
   },
@@ -12356,9 +12373,9 @@
   "a2-demo": {
     "id": "a2-demo",
     "level": "A2",
-    "titleDe": "Demonstrativa: dieser/jeder/alle",
+    "titleDe": "Begleiter: dieser/jeder/alle",
     "titleAr": "الإشارة والتعميم",
-    "ziel": "تشير بـdieser وتعمم بـjeder/alle مع التصريف الصحيح في الرفع والنصب.",
+    "ziel": "تشير بـdieser وتعمم بـjeder/alle مع تصريف الصيغ الاسمية الصحيح في الرفع والنصب.",
     "voraus": [
       "a1-pronomen"
     ],
@@ -12367,11 +12384,11 @@
       "de": "Vergleiche zwei Handys mit sechs Sätzen.",
       "candoIds": []
     },
-    "summaryAr": "dieser للإشارة القريبة (هذا) وjeder للتعميم مع المفرد (كلُّ) وalle للتعميم مع الجمع — والنهايات كأداة التعريف (diesen في المنصوب!).",
+    "summaryAr": "يستعمل dieser للإشارة إلى شخص أو شيء محدد في السياق، وjeder للتعميم مع المفرد (كلّ)، وalle للتعميم مع الجمع. تتصرف صيغ dieser وjeder هنا بنهايات نمط der: diesen في Akkusativ المذكر، وdieses مع المحايد.",
     "rules": [
       {
         "de": "dieser/diese/dieses + Nomen: Dieser Mann · diese Frau · dieses Kind",
-        "ar": "dieser للإشارة القريبة (هذا) ويتصرف كأداة التعريف."
+        "ar": "dieser يشير إلى شخص أو شيء محدد في السياق، ويتصرف هنا بنهايات نمط أداة التعريف."
       },
       {
         "de": "jeder/jede/jedes + Singular: Jedes Kind bekommt ein Buch.",
@@ -12542,8 +12559,8 @@
     ],
     "pitfalls": [
       {
-        "de": "✗ Jeden Tag gehe ich → ✓ Jeder Tag …",
-        "ar": "jeden منصوب! الفاعل ← jeder."
+        "de": "„Jeden Tag gehe ich spazieren“ ✓ (temporaler Akkusativ), aber als Subjekt: „Jeder Tag ist anders“ ✓.",
+        "ar": "Jeden Tag صحيحة عندما تكون عبارة زمنية في Akkusativ؛ أما إذا كانت Tag فاعلاً فنقول Jeder Tag."
       },
       {
         "de": "✗ alle Kind → ✓ alle Kinder",
@@ -15583,142 +15600,146 @@
   },
   "a2-pruefungsstrategie": {
     "id": "a2-pruefungsstrategie",
-    "titleDe": "Prüfungsstrategie: Goethe A2",
-    "titleAr": "استراتيجية امتحان Goethe A2 — 100 كلمة رسائل، فهم المقالات والاستماع",
+    "titleDe": "Interne Prüfungsstrategie: A2-Übungsformat",
+    "titleAr": "استراتيجية داخلية لتدريبات A2 — القراءة والاستماع والكتابة",
     "level": "A2",
-    "ziel": "تتقن بنية امتحان A2، توزيع الوقت، بناء رسالة خاصة 100 كلمة ورسالة رسمية 100 كلمة، وتقنيات التخمين الذكي.",
+    "ziel": "تتدرّب على قراءة المطلوب، وتوزيع الوقت، وتغطية نقاط الكتابة، ومراجعة الإجابة؛ من دون اعتبار الدرس وصفاً رسمياً لامتحان أو جهة بعينها.",
     "voraus": [
       "a2-futur",
       "a2-weil-dass"
     ],
     "anwendung": {
-      "ar": "اكتب رسالة إلى صديق (100 كلمة) ورسالة رسمية (100 كلمة) خلال 30 دقيقة.",
-      "de": "Schreibe eine private E-Mail (100 Wörter) und eine formelle E-Mail (100 Wörter) in 30 Minuten.",
+      "ar": "نفّذ مجموعة A2 داخلية بوقت محدد، واكتب رسالة تغطي كل النقاط المطلوبة، ثم راجعها. قبل امتحان حقيقي ارجع إلى التعليمات الرسمية الحالية للجهة والنموذج الذي سجلت فيه.",
+      "de": "Bearbeite ein internes A2-Übungsset mit Zeitlimit, schreibe eine Nachricht zu allen geforderten Punkten und kontrolliere sie. Prüfe vor einer echten Prüfung die aktuellen offiziellen Vorgaben deines Anbieters und Formats.",
       "candoIds": []
     },
     "verify": [
       {
         "id": "a2-ps-v1-check",
         "type": "mc",
-        "promptDe": "Wie viele Wörter brauchen Sie im Prüfungsteil Schreiben A2?",
+        "promptDe": "Woran orientieren Sie sich bei Länge und Bearbeitungszeit einer Schreibaufgabe?",
         "options": [
-          "30 + 30",
-          "100 + 100",
-          "150 + 150"
+          "An den Angaben der konkreten Aufgabe",
+          "Immer an derselben festen Wortzahl",
+          "Nur am längsten Beispieltext"
         ],
-        "answer": "100 + 100",
-        "explanationAr": "في A2: رسالة خاصة 100 كلمة ورسالة رسمية 100 كلمة."
+        "answer": "An den Angaben der konkreten Aufgabe",
+        "explanationAr": "اتبع عدد الكلمات والزمن والنقاط المكتوبة في المهمة الحالية، وتحقق من المصدر الرسمي قبل امتحان حقيقي."
       },
       {
         "id": "a2-ps-v2",
         "type": "mc",
-        "promptDe": "Was tun Sie im Prüfungsteil Lesen zuerst?",
+        "promptDe": "Was tun Sie im Leseteil häufig zuerst?",
         "options": [
-          "Die Aufgabe lesen und Schlüsselwörter markieren",
+          "Die Aufgabe lesen und Suchbegriffe markieren",
           "Sofort alle Antworten raten",
           "Nur den letzten Absatz lesen"
         ],
-        "answer": "Die Aufgabe lesen und Schlüsselwörter markieren",
-        "explanationAr": "اقرأ المطلوب أولاً وعلّم الكلمات المفتاحية، ثم ابحث عنها في النص — لا تقرأ النص كاملاً قبل أن تعرف ما تبحث عنه."
+        "answer": "Die Aufgabe lesen und Suchbegriffe markieren",
+        "explanationAr": "قراءة المطلوب أولاً تساعد على توجيه البحث؛ ثم يُقرأ من النص ما يلزم للتحقق من الجواب والسياق."
       }
     ],
-    "summaryAr": "بنية Goethe A2: Hören 30د، Lesen 30د، Schreiben 30د (رسالة خاصة + رسمية كل منهما 100 كلمة)، Sprechen 15د. استراتيجيات: في القراءة ابدأ بالعناوين؛ في الاستماع لا تتوقف عند كلمة مجهولة؛ في الرسائل احترم التحية (Sehr geehrte Frau X / Lieber Omar) والختام (Mit freundlichen Grüßen / Liebe Grüße)؛ في التحدث قدّم رأيك ببساطة مع weil.",
+    "summaryAr": "هذه استراتيجية داخلية لتدريبات A2: اقرأ المطلوب أولاً، وحدد معلومات البحث، ووزّع الوقت على المهام، ثم اترك وقتاً للمراجعة. في الكتابة غطِّ كل نقطة مطلوبة بوضوح واستعمل افتتاحاً وختاماً مناسبين للسياق. في الاستماع تابع المعنى العام إذا فاتتك كلمة. تختلف صيغ الامتحانات الرسمية ومددها وأعداد كلماتها وقد تتغير؛ لذلك لا تُعامل هذه الصفحة مصدراً رسمياً لأي امتحان بعينه.",
     "rules": [
       {
-        "de": "Lies zuerst die Aufgabenstellung und markiere dann gezielt passende Schlüsselwörter.",
-        "ar": "اقرأ المطلوب أولاً ثم ابحث في النص عن الكلمات المفتاحية المناسبة."
+        "de": "Lies zuerst die konkrete Aufgabenstellung und markiere, welche Informationen du finden oder formulieren musst.",
+        "ar": "اقرأ المهمة المحددة أولاً وحدد المعلومات التي يجب العثور عليها أو صياغتها."
       },
       {
-        "de": "Beantworte beim Schreiben jeden vorgegebenen Punkt.",
-        "ar": "أجب في الكتابة عن كل نقطة مطلوبة."
+        "de": "Beantworte beim Schreiben jeden vorgegebenen Punkt und beachte Register, Wortzahl und Zeit der konkreten Aufgabe.",
+        "ar": "أجب عن كل نقطة، وراعِ مستوى الرسمية وعدد الكلمات والزمن المذكور في المهمة نفسها."
       },
       {
-        "de": "Wenn ein Wort im Hörtext unbekannt ist, höre auf den Sinn des ganzen Satzes.",
-        "ar": "إذا جهلت كلمة في المسموع، فركّز على معنى الجملة كلها."
+        "de": "Wenn ein Wort im Hörtext unbekannt ist, höre weiter und nutze Satz, Situation und Schlüsselwörter.",
+        "ar": "إذا جهلت كلمة في المسموع، فتابع واستعمل معنى الجملة والموقف والكلمات المفتاحية."
+      },
+      {
+        "de": "Prüfe offizielle Prüfungsdaten nur in den aktuellen Unterlagen des jeweiligen Anbieters.",
+        "ar": "تحقق من بنية الامتحان ومدده حصراً في المواد الرسمية الحالية للجهة المعنية."
       }
     ],
     "tables": [],
     "examples": [
       {
-        "de": "Frage: «Wie viel kostet das Zimmer?» — Schlüsselwort: Preis.",
-        "ar": "السؤال: «كم تكلف الغرفة؟» — الكلمة المفتاحية: السعر."
+        "de": "Frage: „Wann fährt der Zug?“ — Ich suche nach einer Uhrzeit und prüfe den Satzkontext.",
+        "ar": "السؤال: «متى ينطلق القطار؟» — أبحث عن وقت وأتحقق من سياق الجملة."
       },
       {
-        "de": "Ich antworte auf alle drei Punkte in der E-Mail.",
-        "ar": "أجيب عن النقاط الثلاث كلها في البريد الإلكتروني."
+        "de": "Vor dem Abgeben prüfe ich: Habe ich alle Punkte beantwortet und passend begonnen und geendet?",
+        "ar": "قبل التسليم أراجع: هل أجبت عن كل النقاط وافتتحت الرسالة وختمتها بما يناسب السياق؟"
       }
     ],
-    "eselsbruecke": "النقاط الثلاث في الرسالة: اذكرها كلها بعبارة واحدة لكل منها، ولا تنسَ الختام.",
+    "eselsbruecke": "المطلوب أولاً، كل النقاط ثانياً، والمراجعة أخيراً؛ أما البنية والزمن وعدد الكلمات فتؤخذ من المهمة والجهة الرسمية الحالية.",
     "exercises": [
       {
         "id": "a2-ps-v1",
         "type": "mc",
-        "promptDe": "Wie viele Wörter brauchen Sie im Prüfungsteil Schreiben A2?",
+        "promptDe": "Woran orientieren Sie sich bei Länge und Bearbeitungszeit einer Schreibaufgabe?",
         "options": [
-          "30 + 30",
-          "100 + 100",
-          "150 + 150"
+          "An den Angaben der konkreten Aufgabe",
+          "Immer an derselben festen Wortzahl",
+          "Nur am längsten Beispieltext"
         ],
-        "answer": "100 + 100",
-        "explanationAr": "في A2: رسالة خاصة 100 كلمة ورسالة رسمية 100 كلمة.",
+        "answer": "An den Angaben der konkreten Aufgabe",
+        "explanationAr": "اتبع تعليمات المهمة الحالية؛ لا تفترض عدداً ثابتاً لكل امتحان أو نموذج.",
         "promptAr": "اختر الإجابة الصحيحة."
       },
       {
         "type": "mc",
-        "promptDe": "Wie viel Zeit sollten Sie sich pro Aufgabe in der Prüfung ungefähr nehmen?",
-        "promptAr": "كم من الوقت ينبغي أن تأخذ لكل تمرين في الامتحان تقريباً؟",
+        "id": "a2-pruefungsstrategie-r141e-e02",
+        "promptDe": "Wie planen Sie die verfügbare Zeit sinnvoll?",
+        "promptAr": "كيف توزّع الوقت المتاح بصورة مناسبة؟",
         "options": [
-          "So viel Zeit wie nötig",
-          "Pro Aufgabe im Verhältnis zur Punktzahl",
-          "Immer 5 Minuten",
-          "Nur die schwierigen Aufgaben zuerst"
+          "Nur für die schwierigste Aufgabe",
+          "Nach Aufgaben und Punkten, mit kurzer Kontrolle am Ende",
+          "Immer gleich, unabhängig von der Aufgabe",
+          "Ohne Plan"
         ],
-        "answer": "Pro Aufgabe im Verhältnis zur Punktzahl",
-        "explanationAr": "وزّع الوقت على التمارين بحسب الدرجات، لا تحبس نفسك على سؤال واحد.",
-        "id": "a2-pruefungsstrategie-r141e-e02"
+        "answer": "Nach Aufgaben und Punkten, mit kurzer Kontrolle am Ende",
+        "explanationAr": "قسّم الوقت بحسب المهام ووزنها واترك وقتاً قصيراً للمراجعة."
       },
       {
         "type": "mc",
-        "promptDe": "Worauf sollten Sie im Hörverstehen A2 zuerst achten?",
-        "promptAr": "على ماذا تركز أولاً في فهم المسموع A2؟",
+        "id": "a2-pruefungsstrategie-r141e-e03",
+        "promptDe": "Worauf achten Sie beim ersten Hören besonders?",
+        "promptAr": "على ماذا تركز خصوصاً في الاستماع الأول؟",
         "options": [
           "Auf jedes einzelne Wort",
-          "Auf Schlüsselwörter (Wer? Wo? Wann? Warum?)",
-          "Auf die Grammatik",
-          "Auf die Aussprache"
+          "Auf Situation und Schlüsselinformationen",
+          "Nur auf die Grammatik",
+          "Nur auf die Aussprache"
         ],
-        "answer": "Auf Schlüsselwörter (Wer? Wo? Wann? Warum?)",
-        "explanationAr": "الكلمات المفتاحية كافية للإجابة، لا تحاول فهم كل كلمة.",
-        "id": "a2-pruefungsstrategie-r141e-e03"
+        "answer": "Auf Situation und Schlüsselinformationen",
+        "explanationAr": "افهم الموقف والمعلومات الأساسية أولاً، ثم استعمل الاستماع التالي إن أتاحته المهمة للتفاصيل."
       },
       {
         "id": "a2-pruefungsstrategie-r141e-prod",
         "type": "fill",
-        "promptDe": "Lies zuerst die Aufgabe und achte auf wichtige ___.",
-        "promptAr": "ما الذي تبحث عنه في النص بعد قراءة السؤال؟",
-        "answer": "Schlüsselwörter",
-        "explanationAr": "الكلمات المفتاحية تساعدك على العثور على المعلومة المطلوبة."
+        "promptDe": "Lies zuerst die Aufgabe und markiere wichtige ___.",
+        "promptAr": "ما الذي تحدده بعد قراءة المطلوب؟",
+        "answer": "Suchbegriffe",
+        "explanationAr": "كلمات البحث توجهك إلى المعلومة، مع ضرورة التحقق من السياق لا مطابقة الكلمات آلياً."
       },
       {
         "id": "a2-pruefungsstrategie-r141e-prod2",
         "type": "fill",
-        "promptDe": "Bei einem unbekannten Wort achte ich auf den Sinn des ganzen ___.",
-        "promptAr": "أكمل استراتيجية الاستماع: أركز على معنى … كله.",
-        "answer": "Satzes",
-        "explanationAr": "السياق ومعنى الجملة كلها يساعدان على فهم الكلمة."
+        "promptDe": "Bei einem unbekannten Wort höre ich weiter und nutze den ganzen ___.",
+        "promptAr": "أكمل: أتابع الاستماع وأستعمل … كله.",
+        "answer": "Kontext",
+        "explanationAr": "السياق والموقف وبقية الجملة تساعد على استنتاج المعنى."
       }
     ],
     "pitfalls": [
       {
-        "de": "„Bei einem unbekannten Wort höre ich nicht weiter zu.“ ✗ → „Ich höre weiter und erschließe die Bedeutung aus dem Satz.“ ✓",
-        "ar": "لا تتوقف عن الاستماع بسبب كلمة مجهولة؛ تابع واستنتج المعنى من الجملة والسياق."
+        "de": "„Bei einem unbekannten Wort höre ich nicht weiter zu.“ ✗ → „Ich höre weiter und nutze den Kontext.“ ✓",
+        "ar": "لا تتوقف بسبب كلمة مجهولة؛ تابع واستعمل السياق والمعلومات الأساسية."
       },
       {
         "de": "„Ich beantworte nur zwei von drei Punkten.“ ✗ → „Ich beantworte alle vorgegebenen Punkte.“ ✓",
-        "ar": "راجع كل نقطة مطلوبة قبل إرسال الكتابة؛ لا تسقط نقطة بسبب التركيز على عدد الكلمات."
+        "ar": "راجع كل نقطة مطلوبة قبل التسليم، ولا تستبدل تغطية المطلوب بمحاولة الوصول إلى طول مفترض."
       }
     ],
-    "eselsbrueckeAr": "النقاط الثلاث في الرسالة: اذكرها كلها بعبارة واحدة لكل منها، ولا تنسَ الختام.",
+    "eselsbrueckeAr": "المطلوب أولاً، كل النقاط ثانياً، والمراجعة أخيراً؛ أما البنية والزمن وعدد الكلمات فتؤخذ من المهمة والجهة الرسمية الحالية.",
     "pronTippAr": ""
   },
   "b1-pruefungsstrategie": {
