@@ -937,18 +937,27 @@
         "confirmedCurrentTexts": 10,
         "fixture": "scripts/fixtures/texts-reviewed-02.json",
         "patch": "scripts/patches/apply_text_review_pa037_02.py"
+      },
+      {
+        "batch": "PA-037-03",
+        "level": "A2",
+        "reviewedTexts": 32,
+        "correctedTexts": 26,
+        "confirmedCurrentTexts": 6,
+        "fixture": "scripts/fixtures/texts-reviewed-03.json",
+        "patch": "scripts/patches/apply_text_review_pa037_03.py"
       }
     ],
-    "reviewedTexts": 50,
+    "reviewedTexts": 82,
     "reviewedLevels": [
       "A0",
-      "A1"
+      "A1",
+      "A2"
     ],
-    "correctedTexts": 37,
-    "confirmedCurrentTexts": 13,
-    "remainingTexts": 107,
+    "correctedTexts": 63,
+    "confirmedCurrentTexts": 19,
+    "remainingTexts": 75,
     "remainingLevels": [
-      "A2",
       "B1",
       "B2"
     ],
@@ -957,7 +966,7 @@
     "independentLinguisticSignOff": false,
     "independentTranslationSignOff": false,
     "externalCefrOrExamValidation": false,
-    "claimBoundary": "50 bounded internal A0–A1 decisions; 107 A2–B2 texts, all 176 dialogues, re-synthesis/listening checks for 9 changed German audio-source passages, independent review, field validation, and external linguistic, translation, CEFR, or exam sign-off remain pending",
+    "claimBoundary": "82 bounded internal A0–A2 decisions; 75 B1–B2 texts, all 176 dialogues, re-synthesis/listening checks for 13 changed German audio-source passages, independent review, field validation, and external linguistic, translation, CEFR, or exam sign-off remain pending",
     "audioSourcePassagesChanged": [
       "t-a0-06",
       "t-a1-09",
@@ -967,7 +976,11 @@
       "t-a1-20",
       "t-a1-022",
       "t-a1-030",
-      "t-a1-035"
+      "t-a1-035",
+      "t-a2-07",
+      "t-a2-14",
+      "t-a2-15",
+      "t-a2-19"
     ],
     "audioRevalidationCompleted": false
   }

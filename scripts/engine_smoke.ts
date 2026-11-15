@@ -11630,8 +11630,10 @@ void 0;
   ok(Array.isArray(reviewA2T1.contentChecks) && reviewA2T1.contentChecks.length>=5,
     "K213g فحوص محتوى كافية");
   const t03=a2t.find((t:any)=>t.id==="t-a2-03"), t10=a2t.find((t:any)=>t.id==="t-a2-10"), t20=a2t.find((t:any)=>t.id==="t-a2-20");
-  ok(t03.questions[3].promptAr.includes("الطائرة") && t10.questions[2].promptAr.includes("ميزة") && t20.questions[0].promptAr.includes("التقرير"),
-    "K213h نماذج من الأسئلة العربية مطابقة");
+  ok(t03.questions[3].promptAr.includes("الفندق") && t03.questions[3].answer === "richtig" &&
+    t10.questions[2].promptAr.includes("ميزة") && t10.questions[3].answer[0] === "weiter" &&
+    t20.questions[0].promptAr.includes("تقريري") && t20.questions[0].answer.startsWith("Ich hatte"),
+    "K213h نماذج الأسئلة العربية ومفاتيحها مطابقة بعد مراجعة PA-037-03");
   ok(textsArr.filter((t:any)=>t.level==="A2").length===32,
     "K213i مستوى A2 يغطي 32 نصاً (كان 20؛ نموّ البنك — R145)");
   ok(a2t.every((t:any)=>t.de && t.ar && Array.isArray(t.questions) && t.questions.length>=3),
@@ -11943,10 +11945,11 @@ void 0;
     move.questions[1].answer === "Mit dem Fahrrad" &&
     routine.de.includes("Seitdem fühlt er sich viel fitter") && routine.questions[0].answer === "Keine Schokolade abends zu essen" &&
     routine.questions[1].answer === "Dreimal pro Woche" && routine.ar.includes("أكثر لياقة بكثير") &&
+    routine.ar.includes("كان ينهض متأخراً") && routine.ar.includes("أما الآن فينهض في السابعة") &&
     !routine.ar.includes("يشعر بنشاط أكبر") && correction?.before.ar.includes("يشعر بنشاط أكبر") &&
-    correction?.after.ar === routine.ar && reviewR164b.contentChecks.every((check:any) => check.status === "pass" && !!check.result) &&
+    correction?.after.ar.includes("أكثر لياقة بكثير") && reviewR164b.contentChecks.every((check:any) => check.status === "pass" && !!check.result) &&
     reviewR164b.limits.employmentAndRent && reviewR164b.limits.health && reviewR164b.judgement.unresolved === 0,
-    "K233c قصة الانتقال مثال معلّم، وأسئلة السبب/الدراجة والروتين/الشوكولاتة دقيقة؛ صُقلت دلالة fitter");
+    "K233c قصة الانتقال والأسئلة ودلالة fitter محفوظة؛ وصُححت دلالة aufstehen لاحقاً في PA-037-03");
   const hoerenManifest = JSON.parse(readFileSync("content/hoeren-audio.json", "utf8")) as any;
   const dialogManifest = JSON.parse(readFileSync("content/dialog-audio.json", "utf8")) as any;
   const diktatManifest = JSON.parse(readFileSync("content/diktat-audio.json", "utf8")) as any;
@@ -16223,11 +16226,11 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const ciK431 = readFileSync(".github/workflows/ci.yml", "utf8");
   ok(patchK431.includes("current == reviewed") && patchK431.includes("current != previous") &&
     patchK431.includes("unexpected current reading text") &&
-    auditK431.includes("all 50 bounded A0–A1 full-text decisions match") && auditK431.includes("107 A2–B2 texts") &&
+    auditK431.includes("all 82 bounded A0–A2 full-text decisions match") && auditK431.includes("75 B1–B2 texts") &&
     packageK431.includes('"audit:text-content-review"') && ciK431.includes("npm run audit:text-content-review") &&
     reviewK431.scope.includes("triage only") && reviewK431.scope.includes("not correction generators") &&
     reviewK431.scope.includes("not independent linguistic, translation, CEFR, or exam sign-off"),
-    "K431c PA-037-01: الرقعة مقفلة بالنص الكامل وقابلة للإعادة والبوابة موصولة بـCI؛ توسعت لاحقاً إلى 50 قراراً وبقي التوقيع المستقل خارج الادعاء");
+    "K431c PA-037-01: الرقعة مقفلة بالنص الكامل وقابلة للإعادة والبوابة موصولة بـCI؛ توسعت لاحقاً إلى 82 قراراً وبقي التوقيع المستقل خارج الادعاء");
 }
 
 /* ═══ K432 — PA-037-02: مراجعة نصوص القراءة A1 بندياً ═══ */
@@ -16277,11 +16280,64 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const auditK432 = readFileSync("scripts/text_content_review_audit.ts", "utf8");
   ok(patchK432.includes("current == reviewed") && patchK432.includes("current != previous") &&
     patchK432.includes("unexpected current reading text") &&
-    auditK432.includes("all 50 bounded A0–A1 full-text decisions match") && auditK432.includes("107 A2–B2 texts") &&
+    auditK432.includes("all 82 bounded A0–A2 full-text decisions match") && auditK432.includes("75 B1–B2 texts") &&
     auditK432.includes("audio revalidation") && reviewK432.scope.includes("triage only") &&
     reviewK432.scope.includes("not correction generators") &&
     reviewK432.scope.includes("not independent linguistic, translation, CEFR, audio, or exam sign-off"),
-    "K432c PA-037-02: الرقعة مقفلة بالنص الكامل وقابلة للإعادة والبوابة تحرس 50 قراراً مع إبقاء 107 نصوص وإعادة تحقق الصوت والتوقيع المستقل خارج الادعاء");
+    "K432c PA-037-02: الرقعة مقفلة بالنص الكامل وقابلة للإعادة والبوابة تحرس الآن 82 قراراً مع إبقاء 75 نصاً وإعادة تحقق الصوت والتوقيع المستقل خارج الادعاء");
+}
+
+/* ═══ K433 — PA-037-03: مراجعة نصوص القراءة A2 بندياً ═══ */
+{
+  const reviewK433 = JSON.parse(readFileSync("scripts/fixtures/texts-reviewed-03.json", "utf8")) as {
+    schema: string;
+    batch: string;
+    scope: string;
+    entries: { id: string; level: string; decision: "corrected" | "confirmed-current"; rationale: string; previous: Record<string, unknown>; current: Record<string, unknown> }[];
+  };
+  const textsK433 = JSON.parse(readFileSync("content/texts.json", "utf8")) as Array<Record<string, unknown>>;
+  const byIdK433 = new Map(textsK433.map((text) => [String(text.id), text]));
+  const expectedK433 = new Set([
+    "t-a2-01", "t-a2-02", "t-a2-03", "t-a2-04", "t-a2-05",
+    "t-a2-06", "t-a2-07", "t-a2-08", "t-a2-09", "t-a2-10",
+    "t-a2-11", "t-a2-12", "t-a2-13", "t-a2-14", "t-a2-15",
+    "t-a2-16", "t-a2-17", "t-a2-18", "t-a2-19", "t-a2-20",
+    "t-a2-21", "t-a2-22", "t-a2-23", "t-a2-24", "t-a2-25",
+    "t-a2-26", "t-a2-27", "t-a2-28", "t-a2-29", "t-a2-30",
+    "t-a2-031", "t-a2-032",
+  ]);
+  const correctedK433 = reviewK433.entries.filter((entry) => entry.decision === "corrected");
+  const confirmedK433 = reviewK433.entries.filter((entry) => entry.decision === "confirmed-current");
+  const expectedConfirmedK433 = new Set([
+    "t-a2-21", "t-a2-23", "t-a2-25", "t-a2-27", "t-a2-28", "t-a2-30",
+  ]);
+  ok(reviewK433.schema === "wegb2-reviewed-text-decision-batch-v1" && reviewK433.batch === "PA-037-03" &&
+    reviewK433.entries.length === 32 && new Set(reviewK433.entries.map((entry) => entry.id)).size === 32 &&
+    reviewK433.entries.every((entry) => expectedK433.has(entry.id) && entry.level === "A2" && entry.rationale.trim().length > 0) &&
+    correctedK433.length === 26 && confirmedK433.length === 6 &&
+    correctedK433.every((entry) => JSON.stringify(entry.previous) !== JSON.stringify(entry.current)) &&
+    confirmedK433.every((entry) => expectedConfirmedK433.has(entry.id) && JSON.stringify(entry.previous) === JSON.stringify(entry.current)),
+    "K433a PA-037-03: سجل القرار يغطي نصوص A2 الاثنين والثلاثين كاملة بـ26 تصحيحاً و6 قرارات إبقاء مبررة");
+  const currentK433 = JSON.stringify([...expectedK433].map((id) => byIdK433.get(id)));
+  ok(reviewK433.entries.every((entry) => JSON.stringify(byIdK433.get(entry.id)) === JSON.stringify(entry.current)) &&
+    String(byIdK433.get("t-a2-07")?.de).includes("Sich dreimal pro Woche eine halbe Stunde zu bewegen") &&
+    String(byIdK433.get("t-a2-10")?.titleAr) === "انتقال وشيك" &&
+    String(byIdK433.get("t-a2-14")?.de).includes("meine Schwester aus Tunis") &&
+    String(byIdK433.get("t-a2-15")?.de).includes("zwei Möglichkeiten angeboten") &&
+    String(byIdK433.get("t-a2-19")?.de).includes("zwei Kaltmieten, also 1040 Euro") &&
+    String(byIdK433.get("t-a2-032")?.ar).includes("أما الآن فينهض في السابعة") &&
+    !currentK433.includes("استلمنا على الشاطئ") && !currentK433.includes("انتظارٌ كبير") &&
+    !currentK433.includes("In der Werkstatt hat man mir zwei Möglichkeiten:") && !currentK433.includes("الأجرة الشاملة مع التدفئة"),
+    "K433b PA-037-03: القرارات تطابق البنك وتحرس المحاذاة والمنظور والغموض والمفاتيح وإزالة الأسئلة المكررة");
+  const patchK433 = readFileSync("scripts/patches/apply_text_review_pa037_03.py", "utf8");
+  const auditK433 = readFileSync("scripts/text_content_review_audit.ts", "utf8");
+  ok(patchK433.includes("current == reviewed") && patchK433.includes("current != previous") &&
+    patchK433.includes("unexpected current reading text") &&
+    auditK433.includes("all 82 bounded A0–A2 full-text decisions match") && auditK433.includes("75 B1–B2 texts") &&
+    auditK433.includes("audio revalidation") && reviewK433.scope.includes("triage only") &&
+    reviewK433.scope.includes("not correction generators") &&
+    reviewK433.scope.includes("not independent linguistic, translation, CEFR, audio, or exam sign-off"),
+    "K433c PA-037-03: الرقعة مقفلة بالنص الكامل وقابلة للإعادة والبوابة تحرس 82 قراراً مع إبقاء 75 نصاً وإعادة تحقق الصوت والتوقيع المستقل خارج الادعاء");
 }
 
 /* ═══ K334 — R309: القفل الفعلي الحقيقي — إغلاقُ اليوم عند حدود الوحدة ممنوعٌ لا منصوحٌ به فقط ═══ */

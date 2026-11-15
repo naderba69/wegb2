@@ -1,0 +1,3440 @@
+{
+  "schema": "wegb2-reviewed-text-decision-batch-v1",
+  "batch": "PA-037-03",
+  "reviewedAt": "2026-11-04",
+  "scope": "Item-by-item internal review of all 32 A2 reading texts across German and Arabic titles and passages, metadata, questions, options, answers, explanations, narrator perspective, duplication, chronology, ambiguity, and factual or register claim boundaries: 26 bounded corrections and 6 explicit confirmed-current decisions; searches and structural checks were triage only, not correction generators, and this is not independent linguistic, translation, CEFR, audio, or exam sign-off.",
+  "entries": [
+    {
+      "id": "t-a2-01",
+      "level": "A2",
+      "decision": "corrected",
+      "rationale": "Aligned the Arabic weekend title and aufstehen meaning, restored first-person grammar in the split-verb cloze, and replaced the duplicate wake-up item with the afternoon German-study evidence.",
+      "previous": {
+        "id": "t-a2-01",
+        "level": "A2",
+        "titleDe": "Ein anstrengendes Wochenende",
+        "titleAr": "عطلة مرهقة",
+        "de": "Am Samstag bin ich früh aufgestanden und habe meine Wohnung aufgeräumt. Danach bin ich mit meiner Schwester in die Stadt gefahren. Wir haben eingekauft und im Restaurant gegessen. Am Sonntag haben wir lange geschlafen. Am Nachmittag habe ich einen Film gesehen und Deutsch gelernt. Es war anstrengend, aber schön.",
+        "ar": "يوم السبت قمت باكراً ونظّفت شقتي. بعدها ذهبت مع أختي إلى المدينة. تسوّقنا وأكلنا في المطعم. يوم الأحد نمنا طويلاً. بعد الظهر شاهدت فيلماً وتعلّمت الألمانية. كان مرهقاً لكنه جميل.",
+        "questions": [
+          {
+            "id": "t-a2-01-q1",
+            "type": "fill",
+            "promptDe": "Am Samstag ___ er früh ___. (aufstehen)",
+            "answer": [
+              "ist aufgestanden",
+              "ist … aufgestanden"
+            ],
+            "explanationAr": "الدليل حرفياً: «Am Samstag bin ich früh aufgestanden und habe meine Wohnung aufgeräumt.» — aufstehen ← sein + Partizip II.",
+            "promptAr": "يوم السبت ___ باكراً (aufstehen)."
+          },
+          {
+            "id": "t-a2-01-q2",
+            "type": "mc",
+            "promptDe": "Was haben sie in der Stadt gemacht?",
+            "options": [
+              "eingekauft und gegessen",
+              "geschlafen",
+              "gearbeitet"
+            ],
+            "answer": "eingekauft und gegessen",
+            "explanationAr": "في النصِّ حرفياً: «Wir haben eingekauft und … gegessen.»",
+            "promptAr": "ماذا فعلا في المدينة؟"
+          },
+          {
+            "id": "t-a2-01-q3",
+            "type": "fill",
+            "promptDe": "Am Sonntag haben sie lange ___.",
+            "answer": [
+              "geschlafen"
+            ],
+            "explanationAr": "الدليل حرفياً: «Am Sonntag haben wir lange geschlafen.» — schlafen → geschlafen.",
+            "promptAr": "يوم الأحد ___ طويلاً."
+          },
+          {
+            "id": "t-a2-01-q4",
+            "type": "fill",
+            "promptDe": "Am Samstag bin ich früh ___.",
+            "answer": [
+              "aufgestanden"
+            ],
+            "explanationAr": "الماضي المركّبُ لفعلِ الحركةِ يأخذُ sein: «bin ich früh aufgestanden».",
+            "promptAr": "يوم السبت قمتُ باكراً ___."
+          }
+        ]
+      },
+      "current": {
+        "id": "t-a2-01",
+        "level": "A2",
+        "titleDe": "Ein anstrengendes Wochenende",
+        "titleAr": "عطلة نهاية أسبوع مرهقة",
+        "de": "Am Samstag bin ich früh aufgestanden und habe meine Wohnung aufgeräumt. Danach bin ich mit meiner Schwester in die Stadt gefahren. Wir haben eingekauft und im Restaurant gegessen. Am Sonntag haben wir lange geschlafen. Am Nachmittag habe ich einen Film gesehen und Deutsch gelernt. Es war anstrengend, aber schön.",
+        "ar": "نهضت باكراً يوم السبت ورتّبت شقتي. بعد ذلك ذهبت مع أختي إلى المدينة. تسوّقنا وتناولنا الطعام في مطعم. نمنا طويلاً يوم الأحد. شاهدت فيلماً ودرست الألمانية بعد الظهر. كانت عطلة مرهقة، لكنها جميلة.",
+        "questions": [
+          {
+            "id": "t-a2-01-q1",
+            "type": "fill",
+            "promptDe": "Am Samstag ___ ich früh ___. (aufstehen)",
+            "answer": [
+              "bin aufgestanden",
+              "bin … aufgestanden"
+            ],
+            "explanationAr": "الدليل حرفياً: «Am Samstag bin ich früh aufgestanden und habe meine Wohnung aufgeräumt.» — aufstehen ← sein + Partizip II.",
+            "promptAr": "يوم السبت ___ باكراً (aufstehen)."
+          },
+          {
+            "id": "t-a2-01-q2",
+            "type": "mc",
+            "promptDe": "Was haben sie in der Stadt gemacht?",
+            "options": [
+              "eingekauft und gegessen",
+              "geschlafen",
+              "gearbeitet"
+            ],
+            "answer": "eingekauft und gegessen",
+            "explanationAr": "في النصِّ حرفياً: «Wir haben eingekauft und … gegessen.»",
+            "promptAr": "ماذا فعلا في المدينة؟"
+          },
+          {
+            "id": "t-a2-01-q3",
+            "type": "fill",
+            "promptDe": "Am Sonntag haben sie lange ___.",
+            "answer": [
+              "geschlafen"
+            ],
+            "explanationAr": "الدليل حرفياً: «Am Sonntag haben wir lange geschlafen.» — schlafen → geschlafen.",
+            "promptAr": "يوم الأحد ___ طويلاً."
+          },
+          {
+            "id": "t-a2-01-q4",
+            "type": "fill",
+            "promptDe": "Am Nachmittag habe ich einen Film gesehen und Deutsch ___.",
+            "answer": [
+              "gelernt"
+            ],
+            "explanationAr": "النص يقول: «Am Nachmittag habe ich einen Film gesehen und Deutsch gelernt».",
+            "promptAr": "شاهدت فيلماً و___ الألمانية بعد الظهر."
+          }
+        ]
+      }
+    },
+    {
+      "id": "t-a2-02",
+      "level": "A2",
+      "decision": "corrected",
+      "rationale": "Restored the patient’s first-person perspective and replaced the duplicate dreimal cloze with the independently evidenced after-meal instruction.",
+      "previous": {
+        "id": "t-a2-02",
+        "level": "A2",
+        "titleDe": "Beim Arzt",
+        "titleAr": "عند الطبيب",
+        "de": "Guten Tag, was fehlt Ihnen? Seit drei Tagen tut mir der Hals weh und ich habe Fieber. Haben Sie auch Husten? Ja, ein bisschen. Ich schreibe Ihnen ein Rezept. Nehmen Sie die Medizin dreimal am Tag nach dem Essen. Trinken Sie viel Tee und bleiben Sie zwei Tage im Bett.",
+        "ar": "طاب يومكم، ماذا بك؟ منذ ثلاثة أيام يؤلمني حلقي وعندي حُمّى. هل لديك سعال أيضاً؟ نعم، قليلاً. سأكتب لك وصفة. خذ الدواء ثلاث مرات يومياً بعد الأكل. اشرب شاياً كثيراً وابق يومين في السرير.",
+        "questions": [
+          {
+            "id": "t-a2-02-q1",
+            "type": "fill",
+            "promptDe": "Seit drei Tagen tut ihm der ___ weh.",
+            "answer": [
+              "Hals"
+            ],
+            "explanationAr": "الدليل حرفياً: «Seit drei Tagen tut mir der Hals weh und ich habe Fieber.» — der Hals = الحلق.",
+            "promptAr": "منذ ثلاثة أيام يؤلمه ___."
+          },
+          {
+            "id": "t-a2-02-q2",
+            "type": "mc",
+            "promptDe": "Wie oft soll er die Medizin nehmen?",
+            "options": [
+              "einmal",
+              "dreimal",
+              "zweimal"
+            ],
+            "answer": "dreimal",
+            "explanationAr": "في النصِّ حرفياً: «dreimal am Tag».",
+            "promptAr": "كم مرة يأخذ الدواء؟"
+          },
+          {
+            "id": "t-a2-02-q3",
+            "type": "mc",
+            "promptDe": "Was soll er trinken?",
+            "options": [
+              "Kaffee",
+              "Tee",
+              "Milch"
+            ],
+            "answer": "Tee",
+            "explanationAr": "في النصِّ حرفياً: «Trinken Sie viel Tee.»",
+            "promptAr": "ماذا يشرب؟"
+          },
+          {
+            "id": "t-a2-02-q4",
+            "type": "fill",
+            "promptDe": "Nehmen Sie die Medizin ___ am Tag.",
+            "answer": [
+              "dreimal",
+              "3-mal"
+            ],
+            "explanationAr": "الجوابُ في النصِّ حرفياً: «Nehmen Sie die Medizin dreimal am Tag nach dem Essen».",
+            "promptAr": "خذ الدواء ___ في اليوم."
+          }
+        ]
+      },
+      "current": {
+        "id": "t-a2-02",
+        "level": "A2",
+        "titleDe": "Beim Arzt",
+        "titleAr": "عند الطبيب",
+        "de": "Guten Tag, was fehlt Ihnen? Seit drei Tagen tut mir der Hals weh und ich habe Fieber. Haben Sie auch Husten? Ja, ein bisschen. Ich schreibe Ihnen ein Rezept. Nehmen Sie die Medizin dreimal am Tag nach dem Essen. Trinken Sie viel Tee und bleiben Sie zwei Tage im Bett.",
+        "ar": "طاب يومكم، ماذا بك؟ منذ ثلاثة أيام يؤلمني حلقي وعندي حُمّى. هل لديك سعال أيضاً؟ نعم، قليلاً. سأكتب لك وصفة. خذ الدواء ثلاث مرات يومياً بعد الأكل. اشرب شاياً كثيراً وابق يومين في السرير.",
+        "questions": [
+          {
+            "id": "t-a2-02-q1",
+            "type": "fill",
+            "promptDe": "Seit drei Tagen tut mir der ___ weh.",
+            "answer": [
+              "Hals"
+            ],
+            "explanationAr": "الدليل حرفياً: «Seit drei Tagen tut mir der Hals weh und ich habe Fieber.» — der Hals = الحلق.",
+            "promptAr": "منذ ثلاثة أيام يؤلمني ___."
+          },
+          {
+            "id": "t-a2-02-q2",
+            "type": "mc",
+            "promptDe": "Wie oft soll ich die Medizin nehmen?",
+            "options": [
+              "einmal",
+              "dreimal",
+              "zweimal"
+            ],
+            "answer": "dreimal",
+            "explanationAr": "في النصِّ حرفياً: «dreimal am Tag».",
+            "promptAr": "كم مرة عليّ أن آخذ الدواء؟"
+          },
+          {
+            "id": "t-a2-02-q3",
+            "type": "mc",
+            "promptDe": "Was soll ich trinken?",
+            "options": [
+              "Kaffee",
+              "Tee",
+              "Milch"
+            ],
+            "answer": "Tee",
+            "explanationAr": "في النصِّ حرفياً: «Trinken Sie viel Tee.»",
+            "promptAr": "ماذا عليّ أن أشرب؟"
+          },
+          {
+            "id": "t-a2-02-q4",
+            "type": "fill",
+            "promptDe": "Nehmen Sie die Medizin nach dem ___.",
+            "answer": [
+              "Essen"
+            ],
+            "explanationAr": "النص يقول: «Nehmen Sie die Medizin dreimal am Tag nach dem Essen».",
+            "promptAr": "خذ الدواء بعد ___."
+          }
+        ]
+      }
+    },
+    {
+      "id": "t-a2-03",
+      "level": "A2",
+      "decision": "corrected",
+      "rationale": "Removed a true cheaper-price distractor from the stated landscape-reason question, restored first-person perspective, and replaced the duplicate fare comparison with the hotel location.",
+      "previous": {
+        "id": "t-a2-03",
+        "level": "A2",
+        "titleDe": "Eine Reise planen",
+        "titleAr": "تخطيط رحلة",
+        "de": "Wir möchten im Sommer nach München fahren. Der Zug kostet 80 Euro, das Flugzeug 120 Euro. Ich finde, der Zug ist besser, weil man die Landschaft sieht. Das Hotel liegt im Zentrum, gegenüber vom Bahnhof. Wir haben schon zwei Zimmer reserviert. Ich freue mich sehr auf die Reise!",
+        "ar": "نريد السفر إلى ميونخ في الصيف. القطار يكلف 80 يورو والطائرة 120 يورو. أجد القطار أفضل لأن المرء يرى المناظر. الفندق في الوسط مقابل المحطة. لقد حجزنا غرفتين بالفعل. أنا متشوّق جداً للرحلة!",
+        "questions": [
+          {
+            "id": "t-a2-03-q1",
+            "type": "mc",
+            "promptDe": "Warum ist der Zug besser?",
+            "options": [
+              "Er ist billiger.",
+              "Man sieht die Landschaft.",
+              "Er ist schneller."
+            ],
+            "answer": "Man sieht die Landschaft.",
+            "explanationAr": "في النصِّ حرفياً: «weil man die Landschaft sieht».",
+            "promptAr": "لماذا القطار أفضل؟"
+          },
+          {
+            "id": "t-a2-03-q2",
+            "type": "fill",
+            "promptDe": "Der Zug kostet ___ Euro.",
+            "answer": [
+              "80",
+              "achtzig"
+            ],
+            "explanationAr": "الدليل حرفياً: «Der Zug kostet 80 Euro, das Flugzeug 120 Euro.» — 80 Euro.",
+            "promptAr": "القطار يكلف ___ يورو."
+          },
+          {
+            "id": "t-a2-03-q3",
+            "type": "fill",
+            "promptDe": "Sie haben zwei Zimmer ___.",
+            "answer": [
+              "reserviert"
+            ],
+            "explanationAr": "الدليل حرفياً: «Wir haben schon zwei Zimmer reserviert.» — haben … reserviert (Perfekt).",
+            "promptAr": "حجزوا غرفتَين ___."
+          },
+          {
+            "id": "t-a2-03-q4",
+            "type": "truefalse",
+            "promptDe": "Das Flugzeug ist billiger als der Zug.",
+            "options": [
+              "richtig",
+              "falsch"
+            ],
+            "answer": "falsch",
+            "explanationAr": "الدليل حرفياً: «Der Zug kostet 80 Euro, das Flugzeug 120 Euro.» — القطارُ بثمانينَ يورو والطائرةُ بمئةٍ وعشرين — فالقطارُ أرخص.",
+            "promptAr": "هل الطائرة أرخص من القطار؟"
+          }
+        ]
+      },
+      "current": {
+        "id": "t-a2-03",
+        "level": "A2",
+        "titleDe": "Eine Reise planen",
+        "titleAr": "تخطيط رحلة",
+        "de": "Wir möchten im Sommer nach München fahren. Der Zug kostet 80 Euro, das Flugzeug 120 Euro. Ich finde, der Zug ist besser, weil man die Landschaft sieht. Das Hotel liegt im Zentrum, gegenüber vom Bahnhof. Wir haben schon zwei Zimmer reserviert. Ich freue mich sehr auf die Reise!",
+        "ar": "نريد السفر إلى ميونخ في الصيف. القطار يكلف 80 يورو والطائرة 120 يورو. أجد القطار أفضل لأن المرء يرى المناظر. الفندق في الوسط مقابل المحطة. لقد حجزنا غرفتين بالفعل. أنا متشوّق جداً للرحلة!",
+        "questions": [
+          {
+            "id": "t-a2-03-q1",
+            "type": "mc",
+            "promptDe": "Warum finde ich den Zug besser?",
+            "options": [
+              "Man sieht die Landschaft.",
+              "Er fährt nachts.",
+              "Das Hotel ist im Zug."
+            ],
+            "answer": "Man sieht die Landschaft.",
+            "explanationAr": "في النصِّ حرفياً: «weil man die Landschaft sieht».",
+            "promptAr": "لماذا أجد القطار أفضل؟"
+          },
+          {
+            "id": "t-a2-03-q2",
+            "type": "fill",
+            "promptDe": "Der Zug kostet ___ Euro.",
+            "answer": [
+              "80",
+              "achtzig"
+            ],
+            "explanationAr": "الدليل حرفياً: «Der Zug kostet 80 Euro, das Flugzeug 120 Euro.» — 80 Euro.",
+            "promptAr": "القطار يكلف ___ يورو."
+          },
+          {
+            "id": "t-a2-03-q3",
+            "type": "fill",
+            "promptDe": "Sie haben zwei Zimmer ___.",
+            "answer": [
+              "reserviert"
+            ],
+            "explanationAr": "الدليل حرفياً: «Wir haben schon zwei Zimmer reserviert.» — haben … reserviert (Perfekt).",
+            "promptAr": "حجزوا غرفتَين ___."
+          },
+          {
+            "id": "t-a2-03-q4",
+            "type": "truefalse",
+            "promptDe": "Das Hotel liegt gegenüber vom Bahnhof.",
+            "options": [
+              "richtig",
+              "falsch"
+            ],
+            "answer": "richtig",
+            "explanationAr": "النص يقول: «Das Hotel liegt im Zentrum, gegenüber vom Bahnhof».",
+            "promptAr": "يقع الفندق مقابل المحطة."
+          }
+        ]
+      }
+    },
+    {
+      "id": "t-a2-04",
+      "level": "A2",
+      "decision": "corrected",
+      "rationale": "Repaired the malformed Arabic pronunciation sentence, aligned first-person prompts, and replaced the repeated study-reason cloze with the pronunciation detail.",
+      "previous": {
+        "id": "t-a2-04",
+        "level": "A2",
+        "titleDe": "Warum ich Deutsch lerne",
+        "titleAr": "لماذا أتعلّم الألمانية",
+        "de": "Ich lerne Deutsch, weil ich nächstes Jahr in Deutschland studieren möchte. Meine Freundin sagt, dass die Grammatik sehr schwer ist. Ich glaube das nicht ganz, denn ich finde sie interessant. Natürlich ist die Aussprache nicht leicht. Aber ich höre jeden Tag Musik und sehe Serien, deshalb verstehe ich schon viel.",
+        "ar": "أتعلّم الألمانية لأنني أريد الدراسة في ألمانيا العام القادم. صديقتي تقول إن القواعد صعبة جداً. لا أعتقد ذلك تماماً فأنا أجدها ممتعة. بالنطق بطبيعة الحال ليس سهلاً. لكني أسمع الموسيقى وأشاهد المسلسلات يومياً لذا أفهم الكثير.",
+        "questions": [
+          {
+            "id": "t-a2-04-q1",
+            "type": "fill",
+            "promptDe": "Er lernt Deutsch, weil er in Deutschland studieren ___.",
+            "answer": [
+              "möchte",
+              "will"
+            ],
+            "explanationAr": "الدليل حرفياً: «Ich lerne Deutsch, weil ich nächstes Jahr in Deutschland studieren möchte.» — الفعل للنهاية: studieren möchte.",
+            "promptAr": "يتعلّم الألمانية لأنه ___ أن يدرس في ألمانيا."
+          },
+          {
+            "id": "t-a2-04-q2",
+            "type": "fill",
+            "promptDe": "Die Freundin sagt, dass die Grammatik schwer ___.",
+            "answer": [
+              "ist"
+            ],
+            "explanationAr": "الدليل حرفياً: «Meine Freundin sagt, dass die Grammatik sehr schwer ist.» — dass … ist.",
+            "promptAr": "قالت الصديقة إن القواعد ___ صعبة."
+          },
+          {
+            "id": "t-a2-04-q3",
+            "type": "mc",
+            "promptDe": "Warum versteht er schon viel?",
+            "options": [
+              "weil er jeden Tag hört und sieht",
+              "weil die Grammatik leicht ist",
+              "weil er in Deutschland wohnt"
+            ],
+            "answer": "weil er jeden Tag hört und sieht",
+            "explanationAr": "الدليل حرفياً: «Aber ich höre jeden Tag Musik und sehe Serien, deshalb verstehe ich schon viel.» — التعليل في الجملة الأخيرة.",
+            "promptAr": "لماذا يفهم الكثير فعلاً؟"
+          },
+          {
+            "id": "t-a2-04-q4",
+            "type": "fill",
+            "promptDe": "Ich lerne Deutsch, ___ ich in Deutschland studieren möchte.",
+            "answer": [
+              "weil"
+            ],
+            "explanationAr": "الدليل حرفياً: «Ich lerne Deutsch, weil ich nächstes Jahr in Deutschland studieren möchte.» — weil تدفعُ الفعلَ المصرَّفَ إلى آخرِ الجملة.",
+            "promptAr": "أتعلم الألمانية، ___ أريد الدراسة في ألمانيا."
+          }
+        ]
+      },
+      "current": {
+        "id": "t-a2-04",
+        "level": "A2",
+        "titleDe": "Warum ich Deutsch lerne",
+        "titleAr": "لماذا أتعلّم الألمانية",
+        "de": "Ich lerne Deutsch, weil ich nächstes Jahr in Deutschland studieren möchte. Meine Freundin sagt, dass die Grammatik sehr schwer ist. Ich glaube das nicht ganz, denn ich finde sie interessant. Natürlich ist die Aussprache nicht leicht. Aber ich höre jeden Tag Musik und sehe Serien, deshalb verstehe ich schon viel.",
+        "ar": "أتعلّم الألمانية لأنني أريد الدراسة في ألمانيا العام القادم. تقول صديقتي إن القواعد صعبة جداً. لا أوافقها تماماً، فأنا أجد القواعد ممتعة. وبطبيعة الحال، النطق ليس سهلاً. لكنني أستمع إلى الموسيقى وأشاهد المسلسلات كل يوم، ولذلك أفهم الكثير بالفعل.",
+        "questions": [
+          {
+            "id": "t-a2-04-q1",
+            "type": "fill",
+            "promptDe": "Ich lerne Deutsch, weil ich in Deutschland studieren ___.",
+            "answer": [
+              "möchte",
+              "will"
+            ],
+            "explanationAr": "الدليل حرفياً: «Ich lerne Deutsch, weil ich nächstes Jahr in Deutschland studieren möchte.» — الفعل للنهاية: studieren möchte.",
+            "promptAr": "أتعلّم الألمانية لأنني ___ أن أدرس في ألمانيا."
+          },
+          {
+            "id": "t-a2-04-q2",
+            "type": "fill",
+            "promptDe": "Die Freundin sagt, dass die Grammatik schwer ___.",
+            "answer": [
+              "ist"
+            ],
+            "explanationAr": "الدليل حرفياً: «Meine Freundin sagt, dass die Grammatik sehr schwer ist.» — dass … ist.",
+            "promptAr": "تقول الصديقة إن القواعد ___ صعبة."
+          },
+          {
+            "id": "t-a2-04-q3",
+            "type": "mc",
+            "promptDe": "Warum verstehe ich schon viel?",
+            "options": [
+              "weil ich jeden Tag Musik höre und Serien sehe",
+              "weil die Grammatik leicht ist",
+              "weil ich in Deutschland wohne"
+            ],
+            "answer": "weil ich jeden Tag Musik höre und Serien sehe",
+            "explanationAr": "الدليل حرفياً: «Aber ich höre jeden Tag Musik und sehe Serien, deshalb verstehe ich schon viel.» — التعليل في الجملة الأخيرة.",
+            "promptAr": "لماذا أفهم الكثير بالفعل؟"
+          },
+          {
+            "id": "t-a2-04-q4",
+            "type": "fill",
+            "promptDe": "Natürlich ist die ___ nicht leicht.",
+            "answer": [
+              "Aussprache"
+            ],
+            "explanationAr": "النص يقول: «Natürlich ist die Aussprache nicht leicht».",
+            "promptAr": "بطبيعة الحال، ___ ليس سهلاً."
+          }
+        ]
+      }
+    },
+    {
+      "id": "t-a2-05",
+      "level": "A2",
+      "decision": "corrected",
+      "rationale": "Corrected the Arabic food, invitation, gendered imperative, and freuen auf alignment and replaced the repeated start-time cloze with the home location.",
+      "previous": {
+        "id": "t-a2-05",
+        "level": "A2",
+        "titleDe": "Die Einladung",
+        "titleAr": "الدعوة",
+        "de": "Liebe Amina, am Samstag feiere ich meinen Geburtstag! Die Party beginnt um 18 Uhr bei mir zu Hause. Es gibt Kuchen und leckeres Essen. Kannst du kommen? Bring bitte deine Freundin mit! Ich freue mich auf dich. Viele Grüße, Nour",
+        "ar": "عزيزتي أمينة، يوم السبت أحتفل بعيد ميلادي! الحفلة تبدأ في السادسة مساءً (الثامنة عشرة) عندي في البيت. سيكون هناك كعك ولذيذات. هل يمكنك الحضور؟ أحضر صديقتك من فضلك! أنا في انتظارك. تحياتي، نور",
+        "questions": [
+          {
+            "id": "t-a2-05-q1",
+            "type": "mc",
+            "promptDe": "Wann beginnt die Party?",
+            "options": [
+              "um 18 Uhr",
+              "um 8 Uhr",
+              "um 16 Uhr"
+            ],
+            "answer": "um 18 Uhr",
+            "explanationAr": "الدليل حرفياً: «Die Party beginnt um 18 Uhr bei mir zu Hause.» — um 18 Uhr = السادسة مساءً.",
+            "promptAr": "متى تبدأ الحفلة؟"
+          },
+          {
+            "id": "t-a2-05-q2",
+            "type": "fill",
+            "promptDe": "Bring bitte deine Freundin ___.",
+            "answer": [
+              "mit"
+            ],
+            "explanationAr": "الدليل حرفياً: «Bring bitte deine Freundin mit!» — mitbringen ينفصل: bring … mit.",
+            "promptAr": "أحضر صديقتك ___ من فضلك."
+          },
+          {
+            "id": "t-a2-05-q3",
+            "type": "mc",
+            "promptDe": "Was feiert Nour?",
+            "options": [
+              "Hochzeit",
+              "Geburtstag",
+              "Neujahr"
+            ],
+            "answer": "Geburtstag",
+            "explanationAr": "الدليل حرفياً: «Liebe Amina, am Samstag feiere ich meinen Geburtstag!» — عيد الميلاد.",
+            "promptAr": "ماذا تحتفل نور؟"
+          },
+          {
+            "id": "t-a2-05-q4",
+            "type": "fill",
+            "promptDe": "Die Party beginnt um ___ Uhr.",
+            "answer": [
+              "18",
+              "achtzehn"
+            ],
+            "explanationAr": "الجوابُ في النصِّ حرفياً: «Die Party beginnt um 18 Uhr bei mir zu Hause».",
+            "promptAr": "تبدأ الحفلة الساعة ___."
+          }
+        ]
+      },
+      "current": {
+        "id": "t-a2-05",
+        "level": "A2",
+        "titleDe": "Die Einladung",
+        "titleAr": "الدعوة",
+        "de": "Liebe Amina, am Samstag feiere ich meinen Geburtstag! Die Party beginnt um 18 Uhr bei mir zu Hause. Es gibt Kuchen und leckeres Essen. Kannst du kommen? Bring bitte deine Freundin mit! Ich freue mich auf dich. Viele Grüße, Nour",
+        "ar": "عزيزتي أمينة، أحتفل بعيد ميلادي يوم السبت! تبدأ الحفلة في السادسة مساءً في بيتي. سيكون هناك كعك وطعام لذيذ. هل يمكنك الحضور؟ أحضري صديقتك معك من فضلك! أتطلع إلى رؤيتك. مع أطيب التحيات، نور",
+        "questions": [
+          {
+            "id": "t-a2-05-q1",
+            "type": "mc",
+            "promptDe": "Wann beginnt die Party?",
+            "options": [
+              "um 18 Uhr",
+              "um 8 Uhr",
+              "um 16 Uhr"
+            ],
+            "answer": "um 18 Uhr",
+            "explanationAr": "الدليل حرفياً: «Die Party beginnt um 18 Uhr bei mir zu Hause.» — um 18 Uhr = السادسة مساءً.",
+            "promptAr": "متى تبدأ الحفلة؟"
+          },
+          {
+            "id": "t-a2-05-q2",
+            "type": "fill",
+            "promptDe": "Bring bitte deine Freundin ___.",
+            "answer": [
+              "mit"
+            ],
+            "explanationAr": "الدليل حرفياً: «Bring bitte deine Freundin mit!» — mitbringen ينفصل: bring … mit.",
+            "promptAr": "أحضري صديقتك ___ من فضلك."
+          },
+          {
+            "id": "t-a2-05-q3",
+            "type": "mc",
+            "promptDe": "Was feiert Nour?",
+            "options": [
+              "Hochzeit",
+              "Geburtstag",
+              "Neujahr"
+            ],
+            "answer": "Geburtstag",
+            "explanationAr": "الدليل حرفياً: «Liebe Amina, am Samstag feiere ich meinen Geburtstag!» — عيد الميلاد.",
+            "promptAr": "ما المناسبة التي تحتفل بها نور؟"
+          },
+          {
+            "id": "t-a2-05-q4",
+            "type": "fill",
+            "promptDe": "Die Party ist bei mir zu ___.",
+            "answer": [
+              "Hause"
+            ],
+            "explanationAr": "النص يقول: «Die Party beginnt um 18 Uhr bei mir zu Hause».",
+            "promptAr": "تُقام الحفلة في ___."
+          }
+        ]
+      }
+    },
+    {
+      "id": "t-a2-06",
+      "level": "A2",
+      "decision": "corrected",
+      "rationale": "Corrected the Arabic typo that changed “lying on the beach” into an unrelated verb and polished the rain and early-return alignment.",
+      "previous": {
+        "id": "t-a2-06",
+        "level": "A2",
+        "titleDe": "Wochenende am Meer",
+        "titleAr": "عطلة نهاية الأسبوع عند البحر",
+        "de": "Letztes Wochenende sind wir an die Küste gefahren. Wir sind am Freitagabend abgefahren und spät angekommen. Am Samstag haben wir am Strand gelegen und im Meer geschwommen. Am Abend haben wir in einem Fischrestaurant gegessen. Leider hat es am Sonntag geregnet, deshalb sind wir früher nach Hause gefahren. Trotzdem war es ein schönes Wochenende.",
+        "ar": "عطلة نهاية الأسبوع الماضية ذهبنا إلى الساحل. انطلقنا مساء الجمعة ووصلنا متأخرين. يوم السبت استلمنا على الشاطئ وسبحنا في البحر. مساءً أكلنا في مطعم سمك. للأسف أمطرت يوم الأحد لذلك عدنا أبكر. ومع ذلك كانت عطلة جميلة.",
+        "questions": [
+          {
+            "id": "t-a2-06-q1",
+            "type": "fill",
+            "promptDe": "Am Samstag haben sie im Meer ___.",
+            "answer": [
+              "geschwommen"
+            ],
+            "explanationAr": "الدليل حرفياً: «Am Samstag haben wir am Strand gelegen und im Meer geschwommen.» — schwimmen → geschwommen (شاذ).",
+            "promptAr": "يوم السبت ___ في البحر."
+          },
+          {
+            "id": "t-a2-06-q2",
+            "type": "mc",
+            "promptDe": "Warum sind sie früher gefahren?",
+            "options": [
+              "weil es geregnet hat",
+              "weil das Meer kalt war",
+              "weil das Restaurant geschlossen war"
+            ],
+            "answer": "weil es geregnet hat",
+            "explanationAr": "في النصِّ حرفياً: «Leider hat es … geregnet, deshalb …».",
+            "promptAr": "لماذا عادوا باكراً؟"
+          },
+          {
+            "id": "t-a2-06-q3",
+            "type": "truefalse",
+            "promptDe": "Das Wochenende war ganz schlecht.",
+            "options": [
+              "richtig",
+              "falsch"
+            ],
+            "answer": "falsch",
+            "explanationAr": "في النصِّ حرفياً: «Trotzdem war es ein schönes Wochenende.»",
+            "promptAr": "هل كانت العطلة سيئة تماماً؟"
+          },
+          {
+            "id": "t-a2-06-q4",
+            "type": "truefalse",
+            "promptDe": "Am Sonntag hat die Gruppe den ganzen Tag am Strand verbracht.",
+            "options": [
+              "richtig",
+              "falsch"
+            ],
+            "answer": "falsch",
+            "explanationAr": "الجوابُ في النصِّ حرفياً: «Leider hat es am Sonntag geregnet, deshalb sind wir früher nach Hause gefahren».",
+            "promptAr": "هل قضت المجموعة الأحد كله على الشاطئ؟"
+          }
+        ]
+      },
+      "current": {
+        "id": "t-a2-06",
+        "level": "A2",
+        "titleDe": "Wochenende am Meer",
+        "titleAr": "عطلة نهاية الأسبوع عند البحر",
+        "de": "Letztes Wochenende sind wir an die Küste gefahren. Wir sind am Freitagabend abgefahren und spät angekommen. Am Samstag haben wir am Strand gelegen und im Meer geschwommen. Am Abend haben wir in einem Fischrestaurant gegessen. Leider hat es am Sonntag geregnet, deshalb sind wir früher nach Hause gefahren. Trotzdem war es ein schönes Wochenende.",
+        "ar": "ذهبنا إلى الساحل في عطلة نهاية الأسبوع الماضية. انطلقنا مساء الجمعة ووصلنا متأخرين. استلقينا على الشاطئ وسبحنا في البحر يوم السبت. تناولنا العشاء في مطعم سمك. وللأسف هطل المطر يوم الأحد، لذلك عدنا إلى البيت أبكر من المخطط. ومع ذلك كانت عطلة نهاية أسبوع جميلة.",
+        "questions": [
+          {
+            "id": "t-a2-06-q1",
+            "type": "fill",
+            "promptDe": "Am Samstag haben sie im Meer ___.",
+            "answer": [
+              "geschwommen"
+            ],
+            "explanationAr": "الدليل حرفياً: «Am Samstag haben wir am Strand gelegen und im Meer geschwommen.» — schwimmen → geschwommen (شاذ).",
+            "promptAr": "يوم السبت ___ في البحر."
+          },
+          {
+            "id": "t-a2-06-q2",
+            "type": "mc",
+            "promptDe": "Warum sind sie früher gefahren?",
+            "options": [
+              "weil es geregnet hat",
+              "weil das Meer kalt war",
+              "weil das Restaurant geschlossen war"
+            ],
+            "answer": "weil es geregnet hat",
+            "explanationAr": "في النصِّ حرفياً: «Leider hat es … geregnet, deshalb …».",
+            "promptAr": "لماذا عادوا باكراً؟"
+          },
+          {
+            "id": "t-a2-06-q3",
+            "type": "truefalse",
+            "promptDe": "Das Wochenende war ganz schlecht.",
+            "options": [
+              "richtig",
+              "falsch"
+            ],
+            "answer": "falsch",
+            "explanationAr": "في النصِّ حرفياً: «Trotzdem war es ein schönes Wochenende.»",
+            "promptAr": "هل كانت العطلة سيئة تماماً؟"
+          },
+          {
+            "id": "t-a2-06-q4",
+            "type": "truefalse",
+            "promptDe": "Am Sonntag hat die Gruppe den ganzen Tag am Strand verbracht.",
+            "options": [
+              "richtig",
+              "falsch"
+            ],
+            "answer": "falsch",
+            "explanationAr": "الجوابُ في النصِّ حرفياً: «Leider hat es am Sonntag geregnet, deshalb sind wir früher nach Hause gefahren».",
+            "promptAr": "هل قضت المجموعة الأحد كله على الشاطئ؟"
+          }
+        ]
+      }
+    },
+    {
+      "id": "t-a2-07",
+      "level": "A2",
+      "decision": "corrected",
+      "rationale": "Repaired the German reflexive infinitive construction, aligned the Arabic health advice and register, and synchronized the movement-duration cloze.",
+      "previous": {
+        "id": "t-a2-07",
+        "level": "A2",
+        "titleDe": "Gesund leben",
+        "titleAr": "العيش بصحة",
+        "de": "Wer gesund bleiben will, soll jeden Tag frisches Obst und Gemüse essen. Man muss auch genug Wasser trinken. Sport ist wichtig: Dreimal pro Woche eine halbe Stunde bewegen reicht schon. Und schlafen Sie genug! Wer zu wenig schläft, ist am Tag müde und unkonzentriert. Übrigens: Hände waschen nicht vergessen!",
+        "ar": "من يريد البقاء بصحة عليه أن يأكل فواكه وخضراوات طازجة يومياً. يجب أيضاً شرب ماء كافٍ. الرياضة مهمة: ثلاث مرات في الأسبوع نصف ساعة حركة تكفي. ونموا بما يكفي! من ينام قليلاً يكون متعباً وغير مركّز نهاراً. ولا تنسَ غسل اليدين!",
+        "questions": [
+          {
+            "id": "t-a2-07-q1",
+            "type": "mc",
+            "promptDe": "Wie oft soll man Sport machen?",
+            "options": [
+              "einmal pro Woche",
+              "dreimal pro Woche",
+              "jeden Tag"
+            ],
+            "answer": "dreimal pro Woche",
+            "explanationAr": "في النصِّ حرفياً: «Dreimal pro Woche …».",
+            "promptAr": "كم مرة يُنصح بممارسة الرياضة؟"
+          },
+          {
+            "id": "t-a2-07-q2",
+            "type": "fill",
+            "promptDe": "Wer zu wenig schläft, ist am Tag müde und ___.",
+            "answer": [
+              "unkonzentriert"
+            ],
+            "explanationAr": "الدليل حرفياً: «Wer zu wenig schläft, ist am Tag müde und unkonzentriert.» — غير مركّز.",
+            "promptAr": "من ينم قليلاً يكون نهاره متعباً و___."
+          },
+          {
+            "id": "t-a2-07-q3",
+            "type": "fill",
+            "promptDe": "Man muss genug ___ trinken.",
+            "answer": [
+              "Wasser"
+            ],
+            "explanationAr": "الدليل حرفياً: «Man muss auch genug Wasser trinken.» — ماء.",
+            "promptAr": "يجب شرب كمية كافية من ___."
+          },
+          {
+            "id": "t-a2-07-q4",
+            "type": "fill",
+            "promptDe": "Dreimal pro Woche eine halbe ___ bewegen reicht schon.",
+            "answer": [
+              "Stunde"
+            ],
+            "explanationAr": "الجوابُ في النصِّ حرفياً: «Dreimal pro Woche eine halbe Stunde bewegen reicht schon».",
+            "promptAr": "التحرك نصف ___ ثلاث مرات في الأسبوع يكفي."
+          }
+        ]
+      },
+      "current": {
+        "id": "t-a2-07",
+        "level": "A2",
+        "titleDe": "Gesund leben",
+        "titleAr": "العيش بصحة",
+        "de": "Wer gesund bleiben will, soll jeden Tag frisches Obst und Gemüse essen. Man muss auch genug Wasser trinken. Sport ist wichtig: Sich dreimal pro Woche eine halbe Stunde zu bewegen, reicht schon. Achten Sie außerdem auf genügend Schlaf! Wer zu wenig schläft, ist am Tag müde und unkonzentriert. Übrigens: Hände waschen nicht vergessen!",
+        "ar": "من يريد الحفاظ على صحته ينبغي أن يأكل فواكه وخضراوات طازجة كل يوم. ويجب أيضاً شرب كمية كافية من الماء. الرياضة مهمة: يكفي أن تتحرك نصف ساعة ثلاث مرات في الأسبوع. واحرص أيضاً على النوم مدة كافية! من لا ينام بما يكفي يكون متعباً وقليل التركيز نهاراً. ولا تنس غسل اليدين!",
+        "questions": [
+          {
+            "id": "t-a2-07-q1",
+            "type": "mc",
+            "promptDe": "Wie oft soll man Sport machen?",
+            "options": [
+              "einmal pro Woche",
+              "dreimal pro Woche",
+              "jeden Tag"
+            ],
+            "answer": "dreimal pro Woche",
+            "explanationAr": "النص يقول: «Sich dreimal pro Woche eine halbe Stunde zu bewegen, reicht schon.»",
+            "promptAr": "كم مرة يُنصح بممارسة الرياضة؟"
+          },
+          {
+            "id": "t-a2-07-q2",
+            "type": "fill",
+            "promptDe": "Wer zu wenig schläft, ist am Tag müde und ___.",
+            "answer": [
+              "unkonzentriert"
+            ],
+            "explanationAr": "الدليل حرفياً: «Wer zu wenig schläft, ist am Tag müde und unkonzentriert.» — غير مركّز.",
+            "promptAr": "من ينام قليلاً يكون متعباً و___ نهاراً."
+          },
+          {
+            "id": "t-a2-07-q3",
+            "type": "fill",
+            "promptDe": "Man muss genug ___ trinken.",
+            "answer": [
+              "Wasser"
+            ],
+            "explanationAr": "الدليل حرفياً: «Man muss auch genug Wasser trinken.» — ماء.",
+            "promptAr": "يجب شرب كمية كافية من ___."
+          },
+          {
+            "id": "t-a2-07-q4",
+            "type": "fill",
+            "promptDe": "Sich dreimal pro Woche eine halbe ___ zu bewegen, reicht schon.",
+            "answer": [
+              "Stunde"
+            ],
+            "explanationAr": "النص يقول: «Sich dreimal pro Woche eine halbe Stunde zu bewegen, reicht schon».",
+            "promptAr": "يكفي أن تتحرك نصف ___ ثلاث مرات في الأسبوع."
+          }
+        ]
+      }
+    },
+    {
+      "id": "t-a2-08",
+      "level": "A2",
+      "decision": "corrected",
+      "rationale": "Removed an invented female narrator from both medical questions and aligned their options and Arabic explanations with the first-person passage.",
+      "previous": {
+        "id": "t-a2-08",
+        "level": "A2",
+        "titleDe": "Ein Termin beim Arzt",
+        "titleAr": "موعد عند الطبيب",
+        "de": "Seit drei Tagen tut mir der Kopf weh. Ich rufe beim Arzt an und sage: „Ich hätte gern einen Termin.“ Die Arzthelferin gibt mir einen Termin am Montag um zehn Uhr. Der Arzt untersucht mich und sagt, ich soll mehr Wasser trinken und früher schlafen. Er verschreibt mir Tabletten. Schon am Dienstag geht es mir besser.",
+        "ar": "منذ ثلاثة أيام يؤلمني رأسي. أتصل بالطبيب وأقول: «أودّ موعداً». المساعدة تعطيني موعداً يوم الاثنين الساعة العاشرة. يفحصني الطبيب ويقول إن عليّ شرب ماء أكثر والنوم أبكر. يصف لي أقراصاً. يوم الثلاثاء أشعر بتحسّن.",
+        "questions": [
+          {
+            "id": "t-a2-08-q1",
+            "type": "mc",
+            "promptDe": "Warum ruft die Person beim Arzt an?",
+            "options": [
+              "Weil sie Kopfschmerzen hat",
+              "Weil sie müde ist",
+              "Weil sie einen Test macht",
+              "Weil sie Urlaub braucht"
+            ],
+            "answer": "Weil sie Kopfschmerzen hat",
+            "explanationAr": "الدليل حرفياً: «Seit drei Tagen tut mir der Kopf weh.» — لديها صداع منذ ثلاثة أيام (Kopfschmerzen).",
+            "promptAr": "لماذا تتصل بالطبيب؟"
+          },
+          {
+            "id": "t-a2-08-q2",
+            "type": "mc",
+            "promptDe": "Was soll die Person laut Arzt tun?",
+            "options": [
+              "Mehr Wasser trinken und früher schlafen",
+              "Mehr Kaffee trinken",
+              "Sport vermeiden",
+              "Weniger essen"
+            ],
+            "answer": "Mehr Wasser trinken und früher schlafen",
+            "explanationAr": "الدليل حرفياً: «Der Arzt untersucht mich und sagt, ich soll mehr Wasser trinken und früher schlafen.» — نصيحة الطبيب: شرب ماء أكثر والنوم أبكر.",
+            "promptAr": "ماذا ينصحها الطبيب؟"
+          },
+          {
+            "id": "t-a2-08-q3",
+            "type": "mc",
+            "promptDe": "Was verschreibt der Arzt?",
+            "options": [
+              "Tabletten",
+              "Tropfen",
+              "eine Spritze"
+            ],
+            "answer": "Tabletten",
+            "explanationAr": "«Er verschreibt mir Tabletten.» — التحسينُ كان ماءً ونوماً، لكن الوصفةَ أقراصٌ حرفياً.",
+            "promptAr": "ماذا يصف الطبيب؟"
+          },
+          {
+            "id": "t-a2-08-q4",
+            "type": "fill",
+            "promptDe": "Ich hätte gern einen ___.",
+            "answer": [
+              "Termin"
+            ],
+            "explanationAr": "الدليل حرفياً: «Ich rufe beim Arzt an und sage: „Ich hätte gern einen Termin.“ Die Arzthelferin gibt mir einen Termin am Montag um zehn Uhr.» — صيغةُ طلبٍ مهذّبة: hätte gern + مفعولٌ أكوزاتيف.",
+            "promptAr": "أود حجز ___."
+          }
+        ]
+      },
+      "current": {
+        "id": "t-a2-08",
+        "level": "A2",
+        "titleDe": "Ein Termin beim Arzt",
+        "titleAr": "موعد عند الطبيب",
+        "de": "Seit drei Tagen tut mir der Kopf weh. Ich rufe beim Arzt an und sage: „Ich hätte gern einen Termin.“ Die Arzthelferin gibt mir einen Termin am Montag um zehn Uhr. Der Arzt untersucht mich und sagt, ich soll mehr Wasser trinken und früher schlafen. Er verschreibt mir Tabletten. Schon am Dienstag geht es mir besser.",
+        "ar": "منذ ثلاثة أيام يؤلمني رأسي. أتصل بالطبيب وأقول: «أودّ موعداً». المساعدة تعطيني موعداً يوم الاثنين الساعة العاشرة. يفحصني الطبيب ويقول إن عليّ شرب ماء أكثر والنوم أبكر. يصف لي أقراصاً. يوم الثلاثاء أشعر بتحسّن.",
+        "questions": [
+          {
+            "id": "t-a2-08-q1",
+            "type": "mc",
+            "promptDe": "Warum rufe ich beim Arzt an?",
+            "options": [
+              "Weil ich Kopfschmerzen habe",
+              "Weil ich müde bin",
+              "Weil ich einen Test mache",
+              "Weil ich Urlaub brauche"
+            ],
+            "answer": "Weil ich Kopfschmerzen habe",
+            "explanationAr": "النص يقول: «Seit drei Tagen tut mir der Kopf weh» — لديّ صداع منذ ثلاثة أيام.",
+            "promptAr": "لماذا أتصل بعيادة الطبيب؟"
+          },
+          {
+            "id": "t-a2-08-q2",
+            "type": "mc",
+            "promptDe": "Was soll ich laut Arzt tun?",
+            "options": [
+              "Mehr Wasser trinken und früher schlafen",
+              "Mehr Kaffee trinken",
+              "Sport vermeiden",
+              "Weniger essen"
+            ],
+            "answer": "Mehr Wasser trinken und früher schlafen",
+            "explanationAr": "النص يقول: «ich soll mehr Wasser trinken und früher schlafen».",
+            "promptAr": "ماذا ينصحني الطبيب أن أفعل؟"
+          },
+          {
+            "id": "t-a2-08-q3",
+            "type": "mc",
+            "promptDe": "Was verschreibt der Arzt?",
+            "options": [
+              "Tabletten",
+              "Tropfen",
+              "eine Spritze"
+            ],
+            "answer": "Tabletten",
+            "explanationAr": "«Er verschreibt mir Tabletten.» — التحسينُ كان ماءً ونوماً، لكن الوصفةَ أقراصٌ حرفياً.",
+            "promptAr": "ماذا يصف الطبيب؟"
+          },
+          {
+            "id": "t-a2-08-q4",
+            "type": "fill",
+            "promptDe": "Ich hätte gern einen ___.",
+            "answer": [
+              "Termin"
+            ],
+            "explanationAr": "الدليل حرفياً: «Ich rufe beim Arzt an und sage: „Ich hätte gern einen Termin.“ Die Arzthelferin gibt mir einen Termin am Montag um zehn Uhr.» — صيغةُ طلبٍ مهذّبة: hätte gern + مفعولٌ أكوزاتيف.",
+            "promptAr": "أود حجز ___."
+          }
+        ]
+      }
+    },
+    {
+      "id": "t-a2-09",
+      "level": "A2",
+      "decision": "corrected",
+      "rationale": "Restored first-person narrator perspective, removed an unsafe and irrelevant ticket comment, and replaced the duplicate duration cloze with the window request.",
+      "previous": {
+        "id": "t-a2-09",
+        "level": "A2",
+        "titleDe": "Mit dem Zug nach Hamburg",
+        "titleAr": "بالقطار إلى هامبورغ",
+        "de": "Am Freitag fahre ich mit dem Zug nach Hamburg. Mein Koffer ist schwer, weil ich eine Woche bleibe. Im Zug suche ich meinen Platz: Wagen 7, Platz 24. Neben mir sitzt eine Frau mit einem Baby. Sie fragt mich, ob ich das Fenster öffnen kann. Die Fahrt dauert drei Stunden, und ich höre Musik.",
+        "ar": "يوم الجمعة أسافر بالقطار إلى هامبورغ. حقيبتي ثقيلة لأنني أبقى أسبوعاً. في القطار أبحث عن مقعدي: العربة 7، المقعد 24. بجانبي تجلس امرأة مع رضيع. تسألني إن كان بإمكاني فتح النافذة. تستغرق الرحلة ثلاث ساعات وأنا أستمع إلى الموسيقى.",
+        "questions": [
+          {
+            "id": "t-a2-09-q1",
+            "type": "mc",
+            "promptDe": "Wie lange dauert die Fahrt?",
+            "options": [
+              "Drei Stunden",
+              "Eine Stunde",
+              "Sieben Stunden",
+              "Eine Woche"
+            ],
+            "answer": "Drei Stunden",
+            "explanationAr": "الدليل حرفياً: «Die Fahrt dauert drei Stunden, und ich höre Musik.» — الرحلة تستغرق ثلاث ساعات.",
+            "promptAr": "كم تستغرق الرحلة؟"
+          },
+          {
+            "id": "t-a2-09-q2",
+            "type": "mc",
+            "promptDe": "Wer sitzt neben der Person?",
+            "options": [
+              "Eine Frau mit einem Baby",
+              "Ein alter Mann",
+              "Ein Kind",
+              "Niemand"
+            ],
+            "answer": "Eine Frau mit einem Baby",
+            "explanationAr": "الدليل حرفياً: «Neben mir sitzt eine Frau mit einem Baby.» — بجانبه امرأة مع رضيع.",
+            "promptAr": "من يجلس بجانبها؟"
+          },
+          {
+            "id": "t-a2-09-q3",
+            "type": "mc",
+            "promptDe": "Welchen Platz hat die Person im Zug?",
+            "options": [
+              "Wagen 7, Platz 24",
+              "Wagen 4, Platz 27",
+              "Wagen 7, Platz 42"
+            ],
+            "answer": "Wagen 7, Platz 24",
+            "explanationAr": "«Wagen 7, Platz 24.» — والأرقامُ تُخدعُ من يقلبُها بصرياً فلا تراجعْ تذكرتَك.",
+            "promptAr": "أي مقعد لها في القطار؟"
+          },
+          {
+            "id": "t-a2-09-q4",
+            "type": "fill",
+            "promptDe": "Die Fahrt dauert ___ Stunden.",
+            "answer": [
+              "drei",
+              "3"
+            ],
+            "explanationAr": "الجوابُ في النصِّ حرفياً: «Die Fahrt dauert drei Stunden».",
+            "promptAr": "تستغرق الرحلة ___ ساعات."
+          }
+        ]
+      },
+      "current": {
+        "id": "t-a2-09",
+        "level": "A2",
+        "titleDe": "Mit dem Zug nach Hamburg",
+        "titleAr": "بالقطار إلى هامبورغ",
+        "de": "Am Freitag fahre ich mit dem Zug nach Hamburg. Mein Koffer ist schwer, weil ich eine Woche bleibe. Im Zug suche ich meinen Platz: Wagen 7, Platz 24. Neben mir sitzt eine Frau mit einem Baby. Sie fragt mich, ob ich das Fenster öffnen kann. Die Fahrt dauert drei Stunden, und ich höre Musik.",
+        "ar": "يوم الجمعة أسافر بالقطار إلى هامبورغ. حقيبتي ثقيلة لأنني أبقى أسبوعاً. في القطار أبحث عن مقعدي: العربة 7، المقعد 24. بجانبي تجلس امرأة مع رضيع. تسألني إن كان بإمكاني فتح النافذة. تستغرق الرحلة ثلاث ساعات وأنا أستمع إلى الموسيقى.",
+        "questions": [
+          {
+            "id": "t-a2-09-q1",
+            "type": "mc",
+            "promptDe": "Wie lange dauert die Fahrt?",
+            "options": [
+              "Drei Stunden",
+              "Eine Stunde",
+              "Sieben Stunden",
+              "Eine Woche"
+            ],
+            "answer": "Drei Stunden",
+            "explanationAr": "الدليل حرفياً: «Die Fahrt dauert drei Stunden, und ich höre Musik.» — الرحلة تستغرق ثلاث ساعات.",
+            "promptAr": "كم تستغرق الرحلة؟"
+          },
+          {
+            "id": "t-a2-09-q2",
+            "type": "mc",
+            "promptDe": "Wer sitzt neben mir?",
+            "options": [
+              "Eine Frau mit einem Baby",
+              "Ein alter Mann",
+              "Ein Kind",
+              "Niemand"
+            ],
+            "answer": "Eine Frau mit einem Baby",
+            "explanationAr": "النص يقول: «Neben mir sitzt eine Frau mit einem Baby».",
+            "promptAr": "من يجلس بجانبي؟"
+          },
+          {
+            "id": "t-a2-09-q3",
+            "type": "mc",
+            "promptDe": "Welchen Platz habe ich im Zug?",
+            "options": [
+              "Wagen 7, Platz 24",
+              "Wagen 4, Platz 27",
+              "Wagen 7, Platz 42"
+            ],
+            "answer": "Wagen 7, Platz 24",
+            "explanationAr": "النص يذكر بوضوح: «Wagen 7, Platz 24».",
+            "promptAr": "ما رقم مقعدي في القطار؟"
+          },
+          {
+            "id": "t-a2-09-q4",
+            "type": "fill",
+            "promptDe": "Die Frau fragt, ob ich das ___ öffnen kann.",
+            "answer": [
+              "Fenster"
+            ],
+            "explanationAr": "النص يقول: «Sie fragt mich, ob ich das Fenster öffnen kann».",
+            "promptAr": "تسألني المرأة إن كنت أستطيع فتح ___."
+          }
+        ]
+      }
+    },
+    {
+      "id": "t-a2-10",
+      "level": "A2",
+      "decision": "corrected",
+      "rationale": "Corrected the completely mismatched Arabic title, improved moving-box and van terminology, and replaced the inverse rent question with the distance disadvantage.",
+      "previous": {
+        "id": "t-a2-10",
+        "level": "A2",
+        "titleDe": "Ein Umzug steht an",
+        "titleAr": "انتظارٌ كبير",
+        "de": "Nächste Woche ziehe ich in eine neue Wohnung um. Deshalb muss ich viele Kartons packen. Zum Glück helfen mir meine Freunde am Samstag. Wir tragen die Kisten zusammen in den Transporter. Die neue Wohnung ist größer, aber sie liegt weiter von der Arbeit entfernt. Dafür ist die Miete günstiger als vorher.",
+        "ar": "الأسبوع القادم أنتقل إلى شقة جديدة. لذلك عليّ أن أحزم علبًا كثيرة. لحسن الحظ يساعدني أصدقائي السبت. نحمل الصناديق معًا إلى الشاحنة. الشقة الجديدة أكبر، لكنها أبعد عن العمل. بالمقابل كراؤها أرخص من السابق.",
+        "questions": [
+          {
+            "id": "t-a2-10-q1",
+            "type": "mc",
+            "promptDe": "Wann ist der Umzug?",
+            "options": [
+              "nächste Woche",
+              "heute",
+              "am Montag"
+            ],
+            "answer": "nächste Woche",
+            "explanationAr": "في النصِّ حرفياً: «Nächste Woche ziehe ich … um».",
+            "promptAr": "متى الانتقال؟"
+          },
+          {
+            "id": "t-a2-10-q2",
+            "type": "mc",
+            "promptDe": "Wer hilft am Samstag?",
+            "options": [
+              "die Nachbarn",
+              "meine Freunde",
+              "niemand"
+            ],
+            "answer": "meine Freunde",
+            "explanationAr": "في النصِّ حرفياً: «helfen mir meine Freunde am Samstag».",
+            "promptAr": "من يساعد يوم السبت؟"
+          },
+          {
+            "id": "t-a2-10-q3",
+            "type": "mc",
+            "promptDe": "Was ist ein Vorteil der neuen Wohnung?",
+            "options": [
+              "sie ist näher an der Arbeit",
+              "die Miete ist günstiger",
+              "es gibt einen Aufzug"
+            ],
+            "answer": "die Miete ist günstiger",
+            "explanationAr": "في النصِّ حرفياً: «Dafür ist die Miete günstiger als vorher».",
+            "promptAr": "ما ميزة الشقة الجديدة؟"
+          },
+          {
+            "id": "t-a2-10-q4",
+            "type": "truefalse",
+            "promptDe": "Die neue Wohnung ist teurer als die alte.",
+            "options": [
+              "richtig",
+              "falsch"
+            ],
+            "answer": "falsch",
+            "explanationAr": "الجوابُ في النصِّ حرفياً: «Dafür ist die Miete günstiger als vorher».",
+            "promptAr": "هل الشقة الجديدة أغلى من القديمة؟"
+          }
+        ]
+      },
+      "current": {
+        "id": "t-a2-10",
+        "level": "A2",
+        "titleDe": "Ein Umzug steht an",
+        "titleAr": "انتقال وشيك",
+        "de": "Nächste Woche ziehe ich in eine neue Wohnung um. Deshalb muss ich viele Kartons packen. Zum Glück helfen mir meine Freunde am Samstag. Wir tragen die Kisten zusammen in den Transporter. Die neue Wohnung ist größer, aber sie liegt weiter von der Arbeit entfernt. Dafür ist die Miete günstiger als vorher.",
+        "ar": "سأنتقل إلى شقة جديدة الأسبوع القادم. لذلك عليّ توضيب صناديق كرتونية كثيرة. لحسن الحظ سيساعدني أصدقائي يوم السبت. سنحمل الصناديق معاً إلى شاحنة النقل. الشقة الجديدة أكبر، لكنها أبعد عن مكان العمل. وفي المقابل، إيجارها أقل من السابق.",
+        "questions": [
+          {
+            "id": "t-a2-10-q1",
+            "type": "mc",
+            "promptDe": "Wann ist der Umzug?",
+            "options": [
+              "nächste Woche",
+              "heute",
+              "am Montag"
+            ],
+            "answer": "nächste Woche",
+            "explanationAr": "في النصِّ حرفياً: «Nächste Woche ziehe ich … um».",
+            "promptAr": "متى الانتقال؟"
+          },
+          {
+            "id": "t-a2-10-q2",
+            "type": "mc",
+            "promptDe": "Wer hilft am Samstag?",
+            "options": [
+              "die Nachbarn",
+              "meine Freunde",
+              "niemand"
+            ],
+            "answer": "meine Freunde",
+            "explanationAr": "في النصِّ حرفياً: «helfen mir meine Freunde am Samstag».",
+            "promptAr": "من يساعد يوم السبت؟"
+          },
+          {
+            "id": "t-a2-10-q3",
+            "type": "mc",
+            "promptDe": "Was ist ein Vorteil der neuen Wohnung?",
+            "options": [
+              "sie ist näher an der Arbeit",
+              "die Miete ist günstiger",
+              "es gibt einen Aufzug"
+            ],
+            "answer": "die Miete ist günstiger",
+            "explanationAr": "في النصِّ حرفياً: «Dafür ist die Miete günstiger als vorher».",
+            "promptAr": "ما ميزة الشقة الجديدة؟"
+          },
+          {
+            "id": "t-a2-10-q4",
+            "type": "fill",
+            "promptDe": "Die neue Wohnung liegt ___ von der Arbeit entfernt.",
+            "answer": [
+              "weiter"
+            ],
+            "explanationAr": "النص يقول: «sie liegt weiter von der Arbeit entfernt».",
+            "promptAr": "تقع الشقة الجديدة على مسافة ___ من العمل."
+          }
+        ]
+      }
+    },
+    {
+      "id": "t-a2-11",
+      "level": "A2",
+      "decision": "corrected",
+      "rationale": "Corrected Arabic Wohnzimmer and Glühbirnen terminology and aligned three questions and distractors with the first-person narrator.",
+      "previous": {
+        "id": "t-a2-11",
+        "level": "A2",
+        "titleDe": "Im Baumarkt",
+        "titleAr": "في متجر الأدوات",
+        "de": "Am Samstag war ich im Baumarkt, weil die Lampe in meinem Wohnzimmer kaputt war. Ich wusste nicht genau, welches Kabel ich brauche. Zum Glück hat mir ein Verkäufer geduldig geholfen. Er hat mir erklärt, dass das passende Kabel nicht viel kostet. Außerdem habe ich einen Schraubenzieher und zwei Glühbirnen gekauft.",
+        "ar": "السبت كنت في متجر الأدوات لأن المصباح في صالوني كان معطلًا. لم أعرف بالضبط أي كابل أحتاج. لحسن الحظ ساعدني بائعٌ بصبر. شرح لي أن الكابل المناسب لا يكلف كثيرًا. إضافة إلى ذلك اشتريت مفكًّا ومصباحين.",
+        "questions": [
+          {
+            "id": "t-a2-11-q1",
+            "type": "mc",
+            "promptDe": "Warum war er im Baumarkt?",
+            "options": [
+              "die Lampe war kaputt",
+              "er wollte einen Schrank bauen",
+              "er suchte ein Fahrrad"
+            ],
+            "answer": "die Lampe war kaputt",
+            "explanationAr": "في النصِّ حرفياً: «weil die Lampe … kaputt war».",
+            "promptAr": "لماذا ذهب إلى متجر الأدوات؟"
+          },
+          {
+            "id": "t-a2-11-q2",
+            "type": "mc",
+            "promptDe": "Wer hat ihm geholfen?",
+            "options": [
+              "ein Freund",
+              "ein Verkäufer",
+              "der Chef"
+            ],
+            "answer": "ein Verkäufer",
+            "explanationAr": "الدليل حرفياً: «Zum Glück hat mir ein Verkäufer geduldig geholfen». الفخّ: لا صديق ولا رئيس في النص.",
+            "promptAr": "من ساعده؟"
+          },
+          {
+            "id": "t-a2-11-q3",
+            "type": "mc",
+            "promptDe": "Was hat er außer dem Kabel gekauft?",
+            "options": [
+              "einen Hammer",
+              "zwei Glühbirnen und einen Schraubenzieher",
+              "eine neue Lampe"
+            ],
+            "answer": "zwei Glühbirnen und einen Schraubenzieher",
+            "explanationAr": "في النصِّ حرفياً: «Außerdem habe ich einen Schraubenzieher und zwei Glühbirnen gekauft».",
+            "promptAr": "ماذا اشترى غير السلك؟"
+          },
+          {
+            "id": "t-a2-11-q4",
+            "type": "fill",
+            "promptDe": "Der Verkäufer hat mir ___ geholfen.",
+            "answer": [
+              "geduldig"
+            ],
+            "explanationAr": "الجوابُ في النصِّ حرفياً: «hat mir ein Verkäufer geduldig geholfen».",
+            "promptAr": "ساعدني البائع ___."
+          }
+        ]
+      },
+      "current": {
+        "id": "t-a2-11",
+        "level": "A2",
+        "titleDe": "Im Baumarkt",
+        "titleAr": "في متجر الأدوات",
+        "de": "Am Samstag war ich im Baumarkt, weil die Lampe in meinem Wohnzimmer kaputt war. Ich wusste nicht genau, welches Kabel ich brauche. Zum Glück hat mir ein Verkäufer geduldig geholfen. Er hat mir erklärt, dass das passende Kabel nicht viel kostet. Außerdem habe ich einen Schraubenzieher und zwei Glühbirnen gekauft.",
+        "ar": "كنت يوم السبت في متجر أدوات البناء لأن مصباح غرفة المعيشة كان معطلاً. لم أكن أعرف بالضبط أي كابل أحتاج إليه. لحسن الحظ ساعدني أحد البائعين بصبر. وشرح لي أن الكابل المناسب لا يكلّف كثيراً. واشتريت أيضاً مفكاً ولمبتين كهربائيتين.",
+        "questions": [
+          {
+            "id": "t-a2-11-q1",
+            "type": "mc",
+            "promptDe": "Warum war ich im Baumarkt?",
+            "options": [
+              "die Lampe war kaputt",
+              "ich wollte einen Schrank bauen",
+              "ich suchte ein Fahrrad"
+            ],
+            "answer": "die Lampe war kaputt",
+            "explanationAr": "في النصِّ حرفياً: «weil die Lampe … kaputt war».",
+            "promptAr": "لماذا كنت في متجر أدوات البناء؟"
+          },
+          {
+            "id": "t-a2-11-q2",
+            "type": "mc",
+            "promptDe": "Wer hat mir geholfen?",
+            "options": [
+              "ein Freund",
+              "ein Verkäufer",
+              "der Chef"
+            ],
+            "answer": "ein Verkäufer",
+            "explanationAr": "الدليل حرفياً: «Zum Glück hat mir ein Verkäufer geduldig geholfen». الفخّ: لا صديق ولا رئيس في النص.",
+            "promptAr": "من ساعدني؟"
+          },
+          {
+            "id": "t-a2-11-q3",
+            "type": "mc",
+            "promptDe": "Was habe ich außer dem Kabel gekauft?",
+            "options": [
+              "einen Hammer",
+              "zwei Glühbirnen und einen Schraubenzieher",
+              "eine neue Lampe"
+            ],
+            "answer": "zwei Glühbirnen und einen Schraubenzieher",
+            "explanationAr": "في النصِّ حرفياً: «Außerdem habe ich einen Schraubenzieher und zwei Glühbirnen gekauft».",
+            "promptAr": "ماذا اشتريت إلى جانب الكابل؟"
+          },
+          {
+            "id": "t-a2-11-q4",
+            "type": "fill",
+            "promptDe": "Der Verkäufer hat mir ___ geholfen.",
+            "answer": [
+              "geduldig"
+            ],
+            "explanationAr": "الجوابُ في النصِّ حرفياً: «hat mir ein Verkäufer geduldig geholfen».",
+            "promptAr": "ساعدني البائع ___."
+          }
+        ]
+      }
+    },
+    {
+      "id": "t-a2-12",
+      "level": "A2",
+      "decision": "corrected",
+      "rationale": "Improved the Arabic start-time, headphones, weekend pause, and später wording without changing the German facts or answer keys.",
+      "previous": {
+        "id": "t-a2-12",
+        "level": "A2",
+        "titleDe": "Lärm von oben",
+        "titleAr": "ضجيجٌ من فوق",
+        "de": "Mein neuer Nachbar renoviert seine Wohnung. Seit Montag höre ich jeden Morgen ab sechs Uhr das Bohrgerät. Ich kann nicht mehr in Ruhe arbeiten, obwohl ich Kopfhörer benutze. Gestern habe ich mutig an seine Tür geklopft und ihn gefragt, ob er am Wochenende Pause machen kann. Er hat sich entschuldigt und versprochen, später anzufangen.",
+        "ar": "جارِي الجديد يرمّم شقته. منذ الاثنين أسمع آلة الحفر كل صباح من السادسة. لا أستطيع العمل بهدوء رغم أنني أستخدم سماعات. أمس طرقت بابه بشجاعة وسألته هل يستطيع التوقف في عطلة الأسبوع. اعتذر ووعَد أن يبدأ متأخرًا.",
+        "questions": [
+          {
+            "id": "t-a2-12-q1",
+            "type": "mc",
+            "promptDe": "Was macht der Nachbar seit Montag?",
+            "options": [
+              "er renoviert seine Wohnung",
+              "er feiert am Wochenende",
+              "er sucht eine neue Wohnung"
+            ],
+            "answer": "er renoviert seine Wohnung",
+            "explanationAr": "في النصِّ حرفياً: «Mein neuer Nachbar renoviert seine Wohnung».",
+            "promptAr": "ماذا يفعل الجار منذ الاثنين؟"
+          },
+          {
+            "id": "t-a2-12-q2",
+            "type": "mc",
+            "promptDe": "Ab wie viel Uhr ist es laut?",
+            "options": [
+              "um acht Uhr",
+              "ab sechs Uhr",
+              "um sieben Uhr"
+            ],
+            "answer": "ab sechs Uhr",
+            "explanationAr": "في النصِّ حرفياً: «ab sechs Uhr».",
+            "promptAr": "من الساعة كم يبدأ الضجيج؟"
+          },
+          {
+            "id": "t-a2-12-q3",
+            "type": "mc",
+            "promptDe": "Wie hat der Nachbar reagiert?",
+            "options": [
+              "er war wütend",
+              "er hat sich entschuldigt",
+              "er hat nichts gesagt"
+            ],
+            "answer": "er hat sich entschuldigt",
+            "explanationAr": "في النصِّ حرفياً: «Er hat sich entschuldigt und versprochen …».",
+            "promptAr": "كيف تفاعل الجار؟"
+          },
+          {
+            "id": "t-a2-12-q4",
+            "type": "truefalse",
+            "promptDe": "Der Nachbar hat versprochen, später anzufangen.",
+            "options": [
+              "richtig",
+              "falsch"
+            ],
+            "answer": "richtig",
+            "explanationAr": "الجوابُ في النصِّ حرفياً: «Er hat sich entschuldigt und versprochen, später anzufangen».",
+            "promptAr": "هل وعد الجار أن يبدأ لاحقاً؟"
+          }
+        ]
+      },
+      "current": {
+        "id": "t-a2-12",
+        "level": "A2",
+        "titleDe": "Lärm von oben",
+        "titleAr": "ضجيجٌ من فوق",
+        "de": "Mein neuer Nachbar renoviert seine Wohnung. Seit Montag höre ich jeden Morgen ab sechs Uhr das Bohrgerät. Ich kann nicht mehr in Ruhe arbeiten, obwohl ich Kopfhörer benutze. Gestern habe ich mutig an seine Tür geklopft und ihn gefragt, ob er am Wochenende Pause machen kann. Er hat sich entschuldigt und versprochen, später anzufangen.",
+        "ar": "يرمّم جاري الجديد شقته. ومنذ يوم الاثنين أسمع آلة الحفر كل صباح ابتداءً من السادسة. لم أعد أستطيع العمل بهدوء رغم أنني أستخدم سماعات الرأس. طرقت بابه بشجاعة أمس وسألته إن كان يستطيع أخذ استراحة في عطلة نهاية الأسبوع. اعتذر ووعد بأن يبدأ في وقت لاحق.",
+        "questions": [
+          {
+            "id": "t-a2-12-q1",
+            "type": "mc",
+            "promptDe": "Was macht der Nachbar seit Montag?",
+            "options": [
+              "er renoviert seine Wohnung",
+              "er feiert am Wochenende",
+              "er sucht eine neue Wohnung"
+            ],
+            "answer": "er renoviert seine Wohnung",
+            "explanationAr": "في النصِّ حرفياً: «Mein neuer Nachbar renoviert seine Wohnung».",
+            "promptAr": "ماذا يفعل الجار منذ الاثنين؟"
+          },
+          {
+            "id": "t-a2-12-q2",
+            "type": "mc",
+            "promptDe": "Ab wie viel Uhr ist es laut?",
+            "options": [
+              "um acht Uhr",
+              "ab sechs Uhr",
+              "um sieben Uhr"
+            ],
+            "answer": "ab sechs Uhr",
+            "explanationAr": "في النصِّ حرفياً: «ab sechs Uhr».",
+            "promptAr": "من الساعة كم يبدأ الضجيج؟"
+          },
+          {
+            "id": "t-a2-12-q3",
+            "type": "mc",
+            "promptDe": "Wie hat der Nachbar reagiert?",
+            "options": [
+              "er war wütend",
+              "er hat sich entschuldigt",
+              "er hat nichts gesagt"
+            ],
+            "answer": "er hat sich entschuldigt",
+            "explanationAr": "في النصِّ حرفياً: «Er hat sich entschuldigt und versprochen …».",
+            "promptAr": "كيف تفاعل الجار؟"
+          },
+          {
+            "id": "t-a2-12-q4",
+            "type": "truefalse",
+            "promptDe": "Der Nachbar hat versprochen, später anzufangen.",
+            "options": [
+              "richtig",
+              "falsch"
+            ],
+            "answer": "richtig",
+            "explanationAr": "الجوابُ في النصِّ حرفياً: «Er hat sich entschuldigt und versprochen, später anzufangen».",
+            "promptAr": "هل وعد الجار أن يبدأ لاحقاً؟"
+          }
+        ]
+      }
+    },
+    {
+      "id": "t-a2-13",
+      "level": "A2",
+      "decision": "corrected",
+      "rationale": "Removed invented male narration in Arabic and all questions, improved answer phrasing, and replaced the duplicate eight-week cloze with the trainer’s patience.",
+      "previous": {
+        "id": "t-a2-13",
+        "level": "A2",
+        "titleDe": "Ein Kurs im Schwimmen",
+        "titleAr": "دورةٌ في السباحة",
+        "de": "Als Kind habe ich nie schwimmen gelernt. Das wollte ich ändern, deshalb habe ich mich für einen Erwachsenen-Schwimmkurs angemeldet. Am Anfang hatte ich ein wenig Angst vor dem tiefen Wasser. Die Trainerin war sehr geduldig und hat mir Schritt für Schritt alles erklärt. Nach acht Wochen konnte ich zum ersten Mal allein durch das Becken schwimmen. Ich war unglaublich stolz.",
+        "ar": "في الطفولة لم أتعلّم السباحة أبدًا. أردتُ أن أغيّر هذا، لذلك سجّلت في دورة سباحة للبالغين. في البداية كان عندي قليل من الخوف من الماء العميق. المدربة كانت صبورة جدًا وشرحت لي كل شيء خطوة بخطوة. بعد ثمانية أسابيع استطعت أول مرة أن أسبح وحدي عبر الحوض. كنت فخورًا بشكل لا يُصدَّق.",
+        "questions": [
+          {
+            "id": "t-a2-13-q1",
+            "type": "mc",
+            "promptDe": "Warum hat er sich für einen Kurs angemeldet?",
+            "options": [
+              "er wollte schwimmen lernen",
+              "er brauchte Sport für die Gesundheit",
+              "seine Kinder wollten schwimmen lernen"
+            ],
+            "answer": "er wollte schwimmen lernen",
+            "explanationAr": "في النصِّ حرفياً: «Als Kind habe ich nie schwimmen gelernt. Das wollte ich ändern».",
+            "promptAr": "لماذا سجّل في دورة سباحة؟"
+          },
+          {
+            "id": "t-a2-13-q2",
+            "type": "mc",
+            "promptDe": "Wovor hatte er am Anfang Angst?",
+            "options": [
+              "vor dem kalten Wasser",
+              "vor dem tiefen Wasser",
+              "vor den anderen Teilnehmern"
+            ],
+            "answer": "vor dem tiefen Wasser",
+            "explanationAr": "في النصِّ حرفياً: «Angst vor dem tiefen Wasser».",
+            "promptAr": "ممّا كان يخاف في البداية؟"
+          },
+          {
+            "id": "t-a2-13-q3",
+            "type": "mc",
+            "promptDe": "Wann konnte er allein schwimmen?",
+            "options": [
+              "nach acht Wochen",
+              "am ersten Tag",
+              "nach einem Jahr"
+            ],
+            "answer": "nach acht Wochen",
+            "explanationAr": "في النصِّ حرفياً: «Nach acht Wochen konnte ich … schwimmen».",
+            "promptAr": "متى استطاع السباحة وحده؟"
+          },
+          {
+            "id": "t-a2-13-q4",
+            "type": "fill",
+            "promptDe": "Nach ___ Wochen konnte ich allein schwimmen.",
+            "answer": [
+              "acht",
+              "8"
+            ],
+            "explanationAr": "الجوابُ في النصِّ حرفياً: «Nach acht Wochen konnte ich zum ersten Mal allein … schwimmen».",
+            "promptAr": "بعد ___ أسابيع استطعت السباحة وحدي."
+          }
+        ]
+      },
+      "current": {
+        "id": "t-a2-13",
+        "level": "A2",
+        "titleDe": "Ein Kurs im Schwimmen",
+        "titleAr": "دورةٌ في السباحة",
+        "de": "Als Kind habe ich nie schwimmen gelernt. Das wollte ich ändern, deshalb habe ich mich für einen Erwachsenen-Schwimmkurs angemeldet. Am Anfang hatte ich ein wenig Angst vor dem tiefen Wasser. Die Trainerin war sehr geduldig und hat mir Schritt für Schritt alles erklärt. Nach acht Wochen konnte ich zum ersten Mal allein durch das Becken schwimmen. Ich war unglaublich stolz.",
+        "ar": "لم أتعلّم السباحة في طفولتي. أردت تغيير ذلك، ولذلك سجّلت في دورة سباحة للبالغين. في البداية كنت أخاف قليلاً من المياه العميقة. كانت المدربة صبورة جداً وشرحت لي كل شيء خطوة بخطوة. بعد ثمانية أسابيع استطعت للمرة الأولى أن أسبح وحدي عبر الحوض. شعرت بفخر شديد.",
+        "questions": [
+          {
+            "id": "t-a2-13-q1",
+            "type": "mc",
+            "promptDe": "Warum habe ich mich für einen Kurs angemeldet?",
+            "options": [
+              "weil ich schwimmen lernen wollte",
+              "weil ich Sport für die Gesundheit brauchte",
+              "weil meine Kinder schwimmen lernen wollten"
+            ],
+            "answer": "weil ich schwimmen lernen wollte",
+            "explanationAr": "في النصِّ حرفياً: «Als Kind habe ich nie schwimmen gelernt. Das wollte ich ändern».",
+            "promptAr": "لماذا سجّلت في دورة سباحة؟"
+          },
+          {
+            "id": "t-a2-13-q2",
+            "type": "mc",
+            "promptDe": "Wovor hatte ich am Anfang Angst?",
+            "options": [
+              "vor dem kalten Wasser",
+              "vor dem tiefen Wasser",
+              "vor den anderen Teilnehmern"
+            ],
+            "answer": "vor dem tiefen Wasser",
+            "explanationAr": "في النصِّ حرفياً: «Angst vor dem tiefen Wasser».",
+            "promptAr": "ممّ كنت أخاف في البداية؟"
+          },
+          {
+            "id": "t-a2-13-q3",
+            "type": "mc",
+            "promptDe": "Wann konnte ich allein schwimmen?",
+            "options": [
+              "nach acht Wochen",
+              "am ersten Tag",
+              "nach einem Jahr"
+            ],
+            "answer": "nach acht Wochen",
+            "explanationAr": "في النصِّ حرفياً: «Nach acht Wochen konnte ich … schwimmen».",
+            "promptAr": "متى استطعت السباحة وحدي؟"
+          },
+          {
+            "id": "t-a2-13-q4",
+            "type": "fill",
+            "promptDe": "Die Trainerin war sehr ___.",
+            "answer": [
+              "geduldig"
+            ],
+            "explanationAr": "النص يقول: «Die Trainerin war sehr geduldig».",
+            "promptAr": "كانت المدربة ___ جداً."
+          }
+        ]
+      }
+    },
+    {
+      "id": "t-a2-14",
+      "level": "A2",
+      "decision": "corrected",
+      "rationale": "Made the title claim “aus Tunis” explicit in both passages, corrected the singular Arabic title and malformed cycling/weather translation, and restored first-person perspective in the visitor question.",
+      "previous": {
+        "id": "t-a2-14",
+        "level": "A2",
+        "titleDe": "Besuch aus Tunis",
+        "titleAr": "ضيوفٌ من تونس",
+        "de": "Letzte Woche war meine Schwester zu Besuch in Hamburg. Wir haben uns viel vorgenommen: Am ersten Tag haben wir eine Bootsfahrt auf der Alster gemacht, und am zweiten Tag sind wir mit dem Fahrrad durch die Stadt gefahren. Das Wetter hat zum Glück perfekt mitgespielt. Am Abend haben wir in einem kleinen Restaurant gegessen und lange über die Familie gesprochen.",
+        "ar": "الأسبوع الماضي كانت أختي زائرة في هامبورغ. خطّطنا كثيرًا: اليوم الأول ركبنا قاربًا على بحيرة ألستر، والثاني دراجنا في المدينة. الحظ ساعدنا أن الطقس كان مثاليًا. مساءً أكلنا في مطعم صغير وتحدثنا طويلًا عن العائلة.",
+        "questions": [
+          {
+            "id": "t-a2-14-q1",
+            "type": "mc",
+            "promptDe": "Wer war zu Besuch?",
+            "options": [
+              "sein Bruder",
+              "seine Schwester",
+              "seine Tante"
+            ],
+            "answer": "seine Schwester",
+            "explanationAr": "الدليل حرفياً: «Letzte Woche war meine Schwester zu Besuch in Hamburg». الفخّ: الأخ والعمّة لم يُذكرا.",
+            "promptAr": "من كان في الزيارة؟"
+          },
+          {
+            "id": "t-a2-14-q2",
+            "type": "mc",
+            "promptDe": "Was haben sie am ersten Tag gemacht?",
+            "options": [
+              "eine Bootsfahrt",
+              "ein Fahrradrennen",
+              "einen Museumsbesuch"
+            ],
+            "answer": "eine Bootsfahrt",
+            "explanationAr": "في النصِّ حرفياً: «Am ersten Tag haben wir eine Bootsfahrt … gemacht».",
+            "promptAr": "ماذا فعلوا اليوم الأول؟"
+          },
+          {
+            "id": "t-a2-14-q3",
+            "type": "mc",
+            "promptDe": "Wie war das Wetter?",
+            "options": [
+              "es hat geregnet",
+              "perfekt",
+              "zu kalt"
+            ],
+            "answer": "perfekt",
+            "explanationAr": "في النصِّ حرفياً: «Das Wetter hat … perfekt mitgespielt».",
+            "promptAr": "كيف كان الجو؟"
+          },
+          {
+            "id": "t-a2-14-q4",
+            "type": "fill",
+            "promptDe": "Am zweiten Tag sind wir mit dem ___ durch die Stadt gefahren.",
+            "answer": [
+              "Fahrrad"
+            ],
+            "explanationAr": "الجوابُ في النصِّ حرفياً: «am zweiten Tag sind wir mit dem Fahrrad durch die Stadt gefahren».",
+            "promptAr": "اليوم الثاني تجولنا في المدينة ب___."
+          }
+        ]
+      },
+      "current": {
+        "id": "t-a2-14",
+        "level": "A2",
+        "titleDe": "Besuch aus Tunis",
+        "titleAr": "زيارة من تونس",
+        "de": "Letzte Woche war meine Schwester aus Tunis zu Besuch in Hamburg. Wir haben uns viel vorgenommen: Am ersten Tag haben wir eine Bootsfahrt auf der Alster gemacht, und am zweiten Tag sind wir mit dem Fahrrad durch die Stadt gefahren. Das Wetter hat zum Glück perfekt mitgespielt. Am Abend haben wir in einem kleinen Restaurant gegessen und lange über die Familie gesprochen.",
+        "ar": "زارتني أختي القادمة من تونس في هامبورغ الأسبوع الماضي. خططنا لأنشطة كثيرة: قمنا بجولة بالقارب في بحيرة ألستر في اليوم الأول، وتجولنا في المدينة بالدراجة في اليوم الثاني. ولحسن الحظ كان الطقس مثالياً. تناولنا العشاء في مطعم صغير وتحدثنا طويلاً عن العائلة.",
+        "questions": [
+          {
+            "id": "t-a2-14-q1",
+            "type": "mc",
+            "promptDe": "Wer war bei mir zu Besuch?",
+            "options": [
+              "mein Bruder",
+              "meine Schwester",
+              "meine Tante"
+            ],
+            "answer": "meine Schwester",
+            "explanationAr": "النص يقول: «Letzte Woche war meine Schwester aus Tunis zu Besuch in Hamburg».",
+            "promptAr": "من زارني؟"
+          },
+          {
+            "id": "t-a2-14-q2",
+            "type": "mc",
+            "promptDe": "Was haben sie am ersten Tag gemacht?",
+            "options": [
+              "eine Bootsfahrt",
+              "ein Fahrradrennen",
+              "einen Museumsbesuch"
+            ],
+            "answer": "eine Bootsfahrt",
+            "explanationAr": "في النصِّ حرفياً: «Am ersten Tag haben wir eine Bootsfahrt … gemacht».",
+            "promptAr": "ماذا فعلوا اليوم الأول؟"
+          },
+          {
+            "id": "t-a2-14-q3",
+            "type": "mc",
+            "promptDe": "Wie war das Wetter?",
+            "options": [
+              "es hat geregnet",
+              "perfekt",
+              "zu kalt"
+            ],
+            "answer": "perfekt",
+            "explanationAr": "في النصِّ حرفياً: «Das Wetter hat … perfekt mitgespielt».",
+            "promptAr": "كيف كان الجو؟"
+          },
+          {
+            "id": "t-a2-14-q4",
+            "type": "fill",
+            "promptDe": "Am zweiten Tag sind wir mit dem ___ durch die Stadt gefahren.",
+            "answer": [
+              "Fahrrad"
+            ],
+            "explanationAr": "الجوابُ في النصِّ حرفياً: «am zweiten Tag sind wir mit dem Fahrrad durch die Stadt gefahren».",
+            "promptAr": "اليوم الثاني تجولنا في المدينة ب___."
+          }
+        ]
+      }
+    },
+    {
+      "id": "t-a2-15",
+      "level": "A2",
+      "decision": "corrected",
+      "rationale": "Completed the missing German verb angeboten, aligned the Arabic repair alternatives, restored first-person perspective, and replaced the duplicate purchase decision with the idiom gut in Schuss.",
+      "previous": {
+        "id": "t-a2-15",
+        "level": "A2",
+        "titleDe": "Das kaputte Fahrrad",
+        "titleAr": "الدراجة المعطلة",
+        "de": "Gestern ist mein Fahrrad mitten auf dem Weg zur Arbeit kaputtgegangen. Der Reifen war platt und die Kette ist auch heruntergefallen. In der Werkstatt hat man mir zwei Möglichkeiten: Die Reparatur kostet fünfzig Euro, aber ein neues Fahrrad kostet mindestens zweihundert. Außerdem ist mein altes Fahrrad noch gut in Schuss. Also habe ich mich entschieden, es reparieren zu lassen.",
+        "ar": "أمس تعطّلت دراجتي في منتصف الطريق إلى العمل. الإطار كان مثقوبًا والسلسلة سقطت أيضًا. في الورشة عرضوا عليّ احتمالين: الإصلاح يكلف خمسين يورو، لكن جديدة تكلف مئتين على الأقل. ثم إن دراجتي القديمة ما تزال سليمة. لذلك قررتُ أن أُصلحها.",
+        "questions": [
+          {
+            "id": "t-a2-15-q1",
+            "type": "mc",
+            "promptDe": "Was war mit dem Fahrrad kaputt?",
+            "options": [
+              "nur der Reifen",
+              "der Reifen und die Kette",
+              "die Bremsen"
+            ],
+            "answer": "der Reifen und die Kette",
+            "explanationAr": "في النصِّ حرفياً: «Der Reifen war platt und die Kette … auch».",
+            "promptAr": "ماذا تعطّل في الدراجة؟"
+          },
+          {
+            "id": "t-a2-15-q2",
+            "type": "mc",
+            "promptDe": "Was kostet die Reparatur?",
+            "options": [
+              "fünfzig Euro",
+              "zweihundert Euro",
+              "zwanzig Euro"
+            ],
+            "answer": "fünfzig Euro",
+            "explanationAr": "في النصِّ حرفياً: «Die Reparatur kostet fünfzig Euro».",
+            "promptAr": "كم تكلفة التصليح؟"
+          },
+          {
+            "id": "t-a2-15-q3",
+            "type": "mc",
+            "promptDe": "Was hat er entschieden?",
+            "options": [
+              "ein neues Fahrrad zu kaufen",
+              "es reparieren zu lassen",
+              "es zu verkaufen"
+            ],
+            "answer": "es reparieren zu lassen",
+            "explanationAr": "في النصِّ حرفياً: «… entschieden, es reparieren zu lassen».",
+            "promptAr": "ماذا قرر؟"
+          },
+          {
+            "id": "t-a2-15-q4",
+            "type": "truefalse",
+            "promptDe": "Er hat ein neues Fahrrad gekauft.",
+            "options": [
+              "richtig",
+              "falsch"
+            ],
+            "answer": "falsch",
+            "explanationAr": "الجوابُ في النصِّ حرفياً: «Also habe ich mich entschieden, es reparieren zu lassen».",
+            "promptAr": "هل اشترى دراجة جديدة؟"
+          }
+        ]
+      },
+      "current": {
+        "id": "t-a2-15",
+        "level": "A2",
+        "titleDe": "Das kaputte Fahrrad",
+        "titleAr": "الدراجة المعطلة",
+        "de": "Gestern ist mein Fahrrad mitten auf dem Weg zur Arbeit kaputtgegangen. Der Reifen war platt und die Kette ist auch heruntergefallen. In der Werkstatt hat man mir zwei Möglichkeiten angeboten: Die Reparatur kostet fünfzig Euro, aber ein neues Fahrrad kostet mindestens zweihundert. Außerdem ist mein altes Fahrrad noch gut in Schuss. Also habe ich mich entschieden, es reparieren zu lassen.",
+        "ar": "تعطّلت دراجتي أمس في منتصف الطريق إلى العمل. كان الإطار فارغاً من الهواء، وسقطت السلسلة أيضاً. عرضوا عليّ في الورشة خيارين: يكلّف الإصلاح خمسين يورو، بينما تكلّف دراجة جديدة مئتي يورو على الأقل. إضافة إلى ذلك، ما تزال دراجتي القديمة في حالة جيدة. لذلك قررت أن أطلب إصلاحها.",
+        "questions": [
+          {
+            "id": "t-a2-15-q1",
+            "type": "mc",
+            "promptDe": "Was war mit dem Fahrrad kaputt?",
+            "options": [
+              "nur der Reifen",
+              "der Reifen und die Kette",
+              "die Bremsen"
+            ],
+            "answer": "der Reifen und die Kette",
+            "explanationAr": "في النصِّ حرفياً: «Der Reifen war platt und die Kette … auch».",
+            "promptAr": "ماذا تعطّل في الدراجة؟"
+          },
+          {
+            "id": "t-a2-15-q2",
+            "type": "mc",
+            "promptDe": "Was kostet die Reparatur?",
+            "options": [
+              "fünfzig Euro",
+              "zweihundert Euro",
+              "zwanzig Euro"
+            ],
+            "answer": "fünfzig Euro",
+            "explanationAr": "في النصِّ حرفياً: «Die Reparatur kostet fünfzig Euro».",
+            "promptAr": "كم تكلفة التصليح؟"
+          },
+          {
+            "id": "t-a2-15-q3",
+            "type": "mc",
+            "promptDe": "Was habe ich entschieden?",
+            "options": [
+              "ein neues Fahrrad zu kaufen",
+              "es reparieren zu lassen",
+              "es zu verkaufen"
+            ],
+            "answer": "es reparieren zu lassen",
+            "explanationAr": "في النصِّ حرفياً: «… entschieden, es reparieren zu lassen».",
+            "promptAr": "ماذا قررت؟"
+          },
+          {
+            "id": "t-a2-15-q4",
+            "type": "fill",
+            "promptDe": "Mein altes Fahrrad ist noch gut in ___.",
+            "answer": [
+              "Schuss"
+            ],
+            "explanationAr": "النص يقول: «Außerdem ist mein altes Fahrrad noch gut in Schuss.»",
+            "promptAr": "ما تزال دراجتي القديمة في حالة ___."
+          }
+        ]
+      }
+    },
+    {
+      "id": "t-a2-16",
+      "level": "A2",
+      "decision": "corrected",
+      "rationale": "Corrected the Arabic job-role and aufstehen wording and changed the sister answer so it no longer overstates helping as completing the CV herself.",
+      "previous": {
+        "id": "t-a2-16",
+        "level": "A2",
+        "titleDe": "Eine Bewerbung schreiben",
+        "titleAr": "كتابةُ طلبِ عملٍ",
+        "de": "Ich habe eine Anzeige gelesen: Eine Bäckerei in der Nähe sucht eine Aushilfe am Wochenende. Sofort habe ich mich beworben. In der Bewerbung habe ich geschrieben, dass ich zuverlässig bin und gerne früh aufstehe. Meine Schwester hat mir geholfen, den Lebenslauf zu verbessern. Zwei Tage später hat mich die Chefin angerufen und zu einem Gespräch eingeladen.",
+        "ar": "قرأت إعلانًا: مخبزٌ قريب يبحث عن مساعدة في نهاية الأسبوع. فورًا تقدّمت بطلب. في الطلب كتبت أني جدير بالثقة وأني أحب الاستيقاظ مبكرًا. أختي ساعدتني في تحسين سيرتي الذاتية. بعد يومين اتصلت بي المديرة ودعتني إلى مقابلة.",
+        "questions": [
+          {
+            "id": "t-a2-16-q1",
+            "type": "mc",
+            "promptDe": "Wer sucht eine Aushilfe?",
+            "options": [
+              "eine Bäckerei",
+              "ein Restaurant",
+              "eine Fabrik"
+            ],
+            "answer": "eine Bäckerei",
+            "explanationAr": "في النصِّ حرفياً: «Eine Bäckerei … sucht eine Aushilfe».",
+            "promptAr": "من يبحث عن عامل مؤقت؟"
+          },
+          {
+            "id": "t-a2-16-q2",
+            "type": "mc",
+            "promptDe": "Was hat die Schwester gemacht?",
+            "options": [
+              "sie hat den Lebenslauf verbessert",
+              "sie hat die Chefin angerufen",
+              "sie hat mitgearbeitet"
+            ],
+            "answer": "sie hat den Lebenslauf verbessert",
+            "explanationAr": "في النصِّ حرفياً: «Meine Schwester hat mir geholfen, den Lebenslauf zu verbessern».",
+            "promptAr": "ماذا فعلت الأخت؟"
+          },
+          {
+            "id": "t-a2-16-q3",
+            "type": "mc",
+            "promptDe": "Was kam zwei Tage später?",
+            "options": [
+              "eine Absage",
+              "eine Einladung zum Gespräch",
+              "nichts"
+            ],
+            "answer": "eine Einladung zum Gespräch",
+            "explanationAr": "في النصِّ حرفياً: «hat mich die Chefin angerufen und zu einem Gespräch eingeladen».",
+            "promptAr": "ماذا وصل بعد يومين؟"
+          },
+          {
+            "id": "t-a2-16-q4",
+            "type": "fill",
+            "promptDe": "In der Bewerbung habe ich geschrieben, dass ich ___ bin.",
+            "answer": [
+              "zuverlässig"
+            ],
+            "explanationAr": "الجوابُ في النصِّ حرفياً: «dass ich zuverlässig bin und gerne früh aufstehe».",
+            "promptAr": "كتبت في الطلب أنني ___."
+          }
+        ]
+      },
+      "current": {
+        "id": "t-a2-16",
+        "level": "A2",
+        "titleDe": "Eine Bewerbung schreiben",
+        "titleAr": "كتابةُ طلبِ عملٍ",
+        "de": "Ich habe eine Anzeige gelesen: Eine Bäckerei in der Nähe sucht eine Aushilfe am Wochenende. Sofort habe ich mich beworben. In der Bewerbung habe ich geschrieben, dass ich zuverlässig bin und gerne früh aufstehe. Meine Schwester hat mir geholfen, den Lebenslauf zu verbessern. Zwei Tage später hat mich die Chefin angerufen und zu einem Gespräch eingeladen.",
+        "ar": "قرأت إعلاناً: يبحث مخبز قريب عن عامل مؤقت في عطلة نهاية الأسبوع. تقدمت فوراً بطلب للعمل. كتبت في الطلب أنني شخص موثوق وأنني أحب النهوض مبكراً. ساعدتني أختي في تحسين سيرتي الذاتية. وبعد يومين اتصلت بي المديرة ودعتني إلى مقابلة.",
+        "questions": [
+          {
+            "id": "t-a2-16-q1",
+            "type": "mc",
+            "promptDe": "Wer sucht eine Aushilfe?",
+            "options": [
+              "eine Bäckerei",
+              "ein Restaurant",
+              "eine Fabrik"
+            ],
+            "answer": "eine Bäckerei",
+            "explanationAr": "في النصِّ حرفياً: «Eine Bäckerei … sucht eine Aushilfe».",
+            "promptAr": "من يبحث عن عامل مؤقت؟"
+          },
+          {
+            "id": "t-a2-16-q2",
+            "type": "mc",
+            "promptDe": "Was hat die Schwester gemacht?",
+            "options": [
+              "sie hat beim Lebenslauf geholfen",
+              "sie hat die Chefin angerufen",
+              "sie hat mitgearbeitet"
+            ],
+            "answer": "sie hat beim Lebenslauf geholfen",
+            "explanationAr": "النص يقول: «Meine Schwester hat mir geholfen, den Lebenslauf zu verbessern».",
+            "promptAr": "ماذا فعلت الأخت؟"
+          },
+          {
+            "id": "t-a2-16-q3",
+            "type": "mc",
+            "promptDe": "Was geschah zwei Tage später?",
+            "options": [
+              "eine Absage",
+              "eine Einladung zum Gespräch",
+              "nichts"
+            ],
+            "answer": "eine Einladung zum Gespräch",
+            "explanationAr": "في النصِّ حرفياً: «hat mich die Chefin angerufen und zu einem Gespräch eingeladen».",
+            "promptAr": "ماذا وصل بعد يومين؟"
+          },
+          {
+            "id": "t-a2-16-q4",
+            "type": "fill",
+            "promptDe": "In der Bewerbung habe ich geschrieben, dass ich ___ bin.",
+            "answer": [
+              "zuverlässig"
+            ],
+            "explanationAr": "الجوابُ في النصِّ حرفياً: «dass ich zuverlässig bin und gerne früh aufstehe».",
+            "promptAr": "كتبت في الطلب أنني ___."
+          }
+        ]
+      }
+    },
+    {
+      "id": "t-a2-17",
+      "level": "A2",
+      "decision": "corrected",
+      "rationale": "Corrected Stecker from sockets to plugs in Arabic, made the replacement answer exact, and replaced the duplicate LED cloze with disconnecting plugs.",
+      "previous": {
+        "id": "t-a2-17",
+        "level": "A2",
+        "titleDe": "Strom sparen",
+        "titleAr": "توفيرُ الكهرباء",
+        "de": "Die Stromrechnung ist in diesem Jahr ziemlich hoch gewesen. Deshalb wollen wir jetzt zusammen sparen. Wir haben einen Plan gemacht: Alle Lampen werden ausgeschaltet, wenn niemand im Raum ist. Die alten Glühbirnen ersetzen wir durch LED-Lampen, die viel weniger Strom verbrauchen. Außerdem ziehen wir alle Stecker raus. Im nächsten Monat können wir bestimmt schon einen Unterschied sehen.",
+        "ar": "فاتورة الكهرباء هذا العام كانت مرتفعة إلى حدٍّ ما. لذلك نريد أن نوفر معًا الآن. وضعنا خطة: جميع المصابيح تُطفأ حين لا يوجد أحد في الغرفة. نستبدل المصابيح القديمة بمصابيح LED تستهلك أقل بكثير. وأيضًا ننزع كل المقابس. الشهر القادم نستطيع غالبًا أن نرى الفرق.",
+        "questions": [
+          {
+            "id": "t-a2-17-q1",
+            "type": "mc",
+            "promptDe": "Warum wollen sie sparen?",
+            "options": [
+              "die Rechnung war hoch",
+              "sie reisen viel",
+              "das Geld ist knapp"
+            ],
+            "answer": "die Rechnung war hoch",
+            "explanationAr": "في النصِّ حرفياً: «Die Stromrechnung ist … ziemlich hoch gewesen».",
+            "promptAr": "لماذا يريدون التوفير؟"
+          },
+          {
+            "id": "t-a2-17-q2",
+            "type": "mc",
+            "promptDe": "Was ersetzen sie?",
+            "options": [
+              "die Lampen durch LED-Lampen",
+              "den Kühlschrank",
+              "die Heizung"
+            ],
+            "answer": "die Lampen durch LED-Lampen",
+            "explanationAr": "في النصِّ حرفياً: «Die alten Glühbirnen ersetzen wir durch LED-Lampen».",
+            "promptAr": "ماذا يستبدلون؟"
+          },
+          {
+            "id": "t-a2-17-q3",
+            "type": "mc",
+            "promptDe": "Wann sehen sie einen Unterschied?",
+            "options": [
+              "im nächsten Monat",
+              "erst nächstes Jahr",
+              "nie"
+            ],
+            "answer": "im nächsten Monat",
+            "explanationAr": "في النصِّ حرفياً: «Im nächsten Monat können wir … einen Unterschied sehen».",
+            "promptAr": "متى يلاحظون الفرق؟"
+          },
+          {
+            "id": "t-a2-17-q4",
+            "type": "fill",
+            "promptDe": "Wir ersetzen die alten Glühbirnen durch ___-Lampen.",
+            "answer": [
+              "LED"
+            ],
+            "explanationAr": "الجوابُ في النصِّ حرفياً: «ersetzen wir durch LED-Lampen, die viel weniger Strom verbrauchen».",
+            "promptAr": "نستبدل المصابيح القديمة بمصابيح ___."
+          }
+        ]
+      },
+      "current": {
+        "id": "t-a2-17",
+        "level": "A2",
+        "titleDe": "Strom sparen",
+        "titleAr": "توفيرُ الكهرباء",
+        "de": "Die Stromrechnung ist in diesem Jahr ziemlich hoch gewesen. Deshalb wollen wir jetzt zusammen sparen. Wir haben einen Plan gemacht: Alle Lampen werden ausgeschaltet, wenn niemand im Raum ist. Die alten Glühbirnen ersetzen wir durch LED-Lampen, die viel weniger Strom verbrauchen. Außerdem ziehen wir alle Stecker raus. Im nächsten Monat können wir bestimmt schon einen Unterschied sehen.",
+        "ar": "كانت فاتورة الكهرباء مرتفعة إلى حد ما هذا العام. لذلك نريد الآن أن نوفّر معاً. وضعنا خطة: نطفئ جميع المصابيح عندما لا يكون أحد في الغرفة. ونستبدل المصابيح القديمة بمصابيح LED تستهلك كهرباء أقل بكثير. كما نفصل جميع القوابس عن الكهرباء. سنلاحظ بالتأكيد فرقاً في الشهر القادم.",
+        "questions": [
+          {
+            "id": "t-a2-17-q1",
+            "type": "mc",
+            "promptDe": "Warum wollen sie sparen?",
+            "options": [
+              "die Rechnung war hoch",
+              "sie reisen viel",
+              "das Geld ist knapp"
+            ],
+            "answer": "die Rechnung war hoch",
+            "explanationAr": "في النصِّ حرفياً: «Die Stromrechnung ist … ziemlich hoch gewesen».",
+            "promptAr": "لماذا يريدون التوفير؟"
+          },
+          {
+            "id": "t-a2-17-q2",
+            "type": "mc",
+            "promptDe": "Was ersetzen sie?",
+            "options": [
+              "die alten Glühbirnen durch LED-Lampen",
+              "den Kühlschrank",
+              "die Heizung"
+            ],
+            "answer": "die alten Glühbirnen durch LED-Lampen",
+            "explanationAr": "في النصِّ حرفياً: «Die alten Glühbirnen ersetzen wir durch LED-Lampen».",
+            "promptAr": "ماذا يستبدلون؟"
+          },
+          {
+            "id": "t-a2-17-q3",
+            "type": "mc",
+            "promptDe": "Wann sehen sie einen Unterschied?",
+            "options": [
+              "im nächsten Monat",
+              "erst nächstes Jahr",
+              "nie"
+            ],
+            "answer": "im nächsten Monat",
+            "explanationAr": "في النصِّ حرفياً: «Im nächsten Monat können wir … einen Unterschied sehen».",
+            "promptAr": "متى يلاحظون الفرق؟"
+          },
+          {
+            "id": "t-a2-17-q4",
+            "type": "fill",
+            "promptDe": "Außerdem ziehen wir alle ___ raus.",
+            "answer": [
+              "Stecker"
+            ],
+            "explanationAr": "النص يقول: «Außerdem ziehen wir alle Stecker raus».",
+            "promptAr": "كما نفصل جميع ___ عن الكهرباء."
+          }
+        ]
+      }
+    },
+    {
+      "id": "t-a2-18",
+      "level": "A2",
+      "decision": "corrected",
+      "rationale": "Improved Arabic mobile-plan terminology, restored first-person perspective, and replaced the duplicate two-year term cloze with the monthly price.",
+      "previous": {
+        "id": "t-a2-18",
+        "level": "A2",
+        "titleDe": "Ein Vertrag fürs Handy",
+        "titleAr": "عقدٌ للهاتف",
+        "de": "Mein alter Vertrag läuft Ende des Monats aus. Ich war heute in einem Handyladen und habe drei Angebote verglichen. Der günstigste Tarif kostet fünfundzwanzig Euro im Monat und hat fünf Gigabytes Datenvolumen. Die Verkäuferin hat mich darauf hingewiesen, dass die Vertragslaufzeit zwei Jahre beträgt. Das ist lang, aber dafür ist die Flatrate inklusive.",
+        "ar": "عقدي القديم ينتهي آخر الشهر. اليوم كنت في محل هواتف وقارنت ثلاثة عروض. أرخص تسعيرة تكلف خمسة وعشرين يورو في الشهر وفيها خمسة غيغابايت بيانات. نبّهتني البائعة أن مدة العقد سنتان. هذا طويل، لكن بالمقابل الاشتراك اللامحدود متضمَّن.",
+        "questions": [
+          {
+            "id": "t-a2-18-q1",
+            "type": "mc",
+            "promptDe": "Was hat er im Laden gemacht?",
+            "options": [
+              "drei Angebote verglichen",
+              "ein Handy gekauft",
+              "den Vertrag verlängert"
+            ],
+            "answer": "drei Angebote verglichen",
+            "explanationAr": "في النصِّ حرفياً: «habe drei Angebote verglichen».",
+            "promptAr": "ماذا فعل في المتجر؟"
+          },
+          {
+            "id": "t-a2-18-q2",
+            "type": "mc",
+            "promptDe": "Wie viel Datenvolumen gibt es?",
+            "options": [
+              "fünf Gigabytes",
+              "zwei Gigabytes",
+              "zehn Gigabytes"
+            ],
+            "answer": "fünf Gigabytes",
+            "explanationAr": "في النصِّ حرفياً: «fünf Gigabytes Datenvolumen».",
+            "promptAr": "كم حجم البيانات؟"
+          },
+          {
+            "id": "t-a2-18-q3",
+            "type": "mc",
+            "promptDe": "Wie lange läuft der Vertrag?",
+            "options": [
+              "ein Jahr",
+              "zwei Jahre",
+              "drei Jahre"
+            ],
+            "answer": "zwei Jahre",
+            "explanationAr": "في النصِّ حرفياً: «die Vertragslaufzeit zwei Jahre beträgt».",
+            "promptAr": "كم مدة العقد؟"
+          },
+          {
+            "id": "t-a2-18-q4",
+            "type": "fill",
+            "promptDe": "Die Vertragslaufzeit beträgt ___ Jahre.",
+            "answer": [
+              "zwei",
+              "2"
+            ],
+            "explanationAr": "الجوابُ في النصِّ حرفياً: «dass die Vertragslaufzeit zwei Jahre beträgt».",
+            "promptAr": "مدة العقد ___ سنوات."
+          }
+        ]
+      },
+      "current": {
+        "id": "t-a2-18",
+        "level": "A2",
+        "titleDe": "Ein Vertrag fürs Handy",
+        "titleAr": "عقدٌ للهاتف",
+        "de": "Mein alter Vertrag läuft Ende des Monats aus. Ich war heute in einem Handyladen und habe drei Angebote verglichen. Der günstigste Tarif kostet fünfundzwanzig Euro im Monat und hat fünf Gigabytes Datenvolumen. Die Verkäuferin hat mich darauf hingewiesen, dass die Vertragslaufzeit zwei Jahre beträgt. Das ist lang, aber dafür ist die Flatrate inklusive.",
+        "ar": "ينتهي عقدي القديم في نهاية الشهر. ذهبت اليوم إلى متجر للهواتف وقارنت ثلاثة عروض. تكلّف أرخص تعرفة خمسة وعشرين يورو شهرياً، وتشمل خمسة غيغابايت من البيانات. نبّهتني البائعة إلى أن مدة العقد سنتان. هذه مدة طويلة، لكن التعرفة غير المحدودة مشمولة في المقابل.",
+        "questions": [
+          {
+            "id": "t-a2-18-q1",
+            "type": "mc",
+            "promptDe": "Was habe ich im Laden gemacht?",
+            "options": [
+              "drei Angebote verglichen",
+              "ein Handy gekauft",
+              "den Vertrag verlängert"
+            ],
+            "answer": "drei Angebote verglichen",
+            "explanationAr": "في النصِّ حرفياً: «habe drei Angebote verglichen».",
+            "promptAr": "ماذا فعلت في المتجر؟"
+          },
+          {
+            "id": "t-a2-18-q2",
+            "type": "mc",
+            "promptDe": "Wie viel Datenvolumen gibt es?",
+            "options": [
+              "fünf Gigabytes",
+              "zwei Gigabytes",
+              "zehn Gigabytes"
+            ],
+            "answer": "fünf Gigabytes",
+            "explanationAr": "في النصِّ حرفياً: «fünf Gigabytes Datenvolumen».",
+            "promptAr": "كم حجم البيانات؟"
+          },
+          {
+            "id": "t-a2-18-q3",
+            "type": "mc",
+            "promptDe": "Wie lange läuft der Vertrag?",
+            "options": [
+              "ein Jahr",
+              "zwei Jahre",
+              "drei Jahre"
+            ],
+            "answer": "zwei Jahre",
+            "explanationAr": "في النصِّ حرفياً: «die Vertragslaufzeit zwei Jahre beträgt».",
+            "promptAr": "كم مدة العقد؟"
+          },
+          {
+            "id": "t-a2-18-q4",
+            "type": "fill",
+            "promptDe": "Der günstigste Tarif kostet ___ Euro im Monat.",
+            "answer": [
+              "fünfundzwanzig",
+              "25"
+            ],
+            "explanationAr": "النص يقول: «Der günstigste Tarif kostet fünfundzwanzig Euro im Monat».",
+            "promptAr": "تكلّف أرخص تعرفة ___ يورو شهرياً."
+          }
+        ]
+      }
+    },
+    {
+      "id": "t-a2-19",
+      "level": "A2",
+      "decision": "corrected",
+      "rationale": "Made the two-Kaltmieten deposit and 1040-euro amount explicit, removed the unsupported Warmmiete/heating label, corrected Arabic e-mail wording, and recast the speculative “small chance” question as competition.",
+      "previous": {
+        "id": "t-a2-19",
+        "level": "A2",
+        "titleDe": "Die Wohnungsbesichtigung",
+        "titleAr": "معاينةُ الشقّة",
+        "de": "Gestern hatte ich eine Wohnungsbesichtigung. Die Wohnung liegt im dritten Stock, ohne Aufzug. Sie hat zwei Zimmer, eine kleine Küche und einen Balkon. Die Kaltmiete beträgt 520 Euro, dazu kommen 130 Euro Nebenkosten. Die Kaution sind zwei Monatsmieten. Der Vermieter war freundlich, aber es waren zwölf Interessenten da. Heute Abend schicke ich meine Unterlagen per E-Mail. Hoffentlich bekomme ich eine Zusage.",
+        "ar": "أمسِ كانت لي معاينةُ شقّة. الشقّةُ في الطابقِ الثالثِ بلا مصعد. فيها غرفتانِ ومطبخٌ صغيرٌ وشرفة. الإيجارُ الصافي 520 يورو تُضافُ إليه 130 تكاليفَ جانبية. الضمانُ إيجارُ شهرَين. كانَ المؤجِّرُ لطيفاً لكنْ حضرَ اثنا عشرَ راغباً. هذا المساءَ أُرسِلُ وثائقي بالبريد. عسى أن أحصلَ على موافقة.",
+        "questions": [
+          {
+            "id": "t-a2-19-q1",
+            "type": "fill",
+            "promptDe": "Die Warmmiete beträgt zusammen ___ Euro.",
+            "answer": [
+              "650",
+              "650 Euro",
+              "sechshundertfünfzig"
+            ],
+            "explanationAr": "الدليل حرفياً: «Die Kaltmiete beträgt 520 Euro, dazu kommen 130 Euro Nebenkosten.» — 520 صافٍ + 130 جانبية = 650؛ وهذا هو الفرقُ العمليُّ بينَ Kaltmiete وWarmmiete.",
+            "promptAr": "الأجرة الشاملة مع التدفئة ___ يورو."
+          },
+          {
+            "id": "t-a2-19-q2",
+            "type": "mc",
+            "promptDe": "Wie hoch ist die Kaution?",
+            "options": [
+              "520 Euro",
+              "1040 Euro",
+              "130 Euro"
+            ],
+            "answer": "1040 Euro",
+            "explanationAr": "«zwei Monatsmieten» أي ضِعفُ الإيجارِ الصافي 520.",
+            "promptAr": "كم مبلغ التأمين؟"
+          },
+          {
+            "id": "t-a2-19-q3",
+            "type": "mc",
+            "promptDe": "Warum ist die Chance klein?",
+            "options": [
+              "Die Wohnung ist teuer",
+              "Es gab zwölf Interessenten",
+              "Der Vermieter war unfreundlich"
+            ],
+            "answer": "Es gab zwölf Interessenten",
+            "explanationAr": "في النصِّ حرفياً: «es waren zwölf Interessenten da».",
+            "promptAr": "لماذا الفرصة ضئيلة؟"
+          },
+          {
+            "id": "t-a2-19-q4",
+            "type": "truefalse",
+            "promptDe": "Die Wohnung liegt im dritten Stock und hat einen Aufzug.",
+            "options": [
+              "richtig",
+              "falsch"
+            ],
+            "answer": "falsch",
+            "explanationAr": "الجوابُ في النصِّ حرفياً: «im dritten Stock, ohne Aufzug».",
+            "promptAr": "هل الشقة في الطابق الثالث وبها مصعد؟"
+          }
+        ]
+      },
+      "current": {
+        "id": "t-a2-19",
+        "level": "A2",
+        "titleDe": "Die Wohnungsbesichtigung",
+        "titleAr": "معاينةُ الشقّة",
+        "de": "Gestern hatte ich eine Wohnungsbesichtigung. Die Wohnung liegt im dritten Stock, ohne Aufzug. Sie hat zwei Zimmer, eine kleine Küche und einen Balkon. Die Kaltmiete beträgt 520 Euro, dazu kommen 130 Euro Nebenkosten. Die Kaution beträgt zwei Kaltmieten, also 1040 Euro. Der Vermieter war freundlich, aber es waren zwölf Interessenten da. Heute Abend schicke ich meine Unterlagen per E-Mail. Hoffentlich bekomme ich eine Zusage.",
+        "ar": "عاينت شقة أمس. تقع الشقة في الطابق الثالث بلا مصعد. فيها غرفتان ومطبخ صغير وشرفة. يبلغ الإيجار الأساسي 520 يورو، وتُضاف إليه تكاليف جانبية قدرها 130 يورو. يبلغ التأمين إيجار شهرين أساسيين، أي 1040 يورو. كان المؤجّر لطيفاً، لكن حضر اثنا عشر مهتماً بالشقة. سأرسل وثائقي بالبريد الإلكتروني هذا المساء. آمل أن أحصل على موافقة.",
+        "questions": [
+          {
+            "id": "t-a2-19-q1",
+            "type": "fill",
+            "promptDe": "Miete und Nebenkosten betragen zusammen ___ Euro.",
+            "answer": [
+              "650",
+              "650 Euro",
+              "sechshundertfünfzig"
+            ],
+            "explanationAr": "النص يقول: «Die Kaltmiete beträgt 520 Euro, dazu kommen 130 Euro Nebenkosten.» — المجموع 650 يورو.",
+            "promptAr": "يبلغ مجموع الإيجار والتكاليف الجانبية ___ يورو."
+          },
+          {
+            "id": "t-a2-19-q2",
+            "type": "mc",
+            "promptDe": "Wie hoch ist die Kaution?",
+            "options": [
+              "520 Euro",
+              "1040 Euro",
+              "130 Euro"
+            ],
+            "answer": "1040 Euro",
+            "explanationAr": "النص يقول: «Die Kaution beträgt zwei Kaltmieten, also 1040 Euro».",
+            "promptAr": "كم مبلغ التأمين؟"
+          },
+          {
+            "id": "t-a2-19-q3",
+            "type": "mc",
+            "promptDe": "Warum gibt es viel Konkurrenz um die Wohnung?",
+            "options": [
+              "Die Wohnung ist teuer",
+              "Es gab zwölf Interessenten",
+              "Der Vermieter war unfreundlich"
+            ],
+            "answer": "Es gab zwölf Interessenten",
+            "explanationAr": "النص يقول: «es waren zwölf Interessenten da».",
+            "promptAr": "لماذا توجد منافسة كبيرة على الشقة؟"
+          },
+          {
+            "id": "t-a2-19-q4",
+            "type": "truefalse",
+            "promptDe": "Die Wohnung liegt im dritten Stock und hat einen Aufzug.",
+            "options": [
+              "richtig",
+              "falsch"
+            ],
+            "answer": "falsch",
+            "explanationAr": "الجوابُ في النصِّ حرفياً: «im dritten Stock, ohne Aufzug».",
+            "promptAr": "هل الشقة في الطابق الثالث وبها مصعد؟"
+          }
+        ]
+      }
+    },
+    {
+      "id": "t-a2-20",
+      "level": "A2",
+      "decision": "corrected",
+      "rationale": "Restored first-person narrator perspective in the report-deadline questions and synchronized their options while preserving the evidence and keys.",
+      "previous": {
+        "id": "t-a2-20",
+        "level": "A2",
+        "titleDe": "Ein Missverständnis im Büro",
+        "titleAr": "سوءُ فهمٍ في المكتب",
+        "de": "Am Montag sollte ich den Bericht abgeben. Ich hatte verstanden, dass die Frist am Mittwoch endet. Deshalb war der Bericht noch nicht fertig. Meine Kollegin sagte mir: Der Chef wartet seit heute Morgen. Ich habe mich sofort entschuldigt und erklärt, warum ich mich geirrt habe. Der Chef war ruhig. Wir haben vereinbart, dass ich ihm den Bericht bis achtzehn Uhr schicke. Seitdem schreibe ich mir jede Frist in den Kalender.",
+        "ar": "يومَ الإثنينِ كانَ عليَّ تسليمُ التقرير. كنتُ فهمتُ أنَّ المهلةَ تنتهي الأربعاء. لذلك لم يكنِ التقريرُ جاهزاً. قالت لي زميلتي: المديرُ ينتظرُ منذُ الصباح. اعتذرتُ فوراً وشرحتُ سببَ خطئي. كانَ المديرُ هادئاً. اتّفقنا أن أُرسِلَ لهُ التقريرَ حتى السادسةَ مساءً. ومنذُ ذلك الحينِ أكتبُ كلَّ مهلةٍ في التقويم.",
+        "questions": [
+          {
+            "id": "t-a2-20-q1",
+            "type": "mc",
+            "promptDe": "Warum war der Bericht nicht fertig?",
+            "options": [
+              "Er hatte keine Zeit",
+              "Er hatte die Frist falsch verstanden",
+              "Der Chef war krank"
+            ],
+            "answer": "Er hatte die Frist falsch verstanden",
+            "explanationAr": "«Ich hatte verstanden, dass die Frist am Mittwoch endet» — ماضٍ أسبق Plusquamperfekt.",
+            "promptAr": "لماذا لم يكن التقرير جاهزاً؟"
+          },
+          {
+            "id": "t-a2-20-q2",
+            "type": "fill",
+            "promptDe": "Er schickt den Bericht bis ___ Uhr.",
+            "answer": [
+              "achtzehn",
+              "18",
+              "18 Uhr"
+            ],
+            "explanationAr": "«bis achtzehn Uhr» أي السادسةَ مساءً.",
+            "promptAr": "يرسل التقرير حتى الساعة ___."
+          },
+          {
+            "id": "t-a2-20-q3",
+            "type": "mc",
+            "promptDe": "Was macht er jetzt immer?",
+            "options": [
+              "Er fragt den Chef",
+              "Er schreibt jede Frist in den Kalender",
+              "Er kommt früher"
+            ],
+            "answer": "Er schreibt jede Frist in den Kalender",
+            "explanationAr": "في النصِّ حرفياً: «Seitdem schreibe ich mir jede Frist in den Kalender.»",
+            "promptAr": "ماذا يفعل الآن دائماً؟"
+          },
+          {
+            "id": "t-a2-20-q4",
+            "type": "truefalse",
+            "promptDe": "Der Chef hat laut geschimpft.",
+            "options": [
+              "richtig",
+              "falsch"
+            ],
+            "answer": "falsch",
+            "explanationAr": "الجوابُ في النصِّ حرفياً: «Der Chef war ruhig».",
+            "promptAr": "هل صرخ المدير بصوت عالٍ؟"
+          }
+        ]
+      },
+      "current": {
+        "id": "t-a2-20",
+        "level": "A2",
+        "titleDe": "Ein Missverständnis im Büro",
+        "titleAr": "سوءُ فهمٍ في المكتب",
+        "de": "Am Montag sollte ich den Bericht abgeben. Ich hatte verstanden, dass die Frist am Mittwoch endet. Deshalb war der Bericht noch nicht fertig. Meine Kollegin sagte mir: Der Chef wartet seit heute Morgen. Ich habe mich sofort entschuldigt und erklärt, warum ich mich geirrt habe. Der Chef war ruhig. Wir haben vereinbart, dass ich ihm den Bericht bis achtzehn Uhr schicke. Seitdem schreibe ich mir jede Frist in den Kalender.",
+        "ar": "يومَ الإثنينِ كانَ عليَّ تسليمُ التقرير. كنتُ فهمتُ أنَّ المهلةَ تنتهي الأربعاء. لذلك لم يكنِ التقريرُ جاهزاً. قالت لي زميلتي: المديرُ ينتظرُ منذُ الصباح. اعتذرتُ فوراً وشرحتُ سببَ خطئي. كانَ المديرُ هادئاً. اتّفقنا أن أُرسِلَ لهُ التقريرَ حتى السادسةَ مساءً. ومنذُ ذلك الحينِ أكتبُ كلَّ مهلةٍ في التقويم.",
+        "questions": [
+          {
+            "id": "t-a2-20-q1",
+            "type": "mc",
+            "promptDe": "Warum war mein Bericht nicht fertig?",
+            "options": [
+              "Ich hatte keine Zeit",
+              "Ich hatte die Frist falsch verstanden",
+              "Der Chef war krank"
+            ],
+            "answer": "Ich hatte die Frist falsch verstanden",
+            "explanationAr": "«Ich hatte verstanden, dass die Frist am Mittwoch endet» — ماضٍ أسبق Plusquamperfekt.",
+            "promptAr": "لماذا لم يكن تقريري جاهزاً؟"
+          },
+          {
+            "id": "t-a2-20-q2",
+            "type": "fill",
+            "promptDe": "Ich schicke den Bericht bis ___ Uhr.",
+            "answer": [
+              "achtzehn",
+              "18",
+              "18 Uhr"
+            ],
+            "explanationAr": "«bis achtzehn Uhr» أي السادسةَ مساءً.",
+            "promptAr": "سأرسل التقرير بحلول الساعة ___."
+          },
+          {
+            "id": "t-a2-20-q3",
+            "type": "mc",
+            "promptDe": "Was mache ich seitdem immer?",
+            "options": [
+              "Ich frage den Chef",
+              "Ich schreibe jede Frist in den Kalender",
+              "Ich komme früher"
+            ],
+            "answer": "Ich schreibe jede Frist in den Kalender",
+            "explanationAr": "في النصِّ حرفياً: «Seitdem schreibe ich mir jede Frist in den Kalender.»",
+            "promptAr": "ماذا أفعل دائماً منذ ذلك الحين؟"
+          },
+          {
+            "id": "t-a2-20-q4",
+            "type": "truefalse",
+            "promptDe": "Der Chef hat laut geschimpft.",
+            "options": [
+              "richtig",
+              "falsch"
+            ],
+            "answer": "falsch",
+            "explanationAr": "الجوابُ في النصِّ حرفياً: «Der Chef war ruhig».",
+            "promptAr": "هل صرخ المدير بصوت عالٍ؟"
+          }
+        ]
+      }
+    },
+    {
+      "id": "t-a2-21",
+      "level": "A2",
+      "decision": "confirmed-current",
+      "rationale": "Confirmed the complete tentative-flu appointment, Arabic alignment, word count, and both distinct advice questions without change.",
+      "previous": {
+        "id": "t-a2-21",
+        "level": "A2",
+        "titleDe": "Linas Arzttermin: Verdacht auf Grippe",
+        "titleAr": "موعد لينا عند الطبيب: اشتباه بالإنفلونزا",
+        "de": "Mein Name ist Lina. Heute habe ich einen Termin bei Dr. Müller. Ich fühle mich seit drei Tagen nicht gut. Ich habe Husten und Schnupfen, und mein Kopf tut weh. Ich bin um neun Uhr in der Praxis. Zuerst muss ich am Empfang meine Versichertenkarte zeigen. Dann warte ich im Wartezimmer. Nach fünfzehn Minuten ruft mich die Arzthelferin. Der Arzt misst meine Temperatur und hört meine Lunge ab. Der Arzt vermutet eine Grippe. Er schreibt mir ein Rezept und sagt, ich soll viel Tee trinken und zwei Tage im Bett bleiben. Die Arzthelferin erklärt mir, in welcher Apotheke ich das Rezept abgeben kann. Dort hole ich später die Tabletten. Ich sage meinem Chef am Telefon, dass ich krank bin und heute nicht zur Arbeit komme. Danach fahre ich direkt nach Hause. Ich ruhe mich aus und trinke eine Tasse Tee. Wenn es mir morgen nicht besser geht, rufe ich die Praxis noch einmal an.",
+        "ar": "اسمي لينا. لديّ اليوم موعد مع الدكتور مولر. أشعر بتوعّك منذ ثلاثة أيام. لديّ سعال وزكام ورأسي يؤلمني. أكون في العيادة عند التاسعة. يجب أولاً أن أُظهر بطاقة التأمين عند الاستقبال. ثم أنتظر في غرفة الانتظار. بعد خمس عشرة دقيقة تناديني المساعدة الطبية. يقيس الطبيب حرارتي ويستمع إلى رئتيّ. يرجّح الطبيب إصابتي بالإنفلونزا. يكتب لي وصفة وينصحني بشرب الكثير من الشاي والبقاء في السرير يومين. تشرح لي المساعدة الطبية في أي صيدلية أستطيع صرف الوصفة. أشتري الأقراص من هناك لاحقاً. أخبر مديري على الهاتف أنني مريضة ولن أذهب إلى العمل اليوم. ثم أعود مباشرة إلى البيت. أستريح وأشرب كوباً من الشاي. إذا لم أشعر بتحسن غداً، أتصل بالعيادة مرة أخرى.",
+        "questions": [
+          {
+            "type": "mc",
+            "promptDe": "Wie lange ist sie schon krank?",
+            "promptAr": "منذ متى وهي مريضة؟",
+            "options": [
+              "Seit gestern",
+              "Seit drei Tagen",
+              "Seit einer Woche",
+              "Seit zwei Wochen"
+            ],
+            "answer": "Seit drei Tagen",
+            "explanationAr": "الدليل في النص: «Ich fühle mich seit drei Tagen nicht gut.» — منذ ثلاثة أيام.",
+            "id": "t-a2-21-q1"
+          },
+          {
+            "type": "mc",
+            "promptDe": "Was soll sie tun?",
+            "promptAr": "ماذا عليها أن تفعل؟",
+            "options": [
+              "Sofort arbeiten gehen",
+              "Viel Tee trinken und im Bett bleiben",
+              "Nur Sport machen",
+              "Kaffee trinken"
+            ],
+            "answer": "Viel Tee trinken und im Bett bleiben",
+            "explanationAr": "الدليل في النص: «ich soll viel Tee trinken und zwei Tage im Bett bleiben.» — أوصاها بشرب الكثير من الشاي والبقاء في السرير.",
+            "id": "t-a2-21-q2"
+          }
+        ],
+        "wordCountDe": 154
+      },
+      "current": {
+        "id": "t-a2-21",
+        "level": "A2",
+        "titleDe": "Linas Arzttermin: Verdacht auf Grippe",
+        "titleAr": "موعد لينا عند الطبيب: اشتباه بالإنفلونزا",
+        "de": "Mein Name ist Lina. Heute habe ich einen Termin bei Dr. Müller. Ich fühle mich seit drei Tagen nicht gut. Ich habe Husten und Schnupfen, und mein Kopf tut weh. Ich bin um neun Uhr in der Praxis. Zuerst muss ich am Empfang meine Versichertenkarte zeigen. Dann warte ich im Wartezimmer. Nach fünfzehn Minuten ruft mich die Arzthelferin. Der Arzt misst meine Temperatur und hört meine Lunge ab. Der Arzt vermutet eine Grippe. Er schreibt mir ein Rezept und sagt, ich soll viel Tee trinken und zwei Tage im Bett bleiben. Die Arzthelferin erklärt mir, in welcher Apotheke ich das Rezept abgeben kann. Dort hole ich später die Tabletten. Ich sage meinem Chef am Telefon, dass ich krank bin und heute nicht zur Arbeit komme. Danach fahre ich direkt nach Hause. Ich ruhe mich aus und trinke eine Tasse Tee. Wenn es mir morgen nicht besser geht, rufe ich die Praxis noch einmal an.",
+        "ar": "اسمي لينا. لديّ اليوم موعد مع الدكتور مولر. أشعر بتوعّك منذ ثلاثة أيام. لديّ سعال وزكام ورأسي يؤلمني. أكون في العيادة عند التاسعة. يجب أولاً أن أُظهر بطاقة التأمين عند الاستقبال. ثم أنتظر في غرفة الانتظار. بعد خمس عشرة دقيقة تناديني المساعدة الطبية. يقيس الطبيب حرارتي ويستمع إلى رئتيّ. يرجّح الطبيب إصابتي بالإنفلونزا. يكتب لي وصفة وينصحني بشرب الكثير من الشاي والبقاء في السرير يومين. تشرح لي المساعدة الطبية في أي صيدلية أستطيع صرف الوصفة. أشتري الأقراص من هناك لاحقاً. أخبر مديري على الهاتف أنني مريضة ولن أذهب إلى العمل اليوم. ثم أعود مباشرة إلى البيت. أستريح وأشرب كوباً من الشاي. إذا لم أشعر بتحسن غداً، أتصل بالعيادة مرة أخرى.",
+        "questions": [
+          {
+            "type": "mc",
+            "promptDe": "Wie lange ist sie schon krank?",
+            "promptAr": "منذ متى وهي مريضة؟",
+            "options": [
+              "Seit gestern",
+              "Seit drei Tagen",
+              "Seit einer Woche",
+              "Seit zwei Wochen"
+            ],
+            "answer": "Seit drei Tagen",
+            "explanationAr": "الدليل في النص: «Ich fühle mich seit drei Tagen nicht gut.» — منذ ثلاثة أيام.",
+            "id": "t-a2-21-q1"
+          },
+          {
+            "type": "mc",
+            "promptDe": "Was soll sie tun?",
+            "promptAr": "ماذا عليها أن تفعل؟",
+            "options": [
+              "Sofort arbeiten gehen",
+              "Viel Tee trinken und im Bett bleiben",
+              "Nur Sport machen",
+              "Kaffee trinken"
+            ],
+            "answer": "Viel Tee trinken und im Bett bleiben",
+            "explanationAr": "الدليل في النص: «ich soll viel Tee trinken und zwei Tage im Bett bleiben.» — أوصاها بشرب الكثير من الشاي والبقاء في السرير.",
+            "id": "t-a2-21-q2"
+          }
+        ],
+        "wordCountDe": 154
+      }
+    },
+    {
+      "id": "t-a2-22",
+      "level": "A2",
+      "decision": "corrected",
+      "rationale": "Corrected wach ist in Arabic from “wakes up” to “is awake”; all German content, word count, and question keys remain unchanged.",
+      "previous": {
+        "id": "t-a2-22",
+        "level": "A2",
+        "titleDe": "Eine E-Mail an die Lehrerin",
+        "titleAr": "رسالة إلى المعلمة",
+        "de": "Liebe Frau Becker,\n\nich kann heute leider nicht zum Unterricht kommen, weil meine Tochter krank ist. Sie hat Fieber und muss zu Hause bleiben. Der Kinderarzt hat gesagt, dass sie sich ausruhen soll. Deshalb bleibe ich heute bei ihr. Sie trinkt viel Wasser und ruht sich aus. Ich bleibe in ihrer Nähe und lese ihr eine Geschichte vor, wenn sie wach ist. Mein Mann ist auf Geschäftsreise und kann nicht helfen. Kann ich bitte die Hausaufgaben von einer Mitschülerin bekommen? Ich möchte den Stoff nachholen. Könnten Sie mir bitte auch mitteilen, welche Seiten wir heute im Buch lesen und welche Wörter ich lernen soll? Meine Mitschülerin Sara kann mir am Abend ein Foto von ihren Notizen schicken. Wenn es meiner Tochter morgen besser geht, komme ich wieder in den Kurs. Falls nicht, informiere ich Sie rechtzeitig. Ich erledige die Aufgaben zu Hause, damit ich nicht zu viel verpasse. Vielen Dank für Ihr Verständnis.\n\nMit freundlichen Grüßen\nFatima",
+        "ar": "السيدة بيكر المحترمة،\n\nللأسف لا أستطيع الحضور إلى الدرس اليوم لأن ابنتي مريضة. لديها حمى ويجب أن تبقى في البيت. قال طبيب الأطفال إنها تحتاج إلى الراحة. لذلك سأبقى معها اليوم. تشرب كثيراً من الماء وتستريح. أبقى بقربها وأقرأ لها قصة عندما تستيقظ. زوجي في رحلة عمل ولا يستطيع مساعدتي. هل يمكنني الحصول على الواجبات من إحدى زميلاتي؟ أريد أن أستدرك ما فاتني. هل يمكن أن تخبريني أيضاً أي صفحات سنقرأ في الكتاب اليوم وأي كلمات عليّ أن أتعلمها؟ تستطيع زميلتي سارة أن ترسل لي مساءً صورة من ملاحظاتها. إذا تحسنت ابنتي غداً، سأعود إلى الدورة. وإن لم تتحسن، سأخبرك في الوقت المناسب. سأنجز الواجبات في البيت كي لا يفوتني الكثير. شكراً جزيلاً لتفهّمك.\n\nمع خالص التحية،\nفاطمة",
+        "questions": [
+          {
+            "type": "mc",
+            "promptDe": "Warum kommt Fatima nicht zum Unterricht?",
+            "promptAr": "لماذا لن تأتي فاطمة؟",
+            "options": [
+              "Sie hat Fieber",
+              "Ihre Tochter ist krank",
+              "Sie hat keine Zeit",
+              "Der Unterricht fällt aus"
+            ],
+            "answer": "Ihre Tochter ist krank",
+            "explanationAr": "الدليل في النص: «weil meine Tochter krank ist.» — لأن ابنتها مريضة.",
+            "id": "t-a2-22-q1"
+          },
+          {
+            "id": "t-a2-22-q2",
+            "type": "mc",
+            "promptDe": "Was möchte Fatima mit dem Unterrichtsstoff machen?",
+            "promptAr": "ماذا تريد فاطمة أن تفعل بما فات من الدرس؟",
+            "options": [
+              "Sie möchte ihn nachholen",
+              "Sie möchte den Kurs wechseln",
+              "Sie möchte das Buch verkaufen"
+            ],
+            "answer": "Sie möchte ihn nachholen",
+            "explanationAr": "الدليل في النص: «Ich möchte den Stoff nachholen.» — تريد فاطمة استدراك ما فاتها."
+          }
+        ],
+        "wordCountDe": 157
+      },
+      "current": {
+        "id": "t-a2-22",
+        "level": "A2",
+        "titleDe": "Eine E-Mail an die Lehrerin",
+        "titleAr": "رسالة إلى المعلمة",
+        "de": "Liebe Frau Becker,\n\nich kann heute leider nicht zum Unterricht kommen, weil meine Tochter krank ist. Sie hat Fieber und muss zu Hause bleiben. Der Kinderarzt hat gesagt, dass sie sich ausruhen soll. Deshalb bleibe ich heute bei ihr. Sie trinkt viel Wasser und ruht sich aus. Ich bleibe in ihrer Nähe und lese ihr eine Geschichte vor, wenn sie wach ist. Mein Mann ist auf Geschäftsreise und kann nicht helfen. Kann ich bitte die Hausaufgaben von einer Mitschülerin bekommen? Ich möchte den Stoff nachholen. Könnten Sie mir bitte auch mitteilen, welche Seiten wir heute im Buch lesen und welche Wörter ich lernen soll? Meine Mitschülerin Sara kann mir am Abend ein Foto von ihren Notizen schicken. Wenn es meiner Tochter morgen besser geht, komme ich wieder in den Kurs. Falls nicht, informiere ich Sie rechtzeitig. Ich erledige die Aufgaben zu Hause, damit ich nicht zu viel verpasse. Vielen Dank für Ihr Verständnis.\n\nMit freundlichen Grüßen\nFatima",
+        "ar": "السيدة بيكر المحترمة،\n\nللأسف لا أستطيع الحضور إلى الدرس اليوم لأن ابنتي مريضة. لديها حمى ويجب أن تبقى في البيت. قال طبيب الأطفال إنها تحتاج إلى الراحة. لذلك سأبقى معها اليوم. تشرب كثيراً من الماء وتستريح. أبقى بقربها وأقرأ لها قصة عندما تكون مستيقظة. زوجي في رحلة عمل ولا يستطيع مساعدتي. هل يمكنني الحصول على الواجبات من إحدى زميلاتي؟ أريد أن أستدرك ما فاتني. هل يمكن أن تخبريني أيضاً أي صفحات سنقرأ في الكتاب اليوم وأي كلمات عليّ أن أتعلمها؟ تستطيع زميلتي سارة أن ترسل لي مساءً صورة من ملاحظاتها. إذا تحسنت ابنتي غداً، سأعود إلى الدورة. وإن لم تتحسن، سأخبرك في الوقت المناسب. سأنجز الواجبات في البيت كي لا يفوتني الكثير. شكراً جزيلاً لتفهّمك.\n\nمع خالص التحية،\nفاطمة",
+        "questions": [
+          {
+            "type": "mc",
+            "promptDe": "Warum kommt Fatima nicht zum Unterricht?",
+            "promptAr": "لماذا لن تأتي فاطمة؟",
+            "options": [
+              "Sie hat Fieber",
+              "Ihre Tochter ist krank",
+              "Sie hat keine Zeit",
+              "Der Unterricht fällt aus"
+            ],
+            "answer": "Ihre Tochter ist krank",
+            "explanationAr": "الدليل في النص: «weil meine Tochter krank ist.» — لأن ابنتها مريضة.",
+            "id": "t-a2-22-q1"
+          },
+          {
+            "id": "t-a2-22-q2",
+            "type": "mc",
+            "promptDe": "Was möchte Fatima mit dem Unterrichtsstoff machen?",
+            "promptAr": "ماذا تريد فاطمة أن تفعل بما فات من الدرس؟",
+            "options": [
+              "Sie möchte ihn nachholen",
+              "Sie möchte den Kurs wechseln",
+              "Sie möchte das Buch verkaufen"
+            ],
+            "answer": "Sie möchte ihn nachholen",
+            "explanationAr": "الدليل في النص: «Ich möchte den Stoff nachholen.» — تريد فاطمة استدراك ما فاتها."
+          }
+        ],
+        "wordCountDe": 157
+      }
+    },
+    {
+      "id": "t-a2-23",
+      "level": "A2",
+      "decision": "confirmed-current",
+      "rationale": "Confirmed the complete route sequence, Arabic alignment, 167-word metadata, and both time and street questions without change.",
+      "previous": {
+        "id": "t-a2-23",
+        "level": "A2",
+        "titleDe": "Beispiel: Wegbeschreibung zum Bahnhof",
+        "titleAr": "مثال: وصف الطريق إلى المحطة",
+        "de": "Entschuldigung, wie komme ich am besten zum Hauptbahnhof? — Gehen Sie hier geradeaus bis zur Ampel. Dort biegen Sie links in die Goethestraße. Dann gehen Sie etwa 300 Meter. Sie sehen eine Bäckerei auf der rechten Seite. Überqueren Sie die Straße und gehen Sie durch die Unterführung. Der Bahnhof liegt direkt gegenüber. Sie brauchen zu Fuß ungefähr acht Minuten. Der Weg ist einfach, wenn Sie auf die Straßenschilder achten. Die Ampel steht vor einem großen Geschäft. Nachdem Sie links abgebogen sind, bleiben Sie auf dem Gehweg und folgen der Goethestraße. Auf der rechten Seite sehen Sie zuerst ein kleines Hotel und später die Bäckerei. Gehen Sie bis zur nächsten großen Straße und überqueren Sie sie an der Ampel. Danach gehen Sie durch die Unterführung. Der Tunnel ist hell und es gibt dort Wegweiser zum Bahnhof. Am Ende der Unterführung sehen Sie den Haupteingang. Dort stehen ein Fahrkartenautomat und ein Stadtplan. Wenn Sie ein Gleis suchen, können Sie die Anzeige in der Bahnhofshalle lesen oder am Informationsschalter fragen.",
+        "ar": "عفواً، ما أفضل طريق إلى محطة القطار الرئيسية؟ — سر مباشرة حتى الإشارة الضوئية. انعطف يساراً إلى شارع غوته. ثم سر نحو 300 متر. سترى مخبزاً على اليمين. اعبر الشارع وامشِ عبر النفق. تقع المحطة مقابله مباشرة. تحتاج إلى نحو ثماني دقائق سيراً. الطريق سهل إذا انتبهت إلى لافتات الشوارع. تقع الإشارة أمام متجر كبير. بعد أن تنعطف يساراً، ابقَ على الرصيف واتبع شارع غوته. سترى على اليمين فندقاً صغيراً أولاً ثم المخبز. تابع حتى الشارع الكبير التالي واعبره عند الإشارة. بعد ذلك سر عبر النفق. النفق مضاء جيداً، وتوجد فيه لافتات تدل على المحطة. سترى المدخل الرئيسي في نهاية النفق. توجد هناك آلة لشراء التذاكر وخريطة للمدينة. إذا كنت تبحث عن رصيف قطار معين، يمكنك قراءة الشاشة في صالة المحطة أو السؤال عند مكتب المعلومات.",
+        "questions": [
+          {
+            "type": "mc",
+            "promptDe": "Wie lange dauert es zu Fuß?",
+            "promptAr": "كم تستغرق مشياً؟",
+            "options": [
+              "5 Minuten",
+              "8 Minuten",
+              "15 Minuten",
+              "20 Minuten"
+            ],
+            "answer": "8 Minuten",
+            "explanationAr": "الدليل في النص: «Sie brauchen zu Fuß ungefähr acht Minuten.» — ثماني دقائق.",
+            "id": "t-a2-23-q1"
+          },
+          {
+            "id": "t-a2-23-q2",
+            "type": "mc",
+            "promptDe": "In welche Straße soll man links abbiegen?",
+            "promptAr": "إلى أي شارع ينبغي الانعطاف يساراً؟",
+            "options": [
+              "In die Goethestraße",
+              "In die Bahnhofstraße",
+              "In die Marktstraße"
+            ],
+            "answer": "In die Goethestraße",
+            "explanationAr": "الدليل في النص: «Dort biegen Sie links in die Goethestraße.» — انعطف يساراً إلى شارع غوته."
+          }
+        ],
+        "wordCountDe": 167
+      },
+      "current": {
+        "id": "t-a2-23",
+        "level": "A2",
+        "titleDe": "Beispiel: Wegbeschreibung zum Bahnhof",
+        "titleAr": "مثال: وصف الطريق إلى المحطة",
+        "de": "Entschuldigung, wie komme ich am besten zum Hauptbahnhof? — Gehen Sie hier geradeaus bis zur Ampel. Dort biegen Sie links in die Goethestraße. Dann gehen Sie etwa 300 Meter. Sie sehen eine Bäckerei auf der rechten Seite. Überqueren Sie die Straße und gehen Sie durch die Unterführung. Der Bahnhof liegt direkt gegenüber. Sie brauchen zu Fuß ungefähr acht Minuten. Der Weg ist einfach, wenn Sie auf die Straßenschilder achten. Die Ampel steht vor einem großen Geschäft. Nachdem Sie links abgebogen sind, bleiben Sie auf dem Gehweg und folgen der Goethestraße. Auf der rechten Seite sehen Sie zuerst ein kleines Hotel und später die Bäckerei. Gehen Sie bis zur nächsten großen Straße und überqueren Sie sie an der Ampel. Danach gehen Sie durch die Unterführung. Der Tunnel ist hell und es gibt dort Wegweiser zum Bahnhof. Am Ende der Unterführung sehen Sie den Haupteingang. Dort stehen ein Fahrkartenautomat und ein Stadtplan. Wenn Sie ein Gleis suchen, können Sie die Anzeige in der Bahnhofshalle lesen oder am Informationsschalter fragen.",
+        "ar": "عفواً، ما أفضل طريق إلى محطة القطار الرئيسية؟ — سر مباشرة حتى الإشارة الضوئية. انعطف يساراً إلى شارع غوته. ثم سر نحو 300 متر. سترى مخبزاً على اليمين. اعبر الشارع وامشِ عبر النفق. تقع المحطة مقابله مباشرة. تحتاج إلى نحو ثماني دقائق سيراً. الطريق سهل إذا انتبهت إلى لافتات الشوارع. تقع الإشارة أمام متجر كبير. بعد أن تنعطف يساراً، ابقَ على الرصيف واتبع شارع غوته. سترى على اليمين فندقاً صغيراً أولاً ثم المخبز. تابع حتى الشارع الكبير التالي واعبره عند الإشارة. بعد ذلك سر عبر النفق. النفق مضاء جيداً، وتوجد فيه لافتات تدل على المحطة. سترى المدخل الرئيسي في نهاية النفق. توجد هناك آلة لشراء التذاكر وخريطة للمدينة. إذا كنت تبحث عن رصيف قطار معين، يمكنك قراءة الشاشة في صالة المحطة أو السؤال عند مكتب المعلومات.",
+        "questions": [
+          {
+            "type": "mc",
+            "promptDe": "Wie lange dauert es zu Fuß?",
+            "promptAr": "كم تستغرق مشياً؟",
+            "options": [
+              "5 Minuten",
+              "8 Minuten",
+              "15 Minuten",
+              "20 Minuten"
+            ],
+            "answer": "8 Minuten",
+            "explanationAr": "الدليل في النص: «Sie brauchen zu Fuß ungefähr acht Minuten.» — ثماني دقائق.",
+            "id": "t-a2-23-q1"
+          },
+          {
+            "id": "t-a2-23-q2",
+            "type": "mc",
+            "promptDe": "In welche Straße soll man links abbiegen?",
+            "promptAr": "إلى أي شارع ينبغي الانعطاف يساراً؟",
+            "options": [
+              "In die Goethestraße",
+              "In die Bahnhofstraße",
+              "In die Marktstraße"
+            ],
+            "answer": "In die Goethestraße",
+            "explanationAr": "الدليل في النص: «Dort biegen Sie links in die Goethestraße.» — انعطف يساراً إلى شارع غوته."
+          }
+        ],
+        "wordCountDe": 167
+      }
+    },
+    {
+      "id": "t-a2-24",
+      "level": "A2",
+      "decision": "corrected",
+      "rationale": "Corrected the Arabic aufstehen rendering and removed an invented female narrator from the café question while preserving the 153-word German passage.",
+      "previous": {
+        "id": "t-a2-24",
+        "level": "A2",
+        "titleDe": "Mein Wochenende",
+        "titleAr": "عطلة نهاية أسبوعي",
+        "de": "Am Samstag bin ich um neun Uhr aufgestanden. Zuerst habe ich Kaffee getrunken und Zeitung gelesen. Dann habe ich die Wohnung geputzt und eingekauft. Das Wetter war angenehm, deshalb bin ich zu Fuß zum Supermarkt gegangen. Dort habe ich Brot, Obst und Milch gekauft. Nachmittags ist meine Freundin zu mir gekommen. Sie wohnt in derselben Straße. Um drei Uhr sind wir zusammen in ein Café gegangen und haben viel geredet. Zuerst haben wir einen Kaffee bestellt. Danach haben wir über die Arbeit und unsere Pläne für den Sommer gesprochen. Abends habe ich mit meiner Familie zu Hause gegessen. Am Sonntag habe ich lange geschlafen und war im Park spazieren. Dort habe ich Musik gehört und eine Runde um den See gemacht. Abends habe ich Deutsch gelernt, weil ich am Montag einen Test hatte. Vor dem Schlafengehen habe ich meine Tasche für den nächsten Tag vorbereitet. Insgesamt war es ein ruhiges und schönes Wochenende.",
+        "ar": "استيقظت يوم السبت في التاسعة. شربت القهوة وقرأت الجريدة أولاً. ثم نظفت الشقة وتسوقت. كان الطقس لطيفاً، لذلك ذهبت إلى السوبرماركت سيراً على الأقدام. اشتريت هناك خبزاً وفاكهة وحليباً. جاءت صديقتي إلى بيتي بعد الظهر. تسكن في الشارع نفسه. ذهبنا معاً إلى مقهى عند الثالثة وتحدثنا كثيراً. طلبنا القهوة أولاً. ثم تحدثنا عن العمل وخططنا للصيف. تناولت العشاء في البيت مع عائلتي مساءً. نمت طويلاً يوم الأحد وتمشيت في الحديقة. استمعت هناك إلى الموسيقى وقمت بجولة حول البحيرة. درست الألمانية مساءً لأن اختباري كان يوم الاثنين. جهزت حقيبتي لليوم التالي قبل النوم. كانت عطلة نهاية أسبوع هادئة وجميلة إجمالاً.",
+        "questions": [
+          {
+            "type": "mc",
+            "promptDe": "An welchem Tag war der Test?",
+            "promptAr": "في أي يوم كان الاختبار؟",
+            "options": [
+              "Am Samstag",
+              "Am Sonntag",
+              "Am Montag",
+              "Am Dienstag"
+            ],
+            "answer": "Am Montag",
+            "explanationAr": "الدليل في النص: «weil ich am Montag einen Test hatte.» — الاثنين.",
+            "id": "t-a2-24-q1"
+          },
+          {
+            "id": "t-a2-24-q2",
+            "type": "mc",
+            "promptDe": "Wo war die Person am Samstag mit ihrer Freundin?",
+            "promptAr": "أين كانت المتحدثة يوم السبت مع صديقتها؟",
+            "options": [
+              "In einem Café",
+              "Im Kino",
+              "Im Museum"
+            ],
+            "answer": "In einem Café",
+            "explanationAr": "الدليل في النص: «Um drei Uhr sind wir zusammen in ein Café gegangen und haben viel geredet.» — ذهبتا معاً إلى مقهى وتحدثتا."
+          }
+        ],
+        "wordCountDe": 153
+      },
+      "current": {
+        "id": "t-a2-24",
+        "level": "A2",
+        "titleDe": "Mein Wochenende",
+        "titleAr": "عطلة نهاية أسبوعي",
+        "de": "Am Samstag bin ich um neun Uhr aufgestanden. Zuerst habe ich Kaffee getrunken und Zeitung gelesen. Dann habe ich die Wohnung geputzt und eingekauft. Das Wetter war angenehm, deshalb bin ich zu Fuß zum Supermarkt gegangen. Dort habe ich Brot, Obst und Milch gekauft. Nachmittags ist meine Freundin zu mir gekommen. Sie wohnt in derselben Straße. Um drei Uhr sind wir zusammen in ein Café gegangen und haben viel geredet. Zuerst haben wir einen Kaffee bestellt. Danach haben wir über die Arbeit und unsere Pläne für den Sommer gesprochen. Abends habe ich mit meiner Familie zu Hause gegessen. Am Sonntag habe ich lange geschlafen und war im Park spazieren. Dort habe ich Musik gehört und eine Runde um den See gemacht. Abends habe ich Deutsch gelernt, weil ich am Montag einen Test hatte. Vor dem Schlafengehen habe ich meine Tasche für den nächsten Tag vorbereitet. Insgesamt war es ein ruhiges und schönes Wochenende.",
+        "ar": "نهضت يوم السبت في التاسعة. شربت القهوة وقرأت الجريدة أولاً. ثم نظفت الشقة وتسوقت. كان الطقس لطيفاً، لذلك ذهبت إلى السوبرماركت سيراً على الأقدام. اشتريت هناك خبزاً وفاكهة وحليباً. جاءت صديقتي إلى بيتي بعد الظهر. تسكن في الشارع نفسه. ذهبنا معاً إلى مقهى عند الثالثة وتحدثنا كثيراً. طلبنا القهوة أولاً. ثم تحدثنا عن العمل وخططنا للصيف. تناولت العشاء في البيت مع عائلتي مساءً. نمت طويلاً يوم الأحد وتمشيت في الحديقة. استمعت هناك إلى الموسيقى وقمت بجولة حول البحيرة. درست الألمانية مساءً لأن اختباري كان يوم الاثنين. جهزت حقيبتي لليوم التالي قبل النوم. كانت عطلة نهاية أسبوع هادئة وجميلة إجمالاً.",
+        "questions": [
+          {
+            "type": "mc",
+            "promptDe": "An welchem Tag war der Test?",
+            "promptAr": "في أي يوم كان الاختبار؟",
+            "options": [
+              "Am Samstag",
+              "Am Sonntag",
+              "Am Montag",
+              "Am Dienstag"
+            ],
+            "answer": "Am Montag",
+            "explanationAr": "الدليل في النص: «weil ich am Montag einen Test hatte.» — الاثنين.",
+            "id": "t-a2-24-q1"
+          },
+          {
+            "id": "t-a2-24-q2",
+            "type": "mc",
+            "promptDe": "Wo war ich am Samstag mit meiner Freundin?",
+            "promptAr": "أين كنت يوم السبت مع صديقتي؟",
+            "options": [
+              "In einem Café",
+              "Im Kino",
+              "Im Museum"
+            ],
+            "answer": "In einem Café",
+            "explanationAr": "النص يقول: «Um drei Uhr sind wir zusammen in ein Café gegangen und haben viel geredet»."
+          }
+        ],
+        "wordCountDe": 153
+      }
+    },
+    {
+      "id": "t-a2-25",
+      "level": "A2",
+      "decision": "confirmed-current",
+      "rationale": "Confirmed the full supermarket dialogue, Arabic alignment, 171-word metadata, price, location, options, keys, and explanations without change.",
+      "previous": {
+        "id": "t-a2-25",
+        "level": "A2",
+        "titleDe": "Beispiel: Ein Gespräch im Supermarkt",
+        "titleAr": "مثال: محادثة في السوبرماركت",
+        "de": "Guten Tag! Wo finde ich bitte die Milch? — Die Milch ist im Kühlregal ganz hinten links. — Danke. Und wo ist das Brot? — Das Brot ist am Eingang bei der Bäckereiabteilung. — Haben Sie heute keine Tomaten? — Doch, die Tomaten sind heute im Angebot, ein Kilo für 1,49 Euro. Sie liegen gleich beim Gemüse. — Vielen Dank! — Bitte schön. — Ich möchte heute einen Salat für meine Familie machen. Das Gemüse brauche ich für das Abendessen. Gibt es auch Gurken und Paprika? — Ja, beides liegt neben den Tomaten. — Dann nehme ich ein Kilo von den Tomaten. Sind sie frisch? — Ja, die Lieferung kam heute Morgen. Sie können die Tomaten einzeln auswählen. — Können Sie mir bitte auch sagen, wo der Käse ist? — Der Käse liegt im Kühlregal direkt neben der Milch. — Und wo kann ich bezahlen? — Die Kasse ist vorne rechts. Sie können bar oder mit Karte bezahlen. — Gut, dann gehe ich jetzt zur Kasse. Auf Wiedersehen! — Auf Wiedersehen!",
+        "ar": "نهارك سعيد! أين أجد الحليب من فضلك؟ — الحليب في رفّ التبريد، في الخلف إلى اليسار. — شكراً. وأين الخبز؟ — الخبز عند المدخل قرب قسم المخبوزات. — ألا توجد لديكم طماطم اليوم؟ — بلى، الطماطم عليها عرض اليوم: الكيلو بـ1.49 يورو. تجدها بجانب الخضار. — شكراً جزيلاً! — على الرحب والسعة. — أريد اليوم إعداد سلطة لعائلتي. أحتاج إلى الخضار للعشاء. هل لديكم خيار وفلفل أيضاً؟ — نعم، كلاهما بجانب الطماطم. — سأشتري كيلوغراماً من الطماطم إذن. هل هي طازجة؟ — نعم، وصلت الشحنة هذا الصباح. يمكنك اختيار الطماطم واحدةً واحدة. — هل يمكنك أن تخبرني أيضاً أين الجبن؟ — الجبن في رفّ التبريد بجانب الحليب مباشرة. — وأين يمكنني الدفع؟ — الصندوق في الأمام إلى اليمين. يمكنك الدفع نقداً أو بالبطاقة. — حسناً، سأذهب إلى الصندوق الآن. إلى اللقاء! — إلى اللقاء!",
+        "questions": [
+          {
+            "type": "mc",
+            "promptDe": "Was kostet ein Kilo Tomaten?",
+            "promptAr": "كم سعر كيلو الطماطم؟",
+            "options": [
+              "0,99 Euro",
+              "1,29 Euro",
+              "1,49 Euro",
+              "2,49 Euro"
+            ],
+            "answer": "1,49 Euro",
+            "explanationAr": "الدليل في النص: «ein Kilo für 1,49 Euro.» — 1.49 يورو.",
+            "id": "t-a2-25-q1"
+          },
+          {
+            "id": "t-a2-25-q2",
+            "type": "mc",
+            "promptDe": "Wo liegt die Milch im Supermarkt?",
+            "promptAr": "أين يوجد الحليب في السوبرماركت؟",
+            "options": [
+              "Im Kühlregal hinten links",
+              "Bei der Kasse",
+              "Am Eingang neben dem Brot"
+            ],
+            "answer": "Im Kühlregal hinten links",
+            "explanationAr": "الدليل في النص: «Die Milch ist im Kühlregal ganz hinten links.» — الحليب في رف التبريد بالخلف يساراً."
+          }
+        ],
+        "wordCountDe": 171
+      },
+      "current": {
+        "id": "t-a2-25",
+        "level": "A2",
+        "titleDe": "Beispiel: Ein Gespräch im Supermarkt",
+        "titleAr": "مثال: محادثة في السوبرماركت",
+        "de": "Guten Tag! Wo finde ich bitte die Milch? — Die Milch ist im Kühlregal ganz hinten links. — Danke. Und wo ist das Brot? — Das Brot ist am Eingang bei der Bäckereiabteilung. — Haben Sie heute keine Tomaten? — Doch, die Tomaten sind heute im Angebot, ein Kilo für 1,49 Euro. Sie liegen gleich beim Gemüse. — Vielen Dank! — Bitte schön. — Ich möchte heute einen Salat für meine Familie machen. Das Gemüse brauche ich für das Abendessen. Gibt es auch Gurken und Paprika? — Ja, beides liegt neben den Tomaten. — Dann nehme ich ein Kilo von den Tomaten. Sind sie frisch? — Ja, die Lieferung kam heute Morgen. Sie können die Tomaten einzeln auswählen. — Können Sie mir bitte auch sagen, wo der Käse ist? — Der Käse liegt im Kühlregal direkt neben der Milch. — Und wo kann ich bezahlen? — Die Kasse ist vorne rechts. Sie können bar oder mit Karte bezahlen. — Gut, dann gehe ich jetzt zur Kasse. Auf Wiedersehen! — Auf Wiedersehen!",
+        "ar": "نهارك سعيد! أين أجد الحليب من فضلك؟ — الحليب في رفّ التبريد، في الخلف إلى اليسار. — شكراً. وأين الخبز؟ — الخبز عند المدخل قرب قسم المخبوزات. — ألا توجد لديكم طماطم اليوم؟ — بلى، الطماطم عليها عرض اليوم: الكيلو بـ1.49 يورو. تجدها بجانب الخضار. — شكراً جزيلاً! — على الرحب والسعة. — أريد اليوم إعداد سلطة لعائلتي. أحتاج إلى الخضار للعشاء. هل لديكم خيار وفلفل أيضاً؟ — نعم، كلاهما بجانب الطماطم. — سأشتري كيلوغراماً من الطماطم إذن. هل هي طازجة؟ — نعم، وصلت الشحنة هذا الصباح. يمكنك اختيار الطماطم واحدةً واحدة. — هل يمكنك أن تخبرني أيضاً أين الجبن؟ — الجبن في رفّ التبريد بجانب الحليب مباشرة. — وأين يمكنني الدفع؟ — الصندوق في الأمام إلى اليمين. يمكنك الدفع نقداً أو بالبطاقة. — حسناً، سأذهب إلى الصندوق الآن. إلى اللقاء! — إلى اللقاء!",
+        "questions": [
+          {
+            "type": "mc",
+            "promptDe": "Was kostet ein Kilo Tomaten?",
+            "promptAr": "كم سعر كيلو الطماطم؟",
+            "options": [
+              "0,99 Euro",
+              "1,29 Euro",
+              "1,49 Euro",
+              "2,49 Euro"
+            ],
+            "answer": "1,49 Euro",
+            "explanationAr": "الدليل في النص: «ein Kilo für 1,49 Euro.» — 1.49 يورو.",
+            "id": "t-a2-25-q1"
+          },
+          {
+            "id": "t-a2-25-q2",
+            "type": "mc",
+            "promptDe": "Wo liegt die Milch im Supermarkt?",
+            "promptAr": "أين يوجد الحليب في السوبرماركت؟",
+            "options": [
+              "Im Kühlregal hinten links",
+              "Bei der Kasse",
+              "Am Eingang neben dem Brot"
+            ],
+            "answer": "Im Kühlregal hinten links",
+            "explanationAr": "الدليل في النص: «Die Milch ist im Kühlregal ganz hinten links.» — الحليب في رف التبريد بالخلف يساراً."
+          }
+        ],
+        "wordCountDe": 171
+      }
+    },
+    {
+      "id": "t-a2-26",
+      "level": "A2",
+      "decision": "corrected",
+      "rationale": "Corrected the Arabic deadline from “before Thursday” to “no later than Thursday”, matching bis Donnerstag and its answer key.",
+      "previous": {
+        "id": "t-a2-26",
+        "level": "A2",
+        "titleDe": "Beispiel: Eine Einladung zum Geburtstag",
+        "titleAr": "مثال: دعوة إلى عيد ميلاد",
+        "de": "Hallo Ahmed,\n\nich feiere am Samstag um 19 Uhr meinen Geburtstag bei mir zu Hause. Ich wohne in der Schillerstraße 14 im dritten Stock. Du kannst mit der U-Bahn-Linie 3 bis zur Haltestelle Markt fahren. Von dort sind es fünf Minuten zu Fuß. Meine Wohnung ist auf der rechten Seite im dritten Stock. Ich mache Pizza und einen Salat. Es gibt auch Kuchen und Saft. Wir möchten zusammen essen, Musik hören und Karten spielen. Bitte komm pünktlich, damit das Essen nicht kalt wird. Meine Schwester hilft mir bei der Vorbereitung. Ich stelle genug Stühle ins Wohnzimmer, damit alle bequem sitzen können. Du musst nichts mitbringen. Wenn du etwas nicht essen kannst, sag mir bitte vorher Bescheid. Bitte sag mir bis Donnerstag Bescheid, ob du kommen kannst. Ich freue mich, wenn wir uns wiedersehen. Wenn du den Weg nicht findest, ruf mich bitte an. Ich öffne die Haustür ab halb sieben.\n\nViele Grüße\nLena",
+        "ar": "مرحباً أحمد،\n\nسأحتفل بعيد ميلادي يوم السبت في الساعة السابعة مساءً في بيتي. أسكن في شارع شيلر رقم 14، في الطابق الثالث. يمكنك ركوب خط المترو رقم 3 حتى محطة ماركت. ومن هناك تحتاج إلى خمس دقائق سيراً. شقتي على اليمين في الطابق الثالث. سأعدّ البيتزا والسلطة. وسيكون هناك أيضاً كعك وعصير. نريد أن نأكل معاً ونستمع إلى الموسيقى ونلعب الورق. أرجو أن تأتي في الموعد كي لا يبرد الطعام. تساعدني أختي في التحضير. سأضع كراسٍ كافية في غرفة المعيشة كي يجلس الجميع براحة. لا تحتاج إلى إحضار شيء. إذا كان هناك طعام لا تستطيع تناوله، فأخبرني من فضلك مسبقاً. أخبرني قبل يوم الخميس إن كنت تستطيع الحضور. سأكون سعيدة إذا التقينا من جديد. إذا لم تجد الطريق، فاتصل بي من فضلك. سأفتح باب المبنى من السادسة والنصف.\n\nأطيب التحيات،\nلينا",
+        "questions": [
+          {
+            "type": "mc",
+            "promptDe": "Bis wann soll Ahmed Bescheid sagen?",
+            "promptAr": "متى يجب على أحمد أن يرد؟",
+            "options": [
+              "Bis Samstag",
+              "Bis Freitag",
+              "Bis Donnerstag",
+              "Bis Sonntag"
+            ],
+            "answer": "Bis Donnerstag",
+            "explanationAr": "الدليل في النص: «Bitte sag mir bis Donnerstag Bescheid, ob du kommen kannst.» — حتى الخميس.",
+            "id": "t-a2-26-q1"
+          },
+          {
+            "id": "t-a2-26-q2",
+            "type": "mc",
+            "promptDe": "Wie kommt Ahmed bis zur Haltestelle Markt?",
+            "promptAr": "كيف يصل أحمد إلى محطة ماركت؟",
+            "options": [
+              "Mit der U-Bahn-Linie 3",
+              "Mit dem Bus Nummer 5",
+              "Mit dem Zug"
+            ],
+            "answer": "Mit der U-Bahn-Linie 3",
+            "explanationAr": "الدليل في النص: «Du kannst mit der U-Bahn-Linie 3 bis zur Haltestelle Markt fahren.» — يمكنه ركوب خط المترو رقم 3."
+          }
+        ],
+        "wordCountDe": 153
+      },
+      "current": {
+        "id": "t-a2-26",
+        "level": "A2",
+        "titleDe": "Beispiel: Eine Einladung zum Geburtstag",
+        "titleAr": "مثال: دعوة إلى عيد ميلاد",
+        "de": "Hallo Ahmed,\n\nich feiere am Samstag um 19 Uhr meinen Geburtstag bei mir zu Hause. Ich wohne in der Schillerstraße 14 im dritten Stock. Du kannst mit der U-Bahn-Linie 3 bis zur Haltestelle Markt fahren. Von dort sind es fünf Minuten zu Fuß. Meine Wohnung ist auf der rechten Seite im dritten Stock. Ich mache Pizza und einen Salat. Es gibt auch Kuchen und Saft. Wir möchten zusammen essen, Musik hören und Karten spielen. Bitte komm pünktlich, damit das Essen nicht kalt wird. Meine Schwester hilft mir bei der Vorbereitung. Ich stelle genug Stühle ins Wohnzimmer, damit alle bequem sitzen können. Du musst nichts mitbringen. Wenn du etwas nicht essen kannst, sag mir bitte vorher Bescheid. Bitte sag mir bis Donnerstag Bescheid, ob du kommen kannst. Ich freue mich, wenn wir uns wiedersehen. Wenn du den Weg nicht findest, ruf mich bitte an. Ich öffne die Haustür ab halb sieben.\n\nViele Grüße\nLena",
+        "ar": "مرحباً أحمد،\n\nسأحتفل بعيد ميلادي يوم السبت في الساعة السابعة مساءً في بيتي. أسكن في شارع شيلر رقم 14، في الطابق الثالث. يمكنك ركوب خط المترو رقم 3 حتى محطة ماركت. ومن هناك تحتاج إلى خمس دقائق سيراً. شقتي على اليمين في الطابق الثالث. سأعدّ البيتزا والسلطة. وسيكون هناك أيضاً كعك وعصير. نريد أن نأكل معاً ونستمع إلى الموسيقى ونلعب الورق. أرجو أن تأتي في الموعد كي لا يبرد الطعام. تساعدني أختي في التحضير. سأضع كراسٍ كافية في غرفة المعيشة كي يجلس الجميع براحة. لا تحتاج إلى إحضار شيء. إذا كان هناك طعام لا تستطيع تناوله، فأخبرني من فضلك مسبقاً. أخبرني في موعد أقصاه يوم الخميس إن كنت تستطيع الحضور. سأكون سعيدة إذا التقينا من جديد. إذا لم تجد الطريق، فاتصل بي من فضلك. سأفتح باب المبنى من السادسة والنصف.\n\nأطيب التحيات،\nلينا",
+        "questions": [
+          {
+            "type": "mc",
+            "promptDe": "Bis wann soll Ahmed Bescheid sagen?",
+            "promptAr": "متى يجب على أحمد أن يرد؟",
+            "options": [
+              "Bis Samstag",
+              "Bis Freitag",
+              "Bis Donnerstag",
+              "Bis Sonntag"
+            ],
+            "answer": "Bis Donnerstag",
+            "explanationAr": "الدليل في النص: «Bitte sag mir bis Donnerstag Bescheid, ob du kommen kannst.» — حتى الخميس.",
+            "id": "t-a2-26-q1"
+          },
+          {
+            "id": "t-a2-26-q2",
+            "type": "mc",
+            "promptDe": "Wie kommt Ahmed bis zur Haltestelle Markt?",
+            "promptAr": "كيف يصل أحمد إلى محطة ماركت؟",
+            "options": [
+              "Mit der U-Bahn-Linie 3",
+              "Mit dem Bus Nummer 5",
+              "Mit dem Zug"
+            ],
+            "answer": "Mit der U-Bahn-Linie 3",
+            "explanationAr": "الدليل في النص: «Du kannst mit der U-Bahn-Linie 3 bis zur Haltestelle Markt fahren.» — يمكنه ركوب خط المترو رقم 3."
+          }
+        ],
+        "wordCountDe": 153
+      }
+    },
+    {
+      "id": "t-a2-27",
+      "level": "A2",
+      "decision": "confirmed-current",
+      "rationale": "Confirmed the complete apartment-search passage, Arabic alignment, 151-word metadata, and the rent and fitted-kitchen questions without change.",
+      "previous": {
+        "id": "t-a2-27",
+        "level": "A2",
+        "titleDe": "Beispiel: Eine Wohnung suchen",
+        "titleAr": "مثال: البحث عن شقة",
+        "de": "Ich suche seit zwei Monaten eine kleine Wohnung in der Stadt. Sie muss nicht groß sein, aber hell und ruhig. Ein Balkon wäre schön. Die Kaltmiete sollte nicht über 600 Euro liegen. Ich habe schon viele Anzeigen gelesen und mehrere Wohnungen besichtigt. Gestern habe ich eine schöne Zwei-Zimmer-Wohnung gesehen. Sie liegt in einem Altbau, hat 50 Quadratmeter, einen Balkon und eine Einbauküche. Die Kaltmiete beträgt 580 Euro. Bei der Besichtigung hat mir besonders das helle Wohnzimmer gefallen. Die Küche ist schon eingebaut, und im Bad gibt es ein Fenster. Vom Balkon sieht man auf einen ruhigen Innenhof. Die Vermieterin war freundlich und hat mir die Nebenkosten erklärt. Ich habe meine Unterlagen vorbereitet und ihr eine Nachricht geschickt. Sie möchte mir nächste Woche Bescheid geben. Bis dahin suche ich weiter, denn ich möchte sicher sein, dass die neue Wohnung wirklich passt. Wenn ich eine Zusage bekomme, kann ich im nächsten Monat umziehen.",
+        "ar": "أبحث منذ شهرين عن شقة صغيرة في المدينة. لا يشترط أن تكون كبيرة، لكن أريدها مضيئة وهادئة. وستكون الشرفة جميلة. ينبغي ألا يتجاوز الإيجار الأساسي 600 يورو. قرأت كثيراً من الإعلانات وزرت عدة شقق. شاهدت أمس شقة جميلة من غرفتين. تقع في مبنى قديم، ومساحتها 50 متراً مربعاً، وفيها شرفة ومطبخ مجهز. يبلغ الإيجار الأساسي 580 يورو. أعجبتني غرفة المعيشة المضيئة خصوصاً أثناء المعاينة. المطبخ مركّب بالفعل، وفي الحمّام نافذة. أرى من الشرفة فناءً داخلياً هادئاً. كانت المالكة لطيفة وشرحت لي التكاليف الإضافية. جهزت أوراقي وأرسلت إليها رسالة. تريد أن تخبرني بقرارها الأسبوع القادم. سأواصل البحث إلى ذلك الحين، لأنني أريد التأكد من أن الشقة الجديدة مناسبة حقاً. إذا حصلت على موافقتها، يمكنني الانتقال في الشهر القادم.",
+        "questions": [
+          {
+            "type": "mc",
+            "promptDe": "Wie hoch ist die Kaltmiete der neuen Wohnung?",
+            "promptAr": "كم الإيجار الأساسي للشقة الجديدة؟",
+            "options": [
+              "500 Euro",
+              "580 Euro",
+              "600 Euro",
+              "650 Euro"
+            ],
+            "answer": "580 Euro",
+            "explanationAr": "الدليل في النص: «Die Kaltmiete beträgt 580 Euro.» — 580 يورو.",
+            "id": "t-a2-27-q1"
+          },
+          {
+            "id": "t-a2-27-q2",
+            "type": "mc",
+            "promptDe": "Was hat die Wohnung außer einem Balkon?",
+            "promptAr": "ماذا يوجد في الشقة أيضاً غير الشرفة؟",
+            "options": [
+              "Eine Einbauküche",
+              "Eine Garage",
+              "Eine zweite Dusche"
+            ],
+            "answer": "Eine Einbauküche",
+            "explanationAr": "الدليل في النص: «einen Balkon und eine Einbauküche.» — فيها شرفة ومطبخ مركّب."
+          }
+        ],
+        "wordCountDe": 151
+      },
+      "current": {
+        "id": "t-a2-27",
+        "level": "A2",
+        "titleDe": "Beispiel: Eine Wohnung suchen",
+        "titleAr": "مثال: البحث عن شقة",
+        "de": "Ich suche seit zwei Monaten eine kleine Wohnung in der Stadt. Sie muss nicht groß sein, aber hell und ruhig. Ein Balkon wäre schön. Die Kaltmiete sollte nicht über 600 Euro liegen. Ich habe schon viele Anzeigen gelesen und mehrere Wohnungen besichtigt. Gestern habe ich eine schöne Zwei-Zimmer-Wohnung gesehen. Sie liegt in einem Altbau, hat 50 Quadratmeter, einen Balkon und eine Einbauküche. Die Kaltmiete beträgt 580 Euro. Bei der Besichtigung hat mir besonders das helle Wohnzimmer gefallen. Die Küche ist schon eingebaut, und im Bad gibt es ein Fenster. Vom Balkon sieht man auf einen ruhigen Innenhof. Die Vermieterin war freundlich und hat mir die Nebenkosten erklärt. Ich habe meine Unterlagen vorbereitet und ihr eine Nachricht geschickt. Sie möchte mir nächste Woche Bescheid geben. Bis dahin suche ich weiter, denn ich möchte sicher sein, dass die neue Wohnung wirklich passt. Wenn ich eine Zusage bekomme, kann ich im nächsten Monat umziehen.",
+        "ar": "أبحث منذ شهرين عن شقة صغيرة في المدينة. لا يشترط أن تكون كبيرة، لكن أريدها مضيئة وهادئة. وستكون الشرفة جميلة. ينبغي ألا يتجاوز الإيجار الأساسي 600 يورو. قرأت كثيراً من الإعلانات وزرت عدة شقق. شاهدت أمس شقة جميلة من غرفتين. تقع في مبنى قديم، ومساحتها 50 متراً مربعاً، وفيها شرفة ومطبخ مجهز. يبلغ الإيجار الأساسي 580 يورو. أعجبتني غرفة المعيشة المضيئة خصوصاً أثناء المعاينة. المطبخ مركّب بالفعل، وفي الحمّام نافذة. أرى من الشرفة فناءً داخلياً هادئاً. كانت المالكة لطيفة وشرحت لي التكاليف الإضافية. جهزت أوراقي وأرسلت إليها رسالة. تريد أن تخبرني بقرارها الأسبوع القادم. سأواصل البحث إلى ذلك الحين، لأنني أريد التأكد من أن الشقة الجديدة مناسبة حقاً. إذا حصلت على موافقتها، يمكنني الانتقال في الشهر القادم.",
+        "questions": [
+          {
+            "type": "mc",
+            "promptDe": "Wie hoch ist die Kaltmiete der neuen Wohnung?",
+            "promptAr": "كم الإيجار الأساسي للشقة الجديدة؟",
+            "options": [
+              "500 Euro",
+              "580 Euro",
+              "600 Euro",
+              "650 Euro"
+            ],
+            "answer": "580 Euro",
+            "explanationAr": "الدليل في النص: «Die Kaltmiete beträgt 580 Euro.» — 580 يورو.",
+            "id": "t-a2-27-q1"
+          },
+          {
+            "id": "t-a2-27-q2",
+            "type": "mc",
+            "promptDe": "Was hat die Wohnung außer einem Balkon?",
+            "promptAr": "ماذا يوجد في الشقة أيضاً غير الشرفة؟",
+            "options": [
+              "Eine Einbauküche",
+              "Eine Garage",
+              "Eine zweite Dusche"
+            ],
+            "answer": "Eine Einbauküche",
+            "explanationAr": "الدليل في النص: «einen Balkon und eine Einbauküche.» — فيها شرفة ومطبخ مركّب."
+          }
+        ],
+        "wordCountDe": 151
+      }
+    },
+    {
+      "id": "t-a2-28",
+      "level": "A2",
+      "decision": "confirmed-current",
+      "rationale": "Confirmed the qualified health-insurance call, Arabic alignment, 154-word metadata, and both document-delivery questions without change.",
+      "previous": {
+        "id": "t-a2-28",
+        "level": "A2",
+        "titleDe": "Beispielanruf bei einer Krankenkasse",
+        "titleAr": "مثال: اتصال بصندوق تأمين صحي",
+        "de": "Guten Tag, hier ist Ihre Krankenkasse. Wie kann ich Ihnen helfen? — Guten Tag, hier spricht Nadia Saleh. Ich habe mich gestern angemeldet, aber meine Versicherungsnummer noch nicht bekommen. Wie erhalte ich sie? — Wir schicken die Nummer per Post, sobald Ihre Anmeldung bearbeitet ist. Das kann einige Tage dauern. — Kann ich in der Zwischenzeit trotzdem zum Arzt gehen? Muss ich die Rechnung selbst bezahlen? — Wenn Ihre Versicherung bereits aktiv ist, rechnet die Praxis normalerweise direkt mit uns ab. Sie können eine Mitgliedsbescheinigung bei uns anfordern und beim Arzt vorzeigen. — Bekomme ich die Versichertenkarte später auch? — Ja, die Karte kommt nach der Bearbeitung ebenfalls per Post. Bitte prüfen Sie, ob Ihre Adresse richtig ist. — Das mache ich. Ich schreibe die Informationen in mein Notizbuch, damit ich sie nicht vergesse. Vielen Dank für die Information. — Gern. Wenn Sie noch Fragen haben, können Sie uns wieder anrufen. — Auf Wiederhören!",
+        "ar": "مرحباً، معك صندوق التأمين الصحي. كيف أستطيع مساعدتك؟ — نهارك سعيد، معكم نادية صالح. سجلت أمس، لكنني لم أحصل على رقم التأمين بعد. كيف يصلني؟ — نرسل الرقم بالبريد بعد معالجة طلبك. وقد يستغرق ذلك بضعة أيام. — هل يمكنني الذهاب إلى الطبيب في هذه الأثناء؟ وهل يجب أن أدفع الفاتورة بنفسي؟ — إذا كان تأمينك سارياً بالفعل، فعادةً ما تتولى العيادة تسوية الحساب معنا مباشرةً. يمكنك طلب شهادة عضوية منا وإبرازها للطبيب. — وهل سأحصل على بطاقة التأمين لاحقاً أيضاً؟ — نعم، نرسل البطاقة بالبريد بعد معالجة الطلب. من فضلك تحققي من صحة عنوانك. — سأفعل ذلك. أدوّن المعلومات في دفتري كي لا أنساها. شكراً على المعلومة. — على الرحب والسعة. يمكنك معاودة الاتصال بنا إن كانت لديك أسئلة أخرى. — إلى اللقاء عبر الهاتف!",
+        "questions": [
+          {
+            "type": "mc",
+            "promptDe": "Wie erhält Nadia ihre Versicherungsnummer?",
+            "promptAr": "كيف يصل رقم التأمين إلى نادية؟",
+            "options": [
+              "Per E-Mail",
+              "Per Post",
+              "Am Telefon"
+            ],
+            "answer": "Per Post",
+            "explanationAr": "الدليل في النص: «Wir schicken die Nummer per Post, sobald Ihre Anmeldung bearbeitet ist.» — نرسل الرقم بالبريد بعد معالجة الطلب.",
+            "id": "t-a2-28-q1"
+          },
+          {
+            "id": "t-a2-28-q2",
+            "type": "mc",
+            "promptDe": "Was kann Nadia beim Arzt vorzeigen?",
+            "promptAr": "ماذا تستطيع نادية أن تُبرز للطبيب؟",
+            "options": [
+              "Eine Mitgliedsbescheinigung",
+              "Eine Rechnung",
+              "Einen Mietvertrag"
+            ],
+            "answer": "Eine Mitgliedsbescheinigung",
+            "explanationAr": "الدليل في النص: «Sie können eine Mitgliedsbescheinigung bei uns anfordern und beim Arzt vorzeigen.» — تستطيع طلب شهادة عضوية وإبرازها للطبيب."
+          }
+        ],
+        "wordCountDe": 154
+      },
+      "current": {
+        "id": "t-a2-28",
+        "level": "A2",
+        "titleDe": "Beispielanruf bei einer Krankenkasse",
+        "titleAr": "مثال: اتصال بصندوق تأمين صحي",
+        "de": "Guten Tag, hier ist Ihre Krankenkasse. Wie kann ich Ihnen helfen? — Guten Tag, hier spricht Nadia Saleh. Ich habe mich gestern angemeldet, aber meine Versicherungsnummer noch nicht bekommen. Wie erhalte ich sie? — Wir schicken die Nummer per Post, sobald Ihre Anmeldung bearbeitet ist. Das kann einige Tage dauern. — Kann ich in der Zwischenzeit trotzdem zum Arzt gehen? Muss ich die Rechnung selbst bezahlen? — Wenn Ihre Versicherung bereits aktiv ist, rechnet die Praxis normalerweise direkt mit uns ab. Sie können eine Mitgliedsbescheinigung bei uns anfordern und beim Arzt vorzeigen. — Bekomme ich die Versichertenkarte später auch? — Ja, die Karte kommt nach der Bearbeitung ebenfalls per Post. Bitte prüfen Sie, ob Ihre Adresse richtig ist. — Das mache ich. Ich schreibe die Informationen in mein Notizbuch, damit ich sie nicht vergesse. Vielen Dank für die Information. — Gern. Wenn Sie noch Fragen haben, können Sie uns wieder anrufen. — Auf Wiederhören!",
+        "ar": "مرحباً، معك صندوق التأمين الصحي. كيف أستطيع مساعدتك؟ — نهارك سعيد، معكم نادية صالح. سجلت أمس، لكنني لم أحصل على رقم التأمين بعد. كيف يصلني؟ — نرسل الرقم بالبريد بعد معالجة طلبك. وقد يستغرق ذلك بضعة أيام. — هل يمكنني الذهاب إلى الطبيب في هذه الأثناء؟ وهل يجب أن أدفع الفاتورة بنفسي؟ — إذا كان تأمينك سارياً بالفعل، فعادةً ما تتولى العيادة تسوية الحساب معنا مباشرةً. يمكنك طلب شهادة عضوية منا وإبرازها للطبيب. — وهل سأحصل على بطاقة التأمين لاحقاً أيضاً؟ — نعم، نرسل البطاقة بالبريد بعد معالجة الطلب. من فضلك تحققي من صحة عنوانك. — سأفعل ذلك. أدوّن المعلومات في دفتري كي لا أنساها. شكراً على المعلومة. — على الرحب والسعة. يمكنك معاودة الاتصال بنا إن كانت لديك أسئلة أخرى. — إلى اللقاء عبر الهاتف!",
+        "questions": [
+          {
+            "type": "mc",
+            "promptDe": "Wie erhält Nadia ihre Versicherungsnummer?",
+            "promptAr": "كيف يصل رقم التأمين إلى نادية؟",
+            "options": [
+              "Per E-Mail",
+              "Per Post",
+              "Am Telefon"
+            ],
+            "answer": "Per Post",
+            "explanationAr": "الدليل في النص: «Wir schicken die Nummer per Post, sobald Ihre Anmeldung bearbeitet ist.» — نرسل الرقم بالبريد بعد معالجة الطلب.",
+            "id": "t-a2-28-q1"
+          },
+          {
+            "id": "t-a2-28-q2",
+            "type": "mc",
+            "promptDe": "Was kann Nadia beim Arzt vorzeigen?",
+            "promptAr": "ماذا تستطيع نادية أن تُبرز للطبيب؟",
+            "options": [
+              "Eine Mitgliedsbescheinigung",
+              "Eine Rechnung",
+              "Einen Mietvertrag"
+            ],
+            "answer": "Eine Mitgliedsbescheinigung",
+            "explanationAr": "الدليل في النص: «Sie können eine Mitgliedsbescheinigung bei uns anfordern und beim Arzt vorzeigen.» — تستطيع طلب شهادة عضوية وإبرازها للطبيب."
+          }
+        ],
+        "wordCountDe": 154
+      }
+    },
+    {
+      "id": "t-a2-29",
+      "level": "A2",
+      "decision": "corrected",
+      "rationale": "Clarified the Arabic title as a German-language course and removed an invented male narrator from the anticipation sentence.",
+      "previous": {
+        "id": "t-a2-29",
+        "level": "A2",
+        "titleDe": "Beispiel: Ein neuer Deutschkurs",
+        "titleAr": "مثال: دورة ألمانية جديدة",
+        "de": "Nächste Woche beginnt ein neuer Deutschkurs an der Volkshochschule. Der Kurs ist dreimal pro Woche: montags, mittwochs und freitags von 18 bis 20 Uhr. Viele von uns lernen nach der Arbeit, deshalb ist der Abendkurs praktisch. Am Ende der Woche wiederholen wir gemeinsam den Wortschatz. Der Lehrer heißt Herr Neumann. Er ist freundlich und erklärt die Grammatik mit einfachen Beispielen. Im Kurs sprechen wir viel miteinander. Wir üben kurze Gespräche, hören Dialoge und schreiben kleine Texte. In der Pause trinke ich Tee mit zwei anderen Teilnehmenden. Wir helfen einander bei den Hausaufgaben. Ich freue mich auf den Kurs, weil ich für die A2-Prüfung üben möchte. Das Zertifikat brauche ich für meinen Job. Heute habe ich das Lehrbuch gekauft und mein Heft vorbereitet. Ich möchte vor dem ersten Unterricht noch einmal die wichtigsten Wörter wiederholen. So kann ich besser mitarbeiten und den Lehrer verstehen. Nach dem Kurs fahre ich mit dem Bus nach Hause.",
+        "ar": "تبدأ دورة جديدة للألمانية الأسبوع القادم في مركز تعليم الكبار. تُعقد الدورة ثلاث مرات في الأسبوع: أيام الاثنين والأربعاء والجمعة من السادسة إلى الثامنة مساءً. يتعلم كثير منا بعد العمل، لذلك تناسبنا الدورة المسائية. نراجع المفردات معاً في نهاية الأسبوع. اسم المدرس السيد نويمان. إنه ودود ويشرح القواعد بأمثلة بسيطة. نتحدث كثيراً معاً في الدورة. نتدرب على حوارات قصيرة ونستمع إلى حوارات ونكتب نصوصاً صغيرة. أشرب الشاي في الاستراحة مع مشاركين اثنين آخرين. نساعد بعضنا في الواجبات. أنا متحمس للدورة لأنني أريد الاستعداد لامتحان A2. أحتاج إلى الشهادة من أجل عملي. اشتريت كتاب الدورة وجهزت دفتري اليوم. أريد أن أراجع أهم الكلمات مرة أخرى قبل الدرس الأول. هكذا أستطيع المشاركة بصورة أفضل وفهم المدرس. أعود إلى البيت بالحافلة بعد الدورة.",
+        "questions": [
+          {
+            "type": "mc",
+            "promptDe": "An welchen Tagen ist der Kurs?",
+            "promptAr": "في أي أيام الدورة؟",
+            "options": [
+              "Mo/Di/Mi",
+              "Mo/Mi/Fr",
+              "Di/Do/Sa",
+              "Mi/Fr/So"
+            ],
+            "answer": "Mo/Mi/Fr",
+            "explanationAr": "الدليل في النص: «Der Kurs ist dreimal pro Woche: montags, mittwochs und freitags» — الاثنين والأربعاء والجمعة.",
+            "id": "t-a2-29-q1"
+          },
+          {
+            "id": "t-a2-29-q2",
+            "type": "mc",
+            "promptDe": "Wofür brauche ich das Zertifikat?",
+            "promptAr": "لماذا أحتاج إلى الشهادة؟",
+            "options": [
+              "Für meinen Job",
+              "Für eine Reise",
+              "Für die Universität"
+            ],
+            "answer": "Für meinen Job",
+            "explanationAr": "«Das Zertifikat brauche ich für meinen Job.» — أحتاج إلى الشهادة من أجل عملي."
+          }
+        ],
+        "wordCountDe": 153
+      },
+      "current": {
+        "id": "t-a2-29",
+        "level": "A2",
+        "titleDe": "Beispiel: Ein neuer Deutschkurs",
+        "titleAr": "مثال: دورة جديدة للغة الألمانية",
+        "de": "Nächste Woche beginnt ein neuer Deutschkurs an der Volkshochschule. Der Kurs ist dreimal pro Woche: montags, mittwochs und freitags von 18 bis 20 Uhr. Viele von uns lernen nach der Arbeit, deshalb ist der Abendkurs praktisch. Am Ende der Woche wiederholen wir gemeinsam den Wortschatz. Der Lehrer heißt Herr Neumann. Er ist freundlich und erklärt die Grammatik mit einfachen Beispielen. Im Kurs sprechen wir viel miteinander. Wir üben kurze Gespräche, hören Dialoge und schreiben kleine Texte. In der Pause trinke ich Tee mit zwei anderen Teilnehmenden. Wir helfen einander bei den Hausaufgaben. Ich freue mich auf den Kurs, weil ich für die A2-Prüfung üben möchte. Das Zertifikat brauche ich für meinen Job. Heute habe ich das Lehrbuch gekauft und mein Heft vorbereitet. Ich möchte vor dem ersten Unterricht noch einmal die wichtigsten Wörter wiederholen. So kann ich besser mitarbeiten und den Lehrer verstehen. Nach dem Kurs fahre ich mit dem Bus nach Hause.",
+        "ar": "تبدأ دورة جديدة للألمانية الأسبوع القادم في مركز تعليم الكبار. تُعقد الدورة ثلاث مرات في الأسبوع: أيام الاثنين والأربعاء والجمعة من السادسة إلى الثامنة مساءً. يتعلم كثير منا بعد العمل، لذلك تناسبنا الدورة المسائية. نراجع المفردات معاً في نهاية الأسبوع. اسم المدرس السيد نويمان. إنه ودود ويشرح القواعد بأمثلة بسيطة. نتحدث كثيراً معاً في الدورة. نتدرب على حوارات قصيرة ونستمع إلى حوارات ونكتب نصوصاً صغيرة. أشرب الشاي في الاستراحة مع مشاركين اثنين آخرين. نساعد بعضنا في الواجبات. أتطلع إلى الدورة لأنني أريد الاستعداد لامتحان A2. أحتاج إلى الشهادة من أجل عملي. اشتريت كتاب الدورة وجهزت دفتري اليوم. أريد أن أراجع أهم الكلمات مرة أخرى قبل الدرس الأول. هكذا أستطيع المشاركة بصورة أفضل وفهم المدرس. أعود إلى البيت بالحافلة بعد الدورة.",
+        "questions": [
+          {
+            "type": "mc",
+            "promptDe": "An welchen Tagen ist der Kurs?",
+            "promptAr": "في أي أيام الدورة؟",
+            "options": [
+              "Mo/Di/Mi",
+              "Mo/Mi/Fr",
+              "Di/Do/Sa",
+              "Mi/Fr/So"
+            ],
+            "answer": "Mo/Mi/Fr",
+            "explanationAr": "الدليل في النص: «Der Kurs ist dreimal pro Woche: montags, mittwochs und freitags» — الاثنين والأربعاء والجمعة.",
+            "id": "t-a2-29-q1"
+          },
+          {
+            "id": "t-a2-29-q2",
+            "type": "mc",
+            "promptDe": "Wofür brauche ich das Zertifikat?",
+            "promptAr": "لماذا أحتاج إلى الشهادة؟",
+            "options": [
+              "Für meinen Job",
+              "Für eine Reise",
+              "Für die Universität"
+            ],
+            "answer": "Für meinen Job",
+            "explanationAr": "«Das Zertifikat brauche ich für meinen Job.» — أحتاج إلى الشهادة من أجل عملي."
+          }
+        ],
+        "wordCountDe": 153
+      }
+    },
+    {
+      "id": "t-a2-30",
+      "level": "A2",
+      "decision": "confirmed-current",
+      "rationale": "Confirmed the complete couscous preparation sequence, Arabic alignment, 152-word metadata, and both Friday and Harissa questions without change.",
+      "previous": {
+        "id": "t-a2-30",
+        "level": "A2",
+        "titleDe": "Mein Lieblingsgericht",
+        "titleAr": "طبقي المفضل",
+        "de": "Mein Lieblingsgericht ist Couscous mit Gemüse und Lamm. Das kocht meine Mutter jeden Freitag in Tunesien. Für das Gericht braucht man Couscous, Karotten, Zucchini, Kichererbsen, Tomaten, Zwiebeln, Knoblauch und Gewürze wie Kreuzkümmel und Paprika. Meine Mutter würzt das Gericht nach Geschmack. Sie bereitet zuerst das Gemüse vor. Sie schält die Karotten und schneidet die Zucchini in Stücke. Die Zwiebeln werden klein geschnitten und mit etwas Öl angebraten. Danach kommen das Lamm, Wasser und die Gewürze in den Topf. Alles kocht langsam, bis das Fleisch weich ist. Der Couscous wird in einem Siebeinsatz über dem Dampf gegart. Die Kichererbsen kochen mit, bis sie weich sind. Am Schluss legt man den Couscous auf einen großen Teller und gibt Fleisch und Gemüse darüber. Es schmeckt besonders gut mit scharfer Harissa. Die Soße steht extra auf dem Tisch, damit jeder selbst entscheiden kann, wie scharf sein Essen sein soll. Am Freitag isst die ganze Familie gemeinsam.",
+        "ar": "طبقي المفضل هو الكسكس بالخضار ولحم الضأن. تطبخه أمي كل يوم جمعة في تونس. نحتاج إلى الكسكس والجزر والكوسا والحمص والطماطم والبصل والثوم وتوابل مثل الكمون والبابريكا. تضيف أمي التوابل حسب الذوق. تحضّر الخضار أولاً. تقشّر الجزر وتقطّع الكوسا إلى قطع. يُفرم البصل ناعماً ويُحمّر بقليل من الزيت. ثم يُضاف لحم الضأن والماء والتوابل إلى القدر. يُطهى كل شيء على نار هادئة حتى يطرى اللحم. يُطهى الكسكس على البخار في مصفاة فوق القدر. ويُطهى الحمص معه حتى يطرى. في النهاية تضع أمي الكسكس في طبق كبير وتضع اللحم والخضار فوقه. يكون طعمه لذيذاً جداً مع الهريسة الحارة. توضع الصلصة جانباً كي يختار كل شخص بنفسه كمية الهريسة الحارة التي تناسبه. تتناول العائلة كلها الطعام معاً يوم الجمعة.",
+        "questions": [
+          {
+            "type": "mc",
+            "promptDe": "Wann kocht die Mutter Couscous?",
+            "promptAr": "متى تطبخ الأم الكسكس؟",
+            "options": [
+              "Jeden Samstag",
+              "Jeden Freitag",
+              "Jeden Sonntag",
+              "Nur im Ramadan"
+            ],
+            "answer": "Jeden Freitag",
+            "explanationAr": "الدليل في النص: «Das kocht meine Mutter jeden Freitag in Tunesien.» — كل يوم جمعة.",
+            "id": "t-a2-30-q1"
+          },
+          {
+            "id": "t-a2-30-q2",
+            "type": "mc",
+            "promptDe": "Welche Soße wird zum Couscous extra serviert?",
+            "promptAr": "أي صلصة تُقدّم جانباً مع الكسكس؟",
+            "options": [
+              "Scharfe Harissa",
+              "Tomatensoße",
+              "Joghurtsoße"
+            ],
+            "answer": "Scharfe Harissa",
+            "explanationAr": "الدليل في النص: «Es schmeckt besonders gut mit scharfer Harissa.» — يؤكل مع الهريسة الحارة."
+          }
+        ],
+        "wordCountDe": 152
+      },
+      "current": {
+        "id": "t-a2-30",
+        "level": "A2",
+        "titleDe": "Mein Lieblingsgericht",
+        "titleAr": "طبقي المفضل",
+        "de": "Mein Lieblingsgericht ist Couscous mit Gemüse und Lamm. Das kocht meine Mutter jeden Freitag in Tunesien. Für das Gericht braucht man Couscous, Karotten, Zucchini, Kichererbsen, Tomaten, Zwiebeln, Knoblauch und Gewürze wie Kreuzkümmel und Paprika. Meine Mutter würzt das Gericht nach Geschmack. Sie bereitet zuerst das Gemüse vor. Sie schält die Karotten und schneidet die Zucchini in Stücke. Die Zwiebeln werden klein geschnitten und mit etwas Öl angebraten. Danach kommen das Lamm, Wasser und die Gewürze in den Topf. Alles kocht langsam, bis das Fleisch weich ist. Der Couscous wird in einem Siebeinsatz über dem Dampf gegart. Die Kichererbsen kochen mit, bis sie weich sind. Am Schluss legt man den Couscous auf einen großen Teller und gibt Fleisch und Gemüse darüber. Es schmeckt besonders gut mit scharfer Harissa. Die Soße steht extra auf dem Tisch, damit jeder selbst entscheiden kann, wie scharf sein Essen sein soll. Am Freitag isst die ganze Familie gemeinsam.",
+        "ar": "طبقي المفضل هو الكسكس بالخضار ولحم الضأن. تطبخه أمي كل يوم جمعة في تونس. نحتاج إلى الكسكس والجزر والكوسا والحمص والطماطم والبصل والثوم وتوابل مثل الكمون والبابريكا. تضيف أمي التوابل حسب الذوق. تحضّر الخضار أولاً. تقشّر الجزر وتقطّع الكوسا إلى قطع. يُفرم البصل ناعماً ويُحمّر بقليل من الزيت. ثم يُضاف لحم الضأن والماء والتوابل إلى القدر. يُطهى كل شيء على نار هادئة حتى يطرى اللحم. يُطهى الكسكس على البخار في مصفاة فوق القدر. ويُطهى الحمص معه حتى يطرى. في النهاية تضع أمي الكسكس في طبق كبير وتضع اللحم والخضار فوقه. يكون طعمه لذيذاً جداً مع الهريسة الحارة. توضع الصلصة جانباً كي يختار كل شخص بنفسه كمية الهريسة الحارة التي تناسبه. تتناول العائلة كلها الطعام معاً يوم الجمعة.",
+        "questions": [
+          {
+            "type": "mc",
+            "promptDe": "Wann kocht die Mutter Couscous?",
+            "promptAr": "متى تطبخ الأم الكسكس؟",
+            "options": [
+              "Jeden Samstag",
+              "Jeden Freitag",
+              "Jeden Sonntag",
+              "Nur im Ramadan"
+            ],
+            "answer": "Jeden Freitag",
+            "explanationAr": "الدليل في النص: «Das kocht meine Mutter jeden Freitag in Tunesien.» — كل يوم جمعة.",
+            "id": "t-a2-30-q1"
+          },
+          {
+            "id": "t-a2-30-q2",
+            "type": "mc",
+            "promptDe": "Welche Soße wird zum Couscous extra serviert?",
+            "promptAr": "أي صلصة تُقدّم جانباً مع الكسكس؟",
+            "options": [
+              "Scharfe Harissa",
+              "Tomatensoße",
+              "Joghurtsoße"
+            ],
+            "answer": "Scharfe Harissa",
+            "explanationAr": "الدليل في النص: «Es schmeckt besonders gut mit scharfer Harissa.» — يؤكل مع الهريسة الحارة."
+          }
+        ],
+        "wordCountDe": 152
+      }
+    },
+    {
+      "id": "t-a2-031",
+      "level": "A2",
+      "decision": "corrected",
+      "rationale": "Corrected the Arabic meaning of Kartons ausgepackt from taking boxes out to unpacking them and aligned Küche eingerichtet with setting up the kitchen.",
+      "previous": {
+        "id": "t-a2-031",
+        "level": "A2",
+        "titleDe": "Beispiel: Ein Umzug nach Leipzig",
+        "titleAr": "مثال: الانتقال إلى لايبزيغ",
+        "de": "Letzten Monat ist Sara von München nach Leipzig gezogen. Sie hatte eine neue Stelle als Grafikdesignerin gefunden. Die Miete in München war zu hoch, deshalb suchte sie eine Wohnung im Osten. In Leipzig fand sie eine schöne Altbauwohnung mit drei Zimmern und Balkon für 650 Euro warm. Am Anfang vermisste sie ihre Freunde in München, aber sie lernte schnell neue Kollegen kennen. Jetzt gefällt ihr Leipzig gut: Die Stadt ist grün, die Menschen sind freundlich und die Mieten sind bezahlbar. Ihre neue Wohnung liegt in einem ruhigen Viertel. Vom Balkon sieht sie einen kleinen Park. Am ersten Tag hat sie die Kartons ausgepackt und die Küche eingerichtet. Eine Nachbarin hat ihr geholfen, die Möbel ins Haus zu tragen. Bei der Arbeit hat Sara neue Aufgaben bekommen. Sie vermisst ihre Familie noch, telefoniert aber am Wochenende oft mit ihrer Schwester. Am Samstag erkundet sie die Stadt mit dem Fahrrad und probiert neue Cafés aus.",
+        "ar": "انتقلت سارة الشهر الماضي من ميونخ إلى لايبزيغ. كانت قد وجدت وظيفة جديدة كمصممة جرافيك. كان الإيجار في ميونخ مرتفعاً جداً، لذلك بحثت عن شقة في الشرق. وجدت في لايبزيغ شقة جميلة في مبنى قديم، فيها ثلاث غرف وشرفة، بإيجار شامل قدره 650 يورو. افتقدت أصدقاءها في ميونخ في البداية، لكنها تعرفت سريعاً على زملاء جدد. والآن تعجبها لايبزيغ: المدينة خضراء والناس لطفاء والإيجارات معقولة. تقع شقتها الجديدة في حي هادئ. وترى من الشرفة حديقة صغيرة. أخرجت الصناديق ورتبت المطبخ في اليوم الأول. ساعدتها جارة في نقل الأثاث إلى المبنى. حصلت سارة في العمل على مهام جديدة. ما زالت تفتقد عائلتها، لكنها تتصل بأختها كثيراً في نهاية الأسبوع. تستكشف المدينة يوم السبت بالدراجة وتجرب مقاهي جديدة.",
+        "questions": [
+          {
+            "id": "t-a2-031-q1",
+            "type": "mc",
+            "promptDe": "Warum ist Sara nach Leipzig gezogen?",
+            "promptAr": "لماذا انتقلت إلى لايبزيغ؟",
+            "options": [
+              "Wegen einer neuen Stelle und der hohen Miete in München",
+              "Wegen des Wetters",
+              "Weil ihre Familie dort wohnt"
+            ],
+            "answer": "Wegen einer neuen Stelle und der hohen Miete in München",
+            "explanationAr": "الدليل في النص: «Sie hatte eine neue Stelle als Grafikdesignerin gefunden. Die Miete in München war zu hoch.» — وجدت وظيفة جديدة، وكان إيجار ميونخ مرتفعاً أكثر من اللازم."
+          },
+          {
+            "id": "t-a2-031-q2",
+            "type": "mc",
+            "promptDe": "Wie erkundet Sara die Stadt am Wochenende?",
+            "promptAr": "كيف تستكشف سارة المدينة في نهاية الأسبوع؟",
+            "options": [
+              "Mit dem Fahrrad",
+              "Mit dem Taxi",
+              "Zu Fuß mit dem Zug"
+            ],
+            "answer": "Mit dem Fahrrad",
+            "explanationAr": "الدليل في النص: «Am Samstag erkundet sie die Stadt mit dem Fahrrad und probiert neue Cafés aus.» — تستكشفها بالدراجة."
+          }
+        ],
+        "wordCountDe": 153
+      },
+      "current": {
+        "id": "t-a2-031",
+        "level": "A2",
+        "titleDe": "Beispiel: Ein Umzug nach Leipzig",
+        "titleAr": "مثال: الانتقال إلى لايبزيغ",
+        "de": "Letzten Monat ist Sara von München nach Leipzig gezogen. Sie hatte eine neue Stelle als Grafikdesignerin gefunden. Die Miete in München war zu hoch, deshalb suchte sie eine Wohnung im Osten. In Leipzig fand sie eine schöne Altbauwohnung mit drei Zimmern und Balkon für 650 Euro warm. Am Anfang vermisste sie ihre Freunde in München, aber sie lernte schnell neue Kollegen kennen. Jetzt gefällt ihr Leipzig gut: Die Stadt ist grün, die Menschen sind freundlich und die Mieten sind bezahlbar. Ihre neue Wohnung liegt in einem ruhigen Viertel. Vom Balkon sieht sie einen kleinen Park. Am ersten Tag hat sie die Kartons ausgepackt und die Küche eingerichtet. Eine Nachbarin hat ihr geholfen, die Möbel ins Haus zu tragen. Bei der Arbeit hat Sara neue Aufgaben bekommen. Sie vermisst ihre Familie noch, telefoniert aber am Wochenende oft mit ihrer Schwester. Am Samstag erkundet sie die Stadt mit dem Fahrrad und probiert neue Cafés aus.",
+        "ar": "انتقلت سارة الشهر الماضي من ميونخ إلى لايبزيغ. كانت قد وجدت وظيفة جديدة كمصممة جرافيك. كان الإيجار في ميونخ مرتفعاً جداً، لذلك بحثت عن شقة في الشرق. وجدت في لايبزيغ شقة جميلة في مبنى قديم، فيها ثلاث غرف وشرفة، بإيجار شامل قدره 650 يورو. افتقدت أصدقاءها في ميونخ في البداية، لكنها تعرفت سريعاً على زملاء جدد. والآن تعجبها لايبزيغ: المدينة خضراء والناس لطفاء والإيجارات معقولة. تقع شقتها الجديدة في حي هادئ. وترى من الشرفة حديقة صغيرة. أفرغت الصناديق وجهزت المطبخ في اليوم الأول. ساعدتها جارة في نقل الأثاث إلى المبنى. حصلت سارة في العمل على مهام جديدة. ما زالت تفتقد عائلتها، لكنها تتصل بأختها كثيراً في نهاية الأسبوع. تستكشف المدينة يوم السبت بالدراجة وتجرب مقاهي جديدة.",
+        "questions": [
+          {
+            "id": "t-a2-031-q1",
+            "type": "mc",
+            "promptDe": "Warum ist Sara nach Leipzig gezogen?",
+            "promptAr": "لماذا انتقلت إلى لايبزيغ؟",
+            "options": [
+              "Wegen einer neuen Stelle und der hohen Miete in München",
+              "Wegen des Wetters",
+              "Weil ihre Familie dort wohnt"
+            ],
+            "answer": "Wegen einer neuen Stelle und der hohen Miete in München",
+            "explanationAr": "الدليل في النص: «Sie hatte eine neue Stelle als Grafikdesignerin gefunden. Die Miete in München war zu hoch.» — وجدت وظيفة جديدة، وكان إيجار ميونخ مرتفعاً أكثر من اللازم."
+          },
+          {
+            "id": "t-a2-031-q2",
+            "type": "mc",
+            "promptDe": "Wie erkundet Sara die Stadt am Wochenende?",
+            "promptAr": "كيف تستكشف سارة المدينة في نهاية الأسبوع؟",
+            "options": [
+              "Mit dem Fahrrad",
+              "Mit dem Taxi",
+              "Zu Fuß mit dem Zug"
+            ],
+            "answer": "Mit dem Fahrrad",
+            "explanationAr": "الدليل في النص: «Am Samstag erkundet sie die Stadt mit dem Fahrrad und probiert neue Cafés aus.» — تستكشفها بالدراجة."
+          }
+        ],
+        "wordCountDe": 153
+      }
+    },
+    {
+      "id": "t-a2-032",
+      "level": "A2",
+      "decision": "corrected",
+      "rationale": "Corrected both Arabic occurrences of aufstehen from waking to getting up while preserving Lukas’s routine, metadata, and question keys.",
+      "previous": {
+        "id": "t-a2-032",
+        "level": "A2",
+        "titleDe": "Ein gesunder Tagesablauf",
+        "titleAr": "روتين يومي صحي",
+        "de": "Lukas hat seinen Tagesablauf in den letzten Monaten stark verändert. Früher stand er spät auf, trank drei Tassen Kaffee zum Frühstück und aß mittags oft Fast Food. Abends saß er stundenlang vor dem Fernseher. Jetzt steht er um sieben Uhr auf, macht zwanzig Minuten Yoga und frühstückt Müsli mit Obst. Mittags kocht er selbst Gemüse mit Reis. Er geht dreimal pro Woche laufen und schläft vor Mitternacht. Seitdem fühlt er sich viel fitter und ist bei der Arbeit konzentrierter. Er sagt, die größte Schwierigkeit war, abends keine Schokolade zu essen. Am Anfang fiel es ihm schwer, früher ins Bett zu gehen. Deshalb legt er sein Handy abends in einen anderen Raum und liest vor dem Schlafen ein Buch. Er plant seine Mahlzeiten für die Woche und kauft am Samstag frisches Gemüse. Seine Kollegen haben die Veränderung bemerkt. In der Mittagspause gehen sie manchmal gemeinsam spazieren. Lukas sagt, dass kleine Schritte besser zu seinem Alltag passen als ein strenger Plan. Er möchte die neue Routine auch im Winter beibehalten.",
+        "ar": "غيّر لوكاس روتينه اليومي كثيراً خلال الأشهر الماضية. كان يستيقظ متأخراً، ويشرب ثلاثة أكواب من القهوة على الفطور، ويتناول غالباً الوجبات السريعة على الغداء. وكان يجلس ساعات أمام التلفاز في المساء. أما الآن فيستيقظ في السابعة، ويمارس اليوغا عشرين دقيقة، ويفطر موسلي مع الفاكهة. يطبخ الخضار مع الأرز على الغداء بنفسه. يركض ثلاث مرات في الأسبوع وينام قبل منتصف الليل. ومنذ ذلك الحين يشعر بأنه أصبح أكثر لياقة بكثير، كما أصبح أكثر تركيزاً في العمل. يقول إن أصعب شيء كان الامتناع عن أكل الشوكولاتة مساءً. في البداية كان من الصعب عليه أن ينام أبكر. لذلك يضع هاتفه في غرفة أخرى مساءً ويقرأ كتاباً قبل النوم. يخطط لوجبات الأسبوع ويشتري الخضار الطازجة يوم السبت. لاحظ زملاؤه هذا التغيير. ويتمشون معاً أحياناً في استراحة الغداء. يقول لوكاس إن الخطوات الصغيرة تناسب حياته اليومية أكثر من خطة صارمة. ويريد المحافظة على روتينه الجديد في الشتاء أيضاً.",
+        "questions": [
+          {
+            "id": "t-a2-032-q1",
+            "type": "mc",
+            "promptDe": "Was war Lukas' größte Schwierigkeit bei der Umstellung?",
+            "promptAr": "ما كانت أكبر صعوبة؟",
+            "options": [
+              "Früher aufzustehen",
+              "Keine Schokolade abends zu essen",
+              "Täglich Sport zu machen"
+            ],
+            "answer": "Keine Schokolade abends zu essen",
+            "explanationAr": "الدليل في النص: «die größte Schwierigkeit war, abends keine Schokolade zu essen.» — النص يقول إن أصعب شيء كان عدم أكل الشوكولاتة مساءً."
+          },
+          {
+            "id": "t-a2-032-q2",
+            "type": "mc",
+            "promptDe": "Wie oft geht Lukas laufen?",
+            "promptAr": "كم مرة يذهب لوكاس للجري؟",
+            "options": [
+              "Dreimal pro Woche",
+              "Jeden Tag",
+              "Einmal im Monat"
+            ],
+            "answer": "Dreimal pro Woche",
+            "explanationAr": "الدليل في النص: «Er geht dreimal pro Woche laufen und schläft vor Mitternacht.» — يركض ثلاث مرات في الأسبوع."
+          }
+        ],
+        "wordCountDe": 168
+      },
+      "current": {
+        "id": "t-a2-032",
+        "level": "A2",
+        "titleDe": "Ein gesunder Tagesablauf",
+        "titleAr": "روتين يومي صحي",
+        "de": "Lukas hat seinen Tagesablauf in den letzten Monaten stark verändert. Früher stand er spät auf, trank drei Tassen Kaffee zum Frühstück und aß mittags oft Fast Food. Abends saß er stundenlang vor dem Fernseher. Jetzt steht er um sieben Uhr auf, macht zwanzig Minuten Yoga und frühstückt Müsli mit Obst. Mittags kocht er selbst Gemüse mit Reis. Er geht dreimal pro Woche laufen und schläft vor Mitternacht. Seitdem fühlt er sich viel fitter und ist bei der Arbeit konzentrierter. Er sagt, die größte Schwierigkeit war, abends keine Schokolade zu essen. Am Anfang fiel es ihm schwer, früher ins Bett zu gehen. Deshalb legt er sein Handy abends in einen anderen Raum und liest vor dem Schlafen ein Buch. Er plant seine Mahlzeiten für die Woche und kauft am Samstag frisches Gemüse. Seine Kollegen haben die Veränderung bemerkt. In der Mittagspause gehen sie manchmal gemeinsam spazieren. Lukas sagt, dass kleine Schritte besser zu seinem Alltag passen als ein strenger Plan. Er möchte die neue Routine auch im Winter beibehalten.",
+        "ar": "غيّر لوكاس روتينه اليومي كثيراً خلال الأشهر الماضية. كان ينهض متأخراً، ويشرب ثلاثة أكواب من القهوة على الفطور، ويتناول غالباً الوجبات السريعة على الغداء. وكان يجلس ساعات أمام التلفاز في المساء. أما الآن فينهض في السابعة، ويمارس اليوغا عشرين دقيقة، ويفطر موسلي مع الفاكهة. يطبخ الخضار مع الأرز على الغداء بنفسه. يركض ثلاث مرات في الأسبوع وينام قبل منتصف الليل. ومنذ ذلك الحين يشعر بأنه أصبح أكثر لياقة بكثير، كما أصبح أكثر تركيزاً في العمل. يقول إن أصعب شيء كان الامتناع عن أكل الشوكولاتة مساءً. في البداية كان من الصعب عليه أن ينام أبكر. لذلك يضع هاتفه في غرفة أخرى مساءً ويقرأ كتاباً قبل النوم. يخطط لوجبات الأسبوع ويشتري الخضار الطازجة يوم السبت. لاحظ زملاؤه هذا التغيير. ويتمشون معاً أحياناً في استراحة الغداء. يقول لوكاس إن الخطوات الصغيرة تناسب حياته اليومية أكثر من خطة صارمة. ويريد المحافظة على روتينه الجديد في الشتاء أيضاً.",
+        "questions": [
+          {
+            "id": "t-a2-032-q1",
+            "type": "mc",
+            "promptDe": "Was war Lukas' größte Schwierigkeit bei der Umstellung?",
+            "promptAr": "ما كانت أكبر صعوبة؟",
+            "options": [
+              "Früher aufzustehen",
+              "Keine Schokolade abends zu essen",
+              "Täglich Sport zu machen"
+            ],
+            "answer": "Keine Schokolade abends zu essen",
+            "explanationAr": "الدليل في النص: «die größte Schwierigkeit war, abends keine Schokolade zu essen.» — النص يقول إن أصعب شيء كان عدم أكل الشوكولاتة مساءً."
+          },
+          {
+            "id": "t-a2-032-q2",
+            "type": "mc",
+            "promptDe": "Wie oft geht Lukas laufen?",
+            "promptAr": "كم مرة يذهب لوكاس للجري؟",
+            "options": [
+              "Dreimal pro Woche",
+              "Jeden Tag",
+              "Einmal im Monat"
+            ],
+            "answer": "Dreimal pro Woche",
+            "explanationAr": "الدليل في النص: «Er geht dreimal pro Woche laufen und schläft vor Mitternacht.» — يركض ثلاث مرات في الأسبوع."
+          }
+        ],
+        "wordCountDe": 168
+      }
+    }
+  ]
+}
