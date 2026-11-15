@@ -671,11 +671,11 @@
     "claimBoundary": "87 bounded internal A0–B2 decisions; independent review, field validation, and external linguistic, phonetic, CEFR, or exam sign-off remain pending"
   },
   "inventorySnapshot": {
-    "indexedTrackedFilesAndAuditArtifacts": 3618,
-    "manual_complete": 59,
-    "manual_targeted": 67,
+    "indexedTrackedFilesAndAuditArtifacts": 3624,
+    "manual_complete": 60,
+    "manual_targeted": 66,
     "not_started": 3441,
-    "audit_artifact": 51
+    "audit_artifact": 57
   },
   "learningStateCorrections": {
     "findings": [
@@ -924,6 +924,7 @@
         "batch": "PA-037-01",
         "level": "A0",
         "reviewedTexts": 15,
+        "reviewedQuestions": 45,
         "correctedTexts": 12,
         "confirmedCurrentTexts": 3,
         "fixture": "scripts/fixtures/texts-reviewed-01.json",
@@ -933,6 +934,7 @@
         "batch": "PA-037-02",
         "level": "A1",
         "reviewedTexts": 35,
+        "reviewedQuestions": 110,
         "correctedTexts": 25,
         "confirmedCurrentTexts": 10,
         "fixture": "scripts/fixtures/texts-reviewed-02.json",
@@ -942,6 +944,7 @@
         "batch": "PA-037-03",
         "level": "A2",
         "reviewedTexts": 32,
+        "reviewedQuestions": 104,
         "correctedTexts": 26,
         "confirmedCurrentTexts": 6,
         "fixture": "scripts/fixtures/texts-reviewed-03.json",
@@ -951,31 +954,41 @@
         "batch": "PA-037-04",
         "level": "B1",
         "reviewedTexts": 35,
+        "reviewedQuestions": 110,
         "correctedTexts": 30,
         "confirmedCurrentTexts": 5,
         "fixture": "scripts/fixtures/texts-reviewed-04.json",
         "patch": "scripts/patches/apply_text_review_pa037_04.py"
+      },
+      {
+        "batch": "PA-037-05",
+        "level": "B2",
+        "reviewedTexts": 40,
+        "reviewedQuestions": 160,
+        "correctedTexts": 23,
+        "confirmedCurrentTexts": 17,
+        "fixture": "scripts/fixtures/texts-reviewed-05.json",
+        "patch": "scripts/patches/apply_text_review_pa037_05.py"
       }
     ],
-    "reviewedTexts": 117,
+    "reviewedTexts": 157,
     "reviewedLevels": [
       "A0",
       "A1",
       "A2",
-      "B1"
-    ],
-    "correctedTexts": 93,
-    "confirmedCurrentTexts": 24,
-    "remainingTexts": 40,
-    "remainingLevels": [
+      "B1",
       "B2"
     ],
-    "scope": "item-by-item internal full-text review of German and Arabic titles and passages, metadata, questions, options, answers, explanations, narrator perspective, duplication, chronology, ambiguity, and factual, legal, health, environmental, or register claim boundaries; heuristic scans used for triage only",
+    "correctedTexts": 116,
+    "confirmedCurrentTexts": 41,
+    "remainingTexts": 0,
+    "remainingLevels": [],
+    "scope": "item-by-item internal full-text review of German and Arabic titles and passages, metadata, questions, options, answers, explanations, narrator perspective, duplication, chronology, ambiguity, and factual, legal, health, environmental, security, workplace, or register claim boundaries; heuristic scans used for triage only",
     "regressionGate": "npm run audit:text-content-review",
     "independentLinguisticSignOff": false,
     "independentTranslationSignOff": false,
     "externalCefrOrExamValidation": false,
-    "claimBoundary": "117 bounded internal A0–B1 decisions; 40 B2 texts, all 176 dialogues, re-synthesis/listening checks for 39 changed German audio-source passages, independent review, field validation, and external linguistic, translation, legal, medical, environmental, CEFR, or exam sign-off remain pending",
+    "claimBoundary": "157 bounded internal A0–B2 decisions across 529 questions; all 176 dialogues, re-synthesis and text/audio matching or listening checks for 59 changed German audio-source passages, independent review, field validation, and external linguistic, translation, legal, medical, environmental, security, CEFR, or exam sign-off remain pending",
     "audioSourcePassagesChanged": [
       "t-a0-06",
       "t-a1-09",
@@ -1015,8 +1028,37 @@
       "t-b1-30",
       "t-b1-31",
       "t-b1-32",
-      "t-b1-35"
+      "t-b1-35",
+      "t-b2-01",
+      "t-b2-03",
+      "t-b2-05",
+      "t-b2-06",
+      "t-b2-07",
+      "t-b2-08",
+      "t-b2-09",
+      "t-b2-10",
+      "t-b2-11",
+      "t-b2-12",
+      "t-b2-13",
+      "t-b2-14",
+      "t-b2-15",
+      "t-b2-16",
+      "t-b2-17",
+      "t-b2-18",
+      "t-b2-19",
+      "t-b2-20",
+      "t-b2-21",
+      "t-b2-25"
     ],
-    "audioRevalidationCompleted": false
+    "audioRevalidationCompleted": false,
+    "reviewedQuestions": 529,
+    "technicalAudioQc": {
+      "files": 1099,
+      "anomalies": 0,
+      "gaps": 0,
+      "result": "pass",
+      "textAudioMatchChecked": false,
+      "humanListeningCompleted": false
+    }
   }
 }

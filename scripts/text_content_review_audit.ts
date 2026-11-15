@@ -58,6 +58,7 @@ const review01 = readJson<ReviewFixture>("scripts/fixtures/texts-reviewed-01.jso
 const review02 = readJson<ReviewFixture>("scripts/fixtures/texts-reviewed-02.json");
 const review03 = readJson<ReviewFixture>("scripts/fixtures/texts-reviewed-03.json");
 const review04 = readJson<ReviewFixture>("scripts/fixtures/texts-reviewed-04.json");
+const review05 = readJson<ReviewFixture>("scripts/fixtures/texts-reviewed-05.json");
 const byId = new Map(texts.map((text) => [text.id, text]));
 const errors: string[] = [];
 const expectedA0 = new Set([
@@ -92,11 +93,14 @@ const expectedB1 = new Set([
   "t-b1-26", "t-b1-27", "t-b1-28", "t-b1-29", "t-b1-30",
   "t-b1-31", "t-b1-32", "t-b1-33", "t-b1-34", "t-b1-35",
 ]);
+const expectedB2 = new Set(Array.from({ length: 40 }, (_, index) =>
+  `t-b2-${String(index + 1).padStart(2, "0")}`));
 const expectations: BatchExpectation[] = [
   { fixture: review01, batch: "PA-037-01", level: "A0", ids: expectedA0, corrected: 12, confirmed: 3 },
   { fixture: review02, batch: "PA-037-02", level: "A1", ids: expectedA1, corrected: 25, confirmed: 10 },
   { fixture: review03, batch: "PA-037-03", level: "A2", ids: expectedA2, corrected: 26, confirmed: 6 },
   { fixture: review04, batch: "PA-037-04", level: "B1", ids: expectedB1, corrected: 30, confirmed: 5 },
+  { fixture: review05, batch: "PA-037-05", level: "B2", ids: expectedB2, corrected: 23, confirmed: 17 },
 ];
 
 if (texts.length !== 157 || byId.size !== 157) {
@@ -106,6 +110,7 @@ const a0Texts = texts.filter((text) => text.level === "A0");
 const a1Texts = texts.filter((text) => text.level === "A1");
 const a2Texts = texts.filter((text) => text.level === "A2");
 const b1Texts = texts.filter((text) => text.level === "B1");
+const b2Texts = texts.filter((text) => text.level === "B2");
 if (a0Texts.length !== 15 || a0Texts.reduce((sum, text) => sum + text.questions.length, 0) !== 45) {
   errors.push("A0 reading scope drifted from 15 complete texts and 45 questions");
 }
@@ -117,6 +122,9 @@ if (a2Texts.length !== 32 || a2Texts.reduce((sum, text) => sum + text.questions.
 }
 if (b1Texts.length !== 35 || b1Texts.reduce((sum, text) => sum + text.questions.length, 0) !== 110) {
   errors.push("B1 reading scope drifted from 35 complete texts and 110 questions");
+}
+if (b2Texts.length !== 40 || b2Texts.reduce((sum, text) => sum + text.questions.length, 0) !== 160) {
+  errors.push("B2 reading scope drifted from 40 complete texts and 160 questions");
 }
 
 const reviewedIds = new Set<string>();
@@ -168,9 +176,10 @@ for (const expectation of expectations) {
     }
     const questionIds = entry.current.questions.map((question) => question.id);
     const expectedQuestionCount = level === "A0" ? 3
-      : entry.id.match(/^t-a[12]-(?:0[1-9]|1[0-9]|20)$/) ? 4
-        : entry.id.match(/^t-b1-(?:0[1-9]|1[0-9]|20)$/) ? 3
-          : entry.id.match(/^t-b1-(?:2[1-9]|30)$/) ? 4 : 2;
+      : level === "B2" ? 4
+        : entry.id.match(/^t-a[12]-(?:0[1-9]|1[0-9]|20)$/) ? 4
+          : entry.id.match(/^t-b1-(?:0[1-9]|1[0-9]|20)$/) ? 3
+            : entry.id.match(/^t-b1-(?:2[1-9]|30)$/) ? 4 : 2;
     if (entry.current.questions.length !== expectedQuestionCount
       || new Set(questionIds).size !== expectedQuestionCount
       || entry.current.questions.some((question) => !question.promptDe.trim()
@@ -191,7 +200,7 @@ for (const expectation of expectations) {
     }
   }
 }
-if (reviewedIds.size !== 117) errors.push(`PA-037 reviewed identity total drifted from 117 to ${reviewedIds.size}`);
+if (reviewedIds.size !== 157) errors.push(`PA-037 reviewed identity total drifted from 157 to ${reviewedIds.size}`);
 
 const text = (id: string): ReadingText => {
   const value = byId.get(id);
@@ -368,6 +377,47 @@ if (text("t-b1-31").wordCountDe !== 183
   errors.push("B1 final set: word counts, rent and health boundaries, confirmed examples, or bin-placement consistency regressed");
 }
 
+if (!text("t-b2-01").de.includes("pauschale Wirkungsversprechen")
+  || question("t-b2-01", "t-b2-01-q3")?.answer !== "etwas bezweifeln"
+  || question("t-b2-02", "t-b2-02-q2")?.answer?.length !== 1
+  || text("t-b2-03").titleDe !== "Klimawandel: Daten und Entscheidungen"
+  || !text("t-b2-03").de.includes("Ein einzelnes Wetterereignis lässt sich nicht allein")
+  || text("t-b2-04").ar.includes("مدينة نموذجية")
+  || !text("t-b2-05").de.includes("Formale Voraussetzungen bleiben wichtig.")) {
+  errors.push("B2 first set: digital-media, reported-speech, climate, fabricated-translation, or employment claim boundaries regressed");
+}
+if (!text("t-b2-06").de.includes("individuell verschieden")
+  || !text("t-b2-07").de.includes("ohne pädagogisches Konzept")
+  || !text("t-b2-08").de.includes("anderen verlässlichen Quellen")
+  || !text("t-b2-09").de.includes("garantiert jedoch keine bestimmte Gedächtnisleistung")
+  || !text("t-b2-10").de.includes("beweisen jedoch nicht, dass jedes Modell")
+  || !text("t-b2-11").de.includes("hängt vom Gebäude und vom lokalen Klima ab")) {
+  errors.push("B2 evidence set: sleep, pedagogy, source checking, memory, workweek, or green-roof qualification regressed");
+}
+if (text("t-b2-12").titleDe !== "Lesen in kurzen und langen Formaten"
+  || !text("t-b2-13").de.includes("weder Lebenshaltungskosten noch Unterschiede beim Zugang")
+  || text("t-b2-14").titleDe !== "Lärm als Gesundheitsrisiko"
+  || !text("t-b2-15").de.includes("weniger Fehler, oder sie wurden seltener gemeldet")
+  || text("t-b2-16").titleDe !== "Deutschlandticket: Erfolg?"
+  || !text("t-b2-17").de.includes("mit transparenten Daten geprüft werden")) {
+  errors.push("B2 policy set: reading, tuition, noise, error reporting, transport, or advertising boundaries regressed");
+}
+if (text("t-b2-18").titleDe !== "Warum ein digitaler Antrag dauern kann"
+  || !text("t-b2-19").de.includes("je nach Beruf und Region unterschiedliche Ursachen")
+  || !text("t-b2-20").de.includes("Kein einzelnes Instrument löst")
+  || !text("t-b2-21").de.endsWith("bevor Schweigen den anderen verletzt.")
+  || !text("t-b2-25").de.includes("Das war eine Arbeitshypothese, kein Beleg")
+  || question("t-b2-28", "t-b2-28-q1")?.promptAr !== "ماذا تعني إزاحة السكان حسب النص؟") {
+  errors.push("B2 process and narrative set: administration, skills, housing, pronoun logic, injury causality, or Arabic displacement wording regressed");
+}
+if (text("t-b2-36").wordCountDe !== 182
+  || text("t-b2-37").wordCountDe !== 207
+  || text("t-b2-38").wordCountDe !== 180
+  || text("t-b2-39").wordCountDe !== 177
+  || text("t-b2-40").wordCountDe !== 197) {
+  errors.push("B2 final confirmed set: reviewed word counts regressed");
+}
+
 const currentReviewed = JSON.stringify(expectations.flatMap(({ fixture }) => fixture.entries.map((entry) => entry.current)));
 for (const stale of [
   "Die Zahlen 1–10", "ماذا يعمل كريم؟", "Im Kurs sind 12 Studenten",
@@ -379,6 +429,8 @@ for (const stale of [
   "In der Werkstatt hat man mir zwei Möglichkeiten:", "الأجرة الشاملة مع التدفئة", "أخرجت الصناديق ورتبت المطبخ",
   "Lief Hassan", "45 Prozent würden heute eine Ausbildung", "Millionen Menschen ehrenamtlich",
   "Immerhin hundertmal", "Salma hatte gerade dieses Ende beeindruckt", "Obwohl es genug Mülleimer gibt",
+  "يتناول النص بعد ذلك وجهات نظر متباينة", "Eine in Nature veröffentlichte Studie belegt",
+  "größte Studie zur Vier-Tage-Woche", "Das digitale Amt — eine Erfolgsgeschichte", "Ein Preisdeckel löst gar nichts",
 ]) {
   if (currentReviewed.includes(stale)) {
     errors.push(`PA-037 stale, duplicate, mistranslated, or perspective-drifting content returned: ${stale}`);
@@ -392,8 +444,8 @@ if (errors.length) {
 }
 
 console.log(
-  "✅ Reading-text content review: all 117 bounded A0–B1 full-text decisions match (93 corrected, 24 confirmed-current).",
+  "✅ Reading-text content review: all 157 bounded A0–B2 full-text decisions match (116 corrected, 41 confirmed-current).",
 );
 console.log(
-  "ℹ️ This gate protects reviewed titles, German and Arabic passages, metadata, questions, options, answers, explanations, narrator perspective, ambiguity, duplication decisions, and claim boundaries; 40 B2 texts, all 176 dialogues, independent linguistic/translation, legal, medical, or environmental review, audio revalidation, CEFR calibration, and exam sign-off remain outside these batches.",
+  "ℹ️ This gate protects reviewed titles, German and Arabic passages, metadata, questions, options, answers, explanations, narrator perspective, ambiguity, duplication decisions, and claim boundaries; all 176 dialogues, independent linguistic/translation, legal, medical, environmental, or security review, audio revalidation, CEFR calibration, and exam sign-off remain outside these batches.",
 );

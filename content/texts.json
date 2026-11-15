@@ -1048,21 +1048,21 @@
     "level": "B2",
     "titleDe": "Die Digitalisierung der Bildung",
     "titleAr": "رقمنة التعليم",
-    "de": "Die Digitalisierung spielt in der Bildung eine zentrale Rolle. Einerseits ermöglichen neue Medien individuelles Lernen; andererseits stellen Studien die Wirkung vieler Tools in Frage. Eine kürzlich veröffentlichte Untersuchung zeigt, dass die von Lehrern begleitete Nutzung die besten Ergebnisse liefert. Ohne pädagogisches Konzept, so die Forscher, bliebe der Effekt gering. Es geht also nicht um Technik um ihrer selbst willen, sondern um nachhaltige Didaktik.",
-    "ar": "الرقمنة تلعب دوراً محورياً في التعليم. من جهة تتيح الوسائط الجديدة تعلّماً فردياً، ومن جهة أخرى تشكّك الدراسات في فعالية كثير من الأدوات. دراسة منشورة حديثاً تبيّن أن الاستخدام المصحوب بإشراف المعلّمين يعطي أفضل النتائج. وبحسب الباحثين فبدون مفهوم تربوي يبقى الأثر ضئيلاً. المسألة إذن ليست التقنية لذاتها بل منهجية مستدامة. يتناول النص بعد ذلك وجهات نظر متباينة ويعرض دراسة حالة من مدينة نموذجية، ثم يخلص إلى أن الاستدامة تتطلب ربط الخبرة بالمشاركة، مع التمييز بين الوقائع والتقييمات.",
+    "de": "Digitale Medien können in der Bildung eine wichtige Rolle spielen. Je nach Aufgabe ermöglichen sie individuelles Üben und schnellen Zugang zu Materialien. Erfahrungen mit einzelnen Tools stellen pauschale Wirkungsversprechen jedoch in Frage. Entscheidend ist, wie Lehrkräfte ein Werkzeug in ein pädagogisches Konzept einbinden und ob die Lernziele überprüft werden. Es geht also nicht um Technik um ihrer selbst willen, sondern um eine nachvollziehbare Didaktik.",
+    "ar": "يمكن أن تؤدي الوسائط الرقمية دوراً مهماً في التعليم. فهي تتيح، بحسب المهمة، تدريباً فردياً ووصولاً سريعاً إلى المواد. لكن التجارب مع بعض الأدوات تضع الوعود العامة بشأن فعاليتها موضع شك. والعامل الحاسم هو كيفية إدماج المعلمين للأداة في مفهوم تربوي، والتحقق من أهداف التعلم. فالمسألة ليست التقنية لذاتها، بل منهجية تعليمية واضحة.",
     "questions": [
       {
         "id": "t-b2-01-q1",
         "type": "mc",
-        "promptDe": "Was liefert die besten Ergebnisse?",
+        "promptDe": "Wovon hängt die Wirkung eines digitalen Werkzeugs laut Text ab?",
         "options": [
-          "Tools ohne Lehrer",
-          "die von Lehrern begleitete Nutzung",
-          "reine Selbststudien"
+          "von der Einbindung in ein pädagogisches Konzept und der Überprüfung der Lernziele",
+          "nur vom Preis des Werkzeugs",
+          "von der Nutzung ohne Lehrkräfte"
         ],
-        "answer": "die von Lehrern begleitete Nutzung",
-        "explanationAr": "في النصِّ حرفياً: «die von Lehrern begleitete Nutzung …» (Partizipialattribut).",
-        "promptAr": "ما الذي يحقق أفضل النتائج؟"
+        "answer": "von der Einbindung in ein pädagogisches Konzept und der Überprüfung der Lernziele",
+        "explanationAr": "النص يقول: «Entscheidend ist, wie Lehrkräfte ein Werkzeug in ein pädagogisches Konzept einbinden und ob die Lernziele überprüft werden.»",
+        "promptAr": "على ماذا تتوقف فعالية الأداة الرقمية حسب النص؟"
       },
       {
         "id": "t-b2-01-q2",
@@ -1071,33 +1071,33 @@
         "answer": [
           "willen"
         ],
-        "explanationAr": "الدليل حرفياً: «Es geht also nicht um Technik um ihrer selbst willen, sondern um nachhaltige Didaktik.» — um … willen = من أجل.",
+        "explanationAr": "النص يقول: «Es geht also nicht um Technik um ihrer selbst willen, sondern um eine nachvollziehbare Didaktik.» — um … willen = من أجل.",
         "promptAr": "ليست التقنية غاية في ___، بل البيداغوجيا."
       },
       {
         "id": "t-b2-01-q3",
         "type": "mc",
-        "promptDe": "„stellt … in Frage“ heißt:",
+        "promptDe": "„etwas in Frage stellen“ bedeutet:",
         "options": [
-          "يشكّك في",
-          "يؤكد",
-          "ينفي"
+          "etwas bezweifeln",
+          "etwas bestätigen",
+          "etwas verbieten"
         ],
-        "answer": "يشكّك في",
-        "explanationAr": "الدليل حرفياً: «Einerseits ermöglichen neue Medien individuelles Lernen; andererseits stellen Studien die Wirkung vieler Tools in Frage.» — Funktionsverbgefüge.",
-        "promptAr": "«يشكّك في» تعني:"
+        "answer": "etwas bezweifeln",
+        "explanationAr": "النص يقول: «Erfahrungen mit einzelnen Tools stellen pauschale Wirkungsversprechen jedoch in Frage.» — أي تشكك فيها.",
+        "promptAr": "ما معنى عبارة «etwas in Frage stellen»؟"
       },
       {
         "id": "t-b2-01-q4",
         "type": "truefalse",
-        "promptDe": "Laut Text wirken digitale Medien auch ohne pädagogisches Konzept stark.",
+        "promptDe": "Laut Text wirkt jedes digitale Werkzeug automatisch positiv.",
         "options": [
           "richtig",
           "falsch"
         ],
         "answer": "falsch",
-        "explanationAr": "النصُّ يقول: «Ohne pädagogisches Konzept … bliebe der Effekt gering».",
-        "promptAr": "هل تؤثر الوسائط الرقمية بقوة بدون مفهوم تربوي حسب النص؟"
+        "explanationAr": "هذا خطأ؛ فالنص يقول إن التجارب «stellen pauschale Wirkungsversprechen jedoch in Frage».",
+        "promptAr": "هل تؤثر كل أداة رقمية تلقائياً تأثيراً إيجابياً حسب النص؟"
       }
     ],
     "arHinweis": "ملخص عربي — الترجمة الكاملة في النص الألماني؛ الفهم يُختبر بالأسئلة الألمانية."
@@ -1106,9 +1106,9 @@
     "id": "t-b2-02",
     "level": "B2",
     "titleDe": "Aus der Tageszeitung",
-    "titleAr": "من اليومية",
+    "titleAr": "من الصحيفة اليومية",
     "de": "Der Verkehrsminister hat gestern erklärt, die neue Bahnverbindung sei pünktlich und zuverlässig. Die Bürgermeisterin der Region sagte jedoch, die Anwohner hätten andere Erfahrungen gemacht. Viele Pendler berichteten, der Zug sei regelmäßig verspätet. Ein Sprecher der Bahn teilte mit, man arbeite an einer Lösung. Die Opposition stellte die Zahlen in Frage und forderte, die Anforderungen an den Betreiber zu erhöhen.",
-    "ar": "أوضح وزير المواصلات أمس أن خط القطار الجديد دقيق ويمكن الاعتماد عليه. لكن عميدة المنطقة قالت إن السكان عاشوا تجارب مختلفة. كثير من المتنقلين أفادوا بأن القطار يتأخر بانتظام. ناطق باسم السكة الحديدية أفاد بأن العمل جارٍ على حلّ. أما المعارضة فشكّكت في الأرقام وطالبت بتشديد متطلبات المشغّل. يتناول النص بعد ذلك وجهات نظر متباينة ويعرض دراسة حالة من مدينة نموذجية، ثم يخلص إلى أن الاستدامة تتطلب ربط الخبرة بالمشاركة، مع التمييز بين الوقائع والتقييمات.",
+    "ar": "أوضح وزير النقل أمس أن خط القطار الجديد دقيق المواعيد ويمكن الاعتماد عليه. لكن رئيسة بلدية في المنطقة قالت إن السكان مروا بتجارب مختلفة. وأفاد كثير من المتنقلين بأن القطار يتأخر بانتظام. وقال متحدث باسم شركة السكك الحديدية إن العمل جار على حل. أما المعارضة فشككت في الأرقام وطالبت برفع المتطلبات المفروضة على المشغل.",
     "questions": [
       {
         "id": "t-b2-02-q1",
@@ -1125,10 +1125,9 @@
         "type": "fill",
         "promptDe": "Die Pendler berichteten, der Zug ___ verspätet.",
         "answer": [
-          "sei",
-          "wäre"
+          "sei"
         ],
-        "explanationAr": "الدليل حرفياً: «Viele Pendler berichteten, der Zug sei regelmäßig verspätet.» — sei أو wäre عند الالتباس.",
+        "explanationAr": "النص يقول: «Viele Pendler berichteten, der Zug sei regelmäßig verspätet.» — صيغة النقل هي sei في Konjunktiv I.",
         "promptAr": "أفاد المسافرون أن القطار ___ متأخراً."
       },
       {
@@ -1153,8 +1152,8 @@
           "falsch"
         ],
         "answer": "richtig",
-        "explanationAr": "الدليل حرفياً: «Der Verkehrsminister hat gestern erklärt, die neue Bahnverbindung sei pünktlich und zuverlässig.» — الوزيرُ يقولُ منتظمةٌ وموثوقة، والعمدةُ تنقلُ تجربةً مغايرة — وهذا كلامٌ منقولٌ بصيغةِ Konjunktiv I.",
-        "promptAr": "هل يقيم الوزير والعميدة الوضع بشكل مختلف؟"
+        "explanationAr": "يصف الوزير الخط بأنه «pünktlich und zuverlässig»، بينما تقول رئيسة البلدية إن السكان «hätten andere Erfahrungen gemacht»؛ لذلك يختلف التقييمان.",
+        "promptAr": "هل يقيّم الوزير ورئيسة البلدية الوضع بشكل مختلف؟"
       }
     ],
     "arHinweis": "ملخص عربي — الترجمة الكاملة في النص الألماني؛ الفهم يُختبر بالأسئلة الألمانية."
@@ -1162,58 +1161,58 @@
   {
     "id": "t-b2-03",
     "level": "B2",
-    "titleDe": "Klimawandel: Zahlen und Zweifel",
-    "titleAr": "التغيّر المناخي: أرقام وشكوك",
-    "de": "Die Auswirkungen des Klimawandels sind kaum noch zu leugnen: Hitzewellen, Überschwemmungen, Ernteausfälle. Dennoch gibt es Stimmen, die angeblich fehlende Daten beklagen. Wissenschaftlerinnen entgegnen, der Konsens sei breit genug für entschlossenes Handeln. Eine in Nature veröffentlichte Studie belegt den Zusammenhang zwischen CO₂-Ausstoß und Temperaturanstieg. Wer hier noch Abwarten propagiert, handelt verantwortungslos.",
-    "ar": "انعكاسات التغيّر المناخي يصعب إنكارها: موجات حر، فيضانات، خسائر محاصيل. ومع ذلك توجد أصوات تشكو من «بيانات ناقصة» على نحو مزعوم. تردّ الباحثات بأن الإجماع واسع بما يكفي للحزم في العمل. دراسة منشورة في Nature تثبت الصلة بين انبعاثات ثاني أكسيد الكربون وارتفاع الحرارة. من يدعو هنا للانتظار يتصرّف بغير مسؤولية. يتناول النص بعد ذلك وجهات نظر متباينة ويعرض دراسة حالة من مدينة نموذجية، ثم يخلص إلى أن الاستدامة تتطلب ربط الخبرة بالمشاركة، مع التمييز بين الوقائع والتقييمات.",
+    "titleDe": "Klimawandel: Daten und Entscheidungen",
+    "titleAr": "تغير المناخ: البيانات والقرارات",
+    "de": "Die Folgen des Klimawandels zeigen sich in langfristigen Veränderungen und in zunehmenden Risiken. Ein einzelnes Wetterereignis lässt sich nicht allein mit dem Klimawandel erklären. Die Forschung bewertet deshalb lange Messreihen, Modelle und verschiedene Datenquellen. Der breite wissenschaftliche Konsens verbindet den vom Menschen verursachten Ausstoß von Treibhausgasen mit der Erwärmung. Über einzelne Maßnahmen kann man streiten; unbegrenztes Abwarten ist jedoch keine neutrale Entscheidung.",
+    "ar": "تظهر آثار تغير المناخ في التحولات الطويلة الأمد وفي ازدياد المخاطر. ولا يمكن تفسير ظاهرة جوية منفردة بتغير المناخ وحده. لذلك يقيّم الباحثون سلاسل قياس طويلة ونماذج ومصادر بيانات مختلفة. ويربط الإجماع العلمي الواسع بين انبعاثات الغازات الدفيئة الناتجة عن النشاط البشري والاحترار. ويمكن الاختلاف بشأن الإجراءات المفردة، لكن الانتظار إلى ما لا نهاية ليس قراراً محايداً.",
     "questions": [
       {
         "id": "t-b2-03-q1",
         "type": "fill",
-        "promptDe": "Die Auswirkungen sind kaum noch zu ___.",
+        "promptDe": "Ein einzelnes Wetterereignis lässt sich nicht allein mit dem ___ erklären.",
         "answer": [
-          "leugnen"
+          "Klimawandel"
         ],
-        "explanationAr": "الدليل حرفياً: «Die Auswirkungen des Klimawandels sind kaum noch zu leugnen: Hitzewellen, Überschwemmungen, Ernteausfälle.» — zu + مصدر: يصعب إنكارها.",
-        "promptAr": "الآثار بالكاد يمكن ___ بعد الآن."
+        "explanationAr": "النص يقول: «Ein einzelnes Wetterereignis lässt sich nicht allein mit dem Klimawandel erklären.»",
+        "promptAr": "لا يمكن تفسير ظاهرة جوية منفردة بـ___ وحده."
       },
       {
         "id": "t-b2-03-q2",
         "type": "mc",
-        "promptDe": "Was belegt die Studie?",
+        "promptDe": "Welche Grundlagen bewertet die Forschung laut Text?",
         "options": [
-          "fehlende Daten",
-          "Zusammenhang zwischen CO₂ und Temperatur",
-          "Ernteausfälle in Afrika"
+          "lange Messreihen, Modelle und verschiedene Datenquellen",
+          "nur ein einzelnes Wetterereignis",
+          "nur politische Meinungen"
         ],
-        "answer": "Zusammenhang zwischen CO₂ und Temperatur",
-        "explanationAr": "في النصِّ حرفياً: «belegt den Zusammenhang …».",
-        "promptAr": "ماذا تثبت الدراسة؟"
+        "answer": "lange Messreihen, Modelle und verschiedene Datenquellen",
+        "explanationAr": "النص يذكر: «lange Messreihen, Modelle und verschiedene Datenquellen».",
+        "promptAr": "ما الأسس التي يقيّمها البحث حسب النص؟"
       },
       {
         "id": "t-b2-03-q3",
         "type": "mc",
-        "promptDe": "Wie bewertet der Text das Abwarten?",
+        "promptDe": "Wie bewertet der Text unbegrenztes Abwarten?",
         "options": [
-          "vernünftig",
-          "verantwortungslos",
-          "neutral"
+          "als neutrale Entscheidung",
+          "als keine neutrale Entscheidung",
+          "als einzige wissenschaftliche Methode"
         ],
-        "answer": "verantwortungslos",
-        "explanationAr": "في النصِّ حرفياً: «handelt verantwortungslos».",
-        "promptAr": "كيف يقيّم النص الانتظار؟"
+        "answer": "als keine neutrale Entscheidung",
+        "explanationAr": "النص يقول: «unbegrenztes Abwarten ist jedoch keine neutrale Entscheidung».",
+        "promptAr": "كيف يقيّم النص الانتظار إلى ما لا نهاية؟"
       },
       {
         "id": "t-b2-03-q4",
         "type": "truefalse",
-        "promptDe": "Der Text hält Abwarten in der Klimafrage für verantwortungsvoll.",
+        "promptDe": "Ein einzelnes Wetterereignis beweist laut Text für sich allein den Klimawandel.",
         "options": [
           "richtig",
           "falsch"
         ],
         "answer": "falsch",
-        "explanationAr": "في النصِّ حرفياً: «Wer hier noch Abwarten propagiert, handelt verantwortungslos».",
-        "promptAr": "هل يرى النص الانتظار مسؤولاً في مسألة المناخ؟"
+        "explanationAr": "هذا خطأ؛ فالنص يقول: «Ein einzelnes Wetterereignis lässt sich nicht allein mit dem Klimawandel erklären.»",
+        "promptAr": "هل تثبت ظاهرة جوية منفردة تغير المناخ بمفردها حسب النص؟"
       }
     ],
     "arHinweis": "ملخص عربي — الترجمة الكاملة في النص الألماني؛ الفهم يُختبر بالأسئلة الألمانية."
@@ -1222,9 +1221,9 @@
     "id": "t-b2-04",
     "level": "B2",
     "titleDe": "Rezension: ein bemerkenswerter Roman",
-    "titleAr": "مراجعة: رواية تستحق",
+    "titleAr": "مراجعة: رواية جديرة بالاهتمام",
     "de": "Wer einen Roman sucht, der nicht nur unterhält, sondern auch zum Denken anregt, liegt mit diesem Buch genau richtig. Die Autorin zeichnet ein Bild der Gesellschaft, das trotz mancher Übertreibung überzeugend wirkt. Zwar ist der Anfang langsam, doch ab dem zweiten Kapitel entwickelt der Plot eine enorme Spannung. Einzig die Figuren bleiben etwas blass. Insgesamt: eine klare Empfehlung für alle, die anspruchsvolle Literatur schätzen.",
-    "ar": "من يبحث عن رواية لا تسلّي فقط بل تحفّز التفكير فهذا الكتاب خياره الصحيح. ترسم الكاتبة صورة للمجتمع مقنعة رغم بعض المبالغة. صحيح أن البداية بطيئة لكن منذ الفصل الثاني تكتسب الحبكة تشويقاً هائلاً. الوحيد: الشخصيات تبقى باهتة قليلاً. الإجمالي: توصية واضحة لكل من يقدّر الأدب الرفيع. يتناول النص بعد ذلك وجهات نظر متباينة ويعرض دراسة حالة من مدينة نموذجية، ثم يخلص إلى أن الاستدامة تتطلب ربط الخبرة بالمشاركة، مع التمييز بين الوقائع والتقييمات.",
+    "ar": "من يبحث عن رواية لا تقتصر على التسلية، بل تحفز التفكير أيضاً، فسيجد في هذا الكتاب خياراً مناسباً. ترسم الكاتبة صورة مقنعة للمجتمع رغم بعض المبالغة. صحيح أن البداية بطيئة، لكن الحبكة تكتسب منذ الفصل الثاني تشويقاً كبيراً. أما المأخذ الوحيد فهو أن الشخصيات تبقى باهتة بعض الشيء. والخلاصة أنها توصية واضحة لكل من يقدر الأدب المتطلب.",
     "questions": [
       {
         "id": "t-b2-04-q1",
@@ -1237,7 +1236,7 @@
         ],
         "answer": "den Anfang und die Figuren",
         "explanationAr": "الدليل حرفياً: «Zwar ist der Anfang langsam» و«Einzig die Figuren bleiben etwas blass». الفخّ: اللغة والسعر لم يُذكرا.",
-        "promptAr": "بماذا تنتقد المراجعة؟"
+        "promptAr": "ما الذي تنتقده المراجعة؟"
       },
       {
         "id": "t-b2-04-q2",
@@ -1283,53 +1282,53 @@
     "level": "B2",
     "titleDe": "Bewerbung und Arbeitsmarkt",
     "titleAr": "التقديم وسوق العمل",
-    "de": "Die Anforderungen an moderne Berufe sind in den letzten Jahren deutlich gestiegen. Fachwissen allein genügt längst nicht mehr; gefragt sind Fähigkeiten wie Kommunikation, Kreativität und die Bereitschaft, Verantwortung zu übernehmen. Bewerberinnen sollten im Anschreiben nicht nur darstellen, was sie getan haben, sondern auch, welche Konsequenzen ihr Handeln hatte. Wer diese Zusammenhänge plausibel macht, überzeugt — ungeachtet der formalen Voraussetzungen.",
-    "ar": "ارتفعت متطلبات المهن الحديثة بوضوح في السنوات الأخيرة. المعرفة التخصصية وحدها لم تعد كافية؛ المطلوب مهارات كال التواصل والإبداع والاستعداد لتحمّل المسؤولية. على المتقدّمات في الخطاب أن لا يعرضن ما فعلنّه فقط بل أيضاً ما نتج عن أفعالهنّ من نتائج. من يجعل هذه الترابطات مقنعة يُقنع — بغضّ النظر عن الشروط الشكلية. يتناول النص بعد ذلك وجهات نظر متباينة ويعرض دراسة حالة من مدينة نموذجية، ثم يخلص إلى أن الاستدامة تتطلب ربط الخبرة بالمشاركة، مع التمييز بين الوقائع والتقييمات.",
+    "de": "In vielen Stellenausschreibungen reicht Fachwissen allein nicht aus. Gefragt sind zusätzlich Fähigkeiten wie Kommunikation, Kreativität und die Bereitschaft, Verantwortung zu übernehmen. Bewerberinnen und Bewerber sollten im Anschreiben nicht nur darstellen, was sie getan haben, sondern auch, welche Folgen ihr Handeln hatte. Formale Voraussetzungen bleiben wichtig. Wer darüber hinaus Zusammenhänge plausibel macht, lässt das eigene Profil verständlicher werden.",
+    "ar": "في كثير من إعلانات الوظائف لا تكفي المعرفة التخصصية وحدها. إذ تُطلب أيضاً مهارات مثل التواصل والإبداع والاستعداد لتحمل المسؤولية. وينبغي للمتقدمين والمتقدمات ألا يذكروا في خطاب التقديم ما فعلوه فحسب، بل أن يوضحوا أيضاً نتائج أفعالهم. وتظل الشروط الرسمية مهمة. ومن يشرح إضافة إلى ذلك الروابط بصورة مقنعة يجعل ملفه أوضح.",
     "questions": [
       {
         "id": "t-b2-05-q1",
         "type": "fill",
         "promptDe": "Bewerber sollten zeigen, welche ___ ihr Handeln hatte.",
         "answer": [
-          "Konsequenzen"
+          "Folgen"
         ],
-        "explanationAr": "الدليل حرفياً: «Bewerberinnen sollten im Anschreiben nicht nur darstellen, was sie getan haben, sondern auch, welche Konsequenzen ihr Handeln hatte.» — النتائج المترتبة.",
-        "promptAr": "يجب على المتقدمين إظهار ما ___ تصرفهم."
+        "explanationAr": "النص يقول: «welche Folgen ihr Handeln hatte».",
+        "promptAr": "ينبغي للمتقدمين توضيح ___ أفعالهم."
       },
       {
         "id": "t-b2-05-q2",
         "type": "mc",
         "promptDe": "Was ist neben Fachwissen gefragt?",
         "options": [
-          "nur Erfahrung",
-          "Kommunikation, Kreativität, Verantwortung",
-          "gute Noten"
+          "Kommunikation, Kreativität und Verantwortung",
+          "nur Berufserfahrung",
+          "ausschließlich gute Noten"
         ],
-        "answer": "Kommunikation, Kreativität, Verantwortung",
-        "explanationAr": "في النصِّ حرفياً: «gefragt sind Fähigkeiten wie …».",
+        "answer": "Kommunikation, Kreativität und Verantwortung",
+        "explanationAr": "النص يذكر «Kommunikation, Kreativität und die Bereitschaft, Verantwortung zu übernehmen».",
         "promptAr": "ماذا يُطلب إلى جانب المعرفة المتخصصة؟"
       },
       {
         "id": "t-b2-05-q3",
         "type": "fill",
-        "promptDe": "…, ___ der formalen Voraussetzungen.",
+        "promptDe": "Wer Zusammenhänge ___ macht, lässt das eigene Profil verständlicher werden.",
         "answer": [
-          "ungeachtet"
+          "plausibel"
         ],
-        "explanationAr": "الدليل حرفياً: «Wer diese Zusammenhänge plausibel macht, überzeugt — ungeachtet der formalen Voraussetzungen.» — ungeachtet + Genitiv = بغضّ النظر عن.",
-        "promptAr": "___ المتطلبات الشكلية. تلميح المعنى: بغض النظر عن."
+        "explanationAr": "النص يقول: «Wer darüber hinaus Zusammenhänge plausibel macht».",
+        "promptAr": "من يشرح الروابط بصورة ___ يجعل ملفه أوضح."
       },
       {
         "id": "t-b2-05-q4",
         "type": "truefalse",
-        "promptDe": "Fachwissen allein reicht laut Text für moderne Berufe aus.",
+        "promptDe": "Fachwissen allein reicht laut Text in vielen Stellenausschreibungen aus.",
         "options": [
           "richtig",
           "falsch"
         ],
         "answer": "falsch",
-        "explanationAr": "في النصِّ حرفياً: «Fachwissen allein genügt längst nicht mehr».",
-        "promptAr": "هل تكفي المعرفة المتخصصة وحدها للمهن الحديثة حسب النص؟"
+        "explanationAr": "هذا خطأ؛ فالنص يقول: «In vielen Stellenausschreibungen reicht Fachwissen allein nicht aus.»",
+        "promptAr": "هل تكفي المعرفة التخصصية وحدها في كثير من إعلانات الوظائف حسب النص؟"
       }
     ],
     "arHinweis": "ملخص عربي — الترجمة الكاملة في النص الألماني؛ الفهم يُختبر بالأسئلة الألمانية."
@@ -1651,56 +1650,56 @@
     "level": "B2",
     "titleDe": "Schlaf und Lernen",
     "titleAr": "النوم والتعلّم",
-    "de": "Die im Schlaf stattfindende Festigung von Erlerntem ist gut erforscht. Mehrere Studien belegen den Zusammenhang zwischen ausreichendem Schlaf und besseren Prüfungsergebnissen. Besonders wirksam scheint das früh am Morgen Gelernte zu sein, das über Nacht stabilisiert wird. Wer dagegen bis spät in die Nacht büffelt, erzielt oft das Gegenteil: Die von Übermüdung geprägte Konzentration lässt nach. Die Schlussfolgerung liegt auf der Hand: Lernen und Schlafen sind kein Widerspruch, sondern Verbündete.",
-    "ar": "ترسيخ المكتسبات أثناء النوم مبحوث فيه جيداً. عدة دراسات تثبت الصلة بين النوم الكافي ونتائج امتحانية أفضل. يبدو أن الأثر الأقوى لما يُتعلَّم في الصباح الباكر، فيستقرّ خلال الليل. أما من يذاكر حتى وقت متأخر من الليل في غالباً ما ينال العكس: التركيز المطبوع بالإرهاق يخفّ. الاستنتاج بديهي: التعلّم والنوم ليسا تضاداً بل حليفان. يتناول النص بعد ذلك وجهات نظر متباينة ويعرض دراسة حالة من مدينة نموذجية، ثم يخلص إلى أن الاستدامة تتطلب ربط الخبرة بالمشاركة، مع التمييز بين الوقائع والتقييمات.",
+    "de": "Schlaf spielt bei der Festigung von Gelerntem eine wichtige Rolle. Wie viel Schlaf jemand braucht, ist jedoch individuell verschieden. Studien deuten darauf hin, dass Schlafmangel Aufmerksamkeit und Lernleistung beeinträchtigen kann; sie belegen nicht, dass dieselbe Lernzeit für alle Menschen ideal ist. Wer bis spät in die Nacht lernt und dabei übermüdet ist, kann sich schlechter konzentrieren. Die praktische Schlussfolgerung lautet: Lernzeit und ausreichende Erholung sollten gemeinsam geplant werden.",
+    "ar": "يؤدي النوم دوراً مهماً في ترسيخ ما تعلمه المرء. لكن مقدار النوم اللازم يختلف من شخص إلى آخر. وتشير دراسات إلى أن نقص النوم قد يضعف الانتباه وأداء التعلم، لكنها لا تثبت أن وقت التعلم نفسه مثالي للجميع. ومن يدرس حتى وقت متأخر وهو شديد التعب قد يجد صعوبة أكبر في التركيز. والخلاصة العملية هي التخطيط لوقت التعلم والراحة الكافية معاً.",
     "questions": [
       {
         "id": "t-b2-06-q1",
         "type": "mc",
-        "promptDe": "Was ist besonders wirksam?",
+        "promptDe": "Was kann Schlafmangel laut Text beeinträchtigen?",
         "options": [
-          "das bis spät Gelernte",
-          "das früh am Morgen Gelernte",
-          "das am Nachmittag Gelernte"
+          "Aufmerksamkeit und Lernleistung",
+          "nur die Handschrift",
+          "immer das Langzeitgedächtnis aller Menschen"
         ],
-        "answer": "das früh am Morgen Gelernte",
-        "explanationAr": "في النصِّ حرفياً: «Besonders wirksam scheint das früh am Morgen Gelernte zu sein» (Partizipialattribut).",
-        "promptAr": "ما الأكثر فعالية؟"
+        "answer": "Aufmerksamkeit und Lernleistung",
+        "explanationAr": "النص يقول: «Schlafmangel Aufmerksamkeit und Lernleistung beeinträchtigen kann».",
+        "promptAr": "ما الذي قد يضعفه نقص النوم حسب النص؟"
       },
       {
         "id": "t-b2-06-q2",
         "type": "fill",
-        "promptDe": "Die von Übermüdung geprägte ___ lässt nach.",
+        "promptDe": "Wer übermüdet ist, kann sich schlechter ___.",
         "answer": [
-          "Konzentration"
+          "konzentrieren"
         ],
-        "explanationAr": "الدليل حرفياً: «Wer dagegen bis spät in die Nacht büffelt, erzielt oft das Gegenteil: Die von Übermüdung geprägte Konzentration lässt nach.» — التركيز.",
-        "promptAr": "___ التي يطبعها الإرهاق تضعف."
+        "explanationAr": "النص يقول: «Wer bis spät in die Nacht lernt und dabei übermüdet ist, kann sich schlechter konzentrieren.»",
+        "promptAr": "من يكون شديد التعب قد يضعف ___."
       },
       {
         "id": "t-b2-06-q3",
         "type": "mc",
-        "promptDe": "Das Fazit lautet:",
+        "promptDe": "Wie lautet die praktische Schlussfolgerung?",
         "options": [
-          "Lernen und Schlafen sind Verbündete.",
-          "Man soll weniger schlafen.",
-          "Büffeln bis spaat ist optimal."
+          "Lernzeit und Erholung gemeinsam planen",
+          "für alle dieselbe Lernzeit festlegen",
+          "möglichst wenig schlafen"
         ],
-        "answer": "Lernen und Schlafen sind Verbündete.",
-        "explanationAr": "في النصِّ حرفياً: «sondern Verbündete».",
-        "promptAr": "الخلاصة:"
+        "answer": "Lernzeit und Erholung gemeinsam planen",
+        "explanationAr": "النص يقول: «Lernzeit und ausreichende Erholung sollten gemeinsam geplant werden.»",
+        "promptAr": "ما الخلاصة العملية؟"
       },
       {
         "id": "t-b2-06-q4",
         "type": "truefalse",
-        "promptDe": "Wer bis spät in die Nacht lernt, erzielt laut Text oft das Gegenteil.",
+        "promptDe": "Der Text behauptet, dieselbe Lernzeit sei für alle Menschen ideal.",
         "options": [
           "richtig",
           "falsch"
         ],
-        "answer": "richtig",
-        "explanationAr": "في النصِّ حرفياً: «Wer dagegen bis spät in die Nacht büffelt, erzielt oft das Gegenteil».",
-        "promptAr": "هل يحقق من يسهر ليلاً في التعلم عكس ما يريد حسب النص؟"
+        "answer": "falsch",
+        "explanationAr": "هذا خطأ؛ فالنص يقول إن الدراسات «belegen nicht, dass dieselbe Lernzeit für alle Menschen ideal ist».",
+        "promptAr": "هل يزعم النص أن وقت التعلم نفسه مثالي لجميع الناس؟"
       }
     ],
     "arHinweis": "ملخص عربي — الترجمة الكاملة في النص الألماني؛ الفهم يُختبر بالأسئلة الألمانية."
@@ -1710,8 +1709,8 @@
     "level": "B2",
     "titleDe": "Kommentar: Tempo der Digitalisierung",
     "titleAr": "تعليق: وتيرة الرقمنة",
-    "de": "Alle reden von Tempo, kaum jemand von Richtung. Die forcierte Digitalisierung wird gefeiert, als sei sie Selbstzweck. Dabei zeigt die Praxis: Wo technische Lösungen ohne pädagogische Konzepte eingeführt werden, bleibt die Wirkung gering. Es geht nicht darum, Bremsen zu legen, sondern darum, Ziele zu definieren. Wer nur beschleunigt, ohne zu wissen wohin, fährt gegen die Wand.",
-    "ar": "الجميع يتحدث عن السرعة، ونادراً من يتحدث عن الاتجاه. يُحتفى بالرقمنة المُعجَّلة كأنها غاية بذاتها. بينما تبيّن الممارسة: أينما أُدخلت حلول تقنية بلا مفاهيم تربوية يبقى الأثر ضئيلاً. الأمر ليس كبح جماح بل تحديد أهداف. من يسرّع فقط دون أن يعرف إلى أين، يرتطم بالحائط. يتناول النص بعد ذلك وجهات نظر متباينة ويعرض دراسة حالة من مدينة نموذجية، ثم يخلص إلى أن الاستدامة تتطلب ربط الخبرة بالمشاركة، مع التمييز بين الوقائع والتقييمات.",
+    "de": "Alle reden von Tempo, kaum jemand von Richtung. Die forcierte Digitalisierung wird gefeiert, als sei sie Selbstzweck. Der Kommentar warnt: Werden technische Lösungen ohne pädagogisches Konzept eingeführt, kann ihre Wirkung gering bleiben. Es geht nicht darum, Bremsen zu legen, sondern darum, Ziele zu definieren. Wer nur beschleunigt, ohne zu wissen, wohin, riskiert zu scheitern.",
+    "ar": "يتحدث الجميع عن السرعة، وقليلون يتحدثون عن الاتجاه. ويحتفى بالرقمنة المتسارعة كأنها غاية في ذاتها. ويحذر التعليق من أن أثر الحلول التقنية قد يبقى محدوداً إذا أدخلت بلا مفهوم تربوي. وليس المقصود تعطيل الرقمنة، بل تحديد أهدافها. فمن يسرع من دون أن يعرف وجهته يخاطر بالفشل.",
     "questions": [
       {
         "id": "t-b2-07-q1",
@@ -1739,15 +1738,15 @@
       {
         "id": "t-b2-07-q3",
         "type": "mc",
-        "promptDe": "„gegen die Wand fahren“ bedeutet hier:",
+        "promptDe": "Was bedeutet „riskiert zu scheitern“?",
         "options": [
-          "einen Unfall bauen",
-          "scheitern",
-          "schnell fahren"
+          "kann sein Ziel verfehlen",
+          "fährt besonders schnell",
+          "verbietet jede Technik"
         ],
-        "answer": "scheitern",
-        "explanationAr": "الدليل حرفياً: «Wer nur beschleunigt, ohne zu wissen wohin, fährt gegen die Wand.» — استعارة: الفشل.",
-        "promptAr": "«يصطدم بالحائط» تعني هنا:"
+        "answer": "kann sein Ziel verfehlen",
+        "explanationAr": "النص يقول: «Wer nur beschleunigt, ohne zu wissen, wohin, riskiert zu scheitern.» — أي قد يفشل في بلوغ هدفه.",
+        "promptAr": "ما معنى عبارة «riskiert zu scheitern»؟"
       },
       {
         "id": "t-b2-07-q4",
@@ -2114,13 +2113,13 @@
     "level": "B2",
     "titleDe": "Medien und Wahrheit",
     "titleAr": "الإعلام والحقيقة",
-    "de": "Heute erreichen uns Nachrichten in Sekunden – aber nicht jede Information ist wahr. Experten empfehlen, drei Fragen zu stellen: Wer schreibt das? Welche Quellen werden genannt? Stehen die Fakten auch woanders? Wer diese Gewohnheit übt, erkennt schneller, was seriös ist und was nur laut ist.",
-    "ar": "تصلنا الأخبار اليوم في ثوانٍ — لكن ليس كل معلومة صادقة. ينصح الخبراء بطرح ثلاثة أسئلة: من يكتب هذا؟ ما المصادر المذكورة؟ هل توجد الحقائق في مكان آخر أيضاً؟ من يتمرّن على هذه العادة يتعرّف أسرع على الجادّ من صاخب اللامبالاة. يتناول النص بعد ذلك وجهات نظر متباينة ويعرض دراسة حالة من مدينة نموذجية، ثم يخلص إلى أن الاستدامة تتطلب ربط الخبرة بالمشاركة، مع التمييز بين الوقائع والتقييمات.",
+    "de": "Heute erreichen uns Nachrichten in Sekunden, aber nicht jede Information ist verlässlich. Zur Prüfung helfen drei Fragen: Wer schreibt das? Welche Quellen werden genannt? Stehen die Angaben auch in anderen verlässlichen Quellen? Wer diese Gewohnheit übt, erkennt leichter, was gut belegt ist und was nur Aufmerksamkeit erzeugt.",
+    "ar": "تصلنا الأخبار اليوم خلال ثوان، لكن المعلومات ليست كلها موثوقة. وتساعد ثلاثة أسئلة على فحصها: من يكتب هذا؟ وما المصادر المذكورة؟ وهل ترد المعلومات أيضاً في مصادر موثوقة أخرى؟ ومن يتدرب على هذه العادة يستطيع بسهولة أكبر تمييز ما يستند إلى أدلة جيدة مما يهدف إلى جذب الانتباه فحسب.",
     "questions": [
       {
         "id": "t-b2-08-q1",
         "type": "mc",
-        "promptDe": "Wie viele Fragen empfehlen die Experten?",
+        "promptDe": "Wie viele Prüffragen nennt der Text?",
         "options": [
           "Drei",
           "Eine",
@@ -2128,35 +2127,35 @@
           "Fünf"
         ],
         "answer": "Drei",
-        "explanationAr": "الدليل حرفياً: «Experten empfehlen, drei Fragen zu stellen: Wer schreibt das?» — ينصح الخبراء بثلاثة أسئلة قبل التصديق.",
-        "promptAr": "كم سؤالاً يوصي الخبراء؟"
+        "explanationAr": "النص يقول: «Zur Prüfung helfen drei Fragen».",
+        "promptAr": "كم سؤال فحص يذكر النص؟"
       },
       {
         "id": "t-b2-08-q2",
         "type": "mc",
         "promptDe": "Was ist das Ziel dieser Fragen?",
         "options": [
-          "Zu erkennen, was seriös ist",
-          "Mehr Nachrichten zu lesen",
-          "Quellen zu zitieren",
-          "Schneller zu tippen"
+          "zu erkennen, was gut belegt ist",
+          "mehr Nachrichten zu lesen",
+          "schneller zu tippen",
+          "jede Quelle abzulehnen"
         ],
-        "answer": "Zu erkennen, was seriös ist",
-        "explanationAr": "الدليل حرفياً: «Wer diese Gewohnheit übt, erkennt schneller, was seriös ist und was nur laut ist.» — الهدف: تمييز الموثوق من صاخب اللامبالاة.",
+        "answer": "zu erkennen, was gut belegt ist",
+        "explanationAr": "النص يقول إن من يتدرب على ذلك «erkennt leichter, was gut belegt ist».",
         "promptAr": "ما هدف هذه الأسئلة؟"
       },
       {
         "id": "t-b2-08-q3",
         "type": "mc",
-        "promptDe": "Wonach fragt die dritte Frage der Experten?",
+        "promptDe": "Wonach fragt die dritte Prüffrage?",
         "options": [
-          "Ob die Fakten auch woanders stehen",
-          "Wer das schreibt",
-          "Welche Quellen genannt werden"
+          "ob die Angaben auch in anderen verlässlichen Quellen stehen",
+          "wer den Text schreibt",
+          "welche Quellen genannt werden"
         ],
-        "answer": "Ob die Fakten auch woanders stehen",
-        "explanationAr": "«Stehen die Fakten auch woanders?» هي الثالثة؛ ومن يكتبُ والمصادرُ هما الأولى والثانية بالترتيب.",
-        "promptAr": "عمّا يسأل السؤال الثالث؟"
+        "answer": "ob die Angaben auch in anderen verlässlichen Quellen stehen",
+        "explanationAr": "السؤال الثالث هو: «Stehen die Angaben auch in anderen verlässlichen Quellen?»",
+        "promptAr": "عم يسأل سؤال الفحص الثالث؟"
       },
       {
         "id": "t-b2-08-q4",
@@ -2167,7 +2166,7 @@
           "falsch"
         ],
         "answer": "richtig",
-        "explanationAr": "الدليل حرفياً: «Experten empfehlen, drei Fragen zu stellen: Wer schreibt das? Welche Quellen werden genannt? Stehen die Fakten auch woanders?» — مَن يكتب؟ أيُّ مصادرَ تُذكَر؟ أترِدُ الوقائعُ في مكانٍ آخر؟",
+        "explanationAr": "النص يقول: «Zur Prüfung helfen drei Fragen: Wer schreibt das? Welche Quellen werden genannt? Stehen die Angaben auch in anderen verlässlichen Quellen?»",
         "promptAr": "هل يذكر النص ثلاثة أسئلة لفحص الأخبار؟"
       }
     ],
@@ -2178,61 +2177,59 @@
     "level": "B2",
     "titleDe": "Lebenslanges Lernen",
     "titleAr": "التعلّم مدى الحياة",
-    "de": "Früher endete die Ausbildung mit der Schule, heute nicht mehr. Wer beruflich erfolgreich bleiben will, muss sich regelmäßig weiterbilden: Kurse, Seminare, Online-Lernen. Gleichzeitig verbessert das Lernen einer Fremdsprache das Gedächtnis im Alter. Bildung ist damit keine Phase, sondern eine Begleiterin fürs ganze Leben.",
-    "ar": "كان التعلّم ينتهي مع المدرسة سابقاً، أما اليوم فلا. من يريد النجاح مهنياً عليه التطوير المستمر: دورات وندوات وتعلّم إلكتروني. وفي الوقت نفسه يحسّن تعلّم اللغة الأجنبية الذاكرة في الشيخوخة. التعليم بذلك ليس مرحلة، بل رفيق طوال الحياة. يتناول النص بعد ذلك وجهات نظر متباينة ويعرض دراسة حالة من مدينة نموذجية، ثم يخلص إلى أن الاستدامة تتطلب ربط الخبرة بالمشاركة، مع التمييز بين الوقائع والتقييمات.",
+    "de": "Schule und Ausbildung enden, Lernmöglichkeiten dagegen nicht. Berufliche Anforderungen verändern sich, und Menschen können sich durch Kurse, Seminare oder selbstständiges Online-Lernen weiterbilden. Auch eine Fremdsprache kann geistig anregen; sie garantiert jedoch keine bestimmte Gedächtnisleistung im Alter. Bildung ist damit nicht nur eine Phase, sondern kann das ganze Leben begleiten.",
+    "ar": "تنتهي المدرسة والتدريب، لكن فرص التعلم لا تنتهي. قد تتغير المتطلبات المهنية، ويمكن للناس مواصلة التعلم عبر الدورات والندوات أو التعلم الإلكتروني المستقل. وقد يكون تعلم لغة أجنبية منشطاً ذهنياً، لكنه لا يضمن مستوى معيناً للذاكرة في الكبر. لذلك لا يقتصر التعليم على مرحلة، بل يمكن أن يرافق الإنسان طوال حياته.",
     "questions": [
       {
         "id": "t-b2-09-q1",
         "type": "mc",
-        "promptDe": "Was verbessert das Gedächtnis im Alter?",
+        "promptDe": "Wie kann man sich laut Text weiterbilden?",
         "options": [
-          "Das Lernen einer Fremdsprache",
-          "Sport",
-          "Schlaf",
-          "Musik"
+          "durch Kurse, Seminare oder Online-Lernen",
+          "nur durch eine neue Schulausbildung",
+          "ausschließlich durch Prüfungen"
         ],
-        "answer": "Das Lernen einer Fremdsprache",
-        "explanationAr": "الدليل حرفياً: «Gleichzeitig verbessert das Lernen einer Fremdsprache das Gedächtnis im Alter.» — تعلّم اللغة الأجنبية يحسّن الذاكرة في الشيخوخة.",
-        "promptAr": "ما يحسّن الذاكرة في الكبر؟"
+        "answer": "durch Kurse, Seminare oder Online-Lernen",
+        "explanationAr": "النص يذكر «Kurse, Seminare oder selbstständiges Online-Lernen».",
+        "promptAr": "كيف يمكن مواصلة التعلم حسب النص؟"
       },
       {
         "id": "t-b2-09-q2",
         "type": "mc",
-        "promptDe": "Wie wird Bildung im Text beschrieben?",
+        "promptDe": "Wie wird Bildung am Ende beschrieben?",
         "options": [
-          "Als Begleiterin fürs ganze Leben",
-          "Als Phase",
-          "Als Pflicht",
-          "Als Hobby"
+          "als mögliche Begleiterin durchs ganze Leben",
+          "als abgeschlossene Schulphase",
+          "als Garantie für Gedächtnisleistung"
         ],
-        "answer": "Als Begleiterin fürs ganze Leben",
-        "explanationAr": "الدليل حرفياً: «Bildung ist damit keine Phase, sondern eine Begleiterin fürs ganze Leben.» — التعليم رفيق طوال الحياة، لا مرحلة تنتهي.",
-        "promptAr": "كيف توصف التربية في النص؟"
+        "answer": "als mögliche Begleiterin durchs ganze Leben",
+        "explanationAr": "النص يقول إن التعليم «kann das ganze Leben begleiten».",
+        "promptAr": "كيف يوصف التعليم في الختام؟"
       },
       {
         "id": "t-b2-09-q3",
         "type": "mc",
-        "promptDe": "Was war früher anders als heute?",
+        "promptDe": "Was garantiert das Lernen einer Fremdsprache laut Text nicht?",
         "options": [
-          "Die Ausbildung endete mit der Schule",
-          "Man lernte keine Sprachen",
-          "Es gab keine Universitäten"
+          "eine bestimmte Gedächtnisleistung im Alter",
+          "geistige Anregung",
+          "die Möglichkeit zu lernen"
         ],
-        "answer": "Die Ausbildung endete mit der Schule",
-        "explanationAr": "«Früher endete die Ausbildung mit der Schule, heute nicht mehr.» — البدايةُ نصٌّ لا استنتاج.",
-        "promptAr": "ما الذي كان مختلفاً في الماضي؟"
+        "answer": "eine bestimmte Gedächtnisleistung im Alter",
+        "explanationAr": "النص يقول: «sie garantiert jedoch keine bestimmte Gedächtnisleistung im Alter».",
+        "promptAr": "ما الذي لا يضمنه تعلم لغة أجنبية حسب النص؟"
       },
       {
         "id": "t-b2-09-q4",
         "type": "truefalse",
-        "promptDe": "Laut Text endet Bildung heute mit der Schule.",
+        "promptDe": "Lernmöglichkeiten enden laut Text mit Schule oder Ausbildung.",
         "options": [
           "richtig",
           "falsch"
         ],
         "answer": "falsch",
-        "explanationAr": "في النصِّ حرفياً: «Früher endete die Ausbildung mit der Schule, heute nicht mehr».",
-        "promptAr": "هل تنتهي التربية اليوم بانتهاء المدرسة حسب النص؟"
+        "explanationAr": "هذا خطأ؛ فالنص يقول: «Schule und Ausbildung enden, Lernmöglichkeiten dagegen nicht.»",
+        "promptAr": "هل تنتهي فرص التعلم بانتهاء المدرسة أو التدريب حسب النص؟"
       }
     ],
     "arHinweis": "ملخص عربي — الترجمة الكاملة في النص الألماني؛ الفهم يُختبر بالأسئلة الألمانية."
@@ -3750,59 +3747,59 @@
     "level": "B2",
     "titleDe": "Vier-Tage-Woche: Chance oder Risiko?",
     "titleAr": "أسبوعٌ بأربعة أيام: فرصةٌ أم مخاطرة؟",
-    "de": "Die Debatte um die Vier-Tage-Woche wird hitziger, seit ein britischer Versuch positive Ergebnisse meldete: gleichbleibende Produktivität bei spürbar weniger Burnout-Symptomen. Kritikerinnen wenden ein, dass solche Versuche nur für Wissensarbeit galten und sich nicht auf Fabriken übertragen ließen. Beides stimmt, und genau darin liegt die Schwierigkeit: Wer über Arbeitszeit spricht, muss immer auch über Branchen, Einkommen und Macht sprechen – sonst bleibt die Studie ein Experiment unter vielen.",
-    "ar": "اشتدّ النقاش حول الأسبوع ذي الأيام الأربعة بعدما أبلغت تجربة ميدانية بريطانية عن نتائج إيجابية: إنتاجية ثابتة مع احتراقٍ نفسي أقل بوضوح. وتردّ ناقِدات بأن تلك التجارب تخصّ عمل المعرفة وحده ولا تُنسحب إلى المصانع. الاثنان صادقان، وهنا تكمن الصعوبة بعينها: من يتكلم عن وقت العمل فعليه دائمًا أن يتكلم عن الفروع والدخول والسلطة — وإلا بقيت الدراسة تجربةً بين تجارب. يتناول النص بعد ذلك وجهات نظر متباينة ويعرض دراسة حالة من مدينة نموذجية، ثم يخلص إلى أن الاستدامة تتطلب ربط الخبرة بالمشاركة، مع التمييز بين الوقائع والتقييمات.",
+    "de": "Berichte über Pilotprojekte zur Vier-Tage-Woche nennen für die untersuchten Zeiträume teilweise stabile Produktivität und weniger Belastung in teilnehmenden Organisationen. Solche Ergebnisse beweisen jedoch nicht, dass jedes Modell in jeder Branche gleich wirkt. Bei der Bewertung ist zu beachten, dass Organisationen freiwillig teilnehmen können und dass sich Arbeitszeit, Aufgaben und Umsetzung unterscheiden. Wer über kürzere Arbeitswochen spricht, muss deshalb auch Branchen, Einkommen, Arbeitsbelastung und Servicequalität betrachten.",
+    "ar": "تذكر تقارير عن مشروعات تجريبية لأسبوع العمل ذي الأيام الأربعة أن بعض الفترات المدروسة شهدت إنتاجية مستقرة وضغطاً أقل في المؤسسات المشاركة. لكن مثل هذه النتائج لا تثبت أن كل نموذج يحقق الأثر نفسه في كل قطاع. وينبغي عند التقييم مراعاة أن المؤسسات قد تشارك طوعاً، وأن ساعات العمل والمهام وطريقة التنفيذ قد تختلف. لذلك يجب عند مناقشة أسبوع العمل الأقصر النظر أيضاً في القطاعات والدخل وعبء العمل وجودة الخدمات.",
     "questions": [
       {
         "id": "t-b2-10-q1",
         "type": "mc",
-        "promptDe": "Was ergab der britische Feldversuch laut Text?",
+        "promptDe": "Was nennen Berichte über Pilotprojekte teilweise?",
         "options": [
-          "höhere Produktivität",
-          "gleichbleibende Produktivität bei weniger Burnout",
-          "weniger Krankheitstage bei mehr Output"
+          "stabile Produktivität und weniger Belastung",
+          "garantierte Erfolge in allen Branchen",
+          "höhere Arbeitszeit bei geringerem Lohn"
         ],
-        "answer": "gleichbleibende Produktivität bei weniger Burnout",
-        "explanationAr": "في النصِّ حرفياً: «gleichbleibende Produktivität bei spürbar weniger Burnout-Symptomen».",
-        "promptAr": "ماذا أظهرت التجربة البريطانية الميدانية حسب النص؟"
+        "answer": "stabile Produktivität und weniger Belastung",
+        "explanationAr": "النص يقول: «Berichte über Pilotprojekte zur Vier-Tage-Woche nennen für die untersuchten Zeiträume teilweise stabile Produktivität und weniger Belastung».",
+        "promptAr": "ماذا تذكر تقارير المشروعات التجريبية في بعض الحالات؟"
       },
       {
         "id": "t-b2-10-q2",
         "type": "mc",
-        "promptDe": "Was wenden Kritikerinnen ein?",
+        "promptDe": "Welche Einschränkung nennt der Text?",
         "options": [
-          "dass die Versuche zu teuer waren",
-          "dass sie nur für Wissensarbeit galten",
-          "dass die Regierung sie stoppte"
+          "Organisationen können freiwillig teilnehmen und die Umsetzung kann sich unterscheiden.",
+          "Alle Branchen nutzen dasselbe Modell.",
+          "Jedes Pilotprojekt dauert unbegrenzt."
         ],
-        "answer": "dass sie nur für Wissensarbeit galten",
-        "explanationAr": "في النصِّ حرفياً: «dass solche Versuche nur für Wissensarbeit galten».",
-        "promptAr": "علام يردّ النقاد؟"
+        "answer": "Organisationen können freiwillig teilnehmen und die Umsetzung kann sich unterscheiden.",
+        "explanationAr": "النص يقول: «Organisationen freiwillig teilnehmen können» وإن «sich Arbeitszeit, Aufgaben und Umsetzung unterscheiden».",
+        "promptAr": "ما القيد الذي يذكره النص؟"
       },
       {
         "id": "t-b2-10-q3",
         "type": "mc",
-        "promptDe": "Warum bleibt die Studie laut Autor «ein Experiment unter vielen»?",
+        "promptDe": "Was sollte eine Bewertung zusätzlich betrachten?",
         "options": [
-          "weil sie unveröffentlicht blieb",
-          "wenn Branchen und Macht ausgeklammert werden",
-          "weil sie Wiederholungen fehlten"
+          "Branchen, Einkommen, Arbeitsbelastung und Servicequalität",
+          "nur die Zahl der Wochentage",
+          "nur die Werbung der Betriebe"
         ],
-        "answer": "wenn Branchen und Macht ausgeklammert werden",
-        "explanationAr": "في النصِّ حرفياً: «Wer … muss immer auch über Branchen, Einkommen und Macht sprechen – sonst …».",
-        "promptAr": "لماذا تظل الدراسة «تجربة بين تجارب كثيرة» حسب الكاتب؟"
+        "answer": "Branchen, Einkommen, Arbeitsbelastung und Servicequalität",
+        "explanationAr": "النص يذكر «Branchen, Einkommen, Arbeitsbelastung und Servicequalität».",
+        "promptAr": "ما الذي ينبغي أن ينظر إليه التقييم أيضاً؟"
       },
       {
         "id": "t-b2-10-q4",
         "type": "truefalse",
-        "promptDe": "Kritikerinnen bezweifeln die Übertragbarkeit des Versuchs auf Fabriken.",
+        "promptDe": "Pilotprojekte beweisen laut Text den Erfolg jedes Vier-Tage-Modells.",
         "options": [
           "richtig",
           "falsch"
         ],
-        "answer": "richtig",
-        "explanationAr": "الدليل حرفياً: «Kritikerinnen wenden ein, dass solche Versuche nur für Wissensarbeit galten und sich nicht auf Fabriken übertragen ließen» — Konjunktiv I في نقل الاعتراض.",
-        "promptAr": "هل يشكك النقاد في قابلية نقل التجربة إلى المصانع؟"
+        "answer": "falsch",
+        "explanationAr": "هذا خطأ؛ فالنص يقول: «Solche Ergebnisse beweisen jedoch nicht, dass jedes Modell in jeder Branche gleich wirkt.»",
+        "promptAr": "هل تثبت المشروعات التجريبية نجاح كل نموذج لأسبوع من أربعة أيام حسب النص؟"
       }
     ],
     "arHinweis": "ملخص عربي — الترجمة الكاملة في النص الألماني؛ الفهم يُختبر بالأسئلة الألمانية."
@@ -3812,59 +3809,59 @@
     "level": "B2",
     "titleDe": "Grüne Dächer für graue Städte",
     "titleAr": "أسقفٌ خضراء لمدنٍ رمادية",
-    "de": "Stuttgart erprobt es, Kopenhagen verlangt es inzwischen bei Neubauten: die Begrünung von Flachdächern. Die Argumente sind handfest – ein begrüntes Dach dämmt im Winter, kühlt im Sommer, bindet Feinstaub und schluckt bei Starkregen die ersten Liter, die andernfalls die Kanalisation überlasten. Eingeweihte schweigen die Kehrseite nicht tot: Statik, Pflegekosten und Eigentümerinteressen. Wer Stadtklima will, muss daher weniger Appelle drucken als Förderprogramme rechnen.",
-    "ar": "تجرب شتوتغارت وتفرض كوبنهاجن حديثًا في البناء الجديد: تشجيرُ الأسطح المستوية. الحجج ملموسة — السطح الأخضر يعزل شتاءً ويبرّد صيفًا ويربط الغبار الدقيق ويبتلع أول لترات الأمطار الغزيرة التي ترهق المجاري وإلا. ولا يطوي المطلعون طرفَ المقابل: ثباتُ البناء وتكاليف الصيانة ومصالح المالكين. فمن أراد مناخًا مدينيًا فعليه أقل من بيانات نداء وأكثر من حسابات دعم. يتناول النص بعد ذلك وجهات نظر متباينة ويعرض دراسة حالة من مدينة نموذجية، ثم يخلص إلى أن الاستدامة تتطلب ربط الخبرة بالمشاركة، مع التمييز بين الوقائع والتقييمات.",
+    "de": "Begrünte Flachdächer können je nach Aufbau und Pflege Regenwasser zurückhalten, im Sommer zur Kühlung beitragen und die Wärmedämmung beeinflussen. Wie groß der Nutzen ist, hängt vom Gebäude und vom lokalen Klima ab. Zu den praktischen Hürden gehören statische Anforderungen, Pflegekosten und die Zustimmung der Eigentümer. Einige Kommunen fördern Dachbegrünung oder schreiben sie in bestimmten Neubauprojekten vor. Wer das Stadtklima verbessern will, braucht daher technische Prüfungen, klare Regeln und tragfähige Förderprogramme.",
+    "ar": "يمكن للأسطح المستوية المزروعة، بحسب بنائها والعناية بها، أن تحتفظ بمياه الأمطار، وأن تسهم في التبريد صيفاً، وأن تؤثر في العزل الحراري. ويتوقف حجم الفائدة على المبنى والمناخ المحلي. ومن العقبات العملية متطلبات قدرة البناء على التحمل وتكاليف الصيانة وموافقة المالكين. وتشجع بعض البلديات تخضير الأسطح أو تفرضه في مشروعات بناء جديدة محددة. ولذلك يحتاج تحسين مناخ المدينة إلى فحوص تقنية وقواعد واضحة وبرامج دعم قابلة للاستمرار.",
     "questions": [
       {
         "id": "t-b2-11-q1",
         "type": "mc",
-        "promptDe": "Welche Leistung der Dachbegrünung wird NICHT genannt?",
+        "promptDe": "Welche mögliche Wirkung wird NICHT genannt?",
         "options": [
-          "Kühlung im Sommer",
-          "Bindung von Feinstaub",
-          "Steigerung der Mieten"
+          "Rückhalt von Regenwasser",
+          "Beitrag zur Kühlung",
+          "garantierte Senkung der Mieten"
         ],
-        "answer": "Steigerung der Mieten",
-        "explanationAr": "الدليل حرفياً: «ein begrüntes Dach dämmt im Winter, kühlt im Sommer, bindet Feinstaub und schluckt bei Starkregen die ersten Liter» — الكراء لم يُذكر — الثلاث الأُخر في النص حرفيًا.",
-        "promptAr": "أي فائدة للسقوف الخضراء لا تُذكر؟"
+        "answer": "garantierte Senkung der Mieten",
+        "explanationAr": "يذكر النص أن الأسطح «Regenwasser zurückhalten» وقد «zur Kühlung beitragen»؛ ولا يذكر ضمان خفض الإيجارات.",
+        "promptAr": "أي أثر محتمل لا يذكره النص؟"
       },
       {
         "id": "t-b2-11-q2",
         "type": "mc",
-        "promptDe": "Was gehört laut Text zur «Kehrseite»?",
+        "promptDe": "Was gehört laut Text zu den praktischen Hürden?",
         "options": [
-          "Appelle, Statik, Pflegekosten",
-          "Statik, Pflegekosten, Eigentümerinteressen",
-          "Kanäle, Regen, Dämmung"
+          "statische Anforderungen, Pflegekosten und Zustimmung der Eigentümer",
+          "nur mehr Appelle",
+          "Regenwasser, Kühlung und Dämmung"
         ],
-        "answer": "Statik, Pflegekosten, Eigentümerinteressen",
-        "explanationAr": "في النصِّ حرفياً: «Statik, Pflegekosten und Eigentümerinteressen».",
-        "promptAr": "ما الجانب الآخر (السيئ) حسب النص؟"
+        "answer": "statische Anforderungen, Pflegekosten und Zustimmung der Eigentümer",
+        "explanationAr": "النص يقول: «Zu den praktischen Hürden gehören statische Anforderungen, Pflegekosten und die Zustimmung der Eigentümer.»",
+        "promptAr": "ما الذي يندرج ضمن العقبات العملية حسب النص؟"
       },
       {
         "id": "t-b2-11-q3",
         "type": "mc",
-        "promptDe": "Was fordert der Autor am Ende?",
+        "promptDe": "Was braucht eine Umsetzung laut Schluss?",
         "options": [
-          "mehr Appelle",
-          "kalkulierte Förderprogramme",
-          "ein Bauverbot"
+          "technische Prüfungen, klare Regeln und Förderprogramme",
+          "nur mehr Appelle",
+          "ein allgemeines Bauverbot"
         ],
-        "answer": "kalkulierte Förderprogramme",
-        "explanationAr": "في النصِّ حرفياً: «weniger Appelle drucken als Förderprogramme rechnen».",
-        "promptAr": "بماذا ينصح الكاتب في الختام؟"
+        "answer": "technische Prüfungen, klare Regeln und Förderprogramme",
+        "explanationAr": "النص يذكر «technische Prüfungen, klare Regeln und tragfähige Förderprogramme».",
+        "promptAr": "إلى ماذا يحتاج التنفيذ حسب الختام؟"
       },
       {
         "id": "t-b2-11-q4",
         "type": "truefalse",
-        "promptDe": "Der Text verschweigt die Nachteile begrünter Dächer.",
+        "promptDe": "Der Text nennt keine praktischen Hürden begrünter Dächer.",
         "options": [
           "richtig",
           "falsch"
         ],
         "answer": "falsch",
-        "explanationAr": "في النصِّ حرفياً: «Eingeweihte schweigen die Kehrseite nicht tot: Statik, Pflegekosten …».",
-        "promptAr": "هل يكتم النص مساوئ السقوف الخضراء؟"
+        "explanationAr": "هذا خطأ؛ فالنص يذكر «statische Anforderungen, Pflegekosten und die Zustimmung der Eigentümer» ضمن العقبات العملية.",
+        "promptAr": "هل يخلو النص من ذكر عقبات عملية أمام الأسطح الخضراء؟"
       }
     ],
     "arHinweis": "ملخص عربي — الترجمة الكاملة في النص الألماني؛ الفهم يُختبر بالأسئلة الألمانية."
@@ -3872,61 +3869,61 @@
   {
     "id": "t-b2-12",
     "level": "B2",
-    "titleDe": "Lesen im Zeitalter des Kurzvideos",
-    "titleAr": "القراءةُ في زمنِ المقطعِ القصير",
-    "de": "«Die Jugend liest nicht mehr» – dieser Klage hält eine Studie entgegen, dass nie so viel gelesen wurde wie heute: Untertitel, Threads, Kommentare. Nur das Format habe sich verschoben, nicht die Neugier. Beobachterinnen widersprechen: Wer täglich dreihundert Wörter in Häppchen lese, trainiere genau das nicht, was langes Lesen verlangt – das Aushalten von Langeweile, das Folgen verschachtelter Gedanken. Beides ist nicht gleich; wer die Debatte ernst nimmt, hört auf, sie als Kulturkampf zu führen.",
-    "ar": "«لم يعد الشباب يقرأ» — يردّ درسٌ على هذا النوح بأنه ما قُرئ في تاريخ البشَر أكثرُ مما يُقرأ اليوم: ترجمات، خيوط، تعليقات. تغيّر القالبُ وحدَه لا الفضول. تعترض مُلحِقات: من قرئ ثلاثمئة كلمة يوميًا على قضمات يدرّب تحديدًا ما لا يتطلبه القراءة الطويلة: احتمال الملل وملاحقة الأفكار المتداخلة. ليس الأمران سيّان؛ ومن أخذ النقادَ بجدّية كفّ عن إدارته صراعًا ثقافيًا. يتناول النص بعد ذلك وجهات نظر متباينة ويعرض دراسة حالة من مدينة نموذجية، ثم يخلص إلى أن الاستدامة تتطلب ربط الخبرة بالمشاركة، مع التمييز بين الوقائع والتقييمات.",
+    "titleDe": "Lesen in kurzen und langen Formaten",
+    "titleAr": "القراءة في الصيغ القصيرة والطويلة",
+    "de": "Im Alltag werden heute viele kurze Texte gelesen: Untertitel, Nachrichten, Threads und Kommentare. Daraus folgt jedoch nicht automatisch, dass längere Texte häufiger oder seltener gelesen werden. Befürworter kurzer Formate betonen den leichten Zugang; Kritiker fragen, ob dabei ausdauerndes Lesen und das Folgen komplexer Gedanken ausreichend geübt werden. Beides sind unterschiedliche Fähigkeiten. Wer die Debatte ernst nimmt, sollte konkrete Leseformen und Kompetenzen vergleichen, statt einen Kulturkampf zu führen.",
+    "ar": "يقرأ الناس اليوم نصوصاً قصيرة كثيرة في حياتهم اليومية، مثل الترجمات المصاحبة والرسائل وسلاسل المنشورات والتعليقات. لكن ذلك لا يعني تلقائياً أن قراءة النصوص الطويلة زادت أو انخفضت. يشدد مؤيدو الأشكال القصيرة على سهولة الوصول إليها، بينما يسأل المنتقدون إن كانت تدرب بما يكفي على القراءة المتواصلة وتتبع الأفكار المعقدة. وهاتان مهارتان مختلفتان. ومن يأخذ النقاش بجدية ينبغي أن يقارن أشكال القراءة والمهارات المحددة بدلاً من تحويله إلى صراع ثقافي.",
     "questions": [
       {
         "id": "t-b2-12-q1",
         "type": "mc",
-        "promptDe": "Was bestreitet die Studie an der Klage?",
+        "promptDe": "Was folgt laut Text nicht automatisch aus vielen kurzen Texten?",
         "options": [
-          "dass überhaupt gelesen wird",
-          "dass heute weniger gelesen wird",
-          "dass Untertitel zählen"
+          "dass längere Texte häufiger oder seltener gelesen werden",
+          "dass Untertitel kurze Texte sein können",
+          "dass verschiedene Fähigkeiten verglichen werden sollten"
         ],
-        "answer": "dass heute weniger gelesen wird",
-        "explanationAr": "في النصِّ حرفياً: «nie so viel gelesen wurde wie heute».",
-        "promptAr": "ماذا تنفي الدراسة عن الشكوى؟"
+        "answer": "dass längere Texte häufiger oder seltener gelesen werden",
+        "explanationAr": "النص يقول: «Daraus folgt jedoch nicht automatisch, dass längere Texte häufiger oder seltener gelesen werden.»",
+        "promptAr": "ما الذي لا ينتج تلقائياً عن كثرة النصوص القصيرة؟"
       },
       {
         "id": "t-b2-12-q2",
         "type": "mc",
-        "promptDe": "Was trainiere das Häppchenlesen nicht?",
+        "promptDe": "Welche Fähigkeit nennen die Kritiker?",
         "options": [
-          "Schnelligkeit",
-          "das Aushalten von Langeweile",
-          "Grammatik"
+          "ausdauerndes Lesen und das Folgen komplexer Gedanken",
+          "nur schnelles Tippen",
+          "das Vermeiden aller Kommentare"
         ],
-        "answer": "das Aushalten von Langeweile",
-        "explanationAr": "في النصِّ حرفياً: «was langes Lesen verlangt – das Aushalten von Langeweile …».",
-        "promptAr": "ماذا لا يدربه القراءة اللقيمية؟"
+        "answer": "ausdauerndes Lesen und das Folgen komplexer Gedanken",
+        "explanationAr": "النص يذكر «ausdauerndes Lesen und das Folgen komplexer Gedanken».",
+        "promptAr": "ما المهارة التي يذكرها المنتقدون؟"
       },
       {
         "id": "t-b2-12-q3",
         "type": "mc",
         "promptDe": "Wozu rät der Schluss?",
         "options": [
-          "zum Kulturkampf",
-          "die Debatte ernst, aber nicht als Kampf zu führen",
-          "zum totalen Videoverbot"
+          "konkrete Leseformen und Kompetenzen vergleichen",
+          "einen Kulturkampf führen",
+          "alle kurzen Formate verbieten"
         ],
-        "answer": "die Debatte ernst, aber nicht als Kampf zu führen",
-        "explanationAr": "في النصِّ حرفياً: «hört auf, sie als Kulturkampf zu führen».",
-        "promptAr": "إلام يدعو الختام؟"
+        "answer": "konkrete Leseformen und Kompetenzen vergleichen",
+        "explanationAr": "النص يدعو إلى «konkrete Leseformen und Kompetenzen vergleichen, statt einen Kulturkampf zu führen».",
+        "promptAr": "إلى ماذا يدعو الختام؟"
       },
       {
         "id": "t-b2-12-q4",
         "type": "truefalse",
-        "promptDe": "Die Studie behauptet, es werde heute weniger gelesen als früher.",
+        "promptDe": "Der Text behauptet, dass heute sicher weniger lange Texte gelesen werden.",
         "options": [
           "richtig",
           "falsch"
         ],
         "answer": "falsch",
-        "explanationAr": "بالعكس: «nie so viel gelesen wurde wie heute» — لكنَّ الشكلَ تغيَّر.",
-        "promptAr": "هل تزعم الدراسة أن الناس يقرأون أقل من السابق؟"
+        "explanationAr": "هذا خطأ؛ فالنص يقول إن ذلك «nicht automatisch» aus der Nutzung kurzer Texte folgt.",
+        "promptAr": "هل يزعم النص أن قراءة النصوص الطويلة انخفضت بالتأكيد؟"
       }
     ],
     "arHinweis": "ملخص عربي — الترجمة الكاملة في النص الألماني؛ الفهم يُختبر بالأسئلة الألمانية."
@@ -3934,61 +3931,61 @@
   {
     "id": "t-b2-13",
     "level": "B2",
-    "titleDe": "Soll Studium kostenlos sein?",
-    "titleAr": "أيجبُ أن تكونَ الجامعةُ مجانية؟",
-    "de": "Deutschland hält sein Studium für fast kostenlos und ist stolz darauf. Ökonomen aus dem angelsächsischen Raum prophezeien deshalb Überkonsum von Bildung und Unterfinanzierung der Hochschulen. Skandinavische Zahlen, wo Gebühren mit Darlehen gekoppelt sind, zeigen beides nicht so klar – wohl aber ein Phänomen: Studierende aus Akademikerhaushalten nutzen die Gebührenfreiheit überproportional. Wer Chancengerechtigkeit will, muss am Verteilungsmechanismus drehen, nicht bloß am Preisschild.",
-    "ar": "تُبقي ألمانيا جامعتَها شبه مجانية وتفخر. لذلك ينبّأ اقتصاديون من الفضاء الأنغلوسكسوني باستهلاك زائد للتعليم وبتنزيل المعاهدِ عن كفاية التمويل. وأرقامُ إسكندنافيا، حيث القسطُ مع قروض، لا تظهر هذا وذاك بوضوح الأنبياء — لكنّها تُظهر ظاهرة: أبناء بيوت الأكاديميين يستعملون المجانية بنسبة تفوق نصيبهم. فمن أراد تكافؤ فرصة فعليه أن يمسّ آلية التوزيع لا اللافتة السعرية فحسب. يتناول النص بعد ذلك وجهات نظر متباينة ويعرض دراسة حالة من مدينة نموذجية، ثم يخلص إلى أن الاستدامة تتطلب ربط الخبرة بالمشاركة، مع التمييز بين الوقائع والتقييمات.",
+    "titleDe": "Soll das Studium gebührenfrei sein?",
+    "titleAr": "هل ينبغي أن تكون الدراسة الجامعية بلا رسوم؟",
+    "de": "Ob ein Studium gebührenfrei sein sollte, ist umstritten. Gebührenfreiheit senkt eine finanzielle Hürde, beseitigt aber weder Lebenshaltungskosten noch Unterschiede beim Zugang. Studiengebühren können Hochschulen Einnahmen bringen, zugleich jedoch Studierende belasten; auch Darlehen verteilen die Kosten nur in die Zukunft. Wer Chancengerechtigkeit fördern will, muss deshalb neben dem Preis auch Stipendien, Beratung, Studienfinanzierung und soziale Zugangshürden betrachten.",
+    "ar": "يختلف الناس حول إعفاء الدراسة الجامعية من الرسوم. فالإعفاء يزيل عائقاً مالياً، لكنه لا يلغي تكاليف المعيشة ولا الفروق في فرص الوصول. وقد توفر الرسوم دخلاً للجامعات، لكنها قد تثقل الطلاب أيضاً؛ وحتى القروض لا تفعل سوى نقل التكاليف إلى المستقبل. ولذلك ينبغي لمن يريد تعزيز تكافؤ الفرص أن ينظر، إلى جانب السعر، في المنح والإرشاد وتمويل الدراسة والعوائق الاجتماعية أمام الوصول.",
     "questions": [
       {
         "id": "t-b2-13-q1",
         "type": "mc",
-        "promptDe": "Was prophezeien die Ökonomen?",
+        "promptDe": "Was beseitigt Gebührenfreiheit laut Text nicht?",
         "options": [
-          "Überkonsum von Bildung",
-          "zu wenige Bewerber",
-          "Abschaffung der Darlehen"
+          "Lebenshaltungskosten und Zugangsprobleme",
+          "eine finanzielle Hürde",
+          "jede Einnahme der Hochschulen"
         ],
-        "answer": "Überkonsum von Bildung",
-        "explanationAr": "في النصِّ حرفياً: «Überkonsum von Bildung und Unterfinanzierung».",
-        "promptAr": "ماذا يتنبأ الاقتصاديون؟"
+        "answer": "Lebenshaltungskosten und Zugangsprobleme",
+        "explanationAr": "النص يقول إن الإعفاء «beseitigt aber weder Lebenshaltungskosten noch Unterschiede beim Zugang».",
+        "promptAr": "ما الذي لا يلغيه الإعفاء من الرسوم حسب النص؟"
       },
       {
         "id": "t-b2-13-q2",
         "type": "mc",
-        "promptDe": "Wer nutzt laut skandinavischen Zahlen die Gebührenfreiheit überproportional?",
+        "promptDe": "Welche mögliche Folge von Studiengebühren nennt der Text?",
         "options": [
-          "Erstakademiker",
-          "Studierende aus Akademikerhaushalten",
-          "Teilzeitstudierende"
+          "Sie können Hochschulen Einnahmen bringen und Studierende belasten.",
+          "Sie garantieren Chancengerechtigkeit.",
+          "Sie beseitigen Lebenshaltungskosten."
         ],
-        "answer": "Studierende aus Akademikerhaushalten",
-        "explanationAr": "في النصِّ حرفياً: «Studierende aus Akademikerhaushalten … überproportional».",
-        "promptAr": "من ينتفع بالإعفاء من الرسوم أكثر من اللازم حسب الأرقام؟"
+        "answer": "Sie können Hochschulen Einnahmen bringen und Studierende belasten.",
+        "explanationAr": "النص يقول: «Studiengebühren können Hochschulen Einnahmen bringen, zugleich jedoch Studierende belasten».",
+        "promptAr": "ما الأثر المحتمل للرسوم الجامعية الذي يذكره النص؟"
       },
       {
         "id": "t-b2-13-q3",
         "type": "mc",
-        "promptDe": "Wo müsste man laut Text drehen?",
+        "promptDe": "Was sollte man neben dem Preis betrachten?",
         "options": [
-          "am Preisschild",
-          "am Verteilungsmechanismus",
-          "an der Studienordnung"
+          "Stipendien, Beratung und Studienfinanzierung",
+          "nur das Hochschullogo",
+          "ausschließlich Darlehen"
         ],
-        "answer": "am Verteilungsmechanismus",
-        "explanationAr": "في النصِّ حرفياً: «am Verteilungsmechanismus drehen, nicht bloß am Preisschild».",
-        "promptAr": "أين يجب أن نُدوّر الذراع حسب النص؟"
+        "answer": "Stipendien, Beratung und Studienfinanzierung",
+        "explanationAr": "النص يذكر «Stipendien, Beratung, Studienfinanzierung und soziale Zugangshürden».",
+        "promptAr": "ما الذي ينبغي النظر إليه إلى جانب السعر؟"
       },
       {
         "id": "t-b2-13-q4",
         "type": "truefalse",
-        "promptDe": "Studierende aus Akademikerhaushalten nutzen die Gebührenfreiheit überproportional.",
+        "promptDe": "Gebührenfreiheit beseitigt laut Text alle Unterschiede beim Hochschulzugang.",
         "options": [
           "richtig",
           "falsch"
         ],
-        "answer": "richtig",
-        "explanationAr": "الدليل حرفياً: «Skandinavische Zahlen, wo Gebühren mit Darlehen gekoppelt sind, zeigen beides nicht so klar – wohl aber ein Phänomen: Studierende aus Akademikerhaushalten nutzen die Gebührenfreiheit überproportional.» — هذه هي الظاهرةُ التي تُظهِرُها الأرقامُ الاسكندنافية.",
-        "promptAr": "هل يستفيد أبناء الأكاديميين من الإعفاء أكثر من اللازم؟"
+        "answer": "falsch",
+        "explanationAr": "هذا خطأ؛ فالنص يقول إن الإعفاء «beseitigt aber weder Lebenshaltungskosten noch Unterschiede beim Zugang».",
+        "promptAr": "هل يلغي الإعفاء من الرسوم جميع الفروق في الوصول إلى الجامعة؟"
       }
     ],
     "arHinweis": "ملخص عربي — الترجمة الكاملة في النص الألماني؛ الفهم يُختبر بالأسئلة الألمانية."
@@ -3996,61 +3993,61 @@
   {
     "id": "t-b2-14",
     "level": "B2",
-    "titleDe": "Lärm: der unterschätzte Risikofaktor",
-    "titleAr": "الضجيج: عاملُ خطرٍ يُستهانُ به",
-    "de": "Über Lärm wird geschimpft, als gehöre er zum Stadtleben wie das Wetter. Medizinisch ist das fatal: Die WHO schätzt, dass westeuropäische Dauerbeschallung jährlich hunderttausende gesunde Lebensjahre kostet – über Herz-Kreislauf-Erkrankungen, Schlafstörungen, Stresshormone. Das Paradoxe: Gegen Feinstaub gibt es Grenzwerte und Messnetze, gegen Schall fast nichts – er gehört niemandem, jeder macht ihn. Wer Stadt plant, misst auch Dezibel: nicht als Anwalt der Ruhe, sondern der Gesundheit.",
-    "ar": "يُسبّ الضجيج كأنه من حياة المدينة كمثل الطقس. طبّيًا هذا قاتل: تُقدّر منظمةُ الصحة أن القصفَ الصوتي المستمر في غرب أوروبا يكلّف مئةَ ألف عام صحة سنويًا — عبر القلب والدورة واضطراب النوم وهرمونات الإجهاد. ووالمفارِق: للغبار الدقيق حدودٌ وشبكاتُ قياس، وللصوت في العادات ما يشبه العدم، لأنه لا يملكه أحدٌ والكلُ يصنعه. لذا مَن يخطط مدينةً عاد يقيس حديثًا حتى الديسيبل — لا محاميًا للسكوت بل للصحة. يتناول النص بعد ذلك وجهات نظر متباينة ويعرض دراسة حالة من مدينة نموذجية، ثم يخلص إلى أن الاستدامة تتطلب ربط الخبرة بالمشاركة، مع التمييز بين الوقائع والتقييمات.",
+    "titleDe": "Lärm als Gesundheitsrisiko",
+    "titleAr": "الضجيج بوصفه خطراً صحياً",
+    "de": "Dauerhafter Lärm kann den Schlaf stören und zur gesundheitlichen Belastung beitragen. Wie groß das Risiko ist, hängt unter anderem von Lautstärke, Dauer und Tageszeit ab. Die Weltgesundheitsorganisation veröffentlicht Leitlinien zum Umgebungslärm. Städte nutzen außerdem Grenzwerte, Lärmkarten und Aktionspläne, deren Umsetzung sich jedoch unterscheidet. Wer Städte plant, sollte daher nicht nur Dezibel messen, sondern auch prüfen, wann und wie lange Menschen betroffen sind.",
+    "ar": "قد يسبب الضجيج المستمر اضطراب النوم ويسهم في أعباء صحية. ويتوقف حجم الخطر، من بين أمور أخرى، على شدة الصوت ومدته ووقت حدوثه. وتنشر منظمة الصحة العالمية إرشادات بشأن الضوضاء البيئية. كما تستخدم المدن حدوداً وخرائط للضجيج وخطط عمل، لكن طريقة التنفيذ تختلف. ولذلك ينبغي لمن يخطط المدن ألا يقيس الديسيبل فقط، بل أن يتحقق أيضاً من وقت تعرض الناس للضجيج ومدته.",
     "questions": [
       {
         "id": "t-b2-14-q1",
         "type": "mc",
-        "promptDe": "Wie hoch schätzt die WHO den jährlichen Verlust ein?",
+        "promptDe": "Wovon hängt das Lärmrisiko laut Text ab?",
         "options": [
-          "zehntausende Lebensjahre",
-          "hunderttausende gesunde Lebensjahre",
-          "keine belastbare Zahl"
+          "von Lautstärke, Dauer und Tageszeit",
+          "nur vom Wetter",
+          "ausschließlich von Feinstaub"
         ],
-        "answer": "hunderttausende gesunde Lebensjahre",
-        "explanationAr": "في النصِّ حرفياً: «hunderttausende gesunde Lebensjahre kostet».",
-        "promptAr": "كم تقدّر منظمة الصحة الخسارة السنوية؟"
+        "answer": "von Lautstärke, Dauer und Tageszeit",
+        "explanationAr": "النص يذكر «Lautstärke, Dauer und Tageszeit».",
+        "promptAr": "على ماذا يتوقف خطر الضجيج حسب النص؟"
       },
       {
         "id": "t-b2-14-q2",
         "type": "mc",
-        "promptDe": "Warum gibt es gegen Schall fast keine Regulation?",
+        "promptDe": "Welche Instrumente nutzen Städte laut Text?",
         "options": [
-          "weil Messgeräte fehlen",
-          "weil er niemandem gehört und jeder ihn macht",
-          "weil die EU sie verbietet"
+          "Grenzwerte, Lärmkarten und Aktionspläne",
+          "nur private Beschwerden",
+          "keine Regelungen"
         ],
-        "answer": "weil er niemandem gehört und jeder ihn macht",
-        "explanationAr": "في النصِّ حرفياً: «er gehört niemandem, jeder macht ihn».",
-        "promptAr": "لماذا لا توجد تقريباً ضوابط ضد الضجيج؟"
+        "answer": "Grenzwerte, Lärmkarten und Aktionspläne",
+        "explanationAr": "النص يقول: «Städte nutzen außerdem Grenzwerte, Lärmkarten und Aktionspläne».",
+        "promptAr": "ما الأدوات التي تستخدمها المدن حسب النص؟"
       },
       {
         "id": "t-b2-14-q3",
         "type": "mc",
-        "promptDe": "Aus welcher Perspektive sollen Planende Dezibel messen?",
+        "promptDe": "Was sollte die Planung außer Dezibel prüfen?",
         "options": [
-          "als Anwalt der Ruhe",
-          "der Gesundheit",
-          "des Tourismus"
+          "wann und wie lange Menschen betroffen sind",
+          "nur die Zahl der Autos",
+          "den Tourismus"
         ],
-        "answer": "der Gesundheit",
-        "explanationAr": "في النصِّ حرفياً: «nicht als Anwalt der Ruhe, sondern der Gesundheit».",
-        "promptAr": "من أي منظور يجب على المخططين قياس الديسيبل؟"
+        "answer": "wann und wie lange Menschen betroffen sind",
+        "explanationAr": "النص يقول: «wann und wie lange Menschen betroffen sind».",
+        "promptAr": "ما الذي ينبغي للتخطيط فحصه إلى جانب الديسيبل؟"
       },
       {
         "id": "t-b2-14-q4",
         "type": "truefalse",
-        "promptDe": "Gegen Lärm gibt es laut Text ebenso klare Grenzwerte wie gegen Feinstaub.",
+        "promptDe": "Die Umsetzung von Lärmschutzinstrumenten ist laut Text überall gleich.",
         "options": [
           "richtig",
           "falsch"
         ],
         "answer": "falsch",
-        "explanationAr": "في النصِّ حرفياً: «Gegen Feinstaub gibt es Grenzwerte …, gegen Schall fast nichts».",
-        "promptAr": "هل للضجيج حدود واضحة كما للجسيمات الدقيقة حسب النص؟"
+        "explanationAr": "هذا خطأ؛ فالنص يقول عن الحدود وخرائط الضجيج وخطط العمل: «deren Umsetzung sich jedoch unterscheidet».",
+        "promptAr": "هل تنفذ أدوات الحماية من الضجيج بالطريقة نفسها في كل مكان؟"
       }
     ],
     "arHinweis": "ملخص عربي — الترجمة الكاملة في النص الألماني؛ الفهم يُختبر بالأسئلة الألمانية."
@@ -4059,60 +4056,60 @@
     "id": "t-b2-15",
     "level": "B2",
     "titleDe": "Vom Wert der Fehlerkultur",
-    "titleAr": "من قيمةِ ثقافةِ الخطأ",
-    "de": "Amerikanische Forschung nennt es «psychological safety»: das Gefühl, Fehler ohne Gesichtsverlust melden zu dürfen. Deutsche Firmen kaufen dafür teure Berater. Dabei zeigt die Forschung Banales: Nicht die Fehlerquote unterscheidet gute von schlechten Teams, sondern was danach passiert – Schweigen oder Melderegister. Wer Fehler bestraft, bekommt weniger gemeldete Fehler, nicht weniger Fehler. Das ist der Kern aller Lernorganisation: Transparenz kostet Überwindung, Intransparenz am Ende mehr.",
-    "ar": "البحوث الأمريكية تسميها «الأمان النفسي»: أن تُبلّغ عن خطئك دون خسارة ماء الوجه. وتشتري الشركات الألمانية لهذا مستشارين باهظين. والبحوث تُظهر أبسط من هذا: ما يفرق الفرق الطيبة عن الرديئة ليس معدلَ الخطأ بل ما يقع بعده — صمتٌ أم سجلُّ إبلاغ. ومن يعاقب الأخطاء يحصل على مبلَّغٍ أقلّ منها، لا على أقلّ منها. وهذه ليست حاشية بل لُبُّ كل منظمةٍ متعلمة: الشفافية تكلّف مجاهدة، لكن التعمية تكلّف في النهاية أكثر. يتناول النص بعد ذلك وجهات نظر متباينة ويعرض دراسة حالة من مدينة نموذجية، ثم يخلص إلى أن الاستدامة تتطلب ربط الخبرة بالمشاركة، مع التمييز بين الوقائع والتقييمات.",
+    "titleAr": "قيمة ثقافة التعامل مع الأخطاء",
+    "de": "In Teams bezeichnet psychologische Sicherheit das Gefühl, Fragen, Zweifel und Fehler ansprechen zu können, ohne sofort persönliche Nachteile befürchten zu müssen. Die Meldekultur beeinflusst, welche Probleme sichtbar werden. Eine niedrige Zahl gemeldeter Fehler kann deshalb zweierlei bedeuten: Es gab weniger Fehler, oder sie wurden seltener gemeldet. Wer Meldungen bestraft, kann ihre Zahl senken, ohne die Ursachen zu lösen. Lernende Organisationen brauchen daher transparente Analyse statt vorschneller Schuldzuweisung.",
+    "ar": "تعني السلامة النفسية داخل الفرق أن يستطيع الأفراد طرح الأسئلة والتعبير عن الشكوك والتحدث عن الأخطاء من دون الخوف فوراً من أضرار شخصية. وتؤثر ثقافة الإبلاغ في المشكلات التي تصبح ظاهرة. ولذلك قد يعني انخفاض عدد الأخطاء المبلغ عنها أمرين: إما أن الأخطاء قلت، أو أن الإبلاغ عنها انخفض. وقد تؤدي معاقبة المبلّغين إلى خفض عدد البلاغات من دون معالجة الأسباب. لذا تحتاج المؤسسات المتعلمة إلى تحليل شفاف بدلاً من إلقاء اللوم بسرعة.",
     "questions": [
       {
         "id": "t-b2-15-q1",
         "type": "mc",
-        "promptDe": "Was unterscheidet laut Forschung gute Teams?",
+        "promptDe": "Was beeinflusst laut Text, welche Probleme sichtbar werden?",
         "options": [
-          "die Fehlerquote",
-          "was nach dem Fehler passiert",
-          "die Beraterzahl"
+          "die Meldekultur",
+          "nur die Fehlerquote",
+          "die Zahl externer Berater"
         ],
-        "answer": "was nach dem Fehler passiert",
-        "explanationAr": "الدليل حرفياً: «Nicht die Fehlerquote unterscheidet gute von schlechten Teams, sondern was danach passiert». الفخّ: نسبة الأخطاء منفيّة صراحة بـ«Nicht».",
-        "promptAr": "ما الذي يميز الفرق الجيدة حسب البحث؟"
+        "answer": "die Meldekultur",
+        "explanationAr": "النص يقول: «Die Meldekultur beeinflusst, welche Probleme sichtbar werden».",
+        "promptAr": "ما الذي يؤثر في المشكلات التي تصبح ظاهرة حسب النص؟"
       },
       {
         "id": "t-b2-15-q2",
         "type": "mc",
-        "promptDe": "Was bekommt, wer Fehler bestraft?",
+        "promptDe": "Was kann eine niedrige Zahl gemeldeter Fehler bedeuten?",
         "options": [
-          "weniger Fehler",
-          "weniger gemeldete Fehler",
-          "mehr Transparenz"
+          "weniger Fehler oder weniger Meldungen",
+          "immer ein fehlerfreies Team",
+          "mehr persönliche Strafen"
         ],
-        "answer": "weniger gemeldete Fehler",
-        "explanationAr": "في النصِّ حرفياً: «weniger gemeldete Fehler, nicht weniger Fehler».",
-        "promptAr": "ماذا ينال من يُعاقب على الخطأ؟"
+        "answer": "weniger Fehler oder weniger Meldungen",
+        "explanationAr": "النص يوضح: «Es gab weniger Fehler, oder sie wurden seltener gemeldet.»",
+        "promptAr": "ماذا قد يعني انخفاض عدد الأخطاء المبلغ عنها؟"
       },
       {
         "id": "t-b2-15-q3",
         "type": "mc",
-        "promptDe": "Was kostet am Ende mehr?",
+        "promptDe": "Was brauchen lernende Organisationen?",
         "options": [
-          "Überwindung",
-          "Intransparenz",
-          "Melderegister"
+          "transparente Analyse",
+          "vorschnelle Schuldzuweisung",
+          "das Verbot von Fragen"
         ],
-        "answer": "Intransparenz",
-        "explanationAr": "الدليل حرفياً: «Transparenz kostet Überwindung, Intransparenz am Ende mehr». الفخّ: «Überwindung» هو ثمن الشفافية لا ما يكلّف أكثر.",
-        "promptAr": "ما الأكثر كلفة في النهاية؟"
+        "answer": "transparente Analyse",
+        "explanationAr": "النص يقول: «Lernende Organisationen brauchen daher transparente Analyse».",
+        "promptAr": "إلى ماذا تحتاج المؤسسات المتعلمة؟"
       },
       {
         "id": "t-b2-15-q4",
         "type": "truefalse",
-        "promptDe": "Wer Fehler bestraft, bekommt laut Text weniger gemeldete Fehler.",
+        "promptDe": "Strafen für Meldungen lösen laut Text automatisch die Fehlerursachen.",
         "options": [
           "richtig",
           "falsch"
         ],
-        "answer": "richtig",
-        "explanationAr": "في النصِّ حرفياً: «Wer Fehler bestraft, bekommt weniger gemeldete Fehler, nicht weniger Fehler».",
-        "promptAr": "هل يحصل من يُعاقب على الأخطاء على تبليغات أقل حسب النص؟"
+        "answer": "falsch",
+        "explanationAr": "هذا خطأ؛ فالنص يقول إن عدد البلاغات قد ينخفض «ohne die Ursachen zu lösen».",
+        "promptAr": "هل تحل معاقبة البلاغات أسباب الأخطاء تلقائياً حسب النص؟"
       }
     ],
     "arHinweis": "ملخص عربي — الترجمة الكاملة في النص الألماني؛ الفهم يُختبر بالأسئلة الألمانية."
@@ -4120,61 +4117,61 @@
   {
     "id": "t-b2-16",
     "level": "B2",
-    "titleDe": "Das 49-Euro-Ticket: Erfolg?",
-    "titleAr": "تذكرةُ التاسعةِ والأربعين: نجاح؟",
-    "de": "Zwei Jahre nach Einführung des 49-Euro-Tickets ziehen die Verbünde eine zwiespältige Bilanz. Die Verkaufszahlen sind beachtlich, die Entlastung für Berufpendler real – doch die Auslastung zu Stoßzeiten verschlechterte sich vielerorts: Neue Fahrgäste trafen auf alte Züge, zusätzliche rollten nicht. Der Vorwurf der Verbände: Die Politik habe den Nachfrageeffekt unterschätzt. Offen bleibt die Kernfrage: Ein Ticket, das fahren lässt, aber nicht atmen – Mobilitätswende oder Umverteilung von Platz?",
-    "ar": "بعد عامين على إطلاق تذكرةِ الـ49 يورو تسحب شركات النقل ميزانًا مزدوجًا. المبيعات لافتة، والتخفيف عن الموظفين حقيقيّ — لكن الحمولة وقت الذروة تدهورت في أماكن كثيرة لأن ركابًا جددًا وافوا عرباتٍ قديمة ولم تزد واحدة. والسياسة — بحسب اتهام الشركات — استصغرت أثر الطلب. ويبقى سؤال اللُبّ مفتوحًا: تذكرة تجعلك تركب ولا تجعل المقاعد تتنفس — أهذه تحوّلٌ في التنقل أم مجردُ إعادة توزيعٍ للمكان؟ يتناول النص بعد ذلك وجهات نظر متباينة ويعرض دراسة حالة من مدينة نموذجية، ثم يخلص إلى أن الاستدامة تتطلب ربط الخبرة بالمشاركة، مع التمييز بين الوقائع والتقييمات.",
+    "titleDe": "Deutschlandticket: Erfolg?",
+    "titleAr": "تذكرة ألمانيا: نجاح؟",
+    "de": "Seit der Einführung des Deutschlandtickets nutzen viele Fahrgäste ein bundesweit gültiges Abonnement für den Nahverkehr. Dabei können Nachfrage und Belastung regional unterschiedlich ausfallen. Auf manchen Strecken sind Züge zu Stoßzeiten voll, während andernorts Kapazitäten frei bleiben. Ein einfaches Ticket schafft nicht automatisch zusätzliche Fahrzeuge oder Personal. Eine belastbare Bilanz muss deshalb Fahrgastzahlen, Finanzierung, Takt und Servicequalität nach Regionen unterscheiden.",
+    "ar": "منذ إطلاق تذكرة ألمانيا يستخدم كثير من الركاب اشتراكاً صالحاً للنقل المحلي في أنحاء البلاد. وقد يختلف الطلب والعبء الناتج عنه من منطقة إلى أخرى. ففي بعض الخطوط تمتلئ القطارات في ساعات الذروة، بينما تبقى سعات متاحة في أماكن أخرى. ولا توفر التذكرة البسيطة مركبات أو موظفين إضافيين تلقائياً. لذلك ينبغي للتقييم الموثوق أن يميز بين المناطق عند النظر في أعداد الركاب والتمويل وتواتر الرحلات وجودة الخدمة.",
     "questions": [
       {
         "id": "t-b2-16-q1",
         "type": "mc",
-        "promptDe": "Was verschlechterte sich vielerorts?",
+        "promptDe": "Was unterscheidet sich laut Text regional?",
         "options": [
-          "die Verkaufszahlen",
-          "die Auslastung zu Stoßzeiten",
-          "der Preis"
+          "Nachfrage und Belastung",
+          "die bundesweite Gültigkeit des Abonnements",
+          "der Name des Tickets"
         ],
-        "answer": "die Auslastung zu Stoßzeiten",
-        "explanationAr": "في النصِّ حرفياً: «die Auslastung zu Stoßzeiten verschlechterte sich vielerorts».",
-        "promptAr": "ماذا ساء في أماكن كثيرة؟"
+        "answer": "Nachfrage und Belastung",
+        "explanationAr": "النص يقول: «Dabei können Nachfrage und Belastung regional unterschiedlich ausfallen.»",
+        "promptAr": "ما الذي يختلف من منطقة إلى أخرى حسب النص؟"
       },
       {
         "id": "t-b2-16-q2",
         "type": "mc",
-        "promptDe": "Was habe die Politik unterschätzt, sagen die Verbände?",
+        "promptDe": "Was schafft ein einfaches Ticket nicht automatisch?",
         "options": [
-          "den Nachfrageeffekt",
-          "die Technik",
-          "die Tarifstruktur"
+          "zusätzliche Fahrzeuge oder Personal",
+          "ein bundesweit gültiges Abonnement",
+          "eine Debatte über Finanzierung"
         ],
-        "answer": "den Nachfrageeffekt",
-        "explanationAr": "في النصِّ حرفياً: «den Nachfrageeffekt unterschätzt».",
-        "promptAr": "ماذا قللت السياسة من شأنه حسب الاتحادات؟"
+        "answer": "zusätzliche Fahrzeuge oder Personal",
+        "explanationAr": "النص يقول: «Ein einfaches Ticket schafft nicht automatisch zusätzliche Fahrzeuge oder Personal.»",
+        "promptAr": "ما الذي لا توفره التذكرة البسيطة تلقائياً؟"
       },
       {
         "id": "t-b2-16-q3",
         "type": "mc",
-        "promptDe": "Worauf zielt die Schlussfrage ab?",
+        "promptDe": "Was muss eine belastbare Bilanz unterscheiden?",
         "options": [
-          "Technik",
-          "Verteilung des Platzes vs. Mobilitätswende",
-          "Preiserhöhung"
+          "Fahrgastzahlen, Finanzierung, Takt und Servicequalität nach Regionen",
+          "nur den Namen des Tickets",
+          "ausschließlich die Stoßzeit einer Strecke"
         ],
-        "answer": "Verteilung des Platzes vs. Mobilitätswende",
-        "explanationAr": "في النصِّ حرفياً: «Mobilitätswende oder Umverteilung von Platz?».",
-        "promptAr": "إلام تهدف مسألة الختام؟"
+        "answer": "Fahrgastzahlen, Finanzierung, Takt und Servicequalität nach Regionen",
+        "explanationAr": "النص يذكر «Fahrgastzahlen, Finanzierung, Takt und Servicequalität nach Regionen».",
+        "promptAr": "ما الذي ينبغي أن يميزه التقييم الموثوق؟"
       },
       {
         "id": "t-b2-16-q4",
         "type": "truefalse",
-        "promptDe": "Die Auslastung zu Stoßzeiten verbesserte sich nach Einführung des Tickets.",
+        "promptDe": "Das Deutschlandticket schafft laut Text automatisch zusätzliche Züge.",
         "options": [
           "richtig",
           "falsch"
         ],
         "answer": "falsch",
-        "explanationAr": "في النصِّ حرفياً: «die Auslastung zu Stoßzeiten verschlechterte sich vielerorts».",
-        "promptAr": "هل تحسّن الإشغال في أوقات الذروة بعد التذكرة؟"
+        "explanationAr": "هذا خطأ؛ فالنص يقول: «Ein einfaches Ticket schafft nicht automatisch zusätzliche Fahrzeuge oder Personal.»",
+        "promptAr": "هل توفر تذكرة ألمانيا قطارات إضافية تلقائياً حسب النص؟"
       }
     ],
     "arHinweis": "ملخص عربي — الترجمة الكاملة في النص الألماني؛ الفهم يُختبر بالأسئلة الألمانية."
@@ -4183,60 +4180,60 @@
     "id": "t-b2-17",
     "level": "B2",
     "titleDe": "Reklame im öffentlichen Raum",
-    "titleAr": "إعلانٌ في الفضاءِ العام",
-    "de": "Geschmacklos oder gemeinnützig? Plakatwände an Haltestellen finanzieren deren Unterhalt – so verteidigen Werber und Kommunen das Geschäft. Analystinnen halten dagegen: Die «Finanzierung» decke bestenfalls die Rahmen, nicht die beheizten Glaskästen; die Wirkung der Dauerbeschallung aber zeige seit Jahrzehnten dasselbe Bild – Aufmerksamkeitsdiebstahl ohne Zustimmung. Ehrlicher wäre der Kompromiss, wenn Städte Werbefläche wie Infrastruktur behandelten: verpachten, limitieren, messen lassen.",
-    "ar": "بلا ذوقٍ أم للمنفعة العامة؟ لوحاتُ الإعلان عند المواقف تموّل صيانتها — بهذه الحجة يدافع قطاعُ الإعلان والبلديات عن الصفقة. وتردّ المحلّلات: «التمويل» يغطّي أقصاه الأُطر لا الصناديقَ المدفّأة؛ وأثرَ القصف الصوتي يُري منذ عقودٍ الأمرَ عينه: سرقةُ انتباهٍ بلا موافقة. والأصدقُ أن تعامل المدنُ المساحةَ الإعلانية كالبنية التحتية: إيجارٌ، وسقفٌ، وقياسُ أثرٍ على المحكّ. يتناول النص بعد ذلك وجهات نظر متباينة ويعرض دراسة حالة من مدينة نموذجية، ثم يخلص إلى أن الاستدامة تتطلب ربط الخبرة بالمشاركة، مع التمييز بين الوقائع والتقييمات.",
+    "titleAr": "الإعلانات في الفضاء العام",
+    "de": "Werbung an Haltestellen kann nach Angaben von Betreibern zur Finanzierung öffentlicher Infrastruktur beitragen. Wie groß dieser Beitrag ist, hängt jedoch von Verträgen und Kosten ab. Kritiker sehen in vielen Werbeflächen eine visuelle Überlastung und eine unerwünschte Konkurrenz um Aufmerksamkeit. Beide Positionen sollten mit transparenten Daten geprüft werden. Städte können Flächen verpachten, ihre Zahl und Gestaltung begrenzen und die Wirkung der Regeln regelmäßig auswerten.",
+    "ar": "يمكن للإعلانات عند محطات النقل، بحسب المشغلين، أن تسهم في تمويل البنية التحتية العامة. لكن حجم هذا الإسهام يتوقف على العقود والتكاليف. ويرى المنتقدون أن كثرة المساحات الإعلانية تسبب حملاً بصرياً زائداً وتنافساً غير مرغوب فيه على الانتباه. وينبغي فحص الموقفين ببيانات شفافة. ويمكن للمدن تأجير المساحات وتحديد عددها وتصميمها وتقييم أثر القواعد بانتظام.",
     "questions": [
       {
         "id": "t-b2-17-q1",
         "type": "mc",
-        "promptDe": "Was finanzieren laut Verteidigungsargument Plakatwände?",
+        "promptDe": "Wovon hängt der Finanzierungsbeitrag laut Text ab?",
         "options": [
-          "deren Standort-Mieten an Agenturen",
-          "den Unterhalt der Haltestellen",
-          "die Gehälter der Analystinnen"
+          "von Verträgen und Kosten",
+          "nur von der Zahl der Passanten",
+          "vom Gehalt der Analystinnen"
         ],
-        "answer": "den Unterhalt der Haltestellen",
-        "explanationAr": "في النصِّ حرفياً: «finanzieren deren Unterhalt».",
-        "promptAr": "ماذا تموّل لوحات الإعلان حسب حجة الدفاع؟"
+        "answer": "von Verträgen und Kosten",
+        "explanationAr": "النص يقول: «Wie groß dieser Beitrag ist, hängt jedoch von Verträgen und Kosten ab.»",
+        "promptAr": "على ماذا يتوقف الإسهام في التمويل حسب النص؟"
       },
       {
         "id": "t-b2-17-q2",
         "type": "mc",
-        "promptDe": "Was zeigen Studien zu Dauerbeschallung seit Jahrzehnten?",
+        "promptDe": "Was kritisieren Gegner vieler Werbeflächen?",
         "options": [
-          "Aufmerksamkeitsgewinn",
-          "Aufmerksamkeitsdiebstahl ohne Zustimmung",
-          "nichts Belastbares"
+          "visuelle Überlastung und Konkurrenz um Aufmerksamkeit",
+          "zu wenig Werbung",
+          "fehlende Fahrkarten"
         ],
-        "answer": "Aufmerksamkeitsdiebstahl ohne Zustimmung",
-        "explanationAr": "في النصِّ حرفياً: «Aufmerksamkeitsdiebstahl ohne Zustimmung».",
-        "promptAr": "ماذا تظهر دراسات التعرض الدائم منذ عقود؟"
+        "answer": "visuelle Überlastung und Konkurrenz um Aufmerksamkeit",
+        "explanationAr": "النص يذكر «eine visuelle Überlastung und eine unerwünschte Konkurrenz um Aufmerksamkeit».",
+        "promptAr": "ماذا ينتقد معارضو كثرة المساحات الإعلانية؟"
       },
       {
         "id": "t-b2-17-q3",
         "type": "mc",
-        "promptDe": "Wie sollen Städte Werbefläche behandeln?",
+        "promptDe": "Was können Städte mit Werbeflächen tun?",
         "options": [
-          "wie Kunst",
-          "wie Infrastruktur",
-          "wie Privateigentum"
+          "sie verpachten und begrenzen",
+          "jede Werbung ungeprüft erlauben",
+          "sie nur als Kunst behandeln"
         ],
-        "answer": "wie Infrastruktur",
-        "explanationAr": "في النصِّ حرفياً: «wenn Städte Werbefläche wie Infrastruktur behandelten: verpachten, limitieren, messen lassen»",
-        "promptAr": "كيف يجب على المدن التعامل مع المساحات الإعلانية؟"
+        "answer": "sie verpachten und begrenzen",
+        "explanationAr": "النص يقول: «Städte können Flächen verpachten, ihre Zahl und Gestaltung begrenzen».",
+        "promptAr": "ماذا يمكن للمدن أن تفعل بالمساحات الإعلانية؟"
       },
       {
         "id": "t-b2-17-q4",
         "type": "truefalse",
-        "promptDe": "Analystinnen bezweifeln, dass Werbung die Haltestellen wirklich finanziert.",
+        "promptDe": "Der Text verlangt, beide Positionen mit transparenten Daten zu prüfen.",
         "options": [
           "richtig",
           "falsch"
         ],
         "answer": "richtig",
-        "explanationAr": "الدليل حرفياً: «Die «Finanzierung» decke bestenfalls die Rahmen, nicht die beheizten Glaskästen» — Konjunktiv I في الاعتراض، وعلامتا التنصيص حول Finanzierung تشكيك.",
-        "promptAr": "هل يشكك المحللون في أن الإعلان يموّن المحطات فعلاً؟"
+        "explanationAr": "النص يقول: «Beide Positionen sollten mit transparenten Daten geprüft werden.»",
+        "promptAr": "هل يطالب النص بفحص الموقفين ببيانات شفافة؟"
       }
     ],
     "arHinweis": "ملخص عربي — الترجمة الكاملة في النص الألماني؛ الفهم يُختبر بالأسئلة الألمانية."
@@ -4244,61 +4241,61 @@
   {
     "id": "t-b2-18",
     "level": "B2",
-    "titleDe": "Warum der Antrag drei Wochen braucht",
-    "titleAr": "لماذا يستغرقُ الطلبُ ثلاثةَ أسابيع",
-    "de": "Digitale Verwaltung, so das Versprechen, halbiere die Welt in Klicks statt Fristen. Wer eine Meldebescheinigung online beantragt, erlebt oft drei Wochen Warteschleife – nicht wegen der Technik, sondern weil die Behörde weiter persönlich die Identität prüfen muss und niemand die Fachverfahren im Landratsamt zusammenlegte. Digitalisierung auf ein altes Verfahren gepflastert, beschleunigt den Postweg, nicht den Vorgang. Wer Fristen ernst nimmt, muss Prozesse erfinden, nicht Formulare scannen.",
-    "ar": "الوعود تقول: الإدارةُ الرقمية تشطر العالم نقراتٍ بدل مواعيد. ومن يطلب شهادةَ تسجيلٍ إلكترونيًا يعيش غالبًا ثلاثةَ أسابيع انتظاراً — لا للتقنية، بل لأن على الجهة أن تظل تتحقق من الهوية شخصيًا ولأن أحدًا لم يدمج إجراءاتِ مكتب الولاية. ورقمنةٌ تُرصَف على إجراءٍ قديم تُسرّع البريد لا المعاملة. ومن أخذ المواعيدَ بجدّية فعليه أن يخترع مساراتٍ لا أن يمسح استماراتٍ فحسب. يتناول النص بعد ذلك وجهات نظر متباينة ويعرض دراسة حالة من مدينة نموذجية، ثم يخلص إلى أن الاستدامة تتطلب ربط الخبرة بالمشاركة، مع التمييز بين الوقائع والتقييمات.",
+    "titleDe": "Warum ein digitaler Antrag dauern kann",
+    "titleAr": "لماذا قد يستغرق الطلب الرقمي وقتاً",
+    "de": "Ein Onlineformular kann den Weg zur Behörde verkürzen, beschleunigt aber nicht automatisch jeden Antrag. Bearbeitungszeit entsteht zum Beispiel, wenn Identität oder Unterlagen manuell geprüft werden müssen, verschiedene Fachverfahren nicht verbunden sind, Unterlagen fehlen oder Rückfragen nötig sind. Die digitale Übermittlung macht dann vor allem den Postweg schneller. Wer Fristen verkürzen will, muss deshalb den gesamten Prozess prüfen und Zuständigkeiten klären, statt nur Papierformulare einzuscannen.",
+    "ar": "يمكن للاستمارة الإلكترونية أن تختصر الطريق إلى الإدارة، لكنها لا تسرع كل طلب تلقائياً. فقد ينشأ وقت الانتظار مثلاً عندما يلزم فحص الهوية أو المستندات يدوياً، أو عندما لا تكون الأنظمة المتخصصة مترابطة، أو حين تنقص مستندات أو تلزم استفسارات إضافية. وعندئذ تسرع الإحالة الرقمية طريق البريد أساساً. ولذلك ينبغي لمن يريد تقصير المهل أن يفحص العملية كاملة ويوضح المسؤوليات، بدلاً من الاكتفاء بمسح الاستمارات الورقية.",
     "questions": [
       {
         "id": "t-b2-18-q1",
         "type": "mc",
-        "promptDe": "Woran scheitert die Meldebescheinigung laut Text NICHT?",
+        "promptDe": "Was beschleunigt ein Onlineformular nicht automatisch?",
         "options": [
-          "an der persönlichen Identitätsprüfung",
-          "an ungelegten Fachverfahren",
-          "an der Technik selbst"
+          "jeden Antrag",
+          "den Postweg",
+          "die Eingabe am eigenen Gerät"
         ],
-        "answer": "an der Technik selbst",
-        "explanationAr": "في النصِّ حرفياً: «nicht wegen der Technik, sondern weil …».",
-        "promptAr": "علام لا تتعثر شهادة التسجيل حسب النص؟"
+        "answer": "jeden Antrag",
+        "explanationAr": "النص يقول: «beschleunigt aber nicht automatisch jeden Antrag».",
+        "promptAr": "ما الذي لا تسرعه الاستمارة الإلكترونية تلقائياً؟"
       },
       {
         "id": "t-b2-18-q2",
         "type": "mc",
-        "promptDe": "Was bleibt laut Digitalgesetz der Behörde verpflichtet?",
+        "promptDe": "Welche mögliche Ursache der Bearbeitungszeit nennt der Text?",
         "options": [
-          "Datenschutz-Audit",
-          "persönliche Identitätsprüfung",
-          "Vor-Ort-Besuch der Bürger"
+          "manuelle Prüfung von Identität oder Unterlagen",
+          "zu schnelle Post",
+          "fehlende Papierformulare als einziges Problem"
         ],
-        "answer": "persönliche Identitätsprüfung",
-        "explanationAr": "في النصِّ حرفياً: «weil die Behörde weiter persönlich die Identität prüfen muss»",
-        "promptAr": "ماذا يبقى واجباً على الدائرة حسب القانون الرقمي؟"
+        "answer": "manuelle Prüfung von Identität oder Unterlagen",
+        "explanationAr": "النص يذكر: «wenn Identität oder Unterlagen manuell geprüft werden müssen».",
+        "promptAr": "ما السبب المحتمل لوقت المعالجة الذي يذكره النص؟"
       },
       {
         "id": "t-b2-18-q3",
         "type": "mc",
-        "promptDe": "Was muss man laut Schluss erfinden?",
+        "promptDe": "Was muss man laut Schluss prüfen?",
         "options": [
-          "mehr Formulare",
-          "Prozesse",
+          "den gesamten Prozess",
+          "nur das Formularlayout",
           "mehr Scanstellen"
         ],
-        "answer": "Prozesse",
-        "explanationAr": "في النصِّ حرفياً: «Prozesse erfinden, nicht Formulare scannen»",
-        "promptAr": "ماذا يجب اختراعه حسب الختام؟"
+        "answer": "den gesamten Prozess",
+        "explanationAr": "النص يقول: «muss deshalb den gesamten Prozess prüfen und Zuständigkeiten klären».",
+        "promptAr": "ما الذي ينبغي فحصه حسب الختام؟"
       },
       {
         "id": "t-b2-18-q4",
         "type": "truefalse",
-        "promptDe": "Die Verzögerung liegt laut Text vor allem an der Technik.",
+        "promptDe": "Die digitale Übermittlung verkürzt laut Text automatisch jede Bearbeitungsfrist.",
         "options": [
           "richtig",
           "falsch"
         ],
         "answer": "falsch",
-        "explanationAr": "في النصِّ حرفياً: «nicht wegen der Technik, sondern weil die Behörde weiter persönlich die Identität prüfen muss».",
-        "promptAr": "هل يكمن التأخير في التقنية أساساً حسب النص؟"
+        "explanationAr": "هذا خطأ؛ فالنص يقول إن النموذج الرقمي «beschleunigt aber nicht automatisch jeden Antrag».",
+        "promptAr": "هل تقلص الإحالة الرقمية كل مهلة معالجة تلقائياً حسب النص؟"
       }
     ],
     "arHinweis": "ملخص عربي — الترجمة الكاملة في النص الألماني؛ الفهم يُختبر بالأسئلة الألمانية."
@@ -4634,57 +4631,57 @@
     "id": "t-b2-19",
     "level": "B2",
     "titleDe": "Fachkräftemangel: Ursachen und Wege",
-    "titleAr": "نقصُ الكفاءات: الأسبابُ والمسالك",
-    "de": "Der viel diskutierte Fachkräftemangel lässt sich nicht auf eine einzige Ursache zurückführen. Zum einen geht die Zahl der Erwerbstätigen demografisch bedingt zurück, zum anderen passen Ausbildung und Nachfrage immer seltener zusammen. Hinzu kommt, dass die von Unternehmen geforderte Mobilität vielen Familien kaum zuzumuten ist. Zwar wirbt man verstärkt um Zuwanderung, doch ohne beschleunigte Anerkennungsverfahren bleibt deren Wirkung begrenzt. Ökonomen zufolge wäre eine Kombination aus Qualifizierung, Digitalisierung und gezielter Einwanderung am wirksamsten.",
-    "ar": "لا يمكنُ إرجاعُ نقصِ الكفاءاتِ المتداوَلِ كثيراً إلى سببٍ واحد. فمن جهةٍ يتراجعُ عددُ العاملينَ لأسبابٍ ديموغرافية، ومن جهةٍ أخرى قلَّما يتطابقُ التكوينُ مع الطلب. يُضافُ أنَّ التنقُّلَ الذي تطلبُهُ الشركاتُ يصعبُ تحميلُهُ لأُسَرٍ كثيرة. وصحيحٌ أنَّ الاستقطابَ من الخارجِ يتزايد، لكنْ بلا تسريعِ إجراءاتِ الاعترافِ يبقى أثرُهُ محدوداً. وبحسبِ اقتصاديّينَ فإنَّ مزيجاً من التأهيلِ والرقمنةِ والهجرةِ الموجَّهةِ هو الأنجع. يتناول النص بعد ذلك وجهات نظر متباينة ويعرض دراسة حالة من مدينة نموذجية، ثم يخلص إلى أن الاستدامة تتطلب ربط الخبرة بالمشاركة، مع التمييز بين الوقائع والتقييمات.",
+    "titleAr": "نقص الكفاءات: الأسباب والمسارات",
+    "de": "Ein Fachkräftemangel kann je nach Beruf und Region unterschiedliche Ursachen haben. Dazu gehören demografische Veränderungen, eine fehlende Übereinstimmung zwischen Qualifikation und Nachfrage sowie Arbeitsbedingungen oder Mobilitätsanforderungen. Zuwanderung kann ein Teil der Antwort sein; ohne verlässliche Anerkennungsverfahren, Sprachförderung und betriebliche Einarbeitung bleibt ihr Potenzial begrenzt. Auch Weiterbildung, bessere Arbeitsbedingungen und Digitalisierung kommen als Maßnahmen infrage. Welche Kombination wirkt, muss für den jeweiligen Bereich geprüft werden.",
+    "ar": "قد تكون لنقص الكفاءات أسباب مختلفة بحسب المهنة والمنطقة. ومن بينها التحولات الديموغرافية، وعدم التطابق بين المؤهلات والطلب، وظروف العمل أو متطلبات التنقل. ويمكن أن تكون الهجرة جزءاً من الحل، لكن إمكاناتها تبقى محدودة من دون إجراءات موثوقة للاعتراف بالمؤهلات ودعم لغوي وتهيئة مهنية داخل الشركات. كما يمكن النظر في التدريب المستمر وتحسين ظروف العمل والرقمنة. ويجب فحص المزيج الفعال لكل مجال على حدة.",
     "questions": [
       {
         "id": "t-b2-19-q1",
         "type": "mc",
-        "promptDe": "Welche Struktur trägt „die von Unternehmen geforderte Mobilität“?",
+        "promptDe": "Wovon können die Ursachen des Fachkräftemangels abhängen?",
         "options": [
-          "Relativsatz",
-          "Partizip-Attribut",
-          "Konjunktiv I"
+          "von Beruf und Region",
+          "nur von einer einzigen Statistik",
+          "ausschließlich von Zuwanderung"
         ],
-        "answer": "Partizip-Attribut",
-        "explanationAr": "الدليل حرفياً: «Hinzu kommt, dass die von Unternehmen geforderte Mobilität vielen Familien kaum zuzumuten ist.» — صفةٌ اسميةٌ ممتدّةٌ ببناءِ Partizip II داخلَ المجموعةِ الاسمية — بديلٌ مختصَرٌ لجملةِ وصل.",
-        "promptAr": "أي بناء نحوي يُحمل «الحركية المطلوبة من الشركات»؟"
+        "answer": "von Beruf und Region",
+        "explanationAr": "النص يقول: «je nach Beruf und Region unterschiedliche Ursachen».",
+        "promptAr": "مم قد تعتمد أسباب نقص الكفاءات؟"
       },
       {
         "id": "t-b2-19-q2",
         "type": "fill",
-        "promptDe": "Ökonomen ___ wäre eine Kombination am wirksamsten.",
+        "promptDe": "Der Mangel hat je nach Bereich unterschiedliche ___.",
         "answer": [
-          "zufolge"
+          "Ursachen"
         ],
-        "explanationAr": "zufolge حرفٌ يأتي بعدَ الاسمِ ويجرُّهُ بالداتيف: «Ökonomen zufolge».",
-        "promptAr": "___ الاقتصاديين، سيكون المزيج الأكثر فعالية."
+        "explanationAr": "النص يقول: «unterschiedliche Ursachen».",
+        "promptAr": "للنقص ___ مختلفة بحسب المجال."
       },
       {
         "id": "t-b2-19-q3",
         "type": "mc",
-        "promptDe": "Was schwächt die Wirkung der Zuwanderung?",
+        "promptDe": "Was kann das Potenzial von Zuwanderung begrenzen?",
         "options": [
-          "fehlende Sprache",
-          "langsame Anerkennungsverfahren",
-          "niedrige Löhne"
+          "fehlende Anerkennungsverfahren, Sprachförderung und Einarbeitung",
+          "bessere Arbeitsbedingungen",
+          "eine Prüfung des jeweiligen Bereichs"
         ],
-        "answer": "langsame Anerkennungsverfahren",
-        "explanationAr": "في النصِّ حرفياً: «ohne beschleunigte Anerkennungsverfahren bleibt deren Wirkung begrenzt».",
-        "promptAr": "ما يُضعف أثر الهجرة؟"
+        "answer": "fehlende Anerkennungsverfahren, Sprachförderung und Einarbeitung",
+        "explanationAr": "النص يقول: «ohne verlässliche Anerkennungsverfahren, Sprachförderung und betriebliche Einarbeitung bleibt ihr Potenzial begrenzt».",
+        "promptAr": "ما الذي قد يحد من إمكانات الهجرة؟"
       },
       {
         "id": "t-b2-19-q4",
         "type": "truefalse",
-        "promptDe": "Der Fachkräftemangel hat laut Text eine einzige Ursache.",
+        "promptDe": "Der Fachkräftemangel hat laut Text überall dieselbe Ursache.",
         "options": [
           "richtig",
           "falsch"
         ],
         "answer": "falsch",
-        "explanationAr": "في النصِّ حرفياً: «lässt sich nicht auf eine einzige Ursache zurückführen».",
-        "promptAr": "هل لنقص الكفاءات سبب واحد حسب النص؟"
+        "explanationAr": "هذا خطأ؛ فالنص يذكر «je nach Beruf und Region unterschiedliche Ursachen».",
+        "promptAr": "هل لنقص الكفاءات السبب نفسه في كل مكان حسب النص؟"
       }
     ],
     "arHinweis": "ملخص عربي — الترجمة الكاملة في النص الألماني؛ الفهم يُختبر بالأسئلة الألمانية."
@@ -4693,58 +4690,60 @@
     "id": "t-b2-20",
     "level": "B2",
     "titleDe": "Wohnraum in Ballungsräumen",
-    "titleAr": "السكنُ في المناطقِ المكتظّة",
-    "de": "Dass Wohnen in Großstädten zunehmend unbezahlbar wird, bestreitet kaum jemand. Strittig ist hingegen, welche Instrumente greifen. Befürworter einer Mietpreisbremse argumentieren, sie schütze Bestandsmieter; Kritiker halten dagegen, dass sie Investitionen hemme und den Leerstand nicht verringere. Würde man stattdessen konsequent Bauland ausweisen, ließe sich das Angebot mittelfristig erhöhen. Allerdings ist auch das kein Selbstläufer: Ohne Infrastruktur entstehen Quartiere, in denen niemand wohnen möchte.",
-    "ar": "قلَّما يُنكِرُ أحدٌ أنَّ السكنَ في المدنِ الكبرى صارَ فوقَ الطاقة. لكنَّ الخلافَ في الأدواتِ الناجعة. يحتجُّ أنصارُ كابحِ الإيجاراتِ بأنَّهُ يحمي المستأجرينَ القدامى، ويردُّ النقّادُ بأنَّهُ يكبحُ الاستثمارَ ولا يقلّلُ الشغور. ولو خُصِّصَت أراضي البناءِ بحزمٍ لأمكنَ رفعُ العرضِ في المدى المتوسّط. غيرَ أنَّ هذا أيضاً ليسَ تلقائياً: فبلا بنيةٍ تحتيةٍ تنشأُ أحياءٌ لا يرغبُ أحدٌ في سكناها. يتناول النص بعد ذلك وجهات نظر متباينة ويعرض دراسة حالة من مدينة نموذجية، ثم يخلص إلى أن الاستدامة تتطلب ربط الخبرة بالمشاركة، مع التمييز بين الوقائع والتقييمات.",
+    "titleAr": "السكن في التجمعات الحضرية",
+    "de": "In vielen Großstädten belasten steigende Wohnkosten einen Teil der Haushalte stark. Strittig ist, welche Instrumente unter welchen Bedingungen wirken. Befürworter einer Mietpreisbremse argumentieren, sie schütze Bestandsmieter; Kritiker befürchten, sie könne Investitionen hemmen. Die tatsächlichen Folgen hängen von Ausgestaltung und lokalem Wohnungsmarkt ab. Zusätzliches Bauland kann das Angebot mittelfristig erhöhen, braucht aber Verkehr, Schulen und weitere Infrastruktur. Kein einzelnes Instrument löst das Wohnungsproblem automatisch.",
+    "ar": "في مدن كبرى كثيرة تثقل تكاليف السكن المتزايدة كاهل بعض الأسر. ويظل الخلاف قائماً بشأن الأدوات الفعالة والظروف التي تنجح فيها. يرى مؤيدو تحديد الإيجارات أنه يحمي المستأجرين الحاليين، بينما يخشى منتقدون أن يعيق الاستثمار. وتتوقف النتائج الفعلية على طريقة التطبيق وسوق السكن المحلي. ويمكن لأراضي البناء الإضافية أن تزيد العرض على المدى المتوسط، لكنها تحتاج إلى النقل والمدارس وغيرها من البنية التحتية. ولا تحل أداة واحدة مشكلة السكن تلقائياً.",
     "questions": [
       {
         "id": "t-b2-20-q1",
-        "type": "fill",
-        "promptDe": "___ man stattdessen Bauland ausweisen, ließe sich das Angebot erhöhen.",
-        "answer": [
-          "Würde",
-          "würde"
-        ],
-        "explanationAr": "الدليل حرفياً: «Würde man stattdessen konsequent Bauland ausweisen, ließe sich das Angebot mittelfristig erhöhen.» — شرطٌ بلا wenn: الفعلُ المساعدُ يتصدَّرُ الجملةَ (Würde man …, ließe sich …).",
-        "promptAr": "إذا ___ أراضٍ للبناء بدلاً من ذلك، لأمكن رفع العرض."
+        "type": "mc",
+        "promptDe": "Wovon hängen die Folgen einer Mietpreisbremse laut Text ab?",
+        "answer": "von Ausgestaltung und lokalem Wohnungsmarkt",
+        "explanationAr": "النص يقول: «Die tatsächlichen Folgen hängen von Ausgestaltung und lokalem Wohnungsmarkt ab.»",
+        "promptAr": "على ماذا تتوقف نتائج تحديد الإيجارات حسب النص؟",
+        "options": [
+          "von Ausgestaltung und lokalem Wohnungsmarkt",
+          "nur von der Zahl der Kritiker",
+          "ausschließlich vom Bauland"
+        ]
       },
       {
         "id": "t-b2-20-q2",
         "type": "mc",
-        "promptDe": "Was sagen die Kritiker der Mietpreisbremse?",
+        "promptDe": "Was befürchten Kritiker einer Mietpreisbremse?",
         "options": [
-          "Sie schützt Mieter",
-          "Sie hemmt Investitionen",
-          "Sie senkt die Mieten stark"
+          "Sie könne Investitionen hemmen.",
+          "Sie schütze Bestandsmieter.",
+          "Sie baue automatisch Schulen."
         ],
-        "answer": "Sie hemmt Investitionen",
-        "explanationAr": "«Kritiker halten dagegen, dass sie Investitionen hemme» — Konjunktiv I في الكلامِ المنقول.",
-        "promptAr": "ماذا يقول نقاد تحديد سقف الإيجار؟"
+        "answer": "Sie könne Investitionen hemmen.",
+        "explanationAr": "النص يقول: «Kritiker befürchten, sie könne Investitionen hemmen.»",
+        "promptAr": "مم يخشى منتقدو تحديد الإيجارات؟"
       },
       {
         "id": "t-b2-20-q3",
         "type": "mc",
-        "promptDe": "Welche Bedingung nennt der letzte Satz?",
+        "promptDe": "Was braucht zusätzliches Bauland laut Text?",
         "options": [
-          "ohne Infrastruktur keine attraktiven Quartiere",
-          "ohne Mieter kein Bau",
-          "ohne Investoren keine Stadt"
+          "Verkehr, Schulen und weitere Infrastruktur",
+          "keine Planung",
+          "nur höhere Mieten"
         ],
-        "answer": "ohne Infrastruktur keine attraktiven Quartiere",
-        "explanationAr": "في النصِّ حرفياً: «Ohne Infrastruktur entstehen Quartiere, in denen niemand wohnen möchte.»",
-        "promptAr": "أي شرط في الجملة الأخيرة؟"
+        "answer": "Verkehr, Schulen und weitere Infrastruktur",
+        "explanationAr": "النص يقول: «braucht aber Verkehr, Schulen und weitere Infrastruktur».",
+        "promptAr": "إلى ماذا تحتاج أراضي البناء الإضافية حسب النص؟"
       },
       {
         "id": "t-b2-20-q4",
         "type": "truefalse",
-        "promptDe": "Befürworter der Mietpreisbremse sehen darin einen Schutz für Bestandsmieter.",
+        "promptDe": "Ein einzelnes Instrument löst laut Text das Wohnungsproblem automatisch.",
         "options": [
           "richtig",
           "falsch"
         ],
-        "answer": "richtig",
-        "explanationAr": "«sie schütze Bestandsmieter» — نقلٌ بصيغةِ Konjunktiv I.",
-        "promptAr": "هل يرى داعمو تحديد الإيجار فيه حمايةً لساكني الشقق القائمة؟"
+        "answer": "falsch",
+        "explanationAr": "هذا خطأ؛ فالنص يقول: «Kein einzelnes Instrument löst das Wohnungsproblem automatisch.»",
+        "promptAr": "هل تحل أداة واحدة مشكلة السكن تلقائياً حسب النص؟"
       }
     ],
     "arHinweis": "ملخص عربي — الترجمة الكاملة في النص الألماني؛ الفهم يُختبر بالأسئلة الألمانية."
@@ -4754,8 +4753,8 @@
     "level": "B2",
     "titleDe": "Beispiel: Ein Missverständnis unter Freunden",
     "titleAr": "مثال: سوء فهم بين صديقين",
-    "de": "Als Rami erfuhr, dass sein Freund Tarek die Stelle bekommen hatte, auf die sie sich beide beworben hatten, sagte er zuerst gar nichts. Später schrieb er eine kurze Nachricht: „Glückwunsch.“ Ohne Ausrufezeichen. Tarek las darin eine Kränkung und antwortete drei Tage lang nicht. So begann ein Missverständnis, das ihr Verhältnis fast beendet hätte.\n\nIn Wahrheit war Rami weder neidisch noch wütend. Er gönnte Tarek den Erfolg, aber die eigene Enttäuschung war an diesem Abend größer als seine Zuneigung. Das ist menschlich, und es wäre kein Problem gewesen, hätte er es einfach gesagt. Stattdessen schwieg er, und Schweigen lässt sich in jede Richtung deuten. Tarek deutete Ramis Schweigen als Neid; seine Schwester vermutete sogar, Tarek habe Rami betrügen wollen, weil Tarek ihm nichts vom Bewerbungsgespräch erzählt hatte.\n\nDass die beiden heute wieder zusammen Fußball spielen, liegt an einer einzigen Frage. Tarek rief an und fragte nicht „Warum bist du so?“, sondern „Wie geht es dir damit?“. Diese Frage zeigt Mitgefühl; man muss dafür weder nachgeben noch sich rechtfertigen. Rami konnte antworten, ohne sein Selbstwertgefühl zu verteidigen. Gelassenheit heißt nicht, nichts zu fühlen; sie heißt, das Gefühl zu benennen, bevor es den anderen enttäuscht.",
-    "ar": "عندما علم رامي أن صديقه طارق حصل على الوظيفة التي تقدّم إليها الاثنان، لم يقل شيئاً في البداية. ثم كتب إليه رسالة قصيرة: «تهانينا». من دون علامة تعجب. قرأ طارق في الرسالة إهانةً، ولم يردّ طوال ثلاثة أيام. وهكذا بدأ سوء فهم كاد ينهي علاقتهما.\n\nفي الحقيقة، لم يكن رامي حاسداً ولا غاضباً. كان يفرح من أجل نجاح طارق، لكن خيبة أمله هو في تلك الليلة كانت أكبر من مودّته له. وهذا شعور إنساني، ولم يكن ليصبح مشكلة لو قال ذلك ببساطة. لكنه صمت بدلاً من ذلك، والصمت قابل لتفسيرات شتى. ففسّر طارق صمت رامي على أنه حسد؛ بل إن أخته اشتبهت في أن طارق ربما أراد خداع رامي، لأنه لم يخبره عن مقابلة التوظيف.\n\nوما جعل الاثنين يعودان اليوم إلى لعب كرة القدم معاً هو سؤال واحد. اتصل طارق، ولم يسأله: «لماذا تتصرف هكذا؟»، بل قال: «كيف تشعر حيال الأمر؟». يُظهر هذا السؤال تعاطفاً؛ ولا يحتاج المرء كي يطرحه إلى التنازل أو تبرير نفسه. استطاع رامي أن يجيب من دون أن يدافع عن تقديره لذاته. فالرزانة لا تعني ألا يشعر المرء بشيء؛ بل أن يسمّي شعوره قبل أن يخيّب ظنّ الآخر.",
+    "de": "Als Rami erfuhr, dass sein Freund Tarek die Stelle bekommen hatte, auf die sie sich beide beworben hatten, sagte er zuerst gar nichts. Später schrieb er eine kurze Nachricht: „Glückwunsch.“ Ohne Ausrufezeichen. Tarek las darin eine Kränkung und antwortete drei Tage lang nicht. So begann ein Missverständnis, das ihr Verhältnis fast beendet hätte.\n\nIn Wahrheit war Rami weder neidisch noch wütend. Er gönnte Tarek den Erfolg, aber die eigene Enttäuschung war an diesem Abend größer als seine Zuneigung. Das ist menschlich, und es wäre kein Problem gewesen, hätte er es einfach gesagt. Stattdessen schwieg er, und Schweigen lässt sich in jede Richtung deuten. Tarek deutete Ramis Schweigen als Neid; seine Schwester vermutete sogar, Tarek habe Rami betrügen wollen, weil Tarek ihm nichts vom Bewerbungsgespräch erzählt hatte.\n\nDass die beiden heute wieder zusammen Fußball spielen, liegt an einer einzigen Frage. Tarek rief an und fragte nicht „Warum bist du so?“, sondern „Wie geht es dir damit?“. Diese Frage zeigt Mitgefühl; man muss dafür weder nachgeben noch sich rechtfertigen. Rami konnte antworten, ohne sein Selbstwertgefühl zu verteidigen. Gelassenheit heißt nicht, nichts zu fühlen; sie heißt hier, das Gefühl zu benennen, bevor Schweigen den anderen verletzt.",
+    "ar": "عندما علم رامي أن صديقه طارق حصل على الوظيفة التي تقدّم إليها الاثنان، لم يقل شيئاً في البداية. ثم كتب إليه رسالة قصيرة: «تهانينا». من دون علامة تعجب. قرأ طارق في الرسالة إهانةً، ولم يردّ طوال ثلاثة أيام. وهكذا بدأ سوء فهم كاد ينهي علاقتهما.\n\nفي الحقيقة، لم يكن رامي حاسداً ولا غاضباً. كان يفرح من أجل نجاح طارق، لكن خيبة أمله هو في تلك الليلة كانت أكبر من مودّته له. وهذا شعور إنساني، ولم يكن ليصبح مشكلة لو قال ذلك ببساطة. لكنه صمت بدلاً من ذلك، والصمت قابل لتفسيرات شتى. ففسّر طارق صمت رامي على أنه حسد؛ بل إن أخته اشتبهت في أن طارق ربما أراد خداع رامي، لأنه لم يخبره عن مقابلة التوظيف.\n\nوما جعل الاثنين يعودان اليوم إلى لعب كرة القدم معاً هو سؤال واحد. اتصل طارق، ولم يسأله: «لماذا تتصرف هكذا؟»، بل قال: «كيف تشعر حيال الأمر؟». يُظهر هذا السؤال تعاطفاً؛ ولا يحتاج المرء كي يطرحه إلى التنازل أو تبرير نفسه. استطاع رامي أن يجيب من دون أن يدافع عن تقديره لذاته. فالرزانة لا تعني ألا يشعر المرء بشيء؛ بل تعني هنا أن يسمّي شعوره قبل أن يؤذي الصمت الطرف الآخر.",
     "questions": [
       {
         "type": "mc",
@@ -5054,8 +5053,8 @@
     "level": "B2",
     "titleDe": "Beispiel: Die Niederlage im Turnier",
     "titleAr": "مثال: الهزيمة في البطولة",
-    "de": "Das Turnier endete für den kleinen Verein aus dem Stadtteil im Halbfinale mit einem Elfmeter in der letzten Minute. Der Schiedsrichter hatte ein Foul gesehen, das die Hälfte der Zuschauer nicht gesehen hatte. Die andere Hälfte jubelte. So ist das bei einem Wettkampf: Dieselbe Szene, zwei Wahrheiten.\n\nInteressanter als die Niederlage war, was danach geschah. Auf der Mitgliederversammlung zwei Wochen später sprach niemand über den Schiedsrichter. Man sprach über Training. Die Trainerin legte Zahlen vor: drei Zerrungen und zwei Prellungen in einer Saison, fast alle in der zweiten Halbzeit. Diese Zahlen gehören zur Trainingsgeschichte; sie sind keine belegte Statistik. Ihre Erklärung war unbequem. Das Ausdauertraining sei gut, das Krafttraining schwach, und vor den Spielen dehne sich kaum jemand länger als zwei Minuten.\n\nDer Verein beschloss, disziplinierter zu werden, ohne strenger zu sein: zwei feste Einheiten pro Woche, ein Aufwärmplan, den jeder kennt, und ein Notizbuch, in dem jede Spielerin ihre Bestleistung selbst einträgt. Seit dem Beschluss verzeichnete der Verein sieben Beitritte. Die meisten neuen Mitglieder waren Eltern, die vorher nur vom Rand aus angefeuert hatten. Ob die Mannschaft nächstes Jahr eine Runde weiterkommt, ist offen. Sicher ist, dass die Mannschaft besser vorbereitet sein wird – ob sie gewinnt oder verliert.",
-    "ar": "انتهى مشوار النادي الصغير من الحي في البطولة عند الدور نصف النهائي، بعد احتساب ركلة جزاء في الدقيقة الأخيرة. كان الحكم قد احتسب مخالفةً لم يرها نصف المتفرجين، فيما هتف النصف الآخر فرحاً. هكذا تكون المنافسة: المشهد نفسه، وحقيقتان مختلفتان.\n\nوكان ما جرى بعد ذلك أكثر إثارة للاهتمام من الهزيمة. فبعد أسبوعين، في اجتماع الأعضاء، لم يتحدث أحد عن الحكم؛ بل تحدثوا عن التدريب. عرضت المدربة أرقاماً: ثلاث حالات شدّ عضلي ورضّتان في موسم واحد، وقعت معظمها في الشوط الثاني. وهذه الأرقام جزء من القصة التدريبية، وليست إحصاءً موثّقاً. ولم يكن تفسيرها مريحاً: قالت إن تدريب التحمل جيد، لكن تدريب القوة ضعيف، وإنه لا يكاد أحد يمارس تمارين الإطالة لأكثر من دقيقتين قبل المباريات.\n\nقرر النادي أن يصبح أكثر التزاماً من دون أن يكون أكثر تشدداً: حصتان ثابتتان أسبوعياً، وخطة إحماء يعرفها الجميع، ودفتر تسجل فيه كل لاعبة أفضل نتيجة حققتها بنفسها. ومنذ اتخاذ القرار، سجّل النادي سبع حالات انتساب. وكان معظم الأعضاء الجدد من أولياء الأمور الذين كانوا يكتفون بالتشجيع من على جانب الملعب. ولا يزال من غير المعروف ما إذا كان الفريق سيتأهل إلى مرحلة أبعد في العام المقبل. والأكيد أن الفريق سيكون أفضل استعداداً، سواء فاز أم خسر.",
+    "de": "Das Turnier endete für den kleinen Verein aus dem Stadtteil im Halbfinale mit einem Elfmeter in der letzten Minute. Der Schiedsrichter hatte ein Foul gesehen, das die Hälfte der Zuschauer nicht gesehen hatte. Die andere Hälfte jubelte. So ist das bei einem Wettkampf: Dieselbe Szene, zwei Wahrheiten.\n\nInteressanter als die Niederlage war, was danach geschah. Auf der Mitgliederversammlung zwei Wochen später sprach niemand über den Schiedsrichter. Man sprach über Training. Die Trainerin legte Zahlen vor: drei Zerrungen und zwei Prellungen in einer Saison, fast alle in der zweiten Halbzeit. Diese Zahlen gehören zur Trainingsgeschichte; sie sind keine belegte Statistik. Die Trainerin vermutete einen Zusammenhang mit dem Training. Das Ausdauertraining sei gut, das Krafttraining schwach, und vor den Spielen dehne sich kaum jemand länger als zwei Minuten. Das war eine Arbeitshypothese, kein Beleg für die Ursache der Verletzungen.\n\nDer Verein beschloss, disziplinierter zu werden, ohne strenger zu sein: zwei feste Einheiten pro Woche, ein Aufwärmplan, den jeder kennt, und ein Notizbuch, in dem jede Spielerin ihre Bestleistung selbst einträgt. Seit dem Beschluss verzeichnete der Verein sieben Beitritte. Die meisten neuen Mitglieder waren Eltern, die vorher nur vom Rand aus angefeuert hatten. Ob die Mannschaft nächstes Jahr eine Runde weiterkommt, ist offen. Sicher ist, dass die Mannschaft besser vorbereitet sein wird – ob sie gewinnt oder verliert.",
+    "ar": "انتهى مشوار النادي الصغير من الحي في البطولة عند الدور نصف النهائي، بعد احتساب ركلة جزاء في الدقيقة الأخيرة. كان الحكم قد احتسب مخالفةً لم يرها نصف المتفرجين، فيما هتف النصف الآخر فرحاً. هكذا تكون المنافسة: المشهد نفسه، وحقيقتان مختلفتان.\n\nوكان ما جرى بعد ذلك أكثر إثارة للاهتمام من الهزيمة. فبعد أسبوعين، في اجتماع الأعضاء، لم يتحدث أحد عن الحكم؛ بل تحدثوا عن التدريب. عرضت المدربة أرقاماً: ثلاث حالات شدّ عضلي ورضّتان في موسم واحد، وقعت معظمها في الشوط الثاني. وهذه الأرقام جزء من القصة التدريبية، وليست إحصاءً موثّقاً. وافترضت المدربة وجود صلة بطريقة التدريب؛ فقالت إن تدريب التحمل جيد، لكن تدريب القوة ضعيف، وإنه لا يكاد أحد يمارس تمارين الإطالة لأكثر من دقيقتين قبل المباريات. وكان ذلك افتراضاً للعمل، لا دليلاً على سبب الإصابات.\n\nقرر النادي أن يصبح أكثر التزاماً من دون أن يكون أكثر تشدداً: حصتان ثابتتان أسبوعياً، وخطة إحماء يعرفها الجميع، ودفتر تسجل فيه كل لاعبة أفضل نتيجة حققتها بنفسها. ومنذ اتخاذ القرار، سجّل النادي سبع حالات انتساب. وكان معظم الأعضاء الجدد من أولياء الأمور الذين كانوا يكتفون بالتشجيع من على جانب الملعب. ولا يزال من غير المعروف ما إذا كان الفريق سيتأهل إلى مرحلة أبعد في العام المقبل. والأكيد أن الفريق سيكون أفضل استعداداً، سواء فاز أم خسر.",
     "questions": [
       {
         "type": "mc",
@@ -5682,7 +5681,7 @@
         "answer": "Man wird nicht gekündigt, sondern kann sich das Wohnen dort kaum noch leisten.",
         "explanationAr": "الدليل حرفياً: «Man wird nicht gekündigt, sondern kann sich das Wohnen dort kaum noch leisten». الفخّ 1: الإخلاء المباشر منفيّ. الفخّ 2: النص لا يصف انتقالاً طوعياً، بل عجزاً عن تحمّل الكلفة.",
         "id": "t-b2-28-q1",
-        "promptAr": "ماذا تعني المزاحمة حسب النص؟"
+        "promptAr": "ماذا تعني إزاحة السكان حسب النص؟"
       },
       {
         "type": "mc",

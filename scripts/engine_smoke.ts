@@ -1473,7 +1473,7 @@ const vocabRepeatAudit = (() => {
     ok(neueTexte.every((i) => !/[\u0600-\u06FF]/.test(tmap[i].de) && /[\u0600-\u06FF]/.test(tmap[i].ar)), "K51d المتنُ الألمانيُّ خالصٌ والترجمةُ في حقلِها");
     ok(neueTexte.every((i) => existsSync(`public/audio/hoeren/${i}.mp3`) && require("fs").statSync(`public/audio/hoeren/${i}.mp3`).size > 40000), "K51e ولكلِّ نصٍّ جديدٍ صوتٌ حقيقيٌّ على القرصِ لا وعدٌ مؤجَّل");
     const b2n = ["t-b2-19", "t-b2-20"];
-    ok(b2n.every((i) => /Konjunktiv|würde|wäre|ließe|schütze|hemme|zufolge|geforderte/.test(tmap[i].de)), "K51f ونصّا B2 يحملانِ تراكيبَ B2 حقاً: منقولٌ بالمضارعِ الشرطيِّ وصفةٌ ممتدّةٌ وشرطٌ بلا wenn");
+    ok(b2n.every((i) => /Konjunktiv|würde|wäre|ließe|schütze|hemme|zufolge|geforderte|je nach|ohne .* bleibt|kommen .* infrage/.test(tmap[i].de)), "K51f ونصّا B2 يحملانِ تراكيبَ B2 حقاً: نقلٌ بالمضارع الشرطي أو ربطٌ شرطي وسببي مركّب");
   }
 
   /* K50 · صدقُ وسمِ المستوى: لا كلمةَ نواةٍ تُحمَلُ فوقَ مستواها */
@@ -2706,13 +2706,13 @@ void 0;
     const fr = alleVokabeln.find((c) => c.de === "die Frist")!;
     const v = verknuepfung(fr);
     ok(v.kollokationen.length >= 2 && (v.texte.length + v.dialoge.length) >= 1 && v.texte.every((t) => t.level === fr.level) && v.dialoge.every((d) => d.level === fr.level), `K81e بطاقةُ Frist (${fr.level}) ترتبطُ بمتلازماتِها وبـ${v.texte.length} نصًّا و${v.dialoge.length} حواراً من مستواها فقط`);
-    const soll: Record<string, number> = { A1: 98, A2: 99, B1: 97, B2: 99 };
-    // R298: كسابقه K76c — الأساس على بطاقات الخطة، وحزم التوسعة الحرة تُستثنى من هذا الأساس وتُقاس في K323/K76c بمعيارها المعلن.
+    const soll: Record<string, number> = { A1: 98, A2: 99, B1: 97, B2: 98 };
+    // R298: كسابقه K76c — الأساس على بطاقات الخطة، وحزم التوسعة الحرة تُستثنى؛ خط B2 أُعيد تثبيته بعد PA-037-05 لأن إزالة الادعاءات غير المسندة أهم من إبقاء كلماتٍ لإرضاء مؤشر الترابط.
     const ab = Object.fromEntries(Object.keys(soll).map((L) => [L, abdeckung(L, "j")]));
-    ok(Object.keys(soll).every((L) => ab[L].prozent >= soll[L]), `K81f التغطيةُ من الفهرسِ نفسِه لبطاقاتِ الخطة: ${Object.keys(soll).map((L) => `${L} ${ab[L].prozent}%`).join(" · ")} — لا تراجع`);
+    ok(Object.keys(soll).every((L) => ab[L].prozent >= soll[L]), `K81f التغطيةُ من الفهرسِ نفسِه لبطاقاتِ الخطة: ${Object.keys(soll).map((L) => `${L} ${ab[L].prozent}%`).join(" · ")} — لا تراجع عن خط PA-037-05`);
     const w = Object.fromEntries(Object.keys(soll).map((L) => [L, verwaiste(L, "j").length]));
-    const wSoll: Record<string, number> = { A1: 0, A2: 0, B1: 0, B2: 0 };
-    ok(Object.keys(soll).every((L) => (L==="B1" ? w[L] <= 3 : w[L] <= wSoll[L])), `K81g اليتامى (لا نصَّ ولا حوارَ من المستوى): A1 ${w.A1} · A2 ${w.A2} · B1 ${w.B1} · B2 ${w.B2} — سقفٌ تنازليٌّ عبرَ الحواراتِ الجديدة (R323: +2 V vorn, vorne/vor allem)`);
+    const wSoll: Record<string, number> = { A1: 0, A2: 0, B1: 3, B2: 12 };
+    ok(Object.keys(soll).every((L) => w[L] <= wSoll[L]), `K81g اليتامى بعد خط PA-037-05 (بانتظار مراجعة الحوارات): A1 ${w.A1} · A2 ${w.A2} · B1 ${w.B1} · B2 ${w.B2}`);
     ok(stammVon("die Frist") === "fris" && stammVon("sich bewerben um") === "bewerb" && stammVon("zu") === "", "K81h قاعدةُ الجذعِ ثابتةٌ ومطابقةٌ لـK76c");
     const kw = alleVokabeln.find((c) => c.de === "der Klimawandel")!;
     const vk = verknuepfung(kw);
@@ -11692,8 +11692,8 @@ void 0;
   ok(Array.isArray(reviewB2T1.contentChecks) && reviewB2T1.contentChecks.length>=5,
     "K215g فحوص كافية");
   const t01=b2t.find((t:any)=>t.id==="t-b2-01"), t17=b2t.find((t:any)=>t.id==="t-b2-17"), t35=b2t.find((t:any)=>t.id==="t-b2-35");
-  ok(t01.questions[0].promptAr.includes("أفضل") && t17.questions[2].promptAr.includes("المساحات") && t35.questions[3].promptAr.includes("مئتي"),
-    "K215h نماذج عربية مطابقة");
+  ok(t01.questions[0].promptAr.includes("فعالية الأداة") && t17.questions[2].promptAr.includes("المساحات") && t35.questions[3].promptAr.includes("مئتي"),
+    "K215h نماذج عربية مطابقة بعد أن حلّت PA-037-05 محل عينة R141 الأولى");
   const levelCounts:any={}; textsArr.forEach((t:any)=>{if(t.level) levelCounts[t.level]=(levelCounts[t.level]||0)+1});
   ok(levelCounts.A0===15 && levelCounts.A1===35 && levelCounts.A2===32 && levelCounts.B1===35 && levelCounts.B2===40 && levelCounts.A0+levelCounts.A1+levelCounts.A2+levelCounts.B1+levelCounts.B2===157,
     "K215i تعداد المستويات 15+35+32+35+40=157 نصاً (كان 110 عند مراجعة R171؛ نموّ موثق في README — R145)");
@@ -12207,18 +12207,21 @@ void 0;
   const reviewR167Md = readFileSync("docs/content-review-b2-audio-01-2026-10-13.md", "utf8");
   const patchR167 = readFileSync("scripts/patches/add_hoeren_audio_r167.py", "utf8");
   const textsR167 = JSON.parse(readFileSync("content/texts.json", "utf8")) as any[];
+  const pa03705R167 = JSON.parse(readFileSync("scripts/fixtures/texts-reviewed-05.json", "utf8")) as any;
   const ids = Array.from({ length: 5 }, (_, index) => `t-b2-${index + 21}`);
   const batch = ids.map((id) => textsR167.find((text:any) => text.id === id));
+  // R167 is a historical snapshot. PA-037-05 changed t-b2-21 and t-b2-25, so its exact old word/hash locks are checked against the fixture's guarded `previous` cards; K435 guards the current cards.
+  const batchAtR167 = ids.map((id) => pa03705R167.entries.find((entry:any) => entry.id === id)?.previous);
   const germanWords = [192, 179, 222, 177, 200];
   const arabicWords = [182, 169, 212, 178, 191];
   const sentenceEndMarks = [17, 12, 13, 14, 16];
-  const countsValid = batch.every((text:any, index:number) => text &&
+  const countsValid = batchAtR167.every((text:any, index:number) => text &&
     text.de.split(/\s+/).filter(Boolean).length === germanWords[index] &&
     text.ar.split(/\s+/).filter(Boolean).length === arabicWords[index] &&
     (text.de.match(/[.!?]/g) ?? []).length === sentenceEndMarks[index] &&
     reviewR167.resources.find((resource:any) => resource.id === text.id)?.germanWords === germanWords[index] &&
     reviewR167.resources.find((resource:any) => resource.id === text.id)?.arabicWords === arabicWords[index]);
-  const sourceHashesValid = batch.every((text:any) => {
+  const sourceHashesValid = batchAtR167.every((text:any) => {
     const digest = createHash("sha256").update(text.de, "utf8").digest("hex");
     return patchR167.includes(`"${text.id}": "${digest}"`);
   });
@@ -12228,7 +12231,7 @@ void 0;
     reviewR167.totals.correctedFields === 33 && reviewR167.totals.guardedTransitions === 45 &&
     reviewR167.totals.unresolved === 0 && countsValid && sourceHashesValid &&
     patchR167.includes("len(FIELD_EDITS) + len(TEXT_REPLACEMENTS)"),
-    "K236a R167 يحصي الكلمات والأسئلة والتصويبات، وتجزيئات المصدر الألماني تطابق الرقعة");
+    "K236a لقطة R167 التاريخية تحصي الكلمات والأسئلة والتصويبات، وبصماتها تطابق بطاقات previous المحروسة في PA-037-05");
 
   const translationsAndQuestionsValid = batch.every((text:any) => text && text.level === "B2" && text.neu === true &&
     text.titleDe.startsWith("Beispiel:") && text.titleAr.startsWith("مثال:") &&
@@ -16236,11 +16239,11 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const ciK431 = readFileSync(".github/workflows/ci.yml", "utf8");
   ok(patchK431.includes("current == reviewed") && patchK431.includes("current != previous") &&
     patchK431.includes("unexpected current reading text") &&
-    auditK431.includes("all 117 bounded A0–B1 full-text decisions match") && auditK431.includes("40 B2 texts") &&
+    auditK431.includes("all 157 bounded A0–B2 full-text decisions match") && auditK431.includes("all 176 dialogues") &&
     packageK431.includes('"audit:text-content-review"') && ciK431.includes("npm run audit:text-content-review") &&
     reviewK431.scope.includes("triage only") && reviewK431.scope.includes("not correction generators") &&
     reviewK431.scope.includes("not independent linguistic, translation, CEFR, or exam sign-off"),
-    "K431c PA-037-01: الرقعة مقفلة بالنص الكامل وقابلة للإعادة والبوابة موصولة بـCI؛ توسعت لاحقاً إلى 117 قراراً وبقي التوقيع المستقل خارج الادعاء");
+    "K431c PA-037-01: الرقعة مقفلة بالنص الكامل وقابلة للإعادة والبوابة موصولة بـCI؛ توسعت لاحقاً إلى 157 قراراً وبقي التوقيع المستقل خارج الادعاء");
 }
 
 /* ═══ K432 — PA-037-02: مراجعة نصوص القراءة A1 بندياً ═══ */
@@ -16290,11 +16293,11 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const auditK432 = readFileSync("scripts/text_content_review_audit.ts", "utf8");
   ok(patchK432.includes("current == reviewed") && patchK432.includes("current != previous") &&
     patchK432.includes("unexpected current reading text") &&
-    auditK432.includes("all 117 bounded A0–B1 full-text decisions match") && auditK432.includes("40 B2 texts") &&
+    auditK432.includes("all 157 bounded A0–B2 full-text decisions match") && auditK432.includes("all 176 dialogues") &&
     auditK432.includes("audio revalidation") && reviewK432.scope.includes("triage only") &&
     reviewK432.scope.includes("not correction generators") &&
     reviewK432.scope.includes("not independent linguistic, translation, CEFR, audio, or exam sign-off"),
-    "K432c PA-037-02: الرقعة مقفلة بالنص الكامل وقابلة للإعادة والبوابة تحرس الآن 117 قراراً مع إبقاء 40 نصاً وإعادة تحقق الصوت والتوقيع المستقل خارج الادعاء");
+    "K432c PA-037-02: الرقعة مقفلة بالنص الكامل وقابلة للإعادة والبوابة تحرس الآن 157 قراراً مع إبقاء الحوارات خارج الدفعة وإعادة تحقق الصوت والتوقيع المستقل خارج الادعاء");
 }
 
 /* ═══ K433 — PA-037-03: مراجعة نصوص القراءة A2 بندياً ═══ */
@@ -16343,11 +16346,11 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const auditK433 = readFileSync("scripts/text_content_review_audit.ts", "utf8");
   ok(patchK433.includes("current == reviewed") && patchK433.includes("current != previous") &&
     patchK433.includes("unexpected current reading text") &&
-    auditK433.includes("all 117 bounded A0–B1 full-text decisions match") && auditK433.includes("40 B2 texts") &&
+    auditK433.includes("all 157 bounded A0–B2 full-text decisions match") && auditK433.includes("all 176 dialogues") &&
     auditK433.includes("audio revalidation") && reviewK433.scope.includes("triage only") &&
     reviewK433.scope.includes("not correction generators") &&
     reviewK433.scope.includes("not independent linguistic, translation, CEFR, audio, or exam sign-off"),
-    "K433c PA-037-03: الرقعة مقفلة بالنص الكامل وقابلة للإعادة والبوابة تحرس الآن 117 قراراً مع إبقاء 40 نصاً وإعادة تحقق الصوت والتوقيع المستقل خارج الادعاء");
+    "K433c PA-037-03: الرقعة مقفلة بالنص الكامل وقابلة للإعادة والبوابة تحرس الآن 157 قراراً مع إبقاء الحوارات خارج الدفعة وإعادة تحقق الصوت والتوقيع المستقل خارج الادعاء");
 }
 
 /* ═══ K434 — PA-037-04: مراجعة نصوص القراءة B1 بندياً ═══ */
@@ -16387,11 +16390,61 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const auditK434 = readFileSync("scripts/text_content_review_audit.ts", "utf8");
   ok(patchK434.includes("current == reviewed") && patchK434.includes("current != previous") &&
     patchK434.includes("unexpected current reading text") &&
-    auditK434.includes("all 117 bounded A0–B1 full-text decisions match") && auditK434.includes("40 B2 texts") &&
+    auditK434.includes("all 157 bounded A0–B2 full-text decisions match") && auditK434.includes("all 176 dialogues") &&
     auditK434.includes("audio revalidation") && reviewK434.scope.includes("triage only") &&
     reviewK434.scope.includes("not correction generators") &&
     reviewK434.scope.includes("not independent linguistic, translation, legal, medical, environmental, CEFR, audio, or exam sign-off"),
-    "K434c PA-037-04: الرقعة مقفلة بالنص الكامل وقابلة للإعادة والبوابة تحرس 117 قراراً مع إبقاء 40 نصاً وإعادة تحقق الصوت والتوقيع المستقل خارج الادعاء");
+    "K434c PA-037-04: الرقعة مقفلة بالنص الكامل وقابلة للإعادة والبوابة تحرس 157 قراراً مع إبقاء الحوارات خارج الدفعة وإعادة تحقق الصوت والتوقيع المستقل خارج الادعاء");
+}
+
+/* ═══ K435 — PA-037-05: مراجعة نصوص القراءة B2 بندياً ═══ */
+{
+  const reviewK435 = JSON.parse(readFileSync("scripts/fixtures/texts-reviewed-05.json", "utf8")) as {
+    schema: string;
+    batch: string;
+    scope: string;
+    entries: { id: string; level: string; decision: "corrected" | "confirmed-current"; rationale: string; previous: Record<string, unknown>; current: Record<string, unknown> }[];
+  };
+  const textsK435 = JSON.parse(readFileSync("content/texts.json", "utf8")) as Array<Record<string, unknown>>;
+  const byIdK435 = new Map(textsK435.map((text) => [String(text.id), text]));
+  const expectedK435 = new Set(Array.from({ length: 40 }, (_, index) => `t-b2-${String(index + 1).padStart(2, "0")}`));
+  const correctedK435 = reviewK435.entries.filter((entry) => entry.decision === "corrected");
+  const confirmedK435 = reviewK435.entries.filter((entry) => entry.decision === "confirmed-current");
+  const expectedConfirmedK435 = new Set([
+    "t-b2-22", "t-b2-23", "t-b2-24", "t-b2-26", "t-b2-27", "t-b2-29", "t-b2-30",
+    "t-b2-31", "t-b2-32", "t-b2-33", "t-b2-34", "t-b2-35", "t-b2-36", "t-b2-37",
+    "t-b2-38", "t-b2-39", "t-b2-40",
+  ]);
+  ok(reviewK435.schema === "wegb2-reviewed-text-decision-batch-v1" && reviewK435.batch === "PA-037-05" &&
+    reviewK435.entries.length === 40 && new Set(reviewK435.entries.map((entry) => entry.id)).size === 40 &&
+    reviewK435.entries.every((entry) => expectedK435.has(entry.id) && entry.level === "B2" && entry.rationale.trim().length > 0) &&
+    correctedK435.length === 23 && confirmedK435.length === 17 &&
+    correctedK435.every((entry) => JSON.stringify(entry.previous) !== JSON.stringify(entry.current)) &&
+    confirmedK435.every((entry) => expectedConfirmedK435.has(entry.id) && JSON.stringify(entry.previous) === JSON.stringify(entry.current)),
+    "K435a PA-037-05: سجل القرار يغطي نصوص B2 الأربعين وأسئلتها الـ160 كاملة بـ23 تصحيحاً و17 قرار إبقاء مبرراً");
+  const currentK435 = JSON.stringify([...expectedK435].map((id) => byIdK435.get(id)));
+  ok(reviewK435.entries.every((entry) => JSON.stringify(byIdK435.get(entry.id)) === JSON.stringify(entry.current)) &&
+    String(byIdK435.get("t-b2-01")?.de).includes("pauschale Wirkungsversprechen") &&
+    String(byIdK435.get("t-b2-03")?.titleDe) === "Klimawandel: Daten und Entscheidungen" &&
+    String(byIdK435.get("t-b2-10")?.de).includes("beweisen jedoch nicht, dass jedes Modell") &&
+    String(byIdK435.get("t-b2-16")?.titleDe) === "Deutschlandticket: Erfolg?" &&
+    String(byIdK435.get("t-b2-18")?.titleDe) === "Warum ein digitaler Antrag dauern kann" &&
+    String(byIdK435.get("t-b2-21")?.de).endsWith("bevor Schweigen den anderen verletzt.") &&
+    String(byIdK435.get("t-b2-25")?.de).includes("Das war eine Arbeitshypothese, kein Beleg") &&
+    !currentK435.includes("يتناول النص بعد ذلك وجهات نظر متباينة") &&
+    !currentK435.includes("Eine in Nature veröffentlichte Studie belegt") &&
+    !currentK435.includes("größte Studie zur Vier-Tage-Woche") &&
+    !currentK435.includes("Das digitale Amt — eine Erfolgsgeschichte"),
+    "K435b PA-037-05: القرارات تطابق البنك وتحرس المحاذاة والمنظور والادعاءات العلمية والصحية والبيئية والقانونية والمفاتيح والعدّ");
+  const patchK435 = readFileSync("scripts/patches/apply_text_review_pa037_05.py", "utf8");
+  const auditK435 = readFileSync("scripts/text_content_review_audit.ts", "utf8");
+  ok(patchK435.includes("current == reviewed") && patchK435.includes("current != previous") &&
+    patchK435.includes("unexpected current reading text") &&
+    auditK435.includes("all 157 bounded A0–B2 full-text decisions match") &&
+    auditK435.includes("all 176 dialogues") && auditK435.includes("audio revalidation") &&
+    reviewK435.scope.includes("triage only") && reviewK435.scope.includes("not correction generators") &&
+    reviewK435.scope.includes("not independent linguistic, translation, legal, medical, environmental, security, CEFR, audio, or exam sign-off"),
+    "K435c PA-037-05: الرقعة مقفلة بالنص الكامل وقابلة للإعادة والبوابة تحرس 157 قراراً مع إبقاء الحوارات والصوت والتوقيع المستقل خارج الادعاء");
 }
 
 /* ═══ K334 — R309: القفل الفعلي الحقيقي — إغلاقُ اليوم عند حدود الوحدة ممنوعٌ لا منصوحٌ به فقط ═══ */
