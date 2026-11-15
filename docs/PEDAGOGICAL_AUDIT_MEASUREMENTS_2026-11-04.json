@@ -5,7 +5,7 @@
   "scopeNoteAr": "هذه قياسات قابلة لإعادة التشغيل وليست شهادة صحة لغوية أو بيداغوجية.",
   "baseline": {
     "smoke": {
-      "passed": 2519,
+      "passed": 2522,
       "failed": 0
     },
     "interactiveJsdom": {
@@ -671,11 +671,11 @@
     "claimBoundary": "87 bounded internal A0–B2 decisions; independent review, field validation, and external linguistic, phonetic, CEFR, or exam sign-off remain pending"
   },
   "inventorySnapshot": {
-    "indexedTrackedFilesAndAuditArtifacts": 3616,
+    "indexedTrackedFilesAndAuditArtifacts": 3618,
     "manual_complete": 59,
     "manual_targeted": 67,
     "not_started": 3441,
-    "audit_artifact": 49
+    "audit_artifact": 51
   },
   "learningStateCorrections": {
     "findings": [
@@ -928,26 +928,47 @@
         "confirmedCurrentTexts": 3,
         "fixture": "scripts/fixtures/texts-reviewed-01.json",
         "patch": "scripts/patches/apply_text_review_pa037_01.py"
+      },
+      {
+        "batch": "PA-037-02",
+        "level": "A1",
+        "reviewedTexts": 35,
+        "correctedTexts": 25,
+        "confirmedCurrentTexts": 10,
+        "fixture": "scripts/fixtures/texts-reviewed-02.json",
+        "patch": "scripts/patches/apply_text_review_pa037_02.py"
       }
     ],
-    "reviewedTexts": 15,
+    "reviewedTexts": 50,
     "reviewedLevels": [
-      "A0"
+      "A0",
+      "A1"
     ],
-    "correctedTexts": 12,
-    "confirmedCurrentTexts": 3,
-    "remainingTexts": 142,
+    "correctedTexts": 37,
+    "confirmedCurrentTexts": 13,
+    "remainingTexts": 107,
     "remainingLevels": [
-      "A1",
       "A2",
       "B1",
       "B2"
     ],
-    "scope": "item-by-item internal full-text review of German and Arabic titles and passages, questions, options, answers, explanations, narrator perspective, duplication, and factual or register claim boundaries; heuristic scans used for triage only",
+    "scope": "item-by-item internal full-text review of German and Arabic titles and passages, metadata, questions, options, answers, explanations, narrator perspective, duplication, chronology, and factual or register claim boundaries; heuristic scans used for triage only",
     "regressionGate": "npm run audit:text-content-review",
     "independentLinguisticSignOff": false,
     "independentTranslationSignOff": false,
     "externalCefrOrExamValidation": false,
-    "claimBoundary": "15 bounded internal A0 decisions; 142 A1–B2 texts, all 176 dialogues, independent review, field validation, and external linguistic, translation, CEFR, or exam sign-off remain pending"
+    "claimBoundary": "50 bounded internal A0–A1 decisions; 107 A2–B2 texts, all 176 dialogues, re-synthesis/listening checks for 9 changed German audio-source passages, independent review, field validation, and external linguistic, translation, CEFR, or exam sign-off remain pending",
+    "audioSourcePassagesChanged": [
+      "t-a0-06",
+      "t-a1-09",
+      "t-a1-13",
+      "t-a1-14",
+      "t-a1-15",
+      "t-a1-20",
+      "t-a1-022",
+      "t-a1-030",
+      "t-a1-035"
+    ],
+    "audioRevalidationCompleted": false
   }
 }

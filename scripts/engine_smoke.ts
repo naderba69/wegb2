@@ -11187,11 +11187,12 @@ void 0;
     apartment.questions[1].answer === "600 Euro" && apartment.questions[1].explanationAr.includes("الإيجار الشامل"),
     "K227c مصطلح Warmmiete وسؤال 600 يورو موحّدان دون اختزال المصطلح إلى التدفئة");
   const clinic = batch[9];
-  ok(clinic.titleDe.includes("Ärztin") && clinic.de.includes("Heute bin ich bei der Ärztin.") &&
+  ok(clinic.titleDe.includes("Ärztin") && clinic.de.startsWith("Heute gehe ich zur Ärztin.") &&
     !clinic.de.includes("beim Arzt") && clinic.de.includes("Vielleicht ist es eine Erkältung.") &&
     !clinic.de.includes("Das ist eine Erkältung.") && clinic.ar.includes("ربما تكون نزلة برد") &&
+    clinic.de.indexOf("Im Wartezimmer") < clinic.de.indexOf("Sie untersucht mich") &&
     reviewA1Extras.limits.medical.includes("لا تشخيص"),
-    "K227d الطبيبة متسقة مع العنوان والتشخيص مصوغ كاحتمال لا كحقيقة طبية مؤكدة");
+    "K227d الطبيبة متسقة مع العنوان والتشخيص احتمالي وانتظار المريض يسبق الفحص بعد PA-037-02");
   const weekend = batch[11], clothes = batch[8], checkout = batch[4], route = batch[13], birthday = batch[14], weather = batch[5];
   const r162AudioTexts = batch.slice(0, 9);
   ok(weekend.questions[0].promptDe === "Was mache ich am Samstag?" &&
@@ -11533,8 +11534,8 @@ void 0;
   ok(reviewA1T1.corrections.length === 12 && reviewA1T1.judgement.corrected === 12 && reviewA1T1.judgement.unresolved === 0,
     "K210c اثنا عشر تصحيحاً مؤكَّداً بلا غير محسوم");
   const t01=a1t.find((t:any)=>t.id==="t-a1-01"), t02=a1t.find((t:any)=>t.id==="t-a1-02"), t03=a1t.find((t:any)=>t.id==="t-a1-03");
-  ok(t01.questions[0].promptAr==="من أين يوسف؟" && t02.questions[0].promptAr==="ماذا يعمل أبيه؟" && t03.questions[0].promptAr==="أين الحليب؟",
-    "K210d نماذج من الأسئلة العربية المستكملة مطابقة");
+  ok(t01.questions[0].promptAr==="من أين يأتي يوسف؟" && t02.questions[0].promptAr==="ما مهنة أبي؟" && t03.questions[0].promptAr==="أين الحليب؟",
+    "K210d نماذج من الأسئلة العربية المستكملة مطابقة بعد مراجعة PA-037-02");
   ok(reviewA1T1.contextNotes["t-a1-01"]?.length>=3 && reviewA1T1.contextNotes["t-a1-02"]?.length>=3 && reviewA1T1.contextNotes["t-a1-03"]?.length>=3,
     "K210e ملاحظات سياقية لكل نص");
   ok(patchA1T1Src.includes("<R136> patch complete") && patchA1T1Src.includes("locked titles:"),
@@ -11569,8 +11570,10 @@ void 0;
     "K211g الحدود معلَنة");
   ok(Array.isArray(reviewA1T2.contentChecks) && reviewA1T2.contentChecks.length>=4,
     "K211h فحوص محتوى كافية");
-  ok(t04.questions[3].promptAr.includes("مقابل") && t05.questions[1].promptAr.includes("المعلّم") && t06.questions[3].promptAr.includes("صورة"),
-    "K211i محتوى الأسئلة العربية مطابق للمفاتيح");
+  ok(t04.questions[3].promptAr.includes("أولاً") && t04.questions[3].answer[0] === "geradeaus" &&
+    t05.questions[3].promptAr.includes("مساءً") && t05.questions[3].answer[0] === "Freunden" &&
+    t06.questions[3].promptAr.includes("صورة") && t06.questions[3].answer[0] === "hängt",
+    "K211i محتوى الأسئلة العربية ومفاتيحها مطابق بعد إزالة التكرار في PA-037-02");
   ok(patchA1T2Src.includes("<R137> patch complete") && patchA1T2Src.includes("changes applied:") && patchA1T2Src.includes("locked titles:"),
     "K211e الرقعة تطبّق الاثني عشر تصحيحاً");
   ok(a1t.every((t:any)=>t.de && t.ar && Array.isArray(t.questions) && t.questions.length>=4),
@@ -11590,8 +11593,8 @@ void 0;
   ok(reviewA1T3.corrections.length === 56 && reviewA1T3.judgement.corrected === 56,
     "K212c 56 تصحيحاً مؤكَّداً");
   const t07=a1t.find((t:any)=>t.id==="t-a1-07"), t15=a1t.find((t:any)=>t.id==="t-a1-15"), t20=a1t.find((t:any)=>t.id==="t-a1-20");
-  ok(t07.questions[0].promptAr==="ماذا يعمل أمير؟" && t15.questions[0].promptAr==="متى يتدرّب الفريق؟" && t20.questions[0].promptAr==="بماذا يشكو؟",
-    "K212d نماذج من الأسئلة العربية المستكملة");
+  ok(t07.questions[0].promptAr==="ماذا يعمل أمير؟" && t15.questions[0].promptAr==="متى يتدرّب الفريق؟" && t20.questions[0].promptAr==="ما مرضي؟",
+    "K212d نماذج من الأسئلة العربية المستكملة بعد ضبط منظور الراوي في PA-037-02");
   ok(patchA1T3Src.includes("<R138> patch complete") && patchA1T3Src.includes("changes applied:"),
     "K212e الرقعة تطبّق 56 تصحيحاً");
   ok(reviewA1T3Md.includes("الحكم") && reviewA1T3Md.includes("K212") && reviewA1T3Md.includes("A1 كاملة"),
@@ -11770,12 +11773,12 @@ void 0;
   const germanWords = batch.reduce((sum:number, text:any) => sum + text.de.split(/\s+/).filter(Boolean).length, 0);
   const sentenceEndMarks = batch.reduce((sum:number, text:any) => sum + (text.de.match(/[.!?]/g) ?? []).length, 0);
   ok(reviewR163.reviewRule === "R163" && JSON.stringify(reviewR163.targetIds) === JSON.stringify(ids) &&
-    reviewR163.totals.texts === 6 && reviewR163.totals.germanWords === 632 && germanWords === 632 &&
-    reviewR163.totals.sentenceEndMarks === 85 && sentenceEndMarks === 85 && reviewR163.totals.questions === 12 &&
+    reviewR163.totals.texts === 6 && reviewR163.totals.germanWords === 632 && germanWords === 629 &&
+    reviewR163.totals.sentenceEndMarks === 85 && sentenceEndMarks === 84 && reviewR163.totals.questions === 12 &&
     reviewR163.totals.correctedFields === 3 && reviewR163.totals.guardedTransitions === 3 &&
     reviewR163.totals.unresolved === 0 && correctionUnits.length === 3 && new Set(correctionUnits).size === 2 &&
     reviewR163Md.includes("K231a–f") && patchR163.includes("if current == before") && patchR163.includes("mp3_frame_count"),
-    "K231a تقرير R163 يحصي النصوص والكلمات والأسئلة والتصحيحات والرقعة المحروسة وبوابات المتابعة");
+    "K231a لقطة R163 التاريخية 632 كلمة/85 نهاية محفوظة؛ والمحتوى الحالي بعد PA-037-02 هو 629/84");
   const tasksValid = batch.every((text:any) => text && text.level === "A1" && !text.neu && !!text.titleDe?.trim() &&
     !!text.titleAr?.trim() && !!text.de?.trim() && !!text.ar?.trim() && text.wordCountDe === text.de.split(/\s+/).filter(Boolean).length &&
     Array.isArray(text.questions) && text.questions.length === 2 && text.questions.every((question:any) =>
@@ -11784,11 +11787,13 @@ void 0;
       new Set(question.options).size === question.options.length && question.options.includes(question.answer)));
   ok(tasksValid, "K231b النصوص الستة A1 وأسئلتها الاثنا عشر مكتملة؛ عدّ الكلمات والخيارات والمفاتيح صالحة");
   const clinic = batch[0], birthday = batch[5];
-  ok(clinic.wordCountDe === 119 && reviewR163.corrections.find((correction:any) => correction.unit === "t-a1-030")?.before.wordCountDe === 117 &&
+  ok(clinic.wordCountDe === 116 && clinic.wordCountDe === clinic.de.split(/\s+/).filter(Boolean).length &&
+    reviewR163.corrections.find((correction:any) => correction.unit === "t-a1-030")?.before.wordCountDe === 117 &&
+    reviewR163.corrections.find((correction:any) => correction.unit === "t-a1-030")?.after.wordCountDe === 119 &&
     birthday.wordCountDe === 112 && birthday.ar.includes("أجمع الفناجين وأضعها في مكانها") && !birthday.ar.includes("أرتب الفناجين") &&
     reviewR163.corrections.find((correction:any) => correction.unit === "t-a1-035" && correction.fields.includes("ar"))?.reason.includes("weg") &&
     reviewR163.corrections.find((correction:any) => correction.unit === "t-a1-035" && correction.fields.includes("wordCountDe"))?.before.wordCountDe === 109,
-    "K231c عدّا t-a1-030/t-a1-035 صُحّحا؛ وتُرجمت دلالة weg في جمع الفناجين وإبعادها");
+    "K231c عدّ العيادة الحالي 116 مطابق بعد إعادة الترتيب ولقطة 117→119 محفوظة؛ وترجمة weg وعدّ الميلاد ثابتان");
   ok(clinic.de.includes("Vielleicht ist es eine Erkältung.") && clinic.questions.every((question:any) => clinic.de.includes(question.answer === "Der Kopf" ? "Kopfschmerzen" : "Trinken Sie viel Wasser")) &&
     batch[1].de.includes("mit einem roten Ball") && batch[1].questions[0].answer === "Mimi" &&
     batch[2].questions[0].promptDe === "Was mache ich am Samstag?" && batch[2].questions[1].explanationAr.includes("Am Sonntagabend koche ich") &&
@@ -16218,11 +16223,65 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const ciK431 = readFileSync(".github/workflows/ci.yml", "utf8");
   ok(patchK431.includes("current == reviewed") && patchK431.includes("current != previous") &&
     patchK431.includes("unexpected current reading text") &&
-    auditK431.includes("all 15 bounded A0 full-text decisions match") && auditK431.includes("142 A1–B2 texts") &&
+    auditK431.includes("all 50 bounded A0–A1 full-text decisions match") && auditK431.includes("107 A2–B2 texts") &&
     packageK431.includes('"audit:text-content-review"') && ciK431.includes("npm run audit:text-content-review") &&
     reviewK431.scope.includes("triage only") && reviewK431.scope.includes("not correction generators") &&
     reviewK431.scope.includes("not independent linguistic, translation, CEFR, or exam sign-off"),
-    "K431c PA-037-01: الرقعة مقفلة بالنص الكامل وقابلة للإعادة والبوابة موصولة بـCI مع إبقاء 142 نصاً والتوقيع المستقل خارج الادعاء");
+    "K431c PA-037-01: الرقعة مقفلة بالنص الكامل وقابلة للإعادة والبوابة موصولة بـCI؛ توسعت لاحقاً إلى 50 قراراً وبقي التوقيع المستقل خارج الادعاء");
+}
+
+/* ═══ K432 — PA-037-02: مراجعة نصوص القراءة A1 بندياً ═══ */
+{
+  const reviewK432 = JSON.parse(readFileSync("scripts/fixtures/texts-reviewed-02.json", "utf8")) as {
+    schema: string;
+    batch: string;
+    scope: string;
+    entries: { id: string; level: string; decision: "corrected" | "confirmed-current"; rationale: string; previous: Record<string, unknown>; current: Record<string, unknown> }[];
+  };
+  const textsK432 = JSON.parse(readFileSync("content/texts.json", "utf8")) as Array<Record<string, unknown>>;
+  const byIdK432 = new Map(textsK432.map((text) => [String(text.id), text]));
+  const expectedK432 = new Set([
+    "t-a1-01", "t-a1-02", "t-a1-03", "t-a1-04", "t-a1-05",
+    "t-a1-06", "t-a1-07", "t-a1-08", "t-a1-09", "t-a1-10",
+    "t-a1-11", "t-a1-12", "t-a1-13", "t-a1-14", "t-a1-15",
+    "t-a1-16", "t-a1-17", "t-a1-18", "t-a1-19", "t-a1-20",
+    "t-a1-021", "t-a1-022", "t-a1-023", "t-a1-024", "t-a1-025",
+    "t-a1-026", "t-a1-027", "t-a1-028", "t-a1-029", "t-a1-030",
+    "t-a1-031", "t-a1-032", "t-a1-033", "t-a1-034", "t-a1-035",
+  ]);
+  const correctedK432 = reviewK432.entries.filter((entry) => entry.decision === "corrected");
+  const confirmedK432 = reviewK432.entries.filter((entry) => entry.decision === "confirmed-current");
+  const expectedConfirmedK432 = new Set([
+    "t-a1-021", "t-a1-023", "t-a1-024", "t-a1-025", "t-a1-026",
+    "t-a1-027", "t-a1-029", "t-a1-032", "t-a1-033", "t-a1-034",
+  ]);
+  ok(reviewK432.schema === "wegb2-reviewed-text-decision-batch-v1" && reviewK432.batch === "PA-037-02" &&
+    reviewK432.entries.length === 35 && new Set(reviewK432.entries.map((entry) => entry.id)).size === 35 &&
+    reviewK432.entries.every((entry) => expectedK432.has(entry.id) && entry.level === "A1" && entry.rationale.trim().length > 0) &&
+    correctedK432.length === 25 && confirmedK432.length === 10 &&
+    correctedK432.every((entry) => JSON.stringify(entry.previous) !== JSON.stringify(entry.current)) &&
+    confirmedK432.every((entry) => expectedConfirmedK432.has(entry.id) && JSON.stringify(entry.previous) === JSON.stringify(entry.current)),
+    "K432a PA-037-02: سجل القرار يغطي نصوص A1 الخمسة والثلاثين كاملة بـ25 تصحيحاً و10 قرارات إبقاء مبررة");
+  const currentK432 = JSON.stringify([...expectedK432].map((id) => byIdK432.get(id)));
+  const clinicK432 = String(byIdK432.get("t-a1-030")?.de);
+  ok(reviewK432.entries.every((entry) => JSON.stringify(byIdK432.get(entry.id)) === JSON.stringify(entry.current)) &&
+    String(byIdK432.get("t-a1-11")?.titleAr).startsWith("عطلة نهاية الأسبوع") &&
+    String(byIdK432.get("t-a1-19")?.titleAr).startsWith("عطلة نهاية الأسبوع") &&
+    Number(byIdK432.get("t-a1-022")?.wordCountDe) === 112 && Number(byIdK432.get("t-a1-030")?.wordCountDe) === 116 &&
+    clinicK432.indexOf("Im Wartezimmer") < clinicK432.indexOf("Sie untersucht mich") &&
+    String(byIdK432.get("t-a1-035")?.de).startsWith("Heute habe ich Geburtstag und werde dreißig") &&
+    !currentK432.includes("Was ist der Vater von ihm?") && !currentK432.includes("Youssef steht um ___ sieben auf.") &&
+    !currentK432.includes("الماء العذب كل صباح") && !currentK432.includes("Heute habe ich Geburtstag und bin dreißig"),
+    "K432b PA-037-02: القرارات تطابق البنك وتحرس الترجمة والمنظور وإزالة التكرار وتسلسل العيادة والعدّ وصيغة بلوغ العمر");
+  const patchK432 = readFileSync("scripts/patches/apply_text_review_pa037_02.py", "utf8");
+  const auditK432 = readFileSync("scripts/text_content_review_audit.ts", "utf8");
+  ok(patchK432.includes("current == reviewed") && patchK432.includes("current != previous") &&
+    patchK432.includes("unexpected current reading text") &&
+    auditK432.includes("all 50 bounded A0–A1 full-text decisions match") && auditK432.includes("107 A2–B2 texts") &&
+    auditK432.includes("audio revalidation") && reviewK432.scope.includes("triage only") &&
+    reviewK432.scope.includes("not correction generators") &&
+    reviewK432.scope.includes("not independent linguistic, translation, CEFR, audio, or exam sign-off"),
+    "K432c PA-037-02: الرقعة مقفلة بالنص الكامل وقابلة للإعادة والبوابة تحرس 50 قراراً مع إبقاء 107 نصوص وإعادة تحقق الصوت والتوقيع المستقل خارج الادعاء");
 }
 
 /* ═══ K334 — R309: القفل الفعلي الحقيقي — إغلاقُ اليوم عند حدود الوحدة ممنوعٌ لا منصوحٌ به فقط ═══ */
