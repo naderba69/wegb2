@@ -868,7 +868,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
     mount(React.createElement(TaskView, { task: mk("b2-futur-ii"), ...props }));
     ok(txt().includes("gelernt haben") && txt().includes("unregelmäßig"), "XXX5 ودرسُ المستقبلِ التامِّ يُفتَحُ سليماً بجدولِه");
     mount(React.createElement(TaskView, { task: mk("b2-relativ-generalisierend"), ...props }));
-    ok(txt().includes("wer …, der …"), "XXX6 جدولُ wer/was التعميميةُ يعرضُ الصيغةَ الصحيحةَ بعلامات ترقيمها");
+    ok(txt().includes("Wer übt, (der) lernt."), "XXX6 جدولُ wer/was التعميميةُ يعرضُ صيغةَ الإحالة الاختيارية بعلامات ترقيمها");
   }
 
 
@@ -2919,7 +2919,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
     ok(txt().includes("التخيلي الماضي"), "LXXVII3 درس التخيلي الماضي يُعرض");
     ok(txt().includes("آلة الزمن"), "LXXVII4 تركته حاضرة");
     mount(React.createElement(TaskView, { task: mkN("b2-textkonnektoren"), ...propsN }));
-    ok(txt().includes("روابط النص الراقية") && txt().includes("البهلوان"), "LXXVII5 درس B2 وتركته يُعرضان");
+    ok(txt().includes("روابط نصية للتنازل والتضاد والنتيجة") && txt().includes("wenngleich/obgleich"), "LXXVII5 درس روابط B2 المصحح ومثاله يُعرضان");
   }
 
   /* ═══ LXXVIII — مهمةُ الاستقلال في المعالج + تحققٌ مؤجلٌ ثلاثةَ أيام ═══ */

@@ -41,6 +41,7 @@ const review01 = readJson<ReviewFixture>("scripts/fixtures/grammar-reviewed-01.j
 const review02 = readJson<ReviewFixture>("scripts/fixtures/grammar-reviewed-02.json");
 const review03 = readJson<ReviewFixture>("scripts/fixtures/grammar-reviewed-03.json");
 const review04 = readJson<ReviewFixture>("scripts/fixtures/grammar-reviewed-04.json");
+const review05 = readJson<ReviewFixture>("scripts/fixtures/grammar-reviewed-05.json");
 const errors: string[] = [];
 const expectedA0 = new Set([
   "a0-begrussung", "a0-buchstaben", "a0-zahlen", "a0-artikel",
@@ -66,6 +67,16 @@ const expectedB1 = new Set([
   "b1-verb-praeposition", "b1-passiv", "b1-indirekte-fragen",
   "b1-funktionsverben", "b1-absicht", "b1-konj2-vergangenheit",
   "b1-pruefungsstrategie",
+]);
+const expectedB2 = new Set([
+  "b2-indirekte-rede", "b2-partizip", "b2-bedingung", "b2-funktionsverben",
+  "b2-infinitiv", "b2-modalpartikel", "b2-futur-ii",
+  "b2-relativ-generalisierend", "b2-doppelkonnektoren", "b2-nominalstil",
+  "b1-partizip1", "b2-redew", "b2-adjektiv-partizip",
+  "b2-textkonnektoren", "b2-genitiv-praep", "b2-konzessiv",
+  "b2-relativ-genitiv", "b2-pruefungsstrategie", "b2-n-deklination",
+  "b2-passiv", "b2-konjunktiv2-vht", "b2-nominalisierung",
+  "b2-partizipial",
 ]);
 
 const validateBatch = (
@@ -127,10 +138,13 @@ validateBatch(review01, "PA-036-01", expectedA0, "A0", 8, 0);
 validateBatch(review02, "PA-036-02", expectedA1, "A1", 16, 3);
 validateBatch(review03, "PA-036-03", expectedA2, "A2", 18, 4);
 validateBatch(review04, "PA-036-04", expectedB1, "B1", 15, 0);
-const reviewedIds = [...review01.entries, ...review02.entries, ...review03.entries, ...review04.entries]
-  .map((entry) => entry.id);
-if (new Set(reviewedIds).size !== 64) {
-  errors.push("PA-036 decision batches overlap or do not contain 64 unique topics");
+validateBatch(review05, "PA-036-05", expectedB2, "B2", 23, 0);
+const reviewedIds = [
+  ...review01.entries, ...review02.entries, ...review03.entries,
+  ...review04.entries, ...review05.entries,
+].map((entry) => entry.id);
+if (new Set(reviewedIds).size !== 87) {
+  errors.push("PA-036 decision batches overlap or do not contain all 87 unique topics");
 }
 
 const topic = (id: string): GrammarTopic => {
@@ -350,6 +364,75 @@ if (!topic("b1-konj2-vergangenheit").summaryAr.includes("وفق الفعل ال�
   errors.push("B1 past counterfactual/exam strategy: auxiliary, temporal examples, or provider-neutral boundary regressed");
 }
 
+// PA-036-05: bounded B2 regression anchors.
+if (!topic("b2-indirekte-rede").summaryAr.includes("لا يثبت صدق القول أو كذبه")
+  || String(exercise("b2-indirekte-rede", "g15e2")?.answer) !== "habe"
+  || !topic("b2-partizip").summaryAr.includes("der angekommene Zug")
+  || String(exercise("b2-partizip", "g16e3")?.answer) !== "wohnende") {
+  errors.push("B2 indirect speech/participles: evidential boundary, Konjunktiv answer, or attributive semantics regressed");
+}
+if (!topic("b2-bedingung").summaryAr.includes("لا تفرض معادلة زمنية جامدة")
+  || !topic("b2-funktionsverben").summaryAr.includes("أفضل دائماً أو مطابقاً تماماً")) {
+  errors.push("B2 conditions/FVG: semantic tense pattern or lexicalized register boundary regressed");
+}
+if (!topic("b2-infinitiv").summaryAr.includes("قد يكون فاعلها")
+  || !JSON.stringify(topic("b2-infinitiv").rules).includes("Komma ist bei um/ohne/anstatt zu")
+  || !topic("b2-modalpartikel").summaryAr.includes("ليست نسباً رقمية ثابتة")
+  || !JSON.stringify(topic("b2-modalpartikel").pitfalls).includes("doch einfach mal")) {
+  errors.push("B2 infinitives/modal particles: control, comma, probability, or particle-order boundary regressed");
+}
+if (!topic("b2-futur-ii").summaryAr.includes("حدث ماضٍ")
+  || !JSON.stringify(topic("b2-futur-ii").rules).includes("kein zukünftiger Zeitanker nötig")
+  || !topic("b2-relativ-generalisierend").summaryAr.includes("إذا أدت جملة wer والجملة الرئيسية الوظيفة نفسها")
+  || exercise("b2-relativ-generalisierend", "grge2")?.promptDe !== "___ früh übt, wird sicherer.") {
+  errors.push("B2 Futur II/generalizing relatives: inference, time-anchor, correlative-case, or exercise repair regressed");
+}
+if (!topic("b2-doppelkonnektoren").summaryAr.includes("لا توجد قاعدة واحدة")
+  || !String(exercise("b2-doppelkonnektoren", "gdke3")?.answer).includes("verschiebst")
+  || !topic("b2-nominalstil").summaryAr.includes("ليست التحويلات آلية دائماً")
+  || !JSON.stringify(topic("b2-nominalstil").tables).includes("مزيج محتمل")) {
+  errors.push("B2 paired connectors/nominal style: syntax, coherent exercise, or contextual style boundary regressed");
+}
+if (!topic("b1-partizip1").summaryAr.includes("mit einem wartenden Gast")
+  || exercise("b1-partizip1", "b1-partizip1-ex02")?.answer !== "laufenden"
+  || !topic("b2-redew").summaryAr.includes("استعمال حرفي")
+  || !JSON.stringify(topic("b2-redew").rules).includes("Das ist mir Wurst")) {
+  errors.push("B2 Partizip-I/idioms: declension, unrelated item, literal reading, or register boundary regressed");
+}
+if (!topic("b2-adjektiv-partizip").summaryAr.includes("ليس دائماً مبنياً للمجهول")
+  || !JSON.stringify(topic("b2-adjektiv-partizip").rules).includes("viele bekannte Schriftsteller")
+  || !topic("b2-textkonnektoren").summaryAr.includes("أرقى تلقائياً")
+  || exercise("b2-textkonnektoren", "b2-textkonnektoren-n7")?.answer !== "richtig") {
+  errors.push("B2 adjectival participles/text connectors: semantic, declension, register, or position guidance regressed");
+}
+if (!topic("b2-genitiv-praep").summaryAr.includes("Dativ محكية أو إقليمية")
+  || !topic("b2-konzessiv").summaryAr.includes("ولا يصبح المعنى تنازلياً")
+  || !JSON.stringify(topic("b2-konzessiv").rules).includes("die konzessive Wirkung entsteht hier durch trotzdem")) {
+  errors.push("B2 Genitiv prepositions/concession: variation or bei/trotzdem semantic boundary regressed");
+}
+if (!topic("b2-relativ-genitiv").summaryAr.includes("مذكر أو محايد")
+  || verify("b2-relativ-genitiv", "b2-rg-v2-check")?.promptDe !== "Die Frau, ___ Kinder hier wohnen, arbeitet in einer Klinik."
+  || !topic("b2-pruefungsstrategie").titleDe.startsWith("Interne Prüfungsstrategie")
+  || !topic("b2-pruefungsstrategie").summaryAr.includes("تختلف بنية امتحانات B2 الرسمية")
+  || JSON.stringify(topic("b2-pruefungsstrategie")).includes("120–180 Wörter")) {
+  errors.push("B2 Genitiv relatives/exam strategy: antecedent classes, sentence repair, or provider-neutral boundary regressed");
+}
+if (!topic("b2-n-deklination").summaryAr.includes("تصريف مختلط")
+  || !JSON.stringify(topic("b2-n-deklination").rules).includes("Herz ist kein schwaches Maskulinum")
+  || !topic("b2-passiv").titleDe.includes("mehreren Zeitformen")
+  || exercise("b2-passiv", "b2-passiv-e5")?.answer !== "Das Dach ist durch den Sturm zerstört worden."
+  || String(exercise("b2-passiv", "b2-passiv-e6")?.answer) !== "wurde") {
+  errors.push("B2 N-declension/passive: mixed patterns, Herz class, bounded tense scope, agent/cause, or exercise repair regressed");
+}
+if (!topic("b2-konjunktiv2-vht").summaryAr.includes("وفق Perfekt للفعل")
+  || !JSON.stringify(topic("b2-konjunktiv2-vht").rules).includes("anderen Perspektiv- oder Zukunftskontexten")
+  || !topic("b2-nominalisierung").summaryAr.includes("ليست تحويلاً آلياً")
+  || String(exercise("b2-nominalisierung", "b2-nom-e8")?.answer) !== "Für"
+  || !topic("b2-partizipial").summaryAr.includes("فعلاً سابقاً فاعلياً")
+  || JSON.stringify(topic("b2-partizipial")).includes("Eigenhandlung")) {
+  errors.push("B2 past counterfactual/nominalization/participles: auxiliary, würde boundary, restructuring, purpose, or semantic guidance regressed");
+}
+
 const currentTextA0 = JSON.stringify(review01.entries.map((entry) => entry.current));
 for (const stale of [
   "وفي سويسرا تُكتب Straße", "Buchstabiere deinen Namen und deine Telefonnummer",
@@ -398,6 +481,20 @@ for (const stale of [
     errors.push(`PA-036-04 stale, malformed, or overgeneralized content returned: ${stale}`);
   }
 }
+const currentTextB2 = JSON.stringify(review05.entries.map((entry) => entry.current));
+for (const stale of [
+  "قد قالها فعلاً — لا رأيك", "B2 الاحترافي لا تستخدم dass", "Partizip II (= سلبي/منتهٍ دائماً)",
+  "Real: Präsens → Präsens/Futur", "FVG دائمًا رسمي", "حتمًا نفس الفاعل", "نسبة يقين: 90–95%",
+  "لا يزيد عددها عادةً عن اثنتين", "Zeitanker ضروري", "Singular: wer…der / Plural: wer…die",
+  "الفعل يبقى في نفس الموضع في الجملتين", "في رسالة شخصية: تجنبه", "كل الكلمات المنتهية بـ -ung مؤنثة",
+  "اقرأ سؤال الامتحان أولاً", "خطأ حرفي:", "موقع 2 دائماً", "bei + Dativ: bei Regen (رغم المطر)",
+  "120–180 Wörter", "في Goethe B2 ثلاث دقائق للتحضير", "40 اسمًا مذكرًا ضعيفًا",
+  "einzige N-Deklination im Neutrum", "würde في الماضي شفوي فقط", "Komma optional",
+]) {
+  if (currentTextB2.includes(stale)) {
+    errors.push(`PA-036-05 stale, malformed, or overgeneralized content returned: ${stale}`);
+  }
+}
 
 if (errors.length) {
   console.error("❌ Grammar content review audit failed:");
@@ -406,8 +503,8 @@ if (errors.length) {
 }
 
 console.log(
-  "✅ Grammar content review: all 64 bounded A0–B1 full-topic decisions match (57 corrected, 7 confirmed-current).",
+  "✅ Grammar content review: all 87 bounded A0–B2 full-topic decisions match (80 corrected, 7 confirmed-current).",
 );
 console.log(
-  "ℹ️ This gate protects the reviewed A0–B1 objectives, explanations, rules, tables, examples, pitfalls, checks, exercises, pronunciation guidance, and internal exam-strategy boundary; 23 B2 topics and independent linguistic, phonetic, CEFR, or exam sign-off remain outside these batches.",
+  "ℹ️ This gate protects all reviewed grammar objectives, explanations, rules, tables, examples, pitfalls, checks, exercises, pronunciation guidance, and internal exam-strategy boundaries; independent linguistic, phonetic, CEFR, or exam sign-off remains outside these batches.",
 );

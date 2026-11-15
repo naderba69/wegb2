@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
   "generatedFrom": "content/grammar.json",
-  "sourceSha256": "8767840e390ee81668db35c339bc2f6c19b8971fd3b38921e6d0a550b4224a9c",
+  "sourceSha256": "23b30297101f7d546c3d7aac2e704b4a0a2cab6dc963edf6e407d2163c13f88e",
   "updated": "2026-11-05",
   "profileId": "wegb2-internal-german-grammar-coverage-profile",
   "claimStatus": "internal-evidence-map-not-official-ggp",
   "claimAr": "هذه مصفوفة داخلية مشتقة من منهج WegB2 لتتبع القواعد والأدلة. لا تدعي مطابقة German Grammar Profile أو أي قائمة خارجية قبل حفظ المصدر المرخص ومراجعته وتوقيع الربط بنداً بنداً.",
   "summary": {
     "topics": 87,
-    "candidateFeatures": 317,
-    "rules": 317,
+    "candidateFeatures": 319,
+    "rules": 319,
     "examples": 287,
     "pitfalls": 200,
     "verifyItems": 177,
@@ -50,7 +50,7 @@
       "A1": 58,
       "A2": 86,
       "B1": 55,
-      "B2": 89,
+      "B2": 91,
       "A0": 29
     }
   },
@@ -690,8 +690,8 @@
       "id": "b2-indirekte-rede",
       "level": "B2",
       "titleDe": "Indirekte Rede (Konjunktiv I)",
-      "titleAr": "المنقول — أداة الصحافة والدبلوماسية",
-      "goalAr": "تحوّل كلاماً مباشراً إلى منقول (Konjunktiv I) مع قاعدة الاستبدال عند التطابق.",
+      "titleAr": "الكلام غير المباشر بـKonjunktiv I",
+      "goalAr": "تنقل أقوال الآخرين بـKonjunktiv I في سياقات مناسبة، وتختار Konjunktiv II عند الحاجة إلى تمييز الصيغة.",
       "prerequisiteTopicIds": [
         "b1-konj2"
       ],
@@ -728,9 +728,9 @@
     {
       "id": "b2-partizip",
       "level": "B2",
-      "titleDe": "Partizipialattribute & Nominalstil",
-      "titleAr": "الصفات المشتقة والأسلوب الاسمي",
-      "goalAr": "تفهم الصفات المشتقة الممددة وتحوّلها لجمل موصولة.",
+      "titleDe": "Partizipialattribute: Partizip I und II",
+      "titleAr": "الصفات المشتقة من Partizip I وPartizip II",
+      "goalAr": "تفهم الصفات المشتقة الموسعة وتحوّل بينها وبين الجمل الموصولة مع مراعاة المعنى والنهاية.",
       "prerequisiteTopicIds": [
         "b1-partizip1"
       ],
@@ -767,9 +767,9 @@
     {
       "id": "b2-bedingung",
       "level": "B2",
-      "titleDe": "Bedingungssätze (Typ 1–3)",
-      "titleAr": "جمل الشرط الثلاثة",
-      "goalAr": "تبني جمل الشرط الثلاثة (real/hypothetisch/irreal) بالأزمنة الصحيحة.",
+      "titleDe": "Reale und irreale Bedingungssätze",
+      "titleAr": "جمل الشرط الواقعية والافتراضية",
+      "goalAr": "تصوغ شروطاً واقعية وافتراضية في الحاضر والماضي، وتختار الصيغة بحسب المعنى الزمني.",
       "prerequisiteTopicIds": [
         "b1-konj2"
       ],
@@ -806,8 +806,8 @@
       "id": "b2-funktionsverben",
       "level": "B2",
       "titleDe": "Funktionsverbgefüge",
-      "titleAr": "التركيبات الوظيفية — سرّ النص الرسمي",
-      "goalAr": "تستخدم FVG أكاديمية (zur Verfügung stehen, in Kenntnis setzen) بدل الأفعال البسيطة.",
+      "titleAr": "تراكيب الأفعال الوظيفية في السياق",
+      "goalAr": "تستخدم تراكيب FVG شائعة في السياق المناسب وتفرّق بين بنيتها ومعنى الفعل البسيط القريب.",
       "prerequisiteTopicIds": [
         "b1-funktionsverben"
       ],
@@ -830,7 +830,7 @@
         ],
         "applicationDe": "Forme eine E-Mail formell um: 3 FVG.",
         "applicationAr": "أعد كتابة بريد عادي بأسلوب رسمي: 3 تركيبات وظيفية.",
-        "rules": 2,
+        "rules": 3,
         "examples": 2,
         "pitfalls": 1
       },
@@ -844,9 +844,9 @@
     {
       "id": "b2-infinitiv",
       "level": "B2",
-      "titleDe": "erweiterter Infinitiv mit „zu“",
+      "titleDe": "Erweiterter Infinitiv mit „zu“",
       "titleAr": "المصدر المطوّل بـ zu",
-      "goalAr": "تبني المصدر المطوّل (um…zu, ohne…zu, statt…zu) وتميّزه عن dass.",
+      "goalAr": "تبني مجموعات المصدر مع zu وum/ohne/anstatt، وتختار بينها وبين الجملة المصرفة بحسب الفاعل والمعنى.",
       "prerequisiteTopicIds": [
         "b1-konnektoren",
         "b1-absicht"
@@ -870,7 +870,7 @@
         ],
         "applicationDe": "Schreibe einen Kommentar: 3 erweiterte Infinitive.",
         "applicationAr": "اكتب تعليقاً: 3 مصدرات مطوّلة (um zu überzeugen …).",
-        "rules": 3,
+        "rules": 4,
         "examples": 3,
         "pitfalls": 1
       },
@@ -1383,7 +1383,7 @@
       "level": "B2",
       "titleDe": "Modalpartikeln & Subjektive Modalverben",
       "titleAr": "جسيمات النبرة والمعنى الذاتي للأفعال الناقصة (الافتراض والشائعات)",
-      "goalAr": "تفهم جسيمات النبرة (doch, mal, ja, denn) وتستخدمها طبيعياً.",
+      "goalAr": "تفهم جسيمات النبرة الشائعة والمعاني الاستنتاجية أو النقلية لبعض الأفعال الناقصة في سياقها.",
       "prerequisiteTopicIds": [
         "a1-praesens"
       ],
@@ -1424,7 +1424,7 @@
       "level": "B2",
       "titleDe": "Futur II — das Vollendete in der Zukunft",
       "titleAr": "المستقبل التامّ — ما سينتهي قبل لحظةٍ قادمة",
-      "goalAr": "تبني المستقبل التامّ (werden + Partizip II + haben/sein) للتخمين عن الماضي.",
+      "goalAr": "تبني Futur II للتعبير عن حدث مكتمل قبل نقطة مستقبلية أو عن تخمين يتعلق بالماضي.",
       "prerequisiteTopicIds": [
         "a2-futur",
         "a2-perfekt"
@@ -1464,8 +1464,8 @@
       "id": "b2-relativ-generalisierend",
       "level": "B2",
       "titleDe": "Generalisierende Relativsätze — wer · was",
-      "titleAr": "العلاقات العامة — من…ف…/ما…ف…",
-      "goalAr": "تبني العلاقات العامة (Wer …, der … / Was …, das …).",
+      "titleAr": "الجمل الموصولة التعميمية بـwer وwas",
+      "goalAr": "تبني جمل wer/was التعميمية وتختار ضمير الإحالة في الجملة الرئيسية بحسب وظيفته.",
       "prerequisiteTopicIds": [
         "b1-relativ"
       ],
@@ -1527,7 +1527,7 @@
         "canDoIds": [
           "B2-C4"
         ],
-        "applicationDe": "Diskutiere strittig: 4 Sätze mit Doppelkonnektoren.",
+        "applicationDe": "Diskutiere differenziert: 4 Sätze mit zweiteiligen Konnektoren.",
         "applicationAr": "ناقش قضية: sowohl…als auch و einerseits…andererseits — 4 جمل.",
         "rules": 3,
         "examples": 3,
@@ -1544,8 +1544,8 @@
       "id": "b2-nominalstil",
       "level": "B2",
       "titleDe": "Nominalstil und Verbalstil",
-      "titleAr": "الأسلوب الاسمي والفعلي — مفتاح الرسالة الرسمية",
-      "goalAr": "تحوّل الأسلوب الفعلي إلى اسمي (die Durchführung) للكتابة الرسمية.",
+      "titleAr": "الأسلوب الاسمي والأسلوب الفعلي",
+      "goalAr": "تحوّل بين الأسلوب الفعلي والاسمي عندما يسمح المعنى، وتختار الصيغة الأنسب للسياق والوضوح.",
       "prerequisiteTopicIds": [
         "b1-passiv"
       ],
@@ -1900,8 +1900,8 @@
       "id": "b1-partizip1",
       "level": "B2",
       "titleDe": "Partizip I als Adjektiv (Partizipialattribute)",
-      "titleAr": "Partizip I كصفة (التعابيل المفعولية المطوّلة)",
-      "goalAr": "تستخدم Partizip I كصفة (der lesende Mann) بنهايات صحيحة.",
+      "titleAr": "Partizip I كصفة قبل الاسم",
+      "goalAr": "تستخدم Partizip I كصفة قبل الاسم وتضيف نهاية الصفة المناسبة.",
       "prerequisiteTopicIds": [
         "b1-adjektivendungen"
       ],
@@ -1919,7 +1919,7 @@
           "b1-partizip1-r143-e05"
         ],
         "canDoIds": [
-          "B1-C4"
+          "B2-C2"
         ],
         "applicationDe": "Beschreibe eine Szene: 3 Attribute mit Partizip I.",
         "applicationAr": "صِف مشهداً صحفياً: 3 صفات بـ Partizip I (der weinende Junge …).",
@@ -2291,7 +2291,7 @@
       "id": "b2-adjektiv-partizip",
       "level": "B2",
       "titleDe": "Partizipialattribute & nominalisierte Adjektive",
-      "titleAr": "صفات ممدّدة بصيغ الفعل الماضي/المستمر وصفات محوَّلة إلى أسماء",
+      "titleAr": "الصفات المشتقة والصفات المحوّلة إلى أسماء",
       "goalAr": "تبني صفات ممددة بصيغ الفعل (der von allen geliebte Star) وتفكّكها.",
       "prerequisiteTopicIds": [
         "b2-partizip"
@@ -2679,8 +2679,8 @@
       "id": "b2-textkonnektoren",
       "level": "B2",
       "titleDe": "Textkonnektoren: wenngleich/hingegen/folglich …",
-      "titleAr": "روابط النص الراقية",
-      "goalAr": "تكتب بفقرات متماسكة بروابط B2: الإقرار الراقي والتضاد المرن والتعليل النصي.",
+      "titleAr": "روابط نصية للتنازل والتضاد والنتيجة",
+      "goalAr": "تربط الأفكار بـwenngleich/obgleich وhingegen وfolglich مع مراعاة السجل وبنية الجملة.",
       "prerequisiteTopicIds": [
         "b1-konnektoren"
       ],
@@ -3019,7 +3019,7 @@
       "level": "B2",
       "titleDe": "Genitivpräpositionen: wegen, trotz, während, aufgrund …",
       "titleAr": "حروف جر Genitiv: wegen/trotz/während/aufgrund/anlässlich/innerhalb/außerhalb",
-      "goalAr": "تستعمل حروف جر Genitiv في الكتابة الرسمية والصحفية والأكاديمية بدلاً من Dativ العامية، وتتقن صيغها في الكتابة.",
+      "goalAr": "تستعمل حروف جر شائعة مع Genitiv في الأسلوب المعياري المتدرّب عليه، وتتعرف إلى البدائل السياقية.",
       "prerequisiteTopicIds": [
         "b1-genitiv"
       ],
@@ -3054,8 +3054,8 @@
     {
       "id": "b2-konzessiv",
       "level": "B2",
-      "titleDe": "Konzessivsätze: obwohl / trotzdem / auch wenn / wenngleich / bei + Dat",
-      "titleAr": "الجمل التناقضية: obwohl/trotzdem/auch wenn/wenngleich/bei+Dativ",
+      "titleDe": "Konzessivsätze und konzessive Verknüpfungen",
+      "titleAr": "الجمل والروابط التنازلية",
       "goalAr": "تفرّق بين أدوات التناقض وتستعملها في مواضعها الصحيحة: أداة ربط تُقدّم جملة ثانوية (obwohl/wenngleich/obgleich/auch wenn) مقابل ظرف يربط بين جملتين مستقلتين (trotzdem/dennoch/jedoch).",
       "prerequisiteTopicIds": [
         "b1-konnektoren"
@@ -3092,7 +3092,7 @@
       "level": "B2",
       "titleDe": "Relativsätze im Genitiv: dessen und deren",
       "titleAr": "الجمل الموصولة في حالة Genitiv: dessen وderen",
-      "goalAr": "تصف شخصاً أو شيئاً بملكيته أو علاقته عبر الضمير الموصول Genitiv (dessen للمفرد، deren للمؤنث والجمع)، وتكتب جملاً رسمية دقيقة كما في الصحف والتقارير.",
+      "goalAr": "تصف علاقة أو انتماءً بـdessen للمذكر والمحايد وderen للمؤنث والجمع، مع إبقاء بنية الاسم التالي.",
       "prerequisiteTopicIds": [
         "b1-relativ"
       ],
@@ -3237,9 +3237,9 @@
     {
       "id": "b2-pruefungsstrategie",
       "level": "B2",
-      "titleDe": "Prüfungsstrategie: Goethe B2",
-      "titleAr": "استراتيجية امتحان B2 — المقالة الرأيية، التلخيص، والمناقشة المعمّقة",
-      "goalAr": "تتقن بنية امتحان B2 (كتابة تعليق رأي 120-180 كلمة، رسالة رسمية، تلخيص نص، نقاش موسّع)، وتعرف استراتيجيات التعامل مع النصوص الطويلة والمصطلحات المعقدة.",
+      "titleDe": "Interne Prüfungsstrategie: B2-Übungsformat",
+      "titleAr": "استراتيجية داخلية لتدريبات B2",
+      "goalAr": "تخطط لنص حجاجي وتتعامل مع نصوص أطول وتدير تفاعلاً منظماً وفق تعليمات المهمة الحالية، من دون اعتبار الصفحة وصفاً رسمياً لامتحان بعينه.",
       "prerequisiteTopicIds": [
         "b2-nominalstil",
         "b2-textkonnektoren"
@@ -3258,8 +3258,8 @@
           "b2-pruefungsstrategie-r141e-prod2"
         ],
         "canDoIds": [],
-        "applicationDe": "Trainiere eine vollständige B2-Prüfung und lerne 10 Doppelkonnektoren sowie 10 Einleitungs-/Schlusssätze auswendig.",
-        "applicationAr": "حاكِ امتحان B2 كاملاً وركّز على حفظ 10 روابط مزدوجة و10 عبارات افتتاحية/ختامية.",
+        "applicationDe": "Bearbeite ein internes B2-Übungsset mit Zeitlimit, decke alle Aufgabenpunkte ab und prüfe Gliederung sowie Klarheit. Prüfe vor einer echten Prüfung die aktuellen offiziellen Vorgaben deines Anbieters und Formats.",
+        "applicationAr": "نفّذ مجموعة B2 داخلية بوقت محدد، وغطِّ كل نقاط المهمة، ثم راجع التنظيم والوضوح. قبل امتحان حقيقي ارجع إلى التعليمات الرسمية الحالية للجهة والنموذج المسجل فيه.",
         "rules": 3,
         "examples": 2,
         "pitfalls": 2
@@ -3315,7 +3315,7 @@
       "level": "B2",
       "titleDe": "N-Deklination: der Student, den Studenten",
       "titleAr": "التصريف الضعيف للأسماء المذكرة (N-Deklination) — der Student → den Studenten",
-      "goalAr": "تميّز 40 اسمًا مذكرًا ضعيفًا (Student/Kollege/Nachbar/Herr…) وتصرّفها بـ -(e)n في كل الحالات ما عدا نوميناتيف المفرد، وتتجنب الخطأ الشائع *den Student.",
+      "goalAr": "تميّز أنماطاً شائعة من الأسماء المذكرة الضعيفة وتصرّفها بـ-(e)n خارج Nominativ المفرد.",
       "prerequisiteTopicIds": [
         "b2-nominalstil",
         "b1-genitiv"
@@ -3354,9 +3354,9 @@
     {
       "id": "b2-passiv",
       "level": "B2",
-      "titleDe": "Passiv in allen Zeiten — Vorgangs- und Zustandspassiv",
-      "titleAr": "المبني للمجهول في كل الأزمنة — الحدث والنتيجة",
-      "goalAr": "تحوّل المبني للمعلوم إلى مجهول في 4 أزمنة وتفرّق بين Vorgangs- و Zustandspassiv.",
+      "titleDe": "Vorgangs- und Zustandspassiv in mehreren Zeitformen",
+      "titleAr": "مجهول الحدث والحالة في صيغ زمنية متعددة",
+      "goalAr": "تحوّل جملًا إلى Vorgangspassiv في Präsens وPräteritum وPerfekt، وتفرّقه عن Zustandspassiv.",
       "prerequisiteTopicIds": [
         "b1-passiv",
         "a2-perfekt"
@@ -3438,8 +3438,8 @@
     {
       "id": "b2-nominalisierung",
       "level": "B2",
-      "titleDe": "Nominalisierung & Nominalstil — B2 Akademisch",
-      "titleAr": "التحويل الاسمي والأسلوب الاسمي — لغة B2 الأكاديمية",
+      "titleDe": "Nominalisierung und Nominalstil",
+      "titleAr": "التحويل الاسمي والأسلوب الاسمي",
       "goalAr": "تحوّل الجمل الفعلية إلى اسمية (dass → die Tatsache, dass / weil → wegen + Genitiv) وتكتب بأسلوب Nominalstil.",
       "prerequisiteTopicIds": [
         "b2-nominalstil",
@@ -3480,8 +3480,8 @@
     {
       "id": "b2-partizipial",
       "level": "B2",
-      "titleDe": "Partizipialkonstruktionen — B2 Kompaktstil",
-      "titleAr": "التراكيب التشاركية — الأسلوب المكثف B2",
+      "titleDe": "Erweiterte Partizipialattribute",
+      "titleAr": "الصفات المشتقة الموسعة قبل الاسم",
       "goalAr": "تبني Partizip I/II كصفة موسعة (der gestern angekommene Brief) وتحوّلها لموصولة.",
       "prerequisiteTopicIds": [
         "b1-partizip1",
@@ -4294,8 +4294,8 @@
       "topicId": "b2-indirekte-rede",
       "ruleIndex": 1,
       "level": "B2",
-      "descriptorDe": "Bildung: Infinitiv + e (ich lerne → er sagte, ich lerne) · iert-Verben: studiere",
-      "descriptorAr": "صيغة es-geb-form: werde → er sagte, er werde — مع iert-Verben: studiere",
+      "descriptorDe": "Bildung: Verbstamm + Konjunktiv-I-Endung: ich komme, du kommest, er/sie/es komme, wir kommen, ihr kommet, sie kommen. Besonders deutlich ist meist die 3. Person Singular.",
+      "descriptorAr": "يبنى من جذر الفعل ونهايات Konjunktiv I؛ وتكون صيغة الغائب المفرد مثل er komme واضحة، بينما تطابق صيغ أخرى Indikativ أحياناً.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -4310,8 +4310,8 @@
       "topicId": "b2-indirekte-rede",
       "ruleIndex": 2,
       "level": "B2",
-      "descriptorDe": "sein: sei, seiest, sei, seien, seiet, seien",
-      "descriptorAr": "الأهم: er sei, sie seien — sein شاذ كلياً: sei, seiest, sei, seien, seiet, seien",
+      "descriptorDe": "sein: sei, seiest, sei, seien, seiet, seien.",
+      "descriptorAr": "sein له صيغ خاصة: er sei، sie seien.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -4326,8 +4326,8 @@
       "topicId": "b2-indirekte-rede",
       "ruleIndex": 3,
       "level": "B2",
-      "descriptorDe": "Wenn Konjunktiv I wie der Indikativ aussieht, weicht man auf Konjunktiv II aus: haben → hätten, können → könnten",
-      "descriptorAr": "لتمييز المنقول عن المباشر — عند التزامن (Indikativ = Konj. I) ← Konjunktiv II: haben→hätten, können→könnten",
+      "descriptorDe": "Wenn Konjunktiv I mit dem Indikativ zusammenfällt, kann Konjunktiv II die indirekte Rede eindeutig markieren: sie haben → sie hätten.",
+      "descriptorAr": "عند تطابق Konjunktiv I مع Indikativ يمكن استعمال Konjunktiv II لتوضيح أن الكلام منقول؛ ليست قاعدة آلية في كل سجل.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -4342,8 +4342,8 @@
       "topicId": "b2-indirekte-rede",
       "ruleIndex": 4,
       "level": "B2",
-      "descriptorDe": "In der indirekten Rede mit dass steht das Verb am Ende: Er sagte, dass er komme.",
-      "descriptorAr": "الفعلُ في آخرِ الجملةِ المنقولةِ بـdass — مثل dass دائماً — الفعل في نهاية الجملة المنقولة",
+      "descriptorDe": "Ohne dass: Er sagte, er komme morgen. Mit dass: Er sagte, dass er morgen komme.",
+      "descriptorAr": "من دون dass تأتي الصيغة بعد الفاعل، ومع dass ينتقل الفعل المصرّف إلى نهاية الجملة التابعة.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -4358,8 +4358,8 @@
       "topicId": "b2-partizip",
       "ruleIndex": 1,
       "level": "B2",
-      "descriptorDe": "Partizip I (=d): das lesende Kind",
-      "descriptorAr": "الطفل القارئ — Partizip I (=d) كصفة موصوفة: das lesende Kind",
+      "descriptorDe": "Partizip I = Infinitiv + d, dann Adjektivendung: lesen → das lesende Kind.",
+      "descriptorAr": "Partizip I = المصدر + d ثم نهاية الصفة: lesend + e.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -4374,8 +4374,8 @@
       "topicId": "b2-partizip",
       "ruleIndex": 2,
       "level": "B2",
-      "descriptorDe": "Partizip II (=ge…t/en): das gelesene Buch",
-      "descriptorAr": "الكتاب المقروء — Partizip II (=ge…t/en) كصفة: das gelesene Buch",
+      "descriptorDe": "Partizip II als Attribut: das gelesene Buch; bei intransitiven sein-Verben auch aktiv-vorzeitig: der angekommene Zug.",
+      "descriptorAr": "قد يكون Partizip II مبنياً للمجهول أو دالاً على النتيجة، وقد يصف فعلاً سابقاً فاعلياً مع أفعال مثل ankommen.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -4390,8 +4390,8 @@
       "topicId": "b2-partizip",
       "ruleIndex": 3,
       "level": "B2",
-      "descriptorDe": "Mit dem in Berlin gebauten Zug…",
-      "descriptorAr": "أسلوب B2 المكثّف — Mit dem in Berlin gebauten Zug… (الفعلية ← الاسمية)",
+      "descriptorDe": "Erweitertes Attribut: der gestern in Berlin angekommene Zug. Die ganze Gruppe steht vor dem Nomen.",
+      "descriptorAr": "يمكن توسيع الصفة بمكملات، وتبقى المجموعة كلها قبل الاسم.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -4406,8 +4406,8 @@
       "topicId": "b2-partizip",
       "ruleIndex": 4,
       "level": "B2",
-      "descriptorDe": "um zu / ohne zu / statt zu + Infinitiv",
-      "descriptorAr": "لأن / بدون أن / بدلاً من أن — الفعل للنهاية",
+      "descriptorDe": "Relativsatz und Attribut: der Brief, der gestern ankam ↔ der gestern angekommene Brief. Nicht jede Umformung ist stilistisch gleich natürlich.",
+      "descriptorAr": "يمكن التحويل إلى جملة موصولة أو منها عندما يبقى المعنى طبيعياً؛ ولا تكون كل صياغة متساوية أسلوبياً.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -4422,8 +4422,8 @@
       "topicId": "b2-bedingung",
       "ruleIndex": 1,
       "level": "B2",
-      "descriptorDe": "Typ 1: Wenn du lernst, bestehst du die Prüfung.",
-      "descriptorAr": "شرط واقعي — ممكن",
+      "descriptorDe": "Reale/offene Bedingung: Wenn du lernst, bestehst du die Prüfung. Je nach Kontext sind auch Futur, Modalverb oder Imperativ möglich.",
+      "descriptorAr": "في الشرط الواقعي أو المفتوح تتحدد الأزمنة وصيغة الجواب من السياق؛ المثال الشائع Präsens + Präsens.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -4438,8 +4438,8 @@
       "topicId": "b2-bedingung",
       "ruleIndex": 2,
       "level": "B2",
-      "descriptorDe": "Typ 2: Wenn ich Zeit hätte, würde ich reisen.",
-      "descriptorAr": "غير واقعي الآن",
+      "descriptorDe": "Irreal in Gegenwart/Zukunft: Wenn ich Zeit hätte, würde ich reisen / reiste ich.",
+      "descriptorAr": "للشرط الافتراضي الحالي أو المستقبلي نستعمل Konjunktiv II.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -4454,8 +4454,8 @@
       "topicId": "b2-bedingung",
       "ruleIndex": 3,
       "level": "B2",
-      "descriptorDe": "Typ 3: Wenn ich früher gekommen wäre, hätte ich dich getroffen.",
-      "descriptorAr": "خيالي في الماضي — لا يمكن تغييره",
+      "descriptorDe": "Irreal in der Vergangenheit: Wenn ich früher gekommen wäre, hätte ich dich getroffen.",
+      "descriptorAr": "للماضي المخالف للواقع نستعمل hätte/wäre + Partizip II في الشرط والنتيجة بحسب الفعل.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -4470,8 +4470,8 @@
       "topicId": "b2-funktionsverben",
       "ruleIndex": 1,
       "level": "B2",
-      "descriptorDe": "Verb + Nomen",
-      "descriptorAr": "eine Frage stellen = fragen — Verb + Nomen يساوي فعلًا واحدًا",
+      "descriptorDe": "FVG als Einheit lernen: eine Entscheidung treffen, eine Frage stellen, Kritik an etwas üben.",
+      "descriptorAr": "يُحفظ التركيب كوحدة مع الأداة وحرف الجر والحالة.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -4486,8 +4486,24 @@
       "topicId": "b2-funktionsverben",
       "ruleIndex": 2,
       "level": "B2",
-      "descriptorDe": "Kritik üben AN + Dativ",
-      "descriptorAr": "لا تحفظ الاسم منفرداً! — احفظ الحرف مع الوحدة: Kritik üben AN + Dativ",
+      "descriptorDe": "Bedeutungsunterschiede beachten: zur Verfügung stehen (verfügbar sein) ≠ etwas zur Verfügung stellen (bereitstellen).",
+      "descriptorAr": "قد يغيّر الفعل الوظيفي المعنى: stehen يعني متاحاً، وstellen يعني إتاحة شيء.",
+      "sourceRefs": [],
+      "status": {
+        "definition": "derived-from-current-curriculum",
+        "externalSourceMapping": "pending",
+        "cefrLevelAssignment": "pending-external-review",
+        "linguisticReview": "pending-human-review",
+        "directAssessmentEvidence": "pending-item-level-map"
+      }
+    },
+    {
+      "id": "IGGP-b2-funktionsverben-R03",
+      "topicId": "b2-funktionsverben",
+      "ruleIndex": 3,
+      "level": "B2",
+      "descriptorDe": "Register und Kontext prüfen: Ein einfaches Verb kann klarer sein; ein FVG ist nicht automatisch formeller oder besser.",
+      "descriptorAr": "اختر بين التركيب والفعل البسيط بحسب الدقة والسجل، لا بهدف تعقيد النص.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -4502,8 +4518,8 @@
       "topicId": "b2-infinitiv",
       "ruleIndex": 1,
       "level": "B2",
-      "descriptorDe": "versuchen, planen, hoffen, vergessen, sich freuen + zu + Infinitiv",
-      "descriptorAr": "الفعل المصدري للنهاية",
+      "descriptorDe": "Zu-Infinitiv nach passenden Verben/Nomen/Adjektiven: versuchen, planen, die Hoffnung, bereit sein. Die Ergänzung muss lexikalisch passen.",
+      "descriptorAr": "لا تأخذ كل كلمة مجموعة مصدر؛ تُحفظ البنية مع الفعل أو الاسم أو الصفة المناسبة.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -4518,8 +4534,8 @@
       "topicId": "b2-infinitiv",
       "ruleIndex": 2,
       "level": "B2",
-      "descriptorDe": "Es ist wichtig / notwendig / schwer, … zu + Infinitiv",
-      "descriptorAr": "الحكم على الفعل",
+      "descriptorDe": "Das Bezugswort steuert das gedachte Subjekt: Ich hoffe, zu kommen; ich bitte dich, zu kommen. Für ein ausdrücklich genanntes Subjekt ist oft ein dass-Satz nötig.",
+      "descriptorAr": "قد يعود فاعل المصدر المفهوم إلى الفاعل أو المفعول في الجملة الرئيسية؛ ومع فاعل مصرح به نحتاج غالباً جملة dass.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -4534,8 +4550,24 @@
       "topicId": "b2-infinitiv",
       "ruleIndex": 3,
       "level": "B2",
-      "descriptorDe": "Trennbar: vorzubereiten, anzufangen",
-      "descriptorAr": "مثل ge في Perfekt — Trennbar: vorzubereiten, anzufangen (zu في المنتصف)",
+      "descriptorDe": "Trennbare Verben: anzufangen, vorzubereiten; untrennbar: zu besuchen.",
+      "descriptorAr": "في الفعل المنفصل تدخل zu بين السابقة والجذر، أما غير المنفصل فتأتي قبله.",
+      "sourceRefs": [],
+      "status": {
+        "definition": "derived-from-current-curriculum",
+        "externalSourceMapping": "pending",
+        "cefrLevelAssignment": "pending-external-review",
+        "linguisticReview": "pending-human-review",
+        "directAssessmentEvidence": "pending-item-level-map"
+      }
+    },
+    {
+      "id": "IGGP-b2-infinitiv-R04",
+      "topicId": "b2-infinitiv",
+      "ruleIndex": 4,
+      "level": "B2",
+      "descriptorDe": "Komma ist bei um/ohne/anstatt zu sowie bei Bezug auf ein Nomen oder Korrelat obligatorisch; in manchen anderen Fällen ist es freigestellt.",
+      "descriptorAr": "الفاصلة واجبة مع um/ohne/anstatt zu، ومع اعتماد المجموعة على اسم أو ضمير إحالة؛ وقد تكون اختيارية في حالات أخرى.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -5366,8 +5398,8 @@
       "topicId": "b2-modalpartikel",
       "ruleIndex": 1,
       "level": "B2",
-      "descriptorDe": "mal macht die Bitte leichter: Warte mal!",
-      "descriptorAr": "mal تجعل الطلب والأمر أكثر وداً ولطفاً: انتظر لحظة!",
+      "descriptorDe": "mal kann eine Aufforderung lockerer wirken lassen: Warte mal! Wirkung und Höflichkeit hängen auch von Ton und Situation ab.",
+      "descriptorAr": "قد تجعل mal الأمر أقل رسمية، لكن اللطف يتحدد أيضاً بالنبرة والعلاقة.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -5382,8 +5414,8 @@
       "topicId": "b2-modalpartikel",
       "ruleIndex": 2,
       "level": "B2",
-      "descriptorDe": "doch verstärkt oder widerspricht freundlich: Das ist doch toll!",
-      "descriptorAr": "doch للتأكيد الودي أو التذكير بأمر متفق عليه: هذا رائع حقاً!",
+      "descriptorDe": "doch kann erinnern, widersprechen oder verstärken: Das ist doch toll!",
+      "descriptorAr": "قد تأتي doch للتذكير أو الاعتراض أو التأكيد بحسب السياق.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -5398,8 +5430,8 @@
       "topicId": "b2-modalpartikel",
       "ruleIndex": 3,
       "level": "B2",
-      "descriptorDe": "einfach nimmt der Aufforderung die Schwere: Probier es einfach!",
-      "descriptorAr": "einfach تخفف صعوبة الفعل وتشجع على التجربة: جرب فقط!",
+      "descriptorDe": "einfach kann vereinfachen oder zu einer Handlung ermutigen: Probier es einfach!",
+      "descriptorAr": "قد تعرض einfach الفعل كحل بسيط أو تشجع عليه.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -5414,8 +5446,8 @@
       "topicId": "b2-modalpartikel",
       "ruleIndex": 4,
       "level": "B2",
-      "descriptorDe": "sollen drückt fremde Behauptungen und Gerüchte aus: Er soll sehr reich sein.",
-      "descriptorAr": "المعنى الذاتي لـ sollen: نقل ادعاء أو شائعة عن الآخرين (يُقال إنه ثري جداً / قيل عنه).",
+      "descriptorDe": "sollen kann eine fremde Behauptung wiedergeben: Er soll sehr reich sein.",
+      "descriptorAr": "في الاستعمال الذاتي قد ينقل sollen قولاً منسوباً إلى الآخرين من دون إثباته.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -5430,8 +5462,8 @@
       "topicId": "b2-modalpartikel",
       "ruleIndex": 5,
       "level": "B2",
-      "descriptorDe": "müssen drückt höchste subjektive Sicherheit aus: Das Licht brennt, er muss da sein.",
-      "descriptorAr": "المعنى الذاتي لـ müssen: استنتاج بيقين شبه مطلق بناءً على دليل (النور مشتعل، لا بد أنه هناك).",
+      "descriptorDe": "müssen kann eine starke Schlussfolgerung ausdrücken: Das Licht brennt; er muss da sein.",
+      "descriptorAr": "قد يعبّر müssen عن استنتاج قوي من قرينة، لا عن يقين مطلق.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -5446,8 +5478,8 @@
       "topicId": "b2-modalpartikel",
       "ruleIndex": 6,
       "level": "B2",
-      "descriptorDe": "dürfte drückt hohe Wahrscheinlichkeit aus: Der Zug dürfte Verspätung haben.",
-      "descriptorAr": "المعنى الذاتي لـ dürfte: احتمال راجح بنسبة تفوق 75% (من المرجح أن يتأخر القطار).",
+      "descriptorDe": "dürfte markiert eine vorsichtige, relativ wahrscheinliche Annahme: Der Zug dürfte Verspätung haben.",
+      "descriptorAr": "dürfte يفيد ترجيحاً حذراً من دون نسبة رقمية ثابتة.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -5462,8 +5494,8 @@
       "topicId": "b2-futur-ii",
       "ruleIndex": 1,
       "level": "B2",
-      "descriptorDe": "Bildung: werden … Partizip II + haben/sein",
-      "descriptorAr": "الفعل المساعد ثانياً، واسم المفعول ومساعده في آخر الجملة",
+      "descriptorDe": "Bildung: werden … Partizip II + haben/sein; die Wahl von haben/sein folgt dem Perfekt des Vollverbs.",
+      "descriptorAr": "نختار haben أو sein وفق مساعد Perfekt للفعل نفسه، لا وفق قاعدة «الحركة» العامة.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -5478,8 +5510,8 @@
       "topicId": "b2-futur-ii",
       "ruleIndex": 2,
       "level": "B2",
-      "descriptorDe": "Zeitanker nötig: bis morgen, um 18 Uhr, bis dahin",
-      "descriptorAr": "لا يُستعمل بلا مرساة زمن (bis …) وإلا كان Perfekt كافياً",
+      "descriptorDe": "Zukünftige Vollendung wird meist durch einen Bezugspunkt wie bis morgen, um 18 Uhr oder bis dahin deutlich.",
+      "descriptorAr": "في معنى الاكتمال المستقبلي تظهر غالباً مرساة مثل bis morgen، لكن السياق قد يوفرها أيضاً.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -5494,8 +5526,8 @@
       "topicId": "b2-futur-ii",
       "ruleIndex": 3,
       "level": "B2",
-      "descriptorDe": "Vermutung über Vergangenes: Er wird den Zug verpasst haben",
-      "descriptorAr": "الاستعمال الراقي الثاني: ترجيح في الماضي «يكون قد فاته القطار»",
+      "descriptorDe": "Vermutung über Vergangenes: Er wird den Zug verpasst haben. Dafür ist kein zukünftiger Zeitanker nötig.",
+      "descriptorAr": "في التخمين عن الماضي لا نحتاج مرساة مستقبلية؛ تساعد كلمات مثل wohl أو schon والسياق على القراءة الاستنتاجية.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -5510,8 +5542,8 @@
       "topicId": "b2-relativ-generalisierend",
       "ruleIndex": 1,
       "level": "B2",
-      "descriptorDe": "wer …, der/die/das … — Verallgemeinerung",
-      "descriptorAr": "من… فذلك… — تعميم على الأشخاص والجملة الثانية تبدأ بمرجع",
+      "descriptorDe": "Bei gleicher syntaktischer Funktion kann das Korrelat oft entfallen: Wer fragt, (der) lernt. Verlangt der Hauptsatz ein eigenes Kasuskomplement, steht das passende Pronomen: Wer Hilfe braucht, dem helfe ich.",
+      "descriptorAr": "إذا اتحدت الوظيفة يمكن غالباً حذف ضمير الإحالة؛ أما إذا طلبت الرئيسية مكملاً في حالة أخرى فيظهر الضمير المناسب مثل dem.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -5526,8 +5558,8 @@
       "topicId": "b2-relativ-generalisierend",
       "ruleIndex": 2,
       "level": "B2",
-      "descriptorDe": "alles / nichts / vieles + was (niemals „das“)",
-      "descriptorAr": "بعد alles وnichts وvieles تأتي was وحدها — قاعدة حديدية",
+      "descriptorDe": "alles/etwas/nichts/vieles/das + was: alles, was ich weiß; das, was zählt.",
+      "descriptorAr": "بعد ضمائر محايدة غير محددة، وفي تركيب das, was، نستعمل was في المعيار المستهدف.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -5542,8 +5574,8 @@
       "topicId": "b2-relativ-generalisierend",
       "ruleIndex": 3,
       "level": "B2",
-      "descriptorDe": "was als Satzbezug: „Er kam zu spät, was den Chef ärgerte.“",
-      "descriptorAr": "الإشارة إلى الواقعة كلها لا إلى كلمة — ضغط الحجة في جملة",
+      "descriptorDe": "was mit Satzbezug: Er kam zu spät, was den Chef ärgerte.",
+      "descriptorAr": "يمكن أن يعود was على مضمون الجملة السابقة كلها.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -5558,8 +5590,8 @@
       "topicId": "b2-relativ-generalisierend",
       "ruleIndex": 4,
       "level": "B2",
-      "descriptorDe": "Sprichwörter als Muster: „Was Hänschen nicht lernt…“",
-      "descriptorAr": "الأَمْثال المأثورة تُحفظ وتُعاد تراكيبها في الإنشاء",
+      "descriptorDe": "Feste Sprichwörter können eigene, teils ältere Muster bewahren.",
+      "descriptorAr": "تُحفظ الأمثال الثابتة بصيغتها، ولا تُحوّل آلياً إلى قاعدة لكل جملة جديدة.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -5574,8 +5606,8 @@
       "topicId": "b2-doppelkonnektoren",
       "ruleIndex": 1,
       "level": "B2",
-      "descriptorDe": "Beide Teilsätze bleiben Hauptsätze: Verb auf Position 2",
-      "descriptorAr": "كل نصف جملة رئيسية بقواعدها — لا قلب بعد sowohl ونظائرها",
+      "descriptorDe": "Parallelität: sowohl A als auch B; nicht nur A, sondern auch B. Verb- und Satzstellung folgen der jeweils verbundenen Struktur.",
+      "descriptorAr": "اربط عناصر متوازية: اسمًا باسم أو عبارة بعبارة؛ ولا تفترض أن كل زوج يربط جملتين رئيسيتين.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -5590,8 +5622,8 @@
       "topicId": "b2-doppelkonnektoren",
       "ruleIndex": 2,
       "level": "B2",
-      "descriptorDe": "je + Komparativ (Verb am Ende!), desto/umso + Komparativ + Verb",
-      "descriptorAr": "كلّما…ازداد: je جملة تابعة فعلها للآخر، وdesto مع المقارن ثم الفعل",
+      "descriptorDe": "je + Komparativ mit Verb am Ende; desto/umso + Komparativ im Vorfeld, dann finites Verb: Je mehr du übst, desto leichter wird es.",
+      "descriptorAr": "جملة je تابعة فعلها في النهاية، ثم تشغل مجموعة desto/umso مقدمة الرئيسية ويأتي الفعل المصرّف بعدها.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -5606,8 +5638,8 @@
       "topicId": "b2-doppelkonnektoren",
       "ruleIndex": 3,
       "level": "B2",
-      "descriptorDe": "nicht nur …, sondern auch … — das Gegenstück muss parallel sein",
-      "descriptorAr": "البنية المتقابلة تلزم: اسم مقابل اسم، فعل مقابل فعل",
+      "descriptorDe": "nicht nur …, sondern auch …: Die korrespondierenden Teile sollten grammatisch parallel sein.",
+      "descriptorAr": "في nicht nur…sondern auch ينبغي أن تكون الأجزاء المتقابلة متوازية نحوياً.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -5622,8 +5654,8 @@
       "topicId": "b2-nominalstil",
       "ruleIndex": 1,
       "level": "B2",
-      "descriptorDe": "weil → wegen + Genitiv",
-      "descriptorAr": "السبب: weil das Wetter schlecht war → wegen des schlechten Wetters. الفاعل يصبح مضافاً إليه.",
+      "descriptorDe": "Kausaler Bezug: weil das Wetter schlecht war ↔ wegen des schlechten Wetters. Die Umformung muss dieselbe Ursache bewahren.",
+      "descriptorAr": "يمكن تحويل السبب إلى wegen + مجموعة اسمية عندما يبقى الفاعل والمعنى واضحين.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -5638,8 +5670,8 @@
       "topicId": "b2-nominalstil",
       "ruleIndex": 2,
       "level": "B2",
-      "descriptorDe": "obwohl → trotz + Genitiv",
-      "descriptorAr": "التناقض: obwohl es regnete → trotz des Regens.",
+      "descriptorDe": "Konzessiver Bezug: obwohl es regnete ↔ trotz des Regens.",
+      "descriptorAr": "يمكن التعبير عن التنازل بـobwohl أو trotz بحسب البنية.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -5654,8 +5686,8 @@
       "topicId": "b2-nominalstil",
       "ruleIndex": 3,
       "level": "B2",
-      "descriptorDe": "wenn / als → bei + Dativ",
-      "descriptorAr": "الشرط والزمن معاً: wenn es regnet → bei Regen · als ich ankam → bei meiner Ankunft.",
+      "descriptorDe": "Temporaler oder konditionaler Umstand kann mit bei stehen: wenn es regnet ↔ bei Regen; als ich ankam ↔ bei meiner Ankunft. Nicht jedes wenn/als lässt sich so ersetzen.",
+      "descriptorAr": "قد تختصر bei ظرفاً زمنياً أو شرطياً، لكن ليس كل جملة wenn/als قابلة للتحويل الآلي.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -5670,8 +5702,8 @@
       "topicId": "b2-nominalstil",
       "ruleIndex": 4,
       "level": "B2",
-      "descriptorDe": "nachdem → nach + Dativ · bevor → vor + Dativ",
-      "descriptorAr": "التتابع: nachdem er angekommen war → nach seiner Ankunft · bevor die Prüfung beginnt → vor Beginn der Prüfung.",
+      "descriptorDe": "Zeitfolge: nachdem er angekommen war ↔ nach seiner Ankunft; bevor die Prüfung beginnt ↔ vor Beginn der Prüfung.",
+      "descriptorAr": "يمكن لـnach/vor + اسم أن يعبرا عن التتابع إذا بقي المرجع الزمني واضحاً.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -5686,8 +5718,8 @@
       "topicId": "b2-nominalstil",
       "ruleIndex": 5,
       "level": "B2",
-      "descriptorDe": "damit / um … zu → zu / zur / zum + Nomen",
-      "descriptorAr": "الغاية: um Energie zu sparen → zur Energieeinsparung (zur للمؤنث، zum للمذكر والمحايد).",
+      "descriptorDe": "Zweck: um Energie zu sparen ↔ zur Energieeinsparung / um Energie zu sparen. Die natürlichere Form hängt vom Text ab.",
+      "descriptorAr": "يمكن التعبير عن الغاية بمجموعة مصدر أو اسم؛ الاختيار للسياق والوضوح.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -5702,8 +5734,8 @@
       "topicId": "b2-nominalstil",
       "ruleIndex": 6,
       "level": "B2",
-      "descriptorDe": "indem → durch + Akkusativ",
-      "descriptorAr": "الوسيلة: indem man recycelt → durch Recycling.",
+      "descriptorDe": "Mittel: indem man recycelt ↔ durch Recycling, sofern Agens und Bedeutung eindeutig bleiben.",
+      "descriptorAr": "قد تتحول وسيلة indem إلى durch + اسم إذا لم يضيع الفاعل أو المعنى.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -5718,8 +5750,8 @@
       "topicId": "b2-nominalstil",
       "ruleIndex": 7,
       "level": "B2",
-      "descriptorDe": "Verb → -ung (die) / das + Infinitiv",
-      "descriptorAr": "erhöhen → die Erhöhung · lesen → das Lesen. كل اسم بـ-ung مؤنّث، وكل مصدر مُسمّى محايد — بلا استثناء.",
+      "descriptorDe": "Ableitung: erhöhen → die Erhöhung; lesen → das Lesen. Das Suffix -ung bildet feminine Nomen; nominalisierte Infinitive sind Neutra.",
+      "descriptorAr": "الأسماء المشتقة باللاحقة -ung مؤنثة، أما المصدر المحول إلى اسم فمحايد. ليست كل كلمة تنتهي بالحروف ung مشتقة بهذه اللاحقة، مثل der Sprung.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -6102,8 +6134,8 @@
       "topicId": "b1-partizip1",
       "ruleIndex": 1,
       "level": "B2",
-      "descriptorDe": "Partizip I = Infinitiv + d · laufen → laufend · weinen → weinend",
-      "descriptorAr": "كيف يتكوّن Partizip I.",
+      "descriptorDe": "Partizip I = Infinitiv + d: laufen → laufend; weinen → weinend.",
+      "descriptorAr": "التكوين: المصدر + d.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -6118,8 +6150,8 @@
       "topicId": "b1-partizip1",
       "ruleIndex": 2,
       "level": "B2",
-      "descriptorDe": "guter Wein · kaltes Wasser · frische Milch (ohne Artikel: Endung wie bestimmter Artikel)",
-      "descriptorAr": "نهايات الصفات بدون أداة.",
+      "descriptorDe": "Als Attribut bekommt es eine Adjektivendung: der laufende Mann, die laufenden Männer, mit einem laufenden Mann.",
+      "descriptorAr": "قبل الاسم يُصرف كأي صفة بحسب الأداة والحالة والعدد.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -6182,8 +6214,8 @@
       "topicId": "b2-redew",
       "ruleIndex": 1,
       "level": "B2",
-      "descriptorDe": "Die Redewendungen werden als Chunks gelernt, nicht Wort für Wort.",
-      "descriptorAr": "تُحفظ كعبارات جاهزة — لا كلمة كلمة.",
+      "descriptorDe": "Redewendungen als Chunks mit Ergänzungen und Beispiel lernen, nicht nur Wort für Wort.",
+      "descriptorAr": "احفظ التعبير مع الفعل وحرف الجر والمثال.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -6198,8 +6230,8 @@
       "topicId": "b2-redew",
       "ruleIndex": 2,
       "level": "B2",
-      "descriptorDe": "Die Wendung ist wörtlich nicht übersetzbar — im Zweifel ist die wörtliche Übersetzung falsch.",
-      "descriptorAr": "لا تُترجم حرفياً: إن أعطتك الترجمة الحرفية معنى عربياً غريباً فهي ليست المعنى المقصود.",
+      "descriptorDe": "Wörtliche und idiomatische Lesart können nebeneinander bestehen: „Meine Nase ist voll“ kann wörtlich sein; „Ich habe die Nase voll“ ist idiomatisch.",
+      "descriptorAr": "ليست كل ترجمة حرفية خطأ؛ يحدد السياق هل الاستعمال حرفي أم اصطلاحي.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -6214,8 +6246,8 @@
       "topicId": "b2-redew",
       "ruleIndex": 3,
       "level": "B2",
-      "descriptorDe": "Viele Wendungen stammen aus Körper, Tieren und Verkehr: die Nase voll haben · einen Kater haben · der Zug ist abgefahren.",
-      "descriptorAr": "مصدرها الحياة اليومية (الجسم، الحيوانات، المرور) — وهذا سبب عدم ترجمتها حرفياً.",
+      "descriptorDe": "Register beachten: „Das ist mir Wurst“ ist umgangssprachlich; „etwas in Kauf nehmen“ passt auch in formellere Texte.",
+      "descriptorAr": "تختلف درجة الرسمية بين التعابير، فلا توضع كلها في كل موقف.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -6230,8 +6262,8 @@
       "topicId": "b2-redew",
       "ruleIndex": 4,
       "level": "B2",
-      "descriptorDe": "In Prüfungen wird die Wendung im ganzen Satz abgefragt — lerne sie mit einem Beispiel, nicht als Liste.",
-      "descriptorAr": "تُختبر داخل جملة كاملة في الامتحانات؛ احفظها مع مثال لا كقائمة كلمات.",
+      "descriptorDe": "Bedeutung aus dem ganzen Satz erschließen und die Wendung mit typischen Ergänzungen lernen.",
+      "descriptorAr": "استنتج المعنى من الجملة كاملة واحفظ المكملات الشائعة، من دون ادعاء شكل امتحاني بعينه.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -6774,8 +6806,8 @@
       "topicId": "b2-adjektiv-partizip",
       "ruleIndex": 1,
       "level": "B2",
-      "descriptorDe": "das laufende Kind · der angekommene Zug",
-      "descriptorAr": "Partizip I وII كصفات قبل الاسم: نهاية الصفة تُضاف مباشرة",
+      "descriptorDe": "Partizip als Attribut mit Adjektivendung: das laufende Kind; der angekommene Zug; das gelesene Buch.",
+      "descriptorAr": "تضاف نهاية الصفة وفق الأداة والحالة والجنس والعدد.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -6790,8 +6822,8 @@
       "topicId": "b2-adjektiv-partizip",
       "ruleIndex": 2,
       "level": "B2",
-      "descriptorDe": "die sich unterhaltenden Gäste · die von der Sonne beschienene Wiese",
-      "descriptorAr": "يمكن توسيع الصفة بجار ومجرور أو durch/von لوصف فاعل/مفعول",
+      "descriptorDe": "Erweiterung: die sich unterhaltenden Gäste; die von der Sonne beschienene Wiese. Bedeutung und Ergänzungen folgen dem Verb.",
+      "descriptorAr": "يمكن توسيع الصفة بمكملات الفعل، ويجب الحفاظ على بنيته ومعناه.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -6806,8 +6838,8 @@
       "topicId": "b2-adjektiv-partizip",
       "ruleIndex": 3,
       "level": "B2",
-      "descriptorDe": "der Alte · eine Alte · das Gute · das Wichtigste",
-      "descriptorAr": "صفات محوَّلة لأسماء: تُكتب كبيرة وتأخذ نهاية الصفة نفسها",
+      "descriptorDe": "Nominalisierte Adjektive: der Alte, eine Alte, das Gute, das Wichtigste. Großschreibung, aber Adjektivflexion.",
+      "descriptorAr": "تكتب الصفة المحولة إلى اسم بحرف كبير وتبقى نهايتها خاضعة لتصريف الصفات.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -6822,8 +6854,8 @@
       "topicId": "b2-adjektiv-partizip",
       "ruleIndex": 4,
       "level": "B2",
-      "descriptorDe": "viele bekannte Schriftsteller · manche alte Häuser",
-      "descriptorAr": "بعد viele/wenige/manche/einige: النهاية كالجمع بعد die (-en)",
+      "descriptorDe": "Nach viele/einige/manche: viele bekannte Schriftsteller, manche alte Häuser; in obliquen Kasus z. B. mit vielen bekannten Schriftstellern.",
+      "descriptorAr": "بعد viele/einige/manche تظهر -e في Nominativ/Akkusativ الجمع غالباً، و-en في Dativ/Genitiv؛ ليست كـdie في كل الحالات.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -7350,8 +7382,8 @@
       "topicId": "b2-textkonnektoren",
       "ruleIndex": 1,
       "level": "B2",
-      "descriptorDe": "wenngleich/obgleich (= obwohl, gehoben) + Verb-Ende: Wenngleich es regnete, gingen wir.",
-      "descriptorAr": "مرادف obwohl الراقي + فعل في النهاية حتماً.",
+      "descriptorDe": "wenngleich/obgleich (= obwohl, oft formeller) + Verb am Ende: Wenngleich es regnete, gingen wir.",
+      "descriptorAr": "wenngleich/obgleich رابطان تنازليان، وغالباً أكثر رسمية من obwohl، والفعل في نهاية التابعة.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -7366,8 +7398,8 @@
       "topicId": "b2-textkonnektoren",
       "ruleIndex": 2,
       "level": "B2",
-      "descriptorDe": "hingegen (flexibel): Er hingegen blieb. / Hingegen blieb er.",
-      "descriptorAr": "hingegen للتضاد بموضع حر (1 أو 3) — ليست رابطاً صفرياً كـaber!",
+      "descriptorDe": "hingegen markiert einen Kontrast: Er hingegen blieb. / Hingegen blieb er. Die Stellung richtet sich nach dem kontrastierten Element.",
+      "descriptorAr": "قد تأتي hingegen بعد العنصر الذي تقابله أو في مقدمة الجملة؛ لا نصفها بموضع رقمي ثابت لكل استعمال.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -7382,8 +7414,8 @@
       "topicId": "b2-textkonnektoren",
       "ruleIndex": 3,
       "level": "B2",
-      "descriptorDe": "folglich/des Weiteren/zwar … aber: Folglich blieb er. · Des Weiteren gilt: …",
-      "descriptorAr": "سجل B2 الكتابي: folglich (وبالتالي) وdes Weiteren (وعلاوةً) وzwar…aber.",
+      "descriptorDe": "folglich leitet eine Folgerung ein; des Weiteren ergänzt einen Punkt; zwar … aber markiert Einräumung und Gegensatz.",
+      "descriptorAr": "لكل رابط وظيفة مختلفة: نتيجة أو إضافة أو إقرار يتبعه تضاد.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -7846,8 +7878,8 @@
       "topicId": "b2-konzessiv",
       "ruleIndex": 2,
       "level": "B2",
-      "descriptorDe": "Es regnet, trotzdem gehe ich spazieren. (Hauptsatz → Verb an Position 2)",
-      "descriptorAr": "trotzdem جملة مستقلة بعدها الفعل في الموقع الثاني.",
+      "descriptorDe": "Es regnet; trotzdem gehe ich spazieren. Steht trotzdem im Vorfeld, folgt das finite Verb: trotzdem gehe ich.",
+      "descriptorAr": "عند تقديم trotzdem يشغل المقدمة، فيأتي الفعل المصرّف بعده وفق V2.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -7878,8 +7910,8 @@
       "topicId": "b2-konzessiv",
       "ruleIndex": 4,
       "level": "B2",
-      "descriptorDe": "Bei Regen gehe ich trotzdem spazieren. (Präpositionalgruppe)",
-      "descriptorAr": "bei + Dativ في صيغة قصيرة.",
+      "descriptorDe": "Bei Regen gehe ich trotzdem spazieren. „bei Regen“ nennt den Umstand; die konzessive Wirkung entsteht hier durch trotzdem.",
+      "descriptorAr": "bei Regen يذكر الظرف فقط، أما معنى «مع ذلك» فيأتي هنا من trotzdem.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -8118,8 +8150,8 @@
       "topicId": "b2-pruefungsstrategie",
       "ruleIndex": 1,
       "level": "B2",
-      "descriptorDe": "Unterscheide im Kommentar klar zwischen These, Begründung und Beispiel.",
-      "descriptorAr": "ميّز بوضوح في التعليق بين الأطروحة والتعليل والمثال.",
+      "descriptorDe": "Unterscheide im Kommentar klar zwischen These, Begründung und Beispiel; erfülle alle konkreten Aufgabenpunkte.",
+      "descriptorAr": "ميّز بين الموقف والتعليل والمثال، وغطِّ النقاط المطلوبة فعلاً.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -8134,8 +8166,8 @@
       "topicId": "b2-pruefungsstrategie",
       "ruleIndex": 2,
       "level": "B2",
-      "descriptorDe": "Wäge Gegenpositionen ab, bevor du dein Fazit formulierst.",
-      "descriptorAr": "وازن الرأي المقابل قبل صياغة خلاصة موقفك.",
+      "descriptorDe": "Wäge eine relevante Gegenposition ab und formuliere ein nachvollziehbares Fazit.",
+      "descriptorAr": "وازن رأياً مقابلاً ذا صلة عندما تطلب المهمة ذلك، ثم صغ خلاصة واضحة.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -8150,8 +8182,8 @@
       "topicId": "b2-pruefungsstrategie",
       "ruleIndex": 3,
       "level": "B2",
-      "descriptorDe": "Nutze die Vorbereitungszeit, um eine kurze Gliederung zu notieren.",
-      "descriptorAr": "استعمل وقت التحضير لكتابة مخطط قصير.",
+      "descriptorDe": "Nutze eine vorhandene Vorbereitungszeit für eine kurze Gliederung; Dauer und Wortzahl stehen in der aktuellen Aufgabe.",
+      "descriptorAr": "استعمل وقت التحضير المتاح للمخطط، وخذ الزمن وعدد الكلمات من المهمة الحالية.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -8230,8 +8262,8 @@
       "topicId": "b2-n-deklination",
       "ruleIndex": 1,
       "level": "B2",
-      "descriptorDe": "der Junge → den Jungen, dem Jungen, des Jungen (Plural: die Jungen)",
-      "descriptorAr": "مذكر -e للإنسان/الحيوان: Junge/Kollege/Kunde/Löwe/Franzose → كل الحالات -n",
+      "descriptorDe": "der Junge → den/dem/des Jungen; der Kollege → den/dem/des Kollegen.",
+      "descriptorAr": "كثير من أسماء الأشخاص أو الحيوانات المذكرة المنتهية بـ-e ضعيفة، لكن تُحفظ الكلمة مع صيغها.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -8246,8 +8278,8 @@
       "topicId": "b2-n-deklination",
       "ruleIndex": 2,
       "level": "B2",
-      "descriptorDe": "der Student → den Studenten (Plural Studenten: -en → Singular -en)",
-      "descriptorAr": "نهايات لاتينية -ent/-ant/-and: Student, Präsident, Elefant, Praktikant, Demonstrant → -en",
+      "descriptorDe": "der Student/Praktikant → den Studenten/Praktikanten; typische Personensuffixe sind u. a. -ent und -ant.",
+      "descriptorAr": "تظهر أنماط شائعة في أسماء الأشخاص ذات لواحق مثل -ent و-ant.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -8262,8 +8294,8 @@
       "topicId": "b2-n-deklination",
       "ruleIndex": 3,
       "level": "B2",
-      "descriptorDe": "der Polizist → den Polizisten (Plural Polizisten)",
-      "descriptorAr": "نهايات المهن والعلوم -ist/-at/-oge/-graf/-soph: Polizist, Journalist, Soldat, Biologe, Fotograf, Philosoph → -en",
+      "descriptorDe": "der Polizist/Soldat/Biologe → den Polizisten/Soldaten/Biologen. Nicht jedes Wort mit derselben Buchstabenfolge ist schwach.",
+      "descriptorAr": "تشمل مجموعات أخرى أسماء أشخاص مثل Polizist وSoldat وBiologe؛ لا نعمم اللاحقة على كل كلمة.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -8278,8 +8310,8 @@
       "topicId": "b2-n-deklination",
       "ruleIndex": 4,
       "level": "B2",
-      "descriptorDe": "der Mensch → den Menschen; der Herr → den Herrn; der Nachbar → den Nachbarn (-n, nicht -en)",
-      "descriptorAr": "شواذ: Mensch/Herr/Nachbar/Bauer/Bär/Held/Prinz — الاستثناء Nachbar/Bauer/Herr تأخذ -n فقط لا -en في المفرد",
+      "descriptorDe": "Einzeln lernen: der Mensch → den Menschen; der Herr → den Herrn; der Nachbar → den Nachbarn; der Bauer → den Bauern.",
+      "descriptorAr": "تُحفظ هذه الكلمات وصيغها منفردة؛ وقد تكون النهاية -n أو -en بحسب الجذر.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -8294,8 +8326,8 @@
       "topicId": "b2-n-deklination",
       "ruleIndex": 5,
       "level": "B2",
-      "descriptorDe": "Nominativ Singular bleibt unverändert: der Student hilft mir (nicht *den Studenten!)",
-      "descriptorAr": "الاستثناء الوحيد: نوميناتيف المفرد لا يتغير — der Student ist hier (فاعل) لكن den Studenten sehe ich (مفعول)",
+      "descriptorDe": "Nominativ Singular bleibt unverändert: Der Student hilft mir.",
+      "descriptorAr": "Nominativ المفرد بلا نهاية إضافية: der Student؛ أما الحالات الأخرى فـStudenten.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -8310,8 +8342,8 @@
       "topicId": "b2-n-deklination",
       "ruleIndex": 6,
       "level": "B2",
-      "descriptorDe": "Herz (n): das Herz → des Herzens, dem Herzen (einzige N-Deklination im Neutrum)",
-      "descriptorAr": "حالة نادرة محايدة: das Herz → des Herzens (N-Deklination محايدة وحيدة — تُذكر للاكتمال)",
+      "descriptorDe": "Verwandte Mischtypen: der Name → den Namen, des Namens; das Herz → dem Herzen, des Herzens. Herz ist kein schwaches Maskulinum.",
+      "descriptorAr": "Name وHerz نمطان مختلطان قريبان في بعض الصيغ، لكن Herz محايد وليس اسماً مذكراً ضعيفاً.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -8374,8 +8406,8 @@
       "topicId": "b2-passiv",
       "ruleIndex": 4,
       "level": "B2",
-      "descriptorDe": "von + Agens vs durch + Mittel: von den Ingenieuren / durch einen Fehler",
-      "descriptorAr": "von للفاعل الأصلي، durch للوسيلة: von den Ingenieuren / durch einen Fehler.",
+      "descriptorDe": "Urheber häufig mit von + Dativ; Ursache oder vermittelnde Kraft häufig mit durch + Akkusativ: von der Kommission / durch den Sturm.",
+      "descriptorAr": "يأتي المنفذ غالباً مع von + Dativ، وتأتي العلة أو القوة الوسيطة غالباً مع durch + Akkusativ؛ يحدد المعنى الاختيار.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -8422,8 +8454,8 @@
       "topicId": "b2-konjunktiv2-vht",
       "ruleIndex": 2,
       "level": "B2",
-      "descriptorDe": "wäre + PII: Wäre ich früher gekommen, hätte ich dich getroffen.",
-      "descriptorAr": "حركة في الماضي مع sein: wäre gekommen/gewesen — مع أفعال الحركة.",
+      "descriptorDe": "Die Hilfsverbwahl folgt dem Perfekt: ist gekommen → wäre gekommen; hat gelernt → hätte gelernt.",
+      "descriptorAr": "نتبع مساعد Perfekt للفعل، لا قاعدة عامة تقول إن كل حركة تأخذ sein.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -8454,8 +8486,8 @@
       "topicId": "b2-konjunktiv2-vht",
       "ruleIndex": 4,
       "level": "B2",
-      "descriptorDe": "würde + PII umgangssprachlich: Ich würde das gemacht haben",
-      "descriptorAr": "محكي: würde + اسم مفعول؛ الكتابي يفضّل hätte/wäre + PII.",
+      "descriptorDe": "Für die hier geübte irreale Vergangenheit ist hätte/wäre + Partizip II die klare Kurzform. würde + Infinitiv Perfekt kann in anderen Perspektiv- oder Zukunftskontexten vorkommen.",
+      "descriptorAr": "لا نسم كل صيغة würde + Infinitiv Perfekt بأنها عامية أو خاطئة؛ لكن الماضي غير الواقعي المستهدف يصاغ بوضوح بـhätte/wäre.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -8470,8 +8502,8 @@
       "topicId": "b2-nominalisierung",
       "ruleIndex": 1,
       "level": "B2",
-      "descriptorDe": "weil-Satz → wegen + Genitiv: Wegen seiner Krankheit blieb er zu Hause.",
-      "descriptorAr": "تعليل weil → wegen + مضاف إليه: Wegen seiner Krankheit.",
+      "descriptorDe": "Kausale Umformung: weil er krank war ↔ wegen seiner Krankheit, wenn Agens und Bedeutung klar bleiben.",
+      "descriptorAr": "يمكن تحويل السبب إلى wegen + اسم إذا لم يضيع الفاعل أو المعنى.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -8486,8 +8518,8 @@
       "topicId": "b2-nominalisierung",
       "ruleIndex": 2,
       "level": "B2",
-      "descriptorDe": "dass-Satz → Nominal: die Tatsache, dass er kommt",
-      "descriptorAr": "dass → الاسم + dass.",
+      "descriptorDe": "Nomen mit Inhaltssatz: die Tatsache, dass er kommt. Der dass-Satz bleibt erhalten und erläutert das Nomen.",
+      "descriptorAr": "في Die Tatsache, dass… تبقى جملة dass لتشرح الاسم؛ هذا إعادة تنظيم لا حذف للفعل.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -8502,8 +8534,8 @@
       "topicId": "b2-nominalisierung",
       "ruleIndex": 3,
       "level": "B2",
-      "descriptorDe": "um … zu → zum Zweck des … / für + Akk",
-      "descriptorAr": "um zu → اسمي: zum Zweck.",
+      "descriptorDe": "Zweck: um Energie zu sparen ↔ zur Energieeinsparung; oft auch für + Akkusativ.",
+      "descriptorAr": "يمكن التعبير عن الغاية باسم مع zu أو für بحسب الاسم والسياق.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -8518,8 +8550,8 @@
       "topicId": "b2-nominalisierung",
       "ruleIndex": 4,
       "level": "B2",
-      "descriptorDe": "Adjektiv → Substantiv: wichtig → die Wichtigkeit",
-      "descriptorAr": "الصفة → اسم: wichtig → Wichtigkeit.",
+      "descriptorDe": "Ableitung: wichtig → die Wichtigkeit; untersuchen → die Untersuchung. Form und Bedeutung werden mit dem Nomen gelernt.",
+      "descriptorAr": "لا يمكن توليد كل اسم آلياً؛ تُحفظ الصيغة والمعنى والجنس.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -8534,8 +8566,8 @@
       "topicId": "b2-partizipial",
       "ruleIndex": 1,
       "level": "B2",
-      "descriptorDe": "Partizip I: lesend, kommend, schlafend — aktiv, gleichzeitig",
-      "descriptorAr": "Partizip I = d: lesend (قارئ).",
+      "descriptorDe": "Partizip I: lesend, kommend, schlafend; meist aktiv und gleichzeitig zum Bezugsereignis.",
+      "descriptorAr": "Partizip I غالباً فاعلي ومتزامن، لكن القراءة النهائية من السياق.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -8550,8 +8582,8 @@
       "topicId": "b2-partizipial",
       "ruleIndex": 2,
       "level": "B2",
-      "descriptorDe": "Partizip II: gelesen, angekommen, beschlossen — passiv/abgeschlossen",
-      "descriptorAr": "Partizip II = ge…t/en: gelesen (مقروء).",
+      "descriptorDe": "Partizip II: gelesen/beschlossen oft passiv oder resultativ; angekommen aktiv und vorzeitig. Bedeutung folgt Verb und Kontext.",
+      "descriptorAr": "Partizip II ليس مبنياً للمجهول دائماً؛ يعتمد على تعدية الفعل ومساعد Perfekt والسياق.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -8566,8 +8598,8 @@
       "topicId": "b2-partizipial",
       "ruleIndex": 3,
       "level": "B2",
-      "descriptorDe": "Erweitert: der gestern angekommene Brief = der Brief, der gestern ankam",
-      "descriptorAr": "الموسعة = موصولة مختصرة.",
+      "descriptorDe": "Erweitert: der gestern angekommene Brief = der Brief, der gestern ankam.",
+      "descriptorAr": "تأتي مكملات الصفة قبلها، والمجموعة كلها قبل الاسم.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -8582,8 +8614,8 @@
       "topicId": "b2-partizipial",
       "ruleIndex": 4,
       "level": "B2",
-      "descriptorDe": "Komma-Regel: Partizipialgruppe mit Eigenhandlung → Komma optional",
-      "descriptorAr": "المجموعة التشاركية: فاصلة اختيارية حسب المعنى.",
+      "descriptorDe": "Die Adjektivendung steht am Partizip: der angekommene Brief; die beschlossenen Maßnahmen; mit dem gelesenen Text.",
+      "descriptorAr": "تأخذ الكلمة المشتقة نهاية الصفة بحسب الأداة والحالة والجنس والعدد.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",

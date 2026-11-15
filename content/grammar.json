@@ -3072,9 +3072,9 @@
   "b2-indirekte-rede": {
     "id": "b2-indirekte-rede",
     "titleDe": "Indirekte Rede (Konjunktiv I)",
-    "titleAr": "المنقول — أداة الصحافة والدبلوماسية",
+    "titleAr": "الكلام غير المباشر بـKonjunktiv I",
     "level": "B2",
-    "ziel": "تحوّل كلاماً مباشراً إلى منقول (Konjunktiv I) مع قاعدة الاستبدال عند التطابق.",
+    "ziel": "تنقل أقوال الآخرين بـKonjunktiv I في سياقات مناسبة، وتختار Konjunktiv II عند الحاجة إلى تمييز الصيغة.",
     "voraus": [
       "b1-konj2"
     ],
@@ -3112,29 +3112,29 @@
         "explanationAr": "sein في المنقول للجمع: seien."
       }
     ],
-    "summaryAr": "لنقل كلام الآخرين دون التزام بصحته (شرط أساسي في الصحافة!). الصيغة: فعل المنقول (Konjunktiv I) في نهاية الجملة التابعة: «Der Minister sagte, die Lage sei stabil.» إذا تطابقت صيغة المنقول مع المضارع (الحالة الشائعة مع wir/sie) ننتقل إلى Konjunktiv II: «Sie sagten, sie hätten keine Zeit.»",
+    "summaryAr": "يستعمل Konjunktiv I كثيراً في نقل الأقوال، ولا سيما في التقارير والصحافة، لتمييز الكلام المنقول عن صوت الكاتب؛ لكنه لا يثبت صدق القول أو كذبه. من دون dass تبقى الجملة المنقولة بترتيب شبيه بالجملة الرئيسية: Er sagt, er komme morgen. ومع dass يأتي الفعل المصرّف في النهاية: Er sagt, dass er morgen komme. إذا طابقت صيغة Konjunktiv I صيغة Indikativ يمكن استعمال Konjunktiv II لتمييز النقل: Sie sagten, sie hätten keine Zeit. ويظل Indikativ ممكناً في سياقات أخرى بحسب السجل والموقف.",
     "rules": [
       {
-        "de": "Bildung: Infinitiv + e (ich lerne → er sagte, ich lerne) · iert-Verben: studiere",
-        "ar": "صيغة es-geb-form: werde → er sagte, er werde — مع iert-Verben: studiere"
+        "de": "Bildung: Verbstamm + Konjunktiv-I-Endung: ich komme, du kommest, er/sie/es komme, wir kommen, ihr kommet, sie kommen. Besonders deutlich ist meist die 3. Person Singular.",
+        "ar": "يبنى من جذر الفعل ونهايات Konjunktiv I؛ وتكون صيغة الغائب المفرد مثل er komme واضحة، بينما تطابق صيغ أخرى Indikativ أحياناً."
       },
       {
-        "de": "sein: sei, seiest, sei, seien, seiet, seien",
-        "ar": "الأهم: er sei, sie seien — sein شاذ كلياً: sei, seiest, sei, seien, seiet, seien"
+        "de": "sein: sei, seiest, sei, seien, seiet, seien.",
+        "ar": "sein له صيغ خاصة: er sei، sie seien."
       },
       {
-        "de": "Wenn Konjunktiv I wie der Indikativ aussieht, weicht man auf Konjunktiv II aus: haben → hätten, können → könnten",
-        "ar": "لتمييز المنقول عن المباشر — عند التزامن (Indikativ = Konj. I) ← Konjunktiv II: haben→hätten, können→könnten"
+        "de": "Wenn Konjunktiv I mit dem Indikativ zusammenfällt, kann Konjunktiv II die indirekte Rede eindeutig markieren: sie haben → sie hätten.",
+        "ar": "عند تطابق Konjunktiv I مع Indikativ يمكن استعمال Konjunktiv II لتوضيح أن الكلام منقول؛ ليست قاعدة آلية في كل سجل."
       },
       {
-        "de": "In der indirekten Rede mit dass steht das Verb am Ende: Er sagte, dass er komme.",
-        "ar": "الفعلُ في آخرِ الجملةِ المنقولةِ بـdass — مثل dass دائماً — الفعل في نهاية الجملة المنقولة"
+        "de": "Ohne dass: Er sagte, er komme morgen. Mit dass: Er sagte, dass er morgen komme.",
+        "ar": "من دون dass تأتي الصيغة بعد الفاعل، ومع dass ينتقل الفعل المصرّف إلى نهاية الجملة التابعة."
       }
     ],
     "examples": [
       {
         "de": "Der Sprecher sagte, die Verhandlungen seien erfolgreich.",
-        "ar": "المتحدث قال إن المفاوضات ناجحة. — sei/seien — نقل دون التزام"
+        "ar": "قال المتحدث إن المفاوضات ناجحة؛ seien تميّز القول المنقول من دون أن تحكم على صدقه."
       },
       {
         "de": "Sie erklärte, sie habe das nicht gesagt.",
@@ -3147,12 +3147,12 @@
     ],
     "pitfalls": [
       {
-        "de": "„Er sagte, dass die Lage ist stabil.“ ✗",
-        "ar": "في المنقول الصحافي: «…, die Lage sei stabil» (Konjunktiv I)"
+        "de": "„Er sagte, dass die Lage ist stabil.“ ✗ → „Er sagte, dass die Lage stabil sei.“ ✓",
+        "ar": "مع dass يكون الفعل المصرّف في النهاية؛ وفي نمط النقل المستهدف نستعمل sei."
       },
       {
-        "de": "„Sie sagt, sie hat keine Zeit.“ ✗ → „Sie sagt, sie habe keine Zeit.“ ✓",
-        "ar": "في النقل الرسمي غير المباشر نستخدم Konjunktiv I: sie habe، لا Indikativ hat."
+        "de": "„Sie sagt, sie hat keine Zeit“ ist als Indikativ möglich; in der hier geübten formellen indirekten Rede: „Sie sagt, sie habe keine Zeit.“",
+        "ar": "Indikativ ليس خطأ مطلقاً في النقل؛ يتدرّب الدرس على Konjunktiv I الواضح في السجل الرسمي."
       }
     ],
     "exercises": [
@@ -3173,10 +3173,9 @@
         "promptDe": "Sie erklärte, sie ___ (haben) keine Zeit.",
         "text": "Sie erklärte, sie ___ keine Zeit.",
         "answer": [
-          "habe",
-          "hätte"
+          "habe"
         ],
-        "explanationAr": "habe (Konj. I)؛ وإن التبست أمكن hätte."
+        "explanationAr": "habe هي صيغة Konjunktiv I الواضحة للغائب المفرد؛ hätte قد يحمل مسافة أو معنىً آخر بحسب السياق لكنه ليس جواب هذا التدريب."
       },
       {
         "id": "g15e3",
@@ -3201,7 +3200,7 @@
           "er komme",
           "morgen"
         ],
-        "explanationAr": "komme (Konj. I von kommen) في النهاية.",
+        "explanationAr": "في النقل بلا dass: الفاعل er ثم صيغة Konjunktiv I komme، لا فعل في نهاية جملة dass.",
         "promptAr": "حوّل إلى كلام منقول (Konjunktiv I)."
       },
       {
@@ -3245,10 +3244,10 @@
   },
   "b2-partizip": {
     "id": "b2-partizip",
-    "titleDe": "Partizipialattribute & Nominalstil",
-    "titleAr": "الصفات المشتقة والأسلوب الاسمي",
+    "titleDe": "Partizipialattribute: Partizip I und II",
+    "titleAr": "الصفات المشتقة من Partizip I وPartizip II",
     "level": "B2",
-    "ziel": "تفهم الصفات المشتقة الممددة وتحوّلها لجمل موصولة.",
+    "ziel": "تفهم الصفات المشتقة الموسعة وتحوّل بينها وبين الجمل الموصولة مع مراعاة المعنى والنهاية.",
     "voraus": [
       "b1-partizip1"
     ],
@@ -3286,55 +3285,55 @@
         "points": 2
       }
     ],
-    "summaryAr": "لتحويل الجمل الطويلة إلى عبارات مكثّفة: «Das ist ein von vielen Experten kritisierter Plan» (خطة ينتقدها خبراء كثيرون). النمط: ge…t (منفّذ) / ge…en (متلقّى) / d/end (كائن في حالة). الأسلوب الاسمي (Nominalstil) سمة النصوص الأكاديمية B2: statt zu sprechen ← statt einer Rede.",
+    "summaryAr": "يستعمل Partizip I قبل الاسم غالباً لوصف فعل متزامن يؤديه المرجع: das lesende Kind. أما Partizip II فقد يعطي معنىً مبنياً للمجهول أو نتيجةً مع الأفعال المتعدية: das gelesene Buch، وقد يعطي معنىً سابقاً فاعلياً مع أفعال تبني Perfekt بـsein: der angekommene Zug. ويُصرف كلاهما كصفة بحسب الأداة والحالة والجنس والعدد.",
     "rules": [
       {
-        "de": "Partizip I (=d): das lesende Kind",
-        "ar": "الطفل القارئ — Partizip I (=d) كصفة موصوفة: das lesende Kind"
+        "de": "Partizip I = Infinitiv + d, dann Adjektivendung: lesen → das lesende Kind.",
+        "ar": "Partizip I = المصدر + d ثم نهاية الصفة: lesend + e."
       },
       {
-        "de": "Partizip II (=ge…t/en): das gelesene Buch",
-        "ar": "الكتاب المقروء — Partizip II (=ge…t/en) كصفة: das gelesene Buch"
+        "de": "Partizip II als Attribut: das gelesene Buch; bei intransitiven sein-Verben auch aktiv-vorzeitig: der angekommene Zug.",
+        "ar": "قد يكون Partizip II مبنياً للمجهول أو دالاً على النتيجة، وقد يصف فعلاً سابقاً فاعلياً مع أفعال مثل ankommen."
       },
       {
-        "de": "Mit dem in Berlin gebauten Zug…",
-        "ar": "أسلوب B2 المكثّف — Mit dem in Berlin gebauten Zug… (الفعلية ← الاسمية)"
+        "de": "Erweitertes Attribut: der gestern in Berlin angekommene Zug. Die ganze Gruppe steht vor dem Nomen.",
+        "ar": "يمكن توسيع الصفة بمكملات، وتبقى المجموعة كلها قبل الاسم."
       },
       {
-        "de": "um zu / ohne zu / statt zu + Infinitiv",
-        "ar": "لأن / بدون أن / بدلاً من أن — الفعل للنهاية"
+        "de": "Relativsatz und Attribut: der Brief, der gestern ankam ↔ der gestern angekommene Brief. Nicht jede Umformung ist stilistisch gleich natürlich.",
+        "ar": "يمكن التحويل إلى جملة موصولة أو منها عندما يبقى المعنى طبيعياً؛ ولا تكون كل صياغة متساوية أسلوبياً."
       }
     ],
     "examples": [
       {
-        "de": "die von der Regierung beschlossenen Maßnahmen.",
-        "ar": "الإجراءات التي اعتمدتها الحكومة. — Partizip II مطوّل"
+        "de": "Die von der Regierung beschlossenen Maßnahmen treten morgen in Kraft.",
+        "ar": "الإجراءات التي أقرتها الحكومة؛ Partizip II موسع ونهايته توافق الجمع."
       },
       {
-        "de": "Er kam, ohne sich zu entschuldigen.",
-        "ar": "جاء دون أن يعتذر. — ohne zu"
+        "de": "Das am Fenster sitzende Kind liest.",
+        "ar": "الطفل الجالس عند النافذة يقرأ؛ Partizip I موسع."
       },
       {
-        "de": "Sie lernt täglich, um die Prüfung zu bestehen.",
-        "ar": "تدرس يومياً لتجتاز الامتحان. — um zu (الغاية)"
+        "de": "Der gestern angekommene Brief liegt auf dem Tisch.",
+        "ar": "الخطاب الذي وصل أمس؛ Partizip II لمعنى سابق فاعلي مع ankommen."
       }
     ],
     "pitfalls": [
       {
-        "de": "„Der von der Regierung beschlossene Maßnahmen“ ✗",
-        "ar": "النهاية تتبع الأصل: Maßnahmen جمع ← beschlossenen"
+        "de": "„die von der Regierung beschlossene Maßnahmen“ ✗ → „die von der Regierung beschlossenen Maßnahmen“ ✓",
+        "ar": "مع جمع Maßnahmen وبعد die تأخذ الصفة النهاية -en."
       }
     ],
     "exercises": [
       {
         "id": "g16e1",
         "type": "fill",
-        "promptDe": "Er kam, ohne ___ (sich entschuldigen).",
-        "text": "Er kam, ohne ___.",
+        "promptDe": "das ___ Kind (schlafen, Partizip I)",
+        "text": "das ___ Kind",
         "answer": [
-          "sich zu entschuldigen"
+          "schlafende"
         ],
-        "explanationAr": "ohne zu + مصدر (الفعل للنهاية)."
+        "explanationAr": "schlafen + d + نهاية الصفة -e: das schlafende Kind."
       },
       {
         "id": "g16e2",
@@ -3352,12 +3351,12 @@
       {
         "id": "g16e3",
         "type": "fill",
-        "promptDe": "Sie spart Geld, ___ ein Auto zu kaufen. (Absicht)",
+        "promptDe": "der in Berlin ___ Student (wohnen, Partizip I)",
         "answer": [
-          "um"
+          "wohnende"
         ],
-        "explanationAr": "um zu = للغاية.",
-        "promptAr": "تلميح الوظيفة: التعبير عن الغاية أو الهدف."
+        "explanationAr": "wohnen + d ثم نهاية -e: der in Berlin wohnende Student.",
+        "promptAr": "حوّل wohnen إلى Partizip I مصرّف."
       },
       {
         "id": "b2-partizip-u1",
@@ -3369,8 +3368,7 @@
           "beschlossenen maßnahmen"
         ],
         "darfNicht": [
-          "beschlossene maßnahmen",
-          "die"
+          "die Maßnahmen, die"
         ],
         "explanationAr": "Partizip II قبل الاسم بنهاية الصفة -en.",
         "points": 2
@@ -3406,10 +3404,10 @@
   },
   "b2-bedingung": {
     "id": "b2-bedingung",
-    "titleDe": "Bedingungssätze (Typ 1–3)",
-    "titleAr": "جمل الشرط الثلاثة",
+    "titleDe": "Reale und irreale Bedingungssätze",
+    "titleAr": "جمل الشرط الواقعية والافتراضية",
     "level": "B2",
-    "ziel": "تبني جمل الشرط الثلاثة (real/hypothetisch/irreal) بالأزمنة الصحيحة.",
+    "ziel": "تصوغ شروطاً واقعية وافتراضية في الحاضر والماضي، وتختار الصيغة بحسب المعنى الزمني.",
     "voraus": [
       "b1-konj2"
     ],
@@ -3441,23 +3439,23 @@
           "wenn",
           "bestehst"
         ],
-        "explanationAr": "النوع الأول: مضارع + مضارع.",
+        "explanationAr": "هذا المثال الواقعي يستعمل Präsens في الطرفين؛ ليست هذه الصيغة الوحيدة لكل شرط واقعي.",
         "points": 2
       }
     ],
-    "summaryAr": "النوع 1 (واقعي): wenn +Präsens, … Futur/Präsens. النوع 2 (غير واقعي في الحاضر): wenn + Konjunktiv II, … würde/Konj. II. النوع 3 (خيالي في الماضي — «لو أنّ»): wenn + Plusquamperfekt II (hätte/wäre + P.II), … hätte/wäre + P.II. وأداة الربط المكتوبة الرفيعة: sofern, sofern nicht, falls, unter der Bedingung, dass…",
+    "summaryAr": "يمكن تنظيم الشرط للتعلّم في ثلاثة أنماط دلالية: شرط واقعي أو مفتوح، وشرط افتراضي في الحاضر/المستقبل، وشرط ماضٍ مخالف للواقع. لكن الألمانية لا تفرض معادلة زمنية جامدة: قد تأتي في الشرط الواقعي صيغ الحاضر أو المستقبل أو الأمر بحسب السياق. للشرط الافتراضي نستعمل Konjunktiv II، وللماضي غير الواقعي Konjunktiv II Vergangenheit بـhätte/wäre + Partizip II. ومن الروابط الممكنة wenn وfalls وsofern.",
     "rules": [
       {
-        "de": "Typ 1: Wenn du lernst, bestehst du die Prüfung.",
-        "ar": "شرط واقعي — ممكن"
+        "de": "Reale/offene Bedingung: Wenn du lernst, bestehst du die Prüfung. Je nach Kontext sind auch Futur, Modalverb oder Imperativ möglich.",
+        "ar": "في الشرط الواقعي أو المفتوح تتحدد الأزمنة وصيغة الجواب من السياق؛ المثال الشائع Präsens + Präsens."
       },
       {
-        "de": "Typ 2: Wenn ich Zeit hätte, würde ich reisen.",
-        "ar": "غير واقعي الآن"
+        "de": "Irreal in Gegenwart/Zukunft: Wenn ich Zeit hätte, würde ich reisen / reiste ich.",
+        "ar": "للشرط الافتراضي الحالي أو المستقبلي نستعمل Konjunktiv II."
       },
       {
-        "de": "Typ 3: Wenn ich früher gekommen wäre, hätte ich dich getroffen.",
-        "ar": "خيالي في الماضي — لا يمكن تغييره"
+        "de": "Irreal in der Vergangenheit: Wenn ich früher gekommen wäre, hätte ich dich getroffen.",
+        "ar": "للماضي المخالف للواقع نستعمل hätte/wäre + Partizip II في الشرط والنتيجة بحسب الفعل."
       }
     ],
     "examples": [
@@ -3498,7 +3496,7 @@
         "answer": [
           "gekommen"
         ],
-        "explanationAr": "شرط النوع الثالث (ماضٍ غير واقع): wäre/hätte + Partizip II. (Typ 3: wären/hätten + P.II.)"
+        "explanationAr": "شرط ماضٍ غير واقعي: gekommen wäre في التابعة، وhätte … gesehen في الرئيسية."
       },
       {
         "id": "g17e3",
@@ -3510,7 +3508,7 @@
           "Trotzdem"
         ],
         "answer": "Falls",
-        "explanationAr": "falls = شرط مهذّب/احتمال.",
+        "explanationAr": "falls يقدّم شرطاً ممكناً، وغالباً يبرز عدم اليقين أكثر من wenn؛ ليس أداة تهذيب بحد ذاتها.",
         "promptAr": "أداة شرط (إذا)."
       },
       {
@@ -3551,9 +3549,9 @@
   "b2-funktionsverben": {
     "id": "b2-funktionsverben",
     "titleDe": "Funktionsverbgefüge",
-    "titleAr": "التركيبات الوظيفية — سرّ النص الرسمي",
+    "titleAr": "تراكيب الأفعال الوظيفية في السياق",
     "level": "B2",
-    "ziel": "تستخدم FVG أكاديمية (zur Verfügung stehen, in Kenntnis setzen) بدل الأفعال البسيطة.",
+    "ziel": "تستخدم تراكيب FVG شائعة في السياق المناسب وتفرّق بين بنيتها ومعنى الفعل البسيط القريب.",
     "voraus": [
       "b1-funktionsverben"
     ],
@@ -3591,20 +3589,24 @@
         "points": 2
       }
     ],
-    "summaryAr": "اسم + فعل فاتر يساوي معنى واحداً: eine Entscheidung treffen = entscheiden. تُفضَّل في الرسائل الرسمية والتقارير لأنها تعطي نبرة موضوعية. احفظها كوحدة واحدة مع حرف الجرّ! (in Frage stellen, zur Verfügung stellen, Kritik üben, Rücksicht nehmen, eine Rolle spielen).",
+    "summaryAr": "يجمع Funktionsverbgefüge اسماً، وأحياناً حرف جر، مع فعل وظيفي ثابت: eine Entscheidung treffen، Kritik an etwas üben، zur Verfügung stehen/stellen. يحمل الاسم نواة المعنى، وقد يضيف الفعل معنى الحالة أو بدء الحدث أو إحداثه. بعض هذه التراكيب شائع في الكتابة الرسمية، لكن بعضها يومي، ولا يكون استبدال الفعل البسيط بها أفضل دائماً أو مطابقاً تماماً.",
     "rules": [
       {
-        "de": "Verb + Nomen",
-        "ar": "eine Frage stellen = fragen — Verb + Nomen يساوي فعلًا واحدًا"
+        "de": "FVG als Einheit lernen: eine Entscheidung treffen, eine Frage stellen, Kritik an etwas üben.",
+        "ar": "يُحفظ التركيب كوحدة مع الأداة وحرف الجر والحالة."
       },
       {
-        "de": "Kritik üben AN + Dativ",
-        "ar": "لا تحفظ الاسم منفرداً! — احفظ الحرف مع الوحدة: Kritik üben AN + Dativ"
+        "de": "Bedeutungsunterschiede beachten: zur Verfügung stehen (verfügbar sein) ≠ etwas zur Verfügung stellen (bereitstellen).",
+        "ar": "قد يغيّر الفعل الوظيفي المعنى: stehen يعني متاحاً، وstellen يعني إتاحة شيء."
+      },
+      {
+        "de": "Register und Kontext prüfen: Ein einfaches Verb kann klarer sein; ein FVG ist nicht automatisch formeller oder besser.",
+        "ar": "اختر بين التركيب والفعل البسيط بحسب الدقة والسجل، لا بهدف تعقيد النص."
       }
     ],
     "tables": [
       {
-        "captionAr": "أشهر 8 تركيبات",
+        "captionAr": "ثمانية تراكيب شائعة ومعانٍ قريبة",
         "headers": [
           "التركيب",
           "المقابل البسيط",
@@ -3657,7 +3659,7 @@
     "examples": [
       {
         "de": "Die Regierung hat eine wichtige Entscheidung getroffen.",
-        "ar": "اتّخذت الحكومة قراراً مهماً. — = hat entschieden (لكن أنبل)"
+        "ar": "اتخذت الحكومة قراراً مهماً؛ تركيب ثابت قريب من sich entscheiden بحسب السياق."
       },
       {
         "de": "Dieser Faktor spielt dabei keine Rolle.",
@@ -3720,7 +3722,7 @@
         "darfNicht": [
           "entschied"
         ],
-        "explanationAr": "التركيب الوظيفي: eine Entscheidung treffen بدل sich entscheiden — أسلوب B2 المكتوب.",
+        "explanationAr": "الهدف التدرب على التركيب eine Entscheidung treffen؛ لا يعني ذلك أن الفعل البسيط أدنى أسلوبياً.",
         "points": 2
       },
       {
@@ -3759,10 +3761,10 @@
   },
   "b2-infinitiv": {
     "id": "b2-infinitiv",
-    "titleDe": "erweiterter Infinitiv mit „zu“",
+    "titleDe": "Erweiterter Infinitiv mit „zu“",
     "titleAr": "المصدر المطوّل بـ zu",
     "level": "B2",
-    "ziel": "تبني المصدر المطوّل (um…zu, ohne…zu, statt…zu) وتميّزه عن dass.",
+    "ziel": "تبني مجموعات المصدر مع zu وum/ohne/anstatt، وتختار بينها وبين الجملة المصرفة بحسب الفاعل والمعنى.",
     "voraus": [
       "b1-konnektoren",
       "b1-absicht"
@@ -3802,19 +3804,23 @@
         "points": 2
       }
     ],
-    "summaryAr": "بعد أفعال معينة يأتي zu + مصدر في نهاية الجملة (ثلاثية في النهاية!): «Ich versuche, pünktlich zu sein»، «Es ist wichtig, täglich zu üben». مع الأفعال المنفصلة يأتي zu في المنتصف: «anzufangen». مع um zu / ohne zu / statt zu: الفعل أخراً أيضاً.",
+    "summaryAr": "تأتي مجموعة المصدر مع zu بعد أفعال أو أسماء أو أحكام معينة: Ich versuche, pünktlich zu sein؛ Es ist wichtig, täglich zu üben. يُفهم فاعل المصدر من الجملة الحاكمة: قد يكون فاعلها كما في Ich hoffe, zu kommen، أو مفعولها كما في Ich bitte dich, zu kommen. إذا احتيج إلى فاعل مصرح به أو زمن/وجه مصروف فغالباً نستخدم dass. في الفعل المنفصل تدخل zu بين السابقة والجذر: anzufangen.",
     "rules": [
       {
-        "de": "versuchen, planen, hoffen, vergessen, sich freuen + zu + Infinitiv",
-        "ar": "الفعل المصدري للنهاية"
+        "de": "Zu-Infinitiv nach passenden Verben/Nomen/Adjektiven: versuchen, planen, die Hoffnung, bereit sein. Die Ergänzung muss lexikalisch passen.",
+        "ar": "لا تأخذ كل كلمة مجموعة مصدر؛ تُحفظ البنية مع الفعل أو الاسم أو الصفة المناسبة."
       },
       {
-        "de": "Es ist wichtig / notwendig / schwer, … zu + Infinitiv",
-        "ar": "الحكم على الفعل"
+        "de": "Das Bezugswort steuert das gedachte Subjekt: Ich hoffe, zu kommen; ich bitte dich, zu kommen. Für ein ausdrücklich genanntes Subjekt ist oft ein dass-Satz nötig.",
+        "ar": "قد يعود فاعل المصدر المفهوم إلى الفاعل أو المفعول في الجملة الرئيسية؛ ومع فاعل مصرح به نحتاج غالباً جملة dass."
       },
       {
-        "de": "Trennbar: vorzubereiten, anzufangen",
-        "ar": "مثل ge في Perfekt — Trennbar: vorzubereiten, anzufangen (zu في المنتصف)"
+        "de": "Trennbare Verben: anzufangen, vorzubereiten; untrennbar: zu besuchen.",
+        "ar": "في الفعل المنفصل تدخل zu بين السابقة والجذر، أما غير المنفصل فتأتي قبله."
+      },
+      {
+        "de": "Komma ist bei um/ohne/anstatt zu sowie bei Bezug auf ein Nomen oder Korrelat obligatorisch; in manchen anderen Fällen ist es freigestellt.",
+        "ar": "الفاصلة واجبة مع um/ohne/anstatt zu، ومع اعتماد المجموعة على اسم أو ضمير إحالة؛ وقد تكون اختيارية في حالات أخرى."
       }
     ],
     "examples": [
@@ -3828,7 +3834,7 @@
       },
       {
         "de": "Er hat angefangen, den Text zu lesen.",
-        "ar": "بدأ قراءة النص. — anzufangen ← zu في المنتصف"
+        "ar": "بدأ قراءة النص؛ angefangen هو Partizip II للفعل الحاكم، أما zu lesen فهو مصدر المجموعة التابعة."
       }
     ],
     "pitfalls": [
@@ -6823,7 +6829,7 @@
     "titleDe": "Modalpartikeln & Subjektive Modalverben",
     "titleAr": "جسيمات النبرة والمعنى الذاتي للأفعال الناقصة (الافتراض والشائعات)",
     "level": "B2",
-    "ziel": "تفهم جسيمات النبرة (doch, mal, ja, denn) وتستخدمها طبيعياً.",
+    "ziel": "تفهم جسيمات النبرة الشائعة والمعاني الاستنتاجية أو النقلية لبعض الأفعال الناقصة في سياقها.",
     "voraus": [
       "a1-praesens"
     ],
@@ -6850,39 +6856,39 @@
         "type": "mc",
         "promptDe": "Was drückt denn aus in: Wo warst du denn?",
         "options": [
-          "Überraschung und echtes Interesse",
+          "Interesse oder Überraschung, je nach Kontext",
           "Befehl",
           "Verbot"
         ],
-        "answer": "Überraschung und echtes Interesse",
-        "explanationAr": "denn في السؤال = دهشة واهتمام حقيقي."
+        "answer": "Interesse oder Überraschung, je nach Kontext",
+        "explanationAr": "قد تضيف denn في السؤال اهتماماً أو دهشة بحسب السياق والنبرة."
       }
     ],
-    "summaryAr": "أدوات التلوين الصوتي والوجداني (doch, mal, ja) والمعنى الذاتي للأفعال الناقصة للتعبير عن درجات اليقين والشائعات في B2.",
+    "summaryAr": "تضيف جسيمات مثل doch وmal وja وdenn موقف المتكلم ونبرته، ولذلك يتغير أثرها مع السياق والتنغيم. وتستعمل بعض الأفعال الناقصة استعمالاً ذاتياً: müssen لاستنتاج قوي، dürfte لترجيح حذر، könnte لإمكان، وsollen لنقل قول منسوب إلى الغير. هذه درجات تقريبية دلالية وليست نسباً رقمية ثابتة.",
     "rules": [
       {
-        "de": "mal macht die Bitte leichter: Warte mal!",
-        "ar": "mal تجعل الطلب والأمر أكثر وداً ولطفاً: انتظر لحظة!"
+        "de": "mal kann eine Aufforderung lockerer wirken lassen: Warte mal! Wirkung und Höflichkeit hängen auch von Ton und Situation ab.",
+        "ar": "قد تجعل mal الأمر أقل رسمية، لكن اللطف يتحدد أيضاً بالنبرة والعلاقة."
       },
       {
-        "de": "doch verstärkt oder widerspricht freundlich: Das ist doch toll!",
-        "ar": "doch للتأكيد الودي أو التذكير بأمر متفق عليه: هذا رائع حقاً!"
+        "de": "doch kann erinnern, widersprechen oder verstärken: Das ist doch toll!",
+        "ar": "قد تأتي doch للتذكير أو الاعتراض أو التأكيد بحسب السياق."
       },
       {
-        "de": "einfach nimmt der Aufforderung die Schwere: Probier es einfach!",
-        "ar": "einfach تخفف صعوبة الفعل وتشجع على التجربة: جرب فقط!"
+        "de": "einfach kann vereinfachen oder zu einer Handlung ermutigen: Probier es einfach!",
+        "ar": "قد تعرض einfach الفعل كحل بسيط أو تشجع عليه."
       },
       {
-        "de": "sollen drückt fremde Behauptungen und Gerüchte aus: Er soll sehr reich sein.",
-        "ar": "المعنى الذاتي لـ sollen: نقل ادعاء أو شائعة عن الآخرين (يُقال إنه ثري جداً / قيل عنه)."
+        "de": "sollen kann eine fremde Behauptung wiedergeben: Er soll sehr reich sein.",
+        "ar": "في الاستعمال الذاتي قد ينقل sollen قولاً منسوباً إلى الآخرين من دون إثباته."
       },
       {
-        "de": "müssen drückt höchste subjektive Sicherheit aus: Das Licht brennt, er muss da sein.",
-        "ar": "المعنى الذاتي لـ müssen: استنتاج بيقين شبه مطلق بناءً على دليل (النور مشتعل، لا بد أنه هناك)."
+        "de": "müssen kann eine starke Schlussfolgerung ausdrücken: Das Licht brennt; er muss da sein.",
+        "ar": "قد يعبّر müssen عن استنتاج قوي من قرينة، لا عن يقين مطلق."
       },
       {
-        "de": "dürfte drückt hohe Wahrscheinlichkeit aus: Der Zug dürfte Verspätung haben.",
-        "ar": "المعنى الذاتي لـ dürfte: احتمال راجح بنسبة تفوق 75% (من المرجح أن يتأخر القطار)."
+        "de": "dürfte markiert eine vorsichtige, relativ wahrscheinliche Annahme: Der Zug dürfte Verspätung haben.",
+        "ar": "dürfte يفيد ترجيحاً حذراً من دون نسبة رقمية ثابتة."
       }
     ],
     "tables": [
@@ -6916,7 +6922,7 @@
           ],
           [
             "halt/eben",
-            "حتمية",
+            "قبول أو تفسير استسلامي للسياق",
             "Ist halt so."
           ]
         ]
@@ -6931,22 +6937,22 @@
         "rows": [
           [
             "müssen",
-            "يقين استنتاجي 99% (لا مفر منه)",
-            "Er muss krank sein (die Tür ist verschlossen)."
+            "استنتاج قوي",
+            "Er muss krank sein; sein Auto steht noch hier."
           ],
           [
             "dürfte",
-            "احتمال راجح 75% (من المرجح جداً)",
+            "ترجيح حذر",
             "Sie dürfte die Prüfung bestanden haben."
           ],
           [
             "könnte",
-            "إمكانية محتملة 50% (قد يحدث وقد لا)",
+            "إمكان",
             "Es könnte morgen schneien."
           ],
           [
             "sollen",
-            "نقل شائعة أو قول شخص آخر (يُقال أن)",
+            "قول منسوب إلى الغير",
             "Der Minister soll zurücktreten."
           ]
         ]
@@ -6955,37 +6961,37 @@
     "examples": [
       {
         "de": "Komm mal bitte her!",
-        "ar": "تعالَ من فضلك (أمر لطيف جداً)"
+        "ar": "تعال من فضلك؛ mal تجعل الطلب أقل رسمية هنا، والنبرة مهمة."
       },
       {
         "de": "Das ist doch keine Kunst!",
-        "ar": "هذا ليس بصعوبة أصلاً! (doch محبّة)"
+        "ar": "هذا ليس صعباً؛ doch تعترض على تصور سابق في هذا السياق."
       },
       {
         "de": "Mach dir doch keine Sorgen!",
-        "ar": "لا تشل همّاً!"
+        "ar": "لا تقلق؛ doch تلطف أو تشجع بحسب النبرة."
       },
       {
         "de": "Ich bin eben müde.",
-        "ar": "أنا متعب — هكذا أكون (eben)"
+        "ar": "أنا متعب فحسب/هذا هو الواقع؛ eben تحمل قبولاً تفسيرياً هنا."
       },
       {
-        "de": "Probier das mal einfach!",
-        "ar": "جرّبه فحسب! (kombination محبّبة)"
+        "de": "Probier das einfach mal!",
+        "ar": "جرّب ذلك ببساطة؛ اجتماع einfach وmal طبيعي بهذا الترتيب هنا."
       }
     ],
     "pitfalls": [
       {
-        "de": "„Mach einfach mal doch!“ ✗",
-        "ar": "الترتيب: بعد الفعل مباشرة، وحدّ أقصى جسيمين في الجملة"
+        "de": "„Mach einfach mal doch!“ wirkt in diesem Kontext unnatürlich → „Mach das doch einfach mal!“",
+        "ar": "ترتيب الجسيمات يتبع الاستعمال والسياق، ولا توجد قاعدة صحيحة من نوع «بعد الفعل مباشرة وحد أقصى جسيمان»."
       },
       {
         "de": "„Ja!“ (Antwort) ≠ „Du bist ja müde.“ (Modalpartikel)",
         "ar": "لا تخلط بين ja جواباً مستقلاً وبين ja جسيمًا يعبّر عن معلومة مشتركة أو واضحة."
       },
       {
-        "de": "„Das ist doch.“ ✗",
-        "ar": "الجسيم لا يبقى وحده — يرافق معنى دائماً"
+        "de": "„Das ist doch.“ ist ohne passenden Kontext unvollständig → „Das ist doch klar.“",
+        "ar": "يحتاج الجسيم إلى عبارة يفهم منها موقف المتكلم؛ لا يحمل المعنى وحده."
       }
     ],
     "resources": [],
@@ -7021,7 +7027,7 @@
         "type": "fill",
         "promptDe": "Es ist ___ so. (Unvermeidlichkeit)",
         "answer": "halt",
-        "explanationAr": "halt/eben للحتمية الواقعية",
+        "explanationAr": "halt/eben قد يقدمان الواقع على أنه مقبول أو غير قابل للتغيير في هذا السياق.",
         "promptAr": "تلميح المعنى: حتمية أو واقع لا يتغيّر."
       },
       {
@@ -7090,7 +7096,7 @@
     "titleDe": "Futur II — das Vollendete in der Zukunft",
     "titleAr": "المستقبل التامّ — ما سينتهي قبل لحظةٍ قادمة",
     "level": "B2",
-    "ziel": "تبني المستقبل التامّ (werden + Partizip II + haben/sein) للتخمين عن الماضي.",
+    "ziel": "تبني Futur II للتعبير عن حدث مكتمل قبل نقطة مستقبلية أو عن تخمين يتعلق بالماضي.",
     "voraus": [
       "a2-futur",
       "a2-perfekt"
@@ -7128,19 +7134,19 @@
         "points": 2
       }
     ],
-    "summaryAr": "Futur II = werden + Objekt + Partizip II + haben/sein: يُستعمل لما يكون قد تمّ قبل نقطة مستقبلية مرجعية: «Bis 18 Uhr werde ich den Bericht fertiggestellt haben». في B2 يميّز المتقدّم من يقول «سأُنهي» عمن يقول «سأكون قد أنهيت».",
+    "summaryAr": "يبنى Futur II من werden + Partizip II + haben/sein. قد يحدد حدثاً سيكتمل قبل نقطة مستقبلية: Bis 18 Uhr werde ich den Bericht fertiggestellt haben. وقد يعبّر عن تخمين في حدث ماضٍ: Er wird den Zug verpasst haben. يحدد السياق والقرائن أي المعنيين مقصود.",
     "rules": [
       {
-        "de": "Bildung: werden … Partizip II + haben/sein",
-        "ar": "الفعل المساعد ثانياً، واسم المفعول ومساعده في آخر الجملة"
+        "de": "Bildung: werden … Partizip II + haben/sein; die Wahl von haben/sein folgt dem Perfekt des Vollverbs.",
+        "ar": "نختار haben أو sein وفق مساعد Perfekt للفعل نفسه، لا وفق قاعدة «الحركة» العامة."
       },
       {
-        "de": "Zeitanker nötig: bis morgen, um 18 Uhr, bis dahin",
-        "ar": "لا يُستعمل بلا مرساة زمن (bis …) وإلا كان Perfekt كافياً"
+        "de": "Zukünftige Vollendung wird meist durch einen Bezugspunkt wie bis morgen, um 18 Uhr oder bis dahin deutlich.",
+        "ar": "في معنى الاكتمال المستقبلي تظهر غالباً مرساة مثل bis morgen، لكن السياق قد يوفرها أيضاً."
       },
       {
-        "de": "Vermutung über Vergangenes: Er wird den Zug verpasst haben",
-        "ar": "الاستعمال الراقي الثاني: ترجيح في الماضي «يكون قد فاته القطار»"
+        "de": "Vermutung über Vergangenes: Er wird den Zug verpasst haben. Dafür ist kein zukünftiger Zeitanker nötig.",
+        "ar": "في التخمين عن الماضي لا نحتاج مرساة مستقبلية؛ تساعد كلمات مثل wohl أو schon والسياق على القراءة الاستنتاجية."
       }
     ],
     "tables": [
@@ -7180,8 +7186,8 @@
         "ar": "لا يُكدَّس المصدر مع haben: الصحيح werde … gemacht haben"
       },
       {
-        "de": "sein-Verben behalten sein: „Er wird angekommen sein“ ✓",
-        "ar": "أفعال الحركة والتغيّر مع sein حتى في Futur II"
+        "de": "Das Schlussauxiliar folgt dem Perfekt: „Er wird angekommen sein“, aber „Er wird begonnen haben“.",
+        "ar": "نستعمل sein أو haben كما في Perfekt: ist angekommen → wird angekommen sein؛ hat begonnen → wird begonnen haben."
       }
     ],
     "resources": [],
@@ -7248,14 +7254,14 @@
           "ist eingetroffen haben"
         ],
         "answer": "wird eingetroffen sein",
-        "explanationAr": "eintreffen حركة ووصول ← sein.",
+        "explanationAr": "eintreffen يبني Perfekt مع sein: ist eingetroffen → wird eingetroffen sein.",
         "promptAr": "اختر الإجابة الصحيحة للسؤال."
       },
       {
         "id": "b2-futur-ii-u1",
         "type": "umformung",
         "quelleDe": "Ich mache den Bericht bis morgen fertig.",
-        "promptDe": "Setze ins Futur II (Vermutung über Abgeschlossenes).",
+        "promptDe": "Setze ins Futur II (bis morgen abgeschlossen).",
         "answer": "Ich werde den Bericht bis morgen fertig gemacht haben.",
         "mussEnthalten": [
           "werde",
@@ -7264,7 +7270,7 @@
         "darfNicht": [
           "machen haben"
         ],
-        "explanationAr": "Futur II: werden + Partizip II + haben — للتخمين عن حدث سيكون قد اكتمل.",
+        "explanationAr": "هنا يدل Futur II على اكتمال التقرير بحلول الغد: werden + Partizip II + haben.",
         "points": 2
       },
       {
@@ -7283,7 +7289,7 @@
         "darfNicht": [
           "ist"
         ],
-        "explanationAr": "الحركة: Partizip II + sein.",
+        "explanationAr": "ankommen يبني Perfekt مع sein؛ هنا تستعمل الصيغة للتخمين عن الماضي.",
         "points": 2
       }
     ]
@@ -7291,9 +7297,9 @@
   "b2-relativ-generalisierend": {
     "id": "b2-relativ-generalisierend",
     "titleDe": "Generalisierende Relativsätze — wer · was",
-    "titleAr": "العلاقات العامة — من…ف…/ما…ف…",
+    "titleAr": "الجمل الموصولة التعميمية بـwer وwas",
     "level": "B2",
-    "ziel": "تبني العلاقات العامة (Wer …, der … / Was …, das …).",
+    "ziel": "تبني جمل wer/was التعميمية وتختار ضمير الإحالة في الجملة الرئيسية بحسب وظيفته.",
     "voraus": [
       "b1-relativ"
     ],
@@ -7313,7 +7319,7 @@
         "answer": [
           "Wer"
         ],
-        "explanationAr": "wer العامة + der في الجواب."
+        "explanationAr": "Wer يفتح الجملة التعميمية، وdem في الرئيسية لأن glauben يأخذ Dativ."
       },
       {
         "id": "b2-relativ-generalisierend-v2",
@@ -7329,36 +7335,48 @@
         "points": 2
       }
     ],
-    "summaryAr": "بدل «الطلاب الذين…» يعمّم B2 بصيغة مبرمة: «Wer lernen will, findet Wege». وبعد alles/nichts/das تأتي was وحدها، وللتعليق على جملة كاملة جاء was أسلوب ضغط الحجة.",
+    "summaryAr": "تعمّم جملة wer على الأشخاص: Wer lernen will, findet Wege. إذا أدت جملة wer والجملة الرئيسية الوظيفة نفسها يمكن حذف ضمير الإحالة أحياناً: Wer fragt, (der) lernt. أما إذا احتاجت الرئيسية مكملاً مصرحاً بحالة أخرى فيظهر الضمير المناسب: Wer einmal lügt, dem glaubt man nicht. ويستعمل was بعد ضمائر محايدة غير محددة مثل alles وetwas وnichts، وبعد das في تراكيب مثل das, was…، كما قد يعود على مضمون جملة كاملة: Er kam zu spät, was mich ärgerte.",
     "rules": [
       {
-        "de": "wer …, der/die/das … — Verallgemeinerung",
-        "ar": "من… فذلك… — تعميم على الأشخاص والجملة الثانية تبدأ بمرجع"
+        "de": "Bei gleicher syntaktischer Funktion kann das Korrelat oft entfallen: Wer fragt, (der) lernt. Verlangt der Hauptsatz ein eigenes Kasuskomplement, steht das passende Pronomen: Wer Hilfe braucht, dem helfe ich.",
+        "ar": "إذا اتحدت الوظيفة يمكن غالباً حذف ضمير الإحالة؛ أما إذا طلبت الرئيسية مكملاً في حالة أخرى فيظهر الضمير المناسب مثل dem."
       },
       {
-        "de": "alles / nichts / vieles + was (niemals „das“)",
-        "ar": "بعد alles وnichts وvieles تأتي was وحدها — قاعدة حديدية"
+        "de": "alles/etwas/nichts/vieles/das + was: alles, was ich weiß; das, was zählt.",
+        "ar": "بعد ضمائر محايدة غير محددة، وفي تركيب das, was، نستعمل was في المعيار المستهدف."
       },
       {
-        "de": "was als Satzbezug: „Er kam zu spät, was den Chef ärgerte.“",
-        "ar": "الإشارة إلى الواقعة كلها لا إلى كلمة — ضغط الحجة في جملة"
+        "de": "was mit Satzbezug: Er kam zu spät, was den Chef ärgerte.",
+        "ar": "يمكن أن يعود was على مضمون الجملة السابقة كلها."
       },
       {
-        "de": "Sprichwörter als Muster: „Was Hänschen nicht lernt…“",
-        "ar": "الأَمْثال المأثورة تُحفظ وتُعاد تراكيبها في الإنشاء"
+        "de": "Feste Sprichwörter können eigene, teils ältere Muster bewahren.",
+        "ar": "تُحفظ الأمثال الثابتة بصيغتها، ولا تُحوّل آلياً إلى قاعدة لكل جملة جديدة."
       }
     ],
     "tables": [
       {
-        "captionAr": "wer/was التعميمية",
+        "captionAr": "ضمير الإحالة بعد wer بحسب الوظيفة",
         "headers": [
-          "Singular",
-          "Plural"
+          "وظيفته في الرئيسية",
+          "النمط",
+          "مثال"
         ],
         "rows": [
           [
-            "wer …, der …",
-            "wer …, die …"
+            "فاعل",
+            "der (أو الحذف)",
+            "Wer übt, (der) lernt."
+          ],
+          [
+            "Dativ",
+            "dem",
+            "Wer fragt, dem helfe ich."
+          ],
+          [
+            "Akkusativ",
+            "den",
+            "Wer gemeint ist, den rufe ich an."
           ]
         ]
       }
@@ -7379,12 +7397,12 @@
     ],
     "pitfalls": [
       {
-        "de": "„Alles, das ich habe“ ✗",
-        "ar": "بعد alles فقط was — لا das"
+        "de": "„Alles, das ich habe“ ✗ → „Alles, was ich habe“ ✓",
+        "ar": "بعد alles نستعمل was في هذا النمط."
       },
       {
-        "de": "Im Nachsatz nie ein zweites „wer“",
-        "ar": "«Wer kommt, der ist willkommen» ✓؛ «Wer kommt, wer…» ✗ تكرار الواصل"
+        "de": "Im selben wer-Korrelat steht nicht noch einmal wer: „Wer kommt, der ist willkommen.“ Ein neues wer kann aber einen neuen Satz eröffnen.",
+        "ar": "لا نكرر wer بوصفه ضمير الإحالة نفسه؛ ويمكن طبعاً أن تبدأ به جملة تعميمية جديدة."
       }
     ],
     "resources": [],
@@ -7399,18 +7417,18 @@
           "welches"
         ],
         "answer": "was",
-        "explanationAr": "بعد alles ← was أبداً.",
+        "explanationAr": "بعد alles نستعمل was في الصيغة المعيارية المستهدفة.",
         "promptAr": "اختر الكلمة الصحيحة لإكمال الجملة."
       },
       {
         "id": "grge2",
         "type": "fill",
-        "promptDe": "___ früh übt sich, wird ein Meister.",
-        "text": "___ früh übt sich, wird ein Meister.",
+        "promptDe": "___ früh übt, wird sicherer.",
+        "text": "___ früh übt, wird sicherer.",
         "answer": [
           "Wer"
         ],
-        "explanationAr": "المثل يبدأ بـ Wer؛ المرجع der محذوف جمالياً في المأثور."
+        "explanationAr": "wer يعمم على الأشخاص؛ ويمكن حذف der عندما تكون بنية الرئيسية واضحة."
       },
       {
         "id": "grge3",
@@ -7498,7 +7516,7 @@
     ],
     "anwendung": {
       "ar": "ناقش قضية: sowohl…als auch و einerseits…andererseits — 4 جمل.",
-      "de": "Diskutiere strittig: 4 Sätze mit Doppelkonnektoren.",
+      "de": "Diskutiere differenziert: 4 Sätze mit zweiteiligen Konnektoren.",
       "candoIds": [
         "B2-C4"
       ]
@@ -7528,19 +7546,19 @@
         "points": 2
       }
     ],
-    "summaryAr": "أسلوب B2 الحجاجي: sowohl…als auch، entweder…oder، weder…noch، je…desto/umso، nicht nur…sondern auch، zwar…aber — لا تُقلِب موضع الفعل، لكنها توازن الحجج في نَفَس واحد.",
+    "summaryAr": "تربط التراكيب الثنائية عناصر متوازية أو جملًا: sowohl…als auch، entweder…oder، weder…noch، nicht nur…sondern auch، zwar…aber، je…desto/umso. لا توجد قاعدة واحدة لموضع الفعل في جميعها: je تفتح جملة تابعة فعلها في النهاية، بينما desto/umso قد يشغلان مقدمة الجملة الرئيسية، وتتبع الأزواج الأخرى بنية العناصر التي تربطها.",
     "rules": [
       {
-        "de": "Beide Teilsätze bleiben Hauptsätze: Verb auf Position 2",
-        "ar": "كل نصف جملة رئيسية بقواعدها — لا قلب بعد sowohl ونظائرها"
+        "de": "Parallelität: sowohl A als auch B; nicht nur A, sondern auch B. Verb- und Satzstellung folgen der jeweils verbundenen Struktur.",
+        "ar": "اربط عناصر متوازية: اسمًا باسم أو عبارة بعبارة؛ ولا تفترض أن كل زوج يربط جملتين رئيسيتين."
       },
       {
-        "de": "je + Komparativ (Verb am Ende!), desto/umso + Komparativ + Verb",
-        "ar": "كلّما…ازداد: je جملة تابعة فعلها للآخر، وdesto مع المقارن ثم الفعل"
+        "de": "je + Komparativ mit Verb am Ende; desto/umso + Komparativ im Vorfeld, dann finites Verb: Je mehr du übst, desto leichter wird es.",
+        "ar": "جملة je تابعة فعلها في النهاية، ثم تشغل مجموعة desto/umso مقدمة الرئيسية ويأتي الفعل المصرّف بعدها."
       },
       {
-        "de": "nicht nur …, sondern auch … — das Gegenstück muss parallel sein",
-        "ar": "البنية المتقابلة تلزم: اسم مقابل اسم، فعل مقابل فعل"
+        "de": "nicht nur …, sondern auch …: Die korrespondierenden Teile sollten grammatisch parallel sein.",
+        "ar": "في nicht nur…sondern auch ينبغي أن تكون الأجزاء المتقابلة متوازية نحوياً."
       }
     ],
     "tables": [
@@ -7578,16 +7596,16 @@
     ],
     "pitfalls": [
       {
-        "de": "„Je mehr man übt, mehr wird es leichter“ ✗",
-        "ar": "desto عمود البناء؛ تُحذف فلا يقوم"
+        "de": "„Je mehr man übt, mehr wird es leichter“ ✗ → „Je mehr man übt, desto/umso leichter wird es.“ ✓",
+        "ar": "يحتاج الطرف الثاني إلى desto أو umso مع صيغة المقارنة."
       },
       {
         "de": "„Sowohl A aber auch B“ ✗",
         "ar": "als auch، لا aber — خلط شائع"
       },
       {
-        "de": "weder … noch — ohne zusätzliches „nicht“",
-        "ar": "النفي داخل الزوج — لا يُضاعف"
+        "de": "Im einfachen Paar „weder A noch B“ steht keine zusätzliche Negation: „weder Zeit noch Geld“.",
+        "ar": "الزوج نفسه ينفي العنصرين؛ أما النفي الإضافي فقد يظهر في بنى أعقد ذات نطاق مختلف."
       }
     ],
     "resources": [],
@@ -7602,7 +7620,7 @@
           "wie"
         ],
         "answer": "desto",
-        "explanationAr": "الزوج الأبدي je…desto؛ umso بديل مقبول.",
+        "explanationAr": "je…desto زوج شائع، وumso بديل صحيح لـdesto.",
         "promptAr": "اختر الكلمة الصحيحة لإكمال الجملة."
       },
       {
@@ -7619,19 +7637,18 @@
       {
         "id": "gdke3",
         "type": "order",
-        "promptDe": "Bilde einen Satz: (Entweder / übst / du /, / oder / das / Zertifikat / wartet / nicht)",
+        "promptDe": "Bilde einen Satz: (Entweder / übst / du /, / oder / du / verschiebst / die Prüfung)",
         "answer": [
           "Entweder",
           "übst",
           "du",
           ",",
           "oder",
-          "das",
-          "Zertifikat",
-          "wartet",
-          "nicht"
+          "du",
+          "verschiebst",
+          "die Prüfung"
         ],
-        "explanationAr": "entweder بالمقدمة ثم القلب، وoder رئيسية كاملة بعدها.",
+        "explanationAr": "عند تقديم entweder يأتي الفعل übst بعده، ثم تفتح oder جملة رئيسية ثانية.",
         "promptAr": "رتّب الكلمات لتكوّن جملة صحيحة."
       },
       {
@@ -7691,9 +7708,9 @@
   "b2-nominalstil": {
     "id": "b2-nominalstil",
     "titleDe": "Nominalstil und Verbalstil",
-    "titleAr": "الأسلوب الاسمي والفعلي — مفتاح الرسالة الرسمية",
+    "titleAr": "الأسلوب الاسمي والأسلوب الفعلي",
     "level": "B2",
-    "ziel": "تحوّل الأسلوب الفعلي إلى اسمي (die Durchführung) للكتابة الرسمية.",
+    "ziel": "تحوّل بين الأسلوب الفعلي والاسمي عندما يسمح المعنى، وتختار الصيغة الأنسب للسياق والوضوح.",
     "voraus": [
       "b1-passiv"
     ],
@@ -7719,7 +7736,7 @@
         "id": "b2-nominalstil-v2",
         "type": "umformung",
         "quelleDe": "Man prüft die Anträge schnell.",
-        "promptDe": "Formuliere nominal: Die …",
+        "promptDe": "Bilde eine Nominalphrase: die …",
         "answer": "Die schnelle Prüfung der Anträge.",
         "mussEnthalten": [
           "prüfung",
@@ -7732,41 +7749,41 @@
         "points": 2
       }
     ],
-    "summaryAr": "الفكرة الواحدة تُقال بطريقتين: جملة فرعية بفعل (Weil die Mieten steigen …) أو عبارة اسمية بحرف جرّ (Wegen der steigenden Mieten …). الأولى «فعلية» طبيعية في الكلام والرسائل الشخصية، والثانية «اسمية» رسمية مطلوبة في الشكاوى والتقارير والمقالات. امتحان B2 يقيس قدرتك على التنقّل بينهما بوعي — لا على تفضيل إحداهما.",
+    "summaryAr": "يمكن التعبير عن علاقة واحدة بجملة فعلية أو عبارة اسمية: Weil die Mieten steigen… ↔ Wegen der steigenden Mieten…. قد يكثف الأسلوب الاسمي المعلومات ويكثر في نصوص إدارية أو علمية، بينما يكون الأسلوب الفعلي أوضح في سياقات كثيرة. ليست التحويلات آلية دائماً، ولا يُفترض أن الأسلوب الاسمي أفضل أو مطلوب في كل رسالة أو مهمة.",
     "summaryDe": "Derselbe Inhalt – zwei Register: Nebensatz mit Verb (Verbalstil) oder Präposition + Nomen (Nominalstil).",
     "rules": [
       {
-        "de": "weil → wegen + Genitiv",
-        "ar": "السبب: weil das Wetter schlecht war → wegen des schlechten Wetters. الفاعل يصبح مضافاً إليه."
+        "de": "Kausaler Bezug: weil das Wetter schlecht war ↔ wegen des schlechten Wetters. Die Umformung muss dieselbe Ursache bewahren.",
+        "ar": "يمكن تحويل السبب إلى wegen + مجموعة اسمية عندما يبقى الفاعل والمعنى واضحين."
       },
       {
-        "de": "obwohl → trotz + Genitiv",
-        "ar": "التناقض: obwohl es regnete → trotz des Regens."
+        "de": "Konzessiver Bezug: obwohl es regnete ↔ trotz des Regens.",
+        "ar": "يمكن التعبير عن التنازل بـobwohl أو trotz بحسب البنية."
       },
       {
-        "de": "wenn / als → bei + Dativ",
-        "ar": "الشرط والزمن معاً: wenn es regnet → bei Regen · als ich ankam → bei meiner Ankunft."
+        "de": "Temporaler oder konditionaler Umstand kann mit bei stehen: wenn es regnet ↔ bei Regen; als ich ankam ↔ bei meiner Ankunft. Nicht jedes wenn/als lässt sich so ersetzen.",
+        "ar": "قد تختصر bei ظرفاً زمنياً أو شرطياً، لكن ليس كل جملة wenn/als قابلة للتحويل الآلي."
       },
       {
-        "de": "nachdem → nach + Dativ · bevor → vor + Dativ",
-        "ar": "التتابع: nachdem er angekommen war → nach seiner Ankunft · bevor die Prüfung beginnt → vor Beginn der Prüfung."
+        "de": "Zeitfolge: nachdem er angekommen war ↔ nach seiner Ankunft; bevor die Prüfung beginnt ↔ vor Beginn der Prüfung.",
+        "ar": "يمكن لـnach/vor + اسم أن يعبرا عن التتابع إذا بقي المرجع الزمني واضحاً."
       },
       {
-        "de": "damit / um … zu → zu / zur / zum + Nomen",
-        "ar": "الغاية: um Energie zu sparen → zur Energieeinsparung (zur للمؤنث، zum للمذكر والمحايد)."
+        "de": "Zweck: um Energie zu sparen ↔ zur Energieeinsparung / um Energie zu sparen. Die natürlichere Form hängt vom Text ab.",
+        "ar": "يمكن التعبير عن الغاية بمجموعة مصدر أو اسم؛ الاختيار للسياق والوضوح."
       },
       {
-        "de": "indem → durch + Akkusativ",
-        "ar": "الوسيلة: indem man recycelt → durch Recycling."
+        "de": "Mittel: indem man recycelt ↔ durch Recycling, sofern Agens und Bedeutung eindeutig bleiben.",
+        "ar": "قد تتحول وسيلة indem إلى durch + اسم إذا لم يضيع الفاعل أو المعنى."
       },
       {
-        "de": "Verb → -ung (die) / das + Infinitiv",
-        "ar": "erhöhen → die Erhöhung · lesen → das Lesen. كل اسم بـ-ung مؤنّث، وكل مصدر مُسمّى محايد — بلا استثناء."
+        "de": "Ableitung: erhöhen → die Erhöhung; lesen → das Lesen. Das Suffix -ung bildet feminine Nomen; nominalisierte Infinitive sind Neutra.",
+        "ar": "الأسماء المشتقة باللاحقة -ung مؤنثة، أما المصدر المحول إلى اسم فمحايد. ليست كل كلمة تنتهي بالحروف ung مشتقة بهذه اللاحقة، مثل der Sprung."
       }
     ],
     "tables": [
       {
-        "captionAr": "جدول التحويل السبعة",
+        "captionAr": "تحويلات ممكنة بحسب المعنى",
         "headers": [
           "العلاقة",
           "فعلي (Nebensatz)",
@@ -7827,24 +7844,24 @@
         ],
         "rows": [
           [
-            "رسالة شكوى / طلب رسمي",
-            "اسمي",
-            "موضوعي ومختصر — Wegen der Lieferverzögerung bitte ich um …"
+            "نص إداري أو علمي",
+            "قد يكثر الاسمي",
+            "قد يفيد التكثيف، مع ضرورة الحفاظ على الوضوح"
           ],
           [
-            "مقال رأي (Erörterung)",
-            "مزيج",
-            "الاسمي للحجج، الفعلي للأمثلة"
+            "مقال رأي",
+            "مزيج محتمل",
+            "الاختيار يتبع الحجة والإيقاع"
           ],
           [
-            "بريد لصديق",
-            "فعلي",
-            "الاسمي يبدو بيروقراطياً بارداً"
+            "بريد شخصي",
+            "غالباً فعلي",
+            "لكن لا يوجد حظر نحوي على التراكيب الاسمية"
           ],
           [
-            "ملخّص تقرير",
-            "اسمي",
-            "كثافة معلومات في كلمات قليلة"
+            "ملخص تقرير",
+            "قد يكثر الاسمي",
+            "يسمح بتجميع معلومات، وقد يثقل النص إذا أفرط فيه"
           ]
         ]
       }
@@ -7852,7 +7869,7 @@
     "examples": [
       {
         "de": "Wegen des Streiks fielen alle Züge aus. = Weil gestreikt wurde, fielen alle Züge aus.",
-        "ar": "بسبب الإضراب أُلغيت كل القطارات. — الجملتان صحيحتان؛ الأولى في تقرير، الثانية في حديث."
+        "ar": "بسبب الإضراب أُلغيت القطارات؛ الصيغتان تعبران عن السبب، ويحدد السياق الأنسب."
       },
       {
         "de": "Zur Verbesserung der Luftqualität baut die Stadt Radwege.",
@@ -7865,16 +7882,16 @@
     ],
     "pitfalls": [
       {
-        "de": "„wegen dem Wetter“ ✗ (schriftlich) → wegen des Wetters ✓",
-        "ar": "في الكلام يشيع Dativ بعد wegen/trotz، لكن الامتحان الكتابي يريد Genitiv."
+        "de": "Im hier geübten formellen Standard: „wegen des Wetters“. „wegen dem Wetter“ kommt umgangssprachlich und regional vor.",
+        "ar": "يتدرب الدرس على Genitiv بعد wegen، مع الاعتراف بوجود Dativ في الاستعمال المحكي والإقليمي."
       },
       {
         "de": "„zur Erhöhen“ ✗ → zur Erhöhung ✓ / zum Erhöhen ✓",
         "ar": "zur تأتي مع اسم مؤنث (-ung)؛ المصدر المُسمّى محايد فيأخذ zum."
       },
       {
-        "de": "Nominalstil überall ✗",
-        "ar": "نصّ كلّه اسمي يفقد نقاط «Angemessenheit» في بريد شخصي — الأسلوب يتبع المخاطَب."
+        "de": "Zu viel Nominalstil kann einen Text schwer lesbar machen.",
+        "ar": "لا نحكم على الأسلوب بعدد الأسماء؛ المعيار هو وضوح النص وملاءمته للسياق."
       },
       {
         "de": "„Bei Regen es findet …“ ✗ → Bei Regen findet es … ✓",
@@ -9482,9 +9499,9 @@
   "b1-partizip1": {
     "id": "b1-partizip1",
     "titleDe": "Partizip I als Adjektiv (Partizipialattribute)",
-    "titleAr": "Partizip I كصفة (التعابيل المفعولية المطوّلة)",
+    "titleAr": "Partizip I كصفة قبل الاسم",
     "level": "B2",
-    "ziel": "تستخدم Partizip I كصفة (der lesende Mann) بنهايات صحيحة.",
+    "ziel": "تستخدم Partizip I كصفة قبل الاسم وتضيف نهاية الصفة المناسبة.",
     "voraus": [
       "b1-adjektivendungen"
     ],
@@ -9492,7 +9509,7 @@
       "ar": "صِف مشهداً صحفياً: 3 صفات بـ Partizip I (der weinende Junge …).",
       "de": "Beschreibe eine Szene: 3 Attribute mit Partizip I.",
       "candoIds": [
-        "B1-C4"
+        "B2-C2"
       ]
     },
     "verify": [
@@ -9510,24 +9527,24 @@
         "id": "b1-partizip1-v2",
         "type": "umformung",
         "quelleDe": "Das Kind schläft.",
-        "promptDe": "Beginne mit: Das …",
-        "answer": "Das schlafende Kind.",
+        "promptDe": "Bilde eine Nominalphrase mit Partizip I.",
+        "answer": "das schlafende Kind",
         "mussEnthalten": [
           "schlafende"
         ],
-        "explanationAr": "schlafen + d + e: das schlafende Kind.",
+        "explanationAr": "schlafen + d + نهاية الصفة -e: das schlafende Kind.",
         "points": 2
       }
     ],
-    "summaryAr": "Partizip I (Infinitiv + d) يصف شيئاً يقوم بفعل (der lesende Student). يُعامل كصفة ويُصرف حسب الحالة. الصفات التي لا تسبقها أداة تعريفية تضاف لها نهايات واضحة.",
+    "summaryAr": "يتكون Partizip I غالباً من المصدر + d: lesen → lesend. وعندما يأتي قبل الاسم يضاف إليه تصريف الصفة بحسب الأداة والحالة والجنس والعدد: der lesende Student، die lachenden Kinder، mit einem wartenden Gast. وهو يصف عادةً فعلاً متزامناً يؤديه مرجع الاسم.",
     "rules": [
       {
-        "de": "Partizip I = Infinitiv + d · laufen → laufend · weinen → weinend",
-        "ar": "كيف يتكوّن Partizip I."
+        "de": "Partizip I = Infinitiv + d: laufen → laufend; weinen → weinend.",
+        "ar": "التكوين: المصدر + d."
       },
       {
-        "de": "guter Wein · kaltes Wasser · frische Milch (ohne Artikel: Endung wie bestimmter Artikel)",
-        "ar": "نهايات الصفات بدون أداة."
+        "de": "Als Attribut bekommt es eine Adjektivendung: der laufende Mann, die laufenden Männer, mit einem laufenden Mann.",
+        "ar": "قبل الاسم يُصرف كأي صفة بحسب الأداة والحالة والعدد."
       }
     ],
     "tables": [],
@@ -9537,8 +9554,8 @@
         "ar": "الصبي الباكي اسمه ماكس."
       },
       {
-        "de": "Ich trinke gern heißen Kaffee.",
-        "ar": "أحب شرب القهوة الساخنة."
+        "de": "Ich spreche mit den wartenden Gästen.",
+        "ar": "أتحدث مع الضيوف المنتظرين؛ Partizip I مع Dativ الجمع يأخذ -en."
       }
     ],
     "eselsbrueckeAr": "«صفة بلا أداة تنال نهاية الأداة نفسها».",
@@ -9557,23 +9574,22 @@
       {
         "id": "b1-partizip1-ex02",
         "type": "mc",
-        "promptDe": "Ich trinke ___ Tee.",
+        "promptDe": "Ich sehe den ___ Mann.",
         "options": [
-          "heißen",
-          "heiß",
-          "heißes"
+          "laufenden",
+          "laufende",
+          "laufen"
         ],
-        "answer": "heißen",
-        "explanationAr": "صفة بدون أداة أمام Akkusativ مذكر (Tee لا — الشاي مذكر في الألمانية: der Tee) ⇒ heißen.",
-        "promptAr": "اختر الكلمة الصحيحة لإكمال الجملة."
+        "answer": "laufenden",
+        "explanationAr": "Partizip I laufend يُصرف بعد den في Akkusativ المذكر: den laufenden Mann.",
+        "promptAr": "اختر Partizip I بالنهاية الصحيحة."
       },
       {
         "id": "b1-partizip1-f2",
         "type": "fill",
         "promptDe": "Das ___ Kind schläft. (weinen)",
         "answer": [
-          "weinende",
-          "weinend"
+          "weinende"
         ],
         "explanationAr": "Partizip I كصفة قبل الاسم يأخذ لاحقة الصفة: das weinende Kind.",
         "points": 1
@@ -9583,14 +9599,11 @@
         "type": "umformung",
         "quelleDe": "Der Mann, der dort steht, raucht.",
         "promptDe": "Bilden Sie den Satz mit Partizip I um: «Der Mann, der dort steht, raucht.»",
-        "answer": [
-          "Der dort stehende Mann raucht.",
-          "Der stehende Mann dort raucht."
-        ],
+        "answer": "Der dort stehende Mann raucht.",
         "alternativen": [
           "Der dort stehende Mann raucht"
         ],
-        "explanationAr": "Partizip I يحل محل جملة الصلة بفاعل نشط.",
+        "explanationAr": "Partizip I stehende يختصر الجملة الموصولة مع بقاء dort قبل الصفة.",
         "darfNicht": [
           "der dort steht"
         ],
@@ -9615,7 +9628,7 @@
       },
       {
         "de": "✗ der schlafen Mann → ✓ der schlafende Mann",
-        "ar": "لا تستعمل المصدر كصفة أبداً (schlafen ≠ نائم) — الصفة المشتقة تحتاج الـ-d والنهاية"
+        "ar": "في هذا التركيب لا يصلح المصدر schlafen صفةً قبل Mann؛ نحتاج schlafend + نهاية الصفة."
       },
       {
         "de": "✗ …sehr interessanting. → ✓ …sehr interessant.",
@@ -9863,23 +9876,23 @@
         "explanationAr": "ins Gras beißen = يموت (عامية)."
       }
     ],
-    "summaryAr": "في B2 تحتاج مجموعة من التعابير الجاهزة كـ: einen Kater haben, die Nase voll haben, auf dem Laufenden bleiben, etwas in Kauf nehmen, im Grunde genommen … — هذه العبارات لا تُترجم حرفياً وتُميز المستخدم المستقل عن المتعلم.",
+    "summaryAr": "تُفهم التعابير الاصطلاحية كوحدات من السياق، مثل die Nase voll haben وauf dem Laufenden bleiben وetwas in Kauf nehmen. قد يكون لبعضها أيضاً استعمال حرفي، وتختلف درجة رسميتها؛ لذلك لا يكفي حفظ ترجمة واحدة، بل يلزم مثال وسياق مناسب.",
     "rules": [
       {
-        "de": "Die Redewendungen werden als Chunks gelernt, nicht Wort für Wort.",
-        "ar": "تُحفظ كعبارات جاهزة — لا كلمة كلمة."
+        "de": "Redewendungen als Chunks mit Ergänzungen und Beispiel lernen, nicht nur Wort für Wort.",
+        "ar": "احفظ التعبير مع الفعل وحرف الجر والمثال."
       },
       {
-        "de": "Die Wendung ist wörtlich nicht übersetzbar — im Zweifel ist die wörtliche Übersetzung falsch.",
-        "ar": "لا تُترجم حرفياً: إن أعطتك الترجمة الحرفية معنى عربياً غريباً فهي ليست المعنى المقصود."
+        "de": "Wörtliche und idiomatische Lesart können nebeneinander bestehen: „Meine Nase ist voll“ kann wörtlich sein; „Ich habe die Nase voll“ ist idiomatisch.",
+        "ar": "ليست كل ترجمة حرفية خطأ؛ يحدد السياق هل الاستعمال حرفي أم اصطلاحي."
       },
       {
-        "de": "Viele Wendungen stammen aus Körper, Tieren und Verkehr: die Nase voll haben · einen Kater haben · der Zug ist abgefahren.",
-        "ar": "مصدرها الحياة اليومية (الجسم، الحيوانات، المرور) — وهذا سبب عدم ترجمتها حرفياً."
+        "de": "Register beachten: „Das ist mir Wurst“ ist umgangssprachlich; „etwas in Kauf nehmen“ passt auch in formellere Texte.",
+        "ar": "تختلف درجة الرسمية بين التعابير، فلا توضع كلها في كل موقف."
       },
       {
-        "de": "In Prüfungen wird die Wendung im ganzen Satz abgefragt — lerne sie mit einem Beispiel, nicht als Liste.",
-        "ar": "تُختبر داخل جملة كاملة في الامتحانات؛ احفظها مع مثال لا كقائمة كلمات."
+        "de": "Bedeutung aus dem ganzen Satz erschließen und die Wendung mit typischen Ergänzungen lernen.",
+        "ar": "استنتج المعنى من الجملة كاملة واحفظ المكملات الشائعة، من دون ادعاء شكل امتحاني بعينه."
       }
     ],
     "tables": [
@@ -9892,7 +9905,7 @@
         "rows": [
           [
             "einen Kater haben",
-            "صاعده/صداع ما بعد الشرب"
+            "صداع/أعراض ما بعد شرب الكحول"
           ],
           [
             "die Nase voll haben",
@@ -9904,7 +9917,7 @@
           ],
           [
             "etwas in Kauf nehmen",
-            "يتقبّل أمراً غير مرغوب بلا بديل"
+            "يتقبّل نتيجة أو كلفة غير مرغوبة"
           ],
           [
             "im Grunde genommen",
@@ -9939,12 +9952,12 @@
         "ar": "نبقى على اطلاع."
       },
       {
-        "de": "Ich nehme die lärmenden Nachbarn in Kauf, bis der Umbau fertig ist.",
-        "ar": "أتقبّل الجيران المزعجين بصبرٍ حتى ينتهي التجديد (in Kauf nehmen)."
+        "de": "Wir nehmen die zusätzlichen Kosten in Kauf, um den Termin einzuhalten.",
+        "ar": "نتقبل الكلفة الإضافية غير المرغوبة كي نحافظ على الموعد."
       },
       {
-        "de": "Nach dem Meeting bleiben wir über die Entscheidung auf dem Laufenden.",
-        "ar": "بعد الاجتماع نبقى على اطلاع بالقرار (auf dem Laufenden bleiben)."
+        "de": "Bitte halten Sie mich über die Entscheidung auf dem Laufenden.",
+        "ar": "يرجى إبقائي على اطلاع بشأن القرار."
       }
     ],
     "eselsbrueckeAr": "إذا كانت الترجمة الحرفية لا تعطي معنى عربياً منطقياً فالأرجح أنها Redewendung — احفظها ككتلة واحدة.",
@@ -10068,7 +10081,7 @@
           "auf dem Laufenden",
           "Projekt"
         ],
-        "explanationAr": "auf dem Laufenden bleiben مع ja للمعرفة: über das Projekt — الحرف والمعرفة لا يُهملان.",
+        "explanationAr": "يأتي التعبير على النمط über etwas auf dem Laufenden bleiben/sein.",
         "promptAr": "ترجم: نبقى على اطلاع بكل ما يخصّ هذا المشروع."
       },
       {
@@ -10086,8 +10099,8 @@
         "mussEnthalten": [
           "in Kauf"
         ],
-        "explanationAr": "etwas in Kauf nehmen = يتقبّل مُكرَّهاً — «akzeptieren» تكفي في الكلام العامّ لا في الامتحان.",
-        "promptAr": "استبدل «akzeptieren, auch wenn …» بالتعبير الاصطلاحي المناسب (in Kauf nehmen)."
+        "explanationAr": "etwas in Kauf nehmen يعني قبول نتيجة أو كلفة غير مرغوبة؛ وهو المطلوب هنا بدلاً من الفعل العام akzeptieren.",
+        "promptAr": "استبدل العبارة العامة بالتعبير الاصطلاحي المناسب."
       },
       {
         "id": "b2-redew-o1",
@@ -10106,16 +10119,16 @@
     ],
     "pitfalls": [
       {
-        "de": "„Meine Nase ist voll“ ✗ → „Ich habe die Nase voll“ ✓",
-        "ar": "لا تُترجم حرفياً («أنفي ممتلئ») — العبارة كلّها تعني «سئمتُ حتى النخاع» مع الفعل haben."
+        "de": "Für die idiomatische Bedeutung „genug haben“: „Ich habe die Nase voll.“ „Meine Nase ist voll“ kann dagegen wörtlich gemeint sein.",
+        "ar": "لا نوسم الجملة الحرفية خطأً مطلقاً؛ الفرق في المعنى المقصود والسياق."
       },
       {
         "de": "„Ich bin auf dem laufenden“ ✗ → „Ich bin auf dem Laufenden“ ✓",
         "ar": "Substantiviertes Adjektiv: يُكتب كبيراً لأنه بمعنى الاسم."
       },
       {
-        "de": "„Ich verstehe gar nichts“ ✗ (kein Idiom) → „Ich verstehe nur Bahnhof“ ✓",
-        "ar": "الفخّ: جملة صحيحة نحويّاً لكنها ليست العبارة الاصطلالية المطلوبة — الامتحان يطلب Wendung لا وصفاً."
+        "de": "„Ich verstehe gar nichts“ ist grammatisch korrekt, aber kein Idiom. Wenn ausdrücklich eine Redewendung verlangt ist: „Ich verstehe nur Bahnhof.“",
+        "ar": "الجملة الوصفية صحيحة؛ لا نستبدلها إلا عندما تكون المهمة أو النبرة تطلب تعبيراً اصطلاحياً."
       }
     ]
   },
@@ -11282,7 +11295,7 @@
   "b2-adjektiv-partizip": {
     "id": "b2-adjektiv-partizip",
     "titleDe": "Partizipialattribute & nominalisierte Adjektive",
-    "titleAr": "صفات ممدّدة بصيغ الفعل الماضي/المستمر وصفات محوَّلة إلى أسماء",
+    "titleAr": "الصفات المشتقة والصفات المحوّلة إلى أسماء",
     "level": "B2",
     "ziel": "تبني صفات ممددة بصيغ الفعل (der von allen geliebte Star) وتفكّكها.",
     "voraus": [
@@ -11319,23 +11332,23 @@
         "promptAr": "الطالب المقيم في برلين."
       }
     ],
-    "summaryAr": "في مستوى B2 تُستخدَم صيغتا Partizip I (laufend) وPartizip II (gelaufen) كصفات طويلة قبل الاسم، كما تُحوَّل الصفات إلى أسماء بكتابة الحرف كبير (der Alte, das Gute). كلها تُصرَّف كنهايات الصفات العادية.",
+    "summaryAr": "يمكن استعمال Partizip I وPartizip II صفاتٍ قبل الاسم: der laufende Motor، das gelesene Buch، der angekommene Zug. ويتحدد معنى Partizip II من الفعل والسياق؛ فليس دائماً مبنياً للمجهول. كما يمكن تحويل الصفة إلى اسم بكتابتها بحرف كبير مع إبقاء تصريف الصفة: der Alte، eine Alte، das Wichtigste.",
     "rules": [
       {
-        "de": "das laufende Kind · der angekommene Zug",
-        "ar": "Partizip I وII كصفات قبل الاسم: نهاية الصفة تُضاف مباشرة"
+        "de": "Partizip als Attribut mit Adjektivendung: das laufende Kind; der angekommene Zug; das gelesene Buch.",
+        "ar": "تضاف نهاية الصفة وفق الأداة والحالة والجنس والعدد."
       },
       {
-        "de": "die sich unterhaltenden Gäste · die von der Sonne beschienene Wiese",
-        "ar": "يمكن توسيع الصفة بجار ومجرور أو durch/von لوصف فاعل/مفعول"
+        "de": "Erweiterung: die sich unterhaltenden Gäste; die von der Sonne beschienene Wiese. Bedeutung und Ergänzungen folgen dem Verb.",
+        "ar": "يمكن توسيع الصفة بمكملات الفعل، ويجب الحفاظ على بنيته ومعناه."
       },
       {
-        "de": "der Alte · eine Alte · das Gute · das Wichtigste",
-        "ar": "صفات محوَّلة لأسماء: تُكتب كبيرة وتأخذ نهاية الصفة نفسها"
+        "de": "Nominalisierte Adjektive: der Alte, eine Alte, das Gute, das Wichtigste. Großschreibung, aber Adjektivflexion.",
+        "ar": "تكتب الصفة المحولة إلى اسم بحرف كبير وتبقى نهايتها خاضعة لتصريف الصفات."
       },
       {
-        "de": "viele bekannte Schriftsteller · manche alte Häuser",
-        "ar": "بعد viele/wenige/manche/einige: النهاية كالجمع بعد die (-en)"
+        "de": "Nach viele/einige/manche: viele bekannte Schriftsteller, manche alte Häuser; in obliquen Kasus z. B. mit vielen bekannten Schriftstellern.",
+        "ar": "بعد viele/einige/manche تظهر -e في Nominativ/Akkusativ الجمع غالباً، و-en في Dativ/Genitiv؛ ليست كـdie في كل الحالات."
       }
     ],
     "tables": [
@@ -11350,12 +11363,12 @@
           [
             "Partizip I",
             "das weinende Kind",
-            "-e/-en كالصفة العادية"
+            "نهاية بحسب الأداة والحالة والجنس والعدد"
           ],
           [
             "Partizip II",
             "das gestern gelesene Buch",
-            "-e/-en كالصفة العادية"
+            "نهاية بحسب الأداة والحالة والجنس والعدد"
           ],
           [
             "Nominalisiert",
@@ -11428,7 +11441,7 @@
         "type": "fill",
         "promptDe": "Viele alt___ Häuser werden renoviert.",
         "answer": "e",
-        "explanationAr": "Nominativ جمع بعد viele → -e"
+        "explanationAr": "بعد viele في Nominativ الجمع: viele alte Häuser؛ وفي Dativ مثلاً mit vielen alten Häusern."
       },
       {
         "id": "b2-adj-p5",
@@ -13254,8 +13267,8 @@
     "id": "b2-textkonnektoren",
     "level": "B2",
     "titleDe": "Textkonnektoren: wenngleich/hingegen/folglich …",
-    "titleAr": "روابط النص الراقية",
-    "ziel": "تكتب بفقرات متماسكة بروابط B2: الإقرار الراقي والتضاد المرن والتعليل النصي.",
+    "titleAr": "روابط نصية للتنازل والتضاد والنتيجة",
+    "ziel": "تربط الأفكار بـwenngleich/obgleich وhingegen وfolglich مع مراعاة السجل وبنية الجملة.",
     "voraus": [
       "b1-konnektoren"
     ],
@@ -13264,19 +13277,19 @@
       "de": "Schreibe einen Meinungsabsatz mit drei Textkonnektoren.",
       "candoIds": []
     },
-    "summaryAr": "سجل B2 الكتابي: wenngleich/obgleich للإقرار الراقي (فعل في النهاية) وhingegen للتضاد بموضع حر (1 أو 3) وfolglich/des Weiteren/zwar…aber للبناء النصي.",
+    "summaryAr": "تقدّم wenngleich وobgleich جملة تنازلية وفعلها في النهاية، ولهما طابع رسمي أو أدبي أكثر من obwohl في كثير من السياقات. تستعمل hingegen لإبراز التضاد وقد تأتي بعد العنصر المقابَل أو في مقدمة الجملة. وتستعمل folglich لنتيجة منطقية وdes Weiteren لإضافة نقطة؛ ليست هذه الروابط أرقى تلقائياً، بل يحدد السياق ملاءمتها.",
     "rules": [
       {
-        "de": "wenngleich/obgleich (= obwohl, gehoben) + Verb-Ende: Wenngleich es regnete, gingen wir.",
-        "ar": "مرادف obwohl الراقي + فعل في النهاية حتماً."
+        "de": "wenngleich/obgleich (= obwohl, oft formeller) + Verb am Ende: Wenngleich es regnete, gingen wir.",
+        "ar": "wenngleich/obgleich رابطان تنازليان، وغالباً أكثر رسمية من obwohl، والفعل في نهاية التابعة."
       },
       {
-        "de": "hingegen (flexibel): Er hingegen blieb. / Hingegen blieb er.",
-        "ar": "hingegen للتضاد بموضع حر (1 أو 3) — ليست رابطاً صفرياً كـaber!"
+        "de": "hingegen markiert einen Kontrast: Er hingegen blieb. / Hingegen blieb er. Die Stellung richtet sich nach dem kontrastierten Element.",
+        "ar": "قد تأتي hingegen بعد العنصر الذي تقابله أو في مقدمة الجملة؛ لا نصفها بموضع رقمي ثابت لكل استعمال."
       },
       {
-        "de": "folglich/des Weiteren/zwar … aber: Folglich blieb er. · Des Weiteren gilt: …",
-        "ar": "سجل B2 الكتابي: folglich (وبالتالي) وdes Weiteren (وعلاوةً) وzwar…aber."
+        "de": "folglich leitet eine Folgerung ein; des Weiteren ergänzt einen Punkt; zwar … aber markiert Einräumung und Gegensatz.",
+        "ar": "لكل رابط وظيفة مختلفة: نتيجة أو إضافة أو إقرار يتبعه تضاد."
       }
     ],
     "tables": [
@@ -13289,14 +13302,14 @@
         ],
         "rows": [
           [
-            "إقرار راقٍ",
+            "تنازل رسمي غالباً",
             "wenngleich/obgleich",
             "فعل في النهاية"
           ],
           [
             "تضاد",
             "hingegen",
-            "1 أو 3"
+            "بعد العنصر المقابَل أو في المقدمة"
           ],
           [
             "نتيجة",
@@ -13371,7 +13384,7 @@
         "darfNicht": [
           "aber"
         ],
-        "explanationAr": "الإقرار الراقي: Wenngleich…, gingen wir — لا aber السهلة!",
+        "explanationAr": "wenngleich يفتح جملة تنازلية؛ بعد التابعة تبدأ الرئيسية بالفعل gingen wir.",
         "points": 2
       },
       {
@@ -13402,9 +13415,9 @@
       {
         "id": "b2-textkonnektoren-n7",
         "type": "truefalse",
-        "promptDe": "In „Er hingegen blieb“ steht das Verb an Position 2.",
-        "answer": "falsch",
-        "explanationAr": "خطأ — الفعل ثالث (er/hingegen/blieb): hingegen موضع 1 أو 3.",
+        "promptDe": "„Hingegen“ kann direkt nach dem kontrastierten Subjekt stehen: „Er hingegen blieb.“",
+        "answer": "richtig",
+        "explanationAr": "صحيح؛ تأتي hingegen هنا بعد الفاعل المقابَل، ولا يصح تفسير ترتيب الجملة بعدّ الكلمات وحده.",
         "options": [
           "richtig",
           "falsch"
@@ -13442,8 +13455,8 @@
         "ar": "قلب بعد التابع: الفعل قبل الفاعل!"
       },
       {
-        "de": "✗ …, hingegen er blieb → ✓ …, er hingegen blieb",
-        "ar": "hingegen ليست aber — موضعها 1 أو 3!"
+        "de": "„…, hingegen er blieb“ ✗ → „…; er hingegen blieb“ oder „…; hingegen blieb er“ ✓",
+        "ar": "إما أن تأتي بعد العنصر المقابَل أو في مقدمة جملة مستقلة بترتيب V2."
       },
       {
         "de": "✗ desweiteren → ✓ des Weiteren",
@@ -14904,7 +14917,7 @@
     "titleDe": "Genitivpräpositionen: wegen, trotz, während, aufgrund …",
     "titleAr": "حروف جر Genitiv: wegen/trotz/während/aufgrund/anlässlich/innerhalb/außerhalb",
     "level": "B2",
-    "ziel": "تستعمل حروف جر Genitiv في الكتابة الرسمية والصحفية والأكاديمية بدلاً من Dativ العامية، وتتقن صيغها في الكتابة.",
+    "ziel": "تستعمل حروف جر شائعة مع Genitiv في الأسلوب المعياري المتدرّب عليه، وتتعرف إلى البدائل السياقية.",
     "voraus": [
       "b1-genitiv"
     ],
@@ -14924,7 +14937,7 @@
           "Während"
         ],
         "answer": "Wegen",
-        "explanationAr": "Wegen + Genitiv = بسبب. Weil es regnete sind wir zu Hause geblieben."
+        "explanationAr": "Wegen + Genitiv = بسبب. الصياغة الفعلية المقابلة: Weil es regnete, sind wir zu Hause geblieben."
       },
       {
         "id": "b2-gp-v2-check",
@@ -14951,7 +14964,7 @@
         "explanationAr": "Während + Genitiv = أثناء/خلال. Während des Krieges = خلال الحرب."
       }
     ],
-    "summaryAr": "حروف جر Genitiv شائعة الاستخدام في الكتابة الرسمية: wegen (بسبب), trotz (رغم), während (خلال), aufgrund (بسبب/بناءً على), anlässlich (بمناسبة), statt/anstatt (بدلاً من), innerhalb (خلال/داخل), außerhalb (خارج). في اللغة المحكية يستعمل الألمان Dativ كثيراً مع هذه الأدوات، لكن Schriftdeutsch يتطلب Genitiv.",
+    "summaryAr": "تأتي حروف مثل aufgrund وinnerhalb وaußerhalb وwährend، وكذلك wegen وtrotz في الأسلوب المعياري المتدرّب عليه، غالباً مع Genitiv. توجد مع wegen وtrotz خاصةً استعمالات Dativ محكية أو إقليمية، وتوجد تراكيب بديلة مثل innerhalb von. لذلك نتعلم الصيغة المطلوبة في السياق ولا نصف كل بديل بأنه خطأ مطلق.",
     "rules": [
       {
         "de": "wegen + Genitiv: Wegen des Regens",
@@ -15032,7 +15045,7 @@
         "ar": "رغم الجهود الكبيرة، لم ينجح في الامتحان."
       }
     ],
-    "eselsbruecke": "تذكير: هذه الأدوات في الكتابة الرسمية تأخذ دائماً Genitiv — كأنها «تُضيف» -s/-en إلى الاسم بعدها كما في الإنجليزية because of the rain.",
+    "eselsbruecke": "Im hier geübten Standard folgt meist der Genitiv: wegen des Regens, während der Sitzung. Form und mögliche Alternativen werden mit der Präposition gelernt.",
     "exercises": [
       {
         "id": "b2-gp-v1",
@@ -15044,7 +15057,7 @@
           "Während"
         ],
         "answer": "Wegen",
-        "explanationAr": "Wegen + Genitiv = بسبب. Weil es regnete sind wir zu Hause geblieben.",
+        "explanationAr": "Wegen + Genitiv = بسبب. الصياغة الفعلية المقابلة: Weil es regnete, sind wir zu Hause geblieben.",
         "promptAr": "اختر الإجابة الصحيحة."
       },
       {
@@ -15100,13 +15113,13 @@
         "ar": "تأخذ statt Genitiv في الصيغة المعيارية: ein Brief تصبح eines Briefes."
       }
     ],
-    "eselsbrueckeAr": "تذكير: هذه الأدوات في الكتابة الرسمية تأخذ دائماً Genitiv — كأنها «تُضيف» -s/-en إلى الاسم بعدها كما في الإنجليزية because of the rain.",
+    "eselsbrueckeAr": "في الأسلوب المعياري المتدرّب عليه يأتي غالباً Genitiv: wegen des Regens، während der Sitzung؛ واحفظ البدائل الممكنة مع كل حرف.",
     "pronTippAr": ""
   },
   "b2-konzessiv": {
     "id": "b2-konzessiv",
-    "titleDe": "Konzessivsätze: obwohl / trotzdem / auch wenn / wenngleich / bei + Dat",
-    "titleAr": "الجمل التناقضية: obwohl/trotzdem/auch wenn/wenngleich/bei+Dativ",
+    "titleDe": "Konzessivsätze und konzessive Verknüpfungen",
+    "titleAr": "الجمل والروابط التنازلية",
     "level": "B2",
     "ziel": "تفرّق بين أدوات التناقض وتستعملها في مواضعها الصحيحة: أداة ربط تُقدّم جملة ثانوية (obwohl/wenngleich/obgleich/auch wenn) مقابل ظرف يربط بين جملتين مستقلتين (trotzdem/dennoch/jedoch).",
     "voraus": [
@@ -15140,26 +15153,26 @@
           "Weil"
         ],
         "answer": "Trotzdem",
-        "explanationAr": "Trotzdem ظرف يربط جملتين مستقلتين (لا يغيّر ترتيب الفعل)."
+        "explanationAr": "Trotzdem يربط بالمعنى السابق؛ وعند تقديمه يأتي الفعل المصرّف مباشرة بعده: Trotzdem gingen wir…"
       }
     ],
-    "summaryAr": "أدوات التناقض نوعان: 1) روابط جمل ثانوية (تأتي في أول الجملة وتجعل الفعل في الآخر): obwohl (رغم أن), obgleich, wenngleich, auch wenn (حتى لو), selbst wenn (حتى ولو). 2) ظروف/روابط بين جمل مستقلة (الفعل يبقى في الموقع الثاني): trotzdem (مع ذلك), dennoch (مع ذلك), jedoch (لكن/إلا أن), allerdings (مع ذلك). 3) تراكيب جرّية: trotz + Genitiv, bei + Dat (bei schlechtem Wetter).",
+    "summaryAr": "تفتح obwohl وobgleich وwenngleich وauch wenn وselbst wenn جملة تابعة تنازلية، سواء سبقت الرئيسية أو لحقتها، ويأتي فعلها المصرّف في النهاية. أما trotzdem وdennoch فظرفان رابطان يمكن أن يشغلا مقدمة الرئيسية فيأتي الفعل بعدهما، وقد يظهر jedoch أيضاً داخل الجملة. وتعبّر trotz + Genitiv عن التنازل في مجموعة اسمية. أما bei + Dativ فيصف ظرفاً؛ ولا يصبح المعنى تنازلياً إلا من بقية الجملة مثل trotzdem.",
     "rules": [
       {
         "de": "Obwohl es regnet, gehe ich spazieren. (Nebensatz → Verb am Ende)",
         "ar": "obwohl يفتح جملة ثانوية (الفعل في الآخر)."
       },
       {
-        "de": "Es regnet, trotzdem gehe ich spazieren. (Hauptsatz → Verb an Position 2)",
-        "ar": "trotzdem جملة مستقلة بعدها الفعل في الموقع الثاني."
+        "de": "Es regnet; trotzdem gehe ich spazieren. Steht trotzdem im Vorfeld, folgt das finite Verb: trotzdem gehe ich.",
+        "ar": "عند تقديم trotzdem يشغل المقدمة، فيأتي الفعل المصرّف بعده وفق V2."
       },
       {
         "de": "Auch wenn es regnet, gehe ich spazieren. (konzessiv; je nach Kontext hypothetisch)",
         "ar": "auch wenn تعني «حتى إن/حتى لو»؛ وقد تكون الحالة افتراضية بحسب السياق، لكن ذلك ليس لازماً. يبقى الفعل المصرف في نهاية الجملة التابعة."
       },
       {
-        "de": "Bei Regen gehe ich trotzdem spazieren. (Präpositionalgruppe)",
-        "ar": "bei + Dativ في صيغة قصيرة."
+        "de": "Bei Regen gehe ich trotzdem spazieren. „bei Regen“ nennt den Umstand; die konzessive Wirkung entsteht hier durch trotzdem.",
+        "ar": "bei Regen يذكر الظرف فقط، أما معنى «مع ذلك» فيأتي هنا من trotzdem."
       }
     ],
     "tables": [
@@ -15188,7 +15201,7 @@
           [
             "Subjunktion",
             "auch wenn",
-            "Nebensatz, hypothetisch",
+            "Nebensatz V-Ende; real oder hypothetisch je nach Kontext",
             "Auch wenn es regnet, …"
           ],
           [
@@ -15212,8 +15225,8 @@
           [
             "Adverb",
             "jedoch",
-            "V2 (förmlicher)",
-            "Das Ergebnis war gut, jedoch nicht perfekt."
+            "im Vorfeld oder im Mittelfeld",
+            "Das Ergebnis war jedoch nicht perfekt."
           ],
           [
             "Präp.",
@@ -15234,7 +15247,7 @@
         "ar": "على الرغم من ارتفاع التكاليف، استمر المشروع."
       }
     ],
-    "eselsbruecke": "trotzdem = trotzdem هي ظرف لا رابط: تحتاج نقطة/فاصلة قبلها، وبعدها يأتي الفعل ثانياً. أما obwohl فإنه يسحب الفعل إلى آخر الجملة.",
+    "eselsbruecke": "obwohl leitet einen Nebensatz ein; trotzdem/dennoch sind Konnektoradverbien. Stehen sie im Vorfeld, folgt das finite Verb.",
     "exercises": [
       {
         "id": "b2-kk-v1",
@@ -15259,7 +15272,7 @@
           "Weil"
         ],
         "answer": "Trotzdem",
-        "explanationAr": "Trotzdem ظرف يربط جملتين مستقلتين (لا يغيّر ترتيب الفعل).",
+        "explanationAr": "Trotzdem يربط بالمعنى السابق؛ وعند تقديمه يأتي الفعل المصرّف مباشرة بعده: Trotzdem gingen wir…",
         "promptAr": "اختر الإجابة الصحيحة."
       },
       {
@@ -15303,7 +15316,7 @@
         "ar": "في الألمانية المعيارية نستخدم obwohl لافتتاح الجملة التابعة؛ ويمكن استعمال trotzdem في جملة رئيسية بترتيب الفعل الثاني."
       }
     ],
-    "eselsbrueckeAr": "trotzdem = trotzdem هي ظرف لا رابط: تحتاج نقطة/فاصلة قبلها، وبعدها يأتي الفعل ثانياً. أما obwohl فإنه يسحب الفعل إلى آخر الجملة.",
+    "eselsbrueckeAr": "obwohl يفتح جملة تابعة، أما trotzdem/dennoch فظرفان رابطان؛ إذا تقدما الجملة جاء الفعل المصرّف بعدهما.",
     "pronTippAr": ""
   },
   "b2-relativ-genitiv": {
@@ -15311,7 +15324,7 @@
     "titleDe": "Relativsätze im Genitiv: dessen und deren",
     "titleAr": "الجمل الموصولة في حالة Genitiv: dessen وderen",
     "level": "B2",
-    "ziel": "تصف شخصاً أو شيئاً بملكيته أو علاقته عبر الضمير الموصول Genitiv (dessen للمفرد، deren للمؤنث والجمع)، وتكتب جملاً رسمية دقيقة كما في الصحف والتقارير.",
+    "ziel": "تصف علاقة أو انتماءً بـdessen للمذكر والمحايد وderen للمؤنث والجمع، مع إبقاء بنية الاسم التالي.",
     "voraus": [
       "b1-relativ"
     ],
@@ -15331,22 +15344,22 @@
           "dem"
         ],
         "answer": "dessen",
-        "explanationAr": "dessen للمفكر المذكر/المحايد: der Mann, dessen Sohn …"
+        "explanationAr": "dessen للمرجع المذكر أو المحايد: der Mann, dessen Sohn …"
       },
       {
         "id": "b2-rg-v2-check",
         "type": "mc",
-        "promptDe": "Die Frau, ___ Kinder hier wohnen, arbeitet bei BMW.",
+        "promptDe": "Die Frau, ___ Kinder hier wohnen, arbeitet in einer Klinik.",
         "options": [
           "dessen",
           "deren",
           "derer"
         ],
         "answer": "deren",
-        "explanationAr": "deren للمؤنث والجمع: die Frau, deren Kinder …"
+        "explanationAr": "deren للمرجع المؤنث أو الجمع: die Frau, deren Kinder …"
       }
     ],
-    "summaryAr": "dessen تُستعمل مع المفكر المذكر والمحايد (der/das + Genitiv)، وderen مع المؤنث والجمع (die/die Plural + Genitiv). هذان الضميران مهمان في الكتابة الرسمية لوصف العلاقات والملكية دون تكرار الأسماء.",
+    "summaryAr": "يعود dessen إلى مرجع مذكر أو محايد، وتعود deren إلى مرجع مؤنث أو جمع. يعبّران عن الملكية أو علاقة أخرى بالاسم التالي: der Mann, dessen Sohn…؛ die Firma, deren Produkte…. يتحدد الاختيار من جنس/عدد الاسم السابق، لا من جنس الشيء المرتبط به.",
     "rules": [
       {
         "de": "dessen ← maskulin/neutrum: Der Mann, dessen Auto vor der Tür steht, …",
@@ -15375,7 +15388,7 @@
           [
             "das (Neutr.)",
             "dessen",
-            "das Kind, dessen Eltern fehlen"
+            "das Kind, dessen Eltern hier arbeiten"
           ],
           [
             "die (Fem.)",
@@ -15400,7 +15413,7 @@
         "ar": "الشركة التي تُباع منتجاتها في الخارج تنمو."
       }
     ],
-    "eselsbruecke": "dessen يُذكّرك بـhis/its (للمفرد)، deren بـher/their (للمؤنث والجمع).",
+    "eselsbruecke": "dessen für maskuline/neutrale Bezugswörter; deren für feminine Bezugswörter und den Plural.",
     "exercises": [
       {
         "id": "b2-rg-v1",
@@ -15412,20 +15425,20 @@
           "dem"
         ],
         "answer": "dessen",
-        "explanationAr": "dessen للمفكر المذكر/المحايد: der Mann, dessen Sohn …",
+        "explanationAr": "dessen للمرجع المذكر أو المحايد: der Mann, dessen Sohn …",
         "promptAr": "اختر الإجابة الصحيحة."
       },
       {
         "id": "b2-rg-v2",
         "type": "mc",
-        "promptDe": "Die Frau, ___ Kinder hier wohnen, arbeitet bei BMW.",
+        "promptDe": "Die Frau, ___ Kinder hier wohnen, arbeitet in einer Klinik.",
         "options": [
           "dessen",
           "deren",
           "derer"
         ],
         "answer": "deren",
-        "explanationAr": "deren للمؤنث والجمع: die Frau, deren Kinder …",
+        "explanationAr": "deren للمرجع المؤنث أو الجمع: die Frau, deren Kinder …",
         "promptAr": "اختر الإجابة الصحيحة."
       },
       {
@@ -15439,7 +15452,7 @@
           "Der Mann, denen Auto rot ist, fährt weg."
         ],
         "answer": "Der Mann, dessen Auto rot ist, fährt weg.",
-        "explanationAr": "dessen لملكية المذكر/المحايد، deren للمؤنث والجمع.",
+        "explanationAr": "dessen لملكية المذكر/المحايد، deren للمرجع المؤنث أو الجمع.",
         "id": "b2-relativ-genitiv-r141e-e03"
       },
       {
@@ -15469,7 +15482,7 @@
         "ar": "deren يعود إلى الاسم السابق المؤنث أو الجمع؛ يطابق جنس الاسم السابق لا Tochter."
       }
     ],
-    "eselsbrueckeAr": "dessen يُذكّرك بـhis/its (للمفرد)، deren بـher/their (للمؤنث والجمع).",
+    "eselsbrueckeAr": "dessen للمرجع المذكر أو المحايد؛ deren للمرجع المؤنث أو الجمع.",
     "pronTippAr": ""
   },
   "a1-pruefungsstrategie": {
@@ -15905,58 +15918,58 @@
   },
   "b2-pruefungsstrategie": {
     "id": "b2-pruefungsstrategie",
-    "titleDe": "Prüfungsstrategie: Goethe B2",
-    "titleAr": "استراتيجية امتحان B2 — المقالة الرأيية، التلخيص، والمناقشة المعمّقة",
+    "titleDe": "Interne Prüfungsstrategie: B2-Übungsformat",
+    "titleAr": "استراتيجية داخلية لتدريبات B2",
     "level": "B2",
-    "ziel": "تتقن بنية امتحان B2 (كتابة تعليق رأي 120-180 كلمة، رسالة رسمية، تلخيص نص، نقاش موسّع)، وتعرف استراتيجيات التعامل مع النصوص الطويلة والمصطلحات المعقدة.",
+    "ziel": "تخطط لنص حجاجي وتتعامل مع نصوص أطول وتدير تفاعلاً منظماً وفق تعليمات المهمة الحالية، من دون اعتبار الصفحة وصفاً رسمياً لامتحان بعينه.",
     "voraus": [
       "b2-nominalstil",
       "b2-textkonnektoren"
     ],
     "anwendung": {
-      "ar": "حاكِ امتحان B2 كاملاً وركّز على حفظ 10 روابط مزدوجة و10 عبارات افتتاحية/ختامية.",
-      "de": "Trainiere eine vollständige B2-Prüfung und lerne 10 Doppelkonnektoren sowie 10 Einleitungs-/Schlusssätze auswendig.",
+      "ar": "نفّذ مجموعة B2 داخلية بوقت محدد، وغطِّ كل نقاط المهمة، ثم راجع التنظيم والوضوح. قبل امتحان حقيقي ارجع إلى التعليمات الرسمية الحالية للجهة والنموذج المسجل فيه.",
+      "de": "Bearbeite ein internes B2-Übungsset mit Zeitlimit, decke alle Aufgabenpunkte ab und prüfe Gliederung sowie Klarheit. Prüfe vor einer echten Prüfung die aktuellen offiziellen Vorgaben deines Anbieters und Formats.",
       "candoIds": []
     },
     "verify": [
       {
         "id": "b2-ps-v1-check",
         "type": "mc",
-        "promptDe": "Wie lang sollte der B2-Meinungsaufsatz sein?",
+        "promptDe": "Woran orientieren Sie sich bei Wortzahl und Bearbeitungszeit?",
         "options": [
-          "30 Wörter",
-          "120–180 Wörter",
-          "300–400 Wörter"
+          "An den Angaben der konkreten Aufgabe",
+          "An einer pauschalen Zahl aus dem Gedächtnis",
+          "An den Vorgaben eines anderen Prüfungsformats"
         ],
-        "answer": "120–180 Wörter",
-        "explanationAr": "مقال الرأي في B2 بين 120 و180 كلمة."
+        "answer": "An den Angaben der konkreten Aufgabe",
+        "explanationAr": "تختلف الأرقام بحسب الجهة والنموذج؛ المرجع الملزم هو المهمة والمواد الرسمية الحالية."
       },
       {
         "id": "b2-ps-v2",
         "type": "mc",
-        "promptDe": "Was steigert die Bewertung Ihres B2-Kommentars am meisten?",
+        "promptDe": "Was verbessert die Nachvollziehbarkeit eines argumentativen Kommentars?",
         "options": [
           "Gegenposition abwägen und dann ein klares Fazit ziehen",
           "Möglichst viele Fremdwörter aneinanderreihen",
           "Sehr lange Sätze ohne erkennbare Struktur schreiben"
         ],
         "answer": "Gegenposition abwägen und dann ein klares Fazit ziehen",
-        "explanationAr": "النضج الحجاجي: موازنة الرأي المقابل بإنصاف ثم خلاصة واضحة — هذا ما يميّز B2 عن B1."
+        "explanationAr": "تساعد موازنة رأي مقابل ذي صلة وخلاصة واضحة على بناء حجة مفهومة؛ هذا توجيه تدريبي لا معيار درجات رسمي."
       }
     ],
-    "summaryAr": "بنية B2: Lesen 80د، Hören 30د، Schreiben 75د (بريد رسمي + تعليق رأي 120-180 كلمة)، Sprechen 15د (مقارنة، عرض رأي، مناقشة). استراتيجيات: 1) اقرأ الأسئلة قبل النص. 2) لا تترجم كل كلمة، استنتج من السياق. 3) المقال: مقدمة (أعيد صياغة السؤال) + حجتان أو ثلاث مضادة ومؤيدة بأمثلة + خاتة مع خلاصة وتوصية. 4) في النقاش: ابدأ بالموافقة الجزئية ثم اعترض مهذباً مع حجج.",
+    "summaryAr": "هذه استراتيجية داخلية: اقرأ المطلوب قبل النص، وحدد الكلمات المفتاحية، ولا تحاول ترجمة كل كلمة. في الكتابة خطط لموقف واضح مع تعليل ومثال وموازنة للرأي المقابل عند ملاءمته، ثم راجع الترابط والسجل. في التفاعل استجب لحجة الشريك واطلب التوضيح عند الحاجة. تختلف بنية امتحانات B2 الرسمية ومددها وأعداد كلماتها بين الجهات والنماذج وقد تتغير؛ لذلك تؤخذ التفاصيل الملزمة من المهمة والمواد الرسمية الحالية.",
     "rules": [
       {
-        "de": "Unterscheide im Kommentar klar zwischen These, Begründung und Beispiel.",
-        "ar": "ميّز بوضوح في التعليق بين الأطروحة والتعليل والمثال."
+        "de": "Unterscheide im Kommentar klar zwischen These, Begründung und Beispiel; erfülle alle konkreten Aufgabenpunkte.",
+        "ar": "ميّز بين الموقف والتعليل والمثال، وغطِّ النقاط المطلوبة فعلاً."
       },
       {
-        "de": "Wäge Gegenpositionen ab, bevor du dein Fazit formulierst.",
-        "ar": "وازن الرأي المقابل قبل صياغة خلاصة موقفك."
+        "de": "Wäge eine relevante Gegenposition ab und formuliere ein nachvollziehbares Fazit.",
+        "ar": "وازن رأياً مقابلاً ذا صلة عندما تطلب المهمة ذلك، ثم صغ خلاصة واضحة."
       },
       {
-        "de": "Nutze die Vorbereitungszeit, um eine kurze Gliederung zu notieren.",
-        "ar": "استعمل وقت التحضير لكتابة مخطط قصير."
+        "de": "Nutze eine vorhandene Vorbereitungszeit für eine kurze Gliederung; Dauer und Wortzahl stehen in der aktuellen Aufgabe.",
+        "ar": "استعمل وقت التحضير المتاح للمخطط، وخذ الزمن وعدد الكلمات من المهمة الحالية."
       }
     ],
     "tables": [],
@@ -15970,47 +15983,47 @@
         "ar": "يوضح المثال سبب قوة هذا الموقف."
       }
     ],
-    "eselsbruecke": "في B2 يُقيّم التعقيد المناسب (Konjunktiv II، Nominalstil، Doppelkonnektoren) — لا تكتب جملاً أبسط من مستوى B2.",
+    "eselsbruecke": "Klarheit vor Komplexität: verbindliche Struktur, Zeit und Wortzahl kommen aus der aktuellen Aufgabe.",
     "exercises": [
       {
         "id": "b2-ps-v1",
         "type": "mc",
-        "promptDe": "Wie lang sollte der B2-Meinungsaufsatz sein?",
+        "promptDe": "Woran orientieren Sie sich bei Wortzahl und Bearbeitungszeit?",
         "options": [
-          "30 Wörter",
-          "120–180 Wörter",
-          "300–400 Wörter"
+          "An den Angaben der konkreten Aufgabe",
+          "An einer pauschalen Zahl aus dem Gedächtnis",
+          "An den Vorgaben eines anderen Prüfungsformats"
         ],
-        "answer": "120–180 Wörter",
-        "explanationAr": "مقال الرأي في B2 بين 120 و180 كلمة.",
+        "answer": "An den Angaben der konkreten Aufgabe",
+        "explanationAr": "تختلف الأرقام بحسب الجهة والنموذج؛ المرجع الملزم هو المهمة والمواد الرسمية الحالية.",
         "promptAr": "اختر الإجابة الصحيحة."
       },
       {
         "type": "mc",
-        "promptDe": "Was ist im B2-Sprechen Teil 2 verlangt?",
-        "promptAr": "ماذا يُطلب في جزء الكلام B2 Teil 2؟",
+        "promptDe": "Was gehört in ein interaktives B2-Übungsgespräch?",
+        "promptAr": "ما الذي يلائم محادثة تدريبية تفاعلية في B2؟",
         "options": [
-          "Nur Begrüßung",
-          "Präsentation (Monolog) mit Begründung",
-          "Vorlesen eines Textes",
-          "Wortschatztest"
+          "Auf den Beitrag des Partners eingehen und begründen",
+          "Nur eine Begrüßung sagen",
+          "Einen Text ohne Reaktion vorlesen",
+          "Wortlisten aufsagen"
         ],
-        "answer": "Präsentation (Monolog) mit Begründung",
-        "explanationAr": "عرض (مونولوج) مدعّم بالحجج.",
+        "answer": "Auf den Beitrag des Partners eingehen und begründen",
+        "explanationAr": "التفاعل يعني الاستجابة لما يقوله الشريك وتعليل الموقف؛ تفاصيل الامتحان تؤخذ من الجهة الحالية.",
         "id": "b2-pruefungsstrategie-r141e-e02"
       },
       {
         "type": "mc",
-        "promptDe": "Wie lang soll die Vorbereitung auf die Präsentation (Teil 2) sein?",
-        "promptAr": "كم طول وقت التحضير للعرض؟",
+        "promptDe": "Woher nehmen Sie die verbindliche Vorbereitungszeit?",
+        "promptAr": "من أين تأخذ زمن التحضير الملزم؟",
         "options": [
-          "1 Minute",
-          "3 Minuten",
-          "10 Minuten",
-          "Keine Vorbereitung"
+          "Aus der aktuellen Aufgabe und den offiziellen Anbieterunterlagen",
+          "Aus einer pauschalen Zeitangabe ohne Aufgabenbezug",
+          "Aus den Vorgaben eines anderen Prüfungsformats",
+          "Aus einer alten Übung ohne Abgleich"
         ],
-        "answer": "3 Minuten",
-        "explanationAr": "في Goethe B2 ثلاث دقائق للتحضير.",
+        "answer": "Aus der aktuellen Aufgabe und den offiziellen Anbieterunterlagen",
+        "explanationAr": "لا يوجد رقم واحد لكل صيغ B2؛ راجع المهمة والمواد الرسمية الحالية.",
         "id": "b2-pruefungsstrategie-r141e-e03"
       },
       {
@@ -16040,7 +16053,7 @@
         "ar": "الدقة والترابط أهم من تعقيد الجمل؛ استعمل روابط مناسبة مع بنية واضحة."
       }
     ],
-    "eselsbrueckeAr": "في B2 يُقيّم التعقيد المناسب (Konjunktiv II، Nominalstil، Doppelkonnektoren) — لا تكتب جملاً أبسط من مستوى B2.",
+    "eselsbrueckeAr": "الوضوح قبل التعقيد؛ أما البنية والزمن وعدد الكلمات الملزمة فتؤخذ من المهمة الحالية.",
     "pronTippAr": ""
   },
   "a0-satzbau": {
@@ -16229,7 +16242,7 @@
     "titleDe": "N-Deklination: der Student, den Studenten",
     "titleAr": "التصريف الضعيف للأسماء المذكرة (N-Deklination) — der Student → den Studenten",
     "level": "B2",
-    "ziel": "تميّز 40 اسمًا مذكرًا ضعيفًا (Student/Kollege/Nachbar/Herr…) وتصرّفها بـ -(e)n في كل الحالات ما عدا نوميناتيف المفرد، وتتجنب الخطأ الشائع *den Student.",
+    "ziel": "تميّز أنماطاً شائعة من الأسماء المذكرة الضعيفة وتصرّفها بـ-(e)n خارج Nominativ المفرد.",
     "voraus": [
       "b2-nominalstil",
       "b1-genitiv"
@@ -16251,7 +16264,7 @@
         "answer": [
           "dem Nachbarn"
         ],
-        "explanationAr": "helfen + Dativ → dem Nachbarn (N-Deklination: -n، الاستثناء غير القياسي)."
+        "explanationAr": "helfen + Dativ: dem Nachbarn؛ Nachbar يأخذ -n خارج Nominativ المفرد."
       },
       {
         "id": "b2-n-dekl-v2",
@@ -16266,32 +16279,32 @@
         "explanationAr": "kennen + Akk → den Kollegen (N-Deklination -en)."
       }
     ],
-    "summaryAr": "قاعدة التصريف الضعيف (N-Deklination) تخصّ أسماءً مذكرة محددة تأخذ -(e)n في كل الحالات ما عدا نوميناتيف المفرد. القاعدة الذهبية: النهاية في المفرد (غير النوميناتيف) = نهاية الجمع. فإذا كان الجمع Studenten فالمفرد المنصوب/المجرور Studenten، وإذا كان الجمع Nachbarn فالمفرد Nachbarn. تشمل: 1) كل مذكر ينتهي بـ -e ويُسمّي إنسانًا/حيوانًا (Junge, Kollege, Kunde, Löwe, Franzose)، 2) لواحق لاتينية/يونانية -ent/-ant/-and/-ist/-at/-oge/-graf/-soph (Student, Präsident, Praktikant, Polizist, Soldat, Biologe)، 3) كلمات شاذة قليلة: Mensch, Herr, Nachbar, Bauer, Bär, Held, Prinz. الأخطاء الشائعة عند العرب: *den Student/*dem Kollege — لأن العربية لا تصرّف الاسم بهذه الطريقة فيكتبون النوميناتيف في كل موضع.",
-    "summaryDe": "N-Deklination: schwache Maskulina bekommen -(e)n in allen Kasus außer Nom. Sg. — Endung = Pluralendung.",
+    "summaryAr": "تأخذ الأسماء المذكرة الضعيفة -(e)n في Akkusativ وDativ وGenitiv المفرد: der Student، den/dem/des Studenten. تشمل مجموعات شائعة أسماء أشخاص أو حيوانات منتهية بـ-e، وبعض الأسماء ذات اللواحق -ent/-ant/-ist/-at/-oge وغيرها، وأسماءً تحفظ منفردة مثل Mensch وHerr وNachbar. لا تكفي نهاية الكلمة وحدها لكل اسم، وتوجد أسماء ذات تصريف مختلط مثل der Name وdas Herz؛ لذلك يحفظ الجمع وصيغ الحالات مع المدخل.",
+    "summaryDe": "Schwache Maskulina bekommen im Singular außer im Nominativ -(e)n. Verwandte gemischte Muster wie Name und Herz werden getrennt gelernt.",
     "rules": [
       {
-        "de": "der Junge → den Jungen, dem Jungen, des Jungen (Plural: die Jungen)",
-        "ar": "مذكر -e للإنسان/الحيوان: Junge/Kollege/Kunde/Löwe/Franzose → كل الحالات -n"
+        "de": "der Junge → den/dem/des Jungen; der Kollege → den/dem/des Kollegen.",
+        "ar": "كثير من أسماء الأشخاص أو الحيوانات المذكرة المنتهية بـ-e ضعيفة، لكن تُحفظ الكلمة مع صيغها."
       },
       {
-        "de": "der Student → den Studenten (Plural Studenten: -en → Singular -en)",
-        "ar": "نهايات لاتينية -ent/-ant/-and: Student, Präsident, Elefant, Praktikant, Demonstrant → -en"
+        "de": "der Student/Praktikant → den Studenten/Praktikanten; typische Personensuffixe sind u. a. -ent und -ant.",
+        "ar": "تظهر أنماط شائعة في أسماء الأشخاص ذات لواحق مثل -ent و-ant."
       },
       {
-        "de": "der Polizist → den Polizisten (Plural Polizisten)",
-        "ar": "نهايات المهن والعلوم -ist/-at/-oge/-graf/-soph: Polizist, Journalist, Soldat, Biologe, Fotograf, Philosoph → -en"
+        "de": "der Polizist/Soldat/Biologe → den Polizisten/Soldaten/Biologen. Nicht jedes Wort mit derselben Buchstabenfolge ist schwach.",
+        "ar": "تشمل مجموعات أخرى أسماء أشخاص مثل Polizist وSoldat وBiologe؛ لا نعمم اللاحقة على كل كلمة."
       },
       {
-        "de": "der Mensch → den Menschen; der Herr → den Herrn; der Nachbar → den Nachbarn (-n, nicht -en)",
-        "ar": "شواذ: Mensch/Herr/Nachbar/Bauer/Bär/Held/Prinz — الاستثناء Nachbar/Bauer/Herr تأخذ -n فقط لا -en في المفرد"
+        "de": "Einzeln lernen: der Mensch → den Menschen; der Herr → den Herrn; der Nachbar → den Nachbarn; der Bauer → den Bauern.",
+        "ar": "تُحفظ هذه الكلمات وصيغها منفردة؛ وقد تكون النهاية -n أو -en بحسب الجذر."
       },
       {
-        "de": "Nominativ Singular bleibt unverändert: der Student hilft mir (nicht *den Studenten!)",
-        "ar": "الاستثناء الوحيد: نوميناتيف المفرد لا يتغير — der Student ist hier (فاعل) لكن den Studenten sehe ich (مفعول)"
+        "de": "Nominativ Singular bleibt unverändert: Der Student hilft mir.",
+        "ar": "Nominativ المفرد بلا نهاية إضافية: der Student؛ أما الحالات الأخرى فـStudenten."
       },
       {
-        "de": "Herz (n): das Herz → des Herzens, dem Herzen (einzige N-Deklination im Neutrum)",
-        "ar": "حالة نادرة محايدة: das Herz → des Herzens (N-Deklination محايدة وحيدة — تُذكر للاكتمال)"
+        "de": "Verwandte Mischtypen: der Name → den Namen, des Namens; das Herz → dem Herzen, des Herzens. Herz ist kein schwaches Maskulinum.",
+        "ar": "Name وHerz نمطان مختلطان قريبان في بعض الصيغ، لكن Herz محايد وليس اسماً مذكراً ضعيفاً."
       }
     ],
     "tables": [
@@ -16361,7 +16374,7 @@
             "Genitiv",
             "des Nachbarn",
             "der Nachbarn",
-            "+n (قديمًا Nachbars أيضًا)"
+            "+n؛ وصيغة des Nachbars معيارية أيضاً"
           ]
         ]
       }
@@ -16416,7 +16429,7 @@
           "den Praktikanten"
         ],
         "explanationAr": "في حالة النصب (Akkusativ) بعد الفعل suchen تأخذ الأسماء الضعيفة n: den Praktikanten.",
-        "explanationDe": "في حالة النصب (Akkusativ) بعد الفعل suchen تأخذ الأسماء الضعيفة n: den Praktikanten.",
+        "explanationDe": "Akkusativ nach suchen: den Praktikanten; das schwache Maskulinum erhält -en.",
         "quelleDe": "Ich suche den Praktikanten aus Hamburg."
       },
       {
@@ -16427,8 +16440,8 @@
         "answer": [
           "des Experten"
         ],
-        "explanationAr": "في حالة الإضافة (Genitiv) تأخذ الأسماء الضعيفة s: des Experten.",
-        "explanationDe": "في حالة الإضافة (Genitiv) تأخذ الأسماء الضعيفة s: des Experten.",
+        "explanationAr": "في Genitiv: des Experten؛ الاسم الضعيف يأخذ -en، لا علامة s منفصلة.",
+        "explanationDe": "Genitiv des schwachen Maskulinums: des Experten mit -en.",
         "quelleDe": "Die Meinung des Experten ist wichtig."
       },
       {
@@ -16440,7 +16453,7 @@
           "dem Kunden"
         ],
         "explanationAr": "بعد حرف الجر mit المجرور (Dativ) → dem Kunden (n زائدة).",
-        "explanationDe": "بعد حرف الجر mit المجرور (Dativ) → dem Kunden (n زائدة).",
+        "explanationDe": "Nach mit steht der Dativ: mit dem Kunden; Kunde erhält -n.",
         "quelleDe": "Wir sprechen mit dem Kunden über den Vertrag."
       },
       {
@@ -16452,7 +16465,7 @@
           "den Kollegen"
         ],
         "explanationAr": "في حالة النصب → den Kollegen (n زائدة).",
-        "explanationDe": "في حالة النصب → den Kollegen (n زائدة).",
+        "explanationDe": "Akkusativ: den Kollegen; Kollege erhält -n.",
         "quelleDe": "Hast du den Kollegen gesehen?"
       },
       {
@@ -16482,16 +16495,16 @@
         ],
         "explanationAr": "حالة النصب للأسماء الضعيفة: Polizist → den Polizisten.",
         "points": 2,
-        "explanationDe": "حالة النصب للأسماء الضعيفة: Polizist → den Polizisten."
+        "explanationDe": "Akkusativ des schwachen Maskulinums: den Polizisten."
       }
     ]
   },
   "b2-passiv": {
     "id": "b2-passiv",
-    "titleDe": "Passiv in allen Zeiten — Vorgangs- und Zustandspassiv",
-    "titleAr": "المبني للمجهول في كل الأزمنة — الحدث والنتيجة",
+    "titleDe": "Vorgangs- und Zustandspassiv in mehreren Zeitformen",
+    "titleAr": "مجهول الحدث والحالة في صيغ زمنية متعددة",
     "level": "B2",
-    "ziel": "تحوّل المبني للمعلوم إلى مجهول في 4 أزمنة وتفرّق بين Vorgangs- و Zustandspassiv.",
+    "ziel": "تحوّل جملًا إلى Vorgangspassiv في Präsens وPräteritum وPerfekt، وتفرّقه عن Zustandspassiv.",
     "voraus": [
       "b1-passiv",
       "a2-perfekt"
@@ -16504,7 +16517,7 @@
       ]
     },
     "summaryAr": "Vorgangspassiv = werden + Partizip II (الحدث: wird gebaut)، Zustandspassiv = sein + Partizip II (النتيجة: ist gebaut). القاعدة الذهبية: الفاعل المعلوم يُحذف أو يأتي بـ von/durch.",
-    "summaryDe": "Vorgangspassiv (werden + PII) vs Zustandspassiv (sein + PII) — in allen Zeiten.",
+    "summaryDe": "Vorgangspassiv (werden + Partizip II) und Zustandspassiv (sein + Partizip II) in ausgewählten Zeitformen.",
     "rules": [
       {
         "de": "Präsens Passiv: wird + PII — Das Haus wird gebaut.",
@@ -16519,8 +16532,8 @@
         "ar": "تام مجهول: ist + PII + worden (بدون ge-)."
       },
       {
-        "de": "von + Agens vs durch + Mittel: von den Ingenieuren / durch einen Fehler",
-        "ar": "von للفاعل الأصلي، durch للوسيلة: von den Ingenieuren / durch einen Fehler."
+        "de": "Urheber häufig mit von + Dativ; Ursache oder vermittelnde Kraft häufig mit durch + Akkusativ: von der Kommission / durch den Sturm.",
+        "ar": "يأتي المنفذ غالباً مع von + Dativ، وتأتي العلة أو القوة الوسيطة غالباً مع durch + Akkusativ؛ يحدد المعنى الاختيار."
       },
       {
         "de": "Zustandspassiv: ist + PII — Die Tür ist geöffnet (= Ergebnis).",
@@ -16560,8 +16573,8 @@
         "ar": "الجسر يُبنى الآن — Vorgang"
       },
       {
-        "de": "Die Brücke ist seit 2020 gebaut.",
-        "ar": "الجسر مبني منذ 2020 — Zustand"
+        "de": "Die Tür ist seit 8 Uhr geöffnet.",
+        "ar": "الباب مفتوح منذ الثامنة؛ Zustandspassiv يصف الحالة."
       },
       {
         "de": "Der Bericht wurde von der Kommission erstellt.",
@@ -16666,15 +16679,15 @@
         "type": "umformung",
         "quelleDe": "Der Sturm hat das Dach zerstört.",
         "promptDe": "Passiv Perfekt: Das Dach …",
-        "answer": "Das Dach ist vom Sturm zerstört worden.",
+        "answer": "Das Dach ist durch den Sturm zerstört worden.",
         "mussEnthalten": [
           "ist",
           "zerstört",
           "worden"
         ],
-        "explanationAr": "تام مجهول مع الفاعل: Das Dach ist von + فاعل + Partizip II + worden — لأن الفاعل الأصلي يبقى بـ von.",
+        "explanationAr": "Sturm علة أو قوة وسيطة، لذلك يناسب durch + Akkusativ: durch den Sturm.",
         "points": 2,
-        "promptAr": "حوّل إلى مجهول تام مع ذكر الفاعل بـ von.",
+        "promptAr": "حوّل إلى مجهول تام مع ذكر السبب بـdurch.",
         "darfNicht": [
           "Der Sturm hat das Dach zerstört."
         ]
@@ -16682,12 +16695,12 @@
       {
         "id": "b2-passiv-e6",
         "type": "fill",
-        "promptDe": "___ des Berichts wurde Kritik geübt. (Genitivpräp trotzdem?)",
-        "text": "___ des Berichts wurde Kritik geübt.",
+        "promptDe": "An dem Vorschlag ___ Kritik geübt. (werden, Präteritum)",
+        "text": "An dem Vorschlag ___ Kritik geübt.",
         "answer": [
-          "Trotz"
+          "wurde"
         ],
-        "explanationAr": "تعبير شائع في المجهول: wurde Kritik geübt."
+        "explanationAr": "Vorgangspassiv في Präteritum: An dem Vorschlag wurde Kritik geübt."
       },
       {
         "id": "b2-passiv-e7",
@@ -16734,23 +16747,23 @@
         "B2-C2"
       ]
     },
-    "summaryAr": "الماضي التخيلي = hätte/wäre + PII: Hätte ich gelernt, hätte ich bestanden. wäre مع أفعال الحركة/تغير الحالة (gegangen, geworden)، hätte مع الباقي. würde في الماضي شفوي فقط: Ich würde gelernt haben محكي لا معياري.",
+    "summaryAr": "يبنى Konjunktiv II للماضي من hätte أو wäre + Partizip II، ونختار المساعد وفق Perfekt للفعل: hat gelernt → hätte gelernt؛ ist gegangen → wäre gegangen. مع الأفعال الناقصة يظهر Ersatzinfinitiv: hätte anrufen sollen. توجد تراكيب بـwürde + Infinitiv Perfekt في سياقات زمنية أو أسلوبية أخرى؛ لكن التدريب هنا يستهدف الصيغة الموجزة hätte/wäre للماضي غير الواقعي.",
     "rules": [
       {
         "de": "hätte + PII: Hätte ich gelernt, hätte ich bestanden.",
         "ar": "لو درستُ لنجحتُ: hätte + اسم مفعول — للندم على الماضي."
       },
       {
-        "de": "wäre + PII: Wäre ich früher gekommen, hätte ich dich getroffen.",
-        "ar": "حركة في الماضي مع sein: wäre gekommen/gewesen — مع أفعال الحركة."
+        "de": "Die Hilfsverbwahl folgt dem Perfekt: ist gekommen → wäre gekommen; hat gelernt → hätte gelernt.",
+        "ar": "نتبع مساعد Perfekt للفعل، لا قاعدة عامة تقول إن كل حركة تأخذ sein."
       },
       {
         "de": "Modal im KII Vergangenheit: hätte … machen können/müssen/sollen",
         "ar": "الأفعال الناقصة في ماضي التمني: hätte + مصدر + können/müssen/sollen."
       },
       {
-        "de": "würde + PII umgangssprachlich: Ich würde das gemacht haben",
-        "ar": "محكي: würde + اسم مفعول؛ الكتابي يفضّل hätte/wäre + PII."
+        "de": "Für die hier geübte irreale Vergangenheit ist hätte/wäre + Partizip II die klare Kurzform. würde + Infinitiv Perfekt kann in anderen Perspektiv- oder Zukunftskontexten vorkommen.",
+        "ar": "لا نسم كل صيغة würde + Infinitiv Perfekt بأنها عامية أو خاطئة؛ لكن الماضي غير الواقعي المستهدف يصاغ بوضوح بـhätte/wäre."
       }
     ],
     "examples": [
@@ -16793,8 +16806,8 @@
     ],
     "pitfalls": [
       {
-        "de": "✗ Ich würde gelernt haben → ✓ Ich hätte gelernt",
-        "ar": "المعيار hätte لا würde."
+        "de": "Für die Zielbedeutung „irreale Vergangenheit“: „Ich hätte gelernt“. „Ich würde gelernt haben“ ist nicht die hier geübte Form.",
+        "ar": "في معنى الماضي غير الواقعي المستهدف نستعمل hätte gelernt، من دون تعميم الحكم على كل سياق لـwürde."
       },
       {
         "de": "✗ Ich wäre gelernt → ✓ Ich hätte gelernt",
@@ -16885,7 +16898,7 @@
         "answer": [
           "hätte"
         ],
-        "explanationAr": "شرط ماضٍ: hätte + اسم مفعول — hätte geschafft تعني لو نجحتُ."
+        "explanationAr": "Ohne deine Hilfe hätte ich es nicht geschafft = لولا مساعدتك لما تمكنت من إنجازه."
       },
       {
         "id": "b2-k2vht-e8",
@@ -16907,8 +16920,8 @@
   },
   "b2-nominalisierung": {
     "id": "b2-nominalisierung",
-    "titleDe": "Nominalisierung & Nominalstil — B2 Akademisch",
-    "titleAr": "التحويل الاسمي والأسلوب الاسمي — لغة B2 الأكاديمية",
+    "titleDe": "Nominalisierung und Nominalstil",
+    "titleAr": "التحويل الاسمي والأسلوب الاسمي",
     "level": "B2",
     "ziel": "تحوّل الجمل الفعلية إلى اسمية (dass → die Tatsache, dass / weil → wegen + Genitiv) وتكتب بأسلوب Nominalstil.",
     "voraus": [
@@ -16922,23 +16935,23 @@
         "B2-C2"
       ]
     },
-    "summaryAr": "Nominalstil سمة B2 الأكاديمية: تحويل الفعل/الصفة إلى اسم مع حرف جر Genitiv: weil er krank ist → wegen seiner Krankheit؛ dass er kommt → die Tatsache, dass er kommt؛ um zu → zum Zweck.",
+    "summaryAr": "تحوّل Nominalisierung فعلاً أو صفة إلى اسم، مثل untersuchen → die Untersuchung وwichtig → die Wichtigkeit. وقد يعاد تنظيم جملة سببية أو غائية في مجموعة اسمية: weil er krank war → wegen seiner Krankheit؛ um Energie zu sparen → zur Energieeinsparung. أما Die Tatsache, dass… فتضيف اسماً حاكماً مع بقاء جملة dass، وليست تحويلاً آلياً لكل جملة. الاختيار يتبع المعنى والوضوح والسجل.",
     "rules": [
       {
-        "de": "weil-Satz → wegen + Genitiv: Wegen seiner Krankheit blieb er zu Hause.",
-        "ar": "تعليل weil → wegen + مضاف إليه: Wegen seiner Krankheit."
+        "de": "Kausale Umformung: weil er krank war ↔ wegen seiner Krankheit, wenn Agens und Bedeutung klar bleiben.",
+        "ar": "يمكن تحويل السبب إلى wegen + اسم إذا لم يضيع الفاعل أو المعنى."
       },
       {
-        "de": "dass-Satz → Nominal: die Tatsache, dass er kommt",
-        "ar": "dass → الاسم + dass."
+        "de": "Nomen mit Inhaltssatz: die Tatsache, dass er kommt. Der dass-Satz bleibt erhalten und erläutert das Nomen.",
+        "ar": "في Die Tatsache, dass… تبقى جملة dass لتشرح الاسم؛ هذا إعادة تنظيم لا حذف للفعل."
       },
       {
-        "de": "um … zu → zum Zweck des … / für + Akk",
-        "ar": "um zu → اسمي: zum Zweck."
+        "de": "Zweck: um Energie zu sparen ↔ zur Energieeinsparung; oft auch für + Akkusativ.",
+        "ar": "يمكن التعبير عن الغاية باسم مع zu أو für بحسب الاسم والسياق."
       },
       {
-        "de": "Adjektiv → Substantiv: wichtig → die Wichtigkeit",
-        "ar": "الصفة → اسم: wichtig → Wichtigkeit."
+        "de": "Ableitung: wichtig → die Wichtigkeit; untersuchen → die Untersuchung. Form und Bedeutung werden mit dem Nomen gelernt.",
+        "ar": "لا يمكن توليد كل اسم آلياً؛ تُحفظ الصيغة والمعنى والجنس."
       }
     ],
     "examples": [
@@ -16951,8 +16964,8 @@
         "ar": "حقيقة غيابه مؤسفة — Nominal."
       },
       {
-        "de": "Zum Zweck der Untersuchung blieb er.",
-        "ar": "لغرض الفحص بقي — Nominalstil."
+        "de": "Für die Untersuchung führte das Team mehrere Messungen durch.",
+        "ar": "أجرى الفريق قياسات عدة من أجل الفحص؛ für + Akkusativ يعبر عن الغاية هنا."
       }
     ],
     "verify": [
@@ -17027,7 +17040,7 @@
           "Weil seiner Krankheit"
         ],
         "answer": "Wegen seiner Krankheit",
-        "explanationAr": "الأسلوب الاسمي: wegen + Genitiv هو الأسلوب الرسمي المقابل لـ weil.",
+        "explanationAr": "Wegen seiner Krankheit مجموعة اسمية تقابل جملة weil هنا؛ لا يعني ذلك أنها أرفع دائماً.",
         "promptAr": "اختر الأسلوب الاسمي."
       },
       {
@@ -17038,14 +17051,14 @@
         "answer": [
           "Wichtigkeit"
         ],
-        "explanationAr": "تحويل الصفة إلى اسم: wichtig → die Wichtigkeit — كثير B2 يحب الأسماء."
+        "explanationAr": "اشتقاق الصفة: wichtig → die Wichtigkeit؛ تحفظ الصيغة مع جنس الاسم."
       },
       {
         "id": "b2-nom-e5",
         "type": "truefalse",
-        "promptDe": "„Wegen dem Regen“ ist Schriftdeutsch.",
+        "promptDe": "Im hier geübten formellen Standard lautet die Zielphrase „wegen dem Regen“.",
         "answer": "falsch",
-        "explanationAr": "Wegen + Genitiv في الرسمي: wegen des Regens؛ Dativ محكي.",
+        "explanationAr": "الصيغة المستهدفة في هذا السجل هي wegen des Regens؛ وتوجد صيغة Dativ في الاستعمال المحكي والإقليمي.",
         "options": [
           "richtig",
           "falsch"
@@ -17085,19 +17098,19 @@
       {
         "id": "b2-nom-e8",
         "type": "fill",
-        "promptDe": "___ der Prüfung lernte er viel. (Ziel)",
-        "text": "___ der Prüfung lernte er viel.",
+        "promptDe": "___ die Prüfung lernte er viel. (Ziel, Präposition + Akkusativ)",
+        "text": "___ die Prüfung lernte er viel.",
         "answer": [
-          "Zum Zweck"
+          "Für"
         ],
-        "explanationAr": "غرض: zum Zweck + Genitiv أو für + حالة نصب — الأسلوب الرسمي."
+        "explanationAr": "für + Akkusativ تعبر هنا عن الغاية: für die Prüfung."
       }
     ]
   },
   "b2-partizipial": {
     "id": "b2-partizipial",
-    "titleDe": "Partizipialkonstruktionen — B2 Kompaktstil",
-    "titleAr": "التراكيب التشاركية — الأسلوب المكثف B2",
+    "titleDe": "Erweiterte Partizipialattribute",
+    "titleAr": "الصفات المشتقة الموسعة قبل الاسم",
     "level": "B2",
     "ziel": "تبني Partizip I/II كصفة موسعة (der gestern angekommene Brief) وتحوّلها لموصولة.",
     "voraus": [
@@ -17111,23 +17124,23 @@
         "B2-C2"
       ]
     },
-    "summaryAr": "Partizip I (=d): der lesende Mann (الذي يقرأ)؛ Partizip II (=ge…t/en): der gelesene Text (الذي قُرئ). الموسعة: die von der Regierung beschlossenen Maßnahmen (الإجراءات التي أقرتها الحكومة).",
+    "summaryAr": "يصف Partizip I غالباً فعلاً متزامناً يؤديه المرجع: der lesende Mann. وقد يصف Partizip II نتيجةً أو معنىً مبنياً للمجهول مع الفعل المتعدي: der gelesene Text، أو فعلاً سابقاً فاعلياً مع فعل يبني Perfekt بـsein: der angekommene Brief. وتبقى المجموعة الموسعة كلها قبل الاسم وتُصرف كنهاية صفة.",
     "rules": [
       {
-        "de": "Partizip I: lesend, kommend, schlafend — aktiv, gleichzeitig",
-        "ar": "Partizip I = d: lesend (قارئ)."
+        "de": "Partizip I: lesend, kommend, schlafend; meist aktiv und gleichzeitig zum Bezugsereignis.",
+        "ar": "Partizip I غالباً فاعلي ومتزامن، لكن القراءة النهائية من السياق."
       },
       {
-        "de": "Partizip II: gelesen, angekommen, beschlossen — passiv/abgeschlossen",
-        "ar": "Partizip II = ge…t/en: gelesen (مقروء)."
+        "de": "Partizip II: gelesen/beschlossen oft passiv oder resultativ; angekommen aktiv und vorzeitig. Bedeutung folgt Verb und Kontext.",
+        "ar": "Partizip II ليس مبنياً للمجهول دائماً؛ يعتمد على تعدية الفعل ومساعد Perfekt والسياق."
       },
       {
-        "de": "Erweitert: der gestern angekommene Brief = der Brief, der gestern ankam",
-        "ar": "الموسعة = موصولة مختصرة."
+        "de": "Erweitert: der gestern angekommene Brief = der Brief, der gestern ankam.",
+        "ar": "تأتي مكملات الصفة قبلها، والمجموعة كلها قبل الاسم."
       },
       {
-        "de": "Komma-Regel: Partizipialgruppe mit Eigenhandlung → Komma optional",
-        "ar": "المجموعة التشاركية: فاصلة اختيارية حسب المعنى."
+        "de": "Die Adjektivendung steht am Partizip: der angekommene Brief; die beschlossenen Maßnahmen; mit dem gelesenen Text.",
+        "ar": "تأخذ الكلمة المشتقة نهاية الصفة بحسب الأداة والحالة والجنس والعدد."
       }
     ],
     "examples": [
@@ -17170,8 +17183,8 @@
     ],
     "pitfalls": [
       {
-        "de": "„Der von Regierung beschlossenen“ ✗ (ohne n!)",
-        "ar": "beschlossenen بـ n (الجمع)."
+        "de": "„die von der Regierung beschlossene Maßnahmen“ ✗ → „die von der Regierung beschlossenen Maßnahmen“ ✓",
+        "ar": "مع جمع Maßnahmen وبعد die تكون النهاية -en."
       }
     ],
     "exercises": [
@@ -17196,7 +17209,7 @@
         "answer": [
           "lesende"
         ],
-        "explanationAr": "اسم فاعل I: lesend → lesende — مع أداة تعريف يأخذ نهاية."
+        "explanationAr": "Partizip I lesend ثم نهاية -e: der lesende Mann."
       },
       {
         "id": "b2-ptz-e3",
@@ -17247,7 +17260,7 @@
         "answer": [
           "lachenden"
         ],
-        "explanationAr": "Partizip I + n (جمع): lachenden."
+        "explanationAr": "Partizip I lachend، وبعد die في الجمع يأخذ -en: die lachenden Kinder."
       },
       {
         "id": "b2-ptz-e7",
@@ -17259,7 +17272,7 @@
           "lesen"
         ],
         "answer": "gelesen",
-        "explanationAr": "اسم مفعول II: gelesen هو Partizip II من lesen — ليس المضارع.",
+        "explanationAr": "gelesen هو Partizip II من lesen؛ أما lesend فهو Partizip I.",
         "promptAr": "اختر اسم المفعول."
       },
       {
@@ -17271,7 +17284,7 @@
         "mussEnthalten": [
           "weinende kind"
         ],
-        "explanationAr": "اختصار جملة الوصل: das Kind, das weint → das weinende Kind — اسم فاعل يسبق الاسم.",
+        "explanationAr": "اختصار الجملة الموصولة: das Kind, das weint → das weinende Kind؛ Partizip I قبل الاسم.",
         "points": 2,
         "promptAr": "اختصر جملة الوصل باستخدام اسم الفاعل.",
         "darfNicht": [

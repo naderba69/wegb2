@@ -5,14 +5,14 @@
   "scopeNoteAr": "هذه قياسات قابلة لإعادة التشغيل وليست شهادة صحة لغوية أو بيداغوجية.",
   "baseline": {
     "smoke": {
-      "passed": 2513,
+      "passed": 2516,
       "failed": 0
     },
     "interactiveJsdom": {
       "passed": 1027,
       "failed": 0,
       "plannedTasksTraversed": 2500,
-      "interactiveElementsTouched": 22538
+      "interactiveElementsTouched": 22543
     },
     "contentStructuralAudit": {
       "exitCode": 0,
@@ -55,7 +55,7 @@
         "verifiedSources": 0,
         "totalSources": 2,
         "fullyReviewedFeatures": 0,
-        "totalFeatures": 317,
+        "totalFeatures": 319,
         "exitCode": 2
       },
       "externalEvidence": {
@@ -92,7 +92,7 @@
     "scaffoldAudit": {
       "passed": 8,
       "failed": 0,
-      "parenthetical": 232,
+      "parenthetical": 231,
       "items": 758,
       "blankLinked": 176
     },
@@ -640,34 +640,42 @@
         "confirmedCurrentTopics": 0,
         "fixture": "scripts/fixtures/grammar-reviewed-04.json",
         "patch": "scripts/patches/apply_grammar_review_pa036_04.py"
+      },
+      {
+        "batch": "PA-036-05",
+        "level": "B2",
+        "reviewedTopics": 23,
+        "correctedTopics": 23,
+        "confirmedCurrentTopics": 0,
+        "fixture": "scripts/fixtures/grammar-reviewed-05.json",
+        "patch": "scripts/patches/apply_grammar_review_pa036_05.py"
       }
     ],
-    "reviewedTopics": 64,
+    "reviewedTopics": 87,
     "reviewedLevels": [
       "A0",
       "A1",
       "A2",
-      "B1"
-    ],
-    "correctedTopics": 57,
-    "confirmedCurrentTopics": 7,
-    "remainingTopics": 23,
-    "remainingLevels": [
+      "B1",
       "B2"
     ],
+    "correctedTopics": 80,
+    "confirmedCurrentTopics": 7,
+    "remainingTopics": 0,
+    "remainingLevels": [],
     "scope": "item-by-item internal full-topic review of objectives, summaries, rules, tables, examples, pitfalls, checks, exercises, pronunciation guidance, and internal exam-strategy claim boundaries; heuristic scans used for triage only",
     "regressionGate": "npm run audit:grammar-content-review",
     "independentLinguisticSignOff": false,
     "phoneticValidation": false,
     "externalCefrOrExamValidation": false,
-    "claimBoundary": "64 bounded internal A0–B1 decisions; 23 B2 topics, independent review, field validation, and external linguistic, phonetic, CEFR, or exam sign-off remain pending"
+    "claimBoundary": "87 bounded internal A0–B2 decisions; independent review, field validation, and external linguistic, phonetic, CEFR, or exam sign-off remain pending"
   },
   "inventorySnapshot": {
-    "indexedTrackedFilesAndAuditArtifacts": 3611,
-    "manual_complete": 57,
-    "manual_targeted": 68,
+    "indexedTrackedFilesAndAuditArtifacts": 3613,
+    "manual_complete": 58,
+    "manual_targeted": 67,
     "not_started": 3441,
-    "audit_artifact": 45
+    "audit_artifact": 47
   },
   "learningStateCorrections": {
     "findings": [
@@ -756,6 +764,11 @@
       "parenthetical": 232,
       "blankLinked": 176,
       "reason": "The bounded B1 review removed three parenthetical wording markers while preserving all exercises and blank-linked candidates."
+    },
+    "afterReviewPA03605": {
+      "parenthetical": 231,
+      "blankLinked": 176,
+      "reason": "The bounded B2 review removed one parenthetical wording marker while preserving all exercises and blank-linked candidates."
     }
   },
   "placementCorrections": {

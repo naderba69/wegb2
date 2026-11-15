@@ -15984,11 +15984,11 @@ function collectR262(dir: string, out: string[] = []): string[] {
   ok(patchK426.includes("current == reviewed") && patchK426.includes("current != previous") &&
     patchK426.includes("unexpected current grammar topic") &&
     auditK426.includes('validateBatch(review01, "PA-036-01", expectedA0, "A0", 8, 0)') &&
-    auditK426.includes("all 64 bounded A0–B1 full-topic decisions match") &&
-    auditK426.includes("23 B2 topics") &&
+    auditK426.includes("all 87 bounded A0–B2 full-topic decisions match") &&
+    auditK426.includes("independent linguistic, phonetic, CEFR, or exam sign-off remains outside these batches") &&
     reviewK426.scope.includes("triage only") && reviewK426.scope.includes("not correction generators") &&
     reviewK426.scope.includes("not independent linguistic, phonetic, CEFR, or exam sign-off"),
-    "K426c PA-036-01: الرقعة مقفلة بالموضوع الكامل وقابلة للإعادة والبوابة المجمعة تحرس الدفعات الأربع مع إبقاء 23 موضوعاً والتوقيع المستقل خارج الادعاء");
+    "K426c PA-036-01: الرقعة مقفلة بالموضوع الكامل وقابلة للإعادة والبوابة المجمعة تحرس القرارات الـ87 مع إبقاء التوقيع المستقل خارج الادعاء");
 }
 
 /* ═══ K427 — PA-036-02: مراجعة موضوعات قواعد A1 بندياً ═══ */
@@ -16030,10 +16030,11 @@ function collectR262(dir: string, out: string[] = []): string[] {
   ok(patchK427.includes("current == reviewed") && patchK427.includes("current != previous") &&
     patchK427.includes("confirmed-current grammar topic drifted") && patchK427.includes("unexpected current grammar topic") &&
     auditK427.includes('validateBatch(review02, "PA-036-02", expectedA1, "A1", 16, 3)') &&
-    auditK427.includes("all 64 bounded A0–B1 full-topic decisions match") && auditK427.includes("23 B2 topics") &&
+    auditK427.includes("all 87 bounded A0–B2 full-topic decisions match") &&
+    auditK427.includes("independent linguistic, phonetic, CEFR, or exam sign-off remains outside these batches") &&
     reviewK427.scope.includes("triage only") && reviewK427.scope.includes("not correction generators") &&
     reviewK427.scope.includes("not independent linguistic, phonetic, CEFR, or exam sign-off"),
-    "K427c PA-036-02: الرقعة مقفلة بالموضوع وقابلة للإعادة والبوابة تحرس 64 قراراً وتبقي 23 موضوعاً والتوقيع المستقل خارج الادعاء");
+    "K427c PA-036-02: الرقعة مقفلة بالموضوع وقابلة للإعادة والبوابة المجمعة تحرس القرارات الـ87 مع إبقاء التوقيع المستقل خارج الادعاء");
 }
 
 /* ═══ K428 — PA-036-03: مراجعة موضوعات قواعد A2 بندياً ═══ */
@@ -16076,10 +16077,11 @@ function collectR262(dir: string, out: string[] = []): string[] {
   ok(patchK428.includes("current == reviewed") && patchK428.includes("current != previous") &&
     patchK428.includes("confirmed-current grammar topic drifted") && patchK428.includes("unexpected current grammar topic") &&
     auditK428.includes('validateBatch(review03, "PA-036-03", expectedA2, "A2", 18, 4)') &&
-    auditK428.includes("all 64 bounded A0–B1 full-topic decisions match") && auditK428.includes("23 B2 topics") &&
+    auditK428.includes("all 87 bounded A0–B2 full-topic decisions match") &&
+    auditK428.includes("independent linguistic, phonetic, CEFR, or exam sign-off remains outside these batches") &&
     reviewK428.scope.includes("triage only") && reviewK428.scope.includes("not correction generators") &&
     reviewK428.scope.includes("not independent linguistic, phonetic, CEFR, or exam sign-off"),
-    "K428c PA-036-03: الرقعة مقفلة بالموضوع وقابلة للإعادة والبوابة تحرس 64 قراراً وتبقي 23 موضوعاً والتوقيع المستقل خارج الادعاء");
+    "K428c PA-036-03: الرقعة مقفلة بالموضوع وقابلة للإعادة والبوابة المجمعة تحرس القرارات الـ87 مع إبقاء التوقيع المستقل خارج الادعاء");
 }
 
 /* ═══ K429 — PA-036-04: مراجعة موضوعات قواعد B1 بندياً ═══ */
@@ -16122,10 +16124,59 @@ function collectR262(dir: string, out: string[] = []): string[] {
   ok(patchK429.includes("current == reviewed") && patchK429.includes("current != previous") &&
     patchK429.includes("unexpected current grammar topic") &&
     auditK429.includes('validateBatch(review04, "PA-036-04", expectedB1, "B1", 15, 0)') &&
-    auditK429.includes("all 64 bounded A0–B1 full-topic decisions match") && auditK429.includes("23 B2 topics") &&
+    auditK429.includes("all 87 bounded A0–B2 full-topic decisions match") &&
+    auditK429.includes("independent linguistic, phonetic, CEFR, or exam sign-off remains outside these batches") &&
     reviewK429.scope.includes("triage only") && reviewK429.scope.includes("not correction generators") &&
     reviewK429.scope.includes("not independent linguistic, phonetic, CEFR, or exam sign-off"),
-    "K429c PA-036-04: الرقعة مقفلة بالموضوع وقابلة للإعادة والبوابة تحرس 64 قراراً وتبقي 23 موضوع B2 والتوقيع المستقل خارج الادعاء");
+    "K429c PA-036-04: الرقعة مقفلة بالموضوع وقابلة للإعادة والبوابة المجمعة تحرس القرارات الـ87 مع إبقاء التوقيع المستقل خارج الادعاء");
+}
+
+/* ═══ K430 — PA-036-05: مراجعة موضوعات قواعد B2 بندياً ═══ */
+{
+  const reviewK430 = JSON.parse(readFileSync("scripts/fixtures/grammar-reviewed-05.json", "utf8")) as {
+    schema: string;
+    batch: string;
+    scope: string;
+    entries: { id: string; level: string; decision: "corrected" | "confirmed-current"; rationale: string; previous: Record<string, unknown>; current: Record<string, unknown> }[];
+  };
+  const grammarK430 = JSON.parse(readFileSync("content/grammar.json", "utf8")) as Record<string, Record<string, unknown>>;
+  const expectedK430 = new Set([
+    "b2-indirekte-rede", "b2-partizip", "b2-bedingung", "b2-funktionsverben",
+    "b2-infinitiv", "b2-modalpartikel", "b2-futur-ii", "b2-relativ-generalisierend",
+    "b2-doppelkonnektoren", "b2-nominalstil", "b1-partizip1", "b2-redew",
+    "b2-adjektiv-partizip", "b2-textkonnektoren", "b2-genitiv-praep",
+    "b2-konzessiv", "b2-relativ-genitiv", "b2-pruefungsstrategie",
+    "b2-n-deklination", "b2-passiv", "b2-konjunktiv2-vht",
+    "b2-nominalisierung", "b2-partizipial",
+  ]);
+  const correctedK430 = reviewK430.entries.filter((entry) => entry.decision === "corrected");
+  const confirmedK430 = reviewK430.entries.filter((entry) => entry.decision === "confirmed-current");
+  ok(reviewK430.schema === "wegb2-reviewed-grammar-decision-batch-v1" && reviewK430.batch === "PA-036-05" &&
+    reviewK430.entries.length === 23 && new Set(reviewK430.entries.map((entry) => entry.id)).size === 23 &&
+    reviewK430.entries.every((entry) => expectedK430.has(entry.id) && entry.level === "B2" && entry.rationale.trim().length > 0) &&
+    correctedK430.length === 23 && confirmedK430.length === 0 &&
+    correctedK430.every((entry) => JSON.stringify(entry.previous) !== JSON.stringify(entry.current)),
+    "K430a PA-036-05: سجل القرار يغطي موضوعات B2 الثلاثة والعشرين كاملة بـ23 تصحيحاً محدوداً ومبرراً");
+  const currentK430 = JSON.stringify([...expectedK430].map((id) => grammarK430[id]));
+  ok(reviewK430.entries.every((entry) => JSON.stringify(grammarK430[entry.id]) === JSON.stringify(entry.current)) &&
+    String(grammarK430["b2-indirekte-rede"]?.summaryAr).includes("لا يثبت صدق القول أو كذبه") &&
+    String(grammarK430["b2-futur-ii"]?.summaryAr).includes("تخمين في حدث ماضٍ") &&
+    String(grammarK430["b2-nominalstil"]?.summaryAr).includes("ليست التحويلات آلية دائماً") &&
+    String(grammarK430["b2-pruefungsstrategie"]?.titleDe).startsWith("Interne Prüfungsstrategie") &&
+    String(grammarK430["b2-n-deklination"]?.summaryAr).includes("تصريف مختلط") &&
+    !currentK430.includes("نسبة يقين: 90–95%") && !currentK430.includes("Zeitanker ضروري") &&
+    !currentK430.includes("في Goethe B2 ثلاث دقائق للتحضير") && !currentK430.includes("einzige N-Deklination im Neutrum"),
+    "K430b PA-036-05: القرارات تطابق البنك وتحرس النقل والسمات الزمنية والأسلوب والسجل والحد الامتحاني والتصريف");
+  const patchK430 = readFileSync("scripts/patches/apply_grammar_review_pa036_05.py", "utf8");
+  const auditK430 = readFileSync("scripts/grammar_content_review_audit.ts", "utf8");
+  ok(patchK430.includes("current == reviewed") && patchK430.includes("current != previous") &&
+    patchK430.includes("unexpected current grammar topic") &&
+    auditK430.includes('validateBatch(review05, "PA-036-05", expectedB2, "B2", 23, 0)') &&
+    auditK430.includes("all 87 bounded A0–B2 full-topic decisions match") &&
+    auditK430.includes("independent linguistic, phonetic, CEFR, or exam sign-off remains outside these batches") &&
+    reviewK430.scope.includes("triage only") && reviewK430.scope.includes("not correction generators") &&
+    reviewK430.scope.includes("not independent linguistic, phonetic, CEFR, or exam sign-off"),
+    "K430c PA-036-05: الرقعة مقفلة بالموضوع وقابلة للإعادة والبوابة تحرس 87 قراراً مع إبقاء التوقيع المستقل خارج الادعاء");
 }
 
 /* ═══ K334 — R309: القفل الفعلي الحقيقي — إغلاقُ اليوم عند حدود الوحدة ممنوعٌ لا منصوحٌ به فقط ═══ */
@@ -16361,16 +16412,16 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const metricsK357 = calculateScaffoldMetrics(grammarMap);
   const expectedLevelsK357 = {
     A0: [8, 63, 8, 7, 12.7], A1: [19, 150, 54, 39, 36], A2: [22, 202, 79, 61, 39.1],
-    B1: [15, 143, 31, 23, 21.7], B2: [23, 200, 60, 46, 30],
+    B1: [15, 143, 31, 23, 21.7], B2: [23, 200, 59, 46, 29.5],
   } as const;
-  ok(metricsK357.topics === 87 && metricsK357.items === 758 && metricsK357.parenthetical === 232 &&
+  ok(metricsK357.topics === 87 && metricsK357.items === 758 && metricsK357.parenthetical === 231 &&
     metricsK357.blankLinked === 176 && metricsK357.exactLeaks === 0 &&
     Object.entries(expectedLevelsK357).every(([level, expected]) => {
       const metric = metricsK357.byLevel[level as keyof typeof metricsK357.byLevel];
       return [metric.topics, metric.items, metric.parenthetical, metric.blankLinked, metric.parentheticalPct]
         .every((value, index) => value === expected[index]);
     }),
-    "K357b خط الأساس الحالي يعيد إنتاج 87 درساً/758 بنداً و232 علامة و176 مرشح فراغ وصفر تسريب، موزعة على المستويات الخمسة");
+    "K357b خط الأساس الحالي يعيد إنتاج 87 درساً/758 بنداً و231 علامة و176 مرشح فراغ وصفر تسريب، موزعة على المستويات الخمسة");
 
   const qualityK357 = readFileSync("app/qualitaet/page.tsx", "utf8");
   const auditK357 = readFileSync("scripts/scaffold_audit.ts", "utf8");
@@ -16379,7 +16430,7 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const baselineK357 = JSON.parse(readFileSync("content/scaffold-metrics-baseline.json", "utf8")) as { reviewRule?: string; nonBlockingRatios?: boolean };
   ok(qualityK357.includes('data-testid="scaffold-transparency"') && qualityK357.includes("إشارات مراجعة وليست عيوباً مؤكدة") &&
     auditK357.includes("review signals, not confirmed defects") && ciK357.includes("npm run audit:scaffolds") &&
-    browserK357.includes('"232/758"') && baselineK357.reviewRule === "R161" && baselineK357.nonBlockingRatios === true,
+    browserK357.includes('"231/758"') && baselineK357.reviewRule === "R161" && baselineK357.nonBlockingRatios === true,
     "K357c صفحة الجودة والتدقيق وCI وChromium تعرض خط الأساس المحدث بوصفه إشارة غير مانعة، لا قائمة أخطاء مؤكدة");
 }
 

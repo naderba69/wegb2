@@ -5,7 +5,7 @@
   "method": "Count each grammar exercise and delayed verification once. A parenthetical marker is any non-empty (...) in promptDe or text; a blank-linked candidate also contains a ___ blank. Candidates are review signals, not confirmed defects.",
   "topics": 87,
   "items": 758,
-  "parenthetical": 232,
+  "parenthetical": 231,
   "blankLinked": 176,
   "exactLeaks": 0,
   "byLevel": {
@@ -49,10 +49,10 @@
       "level": "B2",
       "topics": 23,
       "items": 200,
-      "parenthetical": 60,
+      "parenthetical": 59,
       "blankLinked": 46,
       "exactLeaks": 0,
-      "parentheticalPct": 30
+      "parentheticalPct": 29.5
     }
   },
   "previousBaseline": {
@@ -66,9 +66,9 @@
     "note": "Four Arabic parenthetical runs and one blank-linked cue moved out of German-labelled grammar prompts; this is a language-schema correction, not reduced learner support."
   },
   "grammarReviewAdjustment": {
-    "finding": "PA-036-02/04",
-    "removedParentheticalMarkers": 6,
+    "finding": "PA-036-02/04/05",
+    "removedParentheticalMarkers": 7,
     "blankLinkedChange": 0,
-    "note": "Reviewed A1 and B1 wording removed six parenthetical markers in total; exercise count and learner support remain intact."
+    "note": "Reviewed A1, B1, and B2 wording removed seven parenthetical markers in total; exercise count and learner support remain intact."
   }
 }
