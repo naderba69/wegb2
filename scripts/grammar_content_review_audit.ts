@@ -40,6 +40,7 @@ const grammar = readJson<Record<string, GrammarTopic>>("content/grammar.json");
 const review01 = readJson<ReviewFixture>("scripts/fixtures/grammar-reviewed-01.json");
 const review02 = readJson<ReviewFixture>("scripts/fixtures/grammar-reviewed-02.json");
 const review03 = readJson<ReviewFixture>("scripts/fixtures/grammar-reviewed-03.json");
+const review04 = readJson<ReviewFixture>("scripts/fixtures/grammar-reviewed-04.json");
 const errors: string[] = [];
 const expectedA0 = new Set([
   "a0-begrussung", "a0-buchstaben", "a0-zahlen", "a0-artikel",
@@ -58,6 +59,13 @@ const expectedA2 = new Set([
   "a2-futur", "a1-futur-einf", "a2-praeteritum-grund", "a2-konj2-hoflich",
   "a2-verb-praep", "a2-adjektiv-einfach", "a1-weil-dass", "a2-verschmolzene",
   "a2-neben", "a2-demo", "a2-wasfuer", "a2-pruefungsstrategie",
+]);
+const expectedB1 = new Set([
+  "b1-konj2", "b1-relativ", "b1-konnektoren", "b1-plusquamperfekt",
+  "b1-genitiv", "b1-adjektivendungen", "b1-wortbildung", "b1-unbestimmte",
+  "b1-verb-praeposition", "b1-passiv", "b1-indirekte-fragen",
+  "b1-funktionsverben", "b1-absicht", "b1-konj2-vergangenheit",
+  "b1-pruefungsstrategie",
 ]);
 
 const validateBatch = (
@@ -118,10 +126,11 @@ if (Object.keys(grammar).length !== 87) {
 validateBatch(review01, "PA-036-01", expectedA0, "A0", 8, 0);
 validateBatch(review02, "PA-036-02", expectedA1, "A1", 16, 3);
 validateBatch(review03, "PA-036-03", expectedA2, "A2", 18, 4);
-const reviewedIds = [...review01.entries, ...review02.entries, ...review03.entries]
+validateBatch(review04, "PA-036-04", expectedB1, "B1", 15, 0);
+const reviewedIds = [...review01.entries, ...review02.entries, ...review03.entries, ...review04.entries]
   .map((entry) => entry.id);
-if (new Set(reviewedIds).size !== 49) {
-  errors.push("PA-036 decision batches overlap or do not contain 49 unique topics");
+if (new Set(reviewedIds).size !== 64) {
+  errors.push("PA-036 decision batches overlap or do not contain 64 unique topics");
 }
 
 const topic = (id: string): GrammarTopic => {
@@ -296,6 +305,51 @@ if (!topic("a2-pruefungsstrategie").titleDe.startsWith("Interne Prüfungsstrateg
   errors.push("a2-pruefungsstrategie: internal scope or removal of unverified provider claims regressed");
 }
 
+// PA-036-04: bounded B1 regression anchors.
+if (!topic("b1-konj2").summaryAr.includes("صيغة würde + Infinitiv بديل شائع")
+  || !String(exercise("b1-konj2", "g11e2")?.explanationAr).includes("Können Sie…? فهي أيضاً طلب صحيح")
+  || !topic("b1-relativ").summaryAr.includes("حالته الإعرابية فتحددها وظيفته")) {
+  errors.push("B1 Konjunktiv/relative clauses: Ersatzform, politeness, or antecedent/case boundary regressed");
+}
+if (!topic("b1-konnektoren").summaryAr.includes("يمكن أن يجتمع obwohl وtrotzdem")
+  || !JSON.stringify(topic("b1-konnektoren").rules).includes("sodass leitet einen Folgesatz ein")
+  || !topic("b1-plusquamperfekt").summaryAr.includes("المهم هو العلاقة الزمنية")
+  || JSON.stringify(topic("b1-plusquamperfekt")).includes("indirekte Frage")) {
+  errors.push("B1 connectors/past: concessive co-occurrence, result clause, event order, or scope regressed");
+}
+if (!topic("b1-genitiv").summaryAr.includes("von + Dativ فهو بديل معياري")
+  || !JSON.stringify(topic("b1-genitiv").rules).includes("des Tages/des Tags")
+  || !topic("b1-adjektivendungen").summaryAr.includes("ein guter Mann")
+  || exercise("b1-adjektivendungen", "b1-adj-e11")?.answer !== "Ich helfe einem jungen Mann.") {
+  errors.push("B1 Genitiv/adjectives: standard alternatives, -s/-es variation, or declension table/exercise regressed");
+}
+if (!topic("b1-wortbildung").summaryAr.includes("اختياره ليس قابلاً للتنبؤ دائماً")
+  || exercise("b1-wortbildung", "b1-wortbildung-u1")?.answer !== "das Türschloss"
+  || !topic("b1-unbestimmte").summaryAr.includes("Ich sehe jemanden/jemand")
+  || String(verify("b1-unbestimmte", "b1-unbestimmte-v1")?.promptDe) !== "___ sagt: Übung macht den Meister.") {
+  errors.push("B1 word formation/indefinites: lexical linking elements, neutral example, or case variants regressed");
+}
+if (!topic("b1-verb-praeposition").summaryAr.includes("لا باعتباره توقعاً مضموناً لامتحان")
+  || !JSON.stringify(topic("b1-verb-praeposition").rules).includes("Worauf wartest du?")
+  || !JSON.stringify(topic("b1-passiv").pitfalls).includes("zukünftigen Zustand ausdrücken")
+  || !JSON.stringify(topic("b1-passiv").tables).includes("Dieses Wasser ist trinkbar")
+  || JSON.stringify(topic("b1-passiv").tables).includes("Seine Sorge ist verständlich")) {
+  errors.push("B1 prepositional verbs/passive: semantic mappings, claim boundary, future state, or Ersatzform scope regressed");
+}
+if (exercise("b1-indirekte-fragen", "b1-indir-n4")?.answer !== "Kannst du mir sagen, ob das Museum geöffnet ist?"
+  || topic("b1-funktionsverben").regel === "Placeholder pending full authoring."
+  || !JSON.stringify(topic("b1-funktionsverben").rules).includes("ليست كل FVG رسمية تلقائياً")
+  || !topic("b1-absicht").summaryAr.includes("يمكن استعماله أيضاً مع الفاعل نفسه")) {
+  errors.push("B1 indirect questions/FVG/purpose: punctuation, authored guidance, register, or damit boundary regressed");
+}
+if (!topic("b1-konj2-vergangenheit").summaryAr.includes("وفق الفعل المساعد في Perfekt")
+  || !JSON.stringify(topic("b1-konj2-vergangenheit").examples).includes("Wäre er doch zu Hause geblieben!")
+  || !topic("b1-pruefungsstrategie").titleDe.startsWith("Interne Prüfungsstrategie")
+  || !topic("b1-pruefungsstrategie").summaryAr.includes("تختلف بنى امتحانات B1 الرسمية")
+  || JSON.stringify(topic("b1-pruefungsstrategie")).includes("Goethe-/telc")) {
+  errors.push("B1 past counterfactual/exam strategy: auxiliary, temporal examples, or provider-neutral boundary regressed");
+}
+
 const currentTextA0 = JSON.stringify(review01.entries.map((entry) => entry.current));
 for (const stale of [
   "وفي سويسرا تُكتب Straße", "Buchstabiere deinen Namen und deine Telefonnummer",
@@ -331,6 +385,19 @@ for (const stale of [
     errors.push(`PA-036-03 stale, malformed, or overgeneralized content returned: ${stale}`);
   }
 }
+const currentTextB1 = JSON.stringify(review04.entries.map((entry) => entry.current));
+for (const stale of [
+  "Würde = كل شيء!", "ممنوع الجمع بين obwohl و trotzdem", "Plusquamperfekt + indirekte Frage",
+  "von + Dativ يُرفض في الكتابة الأكاديمية والامتحان", "Adjektivendungen (Profis!) + N-Deklination",
+  "Tür + Haus", "ones = أفراد", "فهذه الأسئلة مضمونة في كل امتحان", "على الجارّ",
+  "Das Haus wird gebaut sein.“ ✗", "الفخ الأول للعرب", "Placeholder pending full authoring.",
+  "In B1 erkennst und verstehst du", "وبالفاعلين المختلفين ← damit", "نفس تقسيم Perfekt: الحركة والتغيّر",
+  "Goethe-/telc B1", "Lesen 65د", "ca. 100–120 Wörter",
+]) {
+  if (currentTextB1.includes(stale)) {
+    errors.push(`PA-036-04 stale, malformed, or overgeneralized content returned: ${stale}`);
+  }
+}
 
 if (errors.length) {
   console.error("❌ Grammar content review audit failed:");
@@ -339,8 +406,8 @@ if (errors.length) {
 }
 
 console.log(
-  "✅ Grammar content review: all 49 bounded A0–A2 full-topic decisions match (42 corrected, 7 confirmed-current).",
+  "✅ Grammar content review: all 64 bounded A0–B1 full-topic decisions match (57 corrected, 7 confirmed-current).",
 );
 console.log(
-  "ℹ️ This gate protects the reviewed A0–A2 objectives, explanations, rules, tables, examples, pitfalls, checks, exercises, pronunciation guidance, and internal exam-strategy boundary; 38 B1–B2 topics and independent linguistic, phonetic, CEFR, or exam sign-off remain outside these batches.",
+  "ℹ️ This gate protects the reviewed A0–B1 objectives, explanations, rules, tables, examples, pitfalls, checks, exercises, pronunciation guidance, and internal exam-strategy boundary; 23 B2 topics and independent linguistic, phonetic, CEFR, or exam sign-off remain outside these batches.",
 );

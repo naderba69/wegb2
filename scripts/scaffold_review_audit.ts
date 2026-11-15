@@ -70,7 +70,12 @@ for (const [topicId, topic] of Object.entries(grammar)) {
 }
 
 const reviewedIds = review.items.map((item) => item.id);
-const retainedIds = new Set(review.items.filter((item) => item.decision === "retain").map((item) => item.id));
+// A later bounded content review may deliberately remove or rewrite a marker.
+// In that case markersAfter records the current state without rewriting the
+// original R161 decision or pretending that it was an independent new review.
+const retainedIds = new Set(review.items
+  .filter((item) => item.decision === "retain" && (item.markersAfter ?? item.markersBefore).length > 0)
+  .map((item) => item.id));
 const currentCandidates = [...current.entries()]
   .filter(([, entry]) => (entry.level === "B1" || entry.level === "B2") && parentheticalMarkers(entry.exercise).length > 0)
   .map(([id]) => id)

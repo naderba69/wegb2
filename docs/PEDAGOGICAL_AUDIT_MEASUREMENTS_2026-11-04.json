@@ -5,7 +5,7 @@
   "scopeNoteAr": "هذه قياسات قابلة لإعادة التشغيل وليست شهادة صحة لغوية أو بيداغوجية.",
   "baseline": {
     "smoke": {
-      "passed": 2510,
+      "passed": 2513,
       "failed": 0
     },
     "interactiveJsdom": {
@@ -55,7 +55,7 @@
         "verifiedSources": 0,
         "totalSources": 2,
         "fullyReviewedFeatures": 0,
-        "totalFeatures": 316,
+        "totalFeatures": 317,
         "exitCode": 2
       },
       "externalEvidence": {
@@ -92,7 +92,7 @@
     "scaffoldAudit": {
       "passed": 8,
       "failed": 0,
-      "parenthetical": 235,
+      "parenthetical": 232,
       "items": 758,
       "blankLinked": 176
     },
@@ -631,19 +631,28 @@
         "confirmedCurrentTopics": 4,
         "fixture": "scripts/fixtures/grammar-reviewed-03.json",
         "patch": "scripts/patches/apply_grammar_review_pa036_03.py"
+      },
+      {
+        "batch": "PA-036-04",
+        "level": "B1",
+        "reviewedTopics": 15,
+        "correctedTopics": 15,
+        "confirmedCurrentTopics": 0,
+        "fixture": "scripts/fixtures/grammar-reviewed-04.json",
+        "patch": "scripts/patches/apply_grammar_review_pa036_04.py"
       }
     ],
-    "reviewedTopics": 49,
+    "reviewedTopics": 64,
     "reviewedLevels": [
       "A0",
       "A1",
-      "A2"
+      "A2",
+      "B1"
     ],
-    "correctedTopics": 42,
+    "correctedTopics": 57,
     "confirmedCurrentTopics": 7,
-    "remainingTopics": 38,
+    "remainingTopics": 23,
     "remainingLevels": [
-      "B1",
       "B2"
     ],
     "scope": "item-by-item internal full-topic review of objectives, summaries, rules, tables, examples, pitfalls, checks, exercises, pronunciation guidance, and internal exam-strategy claim boundaries; heuristic scans used for triage only",
@@ -651,14 +660,14 @@
     "independentLinguisticSignOff": false,
     "phoneticValidation": false,
     "externalCefrOrExamValidation": false,
-    "claimBoundary": "49 bounded internal A0–A2 decisions; 38 B1–B2 topics, independent review, field validation, and external linguistic, phonetic, CEFR, or exam sign-off remain pending"
+    "claimBoundary": "64 bounded internal A0–B1 decisions; 23 B2 topics, independent review, field validation, and external linguistic, phonetic, CEFR, or exam sign-off remain pending"
   },
   "inventorySnapshot": {
-    "indexedTrackedFilesAndAuditArtifacts": 3609,
+    "indexedTrackedFilesAndAuditArtifacts": 3611,
     "manual_complete": 57,
     "manual_targeted": 68,
     "not_started": 3441,
-    "audit_artifact": 43
+    "audit_artifact": 45
   },
   "learningStateCorrections": {
     "findings": [
@@ -742,6 +751,11 @@
       "parenthetical": 235,
       "blankLinked": 176,
       "reason": "The bounded A2 review preserved the measured scaffold signals while correcting content and claim boundaries; no exercise or blank-linked candidate was removed."
+    },
+    "afterReviewPA03604": {
+      "parenthetical": 232,
+      "blankLinked": 176,
+      "reason": "The bounded B1 review removed three parenthetical wording markers while preserving all exercises and blank-linked candidates."
     }
   },
   "placementCorrections": {

@@ -71,7 +71,7 @@
         "anfangen"
       ],
       "promptDeBefore": "Ich lerne, um ___. (anfangen)",
-      "promptDeAfter": "Ich lerne, um ___.",
+      "promptDeAfter": "Wir stehen früh auf, um pünktlich ___.",
       "textBefore": null,
       "textAfter": null,
       "answer": "anzufangen",
@@ -82,7 +82,8 @@
       ],
       "decision": "remove-redundant",
       "classification": "redundant-with-options",
-      "rationaleAr": "كل خيارات MC تحمل الـlexeme نفسها؛ لذلك لا يضيف القوس قيداً تعليمياً ويكرر معلومة ظاهرة في الخيارات."
+      "rationaleAr": "كل خيارات MC تحمل الـlexeme نفسها؛ لذلك لا يضيف القوس قيداً تعليمياً ويكرر معلومة ظاهرة في الخيارات.",
+      "markersAfter": []
     },
     {
       "id": "b1-absicht-v1",
@@ -118,7 +119,7 @@
       "promptDeAfter": "Korrigiere den Satz (Dativ): Ich helfe ein jung Mann.",
       "textBefore": null,
       "textAfter": null,
-      "answer": "Ich helfe dem jungen Mann.",
+      "answer": "Ich helfe einem jungen Mann.",
       "options": null,
       "decision": "retain",
       "classification": "retain-transformation-target",
@@ -317,14 +318,15 @@
         "Konjunktiv II"
       ],
       "promptDeBefore": "Formuliere höflicher (Konjunktiv II).",
-      "promptDeAfter": "Formuliere höflicher (Konjunktiv II).",
+      "promptDeAfter": "Formuliere zurückhaltender mit Konjunktiv II.",
       "textBefore": null,
       "textAfter": null,
       "answer": "Könnten Sie mir bitte helfen?",
       "options": null,
       "decision": "retain",
       "classification": "retain-transformation-target",
-      "rationaleAr": "القوس يحدد التحويل أو القيد النحوي المطلوب كي لا تصبح مهمة الإنتاج مفتوحة بلا معيار."
+      "rationaleAr": "القوس يحدد التحويل أو القيد النحوي المطلوب كي لا تصبح مهمة الإنتاج مفتوحة بلا معيار.",
+      "markersAfter": []
     },
     {
       "id": "g11e3",
@@ -509,7 +511,7 @@
         "fertig"
       ],
       "promptDeBefore": "Korrigiere: Zustandspassiv (fertig).",
-      "promptDeAfter": "Korrigiere: Zustandspassiv (fertig).",
+      "promptDeAfter": "Formuliere den Zustand in der Gegenwart (fertig).",
       "textBefore": null,
       "textAfter": null,
       "answer": "Das Haus ist gebaut.",
@@ -618,7 +620,7 @@
         "Kontakt"
       ],
       "promptDeBefore": "Wenn Sie im Sprechen Teil 1 (Kontakt) ein Wort nicht wissen, was tun Sie?",
-      "promptDeAfter": "Wenn Sie im Sprechen Teil 1 (Kontakt) ein Wort nicht wissen, was tun Sie?",
+      "promptDeAfter": "Wenn Ihnen im Gespräch ein Wort fehlt, was können Sie tun?",
       "textBefore": null,
       "textAfter": null,
       "answer": "Umschreiben (Paraphrase)",
@@ -630,7 +632,8 @@
       ],
       "decision": "retain",
       "classification": "retain-context-label",
-      "rationaleAr": "القوس يصف سياق المهمة أو قسمها ولا يزوّد فراغاً بجواب."
+      "rationaleAr": "القوس يصف سياق المهمة أو قسمها ولا يزوّد فراغاً بجواب.",
+      "markersAfter": []
     },
     {
       "id": "b1-unb-e2",
@@ -642,14 +645,17 @@
         "niemand"
       ],
       "promptDeBefore": "Ich kenne hier ___. (niemand)",
-      "promptDeAfter": "Ich kenne hier ___. (niemand)",
+      "promptDeAfter": "Ich kenne hier ___. (niemand, mit Kasusendung)",
       "textBefore": null,
       "textAfter": null,
       "answer": "niemanden",
       "options": null,
       "decision": "retain",
       "classification": "retain-derivational-lemma",
-      "rationaleAr": "القوس يعطي lexeme لازمة في تمرين تصريف/اشتقاق محدد؛ لا يساوي الجواب المصرف، وحذفه يجعل الفراغ معجمياً ملتبساً."
+      "rationaleAr": "القوس يعطي lexeme لازمة في تمرين تصريف/اشتقاق محدد؛ لا يساوي الجواب المصرف، وحذفه يجعل الفراغ معجمياً ملتبساً.",
+      "markersAfter": [
+        "niemand, mit Kasusendung"
+      ]
     },
     {
       "id": "b1-unb-e4",
@@ -699,14 +705,15 @@
         "denken an"
       ],
       "promptDeBefore": "Sage: Ich vermisse dich (denken an).",
-      "promptDeAfter": "Sage: Ich vermisse dich (denken an).",
+      "promptDeAfter": "Formuliere stattdessen mit „an dich denken“.",
       "textBefore": null,
       "textAfter": null,
       "answer": "Ich denke an dich.",
       "options": null,
       "decision": "retain",
       "classification": "retain-transformation-target",
-      "rationaleAr": "القوس يحدد التحويل أو القيد النحوي المطلوب كي لا تصبح مهمة الإنتاج مفتوحة بلا معيار."
+      "rationaleAr": "القوس يحدد التحويل أو القيد النحوي المطلوب كي لا تصبح مهمة الإنتاج مفتوحة بلا معيار.",
+      "markersAfter": []
     },
     {
       "id": "b1-vp-e5",
@@ -763,14 +770,17 @@
         "Haus ist das Grundwort"
       ],
       "promptDeBefore": "Bilde das Kompositum (Haus ist das Grundwort).",
-      "promptDeAfter": "Bilde das Kompositum (Haus ist das Grundwort).",
+      "promptDeAfter": "Bilde das gebräuchliche Kompositum (Schloss ist das Grundwort).",
       "textBefore": null,
       "textAfter": null,
-      "answer": "das Türhaus",
+      "answer": "das Türschloss",
       "options": null,
       "decision": "retain",
       "classification": "retain-transformation-target",
-      "rationaleAr": "القوس يحدد التحويل أو القيد النحوي المطلوب كي لا تصبح مهمة الإنتاج مفتوحة بلا معيار."
+      "rationaleAr": "القوس يحدد التحويل أو القيد النحوي المطلوب كي لا تصبح مهمة الإنتاج مفتوحة بلا معيار.",
+      "markersAfter": [
+        "Schloss ist das Grundwort"
+      ]
     },
     {
       "id": "b1-partizip1-f2",
@@ -1486,7 +1496,8 @@
       ],
       "decision": "remove-redundant",
       "classification": "redundant-with-options",
-      "rationaleAr": "كل خيارات MC تحمل الـlexeme نفسها؛ لذلك لا يضيف القوس قيداً تعليمياً ويكرر معلومة ظاهرة في الخيارات."
+      "rationaleAr": "كل خيارات MC تحمل الـlexeme نفسها؛ لذلك لا يضيف القوس قيداً تعليمياً ويكرر معلومة ظاهرة في الخيارات.",
+      "markersAfter": []
     },
     {
       "id": "b2-nom-e2",
@@ -1671,7 +1682,8 @@
       ],
       "decision": "remove-redundant",
       "classification": "redundant-with-options",
-      "rationaleAr": "كل خيارات MC تحمل الـlexeme نفسها؛ لذلك لا يضيف القوس قيداً تعليمياً ويكرر معلومة ظاهرة في الخيارات."
+      "rationaleAr": "كل خيارات MC تحمل الـlexeme نفسها؛ لذلك لا يضيف القوس قيداً تعليمياً ويكرر معلومة ظاهرة في الخيارات.",
+      "markersAfter": []
     },
     {
       "id": "g16e3",
