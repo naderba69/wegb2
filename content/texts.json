@@ -3701,8 +3701,8 @@
     "level": "B1",
     "titleDe": "Schlaflos in der Fremde",
     "titleAr": "سهرٌ في الغربة",
-    "de": "In der Nacht vor meiner B1-Prüfung konnte ich nicht einschlafen. Immer wieder dachte ich an Wörter und Redemittel, die mir im entscheidenden Moment fehlen könnten. Statt im Bett zu verzweifeln, stand ich auf, setzte mich ans Fenster und schrieb drei Seiten mit allem, woran ich mich noch erinnerte. Seltsamerweise wurde ich danach müde. Gegen halb zwei schlief ich ein – und am nächsten Morgen merkte ich im Prüfungsraum, dass ich viel mehr wusste, als ich in der Nacht befürchtet hatte. So ist das mit meiner Prüfungsangst: In der Nacht wirkt sie oft stärker als die Fakten.",
-    "ar": "في الليلة السابقة لامتحان B1 لم أستطع النوم. ظللت أفكر في كلمات وتعبيرات قد أنساها في اللحظة الحاسمة. وبدلاً من الاستسلام للقلق في السرير، نهضت وجلست قرب النافذة وكتبت ثلاث صفحات بكل ما كنت ما أزال أتذكره. والغريب أنني شعرت بالنعاس بعد ذلك. نمت قرابة الواحدة والنصف، وفي صباح اليوم التالي أدركت في قاعة الامتحان أنني أعرف أكثر بكثير مما كنت أخشى في الليل. هكذا يكون قلقي من الامتحان: يبدو لي ليلاً أقوى مما تشير إليه الوقائع.",
+    "de": "In der Nacht vor meiner B1-Prüfung konnte ich nicht einschlafen. Immer wieder dachte ich an Wörter, die mir fehlen könnten. Statt im Bett zu verzweifeln, stand ich auf, setzte mich ans Fenster und schrieb drei Seiten mit allem, woran ich mich noch erinnerte. Seltsamerweise wurde ich danach müde. Gegen halb zwei schlief ich ein. Am nächsten Morgen merkte ich im Prüfungsraum, dass ich mehr wusste, als ich in der Nacht befürchtet hatte. So ist das mit meiner Prüfungsangst: Nachts wirkt sie oft stärker als die Fakten.",
+    "ar": "في الليلة السابقة لامتحان B1 لم أستطع النوم. ظللت أفكر في كلمات قد أنساها. وبدلاً من الاستسلام للقلق في السرير، نهضت وجلست قرب النافذة وكتبت ثلاث صفحات بكل ما ظللت أتذكره. والغريب أنني شعرت بالنعاس بعد ذلك، ونمت قرابة الواحدة والنصف. وفي صباح اليوم التالي أدركت في قاعة الامتحان أنني أعرف أكثر مما كنت أخشاه ليلاً. هكذا يكون قلقي من الامتحان: يبدو لي ليلاً أقوى من الوقائع.",
     "questions": [
       {
         "id": "t-b1-18-q1",
@@ -3714,7 +3714,7 @@
           "Ich lernte im Bett weiter."
         ],
         "answer": "Ich stand auf und schrieb drei Seiten.",
-        "explanationAr": "النص يقول: «stand ich auf … und schrieb drei Seiten».",
+        "explanationAr": "النص يقول: «stand ich auf, setzte mich ans Fenster und schrieb drei Seiten».",
         "promptAr": "ماذا فعلت في الليل؟"
       },
       {
@@ -3740,7 +3740,7 @@
           "Das Prüfungsthema war vorher bekannt."
         ],
         "answer": "Ich wusste mehr, als ich in der Nacht befürchtet hatte.",
-        "explanationAr": "النص يقول إنني أدركت «dass ich viel mehr wusste, als ich in der Nacht befürchtet hatte».",
+        "explanationAr": "النص يقول إنني أدركت «dass ich mehr wusste, als ich in der Nacht befürchtet hatte».",
         "promptAr": "ماذا أدركت في صباح اليوم التالي؟"
       }
     ]

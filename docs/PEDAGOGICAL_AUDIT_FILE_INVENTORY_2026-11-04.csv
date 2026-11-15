@@ -209,7 +209,7 @@ content/synonym-vertiefung.json,content,11378,339,8fefdb93fa8eb649da2ea05c27789e
 content/synonyme-kontext.json,content,45868,772,0231d5b460fc0d6a015d22c544833e42b8ca2b9305351905283dc4384cb10bff,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 content/synonyme.json,content,2558,211,b9f8c4079c18f88b0ae57367bc854760d2076105c7d64f3dfc96e2a5c0b6c76b,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 content/szenarien.json,content,71659,1768,f75d398759d495b82b582a29a66253b68d7b65d186ae3332943a3d22ee1a9b4b,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
-content/texts.json,content,567893,8703,b0b99b94626cdc27f7cbb61df4caad28adbde541a099fcc1ab727dc486257026,manual_targeted,رُوجعت مقاطع أو حقول مرتبطة بنتائج محددة؛ ليست مراجعة كاملة للملف
+content/texts.json,content,567757,8703,db881a349ad5e8b7217b5c47785226501abe5851305e766f17616e8e4601606c,manual_targeted,رُوجعت مقاطع أو حقول مرتبطة بنتائج محددة؛ ليست مراجعة كاملة للملف
 content/tiefenlex.json,content,13743,533,b191a7d26512bef56cbe5637cbab195c82425c224b3b42bc02f07fed1773f3f3,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 content/tool-catalog-governance.json,content,952753,21012,1f99135d798d60fa70c8983af252b4fdc5ac64bd587243bf97609dcf42f3c2d3,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 content/tool-catalog-review-matrix.json,content,1323090,32487,96b68fe1150ea9ab924c5825e163d5b92f9affab0710c45521e56bded31eb298,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
@@ -311,7 +311,7 @@ docs/archive/STUDENT_AUDIT_REPORT.md,docs,13836,160,d7526a94dc9367fa76d383df7362
 docs/archive/alle-180-karten.png,docs,6222690,22834,95752ee355df1bcf70d9da430eb374db2c4d0c61fcf8aeca6ca7ad4e49556341,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 docs/audio-qc-2026-10-16.json,docs,67600,3030,733f502e860cc1cff51b693e72ed1c7c3bbd822f206891e74c86b16b63679b71,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 docs/audio-qc-all-2026-10-18.json,docs,520960,21794,389468f7fb6ad0ccd70d13fcf4048345dfe9f695ac1e8a1de293c4de960ddbb3,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
-docs/audio-qc-all-2026-11-04.json,docs,440790,21002,3aedb8e495e39d8483b4830a192b2eade5d0d5b0581a5659150e72f878ad582f,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
+docs/audio-qc-all-2026-11-04.json,docs,440789,21002,40b3003f044ef3fe5b8e6d315cfc54cb0060bca80db4e3e25e3174f4b7f6c32e,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 docs/audio-qc-hoerneu-2026-10-16.json,docs,6994,320,941ea3ebe914ed17c03c0983b5504683caa3e2536e8e541767192ea1bb62f812,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 docs/audit-2026-10-04.md,docs,32703,149,7482b982ea8e828bd08f4c800dadc49610fbe434d59ff627d50af2d30dd927b1,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 docs/content-gap-a1-dialogues-28-30-2026-10-05.json,docs,7041,152,d273741926c0ebbd0d9e6151ec9be3c291c113fcba4906075984570ee9fd7fe8,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
@@ -3260,7 +3260,7 @@ scripts/fixtures/grammar-reviewed-05.json,scripts,396252,9350,de7a82600dba18b2bb
 scripts/fixtures/texts-reviewed-01.json,scripts,69146,1640,37f19dfde229766ef9a562fb11f956e3fa1e3e43ca4a0ed50c7374f27b8b5d11,audit_artifact,ناتج هذه الدورة، لا يُعدّ مصدراً تعليمياً مراجعاً
 scripts/fixtures/texts-reviewed-02.json,scripts,205696,3685,067b8ed2917ec4a0e3da1a2a83922e8aaf69a6effd97dbde9ee96db5f0a418d1,audit_artifact,ناتج هذه الدورة، لا يُعدّ مصدراً تعليمياً مراجعاً
 scripts/fixtures/texts-reviewed-03.json,scripts,215950,3440,bba4089c60147344bf835348e3f0fcf242036b6ada8f7a23cf74e56f0e58079d,audit_artifact,ناتج هذه الدورة، لا يُعدّ مصدراً تعليمياً مراجعاً
-scripts/fixtures/texts-reviewed-04.json,scripts,292286,4050,bd7415dc8853847e7af23b43938f5c7668f44409a213eba8a32ba6750c42f8d6,audit_artifact,ناتج هذه الدورة، لا يُعدّ مصدراً تعليمياً مراجعاً
+scripts/fixtures/texts-reviewed-04.json,scripts,292150,4050,58a36fca3d2d8906c06a9c10a8e4e3a8685c2b3204282abacca13bb67ebf212a,audit_artifact,ناتج هذه الدورة، لا يُعدّ مصدراً تعليمياً مراجعاً
 scripts/fixtures/vocab-posinfo-reviewed-02.json,scripts,13653,480,9815939c995be843f66caecd5fb142f235b90ef5b23d14d2817871684677b4db,manual_complete,قُرئ الملف كاملاً بشرياً في هذه الدورة ضمن النطاق المبيّن في التقرير
 scripts/fixtures/vocab-posinfo-reviewed-03.json,scripts,19218,648,0bfcfa499f711e46c98cb32fb7b470964d2350a784954ebcb46c4a3b96d04af7,manual_complete,قُرئ الملف كاملاً بشرياً في هذه الدورة ضمن النطاق المبيّن في التقرير
 scripts/fixtures/vocab-posinfo-reviewed-04.json,scripts,22666,728,122ae6fc6783263b0d8de4e787adcef8c9858f36e5ef00c8e4a27fb0531c8827,manual_complete,قُرئ الملف كاملاً بشرياً في هذه الدورة ضمن النطاق المبيّن في التقرير
