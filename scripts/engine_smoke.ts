@@ -16179,6 +16179,52 @@ function collectR262(dir: string, out: string[] = []): string[] {
     "K430c PA-036-05: الرقعة مقفلة بالموضوع وقابلة للإعادة والبوابة تحرس 87 قراراً مع إبقاء التوقيع المستقل خارج الادعاء");
 }
 
+/* ═══ K431 — PA-037-01: مراجعة نصوص القراءة A0 بندياً ═══ */
+{
+  const reviewK431 = JSON.parse(readFileSync("scripts/fixtures/texts-reviewed-01.json", "utf8")) as {
+    schema: string;
+    batch: string;
+    scope: string;
+    entries: { id: string; level: string; decision: "corrected" | "confirmed-current"; rationale: string; previous: Record<string, unknown>; current: Record<string, unknown> }[];
+  };
+  const textsK431 = JSON.parse(readFileSync("content/texts.json", "utf8")) as Array<Record<string, unknown>>;
+  const byIdK431 = new Map(textsK431.map((text) => [String(text.id), text]));
+  const expectedK431 = new Set([
+    "t-a0-01", "t-a0-02", "t-a0-03", "t-a0-04", "t-a0-05",
+    "t-a0-06", "t-a0-07", "t-a0-08", "t-a0-09", "t-a0-10",
+    "t-a0-011", "t-a0-012", "t-a0-013", "t-a0-014", "t-a0-015",
+  ]);
+  const correctedK431 = reviewK431.entries.filter((entry) => entry.decision === "corrected");
+  const confirmedK431 = reviewK431.entries.filter((entry) => entry.decision === "confirmed-current");
+  ok(reviewK431.schema === "wegb2-reviewed-text-decision-batch-v1" && reviewK431.batch === "PA-037-01" &&
+    reviewK431.entries.length === 15 && new Set(reviewK431.entries.map((entry) => entry.id)).size === 15 &&
+    reviewK431.entries.every((entry) => expectedK431.has(entry.id) && entry.level === "A0" && entry.rationale.trim().length > 0) &&
+    correctedK431.length === 12 && confirmedK431.length === 3 &&
+    correctedK431.every((entry) => JSON.stringify(entry.previous) !== JSON.stringify(entry.current)) &&
+    confirmedK431.every((entry) => JSON.stringify(entry.previous) === JSON.stringify(entry.current)),
+    "K431a PA-037-01: سجل القرار يغطي نصوص A0 الخمسة عشر كاملة بـ12 تصحيحاً و3 قرارات إبقاء مبررة");
+  const currentK431 = JSON.stringify([...expectedK431].map((id) => byIdK431.get(id)));
+  ok(reviewK431.entries.every((entry) => JSON.stringify(byIdK431.get(entry.id)) === JSON.stringify(entry.current)) &&
+    String(byIdK431.get("t-a0-02")?.titleDe) === "Zahlen im Alltag" &&
+    String(byIdK431.get("t-a0-06")?.de).includes("zwölf Lernende") &&
+    JSON.stringify(byIdK431.get("t-a0-10")?.questions).includes("Rot, gelb und braun") &&
+    JSON.stringify(byIdK431.get("t-a0-014")?.questions).includes("Der Kellner ist freundlich") &&
+    !currentK431.includes("Im Kurs sind 12 Studenten") && !currentK431.includes("Was macht er am Donnerstag?") &&
+    !currentK431.includes("Welche Jahreszeit mag er am liebsten?") && !currentK431.includes("Was bestellt er heute?"),
+    "K431b PA-037-01: القرارات تطابق البنك وتحرس العنوان والترجمة ومنظور الراوي وإزالة أسئلة الفهم المكررة");
+  const patchK431 = readFileSync("scripts/patches/apply_text_review_pa037_01.py", "utf8");
+  const auditK431 = readFileSync("scripts/text_content_review_audit.ts", "utf8");
+  const packageK431 = readFileSync("package.json", "utf8");
+  const ciK431 = readFileSync(".github/workflows/ci.yml", "utf8");
+  ok(patchK431.includes("current == reviewed") && patchK431.includes("current != previous") &&
+    patchK431.includes("unexpected current reading text") &&
+    auditK431.includes("all 15 bounded A0 full-text decisions match") && auditK431.includes("142 A1–B2 texts") &&
+    packageK431.includes('"audit:text-content-review"') && ciK431.includes("npm run audit:text-content-review") &&
+    reviewK431.scope.includes("triage only") && reviewK431.scope.includes("not correction generators") &&
+    reviewK431.scope.includes("not independent linguistic, translation, CEFR, or exam sign-off"),
+    "K431c PA-037-01: الرقعة مقفلة بالنص الكامل وقابلة للإعادة والبوابة موصولة بـCI مع إبقاء 142 نصاً والتوقيع المستقل خارج الادعاء");
+}
+
 /* ═══ K334 — R309: القفل الفعلي الحقيقي — إغلاقُ اليوم عند حدود الوحدة ممنوعٌ لا منصوحٌ به فقط ═══ */
 {
   const homeK334 = readFileSync("app/page.tsx", "utf8");

@@ -5,14 +5,14 @@
   "scopeNoteAr": "هذه قياسات قابلة لإعادة التشغيل وليست شهادة صحة لغوية أو بيداغوجية.",
   "baseline": {
     "smoke": {
-      "passed": 2516,
+      "passed": 2519,
       "failed": 0
     },
     "interactiveJsdom": {
       "passed": 1027,
       "failed": 0,
       "plannedTasksTraversed": 2500,
-      "interactiveElementsTouched": 22543
+      "interactiveElementsTouched": 22544
     },
     "contentStructuralAudit": {
       "exitCode": 0,
@@ -671,11 +671,11 @@
     "claimBoundary": "87 bounded internal A0–B2 decisions; independent review, field validation, and external linguistic, phonetic, CEFR, or exam sign-off remain pending"
   },
   "inventorySnapshot": {
-    "indexedTrackedFilesAndAuditArtifacts": 3613,
-    "manual_complete": 58,
+    "indexedTrackedFilesAndAuditArtifacts": 3616,
+    "manual_complete": 59,
     "manual_targeted": 67,
     "not_started": 3441,
-    "audit_artifact": 47
+    "audit_artifact": 49
   },
   "learningStateCorrections": {
     "findings": [
@@ -915,5 +915,39 @@
     "cefrOrExamReadinessClaimed": false,
     "externalEffectivenessClaimed": false,
     "regressionGate": "npm run audit:personalization"
+  },
+  "textBankReviewAudit": {
+    "path": "content/texts.json",
+    "texts": 157,
+    "batches": [
+      {
+        "batch": "PA-037-01",
+        "level": "A0",
+        "reviewedTexts": 15,
+        "correctedTexts": 12,
+        "confirmedCurrentTexts": 3,
+        "fixture": "scripts/fixtures/texts-reviewed-01.json",
+        "patch": "scripts/patches/apply_text_review_pa037_01.py"
+      }
+    ],
+    "reviewedTexts": 15,
+    "reviewedLevels": [
+      "A0"
+    ],
+    "correctedTexts": 12,
+    "confirmedCurrentTexts": 3,
+    "remainingTexts": 142,
+    "remainingLevels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2"
+    ],
+    "scope": "item-by-item internal full-text review of German and Arabic titles and passages, questions, options, answers, explanations, narrator perspective, duplication, and factual or register claim boundaries; heuristic scans used for triage only",
+    "regressionGate": "npm run audit:text-content-review",
+    "independentLinguisticSignOff": false,
+    "independentTranslationSignOff": false,
+    "externalCefrOrExamValidation": false,
+    "claimBoundary": "15 bounded internal A0 decisions; 142 A1–B2 texts, all 176 dialogues, independent review, field validation, and external linguistic, translation, CEFR, or exam sign-off remain pending"
   }
 }

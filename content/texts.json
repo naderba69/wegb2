@@ -54,8 +54,8 @@
   {
     "id": "t-a0-02",
     "level": "A0",
-    "titleDe": "Die Zahlen 1–10",
-    "titleAr": "الأرقام من 1 إلى 10",
+    "titleDe": "Zahlen im Alltag",
+    "titleAr": "الأعداد في الحياة اليومية",
     "de": "Eins, zwei, drei, vier, fünf, sechs, sieben, acht, neun, zehn. Ich bin dreißig Jahre alt. Meine Telefonnummer ist 0176 12345678. Die Hausnummer ist 12.",
     "ar": "واحد، اثنان، ثلاثة، أربعة، خمسة، ستة، سبعة، ثمانية، تسعة، عشرة. عمري ثلاثون سنة. رقم هاتفي 0176 12345678. رقم المنزل 12.",
     "questions": [
@@ -75,8 +75,8 @@
       },
       {
         "type": "mc",
-        "promptDe": "Welche Zahl aus den Antwortmöglichkeiten kommt in der ersten Zahlenreihe nicht vor?",
-        "promptAr": "أيّ عدد من الخيارات لا يظهر في سلسلة الأعداد الأولى؟",
+        "promptDe": "Welche Zahl kommt in der Zahlenreihe am Anfang nicht vor?",
+        "promptAr": "أي عدد لا يظهر في سلسلة الأعداد في بداية النص؟",
         "options": [
           "fünf",
           "sieben",
@@ -84,7 +84,7 @@
           "zehn"
         ],
         "answer": "zwölf",
-        "explanationAr": "الدليل في النص: «Eins, zwei, drei, vier, fünf, sechs, sieben, acht, neun, zehn.» — في السلسلة الأولى تُذكر الأعداد بالكلمات من eins bis zehn؛ أما zwölf فلا يظهر فيها.",
+        "explanationAr": "تذكر السلسلة في البداية الأعداد من eins إلى zehn؛ أما zwölf فلا يظهر فيها.",
         "id": "t-a0-02-q2"
       },
       {
@@ -214,7 +214,7 @@
       {
         "type": "mc",
         "promptDe": "Was ist Karim?",
-        "promptAr": "ماذا يعمل كريم؟",
+        "promptAr": "ماذا يقول كريم عن نفسه؟",
         "options": [
           "Lehrer",
           "Arzt",
@@ -8127,8 +8127,8 @@
     "level": "A0",
     "titleDe": "In der Klasse",
     "titleAr": "في الصف",
-    "de": "Das ist mein Klassenzimmer. Hier lerne ich Deutsch. Die Lehrerin heißt Frau Schulz. Sie ist sehr nett. Im Kurs sind 12 Studenten. Sie kommen aus Syrien, aus der Türkei, aus Polen und aus Italien. Wir sprechen zusammen Deutsch. Manchmal lachen wir viel.",
-    "ar": "هذا فصلي. أتعلم فيه الألمانية. اسم المعلمة السيدة شولتس، وهي لطيفة جداً. يضمّ الصف 12 طالباً من سوريا وتركيا وبولندا وإيطاليا. نتحدث الألمانية معاً، وأحياناً نضحك كثيراً.",
+    "de": "Das ist mein Klassenzimmer. Hier lerne ich Deutsch. Die Lehrerin heißt Frau Schulz. Sie ist sehr nett. Im Kurs sind zwölf Lernende. Sie kommen aus Syrien, aus der Türkei, aus Polen und aus Italien. Wir sprechen zusammen Deutsch. Manchmal lachen wir viel.",
+    "ar": "هذه قاعة درسي. هنا أتعلم الألمانية. اسم المعلمة السيدة شولتس، وهي لطيفة جداً. في الدورة اثنا عشر متعلماً من سوريا وتركيا وبولندا وإيطاليا. نتحدث الألمانية معاً، وأحياناً نضحك كثيراً.",
     "questions": [
       {
         "type": "mc",
@@ -8212,15 +8212,15 @@
       },
       {
         "type": "mc",
-        "promptDe": "Was macht er am Donnerstag?",
-        "promptAr": "ماذا يفعل يوم الخميس؟",
+        "promptDe": "Was mache ich am Donnerstag?",
+        "promptAr": "ماذا أفعل يوم الخميس؟",
         "options": [
-          "Er geht zur Arbeit",
-          "Er kauft ein",
-          "Er trifft seine Freunde",
-          "Er schläft lange"
+          "Ich gehe zur Arbeit",
+          "Ich kaufe ein",
+          "Ich treffe meine Freunde",
+          "Ich schlafe lange"
         ],
-        "answer": "Er trifft seine Freunde",
+        "answer": "Ich treffe meine Freunde",
         "explanationAr": "النص يقول: «Am Donnerstag treffe ich meine Freunde».",
         "id": "t-a0-07-q3"
       }
@@ -8264,8 +8264,8 @@
       },
       {
         "type": "mc",
-        "promptDe": "Was trinkt er zum Abendbrot?",
-        "promptAr": "ماذا يشرب في العشاء؟",
+        "promptDe": "Was trinke ich zum Abendbrot?",
+        "promptAr": "ماذا أشرب في العشاء؟",
         "options": [
           "Kaffee",
           "Tee",
@@ -8284,7 +8284,7 @@
     "titleDe": "Die Uhrzeit",
     "titleAr": "الوقت",
     "de": "Ich stehe um 7 Uhr auf. Um 8 Uhr frühstücke ich. Um 9 Uhr beginne ich mit der Arbeit. Um 12 Uhr esse ich zu Mittag. Um 17 Uhr gehe ich nach Hause. Um 19 Uhr esse ich zu Abend. Um 23 Uhr gehe ich ins Bett.",
-    "ar": "أستيقظ عند السابعة صباحاً. أتناول الفطور عند الثامنة. أبدأ العمل عند التاسعة. أتناول الغداء عند الثانية عشرة ظهراً. أعود إلى البيت عند الخامسة مساءً. أتناول العشاء عند السابعة مساءً. أذهب إلى الفراش عند الحادية عشرة ليلاً.",
+    "ar": "أنهض عند السابعة صباحاً. أتناول الفطور عند الثامنة. أبدأ العمل عند التاسعة. أتناول الغداء عند الثانية عشرة ظهراً. أعود إلى البيت عند الخامسة مساءً. أتناول العشاء عند السابعة مساءً. أذهب إلى الفراش عند الحادية عشرة ليلاً.",
     "questions": [
       {
         "type": "mc",
@@ -8316,8 +8316,8 @@
       },
       {
         "type": "mc",
-        "promptDe": "Um wie viel Uhr geht er ins Bett?",
-        "promptAr": "في أيّ ساعة يذهب إلى الفراش؟",
+        "promptDe": "Um wie viel Uhr gehe ich ins Bett?",
+        "promptAr": "في أي ساعة أذهب إلى الفراش؟",
         "options": [
           "Um 19 Uhr",
           "Um 17 Uhr",
@@ -8368,16 +8368,16 @@
       },
       {
         "type": "mc",
-        "promptDe": "Welche Jahreszeit mag er am liebsten?",
-        "promptAr": "أيّ فصل يحبّه أكثر؟",
+        "promptDe": "Welche Farben haben die Blätter im Herbst?",
+        "promptAr": "ما ألوان أوراق الأشجار في الخريف؟",
         "options": [
-          "Den Winter",
-          "Den Frühling",
-          "Den Sommer",
-          "Den Herbst"
+          "Rot, gelb und braun",
+          "Nur grün",
+          "Blau und weiß",
+          "Schwarz und grau"
         ],
-        "answer": "Den Frühling",
-        "explanationAr": "النص يقول: «Ich mag den Frühling am liebsten».",
+        "answer": "Rot, gelb und braun",
+        "explanationAr": "النص يقول: «Im Herbst sind die Blätter bunt: rot, gelb und braun».",
         "id": "t-a0-10-q3"
       }
     ]
@@ -8419,16 +8419,16 @@
       },
       {
         "type": "mc",
-        "promptDe": "Wie viele Hefte sind in der Tasche?",
-        "promptAr": "كم دفتراً في الحقيبة؟",
+        "promptDe": "Wie ist die Schultasche?",
+        "promptAr": "كيف هي الحقيبة المدرسية؟",
         "options": [
-          "zwei",
-          "drei",
-          "vier",
-          "fünf"
+          "Nicht schwer",
+          "Sehr schwer",
+          "Leer",
+          "Schwarz"
         ],
-        "answer": "drei",
-        "explanationAr": "النص يقول: «In der Tasche sind drei Hefte».",
+        "answer": "Nicht schwer",
+        "explanationAr": "النص يقول: «Die Tasche ist nicht schwer».",
         "id": "t-a0-011-q3"
       }
     ]
@@ -8470,16 +8470,16 @@
       },
       {
         "type": "mc",
-        "promptDe": "Wen besucht er am Sonntag?",
-        "promptAr": "مَن يزور يوم الأحد؟",
+        "promptDe": "Was essen wir am Sonntag?",
+        "promptAr": "ماذا نأكل يوم الأحد؟",
         "options": [
-          "Seinen Hund",
-          "Seine Freunde",
-          "Seine Mutter",
-          "Seinen Vater"
+          "Kuchen",
+          "Brot",
+          "Reis",
+          "Suppe"
         ],
-        "answer": "Seine Mutter",
-        "explanationAr": "النص يقول: «Am Sonntag besuche ich meine Mutter».",
+        "answer": "Kuchen",
+        "explanationAr": "النص يقول: «Wir essen zusammen Kuchen».",
         "id": "t-a0-012-q3"
       }
     ]
@@ -8521,8 +8521,8 @@
       },
       {
         "type": "mc",
-        "promptDe": "Was braucht er heute nicht?",
-        "promptAr": "ما الذي لا يحتاجه اليوم؟",
+        "promptDe": "Was brauche ich an diesem Montag nicht?",
+        "promptAr": "ما الذي لا أحتاجه في يوم الاثنين هذا؟",
         "options": [
           "Ein T-Shirt",
           "Eine Jeans",
@@ -8572,16 +8572,16 @@
       },
       {
         "type": "mc",
-        "promptDe": "Was bestellt er heute?",
-        "promptAr": "ماذا يطلب اليوم؟",
+        "promptDe": "Wie ist der Kellner?",
+        "promptAr": "كيف هو النادل؟",
         "options": [
-          "Eine Pizza",
-          "Einen Salat",
-          "Ein Brot",
-          "Eine Suppe und ein Schnitzel"
+          "Freundlich",
+          "Unfreundlich",
+          "Müde",
+          "Laut"
         ],
-        "answer": "Eine Suppe und ein Schnitzel",
-        "explanationAr": "النص يقول: «Heute bestelle ich eine Suppe und ein Schnitzel mit Kartoffeln».",
+        "answer": "Freundlich",
+        "explanationAr": "النص يقول: «Der Kellner ist freundlich».",
         "id": "t-a0-014-q3"
       }
     ]
@@ -8623,15 +8623,15 @@
       },
       {
         "type": "mc",
-        "promptDe": "Was macht er in der Küche?",
-        "promptAr": "ماذا يفعل في المطبخ؟",
+        "promptDe": "Was mache ich in der Küche?",
+        "promptAr": "ماذا أفعل في المطبخ؟",
         "options": [
-          "Er schläft",
-          "Er macht Kaffee",
-          "Er sieht fern",
-          "Er liest ein Buch"
+          "Ich schlafe",
+          "Ich mache Kaffee",
+          "Ich sehe fern",
+          "Ich lese ein Buch"
         ],
-        "answer": "Er macht Kaffee",
+        "answer": "Ich mache Kaffee",
         "explanationAr": "النص يقول: «In der Küche mache ich Kaffee».",
         "id": "t-a0-015-q3"
       }

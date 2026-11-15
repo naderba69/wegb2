@@ -73,6 +73,8 @@ jobs:
         run: npm run audit:writing-consistency
       - name: Reviewed grammar content (PA-036 regression gate)
         run: npm run audit:grammar-content-review
+      - name: Reviewed reading-text content (PA-037 regression gate)
+        run: npm run audit:text-content-review
       - name: Learning-state integrity (PA-006–PA-008 regression gate)
         run: npm run audit:learning-state
       - name: Assessment and interface integrity (PA-004/005/012/019/024/028)
