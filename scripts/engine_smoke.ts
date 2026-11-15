@@ -15983,11 +15983,57 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const auditK426 = readFileSync("scripts/grammar_content_review_audit.ts", "utf8");
   ok(patchK426.includes("current == reviewed") && patchK426.includes("current != previous") &&
     patchK426.includes("unexpected current grammar topic") &&
-    auditK426.includes("review01.entries.length !== 8") &&
-    auditK426.includes("79 A1–B2 topics") &&
+    auditK426.includes('validateBatch(review01, "PA-036-01", expectedA0, "A0", 8, 0)') &&
+    auditK426.includes("all 27 bounded A0/A1 full-topic decisions match") &&
+    auditK426.includes("60 A2–B2 topics") &&
     reviewK426.scope.includes("triage only") && reviewK426.scope.includes("not correction generators") &&
     reviewK426.scope.includes("not independent linguistic, phonetic, CEFR, or exam sign-off"),
-    "K426c PA-036-01: الرقعة مقفلة بالموضوع الكامل وقابلة للإعادة والبوابة تصرّح ببقاء 79 موضوعاً والتوقيع المستقل خارج الادعاء");
+    "K426c PA-036-01: الرقعة مقفلة بالموضوع الكامل وقابلة للإعادة والبوابة المجمعة تحرس الدفعتين مع إبقاء 60 موضوعاً والتوقيع المستقل خارج الادعاء");
+}
+
+/* ═══ K427 — PA-036-02: مراجعة موضوعات قواعد A1 بندياً ═══ */
+{
+  const reviewK427 = JSON.parse(readFileSync("scripts/fixtures/grammar-reviewed-02.json", "utf8")) as {
+    schema: string;
+    batch: string;
+    scope: string;
+    entries: { id: string; level: string; decision: "corrected" | "confirmed-current"; rationale: string; previous: Record<string, unknown>; current: Record<string, unknown> }[];
+  };
+  const grammarK427 = JSON.parse(readFileSync("content/grammar.json", "utf8")) as Record<string, Record<string, unknown>>;
+  const expectedK427 = new Set([
+    "a1-sein-haben", "a1-pronomen", "a1-praesens", "a1-trennbar", "a1-zahlen",
+    "a1-akkusativ", "a1-modalverben", "a1-dativ", "a1-wechsel", "a1-imperativ",
+    "a1-perfekt-einf", "a1-war-hatte", "a1-plural", "a1-zeitpraep",
+    "a1-aussprache-ch", "a1-aussprache-r", "a1-aussprache-sp-st",
+    "a1-aussprache-auslaut", "a1-pruefungsstrategie",
+  ]);
+  const correctedK427 = reviewK427.entries.filter((entry) => entry.decision === "corrected");
+  const confirmedK427 = reviewK427.entries.filter((entry) => entry.decision === "confirmed-current");
+  ok(reviewK427.schema === "wegb2-reviewed-grammar-decision-batch-v1" && reviewK427.batch === "PA-036-02" &&
+    reviewK427.entries.length === 19 && new Set(reviewK427.entries.map((entry) => entry.id)).size === 19 &&
+    reviewK427.entries.every((entry) => expectedK427.has(entry.id) && entry.level === "A1" && entry.rationale.trim().length > 0) &&
+    correctedK427.length === 16 && confirmedK427.length === 3 &&
+    correctedK427.every((entry) => JSON.stringify(entry.previous) !== JSON.stringify(entry.current)) &&
+    confirmedK427.every((entry) => JSON.stringify(entry.previous) === JSON.stringify(entry.current)),
+    "K427a PA-036-02: سجل القرار يغطي موضوعات A1 التسعة عشر كاملة بـ16 تصحيحاً و3 قرارات إبقاء مبررة");
+  ok(reviewK427.entries.every((entry) => JSON.stringify(grammarK427[entry.id]) === JSON.stringify(entry.current)) &&
+    String(grammarK427["a1-sein-haben"]?.summaryAr).includes("الهوية أو الصفة أو الحالة") &&
+    String(grammarK427["a1-dativ"]?.summaryAr).includes("-n أو -s") &&
+    String(grammarK427["a1-aussprache-ch"]?.summaryAr).includes("/ç/") &&
+    String(grammarK427["a1-aussprache-r"]?.summaryAr).includes("تنوعات مقبولة") &&
+    JSON.stringify(grammarK427["a1-aussprache-sp-st"]?.exercises).includes('"answer":"/ʃp/"') &&
+    String(grammarK427["a1-pruefungsstrategie"]?.titleDe).startsWith("Interne Prüfungsstrategie") &&
+    !JSON.stringify([...expectedK427].map((id) => grammarK427[id])).includes("30 Wörter"),
+    "K427b PA-036-02: القرارات تطابق البنك وتحرس الحالات والنطق المتنوع وIPA وحدود ادعاء استراتيجية الامتحان");
+  const patchK427 = readFileSync("scripts/patches/apply_grammar_review_pa036_02.py", "utf8");
+  const auditK427 = readFileSync("scripts/grammar_content_review_audit.ts", "utf8");
+  ok(patchK427.includes("current == reviewed") && patchK427.includes("current != previous") &&
+    patchK427.includes("confirmed-current grammar topic drifted") && patchK427.includes("unexpected current grammar topic") &&
+    auditK427.includes('validateBatch(review02, "PA-036-02", expectedA1, "A1", 16, 3)') &&
+    auditK427.includes("all 27 bounded A0/A1 full-topic decisions match") && auditK427.includes("60 A2–B2 topics") &&
+    reviewK427.scope.includes("triage only") && reviewK427.scope.includes("not correction generators") &&
+    reviewK427.scope.includes("not independent linguistic, phonetic, CEFR, or exam sign-off"),
+    "K427c PA-036-02: الرقعة مقفلة بالموضوع وقابلة للإعادة والبوابة تحرس 27 قراراً وتبقي 60 موضوعاً والتوقيع المستقل خارج الادعاء");
 }
 
 /* ═══ K334 — R309: القفل الفعلي الحقيقي — إغلاقُ اليوم عند حدود الوحدة ممنوعٌ لا منصوحٌ به فقط ═══ */
@@ -16222,17 +16268,17 @@ function collectR262(dir: string, out: string[] = []): string[] {
 
   const metricsK357 = calculateScaffoldMetrics(grammarMap);
   const expectedLevelsK357 = {
-    A0: [8, 63, 8, 7, 12.7], A1: [19, 150, 57, 39, 38], A2: [22, 202, 79, 61, 39.1],
+    A0: [8, 63, 8, 7, 12.7], A1: [19, 150, 54, 39, 36], A2: [22, 202, 79, 61, 39.1],
     B1: [15, 143, 34, 23, 23.8], B2: [23, 200, 60, 46, 30],
   } as const;
-  ok(metricsK357.topics === 87 && metricsK357.items === 758 && metricsK357.parenthetical === 238 &&
+  ok(metricsK357.topics === 87 && metricsK357.items === 758 && metricsK357.parenthetical === 235 &&
     metricsK357.blankLinked === 176 && metricsK357.exactLeaks === 0 &&
     Object.entries(expectedLevelsK357).every(([level, expected]) => {
       const metric = metricsK357.byLevel[level as keyof typeof metricsK357.byLevel];
       return [metric.topics, metric.items, metric.parenthetical, metric.blankLinked, metric.parentheticalPct]
         .every((value, index) => value === expected[index]);
     }),
-    "K357b خط الأساس الحالي يعيد إنتاج 87 درساً/758 بنداً و238 علامة و176 مرشح فراغ وصفر تسريب، موزعة على المستويات الخمسة");
+    "K357b خط الأساس الحالي يعيد إنتاج 87 درساً/758 بنداً و235 علامة و176 مرشح فراغ وصفر تسريب، موزعة على المستويات الخمسة");
 
   const qualityK357 = readFileSync("app/qualitaet/page.tsx", "utf8");
   const auditK357 = readFileSync("scripts/scaffold_audit.ts", "utf8");
@@ -16241,7 +16287,7 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const baselineK357 = JSON.parse(readFileSync("content/scaffold-metrics-baseline.json", "utf8")) as { reviewRule?: string; nonBlockingRatios?: boolean };
   ok(qualityK357.includes('data-testid="scaffold-transparency"') && qualityK357.includes("إشارات مراجعة وليست عيوباً مؤكدة") &&
     auditK357.includes("review signals, not confirmed defects") && ciK357.includes("npm run audit:scaffolds") &&
-    browserK357.includes('"238/758"') && baselineK357.reviewRule === "R161" && baselineK357.nonBlockingRatios === true,
+    browserK357.includes('"235/758"') && baselineK357.reviewRule === "R161" && baselineK357.nonBlockingRatios === true,
     "K357c صفحة الجودة والتدقيق وCI وChromium تعرض خط الأساس المحدث بوصفه إشارة غير مانعة، لا قائمة أخطاء مؤكدة");
 }
 

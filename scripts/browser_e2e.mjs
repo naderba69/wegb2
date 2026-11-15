@@ -271,7 +271,7 @@ async function main() {
       `${toolSummary.relatedCatalogReferences} إحالة مفاهيمية`,
       `${toolSummary.decisionBreakdown["reject-not-applicable"] ?? 0} مرفوضة لعدم الملاءمة`,
       "شفافية السقالة القوسية حسب المستوى",
-      "238/758",
+      "235/758",
       "176",
       "مرشحاً مرتبطاً بفراغ",
       "مراجعة R161: 97/97 حالة B1/B2 لها قرار صريح",

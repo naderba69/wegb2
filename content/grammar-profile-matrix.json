@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "generatedFrom": "content/grammar.json",
-  "sourceSha256": "a60e7ce1ffd9d7971223389e8bc9dbb6b20b7829f352a298f4af6add52d87b1b",
+  "sourceSha256": "9f475bf0285e3c463e80ca367286027b99225e592814a54ff290e240049287b5",
   "updated": "2026-11-05",
   "profileId": "wegb2-internal-german-grammar-coverage-profile",
   "claimStatus": "internal-evidence-map-not-official-ggp",
@@ -84,7 +84,7 @@
       "id": "a1-sein-haben",
       "level": "A1",
       "titleDe": "sein & haben",
-      "titleAr": "الفعلان sein (يكون) و haben (يملك)",
+      "titleAr": "الفعلان sein (يصف الهوية أو الحالة) وhaben (يملك/لديه)",
       "goalAr": "تصرّف sein وhaben في المضارع بلا تردد وتستعملهما في 5 جمل عن نفسك.",
       "prerequisiteTopicIds": [
         "a0-artikel",
@@ -189,7 +189,7 @@
         "canDoIds": [
           "A1-C6"
         ],
-        "applicationDe": "Schreibe 5 Fragen an einen neuen Kollegen (Wo …؟ Was …؟ …).",
+        "applicationDe": "Schreibe 5 Fragen an einen neuen Kollegen (Wo ...? Was ...? ...).",
         "applicationAr": "اكتب 5 أسئلة لزميل جديد (Wo wohnst du؟ Was machst du؟ …) ثم أجب عنها بنفسك.",
         "rules": 4,
         "examples": 3,
@@ -1660,7 +1660,7 @@
       "level": "A1",
       "titleDe": "Dativ — dem/der/den + Präpositionen mit, bei, zu, aus, nach, von, seit",
       "titleAr": "حالة الجر الأساسية وأدواتها",
-      "goalAr": "تستخدم Dativ بعد mit/bei/zu وتفرّقها عن Akkusativ.",
+      "goalAr": "تستخدم Dativ بعد mit/bei/zu/aus/nach/von/seit ومع أمثلة شائعة مثل helfen وgefallen، وتفرّقه عن Akkusativ.",
       "prerequisiteTopicIds": [
         "a1-akkusativ"
       ],
@@ -1775,7 +1775,7 @@
       "id": "a1-perfekt-einf",
       "level": "A1",
       "titleDe": "Perfekt (Einführung): ge-…-t mit haben",
-      "titleAr": "مقدمة الماضي التام (أفعال منتظمة مع haben)",
+      "titleAr": "مقدمة صيغة Perfekt (أفعال منتظمة مع haben)",
       "goalAr": "تطبّق نمط Partizip II المنتظم مع haben على أمثلة الدرس المحددة (ge-…-t).",
       "prerequisiteTopicIds": [
         "a1-sein-haben",
@@ -1800,7 +1800,7 @@
           "A1-C5"
         ],
         "applicationDe": "Erzähle deinen gestrigen Tag in 4 Sätzen im Perfekt.",
-        "applicationAr": "احكِ يومك أمس في 4 جمل بالماضي التام (Heute habe ich … gemacht).",
+        "applicationAr": "احكِ ما فعلته أمس في 4 جمل بصيغة Perfekt (Gestern habe ich … gemacht).",
         "rules": 3,
         "examples": 2,
         "pitfalls": 3
@@ -2045,7 +2045,7 @@
           "A1-C3"
         ],
         "applicationDe": "Erzähle von deinen Großeltern: 4 Sätze mit war/hatte.",
-        "applicationAr": "احكِ عن جدّك: 4 جمل بـ war/hatte (Meine Oma war Lehrerin …).",
+        "applicationAr": "احكِ عن أحد جدّيك أو عن جدّيك في 4 جمل بـwar/hatte (Meine Oma war Lehrerin …).",
         "rules": 3,
         "examples": 5,
         "pitfalls": 3
@@ -2430,8 +2430,8 @@
           "a1-plural-n7"
         ],
         "canDoIds": [],
-        "applicationDe": "Beschreibe dein Zimmer mit sechs Plural-Sätzen.",
-        "applicationAr": "صِف غرفتك بست جمل جمع (Die Bücher liegen …).",
+        "applicationDe": "Beschreibe dein Zimmer mit sechs Sätzen, in denen Nomen im Plural stehen.",
+        "applicationAr": "صِف غرفتك بست جمل تحتوي أسماء في صيغة الجمع (Die Bücher liegen …).",
         "rules": 4,
         "examples": 3,
         "pitfalls": 3
@@ -2874,7 +2874,7 @@
       "level": "A1",
       "titleDe": "Aussprache: ch — ich-Laut vs ach-Laut",
       "titleAr": "نطق ch: ich-Laut الناعم وach-Laut الخشن",
-      "goalAr": "تُفرّق بين ich-Laut (بعد i/e/ö/ü/ä/äu/ei/ie/eu/ai/r/l/n — ناعم) وach-Laut (بعد a/o/u/au — خشن كالخاء العربية).",
+      "goalAr": "تميّز في الكلمات المستهدفة بين ich-Laut الأمامي /ç/ بعد الحركات الأمامية وبعض الصوامت، وach-Laut الخلفي /x/ بعد a/o/u/au.",
       "prerequisiteTopicIds": [
         "a1-praesens"
       ],
@@ -2911,7 +2911,7 @@
       "level": "A1",
       "titleDe": "Aussprache: Das deutsche r",
       "titleAr": "نطق حرف r الألماني",
-      "goalAr": "تُنطِق r في بداية الكلمة رخواً (ليس كالراء العربية المفخّمة)، وتنطق -er آخر الكلمة كـ a خفيفة (Vater = فاتَ).",
+      "goalAr": "تتعرّف تنوع نطق r الألمانية في بداية المقطع، وتتدرّب خصوصاً على نطق -er غير المشددة في آخر كلمات مثل Vater بصوت [ɐ] تقريبي.",
       "prerequisiteTopicIds": [
         "a1-praesens"
       ],
@@ -2947,7 +2947,7 @@
       "level": "A1",
       "titleDe": "Aussprache: sp/st und sch",
       "titleAr": "نطق sch و sp/st في بداية الكلمة",
-      "goalAr": "تعلم أن sp و st في بداية الكلمة/المقطع يُنطقان shp/sht (شب/شت)، وأن sch تُنطق دائماً «ش».",
+      "goalAr": "تتعرف أن sp وst في بداية الكلمة أو المقطع تُنطقان معيارياً /ʃp/ و/ʃt/، وأن sch تمثل عادةً /ʃ/ في الكلمات المستهدفة.",
       "prerequisiteTopicIds": [
         "a1-praesens"
       ],
@@ -2966,7 +2966,7 @@
         ],
         "canDoIds": [],
         "applicationDe": "Wiederhole: spielen, Stadt, Straße, Schule, schreiben.",
-        "applicationAr": "كرّر: spielen=شبيلِن، Stadt=شتات، Straße=شتراسَ، Schule=شولَ، schreiben=شرايبن.",
+        "applicationAr": "كرّر الكلمات spielen وStadt وStraße وSchule وschreiben، وركّز على /ʃp/ و/ʃt/ و/ʃ/ من التسجيل بدل الاعتماد على كتابة عربية تقريبية.",
         "rules": 3,
         "examples": 2,
         "pitfalls": 2
@@ -2983,7 +2983,7 @@
       "level": "A1",
       "titleDe": "Aussprache: Auslautverhärtung — b/d/g → p/t/k",
       "titleAr": "نطق نهاية المقطع: b/d/g تُنطَق p/t/k",
-      "goalAr": "تدرك أن الحروف المجهورة b/d/g في آخر المقطع/الكلمة تُنطَق عديمة الجهر (p/t/k).",
+      "goalAr": "تدرك أن الصوامت الانفجارية المجهورة /b d ɡ/ تفقد الجهر في نهاية المقطع وتُسمع [p t k] في الكلمات المستهدفة.",
       "prerequisiteTopicIds": [
         "a1-praesens",
         "a1-akkusativ"
@@ -3003,7 +3003,7 @@
         ],
         "canDoIds": [],
         "applicationDe": "Wiederhole: Tag, lieb, Kind, Hund, ab — final b→p, d→t, g→k.",
-        "applicationAr": "كرّر: Tag = تاك، lieb = ليب، Kind = كينت، Hund = هونت، ab = آب. لا تنطق g نهائياً جيم!",
+        "applicationAr": "كرّر Tag وlieb وKind وHund وab، ثم قارن Tag/Tage وKind/Kinder. ركّز على فقدان الجهر في نهاية المقطع بدل كتابة النطق بحروف عربية.",
         "rules": 3,
         "examples": 2,
         "pitfalls": 2
@@ -3127,9 +3127,9 @@
     {
       "id": "a1-pruefungsstrategie",
       "level": "A1",
-      "titleDe": "Prüfungsstrategie: Start Deutsch A1",
-      "titleAr": "استراتيجية امتحان Start Deutsch A1 — إدارة الوقت والقراءة والكتابة",
-      "goalAr": "تعرف بنية امتحان A1 (60 دقيقة + Sprechen 15 دقيقة) وكيفية توزيع الوقت وتقنيات القراءة السريعة وبناء الرسالة (30 كلمة) وكيفية التعامل مع الأسئلة الصعبة.",
+      "titleDe": "Interne Prüfungsstrategie: A1-Übungsformat",
+      "titleAr": "استراتيجية داخلية لتدريبات A1 — إدارة الوقت والقراءة والكتابة",
+      "goalAr": "تتدرّب على توزيع وقتك بحسب المهمة، والقراءة الموجّهة، وبناء رسالة قصيرة تغطي المطلوب، والتعامل مع الأسئلة الصعبة؛ من دون اعتبار هذا الدرس وصفاً رسمياً لامتحان بعينه.",
       "prerequisiteTopicIds": [
         "a1-perfekt-einf",
         "a1-zeitpraep"
@@ -3148,8 +3148,8 @@
           "a1-pruefungsstrategie-r141e-prod2"
         ],
         "canDoIds": [],
-        "applicationDe": "Simuliere eine vollständige A1-Prüfung in 60 Minuten und korrigiere dich danach selbst.",
-        "applicationAr": "حاكِ امتحاناً تجريبياً في 60 دقيقة بدون توقف، ثم صحّح إجاباتك.",
+        "applicationDe": "Bearbeite ein internes A1-Übungsset mit Zeitlimit und überprüfe danach deine Antworten. Prüfe vor einer echten Prüfung die aktuellen offiziellen Vorgaben des Anbieters.",
+        "applicationAr": "نفّذ مجموعة تدريب A1 الداخلية بوقت محدد، ثم راجع الإجابات والنقاط التي تركتها. تحقّق منفصلاً من تعليمات الجهة الرسمية قبل أي امتحان حقيقي.",
         "rules": 4,
         "examples": 2,
         "pitfalls": 2
@@ -3528,7 +3528,7 @@
       "ruleIndex": 1,
       "level": "A1",
       "descriptorDe": "sein (ich bin) und haben (ich habe) — zwei unregelmäßige Grundverben",
-      "descriptorAr": "فعلان شاذان — احفظ تصريفهما جيداً — sein = يكون/يوجد · haben = يملك",
+      "descriptorAr": "فعلان شاذان؛ احفظ تصريفهما جيداً: sein لوصف الهوية أو الحالة، وhaben للامتلاك ولتعابير اسمية شائعة.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -3656,7 +3656,7 @@
       "ruleIndex": 3,
       "level": "A1",
       "descriptorDe": "W-Frage: Fragewort + Verb (Position 2) + Subjekt: Wo wohnen Sie? Was machst du?",
-      "descriptorAr": "السؤال بأداة استفهام: أداة الاستفهام أولاً، ثم الفعل المصرف في المركز الثاني دائماً.",
+      "descriptorAr": "في سؤال W-Frage تأتي أداة الاستفهام أولاً، ثم الفعل المصرف، ثم الفاعل إذا لم تكن أداة الاستفهام نفسها هي الفاعل.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -3784,7 +3784,7 @@
       "ruleIndex": 1,
       "level": "A1",
       "descriptorDe": "der → den · ein → einen · kein → keinen",
-      "descriptorAr": "هذا هو كل تغيير الأدوات في المنصوب — kein → keinen (فقط المذكّر!)",
+      "descriptorAr": "في المذكر فقط ضمن هذه الأدوات: der→den وein→einen وkein→keinen؛ لا تعمم النهاية -en على المؤنث أو المحايد.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -5847,8 +5847,8 @@
       "topicId": "a1-dativ",
       "ruleIndex": 1,
       "level": "A1",
-      "descriptorDe": "der → dem · die → der · das → dem · die(Pl) → den",
-      "descriptorAr": "تغيرات أدوات التعريف في حالة الجر.",
+      "descriptorDe": "der → dem · die → der · das → dem · die (Plural) → den; das Pluralnomen bekommt oft zusätzlich -n: mit den Kindern, aber mit den Frauen/Autos.",
+      "descriptorAr": "تتغير أدوات التعريف في Dativ إلى dem/der/dem/den، ويأخذ اسم الجمع غالباً -n إن لم يكن منتهياً أصلاً بـ-n أو -s.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -7575,8 +7575,8 @@
       "topicId": "a1-aussprache-ch",
       "ruleIndex": 1,
       "level": "A1",
-      "descriptorDe": "weich (ich-Laut): nach i, e, ö, ü, ä, äu, ei, ie, eu, ai, r, l, n",
-      "descriptorAr": "ناعم بعد الحروف الأمامية.",
+      "descriptorDe": "ich-Laut /ç/: in vielen Wörtern nach i, e, ö, ü, ä, äu, ei, ie, eu, ai sowie in Beispielen nach r, l, n",
+      "descriptorAr": "الصوت الأمامي /ç/ في الكلمات المستهدفة بعد الحركات الأمامية، وكذلك في أمثلة مثل Milch وKirche.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -7591,8 +7591,8 @@
       "topicId": "a1-aussprache-ch",
       "ruleIndex": 2,
       "level": "A1",
-      "descriptorDe": "hart (ach-Laut): nach a, o, u, au",
-      "descriptorAr": "خشن بعد الحروف الخلفية.",
+      "descriptorDe": "ach-Laut /x/: in vielen Wörtern nach a, o, u, au",
+      "descriptorAr": "الصوت الخلفي /x/ بعد a/o/u/au في أمثلة مثل Bach وBuch وauch.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -7607,8 +7607,8 @@
       "topicId": "a1-aussprache-r",
       "ruleIndex": 1,
       "level": "A1",
-      "descriptorDe": "r am Silbenanfang: rot, Reise, Frau, richtig — Zäpfchen-r oder Zungen-r, gerieben, nicht gerollt",
-      "descriptorAr": "بداية المقطع: راء رخوة.",
+      "descriptorDe": "r am Silbenanfang: Je nach Region und Sprecher sind unter anderem ein uvularer Reibelaut/Zäpfchen-r oder ein Zungen-r möglich.",
+      "descriptorAr": "في بداية المقطع توجد نُطق خلفية ولسانية مقبولة بحسب المنطقة والمتكلم؛ لا تجعل نوعاً واحداً معيار الصحة الوحيد.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -7623,8 +7623,8 @@
       "topicId": "a1-aussprache-r",
       "ruleIndex": 2,
       "level": "A1",
-      "descriptorDe": "-er am Silben-/Wortende: Vater, Mutter, Kinder → schwaches a (Schwa)",
-      "descriptorAr": "نهاية المقطع بصيغة -er: تُختزل إلى a خفيفة.",
+      "descriptorDe": "unbetontes -er am Wortende: Vater, Mutter, Kinder → häufig vokalisiertes [ɐ]",
+      "descriptorAr": "في -er غير المشددة آخر الكلمة يظهر غالباً الصوت [ɐ]، وهو تقريب صوتي لا حرف a مكتوباً.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -7639,8 +7639,8 @@
       "topicId": "a1-aussprache-sp-st",
       "ruleIndex": 1,
       "level": "A1",
-      "descriptorDe": "sch = sch (immer wie sch): Schule, schreiben, Fisch",
-      "descriptorAr": "sch دائماً = ش.",
+      "descriptorDe": "sch steht in den Zielwörtern für /ʃ/: Schule, schreiben, Fisch",
+      "descriptorAr": "تمثل sch عادةً /ʃ/ في الكلمات المستهدفة.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -7655,8 +7655,8 @@
       "topicId": "a1-aussprache-sp-st",
       "ruleIndex": 2,
       "level": "A1",
-      "descriptorDe": "sp im Wort-/Silbenanfang = schp: spielen, sprechen",
-      "descriptorAr": "sp في بداية الكلمة/المقطع = shp.",
+      "descriptorDe": "sp im Wort-/Silbenanfang = /ʃp/: spielen, sprechen",
+      "descriptorAr": "تُنطق sp في بداية الكلمة أو المقطع /ʃp/.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -7671,8 +7671,8 @@
       "topicId": "a1-aussprache-sp-st",
       "ruleIndex": 3,
       "level": "A1",
-      "descriptorDe": "st im Wort-/Silbenanfang = scht: Stadt, stehen, verstehen",
-      "descriptorAr": "st في بداية الكلمة/المقطع = sht.",
+      "descriptorDe": "st im Wort-/Silbenanfang = /ʃt/: Stadt, stehen, verstehen",
+      "descriptorAr": "تُنطق st في بداية الكلمة أو المقطع /ʃt/.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -7688,7 +7688,7 @@
       "ruleIndex": 1,
       "level": "A1",
       "descriptorDe": "b am Ende → p: lieb, ab",
-      "descriptorAr": "b نهاية → p.",
+      "descriptorAr": "في نهاية المقطع يُسمع b غالباً [p] في أمثلة مثل lieb وab.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -7704,7 +7704,7 @@
       "ruleIndex": 2,
       "level": "A1",
       "descriptorDe": "d am Ende → t: Kind, Hund",
-      "descriptorAr": "d نهاية → t.",
+      "descriptorAr": "في نهاية المقطع يُسمع d غالباً [t] في أمثلة مثل Kind وHund.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -7720,7 +7720,7 @@
       "ruleIndex": 3,
       "level": "A1",
       "descriptorDe": "g am Ende → k: Tag, Weg",
-      "descriptorAr": "g نهاية → k.",
+      "descriptorAr": "في نهاية المقطع يُسمع g غالباً [k] في أمثلة مثل Tag وWeg.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -7911,8 +7911,8 @@
       "topicId": "a1-pruefungsstrategie",
       "ruleIndex": 1,
       "level": "A1",
-      "descriptorDe": "Zeit: Hören 20 Min, Lesen 25 Min, Schreiben 20 Min, Sprechen 15 Min.",
-      "descriptorAr": "توزيع الوقت: استماع 20د، قراءة 25د، كتابة 20د، تحدث 15د.",
+      "descriptorDe": "Zeitplanung: Teile die verfügbare Zeit nach Aufgaben und reserviere am Ende eine kurze Kontrolle.",
+      "descriptorAr": "قسّم الوقت المتاح بحسب المهام واترك في النهاية وقتاً قصيراً للمراجعة.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -7927,8 +7927,8 @@
       "topicId": "a1-pruefungsstrategie",
       "ruleIndex": 2,
       "level": "A1",
-      "descriptorDe": "Schreiben: 30 Wörter — Anrede + 3 Punkte + Gruß.",
-      "descriptorAr": "الكتابة: 30 كلمة — تحية + ثلاث نقاط المطلوب + وداع.",
+      "descriptorDe": "Schreiben: passende Anrede + alle geforderten Punkte + passender Schluss; Wortzahl nach der konkreten Aufgabe.",
+      "descriptorAr": "في الكتابة: افتتاح مناسب، وكل النقاط المطلوبة، وختام مناسب؛ واتبع عدد الكلمات المحدد في المهمة نفسها.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -7943,8 +7943,8 @@
       "topicId": "a1-pruefungsstrategie",
       "ruleIndex": 3,
       "level": "A1",
-      "descriptorDe": "Sprechen Teil 1: sich vorstellen (Name, Alter, Land, Wohnort, Beruf, Hobby).",
-      "descriptorAr": "التحدث الجزء 1: تقديم النفس (الاسم، العمر، البلد، السكن، المهنة، الهواية).",
+      "descriptorDe": "Sprechen: Antworte auf die konkrete Aufgabe, stelle kurze verständliche Fragen und formuliere Bitten klar.",
+      "descriptorAr": "في التحدث: أجب عن المهمة المحددة، واطرح أسئلة قصيرة مفهومة، وصغ الطلب بوضوح.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",
@@ -7959,8 +7959,8 @@
       "topicId": "a1-pruefungsstrategie",
       "ruleIndex": 4,
       "level": "A1",
-      "descriptorDe": "Tipp: Einfache, korrekte Sätze sind besser als komplizierte, falsche!",
-      "descriptorAr": "نصيحة: جمل بسيطة صحيحة أفضل من جمل معقدة خاطئة!",
+      "descriptorDe": "Einfache, korrekte Sätze sind meist hilfreicher als unnötig komplizierte Formulierungen.",
+      "descriptorAr": "الجمل البسيطة الصحيحة أنفع غالباً من تراكيب معقدة لا تحتاجها المهمة.",
       "sourceRefs": [],
       "status": {
         "definition": "derived-from-current-curriculum",

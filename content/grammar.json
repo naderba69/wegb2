@@ -2,7 +2,7 @@
   "a1-sein-haben": {
     "id": "a1-sein-haben",
     "titleDe": "sein & haben",
-    "titleAr": "الفعلان sein (يكون) و haben (يملك)",
+    "titleAr": "الفعلان sein (يصف الهوية أو الحالة) وhaben (يملك/لديه)",
     "level": "A1",
     "ziel": "تصرّف sein وhaben في المضارع بلا تردد وتستعملهما في 5 جمل عن نفسك.",
     "voraus": [
@@ -45,11 +45,11 @@
         "explanationAr": "العمر مع sein: sie ist 12 Jahre alt."
       }
     ],
-    "summaryAr": "فعلان أساسيان تصريفهما شاذ. sein يربط الاسم بالصفة أو الهوية (مثل «يكون» في العربية)، و haben يعبّر عن الامتلاك ويُستعمل أيضاً مع كثير من الأسماء: Zeit haben (يتوفر لديه وقت)، Hunger haben (جائع). احفظ تصريفهما في اليوم الأول!",
+    "summaryAr": "فعلان أساسيان تصريفهما شاذ. يربط sein الفاعل بالهوية أو الصفة أو الحالة، بينما يعبّر haben عن الامتلاك ويُستعمل أيضاً مع تعابير اسمية شائعة: Zeit haben (لديه وقت)، Hunger haben (جائع). احفظ تصريفهما في اليوم الأول.",
     "rules": [
       {
         "de": "sein (ich bin) und haben (ich habe) — zwei unregelmäßige Grundverben",
-        "ar": "فعلان شاذان — احفظ تصريفهما جيداً — sein = يكون/يوجد · haben = يملك"
+        "ar": "فعلان شاذان؛ احفظ تصريفهما جيداً: sein لوصف الهوية أو الحالة، وhaben للامتلاك ولتعابير اسمية شائعة."
       },
       {
         "de": "ich bin · du bist · er/sie/es ist · wir sind · ihr seid · sie/Sie sind",
@@ -178,7 +178,7 @@
         "answer": [
           "hat"
         ],
-        "explanationAr": "Zeit haben تثبيت ثابت."
+        "explanationAr": "Zeit haben تعبير شائع بمعنى «لديه وقت»."
       },
       {
         "id": "g1e5",
@@ -286,7 +286,7 @@
         "points": 2
       }
     ],
-    "summaryAr": "ضمائر الفاعل تعوض الأسماء، وأدوات الملكية تُبين ملكية الأشياء وتتبع الاسم المعدود في الجنس والإعراب.",
+    "summaryAr": "ضمائر الفاعل تعوّض الأسماء، وأدوات الملكية تبيّن المالك وتتغير نهايتها بحسب جنس الاسم الذي يليها وعدده وحالته الإعرابية.",
     "rules": [
       {
         "de": "ich, du, er/sie/es, wir, ihr, sie/Sie",
@@ -318,7 +318,7 @@
     "pitfalls": [
       {
         "de": "„Wie geht es Sie?“ ✗",
-        "ar": "Sie في موضع المفعول تصبح Ihnen: Wie geht es Ihnen?"
+        "ar": "في التعبير es geht يأتي الشخص في Dativ؛ لذلك نقول مع Sie الرسمية: Wie geht es Ihnen? ولا يعني ذلك أن Sie تتحول إلى Ihnen في كل موضع."
       }
     ],
     "exercises": [
@@ -346,19 +346,19 @@
         ],
         "answer": "Es",
         "explanationAr": "das Buch ← الضمير es.",
-        "promptAr": "اختر ضمير الإشارة للمحايد (الكتاب → es)."
+        "promptAr": "اختر ضمير الغائب الشخصي المناسب للاسم المحايد (das Buch → es)."
       },
       {
         "id": "g2e3",
         "type": "mc",
-        "promptDe": "Frühstücken ___ zusammen, Herr Meyer?",
+        "promptDe": "Arbeiten ___ heute, Herr Meyer?",
         "options": [
           "du",
           "Sie",
           "es"
         ],
         "answer": "Sie",
-        "explanationAr": "صيغة الاحترام: فعل بصيغة الجمع + Sie.",
+        "explanationAr": "مع المخاطَب الرسمي نستعمل Sie، ويأخذ الفعل الصيغة الموافقة لها: Arbeiten Sie …?",
         "promptAr": "صيغة المخاطب الرسمي في السؤال."
       },
       {
@@ -481,7 +481,7 @@
     ],
     "anwendung": {
       "ar": "اكتب 5 أسئلة لزميل جديد (Wo wohnst du؟ Was machst du؟ …) ثم أجب عنها بنفسك.",
-      "de": "Schreibe 5 Fragen an einen neuen Kollegen (Wo …؟ Was …؟ …).",
+      "de": "Schreibe 5 Fragen an einen neuen Kollegen (Wo ...? Was ...? ...).",
       "candoIds": [
         "A1-C6"
       ]
@@ -514,7 +514,7 @@
         "points": 2
       }
     ],
-    "summaryAr": "تصريف الأفعال في الحاضر وقواعد ترتيب الجملة: الفعل دائماً في المركز 2 في الجملة الخبرية وسؤال W-Frage، وفي المركز 1 في سؤال نعم/لا.",
+    "summaryAr": "تتدرّب على تصريف الأفعال في المضارع وترتيب الجملة: يأتي الفعل المصرف في الموضع الثاني في الجملة الخبرية، وبعد أداة الاستفهام في W-Frage، ويبدأ به سؤال نعم/لا.",
     "rules": [
       {
         "de": "machen: ich mache · du machst · er/sie/es macht · wir machen · ihr macht · sie/Sie machen.",
@@ -526,7 +526,7 @@
       },
       {
         "de": "W-Frage: Fragewort + Verb (Position 2) + Subjekt: Wo wohnen Sie? Was machst du?",
-        "ar": "السؤال بأداة استفهام: أداة الاستفهام أولاً، ثم الفعل المصرف في المركز الثاني دائماً."
+        "ar": "في سؤال W-Frage تأتي أداة الاستفهام أولاً، ثم الفعل المصرف، ثم الفاعل إذا لم تكن أداة الاستفهام نفسها هي الفاعل."
       },
       {
         "de": "Ja/Nein-Frage: Verb (Position 1) + Subjekt: Wohnst du in Berlin? Lernst du Deutsch?",
@@ -589,12 +589,12 @@
           ],
           [
             "Was?",
-            "ماذا / ما (لغير العاقل)",
+            "ماذا / ما (للسؤال عن شيء أو فعل أو معلومة)",
             "Was machst du heute?"
           ],
           [
             "Wo?",
-            "أين (للمكان الثابت مع سكون)",
+            "أين (للسؤال عن مكان الوجود أو وقوع الحدث، لا عن الوجهة)",
             "Wo wohnst du?"
           ],
           [
@@ -910,7 +910,7 @@
         "promptAr": "أجب عن السؤال واستخدم التاريخ: 3 أكتوبر."
       }
     ],
-    "summaryAr": "من 13–19 ينتهي العدد بـ -zehn، ومن 20–90 بوحدات مركّبة: واحد وعشرون = einundzwanzig («واحد» أولاً ثم «و» ثم العشرة!). للساعة: «Es ist ein Uhr» (الواحدة)، أمّا باقي الدقائق فبـ nach (بعد) وvor (قبل): fünf nach zehn (10:05)، وفي بعض المناطق zehn vor halb acht (7:20).",
+    "summaryAr": "من 13 إلى 19 تنتهي الأعداد بـ-zehn، ومن 20 إلى 90 تظهر صيغ العشرات مثل zwanzig وdreißig. في العدد المركب تأتي الوحدة قبل und ثم العشرات: 21 = einundzwanzig. للساعة نستعمل nach وvor، وhalb acht تعني 7:30؛ وفي بعض المناطق تسمع أيضاً zehn vor halb acht بمعنى 7:20.",
     "rules": [
       {
         "de": "1–12: eins, zwei, drei, vier, fünf, sechs, sieben, acht, neun, zehn, elf, zwölf",
@@ -940,7 +940,7 @@
       },
       {
         "de": "Meine Telefonnummer ist 55 32 81.",
-        "ar": "الأرقام تُقرأ منفردة: fünf-fünf-drei-zwei-acht-eins"
+        "ar": "يمكن ذكر رقم الهاتف رقماً رقماً، مع فصل المجموعات بوضوح: fünf-fünf-drei-zwei-acht-eins."
       }
     ],
     "pitfalls": [
@@ -982,7 +982,7 @@
         ],
         "answer": "7:30",
         "explanationAr": "halb acht = قبل الثامنة بنصف ساعة.",
-        "promptAr": "كم الساعة على «الثامنة والنصف»؟"
+        "promptAr": "ما الوقت الذي تعبّر عنه العبارة الألمانية «halb acht»؟"
       },
       {
         "id": "g5e4",
@@ -1084,17 +1084,17 @@
           "stuhl"
         ],
         "darfNicht": [
-          "ein tisch"
+          "ein stuhl"
         ],
         "explanationAr": "بعد kaufen صار Stuhl مفعولاً: ein ← einen.",
         "points": 2
       }
     ],
-    "summaryAr": "الألمانية لها أربع حالات. الأسهل أثراً: المفعول به (Akkusativ). التغيير الوحيد في الأدوات: der→den، ein→einen، kein→keinen. بقيت die/das لا تتغيّر. حفظ جنس الأسماء (der/die/das) ليس ترفاً — كل النحو الألماني يُبنى عليه!",
+    "summaryAr": "يظهر Akkusativ هنا مع المفعول به المباشر. في الأدوات المعروضة يتغير المذكر: der→den، ein→einen، kein→keinen؛ أما المؤنث والمحايد والجمع فتبقى صيغ أدواتها في Nominativ وAkkusativ متطابقة. احفظ جنس الاسم مع أداته.",
     "rules": [
       {
         "de": "der → den · ein → einen · kein → keinen",
-        "ar": "هذا هو كل تغيير الأدوات في المنصوب — kein → keinen (فقط المذكّر!)"
+        "ar": "في المذكر فقط ضمن هذه الأدوات: der→den وein→einen وkein→keinen؛ لا تعمم النهاية -en على المؤنث أو المحايد."
       },
       {
         "de": "Akkusativ: haben, kaufen, sehen, suchen, brauchen, machen",
@@ -1103,7 +1103,7 @@
     ],
     "tables": [
       {
-        "captionAr": "الأدوات",
+        "captionAr": "أداة النكرة ein في الرفع والنصب (لا توجد أداة نكرة للجمع)",
         "headers": [
           "",
           "مذكّر",
@@ -1145,8 +1145,8 @@
     ],
     "pitfalls": [
       {
-        "de": "„Ich habe einen Bruder und eine Schwester.“",
-        "ar": "لاحظ: der Bruder (مذكّر) يأخذ einen، die Schwester (مؤنث) تبقى eine"
+        "de": "✗ Ich habe ein Bruder. → ✓ Ich habe einen Bruder. · ✓ Ich habe eine Schwester.",
+        "ar": "der Bruder مذكر ومفعول به، لذلك يأخذ einen؛ أما die Schwester المؤنثة فتبقى eine."
       }
     ],
     "exercises": [
@@ -1174,7 +1174,7 @@
         ],
         "answer": "eine",
         "explanationAr": "die Wohnung ← eine (بدون تغيير).",
-        "promptAr": "اختر شكل المفعول به المذكر بعد suchen."
+        "promptAr": "اختر أداة النكرة المناسبة للمفعول به المؤنث Wohnung."
       },
       {
         "id": "g6e3",
@@ -8257,7 +8257,7 @@
           "musst"
         ],
         "explanationDe": "Du musst heute lernen.",
-        "explanationAr": "الإجبار = müssen."
+        "explanationAr": "müssen يعبّر هنا عن الضرورة أو الواجب."
       },
       {
         "id": "a1-modalverben-ex03",
@@ -8269,7 +8269,7 @@
           "wollt"
         ],
         "answer": "wollen",
-        "explanationAr": "مع نحن (wir) يبقى الفعل الناقص wollen دون إضافة في النهاية.",
+        "explanationAr": "مع wir نستخدم wollen؛ هذه الصيغة تطابق المصدر شكلاً.",
         "promptAr": "اختر الكلمة الصحيحة لإكمال الجملة."
       },
       {
@@ -8316,7 +8316,7 @@
     "titleDe": "Dativ — dem/der/den + Präpositionen mit, bei, zu, aus, nach, von, seit",
     "titleAr": "حالة الجر الأساسية وأدواتها",
     "level": "A1",
-    "ziel": "تستخدم Dativ بعد mit/bei/zu وتفرّقها عن Akkusativ.",
+    "ziel": "تستخدم Dativ بعد mit/bei/zu/aus/nach/von/seit ومع أمثلة شائعة مثل helfen وgefallen، وتفرّقه عن Akkusativ.",
     "voraus": [
       "a1-akkusativ"
     ],
@@ -8352,11 +8352,11 @@
         "promptAr": "قُل: أسكن عند أخي."
       }
     ],
-    "summaryAr": "حالة الجر (Dativ) تُستخدم بعد أدوات جر معيّنة ومع أفعال مثل gefallen/helfen/danken/gehören. أدوات التعريف تصبح dem (مذكر/محايد) و der (مؤنث) و den (جمع).",
+    "summaryAr": "يُستخدم Dativ بعد حروف جر معيّنة ومع أفعال مثل gefallen وhelfen وdanken وgehören. أدوات التعريف تصبح dem للمذكر والمحايد، وder للمؤنث، وden للجمع؛ ويأخذ اسم الجمع غالباً -n إضافية إن لم يكن منتهياً أصلاً بـ-n أو -s.",
     "rules": [
       {
-        "de": "der → dem · die → der · das → dem · die(Pl) → den",
-        "ar": "تغيرات أدوات التعريف في حالة الجر."
+        "de": "der → dem · die → der · das → dem · die (Plural) → den; das Pluralnomen bekommt oft zusätzlich -n: mit den Kindern, aber mit den Frauen/Autos.",
+        "ar": "تتغير أدوات التعريف في Dativ إلى dem/der/dem/den، ويأخذ اسم الجمع غالباً -n إن لم يكن منتهياً أصلاً بـ-n أو -s."
       },
       {
         "de": "mit · bei · zu · aus · nach · von · seit → immer Dativ!",
@@ -8399,7 +8399,7 @@
             "Plural",
             "die",
             "die",
-            "den"
+            "den (+ غالباً -n للاسم)"
           ]
         ]
       }
@@ -8751,7 +8751,7 @@
           "machen"
         ],
         "explanationDe": "Machen Sie bitte das Fenster zu.",
-        "explanationAr": "Sie-Imperativ يبدأ بالفعل ثم Sie."
+        "explanationAr": "مع Bitte في البداية يأتي بعدها الفعل ثم Sie: Bitte machen Sie …؛ ومن دون Bitte يمكن أن يبدأ الأمر بـMachen Sie …"
       },
       {
         "id": "a1-imperativ-ex02",
@@ -8763,7 +8763,7 @@
           "Machen"
         ],
         "answer": "Mach",
-        "explanationAr": "du-Imperativ = جذر فقط.",
+        "explanationAr": "في هذا المثال صيغة du من machen هي Mach!؛ لا نستخدم Machst.",
         "promptAr": "اختر الكلمة الصحيحة لإكمال الجملة."
       },
       {
@@ -8826,15 +8826,15 @@
         "ar": "اختر المخاطَب أولاً: مع صديق واحد du استعمل Geh!؛ مع مجموعة تُخاطَب بصيغة ihr استعمل Geht!؛ وللنداء الرسمي استعمل Gehen Sie! لا تعرض الصيغ الثلاث كبدائل للمخاطَب نفسه."
       },
       {
-        "de": "✗ Machen das Fenster zu! → ✓ Mach das Fenster zu!",
-        "ar": "الفعل المنفصل ينفصل في الأمر أيضاً: mach … zu (البادئة في النهاية) — لا تلصقها"
+        "de": "(du) ✗ Machen das Fenster zu! → ✓ Mach das Fenster zu!",
+        "ar": "مع du نقول Mach … zu؛ وينفصل zumachen في الأمر أيضاً، فتأتي البادئة zu في النهاية."
       }
     ]
   },
   "a1-perfekt-einf": {
     "id": "a1-perfekt-einf",
     "titleDe": "Perfekt (Einführung): ge-…-t mit haben",
-    "titleAr": "مقدمة الماضي التام (أفعال منتظمة مع haben)",
+    "titleAr": "مقدمة صيغة Perfekt (أفعال منتظمة مع haben)",
     "level": "A1",
     "ziel": "تطبّق نمط Partizip II المنتظم مع haben على أمثلة الدرس المحددة (ge-…-t).",
     "voraus": [
@@ -8842,7 +8842,7 @@
       "a1-akkusativ"
     ],
     "anwendung": {
-      "ar": "احكِ يومك أمس في 4 جمل بالماضي التام (Heute habe ich … gemacht).",
+      "ar": "احكِ ما فعلته أمس في 4 جمل بصيغة Perfekt (Gestern habe ich … gemacht).",
       "de": "Erzähle deinen gestrigen Tag in 4 Sätzen im Perfekt.",
       "candoIds": [
         "A1-C5"
@@ -8872,7 +8872,7 @@
         "promptAr": "لعبت كرة القدم أمس."
       }
     ],
-    "summaryAr": "هذه مقدمة للأفعال المنتظمة المختارة مع haben: يتكوّن Partizip II غالباً من ge- + الجذر + -t/-et. في الجملة الخبرية الرئيسية يأتي haben المصرف في الموضع الثاني وPartizip II في نهاية الإطار الفعلي؛ أما الجملة التابعة فيختلف فيها ترتيب الأفعال. توجد أفعال تأخذ sein وأفعال قوية لها Partizip II غير منتظم.",
+    "summaryAr": "هذه مقدمة لصيغة Perfekt مع أفعال منتظمة مختارة تأخذ haben: يتكوّن Partizip II غالباً من ge- + الجذر + -t/-et. في الجملة الخبرية الرئيسية يأتي haben المصرف في الموضع الثاني وPartizip II في نهاية الإطار الفعلي؛ وفي الجملة التابعة يأتي الفعل المساعد بعد Partizip II. توجد أفعال تأخذ sein وأفعال قوية لها Partizip II غير منتظم.",
     "rules": [
       {
         "de": "Ich habe gestern gearbeitet.",
@@ -10094,7 +10094,7 @@
       "a1-sein-haben"
     ],
     "anwendung": {
-      "ar": "احكِ عن جدّك: 4 جمل بـ war/hatte (Meine Oma war Lehrerin …).",
+      "ar": "احكِ عن أحد جدّيك أو عن جدّيك في 4 جمل بـwar/hatte (Meine Oma war Lehrerin …).",
       "de": "Erzähle von deinen Großeltern: 4 Sätze mit war/hatte.",
       "candoIds": [
         "A1-C3"
@@ -11737,8 +11737,8 @@
       "a1-akkusativ"
     ],
     "anwendung": {
-      "ar": "صِف غرفتك بست جمل جمع (Die Bücher liegen …).",
-      "de": "Beschreibe dein Zimmer mit sechs Plural-Sätzen.",
+      "ar": "صِف غرفتك بست جمل تحتوي أسماء في صيغة الجمع (Die Bücher liegen …).",
+      "de": "Beschreibe dein Zimmer mit sechs Sätzen, in denen Nomen im Plural stehen.",
       "candoIds": []
     },
     "summaryAr": "لا توجد نهاية جمع واحدة تنطبق على كل الأسماء. من الأنماط الشائعة -e و-er و-(e)n و-s؛ كما توجد أسماء بلا نهاية مثل Zimmer → die Zimmer، وقد يصاحب بعض الجموع Umlaut. يتوقف الشكل على الاسم، فاحفظ كل اسم مع أداته وصيغته في الجمع.",
@@ -11875,7 +11875,7 @@
           "autos",
           "schnell"
         ],
-        "explanationAr": "Auto دخيل ← -s: Die Autos sind schnell.",
+        "explanationAr": "جمع Auto المحدد هو Autos بإضافة -s؛ تُحفظ صيغة الجمع مع الاسم.",
         "promptAr": "ترجم: «السيارات سريعة.»"
       },
       {
@@ -11896,7 +11896,7 @@
         "type": "truefalse",
         "promptDe": "„die Hobbys“ ist der richtige Plural von „das Hobby“.",
         "answer": "richtig",
-        "explanationAr": "صحيح — الدخيل يأخذ -s: die Hobbys.",
+        "explanationAr": "صحيح: جمع Hobby هو Hobbys. لا تعمم -s على كل كلمة دخيلة.",
         "options": [
           "richtig",
           "falsch"
@@ -11935,7 +11935,7 @@
       },
       {
         "de": "✗ die Kinds → ✓ die Kinder",
-        "ar": "Kind ليست دخيلة: -er لا -s!"
+        "ar": "جمع Kind هو Kinder؛ لا يمكن اختيار نهاية الجمع من معنى الكلمة وحده، لذلك احفظ الجمع مع الاسم."
       },
       {
         "de": "✗ ein Frauen → ✓ eine Frau",
@@ -14188,7 +14188,7 @@
     "titleDe": "Aussprache: ch — ich-Laut vs ach-Laut",
     "titleAr": "نطق ch: ich-Laut الناعم وach-Laut الخشن",
     "level": "A1",
-    "ziel": "تُفرّق بين ich-Laut (بعد i/e/ö/ü/ä/äu/ei/ie/eu/ai/r/l/n — ناعم) وach-Laut (بعد a/o/u/au — خشن كالخاء العربية).",
+    "ziel": "تميّز في الكلمات المستهدفة بين ich-Laut الأمامي /ç/ بعد الحركات الأمامية وبعض الصوامت، وach-Laut الخلفي /x/ بعد a/o/u/au.",
     "voraus": [
       "a1-praesens"
     ],
@@ -14208,7 +14208,7 @@
           "Nacht"
         ],
         "answer": "ich",
-        "explanationAr": "ich → ch بعد i → ich-Laut ناعم (لا «ش» ولا «خ»! هاء مرققة من وسط اللسان). Buch/Nacht → ach-Laut خشن."
+        "explanationAr": "في ich يأتي ch بعد i ويُنطق /ç/: يقترب وسط اللسان من الحنك من دون ملامسة كاملة. لا تحوّله إلى «ش» أو «خ» عربية. Buch وNacht فيهما الصوت الخلفي /x/."
       },
       {
         "id": "a1-ac-v2-check",
@@ -14220,18 +14220,18 @@
           "auch"
         ],
         "answer": "auch",
-        "explanationAr": "auch → ch بعد au → ach-Laut خشن (كالخاء)."
+        "explanationAr": "في auch يأتي ch بعد au ويُنطق عادةً بالصوت الخلفي /x/؛ يشبه الخاء العربية تقريباً لكنه وصف تقريبي لا تطابق تام."
       }
     ],
-    "summaryAr": "ch صوتان مختلفان: 1) الناعم (ich-Laut) بعد i/e/ö/ü/ä والحروف المركبة ei/ie/eu/ai/äu وبعد r/l/n: ich, nicht, Kirche, Chemie, Mädchen. 2) الخشن (ach-Laut) بعد a/o/u/au: auch, Buch, Koch, Nacht.",
+    "summaryAr": "يمثل ch هنا صوتين رئيسيين: ich-Laut الأمامي /ç/ بعد i/e/ö/ü/ä وبعض التركيبات والصوامت، مثل ich وnicht وMilch؛ وach-Laut الخلفي /x/ بعد a/o/u/au، مثل Bach وBuch وauch. توجد كلمات دخيلة وأسماء قد تتبع أنماطاً أخرى، لذلك يقتصر هذا الدرس على الأمثلة المعروضة.",
     "rules": [
       {
-        "de": "weich (ich-Laut): nach i, e, ö, ü, ä, äu, ei, ie, eu, ai, r, l, n",
-        "ar": "ناعم بعد الحروف الأمامية."
+        "de": "ich-Laut /ç/: in vielen Wörtern nach i, e, ö, ü, ä, äu, ei, ie, eu, ai sowie in Beispielen nach r, l, n",
+        "ar": "الصوت الأمامي /ç/ في الكلمات المستهدفة بعد الحركات الأمامية، وكذلك في أمثلة مثل Milch وKirche."
       },
       {
-        "de": "hart (ach-Laut): nach a, o, u, au",
-        "ar": "خشن بعد الحروف الخلفية."
+        "de": "ach-Laut /x/: in vielen Wörtern nach a, o, u, au",
+        "ar": "الصوت الخلفي /x/ بعد a/o/u/au في أمثلة مثل Bach وBuch وauch."
       }
     ],
     "tables": [
@@ -14276,7 +14276,7 @@
         "ar": "صوت ch ناعم بعد i، وخشن بعد a أو u."
       }
     ],
-    "eselsbruecke": "تخيّل ch مع الحروف الأمامية (i/e) = هواء يمر عبر قناة ضيقة (ناعم)، والحروف الخلفية (a/o/u) = هواء يمر من أقصى الحلق كالخاء.",
+    "eselsbruecke": "لـ/ç/: قرّب وسط اللسان من الحنك واترك ممراً ضيقاً للهواء. ولـ/x/: اجعل التضييق أبعد إلى الخلف في الفم؛ لا تجعل الكتابة العربية بديلاً عن سماع النموذج.",
     "exercises": [
       {
         "id": "a1-ac-v1",
@@ -14288,7 +14288,7 @@
           "Nacht"
         ],
         "answer": "ich",
-        "explanationAr": "ich → ch بعد i → ich-Laut ناعم (لا «ش» ولا «خ»! هاء مرققة من وسط اللسان). Buch/Nacht → ach-Laut خشن.",
+        "explanationAr": "ich → ch بعد i → ich-Laut ناعم (لا «ش» ولا «خ»! صوت أمامي /ç/ بتضييق بين وسط اللسان والحنك). Buch/Nacht → ach-Laut خشن.",
         "promptAr": "اختر الإجابة الصحيحة."
       },
       {
@@ -14301,7 +14301,7 @@
           "auch"
         ],
         "answer": "auch",
-        "explanationAr": "auch → ch بعد au → ach-Laut خشن (كالخاء).",
+        "explanationAr": "في auch يأتي ch بعد au ويُنطق عادةً /x/؛ يشبه الخاء العربية تقريباً، لكنه ليس نسخاً حرفياً لصوت عربي.",
         "promptAr": "اختر الإجابة الصحيحة."
       },
       {
@@ -14315,7 +14315,7 @@
           "immer gleich"
         ],
         "answer": "nach e/i/ä/ö/ü/ei/eu (ich)",
-        "explanationAr": "بعد حروف e/i/ä/ö/ü/ei/eu يُنطَق ch ناعماً.",
+        "explanationAr": "بعد الحركات الأمامية والتركيبات المعروضة يُنطق ch غالباً بالصوت الأمامي /ç/.",
         "id": "a1-aussprache-ch-r141e-e03"
       },
       {
@@ -14329,7 +14329,7 @@
           "Kuchen"
         ],
         "answer": "ich",
-        "explanationAr": "بعد i/e/ä/ö/ü/ei/eu ينطق ch ناعماً.",
+        "explanationAr": "بعد i/e/ä/ö/ü/ei/eu يُنطق ch بالصوت الأمامي /ç/.",
         "id": "a1-aussprache-ch-r141e-e04"
       },
       {
@@ -14338,15 +14338,15 @@
         "promptDe": "Ich trinke eine Tasse ___. (ch nach i)",
         "promptAr": "أكمل بكلمة فيها ch الناعمة بعد i.",
         "answer": "Milch",
-        "explanationAr": "في Milch يأتي ch بعد i، فيُنطق ich-Laut الناعم."
+        "explanationAr": "في Milch يأتي ch بعد i ويُنطق /ç/ في النطق المعياري."
       },
       {
         "id": "a1-aussprache-ch-r141e-prod2",
         "type": "fill",
-        "promptDe": "Der ___ ist neu. (ch nach u)",
+        "promptDe": "Das ___ ist neu. (ch nach u)",
         "promptAr": "أكمل باسم فيه ch الخشنة بعد u.",
         "answer": "Buch",
-        "explanationAr": "في Buch يأتي ch بعد u، فيُنطق ach-Laut الخشن."
+        "explanationAr": "في Buch يأتي ch بعد u ويُنطق عادةً /x/."
       }
     ],
     "pitfalls": [
@@ -14359,7 +14359,7 @@
         "ar": "بعد i في ich يأتي ich-Laut الناعم، لا ach-Laut الخلفي."
       }
     ],
-    "eselsbrueckeAr": "تخيّل ch مع الحروف الأمامية (i/e) = هواء يمر عبر قناة ضيقة (ناعم)، والحروف الخلفية (a/o/u) = هواء يمر من أقصى الحلق كالخاء.",
+    "eselsbrueckeAr": "لـ/ç/: قرّب وسط اللسان من الحنك واترك ممراً ضيقاً للهواء. ولـ/x/: اجعل التضييق أبعد إلى الخلف في الفم؛ لا تجعل الكتابة العربية بديلاً عن سماع النموذج.",
     "pronTippAr": ""
   },
   "a1-aussprache-r": {
@@ -14370,7 +14370,7 @@
     "voraus": [
       "a1-praesens"
     ],
-    "ziel": "تُنطِق r في بداية الكلمة رخواً (ليس كالراء العربية المفخّمة)، وتنطق -er آخر الكلمة كـ a خفيفة (Vater = فاتَ).",
+    "ziel": "تتعرّف تنوع نطق r الألمانية في بداية المقطع، وتتدرّب خصوصاً على نطق -er غير المشددة في آخر كلمات مثل Vater بصوت [ɐ] تقريبي.",
     "anwendung": {
       "ar": "كرّر: rot, reisen, richtig, Frau؛ ثم: Vater, Mutter, Kinder, der, er.",
       "de": "Wiederhole: rot, reisen, richtig, Frau; dann: Vater, Mutter, Kinder, der, er.",
@@ -14380,37 +14380,37 @@
       {
         "id": "a1-ar-v1-check",
         "type": "mc",
-        "promptDe": "Wie wird das \"-er\" in \"Vater\" ausgesprochen?",
+        "promptDe": "Wie klingt das unbetonte -er am Wortende in «Vater» häufig?",
         "options": [
-          "-er بلسان ملفوف",
-          "schwaches a (Vata)",
-          "-e"
+          "als deutliches /er/",
+          "als vokalisiertes [ɐ]",
+          "wie [e]"
         ],
-        "answer": "schwaches a (Vata)",
-        "explanationAr": "مقطع -er في نهاية الكلمة يُختزل إلى a خفيفة: Vater = فاتَ."
+        "answer": "als vokalisiertes [ɐ]",
+        "explanationAr": "تُنطق -er غير المشددة في Vater غالباً [ɐ] في النطق المعياري، مع وجود تنوع إقليمي."
       },
       {
         "id": "a1-ar-v2",
         "type": "mc",
-        "promptDe": "Wie klingt das r in »rot« am Wortanfang?",
+        "promptDe": "Welche Aussprache ist für r am Wortanfang im Deutschen möglich?",
         "options": [
-          "wie ein gerolltes arabisches r",
-          "als schwacher Reibelaut hinten im Hals",
-          "gar nicht — es bleibt stumm"
+          "nur ein stark gerolltes r",
+          "zum Beispiel ein Reibelaut hinten im Mund",
+          "r bleibt immer stumm"
         ],
-        "answer": "als schwacher Reibelaut hinten im Hals",
-        "explanationAr": "في بداية الكلمة r الألمانية رخوة من الحلق، لا تُلفّ كما في العربية: rot لا تُنطق براء مكررة."
+        "answer": "zum Beispiel ein Reibelaut hinten im Mund",
+        "explanationAr": "يمكن أن تُنطق r في بداية المقطع احتكاكية من الخلف، كما توجد نُطق أخرى مثل r اللسانية بحسب المنطقة والمتكلم؛ لا توجد طريقة وحيدة واجبة هنا."
       }
     ],
-    "summaryAr": "حرف r الألماني ليس كالراء العربية المفخّمة المطولة، بل رخو من مؤخرة اللسان أو احتكاكي من الحنك. قواعد: 1) بداية الكلمة/المقطع (rot, Frau) رخو/غُري؛ 2) -er في نهاية الكلمة (Vater, Kinder) يُختزل إلى a خفيفة (Schwa).",
+    "summaryAr": "لـr الألمانية تنوعات مقبولة: قد تكون احتكاكية أو لهوية من الخلف، وقد تكون لسانية في بعض المناطق والمتكلمين. أما -er غير المشددة في آخر كلمات مثل Vater وKinder فتُلفظ في النطق المعياري غالباً صوتاً صائتاً [ɐ]، مع بقاء تنوع إقليمي.",
     "rules": [
       {
-        "de": "r am Silbenanfang: rot, Reise, Frau, richtig — Zäpfchen-r oder Zungen-r, gerieben, nicht gerollt",
-        "ar": "بداية المقطع: راء رخوة."
+        "de": "r am Silbenanfang: Je nach Region und Sprecher sind unter anderem ein uvularer Reibelaut/Zäpfchen-r oder ein Zungen-r möglich.",
+        "ar": "في بداية المقطع توجد نُطق خلفية ولسانية مقبولة بحسب المنطقة والمتكلم؛ لا تجعل نوعاً واحداً معيار الصحة الوحيد."
       },
       {
-        "de": "-er am Silben-/Wortende: Vater, Mutter, Kinder → schwaches a (Schwa)",
-        "ar": "نهاية المقطع بصيغة -er: تُختزل إلى a خفيفة."
+        "de": "unbetontes -er am Wortende: Vater, Mutter, Kinder → häufig vokalisiertes [ɐ]",
+        "ar": "في -er غير المشددة آخر الكلمة يظهر غالباً الصوت [ɐ]، وهو تقريب صوتي لا حرف a مكتوباً."
       }
     ],
     "tables": [],
@@ -14421,50 +14421,50 @@
       },
       {
         "de": "Rita reist am Freitag nach Rom.",
-        "ar": "راء بداية الكلمات Rita وreist وRom تُنطق احتكاكياً."
+        "ar": "تبدأ الكلمات Rita وreist وRom بصوت r؛ قد يختلف تحقيقه بحسب المنطقة والمتكلم."
       }
     ],
-    "eselsbruecke": "بدل أن تقرأ Vater «فاتِر»، قلها «فاتَ» وكأن آخرها a خفيفة.",
+    "eselsbruecke": "في Vater لا تضف مقطع «إر» عربياً كاملاً؛ قرّب -er غير المشددة من [ɐ] بعد سماع النموذج، مع قبول التنوع الإقليمي.",
     "exercises": [
       {
         "id": "a1-ar-v1",
         "type": "mc",
-        "promptDe": "Wie wird das \"-er\" in \"Vater\" ausgesprochen?",
+        "promptDe": "Wie klingt das unbetonte -er am Wortende in «Vater» häufig?",
         "options": [
-          "-er بلسان ملفوف",
-          "schwaches a (Vata)",
-          "-e"
+          "als deutliches /er/",
+          "als vokalisiertes [ɐ]",
+          "wie [e]"
         ],
-        "answer": "schwaches a (Vata)",
-        "explanationAr": "مقطع -er في نهاية الكلمة يُختزل إلى a خفيفة: Vater = فاتَ.",
+        "answer": "als vokalisiertes [ɐ]",
+        "explanationAr": "تُنطق -er غير المشددة في Vater غالباً [ɐ] في النطق المعياري، مع وجود تنوع إقليمي.",
         "promptAr": "اختر الإجابة الصحيحة."
       },
       {
         "type": "mc",
-        "promptDe": "Wie wird das r am Silbenende oft im Hochdeutschen ausgesprochen?",
-        "promptAr": "كيف يُنطَق r في نهاية المقطع في الفصحى؟",
+        "promptDe": "Wie klingt das unbetonte -er am Wortende in «Vater» häufig?",
+        "promptAr": "كيف تُنطق -er غير المشددة في آخر Vater غالباً؟",
         "options": [
-          "Wie ein gerolltes Zungen-r",
-          "Wie ein dunkler a-Laut (Vokal)",
-          "Wie ein ch",
-          "Wie ein sch"
+          "als stark gerolltes r",
+          "als vokalisiertes [ɐ]",
+          "wie l",
+          "wie ch"
         ],
-        "answer": "Wie ein dunkler a-Laut (Vokal)",
-        "explanationAr": "نهاية المقطع r تنطق كصوت حرف علة داكن شبيه بـa، مثل «Vater».",
+        "answer": "als vokalisiertes [ɐ]",
+        "explanationAr": "في Vater تُلفظ -er غير المشددة غالباً [ɐ] في النطق المعياري، مع وجود تنوع إقليمي.",
         "id": "a1-aussprache-r-r141e-e02"
       },
       {
         "type": "mc",
-        "promptDe": "Wie klingt r am Silbenende (Vater) oft?",
-        "promptAr": "كيف يُنطَق r في نهاية المقطع (Vater)؟",
+        "promptDe": "Wie klingt das unbetonte -er am Wortende in «Vater» häufig?",
+        "promptAr": "كيف تُنطق -er غير المشددة في آخر Vater غالباً؟",
         "options": [
-          "Gerollt (wie im Italienischen)",
-          "Dunkles a (Vokal)",
-          "Wie l",
-          "Wie ch"
+          "als stark gerolltes r",
+          "als vokalisiertes [ɐ]",
+          "wie l",
+          "wie ch"
         ],
-        "answer": "Dunkles a (Vokal)",
-        "explanationAr": "في نهاية المقطع يُنطَق r كحرف علة داكن.",
+        "answer": "als vokalisiertes [ɐ]",
+        "explanationAr": "في Vater تُلفظ -er غير المشددة غالباً [ɐ] في النطق المعياري، مع وجود تنوع إقليمي.",
         "id": "a1-aussprache-r-r141e-e03"
       },
       {
@@ -14494,7 +14494,7 @@
         "ar": "لا تفرض طريقة نطق واحدة على جميع اللهجات؛ تعلّم النطق المعياري مع معرفة وجود تنوع إقليمي."
       }
     ],
-    "eselsbrueckeAr": "بدل أن تقرأ Vater «فاتِر»، قلها «فاتَ» وكأن آخرها a خفيفة.",
+    "eselsbrueckeAr": "في Vater لا تضف مقطع «إر» عربياً كاملاً؛ قرّب -er غير المشددة من [ɐ] بعد سماع النموذج، مع قبول التنوع الإقليمي.",
     "pronTippAr": ""
   },
   "a1-aussprache-sp-st": {
@@ -14505,9 +14505,9 @@
     "voraus": [
       "a1-praesens"
     ],
-    "ziel": "تعلم أن sp و st في بداية الكلمة/المقطع يُنطقان shp/sht (شب/شت)، وأن sch تُنطق دائماً «ش».",
+    "ziel": "تتعرف أن sp وst في بداية الكلمة أو المقطع تُنطقان معيارياً /ʃp/ و/ʃt/، وأن sch تمثل عادةً /ʃ/ في الكلمات المستهدفة.",
     "anwendung": {
-      "ar": "كرّر: spielen=شبيلِن، Stadt=شتات، Straße=شتراسَ، Schule=شولَ، schreiben=شرايبن.",
+      "ar": "كرّر الكلمات spielen وStadt وStraße وSchule وschreiben، وركّز على /ʃp/ و/ʃt/ و/ʃ/ من التسجيل بدل الاعتماد على كتابة عربية تقريبية.",
       "de": "Wiederhole: spielen, Stadt, Straße, Schule, schreiben.",
       "candoIds": []
     },
@@ -14517,39 +14517,39 @@
         "type": "mc",
         "promptDe": "Wie wird \"Stadt\" ausgesprochen?",
         "options": [
-          "s-tat",
-          "schtatt",
-          "ts-tat"
+          "mit /st/ am Anfang",
+          "mit /ʃt/ am Anfang",
+          "mit /ts/ am Anfang"
         ],
-        "answer": "schtatt",
-        "explanationAr": "st في بداية الكلمة = sht (شت): Stadt = شتات."
+        "answer": "mit /ʃt/ am Anfang",
+        "explanationAr": "تبدأ Stadt في النطق المعياري بالمجموعة /ʃt/."
       },
       {
         "id": "a1-as-v2",
         "type": "mc",
         "promptDe": "Wie wird »sprechen« ausgesprochen?",
         "options": [
-          "s-preschen",
-          "schprechen",
-          "sp-rechen"
+          "mit /sp/ am Anfang",
+          "mit /ʃp/ am Anfang",
+          "mit /ʃb/ am Anfang"
         ],
-        "answer": "schprechen",
-        "explanationAr": "sp في بداية الكلمة = shp (شب): sprechen تُنطق شبريشن تقريباً — وكذلك spielen."
+        "answer": "mit /ʃp/ am Anfang",
+        "explanationAr": "تبدأ sprechen في النطق المعياري بالمجموعة /ʃp/، وكذلك spielen."
       }
     ],
-    "summaryAr": "قواعد النطق: 1) sch دائماً = «ش» (Schule, Fisch). 2) sp في بداية الكلمة/المقطع = shp (شب): spielen, sprechen. 3) st في بداية الكلمة/المقطع = sht (شت): Stadt, stehen. في وسط الكلمة أو آخرها تنطق سين عادية (best, Fenster).",
+    "summaryAr": "في الكلمات المستهدفة تمثل sch الصوت /ʃ/. وتُنطق sp في بداية الكلمة أو المقطع /ʃp/ مثل spielen وsprechen، وst هناك /ʃt/ مثل Stadt وstehen. أما في أمثلة مثل Wespe وFenster وist فلا تتحول المجموعة تلقائياً إلى /ʃp/ أو /ʃt/.",
     "rules": [
       {
-        "de": "sch = sch (immer wie sch): Schule, schreiben, Fisch",
-        "ar": "sch دائماً = ش."
+        "de": "sch steht in den Zielwörtern für /ʃ/: Schule, schreiben, Fisch",
+        "ar": "تمثل sch عادةً /ʃ/ في الكلمات المستهدفة."
       },
       {
-        "de": "sp im Wort-/Silbenanfang = schp: spielen, sprechen",
-        "ar": "sp في بداية الكلمة/المقطع = shp."
+        "de": "sp im Wort-/Silbenanfang = /ʃp/: spielen, sprechen",
+        "ar": "تُنطق sp في بداية الكلمة أو المقطع /ʃp/."
       },
       {
-        "de": "st im Wort-/Silbenanfang = scht: Stadt, stehen, verstehen",
-        "ar": "st في بداية الكلمة/المقطع = sht."
+        "de": "st im Wort-/Silbenanfang = /ʃt/: Stadt, stehen, verstehen",
+        "ar": "تُنطق st في بداية الكلمة أو المقطع /ʃt/."
       }
     ],
     "tables": [
@@ -14564,37 +14564,37 @@
         "rows": [
           [
             "spielen",
-            "شبيلِن",
+            "/ˈʃpiːlən/",
             "يلعب"
           ],
           [
             "sprechen",
-            "شبريخِن",
+            "/ˈʃpʁɛçn̩/",
             "يتكلم"
           ],
           [
             "Stadt",
-            "شتات",
+            "/ʃtat/",
             "مدينة"
           ],
           [
             "Straße",
-            "شتراسَ",
+            "/ˈʃtʁaːsə/",
             "شارع"
           ],
           [
             "Schule",
-            "شولَ",
+            "/ˈʃuːlə/",
             "مدرسة"
           ],
           [
             "Fisch",
-            "فيش",
+            "/fɪʃ/",
             "سمك"
           ],
           [
             "best",
-            "بست",
+            "/bɛst/",
             "أفضل (سين في الوسط)"
           ]
         ]
@@ -14610,19 +14610,19 @@
         "ar": "في وسط الكلمة أو نهايتها لا تتحول sp/st تلقائياً إلى shp/sht."
       }
     ],
-    "eselsbruecke": "حرف s قبل p أو t في بداية الكلمة يخجل من النطق فيستعين بحرف ش: sp→شب، st→شت.",
+    "eselsbruecke": "في بداية الكلمة أو المقطع: sp → /ʃp/ وst → /ʃt/؛ استخدم IPA والتسجيل، لا تهجئة عربية قد تخلط بين /p/ و/b/.",
     "exercises": [
       {
         "id": "a1-as-v1",
         "type": "mc",
         "promptDe": "Wie wird \"Stadt\" ausgesprochen?",
         "options": [
-          "s-tat",
-          "schtatt",
-          "ts-tat"
+          "mit /st/ am Anfang",
+          "mit /ʃt/ am Anfang",
+          "mit /ts/ am Anfang"
         ],
-        "answer": "schtatt",
-        "explanationAr": "st في بداية الكلمة = sht (شت): Stadt = شتات.",
+        "answer": "mit /ʃt/ am Anfang",
+        "explanationAr": "تبدأ Stadt في النطق المعياري بالمجموعة /ʃt/.",
         "promptAr": "اختر الإجابة الصحيحة."
       },
       {
@@ -14630,19 +14630,19 @@
         "promptDe": "Wie spricht man <sp> am Wortanfang aus?",
         "promptAr": "كيف ينطق sp في أول الكلمة؟",
         "options": [
-          "sp wie in Italienisch",
-          "schp",
-          "sb",
-          "ʃp نعم — shp"
+          "/sp/",
+          "/ʃp/",
+          "/sb/",
+          "/ʃb/"
         ],
-        "answer": "schp",
-        "explanationAr": "في أول الكلمة تنطق shp (Schprache, Stadt=Shtadt).",
+        "answer": "/ʃp/",
+        "explanationAr": "في أول الكلمة أو المقطع تُنطق sp معيارياً /ʃp/، مثل spielen وsprechen.",
         "id": "a1-aussprache-sp-st-r141e-e02"
       },
       {
         "type": "mc",
-        "promptDe": "Welches Wort wird mit «schp» ausgesprochen?",
-        "promptAr": "أي كلمة تنطق «shp»؟",
+        "promptDe": "Welches Wort beginnt standardsprachlich mit /ʃp/?",
+        "promptAr": "أي كلمة تبدأ معيارياً بالصوت /ʃp/؟",
         "options": [
           "Sport",
           "Fest",
@@ -14650,14 +14650,14 @@
           "Haus"
         ],
         "answer": "Sport",
-        "explanationAr": "Sport تنطق «Schport» لأن sp في أول الكلمة.",
+        "explanationAr": "تبدأ Sport معيارياً بـ/ʃp/؛ أما Wespe ففي وسطها /sp/.",
         "id": "a1-aussprache-sp-st-r141e-e03"
       },
       {
         "id": "a1-aussprache-sp-st-r141e-prod",
         "type": "fill",
         "promptDe": "Er geht über die ___raße. (st am Wortanfang)",
-        "promptAr": "أكمل الكلمة التي يبدأ فيها st بصوت sht.",
+        "promptAr": "أكمل كلمة Straße؛ تُنطق st في بدايتها /ʃt/.",
         "answer": "St",
         "explanationAr": "الكلمة Straße تبدأ بـst، وتُنطق في أول الكلمة /ʃt/."
       },
@@ -14665,22 +14665,22 @@
         "id": "a1-aussprache-sp-st-r141e-prod2",
         "type": "fill",
         "promptDe": "Wir ___ Deutsch. (sp am Wortanfang)",
-        "promptAr": "أكمل بالفعل sprechen؛ في بدايته sp تُنطق shp.",
+        "promptAr": "أكمل بالفعل sprechen؛ تُنطق sp في بدايته /ʃp/.",
         "answer": "sprechen",
-        "explanationAr": "في بداية sprechen تُنطق sp بصوت shp."
+        "explanationAr": "تبدأ sprechen في النطق المعياري بالمجموعة /ʃp/."
       }
     ],
     "pitfalls": [
       {
-        "de": "„Sport beginnt mit einem normalen s-Laut.“ ✗ → „Sport beginnt standardsprachlich mit schp.“ ✓",
+        "de": "„Sport beginnt mit /sp/.“ ✗ → „Sport beginnt standardsprachlich mit /ʃp/.“ ✓",
         "ar": "في بداية Sport يُنطق sp عادةً /ʃp/؛ الكتابة sp لا تعني صوت s+p منفصلين هنا."
       },
       {
-        "de": "„Wespe hat schp in der Wortmitte.“ ✗ → „Wespe hat den normalen sp-Laut in der Wortmitte.“ ✓",
+        "de": "„Wespe hat /ʃp/ in der Wortmitte.“ ✗ → „Wespe hat /sp/ in der Wortmitte.“ ✓",
         "ar": "لا يتحول كل sp داخل الكلمة إلى schp؛ في Wespe يبقى الصوت /sp/."
       }
     ],
-    "eselsbrueckeAr": "حرف s قبل p أو t في بداية الكلمة يخجل من النطق فيستعين بحرف ش: sp→شب، st→شت.",
+    "eselsbrueckeAr": "في بداية الكلمة أو المقطع: sp → /ʃp/ وst → /ʃt/؛ استخدم IPA والتسجيل، لا تهجئة عربية قد تخلط بين /p/ و/b/.",
     "pronTippAr": ""
   },
   "a1-aussprache-auslaut": {
@@ -14692,9 +14692,9 @@
       "a1-praesens",
       "a1-akkusativ"
     ],
-    "ziel": "تدرك أن الحروف المجهورة b/d/g في آخر المقطع/الكلمة تُنطَق عديمة الجهر (p/t/k).",
+    "ziel": "تدرك أن الصوامت الانفجارية المجهورة /b d ɡ/ تفقد الجهر في نهاية المقطع وتُسمع [p t k] في الكلمات المستهدفة.",
     "anwendung": {
-      "ar": "كرّر: Tag = تاك، lieb = ليب، Kind = كينت، Hund = هونت، ab = آب. لا تنطق g نهائياً جيم!",
+      "ar": "كرّر Tag وlieb وKind وHund وab، ثم قارن Tag/Tage وKind/Kinder. ركّز على فقدان الجهر في نهاية المقطع بدل كتابة النطق بحروف عربية.",
       "de": "Wiederhole: Tag, lieb, Kind, Hund, ab — final b→p, d→t, g→k.",
       "candoIds": []
     },
@@ -14704,39 +14704,39 @@
         "type": "mc",
         "promptDe": "Wie wird \"Tag\" ausgesprochen?",
         "options": [
-          "تاغ",
-          "تاك",
-          "تا"
+          "/taːɡ/",
+          "/taːk/",
+          "/taː/"
         ],
-        "answer": "تاك",
-        "explanationAr": "Auslautverhärtung: آخر حرف g ينطق k → Tag = تاك."
+        "answer": "/taːk/",
+        "explanationAr": "في Tag يفقد /ɡ/ الجهر في نهاية المقطع ويُسمع [k]؛ تبقى الكتابة g."
       },
       {
         "id": "a1-al-v2",
         "type": "mc",
         "promptDe": "Wie wird »Hund« am Ende ausgesprochen?",
         "options": [
-          "mit weichem d",
-          "mit t (Hunt)",
+          "mit [d]",
+          "mit [t]",
           "das d fällt weg"
         ],
-        "answer": "mit t (Hunt)",
-        "explanationAr": "Auslautverhärtung: d في آخر الكلمة تُنطق t — Hund تُنطق «هونت»، وKind «كينت»."
+        "answer": "mit [t]",
+        "explanationAr": "في Hund يفقد /d/ الجهر في نهاية المقطع ويُسمع [t]؛ لا يسقط الحرف."
       }
     ],
-    "summaryAr": "قاعدة نطقية مهمة: في نهاية الكلمة/المقطع، لا يوجد جهر بالأحرف: b → p، d → t، g → k. هذا يفسر لماذا Tag = تاك وlieb = ليب وKind = كينت.",
+    "summaryAr": "في النطق المعياري تفقد الصوامت الانفجارية المجهورة b/d/g جهرها في نهاية المقطع، فتُسمع [p/t/k]، مع بقاء الإملاء b/d/g. يوضح ذلك Tag [taːk] وlieb [liːp] وKind [kɪnt].",
     "rules": [
       {
         "de": "b am Ende → p: lieb, ab",
-        "ar": "b نهاية → p."
+        "ar": "في نهاية المقطع يُسمع b غالباً [p] في أمثلة مثل lieb وab."
       },
       {
         "de": "d am Ende → t: Kind, Hund",
-        "ar": "d نهاية → t."
+        "ar": "في نهاية المقطع يُسمع d غالباً [t] في أمثلة مثل Kind وHund."
       },
       {
         "de": "g am Ende → k: Tag, Weg",
-        "ar": "g نهاية → k."
+        "ar": "في نهاية المقطع يُسمع g غالباً [k] في أمثلة مثل Tag وWeg."
       }
     ],
     "tables": [
@@ -14751,32 +14751,32 @@
         "rows": [
           [
             "Tag",
-            "تاك",
+            "/taːk/",
             "يوم"
           ],
           [
             "Weg",
-            "فيك",
+            "/veːk/",
             "طريق"
           ],
           [
             "Kind",
-            "كينت",
+            "/kɪnt/",
             "طفل"
           ],
           [
             "Hund",
-            "هونت",
+            "/hʊnt/",
             "كلب"
           ],
           [
             "lieb",
-            "ليب",
+            "/liːp/",
             "محبوب"
           ],
           [
             "ab",
-            "آب",
+            "/ap/",
             "من (حرف جر)"
           ]
         ]
@@ -14784,7 +14784,7 @@
     ],
     "examples": [
       {
-        "de": "Der Tag ist gut. → [deːɐ̯ ta:k ɪst gu:t]",
+        "de": "Der Tag ist gut. → [deːɐ̯ taːk ɪst ɡuːt]",
         "ar": "اليوم جميل."
       },
       {
@@ -14792,19 +14792,19 @@
         "ar": "عند إضافة حركة تظهر العلاقة بين b/p وd/t وg/k."
       }
     ],
-    "eselsbruecke": "الألمان يرهبون الجهر في آخر الكلمة: كل مجهور يفقد جهره في النهاية.",
+    "eselsbruecke": "في نهاية المقطع تفقد صوامت انسدادية مجهورة مثل b/d/g جهرها؛ لا تعمم ذلك على كل صوت مجهور.",
     "exercises": [
       {
         "id": "a1-al-v1",
         "type": "mc",
         "promptDe": "Wie wird \"Tag\" ausgesprochen?",
         "options": [
-          "تاغ",
-          "تاك",
-          "تا"
+          "/taːɡ/",
+          "/taːk/",
+          "/taː/"
         ],
-        "answer": "تاك",
-        "explanationAr": "Auslautverhärtung: آخر حرف g ينطق k → Tag = تاك.",
+        "answer": "/taːk/",
+        "explanationAr": "في Tag يفقد /ɡ/ الجهر في نهاية المقطع ويُسمع [k]؛ تبقى الكتابة g.",
         "promptAr": "اختر الإجابة الصحيحة."
       },
       {
@@ -14827,12 +14827,12 @@
         "promptAr": "أي كلمة تُظهر قلب نهاية المقطع؟",
         "options": [
           "Ball",
-          "Tag → Tak",
-          "Hund",
+          "Tag → [taːk]",
+          "Nase",
           "Katze"
         ],
-        "answer": "Tag → Tak",
-        "explanationAr": "Tag ينطق Tak.",
+        "answer": "Tag → [taːk]",
+        "explanationAr": "في Tag يفقد g الجهر في نهاية المقطع ويُسمع [k].",
         "id": "a1-aussprache-auslaut-r141e-e03"
       },
       {
@@ -14862,7 +14862,7 @@
         "ar": "الإملاء يحافظ على g في Tag رغم نطقها كـk؛ صيغة Tage تساعد على تذكر الحرف."
       }
     ],
-    "eselsbrueckeAr": "الألمان يرهبون الجهر في آخر الكلمة: كل مجهور يفقد جهره في النهاية.",
+    "eselsbrueckeAr": "في نهاية المقطع تفقد صوامت انسدادية مجهورة مثل b/d/g جهرها؛ لا تعمم ذلك على كل صوت مجهور.",
     "pronTippAr": ""
   },
   "b2-genitiv-praep": {
@@ -15440,62 +15440,62 @@
   },
   "a1-pruefungsstrategie": {
     "id": "a1-pruefungsstrategie",
-    "titleDe": "Prüfungsstrategie: Start Deutsch A1",
-    "titleAr": "استراتيجية امتحان Start Deutsch A1 — إدارة الوقت والقراءة والكتابة",
+    "titleDe": "Interne Prüfungsstrategie: A1-Übungsformat",
+    "titleAr": "استراتيجية داخلية لتدريبات A1 — إدارة الوقت والقراءة والكتابة",
     "level": "A1",
-    "ziel": "تعرف بنية امتحان A1 (60 دقيقة + Sprechen 15 دقيقة) وكيفية توزيع الوقت وتقنيات القراءة السريعة وبناء الرسالة (30 كلمة) وكيفية التعامل مع الأسئلة الصعبة.",
+    "ziel": "تتدرّب على توزيع وقتك بحسب المهمة، والقراءة الموجّهة، وبناء رسالة قصيرة تغطي المطلوب، والتعامل مع الأسئلة الصعبة؛ من دون اعتبار هذا الدرس وصفاً رسمياً لامتحان بعينه.",
     "voraus": [
       "a1-perfekt-einf",
       "a1-zeitpraep"
     ],
     "anwendung": {
-      "ar": "حاكِ امتحاناً تجريبياً في 60 دقيقة بدون توقف، ثم صحّح إجاباتك.",
-      "de": "Simuliere eine vollständige A1-Prüfung in 60 Minuten und korrigiere dich danach selbst.",
+      "ar": "نفّذ مجموعة تدريب A1 الداخلية بوقت محدد، ثم راجع الإجابات والنقاط التي تركتها. تحقّق منفصلاً من تعليمات الجهة الرسمية قبل أي امتحان حقيقي.",
+      "de": "Bearbeite ein internes A1-Übungsset mit Zeitlimit und überprüfe danach deine Antworten. Prüfe vor einer echten Prüfung die aktuellen offiziellen Vorgaben des Anbieters.",
       "candoIds": []
     },
     "verify": [
       {
         "id": "a1-ps-v1-check",
         "type": "mc",
-        "promptDe": "Wie viele Wörter sollten Sie im Prüfungsteil Schreiben (E-Mail) etwa schreiben?",
+        "promptDe": "Was gehört in eine kurze Nachricht?",
         "options": [
-          "10 Wörter",
-          "30 Wörter",
-          "100 Wörter"
+          "nur ein Gruß",
+          "Anrede, alle geforderten Punkte und ein passender Schluss",
+          "möglichst viele komplizierte Sätze"
         ],
-        "answer": "30 Wörter",
-        "explanationAr": "في كتابة A1 الهدف 30 كلمة تقريباً للرسالة القصيرة."
+        "answer": "Anrede, alle geforderten Punkte und ein passender Schluss",
+        "explanationAr": "غطِّ كل نقطة مطلوبة بوضوح، واستعمل افتتاحاً وختاماً مناسبين؛ يتبع الطول تعليمات المهمة الحالية."
       },
       {
         "id": "a1-ps-v2-check",
         "type": "mc",
-        "promptDe": "Im Leseteil ist es am besten,…",
+        "promptDe": "Im Leseteil ist es oft hilfreich,…",
         "options": [
           "…jedes Wort im Wörterbuch nachzuschlagen",
           "…zuerst die Fragen zu lesen und dann gezielt zu suchen",
           "…den ganzen Text laut vorzulesen"
         ],
         "answer": "…zuerst die Fragen zu lesen und dann gezielt zu suchen",
-        "explanationAr": "اقرأ الأسئلة أولاً ثم ابحث عن الجواب في النص؛ هذا يوفر وقتاً كبيراً."
+        "explanationAr": "قراءة المطلوب أولاً تساعدك على توجيه البحث في النص واستعمال الوقت بوعي."
       }
     ],
-    "summaryAr": "بنية امتحان Goethe A1: Hören (20د) → Lesen (25د) → Schreiben (20د، رسالة 30 كلمة) → Sprechen (15د: تقديم النفس + قراءة/طرح أسئلة + طلب/شكر). نصائح ذهبية: 1) لا تقضِ أكثر من دقيقة على سؤال صعب — ضع علامة وعد لاحقاً. 2) في الكتابة: ابدأ بالتحية واختم بالوداع، واذكر النقاط الثلاث المطلوبة. 3) في التحدث: تحدّث ببطء وبوضوح، استخدم جملاً بسيطة صحيحة لا جملاً معقدة خاطئة.",
+    "summaryAr": "هذه استراتيجية داخلية للتدريب: اقرأ المطلوب أولاً، وحدد الكلمات المفتاحية، ووزّع الوقت بحسب عدد المهام، وضع علامة على السؤال الصعب ثم عد إليه إن بقي وقت. في الرسالة غطِّ جميع النقاط المطلوبة بافتتاح وختام مناسبين، واتبع عدد الكلمات والزمن المكتوبين في المهمة الحالية. تختلف الصيغ الرسمية وقد تتغير؛ لذلك لا تُعامل هذه الصفحة مصدراً رسمياً لمدد امتحان أو بنيته.",
     "rules": [
       {
-        "de": "Zeit: Hören 20 Min, Lesen 25 Min, Schreiben 20 Min, Sprechen 15 Min.",
-        "ar": "توزيع الوقت: استماع 20د، قراءة 25د، كتابة 20د، تحدث 15د."
+        "de": "Zeitplanung: Teile die verfügbare Zeit nach Aufgaben und reserviere am Ende eine kurze Kontrolle.",
+        "ar": "قسّم الوقت المتاح بحسب المهام واترك في النهاية وقتاً قصيراً للمراجعة."
       },
       {
-        "de": "Schreiben: 30 Wörter — Anrede + 3 Punkte + Gruß.",
-        "ar": "الكتابة: 30 كلمة — تحية + ثلاث نقاط المطلوب + وداع."
+        "de": "Schreiben: passende Anrede + alle geforderten Punkte + passender Schluss; Wortzahl nach der konkreten Aufgabe.",
+        "ar": "في الكتابة: افتتاح مناسب، وكل النقاط المطلوبة، وختام مناسب؛ واتبع عدد الكلمات المحدد في المهمة نفسها."
       },
       {
-        "de": "Sprechen Teil 1: sich vorstellen (Name, Alter, Land, Wohnort, Beruf, Hobby).",
-        "ar": "التحدث الجزء 1: تقديم النفس (الاسم، العمر، البلد، السكن، المهنة، الهواية)."
+        "de": "Sprechen: Antworte auf die konkrete Aufgabe, stelle kurze verständliche Fragen und formuliere Bitten klar.",
+        "ar": "في التحدث: أجب عن المهمة المحددة، واطرح أسئلة قصيرة مفهومة، وصغ الطلب بوضوح."
       },
       {
-        "de": "Tipp: Einfache, korrekte Sätze sind besser als komplizierte, falsche!",
-        "ar": "نصيحة: جمل بسيطة صحيحة أفضل من جمل معقدة خاطئة!"
+        "de": "Einfache, korrekte Sätze sind meist hilfreicher als unnötig komplizierte Formulierungen.",
+        "ar": "الجمل البسيطة الصحيحة أنفع غالباً من تراكيب معقدة لا تحتاجها المهمة."
       }
     ],
     "tables": [],
@@ -15509,43 +15509,43 @@
         "ar": "تتضمن الرسالة القصيرة تحية ومعلومات مطلوبة وختاماً."
       }
     ],
-    "eselsbruecke": "امتحان A1 لا يختبر ذكاءك بل مدى استخدامك الألمانية البسيطة بدقة — فكّر ببساطة واكتب بوضوح.",
+    "eselsbruecke": "اقرأ المطلوب أولاً، غطِّ كل نقطة، وراجع إجابتك؛ أما الزمن وعدد الكلمات والبنية فتؤخذ من تعليمات المهمة والجهة الحالية.",
     "exercises": [
       {
         "id": "a1-ps-v1",
         "type": "mc",
-        "promptDe": "Wie viele Wörter sollten Sie im Prüfungsteil Schreiben (E-Mail) etwa schreiben?",
+        "promptDe": "Was gehört in eine kurze Nachricht?",
         "options": [
-          "10 Wörter",
-          "30 Wörter",
-          "100 Wörter"
+          "nur ein Gruß",
+          "Anrede, alle geforderten Punkte und ein passender Schluss",
+          "möglichst viele komplizierte Sätze"
         ],
-        "answer": "30 Wörter",
-        "explanationAr": "في كتابة A1 الهدف 30 كلمة تقريباً للرسالة القصيرة.",
+        "answer": "Anrede, alle geforderten Punkte und ein passender Schluss",
+        "explanationAr": "غطِّ كل نقطة مطلوبة بوضوح، واستعمل افتتاحاً وختاماً مناسبين؛ يتبع الطول تعليمات المهمة الحالية.",
         "promptAr": "اختر الإجابة الصحيحة."
       },
       {
         "id": "a1-ps-v2",
         "type": "mc",
-        "promptDe": "Im Leseteil ist es am besten,…",
+        "promptDe": "Im Leseteil ist es oft hilfreich,…",
         "options": [
           "…jedes Wort im Wörterbuch nachzuschlagen",
           "…zuerst die Fragen zu lesen und dann gezielt zu suchen",
           "…den ganzen Text laut vorzulesen"
         ],
         "answer": "…zuerst die Fragen zu lesen und dann gezielt zu suchen",
-        "explanationAr": "اقرأ الأسئلة أولاً ثم ابحث عن الجواب في النص؛ هذا يوفر وقتاً كبيراً.",
+        "explanationAr": "قراءة المطلوب أولاً تساعدك على توجيه البحث في النص واستعمال الوقت بوعي.",
         "promptAr": "اختر الإجابة الصحيحة."
       },
       {
         "type": "mc",
-        "promptDe": "Wie lesen Sie lange Texte in der Prüfung am besten?",
-        "promptAr": "ما أفضل طريقة لقراءة النصوص الطويلة في الامتحان؟",
+        "promptDe": "Wie bearbeiten Sie einen längeren Prüfungstext häufig effizient?",
+        "promptAr": "ما الطريقة التي تساعد غالباً على معالجة نص أطول بكفاءة؟",
         "options": [
           "Jedes Wort übersetzen",
           "Erst Aufgaben lesen, dann Text gezielt durchsuchen",
           "Den Text auswendig lernen",
-          "Schnell einmal lesen ohne Aufgaben"
+          "Ohne Blick auf die Aufgaben raten"
         ],
         "answer": "Erst Aufgaben lesen, dann Text gezielt durchsuchen",
         "explanationAr": "اقرأ الأسئلة أولاً ثم ابحث في النص عن الجواب.",
@@ -15578,7 +15578,7 @@
         "ar": "حتى إن كانت الإجابة قصيرة، لا تترك أياً من النقاط المطلوبة في مهمة الكتابة."
       }
     ],
-    "eselsbrueckeAr": "امتحان A1 لا يختبر ذكاءك بل مدى استخدامك الألمانية البسيطة بدقة — فكّر ببساطة واكتب بوضوح.",
+    "eselsbrueckeAr": "اقرأ المطلوب أولاً، غطِّ كل نقطة، وراجع إجابتك؛ أما الزمن وعدد الكلمات والبنية فتؤخذ من تعليمات المهمة والجهة الحالية.",
     "pronTippAr": ""
   },
   "a2-pruefungsstrategie": {
