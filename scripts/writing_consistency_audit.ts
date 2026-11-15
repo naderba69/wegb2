@@ -17,6 +17,7 @@ type WritingReviewEntry = {
   id: string;
   level: string;
   decision: "corrected" | "confirmed-current";
+  rationale?: string;
   previous: WritingTask;
   current: WritingTask;
 };
@@ -33,6 +34,9 @@ const tasks = JSON.parse(
 ) as WritingTask[];
 const review02 = JSON.parse(
   fs.readFileSync(path.join(process.cwd(), "scripts", "fixtures", "writing-reviewed-02.json"), "utf8"),
+) as WritingReviewFixture;
+const review03 = JSON.parse(
+  fs.readFileSync(path.join(process.cwd(), "scripts", "fixtures", "writing-reviewed-03.json"), "utf8"),
 ) as WritingReviewFixture;
 const byId = new Map(tasks.map((task) => [task.id, task]));
 const errors: string[] = [];
@@ -224,6 +228,97 @@ for (const stale of ["الألفية الثانية", "كما تُلْمَز", "
   }
 }
 
+const review03Ids = new Set(review03.entries.map((entry) => entry.id));
+const review03Corrected = review03.entries.filter((entry) => entry.decision === "corrected");
+const review03Confirmed = review03.entries.filter((entry) => entry.decision === "confirmed-current");
+if (review03.schema !== "wegb2-reviewed-writing-decision-batch-v1"
+  || review03.batch !== "PA-035-03"
+  || review03.entries.length !== 20
+  || review03Ids.size !== 20
+  || review03Corrected.length !== 18
+  || review03Confirmed.length !== 2
+  || review03.entries.some((entry) => entry.level !== "A2" || !entry.rationale?.trim())) {
+  errors.push(
+    `unexpected PA-035-03 fixture scope/counts: ${review03.schema}/${review03.batch}/${review03.entries.length}/${review03Ids.size}/${review03Corrected.length}/${review03Confirmed.length}`,
+  );
+}
+if (!review03.scope.includes("triage only")
+  || !review03.scope.includes("not correction generators")
+  || !review03.scope.includes("not independent linguistic, exam, or CEFR sign-off")) {
+  errors.push("PA-035-03 fixture must preserve its triage and external-sign-off claim boundary");
+}
+for (const entry of review03.entries) {
+  const actual = byId.get(entry.id);
+  if (!actual) {
+    errors.push(`missing PA-035-03 writing task ${entry.id}`);
+    continue;
+  }
+  if (actual.level !== "A2"
+    || entry.previous.id !== entry.id
+    || entry.current.id !== entry.id
+    || entry.previous.level !== "A2"
+    || entry.current.level !== "A2"
+    || JSON.stringify(actual) !== JSON.stringify(entry.current)) {
+    errors.push(`${entry.id}: PA-035-03 identity or reviewed task content drifted`);
+  }
+  if (entry.decision === "corrected" && JSON.stringify(entry.previous) === JSON.stringify(entry.current)) {
+    errors.push(`${entry.id}: corrected PA-035-03 decision has no change`);
+  }
+  if (entry.decision === "confirmed-current" && JSON.stringify(entry.previous) !== JSON.stringify(entry.current)) {
+    errors.push(`${entry.id}: confirmed-current PA-035-03 decision changes the task`);
+  }
+  const target = entry.current.zielWort;
+  if (!target) {
+    errors.push(`${entry.id}: PA-035-03 task has no internal word target`);
+  } else {
+    const ratio = words(entry.current.sample) / target;
+    if (ratio < 0.8 || ratio > 1.2) {
+      errors.push(
+        `${entry.id}: PA-035-03 sample has ${words(entry.current.sample)} words for target ${target} (${(ratio * 100).toFixed(1)}%)`,
+      );
+    }
+    const arabicTarget = entry.current.taskAr?.match(/الهدف:\s*(\d+)\s*كلمة/);
+    if (arabicTarget && Number(arabicTarget[1]) !== target) {
+      errors.push(`${entry.id}: Arabic target ${arabicTarget[1]} does not match zielWort ${target}`);
+    }
+  }
+  const range = sentenceRange(entry.current.taskDe);
+  if (range) {
+    const actualMarks = sentenceMarks(entry.current.sample);
+    if (actualMarks < range[0] || actualMarks > range[1]) {
+      errors.push(`${entry.id}: PA-035-03 sample has ${actualMarks} sentence marks; expected ${range.join("–")}`);
+    }
+  }
+}
+const a2Guard03 = JSON.stringify(review03.entries.map((entry) => entry.current));
+if (requireTask("w-a2-01").zielWort !== 40
+  || requireTask("w-a2-02").zielWort !== 60
+  || requireTask("w-a2-11").zielWort !== 80
+  || requireTask("w-a2-04").sample.includes("Soll ich zum Arzt kommen")
+  || !requireTask("w-a2-05").sample.includes("Bring bitte einen Salat mit")
+  || !requireTask("w-a2-07").sample.includes("Donnerstag um 17 Uhr")
+  || requireTask("w-a2-10").sample.includes("einen Termin machen")
+  || !requireTask("w-a2-13").sample.includes("Ich bin viel geschwommen")
+  || !requireTask("w-a2-17").sample.includes("leider absagen")
+  || !requireTask("w-a2-18").sample.includes("Passt dir das?")
+  || !requireTask("w-a2-19").sample.includes("erstatten Sie mir den Kaufpreis")
+  || !requireTask("w-a2-20").sample.includes("Ich interessiere mich sehr für die Wohnung")) {
+  errors.push("PA-035-03 guarded target, task/model, register, or naturalness corrections regressed");
+}
+for (const stale of [
+  "habe geschwommen",
+  "Mit freundlichen Grüßen,",
+  "Viele Grüße,",
+  "Herzliche Grüße,",
+  "feiere…! / Bring bitte",
+  "مرتان Perfekt (bin…gefahren / war)",
+  "حرفٌ واحد يُصلح ما يفسده الجميع",
+]) {
+  if (a2Guard03.includes(stale)) {
+    errors.push(`PA-035-03 stale, malformed, or unsupported text returned: ${stale}`);
+  }
+}
+
 if (errors.length) {
   console.error("❌ Writing consistency audit failed:");
   for (const error of errors) console.error(`- ${error}`);
@@ -231,8 +326,8 @@ if (errors.length) {
 }
 
 console.log(
-  "✅ Writing consistency: 42 registered PA-035 findings remain fixed; all 25 bounded A0/A1 full-card decisions match (17 corrected, 8 confirmed-current).",
+  "✅ Writing consistency: 42 registered findings remain fixed; all 45 bounded A0/A1/A2 full-card decisions match (35 corrected, 10 confirmed-current).",
 );
 console.log(
-  "ℹ️ This gate checks the reviewed target, sample-length, sentence-count, task/Arabic/criterion/model/note, and identity decisions; it does not certify the remaining 80 writing cards or provide independent linguistic, exam, or CEFR sign-off.",
+  "ℹ️ This gate checks reviewed targets, sample length, sentence count, task/Arabic/criterion/model/note alignment, and identity decisions; it does not certify the remaining 60 B1/B2 writing cards or provide independent linguistic, exam, or CEFR sign-off.",
 );

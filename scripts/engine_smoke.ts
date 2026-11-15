@@ -15819,10 +15819,50 @@ function collectR262(dir: string, out: string[] = []): string[] {
   ok(patchK422.includes('current == reviewed') && patchK422.includes('current != previous') &&
     patchK422.includes("unexpected current writing task") &&
     auditK422.includes("review02.entries.length !== 25") && auditK422.includes("review02Corrected.length !== 17") &&
-    auditK422.includes("does not certify the remaining 80 writing cards") &&
+    auditK422.includes("does not certify the remaining 60 B1/B2 writing cards") &&
     reviewK422.scope.includes("triage only") && reviewK422.scope.includes("not correction generators") &&
     reviewK422.scope.includes("not independent linguistic, exam, or CEFR sign-off"),
     "K422c PA-035-02: الرقعة مقفلة بالمهمة الكاملة والبوابة تحرس القرارات مع إبقاء 80 بطاقة والتوقيع المستقل خارج الادعاء");
+}
+
+/* ═══ K423 — PA-035-03: مراجعة بطاقات الكتابة A2 بندياً ═══ */
+{
+  const reviewK423 = JSON.parse(readFileSync("scripts/fixtures/writing-reviewed-03.json", "utf8")) as {
+    schema: string;
+    batch: string;
+    scope: string;
+    entries: { id: string; level: string; decision: "corrected" | "confirmed-current"; rationale: string; previous: Record<string, unknown>; current: Record<string, unknown> }[];
+  };
+  const writingK423 = bankRoh("writing.json") as Record<string, unknown>[];
+  const tasksK423 = new Map(writingK423.map((task) => [String(task.id), task]));
+  const correctedK423 = reviewK423.entries.filter((entry) => entry.decision === "corrected");
+  const confirmedK423 = reviewK423.entries.filter((entry) => entry.decision === "confirmed-current");
+  const currentK423 = new Map(reviewK423.entries.map((entry) => [entry.id, entry.current]));
+  ok(reviewK423.schema === "wegb2-reviewed-writing-decision-batch-v1" && reviewK423.batch === "PA-035-03" &&
+    reviewK423.entries.length === 20 && new Set(reviewK423.entries.map((entry) => entry.id)).size === 20 &&
+    reviewK423.entries.every((entry) => entry.level === "A2" && entry.rationale.trim().length > 0) &&
+    correctedK423.length === 18 && confirmedK423.length === 2 &&
+    confirmedK423.every((entry) => JSON.stringify(entry.previous) === JSON.stringify(entry.current)) &&
+    correctedK423.every((entry) => JSON.stringify(entry.previous) !== JSON.stringify(entry.current)),
+    "K423a PA-035-03: سجل القرار يغطي بطاقات A2 العشرين: 18 تصحيحاً محدوداً وقرارا إبقاء صريحان بمبررات بندية");
+  ok(reviewK423.entries.every((entry) => JSON.stringify(tasksK423.get(entry.id)) === JSON.stringify(entry.current)) &&
+    currentK423.get("w-a2-01")?.zielWort === 40 && currentK423.get("w-a2-02")?.zielWort === 60 &&
+    currentK423.get("w-a2-11")?.zielWort === 80 &&
+    !String(currentK423.get("w-a2-04")?.sample).includes("Soll ich zum Arzt kommen") &&
+    String(currentK423.get("w-a2-07")?.sample).includes("Donnerstag um 17 Uhr") &&
+    String(currentK423.get("w-a2-17")?.sample).includes("leider absagen") &&
+    String(currentK423.get("w-a2-18")?.sample).includes("Passt dir das?") &&
+    String(currentK423.get("w-a2-20")?.sample).includes("Ich interessiere mich sehr für die Wohnung"),
+    "K423b PA-035-03: القرارات تطابق البنك وتحرس الأهداف والطلب الطبي والموعد المتسق والإلغاء الصريح وسؤال التأكيد والألمانية الطبيعية");
+  const patchK423 = readFileSync("scripts/patches/apply_writing_review_pa035_03.py", "utf8");
+  const auditK423 = readFileSync("scripts/writing_consistency_audit.ts", "utf8");
+  ok(patchK423.includes('current == reviewed') && patchK423.includes('current != previous') &&
+    patchK423.includes("unexpected current writing task") &&
+    auditK423.includes("review03.entries.length !== 20") && auditK423.includes("review03Corrected.length !== 18") &&
+    auditK423.includes("does not certify the remaining 60 B1/B2 writing cards") &&
+    reviewK423.scope.includes("triage only") && reviewK423.scope.includes("not correction generators") &&
+    reviewK423.scope.includes("not independent linguistic, exam, or CEFR sign-off"),
+    "K423c PA-035-03: الرقعة مقفلة بالمهمة الكاملة والبوابة تحرس 45 قراراً مع إبقاء B1/B2 والتوقيع المستقل خارج الادعاء");
 }
 
 /* ═══ K334 — R309: القفل الفعلي الحقيقي — إغلاقُ اليوم عند حدود الوحدة ممنوعٌ لا منصوحٌ به فقط ═══ */
