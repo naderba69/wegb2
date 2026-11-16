@@ -1077,7 +1077,7 @@
         "answer": "die unzureichenden Maßnahmen",
         "explanationAr": "الدليل: «reichen aber bei Weitem nicht aus». الفخّ 1: الاتجاه تصفه بأنه «richtig» لا تنتقده. الفخّ 2: التفاؤل الذي تنتقده هو تفاؤل «الحكومة» لا المقدِّمة.",
         "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "promptAr": "ما الذي تنتقده السيدة بيرغر في سياسة المناخ؟"
       },
       {
         "id": "d-b2-01-q2",
@@ -1087,16 +1087,14 @@
           "illusorisch"
         ],
         "explanationAr": "وهمية (Konjunktiv II).",
-        "promptAr": "أكمل الفراغ بالكلمة المناسبة من الحوار."
+        "promptAr": "بمَ تصف بيرغر الأهداف من دون استثمارات مستدامة؟"
       }
     ],
     "dictation": [
-      "Die Maßnahmen reichen bei Weitem nicht aus.",
-      "Es geht um nachhaltige Investitionen.",
-      "Dieser Optimismus ist schwer nachvollziehbar."
+      "Die Maßnahmen gehen in die richtige Richtung, reichen aber bei Weitem nicht aus.",
+      "Dieser Optimismus ist, gelinde gesagt, schwer nachvollziehbar."
     ],
-    "cultural_note": "German beer culture has centuries-old traditions",
-    "cultural_theme": "Technology"
+    "cultural_theme": "Klimapolitik"
   },
   {
     "id": "d-b2-02",
@@ -1139,7 +1137,7 @@
           "voraus"
         ],
         "explanationAr": "etwas voraussetzen = يستلزم.",
-        "promptAr": "أكمل الفراغ بالكلمة المناسبة من الحوار."
+        "promptAr": "ما الذي تستلزمه الرقمنة وفق المستشارة؟"
       },
       {
         "id": "d-b2-02-q2",
@@ -1153,15 +1151,14 @@
         "answer": "dass die Schulungen begleitend stattfinden",
         "explanationAr": "الدليل: «Entscheidend ist, dass die … Schulungen begleitend stattfinden». الفخّ 1: البنية التحتية ذُكرت كشرط ناقص لا كالأمر الحاسم. الفخّ 2: الجدول الزمني ذكره قائد المشروع في الختام فقط.",
         "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "promptAr": "ما العنصر الحاسم في تنفيذ المشروع؟"
       }
     ],
     "dictation": [
-      "Die Digitalisierung setzt eine Infrastruktur voraus.",
-      "Gleichwohl müssen wir anfangen.",
-      "Die von uns geplanten Schulungen finden begleitend statt."
+      "Wo sehen Sie die größte Herausforderung?",
+      "Einverstanden. Dann machen wir weiter mit dem Zeitplan."
     ],
-    "cultural_theme": "Opinions"
+    "cultural_theme": "Digitalisierung und Kommunen"
   },
   {
     "id": "d-b2-03",
@@ -1203,7 +1200,7 @@
         "answer": "nicht besonders seriös",
         "explanationAr": "الدليل: «Sie ist nicht besonders seriös». الفخّ: «geschönt» قالها يوناس عن الشركة (الادّعاء)، لا دينا عن المصدر.",
         "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "promptAr": "كيف تقيّم دينا موثوقية المصدر؟"
       },
       {
         "id": "d-b2-03-q2",
@@ -1213,15 +1210,14 @@
           "Frage"
         ],
         "explanationAr": "in Frage stellen = يشكّك في.",
-        "promptAr": "أكمل الفراغ بالكلمة المناسبة من الحوار."
+        "promptAr": "ما التعبير الذي يستخدمه يوناس للتشكيك في الادعاء؟"
       }
     ],
     "dictation": [
-      "Angeblich hat der Konzern die Zahlen geschönt.",
-      "Wir sollten die Behauptung in Frage stellen.",
-      "Ohne belastbare Daten ist die Schlussfolgerung hinfällig."
+      "Hast du den Artikel gelesen? Angeblich hat der Konzern die Zahlen geschönt.",
+      "Genau. Ohne belastbare Daten ist die Schlussfolgerung hinfällig."
     ],
-    "cultural_theme": "Opinions"
+    "cultural_theme": "Medienkompetenz"
   },
   {
     "id": "d-b2-04",
@@ -1264,7 +1260,7 @@
           "abgeschlossen"
         ],
         "explanationAr": "abschließen → اسم المفعول abgeschlossen (فعل منفصل: ge في الوسط).",
-        "promptAr": "أكمل الفراغ بالكلمة المناسبة من الحوار."
+        "promptAr": "ما الفعل الذي يصف إتمام الموظف للمشروع؟"
       },
       {
         "id": "d-b2-04-q2",
@@ -1278,15 +1274,14 @@
         "answer": "eine schriftliche Zusage für nächstes Jahr",
         "explanationAr": "الدليل: «Unter der Bedingung einer schriftlichen Zusage für nächstes Jahr». الفخّ 1: المسؤولية الإضافية حجّته الماضية لا شرطه. الفخّ 2: «Spielräume dieses Jahr begrenzt» كلام الرئيسة، وهو يقبل التأجيل.",
         "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "promptAr": "ما شرط الموظف للموافقة؟"
       }
     ],
     "dictation": [
       "Ich möchte gern über meine Vergütung sprechen.",
-      "Ich habe das Projekt erfolgreich abgeschlossen.",
-      "Unter der Bedingung einer schriftlichen Zusage."
+      "Unter der Bedingung einer schriftlichen Zusage für nächstes Jahr wäre ich einverstanden."
     ],
-    "cultural_theme": "Society"
+    "cultural_theme": "Arbeitswelt und Vergütung"
   },
   {
     "id": "d-b2-05",
@@ -1338,7 +1333,7 @@
         "answer": "den vorhersehbaren Plot",
         "explanationAr": "الدليل: «wenngleich der Plot etwas vorhersehbar wirkt». الفخّ 1: اللغة وصفها «brillant». الفخّ 2: تطوّر الشخصيات أُعجبت به هيلينا، وكريم أقرّ بأن البطلة «vielschichtig».",
         "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "promptAr": "أي جانب من الرواية ينتقده كريم؟"
       },
       {
         "id": "d-b2-05-q2",
@@ -1349,16 +1344,14 @@
           "lohnt sich."
         ],
         "explanationAr": "sich lohnen = يستحق.",
-        "promptAr": "أكمل الفراغ بالكلمة المناسبة من الحوار."
+        "promptAr": "ما الفعل الذي يستخدمه كريم للتوصية بقراءة الكتاب؟"
       }
     ],
     "dictation": [
-      "Die Sprache ist brillant.",
-      "Gerade die Figurenentwicklung überzeugt mich.",
-      "Es lohnt sich, es zweimal zu lesen."
+      "Die Sprache ist brillant, wenngleich der Plot etwas vorhersehbar wirkt.",
+      "Absolut. Es lohnt sich, es zweimal zu lesen."
     ],
-    "cultural_theme": "Berliner Mauer - Berlin Wall history",
-    "cultural_note": "Theme: Berliner Mauer - Berlin Wall history"
+    "cultural_theme": "Literaturkritik"
   },
   {
     "id": "d-a1-06",
@@ -1801,7 +1794,7 @@
         "answer": "den Lehrer durch KI zu ersetzen",
         "explanationAr": "الدليل: «Einen Lehrer zu ersetzen, wäre ein Kategorienfehler». الفخّ 1: «Werkzeug» شرط د. صالح للموافقة. الفخّ 2: «Urteilskraft» هو ما يطالب به فيبر لا ما ينتقده.",
         "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "promptAr": "ما الذي يصفه الأستاذ فيبر بأنه خطأ مفاهيمي؟"
       },
       {
         "id": "d-b2-06-q2",
@@ -1811,15 +1804,14 @@
           "Abhängigkeit"
         ],
         "explanationAr": "الاعتماد/الإدمان.",
-        "promptAr": "أكمل الفراغ بالكلمة المناسبة من الحوار."
+        "promptAr": "أين ترى الدكتورة صالح أكبر خطر؟"
       }
     ],
     "dictation": [
-      "Einen Lehrer zu ersetzen, wäre ein Kategorienfehler.",
-      "Wer nur noch Ergebnisse konsumiert, verlernt das Denken.",
-      "Wir brauchen Urteilskraft als Lernziel."
+      "Einen Lehrer zu ersetzen, wäre ein Kategorienfehler. KI kann vorbereiten, aber nicht erziehen.",
+      "Genau darum brauchen wir Urteilskraft als Lernziel."
     ],
-    "cultural_theme": "Society"
+    "cultural_theme": "KI und Bildung"
   },
   {
     "id": "d-b2-07",
@@ -1839,8 +1831,8 @@
       },
       {
         "who": "Einkäufer",
-        "de": "Sofern Sie die Lieferfrist verkürzen, wären wir zu 5 Prozent mehr bereit.",
-        "ar": "بشرطِ أن تختصروا مهلةَ التسليم نكون مستعدين لدفع خمسةٍ بالمئة زيادةً."
+        "de": "Sofern Sie die Lieferfrist verkürzen, wären wir zu einem um fünf Prozent höheren Preis bereit.",
+        "ar": "إذا اختصرتم مهلة التسليم، فنحن مستعدون لسعر أعلى بنسبة خمسة بالمئة."
       },
       {
         "who": "Anbieter",
@@ -1857,13 +1849,13 @@
       {
         "id": "d-b2-07-q1",
         "type": "fill",
-        "promptDe": "Sofern Sie die Lieferfrist verkürzen, wären wir zu 5 ___ mehr bereit.",
+        "promptDe": "Wir wären zu einem um fünf ___ höheren Preis bereit.",
+        "promptAr": "بأي كلمة تُستكمل نسبة الزيادة في عرض المشتري؟",
         "answer": [
           "Prozent",
           "prozent"
         ],
-        "explanationAr": "«zu 5 Prozent mehr» — النسبة تُكتب Prozent.",
-        "promptAr": "أكمل الفراغ بالكلمة المناسبة من الحوار."
+        "explanationAr": "النص يقول: «zu einem um fünf Prozent höheren Preis»."
       },
       {
         "id": "d-b2-07-q2",
@@ -1877,16 +1869,14 @@
         "answer": "eine längere Vertragslaufzeit",
         "explanationAr": "الدليل: «unter der Bedingung einer längeren Vertragslaufzeit». الفخّ 1: تقصير مدّة التسليم شرط المشتري. الفخّ 2: الـ5٪ عرض المشتري مقابل ذلك الشرط.",
         "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "promptAr": "ما الشرط الذي يضعه المورّد؟"
       }
     ],
     "dictation": [
-      "Angesichts der Marktlage halten wir unser Angebot für fair.",
-      "Sofern Sie die Lieferfrist verkürzen, wären wir zu 5 Prozent mehr bereit.",
-      "Unter der Bedingung einer längeren Vertragslaufzeit."
+      "Die von Ihnen angebotenen Konditionen decken unsere Kosten kaum.",
+      "Das können wir prüfen. Dann machen wir nächste Woche weiter."
     ],
-    "cultural_theme": "Ostern - Easter celebrations",
-    "cultural_note": "Theme: Ostern - Easter celebrations"
+    "cultural_theme": "Vertragsverhandlung"
   },
   {
     "id": "d-a1-08",
@@ -2369,37 +2359,36 @@
         "promptDe": "Was kritisiert Layla?",
         "options": [
           "die Methode der Studie",
+          "die zu kleine Stichprobe",
           "die Verallgemeinerung durch die Dozentin",
-          "den fehlenden Abschnitt im Paper",
-          "die zu kleine Stichprobe"
+          "den fehlenden Abschnitt im Paper"
         ],
         "answer": "die zu kleine Stichprobe",
         "explanationAr": "الدليل: «Methodisch stark, aber die Stichprobe ist zu klein». الفخّ 1: المنهج مدحته. الفخّ 2: التعميم مشكلةٌ في الدراسة لا فعل الأستاذة. الفخّ 3: القسم الناقص هو ما ستضيفه هي.",
         "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "promptAr": "ما نقطة الضعف التي تراها ليلى في الدراسة؟"
       },
       {
         "id": "d-b2-08-q2",
         "type": "mc",
         "promptDe": "Was wird Layla ergänzen?",
         "options": [
-          "einen Abschnitt über die Grenzen der Forschung",
           "eine größere Stichprobe",
           "eine Kritik an der Methode",
+          "einen Abschnitt über die Grenzen der Forschung",
           "eine Bewertung der Dozentin"
         ],
         "answer": "einen Abschnitt über die Grenzen der Forschung",
         "explanationAr": "الدليل: «ich ergänze einen Abschnitt über die Grenzen der Forschung». الفخّ 1: العيّنة الصغيرة هي ما انتقدت لا ما ستضيف. الفخّ 2: المنهج قوي في رأيها. الفخّ 3: الأستاذة هي من تسأل عن التقييم.",
         "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "promptAr": "ماذا ستضيف ليلى إلى الورقة؟"
       }
     ],
     "dictation": [
       "Methodisch stark, aber die Stichprobe ist zu klein.",
-      "Die Ergebnisse lassen sich kaum verallgemeinern."
+      "Ja, ich ergänze einen Abschnitt über die Grenzen der Forschung."
     ],
-    "cultural_theme": "Umwelt - Environmental awareness",
-    "cultural_note": "Theme: Umwelt - Environmental awareness"
+    "cultural_theme": "Wissenschaftliches Arbeiten"
   },
   {
     "id": "d-b2-09",
@@ -2444,15 +2433,15 @@
         "type": "mc",
         "promptDe": "Warum hat sich Sami beworben?",
         "options": [
-          "wegen der Einarbeitung in den ersten Wochen",
           "wegen der nachhaltigen Projekte",
+          "wegen der Einarbeitung in den ersten Wochen",
           "weil er unter Druck ruhig bleibt",
           "wegen der Personalchefin"
         ],
         "answer": "wegen der nachhaltigen Projekte",
         "explanationAr": "الدليل: «Ihre Firma arbeitet an nachhaltigen Projekten – genau das interessiert mich». الفخّ 1: الـEinarbeitung سؤاله في النهاية. الفخّ 2: الهدوء تحت الضغط جواب سؤال آخر (نقطة قوّته).",
         "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "promptAr": "لماذا تقدّم سامي إلى هذه الشركة؟"
       },
       {
         "id": "d-b2-09-q2",
@@ -2460,21 +2449,21 @@
         "promptDe": "Was ist seine größte Stärke laut Text?",
         "options": [
           "Interesse an Nachhaltigkeit",
-          "schnelle Einarbeitung",
           "strukturiertes Arbeiten und Ruhe unter Druck",
+          "schnelle Einarbeitung",
           "dass er viele Fragen stellt"
         ],
         "answer": "strukturiertes Arbeiten und Ruhe unter Druck",
         "explanationAr": "الدليل: «Ich arbeite strukturiert und bleibe auch unter Druck ruhig». الفخّ 1: الاستدامة سبب تقدّمه لا قوّته. الفخّ 2: الـEinarbeitung شيء يسأل عنه.",
         "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "promptAr": "ما نقطة القوة التي يذكرها سامي؟"
       }
     ],
     "dictation": [
-      "Was ist Ihre größte Stärke?",
-      "Ich arbeite strukturiert und bleibe auch unter Druck ruhig."
+      "Ihre Firma arbeitet an nachhaltigen Projekten – genau das interessiert mich.",
+      "Ja: Wie sieht die Einarbeitung in den ersten Wochen aus?"
     ],
-    "cultural_theme": "Environment"
+    "cultural_theme": "Bewerbung"
   },
   {
     "id": "d-b1-10",
@@ -4181,13 +4170,13 @@
       },
       {
         "who": "Personalchefin",
-        "de": "Ebenso. Was schwebt Ihnen tariflich vor?",
-        "ar": "وكذلك. وما الأجرُ الذي يخطرُ ببالكم؟"
+        "de": "Ebenso. Welche Gehaltsvorstellung haben Sie?",
+        "ar": "وأنا كذلك. ما تصوّركم للراتب؟"
       },
       {
         "who": "Youssef",
         "de": "Angesichts meiner Erfahrung käme ich auf 48.000 Euro brutto.",
-        "ar": "في ضوءِ خبرتي، أبلغُ 48.000 يورو إجماليّاً (ثمانيةً وأربعين ألفاً)."
+        "ar": "في ضوء خبرتي، أتصور راتباً إجمالياً قدره 48.000 يورو."
       },
       {
         "who": "Personalchefin",
@@ -4196,8 +4185,8 @@
       },
       {
         "who": "Youssef",
-        "de": "Auf der Zahl bestehe ich nicht — aber die Weiterbildungszeit zähle ich als Leistung.",
-        "ar": "لستُ مُصمِّماً على الرقم — لكني أَعُدُّ وقتَ تدريبي أداءً."
+        "de": "Auf der Zahl bestehe ich nicht — wichtig ist mir aber vertraglich zugesicherte Weiterbildungszeit.",
+        "ar": "لست متمسكاً بالرقم، لكن يهمني أن يضمن العقد وقتاً للتدريب المستمر."
       },
       {
         "who": "Personalchefin",
@@ -4228,7 +4217,7 @@
         "answer": "45.500 Euro mit Homeoffice und Weiterbildungsbudget",
         "explanationAr": "الدليل: «Dann 45.500, zwei Tage Homeoffice und 400 Euro Weiterbildungsbudget» ثم «Abgemacht». الفخّ 1: 48.000 مطلبه الأوّل الذي لم يُصرّ عليه. الفخّ 2: 45.000 + variabel العرض الأوّل قبل التحسين.",
         "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "promptAr": "على أي حزمة ينتهي التفاوض؟"
       },
       {
         "id": "d-b2-10-q2",
@@ -4237,12 +4226,12 @@
         "options": [
           "eine Probezeit von höchstens drei Monaten",
           "zwei Tage Homeoffice",
-          "dass die Weiterbildungszeit bezahlt wird"
+          "vertraglich zugesicherte Weiterbildungszeit"
         ],
         "answer": "eine Probezeit von höchstens drei Monaten",
-        "explanationAr": "الدليل: «Sofern der Vertrag die Probezeit auf drei Monate begrenzt». الفخّ 1: الهوم أوفيس عرض من الرئيسة لا شرط منه. الفخّ 2: وقت التكوين يريده أن يُحتسب «als Leistung» لا أن يُدفع.",
+        "explanationAr": "الدليل: «Sofern der Vertrag die Probezeit auf drei Monate begrenzt». الفخّ 1: العمل المنزلي جزء من عرض المسؤولة. الفخّ 2: وقت التدريب مهم ليوسف، لكنه ليس شرطه الأخير لإتمام الاتفاق.",
         "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "promptAr": "ما الشرط الأخير الذي يضعه يوسف؟"
       },
       {
         "id": "d-b2-10-q3",
@@ -4256,794 +4245,790 @@
         "answer": "die Zusage über den gesamten Kompromiss",
         "explanationAr": "الدليل: «die Zusage bekommen Sie schriftlich morgen Vormittag» بعد الاتفاق على الكلّ. الفخّ: الجزء المتغيّر كان في العرض الأوّل الذي استُبدل.",
         "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "promptAr": "ماذا سترسل مسؤولة التوظيف خطياً؟"
       }
     ],
     "dictation": [
-      "Auf der Zahl bestehe ich nicht — aber die Weiterbildungszeit zähle ich als Leistung.",
-      "Sofern der Vertrag die Probezeit auf drei Monate begrenzt, haben wir eine Übereinkunft."
+      "Ebenso. Welche Gehaltsvorstellung haben Sie?",
+      "Abgemacht — die Zusage bekommen Sie schriftlich morgen Vormittag."
     ],
-    "cultural_theme": "Umwelt - Environmental awareness",
-    "cultural_note": "Theme: Umwelt - Environmental awareness"
+    "cultural_theme": "Gehaltsverhandlung"
   },
   {
     "id": "d-b2-11",
     "level": "B2",
-    "titleDe": "Mieterhöhung: schriftlich verhandeln",
-    "titleAr": "زيادةُ الإيجار: تفاوُضٌ خطّي",
+    "titleDe": "Mieterhöhung: Unterlagen prüfen",
+    "titleAr": "زيادة الإيجار: فحص المستندات",
     "lines": [
       {
         "who": "Amel",
-        "de": "Die angekündigte Erhöhung um 15 Prozent übersteigt die ortsübliche Miete.",
-        "ar": "الزيادةُ المعلَنةُ بخمسةَ عشرَ بالمئةِ تتجاوزُ الإيجارَ المعتادَ محليًّا."
+        "de": "Die angekündigte Mieterhöhung überrascht mich. Auf welche Begründung stützt sie sich?",
+        "ar": "فاجأتني زيادة الإيجار المعلنة. إلى أي تعليل تستند؟"
       },
       {
         "who": "Hausverwaltung",
-        "de": "Unsere Belege: Mietspiegel und Wirtschaftlichkeitsberechnung.",
-        "ar": "أدلتُنا: مؤشّرُ الإيجاراتِ وحسابُ الجدوى الاقتصادية."
+        "de": "Im Schreiben nennen wir den örtlichen Mietspiegel; Berechnung und Voraussetzungen sollten Sie in Ruhe prüfen.",
+        "ar": "نذكر في الخطاب مؤشر الإيجارات المحلي، وينبغي لكم فحص الحساب والشروط على مهل."
       },
       {
         "who": "Amel",
-        "de": "Genau der Mietspiegel zeigt: in unserem Markt gilt die Kappungsgrenze von fünfzehn Prozent in drei Jahren.",
-        "ar": "مؤشّرُ الإيجارات نفسُه يُظهر أنّ سقفَ الزيادة في سوقنا هو خمسةَ عشرَ بالمئة خلال ثلاث سنوات."
+        "de": "Ich möchte weder eine Frist noch eine Rechtsfolge erraten. Wo kann ich die Angaben unabhängig prüfen lassen?",
+        "ar": "لا أريد تخمين مهلة أو أثر قانوني. أين يمكنني التحقق من البيانات بصورة مستقلة؟"
       },
       {
         "who": "Hausverwaltung",
-        "de": "Stimmt — Ihr Brief errechnet korrekt; wir korrigieren auf 9,8 Prozent.",
-        "ar": "صحيح — حسابُ رسالتكم سليم؛ فنُصحِّحُ إلى تسعةٍ فاصلةَ ثمانية بالمئة."
+        "de": "Zum Beispiel bei einer Mieterberatung oder einer rechtsberatenden Stelle; verbindlich ist, was für Ihren Vertrag und Ort aktuell gilt.",
+        "ar": "مثلاً لدى جهة استشارة للمستأجرين أو جهة تقدم مشورة قانونية؛ والملزم هو ما يسري حالياً على عقدكم ومكانكم."
       },
       {
         "who": "Amel",
-        "de": "Zusätzlich wünsche ich ein Protokoll über die Nebenkostenabrechnung.",
-        "ar": "وزيادةً على ذلك أطلبُ محضرًا لتسويةِ النفقاتِ الجانبية."
+        "de": "Zusätzlich fehlen mir Belege zur Nebenkostenabrechnung.",
+        "ar": "إضافة إلى ذلك، تنقصني مستندات تسوية التكاليف الجانبية."
       },
       {
         "who": "Hausverwaltung",
-        "de": "Das Protokoll folgt binnen vierzehn Tagen samt Belegen.",
-        "ar": "يُرسلُ المحضرُ خلالَ أربعةَ عشرَ يوماً مع الأدلة."
+        "de": "Wir senden die vorhandenen Belege und erklären, wie Sie Einsicht nehmen können.",
+        "ar": "سنرسل المستندات المتاحة ونوضح كيف يمكنكم الاطلاع عليها."
       },
       {
         "who": "Amel",
-        "de": "Sofern alles eintrifft, akzeptiere ich den neuen Betrag zum Ersten.",
-        "ar": "بشرطِ وصولِ كلِّ شيءٍ أقبلُ المبلغَ الجديدَ أولَ الشهر."
+        "de": "Ich bestätige nur den Erhalt. Über eine Zustimmung entscheide ich nach der Prüfung.",
+        "ar": "سأؤكد الاستلام فقط، وأقرر الموافقة بعد الفحص."
       },
       {
         "who": "Hausverwaltung",
-        "de": "Per Mail bestätigt — danke für die sachliche Gesprächsführung.",
-        "ar": "مؤكَّدٌ بالبريد — شكرًا على إدارةِ النقاشِ بموضوعيةٍ."
+        "de": "Das halten wir schriftlich fest; diese Übung ersetzt keine Rechtsberatung.",
+        "ar": "سنثبت ذلك كتابةً؛ وهذا التدريب لا يحل محل الاستشارة القانونية."
       }
     ],
     "questions": [
       {
         "id": "d-b2-11-q1",
         "type": "mc",
-        "promptDe": "Worauf beruft sich Amel?",
+        "promptDe": "Worauf verweist die Verwaltung in ihrem Schreiben?",
+        "promptAr": "إلى ماذا تشير الإدارة في خطابها؟",
         "options": [
-          "auf die Wirtschaftlichkeitsberechnung der Verwaltung",
-          "auf die Nebenkostenabrechnung",
-          "auf den Mietspiegel und die Kappungsgrenze"
+          "auf eine bereits erteilte Rechtsberatung",
+          "auf Amels sofortige Zustimmung",
+          "auf den örtlichen Mietspiegel"
         ],
-        "answer": "auf den Mietspiegel und die Kappungsgrenze",
-        "explanationAr": "الدليل: «Genau der Mietspiegel zeigt: in unserem Markt gilt die Kappungsgrenze von fünfzehn Prozent in drei Jahren» — سقف الزيادة حسب المادة 558 الفقرة 3 من القانون المدني هو 20٪ عموماً و15٪ في المناطق ذات السوق الإيجاري المشدود (كبرلين وهامبورغ ومدن أخرى بمراسيم محلية). الفخّ 1: حسابُ الجدوى الاقتصادية دليلُ الإدارة لا حجّةُ المستأجرة. الفخّ 2: تسوية النفقات الجانبية طلب إضافي.",
-        "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "answer": "auf den örtlichen Mietspiegel",
+        "explanationAr": "الدليل: «Im Schreiben nennen wir den örtlichen Mietspiegel». الفخّان: لم تُقدَّم استشارة قانونية ولم توافق أمل بعد.",
+        "falle": true
       },
       {
         "id": "d-b2-11-q2",
         "type": "mc",
-        "promptDe": "Was folgt nach dem Brief?",
+        "promptDe": "Wo will Amel die Angaben unabhängig prüfen lassen?",
+        "promptAr": "أين تريد أمل التحقق من البيانات بصورة مستقلة؟",
         "options": [
-          "eine korrigierte Forderung von 9,8 Prozent plus Protokoll",
-          "eine Erhöhung um 15 Prozent",
-          "eine Erhöhung um zwanzig Prozent"
+          "bei einer Mieterberatung oder rechtsberatenden Stelle",
+          "nur bei der Hausverwaltung",
+          "anhand einer geratenen Frist"
         ],
-        "answer": "eine korrigierte Forderung von 9,8 Prozent plus Protokoll",
-        "explanationAr": "الدليل: «wir korrigieren auf 9,8 Prozent» و«Das Protokoll folgt binnen vierzehn Tagen». الفخّ 1: 15٪ هي الزيادة الأصلية المطلوبة قبل التصحيح وهي في هذه الحالة السقف النظامي لا المبلغ المقبول. الفخّ 2: 20٪ هو السقف العام في المادة 558 الفقرة 3 BGB خارج المناطق المشدودة، لا المبلغ المصحَّح إليه.",
-        "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "answer": "bei einer Mieterberatung oder rechtsberatenden Stelle",
+        "explanationAr": "الدليل: تقترح الإدارة جهة استشارة للمستأجرين أو جهة تقدم مشورة قانونية. التخمين والإدارة وحدها لا يحققان الاستقلال. الفخّ: البدائل الأخرى تعمم قاعدة أو نتيجة لا يثبتها الحوار.",
+        "falle": true
       },
       {
         "id": "d-b2-11-q3",
         "type": "mc",
-        "promptDe": "Wann akzeptiert Amel die neue Miete?",
+        "promptDe": "Was bestätigt Amel zunächst?",
+        "promptAr": "ماذا تؤكد أمل في البداية؟",
         "options": [
-          "sofort nach dem Gespräch",
-          "wenn Protokoll und Belege eingetroffen sind",
-          "nach vierzehn Tagen, ohne Bedingung"
+          "die Zustimmung vor der Prüfung",
+          "nur den Erhalt",
+          "die vorhandenen Belege"
         ],
-        "answer": "wenn Protokoll und Belege eingetroffen sind",
-        "explanationAr": "الدليل: «Sofern alles eintrifft, akzeptiere ich den neuen Betrag zum Ersten». الفخّ: «vierzehn Tage» مهلة المحضر لا موعد القبول؛ القبول مشروط بـ«sofern».",
-        "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "answer": "nur den Erhalt",
+        "explanationAr": "الدليل: «Ich bestätige nur den Erhalt». وهي تؤجل قرار الموافقة إلى ما بعد الفحص. الفخّ: البدائل الأخرى تعمم قاعدة أو نتيجة لا يثبتها الحوار.",
+        "falle": true
       }
     ],
     "dictation": [
-      "Zusätzlich wünsche ich ein Protokoll über die Nebenkostenabrechnung.",
-      "Stimmt — Ihr Brief errechnet korrekt; wir korrigieren auf 9,8 Prozent."
+      "Im Schreiben nennen wir den örtlichen Mietspiegel; Berechnung und Voraussetzungen sollten Sie in Ruhe prüfen.",
+      "Das halten wir schriftlich fest; diese Übung ersetzt keine Rechtsberatung."
     ],
-    "cultural_theme": "Umwelt - Environmental awareness",
-    "cultural_note": "Theme: Umwelt - Environmental awareness"
+    "cultural_theme": "Mietrechtliche Orientierung"
   },
   {
     "id": "d-b2-12",
     "level": "B2",
-    "titleDe": "Anerkennung des ausländischen Abschlusses",
-    "titleAr": "اعترافٌ بالشهادةِ الأجنبية",
+    "titleDe": "Anerkennung eines ausländischen Abschlusses",
+    "titleAr": "الاعتراف بمؤهل أجنبي",
     "lines": [
       {
         "who": "Mehdi",
-        "de": "Mein tunesisches Ingenieurdiplom soll anerkannt werden — welche Dokumente?",
-        "ar": "أُريدُ الاعترافَ بشهادةِ الهندسةِ التونسية — ما الوثائق؟"
+        "de": "Ich möchte mein tunesisches Ingenieurdiplom anerkennen lassen. Welche Stelle ist zuständig?",
+        "ar": "أريد طلب الاعتراف بشهادة الهندسة التونسية. ما الجهة المختصة؟"
       },
       {
         "who": "Sachbearbeiterin",
-        "de": "Beglaubigte Übersetzung, Fächerübersicht, Nachweis praktischer Tätigkeiten.",
-        "ar": "ترجمةٌ مُصدَّق عليها، وقائمةُ الموادِّ الدراسية، وإثباتُ الخبرةِ العملية."
+        "de": "Zuerst prüfen Sie im offiziellen Anerkennungsportal, ob der konkrete Beruf reglementiert ist und welche Stelle für Ihren Fall zuständig ist.",
+        "ar": "تحققوا أولاً في بوابة الاعتراف الرسمية مما إذا كانت المهنة المحددة منظَّمة ومن الجهة المختصة بحالتكم."
       },
       {
         "who": "Mehdi",
-        "de": "Wie lange dauert die Prüfung, und kann ich währenddessen arbeiten?",
-        "ar": "كم يستغرقُ فحصُ الطلب، وهل يحقُّ لي العملُ خلاله؟"
+        "de": "Welche Unterlagen und Übersetzungen muss ich einreichen?",
+        "ar": "ما المستندات والترجمات التي يجب علي تقديمها؟"
       },
       {
         "who": "Sachbearbeiterin",
-        "de": "Regulär drei Monate; mit Ihrer Berufserlaubnis im Warteverfahren — ja, eingeschränkt.",
-        "ar": "ثلاثةُ أشهر نظاماً؛ وبإذنِ مزاولةِ المهنة في وضعِ الانتظار — نعم، عملٌ مقيَّد."
+        "de": "Nutzen Sie die aktuelle Liste der zuständigen Stelle; reichen Sie Übersetzungen oder Beglaubigungen nur in der dort verlangten Form ein.",
+        "ar": "استخدموا القائمة الحالية للجهة المختصة، وقدّموا الترجمات أو التصديقات بالشكل الذي تطلبه تلك الجهة فقط."
       },
       {
         "who": "Mehdi",
-        "de": "Und wenn die Gleichwertigkeit teilweise verneint wird?",
-        "ar": "وإن حُكِمَ بعدمِ التكافؤِ جزئياً؟"
+        "de": "Darf ich während des Verfahrens schon in dem Beruf arbeiten?",
+        "ar": "هل يجوز لي العمل في المهنة أثناء الإجراء؟"
       },
       {
         "who": "Sachbearbeiterin",
-        "de": "Dann bekommen Sie einen Anpassungslehrgang zugewiesen, höchstens 16 Monate Praxis.",
-        "ar": "يُسنَدُ إليكم دورةٌ تكييفية، أقصاها ستةَ عشرَ شهراً من الممارسةِ العملية."
+        "de": "Das hängt von Beruf, Aufenthalts- und Arbeitserlaubnis ab. Klären Sie es verbindlich mit den zuständigen Behörden; der Antrag allein ist keine Erlaubnis.",
+        "ar": "يتوقف ذلك على المهنة وإذن الإقامة والعمل. تحققوا بصورة ملزمة لدى الجهات المختصة؛ فالطلب وحده ليس تصريحاً."
       },
       {
         "who": "Mehdi",
-        "de": "Die Gebühren sind mir unklar — wer trägt sie bei Erfolg?",
-        "ar": "الرسومُ غيرُ واضحة — ومَن يتحمَّلُها عند النجاح؟"
+        "de": "Und wenn wesentliche Unterschiede festgestellt werden?",
+        "ar": "وماذا إذا ثَبَت وجود فروق جوهرية؟"
       },
       {
         "who": "Sachbearbeiterin",
-        "de": "400 Euro Vorauszahlung; die Erstattung richtet sich nach dem Landrecht.",
-        "ar": "400 يورو دفعةً مقدَّمة؛ والاستردادُ بحسبِ قانونِ الولاية."
+        "de": "Dann erläutert der Bescheid die festgestellten Unterschiede und mögliche Ausgleichsmaßnahmen, soweit die geltenden Regeln sie vorsehen.",
+        "ar": "عندئذ يوضح القرار الفروق المثبتة وإجراءات التعويض الممكنة، بقدر ما تنص عليها القواعد السارية."
       }
     ],
     "questions": [
       {
         "id": "d-b2-12-q1",
         "type": "mc",
-        "promptDe": "Was muss Mehdi beibringen?",
+        "promptDe": "Was soll Mehdi zuerst im offiziellen Portal prüfen?",
+        "promptAr": "ما الذي ينبغي لمهدي التحقق منه أولاً في البوابة الرسمية؟",
         "options": [
-          "nur das tunesische Ingenieurdiplom",
-          "eine Berufserlaubnis aus Tunesien",
-          "beglaubigte Übersetzung, Fächerübersicht und Praxisnachweis"
+          "die Liste der Unterlagen",
+          "eine Arbeitserlaubnis durch den Antrag",
+          "Reglementierung und zuständige Stelle"
         ],
-        "answer": "beglaubigte Übersetzung, Fächerübersicht und Praxisnachweis",
-        "explanationAr": "الدليل: «Beglaubigte Übersetzung, Fächerübersicht, Nachweis praktischer Tätigkeiten». الفخّ: الـBerufserlaubnis يحصل عليها هنا أثناء الانتظار، لا وثيقة يقدّمها.",
-        "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "answer": "Reglementierung und zuständige Stelle",
+        "explanationAr": "الدليل: عليه التحقق مما إذا كانت المهنة منظَّمة ومن الجهة المختصة. لا يذكر الحوار مدة عامة ولا تصريحاً تلقائياً. الفخّ: البدائل الأخرى تعمم قاعدة أو نتيجة لا يثبتها الحوار.",
+        "falle": true
       },
       {
         "id": "d-b2-12-q2",
         "type": "mc",
-        "promptDe": "Arbeiten im Warteverfahren?",
+        "promptDe": "Wonach richtet sich die einzureichende Form?",
+        "promptAr": "ما الذي يحدد شكل المستندات المطلوب تقديمها؟",
         "options": [
-          "eingeschränkt, mit Berufserlaubnis",
-          "ja, regulär ab dem dritten Monat",
-          "erst nach dem Anpassungslehrgang"
+          "nach der aktuellen Liste der zuständigen Stelle",
+          "nach einer beliebigen Übersetzung",
+          "nach dem Antrag allein"
         ],
-        "answer": "eingeschränkt, mit Berufserlaubnis",
-        "explanationAr": "الدليل: «mit Ihrer Berufserlaubnis im Warteverfahren — ja, eingeschränkt». الفخّ 1: «Regulär drei Monate» مدّة الفحص لا موعد بدء العمل. الفخّ 2: الـAnpassungslehrgang يأتي فقط إذا رُفضت المعادلة جزئياً.",
-        "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "answer": "nach der aktuellen Liste der zuständigen Stelle",
+        "explanationAr": "الدليل: تُستخدم القائمة الحالية وتُقدَّم الترجمات والتصديقات بالشكل المطلوب فيها. الفخّ: البدائل الأخرى تعمم قاعدة أو نتيجة لا يثبتها الحوار.",
+        "falle": true
       },
       {
         "id": "d-b2-12-q3",
         "type": "mc",
-        "promptDe": "Wie lang maximal der Anpassungslehrgang?",
+        "promptDe": "Was bedeutet der Anerkennungsantrag für die Arbeitserlaubnis?",
+        "promptAr": "ماذا يعني طلب الاعتراف بالنسبة إلى تصريح العمل؟",
         "options": [
-          "drei Monate",
-          "höchstens 16 Monate",
-          "16 Wochen Praxis"
+          "Er erlaubt jede Tätigkeit sofort.",
+          "Er ist allein keine Arbeitserlaubnis.",
+          "Er ersetzt die Klärung mit den Behörden."
         ],
-        "answer": "höchstens 16 Monate",
-        "explanationAr": "الدليل: «Anpassungslehrgang … höchstens 16 Monate Praxis». الفخّ 1: ثلاثة أشهر مدّة فحص الطلب. الفخّ 2: «Wochen» تبديل الوحدة مع الرقم الصحيح.",
-        "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "answer": "Er ist allein keine Arbeitserlaubnis.",
+        "explanationAr": "الدليل: «der Antrag allein ist keine Erlaubnis». ويلزم التحقق بحسب المهنة ووضع الإقامة والعمل. الفخّ: البدائل الأخرى تعمم قاعدة أو نتيجة لا يثبتها الحوار.",
+        "falle": true
       }
     ],
     "dictation": [
-      "Dann bekommen Sie einen Anpassungslehrgang zugewiesen, höchstens 16 Monate Praxis.",
-      "Regulär drei Monate; mit Ihrer Berufserlaubnis im Warteverfahren — ja, eingeschränkt."
+      "Zuerst prüfen Sie im offiziellen Anerkennungsportal, ob der konkrete Beruf reglementiert ist und welche Stelle für Ihren Fall zuständig ist.",
+      "Dann erläutert der Bescheid die festgestellten Unterschiede und mögliche Ausgleichsmaßnahmen, soweit die geltenden Regeln sie vorsehen."
     ],
-    "cultural_theme": "Environment"
+    "cultural_theme": "Berufsanerkennung"
   },
   {
     "id": "d-b2-13",
     "level": "B2",
-    "titleDe": "Elterngeld: Antrag und Beratung",
-    "titleAr": "بدلُ الوالدية: طلبٌ ومشورة",
+    "titleDe": "Elterngeld: aktuelle Regeln klären",
+    "titleAr": "بدل الوالدية: التحقق من القواعد الحالية",
     "lines": [
       {
         "who": "Selma",
-        "de": "Ich beantrage Elterngeld ab April — welche Fristen gelten?",
-        "ar": "أقدِّمُ طلبَ بدلِ الوالدية من أبريل — ما المهل؟"
+        "de": "Ich plane Elterngeld ab April. Wo prüfe ich die aktuellen Fristen und die mögliche Rückwirkung?",
+        "ar": "أخطط لبدل الوالدية من أبريل. أين أتحقق من المهل الحالية وإمكان الأثر الرجعي؟"
       },
       {
         "who": "Beraterin",
-        "de": "spätestens drei Monate nach der Geburt; rückwirkend nur für drei.",
-        "ar": "أقصاها ثلاثةُ أشهرٍ بعدَ الولادة، بأثرٍ رجعيٍّ لثلاثةِ أشهرٍ فحسب."
+        "de": "Bei der zuständigen Elterngeldstelle und im aktuellen offiziellen Informationsangebot; aus diesem Übungsdialog lässt sich keine Frist ableiten.",
+        "ar": "لدى مكتب بدل الوالدية المختص وفي المعلومات الرسمية الحالية؛ ولا يمكن استنتاج مهلة من هذا الحوار التدريبي."
       },
       {
         "who": "Selma",
-        "de": "Mein Mann und ich teilen die Monate — wie wirkt sich Partnerschaftsbonus aus?",
-        "ar": "نتقاسمُ الأشهر أنا وزوجي، فكيف تعملُ مكافأةُ الشراكة؟"
+        "de": "Mein Mann und ich möchten die Monate aufteilen. Welche Modelle kommen infrage?",
+        "ar": "نريد أنا وزوجي تقسيم الأشهر. ما النماذج الممكنة؟"
       },
       {
         "who": "Beraterin",
-        "de": "Vier Monate gleichzeitig plus Bonus: je zwei Monate obendrauf für beide.",
-        "ar": "أربعةُ أشهرٍ متزامنةٌ زائدَ مكافأة: شهرانِ لكلٍّ منكما."
+        "de": "Basiselterngeld, ElterngeldPlus und ein möglicher Partnerschaftsbonus haben unterschiedliche Voraussetzungen. Lassen Sie Ihren Plan individuell prüfen.",
+        "ar": "للبدل الأساسي وبدل الوالدية بلس ومكافأة الشراكة المحتملة شروط مختلفة. اطلبوا فحص خطتكم بصورة فردية."
       },
       {
         "who": "Selma",
-        "de": "Die Berechnung basiert auf dem Netto der letzten zwölf Monate?",
-        "ar": "هل تُحسَب على صافي دخل الاثني عشرَ شهراً الماضية؟"
+        "de": "Wird immer einfach das Netto der letzten zwölf Monate verwendet?",
+        "ar": "هل يُستخدم دائماً صافي دخل الأشهر الاثني عشر الأخيرة ببساطة؟"
       },
       {
         "who": "Beraterin",
-        "de": "Ja — unteres Einkommen wird prozentual stärker ersetzt, bis 67 Prozent.",
-        "ar": "نعم — الدخلُ الأدنى يُعوَّضُ بنسبةٍ أعلى، حتى سبعةٍ وستين بالمئة."
+        "de": "Nein. Die Stelle bestimmt den gesetzlichen Bemessungszeitraum und berücksichtigt mögliche Ausnahmen.",
+        "ar": "لا. تحدد الجهة فترة الاحتساب القانونية وتراعي الاستثناءات المحتملة."
       },
       {
         "who": "Selma",
-        "de": "Wo lade ich die Lohnbelege hoch, und in welchem Format?",
-        "ar": "أين أرفعُ كشوفَ الرواتبِ وبأي صيغة؟"
+        "de": "Welche Belege soll ich hochladen?",
+        "ar": "ما المستندات التي ينبغي لي رفعها؟"
       },
       {
         "who": "Beraterin",
-        "de": "Im Portal als PDF, je Monat ein Dokument — Scans ohne Stempel akzeptieren wir nicht.",
-        "ar": "في البوابة بصيغة PDF، مستنداً لكل شهر — وأما المسوحاتُ بلا ختمٍ فلا نقبلها."
+        "de": "Folgen Sie der aktuellen Checkliste und dem sicheren Portal der zuständigen Stelle; reichen Sie keine unnötigen persönlichen Daten ein.",
+        "ar": "اتبعوا القائمة الحالية والبوابة الآمنة للجهة المختصة، ولا تقدموا بيانات شخصية غير ضرورية."
       }
     ],
     "questions": [
       {
         "id": "d-b2-13-q1",
         "type": "mc",
-        "promptDe": "Wie lange rückwirkend?",
+        "promptDe": "Wo prüft Selma die aktuellen Fristen?",
+        "promptAr": "أين تتحقق سلمى من المهل الحالية؟",
         "options": [
-          "zwölf Monate",
-          "vier Monate",
-          "drei Monate"
+          "im sicheren Portal",
+          "in diesem Übungsdialog",
+          "bei der zuständigen Elterngeldstelle und im offiziellen Angebot"
         ],
-        "answer": "drei Monate",
-        "explanationAr": "الدليل: «rückwirkend nur für drei». الفخّ 1: 12 شهراً هي فترة حساب الدخل. الفخّ 2: 4 أشهر هي فترة الحصول المتزامن مع الشريك.",
-        "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "answer": "bei der zuständigen Elterngeldstelle und im offiziellen Angebot",
+        "explanationAr": "الدليل: تُحال سلمى إلى الجهة المختصة والمعلومات الرسمية الحالية، لا إلى رقم ثابت في تمرين. الفخّ: البدائل الأخرى تعمم قاعدة أو نتيجة لا يثبتها الحوار.",
+        "falle": true
       },
       {
         "id": "d-b2-13-q2",
         "type": "mc",
-        "promptDe": "Wie hoch maximal die Ersatzquote?",
+        "promptDe": "Warum soll der Aufteilungsplan individuell geprüft werden?",
+        "promptAr": "لماذا ينبغي فحص خطة تقسيم الأشهر بصورة فردية؟",
         "options": [
-          "67 Prozent",
-          "zwölf Prozent",
-          "zwei Prozent"
+          "weil die Modelle unterschiedliche Voraussetzungen haben",
+          "weil immer nur ein Modell erlaubt ist",
+          "weil stets die letzten zwölf Nettomonate gelten"
         ],
-        "answer": "67 Prozent",
-        "explanationAr": "الدليل: «bis 67 Prozent». الفخّان: 12 و2 أرقام وردت لأشهر (الدخل الأخير، الـBonus) لا لنِسَب.",
-        "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "answer": "weil die Modelle unterschiedliche Voraussetzungen haben",
+        "explanationAr": "الدليل: تختلف شروط النماذج، كما قد توجد استثناءات في فترة الاحتساب. الفخّ: البدائل الأخرى تعمم قاعدة أو نتيجة لا يثبتها الحوار.",
+        "falle": true
       },
       {
         "id": "d-b2-13-q3",
         "type": "mc",
-        "promptDe": "Welche Form für Belege?",
+        "promptDe": "Welche Unterlagen soll Selma einreichen?",
+        "promptAr": "ما المستندات التي ينبغي لسلمى تقديمها؟",
         "options": [
-          "ein PDF für alle Monate zusammen",
-          "je Monat ein PDF, mit Stempel",
-          "Scans ohne Stempel im Portal"
+          "alle persönlichen Daten",
+          "die laut aktueller Checkliste erforderlichen Belege",
+          "nur Belege aus dem Übungsdialog"
         ],
-        "answer": "je Monat ein PDF, mit Stempel",
-        "explanationAr": "الدليل: «als PDF, je Monat ein Dokument — Scans ohne Stempel akzeptieren wir nicht». الفخّ 1: ملف واحد للكلّ يخالف «je Monat». الفخّ 2: «ohne Stempel» هو المرفوض صراحةً.",
-        "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "answer": "die laut aktueller Checkliste erforderlichen Belege",
+        "explanationAr": "الدليل: تتبع القائمة الحالية ولا ترسل بيانات غير لازمة. لا يضع الحوار شرط ختم عامّاً. الفخّ: البدائل الأخرى تعمم قاعدة أو نتيجة لا يثبتها الحوار.",
+        "falle": true
       }
     ],
     "dictation": [
-      "Ja — unteres Einkommen wird prozentual stärker ersetzt, bis 67 Prozent.",
-      "Im Portal als PDF, je Monat ein Dokument — Scans ohne Stempel akzeptieren wir nicht."
+      "Bei der zuständigen Elterngeldstelle und im aktuellen offiziellen Informationsangebot; aus diesem Übungsdialog lässt sich keine Frist ableiten.",
+      "Folgen Sie der aktuellen Checkliste und dem sicheren Portal der zuständigen Stelle; reichen Sie keine unnötigen persönlichen Daten ein."
     ],
-    "cultural_theme": "Future plans"
+    "cultural_theme": "Familienleistungen"
   },
   {
     "id": "d-b2-14",
     "level": "B2",
-    "titleDe": "Steuererklärung: Frist und Fristverlängerung",
-    "titleAr": "الإقرارُ الضريبي: الميعادُ وتأجيلُه",
+    "titleDe": "Steuererklärung: aktuelle Frist prüfen",
+    "titleAr": "الإقرار الضريبي: التحقق من الموعد الحالي",
     "lines": [
       {
         "who": "Tarek",
-        "de": "Die Abgabefrist läuft — ich schaffe sie ohne Steuerberater nicht mehr.",
-        "ar": "مهلةُ التقديم قاربت على الانتهاء، ولن ألحقها دون مستشارٍ ضريبي."
+        "de": "Ich bin unsicher, wann meine Steuererklärung fällig ist.",
+        "ar": "لست متأكداً من موعد استحقاق إقراري الضريبي."
       },
       {
         "who": "Finanzamt-Hotline",
-        "de": "Mit Beratung verlängert sich die Frist automatisch bis April nächsten Jahres.",
-        "ar": "مع تعيين مستشارٍ ضريبي تُمدَّدُ المهلةُ تلقائياً إلى أبريل من العام القادم."
+        "de": "Die Frist hängt unter anderem vom Steuerjahr, von der Abgabepflicht und von einer möglichen Beratung ab. Prüfen Sie die aktuelle amtliche Auskunft für Ihren Fall.",
+        "ar": "تتوقف المهلة، من جملة أمور، على السنة الضريبية ووجوب التقديم والاستعانة المحتملة بمستشار. تحققوا من المعلومة الرسمية الحالية لحالتكم."
       },
       {
         "who": "Tarek",
-        "de": "Welche Nachweise für die Homeoffice-Pauschale sind nötig?",
-        "ar": "ما إثباتُ بدلِ العملِ المنزلي؟"
+        "de": "Welche Regel gilt für meine Arbeitstage im Homeoffice?",
+        "ar": "ما القاعدة التي تسري على أيام عملي من المنزل؟"
       },
       {
         "who": "Finanzamt-Hotline",
-        "de": "Arbeitszimmer-Grundriss, Verträge, Nebenkostenanteil — pauschal genügt der Nachweis der Nutzung.",
-        "ar": "مخططُ غرفة العمل، العقود، وحصةُ النفقات الجانبية؛ وفي نظام المبلغ المقطوع يكفي إثباتُ الاستعمال."
+        "de": "Nutzen Sie die aktuelle Erklärungshilfe; sie unterscheidet die jeweils geltenden Voraussetzungen und verlangt nur die dort genannten Angaben.",
+        "ar": "استخدموا دليل الإقرار الحالي؛ فهو يميز الشروط السارية ويطلب البيانات المذكورة فيه فقط."
       },
       {
         "who": "Tarek",
-        "de": "Die Vorauszahlung wurde erhöht — Widerspruch möglich?",
-        "ar": "زِيدَت الدفعةُ المقدَّمة — هل يمكنني الاعتراض؟"
+        "de": "Die Vorauszahlungen wurden geändert. Wie kann ich den Bescheid prüfen lassen?",
+        "ar": "عُدّلت الدفعات المقدمة. كيف يمكنني طلب فحص القرار؟"
       },
       {
         "who": "Finanzamt-Hotline",
-        "de": "Innerhalb eines Monats, aber nur mit geänderter Einkommensprognose.",
-        "ar": "خلالَ شهرٍ واحد، وبشرطِ توقُّعِ دخلٍ معدَّل."
+        "de": "Lesen Sie die Rechtsbehelfsbelehrung im Bescheid und holen Sie bei Bedarf Steuerberatung ein; Frist und Verfahren stehen dort.",
+        "ar": "اقرؤوا إرشادات الطعن في القرار، واستعينوا بمشورة ضريبية عند الحاجة؛ فالمهلة والإجراء مذكوران هناك."
       },
       {
         "who": "Tarek",
-        "de": "Reicht die Übermittlung über ELSTER als Nachweis des Eingangs?",
-        "ar": "هل يكفي الإرسالُ عبر ELSTER لإثباتِ الاستلام؟"
+        "de": "Wie dokumentiere ich eine Übermittlung über ELSTER?",
+        "ar": "كيف أوثق الإرسال عبر إلستر؟"
       },
       {
         "who": "Finanzamt-Hotline",
-        "de": "Ja, die Sendebestätigung aufheben — sie ist das einzige Quittungsdokument.",
-        "ar": "نعم — واحتفظوا بإشعارِ الإرسال، فهو مستندُ الاستلامِ الوحيد."
+        "de": "Speichern Sie das Übermittlungsprotokoll und prüfen Sie den angezeigten Status; was als Nachweis gilt, richtet sich nach dem konkreten Vorgang.",
+        "ar": "احفظوا محضر الإرسال وتحققوا من الحالة المعروضة؛ وما يُعد إثباتاً يتوقف على الإجراء المحدد."
       }
     ],
     "questions": [
       {
         "id": "d-b2-14-q1",
         "type": "mc",
-        "promptDe": "Wie wird die Frist verlängert?",
+        "promptDe": "Wovon hängt die Abgabefrist ab?",
+        "promptAr": "ممّ تتوقف مهلة تقديم الإقرار؟",
         "options": [
-          "durch einen Anruf bei der Hotline",
-          "durch eine geänderte Einkommensprognose",
-          "automatisch, wenn ein Steuerberater beauftragt ist"
+          "von einem festen Apriltermin für alle",
+          "nur von einem Anruf bei der Hotline",
+          "vom konkreten Steuerjahr und Fall"
         ],
-        "answer": "automatisch, wenn ein Steuerberater beauftragt ist",
-        "explanationAr": "الدليل: «Mit Beratung verlängert sich die Frist automatisch». الفخّ 1: الاتصال بالخطّ الساخن هو ما يفعله طارق الآن لا وسيلة التمديد. الفخّ 2: الـEinkommensprognose شرط الاعتراض على الدفعة المسبقة.",
-        "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "answer": "vom konkreten Steuerjahr und Fall",
+        "explanationAr": "الدليل: تختلف بحسب السنة ووجوب التقديم والاستشارة. لا يقرر الحوار تاريخاً موحداً. الفخّ: البدائل الأخرى تعمم قاعدة أو نتيجة لا يثبتها الحوار.",
+        "falle": true
       },
       {
         "id": "d-b2-14-q2",
         "type": "mc",
-        "promptDe": "Frist für den Widerspruch?",
+        "promptDe": "Wo findet Tarek Frist und Verfahren für einen Rechtsbehelf?",
+        "promptAr": "أين يجد طارق مهلة الطعن وإجراءه؟",
         "options": [
-          "ein Monat",
-          "bis April nächsten Jahres",
-          "es gibt keine Frist, nur die Prognose"
+          "in der Rechtsbehelfsbelehrung des Bescheids",
+          "im Übermittlungsprotokoll",
+          "in der aktuellen Erklärungshilfe"
         ],
-        "answer": "ein Monat",
-        "explanationAr": "الدليل: «Innerhalb eines Monats, aber nur mit geänderter Einkommensprognose». الفخّ 1: أبريل هو مهلة التصريح الممدّدة. الفخّ 2: التوقّع شرط إضافي لا بديل عن المهلة.",
-        "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "answer": "in der Rechtsbehelfsbelehrung des Bescheids",
+        "explanationAr": "الدليل: يُحال إلى إرشادات الطعن في القرار، مع مشورة متخصصة عند الحاجة. الفخّ: البدائل الأخرى تعمم قاعدة أو نتيجة لا يثبتها الحوار.",
+        "falle": true
       },
       {
         "id": "d-b2-14-q3",
         "type": "mc",
-        "promptDe": "Welches Dokument beweist den Eingang?",
+        "promptDe": "Was soll Tarek nach der ELSTER-Übermittlung sichern?",
+        "promptAr": "ماذا ينبغي لطارق حفظه بعد الإرسال عبر إلستر؟",
         "options": [
-          "eine Bestätigung des Steuerberaters",
-          "die Sendebestätigung von ELSTER",
-          "der Grundriss des Arbeitszimmers"
+          "die aktuelle Erklärungshilfe",
+          "das Übermittlungsprotokoll",
+          "den Bescheid"
         ],
-        "answer": "die Sendebestätigung von ELSTER",
-        "explanationAr": "الدليل: «die Sendebestätigung aufheben — sie ist das einzige Quittungsdokument». الفخّ: الـGrundriss دليل على غرفة العمل لا على الاستلام.",
-        "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "answer": "das Übermittlungsprotokoll",
+        "explanationAr": "الدليل: «Speichern Sie das Übermittlungsprotokoll und prüfen Sie den angezeigten Status». الفخّ: البدائل الأخرى تعمم قاعدة أو نتيجة لا يثبتها الحوار.",
+        "falle": true
       }
     ],
     "dictation": [
-      "Innerhalb eines Monats, aber nur mit geänderter Einkommensprognose.",
-      "Mit Beratung verlängert sich die Frist automatisch bis April nächsten Jahres."
+      "Die Frist hängt unter anderem vom Steuerjahr, von der Abgabepflicht und von einer möglichen Beratung ab. Prüfen Sie die aktuelle amtliche Auskunft für Ihren Fall.",
+      "Speichern Sie das Übermittlungsprotokoll und prüfen Sie den angezeigten Status; was als Nachweis gilt, richtet sich nach dem konkreten Vorgang."
     ],
-    "cultural_theme": "Future plans"
+    "cultural_theme": "Steuerliche Orientierung"
   },
   {
     "id": "d-b2-15",
     "level": "B2",
-    "titleDe": "Wasserschaden: mit der Versicherung",
-    "titleAr": "تلفُ الماء: مع شركةِ التأمين",
+    "titleDe": "Wasserschaden: Deckung schriftlich klären",
+    "titleAr": "ضرر المياه: التحقق الخطي من التغطية",
     "lines": [
       {
         "who": "Rim",
-        "de": "Seit gestern quillt Wasser aus der Decke — Schaden gemeldet, Nummer 7714.",
-        "ar": "منذ الأمس يتسرَّبُ الماءُ من السقف؛ وقد أبلغتُ عن الضرر، والرقم 7714."
+        "de": "Seit gestern tritt Wasser aus der Decke. Ich habe die Gefahrenstelle gesichert und den Schaden gemeldet.",
+        "ar": "يتسرب الماء من السقف منذ الأمس. أمّنت موضع الخطر وأبلغت عن الضرر."
       },
       {
         "who": "Sachbearbeiter",
-        "de": "Protokoll: Fotos, Uhrzeit, Handwerker-Notdienst bereits beauftragt?",
-        "ar": "في المحضر: صور، وقت، وهل استُدعيَ فنيُّ الطوارئ بالفعل؟"
+        "de": "Dokumentieren Sie, was sicher möglich ist, und beauftragen Sie bei akuter Gefahr den geeigneten Notdienst.",
+        "ar": "وثّقوا ما يمكن توثيقه بأمان، واستدعوا خدمة الطوارئ المناسبة عند وجود خطر عاجل."
       },
       {
         "who": "Rim",
-        "de": "Ja — die Rechnung über die Sofortmaßnahme reicht ein, nicht die Endrechnung.",
-        "ar": "نعم — تكفي فاتورةُ الإجراءِ الفوريّ لا الحسابُ النهائي."
+        "de": "Die Sofortmaßnahme ist erfolgt. Welche Rechnungen und Fotos soll ich einreichen?",
+        "ar": "نُفذ الإجراء الفوري. ما الفواتير والصور التي ينبغي تقديمها؟"
       },
       {
         "who": "Sachbearbeiter",
-        "de": "Wir regulieren nach dem Gutachtertermin, binnen zwei Wochen.",
-        "ar": "نُسوِّي المطالبةَ بعد موعد الخبير، خلال أسبوعين."
+        "de": "Reichen Sie die vorhandenen Belege unter der Schadennummer ein. Ob und in welchem Umfang Kosten gedeckt sind, ergibt sich erst aus Vertrag und Prüfung.",
+        "ar": "قدّموا المستندات المتاحة تحت رقم المطالبة. ولا تتحدد تغطية التكاليف ونطاقها إلا من العقد والفحص."
       },
       {
         "who": "Rim",
-        "de": "Und wenn der Vermieter den Mangel an der Hauptleitung trägt?",
-        "ar": "وإن كان الخللُ في الأنبوبِ الرئيسي على المؤجِّر؟"
+        "de": "Möglicherweise liegt die Ursache an einer Hauptleitung.",
+        "ar": "قد يكون السبب في أنبوب رئيسي."
       },
       {
         "who": "Sachbearbeiter",
-        "de": "Dann halten wir uns den Rückgriff vor; Sie bekommen Vorschuss.",
-        "ar": "نحتفظُ بحقِّ الرجوع على المؤجِّر؛ وستصلكم سلفةٌ الآن."
+        "de": "Die Verantwortlichkeit wird gesondert geklärt; ich kann weder einen Rückgriff noch eine Zahlung vor der Prüfung zusagen.",
+        "ar": "ستُبحث المسؤولية بصورة منفصلة؛ ولا أستطيع التعهد برجوع أو دفع قبل الفحص."
       },
       {
         "who": "Rim",
-        "de": "Mietausfall für die Trocknungszeit — zahlt die Versicherung?",
-        "ar": "فواتُ الإيجار أثناء مدة التجفيف — هل تدفعه التأمين؟"
+        "de": "Wie kläre ich Trocknung, Hotel und eine mögliche Mietminderung?",
+        "ar": "كيف أتحقق من التجفيف والفندق وإمكان تخفيض الإيجار؟"
       },
       {
         "who": "Sachbearbeiter",
-        "de": "Hausrat zahlt Trocknung und Hotel bis zur Wiederbewohnbarkeit; Mietminderung beim Vermieter.",
-        "ar": "تأمينُ المنقولات يدفعُ التجفيفَ والفندقَ حتى يعودَ المسكنُ صالحاً للسكن؛ وأما تخفيضُ الإيجار فعلى المؤجِّر."
+        "de": "Fragen Sie Gebäude- und Hausratversicherung sowie Vermieterseite jeweils schriftlich. Diese Übung ersetzt weder Deckungsprüfung noch Rechtsberatung.",
+        "ar": "اسألوا تأمين المبنى والمنقولات وكذلك جهة المؤجر كتابةً كلٌّ في اختصاصه. هذا التدريب لا يحل محل فحص التغطية أو الاستشارة القانونية."
       }
     ],
     "questions": [
       {
         "id": "d-b2-15-q1",
         "type": "mc",
-        "promptDe": "Wer zahlt das Hotel zuerst?",
+        "promptDe": "Was soll Rim bei akuter Gefahr tun?",
+        "promptAr": "ماذا ينبغي لريـم فعله عند وجود خطر عاجل؟",
         "options": [
-          "der Vermieter",
-          "der Handwerker-Notdienst",
-          "die Hausratversicherung"
+          "auf eine Deckungszusage warten",
+          "eine Zahlung versprechen",
+          "den geeigneten Notdienst beauftragen"
         ],
-        "answer": "die Hausratversicherung",
-        "explanationAr": "الدليل: «Hausrat zahlt Trocknung und Hotel bis zur Wiederbewohnbarkeit». الفخّ 1: المؤجّر مسؤول عن الـMietminderung، والرجوع عليه لاحق. الفخّ 2: خدمة الطوارئ تُصلح لا تدفع.",
-        "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "answer": "den geeigneten Notdienst beauftragen",
+        "explanationAr": "الدليل: السلامة وخدمة الطوارئ المناسبة تسبقان حسم التغطية. لا توجد وعود دفع في الحوار. الفخّ: البدائل الأخرى تعمم قاعدة أو نتيجة لا يثبتها الحوار.",
+        "falle": true
       },
       {
         "id": "d-b2-15-q2",
         "type": "mc",
-        "promptDe": "Was genügt für die Soforthilfe?",
+        "promptDe": "Woraus ergibt sich die Kostendeckung?",
+        "promptAr": "ممّ تتحدد تغطية التكاليف؟",
         "options": [
-          "die Rechnung über die Sofortmaßnahme",
-          "die Endrechnung",
-          "das Gutachten"
+          "aus Vertrag und Prüfung",
+          "allein aus der Schadennummer",
+          "automatisch aus der Sofortmaßnahme"
         ],
-        "answer": "die Rechnung über die Sofortmaßnahme",
-        "explanationAr": "الدليل: «die Rechnung über die Sofortmaßnahme reicht ein, nicht die Endrechnung». الفخّ 1: الفاتورة النهائية منفيّة صراحة. الفخّ 2: الـGutachten مرحلة التسوية لا الإسعاف.",
-        "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "answer": "aus Vertrag und Prüfung",
+        "explanationAr": "الدليل: يصرح الموظف بأن النطاق لا يتحدد إلا من العقد والفحص. الفخّ: البدائل الأخرى تعمم قاعدة أو نتيجة لا يثبتها الحوار.",
+        "falle": true
       },
       {
         "id": "d-b2-15-q3",
         "type": "mc",
-        "promptDe": "Wann wird der Schaden reguliert?",
+        "promptDe": "Wie soll Rim Hotel und Mietminderung klären?",
+        "promptAr": "كيف ينبغي لريـم التحقق من الفندق وتخفيض الإيجار؟",
         "options": [
-          "sofort nach der Meldung mit Nummer 7714",
-          "binnen zwei Wochen nach dem Gutachtertermin",
-          "erst nach der Endrechnung"
+          "durch eine pauschale Zusage der Hausratversicherung",
+          "schriftlich mit den jeweils zuständigen Stellen",
+          "ohne Prüfung des Vertrags"
         ],
-        "answer": "binnen zwei Wochen nach dem Gutachtertermin",
-        "explanationAr": "الدليل: «Wir regulieren nach dem Gutachtertermin, binnen zwei Wochen». الفخّ 1: رقم البلاغ لا يعني تسوية فورية. الفخّ 2: الفاتورة النهائية لم تُذكر شرطاً للتسوية.",
-        "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "answer": "schriftlich mit den jeweils zuständigen Stellen",
+        "explanationAr": "الدليل: تُسأل شركات التأمين وجهة المؤجر كلٌّ عن اختصاصه، ولا يقدم التمرين ضماناً عاماً. الفخّ: البدائل الأخرى تعمم قاعدة أو نتيجة لا يثبتها الحوار.",
+        "falle": true
       }
     ],
     "dictation": [
-      "Wir regulieren nach dem Gutachtertermin, binnen zwei Wochen.",
-      "Dann halten wir uns den Rückgriff vor; Sie bekommen Vorschuss."
+      "Dokumentieren Sie, was sicher möglich ist, und beauftragen Sie bei akuter Gefahr den geeigneten Notdienst.",
+      "Fragen Sie Gebäude- und Hausratversicherung sowie Vermieterseite jeweils schriftlich. Diese Übung ersetzt weder Deckungsprüfung noch Rechtsberatung."
     ],
-    "cultural_theme": "Berliner Mauer - Berlin Wall history",
-    "cultural_note": "Theme: Berliner Mauer - Berlin Wall history"
+    "cultural_theme": "Versicherung und Wasserschaden"
   },
   {
     "id": "d-b2-16",
     "level": "B2",
-    "titleDe": "Volkshochschule: Seminartermin tauschen",
-    "titleAr": "جامعةُ الشعب: تبديلُ موعدِ Seminar",
+    "titleDe": "Beispiel-VHS: Seminartermin tauschen",
+    "titleAr": "معهد افتراضي: تبديل موعد الحلقة",
     "lines": [
       {
         "who": "Nadia",
-        "de": "Der Samstagstermin kollidiert mit meiner Schicht — gegen einen Tausch wäre offen?",
-        "ar": "موعدُ السبت يتعارض مع مناوبتي — هل أنتم منفتحون على تبديل؟"
+        "de": "Der Samstagstermin kollidiert mit meiner Schicht. Ist in diesem Beispielkurs ein Wechsel möglich?",
+        "ar": "يتعارض موعد السبت مع مناوبتي. هل يمكن التبديل في هذه الدورة الافتراضية؟"
       },
       {
         "who": "Kursverwaltung",
-        "de": "Plätze frei im Donnerstagsblock ab 18; Umbuchung kostet 15 Euro.",
-        "ar": "أماكن شاغرة في مجموعة الخميس من الساعة 18؛ وإعادةُ الحجز تكلّف 15 يورو."
+        "de": "Laut unserer fiktiven Kursordnung sind im Donnerstagsblock ab 18 Uhr Plätze frei; die Umbuchung kostet 15 Euro.",
+        "ar": "وفق لائحة الدورة الافتراضية توجد أماكن في مجموعة الخميس من الساعة السادسة، ورسوم التبديل 15 يورو."
       },
       {
         "who": "Nadia",
-        "de": "Wenn ich beim Füllen der Warteliste helfe — erlassen Sie die Gebühr?",
-        "ar": "إن ساعدتُ في ملء قائمة الانتظار — أتعفونني من الرسم؟"
+        "de": "Wenn ich beim Kontakt mit der Warteliste helfe, erlassen Sie die Gebühr?",
+        "ar": "إذا ساعدت في التواصل مع قائمة الانتظار، فهل تعفونني من الرسم؟"
       },
       {
         "who": "Kursverwaltung",
-        "de": "Fair — dann Tausch ohne Gebühr, aber die Anwesenheitspflicht bleibt heilig.",
-        "ar": "منصف — إذن تبديل بلا رسم، لكنّ إلزامَ الحضور يظلّ غيرَ قابل للإسقاط."
+        "de": "In diesem Szenario ja: Tausch ohne Gebühr. Die Teilnahmevorgaben bleiben aber bestehen.",
+        "ar": "في هذا السيناريو نعم: تبديل بلا رسم، لكن شروط الحضور تبقى سارية."
       },
       {
         "who": "Nadia",
-        "de": "Und wie viel Anwesenheit verlangt das Zertifikat?",
-        "ar": "وكم حضورًا يشترطُ الختامُ بالشهادة؟"
+        "de": "Welche Teilnahmequote nennt die Beispielordnung für das Zertifikat?",
+        "ar": "ما نسبة الحضور التي تنص عليها اللائحة الافتراضية للشهادة؟"
       },
       {
         "who": "Kursverwaltung",
-        "de": "Das Zertifikat setzt 80 Prozent Teilnahme voraus, nicht weniger.",
-        "ar": "تتطلّب الشهادةُ حضورَ ثمانينَ بالمئة على الأقلّ."
+        "de": "Sie nennt 80 Prozent. Reale Kurse können andere Regeln haben.",
+        "ar": "تنص على 80 بالمئة. وقد تكون للدورات الفعلية قواعد أخرى."
       },
       {
         "who": "Nadia",
-        "de": "Bei Krankheit in der Prüfungswoche: Nachschreibtermin?",
-        "ar": "وإن مرضتُ في أسبوع الاختبار — أفُرصةُ تعويض؟"
+        "de": "Was sieht das Beispiel bei Krankheit in der Prüfungswoche vor?",
+        "ar": "ماذا ينص المثال في حال المرض خلال أسبوع الاختبار؟"
       },
       {
         "who": "Kursverwaltung",
-        "de": "Ärztliches Attest bis Montag, dann Nachtermin am Monatsersten.",
-        "ar": "شهادةٌ طبيةٌ إلى الاثنين، ثم موعدٌ لاحقٌ أولَ الشهر."
+        "de": "Ein Attest bis Montag und einen Nachtermin am Monatsersten — ausschließlich als interne Regel dieses Übungsszenarios.",
+        "ar": "شهادة طبية حتى الاثنين وموعداً بديلاً أول الشهر، وذلك حصراً كقاعدة داخلية لهذا السيناريو التدريبي."
       }
     ],
     "questions": [
       {
         "id": "d-b2-16-q1",
         "type": "mc",
-        "promptDe": "Was kostet die Umbuchung am Ende?",
+        "promptDe": "Was kostet die Umbuchung am Ende des Beispiels?",
+        "promptAr": "كم تبلغ رسوم التبديل في نهاية المثال؟",
         "options": [
-          "15 Euro",
-          "15 Euro, dafür entfällt die Anwesenheitspflicht",
+          "15 Euro trotz der Vereinbarung",
+          "nichts und die Teilnahmevorgaben entfallen",
           "nichts, weil Nadia bei der Warteliste hilft"
         ],
         "answer": "nichts, weil Nadia bei der Warteliste hilft",
-        "explanationAr": "الدليل: «dann Tausch ohne Gebühr, aber die Anwesenheitspflicht bleibt heilig». الفخّ 1: 15 يورو العرض الأوّل الذي أُسقط. الفخّ 2: واجب الحضور لا يسقط أبداً.",
-        "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "explanationAr": "الدليل: يُتفق في السيناريو على تبديل بلا رسم، مع بقاء شروط الحضور. الفخّ: البدائل الأخرى تعمم قاعدة أو نتيجة لا يثبتها الحوار.",
+        "falle": true
       },
       {
         "id": "d-b2-16-q2",
         "type": "mc",
-        "promptDe": "Teilnahmepflicht fürs Zertifikat?",
+        "promptDe": "Welche Quote nennt die fiktive Kursordnung?",
+        "promptAr": "ما النسبة التي تنص عليها لائحة الدورة الافتراضية؟",
         "options": [
           "80 Prozent",
-          "ab 18 Uhr jeden Donnerstag",
-          "15 Sitzungen im Donnerstagsblock"
+          "18 Uhr",
+          "15 Euro"
         ],
         "answer": "80 Prozent",
-        "explanationAr": "الدليل: «Das Zertifikat setzt 80 Prozent Teilnahme voraus». الفخّ 1: 18 هو وقت بداية كتلة الخميس. الفخّ 2: 15 هو مبلغ رسم التحويل.",
-        "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "explanationAr": "الدليل: تنص لائحة المثال على 80 بالمئة. الفخّ: 18 هو وقت بداية مجموعة الخميس، و15 يورو هو رسم التبديل الأولي، وليسا نسبة الحضور.",
+        "falle": true
       },
       {
         "id": "d-b2-16-q3",
         "type": "mc",
-        "promptDe": "Attest wann nötig?",
+        "promptDe": "Bis wann verlangt das Beispiel das Attest?",
+        "promptAr": "حتى متى يطلب المثال الشهادة الطبية؟",
         "options": [
           "am Monatsersten",
           "bis Montag",
           "in der Prüfungswoche"
         ],
         "answer": "bis Montag",
-        "explanationAr": "الدليل: «Ärztliches Attest bis Montag, dann Nachtermin am Monatsersten». الفخّ 1: أوّل الشهر موعد الامتحان البديل لا الشهادة. الفخّ 2: أسبوع الامتحان وقت المرض.",
-        "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "explanationAr": "الدليل: الاثنين آخر موعد للشهادة في المثال، وأول الشهر موعد الاختبار البديل. الفخّ: البدائل الأخرى تعمم قاعدة أو نتيجة لا يثبتها الحوار.",
+        "falle": true
       }
     ],
     "dictation": [
-      "Das Zertifikat setzt 80 Prozent Teilnahme voraus, nicht weniger.",
-      "Bei Krankheit in der Prüfungswoche: Nachschreibtermin?"
+      "Laut unserer fiktiven Kursordnung sind im Donnerstagsblock ab 18 Uhr Plätze frei; die Umbuchung kostet 15 Euro.",
+      "Ein Attest bis Montag und einen Nachtermin am Monatsersten — ausschließlich als interne Regel dieses Übungsszenarios."
     ],
-    "cultural_theme": "Culture"
+    "cultural_theme": "Weiterbildung und Kursordnung"
   },
   {
     "id": "d-b2-17",
     "level": "B2",
-    "titleDe": "Arbeitgeber und Weiterbildungskosten",
-    "titleAr": "المُشغِّلُ وتكاليفُ التدريب",
+    "titleDe": "Weiterbildungskosten: Vertragsentwurf prüfen",
+    "titleAr": "تكاليف التدريب: فحص مسودة الاتفاق",
     "lines": [
       {
         "who": "Karim",
-        "de": "Die Zertifikatskurse kosten 2.400 Euro — trägt die Firma einen Teil?",
-        "ar": "دوراتُ الاعتماد بـ2.400 يورو — هل تتحمَّل الشركةُ جزءاً؟"
+        "de": "Der Zertifikatskurs kostet 2.400 Euro. Welche Unterstützung bietet die Firma konkret an?",
+        "ar": "تكلف دورة الاعتماد 2400 يورو. ما الدعم المحدد الذي تقدمه الشركة؟"
       },
       {
         "who": "Personalleitung",
-        "de": "Bei Branchennähe ja; Rückzahlungsklausel bei Wechsel unter 24 Monaten.",
-        "ar": "نعم، إن كانت ذات صلةٍ بمجال عملنا؛ ويوجد شرطُ استردادٍ إن تركتَ الشركة قبل أربعة وعشرين شهراً."
+        "de": "Unser unverbindlicher Entwurf sieht bei betrieblichem Bezug eine Beteiligung und eine Rückzahlungsklausel vor.",
+        "ar": "تنص مسودتنا غير الملزمة على مساهمة عند ارتباط الدورة بالعمل وعلى بند استرداد."
       },
       {
         "who": "Karim",
-        "de": "Die Klausel wäre zu akzeptieren, sofern bezahlte Freistellung mitzählt.",
-        "ar": "سأقبلُ البندَ إن حُسِبَتِ الساعةُ المدفوعةُ ضمنَ التدريب."
+        "de": "Wie sind Freistellung, Bindungsdauer und anteilige Rückzahlung genau formuliert?",
+        "ar": "كيف صيغت الإجازة ومدة الالتزام والاسترداد النسبي بدقة؟"
       },
       {
         "who": "Personalleitung",
-        "de": "Zwei Tage pro Monat frei gegen Bindung an ein Jahr Weiterbildung.",
-        "ar": "يومانِ شهرياً إجازةً مدفوعةً مقابل التزامٍ بسنة تدريب."
+        "de": "Das steht im Entwurf. Lassen Sie die Klauseln vor der Unterschrift prüfen; ihre Wirksamkeit kann nicht aus diesem Gespräch abgeleitet werden.",
+        "ar": "ذلك مذكور في المسودة. اطلبوا فحص البنود قبل التوقيع؛ فلا يمكن استنتاج نفاذها من هذا الحوار."
       },
       {
         "who": "Karim",
-        "de": "Und wenn ich während des Kurses Elterngeld nehme — Aussetzen?",
-        "ar": "وإن أخذتُ بدلَ الوالدية أثناء الدورة — هل يُوقَف الاستحقاق؟"
+        "de": "Was passiert bei Elternzeit oder längerer Krankheit?",
+        "ar": "ماذا يحدث عند إجازة الوالدية أو المرض الطويل؟"
       },
       {
         "who": "Personalleitung",
-        "de": "Der Anspruch ruht; wir verlängern die Bindung um die Pause, nicht die Kosten.",
-        "ar": "يتوقّف الاستحقاق؛ نُمدّد فترة الالتزام بمدة التوقف، لا التكاليف."
+        "de": "Auch Unterbrechungen müssen ausdrücklich und fair geregelt werden; wir nehmen sie in die schriftliche Prüfung auf.",
+        "ar": "يجب تنظيم فترات الانقطاع صراحةً وبإنصاف؛ وسنضمها إلى الفحص الخطي."
       },
       {
         "who": "Karim",
-        "de": "Schriftliche Vereinbarung über beides — dann melde ich mich an.",
-        "ar": "اتفاقٌ خطيّ يغطّي كلا الأمرَين، وعندها أسجّل نفسي."
+        "de": "Ich melde mich erst an, wenn Kosten, Freistellung und Rückzahlung schriftlich geklärt sind.",
+        "ar": "لن أسجل قبل توضيح التكاليف والإجازة والاسترداد كتابةً."
       },
       {
         "who": "Personalleitung",
-        "de": "Morgen im Personalbüro, mit Ihren Zusatzstunden im Vertrag.",
-        "ar": "غداً في قسم شؤون الأفراد، وستصلكم الأوراق بعد إدراج الساعات الإضافية في عقدكم."
+        "de": "Einverstanden. Der Entwurf ist ein Angebot, keine allgemeine Aussage zum Arbeitsrecht.",
+        "ar": "موافق. المسودة عرض وليست قولاً عاماً في قانون العمل."
       }
     ],
     "questions": [
       {
         "id": "d-b2-17-q1",
         "type": "mc",
-        "promptDe": "Was folgt aus einem Wechsel vor Ablauf?",
+        "promptDe": "Was enthält der unverbindliche Entwurf?",
+        "promptAr": "ماذا تتضمن المسودة غير الملزمة؟",
         "options": [
-          "eine Prämie für Branchennähe",
-          "zwei freie Tage pro Monat",
-          "eine Rückzahlung laut Klausel"
+          "eine automatisch wirksame Bindung",
+          "eine allgemeine arbeitsrechtliche Zusage",
+          "eine Beteiligung und eine Rückzahlungsklausel"
         ],
-        "answer": "eine Rückzahlung laut Klausel",
-        "explanationAr": "الدليل: «Rückzahlungsklausel bei Wechsel unter 24 Monaten». الفخّ 1: الـBranchennähe شرط التمويل لا مكافأة. الفخّ 2: اليومان مقابل الالتزام لا نتيجة المغادرة.",
-        "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "answer": "eine Beteiligung und eine Rückzahlungsklausel",
+        "explanationAr": "الدليل: هذان العنصران مذكوران في المسودة، لكن نفاذ البنود يحتاج فحصاً. الفخّ: البدائل الأخرى تعمم قاعدة أو نتيجة لا يثبتها الحوار.",
+        "falle": true
       },
       {
         "id": "d-b2-17-q2",
         "type": "mc",
-        "promptDe": "Wie wird die Elternzeit behandelt?",
+        "promptDe": "Warum will Karim die Klauseln prüfen lassen?",
+        "promptAr": "لماذا يريد كريم فحص البنود؟",
         "options": [
-          "der Anspruch ruht und die Bindung wird um die Pause verlängert",
-          "die Kosten werden um die Pause erhöht",
-          "die Bindung endet mit der Elternzeit"
+          "weil ihre Wirksamkeit nicht aus dem Gespräch folgt",
+          "weil jede Rückzahlung immer unwirksam ist",
+          "weil Elternzeit die Kosten automatisch erhöht"
         ],
-        "answer": "der Anspruch ruht und die Bindung wird um die Pause verlängert",
-        "explanationAr": "الدليل: «Der Anspruch ruht; wir verlängern die Bindung um die Pause, nicht die Kosten». الفخّ 1: «nicht die Kosten» منفيّ صراحةً. الفخّ 2: الالتزام يُمدَّد لا ينتهي.",
-        "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "answer": "weil ihre Wirksamkeit nicht aus dem Gespräch folgt",
+        "explanationAr": "الدليل: تحذر الإدارة من استنتاج النفاذ من الحوار. ولا يقرر النص حكماً قانونياً عاماً. الفخّ: البدائل الأخرى تعمم قاعدة أو نتيجة لا يثبتها الحوار.",
+        "falle": true
       },
       {
         "id": "d-b2-17-q3",
         "type": "mc",
-        "promptDe": "Wie viele freie Tage sind zugesagt?",
+        "promptDe": "Wann will Karim sich anmelden?",
+        "promptAr": "متى يريد كريم التسجيل؟",
         "options": [
-          "24 Tage im Jahr",
-          "zwei Tage pro Monat",
-          "zwei Tage pro Woche"
+          "sofort nach dem Gespräch",
+          "nach schriftlicher Klärung von Kosten, Freistellung und Rückzahlung",
+          "erst nach einer automatischen Arbeitserlaubnis"
         ],
-        "answer": "zwei Tage pro Monat",
-        "explanationAr": "الدليل: «Zwei Tage pro Monat frei gegen Bindung an ein Jahr». الفخّ 1: 24 هو عدد أشهر بند الاسترداد. الفخّ 2: «Woche» تبديل الوحدة.",
-        "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "answer": "nach schriftlicher Klärung von Kosten, Freistellung und Rückzahlung",
+        "explanationAr": "الدليل: يربط التسجيل بتوضيح العناصر الثلاثة كتابةً. الفخّ: البدائل الأخرى تعمم قاعدة أو نتيجة لا يثبتها الحوار.",
+        "falle": true
       }
     ],
     "dictation": [
-      "Der Anspruch ruht; wir verlängern die Bindung um die Pause, nicht die Kosten.",
-      "Bei Branchennähe ja; Rückzahlungsklausel bei Wechsel unter 24 Monaten."
+      "Unser unverbindlicher Entwurf sieht bei betrieblichem Bezug eine Beteiligung und eine Rückzahlungsklausel vor.",
+      "Einverstanden. Der Entwurf ist ein Angebot, keine allgemeine Aussage zum Arbeitsrecht."
     ],
-    "cultural_theme": "Innovation"
+    "cultural_theme": "Betriebliche Weiterbildung"
   },
   {
     "id": "d-b2-18",
     "level": "B2",
-    "titleDe": "Kündigung der Krankenkasse",
-    "titleAr": "إنهاءُ عقدِ صندوقِ المرض",
+    "titleDe": "Krankenkassenwechsel: Ablauf bestätigen lassen",
+    "titleAr": "تغيير صندوق التأمين الصحي: تأكيد الإجراءات",
     "lines": [
       {
         "who": "Sami",
-        "de": "Ich möchte meine Versicherung zum Quartalsende kündigen.",
-        "ar": "أودُّ فسخَ تأميني بنهايةِ الربع."
+        "de": "Ich erwäge einen Krankenkassenwechsel. Wie erfahre ich das verbindliche Wechseldatum?",
+        "ar": "أفكر في تغيير صندوق التأمين الصحي. كيف أعرف تاريخ التغيير الملزم؟"
       },
       {
         "who": "Kassenberatung",
-        "de": "Frist läuft; die neue Kasse reicht die Kündigung digital ein.",
-        "ar": "المهلةُ لا تزال سارية؛ والصندوق الجديد يتولّى تقديمَ طلبِ الإنهاء رقميّاً."
+        "de": "Lassen Sie sich den aktuellen Ablauf und das Datum von alter und gewählter Kasse bestätigen; sie berücksichtigen Ihren Versicherungsstatus.",
+        "ar": "اطلبوا من الصندوق الحالي والمختار تأكيد الإجراء الحالي والتاريخ، مع مراعاة وضعكم التأميني."
       },
       {
         "who": "Sami",
-        "de": "Was geschieht mit dem Bonusheft und den Dauermedikamenten?",
-        "ar": "ماذا يحدث لدفترِ نقاطِ المكافآت وأدوية الأمراض المزمنة؟"
+        "de": "Was geschieht mit einem Bonusprogramm und laufenden Behandlungen?",
+        "ar": "ماذا يحدث لبرنامج المكافآت والعلاجات الجارية؟"
       },
       {
         "who": "Kassenberatung",
-        "de": "Das Heft bleibt gültig, die Medikamente laufen nahtlos über die elektronische Verordnung.",
-        "ar": "يبقى الدفترُ سارياً، وتُصرفُ الأدويةُ دون انقطاع عبر الوصفة الإلكترونية."
+        "de": "Bonusregeln und Leistungsfragen werden getrennt geprüft. Klären Sie laufende Genehmigungen und Verordnungen vor dem Wechsel schriftlich.",
+        "ar": "تُفحص قواعد المكافآت ومسائل الخدمات بصورة منفصلة. تحققوا كتابةً من الموافقات والوصفات الجارية قبل التغيير."
       },
       {
         "who": "Sami",
-        "de": "Lückenlos versichert — darf ich im Übergangsmonat zum Arzt?",
-        "ar": "التغطيةُ بلا فجوات — هل أستطيع زيارة الطبيب في شهر الانتقال؟"
+        "de": "Wie vermeide ich, mich auf eine vermutete lückenlose Deckung zu verlassen?",
+        "ar": "كيف أتجنب الاعتماد على افتراض وجود تغطية متصلة؟"
       },
       {
         "who": "Kassenberatung",
-        "de": "Ja, der Versicherungsschutz bleibt bis zum letzten Tag bestehen.",
-        "ar": "نعم — التغطيةُ التأمينية تظلُّ سارية حتى آخر يوم من العقد."
+        "de": "Warten Sie auf die Aufnahmebestätigung und gleichen Sie Beginn und Ende ab; bei medizinischen Fragen wenden Sie sich zusätzlich an Praxis oder Apotheke.",
+        "ar": "انتظروا تأكيد القبول وطابقوا تاريخي البداية والنهاية؛ وللمسائل الطبية راجعوا أيضاً العيادة أو الصيدلية."
       },
       {
         "who": "Sami",
-        "de": "Die Beitragsanteile des Arbeitgebers — wer rechnet ab?",
-        "ar": "أما حصة صاحب العمل من الاشتراكات فمن يجري تسويتَها محاسبياً؟"
+        "de": "Wann informiere ich meinen Arbeitgeber?",
+        "ar": "متى أبلغ صاحب العمل؟"
       },
       {
         "who": "Kassenberatung",
-        "de": "Die Buchhaltung beider Kassen tut das unter sich; Sie erhalten eine Sammelbescheinigung.",
-        "ar": "يقوم محاسبا الصندوقين بتسوية الحسابات فيما بينهما، وستصلكم شهادةٌ إجمالية."
+        "de": "Folgen Sie der bestätigten Mitteilung der Kasse und fragen Sie die Personalstelle nach dem aktuellen betrieblichen Ablauf.",
+        "ar": "اتبعوا الإشعار المؤكد من الصندوق واسألوا شؤون الموظفين عن الإجراء الداخلي الحالي."
       }
     ],
     "questions": [
       {
         "id": "d-b2-18-q1",
         "type": "mc",
-        "promptDe": "Wie kündigt man korrekt?",
+        "promptDe": "Wie erfährt Sami das verbindliche Wechseldatum?",
+        "promptAr": "كيف يعرف سامي تاريخ التغيير الملزم؟",
         "options": [
-          "Sami kündigt selbst zum Quartalsende per Brief",
-          "über die elektronische Verordnung",
-          "die neue Kasse reicht die Kündigung digital ein"
+          "durch die Bonusregeln",
+          "durch den Arbeitgeber",
+          "durch Bestätigung der beteiligten Kassen"
         ],
-        "answer": "die neue Kasse reicht die Kündigung digital ein",
-        "explanationAr": "الدليل: «die neue Kasse reicht die Kündigung digital ein». الفخّ 1: سامي يريد الإنهاء، لكنّ الصندوق الجديد هو من يقدّمه. الفخّ 2: الوصفة الإلكترونية تخصّ الأدوية.",
-        "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "answer": "durch Bestätigung der beteiligten Kassen",
+        "explanationAr": "الدليل: ينبغي تأكيد الإجراء والتاريخ مع مراعاة وضعه التأميني. الفخّ: البدائل الأخرى تعمم قاعدة أو نتيجة لا يثبتها الحوار.",
+        "falle": true
       },
       {
         "id": "d-b2-18-q2",
         "type": "mc",
-        "promptDe": "Schutzlücke im Wechselmonat?",
+        "promptDe": "Was soll vor dem Wechsel schriftlich geklärt werden?",
+        "promptAr": "ما الذي ينبغي التحقق منه كتابةً قبل التغيير؟",
         "options": [
-          "nein, der Schutz bleibt bis zum letzten Tag bestehen",
-          "ja, bis zur Sammelbescheinigung",
-          "nur für Dauermedikamente"
+          "laufende Genehmigungen und Verordnungen",
+          "nur die Bonusregeln",
+          "den Versicherungsstatus"
         ],
-        "answer": "nein, der Schutz bleibt bis zum letzten Tag bestehen",
-        "explanationAr": "الدليل: «der Versicherungsschutz bleibt bis zum letzten Tag bestehen». الفخّ 1: الـSammelbescheinigung تخصّ حصص الاشتراك. الفخّ 2: الأدوية تستمرّ «nahtlos» إضافةً لا حصراً.",
-        "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "answer": "laufende Genehmigungen und Verordnungen",
+        "explanationAr": "الدليل: تُفحص برامج المكافآت والخدمات منفصلة، وتُوضَّح الموافقات والوصفات الجارية. الفخّ: البدائل الأخرى تعمم قاعدة أو نتيجة لا يثبتها الحوار.",
+        "falle": true
       },
       {
         "id": "d-b2-18-q3",
         "type": "mc",
-        "promptDe": "Wer zahlt den Papierkram der Beiträge?",
+        "promptDe": "Worauf soll Sami vor dem Verlassen der alten Kasse warten?",
+        "promptAr": "ماذا ينتظر سامي قبل ترك الصندوق القديم؟",
         "options": [
-          "Sami mit der Sammelbescheinigung",
-          "die Buchhaltungen beider Kassen unter sich",
-          "der Arbeitgeber"
+          "auf die bestätigte Mitteilung der Kasse",
+          "auf die Aufnahmebestätigung",
+          "auf die Personalstelle"
         ],
-        "answer": "die Buchhaltungen beider Kassen unter sich",
-        "explanationAr": "الدليل: «Die Buchhaltung beider Kassen tut das unter sich». الفخّ 1: سامي يتلقّى الشهادة فقط. الفخّ 2: صاحب العمل يدفع حصّته لكنّه لا يُجري المحاسبة بين الصندوقين.",
-        "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "answer": "auf die Aufnahmebestätigung",
+        "explanationAr": "الدليل: ينتظر تأكيد القبول ويطابق البداية والنهاية، بدلاً من افتراض التغطية. الفخّ: البدائل الأخرى تعمم قاعدة أو نتيجة لا يثبتها الحوار.",
+        "falle": true
       }
     ],
     "dictation": [
-      "Ja, der Versicherungsschutz bleibt bis zum letzten Tag bestehen.",
-      "Das Heft bleibt gültig, die Medikamente laufen nahtlos über die elektronische Verordnung."
+      "Lassen Sie sich den aktuellen Ablauf und das Datum von alter und gewählter Kasse bestätigen; sie berücksichtigen Ihren Versicherungsstatus.",
+      "Folgen Sie der bestätigten Mitteilung der Kasse und fragen Sie die Personalstelle nach dem aktuellen betrieblichen Ablauf."
     ],
-    "cultural_theme": "Bierbrauerei - German beer culture",
-    "cultural_note": "Theme: Bierbrauerei - German beer culture"
+    "cultural_theme": "Krankenversicherung"
   },
   {
     "id": "d-b2-19",
@@ -5079,7 +5064,7 @@
       {
         "who": "Teamleitung",
         "de": "Vereinbart wird ein Protokoll mit Fristen, das beide gegenzeichnen.",
-        "ar": "يُثبَّتُ في المحضرِ المواعيدَ ويوقِّعُه الطرفان."
+        "ar": "يُتفق على محضر بمهل يوقّعه الطرفان."
       },
       {
         "who": "Leila",
@@ -5105,7 +5090,7 @@
         "answer": "per Mail mit datierten Protokollen",
         "explanationAr": "الدليل: «die Protokolle datiert … per Mail, nicht im Chat». الفخّ 1: الشات منفيّ صراحةً. الفخّ 2: «Zurufen im Flur» هو ما تريد إنهاءه.",
         "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "promptAr": "كيف وثّقت ليلى المشكلة في البداية؟"
       },
       {
         "id": "d-b2-19-q2",
@@ -5119,816 +5104,804 @@
         "answer": "jede Seite nennt drei Bedürfnisse",
         "explanationAr": "الدليل: «runden Tisch: jede Seite nennt drei Bedürfnisse». الفخّ 1: غياب الـRückmeldung هو الشكوى. الفخّ 2: المواعيد تُثبَّت في محضر لا بتصويت.",
         "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "promptAr": "ما الخطوة الأولى على الطاولة المستديرة؟"
       },
       {
         "id": "d-b2-19-q3",
         "type": "mc",
-        "promptDe": "Wie wird Druck erzeugt?",
+        "promptDe": "Wie wird Verbindlichkeit hergestellt?",
         "options": [
           "durch die Zahlen bis Mittwoch",
           "durch ein gegengezeichnetes Protokoll mit Fristen und Wiedervorlage",
           "durch Rückmeldung an die Einkaufsabteilung"
         ],
         "answer": "durch ein gegengezeichnetes Protokoll mit Fristen und Wiedervorlage",
-        "explanationAr": "الدليل: «ein Protokoll mit Fristen, das beide gegenzeichnen» و«Wiedervorlage nach sechs Wochen — damit es nicht verpufft». الفخّ: الأرقام يوم الأربعاء للمقارنة لا للضغط.",
+        "explanationAr": "الدليل: محضر بمهل يوقعه الطرفان، ثم متابعة بعد ستة أسابيع. أرقام الأربعاء مادة للمقارنة وليست آلية المتابعة. الفخّ: البدائل الأخرى تعمم قاعدة أو نتيجة لا يثبتها الحوار.",
         "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "promptAr": "كيف يجعل الطرفان الاتفاق قابلاً للمتابعة؟"
       }
     ],
     "dictation": [
-      "Gut so. Dann setzen wir einen runden Tisch: jede Seite nennt drei Bedürfnisse.",
+      "Was haben Sie selbst unternommen?",
       "Konstruktiv. Wiedervorlage nach sechs Wochen — damit es nicht verpufft."
     ],
-    "cultural_theme": "Environment"
+    "cultural_theme": "Konfliktmoderation"
   },
   {
     "id": "d-b2-20",
     "level": "B2",
-    "titleDe": "Pflegeversicherung: Begutachtung",
-    "titleAr": "تأمينُ الرعاية: تقديرُ اللجنة",
+    "titleDe": "Pflegebegutachtung: Bedarf dokumentieren",
+    "titleAr": "تقييم الرعاية: توثيق الاحتياج",
     "lines": [
       {
         "who": "Hedi",
-        "de": "Mein Vater hatte vor vier Wochen einen Schlaganfall — wie hoch wird der Pflegegrad sein?",
-        "ar": "أصابَ أبي سكتةٌ دماغيةٌ قبلَ أربعةِ أسابيع — فما درجةُ رعايتِه المتوقعة؟"
+        "de": "Mein Vater benötigt seit einem Schlaganfall Unterstützung. Lässt sich sein Pflegegrad schon vorhersagen?",
+        "ar": "يحتاج أبي إلى دعم منذ إصابته بسكتة. هل يمكن توقع درجة الرعاية مسبقاً؟"
       },
       {
         "who": "Gutachter",
-        "de": "Wir bewerten Selbstständigkeit, nicht die Diagnose allein.",
-        "ar": "نقيّمُ الاستقلاليةَ لا التشخيصَ وحدَه."
+        "de": "Nein. Bewertet wird die Selbstständigkeit in mehreren Lebensbereichen; eine Diagnose allein bestimmt keinen Grad.",
+        "ar": "لا. تُقيَّم الاستقلالية في مجالات حياتية متعددة؛ ولا يحدد التشخيص وحده درجةً."
       },
       {
         "who": "Hedi",
-        "de": "Morgens braucht er Hilfe beim Waschen und Anziehen, mittags reicht Aufsicht.",
-        "ar": "صباحاً يحتاجُ إلى مساعدةٍ في الغسلِ والارتداء، وفي الظهرِ يكفي الإشراف."
+        "de": "Morgens braucht er Hilfe beim Waschen und Anziehen, mittags häufig Aufsicht.",
+        "ar": "يحتاج صباحاً إلى مساعدة في الغسل واللباس، وغالباً إلى إشراف ظهراً."
       },
       {
         "who": "Gutachter",
-        "de": "Nächtliche Unruhe und Sturzangst — dokumentieren Sie das bitte im Tagebuch.",
-        "ar": "اضطرابٌ ليليٌّ وخوفُ السقوط — دوّنوا ذلك في اليومياتِ من فضلكم."
+        "de": "Beschreiben Sie regelmäßig benötigte Hilfe konkret und wahrheitsgemäß, ohne einzelne gute oder schlechte Tage zu verallgemeinern.",
+        "ar": "صفوا المساعدة المطلوبة بانتظام وصفاً محدداً وصادقاً، من دون تعميم يوم جيد أو سيئ واحد."
       },
       {
         "who": "Hedi",
-        "de": "Die zweiwöchige Liste ist vorbereitet, mit Uhrzeiten.",
-        "ar": "قائمةُ الأسبوعينِ جاهزةٌ بمواعيدِها."
+        "de": "Wir führen ein Tagebuch mit Situationen und Uhrzeiten.",
+        "ar": "نحتفظ بيوميات تتضمن المواقف والأوقات."
       },
       {
         "who": "Gutachter",
-        "de": "Dann rechne ich mit Grad zwei bis drei, je nach Wegstrecke innerhalb der Wohnung.",
-        "ar": "أتوقعُ الدرجةَ الثانيةَ إلى الثالثة، بحسب المسافةِ التي يقطعُها داخل الشقة."
+        "de": "Das kann den Alltag veranschaulichen; die Entscheidung trifft jedoch die zuständige Stelle nach ihrer Prüfung.",
+        "ar": "قد يوضح ذلك الحياة اليومية، لكن الجهة المختصة تتخذ القرار بعد فحصها."
       },
       {
         "who": "Hedi",
-        "de": "Und wie lange dauert der Bescheid — was, wenn die Bewertung zu knapp ausfällt?",
-        "ar": "وكم يستغرقُ الرد — وإن جاءَ التقديرُ متدنياً؟"
+        "de": "Was tun wir, wenn wir den Bescheid nicht verstehen oder für falsch halten?",
+        "ar": "ماذا نفعل إذا لم نفهم القرار أو رأيناه خاطئاً؟"
       },
       {
         "who": "Gutachter",
-        "de": "Schriftlich binnen 25 Arbeitstagen; bei zu knapper Bewertung: Widerspruch.",
-        "ar": "خطياً خلالَ خمسةٍ وعشرين يومَ عمل؛ وإن كان التقديرُ متدنياً فالاعتراضُ."
+        "de": "Lesen Sie die Rechtsbehelfsbelehrung und holen Sie bei Bedarf unabhängige Pflege- oder Rechtsberatung ein; Fristen werden nicht geraten.",
+        "ar": "اقرؤوا إرشادات الطعن واستعينوا عند الحاجة بمشورة مستقلة في الرعاية أو القانون؛ ولا تُخمَّن المهل."
       }
     ],
     "questions": [
       {
         "id": "d-b2-20-q1",
         "type": "mc",
-        "promptDe": "Was zählt wirklich?",
+        "promptDe": "Was bestimmt den Pflegegrad nicht allein?",
+        "promptAr": "ما الذي لا يحدد درجة الرعاية بمفرده؟",
         "options": [
-          "die Diagnose Schlaganfall",
-          "die Wegstrecke zur Praxis",
-          "die Selbstständigkeit im Alltag"
+          "die geprüfte Selbstständigkeit",
+          "der dokumentierte Unterstützungsbedarf",
+          "die Diagnose"
         ],
-        "answer": "die Selbstständigkeit im Alltag",
-        "explanationAr": "الدليل: «Wir bewerten Selbstständigkeit, nicht die Diagnose allein». الفخّ 1: التشخيص منفيّ كمعيار وحيد. الفخّ 2: الـWegstrecke المقصودة داخل الشقّة لا إلى العيادة.",
-        "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "answer": "die Diagnose",
+        "explanationAr": "الدليل: تُقيَّم الاستقلالية في مجالات متعددة، ولا يكفي التشخيص وحده. الفخّ: البدائل الأخرى تعمم قاعدة أو نتيجة لا يثبتها الحوار.",
+        "falle": true
       },
       {
         "id": "d-b2-20-q2",
         "type": "mc",
-        "promptDe": "Welche Vorbereitung half?",
+        "promptDe": "Wie soll der Hilfebedarf beschrieben werden?",
+        "promptAr": "كيف ينبغي وصف الاحتياج إلى المساعدة؟",
         "options": [
-          "das zweiwöchige Tagebuch mit Uhrzeiten",
-          "die Aufsicht am Mittag",
-          "der Widerspruch"
+          "konkret, regelmäßig und wahrheitsgemäß",
+          "anhand einzelner guter Tage",
+          "durch die Diagnose allein"
         ],
-        "answer": "das zweiwöchige Tagebuch mit Uhrzeiten",
-        "explanationAr": "الدليل: «Die zweiwöchige Liste ist vorbereitet, mit Uhrzeiten». الفخّ 1: الإشراف حالة الأب لا تحضير. الفخّ 2: الاعتراض خطوة لاحقة إن كان التقييم ضعيفاً.",
-        "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "answer": "konkret, regelmäßig und wahrheitsgemäß",
+        "explanationAr": "الدليل: لا ينبغي تعميم يوم منفرد أو توقع الدرجة مسبقاً. الفخّ: البدائل الأخرى تعمم قاعدة أو نتيجة لا يثبتها الحوار.",
+        "falle": true
       },
       {
         "id": "d-b2-20-q3",
         "type": "mc",
-        "promptDe": "Wie lange bis zum Bescheid?",
+        "promptDe": "Wo finden sich Hinweise zum Vorgehen gegen einen Bescheid?",
+        "promptAr": "أين توجد إرشادات الإجراء بشأن القرار؟",
         "options": [
-          "vier Wochen",
-          "25 Arbeitstage",
-          "zwei Wochen"
+          "in einer geratenen Frist",
+          "in der Rechtsbehelfsbelehrung",
+          "in der Diagnose allein"
         ],
-        "answer": "25 Arbeitstage",
-        "explanationAr": "الدليل: «Schriftlich binnen 25 Arbeitstagen». الفخّ 1: أربعة أسابيع مضت منذ الجلطة. الفخّ 2: أسبوعان مدّة اليوميات.",
-        "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "answer": "in der Rechtsbehelfsbelehrung",
+        "explanationAr": "الدليل: تُقرأ إرشادات الطعن وتُطلب مشورة مستقلة عند الحاجة. الفخّ: البدائل الأخرى تعمم قاعدة أو نتيجة لا يثبتها الحوار.",
+        "falle": true
       }
     ],
     "dictation": [
-      "Morgens braucht er Hilfe beim Waschen und Anziehen, mittags reicht Aufsicht.",
-      "Dann rechne ich mit Grad zwei bis drei, je nach Wegstrecke innerhalb der Wohnung."
+      "Nein. Bewertet wird die Selbstständigkeit in mehreren Lebensbereichen; eine Diagnose allein bestimmt keinen Grad.",
+      "Lesen Sie die Rechtsbehelfsbelehrung und holen Sie bei Bedarf unabhängige Pflege- oder Rechtsberatung ein; Fristen werden nicht geraten."
     ],
-    "cultural_theme": "Festtage - Public holidays",
-    "cultural_note": "Theme: Festtage - Public holidays"
+    "cultural_theme": "Pflegebegutachtung"
   },
   {
     "id": "d-b2-21",
     "level": "B2",
-    "titleDe": "Bildungskredit verhandeln",
-    "titleAr": "تفاوضٌ على قرضٍ تعليمي",
+    "titleDe": "Bildungsfinanzierung: Angebote vergleichen",
+    "titleAr": "تمويل التعليم: مقارنة العروض",
     "lines": [
       {
         "who": "Maha",
-        "de": "Der Bildungskredit deckt mein letztes Studienjahr nicht — Möglichkeit einer Aufstockung?",
-        "ar": "قرضي التعليميُّ لا يغطي السنةَ الأخيرة — أيمكنُ الزيادة؟"
+        "de": "Die bisherige Förderung deckt mein letztes Studienjahr nicht. Welche zusätzlichen Möglichkeiten kann ich vergleichen?",
+        "ar": "لا يغطي الدعم الحالي سنتي الدراسية الأخيرة. ما الخيارات الإضافية التي يمكنني مقارنتها؟"
       },
       {
         "who": "Bankberaterin",
-        "de": "Höchstbetrag staatlich gedeckelt; bankseitig ein zinsgünstiges Darlehen mit Bürgschaft.",
-        "ar": "الحدُّ الأقصى مسقوفٌ حكومياً؛ وقرضٌ مصرفيٌّ ميسَّرُ الفائدةِ بكفالةٍ شخصية."
+        "de": "Trennen Sie staatliche Programme von Bankkrediten und prüfen Sie jeweils aktuelle Beträge, Voraussetzungen, Zinsen und Sicherheiten.",
+        "ar": "افصلوا البرامج الحكومية عن القروض المصرفية، وافحصوا لكل منها المبالغ والشروط والفوائد والضمانات الحالية."
       },
       {
         "who": "Maha",
-        "de": "Die Rückzahlung möchte ich nach dem zweiten Berufsjahr beginnen.",
-        "ar": "أودُّ بدءَ السدادِ بعدَ سنتينِ من مزاولةِ المهنة."
+        "de": "Ich möchte die Rückzahlung möglichst erst nach dem Berufseinstieg beginnen.",
+        "ar": "أود أن يبدأ السداد بعد دخولي سوق العمل إن أمكن."
       },
       {
         "who": "Bankberaterin",
-        "de": "Karenzzeit bis 18 Monate möglich; die Zinsen laufen weiter, werden gestundet.",
-        "ar": "مهلةُ سماحٍ ثمانيةَ عشرَ شهراً؛ والفائدةُ تجري مُؤجَّلةً لا مُلغاة."
+        "de": "Vergleichen Sie Karenzzeit, Zinslauf und Folgen einer Stundung im schriftlichen Angebot; aufgeschobene Zinsen sind nicht automatisch erlassen.",
+        "ar": "قارنوا مهلة السماح وسريان الفائدة وآثار التأجيل في العرض الخطي؛ فالفوائد المؤجلة لا تُلغى تلقائياً."
       },
       {
         "who": "Maha",
-        "de": "Welche Tilgungsrate ist realistisch beim Einstieggehalt?",
-        "ar": "وما قسطُ تسديدٍ واقعيٌّ براتبِ البداية؟"
+        "de": "Wie ermittle ich eine tragbare Rate?",
+        "ar": "كيف أحدد قسطاً يمكن تحمله؟"
       },
       {
         "who": "Bankberaterin",
-        "de": "Zwischen 120 und 200 Euro, abhängig vom Zinsnachlass bei Gehaltsüberweisung.",
-        "ar": "بين 120 و200 يورو — على حسبِ تخفيضِ الفائدةِ بتحويلِ المرتب."
+        "de": "Mit einem realistischen Budget und mehreren Szenarien; verlassen Sie sich nicht auf ein noch unbekanntes Einstiegsgehalt.",
+        "ar": "بميزانية واقعية وسيناريوهات متعددة؛ ولا تعتمدوا على راتب بداية لم يُعرف بعد."
       },
       {
         "who": "Maha",
-        "de": "Sonderzahlung zweimal jährlich — damit wäre eine jährliche Sondertilgung vereinbart.",
-        "ar": "وبدفعتينِ استثنائيتينِ سنوياً يُتَّفقُ على تسديدٍ إضافيٍّ كلَّ عام."
+        "de": "Sondertilgungen und Gesamtkosten möchte ich ebenfalls vergleichen.",
+        "ar": "أريد أيضاً مقارنة السداد الإضافي والتكلفة الإجمالية."
       },
       {
         "who": "Bankberaterin",
-        "de": "So fixieren wir es im Bescheid — Unterschrift online per eID.",
-        "ar": "هكذا نُثبِّته في الإشعار؛ والتوقيعُ إلكترونيٌّ بالهويةِ الرقمية."
+        "de": "Dann lassen Sie Effektivzins, Gesamtbetrag, Gebühren und Sondertilgungsregeln in jedem Angebot ausweisen.",
+        "ar": "إذن اطلبوا بيان الفائدة الفعلية والمبلغ الإجمالي والرسوم وقواعد السداد الإضافي في كل عرض."
       }
     ],
     "questions": [
       {
         "id": "d-b2-21-q1",
         "type": "mc",
-        "promptDe": "Worauf gründet der Zinsnachlass?",
+        "promptDe": "Was soll Maha getrennt vergleichen?",
+        "promptAr": "ما الذي ينبغي لمها مقارنته بصورة منفصلة؟",
         "options": [
-          "auf der Bürgschaft",
-          "auf der Karenzzeit",
-          "auf der Gehaltsüberweisung über die Bank"
+          "nur die monatliche Rate",
+          "nur die Sicherheiten",
+          "staatliche Programme und Bankkredite"
         ],
-        "answer": "auf der Gehaltsüberweisung über die Bank",
-        "explanationAr": "الدليل: «abhängig vom Zinsnachlass bei Gehaltsüberweisung». الفخّ 1: الكفالة شرط القرض البنكي لا سبب الخصم. الفخّ 2: فترة السماح تؤجّل السداد ولا تخفّض الفائدة.",
-        "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "answer": "staatliche Programme und Bankkredite",
+        "explanationAr": "الدليل: تختلف الشروط والفوائد والضمانات بين البرامج الحكومية والقروض المصرفية. الفخّ: البدائل الأخرى تعمم قاعدة أو نتيجة لا يثبتها الحوار.",
+        "falle": true
       },
       {
         "id": "d-b2-21-q2",
         "type": "mc",
-        "promptDe": "Was geschieht während der Karenz?",
+        "promptDe": "Was gilt für aufgeschobene Zinsen?",
+        "promptAr": "ما الذي ينطبق على الفوائد المؤجلة؟",
         "options": [
-          "die Zinsen laufen weiter und werden gestundet",
-          "Zinsen und Tilgung ruhen vollständig",
-          "die Tilgungsrate von 120 Euro beginnt"
+          "Sie sind nicht automatisch erlassen.",
+          "Sie entfallen immer vollständig.",
+          "Sie beginnen erst nach zwei Berufsjahren."
         ],
-        "answer": "die Zinsen laufen weiter und werden gestundet",
-        "explanationAr": "الدليل: «die Zinsen laufen weiter, werden gestundet». الفخّ 1: „ruhen vollständig“ يناقض „laufen weiter“. الفخّ 2: 120 يورو أقلّ قسط بعد السماح لا خلاله.",
-        "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "answer": "Sie sind nicht automatisch erlassen.",
+        "explanationAr": "الدليل: يجب فحص سريان الفائدة وآثار التأجيل في العرض المكتوب. الفخّ: البدائل الأخرى تعمم قاعدة أو نتيجة لا يثبتها الحوار.",
+        "falle": true
       },
       {
         "id": "d-b2-21-q3",
         "type": "mc",
-        "promptDe": "Wodurch wird Sondertilgung gedeckt?",
+        "promptDe": "Welche Angaben will Maha für die Gesamtkosten sehen?",
+        "promptAr": "ما البيانات التي تريد مها رؤيتها لمقارنة التكلفة الإجمالية؟",
         "options": [
-          "durch die Bürgschaft",
-          "durch die zwei Sonderzahlungen im Jahr",
-          "durch das Einstiegsgehalt"
+          "nur das unbekannte Einstiegsgehalt",
+          "Effektivzins, Gesamtbetrag, Gebühren und Sondertilgungsregeln",
+          "eine pauschale Rate ohne Angebot"
         ],
-        "answer": "durch die zwei Sonderzahlungen im Jahr",
-        "explanationAr": "الدليل: «Sonderzahlung zweimal jährlich — damit wäre eine jährliche Sondertilgung vereinbart». الفخّ 1: الكفالة ضمان لا مصدر دفع. الفخّ 2: راتب البداية يحدّد القسط العادي.",
-        "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "answer": "Effektivzins, Gesamtbetrag, Gebühren und Sondertilgungsregeln",
+        "explanationAr": "الدليل: تطلب المستشارة إظهار هذه العناصر في كل عرض. الفخّ: البدائل الأخرى تعمم قاعدة أو نتيجة لا يثبتها الحوار.",
+        "falle": true
       }
     ],
     "dictation": [
-      "Karenzzeit bis 18 Monate möglich; die Zinsen laufen weiter, werden gestundet.",
-      "Zwischen 120 und 200 Euro, abhängig vom Zinsnachlass bei Gehaltsüberweisung."
+      "Trennen Sie staatliche Programme von Bankkrediten und prüfen Sie jeweils aktuelle Beträge, Voraussetzungen, Zinsen und Sicherheiten.",
+      "Dann lassen Sie Effektivzins, Gesamtbetrag, Gebühren und Sondertilgungsregeln in jedem Angebot ausweisen."
     ],
-    "cultural_theme": "Society"
+    "cultural_theme": "Bildungsfinanzierung"
   },
   {
     "id": "d-b2-22",
     "level": "B2",
-    "titleDe": "Überweisung zum Facharzt: Dringlichkeit",
-    "titleAr": "تحويلةٌ إلى الاختصاصي: حالةُ استعجال",
+    "titleDe": "Facharzttermin: Dringlichkeit sicher klären",
+    "titleAr": "موعد الاختصاصي: التحقق الآمن من الاستعجال",
     "lines": [
       {
         "who": "Imen",
-        "de": "Die Überweisung zum Radiologen dauert Wochen — meine Schmerzen lassen nicht nach.",
-        "ar": "التحويلةُ إلى طبيبِ الأشعةِ تستغرقُ أسابيع — والألمُ لا يهدأ."
+        "de": "Der Facharzttermin ist erst in einigen Wochen, und meine Beschwerden lassen nicht nach.",
+        "ar": "موعد الاختصاصي بعد أسابيع، ولا تهدأ أعراضي."
       },
       {
         "who": "Ärztin",
-        "de": "Wir stufen als akut ein: Dringlichkeitscode C auf dem Schein verkürzt die Wartezeit.",
-        "ar": "نُصنِّفُها حادة: رمزُ الاستعجالِ C على التحويلةِ يُقصِّرُ الانتظار."
+        "de": "Wir beurteilen die Beschwerden heute erneut. Bei Warnzeichen oder akuter Verschlechterung gilt der medizinische Notfallweg; im Zweifel rufen Sie 112.",
+        "ar": "سنقيّم الأعراض مجدداً اليوم. عند علامات الخطر أو التدهور الحاد يُتبع مسار الطوارئ الطبية؛ وعند الشك اتصلوا بالرقم 112."
       },
       {
         "who": "Imen",
-        "de": "Kann eine Zweitüberweisung an ein anderes Krankenhaus helfen?",
-        "ar": "هل تُفيدُ تحويلةٌ ثانيةٌ إلى مستشفى آخر؟"
+        "de": "Kann eine Terminservicestelle helfen, wenn eine dringliche Überweisung medizinisch begründet ist?",
+        "ar": "هل يمكن لخدمة المواعيد المساعدة إذا كانت الإحالة العاجلة مبررة طبياً؟"
       },
       {
         "who": "Ärztin",
-        "de": "Parallel ja, aber die Akten müssen austauschbar sein — mit Ihrem Einverständnis.",
-        "ar": "نعم بالتوازي، لكن يجب أن تكون الملفاتُ قابلةً للتبادل — بموافقتكِ."
+        "de": "Wir prüfen die medizinische Dringlichkeit und erklären Ihnen den aktuellen Vermittlungsweg; einen Code stellen wir nur aus, wenn die Voraussetzungen erfüllt sind.",
+        "ar": "سنفحص الاستعجال الطبي ونشرح لكم مسار الوساطة الحالي؛ ولا نصدر رمزاً إلا إذا استوفيت الشروط."
       },
       {
         "who": "Imen",
-        "de": "Welche Befunde braucht der Facharzt zwingend?",
-        "ar": "ما التقاريرُ التي يحتاجُها الاختصاصيُّ إلزامياً؟"
+        "de": "Welche Befunde soll die Fachpraxis erhalten?",
+        "ar": "ما التقارير التي ينبغي أن تتلقاها عيادة الاختصاصي؟"
       },
       {
         "who": "Ärztin",
-        "de": "Laborwerte der Woche, Voraufnahmen im DICOM-Format, keine Komprimierung.",
-        "ar": "تحاليلُ الأسبوع، والصورُ السابقةُ بصيغةِ DICOM دون ضغط."
+        "de": "Nur die erforderlichen Befunde, sicher und mit Ihrer Einwilligung. Format und Übertragungsweg stimmen wir mit der empfangenden Praxis ab.",
+        "ar": "التقارير الضرورية فقط، بصورة آمنة وبموافقتكم. وننسق الصيغة وطريقة النقل مع العيادة المستقبلة."
       },
       {
         "who": "Imen",
-        "de": "Der Termin bestätigt — wie storniere ich, falls es früher klappt?",
-        "ar": "أُكِّد الموعد — كيف أُلغيه إن توفَّر موعدٌ أبكرُ؟"
+        "de": "Wie storniere ich einen Termin, falls ich früher versorgt werde?",
+        "ar": "كيف ألغي الموعد إذا حصلت على الرعاية في وقت أبكر؟"
       },
       {
         "who": "Ärztin",
-        "de": "Ein Anruf genügt; der Platz wandert sofort auf die Nachrückliste.",
-        "ar": "مكالمةٌ واحدة تكفي — فيُنقَلُ المقعدُ فوراً إلى قائمةِ الانتظارِ الاحتياطية."
+        "de": "So früh wie möglich über den von der Terminbestätigung genannten Weg, damit der Platz neu vergeben werden kann.",
+        "ar": "في أقرب وقت ممكن عبر الطريقة المذكورة في تأكيد الموعد، كي يمكن منح الموعد لشخص آخر."
       }
     ],
     "questions": [
       {
         "id": "d-b2-22-q1",
         "type": "mc",
-        "promptDe": "Was verkürzt die Wartezeit?",
+        "promptDe": "Was geschieht bei Warnzeichen oder akuter Verschlechterung?",
+        "promptAr": "ماذا يحدث عند علامات الخطر أو التدهور الحاد؟",
         "options": [
-          "die Laborwerte der Woche",
-          "die Nachrückliste",
-          "der Dringlichkeitscode C auf dem Schein"
+          "Man wartet unverändert mehrere Wochen.",
+          "Ein Code wird automatisch ausgestellt.",
+          "Der medizinische Notfallweg gilt."
         ],
-        "answer": "der Dringlichkeitscode C auf dem Schein",
-        "explanationAr": "الدليل: «Dringlichkeitscode C auf dem Schein verkürzt die Wartezeit». الفخّ 1: قيم المختبر وثيقة يحتاجها الأخصّائي لا وسيلة تقصير الانتظار. الفخّ 2: قائمة الانتظار البديلة تخصّ الإلغاء.",
-        "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "answer": "Der medizinische Notfallweg gilt.",
+        "explanationAr": "الدليل: تُعاد معاينة الحالة، وعند الطوارئ يُتبع مسار الطوارئ ويُتصل بـ112 عند الشك. الفخّ: البدائل الأخرى تعمم قاعدة أو نتيجة لا يثبتها الحوار.",
+        "falle": true
       },
       {
         "id": "d-b2-22-q2",
         "type": "mc",
-        "promptDe": "Welche Bedingung für Parallelüberweisung?",
+        "promptDe": "Wann wird ein Vermittlungscode ausgestellt?",
+        "promptAr": "متى يُصدر رمز الوساطة؟",
         "options": [
-          "das Einverständnis der Patientin zum Aktenaustausch",
-          "eine Bestätigung des Radiologen",
-          "dass die Schmerzen akut sind"
+          "nur wenn die medizinischen Voraussetzungen erfüllt sind",
+          "automatisch bei jeder Überweisung",
+          "erst nach dem Facharzttermin"
         ],
-        "answer": "das Einverständnis der Patientin zum Aktenaustausch",
-        "explanationAr": "الدليل: «die Akten müssen austauschbar sein — mit Ihrem Einverständnis». الفخّ 1: الراديولوجي لم يُطلب منه شيء. الفخّ 2: الحدّة سبب الكود C لا شرط التحويل الموازي.",
-        "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "answer": "nur wenn die medizinischen Voraussetzungen erfüllt sind",
+        "explanationAr": "الدليل: الطبيبة تفحص الاستعجال ولا تعد برمز تلقائي. الفخّ: البدائل الأخرى تعمم قاعدة أو نتيجة لا يثبتها الحوار.",
+        "falle": true
       },
       {
         "id": "d-b2-22-q3",
         "type": "mc",
-        "promptDe": "Wie werden Bilder angeliefert?",
+        "promptDe": "Wie werden Befunde übermittelt?",
+        "promptAr": "كيف تُنقل التقارير؟",
         "options": [
-          "komprimiert, damit sie schneller ankommen",
-          "im DICOM-Format ohne Komprimierung",
-          "als Laborwerte der Woche"
+          "immer unkomprimiert in einem festen Format",
+          "erforderlich, sicher, mit Einwilligung und abgestimmtem Format",
+          "ohne Einwilligung parallel an alle Kliniken"
         ],
-        "answer": "im DICOM-Format ohne Komprimierung",
-        "explanationAr": "الدليل: «Voraufnahmen im DICOM-Format, keine Komprimierung». الفخّ 1: الضغط منفيّ صراحةً. الفخّ 2: قيم المختبر وثيقة أخرى لا صور.",
-        "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "answer": "erforderlich, sicher, mit Einwilligung und abgestimmtem Format",
+        "explanationAr": "الدليل: لا يحدد الحوار صيغة عامة؛ بل تُنسق مع العيادة المستقبلة وبموافقة المريضة. الفخّ: البدائل الأخرى تعمم قاعدة أو نتيجة لا يثبتها الحوار.",
+        "falle": true
       }
     ],
     "dictation": [
-      "Wir stufen als akut ein: Dringlichkeitscode C auf dem Schein verkürzt die Wartezeit.",
-      "Parallel ja, aber die Akten müssen austauschbar sein — mit Ihrem Einverständnis."
+      "Wir beurteilen die Beschwerden heute erneut. Bei Warnzeichen oder akuter Verschlechterung gilt der medizinische Notfallweg; im Zweifel rufen Sie 112.",
+      "So früh wie möglich über den von der Terminbestätigung genannten Weg, damit der Platz neu vergeben werden kann."
     ],
-    "cultural_theme": "Future plans"
+    "cultural_theme": "Facharzttermin und Dringlichkeit"
   },
   {
     "id": "d-b2-23",
     "level": "B2",
-    "titleDe": "Betriebsrat: Überstundenkonflikt",
-    "titleAr": "لجنةُ العاملين: نزيفُ الساعات",
+    "titleDe": "Betriebsrat: Überstunden dokumentieren",
+    "titleAr": "مجلس العاملين: توثيق الساعات الإضافية",
     "lines": [
       {
         "who": "Amir",
-        "de": "Im Lager sammeln sich Überstunden — der Ausgleich fehlt seit März.",
-        "ar": "في المستودعِ تكدَّست ساعاتٌ إضافية، وتعويضُها غائبٌ منذ مارس."
+        "de": "Im Lager sammeln sich Überstunden, und seit März fehlt ein nachvollziehbarer Ausgleich.",
+        "ar": "تتراكم الساعات الإضافية في المستودع، ولا توجد منذ مارس تسوية مفهومة."
       },
       {
         "who": "Betriebsrätin",
-        "de": "Das Arbeitszeitkonto muss monatlich ausgeglichen werden — wir haben die Betriebsvereinbarung.",
-        "ar": "يجبُ تسويةُ رصيدِ ساعاتِ العمل شهرياً — فنحن نستندُ إلى اتفاقيةِ المنشأة."
+        "de": "Wir prüfen Arbeitsvertrag, Tarifvertrag und die aktuelle Betriebsvereinbarung, statt eine allgemeine Regel anzunehmen.",
+        "ar": "سنفحص عقد العمل والاتفاقية الجماعية واتفاقية المنشأة الحالية، بدلاً من افتراض قاعدة عامة."
       },
       {
         "who": "Amir",
-        "de": "Schlagen Sie eine Zeitschiene statt Auszahlung vor?",
-        "ar": "أتقترحون جدولةً زمنيةً بدلَ الدفع النقدي؟"
+        "de": "Soll ich Zeiten, Anordnungen und bisherige Ausgleichsversuche sammeln?",
+        "ar": "هل أجمع الساعات والتكليفات ومحاولات التسوية السابقة؟"
       },
       {
         "who": "Betriebsrätin",
-        "de": "Frei im Block: zwei Tage plus Zuschlag pro Überstunde laut Tarif.",
-        "ar": "إجازةٌ متصلة: يومان، إضافةً إلى علاوةٍ عن كلِّ ساعةٍ إضافيةٍ وفقَ الاتفاقيةِ الأجرية."
+        "de": "Ja. Eine vollständige Aufstellung trennt bestätigte Stunden von strittigen Angaben.",
+        "ar": "نعم. تفصل القائمة الكاملة الساعات المؤكدة عن البيانات المختلف عليها."
       },
       {
         "who": "Amir",
-        "de": "Der Schichtplan lässt das nicht zu — wir brauchen das Kontingent vor Ostern abgebaut.",
-        "ar": "جدولُ المناوباتِ لا يسمحُ بذلك — علينا تصريفُ الرصيدِ قبلَ عيدِ الفصح."
+        "de": "Der Schichtplan erschwert zusammenhängende Freizeit.",
+        "ar": "يجعل جدول المناوبات الإجازة المتصلة صعبة."
       },
       {
         "who": "Betriebsrätin",
-        "de": "Wir setzen die Liste am Montag mit dem Schichtleiter durch — verbindlich.",
-        "ar": "سنُمرِّرُ القائمةَ يومَ الاثنين مع قائدِ المناوبة — بشكلٍ ملزم."
+        "de": "Dann besprechen wir mit der Schichtleitung schriftlich, welche Lösung die geltenden Vereinbarungen tatsächlich zulassen.",
+        "ar": "إذن سنناقش كتابةً مع إدارة المناوبة الحل الذي تسمح به الاتفاقيات السارية فعلاً."
       },
       {
         "who": "Amir",
-        "de": "Was tun, wenn die Firma ignoriert?",
-        "ar": "وماذا لو تجاهلتِ الإدارة؟"
+        "de": "Was tun wir, wenn keine Einigung gelingt?",
+        "ar": "ماذا نفعل إذا لم نصل إلى اتفاق؟"
       },
       {
         "who": "Betriebsrätin",
-        "de": "Dann Einigungsstelle; der Spruch ersetzt die Weigerung des Arbeitgebers.",
-        "ar": "فهيئةُ التسوية؛ ويحلُّ قرارُها محلَّ رفضِ صاحبِ العمل."
+        "de": "Wir dokumentieren den Stand und klären die zuständigen innerbetrieblichen oder rechtlichen Schritte; dieses Gespräch ersetzt keine Rechtsberatung.",
+        "ar": "سنوثق الوضع ونتحقق من الخطوات الداخلية أو القانونية المختصة؛ وهذا الحوار لا يحل محل الاستشارة القانونية."
       }
     ],
     "questions": [
       {
         "id": "d-b2-23-q1",
         "type": "mc",
-        "promptDe": "Wozu verpflichtet die Betriebsvereinbarung?",
+        "promptDe": "Welche Grundlagen will der Betriebsrat prüfen?",
+        "promptAr": "ما الأسس التي يريد مجلس العاملين فحصها؟",
         "options": [
-          "zu Überstunden mit Zuschlag",
-          "zum Abbau vor Ostern",
-          "zum monatlichen Ausgleich des Arbeitszeitkontos"
+          "nur den Arbeitsvertrag",
+          "nur Amirs Aufstellung",
+          "Arbeitsvertrag, Tarifvertrag und aktuelle Betriebsvereinbarung"
         ],
-        "answer": "zum monatlichen Ausgleich des Arbeitszeitkontos",
-        "explanationAr": "الدليل: «Das Arbeitszeitkonto muss monatlich ausgeglichen werden — wir haben die Betriebsvereinbarung». الفخّ 1: الزيادة حسب الـTarif لا الاتفاقية. الفخّ 2: «vor Ostern» مطلب أمير لا نصّ الاتفاقية.",
-        "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "answer": "Arbeitsvertrag, Tarifvertrag und aktuelle Betriebsvereinbarung",
+        "explanationAr": "الدليل: يُرفض افتراض قاعدة عامة قبل فحص النصوص السارية. الفخّ: البدائل الأخرى تعمم قاعدة أو نتيجة لا يثبتها الحوار.",
+        "falle": true
       },
       {
         "id": "d-b2-23-q2",
         "type": "mc",
-        "promptDe": "Welches Druckmittel steht bereit?",
+        "promptDe": "Was trennt die vollständige Aufstellung?",
+        "promptAr": "ما الذي تفصل بينه القائمة الكاملة؟",
         "options": [
-          "die Einigungsstelle",
-          "die Liste mit dem Schichtleiter",
-          "der Zuschlag laut Tarif"
+          "bestätigte Stunden und strittige Angaben",
+          "Freizeit und Ostern",
+          "Tarifvertrag und Rechtsberatung"
         ],
-        "answer": "die Einigungsstelle",
-        "explanationAr": "الدليل: «Dann Einigungsstelle; der Spruch ersetzt die Weigerung des Arbeitgebers». الفخّ 1: القائمة مع رئيس الوردية هي الخطوة العادية يوم الاثنين. الفخّ 2: الـTarif يحدّد الزيادة لا يفرض التنفيذ.",
-        "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "answer": "bestätigte Stunden und strittige Angaben",
+        "explanationAr": "الدليل: تجمع الأوقات والتكليفات ومحاولات التسوية لتوضيح محل الاتفاق والنزاع. الفخّ: البدائل الأخرى تعمم قاعدة أو نتيجة لا يثبتها الحوار.",
+        "falle": true
       },
       {
         "id": "d-b2-23-q3",
         "type": "mc",
-        "promptDe": "Was verlangt Amir zeitlich vor Ostern?",
+        "promptDe": "Was geschieht, wenn keine Einigung gelingt?",
+        "promptAr": "ماذا يحدث إذا لم يتم التوصل إلى اتفاق؟",
         "options": [
-          "eine Auszahlung statt Freizeit",
-          "den Abbau des Überstundenkontingents",
-          "einen neuen Schichtplan"
+          "automatisch ein Zwangsgeld verhängen",
+          "Stand dokumentieren und zuständige Schritte klären",
+          "eine allgemeine Rechtsfolge versprechen"
         ],
-        "answer": "den Abbau des Überstundenkontingents",
-        "explanationAr": "الدليل: «wir brauchen das Kontingent vor Ostern abgebaut». الفخّ 1: أمير سأل عن «Zeitschiene statt Auszahlung». الفخّ 2: جدول الورديات عائق ذكره لا مطلب.",
-        "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "answer": "Stand dokumentieren und zuständige Schritte klären",
+        "explanationAr": "الدليل: لا يَعِد الحوار بنتيجة قانونية تلقائية؛ بل يوثق ويحدد المسار المختص. الفخّ: البدائل الأخرى تعمم قاعدة أو نتيجة لا يثبتها الحوار.",
+        "falle": true
       }
     ],
     "dictation": [
-      "Frei im Block: zwei Tage plus Zuschlag pro Überstunde laut Tarif.",
-      "Dann Einigungsstelle; der Spruch ersetzt die Weigerung des Arbeitgebers."
+      "Wir prüfen Arbeitsvertrag, Tarifvertrag und die aktuelle Betriebsvereinbarung, statt eine allgemeine Regel anzunehmen.",
+      "Wir dokumentieren den Stand und klären die zuständigen innerbetrieblichen oder rechtlichen Schritte; dieses Gespräch ersetzt keine Rechtsberatung."
     ],
-    "cultural_theme": "Culture"
+    "cultural_theme": "Betriebsrat und Arbeitszeit"
   },
   {
     "id": "d-b2-24",
     "level": "B2",
-    "titleDe": "Integrationskurs: Prüfungswiederholung",
-    "titleAr": "دورةُ الاندماج: إعادةُ الامتحان",
+    "titleDe": "Sprachprüfung: Ergebnis und Nachweise klären",
+    "titleAr": "امتحان اللغة: التحقق من النتيجة والإثباتات",
     "lines": [
       {
         "who": "Firas",
-        "de": "Ich habe die telc-Prüfung B1 knapp bestanden — Zertifikat oder nicht?",
-        "ar": "نجحتُ في امتحانِ telc B1 بفارقٍ ضئيل — هل أحصلُ على الشهادة؟"
+        "de": "Mein Ergebnisbogen sagt, dass ich die B1-Prüfung bestanden habe. Wann erhalte ich das Zertifikat?",
+        "ar": "تقول ورقة النتيجة إنني نجحت في امتحان B1. متى أتلقى الشهادة؟"
       },
       {
         "who": "Kursleitung",
-        "de": "Bestanden ist bestanden — das Zertifikat kommt nach vier Wochen per Post.",
-        "ar": "النجاحُ نجاح: ستصلُك الشهادةُ بالبريدِ بعدَ أربعةِ أسابيع."
+        "de": "Fragen Sie das konkrete Prüfungszentrum nach seiner aktuellen Ausstellungs- und Versandzeit; wir versprechen keine pauschale Frist.",
+        "ar": "اسألوا مركز الامتحان المحدد عن مدة الإصدار والإرسال الحالية؛ فنحن لا نَعِد بمهلة عامة."
       },
       {
         "who": "Firas",
-        "de": "Fehlt für meine Aufenthaltserlaubnis nicht der Nachweis der Wiederholung?",
-        "ar": "ألا يُشترطُ لإقامتي إثباتُ إعادةِ الامتحان؟"
+        "de": "Welchen Nachweis verlangt die Ausländerbehörde in meinem Verfahren?",
+        "ar": "ما الإثبات الذي تطلبه سلطة الأجانب في معاملتي؟"
       },
       {
         "who": "Kursleitung",
-        "de": "Bei Bestehen keine — Wiederholungen nur bei Nichtbestehen, maximal zweimal.",
-        "ar": "عندَ النجاحِ لا شيء؛ والإعادةُ تكونُ فقط عندَ الرسوب، وبحدٍّ أقصى مرتين."
+        "de": "Das entscheidet die zuständige Behörde. Reichen Sie nur die aktuell verlangten Unterlagen ein und lassen Sie sich die Auskunft bestätigen.",
+        "ar": "تقرر ذلك الجهة المختصة. قدموا المستندات المطلوبة حالياً فقط واطلبوا تأكيد المعلومة."
       },
       {
         "who": "Firas",
-        "de": "Falls ich die B2-Prüfung ablegen will: Anmeldung über die Volkshochschule?",
-        "ar": "وإن أردتُ التقدُّمَ لامتحان B2: ألتسجيلُ عبرَ معهدِ تعليمِ الكبار؟"
+        "de": "Falls ich später eine B2-Prüfung ablegen will: Wo melde ich mich an?",
+        "ar": "إذا أردت لاحقاً تقديم امتحان B2، فأين أسجل؟"
       },
       {
         "who": "Kursleitung",
-        "de": "Direkt über das Sprachenzentrum, Termin im Frühjahr — Warteliste inklusive.",
-        "ar": "عبرَ مركزِ اللغاتِ مباشرة؛ الموعدُ في الربيع، ومعه قائمةُ انتظار."
+        "de": "Bei einem lizenzierten Prüfungszentrum mit einem für Sie passenden Termin; prüfen Sie Anbieter, Format und Gebühren aktuell.",
+        "ar": "لدى مركز امتحان مرخص بموعد يناسبكم؛ تحققوا حالياً من الجهة والصيغة والرسوم."
       },
       {
         "who": "Firas",
-        "de": "Welche Fördermittel greifen bei wiederholtem Versuch?",
-        "ar": "وما وسائلُ الدعمِ المتاحةِ عندَ إعادةِ المحاولة؟"
+        "de": "Und wie erfahre ich Regeln, Kosten oder Förderung für eine Wiederholung?",
+        "ar": "وكيف أعرف قواعد الإعادة وتكاليفها أو دعمها؟"
       },
       {
         "who": "Kursleitung",
-        "de": "Die Kursträger können die Gebühren halbieren — Antrag binnen zwei Wochen.",
-        "ar": "يستطيعُ منظمو الدورةِ تخفيضَ الرسومِ إلى النصف؛ قدِّم الطلبَ خلالَ أسبوعين."
+        "de": "Direkt beim Prüfungszentrum und der möglichen Förderstelle; Versuchszahl und Kosten werden hier nicht erfunden.",
+        "ar": "مباشرة من مركز الامتحان وجهة الدعم المحتملة؛ ولا نخترع هنا عدد المحاولات أو التكاليف."
       }
     ],
     "questions": [
       {
         "id": "d-b2-24-q1",
         "type": "mc",
-        "promptDe": "Was erhält Firas trotz knappen Bestehens?",
+        "promptDe": "Wer nennt die aktuelle Versandzeit des Zertifikats?",
+        "promptAr": "من يحدد مدة إرسال الشهادة الحالية؟",
         "options": [
-          "einen Nachweis der Wiederholung",
-          "eine halbierte Gebühr",
-          "das Zertifikat nach vier Wochen per Post"
+          "jede Kursleitung mit einer Vier-Wochen-Regel",
+          "die Ausländerbehörde",
+          "das konkrete Prüfungszentrum"
         ],
-        "answer": "das Zertifikat nach vier Wochen per Post",
-        "explanationAr": "الدليل: «Bestanden ist bestanden — das Zertifikat kommt nach vier Wochen per Post». الفخّ 1: الإعادة لا تلزم عند النجاح. الفخّ 2: تخفيض الرسوم يخصّ المحاولة المكرَّرة.",
-        "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "answer": "das konkrete Prüfungszentrum",
+        "explanationAr": "الدليل: لا يقدم الحوار مهلة عامة، بل يحيل إلى مركز الامتحان. الفخّ: البدائل الأخرى تعمم قاعدة أو نتيجة لا يثبتها الحوار.",
+        "falle": true
       },
       {
         "id": "d-b2-24-q2",
         "type": "mc",
-        "promptDe": "Wie viele Wiederholungen bei Nichtbestehen?",
+        "promptDe": "Wer entscheidet über den Nachweis im Aufenthaltsverfahren?",
+        "promptAr": "من يقرر الإثبات المطلوب في معاملة الإقامة؟",
         "options": [
-          "höchstens zweimal",
-          "einmal, nach vier Wochen",
-          "zweimal jährlich"
+          "die zuständige Behörde",
+          "das Prüfungszentrum",
+          "die Kursleitung"
         ],
-        "answer": "höchstens zweimal",
-        "explanationAr": "الدليل: «Wiederholungen nur bei Nichtbestehen, maximal zweimal». الفخّ: „zweimal jährlich“ يضيف تكراراً سنوياً لم يُذكر؛ الحدّ إجماليّ. و«vier Wochen» مدّة وصول الشهادة.",
-        "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "answer": "die zuständige Behörde",
+        "explanationAr": "الدليل: تُطلب المعلومة الحالية من الجهة المختصة ويُحتفظ بتأكيدها. الفخّ: البدائل الأخرى تعمم قاعدة أو نتيجة لا يثبتها الحوار.",
+        "falle": true
       },
       {
         "id": "d-b2-24-q3",
         "type": "mc",
-        "promptDe": "Wo meldet sich Firas für die B2-Prüfung an?",
+        "promptDe": "Wo meldet sich Firas für eine B2-Prüfung an?",
+        "promptAr": "أين يسجل فراس لامتحان B2؟",
         "options": [
-          "über die Volkshochschule",
-          "direkt über das Sprachenzentrum",
-          "über den Kursträger, der die Gebühren halbiert"
+          "bei der möglichen Förderstelle",
+          "bei einem lizenzierten Prüfungszentrum",
+          "bei der Ausländerbehörde"
         ],
-        "answer": "direkt über das Sprachenzentrum",
-        "explanationAr": "الدليل: «Direkt über das Sprachenzentrum, Termin im Frühjahr». الفخّ 1: الـVHS اقتراح فراس المصحَّح. الفخّ 2: الـKursträger يخفّض الرسوم ولا يسجّل.",
-        "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "answer": "bei einem lizenzierten Prüfungszentrum",
+        "explanationAr": "الدليل: يُفحص المركز المرخص والموعد والصيغة والرسوم الحالية. الفخّ: البدائل الأخرى تعمم قاعدة أو نتيجة لا يثبتها الحوار.",
+        "falle": true
       }
     ],
     "dictation": [
-      "Bestanden ist bestanden — das Zertifikat kommt nach vier Wochen per Post.",
-      "Die Kursträger können die Gebühren halbieren — Antrag binnen zwei Wochen."
+      "Fragen Sie das konkrete Prüfungszentrum nach seiner aktuellen Ausstellungs- und Versandzeit; wir versprechen keine pauschale Frist.",
+      "Direkt beim Prüfungszentrum und der möglichen Förderstelle; Versuchszahl und Kosten werden hier nicht erfunden."
     ],
-    "cultural_theme": "Culture"
+    "cultural_theme": "Sprachprüfung und Behördennachweis"
   },
   {
     "id": "d-b2-25",
     "level": "B2",
-    "titleDe": "Beschwerde über den Lieferdienst",
-    "titleAr": "شكوى على خدمةِ التوصيل",
+    "titleDe": "Beschwerde über eine verspätete Kühlsendung",
+    "titleAr": "شكوى بشأن شحنة مبردة متأخرة",
     "lines": [
       {
         "who": "Selim",
-        "de": "Die Sendung kam drei Tage später an, das Kühlpaket war offen.",
-        "ar": "وصلتِ الشحنةُ متأخرةً ثلاثةَ أيام، وكان كيسُ التبريدِ مفتوحاً."
+        "de": "Die Sendung kam drei Tage später an, und das Kühlpaket war offen.",
+        "ar": "وصلت الشحنة متأخرة ثلاثة أيام، وكانت عبوة التبريد مفتوحة."
       },
       {
         "who": "Servicecenter",
-        "de": "Belegfotos, Packzettel und Zeitstempel der Tür — dann öffnen wir das Verfahren.",
-        "ar": "صورُ إثبات، وقائمةُ التعبئة، وطابعٌ زمنيٌّ عند الباب — فنفتحُ الإجراء."
+        "de": "Bitte nutzen Sie temperaturempfindliche Ware nicht, bevor ihre Sicherheit fachlich geklärt ist; dokumentieren Sie Verpackung und Zustellzeit.",
+        "ar": "يرجى عدم استخدام البضاعة الحساسة للحرارة قبل التحقق المتخصص من سلامتها، ووثّقوا التغليف ووقت التسليم."
       },
       {
         "who": "Selim",
-        "de": "Die Ware selbst ist einwandfrei; ich verlange die Versandgebühr zurück.",
-        "ar": "السلعةُ سليمة؛ أريدُ فقط ردَّ مصاريفِ الشحن."
+        "de": "Welche Belege benötigen Sie für die Reklamation?",
+        "ar": "ما المستندات التي تحتاجونها للشكوى؟"
       },
       {
         "who": "Servicecenter",
-        "de": "Rückerstattung plus 10-Euro-Gutschein — gutgeschrieben binnen 72 Stunden.",
-        "ar": "تُستردُّ الرسومُ وتُقيَّد قسيمةُ 10 يورو خلال 72 ساعة."
+        "de": "Fotos, Packzettel und Zustellnachweis. Danach prüfen wir Erstattung oder Ersatz nach den geltenden Bedingungen.",
+        "ar": "صور وقائمة التعبئة وإثبات التسليم. وبعد ذلك نفحص الاسترداد أو الاستبدال وفق الشروط السارية."
       },
       {
         "who": "Selim",
-        "de": "Wenn der Kurier wiederholt öffnet — hat das Konsequenzen?",
-        "ar": "وإن كرّر الساعي فتح الطرود، فهل لذلك عواقب؟"
+        "de": "Können Sie heute schon eine Rückerstattung versprechen?",
+        "ar": "هل يمكنكم التعهد اليوم باسترداد المبلغ؟"
       },
       {
         "who": "Servicecenter",
-        "de": "Wir protokollieren die Charge und setzen ihn bis zur Schulung vom Dienst.",
-        "ar": "نسجِّلُ الدفعةَ ونُوقِفُ الساعي عن العمل حتى اجتياز التدريب."
+        "de": "Nein. Wir bestätigen zunächst den Eingang und teilen die Entscheidung mit Begründung schriftlich mit.",
+        "ar": "لا. سنؤكد الاستلام أولاً ثم نبلغكم القرار وتعليله كتابةً."
       },
       {
         "who": "Selim",
-        "de": "Muss die Beschwerde auf Englisch sein? Ich schreibe sie gern um.",
-        "ar": "هل يلزمُ أن تكونَ الشكوى بالإنجليزية؟ أُعيدُ صياغتَها إن شئتُم."
+        "de": "Muss die Beschwerde auf Englisch sein?",
+        "ar": "هل يجب أن تكون الشكوى بالإنجليزية؟"
       },
       {
         "who": "Servicecenter",
-        "de": "Auf Deutsch reicht — unser Haus übersetzt für Sie ins Englische.",
-        "ar": "بالألمانية تكفي؛ قسمنا الداخلي يترجمها إلى الإنجليزية."
+        "de": "Nein, Deutsch ist möglich; nutzen Sie keine Sprache, die Sie nicht sicher beherrschen.",
+        "ar": "لا، يمكن استخدام الألمانية؛ ولا تستخدموا لغة لا تتقنونها بثقة."
       }
     ],
     "questions": [
       {
         "id": "d-b2-25-q1",
         "type": "mc",
-        "promptDe": "Was wird erstattet?",
+        "promptDe": "Was soll Selim mit der temperaturempfindlichen Ware tun?",
+        "promptAr": "ماذا ينبغي لسليم فعله بالبضاعة الحساسة للحرارة؟",
         "options": [
-          "der Warenwert, weil das Kühlpaket offen war",
-          "nur der Gutschein",
-          "die Versandgebühr plus ein 10-Euro-Gutschein"
+          "ihre Sicherheit selbst bestätigen",
+          "sie wegen der offenen Packung sofort verwenden",
+          "sie bis zur fachlichen Klärung nicht nutzen"
         ],
-        "answer": "die Versandgebühr plus ein 10-Euro-Gutschein",
-        "explanationAr": "الدليل: «ich verlange die Versandgebühr zurück» ← «Rückerstattung plus 10-Euro-Gutschein». الفخّ 1: البضاعة «einwandfrei» فلا تعويض عنها. الفخّ 2: القسيمة إضافة لا بديل.",
-        "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "answer": "sie bis zur fachlichen Klärung nicht nutzen",
+        "explanationAr": "الدليل: تأخر التبريد وفتح العبوة يستدعيان التحقق المتخصص، لا افتراض السلامة. الفخّ: البدائل الأخرى تعمم قاعدة أو نتيجة لا يثبتها الحوار.",
+        "falle": true
       },
       {
         "id": "d-b2-25-q2",
         "type": "mc",
-        "promptDe": "Wie schnell wird die Rückerstattung gutgeschrieben?",
+        "promptDe": "Welche Belege verlangt das Servicecenter?",
+        "promptAr": "ما المستندات التي يطلبها مركز الخدمة؟",
         "options": [
-          "binnen 72 Stunden",
-          "binnen drei Tagen nach der Schulung des Kuriers",
-          "nach drei Tagen Verspätung"
+          "Fotos, Packzettel und Zustellnachweis",
+          "nur die Verpackung",
+          "nur die Beschwerde auf Deutsch"
         ],
-        "answer": "binnen 72 Stunden",
-        "explanationAr": "الدليل: «gutgeschrieben binnen 72 Stunden». الفخّ 1: تدريب الساعي إجراء داخلي منفصل. الفخّ 2: الأيام الثلاثة مدّة تأخّر الطرد.",
-        "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "answer": "Fotos, Packzettel und Zustellnachweis",
+        "explanationAr": "الدليل: تُوثق العبوة ووقت التسليم وتُقدَّم المستندات المذكورة. الفخّ: البدائل الأخرى تعمم قاعدة أو نتيجة لا يثبتها الحوار.",
+        "falle": true
       },
       {
         "id": "d-b2-25-q3",
         "type": "mc",
-        "promptDe": "Welche Beweise nötig?",
+        "promptDe": "Was verspricht das Servicecenter zunächst?",
+        "promptAr": "بماذا يتعهد مركز الخدمة أولاً؟",
         "options": [
-          "eine Beschwerde auf Englisch",
-          "Fotos, Packzettel und Zeitstempel der Tür",
-          "das Protokoll der Charge"
+          "sofort zehn Euro zu erstatten",
+          "den Eingang zu bestätigen und schriftlich zu entscheiden",
+          "die Ware ohne Prüfung zu ersetzen"
         ],
-        "answer": "Fotos, Packzettel und Zeitstempel der Tür",
-        "explanationAr": "الدليل: «Belegfotos, Packzettel und Zeitstempel der Tür — dann öffnen wir das Verfahren». الفخّ 1: الإنجليزية غير مطلوبة («Auf Deutsch reicht»). الفخّ 2: الـCharge يوثّقها المركز لا العميل.",
-        "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "answer": "den Eingang zu bestätigen und schriftlich zu entscheiden",
+        "explanationAr": "الدليل: لا توجد نتيجة مالية مسبقة؛ القرار يأتي بعد الفحص ومع تعليل. الفخّ: البدائل الأخرى تعمم قاعدة أو نتيجة لا يثبتها الحوار.",
+        "falle": true
       }
     ],
     "dictation": [
-      "Wir protokollieren die Charge und setzen ihn bis zur Schulung vom Dienst.",
-      "Belegfotos, Packzettel und Zeitstempel der Tür — dann öffnen wir das Verfahren."
+      "Bitte nutzen Sie temperaturempfindliche Ware nicht, bevor ihre Sicherheit fachlich geklärt ist; dokumentieren Sie Verpackung und Zustellzeit.",
+      "Nein, Deutsch ist möglich; nutzen Sie keine Sprache, die Sie nicht sicher beherrschen."
     ],
-    "cultural_theme": "Weihnachten - Christmas traditions",
-    "cultural_note": "Theme: Weihnachten - Christmas traditions"
+    "cultural_theme": "Verbraucherbeschwerde"
   },
   {
     "id": "d-b2-26",
     "level": "B2",
-    "titleDe": "Promotion: Betreuungswechsel",
-    "titleAr": "الدكتوراه: تغييرُ المشرف",
+    "titleDe": "Promotion: Betreuungswechsel nach Ordnung prüfen",
+    "titleAr": "الدكتوراه: فحص تغيير الإشراف وفق اللائحة",
     "lines": [
       {
         "who": "Amina",
-        "de": "Meine Betreuerin geht in den Ruhestand — die Betreuung muss neu geordnet werden.",
-        "ar": "مشرفتي ستتقاعد — فيجب إعادة ترتيب الإشراف."
+        "de": "Meine Betreuerin geht in den Ruhestand. Welche Regeln gelten für den Betreuungswechsel?",
+        "ar": "ستتقاعد مشرفتي. ما القواعد التي تسري على تغيير الإشراف؟"
       },
       {
         "who": "Dekan",
-        "de": "Wir brauchen eine neue Erstprüferin mit gleicher Qualifikation, binnen sechs Wochen.",
-        "ar": "نحتاج مشرفةً فاحصةً جديدةً بنفس المؤهل خلال ستة أسابيع."
+        "de": "Maßgeblich sind die aktuelle Promotionsordnung und die Entscheidung der zuständigen Fakultätsgremien.",
+        "ar": "المرجع هو لائحة الدكتوراه الحالية وقرار هيئات الكلية المختصة."
       },
       {
         "who": "Amina",
-        "de": "Herr Dr. Weiler erklärte sich bereit, sofern die Dissertationsrichtung bleibt.",
-        "ar": "أبدى الدكتور فايلر استعداده، بشرط بقاء اتجاه الأطروحة."
+        "de": "Herr Dr. Weiler wäre grundsätzlich bereit. Wie wird seine Eignung geprüft?",
+        "ar": "الدكتور فايلر مستعد من حيث المبدأ. كيف تُفحص أهليته؟"
       },
       {
         "who": "Dekan",
-        "de": "Dann unterschreiben beide den Wechsel; die alten Gutachten werden übertragen.",
-        "ar": "إذن يوقّع كلا الطرفين على التبديل، وتُنقل التقارير السابقة كما هي."
+        "de": "Nach den Qualifikations- und Befangenheitsregeln der Fakultät; eine Zusage im Gespräch genügt nicht.",
+        "ar": "وفق قواعد التأهيل وتعارض المصالح في الكلية؛ ولا تكفي موافقة في حوار."
       },
       {
         "who": "Amina",
-        "de": "Verschiebt sich damit mein Kolloquiumstermin?",
-        "ar": "فهل يتأخر موعد مناقشتي؟"
+        "de": "Bleibt mein Kolloquiumstermin automatisch bestehen?",
+        "ar": "هل يبقى موعد المناقشة تلقائياً؟"
       },
       {
         "who": "Dekan",
-        "de": "Nein — er bleibt, es sei denn, Sie beantragen einen Aufschub.",
-        "ar": "لا — يبقى موعده ما لم تتقدَّمي بطلبِ تأجيل."
+        "de": "Das prüft die Verwaltung im Einzelfall. Wir bestätigen Termin und Übergang der Unterlagen schriftlich.",
+        "ar": "تفحص الإدارة ذلك في كل حالة، ونؤكد الموعد ونقل المستندات كتابةً."
       },
       {
         "who": "Amina",
-        "de": "Und was verlangt die Promotionsordnung zusätzlich?",
-        "ar": "وماذا تفرضُ لائحةُ الدكتوراه زيادةً؟"
+        "de": "Welche Gutachten oder Unterschriften fehlen noch?",
+        "ar": "ما التقارير أو التوقيعات التي لا تزال ناقصة؟"
       },
       {
         "who": "Dekan",
-        "de": "Zwei externe Gutachten — die Verwaltung holt sie bis Monatsende ein.",
-        "ar": "تقريران خارجيان، وتستصدرهما الإدارة بنهاية الشهر."
+        "de": "Sie erhalten eine Checkliste aus Ihrer geltenden Ordnung; dieses Beispiel legt weder Zahl noch Frist allgemein fest.",
+        "ar": "ستتلقون قائمة من لائحتكم السارية؛ ولا يحدد هذا المثال عدداً أو مهلة بصورة عامة."
       }
     ],
     "questions": [
       {
         "id": "d-b2-26-q1",
         "type": "mc",
-        "promptDe": "Was muss innerhalb von sechs Wochen geschehen?",
+        "promptDe": "Was ist für den Betreuungswechsel maßgeblich?",
+        "promptAr": "ما المرجع في تغيير الإشراف؟",
         "options": [
-          "das Kolloquium",
-          "die zwei externen Gutachten",
-          "die Bestellung einer neuen Erstprüferin"
+          "eine mündliche Zusage allein",
+          "eine allgemeine Sechs-Wochen-Regel",
+          "aktuelle Promotionsordnung und zuständige Gremien"
         ],
-        "answer": "die Bestellung einer neuen Erstprüferin",
-        "explanationAr": "الدليل: «Wir brauchen eine neue Erstprüferin … binnen sechs Wochen». الفخّ 1: الـKolloquium يبقى في موعده. الفخّ 2: التقارير الخارجية «bis Monatsende».",
-        "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "answer": "aktuelle Promotionsordnung und zuständige Gremien",
+        "explanationAr": "الدليل: تختلف الإجراءات بحسب اللائحة والكلية، لذلك لا يثبت المثال مهلة عامة. الفخّ: البدائل الأخرى تعمم قاعدة أو نتيجة لا يثبتها الحوار.",
+        "falle": true
       },
       {
         "id": "d-b2-26-q2",
         "type": "mc",
-        "promptDe": "Was bleibt beim Wechsel erhalten?",
+        "promptDe": "Warum genügt Dr. Weilers Zusage nicht?",
+        "promptAr": "لماذا لا تكفي موافقة الدكتور فايلر؟",
         "options": [
-          "die alten Gutachten werden übertragen",
-          "die Dissertationsrichtung kann frei geändert werden",
-          "der Kolloquiumstermin wird verschoben"
+          "weil Eignung und Befangenheit geprüft werden",
+          "weil der Termin automatisch entfällt",
+          "weil immer zwei Gutachten fehlen"
         ],
-        "answer": "die alten Gutachten werden übertragen",
-        "explanationAr": "الدليل: «die alten Gutachten werden übertragen». الفخّ 1: فايلر اشترط بقاء الاتجاه. الفخّ 2: الموعد لا يتغيّر إلا بطلب تأجيل.",
-        "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "answer": "weil Eignung und Befangenheit geprüft werden",
+        "explanationAr": "الدليل: تُطبَّق قواعد التأهيل وتعارض المصالح قبل اعتماد التغيير. الفخّ: البدائل الأخرى تعمم قاعدة أو نتيجة لا يثبتها الحوار.",
+        "falle": true
       },
       {
         "id": "d-b2-26-q3",
         "type": "mc",
-        "promptDe": "Was verlangt die Ordnung zusätzlich?",
+        "promptDe": "Wie erfährt Amina die noch fehlenden Schritte?",
+        "promptAr": "كيف تعرف أمينة الخطوات المتبقية؟",
         "options": [
-          "eine Unterschrift von Dr. Weiler",
-          "zwei externe Gutachten",
-          "einen Antrag auf Aufschub"
+          "durch erfundene Zahlen im Beispiel",
+          "durch eine Checkliste aus der geltenden Ordnung",
+          "durch eine automatische Terminverschiebung"
         ],
-        "answer": "zwei externe Gutachten",
-        "explanationAr": "الدليل: «Zwei externe Gutachten — die Verwaltung holt sie bis Monatsende ein». الفخّ 1: توقيع فايلر جزء من التبديل لا شرطاً إضافياً في اللائحة. الفخّ 2: التأجيل اختياري.",
-        "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "answer": "durch eine Checkliste aus der geltenden Ordnung",
+        "explanationAr": "الدليل: تؤكد الإدارة الموعد والمستندات كتابةً وتقدم قائمة مرتبطة باللائحة السارية. الفخّ: البدائل الأخرى تعمم قاعدة أو نتيجة لا يثبتها الحوار.",
+        "falle": true
       }
     ],
     "dictation": [
-      "Dann unterschreiben beide den Wechsel; die alten Gutachten werden übertragen.",
-      "Nein — er bleibt, es sei denn, Sie beantragen einen Aufschub."
+      "Maßgeblich sind die aktuelle Promotionsordnung und die Entscheidung der zuständigen Fakultätsgremien.",
+      "Sie erhalten eine Checkliste aus Ihrer geltenden Ordnung; dieses Beispiel legt weder Zahl noch Frist allgemein fest."
     ],
-    "cultural_theme": "Environment"
+    "cultural_theme": "Promotionsbetreuung"
   },
   {
     "id": "d-b2-27",
     "level": "B2",
-    "titleDe": "Nachbarschaftsstreit: Schlichtung",
-    "titleAr": "خلافُ الجيرة: مصلحةُ الصلح",
+    "titleDe": "Nachbarschaftsstreit: Schlichtungsweg klären",
+    "titleAr": "خلاف الجيران: التحقق من مسار الصلح",
     "lines": [
       {
         "who": "Yara",
-        "de": "Die Hecke meines Nachbarn ragt 40 Zentimeter auf mein Grundstück — die Mahnung half nicht.",
-        "ar": "سياج جاري يمتد أربعين سنتيمتراً داخل أرضي، ولم يُجدِ الإنذار الخطي."
+        "de": "Die Hecke meines Nachbarn ragt nach meiner Messung auf mein Grundstück, und mein Schreiben blieb ohne Antwort.",
+        "ar": "وفق قياسي تمتد شجيرات جاري إلى أرضي، ولم أتلق رداً على رسالتي."
       },
       {
         "who": "Schiedsfrau",
-        "de": "Vor der Klage gehört der Schlichtungsversuch zur Pflicht — dazu bin ich da.",
-        "ar": "قبل أي دعوى تكون محاولة الصلح واجبة — ولهذا أنا هنا."
+        "de": "Ob vor einer Klage ein Schlichtungsversuch vorgeschrieben oder nur sinnvoll ist, hängt von Bundesland und Streitgegenstand ab.",
+        "ar": "يتوقف كون محاولة الصلح واجبة قبل الدعوى أو مفيدة فقط على الولاية وموضوع النزاع."
       },
       {
         "who": "Yara",
-        "de": "Wenn er die Grenze akzeptiert — verzichte ich auf Schadensersatz.",
-        "ar": "إن قبل بالحد، سأتنازل عن التعويض."
+        "de": "Wie kann ich den Verlauf sachlich dokumentieren?",
+        "ar": "كيف يمكنني توثيق الوقائع بموضوعية؟"
       },
       {
         "who": "Schiedsfrau",
-        "de": "Dann schlage ich einen Vergleich mit Frist zum Rückschnitt vor.",
-        "ar": "إذن أقترح تسويةً بمهلة لتقليم السياج."
+        "de": "Sichern Sie Schriftverkehr, datierte Fotos und vorhandene Grundstücksunterlagen; welche Beweise genügen, beurteilt die zuständige Stelle.",
+        "ar": "احتفظوا بالمراسلات والصور المؤرخة ومستندات العقار المتاحة؛ والجهة المختصة تقرر كفاية الأدلة."
       },
       {
         "who": "Yara",
-        "de": "Und die Frist — kann die gerichtlich bestätigt werden?",
-        "ar": "وهل تُصادَق على المهلة قضائياً؟"
+        "de": "Wenn wir uns auf einen Rückschnitt einigen, wie halten wir das fest?",
+        "ar": "إذا اتفقنا على التقليم، فكيف نثبته؟"
       },
       {
         "who": "Schiedsfrau",
-        "de": "Ja — bei Verstoß droht ein Zwangsgeld bis 250.000 Euro.",
-        "ar": "نعم — وفي حال المخالفة تُفرَض غرامة إجبارية تصل إلى 250000 يورو."
+        "de": "Mit einer klaren schriftlichen Vereinbarung über Maßnahme und Termin; Vollstreckbarkeit und Folgen müssen fachlich geprüft werden.",
+        "ar": "باتفاق خطي واضح على الإجراء والموعد؛ ويجب فحص قابلية التنفيذ والآثار على يد مختص."
       },
       {
         "who": "Yara",
-        "de": "Welche Unterlagen brauche ich für den Termin?",
-        "ar": "ما الأوراق المطلوبة للموعد؟"
+        "de": "Und wenn keine Einigung zustande kommt?",
+        "ar": "وماذا إذا لم يتم الاتفاق؟"
       },
       {
         "who": "Schiedsfrau",
-        "de": "Katasterauszug, Fotos mit Maßstab, die Mahnung von damals, zwei Zeugen genügen.",
-        "ar": "كشفُ السجل العقاري، صورٌ بمقياس، خطابُ الإنذار، وشاهدان تكفي."
-      },
-      {
-        "who": "Yara",
-        "de": "Und wenn er zum Termin nicht erscheint?",
-        "ar": "وإن لم يحضرِ الموعد؟"
-      },
-      {
-        "who": "Schiedsfrau",
-        "de": "Dann wird das Scheitern protokolliert — und die Klage wird zulässig.",
-        "ar": "يُسجَّل فشل الصلح في محضر، فتصبح الدعوى مقبولة."
+        "de": "Dann dokumentieren wir das Ergebnis und nennen die zuständigen Beratungs- oder Gerichtswege, ohne einen Prozesserfolg zu versprechen.",
+        "ar": "نوثق النتيجة ونوضح مسارات الاستشارة أو القضاء المختصة، من دون وعد بنتيجة الدعوى."
       }
     ],
     "questions": [
       {
         "id": "d-b2-27-q1",
         "type": "mc",
-        "promptDe": "Was ist vor der Klage Pflicht?",
+        "promptDe": "Wovon hängt eine vorgeschriebene Schlichtung ab?",
+        "promptAr": "ممّ يتوقف وجوب الصلح؟",
         "options": [
-          "eine Mahnung mit Frist",
-          "ein Zwangsgeld",
-          "ein Schlichtungsversuch"
+          "immer von einer festen Geldgrenze",
+          "allein von Yaras Messung",
+          "von Bundesland und Streitgegenstand"
         ],
-        "answer": "ein Schlichtungsversuch",
-        "explanationAr": "الدليل: «Vor der Klage gehört der Schlichtungsversuch zur Pflicht». الفخّ 1: الإنذار أرسلته يارا ولم ينفع، وليس شرطاً قانونياً هنا. الفخّ 2: الغرامة تأتي بعد المخالفة.",
-        "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "answer": "von Bundesland und Streitgegenstand",
+        "explanationAr": "الدليل: لا يقدم الحوار قاعدة وطنية مطلقة، بل يحيل إلى المكان ونوع النزاع. الفخّ: البدائل الأخرى تعمم قاعدة أو نتيجة لا يثبتها الحوار.",
+        "falle": true
       },
       {
         "id": "d-b2-27-q2",
         "type": "mc",
-        "promptDe": "Was geschieht nach Verweigerung?",
+        "promptDe": "Was soll Yara sachlich sichern?",
+        "promptAr": "ما الذي ينبغي ليارا حفظه لتوثيق الوقائع؟",
         "options": [
-          "das Scheitern wird protokolliert und die Klage wird zulässig",
-          "ein Zwangsgeld bis 250.000 Euro",
-          "Yara verzichtet auf Schadensersatz"
+          "Schriftverkehr, datierte Fotos und Grundstücksunterlagen",
+          "nur datierte Fotos",
+          "nur vorhandene Grundstücksunterlagen"
         ],
-        "answer": "das Scheitern wird protokolliert und die Klage wird zulässig",
-        "explanationAr": "الدليل: «Dann wird das Scheitern protokolliert — und die Klage wird zulässig». الفخّ 1: الغرامة عند مخالفة مهلة مصادَق عليها. الفخّ 2: التنازل مشروط بقبول الحدّ.",
-        "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "answer": "Schriftverkehr, datierte Fotos und Grundstücksunterlagen",
+        "explanationAr": "الدليل: تُجمع المواد المتاحة، وتقرر الجهة المختصة مدى كفايتها. الفخّ: البدائل الأخرى تعمم قاعدة أو نتيجة لا يثبتها الحوار.",
+        "falle": true
       },
       {
         "id": "d-b2-27-q3",
         "type": "mc",
-        "promptDe": "Was wird mit Zwangsgeld gesichert?",
+        "promptDe": "Was muss bei einer Vereinbarung fachlich geprüft werden?",
+        "promptAr": "ما الذي يحتاج فحصاً متخصصاً في الاتفاق؟",
         "options": [
-          "der Verzicht auf Schadensersatz",
-          "die Frist zum Rückschnitt",
-          "die Grenze von 40 Zentimetern"
+          "ein versprochener Prozesserfolg",
+          "Vollstreckbarkeit und Folgen",
+          "die zuständigen Gerichtswege"
         ],
-        "answer": "die Frist zum Rückschnitt",
-        "explanationAr": "الدليل: «Vergleich mit Frist zum Rückschnitt … bei Verstoß droht ein Zwangsgeld». الفخّ 1: التنازل وعد يارا. الفخّ 2: الـ40 سم مقدار التجاوز لا موضوع الغرامة.",
-        "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "answer": "Vollstreckbarkeit und Folgen",
+        "explanationAr": "الدليل: الاتفاق يحدد الإجراء والموعد، لكن آثاره وقابليته للتنفيذ لا تُفترضان. الفخّ: البدائل الأخرى تعمم قاعدة أو نتيجة لا يثبتها الحوار.",
+        "falle": true
       }
     ],
     "dictation": [
-      "Vor der Klage gehört der Schlichtungsversuch zur Pflicht — dazu bin ich da.",
-      "Katasterauszug, Fotos mit Maßstab, die Mahnung von damals, zwei Zeugen genügen."
+      "Ob vor einer Klage ein Schlichtungsversuch vorgeschrieben oder nur sinnvoll ist, hängt von Bundesland und Streitgegenstand ab.",
+      "Dann dokumentieren wir das Ergebnis und nennen die zuständigen Beratungs- oder Gerichtswege, ohne einen Prozesserfolg zu versprechen."
     ],
-    "cultural_theme": "Opinions"
+    "cultural_theme": "Nachbarschaft und Schlichtung"
   },
   {
     "id": "d-a1-31",
@@ -6398,7 +6371,7 @@
         "answer": "Er bestätigt sie und zeigt den beruflichen Nutzen",
         "explanationAr": "الدليل: «Das ist richtig … Ich habe gelernt, unter Belastung zu priorisieren». الفخّ 1: الدورة ذُكرت «nebenbei» لا هرباً. الفخّ 2: «Das ist richtig» يناقض الإنكار.",
         "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "promptAr": "كيف يشرح المتقدّم الفجوة في سيرته؟"
       },
       {
         "id": "d-b2-31-q2",
@@ -6408,7 +6381,7 @@
           "Angenommen"
         ],
         "explanationAr": "Angenommen = لنفترضْ؛ تفتحُ فرضاً يليهِ Konjunktiv II.",
-        "promptAr": "أكمل الفراغ بالكلمة المناسبة من الحوار."
+        "promptAr": "ما الكلمة التي تفتح الفرضية في سؤال مسؤولة التوظيف؟"
       },
       {
         "id": "d-b2-31-q3",
@@ -6420,15 +6393,15 @@
         ],
         "answer": "richtig",
         "explanationAr": "«zunächst … anschließend …» خطوتانِ مرتّبتان.",
-        "promptAr": "هل العبارة صحيحة أم خاطئة حسب الحوار؟"
+        "promptAr": "هل يجيب المتقدّم عن الحالة الافتراضية بخطوات محددة؟"
       }
     ],
     "dictation": [
       "In Ihrem Lebenslauf fällt eine Lücke von acht Monaten auf.",
-      "Das ist richtig. Ich habe in dieser Zeit meine Mutter gepflegt und nebenbei einen Fachkurs abgeschlossen.",
-      "Inwiefern hat Sie diese Zeit beruflich weitergebracht?"
+      "Ich habe gelernt, unter Belastung zu priorisieren, was mir heute täglich zugutekommt.",
+      "Ich würde zunächst die Aufgaben sichten und anschließend Prioritäten gemeinsam abstimmen."
     ],
-    "cultural_theme": "Innovation"
+    "cultural_theme": "Bewerbung"
   },
   {
     "id": "d-b2-32",
@@ -6448,8 +6421,8 @@
       },
       {
         "who": "Yara",
-        "de": "Selbst wenn der Effekt klein wäre: Er kostet nichts und wirkt sofort.",
-        "ar": "حتى لو كانَ الأثرُ صغيراً: لا يكلّفُ شيئاً ويعملُ فوراً."
+        "de": "Selbst wenn der Effekt klein wäre: Die Maßnahme ließe sich vergleichsweise schnell einführen und würde sofort wirken.",
+        "ar": "حتى لو كان الأثر صغيراً، يمكن تطبيق الإجراء بسرعة نسبية وسيبدأ مفعوله فوراً."
       },
       {
         "who": "Tobias",
@@ -6470,12 +6443,12 @@
         "options": [
           "dass gleichzeitig in Schienen investiert wird",
           "dass die Einsparung größer ausfällt",
-          "dass das Limit nichts kostet"
+          "dass die Maßnahme schnell eingeführt wird"
         ],
         "answer": "dass gleichzeitig in Schienen investiert wird",
-        "explanationAr": "الدليل: «Einverstanden, sofern man gleichzeitig in Schienen investiert». الفخّ 1: صِغر التوفير اعتراضه لا شرطه. الفخّ 2: «kostet nichts» حجّة يارا.",
+        "explanationAr": "الدليل: «Einverstanden, sofern man gleichzeitig in Schienen investiert». الفخّ: صِغر التوفير اعتراض توبياس، أما سرعة التطبيق فهي حجة يارا وليست شرطه.",
         "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "promptAr": "ما الشرط الذي يربط به توبياس موافقته؟"
       },
       {
         "id": "d-b2-32-q2",
@@ -6485,7 +6458,7 @@
           "Selbst"
         ],
         "explanationAr": "«Selbst wenn …» = حتى لو؛ تنازلٌ افتراضيٌّ مع Konjunktiv II.",
-        "promptAr": "أكمل الفراغ بالكلمة المناسبة من الحوار."
+        "promptAr": "ما الكلمة التي تفتتح جملة التنازل الافتراضي؟"
       },
       {
         "id": "d-b2-32-q3",
@@ -6497,16 +6470,15 @@
         ],
         "answer": "falsch",
         "explanationAr": "«Dann sind wir uns im Grundsatz einig» — اتّفاقٌ مبدئيّ.",
-        "promptAr": "هل العبارة صحيحة أم خاطئة حسب الحوار؟"
+        "promptAr": "هل ينتهي الحوار من دون اتفاق مبدئي؟"
       }
     ],
     "dictation": [
       "Ein generelles Tempolimit würde Leben retten und Emissionen senken.",
-      "Das mag sein, doch die Einsparung fällt geringer aus, als oft behauptet wird.",
-      "Selbst wenn der Effekt klein wäre: Er kostet nichts und wirkt sofort."
+      "Selbst wenn der Effekt klein wäre: Die Maßnahme ließe sich vergleichsweise schnell einführen und würde sofort wirken.",
+      "Damit kann ich leben. Dann sind wir uns im Grundsatz einig."
     ],
-    "cultural_theme": "Oktoberfest - German beer festival",
-    "cultural_note": "Theme: Oktoberfest - German beer festival"
+    "cultural_theme": "Verkehrspolitik"
   },
   {
     "id": "d-a2-10",
@@ -11027,13 +10999,13 @@
       },
       {
         "who": "Mieterin",
-        "de": "Wie hoch ist die Kaution im Vertrag? Sie entspricht drei Kaltmieten, oder?",
-        "ar": "ما قيمة وديعة الضمان في العقد؟ إنها تعادل ثلاثة أشهر من الإيجار الأساسي، أليس كذلك؟"
+        "de": "Wie hoch ist die Kaution in diesem Vertragsentwurf? Sie entspricht drei Kaltmieten, oder?",
+        "ar": "ما قيمة وديعة الضمان في مسودة العقد هذه؟ إنها تعادل ثلاثة أشهر من الإيجار الأساسي، أليس كذلك؟"
       },
       {
         "who": "Vermieterin",
-        "de": "Ja, die Kaution beträgt 2160 Euro und wird auf ein separates Kautionskonto eingezahlt.",
-        "ar": "نعم، تبلغ وديعة الضمان 2160 يورو، وتُودَع في حساب ضمان منفصل."
+        "de": "Im Entwurf beträgt die Kaution 2.160 Euro; außerdem ist ein separates Kautionskonto vorgesehen. Bitte prüfen Sie die Vertragsangaben vor der Unterschrift.",
+        "ar": "تبلغ الوديعة في المسودة 2160 يورو، كما تنص على حساب ضمان منفصل. يرجى فحص بيانات العقد قبل التوقيع."
       },
       {
         "who": "Mieterin",
@@ -11042,8 +11014,8 @@
       },
       {
         "who": "Vermieterin",
-        "de": "Für die ordentliche Kündigung gilt in der Regel eine gesetzliche Frist von drei Monaten. Für die ersten zwei Jahre ist eine Staffelmiete vereinbart; die Beträge und Termine stehen im Vertrag.",
-        "ar": "بالنسبة إلى الفسخ العادي، تسري في العادة مهلة قانونية مدتها ثلاثة أشهر. وفي أول عامين، اتُّفق على إيجار متدرّج؛ وترد مبالغ الزيادة ومواعيدها في العقد."
+        "de": "Im Entwurf steht für die ordentliche Kündigung eine Frist von drei Monaten. Für die ersten zwei Jahre ist eine Staffelmiete mit Beträgen und Terminen aufgeführt. Was rechtlich gilt, sollte im Einzelfall geprüft werden.",
+        "ar": "تنص المسودة على مهلة ثلاثة أشهر للفسخ العادي، وعلى إيجار متدرج في أول عامين مع مبالغ ومواعيد محددة. وينبغي فحص الحكم القانوني في كل حالة."
       },
       {
         "who": "Mieterin",
@@ -11079,24 +11051,23 @@
       {
         "type": "mc",
         "promptDe": "Auf welches Konto geht die Kaution?",
-        "promptAr": "إلى أي حساب تُودَع وديعة الضمان؟",
+        "promptAr": "في أي نوع من الحسابات تنص المسودة على إيداع الوديعة؟",
         "options": [
           "Auf das Privatkonto der Vermieterin",
-          "Auf ein separates Kautionskonto",
           "Auf das Konto für die Nebenkosten",
+          "Auf ein separates Kautionskonto",
           "Bar bei Übergabe"
         ],
         "answer": "Auf ein separates Kautionskonto",
-        "explanationAr": "الدليل: ينص الحوار على إيداع وديعة الضمان في حساب منفصل مخصص لها. الفخّ: ليس الحساب الشخصي للمؤجّرة، ولا حساب التكاليف الجانبية، ولا الدفع النقدي عند التسليم.",
+        "explanationAr": "الدليل: تنص المسودة على حساب ضمان منفصل. ويطلب الحوار فحص بيانات العقد قبل التوقيع، ولا يعممها على كل عقد. الفخّ: البدائل الأخرى تعمم قاعدة أو نتيجة لا يثبتها الحوار.",
         "id": "dlg-b2-mietvertrag-q2"
       }
     ],
     "dictation": [
-      "Die Kaltmiete beträgt 720 Euro und die Nebenkosten liegen bei 180 Euro.",
-      "Für die ersten zwei Jahre ist eine Staffelmiete vereinbart; die Beträge und Termine stehen im Vertrag."
+      "Wie hoch ist die Kaution in diesem Vertragsentwurf? Sie entspricht drei Kaltmieten, oder?",
+      "Gut, dann lese ich den Vertrag noch einmal in Ruhe durch und schicke ihn Ihnen unterschrieben zurück."
     ],
-    "cultural_theme": "Musik - Classical music (Beethoven, Bach)",
-    "cultural_note": "Theme: Musik - Classical music (Beethoven, Bach)"
+    "cultural_theme": "Mietvertrag"
   },
   {
     "id": "d-a0-04",
@@ -11707,45 +11678,45 @@
     "lines": [
       {
         "who": "Interviewer + Expertin",
-        "de": "Wie beurteilen Sie die Situation auf dem deutschen Arbeitsmarkt für ausländische Fachkräfte? – Grundsätzlich ist die Nachfrage hoch, insbesondere in technischen Berufen und im Gesundheitswesen. Das Problem liegt oft weniger in der Qualifikation als vielmehr in der Anerkennung der Abschlüsse und in den Sprachkenntnissen. A2- oder B1-Kenntnisse reichen für manche Tätigkeiten nicht aus. Einige Arbeitgeber fordern mindestens B2, in bestimmten Bereichen sogar C1. Außerdem spielt interkulturelle Kompetenz eine immer größere Rolle. Mein Rat: frühzeitig Deutsch lernen und die Anerkennung bereits im Heimatland beantragen.",
-        "ar": "س: كيف تقيّمين وضع سوق العمل الألماني للكفاءات الأجنبية؟ – ج: بوجه عام، الطلب مرتفع، خصوصاً في المهن التقنية ومجال الصحة. وغالباً لا تكمن المشكلة في المؤهل نفسه بقدر ما تكمن في الاعتراف بالشهادات ومستوى اللغة. وقد لا تكفي معرفة A2 أو B1 لبعض الوظائف. ويطلب بعض أرباب العمل B2 على الأقل، وفي مجالات معينة C1. كما تزداد أهمية الكفاءة بين الثقافات. نصيحتي: تعلّموا الألمانية مبكراً، وقدّموا طلب معادلة الشهادة منذ وجودكم في بلدكم."
+        "de": "Wie beurteilen Sie die Chancen ausländischer Fachkräfte auf dem deutschen Arbeitsmarkt? – Sie unterscheiden sich stark nach Beruf, Region und persönlicher Situation. In manchen Bereichen ist die Nachfrage hoch. Ob eine Anerkennung nötig ist und welche Deutschkenntnisse verlangt werden, hängt vom konkreten Beruf, von der zuständigen Stelle und vom Arbeitgeber ab. Mein Rat: Nutzen Sie offizielle Berufs- und Anerkennungsportale, prüfen Sie Stellenanzeigen genau und lassen Sie verbindliche Voraussetzungen frühzeitig klären.",
+        "ar": "س: كيف تقيّمين فرص الكفاءات الأجنبية في سوق العمل الألماني؟ – تختلف كثيراً بحسب المهنة والمنطقة والوضع الشخصي. والطلب مرتفع في بعض المجالات. أما الحاجة إلى الاعتراف بالمؤهل ومستوى الألمانية المطلوب فتعتمدان على المهنة المحددة والجهة المختصة وصاحب العمل. نصيحتي: استخدموا بوابات المهن والاعتراف الرسمية، وافحصوا إعلانات العمل بدقة، وتحققوا مبكراً من الشروط الملزمة."
       }
     ],
     "questions": [
       {
+        "id": "hoer-b2-01-q1",
         "type": "mc",
-        "promptDe": "Was ist laut der Expertin das größere Problem?",
-        "promptAr": "ما المشكلة الأكبر بحسب الخبيرة؟",
+        "promptDe": "Wovon hängen die Chancen laut der Expertin ab?",
+        "promptAr": "ممّ تتوقف الفرص بحسب الخبيرة؟",
         "options": [
-          "Die hohe Nachfrage in technischen Berufen",
-          "Die Anerkennung der Abschlüsse und die Sprache",
-          "Die interkulturelle Kompetenz",
-          "Die Qualifikation im Gesundheitswesen"
+          "von Beruf, Region und persönlicher Situation",
+          "nur von einer allgemein hohen Nachfrage",
+          "immer von demselben Sprachniveau"
         ],
-        "answer": "Die Anerkennung der Abschlüsse und die Sprache",
-        "explanationAr": "الدليل: تذكر الإجابة الاعتراف بالشهادات واللغة بوصفهما الصعوبة الأبرز، لا المؤهل نفسه. الفخّ: ارتفاع الطلب في بعض المهن والكفاءة بين الثقافات ذُكرا أيضاً، لكنهما ليسا المشكلة المحددة.",
-        "id": "hoer-b2-01-q1"
+        "answer": "von Beruf, Region und persönlicher Situation",
+        "explanationAr": "الدليل: تشدد الخبيرة على اختلاف الفرص والشروط بحسب الحالة، لا على قاعدة موحدة. الفخّ: البدائل الأخرى تعمم قاعدة أو نتيجة لا يثبتها الحوار.",
+        "falle": true
       },
       {
+        "id": "hoer-b2-01-q2",
         "type": "mc",
-        "promptDe": "Welches Sprachniveau wird zuerst als Mindestanforderung genannt?",
-        "promptAr": "ما المستوى اللغوي الذي ذُكر أولاً بوصفه الحد الأدنى؟",
+        "promptDe": "Was empfiehlt die Expertin?",
+        "promptAr": "بماذا تنصح الخبيرة؟",
         "options": [
-          "A2-Kenntnisse reichen oft nicht aus",
-          "Mindestens B2",
-          "C1 in manchen Bereichen",
-          "B1-Kenntnisse reichen oft nicht aus"
+          "eine allgemein hohe Nachfrage annehmen",
+          "offizielle Portale nutzen und Voraussetzungen früh klären",
+          "nur auf den Arbeitgeber vertrauen"
         ],
-        "answer": "Mindestens B2",
-        "explanationAr": "الدليل: ذُكر B2 أولاً كحد أدنى لدى بعض أصحاب العمل، ثم C1 لبعض المجالات. الفخّ: C1 أعلى ويخص مجالات معينة، وليس المستوى الأول المذكور.",
-        "id": "hoer-b2-01-q2"
+        "answer": "offizielle Portale nutzen und Voraussetzungen früh klären",
+        "explanationAr": "الدليل: تنصح بالبوابات الرسمية وفحص الإعلانات والتحقق المبكر، ولا تضع مستوى موحداً لكل وظيفة. الفخّ: البدائل الأخرى تعمم قاعدة أو نتيجة لا يثبتها الحوار.",
+        "falle": true
       }
     ],
     "dictation": [
-      "Grundsätzlich ist die Nachfrage hoch, insbesondere in technischen Berufen und im Gesundheitswesen."
+      "Sie unterscheiden sich stark nach Beruf, Region und persönlicher Situation."
     ],
     "hoertext": true,
-    "cultural_theme": "Future plans"
+    "cultural_theme": "Arbeitsmarkt und Anerkennung"
   },
   {
     "id": "d-a0-09",
@@ -12329,81 +12300,85 @@
     "id": "d-b2-ht01",
     "level": "B2",
     "type": "hoer",
-    "situationDe": "Fiktive Radiomeldung: Klimaprotest auf einer Autobahn",
-    "situationAr": "خبر إذاعي افتراضي: احتجاج مناخي على طريق سريع",
+    "situationDe": "Fiktive Radiomeldung für eine Hörübung",
+    "situationAr": "خبر إذاعي خيالي لتمرين استماع",
     "lines": [
       {
-        "de": "Umweltaktivisten haben heute Morgen eine Autobahn in einer Großstadt blockiert, indem sie sich auf der Fahrbahn festklebten.",
-        "ar": "أغلق ناشطون بيئيون صباح اليوم طريقاً سريعاً في مدينة كبيرة، بعد أن ألصقوا أنفسهم بسطح الطريق.",
-        "who": "Nachrichtensprecher"
+        "who": "Nachrichtensprecher",
+        "de": "Beispielmeldung für diese Hörübung: In einer erfundenen Großstadt haben Umweltaktivisten am Morgen eine Autobahn blockiert.",
+        "ar": "خبر نموذجي لهذا التمرين: في مدينة كبيرة خيالية أغلق ناشطون بيئيون طريقاً سريعاً صباحاً."
       },
       {
-        "de": "Die Polizei hat mit der Räumung begonnen. Es kam zu einem langen Stau. Die Straße ist stadteinwärts gesperrt; die Räumung wird voraussichtlich bis zum Mittag dauern.",
-        "ar": "بدأت الشرطة إخلاء الطريق. وحدث ازدحام طويل. وأُغلق المسار المتجه إلى داخل المدينة؛ ومن المتوقع أن تستمر عملية الإخلاء حتى الظهر.",
-        "who": "Nachrichtensprecher"
+        "who": "Nachrichtensprecher",
+        "de": "In diesem Szenario hat die Polizei mit der Räumung begonnen. Stadteinwärts ist die Straße gesperrt; laut fiktiver Meldung soll die Räumung bis zum Mittag dauern.",
+        "ar": "في هذا السيناريو بدأت الشرطة الإخلاء. الطريق إلى وسط المدينة مغلق، ووفق الخبر الخيالي يُتوقع استمرار الإخلاء حتى الظهر."
       }
     ],
-    "titleDe": "Fiktive Radiomeldung: Klimaprotest auf einer Autobahn",
-    "titleAr": "خبر إذاعي افتراضي: احتجاج مناخي على طريق سريع",
+    "titleDe": "Fiktive Radiomeldung: Protest und Verkehr",
+    "titleAr": "خبر إذاعي خيالي: احتجاج وحركة المرور",
     "questions": [
       {
         "id": "d-b2-ht01-q1",
         "type": "mc",
-        "promptDe": "Wie lange wird die Räumung voraussichtlich dauern?",
-        "promptAr": "متى يتوقع انتهاء الإخلاء؟",
+        "promptDe": "Wie lange soll die Räumung in der fiktiven Meldung dauern?",
+        "promptAr": "حتى متى يُفترض أن يستمر الإخلاء في الخبر الخيالي؟",
         "options": [
           "Bis 8 Uhr",
-          "Bis zum Mittag",
-          "Bis zum Abend"
+          "Bis zum Abend",
+          "Bis zum Mittag"
         ],
         "answer": "Bis zum Mittag",
-        "explanationAr": "الدليل: توقّع المذيع أن تستمر عملية الإخلاء حتى الظهر. الفخّ: الإغلاق بدأ صباحاً، لكن وقت انتهائه المتوقع هو الظهر، لا الثامنة أو المساء."
+        "explanationAr": "الدليل داخل السيناريو: تقول الرسالة الخيالية «bis zum Mittag». ولا يصف النص حادثة جارية. الفخّ: البدائل الأخرى تعمم قاعدة أو نتيجة لا يثبتها الحوار.",
+        "falle": true
       }
     ],
     "dictation": [
-      "Umweltaktivisten haben heute Morgen eine Autobahn in einer Großstadt blockiert, indem sie sich auf der Fahrbahn festklebten."
+      "Beispielmeldung für diese Hörübung: In einer erfundenen Großstadt haben Umweltaktivisten am Morgen eine Autobahn blockiert.",
+      "In diesem Szenario hat die Polizei mit der Räumung begonnen. Stadteinwärts ist die Straße gesperrt; laut fiktiver Meldung soll die Räumung bis zum Mittag dauern."
     ],
-    "cultural_theme": "Innovation"
+    "cultural_theme": "Fiktive Verkehrsmeldung"
   },
   {
     "id": "d-b2-ht02",
     "level": "B2",
     "type": "hoer",
-    "situationDe": "Anrufbeantworter: Büro geschlossen und Notdienst",
-    "situationAr": "جهاز الرد الآلي: إغلاق المكتب وخدمة المناوبة",
+    "situationDe": "Fiktive Anrufbeantworteransage für eine Hörübung",
+    "situationAr": "رسالة خيالية على جهاز الرد لتمرين استماع",
     "lines": [
       {
-        "de": "Guten Tag, Sie haben unser Büro erreicht. Es ist heute bereits geschlossen.",
-        "ar": "مرحباً، لقد اتصلتم بمكتبنا، وهو مغلق اليوم.",
-        "who": "Anrufbeantworter"
+        "who": "Anrufbeantworter",
+        "de": "Beispielansage für diese Hörübung: Guten Tag, Sie haben unser fiktives Büro erreicht. Es ist heute bereits geschlossen.",
+        "ar": "رسالة نموذجية لهذا التمرين: مرحباً، اتصلتم بمكتبنا الخيالي، وهو مغلق اليوم."
       },
       {
-        "de": "Unsere Öffnungszeiten am Montag sind von 8 bis 17 Uhr. In dringenden Fällen finden Sie die Rufnummer unseres Notdienstes in Ihren Vertragsunterlagen. Vielen Dank für Ihr Verständnis.",
-        "ar": "ساعات عملنا يوم الاثنين من 8 إلى 17. في الحالات العاجلة، تجدون رقم خدمة المناوبة في مستنداتكم التعاقدية. شكراً لتفهمكم.",
-        "who": "Anrufbeantworter"
+        "who": "Anrufbeantworter",
+        "de": "Im Beispiel ist das Büro am Montag von 8 bis 17 Uhr geöffnet. Die erfundene Notdienstnummer stünde in den Vertragsunterlagen. Vielen Dank für Ihr Verständnis.",
+        "ar": "في المثال يفتح المكتب يوم الاثنين من الثامنة إلى السابعة عشرة. ويُفترض أن يكون رقم خدمة المناوبة الخيالي في مستندات العقد. شكراً لتفهمكم."
       }
     ],
-    "titleDe": "Anrufbeantworter: Büro geschlossen und Notdienst",
-    "titleAr": "جهاز الرد الآلي: إغلاق المكتب وخدمة المناوبة",
+    "titleDe": "Fiktive Ansage: Büro und Notdienst",
+    "titleAr": "رسالة خيالية: المكتب وخدمة المناوبة",
     "questions": [
       {
         "id": "d-b2-ht02-q1",
         "type": "mc",
-        "promptDe": "Wo finden Kundinnen und Kunden die Nummer des Notdienstes?",
-        "promptAr": "أين يجد العملاء رقم خدمة المناوبة؟",
+        "promptDe": "Wo stünde die Notdienstnummer im Beispiel?",
+        "promptAr": "أين يُفترض وجود رقم خدمة المناوبة في المثال؟",
         "options": [
           "In den Vertragsunterlagen",
           "Im Büro während der Öffnungszeiten",
           "Im Büro am Montag"
         ],
         "answer": "In den Vertragsunterlagen",
-        "explanationAr": "الدليل: تشير الرسالة إلى أن رقم خدمة المناوبة موجود في المستندات التعاقدية. الفخّ: تُذكر أوقات المكتب، لكن لا يقال إن الرقم يُعطى فيه أو خلال الدوام."
+        "explanationAr": "الدليل داخل الرسالة الخيالية: يُفترض وجود الرقم في مستندات العقد، لا في مكتب حقيقي. الفخّ: البدائل الأخرى تعمم قاعدة أو نتيجة لا يثبتها الحوار.",
+        "falle": true
       }
     ],
     "dictation": [
-      "Guten Tag, Sie haben unser Büro erreicht."
+      "Beispielansage für diese Hörübung: Guten Tag, Sie haben unser fiktives Büro erreicht. Es ist heute bereits geschlossen.",
+      "Im Beispiel ist das Büro am Montag von 8 bis 17 Uhr geöffnet. Die erfundene Notdienstnummer stünde in den Vertragsunterlagen. Vielen Dank für Ihr Verständnis."
     ],
-    "cultural_theme": "Future plans"
+    "cultural_theme": "Fiktive Büroansage"
   },
   {
     "id": "d-a0-ht02",
@@ -12698,8 +12673,8 @@
         "promptDe": "Welche Aussage lässt sich aus dem Beispiel nicht sicher ableiten?",
         "promptAr": "ما الذي لا يمكن استنتاجه على نحو مؤكد من المثال؟",
         "options": [
-          "Eine sichere Zahl künftig wegfallender Stellen",
           "Dass einige Tätigkeiten automatisiert werden könnten",
+          "Eine sichere Zahl künftig wegfallender Stellen",
           "Dass in anderen Bereichen neue Aufgaben entstehen"
         ],
         "answer": "Eine sichere Zahl künftig wegfallender Stellen",
@@ -12709,7 +12684,7 @@
     "dictation": [
       "Betrachten wir ein Beispiel: Künstliche Intelligenz könnte berufliche Aufgaben verändern."
     ],
-    "cultural_theme": "Environment"
+    "cultural_theme": "KI und Arbeitsmarkt"
   },
   {
     "id": "dlg-b1-wohnungssuche",
@@ -12913,7 +12888,7 @@
       {
         "who": "Clara",
         "de": "Sehen schon, aber die kurzen Gespräche in der Küche fehlen. Genau dort entstehen oft die besten Ideen.",
-        "ar": "نراهم نعم، لكن الأحاديث القصيرة في المطبخ مفقودة. وهناك بالضبط تولد غالباً أفضل الأفكار."
+        "ar": "نرى بعضنا نعم، لكن الأحاديث القصيرة في المطبخ مفقودة. وهناك بالضبط تولد غالباً أفضل الأفكار."
       },
       {
         "who": "Jonas",
@@ -12952,13 +12927,13 @@
         "type": "mc",
         "promptDe": "Welchen Nachteil des Homeoffice nennt Clara zuerst?",
         "options": [
-          "Das Team wird sich immer fremder.",
           "Man arbeitet zu Hause unkonzentriert.",
-          "Der Computer geht zu oft kaputt."
+          "Der Computer geht zu oft kaputt.",
+          "Das Team wird sich immer fremder."
         ],
         "answer": "Das Team wird sich immer fremder.",
         "explanationAr": "الدليل: »wir uns als Team immer fremder werden«. الفخّ: قلة التركيز رأي معاكس لما قالته كلارا لاحقاً عن عمل جوناس.",
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "promptAr": "ما أول عيب للعمل المنزلي تذكره كلارا؟"
       },
       {
         "id": "dlg-b2-homeoffice-q2",
@@ -12968,16 +12943,15 @@
           "Nachrichten"
         ],
         "explanationAr": "الدليل: »und abends keine Nachrichten mehr« — اقتراح القاعدة الثابتة.",
-        "promptAr": "أكمل الفراغ بالكلمة المناسبة من الحوار."
+        "promptAr": "ما الذي تقترح كلارا عدم إرساله مساءً؟"
       }
     ],
     "dictation": [
-      "Genau dort entstehen oft die besten Ideen.",
-      "Nicht jeder schafft das.",
-      "Ein fester Rahmen würde beiden Seiten helfen: Ruhe zum Arbeiten und echten Kontakt im Team."
+      "Seit wir teilweise im Homeoffice arbeiten, bin ich viel entspannter. Der lange Weg ins Büro fällt einfach weg.",
+      "Konzentrierter vielleicht, aber auch länger. Viele Kollegen antworten abends noch auf Nachrichten, weil die Grenze zur Freizeit verschwimmt.",
+      "Genau. Es geht nicht um Entweder-oder, sondern um eine gute Mischung, die für alle funktioniert."
     ],
-    "cultural_theme": "Arbeitswelt im Wandel - Changing world of work",
-    "cultural_note": "Theme: Arbeitswelt im Wandel - Changing world of work"
+    "cultural_theme": "Arbeitswelt im Wandel"
   },
   {
     "id": "dlg-b2-klimadebatte",
@@ -13048,7 +13022,7 @@
         ],
         "answer": "Weil sich ärmere Familien dann keinen Urlaub mehr leisten können.",
         "explanationAr": "الدليل: »können sich ärmere Familien keinen Urlaub mehr leisten« — حجة العدالة الاجتماعية. الفخّ: ازدحام القطارات لم يُذكر.",
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "promptAr": "لماذا ترى السيدة زومر أن رفع أسعار الطيران إشكالي؟"
       },
       {
         "id": "dlg-b2-klimadebatte-q2",
@@ -13058,16 +13032,15 @@
           "stärken"
         ],
         "explanationAr": "الدليل: »erst die Bahn stärken, dann das Fliegen verteuern« — خلاصة الميسّرة للتسوية.",
-        "promptAr": "أكمل الفراغ بالكلمة المناسبة من الحوار."
+        "promptAr": "ما الفعل الذي يلخص تقوية السكك قبل رفع أسعار الطيران؟"
       }
     ],
     "dictation": [
-      "Fliegen ist heute oft billiger als Bahnfahren, obwohl es dem Klima viel mehr schadet.",
-      "Klimaschutz funktioniert nur, wenn er für alle bezahlbar bleibt.",
-      "zuerst bessere Züge, dann höhere Flugpreise."
+      "Unser Thema heute: Soll Fliegen deutlich teurer werden, um das Klima zu schützen? Herr Wolf, Sie sind dafür.",
+      "Da stimme ich zu: Die Bahn muss besser werden. Aber ohne höhere Preise fürs Fliegen wird sich kaum etwas ändern.",
+      "Ein Kompromiss also: erst die Bahn stärken, dann das Fliegen verteuern. Vielen Dank an beide Gäste!"
     ],
-    "cultural_theme": "Klimapolitik - Climate policy",
-    "cultural_note": "Theme: Klimapolitik - Climate policy"
+    "cultural_theme": "Klimapolitik"
   },
   {
     "id": "dlg-a1-baeckerei",
@@ -13443,8 +13416,8 @@
       },
       {
         "who": "Dr. Arslan",
-        "de": "In der Geschichte hat Technik Berufe verändert, aber selten ganze Berufe gelöscht. Neue Aufgaben sind entstanden.",
-        "ar": "عبر التاريخ غيّرت التقنية المهن لكنها نادراً ما محتها بالكامل. ونشأت مهام جديدة."
+        "de": "Welche Aufgaben wegfallen oder neu entstehen, lässt sich nicht allgemein vorhersagen. Deshalb brauchen wir eine konkrete Folgenabschätzung.",
+        "ar": "لا يمكن التنبؤ بصورة عامة بالمهام التي ستختفي أو تنشأ، لذلك نحتاج إلى تقييم محدد للآثار."
       },
       {
         "who": "Frau Brandt",
@@ -13484,7 +13457,7 @@
         ],
         "answer": "Sie sortiert Bewerbungen vor",
         "explanationAr": "الدليل: «sortiert eine Software Bewerbungen vor». الفخّ: القرار يتخذه إنسان («ein Mensch trifft die Entscheidung»)، ومراجعة كل قرار مهمة البشر لا البرنامج.",
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "promptAr": "ما وظيفة البرنامج في شركة الدكتور أرسلان؟"
       },
       {
         "id": "dlg-b2-ki-arbeit-q2",
@@ -13497,7 +13470,7 @@
         ],
         "answer": "dass Firmen Stellen streichen",
         "explanationAr": "الدليل: «Dass Firmen Stellen streichen und es als Fortschritt verkaufen». الفخّ: أخطاء الآلة وحماية البيانات مخاوف مذكورة أيضاً، لكن إجابتها المباشرة عن سؤال «أكبر مخاوفك» هي إلغاء الوظائف.",
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "promptAr": "ما أكبر مخاوف السيدة برانت؟"
       },
       {
         "id": "dlg-b2-ki-arbeit-q3",
@@ -13507,14 +13480,15 @@
           "Vorschläge"
         ],
         "explanationAr": "الدليل: «Die Maschine macht Vorschläge, mehr nicht».",
-        "promptAr": "أكمل الفراغ بالكلمة المناسبة من الحوار."
+        "promptAr": "ماذا تقدّم الآلة وفق الدكتور أرسلان؟"
       }
     ],
     "dictation": [
-      "Wie verändert künstliche Intelligenz unsere Berufe",
-      "Die Maschine macht Vorschläge, mehr nicht",
-      "Technik soll helfen, nicht ersetzen"
-    ]
+      "Unser Thema heute: Wie verändert künstliche Intelligenz unsere Berufe? Herr Dr. Arslan, Sie arbeiten mit solchen Systemen.",
+      "Welche Aufgaben wegfallen oder neu entstehen, lässt sich nicht allgemein vorhersagen. Deshalb brauchen wir eine konkrete Folgenabschätzung.",
+      "Also Technik ja, aber mit klaren Regeln. Vielen Dank an Sie beide!"
+    ],
+    "cultural_theme": "KI und Arbeitswelt"
   },
   {
     "id": "d-b2-38",
@@ -13574,8 +13548,8 @@
         "promptDe": "Was fordert Weber für die Zukunft?",
         "promptAr": "ماذا تطالب فيبر للمستقبل؟",
         "options": [
-          "mehr soziale Wohnungen",
           "eine irreführende Darstellung",
+          "mehr soziale Wohnungen",
           "deutlich gestiegene Mieten"
         ],
         "answer": "mehr soziale Wohnungen",
@@ -13585,10 +13559,9 @@
     ],
     "dictation": [
       "Die Mieten sind in den letzten zwei Jahren deutlich gestiegen, aber die Politik reagiert nur zögerlich.",
-      "Diese Darstellung ist, gelinde gesagt, irreführend, denn die Zahlen belegen das Gegenteil.",
       "Wir brauchen mehr soziale Wohnungen, sonst bleibt bezahlbares Wohnen illusorisch."
     ],
-    "cultural_theme": "Wohnen",
+    "cultural_theme": "Wohnungsmarkt",
     "level": "B2"
   },
   {
@@ -13635,9 +13608,9 @@
         "promptDe": "Was kritisiert die Mitarbeiterin?",
         "promptAr": "ماذا تنتقد الموظفة؟",
         "options": [
-          "die kurzfristige Einführung",
           "die reibungslose Umstellung",
-          "den Zugang der Kollegen"
+          "den Zugang der Kollegen",
+          "die kurzfristige Einführung"
         ],
         "answer": "die kurzfristige Einführung",
         "explanationAr": "الدليل: «die Einführung war zu kurzfristig». الفخّ: «reibungslos verlaufen» قول الإدارة لا الموظفة.",
@@ -13659,11 +13632,10 @@
       }
     ],
     "dictation": [
-      "Unser Team hat die neue Software zwar getestet, jedoch gibt es noch erhebliche Bedenken.",
-      "Dieser Optimismus ist schwer nachvollziehbar, denn viele Kollegen haben noch keinen Zugang.",
+      "Ich finde die Technologie eigentlich hilfreich, aber die Einführung war zu kurzfristig.",
       "Wir brauchen mehr Zeit für Schulungen, sonst bleibt das Projekt ineffizient."
     ],
-    "cultural_theme": "Arbeit",
+    "cultural_theme": "Digitalisierung am Arbeitsplatz",
     "level": "B2"
   },
   {
@@ -13684,8 +13656,8 @@
       },
       {
         "who": "Aktivist",
-        "de": "Die Preise sind eigentlich nicht höher, jedoch fehlt oft die Information.",
-        "ar": "الأسعار ليست أعلى في الواقع، لكن غالبًا ما تغيب المعلومة."
+        "de": "Nachhaltige Produkte können teurer oder günstiger sein; oft fehlen verständliche Informationen zu Wirkung, Haltbarkeit und Gesamtkosten.",
+        "ar": "قد تكون المنتجات المستدامة أغلى أو أرخص؛ وغالباً ما تنقص معلومات مفهومة عن الأثر والمتانة والتكلفة الإجمالية."
       },
       {
         "who": "Publikum",
@@ -13701,6 +13673,11 @@
         "who": "Publikum",
         "de": "Was können wir also konkret tun?",
         "ar": "إذن ماذا يمكننا أن نفعل عمليًا؟"
+      },
+      {
+        "who": "Aktivist",
+        "de": "Wir können Bedarf prüfen, Produkte länger nutzen und glaubwürdige Informationen vergleichen, statt jedes „grüne“ Versprechen ungeprüft zu übernehmen.",
+        "ar": "يمكننا فحص الحاجة، واستخدام المنتجات مدة أطول، ومقارنة المعلومات الموثوقة بدلاً من تصديق كل وعد «أخضر» دون فحص."
       }
     ],
     "questions": [
@@ -13710,8 +13687,8 @@
         "promptDe": "Was sagt der Aktivist über Klimaschutz?",
         "promptAr": "ماذا يقول الناشط عن حماية المناخ؟",
         "options": [
-          "viele reden, handeln aber selten konsequent",
           "die Kunden wollten keine Veränderung",
+          "viele reden, handeln aber selten konsequent",
           "die Preise sind viel teurer"
         ],
         "answer": "viele reden, handeln aber selten konsequent",
@@ -13721,24 +13698,23 @@
       {
         "id": "d-b2-40-q2",
         "type": "mc",
-        "promptDe": "Warum ist nachhaltiger Konsum schwierig?",
-        "promptAr": "لماذا الاستهلاك المستدام صعب؟",
+        "promptDe": "Was erschwert nachhaltige Kaufentscheidungen laut dem Aktivisten?",
+        "promptAr": "ما الذي يصعّب قرارات الشراء المستدامة بحسب الناشط؟",
         "options": [
-          "die Information fehlt oft",
-          "die Kunden wollten keine Veränderung",
-          "die Preise sind nicht höher"
+          "immer günstigere Produkte",
+          "dass Kunden grundsätzlich keine Veränderung wollen",
+          "fehlende verständliche Informationen"
         ],
-        "answer": "die Information fehlt oft",
-        "explanationAr": "الدليل: «jedoch fehlt oft die Information». الفخّ: «wollten keine Veränderung» وصف للصناعة لا السبب الحقيقي.",
+        "answer": "fehlende verständliche Informationen",
+        "explanationAr": "الدليل: قد تختلف الأسعار، لكن المعلومات المفهومة عن الأثر والمتانة والتكلفة كثيراً ما تنقص. الفخّ: البدائل الأخرى تعمم قاعدة أو نتيجة لا يثبتها الحوار.",
         "falle": true
       }
     ],
     "dictation": [
-      "Viele Menschen reden zwar über Klimaschutz, handeln aber nur selten konsequent.",
-      "Die Preise sind eigentlich nicht höher, jedoch fehlt oft die Information.",
-      "Diese Behauptung ist kaum haltbar, denn Umfragen zeigen das Gegenteil."
+      "Aber ist nachhaltiger Konsum nicht viel teurer?",
+      "Wir können Bedarf prüfen, Produkte länger nutzen und glaubwürdige Informationen vergleichen, statt jedes „grüne“ Versprechen ungeprüft zu übernehmen."
     ],
-    "cultural_theme": "Umwelt",
+    "cultural_theme": "Nachhaltiger Konsum",
     "level": "B2"
   },
   {
@@ -13776,6 +13752,11 @@
         "who": "Eltern",
         "de": "Was empfehlen Sie uns als Eltern?",
         "ar": "بماذا تنصحنا كآباء؟"
+      },
+      {
+        "who": "Berater",
+        "de": "Sprechen Sie über Interessen und Erwartungen, nutzen Sie Praktika und suchen Sie früh das Gespräch mit Betrieb oder Berufsberatung.",
+        "ar": "تحدثوا عن الاهتمامات والتوقعات، واستفيدوا من التدريب العملي، وابحثوا مبكراً عن حوار مع المنشأة أو الإرشاد المهني."
       }
     ],
     "questions": [
@@ -13799,8 +13780,8 @@
         "promptDe": "Was sagen die Firmen?",
         "promptAr": "ماذا تقول الشركات؟",
         "options": [
-          "die Jugendlichen seien nicht motiviert",
           "die Begleitung im Betrieb fehlt",
+          "die Jugendlichen seien nicht motiviert",
           "die Ausbildung werde früh abgebrochen"
         ],
         "answer": "die Jugendlichen seien nicht motiviert",
@@ -13809,11 +13790,10 @@
       }
     ],
     "dictation": [
-      "Viele Jugendliche wählen zwar einen Beruf, brechen die Ausbildung aber früh ab.",
-      "Die Erwartungen sind oft unrealistisch, jedoch fehlt auch die Begleitung im Betrieb.",
-      "Diese Aussage ist nur teilweise richtig, denn die Zahlen zeigen auch fehlende Unterstützung."
+      "Aber ist das nicht ein Zeichen für falsche Erwartungen?",
+      "Sprechen Sie über Interessen und Erwartungen, nutzen Sie Praktika und suchen Sie früh das Gespräch mit Betrieb oder Berufsberatung."
     ],
-    "cultural_theme": "Bildung",
+    "cultural_theme": "Ausbildung und Berufswahl",
     "level": "B2"
   },
   {
@@ -13851,6 +13831,11 @@
         "who": "Leitung",
         "de": "Was würden Sie konkret ändern?",
         "ar": "ماذا تغيّر تحديدًا؟"
+      },
+      {
+        "who": "Pfleger",
+        "de": "Verlässliche Personalplanung, klare Prioritäten und geschützte Zeit für die Versorgung wären erste Ansatzpunkte; konkrete Maßnahmen müssen fachlich geprüft werden.",
+        "ar": "يمكن أن تكون جدولة الطاقم الموثوقة والأولويات الواضحة والوقت المحمي للرعاية نقاط بداية؛ ويجب فحص الإجراءات المحددة مهنياً."
       }
     ],
     "questions": [
@@ -13860,9 +13845,9 @@
         "promptDe": "Was beschreibt der Pfleger?",
         "promptAr": "ماذا يصف الممرض؟",
         "options": [
-          "mehr Patienten und weniger Personal",
           "eine erfolgreiche Reform",
-          "die Zeit pro Patient ist gestiegen"
+          "die Zeit pro Patient ist gestiegen",
+          "mehr Patienten und weniger Personal"
         ],
         "answer": "mehr Patienten und weniger Personal",
         "explanationAr": "الدليل: «mehr Patienten, aber deutlich weniger Personal». الفخّ: «einer erfolgreichen Reform» قول السياسة لا الواقع.",
@@ -13884,11 +13869,10 @@
       }
     ],
     "dictation": [
-      "Wir haben zwar mehr Patienten, aber deutlich weniger Personal als früher.",
-      "Die Qualität leidet leider, denn die Zeit pro Patient ist stark gesunken.",
-      "Diese Reform ist in der Praxis kaum spürbar, denn die Belastung bleibt hoch."
+      "Aber die Qualität ist doch gleich geblieben?",
+      "Verlässliche Personalplanung, klare Prioritäten und geschützte Zeit für die Versorgung wären erste Ansatzpunkte; konkrete Maßnahmen müssen fachlich geprüft werden."
     ],
-    "cultural_theme": "Gesundheit",
+    "cultural_theme": "Gesundheitssystem und Pflege",
     "level": "B2"
   },
   {
@@ -13926,6 +13910,11 @@
         "who": "Kollege",
         "de": "Wie sollten wir darauf reagieren?",
         "ar": "كيف ينبغي أن نتفاعل مع ذلك؟"
+      },
+      {
+        "who": "Journalistin",
+        "de": "Wir sollten Quellen und Unsicherheiten sichtbar machen, Wichtiges einordnen und zwischen Nachricht, Analyse und Meinung klar unterscheiden.",
+        "ar": "ينبغي إظهار المصادر ومواضع عدم اليقين، ووضع المهم في سياقه، والتمييز بوضوح بين الخبر والتحليل والرأي."
       }
     ],
     "questions": [
@@ -13935,8 +13924,8 @@
         "promptDe": "Was sagt die Journalistin über Leser?",
         "promptAr": "ماذا تقول الصحفية عن القراء؟",
         "options": [
-          "informiert, aber eigentlich überfordert",
           "die Leser wollten nur Unterhaltung",
+          "informiert, aber eigentlich überfordert",
           "die Menge ist riesig"
         ],
         "answer": "informiert, aber eigentlich überfordert",
@@ -13949,9 +13938,9 @@
         "promptDe": "Was behaupten die Verlage?",
         "promptAr": "ماذا تزعم دور النشر؟",
         "options": [
-          "die Leser wollten nur Unterhaltung",
           "Studien zeigen auch Interesse an Tiefe",
-          "der Überblick fehlt oft"
+          "der Überblick fehlt oft",
+          "die Leser wollten nur Unterhaltung"
         ],
         "answer": "die Leser wollten nur Unterhaltung",
         "explanationAr": "الدليل: «die Leser wollten nur Unterhaltung». الفخّ: «Interesse an Tiefe» نتيجة الدراسات لا قول الناشرين.",
@@ -13959,11 +13948,10 @@
       }
     ],
     "dictation": [
-      "Viele Leser fühlen sich zwar informiert, sind aber eigentlich überfordert.",
-      "Die Menge ist riesig, jedoch fehlt oft der Überblick.",
-      "Diese Behauptung ist verkürzt, denn Studien zeigen auch Interesse an Tiefe."
+      "Aber ist das nicht ein Widerspruch?",
+      "Wir sollten Quellen und Unsicherheiten sichtbar machen, Wichtiges einordnen und zwischen Nachricht, Analyse und Meinung klar unterscheiden."
     ],
-    "cultural_theme": "Medien",
+    "cultural_theme": "Medienkompetenz",
     "level": "B2"
   },
   {
@@ -14001,6 +13989,11 @@
         "who": "Teilnehmer",
         "de": "Was empfehlen Sie konkret?",
         "ar": "بماذا تنصحين تحديدًا؟"
+      },
+      {
+        "who": "Lehrerin",
+        "de": "Suchen Sie sichere, freiwillige Sprechanlässe im Alltag, zum Beispiel Tandems oder Vereine, und respektieren Sie dabei persönliche Grenzen.",
+        "ar": "ابحثوا عن فرص آمنة وطوعية للكلام في الحياة اليومية، مثل التبادل اللغوي أو الجمعيات، مع احترام الحدود الشخصية."
       }
     ],
     "questions": [
@@ -14024,8 +14017,8 @@
         "promptDe": "Was sagt sie über Integration?",
         "promptAr": "ماذا تقول عن الاندماج؟",
         "options": [
-          "Sprache lernt man durch Anwendung",
           "am Anfang ist das normal",
+          "Sprache lernt man durch Anwendung",
           "der Kurs allein reiche aus"
         ],
         "answer": "Sprache lernt man durch Anwendung",
@@ -14034,11 +14027,10 @@
       }
     ],
     "dictation": [
-      "Viele Teilnehmende lernen zwar fleißig, sprechen aber selten außerhalb des Kurses.",
-      "Am Anfang ja, jedoch braucht Integration auch Kontakte im Alltag.",
-      "Diese Ansicht ist zu eng, denn Sprache lernt man durch Anwendung."
+      "Aber ist das nicht normal am Anfang?",
+      "Suchen Sie sichere, freiwillige Sprechanlässe im Alltag, zum Beispiel Tandems oder Vereine, und respektieren Sie dabei persönliche Grenzen."
     ],
-    "cultural_theme": "Integration",
+    "cultural_theme": "Integration und Sprachpraxis",
     "level": "B2"
   },
   {
@@ -14076,6 +14068,11 @@
         "who": "Bürger",
         "de": "Wann beginnt der Umbau?",
         "ar": "متى يبدأ التحويل؟"
+      },
+      {
+        "who": "Stadträtin",
+        "de": "Ein Termin steht erst fest, wenn Planung, Beteiligung und Beschluss abgeschlossen sind; die Stadt muss ihn dann öffentlich bekannt geben.",
+        "ar": "لا يتحدد موعد إلا بعد اكتمال التخطيط والمشاركة والقرار؛ وعلى المدينة عندئذ إعلانه للناس."
       }
     ],
     "questions": [
@@ -14085,9 +14082,9 @@
         "promptDe": "Was beschreibt die Stadträtin?",
         "promptAr": "ماذا تصف المستشارة؟",
         "options": [
-          "viele Autos, aber zu wenig sichere Radwege",
           "die Pläne seien unrealistisch",
-          "der Platz ist begrenzt"
+          "der Platz ist begrenzt",
+          "viele Autos, aber zu wenig sichere Radwege"
         ],
         "answer": "viele Autos, aber zu wenig sichere Radwege",
         "explanationAr": "الدليل: «viele Autos, aber zu wenig sichere Radwege». الفخّ: «unrealistisch» قول المعارضة لا وصفها.",
@@ -14109,11 +14106,10 @@
       }
     ],
     "dictation": [
-      "Wir haben zwar viele Autos, aber zu wenig sichere Radwege.",
-      "Beides ja, jedoch ist der Platz begrenzt, deshalb braucht es Prioritäten.",
-      "Diese Kritik ist nicht neu, denn jede Veränderung erzeugt Widerstand."
+      "Aber braucht man nicht beides?",
+      "Ein Termin steht erst fest, wenn Planung, Beteiligung und Beschluss abgeschlossen sind; die Stadt muss ihn dann öffentlich bekannt geben."
     ],
-    "cultural_theme": "Mobilität",
+    "cultural_theme": "Städtische Mobilität",
     "level": "B2"
   },
   {
@@ -14151,6 +14147,11 @@
         "who": "Moderator",
         "de": "Was wäre eine faire Lösung?",
         "ar": "ما الحل العادل؟"
+      },
+      {
+        "who": "Expertin",
+        "de": "Klare Erreichbarkeitszeiten, echte Wahlmöglichkeiten und gemeinsam vereinbarte Arbeitsziele wären fairer als ständige Verfügbarkeit.",
+        "ar": "تكون أوقات التواصل الواضحة والخيارات الحقيقية وأهداف العمل المتفق عليها جماعياً أعدل من التوفر الدائم."
       }
     ],
     "questions": [
@@ -14160,8 +14161,8 @@
         "promptDe": "Was beobachtet die Expertin?",
         "promptAr": "ماذا تلاحظ الخبيرة؟",
         "options": [
-          "Homeoffice, aber ständige Erreichbarkeit",
           "die Flexibilität sei ein Vorteil",
+          "Homeoffice, aber ständige Erreichbarkeit",
           "das Ergebnis ist mehr Freiheit"
         ],
         "answer": "Homeoffice, aber ständige Erreichbarkeit",
@@ -14174,9 +14175,9 @@
         "promptDe": "Wie bewertet sie Flexibilität?",
         "promptAr": "كيف تقيّم المرونة؟",
         "options": [
-          "oft einseitig und risikoreich für Beschäftigte",
           "die Arbeitgeber behaupten Flexibilität sei Vorteil",
-          "das Ergebnis ist oft Stress"
+          "das Ergebnis ist oft Stress",
+          "oft einseitig und risikoreich für Beschäftigte"
         ],
         "answer": "oft einseitig und risikoreich für Beschäftigte",
         "explanationAr": "الدليل: «Flexibilität ist oft einseitig, denn die Beschäftigten tragen das Risiko». الفخّ: «Vorteil» ادعاء أصحاب العمل لا تقييمها.",
@@ -14184,11 +14185,10 @@
       }
     ],
     "dictation": [
-      "Viele Firmen bieten zwar Homeoffice an, erwarten aber ständige Erreichbarkeit.",
-      "Genau, deshalb ist das Ergebnis oft Stress, nicht mehr Freiheit.",
-      "Diese Flexibilität ist oft einseitig, denn die Beschäftigten tragen das Risiko."
+      "Aber ist das nicht ein Widerspruch?",
+      "Klare Erreichbarkeitszeiten, echte Wahlmöglichkeiten und gemeinsam vereinbarte Arbeitsziele wären fairer als ständige Verfügbarkeit."
     ],
-    "cultural_theme": "Arbeit",
+    "cultural_theme": "Arbeitswelt im Wandel",
     "level": "B2"
   },
   {
@@ -14226,6 +14226,11 @@
         "who": "Studentin",
         "de": "Was empfehlen Sie uns?",
         "ar": "بماذا تنصحنا؟"
+      },
+      {
+        "who": "Professor",
+        "de": "Nutzen Sie KI transparent zum Prüfen und Üben, aber begründen Sie Ergebnisse selbst und beachten Sie die Regeln Ihrer Hochschule.",
+        "ar": "استخدموا الذكاء الاصطناعي بشفافية للفحص والتدريب، لكن عللوا النتائج بأنفسكم والتزموا بقواعد جامعتكم."
       }
     ],
     "questions": [
@@ -14249,8 +14254,8 @@
         "promptDe": "Wie bewertet er die Regelung?",
         "promptAr": "كيف يقيّم التنظيم؟",
         "options": [
-          "lückenhaft, Praxis schneller als Regeln",
           "die Tools ersetzen das Denken",
+          "lückenhaft, Praxis schneller als Regeln",
           "die Hochschulen behaupten Nutzung sei geregelt"
         ],
         "answer": "lückenhaft, Praxis schneller als Regeln",
@@ -14259,11 +14264,10 @@
       }
     ],
     "dictation": [
-      "Viele Studierende nutzen zwar KI-Tools, verstehen aber die Grundlagen kaum.",
-      "Sie helfen teilweise, jedoch ersetzen sie nicht das eigene Denken.",
-      "Diese Regelung ist lückenhaft, denn die Praxis entwickelt sich schneller als die Regeln."
+      "Aber helfen die Tools nicht beim Lernen?",
+      "Nutzen Sie KI transparent zum Prüfen und Üben, aber begründen Sie Ergebnisse selbst und beachten Sie die Regeln Ihrer Hochschule."
     ],
-    "cultural_theme": "Bildung",
+    "cultural_theme": "KI in der Bildung",
     "level": "B2"
   },
   {
@@ -14301,6 +14305,11 @@
         "who": "Mitglied",
         "de": "Wie können wir mehr Menschen gewinnen?",
         "ar": "كيف نكسب مزيدًا من الناس؟"
+      },
+      {
+        "who": "Vorsitzende",
+        "de": "Wir brauchen klare Aufgabenbeschreibungen, eine persönliche Vermittlung und flexible Einsätze, damit Interesse und Aufgabe zusammenpassen.",
+        "ar": "نحتاج إلى وصف واضح للمهام ووساطة شخصية ومشاركات مرنة كي يتوافق الاهتمام مع المهمة."
       }
     ],
     "questions": [
@@ -14310,9 +14319,9 @@
         "promptDe": "Was beobachtet die Vorsitzende?",
         "promptAr": "ماذا تلاحظ الرئيسة؟",
         "options": [
-          "wollen helfen, finden aber keinen Einsatz",
           "das Ehrenamt sei stark",
-          "die Zahlen sinken"
+          "die Zahlen sinken",
+          "wollen helfen, finden aber keinen Einsatz"
         ],
         "answer": "wollen helfen, finden aber keinen Einsatz",
         "explanationAr": "الدليل: «wollen zwar helfen, finden aber keinen passenden Einsatz». الفخّ: «stark» قول المدينة لا ملاحظتها.",
@@ -14334,11 +14343,10 @@
       }
     ],
     "dictation": [
-      "Viele Menschen wollen zwar helfen, finden aber keinen passenden Einsatz.",
-      "Die Angebote sind zahlreich, jedoch fehlt oft die Vermittlung.",
-      "Diese Aussage ist zu allgemein, denn die Zahlen sinken in vielen Bereichen."
+      "Aber gibt es nicht genug Angebote?",
+      "Wir brauchen klare Aufgabenbeschreibungen, eine persönliche Vermittlung und flexible Einsätze, damit Interesse und Aufgabe zusammenpassen."
     ],
-    "cultural_theme": "Gesellschaft",
+    "cultural_theme": "Ehrenamt",
     "level": "B2"
   },
   {
@@ -14376,6 +14384,11 @@
         "who": "Bürgerin",
         "de": "Was kann die Stadt konkret tun?",
         "ar": "ماذا يمكن للمدينة أن تفعل عمليًا؟"
+      },
+      {
+        "who": "Bürgermeister",
+        "de": "Die Stadt kann früh informieren, barrierearme Beteiligungswege anbieten und sichtbar erklären, wie Hinweise in Entscheidungen einfließen.",
+        "ar": "يمكن للمدينة الإعلام مبكراً، وتوفير مسارات مشاركة ميسرة، وشرح كيفية دخول الملاحظات في القرارات بوضوح."
       }
     ],
     "questions": [
@@ -14385,8 +14398,8 @@
         "promptDe": "Was beobachtet der Bürgermeister?",
         "promptAr": "ماذا يلاحظ رئيس البلدية؟",
         "options": [
-          "interessieren sich, beteiligen sich aber selten aktiv",
           "die Bürger seien politikverdrossen",
+          "interessieren sich, beteiligen sich aber selten aktiv",
           "die Möglichkeiten gibt es"
         ],
         "answer": "interessieren sich, beteiligen sich aber selten aktiv",
@@ -14399,9 +14412,9 @@
         "promptDe": "Wie bewertet er die Diagnose der Parteien?",
         "promptAr": "كيف يقيّم تشخيص الأحزاب؟",
         "options": [
-          "verkürzt, viele wollen mitgestalten",
           "die Bürger seien politikverdrossen",
-          "die Möglichkeiten gibt es"
+          "die Möglichkeiten gibt es",
+          "verkürzt, viele wollen mitgestalten"
         ],
         "answer": "verkürzt, viele wollen mitgestalten",
         "explanationAr": "الدليل: «Diagnose ist verkürzt, denn viele wollen mitgestalten». الفخّ: «politikverdrossen» هو قول الأحزاب نفسه.",
@@ -14409,11 +14422,10 @@
       }
     ],
     "dictation": [
-      "Viele Bürger interessieren sich zwar für Politik, beteiligen sich aber selten aktiv.",
-      "Die Möglichkeiten gibt es, jedoch fehlt oft das Vertrauen.",
-      "Diese Diagnose ist verkürzt, denn viele wollen mitgestalten, finden aber keinen Zugang."
+      "Aber liegt das nicht an fehlenden Möglichkeiten?",
+      "Die Stadt kann früh informieren, barrierearme Beteiligungswege anbieten und sichtbar erklären, wie Hinweise in Entscheidungen einfließen."
     ],
-    "cultural_theme": "Politik",
+    "cultural_theme": "Demokratische Beteiligung",
     "level": "B2"
   }
 ]

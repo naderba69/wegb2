@@ -199,6 +199,9 @@ const pa03803ReviewForHistoricalChecks = JSON.parse(
 const pa03804ReviewForHistoricalChecks = JSON.parse(
   readFileSync("scripts/fixtures/dialogues-reviewed-04.json", "utf8"),
 ) as { entries: { id: string; previous: unknown }[] };
+const pa03805ReviewForHistoricalChecks = JSON.parse(
+  readFileSync("scripts/fixtures/dialogues-reviewed-05.json", "utf8"),
+) as { entries: { id: string; previous: unknown }[] };
 const pa03802PreviousById = new Map(
   pa03802ReviewForHistoricalChecks.entries.map((entry) => [entry.id, entry.previous]),
 );
@@ -208,12 +211,16 @@ const pa03803PreviousById = new Map(
 const pa03804PreviousById = new Map(
   pa03804ReviewForHistoricalChecks.entries.map((entry) => [entry.id, entry.previous]),
 );
-// R439/R440: تقارير أكتوبر آثار تاريخية؛ تُقارن بالحالة السابقة لدفعات PA-038-02/03/04،
-// بينما K437–K439 والبوابة المخصصة تحرس البنك الحالي بعد المراجعة الكاملة.
+const pa03805PreviousById = new Map(
+  pa03805ReviewForHistoricalChecks.entries.map((entry) => [entry.id, entry.previous]),
+);
+// R439–R441: تقارير أكتوبر آثار تاريخية؛ تُقارن بالحالة السابقة لدفعات PA-038-02/03/04/05،
+// بينما K437–K440 والبوابة المخصصة تحرس البنك الحالي بعد المراجعة الكاملة.
 const dialoguesBeforePa038Reviews = dialogues.map((dialogue) =>
   pa03802PreviousById.get(dialogue.id)
     ?? pa03803PreviousById.get(dialogue.id)
     ?? pa03804PreviousById.get(dialogue.id)
+    ?? pa03805PreviousById.get(dialogue.id)
     ?? dialogue
 ) as typeof dialogues;
 
@@ -2733,14 +2740,14 @@ void 0;
     const fr = alleVokabeln.find((c) => c.de === "die Frist")!;
     const v = verknuepfung(fr);
     ok(v.kollokationen.length >= 2 && (v.texte.length + v.dialoge.length) >= 1 && v.texte.every((t) => t.level === fr.level) && v.dialoge.every((d) => d.level === fr.level), `K81e بطاقةُ Frist (${fr.level}) ترتبطُ بمتلازماتِها وبـ${v.texte.length} نصًّا و${v.dialoge.length} حواراً من مستواها فقط`);
-    const soll: Record<string, number> = { A1: 98, A2: 97, B1: 97, B2: 98 };
-    // R298/PA-038-03/04: الأساس على بطاقات الخطة وحزم التوسعة الحرة مستثناة. خُفّض الخط المعلن
-    // بعد حذف وصفات/وعود/مصطلحات غير آمنة من A2/B1؛ لا تُعاد ألفاظ لمجرد تجميل مؤشر الترابط.
+    const soll: Record<string, number> = { A1: 98, A2: 97, B1: 97, B2: 97 };
+    // R298/PA-038-03/04/05: الأساس على بطاقات الخطة وحزم التوسعة الحرة مستثناة. خُفّض الخط المعلن
+    // بعد حذف وصفات/وعود/مصطلحات غير آمنة من A2/B1/B2؛ لا تُعاد ألفاظ لمجرد تجميل مؤشر الترابط.
     const ab = Object.fromEntries(Object.keys(soll).map((L) => [L, abdeckung(L, "j")]));
-    ok(Object.keys(soll).every((L) => ab[L].prozent >= soll[L]), `K81f التغطيةُ من الفهرسِ نفسِه لبطاقاتِ الخطة: ${Object.keys(soll).map((L) => `${L} ${ab[L].prozent}%`).join(" · ")} — خط PA-038-03 المعلن لا يعلو على سلامة المحتوى`);
+    ok(Object.keys(soll).every((L) => ab[L].prozent >= soll[L]), `K81f التغطيةُ من الفهرسِ نفسِه لبطاقاتِ الخطة: ${Object.keys(soll).map((L) => `${L} ${ab[L].prozent}%`).join(" · ")} — خط PA-038-05 المعلن لا يعلو على سلامة المحتوى`);
     const w = Object.fromEntries(Object.keys(soll).map((L) => [L, verwaiste(L, "j").length]));
-    const wSoll: Record<string, number> = { A1: 4, A2: 13, B1: 12, B2: 12 };
-    ok(Object.keys(soll).every((L) => w[L] <= wSoll[L]), `K81g اليتامى بعد PA-038-04 (لا تُعاد ألفاظ محذوفة لإرضاء المؤشر): A1 ${w.A1} · A2 ${w.A2} · B1 ${w.B1} · B2 ${w.B2}`);
+    const wSoll: Record<string, number> = { A1: 4, A2: 13, B1: 12, B2: 21 };
+    ok(Object.keys(soll).every((L) => w[L] <= wSoll[L]), `K81g اليتامى بعد PA-038-05 (لا تُعاد ألفاظ محذوفة لإرضاء المؤشر): A1 ${w.A1} · A2 ${w.A2} · B1 ${w.B1} · B2 ${w.B2}`);
     ok(stammVon("die Frist") === "fris" && stammVon("sich bewerben um") === "bewerb" && stammVon("zu") === "", "K81h قاعدةُ الجذعِ ثابتةٌ ومطابقةٌ لـK76c");
     const kw = alleVokabeln.find((c) => c.de === "der Klimawandel")!;
     const vk = verknuepfung(kw);
@@ -9755,7 +9762,7 @@ void 0;
 {
   const reviewB201 = JSON.parse(readFileSync("docs/content-review-b2-dialogues-01-2026-10-08.json", "utf8")) as any;
   const reviewB201Md = readFileSync("docs/content-review-b2-dialogues-01-2026-10-08.md", "utf8");
-  const liveB201 = JSON.parse(readFileSync("content/dialogues.json", "utf8")) as any[];
+  const liveB201 = dialoguesBeforePa038Reviews as any[];
   const patchSourceB201 = readFileSync("scripts/patches/review_b2_dialogues_01.py", "utf8");
   const scope201 = ["d-b2-01", "d-b2-02", "d-b2-03"];
   ok(reviewB201.reviewRule === "R123" && reviewB201.date === "2026-10-08" &&
@@ -9882,7 +9889,7 @@ void 0;
 {
   const reviewB202 = JSON.parse(readFileSync("docs/content-review-b2-dialogues-02-2026-10-08.json", "utf8")) as any;
   const reviewB202Md = readFileSync("docs/content-review-b2-dialogues-02-2026-10-08.md", "utf8");
-  const liveB202 = JSON.parse(readFileSync("content/dialogues.json", "utf8")) as any[];
+  const liveB202 = dialoguesBeforePa038Reviews as any[];
   const patchSourceB202 = readFileSync("scripts/patches/review_b2_dialogues_02.py", "utf8");
   const scope202 = ["d-b2-04", "d-b2-05", "d-b2-06"];
   ok(reviewB202.reviewRule === "R124" && reviewB202.date === "2026-10-08" &&
@@ -10007,7 +10014,7 @@ void 0;
 {
   const reviewB203 = JSON.parse(readFileSync("docs/content-review-b2-dialogues-03-2026-10-08.json", "utf8")) as any;
   const reviewB203Md = readFileSync("docs/content-review-b2-dialogues-03-2026-10-08.md", "utf8");
-  const liveB203 = JSON.parse(readFileSync("content/dialogues.json", "utf8")) as any[];
+  const liveB203 = dialoguesBeforePa038Reviews as any[];
   const patchSourceB203 = readFileSync("scripts/patches/review_b2_dialogues_03.py", "utf8");
   const scope203 = ["d-b2-07", "d-b2-08", "d-b2-09"];
   ok(reviewB203.reviewRule === "R125" && reviewB203.date === "2026-10-08" &&
@@ -10133,7 +10140,7 @@ void 0;
 {
   const reviewB204 = JSON.parse(readFileSync("docs/content-review-b2-dialogues-04-2026-10-08.json", "utf8")) as any;
   const reviewB204Md = readFileSync("docs/content-review-b2-dialogues-04-2026-10-08.md", "utf8");
-  const liveB204 = JSON.parse(readFileSync("content/dialogues.json", "utf8")) as any[];
+  const liveB204 = dialoguesBeforePa038Reviews as any[];
   const patchSourceB204 = readFileSync("scripts/patches/review_b2_dialogues_04.py", "utf8");
   const scope204 = ["d-b2-10", "d-b2-11", "d-b2-12"];
   ok(reviewB204.reviewRule === "R126" && reviewB204.date === "2026-10-08" &&
@@ -10296,7 +10303,7 @@ void 0;
     reviewB205.corrections.some((c:any)=>c.unit==="d-b2-15.lines[5].ar" && c.new.includes("سلفة")) &&
     reviewB205.corrections.some((c:any)=>c.unit==="d-b2-15.lines[7].ar" && c.new.includes("تأمينُ المنقولات")),
     "K201e d-b2-15: أبلغتُ عن الضرر، فنيُّ الطوارئ، تسوية المطالبة خلال أسبوعين، سلفة (لا عربون)، تأمين المنقولات");
-  const dialoguesArr = JSON.parse(readFileSync("content/dialogues.json","utf8")) as any[];
+  const dialoguesArr = dialoguesBeforePa038Reviews as any[];
   const locksOk205 = reviewB205.corrections.every((c:any)=>c.unit.endsWith(".ar")) &&
     ["d-b2-13","d-b2-14","d-b2-15"].every((id)=>{
       const dlg=dialoguesArr.find((x:any)=>x.id===id);
@@ -10341,7 +10348,7 @@ void 0;
     "K202d d-b2-17: سبعة تصحيحات (شركة، شرط استرداد، التزام، يُوقَف الاستحقاق، ستصلكم، اتفاق خطي، قسم الأفراد)");
   ok(["d-b2-18.lines[1].ar","d-b2-18.lines[2].ar","d-b2-18.lines[3].ar","d-b2-18.lines[4].ar","d-b2-18.lines[5].ar","d-b2-18.lines[6].ar","d-b2-18.lines[7].ar"].every(u => reviewB206.corrections.some((c:any)=>c.unit===u)),
     "K202e d-b2-18: سبعة تصحيحات (طلب الإنهاء، Bonusheft/أمراض مزمنة، تصرف عبر الوصفة، تغطية بلا فجوات، تسوية محاسبية، ستصلكم)");
-  const dialoguesArr = JSON.parse(readFileSync("content/dialogues.json","utf8")) as any[];
+  const dialoguesArr = dialoguesBeforePa038Reviews as any[];
   const locksOk206 = reviewB206.corrections.every((c:any)=>c.unit.endsWith(".ar")) &&
     ["d-b2-16","d-b2-17","d-b2-18"].every((id)=>{
       const dlg=dialoguesArr.find((x:any)=>x.id===id);
@@ -10383,7 +10390,7 @@ void 0;
     "K203d d-b2-20: 6 تصحيحات (Schlaganfall=سكتة، Hilfe=مساعدة، Unruhe/Tagebuch، zweiwöchig، Bescheid/متدنياً، Widerspruch)");
   ok(["d-b2-21.lines[1].ar","d-b2-21.lines[2].ar","d-b2-21.lines[6].ar","d-b2-21.lines[7].ar"].every(u => reviewB207.corrections.some((c:any)=>c.unit===u)),
     "K203e d-b2-21: 4 تصحيحات (gedeckelt/zinsgünstig/Bürgschaft، Berufsjahr، Sonderzahlung/Sondertilgung، Bescheid/eID)");
-  const dialoguesArr = JSON.parse(readFileSync("content/dialogues.json","utf8")) as any[];
+  const dialoguesArr = dialoguesBeforePa038Reviews as any[];
   const locksOk203 = reviewB207.corrections.every((c:any)=>c.unit.endsWith(".ar")) &&
     ["d-b2-19","d-b2-20","d-b2-21"].every((id)=>{
       const dlg=dialoguesArr.find((x:any)=>x.id===id);
@@ -10424,7 +10431,7 @@ void 0;
     "K204d d-b2-23: 6 تصحيحات (تسوية رصيد/اتفاقية المنشأة، جدولة زمنية، إجازة متصلة/علاوة، تصريف الرصيد، تمرير قائمة/ملزم، هيئة التسوية/قرار)");
   ok(["d-b2-24.lines[0].ar","d-b2-24.lines[1].ar","d-b2-24.lines[2].ar","d-b2-24.lines[3].ar","d-b2-24.lines[4].ar","d-b2-24.lines[5].ar","d-b2-24.lines[6].ar","d-b2-24.lines[7].ar"].every(u => reviewB208.corrections.some((c:any)=>c.unit===u)),
     "K204e d-b2-24: 8 تصحيحات (شهادة، نجاح، إثبات إعادة، رسوب، VHS=معهد تعليم الكبار، قائمة انتظار، وسائل دعم، منظمو الدورة/تخفيض)");
-  const dialoguesArr = JSON.parse(readFileSync("content/dialogues.json","utf8")) as any[];
+  const dialoguesArr = dialoguesBeforePa038Reviews as any[];
   const locksOk204 = reviewB208.corrections.every((c:any)=>c.unit.endsWith(".ar")) &&
     ["d-b2-22","d-b2-23","d-b2-24"].every((id)=>{
       const dlg=dialoguesArr.find((x:any)=>x.id===id);
@@ -10465,7 +10472,7 @@ void 0;
     "K205d d-b2-26: 6 تصحيحات (تقاعد/إشراف، مشرفة فاحصة، اتجاه الأطروحة، توقيع تبديل/تقارير، يتأخر لا يتزحزح، تقريران خارجيان)");
   ok(["d-b2-27.lines[0].ar","d-b2-27.lines[1].ar","d-b2-27.lines[2].ar","d-b2-27.lines[3].ar","d-b2-27.lines[4].ar","d-b2-27.lines[5].ar","d-b2-27.lines[6].ar","d-b2-27.lines[7].ar","d-b2-27.lines[9].ar"].every(u => reviewB209.corrections.some((c:any)=>c.unit===u)),
     "K205e d-b2-27: 9 تصحيحات (سياج/إنذار، صلح واجب، سأتنازل، تسوية/تقليم، مصادقة، غرامة إجبارية، أوراق الموعد، كشف سجل عقاري، تسجيل فشل)");
-  const dialoguesArr = JSON.parse(readFileSync("content/dialogues.json","utf8")) as any[];
+  const dialoguesArr = dialoguesBeforePa038Reviews as any[];
   const locksOk205 = reviewB209.corrections.every((c:any)=>c.unit.endsWith(".ar")) &&
     ["d-b2-25","d-b2-26","d-b2-27"].every((id)=>{
       const dlg=dialoguesArr.find((x:any)=>x.id===id);
@@ -10502,7 +10509,7 @@ void 0;
     "K206c d-b2-31: 3 تصحيحات (كيف أفادتك، يفيدني في عملي، سأستعرض)");
   ok(["d-b2-32.lines[0].ar","d-b2-32.lines[4].ar"].every(u => reviewB210.corrections.some((c:any)=>c.unit===u)),
     "K206d d-b2-32: تصحيحان (حد السرعة، أقبل بهذا)");
-  const dialoguesArr = JSON.parse(readFileSync("content/dialogues.json","utf8")) as any[];
+  const dialoguesArr = dialoguesBeforePa038Reviews as any[];
   const locksOk = reviewB210.corrections.every((c:any)=>c.unit.endsWith(".ar")) &&
     ["d-b2-31","d-b2-32"].every((id)=>{
       const dlg=dialoguesArr.find((x:any)=>x.id===id);
@@ -11055,7 +11062,7 @@ void 0;
   const reviewB2Extras = JSON.parse(readFileSync("docs/content-review-b2-dialogues-10-2026-10-11.json", "utf8")) as any;
   const reviewB2ExtrasMd = readFileSync("docs/content-review-b2-dialogues-10-2026-10-11.md", "utf8");
   const reviewB2Patch = readFileSync("scripts/patches/review_b2_extras_10.py", "utf8");
-  const dialoguesArr = JSON.parse(readFileSync("content/dialogues.json", "utf8")) as any[];
+  const dialoguesArr = dialoguesBeforePa038Reviews as any[];
   const ids = ["dlg-b2-mietvertrag", "hoer-b2-01", "d-b2-ht01", "d-b2-ht02", "d-b2-ht03"];
   const batch = ids.map((id) => dialoguesArr.find((d:any) => d.id === id));
   const tasksValid = batch.every((d:any) => d && d.level === "B2" && Array.isArray(d.lines) && d.lines.length > 0 &&
@@ -13200,7 +13207,7 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const transcripts304 = JSON.parse(readFileSync("content/audio-transcript-overrides.json", "utf8")) as {
     items: Array<{ file: string; id: string; group: string; textDe: string; audioCommit: string; sourcePath: string }>;
   };
-  const transcriptOverridesOk304 = transcripts304.items.length === 65 && transcripts304.items.every((entry) =>
+  const transcriptOverridesOk304 = transcripts304.items.length === 97 && transcripts304.items.every((entry) =>
     platten304.has(entry.file) && entry.textDe.trim().length > 0 && /^[0-9a-f]{40}$/.test(entry.audioCommit) &&
     (entry.group === "dialog" || entry.group === "hoeren") && entry.sourcePath.startsWith("content/"));
   const audioQcSrc304 = readFileSync("scripts/audio_qc_all.py", "utf8");
@@ -13221,7 +13228,7 @@ function collectR262(dir: string, out: string[] = []): string[] {
      audioQcSrc304.includes('fehler.append("placeholder")') && audioQcSrc304.includes('e["fehler"].append("audio-duplikat")') &&
      audioReq304.includes("miniaudio==1.71") && audioReq304.includes("numpy==2.4.6") &&
      audioReq304.includes("cffi==2.1.1") && audioReq304.includes("pycparser==3.12"),
-    `K304 مراجعةُ الصوتِ الآليةُ R272: ‏${platten304.size}/${platten304.size} ملفاً ذا مانيفستو مفكوكاً ومقيساً وفريد البصمة، مع 65 لقطة نص تسجيل صريحة بلا شذوذ — لا يشمل الحكم 87 ملف قواعد بلا مانيفستو نص/صوت، ولا يساوي استماعاً بشرياً أو حكم نطق`);
+    `K304 مراجعةُ الصوتِ الآليةُ R272: ‏${platten304.size}/${platten304.size} ملفاً ذا مانيفستو مفكوكاً ومقيساً وفريد البصمة، مع 97 لقطة نص تسجيل صريحة بلا شذوذ — لا يشمل الحكم 87 ملف قواعد بلا مانيفستو نص/صوت، ولا يساوي استماعاً بشرياً أو حكم نطق`);
 }
 
 // ===== K305 (R280 · M1+M2): FSRS-6-Scheduler + Meisterungsstufen Erkennen/Produktion =====
@@ -16519,7 +16526,7 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const ciK436 = readFileSync(".github/workflows/ci.yml", "utf8");
   ok(patchK436.includes("current == reviewed") && patchK436.includes("current != previous") &&
     patchK436.includes("unexpected current dialogue") &&
-    auditK436.includes("all 127 bounded A0–B1 full-dialogue decisions match") && auditK436.includes("49 B2 dialogues") &&
+    auditK436.includes("all 176 bounded A0–B2 full-dialogue decisions match") && auditK436.includes("1138 lines and 424 questions") &&
     packageK436.includes('"audit:dialogue-content-review"') && ciK436.includes("npm run audit:dialogue-content-review") &&
     reviewK436.scope.includes("triage only") && reviewK436.scope.includes("not correction generators") &&
     reviewK436.scope.includes("not independent linguistic, translation, cultural, medical, CEFR, audio, or exam sign-off"),
@@ -16562,7 +16569,7 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const ciK437 = readFileSync(".github/workflows/ci.yml", "utf8");
   ok(patchK437.includes("current == reviewed") && patchK437.includes("current != previous") &&
     patchK437.includes("unexpected current dialogue") &&
-    auditK437.includes("all 127 bounded A0–B1 full-dialogue decisions match") && auditK437.includes("49 B2 dialogues") &&
+    auditK437.includes("all 176 bounded A0–B2 full-dialogue decisions match") && auditK437.includes("1138 lines and 424 questions") &&
     packageK437.includes('"audit:dialogue-content-review"') && ciK437.includes("npm run audit:dialogue-content-review") &&
     reviewK437.scope.includes("all 238 line alignments") && reviewK437.scope.includes("all 89 questions") &&
     reviewK437.scope.includes("triage only") && reviewK437.scope.includes("not correction generators") &&
@@ -16611,7 +16618,7 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const ciK438 = readFileSync(".github/workflows/ci.yml", "utf8");
   ok(patchK438.includes("current == reviewed") && patchK438.includes("current != previous") &&
     patchK438.includes("unexpected current dialogue") &&
-    auditK438.includes("all 127 bounded A0–B1 full-dialogue decisions match") && auditK438.includes("49 B2 dialogues") &&
+    auditK438.includes("all 176 bounded A0–B2 full-dialogue decisions match") && auditK438.includes("1138 lines and 424 questions") &&
     packageK438.includes('"audit:dialogue-content-review"') && ciK438.includes("npm run audit:dialogue-content-review") &&
     reviewK438.scope.includes("all 248 line alignments") && reviewK438.scope.includes("all 93 questions") &&
     reviewK438.scope.includes("triage only") && reviewK438.scope.includes("not linguistic correction generators") &&
@@ -16660,12 +16667,61 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const ciK439 = readFileSync(".github/workflows/ci.yml", "utf8");
   ok(patchK439.includes("current == reviewed") && patchK439.includes("current != previous") &&
     patchK439.includes("unexpected current dialogue") &&
-    auditK439.includes("all 127 bounded A0–B1 full-dialogue decisions match") && auditK439.includes("49 B2 dialogues") &&
+    auditK439.includes("all 176 bounded A0–B2 full-dialogue decisions match") && auditK439.includes("1138 lines and 424 questions") &&
     packageK439.includes('"audit:dialogue-content-review"') && ciK439.includes("npm run audit:dialogue-content-review") &&
     reviewK439.scope.includes("all 252 line alignments") && reviewK439.scope.includes("all 91 questions") &&
     reviewK439.scope.includes("triage only") && reviewK439.scope.includes("not linguistic correction generators") &&
     reviewK439.scope.includes("not independent linguistic, translation, cultural, legal, medical, pharmacy, emergency-services, audio, CEFR, Goethe, telc, or exam sign-off"),
     "K439c PA-038-04: الرقعة exact-match وقابلة للإعادة وفاشلة عند الانزياح والبوابة موصولة بـCI مع إبقاء 49 حوار B2 والصوت والتوقيع المستقل خارج الادعاء");
+}
+
+/* ═══ K440 — PA-038-05: مراجعة حوارات B2 بندياً وإغلاق البنك كاملاً ═══ */
+{
+  const reviewK440 = JSON.parse(readFileSync("scripts/fixtures/dialogues-reviewed-05.json", "utf8")) as {
+    schema: string;
+    batch: string;
+    scope: string;
+    entries: { id: string; level: string; decision: "corrected" | "confirmed-current"; rationale: string; previous: Record<string, unknown>; current: Record<string, any> }[];
+  };
+  const dialoguesK440 = JSON.parse(readFileSync("content/dialogues.json", "utf8")) as Array<Record<string, any>>;
+  const byIdK440 = new Map(dialoguesK440.map((dialogue) => [String(dialogue.id), dialogue]));
+  const expectedK440 = new Set(dialoguesK440.filter((dialogue) => dialogue.level === "B2").map((dialogue) => String(dialogue.id)));
+  const correctedK440 = reviewK440.entries.filter((entry) => entry.decision === "corrected");
+  const confirmedK440 = reviewK440.entries.filter((entry) => entry.decision === "confirmed-current");
+  const lineCountK440 = reviewK440.entries.reduce((sum, entry) => sum + (entry.current.lines?.length ?? 0), 0);
+  const questionCountK440 = reviewK440.entries.reduce((sum, entry) => sum + (entry.current.questions?.length ?? 0), 0);
+  ok(reviewK440.schema === "wegb2-reviewed-dialogue-decision-batch-v1" && reviewK440.batch === "PA-038-05" &&
+    reviewK440.entries.length === 49 && expectedK440.size === 49 &&
+    reviewK440.entries.every((entry) => expectedK440.has(entry.id) && entry.level === "B2" && entry.rationale.trim().length > 0) &&
+    correctedK440.length === 49 && confirmedK440.length === 0 && lineCountK440 === 332 && questionCountK440 === 116 &&
+    correctedK440.every((entry) => JSON.stringify(entry.previous) !== JSON.stringify(entry.current)),
+    "K440a PA-038-05: سجل القرار يغطي حوارات B2 التسعة والأربعين كاملة بـ332 سطراً و116 سؤالاً و49 تصحيحاً مبرراً");
+  const currentK440 = JSON.stringify([...expectedK440].map((id) => byIdK440.get(id)));
+  ok(reviewK440.entries.every((entry) => JSON.stringify(byIdK440.get(entry.id)) === JSON.stringify(entry.current)) &&
+    byIdK440.get("d-b2-11")?.lines?.[7]?.de.includes("keine Rechtsberatung") &&
+    byIdK440.get("d-b2-12")?.lines?.[5]?.de.includes("Antrag allein ist keine Erlaubnis") &&
+    byIdK440.get("d-b2-15")?.lines?.[3]?.de.includes("Vertrag und Prüfung") &&
+    byIdK440.get("d-b2-20")?.lines?.[1]?.de.startsWith("Nein.") &&
+    byIdK440.get("d-b2-22")?.lines?.[1]?.de.includes("112") &&
+    byIdK440.get("d-b2-25")?.lines?.[1]?.de.includes("nicht, bevor ihre Sicherheit fachlich geklärt ist") &&
+    byIdK440.get("d-b2-ht01")?.situationDe === "Fiktive Radiomeldung für eine Hörübung" &&
+    byIdK440.get("d-b2-ht02")?.situationDe === "Fiktive Anrufbeantworteransage für eine Hörübung" &&
+    !currentK440.includes("Dringlichkeitscode C auf dem Schein") &&
+    !currentK440.includes("Wiederholungen nur bei Nichtbestehen, maximal zweimal") &&
+    !currentK440.includes("Zwangsgeld bis 250.000 Euro"),
+    "K440b PA-038-05: القرارات تطابق البنك وتحرس حدود السكن والاعتراف والضرائب والتأمين والرعاية والطب والعمل والامتحان وسلامة المنتج والأخبار الخيالية");
+  const patchK440 = readFileSync("scripts/patches/apply_dialogue_review_pa038_05.py", "utf8");
+  const auditK440 = readFileSync("scripts/dialogue_content_review_audit.ts", "utf8");
+  const packageK440 = readFileSync("package.json", "utf8");
+  const ciK440 = readFileSync(".github/workflows/ci.yml", "utf8");
+  ok(patchK440.includes("current == reviewed") && patchK440.includes("current != previous") &&
+    patchK440.includes("unexpected current dialogue") &&
+    auditK440.includes("all 176 bounded A0–B2 full-dialogue decisions match") && auditK440.includes("1138 lines and 424 questions") &&
+    packageK440.includes('"audit:dialogue-content-review"') && ciK440.includes("npm run audit:dialogue-content-review") &&
+    reviewK440.scope.includes("all 332 German/Arabic line alignments") && reviewK440.scope.includes("all 116 questions") &&
+    reviewK440.scope.includes("triage only") && reviewK440.scope.includes("not linguistic correction generators") &&
+    reviewK440.scope.includes("not independent linguistic, translation, cultural, legal, medical, pharmacy, emergency-services, audio, CEFR, Goethe/telc, or exam sign-off"),
+    "K440c PA-038-05: الرقعة exact-match وقابلة للإعادة وفاشلة عند الانزياح، والبوابة موصولة بـCI مع اكتمال 176 حواراً وإبقاء الصوت والتوقيع المستقل خارج الادعاء");
 }
 
 /* ═══ K334 — R309: القفل الفعلي الحقيقي — إغلاقُ اليوم عند حدود الوحدة ممنوعٌ لا منصوحٌ به فقط ═══ */
