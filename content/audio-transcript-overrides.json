@@ -228,6 +228,238 @@
       "sourcePath": "content/dialogues.json"
     },
     {
+      "file": "/audio/dialog/d-b2-07.mp3",
+      "id": "d-b2-07",
+      "group": "dialog",
+      "textDe": "Die von Ihnen angebotenen Konditionen decken unsere Kosten kaum. Angesichts der Marktlage halten wir unser Angebot für fair. Sofern Sie die Lieferfrist verkürzen, wären wir zu 5 Prozent mehr bereit. Einverstanden, unter der Bedingung einer längeren Vertragslaufzeit. Das können wir prüfen. Dann machen wir nächste Woche weiter.",
+      "audioCommit": "bbdf2255c4b84aa3e7938d5f3af1e0c7c1c7d053",
+      "sourcePath": "content/dialogues.json"
+    },
+    {
+      "file": "/audio/dialog/d-b2-10.mp3",
+      "id": "d-b2-10",
+      "group": "dialog",
+      "textDe": "Danke, dass Sie sich die Zeit nehmen — Ihre Stelle interessiert mich sehr. Ebenso. Was schwebt Ihnen tariflich vor? Angesichts meiner Erfahrung käme ich auf 48.000 Euro brutto. Das liegt über unserem Rahmen; 45.000 plus variabler Anteil wäre verhandelbar. Auf der Zahl bestehe ich nicht — aber die Weiterbildungszeit zähle ich als Leistung. Fair. Dann 45.500, zwei Tage Homeoffice und 400 Euro Weiterbildungsbudget. Sofern der Vertrag die Probezeit auf drei Monate begrenzt, haben wir eine Übereinkunft. Abgemacht — die Zusage bekommen Sie schriftlich morgen Vormittag.",
+      "audioCommit": "bbdf2255c4b84aa3e7938d5f3af1e0c7c1c7d053",
+      "sourcePath": "content/dialogues.json"
+    },
+    {
+      "file": "/audio/dialog/d-b2-11.mp3",
+      "id": "d-b2-11",
+      "group": "dialog",
+      "textDe": "Die angekündigte Erhöhung um 15 Prozent übersteigt die ortsübliche Miete. Unsere Belege: Mietspiegel und Wirtschaftlichkeitsberechnung. Genau der Mietspiegel zeigt: in unserem Markt gilt die Kappungsgrenze von fünfzehn Prozent in drei Jahren. Stimmt — Ihr Brief errechnet korrekt; wir korrigieren auf 9,8 Prozent. Zusätzlich wünsche ich ein Protokoll über die Nebenkostenabrechnung. Das Protokoll folgt binnen vierzehn Tagen samt Belegen. Sofern alles eintrifft, akzeptiere ich den neuen Betrag zum Ersten. Per Mail bestätigt — danke für die sachliche Gesprächsführung.",
+      "audioCommit": "bbdf2255c4b84aa3e7938d5f3af1e0c7c1c7d053",
+      "sourcePath": "content/dialogues.json"
+    },
+    {
+      "file": "/audio/dialog/d-b2-12.mp3",
+      "id": "d-b2-12",
+      "group": "dialog",
+      "textDe": "Mein tunesisches Ingenieurdiplom soll anerkannt werden — welche Dokumente? Beglaubigte Übersetzung, Fächerübersicht, Nachweis praktischer Tätigkeiten. Wie lange dauert die Prüfung, und kann ich währenddessen arbeiten? Regulär drei Monate; mit Ihrer Berufserlaubnis im Warteverfahren — ja, eingeschränkt. Und wenn die Gleichwertigkeit teilweise verneint wird? Dann bekommen Sie einen Anpassungslehrgang zugewiesen, höchstens 16 Monate Praxis. Die Gebühren sind mir unklar — wer trägt sie bei Erfolg? 400 Euro Vorauszahlung; die Erstattung richtet sich nach dem Landrecht.",
+      "audioCommit": "bbdf2255c4b84aa3e7938d5f3af1e0c7c1c7d053",
+      "sourcePath": "content/dialogues.json"
+    },
+    {
+      "file": "/audio/dialog/d-b2-13.mp3",
+      "id": "d-b2-13",
+      "group": "dialog",
+      "textDe": "Ich beantrage Elterngeld ab April — welche Fristen gelten? spätestens drei Monate nach der Geburt; rückwirkend nur für drei. Mein Mann und ich teilen die Monate — wie wirkt sich Partnerschaftsbonus aus? Vier Monate gleichzeitig plus Bonus: je zwei Monate obendrauf für beide. Die Berechnung basiert auf dem Netto der letzten zwölf Monate? Ja — unteres Einkommen wird prozentual stärker ersetzt, bis 67 Prozent. Wo lade ich die Lohnbelege hoch, und in welchem Format? Im Portal als PDF, je Monat ein Dokument — Scans ohne Stempel akzeptieren wir nicht.",
+      "audioCommit": "bbdf2255c4b84aa3e7938d5f3af1e0c7c1c7d053",
+      "sourcePath": "content/dialogues.json"
+    },
+    {
+      "file": "/audio/dialog/d-b2-14.mp3",
+      "id": "d-b2-14",
+      "group": "dialog",
+      "textDe": "Die Abgabefrist läuft — ich schaffe sie ohne Steuerberater nicht mehr. Mit Beratung verlängert sich die Frist automatisch bis April nächsten Jahres. Welche Nachweise für die Homeoffice-Pauschale sind nötig? Arbeitszimmer-Grundriss, Verträge, Nebenkostenanteil — pauschal genügt der Nachweis der Nutzung. Die Vorauszahlung wurde erhöht — Widerspruch möglich? Innerhalb eines Monats, aber nur mit geänderter Einkommensprognose. Reicht die Übermittlung über ELSTER als Nachweis des Eingangs? Ja, die Sendebestätigung aufheben — sie ist das einzige Quittungsdokument.",
+      "audioCommit": "bbdf2255c4b84aa3e7938d5f3af1e0c7c1c7d053",
+      "sourcePath": "content/dialogues.json"
+    },
+    {
+      "file": "/audio/dialog/d-b2-15.mp3",
+      "id": "d-b2-15",
+      "group": "dialog",
+      "textDe": "Seit gestern quillt Wasser aus der Decke — Schaden gemeldet, Nummer 7714. Protokoll: Fotos, Uhrzeit, Handwerker-Notdienst bereits beauftragt? Ja — die Rechnung über die Sofortmaßnahme reicht ein, nicht die Endrechnung. Wir regulieren nach dem Gutachtertermin, binnen zwei Wochen. Und wenn der Vermieter den Mangel an der Hauptleitung trägt? Dann halten wir uns den Rückgriff vor; Sie bekommen Vorschuss. Mietausfall für die Trocknungszeit — zahlt die Versicherung? Hausrat zahlt Trocknung und Hotel bis zur Wiederbewohnbarkeit; Mietminderung beim Vermieter.",
+      "audioCommit": "bbdf2255c4b84aa3e7938d5f3af1e0c7c1c7d053",
+      "sourcePath": "content/dialogues.json"
+    },
+    {
+      "file": "/audio/dialog/d-b2-16.mp3",
+      "id": "d-b2-16",
+      "group": "dialog",
+      "textDe": "Der Samstagstermin kollidiert mit meiner Schicht — gegen einen Tausch wäre offen? Plätze frei im Donnerstagsblock ab 18; Umbuchung kostet 15 Euro. Wenn ich beim Füllen der Warteliste helfe — erlassen Sie die Gebühr? Fair — dann Tausch ohne Gebühr, aber die Anwesenheitspflicht bleibt heilig. Und wie viel Anwesenheit verlangt das Zertifikat? Das Zertifikat setzt 80 Prozent Teilnahme voraus, nicht weniger. Bei Krankheit in der Prüfungswoche: Nachschreibtermin? Ärztliches Attest bis Montag, dann Nachtermin am Monatsersten.",
+      "audioCommit": "bbdf2255c4b84aa3e7938d5f3af1e0c7c1c7d053",
+      "sourcePath": "content/dialogues.json"
+    },
+    {
+      "file": "/audio/dialog/d-b2-17.mp3",
+      "id": "d-b2-17",
+      "group": "dialog",
+      "textDe": "Die Zertifikatskurse kosten 2.400 Euro — trägt die Firma einen Teil? Bei Branchennähe ja; Rückzahlungsklausel bei Wechsel unter 24 Monaten. Die Klausel wäre zu akzeptieren, sofern bezahlte Freistellung mitzählt. Zwei Tage pro Monat frei gegen Bindung an ein Jahr Weiterbildung. Und wenn ich während des Kurses Elterngeld nehme — Aussetzen? Der Anspruch ruht; wir verlängern die Bindung um die Pause, nicht die Kosten. Schriftliche Vereinbarung über beides — dann melde ich mich an. Morgen im Personalbüro, mit Ihren Zusatzstunden im Vertrag.",
+      "audioCommit": "bbdf2255c4b84aa3e7938d5f3af1e0c7c1c7d053",
+      "sourcePath": "content/dialogues.json"
+    },
+    {
+      "file": "/audio/dialog/d-b2-18.mp3",
+      "id": "d-b2-18",
+      "group": "dialog",
+      "textDe": "Ich möchte meine Versicherung zum Quartalsende kündigen. Frist läuft; die neue Kasse reicht die Kündigung digital ein. Was geschieht mit dem Bonusheft und den Dauermedikamenten? Das Heft bleibt gültig, die Medikamente laufen nahtlos über die elektronische Verordnung. Lückenlos versichert — darf ich im Übergangsmonat zum Arzt? Ja, der Versicherungsschutz bleibt bis zum letzten Tag bestehen. Die Beitragsanteile des Arbeitgebers — wer rechnet ab? Die Buchhaltung beider Kassen tut das unter sich; Sie erhalten eine Sammelbescheinigung.",
+      "audioCommit": "bbdf2255c4b84aa3e7938d5f3af1e0c7c1c7d053",
+      "sourcePath": "content/dialogues.json"
+    },
+    {
+      "file": "/audio/dialog/d-b2-20.mp3",
+      "id": "d-b2-20",
+      "group": "dialog",
+      "textDe": "Mein Vater hatte vor vier Wochen einen Schlaganfall — wie hoch wird der Pflegegrad sein? Wir bewerten Selbstständigkeit, nicht die Diagnose allein. Morgens braucht er Hilfe beim Waschen und Anziehen, mittags reicht Aufsicht. Nächtliche Unruhe und Sturzangst — dokumentieren Sie das bitte im Tagebuch. Die zweiwöchige Liste ist vorbereitet, mit Uhrzeiten. Dann rechne ich mit Grad zwei bis drei, je nach Wegstrecke innerhalb der Wohnung. Und wie lange dauert der Bescheid — was, wenn die Bewertung zu knapp ausfällt? Schriftlich binnen 25 Arbeitstagen; bei zu knapper Bewertung: Widerspruch.",
+      "audioCommit": "bbdf2255c4b84aa3e7938d5f3af1e0c7c1c7d053",
+      "sourcePath": "content/dialogues.json"
+    },
+    {
+      "file": "/audio/dialog/d-b2-21.mp3",
+      "id": "d-b2-21",
+      "group": "dialog",
+      "textDe": "Der Bildungskredit deckt mein letztes Studienjahr nicht — Möglichkeit einer Aufstockung? Höchstbetrag staatlich gedeckelt; bankseitig ein zinsgünstiges Darlehen mit Bürgschaft. Die Rückzahlung möchte ich nach dem zweiten Berufsjahr beginnen. Karenzzeit bis 18 Monate möglich; die Zinsen laufen weiter, werden gestundet. Welche Tilgungsrate ist realistisch beim Einstieggehalt? Zwischen 120 und 200 Euro, abhängig vom Zinsnachlass bei Gehaltsüberweisung. Sonderzahlung zweimal jährlich — damit wäre eine jährliche Sondertilgung vereinbart. So fixieren wir es im Bescheid — Unterschrift online per eID.",
+      "audioCommit": "bbdf2255c4b84aa3e7938d5f3af1e0c7c1c7d053",
+      "sourcePath": "content/dialogues.json"
+    },
+    {
+      "file": "/audio/dialog/d-b2-22.mp3",
+      "id": "d-b2-22",
+      "group": "dialog",
+      "textDe": "Die Überweisung zum Radiologen dauert Wochen — meine Schmerzen lassen nicht nach. Wir stufen als akut ein: Dringlichkeitscode C auf dem Schein verkürzt die Wartezeit. Kann eine Zweitüberweisung an ein anderes Krankenhaus helfen? Parallel ja, aber die Akten müssen austauschbar sein — mit Ihrem Einverständnis. Welche Befunde braucht der Facharzt zwingend? Laborwerte der Woche, Voraufnahmen im DICOM-Format, keine Komprimierung. Der Termin bestätigt — wie storniere ich, falls es früher klappt? Ein Anruf genügt; der Platz wandert sofort auf die Nachrückliste.",
+      "audioCommit": "bbdf2255c4b84aa3e7938d5f3af1e0c7c1c7d053",
+      "sourcePath": "content/dialogues.json"
+    },
+    {
+      "file": "/audio/dialog/d-b2-23.mp3",
+      "id": "d-b2-23",
+      "group": "dialog",
+      "textDe": "Im Lager sammeln sich Überstunden — der Ausgleich fehlt seit März. Das Arbeitszeitkonto muss monatlich ausgeglichen werden — wir haben die Betriebsvereinbarung. Schlagen Sie eine Zeitschiene statt Auszahlung vor? Frei im Block: zwei Tage plus Zuschlag pro Überstunde laut Tarif. Der Schichtplan lässt das nicht zu — wir brauchen das Kontingent vor Ostern abgebaut. Wir setzen die Liste am Montag mit dem Schichtleiter durch — verbindlich. Was tun, wenn die Firma ignoriert? Dann Einigungsstelle; der Spruch ersetzt die Weigerung des Arbeitgebers.",
+      "audioCommit": "bbdf2255c4b84aa3e7938d5f3af1e0c7c1c7d053",
+      "sourcePath": "content/dialogues.json"
+    },
+    {
+      "file": "/audio/dialog/d-b2-24.mp3",
+      "id": "d-b2-24",
+      "group": "dialog",
+      "textDe": "Ich habe die telc-Prüfung B1 knapp bestanden — Zertifikat oder nicht? Bestanden ist bestanden — das Zertifikat kommt nach vier Wochen per Post. Fehlt für meine Aufenthaltserlaubnis nicht der Nachweis der Wiederholung? Bei Bestehen keine — Wiederholungen nur bei Nichtbestehen, maximal zweimal. Falls ich die B2-Prüfung ablegen will: Anmeldung über die Volkshochschule? Direkt über das Sprachenzentrum, Termin im Frühjahr — Warteliste inklusive. Welche Fördermittel greifen bei wiederholtem Versuch? Die Kursträger können die Gebühren halbieren — Antrag binnen zwei Wochen.",
+      "audioCommit": "bbdf2255c4b84aa3e7938d5f3af1e0c7c1c7d053",
+      "sourcePath": "content/dialogues.json"
+    },
+    {
+      "file": "/audio/dialog/d-b2-25.mp3",
+      "id": "d-b2-25",
+      "group": "dialog",
+      "textDe": "Die Sendung kam drei Tage später an, das Kühlpaket war offen. Belegfotos, Packzettel und Zeitstempel der Tür — dann öffnen wir das Verfahren. Die Ware selbst ist einwandfrei; ich verlange die Versandgebühr zurück. Rückerstattung plus 10-Euro-Gutschein — gutgeschrieben binnen 72 Stunden. Wenn der Kurier wiederholt öffnet — hat das Konsequenzen? Wir protokollieren die Charge und setzen ihn bis zur Schulung vom Dienst. Muss die Beschwerde auf Englisch sein? Ich schreibe sie gern um. Auf Deutsch reicht — unser Haus übersetzt für Sie ins Englische.",
+      "audioCommit": "bbdf2255c4b84aa3e7938d5f3af1e0c7c1c7d053",
+      "sourcePath": "content/dialogues.json"
+    },
+    {
+      "file": "/audio/dialog/d-b2-26.mp3",
+      "id": "d-b2-26",
+      "group": "dialog",
+      "textDe": "Meine Betreuerin geht in den Ruhestand — die Betreuung muss neu geordnet werden. Wir brauchen eine neue Erstprüferin mit gleicher Qualifikation, binnen sechs Wochen. Herr Dr. Weiler erklärte sich bereit, sofern die Dissertationsrichtung bleibt. Dann unterschreiben beide den Wechsel; die alten Gutachten werden übertragen. Verschiebt sich damit mein Kolloquiumstermin? Nein — er bleibt, es sei denn, Sie beantragen einen Aufschub. Und was verlangt die Promotionsordnung zusätzlich? Zwei externe Gutachten — die Verwaltung holt sie bis Monatsende ein.",
+      "audioCommit": "bbdf2255c4b84aa3e7938d5f3af1e0c7c1c7d053",
+      "sourcePath": "content/dialogues.json"
+    },
+    {
+      "file": "/audio/dialog/d-b2-27.mp3",
+      "id": "d-b2-27",
+      "group": "dialog",
+      "textDe": "Die Hecke meines Nachbarn ragt 40 Zentimeter auf mein Grundstück — die Mahnung half nicht. Vor der Klage gehört der Schlichtungsversuch zur Pflicht — dazu bin ich da. Wenn er die Grenze akzeptiert — verzichte ich auf Schadensersatz. Dann schlage ich einen Vergleich mit Frist zum Rückschnitt vor. Und die Frist — kann die gerichtlich bestätigt werden? Ja — bei Verstoß droht ein Zwangsgeld bis 250.000 Euro. Welche Unterlagen brauche ich für den Termin? Katasterauszug, Fotos mit Maßstab, die Mahnung von damals, zwei Zeugen genügen. Und wenn er zum Termin nicht erscheint? Dann wird das Scheitern protokolliert — und die Klage wird zulässig.",
+      "audioCommit": "bbdf2255c4b84aa3e7938d5f3af1e0c7c1c7d053",
+      "sourcePath": "content/dialogues.json"
+    },
+    {
+      "file": "/audio/dialog/d-b2-32.mp3",
+      "id": "d-b2-32",
+      "group": "dialog",
+      "textDe": "Ein generelles Tempolimit würde Leben retten und Emissionen senken. Das mag sein, doch die Einsparung fällt geringer aus, als oft behauptet wird. Selbst wenn der Effekt klein wäre: Er kostet nichts und wirkt sofort. Einverstanden, sofern man gleichzeitig in Schienen investiert. Damit kann ich leben. Dann sind wir uns im Grundsatz einig.",
+      "audioCommit": "bbdf2255c4b84aa3e7938d5f3af1e0c7c1c7d053",
+      "sourcePath": "content/dialogues.json"
+    },
+    {
+      "file": "/audio/dialog/d-b2-40.mp3",
+      "id": "d-b2-40",
+      "group": "dialog",
+      "textDe": "Viele Menschen reden zwar über Klimaschutz, handeln aber nur selten konsequent. Aber ist nachhaltiger Konsum nicht viel teurer? Die Preise sind eigentlich nicht höher, jedoch fehlt oft die Information. Die Industrie behauptet dagegen, die Kunden wollten keine Veränderung. Diese Behauptung ist kaum haltbar, denn Umfragen zeigen das Gegenteil. Was können wir also konkret tun?",
+      "audioCommit": "1a34344fc0d670b1b54dae7841c65a694ec28454",
+      "sourcePath": "content/dialogues.json"
+    },
+    {
+      "file": "/audio/dialog/d-b2-41.mp3",
+      "id": "d-b2-41",
+      "group": "dialog",
+      "textDe": "Viele Jugendliche wählen zwar einen Beruf, brechen die Ausbildung aber früh ab. Aber ist das nicht ein Zeichen für falsche Erwartungen? Die Erwartungen sind oft unrealistisch, jedoch fehlt auch die Begleitung im Betrieb. Die Firmen sagen dagegen, die Jugendlichen seien nicht motiviert. Diese Aussage ist nur teilweise richtig, denn die Zahlen zeigen auch fehlende Unterstützung. Was empfehlen Sie uns als Eltern?",
+      "audioCommit": "1a34344fc0d670b1b54dae7841c65a694ec28454",
+      "sourcePath": "content/dialogues.json"
+    },
+    {
+      "file": "/audio/dialog/d-b2-42.mp3",
+      "id": "d-b2-42",
+      "group": "dialog",
+      "textDe": "Wir haben zwar mehr Patienten, aber deutlich weniger Personal als früher. Aber die Qualität ist doch gleich geblieben? Die Qualität leidet leider, denn die Zeit pro Patient ist stark gesunken. Die Politik spricht dagegen von einer erfolgreichen Reform. Diese Reform ist in der Praxis kaum spürbar, denn die Belastung bleibt hoch. Was würden Sie konkret ändern?",
+      "audioCommit": "1a34344fc0d670b1b54dae7841c65a694ec28454",
+      "sourcePath": "content/dialogues.json"
+    },
+    {
+      "file": "/audio/dialog/d-b2-43.mp3",
+      "id": "d-b2-43",
+      "group": "dialog",
+      "textDe": "Viele Leser fühlen sich zwar informiert, sind aber eigentlich überfordert. Aber ist das nicht ein Widerspruch? Die Menge ist riesig, jedoch fehlt oft der Überblick. Die Verlage behaupten dagegen, die Leser wollten nur Unterhaltung. Diese Behauptung ist verkürzt, denn Studien zeigen auch Interesse an Tiefe. Wie sollten wir darauf reagieren?",
+      "audioCommit": "1a34344fc0d670b1b54dae7841c65a694ec28454",
+      "sourcePath": "content/dialogues.json"
+    },
+    {
+      "file": "/audio/dialog/d-b2-44.mp3",
+      "id": "d-b2-44",
+      "group": "dialog",
+      "textDe": "Viele Teilnehmende lernen zwar fleißig, sprechen aber selten außerhalb des Kurses. Aber ist das nicht normal am Anfang? Am Anfang ja, jedoch braucht Integration auch Kontakte im Alltag. Die Behörden sagen dagegen, der Kurs allein reiche aus. Diese Ansicht ist zu eng, denn Sprache lernt man durch Anwendung. Was empfehlen Sie konkret?",
+      "audioCommit": "1a34344fc0d670b1b54dae7841c65a694ec28454",
+      "sourcePath": "content/dialogues.json"
+    },
+    {
+      "file": "/audio/dialog/d-b2-45.mp3",
+      "id": "d-b2-45",
+      "group": "dialog",
+      "textDe": "Wir haben zwar viele Autos, aber zu wenig sichere Radwege. Aber braucht man nicht beides? Beides ja, jedoch ist der Platz begrenzt, deshalb braucht es Prioritäten. Die Opposition behauptet dagegen, die Pläne seien unrealistisch. Diese Kritik ist nicht neu, denn jede Veränderung erzeugt Widerstand. Wann beginnt der Umbau?",
+      "audioCommit": "1a34344fc0d670b1b54dae7841c65a694ec28454",
+      "sourcePath": "content/dialogues.json"
+    },
+    {
+      "file": "/audio/dialog/d-b2-46.mp3",
+      "id": "d-b2-46",
+      "group": "dialog",
+      "textDe": "Viele Firmen bieten zwar Homeoffice an, erwarten aber ständige Erreichbarkeit. Aber ist das nicht ein Widerspruch? Genau, deshalb ist das Ergebnis oft Stress, nicht mehr Freiheit. Die Arbeitgeber behaupten dagegen, die Flexibilität sei ein Vorteil. Diese Flexibilität ist oft einseitig, denn die Beschäftigten tragen das Risiko. Was wäre eine faire Lösung?",
+      "audioCommit": "1a34344fc0d670b1b54dae7841c65a694ec28454",
+      "sourcePath": "content/dialogues.json"
+    },
+    {
+      "file": "/audio/dialog/d-b2-47.mp3",
+      "id": "d-b2-47",
+      "group": "dialog",
+      "textDe": "Viele Studierende nutzen zwar KI-Tools, verstehen aber die Grundlagen kaum. Aber helfen die Tools nicht beim Lernen? Sie helfen teilweise, jedoch ersetzen sie nicht das eigene Denken. Die Hochschulen behaupten dagegen, die Nutzung sei bereits geregelt. Diese Regelung ist lückenhaft, denn die Praxis entwickelt sich schneller als die Regeln. Was empfehlen Sie uns?",
+      "audioCommit": "1a34344fc0d670b1b54dae7841c65a694ec28454",
+      "sourcePath": "content/dialogues.json"
+    },
+    {
+      "file": "/audio/dialog/d-b2-48.mp3",
+      "id": "d-b2-48",
+      "group": "dialog",
+      "textDe": "Viele Menschen wollen zwar helfen, finden aber keinen passenden Einsatz. Aber gibt es nicht genug Angebote? Die Angebote sind zahlreich, jedoch fehlt oft die Vermittlung. Die Stadt behauptet dagegen, das Ehrenamt sei stark. Diese Aussage ist zu allgemein, denn die Zahlen sinken in vielen Bereichen. Wie können wir mehr Menschen gewinnen?",
+      "audioCommit": "1a34344fc0d670b1b54dae7841c65a694ec28454",
+      "sourcePath": "content/dialogues.json"
+    },
+    {
+      "file": "/audio/dialog/d-b2-49.mp3",
+      "id": "d-b2-49",
+      "group": "dialog",
+      "textDe": "Viele Bürger interessieren sich zwar für Politik, beteiligen sich aber selten aktiv. Aber liegt das nicht an fehlenden Möglichkeiten? Die Möglichkeiten gibt es, jedoch fehlt oft das Vertrauen. Die Parteien behaupten dagegen, die Bürger seien politikverdrossen. Diese Diagnose ist verkürzt, denn viele wollen mitgestalten, finden aber keinen Zugang. Was kann die Stadt konkret tun?",
+      "audioCommit": "1a34344fc0d670b1b54dae7841c65a694ec28454",
+      "sourcePath": "content/dialogues.json"
+    },
+    {
       "file": "/audio/dialog/d-b2-ht01.mp3",
       "id": "d-b2-ht01",
       "group": "dialog",
@@ -284,6 +516,22 @@
       "sourcePath": "content/dialogues.json"
     },
     {
+      "file": "/audio/dialog/dlg-b2-ki-arbeit.mp3",
+      "id": "dlg-b2-ki-arbeit",
+      "group": "dialog",
+      "textDe": "Unser Thema heute: Wie verändert künstliche Intelligenz unsere Berufe? Herr Dr. Arslan, Sie arbeiten mit solchen Systemen. Ja. In meiner Firma sortiert eine Software Bewerbungen vor. Das spart Zeit, aber ein Mensch trifft die Entscheidung. Das klingt gut, aber wer kontrolliert die Software? Sie kann Fehler machen und Menschen benachteiligen. Deshalb prüfen wir jede Entscheidung. Die Maschine macht Vorschläge, mehr nicht. Frau Brandt, was ist Ihre größte Sorge bei diesem Thema? Dass Firmen Stellen streichen und es als Fortschritt verkaufen. Technik soll helfen, nicht ersetzen. In der Geschichte hat Technik Berufe verändert, aber selten ganze Berufe gelöscht. Neue Aufgaben sind entstanden. Das stimmt, aber der Übergang war für viele Menschen hart. Nicht jeder kann schnell umlernen. Was sollten Firmen also konkret tun? Die Mitarbeiter früh einbeziehen und Weiterbildung anbieten, bevor die Technik kommt. Und der Staat muss Regeln setzen, damit die Daten der Menschen geschützt bleiben. Also Technik ja, aber mit klaren Regeln. Vielen Dank an Sie beide!",
+      "audioCommit": "bf060b8b1248fb9c12d162d085350f2224380441",
+      "sourcePath": "content/dialogues.json"
+    },
+    {
+      "file": "/audio/dialog/dlg-b2-mietvertrag.mp3",
+      "id": "dlg-b2-mietvertrag",
+      "group": "dialog",
+      "textDe": "Frau Saleh, hier ist der Mietvertrag. Die Kaltmiete beträgt 720 Euro und die Nebenkosten liegen bei 180 Euro. Zusammen sind das 900 Euro Warmmiete. Wie hoch ist die Kaution im Vertrag? Sie entspricht drei Kaltmieten, oder? Ja, die Kaution beträgt 2160 Euro und wird auf ein separates Kautionskonto eingezahlt. Wie lange ist die Kündigungsfrist? Für die ordentliche Kündigung gilt in der Regel eine gesetzliche Frist von drei Monaten. Für die ersten zwei Jahre ist eine Staffelmiete vereinbart; die Beträge und Termine stehen im Vertrag. Darf ich in der Wohnung Wände streichen oder kleine Bohrungen machen? Neutrale Wandfarben sind in Ordnung. Bitte sprechen Sie geplante Bohrungen vorher mit mir ab. Normale Gebrauchsspuren sind kein Problem; was bei Auszug nötig ist, richtet sich nach dem Vertrag und dem Zustand der Wohnung. Gut, dann lese ich den Vertrag noch einmal in Ruhe durch und schicke ihn Ihnen unterschrieben zurück.",
+      "audioCommit": "bf060b8b1248fb9c12d162d085350f2224380441",
+      "sourcePath": "content/dialogues.json"
+    },
+    {
       "file": "/audio/dialog/hoer-a1-01.mp3",
       "id": "hoer-a1-01",
       "group": "dialog",
@@ -312,6 +560,14 @@
       "id": "hoer-b1-01",
       "group": "dialog",
       "textDe": "Hallo Karim, hier ist Sarah von der Arbeit. Ich rufe an, weil der Termin mit Herrn Becker am Mittwoch leider ausfällt. Er ist krank geworden. Ich habe schon einen neuen Termin für den 18. November um 10 Uhr vorgeschlagen. Bitte sag mir bis morgen Bescheid, ob dir das passt. Ansonsten ruf mich bitte auf dem Handy zurück. Danke, bis dann!",
+      "audioCommit": "bf060b8b1248fb9c12d162d085350f2224380441",
+      "sourcePath": "content/dialogues.json"
+    },
+    {
+      "file": "/audio/dialog/hoer-b2-01.mp3",
+      "id": "hoer-b2-01",
+      "group": "dialog",
+      "textDe": "Wie beurteilen Sie die Situation auf dem deutschen Arbeitsmarkt für ausländische Fachkräfte? – Grundsätzlich ist die Nachfrage hoch, insbesondere in technischen Berufen und im Gesundheitswesen. Das Problem liegt oft weniger in der Qualifikation als vielmehr in der Anerkennung der Abschlüsse und in den Sprachkenntnissen. A2- oder B1-Kenntnisse reichen für manche Tätigkeiten nicht aus. Einige Arbeitgeber fordern mindestens B2, in bestimmten Bereichen sogar C1. Außerdem spielt interkulturelle Kompetenz eine immer größere Rolle. Mein Rat: frühzeitig Deutsch lernen und die Anerkennung bereits im Heimatland beantragen.",
       "audioCommit": "bf060b8b1248fb9c12d162d085350f2224380441",
       "sourcePath": "content/dialogues.json"
     },

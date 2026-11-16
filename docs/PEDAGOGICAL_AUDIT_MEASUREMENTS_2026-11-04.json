@@ -671,11 +671,11 @@
     "claimBoundary": "87 bounded internal A0–B2 decisions; independent review, field validation, and external linguistic, phonetic, CEFR, or exam sign-off remain pending"
   },
   "inventorySnapshot": {
-    "indexedTrackedFilesAndAuditArtifacts": 3633,
-    "manual_complete": 61,
-    "manual_targeted": 68,
+    "indexedTrackedFilesAndAuditArtifacts": 3635,
+    "manual_complete": 62,
+    "manual_targeted": 67,
     "not_started": 3439,
-    "audit_artifact": 65
+    "audit_artifact": 67
   },
   "learningStateCorrections": {
     "findings": [
@@ -988,7 +988,7 @@
     "independentLinguisticSignOff": false,
     "independentTranslationSignOff": false,
     "externalCefrOrExamValidation": false,
-    "claimBoundary": "157 bounded internal A0–B2 decisions across 529 questions; all dialogues remain outside PA-037, with 127 A0–B1 dialogues separately guarded by PA-038-01/02/03/04 and 49 B2 dialogues still pending; re-synthesis and text/audio matching or listening checks for 59 changed German reading-audio sources, independent review, field validation, and external linguistic, translation, legal, medical, environmental, security, CEFR, or exam sign-off remain pending",
+    "claimBoundary": "157 bounded internal A0–B2 decisions across 529 questions; dialogues are reviewed separately by all five PA-038 batches, while re-synthesis and text/audio matching or listening checks for 59 changed German reading-audio sources, independent review, field validation, and external linguistic, translation, legal, medical, environmental, security, CEFR, or exam sign-off remain pending",
     "audioSourcePassagesChanged": [
       "t-a0-06",
       "t-a1-09",
@@ -1108,30 +1108,40 @@
         "confirmedCurrentDialogues": 0,
         "fixture": "scripts/fixtures/dialogues-reviewed-04.json",
         "patch": "scripts/patches/apply_dialogue_review_pa038_04.py"
+      },
+      {
+        "batch": "PA-038-05",
+        "level": "B2",
+        "reviewedDialogues": 49,
+        "reviewedLines": 332,
+        "reviewedQuestions": 116,
+        "correctedDialogues": 49,
+        "confirmedCurrentDialogues": 0,
+        "fixture": "scripts/fixtures/dialogues-reviewed-05.json",
+        "patch": "scripts/patches/apply_dialogue_review_pa038_05.py"
       }
     ],
-    "reviewedDialogues": 127,
-    "reviewedLines": 806,
-    "reviewedQuestions": 308,
+    "reviewedDialogues": 176,
+    "reviewedLines": 1138,
+    "reviewedQuestions": 424,
     "reviewedLevels": [
       "A0",
       "A1",
       "A2",
-      "B1"
-    ],
-    "correctedDialogues": 127,
-    "confirmedCurrentDialogues": 0,
-    "remainingDialogues": 49,
-    "remainingLevels": [
+      "B1",
       "B2"
     ],
-    "scope": "item-by-item internal full-dialogue review of stable identity, level, German and Arabic titles, situations, speakers, all bilingual lines, all questions and dependent data, options, answers, explanations, dictation, metadata, perspective, sequence, ambiguity, duplication, register, and cultural, legal, medical, pharmacy, emergency-services, workplace-safety, housing, identity-document, immigration-procedure, passenger-rights, energy-contract, consumer-contract, banking, education, environmental, pricing, return-policy, and factual claim boundaries; searches, regexes, and structural checks used for triage only, not linguistic correction generation",
+    "correctedDialogues": 176,
+    "confirmedCurrentDialogues": 0,
+    "remainingDialogues": 0,
+    "remainingLevels": [],
+    "scope": "item-by-item internal full-dialogue review of stable identity, level, German and Arabic titles, situations, speakers, all bilingual lines, all questions and dependent data, options, answers, explanations, dictation, metadata, perspective, sequence, ambiguity, duplication, register, and cultural, legal, medical, pharmacy, emergency-services, workplace-safety, housing, recognition, tax, family-benefit, insurance, care, identity-document, immigration-procedure, passenger-rights, energy-contract, consumer-contract, banking, education, environmental, pricing, return-policy, employment, examination, university-procedure, civic, and factual claim boundaries; searches, regexes, and structural checks used for triage only, not linguistic correction generation",
     "regressionGate": "npm run audit:dialogue-content-review",
     "independentLinguisticSignOff": false,
     "independentTranslationSignOff": false,
     "culturalOrMedicalSignOff": false,
     "externalCefrOrExamValidation": false,
-    "claimBoundary": "127 bounded internal A0–B1 full-dialogue decisions across 806 lines and 308 questions; 49 B2 dialogues, re-synthesis and text/audio matching or listening checks for 73 changed German dialogue-audio sources, independent review, field validation, and external linguistic, translation, cultural, legal, medical, pharmacy, emergency-services, audio, CEFR, Goethe, telc, or exam sign-off remain pending",
+    "claimBoundary": "176 bounded internal A0–B2 full-dialogue decisions across 1138 lines and 424 questions; no dialogue remains outside the internal PA-038 ledger, while re-synthesis and text/audio matching or listening checks for 107 changed German dialogue-audio sources, independent review, field validation, and external linguistic, translation, cultural, legal, medical, pharmacy, emergency-services, audio, CEFR, Goethe, telc, or exam sign-off remain pending",
     "audioSourceDialoguesChanged": [
       "d-a0-05",
       "d-a0-11",
@@ -1205,7 +1215,41 @@
       "d-b1-ht02",
       "dlg-b1-wohnungssuche",
       "dlg-b1-berufsberatung",
-      "dlg-b1-elterngespraech"
+      "dlg-b1-elterngespraech",
+      "d-b2-07",
+      "d-b2-10",
+      "d-b2-11",
+      "d-b2-12",
+      "d-b2-13",
+      "d-b2-14",
+      "d-b2-15",
+      "d-b2-16",
+      "d-b2-17",
+      "d-b2-18",
+      "d-b2-20",
+      "d-b2-21",
+      "d-b2-22",
+      "d-b2-23",
+      "d-b2-24",
+      "d-b2-25",
+      "d-b2-26",
+      "d-b2-27",
+      "d-b2-32",
+      "dlg-b2-mietvertrag",
+      "hoer-b2-01",
+      "d-b2-ht01",
+      "d-b2-ht02",
+      "dlg-b2-ki-arbeit",
+      "d-b2-40",
+      "d-b2-41",
+      "d-b2-42",
+      "d-b2-43",
+      "d-b2-44",
+      "d-b2-45",
+      "d-b2-46",
+      "d-b2-47",
+      "d-b2-48",
+      "d-b2-49"
     ],
     "audioRevalidationCompleted": false,
     "technicalAudioQc": {
@@ -1215,9 +1259,10 @@
       "result": "pass",
       "textAudioMatchChecked": false,
       "humanListeningCompleted": false,
-      "recordingTranscriptOverrides": 65,
+      "recordingTranscriptOverrides": 97,
       "b1RecordingSnapshotsAdded": 26,
-      "snapshotPurpose": "tempo measurement against recording-time text only; does not establish current text/audio match"
+      "snapshotPurpose": "tempo measurement against recording-time text only; does not establish current text/audio match",
+      "b2RecordingSnapshotsAdded": 32
     }
   }
 }

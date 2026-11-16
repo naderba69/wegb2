@@ -55,6 +55,7 @@ const review01 = readJson<ReviewFixture>("scripts/fixtures/dialogues-reviewed-01
 const review02 = readJson<ReviewFixture>("scripts/fixtures/dialogues-reviewed-02.json");
 const review03 = readJson<ReviewFixture>("scripts/fixtures/dialogues-reviewed-03.json");
 const review04 = readJson<ReviewFixture>("scripts/fixtures/dialogues-reviewed-04.json");
+const review05 = readJson<ReviewFixture>("scripts/fixtures/dialogues-reviewed-05.json");
 const byId = new Map(dialogues.map((dialogue) => [dialogue.id, dialogue]));
 const errors: string[] = [];
 const expectedA0 = new Set([
@@ -92,6 +93,17 @@ const expectedB1 = new Set([
   "d-b1-ht03", "dlg-b1-wohnungssuche", "dlg-b1-berufsberatung",
   "dlg-b1-elterngespraech",
 ]);
+const expectedB2 = new Set([
+  "d-b2-01", "d-b2-02", "d-b2-03", "d-b2-04", "d-b2-05", "d-b2-06",
+  "d-b2-07", "d-b2-08", "d-b2-09", "d-b2-10", "d-b2-11", "d-b2-12",
+  "d-b2-13", "d-b2-14", "d-b2-15", "d-b2-16", "d-b2-17", "d-b2-18",
+  "d-b2-19", "d-b2-20", "d-b2-21", "d-b2-22", "d-b2-23", "d-b2-24",
+  "d-b2-25", "d-b2-26", "d-b2-27", "d-b2-31", "d-b2-32",
+  "dlg-b2-mietvertrag", "hoer-b2-01", "d-b2-ht01", "d-b2-ht02", "d-b2-ht03",
+  "dlg-b2-homeoffice", "dlg-b2-klimadebatte", "dlg-b2-ki-arbeit",
+  "d-b2-38", "d-b2-39", "d-b2-40", "d-b2-41", "d-b2-42", "d-b2-43",
+  "d-b2-44", "d-b2-45", "d-b2-46", "d-b2-47", "d-b2-48", "d-b2-49",
+]);
 
 if (dialogues.length !== 176 || byId.size !== 176) {
   errors.push(`dialogue bank count or identity drifted: ${dialogues.length}/${byId.size} instead of 176/176`);
@@ -119,6 +131,12 @@ if (b1Dialogues.length !== 37
   || b1Dialogues.reduce((sum, dialogue) => sum + dialogue.lines.length, 0) !== 252
   || b1Dialogues.reduce((sum, dialogue) => sum + dialogue.questions.length, 0) !== 91) {
   errors.push("B1 dialogue scope drifted from 37 complete dialogues, 252 lines, and 91 questions");
+}
+const b2Dialogues = dialogues.filter((dialogue) => dialogue.level === "B2");
+if (b2Dialogues.length !== 49
+  || b2Dialogues.reduce((sum, dialogue) => sum + dialogue.lines.length, 0) !== 332
+  || b2Dialogues.reduce((sum, dialogue) => sum + dialogue.questions.length, 0) !== 116) {
+  errors.push("B2 dialogue scope drifted from 49 complete dialogues, 332 lines, and 116 questions");
 }
 
 const ids = new Set(review01.entries.map((entry) => entry.id));
@@ -401,6 +419,81 @@ for (const entry of review04.entries) {
   }
 }
 
+const ids05 = new Set(review05.entries.map((entry) => entry.id));
+const corrected05 = review05.entries.filter((entry) => entry.decision === "corrected");
+const confirmed05 = review05.entries.filter((entry) => entry.decision === "confirmed-current");
+if (review05.schema !== "wegb2-reviewed-dialogue-decision-batch-v1"
+  || review05.batch !== "PA-038-05"
+  || review05.reviewedAt !== "2026-11-04"
+  || review05.entries.length !== 49
+  || ids05.size !== 49
+  || [...expectedB2].some((id) => !ids05.has(id))
+  || corrected05.length !== 49
+  || confirmed05.length !== 0
+  || review05.entries.some((entry) => entry.level !== "B2" || !entry.rationale.trim())) {
+  errors.push("PA-038-05: unexpected fixture scope, counts, levels, or decision metadata");
+}
+if (!review05.scope.includes("all 332 German/Arabic line alignments")
+  || !review05.scope.includes("all 116 questions")
+  || !review05.scope.includes("triage only")
+  || !review05.scope.includes("not linguistic correction generators")
+  || !review05.scope.includes("not independent")
+  || !review05.scope.includes("legal")
+  || !review05.scope.includes("medical")
+  || !review05.scope.includes("audio")
+  || !review05.scope.includes("CEFR")
+  || !review05.scope.includes("Goethe")
+  || !review05.scope.includes("telc")
+  || !review05.scope.includes("exam sign-off")) {
+  errors.push("PA-038-05: fixture must preserve full-scope, triage, and external-sign-off claim boundaries");
+}
+
+for (const entry of review05.entries) {
+  const actual = byId.get(entry.id);
+  if (!actual) {
+    errors.push(`PA-038-05: missing dialogue ${entry.id}`);
+    continue;
+  }
+  if (actual.id !== entry.id
+    || actual.level !== "B2"
+    || entry.previous.id !== entry.id
+    || entry.current.id !== entry.id
+    || entry.previous.level !== "B2"
+    || entry.current.level !== "B2"
+    || JSON.stringify(actual) !== JSON.stringify(entry.current)) {
+    errors.push(`${entry.id}: B2 identity, level, or reviewed full-dialogue content drifted`);
+  }
+  const changed = JSON.stringify(entry.previous) !== JSON.stringify(entry.current);
+  if ((entry.decision === "corrected" && !changed)
+    || (entry.decision === "confirmed-current" && changed)) {
+    errors.push(`${entry.id}: B2 decision does not match its bounded transition`);
+  }
+  if (!entry.current.titleDe.trim() || !entry.current.titleAr.trim()
+    || !entry.current.cultural_theme?.trim()
+    || entry.current.cultural_note !== undefined
+    || entry.current.lines.some((line) => !line.who.trim() || !line.de.trim() || !line.ar.trim())) {
+    errors.push(`${entry.id}: reviewed B2 title, topic, note cleanup, speaker, or bilingual line drifted`);
+  }
+  const questionIds = entry.current.questions.map((question) => question.id);
+  if (new Set(questionIds).size !== questionIds.length
+    || entry.current.questions.some((question) => !question.promptDe.trim()
+      || !String(question.promptAr ?? "").trim()
+      || !String(question.explanationAr ?? "").trim()
+      || /اختر|أكمل|املأ/.test(question.promptAr ?? ""))) {
+    errors.push(`${entry.id}: reviewed B2 question identity, semantic prompt, or explanation drifted`);
+  }
+  for (const questionItem of entry.current.questions) {
+    if ((questionItem.type === "mc" || questionItem.type === "truefalse")
+      && (!Array.isArray(questionItem.options) || !questionItem.options.includes(String(questionItem.answer)))) {
+      errors.push(`${questionItem.id}: B2 answer is absent from its options`);
+    }
+  }
+  if ((entry.current.dictation ?? []).some((sentence) =>
+    !entry.current.lines.some((line) => line.de.includes(sentence)))) {
+    errors.push(`${entry.id}: B2 dictation segment is absent from the reviewed German lines`);
+  }
+}
+
 const dialogue = (id: string): Dialogue => {
   const value = byId.get(id);
   if (!value) throw new Error(`missing dialogue ${id}`);
@@ -519,8 +612,47 @@ if (dialogue("d-b1-17").titleDe !== "Einen Lesetag in der Schule planen"
   errors.push("B1 final set: title-content alignment, fictional bulletins, regular-practice inference, metadata cleanup, or semantic Arabic prompts regressed");
 }
 
+if (!dialogue("d-b2-11").lines[3].de.includes("Mieterberatung")
+  || !dialogue("d-b2-11").lines[7].de.includes("keine Rechtsberatung")
+  || !dialogue("d-b2-12").lines[1].de.includes("offiziellen Anerkennungsportal")
+  || !dialogue("d-b2-12").lines[5].de.includes("Antrag allein ist keine Erlaubnis")
+  || !dialogue("d-b2-13").lines[1].de.includes("keine Frist ableiten")
+  || !dialogue("d-b2-14").lines[5].de.includes("Rechtsbehelfsbelehrung")
+  || !dialogue("d-b2-15").lines[3].de.includes("Vertrag und Prüfung")) {
+  errors.push("B2 public-service set: housing, recognition, family-benefit, tax, or insurance claim boundaries regressed");
+}
+if (!dialogue("d-b2-17").lines[3].de.includes("Wirksamkeit")
+  || !dialogue("d-b2-18").lines[5].de.includes("Aufnahmebestätigung")
+  || !dialogue("d-b2-20").lines[1].de.startsWith("Nein.")
+  || !dialogue("d-b2-20").lines[7].de.includes("Rechtsbehelfsbelehrung")
+  || !dialogue("d-b2-21").lines[3].de.includes("nicht automatisch erlassen")
+  || !dialogue("d-b2-22").lines[1].de.includes("112")
+  || !dialogue("d-b2-22").lines[3].de.includes("nur aus, wenn die Voraussetzungen erfüllt sind")) {
+  errors.push("B2 employment, insurance, care, finance, or medical safety boundary regressed");
+}
+if (!dialogue("d-b2-23").lines[1].de.includes("Tarifvertrag")
+  || !dialogue("d-b2-24").lines[7].de.includes("nicht erfunden")
+  || !dialogue("d-b2-25").lines[1].de.includes("nicht, bevor ihre Sicherheit fachlich geklärt ist")
+  || !dialogue("d-b2-26").lines[1].de.includes("aktuelle Promotionsordnung")
+  || !dialogue("d-b2-27").lines[1].de.includes("Bundesland und Streitgegenstand")
+  || !dialogue("dlg-b2-mietvertrag").lines[4].de.includes("im Einzelfall geprüft")
+  || !dialogue("hoer-b2-01").lines[0].de.includes("konkreten Beruf")) {
+  errors.push("B2 variable-rule set: labour, exam, product-safety, doctoral, conciliation, tenancy, or employment scope regressed");
+}
+if (dialogue("d-b2-ht01").situationDe !== "Fiktive Radiomeldung für eine Hörübung"
+  || dialogue("d-b2-ht02").situationDe !== "Fiktive Anrufbeantworteransage für eine Hörübung"
+  || !dialogue("d-b2-ht01").lines[0].de.startsWith("Beispielmeldung für diese Hörübung")
+  || !dialogue("d-b2-ht02").lines[0].de.startsWith("Beispielansage für diese Hörübung")
+  || dialogue("d-b2-40").lines.length !== 7
+  || dialogue("d-b2-49").lines.length !== 7
+  || b2Dialogues.some((item) => item.cultural_note !== undefined)
+  || b2Dialogues.some((item) => item.questions.some((itemQuestion) => /اختر|أكمل|املأ/.test(itemQuestion.promptAr ?? "")))) {
+  errors.push("B2 final set: fictional bulletins, completed closing turns, metadata cleanup, or semantic Arabic prompts regressed");
+}
+
 const reviewedCurrent = JSON.stringify([
   ...review01.entries, ...review02.entries, ...review03.entries, ...review04.entries,
+  ...review05.entries,
 ].map((entry) => entry.current));
 for (const stale of [
   "German greetings typically include handshakes",
@@ -542,6 +674,21 @@ for (const stale of [
   "Vierzehn Tage Sperre bis zum nächsten Versuch",
   "Ansonsten kostet es 4,90 Euro im Monat.",
   "Sie bekommen die Karte und die PIN in etwa einer Woche per Post.",
+  "Kappungsgrenze von fünfzehn Prozent in drei Jahren",
+  "höchstens 16 Monate Praxis",
+  "Vier Monate gleichzeitig plus Bonus",
+  "Mit Beratung verlängert sich die Frist automatisch bis April nächsten Jahres.",
+  "Hausrat zahlt Trocknung und Hotel bis zur Wiederbewohnbarkeit",
+  "Rückzahlungsklausel bei Wechsel unter 24 Monaten",
+  "die Medikamente laufen nahtlos über die elektronische Verordnung",
+  "Dann rechne ich mit Grad zwei bis drei",
+  "Dringlichkeitscode C auf dem Schein",
+  "Das Arbeitszeitkonto muss monatlich ausgeglichen werden",
+  "Wiederholungen nur bei Nichtbestehen, maximal zweimal",
+  "Rückerstattung plus 10-Euro-Gutschein",
+  "Wir brauchen eine neue Erstprüferin mit gleicher Qualifikation, binnen sechs Wochen.",
+  "bei Verstoß droht ein Zwangsgeld bis 250.000 Euro",
+  "Einige Arbeitgeber fordern mindestens B2, in bestimmten Bereichen sogar C1.",
 ]) {
   if (reviewedCurrent.includes(stale)) {
     errors.push(`PA-038 stale, generic, unrelated, or unbounded content returned: ${stale}`);
@@ -555,8 +702,8 @@ if (errors.length) {
 }
 
 console.log(
-  "✅ Dialogue content review: all 127 bounded A0–B1 full-dialogue decisions match (127 corrected, 0 confirmed-current; 806 lines and 308 questions).",
+  "✅ Dialogue content review: all 176 bounded A0–B2 full-dialogue decisions match (176 corrected, 0 confirmed-current; 1138 lines and 424 questions).",
 );
 console.log(
-  "ℹ️ This gate protects reviewed A0–B1 titles, situations, speakers, German and Arabic lines, questions, options, answers, explanations, dictation, metadata, ambiguity, register, and claim boundaries; 49 B2 dialogues, independent linguistic/translation, cultural, legal, medical, pharmacy, emergency-services, audio, CEFR, Goethe/telc, and exam sign-off remain outside these batches.",
+  "ℹ️ This gate protects reviewed A0–B2 titles, situations, speakers, German and Arabic lines, questions, options, answers, explanations, dictation, metadata, ambiguity, register, and claim boundaries; independent linguistic/translation, cultural, legal, medical, pharmacy, emergency-services, audio, CEFR, Goethe/telc, and exam sign-off remain outside these batches.",
 );
