@@ -10580,10 +10580,10 @@ void 0;
   const d06 = batch[2];
   const additionalOrder = d06.questions.find((q:any) => q.id === "d-a0-06-q2");
   ok(d06.lines[2].ar === "مع الحليب أم بدونه؟" && d06.lines[3].ar === "مع الحليب من فضلك، وكأس من الماء." &&
-    d06.questions[0].promptAr === "ماذا يطلب الضيف؟" && additionalOrder.promptDe === "Was bestellt der Gast noch?" &&
-    additionalOrder.answer === "Milch und ein Glas Wasser" && additionalOrder.options.includes(additionalOrder.answer) &&
-    additionalOrder.explanationAr.includes(d06.lines[3].de),
-    "K216d d-a0-06 ترجمة الحليب واضحة، والسؤال ومفتاحه وشرحه يشملون الحليب وكأس الماء كليهما");
+    d06.questions[0].promptAr === "ماذا يطلب الضيف؟" && additionalOrder.promptDe === "Was bestellt der Gast zusätzlich zum Kaffee?" &&
+    additionalOrder.answer === "Ein Glas Wasser" && additionalOrder.options.includes(additionalOrder.answer) &&
+    additionalOrder.explanationAr.includes("Und ein Glas Wasser."),
+    "K216d d-a0-06 يفصل الحليب بوصفه جزءاً من القهوة عن كأس الماء بوصفه الطلب الإضافي");
 }
 /* ═══ K217 — دفعة A0 الثالثة d-a0-07..09 (R146). ═══ */
 {
@@ -10670,7 +10670,7 @@ void 0;
   const d13 = batch[0];
   ok(d13.lines[0].ar === "عفواً، أين محطة القطار؟" && d13.lines[1].ar === "سِرْ مستقيماً، ثم انعطف يميناً." &&
     d13.questions[0].promptAr === "كم يستغرق الوصول سيراً؟" && d13.questions[0].answer === "5 Minuten" &&
-    d13.questions[0].explanationAr === "خمس دقائق سيراً على الأقدام." &&
+    d13.questions[0].explanationAr.includes("fünf Minuten zu Fuß") &&
     d13.questions[1].promptDe === "Wie kommt der Tourist zum Bahnhof?" &&
     d13.questions[1].promptAr === "كيف يصل السائح إلى محطة القطار؟" &&
     d13.dictation[0] === "Nein, fünf Minuten zu Fuß." && d13.dictation[0] === d13.lines[3].de,
@@ -16445,6 +16445,52 @@ function collectR262(dir: string, out: string[] = []): string[] {
     reviewK435.scope.includes("triage only") && reviewK435.scope.includes("not correction generators") &&
     reviewK435.scope.includes("not independent linguistic, translation, legal, medical, environmental, security, CEFR, audio, or exam sign-off"),
     "K435c PA-037-05: الرقعة مقفلة بالنص الكامل وقابلة للإعادة والبوابة تحرس 157 قراراً مع إبقاء الحوارات والصوت والتوقيع المستقل خارج الادعاء");
+}
+
+/* ═══ K436 — PA-038-01: مراجعة حوارات A0 بندياً ═══ */
+{
+  const reviewK436 = JSON.parse(readFileSync("scripts/fixtures/dialogues-reviewed-01.json", "utf8")) as {
+    schema: string;
+    batch: string;
+    scope: string;
+    entries: { id: string; level: string; decision: "corrected" | "confirmed-current"; rationale: string; previous: Record<string, unknown>; current: Record<string, unknown> }[];
+  };
+  const dialoguesK436 = JSON.parse(readFileSync("content/dialogues.json", "utf8")) as Array<Record<string, unknown>>;
+  const byIdK436 = new Map(dialoguesK436.map((dialogue) => [String(dialogue.id), dialogue]));
+  const expectedK436 = new Set([
+    "d-a0-01", "d-a0-02", "d-a0-03", "d-a0-04", "d-a0-05", "d-a0-06", "d-a0-07", "d-a0-08",
+    "d-a0-09", "d-a0-10", "d-a0-11", "d-a0-12", "d-a0-13", "d-a0-ht01", "d-a0-ht02", "d-a0-ht03",
+  ]);
+  const correctedK436 = reviewK436.entries.filter((entry) => entry.decision === "corrected");
+  const confirmedK436 = reviewK436.entries.filter((entry) => entry.decision === "confirmed-current");
+  ok(reviewK436.schema === "wegb2-reviewed-dialogue-decision-batch-v1" && reviewK436.batch === "PA-038-01" &&
+    reviewK436.entries.length === 16 && new Set(reviewK436.entries.map((entry) => entry.id)).size === 16 &&
+    reviewK436.entries.every((entry) => expectedK436.has(entry.id) && entry.level === "A0" && entry.rationale.trim().length > 0) &&
+    correctedK436.length === 16 && confirmedK436.length === 0 &&
+    correctedK436.every((entry) => JSON.stringify(entry.previous) !== JSON.stringify(entry.current)),
+    "K436a PA-038-01: سجل القرار يغطي حوارات A0 الستة عشر كاملة بـ68 سطراً و35 سؤالاً و16 تصحيحاً مبرراً");
+  const currentK436 = JSON.stringify([...expectedK436].map((id) => byIdK436.get(id)));
+  ok(reviewK436.entries.every((entry) => JSON.stringify(byIdK436.get(entry.id)) === JSON.stringify(entry.current)) &&
+    String(byIdK436.get("d-a0-03")?.titleDe) === "Einen Namen buchstabieren" &&
+    currentK436.includes("Buchstabieren Sie den Namen bitte.") &&
+    currentK436.includes("Was bestellt der Gast zusätzlich zum Kaffee?") &&
+    currentK436.includes("Gut, ich untersuche Sie jetzt.") && currentK436.includes("ما رقم المسار؟") &&
+    !currentK436.includes("German greetings typically include handshakes") &&
+    !currentK436.includes("Weihnachten - Christmas traditions") &&
+    !currentK436.includes("Umwelt - Environmental awareness") &&
+    !currentK436.includes("الإجابة الصحيحة محدَّدة بالأزرار"),
+    "K436b PA-038-01: القرارات تطابق البنك وتحرس المحاذاة والغموض والسجل الطبي المحدود وملاءمة البيانات الوصفية");
+  const patchK436 = readFileSync("scripts/patches/apply_dialogue_review_pa038_01.py", "utf8");
+  const auditK436 = readFileSync("scripts/dialogue_content_review_audit.ts", "utf8");
+  const packageK436 = readFileSync("package.json", "utf8");
+  const ciK436 = readFileSync(".github/workflows/ci.yml", "utf8");
+  ok(patchK436.includes("current == reviewed") && patchK436.includes("current != previous") &&
+    patchK436.includes("unexpected current dialogue") &&
+    auditK436.includes("all 16 bounded A0 full-dialogue decisions match") && auditK436.includes("160 A1–B2 dialogues") &&
+    packageK436.includes('"audit:dialogue-content-review"') && ciK436.includes("npm run audit:dialogue-content-review") &&
+    reviewK436.scope.includes("triage only") && reviewK436.scope.includes("not correction generators") &&
+    reviewK436.scope.includes("not independent linguistic, translation, cultural, medical, CEFR, audio, or exam sign-off"),
+    "K436c PA-038-01: الرقعة مقفلة بالحوار الكامل وقابلة للإعادة والبوابة موصولة بـCI مع إبقاء 160 حواراً والصوت والتوقيع المستقل خارج الادعاء");
 }
 
 /* ═══ K334 — R309: القفل الفعلي الحقيقي — إغلاقُ اليوم عند حدود الوحدة ممنوعٌ لا منصوحٌ به فقط ═══ */

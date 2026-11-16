@@ -10436,7 +10436,7 @@
         "type": "mc",
         "promptDe": "Wer heißt Ali?",
         "promptAr": "من اسمه علي؟",
-        "explanationAr": "الإجابة الصحيحة محدَّدة بالأزرار — استمع جيداً واختر ما يطابق الحوار."
+        "explanationAr": "يقول B: «Ich heiße Ali.» — اسمه علي."
       },
       {
         "options": [
@@ -10450,7 +10450,7 @@
         "type": "mc",
         "promptDe": "Was sagt B zum Schluss?",
         "promptAr": "ماذا يقول B في الختام؟",
-        "explanationAr": "الإجابة الصحيحة محدَّدة بالأزرار — استمع جيداً واختر ما يطابق الحوار."
+        "explanationAr": "آخر ما يقوله B هو: «Auf Wiedersehen!» — إلى اللقاء."
       },
       {
         "id": "d-a0-01-q3",
@@ -10472,8 +10472,8 @@
       "Wie heißt du?",
       "Ich heiße Ali. Und du?"
     ],
-    "cultural_note": "German greetings typically include handshakes",
-    "cultural_theme": "Introduction"
+    "cultural_note": "Hallo is informal; Guten Tag is neutral or formal. Greeting customs depend on the situation.",
+    "cultural_theme": "Introductions and greetings"
   },
   {
     "id": "d-a0-02",
@@ -10483,7 +10483,7 @@
     "lines": [
       {
         "de": "Wie viel ist eins plus zwei?",
-        "ar": "كم واحد زائد اثنين؟",
+        "ar": "كم يساوي واحد زائد اثنين؟",
         "who": "A"
       },
       {
@@ -10509,8 +10509,8 @@
         "id": "d-a0-02-q1",
         "type": "mc",
         "promptDe": "Was ist eins plus zwei?",
-        "promptAr": "كم 1+2؟",
-        "explanationAr": "الإجابة الصحيحة محدَّدة بالأزرار — استمع جيداً واختر ما يطابق الحوار."
+        "promptAr": "كم يساوي 1 + 2؟",
+        "explanationAr": "يقول B: «Eins plus zwei ist drei.» — واحد زائد اثنين يساوي ثلاثة."
       },
       {
         "id": "d-a0-02-q2",
@@ -10544,13 +10544,13 @@
       "Eins plus zwei ist drei.",
       "Danke!"
     ],
-    "cultural_theme": "Greeting"
+    "cultural_theme": "Numbers"
   },
   {
     "id": "d-a0-03",
     "level": "A0",
-    "titleDe": "Das Alphabet buchstabieren",
-    "titleAr": "تهجئة",
+    "titleDe": "Einen Namen buchstabieren",
+    "titleAr": "تهجئة اسم",
     "lines": [
       {
         "de": "Buchstabiere bitte deinen Namen!",
@@ -10581,7 +10581,7 @@
         "type": "mc",
         "promptDe": "Wie heißt B?",
         "promptAr": "ما اسم B؟",
-        "explanationAr": "الإجابة الصحيحة محدَّدة بالأزرار — استمع جيداً واختر ما يطابق الحوار."
+        "explanationAr": "يقول B: «A – L – I. Ali.» — اسمه علي."
       },
       {
         "id": "d-a0-03-q2",
@@ -10617,8 +10617,8 @@
       "A – L – I. Ali.",
       "Danke!"
     ],
-    "cultural_theme": "Weihnachten - Christmas traditions",
-    "cultural_note": "Theme: Weihnachten - Christmas traditions"
+    "cultural_theme": "Names and spelling",
+    "cultural_note": "Names can be spelled letter by letter when they are unclear."
   },
   {
     "id": "dlg-a1-fahrkarte",
@@ -11165,7 +11165,7 @@
       {
         "type": "mc",
         "promptDe": "Woher kommt Layla?",
-        "promptAr": "من أين ليلى؟",
+        "promptAr": "من أين تأتي ليلى؟",
         "options": [
           "Aus Tunesien",
           "Aus Syrien",
@@ -11173,7 +11173,7 @@
           "Aus Ägypten"
         ],
         "answer": "Aus Syrien",
-        "explanationAr": "ليلى من سوريا.",
+        "explanationAr": "تقول ليلى: «Ich komme aus Syrien.» — إنها من سوريا.",
         "id": "d-a0-04-q1"
       },
       {
@@ -11187,7 +11187,7 @@
           "In Köln"
         ],
         "answer": "In Hamburg",
-        "explanationAr": "تسكن في هامبورغ.",
+        "explanationAr": "تقول ليلى: «Ich wohne in Hamburg.» — تسكن في هامبورغ.",
         "id": "d-a0-04-q2"
       }
     ],
@@ -11195,8 +11195,8 @@
       "Ich heiße Layla.",
       "Ich komme aus Syrien."
     ],
-    "cultural_theme": "Umwelt - Environmental awareness",
-    "cultural_note": "Theme: Umwelt - Environmental awareness"
+    "cultural_theme": "Introductions: origin and residence",
+    "cultural_note": "Names, origin, and residence are common topics in simple introductions."
   },
   {
     "id": "d-a0-05",
@@ -11217,8 +11217,8 @@
       },
       {
         "who": "Mitarbeiterin",
-        "de": "Buchstabieren Sie bitte!",
-        "ar": "اهجُ من فضلك!"
+        "de": "Buchstabieren Sie den Namen bitte.",
+        "ar": "تهجَّ الاسم من فضلك."
       },
       {
         "who": "Kunde",
@@ -11257,19 +11257,19 @@
         "promptDe": "Was sagt die Mitarbeiterin direkt nach dem Namen?",
         "promptAr": "ماذا تقول الموظفة مباشرةً بعد ذكر الاسم؟",
         "options": [
-          "Buchstabieren Sie bitte!",
+          "Buchstabieren Sie den Namen bitte.",
           "Danke. Und Ihre Telefonnummer?",
           "Haben Sie einen Termin?",
           "Brauchen Sie Hilfe?"
         ],
-        "answer": "Buchstabieren Sie bitte!",
-        "explanationAr": "تقول مباشرةً بعد ذكر الاسم: «Buchstabieren Sie bitte!» — «يرجى تهجئة الاسم»."
+        "answer": "Buchstabieren Sie den Namen bitte.",
+        "explanationAr": "تقول الموظفة مباشرةً: «Buchstabieren Sie den Namen bitte.» — تهجَّ الاسم من فضلك."
       }
     ],
     "dictation": [
-      "Buchstabieren Sie bitte!"
+      "Buchstabieren Sie den Namen bitte."
     ],
-    "cultural_theme": "Greeting"
+    "cultural_theme": "Personal data and spelling"
   },
   {
     "id": "d-a0-06",
@@ -11327,23 +11327,23 @@
       {
         "id": "d-a0-06-q2",
         "type": "mc",
-        "promptDe": "Was bestellt der Gast noch?",
-        "promptAr": "ماذا يطلب الضيف أيضاً؟",
+        "promptDe": "Was bestellt der Gast zusätzlich zum Kaffee?",
+        "promptAr": "ماذا يطلب الضيف إضافةً إلى القهوة؟",
         "options": [
-          "Milch und ein Glas Wasser",
+          "Ein Glas Wasser",
           "Einen Kuchen",
           "Einen Tee",
           "Ein Sandwich"
         ],
-        "answer": "Milch und ein Glas Wasser",
-        "explanationAr": "«Mit Milch, bitte. Und ein Glas Wasser.» — يطلب قهوته بالحليب وكأساً من الماء."
+        "answer": "Ein Glas Wasser",
+        "explanationAr": "يقول الضيف: «Und ein Glas Wasser.» — يطلب كأساً من الماء إضافةً إلى القهوة."
       }
     ],
     "dictation": [
       "Einen Kaffee, bitte!",
       "Mit Milch, bitte."
     ],
-    "cultural_theme": "Introduction"
+    "cultural_theme": "Ordering at a café"
   },
   {
     "id": "d-a0-07",
@@ -11390,7 +11390,7 @@
           "18"
         ],
         "answer": "22",
-        "explanationAr": "عمر سارة 22 سنة.",
+        "explanationAr": "تقول سارة: «Ich bin 22 Jahre alt.» — عمرها 22 سنة.",
         "id": "d-a0-07-q1"
       },
       {
@@ -11404,14 +11404,14 @@
           "In Köln"
         ],
         "answer": "In München",
-        "explanationAr": "يسكن في ميونخ.",
+        "explanationAr": "يقول تيم: «Ich wohne in München.» — يسكن في ميونخ.",
         "id": "d-a0-07-q2"
       }
     ],
     "dictation": [
       "Ich bin 22 Jahre alt."
     ],
-    "cultural_theme": "Introduction"
+    "cultural_theme": "Personal information: age and residence"
   },
   {
     "id": "d-a0-08",
@@ -11475,8 +11475,8 @@
       "Auf Wiedersehen!",
       "Schönen Tag noch!"
     ],
-    "cultural_theme": "Weihnachten - Christmas traditions",
-    "cultural_note": "Theme: Weihnachten - Christmas traditions"
+    "cultural_theme": "Farewells",
+    "cultural_note": "Tschüss is informal; Auf Wiedersehen is neutral or formal."
   },
   {
     "id": "hoer-a1-01",
@@ -11789,12 +11789,12 @@
       {
         "who": "Verkäuferin",
         "de": "Das macht 2,50 Euro.",
-        "ar": "هذا يساوي 2.50 يورو."
+        "ar": "ثمنه 2.50 يورو."
       },
       {
         "who": "Kunde",
         "de": "Und zwei Brötchen, bitte.",
-        "ar": "ورغيفي خبز صغير أيضاً من فضلك."
+        "ar": "وقطعتا خبز صغيرتان أيضاً، من فضلك."
       },
       {
         "who": "Verkäuferin",
@@ -11840,7 +11840,7 @@
     "dictation": [
       "Das macht 2,50 Euro."
     ],
-    "cultural_theme": "Social contacts"
+    "cultural_theme": "Prices and payment"
   },
   {
     "id": "d-a0-10",
@@ -11882,7 +11882,7 @@
           "Viertel vor drei"
         ],
         "answer": "Viertel nach drei",
-        "explanationAr": "الثالثة والربع.",
+        "explanationAr": "يقول B: «Um Viertel nach drei.» — تأتي الحافلة في الثالثة والربع.",
         "id": "d-a0-10-q1"
       },
       {
@@ -11903,13 +11903,13 @@
     "dictation": [
       "Es ist halb drei."
     ],
-    "cultural_theme": "Introduction"
+    "cultural_theme": "Time and public transport"
   },
   {
     "id": "d-a0-11",
     "level": "A0",
-    "titleDe": "Beim Arzt — einfacher Termin",
-    "titleAr": "عند الطبيب — موعد بسيط",
+    "titleDe": "Beim Arzt — einfache Beschwerden",
+    "titleAr": "عند الطبيب — أعراض بسيطة",
     "ort": "Arztpraxis",
     "lines": [
       {
@@ -11934,8 +11934,8 @@
       },
       {
         "who": "Arzt",
-        "de": "Gut, trinken Sie viel Wasser und ruhen Sie sich aus.",
-        "ar": "جيد، اشرب ماء كثيراً واسترح."
+        "de": "Gut, ich untersuche Sie jetzt.",
+        "ar": "حسناً، سأفحصك الآن."
       }
     ],
     "questions": [
@@ -11961,7 +11961,7 @@
         "options": [
           "Ja, er hat Husten",
           "Nein, er hat keinen Husten",
-          "Die Ärztin weiß es nicht",
+          "Der Arzt weiß es nicht",
           "Nur am Morgen"
         ],
         "answer": "Nein, er hat keinen Husten",
@@ -11971,7 +11971,7 @@
     "dictation": [
       "Ich habe Kopfschmerzen und Fieber."
     ],
-    "cultural_theme": "Daily routines"
+    "cultural_theme": "Health: describing symptoms"
   },
   {
     "id": "d-a0-12",
@@ -12034,8 +12034,7 @@
     "dictation": [
       "Ja, ich habe einen Bruder und zwei Schwestern."
     ],
-    "cultural_theme": "Umwelt - Environmental awareness",
-    "cultural_note": "Theme: Umwelt - Environmental awareness"
+    "cultural_theme": "Family"
   },
   {
     "id": "d-a0-13",
@@ -12077,7 +12076,7 @@
           "20 Minuten"
         ],
         "answer": "5 Minuten",
-        "explanationAr": "خمس دقائق سيراً على الأقدام.",
+        "explanationAr": "يقول المار: «fünf Minuten zu Fuß.» — يستغرق الوصول خمس دقائق سيراً.",
         "id": "d-a0-13-q1"
       },
       {
@@ -12098,7 +12097,7 @@
     "dictation": [
       "Nein, fünf Minuten zu Fuß."
     ],
-    "cultural_theme": "Greeting"
+    "cultural_theme": "Asking for directions"
   },
   {
     "id": "d-a0-ht01",
@@ -12109,7 +12108,7 @@
     "lines": [
       {
         "de": "Achtung, Gleis 3! Der Regionalzug nach Bonn fährt heute zehn Minuten später.",
-        "ar": "انتباه، الرصيف ٣! القطار الإقليمي إلى بون يتأخر اليوم عشر دقائق.",
+        "ar": "انتباه، المسار رقم ٣! القطار الإقليمي إلى بون يتأخر اليوم عشر دقائق.",
         "who": "Ansage"
       },
       {
@@ -12138,20 +12137,20 @@
         "id": "d-a0-ht01-q2",
         "type": "mc",
         "promptDe": "Welche Nummer hat das Gleis?",
-        "promptAr": "ما رقم الرصيف؟",
+        "promptAr": "ما رقم المسار؟",
         "options": [
           "Gleis 1",
           "Gleis 2",
           "Gleis 3"
         ],
         "answer": "Gleis 3",
-        "explanationAr": "«Achtung, Gleis 3!» — الإعلان عن الرصيف رقم ثلاثة."
+        "explanationAr": "«Achtung, Gleis 3!» — الإعلان عن المسار رقم ثلاثة."
       }
     ],
     "dictation": [
       "Achtung, Gleis 3!"
     ],
-    "cultural_theme": "Daily routines"
+    "cultural_theme": "Train announcements"
   },
   {
     "id": "d-a1-ht01",
@@ -12481,8 +12480,7 @@
     "dictation": [
       "Heute sind die Bananen im Angebot: ein Kilo für einen Euro."
     ],
-    "cultural_theme": "Bierbrauerei - German beer culture",
-    "cultural_note": "Theme: Bierbrauerei - German beer culture"
+    "cultural_theme": "Shopping and prices"
   },
   {
     "id": "d-a0-ht03",
@@ -12493,7 +12491,7 @@
     "lines": [
       {
         "de": "Guten Tag! Was möchten Sie?",
-        "ar": "نهاركم سعيد، ماذا تريدون؟",
+        "ar": "مرحباً! ماذا ترغب؟",
         "who": "Kellner"
       },
       {
@@ -12545,7 +12543,7 @@
     "dictation": [
       "Was möchten Sie?"
     ],
-    "cultural_theme": "Daily routines"
+    "cultural_theme": "Ordering at a café"
   },
   {
     "id": "d-a1-ht03",
