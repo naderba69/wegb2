@@ -1,6 +1,6 @@
 import { lokalesDatumPlus } from "./datum";
 import type { Progress } from "./types";
-import { KOMPETENZEN } from "./kompetenz";
+import { evidenceTypeOf, isMeasuredEvidence, KOMPETENZEN } from "./kompetenz";
 import type { Kompetenz } from "./types";
 
 /**
@@ -9,7 +9,7 @@ import type { Kompetenz } from "./types";
  * letzten 7 Tage, sobald genug datierte Einträge existieren — sonst ehrlich
  * das Verlaufsfenster der letzten 120 Versuche (kein Datum wird erfunden).
  */
-export interface SkillZeile { hand: Kompetenz; versuche: number; anteil: number; quote: number | null }
+export interface SkillZeile { hand: Kompetenz; versuche: number; gemessen: number; selbst: number; anteil: number; quote: number | null }
 export interface SkillBilanz { fenster: "7-tage" | "verlauf"; eintraege: number; zeilen: SkillZeile[]; warnung: string | null }
 
 export function skillBilanz(p: Progress, jetzt = new Date()): SkillBilanz {
@@ -20,11 +20,14 @@ export function skillBilanz(p: Progress, jetzt = new Date()): SkillBilanz {
   const basis = fenster === "7-tage" ? datiert : log.slice(-120);
   const zeilen: SkillZeile[] = KOMPETENZEN.map((hand) => {
     const teil = basis.filter((e) => e.h === hand);
+    const gemessen = teil.filter(isMeasuredEvidence);
     return {
       hand,
       versuche: teil.length,
+      gemessen: gemessen.length,
+      selbst: teil.filter((e) => evidenceTypeOf(e) === "self_report").length,
       anteil: basis.length ? Math.round((teil.length / basis.length) * 1000) / 1000 : 0,
-      quote: teil.length ? Math.round((teil.filter((e) => e.ok).length / teil.length) * 100) / 100 : null,
+      quote: gemessen.length ? Math.round((gemessen.filter((e) => e.ok).length / gemessen.length) * 100) / 100 : null,
     };
   });
   let warnung: string | null = null;

@@ -1,0 +1,1183 @@
+{
+  "schema": "wegb2-reviewed-writing-decision-batch-v1",
+  "batch": "PA-035-02",
+  "reviewedAt": "2026-11-04",
+  "scope": "Item-by-item internal review of all 25 A0/A1 writing cards across task, Arabic alignment, criteria, model, notes, and internal word target: 17 bounded corrections and 8 explicit confirmed-current decisions; counts and searches were triage only, not correction generators, and this is not independent linguistic, exam, or CEFR sign-off.",
+  "entries": [
+    {
+      "id": "w-a0-01",
+      "level": "A0",
+      "decision": "corrected",
+      "previous": {
+        "id": "w-a0-01",
+        "level": "A0",
+        "format": "frei",
+        "titleDe": "Das Alphabet schreiben",
+        "titleAr": "كتابة الأبجدية الألمانية",
+        "taskDe": "Schreibe die 26 Buchstaben des Alphabets, die drei Umlaute (ä, ö, ü) und ß. Finde zu jedem Zeichen ein Beispielwort: Bei A–Z und ä/ö/ü beginnt es damit; das Beispiel zu ß enthält ß, zum Beispiel Straße.",
+        "taskAr": "اكتب حروف الأبجدية الألمانية الستة والعشرين، والأوملاوت الثلاثة (ä, ö, ü)، وß. أعطِ لكل علامة كلمة مثال: تبدأ الكلمة بالحرف المقصود، أما مثال ß فيحتوي عليه مثل Straße.",
+        "criteria": [
+          "جميع الحروف الـ26 موجودة",
+          "حروف الأوملاوت ä/ö/ü مكتوبة",
+          "ß مكتوب",
+          "كلمة مثال صحيحة تبدأ بالحرف المقصود؛ أما ß فيكفي أن يرد داخل الكلمة مثل Straße"
+        ],
+        "sample": "A – Apfel, B – Buch, C – Computer, D – Deutschland, E – Esel, F – Fisch, G – Geld, H – Haus, I – Insel, J – Jahr, K – Kaffee, L – Land, M – Mann, N – Name, O – Oma, P – Park, Q – Quelle, R – Radio, S – Schule, T – Tag, U – Uhr, V – Vater, W – Wasser, X – Xylofon, Y – Yoga, Z – Zug · ä – Ärzte, ö – Öl, ü – Übung, ß – Straße.",
+        "noteAr": [
+          "في A0 نكتفي بكتابة الحروف وكلمة واحدة: لا جُمَل مركَّبة ولا تصريف.",
+          "ß يُنطق صوت /s/ مهموساً؛ و«s الحادّة» اسمٌ آخر للحرف، ولا يعني تضعيف الصوت.",
+          "إذا تعذّر إدخال ä/ö/ü/ß، أو سمحت المهمة، فقد تُقبل ae/oe/ue/ss. ورقة حلول Goethe-Test PRO تقبل هذه البدائل في نوع إدخال محدد؛ لا نعمّم ذلك على كل اختبار، واتبع تعليماته."
+        ],
+        "zielWort": 20
+      },
+      "current": {
+        "id": "w-a0-01",
+        "level": "A0",
+        "format": "frei",
+        "titleDe": "Das Alphabet schreiben",
+        "titleAr": "كتابة الأبجدية الألمانية",
+        "taskDe": "Schreibe die 26 Buchstaben des Alphabets, die drei Umlaute (ä, ö, ü) und ß. Finde zu jedem Zeichen ein Beispielwort: Bei A–Z und ä/ö/ü beginnt es damit; das Beispiel zu ß enthält ß, zum Beispiel Straße.",
+        "taskAr": "اكتب حروف الأبجدية الألمانية الستة والعشرين، والأوملاوت الثلاثة (ä, ö, ü)، وß. أعطِ لكل علامة كلمة مثال: تبدأ الكلمة بالحرف المقصود، أما مثال ß فيحتوي عليه مثل Straße.",
+        "criteria": [
+          "جميع الحروف الـ26 موجودة",
+          "حروف الأوملاوت ä/ö/ü مكتوبة",
+          "ß مكتوب",
+          "كلمة مثال صحيحة تبدأ بالحرف المقصود؛ أما ß فيكفي أن يرد داخل الكلمة مثل Straße"
+        ],
+        "sample": "A – Apfel, B – Buch, C – Computer, D – Deutschland, E – Esel, F – Fisch, G – Geld, H – Haus, I – Insel, J – Jahr, K – Kaffee, L – Land, M – Mann, N – Name, O – Oma, P – Park, Q – Quelle, R – Radio, S – Schule, T – Tag, U – Uhr, V – Vater, W – Wasser, X – Xylofon, Y – Yoga, Z – Zug · ä – Ärzte, ö – Öl, ü – Übung, ß – Straße.",
+        "noteAr": [
+          "في A0 نكتفي بكتابة الحروف وكلمة واحدة: لا جُمَل مركَّبة ولا تصريف.",
+          "ß يُنطق صوت /s/ مهموساً؛ و«s الحادّة» اسمٌ آخر للحرف، ولا يعني تضعيف الصوت.",
+          "إذا تعذّر إدخال ä/ö/ü/ß، أو سمحت المهمة، فقد تُقبل ae/oe/ue/ss. ورقة حلول Goethe-Test PRO تقبل هذه البدائل في نوع إدخال محدد؛ لا نعمّم ذلك على كل اختبار، واتبع تعليماته."
+        ],
+        "zielWort": 60
+      }
+    },
+    {
+      "id": "w-a0-02",
+      "level": "A0",
+      "decision": "corrected",
+      "previous": {
+        "id": "w-a0-02",
+        "level": "A0",
+        "format": "frei",
+        "titleDe": "Hallo! Ich heiße …",
+        "titleAr": "مرحباً! اسمي …",
+        "taskDe": "Schreibe 3 einfache Sätze über dich: Name, Herkunft, Sprache.",
+        "taskAr": "اكتب 3 جمل بسيطة عن نفسك: الاسم، البلد، اللغة. (الهدف: 23 كلمة تقريباً).",
+        "criteria": [
+          "جملة اسمك (ich heiße …)",
+          "جملة بلدك (ich komme aus …)",
+          "جملة لغتك (ich spreche …)"
+        ],
+        "sample": "Hallo! Ich heiße Sara. Ich komme aus Tunesien. Ich spreche Arabisch und ein bisschen Deutsch.",
+        "noteAr": [
+          "في A0 الجمل بسيطة جداً: فاعل + فعل + مكمّل، بلا روابط.",
+          "«aus Tunesien» بلا أداة.",
+          "«ein bisschen Deutsch» = قليل من الألمانية — عبارة تحية متوقعة في اليوم الأول."
+        ],
+        "zielWort": 23
+      },
+      "current": {
+        "id": "w-a0-02",
+        "level": "A0",
+        "format": "frei",
+        "titleDe": "Hallo! Ich heiße …",
+        "titleAr": "مرحباً! اسمي …",
+        "taskDe": "Schreibe 3 einfache Sätze über dich: Name, Herkunft, Sprache.",
+        "taskAr": "اكتب 3 جمل بسيطة عن نفسك: الاسم، البلد، اللغة. (الهدف: 23 كلمة تقريباً).",
+        "criteria": [
+          "جملة اسمك (ich heiße …)",
+          "جملة بلدك (ich komme aus …)",
+          "جملة لغتك (ich spreche …)"
+        ],
+        "sample": "Ich heiße Sara Ben Ali. Ich komme aus Tunis in Tunesien. Ich spreche Arabisch und lerne jetzt ein bisschen Deutsch.",
+        "noteAr": [
+          "في A0 استخدم جملاً قصيرة بأفعال واضحة، وتجنب الجمل الثانوية؛ يمكن استعمال und لربط معلومتين بسيطتين.",
+          "«aus Tunesien» بلا أداة.",
+          "«ein bisschen Deutsch» = قليل من الألمانية — عبارة تحية متوقعة في اليوم الأول."
+        ],
+        "zielWort": 23
+      }
+    },
+    {
+      "id": "w-a1-01",
+      "level": "A1",
+      "decision": "confirmed-current",
+      "previous": {
+        "id": "w-a1-01",
+        "level": "A1",
+        "format": "frei",
+        "titleDe": "Stell dich vor!",
+        "titleAr": "قدّم نفسك",
+        "taskDe": "Schreibe 4–5 Sätze über dich: Name, Alter, Land, Stadt, Beruf/Schule, Sprachen.",
+        "taskAr": "اكتب 4–5 جمل عن نفسك: الاسم، العمر، البلد، المدينة، المهنة/الدراسة، اللغات. (الهدف: 30 كلمة تقريباً).",
+        "criteria": [
+          "الفعل في الموضع الثاني (ich heiße, ich komme, ich wohne)",
+          "sein و haben مصرّفَين بشكل صحيح",
+          "أصل البلد بدون ein: aus Syrien",
+          "جملة ختامية عن تعلّمك الألمانية"
+        ],
+        "sample": "Guten Tag! Ich heiße Youssef und bin 27 Jahre alt. Ich komme aus Tunesien und wohne in Tunis. Ich bin Ingenieur, habe eine Stelle und spreche Arabisch. Jetzt lerne ich Deutsch.",
+        "noteAr": [
+          "خمس جمل واضحة: تحية، اسم وعمر، أصل وسكن، مهنة ولغة، ثم جملة عن تعلّم الألمانية",
+          "«aus Tunesien» بلا أداة: قاعدةُ الأصل معلَّمةٌ بالمثال لا بالوعظ",
+          "الجملة الختامية قصيرة ومناسبة لـA1: Jetzt lerne ich Deutsch."
+        ],
+        "zielWort": 30
+      },
+      "current": {
+        "id": "w-a1-01",
+        "level": "A1",
+        "format": "frei",
+        "titleDe": "Stell dich vor!",
+        "titleAr": "قدّم نفسك",
+        "taskDe": "Schreibe 4–5 Sätze über dich: Name, Alter, Land, Stadt, Beruf/Schule, Sprachen.",
+        "taskAr": "اكتب 4–5 جمل عن نفسك: الاسم، العمر، البلد، المدينة، المهنة/الدراسة، اللغات. (الهدف: 30 كلمة تقريباً).",
+        "criteria": [
+          "الفعل في الموضع الثاني (ich heiße, ich komme, ich wohne)",
+          "sein و haben مصرّفَين بشكل صحيح",
+          "أصل البلد بدون ein: aus Syrien",
+          "جملة ختامية عن تعلّمك الألمانية"
+        ],
+        "sample": "Guten Tag! Ich heiße Youssef und bin 27 Jahre alt. Ich komme aus Tunesien und wohne in Tunis. Ich bin Ingenieur, habe eine Stelle und spreche Arabisch. Jetzt lerne ich Deutsch.",
+        "noteAr": [
+          "خمس جمل واضحة: تحية، اسم وعمر، أصل وسكن، مهنة ولغة، ثم جملة عن تعلّم الألمانية",
+          "«aus Tunesien» بلا أداة: قاعدةُ الأصل معلَّمةٌ بالمثال لا بالوعظ",
+          "الجملة الختامية قصيرة ومناسبة لـA1: Jetzt lerne ich Deutsch."
+        ],
+        "zielWort": 30
+      }
+    },
+    {
+      "id": "w-a1-02",
+      "level": "A1",
+      "decision": "corrected",
+      "previous": {
+        "id": "w-a1-02",
+        "level": "A1",
+        "format": "frei",
+        "titleDe": "Formular ausfüllen",
+        "titleAr": "املأ استمارة",
+        "taskDe": "Schreibe deine Personalien als Formular: Vorname, Familienname, Alter, Geburtsdatum, Land, Adresse, Telefonnummer.",
+        "taskAr": "اكتب بياناتك الشخصية كاستمارة: الاسم، اسم العائلة، العمر، تاريخ الميلاد، البلد، العنوان، الهاتف. (الهدف: 30 كلمة تقريباً).",
+        "criteria": [
+          "الأرقام والتاريخ مكتوبة بصيغة نموذج واضحة",
+          "تاريخ الميلاد بصيغة: der 3. Mai 1998",
+          "البيانات متناسقة مع تقديرك السابق"
+        ],
+        "sample": "Vorname: Youssef · Familienname: Ben Ali · Alter: 27 Jahre · Geburtsdatum: der 3. Mai 1998 · Land: Tunesien · Straße: Rue de la Liberté 12 · Telefon: 0 71 234 567",
+        "noteAr": [
+          "التاريخ بصيغة «der 3. Mai 1998» حرفياً كما تطلب المعايير — صيغةٌ يخطئ فيها حتى B1",
+          "الأرقام مفصولة (0 71 234 567) كما في النماذج الرسمية لا متلاصقة",
+          "كل حقلٍ عنوانٌ ونقطةٌ وقيمة — لا جُمل: التنسيقُ نصفُ المهمة"
+        ],
+        "zielWort": 30
+      },
+      "current": {
+        "id": "w-a1-02",
+        "level": "A1",
+        "format": "frei",
+        "titleDe": "Formular ausfüllen",
+        "titleAr": "املأ استمارة",
+        "taskDe": "Schreibe deine Personalien als Formular: Vorname, Familienname, Alter, Geburtsdatum, Land, Adresse, Telefonnummer.",
+        "taskAr": "اكتب بياناتك الشخصية كاستمارة: الاسم، اسم العائلة، العمر، تاريخ الميلاد، البلد، العنوان، الهاتف. (الهدف: 30 كلمة تقريباً).",
+        "criteria": [
+          "الأرقام والتاريخ مكتوبة بصيغة نموذج واضحة",
+          "تاريخ الميلاد بصيغة نموذج، مثل: 03.05.1998",
+          "البيانات متناسقة داخل الاستمارة"
+        ],
+        "sample": "Vorname: Youssef · Familienname: Ben Ali · Alter: 27 Jahre · Geburtsdatum: 03.05.1998 · Land: Tunesien · Straße: Rue de la Liberté 12 · Telefon: 0 71 234 567",
+        "noteAr": [
+          "في حقل تاريخ الميلاد اكتب اليوم والشهر والسنة بصيغة نموذج واضحة، مثل 03.05.1998، من دون أداة أو جملة كاملة.",
+          "يمكن فصل مجموعات رقم الهاتف بمسافات لتسهيل قراءته.",
+          "كل حقل عنوان وقيمة؛ لا حاجة إلى تحويل الاستمارة إلى جمل."
+        ],
+        "zielWort": 30
+      }
+    },
+    {
+      "id": "w-a1-03",
+      "level": "A1",
+      "decision": "corrected",
+      "previous": {
+        "id": "w-a1-03",
+        "level": "A1",
+        "format": "frei",
+        "titleDe": "Meine Familie",
+        "titleAr": "عائلتي",
+        "taskDe": "Schreibe 5 Sätze über deine Familie (Vater, Mutter, Geschwister) mit Possessivartikeln.",
+        "taskAr": "اكتب 5 جمل عن عائلتك (أب، أم، إخوة) مع أدلة الملكية. (الهدف: 30 كلمة تقريباً).",
+        "criteria": [
+          "mein/dein/sein… مع الجنس الصحيح",
+          "الفعل ثانياً: Mein Vater heißt…",
+          "جملة عن سكنهم أو عملهم"
+        ],
+        "sample": "Mein Vater heißt Ahmed und ist Lehrer. Meine Mutter heißt Salma und kocht sehr gut. Ich habe einen Bruder und zwei Schwestern. Mein Bruder wohnt in Sfax. Am Freitag essen wir zusammen.",
+        "noteAr": [
+          "ملكيةٌ صحيحة الجنس مع كل موصوف: Mein Vater / Meine Mutter — العمود الذي تُبنى عليه الألفية الثانية",
+          "الفعل ثانياً حتى في جملة UND: heißt…und ist Lehrer — صيغةٌ واحدة وأمانٌ كامل",
+          "خاتمةُ الجمعة تُدفّئ القائمة الجافة — معيارُ «جملة عن سكن/عمل» مُنجَزٌ ومربوطٌ بعاطفة"
+        ],
+        "zielWort": 30
+      },
+      "current": {
+        "id": "w-a1-03",
+        "level": "A1",
+        "format": "frei",
+        "titleDe": "Meine Familie",
+        "titleAr": "عائلتي",
+        "taskDe": "Schreibe 5 Sätze über deine Familie (Vater, Mutter, Geschwister) mit Possessivartikeln.",
+        "taskAr": "اكتب 5 جمل عن عائلتك (أب، أم، إخوة) مع أدوات الملكية. (الهدف: 30 كلمة تقريباً).",
+        "criteria": [
+          "mein/dein/sein… مع الجنس الصحيح",
+          "الفعل ثانياً: Mein Vater heißt…",
+          "جملة عن سكنهم أو عملهم"
+        ],
+        "sample": "Mein Vater heißt Ahmed und ist Lehrer. Meine Mutter heißt Salma und kocht sehr gut. Ich habe einen Bruder und zwei Schwestern. Mein Bruder wohnt in Sfax. Am Freitag essen wir zusammen.",
+        "noteAr": [
+          "طابق أداة الملكية مع جنس الاسم: mein Vater / meine Mutter.",
+          "ضع الفعل المصرف في الموضع الثاني، ويمكن ربط خبرين بـund: Mein Vater heißt Ahmed und ist Lehrer.",
+          "اختم بمعلومة بسيطة عن السكن أو العمل أو نشاط عائلي."
+        ],
+        "zielWort": 30
+      }
+    },
+    {
+      "id": "w-a1-04",
+      "level": "A1",
+      "decision": "corrected",
+      "previous": {
+        "id": "w-a1-04",
+        "level": "A1",
+        "format": "frei",
+        "titleDe": "Mein Tagesablauf",
+        "titleAr": "جدولي اليومي",
+        "taskDe": "Schreibe 6 Sätze über deinen Tag: Aufstehen, Arbeit, Mittag, Abend, Schlafen. Nutze trennbare Verben!",
+        "taskAr": "اكتب 6 جمل عن يومك: الاستيقاظ، العمل، الظهيرة، المساء، النوم. استعمل الأفعال المنفصلة! (الهدف: 30 كلمة تقريباً).",
+        "criteria": [
+          "3 أفعال منفصلة على الأقل (aufstehen, einkaufen, anrufen…)",
+          "ظروف الزمن: morgens, dann, abends",
+          "الفعل ثانياً والبادئة للنهاية"
+        ],
+        "sample": "Ich stehe um halb sieben auf. Dann ziehe ich mich schnell an. Um acht fahre ich zur Arbeit. Am Mittag esse ich mit Kollegen. Abends kaufe ich im Supermarkt ein. Um elf Uhr gehe ich schlafen.",
+        "noteAr": [
+          "ثلاثة أفعالٍ منفصلة في مكانها الصحيح: stehe…auf / ziehe…an / kaufe…ein — البادئة تُرمى للمؤخرة كما تُلْمَز",
+          "مؤشرات الزمن تُفتَتَح بها الجمل (Dann / Am Mittag / Abends) والقلبُ بعدها مباشرة — inversionٌ مُبَكِّرٌ مضمون",
+          "ست جمل لا أكثر: الوفاءُ بالعدد فضيلةُ A1 الأولى"
+        ],
+        "zielWort": 30
+      },
+      "current": {
+        "id": "w-a1-04",
+        "level": "A1",
+        "format": "frei",
+        "titleDe": "Mein Tagesablauf",
+        "titleAr": "جدولي اليومي",
+        "taskDe": "Schreibe 6 Sätze über deinen Tag: Aufstehen, Arbeit, Mittag, Abend, Schlafen. Nutze trennbare Verben!",
+        "taskAr": "اكتب 6 جمل عن يومك: الاستيقاظ، العمل، الظهيرة، المساء، النوم. استعمل الأفعال المنفصلة! (الهدف: 30 كلمة تقريباً).",
+        "criteria": [
+          "3 أفعال منفصلة على الأقل (aufstehen, einkaufen, anrufen…)",
+          "ظروف الزمن: morgens, dann, abends",
+          "الفعل ثانياً والبادئة للنهاية"
+        ],
+        "sample": "Ich stehe um halb sieben auf. Dann ziehe ich mich schnell an. Um acht fahre ich zur Arbeit. Am Mittag esse ich mit Kollegen. Abends kaufe ich im Supermarkt ein. Um elf Uhr gehe ich schlafen.",
+        "noteAr": [
+          "يعرض النموذج ثلاثة أفعال منفصلة صحيحة: stehe … auf / ziehe … an / kaufe … ein.",
+          "عند بدء الجملة بظرف زمن مثل Dann أو Am Mittag أو Abends يأتي الفعل المصرف بعده مباشرة.",
+          "يتكون النموذج من ست جمل كما تطلب المهمة."
+        ],
+        "zielWort": 30
+      }
+    },
+    {
+      "id": "w-a1-05",
+      "level": "A1",
+      "decision": "confirmed-current",
+      "previous": {
+        "id": "w-a1-05",
+        "level": "A1",
+        "format": "frei",
+        "titleDe": "Eine kurze Nachricht",
+        "titleAr": "رسالة قصيرة",
+        "taskDe": "Schreibe eine kurze Nachricht an einen Freund: Termin am Freitag, Uhrzeit, Ort.",
+        "taskAr": "اكتب رسالة قصيرة لصديق: موعد يوم الجمعة، الساعة، المكان. (الهدف: 30 كلمة تقريباً).",
+        "criteria": [
+          "تحية وختام مناسبان (Hallo … Tschüss)",
+          "الوقت والمكان بدقة",
+          "جملة دعوة واحدة"
+        ],
+        "sample": "Hallo Ahmed! Möchtest du dich am Freitag um achtzehn Uhr mit mir im Café Zentrum treffen? Ich möchte dir dort ein Buch geben. Bitte schreib mir bald. Tschüss, Sami",
+        "noteAr": [
+          "رسالة قصيرة من أربع جمل: تحية، دعوة صريحة، غرض اللقاء، وطلب جواب؛ ثم عبارة ختام مناسبة",
+          "«um achtzehn Uhr» منطوقةً بالألفاظ لا بالأرقام — كما في كتاب A1: الالتزامُ بالسياق مقدَّمٌ على الأناقة",
+          "جملة الدعوة صريحة (Möchtest du…?) لا تلويحاً — في A1 تُكافأ الصراحة"
+        ],
+        "zielWort": 30
+      },
+      "current": {
+        "id": "w-a1-05",
+        "level": "A1",
+        "format": "frei",
+        "titleDe": "Eine kurze Nachricht",
+        "titleAr": "رسالة قصيرة",
+        "taskDe": "Schreibe eine kurze Nachricht an einen Freund: Termin am Freitag, Uhrzeit, Ort.",
+        "taskAr": "اكتب رسالة قصيرة لصديق: موعد يوم الجمعة، الساعة، المكان. (الهدف: 30 كلمة تقريباً).",
+        "criteria": [
+          "تحية وختام مناسبان (Hallo … Tschüss)",
+          "الوقت والمكان بدقة",
+          "جملة دعوة واحدة"
+        ],
+        "sample": "Hallo Ahmed! Möchtest du dich am Freitag um achtzehn Uhr mit mir im Café Zentrum treffen? Ich möchte dir dort ein Buch geben. Bitte schreib mir bald. Tschüss, Sami",
+        "noteAr": [
+          "رسالة قصيرة من أربع جمل: تحية، دعوة صريحة، غرض اللقاء، وطلب جواب؛ ثم عبارة ختام مناسبة",
+          "«um achtzehn Uhr» منطوقةً بالألفاظ لا بالأرقام — كما في كتاب A1: الالتزامُ بالسياق مقدَّمٌ على الأناقة",
+          "جملة الدعوة صريحة (Möchtest du…?) لا تلويحاً — في A1 تُكافأ الصراحة"
+        ],
+        "zielWort": 30
+      }
+    },
+    {
+      "id": "w-a1-06",
+      "level": "A1",
+      "decision": "corrected",
+      "previous": {
+        "id": "w-a1-06",
+        "level": "A1",
+        "format": "frei",
+        "titleDe": "Postkarte aus dem Urlaub",
+        "titleAr": "بطاقة بريدية من العطلة",
+        "taskDe": "Schreibe eine kurze Postkarte (4–5 Sätze) aus dem Urlaub: Wo bist du? Wie ist das Wetter? Was machst du?",
+        "taskAr": "اكتب بطاقة بريدية قصيرة (4–5 جمل) من العطلة: أين أنت؟ كيف الطقس؟ ماذا تفعل؟ (الهدف: 30 كلمة تقريباً).",
+        "criteria": [
+          "تحية ومقصود (Hallo … hier bin ich)",
+          "الطقس بجملة واحدة",
+          "نشاط واحد على الأقل",
+          "خاتمة ودّية"
+        ],
+        "sample": "Liebe Salma! Ich bin jetzt in Hammamet. Das Wetter ist schön und sonnig. Jeden Tag schwimme ich im Meer. Am Abend esse ich im Café am Strand. Viele Grüße, Sami",
+        "noteAr": [
+          "بطاقةُ بريده صغيرةٌ كعنوانها: خمسُ جمل لا تتزاحم",
+          "الطقسُ جملة، والنشاطان واضحان: السباحة ثم الأكل في المقهى",
+          "Viele Grüße + اسم — خاتمةُ البطاقة قارةٌ لا تُساوَم"
+        ],
+        "zielWort": 30
+      },
+      "current": {
+        "id": "w-a1-06",
+        "level": "A1",
+        "format": "frei",
+        "titleDe": "Postkarte aus dem Urlaub",
+        "titleAr": "بطاقة بريدية من العطلة",
+        "taskDe": "Schreibe eine kurze Postkarte (4–5 Sätze) aus dem Urlaub: Wo bist du? Wie ist das Wetter? Was machst du?",
+        "taskAr": "اكتب بطاقة بريدية قصيرة (4–5 جمل) من العطلة: أين أنت؟ كيف الطقس؟ ماذا تفعل؟ (الهدف: 30 كلمة تقريباً).",
+        "criteria": [
+          "تحية ومقصود (Hallo … hier bin ich)",
+          "الطقس بجملة واحدة",
+          "نشاط واحد على الأقل",
+          "خاتمة ودّية"
+        ],
+        "sample": "Liebe Salma! Ich bin jetzt in Hammamet. Das Wetter ist schön und sonnig. Jeden Tag schwimme ich im Meer. Am Abend esse ich im Café am Strand. Viele Grüße, Sami",
+        "noteAr": [
+          "يتكون النموذج من خمس جمل قصيرة مناسبة لبطاقة بريدية.",
+          "يذكر الطقس ونشاطين واضحين: السباحة ثم الأكل في المقهى.",
+          "اختم البطاقة بـViele Grüße ثم اسم المرسل."
+        ],
+        "zielWort": 30
+      }
+    },
+    {
+      "id": "w-a1-07",
+      "level": "A1",
+      "decision": "confirmed-current",
+      "previous": {
+        "id": "w-a1-07",
+        "level": "A1",
+        "format": "frei",
+        "titleDe": "Nachricht an einen Freund",
+        "titleAr": "رسالة قصيرة إلى صديق",
+        "taskDe": "Schreibe eine kurze Nachricht (3–5 Sätze) an einen Freund: Wie geht es dir? Was machst du heute Abend? Treffen wir uns?",
+        "taskAr": "اكتب رسالة قصيرة (3-5 جمل) لصديق: كيف حالك؟ ماذا تفعل هذا المساء؟ هل نلتقي؟ (الهدف: 30 كلمة تقريباً).",
+        "criteria": [
+          "3-5 جمل مفهومة",
+          "تحية وسؤال عن الحال",
+          "اقتراح موعد/لقاء",
+          "خاتمة مهذبة"
+        ],
+        "sample": "Lieber Sami, wie geht es dir? Mir geht es gut. Heute Abend bin ich frei. Möchtest du ins Café kommen? Wir können uns um acht Uhr treffen. Viele Grüße, Adam",
+        "noteAr": [
+          "سؤالُ حالٍ ثم عرضُ لقاءٍ بموعدٍ محدد — ثلاثيةُ الرسالة القصيرة",
+          "Möchtest du…? صيغةُ عرضٍ مهذبة تُحفَظ وتُستعمل",
+          "خمس جمل، كلٌّ في خدمة: لا حشو معفى في A1"
+        ],
+        "zielWort": 30
+      },
+      "current": {
+        "id": "w-a1-07",
+        "level": "A1",
+        "format": "frei",
+        "titleDe": "Nachricht an einen Freund",
+        "titleAr": "رسالة قصيرة إلى صديق",
+        "taskDe": "Schreibe eine kurze Nachricht (3–5 Sätze) an einen Freund: Wie geht es dir? Was machst du heute Abend? Treffen wir uns?",
+        "taskAr": "اكتب رسالة قصيرة (3-5 جمل) لصديق: كيف حالك؟ ماذا تفعل هذا المساء؟ هل نلتقي؟ (الهدف: 30 كلمة تقريباً).",
+        "criteria": [
+          "3-5 جمل مفهومة",
+          "تحية وسؤال عن الحال",
+          "اقتراح موعد/لقاء",
+          "خاتمة مهذبة"
+        ],
+        "sample": "Lieber Sami, wie geht es dir? Mir geht es gut. Heute Abend bin ich frei. Möchtest du ins Café kommen? Wir können uns um acht Uhr treffen. Viele Grüße, Adam",
+        "noteAr": [
+          "سؤالُ حالٍ ثم عرضُ لقاءٍ بموعدٍ محدد — ثلاثيةُ الرسالة القصيرة",
+          "Möchtest du…? صيغةُ عرضٍ مهذبة تُحفَظ وتُستعمل",
+          "خمس جمل، كلٌّ في خدمة: لا حشو معفى في A1"
+        ],
+        "zielWort": 30
+      }
+    },
+    {
+      "id": "w-a1-08",
+      "level": "A1",
+      "decision": "corrected",
+      "previous": {
+        "id": "w-a1-08",
+        "level": "A1",
+        "format": "frei",
+        "titleDe": "Eine SMS an die Lehrerin",
+        "titleAr": "رسالة قصيرة إلى المعلّمة",
+        "taskDe": "Du bist krank und kannst nicht zum Kurs kommen. Schreibe eine kurze Nachricht (3–4 Sätze): Grund, wie lange, eine Frage zu den Hausaufgaben.",
+        "taskAr": "أنت مريض ولا تستطيع الحضور إلى الدورة. اكتب رسالة قصيرة (3–4 جمل): السبب، المدة، وسؤال عن الواجبات. (الهدف: 30 كلمة تقريباً).",
+        "criteria": [
+          "تحية ووداع مناسبان (Liebe Frau … / Viele Grüße)",
+          "الفعل في الموضع الثاني",
+          "جملة بـ«kann … nicht kommen» (الفعل المساعد + المصدر في النهاية)",
+          "سؤال واحد بعلامة استفهام"
+        ],
+        "sample": "Liebe Frau Klein, ich bin krank und habe Fieber. Ich kann heute und morgen nicht zum Kurs kommen. Der Arzt sagt, ich soll zwei Tage zu Hause bleiben. Was sind die Hausaufgaben für Donnerstag? Viele Grüße, Omar",
+        "noteAr": [
+          "«kann … kommen»: قوس الفعل المساعد والمصدر — أهمّ بنية في رسائل A1",
+          "السؤال في النهاية يجعل الرسالة تواصلاً لا إعلاناً"
+        ],
+        "neu": true,
+        "zielWort": 30
+      },
+      "current": {
+        "id": "w-a1-08",
+        "level": "A1",
+        "format": "frei",
+        "titleDe": "Eine SMS an die Lehrerin",
+        "titleAr": "رسالة قصيرة إلى المعلّمة",
+        "taskDe": "Du bist krank und kannst nicht zum Kurs kommen. Schreibe eine kurze Nachricht (3–4 Sätze): Grund, wie lange, eine Frage zu den Hausaufgaben.",
+        "taskAr": "أنت مريض ولا تستطيع الحضور إلى الدورة. اكتب رسالة قصيرة (3–4 جمل): السبب، المدة، وسؤال عن الواجبات. (الهدف: 30 كلمة تقريباً).",
+        "criteria": [
+          "تحية ووداع مناسبان (Liebe Frau … / Viele Grüße)",
+          "الفعل في الموضع الثاني",
+          "جملة بـ«kann … nicht kommen» (الفعل المساعد + المصدر في النهاية)",
+          "سؤال واحد بعلامة استفهام"
+        ],
+        "sample": "Liebe Frau Klein, ich bin krank und habe Fieber. Ich kann zwei Tage nicht zum Kurs kommen. Der Arzt sagt, ich soll zu Hause bleiben. Was sind die Hausaufgaben für Donnerstag? Viele Grüße, Omar",
+        "noteAr": [
+          "«kann … kommen»: قوس الفعل المساعد والمصدر — أهمّ بنية في رسائل A1",
+          "السؤال في النهاية يجعل الرسالة تواصلاً لا إعلاناً"
+        ],
+        "neu": true,
+        "zielWort": 30
+      }
+    },
+    {
+      "id": "w-a1-09",
+      "level": "A1",
+      "decision": "corrected",
+      "previous": {
+        "id": "w-a1-09",
+        "level": "A1",
+        "format": "frei",
+        "titleDe": "Postkarte an einen Freund",
+        "titleAr": "بطاقة بريدية إلى صديق",
+        "taskDe": "Schreibe eine Postkarte an einen Freund (4–5 Sätze): Wo bist du? Wie ist das Wetter? Was machst du? Wann kommst du zurück?",
+        "taskAr": "اكتب بطاقة بريدية لصديق (4–5 جمل): أين أنت؟ كيف الطقس؟ ماذا تفعل؟ متى تعود؟ (الهدف: 30 كلمة تقريباً).",
+        "criteria": [
+          "الإجابة عن الأسئلة الأربعة",
+          "جملة عن الطقس بـ«es ist / es regnet»",
+          "فعل منفصل واحد على الأقل (zurückkommen / mitkommen)",
+          "الأزمنة في الحاضر"
+        ],
+        "sample": "Hallo Karim, ich bin in Hamburg am Meer. Das Wetter ist gut, die Sonne scheint, aber der Wind ist kalt. Morgens schwimme ich, nachmittags gehe ich spazieren. Am Samstag komme ich zurück. Bis bald! Lina",
+        "noteAr": [
+          "«komme … zurück»: الفعل المنفصل في الحاضر — الجزء الثاني في نهاية الجملة",
+          "البطاقة تحتاج مخاطَباً وتوقيعاً — يُفحصان في الامتحان"
+        ],
+        "neu": true,
+        "zielWort": 30
+      },
+      "current": {
+        "id": "w-a1-09",
+        "level": "A1",
+        "format": "frei",
+        "titleDe": "Postkarte an einen Freund",
+        "titleAr": "بطاقة بريدية إلى صديق",
+        "taskDe": "Schreibe eine Postkarte an einen Freund (4–5 Sätze): Wo bist du? Wie ist das Wetter? Was machst du? Wann kommst du zurück?",
+        "taskAr": "اكتب بطاقة بريدية لصديق (4–5 جمل): أين أنت؟ كيف الطقس؟ ماذا تفعل؟ متى تعود؟ (الهدف: 30 كلمة تقريباً).",
+        "criteria": [
+          "الإجابة عن الأسئلة الأربعة",
+          "جملة عن الطقس بـ«es ist / es regnet»",
+          "فعل منفصل واحد على الأقل (zurückkommen / mitkommen)",
+          "الأزمنة في الحاضر"
+        ],
+        "sample": "Hallo Karim, ich bin in Hamburg am Meer. Das Wetter ist gut, die Sonne scheint, aber der Wind ist kalt. Morgens schwimme ich, nachmittags gehe ich spazieren. Am Samstag komme ich zurück. Bis bald! Lina",
+        "noteAr": [
+          "«komme … zurück»: فعل منفصل في الحاضر، ويأتي جزؤه الثاني في نهاية الجملة.",
+          "أضف اسم المخاطَب وتوقيع المرسل ليكتمل شكل البطاقة."
+        ],
+        "neu": true,
+        "zielWort": 30
+      }
+    },
+    {
+      "id": "w-a1-10",
+      "level": "A1",
+      "decision": "corrected",
+      "previous": {
+        "id": "w-a1-10",
+        "level": "A1",
+        "format": "frei",
+        "titleDe": "Ein Formular im Amt",
+        "titleAr": "استمارة في الدائرة",
+        "taskDe": "Fülle das Formular für die Anmeldung im Sprachkurs aus: Vorname, Nachname, Geburtsdatum, Adresse mit Postleitzahl, Telefon, Muttersprache, Kurs (A1/A2).",
+        "taskAr": "املأ استمارة التسجيل في دورة اللغة: الاسم، اسم العائلة، تاريخ الميلاد، العنوان مع الرمز البريدي، الهاتف، اللغة الأم، الدورة. (الهدف: 30 كلمة تقريباً).",
+        "criteria": [
+          "كل الحقول معبّأة",
+          "تاريخ الميلاد بصيغة يوم.شهر.سنة",
+          "الرمز البريدي قبل اسم المدينة",
+          "الاسم بأحرف كبيرة في أوله"
+        ],
+        "sample": "Vorname: Salma · Nachname: Trabelsi · Geburtsdatum: 12. März, sechsundzwanzig Jahre alt · Adresse: Gartenstraße 8, 04109 Leipzig · Telefon: 0341 123456 · Muttersprache: Arabisch · Zweite Sprache: Französisch · Kurs: A1 am Vormittag · Unterschrift: S. Trabelsi",
+        "noteAr": [
+          "الاستمارة جزء ثابت من امتحان A1: لا جمل، بل حقول صحيحة",
+          "الرمز البريدي قبل المدينة — ترتيب ألماني يُخطئ فيه كثيرون"
+        ],
+        "neu": true,
+        "zielWort": 30
+      },
+      "current": {
+        "id": "w-a1-10",
+        "level": "A1",
+        "format": "frei",
+        "titleDe": "Ein Formular im Amt",
+        "titleAr": "استمارة في الدائرة",
+        "taskDe": "Fülle das Formular für die Anmeldung im Sprachkurs aus: Vorname, Nachname, Geburtsdatum, Adresse mit Postleitzahl, Telefon, Muttersprache, Kurs (A1/A2).",
+        "taskAr": "املأ استمارة التسجيل في دورة اللغة: الاسم، اسم العائلة، تاريخ الميلاد، العنوان مع الرمز البريدي، الهاتف، اللغة الأم، الدورة. (الهدف: 30 كلمة تقريباً).",
+        "criteria": [
+          "كل الحقول معبّأة",
+          "تاريخ الميلاد بصيغة يوم.شهر.سنة، مثل 12.03.1998",
+          "الرمز البريدي قبل اسم المدينة",
+          "الاسم بأحرف كبيرة في أوله"
+        ],
+        "sample": "Vorname: Salma · Nachname: Trabelsi · Geburtsdatum: 12.03.1998 · Adresse: Gartenstraße 8, 04109 Leipzig · Telefon: 0341 123456 · Muttersprache: Arabisch · Zweite Sprache: Französisch · Kurs: A1 am Vormittag · Unterschrift: S. Trabelsi",
+        "noteAr": [
+          "اكتب تاريخ الميلاد في حقل مستقل بصيغة واضحة مثل 12.03.1998، ولا تخلط التاريخ بالعمر.",
+          "ضع الرمز البريدي قبل اسم المدينة، واملأ الحقول كقيم قصيرة لا كجمل."
+        ],
+        "neu": true,
+        "zielWort": 30
+      }
+    },
+    {
+      "id": "w-a0-03",
+      "level": "A0",
+      "decision": "corrected",
+      "previous": {
+        "id": "w-a0-03",
+        "level": "A0",
+        "format": "frei",
+        "titleDe": "Mich vorstellen (5 Sätze)",
+        "titleAr": "تقديم نفسي (5 جمل)",
+        "taskDe": "Schreibe 5 einfache Sätze über dich: Name, Alter, Herkunft, Wohnort, Beruf/Studium. Nutze \"ich heiße\", \"ich bin\", \"ich komme aus\", \"ich wohne in\", \"ich bin (Beruf)\".",
+        "taskAr": "اكتب 5 جمل بسيطة عن نفسك: الاسم، العمر، البلد، السكن، المهنة/الدراسة. استخدم «اسمي»، «عمري»، «أنا من»، «أسكن في»، «أعمل/أدرس».",
+        "criteria": [
+          "5 جمل بسيطة",
+          "استخدام sein/heißen/kommen/wohnen",
+          "جندر واضح للأسماء",
+          "علامات ترقيم صحيحة"
+        ],
+        "sample": "Ich heiße Layla. Ich bin 24 Jahre alt. Ich komme aus Syrien. Ich wohne in Köln. Ich bin Studentin.",
+        "noteAr": [
+          "اكتب جملة قصيرة واحدة لكل معلومة، مع فعل واضح مثل heißen أو sein أو wohnen.",
+          "للعمر قل: Ich bin 24 Jahre alt؛ ولا تُسقط Jahre alt. ابدأ الجملة بحرف كبير واختمها بنقطة."
+        ],
+        "zielWort": 25
+      },
+      "current": {
+        "id": "w-a0-03",
+        "level": "A0",
+        "format": "frei",
+        "titleDe": "Mich vorstellen (5 Sätze)",
+        "titleAr": "تقديم نفسي (5 جمل)",
+        "taskDe": "Schreibe 5 einfache Sätze über dich: Name, Alter, Herkunft, Wohnort, Beruf/Studium. Nutze \"ich heiße\", \"ich bin\", \"ich komme aus\", \"ich wohne in\", \"ich bin (Beruf)\".",
+        "taskAr": "اكتب 5 جمل بسيطة عن نفسك: الاسم، العمر، البلد، السكن، المهنة/الدراسة. استخدم «اسمي»، «عمري»، «أنا من»، «أسكن في»، «أعمل/أدرس».",
+        "criteria": [
+          "5 جمل بسيطة",
+          "استخدام sein/heißen/kommen/wohnen",
+          "المعلومات الخمس المطلوبة موجودة",
+          "علامات ترقيم صحيحة"
+        ],
+        "sample": "Ich heiße Layla. Ich bin 24 Jahre alt. Ich komme aus Syrien. Ich wohne in Köln. Ich bin Studentin an der Universität.",
+        "noteAr": [
+          "اكتب جملة قصيرة واحدة لكل معلومة، مع فعل واضح مثل heißen أو sein أو wohnen.",
+          "للعمر قل: Ich bin 24 Jahre alt؛ ولا تُسقط Jahre alt. ابدأ الجملة بحرف كبير واختمها بنقطة."
+        ],
+        "zielWort": 25
+      }
+    },
+    {
+      "id": "w-a0-04",
+      "level": "A0",
+      "decision": "corrected",
+      "previous": {
+        "id": "w-a0-04",
+        "level": "A0",
+        "format": "frei",
+        "titleDe": "Meine Familie",
+        "titleAr": "عائلتي",
+        "taskDe": "Schreibe 4–6 Sätze über deine Familie: Wie viele Personen? Wie heißen sie? Wie alt sind sie? Was machen sie beruflich?",
+        "taskAr": "اكتب 4–6 جمل عن عائلتك: كم فرداً؟ أسماؤهم؟ أعمارهم؟ مهنهم؟",
+        "criteria": [
+          "4 جمل على الأقل",
+          "استخدام mein/meine",
+          "مهن مذكورة",
+          "أفعال بسيطة في زمن المضارع"
+        ],
+        "sample": "In meiner Familie sind vier Personen: mein Vater Omar, meine Mutter Dalia, mein Bruder Sami und ich. Mein Vater ist 50 Jahre alt und Arzt. Meine Mutter ist 46 Jahre alt und Lehrerin. Mein Bruder ist 16 Jahre alt und Schüler. Ich bin Studentin.",
+        "noteAr": [
+          "استخدم mein مع المذكر والمحايد، مثل mein Vater وmein Kind، وmeine مع المؤنث، مثل meine Mutter.",
+          "عند تعداد أفراد الأسرة قل Das sind، ثم اذكر المهن بجمل بسيطة مع ist أو bin."
+        ],
+        "zielWort": 30
+      },
+      "current": {
+        "id": "w-a0-04",
+        "level": "A0",
+        "format": "frei",
+        "titleDe": "Meine Familie",
+        "titleAr": "عائلتي",
+        "taskDe": "Schreibe 4–6 Sätze über deine Familie: Wie viele Personen? Wie heißen sie? Wie alt sind sie? Was machen sie beruflich?",
+        "taskAr": "اكتب 4–6 جمل عن عائلتك: كم فرداً؟ أسماؤهم؟ أعمارهم؟ مهنهم؟",
+        "criteria": [
+          "4 جمل على الأقل",
+          "استخدام mein/meine",
+          "مهن مذكورة",
+          "أفعال بسيطة في زمن المضارع"
+        ],
+        "sample": "In meiner Familie sind vier Personen: mein Vater Omar, meine Mutter Dalia, mein Bruder Sami und ich. Mein Vater ist 50 Jahre alt und Arzt. Meine Mutter ist 46 Jahre alt und Lehrerin. Mein Bruder ist 16 Jahre alt und Schüler. Ich bin Studentin.",
+        "noteAr": [
+          "استخدم mein مع المذكر والمحايد، مثل mein Vater وmein Kind، وmeine مع المؤنث، مثل meine Mutter.",
+          "يمكنك بدء التعداد بـDas sind … أو بـIn meiner Familie sind …، ثم اذكر الأعمار والمهن بجمل بسيطة مع ist أو bin."
+        ],
+        "zielWort": 40
+      }
+    },
+    {
+      "id": "w-a0-05",
+      "level": "A0",
+      "decision": "corrected",
+      "previous": {
+        "id": "w-a0-05",
+        "level": "A0",
+        "format": "frei",
+        "titleDe": "Zahlen und Farben",
+        "titleAr": "الأرقام والألوان",
+        "taskDe": "Schreibe die Zahlen von 1 bis 20 auf Deutsch und nenne zu 5 Farben ein Beispiel (der Himmel ist blau usw.).",
+        "taskAr": "اكتب الأرقام من 1 إلى 20 بالألمانية، ثم اذكر 5 ألوان مع مثال لكل لون (السماء زرقاء…).",
+        "criteria": [
+          "الأرقام 1–20 صحيحة",
+          "5 ألوان مع مثال",
+          "جنس الاسم في المثال صحيح"
+        ],
+        "sample": "eins, zwei, drei, vier, fünf, sechs, sieben, acht, neun, zehn, elf, zwölf, dreizehn, vierzehn, fünfzehn, sechzehn, siebzehn, achtzehn, neunzehn, zwanzig. Der Himmel ist blau. Die Sonne ist gelb. Das Gras ist grün. Die Erdbeere ist rot. Die Nacht ist schwarz.",
+        "noteAr": [
+          "اكتب الأعداد كلها بالترتيب من eins إلى zwanzig؛ انتبه خصوصاً إلى كتابة sechs وsechzehn وzwölf.",
+          "اربط كل لون باسم ذي أداة صحيحة، مثل der Himmel ist blau وdie Sonne ist gelb؛ الصفة هنا تبدأ بحرف صغير."
+        ],
+        "zielWort": 30
+      },
+      "current": {
+        "id": "w-a0-05",
+        "level": "A0",
+        "format": "frei",
+        "titleDe": "Zahlen und Farben",
+        "titleAr": "الأرقام والألوان",
+        "taskDe": "Schreibe die Zahlen von 1 bis 20 auf Deutsch und nenne zu 5 Farben ein Beispiel (der Himmel ist blau usw.).",
+        "taskAr": "اكتب الأرقام من 1 إلى 20 بالألمانية، ثم اذكر 5 ألوان مع مثال لكل لون (السماء زرقاء…).",
+        "criteria": [
+          "الأرقام 1–20 صحيحة",
+          "5 ألوان مع مثال",
+          "أداة الاسم في المثال صحيحة"
+        ],
+        "sample": "eins, zwei, drei, vier, fünf, sechs, sieben, acht, neun, zehn, elf, zwölf, dreizehn, vierzehn, fünfzehn, sechzehn, siebzehn, achtzehn, neunzehn, zwanzig. Der Himmel ist blau. Die Sonne ist gelb. Das Gras ist grün. Die Erdbeere ist rot. Die Nacht ist schwarz.",
+        "noteAr": [
+          "اكتب الأعداد كلها بالترتيب من eins إلى zwanzig؛ انتبه خصوصاً إلى كتابة sechs وsechzehn وzwölf.",
+          "اربط كل لون باسم ذي أداة صحيحة، مثل der Himmel ist blau وdie Sonne ist gelb؛ الصفة هنا تبدأ بحرف صغير."
+        ],
+        "zielWort": 40
+      }
+    },
+    {
+      "id": "w-a1-11",
+      "level": "A1",
+      "decision": "confirmed-current",
+      "previous": {
+        "id": "w-a1-11",
+        "level": "A1",
+        "format": "frei",
+        "titleDe": "Mein Wochenplan",
+        "titleAr": "برنامج أسبوعي",
+        "taskDe": "Schreibe 8–10 Sätze über deinen typischen Wochenablauf: Wann stehst du auf? Was machst du am Montag/Dienstag/...? Was machst du am Wochenende?",
+        "taskAr": "اكتب 8–10 جمل عن أسبوعك المعتاد: متى تستيقظ؟ ماذا تفعل أيام الاثنين/الثلاثاء…؟ ماذا تفعل في العطلة؟",
+        "criteria": [
+          "8 جمل على الأقل",
+          "أيام الأسبوع مذكورة",
+          "أوقات صحيحة (um … Uhr)",
+          "أفعال في المضارع صحيحة"
+        ],
+        "sample": "Am Montag stehe ich um 7 Uhr auf. Danach frühstücke ich zu Hause. Am Dienstag fahre ich mit dem Bus zur Arbeit. Am Mittwoch lerne ich am Abend Deutsch. Am Donnerstag mache ich nach der Arbeit Sport. Am Freitag kaufe ich ein und koche mit meinem Bruder. Am Samstag schlafe ich länger und treffe Freunde. Am Sonntag besuche ich meine Eltern. Am Wochenende gehe ich außerdem gern spazieren.",
+        "noteAr": [
+          "لليوم استخدم am Montag أو am Wochenende، وللساعة um 7 Uhr؛ يأتي am قبل اليوم وum قبل الوقت.",
+          "اكتب من 8 إلى 10 جمل بالمضارع، ونوّع الأفعال؛ في الفعل المنفصل مثل aufstehen يأتي الجزء auf في آخر الجملة."
+        ],
+        "zielWort": 80
+      },
+      "current": {
+        "id": "w-a1-11",
+        "level": "A1",
+        "format": "frei",
+        "titleDe": "Mein Wochenplan",
+        "titleAr": "برنامج أسبوعي",
+        "taskDe": "Schreibe 8–10 Sätze über deinen typischen Wochenablauf: Wann stehst du auf? Was machst du am Montag/Dienstag/...? Was machst du am Wochenende?",
+        "taskAr": "اكتب 8–10 جمل عن أسبوعك المعتاد: متى تستيقظ؟ ماذا تفعل أيام الاثنين/الثلاثاء…؟ ماذا تفعل في العطلة؟",
+        "criteria": [
+          "8 جمل على الأقل",
+          "أيام الأسبوع مذكورة",
+          "أوقات صحيحة (um … Uhr)",
+          "أفعال في المضارع صحيحة"
+        ],
+        "sample": "Am Montag stehe ich um 7 Uhr auf. Danach frühstücke ich zu Hause. Am Dienstag fahre ich mit dem Bus zur Arbeit. Am Mittwoch lerne ich am Abend Deutsch. Am Donnerstag mache ich nach der Arbeit Sport. Am Freitag kaufe ich ein und koche mit meinem Bruder. Am Samstag schlafe ich länger und treffe Freunde. Am Sonntag besuche ich meine Eltern. Am Wochenende gehe ich außerdem gern spazieren.",
+        "noteAr": [
+          "لليوم استخدم am Montag أو am Wochenende، وللساعة um 7 Uhr؛ يأتي am قبل اليوم وum قبل الوقت.",
+          "اكتب من 8 إلى 10 جمل بالمضارع، ونوّع الأفعال؛ في الفعل المنفصل مثل aufstehen يأتي الجزء auf في آخر الجملة."
+        ],
+        "zielWort": 80
+      }
+    },
+    {
+      "id": "w-a1-12",
+      "level": "A1",
+      "decision": "corrected",
+      "previous": {
+        "id": "w-a1-12",
+        "level": "A1",
+        "format": "frei",
+        "titleDe": "Mein Lieblingsort",
+        "titleAr": "مكاني المفضل",
+        "taskDe": "Beschreibe deinen Lieblingsort: Wo ist er? Warum gefällt er dir? Was machst du dort?",
+        "taskAr": "صِف مكانك المفضل: أين هو؟ لماذا يعجبك؟ ماذا تفعل هناك؟",
+        "criteria": [
+          "وصف المكان",
+          "ذكر السبب",
+          "استخدام weil",
+          "صفات بسيطة"
+        ],
+        "sample": "Mein Lieblingsort ist der Park in meiner Stadt. Der Park liegt neben meiner Wohnung. Dort gibt es viele Bäume und einen kleinen See. Ich gehe gern dorthin, weil es dort ruhig ist. Am Wochenende spaziere ich mit meiner Schwester im Park.",
+        "noteAr": [
+          "صف المكان بجمل واضحة، ثم اذكر أين يقع وما الذي تفعله فيه؛ أضف صفة بسيطة مثل ruhig أو schön.",
+          "بعد weil تأتي الجملة التابعة والفعل المصرف في آخرها: ..., weil es dort ruhig ist."
+        ],
+        "zielWort": 80
+      },
+      "current": {
+        "id": "w-a1-12",
+        "level": "A1",
+        "format": "frei",
+        "titleDe": "Mein Lieblingsort",
+        "titleAr": "مكاني المفضل",
+        "taskDe": "Beschreibe deinen Lieblingsort: Wo ist er? Warum gefällt er dir? Was machst du dort?",
+        "taskAr": "صِف مكانك المفضل: أين هو؟ لماذا يعجبك؟ ماذا تفعل هناك؟",
+        "criteria": [
+          "وصف المكان",
+          "ذكر السبب",
+          "استخدام weil",
+          "صفات بسيطة"
+        ],
+        "sample": "Mein Lieblingsort ist der Park in meiner Stadt. Der Park liegt neben meiner Wohnung. Dort gibt es viele Bäume und einen kleinen See. Ich gehe gern dorthin, weil es dort ruhig ist. Am Wochenende spaziere ich mit meiner Schwester im Park.",
+        "noteAr": [
+          "صف المكان بجمل واضحة، ثم اذكر أين يقع وما الذي تفعله فيه؛ أضف صفة بسيطة مثل ruhig أو schön.",
+          "بعد weil تأتي الجملة التابعة والفعل المصرف في آخرها: ..., weil es dort ruhig ist."
+        ],
+        "zielWort": 50
+      }
+    },
+    {
+      "id": "w-a0-06",
+      "level": "A0",
+      "decision": "corrected",
+      "previous": {
+        "id": "w-a0-06",
+        "level": "A0",
+        "format": "frei",
+        "titleDe": "Sich vorstellen (Postkarte)",
+        "titleAr": "تقديم النفس (بطاقة بريدية)",
+        "taskDe": "Schreiben Sie 3–4 Sätze auf einer Postkarte: Name, Alter, Wohnort und Hobby.",
+        "taskAr": "اكتب ٣–٤ جمل على بطاقة بريدية: الاسم، العمر، السكن، والهواية.",
+        "criteria": [
+          "اسمك واضح",
+          "العمر مع Jahre alt",
+          "مكان السكن mit in …",
+          "هواية واحدة بسيطة"
+        ],
+        "sample": "Hallo! Ich heiße Sara und bin 22 Jahre alt. Ich wohne in Tunis. Ich schwimme gern.",
+        "noteAr": [
+          "في بطاقة A0 اكتفِ بجمل قصيرة من فاعل وفعل؛ لا حاجة إلى جمل موصولة أو ثانوية.",
+          "تحقق من وجود المعلومات الأربع: الاسم، والعمر مع Jahre alt، والسكن مع in، وهواية واحدة."
+        ],
+        "zielWort": 25
+      },
+      "current": {
+        "id": "w-a0-06",
+        "level": "A0",
+        "format": "frei",
+        "titleDe": "Sich vorstellen (Postkarte)",
+        "titleAr": "تقديم النفس (بطاقة بريدية)",
+        "taskDe": "Schreiben Sie 3–4 Sätze auf einer Postkarte: Name, Alter, Wohnort und Hobby.",
+        "taskAr": "اكتب ٣–٤ جمل على بطاقة بريدية: الاسم، العمر، السكن، والهواية.",
+        "criteria": [
+          "اسمك واضح",
+          "العمر مع Jahre alt",
+          "مكان السكن mit in …",
+          "هواية واحدة بسيطة"
+        ],
+        "sample": "Hallo! Ich heiße Sara und bin 22 Jahre alt. Ich wohne mit meiner Familie in Tunis. In meiner Freizeit schwimme ich sehr gern im Hallenbad.",
+        "noteAr": [
+          "في بطاقة A0 اكتفِ بجمل قصيرة ذات أفعال واضحة؛ لا حاجة إلى جمل ثانوية طويلة.",
+          "تحقق من وجود المعلومات الأربع: الاسم، والعمر مع Jahre alt، والسكن مع in، وهواية واحدة."
+        ],
+        "zielWort": 25
+      }
+    },
+    {
+      "id": "w-a1-13",
+      "level": "A1",
+      "decision": "corrected",
+      "previous": {
+        "id": "w-a1-13",
+        "level": "A1",
+        "format": "brief",
+        "titleDe": "Einladung zum Geburtstag",
+        "titleAr": "دعوة عيد ميلاد",
+        "taskDe": "Schreiben Sie an Ihre Freundin Ayşe eine E-Mail (ca. 40 Wörter): Einladung zur Geburtstagsfeier – wann? wo? was soll sie mitbringen?",
+        "taskAr": "اكتب إيميلاً لصديقتك عائشة (حوالي ٤٠ كلمة): ادعُها لحفلة عيد ميلادك – متى؟ أين؟ ماذا تحضر معها؟",
+        "criteria": [
+          "Anrede + Grußformel",
+          "Ort und Termin genannt",
+          "Bitte um Mitbringen / Antwort",
+          "Zeit: ca. 40 Wörter"
+        ],
+        "sample": "Liebe Ayşe, ich habe am Samstag Geburtstag und mache eine Party. Die Party beginnt um 18 Uhr bei mir zu Hause, Goethestraße 5. Kannst du kommen? Bitte sag mir bis Donnerstag Bescheid. Bring bitte deine neue CD mit! Viele Grüße, Deine Lena.",
+        "noteAr": [
+          "رتّب الدعوة: التحية، واليوم والساعة، والمكان أو العنوان، ثم طلب الرد والختام.",
+          "للسؤال عن الحضور استخدم Kannst du kommen?؛ واكتب الموعد مثلاً am Samstag um 18 Uhr."
+        ],
+        "zielWort": 40
+      },
+      "current": {
+        "id": "w-a1-13",
+        "level": "A1",
+        "format": "brief",
+        "titleDe": "Einladung zum Geburtstag",
+        "titleAr": "دعوة عيد ميلاد",
+        "taskDe": "Schreiben Sie an Ihre Freundin Ayşe eine E-Mail (ca. 40 Wörter): Einladung zur Geburtstagsfeier – wann? wo? was soll sie mitbringen?",
+        "taskAr": "اكتب إيميلاً لصديقتك عائشة (حوالي ٤٠ كلمة): ادعُها لحفلة عيد ميلادك – متى؟ أين؟ ماذا تحضر معها؟",
+        "criteria": [
+          "Anrede + Grußformel",
+          "Ort und Termin genannt",
+          "Bitte um Mitbringen / Antwort",
+          "Zeit: ca. 40 Wörter"
+        ],
+        "sample": "Liebe Ayşe,\n\nich habe am Samstag Geburtstag und mache eine Party. Sie beginnt um 18 Uhr bei mir zu Hause in der Goethestraße 5. Kannst du kommen? Bring bitte deine neue CD mit und sag mir bis Donnerstag Bescheid.\n\nViele Grüße\nLena",
+        "noteAr": [
+          "رتّب الدعوة: التحية، واليوم والساعة، والمكان أو العنوان، ثم طلب الرد والختام.",
+          "للسؤال عن الحضور استخدم Kannst du kommen?؛ واكتب الموعد مثلاً am Samstag um 18 Uhr."
+        ],
+        "zielWort": 40
+      }
+    },
+    {
+      "id": "w-a1-14",
+      "level": "A1",
+      "decision": "confirmed-current",
+      "previous": {
+        "id": "w-a1-14",
+        "level": "A1",
+        "format": "frei",
+        "titleDe": "Postkarte vom Meer",
+        "titleAr": "بطاقة بريدية من البحر",
+        "taskDe": "Sie sind im Urlaub am Meer. Schreiben Sie eine Postkarte an Ihre Freundin (ca. 40 Wörter): Wo sind Sie, wie ist das Wetter und was machen Sie?",
+        "taskAr": "أنت في إجازة عند البحر. اكتب بطاقة بريدية إلى صديقتك (نحو 40 كلمة): أين أنت، كيف الطقس، وماذا تفعل؟",
+        "criteria": [
+          "تحية قصيرة (Liebe …)",
+          "ثلاث جمل بسيطة: مكان وطقس ونشاط",
+          "ختام قصير (Viele Grüße)"
+        ],
+        "sample": "Liebe Salma,\n\nviele Grüße aus Tunesien! Ich bin am Meer. Die Sonne scheint und es ist sehr warm. Ich schwimme jeden Tag und esse Fisch. Ich liege jeden Tag am Strand. Der Urlaub ist toll! Bis bald!\n\nDeine Sara",
+        "noteAr": [
+          "الحاضر البسيط فقط (scheint/schwimme/esse) — سجلّ A1 النقي",
+          "نقاط تعجب معتدلة تضفي روح البطاقة البريدية"
+        ],
+        "zielWort": 40
+      },
+      "current": {
+        "id": "w-a1-14",
+        "level": "A1",
+        "format": "frei",
+        "titleDe": "Postkarte vom Meer",
+        "titleAr": "بطاقة بريدية من البحر",
+        "taskDe": "Sie sind im Urlaub am Meer. Schreiben Sie eine Postkarte an Ihre Freundin (ca. 40 Wörter): Wo sind Sie, wie ist das Wetter und was machen Sie?",
+        "taskAr": "أنت في إجازة عند البحر. اكتب بطاقة بريدية إلى صديقتك (نحو 40 كلمة): أين أنت، كيف الطقس، وماذا تفعل؟",
+        "criteria": [
+          "تحية قصيرة (Liebe …)",
+          "ثلاث جمل بسيطة: مكان وطقس ونشاط",
+          "ختام قصير (Viele Grüße)"
+        ],
+        "sample": "Liebe Salma,\n\nviele Grüße aus Tunesien! Ich bin am Meer. Die Sonne scheint und es ist sehr warm. Ich schwimme jeden Tag und esse Fisch. Ich liege jeden Tag am Strand. Der Urlaub ist toll! Bis bald!\n\nDeine Sara",
+        "noteAr": [
+          "الحاضر البسيط فقط (scheint/schwimme/esse) — سجلّ A1 النقي",
+          "نقاط تعجب معتدلة تضفي روح البطاقة البريدية"
+        ],
+        "zielWort": 40
+      }
+    },
+    {
+      "id": "w-a1-15",
+      "level": "A1",
+      "decision": "corrected",
+      "previous": {
+        "id": "w-a1-15",
+        "level": "A1",
+        "format": "frei",
+        "titleDe": "E-Mail an eine Freundin: Treffen",
+        "titleAr": "رسالة إلى صديقة: لقاء",
+        "taskDe": "Schreiben Sie eine kurze E-Mail an Ihre Freundin (ca. 40 Wörter): Laden Sie sie am Samstag zu einem Kaffee ein. Schreiben Sie, wann und wo Sie sich treffen.",
+        "taskAr": "اكتب رسالة قصيرة إلى صديقتك (نحو 40 كلمة): ادعُها إلى قهوة يوم السبت. اكتب متى وأين تلتقيان.",
+        "criteria": [
+          "سؤال/دعوة مباشرة (Hast du Zeit?)",
+          "اليوم والساعة والمكان",
+          "سؤال إغلاقي (Geht das?)"
+        ],
+        "sample": "Hallo liebe Amira,\n\nhast du am Samstag Zeit? Ich lade dich zu einem Kaffee ein. Wir treffen uns um 16 Uhr im Café am Markt. Ich freue mich! Geht das? Schreib mir bitte!\n\nLiebe Grüße\nSara",
+        "noteAr": [
+          "ثلاثة أفعال دعوة متدرجة (Hast du Zeit / Ich lade ein / Geht das)",
+          "بيانات اللقاء كاملة في جملة واحدة"
+        ],
+        "zielWort": 40
+      },
+      "current": {
+        "id": "w-a1-15",
+        "level": "A1",
+        "format": "frei",
+        "titleDe": "E-Mail an eine Freundin: Treffen",
+        "titleAr": "رسالة إلى صديقة: لقاء",
+        "taskDe": "Schreiben Sie eine kurze E-Mail an Ihre Freundin (ca. 40 Wörter): Laden Sie sie am Samstag zu einem Kaffee ein. Schreiben Sie, wann und wo Sie sich treffen.",
+        "taskAr": "اكتب رسالة قصيرة إلى صديقتك (نحو 40 كلمة): ادعُها إلى قهوة يوم السبت. اكتب متى وأين تلتقيان.",
+        "criteria": [
+          "سؤال/دعوة مباشرة (Hast du Zeit?)",
+          "اليوم والساعة والمكان",
+          "سؤال إغلاقي (Geht das?)"
+        ],
+        "sample": "Liebe Amira,\n\nhast du am Samstag Zeit? Ich lade dich zu einem Kaffee ein. Wir treffen uns um 16 Uhr im Café am Markt. Ich freue mich! Geht das? Schreib mir bitte!\n\nLiebe Grüße\nSara",
+        "noteAr": [
+          "ثلاثة أفعال دعوة متدرجة (Hast du Zeit / Ich lade ein / Geht das)",
+          "بيانات اللقاء كاملة في جملة واحدة"
+        ],
+        "zielWort": 40
+      }
+    },
+    {
+      "id": "w-a1-16",
+      "level": "A1",
+      "decision": "confirmed-current",
+      "previous": {
+        "id": "w-a1-16",
+        "level": "A1",
+        "format": "frei",
+        "titleDe": "Einladung zum Essen",
+        "titleAr": "دعوة إلى طعام",
+        "taskDe": "Sie kochen am Freitag für Freunde. Schreiben Sie eine kurze Einladung (ca. 40 Wörter): Wann essen Sie, was kochen Sie und wo wohnen Sie?",
+        "taskAr": "تطبخ يوم الجمعة لأصدقاء. اكتب دعوة قصيرة (نحو 40 كلمة): متى تأكلون، ماذا تطبخ، وأين تسكن؟",
+        "criteria": [
+          "دعوة صريحة (Ich lade euch ein)",
+          "اليوم والساعة",
+          "الطعام والعنوان"
+        ],
+        "sample": "Liebe Freunde,\n\nich lade euch am Freitag zum Essen ein! Wir essen um 19 Uhr bei mir zu Hause. Ich koche Reis mit Hähnchen und Salat. Meine Adresse: Gartenstraße 8. Kommt bitte hungrig!\n\nEuer Ali",
+        "noteAr": [
+          "صيغة الجمع euch للمدعوين — دقة ضمائر A1",
+          "لمسة مرحة (Kommt bitte hungrig) ضمن سجلّ بسيط صحيح"
+        ],
+        "zielWort": 40
+      },
+      "current": {
+        "id": "w-a1-16",
+        "level": "A1",
+        "format": "frei",
+        "titleDe": "Einladung zum Essen",
+        "titleAr": "دعوة إلى طعام",
+        "taskDe": "Sie kochen am Freitag für Freunde. Schreiben Sie eine kurze Einladung (ca. 40 Wörter): Wann essen Sie, was kochen Sie und wo wohnen Sie?",
+        "taskAr": "تطبخ يوم الجمعة لأصدقاء. اكتب دعوة قصيرة (نحو 40 كلمة): متى تأكلون، ماذا تطبخ، وأين تسكن؟",
+        "criteria": [
+          "دعوة صريحة (Ich lade euch ein)",
+          "اليوم والساعة",
+          "الطعام والعنوان"
+        ],
+        "sample": "Liebe Freunde,\n\nich lade euch am Freitag zum Essen ein! Wir essen um 19 Uhr bei mir zu Hause. Ich koche Reis mit Hähnchen und Salat. Meine Adresse: Gartenstraße 8. Kommt bitte hungrig!\n\nEuer Ali",
+        "noteAr": [
+          "صيغة الجمع euch للمدعوين — دقة ضمائر A1",
+          "لمسة مرحة (Kommt bitte hungrig) ضمن سجلّ بسيط صحيح"
+        ],
+        "zielWort": 40
+      }
+    },
+    {
+      "id": "w-a1-17",
+      "level": "A1",
+      "decision": "corrected",
+      "previous": {
+        "id": "w-a1-17",
+        "level": "A1",
+        "format": "frei",
+        "titleDe": "Nachricht an die Nachbarin: ein Paket",
+        "titleAr": "رسالة إلى الجارة: طرد",
+        "taskDe": "Ihre Nachbarin ist nicht zu Hause. Der Postbote hat ein Paket für sie. Schreiben Sie eine kurze Nachricht (ca. 35 Wörter): Wo ist das Paket und wann kann sie es holen?",
+        "taskAr": "جارتك ليست في البيت. ترك ساعي البريد طردًا لها. اكتب رسالة قصيرة (نحو 35 كلمة): أين الطرد ومتى يمكنها أخذه؟",
+        "criteria": [
+          "الطرد ومكانه بجملة واحدة",
+          "وقت الاستلام",
+          "توقيع بالاسم ورقم الشقة"
+        ],
+        "sample": "Liebe Frau Klein,\n\nder Postbote war heute da. Ihr Paket ist bei mir, Wohnung 12. Sie können es ab 18 Uhr holen. Ich bin zu Hause.\n\nViele Grüße\nSara aus Wohnung 12",
+        "noteAr": [
+          "معلومتا الرسالة (Ort + Zeit) بلا أي زائد",
+          "التوقيع بالموقع (Wohnung 12) كما في إعلانات الأبواب الحقيقية"
+        ],
+        "zielWort": 35
+      },
+      "current": {
+        "id": "w-a1-17",
+        "level": "A1",
+        "format": "frei",
+        "titleDe": "Nachricht an die Nachbarin: ein Paket",
+        "titleAr": "رسالة إلى الجارة: طرد",
+        "taskDe": "Ihre Nachbarin ist nicht zu Hause. Der Postbote hat ein Paket für sie. Schreiben Sie eine kurze Nachricht (ca. 35 Wörter): Wo ist das Paket und wann kann sie es holen?",
+        "taskAr": "جارتك ليست في البيت. ترك ساعي البريد طردًا لها. اكتب رسالة قصيرة (نحو 35 كلمة): أين الطرد ومتى يمكنها أخذه؟",
+        "criteria": [
+          "الطرد ومكانه بجملة واحدة",
+          "وقت الاستلام",
+          "توقيع بالاسم ورقم الشقة"
+        ],
+        "sample": "Liebe Frau Klein,\n\nder Postbote war heute da. Ihr Paket ist bei mir in Wohnung 12. Sie können es ab 18 Uhr holen. Ich bin zu Hause.\n\nViele Grüße\nSara aus Wohnung 12",
+        "noteAr": [
+          "معلومتا الرسالة (Ort + Zeit) بلا أي زائد",
+          "التوقيع بالموقع (Wohnung 12) كما في إعلانات الأبواب الحقيقية"
+        ],
+        "zielWort": 35
+      }
+    },
+    {
+      "id": "w-a1-18",
+      "level": "A1",
+      "decision": "confirmed-current",
+      "previous": {
+        "id": "w-a1-18",
+        "level": "A1",
+        "format": "brief",
+        "titleDe": "E-Mail an den Lehrer: Frage zur Hausaufgabe",
+        "titleAr": "رسالة إلى المعلم: سؤال عن الواجب",
+        "taskDe": "Sie verstehen die Hausaufgabe nicht. Schreiben Sie eine kurze E-Mail an Ihren Lehrer Herrn Müller (ca. 50 Wörter): Entschuldigen Sie sich, erklären Sie das Problem und bitten Sie um Hilfe.",
+        "taskAr": "لا تفهم الواجب المنزلي. اكتب رسالة قصيرة إلى معلمك السيد مولر (نحو 50 كلمة): اعتذر، اشرح المشكلة، واطلب المساعدة.",
+        "criteria": [
+          "تحية مؤدبة (Sehr geehrter Herr Müller,)",
+          "المشكلة بجملة واحدة",
+          "طلب مهذّب واحد"
+        ],
+        "sample": "Sehr geehrter Herr Müller,\n\nentschuldigen Sie bitte. Ich verstehe die Hausaufgabe auf Seite 30 nicht. Die Übung 2 ist schwer für mich. Können Sie mir bitte helfen? Ich komme gern nach dem Kurs zu Ihnen. Ich übe jeden Tag zu Hause. Vielen Dank!\n\nMit freundlichen Grüßen\nOmar Haddad",
+        "noteAr": [
+          "تحديد الصفحة والتمرين يجعل السؤال قابلًا للإجابة فورًا",
+          "عرض الحضور بعد الدرس (nach dem Kurs) — طلب صغير مؤدب"
+        ],
+        "zielWort": 50
+      },
+      "current": {
+        "id": "w-a1-18",
+        "level": "A1",
+        "format": "brief",
+        "titleDe": "E-Mail an den Lehrer: Frage zur Hausaufgabe",
+        "titleAr": "رسالة إلى المعلم: سؤال عن الواجب",
+        "taskDe": "Sie verstehen die Hausaufgabe nicht. Schreiben Sie eine kurze E-Mail an Ihren Lehrer Herrn Müller (ca. 50 Wörter): Entschuldigen Sie sich, erklären Sie das Problem und bitten Sie um Hilfe.",
+        "taskAr": "لا تفهم الواجب المنزلي. اكتب رسالة قصيرة إلى معلمك السيد مولر (نحو 50 كلمة): اعتذر، اشرح المشكلة، واطلب المساعدة.",
+        "criteria": [
+          "تحية مؤدبة (Sehr geehrter Herr Müller,)",
+          "المشكلة بجملة واحدة",
+          "طلب مهذّب واحد"
+        ],
+        "sample": "Sehr geehrter Herr Müller,\n\nentschuldigen Sie bitte. Ich verstehe die Hausaufgabe auf Seite 30 nicht. Die Übung 2 ist schwer für mich. Können Sie mir bitte helfen? Ich komme gern nach dem Kurs zu Ihnen. Ich übe jeden Tag zu Hause. Vielen Dank!\n\nMit freundlichen Grüßen\nOmar Haddad",
+        "noteAr": [
+          "تحديد الصفحة والتمرين يجعل السؤال قابلًا للإجابة فورًا",
+          "عرض الحضور بعد الدرس (nach dem Kurs) — طلب صغير مؤدب"
+        ],
+        "zielWort": 50
+      }
+    },
+    {
+      "id": "w-a1-19",
+      "level": "A1",
+      "decision": "confirmed-current",
+      "previous": {
+        "id": "w-a1-19",
+        "level": "A1",
+        "format": "frei",
+        "titleDe": "Glückwunschkarte zum Geburtstag",
+        "titleAr": "بطاقة تهنئة بعيد ميلاد",
+        "taskDe": "Ihre Freundin hat Geburtstag. Schreiben Sie eine Glückwunschkarte (ca. 35 Wörter): Gratulieren Sie ihr und wünschen Sie ihr etwas Gutes.",
+        "taskAr": "صديقتك عندها عيد ميلاد. اكتب بطاقة تهنئة (نحو 35 كلمة): هنّئها وتمنَّ لها شيئًا طيبًا.",
+        "criteria": [
+          "تهنئة مباشرة (Alles Gute zum Geburtstag)",
+          "أمنيتان بسيطتان (Gesundheit/Glück)",
+          "ختام ودود"
+        ],
+        "sample": "Liebe Amira,\n\nalles Gute zum Geburtstag! Ich wünsche dir Gesundheit, Glück und viel Spaß. Du bist eine tolle Freundin. Feiere schön mit deiner Familie!\n\nHab einen schönen Tag mit viel Kuchen und Musik! Deine Sara",
+        "noteAr": [
+          "أمنيات بأسماء بسيطة صحيحة (Gesundheit, Glück, Spaß)",
+          "جملة وصف ودودة (tolle Freundin) تختم بصدق"
+        ],
+        "zielWort": 35
+      },
+      "current": {
+        "id": "w-a1-19",
+        "level": "A1",
+        "format": "frei",
+        "titleDe": "Glückwunschkarte zum Geburtstag",
+        "titleAr": "بطاقة تهنئة بعيد ميلاد",
+        "taskDe": "Ihre Freundin hat Geburtstag. Schreiben Sie eine Glückwunschkarte (ca. 35 Wörter): Gratulieren Sie ihr und wünschen Sie ihr etwas Gutes.",
+        "taskAr": "صديقتك عندها عيد ميلاد. اكتب بطاقة تهنئة (نحو 35 كلمة): هنّئها وتمنَّ لها شيئًا طيبًا.",
+        "criteria": [
+          "تهنئة مباشرة (Alles Gute zum Geburtstag)",
+          "أمنيتان بسيطتان (Gesundheit/Glück)",
+          "ختام ودود"
+        ],
+        "sample": "Liebe Amira,\n\nalles Gute zum Geburtstag! Ich wünsche dir Gesundheit, Glück und viel Spaß. Du bist eine tolle Freundin. Feiere schön mit deiner Familie!\n\nHab einen schönen Tag mit viel Kuchen und Musik! Deine Sara",
+        "noteAr": [
+          "أمنيات بأسماء بسيطة صحيحة (Gesundheit, Glück, Spaß)",
+          "جملة وصف ودودة (tolle Freundin) تختم بصدق"
+        ],
+        "zielWort": 35
+      }
+    }
+  ]
+}

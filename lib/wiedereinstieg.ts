@@ -79,9 +79,10 @@ export function resumeBedarf(p: Progress, now = new Date()): boolean {
 export function resumePlan(plan: DayPlan, p: Progress, now = new Date()): DayPlan {
   if (!resumeZustand(p, now).aktiv) return plan;
   const kritisch = plan.tasks.filter((t) => t.mandatory || t.exam || t.kind === "wiederholen");
-  const tasks = kritisch.length > 0
+  const tasks = (kritisch.length > 0
     ? kritisch
-    : [...plan.tasks].sort((a, b) => a.minutes - b.minutes).slice(0, 1);
+    : [...plan.tasks].sort((a, b) => a.minutes - b.minutes).slice(0, 1))
+    .map((task) => ({ ...task, path: "core" as const }));
   return {
     ...plan,
     tasks,

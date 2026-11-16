@@ -1,0 +1,557 @@
+{
+  "schema": "wegb2-reviewed-vocab-posinfo-v1",
+  "reviewedAt": "2026-11-04",
+  "scope": "110 internal manual corrections from PA-034; this fixture prevents regression and is not an external linguistic sign-off.",
+  "entries": [
+    {
+      "id": "v838",
+      "de": "nachweisen",
+      "posInfo": "weist nach, wies nach, hat nachgewiesen"
+    },
+    {
+      "id": "v845",
+      "de": "zulassen",
+      "posInfo": "lässt zu, ließ zu, hat zugelassen"
+    },
+    {
+      "id": "v856",
+      "de": "durchfallen",
+      "posInfo": "fällt durch, fiel durch, ist durchgefallen"
+    },
+    {
+      "id": "v857",
+      "de": "zurücktreten",
+      "posInfo": "tritt zurück, trat zurück, ist zurückgetreten"
+    },
+    {
+      "id": "v860",
+      "de": "sich einschreiben",
+      "posInfo": "schreibt sich ein, schrieb sich ein, hat sich eingeschrieben"
+    },
+    {
+      "id": "v878",
+      "de": "unterbrechen",
+      "posInfo": "unterbricht, unterbrach, hat unterbrochen"
+    },
+    {
+      "id": "v1020",
+      "de": "beitreten",
+      "posInfo": "tritt bei, trat bei, ist beigetreten"
+    },
+    {
+      "id": "v1022",
+      "de": "austreten",
+      "posInfo": "tritt aus, trat aus, ist ausgetreten"
+    },
+    {
+      "id": "v1395",
+      "de": "gedenken",
+      "posInfo": "gedenkt, gedachte, hat gedacht"
+    },
+    {
+      "id": "vw-a1sta-022",
+      "de": "ankommen",
+      "posInfo": "kommt an, kam an, ist angekommen"
+    },
+    {
+      "id": "r311a1-051",
+      "de": "mitnehmen",
+      "posInfo": "nimmt mit, nahm mit, hat mitgenommen"
+    },
+    {
+      "id": "vw-a2arb-038",
+      "de": "bestehen",
+      "posInfo": "besteht, bestand, hat bestanden"
+    },
+    {
+      "id": "vx-haus--028",
+      "de": "lesen",
+      "posInfo": "liest, las, hat gelesen"
+    },
+    {
+      "id": "vx-haus--029",
+      "de": "schreiben",
+      "posInfo": "schreibt, schrieb, hat geschrieben"
+    },
+    {
+      "id": "vx-haus--032",
+      "de": "gehen",
+      "posInfo": "geht, ging, ist gegangen"
+    },
+    {
+      "id": "vx-haus--034",
+      "de": "geben",
+      "posInfo": "gibt, gab, hat gegeben"
+    },
+    {
+      "id": "vx-haus--035",
+      "de": "nehmen",
+      "posInfo": "nimmt, nahm, hat genommen"
+    },
+    {
+      "id": "vx-haus--042",
+      "de": "denken",
+      "posInfo": "denkt, dachte, hat gedacht"
+    },
+    {
+      "id": "vx-haus--045",
+      "de": "schließen",
+      "posInfo": "schließt, schloss, hat geschlossen"
+    },
+    {
+      "id": "vy-leben-045",
+      "de": "abnehmen",
+      "posInfo": "nimmt ab, nahm ab, hat abgenommen"
+    },
+    {
+      "id": "vy-leben-046",
+      "de": "zunehmen",
+      "posInfo": "nimmt zu, nahm zu, hat zugenommen"
+    },
+    {
+      "id": "vz-welt-b-037",
+      "de": "fallen",
+      "posInfo": "fällt, fiel, ist gefallen"
+    },
+    {
+      "id": "vz-welt-b-040",
+      "de": "mitkommen",
+      "posInfo": "kommt mit, kam mit, ist mitgekommen"
+    },
+    {
+      "id": "vz-welt-b-041",
+      "de": "zurückkommen",
+      "posInfo": "kommt zurück, kam zurück, ist zurückgekommen"
+    },
+    {
+      "id": "vz-welt-b-042",
+      "de": "weggehen",
+      "posInfo": "geht weg, ging weg, ist weggegangen"
+    },
+    {
+      "id": "vz-schrei-026",
+      "de": "teilnehmen",
+      "posInfo": "nimmt teil, nahm teil, hat teilgenommen"
+    },
+    {
+      "id": "vc-mensc-802",
+      "de": "sich verlassen auf",
+      "posInfo": "verlässt sich auf, verließ sich auf, hat sich auf ... verlassen"
+    },
+    {
+      "id": "vc-medien-031",
+      "de": "denken an",
+      "posInfo": "denkt an, dachte an, hat an ... gedacht"
+    },
+    {
+      "id": "ve-erzaehl-020",
+      "de": "sich entwickeln",
+      "posInfo": "entwickelt sich, entwickelte sich, hat sich entwickelt"
+    },
+    {
+      "id": "r312a2-165",
+      "de": "ausgehen",
+      "posInfo": "geht aus, ging aus, ist ausgegangen"
+    },
+    {
+      "id": "vf-kultd-304",
+      "de": "abgeben",
+      "posInfo": "gibt ab, gab ab, hat abgegeben"
+    },
+    {
+      "id": "vf-kultd-309",
+      "de": "aufgeben",
+      "posInfo": "gibt auf, gab auf, hat aufgegeben"
+    },
+    {
+      "id": "vg-arbeit--005",
+      "de": "sich weiterentwickeln",
+      "posInfo": "entwickelt sich weiter, entwickelte sich weiter, hat sich weiterentwickelt"
+    },
+    {
+      "id": "vh-technik-022",
+      "de": "zunehmen an",
+      "posInfo": "nimmt zu, nahm zu, hat zugenommen"
+    },
+    {
+      "id": "vh-technik-023",
+      "de": "abnehmen an",
+      "posInfo": "nimmt ab, nahm ab, hat abgenommen"
+    },
+    {
+      "id": "vi-funktio-003",
+      "de": "bestehen aus",
+      "posInfo": "besteht aus, bestand aus, hat aus ... bestanden"
+    },
+    {
+      "id": "vi-funktio-004",
+      "de": "bestehen auf",
+      "posInfo": "besteht auf, bestand auf, hat auf ... bestanden"
+    },
+    {
+      "id": "vi-funktio-008",
+      "de": "teilnehmen an",
+      "posInfo": "nimmt teil, nahm teil, hat teilgenommen"
+    },
+    {
+      "id": "vi-funktio-009",
+      "de": "hinweisen auf",
+      "posInfo": "weist hin, wies hin, hat hingewiesen"
+    },
+    {
+      "id": "vi-funktio-015",
+      "de": "sich eignen für",
+      "posInfo": "eignet sich, eignete sich, hat sich geeignet"
+    },
+    {
+      "id": "vi-funktio-016",
+      "de": "in Kauf nehmen",
+      "posInfo": "nimmt in Kauf, nahm in Kauf, hat in Kauf genommen"
+    },
+    {
+      "id": "vi-funktio-017",
+      "de": "zur Verfügung stellen",
+      "posInfo": "stellt zur Verfügung, stellte zur Verfügung, hat zur Verfügung gestellt"
+    },
+    {
+      "id": "vi-funktio-018",
+      "de": "in Anspruch nehmen",
+      "posInfo": "nimmt in Anspruch, nahm in Anspruch, hat in Anspruch genommen"
+    },
+    {
+      "id": "vi-funktio-022",
+      "de": "in Frage kommen",
+      "posInfo": "kommt in Frage, kam in Frage, ist in Frage gekommen"
+    },
+    {
+      "id": "vi-funkv-706",
+      "de": "in Betracht ziehen",
+      "posInfo": "zieht in Betracht, zog in Betracht, hat in Betracht gezogen"
+    },
+    {
+      "id": "vi-funkv-709",
+      "de": "zur Sprache bringen",
+      "posInfo": "bringt zur Sprache, brachte zur Sprache, hat zur Sprache gebracht"
+    },
+    {
+      "id": "vk-b1x-025",
+      "de": "teilnehmen am Wettbewerb",
+      "posInfo": "nimmt am Wettbewerb teil, nahm am Wettbewerb teil, hat am Wettbewerb teilgenommen"
+    },
+    {
+      "id": "vm-b1z-018",
+      "de": "in Verzug geraten",
+      "posInfo": "gerät in Verzug, geriet in Verzug, ist in Verzug geraten"
+    },
+    {
+      "id": "vm-b1z-028",
+      "de": "auf etwas hinauslaufen",
+      "posInfo": "läuft auf etwas hinaus, lief auf etwas hinaus, ist auf etwas hinausgelaufen"
+    },
+    {
+      "id": "vm-b1z-030",
+      "de": "auf jemanden zugehen",
+      "posInfo": "geht auf jemanden zu, ging auf jemanden zu, ist auf jemanden zugegangen"
+    },
+    {
+      "id": "vm-b1z-034",
+      "de": "auf dem Laufenden bleiben",
+      "posInfo": "bleibt auf dem Laufenden, blieb auf dem Laufenden, ist auf dem Laufenden geblieben"
+    },
+    {
+      "id": "vm-b1z-037",
+      "de": "zur Sprache kommen",
+      "posInfo": "kommt zur Sprache, kam zur Sprache, ist zur Sprache gekommen"
+    },
+    {
+      "id": "vp-b1u-027",
+      "de": "aufschreiben",
+      "posInfo": "schreibt auf, schrieb auf, hat aufgeschrieben"
+    },
+    {
+      "id": "vp-b1u-028",
+      "de": "unterschreiben lassen",
+      "posInfo": "lässt unterschreiben, ließ unterschreiben, hat unterschreiben lassen"
+    },
+    {
+      "id": "vp-b1u-029",
+      "de": "zuschreiben",
+      "posInfo": "schreibt zu, schrieb zu, hat zugeschrieben"
+    },
+    {
+      "id": "vp-b1u-030",
+      "de": "bestehen bleiben",
+      "posInfo": "bleibt bestehen, blieb bestehen, ist bestehen geblieben"
+    },
+    {
+      "id": "vs-b1r-029",
+      "de": "sich verlassen können auf",
+      "posInfo": "kann sich auf ... verlassen, konnte sich auf ... verlassen, hat sich auf ... verlassen können"
+    },
+    {
+      "id": "vu-b1p-024",
+      "de": "aufkommen für",
+      "posInfo": "kommt für ... auf, kam für ... auf, ist für ... aufgekommen"
+    },
+    {
+      "id": "vu-b1p-025",
+      "de": "hinweisen darauf, dass",
+      "posInfo": "weist darauf hin, wies darauf hin, hat darauf hingewiesen"
+    },
+    {
+      "id": "vu-b1p-031",
+      "de": "in Kraft treten",
+      "posInfo": "tritt in Kraft, trat in Kraft, ist in Kraft getreten"
+    },
+    {
+      "id": "vu-b1p-032",
+      "de": "zur Folge haben",
+      "posInfo": "hat zur Folge, hatte zur Folge, hat zur Folge gehabt"
+    },
+    {
+      "id": "vu-b1p-034",
+      "de": "zur Kenntnis nehmen",
+      "posInfo": "nimmt zur Kenntnis, nahm zur Kenntnis, hat zur Kenntnis genommen"
+    },
+    {
+      "id": "vv-verwal-014",
+      "de": "in Kraft bleiben",
+      "posInfo": "bleibt in Kraft, blieb in Kraft, ist in Kraft geblieben"
+    },
+    {
+      "id": "vv-gefueh-016",
+      "de": "zugeben",
+      "posInfo": "gibt zu, gab zu, hat zugegeben"
+    },
+    {
+      "id": "vv-gefueh-019",
+      "de": "offenlassen",
+      "posInfo": "lässt offen, ließ offen, hat offengelassen"
+    },
+    {
+      "id": "a0-klassenzimmer-017",
+      "de": "schließen",
+      "posInfo": "schließt, schloss, hat geschlossen"
+    },
+    {
+      "id": "a0-klassenzimmer-018",
+      "de": "schreiben",
+      "posInfo": "schreibt, schrieb, hat geschrieben"
+    },
+    {
+      "id": "a0-klassenzimmer-019",
+      "de": "lesen",
+      "posInfo": "liest, las, hat gelesen"
+    },
+    {
+      "id": "j01-arbeit-vertieft-008",
+      "de": "sich eignen",
+      "posInfo": "eignet sich, eignete sich, hat sich geeignet"
+    },
+    {
+      "id": "j01-arbeit-vertieft-034",
+      "de": "vertreten",
+      "posInfo": "vertritt, vertrat, hat vertreten"
+    },
+    {
+      "id": "j01-arbeit-vertieft-039",
+      "de": "ausfallen",
+      "posInfo": "fällt aus, fiel aus, ist ausgefallen"
+    },
+    {
+      "id": "j04-gesundheit-pflege-052",
+      "de": "einnehmen",
+      "posInfo": "nimmt ein, nahm ein, hat eingenommen"
+    },
+    {
+      "id": "j05-bildung-wissenschaft-031",
+      "de": "annehmen",
+      "posInfo": "nimmt an, nahm an, hat angenommen"
+    },
+    {
+      "id": "j05-bildung-wissenschaft-037",
+      "de": "sich aneignen",
+      "posInfo": "eignet sich an, eignete sich an, hat sich angeeignet"
+    },
+    {
+      "id": "j07-geld-wirtschaft-036",
+      "de": "ausgeben",
+      "posInfo": "gibt aus, gab aus, hat ausgegeben"
+    },
+    {
+      "id": "j08-gefuehle-beziehungen-036",
+      "de": "auskommen mit",
+      "posInfo": "kommt mit ... aus, kam mit ... aus, ist mit ... ausgekommen"
+    },
+    {
+      "id": "j10-meinung-diskussion-042",
+      "de": "aus etwas schließen",
+      "posInfo": "schließt daraus, schloss daraus, hat daraus geschlossen"
+    },
+    {
+      "id": "j14-kultur-freizeit-040",
+      "de": "vorlesen",
+      "posInfo": "liest vor, las vor, hat vorgelesen"
+    },
+    {
+      "id": "j14-kultur-freizeit-041",
+      "de": "antreten",
+      "posInfo": "tritt an, trat an, ist angetreten"
+    },
+    {
+      "id": "r314b1-004",
+      "de": "abschreiben",
+      "posInfo": "schreibt ab, schrieb ab, hat abgeschrieben"
+    },
+    {
+      "id": "r314b1-034",
+      "de": "anhaben",
+      "posInfo": "hat an, hatte an, hat angehabt"
+    },
+    {
+      "id": "r314b1-038",
+      "de": "anschließen",
+      "posInfo": "schließt an, schloss an, hat angeschlossen"
+    },
+    {
+      "id": "r314b1-055",
+      "de": "auffallen",
+      "posInfo": "fällt auf, fiel auf, ist aufgefallen"
+    },
+    {
+      "id": "r314b1-062",
+      "de": "aufnehmen",
+      "posInfo": "nimmt auf, nahm auf, hat aufgenommen"
+    },
+    {
+      "id": "r314b1-076",
+      "de": "ausschließen",
+      "posInfo": "schließt aus, schloss aus, hat ausgeschlossen"
+    },
+    {
+      "id": "r314b1-117",
+      "de": "bekommen",
+      "posInfo": "bekommt, bekam, hat bekommen"
+    },
+    {
+      "id": "r314b1-132",
+      "de": "beschließen",
+      "posInfo": "beschließt, beschloss, hat beschlossen"
+    },
+    {
+      "id": "r314b1-159",
+      "de": "brechen",
+      "posInfo": "bricht, brach, hat gebrochen"
+    },
+    {
+      "id": "r315b1-050",
+      "de": "einbrechen",
+      "posInfo": "bricht ein, brach ein, ist eingebrochen"
+    },
+    {
+      "id": "r315b1-054",
+      "de": "einfallen",
+      "posInfo": "fällt ein, fiel ein, ist eingefallen"
+    },
+    {
+      "id": "r315b1-067",
+      "de": "eintreten",
+      "posInfo": "tritt ein, trat ein, ist eingetreten"
+    },
+    {
+      "id": "r315b1-083",
+      "de": "entgegenkommen",
+      "posInfo": "kommt entgegen, kam entgegen, ist entgegengekommen"
+    },
+    {
+      "id": "r315b1-086",
+      "de": "entlassen",
+      "posInfo": "entlässt, entließ, hat entlassen"
+    },
+    {
+      "id": "r315b1-090",
+      "de": "entwickeln",
+      "posInfo": "entwickelt, entwickelte, hat entwickelt"
+    },
+    {
+      "id": "r315b1-091",
+      "de": "sich ereignen",
+      "posInfo": "ereignet sich, ereignete sich, hat sich ereignet"
+    },
+    {
+      "id": "r316b1-023",
+      "de": "festnehmen",
+      "posInfo": "nimmt fest, nahm fest, hat festgenommen"
+    },
+    {
+      "id": "r316b1-071",
+      "de": "gefallen",
+      "posInfo": "gefällt, gefiel, hat gefallen"
+    },
+    {
+      "id": "r316b1-112",
+      "de": "haben",
+      "posInfo": "hat, hatte, hat gehabt"
+    },
+    {
+      "id": "r316b1-140",
+      "de": "hinterlassen",
+      "posInfo": "hinterlässt, hinterließ, hat hinterlassen"
+    },
+    {
+      "id": "r316b1-142",
+      "de": "hinweisen",
+      "posInfo": "weist hin, wies hin, hat hingewiesen"
+    },
+    {
+      "id": "r317b1-114",
+      "de": "lassen",
+      "posInfo": "lässt, ließ, hat gelassen"
+    },
+    {
+      "id": "r318b1-054",
+      "de": "nachdenken",
+      "posInfo": "denkt nach, dachte nach, hat nachgedacht"
+    },
+    {
+      "id": "r322b1-046",
+      "de": "treten",
+      "posInfo": "tritt, trat, hat getreten"
+    },
+    {
+      "id": "r322b1-070",
+      "de": "mit etwas umgehen",
+      "posInfo": "geht mit ... um, ging mit ... um, ist mit ... umgegangen"
+    },
+    {
+      "id": "r322b1-084",
+      "de": "unterlassen",
+      "posInfo": "unterlässt, unterließ, hat unterlassen"
+    },
+    {
+      "id": "r323b1-024",
+      "de": "verlassen",
+      "posInfo": "verlässt, verließ, hat verlassen"
+    },
+    {
+      "id": "r323b1-061",
+      "de": "vorhaben",
+      "posInfo": "hat vor, hatte vor, hat vorgehabt"
+    },
+    {
+      "id": "r323b1-064",
+      "de": "vorkommen",
+      "posInfo": "kommt vor, kam vor, ist vorgekommen"
+    },
+    {
+      "id": "r325b1-025",
+      "de": "zugehen",
+      "posInfo": "geht zu, ging zu, ist zugegangen"
+    },
+    {
+      "id": "r325b1-030",
+      "de": "zurechtkommen",
+      "posInfo": "kommt zurecht, kam zurecht, ist zurechtgekommen"
+    }
+  ]
+}

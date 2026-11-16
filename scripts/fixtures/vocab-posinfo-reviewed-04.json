@@ -1,0 +1,728 @@
+{
+  "schema": "wegb2-reviewed-vocab-posinfo-batch-v1",
+  "batch": "PA-034-04",
+  "reviewedAt": "2026-11-04",
+  "scope": "90 additional high-confidence single-head principal-part corrections after item-by-item contextual internal review; candidate generation and suffix grouping are not external linguistic sign-off.",
+  "entries": [
+    {
+      "id": "vb-abschl-025",
+      "deck": "a1-menschen-abschluss",
+      "level": "A1",
+      "de": "zurückfahren",
+      "previousPosInfo": "rückfahrt zu, rückfahrte zu, ist zugerückfahrt",
+      "posInfo": "fährt zurück, fuhr zurück, ist zurückgefahren"
+    },
+    {
+      "id": "r311a1-036",
+      "deck": "a1-modal-ort",
+      "level": "A1",
+      "de": "telefonieren",
+      "previousPosInfo": "telefoniert, telefonierte, hat getelefoniert",
+      "posInfo": "telefoniert, telefonierte, hat telefoniert"
+    },
+    {
+      "id": "va-modort-101",
+      "deck": "a1-modal-ort",
+      "level": "A1",
+      "de": "funktionieren",
+      "previousPosInfo": "funktioniert, funktionierte, hat gefunktioniert",
+      "posInfo": "funktioniert, funktionierte, hat funktioniert"
+    },
+    {
+      "id": "vz-welt-b-015",
+      "deck": "a1-welt-beruf",
+      "level": "A1",
+      "de": "buchstabieren",
+      "previousPosInfo": "buchstabiert, buchstabierte, hat gebuchstabiert",
+      "posInfo": "buchstabiert, buchstabierte, hat buchstabiert"
+    },
+    {
+      "id": "vz-welt-b-031",
+      "deck": "a1-welt-beruf",
+      "level": "A1",
+      "de": "sitzen",
+      "previousPosInfo": "sitzt, sitzte, hat gesitzt",
+      "posInfo": "sitzt, saß, hat gesessen"
+    },
+    {
+      "id": "vz-welt-b-038",
+      "deck": "a1-welt-beruf",
+      "level": "A1",
+      "de": "steigen",
+      "previousPosInfo": "steigt, steigte, ist gesteigt",
+      "posInfo": "steigt, stieg, ist gestiegen"
+    },
+    {
+      "id": "vw-a2all-008",
+      "deck": "a2-alltag-dienste",
+      "level": "A2",
+      "de": "reparieren",
+      "previousPosInfo": "repariert, reparierte, hat gerepariert",
+      "posInfo": "repariert, reparierte, hat repariert"
+    },
+    {
+      "id": "vw-a2all-078",
+      "deck": "a2-alltag-dienste",
+      "level": "A2",
+      "de": "vorschlagen",
+      "previousPosInfo": "schlagt vor, schlagte vor, hat vorgeschlagt",
+      "posInfo": "schlägt vor, schlug vor, hat vorgeschlagen"
+    },
+    {
+      "id": "ve-umwelt--014",
+      "deck": "a2-arbeit-umwelt",
+      "level": "A2",
+      "de": "vermeiden",
+      "previousPosInfo": "vermeidet, vermeidete, hat vermeidt",
+      "posInfo": "vermeidet, vermied, hat vermieden"
+    },
+    {
+      "id": "r312a2-149",
+      "deck": "a2-erzaehlen-zeit",
+      "level": "A2",
+      "de": "passieren",
+      "previousPosInfo": "passiert, passierte, hat gepassiert",
+      "posInfo": "passiert, passierte, ist passiert"
+    },
+    {
+      "id": "r312a2-150",
+      "deck": "a2-erzaehlen-zeit",
+      "level": "A2",
+      "de": "stattfinden",
+      "previousPosInfo": "stattfindet, stattfindete, hat gestattfindt",
+      "posInfo": "findet statt, fand statt, hat stattgefunden"
+    },
+    {
+      "id": "r312a2-124",
+      "deck": "a2-geld-gesundheit",
+      "level": "A2",
+      "de": "wehtun",
+      "previousPosInfo": "wehtut, wehtute, hat gewehtut",
+      "posInfo": "tut weh, tat weh, hat wehgetan"
+    },
+    {
+      "id": "r312a2-125",
+      "deck": "a2-geld-gesundheit",
+      "level": "A2",
+      "de": "sterben",
+      "previousPosInfo": "sterbt, sterbte, ist gesterbt",
+      "posInfo": "stirbt, starb, ist gestorben"
+    },
+    {
+      "id": "vd-geld-k-020",
+      "deck": "a2-geld-gesundheit",
+      "level": "A2",
+      "de": "überziehen",
+      "previousPosInfo": "zieht über, ziehte über, ist überzieht",
+      "posInfo": "überzieht, überzog, hat überzogen"
+    },
+    {
+      "id": "r312a2-194",
+      "deck": "a2-kultur-digital",
+      "level": "A2",
+      "de": "fotografieren",
+      "previousPosInfo": "fotografiert, fotografierte, hat gefotografiert",
+      "posInfo": "fotografiert, fotografierte, hat fotografiert"
+    },
+    {
+      "id": "vf-kultd-318",
+      "deck": "a2-kultur-digital",
+      "level": "A2",
+      "de": "schwarzfahren",
+      "previousPosInfo": "schwarzfahrt, schwarzfahrte, ist geschwarzfahrt",
+      "posInfo": "fährt schwarz, fuhr schwarz, ist schwarzgefahren"
+    },
+    {
+      "id": "vy-leben-010",
+      "deck": "a2-leben-technik",
+      "level": "A2",
+      "de": "vergleichen",
+      "previousPosInfo": "vergleicht, vergleichte, hat vergleicht",
+      "posInfo": "vergleicht, verglich, hat verglichen"
+    },
+    {
+      "id": "vc-medien-013",
+      "deck": "a2-medien-bildung",
+      "level": "A2",
+      "de": "kommentieren",
+      "previousPosInfo": "kommentiert, kommentierte, ist gekommentiert",
+      "posInfo": "kommentiert, kommentierte, hat kommentiert"
+    },
+    {
+      "id": "vc-reise-805",
+      "deck": "a2-reise-feste",
+      "level": "A2",
+      "de": "probieren",
+      "previousPosInfo": "probiert, probierte, hat geprobiert",
+      "posInfo": "probiert, probierte, hat probiert"
+    },
+    {
+      "id": "r312a2-057",
+      "deck": "a2-schreiben-dienste",
+      "level": "A2",
+      "de": "notieren",
+      "previousPosInfo": "notiert, notierte, hat genotiert",
+      "posInfo": "notiert, notierte, hat notiert"
+    },
+    {
+      "id": "r312a2-058",
+      "deck": "a2-schreiben-dienste",
+      "level": "A2",
+      "de": "markieren",
+      "previousPosInfo": "markiert, markierte, hat gemarkiert",
+      "posInfo": "markiert, markierte, hat markiert"
+    },
+    {
+      "id": "vd-wohnen-017",
+      "deck": "a2-wohnen-vertrag",
+      "level": "A2",
+      "de": "streichen",
+      "previousPosInfo": "streicht, streichte, hat gestreicht",
+      "posInfo": "streicht, strich, hat gestrichen"
+    },
+    {
+      "id": "r315b1-013",
+      "deck": "b1-az-d",
+      "level": "B1",
+      "de": "dekorieren",
+      "previousPosInfo": "dekoriert, dekorierte, hat gedekoriert",
+      "posInfo": "dekoriert, dekorierte, hat dekoriert"
+    },
+    {
+      "id": "r315b1-028",
+      "deck": "b1-az-d",
+      "level": "B1",
+      "de": "diskutieren",
+      "previousPosInfo": "diskutiert, diskutierte, hat gediskutiert",
+      "posInfo": "diskutiert, diskutierte, hat diskutiert"
+    },
+    {
+      "id": "r327b1-013",
+      "deck": "b1-az-final",
+      "level": "B1",
+      "de": "rasieren",
+      "previousPosInfo": "rasiert, rasierte, hat gerasiert",
+      "posInfo": "rasiert, rasierte, hat rasiert"
+    },
+    {
+      "id": "r327b1-018",
+      "deck": "b1-az-final",
+      "level": "B1",
+      "de": "stoßen",
+      "previousPosInfo": "stoßt, stoßte, hat gestoßt",
+      "posInfo": "stößt, stieß, hat gestoßen"
+    },
+    {
+      "id": "r327b1-022",
+      "deck": "b1-az-final",
+      "level": "B1",
+      "de": "zwingen",
+      "previousPosInfo": "zwingt, zwingte, hat gezwingt",
+      "posInfo": "zwingt, zwang, hat gezwungen"
+    },
+    {
+      "id": "r316b1-057",
+      "deck": "b1-az-g",
+      "level": "B1",
+      "de": "garantieren",
+      "previousPosInfo": "garantiert, garantierte, hat gegarantiert",
+      "posInfo": "garantiert, garantierte, hat garantiert"
+    },
+    {
+      "id": "r317b1-081",
+      "deck": "b1-az-k",
+      "level": "B1",
+      "de": "kopieren",
+      "previousPosInfo": "kopiert, kopierte, hat gekopiert",
+      "posInfo": "kopiert, kopierte, hat kopiert"
+    },
+    {
+      "id": "r317b1-087",
+      "deck": "b1-az-k",
+      "level": "B1",
+      "de": "korrigieren",
+      "previousPosInfo": "korrigiert, korrigierte, hat gekorrigiert",
+      "posInfo": "korrigiert, korrigierte, hat korrigiert"
+    },
+    {
+      "id": "r318b1-092",
+      "deck": "b1-az-o",
+      "level": "B1",
+      "de": "organisieren",
+      "previousPosInfo": "organisiert, organisierte, hat georganisiert",
+      "posInfo": "organisiert, organisierte, hat organisiert"
+    },
+    {
+      "id": "r318b1-128",
+      "deck": "b1-az-p",
+      "level": "B1",
+      "de": "präsentieren",
+      "previousPosInfo": "präsentiert, präsentierte, hat gepräsentiert",
+      "posInfo": "präsentiert, präsentierte, hat präsentiert"
+    },
+    {
+      "id": "r318b1-132",
+      "deck": "b1-az-p",
+      "level": "B1",
+      "de": "produzieren",
+      "previousPosInfo": "produziert, produzierte, hat geproduziert",
+      "posInfo": "produziert, produzierte, hat produziert"
+    },
+    {
+      "id": "r319b1-016",
+      "deck": "b1-az-qr",
+      "level": "B1",
+      "de": "reagieren",
+      "previousPosInfo": "reagiert, reagierte, hat gereagiert",
+      "posInfo": "reagiert, reagierte, hat reagiert"
+    },
+    {
+      "id": "r319b1-017",
+      "deck": "b1-az-qr",
+      "level": "B1",
+      "de": "realisieren",
+      "previousPosInfo": "realisiert, realisierte, hat gerealisiert",
+      "posInfo": "realisiert, realisierte, hat realisiert"
+    },
+    {
+      "id": "r320b1-010",
+      "deck": "b1-az-s1",
+      "level": "B1",
+      "de": "schalten",
+      "previousPosInfo": "schaltet, schaltete, hat geschaltt",
+      "posInfo": "schaltet, schaltete, hat geschaltet"
+    },
+    {
+      "id": "r320b1-033",
+      "deck": "b1-az-s1",
+      "level": "B1",
+      "de": "schweigen",
+      "previousPosInfo": "schweigt, schweigte, hat geschweigt",
+      "posInfo": "schweigt, schwieg, hat geschwiegen"
+    },
+    {
+      "id": "r321b1-033",
+      "deck": "b1-az-s2",
+      "level": "B1",
+      "de": "stechen",
+      "previousPosInfo": "stecht, stechte, hat gestecht",
+      "posInfo": "sticht, stach, hat gestochen"
+    },
+    {
+      "id": "r321b1-044",
+      "deck": "b1-az-s2",
+      "level": "B1",
+      "de": "stinken",
+      "previousPosInfo": "stinkt, stinkte, hat gestinkt",
+      "posInfo": "stinkt, stank, hat gestunken"
+    },
+    {
+      "id": "r322b1-041",
+      "deck": "b1-az-t",
+      "level": "B1",
+      "de": "transportieren",
+      "previousPosInfo": "transportiert, transportierte, hat getransportiert",
+      "posInfo": "transportiert, transportierte, hat transportiert"
+    },
+    {
+      "id": "r322b1-044",
+      "deck": "b1-az-t",
+      "level": "B1",
+      "de": "treiben",
+      "previousPosInfo": "treibt, treibte, hat getreibt",
+      "posInfo": "treibt, trieb, hat getrieben"
+    },
+    {
+      "id": "r322b1-049",
+      "deck": "b1-az-t",
+      "level": "B1",
+      "de": "tun",
+      "previousPosInfo": "tut, tute, hat getut",
+      "posInfo": "tut, tat, hat getan"
+    },
+    {
+      "id": "r322b1-054",
+      "deck": "b1-az-u",
+      "level": "B1",
+      "de": "überfahren",
+      "previousPosInfo": "fahrt über, fahrte über, ist überfahrt",
+      "posInfo": "überfährt, überfuhr, hat überfahren"
+    },
+    {
+      "id": "r322b1-083",
+      "deck": "b1-az-u",
+      "level": "B1",
+      "de": "unterhalten",
+      "previousPosInfo": "haltet unter, haltete unter, hat unterhaltt",
+      "posInfo": "unterhält, unterhielt, hat unterhalten"
+    },
+    {
+      "id": "r322b1-090",
+      "deck": "b1-az-u",
+      "level": "B1",
+      "de": "unterstreichen",
+      "previousPosInfo": "streicht unter, streichte unter, hat unterstreicht",
+      "posInfo": "unterstreicht, unterstrich, hat unterstrichen"
+    },
+    {
+      "id": "r323b1-008",
+      "deck": "b1-az-v",
+      "level": "B1",
+      "de": "verbrennen",
+      "previousPosInfo": "verbrennt, verbrennte, hat verbrennt",
+      "posInfo": "verbrennt, verbrannte, ist verbrannt"
+    },
+    {
+      "id": "r323b1-009",
+      "deck": "b1-az-v",
+      "level": "B1",
+      "de": "verbringen",
+      "previousPosInfo": "verbringt, verbringte, hat verbringt",
+      "posInfo": "verbringt, verbrachte, hat verbracht"
+    },
+    {
+      "id": "r323b1-033",
+      "deck": "b1-az-v",
+      "level": "B1",
+      "de": "verraten",
+      "previousPosInfo": "verratet, verratete, hat verratt",
+      "posInfo": "verrät, verriet, hat verraten"
+    },
+    {
+      "id": "r325b1-016",
+      "deck": "b1-az-z",
+      "level": "B1",
+      "de": "ziehen",
+      "previousPosInfo": "zieht, ziehte, ist gezieht",
+      "posInfo": "zieht, zog, ist gezogen"
+    },
+    {
+      "id": "r325b1-022",
+      "deck": "b1-az-z",
+      "level": "B1",
+      "de": "zubereiten",
+      "previousPosInfo": "bereitet zu, bereitete zu, hat zugebereitt",
+      "posInfo": "bereitet zu, bereitete zu, hat zubereitet"
+    },
+    {
+      "id": "vh-technik-014",
+      "deck": "b1-gesundheit-technik",
+      "level": "B1",
+      "de": "verbreiten",
+      "previousPosInfo": "verbreitet, verbreitete, hat verbreitt",
+      "posInfo": "verbreitet, verbreitete, hat verbreitet"
+    },
+    {
+      "id": "vp-b1u-026",
+      "deck": "b1-job-auto-praefix",
+      "level": "B1",
+      "de": "verschreiben",
+      "previousPosInfo": "verschreibt, verschreibte, hat verschreibt",
+      "posInfo": "verschreibt, verschrieb, hat verschrieben"
+    },
+    {
+      "id": "vp-b1u-034",
+      "deck": "b1-job-auto-praefix",
+      "level": "B1",
+      "de": "widerstehen",
+      "previousPosInfo": "widersteht, widerstehte, hat gewidersteht",
+      "posInfo": "widersteht, widerstand, hat widerstanden"
+    },
+    {
+      "id": "vg-psyche--020",
+      "deck": "b1-karriere-psyche",
+      "level": "B1",
+      "de": "vorwerfen",
+      "previousPosInfo": "werft vor, werfte vor, hat vorgewerft",
+      "posInfo": "wirft vor, warf vor, hat vorgeworfen"
+    },
+    {
+      "id": "v1439",
+      "deck": "b2-wissenschaft-zukunft",
+      "level": "B2",
+      "de": "interpretieren",
+      "previousPosInfo": "interpretiert, interpretierte, hat geinterpretiert",
+      "posInfo": "interpretiert, interpretierte, hat interpretiert"
+    },
+    {
+      "id": "v935",
+      "deck": "h07-gefuehle-psyche",
+      "level": "B2",
+      "de": "riskieren",
+      "previousPosInfo": "riskiert, riskierte, hat geriskiert",
+      "posInfo": "riskiert, riskierte, hat riskiert"
+    },
+    {
+      "id": "v946",
+      "deck": "h07-gefuehle-psyche",
+      "level": "B2",
+      "de": "ignorieren",
+      "previousPosInfo": "ignoriert, ignorierte, hat geignoriert",
+      "posInfo": "ignoriert, ignorierte, hat ignoriert"
+    },
+    {
+      "id": "v1012",
+      "deck": "h08-sport-freizeit",
+      "level": "B2",
+      "de": "pfeifen",
+      "previousPosInfo": "pfeift, pfeifte, hat gepfeift",
+      "posInfo": "pfeift, pfiff, hat gepfiffen"
+    },
+    {
+      "id": "v978",
+      "deck": "h08-sport-freizeit",
+      "level": "B2",
+      "de": "trainieren",
+      "previousPosInfo": "trainiert, trainierte, hat getrainiert",
+      "posInfo": "trainiert, trainierte, hat trainiert"
+    },
+    {
+      "id": "v994",
+      "deck": "h08-sport-freizeit",
+      "level": "B2",
+      "de": "dosieren",
+      "previousPosInfo": "dosiert, dosierte, hat gedosiert",
+      "posInfo": "dosiert, dosierte, hat dosiert"
+    },
+    {
+      "id": "v1079",
+      "deck": "i01-medien-meinung",
+      "level": "B2",
+      "de": "verschweigen",
+      "previousPosInfo": "verschweigt, verschweigte, hat verschweigt",
+      "posInfo": "verschweigt, verschwieg, hat verschwiegen"
+    },
+    {
+      "id": "v1266",
+      "deck": "i05-ernaehrung-verbraucherschutz",
+      "level": "B2",
+      "de": "zurückrufen",
+      "previousPosInfo": "rückruft zu, rückrufte zu, hat zugerückruft",
+      "posInfo": "ruft zurück, rief zurück, hat zurückgerufen"
+    },
+    {
+      "id": "v1311",
+      "deck": "i06-stadtentwicklung",
+      "level": "B2",
+      "de": "sanieren",
+      "previousPosInfo": "saniert, sanierte, hat gesaniert",
+      "posInfo": "saniert, sanierte, hat saniert"
+    },
+    {
+      "id": "v1353",
+      "deck": "i07-migration-integration",
+      "level": "B2",
+      "de": "integrieren",
+      "previousPosInfo": "integriert, integrierte, hat geintegriert",
+      "posInfo": "integriert, integrierte, hat integriert"
+    },
+    {
+      "id": "v1398",
+      "deck": "i08-erinnerungskultur",
+      "level": "B2",
+      "de": "relativieren",
+      "previousPosInfo": "relativiert, relativierte, hat gerelativiert",
+      "posInfo": "relativiert, relativierte, hat relativiert"
+    },
+    {
+      "id": "j01-arbeit-vertieft-036",
+      "deck": "j01-arbeit-vertieft",
+      "level": "B2",
+      "de": "protokollieren",
+      "previousPosInfo": "protokolliert, protokollierte, hat geprotokolliert",
+      "posInfo": "protokolliert, protokollierte, hat protokolliert"
+    },
+    {
+      "id": "j01-arbeit-vertieft-037",
+      "deck": "j01-arbeit-vertieft",
+      "level": "B2",
+      "de": "delegieren",
+      "previousPosInfo": "delegiert, delegierte, hat gedelegiert",
+      "posInfo": "delegiert, delegierte, hat delegiert"
+    },
+    {
+      "id": "j01-arbeit-vertieft-038",
+      "deck": "j01-arbeit-vertieft",
+      "level": "B2",
+      "de": "priorisieren",
+      "previousPosInfo": "priorisiert, priorisierte, hat gepriorisiert",
+      "posInfo": "priorisiert, priorisierte, hat priorisiert"
+    },
+    {
+      "id": "j03-umwelt-energie-039",
+      "deck": "j03-umwelt-energie",
+      "level": "B2",
+      "de": "reduzieren",
+      "previousPosInfo": "reduziert, reduzierte, hat gereduziert",
+      "posInfo": "reduziert, reduzierte, hat reduziert"
+    },
+    {
+      "id": "j04-gesundheit-pflege-055",
+      "deck": "j04-gesundheit-pflege",
+      "level": "B2",
+      "de": "kontrollieren",
+      "previousPosInfo": "kontrolliert, kontrollierte, hat gekontrolliert",
+      "posInfo": "kontrolliert, kontrollierte, hat kontrolliert"
+    },
+    {
+      "id": "j04-gesundheit-pflege-059",
+      "deck": "j04-gesundheit-pflege",
+      "level": "B2",
+      "de": "verbinden",
+      "previousPosInfo": "verbindet, verbindete, hat verbindt",
+      "posInfo": "verbindet, verband, hat verbunden"
+    },
+    {
+      "id": "j04-gesundheit-pflege-060",
+      "deck": "j04-gesundheit-pflege",
+      "level": "B2",
+      "de": "sterilisieren",
+      "previousPosInfo": "sterilisiert, sterilisierte, hat gesterilisiert",
+      "posInfo": "sterilisiert, sterilisierte, hat sterilisiert"
+    },
+    {
+      "id": "j04-gesundheit-pflege-065",
+      "deck": "j04-gesundheit-pflege",
+      "level": "B2",
+      "de": "mobilisieren",
+      "previousPosInfo": "mobilisiert, mobilisierte, hat gemobilisiert",
+      "posInfo": "mobilisiert, mobilisierte, hat mobilisiert"
+    },
+    {
+      "id": "j04-gesundheit-pflege-068",
+      "deck": "j04-gesundheit-pflege",
+      "level": "B2",
+      "de": "übertragen",
+      "previousPosInfo": "tragt über, tragte über, hat übertragt",
+      "posInfo": "überträgt, übertrug, hat übertragen"
+    },
+    {
+      "id": "j05-bildung-wissenschaft-028",
+      "deck": "j05-bildung-wissenschaft",
+      "level": "B2",
+      "de": "studieren",
+      "previousPosInfo": "studiert, studierte, hat gestudiert",
+      "posInfo": "studiert, studierte, hat studiert"
+    },
+    {
+      "id": "j05-bildung-wissenschaft-033",
+      "deck": "j05-bildung-wissenschaft",
+      "level": "B2",
+      "de": "unterscheiden",
+      "previousPosInfo": "scheidet unter, scheidete unter, hat unterscheidt",
+      "posInfo": "unterscheidet, unterschied, hat unterschieden"
+    },
+    {
+      "id": "j06-medien-digital-041",
+      "deck": "j06-medien-digital",
+      "level": "B2",
+      "de": "manipulieren",
+      "previousPosInfo": "manipuliert, manipulierte, hat gemanipuliert",
+      "posInfo": "manipuliert, manipulierte, hat manipuliert"
+    },
+    {
+      "id": "j06-medien-digital-043",
+      "deck": "j06-medien-digital",
+      "level": "B2",
+      "de": "registrieren",
+      "previousPosInfo": "registriert, registrierte, hat geregistriert",
+      "posInfo": "registriert, registrierte, hat registriert"
+    },
+    {
+      "id": "j06-medien-digital-045",
+      "deck": "j06-medien-digital",
+      "level": "B2",
+      "de": "installieren",
+      "previousPosInfo": "installiert, installierte, hat geinstalliert",
+      "posInfo": "installiert, installierte, hat installiert"
+    },
+    {
+      "id": "j07-geld-wirtschaft-039",
+      "deck": "j07-geld-wirtschaft",
+      "level": "B2",
+      "de": "investieren",
+      "previousPosInfo": "investiert, investierte, hat geinvestiert",
+      "posInfo": "investiert, investierte, hat investiert"
+    },
+    {
+      "id": "j07-geld-wirtschaft-040",
+      "deck": "j07-geld-wirtschaft",
+      "level": "B2",
+      "de": "konkurrieren",
+      "previousPosInfo": "konkurriert, konkurrierte, hat gekonkurriert",
+      "posInfo": "konkurriert, konkurrierte, hat konkurriert"
+    },
+    {
+      "id": "j08-gefuehle-beziehungen-033",
+      "deck": "j08-gefuehle-beziehungen",
+      "level": "B2",
+      "de": "respektieren",
+      "previousPosInfo": "respektiert, respektierte, hat gerespektiert",
+      "posInfo": "respektiert, respektierte, hat respektiert"
+    },
+    {
+      "id": "j09-stadt-wohnen-verkehr-026",
+      "deck": "j09-stadt-wohnen-verkehr",
+      "level": "B2",
+      "de": "stornieren",
+      "previousPosInfo": "storniert, stornierte, hat gestorniert",
+      "posInfo": "storniert, stornierte, hat storniert"
+    },
+    {
+      "id": "j11-alltag-haus-039",
+      "deck": "j11-alltag-haus",
+      "level": "B2",
+      "de": "servieren",
+      "previousPosInfo": "serviert, servierte, hat geserviert",
+      "posInfo": "serviert, servierte, hat serviert"
+    },
+    {
+      "id": "j12-natur-tiere-045",
+      "deck": "j12-natur-tiere",
+      "level": "B2",
+      "de": "wachsen",
+      "previousPosInfo": "wachst, wachste, hat gewachst",
+      "posInfo": "wächst, wuchs, ist gewachsen"
+    },
+    {
+      "id": "j13-koerper-zeit-043",
+      "deck": "j13-koerper-zeit",
+      "level": "B2",
+      "de": "schreien",
+      "previousPosInfo": "schreit, schreite, hat geschreit",
+      "posInfo": "schreit, schrie, hat geschrien"
+    },
+    {
+      "id": "j14-kultur-freizeit-035",
+      "deck": "j14-kultur-freizeit",
+      "level": "B2",
+      "de": "applaudieren",
+      "previousPosInfo": "applaudiert, applaudierte, hat geapplaudiert",
+      "posInfo": "applaudiert, applaudierte, hat applaudiert"
+    },
+    {
+      "id": "j14-kultur-freizeit-039",
+      "deck": "j14-kultur-freizeit",
+      "level": "B2",
+      "de": "komponieren",
+      "previousPosInfo": "komponiert, komponierte, hat gekomponiert",
+      "posInfo": "komponiert, komponierte, hat komponiert"
+    },
+    {
+      "id": "j15-berufe-dienste-034",
+      "deck": "j15-berufe-dienste",
+      "level": "B2",
+      "de": "weiterverbinden",
+      "previousPosInfo": "verbindet weiter, verbindete weiter, hat weitergeverbindt",
+      "posInfo": "verbindet weiter, verband weiter, hat weiterverbunden"
+    },
+    {
+      "id": "j15-berufe-dienste-036",
+      "deck": "j15-berufe-dienste",
+      "level": "B2",
+      "de": "montieren",
+      "previousPosInfo": "montiert, montierte, hat gemontiert",
+      "posInfo": "montiert, montierte, hat montiert"
+    }
+  ]
+}

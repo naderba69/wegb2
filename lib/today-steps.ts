@@ -1,4 +1,5 @@
 import type { DayTask, TaskResult } from "@/lib/types";
+import { isCoreTask } from "@/lib/day-path";
 
 /** المحطات البصرية الخمس لليوم الموحّد. */
 export type TodayStepId = 1 | 2 | 3 | 4 | 5;
@@ -44,7 +45,8 @@ export function todayStepStatuses(
   wurdeAbgegeben: (task: DayTask) => boolean,
   istRitualGesperrt: (index: number) => boolean,
 ): Map<TodayStepId, TodayStepStatus> {
-  const gruppen = groupTasksByTodayStep(tasks);
+  // التعميق يبقى ظاهراً داخل محطته، لكنه لا يقفل تقدّم المسار الأساسي.
+  const gruppen = groupTasksByTodayStep(tasks.filter(isCoreTask));
   const status = new Map<TodayStepId, TodayStepStatus>();
   let offeneStationDavor = false;
 

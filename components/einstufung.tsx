@@ -1,22 +1,28 @@
 "use client";
 /**
- * 🪪 M3/R183 — واجهة التشخيص التكيّفي: أربع مهارات متتابعة، إجابة تُقفل
- * عند النقر بلا كشفٍ فوري (حتى لا يتأثر الأداء بالتعلّم أثناء الاختبار)،
- * ثم خلاصة بكلّ مهارة ويوم الدخول الآمن مع زرّ تطبيقٍ صريح.
+ * 🪪 M3/R183/PA-014 — فرز دخول تكيّفي لأربع حزم استقبال/صيغة.
+ * أربعة مصادر لكل مستوى وعتبة 3/4 تمنع صعود تخمين واحد. لا كشف فوري،
+ * ولا عينة كتابة/تحدث؛ الخلاصة اقتراح موضع داخلي لا حكم CEFR.
  */
 import { lokalesDatum } from "@/lib/datum";
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import { useProgress } from "@/lib/store";
 import {
+  EINSTUFUNG_BESTANDEN_AB, EINSTUFUNG_ITEMS_PRO_STUFE, EINSTUFUNG_SCOPE,
   EINSTUFUNG_SKILLS, einstufungStart, einstufungAktuell, einstufungAntwort,
-  einstiegsVorschlag, type EinstufungsSkill, type EinstufungsLauf,
+  einstufungsBandErgebnisse, einstiegsVorschlag, type EinstufungsBandErgebnis,
+  type EinstufungsSkill, type EinstufungsLauf,
 } from "@/lib/einstufung";
 import type { Level } from "@/lib/types";
 import { speakDe } from "@/lib/speech";
 
 const SKILL_AR: Record<EinstufungsSkill, string> = {
   lesen: "📖 القراءة", hoeren: "🎧 الاستماع", grammatik: "🧩 القواعد", wortschatz: "🗂️ المفردات",
+};
+type EinstufungsProtokoll = {
+  bands: EinstufungsBandErgebnis[];
+  items: EinstufungsLauf["antworten"];
 };
 
 export function EinstufungTest() {
@@ -25,6 +31,7 @@ export function EinstufungTest() {
   const [skillIdx, setSkillIdx] = useState(0);
   const [lauf, setLauf] = useState<EinstufungsLauf>(() => einstufungStart("lesen"));
   const [ergebnisse, setErgebnisse] = useState<Partial<Record<EinstufungsSkill, Level>>>({});
+  const [protokolle, setProtokolle] = useState<Partial<Record<EinstufungsSkill, EinstufungsProtokoll>>>({});
   const [angewandt, setAngewandt] = useState(false);
 
   const skill = EINSTUFUNG_SKILLS[skillIdx];
@@ -38,6 +45,7 @@ export function EinstufungTest() {
 
   const starten = () => {
     setErgebnisse({});
+    setProtokolle({});
     setSkillIdx(0);
     setLauf(einstufungStart(EINSTUFUNG_SKILLS[0]));
     setAngwandtF();
@@ -51,6 +59,10 @@ export function EinstufungTest() {
     if (neu.fertig) {
       const erg = { ...ergebnisse, [skill]: (neu.schaetzung ?? "A0") as Level };
       setErgebnisse(erg);
+      setProtokolle((current) => ({
+        ...current,
+        [skill]: { bands: einstufungsBandErgebnisse(neu), items: neu.antworten },
+      }));
       if (skillIdx + 1 < EINSTUFUNG_SKILLS.length) {
         setSkillIdx(skillIdx + 1);
         setLauf(einstufungStart(EINSTUFUNG_SKILLS[skillIdx + 1]));
@@ -73,7 +85,11 @@ export function EinstufungTest() {
         placed: true,
         einstufung: {
           lesen: erg.lesen, hoeren: erg.hoeren, grammatik: erg.grammatik, wortschatz: erg.wortschatz,
-          tag: vorschlag.tag, datum: lokalesDatum(),
+          tag: vorschlag.tag, datum: lokalesDatum(), scope: EINSTUFUNG_SCOPE,
+          evidence: Object.fromEntries(EINSTUFUNG_SKILLS.map((entrySkill) => {
+            const protocol = protokolle[entrySkill] ?? { bands: [], items: [] };
+            return [entrySkill, { totalItems: protocol.items.length, bands: protocol.bands, items: protocol.items }];
+          })),
         },
       },
     }));
@@ -84,17 +100,17 @@ export function EinstufungTest() {
     return (
       <div style={{ display: "grid", gap: "0.8rem" }} data-testid="einstufung">
         <p style={{ lineHeight: 2, margin: 0 }}>
-          أربع مهارات تُقاس مستقلّة بأسئلة حقيقية من بنوك التطبيق نفسه، متدرّجة من A1 إلى B2:
-          كلّما أصبتَ صعدتَ، وحين تخفق في سؤالَي مستوىً تتوقّف تلك المهارة. في النهاية نقترح
-          يوم دخولٍ آمنًا: بداية أضعف مهاراتك، <strong>دون قفزٍ فوق أيّ امتحان مرحلةٍ لم تُجزه</strong>.
+          أربع حزم استقبال/صيغة تُفحص من بنوك التطبيق: القراءة والاستماع والتعرّف إلى القواعد والمفردات.
+          لكل مستوى أربعة بنود من أربعة مصادر مختلفة، ويلزم <strong>3 من 4</strong> للصعود؛ إصابة بند واحد أو بندين لا تكفي.
+          في النهاية نقترح يوم دخول محافظًا من أضعف حزمة، <strong>دون قفز فوق امتحان مرحلة لم تُجزه</strong>.
         </p>
-        <p className="tiny muted" style={{ margin: 0, lineHeight: 1.9 }}>
-          تقديرٌ آلي مبني على محتوى هذا التطبيق — ليس اختبار Goethe/telc رسميًا ولا يغني عنه.
-          نحو 4–8 أسئلة للمهارة (دقائق معدودة)، ولا تظهر صحّة الإجابات أثناء الاختبار حتى لا يتغيّر أداؤك.
+        <p className="tiny muted" style={{ margin: 0, lineHeight: 1.9 }} data-testid="einstufung-scope">
+          النطاق محدود صراحةً: لا توجد هنا عينة كتابة أو تحدث، لذلك لا تصدر النتيجة مستوى CEFR ولا حكماً على الإنتاج.
+          هذا فرز داخلي غير معاير، وليس اختبار Goethe/telc رسميًا. يُطرح 4–16 بندًا لكل مجال، ولا تظهر صحة الإجابات أثناءه.
         </p>
         {progress.settings.einstufung && (
           <p className="tiny" style={{ margin: 0 }}>
-            آخر تشخيص ({progress.settings.einstufung.datum}): قراءة {progress.settings.einstufung.lesen} ·
+            آخر فرز دخول ({progress.settings.einstufung.datum}): قراءة {progress.settings.einstufung.lesen} ·
             سماع {progress.settings.einstufung.hoeren} · قواعد {progress.settings.einstufung.grammatik} ·
             مفردات {progress.settings.einstufung.wortschatz} ← اليوم {progress.settings.einstufung.tag}
           </p>
@@ -109,14 +125,24 @@ export function EinstufungTest() {
   if (phase === "fertig" && vorschlag) {
     return (
       <div style={{ display: "grid", gap: "0.8rem" }} data-testid="einstufung-ergebnis">
-        <h2 style={{ margin: 0, fontSize: "1.15rem" }}>نتيجتك بمهارة</h2>
+        <h2 style={{ margin: 0, fontSize: "1.15rem" }}>اقتراح الدخول حسب الحزم الأربع</h2>
+        <p className="tiny muted" style={{ margin: 0 }}>
+          الرموز A1–B2 هنا أسماء حزم محتوى اجتزت فيها 3/4، وليست حكماً على مستواك العام.
+        </p>
         <ul style={{ margin: 0, lineHeight: 2.1 }}>
-          {EINSTUFUNG_SKILLS.map((s) => (
-            <li key={s}>{SKILL_AR[s]}: <strong>{ergebnisse[s]}</strong></li>
-          ))}
+          {EINSTUFUNG_SKILLS.map((entrySkill) => {
+            const bands = protokolle[entrySkill]?.bands ?? [];
+            const last = bands.at(-1);
+            return (
+              <li key={entrySkill}>
+                {SKILL_AR[entrySkill]}: <strong>حزمة دخول {ergebnisse[entrySkill]}</strong>
+                {last && <> · آخر حزمة مفحوصة {last.stufe}: {last.richtig}/{last.gesamt}</>}
+              </li>
+            );
+          })}
         </ul>
         <p style={{ margin: 0, lineHeight: 2 }}>
-          نقطة الدخول الآمنة: <strong>اليوم {vorschlag.tag}</strong> (بداية أضعف مهارة: {vorschlag.schwachStufe})
+          نقطة الدخول المحافظة: <strong>اليوم {vorschlag.tag}</strong> (بداية أضعف حزمة: {vorschlag.schwachStufe})
           {vorschlag.pruefungsTag
             ? <> — ويقف قبلها امتحان مرحلةٍ غير مُجاز (يوم {vorschlag.pruefungsTag})، فستبدأ منه لتثبّت القفزة باجتيازه داخل الخطة.</>
             : <>.</>}
@@ -136,18 +162,19 @@ export function EinstufungTest() {
           </p>
         )}
         <p className="tiny muted" style={{ margin: 0 }}>
-          الانتقال يغيّر موضعك في الخطة فقط؛ بطاقاتك ودفتر أخطائك ونقاطك محفوظة، ويمكنك إعادة التشخيص متى شئت.
+          الانتقال يغيّر موضعك في الخطة فقط؛ لا يثبت مستوى ولا يقيّم الكتابة أو التحدث. بطاقاتك ودفتر أخطائك ونقاطك محفوظة، ويمكنك إعادة الفرز متى شئت.
         </p>
       </div>
     );
   }
 
   if (!frage) return null;
+  const bandAntworten = lauf.antworten.filter((antwort) => antwort.stufe === frage.stufe);
   return (
     <div style={{ display: "grid", gap: "0.8rem" }} data-testid="einstufung-lauf">
       <div className="tiny muted">
-        المهارة {skillIdx + 1}/4 · {SKILL_AR[skill]} · المستوى المُختبَر الآن {frage.stufe} ·
-        سؤال {lauf.antworten.length + 1} في هذه المهارة
+        المجال {skillIdx + 1}/4 · {SKILL_AR[skill]} · حزمة المحتوى {frage.stufe} ·
+        بند {bandAntworten.length + 1}/{EINSTUFUNG_ITEMS_PRO_STUFE} · قاعدة الصعود {EINSTUFUNG_BESTANDEN_AB}/{EINSTUFUNG_ITEMS_PRO_STUFE}
       </div>
       {frage.skill === "hoeren" && (
         <div style={{ display: "grid", gap: "0.35rem" }}>
@@ -164,13 +191,13 @@ export function EinstufungTest() {
         </div>
       )}
       {frage.skill === "lesen" && frage.ex.text && (
-        <div dir="ltr" style={{ background: "var(--color-card2, #f6f1e7)", borderRadius: "10px", padding: "0.7rem 0.9rem", lineHeight: 1.8, textAlign: "left" }}>
+        <div lang="de" dir="ltr" style={{ background: "var(--color-card2, #f6f1e7)", borderRadius: "10px", padding: "0.7rem 0.9rem", lineHeight: 1.8, textAlign: "left" }}>
           {frage.ex.text}
         </div>
       )}
       <div style={{ fontWeight: 800, lineHeight: 1.9 }}>
-        <span dir="ltr">{frage.ex.promptDe}</span>
-        {frage.ex.promptAr && <div className="tiny muted" style={{ fontWeight: 400 }}>{frage.ex.promptAr}</div>}
+        <span lang="de" dir="ltr">{frage.ex.promptDe}</span>
+        {frage.ex.promptAr && <div lang="ar" dir="rtl" className="tiny muted" style={{ fontWeight: 400 }}>{frage.ex.promptAr}</div>}
       </div>
       <div style={{ display: "grid", gap: "0.45rem" }}>
         {(frage.ex.options ?? []).map((opt) => (
@@ -178,6 +205,8 @@ export function EinstufungTest() {
             key={opt}
             type="button"
             className="btn"
+            lang={/[\u0600-\u06ff]/u.test(opt) ? "ar" : "de"}
+            dir={/[\u0600-\u06ff]/u.test(opt) ? "rtl" : "ltr"}
             style={{ minHeight: "48px", textAlign: "start" }}
             onClick={() => antworten(opt)}
           >

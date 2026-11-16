@@ -1,0 +1,990 @@
+{
+  "schema": "wegb2-reviewed-writing-decision-batch-v1",
+  "batch": "PA-035-03",
+  "reviewedAt": "2026-11-04",
+  "scope": "Item-by-item internal review of all 20 A2 writing cards across task, Arabic alignment, criteria, model, notes, and internal word target: 18 bounded corrections and 2 explicit confirmed-current decisions; counts and searches were triage only, not correction generators, and this is not independent linguistic, exam, or CEFR sign-off.",
+  "entries": [
+    {
+      "id": "w-a2-01",
+      "level": "A2",
+      "decision": "corrected",
+      "rationale": "Aligned the six-sentence task with a 40-word internal target and replaced unsupported or rhetorical Arabic model claims.",
+      "previous": {
+        "id": "w-a2-01",
+        "level": "A2",
+        "format": "frei",
+        "titleDe": "Mein gestriger Tag",
+        "titleAr": "يومي أمس",
+        "taskDe": "Schreibe 6 Sätze über gestern – benutze mindestens 5× Perfekt (3× haben, 2× sein).",
+        "taskAr": "اكتب 6 جمل عن أمس — استعمل الماضي التام 5 مرات على الأقل (3 مع haben و2 مع sein). (الهدف: 100 كلمة تقريباً).",
+        "criteria": [
+          "hat/ist في الموضع الثاني والتصريف الثالث للنهاية",
+          "تباين صحيح بين haben و sein",
+          "ظروف زمنية: gestern, am Morgen, dann",
+          "جملة بفعل منفصل (aufgestanden / eingekauft)"
+        ],
+        "sample": "Gestern bin ich früh aufgestanden. Ich habe schnell gefrühstückt. Dann bin ich zur Arbeit gefahren. Am Mittag habe ich mit Kollegen gegessen. Am Nachmittag habe ich einen langen Bericht geschrieben. Danach war ich sehr müde.",
+        "noteAr": [
+          "ست جمل، خمسة Perfekt، وتناوبُ haben/sein مُطبَقٌ بلا شذوذ: bin…aufgestanden / habe…gegessen",
+          "الفعل المنفصل في التام: aufgestanden — البادئة ge في منتصفها، الدرسُ كله في كلمة",
+          "الترتيب الزمني ظاهريٌّ بظرفٍ في صدر كل جملة — Gestern / Am Mittag / Am Abend: لا تحتاج حينها روابط"
+        ],
+        "zielWort": 100
+      },
+      "current": {
+        "id": "w-a2-01",
+        "level": "A2",
+        "format": "frei",
+        "titleDe": "Mein gestriger Tag",
+        "titleAr": "يومي أمس",
+        "taskDe": "Schreibe 6 Sätze über gestern – benutze mindestens 5× Perfekt (3× haben, 2× sein).",
+        "taskAr": "اكتب 6 جمل عن أمس — استعمل الماضي التام 5 مرات على الأقل (3 مع haben و2 مع sein). (الهدف: 40 كلمة تقريباً).",
+        "criteria": [
+          "الفعل المساعد المصرف (haben/sein) في الموضع الثاني، وPartizip II في نهاية الجملة",
+          "تباين صحيح بين haben و sein",
+          "ظروف زمنية: gestern, am Morgen, dann",
+          "جملة بفعل منفصل (aufgestanden / eingekauft)"
+        ],
+        "sample": "Gestern bin ich früh aufgestanden. Ich habe schnell gefrühstückt. Dann bin ich zur Arbeit gefahren. Am Mittag habe ich mit Kollegen gegessen. Am Nachmittag habe ich einen langen Bericht geschrieben. Danach war ich sehr müde.",
+        "noteAr": [
+          "يعرض النموذج خمس صيغ Perfekt: اثنتان مع sein وثلاث مع haben، ثم يستخدم war لوصف الحالة الأخيرة.",
+          "في aufgestanden تأتي ge بين البادئة auf وجذر الفعل stehen.",
+          "تنظم الظروف الأحداث بوضوح: Gestern، ثم Dann وAm Mittag وAm Nachmittag وDanach."
+        ],
+        "zielWort": 40
+      }
+    },
+    {
+      "id": "w-a2-02",
+      "level": "A2",
+      "decision": "corrected",
+      "rationale": "Aligned the five-to-six-sentence task with a 60-word target and corrected the connector criterion and Arabic explanation.",
+      "previous": {
+        "id": "w-a2-02",
+        "level": "A2",
+        "format": "frei",
+        "titleDe": "Warum ich Deutsch lerne",
+        "titleAr": "لماذا أتعلّم الألمانية",
+        "taskDe": "Schreibe einen Absatz (5–6 Sätze) mit 2× „weil“ und 1× „dass“. Denk an die Wortstellung!",
+        "taskAr": "اكتب فقرة (5–6 جمل) مع weil مرتين و dass مرة. انتبه لموضع الفعل! (الهدف: 100 كلمة تقريباً).",
+        "criteria": [
+          "weil/dass + فعل للنهاية",
+          "رأي شخصي واحد على الأقل",
+          "كلمات ربط زمنية (zuerst, dann, natürlich)"
+        ],
+        "sample": "Ich lerne Deutsch, weil ich nächstes Jahr in Deutschland studieren möchte. Meine Freundin sagt, dass die Grammatik schwer ist. Ich finde sie aber interessant. Natürlich ist die Aussprache nicht leicht. Trotzdem lerne ich jeden Tag, weil man nur so Fortschritte macht. Deshalb höre ich jeden Abend einen Podcast und schreibe neue Wörter auf.",
+        "noteAr": [
+          "weil و dass في مواضعها، والفعلُ في القعر كل مرة — المعيارُ الذي يفصل A2 عن A1",
+          "رأيٌ صريح واحد (Ich finde sie aber interessant) كما يطلب المعيار — لا نصيحةٌ بلا «أنا»",
+          "رأيٌ شخصي بـ aber ثم ختامٌ بـ deshalb في ست جمل؛ weil مرتان وdass مرة كما تطلب المهمة"
+        ],
+        "zielWort": 100
+      },
+      "current": {
+        "id": "w-a2-02",
+        "level": "A2",
+        "format": "frei",
+        "titleDe": "Warum ich Deutsch lerne",
+        "titleAr": "لماذا أتعلّم الألمانية",
+        "taskDe": "Schreibe einen Absatz (5–6 Sätze) mit 2× „weil“ und 1× „dass“. Denk an die Wortstellung!",
+        "taskAr": "اكتب فقرة (5–6 جمل) مع weil مرتين و dass مرة. انتبه لموضع الفعل! (الهدف: 60 كلمة تقريباً).",
+        "criteria": [
+          "weil/dass + فعل للنهاية",
+          "رأي شخصي واحد على الأقل",
+          "روابط مناسبة لتنظيم الفقرة، مثل natürlich وtrotzdem وdeshalb"
+        ],
+        "sample": "Ich lerne Deutsch, weil ich nächstes Jahr in Deutschland studieren möchte. Meine Freundin sagt, dass die Grammatik schwer ist. Ich finde sie aber interessant. Natürlich ist die Aussprache nicht leicht. Trotzdem lerne ich jeden Tag, weil man nur so Fortschritte macht. Deshalb höre ich jeden Abend einen Podcast und schreibe neue Wörter auf.",
+        "noteAr": [
+          "بعد weil وdass يأتي الفعل المصرف في نهاية الجملة التابعة.",
+          "يعرض النموذج رأياً شخصياً صريحاً في جملة Ich finde sie aber interessant.",
+          "يربط النموذج الأفكار بـaber وtrotzdem وdeshalb، ويستخدم weil مرتين وdass مرة كما تطلب المهمة."
+        ],
+        "zielWort": 60
+      }
+    },
+    {
+      "id": "w-a2-03",
+      "level": "A2",
+      "decision": "corrected",
+      "rationale": "Aligned the travel-email task with a 70-word target and corrected the tense description in the Arabic notes.",
+      "previous": {
+        "id": "w-a2-03",
+        "level": "A2",
+        "format": "brief",
+        "titleDe": "Reise-E-Mail",
+        "titleAr": "بريد رحلة",
+        "taskDe": "Schreibe eine E-Mail an eine Freundin über deine Reise: Wohin, wann, wie (Zug/Flug), Hotel.",
+        "taskAr": "اكتب بريداً إلى صديقة عن رحلتك: إلى أين، متى، كيف (قطار/طائرة)، الفندق. (الهدف: 100 كلمة تقريباً).",
+        "criteria": [
+          "بنية البريد: ترحيب + محتوى + خاتمة",
+          "Perfekt أو Futur I مرة واحدة",
+          "معلومات السفر الأربع كاملة"
+        ],
+        "sample": "Liebe Salma, wie geht es dir? Ich bin gestern nach München gefahren. Der Zug war pünktlich und bequem. Ich wohne in einem kleinen Hotel gegenüber vom Bahnhof. Am Abend habe ich im Restaurant gegessen und bin früh ins Bett gegangen. Morgen treffe ich einen Freund und wir fahren zum Englischen Garten. Ich habe gehört, dass es dort sehr schön ist. Schreib mir bald! Viele Grüße, Nour",
+        "noteAr": [
+          "بريدٌ كامل: Liebe… / محتوى / Schreib mir bald! / Viele Grüße — الهيكلُ يُدرَّس بالبنيان لا بالقوائم",
+          "مرتان Perfekt (bin…gefahren / war) وجملة حاضرةٍ بالمستقبل الدلالي — توازنُ أزمنةٍ صغير لكنه مسجَّل",
+          "معلوماتُ السفر الأربع كلها: وجهةٌ وموعدٌ ووسيلةٌ ونُزل — لا تُعَفَّ عن واحدةٍ لأنها «بديهية»"
+        ],
+        "zielWort": 100
+      },
+      "current": {
+        "id": "w-a2-03",
+        "level": "A2",
+        "format": "brief",
+        "titleDe": "Reise-E-Mail",
+        "titleAr": "بريد رحلة",
+        "taskDe": "Schreibe eine E-Mail an eine Freundin über deine Reise: Wohin, wann, wie (Zug/Flug), Hotel.",
+        "taskAr": "اكتب بريداً إلى صديقة عن رحلتك: إلى أين، متى، كيف (قطار/طائرة)، الفندق. (الهدف: 70 كلمة تقريباً).",
+        "criteria": [
+          "بنية البريد: ترحيب + محتوى + خاتمة",
+          "Perfekt أو Futur I مرة واحدة",
+          "معلومات السفر الأربع كاملة"
+        ],
+        "sample": "Liebe Salma,\n\nwie geht es dir? Ich bin gestern nach München gefahren. Der Zug war pünktlich und bequem. Ich wohne in einem kleinen Hotel gegenüber vom Bahnhof. Am Abend habe ich im Restaurant gegessen und bin früh ins Bett gegangen. Morgen treffe ich einen Freund und wir fahren zum Englischen Garten. Ich habe gehört, dass es dort sehr schön ist. Schreib mir bald!\n\nViele Grüße\nNour",
+        "noteAr": [
+          "يحافظ النموذج على بنية البريد: تحية، ومحتوى، وطلب رد، ثم خاتمة باسم المرسل.",
+          "يستخدم Perfekt في bin gefahren وhabe gegessen وbin … gegangen وhabe gehört، ويستخدم war لوصف القطار.",
+          "يذكر الوجهة والوقت ووسيلة السفر والفندق كما تطلب المهمة."
+        ],
+        "zielWort": 70
+      }
+    },
+    {
+      "id": "w-a2-04",
+      "level": "A2",
+      "decision": "corrected",
+      "rationale": "Aligned the medical explanation with a 70-word target, fixed the Arabic criterion typo, and removed the contradictory question about visiting the doctor.",
+      "previous": {
+        "id": "w-a2-04",
+        "level": "A2",
+        "format": "frei",
+        "titleDe": "Beim Arzt – eine Erklärung",
+        "titleAr": "شرح للطبيب",
+        "taskDe": "Schreibe, was du dem Arzt sagst: Symptome seit wann, Schmerzen, Medizin.",
+        "taskAr": "اكتب ما ستقوله للطبيب: الأعراض منذ متى، الآلام، الدواء. (الهدف: 100 كلمة تقريباً).",
+        "criteria": [
+          "seit + Dativ (seit drei Tagen)",
+          "weh tun مع الجسم",
+          "طلب أو سؤال مهذّب للمطّب"
+        ],
+        "sample": "Seit drei Tagen tut mir der Hals weh. Ich habe Fieber und bin sehr müde. Ich habe auch ein bisschen Husten. In der Nacht habe ich schlecht geschlafen, weil der Husten so stark war. Ich habe noch keinen Tee mit Honig getrunken. Was soll ich tun, Herr Doktor? Soll ich zum Arzt kommen oder kann ich zu Hause bleiben? Muss ich Medizin nehmen?",
+        "noteAr": [
+          "seit + داتيف حيّة: Seit drei Tagen — حرفٌ واحد يُصلح ما يفسده الجميع",
+          "جسمٌ مرفوعٌ مع weh tun: tut mir der Hals weh — الصيغةُ لا تُختَرع",
+          "سؤالٌ مهذب في الختام (Was soll ich tun, Herr Doktor?) — مريضٌ يسلم قيادته بأدب فيُكافأ"
+        ],
+        "zielWort": 100
+      },
+      "current": {
+        "id": "w-a2-04",
+        "level": "A2",
+        "format": "frei",
+        "titleDe": "Beim Arzt – eine Erklärung",
+        "titleAr": "شرح للطبيب",
+        "taskDe": "Schreibe, was du dem Arzt sagst: Symptome seit wann, Schmerzen, Medizin.",
+        "taskAr": "اكتب ما ستقوله للطبيب: الأعراض منذ متى، الآلام، الدواء. (الهدف: 70 كلمة تقريباً).",
+        "criteria": [
+          "seit + Dativ (seit drei Tagen)",
+          "weh tun مع الجسم",
+          "طلب أو سؤال مهذّب للطبيب"
+        ],
+        "sample": "Seit drei Tagen tut mir der Hals weh. Ich habe Fieber und bin sehr müde. Außerdem habe ich starken Husten. In der Nacht habe ich schlecht geschlafen, weil der Husten so stark war. Ich habe schon Tee mit Honig getrunken, aber es hat nicht geholfen. Was soll ich tun, Herr Doktor? Soll ich zu Hause bleiben? Muss ich ein Medikament nehmen?",
+        "noteAr": [
+          "تأتي المدة بعد seit في الداتيف: seit drei Tagen.",
+          "في تركيب weh tun يكون موضع الألم هو الفاعل: Der Hals tut mir weh.",
+          "يختم النموذج بأسئلة مباشرة ومهذبة عن العلاج والبقاء في المنزل."
+        ],
+        "zielWort": 70
+      }
+    },
+    {
+      "id": "w-a2-05",
+      "level": "A2",
+      "decision": "corrected",
+      "rationale": "Aligned the invitation with a 70-word target and made the requested item to bring explicit instead of treating a person as the item.",
+      "previous": {
+        "id": "w-a2-05",
+        "level": "A2",
+        "format": "frei",
+        "titleDe": "Einladung schreiben",
+        "titleAr": "كتابة دعوة",
+        "taskDe": "Schreibe eine Einladung zu einer Feier: Anlass, Tag, Uhrzeit, Ort, was mitbringen.",
+        "taskAr": "اكتب دعوة لحفلة: المناسبة، اليوم، الساعة، المكان، ماذا يحضر الضيوف. (الهدف: 100 كلمة تقريباً).",
+        "criteria": [
+          "فعل أمر أو دعوة مهذّبة (Komm vorbei! / Kannst du kommen?)",
+          "كل المعلومات الخمس",
+          "نبرة ودّية + خاتمة"
+        ],
+        "sample": "Liebe Amina, am Samstag feiere ich meinen Geburtstag! Die Party beginnt um achtzehn Uhr bei mir zu Hause. Es gibt Kuchen und Musik. Bring bitte deine Cousine mit! Wir haben viel Platz und du kannst auch deinen Bruder einladen. Nach dem Kuchen spielen wir Spiele und hören alte Lieder. Bitte sag mir bald Bescheid, ob du kommen kannst. Ich freue mich auf dich. Viele Grüße, Nour",
+        "noteAr": [
+          "خمس معلومات كاملة: مناسبة ويومٌ وساعةٌ ومكانٌ وما يُجلَب — لا تُرْمَز واحدةٌ بقرينة",
+          "فعل أمرٌ ودعوة معاً: feiere…! / Bring bitte… — الأمرُ بالألمانية مهذبٌ بحرفٍ واحد",
+          "«Ich freue mich auf dich» — جملةُ ودٍّ ختامية تُنقِذ قائمة المعلومات من الجفاف"
+        ],
+        "zielWort": 100
+      },
+      "current": {
+        "id": "w-a2-05",
+        "level": "A2",
+        "format": "frei",
+        "titleDe": "Einladung schreiben",
+        "titleAr": "كتابة دعوة",
+        "taskDe": "Schreibe eine Einladung zu einer Feier: Anlass, Tag, Uhrzeit, Ort, was mitbringen.",
+        "taskAr": "اكتب دعوة لحفلة: المناسبة، اليوم، الساعة، المكان، ماذا يحضر الضيوف. (الهدف: 70 كلمة تقريباً).",
+        "criteria": [
+          "فعل أمر أو دعوة مهذّبة (Komm vorbei! / Kannst du kommen?)",
+          "كل المعلومات الخمس",
+          "نبرة ودّية + خاتمة"
+        ],
+        "sample": "Liebe Amina,\n\nam Samstag feiere ich meinen Geburtstag! Die Party beginnt um achtzehn Uhr bei mir zu Hause. Es gibt Kuchen und Musik. Bring bitte einen Salat mit! Wir haben viel Platz und du kannst auch deine Cousine einladen. Nach dem Kuchen spielen wir Spiele und hören alte Lieder. Bitte sag mir bald Bescheid, ob du kommen kannst. Ich freue mich auf dich.\n\nViele Grüße\nNour",
+        "noteAr": [
+          "يذكر النموذج المناسبة واليوم والساعة والمكان وما ينبغي إحضاره.",
+          "تعرض جملة Bring bitte einen Salat mit صيغة أمر مهذبة بـbitte.",
+          "تغلق جملة Ich freue mich auf dich الدعوة بنبرة ودية قبل التحية الختامية."
+        ],
+        "zielWort": 70
+      }
+    },
+    {
+      "id": "w-a2-06",
+      "level": "A2",
+      "decision": "corrected",
+      "rationale": "Aligned the six-sentence complaint with a 70-word target, used a natural Perfekt description of the noise, and corrected email closing layout.",
+      "previous": {
+        "id": "w-a2-06",
+        "level": "A2",
+        "format": "brief",
+        "titleDe": "Beschwerde-E-Mail ans Hotel",
+        "titleAr": "بريد شكوى إلى الفندق",
+        "taskDe": "Schreibe eine kurze Beschwerde-E-Mail (6 Sätze) an ein Hotel: Problem (Zimmer/Lärm), Bitte um Lösung, Perfekt nutzen.",
+        "taskAr": "اكتب بريداً قصيراً للشكوى (6 جمل) إلى فندق: مشكلة (غرفة/ضجيج)، طلب حل، استعمل الماضي التام. (الهدف: 100 كلمة تقريباً).",
+        "criteria": [
+          "وصف الحدث بالـ Perfekt",
+          "شكوى مهذّبة بلا غضب",
+          "طلب محدد واحد",
+          "بريد كامل بمقدمة وخاتمة"
+        ],
+        "sample": "Sehr geehrte Damen und Herren, ich habe letzte Woche in Ihrem Hotel übernachtet. Leider hat das Zimmer neben dem Aufzug sehr viel Lärm gemacht. Der Lärm hat um zweiundzwanzig Uhr angefangen und bis drei Uhr gedauert. Ich habe drei Nächte schlecht geschlafen. Ich habe an der Rezeption angerufen, aber niemand hat geantwortet. Bitte erstatten Sie mir einen Teil des Preises. Mit freundlichen Grüßen, Nadia Mansour",
+        "noteAr": [
+          "شكوى بلا غضب: leider + وصفٌ هادئ — النبرةُ تُقرَأ قبل الحجج",
+          "Perfekt في صدر الوقائع: habe…übernachtet / hat…gemacht — الماضي المُنجَز لا المستمر",
+          "طلبٌ محدد واحد (Teil erstatten) — من يطلب الكثير في A2 لا يُعطى شيئاً"
+        ],
+        "zielWort": 100
+      },
+      "current": {
+        "id": "w-a2-06",
+        "level": "A2",
+        "format": "brief",
+        "titleDe": "Beschwerde-E-Mail ans Hotel",
+        "titleAr": "بريد شكوى إلى الفندق",
+        "taskDe": "Schreibe eine kurze Beschwerde-E-Mail (6 Sätze) an ein Hotel: Problem (Zimmer/Lärm), Bitte um Lösung, Perfekt nutzen.",
+        "taskAr": "اكتب بريداً قصيراً للشكوى (6 جمل) إلى فندق: مشكلة (غرفة/ضجيج)، طلب حل، استعمل الماضي التام. (الهدف: 70 كلمة تقريباً).",
+        "criteria": [
+          "وصف الحدث بالـ Perfekt",
+          "شكوى مهذّبة بلا غضب",
+          "طلب محدد واحد",
+          "بريد كامل بمقدمة وخاتمة"
+        ],
+        "sample": "Sehr geehrte Damen und Herren,\n\nich habe letzte Woche in Ihrem Hotel übernachtet. Leider habe ich im Zimmer neben dem Aufzug nachts viel Lärm gehört. Der Lärm hat um 22 Uhr angefangen und bis drei Uhr gedauert. Ich habe drei Nächte schlecht geschlafen. Ich habe an der Rezeption angerufen, aber niemand hat geantwortet. Bitte erstatten Sie mir einen Teil des Preises.\n\nMit freundlichen Grüßen\nNadia Mansour",
+        "noteAr": [
+          "يصف النموذج الوقائع بهدوء ويستخدم leider من دون صياغة هجومية.",
+          "تظهر صيغ Perfekt في habe … übernachtet وhabe … gehört وhat … angefangen وغيرها.",
+          "يطلب النموذج حلاً واحداً محدداً: استرداد جزء من السعر."
+        ],
+        "zielWort": 70
+      }
+    },
+    {
+      "id": "w-a2-07",
+      "level": "A2",
+      "decision": "corrected",
+      "rationale": "Aligned the landlord email with a 70-word target and removed the contradiction between working hours and the proposed appointment.",
+      "previous": {
+        "id": "w-a2-07",
+        "level": "A2",
+        "format": "brief",
+        "titleDe": "E-Mail an den Vermieter",
+        "titleAr": "بريد إلى صاحب الشقة",
+        "taskDe": "Schreibe eine E-Mail an deinen Vermieter: In deiner Wohnung ist etwas kaputt (z. B. der Wasserhahn). Beschreibe das Problem und schlage einen Termin vor.",
+        "taskAr": "اكتب بريداً إلى صاحب شقتك: شيء معطّل لديك (مثلاً صنبور الماء). صف المشكلة واقترح موعداً. (الهدف: 100 كلمة تقريباً).",
+        "criteria": [
+          "مقدمة وشرح واضح للمشكلة",
+          "طلب مهذب",
+          "اقتراح موعد",
+          "خاتمة وتوقيع"
+        ],
+        "sample": "Sehr geehrte Frau Klein, in meiner Küche ist der Wasserhahn kaputt. Das Wasser läuft ständig und ich kann es nicht abstellen. Ich arbeite von acht bis sechzehn Uhr. Passt Ihnen Donnerstag um zehn Uhr? Ich habe schon versucht, das Wasser selbst abzustellen, aber es funktioniert nicht. Vielleicht können Sie einen Handwerker schicken. Ich bin am Freitag auch zu Hause. Mit freundlichen Grüßen, Karim Mansour",
+        "noteAr": [
+          "مقدمة ووصف وموعدٌ مقترح وتوقيع: أربعُ ركائز لا تضطرب",
+          "Das Wasser läuft ständig — واقعةٌ واحدة بدقةٍ أفضل من فقرةِ انفعال",
+          "Passt Ihnen Donnerstag…? اقتراحُ موعدٍ بسؤال — لباقَةٌ تُسَرّع الصلاح"
+        ],
+        "zielWort": 100
+      },
+      "current": {
+        "id": "w-a2-07",
+        "level": "A2",
+        "format": "brief",
+        "titleDe": "E-Mail an den Vermieter",
+        "titleAr": "بريد إلى صاحب الشقة",
+        "taskDe": "Schreibe eine E-Mail an deinen Vermieter: In deiner Wohnung ist etwas kaputt (z. B. der Wasserhahn). Beschreibe das Problem und schlage einen Termin vor.",
+        "taskAr": "اكتب بريداً إلى صاحب شقتك: شيء معطّل لديك (مثلاً صنبور الماء). صف المشكلة واقترح موعداً. (الهدف: 70 كلمة تقريباً).",
+        "criteria": [
+          "مقدمة وشرح واضح للمشكلة",
+          "طلب مهذب",
+          "اقتراح موعد",
+          "خاتمة وتوقيع"
+        ],
+        "sample": "Sehr geehrte Frau Klein,\n\nin meiner Küche ist der Wasserhahn kaputt. Das Wasser läuft ständig, und ich kann es nicht abstellen. Ich arbeite werktags von acht bis sechzehn Uhr. Könnte ein Handwerker am Donnerstag um 17 Uhr kommen? Ich habe schon versucht, das Wasser selbst abzustellen, aber es hat nicht funktioniert. Am Freitag bin ich ebenfalls ab 16 Uhr zu Hause. Bitte teilen Sie mir mit, welcher Termin passt.\n\nMit freundlichen Grüßen\nKarim Mansour",
+        "noteAr": [
+          "يتكون البريد من تحية ووصف واضح للمشكلة وموعدين ممكنين وخاتمة.",
+          "توضح جملة Das Wasser läuft ständig المشكلة من دون مبالغة.",
+          "يقترح النموذج موعداً بعد وقت العمل ويسأل بأدب عن الموعد المناسب."
+        ],
+        "zielWort": 70
+      }
+    },
+    {
+      "id": "w-a2-08",
+      "level": "A2",
+      "decision": "corrected",
+      "rationale": "Aligned the daily-plan task and its eight-sentence model with a 70-word target and replaced rhetorical notes with model-grounded guidance.",
+      "previous": {
+        "id": "w-a2-08",
+        "level": "A2",
+        "format": "frei",
+        "titleDe": "Mein Tagesplan",
+        "titleAr": "جدولي اليومي",
+        "taskDe": "Schreibe über deinen Tagesplan: Wann stehst du auf? Was machst du am Vormittag, am Nachmittag und am Abend?",
+        "taskAr": "اكتب عن جدولك اليومي: متى تستيقظ؟ ماذا تفعل صباحاً وعصراً ومساءً؟ (الهدف: 100 كلمة تقريباً).",
+        "criteria": [
+          "استخدام أوقات (Uhr)",
+          "فترة الصباح والمساء",
+          "5 جمل على الأقل",
+          "أفعال متنوعة"
+        ],
+        "sample": "Ich stehe um halb sieben auf. Am Vormittag habe ich Kurs und lerne Deutsch. Um eins esse ich in der Mensa. Am Nachmittag arbeite ich im Büro. Am Abend koche ich und rufe meine Familie an. Zwischen den Kursen trinke ich Kaffee mit Freunden und wiederhole neue Wörter. Am Wochenende spiele ich manchmal Fußball und besuche meine Cousine. Um elf Uhr schlafe ich ein.",
+        "noteAr": [
+          "نصف يومٍ موزون: Kurs/ Arbeit / Kochen — لا جملة أطول من أختها",
+          "أفعال منفصلة في يومه (stehe…auf / rufe…an) — إعادةُ استعمالٍ ذكية لا حفظٌ منبري",
+          "Um elf Uhr schlafe ich ein — خاتمةٌ بزمن: انسجامُ قالبٍ حتى في النوم"
+        ],
+        "zielWort": 100
+      },
+      "current": {
+        "id": "w-a2-08",
+        "level": "A2",
+        "format": "frei",
+        "titleDe": "Mein Tagesplan",
+        "titleAr": "جدولي اليومي",
+        "taskDe": "Schreibe über deinen Tagesplan: Wann stehst du auf? Was machst du am Vormittag, am Nachmittag und am Abend?",
+        "taskAr": "اكتب عن جدولك اليومي: متى تستيقظ؟ ماذا تفعل صباحاً وعصراً ومساءً؟ (الهدف: 70 كلمة تقريباً).",
+        "criteria": [
+          "استخدام أوقات (Uhr)",
+          "فترة الصباح والمساء",
+          "5 جمل على الأقل",
+          "أفعال متنوعة"
+        ],
+        "sample": "Ich stehe um halb sieben auf. Am Vormittag habe ich Kurs und lerne Deutsch. Um eins esse ich in der Mensa. Am Nachmittag arbeite ich im Büro. Am Abend koche ich und rufe meine Familie an. Zwischen den Kursen trinke ich Kaffee mit Freunden und wiederhole neue Wörter. Am Wochenende spiele ich manchmal Fußball und besuche meine Cousine. Um elf Uhr schlafe ich ein.",
+        "noteAr": [
+          "ينظم النموذج اليوم إلى Vormittag وNachmittag وAbend، ويذكر أوقاتاً محددة.",
+          "يعرض فعلين منفصلين صحيحين: stehe … auf وrufe … an.",
+          "تغلق جملة Um elf Uhr schlafe ich ein الجدول بوقت واضح."
+        ],
+        "zielWort": 70
+      }
+    },
+    {
+      "id": "w-a2-09",
+      "level": "A2",
+      "decision": "corrected",
+      "rationale": "Aligned the six-to-eight-sentence refusal with a 70-word target and corrected email layout and Arabic guidance.",
+      "previous": {
+        "id": "w-a2-09",
+        "level": "A2",
+        "format": "brief",
+        "titleDe": "Absage einer Einladung",
+        "titleAr": "الاعتذار عن دعوة",
+        "taskDe": "Eine Freundin lädt dich zu ihrer Hochzeit ein, aber du kannst nicht kommen. Schreibe eine E-Mail (6–8 Sätze): Dank, Grund, Entschuldigung, Vorschlag für ein Treffen.",
+        "taskAr": "صديقة تدعوك إلى زفافها لكنك لا تستطيع الحضور. اكتب إيميلاً (6–8 جمل): شكر، سبب، اعتذار، اقتراح لقاء. (الهدف: 100 كلمة تقريباً).",
+        "criteria": [
+          "شكر على الدعوة في البداية",
+          "سبب بـweil (الفعل في النهاية)",
+          "اعتذار صريح (Es tut mir leid)",
+          "اقتراح بـ«Wollen wir …?» أو «Wie wäre es mit …?»"
+        ],
+        "sample": "Liebe Nour, vielen Dank für die Einladung zu deiner Hochzeit! Ich freue mich sehr für dich. Leider kann ich am 14. Juni nicht kommen, weil ich an diesem Tag eine Prüfung habe. Es tut mir wirklich leid. Ich möchte dir aber gratulieren und ein Geschenk vorbeibringen. Wollen wir uns in der Woche danach treffen? Ich lade dich zum Essen ein. Herzliche Grüße, Amina",
+        "noteAr": [
+          "Absage = اعتذار عن دعوة: البنية شكر ← سبب ← أسف ← بديل",
+          "«weil … habe»: الفعل في النهاية — يُقيَّم مباشرة"
+        ],
+        "neu": true,
+        "zielWort": 100
+      },
+      "current": {
+        "id": "w-a2-09",
+        "level": "A2",
+        "format": "brief",
+        "titleDe": "Absage einer Einladung",
+        "titleAr": "الاعتذار عن دعوة",
+        "taskDe": "Eine Freundin lädt dich zu ihrer Hochzeit ein, aber du kannst nicht kommen. Schreibe eine E-Mail (6–8 Sätze): Dank, Grund, Entschuldigung, Vorschlag für ein Treffen.",
+        "taskAr": "صديقة تدعوك إلى زفافها لكنك لا تستطيع الحضور. اكتب إيميلاً (6–8 جمل): شكر، سبب، اعتذار، اقتراح لقاء. (الهدف: 70 كلمة تقريباً).",
+        "criteria": [
+          "شكر على الدعوة في البداية",
+          "سبب بـweil (الفعل في النهاية)",
+          "اعتذار صريح (Es tut mir leid)",
+          "اقتراح بـ«Wollen wir …?» أو «Wie wäre es mit …?»"
+        ],
+        "sample": "Liebe Nour,\n\nvielen Dank für die Einladung zu deiner Hochzeit! Ich freue mich sehr für dich. Leider kann ich am 14. Juni nicht kommen, weil ich an diesem Tag eine Prüfung habe. Es tut mir wirklich leid. Ich möchte dir aber gratulieren und ein Geschenk vorbeibringen. Wollen wir uns in der Woche danach treffen? Ich lade dich zum Essen ein.\n\nHerzliche Grüße\nAmina",
+        "noteAr": [
+          "رتّب الاعتذار عن الدعوة هكذا: شكر، ثم سبب، ثم اعتذار صريح، ثم اقتراح بديل.",
+          "بعد weil يأتي الفعل habe في نهاية الجملة التابعة.",
+          "يقدم السؤال Wollen wir uns … treffen? اقتراحاً واضحاً للقاء لاحق."
+        ],
+        "neu": true,
+        "zielWort": 70
+      }
+    },
+    {
+      "id": "w-a2-10",
+      "level": "A2",
+      "decision": "corrected",
+      "rationale": "Aligned the six-to-eight-sentence maintenance request with a 70-word target and replaced the unnatural Termin machen request.",
+      "previous": {
+        "id": "w-a2-10",
+        "level": "A2",
+        "format": "brief",
+        "titleDe": "Beschwerde beim Hausmeister",
+        "titleAr": "شكوى إلى حارس البناية",
+        "taskDe": "Die Heizung in deiner Wohnung funktioniert seit drei Tagen nicht. Schreibe eine kurze Nachricht an den Hausmeister (6–8 Sätze): Problem, seit wann, was du schon gemacht hast, Bitte um Termin.",
+        "taskAr": "التدفئة في شقتك لا تعمل منذ ثلاثة أيام. اكتب رسالة قصيرة إلى الحارس (6–8 جمل): المشكلة، منذ متى، ما فعلته، طلب موعد. (الهدف: 100 كلمة تقريباً).",
+        "criteria": [
+          "مخاطبة رسمية (Sehr geehrter Herr …)",
+          "«seit» + Dativ للمدة",
+          "Perfekt لما فعلته (habe … probiert)",
+          "طلب مهذّب بـ«Könnten Sie …?»"
+        ],
+        "sample": "Sehr geehrter Herr Kaya, die Heizung in meiner Wohnung im dritten Stock funktioniert seit drei Tagen nicht. Ich habe schon alles probiert und den Regler neu eingestellt, aber es bleibt kalt. Die Kinder sind erkältet. Könnten Sie bitte diese Woche einen Termin machen? Ich bin jeden Tag ab 16 Uhr zu Hause. Vielen Dank im Voraus. Mit freundlichen Grüßen, Fatma Ben Ali",
+        "noteAr": [
+          "الشكوى المهذّبة تنجح بالحقائق: منذ متى، ماذا جرّبت، متى أنت متاح",
+          "«Könnten Sie» أهذب من «Können Sie» — Konjunktiv II الأول في A2"
+        ],
+        "neu": true,
+        "zielWort": 100
+      },
+      "current": {
+        "id": "w-a2-10",
+        "level": "A2",
+        "format": "brief",
+        "titleDe": "Beschwerde beim Hausmeister",
+        "titleAr": "شكوى إلى حارس البناية",
+        "taskDe": "Die Heizung in deiner Wohnung funktioniert seit drei Tagen nicht. Schreibe eine kurze Nachricht an den Hausmeister (6–8 Sätze): Problem, seit wann, was du schon gemacht hast, Bitte um Termin.",
+        "taskAr": "التدفئة في شقتك لا تعمل منذ ثلاثة أيام. اكتب رسالة قصيرة إلى الحارس (6–8 جمل): المشكلة، منذ متى، ما فعلته، طلب موعد. (الهدف: 70 كلمة تقريباً).",
+        "criteria": [
+          "مخاطبة رسمية (Sehr geehrter Herr …)",
+          "«seit» + Dativ للمدة",
+          "Perfekt لما فعلته (habe … probiert)",
+          "طلب مهذّب بـ«Könnten Sie …?»"
+        ],
+        "sample": "Sehr geehrter Herr Kaya,\n\ndie Heizung in meiner Wohnung im dritten Stock funktioniert seit drei Tagen nicht. Ich habe schon den Regler geprüft und neu eingestellt, aber es bleibt kalt. Die Kinder sind erkältet. Könnten Sie bitte diese Woche vorbeikommen oder einen Handwerker schicken? Ich bin jeden Tag ab 16 Uhr zu Hause. Vielen Dank im Voraus.\n\nMit freundlichen Grüßen\nFatma Ben Ali",
+        "noteAr": [
+          "يذكر النموذج منذ متى توجد المشكلة، وما الذي جُرّب، ومتى يكون المرسل في المنزل.",
+          "تجعل صيغة Könnten Sie bitte … الطلب مهذباً، وتقترح حضور الحارس أو إرسال فني."
+        ],
+        "neu": true,
+        "zielWort": 70
+      }
+    },
+    {
+      "id": "w-a2-11",
+      "level": "A2",
+      "decision": "corrected",
+      "rationale": "Aligned the seven-to-nine-sentence narrative with an 80-word target, improved the closing event, and corrected the clause-order explanation.",
+      "previous": {
+        "id": "w-a2-11",
+        "level": "A2",
+        "format": "frei",
+        "titleDe": "Ein Erlebnis erzählen",
+        "titleAr": "سرد تجربة",
+        "taskDe": "Erzähle von einem Tag, an dem etwas nicht geklappt hat (7–9 Sätze): Was war der Plan? Was ist passiert? Wie ist es ausgegangen? Benutze das Perfekt.",
+        "taskAr": "احكِ عن يوم لم تسر فيه الأمور كما يجب (7–9 جمل): ما الخطة؟ ماذا حدث؟ كيف انتهى؟ استعمل الـPerfekt. (الهدف: 100 كلمة تقريباً).",
+        "criteria": [
+          "Perfekt مع haben وsein بشكل صحيح",
+          "روابط زمنية (zuerst, dann, danach, schließlich)",
+          "جملة بـ«als» أو «nachdem» واحدة على الأقل",
+          "خاتمة قصيرة (Zum Glück / Leider)"
+        ],
+        "sample": "Letzten Samstag wollte ich mit dem Zug nach Köln fahren. Zuerst habe ich den Bus verpasst, dann bin ich zu Fuß zum Bahnhof gelaufen. Als ich angekommen bin, war der Zug schon weg. Ich habe eine Stunde gewartet und einen Kaffee getrunken. Danach habe ich den nächsten Zug genommen. In Köln hat es geregnet, aber meine Freundin hat am Bahnhof gewartet. Schließlich haben wir einen schönen Abend gehabt. Zum Glück ist alles gut ausgegangen.",
+        "noteAr": [
+          "sein مع أفعال الحركة: bin gelaufen / bin angekommen — الخطأ الأكثر شيوعاً في A2",
+          "الروابط الزمنية تحوّل قائمة أحداث إلى قصة"
+        ],
+        "neu": true,
+        "zielWort": 100
+      },
+      "current": {
+        "id": "w-a2-11",
+        "level": "A2",
+        "format": "frei",
+        "titleDe": "Ein Erlebnis erzählen",
+        "titleAr": "سرد تجربة",
+        "taskDe": "Erzähle von einem Tag, an dem etwas nicht geklappt hat (7–9 Sätze): Was war der Plan? Was ist passiert? Wie ist es ausgegangen? Benutze das Perfekt.",
+        "taskAr": "احكِ عن يوم لم تسر فيه الأمور كما يجب (7–9 جمل): ما الخطة؟ ماذا حدث؟ كيف انتهى؟ استعمل الـPerfekt. (الهدف: 80 كلمة تقريباً).",
+        "criteria": [
+          "Perfekt مع haben وsein بشكل صحيح",
+          "روابط زمنية (zuerst, dann, danach, schließlich)",
+          "جملة بـ«als» أو «nachdem» واحدة على الأقل",
+          "خاتمة قصيرة (Zum Glück / Leider)"
+        ],
+        "sample": "Letzten Samstag wollte ich mit dem Zug nach Köln fahren. Zuerst habe ich den Bus verpasst, dann bin ich zu Fuß zum Bahnhof gelaufen. Als ich angekommen bin, war der Zug schon weg. Ich habe eine Stunde gewartet und einen Kaffee getrunken. Danach habe ich den nächsten Zug genommen. In Köln hat es geregnet, aber meine Freundin hat am Bahnhof gewartet. Schließlich haben wir noch einen schönen Abend zusammen verbracht. Zum Glück ist alles gut ausgegangen.",
+        "noteAr": [
+          "تستخدم أفعال الحركة sein في bin … gelaufen وangekommen bin؛ يأتي الفعل في نهاية جملة als التابعة.",
+          "تنظم الروابط Zuerst وdann وDanach وSchließlich القصة زمنياً.",
+          "توضح جملة Zum Glück ist alles gut ausgegangen نتيجة الحدث في النهاية."
+        ],
+        "neu": true,
+        "zielWort": 80
+      }
+    },
+    {
+      "id": "w-a2-12",
+      "level": "A2",
+      "decision": "corrected",
+      "rationale": "Translated the four model-facing criteria into aligned Arabic while retaining the previously corrected bounded complaint model.",
+      "previous": {
+        "id": "w-a2-12",
+        "level": "A2",
+        "format": "brief",
+        "titleDe": "Beschwerde an Hotel",
+        "titleAr": "شكوى إلى الفندق",
+        "taskDe": "Schreiben Sie an ein Hotel in München (ca. 80 Wörter): Sie waren letztes Wochenende dort – das Zimmer war kalt, das WLAN funktionierte nicht – bitten Sie um Entschuldigung / Teilrückerstattung.",
+        "taskAr": "اكتب لفندق في ميونخ (حوالي ٨٠ كلمة): كنت هناك نهاية الأسبوع الماضي، الغرفة كانت باردة والواي فاي لا يعمل، اطلب اعتذاراً واسترداداً جزئياً.",
+        "criteria": [
+          "Betreffzeile",
+          "Sachliche Beschreibung (2 Probleme)",
+          "Konkrete Forderung",
+          "Freundliche Schlussformel"
+        ],
+        "sample": "Betreff: Probleme während meines Aufenthalts\n\nSehr geehrte Damen und Herren,\n\nich war vom 3. bis 5. Oktober in Ihrem Hotel in München, Zimmer 214. Leider war es in meinem Zimmer sehr kalt, weil die Heizung nicht funktionierte. Außerdem hatte ich am Wochenende kein WLAN. Ich habe das Problem am Samstagmorgen an der Rezeption gemeldet, aber leider konnte mir niemand helfen. Deshalb war ich mit meinem Aufenthalt nicht zufrieden. Bitte entschuldigen Sie die Unannehmlichkeiten. Ich bitte um eine teilweise Rückerstattung von 50 Euro. Bitte bestätigen Sie mir kurz, ob das möglich ist.\n\nMit freundlichen Grüßen\nAli Mahdi",
+        "noteAr": [
+          "ابدأ بسطر موضوع، ثم اذكر تاريخ الإقامة ورقم الغرفة، واشرح المشكلتين بوقائع محددة: التدفئة والواي فاي.",
+          "اطلب بوضوح اعتذاراً أو استرداداً جزئياً بمبلغ معلوم، واختم بصيغة مهذبة؛ استخدم الماضي لوصف الإقامة."
+        ],
+        "zielWort": 80
+      },
+      "current": {
+        "id": "w-a2-12",
+        "level": "A2",
+        "format": "brief",
+        "titleDe": "Beschwerde an Hotel",
+        "titleAr": "شكوى إلى الفندق",
+        "taskDe": "Schreiben Sie an ein Hotel in München (ca. 80 Wörter): Sie waren letztes Wochenende dort – das Zimmer war kalt, das WLAN funktionierte nicht – bitten Sie um Entschuldigung / Teilrückerstattung.",
+        "taskAr": "اكتب لفندق في ميونخ (حوالي ٨٠ كلمة): كنت هناك نهاية الأسبوع الماضي، الغرفة كانت باردة والواي فاي لا يعمل، اطلب اعتذاراً واسترداداً جزئياً.",
+        "criteria": [
+          "سطر موضوع واضح",
+          "وصف موضوعي للمشكلتين",
+          "طلب محدد",
+          "خاتمة مهذبة"
+        ],
+        "sample": "Betreff: Probleme während meines Aufenthalts\n\nSehr geehrte Damen und Herren,\n\nich war vom 3. bis 5. Oktober in Ihrem Hotel in München, Zimmer 214. Leider war es in meinem Zimmer sehr kalt, weil die Heizung nicht funktionierte. Außerdem hatte ich am Wochenende kein WLAN. Ich habe das Problem am Samstagmorgen an der Rezeption gemeldet, aber leider konnte mir niemand helfen. Deshalb war ich mit meinem Aufenthalt nicht zufrieden. Bitte entschuldigen Sie die Unannehmlichkeiten. Ich bitte um eine teilweise Rückerstattung von 50 Euro. Bitte bestätigen Sie mir kurz, ob das möglich ist.\n\nMit freundlichen Grüßen\nAli Mahdi",
+        "noteAr": [
+          "ابدأ بسطر موضوع، ثم اذكر تاريخ الإقامة ورقم الغرفة، واشرح المشكلتين بوقائع محددة: التدفئة والواي فاي.",
+          "اطلب بوضوح اعتذاراً أو استرداداً جزئياً بمبلغ معلوم، واختم بصيغة مهذبة؛ استخدم الماضي لوصف الإقامة."
+        ],
+        "zielWort": 80
+      }
+    },
+    {
+      "id": "w-a2-13",
+      "level": "A2",
+      "decision": "corrected",
+      "rationale": "Corrected the informal greeting, activity-Perfekt model and note, repetitive fragments, and closing while retaining the 70-word target.",
+      "previous": {
+        "id": "w-a2-13",
+        "level": "A2",
+        "format": "frei",
+        "titleDe": "E-Mail an einen Freund: Mein Urlaub",
+        "titleAr": "رسالة إلى صديق: إجازتي",
+        "taskDe": "Sie waren im Urlaub am Meer. Schreiben Sie eine E-Mail an Ihren Freund (ca. 70 Wörter): Wo waren Sie, wie war das Wetter und was haben Sie gemacht?",
+        "taskAr": "كنت في إجازة عند البحر. اكتب رسالة إلى صديقك (نحو 70 كلمة): أين كنت، كيف كان الطقس، وماذا فعلت؟",
+        "criteria": [
+          "تحية ودّية",
+          "ثلاث معلومات: مكان وطقس ونشاط",
+          "زمن ماضٍ بسيط (war/habe … gemacht) حيث يلزم",
+          "سؤال للصديق في النهاية يفتح الردّ"
+        ],
+        "sample": "Hallo lieber Paul,\n\nich war letzte Woche im Urlaub am Meer in Tunesien. Das Wetter war super: jeden Tag Sonne und 30 Grad! Ich habe viel geschwommen und am Strand gelegen. Am Abend habe ich Fisch gegessen, sehr lecker! Der Urlaub war kurz, aber schön. Die Leute dort waren sehr freundlich und das Essen war lecker. Und du? Was hast du gemacht? Schreib mir bald!\n\nViele Grüße\nDein Ali",
+        "noteAr": [
+          "الماضي بتصريف بسيط صحيح (war/habe geschwommen) على مستوى A2",
+          "تفاصيل حسّية قصيرة (Sonne, 30 Grad, Fisch) تجعل الرسالة حيّة",
+          "سؤال ختامي للصديق يحوّل النص إلى حوار"
+        ],
+        "zielWort": 70
+      },
+      "current": {
+        "id": "w-a2-13",
+        "level": "A2",
+        "format": "frei",
+        "titleDe": "E-Mail an einen Freund: Mein Urlaub",
+        "titleAr": "رسالة إلى صديق: إجازتي",
+        "taskDe": "Sie waren im Urlaub am Meer. Schreiben Sie eine E-Mail an Ihren Freund (ca. 70 Wörter): Wo waren Sie, wie war das Wetter und was haben Sie gemacht?",
+        "taskAr": "كنت في إجازة عند البحر. اكتب رسالة إلى صديقك (نحو 70 كلمة): أين كنت، كيف كان الطقس، وماذا فعلت؟",
+        "criteria": [
+          "تحية ودّية",
+          "ثلاث معلومات: مكان وطقس ونشاط",
+          "زمن ماضٍ بسيط (war/habe … gemacht) حيث يلزم",
+          "سؤال للصديق في النهاية يفتح الردّ"
+        ],
+        "sample": "Lieber Paul,\n\nich war letzte Woche am Meer in Tunesien. Das Wetter war super: Jeden Tag schien die Sonne, und es waren 30 Grad. Ich bin viel geschwommen und habe am Strand gelegen. Am Abend habe ich Fisch gegessen. Der Urlaub war kurz, aber schön. Die Leute waren freundlich, und das Essen hat mir gut geschmeckt. Und du? Was hast du gemacht? Schreib mir bald!\n\nViele Grüße\nAli",
+        "noteAr": [
+          "يستخدم النموذج الماضي في war وbin geschwommen وhabe gelegen وhabe gegessen.",
+          "توضح تفاصيل Sonne و30 Grad وFisch الطقس والنشاط من دون إطالة.",
+          "يفتح السؤال Was hast du gemacht? باب الرد في نهاية الرسالة."
+        ],
+        "zielWort": 70
+      }
+    },
+    {
+      "id": "w-a2-14",
+      "level": "A2",
+      "decision": "corrected",
+      "rationale": "Corrected wiederkommen orthography and removed the unsupported claim that the model represented real A2 correspondence.",
+      "previous": {
+        "id": "w-a2-14",
+        "level": "A2",
+        "format": "brief",
+        "titleDe": "Nachricht an die Lehrerin: krank",
+        "titleAr": "رسالة إلى المعلمة: مريض",
+        "taskDe": "Sie sind krank und können heute nicht in den Deutschkurs kommen. Schreiben Sie eine kurze E-Mail an Ihre Lehrerin Frau Klein (ca. 50 Wörter): Entschuldigen Sie sich, sagen Sie, was Sie haben und wann Sie wieder kommen.",
+        "taskAr": "أنت مريض ولا تستطيع حضور درس الألمانية اليوم. اكتب رسالة قصيرة إلى معلمتك السيدة كلاين (نحو 50 كلمة): اعتذر، قل ما بك، ومتى ستعود.",
+        "criteria": [
+          "تحية رسمية صغيرة (Sehr geehrte Frau Klein,)",
+          "المرض بكلمات بسيطة (Fieber, Kopfschmerzen)",
+          "موعد عودة متوقع",
+          "طلب الحصّة/الواجب بلطف"
+        ],
+        "sample": "Sehr geehrte Frau Klein,\n\nich bin heute krank und kann nicht in den Kurs kommen. Ich habe Fieber und starke Kopfschmerzen. Der Arzt sagt, ich soll zwei Tage zu Hause bleiben. Am Freitag komme ich wieder. Können Sie mir bitte die Hausaufgaben schicken? Vielen Dank!\n\nMit freundlichen Grüßen\nSara Nasser",
+        "noteAr": [
+          "سبب الغياب ومدته وموعد العودة — معلومات الرسالة كاملة",
+          "طلب الواجب بسؤال مهذّب واحد",
+          "قصيرة كرسائل A2 الحقيقية (نحو 50 كلمة)"
+        ],
+        "zielWort": 50
+      },
+      "current": {
+        "id": "w-a2-14",
+        "level": "A2",
+        "format": "brief",
+        "titleDe": "Nachricht an die Lehrerin: krank",
+        "titleAr": "رسالة إلى المعلمة: مريض",
+        "taskDe": "Sie sind krank und können heute nicht in den Deutschkurs kommen. Schreiben Sie eine kurze E-Mail an Ihre Lehrerin Frau Klein (ca. 50 Wörter): Entschuldigen Sie sich, sagen Sie, was Sie haben und wann Sie wiederkommen.",
+        "taskAr": "أنت مريض ولا تستطيع حضور درس الألمانية اليوم. اكتب رسالة قصيرة إلى معلمتك السيدة كلاين (نحو 50 كلمة): اعتذر، قل ما بك، ومتى ستعود.",
+        "criteria": [
+          "تحية رسمية صغيرة (Sehr geehrte Frau Klein,)",
+          "المرض بكلمات بسيطة (Fieber, Kopfschmerzen)",
+          "موعد عودة متوقع",
+          "طلب الحصّة/الواجب بلطف"
+        ],
+        "sample": "Sehr geehrte Frau Klein,\n\nich bin heute krank und kann nicht in den Kurs kommen. Ich habe Fieber und starke Kopfschmerzen. Der Arzt sagt, ich soll zwei Tage zu Hause bleiben. Am Freitag komme ich wieder. Können Sie mir bitte die Hausaufgaben schicken? Vielen Dank!\n\nMit freundlichen Grüßen\nSara Nasser",
+        "noteAr": [
+          "يذكر النموذج سبب الغياب ومدته وموعد العودة المتوقع.",
+          "يطلب الواجب في سؤال مهذب واحد: Können Sie mir bitte …?",
+          "يبقى النص قريباً من الهدف الداخلي البالغ نحو 50 كلمة."
+        ],
+        "zielWort": 50
+      }
+    },
+    {
+      "id": "w-a2-15",
+      "level": "A2",
+      "decision": "confirmed-current",
+      "rationale": "Reviewed the full invitation card; its task, Arabic alignment, criteria, model, notes, and 60-word target are mutually consistent.",
+      "previous": {
+        "id": "w-a2-15",
+        "level": "A2",
+        "format": "brief",
+        "titleDe": "Einladung an die Nachbarn",
+        "titleAr": "دعوة للجيران",
+        "taskDe": "Sie machen ein kleines Fest in Ihrer Wohnung. Schreiben Sie eine Einladung an Ihre Nachbarn (ca. 60 Wörter): Wann ist das Fest, was gibt es zu essen und bis wann sollen sie antworten?",
+        "taskAr": "تقيم حفلًا صغيرًا في شقتك. اكتب دعوة إلى جيرانك (نحو 60 كلمة): متى الحفل، ما الطعام، وحتى متى يردّون؟",
+        "criteria": [
+          "دعوة واضحة (Ich lade Sie ein)",
+          "اليوم والساعة والمكان",
+          "ذكر الطعام/الشراب",
+          "مهلة للردّ"
+        ],
+        "sample": "Liebe Nachbarn,\n\nich lade Sie herzlich zu einem kleinen Fest in meiner Wohnung ein! Das Fest ist am Samstag, dem 6. Mai, ab 19 Uhr in der Wohnung 12. Es gibt tunesische Speisen, Tee und Kuchen. Ich freue mich auf einen schönen Abend mit Ihnen. Bitte sagen Sie mir bis Mittwoch Bescheid, ob Sie kommen können.\n\nHerzliche Grüße\nIhr Nachbar Youssef",
+        "noteAr": [
+          "صيغة Sie للجيران (علاقة مهذّبة لا صداقة) — دقة سجلّ A2",
+          "البيانات الأربعة (was/wann/wo/Antwort) موجودة",
+          "توقيع بصفتك (Ihr Nachbar) يناسب إعلان بناء"
+        ],
+        "zielWort": 60
+      },
+      "current": {
+        "id": "w-a2-15",
+        "level": "A2",
+        "format": "brief",
+        "titleDe": "Einladung an die Nachbarn",
+        "titleAr": "دعوة للجيران",
+        "taskDe": "Sie machen ein kleines Fest in Ihrer Wohnung. Schreiben Sie eine Einladung an Ihre Nachbarn (ca. 60 Wörter): Wann ist das Fest, was gibt es zu essen und bis wann sollen sie antworten?",
+        "taskAr": "تقيم حفلًا صغيرًا في شقتك. اكتب دعوة إلى جيرانك (نحو 60 كلمة): متى الحفل، ما الطعام، وحتى متى يردّون؟",
+        "criteria": [
+          "دعوة واضحة (Ich lade Sie ein)",
+          "اليوم والساعة والمكان",
+          "ذكر الطعام/الشراب",
+          "مهلة للردّ"
+        ],
+        "sample": "Liebe Nachbarn,\n\nich lade Sie herzlich zu einem kleinen Fest in meiner Wohnung ein! Das Fest ist am Samstag, dem 6. Mai, ab 19 Uhr in der Wohnung 12. Es gibt tunesische Speisen, Tee und Kuchen. Ich freue mich auf einen schönen Abend mit Ihnen. Bitte sagen Sie mir bis Mittwoch Bescheid, ob Sie kommen können.\n\nHerzliche Grüße\nIhr Nachbar Youssef",
+        "noteAr": [
+          "صيغة Sie للجيران (علاقة مهذّبة لا صداقة) — دقة سجلّ A2",
+          "البيانات الأربعة (was/wann/wo/Antwort) موجودة",
+          "توقيع بصفتك (Ihr Nachbar) يناسب إعلان بناء"
+        ],
+        "zielWort": 60
+      }
+    },
+    {
+      "id": "w-a2-16",
+      "level": "A2",
+      "decision": "confirmed-current",
+      "rationale": "Reviewed the full course-enquiry card; all requested questions, register, model, notes, and 60-word target remain aligned.",
+      "previous": {
+        "id": "w-a2-16",
+        "level": "A2",
+        "format": "brief",
+        "titleDe": "Anfrage: Deutschkurs am Abend",
+        "titleAr": "استفسار: دورة ألمانية مسائية",
+        "taskDe": "Sie möchten Deutsch lernen. Schreiben Sie eine kurze E-Mail an eine Sprachschule (ca. 60 Wörter): Fragen Sie nach einem Kurs am Abend (A2), nach dem Preis und dem Starttermin.",
+        "taskAr": "تريد تعلّم الألمانية. اكتب رسالة قصيرة إلى مدرسة لغة (نحو 60 كلمة): اسأل عن دورة مسائية (A2) وعن السعر وتاريخ البدء.",
+        "criteria": [
+          "جملة هدف في البداية (Ich möchte … lernen)",
+          "ثلاثة أسئلة قصيرة وواضحة",
+          "ختام مهذّب قصير"
+        ],
+        "sample": "Sehr geehrte Damen und Herren,\n\nich möchte gern Deutsch lernen und suche einen A2-Kurs am Abend. Ich arbeite am Tag. Haben Sie einen Kurs am Abend? Wann beginnt der nächste Kurs? Und wie viel kostet er im Monat? Ich freue mich auf Ihre Antwort. Vielen Dank!\n\nMit freundlichen Grüßen\nMounir Haddad",
+        "noteAr": [
+          "سبب طلب المساء بجملة قصيرة (Ich arbeite am Tag)",
+          "ثلاثة أسئلة متتالية مباشرة — أسلوب A2 الصحيح في الاستفسار",
+          "لا زخرفة زائدة عن حاجة الرسالة القصيرة"
+        ],
+        "zielWort": 60
+      },
+      "current": {
+        "id": "w-a2-16",
+        "level": "A2",
+        "format": "brief",
+        "titleDe": "Anfrage: Deutschkurs am Abend",
+        "titleAr": "استفسار: دورة ألمانية مسائية",
+        "taskDe": "Sie möchten Deutsch lernen. Schreiben Sie eine kurze E-Mail an eine Sprachschule (ca. 60 Wörter): Fragen Sie nach einem Kurs am Abend (A2), nach dem Preis und dem Starttermin.",
+        "taskAr": "تريد تعلّم الألمانية. اكتب رسالة قصيرة إلى مدرسة لغة (نحو 60 كلمة): اسأل عن دورة مسائية (A2) وعن السعر وتاريخ البدء.",
+        "criteria": [
+          "جملة هدف في البداية (Ich möchte … lernen)",
+          "ثلاثة أسئلة قصيرة وواضحة",
+          "ختام مهذّب قصير"
+        ],
+        "sample": "Sehr geehrte Damen und Herren,\n\nich möchte gern Deutsch lernen und suche einen A2-Kurs am Abend. Ich arbeite am Tag. Haben Sie einen Kurs am Abend? Wann beginnt der nächste Kurs? Und wie viel kostet er im Monat? Ich freue mich auf Ihre Antwort. Vielen Dank!\n\nMit freundlichen Grüßen\nMounir Haddad",
+        "noteAr": [
+          "سبب طلب المساء بجملة قصيرة (Ich arbeite am Tag)",
+          "ثلاثة أسئلة متتالية مباشرة — أسلوب A2 الصحيح في الاستفسار",
+          "لا زخرفة زائدة عن حاجة الرسالة القصيرة"
+        ],
+        "zielWort": 60
+      }
+    },
+    {
+      "id": "w-a2-17",
+      "level": "A2",
+      "decision": "corrected",
+      "rationale": "Made the cancellation explicit in the first sentence and corrected the formal email closing layout.",
+      "previous": {
+        "id": "w-a2-17",
+        "level": "A2",
+        "format": "brief",
+        "titleDe": "Arzttermin absagen",
+        "titleAr": "إلغاء موعد طبيب",
+        "taskDe": "Sie haben am Montag einen Termin beim Arzt, aber Sie müssen arbeiten. Schreiben Sie eine kurze E-Mail an die Praxis (ca. 50 Wörter): Sagen Sie den Termin ab, erklären Sie kurz warum und bitten Sie um einen neuen Termin.",
+        "taskAr": "عندك موعد عند الطبيب يوم الاثنين لكن عليك العمل. اكتب رسالة قصيرة إلى العيادة (نحو 50 كلمة): ألغِ الموعد، اشرح السبب باختصار، واطلب موعدًا جديدًا.",
+        "criteria": [
+          "ذكر الموعد الأصلي (am Montag um …)",
+          "سبب قصير (ich muss arbeiten)",
+          "طلب موعد جديد بأدب"
+        ],
+        "sample": "Sehr geehrte Damen und Herren, ich habe am Montag um 9 Uhr einen Termin bei Dr. Weber. Leider muss ich arbeiten und kann nicht kommen. Könnten Sie mir bitte einen neuen Termin am Nachmittag geben? Vielen Dank für Ihr Verständnis. Mit freundlichen Grüßen Lina Mansour",
+        "noteAr": [
+          "إلغاء صريح من أول جملة (ich habe … leider muss ich)",
+          "تفضيل بديل مرن (gern am Nachmittag) يسهّل الحل",
+          "شكر على التفهم — صيغة الإلغاءات المعيارية"
+        ],
+        "zielWort": 50
+      },
+      "current": {
+        "id": "w-a2-17",
+        "level": "A2",
+        "format": "brief",
+        "titleDe": "Arzttermin absagen",
+        "titleAr": "إلغاء موعد طبيب",
+        "taskDe": "Sie haben am Montag einen Termin beim Arzt, aber Sie müssen arbeiten. Schreiben Sie eine kurze E-Mail an die Praxis (ca. 50 Wörter): Sagen Sie den Termin ab, erklären Sie kurz warum und bitten Sie um einen neuen Termin.",
+        "taskAr": "عندك موعد عند الطبيب يوم الاثنين لكن عليك العمل. اكتب رسالة قصيرة إلى العيادة (نحو 50 كلمة): ألغِ الموعد، اشرح السبب باختصار، واطلب موعدًا جديدًا.",
+        "criteria": [
+          "ذكر الموعد الأصلي (am Montag um …)",
+          "سبب قصير (ich muss arbeiten)",
+          "طلب موعد جديد بأدب"
+        ],
+        "sample": "Sehr geehrte Damen und Herren,\n\nich muss meinen Termin bei Dr. Weber am Montag um 9 Uhr leider absagen. Ich muss an diesem Vormittag arbeiten und kann nicht kommen. Könnten Sie mir bitte einen neuen Termin am Nachmittag geben? Vielen Dank für Ihr Verständnis.\n\nMit freundlichen Grüßen\nLina Mansour",
+        "noteAr": [
+          "تلغي الجملة الأولى الموعد صراحةً بالفعل absagen وتذكر اليوم والساعة.",
+          "تشرح الجملة التالية سبب الإلغاء باختصار.",
+          "يطلب السؤال Könnten Sie mir bitte …? موعداً بديلاً في فترة بعد الظهر."
+        ],
+        "zielWort": 50
+      }
+    },
+    {
+      "id": "w-a2-18",
+      "level": "A2",
+      "decision": "corrected",
+      "rationale": "Normalized the informal greeting and added the task-required explicit confirmation question.",
+      "previous": {
+        "id": "w-a2-18",
+        "level": "A2",
+        "format": "frei",
+        "titleDe": "Nachricht: Treffen am Wochenende planen",
+        "titleAr": "رسالة: التخطيط للقاء في العطلة",
+        "taskDe": "Sie möchten sich am Wochenende mit Ihrer Freundin treffen. Schreiben Sie eine Nachricht (ca. 60 Wörter): Schlagen Sie einen Tag, eine Uhrzeit und einen Treffpunkt vor und fragen Sie, ob es passt.",
+        "taskAr": "تريد لقاء صديقتك في عطلة الأسبوع. اكتب رسالة (نحو 60 كلمة): اقترح يومًا وساعة ومكان لقاء واسألها إن كان يناسبها.",
+        "criteria": [
+          "اقتراح بيوم وساعة ومكان",
+          "سؤال تأكيد (Passt dir das?)",
+          "بديل واحد إن لم يناسب"
+        ],
+        "sample": "Hallo liebe Salma,\n\nwie geht es dir? Ich möchte dich am Wochenende sehen. Hast du am Samstag um 15 Uhr Zeit? Wir können uns im Café am Markt treffen und einen Kaffee trinken. Wenn Samstag nicht geht, habe ich auch am Sonntag Zeit. Schreib mir schnell zurück!\n\nLiebe Grüße\nDeine Sara",
+        "noteAr": [
+          "الاقتراح الثلاثي (Tag/Zeit/Ort) في سطرين",
+          "خطة بديلة جاهزة (auch am Sonntag) تختصر الرسائل",
+          "دعوة صريحة للرد (Schreib mir zurück)"
+        ],
+        "zielWort": 60
+      },
+      "current": {
+        "id": "w-a2-18",
+        "level": "A2",
+        "format": "frei",
+        "titleDe": "Nachricht: Treffen am Wochenende planen",
+        "titleAr": "رسالة: التخطيط للقاء في العطلة",
+        "taskDe": "Sie möchten sich am Wochenende mit Ihrer Freundin treffen. Schreiben Sie eine Nachricht (ca. 60 Wörter): Schlagen Sie einen Tag, eine Uhrzeit und einen Treffpunkt vor und fragen Sie, ob es passt.",
+        "taskAr": "تريد لقاء صديقتك في عطلة الأسبوع. اكتب رسالة (نحو 60 كلمة): اقترح يومًا وساعة ومكان لقاء واسألها إن كان يناسبها.",
+        "criteria": [
+          "اقتراح بيوم وساعة ومكان",
+          "سؤال تأكيد (Passt dir das?)",
+          "بديل واحد إن لم يناسب"
+        ],
+        "sample": "Liebe Salma,\n\nwie geht es dir? Ich möchte dich am Wochenende sehen. Hast du am Samstag um 15 Uhr Zeit? Wir können uns im Café am Markt treffen und einen Kaffee trinken. Passt dir das? Wenn Samstag nicht geht, habe ich auch am Sonntag Zeit. Schreib mir bitte zurück!\n\nLiebe Grüße\nSara",
+        "noteAr": [
+          "يقدم النموذج اليوم والساعة والمكان بوضوح.",
+          "يسأل Passt dir das? صراحةً إن كان الاقتراح مناسباً.",
+          "يقدم يوم الأحد بديلاً إذا لم يناسب يوم السبت."
+        ],
+        "zielWort": 60
+      }
+    },
+    {
+      "id": "w-a2-19",
+      "level": "A2",
+      "decision": "corrected",
+      "rationale": "Replaced the redundant and abrupt refund request with one clear, polite sentence and grounded the Arabic notes in the model.",
+      "previous": {
+        "id": "w-a2-19",
+        "level": "A2",
+        "format": "brief",
+        "titleDe": "Beschwerde: Handy kaputt",
+        "titleAr": "شكوى: هاتف معطّل",
+        "taskDe": "Sie haben vor einer Woche ein Handy gekauft. Jetzt geht es nicht mehr an. Schreiben Sie eine kurze E-Mail an das Geschäft (ca. 70 Wörter): Erklären Sie das Problem und bitten Sie um ein neues Handy oder Ihr Geld zurück.",
+        "taskAr": "اشتريت هاتفًا قبل أسبوع. الآن لا يعمل. اكتب رسالة قصيرة إلى المتجر (نحو 70 كلمة): اشرح المشكلة واطلب هاتفًا جديدًا أو استرداد مالك.",
+        "criteria": [
+          "متى اشتريت وماذا حدث (vor einer Woche / geht nicht mehr an)",
+          "طلب واضح بخيارين (neues Handy oder Geld zurück)",
+          "لهجة حازمة مهذّبة بلا غضب"
+        ],
+        "sample": "Sehr geehrte Damen und Herren,\n\nich habe vor einer Woche in Ihrem Geschäft ein Handy gekauft. Seit gestern geht es nicht mehr an. Ich habe es zweimal aufgeladen, aber es funktioniert nicht. Das ist sehr ärgerlich. Ich bitte Sie: Geben Sie mir bitte ein neues Handy oder mein Geld zurück. Ich bringe das Handy und die Rechnung morgen in Ihr Geschäft.\n\nMit freundlichen Grüßen\nKarim Aziz",
+        "noteAr": [
+          "تسلسل وقائع زمني (vor einer Woche → seit gestern) يجعل الشكوى مفهومة",
+          "محاولة إصلاح مذكورة (zweimal aufgeladen) تسدّ باب الاعتراض",
+          "إعلان إحضار الفاتورة — واقعية إجرائية"
+        ],
+        "zielWort": 70
+      },
+      "current": {
+        "id": "w-a2-19",
+        "level": "A2",
+        "format": "brief",
+        "titleDe": "Beschwerde: Handy kaputt",
+        "titleAr": "شكوى: هاتف معطّل",
+        "taskDe": "Sie haben vor einer Woche ein Handy gekauft. Jetzt geht es nicht mehr an. Schreiben Sie eine kurze E-Mail an das Geschäft (ca. 70 Wörter): Erklären Sie das Problem und bitten Sie um ein neues Handy oder Ihr Geld zurück.",
+        "taskAr": "اشتريت هاتفًا قبل أسبوع. الآن لا يعمل. اكتب رسالة قصيرة إلى المتجر (نحو 70 كلمة): اشرح المشكلة واطلب هاتفًا جديدًا أو استرداد مالك.",
+        "criteria": [
+          "متى اشتريت وماذا حدث (vor einer Woche / geht nicht mehr an)",
+          "طلب واضح بخيارين (neues Handy oder Geld zurück)",
+          "لهجة حازمة مهذّبة بلا غضب"
+        ],
+        "sample": "Sehr geehrte Damen und Herren,\n\nich habe vor einer Woche in Ihrem Geschäft ein Handy gekauft. Seit gestern geht es nicht mehr an. Ich habe es zweimal aufgeladen, aber es funktioniert nicht. Das ist sehr ärgerlich. Bitte geben Sie mir ein neues Handy oder erstatten Sie mir den Kaufpreis. Ich bringe das Handy und die Rechnung morgen in Ihr Geschäft.\n\nMit freundlichen Grüßen\nKarim Aziz",
+        "noteAr": [
+          "يرتب النموذج الوقائع زمنياً: الشراء قبل أسبوع، ثم توقف الهاتف منذ الأمس.",
+          "توضح جملة zweimal aufgeladen محاولة فحص المشكلة قبل إرسال الشكوى.",
+          "يطلب النموذج بوضوح هاتفاً جديداً أو استرداد ثمن الشراء."
+        ],
+        "zielWort": 70
+      }
+    },
+    {
+      "id": "w-a2-20",
+      "level": "A2",
+      "decision": "corrected",
+      "rationale": "Replaced an unnatural interest phrase with idiomatic German and grounded the Arabic notes in the requested content.",
+      "previous": {
+        "id": "w-a2-20",
+        "level": "A2",
+        "format": "brief",
+        "titleDe": "E-Mail: Wohnung besichtigen",
+        "titleAr": "رسالة: معاينة شقة",
+        "taskDe": "Sie suchen eine Wohnung und haben eine Anzeige gelesen. Schreiben Sie eine kurze E-Mail an den Vermieter (ca. 70 Wörter): Stellen Sie sich vor und bitten Sie um einen Termin für die Besichtigung.",
+        "taskAr": "تبحث عن شقة وقرأت إعلانًا. اكتب رسالة قصيرة إلى المالك (نحو 70 كلمة): قدّم نفسك واطلب موعدًا لمعاينة الشقة.",
+        "criteria": [
+          "تقديم نفسك: الاسم والعمل",
+          "مرجع الإعلان (Ihre Anzeige …)",
+          "طلب موعد مع وقتين مقترحين"
+        ],
+        "sample": "Sehr geehrter Herr Schmidt,\n\nmein Name ist Nadia Cherif. Ich arbeite als Verkäuferin und suche eine Wohnung in Ihrer Stadt. Ich habe Ihre Anzeige für die Zwei-Zimmer-Wohnung in der Marktstraße gelesen. Die Wohnung ist sehr interessant für mich. Kann ich die Wohnung besichtigen? Ich habe am Donnerstag ab 17 Uhr oder am Samstag Zeit. Ich freue mich auf Ihre Antwort.\n\nMit freundlichen Grüßen\nNadia Cherif",
+        "noteAr": [
+          "تقديم مهني موجز (الاسم + المهنة + سبب البحث)",
+          "موعدان مقترحان يسهّلان الرد على المالك",
+          "اهتمام معلن بجملة واحدة (sehr interessant für mich)"
+        ],
+        "zielWort": 70
+      },
+      "current": {
+        "id": "w-a2-20",
+        "level": "A2",
+        "format": "brief",
+        "titleDe": "E-Mail: Wohnung besichtigen",
+        "titleAr": "رسالة: معاينة شقة",
+        "taskDe": "Sie suchen eine Wohnung und haben eine Anzeige gelesen. Schreiben Sie eine kurze E-Mail an den Vermieter (ca. 70 Wörter): Stellen Sie sich vor und bitten Sie um einen Termin für die Besichtigung.",
+        "taskAr": "تبحث عن شقة وقرأت إعلانًا. اكتب رسالة قصيرة إلى المالك (نحو 70 كلمة): قدّم نفسك واطلب موعدًا لمعاينة الشقة.",
+        "criteria": [
+          "تقديم نفسك: الاسم والعمل",
+          "مرجع الإعلان (Ihre Anzeige …)",
+          "طلب موعد مع وقتين مقترحين"
+        ],
+        "sample": "Sehr geehrter Herr Schmidt,\n\nmein Name ist Nadia Cherif. Ich arbeite als Verkäuferin und suche eine Wohnung in Ihrer Stadt. Ich habe Ihre Anzeige für die Zwei-Zimmer-Wohnung in der Marktstraße gelesen. Ich interessiere mich sehr für die Wohnung. Kann ich die Wohnung besichtigen? Ich habe am Donnerstag ab 17 Uhr oder am Samstag Zeit. Ich freue mich auf Ihre Antwort.\n\nMit freundlichen Grüßen\nNadia Cherif",
+        "noteAr": [
+          "يقدم المرسل اسمه ومهنته وسبب بحثه عن شقة باختصار.",
+          "يشير إلى الإعلان ويطلب المعاينة مباشرةً.",
+          "يقترح الخميس بعد الساعة 17 أو السبت لتسهيل تحديد الموعد."
+        ],
+        "zielWort": 70
+      }
+    }
+  ]
+}

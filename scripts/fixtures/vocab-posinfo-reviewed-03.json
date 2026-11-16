@@ -1,0 +1,648 @@
+{
+  "schema": "wegb2-reviewed-vocab-posinfo-batch-v1",
+  "batch": "PA-034-03",
+  "reviewedAt": "2026-11-04",
+  "scope": "80 additional high-confidence single-head principal-part corrections after item-by-item contextual internal review; candidate generation is not external linguistic sign-off.",
+  "entries": [
+    {
+      "id": "vx-haus--037",
+      "deck": "a1-haus-schule",
+      "level": "A1",
+      "de": "bringen",
+      "previousPosInfo": "bringt, bringte, hat gebringt",
+      "posInfo": "bringt, brachte, hat gebracht"
+    },
+    {
+      "id": "vw-a1koe-033",
+      "deck": "a1-koerper-kleidung",
+      "level": "A1",
+      "de": "anziehen",
+      "previousPosInfo": "zieht an, ziehte an, ist angezieht",
+      "posInfo": "zieht an, zog an, hat angezogen"
+    },
+    {
+      "id": "va-modort-084",
+      "deck": "a1-modal-ort",
+      "level": "A1",
+      "de": "leihen",
+      "previousPosInfo": "leiht, leihte, hat geleiht",
+      "posInfo": "leiht, lieh, hat geliehen"
+    },
+    {
+      "id": "va-modort-100",
+      "deck": "a1-modal-ort",
+      "level": "A1",
+      "de": "kaputtgehen",
+      "previousPosInfo": "kaputtgeht, kaputtgehte, ist gekaputtgeht",
+      "posInfo": "geht kaputt, ging kaputt, ist kaputtgegangen"
+    },
+    {
+      "id": "r311a1-070",
+      "deck": "a1-natur-freizeit",
+      "level": "A1",
+      "de": "riechen",
+      "previousPosInfo": "riecht, riechte, hat geriecht",
+      "posInfo": "riecht, roch, hat gerochen"
+    },
+    {
+      "id": "vy-natur-047",
+      "deck": "a1-natur-freizeit",
+      "level": "A1",
+      "de": "mögen",
+      "previousPosInfo": "mögt, mögte, hat gemögt",
+      "posInfo": "mag, mochte, hat gemocht"
+    },
+    {
+      "id": "vy-natur-060",
+      "deck": "a1-natur-freizeit",
+      "level": "A1",
+      "de": "schneiden",
+      "previousPosInfo": "schneidet, schneidete, hat geschneidt",
+      "posInfo": "schneidet, schnitt, hat geschnitten"
+    },
+    {
+      "id": "r311a1-050",
+      "deck": "a1-stadt-wege",
+      "level": "A1",
+      "de": "abfliegen",
+      "previousPosInfo": "fliegt ab, fliegte ab, ist abgefliegt",
+      "posInfo": "fliegt ab, flog ab, ist abgeflogen"
+    },
+    {
+      "id": "vz-welt-b-032",
+      "deck": "a1-welt-beruf",
+      "level": "A1",
+      "de": "liegen",
+      "previousPosInfo": "liegt, liegte, hat geliegt",
+      "posInfo": "liegt, lag, hat gelegen"
+    },
+    {
+      "id": "vz-welt-b-039",
+      "deck": "a1-welt-beruf",
+      "level": "A1",
+      "de": "aussteigen",
+      "previousPosInfo": "steigt aus, steigte aus, ist ausgesteigt",
+      "posInfo": "steigt aus, stieg aus, ist ausgestiegen"
+    },
+    {
+      "id": "vw-a2all-023",
+      "deck": "a2-alltag-dienste",
+      "level": "A2",
+      "de": "absprechen",
+      "previousPosInfo": "sprecht ab, sprechte ab, hat abgesprecht",
+      "posInfo": "spricht ab, sprach ab, hat abgesprochen"
+    },
+    {
+      "id": "r312a2-166",
+      "deck": "a2-arbeit-umwelt",
+      "level": "A2",
+      "de": "austragen",
+      "previousPosInfo": "tragt aus, tragte aus, hat ausgetragt",
+      "posInfo": "trägt aus, trug aus, hat ausgetragen"
+    },
+    {
+      "id": "ve-kueche--015",
+      "deck": "a2-kueche-haushalt",
+      "level": "A2",
+      "de": "abwaschen",
+      "previousPosInfo": "wascht ab, waschte ab, hat abgewascht",
+      "posInfo": "wäscht ab, wusch ab, hat abgewaschen"
+    },
+    {
+      "id": "ve-kueche--020",
+      "deck": "a2-kueche-haushalt",
+      "level": "A2",
+      "de": "einfrieren",
+      "previousPosInfo": "friert ein, frierte ein, hat eingefriert",
+      "posInfo": "friert ein, fror ein, hat eingefroren"
+    },
+    {
+      "id": "vf-kultd-310",
+      "deck": "a2-kultur-digital",
+      "level": "A2",
+      "de": "dranbleiben",
+      "previousPosInfo": "dranbleibt, dranbleibte, hat gedranbleibt",
+      "posInfo": "bleibt dran, blieb dran, ist drangeblieben"
+    },
+    {
+      "id": "vf-kultur-033",
+      "deck": "a2-kultur-digital",
+      "level": "A2",
+      "de": "hochladen",
+      "previousPosInfo": "hochladet, hochladete, hat gehochladt",
+      "posInfo": "lädt hoch, lud hoch, hat hochgeladen"
+    },
+    {
+      "id": "vy-leben-030",
+      "deck": "a2-leben-technik",
+      "level": "A2",
+      "de": "herunterladen",
+      "previousPosInfo": "unterladet her, unterladete her, hat hergeunterladt",
+      "posInfo": "lädt herunter, lud herunter, hat heruntergeladen"
+    },
+    {
+      "id": "r312a2-173",
+      "deck": "a2-redemittel",
+      "level": "A2",
+      "de": "leidtun",
+      "previousPosInfo": "leidtut, leidtute, hat geleidtut",
+      "posInfo": "tut leid, tat leid, hat leidgetan"
+    },
+    {
+      "id": "r314b1-003",
+      "deck": "b1-az-a",
+      "level": "B1",
+      "de": "abhängen",
+      "previousPosInfo": "hängt ab, hängte ab, hat abgehängt",
+      "posInfo": "hängt ab, hing ab, hat abgehangen"
+    },
+    {
+      "id": "r314b1-040",
+      "deck": "b1-az-a",
+      "level": "B1",
+      "de": "ansehen",
+      "previousPosInfo": "seht an, sehte an, hat angeseht",
+      "posInfo": "sieht an, sah an, hat angesehen"
+    },
+    {
+      "id": "r314b1-041",
+      "deck": "b1-az-a",
+      "level": "B1",
+      "de": "ansprechen",
+      "previousPosInfo": "sprecht an, sprechte an, hat angesprecht",
+      "posInfo": "spricht an, sprach an, hat angesprochen"
+    },
+    {
+      "id": "r314b1-058",
+      "deck": "b1-az-a",
+      "level": "B1",
+      "de": "aufhalten",
+      "previousPosInfo": "haltet auf, haltete auf, hat aufgehaltt",
+      "posInfo": "hält auf, hielt auf, hat aufgehalten"
+    },
+    {
+      "id": "r314b1-059",
+      "deck": "b1-az-a",
+      "level": "B1",
+      "de": "aufheben",
+      "previousPosInfo": "hebt auf, hebte auf, hat aufgehebt",
+      "posInfo": "hebt auf, hob auf, hat aufgehoben"
+    },
+    {
+      "id": "r314b1-110",
+      "deck": "b1-az-b",
+      "level": "B1",
+      "de": "behalten",
+      "previousPosInfo": "behaltet, behaltete, hat behaltt",
+      "posInfo": "behält, behielt, hat behalten"
+    },
+    {
+      "id": "r314b1-136",
+      "deck": "b1-az-b",
+      "level": "B1",
+      "de": "besitzen",
+      "previousPosInfo": "besitzt, besitzte, hat besitzt",
+      "posInfo": "besitzt, besaß, hat besessen"
+    },
+    {
+      "id": "r314b1-139",
+      "deck": "b1-az-b",
+      "level": "B1",
+      "de": "besprechen",
+      "previousPosInfo": "besprecht, besprechte, hat besprecht",
+      "posInfo": "bespricht, besprach, hat besprochen"
+    },
+    {
+      "id": "r314b1-150",
+      "deck": "b1-az-b",
+      "level": "B1",
+      "de": "bitten",
+      "previousPosInfo": "bittet, bittete, hat gebittt",
+      "posInfo": "bittet, bat, hat gebeten"
+    },
+    {
+      "id": "r314b1-162",
+      "deck": "b1-az-b",
+      "level": "B1",
+      "de": "brennen",
+      "previousPosInfo": "brennt, brennte, hat gebrennt",
+      "posInfo": "brennt, brannte, hat gebrannt"
+    },
+    {
+      "id": "r315b1-064",
+      "deck": "b1-az-e",
+      "level": "B1",
+      "de": "einschalten",
+      "previousPosInfo": "schaltet ein, schaltete ein, hat eingeschaltt",
+      "posInfo": "schaltet ein, schaltete ein, hat eingeschaltet"
+    },
+    {
+      "id": "r315b1-077",
+      "deck": "b1-az-e",
+      "level": "B1",
+      "de": "empfangen",
+      "previousPosInfo": "empfangt, empfangte, hat empfangt",
+      "posInfo": "empfängt, empfing, hat empfangen"
+    },
+    {
+      "id": "r315b1-084",
+      "deck": "b1-az-e",
+      "level": "B1",
+      "de": "enthalten",
+      "previousPosInfo": "enthaltet, enthaltete, hat enthaltt",
+      "posInfo": "enthält, enthielt, hat enthalten"
+    },
+    {
+      "id": "r315b1-087",
+      "deck": "b1-az-e",
+      "level": "B1",
+      "de": "entscheiden",
+      "previousPosInfo": "entscheidet, entscheidete, hat entscheidt",
+      "posInfo": "entscheidet, entschied, hat entschieden"
+    },
+    {
+      "id": "r315b1-097",
+      "deck": "b1-az-e",
+      "level": "B1",
+      "de": "erkennen",
+      "previousPosInfo": "erkennt, erkennte, hat erkennt",
+      "posInfo": "erkennt, erkannte, hat erkannt"
+    },
+    {
+      "id": "r316b1-020",
+      "deck": "b1-az-f",
+      "level": "B1",
+      "de": "festhalten",
+      "previousPosInfo": "festhaltet, festhaltete, hat gefesthaltt",
+      "posInfo": "hält fest, hielt fest, hat festgehalten"
+    },
+    {
+      "id": "r316b1-025",
+      "deck": "b1-az-f",
+      "level": "B1",
+      "de": "feststehen",
+      "previousPosInfo": "feststeht, feststehte, hat gefeststeht",
+      "posInfo": "steht fest, stand fest, hat festgestanden"
+    },
+    {
+      "id": "r316b1-030",
+      "deck": "b1-az-f",
+      "level": "B1",
+      "de": "fliehen",
+      "previousPosInfo": "flieht, fliehte, hat geflieht",
+      "posInfo": "flieht, floh, ist geflohen"
+    },
+    {
+      "id": "r316b1-079",
+      "deck": "b1-az-g",
+      "level": "B1",
+      "de": "gelten",
+      "previousPosInfo": "geltet, geltete, hat geltt",
+      "posInfo": "gilt, galt, hat gegolten"
+    },
+    {
+      "id": "r316b1-081",
+      "deck": "b1-az-g",
+      "level": "B1",
+      "de": "genießen",
+      "previousPosInfo": "genießt, genießte, hat genießt",
+      "posInfo": "genießt, genoss, hat genossen"
+    },
+    {
+      "id": "r316b1-087",
+      "deck": "b1-az-g",
+      "level": "B1",
+      "de": "geschehen",
+      "previousPosInfo": "gescheht, geschehte, ist gescheht",
+      "posInfo": "geschieht, geschah, ist geschehen"
+    },
+    {
+      "id": "r316b1-122",
+      "deck": "b1-az-h",
+      "level": "B1",
+      "de": "halten",
+      "previousPosInfo": "haltet, haltete, hat gehaltt",
+      "posInfo": "hält, hielt, hat gehalten"
+    },
+    {
+      "id": "r316b1-129",
+      "deck": "b1-az-h",
+      "level": "B1",
+      "de": "heben",
+      "previousPosInfo": "hebt, hebte, hat gehebt",
+      "posInfo": "hebt, hob, hat gehoben"
+    },
+    {
+      "id": "r316b1-133",
+      "deck": "b1-az-h",
+      "level": "B1",
+      "de": "herausfinden",
+      "previousPosInfo": "ausfindet her, ausfindete her, hat hergeausfindt",
+      "posInfo": "findet heraus, fand heraus, hat herausgefunden"
+    },
+    {
+      "id": "r316b1-135",
+      "deck": "b1-az-h",
+      "level": "B1",
+      "de": "herunterfahren",
+      "previousPosInfo": "unterfahrt her, unterfahrte her, ist hergeunterfahrt",
+      "posInfo": "fährt herunter, fuhr herunter, hat heruntergefahren"
+    },
+    {
+      "id": "r316b1-138",
+      "deck": "b1-az-h",
+      "level": "B1",
+      "de": "hinunterwerfen",
+      "previousPosInfo": "unterwerft hin, unterwerfte hin, hat hingeunterwerft",
+      "posInfo": "wirft hinunter, warf hinunter, hat hinuntergeworfen"
+    },
+    {
+      "id": "r317b1-138",
+      "deck": "b1-az-l",
+      "level": "B1",
+      "de": "losfahren",
+      "previousPosInfo": "fahrt los, fahrte los, ist losgefahrt",
+      "posInfo": "fährt los, fuhr los, ist losgefahren"
+    },
+    {
+      "id": "r318b1-056",
+      "deck": "b1-az-n",
+      "level": "B1",
+      "de": "nachschlagen",
+      "previousPosInfo": "schlagt nach, schlagte nach, hat nachgeschlagt",
+      "posInfo": "schlägt nach, schlug nach, hat nachgeschlagen"
+    },
+    {
+      "id": "r318b1-067",
+      "deck": "b1-az-n",
+      "level": "B1",
+      "de": "nennen",
+      "previousPosInfo": "nennt, nennte, hat genennt",
+      "posInfo": "nennt, nannte, hat genannt"
+    },
+    {
+      "id": "r319b1-008",
+      "deck": "b1-az-qr",
+      "level": "B1",
+      "de": "raten",
+      "previousPosInfo": "ratet, ratete, hat geratt",
+      "posInfo": "rät, riet, hat geraten"
+    },
+    {
+      "id": "r319b1-044",
+      "deck": "b1-az-qr",
+      "level": "B1",
+      "de": "rufen",
+      "previousPosInfo": "ruft, rufte, hat geruft",
+      "posInfo": "ruft, rief, hat gerufen"
+    },
+    {
+      "id": "r320b1-015",
+      "deck": "b1-az-s1",
+      "level": "B1",
+      "de": "schieben",
+      "previousPosInfo": "schiebt, schiebte, hat geschiebt",
+      "posInfo": "schiebt, schob, hat geschoben"
+    },
+    {
+      "id": "r320b1-017",
+      "deck": "b1-az-s1",
+      "level": "B1",
+      "de": "schießen",
+      "previousPosInfo": "schießt, schießte, hat geschießt",
+      "posInfo": "schießt, schoss, hat geschossen"
+    },
+    {
+      "id": "r320b1-020",
+      "deck": "b1-az-s1",
+      "level": "B1",
+      "de": "schlagen",
+      "previousPosInfo": "schlagt, schlagte, hat geschlagt",
+      "posInfo": "schlägt, schlug, hat geschlagen"
+    },
+    {
+      "id": "vj-migrati-018",
+      "deck": "b1-bildung-migration-familie",
+      "level": "B1",
+      "de": "erziehen",
+      "previousPosInfo": "erzieht, erziehte, ist erzieht",
+      "posInfo": "erzieht, erzog, hat erzogen"
+    },
+    {
+      "id": "vh-technik-021",
+      "deck": "b1-gesundheit-technik",
+      "level": "B1",
+      "de": "betragen",
+      "previousPosInfo": "betragt, betragte, hat betragt",
+      "posInfo": "beträgt, betrug, hat betragen"
+    },
+    {
+      "id": "vp-b1u-031",
+      "deck": "b1-job-auto-praefix",
+      "level": "B1",
+      "de": "entstehen",
+      "previousPosInfo": "entsteht, entstehte, hat entsteht",
+      "posInfo": "entsteht, entstand, ist entstanden"
+    },
+    {
+      "id": "vp-b1u-033",
+      "deck": "b1-job-auto-praefix",
+      "level": "B1",
+      "de": "gestehen",
+      "previousPosInfo": "gesteht, gestehte, hat gesteht",
+      "posInfo": "gesteht, gestand, hat gestanden"
+    },
+    {
+      "id": "vv-gefueh-017",
+      "deck": "b1-verwaltung-handwerk",
+      "level": "B1",
+      "de": "bestreiten",
+      "previousPosInfo": "bestreitet, bestreitete, hat bestreitt",
+      "posInfo": "bestreitet, bestritt, hat bestritten"
+    },
+    {
+      "id": "vm-b1z-019",
+      "deck": "b1-wissen-zeit-wendungen",
+      "level": "B1",
+      "de": "aufschieben",
+      "previousPosInfo": "schiebt auf, schiebte auf, hat aufgeschiebt",
+      "posInfo": "schiebt auf, schob auf, hat aufgeschoben"
+    },
+    {
+      "id": "v819",
+      "deck": "h05-staat-recht",
+      "level": "B2",
+      "de": "abschieben",
+      "previousPosInfo": "schiebt ab, schiebte ab, hat abgeschiebt",
+      "posInfo": "schiebt ab, schob ab, hat abgeschoben"
+    },
+    {
+      "id": "v831",
+      "deck": "h05-staat-recht",
+      "level": "B2",
+      "de": "bestechen",
+      "previousPosInfo": "bestecht, bestechte, hat bestecht",
+      "posInfo": "besticht, bestach, hat bestochen"
+    },
+    {
+      "id": "v864",
+      "deck": "h06-studium-lernen",
+      "level": "B2",
+      "de": "ausleihen",
+      "previousPosInfo": "leiht aus, leihte aus, hat ausgeleiht",
+      "posInfo": "leiht aus, lieh aus, hat ausgeliehen"
+    },
+    {
+      "id": "v963",
+      "deck": "h07-gefuehle-psyche",
+      "level": "B2",
+      "de": "anerkennen",
+      "previousPosInfo": "erkennt an, erkennte an, hat angeerkennt",
+      "posInfo": "erkennt an, erkannte an, hat anerkannt"
+    },
+    {
+      "id": "v1082",
+      "deck": "i01-medien-meinung",
+      "level": "B2",
+      "de": "nachvollziehen",
+      "previousPosInfo": "vollzieht nach, vollziehte nach, ist nachgevollzieht",
+      "posInfo": "vollzieht nach, vollzog nach, hat nachvollzogen"
+    },
+    {
+      "id": "v1214",
+      "deck": "i04-energie-wende",
+      "level": "B2",
+      "de": "abschalten",
+      "previousPosInfo": "schaltet ab, schaltete ab, hat abgeschaltt",
+      "posInfo": "schaltet ab, schaltete ab, hat abgeschaltet"
+    },
+    {
+      "id": "v1215",
+      "deck": "i04-energie-wende",
+      "level": "B2",
+      "de": "hochfahren",
+      "previousPosInfo": "hochfahrt, hochfahrte, ist gehochfahrt",
+      "posInfo": "fährt hoch, fuhr hoch, hat hochgefahren"
+    },
+    {
+      "id": "j03-umwelt-energie-047",
+      "deck": "j03-umwelt-energie",
+      "level": "B2",
+      "de": "schmelzen",
+      "previousPosInfo": "schmelzt, schmelzte, hat geschmelzt",
+      "posInfo": "schmilzt, schmolz, ist geschmolzen"
+    },
+    {
+      "id": "j03-umwelt-energie-050",
+      "deck": "j03-umwelt-energie",
+      "level": "B2",
+      "de": "erhalten",
+      "previousPosInfo": "erhaltet, erhaltete, hat erhaltt",
+      "posInfo": "erhält, erhielt, hat erhalten"
+    },
+    {
+      "id": "j03-umwelt-energie-053",
+      "deck": "j03-umwelt-energie",
+      "level": "B2",
+      "de": "ausgleichen",
+      "previousPosInfo": "gleicht aus, gleichte aus, hat ausgegleicht",
+      "posInfo": "gleicht aus, glich aus, hat ausgeglichen"
+    },
+    {
+      "id": "j05-bildung-wissenschaft-029",
+      "deck": "j05-bildung-wissenschaft",
+      "level": "B2",
+      "de": "erheben",
+      "previousPosInfo": "erhebt, erhebte, hat erhebt",
+      "posInfo": "erhebt, erhob, hat erhoben"
+    },
+    {
+      "id": "j05-bildung-wissenschaft-036",
+      "deck": "j05-bildung-wissenschaft",
+      "level": "B2",
+      "de": "aussprechen",
+      "previousPosInfo": "sprecht aus, sprechte aus, hat ausgesprecht",
+      "posInfo": "spricht aus, sprach aus, hat ausgesprochen"
+    },
+    {
+      "id": "j09-stadt-wohnen-verkehr-023",
+      "deck": "j09-stadt-wohnen-verkehr",
+      "level": "B2",
+      "de": "abbiegen",
+      "previousPosInfo": "biegt ab, biegte ab, hat abgebiegt",
+      "posInfo": "biegt ab, bog ab, ist abgebogen"
+    },
+    {
+      "id": "j10-meinung-diskussion-038",
+      "deck": "j10-meinung-diskussion",
+      "level": "B2",
+      "de": "hervorheben",
+      "previousPosInfo": "vorhebt her, vorhebte her, hat hergevorhebt",
+      "posInfo": "hebt hervor, hob hervor, hat hervorgehoben"
+    },
+    {
+      "id": "j12-natur-tiere-050",
+      "deck": "j12-natur-tiere",
+      "level": "B2",
+      "de": "gießen",
+      "previousPosInfo": "gießt, gießte, hat gegießt",
+      "posInfo": "gießt, goss, hat gegossen"
+    },
+    {
+      "id": "j12-natur-tiere-053",
+      "deck": "j12-natur-tiere",
+      "level": "B2",
+      "de": "scheinen",
+      "previousPosInfo": "scheint, scheinte, hat gescheint",
+      "posInfo": "scheint, schien, hat geschienen"
+    },
+    {
+      "id": "j12-natur-tiere-057",
+      "deck": "j12-natur-tiere",
+      "level": "B2",
+      "de": "kriechen",
+      "previousPosInfo": "kriecht, kriechte, hat gekriecht",
+      "posInfo": "kriecht, kroch, ist gekrochen"
+    },
+    {
+      "id": "j12-natur-tiere-059",
+      "deck": "j12-natur-tiere",
+      "level": "B2",
+      "de": "fressen",
+      "previousPosInfo": "fresst, fresste, hat gefresst",
+      "posInfo": "frisst, fraß, hat gefressen"
+    },
+    {
+      "id": "j13-koerper-zeit-056",
+      "deck": "j13-koerper-zeit",
+      "level": "B2",
+      "de": "erfinden",
+      "previousPosInfo": "erfindet, erfindete, hat erfindt",
+      "posInfo": "erfindet, erfand, hat erfunden"
+    },
+    {
+      "id": "j15-berufe-dienste-029",
+      "deck": "j15-berufe-dienste",
+      "level": "B2",
+      "de": "beraten",
+      "previousPosInfo": "beratet, beratete, hat beratt",
+      "posInfo": "berät, beriet, hat beraten"
+    },
+    {
+      "id": "j16-wege-ziele-010",
+      "deck": "j16-wege-ziele",
+      "level": "B2",
+      "de": "gelingen",
+      "previousPosInfo": "gelingt, gelingte, ist gelingt",
+      "posInfo": "gelingt, gelang, ist gelungen"
+    },
+    {
+      "id": "j16-wege-ziele-011",
+      "deck": "j16-wege-ziele",
+      "level": "B2",
+      "de": "misslingen",
+      "previousPosInfo": "misslingt, misslingte, hat misslingt",
+      "posInfo": "misslingt, misslang, ist misslungen"
+    }
+  ]
+}

@@ -19,7 +19,7 @@ type Dict = Record<string, { ar: string; de: string; hint?: string }>;
 
 const dict: Dict = {
   appTitle: { ar: "طريقي إلى B2", de: "Mein Weg bis B2" },
-  appSub: { ar: "المدرّس الافتراضي الوحيد — من الصفر إلى B2", de: "Dein virtueller Lehrer — von Null bis B2" },
+  appSub: { ar: "مسار تعلّم محلي — من الصفر نحو B2", de: "Lokaler Lernpfad — von Null in Richtung B2" },
   navDashboard: { ar: "لوحة اليوم", de: "Heute" },
   navCourse: { ar: "المسار", de: "Kurs" },
   navReview: { ar: "المراجعات", de: "Wiederholen" },

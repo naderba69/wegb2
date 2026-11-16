@@ -1,0 +1,1079 @@
+{
+  "schema": "wegb2-reviewed-vocab-posinfo-decision-batch-v1",
+  "batch": "PA-034-13",
+  "reviewedAt": "2026-11-04",
+  "scope": "Item-by-item internal review of all 119 residual unguarded B1 posInfo cards after reading every head, example, and current value: 2 context/head-shape corrections and 117 explicit confirmed-current decisions; deck and external-reference grouping were triage only, not correction generators, and this is not external linguistic sign-off.",
+  "entries": [
+    {
+      "id": "v099",
+      "deck": "b1-gesellschaft",
+      "level": "B1",
+      "de": "begründen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "begründet, begründete, hat begründet",
+      "posInfo": "begründet, begründete, hat begründet"
+    },
+    {
+      "id": "v115",
+      "deck": "b1-gesellschaft",
+      "level": "B1",
+      "de": "überzeugen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "überzeugt, überzeugte, hat überzeugt",
+      "posInfo": "überzeugt, überzeugte, hat überzeugt"
+    },
+    {
+      "id": "v119",
+      "deck": "b1-gesellschaft",
+      "level": "B1",
+      "de": "ausbilden",
+      "decision": "confirmed-current",
+      "previousPosInfo": "bildet aus, bildete aus, hat ausgebildet",
+      "posInfo": "bildet aus, bildete aus, hat ausgebildet"
+    },
+    {
+      "id": "vg-argumen-008",
+      "deck": "b1-staat-argument",
+      "level": "B1",
+      "de": "einräumen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "räumt ein, räumte ein, hat eingeräumt",
+      "posInfo": "räumt ein, räumte ein, hat eingeräumt"
+    },
+    {
+      "id": "vg-argumen-020",
+      "deck": "b1-staat-argument",
+      "level": "B1",
+      "de": "einschätzen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "schätzt ein, schätzte ein, hat eingeschätzt",
+      "posInfo": "schätzt ein, schätzte ein, hat eingeschätzt"
+    },
+    {
+      "id": "vg-argumen-023",
+      "deck": "b1-staat-argument",
+      "level": "B1",
+      "de": "abwägen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "wägt ab, wägte ab, hat abgewägt",
+      "posInfo": "wägt ab, wägte ab, hat abgewägt"
+    },
+    {
+      "id": "vg-psyche--016",
+      "deck": "b1-karriere-psyche",
+      "level": "B1",
+      "de": "bereuen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "bereut, bereute, hat bereut",
+      "posInfo": "bereut, bereute, hat bereut"
+    },
+    {
+      "id": "vg-psyche--021",
+      "deck": "b1-karriere-psyche",
+      "level": "B1",
+      "de": "beleidigen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "beleidigt, beleidigte, hat beleidigt",
+      "posInfo": "beleidigt, beleidigte, hat beleidigt"
+    },
+    {
+      "id": "vg-psyche--026",
+      "deck": "b1-karriere-psyche",
+      "level": "B1",
+      "de": "einlenken",
+      "decision": "confirmed-current",
+      "previousPosInfo": "lenkt ein, lenkte ein, hat eingelenkt",
+      "posInfo": "lenkt ein, lenkte ein, hat eingelenkt"
+    },
+    {
+      "id": "vh-projekt-001",
+      "deck": "b1-projekt-rede",
+      "level": "B1",
+      "de": "planen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "plant, plante, hat geplant",
+      "posInfo": "plant, plante, hat geplant"
+    },
+    {
+      "id": "vh-projekt-007",
+      "deck": "b1-projekt-rede",
+      "level": "B1",
+      "de": "umsetzen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "setzt um, setzte um, hat umgesetzt",
+      "posInfo": "setzt um, setzte um, hat umgesetzt"
+    },
+    {
+      "id": "vh-projekt-016",
+      "deck": "b1-projekt-rede",
+      "level": "B1",
+      "de": "loben für",
+      "decision": "confirmed-current",
+      "previousPosInfo": "lobt, lobte, hat gelobt",
+      "posInfo": "lobt, lobte, hat gelobt"
+    },
+    {
+      "id": "vi-funktio-000",
+      "deck": "b1-funktionsverben",
+      "level": "B1",
+      "de": "beantragen und bewilligen",
+      "decision": "corrected",
+      "previousPosInfo": "beantragt, beantragte, hat beantragt",
+      "posInfo": "beantragt und bewilligt, beantragte und bewilligte, hat beantragt und bewilligt"
+    },
+    {
+      "id": "vi-funktio-001",
+      "deck": "b1-funktionsverben",
+      "level": "B1",
+      "de": "berücksichtigen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "berücksichtigt, berücksichtigte, hat berücksichtigt",
+      "posInfo": "berücksichtigt, berücksichtigte, hat berücksichtigt"
+    },
+    {
+      "id": "vi-funktio-010",
+      "deck": "b1-funktionsverben",
+      "level": "B1",
+      "de": "verfügen über",
+      "decision": "confirmed-current",
+      "previousPosInfo": "verfügt, verfügte, hat verfügt",
+      "posInfo": "verfügt, verfügte, hat verfügt"
+    },
+    {
+      "id": "vi-funktio-014",
+      "deck": "b1-funktionsverben",
+      "level": "B1",
+      "de": "dienen zu",
+      "decision": "confirmed-current",
+      "previousPosInfo": "dient, diente, hat gedient",
+      "posInfo": "dient, diente, hat gedient"
+    },
+    {
+      "id": "r313b1-004",
+      "deck": "b1-digital-kauf-nomen",
+      "level": "B1",
+      "de": "bloggen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "bloggt, bloggte, hat gebloggt",
+      "posInfo": "bloggt, bloggte, hat gebloggt"
+    },
+    {
+      "id": "r313b1-009",
+      "deck": "b1-digital-kauf-nomen",
+      "level": "B1",
+      "de": "mailen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "mailt, mailte, hat gemailt",
+      "posInfo": "mailt, mailte, hat gemailt"
+    },
+    {
+      "id": "r313b1-085",
+      "deck": "b1-pruefung-text-reflexiv",
+      "level": "B1",
+      "de": "lösen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "löst, löste, hat gelöst",
+      "posInfo": "löst, löste, hat gelöst"
+    },
+    {
+      "id": "vt-b1q-015",
+      "deck": "b1-klima-sport-komposita",
+      "level": "B1",
+      "de": "vorbeugen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "beugt vor, beugte vor, hat vorgebeugt",
+      "posInfo": "beugt vor, beugte vor, hat vorgebeugt"
+    },
+    {
+      "id": "r313b1-069",
+      "deck": "b1-klima-sport-komposita",
+      "level": "B1",
+      "de": "faxen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "faxt, faxte, hat gefaxt",
+      "posInfo": "faxt, faxte, hat gefaxt"
+    },
+    {
+      "id": "r313b1-074",
+      "deck": "b1-klima-sport-komposita",
+      "level": "B1",
+      "de": "jobben",
+      "decision": "confirmed-current",
+      "previousPosInfo": "jobbt, jobbte, hat gejobbt",
+      "posInfo": "jobbt, jobbte, hat gejobbt"
+    },
+    {
+      "id": "r313b1-058",
+      "deck": "b1-medien-reise-verben",
+      "level": "B1",
+      "de": "campen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "campt, campte, hat gecampt",
+      "posInfo": "campt, campte, hat gecampt"
+    },
+    {
+      "id": "r313b1-066",
+      "deck": "b1-medien-reise-verben",
+      "level": "B1",
+      "de": "surfen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "surft, surfte, hat gesurft",
+      "posInfo": "surft, surfte, hat gesurft"
+    },
+    {
+      "id": "vv-verwal-012",
+      "deck": "b1-verwaltung-handwerk",
+      "level": "B1",
+      "de": "abstimmen über",
+      "decision": "confirmed-current",
+      "previousPosInfo": "stimmt ab, stimmte ab, hat abgestimmt",
+      "posInfo": "stimmt ab, stimmte ab, hat abgestimmt"
+    },
+    {
+      "id": "vv-gefueh-013",
+      "deck": "b1-verwaltung-handwerk",
+      "level": "B1",
+      "de": "einschätzen als",
+      "decision": "confirmed-current",
+      "previousPosInfo": "schätzt ein, schätzte ein, hat eingeschätzt",
+      "posInfo": "schätzt ein, schätzte ein, hat eingeschätzt"
+    },
+    {
+      "id": "r314b1-005",
+      "deck": "b1-az-a",
+      "level": "B1",
+      "de": "abmachen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "macht ab, machte ab, hat abgemacht",
+      "posInfo": "macht ab, machte ab, hat abgemacht"
+    },
+    {
+      "id": "r314b1-007",
+      "deck": "b1-az-a",
+      "level": "B1",
+      "de": "abstimmen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "stimmt ab, stimmte ab, hat abgestimmt",
+      "posInfo": "stimmt ab, stimmte ab, hat abgestimmt"
+    },
+    {
+      "id": "r314b1-035",
+      "deck": "b1-az-a",
+      "level": "B1",
+      "de": "ankündigen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "kündigt an, kündigte an, hat angekündigt",
+      "posInfo": "kündigt an, kündigte an, hat angekündigt"
+    },
+    {
+      "id": "r314b1-037",
+      "deck": "b1-az-a",
+      "level": "B1",
+      "de": "anschaffen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "schafft an, schaffte an, hat angeschafft",
+      "posInfo": "schafft an, schaffte an, hat angeschafft"
+    },
+    {
+      "id": "r314b1-039",
+      "deck": "b1-az-a",
+      "level": "B1",
+      "de": "anschnallen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "schnallt an, schnallte an, hat angeschnallt",
+      "posInfo": "schnallt an, schnallte an, hat angeschnallt"
+    },
+    {
+      "id": "r314b1-042",
+      "deck": "b1-az-a",
+      "level": "B1",
+      "de": "anstellen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "stellt an, stellte an, hat angestellt",
+      "posInfo": "stellt an, stellte an, hat angestellt"
+    },
+    {
+      "id": "r314b1-047",
+      "deck": "b1-az-a",
+      "level": "B1",
+      "de": "anzeigen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "zeigt an, zeigte an, hat angezeigt",
+      "posInfo": "zeigt an, zeigte an, hat angezeigt"
+    },
+    {
+      "id": "r314b1-060",
+      "deck": "b1-az-a",
+      "level": "B1",
+      "de": "auflösen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "löst auf, löste auf, hat aufgelöst",
+      "posInfo": "löst auf, löste auf, hat aufgelöst"
+    },
+    {
+      "id": "r314b1-074",
+      "deck": "b1-az-a",
+      "level": "B1",
+      "de": "ausreichen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "reicht aus, reichte aus, hat ausgereicht",
+      "posInfo": "reicht aus, reichte aus, hat ausgereicht"
+    },
+    {
+      "id": "r314b1-082",
+      "deck": "b1-az-a",
+      "level": "B1",
+      "de": "auswählen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "wählt aus, wählte aus, hat ausgewählt",
+      "posInfo": "wählt aus, wählte aus, hat ausgewählt"
+    },
+    {
+      "id": "r314b1-099",
+      "deck": "b1-az-b",
+      "level": "B1",
+      "de": "bauen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "baut, baute, hat gebaut",
+      "posInfo": "baut, baute, hat gebaut"
+    },
+    {
+      "id": "r314b1-104",
+      "deck": "b1-az-b",
+      "level": "B1",
+      "de": "bedienen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "bedient, bediente, hat bedient",
+      "posInfo": "bedient, bediente, hat bedient"
+    },
+    {
+      "id": "r314b1-109",
+      "deck": "b1-az-b",
+      "level": "B1",
+      "de": "begrüßen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "begrüßt, begrüßte, hat begrüßt",
+      "posInfo": "begrüßt, begrüßte, hat begrüßt"
+    },
+    {
+      "id": "r314b1-119",
+      "deck": "b1-az-b",
+      "level": "B1",
+      "de": "bemerken",
+      "decision": "confirmed-current",
+      "previousPosInfo": "bemerkt, bemerkte, hat bemerkt",
+      "posInfo": "bemerkt, bemerkte, hat bemerkt"
+    },
+    {
+      "id": "r314b1-121",
+      "deck": "b1-az-b",
+      "level": "B1",
+      "de": "benötigen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "benötigt, benötigte, hat benötigt",
+      "posInfo": "benötigt, benötigte, hat benötigt"
+    },
+    {
+      "id": "r314b1-122",
+      "deck": "b1-az-b",
+      "level": "B1",
+      "de": "benutzen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "benutzt, benutzte, hat benutzt",
+      "posInfo": "benutzt, benutzte, hat benutzt"
+    },
+    {
+      "id": "r314b1-129",
+      "deck": "b1-az-b",
+      "level": "B1",
+      "de": "beschädigen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "beschädigt, beschädigte, hat beschädigt",
+      "posInfo": "beschädigt, beschädigte, hat beschädigt"
+    },
+    {
+      "id": "r314b1-133",
+      "deck": "b1-az-b",
+      "level": "B1",
+      "de": "beschränken",
+      "decision": "confirmed-current",
+      "previousPosInfo": "beschränkt, beschränkte, hat beschränkt",
+      "posInfo": "beschränkt, beschränkte, hat beschränkt"
+    },
+    {
+      "id": "r314b1-135",
+      "deck": "b1-az-b",
+      "level": "B1",
+      "de": "besetzen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "besetzt, besetzte, hat besetzt",
+      "posInfo": "besetzt, besetzte, hat besetzt"
+    },
+    {
+      "id": "r314b1-138",
+      "deck": "b1-az-b",
+      "level": "B1",
+      "de": "besorgen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "besorgt, besorgte, hat besorgt",
+      "posInfo": "besorgt, besorgte, hat besorgt"
+    },
+    {
+      "id": "r314b1-141",
+      "deck": "b1-az-b",
+      "level": "B1",
+      "de": "bestätigen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "bestätigt, bestätigte, hat bestätigt",
+      "posInfo": "bestätigt, bestätigte, hat bestätigt"
+    },
+    {
+      "id": "r314b1-145",
+      "deck": "b1-az-b",
+      "level": "B1",
+      "de": "bewegen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "bewegt, bewegte, hat bewegt",
+      "posInfo": "bewegt, bewegte, hat bewegt"
+    },
+    {
+      "id": "r314b1-154",
+      "deck": "b1-az-b",
+      "level": "B1",
+      "de": "blitzen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "blitzt, blitzte, hat geblitzt",
+      "posInfo": "blitzt, blitzte, hat geblitzt"
+    },
+    {
+      "id": "r315b1-007",
+      "deck": "b1-az-d",
+      "level": "B1",
+      "de": "danken",
+      "decision": "confirmed-current",
+      "previousPosInfo": "dankt, dankte, hat gedankt",
+      "posInfo": "dankt, dankte, hat gedankt"
+    },
+    {
+      "id": "r315b1-022",
+      "deck": "b1-az-d",
+      "level": "B1",
+      "de": "dienen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "dient, diente, hat gedient",
+      "posInfo": "dient, diente, hat gedient"
+    },
+    {
+      "id": "r315b1-036",
+      "deck": "b1-az-d",
+      "level": "B1",
+      "de": "drucken",
+      "decision": "confirmed-current",
+      "previousPosInfo": "druckt, druckte, hat gedruckt",
+      "posInfo": "druckt, druckte, hat gedruckt"
+    },
+    {
+      "id": "r315b1-037",
+      "deck": "b1-az-d",
+      "level": "B1",
+      "de": "drücken",
+      "decision": "confirmed-current",
+      "previousPosInfo": "drückt, drückte, hat gedrückt",
+      "posInfo": "drückt, drückte, hat gedrückt"
+    },
+    {
+      "id": "r315b1-041",
+      "deck": "b1-az-d",
+      "level": "B1",
+      "de": "duzen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "duzt, duzte, hat geduzt",
+      "posInfo": "duzt, duzte, hat geduzt"
+    },
+    {
+      "id": "r315b1-048",
+      "deck": "b1-az-e",
+      "level": "B1",
+      "de": "eilen",
+      "decision": "corrected",
+      "previousPosInfo": "eilt, eilte, hat geeilt",
+      "posInfo": "eilt, eilte, ist geeilt"
+    },
+    {
+      "id": "r315b1-056",
+      "deck": "b1-az-e",
+      "level": "B1",
+      "de": "einfügen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "fügt ein, fügte ein, hat eingefügt",
+      "posInfo": "fügt ein, fügte ein, hat eingefügt"
+    },
+    {
+      "id": "r315b1-057",
+      "deck": "b1-az-e",
+      "level": "B1",
+      "de": "einführen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "führt ein, führte ein, hat eingeführt",
+      "posInfo": "führt ein, führte ein, hat eingeführt"
+    },
+    {
+      "id": "r315b1-081",
+      "deck": "b1-az-e",
+      "level": "B1",
+      "de": "entfernen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "entfernt, entfernte, hat entfernt",
+      "posInfo": "entfernt, entfernte, hat entfernt"
+    },
+    {
+      "id": "r315b1-094",
+      "deck": "b1-az-e",
+      "level": "B1",
+      "de": "erfüllen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "erfüllt, erfüllte, hat erfüllt",
+      "posInfo": "erfüllt, erfüllte, hat erfüllt"
+    },
+    {
+      "id": "r315b1-100",
+      "deck": "b1-az-e",
+      "level": "B1",
+      "de": "erleben",
+      "decision": "confirmed-current",
+      "previousPosInfo": "erlebt, erlebte, hat erlebt",
+      "posInfo": "erlebt, erlebte, hat erlebt"
+    },
+    {
+      "id": "r315b1-102",
+      "deck": "b1-az-e",
+      "level": "B1",
+      "de": "ernähren",
+      "decision": "confirmed-current",
+      "previousPosInfo": "ernährt, ernährte, hat ernährt",
+      "posInfo": "ernährt, ernährte, hat ernährt"
+    },
+    {
+      "id": "r315b1-107",
+      "deck": "b1-az-e",
+      "level": "B1",
+      "de": "erschrecken",
+      "decision": "confirmed-current",
+      "previousPosInfo": "erschreckt, erschreckte, hat erschreckt",
+      "posInfo": "erschreckt, erschreckte, hat erschreckt"
+    },
+    {
+      "id": "r315b1-108",
+      "deck": "b1-az-e",
+      "level": "B1",
+      "de": "erstellen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "erstellt, erstellte, hat erstellt",
+      "posInfo": "erstellt, erstellte, hat erstellt"
+    },
+    {
+      "id": "r316b1-013",
+      "deck": "b1-az-f",
+      "level": "B1",
+      "de": "fassen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "fasst, fasste, hat gefasst",
+      "posInfo": "fasst, fasste, hat gefasst"
+    },
+    {
+      "id": "r316b1-014",
+      "deck": "b1-az-f",
+      "level": "B1",
+      "de": "faulenzen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "faulenzt, faulenzte, hat gefaulenzt",
+      "posInfo": "faulenzt, faulenzte, hat gefaulenzt"
+    },
+    {
+      "id": "r316b1-021",
+      "deck": "b1-az-f",
+      "level": "B1",
+      "de": "festigen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "festigt, festigte, hat gefestigt",
+      "posInfo": "festigt, festigte, hat gefestigt"
+    },
+    {
+      "id": "r316b1-046",
+      "deck": "b1-az-f",
+      "level": "B1",
+      "de": "frühstücken",
+      "decision": "confirmed-current",
+      "previousPosInfo": "frühstückt, frühstückte, hat gefrühstückt",
+      "posInfo": "frühstückt, frühstückte, hat gefrühstückt"
+    },
+    {
+      "id": "r316b1-048",
+      "deck": "b1-az-f",
+      "level": "B1",
+      "de": "führen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "führt, führte, hat geführt",
+      "posInfo": "führt, führte, hat geführt"
+    },
+    {
+      "id": "r316b1-066",
+      "deck": "b1-az-g",
+      "level": "B1",
+      "de": "gebrauchen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "gebraucht, gebrauchte, hat gebraucht",
+      "posInfo": "gebraucht, gebrauchte, hat gebraucht"
+    },
+    {
+      "id": "r316b1-077",
+      "deck": "b1-az-g",
+      "level": "B1",
+      "de": "gehören",
+      "decision": "confirmed-current",
+      "previousPosInfo": "gehört, gehörte, hat gehört",
+      "posInfo": "gehört, gehörte, hat gehört"
+    },
+    {
+      "id": "r316b1-082",
+      "deck": "b1-az-g",
+      "level": "B1",
+      "de": "genügen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "genügt, genügte, hat genügt",
+      "posInfo": "genügt, genügte, hat genügt"
+    },
+    {
+      "id": "r316b1-093",
+      "deck": "b1-az-g",
+      "level": "B1",
+      "de": "gewöhnen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "gewöhnt, gewöhnte, hat gewöhnt",
+      "posInfo": "gewöhnt, gewöhnte, hat gewöhnt"
+    },
+    {
+      "id": "r316b1-109",
+      "deck": "b1-az-g",
+      "level": "B1",
+      "de": "grüßen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "grüßt, grüßte, hat gegrüßt",
+      "posInfo": "grüßt, grüßte, hat gegrüßt"
+    },
+    {
+      "id": "r316b1-110",
+      "deck": "b1-az-g",
+      "level": "B1",
+      "de": "gucken",
+      "decision": "confirmed-current",
+      "previousPosInfo": "guckt, guckte, hat geguckt",
+      "posInfo": "guckt, guckte, hat geguckt"
+    },
+    {
+      "id": "r316b1-153",
+      "deck": "b1-az-h",
+      "level": "B1",
+      "de": "hupen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "hupt, hupte, hat gehupt",
+      "posInfo": "hupt, hupte, hat gehupt"
+    },
+    {
+      "id": "r317b1-041",
+      "deck": "b1-az-k",
+      "level": "B1",
+      "de": "kämpfen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "kämpft, kämpfte, hat gekämpft",
+      "posInfo": "kämpft, kämpfte, hat gekämpft"
+    },
+    {
+      "id": "r317b1-062",
+      "deck": "b1-az-k",
+      "level": "B1",
+      "de": "kleben",
+      "decision": "confirmed-current",
+      "previousPosInfo": "klebt, klebte, hat geklebt",
+      "posInfo": "klebt, klebte, hat geklebt"
+    },
+    {
+      "id": "r317b1-068",
+      "deck": "b1-az-k",
+      "level": "B1",
+      "de": "klopfen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "klopft, klopfte, hat geklopft",
+      "posInfo": "klopft, klopfte, hat geklopft"
+    },
+    {
+      "id": "r317b1-105",
+      "deck": "b1-az-k",
+      "level": "B1",
+      "de": "küssen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "küsst, küsste, hat geküsst",
+      "posInfo": "küsst, küsste, hat geküsst"
+    },
+    {
+      "id": "r317b1-118",
+      "deck": "b1-az-l",
+      "level": "B1",
+      "de": "leben",
+      "decision": "confirmed-current",
+      "previousPosInfo": "lebt, lebte, hat gelebt",
+      "posInfo": "lebt, lebte, hat gelebt"
+    },
+    {
+      "id": "r318b1-021",
+      "deck": "b1-az-m",
+      "level": "B1",
+      "de": "merken",
+      "decision": "confirmed-current",
+      "previousPosInfo": "merkt, merkte, hat gemerkt",
+      "posInfo": "merkt, merkte, hat gemerkt"
+    },
+    {
+      "id": "r318b1-037",
+      "deck": "b1-az-m",
+      "level": "B1",
+      "de": "mitteilen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "teilt mit, teilte mit, hat mitgeteilt",
+      "posInfo": "teilt mit, teilte mit, hat mitgeteilt"
+    },
+    {
+      "id": "r318b1-079",
+      "deck": "b1-az-n",
+      "level": "B1",
+      "de": "nutzen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "nutzt, nutzte, hat genutzt",
+      "posInfo": "nutzt, nutzte, hat genutzt"
+    },
+    {
+      "id": "r318b1-080",
+      "deck": "b1-az-n",
+      "level": "B1",
+      "de": "nützen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "nützt, nützte, hat genützt",
+      "posInfo": "nützt, nützte, hat genützt"
+    },
+    {
+      "id": "r319b1-011",
+      "deck": "b1-az-qr",
+      "level": "B1",
+      "de": "rauchen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "raucht, rauchte, hat geraucht",
+      "posInfo": "raucht, rauchte, hat geraucht"
+    },
+    {
+      "id": "r319b1-028",
+      "deck": "b1-az-qr",
+      "level": "B1",
+      "de": "reichen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "reicht, reichte, hat gereicht",
+      "posInfo": "reicht, reichte, hat gereicht"
+    },
+    {
+      "id": "r319b1-030",
+      "deck": "b1-az-qr",
+      "level": "B1",
+      "de": "reinigen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "reinigt, reinigte, hat gereinigt",
+      "posInfo": "reinigt, reinigte, hat gereinigt"
+    },
+    {
+      "id": "r320b1-012",
+      "deck": "b1-az-s1",
+      "level": "B1",
+      "de": "schauen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "schaut, schaute, hat geschaut",
+      "posInfo": "schaut, schaute, hat geschaut"
+    },
+    {
+      "id": "r320b1-023",
+      "deck": "b1-az-s1",
+      "level": "B1",
+      "de": "schminken",
+      "decision": "confirmed-current",
+      "previousPosInfo": "schminkt, schminkte, hat geschminkt",
+      "posInfo": "schminkt, schminkte, hat geschminkt"
+    },
+    {
+      "id": "r320b1-035",
+      "deck": "b1-az-s1",
+      "level": "B1",
+      "de": "schwitzen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "schwitzt, schwitzte, hat geschwitzt",
+      "posInfo": "schwitzt, schwitzte, hat geschwitzt"
+    },
+    {
+      "id": "r320b1-048",
+      "deck": "b1-az-s1",
+      "level": "B1",
+      "de": "siegen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "siegt, siegte, hat gesiegt",
+      "posInfo": "siegt, siegte, hat gesiegt"
+    },
+    {
+      "id": "r320b1-050",
+      "deck": "b1-az-s1",
+      "level": "B1",
+      "de": "siezen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "siezt, siezte, hat gesiezt",
+      "posInfo": "siezt, siezte, hat gesiezt"
+    },
+    {
+      "id": "r321b1-005",
+      "deck": "b1-az-s2",
+      "level": "B1",
+      "de": "sorgen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "sorgt, sorgte, hat gesorgt",
+      "posInfo": "sorgt, sorgte, hat gesorgt"
+    },
+    {
+      "id": "r321b1-025",
+      "deck": "b1-az-s2",
+      "level": "B1",
+      "de": "spüren",
+      "decision": "confirmed-current",
+      "previousPosInfo": "spürt, spürte, hat gespürt",
+      "posInfo": "spürt, spürte, hat gespürt"
+    },
+    {
+      "id": "r321b1-034",
+      "deck": "b1-az-s2",
+      "level": "B1",
+      "de": "stecken",
+      "decision": "confirmed-current",
+      "previousPosInfo": "steckt, steckte, hat gesteckt",
+      "posInfo": "steckt, steckte, hat gesteckt"
+    },
+    {
+      "id": "r321b1-043",
+      "deck": "b1-az-s2",
+      "level": "B1",
+      "de": "stimmen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "stimmt, stimmte, hat gestimmt",
+      "posInfo": "stimmt, stimmte, hat gestimmt"
+    },
+    {
+      "id": "r321b1-045",
+      "deck": "b1-az-s2",
+      "level": "B1",
+      "de": "stoppen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "stoppt, stoppte, hat gestoppt",
+      "posInfo": "stoppt, stoppte, hat gestoppt"
+    },
+    {
+      "id": "r321b1-046",
+      "deck": "b1-az-s2",
+      "level": "B1",
+      "de": "stören",
+      "decision": "confirmed-current",
+      "previousPosInfo": "stört, störte, hat gestört",
+      "posInfo": "stört, störte, hat gestört"
+    },
+    {
+      "id": "r322b1-013",
+      "deck": "b1-az-t",
+      "level": "B1",
+      "de": "tauchen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "taucht, tauchte, hat getaucht",
+      "posInfo": "taucht, tauchte, hat getaucht"
+    },
+    {
+      "id": "r322b1-014",
+      "deck": "b1-az-t",
+      "level": "B1",
+      "de": "tauschen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "tauscht, tauschte, hat getauscht",
+      "posInfo": "tauscht, tauschte, hat getauscht"
+    },
+    {
+      "id": "r322b1-031",
+      "deck": "b1-az-t",
+      "level": "B1",
+      "de": "tippen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "tippt, tippte, hat getippt",
+      "posInfo": "tippt, tippte, hat getippt"
+    },
+    {
+      "id": "r322b1-068",
+      "deck": "b1-az-u",
+      "level": "B1",
+      "de": "umdrehen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "dreht um, drehte um, hat umgedreht",
+      "posInfo": "dreht um, drehte um, hat umgedreht"
+    },
+    {
+      "id": "r323b1-012",
+      "deck": "b1-az-v",
+      "level": "B1",
+      "de": "verfügen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "verfügt, verfügte, hat verfügt",
+      "posInfo": "verfügt, verfügte, hat verfügt"
+    },
+    {
+      "id": "r323b1-023",
+      "deck": "b1-az-v",
+      "level": "B1",
+      "de": "verlangen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "verlangt, verlangte, hat verlangt",
+      "posInfo": "verlangt, verlangte, hat verlangt"
+    },
+    {
+      "id": "r323b1-025",
+      "deck": "b1-az-v",
+      "level": "B1",
+      "de": "verletzen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "verletzt, verletzte, hat verletzt",
+      "posInfo": "verletzt, verletzte, hat verletzt"
+    },
+    {
+      "id": "r323b1-031",
+      "deck": "b1-az-v",
+      "level": "B1",
+      "de": "verpflegen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "verpflegt, verpflegte, hat verpflegt",
+      "posInfo": "verpflegt, verpflegte, hat verpflegt"
+    },
+    {
+      "id": "r323b1-036",
+      "deck": "b1-az-v",
+      "level": "B1",
+      "de": "versäumen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "versäumt, versäumte, hat versäumt",
+      "posInfo": "versäumt, versäumte, hat versäumt"
+    },
+    {
+      "id": "r323b1-040",
+      "deck": "b1-az-v",
+      "level": "B1",
+      "de": "verstecken",
+      "decision": "confirmed-current",
+      "previousPosInfo": "versteckt, versteckte, hat versteckt",
+      "posInfo": "versteckt, versteckte, hat versteckt"
+    },
+    {
+      "id": "r323b1-041",
+      "deck": "b1-az-v",
+      "level": "B1",
+      "de": "verteilen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "verteilt, verteilte, hat verteilt",
+      "posInfo": "verteilt, verteilte, hat verteilt"
+    },
+    {
+      "id": "r323b1-044",
+      "deck": "b1-az-v",
+      "level": "B1",
+      "de": "verurteilen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "verurteilt, verurteilte, hat verurteilt",
+      "posInfo": "verurteilt, verurteilte, hat verurteilt"
+    },
+    {
+      "id": "r323b1-068",
+      "deck": "b1-az-v",
+      "level": "B1",
+      "de": "vorstellen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "stellt vor, stellte vor, hat vorgestellt",
+      "posInfo": "stellt vor, stellte vor, hat vorgestellt"
+    },
+    {
+      "id": "r324b1-006",
+      "deck": "b1-az-w",
+      "level": "B1",
+      "de": "warnen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "warnt, warnte, hat gewarnt",
+      "posInfo": "warnt, warnte, hat gewarnt"
+    },
+    {
+      "id": "r324b1-046",
+      "deck": "b1-az-w",
+      "level": "B1",
+      "de": "wünschen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "wünscht, wünschte, hat gewünscht",
+      "posInfo": "wünscht, wünschte, hat gewünscht"
+    },
+    {
+      "id": "r325b1-003",
+      "deck": "b1-az-z",
+      "level": "B1",
+      "de": "zahlen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "zahlt, zahlte, hat gezahlt",
+      "posInfo": "zahlt, zahlte, hat gezahlt"
+    },
+    {
+      "id": "r325b1-004",
+      "deck": "b1-az-z",
+      "level": "B1",
+      "de": "zählen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "zählt, zählte, hat gezählt",
+      "posInfo": "zählt, zählte, hat gezählt"
+    },
+    {
+      "id": "r325b1-028",
+      "deck": "b1-az-z",
+      "level": "B1",
+      "de": "zumachen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "macht zu, machte zu, hat zugemacht",
+      "posInfo": "macht zu, machte zu, hat zugemacht"
+    },
+    {
+      "id": "r325b1-034",
+      "deck": "b1-az-z",
+      "level": "B1",
+      "de": "zuschauen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "schaut zu, schaute zu, hat zugeschaut",
+      "posInfo": "schaut zu, schaute zu, hat zugeschaut"
+    },
+    {
+      "id": "r327b1-004",
+      "deck": "b1-az-final",
+      "level": "B1",
+      "de": "aufregen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "regt auf, regte auf, hat aufgeregt",
+      "posInfo": "regt auf, regte auf, hat aufgeregt"
+    },
+    {
+      "id": "r327b1-005",
+      "deck": "b1-az-final",
+      "level": "B1",
+      "de": "ausruhen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "ruht aus, ruhte aus, hat ausgeruht",
+      "posInfo": "ruht aus, ruhte aus, hat ausgeruht"
+    }
+  ]
+}

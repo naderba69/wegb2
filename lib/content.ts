@@ -11,6 +11,7 @@ import type {
   Level,
   Tiefenlex,
   Eselsbruecke,
+  CanDoDescriptor,
 } from "./types";
 import { bankRoh, beiBankenBereit, beiVertiefungBereit, beiLangBankenBereit, BANK_DATEIEN, VERTIEFUNG_DATEIEN, LANG_DATEIEN } from "./bankload";
 
@@ -46,10 +47,7 @@ export function leseText(t: Lesetext): { de: string; ar: string; questions: Exer
 }
 export const dialogues = [] as unknown as Hoerdialog[];
 export const writingTasks = [] as unknown as Schreibaufgabe[];
-export const candoMap = {} as Record<
-  Level,
-  { id: string; de: string; ar: string }[]
->;
+export const candoMap = {} as Record<Level, CanDoDescriptor[]>;
 /** بنك أنماط التصحيح الألمانية (مترابط بمحرّك دفتر الأخطاء) */
 export const fehlerList = [] as (FehlerEintrag & { id: string; kat: string })[];
 /** حيل الحفظ السريع لكل كلمة (كلمة مفتاحية/قصة/جذر عربي) */

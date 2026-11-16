@@ -37,12 +37,12 @@ export interface BerufsstartSchritt {
   id: string; titelAr: string; detailAr: string; kartenId?: string;
 }
 export const BERUFSSTART_SCHRITTE: BerufsstartSchritt[] = [
-  { id: "bs-sprache", titelAr: "أنهِ الألمانية العامة حتى B2", detailAr: "اتبع خطة الـ378 يومًا هنا واجتز اختبارات المراحل؛ شهادة Goethe/telc B2 هي قاعدة كل ما بعدها.", kartenId: undefined },
-  { id: "bs-fach", titelAr: "ابنِ اللغة المهنية في محطة التمريض", detailAr: "115 كلمة مهنية و8 حوارات ومحاكاة طبية وبنك معرفة في هذه الأكاديمية (تدرّب ← ألمانية التمريض).", kartenId: undefined },
-  { id: "bs-unterlagen", titelAr: "جهّز أوراق الاعتراف مترجمة ومصدّقة", detailAr: "شهادة التمريض وكشف الدرجات والسيرة — ترجمة محلفة (beglaubigt) قبل أيّ تقديم.", kartenId: "lw-03" },
-  { id: "bs-antrag", titelAr: "قدّم طلب الاعتراف (Anerkennung)", detailAr: "لدى جهة ولايتك؛ القرار (Bescheid) يخبرك إن كنت جاهزًا أو تحتاج معادلة.", kartenId: "lw-03" },
-  { id: "bs-ausgleich", titelAr: "اختر طريق المعادلة إن لزم", detailAr: "Kenntnisprüfung (اختبار معرفة) أو Anpassungslehrgang (تدريب تكييف بمستشفى) — وأحيانًا عمل كمساعد أثناء ذلك.", kartenId: "lw-03" },
-  { id: "bs-bewerbung", titelAr: "قدّم على مستشفيات ودور رعاية", detailAr: "سيرة ذاتية ألمانية ورسالة قصيرة؛ كثير من جهات العمل تدعم الاعتراف نفسه وتوظّف أثناءه.", kartenId: "lw-05" },
-  { id: "bs-vertrag", titelAr: "وقّع العقد وافهمه قبل التوقيع", detailAr: "راتب إجمالي، Probezeit، عطل، إضافات ورديات — لا توقيع متسرّع (بطاقة العقد).", kartenId: "lw-05" },
-  { id: "bs-ankunft", titelAr: "نظّم الوصول: سكن وتأمين وتسجيل", detailAr: "Anmeldung خلال 14 يومًا، Krankenkasse، وحساب بنكي — البطاقات lw-01 وlw-04 وlw-08 ترشدك.", kartenId: "lw-01" },
+  { id: "bs-sprache", titelAr: "تدرّب على وصف مستواك وهدفك اللغوي", detailAr: "استخدم الخطة لبناء الألمانية، ثم اسأل الجهة المختصة عن الشهادة والمستوى المطلوبين لحالتك؛ اختبارات التطبيق داخلية.", kartenId: undefined },
+  { id: "bs-fach", titelAr: "ابنِ مفردات اللغة المهنية في محطة التمريض", detailAr: "تدرّب على الكلمات والحوارات والمحاكاة الخيالية، ولا تستعمل بنك المعرفة بديلاً عن تدريب مهني أو بروتوكول جهة عمل.", kartenId: undefined },
+  { id: "bs-unterlagen", titelAr: "تدرّب على السؤال عن أوراق الاعتراف", detailAr: "حضّر أسئلة ألمانية عن الشهادة وكشف الدرجات والترجمة والتصديق؛ قائمة الوثائق الملزمة تُؤخذ من جهة الاعتراف الحالية.", kartenId: "lw-03" },
+  { id: "bs-antrag", titelAr: "تدرّب على طلب معلومات عن Anerkennung", detailAr: "تعلّم كيف تسأل عن الجهة المسؤولة والطلب والقرار؛ لا تحدد البطاقة الجهة أو الإجراء القانوني لحالتك.", kartenId: "lw-03" },
+  { id: "bs-ausgleich", titelAr: "تعلّم مفردات خيارات المعادلة", detailAr: "تعرّف لغوياً إلى Kenntnisprüfung وAnpassungslehrgang، ثم تحقق من الخيارات المتاحة فعلاً في قرار الجهة المختصة.", kartenId: "lw-03" },
+  { id: "bs-bewerbung", titelAr: "تدرّب على لغة التقديم إلى جهة عمل", detailAr: "اكتب سيرة ورسالة تدريبية واسأل صاحب العمل عما يطلبه؛ الأمثلة لا تعد بتوظيف أو دعم للاعتراف.", kartenId: "lw-05" },
+  { id: "bs-vertrag", titelAr: "تدرّب على أسئلة عقد العمل", detailAr: "تعلّم السؤال عن الراتب الإجمالي وProbezeit والعطل والورديات، واطلب شرحاً مختصاً قبل أي توقيع حقيقي.", kartenId: "lw-05" },
+  { id: "bs-ankunft", titelAr: "تدرّب على أسئلة السكن والتأمين والتسجيل", detailAr: "استخدم البطاقات لصياغة الأسئلة فقط، وتحقق من المهل والوثائق الحالية لدى البلدية والتأمين والجهات المختصة.", kartenId: "lw-01" },
 ];

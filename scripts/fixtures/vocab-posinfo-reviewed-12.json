@@ -1,0 +1,890 @@
+{
+  "schema": "wegb2-reviewed-vocab-posinfo-decision-batch-v1",
+  "batch": "PA-034-12",
+  "reviewedAt": "2026-11-04",
+  "scope": "Item-by-item internal review of all 98 residual unguarded A0-A2 posInfo cards after reading every head, example, and current value: 2 context-specific auxiliary corrections and 96 explicit confirmed-current decisions; level and reference grouping were triage only, not correction generators, and this is not external linguistic sign-off.",
+  "entries": [
+    {
+      "id": "v007",
+      "deck": "a1-start",
+      "level": "A1",
+      "de": "kommen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "kommt, kam, ist gekommen",
+      "posInfo": "kommt, kam, ist gekommen"
+    },
+    {
+      "id": "v008",
+      "deck": "a1-start",
+      "level": "A1",
+      "de": "wohnen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "wohnt, wohnte, hat gewohnt",
+      "posInfo": "wohnt, wohnte, hat gewohnt"
+    },
+    {
+      "id": "v011",
+      "deck": "a1-start",
+      "level": "A1",
+      "de": "lernen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "lernt, lernte, hat gelernt",
+      "posInfo": "lernt, lernte, hat gelernt"
+    },
+    {
+      "id": "v012",
+      "deck": "a1-start",
+      "level": "A1",
+      "de": "arbeiten",
+      "decision": "confirmed-current",
+      "previousPosInfo": "arbeitet, arbeitete, hat gearbeitet",
+      "posInfo": "arbeitet, arbeitete, hat gearbeitet"
+    },
+    {
+      "id": "v149",
+      "deck": "a1-start",
+      "level": "A1",
+      "de": "bezahlen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "bezahlt, bezahlte, hat bezahlt",
+      "posInfo": "bezahlt, bezahlte, hat bezahlt"
+    },
+    {
+      "id": "r311a1-011",
+      "deck": "a1-familie-alltag",
+      "level": "A1",
+      "de": "heiraten",
+      "decision": "confirmed-current",
+      "previousPosInfo": "heiratet, heiratete, hat geheiratet",
+      "posInfo": "heiratet, heiratete, hat geheiratet"
+    },
+    {
+      "id": "v058",
+      "deck": "a2-komplett",
+      "level": "A2",
+      "de": "reservieren",
+      "decision": "confirmed-current",
+      "previousPosInfo": "reserviert, reservierte, hat reserviert",
+      "posInfo": "reserviert, reservierte, hat reserviert"
+    },
+    {
+      "id": "v061",
+      "deck": "a2-komplett",
+      "level": "A2",
+      "de": "sparen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "spart, sparte, hat gespart",
+      "posInfo": "spart, sparte, hat gespart"
+    },
+    {
+      "id": "v069",
+      "deck": "a2-komplett",
+      "level": "A2",
+      "de": "putzen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "putzt, putzte, hat geputzt",
+      "posInfo": "putzt, putzte, hat geputzt"
+    },
+    {
+      "id": "v075",
+      "deck": "a2-b1-bruecke",
+      "level": "A2",
+      "de": "glauben",
+      "decision": "confirmed-current",
+      "previousPosInfo": "glaubt, glaubte, hat geglaubt",
+      "posInfo": "glaubt, glaubte, hat geglaubt"
+    },
+    {
+      "id": "v082",
+      "deck": "a2-b1-bruecke",
+      "level": "A2",
+      "de": "gratulieren",
+      "decision": "confirmed-current",
+      "previousPosInfo": "gratuliert, gratulierte, hat gratuliert",
+      "posInfo": "gratuliert, gratulierte, hat gratuliert"
+    },
+    {
+      "id": "v087",
+      "deck": "a2-b1-bruecke",
+      "level": "A2",
+      "de": "beschreiben",
+      "decision": "confirmed-current",
+      "previousPosInfo": "beschreibt, beschrieb, hat beschrieben",
+      "posInfo": "beschreibt, beschrieb, hat beschrieben"
+    },
+    {
+      "id": "v166",
+      "deck": "a2-b1-bruecke",
+      "level": "A2",
+      "de": "erwarten",
+      "decision": "confirmed-current",
+      "previousPosInfo": "erwartet, erwartete, hat erwartet",
+      "posInfo": "erwartet, erwartete, hat erwartet"
+    },
+    {
+      "id": "vw-a1ess-036",
+      "deck": "a1-essen-trinken",
+      "level": "A1",
+      "de": "kochen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "kocht, kochte, hat gekocht",
+      "posInfo": "kocht, kochte, hat gekocht"
+    },
+    {
+      "id": "vw-a1ess-038",
+      "deck": "a1-essen-trinken",
+      "level": "A1",
+      "de": "schmecken",
+      "decision": "confirmed-current",
+      "previousPosInfo": "schmeckt, schmeckte, hat geschmeckt",
+      "posInfo": "schmeckt, schmeckte, hat geschmeckt"
+    },
+    {
+      "id": "vw-a1ess-039",
+      "deck": "a1-essen-trinken",
+      "level": "A1",
+      "de": "bestellen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "bestellt, bestellte, hat bestellt",
+      "posInfo": "bestellt, bestellte, hat bestellt"
+    },
+    {
+      "id": "r311a1-059",
+      "deck": "a1-essen-trinken",
+      "level": "A1",
+      "de": "grillen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "grillt, grillte, hat gegrillt",
+      "posInfo": "grillt, grillte, hat gegrillt"
+    },
+    {
+      "id": "vw-a1koe-035",
+      "deck": "a1-koerper-kleidung",
+      "level": "A1",
+      "de": "passen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "passt, passte, hat gepasst",
+      "posInfo": "passt, passte, hat gepasst"
+    },
+    {
+      "id": "vw-a1sta-035",
+      "deck": "a1-stadt-wege",
+      "level": "A1",
+      "de": "fragen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "fragt, fragte, hat gefragt",
+      "posInfo": "fragt, fragte, hat gefragt"
+    },
+    {
+      "id": "vw-a1sta-036",
+      "deck": "a1-stadt-wege",
+      "level": "A1",
+      "de": "zeigen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "zeigt, zeigte, hat gezeigt",
+      "posInfo": "zeigt, zeigte, hat gezeigt"
+    },
+    {
+      "id": "vw-a1sta-037",
+      "deck": "a1-stadt-wege",
+      "level": "A1",
+      "de": "suchen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "sucht, suchte, hat gesucht",
+      "posInfo": "sucht, suchte, hat gesucht"
+    },
+    {
+      "id": "vw-a1sta-041",
+      "deck": "a1-stadt-wege",
+      "level": "A1",
+      "de": "kaufen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "kauft, kaufte, hat gekauft",
+      "posInfo": "kauft, kaufte, hat gekauft"
+    },
+    {
+      "id": "vw-a1sta-042",
+      "deck": "a1-stadt-wege",
+      "level": "A1",
+      "de": "verkaufen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "verkauft, verkaufte, hat verkauft",
+      "posInfo": "verkauft, verkaufte, hat verkauft"
+    },
+    {
+      "id": "vw-a2arb-019",
+      "deck": "a2-arbeit-buero",
+      "level": "A2",
+      "de": "verdienen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "verdient, verdiente, hat verdient",
+      "posInfo": "verdient, verdiente, hat verdient"
+    },
+    {
+      "id": "vw-a2arb-023",
+      "deck": "a2-arbeit-buero",
+      "level": "A2",
+      "de": "absagen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "sagt ab, sagte ab, hat abgesagt",
+      "posInfo": "sagt ab, sagte ab, hat abgesagt"
+    },
+    {
+      "id": "vw-a2arb-028",
+      "deck": "a2-arbeit-buero",
+      "level": "A2",
+      "de": "ausfüllen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "füllt aus, füllte aus, hat ausgefüllt",
+      "posInfo": "füllt aus, füllte aus, hat ausgefüllt"
+    },
+    {
+      "id": "vw-a2arb-044",
+      "deck": "a2-arbeit-buero",
+      "level": "A2",
+      "de": "erklären",
+      "decision": "confirmed-current",
+      "previousPosInfo": "erklärt, erklärte, hat erklärt",
+      "posInfo": "erklärt, erklärte, hat erklärt"
+    },
+    {
+      "id": "vw-a2arb-046",
+      "deck": "a2-arbeit-buero",
+      "level": "A2",
+      "de": "üben",
+      "decision": "confirmed-current",
+      "previousPosInfo": "übt, übte, hat geübt",
+      "posInfo": "übt, übte, hat geübt"
+    },
+    {
+      "id": "vw-a2arb-082",
+      "deck": "a2-arbeit-buero",
+      "level": "A2",
+      "de": "nachfragen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "fragt nach, fragte nach, hat nachgefragt",
+      "posInfo": "fragt nach, fragte nach, hat nachgefragt"
+    },
+    {
+      "id": "vw-a2all-012",
+      "deck": "a2-alltag-dienste",
+      "level": "A2",
+      "de": "trennen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "trennt, trennte, hat getrennt",
+      "posInfo": "trennt, trennte, hat getrennt"
+    },
+    {
+      "id": "vw-a2all-013",
+      "deck": "a2-alltag-dienste",
+      "level": "A2",
+      "de": "aufräumen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "räumt auf, räumte auf, hat aufgeräumt",
+      "posInfo": "räumt auf, räumte auf, hat aufgeräumt"
+    },
+    {
+      "id": "vw-a2all-019",
+      "deck": "a2-alltag-dienste",
+      "level": "A2",
+      "de": "schicken",
+      "decision": "confirmed-current",
+      "previousPosInfo": "schickt, schickte, hat geschickt",
+      "posInfo": "schickt, schickte, hat geschickt"
+    },
+    {
+      "id": "vw-a2all-020",
+      "deck": "a2-alltag-dienste",
+      "level": "A2",
+      "de": "erreichen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "erreicht, erreichte, hat erreicht",
+      "posInfo": "erreicht, erreichte, hat erreicht"
+    },
+    {
+      "id": "vw-a2all-049",
+      "deck": "a2-alltag-dienste",
+      "level": "A2",
+      "de": "buchen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "bucht, buchte, hat gebucht",
+      "posInfo": "bucht, buchte, hat gebucht"
+    },
+    {
+      "id": "vw-a2all-052",
+      "deck": "a2-alltag-dienste",
+      "level": "A2",
+      "de": "packen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "packt, packte, hat gepackt",
+      "posInfo": "packt, packte, hat gepackt"
+    },
+    {
+      "id": "vw-a2all-079",
+      "deck": "a2-alltag-dienste",
+      "level": "A2",
+      "de": "zusagen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "sagt zu, sagte zu, hat zugesagt",
+      "posInfo": "sagt zu, sagte zu, hat zugesagt"
+    },
+    {
+      "id": "vx-haus--030",
+      "deck": "a1-haus-schule",
+      "level": "A1",
+      "de": "hören",
+      "decision": "confirmed-current",
+      "previousPosInfo": "hört, hörte, hat gehört",
+      "posInfo": "hört, hörte, hat gehört"
+    },
+    {
+      "id": "vx-haus--033",
+      "deck": "a1-haus-schule",
+      "level": "A1",
+      "de": "machen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "macht, machte, hat gemacht",
+      "posInfo": "macht, machte, hat gemacht"
+    },
+    {
+      "id": "vx-haus--036",
+      "deck": "a1-haus-schule",
+      "level": "A1",
+      "de": "sagen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "sagt, sagte, hat gesagt",
+      "posInfo": "sagt, sagte, hat gesagt"
+    },
+    {
+      "id": "vx-haus--039",
+      "deck": "a1-haus-schule",
+      "level": "A1",
+      "de": "brauchen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "braucht, brauchte, hat gebraucht",
+      "posInfo": "braucht, brauchte, hat gebraucht"
+    },
+    {
+      "id": "vx-haus--047",
+      "deck": "a1-haus-schule",
+      "level": "A1",
+      "de": "aufhören",
+      "decision": "confirmed-current",
+      "previousPosInfo": "hört auf, hörte auf, hat aufgehört",
+      "posInfo": "hört auf, hörte auf, hat aufgehört"
+    },
+    {
+      "id": "vx-haus--051",
+      "deck": "a1-haus-schule",
+      "level": "A1",
+      "de": "spielen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "spielt, spielte, hat gespielt",
+      "posInfo": "spielt, spielte, hat gespielt"
+    },
+    {
+      "id": "vy-natur-025",
+      "deck": "a1-natur-freizeit",
+      "level": "A1",
+      "de": "tanzen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "tanzt, tanzte, hat getanzt",
+      "posInfo": "tanzt, tanzte, hat getanzt"
+    },
+    {
+      "id": "vy-natur-034",
+      "deck": "a1-natur-freizeit",
+      "level": "A1",
+      "de": "besuchen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "besucht, besuchte, hat besucht",
+      "posInfo": "besucht, besuchte, hat besucht"
+    },
+    {
+      "id": "vy-natur-044",
+      "deck": "a1-natur-freizeit",
+      "level": "A1",
+      "de": "lachen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "lacht, lachte, hat gelacht",
+      "posInfo": "lacht, lachte, hat gelacht"
+    },
+    {
+      "id": "vy-natur-045",
+      "deck": "a1-natur-freizeit",
+      "level": "A1",
+      "de": "weinen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "weint, weinte, hat geweint",
+      "posInfo": "weint, weinte, hat geweint"
+    },
+    {
+      "id": "vy-natur-046",
+      "deck": "a1-natur-freizeit",
+      "level": "A1",
+      "de": "lieben",
+      "decision": "confirmed-current",
+      "previousPosInfo": "liebt, liebte, hat geliebt",
+      "posInfo": "liebt, liebte, hat geliebt"
+    },
+    {
+      "id": "vy-natur-048",
+      "deck": "a1-natur-freizeit",
+      "level": "A1",
+      "de": "hassen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "hasst, hasste, hat gehasst",
+      "posInfo": "hasst, hasste, hat gehasst"
+    },
+    {
+      "id": "vy-natur-053",
+      "deck": "a1-natur-freizeit",
+      "level": "A1",
+      "de": "duschen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "duscht, duschte, hat geduscht",
+      "posInfo": "duscht, duschte, hat geduscht"
+    },
+    {
+      "id": "vy-natur-054",
+      "deck": "a1-natur-freizeit",
+      "level": "A1",
+      "de": "kehren",
+      "decision": "confirmed-current",
+      "previousPosInfo": "kehrt, kehrte, hat gekehrt",
+      "posInfo": "kehrt, kehrte, hat gekehrt"
+    },
+    {
+      "id": "vy-leben-012",
+      "deck": "a2-leben-technik",
+      "level": "A2",
+      "de": "erlauben",
+      "decision": "confirmed-current",
+      "previousPosInfo": "erlaubt, erlaubte, hat erlaubt",
+      "posInfo": "erlaubt, erlaubte, hat erlaubt"
+    },
+    {
+      "id": "vy-leben-018",
+      "deck": "a2-leben-technik",
+      "level": "A2",
+      "de": "aufpassen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "passt auf, passte auf, hat aufgepasst",
+      "posInfo": "passt auf, passte auf, hat aufgepasst"
+    },
+    {
+      "id": "vy-leben-029",
+      "deck": "a2-leben-technik",
+      "level": "A2",
+      "de": "löschen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "löscht, löschte, hat gelöscht",
+      "posInfo": "löscht, löschte, hat gelöscht"
+    },
+    {
+      "id": "vz-welt-b-033",
+      "deck": "a1-welt-beruf",
+      "level": "A1",
+      "de": "stellen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "stellt, stellte, hat gestellt",
+      "posInfo": "stellt, stellte, hat gestellt"
+    },
+    {
+      "id": "vz-welt-b-034",
+      "deck": "a1-welt-beruf",
+      "level": "A1",
+      "de": "legen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "legt, legte, hat gelegt",
+      "posInfo": "legt, legte, hat gelegt"
+    },
+    {
+      "id": "vz-welt-b-035",
+      "deck": "a1-welt-beruf",
+      "level": "A1",
+      "de": "setzen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "setzt, setzte, hat gesetzt",
+      "posInfo": "setzt, setzte, hat gesetzt"
+    },
+    {
+      "id": "vz-welt-b-036",
+      "deck": "a1-welt-beruf",
+      "level": "A1",
+      "de": "hängen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "hängt, hängte, hat gehängt",
+      "posInfo": "hängt, hängte, hat gehängt"
+    },
+    {
+      "id": "vz-welt-b-043",
+      "deck": "a1-welt-beruf",
+      "level": "A1",
+      "de": "holen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "holt, holte, hat geholt",
+      "posInfo": "holt, holte, hat geholt"
+    },
+    {
+      "id": "vz-schrei-009",
+      "deck": "a2-schreiben-dienste",
+      "level": "A2",
+      "de": "zustimmen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "stimmt zu, stimmte zu, hat zugestimmt",
+      "posInfo": "stimmt zu, stimmte zu, hat zugestimmt"
+    },
+    {
+      "id": "va-modort-056",
+      "deck": "a1-modal-ort",
+      "level": "A1",
+      "de": "klicken",
+      "decision": "confirmed-current",
+      "previousPosInfo": "klickt, klickte, hat geklickt",
+      "posInfo": "klickt, klickte, hat geklickt"
+    },
+    {
+      "id": "va-modort-057",
+      "deck": "a1-modal-ort",
+      "level": "A1",
+      "de": "suchen im Internet",
+      "decision": "confirmed-current",
+      "previousPosInfo": "sucht, suchte, hat gesucht",
+      "posInfo": "sucht, suchte, hat gesucht"
+    },
+    {
+      "id": "va-modort-073",
+      "deck": "a1-modal-ort",
+      "level": "A1",
+      "de": "abholen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "holt ab, holte ab, hat abgeholt",
+      "posInfo": "holt ab, holte ab, hat abgeholt"
+    },
+    {
+      "id": "va-modort-086",
+      "deck": "a1-modal-ort",
+      "level": "A1",
+      "de": "teilen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "teilt, teilte, hat geteilt",
+      "posInfo": "teilt, teilte, hat geteilt"
+    },
+    {
+      "id": "va-modort-089",
+      "deck": "a1-modal-ort",
+      "level": "A1",
+      "de": "ausmachen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "macht aus, machte aus, hat ausgemacht",
+      "posInfo": "macht aus, machte aus, hat ausgemacht"
+    },
+    {
+      "id": "va-modort-090",
+      "deck": "a1-modal-ort",
+      "level": "A1",
+      "de": "anmachen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "macht an, machte an, hat angemacht",
+      "posInfo": "macht an, machte an, hat angemacht"
+    },
+    {
+      "id": "r311a1-045",
+      "deck": "a1-modal-ort",
+      "level": "A1",
+      "de": "ankreuzen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "kreuzt an, kreuzte an, hat angekreuzt",
+      "posInfo": "kreuzt an, kreuzte an, hat angekreuzt"
+    },
+    {
+      "id": "r311a1-046",
+      "deck": "a1-modal-ort",
+      "level": "A1",
+      "de": "kriegen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "kriegt, kriegte, hat gekriegt",
+      "posInfo": "kriegt, kriegte, hat gekriegt"
+    },
+    {
+      "id": "vc-mensch-020",
+      "deck": "a2-mensch-beziehung",
+      "level": "A2",
+      "de": "vertrauen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "vertraut, vertraute, hat vertraut",
+      "posInfo": "vertraut, vertraute, hat vertraut"
+    },
+    {
+      "id": "vc-mensc-810",
+      "deck": "a2-mensch-beziehung",
+      "level": "A2",
+      "de": "zuhören",
+      "decision": "confirmed-current",
+      "previousPosInfo": "hört zu, hörte zu, hat zugehört",
+      "posInfo": "hört zu, hörte zu, hat zugehört"
+    },
+    {
+      "id": "vc-mensc-813",
+      "deck": "a2-mensch-beziehung",
+      "level": "A2",
+      "de": "wirken",
+      "decision": "confirmed-current",
+      "previousPosInfo": "wirkt, wirkte, hat gewirkt",
+      "posInfo": "wirkt, wirkte, hat gewirkt"
+    },
+    {
+      "id": "vc-medien-007",
+      "deck": "a2-medien-bildung",
+      "level": "A2",
+      "de": "veröffentlichen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "veröffentlicht, veröffentlichte, hat veröffentlicht",
+      "posInfo": "veröffentlicht, veröffentlichte, hat veröffentlicht"
+    },
+    {
+      "id": "vc-medien-025",
+      "deck": "a2-medien-bildung",
+      "level": "A2",
+      "de": "fehlen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "fehlt, fehlte, hat gefehlt",
+      "posInfo": "fehlt, fehlte, hat gefehlt"
+    },
+    {
+      "id": "vc-medien-035",
+      "deck": "a2-medien-bildung",
+      "level": "A2",
+      "de": "danken für",
+      "decision": "confirmed-current",
+      "previousPosInfo": "dankt, dankte, hat gedankt",
+      "posInfo": "dankt, dankte, hat gedankt"
+    },
+    {
+      "id": "vc-medie-800",
+      "deck": "a2-medien-bildung",
+      "level": "A2",
+      "de": "prüfen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "prüft, prüfte, hat geprüft",
+      "posInfo": "prüft, prüfte, hat geprüft"
+    },
+    {
+      "id": "vd-wohnen-020",
+      "deck": "a2-wohnen-vertrag",
+      "level": "A2",
+      "de": "kündigen zum Monatsende",
+      "decision": "confirmed-current",
+      "previousPosInfo": "kündigt, kündigte, hat gekündigt",
+      "posInfo": "kündigt, kündigte, hat gekündigt"
+    },
+    {
+      "id": "vd-wohnen-027",
+      "deck": "a2-wohnen-vertrag",
+      "level": "A2",
+      "de": "nachzahlen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "zahlt nach, zahlte nach, hat nachgezahlt",
+      "posInfo": "zahlt nach, zahlte nach, hat nachgezahlt"
+    },
+    {
+      "id": "vd-gesund-026",
+      "deck": "a2-geld-gesundheit",
+      "level": "A2",
+      "de": "entspannen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "entspannt, entspannte, hat entspannt",
+      "posInfo": "entspannt, entspannte, hat entspannt"
+    },
+    {
+      "id": "ve-kueche--002",
+      "deck": "a2-kueche-haushalt",
+      "level": "A2",
+      "de": "mischen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "mischt, mischte, hat gemischt",
+      "posInfo": "mischt, mischte, hat gemischt"
+    },
+    {
+      "id": "ve-kueche--006",
+      "deck": "a2-kueche-haushalt",
+      "level": "A2",
+      "de": "abkühlen",
+      "decision": "corrected",
+      "previousPosInfo": "kühlt ab, kühlte ab, hat abgekühlt",
+      "posInfo": "kühlt ab, kühlte ab, ist abgekühlt"
+    },
+    {
+      "id": "ve-kueche--007",
+      "deck": "a2-kueche-haushalt",
+      "level": "A2",
+      "de": "würzen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "würzt, würzte, hat gewürzt",
+      "posInfo": "würzt, würzte, hat gewürzt"
+    },
+    {
+      "id": "ve-kueche--021",
+      "deck": "a2-kueche-haushalt",
+      "level": "A2",
+      "de": "auftauen",
+      "decision": "corrected",
+      "previousPosInfo": "taut auf, taute auf, hat aufgetaut",
+      "posInfo": "taut auf, taute auf, ist aufgetaut"
+    },
+    {
+      "id": "ve-kueche-801",
+      "deck": "a2-kueche-haushalt",
+      "level": "A2",
+      "de": "vorheizen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "heizt vor, heizte vor, hat vorgeheizt",
+      "posInfo": "heizt vor, heizte vor, hat vorgeheizt"
+    },
+    {
+      "id": "ve-kueche-804",
+      "deck": "a2-kueche-haushalt",
+      "level": "A2",
+      "de": "umrühren",
+      "decision": "confirmed-current",
+      "previousPosInfo": "rührt um, rührte um, hat umgerührt",
+      "posInfo": "rührt um, rührte um, hat umgerührt"
+    },
+    {
+      "id": "r312a2-133",
+      "deck": "a2-kueche-haushalt",
+      "level": "A2",
+      "de": "schenken",
+      "decision": "confirmed-current",
+      "previousPosInfo": "schenkt, schenkte, hat geschenkt",
+      "posInfo": "schenkt, schenkte, hat geschenkt"
+    },
+    {
+      "id": "r312a2-134",
+      "deck": "a2-kueche-haushalt",
+      "level": "A2",
+      "de": "einpacken",
+      "decision": "confirmed-current",
+      "previousPosInfo": "packt ein, packte ein, hat eingepackt",
+      "posInfo": "packt ein, packte ein, hat eingepackt"
+    },
+    {
+      "id": "r312a2-135",
+      "deck": "a2-kueche-haushalt",
+      "level": "A2",
+      "de": "klappen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "klappt, klappte, hat geklappt",
+      "posInfo": "klappt, klappte, hat geklappt"
+    },
+    {
+      "id": "r312a2-151",
+      "deck": "a2-erzaehlen-zeit",
+      "level": "A2",
+      "de": "träumen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "träumt, träumte, hat geträumt",
+      "posInfo": "träumt, träumte, hat geträumt"
+    },
+    {
+      "id": "ve-arbeits-016",
+      "deck": "a2-arbeit-umwelt",
+      "level": "A2",
+      "de": "befolgen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "befolgt, befolgte, hat befolgt",
+      "posInfo": "befolgt, befolgte, hat befolgt"
+    },
+    {
+      "id": "r312a2-154",
+      "deck": "a2-arbeit-umwelt",
+      "level": "A2",
+      "de": "herstellen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "stellt her, stellte her, hat hergestellt",
+      "posInfo": "stellt her, stellte her, hat hergestellt"
+    },
+    {
+      "id": "r312a2-156",
+      "deck": "a2-arbeit-umwelt",
+      "level": "A2",
+      "de": "schneien",
+      "decision": "confirmed-current",
+      "previousPosInfo": "schneit, schneite, hat geschneit",
+      "posInfo": "schneit, schneite, hat geschneit"
+    },
+    {
+      "id": "r312a2-164",
+      "deck": "a2-arbeit-umwelt",
+      "level": "A2",
+      "de": "aufmachen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "macht auf, machte auf, hat aufgemacht",
+      "posInfo": "macht auf, machte auf, hat aufgemacht"
+    },
+    {
+      "id": "r312a2-174",
+      "deck": "a2-redemittel",
+      "level": "A2",
+      "de": "schimpfen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "schimpft, schimpfte, hat geschimpft",
+      "posInfo": "schimpft, schimpfte, hat geschimpft"
+    },
+    {
+      "id": "r312a2-176",
+      "deck": "a2-redemittel",
+      "level": "A2",
+      "de": "wecken",
+      "decision": "confirmed-current",
+      "previousPosInfo": "weckt, weckte, hat geweckt",
+      "posInfo": "weckt, weckte, hat geweckt"
+    },
+    {
+      "id": "vf-kultur-035",
+      "deck": "a2-kultur-digital",
+      "level": "A2",
+      "de": "ausdrucken",
+      "decision": "confirmed-current",
+      "previousPosInfo": "druckt aus, druckte aus, hat ausgedruckt",
+      "posInfo": "druckt aus, druckte aus, hat ausgedruckt"
+    },
+    {
+      "id": "vf-kultd-306",
+      "deck": "a2-kultur-digital",
+      "level": "A2",
+      "de": "nachholen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "holt nach, holte nach, hat nachgeholt",
+      "posInfo": "holt nach, holte nach, hat nachgeholt"
+    },
+    {
+      "id": "vf-kultd-322",
+      "deck": "a2-kultur-digital",
+      "level": "A2",
+      "de": "tanken",
+      "decision": "confirmed-current",
+      "previousPosInfo": "tankt, tankte, hat getankt",
+      "posInfo": "tankt, tankte, hat getankt"
+    },
+    {
+      "id": "r312a2-195",
+      "deck": "a2-kultur-digital",
+      "level": "A2",
+      "de": "joggen",
+      "decision": "confirmed-current",
+      "previousPosInfo": "joggt, joggte, hat gejoggt",
+      "posInfo": "joggt, joggte, hat gejoggt"
+    },
+    {
+      "id": "a0-klassenzimmer-020",
+      "deck": "a0-klassenzimmer",
+      "level": "A0",
+      "de": "hören",
+      "decision": "confirmed-current",
+      "previousPosInfo": "hört, hörte, hat gehört",
+      "posInfo": "hört, hörte, hat gehört"
+    }
+  ]
+}

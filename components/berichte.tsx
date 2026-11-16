@@ -1,18 +1,17 @@
 "use client";
 // 📊 مركز التقارير — BerichteZentrum (Modul T) في جناح التقوية
 // ثلاثة تقارير في محرّك واحد (لا أدوات شاردة):
-//   🎯 مؤشر Prüfungsbereitschaft بأربعة عوامل موزونة من شبكة الكفاءات
-//   🕳️ فجوات المواضيع + توصيات علاج مرتّبة بالعوائق الكبرى
+//   🔎 تغطية الدليل مع فصل measured / self_report / activity
+//   🕳️ فجوات التدريب + توصيات لا تتحول إلى حكم مستوى
 //   📄 تقرير شهري مطبوع (PDF عبر الطباعة) + تصدير CSV للأرقام
 import { lokalesDatum } from "@/lib/datum";
-import { useMemo, useState } from "react";
-import type { Progress } from "@/lib/types";
+import { useState } from "react";
+import type { Kompetenz, Progress } from "@/lib/types";
 import { TOTAL_DAYS } from "@/lib/types";
-import { kompetenzWerte, b2Score, pruefungsBereitschaft, bereitBand, KOMPETENZEN, KOMPETENZ_AR, band } from "@/lib/kompetenz";
+import { kompetenzWerte, evidenzUebersicht, KOMPETENZEN, KOMPETENZ_AR } from "@/lib/kompetenz";
 import { fehlerFamilien, resistenteFehler, schwere, URSACHEN, ursacheVon } from "@/lib/fehler";
 import { planPct } from "@/lib/plan";
 import { feedbackQuote, fehlerHeilung, pruefungsKurve, todayUxSummary } from "@/lib/metriken";
-import { noteFromPct } from "@/lib/grader";
 import { prognose } from "@/lib/prognose";
 import { sprechHeute } from "@/lib/sprechziel";
 import { FLUENZ_ZIEL } from "@/lib/fluenz";
@@ -22,25 +21,42 @@ import { KalibrierungPanel, type ProgressUpdater } from "./kalibrierung";
 import { VerzweigungPanel } from "./verzweigung";
 import { wartungsBericht } from "@/lib/wartung";
 import { wochenBilanz } from "@/lib/motivation";
-import { levelOfXp } from "@/lib/spiel";
 import { StundenVertrag } from "./stundenvertrag";
 
 const HAND: Record<string, string> = { Lesen: "📖", Hoeren: "👂", Schreiben: "✍️", Sprechen: "🗣️", Grammatik: "🧩", Wortschatz: "🗂️" };
 
-/** توصيات العلاج الثلاث — حتمية من البيانات (قانون العوائق الكبرى) */
+type TrainingsFokus = { hand: Kompetenz; basis: "measured" | "activity" | "none" };
+
+function trainingsFokus(p: Progress): TrainingsFokus {
+  const werte = kompetenzWerte(p);
+  const measured = KOMPETENZEN
+    .filter((hand) => werte[hand].wert !== null)
+    .sort((a, b) => (werte[a].wert ?? 0) - (werte[b].wert ?? 0) || a.localeCompare(b));
+  if (measured[0]) return { hand: measured[0], basis: "measured" };
+  const activity = [...KOMPETENZEN]
+    .filter((hand) => werte[hand].versuche > 0)
+    .sort((a, b) => werte[a].versuche - werte[b].versuche || a.localeCompare(b));
+  return activity[0] ? { hand: activity[0], basis: "activity" } : { hand: "Lesen", basis: "none" };
+}
+
+/** توصيات تدريب؛ الاختيار من أداء مقاس أو من حجم النشاط، مع إعلان الأساس. */
 export function empfehlungen(p: Progress): { dringend: string; text: string }[] {
   const out: { dringend: string; text: string }[] = [];
-  const w = kompetenzWerte(p);
-  const schwach = [...KOMPETENZEN].sort((a, b) => w[a].wert - w[b].wert || a.localeCompare(b))[0];
-  const map: Record<string, string> = {
-    Lesen: "📖 القراءة أضعف حلقاتك: نصّين يومياً مع سؤالين (جناح الاختبار/الحصص).",
-    Hoeren: "👂 الاستماع أضعف حلقاتك: حوار واحد بالتسميع + إملاء يومي (مدرّب الدِكتات/آلة الاستماع).",
-    Schreiben: "✍️ الكتابة أضعف حلقاتك: تمرين Teil-1 بتوقّت 15د مرتين أسبوعياً.",
-    Sprechen: "🗣️ المحادثة أضعف حلقاتك: تسميع جُمل بصوت عالٍ + دور واحد من سيناريو كل يوم.",
-    Grammatik: "🧩 القواعد أضعف حلقاتك: ميادين القواعد + تصريف يومي قبل النوم.",
-    Wortschatz: "🗂️ المفردات أضعف حلقاتك: 10 بطاقات SRS يومياً + عمق معجمي مرتين أسبوعياً.",
+  const fokus = trainingsFokus(p);
+  const map: Record<Kompetenz, string> = {
+    Lesen: "📖 القراءة: نصّان مع أسئلة فهم وتصحيح معلن.",
+    Hoeren: "👂 الاستماع: حوار بالتسميع ثم إملاء مصحح.",
+    Schreiben: "✍️ الكتابة: مهمة قصيرة مع rubric وأثر تصحيح منفصل عن التقييم الذاتي.",
+    Sprechen: "🗣️ المحادثة: عينة صوت أو مقيّم بشري؛ زر الإكمال وحده لا يقيس الأداء.",
+    Grammatik: "🧩 القواعد: استرجاع قصير مصحح قبل إعادة الشرح.",
+    Wortschatz: "🗂️ المفردات: بطاقات مستحقة ثم اختبار استرجاع مصحح.",
   };
-  out.push({ dringend: "أولوية قصوى", text: map[schwach] });
+  const basis = fokus.basis === "measured"
+    ? "أدنى أداء تدريبي مقاس في العينة الحالية"
+    : fokus.basis === "activity"
+      ? "أقل مجال حضوراً في سجل النشاط؛ ليس حكماً بأنه الأضعف"
+      : "اقتراح بداية لعدم وجود دليل بعد";
+  out.push({ dringend: "تركيز مقترح", text: `${map[fokus.hand]} (${basis})` });
   const resis = resistenteFehler(p);
   if (resis.length) out.push({ dringend: "علاج مقاوم", text: `🛡️ ${resis.length} خطأً يقاوم المراجعة — نفّذ بروتوكول الثلاث خطوات في معمل الأخطاء هذا الأسبوع.` });
   const fams = fehlerFamilien(p);
@@ -56,17 +72,14 @@ export function empfehlungen(p: Progress): { dringend: string; text: string }[] 
 /** تقرير HTML مطبوع — يُفتح في نافذة ويُطبع كـ PDF */
 function berichtHtml(p: Progress, name: string): string {
   const w = kompetenzWerte(p);
-  const b2 = b2Score(p);
-  const bereit = pruefungsBereitschaft(p);
-  const bb = bereitBand(bereit.gesamt);
+  const evidence = evidenzUebersicht(p);
   const fehler = Object.values(p.fehler ?? {});
   const resis = resistenteFehler(p);
   const tage = Object.values(p.plan.days ?? {});
   const heute = lokalesDatum();
-  const rows = KOMPETENZEN.map((h) => `<tr><td>${HAND[h]} ${KOMPETENZ_AR[h]} <small>(${h})</small></td><td class="n">${w[h].wert}</td><td class="n">${w[h].kern !== null ? w[h].versuche + " محاولة" : "تقديري"}</td></tr>`).join("");
-  const teile = bereit.teile.map((t) => `<tr><td>${t.ar}</td><td class="n">${t.wert}</td><td class="n">${Math.round(t.gewicht * 100)}%</td></tr>`).join("");
+  const rows = KOMPETENZEN.map((h) => `<tr><td>${HAND[h]} ${KOMPETENZ_AR[h]} <small>(${h})</small></td><td class="n">${w[h].wert === null ? "—" : w[h].wert + "٪"}</td><td class="n">${w[h].measured} مقاس · ${w[h].selfReported} ذاتي · ${w[h].activity} نشاط</td></tr>`).join("");
   const gaps = empfehlungen(p).map((e) => `<li><b>${e.dringend}:</b> ${e.text}</li>`).join("");
-  return `<!doctype html><html dir="rtl"><head><meta charset="utf-8"><title>تقرير شهري — ${name}</title>
+  return `<!doctype html><html dir="rtl"><head><meta charset="utf-8"><title>تقرير تدريب شهري — ${name}</title>
 <style>
 body{font-family:system-ui,sans-serif;color:#2c2a25;background:#fff;margin:2rem;max-width:46rem}
 h1{color:#355E3B;font-size:1.4rem;margin:0 0 .2rem}h2{color:#B03A2E;font-size:1.05rem;margin:1.2rem 0 .4rem}
@@ -79,40 +92,48 @@ table{border-collapse:collapse;width:100%;font-size:.9rem}td,th{border:1px solid
 .fuss{margin-top:1.4rem;font-size:.75rem;color:#777;border-top:1px solid #ddd;padding-top:.5rem}
 </style></head><body>
 <div class="kopf">
-<h1>📊 التقرير الشهري — Monatsbericht</h1>
+<h1>📊 تقرير التدريب الشهري</h1>
 <div>طريقي إلى B2 — <b>${name}</b> · تاريخ الإصدار: ${heute} · اليوم <b>${p.plan.day}</b>/${TOTAL_DAYS}</div>
 </div>
 <div class="kacheln">
-<div class="kachel"><b>${bereit.gesamt}%</b>جاهزية الامتحان<small> ${bb.name}</small></div>
-<div class="kachel"><b>${b2}</b>B2-Score<small> ${band(b2).name}</small></div>
+<div class="kachel"><b>${evidence.measuredSkills}/${evidence.requiredSkills}</b>مجالات بعينة أداء كافية</div>
+<div class="kachel"><b>${evidence.completeTrainingPerformance ?? "—"}</b>متوسط أداء تدريبي مكتمل<small>ليس مستوى CEFR</small></div>
+<div class="kachel"><b>${evidence.activityEntries}</b>أحداث نشاط</div>
+<div class="kachel"><b>${evidence.selfReportedEntries}</b>تقييمات ذاتية</div>
 <div class="kachel"><b>${tage.filter((d) => d.closed).length}</b>أيام مُغلقة</div>
-<div class="kachel"><b>${p.xp ?? 0}</b>XP</div>
 <div class="kachel"><b>${fehler.length}</b>خطأً بالدفتر<small> (${resis.length} مقاوم)</small></div>
-<div class="kachel"><b>${Object.keys(p.srs ?? {}).length}</b>بطاقة SRS</div>
 </div>
-<h2>🎯 عوامل الجاهزية (40/25/20/15)</h2>
-<table><tr><th>العامل</th><th class="n">القيمة</th><th class="n">الوزن</th></tr>${teile}</table>
-<h2>📈 شبكة الكفاءات الست</h2>
-<table><tr><th>الكفاءة</th><th class="n">0-100</th><th class="n">الأساس</th></tr>${rows}</table>
-<h2>🕳️ العوائق الكبرى وخطتها</h2>
+<h2>🔎 حدود الدليل</h2>
+<p><b>جاهزية الامتحان: غير مقاسة.</b> لا يحوّل هذا التقرير XP أو إغلاق الأيام أو SRS أو التقييم الذاتي إلى حكم مستوى. يلزم لذلك اختبار مُعاير وتحقق خارجي.</p>
+<h2>📈 المجالات الستة</h2>
+<table><tr><th>المجال</th><th class="n">أداء تدريبي</th><th class="n">مصدر السجل</th></tr>${rows}</table>
+<h2>🕳️ أولويات التدريب</h2>
 <ul>${gaps}</ul>
-<div class="fuss">تقرير آلي حتمي يولّده التطبيق من بيانات المتعلّم مباشرة — بلا خوادم ولا خصوصية مهدَّدة. يُطبع أو يُحفظ PDF من نافذة الطباعة.</div>
+<div class="fuss">تقرير وصفي آلي من بيانات الجهاز. ليس شهادة مستوى ولا نتيجة Goethe/telc ولا تنبؤاً بالجاهزية.</div>
 </body></html>`;
 }
 
 function csvHtml(p: Progress): string {
   const w = kompetenzWerte(p);
-  const bereit = pruefungsBereitschaft(p);
+  const evidence = evidenzUebersicht(p);
   const fehler = Object.values(p.fehler ?? {});
   const zeilen: string[] = ["kennzahl,wert"];
   zeilen.push(`tag,${p.plan.day}`);
   zeilen.push(`tage_geschlossen,${Object.values(p.plan.days ?? {}).filter((d) => d.closed).length}`);
   zeilen.push(`plan_pct,${planPct(p)}`);
   zeilen.push(`xp,${p.xp ?? 0}`);
-  zeilen.push(`b2_score,${b2Score(p)}`);
-  zeilen.push(`pruefungsbereitschaft,${bereit.gesamt}`);
-  for (const t of bereit.teile) zeilen.push(`faktor_${t.name},${t.wert}`);
-  for (const h of KOMPETENZEN) zeilen.push(`kompetenz_${h},${w[h].wert}`);
+  zeilen.push(`training_performance_complete,${evidence.completeTrainingPerformance ?? ""}`);
+  zeilen.push(`exam_readiness,not_assessed`);
+  zeilen.push(`evidence_measured_skills,${evidence.measuredSkills}/${evidence.requiredSkills}`);
+  zeilen.push(`evidence_measured_entries,${evidence.measuredEntries}`);
+  zeilen.push(`evidence_self_report_entries,${evidence.selfReportedEntries}`);
+  zeilen.push(`evidence_activity_entries,${evidence.activityEntries}`);
+  for (const h of KOMPETENZEN) {
+    zeilen.push(`training_performance_${h},${w[h].wert ?? ""}`);
+    zeilen.push(`evidence_${h}_measured,${w[h].measured}`);
+    zeilen.push(`evidence_${h}_self_report,${w[h].selfReported}`);
+    zeilen.push(`evidence_${h}_activity,${w[h].activity}`);
+  }
   zeilen.push(`fehler_gesamt,${fehler.length}`);
   zeilen.push(`fehler_resistent,${resistenteFehler(p).length}`);
   const m1 = feedbackQuote(p), m2 = fehlerHeilung(p), m3 = pruefungsKurve(p);
@@ -136,39 +157,35 @@ function csvHtml(p: Progress): string {
 }
 
 
-/** ورقة رسمية A4 — ختم التحقّق حتمي: رمز من الاسم+اليوم (لا خادم، لا تزوير عابر) */
-function amtsblattHtml(p: Progress, name: string): string {
+/** ورقة A4 وصفية من سجل الجهاز؛ ليست وثيقة رسمية ولا شهادة مستوى. */
+function lernnachweisHtml(p: Progress, name: string): string {
   const w = kompetenzWerte(p);
-  const pb = pruefungsBereitschaft(p);
+  const evidence = evidenzUebersicht(p);
   const day = p.plan.day;
-  const code = (([...name].reduce((s2, c) => s2 + c.charCodeAt(0), 0) + day * 7919) % 9000) + 1000;
-  const rows = KOMPETENZEN.map((h) => `<tr><td>${KOMPETENZ_AR[h]} <span dir="ltr" style="color:#888">(${h})</span></td><td style="text-align:center"><b>${w[h].wert}٪</b></td><td style="text-align:center">${noteFromPct(w[h].wert)}</td></tr>`).join("");
+  const rows = KOMPETENZEN.map((h) => `<tr><td>${KOMPETENZ_AR[h]} <span dir="ltr" style="color:#888">(${h})</span></td><td style="text-align:center"><b>${w[h].wert === null ? "—" : w[h].wert + "٪"}</b></td><td style="text-align:center">${w[h].measured} / ${w[h].selfReported} / ${w[h].activity}</td></tr>`).join("");
   const exams = Object.values(p.exams ?? {});
   const best = exams.length ? Math.max(...exams.map((e) => e.score)) : null;
-  const lvl = levelOfXp(p.xp ?? 0);
-  return `<!doctype html><html dir="rtl"><head><meta charset="utf-8"><title>Amtsblatt — ${name}</title>
+  return `<!doctype html><html dir="rtl"><head><meta charset="utf-8"><title>إثبات تدريب داخلي — ${name}</title>
 <style>@page{size:A4;margin:14mm}body{font-family:Georgia,serif;color:#1c1917;padding:2rem 2.4rem}
 .frame{border:3px double #7c2d12;padding:1.6rem 1.9rem}h1{font-size:1.05rem;text-align:center;letter-spacing:.05em;margin:.2rem 0}
 .sub{text-align:center;color:#777;font-size:.72rem;margin-bottom:1rem}table{width:100%;border-collapse:collapse;font-size:.85rem}
 td,th{border-bottom:1px solid #ccc;padding:.35rem .5rem}th{background:#faf7f2;text-align:right}
 .box{display:flex;gap:1rem;flex-wrap:wrap;margin:.9rem 0}.stat{flex:1;min-width:8rem;text-align:center;border:1px solid #e5e0d8;border-radius:10px;padding:.5rem}
-.stat b{font-size:1.3rem;display:block}.seal{text-align:center;margin-top:1rem;font-size:.72rem;color:#7c2d12}
-code{background:#faf7f2;border:1px solid #ddd;border-radius:6px;padding:.1rem .4rem;font-size:.75rem}
+.stat b{font-size:1.3rem;display:block}.notice{text-align:center;margin-top:1rem;font-size:.75rem;color:#7c2d12;line-height:1.7}
 @media print{button{display:none}}button{position:fixed;inset-block-start:8px;inset-inline-end:8px;padding:.4rem .9rem;cursor:pointer}</style></head><body>
 <button onclick="print()">🖨️ طباعة / PDF</button><div class="frame">
-<h1>🎓 وثيقة مستوى — Amtliches Notblatt</h1><div class="sub">«طريقي إلى B2» · اليوم <b>${day}</b> من ${TOTAL_DAYS} · ${lokalesDatum()}</div>
-<p style="text-align:center;font-size:1rem">الحامل/ة: <b>${name}</b></p>
-<table><tr><th>الكفاءة</th><th>القيمة</th><th>المعادل الألماني</th></tr>${rows}</table>
+<h1>📚 إثبات تدريب داخلي — Lernnachweis</h1><div class="sub">«طريقي إلى B2» · اليوم <b>${day}</b> من ${TOTAL_DAYS} · ${lokalesDatum()}</div>
+<p style="text-align:center;font-size:1rem">المتعلّم/ة: <b>${name}</b></p>
+<table><tr><th>المجال</th><th>أداء تدريبي</th><th>مقاس / ذاتي / نشاط</th></tr>${rows}</table>
 <div class="box">
-<div class="stat"><b>${pb.gesamt}٪</b>جاهزية الامتحان<br><span style="font-size:.7rem;color:#777">${bereitBand(pb.gesamt).name}</span></div>
-<div class="stat"><b>${b2Score(p)}</b>B2-Score شبكة</div>
-<div class="stat"><b>${planPct(p)}٪</b>انضباط الخطة</div>
+<div class="stat"><b>${evidence.measuredSkills}/${evidence.requiredSkills}</b>مجالات بعينة كافية</div>
+<div class="stat"><b>${evidence.completeTrainingPerformance ?? "—"}</b>متوسط تدريب مكتمل</div>
+<div class="stat"><b>${planPct(p)}٪</b>إكمال الخطة</div>
 <div class="stat"><b>${p.streak.count}🔥</b>سلسلة الأيام</div>
-<div class="stat"><b>${p.xp ?? 0}</b>XP — ${lvl.name}</div>
-${best !== null ? `<div class="stat"><b>${best}</b>أعلى محاكاة (${exams.length} tries)</div>` : ""}
-<div class="stat"><b>${Object.keys(p.abzeichen ?? {}).length}</b>أوسمة</div>
+<div class="stat"><b>${p.xp ?? 0}</b>XP نشاط</div>
+${best !== null ? `<div class="stat"><b>${best}</b>أعلى محاكاة داخلية (${exams.length} محاولات)</div>` : ""}
 </div>
-<div class="seal">رمز التحقّق الحتمي: <code>WB2-${String(day).padStart(3, "0")}-${code}</code> — يُعاد إنتاجه من الاسم واليوم وحدهما؛ غيّر اليوم واحدًا فيتغيّر الختم. لا يُقبل في المزاد، يُقبل عند المرشد.</div>
+<div class="notice"><b>جاهزية الامتحان غير مقاسة.</b> هذه ورقة وصفية مولّدة محلياً، وليست شهادة مستوى أو وثيقة رسمية أو اعتماد Goethe/telc. لا تدخل XP والأيام المغلقة والتقييمات الذاتية في أداء اللغة المقاس.</div>
 </div></body></html>`;
 }
 
@@ -191,8 +208,8 @@ export function wochenKarteHtml(p: Progress, name: string): string {
   const bericht = wochenBericht(p);
   const minRows = bericht.minutenProArt.map((m) => `<tr><td>${m.art}</td><td class="n">${m.minuten}</td></tr>`).join("");
   const fehlerRows = bericht.fehlerWiederholt.map((f) => `<tr><td>${f.falsch}</td><td>${f.richtig}</td><td class="n">${f.treffer}</td></tr>`).join("");
-  const planRows = bericht.naechsteWoche.map((d) => `<tr><td class="n">${d.day}</td><td>${d.phase}</td><td>${d.typ}</td><td class="n">${d.minuten}</td></tr>`).join("");
-  const rows = sb.zeilen.map((z) => `<tr><td>${KOMPETENZ_AR[z.hand] ?? z.hand}</td><td class="n">${z.versuche}</td><td class="n">${Math.round(z.anteil * 100)}٪</td><td class="n">${z.quote === null ? "—" : z.quote + "٪"}</td></tr>`).join("");
+  const planRows = bericht.naechsteWoche.map((d) => `<tr><td class="n">${d.day}</td><td>${d.phase}</td><td>${d.typ}</td><td class="n">${d.kernMinuten}</td><td class="n">${d.vertiefungMinuten}</td><td class="n">${d.minuten}</td></tr>`).join("");
+  const rows = sb.zeilen.map((z) => `<tr><td>${KOMPETENZ_AR[z.hand] ?? z.hand}</td><td class="n">${z.versuche}</td><td class="n">${z.gemessen}</td><td class="n">${Math.round(z.anteil * 100)}٪</td><td class="n">${z.quote === null ? "—" : z.quote + "٪"}</td></tr>`).join("");
   return `<!doctype html><html dir="rtl"><head><meta charset="utf-8"><title>بطاقة تقدّم الأسبوع — ${name}</title>
 <style>body{font-family:system-ui,sans-serif;margin:2rem;color:#222}table{border-collapse:collapse;width:100%}td,th{border:1px solid #bbb;padding:.4rem .6rem;text-align:right}td.n{text-align:center}h1{font-size:1.3rem}</style></head><body>
 <h1>🗓️ بطاقة تقدّم الأسبوع — ${name}</h1>
@@ -200,7 +217,7 @@ export function wochenKarteHtml(p: Progress, name: string): string {
 <p>أيام مغلقة: <b>${wb.aktiveTage}/${wb.zielTage}</b> · مهام منجزة: <b>${wb.aufgabenErledigt}</b> · دقائق مقاسة بالمؤقّت: <b>${wb.minutenGemessen}</b></p>
 <p>احتفاظ البطاقات الحالي (نموذج FSRS): <b>${pr.retention === null ? "—" : Math.round(pr.retention * 100) + "٪"}</b> · آخر سرعة قراءة: <b>${fl ? fl.wpm + " كلمة/دقيقة" : "—"}</b></p>
 <h2>توازن المهارات (${sb.fenster === "7-tage" ? "آخر 7 أيام" : "آخر المحاولات"})</h2>
-<table><tr><th>المهارة</th><th>محاولات</th><th>الحصة</th><th>الإصابة</th></tr>${rows}</table>
+<table><tr><th>المهارة</th><th>أحداث</th><th>مقاسة</th><th>حصة النشاط</th><th>إصابة المقاس</th></tr>${rows}</table>
 ${sb.warnung ? `<p>⚖️ ${sb.warnung}</p>` : ""}
 <h2>دقائق هذا الأسبوع بحسب نوع المهمة (مقاسة حيث توفّرت، وإلا مخططة معلنة)</h2>
 <table><tr><th>النوع</th><th>دقائق</th></tr>${minRows || '<tr><td colspan="2">لا مهام مسلّمة هذا الأسبوع بعد</td></tr>'}</table>
@@ -209,17 +226,16 @@ ${sb.warnung ? `<p>⚖️ ${sb.warnung}</p>` : ""}
 <h2>أخطاء متكررة (ظهرت مرتين فأكثر)</h2>
 <table><tr><th>خطأك</th><th>الصواب</th><th>مرات</th></tr>${fehlerRows || '<tr><td colspan="3">لا أخطاء متكررة هذا الأسبوع</td></tr>'}</table>
 <h2>خطة الأسبوع القادم (من اليوم ${p.plan.day + 1})</h2>
-<table><tr><th>اليوم</th><th>المستوى</th><th>النوع</th><th>دقائق مخططة</th></tr>${planRows}</table>
+<table><tr><th>اليوم</th><th>المستوى</th><th>النوع</th><th>أساسي</th><th>تعميق اختياري</th><th>الكل</th></tr>${planRows}</table>
 </body></html>`;
 }
 
 export function BerichteZentrum({ progress, name = "المتعلّم", updateProgress }: { progress: Progress; name?: string; updateProgress: ProgressUpdater }) {
   const [open, setOpen] = useState(false);
-  const bereit = useMemo(() => pruefungsBereitschaft(progress), [progress]);
-  const bb = bereitBand(bereit.gesamt);
+  const evidence = evidenzUebersicht(progress);
+  const werte = kompetenzWerte(progress);
   const gaps = empfehlungen(progress);
   const fams = fehlerFamilien(progress);
-  const b2 = b2Score(progress);
 
   const drucken = () => {
     const fenster = window.open("", "_blank");
@@ -239,7 +255,7 @@ export function BerichteZentrum({ progress, name = "المتعلّم", updatePro
         <span className="chip">{open ? "إخفاء ▲" : "إظهار ▼"}</span>
       </button>
       <div style={{ fontSize: "0.8rem", color: "var(--color-ink2)", margin: "0.2rem 0 0.6rem" }}>
-        جاهزية الامتحان بأربعة عوامل · ⏱️ عقد الساعات مقابل مرجع CEFR · فجوات المواضيع بخططها · تقرير شهري يُطبع PDF · أرقام CSV — كلها من شبكة الكفاءات ذاتها.
+        تغطية الدليل بحسب مصدره · ⏱️ وقت مقاس منفصل عن الوقت اليدوي · أولويات تدريب · تقرير PDF وCSV وصفيان — بلا تحويل XP أو الإكمال إلى مستوى أو جاهزية.
       </div>
       {open && (
         <div style={{ display: "grid", gap: "0.7rem" }}>
@@ -362,13 +378,13 @@ export function BerichteZentrum({ progress, name = "المتعلّم", updatePro
               <div data-testid="skill-balance" className="card" style={{ padding: "0.9rem 1.1rem", background: "var(--color-paper)", fontSize: "0.85rem" }}>
                 <div style={{ fontWeight: 900, marginBottom: "0.3rem" }}>⚖️ توازن المهارات ({sb.fenster === "7-tage" ? "آخر 7 أيام" : "نافذة آخر المحاولات"})</div>
                 {sb.eintraege === 0 ? (
-                  <span style={{ color: "var(--color-ink2)" }}>لا محاولات مسجّلة بعد في شبكة الكفاءات.</span>
+                  <span style={{ color: "var(--color-ink2)" }}>لا أحداث مسجّلة بعد في سجل مجالات التدريب.</span>
                 ) : (
                   <div style={{ display: "grid", gap: "0.25rem" }}>
                     {sb.zeilen.map((z) => (
                       <div key={z.hand} style={{ display: "flex", justifyContent: "space-between", gap: "0.5rem" }}>
                         <span>{KOMPETENZ_AR[z.hand] ?? z.hand}</span>
-                        <span><span className="rtl-num">{z.versuche}</span> محاولة · <span className="rtl-num">{Math.round(z.anteil * 100)}٪</span>{z.quote !== null && <> · إصابة <span className="rtl-num">{z.quote}٪</span></>}</span>
+                        <span><span className="rtl-num">{z.versuche}</span> حدث · <span className="rtl-num">{Math.round(z.anteil * 100)}٪</span> من النشاط · مقاس <span className="rtl-num">{z.gemessen}</span>{z.quote !== null && <> · إصابة المقاس <span className="rtl-num">{z.quote}٪</span></>}</span>
                       </div>
                     ))}
                     {sb.warnung && <div style={{ color: "var(--color-cola)" }}>⚠️ {sb.warnung}</div>}
@@ -445,31 +461,36 @@ export function BerichteZentrum({ progress, name = "المتعلّم", updatePro
             );
           })()}
 
-          {/* 🎯 الجاهزية */}
-          <div className="card" style={{ padding: "0.9rem 1.1rem", background: "var(--color-paper)" }}>
-            <div style={{ fontWeight: 900, marginBottom: "0.3rem" }}>🎯 جاهزية الامتحان — Prüfungsbereitschaft</div>
+          {/* 🔎 تغطية الدليل — لا مؤشر جاهزية مشتق من النشاط */}
+          <div className="card" style={{ padding: "0.9rem 1.1rem", background: "var(--color-paper)" }} data-testid="evidence-provenance-panel">
+            <div style={{ fontWeight: 900, marginBottom: "0.3rem" }}>🔎 دليل الأداء وحدوده</div>
             <div style={{ display: "flex", alignItems: "baseline", gap: "0.6rem", flexWrap: "wrap" }}>
-              <span style={{ fontSize: "2.4rem", fontWeight: 900, color: bb.farbe, lineHeight: 1 }}><span className="rtl-num">{bereit.gesamt}</span></span>
-              <span className="chip" style={{ borderColor: bb.farbe, color: bb.farbe, fontWeight: 800 }}>{bb.name} — {bb.ar}</span>
-              <span style={{ fontSize: "0.75rem", color: "var(--color-ink2)" }}>B2-Score: <span className="rtl-num">{b2}</span> ({band(b2).name})</span>
+              <span style={{ fontSize: "2.2rem", fontWeight: 900, color: "var(--color-cola)", lineHeight: 1 }}>
+                <span className="rtl-num">{evidence.completeTrainingPerformance ?? "—"}</span>
+              </span>
+              <span className="chip" style={{ fontWeight: 800 }}>
+                {evidence.completeTrainingPerformance === null ? "عينة الأداء غير مكتملة" : "متوسط أداء تدريبي داخلي"}
+              </span>
+              <span style={{ fontSize: "0.75rem", color: "var(--color-ink2)" }}>
+                مجالات مكتملة: <span className="rtl-num">{evidence.measuredSkills}/{evidence.requiredSkills}</span>
+              </span>
             </div>
-            <div className="progressbar" style={{ margin: "0.5rem 0" }}>
-              <div style={{ width: `${bereit.gesamt}%`, background: bb.farbe }} />
-            </div>
-            <div style={{ display: "grid", gap: "0.25rem" }}>
-              {bereit.teile.map((t) => (
-                <div key={t.name} style={{ display: "flex", alignItems: "center", gap: "0.5rem", fontSize: "0.78rem" }}>
-                  <span style={{ width: "8.5rem" }}>{t.ar}</span>
+            <div style={{ display: "grid", gap: "0.25rem", marginTop: "0.55rem" }}>
+              {KOMPETENZEN.map((hand) => (
+                <div key={hand} style={{ display: "flex", alignItems: "center", gap: "0.5rem", fontSize: "0.78rem" }}>
+                  <span style={{ width: "6rem" }}>{KOMPETENZ_AR[hand]}</span>
                   <span className="progressbar" style={{ flex: 1, height: 7 }}>
-                    <span style={{ display: "block", width: `${t.wert}%`, height: "100%", background: "var(--color-b2)" }} />
+                    <span style={{ display: "block", width: `${werte[hand].wert ?? 0}%`, height: "100%", background: werte[hand].wert === null ? "var(--color-line)" : "var(--color-b2)" }} />
                   </span>
-                  <span className="rtl-num" style={{ width: "1.8rem", textAlign: "end", fontWeight: 700 }}>{t.wert}</span>
-                  <span style={{ fontSize: "0.68rem", color: "var(--color-ink2)", width: "2.4rem" }}>وزن {Math.round(t.gewicht * 100)}%</span>
+                  <span className="rtl-num" style={{ width: "2.2rem", textAlign: "end", fontWeight: 700 }}>{werte[hand].wert === null ? "—" : `${werte[hand].wert}%`}</span>
+                  <span style={{ fontSize: "0.68rem", color: "var(--color-ink2)", minWidth: "9rem" }}>
+                    مقاس {werte[hand].measured} · ذاتي {werte[hand].selfReported} · نشاط {werte[hand].activity}
+                  </span>
                 </div>
               ))}
             </div>
-            <div style={{ fontSize: "0.75rem", color: "var(--color-ink2)", marginTop: "0.35rem" }}>
-              المعادلة حتمية موثّقة: شبكة الكفاءات 40% · انضباط الخطة 25% · صحّة الأخطاء 20% · نضج البطاقات 15%.
+            <div style={{ fontSize: "0.78rem", color: "var(--color-ink2)", marginTop: "0.55rem", lineHeight: 1.8 }} data-testid="exam-readiness-not-assessed">
+              <strong>جاهزية الامتحان: غير مقاسة.</strong> لا تمنح الأيام المغلقة أو XP أو SRS أو غياب الأخطاء نقاط أداء. يتطلب حكم المستوى بنوداً موسومة ومُعايرة، عينات إنتاج مقاسة، وتحققاً خارجياً غير متوافر هنا.
             </div>
           </div>
 
@@ -502,11 +523,11 @@ export function BerichteZentrum({ progress, name = "المتعلّم", updatePro
               onClick={() => {
                 const win = window.open("", "_blank");
                 if (!win) return;
-                win.document.write(amtsblattHtml(progress, name));
+                win.document.write(lernnachweisHtml(progress, name));
                 win.document.close();
               }}
             >
-              📜 الورقة الرسمية A4
+              📚 إثبات تدريب A4
             </button>
             <button className="btn btn-ghost" onClick={() => ladeCsv(csvHtml(progress))}>📥 CSV للأرقام</button>
             <button

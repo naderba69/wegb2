@@ -23,6 +23,7 @@
  */
 
 import type { DayPlan, DayTask, Progress } from "./types";
+import { isCoreTask } from "./day-path";
 
 export interface RitualUrteil {
   /** هل لليوم بوابة أصلاً؟ */
@@ -47,7 +48,8 @@ export function torAufgaben(tasks: DayTask[]): number[] {
   let i = 0;
   while (i < tasks.length && tasks[i].mandatory) out.push(i++);
   let abruf = 0;
-  while (i < tasks.length && tasks[i].kind === "wiederholen") { out.push(i++); abruf++; }
+  // التعميق لا يتحول إلى بوابة إلزامية؛ واسمح للمسار الأساسي فقط بحبس الجديد.
+  while (i < tasks.length && tasks[i].kind === "wiederholen" && isCoreTask(tasks[i])) { out.push(i++); abruf++; }
   return abruf === 0 ? [] : out;
 }
 
@@ -57,8 +59,8 @@ export function ritualUrteil(plan: DayPlan, progress: Progress): RitualUrteil {
   if (plan.type === "wochencheck") {
     const u = keine("wochencheck");
     let kopfMin = 0;
-    for (const t of plan.tasks) { if (t.mandatory || t.exam || t.kind === "check") kopfMin += t.minutes; else break; }
-    const abrufMin = plan.tasks.filter((t) => t.kind === "wiederholen").reduce((s, t) => s + t.minutes, 0);
+    for (const t of plan.tasks) { if (isCoreTask(t) && (t.mandatory || t.exam || t.kind === "check")) kopfMin += t.minutes; else if (t.kind !== "check") break; }
+    const abrufMin = plan.tasks.filter((t) => isCoreTask(t) && t.kind === "wiederholen").reduce((s, t) => s + t.minutes, 0);
     return { ...u, torMinuten: kopfMin + abrufMin };
   }
   const tor = torAufgaben(plan.tasks);

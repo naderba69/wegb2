@@ -3,12 +3,11 @@ import { newCard } from "./srs";
 import type { Progress, VocabCard } from "./types";
 
 /**
- * 📚 R298 (vom Besitzer genehmigte Erweiterung): B2-Rezeptiv-Erweiterung.
- * 16 Themen-Decks (j01–j16, 912 Karten), die die in R295 ehrlich
- * ausgewiesene Lücke zum B2-Rezeptivumfang (~4500) schließen.
- * Freies Erkennungstraining außerhalb des 378-Tage-Plans: Korrekte
- * Antworten führen die Karte rezeptiv in den SRS-Bestand ein —
- * produktive Meisterung bleibt Sache der Plan- und Produktionsstationen.
+ * 📚 R298/PA-020: 16 thematische B2-Decks (j01–j16, 912 Karten).
+ * Karten sind keine externen Headwords; die Decks erweitern das interne
+ * Erkennungstraining und begründen keine Goethe-/CEFR-Abdeckungsquote.
+ * Richtige Antworten führen die Karte in den SRS-Bestand ein; sie belegen
+ * weder produktive Beherrschung noch ein extern validiertes Niveau.
  */
 export interface ErweiterungDeck { id: string; titleDe: string; titleAr: string; anzahl: number }
 

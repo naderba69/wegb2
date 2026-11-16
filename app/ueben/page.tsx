@@ -55,7 +55,7 @@ import { baueUebungsEmpfehlungen } from "@/lib/uebungsnavigator";
 const UEBEN_REIHENFOLGE = "einstufung,zusatz,fehlerlabor,uebungen,wortreview,selbsttest,blitz,hoeren,hoerneu,lueck,muendlich,begleiter,schatten,phonetik,vortrag,interview,briefe,szenarien,pflege,vollpruefung,leseleiter,redemittel,leben,tiefen,lesestoff,spiele,katalog";
 
 const KARTE: Record<string, { icon: string; titel: string; unter: string }> = {
-  einstufung: { icon: "🪪", titel: "تحديد المستوى التكيّفي", unter: "تشخيص بأربع مهارات يقترح يوم دخولٍ آمنًا في الخطة." },
+  einstufung: { icon: "🪪", titel: "فرز دخول استقبالي", unter: "قراءة وسماع وقواعد ومفردات تقترح موضعاً محافظاً؛ لا تقيس الكتابة/التحدث ولا مستوى CEFR." },
   zusatz: { icon: "➕", titel: "تدريب إضافي", unter: "تمارين أخرى بقيت من درس اليوم." },
   fehlerlabor: { icon: "🔬", titel: "معمل تحليل الخطأ", unter: "افهم سبب الخطأ وتدرّب على تصحيحه." },
   uebungen: { icon: "🗂️", titel: "التدريب الحرّ", unter: "راجع المفردات والبطاقات وفق حاجتك." },
@@ -79,7 +79,7 @@ const KARTE: Record<string, { icon: string; titel: string; unter: string }> = {
   tiefen: { icon: "📖", titel: "معجم المفردات", unter: "ابحث عن كلمة أو معنى عند الحاجة." },
   lesestoff: { icon: "📚", titel: "قراءة وحوارات حرة", unter: "قصص ونصوص وحوارات جديدة لكل المستويات مع أسئلة فهم (R300 — خارج الخطة)." },
   spiele: { icon: "🎮", titel: "ألعاب الكلمات", unter: "شبكة كلمات من مفرداتك، أكمل الحوار، وترجم بكتابتك (R300 — خارج الخطة)." },
-  wortreview: { icon: "🧠", titel: "مراجعة الكلمات الموسعة", unter: "5 أنماط + تصفية + SRS ذكي — كل المفردات 6202 في لوحة واحدة." },
+  wortreview: { icon: "🧠", titel: "مراجعة الكلمات الموسعة", unter: "5 أنماط + تصفية + SRS ذكي — بطاقات البنك الـ6202 في لوحة واحدة." },
   selbsttest: { icon: "🕊️", titel: "مختبر الاسترجاع", unter: "استرجاع حر وفجوات وتداخل بلا خيارات؛ لا يظهر الحل قبل التسليم." },
   katalog: { icon: "🗃️", titel: "دليل التدريبات", unter: "استعرض التدريبات المتاحة في الأكاديمية." },
 };
@@ -118,8 +118,10 @@ export default function Ueben() {
     setGeladen(true);
     try {
       const params = new URLSearchParams(window.location.search);
+      const station = params.get("station");
       const f = params.get("filter");
-      if (f && ["wohnen","behoerde","gesundheit","arbeit","familie","mobilitaet","alltag"].includes(f)) {
+      if (station && Object.hasOwn(KARTE, station)) setOffen(station);
+      else if (f && ["wohnen","behoerde","gesundheit","arbeit","familie","mobilitaet","alltag"].includes(f)) {
         setOffen("leben");
       }
     } catch {}

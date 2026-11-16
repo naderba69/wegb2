@@ -10,7 +10,7 @@ import { WortLinkText } from "./wortlink";
 import { newCard, reviewCard, isDue, newCardCap, karteStufe, KARTENSTUFE_AR } from "@/lib/srs";
 import { planeWortkarten } from "@/lib/wortkarten";
 import { genusCode } from "@/lib/genus";
-import { addFehlerNow, markiereSchriftlich, loadProgress, saveProgress } from "@/lib/store";
+import { addFehlerNow, markiereSchriftlich, loadProgress, PROGRESS_EVENT, saveProgress } from "@/lib/store";
 import { speakDe, speakAny, speakLine, stopSpeech, speechAvailable, germanVoices, warmVoices } from "@/lib/speech";
 import { levelOf, clozeFromSatz, rng } from "@/lib/plan";
 import { buildBrueckeItems } from "@/lib/bruecken";
@@ -26,11 +26,13 @@ import { SignalRadar } from "./signalradar";
 import { StilWechsler } from "./stilwechsler";
 import { grammatikImText } from "@/lib/grammatikRadar";
 import { meldung } from "@/lib/meldungen";
+import { KOMPETENZ_AR } from "@/lib/kompetenz";
 import { BemerkenKarte } from "./bemerken";
 import { entdeckungsFrage, induktionMoeglich, ergebnisText, type EntdeckungsErgebnis } from "@/lib/induktion";
 import { grammarMap } from "@/lib/content";
 import { LektionWizard } from "@/components/akademie/LektionWizard";
 import { useBankGeneration } from "@/lib/use-bank-generation";
+import { getProsodieEinheit } from "@/lib/prosodie";
 
 /** مسودّة محلية للمهمة الجارية؛ تبقى حتى التسليم أو الإغلاق الصريح لليوم. */
 function useTaskDraft<T>(persistKey: string | undefined, slot: string, initial: T) {
@@ -151,7 +153,7 @@ export default function TaskView({ task, lang: _lang, day, srs, onSrs, onPoints,
 
 type SrsState2 = Record<string, SrsState>;
 
-// ── 🔁 مراجعةُ الشفرات بفواصلَ متباعدة: التركةُ بطاقةٌ في دورةِ SM-2 كالمفردة ──
+// ── 🔁 مراجعةُ الشفرات بفواصلَ متباعدة: التركةُ بطاقةٌ في دورةِ FSRS-6 المتكيفة كالمفردة ──
 function BrueckenSRS({ srs, onSrs, onPoints }: { srs: SrsState2; onSrs: (id: string, s: SrsState) => void; onPoints: (p: number, m: number) => void }) {
   const [i, setI] = useState(0);
   const [offen, setOffen] = useState(false);
@@ -936,7 +938,7 @@ function HoerenTask({ task, onPoints, voiceName, rate, persistKey }: Omit<TaskPr
   const dictationEx: Exercise[] = dlg.dictation.map((s, i) => ({
     id: `${dlg.id}-di${i}`,
     type: "dictation",
-    promptDe: "اسمع واكتب",
+    promptDe: "Höre zu und schreibe den Satz auf.",
     promptAr: "اضغط 🔊 ثم اكتب ما سمعته بالألمانية",
     answer: [s],
     explanationDe: s,
@@ -1148,13 +1150,22 @@ function SchreibenTask({ task, onPoints, persistKey }: Omit<TaskProps, "lang" | 
 }
 
 // ── نطقٌ وإيقاعٌ قابلان للاستعمال داخل مهمة اليوم ──────────────────────
+type ProsodieVergleichStand = {
+  vor?: AusspracheAbschluss;
+  nach?: AusspracheAbschluss;
+  beobachtung?: "pausen" | "akzent" | "fluss" | "unklar";
+};
+
 function AusspracheTask({ task, day, onPoints, voiceName, rate, persistKey }: Omit<TaskProps, "lang" | "srs" | "onSrs">) {
   const [draft, setDraft, draftReady] = useTaskDraft(persistKey, "pronunciation", {
     done: {} as Record<string, boolean>,
     measured: {} as Record<string, boolean>,
+    vergleich: {} as Record<string, ProsodieVergleichStand>,
   });
   const done = draft.done ?? {};
   const measured = draft.measured ?? {};
+  const prosodie = getProsodieEinheit(task.pronunciationId);
+  const vergleich: ProsodieVergleichStand = prosodie ? (draft.vergleich?.[prosodie.id] ?? {}) : {};
   const items = (task.sentenceIds ?? []).flatMap((id) => {
     const sentence = getSatz(id);
     return sentence ? [sentence] : [];
@@ -1171,7 +1182,156 @@ function AusspracheTask({ task, day, onPoints, voiceName, rate, persistKey }: Om
     }));
   };
 
+  const completeProsodieAttempt = (attempt: "vor" | "nach", result: AusspracheAbschluss) => {
+    if (!prosodie) return;
+    setDraft((previous) => ({
+      ...previous,
+      vergleich: {
+        ...(previous.vergleich ?? {}),
+        [prosodie.id]: {
+          ...(previous.vergleich?.[prosodie.id] ?? {}),
+          [attempt]: result,
+        },
+      },
+    }));
+  };
+
+  const setProsodieObservation = (beobachtung: NonNullable<ProsodieVergleichStand["beobachtung"]>) => {
+    if (!prosodie) return;
+    setDraft((previous) => ({
+      ...previous,
+      vergleich: {
+        ...(previous.vergleich ?? {}),
+        [prosodie.id]: {
+          ...(previous.vergleich?.[prosodie.id] ?? {}),
+          beobachtung,
+        },
+      },
+    }));
+  };
+
   if (!draftReady) return <div className="card" role="status">⏳ جارٍ استعادة تدريب النطق…</div>;
+
+  if (prosodie) {
+    const vor = vergleich.vor;
+    const nach = vergleich.nach;
+    const beideGemessen = vor?.measured && nach?.measured && typeof vor.score === "number" && typeof nach.score === "number";
+    const delta = beideGemessen ? (nach.score as number) - (vor.score as number) : null;
+    const beobachtungen: Array<{ id: NonNullable<ProsodieVergleichStand["beobachtung"]>; label: string }> = [
+      { id: "pausen", label: "صارت الوقفات أقل أو أوضح" },
+      { id: "akzent", label: "صار النبر المقصود أوضح" },
+      { id: "fluss", label: "صار الإيقاع أكثر اتصالاً" },
+      { id: "unklar", label: "لم ألاحظ فرقاً واضحاً بعد" },
+    ];
+
+    return (
+      <section className="card fadein dirb-ex" data-testid="prosodie-vergleich-task" style={{ padding: "1.2rem", display: "grid", gap: "0.8rem" }}>
+        <Head icon="🎚️" de={prosodie.titelDe} ar={`${prosodie.titelAr} — مقارنة قبل/بعد`} />
+        <div className="card" style={{ padding: "0.65rem 0.8rem", background: "var(--color-paper2)" }}>
+          <De style={{ fontWeight: 800 }}>{prosodie.markierungDe}</De>
+          <div style={{ marginTop: "0.3rem" }}>{prosodie.zielAr}</div>
+          <small>هذه مادة تدريب داخلية. القياس المحلي يصف الإيقاع والوقفات والمقاطع فقط، ولا يقيس الفونيمات أو اللكنة ولا يثبت مستوى CEFR.</small>
+        </div>
+
+        <div data-testid="prosodie-before" style={{ display: "grid", gap: "0.4rem" }}>
+          <strong>1) المحاولة الأولى — قبل الإرشاد</strong>
+          <AusspracheTrainer
+            satz={prosodie.satzDe}
+            ar={prosodie.satzAr}
+            level={level}
+            voiceName={voiceName}
+            rate={rate}
+            attemptLabel="المحاولة الأولى"
+            onPracticeComplete={(result) => completeProsodieAttempt("vor", result)}
+          />
+        </div>
+
+        {vor && (
+          <div className="card" data-testid="prosodie-coaching" style={{ padding: "0.75rem 0.9rem", borderInlineStart: "4px solid var(--color-a1)" }}>
+            <strong>2) إرشاد مركز قبل الإعادة</strong>
+            <ul style={{ margin: "0.4rem 1rem 0" }}>
+              {prosodie.coachingAr.map((hinweis) => <li key={hinweis}>{hinweis}</li>)}
+            </ul>
+          </div>
+        )}
+
+        {vor && (
+          <div data-testid="prosodie-after" style={{ display: "grid", gap: "0.4rem" }}>
+            <strong>3) المحاولة الثانية — بعد الإرشاد</strong>
+            <AusspracheTrainer
+              satz={prosodie.satzDe}
+              ar={prosodie.satzAr}
+              level={level}
+              voiceName={voiceName}
+              rate={rate}
+              attemptLabel="المحاولة الثانية"
+              onPracticeComplete={(result) => completeProsodieAttempt("nach", result)}
+            />
+          </div>
+        )}
+
+        {vor && nach && (
+          <div className="card" data-testid="prosodie-comparison" style={{ padding: "0.75rem 0.9rem", background: "var(--color-paper2)" }}>
+            <strong>4) المقارنة الصريحة</strong>
+            {delta !== null ? (
+              <>
+                <p style={{ margin: "0.35rem 0" }}>
+                  فرق تقدير الإيقاع الداخلي: <span className="rtl-num">{delta > 0 ? "+" : ""}{delta}</span> نقطة
+                  ({vor.score}/100 ← {nach.score}/100). هذا فرق بين تسجيلين في الجلسة، لا قياس تحسن نطقي عام.
+                </p>
+                {vor.analyse && nach.analyse && (
+                  <p data-testid="prosodie-local-metrics" style={{ margin: "0.35rem 0" }}>
+                    وصف التسجيلين — الوقفات: {vor.analyse.pausen} ← {nach.analyse.pausen}؛ المقاطع المرصودة: {vor.analyse.silben} ← {nach.analyse.silben}؛ نسبة الكلام: {Math.round(vor.analyse.sprechAnteil * 100)}٪ ← {Math.round(nach.analyse.sprechAnteil * 100)}٪. الأرقام وصف للطاقة والصمت، لا حكم على صوت مفرد.
+                  </p>
+                )}
+              </>
+            ) : (
+              <p style={{ margin: "0.35rem 0" }}>أُنجزت محاولتان دون قياس رقمي كامل؛ اختر ملاحظتك السمعية الذاتية. لن تُسجّل كدرجة نطق.</p>
+            )}
+            <div role="group" aria-label="ما الفرق الذي لاحظته بين المحاولتين؟" style={{ display: "flex", gap: "0.4rem", flexWrap: "wrap" }}>
+              {beobachtungen.map((option) => (
+                <button
+                  key={option.id}
+                  type="button"
+                  className={`chip ${vergleich.beobachtung === option.id ? "active" : ""}`}
+                  aria-pressed={vergleich.beobachtung === option.id}
+                  data-testid={`prosodie-observation-${option.id}`}
+                  onClick={() => setProsodieObservation(option.id)}
+                >
+                  {option.label}
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {items.length > 0 && (
+          <details data-testid="prosodie-transfer">
+            <summary style={{ cursor: "pointer", fontWeight: 800 }}>جمل النقل الأصلية لهذه المهمة ({items.length})</summary>
+            <div style={{ display: "grid", gap: "0.35rem", marginTop: "0.45rem" }}>
+              {items.map((sentence) => (
+                <div key={sentence.id} className="card" style={{ padding: "0.5rem 0.7rem", display: "flex", gap: "0.5rem", alignItems: "center" }}>
+                  <button type="button" className="chip" onClick={() => speakDe(sentence.de, { voiceName, rate })}>🔊</button>
+                  <div><De>{sentence.de}</De><small>{sentence.ar}</small></div>
+                </div>
+              ))}
+            </div>
+          </details>
+        )}
+
+        <button
+          type="button"
+          className="btn btn-primary"
+          data-testid="prosodie-task-complete"
+          disabled={!vor || !nach || !vergleich.beobachtung}
+          onClick={() => onPoints(1, 1)}
+        >
+          سلّم مقارنة المحاولتين
+        </button>
+      </section>
+    );
+  }
+
   if (!items.length) return <div className="card" role="alert">لا توجد جمل نطق مرتبطة بهذه المهمة بعد؛ لم نُسجّل إنجازاً وهمياً.</div>;
 
   return (
@@ -1249,7 +1409,7 @@ function SprechenTask({ task, onPoints, voiceName, rate, persistKey }: Omit<Task
         ))}
       </div>
       <p style={{ color: "var(--color-ink2)", fontSize: "0.88rem", margin: "0.7rem 0" }}>
-        💡 قاعدة الظل اللغوي: استمع للجملة ← انسخ نغمة المتحدث بحذف اللامام ← سجّل صوتك بالهاتف واستمع كل 3 أيام لتلاحظ تقدّمك.
+        💡 قاعدة الظل اللغوي: استمع للجملة ← حاكِ نغمة المتحدث وإيقاعه ← سجّل صوتك بالهاتف واستمع كل 3 أيام لتلاحظ تقدّمك.
       </p>
       {!schriftAb ? (
         <div className="card" style={{ padding: "0.7rem 0.9rem", margin: "0 0 0.7rem", background: "var(--color-paper2)" }}>
@@ -1409,18 +1569,29 @@ function seedFrom(id: string): number {
 
 function CanDoList({ level, full }: { level: "A0" | "A1" | "A2" | "B1" | "B2"; full?: boolean }) {
   const items = candoMap[level] ?? [];
+  const [selected, setSelected] = useState<Record<string, boolean>>({});
+  useEffect(() => {
+    const refresh = () => setSelected({ ...loadProgress().canDo });
+    refresh();
+    window.addEventListener(PROGRESS_EVENT, refresh);
+    return () => window.removeEventListener(PROGRESS_EVENT, refresh);
+  }, []);
   const toggleCanDoNow = (id: string) => {
     const progress = loadProgress();
     const canDo = { ...progress.canDo };
     if (canDo[id]) delete canDo[id];
     else canDo[id] = true;
-    saveProgress({ ...progress, canDo });
+    if (saveProgress({ ...progress, canDo })) setSelected(canDo);
   };
   return (
-    <div style={{ marginTop: "1.2rem" }}>
-      <h4 style={{ fontWeight: 800, margin: "0.4rem 0 0.5rem" }}>
-        ✅ أستطيع أن… {full ? "— تقرير نهاية المرحلة (القائمة الكاملة)" : "(علّم ما أتقنته)"}
+    <div style={{ marginTop: "1.2rem" }} data-testid="cando-self-report">
+      <h4 style={{ fontWeight: 800, margin: "0.4rem 0 0.25rem" }}>
+        ✅ أستطيع أن… {full ? "— تقرير نهاية المرحلة (القائمة الكاملة)" : "(تقييم ذاتي وصفي)"}
       </h4>
+      <div id={`cando-boundary-${level}`} data-testid="cando-boundary" style={{ fontSize: "0.76rem", color: "var(--color-ink2)", lineHeight: 1.75, marginBottom: "0.5rem" }}>
+        أوصاف تواصلية داخلية للتأمل، غير منسوبة إلى CEFR ولا تدخل الأداء المقاس أو حكم الجاهزية.
+        {level === "A0" && <> تسمية A0 داخلية لمرحلة تمهيدية قبل A1 (<span lang="de" dir="ltr">Pre-A1</span>).</>}
+      </div>
       <div style={{ display: "grid", gap: "0.35rem" }}>
         {(full ? items : items.slice(0, 4)).map((c) => (
           <label
@@ -1428,10 +1599,20 @@ function CanDoList({ level, full }: { level: "A0" | "A1" | "A2" | "B1" | "B2"; f
             aria-label={`${c.de} — ${c.ar}`}
             style={{ display: "flex", gap: "0.5rem", alignItems: "flex-start", cursor: "pointer", border: "1px solid var(--color-line)", borderRadius: "0.6rem", padding: "0.5rem 0.7rem" }}
           >
-            <input type="checkbox" onChange={() => toggleCanDoNow(c.id)} style={{ marginTop: "0.25rem" }} />
+            <input
+              type="checkbox"
+              checked={selected[c.id] === true}
+              onChange={() => toggleCanDoNow(c.id)}
+              aria-describedby={`cando-boundary-${level}`}
+              data-testid={`cando-checkbox-${c.id}`}
+              style={{ marginTop: "0.25rem" }}
+            />
             <span>
               <De>{c.de}</De>
               <div style={{ fontSize: "0.8rem", color: "var(--color-ink2)" }}>{c.ar}</div>
+              <div style={{ fontSize: "0.7rem", color: "var(--color-ink2)", marginTop: "0.2rem" }}>
+                {c.skills.map((skill) => KOMPETENZ_AR[skill]).join(" + ")} · {c.levelLabel} · مصدر داخلي
+              </div>
             </span>
           </label>
         ))}

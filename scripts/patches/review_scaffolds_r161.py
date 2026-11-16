@@ -15,7 +15,7 @@ PATH = Path("content/grammar.json")
 CHANGES = {
     "b1-absicht-n6": {
         "old": "Ich lerne, um ___. (anfangen)",
-        "new": "Ich lerne, um ___.",
+        "new": "Wir stehen früh auf, um pünktlich ___.",
         "answer": "anzufangen",
         "options": ["anzufangen", "an zu fangen", "zu anfangen"],
     },

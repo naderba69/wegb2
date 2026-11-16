@@ -22,17 +22,18 @@ const DAY = 24 * 60 * 60 * 1000;
 export const MAX_REVIEWS_PER_DAY = 150;
 export const MAX_LAPSES_BEFORE_REWRITE = 3;
 
-export function newCard(): SrsState {
+export function newCard(now = new Date()): SrsState {
   return {
     ease: 2.5,
     interval: 0,
     prod: 0,
+    successStreak: 0,
     // أول ظهور للبطاقة: بعد الدرس مباشرة، والمراجعة الأولى بعد 24 ساعة
-    due: new Date(Date.now() + DAY).toISOString(),
+    due: new Date(now.getTime() + DAY).toISOString(),
     reps: 0,
     lapses: 0,
     learning: true,
-    introduced: new Date().toISOString(),
+    introduced: now.toISOString(),
   };
 }
 
@@ -98,13 +99,27 @@ export function reviewCard(
 ): SrsState {
   const now = opts?.now ?? new Date();
   const g = quality === 0 ? 1 : quality === 2 ? 3 : 4;
-  const s: SrsState = { ...state, reps: state.reps + 1, last: now.toISOString() };
+  // أي موعد overlearning حلّ حتى لحظة هذه المراجعة يُستهلك الآن؛ لا يبقى سبباً
+  // يجعل البطاقة مستحقة إلى الأبد. المواعيد المستقبلية فقط تستمر في الطابور.
+  const futureOverDue = (state.overDue ?? []).filter((due) => {
+    const timestamp = new Date(due).getTime();
+    return Number.isFinite(timestamp) && timestamp > now.getTime();
+  });
+  const successStreak = quality >= 2 ? (state.successStreak ?? 0) + 1 : 0;
+  const s: SrsState = {
+    ...state,
+    reps: state.reps + 1,
+    last: now.toISOString(),
+    successStreak,
+    overDue: futureOverDue.length > 0 ? futureOverDue : undefined,
+  };
   if (opts?.produktiv && quality >= 2) s.prod = (state.prod ?? 0) + 1;
 
   if (quality < 2) {
     s.lapses = state.lapses + 1;
+    s.overDue = undefined;
     if (s.lapses >= MAX_LAPSES_BEFORE_REWRITE) {
-      return { ...newCard(), lapses: s.lapses, prod: state.prod ?? 0 };
+      return { ...newCard(now), lapses: s.lapses, prod: state.prod ?? 0 };
     }
     s.learning = true;
     s.interval = 0;
@@ -149,10 +164,10 @@ export function reviewCard(
   const rawInterval = Math.round(fsrsIntervall(stab));
   s.interval = Math.min(90, Math.max(1, rawInterval));
   s.due = new Date(now.getTime() + s.interval * DAY).toISOString();
-  // 010 Overlearning: بعد 3 نجاحات متتالية، أضف تكرارين إضافيين (+2ي، +7ي) لمنع وهم الإتقان
-  const streak = (state.reps >= 2 && quality >= 2) ? 3 : 0; // مبسط: streak≈3 عند النجاح المتكرر
-  if (overShould(s.reps, streak)) {
-    s.overDue = overExtraDueDays(Date.now() / DAY).map((d) => new Date(d * DAY).toISOString());
+  // 010 Overlearning: عند بلوغ 3 نجاحات متتالية فعلياً، أضف موعدي +2ي/+7ي مرةً واحدة.
+  // استعمال now المحقون يجعل الاختبار والترحيل الزمني حتميين ولا يعتمد على ساعة الجهاز الخفية.
+  if (successStreak === 3 && overShould(s.reps, successStreak)) {
+    s.overDue = overExtraDueDays(now.getTime() / DAY).map((d) => new Date(d * DAY).toISOString());
   }
   return s;
 }
@@ -181,6 +196,29 @@ export function isDue(state: SrsState, now = new Date()): boolean {
   // 010 Overlearning: مواعيد إضافية تُعتبر مستحقة أيضاً
   if (state.overDue?.some((d) => new Date(d).getTime() <= now.getTime())) return true;
   return false;
+}
+
+/** أقدم موعد صالح للبطاقة، بما في ذلك مواعيد overlearning. */
+function oldestDueTimestamp(state: SrsState): number {
+  const timestamps = [state.due, ...(state.overDue ?? [])]
+    .map((value) => new Date(value).getTime())
+    .filter(Number.isFinite);
+  return timestamps.length > 0 ? Math.min(...timestamps) : Number.POSITIVE_INFINITY;
+}
+
+/** أولوية المراجعة: الأقدم استحقاقاً، ثم الأقل قابلية للاسترجاع، ثم الأكثر سقوطاً، ثم المعرّف. */
+function compareDueCards(
+  a: [string, SrsState],
+  b: [string, SrsState],
+  now: Date,
+): number {
+  const dueDelta = oldestDueTimestamp(a[1]) - oldestDueTimestamp(b[1]);
+  if (dueDelta !== 0) return dueDelta;
+  const recallA = abrufbarkeit(a[1], now) ?? 1;
+  const recallB = abrufbarkeit(b[1], now) ?? 1;
+  if (recallA !== recallB) return recallA - recallB;
+  if (a[1].lapses !== b[1].lapses) return b[1].lapses - a[1].lapses;
+  return a[0].localeCompare(b[0]);
 }
 
 /** عدد البطاقات الجديدة المسموح بها اليوم حسب الوتيرة */
@@ -235,7 +273,7 @@ export function todayDeck(
       due.push(id);
     }
   }
-  due.sort(); // حتمية
+  due.sort((a, b) => compareDueCards([a, srs[a]], [b, srs[b]], now));
   notStarted.sort();
   return {
     due: due.slice(0, MAX_REVIEWS_PER_DAY),

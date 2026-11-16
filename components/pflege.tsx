@@ -5,10 +5,11 @@ import { FSP_AUSRICHTUNG, FSP_STATUS_AR } from "@/lib/fsp";
 import { useEffect } from "react";
 import { speakAny } from "@/lib/speech";
 import { De } from "@/components/De";
+import { HighRiskContentNotice } from "@/components/high-risk-notice";
 
 /**
  * 🩺 محطة ألمانية التمريض (R197) — مسار Fachsprache إضافي اختياري:
- * مفردات مهنية A2→B2، حوارات عمل حقيقية، نماذج توثيق، وتوجيه لصيغة telc Medizin/Pflege.
+ * مفردات مهنية A2→B2، حوارات خيالية للتدريب، نماذج توثيق داخلية، وتوجيه غير معتمد لصيغة telc Medizin/Pflege.
  * لا يدخل في خطة الـ378 يومًا ولا في أيّ نتيجة — هدفه جسر B2 العام إلى مكان العمل.
  * الصوت هنا نطق متصفح (speakAny) لا تسجيلات — ولا ندّعي غير ذلك.
  */
@@ -121,12 +122,12 @@ function FachwissenQuiz() {
   const fertig = beantwortet === pflegeFachwissen.length && pflegeFachwissen.length > 0;
   return (
     <section data-testid="pflege-fachwissen">
-      <h3 style={{ fontWeight: 800, margin: "0.2rem 0 0.5rem" }}>🧠 معرفة مهنية بأسلوب Kenntnisprüfung ({pflegeFachwissen.length} سؤالًا)</h3>
+      <h3 style={{ fontWeight: 800, margin: "0.2rem 0 0.5rem" }}>🧠 بنك معرفة تدريبي غير موثّق مهنياً ({pflegeFachwissen.length} سؤالًا)</h3>
       <p style={{ fontSize: "0.82rem", color: "var(--color-ink2)", margin: "0 0 0.6rem" }}>
-        أسئلة معرفة تمريضية أساسية (نظافة، وقاية، أدوية، طوارئ، حقوق) بإجابة فورية وشرح.
-        تدريب من تأليف المشروع — أسئلة Kenntnisprüfung الحقيقية تحدّدها ولايتك وجهة امتحانها.
+        أسئلة داخلية عن النظافة والوقاية والأدوية والطوارئ والحقوق؛ لم يراجعها مختص ولا تصلح لاتخاذ قرار رعاية.
+        استعملها لتدريب اللغة وشكل السؤال فقط، وتحقق من المعرفة المهنية والامتحان لدى ولايتك وجهتك الحالية.
         {beantwortet > 0 && <> · أجبتَ عن {beantwortet}/{pflegeFachwissen.length}، الصحيح {richtigZahl}</>}
-        {fertig && <strong data-testid="pflege-fachwissen-ergebnis"> · النتيجة النهائية: {richtigZahl}/{pflegeFachwissen.length} ({Math.round((richtigZahl / pflegeFachwissen.length) * 100)}%)</strong>}
+        {fertig && <strong data-testid="pflege-fachwissen-ergebnis"> · نتيجة البنود الداخلية: {richtigZahl}/{pflegeFachwissen.length} ({Math.round((richtigZahl / pflegeFachwissen.length) * 100)}%) — ليست كفاءة مهنية</strong>}
       </p>
       <div style={{ display: "grid", gap: "0.55rem" }}>
         {pflegeFachwissen.map((f, i) => {
@@ -246,11 +247,9 @@ export function PflegeStation() {
   return (
     <div data-testid="pflege-station" style={{ display: "grid", gap: "1rem" }}>
       <p style={{ fontSize: "0.86rem", color: "var(--color-ink2)", margin: 0 }}>
-        🩺 مسارٌ إضافي اختياري لمن هدفه العمل في الرعاية الصحية بألمانيا. لا يدخل في خطة الأيام ولا نتائجها —
-        وهو جسرٌ من B2 العام إلى لغة مكان العمل. صوت الحوارات نطقُ متصفّحٍ آلي، لا تسجيلات بشرية.
-        ولن تشعر أنك تدرس «مادة» منفصلة: كل كلمات هذا المسار الـ133 منسوجة أيضًا في حزم مفرداتك اليومية
-        العامة (الصحة والعمل) بمستوياتها، و64 جملةً مهنية (منها عبارات سرير المريض العشر) في بنك جملك العام — فتصلك داخل دروسك العادية في وقتها الطبيعي، وهذه المحطة تعميقٌ اختياري (حوارات وتوثيق ومحاكاة).
+        🩺 مسار لغوي إضافي اختياري لمن يريد التدرّب على ألمانية الرعاية الصحية. لا يدخل في خطة الأيام أو نتائجها، ولا يمنح تأهيلاً مهنياً. صوت الحوارات نطق متصفح آلي، وكل الحالات والنماذج أمثلة تدريبية داخلية.
       </p>
+      <HighRiskContentNotice surfaceId="pflege" />
 
       {/* ── المفردات المهنية ── */}
       <section>
@@ -364,7 +363,7 @@ export function PflegeStation() {
       <MedizinSimulation />
       <section className="card" data-testid="fsp-ausrichtung" style={{ padding: "0.8rem 1rem", display: "grid", gap: "0.4rem", marginTop: "0.7rem" }}>
         <strong>🎯 محاذاة امتحان اللغة المهنية (Fachsprachenprüfung) — A24</strong>
-        <div style={{ fontSize: "0.82rem", color: "var(--color-ink2)" }}>خريطة صادقة: كل جزء حقيقي وبماذا يُدرَّب هنا. صيغ الامتحانات تتغيّر — المرجع دائمًا إطار telc/الغرفة الحالي.</div>
+        <div style={{ fontSize: "0.82rem", color: "var(--color-ink2)" }}>خريطة تدريب داخلية غير موثقة خارجياً؛ لا تثبت أجزاء امتحانك أو مطابقته. تحقق من جهة الامتحان/الغرفة الحالية قبل التحضير أو التسجيل.</div>
         {FSP_AUSRICHTUNG.map((z) => (
           <div key={z.teilDe} style={{ display: "grid", gap: "0.1rem", fontSize: "0.86rem" }}>
             <div><strong>{z.teilAr}</strong> · {FSP_STATUS_AR[z.status]}</div>
@@ -380,7 +379,7 @@ export function PflegeStation() {
       <section>
         <h3 style={{ fontWeight: 800, margin: "0.2rem 0 0.5rem" }}>🎯 نحو امتحان telc Medizin/Pflege — توجيه تدريبي</h3>
         <p style={{ fontSize: "0.82rem", color: "var(--color-ink2)", margin: "0 0 0.5rem" }}>
-          هذه بطاقات توجيه على صيغة الامتحان المهني كما تنشرها telc — تدريبٌ عليها، وليست امتحانًا رسميًا ولا بديلًا عن نماذج telc الأصلية قبل التقديم.
+          هذه بطاقات تدريب داخلي غير متحقق من حداثة صيغتها؛ ليست امتحاناً رسمياً ولا بديلاً عن مواصفات ونماذج الجهة الحالية قبل التقديم.
         </p>
         <div style={{ display: "grid", gap: "0.5rem" }}>
           {pflegePruefung.map((p) => (

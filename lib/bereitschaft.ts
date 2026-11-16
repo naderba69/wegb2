@@ -1,7 +1,6 @@
-// lib/bereitschaft.ts — تحليلات الاستعداد للامتحان (E3/R173)
-// العقد: كل رقم هنا يُشتق من نتائج المتعلّم المسجَّلة في متصفّحه فقط
-// (محاولات المحاكاة في simulationen) — بلا أي تنبؤ وبأحكامٍ موثّقة العتبات.
-// خطّ النجاح المرجعي = 60 (Goethe/telc)؛ نطاقات الوصف تُسمّي الواقع المسجّل ولا تعد بشيء.
+// lib/bereitschaft.ts — تحليلات وصفية لمحاولات المحاكاة (E3/R173/PA-017).
+// العقد: كل رقم من سجل المتعلم المحلي؛ الآلي منفصل عن التقرير الذاتي،
+// ولا تنبؤ أو حكم نجاح/جاهزية شامل. خط 60 مرجع داخلي للأقسام الآلية فقط.
 
 import type { Progress } from "./types";
 import { formatById, type SimFormatId } from "./simulation";
@@ -54,18 +53,20 @@ export function versucheVon(p: Progress, formatId?: SimFormatId): Versuch[] {
   return alle.filter((v) => ((v.format as SimFormatId | undefined) ?? "goethe-b2") === formatId);
 }
 
-function bandFuer(versuche: number, mittel: number | null, ueberLinie: number): { bandAr: string; farbe: string } {
+function bandFuer(versuche: number, mittel: number | null, ueberLinie: number, selbstbericht: boolean): { bandAr: string; farbe: string } {
   if (versuche === 0 || mittel === null)
-    return { bandAr: "لا محاولات محاكاة مسجّلة بعد", farbe: "var(--color-mid)" };
+    return { bandAr: selbstbericht ? "لا تقارير ذاتية مسجلة بعد" : "لا محاولات مصححة محلياً بعد", farbe: "var(--color-mid)" };
   if (versuche === 1)
-    return { bandAr: "محاولة واحدة — لا تكفي لأيّ حكم", farbe: "var(--color-mid)" };
+    return { bandAr: selbstbericht ? "تقرير ذاتي واحد — وصف فقط" : "محاولة آلية واحدة — لا تكفي لأي حكم", farbe: "var(--color-mid)" };
+  if (selbstbericht)
+    return { bandAr: "اتجاه تقاريرك الذاتية — غير مراجع", farbe: "var(--color-mid)" };
   if (mittel >= 70 && ueberLinie >= 2)
-    return { bandAr: "ثابتة فوق خطّ النجاح (60) في المحاكاة", farbe: "var(--color-a1)" };
+    return { bandAr: "ثابت فوق الخط المرجعي الداخلي (60)", farbe: "var(--color-a1)" };
   if (mittel >= BESTEHENS_LINIE)
-    return { bandAr: "فوق خطّ النجاح لكن بهامشٍ ضيّق", farbe: "var(--color-gold)" };
+    return { bandAr: "فوق الخط المرجعي الداخلي بهامش ضيق", farbe: "var(--color-gold)" };
   if (mittel >= 50)
-    return { bandAr: "قريبة تحت الخطّ — فجوة قابلة للإغلاق", farbe: "var(--color-b2)" };
-  return { bandAr: "دون الخطّ بوضوح حتى الآن", farbe: "var(--color-cola)" };
+    return { bandAr: "قريب تحت الخط المرجعي الداخلي", farbe: "var(--color-b2)" };
+  return { bandAr: "دون الخط المرجعي الداخلي بوضوح", farbe: "var(--color-cola)" };
 }
 
 /** حصيلة المهارات الأربع من محاولات المحاكاة (صيغة واحدة أو كلّ الصيغ). */
@@ -84,7 +85,7 @@ export function fertigkeitenBilanz(p: Progress, formatId?: SimFormatId): FertBil
       const diff = werte[werte.length - 1] - vorher.reduce((a, b) => a + b, 0) / vorher.length;
       trend = diff >= 5 ? "steigend" : diff <= -5 ? "fallend" : "stabil";
     }
-    const band = bandFuer(versuche, mittel, ueberLinie);
+    const band = bandFuer(versuche, mittel, ueberLinie, FERT_SELBST[key]);
     return {
       key,
       versuche,
@@ -106,24 +107,23 @@ export function schwaechsteFertigkeit(bilanzen: FertBilanz[]): FertBilanz | null
 }
 
 export interface BereitschaftsFazit {
-  /** إجمالي المحاولات المكتملة */
+  /** إجمالي المحاولات المكتملة؛ لا يعني حكماً امتحانياً. */
   versucheGesamt: number;
-  bestandenAnzahl: number;
-  /** عناوين الصيغ التي خاضها المتعلّم مع عدد نجاحاتها */
-  proFormat: { formatAr: string; versuche: number; bestanden: number }[];
-  /** توصية رقعة واحدة مبنية على أضعف دليل */
+  gesamtUrteil: "not_assessed";
+  /** عناوين الصيغ التي خاضها المتعلم وعدد المحاولات فقط. */
+  proFormat: { formatAr: string; versuche: number }[];
+  /** توصية من القسمين المصححين محلياً فقط؛ لا تخلط التقرير الذاتي. */
   empfehlungAr: string | null;
 }
 
 /** ملخّصٌ وصفيٌّ للسجلّ كلِّه + توصية الرقعة التالية (أضعف مهارة موثّقة). */
 export function bereitschaftsFazit(p: Progress): BereitschaftsFazit {
   const alle = versucheVon(p);
-  const proFormatMap = new Map<string, { versuche: number; bestanden: number }>();
+  const proFormatMap = new Map<string, { versuche: number }>();
   for (const v of alle) {
     const id = ((v.format as SimFormatId | undefined) ?? "goethe-b2") as SimFormatId;
-    const e = proFormatMap.get(id) ?? { versuche: 0, bestanden: 0 };
+    const e = proFormatMap.get(id) ?? { versuche: 0 };
     e.versuche += 1;
-    if (v.bestanden) e.bestanden += 1;
     proFormatMap.set(id, e);
   }
   const proFormat = [...proFormatMap.entries()].map(([id, e]) => ({
@@ -131,16 +131,15 @@ export function bereitschaftsFazit(p: Progress): BereitschaftsFazit {
     ...e,
   }));
 
-  const schwach = schwaechsteFertigkeit(fertigkeitenBilanz(p));
+  const objektiveBilanzen = fertigkeitenBilanz(p).filter((bilanz) => !FERT_SELBST[bilanz.key]);
+  const schwach = schwaechsteFertigkeit(objektiveBilanzen);
   const empfehlungAr = schwach
-    ? schwach.mittel !== null && schwach.mittel < BESTEHENS_LINIE
-      ? `${FERT_AR[schwach.key]} هي الأضعف في سجلّك (متوسط آخر ٣ محاولات ${schwach.mittel}) — ركّز رقعة تدريب عليها ثم أعد محاكاة كاملة وقارن.`
-      : `${FERT_AR[schwach.key]} هي الأقرب إلى الخطّ (متوسط آخر ٣ محاولات ${schwach.mittel}) — هامشها الضيّق هو أول ما يستحق التثبيت.`
+    ? `${FERT_AR[schwach.key]} هي الأضعف في القسم المصحح محلياً (متوسط آخر ٣ محاولات ${schwach.mittel}) — ركّز تدريباً عليها ثم قارن بمحاكاة لاحقة.`
     : null;
 
   return {
     versucheGesamt: alle.length,
-    bestandenAnzahl: alle.filter((v) => v.bestanden).length,
+    gesamtUrteil: "not_assessed",
     proFormat,
     empfehlungAr,
   };

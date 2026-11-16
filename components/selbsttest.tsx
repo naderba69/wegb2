@@ -20,7 +20,7 @@ import type { Progress } from "@/lib/types";
 import { useProgress, addFehlerNow } from "@/lib/store";
 import { normalize } from "@/lib/grader";
 import { levelOf, pickN, rng, clozeFromSatz } from "@/lib/plan";
-import { logK } from "@/lib/kompetenz";
+import { logMeasuredK } from "@/lib/kompetenz";
 import { checkAbzeichen } from "@/lib/spiel";
 import { sentences, texts, fehlerList, alleVokabeln } from "@/lib/content";
 
@@ -263,7 +263,7 @@ function FreieWiedergabe({ tag, day }: { tag: number; day: number }) {
         addFehlerNow({ falsch: (gaben[k] ?? "").trim() || "…", richtig: it.de, art: "wortschatz", ar: "استرجاع حر — الجملة ضاعت من الذاكرة", quelle: "Selbsttest" });
       }
     });
-    update((p) => logK(checkAbzeichen({ ...p, xp: (p.xp ?? 0) + xp }), "Wortschatz", okAnz >= 4));
+    update((p) => logMeasuredK(checkAbzeichen({ ...p, xp: (p.xp ?? 0) + xp }), "Wortschatz", okAnz >= 4));
   }
 
   return (
@@ -359,7 +359,7 @@ function Textluecken({ tag, day }: { tag: number; day: number }) {
       if (g === s) xp += 1;
       else addFehlerNow({ falsch: g || "…", richtig: h.word, art: g && fastDistanz(g, s) <= 2 ? "schreibung" : "wortschatz", ar: `فجوة نص ${run.titleDe} — ${g ? "خطأ إملائي قريب" : "الكلمة غابت تماماً"}`, quelle: "Selbsttest" });
     });
-    update((p) => logK(checkAbzeichen({ ...p, xp: (p.xp ?? 0) + xp }), "Lesen", richtig >= Math.ceil(run.holes.length * 0.6)));
+    update((p) => logMeasuredK(checkAbzeichen({ ...p, xp: (p.xp ?? 0) + xp }), "Lesen", richtig >= Math.ceil(run.holes.length * 0.6)));
   }
 
   return (
@@ -450,7 +450,7 @@ function InterleavingMischer({ tag, day }: { tag: number; day: number }) {
       if (ok) xp += 2;
       else addFehlerNow({ falsch: gi || "…", richtig: it.loesung, art: it.quell === "fehler" ? it.kat : "wortschatz", ar: `الخلّاط (${it.quell === "fehler" ? "تصويب" : it.quell === "vokabel" ? "مفردة" : "فجوة"}) — ضاع في التداخل`, quelle: "Selbsttest" });
     });
-    update((p) => logK(checkAbzeichen({ ...p, xp: (p.xp ?? 0) + xp }), "Grammatik", richtig >= (blockiert ? 7 : 6)));
+    update((p) => logMeasuredK(checkAbzeichen({ ...p, xp: (p.xp ?? 0) + xp }), "Grammatik", richtig >= (blockiert ? 7 : 6)));
   }
 
   const QLABEL: Record<MixItem["quell"], string> = { fehler: "🔍 صوّب", vokabel: "🔤 مفردة", cloze: "🧩 فجوة" };

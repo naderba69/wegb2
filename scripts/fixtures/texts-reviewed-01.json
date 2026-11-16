@@ -1,0 +1,1640 @@
+{
+  "schema": "wegb2-reviewed-text-decision-batch-v1",
+  "batch": "PA-037-01",
+  "reviewedAt": "2026-11-04",
+  "scope": "Item-by-item internal review of all 15 A0 reading texts across German and Arabic titles and passages, questions, options, answers, explanations, narrator perspective, duplication, and factual or register claim boundaries: 12 bounded corrections and 3 explicit confirmed-current decisions; searches and structural checks were triage only, not correction generators, and this is not independent linguistic, translation, CEFR, or exam sign-off.",
+  "entries": [
+    {
+      "id": "t-a0-01",
+      "level": "A0",
+      "decision": "confirmed-current",
+      "rationale": "Confirmed the short self-introduction, Arabic alignment, and all three evidence-linked questions without change.",
+      "previous": {
+        "id": "t-a0-01",
+        "level": "A0",
+        "titleDe": "Hallo!",
+        "titleAr": "مرحباً!",
+        "de": "Hallo! Ich heiße Ali. Ich komme aus Tunesien. Ich wohne in Berlin. Ich lerne Deutsch. Guten Tag! Wie heißt du?",
+        "ar": "مرحباً! اسمي علي. أنا من تونس. أسكن في برلين. أتعلم الألمانية. نهارك سعيد! ما اسمك؟",
+        "questions": [
+          {
+            "type": "mc",
+            "promptDe": "Wie heißt der Mann?",
+            "promptAr": "ما اسم الرجل؟",
+            "options": [
+              "Youssef",
+              "Ali",
+              "Hassan",
+              "Omar"
+            ],
+            "answer": "Ali",
+            "explanationAr": "النص يقول: Ich heiße Ali.",
+            "id": "t-a0-01-q1"
+          },
+          {
+            "type": "mc",
+            "promptDe": "Wo wohnt Ali?",
+            "promptAr": "أين يسكن علي؟",
+            "options": [
+              "In München",
+              "In Hamburg",
+              "In Berlin",
+              "In Köln"
+            ],
+            "answer": "In Berlin",
+            "explanationAr": "النص يقول: Ich wohne in Berlin.",
+            "id": "t-a0-01-q2"
+          },
+          {
+            "type": "mc",
+            "promptDe": "Woher kommt Ali?",
+            "promptAr": "من أين يأتي علي؟",
+            "options": [
+              "Aus Berlin",
+              "Aus Tunesien",
+              "Aus München",
+              "Aus Köln"
+            ],
+            "answer": "Aus Tunesien",
+            "explanationAr": "النص يقول: «Ich komme aus Tunesien».",
+            "id": "t-a0-01-q3"
+          }
+        ]
+      },
+      "current": {
+        "id": "t-a0-01",
+        "level": "A0",
+        "titleDe": "Hallo!",
+        "titleAr": "مرحباً!",
+        "de": "Hallo! Ich heiße Ali. Ich komme aus Tunesien. Ich wohne in Berlin. Ich lerne Deutsch. Guten Tag! Wie heißt du?",
+        "ar": "مرحباً! اسمي علي. أنا من تونس. أسكن في برلين. أتعلم الألمانية. نهارك سعيد! ما اسمك؟",
+        "questions": [
+          {
+            "type": "mc",
+            "promptDe": "Wie heißt der Mann?",
+            "promptAr": "ما اسم الرجل؟",
+            "options": [
+              "Youssef",
+              "Ali",
+              "Hassan",
+              "Omar"
+            ],
+            "answer": "Ali",
+            "explanationAr": "النص يقول: Ich heiße Ali.",
+            "id": "t-a0-01-q1"
+          },
+          {
+            "type": "mc",
+            "promptDe": "Wo wohnt Ali?",
+            "promptAr": "أين يسكن علي؟",
+            "options": [
+              "In München",
+              "In Hamburg",
+              "In Berlin",
+              "In Köln"
+            ],
+            "answer": "In Berlin",
+            "explanationAr": "النص يقول: Ich wohne in Berlin.",
+            "id": "t-a0-01-q2"
+          },
+          {
+            "type": "mc",
+            "promptDe": "Woher kommt Ali?",
+            "promptAr": "من أين يأتي علي؟",
+            "options": [
+              "Aus Berlin",
+              "Aus Tunesien",
+              "Aus München",
+              "Aus Köln"
+            ],
+            "answer": "Aus Tunesien",
+            "explanationAr": "النص يقول: «Ich komme aus Tunesien».",
+            "id": "t-a0-01-q3"
+          }
+        ]
+      }
+    },
+    {
+      "id": "t-a0-02",
+      "level": "A0",
+      "decision": "corrected",
+      "rationale": "Retitled the mixed everyday-number text and made the sequence question refer unambiguously to the opening one-to-ten list.",
+      "previous": {
+        "id": "t-a0-02",
+        "level": "A0",
+        "titleDe": "Die Zahlen 1–10",
+        "titleAr": "الأرقام من 1 إلى 10",
+        "de": "Eins, zwei, drei, vier, fünf, sechs, sieben, acht, neun, zehn. Ich bin dreißig Jahre alt. Meine Telefonnummer ist 0176 12345678. Die Hausnummer ist 12.",
+        "ar": "واحد، اثنان، ثلاثة، أربعة، خمسة، ستة، سبعة، ثمانية، تسعة، عشرة. عمري ثلاثون سنة. رقم هاتفي 0176 12345678. رقم المنزل 12.",
+        "questions": [
+          {
+            "type": "mc",
+            "promptDe": "Wie alt ist der Erzähler?",
+            "promptAr": "كم عمر المتحدّث؟",
+            "options": [
+              "Zwanzig",
+              "Dreißig",
+              "Vierzig",
+              "Fünfzig"
+            ],
+            "answer": "Dreißig",
+            "explanationAr": "النص يقول: dreißig Jahre alt.",
+            "id": "t-a0-02-q1"
+          },
+          {
+            "type": "mc",
+            "promptDe": "Welche Zahl aus den Antwortmöglichkeiten kommt in der ersten Zahlenreihe nicht vor?",
+            "promptAr": "أيّ عدد من الخيارات لا يظهر في سلسلة الأعداد الأولى؟",
+            "options": [
+              "fünf",
+              "sieben",
+              "zwölf",
+              "zehn"
+            ],
+            "answer": "zwölf",
+            "explanationAr": "الدليل في النص: «Eins, zwei, drei, vier, fünf, sechs, sieben, acht, neun, zehn.» — في السلسلة الأولى تُذكر الأعداد بالكلمات من eins bis zehn؛ أما zwölf فلا يظهر فيها.",
+            "id": "t-a0-02-q2"
+          },
+          {
+            "type": "fill",
+            "promptDe": "Meine ___ ist 0176 12345678.",
+            "promptAr": "أكمل الفراغ بالكلمة المناسبة من النص.",
+            "answer": [
+              "Telefonnummer"
+            ],
+            "explanationAr": "النص يقول: «Meine Telefonnummer ist 0176 12345678».",
+            "id": "t-a0-02-q3"
+          }
+        ]
+      },
+      "current": {
+        "id": "t-a0-02",
+        "level": "A0",
+        "titleDe": "Zahlen im Alltag",
+        "titleAr": "الأعداد في الحياة اليومية",
+        "de": "Eins, zwei, drei, vier, fünf, sechs, sieben, acht, neun, zehn. Ich bin dreißig Jahre alt. Meine Telefonnummer ist 0176 12345678. Die Hausnummer ist 12.",
+        "ar": "واحد، اثنان، ثلاثة، أربعة، خمسة، ستة، سبعة، ثمانية، تسعة، عشرة. عمري ثلاثون سنة. رقم هاتفي 0176 12345678. رقم المنزل 12.",
+        "questions": [
+          {
+            "type": "mc",
+            "promptDe": "Wie alt ist der Erzähler?",
+            "promptAr": "كم عمر المتحدّث؟",
+            "options": [
+              "Zwanzig",
+              "Dreißig",
+              "Vierzig",
+              "Fünfzig"
+            ],
+            "answer": "Dreißig",
+            "explanationAr": "النص يقول: dreißig Jahre alt.",
+            "id": "t-a0-02-q1"
+          },
+          {
+            "type": "mc",
+            "promptDe": "Welche Zahl kommt in der Zahlenreihe am Anfang nicht vor?",
+            "promptAr": "أي عدد لا يظهر في سلسلة الأعداد في بداية النص؟",
+            "options": [
+              "fünf",
+              "sieben",
+              "zwölf",
+              "zehn"
+            ],
+            "answer": "zwölf",
+            "explanationAr": "تذكر السلسلة في البداية الأعداد من eins إلى zehn؛ أما zwölf فلا يظهر فيها.",
+            "id": "t-a0-02-q2"
+          },
+          {
+            "type": "fill",
+            "promptDe": "Meine ___ ist 0176 12345678.",
+            "promptAr": "أكمل الفراغ بالكلمة المناسبة من النص.",
+            "answer": [
+              "Telefonnummer"
+            ],
+            "explanationAr": "النص يقول: «Meine Telefonnummer ist 0176 12345678».",
+            "id": "t-a0-02-q3"
+          }
+        ]
+      }
+    },
+    {
+      "id": "t-a0-03",
+      "level": "A0",
+      "decision": "confirmed-current",
+      "rationale": "Confirmed the A-to-Z letter sequence, name spelling, street sentence, Arabic alignment, and question keys without change.",
+      "previous": {
+        "id": "t-a0-03",
+        "level": "A0",
+        "titleDe": "Das Alphabet",
+        "titleAr": "الأبجدية",
+        "de": "A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z. Ich heiße Fatima: F – A – T – I – M – A. Ich wohne in der Goethestraße.",
+        "ar": "A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z. اسمي فاطمة: F – A – T – I – M – A. أسكن في شارع جوته (Goethestraße).",
+        "questions": [
+          {
+            "type": "mc",
+            "promptDe": "Wie heißt die Frau?",
+            "promptAr": "ما اسم المرأة؟",
+            "options": [
+              "Amira",
+              "Fatima",
+              "Leila",
+              "Sara"
+            ],
+            "answer": "Fatima",
+            "explanationAr": "النص يقول: Ich heiße Fatima.",
+            "id": "t-a0-03-q1"
+          },
+          {
+            "type": "mc",
+            "promptDe": "Welcher Buchstabe kommt nach D?",
+            "promptAr": "ما الحرف الذي يأتي بعد D؟",
+            "options": [
+              "C",
+              "E",
+              "F",
+              "G"
+            ],
+            "answer": "E",
+            "explanationAr": "بعد D يأتي E.",
+            "id": "t-a0-03-q2"
+          },
+          {
+            "type": "mc",
+            "promptDe": "In welcher Straße wohnt Fatima?",
+            "promptAr": "في أيّ شارع تسكن فاطمة؟",
+            "options": [
+              "In der Schulstraße",
+              "In der Goethestraße",
+              "In der Bahnhofstraße",
+              "In der Gartenstraße"
+            ],
+            "answer": "In der Goethestraße",
+            "explanationAr": "النص يقول: «Ich wohne in der Goethestraße».",
+            "id": "t-a0-03-q3"
+          }
+        ]
+      },
+      "current": {
+        "id": "t-a0-03",
+        "level": "A0",
+        "titleDe": "Das Alphabet",
+        "titleAr": "الأبجدية",
+        "de": "A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z. Ich heiße Fatima: F – A – T – I – M – A. Ich wohne in der Goethestraße.",
+        "ar": "A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z. اسمي فاطمة: F – A – T – I – M – A. أسكن في شارع جوته (Goethestraße).",
+        "questions": [
+          {
+            "type": "mc",
+            "promptDe": "Wie heißt die Frau?",
+            "promptAr": "ما اسم المرأة؟",
+            "options": [
+              "Amira",
+              "Fatima",
+              "Leila",
+              "Sara"
+            ],
+            "answer": "Fatima",
+            "explanationAr": "النص يقول: Ich heiße Fatima.",
+            "id": "t-a0-03-q1"
+          },
+          {
+            "type": "mc",
+            "promptDe": "Welcher Buchstabe kommt nach D?",
+            "promptAr": "ما الحرف الذي يأتي بعد D؟",
+            "options": [
+              "C",
+              "E",
+              "F",
+              "G"
+            ],
+            "answer": "E",
+            "explanationAr": "بعد D يأتي E.",
+            "id": "t-a0-03-q2"
+          },
+          {
+            "type": "mc",
+            "promptDe": "In welcher Straße wohnt Fatima?",
+            "promptAr": "في أيّ شارع تسكن فاطمة؟",
+            "options": [
+              "In der Schulstraße",
+              "In der Goethestraße",
+              "In der Bahnhofstraße",
+              "In der Gartenstraße"
+            ],
+            "answer": "In der Goethestraße",
+            "explanationAr": "النص يقول: «Ich wohne in der Goethestraße».",
+            "id": "t-a0-03-q3"
+          }
+        ]
+      }
+    },
+    {
+      "id": "t-a0-04",
+      "level": "A0",
+      "decision": "confirmed-current",
+      "rationale": "Confirmed the colour statements, Arabic translation, options, answers, and evidence explanations without change.",
+      "previous": {
+        "id": "t-a0-04",
+        "level": "A0",
+        "titleDe": "Farben",
+        "titleAr": "الألوان",
+        "de": "Das Gras ist grün. Der Himmel ist blau. Die Sonne ist gelb. Die Nacht ist schwarz. Die Milch ist weiß. Das Blut ist rot. Die Orange ist orange. Die Schokolade ist braun.",
+        "ar": "العشب أخضر. السماء زرقاء. الشمس صفراء. الليل أسود. الحليب أبيض. الدم أحمر. البرتقالة برتقالية. الشوكولاتة بنية.",
+        "questions": [
+          {
+            "type": "mc",
+            "promptDe": "Welche Farbe hat der Himmel?",
+            "promptAr": "ما لون السماء؟",
+            "options": [
+              "grün",
+              "blau",
+              "rot",
+              "gelb"
+            ],
+            "answer": "blau",
+            "explanationAr": "النص يقول: Der Himmel ist blau.",
+            "id": "t-a0-04-q1"
+          },
+          {
+            "type": "mc",
+            "promptDe": "Was ist weiß?",
+            "promptAr": "ما الأبيض؟",
+            "options": [
+              "Die Sonne",
+              "Die Milch",
+              "Das Blut",
+              "Die Schokolade"
+            ],
+            "answer": "Die Milch",
+            "explanationAr": "النص يقول: Die Milch ist weiß.",
+            "id": "t-a0-04-q2"
+          },
+          {
+            "type": "mc",
+            "promptDe": "Welche Farbe hat die Schokolade?",
+            "promptAr": "ما لون الشوكولاتة؟",
+            "options": [
+              "weiß",
+              "grün",
+              "braun",
+              "schwarz"
+            ],
+            "answer": "braun",
+            "explanationAr": "النص يقول: «Die Schokolade ist braun».",
+            "id": "t-a0-04-q3"
+          }
+        ]
+      },
+      "current": {
+        "id": "t-a0-04",
+        "level": "A0",
+        "titleDe": "Farben",
+        "titleAr": "الألوان",
+        "de": "Das Gras ist grün. Der Himmel ist blau. Die Sonne ist gelb. Die Nacht ist schwarz. Die Milch ist weiß. Das Blut ist rot. Die Orange ist orange. Die Schokolade ist braun.",
+        "ar": "العشب أخضر. السماء زرقاء. الشمس صفراء. الليل أسود. الحليب أبيض. الدم أحمر. البرتقالة برتقالية. الشوكولاتة بنية.",
+        "questions": [
+          {
+            "type": "mc",
+            "promptDe": "Welche Farbe hat der Himmel?",
+            "promptAr": "ما لون السماء؟",
+            "options": [
+              "grün",
+              "blau",
+              "rot",
+              "gelb"
+            ],
+            "answer": "blau",
+            "explanationAr": "النص يقول: Der Himmel ist blau.",
+            "id": "t-a0-04-q1"
+          },
+          {
+            "type": "mc",
+            "promptDe": "Was ist weiß?",
+            "promptAr": "ما الأبيض؟",
+            "options": [
+              "Die Sonne",
+              "Die Milch",
+              "Das Blut",
+              "Die Schokolade"
+            ],
+            "answer": "Die Milch",
+            "explanationAr": "النص يقول: Die Milch ist weiß.",
+            "id": "t-a0-04-q2"
+          },
+          {
+            "type": "mc",
+            "promptDe": "Welche Farbe hat die Schokolade?",
+            "promptAr": "ما لون الشوكولاتة؟",
+            "options": [
+              "weiß",
+              "grün",
+              "braun",
+              "schwarz"
+            ],
+            "answer": "braun",
+            "explanationAr": "النص يقول: «Die Schokolade ist braun».",
+            "id": "t-a0-04-q3"
+          }
+        ]
+      }
+    },
+    {
+      "id": "t-a0-05",
+      "level": "A0",
+      "decision": "corrected",
+      "rationale": "Corrected the Arabic question so Student is read as Karim’s stated status rather than an asserted occupation.",
+      "previous": {
+        "id": "t-a0-05",
+        "level": "A0",
+        "titleDe": "Ich und meine Familie",
+        "titleAr": "أنا وعائلتي",
+        "de": "Ich bin Karim. Ich bin Student. Ich habe eine Familie. Das ist meine Mutter, mein Vater, meine Schwester und mein Bruder. Wir wohnen in Köln. Meine Mutter ist Lehrerin. Mein Vater ist Arzt.",
+        "ar": "أنا كريم. أنا طالب. لدي عائلة. هذه أمي، أبي، أختي وأخي. نسكن في كولونيا. أمي معلمة. أبي طبيب.",
+        "questions": [
+          {
+            "type": "mc",
+            "promptDe": "Was ist Karim?",
+            "promptAr": "ماذا يعمل كريم؟",
+            "options": [
+              "Lehrer",
+              "Arzt",
+              "Student",
+              "Ingenieur"
+            ],
+            "answer": "Student",
+            "explanationAr": "النص يقول: Ich bin Student.",
+            "id": "t-a0-05-q1"
+          },
+          {
+            "type": "mc",
+            "promptDe": "Wer ist Arzt?",
+            "promptAr": "من الطبيب؟",
+            "options": [
+              "Die Mutter",
+              "Der Vater",
+              "Der Bruder",
+              "Die Schwester"
+            ],
+            "answer": "Der Vater",
+            "explanationAr": "النص يقول: Mein Vater ist Arzt.",
+            "id": "t-a0-05-q2"
+          },
+          {
+            "type": "mc",
+            "promptDe": "Wo wohnen Karim und seine Familie?",
+            "promptAr": "أين يسكن كريم وعائلته؟",
+            "options": [
+              "In Berlin",
+              "In Hamburg",
+              "In Köln",
+              "In München"
+            ],
+            "answer": "In Köln",
+            "explanationAr": "النص يقول: «Wir wohnen in Köln».",
+            "id": "t-a0-05-q3"
+          }
+        ]
+      },
+      "current": {
+        "id": "t-a0-05",
+        "level": "A0",
+        "titleDe": "Ich und meine Familie",
+        "titleAr": "أنا وعائلتي",
+        "de": "Ich bin Karim. Ich bin Student. Ich habe eine Familie. Das ist meine Mutter, mein Vater, meine Schwester und mein Bruder. Wir wohnen in Köln. Meine Mutter ist Lehrerin. Mein Vater ist Arzt.",
+        "ar": "أنا كريم. أنا طالب. لدي عائلة. هذه أمي، أبي، أختي وأخي. نسكن في كولونيا. أمي معلمة. أبي طبيب.",
+        "questions": [
+          {
+            "type": "mc",
+            "promptDe": "Was ist Karim?",
+            "promptAr": "ماذا يقول كريم عن نفسه؟",
+            "options": [
+              "Lehrer",
+              "Arzt",
+              "Student",
+              "Ingenieur"
+            ],
+            "answer": "Student",
+            "explanationAr": "النص يقول: Ich bin Student.",
+            "id": "t-a0-05-q1"
+          },
+          {
+            "type": "mc",
+            "promptDe": "Wer ist Arzt?",
+            "promptAr": "من الطبيب؟",
+            "options": [
+              "Die Mutter",
+              "Der Vater",
+              "Der Bruder",
+              "Die Schwester"
+            ],
+            "answer": "Der Vater",
+            "explanationAr": "النص يقول: Mein Vater ist Arzt.",
+            "id": "t-a0-05-q2"
+          },
+          {
+            "type": "mc",
+            "promptDe": "Wo wohnen Karim und seine Familie?",
+            "promptAr": "أين يسكن كريم وعائلته؟",
+            "options": [
+              "In Berlin",
+              "In Hamburg",
+              "In Köln",
+              "In München"
+            ],
+            "answer": "In Köln",
+            "explanationAr": "النص يقول: «Wir wohnen in Köln».",
+            "id": "t-a0-05-q3"
+          }
+        ]
+      }
+    },
+    {
+      "id": "t-a0-06",
+      "level": "A0",
+      "decision": "corrected",
+      "rationale": "Aligned classroom/course wording, replaced the male-only Studenten label with Lernende, spelled out the number, and updated Arabic accordingly.",
+      "previous": {
+        "id": "t-a0-06",
+        "level": "A0",
+        "titleDe": "In der Klasse",
+        "titleAr": "في الصف",
+        "de": "Das ist mein Klassenzimmer. Hier lerne ich Deutsch. Die Lehrerin heißt Frau Schulz. Sie ist sehr nett. Im Kurs sind 12 Studenten. Sie kommen aus Syrien, aus der Türkei, aus Polen und aus Italien. Wir sprechen zusammen Deutsch. Manchmal lachen wir viel.",
+        "ar": "هذا فصلي. أتعلم فيه الألمانية. اسم المعلمة السيدة شولتس، وهي لطيفة جداً. يضمّ الصف 12 طالباً من سوريا وتركيا وبولندا وإيطاليا. نتحدث الألمانية معاً، وأحياناً نضحك كثيراً.",
+        "questions": [
+          {
+            "type": "mc",
+            "promptDe": "Wie heißt die Lehrerin?",
+            "promptAr": "ما اسم المعلمة؟",
+            "options": [
+              "Frau Müller",
+              "Frau Schulz",
+              "Frau Becker",
+              "Frau Klein"
+            ],
+            "answer": "Frau Schulz",
+            "explanationAr": "اسمها السيدة شولتس.",
+            "id": "t-a0-06-q1"
+          },
+          {
+            "id": "t-a0-06-q2",
+            "type": "mc",
+            "promptDe": "Welche Sprache sprechen die Lernenden zusammen?",
+            "promptAr": "ما اللغة التي يتحدث بها المتعلمون معاً؟",
+            "options": [
+              "Deutsch",
+              "Englisch",
+              "Arabisch",
+              "Französisch"
+            ],
+            "answer": "Deutsch",
+            "explanationAr": "«Wir sprechen zusammen Deutsch.» — يتحدثون الألمانية معاً."
+          },
+          {
+            "type": "mc",
+            "promptDe": "Wie ist die Lehrerin?",
+            "promptAr": "كيف هي المعلمة؟",
+            "options": [
+              "streng",
+              "sehr nett",
+              "alt",
+              "laut"
+            ],
+            "answer": "sehr nett",
+            "explanationAr": "النص يقول: «Sie ist sehr nett».",
+            "id": "t-a0-06-q3"
+          }
+        ]
+      },
+      "current": {
+        "id": "t-a0-06",
+        "level": "A0",
+        "titleDe": "In der Klasse",
+        "titleAr": "في الصف",
+        "de": "Das ist mein Klassenzimmer. Hier lerne ich Deutsch. Die Lehrerin heißt Frau Schulz. Sie ist sehr nett. Im Kurs sind zwölf Lernende. Sie kommen aus Syrien, aus der Türkei, aus Polen und aus Italien. Wir sprechen zusammen Deutsch. Manchmal lachen wir viel.",
+        "ar": "هذه قاعة درسي. هنا أتعلم الألمانية. اسم المعلمة السيدة شولتس، وهي لطيفة جداً. في الدورة اثنا عشر متعلماً من سوريا وتركيا وبولندا وإيطاليا. نتحدث الألمانية معاً، وأحياناً نضحك كثيراً.",
+        "questions": [
+          {
+            "type": "mc",
+            "promptDe": "Wie heißt die Lehrerin?",
+            "promptAr": "ما اسم المعلمة؟",
+            "options": [
+              "Frau Müller",
+              "Frau Schulz",
+              "Frau Becker",
+              "Frau Klein"
+            ],
+            "answer": "Frau Schulz",
+            "explanationAr": "اسمها السيدة شولتس.",
+            "id": "t-a0-06-q1"
+          },
+          {
+            "id": "t-a0-06-q2",
+            "type": "mc",
+            "promptDe": "Welche Sprache sprechen die Lernenden zusammen?",
+            "promptAr": "ما اللغة التي يتحدث بها المتعلمون معاً؟",
+            "options": [
+              "Deutsch",
+              "Englisch",
+              "Arabisch",
+              "Französisch"
+            ],
+            "answer": "Deutsch",
+            "explanationAr": "«Wir sprechen zusammen Deutsch.» — يتحدثون الألمانية معاً."
+          },
+          {
+            "type": "mc",
+            "promptDe": "Wie ist die Lehrerin?",
+            "promptAr": "كيف هي المعلمة؟",
+            "options": [
+              "streng",
+              "sehr nett",
+              "alt",
+              "laut"
+            ],
+            "answer": "sehr nett",
+            "explanationAr": "النص يقول: «Sie ist sehr nett».",
+            "id": "t-a0-06-q3"
+          }
+        ]
+      }
+    },
+    {
+      "id": "t-a0-07",
+      "level": "A0",
+      "decision": "corrected",
+      "rationale": "Kept the Thursday question in the text’s first-person narrative instead of inventing a male third-person referent.",
+      "previous": {
+        "id": "t-a0-07",
+        "level": "A0",
+        "titleDe": "Die Wochentage",
+        "titleAr": "أيام الأسبوع",
+        "de": "Am Montag gehe ich zur Arbeit. Am Dienstag habe ich einen Deutschkurs. Am Mittwoch kaufe ich ein. Am Donnerstag treffe ich meine Freunde. Am Freitag sehe ich fern. Am Samstag schlafe ich lange. Am Sonntag besuche ich meine Familie.",
+        "ar": "أذهب إلى العمل يوم الاثنين. لدي دورة في اللغة الألمانية يوم الثلاثاء. أتسوّق يوم الأربعاء. أقابل أصدقائي يوم الخميس. أشاهد التلفاز يوم الجمعة. أنام وقتاً طويلاً يوم السبت. أزور عائلتي يوم الأحد.",
+        "questions": [
+          {
+            "type": "mc",
+            "promptDe": "Was mache ich am Mittwoch?",
+            "promptAr": "ماذا أفعل يوم الأربعاء؟",
+            "options": [
+              "Ich arbeite.",
+              "Ich kaufe ein.",
+              "Ich sehe fern.",
+              "Ich schlafe."
+            ],
+            "answer": "Ich kaufe ein.",
+            "explanationAr": "«Am Mittwoch kaufe ich ein.» — أتسوّق يوم الأربعاء.",
+            "id": "t-a0-07-q1"
+          },
+          {
+            "id": "t-a0-07-q2",
+            "type": "mc",
+            "promptDe": "Wann besuche ich meine Familie?",
+            "promptAr": "متى أزور عائلتي؟",
+            "options": [
+              "Am Montag",
+              "Am Donnerstag",
+              "Am Samstag",
+              "Am Sonntag"
+            ],
+            "answer": "Am Sonntag",
+            "explanationAr": "«Am Sonntag besuche ich meine Familie.» — أزور عائلتي يوم الأحد."
+          },
+          {
+            "type": "mc",
+            "promptDe": "Was macht er am Donnerstag?",
+            "promptAr": "ماذا يفعل يوم الخميس؟",
+            "options": [
+              "Er geht zur Arbeit",
+              "Er kauft ein",
+              "Er trifft seine Freunde",
+              "Er schläft lange"
+            ],
+            "answer": "Er trifft seine Freunde",
+            "explanationAr": "النص يقول: «Am Donnerstag treffe ich meine Freunde».",
+            "id": "t-a0-07-q3"
+          }
+        ]
+      },
+      "current": {
+        "id": "t-a0-07",
+        "level": "A0",
+        "titleDe": "Die Wochentage",
+        "titleAr": "أيام الأسبوع",
+        "de": "Am Montag gehe ich zur Arbeit. Am Dienstag habe ich einen Deutschkurs. Am Mittwoch kaufe ich ein. Am Donnerstag treffe ich meine Freunde. Am Freitag sehe ich fern. Am Samstag schlafe ich lange. Am Sonntag besuche ich meine Familie.",
+        "ar": "أذهب إلى العمل يوم الاثنين. لدي دورة في اللغة الألمانية يوم الثلاثاء. أتسوّق يوم الأربعاء. أقابل أصدقائي يوم الخميس. أشاهد التلفاز يوم الجمعة. أنام وقتاً طويلاً يوم السبت. أزور عائلتي يوم الأحد.",
+        "questions": [
+          {
+            "type": "mc",
+            "promptDe": "Was mache ich am Mittwoch?",
+            "promptAr": "ماذا أفعل يوم الأربعاء؟",
+            "options": [
+              "Ich arbeite.",
+              "Ich kaufe ein.",
+              "Ich sehe fern.",
+              "Ich schlafe."
+            ],
+            "answer": "Ich kaufe ein.",
+            "explanationAr": "«Am Mittwoch kaufe ich ein.» — أتسوّق يوم الأربعاء.",
+            "id": "t-a0-07-q1"
+          },
+          {
+            "id": "t-a0-07-q2",
+            "type": "mc",
+            "promptDe": "Wann besuche ich meine Familie?",
+            "promptAr": "متى أزور عائلتي؟",
+            "options": [
+              "Am Montag",
+              "Am Donnerstag",
+              "Am Samstag",
+              "Am Sonntag"
+            ],
+            "answer": "Am Sonntag",
+            "explanationAr": "«Am Sonntag besuche ich meine Familie.» — أزور عائلتي يوم الأحد."
+          },
+          {
+            "type": "mc",
+            "promptDe": "Was mache ich am Donnerstag?",
+            "promptAr": "ماذا أفعل يوم الخميس؟",
+            "options": [
+              "Ich gehe zur Arbeit",
+              "Ich kaufe ein",
+              "Ich treffe meine Freunde",
+              "Ich schlafe lange"
+            ],
+            "answer": "Ich treffe meine Freunde",
+            "explanationAr": "النص يقول: «Am Donnerstag treffe ich meine Freunde».",
+            "id": "t-a0-07-q3"
+          }
+        ]
+      }
+    },
+    {
+      "id": "t-a0-08",
+      "level": "A0",
+      "decision": "corrected",
+      "rationale": "Kept the supper-drink question in the text’s first-person narrative instead of inventing a male third-person referent.",
+      "previous": {
+        "id": "t-a0-08",
+        "level": "A0",
+        "titleDe": "Das Essen",
+        "titleAr": "الطعام",
+        "de": "Ich esse gern Brot mit Käse zum Frühstück. Zum Mittag esse ich gern Reis mit Gemüse und Fleisch. Zum Abendbrot trinke ich Tee und esse Obst. Ich trinke nicht viel Kaffee. Mein Lieblingsobst ist der Apfel. Ich mag auch Bananen und Orangen.",
+        "ar": "أحب أكل الخبز مع الجبن في الفطور. في الغداء آكل الأرز مع الخضار واللحم. في العشاء أشرب الشاي وآكل فاكهة. لا أشرب الكثير من القهوة. فاكهتي المفضلة التفاح، وأحب الموز والبرتقال أيضاً.",
+        "questions": [
+          {
+            "type": "mc",
+            "promptDe": "Was ist mein Lieblingsobst?",
+            "promptAr": "ما فاكهتي المفضلة؟",
+            "options": [
+              "Banane",
+              "Apfel",
+              "Orange",
+              "Traube"
+            ],
+            "answer": "Apfel",
+            "explanationAr": "«Mein Lieblingsobst ist der Apfel.» — فاكهتي المفضلة هي التفاح.",
+            "id": "t-a0-08-q1"
+          },
+          {
+            "id": "t-a0-08-q2",
+            "type": "mc",
+            "promptDe": "Was esse ich zum Abendbrot?",
+            "promptAr": "ماذا آكل في وجبة العشاء؟",
+            "options": [
+              "Brot und Käse",
+              "Reis und Fleisch",
+              "Obst",
+              "Kuchen"
+            ],
+            "answer": "Obst",
+            "explanationAr": "«Zum Abendbrot trinke ich Tee und esse Obst.» — أشرب الشاي وآكل الفاكهة في وجبة العشاء."
+          },
+          {
+            "type": "mc",
+            "promptDe": "Was trinkt er zum Abendbrot?",
+            "promptAr": "ماذا يشرب في العشاء؟",
+            "options": [
+              "Kaffee",
+              "Tee",
+              "Wasser",
+              "Saft"
+            ],
+            "answer": "Tee",
+            "explanationAr": "النص يقول: «Zum Abendbrot trinke ich Tee».",
+            "id": "t-a0-08-q3"
+          }
+        ]
+      },
+      "current": {
+        "id": "t-a0-08",
+        "level": "A0",
+        "titleDe": "Das Essen",
+        "titleAr": "الطعام",
+        "de": "Ich esse gern Brot mit Käse zum Frühstück. Zum Mittag esse ich gern Reis mit Gemüse und Fleisch. Zum Abendbrot trinke ich Tee und esse Obst. Ich trinke nicht viel Kaffee. Mein Lieblingsobst ist der Apfel. Ich mag auch Bananen und Orangen.",
+        "ar": "أحب أكل الخبز مع الجبن في الفطور. في الغداء آكل الأرز مع الخضار واللحم. في العشاء أشرب الشاي وآكل فاكهة. لا أشرب الكثير من القهوة. فاكهتي المفضلة التفاح، وأحب الموز والبرتقال أيضاً.",
+        "questions": [
+          {
+            "type": "mc",
+            "promptDe": "Was ist mein Lieblingsobst?",
+            "promptAr": "ما فاكهتي المفضلة؟",
+            "options": [
+              "Banane",
+              "Apfel",
+              "Orange",
+              "Traube"
+            ],
+            "answer": "Apfel",
+            "explanationAr": "«Mein Lieblingsobst ist der Apfel.» — فاكهتي المفضلة هي التفاح.",
+            "id": "t-a0-08-q1"
+          },
+          {
+            "id": "t-a0-08-q2",
+            "type": "mc",
+            "promptDe": "Was esse ich zum Abendbrot?",
+            "promptAr": "ماذا آكل في وجبة العشاء؟",
+            "options": [
+              "Brot und Käse",
+              "Reis und Fleisch",
+              "Obst",
+              "Kuchen"
+            ],
+            "answer": "Obst",
+            "explanationAr": "«Zum Abendbrot trinke ich Tee und esse Obst.» — أشرب الشاي وآكل الفاكهة في وجبة العشاء."
+          },
+          {
+            "type": "mc",
+            "promptDe": "Was trinke ich zum Abendbrot?",
+            "promptAr": "ماذا أشرب في العشاء؟",
+            "options": [
+              "Kaffee",
+              "Tee",
+              "Wasser",
+              "Saft"
+            ],
+            "answer": "Tee",
+            "explanationAr": "النص يقول: «Zum Abendbrot trinke ich Tee».",
+            "id": "t-a0-08-q3"
+          }
+        ]
+      }
+    },
+    {
+      "id": "t-a0-09",
+      "level": "A0",
+      "decision": "corrected",
+      "rationale": "Corrected aufstehen from waking up to getting up in Arabic and aligned the bedtime question with the first-person narrator.",
+      "previous": {
+        "id": "t-a0-09",
+        "level": "A0",
+        "titleDe": "Die Uhrzeit",
+        "titleAr": "الوقت",
+        "de": "Ich stehe um 7 Uhr auf. Um 8 Uhr frühstücke ich. Um 9 Uhr beginne ich mit der Arbeit. Um 12 Uhr esse ich zu Mittag. Um 17 Uhr gehe ich nach Hause. Um 19 Uhr esse ich zu Abend. Um 23 Uhr gehe ich ins Bett.",
+        "ar": "أستيقظ عند السابعة صباحاً. أتناول الفطور عند الثامنة. أبدأ العمل عند التاسعة. أتناول الغداء عند الثانية عشرة ظهراً. أعود إلى البيت عند الخامسة مساءً. أتناول العشاء عند السابعة مساءً. أذهب إلى الفراش عند الحادية عشرة ليلاً.",
+        "questions": [
+          {
+            "type": "mc",
+            "promptDe": "Wann beginne ich mit der Arbeit?",
+            "promptAr": "متى أبدأ العمل؟",
+            "options": [
+              "Um 7 Uhr",
+              "Um 8 Uhr",
+              "Um 9 Uhr",
+              "Um 12 Uhr"
+            ],
+            "answer": "Um 9 Uhr",
+            "explanationAr": "«Um 9 Uhr beginne ich mit der Arbeit.» — أبدأ العمل عند التاسعة.",
+            "id": "t-a0-09-q1"
+          },
+          {
+            "id": "t-a0-09-q2",
+            "type": "mc",
+            "promptDe": "Wann gehe ich nach Hause?",
+            "promptAr": "متى أعود إلى البيت؟",
+            "options": [
+              "Um 9 Uhr",
+              "Um 12 Uhr",
+              "Um 17 Uhr",
+              "Um 19 Uhr"
+            ],
+            "answer": "Um 17 Uhr",
+            "explanationAr": "«Um 17 Uhr gehe ich nach Hause.» — أعود إلى البيت عند الخامسة مساءً."
+          },
+          {
+            "type": "mc",
+            "promptDe": "Um wie viel Uhr geht er ins Bett?",
+            "promptAr": "في أيّ ساعة يذهب إلى الفراش؟",
+            "options": [
+              "Um 19 Uhr",
+              "Um 17 Uhr",
+              "Um 12 Uhr",
+              "Um 23 Uhr"
+            ],
+            "answer": "Um 23 Uhr",
+            "explanationAr": "النص يقول: «Um 23 Uhr gehe ich ins Bett».",
+            "id": "t-a0-09-q3"
+          }
+        ]
+      },
+      "current": {
+        "id": "t-a0-09",
+        "level": "A0",
+        "titleDe": "Die Uhrzeit",
+        "titleAr": "الوقت",
+        "de": "Ich stehe um 7 Uhr auf. Um 8 Uhr frühstücke ich. Um 9 Uhr beginne ich mit der Arbeit. Um 12 Uhr esse ich zu Mittag. Um 17 Uhr gehe ich nach Hause. Um 19 Uhr esse ich zu Abend. Um 23 Uhr gehe ich ins Bett.",
+        "ar": "أنهض عند السابعة صباحاً. أتناول الفطور عند الثامنة. أبدأ العمل عند التاسعة. أتناول الغداء عند الثانية عشرة ظهراً. أعود إلى البيت عند الخامسة مساءً. أتناول العشاء عند السابعة مساءً. أذهب إلى الفراش عند الحادية عشرة ليلاً.",
+        "questions": [
+          {
+            "type": "mc",
+            "promptDe": "Wann beginne ich mit der Arbeit?",
+            "promptAr": "متى أبدأ العمل؟",
+            "options": [
+              "Um 7 Uhr",
+              "Um 8 Uhr",
+              "Um 9 Uhr",
+              "Um 12 Uhr"
+            ],
+            "answer": "Um 9 Uhr",
+            "explanationAr": "«Um 9 Uhr beginne ich mit der Arbeit.» — أبدأ العمل عند التاسعة.",
+            "id": "t-a0-09-q1"
+          },
+          {
+            "id": "t-a0-09-q2",
+            "type": "mc",
+            "promptDe": "Wann gehe ich nach Hause?",
+            "promptAr": "متى أعود إلى البيت؟",
+            "options": [
+              "Um 9 Uhr",
+              "Um 12 Uhr",
+              "Um 17 Uhr",
+              "Um 19 Uhr"
+            ],
+            "answer": "Um 17 Uhr",
+            "explanationAr": "«Um 17 Uhr gehe ich nach Hause.» — أعود إلى البيت عند الخامسة مساءً."
+          },
+          {
+            "type": "mc",
+            "promptDe": "Um wie viel Uhr gehe ich ins Bett?",
+            "promptAr": "في أي ساعة أذهب إلى الفراش؟",
+            "options": [
+              "Um 19 Uhr",
+              "Um 17 Uhr",
+              "Um 12 Uhr",
+              "Um 23 Uhr"
+            ],
+            "answer": "Um 23 Uhr",
+            "explanationAr": "النص يقول: «Um 23 Uhr gehe ich ins Bett».",
+            "id": "t-a0-09-q3"
+          }
+        ]
+      }
+    },
+    {
+      "id": "t-a0-10",
+      "level": "A0",
+      "decision": "corrected",
+      "rationale": "Replaced a duplicate favourite-season question with distinct comprehension of the explicitly listed autumn colours.",
+      "previous": {
+        "id": "t-a0-10",
+        "level": "A0",
+        "titleDe": "Wetter und Jahreszeiten",
+        "titleAr": "الطقس والفصول",
+        "de": "Im Winter ist es kalt und es schneit. Ich trage eine dicke Jacke. Im Frühling blühen die Blumen. Im Sommer ist es heiß. Ich gehe schwimmen. Im Herbst sind die Blätter bunt: rot, gelb und braun. Ich mag den Frühling am liebsten.",
+        "ar": "الجو بارد في الشتاء ويتساقط الثلج. أرتدي سترة سميكة. تتفتح الأزهار في الربيع. الجو حار في الصيف وأذهب للسباحة. أوراق الأشجار ملوّنة في الخريف: حمراء وصفراء وبنية. أحب الربيع أكثر من غيره.",
+        "questions": [
+          {
+            "type": "mc",
+            "promptDe": "Welche Jahreszeit mag ich am liebsten?",
+            "promptAr": "أي فصل أحب أكثر؟",
+            "options": [
+              "Winter",
+              "Frühling",
+              "Sommer",
+              "Herbst"
+            ],
+            "answer": "Frühling",
+            "explanationAr": "«Ich mag den Frühling am liebsten.» — أحب الربيع أكثر من غيره.",
+            "id": "t-a0-10-q1"
+          },
+          {
+            "id": "t-a0-10-q2",
+            "type": "mc",
+            "promptDe": "Was trage ich im Winter?",
+            "promptAr": "ماذا أرتدي في الشتاء؟",
+            "options": [
+              "Eine dicke Jacke",
+              "Ein T-Shirt",
+              "Ein Kleid",
+              "Eine kurze Hose"
+            ],
+            "answer": "Eine dicke Jacke",
+            "explanationAr": "«Ich trage eine dicke Jacke.» — أرتدي سترة سميكة."
+          },
+          {
+            "type": "mc",
+            "promptDe": "Welche Jahreszeit mag er am liebsten?",
+            "promptAr": "أيّ فصل يحبّه أكثر؟",
+            "options": [
+              "Den Winter",
+              "Den Frühling",
+              "Den Sommer",
+              "Den Herbst"
+            ],
+            "answer": "Den Frühling",
+            "explanationAr": "النص يقول: «Ich mag den Frühling am liebsten».",
+            "id": "t-a0-10-q3"
+          }
+        ]
+      },
+      "current": {
+        "id": "t-a0-10",
+        "level": "A0",
+        "titleDe": "Wetter und Jahreszeiten",
+        "titleAr": "الطقس والفصول",
+        "de": "Im Winter ist es kalt und es schneit. Ich trage eine dicke Jacke. Im Frühling blühen die Blumen. Im Sommer ist es heiß. Ich gehe schwimmen. Im Herbst sind die Blätter bunt: rot, gelb und braun. Ich mag den Frühling am liebsten.",
+        "ar": "الجو بارد في الشتاء ويتساقط الثلج. أرتدي سترة سميكة. تتفتح الأزهار في الربيع. الجو حار في الصيف وأذهب للسباحة. أوراق الأشجار ملوّنة في الخريف: حمراء وصفراء وبنية. أحب الربيع أكثر من غيره.",
+        "questions": [
+          {
+            "type": "mc",
+            "promptDe": "Welche Jahreszeit mag ich am liebsten?",
+            "promptAr": "أي فصل أحب أكثر؟",
+            "options": [
+              "Winter",
+              "Frühling",
+              "Sommer",
+              "Herbst"
+            ],
+            "answer": "Frühling",
+            "explanationAr": "«Ich mag den Frühling am liebsten.» — أحب الربيع أكثر من غيره.",
+            "id": "t-a0-10-q1"
+          },
+          {
+            "id": "t-a0-10-q2",
+            "type": "mc",
+            "promptDe": "Was trage ich im Winter?",
+            "promptAr": "ماذا أرتدي في الشتاء؟",
+            "options": [
+              "Eine dicke Jacke",
+              "Ein T-Shirt",
+              "Ein Kleid",
+              "Eine kurze Hose"
+            ],
+            "answer": "Eine dicke Jacke",
+            "explanationAr": "«Ich trage eine dicke Jacke.» — أرتدي سترة سميكة."
+          },
+          {
+            "type": "mc",
+            "promptDe": "Welche Farben haben die Blätter im Herbst?",
+            "promptAr": "ما ألوان أوراق الأشجار في الخريف؟",
+            "options": [
+              "Rot, gelb und braun",
+              "Nur grün",
+              "Blau und weiß",
+              "Schwarz und grau"
+            ],
+            "answer": "Rot, gelb und braun",
+            "explanationAr": "النص يقول: «Im Herbst sind die Blätter bunt: rot, gelb und braun».",
+            "id": "t-a0-10-q3"
+          }
+        ]
+      }
+    },
+    {
+      "id": "t-a0-011",
+      "level": "A0",
+      "decision": "corrected",
+      "rationale": "Replaced the duplicate notebook-count question with distinct comprehension of the bag’s stated weight.",
+      "previous": {
+        "id": "t-a0-011",
+        "level": "A0",
+        "titleDe": "Meine Schultasche",
+        "titleAr": "حقيبتي المدرسية",
+        "de": "Ich habe eine Schultasche. Sie ist blau und rot. In der Tasche sind drei Hefte, ein Kugelschreiber, ein Bleistift und ein Radiergummi. Ich habe auch ein Buch für den Deutschunterricht. Die Tasche ist nicht schwer. Ich nehme sie jeden Morgen in die Schule.",
+        "ar": "عندي حقيبة مدرسية. هي زرقاء وحمراء. في الحقيبة ثلاثة دفاتر وقلم حبر جاف وقلم رصاص وممحاة. عندي أيضاً كتاب لحصة الألمانية. الحقيبة ليست ثقيلة. آخذها كل صباح إلى المدرسة.",
+        "questions": [
+          {
+            "id": "t-a0-011-q1",
+            "type": "mc",
+            "promptDe": "Wie viele Hefte sind in der Schultasche?",
+            "promptAr": "كم دفتراً في الحقيبة المدرسية؟",
+            "options": [
+              "Ein Heft",
+              "Zwei Hefte",
+              "Drei Hefte"
+            ],
+            "answer": "Drei Hefte",
+            "explanationAr": "في النص: ثلاثة دفاتر."
+          },
+          {
+            "id": "t-a0-011-q2",
+            "type": "mc",
+            "promptDe": "Wohin nehme ich die Tasche jeden Morgen?",
+            "promptAr": "إلى أين آخذ الحقيبة كل صباح؟",
+            "options": [
+              "In den Park",
+              "Zur Arbeit",
+              "In die Schule",
+              "Zum Bahnhof"
+            ],
+            "answer": "In die Schule",
+            "explanationAr": "«Ich nehme sie jeden Morgen in die Schule.» — آخذها إلى المدرسة كل صباح."
+          },
+          {
+            "type": "mc",
+            "promptDe": "Wie viele Hefte sind in der Tasche?",
+            "promptAr": "كم دفتراً في الحقيبة؟",
+            "options": [
+              "zwei",
+              "drei",
+              "vier",
+              "fünf"
+            ],
+            "answer": "drei",
+            "explanationAr": "النص يقول: «In der Tasche sind drei Hefte».",
+            "id": "t-a0-011-q3"
+          }
+        ]
+      },
+      "current": {
+        "id": "t-a0-011",
+        "level": "A0",
+        "titleDe": "Meine Schultasche",
+        "titleAr": "حقيبتي المدرسية",
+        "de": "Ich habe eine Schultasche. Sie ist blau und rot. In der Tasche sind drei Hefte, ein Kugelschreiber, ein Bleistift und ein Radiergummi. Ich habe auch ein Buch für den Deutschunterricht. Die Tasche ist nicht schwer. Ich nehme sie jeden Morgen in die Schule.",
+        "ar": "عندي حقيبة مدرسية. هي زرقاء وحمراء. في الحقيبة ثلاثة دفاتر وقلم حبر جاف وقلم رصاص وممحاة. عندي أيضاً كتاب لحصة الألمانية. الحقيبة ليست ثقيلة. آخذها كل صباح إلى المدرسة.",
+        "questions": [
+          {
+            "id": "t-a0-011-q1",
+            "type": "mc",
+            "promptDe": "Wie viele Hefte sind in der Schultasche?",
+            "promptAr": "كم دفتراً في الحقيبة المدرسية؟",
+            "options": [
+              "Ein Heft",
+              "Zwei Hefte",
+              "Drei Hefte"
+            ],
+            "answer": "Drei Hefte",
+            "explanationAr": "في النص: ثلاثة دفاتر."
+          },
+          {
+            "id": "t-a0-011-q2",
+            "type": "mc",
+            "promptDe": "Wohin nehme ich die Tasche jeden Morgen?",
+            "promptAr": "إلى أين آخذ الحقيبة كل صباح؟",
+            "options": [
+              "In den Park",
+              "Zur Arbeit",
+              "In die Schule",
+              "Zum Bahnhof"
+            ],
+            "answer": "In die Schule",
+            "explanationAr": "«Ich nehme sie jeden Morgen in die Schule.» — آخذها إلى المدرسة كل صباح."
+          },
+          {
+            "type": "mc",
+            "promptDe": "Wie ist die Schultasche?",
+            "promptAr": "كيف هي الحقيبة المدرسية؟",
+            "options": [
+              "Nicht schwer",
+              "Sehr schwer",
+              "Leer",
+              "Schwarz"
+            ],
+            "answer": "Nicht schwer",
+            "explanationAr": "النص يقول: «Die Tasche ist nicht schwer».",
+            "id": "t-a0-011-q3"
+          }
+        ]
+      }
+    },
+    {
+      "id": "t-a0-012",
+      "level": "A0",
+      "decision": "corrected",
+      "rationale": "Replaced a duplicate Sunday-visit question with distinct comprehension of what the narrator and mother eat.",
+      "previous": {
+        "id": "t-a0-012",
+        "level": "A0",
+        "titleDe": "Am Wochenende",
+        "titleAr": "في نهاية الأسبوع",
+        "de": "Am Samstag stehe ich spät auf. Ich trinke Kaffee und lese die Zeitung. Am Nachmittag gehe ich mit meinem Hund im Park spazieren. Am Sonntag besuche ich meine Mutter. Wir essen zusammen Kuchen und trinken Tee. Das Wochenende ist schön.",
+        "ar": "أستيقظ في وقت متأخر يوم السبت. أشرب القهوة وأقرأ الجريدة. بعد الظهر أتنزه مع كلبي في الحديقة. يوم الأحد أزور أمي. نتناول الكعكة معاً ونشرب الشاي. نهاية الأسبوع جميلة.",
+        "questions": [
+          {
+            "id": "t-a0-012-q1",
+            "type": "mc",
+            "promptDe": "Was mache ich am Sonntag?",
+            "promptAr": "ماذا أفعل يوم الأحد؟",
+            "options": [
+              "Ich arbeite.",
+              "Ich besuche meine Mutter.",
+              "Ich schlafe den ganzen Tag."
+            ],
+            "answer": "Ich besuche meine Mutter.",
+            "explanationAr": "«Am Sonntag besuche ich meine Mutter.» — أزور أمي يوم الأحد."
+          },
+          {
+            "id": "t-a0-012-q2",
+            "type": "mc",
+            "promptDe": "Mit welchem Tier gehe ich am Samstag im Park spazieren?",
+            "promptAr": "مع أي حيوان أتمشى في الحديقة يوم السبت؟",
+            "options": [
+              "Mit einer Katze",
+              "Mit meinem Hund",
+              "Mit einem Pferd",
+              "Mit einem Vogel"
+            ],
+            "answer": "Mit meinem Hund",
+            "explanationAr": "«Am Nachmittag gehe ich mit meinem Hund im Park spazieren.» — أتمشى مع كلبي في الحديقة."
+          },
+          {
+            "type": "mc",
+            "promptDe": "Wen besucht er am Sonntag?",
+            "promptAr": "مَن يزور يوم الأحد؟",
+            "options": [
+              "Seinen Hund",
+              "Seine Freunde",
+              "Seine Mutter",
+              "Seinen Vater"
+            ],
+            "answer": "Seine Mutter",
+            "explanationAr": "النص يقول: «Am Sonntag besuche ich meine Mutter».",
+            "id": "t-a0-012-q3"
+          }
+        ]
+      },
+      "current": {
+        "id": "t-a0-012",
+        "level": "A0",
+        "titleDe": "Am Wochenende",
+        "titleAr": "في نهاية الأسبوع",
+        "de": "Am Samstag stehe ich spät auf. Ich trinke Kaffee und lese die Zeitung. Am Nachmittag gehe ich mit meinem Hund im Park spazieren. Am Sonntag besuche ich meine Mutter. Wir essen zusammen Kuchen und trinken Tee. Das Wochenende ist schön.",
+        "ar": "أستيقظ في وقت متأخر يوم السبت. أشرب القهوة وأقرأ الجريدة. بعد الظهر أتنزه مع كلبي في الحديقة. يوم الأحد أزور أمي. نتناول الكعكة معاً ونشرب الشاي. نهاية الأسبوع جميلة.",
+        "questions": [
+          {
+            "id": "t-a0-012-q1",
+            "type": "mc",
+            "promptDe": "Was mache ich am Sonntag?",
+            "promptAr": "ماذا أفعل يوم الأحد؟",
+            "options": [
+              "Ich arbeite.",
+              "Ich besuche meine Mutter.",
+              "Ich schlafe den ganzen Tag."
+            ],
+            "answer": "Ich besuche meine Mutter.",
+            "explanationAr": "«Am Sonntag besuche ich meine Mutter.» — أزور أمي يوم الأحد."
+          },
+          {
+            "id": "t-a0-012-q2",
+            "type": "mc",
+            "promptDe": "Mit welchem Tier gehe ich am Samstag im Park spazieren?",
+            "promptAr": "مع أي حيوان أتمشى في الحديقة يوم السبت؟",
+            "options": [
+              "Mit einer Katze",
+              "Mit meinem Hund",
+              "Mit einem Pferd",
+              "Mit einem Vogel"
+            ],
+            "answer": "Mit meinem Hund",
+            "explanationAr": "«Am Nachmittag gehe ich mit meinem Hund im Park spazieren.» — أتمشى مع كلبي في الحديقة."
+          },
+          {
+            "type": "mc",
+            "promptDe": "Was essen wir am Sonntag?",
+            "promptAr": "ماذا نأكل يوم الأحد؟",
+            "options": [
+              "Kuchen",
+              "Brot",
+              "Reis",
+              "Suppe"
+            ],
+            "answer": "Kuchen",
+            "explanationAr": "النص يقول: «Wir essen zusammen Kuchen».",
+            "id": "t-a0-012-q3"
+          }
+        ]
+      }
+    },
+    {
+      "id": "t-a0-013",
+      "level": "A0",
+      "decision": "corrected",
+      "rationale": "Removed an invented male/today perspective and tied the no-jacket question to the text’s first-person Monday scenario.",
+      "previous": {
+        "id": "t-a0-013",
+        "level": "A0",
+        "titleDe": "Wetterbeispiel: Ein warmer Montag",
+        "titleAr": "مثال عن الطقس: يوم اثنين دافئ",
+        "de": "An einem Montag ist der Himmel blau und die Sonne scheint. Es sind etwa 20 Grad. Ich ziehe ein T-Shirt und eine Jeans an. Ich brauche keine Jacke. Ich freue mich auf den Nachmittag im Garten.",
+        "ar": "في يوم اثنين تكون السماء زرقاء والشمس مشرقة. تبلغ الحرارة نحو 20 درجة. أرتدي قميصاً وبنطال جينز. لا أحتاج إلى سترة. وأتطلع إلى قضاء فترة بعد الظهر في الحديقة.",
+        "questions": [
+          {
+            "id": "t-a0-013-q1",
+            "type": "mc",
+            "promptDe": "Wie warm ist es an diesem Montag?",
+            "promptAr": "كم تبلغ درجة الحرارة يوم الاثنين في هذا المثال؟",
+            "options": [
+              "10 Grad",
+              "20 Grad",
+              "30 Grad"
+            ],
+            "answer": "20 Grad",
+            "explanationAr": "النص يذكر نحو 20 درجة («etwa 20 Grad»)."
+          },
+          {
+            "id": "t-a0-013-q2",
+            "type": "mc",
+            "promptDe": "Was ziehe ich an?",
+            "promptAr": "ماذا أرتدي؟",
+            "options": [
+              "Ein T-Shirt und eine Jeans",
+              "Eine dicke Jacke",
+              "Ein Hemd und eine Hose",
+              "Ein Kleid"
+            ],
+            "answer": "Ein T-Shirt und eine Jeans",
+            "explanationAr": "«Ich ziehe ein T-Shirt und eine Jeans an.» — أرتدي قميصاً وبنطال جينز."
+          },
+          {
+            "type": "mc",
+            "promptDe": "Was braucht er heute nicht?",
+            "promptAr": "ما الذي لا يحتاجه اليوم؟",
+            "options": [
+              "Ein T-Shirt",
+              "Eine Jeans",
+              "Eine Jacke",
+              "Einen Garten"
+            ],
+            "answer": "Eine Jacke",
+            "explanationAr": "النص يقول: «Ich brauche keine Jacke».",
+            "id": "t-a0-013-q3"
+          }
+        ]
+      },
+      "current": {
+        "id": "t-a0-013",
+        "level": "A0",
+        "titleDe": "Wetterbeispiel: Ein warmer Montag",
+        "titleAr": "مثال عن الطقس: يوم اثنين دافئ",
+        "de": "An einem Montag ist der Himmel blau und die Sonne scheint. Es sind etwa 20 Grad. Ich ziehe ein T-Shirt und eine Jeans an. Ich brauche keine Jacke. Ich freue mich auf den Nachmittag im Garten.",
+        "ar": "في يوم اثنين تكون السماء زرقاء والشمس مشرقة. تبلغ الحرارة نحو 20 درجة. أرتدي قميصاً وبنطال جينز. لا أحتاج إلى سترة. وأتطلع إلى قضاء فترة بعد الظهر في الحديقة.",
+        "questions": [
+          {
+            "id": "t-a0-013-q1",
+            "type": "mc",
+            "promptDe": "Wie warm ist es an diesem Montag?",
+            "promptAr": "كم تبلغ درجة الحرارة يوم الاثنين في هذا المثال؟",
+            "options": [
+              "10 Grad",
+              "20 Grad",
+              "30 Grad"
+            ],
+            "answer": "20 Grad",
+            "explanationAr": "النص يذكر نحو 20 درجة («etwa 20 Grad»)."
+          },
+          {
+            "id": "t-a0-013-q2",
+            "type": "mc",
+            "promptDe": "Was ziehe ich an?",
+            "promptAr": "ماذا أرتدي؟",
+            "options": [
+              "Ein T-Shirt und eine Jeans",
+              "Eine dicke Jacke",
+              "Ein Hemd und eine Hose",
+              "Ein Kleid"
+            ],
+            "answer": "Ein T-Shirt und eine Jeans",
+            "explanationAr": "«Ich ziehe ein T-Shirt und eine Jeans an.» — أرتدي قميصاً وبنطال جينز."
+          },
+          {
+            "type": "mc",
+            "promptDe": "Was brauche ich an diesem Montag nicht?",
+            "promptAr": "ما الذي لا أحتاجه في يوم الاثنين هذا؟",
+            "options": [
+              "Ein T-Shirt",
+              "Eine Jeans",
+              "Eine Jacke",
+              "Einen Garten"
+            ],
+            "answer": "Eine Jacke",
+            "explanationAr": "النص يقول: «Ich brauche keine Jacke».",
+            "id": "t-a0-013-q3"
+          }
+        ]
+      }
+    },
+    {
+      "id": "t-a0-014",
+      "level": "A0",
+      "decision": "corrected",
+      "rationale": "Replaced a duplicate order question with distinct comprehension of the waiter’s stated manner.",
+      "previous": {
+        "id": "t-a0-014",
+        "level": "A0",
+        "titleDe": "Im Restaurant",
+        "titleAr": "في المطعم",
+        "de": "Ich gehe gern ins Restaurant. Heute bestelle ich eine Suppe und ein Schnitzel mit Kartoffeln. Dazu trinke ich ein Glas Wasser. Der Kellner ist freundlich. Das Essen schmeckt sehr gut. Ich bezahle und gehe nach Hause.",
+        "ar": "أحب الذهاب إلى المطعم. اليوم أطلب حساءً وقطعة شنيتسل مع البطاطس. وأشرب مع الوجبة كأساً من الماء. النادل ودود. الطعام لذيذ جداً. أدفع الحساب وأعود إلى البيت.",
+        "questions": [
+          {
+            "id": "t-a0-014-q1",
+            "type": "mc",
+            "promptDe": "Was trinke ich dazu?",
+            "promptAr": "ماذا أشرب مع الطعام؟",
+            "options": [
+              "Bier",
+              "Ein Glas Wasser",
+              "Cola"
+            ],
+            "answer": "Ein Glas Wasser",
+            "explanationAr": "«Dazu trinke ich ein Glas Wasser.» — أشرب كأساً من الماء مع الطعام."
+          },
+          {
+            "id": "t-a0-014-q2",
+            "type": "mc",
+            "promptDe": "Was bestelle ich zu essen?",
+            "promptAr": "ماذا أطلب من الطعام؟",
+            "options": [
+              "Eine Suppe und ein Schnitzel mit Kartoffeln",
+              "Nur einen Salat",
+              "Brot mit Käse",
+              "Fisch mit Reis"
+            ],
+            "answer": "Eine Suppe und ein Schnitzel mit Kartoffeln",
+            "explanationAr": "«Heute bestelle ich eine Suppe und ein Schnitzel mit Kartoffeln.» — أطلب حساءً وقطعة شنيتسل مع البطاطس."
+          },
+          {
+            "type": "mc",
+            "promptDe": "Was bestellt er heute?",
+            "promptAr": "ماذا يطلب اليوم؟",
+            "options": [
+              "Eine Pizza",
+              "Einen Salat",
+              "Ein Brot",
+              "Eine Suppe und ein Schnitzel"
+            ],
+            "answer": "Eine Suppe und ein Schnitzel",
+            "explanationAr": "النص يقول: «Heute bestelle ich eine Suppe und ein Schnitzel mit Kartoffeln».",
+            "id": "t-a0-014-q3"
+          }
+        ]
+      },
+      "current": {
+        "id": "t-a0-014",
+        "level": "A0",
+        "titleDe": "Im Restaurant",
+        "titleAr": "في المطعم",
+        "de": "Ich gehe gern ins Restaurant. Heute bestelle ich eine Suppe und ein Schnitzel mit Kartoffeln. Dazu trinke ich ein Glas Wasser. Der Kellner ist freundlich. Das Essen schmeckt sehr gut. Ich bezahle und gehe nach Hause.",
+        "ar": "أحب الذهاب إلى المطعم. اليوم أطلب حساءً وقطعة شنيتسل مع البطاطس. وأشرب مع الوجبة كأساً من الماء. النادل ودود. الطعام لذيذ جداً. أدفع الحساب وأعود إلى البيت.",
+        "questions": [
+          {
+            "id": "t-a0-014-q1",
+            "type": "mc",
+            "promptDe": "Was trinke ich dazu?",
+            "promptAr": "ماذا أشرب مع الطعام؟",
+            "options": [
+              "Bier",
+              "Ein Glas Wasser",
+              "Cola"
+            ],
+            "answer": "Ein Glas Wasser",
+            "explanationAr": "«Dazu trinke ich ein Glas Wasser.» — أشرب كأساً من الماء مع الطعام."
+          },
+          {
+            "id": "t-a0-014-q2",
+            "type": "mc",
+            "promptDe": "Was bestelle ich zu essen?",
+            "promptAr": "ماذا أطلب من الطعام؟",
+            "options": [
+              "Eine Suppe und ein Schnitzel mit Kartoffeln",
+              "Nur einen Salat",
+              "Brot mit Käse",
+              "Fisch mit Reis"
+            ],
+            "answer": "Eine Suppe und ein Schnitzel mit Kartoffeln",
+            "explanationAr": "«Heute bestelle ich eine Suppe und ein Schnitzel mit Kartoffeln.» — أطلب حساءً وقطعة شنيتسل مع البطاطس."
+          },
+          {
+            "type": "mc",
+            "promptDe": "Wie ist der Kellner?",
+            "promptAr": "كيف هو النادل؟",
+            "options": [
+              "Freundlich",
+              "Unfreundlich",
+              "Müde",
+              "Laut"
+            ],
+            "answer": "Freundlich",
+            "explanationAr": "النص يقول: «Der Kellner ist freundlich».",
+            "id": "t-a0-014-q3"
+          }
+        ]
+      }
+    },
+    {
+      "id": "t-a0-015",
+      "level": "A0",
+      "decision": "corrected",
+      "rationale": "Aligned the kitchen question and its options with the text’s first-person narrator instead of an invented male referent.",
+      "previous": {
+        "id": "t-a0-015",
+        "level": "A0",
+        "titleDe": "Meine Wohnung",
+        "titleAr": "شقتي",
+        "de": "Ich wohne in einer kleinen Wohnung in der Stadt. Die Wohnung hat ein Wohnzimmer, ein Schlafzimmer, eine Küche und ein Bad. Im Wohnzimmer steht ein Sofa vor dem Fernseher. In der Küche mache ich Kaffee. Die Wohnung ist ruhig und hell.",
+        "ar": "أسكن في شقة صغيرة في المدينة. فيها غرفة معيشة وغرفة نوم ومطبخ وحمام. توجد أريكة أمام التلفاز في غرفة المعيشة. أُحضّر القهوة في المطبخ. الشقة هادئة ومشرقة.",
+        "questions": [
+          {
+            "id": "t-a0-015-q1",
+            "type": "mc",
+            "promptDe": "Wie ist die Wohnung?",
+            "promptAr": "كيف هي الشقة؟",
+            "options": [
+              "Groß und laut",
+              "Klein, ruhig und hell",
+              "Dunkel und alt"
+            ],
+            "answer": "Klein, ruhig und hell",
+            "explanationAr": "النص: kleine Wohnung, ruhig und hell."
+          },
+          {
+            "id": "t-a0-015-q2",
+            "type": "mc",
+            "promptDe": "Was steht im Wohnzimmer?",
+            "promptAr": "ماذا يوجد في غرفة المعيشة؟",
+            "options": [
+              "Ein Sofa",
+              "Ein Bett",
+              "Ein Tisch",
+              "Ein Schreibtisch"
+            ],
+            "answer": "Ein Sofa",
+            "explanationAr": "«Im Wohnzimmer steht ein Sofa vor dem Fernseher.» — توجد أريكة أمام التلفاز في غرفة المعيشة."
+          },
+          {
+            "type": "mc",
+            "promptDe": "Was macht er in der Küche?",
+            "promptAr": "ماذا يفعل في المطبخ؟",
+            "options": [
+              "Er schläft",
+              "Er macht Kaffee",
+              "Er sieht fern",
+              "Er liest ein Buch"
+            ],
+            "answer": "Er macht Kaffee",
+            "explanationAr": "النص يقول: «In der Küche mache ich Kaffee».",
+            "id": "t-a0-015-q3"
+          }
+        ]
+      },
+      "current": {
+        "id": "t-a0-015",
+        "level": "A0",
+        "titleDe": "Meine Wohnung",
+        "titleAr": "شقتي",
+        "de": "Ich wohne in einer kleinen Wohnung in der Stadt. Die Wohnung hat ein Wohnzimmer, ein Schlafzimmer, eine Küche und ein Bad. Im Wohnzimmer steht ein Sofa vor dem Fernseher. In der Küche mache ich Kaffee. Die Wohnung ist ruhig und hell.",
+        "ar": "أسكن في شقة صغيرة في المدينة. فيها غرفة معيشة وغرفة نوم ومطبخ وحمام. توجد أريكة أمام التلفاز في غرفة المعيشة. أُحضّر القهوة في المطبخ. الشقة هادئة ومشرقة.",
+        "questions": [
+          {
+            "id": "t-a0-015-q1",
+            "type": "mc",
+            "promptDe": "Wie ist die Wohnung?",
+            "promptAr": "كيف هي الشقة؟",
+            "options": [
+              "Groß und laut",
+              "Klein, ruhig und hell",
+              "Dunkel und alt"
+            ],
+            "answer": "Klein, ruhig und hell",
+            "explanationAr": "النص: kleine Wohnung, ruhig und hell."
+          },
+          {
+            "id": "t-a0-015-q2",
+            "type": "mc",
+            "promptDe": "Was steht im Wohnzimmer?",
+            "promptAr": "ماذا يوجد في غرفة المعيشة؟",
+            "options": [
+              "Ein Sofa",
+              "Ein Bett",
+              "Ein Tisch",
+              "Ein Schreibtisch"
+            ],
+            "answer": "Ein Sofa",
+            "explanationAr": "«Im Wohnzimmer steht ein Sofa vor dem Fernseher.» — توجد أريكة أمام التلفاز في غرفة المعيشة."
+          },
+          {
+            "type": "mc",
+            "promptDe": "Was mache ich in der Küche?",
+            "promptAr": "ماذا أفعل في المطبخ؟",
+            "options": [
+              "Ich schlafe",
+              "Ich mache Kaffee",
+              "Ich sehe fern",
+              "Ich lese ein Buch"
+            ],
+            "answer": "Ich mache Kaffee",
+            "explanationAr": "النص يقول: «In der Küche mache ich Kaffee».",
+            "id": "t-a0-015-q3"
+          }
+        ]
+      }
+    }
+  ]
+}

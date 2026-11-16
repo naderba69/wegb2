@@ -3,230 +3,497 @@
     {
       "id": "A1-C1",
       "de": "Ich kann mich vorstellen und begrüßen.",
-      "ar": "أستطيع أن أُسلّم وأُقدّم نفسي."
+      "ar": "أستطيع أن أُسلّم وأُقدّم نفسي.",
+      "skills": [
+        "Sprechen"
+      ],
+      "kind": "communicative_self_report",
+      "source": "internal",
+      "levelLabel": "A1"
     },
     {
       "id": "A1-C2",
-      "de": "Ich kann Zahlen, Datum und Uhrzeit sagen.",
-      "ar": "أستطيع ذكر الأرقام والتاريخ والوقت."
+      "de": "Ich kann Zahlen, Datumsangaben und Uhrzeiten nennen und verstehen.",
+      "ar": "أستطيع ذكر الأرقام والتواريخ والأوقات وفهمها.",
+      "skills": [
+        "Sprechen",
+        "Hoeren"
+      ],
+      "kind": "communicative_self_report",
+      "source": "internal",
+      "levelLabel": "A1"
     },
     {
       "id": "A1-C3",
       "de": "Ich kann über meine Familie und Hobbys sprechen.",
-      "ar": "أستطيع التحدث عن عائلتي وهواياتي."
+      "ar": "أستطيع التحدث عن عائلتي وهواياتي.",
+      "skills": [
+        "Sprechen"
+      ],
+      "kind": "communicative_self_report",
+      "source": "internal",
+      "levelLabel": "A1"
     },
     {
       "id": "A1-C4",
       "de": "Ich kann einfach bestellen und einkaufen.",
-      "ar": "أستطيع الطلب والتسوق بعبارات بسيطة."
+      "ar": "أستطيع الطلب والتسوق بعبارات بسيطة.",
+      "skills": [
+        "Sprechen"
+      ],
+      "kind": "communicative_self_report",
+      "source": "internal",
+      "levelLabel": "A1"
     },
     {
       "id": "A1-C5",
       "de": "Ich kann über meinen Alltag und meine Wohnung erzählen.",
-      "ar": "أستطيع الحديث عن يومي ومنزلي."
+      "ar": "أستطيع الحديث عن يومي ومنزلي.",
+      "skills": [
+        "Sprechen"
+      ],
+      "kind": "communicative_self_report",
+      "source": "internal",
+      "levelLabel": "A1"
     },
     {
       "id": "A1-C6",
-      "de": "Ich kann kurze Sätze im Präsens schreiben.",
-      "ar": "أستطيع كتابة جمل قصيرة في المضارع."
+      "de": "Ich kann eine kurze Mitteilung über meinen Alltag schreiben.",
+      "ar": "أستطيع كتابة رسالة قصيرة عن حياتي اليومية.",
+      "skills": [
+        "Schreiben"
+      ],
+      "kind": "communicative_self_report",
+      "source": "internal",
+      "levelLabel": "A1"
     },
     {
       "id": "A1-C7",
       "de": "Ich kann einfache Hörtexte (Dialoge) verstehen.",
-      "ar": "أستطيع فهم حوارات بسيطة مسموعة."
+      "ar": "أستطيع فهم حوارات بسيطة مسموعة.",
+      "skills": [
+        "Hoeren"
+      ],
+      "kind": "communicative_self_report",
+      "source": "internal",
+      "levelLabel": "A1"
     },
     {
       "id": "A1-C8",
       "de": "Ich kann nach dem Weg fragen und einfache Auskünfte geben.",
-      "ar": "أستطيع السؤال عن الطريق وإعطاء معلومات بسيطة."
+      "ar": "أستطيع السؤال عن الطريق وإعطاء معلومات بسيطة.",
+      "skills": [
+        "Sprechen"
+      ],
+      "kind": "communicative_self_report",
+      "source": "internal",
+      "levelLabel": "A1"
     }
   ],
   "A2": [
     {
       "id": "A2-C1",
-      "de": "Ich kann über die Vergangenheit (Perfekt) erzählen.",
-      "ar": "أستطيع سرد الماضي (الماضي التام)."
+      "de": "Ich kann von einem vergangenen Erlebnis erzählen und die Ereignisse verständlich ordnen.",
+      "ar": "أستطيع سرد تجربة ماضية وترتيب أحداثها بصورة مفهومة.",
+      "skills": [
+        "Sprechen"
+      ],
+      "kind": "communicative_self_report",
+      "source": "internal",
+      "levelLabel": "A2"
     },
     {
       "id": "A2-C2",
       "de": "Ich kann im Krankenhaus und beim Arzt erklären, was wehtut.",
-      "ar": "أستطيع شرح شكواي عند الطبيب."
+      "ar": "أستطيع شرح شكواي عند الطبيب.",
+      "skills": [
+        "Sprechen"
+      ],
+      "kind": "communicative_self_report",
+      "source": "internal",
+      "levelLabel": "A2"
     },
     {
       "id": "A2-C3",
       "de": "Ich kann eine Reise planen und buchen.",
-      "ar": "أستطيع التخطيط لرحلة وحجزها."
+      "ar": "أستطيع التخطيط لرحلة وحجزها.",
+      "skills": [
+        "Sprechen"
+      ],
+      "kind": "communicative_self_report",
+      "source": "internal",
+      "levelLabel": "A2"
     },
     {
       "id": "A2-C4",
-      "de": "Ich kann meine Meinung mit „weil“ und „dass“ begründen.",
-      "ar": "أستطيع تبرير رأيي بـ weil و dass."
+      "de": "Ich kann meine Meinung nennen und einen einfachen Grund dafür geben.",
+      "ar": "أستطيع ذكر رأيي وتقديم سبب بسيط له.",
+      "skills": [
+        "Sprechen"
+      ],
+      "kind": "communicative_self_report",
+      "source": "internal",
+      "levelLabel": "A2"
     },
     {
       "id": "A2-C5",
       "de": "Ich kann Menschen und Kleidung beschreiben.",
-      "ar": "أستطيع وصف الأشخاص والملابس."
+      "ar": "أستطيع وصف الأشخاص والملابس.",
+      "skills": [
+        "Sprechen"
+      ],
+      "kind": "communicative_self_report",
+      "source": "internal",
+      "levelLabel": "A2"
     },
     {
       "id": "A2-C6",
       "de": "Ich kann kurze persönliche E-Mails schreiben.",
-      "ar": "أستطيع كتابة رسائل شخصية قصيرة."
+      "ar": "أستطيع كتابة رسائل شخصية قصيرة.",
+      "skills": [
+        "Schreiben"
+      ],
+      "kind": "communicative_self_report",
+      "source": "internal",
+      "levelLabel": "A2"
     },
     {
       "id": "A2-C7",
       "de": "Ich kann Hörtexte zu vertrauten Themen verstehen.",
-      "ar": "أستطيع فهم نصوص مسموعة في مواضيع مألوفة."
+      "ar": "أستطيع فهم نصوص مسموعة في مواضيع مألوفة.",
+      "skills": [
+        "Hoeren"
+      ],
+      "kind": "communicative_self_report",
+      "source": "internal",
+      "levelLabel": "A2"
     },
     {
       "id": "A2-C8",
       "de": "Ich kann über Pläne und Wünsche sprechen.",
-      "ar": "أستطيع التحدث عن الخطط والرغبات."
+      "ar": "أستطيع التحدث عن الخطط والرغبات.",
+      "skills": [
+        "Sprechen"
+      ],
+      "kind": "communicative_self_report",
+      "source": "internal",
+      "levelLabel": "A2"
     },
     {
       "id": "A2-C9",
-      "de": "Ich kann im Präteritum erzählen (war, hatte, ging).",
-      "ar": "أستطيع السرد بالماضي البسيط (war, hatte, ging)."
+      "de": "Ich kann wichtige Stationen aus meinem Leben in zeitlicher Reihenfolge beschreiben.",
+      "ar": "أستطيع وصف محطات مهمة من حياتي بترتيب زمني.",
+      "skills": [
+        "Sprechen"
+      ],
+      "kind": "communicative_self_report",
+      "source": "internal",
+      "levelLabel": "A2"
     }
   ],
   "B1": [
     {
       "id": "B1-C1",
       "de": "Ich kann meine Meinung klar begründen und diskutieren.",
-      "ar": "أستطيع تبرير رأيي بوضوح ومناقشته."
+      "ar": "أستطيع تبرير رأيي بوضوح ومناقشته.",
+      "skills": [
+        "Sprechen"
+      ],
+      "kind": "communicative_self_report",
+      "source": "internal",
+      "levelLabel": "B1"
     },
     {
       "id": "B1-C2",
-      "de": "Ich kann Ratschläge geben (Konjunktiv II).",
-      "ar": "أستطيع تقديم النصائح (كونونكتيف الثاني)."
+      "de": "Ich kann einer Person einen passenden Rat geben und ihn höflich formulieren.",
+      "ar": "أستطيع تقديم نصيحة مناسبة لشخص وصياغتها بأدب.",
+      "skills": [
+        "Sprechen"
+      ],
+      "kind": "communicative_self_report",
+      "source": "internal",
+      "levelLabel": "B1"
     },
     {
       "id": "B1-C3",
-      "de": "Ich kann Erfahrungen mit dem Perfekt und Plusquamperfekt erzählen.",
-      "ar": "أستطيع سرد التجارب بالماضي التام وما قبل الماضي."
+      "de": "Ich kann von Erfahrungen erzählen und frühere Ereignisse zeitlich deutlich einordnen.",
+      "ar": "أستطيع سرد التجارب وتوضيح ترتيب الأحداث السابقة زمنياً.",
+      "skills": [
+        "Sprechen"
+      ],
+      "kind": "communicative_self_report",
+      "source": "internal",
+      "levelLabel": "B1"
     },
     {
       "id": "B1-C4",
-      "de": "Ich kann über Texte und Nachrichten berichten.",
-      "ar": "أستطيع التبليغ عن النصوص والأخبار."
+      "de": "Ich kann den Inhalt von Texten und Nachrichten mündlich zusammenfassen.",
+      "ar": "أستطيع تلخيص مضمون النصوص والأخبار شفهياً.",
+      "skills": [
+        "Lesen",
+        "Sprechen"
+      ],
+      "kind": "communicative_self_report",
+      "source": "internal",
+      "levelLabel": "B1"
     },
     {
       "id": "B1-C5",
       "de": "Ich kann eine Bewerbung und formelle E-Mails schreiben.",
-      "ar": "أستطيع كتابة طلب توظيف ورسائل رسمية."
+      "ar": "أستطيع كتابة طلب توظيف ورسائل رسمية.",
+      "skills": [
+        "Schreiben"
+      ],
+      "kind": "communicative_self_report",
+      "source": "internal",
+      "levelLabel": "B1"
     },
     {
       "id": "B1-C6",
       "de": "Ich kann längere Hörtexte (Radio, Podcast) verstehen.",
-      "ar": "أستطيع فهم نصوص مسموعة أطول (راديو/بودكاست)."
+      "ar": "أستطيع فهم نصوص مسموعة أطول (راديو/بودكاست).",
+      "skills": [
+        "Hoeren"
+      ],
+      "kind": "communicative_self_report",
+      "source": "internal",
+      "levelLabel": "B1"
     },
     {
       "id": "B1-C7",
-      "de": "Ich kann Relativsätze nutzen, um genau zu beschreiben.",
-      "ar": "أستطيع استخدام الجمل الوصفية للوصف الدقيق."
+      "de": "Ich kann Personen und Dinge so genau beschreiben, dass klar ist, wen oder was ich meine.",
+      "ar": "أستطيع وصف الأشخاص والأشياء بدقة بحيث يتضح من أو ما أقصده.",
+      "skills": [
+        "Sprechen"
+      ],
+      "kind": "communicative_self_report",
+      "source": "internal",
+      "levelLabel": "B1"
     },
     {
       "id": "B1-C8",
-      "de": "Ich kann am Goethe-Zertifikat B1 teilnehmen.",
-      "ar": "أستطيع اجتياز شهادة B1 (غوته)."
+      "de": "Ich kann in einem kurzen Gespräch über ein vertrautes Thema sprechen und auf Nachfragen reagieren.",
+      "ar": "أستطيع التحدث في حوار قصير عن موضوع مألوف والرد على الأسئلة اللاحقة.",
+      "skills": [
+        "Sprechen"
+      ],
+      "kind": "communicative_self_report",
+      "source": "internal",
+      "levelLabel": "B1"
     }
   ],
   "B2": [
     {
       "id": "B2-C1",
-      "de": "Ich kann indirekte Rede verwenden (Konjunktiv I).",
-      "ar": "أستطيع استخدام المنقول (كونونكتيف الأول)."
+      "de": "Ich kann die Aussagen anderer in einem Bericht sachlich wiedergeben und die Quelle deutlich machen.",
+      "ar": "أستطيع نقل أقوال الآخرين بموضوعية في تقرير وتوضيح مصدرها.",
+      "skills": [
+        "Schreiben"
+      ],
+      "kind": "communicative_self_report",
+      "source": "internal",
+      "levelLabel": "B2"
     },
     {
       "id": "B2-C2",
       "de": "Ich kann Fachtexte und längere Artikel verstehen.",
-      "ar": "أستطيع فهم النصوص المتخصصة والمقالات الطويلة."
+      "ar": "أستطيع فهم النصوص المتخصصة والمقالات الطويلة.",
+      "skills": [
+        "Lesen"
+      ],
+      "kind": "communicative_self_report",
+      "source": "internal",
+      "levelLabel": "B2"
     },
     {
       "id": "B2-C3",
       "de": "Ich kann einen Kommentar und eine Rezension schreiben.",
-      "ar": "أستطيع كتابة تعليق صحفي ومراجعة نقدية."
+      "ar": "أستطيع كتابة تعليق صحفي ومراجعة نقدية.",
+      "skills": [
+        "Schreiben"
+      ],
+      "kind": "communicative_self_report",
+      "source": "internal",
+      "levelLabel": "B2"
     },
     {
       "id": "B2-C4",
-      "de": "Ich kann flüssig und spontan mit Muttersprachlern diskutieren.",
-      "ar": "أستطيع النقاش بطلاقة وعفوية مع الناطقين الأصليين."
+      "de": "Ich kann mich an einer längeren Diskussion flüssig beteiligen, nachfragen und auf Gegenargumente reagieren.",
+      "ar": "أستطيع المشاركة بطلاقة في نقاش أطول وطرح أسئلة والرد على الحجج المضادة.",
+      "skills": [
+        "Sprechen"
+      ],
+      "kind": "communicative_self_report",
+      "source": "internal",
+      "levelLabel": "B2"
     },
     {
       "id": "B2-C5",
-      "de": "Ich kann komplexe Bedingungen und Hypothesen ausdrücken.",
-      "ar": "أستطيع التعبير عن الشروط المركّبة والافتراضات."
+      "de": "Ich kann Bedingungen und mögliche Folgen differenziert darstellen.",
+      "ar": "أستطيع عرض الشروط والنتائج المحتملة بصورة دقيقة ومتنوعة.",
+      "skills": [
+        "Sprechen"
+      ],
+      "kind": "communicative_self_report",
+      "source": "internal",
+      "levelLabel": "B2"
     },
     {
       "id": "B2-C6",
-      "de": "Ich kann präzise schreiben: Funktionsverbgefüge, Nominalstil.",
-      "ar": "أستطيع الكتابة الدقيقة: التركيبات الوظيفية والأسلوب الاسمي."
+      "de": "Ich kann einen formellen Text präzise und adressatengerecht überarbeiten.",
+      "ar": "أستطيع مراجعة نص رسمي بدقة وبما يناسب المخاطَب.",
+      "skills": [
+        "Schreiben"
+      ],
+      "kind": "communicative_self_report",
+      "source": "internal",
+      "levelLabel": "B2"
     },
     {
       "id": "B2-C7",
-      "de": "Ich kann Vorträge halten und präsentieren.",
-      "ar": "أستطيع إلقاء عروض وعروض تقديمية."
+      "de": "Ich kann ein Thema klar gegliedert präsentieren und Fragen dazu beantworten.",
+      "ar": "أستطيع عرض موضوع بترتيب واضح والإجابة عن الأسئلة المتعلقة به.",
+      "skills": [
+        "Sprechen"
+      ],
+      "kind": "communicative_self_report",
+      "source": "internal",
+      "levelLabel": "B2"
     },
     {
       "id": "B2-C8",
-      "de": "Ich kann das Goethe-Zertifikat B2 bestehen.",
-      "ar": "أستطيع اجتياز شهادة B2 (غوته)."
+      "de": "Ich kann unter Zeitvorgabe einen Standpunkt strukturiert darstellen, begründen und auf Gegenargumente reagieren.",
+      "ar": "أستطيع ضمن وقت محدد عرض موقف بصورة منظمة وتبريره والرد على الحجج المضادة.",
+      "skills": [
+        "Sprechen"
+      ],
+      "kind": "communicative_self_report",
+      "source": "internal",
+      "levelLabel": "B2"
     }
   ],
   "A0": [
     {
       "id": "a0-1",
       "de": "Ich kann mich vorstellen (Name, Herkunft, Wohnort).",
-      "ar": "أستطيع أن أقدم نفسي (الاسم، بلد المنشأ، السكن)."
+      "ar": "أستطيع أن أقدم نفسي (الاسم، بلد المنشأ، السكن).",
+      "skills": [
+        "Sprechen"
+      ],
+      "kind": "communicative_self_report",
+      "source": "internal",
+      "levelLabel": "Pre-A1 (interne Bezeichnung A0)"
     },
     {
       "id": "a0-2",
       "de": "Ich kann das deutsche Alphabet vorlesen und einfache Wörter buchstabieren.",
-      "ar": "أستطيع قراءة الأبجدية الألمانية وتهجئة كلمات بسيطة."
+      "ar": "أستطيع قراءة الأبجدية الألمانية وتهجئة كلمات بسيطة.",
+      "skills": [
+        "Sprechen"
+      ],
+      "kind": "communicative_self_report",
+      "source": "internal",
+      "levelLabel": "Pre-A1 (interne Bezeichnung A0)"
     },
     {
       "id": "a0-3",
       "de": "Ich kann bis 100 zählen und Preise sowie Telefonnummern verstehen.",
-      "ar": "أستطيع العد حتى مئة وفهم الأسعار وأرقام الهواتف."
+      "ar": "أستطيع العد حتى مئة وفهم الأسعار وأرقام الهواتف.",
+      "skills": [
+        "Sprechen",
+        "Hoeren"
+      ],
+      "kind": "communicative_self_report",
+      "source": "internal",
+      "levelLabel": "Pre-A1 (interne Bezeichnung A0)"
     },
     {
       "id": "a0-4",
       "de": "Ich kann jemanden begrüßen und mich verabschieden (formell und informell).",
-      "ar": "أستطيع تحية الآخرين وتوديعهم (الصيغة الرسمية وغير الرسمية)."
+      "ar": "أستطيع تحية الآخرين وتوديعهم (الصيغة الرسمية وغير الرسمية).",
+      "skills": [
+        "Sprechen"
+      ],
+      "kind": "communicative_self_report",
+      "source": "internal",
+      "levelLabel": "Pre-A1 (interne Bezeichnung A0)"
     },
     {
       "id": "a0-5",
       "de": "Ich kann einfache Fragen nach Name, Herkunft und Befinden stellen und beantworten.",
-      "ar": "أستطيع أن أسأل وأجيب على أسئلة بسيطة عن الاسم والأصل والحال."
+      "ar": "أستطيع أن أسأل وأجيب على أسئلة بسيطة عن الاسم والأصل والحال.",
+      "skills": [
+        "Sprechen"
+      ],
+      "kind": "communicative_self_report",
+      "source": "internal",
+      "levelLabel": "Pre-A1 (interne Bezeichnung A0)"
     },
     {
       "id": "a0-6",
       "de": "Ich kann eine einfache Anmeldung ausfüllen (Name, Vorname, Adresse, Telefon).",
-      "ar": "أستطيع ملء استمارة بسيطة (الاسم، اللقب، العنوان، الهاتف)."
+      "ar": "أستطيع ملء استمارة بسيطة (الاسم، اللقب، العنوان، الهاتف).",
+      "skills": [
+        "Schreiben"
+      ],
+      "kind": "communicative_self_report",
+      "source": "internal",
+      "levelLabel": "Pre-A1 (interne Bezeichnung A0)"
     },
     {
       "id": "a0-7",
       "de": "Ich verstehe langsam und deutlich gesprochene Begrüßungen und Zahlen.",
-      "ar": "أفهم التحيات والأرقام عندما تُنطق ببطء ووضوح."
+      "ar": "أفهم التحيات والأرقام عندما تُنطق ببطء ووضوح.",
+      "skills": [
+        "Hoeren"
+      ],
+      "kind": "communicative_self_report",
+      "source": "internal",
+      "levelLabel": "Pre-A1 (interne Bezeichnung A0)"
     },
     {
       "id": "a0-8",
       "de": "Ich kann Farben und einfache Dinge aus dem Klassenzimmer benennen.",
-      "ar": "أستطيع تسمية الألوان والأشياء البسيطة في غرفة الصف."
+      "ar": "أستطيع تسمية الألوان والأشياء البسيطة في غرفة الصف.",
+      "skills": [
+        "Sprechen"
+      ],
+      "kind": "communicative_self_report",
+      "source": "internal",
+      "levelLabel": "Pre-A1 (interne Bezeichnung A0)"
     },
     {
       "id": "a0-9",
       "de": "Ich kann im Café ein einfaches Getränk oder Gericht bestellen.",
-      "ar": "أستطيع طلب مشروب أو وجبة بسيطة في المقهى."
+      "ar": "أستطيع طلب مشروب أو وجبة بسيطة في المقهى.",
+      "skills": [
+        "Sprechen"
+      ],
+      "kind": "communicative_self_report",
+      "source": "internal",
+      "levelLabel": "Pre-A1 (interne Bezeichnung A0)"
     },
     {
       "id": "a0-10",
       "de": "Ich kann um Wiederholung oder langsameres Sprechen bitten.",
-      "ar": "أستطيع طلب إعادة الكلام أو التحدث ببطء أكثر."
+      "ar": "أستطيع طلب إعادة الكلام أو التحدث ببطء أكثر.",
+      "skills": [
+        "Sprechen"
+      ],
+      "kind": "communicative_self_report",
+      "source": "internal",
+      "levelLabel": "Pre-A1 (interne Bezeichnung A0)"
     },
     {
       "id": "a0-11",
       "de": "Ich kann einfache Lebensmittel und Getränke benennen und sagen, was ich gern esse oder trinke.",
-      "ar": "أستطيع تسمية أطعمة ومشروبات بسيطة وذكر ما أحب أكله أو شربه."
+      "ar": "أستطيع تسمية أطعمة ومشروبات بسيطة وذكر ما أحب أكله أو شربه.",
+      "skills": [
+        "Sprechen"
+      ],
+      "kind": "communicative_self_report",
+      "source": "internal",
+      "levelLabel": "Pre-A1 (interne Bezeichnung A0)"
     }
   ]
 }

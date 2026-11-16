@@ -1,5 +1,5 @@
 import { isDue } from "./srs";
-import { kompetenzWerte, KOMPETENZEN, KOMPETENZ_AR, pruefungsBereitschaft } from "./kompetenz";
+import { kompetenzWerte, KOMPETENZEN, KOMPETENZ_AR } from "./kompetenz";
 import { LERNZIEL_LABEL, TEMPO_LABEL } from "./types";
 import type { Kompetenz, Lernziel, Progress, Tempo } from "./types";
 
@@ -31,7 +31,6 @@ export type UebungsSignal =
   | "due-errors"
   | "due-cards"
   | "weak-skill"
-  | "exam-practice"
   | "learning-profile"
   | "retrieval-practice"
   | "quick-fallback";
@@ -131,10 +130,11 @@ function schwaechsteBeobachteteKompetenz(p: Progress): { hand: Kompetenz; wert: 
   const werte = kompetenzWerte(p);
   const beobachtet = KOMPETENZEN
     .map((hand) => ({ hand, ...werte[hand] }))
-    // ثماني محاولات هي الحد الذي يبدأ عنده kompetenzWerte حساب النواة الحديثة.
-    .filter((entry) => entry.versuche >= 8)
+    // لا يدخل النشاط أو التقييم الذاتي: يلزم ثمانية أدلة measured مؤهلة.
+    .filter((entry): entry is typeof entry & { wert: number } => entry.wert !== null)
     .sort((a, b) => a.wert - b.wert || a.hand.localeCompare(b.hand));
-  return beobachtet[0] ?? null;
+  const first = beobachtet[0];
+  return first ? { hand: first.hand, wert: first.wert, versuche: first.measured } : null;
 }
 
 /**
@@ -164,8 +164,8 @@ export function baueUebungsEmpfehlungen(
       station: "einstufung",
       signal: "placement",
       prioritaet: 96,
-      grundAr: "ابدأ بتقدير نقطة دخول محافظة قبل أن تختار تدريباً عشوائياً.",
-      messwertAr: "لا يوجد تشخيص مستوى مطبّق بعد",
+      grundAr: "ابدأ بفرز دخول محافظ للقراءة والسماع والقواعد والمفردات قبل تدريب عشوائي؛ لا يقيس الإنتاج أو CEFR.",
+      messwertAr: "لا يوجد فرز دخول استقبالي مطبّق بعد",
     });
   }
 
@@ -199,17 +199,6 @@ export function baueUebungsEmpfehlungen(
       prioritaet: 70 + Math.min(9, Math.floor((100 - schwach.wert) / 10)),
       grundAr: "هذه أضعف مهارة ملاحظة في محاولاتك الأخيرة؛ التوصية تدريب اختياري لا حكم مستوى.",
       messwertAr: `${KOMPETENZ_AR[schwach.hand]}: ${schwach.wert}/100 من ${schwach.versuche} محاولات`,
-    });
-  }
-
-  const bereit = pruefungsBereitschaft(p).gesamt;
-  if (p.settings.placed === true && bereit >= 65) {
-    kandidaten.push({
-      station: "vollpruefung",
-      signal: "exam-practice",
-      prioritaet: 60,
-      grundAr: "لديك أساس يسمح بجولة تدريب داخلية تجمع المهارات؛ النتيجة ليست رسمية.",
-      messwertAr: `مؤشر الجاهزية الداخلي: ${bereit}/100`,
     });
   }
 

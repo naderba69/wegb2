@@ -16,7 +16,7 @@ import {
   woerterZaehlen,
 } from "@/lib/leseleiter";
 import { gemischteOptionen } from "@/lib/optionen";
-import { logK } from "@/lib/kompetenz";
+import { logMeasuredK } from "@/lib/kompetenz";
 import { speakDe, stopSpeech } from "@/lib/speech";
 import { De, DeBlock } from "./De";
 
@@ -60,7 +60,7 @@ export function LeseLeiter() {
       const alt = p.leseleiter?.[text.id];
       const neu = !alt || richtig > alt.r ? { r: richtig, g } : alt;
       const fl = wpm > 0 ? { datum: new Date().toISOString(), wpm, stufe: text.stufe } : null;
-      return logK({ ...p, leseleiter: { ...(p.leseleiter ?? {}), [text.id]: neu }, ...(fl ? { fluenz: [...(p.fluenz ?? []), fl].slice(-50) } : {}) }, "Lesen", richtig / g >= 2 / 3);
+      return logMeasuredK({ ...p, leseleiter: { ...(p.leseleiter ?? {}), [text.id]: neu }, ...(fl ? { fluenz: [...(p.fluenz ?? []), fl].slice(-50) } : {}) }, "Lesen", richtig / g >= 2 / 3);
     });
   };
 

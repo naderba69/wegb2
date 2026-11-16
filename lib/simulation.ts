@@ -192,9 +192,6 @@ export interface SimErgebnis {
   sprechen: number;
 }
 
-export const simulationBestanden = (e: SimErgebnis): boolean =>
-  modulBestanden(e.lesen) && modulBestanden(e.hoeren) && modulBestanden(e.schreiben) && modulBestanden(e.sprechen);
-
 export const RUBRIK_PUNKTE: readonly number[] = [25, 19, 13, 6, 0];
 export const RUBRIK_LABELS: readonly string[] = ["ممتاز (A)", "جيد (B)", "مقبول (C)", "ضعيف (D)", "غير كافٍ (E)"];
 
@@ -232,10 +229,13 @@ export interface BewertungsZeile {
 
 export interface SimBewertung {
   zeilen: BewertungsZeile[];
-  bestanden: boolean;
+  /** لا يصدر حكم شامل لأن الإنتاج self-report وغير مراجع خارجياً. */
+  gesamtUrteil: "not_assessed";
   fazitAr: string;
-  /** نقاط مئوية للسجلّ الموحّد (قراءة/استماع/كتابة/تحدّث) */
+  /** نقاط مئوية للعرض التاريخي؛ provenance مفصول في الحقلين التاليين. */
   prozent: SimErgebnis;
+  objektiv: { lesen: number; hoeren: number; sprachbausteine: number | null };
+  selbstbericht: { schreiben: number; sprechen: number };
 }
 
 export function bewerteSimulation(formatId: SimFormatId, roh: Rohwerte): SimBewertung {
@@ -245,20 +245,26 @@ export function bewerteSimulation(formatId: SimFormatId, roh: Rohwerte): SimBewe
     schreiben: roh.schreibenZuKurz ? Math.min(roh.schreibenRubrik, 59) : roh.schreibenRubrik,
     sprechen: roh.sprechenRubrik,
   };
+  const objektiv = {
+    lesen: prozent.lesen,
+    hoeren: prozent.hoeren,
+    sprachbausteine: formatId === "telc-b2" || formatId === "dtz"
+      ? punkteAusAnteil(roh.sprachAnteil)
+      : null,
+  };
+  const selbstbericht = { schreiben: prozent.schreiben, sprechen: prozent.sprechen };
+  const basis = { gesamtUrteil: "not_assessed" as const, prozent, objektiv, selbstbericht };
 
   if (formatId === "goethe-b2" || formatId === "goethe-b1") {
-    const zeilen: BewertungsZeile[] = [
-      { titelAr: "📖 القراءة", wert: `${prozent.lesen}/100`, ok: modulBestanden(prozent.lesen) },
-      { titelAr: "🎧 الاستماع", wert: `${prozent.hoeren}/100`, ok: modulBestanden(prozent.hoeren) },
-      { titelAr: "✍️ الكتابة (تقييم ذاتي بالشبكة)", wert: `${prozent.schreiben}/100`, ok: modulBestanden(prozent.schreiben) },
-      { titelAr: "🗣️ التحدّث (تقييم ذاتي بالشبكة)", wert: `${prozent.sprechen}/100`, ok: modulBestanden(prozent.sprechen) },
-    ];
-    const bestanden = simulationBestanden(prozent);
     return {
-      zeilen, bestanden, prozent,
-      fazitAr: bestanden
-        ? "ناجح في كلّ الوحدات بصيغة Goethe (كلّ وحدة ≥60، بلا تعويض)."
-        : "لم تبلغ كلّ وحدةٍ عتبةَ 60 — في صيغة Goethe لا تعويض بين الوحدات.",
+      ...basis,
+      zeilen: [
+        { titelAr: "📖 القراءة — تصحيح محلي آلي", wert: `${prozent.lesen}/100`, ok: modulBestanden(prozent.lesen) },
+        { titelAr: "🎧 الاستماع — تصحيح محلي آلي", wert: `${prozent.hoeren}/100`, ok: modulBestanden(prozent.hoeren) },
+        { titelAr: "✍️ الكتابة — تقرير ذاتي بالشبكة", wert: `${prozent.schreiben}/100` },
+        { titelAr: "🗣️ التحدّث — تقرير ذاتي بالشبكة", wert: `${prozent.sprechen}/100` },
+      ],
+      fazitAr: "تظهر نتيجتا القراءة والاستماع المصححتان آلياً منفصلتين عن تقريري الكتابة والتحدث الذاتيين؛ لا يصدر التطبيق حكماً شاملاً بالنجاح أو الرسوب.",
     };
   }
 
@@ -269,43 +275,32 @@ export function bewerteSimulation(formatId: SimFormatId, roh: Rohwerte): SimBewe
     const schreibenP = roh.schreibenZuKurz
       ? Math.min(Math.round((roh.schreibenRubrik / 100) * 45), 26)
       : Math.round((roh.schreibenRubrik / 100) * 45);
-    const schriftlich = lesenP + sprachP + hoerenP + schreibenP;
+    const autoSumme = lesenP + sprachP + hoerenP;
     const muendlich = Math.round((roh.sprechenRubrik / 100) * 75);
-    const bestanden = schriftlich >= 135 && muendlich >= 45;
     return {
+      ...basis,
       zeilen: [
-        { titelAr: "قراءة (Leseverstehen)", wert: `${lesenP}/75` },
-        { titelAr: "بنى لغوية (Sprachbausteine)", wert: `${sprachP}/30` },
-        { titelAr: "استماع (Hörverstehen)", wert: `${hoerenP}/75` },
-        { titelAr: "كتابة (Schriftlicher Ausdruck، تقييم ذاتي)", wert: `${schreibenP}/45` },
-        { titelAr: "المكتوب كاملًا", wert: `${schriftlich}/225`, ok: schriftlich >= 135, stark: true },
-        { titelAr: "الشفهي (Mündlicher Ausdruck، تقييم ذاتي)", wert: `${muendlich}/75`, ok: muendlich >= 45, stark: true },
+        { titelAr: "قراءة — تصحيح محلي آلي", wert: `${lesenP}/75` },
+        { titelAr: "بنى لغوية — تصحيح محلي آلي", wert: `${sprachP}/30` },
+        { titelAr: "استماع — تصحيح محلي آلي", wert: `${hoerenP}/75` },
+        { titelAr: "المجموع المصحح آلياً فقط", wert: `${autoSumme}/180`, stark: true },
+        { titelAr: "كتابة — تقرير ذاتي غير مراجع", wert: `${schreibenP}/45` },
+        { titelAr: "تحدث — تقرير ذاتي غير مراجع", wert: `${muendlich}/75` },
       ],
-      bestanden, prozent,
-      fazitAr: bestanden
-        ? "ناجح بصيغة telc: المكتوب ≥135/225 والشفهي ≥45/75 معًا."
-        : "صيغة telc تشترط الكتلتين معًا: مكتوب ≥135/225 وشفهي ≥45/75.",
+      fazitAr: "لا تُركّب كتلة مكتوبة أو نتيجة telc كلية: جزء الكتابة والتحدث تقريران ذاتيان، لذلك يبقى حكم النجاح غير مقاس.",
     };
   }
 
-  // DTZ: نتيجة مستوى من النسبة الكلية
-  const gesamt = Math.round(((roh.lesenAnteil + roh.sprachAnteil + roh.hoerenAnteil + roh.schreibenRubrik / 100 + roh.sprechenRubrik / 100) / 5) * 100);
-  const niveau = gesamt >= 60 ? "B1" : gesamt >= 45 ? "A2" : "unter A2";
   return {
+    ...basis,
     zeilen: [
-      { titelAr: "📖 القراءة", wert: `${prozent.lesen}%` },
-      { titelAr: "🧩 البنى اللغوية", wert: `${punkteAusAnteil(roh.sprachAnteil)}%` },
-      { titelAr: "🎧 الاستماع", wert: `${prozent.hoeren}%` },
-      { titelAr: "✍️ الكتابة (تقييم ذاتي)", wert: `${prozent.schreiben}%` },
-      { titelAr: "🗣️ التحدّث (تقييم ذاتي)", wert: `${prozent.sprechen}%` },
-      { titelAr: "المستوى المُقدَّر في المحاكاة", wert: niveau, ok: niveau === "B1", stark: true },
+      { titelAr: "📖 القراءة — تصحيح محلي آلي", wert: `${prozent.lesen}%` },
+      { titelAr: "🧩 البنى اللغوية — تصحيح محلي آلي", wert: `${objektiv.sprachbausteine ?? 0}%` },
+      { titelAr: "🎧 الاستماع — تصحيح محلي آلي", wert: `${prozent.hoeren}%` },
+      { titelAr: "✍️ الكتابة — تقرير ذاتي غير مراجع", wert: `${prozent.schreiben}%` },
+      { titelAr: "🗣️ التحدث — تقرير ذاتي غير مراجع", wert: `${prozent.sprechen}%` },
+      { titelAr: "مستوى DTZ الكلي", wert: "غير مقاس", stark: true },
     ],
-    bestanden: niveau === "B1",
-    prozent,
-    fazitAr: niveau === "B1"
-      ? "بلغتَ مستوى B1 في هذه المحاكاة (‏≥60% إجمالًا)."
-      : niveau === "A2"
-        ? "نتيجتك عند A2 في هذه المحاكاة (45–59%) — واصل نحو B1."
-        : "دون A2 في هذه المحاكاة (<45%) — ركّز على الأساسيات ثم أعد المحاولة.",
+    fazitAr: "لا يصدر مستوى A2/B1 من جمع التصحيح الآلي بالتقرير الذاتي؛ يلزم تصحيح إنتاجي مؤهل وفق إجراءات DTZ.",
   };
 }

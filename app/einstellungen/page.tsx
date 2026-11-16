@@ -14,6 +14,7 @@ import { KOMFORT_KEY, ladeKomfort, wendeKomfortAn } from "@/lib/komfort";
 import { speakDe, warmVoices, speechAvailable , recognitionAvailable } from "@/lib/speech";
 import LocalSpeechPilot from "@/components/LocalSpeechPilot";
 import { PHASE_START, levelAmTag } from "@/lib/phasen";
+import { planArbeitslast } from "@/lib/plan";
 import { OfflineKarte } from "@/components/offline";
 import { KlassenAnsicht } from "@/components/klassenansicht";
 import { ZielTempoKarte } from "@/components/zieltempo";
@@ -47,6 +48,7 @@ export default function Einstellungen() {
   if (!ready) {
     return <div className="today-screen" role="status" aria-live="polite">⏳ جارٍ استعادة إعدادات ملفك المحلي…</div>;
   }
+  const arbeitslast = planArbeitslast();
 
   const exportJson = () => {
     // R303/ب6: النسخة تحمل أيضًا عدّاد القراءة الحرّة وإعدادات الراحة (مفاتيح weg-* الفرعية)
@@ -134,7 +136,7 @@ export default function Einstellungen() {
             الانتقال يغيّر موضعك في الخطة فقط — بطاقاتك ودفتر أخطائك ونقاطك تبقى كما هي، ويمكنك العودة متى شئت.
           </p>
           <p style={{ margin: "0 0 0.6rem" }}>
-            <Link href="/ueben">🪪 أو حدّد مستواك بالتشخيص التكيّفي (أربع مهارات، دقائق معدودة) ←</Link>
+            <Link href="/ueben">🪪 أو استخدم فرز الدخول الاستقبالي (لا يقيس الكتابة/التحدث ولا يثبت CEFR) ←</Link>
           </p>
           <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }} data-testid="einstieg-wahl">
             {(["A1", "A2", "B1", "B2"] as Level[]).map((lvl) => (
@@ -193,7 +195,7 @@ export default function Einstellungen() {
         <details className="dirb-details" open>
           <summary>🎚️ إيقاع المحتوى اليومي</summary>
           <p style={{ color: "var(--color-ink2)", fontSize: "0.9rem", margin: "0.6rem 0 0.8rem", lineHeight: 1.9 }}>
-            اختر وتيرة البطاقات الجديدة: خفيف حتى <strong>3</strong>، منتظم حتى <strong>5</strong>، ومكثّف حتى <strong>10</strong> بطاقات في اليوم؛ وتُقدَّم المراجعات المستحقة أولاً. هذا الاختيار لا يغيّر تقدير دقائق المهام ولا هدف الجلسة الافتراضي البالغ <strong>90 دقيقة</strong>.
+            اختر وتيرة البطاقات الجديدة: خفيف حتى <strong>3</strong>، منتظم حتى <strong>5</strong>، ومكثف حتى <strong>10</strong> بطاقات في اليوم؛ وتقدم المراجعات المستحقة أولاً. هذا الاختيار لا يغير تقدير دقائق المهام ولا هدف الجلسة الافتراضي البالغ <strong>{arbeitslast.sitzungszielMinuten} دقيقة</strong>.
             يمكنك التوقف والحفظ في أي وقت، حتى قبل بلوغ الهدف، ثم المتابعة لاحقاً بلا إغلاق لليوم أو تسجيل فشل أو تعويض.
           </p>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "0.6rem" }}>
@@ -550,15 +552,18 @@ export default function Einstellungen() {
         <details className="dirb-details">
           <summary>📐 الميثاق المنهجي للخطة</summary>
           <ul style={{ lineHeight: 1.9, fontSize: "0.92rem", paddingInlineStart: "1.2rem", margin: "0.6rem 0 0.2rem" }}>
-            <li><strong>378 يوماً بتوزيعٍ أكاديمي</strong> (أوزان ساعات CEFR لا التساوي): A0 ‏(1–10) ← A1 ‏(11–94) ← A2 ‏(95–178) ← B1 ‏(179–276) ← B2 ‏(277–374) ← ختام (375–378)؛ والحمل اليومي يتصاعد ×0.7 ← ×1.0 ← ×1.25 ← ×1.65 ← ×2.2.</li>
+            <li><strong>{arbeitslast.tage} يوماً بأقسام ثابتة</strong>: A0 ‏(1–10) ← A1 ‏(11–94) ← A2 ‏(95–178) ← B1 ‏(179–276) ← B2 ‏(277–374) ← ختام (375–378). المسار الأساسي المحسوب <strong>{arbeitslast.kernStunden.toFixed(1)} ساعة</strong> بمتوسط <strong>{arbeitslast.durchschnittKernMinutenProTag.toFixed(1)} دقيقة/يوم</strong>. التعميق الاختياري <strong>{arbeitslast.vertiefungStunden.toFixed(1)} ساعة</strong>؛ مجموع الكتالوج كله <strong>{arbeitslast.stunden.toFixed(1)} ساعة</strong>.</li>
             <li><strong>الإيقاع الأسبوعي</strong>: 5 أيام تعلّم · يوم تثبيت (كتابة/تحدّث/أخطاء) · يوم فحص أسبوعي.</li>
-            <li><strong>بنية الحصة الثابتة</strong>: استرجاع ← قواعد ← مفردات ← مهارة (تسميع/قراءة/كتابة/تحدّث) ← فحص.</li>
-            <li><strong>قفل تسلسلي</strong>: لا غد قبل إغلاق اليوم.</li>
-            <li><strong>التعويض الإلزامي</strong>: ما لم يُنجح (≥60% Goethe — ≥80% تميّز) يُرحَّل إلى أول الغد — يتولّاه المحرّك آلياً.</li>
+            <li><strong>مساران واضحان</strong>: مسار أساسي داخلي يستهدف 45–90 دقيقة في اليوم العادي، ثم تعميق اختياري يفتح بعده. امتحان الختام غير القابل للتقسيم استثناء معلن.</li>
+            <li><strong>بنية الحصة</strong>: استرجاع ثم تركيز يومي يدور بين القواعد والمفردات والأداء التواصلي؛ لا يُطلب الكتالوج كله لإغلاق اليوم.</li>
+            <li><strong>قفل تسلسلي</strong>: لا غد قبل إغلاق اليوم، والتعميق لا يقفل المسار الأساسي.</li>
+            <li><strong>التعويض الإلزامي</strong>: غير المتقن من المسار الأساسي يُرحَّل إلى أول الغد. التعميق غير المُسلَّم محايد؛ وإذا سُلِّم ولم يُجتز يبقى علاجياً. عتبة اليوم الداخلية (≥80%) ليست عتبة امتحان رسمي.</li>
             <li><strong>حتمية كاملة</strong>: «اليوم 47» يظهر بنفس المهام دائماً — لا عشوائية ولا توهان.</li>
-            <li><strong>التكرار المتباعد</strong>: بطاقات مجدولة بخوارزمية SM-2 داخل الحصص اليومية.</li>
+            <li><strong>التكرار المتباعد</strong>: بطاقات مجدولة بخوارزمية FSRS-6 بتقدير متكيف وهدف احتفاظ 90%، لا بفواصل ثابتة مضمونة.</li>
             <li><strong>التأسيس العلمي</strong>: CEFR/GERR · استرجاع استباقي · تكرار متباعد · تكامل المهارات الأربع · سُلّم تدريجي من السند إلى الغمر.</li>
-            <li><strong>مسارات بديلة للعامل بنظام مناوبات</strong>: 378ي هو الافتراضي (152د/يوم B2 متوسط داخل السقف D1_B2_DECKEL_MIN · lib/phasen.ts:249.3ساعة/98 يوم) — للمتفرغ <em>مكثف 180ي</em> يقطع المراجعة لاحترام السقف، وللعامل <em>بطيء 600ي</em> (74د/يوم) عبر <code>Tempo leicht/regelmaessig/intensiv</code> (3/5/10 بطاقات/يوم) — كلاهما موثق في <code>ALTERNATIVE_PFADE</code> بلا تغيير إجباري للـ 378.</li>
+            <li><strong>قسم B2</strong>: متوسط المسار الأساسي <strong>{arbeitslast.phasen.B2.durchschnittKernMinutenProTag.toFixed(1)} دقيقة/يوم</strong>، والتعميق الاختياري <strong>{arbeitslast.phasen.B2.durchschnittVertiefungMinutenProTag.toFixed(1)} دقيقة/يوم</strong>. يمكنك تقسيم الأساسي على جلسات والتوقف والحفظ.</li>
+            <li><strong>حد الإثبات</strong>: نافذة 45–90 دقيقة قرار تخطيط داخلي محافظ؛ لم تُثبت بعد على 20–30 متعلماً ولا تدّعي خفض التعب أو التسرّب.</li>
+            <li><strong>حدود الأرقام</strong>: الوقت والحضور لا يثبتان مستوى CEFR أو جاهزية امتحان؛ ذلك يحتاج أداءً متعدد المهارات وتقويماً مناسباً.</li>
           </ul>
         </details>
 

@@ -71,7 +71,7 @@
         "anfangen"
       ],
       "promptDeBefore": "Ich lerne, um ___. (anfangen)",
-      "promptDeAfter": "Ich lerne, um ___.",
+      "promptDeAfter": "Wir stehen früh auf, um pünktlich ___.",
       "textBefore": null,
       "textAfter": null,
       "answer": "anzufangen",
@@ -82,7 +82,8 @@
       ],
       "decision": "remove-redundant",
       "classification": "redundant-with-options",
-      "rationaleAr": "كل خيارات MC تحمل الـlexeme نفسها؛ لذلك لا يضيف القوس قيداً تعليمياً ويكرر معلومة ظاهرة في الخيارات."
+      "rationaleAr": "كل خيارات MC تحمل الـlexeme نفسها؛ لذلك لا يضيف القوس قيداً تعليمياً ويكرر معلومة ظاهرة في الخيارات.",
+      "markersAfter": []
     },
     {
       "id": "b1-absicht-v1",
@@ -118,7 +119,7 @@
       "promptDeAfter": "Korrigiere den Satz (Dativ): Ich helfe ein jung Mann.",
       "textBefore": null,
       "textAfter": null,
-      "answer": "Ich helfe dem jungen Mann.",
+      "answer": "Ich helfe einem jungen Mann.",
       "options": null,
       "decision": "retain",
       "classification": "retain-transformation-target",
@@ -210,14 +211,17 @@
         "آنا"
       ],
       "promptDeBefore": "___ Haus (آنا) ist groß.",
-      "promptDeAfter": "___ Haus (آنا) ist groß.",
+      "promptDeAfter": "___ Haus (Anna) ist groß.",
       "textBefore": null,
       "textAfter": null,
       "answer": "Annas",
       "options": null,
       "decision": "retain",
       "classification": "retain-semantic-cue",
-      "rationaleAr": "القوس قيد دلالي أو وظيفي يحدد المعنى المقصود ولا يعطي الصيغة المقبولة حرفياً."
+      "rationaleAr": "القوس قيد دلالي أو وظيفي يحدد المعنى المقصود ولا يعطي الصيغة المقبولة حرفياً.",
+      "markersAfter": [
+        "Anna"
+      ]
     },
     {
       "id": "b1-genitiv-v1",
@@ -271,14 +275,17 @@
         "هو"
       ],
       "promptDeBefore": "ترجم: «لا أعرف أين يسكن» (هو).",
-      "promptDeAfter": "ترجم: «لا أعرف أين يسكن» (هو).",
+      "promptDeAfter": "Formuliere eine indirekte Frage auf Deutsch (Subjekt: er).",
       "textBefore": null,
       "textAfter": null,
       "answer": "Ich weiß nicht, wo er wohnt.",
       "options": null,
       "decision": "retain",
       "classification": "retain-context-label",
-      "rationaleAr": "القوس يصف سياق المهمة أو قسمها ولا يزوّد فراغاً بجواب."
+      "rationaleAr": "القوس يصف سياق المهمة أو قسمها ولا يزوّد فراغاً بجواب.",
+      "markersAfter": [
+        "Subjekt: er"
+      ]
     },
     {
       "id": "b1-indir-n7",
@@ -311,14 +318,15 @@
         "Konjunktiv II"
       ],
       "promptDeBefore": "Formuliere höflicher (Konjunktiv II).",
-      "promptDeAfter": "Formuliere höflicher (Konjunktiv II).",
+      "promptDeAfter": "Formuliere zurückhaltender mit Konjunktiv II.",
       "textBefore": null,
       "textAfter": null,
       "answer": "Könnten Sie mir bitte helfen?",
       "options": null,
       "decision": "retain",
       "classification": "retain-transformation-target",
-      "rationaleAr": "القوس يحدد التحويل أو القيد النحوي المطلوب كي لا تصبح مهمة الإنتاج مفتوحة بلا معيار."
+      "rationaleAr": "القوس يحدد التحويل أو القيد النحوي المطلوب كي لا تصبح مهمة الإنتاج مفتوحة بلا معيار.",
+      "markersAfter": []
     },
     {
       "id": "g11e3",
@@ -418,7 +426,7 @@
         "ومع ذلك"
       ],
       "promptDeBefore": "Er hatte kein Geld. ___ hat er das Auto gekauft. (ومع ذلك)",
-      "promptDeAfter": "Er hatte kein Geld. ___ hat er das Auto gekauft. (ومع ذلك)",
+      "promptDeAfter": "Er hatte kein Geld. ___ hat er das Auto gekauft. (Gegensatz)",
       "textBefore": null,
       "textAfter": null,
       "answer": [
@@ -428,7 +436,10 @@
       "options": null,
       "decision": "retain",
       "classification": "retain-semantic-cue",
-      "rationaleAr": "القوس قيد دلالي أو وظيفي يحدد المعنى المقصود ولا يعطي الصيغة المقبولة حرفياً."
+      "rationaleAr": "القوس قيد دلالي أو وظيفي يحدد المعنى المقصود ولا يعطي الصيغة المقبولة حرفياً.",
+      "markersAfter": [
+        "Gegensatz"
+      ]
     },
     {
       "id": "b1-konnektoren-v2",
@@ -459,14 +470,17 @@
         "عملية سابقة"
       ],
       "promptDeBefore": "Das Auto ist repariert ___. (عملية سابقة)",
-      "promptDeAfter": "Das Auto ist repariert ___. (عملية سابقة)",
+      "promptDeAfter": "Das Auto ist repariert ___. (abgeschlossener Vorgang)",
       "textBefore": null,
       "textAfter": null,
       "answer": "worden",
       "options": null,
       "decision": "retain",
       "classification": "retain-semantic-cue",
-      "rationaleAr": "القوس قيد دلالي أو وظيفي يحدد المعنى المقصود ولا يعطي الصيغة المقبولة حرفياً."
+      "rationaleAr": "القوس قيد دلالي أو وظيفي يحدد المعنى المقصود ولا يعطي الصيغة المقبولة حرفياً.",
+      "markersAfter": [
+        "abgeschlossener Vorgang"
+      ]
     },
     {
       "id": "b1-pas-e5",
@@ -497,7 +511,7 @@
         "fertig"
       ],
       "promptDeBefore": "Korrigiere: Zustandspassiv (fertig).",
-      "promptDeAfter": "Korrigiere: Zustandspassiv (fertig).",
+      "promptDeAfter": "Formuliere den Zustand in der Gegenwart (fertig).",
       "textBefore": null,
       "textAfter": null,
       "answer": "Das Haus ist gebaut.",
@@ -606,7 +620,7 @@
         "Kontakt"
       ],
       "promptDeBefore": "Wenn Sie im Sprechen Teil 1 (Kontakt) ein Wort nicht wissen, was tun Sie?",
-      "promptDeAfter": "Wenn Sie im Sprechen Teil 1 (Kontakt) ein Wort nicht wissen, was tun Sie?",
+      "promptDeAfter": "Wenn Ihnen im Gespräch ein Wort fehlt, was können Sie tun?",
       "textBefore": null,
       "textAfter": null,
       "answer": "Umschreiben (Paraphrase)",
@@ -618,7 +632,8 @@
       ],
       "decision": "retain",
       "classification": "retain-context-label",
-      "rationaleAr": "القوس يصف سياق المهمة أو قسمها ولا يزوّد فراغاً بجواب."
+      "rationaleAr": "القوس يصف سياق المهمة أو قسمها ولا يزوّد فراغاً بجواب.",
+      "markersAfter": []
     },
     {
       "id": "b1-unb-e2",
@@ -630,14 +645,17 @@
         "niemand"
       ],
       "promptDeBefore": "Ich kenne hier ___. (niemand)",
-      "promptDeAfter": "Ich kenne hier ___. (niemand)",
+      "promptDeAfter": "Ich kenne hier ___. (niemand, mit Kasusendung)",
       "textBefore": null,
       "textAfter": null,
       "answer": "niemanden",
       "options": null,
       "decision": "retain",
       "classification": "retain-derivational-lemma",
-      "rationaleAr": "القوس يعطي lexeme لازمة في تمرين تصريف/اشتقاق محدد؛ لا يساوي الجواب المصرف، وحذفه يجعل الفراغ معجمياً ملتبساً."
+      "rationaleAr": "القوس يعطي lexeme لازمة في تمرين تصريف/اشتقاق محدد؛ لا يساوي الجواب المصرف، وحذفه يجعل الفراغ معجمياً ملتبساً.",
+      "markersAfter": [
+        "niemand, mit Kasusendung"
+      ]
     },
     {
       "id": "b1-unb-e4",
@@ -687,14 +705,15 @@
         "denken an"
       ],
       "promptDeBefore": "Sage: Ich vermisse dich (denken an).",
-      "promptDeAfter": "Sage: Ich vermisse dich (denken an).",
+      "promptDeAfter": "Formuliere stattdessen mit „an dich denken“.",
       "textBefore": null,
       "textAfter": null,
       "answer": "Ich denke an dich.",
       "options": null,
       "decision": "retain",
       "classification": "retain-transformation-target",
-      "rationaleAr": "القوس يحدد التحويل أو القيد النحوي المطلوب كي لا تصبح مهمة الإنتاج مفتوحة بلا معيار."
+      "rationaleAr": "القوس يحدد التحويل أو القيد النحوي المطلوب كي لا تصبح مهمة الإنتاج مفتوحة بلا معيار.",
+      "markersAfter": []
     },
     {
       "id": "b1-vp-e5",
@@ -706,14 +725,17 @@
         "جمع"
       ],
       "promptDeBefore": "Sie hat Angst ___ Hunden. (جمع)",
-      "promptDeAfter": "Sie hat Angst ___ Hunden. (جمع)",
+      "promptDeAfter": "Sie hat Angst ___ Hunden. (Plural)",
       "textBefore": null,
       "textAfter": null,
       "answer": "vor",
       "options": null,
       "decision": "retain",
       "classification": "retain-semantic-cue",
-      "rationaleAr": "القوس قيد دلالي أو وظيفي يحدد المعنى المقصود ولا يعطي الصيغة المقبولة حرفياً."
+      "rationaleAr": "القوس قيد دلالي أو وظيفي يحدد المعنى المقصود ولا يعطي الصيغة المقبولة حرفياً.",
+      "markersAfter": [
+        "Plural"
+      ]
     },
     {
       "id": "b1-wortbildung-e2",
@@ -748,14 +770,17 @@
         "Haus ist das Grundwort"
       ],
       "promptDeBefore": "Bilde das Kompositum (Haus ist das Grundwort).",
-      "promptDeAfter": "Bilde das Kompositum (Haus ist das Grundwort).",
+      "promptDeAfter": "Bilde das gebräuchliche Kompositum (Schloss ist das Grundwort).",
       "textBefore": null,
       "textAfter": null,
-      "answer": "das Türhaus",
+      "answer": "das Türschloss",
       "options": null,
       "decision": "retain",
       "classification": "retain-transformation-target",
-      "rationaleAr": "القوس يحدد التحويل أو القيد النحوي المطلوب كي لا تصبح مهمة الإنتاج مفتوحة بلا معيار."
+      "rationaleAr": "القوس يحدد التحويل أو القيد النحوي المطلوب كي لا تصبح مهمة الإنتاج مفتوحة بلا معيار.",
+      "markersAfter": [
+        "Schloss ist das Grundwort"
+      ]
     },
     {
       "id": "b1-partizip1-f2",
@@ -771,8 +796,7 @@
       "textBefore": null,
       "textAfter": null,
       "answer": [
-        "weinende",
-        "weinend"
+        "weinende"
       ],
       "options": null,
       "decision": "retain",
@@ -936,7 +960,7 @@
         "Entweder / übst / du /, / oder / das / Zertifikat / wartet / nicht"
       ],
       "promptDeBefore": "Bilde einen Satz: (Entweder / übst / du /, / oder / das / Zertifikat / wartet / nicht)",
-      "promptDeAfter": "Bilde einen Satz: (Entweder / übst / du /, / oder / das / Zertifikat / wartet / nicht)",
+      "promptDeAfter": "Bilde einen Satz: (Entweder / übst / du /, / oder / du / verschiebst / die Prüfung)",
       "textBefore": null,
       "textAfter": null,
       "answer": [
@@ -945,15 +969,17 @@
         "du",
         ",",
         "oder",
-        "das",
-        "Zertifikat",
-        "wartet",
-        "nicht"
+        "du",
+        "verschiebst",
+        "die Prüfung"
       ],
       "options": null,
       "decision": "retain",
       "classification": "retain-token-bank",
-      "rationaleAr": "القوس هو بنك القطع المطلوب ترتيبها، لا تلميح جواب مستقل؛ حذفه يلغي مادة المهمة."
+      "rationaleAr": "القوس هو بنك القطع المطلوب ترتيبها، لا تلميح جواب مستقل؛ حذفه يلغي مادة المهمة.",
+      "markersAfter": [
+        "Entweder / übst / du /, / oder / du / verschiebst / die Prüfung"
+      ]
     },
     {
       "id": "gdke5",
@@ -1007,14 +1033,17 @@
         "Vermutung über Abgeschlossenes"
       ],
       "promptDeBefore": "Setze ins Futur II (Vermutung über Abgeschlossenes).",
-      "promptDeAfter": "Setze ins Futur II (Vermutung über Abgeschlossenes).",
+      "promptDeAfter": "Setze ins Futur II (bis morgen abgeschlossen).",
       "textBefore": null,
       "textAfter": null,
       "answer": "Ich werde den Bericht bis morgen fertig gemacht haben.",
       "options": null,
       "decision": "retain",
       "classification": "retain-transformation-target",
-      "rationaleAr": "القوس يحدد التحويل أو القيد النحوي المطلوب كي لا تصبح مهمة الإنتاج مفتوحة بلا معيار."
+      "rationaleAr": "القوس يحدد التحويل أو القيد النحوي المطلوب كي لا تصبح مهمة الإنتاج مفتوحة بلا معيار.",
+      "markersAfter": [
+        "bis morgen abgeschlossen"
+      ]
     },
     {
       "id": "gf2e1",
@@ -1143,8 +1172,7 @@
       "textBefore": "Sie erklärte, sie ___ keine Zeit.",
       "textAfter": "Sie erklärte, sie ___ keine Zeit.",
       "answer": [
-        "habe",
-        "hätte"
+        "habe"
       ],
       "options": null,
       "decision": "retain",
@@ -1290,14 +1318,17 @@
         "حتمية"
       ],
       "promptDeBefore": "Es ist ___ so. (حتمية)",
-      "promptDeAfter": "Es ist ___ so. (حتمية)",
+      "promptDeAfter": "Es ist ___ so. (Unvermeidlichkeit)",
       "textBefore": null,
       "textAfter": null,
       "answer": "halt",
       "options": null,
       "decision": "retain",
       "classification": "retain-semantic-cue",
-      "rationaleAr": "القوس قيد دلالي أو وظيفي يحدد المعنى المقصود ولا يعطي الصيغة المقبولة حرفياً."
+      "rationaleAr": "القوس قيد دلالي أو وظيفي يحدد المعنى المقصود ولا يعطي الصيغة المقبولة حرفياً.",
+      "markersAfter": [
+        "Unvermeidlichkeit"
+      ]
     },
     {
       "id": "b2-mp-e5",
@@ -1309,14 +1340,17 @@
         "معلوم مشترك"
       ],
       "promptDeBefore": "Du bist ___ müde, oder? (معلوم مشترك)",
-      "promptDeAfter": "Du bist ___ müde, oder? (معلوم مشترك)",
+      "promptDeAfter": "Du bist ___ müde, oder? (gemeinsames Wissen)",
       "textBefore": null,
       "textAfter": null,
       "answer": "ja",
       "options": null,
       "decision": "retain",
       "classification": "retain-semantic-cue",
-      "rationaleAr": "القوس قيد دلالي أو وظيفي يحدد المعنى المقصود ولا يعطي الصيغة المقبولة حرفياً."
+      "rationaleAr": "القوس قيد دلالي أو وظيفي يحدد المعنى المقصود ولا يعطي الصيغة المقبولة حرفياً.",
+      "markersAfter": [
+        "gemeinsames Wissen"
+      ]
     },
     {
       "id": "b2-modalpartikel-v1",
@@ -1465,7 +1499,8 @@
       ],
       "decision": "remove-redundant",
       "classification": "redundant-with-options",
-      "rationaleAr": "كل خيارات MC تحمل الـlexeme نفسها؛ لذلك لا يضيف القوس قيداً تعليمياً ويكرر معلومة ظاهرة في الخيارات."
+      "rationaleAr": "كل خيارات MC تحمل الـlexeme نفسها؛ لذلك لا يضيف القوس قيداً تعليمياً ويكرر معلومة ظاهرة في الخيارات.",
+      "markersAfter": []
     },
     {
       "id": "b2-nom-e2",
@@ -1519,16 +1554,19 @@
         "Ziel"
       ],
       "promptDeBefore": "___ der Prüfung lernte er viel. (Ziel)",
-      "promptDeAfter": "___ der Prüfung lernte er viel. (Ziel)",
+      "promptDeAfter": "___ die Prüfung lernte er viel. (Ziel, Präposition + Akkusativ)",
       "textBefore": "___ der Prüfung lernte er viel.",
-      "textAfter": "___ der Prüfung lernte er viel.",
+      "textAfter": "___ die Prüfung lernte er viel.",
       "answer": [
-        "Zum Zweck"
+        "Für"
       ],
       "options": null,
       "decision": "retain",
       "classification": "retain-semantic-cue",
-      "rationaleAr": "القوس قيد دلالي أو وظيفي يحدد المعنى المقصود ولا يعطي الصيغة المقبولة حرفياً."
+      "rationaleAr": "القوس قيد دلالي أو وظيفي يحدد المعنى المقصود ولا يعطي الصيغة المقبولة حرفياً.",
+      "markersAfter": [
+        "Ziel, Präposition + Akkusativ"
+      ]
     },
     {
       "id": "b2-nominalstil-u1",
@@ -1618,16 +1656,19 @@
         "sich entschuldigen"
       ],
       "promptDeBefore": "Er kam, ohne ___ (sich entschuldigen).",
-      "promptDeAfter": "Er kam, ohne ___ (sich entschuldigen).",
+      "promptDeAfter": "das ___ Kind (schlafen, Partizip I)",
       "textBefore": "Er kam, ohne ___.",
-      "textAfter": "Er kam, ohne ___.",
+      "textAfter": "das ___ Kind",
       "answer": [
-        "sich zu entschuldigen"
+        "schlafende"
       ],
       "options": null,
       "decision": "retain",
       "classification": "retain-derivational-lemma",
-      "rationaleAr": "القوس يعطي lexeme لازمة في تمرين تصريف/اشتقاق محدد؛ لا يساوي الجواب المصرف، وحذفه يجعل الفراغ معجمياً ملتبساً."
+      "rationaleAr": "القوس يعطي lexeme لازمة في تمرين تصريف/اشتقاق محدد؛ لا يساوي الجواب المصرف، وحذفه يجعل الفراغ معجمياً ملتبساً.",
+      "markersAfter": [
+        "schlafen, Partizip I"
+      ]
     },
     {
       "id": "g16e2",
@@ -1650,7 +1691,8 @@
       ],
       "decision": "remove-redundant",
       "classification": "redundant-with-options",
-      "rationaleAr": "كل خيارات MC تحمل الـlexeme نفسها؛ لذلك لا يضيف القوس قيداً تعليمياً ويكرر معلومة ظاهرة في الخيارات."
+      "rationaleAr": "كل خيارات MC تحمل الـlexeme نفسها؛ لذلك لا يضيف القوس قيداً تعليمياً ويكرر معلومة ظاهرة في الخيارات.",
+      "markersAfter": []
     },
     {
       "id": "g16e3",
@@ -1662,16 +1704,19 @@
         "للغاية"
       ],
       "promptDeBefore": "Sie spart Geld, ___ ein Auto zu kaufen. (للغاية)",
-      "promptDeAfter": "Sie spart Geld, ___ ein Auto zu kaufen. (للغاية)",
+      "promptDeAfter": "der in Berlin ___ Student (wohnen, Partizip I)",
       "textBefore": null,
       "textAfter": null,
       "answer": [
-        "um"
+        "wohnende"
       ],
       "options": null,
       "decision": "retain",
       "classification": "retain-semantic-cue",
-      "rationaleAr": "القوس قيد دلالي أو وظيفي يحدد المعنى المقصود ولا يعطي الصيغة المقبولة حرفياً."
+      "rationaleAr": "القوس قيد دلالي أو وظيفي يحدد المعنى المقصود ولا يعطي الصيغة المقبولة حرفياً.",
+      "markersAfter": [
+        "wohnen, Partizip I"
+      ]
     },
     {
       "id": "b2-partizip-v1",
@@ -1810,16 +1855,19 @@
         "Genitivpräp trotzdem?"
       ],
       "promptDeBefore": "___ des Berichts wurde Kritik geübt. (Genitivpräp trotzdem?)",
-      "promptDeAfter": "___ des Berichts wurde Kritik geübt. (Genitivpräp trotzdem?)",
+      "promptDeAfter": "An dem Vorschlag ___ Kritik geübt. (werden, Präteritum)",
       "textBefore": "___ des Berichts wurde Kritik geübt.",
-      "textAfter": "___ des Berichts wurde Kritik geübt.",
+      "textAfter": "An dem Vorschlag ___ Kritik geübt.",
       "answer": [
-        "Trotz"
+        "wurde"
       ],
       "options": null,
       "decision": "retain",
       "classification": "retain-grammar-target",
-      "rationaleAr": "القوس يحدد الفئة أو الحالة النحوية التي يقيسها التمرين، بينما تبقى الصيغة المطلوب إنتاجها على المتعلم."
+      "rationaleAr": "القوس يحدد الفئة أو الحالة النحوية التي يقيسها التمرين، بينما تبقى الصيغة المطلوب إنتاجها على المتعلم.",
+      "markersAfter": [
+        "werden, Präteritum"
+      ]
     },
     {
       "id": "b2-passiv-v2",
@@ -1854,19 +1902,20 @@
         "Teil 2"
       ],
       "promptDeBefore": "Wie lang soll die Vorbereitung auf die Präsentation (Teil 2) sein?",
-      "promptDeAfter": "Wie lang soll die Vorbereitung auf die Präsentation (Teil 2) sein?",
+      "promptDeAfter": "Woher nehmen Sie die verbindliche Vorbereitungszeit?",
       "textBefore": null,
       "textAfter": null,
-      "answer": "3 Minuten",
+      "answer": "Aus der aktuellen Aufgabe und den offiziellen Anbieterunterlagen",
       "options": [
-        "1 Minute",
-        "3 Minuten",
-        "10 Minuten",
-        "Keine Vorbereitung"
+        "Aus der aktuellen Aufgabe und den offiziellen Anbieterunterlagen",
+        "Aus einer pauschalen Zeitangabe ohne Aufgabenbezug",
+        "Aus den Vorgaben eines anderen Prüfungsformats",
+        "Aus einer alten Übung ohne Abgleich"
       ],
       "decision": "retain",
       "classification": "retain-context-label",
-      "rationaleAr": "القوس يصف سياق المهمة أو قسمها ولا يزوّد فراغاً بجواب."
+      "rationaleAr": "القوس يصف سياق المهمة أو قسمها ولا يزوّد فراغاً بجواب.",
+      "markersAfter": []
     },
     {
       "id": "b2-redew-f2",

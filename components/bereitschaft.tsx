@@ -1,5 +1,5 @@
 "use client";
-// 📈 تحليلات الاستعداد (E3/R173): صورة من سجلّ المتعلّم المسجَّل فقط — بلا تنبؤ وبلا وعود.
+// 📈 تحليلات المحاكاة (E3/R173/PA-017): الآلي منفصل عن التقرير الذاتي، بلا حكم جاهزية.
 import { useMemo, useState } from "react";
 import type { Progress } from "@/lib/types";
 import { SIM_FORMATE, type SimFormatId } from "@/lib/simulation";
@@ -26,10 +26,10 @@ export function Bereitschaft({ progress }: { progress: Progress }) {
 
   return (
     <div className="card" style={{ padding: "0.9rem 1rem", background: "var(--color-paper2)" }}>
-      <div style={{ fontWeight: 800, marginBottom: "0.3rem" }}>📈 تحليلات الاستعداد — من سجلّك أنت</div>
+      <div style={{ fontWeight: 800, marginBottom: "0.3rem" }}>📈 تحليلات المحاكاة — من سجلّك أنت</div>
       <div style={{ fontSize: "0.85rem", color: "var(--color-ink2)", marginBottom: "0.6rem", lineHeight: 1.8 }}>
-        كل رقمٍ هنا حسابٌ من محاولات محاكاتك المحفوظة في متصفّحك، وخطّ النجاح المرجعي 60 كما في الامتحانات الرسمية.
-        هذه الصورة تصف ما سجّلته حتى اليوم — وليست تنبؤًا بنتيجة امتحانٍ حقيقي، فالمحاكاة تدريبٌ لا امتحانٌ رسمي.
+        القراءة والاستماع مصححان محلياً آلياً، بينما الكتابة والتحدث تقريران ذاتيان غير مراجعين.
+        يعرضهما التطبيق منفصلين؛ لا يحسب نجاحاً كلياً أو مستوى أو جاهزية امتحان.
       </div>
 
       {progress.settings.examDate && (
@@ -64,13 +64,12 @@ export function Bereitschaft({ progress }: { progress: Progress }) {
         </div>
       ) : (
         <>
-          <div style={{ fontSize: "0.9rem", marginBottom: "0.5rem" }}>
-            أتممتَ <b className="rtl-num">{fazit.versucheGesamt}</b> محاكاة كاملة، منها{" "}
-            <b className="rtl-num">{fazit.bestandenAnzahl}</b> بحكم نجاح صيغتها
+          <div style={{ fontSize: "0.9rem", marginBottom: "0.5rem" }} data-testid="simulation-overall-not-assessed">
+            أتممتَ <b className="rtl-num">{fazit.versucheGesamt}</b> محاكاة كاملة
             {fazit.proFormat.length > 0 && (
-              <> ({fazit.proFormat.map((e) => `${e.formatAr}: ${e.bestanden}/${e.versuche}`).join(" · ")})</>
+              <> ({fazit.proFormat.map((e) => `${e.formatAr}: ${e.versuche}`).join(" · ")})</>
             )}
-            .
+            . الحكم الشامل: <strong>غير مقاس</strong> لأن الإنتاج تقرير ذاتي.
           </div>
 
           {(() => {
@@ -80,7 +79,9 @@ export function Bereitschaft({ progress }: { progress: Progress }) {
                 <strong>🎯 مجال تذبذب نتائجك (M5)</strong>
                 {band.map((z) => (
                   <div key={z.key} style={{ display: "flex", justifyContent: "space-between", gap: "0.5rem", padding: "0.15rem 0" }}>
-                    <span>{FERT_AR[z.key] ?? z.key}</span>
+                    <span>
+                      {FERT_AR[z.key] ?? z.key} · {z.evidenceType === "self_report" ? "تقرير ذاتي" : "تصحيح محلي آلي"}
+                    </span>
                     <span>
                       متوسط <b className="rtl-num">{z.mittel}</b>
                       {z.band === null ? (
@@ -106,9 +107,10 @@ export function Bereitschaft({ progress }: { progress: Progress }) {
                 {b.versuche > 0 ? (
                   <div style={{ fontSize: "0.85rem", color: "var(--color-ink2)", marginTop: "0.25rem" }}>
                     متوسط آخر {Math.min(3, b.versuche)} محاولات: <b className="rtl-num">{b.mittel}</b> من 100 · آخر محاولة:{" "}
-                    <b className="rtl-num">{b.letzter}</b> · فوق خطّ 60: <b className="rtl-num">{b.ueberLinie}/{Math.min(3, b.versuche)}</b>
+                    <b className="rtl-num">{b.letzter}</b>
+                    {!FERT_SELBST[b.key] && <> · فوق الخط المرجعي الداخلي 60: <b className="rtl-num">{b.ueberLinie}/{Math.min(3, b.versuche)}</b></>}
                     {b.trend && <> · الاتجاه: {TREND_AR[b.trend]}</>}
-                    {FERT_SELBST[b.key] && <span> · (في المحاكاة: تقييم ذاتي بالشبكة — دليلٌ أخفّ من الآلي)</span>}
+                    {FERT_SELBST[b.key] && <span> · تقرير ذاتي غير مراجع، لا يدخل حكماً كلياً</span>}
                   </div>
                 ) : (
                   <div style={{ fontSize: "0.85rem", color: "var(--color-ink2)", marginTop: "0.25rem" }}>لا بيانات في الصيغة المختارة.</div>
@@ -116,7 +118,9 @@ export function Bereitschaft({ progress }: { progress: Progress }) {
                 {b.mittel !== null && (
                   <div style={{ height: 8, borderRadius: 4, background: "var(--color-paper)", marginTop: "0.4rem", position: "relative" }}>
                     <div style={{ width: `${b.mittel}%`, height: "100%", borderRadius: 4, background: b.farbe }} />
-                    <div style={{ position: "absolute", top: -2, bottom: -2, insetInlineStart: "60%", width: 2, background: "var(--color-ink)" }} title="خطّ النجاح 60" />
+                    {!FERT_SELBST[b.key] && (
+                      <div style={{ position: "absolute", top: -2, bottom: -2, insetInlineStart: "60%", width: 2, background: "var(--color-ink)" }} title="الخط المرجعي الداخلي 60" />
+                    )}
                   </div>
                 )}
               </div>
@@ -125,7 +129,7 @@ export function Bereitschaft({ progress }: { progress: Progress }) {
 
           {fazit.empfehlungAr && (
             <div className="card" style={{ padding: "0.6rem 0.8rem", marginTop: "0.6rem", background: "var(--color-gold-soft)" }}>
-              🧭 الرقعة التالية من سجلّك: {fazit.empfehlungAr}
+              🧭 الرقعة التالية من القسم المصحح محلياً: {fazit.empfehlungAr}
             </div>
           )}
 
@@ -135,11 +139,10 @@ export function Bereitschaft({ progress }: { progress: Progress }) {
               {historie.map((v, i) => (
                 <div key={i} style={{ display: "flex", justifyContent: "space-between", fontSize: "0.85rem", padding: "0.2rem 0", flexWrap: "wrap", gap: "0.4rem" }}>
                   <span>
-                    {v.bestanden ? "✅" : "✗"}{" "}
-                    {SIM_FORMATE.find((f) => f.id === ((v.format as SimFormatId) ?? "goethe-b2"))?.titelAr ?? "Goethe-Zertifikat B2"}
+                    🧪 {SIM_FORMATE.find((f) => f.id === ((v.format as SimFormatId) ?? "goethe-b2"))?.titelAr ?? "Goethe-Zertifikat B2"} · لا حكم شامل
                   </span>
                   <span className="rtl-num">
-                    قراءة {v.punkte.lesen} · استماع {v.punkte.hoeren} · كتابة {v.punkte.schreiben} · تحدّث {v.punkte.sprechen} · {v.datum.slice(0, 10)}
+                    آلي: قراءة {v.punkte.lesen} · استماع {v.punkte.hoeren} — ذاتي: كتابة {v.punkte.schreiben} · تحدث {v.punkte.sprechen} · {v.datum.slice(0, 10)}
                   </span>
                 </div>
               ))}

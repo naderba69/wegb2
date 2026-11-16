@@ -19,7 +19,7 @@
       "ß يُنطق صوت /s/ مهموساً؛ و«s الحادّة» اسمٌ آخر للحرف، ولا يعني تضعيف الصوت.",
       "إذا تعذّر إدخال ä/ö/ü/ß، أو سمحت المهمة، فقد تُقبل ae/oe/ue/ss. ورقة حلول Goethe-Test PRO تقبل هذه البدائل في نوع إدخال محدد؛ لا نعمّم ذلك على كل اختبار، واتبع تعليماته."
     ],
-    "zielWort": 20
+    "zielWort": 60
   },
   {
     "id": "w-a0-02",
@@ -34,9 +34,9 @@
       "جملة بلدك (ich komme aus …)",
       "جملة لغتك (ich spreche …)"
     ],
-    "sample": "Hallo! Ich heiße Sara. Ich komme aus Tunesien. Ich spreche Arabisch und ein bisschen Deutsch.",
+    "sample": "Ich heiße Sara Ben Ali. Ich komme aus Tunis in Tunesien. Ich spreche Arabisch und lerne jetzt ein bisschen Deutsch.",
     "noteAr": [
-      "في A0 الجمل بسيطة جداً: فاعل + فعل + مكمّل، بلا روابط.",
+      "في A0 استخدم جملاً قصيرة بأفعال واضحة، وتجنب الجمل الثانوية؛ يمكن استعمال und لربط معلومتين بسيطتين.",
       "«aus Tunesien» بلا أداة.",
       "«ein bisschen Deutsch» = قليل من الألمانية — عبارة تحية متوقعة في اليوم الأول."
     ],
@@ -56,11 +56,11 @@
       "أصل البلد بدون ein: aus Syrien",
       "جملة ختامية عن تعلّمك الألمانية"
     ],
-    "sample": "Guten Tag! Ich heiße Youssef. Ich bin 27 Jahre alt. Ich komme aus Tunesien und wohne in Tunis. Ich bin Ingenieur und arbeite in einer Firma. Ich spreche Arabisch, Französisch und Englisch. Jetzt lerne ich Deutsch, weil ich in Deutschland arbeiten möchte.",
+    "sample": "Guten Tag! Ich heiße Youssef und bin 27 Jahre alt. Ich komme aus Tunesien und wohne in Tunis. Ich bin Ingenieur, habe eine Stelle und spreche Arabisch. Jetzt lerne ich Deutsch.",
     "noteAr": [
-      "الفعل الثاني محروس في كل جملة: heiße / bin / komme…wohne / bin…arbeite / spreche / lerne — ست فقرات، ست إجابات عن الامتحان نفسه",
+      "خمس جمل واضحة: تحية، اسم وعمر، أصل وسكن، مهنة ولغة، ثم جملة عن تعلّم الألمانية",
       "«aus Tunesien» بلا أداة: قاعدةُ الأصل معلَّمةٌ بالمثال لا بالوعظ",
-      "الجملة الختامية بسببٍ (weil) ترفع النصَّ من قائمةٍ إلى فقرة — حيلةٌ تصلح لغير الألفيين أيضًا"
+      "الجملة الختامية قصيرة ومناسبة لـA1: Jetzt lerne ich Deutsch."
     ],
     "zielWort": 30
   },
@@ -73,15 +73,15 @@
     "taskDe": "Schreibe deine Personalien als Formular: Vorname, Familienname, Alter, Geburtsdatum, Land, Adresse, Telefonnummer.",
     "taskAr": "اكتب بياناتك الشخصية كاستمارة: الاسم، اسم العائلة، العمر، تاريخ الميلاد، البلد، العنوان، الهاتف. (الهدف: 30 كلمة تقريباً).",
     "criteria": [
-      "الأرقام مكتوبة بالألمانية",
-      "تاريخ الميلاد بصيغة: der 3. Mai 1998",
-      "البيانات متناسقة مع تقديرك السابق"
+      "الأرقام والتاريخ مكتوبة بصيغة نموذج واضحة",
+      "تاريخ الميلاد بصيغة نموذج، مثل: 03.05.1998",
+      "البيانات متناسقة داخل الاستمارة"
     ],
-    "sample": "Vorname: Youssef · Familienname: Ben Ali · Alter: 27 Jahre · Geburtsdatum: der 3. Mai 1998 · Land: Tunesien · Straße: Rue de la Liberté 12 · Telefon: 0 71 234 567",
+    "sample": "Vorname: Youssef · Familienname: Ben Ali · Alter: 27 Jahre · Geburtsdatum: 03.05.1998 · Land: Tunesien · Straße: Rue de la Liberté 12 · Telefon: 0 71 234 567",
     "noteAr": [
-      "التاريخ بصيغة «der 3. Mai 1998» حرفياً كما تطلب المعايير — صيغةٌ يخطئ فيها حتى B1",
-      "الأرقام مفصولة (0 71 234 567) كما في النماذج الرسمية لا متلاصقة",
-      "كل حقلٍ عنوانٌ ونقطةٌ وقيمة — لا جُمل: التنسيقُ نصفُ المهمة"
+      "في حقل تاريخ الميلاد اكتب اليوم والشهر والسنة بصيغة نموذج واضحة، مثل 03.05.1998، من دون أداة أو جملة كاملة.",
+      "يمكن فصل مجموعات رقم الهاتف بمسافات لتسهيل قراءته.",
+      "كل حقل عنوان وقيمة؛ لا حاجة إلى تحويل الاستمارة إلى جمل."
     ],
     "zielWort": 30
   },
@@ -92,7 +92,7 @@
     "titleDe": "Meine Familie",
     "titleAr": "عائلتي",
     "taskDe": "Schreibe 5 Sätze über deine Familie (Vater, Mutter, Geschwister) mit Possessivartikeln.",
-    "taskAr": "اكتب 5 جمل عن عائلتك (أب، أم، إخوة) مع أدلة الملكية. (الهدف: 30 كلمة تقريباً).",
+    "taskAr": "اكتب 5 جمل عن عائلتك (أب، أم، إخوة) مع أدوات الملكية. (الهدف: 30 كلمة تقريباً).",
     "criteria": [
       "mein/dein/sein… مع الجنس الصحيح",
       "الفعل ثانياً: Mein Vater heißt…",
@@ -100,9 +100,9 @@
     ],
     "sample": "Mein Vater heißt Ahmed und ist Lehrer. Meine Mutter heißt Salma und kocht sehr gut. Ich habe einen Bruder und zwei Schwestern. Mein Bruder wohnt in Sfax. Am Freitag essen wir zusammen.",
     "noteAr": [
-      "ملكيةٌ صحيحة الجنس مع كل موصوف: Mein Vater / Meine Mutter — العمود الذي تُبنى عليه الألفية الثانية",
-      "الفعل ثانياً حتى في جملة UND: heißt…und ist Lehrer — صيغةٌ واحدة وأمانٌ كامل",
-      "خاتمةُ الجمعة تُدفّئ القائمة الجافة — معيارُ «جملة عن سكن/عمل» مُنجَزٌ ومربوطٌ بعاطفة"
+      "طابق أداة الملكية مع جنس الاسم: mein Vater / meine Mutter.",
+      "ضع الفعل المصرف في الموضع الثاني، ويمكن ربط خبرين بـund: Mein Vater heißt Ahmed und ist Lehrer.",
+      "اختم بمعلومة بسيطة عن السكن أو العمل أو نشاط عائلي."
     ],
     "zielWort": 30
   },
@@ -119,11 +119,11 @@
       "ظروف الزمن: morgens, dann, abends",
       "الفعل ثانياً والبادئة للنهاية"
     ],
-    "sample": "Ich stehe um halb sieben auf. Dann frühstücke ich schnell. Um acht fahre ich zur Arbeit. Am Mittag esse ich mit Kollegen. Abends kaufe ich im Supermarkt ein. Um elf Uhr gehe ich schlafen.",
+    "sample": "Ich stehe um halb sieben auf. Dann ziehe ich mich schnell an. Um acht fahre ich zur Arbeit. Am Mittag esse ich mit Kollegen. Abends kaufe ich im Supermarkt ein. Um elf Uhr gehe ich schlafen.",
     "noteAr": [
-      "ثلاثة أفعالٍ منفصلة في مكانها الصحيح: stehe…auf / kaufe…ein — البادئة تُرمى للمؤخرة كما تُلْمَز",
-      "مؤشرات الزمن تُفتَتَح بها الجمل (Dann / Am Mittag / Abends) والقلبُ بعدها مباشرة — inversionٌ مُبَكِّرٌ مضمون",
-      "ست جمل لا أكثر: الوفاءُ بالعدد فضيلةُ A1 الأولى"
+      "يعرض النموذج ثلاثة أفعال منفصلة صحيحة: stehe … auf / ziehe … an / kaufe … ein.",
+      "عند بدء الجملة بظرف زمن مثل Dann أو Am Mittag أو Abends يأتي الفعل المصرف بعده مباشرة.",
+      "يتكون النموذج من ست جمل كما تطلب المهمة."
     ],
     "zielWort": 30
   },
@@ -140,9 +140,9 @@
       "الوقت والمكان بدقة",
       "جملة دعوة واحدة"
     ],
-    "sample": "Hallo Ahmed! Treffen wir uns am Freitag um achtzehn Uhr im Café Zentrum? Ich möchte dir ein Buch geben. Das Café ist in der Stadtmitte und hat guten Tee. Wir können dort zusammen lernen und sprechen. Bitte schreib mir! Ich warte auf deine Antwort. Tschüss, Sami",
+    "sample": "Hallo Ahmed! Möchtest du dich am Freitag um achtzehn Uhr mit mir im Café Zentrum treffen? Ich möchte dir dort ein Buch geben. Bitte schreib mir bald. Tschüss, Sami",
     "noteAr": [
-      "رسالة كاملة بأربع جمل: تحية، سؤالُ لقاءٍ بـ wir, معلومتا وقتٍ ومكان، خاتمة — كل معيارٍ في سطره",
+      "رسالة قصيرة من أربع جمل: تحية، دعوة صريحة، غرض اللقاء، وطلب جواب؛ ثم عبارة ختام مناسبة",
       "«um achtzehn Uhr» منطوقةً بالألفاظ لا بالأرقام — كما في كتاب A1: الالتزامُ بالسياق مقدَّمٌ على الأناقة",
       "جملة الدعوة صريحة (Möchtest du…?) لا تلويحاً — في A1 تُكافأ الصراحة"
     ],
@@ -155,20 +155,20 @@
     "titleDe": "Mein gestriger Tag",
     "titleAr": "يومي أمس",
     "taskDe": "Schreibe 6 Sätze über gestern – benutze mindestens 5× Perfekt (3× haben, 2× sein).",
-    "taskAr": "اكتب 6 جمل عن أمس — استعمل الماضي التام 5 مرات على الأقل (3 مع haben و2 مع sein). (الهدف: 100 كلمة تقريباً).",
+    "taskAr": "اكتب 6 جمل عن أمس — استعمل الماضي التام 5 مرات على الأقل (3 مع haben و2 مع sein). (الهدف: 40 كلمة تقريباً).",
     "criteria": [
-      "hat/ist في الموضع الثاني والتصريف الثالث للنهاية",
+      "الفعل المساعد المصرف (haben/sein) في الموضع الثاني، وPartizip II في نهاية الجملة",
       "تباين صحيح بين haben و sein",
       "ظروف زمنية: gestern, am Morgen, dann",
       "جملة بفعل منفصل (aufgestanden / eingekauft)"
     ],
-    "sample": "Gestern bin ich früh aufgestanden. Ich habe schnell gefrühstückt und bin zur Arbeit gefahren. Am Mittag habe ich mit Kollegen gegessen. Am Nachmittag habe ich einen langen Bericht geschrieben. Am Abend bin ich müde nach Hause gegangen. Danach habe ich meine Tasche gepackt und bin früh schlafen gegangen. Ich habe noch eine Stunde Deutsch gelernt und heute sehr viel Energie.",
+    "sample": "Gestern bin ich früh aufgestanden. Ich habe schnell gefrühstückt. Dann bin ich zur Arbeit gefahren. Am Mittag habe ich mit Kollegen gegessen. Am Nachmittag habe ich einen langen Bericht geschrieben. Danach war ich sehr müde.",
     "noteAr": [
-      "ست جمل، خمسة Perfekt، وتناوبُ haben/sein مُطبَقٌ بلا شذوذ: bin…aufgestanden / habe…gegessen",
-      "الفعل المنفصل في التام: aufgestanden — البادئة ge في منتصفها، الدرسُ كله في كلمة",
-      "الترتيب الزمني ظاهريٌّ بظرفٍ في صدر كل جملة — Gestern / Am Mittag / Am Abend: لا تحتاج حينها روابط"
+      "يعرض النموذج خمس صيغ Perfekt: اثنتان مع sein وثلاث مع haben، ثم يستخدم war لوصف الحالة الأخيرة.",
+      "في aufgestanden تأتي ge بين البادئة auf وجذر الفعل stehen.",
+      "تنظم الظروف الأحداث بوضوح: Gestern، ثم Dann وAm Mittag وAm Nachmittag وDanach."
     ],
-    "zielWort": 100
+    "zielWort": 40
   },
   {
     "id": "w-a2-02",
@@ -177,19 +177,19 @@
     "titleDe": "Warum ich Deutsch lerne",
     "titleAr": "لماذا أتعلّم الألمانية",
     "taskDe": "Schreibe einen Absatz (5–6 Sätze) mit 2× „weil“ und 1× „dass“. Denk an die Wortstellung!",
-    "taskAr": "اكتب فقرة (5–6 جمل) مع weil مرتين و dass مرة. انتبه لموضع الفعل! (الهدف: 100 كلمة تقريباً).",
+    "taskAr": "اكتب فقرة (5–6 جمل) مع weil مرتين و dass مرة. انتبه لموضع الفعل! (الهدف: 60 كلمة تقريباً).",
     "criteria": [
       "weil/dass + فعل للنهاية",
       "رأي شخصي واحد على الأقل",
-      "كلمات ربط زمنية (zuerst, dann, natürlich)"
+      "روابط مناسبة لتنظيم الفقرة، مثل natürlich وtrotzdem وdeshalb"
     ],
-    "sample": "Ich lerne Deutsch, weil ich nächstes Jahr in Deutschland studieren möchte. Meine Freundin sagt, dass die Grammatik schwer ist. Ich finde sie aber interessant. Natürlich ist die Aussprache nicht leicht. Trotzdem lerne ich jeden Tag, weil man nur so Fortschritte macht. Ich habe gestern einen Artikel gelesen, in dem stand, dass tägliches Üben sehr hilft. Deshalb höre ich jeden Abend einen Podcast und schreibe neue Wörter auf.",
+    "sample": "Ich lerne Deutsch, weil ich nächstes Jahr in Deutschland studieren möchte. Meine Freundin sagt, dass die Grammatik schwer ist. Ich finde sie aber interessant. Natürlich ist die Aussprache nicht leicht. Trotzdem lerne ich jeden Tag, weil man nur so Fortschritte macht. Deshalb höre ich jeden Abend einen Podcast und schreibe neue Wörter auf.",
     "noteAr": [
-      "weil و dass في مواضعها، والفعلُ في القعر كل مرة — المعيارُ الذي يفصل A2 عن A1",
-      "رأيٌ صريح واحد (Ich finde sie aber interessant) كما يطلب المعيار — لا نصيحةٌ بلا «أنا»",
-      "رأيٌ شخصي بـ aber ثم ختامٌ بـ trotzdem في جملةٍ مستقلة — ثلاثُ أدواتٍ في خمسة أسطر، كلٌّ في حجمها"
+      "بعد weil وdass يأتي الفعل المصرف في نهاية الجملة التابعة.",
+      "يعرض النموذج رأياً شخصياً صريحاً في جملة Ich finde sie aber interessant.",
+      "يربط النموذج الأفكار بـaber وtrotzdem وdeshalb، ويستخدم weil مرتين وdass مرة كما تطلب المهمة."
     ],
-    "zielWort": 100
+    "zielWort": 60
   },
   {
     "id": "w-a2-03",
@@ -198,19 +198,19 @@
     "titleDe": "Reise-E-Mail",
     "titleAr": "بريد رحلة",
     "taskDe": "Schreibe eine E-Mail an eine Freundin über deine Reise: Wohin, wann, wie (Zug/Flug), Hotel.",
-    "taskAr": "اكتب بريداً إلى صديقة عن رحلتك: إلى أين، متى، كيف (قطار/طائرة)، الفندق. (الهدف: 100 كلمة تقريباً).",
+    "taskAr": "اكتب بريداً إلى صديقة عن رحلتك: إلى أين، متى، كيف (قطار/طائرة)، الفندق. (الهدف: 70 كلمة تقريباً).",
     "criteria": [
       "بنية البريد: ترحيب + محتوى + خاتمة",
       "Perfekt أو Futur I مرة واحدة",
       "معلومات السفر الأربع كاملة"
     ],
-    "sample": "Liebe Salma, wie geht es dir? Ich bin gestern nach München gefahren. Der Zug war pünktlich und bequem. Ich wohne in einem kleinen Hotel gegenüber vom Bahnhof. Am Abend habe ich im Restaurant gegessen und bin früh ins Bett gegangen. Morgen treffe ich einen Freund und wir fahren zum Englischen Garten. Ich habe gehört, dass es dort sehr schön ist. Schreib mir bald! Viele Grüße, Nour",
+    "sample": "Liebe Salma,\n\nwie geht es dir? Ich bin gestern nach München gefahren. Der Zug war pünktlich und bequem. Ich wohne in einem kleinen Hotel gegenüber vom Bahnhof. Am Abend habe ich im Restaurant gegessen und bin früh ins Bett gegangen. Morgen treffe ich einen Freund und wir fahren zum Englischen Garten. Ich habe gehört, dass es dort sehr schön ist. Schreib mir bald!\n\nViele Grüße\nNour",
     "noteAr": [
-      "بريدٌ كامل: Liebe… / محتوى / Schreib mir bald! / Viele Grüße — الهيكلُ يُدرَّس بالبنيان لا بالقوائم",
-      "مرتان Perfekt (bin…gefahren / war) وجملة حاضرةٍ بالمستقبل الدلالي — توازنُ أزمنةٍ صغير لكنه مسجَّل",
-      "معلوماتُ السفر الأربع كلها: وجهةٌ وموعدٌ ووسيلةٌ ونُزل — لا تُعَفَّ عن واحدةٍ لأنها «بديهية»"
+      "يحافظ النموذج على بنية البريد: تحية، ومحتوى، وطلب رد، ثم خاتمة باسم المرسل.",
+      "يستخدم Perfekt في bin gefahren وhabe gegessen وbin … gegangen وhabe gehört، ويستخدم war لوصف القطار.",
+      "يذكر الوجهة والوقت ووسيلة السفر والفندق كما تطلب المهمة."
     ],
-    "zielWort": 100
+    "zielWort": 70
   },
   {
     "id": "w-a2-04",
@@ -219,19 +219,19 @@
     "titleDe": "Beim Arzt – eine Erklärung",
     "titleAr": "شرح للطبيب",
     "taskDe": "Schreibe, was du dem Arzt sagst: Symptome seit wann, Schmerzen, Medizin.",
-    "taskAr": "اكتب ما ستقوله للطبيب: الأعراض منذ متى، الآلام، الدواء. (الهدف: 100 كلمة تقريباً).",
+    "taskAr": "اكتب ما ستقوله للطبيب: الأعراض منذ متى، الآلام، الدواء. (الهدف: 70 كلمة تقريباً).",
     "criteria": [
       "seit + Dativ (seit drei Tagen)",
       "weh tun مع الجسم",
-      "طلب أو سؤال مهذّب للمطّب"
+      "طلب أو سؤال مهذّب للطبيب"
     ],
-    "sample": "Seit drei Tagen tut mir der Hals weh. Ich habe Fieber und bin sehr müde. Ich habe auch ein bisschen Husten. In der Nacht habe ich schlecht geschlafen, weil der Husten so stark war. Ich habe noch keinen Tee mit Honig getrunken. Was soll ich tun, Herr Doktor? Soll ich zum Arzt kommen oder kann ich zu Hause bleiben? Muss ich Medizin nehmen?",
+    "sample": "Seit drei Tagen tut mir der Hals weh. Ich habe Fieber und bin sehr müde. Außerdem habe ich starken Husten. In der Nacht habe ich schlecht geschlafen, weil der Husten so stark war. Ich habe schon Tee mit Honig getrunken, aber es hat nicht geholfen. Was soll ich tun, Herr Doktor? Soll ich zu Hause bleiben? Muss ich ein Medikament nehmen?",
     "noteAr": [
-      "seit + داتيف حيّة: Seit drei Tagen — حرفٌ واحد يُصلح ما يفسده الجميع",
-      "جسمٌ مرفوعٌ مع weh tun: tut mir der Hals weh — الصيغةُ لا تُختَرع",
-      "سؤالٌ مهذب في الختام (Was soll ich tun, Herr Doktor?) — مريضٌ يسلم قيادته بأدب فيُكافأ"
+      "تأتي المدة بعد seit في الداتيف: seit drei Tagen.",
+      "في تركيب weh tun يكون موضع الألم هو الفاعل: Der Hals tut mir weh.",
+      "يختم النموذج بأسئلة مباشرة ومهذبة عن العلاج والبقاء في المنزل."
     ],
-    "zielWort": 100
+    "zielWort": 70
   },
   {
     "id": "w-a2-05",
@@ -240,19 +240,19 @@
     "titleDe": "Einladung schreiben",
     "titleAr": "كتابة دعوة",
     "taskDe": "Schreibe eine Einladung zu einer Feier: Anlass, Tag, Uhrzeit, Ort, was mitbringen.",
-    "taskAr": "اكتب دعوة لحفلة: المناسبة، اليوم، الساعة، المكان، ماذا يحضر الضيوف. (الهدف: 100 كلمة تقريباً).",
+    "taskAr": "اكتب دعوة لحفلة: المناسبة، اليوم، الساعة، المكان، ماذا يحضر الضيوف. (الهدف: 70 كلمة تقريباً).",
     "criteria": [
       "فعل أمر أو دعوة مهذّبة (Komm vorbei! / Kannst du kommen?)",
       "كل المعلومات الخمس",
       "نبرة ودّية + خاتمة"
     ],
-    "sample": "Liebe Amina, am Samstag feiere ich meinen Geburtstag! Die Party beginnt um achtzehn Uhr bei mir zu Hause. Es gibt Kuchen und Musik. Bring bitte deine Cousine mit! Wir haben viel Platz und du kannst auch deinen Bruder einladen. Nach dem Kuchen spielen wir Spiele und hören alte Lieder. Bitte sag mir bald Bescheid, ob du kommen kannst. Ich freue mich auf dich. Viele Grüße, Nour",
+    "sample": "Liebe Amina,\n\nam Samstag feiere ich meinen Geburtstag! Die Party beginnt um achtzehn Uhr bei mir zu Hause. Es gibt Kuchen und Musik. Bring bitte einen Salat mit! Wir haben viel Platz und du kannst auch deine Cousine einladen. Nach dem Kuchen spielen wir Spiele und hören alte Lieder. Bitte sag mir bald Bescheid, ob du kommen kannst. Ich freue mich auf dich.\n\nViele Grüße\nNour",
     "noteAr": [
-      "خمس معلومات كاملة: مناسبة ويومٌ وساعةٌ ومكانٌ وما يُجلَب — لا تُرْمَز واحدةٌ بقرينة",
-      "فعل أمرٌ ودعوة معاً: feiere…! / Bring bitte… — الأمرُ بالألمانية مهذبٌ بحرفٍ واحد",
-      "«Ich freue mich auf dich» — جملةُ ودٍّ ختامية تُنقِذ قائمة المعلومات من الجفاف"
+      "يذكر النموذج المناسبة واليوم والساعة والمكان وما ينبغي إحضاره.",
+      "تعرض جملة Bring bitte einen Salat mit صيغة أمر مهذبة بـbitte.",
+      "تغلق جملة Ich freue mich auf dich الدعوة بنبرة ودية قبل التحية الختامية."
     ],
-    "zielWort": 100
+    "zielWort": 70
   },
   {
     "id": "w-b1-01",
@@ -268,13 +268,13 @@
       "جملة بـ Konjunktiv II",
       "خاتمة أو توصية"
     ],
-    "sample": "Meiner Meinung nach sollten Handys in Schulen eingeschränkt werden, weil sie die Konzentration stören: Ein kurzer Blick aufs Display genügt, und der Faden der Erklärung ist gerissen. Obwohl Handys nützliche Werkzeuge sind – als Wörterbuch oder Taschenrechner –, spielen sie im Unterricht oft nur eine Nebenrolle. Deshalb würde ich empfehlen, sie zu Stundenbeginn einsammeln und in der Pause zurückgeben zu lassen. Könnten Lehrkräfte zudem bewusste Medienminuten einbauen, hätten die Schüler ein doppeltes Lernfeld: Stoff und Selbstkontrolle. So wird das Handy vom Störenfried zum Gehilfen – nur eben nicht zur falschen Zeit.",
+    "sample": "Meiner Meinung nach sollten Handys in Schulen eingeschränkt werden, weil sie die Konzentration stören: Ein kurzer Blick aufs Display genügt, und der Faden der Erklärung ist gerissen. Obwohl Handys nützliche Werkzeuge sind – als Wörterbuch oder Taschenrechner –, spielen sie im Unterricht oft nur eine Nebenrolle. Deshalb würde ich empfehlen, sie zu Stundenbeginn einzusammeln und erst in der Pause wieder auszugeben. Könnten Lehrkräfte zudem bewusste Medienminuten einbauen, hätten die Schüler ein doppeltes Lernfeld: Stoff und Selbstkontrolle. So wird das Handy vom Störenfried zum Gehilfen – nur eben nicht zur falschen Zeit.",
     "noteAr": [
-      "كل أدوات المعيار في مواضعها: meiner Meinung nach / weil / obwohl / deshalb + würde — أربعُ علاماتِ تصريفٍ يقرأها المصححُ كأنه يمسحُ بطاقات",
-      "«Könnten Lehrkräfte zudem…» — جملةُ شرطٍ بلا wenn بقلب الفعل أولاً: ترفٌ في B1 يستحق الإشادة",
-      "الإطار دائري: يبدأ باليد كالمُزعج ويختم بها كالمُعين — بنيةٌ تُدرِّسُ البلاغة قبل اسمها"
+      "يستخدم النموذج meiner Meinung nach وweil وobwohl وdeshalb، ويعرض Konjunktiv II في sollten وwürde.",
+      "تقدم جملة Könnten Lehrkräfte …, hätten die Schüler … شرطاً من دون wenn مع الفعل في البداية.",
+      "تختم الفقرة بتوصية تربط استعمال الهاتف بالوقت والغرض."
     ],
-    "zielWort": 100
+    "zielWort": 80
   },
   {
     "id": "w-b1-02",
@@ -286,15 +286,15 @@
     "taskAr": "اكتب جوهر خطاب التوظيف (100 كلمة): من أنت؟ لماذا هذا المنصب؟ ماذا تقدّم؟ استعمل جملتين وصفيتين.",
     "criteria": [
       "أسلوب رسمي (Sie، بلا عامية)",
-      "ذاتي بضمير وصفي",
+      "جملتا صلة على الأقل بضمير موصول مناسب",
       "سبب الترشّح واضح",
       "خاتمة بالترحيب بمقابلة"
     ],
-    "sample": "Sehr geehrte Damen und Herren, mit großem Interesse habe ich mich um die Stelle beworben, die Sie auf Ihrer Website ausgeschrieben haben. Ich bin Ingenieurin, die drei Jahre Erfahrung in der Entwicklung nachhaltiger Antriebe gesammelt hat. Besonders reizt mich an Ihrem Haus die Projektarbeit, die Technik und Umwelt zusammenbringt. In meiner jetzigen Firma habe ich ein Team von vier Kolleginnen geführt; das hat mich fachlich wie persönlich weitgebracht. Eine Übersicht meiner Projekte füge ich der Bewerbung bei. Über eine Einladung zu einem Gespräch, in dem ich Sie von meiner Motivation überzeugen kann, würde ich mich sehr freuen. Mit freundlichen Grüßen, Nadia Ferchichi",
+    "sample": "Sehr geehrte Damen und Herren,\n\nmit großem Interesse bewerbe ich mich um die Stelle, die Sie auf Ihrer Website ausgeschrieben haben. Ich bin Ingenieurin und habe drei Jahre Erfahrung in der Entwicklung nachhaltiger Antriebe. Besonders reizt mich die Projektarbeit, die Technik und Umwelt zusammenbringt. In meiner jetzigen Firma leite ich ein Team, das aus vier Kolleginnen und Kollegen besteht. Diese Aufgabe hat mich fachlich und persönlich weitergebracht. Eine Übersicht meiner Projekte füge ich der Bewerbung bei. Über eine Einladung zu einem Gespräch, in dem ich meine Motivation näher erläutern kann, würde ich mich sehr freuen.\n\nMit freundlichen Grüßen\nNadia Ferchichi",
     "noteAr": [
-      "أربعةُ أوصال موصولة (die/der/das/was/in dem) — اثنان يكفيان، والزيادةُ بلا خطأ تُحسب لا تُخصم",
-      "ضميرُ العمل بصيغة المتكلم الفخري بلا تباهٍ: Ich bin Ingenieurin, die… — المعيارُ الذاتي بدقة",
-      "الخاتمة بدعوة مقابلةٍ بصيغة Konjunktiv (würde mich freuen) — البروتوكولُ الرسمي مُنجَزٌ حتى الحرف الأخير"
+      "تعرض الجمل die Sie … ausgeschrieben haben وdie Technik … zusammenbringt وdas aus … besteht صلات موصولة واضحة.",
+      "تذكر الرسالة الخبرة وسبب الاهتمام بالوظيفة ومثالاً على قيادة فريق.",
+      "تستخدم الخاتمة würde ich mich sehr freuen لطلب المقابلة بأدب."
     ],
     "zielWort": 100
   },
@@ -314,11 +314,11 @@
     ],
     "sample": "Bevor ich nach Deutschland gekommen war, hatte ich drei Jahre Deutsch gelernt – an der Volkshochschule, mit Karteikarten und einer Lehrerin, die mir Mut machte. Trotzdem war der Anfang schwer: Im ersten Bürogespräch verstand ich nur Bahnhof, obwohl ich doch alles gelernt hatte. Ein Kollege hat mir sehr geholfen: Er hat mich ermutigt, einfach zu sprechen, auch mit Fehlern. Ohne ihn hätte ich nicht so schnell Fortschritte gemacht. Heute, zwei Jahre später, denke ich dankbar an diese erste Stunde im falschen Konferenzraum zurück – und lächle.",
     "noteAr": [
-      "war/hatte ليستا تزييناً: السردُ الألمانيُّ لا يقول «ist gewesen» في الكتابة — وهذه كانت فجوةَ المنهجِ حتى أُغلِقَت بدرسَي a1-war-hatte و a2-praeteritum",
-      "Plusquamperfekt مُثبَّتٌ في صدر «Bevor…» مرتين ثم مفارِقٌ عند الشعور — استخدامٌ وظيفي لا استعراضي",
-      "Perfekt مزدوج للحليف (hat geholfen / hat ermutigt) ثم رجوعٌ للحاضر (Heute… denke) — الزمنُ يُديرُ الحكاية"
+      "يستخدم النموذج war وhatte في السرد، ويضع hatte … gelernt وgekommen war للأحداث السابقة.",
+      "تظهر صيغتا Perfekt في hat … geholfen وhat … ermutigt داخل جزء الحوار عن الزميل.",
+      "ينتقل الختام إلى الحاضر في Heute … denke ليبين أثر التجربة الآن."
     ],
-    "zielWort": 100
+    "zielWort": 80
   },
   {
     "id": "w-b1-04",
@@ -331,13 +331,13 @@
     "criteria": [
       "بناء ثلاثي واضح",
       "obwohl/trotzdem/deshalb كلها مستعملة",
-      "أقل تقدير واحد مدعوم بأرقام أو مثال"
+      "حجة واحدة على الأقل مدعومة بمثال ملموس"
     ],
-    "sample": "In unserer Stadt wird über neue Radwege diskutiert – hitziger, als man erwarten würde. Einerseits kosten sie Geld, andererseits verbessern sie die Luft und machen die Wege sicherer. Eine Umfrage zeigt: 70 Prozent würden das Auto stehen lassen, wenn es gute Radwege gäbe. Obwohl die Anfangskosten hoch sind, rechnet sich der Bau langfristig – weniger Staus, weniger Lärm, gesündere Kinder. Trotzdem fordern Anwohner Ersatz für wegfallende Parkplätze; ihr Einwand verdient eine ernsthafte Antwort, keine Abwehr. Deshalb sollten die Radwege gebaut werden – zusammen mit einem Parkraumkonzept. Für Gesundheit und Umwelt ist jede eingesparte Autofahrt ein Gewinn; die Frage ist nur, wer zuerst den Mut hat.",
+    "sample": "In unserer Stadt wird über neue Radwege diskutiert – hitziger, als man erwarten würde. Einerseits kosten sie Geld, andererseits verbessern sie die Luft und machen die Wege sicherer. Ein sicherer Radweg zwischen Wohnvierteln, Schulen und Bahnhöfen würde vielen Menschen eine echte Alternative zum Auto geben. Obwohl die Anfangskosten hoch sind, rechnet sich der Bau langfristig – weniger Staus, weniger Lärm, gesündere Kinder. Trotzdem fordern Anwohner Ersatz für wegfallende Parkplätze; ihr Einwand verdient eine ernsthafte Antwort, keine Abwehr. Deshalb sollten die Radwege gebaut werden – zusammen mit einem Parkraumkonzept. Für Gesundheit und Umwelt ist jede eingesparte Autofahrt ein Gewinn; die Frage ist nur, wer zuerst den Mut hat.",
     "noteAr": [
-      "البناء الثلاثي ظاهرٌ بلا عنوان: قضية ← حجتان ← موقف — حتى المصحح المتعجّل يراه",
-      "رقمٌ مُدَّعًى لا مُوهَمًا: 70 Prozent + «würden…stehen lassen» شرطية — أرقامُ التعليقات أسلحةٌ لا حلي",
-      "الإجابة عن اعتراضِ الأنوار (Trotzdem fordern Anwohner…) قبل التوصية — فنُّ «خذِ الخصمَ على محمل الجد» مذكورٌ باسمه"
+      "يتدرج النص من عرض القضية إلى حجتين ثم موقف ختامي واضح.",
+      "يدعم مثال الطريق الذي يربط الأحياء والمدارس والمحطات حجة الاستغناء عن السيارة من دون نسبة مختلقة.",
+      "يعرض اعتراض فقدان مواقف السيارات قبل اقتراح الجمع بين مسارات الدراجات وخطة للمواقف."
     ],
     "zielWort": 100
   },
@@ -347,8 +347,8 @@
     "format": "frei",
     "titleDe": "Rat geben",
     "titleAr": "تقديم نصيحة",
-    "taskDe": "Ein Freund will seinen Job kündigen, obwohl er gut verdient. Schreibe deinen Rat (80 Wörter) mit Konjunktiv II.",
-    "taskAr": "صديق يريد ترك عمله رغم راتبه الجيد. اكتب نصيحتك (80 كلمة) بـ كونونكتيف الثاني.",
+    "taskDe": "Ein Freund will seinen Job kündigen, obwohl er gut verdient. Schreibe deinen Rat (ca. 100 Wörter) mit Konjunktiv II.",
+    "taskAr": "صديق يريد ترك عمله رغم راتبه الجيد. اكتب نصيحتك (100 كلمة تقريباً) بـ كونونكتيف الثاني.",
     "criteria": [
       "نصيحتان على الأقل بصيغة würde/müsste/könnte",
       "جملة شرط غير واقعة (wenn … hätte)",
@@ -356,9 +356,9 @@
     ],
     "sample": "Lieber Karim, ich würde dir raten, über die Gründe erst einmal in Ruhe nachzudenken – Kündigung ist schnell ausgesprochen, das gute Gehalt kommt nicht genauso schnell zurück. Wenn ich an deiner Stelle wäre, hätte ich zuerst ein Gespräch mit dem Chef geführt; oft lässt sich mehr ändern, als man denkt. Falls du trotzdem gehen möchtest, würde ich empfehlen, vorher einen neuen Vertrag in der Tasche zu haben. Niemandem ist geholfen, wenn Frust gegen Leere getauscht wird. Vielleicht hilft dir auch der Gedanke, dass ein guter Chef dich gehen lässt und ein schlechter dich nie gehalten hat. Entscheiden musst du selbst – ich drücke dir die Daumen, egal wie es ausgeht.",
     "noteAr": [
-      "نبرتا نصيحةٍ متدرجتان: würde raten / würde empfehlen — بين اللياقةِ والإلحاحِ خيطٌ لا يُرى ويُحفَظ",
-      "جملةُ «Wenn ich an deiner Stelle wäre, hätte ich…» — النموذجُ المدرسيُّ للشرط غير الواقع، موضوعةٌ في فم الصديق لا الكتاب",
-      "«Entscheiden musst du» — تسليمُ القرار للمُوجَّه إليه: المعيارُ الرابع (احترامُ الاختيار) مُنجَزٌ في سطرٍ واحد"
+      "تستخدم النصيحة würde dir raten وwürde ich empfehlen بصيغة مهذبة.",
+      "تعرض جملة Wenn ich an deiner Stelle wäre, hätte ich … شرطاً غير واقعي.",
+      "تترك جملة Entscheiden musst du selbst القرار النهائي للصديق."
     ],
     "zielWort": 100
   },
@@ -377,12 +377,11 @@
       "خاتمة فيها توصية أو سؤال مفتوح",
       "بلا عامية (keine Umgangssprache)"
     ],
-    "sample": "Soziale Medien spielen in unserem Alltag eine große Rolle. Einerseits verbinden sie Menschen über Grenzen hinweg; andererseits stellen viele Studien ihre Wirkung auf die Zufriedenheit infrage. Ein Psychologe erklärte kürzlich, der ständige Vergleich mit inszenierten Leben führe nachweislich zu Unzufriedenheit, zumal der Algorithmus Empörung höher bewerte als Zufriedenheit. Dennoch wäre ein Verbot der falsche Weg – Verbote machen Neugier erst interessant. Entscheidender ist die Kompetenz der Nutzerinnen und Nutzer: Wer Werbung als Werbung erkennt, lässt sich seltener vermessen. Meines Erachtens sollte deshalb Medienbildung früher in die Lehrpläne, damit Jugendliche die Werkzeuge beherrschen, statt von ihnen beherrscht zu werden. Dabei spielt auch die Sprache eine Rolle: Wer sagt «Ich bin traurig, weil niemand mein Bild geliked hat», verwechselt Aufmerksamkeit mit Anerkennung. Die Forschung zeigt zugleich, dass moderater Konsum kaum schadet, solange das Gespräch im echten Leben nicht verstummt. Ob uns das schnell genug gelingt, steht freilich dahin.",
+    "sample": "Soziale Medien spielen im Alltag eine große Rolle. Einerseits verbinden sie Menschen über Entfernungen hinweg; andererseits kann der ständige Vergleich mit sorgfältig ausgewählten Bildern unzufrieden machen. In einer Schuldiskussion erklärte eine Schülerin, dieser Vergleich setze viele Jugendliche unter Druck; außerdem werde Werbung nicht immer als solche erkannt. Jedoch wäre ein allgemeines Verbot der falsche Weg, weil soziale Netzwerke auch Information und Austausch ermöglichen. Entscheidend ist deshalb die Kompetenz der Nutzerinnen und Nutzer. Wer Quellen prüft, Benachrichtigungen begrenzt und Pausen einplant, lässt sich weniger leicht ablenken. Dennoch tragen auch Plattformen Verantwortung: Verständliche Einstellungen und klare Werbekennzeichnung sollten selbstverständlich sein. Meines Erachtens gehört Medienbildung früher in den Unterricht, damit Jugendliche Chancen nutzen und Risiken erkennen können. Ob soziale Medien uns unzufriedener machen, hängt somit nicht nur von der Technik, sondern auch von Regeln und Gewohnheiten ab.",
     "noteAr": [
-      "منقولٌ بـ Konjunktiv I حيّ: führe… / bewerte… — لا تجميلٌ بل نقلُ أمانة",
-      "الفعلُ الوظيفي مُزدوج: eine Rolle spielen + infrage stellen — المعيارُ مُنجَزٌ في أول سطرين",
-      "خاتمةٌ بسؤالٍ مفتوح (Ob uns das… steht dahin) — قالبُ التعليق الصحفيّ يُغلَق ولا يُغلِق",
-      "غوته B2 الكتابة: مساهمة منتدى ~150 كلمة — 45 دقيقة الجزء 1/2"
+      "يعرض النموذج موقفين بوضوح عبر einerseits وandererseits، ثم يضيف قيداً عملياً قبل التوصية.",
+      "يظهر النقل غير المباشر في setze وwerde، ويظهر التركيب الوظيفي المطلوب في eine Rolle spielen.",
+      "تربط الخاتمة المسؤولية بالتثقيف الإعلامي بدلاً من إطلاق حكم سببي غير موثّق."
     ],
     "zielWort": 150,
     "b2Typ": "forum",
@@ -397,19 +396,18 @@
     "taskDe": "Schreibe eine formelle E-Mail (ca. 120 Wörter) an eine Firma: Interesse an einer Stelle, Qualifikationen, Termin für Gespräch. Nutze Funktionsverbgefüge + erweiterten Infinitiv.",
     "taskAr": "اكتب بريداً رسمياً (120 كلمة) إلى شركة: اهتمام بمنصب، مؤهلات، موعد مقابلة. استعمل التركيبات الوظيفية والمصدر المطوّل.",
     "criteria": [
-      "صيغة Sie كاملة + أسلوب رسمي (أفعل/يُفعل)",
-      "Funktionsverbgefüge اثنان",
-      "um zu / ohne zu / statt zu مرة واحدة",
-      "بنية: مقدمة ← سبب ← طلب ← خاتمة"
+      "صيغة Sie كاملة وتنسيق رسمي",
+      "تركيبان وظيفيان على الأقل",
+      "استخدام um zu وohne zu وstatt zu في سياق صحيح",
+      "بنية: موضوع الرسالة، اهتمام، مؤهلات، طلب مقابلة، ختام"
     ],
-    "sample": "Sehr geehrte Damen und Herren, mit großem Interesse habe ich Ihre Stellenanzeige gelesen. Die ausgeschriebene Stelle bringt zwei Dinge zusammen, die mich fachlich prägen: Projektarbeit und Datenanalyse. Ich möchte meine Erfahrung in der Prozessautomatisierung gern in Ihr Team einbringen. Um meine Eignung zu belegen, füge ich einen Kurzbericht zweier Projekte bei, die ohne technische Fremdwörter auskommen und deren Ergebnis sich in Zahlen messen lässt. In einem Projekt habe ich die Bearbeitungszeit von Anträgen um dreißig Prozent verringert, indem ich wiederkehrende Schritte automatisiert habe. Im zweiten habe ich ein Dashboard aufgebaut, das Fehler sichtbar macht, bevor sie teuer werden. Statt mich in Floskeln zu verlieren, trete ich lieber den Beweis selbst an: In einem Gespräch innerhalb der nächsten zwei Wochen lege ich gern dar, wie ich Ihrer Abteilung zur Entlastung verhelfen kann. Über eine Einladung freue ich mich. Mit freundlichen Grüßen, A. Mansour",
+    "sample": "Betreff: Bewerbung als Projektmitarbeiterin\n\nSehr geehrte Damen und Herren,\n\nhiermit möchte ich mein Interesse an der ausgeschriebenen Stelle bekunden. Während meines Studiums und meiner zweijährigen Tätigkeit in der Datenanalyse habe ich Projekte geplant und wiederkehrende Abläufe automatisiert. Damit kann ich einen konkreten Beitrag zu Ihrem Team leisten. Um Ihnen einen kurzen Einblick in meine Arbeit zu geben, füge ich zwei verständlich aufbereitete Projektbeispiele bei, ohne unnötige Fachbegriffe zu verwenden. Statt nur meine Qualifikationen aufzuzählen, erläutere ich Ihnen gern persönlich, wie ich Ihre Abteilung unterstützen könnte. Für ein Gespräch stehe ich in den kommenden zwei Wochen dienstags oder donnerstags am Nachmittag zur Verfügung. Über eine Einladung würde ich mich sehr freuen.\n\nMit freundlichen Grüßen\nAmina Mansour",
     "noteAr": [
-      "ثلاثيةُ um zu / ohne… / statt zu في مواضعها النحوية الصحيحة — معيارٌ لا ينجو منه إلا من درَّب",
-      "Funktionsverbgefüge ×2: einbringen + zur Entlastung verhelfen (وتَنجَز «den Beweis antreten») — ثلاثٌ إن حسبت",
-      "طلبُ موعدٍ بإطار زمني محدد (binnen zwei Wochen) — الرسميةُ لا تعني الضبابية",
-      "غوته B2 الكتابة: رسالة رسمية ~100 كلمة — 30 دقيقة الجزء 2/2"
+      "تتبع الرسالة ترتيباً مهنياً: موضوع الرسالة، الاهتمام، المؤهلات، ثم طلب المقابلة والختام.",
+      "يظهر تركيبان اسميان فعليان على الأقل في Interesse bekunden وeinen Beitrag leisten وzur Verfügung stehen.",
+      "تُستخدم um zu وohne zu وstatt zu داخل سياق الطلب، لا كجمل منفصلة للحفظ."
     ],
-    "zielWort": 100,
+    "zielWort": 120,
     "b2Typ": "nachricht",
     "dauerMin": 30
   },
@@ -422,17 +420,16 @@
     "taskDe": "Rezension eines Buches/Films (ca. 150 Wörter): Inhalt kurz → Stärken/Schwächen → Fazit mit Empfehlung. Nutze zwar … doch, obgleich, im Hinblick auf.",
     "taskAr": "مراجعة كتاب/فيلم (150 كلمة): محتوى موجز ← قوة/ضعف ← خاتمة بتوصية. استعمل: صحيح أن… لكن، رغم أن، في ضوء.",
     "criteria": [
-      "تلخيص بلا كشف النهاية!",
-      "نقد متوازن (قوة واحدة وضعف واحد)",
-      "Konnektoren رفيعة (wenngleich, zugegeben, insgesamt)",
+      "تلخيص بلا كشف النهاية",
+      "نقد متوازن: قوة واحدة وضعف واحد على الأقل",
+      "روابط متنوعة مثل obgleich وzugegeben وinsgesamt",
       "توصية مبرَّرة"
     ],
-    "sample": "Der Roman, dessen Titel manchem zu viel verspricht, hält fast alles, was er verspricht. Wer ein Buch sucht, das nicht nur unterhält, sondern zum Denken anregt, liegt hier richtig. Erzählt wird von einer Familie, die über drei Generationen hinweg ihre Sprache verliert; das Ende – mehr sei nicht verraten – passt in eine einzige Bahnhofsdurchsage. Zwar ist der Anfang langsam, doch ab dem zweiten Kapitel entwickelt die Handlung enorme Spannung. Obgleich die Rahmenhandlung gelegentlich konstruiert wirkt, überzeugt die Autorin durch Genauigkeit im Kleinen. Die Figuren bleiben im Hinblick auf ihre Widersprüche etwas blass; man erfährt, was sie tun, seltener, warum sie es tun. Zugegeben: Wer epische Ruhe sucht, wird hier fündig. Insgesamt – trotz der genannten Schwäche – eine klare Empfehlung für alle, die Literatur als Denkübung lesen.",
+    "sample": "Der Roman erzählt von einer Familie, die über drei Generationen hinweg ihre gemeinsame Sprache verliert. Im Mittelpunkt steht Leila, die nach vielen Jahren in ihre Heimatstadt zurückkehrt und dort alte Tonaufnahmen entdeckt. Mehr über die letzte Aufnahme soll nicht verraten werden. Zwar beginnt die Handlung langsam, doch ab dem zweiten Kapitel entwickelt sie eine überzeugende Spannung. Obgleich einige Zufälle konstruiert wirken, beschreibt die Autorin kleine Gesten und Gespräche sehr genau. Besonders Leilas Konflikt zwischen Zugehörigkeit und Distanz bleibt im Gedächtnis. Im Hinblick auf die Nebenfiguren hätte ich mir allerdings mehr Tiefe gewünscht; ihre Entscheidungen werden nicht immer nachvollziehbar. Zugegeben, wer schnelle Action erwartet, wird mit dem ruhigen Erzähltempo wenig anfangen können. Insgesamt überwiegen jedoch die Stärken. Ich empfehle den Roman allen, die Familiengeschichten mögen und bereit sind, über Sprache, Erinnerung und Herkunft nachzudenken.",
     "noteAr": [
-      "تلخيصٌ بلا نهاية: «passt in eine Bahnhofsdurchsage — mehr sei nicht verraten» — الهمزُ بذكاء بدلَ الحرق",
-      "زوايا الربط الرفيعة كلها: zwar…doch / obgleich / im Hinblick auf / zugegeben / insgesamt — المعيارُ مُستنفَدٌ حرفياً",
-      "نقدٌ متزن حتى في الجملة الواحدة: قوةُ التفاصيل، ضعفُ الشخصيات — الميزانُ لا المجاملة",
-      "غوته B2 الكتابة: مساهمة منتدى ~150 كلمة — 45 دقيقة الجزء 1/2"
+      "يلخّص النموذج موضوع الرواية من دون كشف النهاية، ثم يفصل بين قوة السرد وضعف بناء الشخصيات.",
+      "تُنظّم الروابط zwar … doch وobgleich وim Hinblick auf وinsgesamt الانتقال من العرض إلى التقويم.",
+      "تأتي التوصية في النهاية ومقيّدة بنوع القارئ الذي قد يستفيد من الكتاب."
     ],
     "zielWort": 150,
     "b2Typ": "forum",
@@ -452,12 +449,11 @@
       "موقف شخصي حاسم في النهاية",
       "أسلوب موضوعي (بلا أنا كثير)"
     ],
-    "sample": "Die Debatte über Homeoffice wird kontrovers geführt – quer durch alle Einkommensschichten, wie jüngste Befragungen zeigen. Befürworter betonen die Flexibilität: Wer die Pendelzeit spart, gewinnt Stunden fürs Leben; viele Produktivitätsstudien weisen sogar leichte Zugewinne aus. Kritiker verweisen auf den Verlust sozialer Kontakte und darauf, dass Führungskräfte unsichtbare Leistung schwerer beurteilen. Beide Seiten haben recht – auf jeder ihre Hälfte. Sofern die Arbeitsorganisation stimmt und Erreichbarkeit kein Dauerstress wird, sind die Ergebnisse im Schnitt besser. Unter der Bedingung, dass klare Regeln für Präsenztage gelten, entfaltet das Hybridmodell seine Wirkung; pauschale Abschaffung wie erzwungene Rückkehr wären beide Denkfehler. Meines Erachtens führt die Zukunft über die Mischung: zwei Tage Büro, drei Tage Ort der Wahl – vorausgesetzt, die Unternehmen investieren in Vertrauen statt Kontrolle. Wer Arbeit nach Anwesenheit bemisst, hat den Wandel nicht verstanden, nur verschoben.",
+    "sample": "Die Debatte über Homeoffice wird kontrovers geführt. Befürworter betonen vor allem die Flexibilität: Wer nicht pendeln muss, gewinnt Zeit und kann konzentrierte Aufgaben häufig ruhiger erledigen. Kritiker verweisen dagegen auf fehlende soziale Kontakte und schwierigere spontane Absprachen. Auch die Grenze zwischen Beruf und Freizeit kann verschwimmen, wenn der Arbeitstag kein klares Ende hat. Beide Seiten haben teilweise recht. Sofern Aufgaben, Ausstattung und Wohnsituation geeignet sind, bietet das Arbeiten zu Hause deutliche Vorteile. Unter der Bedingung, dass feste Präsenztage gelten, bleibt zugleich der persönliche Austausch erhalten. Ein solches Hybridmodell passt jedoch nicht zu jedem Beruf und sollte deshalb nicht pauschal vorgeschrieben werden. Meines Erachtens liegt die Zukunft in einer flexiblen Mischung, vorausgesetzt, dass Beschäftigte und Betriebe gemeinsam verlässliche Regeln zu Arbeitszeit, Datenschutz und Erreichbarkeit vereinbaren. Entscheidend sollte die Aufgabe sein, nicht die bloße Anwesenheit.",
     "noteAr": [
-      "فصلٌ معماري: proponents → critics → «كلٌّ صادقٌ في نصفه» → موقف — نمطُ Erörterung المصدَّق",
-      "شرطيتان نظاميتان: sofern / unter der Bedingung dass — و«vorausgesetzt» الثالثة مكافأة",
-      "النبرة بلا «أنا» حتى الجملةِ الموقعية الأخيرة (Meines Erachtens) — المعيارُ الموضوعيُّ مُطبَّقٌ بصيغته الرسمية",
-      "غوته B2 الكتابة: مساهمة منتدى ~150 كلمة — 45 دقيقة الجزء 1/2"
+      "يُعرض جانب المرونة أولاً، ثم مخاطر العزلة وصعوبة التنسيق، قبل صياغة الموقف الشخصي.",
+      "تظهر الشروط في sofern وunter der Bedingung, dass وvorausgesetzt, dass.",
+      "يتجنب النموذج تحويل الافتراضات إلى نتائج دراسات، ويعرضها كحجج قابلة للنقاش."
     ],
     "zielWort": 150,
     "b2Typ": "forum",
@@ -467,24 +463,23 @@
     "id": "w-b2-05",
     "level": "B2",
     "format": "brief",
-    "titleDe": "Bewerbung auf Englisch? Nein: Motivationsschreiben B2",
+    "titleDe": "Motivationsschreiben für Studium oder Stipendium",
     "titleAr": "خطاب دافع (B2)",
     "taskDe": "Motivationsschreiben (ca. 150 Wörter) für ein Stipendium/dein Traumstudium: Wer du bist, deine Ziele, warum genau du. Nutze Partizipialattribute.",
     "taskAr": "خطاب دافع (150 كلمة) لمنحة/دراسة الحلم: من أنت، أهدافك، لماذا أنت تحديداً. استعمل الصفات المشتقة.",
     "criteria": [
-      "Partizipialattribute اثنان على الأقل (die von mir …)",
-      "أهداف ملموسة (بدبابة عامة)",
-      "صلة واضحة بين خبراتك والفرصة",
-      "نبرة واثقة مهذّبة"
+      "صفتان مشتقتان على الأقل مثل die von mir gesammelten Erfahrungen",
+      "أهداف ملموسة بدلاً من عبارات عامة",
+      "صلة واضحة بين الخبرة والفرصة",
+      "نبرة واثقة ومهذّبة"
     ],
-    "sample": "Die von mir während des Studiums gesammelten Erfahrungen im Solarbereich haben meinen Wunsch gefestigt, für netztaugliche Speichertechnologien zu arbeiten. Konkret leitete ich eine studentische Arbeitsgruppe, die ein Lastmanagement für ein tunesisches Dorf modellierte – ein Projekt, das ohne förderfähige Begleitung akademische Übung geblieben wäre. Als in Tunesien ausgebildete Ingenieurin bringe ich technisches Wissen, interkulturelle Erfahrung und die Gewohnheit mit, Knappheit als Designaufgabe zu begreifen, nicht als Ausrede. Mein Ziel ist es, Speicherkonzepte für den mediterranen Raum so zu entwickeln, dass sie auch Gemeinden mit kleiner Kasse tragen. Ein an Ihrer Fakultät erworbenes Masterdiplom wäre dafür die ideale Voraussetzung – und das von Ihnen vergebene Stipendium der entscheidende erste Schritt. Überzeugen kann ich vor allem durch Arbeit; meine bisherige liegt diesem Schreiben als Kurzdossier bei.",
+    "sample": "Die von mir während des Studiums gesammelten Erfahrungen im Solarbereich haben meinen Wunsch gefestigt, an netztauglichen Speichertechnologien zu arbeiten. Konkret leitete ich eine studentische Arbeitsgruppe, die ein Lastmanagement für ein tunesisches Dorf modellierte. Ohne weitere Förderung wäre dieses Vorhaben eine rein akademische Übung geblieben. Als in Tunesien ausgebildete Ingenieurin bringe ich technisches Wissen, interkulturelle Erfahrung und die Bereitschaft mit, knappe Ressourcen als Gestaltungsaufgabe zu verstehen. Mein Ziel ist es, Speicherkonzepte für den mediterranen Raum so zu entwickeln, dass auch Gemeinden mit kleinem Budget sie einsetzen können. Ein an Ihrer Fakultät erworbener Masterabschluss wäre dafür eine wichtige fachliche Grundlage; das von Ihnen vergebene Stipendium würde mir die notwendige Konzentration auf das Studium ermöglichen. Meine bisherigen Berechnungen und Projektberichte liegen dem Schreiben als Arbeitsproben bei. Gern erläutere ich in einem Gespräch, welchen Beitrag ich zum Austausch an Ihrer Fakultät leisten möchte.",
     "noteAr": [
-      "Partizipialattribute أربعةٌ سالمة: von mir… gesammelten / in Tunesien ausgebildete / an Ihrer Fakultät erworbenes / von Ihnen vergebene — المعيارُ مضاعَف",
-      "هدفٌ ملموسٌ مضاعف: Lastmanagement لقرية + تصميمٌ لذوي الجيوب الخفيفة — لا جملةُ «أحب البيئة» الفارغة",
-      "صلةُ الخبرة بالفرصة صريحة: ما نَقَصَكَ من تمويلٍ هنا هو ما اكتمل هناك",
-      "غوته B2 الكتابة: رسالة رسمية ~100 كلمة — 30 دقيقة الجزء 2/2"
+      "يربط النموذج خبرة محددة في الطاقة الشمسية بهدف دراسي ومهني واضح.",
+      "تظهر الصفات المشتقة في die von mir gesammelten Erfahrungen وals in Tunesien ausgebildete Ingenieurin وein an Ihrer Fakultät erworbener Abschluss.",
+      "تُدعَم النبرة الواثقة بأمثلة وملف أعمال بدلاً من عبارات عامة عن التفوق."
     ],
-    "zielWort": 100,
+    "zielWort": 150,
     "b2Typ": "nachricht",
     "dauerMin": 30
   },
@@ -502,11 +497,11 @@
       "نشاط واحد على الأقل",
       "خاتمة ودّية"
     ],
-    "sample": "Liebe Salma! Ich bin jetzt in Hammamet. Das Wetter ist schön und sonnig. Jeden Tag gehe ich zum Strand und schwimme im Meer. Das Essen ist sehr lecker. Am Abend sitze ich im Café am Meer und lese ein Buch. Viele Grüße, Sami. Ich schicke dir bald ein Foto!",
+    "sample": "Liebe Salma! Ich bin jetzt in Hammamet. Das Wetter ist schön und sonnig. Jeden Tag schwimme ich im Meer. Am Abend esse ich im Café am Strand. Viele Grüße, Sami",
     "noteAr": [
-      "بطاقةُ بريده صغيرةٌ كعنوانها: خمسُ جمل لا تتزاحم",
-      "الطقسُ جملة، النشاطُ جملة — معيارُ «واحدٌ على الأقل» مُنجَزٌ بالضبط، لا بالإفراط",
-      "Viele Grüße + اسم — خاتمةُ البطاقة قارةٌ لا تُساوَم"
+      "يتكون النموذج من خمس جمل قصيرة مناسبة لبطاقة بريدية.",
+      "يذكر الطقس ونشاطين واضحين: السباحة ثم الأكل في المقهى.",
+      "اختم البطاقة بـViele Grüße ثم اسم المرسل."
     ],
     "zielWort": 30
   },
@@ -517,20 +512,20 @@
     "titleDe": "Beschwerde-E-Mail ans Hotel",
     "titleAr": "بريد شكوى إلى الفندق",
     "taskDe": "Schreibe eine kurze Beschwerde-E-Mail (6 Sätze) an ein Hotel: Problem (Zimmer/Lärm), Bitte um Lösung, Perfekt nutzen.",
-    "taskAr": "اكتب بريداً قصيراً للشكوى (6 جمل) إلى فندق: مشكلة (غرفة/ضجيج)، طلب حل، استعمل الماضي التام. (الهدف: 100 كلمة تقريباً).",
+    "taskAr": "اكتب بريداً قصيراً للشكوى (6 جمل) إلى فندق: مشكلة (غرفة/ضجيج)، طلب حل، استعمل الماضي التام. (الهدف: 70 كلمة تقريباً).",
     "criteria": [
       "وصف الحدث بالـ Perfekt",
       "شكوى مهذّبة بلا غضب",
       "طلب محدد واحد",
       "بريد كامل بمقدمة وخاتمة"
     ],
-    "sample": "Sehr geehrte Damen und Herren, ich habe letzte Woche in Ihrem Hotel übernachtet. Leider hat das Zimmer neben dem Aufzug sehr viel Lärm gemacht. Der Lärm hat um zweiundzwanzig Uhr angefangen und bis drei Uhr gedauert. Ich habe drei Nächte schlecht geschlafen. Ich habe an der Rezeption angerufen, aber niemand hat geantwortet. Bitte erstatten Sie mir einen Teil des Preises. Mit freundlichen Grüßen, N. Mansour",
+    "sample": "Sehr geehrte Damen und Herren,\n\nich habe letzte Woche in Ihrem Hotel übernachtet. Leider habe ich im Zimmer neben dem Aufzug nachts viel Lärm gehört. Der Lärm hat um 22 Uhr angefangen und bis drei Uhr gedauert. Ich habe drei Nächte schlecht geschlafen. Ich habe an der Rezeption angerufen, aber niemand hat geantwortet. Bitte erstatten Sie mir einen Teil des Preises.\n\nMit freundlichen Grüßen\nNadia Mansour",
     "noteAr": [
-      "شكوى بلا غضب: leider + وصفٌ هادئ — النبرةُ تُقرَأ قبل الحجج",
-      "Perfekt في صدر الوقائع: habe…übernachtet / hat…gemacht — الماضي المُنجَز لا المستمر",
-      "طلبٌ محدد واحد (Teil erstatten) — من يطلب الكثير في A2 لا يُعطى شيئاً"
+      "يصف النموذج الوقائع بهدوء ويستخدم leider من دون صياغة هجومية.",
+      "تظهر صيغ Perfekt في habe … übernachtet وhabe … gehört وhat … angefangen وغيرها.",
+      "يطلب النموذج حلاً واحداً محدداً: استرداد جزء من السعر."
     ],
-    "zielWort": 100
+    "zielWort": 70
   },
   {
     "id": "w-b1-06",
@@ -541,16 +536,16 @@
     "taskDe": "Schreibe einen Forum-Post (ca. 100 Wörter): Wie lernst du am besten? Erzähle von deiner Erfahrung und gib Tipps. Nutze: einerseits/andererseits, deshalb.",
     "taskAr": "اكتب مشاركة منتدى (100 كلمة): كيف تتعلّم أفضل؟ احكِ تجربتك وقدّم نصائح. استعمل: من جهة/من أخرى، لذلك.",
     "criteria": [
-      "experience شخصية محدّدة (وليس نصائح عامة فقط)",
+      "تجربة شخصية محددة، لا نصائح عامة فقط",
       "أداة مقابلة واحدة",
       "3 نصائح عملية على الأقل",
       "نبرة منتدى ودّية"
     ],
-    "sample": "Ich lerne Vokabeln am besten mit Karteikarten: Einerseits dauert es täglich nur zehn Minuten, andererseits wiederhole ich automatisch das, was ich sonst vergraben würde. Meine Erfahrung ist ernüchternd und nützlich zugleich – ohne tägliche Wiederholung hatte ich nach einer Woche die Hälfte vergessen, gemessen, nicht gefühlt! Mein erster Tipp: Lernt neue Wörter am Morgen, da ist das Gehirn noch leer. Mein zweiter: Hört abends deutsche Lieder mit Text – so lernt das Gehirn im Schlaf mit, ohne dass ihr müsst. Und der unbequemste Tipp zum Schluss: Führt ein kleines Fehlerheft und lest es vor dem Einschlafen. Wer seine eigenen Fehler nochmal liest, macht sie seltener ein drittes Mal. Viel Erfolg euch allen!",
+    "sample": "Ich lerne Vokabeln am besten mit Karteikarten: Einerseits brauche ich dafür täglich nur zehn Minuten, andererseits wiederhole ich schwierige Wörter automatisch öfter. Früher lernte ich nur am Wochenende; nach wenigen Tagen konnte ich mich an viele Wörter nicht mehr erinnern. Deshalb übe ich jetzt jeden Tag kurz. Mein erster Tipp: Lernt neue Wörter am Morgen und wiederholt sie am Abend. Mein zweiter: Hört kurze Podcasts, lest das Transkript mit und notiert nützliche Ausdrücke. Und mein dritter Tipp: Führt ein kleines Fehlerheft und schaut regelmäßig hinein. Wer seine eigenen Fehler erkennt, kann gezielter an ihnen arbeiten. Viel Erfolg euch allen!",
     "noteAr": [
-      "تجربةٌ رقمية شخصية: «نصف ما درستُ تبخّر في أسبوع، قِسْتُ ذلك» — لا عامّيةُ النصائح إلا بعدها",
-      "ثلاثُ نصائح مُسَمَّاة (erster / zweiter / unbequemster) — التعدادُ المرقَّمُ أمانةٌ لدى المصححين",
-      "«ohne dass ihr müsst» — subordinateٌ خفيفةٌ تنهي جملةً طويلة بأنفاسٍ كاملة: إيقاعٌ مقصودٌ لا سهو"
+      "توضح التجربة الفرق بين المراجعة الأسبوعية القصيرة والمراجعة اليومية.",
+      "تقدم الفقرة ثلاث نصائح عملية: مراجعة موزعة، وبودكاست مع نص، ودفتر أخطاء.",
+      "يربط einerseits/andererseits بين ميزتي البطاقات، وتقدم deshalb نتيجة التجربة."
     ],
     "zielWort": 100
   },
@@ -563,18 +558,17 @@
     "taskDe": "Schreibe einen Bericht (ca. 150 Wörter) über die Debatte „KI im Unterricht“: Sachlich referieren (indirekte Rede!), Positionen wiedergeben, eigenes Fazit. Nutze: laut, zufolge, demzufolge.",
     "taskAr": "اكتب تقريراً (150 كلمة) عن مناظرة «الذكاء الاصطناعي في التعليم»: نقل موضوعي (منقول!)، عرض المواقف، خلاصة خاصة. استعمل: حسب، بحسب، وبناءً عليه.",
     "criteria": [
-      "نقل موضوعي بلا ضمير أنا (إلا في الفصل الأخير)",
-      "Konjunktiv I للمنقول (3 مرات)",
-      "عرض موقفين مختلفين بالتوازن",
+      "نقل موضوعي بلا ضمير ich إلا في الخلاصة",
+      "Konjunktiv I للمنقول ثلاث مرات على الأقل",
+      "عرض موقفين مختلفين بتوازن",
       "Fazit منفصل في النهاية",
-      "أقل تركيب وظيفي واحد"
+      "تركيب وظيفي واحد على الأقل"
     ],
-    "sample": "In der Podiumsdiskussion „KI im Unterricht“ wurde die Rolle künstlicher Intelligenz kontrovers erörtert. Laut einer vorab verteilten Studie erwarten sechzig Prozent der Lehrkräfte Entlastung bei Vorbereitungsaufgaben – zugleich fürchten viele, dass die Urteilskraft auf der Strecke bleibe. Prof. Weber erklärte, einen Lehrer ersetzen zu wollen, sei ein Kategorienfehler; KI könne vorbereiten, aber nicht erziehen. Dr. Saleh pflichtete bei, sofern man die Technik als Werkzeug begreife, und warnte vor Abhängigkeit: Wer nur noch Ergebnisse konsumiere, verlerne das Denken. Der Lehrergewerkschaft zufolge fehlt zudem die Infrastruktur – zu wenige Geräte, zu löchriges Netz. Demzufolge lautete der Tenor am Abend: Technik ja, aber nur mit pädagogischem Kompass. Wer Urteilskraft stärkt, statt Ergebnisse zu bestellen, wird auch mit Maschinen gut unterrichten; wer umgekehrt rechnet, bereitet die nächste Debatte in zehn Jahren vor – dann mit besseren Geräten.",
+    "sample": "In der Podiumsdiskussion „KI im Unterricht“ kamen unterschiedliche Positionen zur Sprache. Laut der Lehrerin Frau Yilmaz könne künstliche Intelligenz bei der Vorbereitung helfen und Routineaufgaben erleichtern. Sie betonte jedoch, die Verantwortung für Auswahl und Bewertung bleibe bei der Lehrkraft. Der Schüler Jonas Weber wandte ein, Lernende könnten fertige Antworten übernehmen, ohne den Lösungsweg zu verstehen. Seiner Ansicht nach bestehe dadurch die Gefahr, dass selbstständiges Denken zu kurz komme. Der Schulleiterin zufolge braucht die Schule deshalb klare Regeln, geschützte Zugänge und Fortbildungen. Demzufolge waren sich die Beteiligten in einem Punkt einig: Die Technik soll ein Werkzeug sein und keine Entscheidungen über Lernende treffen.\n\nMein Fazit lautet, dass KI im Unterricht sinnvoll sein kann, sofern Aufgaben transparent bleiben und Ergebnisse gemeinsam geprüft werden. Ohne Übung im Fragen, Vergleichen und Begründen würde ein schnelleres Ergebnis noch keinen besseren Unterricht bedeuten.",
     "noteAr": [
-      "Konjunktiv I أربعُ مرات في المنقول (bleibe / sei / begreife / konsumiere / verlerne) — النقلُ الصحفيُّ أمانةٌ تصرفية",
-      "الأدوات الثلاث نظامية: laut / …zufolge / demzufolge — توزيعُ المصدرية كما يُلزِم التقرير",
-      "فصلٌ أخيرٌ بفعل التوازن: «تقنية نعم… لكن» بعد أن عُرِضَ الطرفان بلا رجَّةِ مرجَّح — ثم استشرافُ العشرِ سنوات: ختامُ التقارير الكبار",
-      "غوته B2 الكتابة: مساهمة منتدى ~150 كلمة — 45 دقيقة الجزء 1/2"
+      "يفصل التقرير بين موقفي المعلمة والطالب ثم يذكر نقطة الاتفاق قبل الخلاصة الشخصية.",
+      "يظهر النقل غير المباشر في könne وbleibe وbestehe، وتُستخدم laut وzufolge وdemzufolge في وظائفها السياقية.",
+      "يقدّم Fazit حكماً مشروطاً بالتدريب والقواعد، من دون نسبة أرقام أو دراسات غير معرّفة."
     ],
     "zielWort": 150,
     "b2Typ": "forum",
@@ -609,20 +603,20 @@
     "titleDe": "E-Mail an den Vermieter",
     "titleAr": "بريد إلى صاحب الشقة",
     "taskDe": "Schreibe eine E-Mail an deinen Vermieter: In deiner Wohnung ist etwas kaputt (z. B. der Wasserhahn). Beschreibe das Problem und schlage einen Termin vor.",
-    "taskAr": "اكتب بريداً إلى صاحب شقتك: شيء معطّل لديك (مثلاً صنبور الماء). صف المشكلة واقترح موعداً. (الهدف: 100 كلمة تقريباً).",
+    "taskAr": "اكتب بريداً إلى صاحب شقتك: شيء معطّل لديك (مثلاً صنبور الماء). صف المشكلة واقترح موعداً. (الهدف: 70 كلمة تقريباً).",
     "criteria": [
       "مقدمة وشرح واضح للمشكلة",
       "طلب مهذب",
       "اقتراح موعد",
       "خاتمة وتوقيع"
     ],
-    "sample": "Sehr geehrte Frau Klein, in meiner Küche ist der Wasserhahn kaputt. Das Wasser läuft ständig und ich kann es nicht abstellen. Ich arbeite von acht bis sechzehn Uhr. Passt Ihnen Donnerstag um zehn Uhr? Ich habe schon versucht, das Wasser selbst abzustellen, aber es funktioniert nicht. Vielleicht können Sie einen Handwerker schicken. Ich bin am Freitag auch zu Hause. Mit freundlichen Grüßen, Karim Mansour",
+    "sample": "Sehr geehrte Frau Klein,\n\nin meiner Küche ist der Wasserhahn kaputt. Das Wasser läuft ständig, und ich kann es nicht abstellen. Ich arbeite werktags von acht bis sechzehn Uhr. Könnte ein Handwerker am Donnerstag um 17 Uhr kommen? Ich habe schon versucht, das Wasser selbst abzustellen, aber es hat nicht funktioniert. Am Freitag bin ich ebenfalls ab 16 Uhr zu Hause. Bitte teilen Sie mir mit, welcher Termin passt.\n\nMit freundlichen Grüßen\nKarim Mansour",
     "noteAr": [
-      "مقدمة ووصف وموعدٌ مقترح وتوقيع: أربعُ ركائز لا تضطرب",
-      "Das Wasser läuft ständig — واقعةٌ واحدة بدقةٍ أفضل من فقرةِ انفعال",
-      "Passt Ihnen Donnerstag…? اقتراحُ موعدٍ بسؤال — لباقَةٌ تُسَرّع الصلاح"
+      "يتكون البريد من تحية ووصف واضح للمشكلة وموعدين ممكنين وخاتمة.",
+      "توضح جملة Das Wasser läuft ständig المشكلة من دون مبالغة.",
+      "يقترح النموذج موعداً بعد وقت العمل ويسأل بأدب عن الموعد المناسب."
     ],
-    "zielWort": 100
+    "zielWort": 70
   },
   {
     "id": "w-a2-08",
@@ -631,7 +625,7 @@
     "titleDe": "Mein Tagesplan",
     "titleAr": "جدولي اليومي",
     "taskDe": "Schreibe über deinen Tagesplan: Wann stehst du auf? Was machst du am Vormittag, am Nachmittag und am Abend?",
-    "taskAr": "اكتب عن جدولك اليومي: متى تستيقظ؟ ماذا تفعل صباحاً وعصراً ومساءً؟ (الهدف: 100 كلمة تقريباً).",
+    "taskAr": "اكتب عن جدولك اليومي: متى تستيقظ؟ ماذا تفعل صباحاً وعصراً ومساءً؟ (الهدف: 70 كلمة تقريباً).",
     "criteria": [
       "استخدام أوقات (Uhr)",
       "فترة الصباح والمساء",
@@ -640,11 +634,11 @@
     ],
     "sample": "Ich stehe um halb sieben auf. Am Vormittag habe ich Kurs und lerne Deutsch. Um eins esse ich in der Mensa. Am Nachmittag arbeite ich im Büro. Am Abend koche ich und rufe meine Familie an. Zwischen den Kursen trinke ich Kaffee mit Freunden und wiederhole neue Wörter. Am Wochenende spiele ich manchmal Fußball und besuche meine Cousine. Um elf Uhr schlafe ich ein.",
     "noteAr": [
-      "نصف يومٍ موزون: Kurs/ Arbeit / Kochen — لا جملة أطول من أختها",
-      "أفعال منفصلة في يومه (stehe…auf / rufe…an) — إعادةُ استعمالٍ ذكية لا حفظٌ منبري",
-      "Um elf Uhr schlafe ich ein — خاتمةٌ بزمن: انسجامُ قالبٍ حتى في النوم"
+      "ينظم النموذج اليوم إلى Vormittag وNachmittag وAbend، ويذكر أوقاتاً محددة.",
+      "يعرض فعلين منفصلين صحيحين: stehe … auf وrufe … an.",
+      "تغلق جملة Um elf Uhr schlafe ich ein الجدول بوقت واضح."
     ],
-    "zielWort": 100
+    "zielWort": 70
   },
   {
     "id": "w-b1-07",
@@ -653,20 +647,20 @@
     "titleDe": "Handys im Unterricht – meine Meinung",
     "titleAr": "الهواتف في الصف — رأيي",
     "taskDe": "Schreibe einen Text (ca. 80 Wörter): Sollen Handys im Unterricht erlaubt sein? Begründe deine Meinung mit zwei Argumenten.",
-    "taskAr": "اكتب نصاً (نحو 80 كلمة): هل يُسمح بالهواتف في الصف؟ مهّد رأيي بحجّتين.",
+    "taskAr": "اكتب نصاً (نحو 80 كلمة): هل يُسمح بالهواتف في الصف؟ علّل رأيك بحجّتين.",
     "criteria": [
       "رأي واضح في المقدمة",
       "حجّتان مع شرح",
       "رابط (deshalb, aber, außerdem)",
       "خاتمة"
     ],
-    "sample": "Meiner Meinung nach sollen Handys im Unterricht grundsätzlich tabu sein. Erstens lenken sie ab: Eine Nachricht genügt, und der Faden ist gerissen – das merken selbst die Schüler, die danach fragend schauen. Zweitens verlernen sie das Mitschreiben von Hand; wer nicht mitschreibt, vergisst schneller, als jedes Wörterbuch es ersetzen kann. Natürlich gibt es gute Ausnahmen, etwa die Recherche im Fremdsprachenunterricht. Deshalb schlage ich vor: Handys bleiben in der Tasche, außer die Lehrkraft erlaubt sie bewusst für eine Aufgabe – dann werden sie Werkzeug statt Störenfried.",
+    "sample": "Meiner Meinung nach sollen Handys im Unterricht grundsätzlich tabu sein. Erstens lenken sie ab: Eine Nachricht genügt, und der Faden ist gerissen – das merken selbst die Schüler, die danach fragend schauen. Zweitens schreiben viele weniger mit; beim Schreiben von Hand müssen sie die wichtigsten Punkte selbst auswählen. Natürlich gibt es gute Ausnahmen, etwa die Recherche im Fremdsprachenunterricht. Deshalb schlage ich vor: Handys bleiben in der Tasche. Wenn die Lehrkraft sie bewusst für eine Aufgabe erlaubt, werden sie zum Werkzeug statt zum Störenfried.",
     "noteAr": [
-      "رأيٌ في السطر الأول قبل أي تمهيد — في B1 لا تُكافأ المقدمةُ الدائرية",
-      "حجتان مشروحتان لا مرميتان: Erstens… (وقائع) / Zweitens… (مبررٌ معياريٌّ) — كل حجةٍ جملةٌ إضافية تُدافِع عنها",
-      "استثناءٌ مذكورٌ ومُؤطَّر («Natürlich… außer…» — لا: «außer die Lehrkraft erlaubt») — قوةُ موقفٍ تُظهِرُ حدودَه"
+      "يعلن النموذج الرأي في الجملة الأولى ثم يشرح حجتين واضحتين.",
+      "تتناول الحجة الأولى التشتت، والثانية اختيار النقاط المهمة عند تدوين الملاحظات.",
+      "يعرض النموذج استثناءً محدوداً: يسمح بالهاتف عندما تحدد المعلمة مهمة واضحة."
     ],
-    "zielWort": 100
+    "zielWort": 80
   },
   {
     "id": "w-b2-07",
@@ -682,12 +676,11 @@
       "مطلب واضح مع أجل",
       "خاتمة رسمية"
     ],
-    "sample": "Sehr geehrte Damen und Herren, am 3. Mai habe ich Ihren Online-Kurs „Deutsch B2“ gekauft (Bestellnummer 4471, Rechnung 2210). Leider funktioniert der Zugang bis heute nicht: Trotz zweimaliger Rücksetzung erhalte ich ständig die Meldung „Passwort falsch“ – ein Fehler, den Ihr Support telefonisch bestätigt, aber bisher nicht behoben hat. Ich bitte Sie, den Zugang bis zum kommenden Freitag, den 22. Mai, freizuschalten. Andernfalls trete ich vom Vertrag zurück und bitte um vollständige Rückerstattung des Kursbetrags von 89 Euro binnen weiterer vierzehn Tage. Ich habe den Support am 10. Mai schriftlich kontaktiert und am 15. Mai erneut angerufen, jedoch ohne Erfolg. Der Fehler liegt nachweislich nicht bei meinem Gerät, da der Login auf zwei verschiedenen Browsern scheitert. Die Belege zu Zahlung und Supportanfragen halte ich bereit und reiche sie auf Wunsch nach. Mit freundlichen Grüßen, Layla Haddad",
+    "sample": "Sehr geehrte Damen und Herren,\n\nam 3. Mai habe ich Ihren Online-Kurs „Deutsch B2“ gekauft (Bestellnummer 4471). Leider funktioniert der Zugang bis heute nicht. Trotz zweimaliger Rücksetzung erscheint weiterhin die Meldung „Passwort falsch“. Ihren Support habe ich am 10. Mai schriftlich kontaktiert, jedoch keine Antwort erhalten. Bitte schalten Sie meinen Zugang bis zum 22. Mai frei. Sollte das nicht möglich sein, bitte ich um die Stornierung und die vollständige Rückerstattung von 89 Euro innerhalb von vierzehn Tagen. Der Fehler tritt auf zwei Geräten und in verschiedenen Browsern auf. Die Zahlungsbestätigung und meine Supportanfrage kann ich Ihnen gern zusenden.\n\nMit freundlichen Grüßen\nLayla Haddad",
     "noteAr": [
-      "أرقام وأرقامٌ عكسية: طلب + أجل محدد (bis Freitag) ثم شرطان (Rücktritt / Erstattung binnen vierzehn Tagen) — الشكوىُ قانونٌ مُهذَّب",
-      "دقة الوقائع: رقم طلب، رقم فاتورة، رسالة الخطأ حرفياً — لا «الوصولُ لا يعمل» بلا جثة دليل",
-      "«Belege halte ich bereit» — ورقةُ القوة الأخيرة تُلْمَح ولا تُلَوَّح: آدابُ الضغط الرسمي",
-      "غوته B2 الكتابة: رسالة رسمية ~100 كلمة — 30 دقيقة الجزء 2/2"
+      "يسجل النموذج رقم الطلب وتاريخ الشراء ورسالة الخطأ ومحاولتي المعالجة بترتيب قابل للمتابعة.",
+      "يحدد طلب فتح الحساب وموعداً نهائياً، ثم يذكر الاسترداد كبديل إذا تعذر التنفيذ.",
+      "تأتي التحية والختام في سطرين منفصلين وتحافظ الرسالة على لهجة حازمة ومهذبة."
     ],
     "zielWort": 100,
     "b2Typ": "nachricht",
@@ -707,14 +700,13 @@
       "استخدام Konjunktiv II",
       "خاتمة متزنة"
     ],
-    "sample": "Lohnt sich ein Auslandsjahr für junge Leute? Die Frage klingt einfach, entscheidet aber oft über Selbstverständnis und Lebenslauf. Je länger man im Ausland lebt, desto sicherer spricht man die Sprache – und desto schwerer fällt daheim die Antwort auf die Frage, warum man je geblieben sei. Ein Jahr wäre ideal; sechs Monate helfen, wer sie klug nutzt, genauso. Ohne Auslandserfahrung hätte ich nie gelernt, fremde Regeln zuerst zu verstehen statt zu beurteilen. Manche fürchten die Kosten; doch wer ein Stipendium sucht, findet häufig Unterstützung – teurer als ihr Ruf ist nur die Zeit, die man mit Zweifeln verbringt. Insgesamt überwiegt der Gewinn: Man kommt reicher zurück, als man hingegangen ist. Bereuen tut es, wenn überhaupt, nur, wer es nicht versucht hat.",
+    "sample": "Lohnt sich ein Auslandsjahr für junge Leute? Je länger man in einer anderen Sprache lebt, desto häufiger muss man sie im Alltag benutzen. Dadurch könnte man sprachlich sicherer und selbstständiger werden. Ebenso wichtig ist der Perspektivwechsel: Ohne meinen Aufenthalt im Ausland hätte ich manche Gewohnheiten vorschnell beurteilt. Gegen ein ganzes Jahr sprechen jedoch Kosten und organisatorische Fragen. Sechs Monate könnten bei guter Planung ebenfalls viel bringen, und ein Stipendium wäre eine mögliche Finanzierung. Insgesamt lohnt sich der Aufenthalt, wenn Ziel, Budget und Betreuung vorher geklärt sind. Er ist also eine große Chance, aber nicht automatisch für jede Person die beste Entscheidung.",
     "noteAr": [
-      "je…desto مزدوجةٌ في صلب السؤال لا للزينة — قالبُ المقارنة كما يُطلَب",
-      "Konjunktiv II في خدمة الحُجَّة لا الحفظ: hätte… nie gelernt / wäre — شرطيّةُ تجربةٍ لا شرطيّةُ كتاب",
-      "قلبُ حجةِ التكلفة: الأغلى ليس الرحلةَ بل زمنُ الشكّ — تقنيةُ الردِّ الصفوة: ماثلةٌ في النص لا مسمّاةٌ في الحاشية",
-      "غوته B2 الكتابة: مساهمة منتدى ~150 كلمة — 45 دقيقة الجزء 1/2"
+      "يفتتح المقال بالسؤال، ثم يناقش اكتساب اللغة والاستقلال مقابل التكلفة والتنظيم.",
+      "تظهر المقارنة في je … desto وebenso، ويظهر Konjunktiv II في wäre وkönnte وhätte.",
+      "الخلاصة مشروطة بالتخطيط والتمويل، فلا تجعل سنة الخارج مناسبة تلقائياً للجميع."
     ],
-    "zielWort": 150,
+    "zielWort": 100,
     "b2Typ": "forum",
     "dauerMin": 45
   },
@@ -732,7 +724,7 @@
       "جملة بـ«kann … nicht kommen» (الفعل المساعد + المصدر في النهاية)",
       "سؤال واحد بعلامة استفهام"
     ],
-    "sample": "Liebe Frau Klein, ich bin krank und habe Fieber und Halsschmerzen. Ich kann heute und morgen nicht zum Kurs kommen. Der Arzt sagt, ich soll zwei Tage zu Hause bleiben. Was sind die Hausaufgaben für Donnerstag? Vielen Dank für Ihr Verständnis! Viele Grüße, Omar",
+    "sample": "Liebe Frau Klein, ich bin krank und habe Fieber. Ich kann zwei Tage nicht zum Kurs kommen. Der Arzt sagt, ich soll zu Hause bleiben. Was sind die Hausaufgaben für Donnerstag? Viele Grüße, Omar",
     "noteAr": [
       "«kann … kommen»: قوس الفعل المساعد والمصدر — أهمّ بنية في رسائل A1",
       "السؤال في النهاية يجعل الرسالة تواصلاً لا إعلاناً"
@@ -756,8 +748,8 @@
     ],
     "sample": "Hallo Karim, ich bin in Hamburg am Meer. Das Wetter ist gut, die Sonne scheint, aber der Wind ist kalt. Morgens schwimme ich, nachmittags gehe ich spazieren. Am Samstag komme ich zurück. Bis bald! Lina",
     "noteAr": [
-      "«komme … zurück»: الفعل المنفصل في الحاضر — الجزء الثاني في نهاية الجملة",
-      "البطاقة تحتاج مخاطَباً وتوقيعاً — يُفحصان في الامتحان"
+      "«komme … zurück»: فعل منفصل في الحاضر، ويأتي جزؤه الثاني في نهاية الجملة.",
+      "أضف اسم المخاطَب وتوقيع المرسل ليكتمل شكل البطاقة."
     ],
     "neu": true,
     "zielWort": 30
@@ -772,14 +764,14 @@
     "taskAr": "املأ استمارة التسجيل في دورة اللغة: الاسم، اسم العائلة، تاريخ الميلاد، العنوان مع الرمز البريدي، الهاتف، اللغة الأم، الدورة. (الهدف: 30 كلمة تقريباً).",
     "criteria": [
       "كل الحقول معبّأة",
-      "تاريخ الميلاد بصيغة يوم.شهر.سنة",
+      "تاريخ الميلاد بصيغة يوم.شهر.سنة، مثل 12.03.1998",
       "الرمز البريدي قبل اسم المدينة",
       "الاسم بأحرف كبيرة في أوله"
     ],
-    "sample": "Vorname: Salma · Nachname: Trabelsi · Geburtsdatum: 12. März, sechsundzwanzig Jahre alt · Adresse: Gartenstraße 8, 04109 Leipzig · Telefon: 0341 123456 · Muttersprache: Arabisch · Zweite Sprache: Französisch · Kurs: A1 am Vormittag · Unterschrift: S. Trabelsi",
+    "sample": "Vorname: Salma · Nachname: Trabelsi · Geburtsdatum: 12.03.1998 · Adresse: Gartenstraße 8, 04109 Leipzig · Telefon: 0341 123456 · Muttersprache: Arabisch · Zweite Sprache: Französisch · Kurs: A1 am Vormittag · Unterschrift: S. Trabelsi",
     "noteAr": [
-      "الاستمارة جزء ثابت من امتحان A1: لا جمل، بل حقول صحيحة",
-      "الرمز البريدي قبل المدينة — ترتيب ألماني يُخطئ فيه كثيرون"
+      "اكتب تاريخ الميلاد في حقل مستقل بصيغة واضحة مثل 12.03.1998، ولا تخلط التاريخ بالعمر.",
+      "ضع الرمز البريدي قبل اسم المدينة، واملأ الحقول كقيم قصيرة لا كجمل."
     ],
     "neu": true,
     "zielWort": 30
@@ -791,20 +783,21 @@
     "titleDe": "Absage einer Einladung",
     "titleAr": "الاعتذار عن دعوة",
     "taskDe": "Eine Freundin lädt dich zu ihrer Hochzeit ein, aber du kannst nicht kommen. Schreibe eine E-Mail (6–8 Sätze): Dank, Grund, Entschuldigung, Vorschlag für ein Treffen.",
-    "taskAr": "صديقة تدعوك إلى زفافها لكنك لا تستطيع الحضور. اكتب إيميلاً (6–8 جمل): شكر، سبب، اعتذار، اقتراح لقاء. (الهدف: 100 كلمة تقريباً).",
+    "taskAr": "صديقة تدعوك إلى زفافها لكنك لا تستطيع الحضور. اكتب إيميلاً (6–8 جمل): شكر، سبب، اعتذار، اقتراح لقاء. (الهدف: 70 كلمة تقريباً).",
     "criteria": [
       "شكر على الدعوة في البداية",
       "سبب بـweil (الفعل في النهاية)",
       "اعتذار صريح (Es tut mir leid)",
       "اقتراح بـ«Wollen wir …?» أو «Wie wäre es mit …?»"
     ],
-    "sample": "Liebe Nour, vielen Dank für die Einladung zu deiner Hochzeit! Ich freue mich sehr für dich. Leider kann ich am 14. Juni nicht kommen, weil ich an diesem Tag eine Prüfung habe. Es tut mir wirklich leid. Ich möchte dir aber gratulieren und ein Geschenk vorbeibringen. Wollen wir uns in der Woche danach treffen? Ich lade dich zum Essen ein. Herzliche Grüße, Amina",
+    "sample": "Liebe Nour,\n\nvielen Dank für die Einladung zu deiner Hochzeit! Ich freue mich sehr für dich. Leider kann ich am 14. Juni nicht kommen, weil ich an diesem Tag eine Prüfung habe. Es tut mir wirklich leid. Ich möchte dir aber gratulieren und ein Geschenk vorbeibringen. Wollen wir uns in der Woche danach treffen? Ich lade dich zum Essen ein.\n\nHerzliche Grüße\nAmina",
     "noteAr": [
-      "Absage = اعتذار عن دعوة: البنية شكر ← سبب ← أسف ← بديل",
-      "«weil … habe»: الفعل في النهاية — يُقيَّم مباشرة"
+      "رتّب الاعتذار عن الدعوة هكذا: شكر، ثم سبب، ثم اعتذار صريح، ثم اقتراح بديل.",
+      "بعد weil يأتي الفعل habe في نهاية الجملة التابعة.",
+      "يقدم السؤال Wollen wir uns … treffen? اقتراحاً واضحاً للقاء لاحق."
     ],
     "neu": true,
-    "zielWort": 100
+    "zielWort": 70
   },
   {
     "id": "w-a2-10",
@@ -813,20 +806,20 @@
     "titleDe": "Beschwerde beim Hausmeister",
     "titleAr": "شكوى إلى حارس البناية",
     "taskDe": "Die Heizung in deiner Wohnung funktioniert seit drei Tagen nicht. Schreibe eine kurze Nachricht an den Hausmeister (6–8 Sätze): Problem, seit wann, was du schon gemacht hast, Bitte um Termin.",
-    "taskAr": "التدفئة في شقتك لا تعمل منذ ثلاثة أيام. اكتب رسالة قصيرة إلى الحارس (6–8 جمل): المشكلة، منذ متى، ما فعلته، طلب موعد. (الهدف: 100 كلمة تقريباً).",
+    "taskAr": "التدفئة في شقتك لا تعمل منذ ثلاثة أيام. اكتب رسالة قصيرة إلى الحارس (6–8 جمل): المشكلة، منذ متى، ما فعلته، طلب موعد. (الهدف: 70 كلمة تقريباً).",
     "criteria": [
       "مخاطبة رسمية (Sehr geehrter Herr …)",
       "«seit» + Dativ للمدة",
       "Perfekt لما فعلته (habe … probiert)",
       "طلب مهذّب بـ«Könnten Sie …?»"
     ],
-    "sample": "Sehr geehrter Herr Kaya, die Heizung in meiner Wohnung im dritten Stock funktioniert seit drei Tagen nicht. Ich habe schon alles probiert und den Regler neu eingestellt, aber es bleibt kalt. Die Kinder sind erkältet. Könnten Sie bitte diese Woche einen Termin machen? Ich bin jeden Tag ab 16 Uhr zu Hause. Vielen Dank im Voraus. Mit freundlichen Grüßen, Fatma Ben Ali",
+    "sample": "Sehr geehrter Herr Kaya,\n\ndie Heizung in meiner Wohnung im dritten Stock funktioniert seit drei Tagen nicht. Ich habe schon den Regler geprüft und neu eingestellt, aber es bleibt kalt. Die Kinder sind erkältet. Könnten Sie bitte diese Woche vorbeikommen oder einen Handwerker schicken? Ich bin jeden Tag ab 16 Uhr zu Hause. Vielen Dank im Voraus.\n\nMit freundlichen Grüßen\nFatma Ben Ali",
     "noteAr": [
-      "الشكوى المهذّبة تنجح بالحقائق: منذ متى، ماذا جرّبت، متى أنت متاح",
-      "«Könnten Sie» أهذب من «Können Sie» — Konjunktiv II الأول في A2"
+      "يذكر النموذج منذ متى توجد المشكلة، وما الذي جُرّب، ومتى يكون المرسل في المنزل.",
+      "تجعل صيغة Könnten Sie bitte … الطلب مهذباً، وتقترح حضور الحارس أو إرسال فني."
     ],
     "neu": true,
-    "zielWort": 100
+    "zielWort": 70
   },
   {
     "id": "w-a2-11",
@@ -835,20 +828,21 @@
     "titleDe": "Ein Erlebnis erzählen",
     "titleAr": "سرد تجربة",
     "taskDe": "Erzähle von einem Tag, an dem etwas nicht geklappt hat (7–9 Sätze): Was war der Plan? Was ist passiert? Wie ist es ausgegangen? Benutze das Perfekt.",
-    "taskAr": "احكِ عن يوم لم تسر فيه الأمور كما يجب (7–9 جمل): ما الخطة؟ ماذا حدث؟ كيف انتهى؟ استعمل الـPerfekt. (الهدف: 100 كلمة تقريباً).",
+    "taskAr": "احكِ عن يوم لم تسر فيه الأمور كما يجب (7–9 جمل): ما الخطة؟ ماذا حدث؟ كيف انتهى؟ استعمل الـPerfekt. (الهدف: 80 كلمة تقريباً).",
     "criteria": [
       "Perfekt مع haben وsein بشكل صحيح",
       "روابط زمنية (zuerst, dann, danach, schließlich)",
       "جملة بـ«als» أو «nachdem» واحدة على الأقل",
       "خاتمة قصيرة (Zum Glück / Leider)"
     ],
-    "sample": "Letzten Samstag wollte ich mit dem Zug nach Köln fahren. Zuerst habe ich den Bus verpasst, dann bin ich zu Fuß zum Bahnhof gelaufen. Als ich angekommen bin, war der Zug schon weg. Ich habe eine Stunde gewartet und einen Kaffee getrunken. Danach habe ich den nächsten Zug genommen. In Köln hat es geregnet, aber meine Freundin hat am Bahnhof gewartet. Schließlich haben wir einen schönen Abend gehabt. Zum Glück ist alles gut ausgegangen.",
+    "sample": "Letzten Samstag wollte ich mit dem Zug nach Köln fahren. Zuerst habe ich den Bus verpasst, dann bin ich zu Fuß zum Bahnhof gelaufen. Als ich angekommen bin, war der Zug schon weg. Ich habe eine Stunde gewartet und einen Kaffee getrunken. Danach habe ich den nächsten Zug genommen. In Köln hat es geregnet, aber meine Freundin hat am Bahnhof gewartet. Schließlich haben wir noch einen schönen Abend zusammen verbracht. Zum Glück ist alles gut ausgegangen.",
     "noteAr": [
-      "sein مع أفعال الحركة: bin gelaufen / bin angekommen — الخطأ الأكثر شيوعاً في A2",
-      "الروابط الزمنية تحوّل قائمة أحداث إلى قصة"
+      "تستخدم أفعال الحركة sein في bin … gelaufen وangekommen bin؛ يأتي الفعل في نهاية جملة als التابعة.",
+      "تنظم الروابط Zuerst وdann وDanach وSchließlich القصة زمنياً.",
+      "توضح جملة Zum Glück ist alles gut ausgegangen نتيجة الحدث في النهاية."
     ],
     "neu": true,
-    "zielWort": 100
+    "zielWort": 80
   },
   {
     "id": "w-b1-08",
@@ -866,8 +860,9 @@
     ],
     "sample": "Ich arbeite seit einem Jahr zwei Tage pro Woche im Homeoffice, und meine Erfahrung ist gemischt. Einerseits spare ich jeden Tag eine Stunde Fahrt und kann meine Tochter von der Schule abholen. Andererseits verliere ich den Kontakt zu den Kollegen, und manche Absprachen dauern per Mail viel länger als im Büro. Obwohl ich die Flexibilität schätze, glaube ich nicht, dass Homeoffice allein gut für Familien ist. Meiner Meinung nach braucht man klare Regeln: feste Zeiten, an denen man erreichbar ist, und einen Tag pro Woche, an dem das ganze Team im Büro ist. So bleibt die Vereinbarkeit von Beruf und Familie realistisch.",
     "noteAr": [
-      "نموذج امتحان B1 الكتابي: مشاركة منتدى بأربعة عناصر — يُقيَّم كلٌّ منها على حدة",
-      "«Obwohl … schätze, glaube ich nicht, dass …»: جملتان ثانويتان في جملة واحدة — علامة B1 ناضج"
+      "يرتب النموذج العناصر الأربعة: تجربة شخصية، وميزة، وعيب، ثم رأي معلل.",
+      "تجمع جملة Obwohl … schätze, glaube ich nicht, dass … بين obwohl وdass مع ترتيب فعل صحيح.",
+      "تقدم الخاتمة قواعد عملية للجمع بين المرونة والتواصل مع الفريق."
     ],
     "neu": true,
     "zielWort": 100
@@ -886,10 +881,11 @@
       "ذكر رقم الحجز أو اسم الدورة",
       "سؤال واضح عن الرسوم"
     ],
-    "sample": "Sehr geehrte Damen und Herren, ich habe den Kurs „Deutsch für den Beruf B1“ ab dem 3. März gebucht (Buchungsnummer 4471). Leider muss ich an diesem Tag eine Dienstreise antreten, die mein Arbeitgeber erst gestern festgelegt hat. Wäre es möglich, meine Anmeldung auf den nächsten Kurs im April oder Mai zu verschieben? Beide Termine würden mir passen. Außerdem möchte ich fragen, ob für die Verschiebung eine Gebühr anfällt und ob meine Anzahlung erhalten bleibt. Für eine kurze Rückmeldung wäre ich Ihnen dankbar. Mit freundlichen Grüßen, Hedi Mansour",
+    "sample": "Sehr geehrte Damen und Herren,\n\nich habe den Kurs „Deutsch für den Beruf B1“ ab dem 3. März gebucht (Buchungsnummer 4471). Leider muss ich an diesem Tag eine Dienstreise antreten, die mein Arbeitgeber erst gestern festgelegt hat. Wäre es möglich, meine Anmeldung auf den nächsten Kurs im April oder Mai zu verschieben? Beide Termine würden mir passen. Außerdem möchte ich fragen, ob für die Verschiebung eine Gebühr anfällt und ob meine Anzahlung erhalten bleibt. Für eine kurze Rückmeldung wäre ich Ihnen dankbar.\n\nMit freundlichen Grüßen\nHedi Mansour",
     "noteAr": [
-      "Konjunktiv II للتهذيب: wäre es möglich / würden mir passen / wäre ich dankbar — ثلاث صيغ في نصّ واحد",
-      "المعلومة الإدارية (رقم الحجز) تجعل الرسالة قابلة للمعالجة — يُحتسب في التقييم"
+      "تستخدم الرسالة wäre es möglich وwürden mir passen وwäre ich dankbar للتهذيب.",
+      "يحدد اسم الدورة ورقم الحجز والموعدين البديلين بوضوح.",
+      "يسأل النص صراحةً عن رسوم التأجيل وبقاء الدفعة المقدمة."
     ],
     "neu": true,
     "zielWort": 100
@@ -908,10 +904,11 @@
       "جملة بـ«Ich habe gelernt, dass …»",
       "لا اتهام لأحد — وصف موضوعي"
     ],
-    "sample": "Im ersten Monat in Leipzig hatte ich einen Termin beim Amt um 9 Uhr. Ich kam um 9:10 Uhr, weil der Bus Verspätung hatte, und dachte, zehn Minuten seien kein Problem. Die Sachbearbeiterin hatte den Termin aber schon abgesagt, denn nach ihr war Pünktlichkeit Teil der Vereinbarung. Ich war zuerst enttäuscht und fand die Regel streng. Später hat mir eine Kollegin erklärt, dass man in solchen Fällen kurz anruft, auch wenn man nur fünf Minuten zu spät kommt. Ich habe daraus gelernt, dass Pünktlichkeit hier weniger mit Strenge als mit Respekt für die Zeit der anderen zu tun hat.",
+    "sample": "Im ersten Monat in Leipzig hatte ich einen Termin beim Amt um 9 Uhr. Ich kam um 9:10 Uhr, weil der Bus Verspätung hatte, und dachte, zehn Minuten seien kein Problem. Die Sachbearbeiterin hatte den Termin aber schon abgesagt, denn für sie gehörte Pünktlichkeit zur Vereinbarung. Ich war zuerst enttäuscht und fand die Regel streng. Später hat mir eine Kollegin erklärt, dass man in solchen Fällen kurz anruft, auch wenn man nur fünf Minuten zu spät kommt. Ich habe daraus gelernt, dass Pünktlichkeit hier weniger mit Strenge als mit Respekt für die Zeit der anderen zu tun hat.",
     "noteAr": [
-      "التقرير الحيادي: لا «الألمان صارمون» بل «الوقت جزء من الاتفاق»",
-      "مزج Präteritum وPerfekt في السرد المكتوب طبيعي في B1"
+      "يصف التقرير الموقف من دون تعميم، وينسب تفسير الموعد إلى الموظفة.",
+      "يستخدم war وhatte وwollte للسرد، ثم Perfekt في hat … erklärt للحدث اللاحق.",
+      "تختم جملة Ich habe daraus gelernt, dass … بالدرس المستفاد كما تطلب المهمة."
     ],
     "neu": true,
     "zielWort": 100
@@ -930,15 +927,14 @@
       "حجة مضادة صريحة ثم دحضها (Zwar … doch / Man könnte einwenden, dass …)",
       "خلاصة بموقف واضح؛ ≥130 كلمة؛ بلا إحصاءات مختلَقة"
     ],
-    "sample": "Mit Interesse habe ich Ihren Bericht über das geplante Tempolimit in der Innenstadt gelesen und möchte der Debatte zwei Gedanken hinzufügen. Zum einen geht es nicht nur um Sicherheit, sondern um Lebensqualität: Wer an einer Hauptstraße wohnt, kennt den Unterschied zwischen dreißig und fünfzig nicht aus Statistiken, sondern aus dem Schlafzimmer. Zum anderen verändert Tempo 30 das Verhalten aller: Radfahrer trauen sich auf die Straße, Fußgänger überqueren sie ohne Angst. Man könnte einwenden, dass die Fahrzeit für Pendler steigt. Zwar stimmt das auf dem Papier, doch in der Innenstadt bestimmen Ampeln und Kreuzungen die Fahrzeit, nicht die Höchstgeschwindigkeit; die Verzögerung liegt im Bereich weniger Minuten. Ich plädiere deshalb dafür, das Tempolimit zunächst für ein Jahr einzuführen und dann offen zu prüfen, was sich verändert hat. Eine Stadt, die ihre Regeln testet, statt sie nur zu diskutieren, verdient Vertrauen.",
+    "sample": "Sehr geehrte Redaktion,\n\nmit Interesse habe ich Ihren Bericht über das geplante Tempolimit von 30 km/h in der Innenstadt gelesen. Zum einen geht es um Sicherheit: Bei niedrigerem Tempo bleibt mehr Zeit, auf Kinder, Radfahrerinnen und Fußgänger zu reagieren. Zum anderen kann eine ruhigere Straße für Anwohner angenehmer sein und Platz für andere Verkehrsarten schaffen. Man könnte einwenden, dass Pendler dadurch länger unterwegs wären. Dieser Einwand ist verständlich; allerdings bestimmen in der Innenstadt auch Ampeln, Kreuzungen und die Verkehrsdichte die Fahrzeit. Ob die Belastung tatsächlich steigt, sollte deshalb nicht einfach behauptet, sondern geprüft werden. Ich schlage vor, Tempo 30 zunächst für ein Jahr einzuführen, Veränderungen bei Sicherheit, Lärm und Fahrzeit transparent zu erfassen und anschließend öffentlich auszuwerten. So lässt sich eine dauerhafte Entscheidung auf nachvollziehbare Beobachtungen stützen.\n\nMit freundlichen Grüßen\nNadia Karim",
     "noteAr": [
-      "نموذج امتحان B2: Leserbrief ببنية إشارة ← حجج ← دحض ← موقف",
-      "الدحض بـ«Zwar … doch» هو المهارة الفاصلة بين B1 وB2",
-      "الأرقام في النموذج عامة (Minuten) بلا إحصاء مختلَق — قاعدة المشروع",
-      "غوته B2 الكتابة: رسالة رسمية ~100 كلمة — 30 دقيقة الجزء 2/2"
+      "يرتبط الافتتاح بالنقاش المنشور، ثم يفصل الحجتين بواسطة zum einen وzum anderen.",
+      "يُذكر أثر محتمل على زمن التنقل كحجة مضادة، ثم يُقترح اختبار محدد بدلاً من ادعاء رقمي غير مسند.",
+      "تغلق الرسالة بموقف واضح واقتراح تقييم النتائج بعد سنة."
     ],
     "neu": true,
-    "zielWort": 100,
+    "zielWort": 150,
     "b2Typ": "nachricht",
     "dauerMin": 30
   },
@@ -951,19 +947,19 @@
     "taskDe": "Ein online bestelltes Gerät kam beschädigt an, und der Kundendienst antwortet seit zwei Wochen nicht. Schreibe eine formelle Beschwerde (ca. 150 Wörter): Sachverhalt mit Daten, bisherige Schritte, konkrete Forderung mit Frist, Hinweis auf Verbraucherzentrale.",
     "taskAr": "جهاز مطلوب عبر الإنترنت وصل معطوباً وخدمة الزبائن لا تردّ منذ أسبوعين. اكتب شكوى رسمية (~150 كلمة): الوقائع بالتواريخ، الخطوات السابقة، مطلب محدد بمهلة، إشارة إلى مركز حماية المستهلك.",
     "criteria": [
-      "سطر موضوع (Betreff) بالرقم",
-      "الوقائع بترتيب زمني وبصيغة موضوعية (Passiv/Präteritum)",
-      "مطلب واحد واضح + مهلة (bis zum …)",
-      "لهجة حازمة مهذّبة؛ الإشارة إلى الخطوة التالية بلا تهديد"
+      "سطر موضوع يتضمن رقم الطلب",
+      "الوقائع بترتيب زمني وبصيغة موضوعية",
+      "طلب واحد واضح مع مهلة bis zum …",
+      "لهجة حازمة مهذبة وذكر الخطوة التالية بلا تهديد"
     ],
-    "sample": "Betreff: Reklamation – Bestellung Nr. 88214 vom 2. Mai\n\nSehr geehrte Damen und Herren,\n\nam 9. Mai wurde mir der bestellte Wasserkocher geliefert. Das Paket war bereits geöffnet, und das Gerät weist einen Riss im Glas auf; ein Foto und den Lieferschein füge ich bei. Noch am selben Tag habe ich den Schaden über Ihr Kontaktformular gemeldet und am 16. Mai telefonisch nachgefragt. Bis heute habe ich keine Antwort erhalten.\n\nIch fordere Sie daher auf, mir bis zum 6. Juni entweder ein einwandfreies Ersatzgerät zu liefern oder den Kaufpreis von 39,90 Euro zu erstatten. Die Rücksendung des defekten Geräts ist auf Ihre Kosten zu organisieren.\n\nSollte ich bis zu diesem Termin keine Rückmeldung erhalten, werde ich mich an die Verbraucherzentrale wenden und meine weiteren Rechte prüfen lassen.\n\nMit freundlichen Grüßen\nRania Haddad",
+    "sample": "Betreff: Reklamation – Bestellung Nr. 88214 vom 2. Mai\n\nSehr geehrte Damen und Herren,\n\nam 9. Mai wurde mir der bestellte Wasserkocher geliefert. Das Paket war bereits geöffnet, und das Gerät weist einen Riss im Glas auf. Ein Foto und den Lieferschein füge ich bei. Noch am selben Tag meldete ich den Schaden über Ihr Kontaktformular; am 16. Mai fragte ich zusätzlich telefonisch nach. Seit zwei Wochen habe ich dennoch keine Antwort erhalten.\n\nBitte liefern Sie mir bis zum 6. Juni ein einwandfreies Ersatzgerät. Teilen Sie mir zugleich mit, wie die für mich kostenfreie Rücksendung des beschädigten Geräts organisiert wird.\n\nSollte ich bis zu diesem Termin keine Rückmeldung erhalten, werde ich mich bei der Verbraucherzentrale über mögliche nächste Schritte informieren. Ich bitte um eine schriftliche Bestätigung.\n\nMit freundlichen Grüßen\nRania Haddad",
     "noteAr": [
-      "الشكوى الرسمية تُبنى على تواريخ: كل خطوة بتاريخها — هذا ما يجعلها قابلة للتنفيذ",
-      "«Sollte ich … erhalten, werde ich …»: شرط بلا wenn + مستقبل — بنية B2 نموذجية للإنذار المهذّب",
-      "ملاحظة: Goethe B2 Schreiben: Formelle Nachricht ~100 Wörter — 30 Min. Teil 2/2"
+      "يرتب النموذج التسليم المتضرر ثم البلاغ الإلكتروني ثم المتابعة الهاتفية بحسب التاريخ.",
+      "يطلب جهازاً بديلاً صالحاً خلال مهلة واحدة واضحة، ويحدد مسؤولية تنظيم الإرجاع.",
+      "تُذكر Verbraucherzentrale كخطوة تالية للفحص لا كتهديد أو نتيجة قانونية مضمونة."
     ],
     "neu": true,
-    "zielWort": 100,
+    "zielWort": 150,
     "b2Typ": "nachricht",
     "dauerMin": 30
   },
@@ -981,15 +977,14 @@
       "موقف صريح مع تعليل (Ich bin der Ansicht, dass …, weil …)",
       "اقتراح بديل أو تعديل؛ Nominalisierungen وPassiv مناسبان لـB2"
     ],
-    "sample": "Der Vorschlag, alle Schülerinnen und Schüler der Oberstufe zu vierzig Stunden Ehrenamt zu verpflichten, klingt zunächst widersprüchlich: Kann Freiwilligkeit verordnet werden? Ein Blick auf die Argumente lohnt sich dennoch.\n\nFür den Vorschlag spricht, dass viele Jugendliche ohne einen solchen Anstoß nie erfahren würden, wie ein Verein, eine Tafel oder ein Pflegeheim von innen aussieht. Zudem entstehen Kontakte über die eigene soziale Gruppe hinaus, was der Integration aller Beteiligten dient. Dagegen lässt sich einwenden, dass erzwungenes Engagement schnell zur bloßen Pflichtübung wird und dass Schüler mit Nebenjob oder Betreuungsaufgaben zusätzlich belastet würden.\n\nIch bin der Ansicht, dass die Idee richtig, die Form aber falsch ist. Statt einer Pflicht mit Stundenzahl sollte die Schule ein Wahlpflichtfach „Engagement“ anbieten, das anerkannt und benotet wird, aber Raum für eigene Projekte lässt. So bliebe der Kern des Ehrenamts erhalten: dass man es selbst gewählt hat.",
+    "sample": "Der Vorschlag, alle Schülerinnen und Schüler der Oberstufe zu vierzig Stunden Ehrenamt zu verpflichten, klingt zunächst widersprüchlich: Kann Freiwilligkeit verordnet werden? Ein Blick auf beide Seiten lohnt sich dennoch.\n\nDafür spricht, dass Jugendliche Tätigkeiten kennenlernen, denen sie sonst vielleicht nicht begegnen würden. Außerdem können bei der Mitarbeit in einem Verein, einer Tafel oder einem Pflegeheim Kontakte außerhalb der eigenen Klasse entstehen. Dagegen lässt sich einwenden, dass erzwungenes Engagement schnell zur bloßen Pflichtübung wird. Hinzu kommt die zeitliche Belastung für Jugendliche, die neben der Schule arbeiten oder Angehörige betreuen. Auch Begleitung, Fahrtkosten und Versicherung müssten verlässlich geregelt werden.\n\nIch bin der Ansicht, dass die Idee in veränderter Form sinnvoll ist, weil gesellschaftliches Engagement Anerkennung verdient, aber Wahlmöglichkeiten braucht. Statt einer starren Pflicht sollte die Schule ein Wahlpflichtfach „Engagement“ anbieten. Darin könnten die Jugendlichen ein eigenes Projekt auswählen, Unterstützung erhalten und ihre Erfahrungen reflektieren. So würde die Leistung anerkannt, ohne den freiwilligen Kern vollständig aufzugeben.",
     "noteAr": [
-      "Stellungnahme في B2: الموقف يأتي بعد الموازنة لا قبلها",
-      "«Kann Freiwilligkeit verordnet werden?» سؤال بلاغي في المقدمة — أداة أسلوبية تُحتسب في B2",
-      "صيغ B2: Passiv (verordnet werden)، Nominalisierung (Freiwilligkeit، Engagement)، Konjunktiv II (bliebe)",
-      "غوته B2 الكتابة: مساهمة منتدى ~150 كلمة — 45 دقيقة الجزء 1/2"
+      "تعيد المقدمة صياغة الاقتراح وتطرح التعارض بين الإلزام والتطوع.",
+      "يعرض النموذج فائدتين ثم عيبين عمليين يتعلقان بالدافعية والوقت قبل إعلان الموقف.",
+      "يقترح Wahlpflichtfach بديلاً معللاً يتيح الاختيار ويعترف بالعمل المنجز."
     ],
     "neu": true,
-    "zielWort": 150,
+    "zielWort": 180,
     "b2Typ": "forum",
     "dauerMin": 45
   },
@@ -1004,10 +999,10 @@
     "criteria": [
       "5 جمل بسيطة",
       "استخدام sein/heißen/kommen/wohnen",
-      "جندر واضح للأسماء",
+      "المعلومات الخمس المطلوبة موجودة",
       "علامات ترقيم صحيحة"
     ],
-    "sample": "Ich heiße Layla. Ich bin 24 Jahre alt. Ich komme aus Syrien. Ich wohne in Köln. Ich bin Studentin.",
+    "sample": "Ich heiße Layla. Ich bin 24 Jahre alt. Ich komme aus Syrien. Ich wohne in Köln. Ich bin Studentin an der Universität.",
     "noteAr": [
       "اكتب جملة قصيرة واحدة لكل معلومة، مع فعل واضح مثل heißen أو sein أو wohnen.",
       "للعمر قل: Ich bin 24 Jahre alt؛ ولا تُسقط Jahre alt. ابدأ الجملة بحرف كبير واختمها بنقطة."
@@ -1031,9 +1026,9 @@
     "sample": "In meiner Familie sind vier Personen: mein Vater Omar, meine Mutter Dalia, mein Bruder Sami und ich. Mein Vater ist 50 Jahre alt und Arzt. Meine Mutter ist 46 Jahre alt und Lehrerin. Mein Bruder ist 16 Jahre alt und Schüler. Ich bin Studentin.",
     "noteAr": [
       "استخدم mein مع المذكر والمحايد، مثل mein Vater وmein Kind، وmeine مع المؤنث، مثل meine Mutter.",
-      "عند تعداد أفراد الأسرة قل Das sind، ثم اذكر المهن بجمل بسيطة مع ist أو bin."
+      "يمكنك بدء التعداد بـDas sind … أو بـIn meiner Familie sind …، ثم اذكر الأعمار والمهن بجمل بسيطة مع ist أو bin."
     ],
-    "zielWort": 30
+    "zielWort": 40
   },
   {
     "id": "w-a0-05",
@@ -1046,14 +1041,14 @@
     "criteria": [
       "الأرقام 1–20 صحيحة",
       "5 ألوان مع مثال",
-      "جنس الاسم في المثال صحيح"
+      "أداة الاسم في المثال صحيحة"
     ],
     "sample": "eins, zwei, drei, vier, fünf, sechs, sieben, acht, neun, zehn, elf, zwölf, dreizehn, vierzehn, fünfzehn, sechzehn, siebzehn, achtzehn, neunzehn, zwanzig. Der Himmel ist blau. Die Sonne ist gelb. Das Gras ist grün. Die Erdbeere ist rot. Die Nacht ist schwarz.",
     "noteAr": [
       "اكتب الأعداد كلها بالترتيب من eins إلى zwanzig؛ انتبه خصوصاً إلى كتابة sechs وsechzehn وzwölf.",
       "اربط كل لون باسم ذي أداة صحيحة، مثل der Himmel ist blau وdie Sonne ist gelb؛ الصفة هنا تبدأ بحرف صغير."
     ],
-    "zielWort": 30
+    "zielWort": 40
   },
   {
     "id": "w-a1-11",
@@ -1095,7 +1090,7 @@
       "صف المكان بجمل واضحة، ثم اذكر أين يقع وما الذي تفعله فيه؛ أضف صفة بسيطة مثل ruhig أو schön.",
       "بعد weil تأتي الجملة التابعة والفعل المصرف في آخرها: ..., weil es dort ruhig ist."
     ],
-    "zielWort": 80
+    "zielWort": 50
   },
   {
     "id": "w-b1-11",
@@ -1116,7 +1111,7 @@
       "ابدأ بتحية رسمية، وحدّد وقت الطلب والتسليم ووصف العيب؛ استخدم als للحدث المحدد في الماضي.",
       "اجعل الحل المطلوب صريحاً (Umtausch أو Rückerstattung)، وحدّد مهلة للرد، واختم رسمياً؛ أرفق صورة للعيب إن توفرت."
     ],
-    "zielWort": 110
+    "zielWort": 100
   },
   {
     "id": "w-b1-12",
@@ -1137,7 +1132,7 @@
       "وازن الإيجابيات والسلبيات في فقرات مترابطة؛ استخدم einerseits وandererseits لا قائمة مفككة.",
       "اربط تجربة شخصية بتوصية نهائية معلّلة، ووضّح رأيك بعبارة مثل Meiner Meinung nach."
     ],
-    "zielWort": 110
+    "zielWort": 100
   },
   {
     "id": "w-b2-12",
@@ -1156,9 +1151,9 @@
     ],
     "sample": "Die Digitalisierung der Schulen wird kontrovers diskutiert. Richtig eingesetzt könnte sie den Unterricht vielfältiger und zugänglicher machen. Digitale Lehrmittel bieten aktuelle Quellen und ermöglichen es, dass Lernende im eigenen Tempo üben; Lehrkräfte können Aufgaben besser an unterschiedliche Niveaus anpassen. Zudem lassen sich Projekte leichter gemeinsam bearbeiten, auch wenn eine Klasse nicht am selben Ort arbeitet. Dem stehen erhebliche Risiken gegenüber. Wo Geräte oder stabiles Internet fehlen, werden soziale Unterschiede verstärkt. Außerdem lenken Benachrichtigungen ab, und die Erhebung persönlicher Daten wirft Datenschutzfragen auf. Ein Beispiel: Eine Recherche auf dem Tablet kann mehrere Perspektiven sichtbar machen; ohne klare Aufgabe wechseln manche jedoch zu Spielen. Technik allein verbessert also keinen Unterricht. Schulen sollten Lehrkräfte fortbilden, Datenschutz verbindlich regeln und analoge Alternativen sichern. Aus meiner Sicht ist Digitalisierung dann sinnvoll, wenn sie ein pädagogisches Ziel unterstützt und nicht die Beziehung zwischen Lehrkraft und Lernenden ersetzt.",
     "noteAr": [
-      "ابدأ بأطروحة، ثم اعرض حجتين مؤيدتين وحجتين معارضتين مع مثال محدد لكل موقف؛ لا تكتفِ بسرد المزايا.",
-      "نوّع الروابط: obwohl يقدّم جملة تابعة، وtrotz يسبق اسماً في حالة المضاف إليه؛ واختم بحكم معلّل لا بمجرد إعادة العنوان.",
-      "ملاحظة: Goethe B2 Schreiben: Forumsbeitrag ~150 Wörter — 45 Min. Teil 1/2"
+      "يعرض النموذج فوائد تنويع المصادر والتعلم بالسرعة المناسبة، ثم مخاطر الفجوة الرقمية والتشتت والبيانات.",
+      "يوضح مثال الجهاز اللوحي كيف تتغير النتيجة بحسب وضوح المهمة.",
+      "تربط الخاتمة الرقمنة بهدف تربوي محدد وتبقي البدائل غير الرقمية متاحة."
     ],
     "zielWort": 150,
     "b2Typ": "forum",
@@ -1181,11 +1176,11 @@
     ],
     "sample": "[Ihre Anschrift]\n[Anschrift des Vermieters]\nKöln, den 28. Oktober\n\nBetreff: Erneute Mängelanzeige – Heizung in meiner Wohnung\n\nSehr geehrter Herr Müller,\n\nseit dem 30. September funktioniert die Heizung im Wohnzimmer meiner Wohnung nicht. Die Raumtemperatur liegt abends nur bei etwa 16 Grad, sodass das Zimmer kaum nutzbar ist. Am 3. und am 10. Oktober habe ich Sie bereits telefonisch über den Defekt informiert; leider wurde bisher weder eine Reparatur veranlasst noch ein Termin vereinbart. Ich bitte Sie daher, den Mangel innerhalb von 14 Tagen nach Zugang dieses Schreibens fachgerecht zu beheben. Bei Zugang am 28. Oktober endet diese Frist am 11. November. Bitte bestätigen Sie mir schriftlich, wann ein Handwerker kommt. Sollte die Reparatur bis zum Ablauf der Frist nicht erfolgt sein, behalte ich mir vor, nach rechtlicher Beratung eine angemessene Mietminderung geltend zu machen. Ich hoffe auf eine zeitnahe Lösung.\n\nMit freundlichen Grüßen\nMax Beispiel",
     "noteAr": [
-      "ضع العنوان والتاريخ والموضوع قبل التحية، وسجّل تاريخ بدء العطل وتاريخي البلاغين السابقين بترتيب زمني دقيق.",
-      "حدّد مهلة 14 يوماً بموعد نهائي واطلب التأكيد؛ صغ Mietminderung كاحتمال بعد استشارة قانونية، لا كتخفيض فوري تلقائي.",
-      "ملاحظة: Goethe B2 Schreiben: Formelle Nachricht ~100 Wörter — 30 Min. Teil 2/2"
+      "تسجل الرسالة تاريخ بدء العطل وتاريخي الاتصال قبل تحديد الطلب.",
+      "تُحسب مهلة الأربعة عشر يوماً إلى تاريخ نهائي واضح ويُطلب تأكيد موعد الفني كتابياً.",
+      "تُصاغ Mietminderung كخطوة محتملة بعد استشارة، لا كحق آلي يقرره النموذج."
     ],
-    "zielWort": 100,
+    "zielWort": 150,
     "b2Typ": "nachricht",
     "dauerMin": 30
   },
@@ -1203,9 +1198,9 @@
       "مكان السكن mit in …",
       "هواية واحدة بسيطة"
     ],
-    "sample": "Hallo! Ich heiße Sara. Ich bin 22 Jahre alt. Ich wohne in Tunis. Ich schwimme gern.",
+    "sample": "Hallo! Ich heiße Sara und bin 22 Jahre alt. Ich wohne mit meiner Familie in Tunis. In meiner Freizeit schwimme ich sehr gern im Hallenbad.",
     "noteAr": [
-      "في بطاقة A0 اكتفِ بجمل قصيرة من فاعل وفعل؛ لا حاجة إلى جمل موصولة أو ثانوية.",
+      "في بطاقة A0 اكتفِ بجمل قصيرة ذات أفعال واضحة؛ لا حاجة إلى جمل ثانوية طويلة.",
       "تحقق من وجود المعلومات الأربع: الاسم، والعمر مع Jahre alt، والسكن مع in، وهواية واحدة."
     ],
     "zielWort": 25
@@ -1224,7 +1219,7 @@
       "Bitte um Mitbringen / Antwort",
       "Zeit: ca. 40 Wörter"
     ],
-    "sample": "Liebe Ayşe, ich habe am Samstag Geburtstag und mache eine Party. Die Party beginnt um 18 Uhr bei mir zu Hause, Goethestraße 5. Kannst du kommen? Bitte sag mir bis Donnerstag Bescheid. Bring bitte deine neue CD mit! Viele Grüße, Deine Lena.",
+    "sample": "Liebe Ayşe,\n\nich habe am Samstag Geburtstag und mache eine Party. Sie beginnt um 18 Uhr bei mir zu Hause in der Goethestraße 5. Kannst du kommen? Bring bitte deine neue CD mit und sag mir bis Donnerstag Bescheid.\n\nViele Grüße\nLena",
     "noteAr": [
       "رتّب الدعوة: التحية، واليوم والساعة، والمكان أو العنوان، ثم طلب الرد والختام.",
       "للسؤال عن الحضور استخدم Kannst du kommen?؛ واكتب الموعد مثلاً am Samstag um 18 Uhr."
@@ -1240,12 +1235,12 @@
     "taskDe": "Schreiben Sie an ein Hotel in München (ca. 80 Wörter): Sie waren letztes Wochenende dort – das Zimmer war kalt, das WLAN funktionierte nicht – bitten Sie um Entschuldigung / Teilrückerstattung.",
     "taskAr": "اكتب لفندق في ميونخ (حوالي ٨٠ كلمة): كنت هناك نهاية الأسبوع الماضي، الغرفة كانت باردة والواي فاي لا يعمل، اطلب اعتذاراً واسترداداً جزئياً.",
     "criteria": [
-      "Betreffzeile",
-      "Sachliche Beschreibung (2 Probleme)",
-      "Konkrete Forderung",
-      "Freundliche Schlussformel"
+      "سطر موضوع واضح",
+      "وصف موضوعي للمشكلتين",
+      "طلب محدد",
+      "خاتمة مهذبة"
     ],
-    "sample": "Betreff: Probleme während meines Aufenthalts\n\nSehr geehrte Damen und Herren,\n\nich war vom 3. bis 5. Oktober in Ihrem Hotel in München, Zimmer 214. Leider war es in meinem Zimmer sehr kalt, weil die Heizung nicht funktionierte. Außerdem hatte ich während des ganzen Wochenendes kein WLAN. Ich habe das Problem am Samstagmorgen an der Rezeption gemeldet, aber leider konnte mir niemand helfen. Deshalb war ich mit meinem Aufenthalt nicht zufrieden. Bitte entschuldigen Sie die Unannehmlichkeiten. Ich bitte um eine teilweise Rückerstattung von 50 Euro. Bitte bestätigen Sie mir kurz, ob das möglich ist.\n\nMit freundlichen Grüßen\nAli Mahdi",
+    "sample": "Betreff: Probleme während meines Aufenthalts\n\nSehr geehrte Damen und Herren,\n\nich war vom 3. bis 5. Oktober in Ihrem Hotel in München, Zimmer 214. Leider war es in meinem Zimmer sehr kalt, weil die Heizung nicht funktionierte. Außerdem hatte ich am Wochenende kein WLAN. Ich habe das Problem am Samstagmorgen an der Rezeption gemeldet, aber leider konnte mir niemand helfen. Deshalb war ich mit meinem Aufenthalt nicht zufrieden. Bitte entschuldigen Sie die Unannehmlichkeiten. Ich bitte um eine teilweise Rückerstattung von 50 Euro. Bitte bestätigen Sie mir kurz, ob das möglich ist.\n\nMit freundlichen Grüßen\nAli Mahdi",
     "noteAr": [
       "ابدأ بسطر موضوع، ثم اذكر تاريخ الإقامة ورقم الغرفة، واشرح المشكلتين بوقائع محددة: التدفئة والواي فاي.",
       "اطلب بوضوح اعتذاراً أو استرداداً جزئياً بمبلغ معلوم، واختم بصيغة مهذبة؛ استخدم الماضي لوصف الإقامة."
@@ -1261,10 +1256,10 @@
     "taskDe": "Schreiben Sie einen Forumsbeitrag (ca. 110 Wörter): Sind Sie für oder gegen ein Handyverbot in Schulen? Nennen Sie zwei Argumente und ein Beispiel.",
     "taskAr": "اكتب مشاركة منتدى (حوالي ١١٠ كلم): هل تؤيد أو تعارض منع الهاتف في المدارس؟ اذكر حجتين ومثالاً.",
     "criteria": [
-      "Klare Position (Pro oder Contra)",
-      "Zwei Argumente mit Begründung",
-      "Konkretes Beispiel",
-      "Schlüssiger Schluss"
+      "موقف واضح مع المنع أو ضده",
+      "حجتان مع تعليل",
+      "مثال ملموس",
+      "خاتمة منطقية منسجمة مع الموقف"
     ],
     "sample": "Ich bin für ein Handyverbot während des Unterrichts, denn Handys lenken viele Schülerinnen und Schüler ab. Manche lesen Nachrichten oder schauen Videos, statt der Lehrkraft zuzuhören. So verpassen sie wichtige Erklärungen. Außerdem stören Klingeltöne die ganze Klasse. An meiner früheren Schule waren Handys erlaubt. In einer Mathematikstunde sah ich, wie mehrere Schüler heimlich Nachrichten schrieben; danach mussten wir die Aufgabe noch einmal besprechen. Natürlich kann ein Smartphone in den Pausen nützlich sein und im Notfall helfen. Deshalb sollte es nicht den ganzen Schultag verboten werden. Meiner Meinung nach bleiben Handys während des Unterrichts in der Tasche und werden nur mit Erlaubnis der Lehrkraft benutzt. So können sich alle besser konzentrieren, ohne auf die Vorteile ganz zu verzichten.",
     "noteAr": [
@@ -1289,11 +1284,11 @@
     ],
     "sample": "Das Homeoffice hat die Arbeitswelt nachhaltig verändert, doch nicht jeder Beschäftigte und jeder Betrieb profitiert gleichermaßen. Arbeitnehmerinnen und Arbeitnehmer sparen den täglichen Arbeitsweg und können ihre Arbeitszeit oft flexibler organisieren. Arbeitgeber gewinnen Zugang zu Fachkräften außerhalb ihres Standorts und benötigen möglicherweise weniger Bürofläche. Gleichzeitig kann die dauerhafte Arbeit zu Hause soziale Isolation fördern und die Grenze zwischen Beruf und Freizeit verwischen. Für Unternehmen wird es schwieriger, neue Beschäftigte einzuarbeiten und spontane Absprachen im Team zu ermöglichen; zudem müssen sensible Daten zuverlässig geschützt werden. Ein hybrides Modell könnte diese Nachteile begrenzen: feste Teamtage im Büro sichern den Austausch, während konzentrierte Aufgaben an anderen Tagen zu Hause erledigt werden. Voraussetzung sind klare Arbeitszeiten, geeignete Ausstattung und Regeln zur Erreichbarkeit. Meiner Ansicht nach sollte Homeoffice weder Pflicht noch Ausnahme sein. Beschäftigte und Arbeitgeber sollten gemeinsam entscheiden, welche Mischung zu den Aufgaben passt. So verbindet man Flexibilität mit Zusammenarbeit, ohne die Risiken zu übersehen.",
     "noteAr": [
-      "ميّز بين مصلحة الموظف وصاحب العمل، ووازن المرونة وتوفير الوقت مع العزلة وصعوبة التنسيق وحماية البيانات.",
-      "اعرض حجة مضادة ثم اقترح حلاً وسطاً عملياً، مثل أيام هجينة وقواعد واضحة، وعلّل موقفك في خاتمة محددة.",
-      "ملاحظة: Goethe B2 Schreiben: Forumsbeitrag ~150 Wörter — 45 Min. Teil 1/2"
+      "يميّز النموذج بين منافع الموظفين ومنافع أصحاب العمل، ثم يعرض مخاطر كل طرف.",
+      "يحوّل الحل الهجين الموازنة إلى شروط عملية: أيام فريق، تجهيز مناسب، وقواعد للتواصل.",
+      "تعلن الخاتمة موقفاً واضحاً يرفض الإلزام والمنع العامين."
     ],
-    "zielWort": 150,
+    "zielWort": 160,
     "b2Typ": "forum",
     "dauerMin": 45
   },
@@ -1313,10 +1308,9 @@
     ],
     "sample": "Meiner Meinung nach sollte Homeoffice für viele Berufe möglich sein, aber nicht für alle. Einerseits spart man Zeit und Geld, weil der Weg zur Arbeit wegfällt, und man kann Familie und Beruf besser verbinden. Andererseits fehlt der direkte Kontakt zu den Kollegen; neue Mitarbeiter lernen das Team nur schwer kennen. Aus meiner Erfahrung weiß ich, dass zwei Tage zu Hause ideal sind: Man arbeitet konzentriert und bleibt trotzdem Teil des Teams. Im Büro dagegen entstehen Ideen oft zufällig am Kaffeetisch, und Probleme lassen sich in fünf Minuten klären, für die man online drei Tage E-Mails schreibt. Auch die Grenze zwischen Arbeit und Freizeit verschwimmt zu Hause schnell; viele arbeiten abends länger, statt früher Schluss zu machen. Als Kompromiss könnten Firmen feste Tage im Büro vereinbaren. So nutzt man die Vorteile beider Arbeitsformen, ohne die Nachteile zu groß werden zu lassen. Entscheidend ist nicht der Ort, sondern Vertrauen und klare Absprachen.",
     "noteAr": [
-      "افتتاح بموقف صريح لا تمهيد طويل — معيار Goethe الأول",
-      "توازن حججي (einerseits/andererseits) ثم حل وسط في الخاتمة بدل انتصار طرف",
-      "مثال من التجربة بصيغة عامة قابلة للنقل (zwei Tage) لا حكاية شخصية طويلة",
-      "غوته B2 الكتابة: مساهمة منتدى ~150 كلمة — 45 دقيقة الجزء 1/2"
+      "يظهر الموقف في الجملتين الأوليين ثم تُفصل الحجة المؤيدة عن الحجة المعارضة.",
+      "يقدم مثال اليومين من المنزل تجربة محددة ويوازنها بما يحدث في المكتب.",
+      "ينتهي النص بحل وسط قائم على أيام حضور ثابتة واتفاقات واضحة."
     ],
     "zielWort": 150,
     "b2Typ": "forum",
@@ -1336,12 +1330,11 @@
       "حجة مضادة معترف بها ثم رد عليها (Das mag sein, jedoch …)",
       "سجلّ منتدى: لا تحية ولا ختام رسالة"
     ],
-    "sample": "Ich bin dafür, soziale Medien erst ab 16 Jahren zu erlauben. Jugendliche verbringen heute viele Stunden am Handy; das führt dazu, dass Schlaf, Schule und echte Freundschaften leiden. Kritiker sagen, ein Verbot sei schwer zu kontrollieren. Das mag sein, jedoch schützt ein klares Gesetz Kinder in einem Alter, in dem sie Werbung und Druck noch nicht gut einschätzen können. Wichtig ist außerdem, dass Eltern und Schulen über Gefahren sprechen, statt nur zu verbieten. Ein Verbot allein löst das Problem nicht, aber es gibt Familien Zeit und eine klare Grenze. Hinzu kommt der Druck durch Bilder und Likes: Wer sich ständig vergleicht, fühlt sich schnell zu dick, zu arm oder zu langweilig. Schulen berichten außerdem von Schülern, die nachts kaum schlafen, weil sie ihr Handy nicht weglegen können. Deshalb halte ich die Altersgrenze für sinnvoll, wenn sie mit Aufklärung verbunden wird.",
+    "sample": "Ich bin dafür, soziale Medien grundsätzlich erst ab 16 Jahren zu erlauben. Wenn Benachrichtigungen bis spät in die Nacht eintreffen, kann das dazu führen, dass Schlaf und Konzentration leiden. Auch der ständige Vergleich mit sorgfältig ausgewählten Bildern kann Druck erzeugen. Kritiker sagen, eine Altersgrenze sei technisch leicht zu umgehen. Das mag sein; eine Regel allein löst das Problem tatsächlich nicht. Sie kann Familien und Schulen jedoch einen klaren Rahmen geben, wenn sie mit Medienbildung und verständlichen Schutzfunktionen verbunden wird. Plattformen sollten private Konten voreinstellen, Werbung deutlich kennzeichnen und einfache Zeitlimits anbieten. Eltern wiederum müssen über Nutzung sprechen, statt nur Geräte wegzunehmen. Deshalb halte ich eine Altersgrenze für sinnvoll, sofern sie nicht als einzige Maßnahme betrachtet wird. Entscheidend ist, dass Jugendliche schrittweise lernen, Inhalte, Kontakte und ihre eigene Bildschirmzeit kritisch einzuschätzen.",
     "noteAr": [
-      "ربط سببي صريح (das führt dazu, dass) يرفع معيار التراكيب",
-      "الاعتراف بالحجة المضادة ثم تفنيدها (Das mag sein, jedoch) — نضج حجاجي B2",
-      "الخاتمة مشروطة (wenn) لا مطلقة — تدرّج في الحكم",
-      "غوته B2 الكتابة: مساهمة منتدى ~150 كلمة — 45 دقيقة الجزء 1/2"
+      "يعلن النموذج تأييد الحد العمري ثم يشرح أثر الإشعارات والمقارنة المستمرة بصيغة احتمالية.",
+      "يعترف بصعوبة التحقق من العمر ويرد بأن الحد يحتاج إلى توعية وأدوات حماية، لا إلى الحظر وحده.",
+      "تظل الخاتمة مشروطة بتعاون الأسرة والمدرسة والمنصة."
     ],
     "zielWort": 150,
     "b2Typ": "forum",
@@ -1361,12 +1354,11 @@
       "مشكلة واقعية (Kosten, kleine Firmen) لا معارضة شكلية",
       "خاتمة تبدأ بـ Zusammenfassend / Alles in allem"
     ],
-    "sample": "Die Vier-Tage-Woche bei vollem Gehalt halte ich persönlich für eine gute Idee, wenn die Arbeit gut organisiert ist. Wer ausgeruht ist, arbeitet konzentrierter; viele Studien zeigen, dass die Leistung in vier Tagen kaum sinkt. Ein Problem sind jedoch die Kosten für kleine Firmen, denn sie können nicht einfach mehr Personal einstellen. Im Vergleich zu früher hat sich unsere Arbeitswelt stark verändert: Computer erledigen heute viele Aufgaben schneller. Natürlich funktioniert das nicht in jedem Beruf: Eine Krankenschwester kann nicht von zu Hause arbeiten, und auch Fabriken brauchen Menschen vor Ort. Der freie Freitag sollte deshalb eine Möglichkeit sein, keine Pflicht für alle. Wo er möglich ist, berichten Firmen von weniger Krankheitstagen und zufriedeneren Mitarbeitern. Zusammenfassend kann man sagen, dass die Vier-Tage-Woche kein Geschenk ist, sondern eine Frage der Organisation. Firmen sollten sie testen, statt sie sofort für alle einzuführen oder abzulehnen.",
+    "sample": "Die Vier-Tage-Woche bei vollem Gehalt halte ich für eine interessante Möglichkeit, wenn Aufgaben und Arbeitszeit realistisch geplant werden. Ein zusätzlicher freier Tag könnte Erholung schaffen, sodass Beschäftigte konzentrierter arbeiten. Ein Problem ist jedoch die Besetzung: Kleine Betriebe oder Einrichtungen mit festen Öffnungs- und Pflegezeiten können Ausfälle nicht einfach durch mehr Personal ausgleichen. Deshalb passt dasselbe Modell nicht zu jedem Beruf. Eine Verwaltung könnte zum Beispiel ein Team sechs Monate lang an vier Tagen mit klar begrenzter Arbeitszeit arbeiten lassen und anschließend Arbeitsmenge, Überstunden und Rückmeldungen vergleichen. In einer Klinik wären dagegen versetzte freie Tage und ausreichend Personal nötig, damit die Versorgung gesichert bleibt. Im Vergleich zu früher lassen sich manche Routineaufgaben schneller erledigen, andere bleiben zeitgebunden. Zusammenfassend sollte die Vier-Tage-Woche weder sofort für alle vorgeschrieben noch pauschal abgelehnt werden. Sinnvoller sind begrenzte Versuche mit klaren Kriterien und einer gemeinsamen Auswertung.",
     "noteAr": [
-      "مقارنة زمنية (Im Vergleich zu früher) من وسائل التعبير المعيارية",
-      "خاتمة بجملة تلخيصية صريحة (Zusammenfassend kann man sagen) تُغلق البنية",
-      "نفي متوازن (kein Geschenk, sondern) يري نضجًا لغويًا",
-      "غوته B2 الكتابة: مساهمة منتدى ~150 كلمة — 45 دقيقة الجزء 1/2"
+      "يربط النموذج الميزة بتنظيم العمل والتركيز، ثم يعرض مشكلة تغطية الورديات وتكلفة الموظفين الإضافيين.",
+      "يقدم مثالاً افتراضياً من إدارة تجرّب النظام بدلاً من نسبة نتائج إلى دراسات أو شركات غير محددة.",
+      "تغلق الخلاصة باقتراح تجربة محدودة وتقييمها قبل التعميم."
     ],
     "zielWort": 150,
     "b2Typ": "forum",
@@ -1386,12 +1378,11 @@
       "اقتراح عملي في النهاية لا شعار",
       "ضمير الشأن والعموم (man) بدل تكرار ich"
     ],
-    "sample": "Ich bin der Meinung, dass unsere Innenstädte weitgehend autofrei werden sollten. Ohne Autos sind die Straßen sicherer, die Luft ist sauberer und es gibt mehr Platz für Menschen, Cafés und Grünflächen. Außerdem fahren die meisten Wege in der Stadt problemlos mit Bus, Bahn oder Fahrrad. Trotzdem darf man die Bewohner nicht vergessen: Ältere Menschen und Familien brauchen manchmal ein Auto. Geschäfte in der Innenstadt fürchten weniger Kunden, doch Erfahrungen aus anderen Städten zeigen: Fußgängerzonen sind voller, nicht leerer, weil Menschen dort gern bleiben. Wer mit dem Auto kommen muss, findet am Stadtrand Parkhäuser und steigt in die Straßenbahn um. Aus diesem Grund schlage ich vor, die Innenstadt schrittweise zu verändern: mehr Parkplätze am Rand, günstige Tickets und gute Radwege. So gewinnt die Stadt an Leben, ohne dass jemand ausgeschlossen wird.",
+    "sample": "Ich bin der Meinung, dass Innenstädte weitgehend autofrei werden sollten. Weniger Autoverkehr kann Straßen sicherer machen, die Luftqualität verbessern und mehr Platz für Fußwege, Fahrräder und Grünflächen schaffen. Außerdem könnten Plätze angenehmer werden, wenn dort nicht ständig Fahrzeuge durchfahren oder parken. Trotzdem darf man die Schwierigkeiten der Bewohner nicht übersehen. Ältere Menschen, Personen mit Behinderung und Familien sind teilweise auf ein Auto angewiesen; auch Lieferdienste benötigen verlässliche Zufahrten. Geschäfte befürchten zudem, dass Kundschaft ausbleibt, wenn Alternativen fehlen. Aus diesem Grund schlage ich eine schrittweise Umstellung vor: zuerst häufigere Busse und Bahnen, sichere Radwege und Parkmöglichkeiten am Stadtrand, danach verkehrsarme Bereiche. Für notwendige Fahrten sollte es klare Ausnahmegenehmigungen und feste Lieferzeiten geben. So gewinnt die Stadt öffentlichen Raum, ohne Menschen auszuschließen, die nicht problemlos auf ein anderes Verkehrsmittel wechseln können.",
     "noteAr": [
-      "تدرّج المقترح (schrittweise) يحوّل الموقف إلى خطة — مطلوب في خلاصات B2",
-      "اعتراف بفئة متضررة محددة (ältere Menschen) لا بمعارضة مجردة",
-      "تنويع الروابط: außerdem/trotzdem/aus diesem Grund في نص واحد",
-      "غوته B2 الكتابة: مساهمة منتدى ~150 كلمة — 45 دقيقة الجزء 1/2"
+      "يذكر النموذج فوائد السلامة والهواء والمساحة، ثم يخصص فقرة لصعوبات السكان والتوصيل.",
+      "تُعرض النتائج المتوقعة كاحتمالات مرتبطة بالخطة لا كخبرة خارجية محسومة.",
+      "يتضمن الاقتراح تنفيذًا تدريجياً ونقلاً عاماً ومواقف طرفية واستثناءات ضرورية."
     ],
     "zielWort": 150,
     "b2Typ": "forum",
@@ -1402,21 +1393,20 @@
     "level": "B2",
     "format": "frei",
     "titleDe": "Stellungnahme: Bargeld abschaffen?",
-    "titleAr": "بيان موقف (telc): إلغاء النقد؟",
-    "taskDe": "Sie schreiben für ein Online-Forum eine Stellungnahme zum Thema „Bargeld abschaffen?“ (mindestens 150 Wörter, telc-Format). Struktur: Position → zwei Argumente → Gegenposition → Kompromiss oder klare Entscheidung.",
-    "taskAr": "تكتب بيان موقف لمنتدى إلكتروني حول «إلغاء النقد؟» (150 كلمة على الأقل، بصيغة telc). البنية: موقف، حجتان، موقف مضاد، حل وسط أو قرار واضح.",
+    "titleAr": "موقف: هل نلغي النقد؟",
+    "taskDe": "Sie schreiben für ein Online-Forum eine Stellungnahme zum Thema „Bargeld abschaffen?“ (mindestens 150 Wörter). Struktur: Position → zwei Argumente → Gegenposition → Kompromiss oder klare Entscheidung.",
+    "taskAr": "تكتب موقفاً لمنتدى إلكتروني حول «هل نلغي النقد؟» (150 كلمة على الأقل). البنية: موقف، حجتان، موقف مضاد، حل وسط أو قرار واضح.",
     "criteria": [
       "موقف من الجملة الأولى (Ich bin dagegen, dass …)",
       "حجتان منفصلتان بفقرات أو روابط واضحة",
       "صياغة الموقف المضاد بنزاهة (Befürworter sagen, dass …)",
       "إغلاق بقرار أو تسوية لا بتكرار الافتتاح"
     ],
-    "sample": "Ich bin dagegen, Bargeld abzuschaffen. Bezahlen mit Karte oder Handy ist zwar schnell, aber Bargeld gibt Freiheit: Man kann auch ohne Konto, ohne Strom und ohne Internet bezahlen. Außerdem hilft Bargeld vielen Menschen, ihre Ausgaben zu kontrollieren; wer Scheine in der Hand hat, gibt weniger aus. Befürworter sagen, dass digitales Bezahlen sicherer und ehrlicher sei, weil alles dokumentiert wird. Das stimmt teilweise, jedoch entstehen dabei Daten über jeden Einkauf. Auch ältere Menschen und kleine Läden auf dem Land sind auf Bargeld angewiesen; nicht jeder besitzt ein Smartphone oder ein Konto ohne Gebühren. Scheine und Münzen funktionieren immer, selbst bei einem Stromausfall. Nachbarn und kleine Händler erzählen mir außerdem, dass sie sich ohne Bargeld nicht sicher fühlen. Als Kompromiss schlage ich vor: Digitales Bezahlen darf wachsen, aber Bargeld muss als Alternative bleiben. So entscheidet jeder selbst, wie er bezahlen möchte.",
+    "sample": "Ich bin dagegen, Bargeld vollständig abzuschaffen. Karten und Handys sind zwar bequem, doch Bargeld bleibt für viele Situationen wichtig. Erstens ermöglicht es auch Menschen ohne Smartphone oder sichere Internetverbindung, selbstständig einzukaufen. Zweitens hilft die sichtbare Menge im Portemonnaie manchen Personen dabei, ein festes Wochenbudget einzuhalten. Darüber hinaus entstehen bei digitalen Zahlungen Daten über Einkäufe, die geschützt werden müssen.\n\nBefürworter einer Abschaffung sagen, digitales Bezahlen sei schnell und erleichtere die Abrechnung in Geschäften. Das stimmt teilweise. Allerdings dürfen technische Bequemlichkeit und moderne Kassen nicht dazu führen, dass ältere Menschen, Kinder oder Personen ohne passendes Konto ausgeschlossen werden. Auch bei einer technischen Störung ist eine zusätzliche Zahlungsart sinnvoll.\n\nAls Kompromiss schlage ich deshalb vor, digitale Angebote weiter auszubauen, Bargeld aber als allgemein zugängliche Alternative zu erhalten. Geschäfte sollten mindestens zwei Zahlungswege anbieten, während Kundinnen und Kunden selbst entscheiden. Diese Wahl sollte unabhängig vom Einkommen offenstehen. So verbinden wir Komfort mit Teilhabe, Datenschutz und Wahlfreiheit.",
     "noteAr": [
-      "تمثيل الموقف المضاد بنزاهة (Das stimmt teilweise) قبل الرد — قلب صيغة telc",
-      "حجتان ماديتان (Freiheit, Kontrolle) لا عاطفيتان فقط",
-      "تسوية ختامية بصيغة Vorschlag (Als Kompromiss schlage ich vor)",
-      "غوته B2 الكتابة: مساهمة منتدى ~150 كلمة — 45 دقيقة الجزء 1/2"
+      "يبدأ النص برفض الإلغاء الكامل ثم يفصل بين سهولة الوصول والخصوصية والقدرة على ضبط الميزانية.",
+      "يعرض حجة مؤيدي الدفع الرقمي بنزاهة قبل بيان أثر استبعاد من لا يملك الأدوات المناسبة.",
+      "تقترح الخاتمة إبقاء الخيارين معاً بدلاً من تكرار موقف البداية."
     ],
     "zielWort": 150,
     "b2Typ": "forum",
@@ -1436,12 +1426,11 @@
       "اقتراح موعدين بدقة (am … um … Uhr)",
       "ختام مهني (Mit freundlichen Grüßen) + اسم"
     ],
-    "sample": "Sehr geehrte Frau Sommer,\n\nleider muss ich unseren Termin am Donnerstag um 10 Uhr verschieben. An diesem Tag findet eine dringende Schulung unserer Abteilung statt, an der ich teilnehmen muss. Es tut mir leid, dass ich Ihnen erst heute schreibe. Als neue Termine schlage ich Freitag um 9 Uhr oder Montag um 14 Uhr vor. Beide Zeiten sind in meinem Kalender frei. Bitte teilen Sie mir mit, welcher Termin Ihnen besser passt. Für Rückfragen stehe ich Ihnen gern zur Verfügung.\n\nMit freundlichen Grüßen\nKarim Benali Über eine kurze Rückmeldung, ob der Termin Ihnen passt, würde ich mich sehr freuen. Selbstverständlich bringe ich zum Gespräch alle nötigen Unterlagen und Zeugnisse mit.",
+    "sample": "Sehr geehrte Frau Sommer,\n\nleider muss ich unseren Termin am Donnerstag um 10 Uhr verschieben, da an diesem Vormittag eine dringende Schulung unserer Abteilung stattfindet, an der ich teilnehmen muss. Bitte entschuldigen Sie, dass ich Ihnen erst heute Bescheid gebe. Als Ersatztermine schlage ich Freitag, den 12. Juni, um 9 Uhr oder Montag, den 15. Juni, um 14 Uhr vor. Bitte teilen Sie mir mit, welcher Termin Ihnen besser passt. Sollten beide Zeiten ungünstig sein, suche ich gern nach einer weiteren Möglichkeit. Den Besprechungsraum reserviere ich anschließend gern für den bestätigten Termin. Vielen Dank für Ihr Verständnis.\n\nMit freundlichen Grüßen\nKarim Benali",
     "noteAr": [
-      "افتتاح مباشر بالمشكلة (leider muss ich) — لا مقدمات فارغة في رسائل العمل",
-      "موعدان بديلان محددان يجعلان الرد سهلًا على المديرة",
-      "جملة الاستعداد للاستفسار (Für Rückfragen …) ختام مهني معياري",
-      "غوته B2 الكتابة: رسالة رسمية ~100 كلمة — 30 دقيقة الجزء 2/2"
+      "تتضمن الرسالة اعتذاراً وسبباً واضحاً في جملة da ثم تقترح موعدين كاملين.",
+      "يسهّل سؤال الاختيار الرد ويعرض البحث عن بديل إذا لم يلائم الموعدان.",
+      "تنتهي الرسالة عند الاسم؛ لا يظهر أي محتوى جديد بعد التوقيع."
     ],
     "zielWort": 100,
     "b2Typ": "nachricht",
@@ -1461,12 +1450,11 @@
       "سؤالان محددان لا قائمة طويلة",
       "شكر مسبق + ختام مهني"
     ],
-    "sample": "Sehr geehrter Herr Lange,\n\nmein Name ist Sara Amri, ich arbeite seit Mai in der Abteilung Marketing. Nächste Woche beginne ich im Projekt „Neuer Onlineshop“ und hätte einige Fragen. Könnten Sie mir bitte die aktuellen Projektunterlagen zuschicken? Außerdem würde ich gern wissen, wann unser erstes Treffen stattfindet und wer daran teilnimmt. Dann kann ich mich gut vorbereiten. Über die Zugangsdaten zum Projektordner würde ich mich ebenfalls freuen. Gern stelle ich mich dem Team in einer kurzen Runde persönlich vor. Vielen Dank im Voraus für Ihre Unterstützung.\n\nMit freundlichen Grüßen\nSara Amri Für ein erstes Gespräch stehe ich Ihnen gern jederzeit zur Verfügung. Ich freue mich auf den Start in Ihrem Team und auf eine gute Zusammenarbeit.",
+    "sample": "Sehr geehrter Herr Lange,\n\nmein Name ist Sara Amri, und ich arbeite seit Mai in der Marketingabteilung. Nächste Woche beginne ich im Projekt „Neuer Onlineshop“ und möchte mich gern vorbereiten. Könnten Sie mir bitte die aktuellen Projektunterlagen und die Zugangsdaten zum Projektordner zuschicken? Außerdem würde ich gern wissen, wann unser erstes Treffen stattfindet und wer daran teilnimmt. Dann kann ich die richtigen Themen vorbereiten. Gern stelle ich mich dem Team bei dieser Gelegenheit kurz persönlich vor. Vielen Dank im Voraus für Ihre Unterstützung. Falls noch etwas fehlt, ergänze ich es umgehend. Ich freue mich auf die Zusammenarbeit.\n\nMit freundlichen Grüßen\nSara Amri",
     "noteAr": [
-      "Konjunktiv II في الطلبين (Könnten Sie / würde ich gern) — علامة مهنية B2",
-      "تقديم النفس بوظيفة وقسم وتاريخ بداية في سطرين",
-      "شكر مسبق (Vielen Dank im Voraus) يغلق الطلب بأدب",
-      "غوته B2 الكتابة: رسالة رسمية ~100 كلمة — 30 دقيقة الجزء 2/2"
+      "يعرّف الكاتب بقسمه وتاريخ بدء عمله قبل طلب المستندات.",
+      "تظهر الصيغة المهذبة في Könnten Sie وwürde ich gern، وتقتصر الأسئلة على الاجتماع والمشاركين.",
+      "يأتي الشكر قبل التحية الختامية ولا يضاف نص بعد الاسم."
     ],
     "zielWort": 100,
     "b2Typ": "nachricht",
@@ -1476,7 +1464,7 @@
     "id": "w-b2-21",
     "level": "B2",
     "format": "brief",
-    "titleDe": "Berufliche Nachricht: Übergabe an Kollegen",
+    "titleDe": "Berufliche Nachricht: Aufgabenübergabe",
     "titleAr": "رسالة مهنية: تسليم مهام لزميل",
     "taskDe": "Sie sind nächste Woche im Urlaub. Schreiben Sie eine Nachricht an Ihre Kollegin Frau Roth (ca. 100 Wörter): Erklären Sie, welche Aufgaben sie übernimmt, wo die Unterlagen liegen und wer bei Problemen hilft.",
     "taskAr": "أنت في إجازة الأسبوع القادم. اكتب رسالة إلى زميلتك السيدة روث (نحو 100 كلمة): اشرح المهام التي ستتولاها، وأين توجد المستندات، ومن يساعد عند المشكلات.",
@@ -1486,12 +1474,11 @@
       "معلومة مكان المستندات بدقة",
       "عرض مساعدة بديل عند المشكلات + شكر"
     ],
-    "sample": "Liebe Frau Roth,\n\nwie besprochen bin ich nächste Woche im Urlaub. Vielen Dank, dass Sie meine wichtigsten Aufgaben übernehmen. Zuerst müssten bitte die Kundenmails beantwortet werden; die Vorlagen liegen im Ordner „Kunden“ auf dem Server. Am Freitag kommt außerdem der Wochenbericht, eine kurze Anleitung finden Sie daneben. Bei technischen Problemen hilft Ihnen Herr Peters aus der IT, Durchwahl 214. Ich bin ab dem 20. wieder da und rufe Sie dann an.\n\nAm Mittwoch rufe ich kurz aus dem Urlaub an, falls es Fragen gibt. Vielen Dank und herzliche Grüße\nOmar Haddad Alle Passwörter und Zugänge liegen wie besprochen im verschlossenen Umschlag bei Frau Berger. Ich wünsche dem ganzen Team eine ruhige und erfolgreiche Zeit.",
+    "sample": "Liebe Frau Roth,\n\nwie besprochen bin ich nächste Woche im Urlaub. Vielen Dank, dass Sie meine wichtigsten Aufgaben übernehmen. Beantworten Sie bitte zuerst die Kundenmails; die Vorlagen liegen im Ordner „Kunden“ auf dem Server. Am Freitag erstellen Sie außerdem den Wochenbericht. Eine kurze Anleitung und die aktuellen Zahlen finden Sie im Unterordner „Berichte“. Bei technischen Problemen hilft Ihnen Herr Peters aus der IT unter der Durchwahl 214. Inhaltliche Fragen kann Frau Berger aus unserem Team beantworten. Ab dem 20. bin ich wieder erreichbar. Den Kalender habe ich bereits entsprechend aktualisiert. Offene Punkte besprechen wir dann gemeinsam.\n\nVielen Dank und herzliche Grüße\nOmar Haddad",
     "noteAr": [
-      "تحية بـ Liebe Frau لأن العلاقة زمالة (نصف رسمية) لا رسمية كاملة",
-      "ترتيب زمني/أولوي (Zuerst … Am Freitag außerdem) يجعل التسليم قابلًا للتنفيذ",
-      "بديل عند المشكلة باسم ورقم داخلي — واقعية مهنية مقنعة",
-      "غوته B2 الكتابة: رسالة رسمية ~100 كلمة — 30 دقيقة الجزء 2/2"
+      "ترتب الرسالة المهام زمنياً وتحدد مكان القوالب والتعليمات بدقة.",
+      "تفرق بين جهة المساعدة الفنية وجهة المساعدة المتعلقة بالعمل.",
+      "تأتي جملة الشكر قبل التحية والتوقيع، من دون إقحام بيانات دخول بعدهما."
     ],
     "zielWort": 100,
     "b2Typ": "nachricht",
@@ -1511,14 +1498,13 @@
       "اقتراح قابل للتنفيذ (Die Stadt könnte …)",
       "ختام رسائل القرّاء (Mit freundlichen Grüßen)"
     ],
-    "sample": "Sehr geehrte Redaktion,\n\nin Ihrem Artikel vom 4. Juni berichten Sie, dass in der Bahnhofstraße zwanzig alte Bäume gefällt werden sollen. Darüber habe ich mich sehr geärgert. Bäume sind kein Schmuck, sie sind Klimaanlage und Lebensraum zugleich: Sie kühlen die Straße im Sommer und geben Vögeln ein Zuhause. Außerdem zeigen viele Studien, dass Menschen in grünen Straßen gesünder und ruhiger leben. Natürlich müssen kranke Bäume entfernt werden, das versteht jeder. Die Stadt könnte jedoch für jeden gefällten Baum zwei neue pflanzen und die Bürger vorher informieren. So bleibt unsere Stadt lebenswert.\n\nDiese Bäume stehen dort seit fast hundert Jahren und spenden im Sommer Schatten für alle, die an der Haltestelle warten. Es wäre schade, wenn unsere Enkel sie nur noch von Fotos kennen würden. Mit freundlichen Grüßen\nLena Fischer",
+    "sample": "Sehr geehrte Redaktion,\n\nin Ihrem Artikel vom 4. Juni berichten Sie, dass in der Bahnhofstraße zwanzig alte Bäume gefällt werden sollen. Diese Planung sehe ich kritisch, weil Bäume die Straße im Sommer beschatten und Tieren Lebensraum bieten. Natürlich müssen kranke oder nicht mehr standsichere Bäume entfernt werden. Die Stadt sollte jedoch nachvollziehbar veröffentlichen, welche Bäume geprüft wurden und warum eine Fällung nötig ist. Außerdem könnte sie für jeden entfernten Baum geeignete neue Bäume pflanzen und deren Pflege über mehrere Jahre sichern. Vor Beginn der Arbeiten sollte es einen Ortstermin geben, bei dem Anwohner Fragen stellen und Alternativen vorschlagen können. Vielleicht lassen sich einzelne Parkplätze oder Leitungswege verändern, sodass ein Teil des Bestands erhalten bleibt. Eine solche Lösung verbindet Sicherheit mit langfristiger Stadtplanung. Bitte begleiten Sie das Verfahren weiter und machen Sie die Begründungen öffentlich sichtbar.\n\nMit freundlichen Grüßen\nLena Fischer",
     "noteAr": [
-      "إشارة دقيقة للمقال (Datum + Inhalt) تفتتح رسائل القرّاء معياريًا",
-      "استعارة وظيفية (Bäume sind Klimaanlage) ترفع مستوى التعبير",
-      "اقتراح متناسب (zwei neue für jeden) لا مطالبة قصوى",
-      "غوته B2 الكتابة: رسالة رسمية ~100 كلمة — 30 دقيقة الجزء 2/2"
+      "يربط الافتتاح الرسالة بتاريخ المقال ومضمونه ثم يعلل الاعتراض بوظائف الظل والموطن الطبيعي.",
+      "يعترف بإزالة الأشجار المريضة لكنه يطلب نشر الفحص وخطة الاستبدال.",
+      "يقدّم اقتراحاً يمكن متابعته من دون أرقام بحثية أو أعمار أشجار غير واردة في المهمة."
     ],
-    "zielWort": 100,
+    "zielWort": 150,
     "b2Typ": "nachricht",
     "dauerMin": 30
   },
@@ -1536,11 +1522,11 @@
       "مثال قصير من الحياة",
       "جملة أخيرة بموقفك النهائي"
     ],
-    "sample": "Ich bin der Meinung, dass Haustiere in einer Mietwohnung nicht verboten werden sollten. Einerseits verstehe ich die Vermieter: Ein Hund kann laut sein und die Wohnung beschädigen. Andererseits sind Tiere für viele Menschen Familienmitglieder. Meine Nachbarin zum Beispiel hat eine kleine Katze; man hört sie nie und die Wohnung ist sauber. Natürlich müssen Besitzer auf ihre Tiere aufpassen und Probleme mit den Nachbarn lösen. Der Vermieter könnte vorher fragen, welches Tier man hat, und das im Vertrag festhalten. Große Hunde in sehr kleinen Wohnungen sind natürlich ein Problem, das sehe ich ein. Ein allgemeines Verbot finde ich falsch. Besser ist eine Regel im Vertrag: Tiere sind erlaubt, aber der Besitzer bezahlt für Schäden. So sind beide Seiten zufrieden.",
+    "sample": "Ich bin der Meinung, dass Haustiere in einer Mietwohnung nicht verboten werden sollten. Einerseits verstehe ich die Vermieter: Ein Hund kann laut sein und die Wohnung beschädigen. Andererseits sind Tiere für viele Menschen Familienmitglieder. Meine Nachbarin zum Beispiel hat eine kleine Katze; man hört sie nie und die Wohnung ist sauber. Natürlich müssen Besitzer auf ihre Tiere aufpassen und Probleme mit den Nachbarn lösen. Der Vermieter könnte vorher fragen, welches Tier man hat, und das im Vertrag festhalten. Große Hunde in sehr kleinen Wohnungen sind natürlich ein Problem, das sehe ich ein. Ein allgemeines Verbot finde ich falsch. Besser ist eine Regel im Vertrag: Tiere sind erlaubt, aber der Besitzer bezahlt für Schäden. So werden die Interessen beider Seiten berücksichtigt.",
     "noteAr": [
-      "تفهّم الطرف الآخر أولًا (Ich verstehe die Vermieter) ثم الترجيح — بنية B1 الناضجة",
-      "مثال جارة محدد يجعل الحجة محسوسة",
-      "الخاتمة بقاعدة عملية (Regel im Vertrag) لا بانطباع"
+      "يعرض النموذج حجة المالك ثم حجة المستأجر قبل ترجيح الموقف.",
+      "يدعم مثال القطة الهادئة الحجة بموقف يومي محدد.",
+      "تقترح الخاتمة قاعدة في العقد ومسؤولية صاحب الحيوان عن الأضرار بدلاً من منع عام."
     ],
     "zielWort": 120
   },
@@ -1558,11 +1544,11 @@
       "اقتراح وسط (Handy nur in der Pause?)",
       "روابط: deshalb, aber, zum Beispiel"
     ],
-    "sample": "Ich bin für ein Handyverbot im Unterricht, aber nicht in der Pause. Im Unterricht stören Handys sehr: Viele Schüler schauen auf Nachrichten und hören nicht zu. Deshalb sind die Noten oft schlechter. Ein Nachteil ist, dass die Schüler in der Pause ihre Eltern nicht erreichen können. Mein Vorschlag: Die Handys bleiben im Unterricht in einer Box am Lehrerpult. In der Pause darf man sie benutzen. Für Notfälle gibt es eine einfache Lösung: Das Telefon im Schulbüro ist immer erreichbar. Ein Verbot für den ganzen Tag finde ich dagegen zu streng, denn das Handy ist auch ein Werkzeug zum Lernen, zum Beispiel für Wörterbücher. So lernen die Schüler konzentriert und bleiben trotzdem erreichbar. Lehrer und Schüler sollten diese Regel zusammen beschließen, dann akzeptieren sie alle.",
+    "sample": "Ich bin für ein Handyverbot im Unterricht, aber nicht in der Pause. Im Unterricht stören Handys sehr: Viele Schüler schauen auf Nachrichten und hören nicht zu. Deshalb können sich viele schlechter konzentrieren. Ein Nachteil ist, dass die Schüler in der Pause ihre Eltern nicht erreichen können. Mein Vorschlag: Die Handys bleiben im Unterricht in einer Box am Lehrerpult. In der Pause darf man sie benutzen. Für Notfälle gibt es eine einfache Lösung: Das Telefon im Schulbüro ist immer erreichbar. Ein Verbot für den ganzen Tag finde ich dagegen zu streng, denn das Handy ist auch ein Werkzeug zum Lernen, zum Beispiel für Wörterbücher. So lernen die Schüler konzentriert und bleiben trotzdem erreichbar. Lehrer und Schüler sollten diese Regel zusammen beschließen, denn dann wird sie eher akzeptiert.",
     "noteAr": [
-      "تحديد الموقف بدقة (im Unterricht ja, Pause nein) بدل نعم/لا مطلقة",
-      "سبب ونتيجة (Deshalb sind die Noten schlechter)",
-      "إشراك الطرفين في القرار (zusammen beschließen) خاتمة واقعية"
+      "يحدد النموذج موقفاً وسطاً: المنع أثناء الدرس لا أثناء الاستراحة.",
+      "يربط deshalb استعمال الهاتف بصعوبة التركيز من دون ادعاء درجات غير موثقة.",
+      "تقترح الخاتمة أن يشارك المعلمون والطلاب في وضع القاعدة لزيادة قبولها."
     ],
     "zielWort": 120
   },
@@ -1580,11 +1566,11 @@
       "مثال مقارن من بلدك (In meinem Land …)",
       "خلاصة بجملة واحدة"
     ],
-    "sample": "Meiner Meinung nach sollten Geschäfte am Sonntag nur kurz öffnen, zum Beispiel von 10 bis 14 Uhr. Viele Familien arbeiten die ganze Woche und haben nur am Sonntag Zeit für große Einkäufe. Aber die Verkäufer brauchen auch einen freien Tag mit ihrer Familie. In meinem Land, in Tunesien, sind die Geschäfte am Sonntag offen; das ist praktisch, aber die Mitarbeiter sind oft müde. Ein kurzer Sonntag ist ein guter Kompromiss: Kunden können einkaufen und die Mitarbeiter haben den Nachmittag frei. Apotheken und Bäckereien sollten meiner Meinung nach auf jeden Fall öffnen dürfen, weil Menschen sie auch am Sonntag brauchen. Große Möbelhäuser können dagegen geschlossen bleiben, ein Sofa kauft man nicht im Notfall. So verlieren beide Seiten wenig und gewinnen etwas.",
+    "sample": "Meiner Meinung nach sollten Geschäfte am Sonntag nur kurz öffnen, zum Beispiel von 10 bis 14 Uhr. Viele Familien arbeiten die ganze Woche und haben nur am Sonntag Zeit für große Einkäufe. Aber die Verkäufer brauchen auch einen freien Tag mit ihrer Familie. In meiner Heimatstadt in Tunesien sind viele Geschäfte sonntags geöffnet; ich finde das praktisch, denke aber auch an die Beschäftigten. Ein kurzer Sonntag ist ein guter Kompromiss: Kunden können einkaufen und die Mitarbeiter haben den Nachmittag frei. Apotheken und Bäckereien sollten meiner Meinung nach auf jeden Fall öffnen dürfen, weil Menschen sie auch am Sonntag brauchen. Große Möbelhäuser können dagegen geschlossen bleiben, ein Sofa kauft man nicht im Notfall. So verlieren beide Seiten wenig und gewinnen etwas.",
     "noteAr": [
-      "مثال مقارن من بلد المتعلم (Tunesien) — مرجعية شخصية مطلوبة في B1",
-      "موقف وسط بزمن محدد (10 bis 14 Uhr) يدل على تفكير عملي",
-      "مراعاة العاملين لا المستهلك فقط — توازن الحجج"
+      "يقدم النموذج تجربة محددة من مدينة الكاتب في تونس بدلاً من تعميم على البلد كله.",
+      "يقترح حلاً وسطاً بوقت محدد من الساعة 10 إلى 14.",
+      "يعرض احتياجات الزبائن وحق العاملين في وقت حر قبل الخلاصة."
     ],
     "zielWort": 120
   },
@@ -1604,9 +1590,9 @@
     ],
     "sample": "Sehr geehrte Damen und Herren,\n\nam 12. Juli habe ich bei Ihnen eine Busreise nach Prag gebucht (Buchungsnummer 4581). Leider gab es zwei Probleme: Der Bus kam drei Stunden zu spät, und das Hotel lag nicht im Zentrum wie versprochen, sondern fünf Kilometer entfernt. Das war für uns sehr ärgerlich. Ich bitte Sie, mir einen Teil des Preises zurückzuzahlen. Über eine Antwort bis nächste Woche würde ich mich freuen.\n\nMit freundlichen Grüßen\nNadia Cherif",
     "noteAr": [
-      "رقم حجز وتاريخ يجعلان الشكوى موثقة كالواقع",
-      "مشكلتان مفصولتان بوضوح (zwei Probleme: … und …)",
-      "طلب تعويض جزئي متناسب (einen Teil) لا مبالغة"
+      "يذكر النموذج تاريخ الرحلة ورقم الحجز لتحديد الشكوى.",
+      "يفصل المشكلتين بوضوح: تأخر الحافلة وموقع الفندق المخالف للحجز.",
+      "يطلب استرداد جزء من السعر في جملة واضحة من دون تهديد."
     ],
     "zielWort": 80
   },
@@ -1646,11 +1632,11 @@
       "صيغة مهذّبة (Ich hätte gern Informationen …) أو أسئلة مباشرة بأدب",
       "شكر + ختام"
     ],
-    "sample": "Sehr geehrte Damen und Herren,\n\nich möchte gern einen Deutschkurs auf dem Niveau B1 machen und hätte einige Fragen. Gibt es Kurse am Abend, weil ich tagsüber arbeite? Wie viel kostet der Kurs pro Monat? Und wie kann ich mich anmelden – online oder in der Schule? Über eine Antwort würde ich mich sehr freuen. Vielen Dank im Voraus.\n\nIch habe von Montag bis Freitag Zeit. Mit freundlichen Grüßen\nMouna Gharbi",
+    "sample": "Sehr geehrte Damen und Herren,\n\nich möchte gern einen Deutschkurs auf dem Niveau B1 machen und hätte einige Fragen. Gibt es Kurse am Abend? Ich arbeite nämlich tagsüber. Wie viel kostet der Kurs pro Monat? Und wie kann ich mich anmelden – online oder in der Schule? Für mich kommen die Abende von Montag bis Freitag infrage. Über eine Antwort würde ich mich sehr freuen. Vielen Dank im Voraus.\n\nMit freundlichen Grüßen\nMouna Gharbi",
     "noteAr": [
-      "ثلاثة أسئلة صريحة تعكس نقاط المهمة واحدًا واحدًا",
-      "تعليل سؤال المساء بجملة weil — معلومات مفيدة للقارئ",
-      "امتنان مسبق (Vielen Dank im Voraus) قبل الختام"
+      "تطرح الرسالة ثلاثة أسئلة واضحة عن المساء والسعر وطريقة التسجيل.",
+      "تشرح الحاجة إلى دورة مسائية لأن المرسل يعمل نهاراً.",
+      "تذكر أوقات التوفر قبل الشكر والخاتمة الرسمية."
     ],
     "zielWort": 80
   },
@@ -1668,11 +1654,11 @@
       "طلب واقعي واحد (Tipps oder kurzes Gespräch)",
       "ختام مهذّب"
     ],
-    "sample": "Sehr geehrte Frau Beck,\n\nich bin in Ihrem B1-Kurs am Dienstag. Die neue Grammatik, besonders der Akkusativ, ist schwer für mich. Ich lerne zu Hause, aber ich mache noch viele Fehler in den Hausaufgaben. Hätten Sie vielleicht einige Tipps für mich? Oder können wir uns zehn Minuten nach dem Kurs kurz sprechen? Ich möchte gern besser werden und übe jeden Tag. Vielen Dank für Ihre Hilfe.\n\nMit freundlichen Grüßen\nAli Mansour",
+    "sample": "Sehr geehrte Frau Beck,\n\nich bin in Ihrem B1-Kurs am Dienstag. Die neue Grammatik, besonders der Akkusativ, ist schwer für mich. Ich lerne zu Hause, aber ich mache noch viele Fehler in den Hausaufgaben. Hätten Sie vielleicht einige Tipps für mich? Oder können wir nach dem Kurs zehn Minuten miteinander sprechen? Ich möchte gern besser werden und übe jeden Tag. Vielen Dank für Ihre Hilfe.\n\nMit freundlichen Grüßen\nAli Mansour",
     "noteAr": [
-      "تحديد المشكلة بدقة (besonders der Akkusativ) يجعل الطلب قابلًا للإجابة",
-      "طلب صغير واقعي (zehn Minuten) بدل طلب عام",
-      "إظهار الجهد الذاتي (ich übe jeden Tag) قبل طلب المساعدة"
+      "تحدد الرسالة المشكلة في Akkusativ بدلاً من وصف القواعد كلها بالصعوبة.",
+      "تطلب نصائح أو محادثة قصيرة مدتها عشر دقائق بعد الدرس.",
+      "يذكر المرسل أنه يدرس ويتدرب يومياً قبل طلب المساعدة."
     ],
     "zielWort": 80
   },
@@ -1690,11 +1676,11 @@
       "لمحة عن البرنامج/الطعام تدفع للموافقة",
       "طلب ردّ قصير + ختام"
     ],
-    "sample": "Sehr geehrte Frau Sommer,\n\nwir laden Sie herzlich zu unserem Sommerfest ein! Das Fest findet am Samstag, dem 15. Juli, ab 17 Uhr im Garten unserer Schule statt. Es gibt Essen aus vielen Ländern, Musik und Spiele. Unsere Gruppe kocht ein Gericht aus Tunesien. Wir würden uns sehr freuen, wenn Sie kommen können. Bitte sagen Sie uns bis Donnerstag Bescheid.\n\nAuch die anderen Kurse sind herzlich eingeladen. Herzliche Grüße\nIhr B1-Kurs",
+    "sample": "Sehr geehrte Frau Sommer,\n\nwir laden Sie herzlich zu unserem Sommerfest ein! Das Fest findet am Samstag, dem 15. Juli, ab 17 Uhr im Garten unserer Schule statt. Es gibt Essen aus vielen Ländern, Musik und Spiele. Unsere Gruppe kocht ein Gericht aus Tunesien. Wir würden uns sehr freuen, wenn Sie kommen können. Auch die anderen Kurse sind herzlich eingeladen. Bitte sagen Sie uns bis Donnerstag Bescheid.\n\nHerzliche Grüße\nIhr B1-Kurs",
     "noteAr": [
-      "دعوة جماعية (wir/Ihr B1-Kurs) بصوت الفصل لا فرد واحد",
-      "البيانات الثلاثة (Tag, Datum, Uhr, Ort) كاملة في سطرين",
-      "مهلة ردّ قصيرة مهذّبة (bis Donnerstag Bescheid)"
+      "تأتي الدعوة بصوت المجموعة wir ويطابقها توقيع Ihr B1-Kurs.",
+      "يذكر النموذج اليوم والتاريخ والساعة والمكان والطعام.",
+      "يضع دعوة الدورات الأخرى وطلب الرد قبل التحية الختامية."
     ],
     "zielWort": 80
   },
@@ -1712,11 +1698,11 @@
       "اقتراح بديل محدد بيوم وساعة",
       "ختام ودّي قصير"
     ],
-    "sample": "Hallo Karim,\n\nvielen Dank für deine Einladung! Leider kann ich am Samstag nicht zum Fußball kommen, weil ich bis 18 Uhr arbeiten muss. Das tut mir wirklich leid. Aber wie wäre es am Sonntag um 16 Uhr im Park? Da habe ich frei und bringe den Ball mit. Sag mir bitte kurz Bescheid!\n\nLiebe Grüße\nDein Freund Sami Nächstes Mal bin ich wieder dabei, das verspreche ich euch. Viele Grüße an alle!",
+    "sample": "Hallo Karim,\n\nvielen Dank für deine Einladung! Leider kann ich am Samstag nicht zum Fußball kommen, weil ich bis 18 Uhr arbeiten muss. Das tut mir wirklich leid. Wie wäre es am Sonntag um 16 Uhr im Park? Da habe ich frei und bringe den Ball mit. Danach können wir noch etwas trinken und über das nächste Spiel sprechen. Sag mir bitte kurz Bescheid!\n\nLiebe Grüße\nSami",
     "noteAr": [
-      "اعتذار مبرَّر بسبب عمل محدد لا عذر غامض",
-      "مقابل فوري بيوم وساعة ومكان (Sonntag 16 Uhr im Park)",
-      "سؤال إغلاقي قصير (Sag mir Bescheid) يبقي الحوار مفتوحًا"
+      "يعتذر النموذج ويذكر سبب العمل بوضوح.",
+      "يقترح الأحد الساعة 16 في الحديقة موعداً بديلاً محدداً.",
+      "يطلب رداً قصيراً ثم ينهي الرسالة قبل التوقيع من دون نص زائد."
     ],
     "zielWort": 60
   },
@@ -1734,11 +1720,11 @@
       "زمن ماضٍ بسيط (war/habe … gemacht) حيث يلزم",
       "سؤال للصديق في النهاية يفتح الردّ"
     ],
-    "sample": "Hallo lieber Paul,\n\nich war letzte Woche im Urlaub am Meer in Tunesien. Das Wetter war super: jeden Tag Sonne und 30 Grad! Ich habe viel geschwommen und am Strand gelegen. Am Abend habe ich Fisch gegessen, sehr lecker! Der Urlaub war kurz, aber schön. Die Leute dort waren sehr freundlich und das Essen war lecker. Und du? Was hast du gemacht? Schreib mir bald!\n\nViele Grüße\nDein Ali",
+    "sample": "Lieber Paul,\n\nich war letzte Woche am Meer in Tunesien. Das Wetter war super: Jeden Tag schien die Sonne, und es waren 30 Grad. Ich bin viel geschwommen und habe am Strand gelegen. Am Abend habe ich Fisch gegessen. Der Urlaub war kurz, aber schön. Die Leute waren freundlich, und das Essen hat mir gut geschmeckt. Und du? Was hast du gemacht? Schreib mir bald!\n\nViele Grüße\nAli",
     "noteAr": [
-      "الماضي بتصريف بسيط صحيح (war/habe geschwommen) على مستوى A2",
-      "تفاصيل حسّية قصيرة (Sonne, 30 Grad, Fisch) تجعل الرسالة حيّة",
-      "سؤال ختامي للصديق يحوّل النص إلى حوار"
+      "يستخدم النموذج الماضي في war وbin geschwommen وhabe gelegen وhabe gegessen.",
+      "توضح تفاصيل Sonne و30 Grad وFisch الطقس والنشاط من دون إطالة.",
+      "يفتح السؤال Was hast du gemacht? باب الرد في نهاية الرسالة."
     ],
     "zielWort": 70
   },
@@ -1748,7 +1734,7 @@
     "format": "brief",
     "titleDe": "Nachricht an die Lehrerin: krank",
     "titleAr": "رسالة إلى المعلمة: مريض",
-    "taskDe": "Sie sind krank und können heute nicht in den Deutschkurs kommen. Schreiben Sie eine kurze E-Mail an Ihre Lehrerin Frau Klein (ca. 50 Wörter): Entschuldigen Sie sich, sagen Sie, was Sie haben und wann Sie wieder kommen.",
+    "taskDe": "Sie sind krank und können heute nicht in den Deutschkurs kommen. Schreiben Sie eine kurze E-Mail an Ihre Lehrerin Frau Klein (ca. 50 Wörter): Entschuldigen Sie sich, sagen Sie, was Sie haben und wann Sie wiederkommen.",
     "taskAr": "أنت مريض ولا تستطيع حضور درس الألمانية اليوم. اكتب رسالة قصيرة إلى معلمتك السيدة كلاين (نحو 50 كلمة): اعتذر، قل ما بك، ومتى ستعود.",
     "criteria": [
       "تحية رسمية صغيرة (Sehr geehrte Frau Klein,)",
@@ -1758,9 +1744,9 @@
     ],
     "sample": "Sehr geehrte Frau Klein,\n\nich bin heute krank und kann nicht in den Kurs kommen. Ich habe Fieber und starke Kopfschmerzen. Der Arzt sagt, ich soll zwei Tage zu Hause bleiben. Am Freitag komme ich wieder. Können Sie mir bitte die Hausaufgaben schicken? Vielen Dank!\n\nMit freundlichen Grüßen\nSara Nasser",
     "noteAr": [
-      "سبب الغياب ومدته وموعد العودة — معلومات الرسالة كاملة",
-      "طلب الواجب بسؤال مهذّب واحد",
-      "قصيرة كرسائل A2 الحقيقية (نحو 50 كلمة)"
+      "يذكر النموذج سبب الغياب ومدته وموعد العودة المتوقع.",
+      "يطلب الواجب في سؤال مهذب واحد: Können Sie mir bitte …?",
+      "يبقى النص قريباً من الهدف الداخلي البالغ نحو 50 كلمة."
     ],
     "zielWort": 50
   },
@@ -1820,11 +1806,11 @@
       "سبب قصير (ich muss arbeiten)",
       "طلب موعد جديد بأدب"
     ],
-    "sample": "Sehr geehrte Damen und Herren, ich habe am Montag um 9 Uhr einen Termin bei Dr. Weber. Leider muss ich an diesem Tag arbeiten und kann nicht kommen. Ich bitte um einen neuen Termin, gern am Nachmittag. Der neue Termin sollte möglichst nächste Woche sein, weil ich danach verreise. Bitte sagen Sie mir, welche Zeiten noch frei sind. Ich rufe auch gern noch einmal an. Vielen Dank für Ihr Verständnis. Mit freundlichen Grüßen Lina Mansour",
+    "sample": "Sehr geehrte Damen und Herren,\n\nich muss meinen Termin bei Dr. Weber am Montag um 9 Uhr leider absagen. Ich muss an diesem Vormittag arbeiten und kann nicht kommen. Könnten Sie mir bitte einen neuen Termin am Nachmittag geben? Vielen Dank für Ihr Verständnis.\n\nMit freundlichen Grüßen\nLina Mansour",
     "noteAr": [
-      "إلغاء صريح من أول جملة (ich habe … leider muss ich)",
-      "تفضيل بديل مرن (gern am Nachmittag) يسهّل الحل",
-      "شكر على التفهم — صيغة الإلغاءات المعيارية"
+      "تلغي الجملة الأولى الموعد صراحةً بالفعل absagen وتذكر اليوم والساعة.",
+      "تشرح الجملة التالية سبب الإلغاء باختصار.",
+      "يطلب السؤال Könnten Sie mir bitte …? موعداً بديلاً في فترة بعد الظهر."
     ],
     "zielWort": 50
   },
@@ -1841,11 +1827,11 @@
       "سؤال تأكيد (Passt dir das?)",
       "بديل واحد إن لم يناسب"
     ],
-    "sample": "Hallo liebe Salma,\n\nwie geht es dir? Ich möchte dich am Wochenende sehen. Hast du am Samstag um 15 Uhr Zeit? Wir können uns im Café am Markt treffen und einen Kaffee trinken. Wenn Samstag nicht geht, habe ich auch am Sonntag Zeit. Schreib mir schnell zurück!\n\nLiebe Grüße\nDeine Sara",
+    "sample": "Liebe Salma,\n\nwie geht es dir? Ich möchte dich am Wochenende sehen. Hast du am Samstag um 15 Uhr Zeit? Wir können uns im Café am Markt treffen und einen Kaffee trinken. Passt dir das? Wenn Samstag nicht geht, habe ich auch am Sonntag Zeit. Schreib mir bitte zurück!\n\nLiebe Grüße\nSara",
     "noteAr": [
-      "الاقتراح الثلاثي (Tag/Zeit/Ort) في سطرين",
-      "خطة بديلة جاهزة (auch am Sonntag) تختصر الرسائل",
-      "دعوة صريحة للرد (Schreib mir zurück)"
+      "يقدم النموذج اليوم والساعة والمكان بوضوح.",
+      "يسأل Passt dir das? صراحةً إن كان الاقتراح مناسباً.",
+      "يقدم يوم الأحد بديلاً إذا لم يناسب يوم السبت."
     ],
     "zielWort": 60
   },
@@ -1862,11 +1848,11 @@
       "طلب واضح بخيارين (neues Handy oder Geld zurück)",
       "لهجة حازمة مهذّبة بلا غضب"
     ],
-    "sample": "Sehr geehrte Damen und Herren,\n\nich habe vor einer Woche in Ihrem Geschäft ein Handy gekauft. Seit gestern geht es nicht mehr an. Ich habe es zweimal aufgeladen, aber es funktioniert nicht. Das ist sehr ärgerlich. Ich bitte Sie: Geben Sie mir bitte ein neues Handy oder mein Geld zurück. Ich bringe das Handy und die Rechnung morgen in Ihr Geschäft.\n\nMit freundlichen Grüßen\nKarim Aziz",
+    "sample": "Sehr geehrte Damen und Herren,\n\nich habe vor einer Woche in Ihrem Geschäft ein Handy gekauft. Seit gestern geht es nicht mehr an. Ich habe es zweimal aufgeladen, aber es funktioniert nicht. Das ist sehr ärgerlich. Bitte geben Sie mir ein neues Handy oder erstatten Sie mir den Kaufpreis. Ich bringe das Handy und die Rechnung morgen in Ihr Geschäft.\n\nMit freundlichen Grüßen\nKarim Aziz",
     "noteAr": [
-      "تسلسل وقائع زمني (vor einer Woche → seit gestern) يجعل الشكوى مفهومة",
-      "محاولة إصلاح مذكورة (zweimal aufgeladen) تسدّ باب الاعتراض",
-      "إعلان إحضار الفاتورة — واقعية إجرائية"
+      "يرتب النموذج الوقائع زمنياً: الشراء قبل أسبوع، ثم توقف الهاتف منذ الأمس.",
+      "توضح جملة zweimal aufgeladen محاولة فحص المشكلة قبل إرسال الشكوى.",
+      "يطلب النموذج بوضوح هاتفاً جديداً أو استرداد ثمن الشراء."
     ],
     "zielWort": 70
   },
@@ -1883,11 +1869,11 @@
       "مرجع الإعلان (Ihre Anzeige …)",
       "طلب موعد مع وقتين مقترحين"
     ],
-    "sample": "Sehr geehrter Herr Schmidt,\n\nmein Name ist Nadia Cherif. Ich arbeite als Verkäuferin und suche eine Wohnung in Ihrer Stadt. Ich habe Ihre Anzeige für die Zwei-Zimmer-Wohnung in der Marktstraße gelesen. Die Wohnung ist sehr interessant für mich. Kann ich die Wohnung besichtigen? Ich habe am Donnerstag ab 17 Uhr oder am Samstag Zeit. Ich freue mich auf Ihre Antwort.\n\nMit freundlichen Grüßen\nNadia Cherif",
+    "sample": "Sehr geehrter Herr Schmidt,\n\nmein Name ist Nadia Cherif. Ich arbeite als Verkäuferin und suche eine Wohnung in Ihrer Stadt. Ich habe Ihre Anzeige für die Zwei-Zimmer-Wohnung in der Marktstraße gelesen. Ich interessiere mich sehr für die Wohnung. Kann ich die Wohnung besichtigen? Ich habe am Donnerstag ab 17 Uhr oder am Samstag Zeit. Ich freue mich auf Ihre Antwort.\n\nMit freundlichen Grüßen\nNadia Cherif",
     "noteAr": [
-      "تقديم مهني موجز (الاسم + المهنة + سبب البحث)",
-      "موعدان مقترحان يسهّلان الرد على المالك",
-      "اهتمام معلن بجملة واحدة (sehr interessant für mich)"
+      "يقدم المرسل اسمه ومهنته وسبب بحثه عن شقة باختصار.",
+      "يشير إلى الإعلان ويطلب المعاينة مباشرةً.",
+      "يقترح الخميس بعد الساعة 17 أو السبت لتسهيل تحديد الموعد."
     ],
     "zielWort": 70
   },
@@ -1924,7 +1910,7 @@
       "اليوم والساعة والمكان",
       "سؤال إغلاقي (Geht das?)"
     ],
-    "sample": "Hallo liebe Amira,\n\nhast du am Samstag Zeit? Ich lade dich zu einem Kaffee ein. Wir treffen uns um 16 Uhr im Café am Markt. Ich freue mich! Geht das? Schreib mir bitte!\n\nLiebe Grüße\nSara",
+    "sample": "Liebe Amira,\n\nhast du am Samstag Zeit? Ich lade dich zu einem Kaffee ein. Wir treffen uns um 16 Uhr im Café am Markt. Ich freue mich! Geht das? Schreib mir bitte!\n\nLiebe Grüße\nSara",
     "noteAr": [
       "ثلاثة أفعال دعوة متدرجة (Hast du Zeit / Ich lade ein / Geht das)",
       "بيانات اللقاء كاملة في جملة واحدة"
@@ -1964,7 +1950,7 @@
       "وقت الاستلام",
       "توقيع بالاسم ورقم الشقة"
     ],
-    "sample": "Liebe Frau Klein,\n\nder Postbote war heute da. Ihr Paket ist bei mir, Wohnung 12. Sie können es ab 18 Uhr holen. Ich bin zu Hause.\n\nViele Grüße\nSara aus Wohnung 12",
+    "sample": "Liebe Frau Klein,\n\nder Postbote war heute da. Ihr Paket ist bei mir in Wohnung 12. Sie können es ab 18 Uhr holen. Ich bin zu Hause.\n\nViele Grüße\nSara aus Wohnung 12",
     "noteAr": [
       "معلومتا الرسالة (Ort + Zeit) بلا أي زائد",
       "التوقيع بالموقع (Wohnung 12) كما في إعلانات الأبواب الحقيقية"
@@ -2025,13 +2011,13 @@
       "طلب موعد بديل بإطار زمني واضح",
       "خاتمة رسمية (Mit freundlichen Grüßen)"
     ],
-    "sample": "Sehr geehrte Damen und Herren,\n\nich habe am Dienstag um 10 Uhr einen Termin in Ihrem Bürgeramt. Leider kann ich diesen Termin nicht wahrnehmen, weil ich an diesem Tag beruflich verreisen muss. Ich entschuldige mich für die kurzfristige Absage.\n\nKönnten Sie mir bitte einen neuen Termin in der folgenden Woche geben? Am Vormittag würde es mir besonders gut passen. Ich bringe alle Unterlagen vollständig mit.\n\nVielen Dank für Ihr Verständnis. Ich freue mich auf Ihre Rückmeldung.\n\nMit freundlichen Grüßen\nAhmed Benali",
+    "sample": "Sehr geehrte Damen und Herren,\n\nich habe am Dienstag um 10 Uhr einen Termin in Ihrem Bürgeramt. Leider kann ich diesen Termin nicht wahrnehmen, weil ich an diesem Tag beruflich verreisen muss. Ich entschuldige mich für die kurzfristige Absage.\n\nKönnten Sie mir bitte einen neuen Termin in der folgenden Woche geben? Am Vormittag würde es mir besonders gut passen, weil ich nachmittags arbeite. Falls kein Vormittag frei ist, könnte ich auch am Donnerstag ab 16 Uhr kommen. Ich bringe alle Unterlagen vollständig mit.\n\nVielen Dank für Ihr Verständnis. Ich freue mich auf Ihre Rückmeldung.\n\nMit freundlichen Grüßen\nAhmed Benali",
     "noteAr": [
       "سبب واحد محدد بدل أعذار غامضة",
       "طلب بديل مرن (الأسبوع التالي، صباحًا)",
       "لا معلومات زائدة عن المطلوب"
     ],
-    "zielWort": 100,
+    "zielWort": 110,
     "neu": true
   },
   {
@@ -2048,7 +2034,7 @@
       "وقائع لا آراء فقط",
       "جملة ختامية بما تعلّمته"
     ],
-    "sample": "Gestern war mein erster Tag im Pflegepraktikum in einem Seniorenheim. Zuerst hat mich die Leiterin, Frau Krüger, freundlich begrüßt und mir die Station gezeigt. Danach habe ich eine erfahrene Pflegekraft begleitet. Ich habe gesehen, wie sie Blutdruck gemessen und mit den Bewohnern gesprochen hat. Am Anfang war ich nervös, aber alle waren sehr nett zu mir. Ein Bewohner hat mir von seinem früheren Beruf erzählt. Das fand ich besonders interessant. Am Ende des Tages war ich müde, aber auch glücklich. Ich habe gelernt, dass Pflege viel Geduld und ein offenes Ohr braucht.",
+    "sample": "Gestern war mein erster Tag im Pflegepraktikum in einem Seniorenheim. Zuerst hat mich die Leiterin, Frau Krüger, freundlich begrüßt und mir die Station gezeigt. Danach habe ich eine erfahrene Pflegekraft begleitet. Ich habe gesehen, wie sie Blutdruck gemessen und mit den Bewohnern gesprochen hat. Am Anfang war ich nervös, aber alle waren sehr nett zu mir. Unter Anleitung durfte ich außerdem Getränke verteilen und ein Zimmer vorbereiten. Ein Bewohner hat mir von seinem früheren Beruf erzählt. Das fand ich besonders interessant. Am Ende des Tages war ich müde, aber auch glücklich. Ich habe gelernt, dass Pflege viel Geduld und ein offenes Ohr braucht.",
     "noteAr": [
       "افتتاح بالمكان والزمان",
       "تفاصيل مشاهَدة بعين المتدرب",
@@ -2068,10 +2054,10 @@
     "criteria": [
       "ذكر بياناتك ومرجع الفاتورة",
       "سؤال واحد دقيق عن المبلغ الغامض",
-      "طلب رد كتابي مؤرّخ",
+      "طلب رد كتابي ضمن مهلة واضحة",
       "نبرة مهذّبة دون تهديد"
     ],
-    "sample": "Sehr geehrte Damen und Herren,\n\nich habe Ihre Rechnung für meine Behandlung im März erhalten. Meine Versichertennummer steht oben in diesem Schreiben. Einen Betrag verstehe ich leider nicht: Für die Untersuchung werden mir 45 Euro berechnet, obwohl mir vorher gesagt wurde, dass die Kasse diese Kosten übernimmt.\n\nKönnten Sie mir bitte schriftlich erklären, wie sich dieser Betrag genau zusammensetzt? Falls ein Fehler vorliegt, bitte ich Sie um eine neue Rechnung.\n\nVielen Dank für Ihre freundliche Hilfe.\n\nMit freundlichen Grüßen\nSara Haddad",
+    "sample": "Sehr geehrte Damen und Herren,\n\nich habe Ihre Rechnung für meine Behandlung im März erhalten. Meine Versichertennummer ist A123456789, die Rechnungsnummer lautet R-3187. Einen Betrag verstehe ich leider nicht: Für die Untersuchung werden mir 45 Euro berechnet, obwohl mir vorher gesagt wurde, dass die Kasse diese Kosten übernimmt.\n\nKönnten Sie mir bitte schriftlich erklären, wie sich dieser Betrag genau zusammensetzt? Falls ein Fehler vorliegt, bitte ich Sie um eine neue Rechnung. Bitte senden Sie mir Ihre schriftliche Antwort bis zum 15. April zu.\n\nVielen Dank für Ihre freundliche Hilfe.\n\nMit freundlichen Grüßen\nSara Haddad",
     "noteAr": [
       "مرجع دقيق (الشهر والمبلغ) دون سنوات قابلة للتكذيب",
       "طلب تصحيح مشروط بهدوء (falls)",
@@ -2094,11 +2080,11 @@
       "مثال واحد ملموس",
       "خاتمة تلخّص الموقف"
     ],
-    "sample": "Hallo zusammen,\n\nich wohne in einer großen Stadt und habe kein eigenes Auto. Meiner Meinung nach braucht man in der Stadt kein Auto. Erstens sind Busse und Bahnen schnell und viel billiger. Ein Auto kostet jeden Monat viel Geld für Versicherung, Benzin und Parkplatz. Zweitens ist es besser für die Umwelt, wenn weniger Autos fahren. Natürlich ist ein Auto manchmal praktisch, zum Beispiel für große Einkäufe. Aber dafür kann man ein Auto mieten oder mit Freunden fahren. Mein Fazit: In der Stadt geht es sehr gut ohne eigenes Auto.",
+    "sample": "Hallo zusammen,\n\nich wohne in einer großen Stadt und habe kein eigenes Auto. Meiner Meinung nach braucht man in der Stadt kein Auto. Erstens sind Busse und Bahnen schnell und viel billiger. Ein Auto kostet jeden Monat viel Geld für Versicherung, Benzin und Parkgebühren. Zweitens ist es besser für die Umwelt, wenn weniger Autos fahren. Natürlich ist ein Auto manchmal praktisch, zum Beispiel für große Einkäufe. Aber dafür kann man ein Auto mieten oder mit Freunden fahren. Mein Fazit: In der Stadt geht es sehr gut ohne eigenes Auto.",
     "noteAr": [
-      "حجتان مرقّمتان ضمنيًا (erstens/zweitens)",
-      "تنازل صغير (natürlich…) يقوّي الموقف",
-      "خاتمة بجملة واحدة حاسمة"
+      "يقدم النموذج سببين واضحين باستعمال Erstens وZweitens.",
+      "يعرض مثال التسوق الكبير بوصفه حالة قد تكون فيها السيارة مفيدة.",
+      "تلخص الخاتمة الموقف في جملة مباشرة."
     ],
     "zielWort": 110,
     "neu": true
@@ -2117,11 +2103,11 @@
       "نبرة ودودة غير رسمية زيادة",
       "سؤال إغلاقي للرد"
     ],
-    "sample": "Hallo und herzlich willkommen in unserem Haus!\n\nwir sind Familie Haddad aus der Wohnung über Ihnen. Wir freuen uns sehr, dass Sie da sind. Gern möchten wir Sie zu Kaffee und Kuchen einladen, damit wir uns besser kennenlernen. Hätten Sie am Samstag gegen 16 Uhr Zeit? Es dauert nicht lange, und unsere Kinder freuen sich auch schon sehr.\n\nWenn der Termin nicht passt, schlagen Sie einfach einen anderen Tag vor. Wir freuen uns auf Sie!\n\nViele Grüße\nIhre neuen Nachbarn",
+    "sample": "Hallo und herzlich willkommen in unserem Haus!\n\nWir sind Familie Haddad aus der Wohnung über Ihnen. Wir freuen uns sehr, dass Sie da sind. Gern möchten wir Sie zu Kaffee und Kuchen einladen, damit wir uns besser kennenlernen. Hätten Sie am Samstag gegen 16 Uhr Zeit? Es dauert nicht lange, und unsere Kinder freuen sich auch schon sehr.\n\nWenn der Termin nicht passt, schlagen Sie einfach einen anderen Tag vor. Wir freuen uns auf Sie!\n\nViele Grüße\nIhre neuen Nachbarn",
     "noteAr": [
-      "ترحيب قبل التعريف",
-      "مرونة في الموعد ترفع قبول الدعوة",
-      "ختام دافئ قصير"
+      "تبدأ الرسالة بالترحيب ثم تعرف الأسرة ورقم الشقة.",
+      "تقترح القهوة والكعك يوم السبت نحو الساعة 16.",
+      "تطلب اقتراح يوم آخر إذا لم يناسب الموعد وتختم بنبرة ودية."
     ],
     "zielWort": 90,
     "neu": true
@@ -2140,14 +2126,13 @@
       "مخاطر حقيقية لا شعارات",
       "موقف متوازن مشروط في الختام"
     ],
-    "sample": "Tablets statt Papierakten, digitale Dienstpläne, Werte direkt am Bett eintragen: Die Digitalisierung verändert die Pflege schnell. Ob sie sie besser macht, hängt davon ab, wie man sie einführt.\n\nEinerseits spart die digitale Dokumentation Zeit. Werte sind sofort für alle sichtbar, Fehler durch unleserliche Handschrift werden seltener. Andererseits entstehen neue Risiken: Patientendaten sind sensibel und brauchen starken Schutz. Außerdem darf der Bildschirm nicht wichtiger werden als der Mensch. Ein Tablet kann kein Gespräch ersetzen.\n\nMeiner Ansicht nach gilt: Technik soll der Pflege dienen, nicht umgekehrt. Wenn digitale Werkzeuge Zeit für Gespräche freimachen und sicher sind, verbessern sie die Versorgung. Ohne Schulung und Datenschutz bleibt sie jedoch ein Risiko. Entscheidend ist also nicht die Technik selbst, sondern ihr verantwortungsvoller Einsatz im Alltag.",
+    "sample": "Tablets statt Papierakten, digitale Dienstpläne und Messwerte direkt am Bett: Die Digitalisierung verändert die Pflege. Ob sie die Versorgung verbessert, hängt jedoch davon ab, wie sie eingeführt wird.\n\nEinerseits kann digitale Dokumentation doppelte Einträge vermeiden und Informationen schneller auffindbar machen. Wenn eine Pflegefachkraft einen neuen Wert einträgt, sehen berechtigte Teammitglieder die Änderung und können ihre nächsten Schritte abstimmen. So bleibt im Idealfall mehr Zeit für Gespräche, Mobilisierung und Beratung. Andererseits sind Gesundheitsdaten besonders sensibel. Zugriffsrechte müssen deshalb klar geregelt und Geräte geschützt werden. Ein Systemausfall kann Abläufe verzögern; für diesen Fall braucht jede Station einen Ersatzplan. Außerdem darf der Bildschirm nicht zum Hindernis im Gespräch werden.\n\nMeiner Ansicht nach soll Technik der Pflege dienen, nicht umgekehrt. Wenn Beschäftigte geschult werden, nur notwendige Daten zugänglich sind und analoge Notfallwege bestehen, können digitale Werkzeuge die Arbeit erleichtern. Ohne diese Voraussetzungen bleibt ihr Nutzen begrenzt und das Risiko trägt am Ende das gesamte Team.",
     "noteAr": [
-      "بنية einerseits/andererseits كاملة",
-      "حجة الإنسانية مقابل حجة الكفاءة",
-      "خاتمة مشروطة لا مطلقة",
-      "غوته B2 الكتابة: مساهمة منتدى ~150 كلمة — 45 دقيقة الجزء 1/2"
+      "توضح المقدمة أن أثر الرقمنة يعتمد على طريقة التطبيق.",
+      "يقابل النموذج توفير وقت التوثيق بمخاطر حماية البيانات وتعطل النظام وتحول الشاشة إلى حاجز.",
+      "تشترط الخاتمة التدريب والصلاحيات الواضحة وخطة بديلة قبل الحكم بتحسن الرعاية."
     ],
-    "zielWort": 150,
+    "zielWort": 170,
     "neu": true,
     "b2Typ": "forum",
     "dauerMin": 45
@@ -2166,14 +2151,13 @@
       "أثر المشكلة على العمل مذكور",
       "اقتراح حل واجتماع بخاتمة مهذّبة"
     ],
-    "sample": "Sehr geehrte Frau Brenner,\n\nich schreibe Ihnen wegen der Wochenenddienste auf unserer Station. In den letzten Wochen mussten dieselben Kolleginnen und Kollegen fast jedes Wochenende arbeiten. Das führt zu Müdigkeit und Unzufriedenheit im Team, und erste Krankmeldungen waren die Folge.\n\nIch möchte vorschlagen, dass wir die Wochenenden in einer Teambesprechung neu und gerecht verteilen. Ein rotierender Plan, bei dem Wünsche früh eingetragen werden, könnte helfen. Gern bringe ich einen konkreten Entwurf mit. Ich bin sicher, dass ein fairer Plan die Stimmung im Team deutlich verbessern wird. Außerdem sinkt so das Risiko, dass gute Kolleginnen und Kollegen unsere Station verlassen. Das wäre für die Patienten und für uns alle ein großer Verlust.\n\nÜber einen Termin in der kommenden Woche würde ich mich freuen.\n\nMit freundlichen Grüßen\nYusuf Kaya, Pflegefachkraft",
+    "sample": "Sehr geehrte Frau Brenner,\n\nich schreibe Ihnen wegen der Wochenenddienste auf unserer Station. In den vergangenen sechs Wochen waren mehrere Kolleginnen und Kollegen an vier oder fünf Wochenenden eingeteilt, während andere deutlich seltener Dienst hatten. Diese Verteilung führt zu Müdigkeit und Unzufriedenheit. Kurzfristige Ausfälle verschärfen die Belastung zusätzlich, weil freie Dienste dann schwer zu besetzen sind.\n\nIch schlage vor, dass wir die nächsten Pläne in einer Teambesprechung neu verteilen. Ein rotierendes System, in das Wünsche bis zu einem festen Termin eingetragen werden, könnte die Wochenenden gerechter verteilen. Gern bereite ich dafür einen ersten Entwurf vor. Außerdem sollten Tauschregeln für dringende Fälle festgelegt werden.\n\nKönnten wir das Thema in der kommenden Woche besprechen? Über einen Terminvorschlag würde ich mich freuen.\n\nMit freundlichen Grüßen\nYusuf Kaya\nPflegefachkraft",
     "noteAr": [
-      "مشكلة بسلوك قابل للقياس لا انطباعات",
-      "حل مقترح بعرض جهد (Entwurf mitbringen)",
-      "توقيع بالوظيفة يلائم السياق",
-      "غوته B2 الكتابة: رسالة رسمية ~100 كلمة — 30 دقيقة الجزء 2/2"
+      "يصف النموذج تكرار مناوبات نهاية الأسبوع من دون اتهام شخص بعينه.",
+      "يربط المشكلة بالإرهاق وصعوبة التعويض، ثم يقترح خطة دورية تسمح بتسجيل الرغبات مبكراً.",
+      "يجمع الطلب بين اجتماع قريب وعرض مسودة عملية وموعد رد مهذب."
     ],
-    "zielWort": 100,
+    "zielWort": 140,
     "neu": true,
     "b2Typ": "nachricht",
     "dauerMin": 30
@@ -2192,14 +2176,13 @@
       "ربط كل محور بأثره العملي",
       "ترتيب أولويات مبرَّر في الختام"
     ],
-    "sample": "Der Mangel an Pflegekräften ist eines der größten Probleme unseres Gesundheitssystems. Um den Beruf attraktiver zu machen, werden oft drei Wege genannt: mehr Gehalt, bessere Arbeitszeiten und mehr Anerkennung.\n\nEin faires Gehalt ist ohne Zweifel wichtig. Wer Verantwortung für Menschen trägt, muss davon gut leben können. Doch Geld allein hält niemanden in einem Beruf, der körperlich und seelisch erschöpft. Planbare Dienste, echte Pausen und genug Personal pro Schicht entscheiden darüber, ob Pflegekräfte gesund bleiben. Hinzu kommt die Anerkennung: Pflege ist eine hochqualifizierte Arbeit und keine bloße Hilfstätigkeit.\n\nMeiner Meinung nach steht die Arbeitszeit an erster Stelle, gefolgt von Bezahlung und Anerkennung. Denn nur wer den Beruf langfristig gesund ausüben kann, bleibt — und genau das brauchen die Patienten am meisten.",
+    "sample": "Viele Pflegeeinrichtungen suchen Personal und müssen zugleich erfahrene Beschäftigte halten. Um den Beruf attraktiver zu machen, werden meist drei Bereiche genannt: Bezahlung, Arbeitszeiten und gesellschaftliche Anerkennung.\n\nEin faires Gehalt ist wichtig, weil Pflegekräfte fachliche Verantwortung tragen. Zuschläge für Nacht- und Wochenenddienste sollten transparent und verlässlich sein. Geld allein reicht jedoch nicht, wenn häufiges Einspringen Erholung und Familienleben verhindert. Planbare Dienste, echte Pausen und ausreichend besetzte Schichten entscheiden mit darüber, ob Beschäftigte langfristig gesund bleiben. Flexible Teilzeitmodelle könnten zusätzlich helfen, unterschiedliche Lebensphasen zu berücksichtigen.\n\nAuch Anerkennung darf nicht bei freundlichen Worten enden. Pflege ist eine qualifizierte Tätigkeit; dazu gehören Beobachtung, Dokumentation, Beratung und Zusammenarbeit mit anderen Berufen. Gute Fortbildungs- und Aufstiegsmöglichkeiten machen diese Verantwortung sichtbar und eröffnen Perspektiven.\n\nMeiner Meinung nach stehen verlässliche Arbeitszeiten an erster Stelle, gefolgt von angemessener Bezahlung und beruflicher Anerkennung. Denn nur wer dauerhaft gesund arbeiten und sein Leben planen kann, bleibt im Beruf. Auf dieser Grundlage können Gehalt und Entwicklungsmöglichkeiten ihre Wirkung entfalten.",
     "noteAr": [
-      "تمييز بين الجذب والبقاء في المهنة",
-      "كل محور مرتبط بنتيجة عملية",
-      "ختام بترتيب صريح (an erster Stelle)",
-      "غوته B2 الكتابة: مساهمة منتدى ~150 كلمة — 45 دقيقة الجزء 1/2"
+      "يعالج النموذج الأجر وساعات العمل والتقدير في محاور منفصلة ويربط كل محور بأثر عملي.",
+      "يميز بين جذب العاملين والمحافظة عليهم من خلال التخطيط والراحة والتطور المهني.",
+      "تحدد الخاتمة ترتيب الأولويات وتعلله بالقدرة على الاستمرار في المهنة."
     ],
-    "zielWort": 150,
+    "zielWort": 180,
     "neu": true,
     "b2Typ": "forum",
     "dauerMin": 45
@@ -2218,14 +2201,13 @@
       "سبب واحد منتقد بدليل",
       "اقتراح قابل للتنفيذ لا أمنيات"
     ],
-    "sample": "Sehr geehrte Redaktion,\n\nIhr Bericht über steigende Mieten hat mich sehr angesprochen. Als junger Berufstätiger erlebe ich die Wohnungsnot jeden Tag: Für eine kleine Wohnung in der Stadt zahlt man heute oft mehr als die Hälfte des Gehalts. Viele Kolleginnen und Kollegen pendeln deshalb stundenlang oder geben die Stadt ganz auf.\n\nEin Hauptgrund ist, dass zu wenige bezahlbare Wohnungen gebaut werden, während viele Wohnungen leer stehen oder teuer als Ferienwohnungen vermietet werden. Das kann eine Stadt sich auf Dauer nicht leisten, denn sie braucht Krankenschwestern, Busfahrer und Verkäuferinnen in ihrer Nähe.\n\nIch schlage vor, leerstehende Büros stärker in Wohnungen umzubauen und den Bau kleiner Wohnungen gezielt zu fördern. So bleibt die Stadt für die Menschen lebendig, die sie jeden Tag am Laufen halten.\n\nMit freundlichen Grüßen\nMiriam Saleh",
+    "sample": "Sehr geehrte Redaktion,\n\nIhr Bericht über steigende Mieten hat mich sehr angesprochen. Als junger Berufstätiger erlebe ich, wie schwierig die Suche nach einer bezahlbaren Wohnung geworden ist. Viele Angebote liegen außerhalb meines Budgets, Besichtigungen sind schnell ausgebucht, und ein weiter Arbeitsweg bleibt oft die einzige Möglichkeit. Das kostet Zeit und erschwert die Planung des Alltags.\n\nBesonders kritisch sehe ich, wenn Wohnungen dem dauerhaften Mietmarkt entzogen und nur noch kurzfristig angeboten werden. Wo regulärer Wohnraum knapp ist, verschärft eine solche Nutzung den Wettbewerb zusätzlich. Eine Stadt braucht jedoch auch Pflegekräfte, Fahrerinnen, Verkäufer und Auszubildende in erreichbarer Nähe.\n\nIch schlage vor, geeignete leerstehende Büroflächen schneller in kleine Wohnungen umzubauen. Dabei müssen Licht, Brandschutz und Wohnqualität verbindlich geprüft werden. Zusätzlich könnten Genehmigungen für dauerhaft bezahlbare, kleinere Projekte beschleunigt werden. So entsteht neuer Wohnraum, ohne bloß auf weit entfernte Neubaugebiete zu hoffen.\n\nMit freundlichen Grüßen\nMiriam Saleh",
     "noteAr": [
-      "ربط شخصي بمقال الجريدة",
-      "سبب اقتصادي واحد محدد",
-      "اقتراحان عمليان (Umbau/Förderung)",
-      "غوته B2 الكتابة: رسالة رسمية ~100 كلمة — 30 دقيقة الجزء 2/2"
+      "يعرض الكاتب أثر البحث الطويل والتنقل من منظور موظف شاب من دون نسبة راتب عامة غير موثقة.",
+      "يركز النقد على تقليص السكن الدائم عند تحويل وحدات إلى استعمالات قصيرة المدة.",
+      "يقترح تحويل مكاتب مناسبة وتسريع مشاريع صغيرة مع إبقاء شروط السلامة والجودة."
     ],
-    "zielWort": 100,
+    "zielWort": 160,
     "neu": true,
     "b2Typ": "nachricht",
     "dauerMin": 30
@@ -2244,14 +2226,13 @@
       "ملاحظة ختامية تنقل صورة المهنة",
       "لغة تقرير لا يوميات عاطفية"
     ],
-    "sample": "Für unsere Schülerzeitung durfte ich einen Tag auf der Pflegestation eines Krankenhauses verbringen. Um sieben Uhr begann der Dienst mit der Übergabe: Das Nachtteam berichtete über jeden Patienten. Danach begleitete ich eine Pflegefachkraft bei ihrer Runde.\n\nZuerst half sie einer älteren Patientin beim Waschen und Anziehen. Dabei sprach sie ruhig und erklärte jeden Schritt. Später maß sie Blutdruck und Puls, trug die Werte in die Dokumentation ein und beantwortete die Fragen eines besorgten Angehörigen am Telefon. Ich war überrascht, wie viel Organisation und Wissen hinter jeder kleinen Tätigkeit steckt.\n\nAm Ende des Tages war mir klar: Pflege bedeutet nicht nur Medizin, sondern vor allem Zeit, Geduld und Respekt für jeden Menschen. Dieser Tag hat meinen Respekt vor dem Beruf deutlich wachsen lassen.",
+    "sample": "Für unsere Schülerzeitung durfte ich einen Tag auf der Pflegestation eines Krankenhauses verbringen. Um sieben Uhr begann der Dienst mit der Übergabe: Das Nachtteam berichtete über jeden Patienten. Danach begleitete ich eine Pflegefachkraft bei ihrer Runde. Vor jedem Zimmer prüfte sie den Plan und besprach Änderungen mit dem Team.\n\nZuerst half sie einer älteren Patientin beim Waschen und Anziehen. Dabei sprach sie ruhig und erklärte jeden Schritt. Später maß sie Blutdruck und Puls, trug die Werte in die Dokumentation ein und beantwortete die Fragen eines besorgten Angehörigen am Telefon. Nach dem Mittag kontrollierte sie gemeinsam mit einer Kollegin, welche Aufgaben noch offen waren, und passte die Reihenfolge an. Ich bemerkte, wie viel Organisation und Wissen hinter jeder Tätigkeit steckt. Gleichzeitig musste sie aufmerksam zuhören und Entscheidungen verständlich erklären.\n\nAm Ende des Tages war mir klar: Pflege umfasst nicht nur medizinische Aufgaben. Ebenso wichtig sind sorgfältige Planung, Geduld und respektvolle Kommunikation. Gerade die Verbindung dieser Bereiche macht den Beruf anspruchsvoll.",
     "noteAr": [
-      "مشاهد متسلسلة بمنطق الوردية",
-      "توازن بين التقني والإنساني",
-      "خاتمة بملاحظة واحدة قوية",
-      "غوته B2 الكتابة: مساهمة منتدى ~150 كلمة — 45 دقيقة الجزء 1/2"
+      "يسير التقرير من تسليم الوردية إلى الجولة ثم التوثيق والتواصل مع قريب المريضة.",
+      "يصف نشاطين على الأقل بتفاصيل مهنية من دون تحويل النص إلى يوميات عاطفية.",
+      "تجمع الملاحظة الأخيرة بين المعرفة والتنظيم والتواصل بوصفها عناصر للمهنة."
     ],
-    "zielWort": 150,
+    "zielWort": 170,
     "neu": true,
     "b2Typ": "forum",
     "dauerMin": 45
@@ -2271,12 +2252,11 @@
       "خاتمة بتوصية",
       "بلا عامية"
     ],
-    "sample": "Die Debatte um bezahlbares Wohnen spaltet die Stadt. Einerseits begrüßt die Regierung die Mietpreisbremse als Erfolg; andererseits bezeichnen Kritiker sie als unzureichend. Eine Mieterin erklärte kürzlich, die Mieten seien trotz Bremse weiter gestiegen, weil zu wenig neue Wohnungen gebaut würden. Diese Darstellung, so die Mieterin, sei irreführend. Nominell existiert die Bremse, praktisch fehlt jedoch Kontrolle. Deshalb fordern Verbände nicht nur Regeln, sondern auch Investitionen in sozialen Wohnungsbau. Nur wer beide Hebel nutzt, so die Forderung, könne Vertrauen zurückgewinnen. Meines Erachtens liegt darin der Schlüssel.  Zudem zeigt die Erfahrung aus Wien, dass genossenschaftlicher Neubau nicht nur günstiger, sondern auch sozial stabiler ist. Diese Lehren sollten mutig übertragen werden, denn Wohnen ist Grundbedürfnis, nicht Luxus. Diese Entwicklung verdient mehr Aufmerksamkeit in der öffentlichen Debatte, denn sie betrifft nicht nur Mieten oder Konsum, sondern unsere Vorstellung von Zusammenleben und Verantwortung.",
+    "sample": "Bezahlbares Wohnen bleibt ein zentrales Thema. Meines Erachtens kann eine Mietpreisbremse einen Beitrag leisten, sie reicht allein jedoch nicht aus. Erstens braucht jede Regel eine verständliche Anwendung und wirksame Kontrolle. In einer Bürgerversammlung erklärte eine Mieterin, die Vorgaben seien für viele Betroffene schwer zu prüfen; außerdem brauche es leicht erreichbare Beratung. Ohne solche Unterstützung werde eine berechtigte Forderung möglicherweise gar nicht gestellt. Zweitens löst eine Begrenzung bestehender Mieten nicht automatisch das Problem eines zu kleinen Angebots. Deshalb müssen auch neue bezahlbare Wohnungen entstehen und vorhandene Gebäude sinnvoll genutzt werden. Kritiker wenden ein, zusätzlicher Bau dauere lange. Das stimmt, dennoch ist Aufschub keine Lösung. Die Stadt sollte kurzfristig die Kontrolle und Beratung verbessern und langfristig Flächen, Umbauten und sozialen Wohnungsbau planen. Nur die Verbindung beider Wege kann verhindern, dass eine gute Regel auf dem Papier bleibt.",
     "noteAr": [
-      "منقول حي: seien gestiegen / würde gebaut — نقل أمانة",
-      "تركيب اسمي: die Forderung — معيار منجز",
-      "خاتمة بتوصية عملية",
-      "غوته B2 الكتابة: مساهمة منتدى ~150 كلمة — 45 دقيقة الجزء 1/2"
+      "يفصل النموذج بين أثر القاعدة عند تطبيقها وحدودها عندما يقل المعروض السكني.",
+      "يظهر النقل غير المباشر في seien وbrauche وwerde، وتظهر Nominalisierung في die Forderung وdie Kontrolle.",
+      "تنتهي المساهمة بتوصية تجمع الرقابة والبناء بدلاً من الاستشهاد بمدينة أو نتيجة غير موثقة."
     ],
     "zielWort": 150,
     "b2Typ": "forum",
@@ -2296,12 +2276,11 @@
       "موعدان محددان",
       "ختام Mit freundlichen Grüßen"
     ],
-    "sample": "Sehr geehrter Herr Becker,\n\nleider komme ich mit der neuen Software noch nicht sicher zurecht. Da die Einführung sehr kurzfristig war, blieb wenig Zeit zum Üben. Könnten wir eine kurze Schulung ansetzen? Ich schlage Dienstag um 10 Uhr oder Donnerstag um 14 Uhr vor. Beide Termine passen in meinen Kalender. Über eine kurze Rückmeldung würde ich mich freuen. Vielen Dank für Ihr Verständnis.\n\nMit freundlichen Grüßen\nSamir Haddad  Zusätzlich wäre ein Handout mit den wichtigsten Schritten hilfreich, damit alle im Team später nachlesen können. Vielen Dank für Ihre Unterstützung und Ihr Verständnis für mein Anliegen. Das Gespräch bietet zudem die Chance, Missverständnisse früh zu klären und gemeinsam eine tragfähige Lösung zu entwickeln, die alle Beteiligten entlastet.",
+    "sample": "Sehr geehrter Herr Becker,\n\nleider kann ich die neue Software noch nicht sicher bedienen, weil sie sehr kurzfristig eingeführt wurde und nur wenig Zeit zum Üben blieb. Könnten wir deshalb eine kurze Schulung für unser Team ansetzen? Ich schlage Dienstag, den 8. September, um 10 Uhr oder Donnerstag, den 10. September, um 14 Uhr vor. Beide Termine passen in unseren Dienstplan. Hilfreich wäre außerdem ein kurzes Handout mit den wichtigsten Arbeitsschritten, damit wir später gezielt nachlesen können. Über eine Rückmeldung, welcher Termin für Sie möglich ist, würde ich mich freuen. Vielen Dank für Ihre Unterstützung.\n\nMit freundlichen Grüßen\nSamir Haddad",
     "noteAr": [
-      "افتتاح بالمشكلة دون مقدمات",
-      "موعدان يجعلان الرد سهلاً",
-      "ختام مهني",
-      "غوته B2 الكتابة: رسالة رسمية ~100 كلمة — 30 دقيقة الجزء 2/2"
+      "يربط النموذج طلب التدريب مباشرة بقِصر فترة إدخال البرنامج بواسطة weil.",
+      "يقدم موعدين محددين ويطلب مادة مرجعية قصيرة ليستفيد منها الفريق بعد التدريب.",
+      "يوضع الطلب الإضافي والشكر قبل التحية والتوقيع، ولا يلصق نص بعد الاسم."
     ],
     "zielWort": 100,
     "b2Typ": "nachricht",
@@ -2322,12 +2301,11 @@
       "خاتمة مفتوحة",
       "بلا عامية"
     ],
-    "sample": "Viele verbinden Nachhaltigkeit mit Verzicht. Diese Annahme wird oft unhinterfragt wiederholt. Ein Experte erklärte kürzlich, nachhaltige Produkte seien nicht generell teurer, jedoch fehle oft die Information, wo sie erhältlich seien. Zwar wirken Preise im ersten Moment höher, dennoch werde langfristig Geld gespart, weil langlebige Produkte seltener ersetzt werden müssten. Auch die Industrie trage Verantwortung, denn Kundenwünsche würden in Umfragen anders dargestellt als in Werbung. Meines Erachtens braucht es deshalb bessere Vermittlung statt Moral.  Auch Schulen tragen Verantwortung, weil Konsumverhalten früh geprägt wird. Wer Kindern zeigt, wie man repariert statt ersetzt, spart Ressourcen und Geld. Das Gespräch bietet zudem die Chance, Missverständnisse früh zu klären und gemeinsam eine tragfähige Lösung zu entwickeln, die alle Beteiligten entlastet. Diese Entwicklung verdient mehr Aufmerksamkeit in der öffentlichen Debatte, denn sie betrifft nicht nur Mieten oder Konsum, sondern unsere Vorstellung von Zusammenleben und Verantwortung.",
+    "sample": "Nachhaltiger Konsum gilt oft als teuer. Tatsächlich ist der erste Preis mancher langlebigen Produkte höher; entscheidend sind jedoch auch Nutzungsdauer, Reparatur und die Menge, die gekauft wird. In einer Forumsdiskussion erklärte eine Teilnehmerin, sie kaufe Kleidung seltener, halte sie dafür länger und lasse kleine Schäden reparieren. So werde nicht bei jedem Problem sofort ein neues Stück gekauft. Ein zweites Argument betrifft den Zugang: Nicht alle Menschen können einen höheren Preis im Voraus bezahlen, selbst wenn sich ein Produkt später länger nutzen lässt. Deshalb werden günstige Reparaturen, Leihangebote und Gebrauchtwaren gebraucht. Zwar trägt auch die Industrie Verantwortung, dennoch entscheiden Verbraucher mit, wie oft Dinge ersetzt werden. Nachhaltiger Konsum bedeutet also nicht automatisch, die teuerste Variante zu wählen. Er kann auch heißen, weniger zu kaufen, Produkte zu teilen und Vorhandenes länger zu nutzen. Welche dieser Möglichkeiten lässt sich im eigenen Alltag als Nächstes umsetzen?",
     "noteAr": [
-      "منقول: seien teurer / würden ersetzt — حي",
-      "مبني للمجهول: werde gespart / würden dargestellt — منجز",
-      "خاتمة توصية",
-      "غوته B2 الكتابة: مساهمة منتدى ~150 كلمة — 45 دقيقة الجزء 1/2"
+      "يعرض النموذج فرقاً بين سعر الشراء الأولي والتكلفة على مدة الاستخدام من دون تعميم أن خياراً واحداً أرخص دائماً.",
+      "يظهر النقل غير المباشر في kaufe وhalte وlasse، ويظهر المبني للمجهول في werde … gekauft وDinge ersetzt werden.",
+      "تفتح الخاتمة السؤال على عادات الشراء والإصلاح والمشاركة بدلاً من فقرة عامة غير مرتبطة."
     ],
     "zielWort": 150,
     "b2Typ": "forum",
@@ -2347,12 +2325,11 @@
       "Bitte um Termin mit zwei Vorschlägen",
       "Gruß Mit freundlichen Grüßen"
     ],
-    "sample": "Sehr geehrter Herr Vogel,\n\nunser Sohn hat seine Ausbildung begonnen, jedoch ist er unsicher, ob er weitermachen soll. Mir ist aufgefallen, dass seine Erwartungen unrealistisch waren und dass die Begleitung im Betrieb fehlt. Wir würden gern Ihre Einschätzung hören. Könnten wir einen Termin am Mittwoch um 16 Uhr oder Freitag um 10 Uhr vereinbaren? Über eine Rückmeldung freuen wir uns. Vielen Dank.\n\nMit freundlichen Grüßen\nNora Al-Hadi  Wir haben bereits mit unserem Sohn gesprochen, jedoch bleiben viele Fragen offen. Ein Gespräch mit Ihnen würde uns sehr helfen, die nächsten Schritte gemeinsam zu planen. Das Gespräch bietet zudem die Chance, Missverständnisse früh zu klären und gemeinsam eine tragfähige Lösung zu entwickeln, die alle Beteiligten entlastet.",
+    "sample": "Sehr geehrter Herr Vogel,\n\nunser Sohn hat vor drei Monaten eine Ausbildung begonnen, ist inzwischen aber unsicher, ob er sie fortsetzen soll. Uns ist aufgefallen, dass seine Erwartungen an den Arbeitsalltag anders waren. Außerdem sagt er, dass er bei neuen Aufgaben zu wenig Anleitung erhalte. Wir haben bereits mit ihm gesprochen, können die Situation von außen jedoch nicht sicher beurteilen. Deshalb würden wir gern Ihre Einschätzung hören und die nächsten Schritte gemeinsam planen. Könnten wir einen Termin am Mittwoch um 16 Uhr oder am Freitag um 10 Uhr vereinbaren? Bitte teilen Sie uns mit, welcher Zeitpunkt Ihnen passt. Vielen Dank für Ihre Unterstützung.\n\nMit freundlichen Grüßen\nNora Al-Hadi",
     "noteAr": [
-      "ملاحظتان واضحتان",
-      "موعدان محددان",
-      "ختام مهني",
-      "غوته B2 الكتابة: رسالة رسمية ~100 كلمة — 30 دقيقة الجزء 2/2"
+      "تعرض الرسالة تردد الابن ثم ملاحظتين منفصلتين عن توقعاته وشعوره بقلة التوجيه.",
+      "تذكر أن الأسرة تحدثت معه قبل طلب رأي المستشار، ثم تقدم موعدين محددين.",
+      "تسبق خطة الخطوات التالية التحية الختامية ولا يظهر نص جديد بعد التوقيع."
     ],
     "zielWort": 100,
     "b2Typ": "nachricht",
@@ -2373,12 +2350,11 @@
       "خاتمة بسؤال",
       "بلا عامية"
     ],
-    "sample": "Das Misstrauen gegenüber Medien wächst. Einerseits verbreiten soziale Netzwerke Desinformation in Sekunden; andererseits leisten Redaktionen wertvolle Einordnung. Eine Journalistin betonte kürzlich, die Fülle überfordere viele, jedoch fehle nicht das Interesse an Tiefe, sondern die Zeit zur Prüfung. Diese Einschätzung, so die Journalistin, sei in Studien belegt. Nominal ist die Sorge berechtigt, praktisch hilft jedoch Medienkompetenz. Wer Quellen prüft statt nur teilt, so die Schlussfolgerung, gewinnt Vertrauen zurück. Ob wir diese Kompetenz flächendeckend schaffen, bleibt offen.  Gleichzeitig darf Kritik nicht pauschal werden. Seriöse Redaktionen prüfen Fakten, korrigieren Fehler transparent und ermöglichen so Vertrauen. Diese Qualität gilt es zu stärken. Das Gespräch bietet zudem die Chance, Missverständnisse früh zu klären und gemeinsam eine tragfähige Lösung zu entwickeln, die alle Beteiligten entlastet. Diese Entwicklung verdient mehr Aufmerksamkeit in der öffentlichen Debatte, denn sie betrifft nicht nur Mieten oder Konsum, sondern unsere Vorstellung von Zusammenleben und Verantwortung.",
+    "sample": "Die Behauptung, man könne heute keiner Nachricht mehr trauen, ist verständlich, aber zu pauschal. Einerseits verbreiten sich Meldungen ohne erkennbare Quelle in sozialen Netzwerken sehr schnell. Andererseits arbeiten Redaktionen mit nachvollziehbaren Quellen, Korrekturen und verantwortlichen Ansprechpartnern. In einer Diskussion erklärte eine Journalistin, die Menge neuer Inhalte überfordere viele Menschen; oft fehle nicht das Interesse, sondern die Zeit für eine sorgfältige Prüfung. Fehler seien dennoch möglich und müssten transparent berichtigt werden. Vertrauen sollte deshalb weder blind gewährt noch grundsätzlich verweigert werden. Hilfreich sind die Überprüfung des Absenders, der Vergleich mehrerer Berichte und die Suche nach Belegen. Auch Plattformen sollten deutlich machen, wer einen Inhalt veröffentlicht hat. Medienkompetenz entlastet Redaktionen jedoch nicht von ihrer Verantwortung für klare Trennung von Nachricht und Meinung. Wie können Nutzer, Plattformen und Journalisten diese Verantwortung gemeinsam wahrnehmen?",
     "noteAr": [
-      "نقل بـ Konjunktiv I: überfordere/fehle — حي",
-      "تركيب اسمي: die Sorge — منجز",
-      "خاتمة بسؤال مفتوح",
-      "غوته B2 الكتابة: مساهمة منتدى ~150 كلمة — 45 دقيقة الجزء 1/2"
+      "يميّز النموذج بين سرعة انتشار معلومة بلا مصدر وبين عمل التحرير القابل للفحص والتصحيح.",
+      "يظهر النقل غير المباشر في überfordere وfehle وseien، وتظهر Nominalisierung في die Überprüfung.",
+      "تنتهي الحجة بسؤال عن مسؤولية المستخدم والمنصة والتحرير بدلاً من ادعاء بحثي غير مسند."
     ],
     "zielWort": 150,
     "b2Typ": "forum",

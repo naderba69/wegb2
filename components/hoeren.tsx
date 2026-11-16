@@ -9,7 +9,7 @@ import { useMemo, useRef, useState } from "react";
 import type { Progress } from "@/lib/types";
 import { addFehlerNow, useProgress } from "@/lib/store";
 import { checkAbzeichen } from "@/lib/spiel";
-import { logK } from "@/lib/kompetenz";
+import { logMeasuredK } from "@/lib/kompetenz";
 import { speakAny, stopSpeech, speechAvailable } from "@/lib/speech";
 import { gemischteOptionen } from "@/lib/optionen";
 import { hoerenAudio, type LkGap } from "@/lib/content";
@@ -131,7 +131,7 @@ export function HoerLabor({ progress }: { progress: Progress }) {
     stopSpeech();
     update((p) => {
       let q = checkAbzeichen({ ...p, xp: (p.xp ?? 0) + (ergebnis.ok === ergebnis.n ? 12 : 4 + ergebnis.ok * 2) });
-      q = logK(q, "Hoeren", ergebnis.ok >= Math.ceil(ergebnis.n / 2));
+      q = logMeasuredK(q, "Hoeren", ergebnis.ok >= Math.ceil(ergebnis.n / 2));
       return q;
     });
     for (const it of runde.items) {
@@ -323,7 +323,7 @@ export function LueckDiktat({ progress }: { progress: Progress }) {
     audioRef.current?.pause();
     update((p) => {
       let q = checkAbzeichen({ ...p, xp: (p.xp ?? 0) + (score === item.gaps.length ? 10 : 2 + score * 2) });
-      q = logK(q, "Hoeren", score >= Math.ceil(item.gaps.length / 2));
+      q = logMeasuredK(q, "Hoeren", score >= Math.ceil(item.gaps.length / 2));
       return q;
     });
     for (const g of item.gaps) {

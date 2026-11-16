@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import { speakAny } from "@/lib/speech";
 import { De } from "@/components/De";
 import { useSearchParams } from "next/navigation";
+import { HighRiskContentNotice } from "@/components/high-risk-notice";
 
 /**
  * 🌍 محطة الحياة في ألمانيا (R200): بطاقات مؤسسات وحياة يومية بعبارات جاهزة،
@@ -53,16 +54,16 @@ export function LebensweltStation() {
   return (
     <div data-testid="lebenswelt-station" style={{ display: "grid", gap: "1rem" }}>
       <p style={{ fontSize: "0.86rem", color: "var(--color-ink2)", margin: 0 }}>
-        🌍 اللغة لا تكفي وحدها للعيش والعمل: هنا المؤسسات والأوراق والعادات التي ستواجهك فعلًا —
-        وبطاقة الاعتراف بمؤهّل التمريض في الصدارة لأنها بوابة عملك. توجيه عملي عام لا استشارة قانونية.
+        🌍 تدريب لغوي على مواقف محتملة في المؤسسات والعمل والحياة اليومية. الأمثلة تساعدك على السؤال والفهم، لكنها لا تحدد الإجراء الصحيح لحالتك.
       </p>
+      <HighRiskContentNotice surfaceId="lebenswelt" />
 
       {/* 🚀 خطة البدء المهني — قائمة بيد المتعلم، لا تدخل في نتائج الخطة */}
       <section className="card" style={{ padding: "0.8rem 0.95rem" }} data-testid="berufsstart">
-        <h3 style={{ fontWeight: 800, margin: "0 0 0.3rem" }}>🚀 خطّتي للبدء المهني في التمريض</h3>
+        <h3 style={{ fontWeight: 800, margin: "0 0 0.3rem" }}>🚀 قائمة تنظيم لغوية للبدء المهني في التمريض</h3>
         <p style={{ fontSize: "0.84rem", color: "var(--color-ink2)", margin: "0 0 0.6rem" }}>
-          ثماني خطوات من مستواك اليوم إلى أول عقد عمل. علّم ما تُنجزه — تُحفظ العلامات في متصفحك فقط
-          ولا تدخل في نتائج الخطة. أنجزتَ {bsFertig} من {BERUFSSTART_SCHRITTE.length}.
+          ثمانية موضوعات داخلية لتتبع المفردات والأسئلة التي قد تحتاجها؛ ليست ترتيباً رسمياً للإجراءات أو ضماناً للوصول إلى عقد. علّم ما تتدرب عليه — تُحفظ العلامات في متصفحك فقط
+          ولا تدخل في نتائج الخطة. علّمتَ {bsFertig} من {BERUFSSTART_SCHRITTE.length}.
         </p>
         <div style={{ display: "grid", gap: "0.4rem" }}>
           {BERUFSSTART_SCHRITTE.map((s, i) => (

@@ -1,0 +1,69 @@
+{
+  "schema": "wegb2-high-risk-content-governance-v1",
+  "updatedAt": "2026-11-04",
+  "claimBoundaryAr": "هذا السجل يصف النطاق وحالة المصدر والمراجعة فقط؛ لا يثبت صحة طبية أو قانونية أو مدنية ولا يساوي توقيع مختص.",
+  "surfaces": [
+    {
+      "id": "pflege",
+      "bank": "content/pflege.json",
+      "titleAr": "محتوى التمريض والصحة",
+      "jurisdiction": "DE; details may vary by state, employer, profession, and examination body",
+      "noticeAr": "مادة لغة وتدريب داخلي، وليست مرجعاً طبياً أو تعليمات رعاية أو تحضيراً مهنياً معتمداً. لا تستخدم إجابة أو نموذجاً هنا لاتخاذ قرار علاجي أو دوائي أو طارئ.",
+      "officialActionAr": "في الواقع اتبع بروتوكول جهة العمل وتعليمات المختص والجهة الامتحانية الحالية.",
+      "professionalReview": "pending",
+      "fieldValidation": "pending",
+      "groups": [
+        { "selector": "wortschatz", "count": 133, "classification": "mixed-professional-language-training", "source": { "status": "pending-external-verification", "url": null, "asOf": null } },
+        { "selector": "dialoge", "count": 10, "classification": "fictional-language-scenario", "source": { "status": "not-applicable-fictional", "url": null, "asOf": null } },
+        { "selector": "dokumentation", "count": 11, "classification": "fictional-language-scenario", "source": { "status": "not-applicable-fictional", "url": null, "asOf": null } },
+        { "selector": "pruefung", "count": 3, "classification": "time-sensitive-exam-orientation", "source": { "status": "pending-external-verification", "url": null, "asOf": null } },
+        { "selector": "medizinpruefung.lesen", "count": 12, "classification": "mixed-professional-training", "source": { "status": "pending-external-verification", "url": null, "asOf": null } },
+        { "selector": "medizinpruefung.hoeren", "count": 12, "classification": "mixed-professional-training", "source": { "status": "pending-external-verification", "url": null, "asOf": null } },
+        { "selector": "fachwissen", "count": 40, "classification": "unverified-professional-knowledge", "source": { "status": "pending-external-verification", "url": null, "asOf": null } },
+        { "selector": "phrasen", "count": 11, "classification": "fictional-language-example", "source": { "status": "not-applicable-fictional", "url": null, "asOf": null } },
+        { "selector": "simulation.schreiben", "count": 4, "classification": "fictional-language-scenario", "source": { "status": "not-applicable-fictional", "url": null, "asOf": null } },
+        { "selector": "simulation.sprechen", "count": 4, "classification": "fictional-language-scenario", "source": { "status": "not-applicable-fictional", "url": null, "asOf": null } }
+      ]
+    },
+    {
+      "id": "orientierung",
+      "bank": "content/orientierung.json",
+      "titleAr": "التوجيه المدني والسياسي",
+      "jurisdiction": "DE; laws, institutions, and course formats may change",
+      "noticeAr": "النصوص ملخصات تعليمية مؤلفة داخلياً وليست نصوص BAMF أو قانوناً أو إرشاداً رسمياً. المصدر الرسمي المؤرخ لكل ادعاء لم يُثبت بعد.",
+      "officialActionAr": "للحقوق والانتخابات والإقامة والإجراءات ارجع إلى النص القانوني أو الجهة الرسمية الحالية.",
+      "professionalReview": "pending",
+      "fieldValidation": "pending",
+      "groups": [
+        { "selector": "$", "count": 20, "classification": "unverified-civic-summary", "source": { "status": "pending-external-verification", "url": null, "asOf": null } }
+      ]
+    },
+    {
+      "id": "lebenswelt",
+      "bank": "content/lebenswelt.json",
+      "titleAr": "إجراءات الحياة والعمل في ألمانيا",
+      "jurisdiction": "DE; procedures vary by state, municipality, residence status, insurer, and profession",
+      "noticeAr": "البطاقات تدريب لغوي وتوجيه عام غير متحقق خارجياً، وليست استشارة قانونية أو إدارية أو طبية. المهل والوثائق والمسارات قد تتغير.",
+      "officialActionAr": "تحقق قبل أي إجراء من الجهة الرسمية المختصة بحالتك ومن تاريخ التعليمات.",
+      "professionalReview": "pending",
+      "fieldValidation": "pending",
+      "groups": [
+        { "selector": "themen", "count": 13, "classification": "unverified-procedural-orientation", "source": { "status": "pending-external-verification", "url": null, "asOf": null } },
+        { "selector": "umgang", "count": 16, "classification": "fictional-language-example", "source": { "status": "not-applicable-fictional", "url": null, "asOf": null } }
+      ]
+    },
+    {
+      "id": "szenarien",
+      "bank": "content/szenarien.json",
+      "titleAr": "سيناريوهات الطوارئ والبلدية والبنك والعمل",
+      "jurisdiction": "DE-context fictional training; real procedures vary",
+      "noticeAr": "هذه مواقف وشخصيات ونماذج خيالية لتدريب اللغة. ليست تعليمات طوارئ أو نموذجاً رسمياً أو نصيحة قانونية أو مالية.",
+      "officialActionAr": "في موقف حقيقي اتبع رقم الطوارئ والجهة الرسمية أو المختص، ولا تعتمد على سيناريو التدريب.",
+      "professionalReview": "pending",
+      "fieldValidation": "pending",
+      "groups": [
+        { "selector": "szenarien", "count": 12, "classification": "fictional-language-scenario", "source": { "status": "not-applicable-fictional", "url": null, "asOf": null } }
+      ]
+    }
+  ]
+}

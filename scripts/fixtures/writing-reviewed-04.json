@@ -1,0 +1,1361 @@
+{
+  "schema": "wegb2-reviewed-writing-decision-batch-v1",
+  "batch": "PA-035-04",
+  "reviewedAt": "2026-11-04",
+  "scope": "Item-by-item internal review of all 27 B1 writing cards across task, Arabic alignment, criteria, model, notes, and internal word target: 22 bounded corrections and 5 explicit confirmed-current decisions; counts and searches were triage only, not correction generators, and this is not independent linguistic, exam, or CEFR sign-off.",
+  "entries": [
+    {
+      "id": "w-b1-01",
+      "level": "B1",
+      "decision": "corrected",
+      "rationale": "Replaced an awkward causative recommendation and unsupported rhetorical Arabic notes while preserving every required connector and Konjunktiv-II form.",
+      "previous": {
+        "id": "w-b1-01",
+        "level": "B1",
+        "format": "frei",
+        "titleDe": "Meinung + Begründung",
+        "titleAr": "رأي مبرَّر",
+        "taskDe": "Schreibe einen Absatz (ca. 80 Wörter): Sollen Handys in Schulen verboten werden? Nutze: meiner Meinung nach, weil, deshalb, obwohl + 1× Konjunktiv II.",
+        "taskAr": "اكتب فقرة (80 كلمة تقريباً): هل يُحظر استعمال الهواتف في المدرسة؟ استعمل: رأيي، لأن، لذلك، رغم أن + كونونكتيف الثاني.",
+        "criteria": [
+          "جملة افتتاحية بالرأي",
+          "تعليلان بأدوات ربط مختلفة",
+          "جملة بـ Konjunktiv II",
+          "خاتمة أو توصية"
+        ],
+        "sample": "Meiner Meinung nach sollten Handys in Schulen eingeschränkt werden, weil sie die Konzentration stören: Ein kurzer Blick aufs Display genügt, und der Faden der Erklärung ist gerissen. Obwohl Handys nützliche Werkzeuge sind – als Wörterbuch oder Taschenrechner –, spielen sie im Unterricht oft nur eine Nebenrolle. Deshalb würde ich empfehlen, sie zu Stundenbeginn einsammeln und in der Pause zurückgeben zu lassen. Könnten Lehrkräfte zudem bewusste Medienminuten einbauen, hätten die Schüler ein doppeltes Lernfeld: Stoff und Selbstkontrolle. So wird das Handy vom Störenfried zum Gehilfen – nur eben nicht zur falschen Zeit.",
+        "noteAr": [
+          "كل أدوات المعيار في مواضعها: meiner Meinung nach / weil / obwohl / deshalb + würde — أربعُ علاماتِ تصريفٍ يقرأها المصححُ كأنه يمسحُ بطاقات",
+          "«Könnten Lehrkräfte zudem…» — جملةُ شرطٍ بلا wenn بقلب الفعل أولاً: ترفٌ في B1 يستحق الإشادة",
+          "الإطار دائري: يبدأ باليد كالمُزعج ويختم بها كالمُعين — بنيةٌ تُدرِّسُ البلاغة قبل اسمها"
+        ],
+        "zielWort": 80
+      },
+      "current": {
+        "id": "w-b1-01",
+        "level": "B1",
+        "format": "frei",
+        "titleDe": "Meinung + Begründung",
+        "titleAr": "رأي مبرَّر",
+        "taskDe": "Schreibe einen Absatz (ca. 80 Wörter): Sollen Handys in Schulen verboten werden? Nutze: meiner Meinung nach, weil, deshalb, obwohl + 1× Konjunktiv II.",
+        "taskAr": "اكتب فقرة (80 كلمة تقريباً): هل يُحظر استعمال الهواتف في المدرسة؟ استعمل: رأيي، لأن، لذلك، رغم أن + كونونكتيف الثاني.",
+        "criteria": [
+          "جملة افتتاحية بالرأي",
+          "تعليلان بأدوات ربط مختلفة",
+          "جملة بـ Konjunktiv II",
+          "خاتمة أو توصية"
+        ],
+        "sample": "Meiner Meinung nach sollten Handys in Schulen eingeschränkt werden, weil sie die Konzentration stören: Ein kurzer Blick aufs Display genügt, und der Faden der Erklärung ist gerissen. Obwohl Handys nützliche Werkzeuge sind – als Wörterbuch oder Taschenrechner –, spielen sie im Unterricht oft nur eine Nebenrolle. Deshalb würde ich empfehlen, sie zu Stundenbeginn einzusammeln und erst in der Pause wieder auszugeben. Könnten Lehrkräfte zudem bewusste Medienminuten einbauen, hätten die Schüler ein doppeltes Lernfeld: Stoff und Selbstkontrolle. So wird das Handy vom Störenfried zum Gehilfen – nur eben nicht zur falschen Zeit.",
+        "noteAr": [
+          "يستخدم النموذج meiner Meinung nach وweil وobwohl وdeshalb، ويعرض Konjunktiv II في sollten وwürde.",
+          "تقدم جملة Könnten Lehrkräfte …, hätten die Schüler … شرطاً من دون wenn مع الفعل في البداية.",
+          "تختم الفقرة بتوصية تربط استعمال الهاتف بالوقت والغرض."
+        ],
+        "zielWort": 80
+      }
+    },
+    {
+      "id": "w-b1-02",
+      "level": "B1",
+      "decision": "corrected",
+      "rationale": "Corrected the application tense, aligned the relative-clause criterion, and fixed formal-letter layout and unsupported assessment claims.",
+      "previous": {
+        "id": "w-b1-02",
+        "level": "B1",
+        "format": "brief",
+        "titleDe": "Anschreiben (Bewerbung)",
+        "titleAr": "خطاب التوظيف",
+        "taskDe": "Schreibe den Kern eines Anschreibens (ca. 100 Wörter): Wer bist du? Warum diese Stelle? Was bringst du mit? Nutze 2 Relativsätze.",
+        "taskAr": "اكتب جوهر خطاب التوظيف (100 كلمة): من أنت؟ لماذا هذا المنصب؟ ماذا تقدّم؟ استعمل جملتين وصفيتين.",
+        "criteria": [
+          "أسلوب رسمي (Sie، بلا عامية)",
+          "ذاتي بضمير وصفي",
+          "سبب الترشّح واضح",
+          "خاتمة بالترحيب بمقابلة"
+        ],
+        "sample": "Sehr geehrte Damen und Herren, mit großem Interesse habe ich mich um die Stelle beworben, die Sie auf Ihrer Website ausgeschrieben haben. Ich bin Ingenieurin, die drei Jahre Erfahrung in der Entwicklung nachhaltiger Antriebe gesammelt hat. Besonders reizt mich an Ihrem Haus die Projektarbeit, die Technik und Umwelt zusammenbringt. In meiner jetzigen Firma habe ich ein Team von vier Kolleginnen geführt; das hat mich fachlich wie persönlich weitgebracht. Eine Übersicht meiner Projekte füge ich der Bewerbung bei. Über eine Einladung zu einem Gespräch, in dem ich Sie von meiner Motivation überzeugen kann, würde ich mich sehr freuen. Mit freundlichen Grüßen, Nadia Ferchichi",
+        "noteAr": [
+          "أربعةُ أوصال موصولة (die/der/das/was/in dem) — اثنان يكفيان، والزيادةُ بلا خطأ تُحسب لا تُخصم",
+          "ضميرُ العمل بصيغة المتكلم الفخري بلا تباهٍ: Ich bin Ingenieurin, die… — المعيارُ الذاتي بدقة",
+          "الخاتمة بدعوة مقابلةٍ بصيغة Konjunktiv (würde mich freuen) — البروتوكولُ الرسمي مُنجَزٌ حتى الحرف الأخير"
+        ],
+        "zielWort": 100
+      },
+      "current": {
+        "id": "w-b1-02",
+        "level": "B1",
+        "format": "brief",
+        "titleDe": "Anschreiben (Bewerbung)",
+        "titleAr": "خطاب التوظيف",
+        "taskDe": "Schreibe den Kern eines Anschreibens (ca. 100 Wörter): Wer bist du? Warum diese Stelle? Was bringst du mit? Nutze 2 Relativsätze.",
+        "taskAr": "اكتب جوهر خطاب التوظيف (100 كلمة): من أنت؟ لماذا هذا المنصب؟ ماذا تقدّم؟ استعمل جملتين وصفيتين.",
+        "criteria": [
+          "أسلوب رسمي (Sie، بلا عامية)",
+          "جملتا صلة على الأقل بضمير موصول مناسب",
+          "سبب الترشّح واضح",
+          "خاتمة بالترحيب بمقابلة"
+        ],
+        "sample": "Sehr geehrte Damen und Herren,\n\nmit großem Interesse bewerbe ich mich um die Stelle, die Sie auf Ihrer Website ausgeschrieben haben. Ich bin Ingenieurin und habe drei Jahre Erfahrung in der Entwicklung nachhaltiger Antriebe. Besonders reizt mich die Projektarbeit, die Technik und Umwelt zusammenbringt. In meiner jetzigen Firma leite ich ein Team, das aus vier Kolleginnen und Kollegen besteht. Diese Aufgabe hat mich fachlich und persönlich weitergebracht. Eine Übersicht meiner Projekte füge ich der Bewerbung bei. Über eine Einladung zu einem Gespräch, in dem ich meine Motivation näher erläutern kann, würde ich mich sehr freuen.\n\nMit freundlichen Grüßen\nNadia Ferchichi",
+        "noteAr": [
+          "تعرض الجمل die Sie … ausgeschrieben haben وdie Technik … zusammenbringt وdas aus … besteht صلات موصولة واضحة.",
+          "تذكر الرسالة الخبرة وسبب الاهتمام بالوظيفة ومثالاً على قيادة فريق.",
+          "تستخدم الخاتمة würde ich mich sehr freuen لطلب المقابلة بأدب."
+        ],
+        "zielWort": 100
+      }
+    },
+    {
+      "id": "w-b1-03",
+      "level": "B1",
+      "decision": "corrected",
+      "rationale": "Replaced absolute and rhetorical tense claims with a precise explanation of the model’s narrative sequence.",
+      "previous": {
+        "id": "w-b1-03",
+        "level": "B1",
+        "format": "frei",
+        "titleDe": "Erlebnis erzählen",
+        "titleAr": "سرد تجربة",
+        "taskDe": "Erzähle eine Geschichte (ca. 80 Wörter) in der Erzählzeit: Präteritum für sein/haben (war, hatte), Plusquamperfekt für das Vorherige, Perfekt im wörtlichen Gespräch.",
+        "taskAr": "احكِ قصة (80 كلمة) بزمن السرد: Präteritum مع sein/haben (war·hatte)، والماضي الأسبق لما سبق الأحداث، و Perfekt داخل الكلام المنقول.",
+        "criteria": [
+          "تسلسل زمني: nachdem/bevor أو قبلها/بعدها",
+          "Präteritum من sein أو haben مرة على الأقل (war · hatte) — درس a2-praeteritum",
+          "Plusquamperfekt مرة + Perfekt مرتين",
+          "جملة ختامية فيها شعور"
+        ],
+        "sample": "Bevor ich nach Deutschland gekommen war, hatte ich drei Jahre Deutsch gelernt – an der Volkshochschule, mit Karteikarten und einer Lehrerin, die mir Mut machte. Trotzdem war der Anfang schwer: Im ersten Bürogespräch verstand ich nur Bahnhof, obwohl ich doch alles gelernt hatte. Ein Kollege hat mir sehr geholfen: Er hat mich ermutigt, einfach zu sprechen, auch mit Fehlern. Ohne ihn hätte ich nicht so schnell Fortschritte gemacht. Heute, zwei Jahre später, denke ich dankbar an diese erste Stunde im falschen Konferenzraum zurück – und lächle.",
+        "noteAr": [
+          "war/hatte ليستا تزييناً: السردُ الألمانيُّ لا يقول «ist gewesen» في الكتابة — وهذه كانت فجوةَ المنهجِ حتى أُغلِقَت بدرسَي a1-war-hatte و a2-praeteritum",
+          "Plusquamperfekt مُثبَّتٌ في صدر «Bevor…» مرتين ثم مفارِقٌ عند الشعور — استخدامٌ وظيفي لا استعراضي",
+          "Perfekt مزدوج للحليف (hat geholfen / hat ermutigt) ثم رجوعٌ للحاضر (Heute… denke) — الزمنُ يُديرُ الحكاية"
+        ],
+        "zielWort": 80
+      },
+      "current": {
+        "id": "w-b1-03",
+        "level": "B1",
+        "format": "frei",
+        "titleDe": "Erlebnis erzählen",
+        "titleAr": "سرد تجربة",
+        "taskDe": "Erzähle eine Geschichte (ca. 80 Wörter) in der Erzählzeit: Präteritum für sein/haben (war, hatte), Plusquamperfekt für das Vorherige, Perfekt im wörtlichen Gespräch.",
+        "taskAr": "احكِ قصة (80 كلمة) بزمن السرد: Präteritum مع sein/haben (war·hatte)، والماضي الأسبق لما سبق الأحداث، و Perfekt داخل الكلام المنقول.",
+        "criteria": [
+          "تسلسل زمني: nachdem/bevor أو قبلها/بعدها",
+          "Präteritum من sein أو haben مرة على الأقل (war · hatte) — درس a2-praeteritum",
+          "Plusquamperfekt مرة + Perfekt مرتين",
+          "جملة ختامية فيها شعور"
+        ],
+        "sample": "Bevor ich nach Deutschland gekommen war, hatte ich drei Jahre Deutsch gelernt – an der Volkshochschule, mit Karteikarten und einer Lehrerin, die mir Mut machte. Trotzdem war der Anfang schwer: Im ersten Bürogespräch verstand ich nur Bahnhof, obwohl ich doch alles gelernt hatte. Ein Kollege hat mir sehr geholfen: Er hat mich ermutigt, einfach zu sprechen, auch mit Fehlern. Ohne ihn hätte ich nicht so schnell Fortschritte gemacht. Heute, zwei Jahre später, denke ich dankbar an diese erste Stunde im falschen Konferenzraum zurück – und lächle.",
+        "noteAr": [
+          "يستخدم النموذج war وhatte في السرد، ويضع hatte … gelernt وgekommen war للأحداث السابقة.",
+          "تظهر صيغتا Perfekt في hat … geholfen وhat … ermutigt داخل جزء الحوار عن الزميل.",
+          "ينتقل الختام إلى الحاضر في Heute … denke ليبين أثر التجربة الآن."
+        ],
+        "zielWort": 80
+      }
+    },
+    {
+      "id": "w-b1-04",
+      "level": "B1",
+      "decision": "corrected",
+      "rationale": "Removed a fabricated survey percentage, replaced the numeric-evidence criterion with a concrete-example criterion, and grounded the Arabic notes in the model.",
+      "previous": {
+        "id": "w-b1-04",
+        "level": "B1",
+        "format": "frei",
+        "titleDe": "Kommentar I: Umwelt",
+        "titleAr": "تعليق 1: البيئة",
+        "taskDe": "Kommentar (ca. 100 Wörter): Brauchen wir mehr Radwege? Gliederung: Einstieg → 2 Argumente (mit Konnektoren) → Schluss.",
+        "taskAr": "تعليق (100 كلمة): هل نحتاج ممرات دراجات أكثر؟ بنية: مدخل ← حجّتان بأدوات ربط ← خاتمة.",
+        "criteria": [
+          "بناء ثلاثي واضح",
+          "obwohl/trotzdem/deshalb كلها مستعملة",
+          "أقل تقدير واحد مدعوم بأرقام أو مثال"
+        ],
+        "sample": "In unserer Stadt wird über neue Radwege diskutiert – hitziger, als man erwarten würde. Einerseits kosten sie Geld, andererseits verbessern sie die Luft und machen die Wege sicherer. Eine Umfrage zeigt: 70 Prozent würden das Auto stehen lassen, wenn es gute Radwege gäbe. Obwohl die Anfangskosten hoch sind, rechnet sich der Bau langfristig – weniger Staus, weniger Lärm, gesündere Kinder. Trotzdem fordern Anwohner Ersatz für wegfallende Parkplätze; ihr Einwand verdient eine ernsthafte Antwort, keine Abwehr. Deshalb sollten die Radwege gebaut werden – zusammen mit einem Parkraumkonzept. Für Gesundheit und Umwelt ist jede eingesparte Autofahrt ein Gewinn; die Frage ist nur, wer zuerst den Mut hat.",
+        "noteAr": [
+          "البناء الثلاثي ظاهرٌ بلا عنوان: قضية ← حجتان ← موقف — حتى المصحح المتعجّل يراه",
+          "رقمٌ مُدَّعًى لا مُوهَمًا: 70 Prozent + «würden…stehen lassen» شرطية — أرقامُ التعليقات أسلحةٌ لا حلي",
+          "الإجابة عن اعتراضِ الأنوار (Trotzdem fordern Anwohner…) قبل التوصية — فنُّ «خذِ الخصمَ على محمل الجد» مذكورٌ باسمه"
+        ],
+        "zielWort": 100
+      },
+      "current": {
+        "id": "w-b1-04",
+        "level": "B1",
+        "format": "frei",
+        "titleDe": "Kommentar I: Umwelt",
+        "titleAr": "تعليق 1: البيئة",
+        "taskDe": "Kommentar (ca. 100 Wörter): Brauchen wir mehr Radwege? Gliederung: Einstieg → 2 Argumente (mit Konnektoren) → Schluss.",
+        "taskAr": "تعليق (100 كلمة): هل نحتاج ممرات دراجات أكثر؟ بنية: مدخل ← حجّتان بأدوات ربط ← خاتمة.",
+        "criteria": [
+          "بناء ثلاثي واضح",
+          "obwohl/trotzdem/deshalb كلها مستعملة",
+          "حجة واحدة على الأقل مدعومة بمثال ملموس"
+        ],
+        "sample": "In unserer Stadt wird über neue Radwege diskutiert – hitziger, als man erwarten würde. Einerseits kosten sie Geld, andererseits verbessern sie die Luft und machen die Wege sicherer. Ein sicherer Radweg zwischen Wohnvierteln, Schulen und Bahnhöfen würde vielen Menschen eine echte Alternative zum Auto geben. Obwohl die Anfangskosten hoch sind, rechnet sich der Bau langfristig – weniger Staus, weniger Lärm, gesündere Kinder. Trotzdem fordern Anwohner Ersatz für wegfallende Parkplätze; ihr Einwand verdient eine ernsthafte Antwort, keine Abwehr. Deshalb sollten die Radwege gebaut werden – zusammen mit einem Parkraumkonzept. Für Gesundheit und Umwelt ist jede eingesparte Autofahrt ein Gewinn; die Frage ist nur, wer zuerst den Mut hat.",
+        "noteAr": [
+          "يتدرج النص من عرض القضية إلى حجتين ثم موقف ختامي واضح.",
+          "يدعم مثال الطريق الذي يربط الأحياء والمدارس والمحطات حجة الاستغناء عن السيارة من دون نسبة مختلقة.",
+          "يعرض اعتراض فقدان مواقف السيارات قبل اقتراح الجمع بين مسارات الدراجات وخطة للمواقف."
+        ],
+        "zielWort": 100
+      }
+    },
+    {
+      "id": "w-b1-05",
+      "level": "B1",
+      "decision": "corrected",
+      "rationale": "Resolved the visible 80-word versus 100-word scoring conflict and replaced rhetorical notes with model-grounded advice guidance.",
+      "previous": {
+        "id": "w-b1-05",
+        "level": "B1",
+        "format": "frei",
+        "titleDe": "Rat geben",
+        "titleAr": "تقديم نصيحة",
+        "taskDe": "Ein Freund will seinen Job kündigen, obwohl er gut verdient. Schreibe deinen Rat (80 Wörter) mit Konjunktiv II.",
+        "taskAr": "صديق يريد ترك عمله رغم راتبه الجيد. اكتب نصيحتك (80 كلمة) بـ كونونكتيف الثاني.",
+        "criteria": [
+          "نصيحتان على الأقل بصيغة würde/müsste/könnte",
+          "جملة شرط غير واقعة (wenn … hätte)",
+          "نبرة هادئة تحترم قرار الصديق"
+        ],
+        "sample": "Lieber Karim, ich würde dir raten, über die Gründe erst einmal in Ruhe nachzudenken – Kündigung ist schnell ausgesprochen, das gute Gehalt kommt nicht genauso schnell zurück. Wenn ich an deiner Stelle wäre, hätte ich zuerst ein Gespräch mit dem Chef geführt; oft lässt sich mehr ändern, als man denkt. Falls du trotzdem gehen möchtest, würde ich empfehlen, vorher einen neuen Vertrag in der Tasche zu haben. Niemandem ist geholfen, wenn Frust gegen Leere getauscht wird. Vielleicht hilft dir auch der Gedanke, dass ein guter Chef dich gehen lässt und ein schlechter dich nie gehalten hat. Entscheiden musst du selbst – ich drücke dir die Daumen, egal wie es ausgeht.",
+        "noteAr": [
+          "نبرتا نصيحةٍ متدرجتان: würde raten / würde empfehlen — بين اللياقةِ والإلحاحِ خيطٌ لا يُرى ويُحفَظ",
+          "جملةُ «Wenn ich an deiner Stelle wäre, hätte ich…» — النموذجُ المدرسيُّ للشرط غير الواقع، موضوعةٌ في فم الصديق لا الكتاب",
+          "«Entscheiden musst du» — تسليمُ القرار للمُوجَّه إليه: المعيارُ الرابع (احترامُ الاختيار) مُنجَزٌ في سطرٍ واحد"
+        ],
+        "zielWort": 100
+      },
+      "current": {
+        "id": "w-b1-05",
+        "level": "B1",
+        "format": "frei",
+        "titleDe": "Rat geben",
+        "titleAr": "تقديم نصيحة",
+        "taskDe": "Ein Freund will seinen Job kündigen, obwohl er gut verdient. Schreibe deinen Rat (ca. 100 Wörter) mit Konjunktiv II.",
+        "taskAr": "صديق يريد ترك عمله رغم راتبه الجيد. اكتب نصيحتك (100 كلمة تقريباً) بـ كونونكتيف الثاني.",
+        "criteria": [
+          "نصيحتان على الأقل بصيغة würde/müsste/könnte",
+          "جملة شرط غير واقعة (wenn … hätte)",
+          "نبرة هادئة تحترم قرار الصديق"
+        ],
+        "sample": "Lieber Karim, ich würde dir raten, über die Gründe erst einmal in Ruhe nachzudenken – Kündigung ist schnell ausgesprochen, das gute Gehalt kommt nicht genauso schnell zurück. Wenn ich an deiner Stelle wäre, hätte ich zuerst ein Gespräch mit dem Chef geführt; oft lässt sich mehr ändern, als man denkt. Falls du trotzdem gehen möchtest, würde ich empfehlen, vorher einen neuen Vertrag in der Tasche zu haben. Niemandem ist geholfen, wenn Frust gegen Leere getauscht wird. Vielleicht hilft dir auch der Gedanke, dass ein guter Chef dich gehen lässt und ein schlechter dich nie gehalten hat. Entscheiden musst du selbst – ich drücke dir die Daumen, egal wie es ausgeht.",
+        "noteAr": [
+          "تستخدم النصيحة würde dir raten وwürde ich empfehlen بصيغة مهذبة.",
+          "تعرض جملة Wenn ich an deiner Stelle wäre, hätte ich … شرطاً غير واقعي.",
+          "تترك جملة Entscheiden musst du selbst القرار النهائي للصديق."
+        ],
+        "zielWort": 100
+      }
+    },
+    {
+      "id": "w-b1-06",
+      "level": "B1",
+      "decision": "corrected",
+      "rationale": "Removed an unsupported sleep-learning claim, fixed the malformed subordinate clause and mixed-language criterion, and grounded the personal experience and tips.",
+      "previous": {
+        "id": "w-b1-06",
+        "level": "B1",
+        "format": "frei",
+        "titleDe": "Forum-Post: Lernmethoden",
+        "titleAr": "مشاركة في منتدى: طرق التعلّم",
+        "taskDe": "Schreibe einen Forum-Post (ca. 100 Wörter): Wie lernst du am besten? Erzähle von deiner Erfahrung und gib Tipps. Nutze: einerseits/andererseits, deshalb.",
+        "taskAr": "اكتب مشاركة منتدى (100 كلمة): كيف تتعلّم أفضل؟ احكِ تجربتك وقدّم نصائح. استعمل: من جهة/من أخرى، لذلك.",
+        "criteria": [
+          "experience شخصية محدّدة (وليس نصائح عامة فقط)",
+          "أداة مقابلة واحدة",
+          "3 نصائح عملية على الأقل",
+          "نبرة منتدى ودّية"
+        ],
+        "sample": "Ich lerne Vokabeln am besten mit Karteikarten: Einerseits dauert es täglich nur zehn Minuten, andererseits wiederhole ich automatisch das, was ich sonst vergraben würde. Meine Erfahrung ist ernüchternd und nützlich zugleich – ohne tägliche Wiederholung hatte ich nach einer Woche die Hälfte vergessen, gemessen, nicht gefühlt! Mein erster Tipp: Lernt neue Wörter am Morgen, da ist das Gehirn noch leer. Mein zweiter: Hört abends deutsche Lieder mit Text – so lernt das Gehirn im Schlaf mit, ohne dass ihr müsst. Und der unbequemste Tipp zum Schluss: Führt ein kleines Fehlerheft und lest es vor dem Einschlafen. Wer seine eigenen Fehler nochmal liest, macht sie seltener ein drittes Mal. Viel Erfolg euch allen!",
+        "noteAr": [
+          "تجربةٌ رقمية شخصية: «نصف ما درستُ تبخّر في أسبوع، قِسْتُ ذلك» — لا عامّيةُ النصائح إلا بعدها",
+          "ثلاثُ نصائح مُسَمَّاة (erster / zweiter / unbequemster) — التعدادُ المرقَّمُ أمانةٌ لدى المصححين",
+          "«ohne dass ihr müsst» — subordinateٌ خفيفةٌ تنهي جملةً طويلة بأنفاسٍ كاملة: إيقاعٌ مقصودٌ لا سهو"
+        ],
+        "zielWort": 100
+      },
+      "current": {
+        "id": "w-b1-06",
+        "level": "B1",
+        "format": "frei",
+        "titleDe": "Forum-Post: Lernmethoden",
+        "titleAr": "مشاركة في منتدى: طرق التعلّم",
+        "taskDe": "Schreibe einen Forum-Post (ca. 100 Wörter): Wie lernst du am besten? Erzähle von deiner Erfahrung und gib Tipps. Nutze: einerseits/andererseits, deshalb.",
+        "taskAr": "اكتب مشاركة منتدى (100 كلمة): كيف تتعلّم أفضل؟ احكِ تجربتك وقدّم نصائح. استعمل: من جهة/من أخرى، لذلك.",
+        "criteria": [
+          "تجربة شخصية محددة، لا نصائح عامة فقط",
+          "أداة مقابلة واحدة",
+          "3 نصائح عملية على الأقل",
+          "نبرة منتدى ودّية"
+        ],
+        "sample": "Ich lerne Vokabeln am besten mit Karteikarten: Einerseits brauche ich dafür täglich nur zehn Minuten, andererseits wiederhole ich schwierige Wörter automatisch öfter. Früher lernte ich nur am Wochenende; nach wenigen Tagen konnte ich mich an viele Wörter nicht mehr erinnern. Deshalb übe ich jetzt jeden Tag kurz. Mein erster Tipp: Lernt neue Wörter am Morgen und wiederholt sie am Abend. Mein zweiter: Hört kurze Podcasts, lest das Transkript mit und notiert nützliche Ausdrücke. Und mein dritter Tipp: Führt ein kleines Fehlerheft und schaut regelmäßig hinein. Wer seine eigenen Fehler erkennt, kann gezielter an ihnen arbeiten. Viel Erfolg euch allen!",
+        "noteAr": [
+          "توضح التجربة الفرق بين المراجعة الأسبوعية القصيرة والمراجعة اليومية.",
+          "تقدم الفقرة ثلاث نصائح عملية: مراجعة موزعة، وبودكاست مع نص، ودفتر أخطاء.",
+          "يربط einerseits/andererseits بين ميزتي البطاقات، وتقدم deshalb نتيجة التجربة."
+        ],
+        "zielWort": 100
+      }
+    },
+    {
+      "id": "w-b1-07",
+      "level": "B1",
+      "decision": "corrected",
+      "rationale": "Corrected the Arabic instruction, replaced a semantically broken handwriting argument, and aligned the exception explanation with the model.",
+      "previous": {
+        "id": "w-b1-07",
+        "level": "B1",
+        "format": "frei",
+        "titleDe": "Handys im Unterricht – meine Meinung",
+        "titleAr": "الهواتف في الصف — رأيي",
+        "taskDe": "Schreibe einen Text (ca. 80 Wörter): Sollen Handys im Unterricht erlaubt sein? Begründe deine Meinung mit zwei Argumenten.",
+        "taskAr": "اكتب نصاً (نحو 80 كلمة): هل يُسمح بالهواتف في الصف؟ مهّد رأيي بحجّتين.",
+        "criteria": [
+          "رأي واضح في المقدمة",
+          "حجّتان مع شرح",
+          "رابط (deshalb, aber, außerdem)",
+          "خاتمة"
+        ],
+        "sample": "Meiner Meinung nach sollen Handys im Unterricht grundsätzlich tabu sein. Erstens lenken sie ab: Eine Nachricht genügt, und der Faden ist gerissen – das merken selbst die Schüler, die danach fragend schauen. Zweitens verlernen sie das Mitschreiben von Hand; wer nicht mitschreibt, vergisst schneller, als jedes Wörterbuch es ersetzen kann. Natürlich gibt es gute Ausnahmen, etwa die Recherche im Fremdsprachenunterricht. Deshalb schlage ich vor: Handys bleiben in der Tasche, außer die Lehrkraft erlaubt sie bewusst für eine Aufgabe – dann werden sie Werkzeug statt Störenfried.",
+        "noteAr": [
+          "رأيٌ في السطر الأول قبل أي تمهيد — في B1 لا تُكافأ المقدمةُ الدائرية",
+          "حجتان مشروحتان لا مرميتان: Erstens… (وقائع) / Zweitens… (مبررٌ معياريٌّ) — كل حجةٍ جملةٌ إضافية تُدافِع عنها",
+          "استثناءٌ مذكورٌ ومُؤطَّر («Natürlich… außer…» — لا: «außer die Lehrkraft erlaubt») — قوةُ موقفٍ تُظهِرُ حدودَه"
+        ],
+        "zielWort": 80
+      },
+      "current": {
+        "id": "w-b1-07",
+        "level": "B1",
+        "format": "frei",
+        "titleDe": "Handys im Unterricht – meine Meinung",
+        "titleAr": "الهواتف في الصف — رأيي",
+        "taskDe": "Schreibe einen Text (ca. 80 Wörter): Sollen Handys im Unterricht erlaubt sein? Begründe deine Meinung mit zwei Argumenten.",
+        "taskAr": "اكتب نصاً (نحو 80 كلمة): هل يُسمح بالهواتف في الصف؟ علّل رأيك بحجّتين.",
+        "criteria": [
+          "رأي واضح في المقدمة",
+          "حجّتان مع شرح",
+          "رابط (deshalb, aber, außerdem)",
+          "خاتمة"
+        ],
+        "sample": "Meiner Meinung nach sollen Handys im Unterricht grundsätzlich tabu sein. Erstens lenken sie ab: Eine Nachricht genügt, und der Faden ist gerissen – das merken selbst die Schüler, die danach fragend schauen. Zweitens schreiben viele weniger mit; beim Schreiben von Hand müssen sie die wichtigsten Punkte selbst auswählen. Natürlich gibt es gute Ausnahmen, etwa die Recherche im Fremdsprachenunterricht. Deshalb schlage ich vor: Handys bleiben in der Tasche. Wenn die Lehrkraft sie bewusst für eine Aufgabe erlaubt, werden sie zum Werkzeug statt zum Störenfried.",
+        "noteAr": [
+          "يعلن النموذج الرأي في الجملة الأولى ثم يشرح حجتين واضحتين.",
+          "تتناول الحجة الأولى التشتت، والثانية اختيار النقاط المهمة عند تدوين الملاحظات.",
+          "يعرض النموذج استثناءً محدوداً: يسمح بالهاتف عندما تحدد المعلمة مهمة واضحة."
+        ],
+        "zielWort": 80
+      }
+    },
+    {
+      "id": "w-b1-08",
+      "level": "B1",
+      "decision": "corrected",
+      "rationale": "Removed an unsupported exam-scoring claim and replaced it with a direct explanation of the four requested content elements and subordinate clauses.",
+      "previous": {
+        "id": "w-b1-08",
+        "level": "B1",
+        "format": "frei",
+        "titleDe": "Forumsbeitrag: Homeoffice",
+        "titleAr": "مشاركة في منتدى: العمل من البيت",
+        "taskDe": "In einem Forum wird diskutiert, ob Homeoffice gut für Familien ist. Schreibe einen Beitrag (ca. 100 Wörter): eigene Erfahrung, ein Vorteil, ein Nachteil, deine Meinung mit Begründung.",
+        "taskAr": "يُناقَش في منتدى هل العمل من البيت جيد للعائلات. اكتب مشاركة (~100 كلمة): تجربتك، ميزة، عيب، رأيك مع تعليل.",
+        "criteria": [
+          "بنية واضحة: تجربة ← ميزة ← عيب ← رأي",
+          "روابط رأي (Einerseits … andererseits, meiner Meinung nach)",
+          "جملة ثانوية بـobwohl أو dass",
+          "≥90 كلمة"
+        ],
+        "sample": "Ich arbeite seit einem Jahr zwei Tage pro Woche im Homeoffice, und meine Erfahrung ist gemischt. Einerseits spare ich jeden Tag eine Stunde Fahrt und kann meine Tochter von der Schule abholen. Andererseits verliere ich den Kontakt zu den Kollegen, und manche Absprachen dauern per Mail viel länger als im Büro. Obwohl ich die Flexibilität schätze, glaube ich nicht, dass Homeoffice allein gut für Familien ist. Meiner Meinung nach braucht man klare Regeln: feste Zeiten, an denen man erreichbar ist, und einen Tag pro Woche, an dem das ganze Team im Büro ist. So bleibt die Vereinbarkeit von Beruf und Familie realistisch.",
+        "noteAr": [
+          "نموذج امتحان B1 الكتابي: مشاركة منتدى بأربعة عناصر — يُقيَّم كلٌّ منها على حدة",
+          "«Obwohl … schätze, glaube ich nicht, dass …»: جملتان ثانويتان في جملة واحدة — علامة B1 ناضج"
+        ],
+        "neu": true,
+        "zielWort": 100
+      },
+      "current": {
+        "id": "w-b1-08",
+        "level": "B1",
+        "format": "frei",
+        "titleDe": "Forumsbeitrag: Homeoffice",
+        "titleAr": "مشاركة في منتدى: العمل من البيت",
+        "taskDe": "In einem Forum wird diskutiert, ob Homeoffice gut für Familien ist. Schreibe einen Beitrag (ca. 100 Wörter): eigene Erfahrung, ein Vorteil, ein Nachteil, deine Meinung mit Begründung.",
+        "taskAr": "يُناقَش في منتدى هل العمل من البيت جيد للعائلات. اكتب مشاركة (~100 كلمة): تجربتك، ميزة، عيب، رأيك مع تعليل.",
+        "criteria": [
+          "بنية واضحة: تجربة ← ميزة ← عيب ← رأي",
+          "روابط رأي (Einerseits … andererseits, meiner Meinung nach)",
+          "جملة ثانوية بـobwohl أو dass",
+          "≥90 كلمة"
+        ],
+        "sample": "Ich arbeite seit einem Jahr zwei Tage pro Woche im Homeoffice, und meine Erfahrung ist gemischt. Einerseits spare ich jeden Tag eine Stunde Fahrt und kann meine Tochter von der Schule abholen. Andererseits verliere ich den Kontakt zu den Kollegen, und manche Absprachen dauern per Mail viel länger als im Büro. Obwohl ich die Flexibilität schätze, glaube ich nicht, dass Homeoffice allein gut für Familien ist. Meiner Meinung nach braucht man klare Regeln: feste Zeiten, an denen man erreichbar ist, und einen Tag pro Woche, an dem das ganze Team im Büro ist. So bleibt die Vereinbarkeit von Beruf und Familie realistisch.",
+        "noteAr": [
+          "يرتب النموذج العناصر الأربعة: تجربة شخصية، وميزة، وعيب، ثم رأي معلل.",
+          "تجمع جملة Obwohl … schätze, glaube ich nicht, dass … بين obwohl وdass مع ترتيب فعل صحيح.",
+          "تقدم الخاتمة قواعد عملية للجمع بين المرونة والتواصل مع الفريق."
+        ],
+        "neu": true,
+        "zielWort": 100
+      }
+    },
+    {
+      "id": "w-b1-09",
+      "level": "B1",
+      "decision": "corrected",
+      "rationale": "Corrected formal-email paragraph and closing layout and removed unsupported scoring language from the Arabic notes.",
+      "previous": {
+        "id": "w-b1-09",
+        "level": "B1",
+        "format": "brief",
+        "titleDe": "Halbformelle E-Mail: Kurs verschieben",
+        "titleAr": "إيميل شبه رسمي: تأجيل دورة",
+        "taskDe": "Du hast einen Fortbildungskurs gebucht, kannst aber am Termin nicht teilnehmen. Schreibe an die Sprachschule (ca. 100 Wörter): Situation, Bitte um Verschiebung, Alternativtermine, Frage zu Kosten.",
+        "taskAr": "حجزت دورة تكوين لكنك لا تستطيع الحضور في الموعد. اكتب إلى مدرسة اللغة (~100 كلمة): الوضع، طلب التأجيل، مواعيد بديلة، سؤال عن التكاليف.",
+        "criteria": [
+          "مخاطبة وختام رسميان (Sehr geehrte Damen und Herren / Mit freundlichen Grüßen)",
+          "صيغة تهذيب بالمصدر: أرغب في / هل يمكن أن (Ich würde gern / Wäre es möglich)",
+          "ذكر رقم الحجز أو اسم الدورة",
+          "سؤال واضح عن الرسوم"
+        ],
+        "sample": "Sehr geehrte Damen und Herren, ich habe den Kurs „Deutsch für den Beruf B1“ ab dem 3. März gebucht (Buchungsnummer 4471). Leider muss ich an diesem Tag eine Dienstreise antreten, die mein Arbeitgeber erst gestern festgelegt hat. Wäre es möglich, meine Anmeldung auf den nächsten Kurs im April oder Mai zu verschieben? Beide Termine würden mir passen. Außerdem möchte ich fragen, ob für die Verschiebung eine Gebühr anfällt und ob meine Anzahlung erhalten bleibt. Für eine kurze Rückmeldung wäre ich Ihnen dankbar. Mit freundlichen Grüßen, Hedi Mansour",
+        "noteAr": [
+          "Konjunktiv II للتهذيب: wäre es möglich / würden mir passen / wäre ich dankbar — ثلاث صيغ في نصّ واحد",
+          "المعلومة الإدارية (رقم الحجز) تجعل الرسالة قابلة للمعالجة — يُحتسب في التقييم"
+        ],
+        "neu": true,
+        "zielWort": 100
+      },
+      "current": {
+        "id": "w-b1-09",
+        "level": "B1",
+        "format": "brief",
+        "titleDe": "Halbformelle E-Mail: Kurs verschieben",
+        "titleAr": "إيميل شبه رسمي: تأجيل دورة",
+        "taskDe": "Du hast einen Fortbildungskurs gebucht, kannst aber am Termin nicht teilnehmen. Schreibe an die Sprachschule (ca. 100 Wörter): Situation, Bitte um Verschiebung, Alternativtermine, Frage zu Kosten.",
+        "taskAr": "حجزت دورة تكوين لكنك لا تستطيع الحضور في الموعد. اكتب إلى مدرسة اللغة (~100 كلمة): الوضع، طلب التأجيل، مواعيد بديلة، سؤال عن التكاليف.",
+        "criteria": [
+          "مخاطبة وختام رسميان (Sehr geehrte Damen und Herren / Mit freundlichen Grüßen)",
+          "صيغة تهذيب بالمصدر: أرغب في / هل يمكن أن (Ich würde gern / Wäre es möglich)",
+          "ذكر رقم الحجز أو اسم الدورة",
+          "سؤال واضح عن الرسوم"
+        ],
+        "sample": "Sehr geehrte Damen und Herren,\n\nich habe den Kurs „Deutsch für den Beruf B1“ ab dem 3. März gebucht (Buchungsnummer 4471). Leider muss ich an diesem Tag eine Dienstreise antreten, die mein Arbeitgeber erst gestern festgelegt hat. Wäre es möglich, meine Anmeldung auf den nächsten Kurs im April oder Mai zu verschieben? Beide Termine würden mir passen. Außerdem möchte ich fragen, ob für die Verschiebung eine Gebühr anfällt und ob meine Anzahlung erhalten bleibt. Für eine kurze Rückmeldung wäre ich Ihnen dankbar.\n\nMit freundlichen Grüßen\nHedi Mansour",
+        "noteAr": [
+          "تستخدم الرسالة wäre es möglich وwürden mir passen وwäre ich dankbar للتهذيب.",
+          "يحدد اسم الدورة ورقم الحجز والموعدين البديلين بوضوح.",
+          "يسأل النص صراحةً عن رسوم التأجيل وبقاء الدفعة المقدمة."
+        ],
+        "neu": true,
+        "zielWort": 100
+      }
+    },
+    {
+      "id": "w-b1-10",
+      "level": "B1",
+      "decision": "corrected",
+      "rationale": "Replaced an unnatural attribution phrase and grounded the Arabic notes in the neutral narrative and tense choices.",
+      "previous": {
+        "id": "w-b1-10",
+        "level": "B1",
+        "format": "frei",
+        "titleDe": "Bericht: Ein Missverständnis",
+        "titleAr": "تقرير: سوء فهم",
+        "taskDe": "Schreibe für den Kurs einen kurzen Bericht (ca. 100 Wörter) über ein Missverständnis in Deutschland: Was ist passiert? Warum kam es dazu? Was hast du daraus gelernt?",
+        "taskAr": "اكتب للدورة تقريراً قصيراً (~100 كلمة) عن سوء فهم في ألمانيا: ماذا حدث؟ لماذا؟ ماذا تعلّمت؟",
+        "criteria": [
+          "Präteritum لأفعال السرد الأساسية (war, hatte, wollte) وPerfekt للباقي",
+          "جملة سببية بـweil أو denn",
+          "جملة بـ«Ich habe gelernt, dass …»",
+          "لا اتهام لأحد — وصف موضوعي"
+        ],
+        "sample": "Im ersten Monat in Leipzig hatte ich einen Termin beim Amt um 9 Uhr. Ich kam um 9:10 Uhr, weil der Bus Verspätung hatte, und dachte, zehn Minuten seien kein Problem. Die Sachbearbeiterin hatte den Termin aber schon abgesagt, denn nach ihr war Pünktlichkeit Teil der Vereinbarung. Ich war zuerst enttäuscht und fand die Regel streng. Später hat mir eine Kollegin erklärt, dass man in solchen Fällen kurz anruft, auch wenn man nur fünf Minuten zu spät kommt. Ich habe daraus gelernt, dass Pünktlichkeit hier weniger mit Strenge als mit Respekt für die Zeit der anderen zu tun hat.",
+        "noteAr": [
+          "التقرير الحيادي: لا «الألمان صارمون» بل «الوقت جزء من الاتفاق»",
+          "مزج Präteritum وPerfekt في السرد المكتوب طبيعي في B1"
+        ],
+        "neu": true,
+        "zielWort": 100
+      },
+      "current": {
+        "id": "w-b1-10",
+        "level": "B1",
+        "format": "frei",
+        "titleDe": "Bericht: Ein Missverständnis",
+        "titleAr": "تقرير: سوء فهم",
+        "taskDe": "Schreibe für den Kurs einen kurzen Bericht (ca. 100 Wörter) über ein Missverständnis in Deutschland: Was ist passiert? Warum kam es dazu? Was hast du daraus gelernt?",
+        "taskAr": "اكتب للدورة تقريراً قصيراً (~100 كلمة) عن سوء فهم في ألمانيا: ماذا حدث؟ لماذا؟ ماذا تعلّمت؟",
+        "criteria": [
+          "Präteritum لأفعال السرد الأساسية (war, hatte, wollte) وPerfekt للباقي",
+          "جملة سببية بـweil أو denn",
+          "جملة بـ«Ich habe gelernt, dass …»",
+          "لا اتهام لأحد — وصف موضوعي"
+        ],
+        "sample": "Im ersten Monat in Leipzig hatte ich einen Termin beim Amt um 9 Uhr. Ich kam um 9:10 Uhr, weil der Bus Verspätung hatte, und dachte, zehn Minuten seien kein Problem. Die Sachbearbeiterin hatte den Termin aber schon abgesagt, denn für sie gehörte Pünktlichkeit zur Vereinbarung. Ich war zuerst enttäuscht und fand die Regel streng. Später hat mir eine Kollegin erklärt, dass man in solchen Fällen kurz anruft, auch wenn man nur fünf Minuten zu spät kommt. Ich habe daraus gelernt, dass Pünktlichkeit hier weniger mit Strenge als mit Respekt für die Zeit der anderen zu tun hat.",
+        "noteAr": [
+          "يصف التقرير الموقف من دون تعميم، وينسب تفسير الموعد إلى الموظفة.",
+          "يستخدم war وhatte وwollte للسرد، ثم Perfekt في hat … erklärt للحدث اللاحق.",
+          "تختم جملة Ich habe daraus gelernt, dass … بالدرس المستفاد كما تطلب المهمة."
+        ],
+        "neu": true,
+        "zielWort": 100
+      }
+    },
+    {
+      "id": "w-b1-11",
+      "level": "B1",
+      "decision": "confirmed-current",
+      "rationale": "Reviewed the full online-shop complaint; task, Arabic alignment, criteria, model, notes, deadline, and 100-word target remain mutually consistent.",
+      "previous": {
+        "id": "w-b1-11",
+        "level": "B1",
+        "format": "brief",
+        "titleDe": "Beschwerde-E-Mail an ein Online-Geschäft",
+        "titleAr": "رسالة شكوى لمتجر إلكتروني",
+        "taskDe": "Du hast vor einer Woche online ein Smartphone bestellt. Es ist angekommen, aber das Display hat einen Kratzer. Schreibe eine E-Mail an den Kundenservice (ca. 100 Wörter): Grund für die Beschwerde, was passiert ist, was du verlangst (Umtausch/Rückerstattung), Frist.",
+        "taskAr": "اشتريت هاتفاً ذكياً قبل أسبوع عبر الإنترنت، وعند وصوله وجدت خدشاً على الشاشة. اكتب رسالة إلى خدمة الزبائن (حوالي 100 كلمة): سبب الشكوى، ماذا حدث، ماذا تطلب (استبدال/استرداد)، ومهلة.",
+        "criteria": [
+          "تحية ونهاية رسمية",
+          "وصف المشكلة ووقتها",
+          "مطلب واضح (تبديل/استرداد)",
+          "نبرة مهذبة وحازمة"
+        ],
+        "sample": "Sehr geehrte Damen und Herren,\n\nvor einer Woche habe ich in Ihrem Online-Shop ein Smartphone bestellt. Gestern wurde das Paket geliefert. Als ich das Gerät ausgepackt habe, bemerkte ich einen langen Kratzer auf dem Display. Die Verpackung war unbeschädigt, und ich habe den Schaden sofort fotografiert. Das Smartphone funktioniert zwar, aber der Kratzer stört mich sehr und das Gerät entspricht nicht der Beschreibung. Ich bitte Sie daher um einen Austausch gegen ein einwandfreies Modell. Bitte antworten Sie mir innerhalb von sieben Tagen und erklären Sie, wie ich das beschädigte Gerät kostenlos zurückschicken kann. Sollte ein Austausch nicht möglich sein, wünsche ich eine Rückerstattung des Kaufpreises. Ein Foto des Schadens füge ich bei.\n\nMit freundlichen Grüßen\nLena Hoffmann",
+        "noteAr": [
+          "ابدأ بتحية رسمية، وحدّد وقت الطلب والتسليم ووصف العيب؛ استخدم als للحدث المحدد في الماضي.",
+          "اجعل الحل المطلوب صريحاً (Umtausch أو Rückerstattung)، وحدّد مهلة للرد، واختم رسمياً؛ أرفق صورة للعيب إن توفرت."
+        ],
+        "zielWort": 100
+      },
+      "current": {
+        "id": "w-b1-11",
+        "level": "B1",
+        "format": "brief",
+        "titleDe": "Beschwerde-E-Mail an ein Online-Geschäft",
+        "titleAr": "رسالة شكوى لمتجر إلكتروني",
+        "taskDe": "Du hast vor einer Woche online ein Smartphone bestellt. Es ist angekommen, aber das Display hat einen Kratzer. Schreibe eine E-Mail an den Kundenservice (ca. 100 Wörter): Grund für die Beschwerde, was passiert ist, was du verlangst (Umtausch/Rückerstattung), Frist.",
+        "taskAr": "اشتريت هاتفاً ذكياً قبل أسبوع عبر الإنترنت، وعند وصوله وجدت خدشاً على الشاشة. اكتب رسالة إلى خدمة الزبائن (حوالي 100 كلمة): سبب الشكوى، ماذا حدث، ماذا تطلب (استبدال/استرداد)، ومهلة.",
+        "criteria": [
+          "تحية ونهاية رسمية",
+          "وصف المشكلة ووقتها",
+          "مطلب واضح (تبديل/استرداد)",
+          "نبرة مهذبة وحازمة"
+        ],
+        "sample": "Sehr geehrte Damen und Herren,\n\nvor einer Woche habe ich in Ihrem Online-Shop ein Smartphone bestellt. Gestern wurde das Paket geliefert. Als ich das Gerät ausgepackt habe, bemerkte ich einen langen Kratzer auf dem Display. Die Verpackung war unbeschädigt, und ich habe den Schaden sofort fotografiert. Das Smartphone funktioniert zwar, aber der Kratzer stört mich sehr und das Gerät entspricht nicht der Beschreibung. Ich bitte Sie daher um einen Austausch gegen ein einwandfreies Modell. Bitte antworten Sie mir innerhalb von sieben Tagen und erklären Sie, wie ich das beschädigte Gerät kostenlos zurückschicken kann. Sollte ein Austausch nicht möglich sein, wünsche ich eine Rückerstattung des Kaufpreises. Ein Foto des Schadens füge ich bei.\n\nMit freundlichen Grüßen\nLena Hoffmann",
+        "noteAr": [
+          "ابدأ بتحية رسمية، وحدّد وقت الطلب والتسليم ووصف العيب؛ استخدم als للحدث المحدد في الماضي.",
+          "اجعل الحل المطلوب صريحاً (Umtausch أو Rückerstattung)، وحدّد مهلة للرد، واختم رسمياً؛ أرفق صورة للعيب إن توفرت."
+        ],
+        "zielWort": 100
+      }
+    },
+    {
+      "id": "w-b1-12",
+      "level": "B1",
+      "decision": "confirmed-current",
+      "rationale": "Reviewed the full app-learning forum post; balanced arguments, personal experience, recommendation, notes, and 100-word target remain aligned.",
+      "previous": {
+        "id": "w-b1-12",
+        "level": "B1",
+        "format": "frei",
+        "titleDe": "Meine Meinung zum Lernen mit Apps",
+        "titleAr": "رأيي في التعلّم بالتطبيقات",
+        "taskDe": "Schreibe einen Forumsbeitrag (ca. 100 Wörter) über das Sprachenlernen mit Apps: Vor- und Nachteile, deine Erfahrung, Empfehlung.",
+        "taskAr": "اكتب مشاركة منتدى (100 كلمة) عن تعلّم اللغات عبر التطبيقات: إيجابيات وسلبيات، تجربتك، توصية.",
+        "criteria": [
+          "مقدمة وعرض وخاتمة",
+          "إيجابيتان وسلبيتان",
+          "تجربة شخصية",
+          "رأي معلَّل بـweil/meiner Meinung nach"
+        ],
+        "sample": "Immer mehr Menschen lernen Sprachen mit Apps. Meiner Meinung nach sind sie eine praktische Ergänzung zum Unterricht. Einerseits kann man jederzeit und im eigenen Tempo üben. Kurze Übungen helfen dabei, neue Wörter regelmäßig zu wiederholen, und viele Apps geben sofort eine Rückmeldung. Ich lerne seit drei Monaten jeden Morgen zehn Minuten Deutsch mit einer App; dadurch habe ich meinen Wortschatz erweitert. Andererseits erklären Apps die Grammatik oft nur kurz, und beim Sprechen fehlt ein echter Gesprächspartner. Außerdem können Benachrichtigungen ablenken. Ich empfehle deshalb, eine App mit einem Sprachkurs oder einem Tandem zu kombinieren. So bleibt man motiviert und kann das Gelernte in echten Gesprächen anwenden. Eine App ersetzt keine Lehrkraft, ist aber eine hilfreiche Ergänzung.",
+        "noteAr": [
+          "وازن الإيجابيات والسلبيات في فقرات مترابطة؛ استخدم einerseits وandererseits لا قائمة مفككة.",
+          "اربط تجربة شخصية بتوصية نهائية معلّلة، ووضّح رأيك بعبارة مثل Meiner Meinung nach."
+        ],
+        "zielWort": 100
+      },
+      "current": {
+        "id": "w-b1-12",
+        "level": "B1",
+        "format": "frei",
+        "titleDe": "Meine Meinung zum Lernen mit Apps",
+        "titleAr": "رأيي في التعلّم بالتطبيقات",
+        "taskDe": "Schreibe einen Forumsbeitrag (ca. 100 Wörter) über das Sprachenlernen mit Apps: Vor- und Nachteile, deine Erfahrung, Empfehlung.",
+        "taskAr": "اكتب مشاركة منتدى (100 كلمة) عن تعلّم اللغات عبر التطبيقات: إيجابيات وسلبيات، تجربتك، توصية.",
+        "criteria": [
+          "مقدمة وعرض وخاتمة",
+          "إيجابيتان وسلبيتان",
+          "تجربة شخصية",
+          "رأي معلَّل بـweil/meiner Meinung nach"
+        ],
+        "sample": "Immer mehr Menschen lernen Sprachen mit Apps. Meiner Meinung nach sind sie eine praktische Ergänzung zum Unterricht. Einerseits kann man jederzeit und im eigenen Tempo üben. Kurze Übungen helfen dabei, neue Wörter regelmäßig zu wiederholen, und viele Apps geben sofort eine Rückmeldung. Ich lerne seit drei Monaten jeden Morgen zehn Minuten Deutsch mit einer App; dadurch habe ich meinen Wortschatz erweitert. Andererseits erklären Apps die Grammatik oft nur kurz, und beim Sprechen fehlt ein echter Gesprächspartner. Außerdem können Benachrichtigungen ablenken. Ich empfehle deshalb, eine App mit einem Sprachkurs oder einem Tandem zu kombinieren. So bleibt man motiviert und kann das Gelernte in echten Gesprächen anwenden. Eine App ersetzt keine Lehrkraft, ist aber eine hilfreiche Ergänzung.",
+        "noteAr": [
+          "وازن الإيجابيات والسلبيات في فقرات مترابطة؛ استخدم einerseits وandererseits لا قائمة مفككة.",
+          "اربط تجربة شخصية بتوصية نهائية معلّلة، ووضّح رأيك بعبارة مثل Meiner Meinung nach."
+        ],
+        "zielWort": 100
+      }
+    },
+    {
+      "id": "w-b1-13",
+      "level": "B1",
+      "decision": "corrected",
+      "rationale": "Translated the four learner-facing German criteria into aligned Arabic while retaining the bounded forum model.",
+      "previous": {
+        "id": "w-b1-13",
+        "level": "B1",
+        "format": "frei",
+        "titleDe": "Meinung: Handyverbot in der Schule?",
+        "titleAr": "رأي: هل يُمنع الهاتف في المدرسة؟",
+        "taskDe": "Schreiben Sie einen Forumsbeitrag (ca. 110 Wörter): Sind Sie für oder gegen ein Handyverbot in Schulen? Nennen Sie zwei Argumente und ein Beispiel.",
+        "taskAr": "اكتب مشاركة منتدى (حوالي ١١٠ كلم): هل تؤيد أو تعارض منع الهاتف في المدارس؟ اذكر حجتين ومثالاً.",
+        "criteria": [
+          "Klare Position (Pro oder Contra)",
+          "Zwei Argumente mit Begründung",
+          "Konkretes Beispiel",
+          "Schlüssiger Schluss"
+        ],
+        "sample": "Ich bin für ein Handyverbot während des Unterrichts, denn Handys lenken viele Schülerinnen und Schüler ab. Manche lesen Nachrichten oder schauen Videos, statt der Lehrkraft zuzuhören. So verpassen sie wichtige Erklärungen. Außerdem stören Klingeltöne die ganze Klasse. An meiner früheren Schule waren Handys erlaubt. In einer Mathematikstunde sah ich, wie mehrere Schüler heimlich Nachrichten schrieben; danach mussten wir die Aufgabe noch einmal besprechen. Natürlich kann ein Smartphone in den Pausen nützlich sein und im Notfall helfen. Deshalb sollte es nicht den ganzen Schultag verboten werden. Meiner Meinung nach bleiben Handys während des Unterrichts in der Tasche und werden nur mit Erlaubnis der Lehrkraft benutzt. So können sich alle besser konzentrieren, ohne auf die Vorteile ganz zu verzichten.",
+        "noteAr": [
+          "أعلن موقفك بوضوح، وادعم كل حجة بسبب أو مثال ملموس؛ ميّز بين المنع أثناء الدرس والمنع طوال اليوم.",
+          "اربط الحجج بأدوات مثل denn وaußerdem وtrotzdem، ثم اختم باستنتاج ينسجم مع موقفك."
+        ],
+        "zielWort": 110
+      },
+      "current": {
+        "id": "w-b1-13",
+        "level": "B1",
+        "format": "frei",
+        "titleDe": "Meinung: Handyverbot in der Schule?",
+        "titleAr": "رأي: هل يُمنع الهاتف في المدرسة؟",
+        "taskDe": "Schreiben Sie einen Forumsbeitrag (ca. 110 Wörter): Sind Sie für oder gegen ein Handyverbot in Schulen? Nennen Sie zwei Argumente und ein Beispiel.",
+        "taskAr": "اكتب مشاركة منتدى (حوالي ١١٠ كلم): هل تؤيد أو تعارض منع الهاتف في المدارس؟ اذكر حجتين ومثالاً.",
+        "criteria": [
+          "موقف واضح مع المنع أو ضده",
+          "حجتان مع تعليل",
+          "مثال ملموس",
+          "خاتمة منطقية منسجمة مع الموقف"
+        ],
+        "sample": "Ich bin für ein Handyverbot während des Unterrichts, denn Handys lenken viele Schülerinnen und Schüler ab. Manche lesen Nachrichten oder schauen Videos, statt der Lehrkraft zuzuhören. So verpassen sie wichtige Erklärungen. Außerdem stören Klingeltöne die ganze Klasse. An meiner früheren Schule waren Handys erlaubt. In einer Mathematikstunde sah ich, wie mehrere Schüler heimlich Nachrichten schrieben; danach mussten wir die Aufgabe noch einmal besprechen. Natürlich kann ein Smartphone in den Pausen nützlich sein und im Notfall helfen. Deshalb sollte es nicht den ganzen Schultag verboten werden. Meiner Meinung nach bleiben Handys während des Unterrichts in der Tasche und werden nur mit Erlaubnis der Lehrkraft benutzt. So können sich alle besser konzentrieren, ohne auf die Vorteile ganz zu verzichten.",
+        "noteAr": [
+          "أعلن موقفك بوضوح، وادعم كل حجة بسبب أو مثال ملموس؛ ميّز بين المنع أثناء الدرس والمنع طوال اليوم.",
+          "اربط الحجج بأدوات مثل denn وaußerdem وtrotzdem، ثم اختم باستنتاج ينسجم مع موقفك."
+        ],
+        "zielWort": 110
+      }
+    },
+    {
+      "id": "w-b1-14",
+      "level": "B1",
+      "decision": "corrected",
+      "rationale": "Replaced an overgeneralized satisfaction claim and grounded the Arabic notes in the balanced argument and practical conclusion.",
+      "previous": {
+        "id": "w-b1-14",
+        "level": "B1",
+        "format": "frei",
+        "titleDe": "Forumsbeitrag: Haustiere in der Mietwohnung?",
+        "titleAr": "مساهمة منتدى: حيوانات أليفة في شقة مستأجرة؟",
+        "taskDe": "Sie schreiben einen Forumsbeitrag zum Thema „Haustiere in der Mietwohnung – sollte der Vermieter sie verbieten dürfen?“ (ca. 120 Wörter). Schreiben Sie Ihre Meinung, ein Argument dafür und eines dagegen, und ein Beispiel.",
+        "taskAr": "تكتب مساهمة منتدى حول «الحيوانات الأليفة في الشقة المستأجرة — هل يحق للمالك منعها؟» (نحو 120 كلمة). اكتب رأيك وحجة مؤيدة وأخرى معارضة ومثالًا.",
+        "criteria": [
+          "رأي واضح مبكرًا",
+          "حجة للمالك وحجة للمستأجر (einerseits/andererseits)",
+          "مثال قصير من الحياة",
+          "جملة أخيرة بموقفك النهائي"
+        ],
+        "sample": "Ich bin der Meinung, dass Haustiere in einer Mietwohnung nicht verboten werden sollten. Einerseits verstehe ich die Vermieter: Ein Hund kann laut sein und die Wohnung beschädigen. Andererseits sind Tiere für viele Menschen Familienmitglieder. Meine Nachbarin zum Beispiel hat eine kleine Katze; man hört sie nie und die Wohnung ist sauber. Natürlich müssen Besitzer auf ihre Tiere aufpassen und Probleme mit den Nachbarn lösen. Der Vermieter könnte vorher fragen, welches Tier man hat, und das im Vertrag festhalten. Große Hunde in sehr kleinen Wohnungen sind natürlich ein Problem, das sehe ich ein. Ein allgemeines Verbot finde ich falsch. Besser ist eine Regel im Vertrag: Tiere sind erlaubt, aber der Besitzer bezahlt für Schäden. So sind beide Seiten zufrieden.",
+        "noteAr": [
+          "تفهّم الطرف الآخر أولًا (Ich verstehe die Vermieter) ثم الترجيح — بنية B1 الناضجة",
+          "مثال جارة محدد يجعل الحجة محسوسة",
+          "الخاتمة بقاعدة عملية (Regel im Vertrag) لا بانطباع"
+        ],
+        "zielWort": 120
+      },
+      "current": {
+        "id": "w-b1-14",
+        "level": "B1",
+        "format": "frei",
+        "titleDe": "Forumsbeitrag: Haustiere in der Mietwohnung?",
+        "titleAr": "مساهمة منتدى: حيوانات أليفة في شقة مستأجرة؟",
+        "taskDe": "Sie schreiben einen Forumsbeitrag zum Thema „Haustiere in der Mietwohnung – sollte der Vermieter sie verbieten dürfen?“ (ca. 120 Wörter). Schreiben Sie Ihre Meinung, ein Argument dafür und eines dagegen, und ein Beispiel.",
+        "taskAr": "تكتب مساهمة منتدى حول «الحيوانات الأليفة في الشقة المستأجرة — هل يحق للمالك منعها؟» (نحو 120 كلمة). اكتب رأيك وحجة مؤيدة وأخرى معارضة ومثالًا.",
+        "criteria": [
+          "رأي واضح مبكرًا",
+          "حجة للمالك وحجة للمستأجر (einerseits/andererseits)",
+          "مثال قصير من الحياة",
+          "جملة أخيرة بموقفك النهائي"
+        ],
+        "sample": "Ich bin der Meinung, dass Haustiere in einer Mietwohnung nicht verboten werden sollten. Einerseits verstehe ich die Vermieter: Ein Hund kann laut sein und die Wohnung beschädigen. Andererseits sind Tiere für viele Menschen Familienmitglieder. Meine Nachbarin zum Beispiel hat eine kleine Katze; man hört sie nie und die Wohnung ist sauber. Natürlich müssen Besitzer auf ihre Tiere aufpassen und Probleme mit den Nachbarn lösen. Der Vermieter könnte vorher fragen, welches Tier man hat, und das im Vertrag festhalten. Große Hunde in sehr kleinen Wohnungen sind natürlich ein Problem, das sehe ich ein. Ein allgemeines Verbot finde ich falsch. Besser ist eine Regel im Vertrag: Tiere sind erlaubt, aber der Besitzer bezahlt für Schäden. So werden die Interessen beider Seiten berücksichtigt.",
+        "noteAr": [
+          "يعرض النموذج حجة المالك ثم حجة المستأجر قبل ترجيح الموقف.",
+          "يدعم مثال القطة الهادئة الحجة بموقف يومي محدد.",
+          "تقترح الخاتمة قاعدة في العقد ومسؤولية صاحب الحيوان عن الأضرار بدلاً من منع عام."
+        ],
+        "zielWort": 120
+      }
+    },
+    {
+      "id": "w-b1-15",
+      "level": "B1",
+      "decision": "corrected",
+      "rationale": "Removed an unsupported grade-effect claim, corrected the final clause, and aligned the Arabic notes with the compromise proposal.",
+      "previous": {
+        "id": "w-b1-15",
+        "level": "B1",
+        "format": "frei",
+        "titleDe": "Forumsbeitrag: Handyverbot in der Schule?",
+        "titleAr": "مساهمة منتدى: منع الهواتف في المدرسة؟",
+        "taskDe": "Sie schreiben einen Forumsbeitrag zum Thema „Handyverbot in der Schule?“ (ca. 120 Wörter). Gehen Sie auf Ihre Meinung, Vorteile des Verbots, Nachteile und einen eigenen Vorschlag ein.",
+        "taskAr": "تكتب مساهمة منتدى حول «منع الهواتف في المدرسة؟» (نحو 120 كلمة). تطرّق إلى رأيك ومزايا المنع وعيوبه واقتراحك.",
+        "criteria": [
+          "موقف صريح من العنوان نفسه",
+          "مزايا وعيوب بأمثلة مدرسية",
+          "اقتراح وسط (Handy nur in der Pause?)",
+          "روابط: deshalb, aber, zum Beispiel"
+        ],
+        "sample": "Ich bin für ein Handyverbot im Unterricht, aber nicht in der Pause. Im Unterricht stören Handys sehr: Viele Schüler schauen auf Nachrichten und hören nicht zu. Deshalb sind die Noten oft schlechter. Ein Nachteil ist, dass die Schüler in der Pause ihre Eltern nicht erreichen können. Mein Vorschlag: Die Handys bleiben im Unterricht in einer Box am Lehrerpult. In der Pause darf man sie benutzen. Für Notfälle gibt es eine einfache Lösung: Das Telefon im Schulbüro ist immer erreichbar. Ein Verbot für den ganzen Tag finde ich dagegen zu streng, denn das Handy ist auch ein Werkzeug zum Lernen, zum Beispiel für Wörterbücher. So lernen die Schüler konzentriert und bleiben trotzdem erreichbar. Lehrer und Schüler sollten diese Regel zusammen beschließen, dann akzeptieren sie alle.",
+        "noteAr": [
+          "تحديد الموقف بدقة (im Unterricht ja, Pause nein) بدل نعم/لا مطلقة",
+          "سبب ونتيجة (Deshalb sind die Noten schlechter)",
+          "إشراك الطرفين في القرار (zusammen beschließen) خاتمة واقعية"
+        ],
+        "zielWort": 120
+      },
+      "current": {
+        "id": "w-b1-15",
+        "level": "B1",
+        "format": "frei",
+        "titleDe": "Forumsbeitrag: Handyverbot in der Schule?",
+        "titleAr": "مساهمة منتدى: منع الهواتف في المدرسة؟",
+        "taskDe": "Sie schreiben einen Forumsbeitrag zum Thema „Handyverbot in der Schule?“ (ca. 120 Wörter). Gehen Sie auf Ihre Meinung, Vorteile des Verbots, Nachteile und einen eigenen Vorschlag ein.",
+        "taskAr": "تكتب مساهمة منتدى حول «منع الهواتف في المدرسة؟» (نحو 120 كلمة). تطرّق إلى رأيك ومزايا المنع وعيوبه واقتراحك.",
+        "criteria": [
+          "موقف صريح من العنوان نفسه",
+          "مزايا وعيوب بأمثلة مدرسية",
+          "اقتراح وسط (Handy nur in der Pause?)",
+          "روابط: deshalb, aber, zum Beispiel"
+        ],
+        "sample": "Ich bin für ein Handyverbot im Unterricht, aber nicht in der Pause. Im Unterricht stören Handys sehr: Viele Schüler schauen auf Nachrichten und hören nicht zu. Deshalb können sich viele schlechter konzentrieren. Ein Nachteil ist, dass die Schüler in der Pause ihre Eltern nicht erreichen können. Mein Vorschlag: Die Handys bleiben im Unterricht in einer Box am Lehrerpult. In der Pause darf man sie benutzen. Für Notfälle gibt es eine einfache Lösung: Das Telefon im Schulbüro ist immer erreichbar. Ein Verbot für den ganzen Tag finde ich dagegen zu streng, denn das Handy ist auch ein Werkzeug zum Lernen, zum Beispiel für Wörterbücher. So lernen die Schüler konzentriert und bleiben trotzdem erreichbar. Lehrer und Schüler sollten diese Regel zusammen beschließen, denn dann wird sie eher akzeptiert.",
+        "noteAr": [
+          "يحدد النموذج موقفاً وسطاً: المنع أثناء الدرس لا أثناء الاستراحة.",
+          "يربط deshalb استعمال الهاتف بصعوبة التركيز من دون ادعاء درجات غير موثقة.",
+          "تقترح الخاتمة أن يشارك المعلمون والطلاب في وضع القاعدة لزيادة قبولها."
+        ],
+        "zielWort": 120
+      }
+    },
+    {
+      "id": "w-b1-16",
+      "level": "B1",
+      "decision": "corrected",
+      "rationale": "Narrowed an unsupported country-wide Sunday-opening claim to the writer’s hometown experience and aligned the Arabic note with that scope.",
+      "previous": {
+        "id": "w-b1-16",
+        "level": "B1",
+        "format": "frei",
+        "titleDe": "Forumsbeitrag: Einkaufen am Sonntag?",
+        "titleAr": "مساهمة منتدى: التسوّق يوم الأحد؟",
+        "taskDe": "Sie schreiben einen Forumsbeitrag zum Thema „Sollen Geschäfte am Sonntag öffnen dürfen?“ (ca. 120 Wörter). Schreiben Sie Ihre Meinung, nennen Sie Vorteile und Nachteile und geben Sie ein Beispiel aus Ihrem Land.",
+        "taskAr": "تكتب مساهمة منتدى حول «هل يجب أن تفتح المحلات يوم الأحد؟» (نحو 120 كلمة). اكتب رأيك واذكر مزايا وعيوبًا وأعطِ مثالًا من بلدك.",
+        "criteria": [
+          "رأي + سبب شخصي",
+          "وجهة نظر العاملين في المحلات حاضرة",
+          "مثال مقارن من بلدك (In meinem Land …)",
+          "خلاصة بجملة واحدة"
+        ],
+        "sample": "Meiner Meinung nach sollten Geschäfte am Sonntag nur kurz öffnen, zum Beispiel von 10 bis 14 Uhr. Viele Familien arbeiten die ganze Woche und haben nur am Sonntag Zeit für große Einkäufe. Aber die Verkäufer brauchen auch einen freien Tag mit ihrer Familie. In meinem Land, in Tunesien, sind die Geschäfte am Sonntag offen; das ist praktisch, aber die Mitarbeiter sind oft müde. Ein kurzer Sonntag ist ein guter Kompromiss: Kunden können einkaufen und die Mitarbeiter haben den Nachmittag frei. Apotheken und Bäckereien sollten meiner Meinung nach auf jeden Fall öffnen dürfen, weil Menschen sie auch am Sonntag brauchen. Große Möbelhäuser können dagegen geschlossen bleiben, ein Sofa kauft man nicht im Notfall. So verlieren beide Seiten wenig und gewinnen etwas.",
+        "noteAr": [
+          "مثال مقارن من بلد المتعلم (Tunesien) — مرجعية شخصية مطلوبة في B1",
+          "موقف وسط بزمن محدد (10 bis 14 Uhr) يدل على تفكير عملي",
+          "مراعاة العاملين لا المستهلك فقط — توازن الحجج"
+        ],
+        "zielWort": 120
+      },
+      "current": {
+        "id": "w-b1-16",
+        "level": "B1",
+        "format": "frei",
+        "titleDe": "Forumsbeitrag: Einkaufen am Sonntag?",
+        "titleAr": "مساهمة منتدى: التسوّق يوم الأحد؟",
+        "taskDe": "Sie schreiben einen Forumsbeitrag zum Thema „Sollen Geschäfte am Sonntag öffnen dürfen?“ (ca. 120 Wörter). Schreiben Sie Ihre Meinung, nennen Sie Vorteile und Nachteile und geben Sie ein Beispiel aus Ihrem Land.",
+        "taskAr": "تكتب مساهمة منتدى حول «هل يجب أن تفتح المحلات يوم الأحد؟» (نحو 120 كلمة). اكتب رأيك واذكر مزايا وعيوبًا وأعطِ مثالًا من بلدك.",
+        "criteria": [
+          "رأي + سبب شخصي",
+          "وجهة نظر العاملين في المحلات حاضرة",
+          "مثال مقارن من بلدك (In meinem Land …)",
+          "خلاصة بجملة واحدة"
+        ],
+        "sample": "Meiner Meinung nach sollten Geschäfte am Sonntag nur kurz öffnen, zum Beispiel von 10 bis 14 Uhr. Viele Familien arbeiten die ganze Woche und haben nur am Sonntag Zeit für große Einkäufe. Aber die Verkäufer brauchen auch einen freien Tag mit ihrer Familie. In meiner Heimatstadt in Tunesien sind viele Geschäfte sonntags geöffnet; ich finde das praktisch, denke aber auch an die Beschäftigten. Ein kurzer Sonntag ist ein guter Kompromiss: Kunden können einkaufen und die Mitarbeiter haben den Nachmittag frei. Apotheken und Bäckereien sollten meiner Meinung nach auf jeden Fall öffnen dürfen, weil Menschen sie auch am Sonntag brauchen. Große Möbelhäuser können dagegen geschlossen bleiben, ein Sofa kauft man nicht im Notfall. So verlieren beide Seiten wenig und gewinnen etwas.",
+        "noteAr": [
+          "يقدم النموذج تجربة محددة من مدينة الكاتب في تونس بدلاً من تعميم على البلد كله.",
+          "يقترح حلاً وسطاً بوقت محدد من الساعة 10 إلى 14.",
+          "يعرض احتياجات الزبائن وحق العاملين في وقت حر قبل الخلاصة."
+        ],
+        "zielWort": 120
+      }
+    },
+    {
+      "id": "w-b1-17",
+      "level": "B1",
+      "decision": "corrected",
+      "rationale": "Removed a normative compensation claim and replaced it with a precise description of the documented problems and bounded request.",
+      "previous": {
+        "id": "w-b1-17",
+        "level": "B1",
+        "format": "brief",
+        "titleDe": "Beschwerde an einen Reiseveranstalter",
+        "titleAr": "شكوى إلى منظم رحلات",
+        "taskDe": "Sie haben eine Busreise gebucht. Der Bus war drei Stunden zu spät und das Hotel war anders als gebucht. Schreiben Sie eine E-Mail an den Reiseveranstalter (ca. 80 Wörter): Beschreiben Sie die Probleme und fordern Sie eine Lösung. Vergessen Sie Anrede und Grußformel nicht.",
+        "taskAr": "حجزت رحلة بالحافلة. تأخرت الحافلة ثلاث ساعات وكان الفندق مختلفًا عما حجزته. اكتب رسالة إلى منظم الرحلات (نحو 80 كلمة): صِف المشكلات واطلب حلًّا. لا تنسَ التحية والختام.",
+        "criteria": [
+          "تحية رسمية + مرجع الحجز (Reise am …, Buchungsnummer)",
+          "مشكلتان محددتان بزمن ووقائع لا شكاوى عامة",
+          "طلب واضح (Ich bitte Sie, …)",
+          "ختام رسمي"
+        ],
+        "sample": "Sehr geehrte Damen und Herren,\n\nam 12. Juli habe ich bei Ihnen eine Busreise nach Prag gebucht (Buchungsnummer 4581). Leider gab es zwei Probleme: Der Bus kam drei Stunden zu spät, und das Hotel lag nicht im Zentrum wie versprochen, sondern fünf Kilometer entfernt. Das war für uns sehr ärgerlich. Ich bitte Sie, mir einen Teil des Preises zurückzuzahlen. Über eine Antwort bis nächste Woche würde ich mich freuen.\n\nMit freundlichen Grüßen\nNadia Cherif",
+        "noteAr": [
+          "رقم حجز وتاريخ يجعلان الشكوى موثقة كالواقع",
+          "مشكلتان مفصولتان بوضوح (zwei Probleme: … und …)",
+          "طلب تعويض جزئي متناسب (einen Teil) لا مبالغة"
+        ],
+        "zielWort": 80
+      },
+      "current": {
+        "id": "w-b1-17",
+        "level": "B1",
+        "format": "brief",
+        "titleDe": "Beschwerde an einen Reiseveranstalter",
+        "titleAr": "شكوى إلى منظم رحلات",
+        "taskDe": "Sie haben eine Busreise gebucht. Der Bus war drei Stunden zu spät und das Hotel war anders als gebucht. Schreiben Sie eine E-Mail an den Reiseveranstalter (ca. 80 Wörter): Beschreiben Sie die Probleme und fordern Sie eine Lösung. Vergessen Sie Anrede und Grußformel nicht.",
+        "taskAr": "حجزت رحلة بالحافلة. تأخرت الحافلة ثلاث ساعات وكان الفندق مختلفًا عما حجزته. اكتب رسالة إلى منظم الرحلات (نحو 80 كلمة): صِف المشكلات واطلب حلًّا. لا تنسَ التحية والختام.",
+        "criteria": [
+          "تحية رسمية + مرجع الحجز (Reise am …, Buchungsnummer)",
+          "مشكلتان محددتان بزمن ووقائع لا شكاوى عامة",
+          "طلب واضح (Ich bitte Sie, …)",
+          "ختام رسمي"
+        ],
+        "sample": "Sehr geehrte Damen und Herren,\n\nam 12. Juli habe ich bei Ihnen eine Busreise nach Prag gebucht (Buchungsnummer 4581). Leider gab es zwei Probleme: Der Bus kam drei Stunden zu spät, und das Hotel lag nicht im Zentrum wie versprochen, sondern fünf Kilometer entfernt. Das war für uns sehr ärgerlich. Ich bitte Sie, mir einen Teil des Preises zurückzuzahlen. Über eine Antwort bis nächste Woche würde ich mich freuen.\n\nMit freundlichen Grüßen\nNadia Cherif",
+        "noteAr": [
+          "يذكر النموذج تاريخ الرحلة ورقم الحجز لتحديد الشكوى.",
+          "يفصل المشكلتين بوضوح: تأخر الحافلة وموقع الفندق المخالف للحجز.",
+          "يطلب استرداد جزء من السعر في جملة واضحة من دون تهديد."
+        ],
+        "zielWort": 80
+      }
+    },
+    {
+      "id": "w-b1-18",
+      "level": "B1",
+      "decision": "confirmed-current",
+      "rationale": "Reviewed the full noise complaint; tenant context, times, prior contact, bounded request, formal register, notes, and 80-word target remain aligned.",
+      "previous": {
+        "id": "w-b1-18",
+        "level": "B1",
+        "format": "brief",
+        "titleDe": "Beschwerde an die Hausverwaltung: Lärm",
+        "titleAr": "شكوى إلى إدارة السكن: ضجيج",
+        "taskDe": "In Ihrem Haus ist es seit Wochen nachts sehr laut (Partys im Nachbarapartment). Schreiben Sie eine E-Mail an die Hausverwaltung (ca. 80 Wörter): Erklären Sie das Problem, nennen Sie Zeiten und bitten Sie um Hilfe.",
+        "taskAr": "في بنائك ضجيج شديد منذ أسابيع ليلًا (حفلات في الشقة المجاورة). اكتب رسالة إلى إدارة السكن (نحو 80 كلمة): اشرح المشكلة، اذكر الأوقات، واطلب المساعدة.",
+        "criteria": [
+          "تقديم نفسك كمستأجر (Ich wohne seit … in Wohnung …)",
+          "أوقات الضجيج بدقة (freitags ab 23 Uhr)",
+          "طلب مهذّب لا تهديد (Ich bitte Sie, mit … zu sprechen)",
+          "ختام رسمي"
+        ],
+        "sample": "Sehr geehrte Damen und Herren,\n\nich wohne seit zwei Jahren in der Wohnung 14 in der Gartenstraße 8. Seit einigen Wochen ist es nachts sehr laut: In der Wohnung über mir gibt es jeden Freitag Partys bis zwei Uhr nachts. Meine Kinder können nicht schlafen. Ich habe schon freundlich mit den Nachbarn gesprochen, aber nichts hat sich geändert. Ich bitte Sie, mit den Nachbarn zu sprechen und uns zu helfen.\n\nMit freundlichen Grüßen\nYassine Trabelsi",
+        "noteAr": [
+          "تقديم المستأجر بعنوان ورقم شقة — شكوى قابلة للمتابعة",
+          "إثبات محاولة ودية سابقة (Ich habe schon … gesprochen) يقوّي الموقف",
+          "طلب محدد واحد (mit den Nachbarn sprechen) بدل قائمة شكاوى"
+        ],
+        "zielWort": 80
+      },
+      "current": {
+        "id": "w-b1-18",
+        "level": "B1",
+        "format": "brief",
+        "titleDe": "Beschwerde an die Hausverwaltung: Lärm",
+        "titleAr": "شكوى إلى إدارة السكن: ضجيج",
+        "taskDe": "In Ihrem Haus ist es seit Wochen nachts sehr laut (Partys im Nachbarapartment). Schreiben Sie eine E-Mail an die Hausverwaltung (ca. 80 Wörter): Erklären Sie das Problem, nennen Sie Zeiten und bitten Sie um Hilfe.",
+        "taskAr": "في بنائك ضجيج شديد منذ أسابيع ليلًا (حفلات في الشقة المجاورة). اكتب رسالة إلى إدارة السكن (نحو 80 كلمة): اشرح المشكلة، اذكر الأوقات، واطلب المساعدة.",
+        "criteria": [
+          "تقديم نفسك كمستأجر (Ich wohne seit … in Wohnung …)",
+          "أوقات الضجيج بدقة (freitags ab 23 Uhr)",
+          "طلب مهذّب لا تهديد (Ich bitte Sie, mit … zu sprechen)",
+          "ختام رسمي"
+        ],
+        "sample": "Sehr geehrte Damen und Herren,\n\nich wohne seit zwei Jahren in der Wohnung 14 in der Gartenstraße 8. Seit einigen Wochen ist es nachts sehr laut: In der Wohnung über mir gibt es jeden Freitag Partys bis zwei Uhr nachts. Meine Kinder können nicht schlafen. Ich habe schon freundlich mit den Nachbarn gesprochen, aber nichts hat sich geändert. Ich bitte Sie, mit den Nachbarn zu sprechen und uns zu helfen.\n\nMit freundlichen Grüßen\nYassine Trabelsi",
+        "noteAr": [
+          "تقديم المستأجر بعنوان ورقم شقة — شكوى قابلة للمتابعة",
+          "إثبات محاولة ودية سابقة (Ich habe schon … gesprochen) يقوّي الموقف",
+          "طلب محدد واحد (mit den Nachbarn sprechen) بدل قائمة شكاوى"
+        ],
+        "zielWort": 80
+      }
+    },
+    {
+      "id": "w-b1-19",
+      "level": "B1",
+      "decision": "corrected",
+      "rationale": "Moved availability before the thanks and formal closing, clarified evening availability, and aligned the message layout with its register.",
+      "previous": {
+        "id": "w-b1-19",
+        "level": "B1",
+        "format": "brief",
+        "titleDe": "Anfrage an eine Sprachschule",
+        "titleAr": "استفسار إلى مدرسة لغة",
+        "taskDe": "Sie möchten einen Deutschkurs machen. Schreiben Sie eine E-Mail an die Sprachschule (ca. 80 Wörter): Fragen Sie nach Kursen am Abend, nach dem Preis und wie Sie sich anmelden können.",
+        "taskAr": "تريد الالتحاق بدورة ألمانية. اكتب رسالة إلى مدرسة اللغة (نحو 80 كلمة): اسأل عن دورات المساء وعن السعر وكيفية التسجيل.",
+        "criteria": [
+          "سبب كتابتك في أول جملة",
+          "ثلاثة أسئلة مرتبة وواضحة",
+          "صيغة مهذّبة (Ich hätte gern Informationen …) أو أسئلة مباشرة بأدب",
+          "شكر + ختام"
+        ],
+        "sample": "Sehr geehrte Damen und Herren,\n\nich möchte gern einen Deutschkurs auf dem Niveau B1 machen und hätte einige Fragen. Gibt es Kurse am Abend, weil ich tagsüber arbeite? Wie viel kostet der Kurs pro Monat? Und wie kann ich mich anmelden – online oder in der Schule? Über eine Antwort würde ich mich sehr freuen. Vielen Dank im Voraus.\n\nIch habe von Montag bis Freitag Zeit. Mit freundlichen Grüßen\nMouna Gharbi",
+        "noteAr": [
+          "ثلاثة أسئلة صريحة تعكس نقاط المهمة واحدًا واحدًا",
+          "تعليل سؤال المساء بجملة weil — معلومات مفيدة للقارئ",
+          "امتنان مسبق (Vielen Dank im Voraus) قبل الختام"
+        ],
+        "zielWort": 80
+      },
+      "current": {
+        "id": "w-b1-19",
+        "level": "B1",
+        "format": "brief",
+        "titleDe": "Anfrage an eine Sprachschule",
+        "titleAr": "استفسار إلى مدرسة لغة",
+        "taskDe": "Sie möchten einen Deutschkurs machen. Schreiben Sie eine E-Mail an die Sprachschule (ca. 80 Wörter): Fragen Sie nach Kursen am Abend, nach dem Preis und wie Sie sich anmelden können.",
+        "taskAr": "تريد الالتحاق بدورة ألمانية. اكتب رسالة إلى مدرسة اللغة (نحو 80 كلمة): اسأل عن دورات المساء وعن السعر وكيفية التسجيل.",
+        "criteria": [
+          "سبب كتابتك في أول جملة",
+          "ثلاثة أسئلة مرتبة وواضحة",
+          "صيغة مهذّبة (Ich hätte gern Informationen …) أو أسئلة مباشرة بأدب",
+          "شكر + ختام"
+        ],
+        "sample": "Sehr geehrte Damen und Herren,\n\nich möchte gern einen Deutschkurs auf dem Niveau B1 machen und hätte einige Fragen. Gibt es Kurse am Abend? Ich arbeite nämlich tagsüber. Wie viel kostet der Kurs pro Monat? Und wie kann ich mich anmelden – online oder in der Schule? Für mich kommen die Abende von Montag bis Freitag infrage. Über eine Antwort würde ich mich sehr freuen. Vielen Dank im Voraus.\n\nMit freundlichen Grüßen\nMouna Gharbi",
+        "noteAr": [
+          "تطرح الرسالة ثلاثة أسئلة واضحة عن المساء والسعر وطريقة التسجيل.",
+          "تشرح الحاجة إلى دورة مسائية لأن المرسل يعمل نهاراً.",
+          "تذكر أوقات التوفر قبل الشكر والخاتمة الرسمية."
+        ],
+        "zielWort": 80
+      }
+    },
+    {
+      "id": "w-b1-20",
+      "level": "B1",
+      "decision": "corrected",
+      "rationale": "Corrected the ungrammatical Gespräch request and grounded the Arabic notes in the specific problem, bounded request, and learner effort.",
+      "previous": {
+        "id": "w-b1-20",
+        "level": "B1",
+        "format": "brief",
+        "titleDe": "E-Mail an die Kursleiterin: Hilfe erbitten",
+        "titleAr": "رسالة إلى مدرّبة الدورة: طلب مساعدة",
+        "taskDe": "Sie machen einen Deutschkurs, aber die Grammatik ist schwer für Sie. Schreiben Sie eine E-Mail an Ihre Kursleiterin Frau Beck (ca. 80 Wörter): Erklären Sie Ihr Problem und bitten Sie um einen Tipp oder ein Gespräch.",
+        "taskAr": "تلتحق بدورة ألمانية لكن القواعد صعبة عليك. اكتب رسالة إلى مدرّبتك السيدة بِك (نحو 80 كلمة): اشرح مشكلتك واطلب نصيحة أو لقاء.",
+        "criteria": [
+          "تحية نصف رسمية باسم (Sehr geehrte Frau Beck,)",
+          "مشكلة محددة (die Grammatik / der Akkusativ) لا «كل شيء صعب»",
+          "طلب واقعي واحد (Tipps oder kurzes Gespräch)",
+          "ختام مهذّب"
+        ],
+        "sample": "Sehr geehrte Frau Beck,\n\nich bin in Ihrem B1-Kurs am Dienstag. Die neue Grammatik, besonders der Akkusativ, ist schwer für mich. Ich lerne zu Hause, aber ich mache noch viele Fehler in den Hausaufgaben. Hätten Sie vielleicht einige Tipps für mich? Oder können wir uns zehn Minuten nach dem Kurs kurz sprechen? Ich möchte gern besser werden und übe jeden Tag. Vielen Dank für Ihre Hilfe.\n\nMit freundlichen Grüßen\nAli Mansour",
+        "noteAr": [
+          "تحديد المشكلة بدقة (besonders der Akkusativ) يجعل الطلب قابلًا للإجابة",
+          "طلب صغير واقعي (zehn Minuten) بدل طلب عام",
+          "إظهار الجهد الذاتي (ich übe jeden Tag) قبل طلب المساعدة"
+        ],
+        "zielWort": 80
+      },
+      "current": {
+        "id": "w-b1-20",
+        "level": "B1",
+        "format": "brief",
+        "titleDe": "E-Mail an die Kursleiterin: Hilfe erbitten",
+        "titleAr": "رسالة إلى مدرّبة الدورة: طلب مساعدة",
+        "taskDe": "Sie machen einen Deutschkurs, aber die Grammatik ist schwer für Sie. Schreiben Sie eine E-Mail an Ihre Kursleiterin Frau Beck (ca. 80 Wörter): Erklären Sie Ihr Problem und bitten Sie um einen Tipp oder ein Gespräch.",
+        "taskAr": "تلتحق بدورة ألمانية لكن القواعد صعبة عليك. اكتب رسالة إلى مدرّبتك السيدة بِك (نحو 80 كلمة): اشرح مشكلتك واطلب نصيحة أو لقاء.",
+        "criteria": [
+          "تحية نصف رسمية باسم (Sehr geehrte Frau Beck,)",
+          "مشكلة محددة (die Grammatik / der Akkusativ) لا «كل شيء صعب»",
+          "طلب واقعي واحد (Tipps oder kurzes Gespräch)",
+          "ختام مهذّب"
+        ],
+        "sample": "Sehr geehrte Frau Beck,\n\nich bin in Ihrem B1-Kurs am Dienstag. Die neue Grammatik, besonders der Akkusativ, ist schwer für mich. Ich lerne zu Hause, aber ich mache noch viele Fehler in den Hausaufgaben. Hätten Sie vielleicht einige Tipps für mich? Oder können wir nach dem Kurs zehn Minuten miteinander sprechen? Ich möchte gern besser werden und übe jeden Tag. Vielen Dank für Ihre Hilfe.\n\nMit freundlichen Grüßen\nAli Mansour",
+        "noteAr": [
+          "تحدد الرسالة المشكلة في Akkusativ بدلاً من وصف القواعد كلها بالصعوبة.",
+          "تطلب نصائح أو محادثة قصيرة مدتها عشر دقائق بعد الدرس.",
+          "يذكر المرسل أنه يدرس ويتدرب يومياً قبل طلب المساعدة."
+        ],
+        "zielWort": 80
+      }
+    },
+    {
+      "id": "w-b1-21",
+      "level": "B1",
+      "decision": "corrected",
+      "rationale": "Moved content that appeared after the closing into the body, separated the closing, and corrected the Arabic count of date/time/place details.",
+      "previous": {
+        "id": "w-b1-21",
+        "level": "B1",
+        "format": "brief",
+        "titleDe": "Einladung an die Lehrerin zum Sommerfest",
+        "titleAr": "دعوة المعلمة إلى حفل الصيف",
+        "taskDe": "Ihre Sprachschule macht ein Sommerfest. Schreiben Sie eine Einladung an Ihre Lehrerin Frau Sommer (ca. 80 Wörter): Laden Sie sie ein, nennen Sie Ort, Datum und Uhrzeit und sagen Sie, was es zu essen gibt.",
+        "taskAr": "تقيم مدرستك حفل صيف. اكتب دعوة إلى معلمتك السيدة زومر (نحو 80 كلمة): ادعُها، اذكر المكان والتاريخ والساعة، وقل ما سيكون من طعام.",
+        "criteria": [
+          "دعوة صريحة مهذّبة (Wir laden Sie herzlich ein)",
+          "بيانات كاملة: متى وأين",
+          "لمحة عن البرنامج/الطعام تدفع للموافقة",
+          "طلب ردّ قصير + ختام"
+        ],
+        "sample": "Sehr geehrte Frau Sommer,\n\nwir laden Sie herzlich zu unserem Sommerfest ein! Das Fest findet am Samstag, dem 15. Juli, ab 17 Uhr im Garten unserer Schule statt. Es gibt Essen aus vielen Ländern, Musik und Spiele. Unsere Gruppe kocht ein Gericht aus Tunesien. Wir würden uns sehr freuen, wenn Sie kommen können. Bitte sagen Sie uns bis Donnerstag Bescheid.\n\nAuch die anderen Kurse sind herzlich eingeladen. Herzliche Grüße\nIhr B1-Kurs",
+        "noteAr": [
+          "دعوة جماعية (wir/Ihr B1-Kurs) بصوت الفصل لا فرد واحد",
+          "البيانات الثلاثة (Tag, Datum, Uhr, Ort) كاملة في سطرين",
+          "مهلة ردّ قصيرة مهذّبة (bis Donnerstag Bescheid)"
+        ],
+        "zielWort": 80
+      },
+      "current": {
+        "id": "w-b1-21",
+        "level": "B1",
+        "format": "brief",
+        "titleDe": "Einladung an die Lehrerin zum Sommerfest",
+        "titleAr": "دعوة المعلمة إلى حفل الصيف",
+        "taskDe": "Ihre Sprachschule macht ein Sommerfest. Schreiben Sie eine Einladung an Ihre Lehrerin Frau Sommer (ca. 80 Wörter): Laden Sie sie ein, nennen Sie Ort, Datum und Uhrzeit und sagen Sie, was es zu essen gibt.",
+        "taskAr": "تقيم مدرستك حفل صيف. اكتب دعوة إلى معلمتك السيدة زومر (نحو 80 كلمة): ادعُها، اذكر المكان والتاريخ والساعة، وقل ما سيكون من طعام.",
+        "criteria": [
+          "دعوة صريحة مهذّبة (Wir laden Sie herzlich ein)",
+          "بيانات كاملة: متى وأين",
+          "لمحة عن البرنامج/الطعام تدفع للموافقة",
+          "طلب ردّ قصير + ختام"
+        ],
+        "sample": "Sehr geehrte Frau Sommer,\n\nwir laden Sie herzlich zu unserem Sommerfest ein! Das Fest findet am Samstag, dem 15. Juli, ab 17 Uhr im Garten unserer Schule statt. Es gibt Essen aus vielen Ländern, Musik und Spiele. Unsere Gruppe kocht ein Gericht aus Tunesien. Wir würden uns sehr freuen, wenn Sie kommen können. Auch die anderen Kurse sind herzlich eingeladen. Bitte sagen Sie uns bis Donnerstag Bescheid.\n\nHerzliche Grüße\nIhr B1-Kurs",
+        "noteAr": [
+          "تأتي الدعوة بصوت المجموعة wir ويطابقها توقيع Ihr B1-Kurs.",
+          "يذكر النموذج اليوم والتاريخ والساعة والمكان والطعام.",
+          "يضع دعوة الدورات الأخرى وطلب الرد قبل التحية الختامية."
+        ],
+        "zielWort": 80
+      }
+    },
+    {
+      "id": "w-b1-22",
+      "level": "B1",
+      "decision": "corrected",
+      "rationale": "Removed text accidentally concatenated after the signature and retained a complete bounded apology, reason, alternative appointment, and closing.",
+      "previous": {
+        "id": "w-b1-22",
+        "level": "B1",
+        "format": "frei",
+        "titleDe": "Absage an einen Freund",
+        "titleAr": "اعتذار عن موعد لصديق",
+        "taskDe": "Ihr Freund hat Sie am Samstag zum Fußballspielen eingeladen. Sie können nicht kommen. Schreiben Sie eine kurze Nachricht (ca. 60 Wörter): Entschuldigen Sie sich, erklären Sie warum und schlagen Sie einen neuen Termin vor.",
+        "taskAr": "دعاك صديقك يوم السبت للعب كرة القدم. لا تستطيع الحضور. اكتب رسالة قصيرة (نحو 60 كلمة): اعتذر، اشرح السبب، واقترح موعدًا جديدًا.",
+        "criteria": [
+          "تحية ودّية (Hallo/Lieber …)",
+          "اعتذار + سبب بجملة واحدة",
+          "اقتراح بديل محدد بيوم وساعة",
+          "ختام ودّي قصير"
+        ],
+        "sample": "Hallo Karim,\n\nvielen Dank für deine Einladung! Leider kann ich am Samstag nicht zum Fußball kommen, weil ich bis 18 Uhr arbeiten muss. Das tut mir wirklich leid. Aber wie wäre es am Sonntag um 16 Uhr im Park? Da habe ich frei und bringe den Ball mit. Sag mir bitte kurz Bescheid!\n\nLiebe Grüße\nDein Freund Sami Nächstes Mal bin ich wieder dabei, das verspreche ich euch. Viele Grüße an alle!",
+        "noteAr": [
+          "اعتذار مبرَّر بسبب عمل محدد لا عذر غامض",
+          "مقابل فوري بيوم وساعة ومكان (Sonntag 16 Uhr im Park)",
+          "سؤال إغلاقي قصير (Sag mir Bescheid) يبقي الحوار مفتوحًا"
+        ],
+        "zielWort": 60
+      },
+      "current": {
+        "id": "w-b1-22",
+        "level": "B1",
+        "format": "frei",
+        "titleDe": "Absage an einen Freund",
+        "titleAr": "اعتذار عن موعد لصديق",
+        "taskDe": "Ihr Freund hat Sie am Samstag zum Fußballspielen eingeladen. Sie können nicht kommen. Schreiben Sie eine kurze Nachricht (ca. 60 Wörter): Entschuldigen Sie sich, erklären Sie warum und schlagen Sie einen neuen Termin vor.",
+        "taskAr": "دعاك صديقك يوم السبت للعب كرة القدم. لا تستطيع الحضور. اكتب رسالة قصيرة (نحو 60 كلمة): اعتذر، اشرح السبب، واقترح موعدًا جديدًا.",
+        "criteria": [
+          "تحية ودّية (Hallo/Lieber …)",
+          "اعتذار + سبب بجملة واحدة",
+          "اقتراح بديل محدد بيوم وساعة",
+          "ختام ودّي قصير"
+        ],
+        "sample": "Hallo Karim,\n\nvielen Dank für deine Einladung! Leider kann ich am Samstag nicht zum Fußball kommen, weil ich bis 18 Uhr arbeiten muss. Das tut mir wirklich leid. Wie wäre es am Sonntag um 16 Uhr im Park? Da habe ich frei und bringe den Ball mit. Danach können wir noch etwas trinken und über das nächste Spiel sprechen. Sag mir bitte kurz Bescheid!\n\nLiebe Grüße\nSami",
+        "noteAr": [
+          "يعتذر النموذج ويذكر سبب العمل بوضوح.",
+          "يقترح الأحد الساعة 16 في الحديقة موعداً بديلاً محدداً.",
+          "يطلب رداً قصيراً ثم ينهي الرسالة قبل التوقيع من دون نص زائد."
+        ],
+        "zielWort": 60
+      }
+    },
+    {
+      "id": "w-b1-23",
+      "level": "B1",
+      "decision": "confirmed-current",
+      "rationale": "Reviewed the full Bürgeramt rescheduling email; reason, apology, next-week alternatives, formal layout, notes, and 110-word target remain aligned.",
+      "previous": {
+        "id": "w-b1-23",
+        "level": "B1",
+        "format": "brief",
+        "titleDe": "Termin beim Amt verschieben",
+        "titleAr": "تأجيل موعد في دائرة رسمية",
+        "taskDe": "Schreiben Sie eine formelle E-Mail an das Bürgeramt (ca. 110 Wörter): Sie können Ihren Termin am Dienstag nicht wahrnehmen, entschuldigen Sie sich, nennen Sie den Grund und bitten Sie um einen neuen Termin in der Folgewoche.",
+        "taskAr": "اكتب بريدًا رسميًا إلى مكتب المواطنين (نحو 110 كلمات): لا تستطيع الحضور الثلاثاء، اعتذر واذكر السبب واطلب موعدًا جديدًا في الأسبوع التالي.",
+        "criteria": [
+          "تحية رسمية وسبب واضح منذ البداية",
+          "اعتذار مهذّب مع سبب واحد محدد",
+          "طلب موعد بديل بإطار زمني واضح",
+          "خاتمة رسمية (Mit freundlichen Grüßen)"
+        ],
+        "sample": "Sehr geehrte Damen und Herren,\n\nich habe am Dienstag um 10 Uhr einen Termin in Ihrem Bürgeramt. Leider kann ich diesen Termin nicht wahrnehmen, weil ich an diesem Tag beruflich verreisen muss. Ich entschuldige mich für die kurzfristige Absage.\n\nKönnten Sie mir bitte einen neuen Termin in der folgenden Woche geben? Am Vormittag würde es mir besonders gut passen, weil ich nachmittags arbeite. Falls kein Vormittag frei ist, könnte ich auch am Donnerstag ab 16 Uhr kommen. Ich bringe alle Unterlagen vollständig mit.\n\nVielen Dank für Ihr Verständnis. Ich freue mich auf Ihre Rückmeldung.\n\nMit freundlichen Grüßen\nAhmed Benali",
+        "noteAr": [
+          "سبب واحد محدد بدل أعذار غامضة",
+          "طلب بديل مرن (الأسبوع التالي، صباحًا)",
+          "لا معلومات زائدة عن المطلوب"
+        ],
+        "zielWort": 110,
+        "neu": true
+      },
+      "current": {
+        "id": "w-b1-23",
+        "level": "B1",
+        "format": "brief",
+        "titleDe": "Termin beim Amt verschieben",
+        "titleAr": "تأجيل موعد في دائرة رسمية",
+        "taskDe": "Schreiben Sie eine formelle E-Mail an das Bürgeramt (ca. 110 Wörter): Sie können Ihren Termin am Dienstag nicht wahrnehmen, entschuldigen Sie sich, nennen Sie den Grund und bitten Sie um einen neuen Termin in der Folgewoche.",
+        "taskAr": "اكتب بريدًا رسميًا إلى مكتب المواطنين (نحو 110 كلمات): لا تستطيع الحضور الثلاثاء، اعتذر واذكر السبب واطلب موعدًا جديدًا في الأسبوع التالي.",
+        "criteria": [
+          "تحية رسمية وسبب واضح منذ البداية",
+          "اعتذار مهذّب مع سبب واحد محدد",
+          "طلب موعد بديل بإطار زمني واضح",
+          "خاتمة رسمية (Mit freundlichen Grüßen)"
+        ],
+        "sample": "Sehr geehrte Damen und Herren,\n\nich habe am Dienstag um 10 Uhr einen Termin in Ihrem Bürgeramt. Leider kann ich diesen Termin nicht wahrnehmen, weil ich an diesem Tag beruflich verreisen muss. Ich entschuldige mich für die kurzfristige Absage.\n\nKönnten Sie mir bitte einen neuen Termin in der folgenden Woche geben? Am Vormittag würde es mir besonders gut passen, weil ich nachmittags arbeite. Falls kein Vormittag frei ist, könnte ich auch am Donnerstag ab 16 Uhr kommen. Ich bringe alle Unterlagen vollständig mit.\n\nVielen Dank für Ihr Verständnis. Ich freue mich auf Ihre Rückmeldung.\n\nMit freundlichen Grüßen\nAhmed Benali",
+        "noteAr": [
+          "سبب واحد محدد بدل أعذار غامضة",
+          "طلب بديل مرن (الأسبوع التالي، صباحًا)",
+          "لا معلومات زائدة عن المطلوب"
+        ],
+        "zielWort": 110,
+        "neu": true
+      }
+    },
+    {
+      "id": "w-b1-24",
+      "level": "B1",
+      "decision": "confirmed-current",
+      "rationale": "Reviewed the full internship report; chronology, observed activities, past tense, learning conclusion, notes, and 120-word target remain aligned.",
+      "previous": {
+        "id": "w-b1-24",
+        "level": "B1",
+        "format": "frei",
+        "titleDe": "Bericht: Mein erster Tag im Praktikum",
+        "titleAr": "تقرير: يومي الأول في التدريب العملي",
+        "taskDe": "Schreiben Sie einen Bericht über Ihren ersten Tag in einem Pflegepraktikum (ca. 120 Wörter): Wo waren Sie? Wen haben Sie kennengelernt? Was haben Sie gemacht und gelernt? Schreiben Sie in der Vergangenheit.",
+        "taskAr": "اكتب تقريرًا عن يومك الأول في تدريب عملي بمجال الرعاية (نحو 120 كلمة): أين كنت؟ بمن تعرّفت؟ ماذا فعلت وتعلّمت؟ اكتب بالماضي.",
+        "criteria": [
+          "ترتيب زمني واضح (zuerst, danach, am Ende)",
+          "الماضي المركّب بانتظام",
+          "وقائع لا آراء فقط",
+          "جملة ختامية بما تعلّمته"
+        ],
+        "sample": "Gestern war mein erster Tag im Pflegepraktikum in einem Seniorenheim. Zuerst hat mich die Leiterin, Frau Krüger, freundlich begrüßt und mir die Station gezeigt. Danach habe ich eine erfahrene Pflegekraft begleitet. Ich habe gesehen, wie sie Blutdruck gemessen und mit den Bewohnern gesprochen hat. Am Anfang war ich nervös, aber alle waren sehr nett zu mir. Unter Anleitung durfte ich außerdem Getränke verteilen und ein Zimmer vorbereiten. Ein Bewohner hat mir von seinem früheren Beruf erzählt. Das fand ich besonders interessant. Am Ende des Tages war ich müde, aber auch glücklich. Ich habe gelernt, dass Pflege viel Geduld und ein offenes Ohr braucht.",
+        "noteAr": [
+          "افتتاح بالمكان والزمان",
+          "تفاصيل مشاهَدة بعين المتدرب",
+          "ختام بدروس اليوم لا بملخص جاف"
+        ],
+        "zielWort": 120,
+        "neu": true
+      },
+      "current": {
+        "id": "w-b1-24",
+        "level": "B1",
+        "format": "frei",
+        "titleDe": "Bericht: Mein erster Tag im Praktikum",
+        "titleAr": "تقرير: يومي الأول في التدريب العملي",
+        "taskDe": "Schreiben Sie einen Bericht über Ihren ersten Tag in einem Pflegepraktikum (ca. 120 Wörter): Wo waren Sie? Wen haben Sie kennengelernt? Was haben Sie gemacht und gelernt? Schreiben Sie in der Vergangenheit.",
+        "taskAr": "اكتب تقريرًا عن يومك الأول في تدريب عملي بمجال الرعاية (نحو 120 كلمة): أين كنت؟ بمن تعرّفت؟ ماذا فعلت وتعلّمت؟ اكتب بالماضي.",
+        "criteria": [
+          "ترتيب زمني واضح (zuerst, danach, am Ende)",
+          "الماضي المركّب بانتظام",
+          "وقائع لا آراء فقط",
+          "جملة ختامية بما تعلّمته"
+        ],
+        "sample": "Gestern war mein erster Tag im Pflegepraktikum in einem Seniorenheim. Zuerst hat mich die Leiterin, Frau Krüger, freundlich begrüßt und mir die Station gezeigt. Danach habe ich eine erfahrene Pflegekraft begleitet. Ich habe gesehen, wie sie Blutdruck gemessen und mit den Bewohnern gesprochen hat. Am Anfang war ich nervös, aber alle waren sehr nett zu mir. Unter Anleitung durfte ich außerdem Getränke verteilen und ein Zimmer vorbereiten. Ein Bewohner hat mir von seinem früheren Beruf erzählt. Das fand ich besonders interessant. Am Ende des Tages war ich müde, aber auch glücklich. Ich habe gelernt, dass Pflege viel Geduld und ein offenes Ohr braucht.",
+        "noteAr": [
+          "افتتاح بالمكان والزمان",
+          "تفاصيل مشاهَدة بعين المتدرب",
+          "ختام بدروس اليوم لا بملخص جاف"
+        ],
+        "zielWort": 120,
+        "neu": true
+      }
+    },
+    {
+      "id": "w-b1-25",
+      "level": "B1",
+      "decision": "corrected",
+      "rationale": "Corrected the Arabic criterion from a dated response to a written response within a clear deadline while retaining the bounded formal model.",
+      "previous": {
+        "id": "w-b1-25",
+        "level": "B1",
+        "format": "brief",
+        "titleDe": "Frage an die Krankenkasse",
+        "titleAr": "استفسار لشركة التأمين الصحي",
+        "taskDe": "Schreiben Sie eine formelle E-Mail an Ihre Krankenkasse (ca. 110 Wörter): Sie haben eine Rechnung für eine Behandlung bekommen und verstehen einen Betrag nicht. Bitten Sie höflich um Erklärung und um eine schriftliche Antwort.",
+        "taskAr": "اكتب بريدًا رسميًا إلى تأمينك الصحي (نحو 110 كلمات): وصلك فاتورة علاج ولا تفهم أحد مبالغها. اطلب بلطف شرحًا وردًا كتابيًا.",
+        "criteria": [
+          "ذكر بياناتك ومرجع الفاتورة",
+          "سؤال واحد دقيق عن المبلغ الغامض",
+          "طلب رد كتابي مؤرّخ",
+          "نبرة مهذّبة دون تهديد"
+        ],
+        "sample": "Sehr geehrte Damen und Herren,\n\nich habe Ihre Rechnung für meine Behandlung im März erhalten. Meine Versichertennummer ist A123456789, die Rechnungsnummer lautet R-3187. Einen Betrag verstehe ich leider nicht: Für die Untersuchung werden mir 45 Euro berechnet, obwohl mir vorher gesagt wurde, dass die Kasse diese Kosten übernimmt.\n\nKönnten Sie mir bitte schriftlich erklären, wie sich dieser Betrag genau zusammensetzt? Falls ein Fehler vorliegt, bitte ich Sie um eine neue Rechnung. Bitte senden Sie mir Ihre schriftliche Antwort bis zum 15. April zu.\n\nVielen Dank für Ihre freundliche Hilfe.\n\nMit freundlichen Grüßen\nSara Haddad",
+        "noteAr": [
+          "مرجع دقيق (الشهر والمبلغ) دون سنوات قابلة للتكذيب",
+          "طلب تصحيح مشروط بهدوء (falls)",
+          "خاتمة شكر قصيرة"
+        ],
+        "zielWort": 110,
+        "neu": true
+      },
+      "current": {
+        "id": "w-b1-25",
+        "level": "B1",
+        "format": "brief",
+        "titleDe": "Frage an die Krankenkasse",
+        "titleAr": "استفسار لشركة التأمين الصحي",
+        "taskDe": "Schreiben Sie eine formelle E-Mail an Ihre Krankenkasse (ca. 110 Wörter): Sie haben eine Rechnung für eine Behandlung bekommen und verstehen einen Betrag nicht. Bitten Sie höflich um Erklärung und um eine schriftliche Antwort.",
+        "taskAr": "اكتب بريدًا رسميًا إلى تأمينك الصحي (نحو 110 كلمات): وصلك فاتورة علاج ولا تفهم أحد مبالغها. اطلب بلطف شرحًا وردًا كتابيًا.",
+        "criteria": [
+          "ذكر بياناتك ومرجع الفاتورة",
+          "سؤال واحد دقيق عن المبلغ الغامض",
+          "طلب رد كتابي ضمن مهلة واضحة",
+          "نبرة مهذّبة دون تهديد"
+        ],
+        "sample": "Sehr geehrte Damen und Herren,\n\nich habe Ihre Rechnung für meine Behandlung im März erhalten. Meine Versichertennummer ist A123456789, die Rechnungsnummer lautet R-3187. Einen Betrag verstehe ich leider nicht: Für die Untersuchung werden mir 45 Euro berechnet, obwohl mir vorher gesagt wurde, dass die Kasse diese Kosten übernimmt.\n\nKönnten Sie mir bitte schriftlich erklären, wie sich dieser Betrag genau zusammensetzt? Falls ein Fehler vorliegt, bitte ich Sie um eine neue Rechnung. Bitte senden Sie mir Ihre schriftliche Antwort bis zum 15. April zu.\n\nVielen Dank für Ihre freundliche Hilfe.\n\nMit freundlichen Grüßen\nSara Haddad",
+        "noteAr": [
+          "مرجع دقيق (الشهر والمبلغ) دون سنوات قابلة للتكذيب",
+          "طلب تصحيح مشروط بهدوء (falls)",
+          "خاتمة شكر قصيرة"
+        ],
+        "zielWort": 110,
+        "neu": true
+      }
+    },
+    {
+      "id": "w-b1-26",
+      "level": "B1",
+      "decision": "corrected",
+      "rationale": "Replaced the unnatural singular Parkplatz cost with the idiomatic Parkgebühren while retaining the balanced forum argument.",
+      "previous": {
+        "id": "w-b1-26",
+        "level": "B1",
+        "format": "frei",
+        "titleDe": "Forumsbeitrag: Auto in der Stadt?",
+        "titleAr": "مشاركة منتدى: سيارة في المدينة؟",
+        "taskDe": "Schreiben Sie einen Forumsbeitrag (ca. 110 Wörter): Braucht man in einer großen Stadt ein eigenes Auto? Nennen Sie Ihre Meinung, zwei Gründe und ein kurzes Fazit.",
+        "taskAr": "اكتب مشاركة منتدى (نحو 110 كلمات): هل يحتاج المرء سيارة خاصة في مدينة كبيرة؟ اذكر رأيك وسببين وخاتمة قصيرة.",
+        "criteria": [
+          "رأي صريح منذ الجملة الأولى",
+          "سببان مرتبطان بحياتك اليومية",
+          "مثال واحد ملموس",
+          "خاتمة تلخّص الموقف"
+        ],
+        "sample": "Hallo zusammen,\n\nich wohne in einer großen Stadt und habe kein eigenes Auto. Meiner Meinung nach braucht man in der Stadt kein Auto. Erstens sind Busse und Bahnen schnell und viel billiger. Ein Auto kostet jeden Monat viel Geld für Versicherung, Benzin und Parkplatz. Zweitens ist es besser für die Umwelt, wenn weniger Autos fahren. Natürlich ist ein Auto manchmal praktisch, zum Beispiel für große Einkäufe. Aber dafür kann man ein Auto mieten oder mit Freunden fahren. Mein Fazit: In der Stadt geht es sehr gut ohne eigenes Auto.",
+        "noteAr": [
+          "حجتان مرقّمتان ضمنيًا (erstens/zweitens)",
+          "تنازل صغير (natürlich…) يقوّي الموقف",
+          "خاتمة بجملة واحدة حاسمة"
+        ],
+        "zielWort": 110,
+        "neu": true
+      },
+      "current": {
+        "id": "w-b1-26",
+        "level": "B1",
+        "format": "frei",
+        "titleDe": "Forumsbeitrag: Auto in der Stadt?",
+        "titleAr": "مشاركة منتدى: سيارة في المدينة؟",
+        "taskDe": "Schreiben Sie einen Forumsbeitrag (ca. 110 Wörter): Braucht man in einer großen Stadt ein eigenes Auto? Nennen Sie Ihre Meinung, zwei Gründe und ein kurzes Fazit.",
+        "taskAr": "اكتب مشاركة منتدى (نحو 110 كلمات): هل يحتاج المرء سيارة خاصة في مدينة كبيرة؟ اذكر رأيك وسببين وخاتمة قصيرة.",
+        "criteria": [
+          "رأي صريح منذ الجملة الأولى",
+          "سببان مرتبطان بحياتك اليومية",
+          "مثال واحد ملموس",
+          "خاتمة تلخّص الموقف"
+        ],
+        "sample": "Hallo zusammen,\n\nich wohne in einer großen Stadt und habe kein eigenes Auto. Meiner Meinung nach braucht man in der Stadt kein Auto. Erstens sind Busse und Bahnen schnell und viel billiger. Ein Auto kostet jeden Monat viel Geld für Versicherung, Benzin und Parkgebühren. Zweitens ist es besser für die Umwelt, wenn weniger Autos fahren. Natürlich ist ein Auto manchmal praktisch, zum Beispiel für große Einkäufe. Aber dafür kann man ein Auto mieten oder mit Freunden fahren. Mein Fazit: In der Stadt geht es sehr gut ohne eigenes Auto.",
+        "noteAr": [
+          "يقدم النموذج سببين واضحين باستعمال Erstens وZweitens.",
+          "يعرض مثال التسوق الكبير بوصفه حالة قد تكون فيها السيارة مفيدة.",
+          "تلخص الخاتمة الموقف في جملة مباشرة."
+        ],
+        "zielWort": 110,
+        "neu": true
+      }
+    },
+    {
+      "id": "w-b1-27",
+      "level": "B1",
+      "decision": "corrected",
+      "rationale": "Corrected capitalization after an exclamation-mark greeting and grounded the Arabic notes in the introduction, invitation, fallback, and closing.",
+      "previous": {
+        "id": "w-b1-27",
+        "level": "B1",
+        "format": "brief",
+        "titleDe": "Einladung an neue Nachbarn",
+        "titleAr": "دعوة للجيران الجدد",
+        "taskDe": "Schreiben Sie eine halbformelle Einladung an Ihre neuen Nachbarn (ca. 90 Wörter): Stellen Sie sich kurz vor, laden Sie sie zu Kaffee und Kuchen ein und schlagen Sie Tag und Uhrzeit vor.",
+        "taskAr": "اكتب دعوة نصف رسمية لجيرانك الجدد (نحو 90 كلمة): عرّف بنفسك باختصار، ادعُهم إلى قهوة وكعك، واقترح يومًا وساعة.",
+        "criteria": [
+          "تعريف قصير بالاسم والشقة",
+          "دعوة محددة بيوم وساعة",
+          "نبرة ودودة غير رسمية زيادة",
+          "سؤال إغلاقي للرد"
+        ],
+        "sample": "Hallo und herzlich willkommen in unserem Haus!\n\nwir sind Familie Haddad aus der Wohnung über Ihnen. Wir freuen uns sehr, dass Sie da sind. Gern möchten wir Sie zu Kaffee und Kuchen einladen, damit wir uns besser kennenlernen. Hätten Sie am Samstag gegen 16 Uhr Zeit? Es dauert nicht lange, und unsere Kinder freuen sich auch schon sehr.\n\nWenn der Termin nicht passt, schlagen Sie einfach einen anderen Tag vor. Wir freuen uns auf Sie!\n\nViele Grüße\nIhre neuen Nachbarn",
+        "noteAr": [
+          "ترحيب قبل التعريف",
+          "مرونة في الموعد ترفع قبول الدعوة",
+          "ختام دافئ قصير"
+        ],
+        "zielWort": 90,
+        "neu": true
+      },
+      "current": {
+        "id": "w-b1-27",
+        "level": "B1",
+        "format": "brief",
+        "titleDe": "Einladung an neue Nachbarn",
+        "titleAr": "دعوة للجيران الجدد",
+        "taskDe": "Schreiben Sie eine halbformelle Einladung an Ihre neuen Nachbarn (ca. 90 Wörter): Stellen Sie sich kurz vor, laden Sie sie zu Kaffee und Kuchen ein und schlagen Sie Tag und Uhrzeit vor.",
+        "taskAr": "اكتب دعوة نصف رسمية لجيرانك الجدد (نحو 90 كلمة): عرّف بنفسك باختصار، ادعُهم إلى قهوة وكعك، واقترح يومًا وساعة.",
+        "criteria": [
+          "تعريف قصير بالاسم والشقة",
+          "دعوة محددة بيوم وساعة",
+          "نبرة ودودة غير رسمية زيادة",
+          "سؤال إغلاقي للرد"
+        ],
+        "sample": "Hallo und herzlich willkommen in unserem Haus!\n\nWir sind Familie Haddad aus der Wohnung über Ihnen. Wir freuen uns sehr, dass Sie da sind. Gern möchten wir Sie zu Kaffee und Kuchen einladen, damit wir uns besser kennenlernen. Hätten Sie am Samstag gegen 16 Uhr Zeit? Es dauert nicht lange, und unsere Kinder freuen sich auch schon sehr.\n\nWenn der Termin nicht passt, schlagen Sie einfach einen anderen Tag vor. Wir freuen uns auf Sie!\n\nViele Grüße\nIhre neuen Nachbarn",
+        "noteAr": [
+          "تبدأ الرسالة بالترحيب ثم تعرف الأسرة ورقم الشقة.",
+          "تقترح القهوة والكعك يوم السبت نحو الساعة 16.",
+          "تطلب اقتراح يوم آخر إذا لم يناسب الموعد وتختم بنبرة ودية."
+        ],
+        "zielWort": 90,
+        "neu": true
+      }
+    }
+  ]
+}

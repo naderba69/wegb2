@@ -3,8 +3,8 @@
  *  Weg-Engine — البوصلة المولَّدة من سجلّ الأنشطة
  * ============================================================
  *  لا قائمةَ تُختَرع هنا: المرحلة (1..8) تُشتق من يوم الخطة،
- *  واختيار اليوم تُرشِّحه شبكةُ الكفاءات ذاتها — فتتصدر
- *  الأنشطةُ التي تعالج أضعف كفاءة عندك وتُغذّي دفترَ أخطائك،
+ *  واختيار اليوم يقرأ سجل الدليل: يتصدر أدنى أداء تدريبي مقاس،
+ *  أو أقل مجال نشاطاً عند غياب القياس من دون اختلاق «ضعف»،
  *  وما هو أبكر من مستواك يُعرض خلف قفل «يُفتح في المرحلة N»
  *  بدل أن يضيع المتعلم في جدار ثلاثين أكورديون.
  *  حتمي: يومٌ واحد + مستوى واحد = مسارٌ واحد (يُثبِته الدخان K20).
@@ -60,7 +60,11 @@ export function wegHeute(progress: Progress): Weg {
   const stufe = stufeVonTag(day);
   const [von, bis] = tagVonStufe(stufe);
   const w = kompetenzWerte(progress);
-  const schwach = [...KOMPETENZEN].sort((a, b) => w[a].wert - w[b].wert)[0];
+  const gemessen = KOMPETENZEN.filter((hand) => w[hand].wert !== null)
+    .sort((a, b) => (w[a].wert ?? 0) - (w[b].wert ?? 0) || a.localeCompare(b));
+  const schwach = gemessen[0] ?? [...KOMPETENZEN]
+    .sort((a, b) => w[a].versuche - w[b].versuche || a.localeCompare(b))[0];
+  const fokusGemessen = gemessen.length > 0;
   const hatFehler = Object.keys(progress.fehler ?? {}).length > 0;
   const live = AKTIVITAETEN.filter((a) => a.status === "live" && a.id !== "wegweiser");
   const offenRaw = live.filter((a) => a.stufe[0] <= stufe && stufe <= a.stufe[1]);
@@ -68,15 +72,17 @@ export function wegHeute(progress: Progress): Weg {
   const scored = offenRaw
     .map((a, i) => {
       let score = 0;
-      if (a.handlung.includes(schwach) && w[schwach].wert < 75) score += 3;
+      if (a.handlung.includes(schwach) && (!fokusGemessen || (w[schwach].wert ?? 100) < 75)) score += 3;
       if (a.fehlerarten !== "—" && hatFehler) score += 1;
       if (a.nurKatalog) score -= 2;
       return { a, i, score, jitter: rand() * 0.5 };
     })
     .sort((x, y) => y.score - x.score || y.jitter - x.jitter || x.i - y.i);
   const grund = (a: Aktivitaet): string =>
-    a.handlung.includes(schwach) && w[schwach].wert < 75
-      ? `لأنها تُدرّب «${KOMPETENZ_AR[schwach]}» — أضعف كفاءة عندك الآن (${w[schwach].wert}٪)`
+    a.handlung.includes(schwach) && (!fokusGemessen || (w[schwach].wert ?? 100) < 75)
+      ? fokusGemessen
+        ? `لأنها تُدرّب «${KOMPETENZ_AR[schwach]}» — أدنى أداء تدريبي مقاس حالياً (${w[schwach].wert}٪)`
+        : `لأنها تُدرّب «${KOMPETENZ_AR[schwach]}» — الأقل حضوراً في نشاطك، لا الأضعف حكماً`
       : a.fehlerarten !== "—" && hatFehler
         ? "لأنها تعالج دفتر أخطائك أيضاً"
         : "لأنها في متناول مرحلتك";

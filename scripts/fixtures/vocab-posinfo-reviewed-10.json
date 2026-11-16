@@ -1,0 +1,136 @@
+{
+  "schema": "wegb2-reviewed-vocab-posinfo-batch-v1",
+  "batch": "PA-034-10",
+  "reviewedAt": "2026-11-04",
+  "scope": "16 additional high-confidence residual single-head corrections after item-by-item internal review of each head and example: 15 principal-part corrections plus one explicit non-principal-part pedagogical representation for möchten; auxiliary and string-shape grouping were triage only and this is not external linguistic sign-off.",
+  "entries": [
+    {
+      "id": "v1081",
+      "deck": "i01-medien-meinung",
+      "level": "B2",
+      "de": "einordnen",
+      "previousPosInfo": "ordnt ein, ordnte ein, hat eingeordnt",
+      "posInfo": "ordnet ein, ordnete ein, hat eingeordnet"
+    },
+    {
+      "id": "vy-natur-033",
+      "deck": "a1-natur-freizeit",
+      "level": "A1",
+      "de": "reisen",
+      "previousPosInfo": "reist, reiste, hat gereist",
+      "posInfo": "reist, reiste, ist gereist"
+    },
+    {
+      "id": "va-modort-005",
+      "deck": "a1-modal-ort",
+      "level": "A1",
+      "de": "möchten",
+      "previousPosInfo": "möchtet, möchtete, hat gemöchtt",
+      "posInfo": "Konjunktiv II von mögen: ich möchte · du möchtest · wir/Sie möchten"
+    },
+    {
+      "id": "r312a2-099",
+      "deck": "a2-reise-feste",
+      "level": "A2",
+      "de": "verreisen",
+      "previousPosInfo": "verreist, verreiste, hat verreist",
+      "posInfo": "verreist, verreiste, ist verreist"
+    },
+    {
+      "id": "j04-gesundheit-pflege-063",
+      "deck": "j04-gesundheit-pflege",
+      "level": "B2",
+      "de": "verheilen",
+      "previousPosInfo": "verheilt, verheilte, hat verheilt",
+      "posInfo": "verheilt, verheilte, ist verheilt"
+    },
+    {
+      "id": "j04-gesundheit-pflege-064",
+      "deck": "j04-gesundheit-pflege",
+      "level": "B2",
+      "de": "heilen",
+      "previousPosInfo": "heilt, heilte, hat geheilt",
+      "posInfo": "heilt, heilte, ist geheilt"
+    },
+    {
+      "id": "j06-medien-digital-044",
+      "deck": "j06-medien-digital",
+      "level": "B2",
+      "de": "abonnieren",
+      "previousPosInfo": "onniert ab, onnierte ab, hat abgeonniert",
+      "posInfo": "abonniert, abonnierte, hat abonniert"
+    },
+    {
+      "id": "j11-alltag-haus-033",
+      "deck": "j11-alltag-haus",
+      "level": "B2",
+      "de": "abtrocknen",
+      "previousPosInfo": "trocknt ab, trocknte ab, hat abgetrocknt",
+      "posInfo": "trocknet ab, trocknete ab, hat abgetrocknet"
+    },
+    {
+      "id": "j12-natur-tiere-047",
+      "deck": "j12-natur-tiere",
+      "level": "B2",
+      "de": "welken",
+      "previousPosInfo": "welkt, welkte, hat gewelkt",
+      "posInfo": "welkt, welkte, ist gewelkt"
+    },
+    {
+      "id": "j12-natur-tiere-055",
+      "deck": "j12-natur-tiere",
+      "level": "B2",
+      "de": "tauen",
+      "previousPosInfo": "taut, taute, hat getaut",
+      "posInfo": "taut, taute, ist getaut"
+    },
+    {
+      "id": "r314b1-025",
+      "deck": "b1-az-a",
+      "level": "B1",
+      "de": "analysieren",
+      "previousPosInfo": "alysiert an, alysierte an, hat angealysiert",
+      "posInfo": "analysiert, analysierte, hat analysiert"
+    },
+    {
+      "id": "r314b1-064",
+      "deck": "b1-az-a",
+      "level": "B1",
+      "de": "aufwachen",
+      "previousPosInfo": "wacht auf, wachte auf, hat aufgewacht",
+      "posInfo": "wacht auf, wachte auf, ist aufgewacht"
+    },
+    {
+      "id": "r316b1-035",
+      "deck": "b1-az-f",
+      "level": "B1",
+      "de": "folgen",
+      "previousPosInfo": "folgt, folgte, hat gefolgt",
+      "posInfo": "folgt, folgte, ist gefolgt"
+    },
+    {
+      "id": "r316b1-047",
+      "deck": "b1-az-f",
+      "level": "B1",
+      "de": "fühlen",
+      "previousPosInfo": "fühlt, fühlte, ist gefühlt",
+      "posInfo": "fühlt, fühlte, hat gefühlt"
+    },
+    {
+      "id": "r317b1-047",
+      "deck": "b1-az-k",
+      "level": "B1",
+      "de": "kaputtmachen",
+      "previousPosInfo": "kaputtmacht, kaputtmachte, hat gekaputtmacht",
+      "posInfo": "macht kaputt, machte kaputt, hat kaputtgemacht"
+    },
+    {
+      "id": "r321b1-056",
+      "deck": "b1-az-s2",
+      "level": "B1",
+      "de": "stürzen",
+      "previousPosInfo": "stürzt, stürzte, hat gestürzt",
+      "posInfo": "stürzt, stürzte, ist gestürzt"
+    }
+  ]
+}

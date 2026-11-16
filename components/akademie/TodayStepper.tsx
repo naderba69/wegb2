@@ -5,6 +5,7 @@ import { KindIcon } from "@/components/dirb/icons";
 import { grammarMap } from "@/lib/content";
 import type { RitualUrteil } from "@/lib/ritual";
 import { aufgabeGesperrt } from "@/lib/ritual";
+import { corePathMinutes, deepeningMinutes, isCoreTask } from "@/lib/day-path";
 import {
   groupTasksByTodayStep,
   todayStepStatuses,
@@ -64,7 +65,9 @@ export default function TodayStepper({ plan, ritual, stepFrei, setStep, resultOf
   const doneCount = Array.from(stepStatus.values()).filter((v) => v === "done").length; // B2 Prüfungsbadge: Schritt 4
   const totalSteps = 5;
   const progressPct = Math.round((doneCount / totalSteps) * 100);
-  const totalMinutes = plan.tasks.reduce((s, t) => s + (t.minutes ?? 0), 0);
+  const coreMinutes = corePathMinutes(plan.tasks);
+  const optionalMinutes = deepeningMinutes(plan.tasks);
+  const coreCompleted = plan.tasks.filter(isCoreTask).every((task) => !!resultOf(task.id));
 
   return (
     <section className="today-stepper" aria-label="خريطة اليوم — 5 خطوات" data-testid="today-stepper">
@@ -76,8 +79,8 @@ export default function TodayStepper({ plan, ritual, stepFrei, setStep, resultOf
           <span style={{ fontSize:"0.72rem", color:"#9FB2CE" }} dir="ltr">— Verlag · klar · ruhig · akademisch</span>
         </div>
         <div style={{ position:"relative", zIndex:1, marginTop:"0.4rem", display:"flex", gap:"0.5rem", flexWrap:"wrap", alignItems:"center", fontSize:"0.74rem" }}>
-          <span style={{ background:"rgb(200 168 78 / 0.18)", color:"#E8D9A8", padding:"0.15rem 0.5rem", borderRadius:"999px", fontWeight:800, border:"1px solid rgb(200 168 78 / 0.3)" }}><span className="rtl-num">⏱ 90</span> د هدف</span>
-          <span style={{ background:"rgb(255 255 255 / 0.10)", color:"#E8EEF8", padding:"0.15rem 0.5rem", borderRadius:"999px", border:"1px solid rgb(255 255 255 / 0.18)" }}><span className="rtl-num">{totalMinutes}</span> د اليوم</span>
+          <span style={{ background:"rgb(200 168 78 / 0.18)", color:"#E8D9A8", padding:"0.15rem 0.5rem", borderRadius:"999px", fontWeight:800, border:"1px solid rgb(200 168 78 / 0.3)" }}>🟢 أساسي <span className="rtl-num">{coreMinutes}</span> د</span>
+          <span style={{ background:"rgb(255 255 255 / 0.10)", color:"#E8EEF8", padding:"0.15rem 0.5rem", borderRadius:"999px", border:"1px solid rgb(255 255 255 / 0.18)" }}>➕ اختياري <span className="rtl-num">{optionalMinutes}</span> د</span>
           <span style={{ color:"#B8C7E0" }}>{plan.type === "lerntag" ? "يوم تعلّم" : plan.type === "festigung" ? "تثبيت" : plan.type === "wochencheck" ? "فحص" : "ختام"}</span>
           <span style={{ marginInlineStart:"auto", color:"#9FB2CE", fontSize:"0.72rem" }}>{doneCount}/{totalSteps} منجزة · {progressPct}%</span>
         </div>
@@ -89,7 +92,7 @@ export default function TodayStepper({ plan, ritual, stepFrei, setStep, resultOf
         </div>
       </div>
       <div className="today-stepper-light">
-        <p className="today-stepper-hint" style={{ margin:0 }}>الخطوات الخمس مرئية دائماً — التالية تُفتح بعد تسليم مهام الحالية. النتيجة غير المجتازة تعود للعلاج ولا تحبس يومك.</p>
+        <p className="today-stepper-hint" style={{ margin:0 }}>المسار الأساسي يفتح محطةً بعد محطة. بعد تسليمه ينفتح التعميق الاختياري؛ تركه محايد، والمُسلَّم غير المجتاز يبقى علاجياً.</p>
       </div>
 
       {/* Steps */}
@@ -98,6 +101,8 @@ export default function TodayStepper({ plan, ritual, stepFrei, setStep, resultOf
           const meta = STEP_META[sid];
           const tasks = grouped.get(sid) ?? [];
           const status = stepStatus.get(sid) ?? "locked";
+          const coreAtStep = tasks.filter(isCoreTask);
+          const optionalAtStep = tasks.filter((task) => !isCoreTask(task));
           const isEmpty = tasks.length === 0;
           const isDone = status === "done";
           const isActive = status === "active";
@@ -128,7 +133,10 @@ export default function TodayStepper({ plan, ritual, stepFrei, setStep, resultOf
                       <span className="today-step-num rtl-num">{sid}.</span> {meta.titleAr}
                       <span className="today-step-de" lang="de" dir="ltr"> — {meta.titleDe}</span>
                     </div>
-                    <div className="today-step-desc">{meta.descAr} · <span className="rtl-num">{tasks.length}</span> {tasks.length === 1 ? "مهمة" : "مهام"} · <span className="rtl-num">{tasks.reduce((s, t) => s + (t.minutes ?? 0), 0)}</span> د</div>
+                    <div className="today-step-desc">
+                      {meta.descAr} · أساسي <span className="rtl-num">{coreAtStep.length}</span> / <span className="rtl-num">{coreAtStep.reduce((sum, task) => sum + task.minutes, 0)}</span> د
+                      {optionalAtStep.length > 0 && <> · اختياري <span className="rtl-num">{optionalAtStep.length}</span> / <span className="rtl-num">{optionalAtStep.reduce((sum, task) => sum + task.minutes, 0)}</span> د</>}
+                    </div>
                   </div>
                   <span className={`today-step-badge ${isDone ? "badge-done" : isActive ? "badge-active" : "badge-locked"}`}>
                     {isDone ? "✓ منجزة" : isActive ? "▶ الآن" : "🔒 مقفلة"}
@@ -144,28 +152,31 @@ export default function TodayStepper({ plan, ritual, stepFrei, setStep, resultOf
                       const submitted = !!r;
                       const globalIdx = plan.tasks.indexOf(t);
                       const gesperrt = globalIdx >= 0 && aufgabeGesperrt(ritual, globalIdx);
+                      const optionalLocked = !isCoreTask(t) && !coreCompleted;
+                      const taskLocked = optionalLocked || isLocked || (gesperrt && !isDone);
                       const isCurrent = globalIdx === stepFrei;
 
                       return (
                         <button
                           key={t.id}
                           type="button"
-                          disabled={isLocked || (gesperrt && !isDone)}
+                          disabled={taskLocked}
                           onClick={() => {
                             if (globalIdx >= 0) {
                               setStep(globalIdx);
                               document.getElementById("aufgabe-spieler")?.scrollIntoView({ behavior: "smooth", block: "start" });
                             }
                           }}
-                          className={`today-step-task ${passed ? "is-passed" : submitted ? "is-submitted" : isCurrent ? "is-current" : ""} ${isLocked || gesperrt ? "is-gesperrt" : ""}`}
+                          className={`today-step-task ${passed ? "is-passed" : submitted ? "is-submitted" : isCurrent ? "is-current" : ""} ${taskLocked ? "is-gesperrt" : ""}`}
                           data-testid={`today-step-${sid}-task-${globalIdx}`}
-                          aria-label={`${t.titleAr} — ${t.minutes} دقيقة${isLocked || gesperrt ? " مقفلة" : passed ? " منجزة" : submitted ? " مسلّمة" : ""}`}
+                          data-path={isCoreTask(t) ? "core" : "deepening"}
+                          aria-label={`${t.titleAr} — ${t.minutes} دقيقة — ${isCoreTask(t) ? "مسار أساسي" : "تعميق اختياري"}${taskLocked ? " مقفلة" : passed ? " منجزة" : submitted ? " مسلّمة" : ""}`}
                         >
                           <KindIcon kind={t.kind} className="today-step-task-icon" />
-                          <span className="today-step-task-title">{t.titleAr}</span>
+                          <span className="today-step-task-title">{isCoreTask(t) ? "🟢" : "➕"} {t.titleAr}</span>
                           {sid === 3 && (() => { const b = lifeContextForStep3(t.titleDe); return b ? <span className="chip" data-testid={`today-step-3-bamf-${t.id}`} style={{ fontSize: "0.68rem", padding: "0.1rem 0.35rem", background: "var(--color-paper2)", fontWeight: 800 }}>{b.emoji} {b.label}</span> : null; })()}
                           <span className="today-step-task-meta rtl-num">{t.minutes}د</span>
-                          <span className="today-step-task-state">{isLocked || gesperrt ? "🔒" : passed ? "✓" : submitted ? "◐" : "○"}</span>
+                          <span className="today-step-task-state">{taskLocked ? "🔒" : passed ? "✓" : submitted ? "◐" : "○"}</span>
                         </button>
                       );
                     })}
@@ -215,7 +226,7 @@ export default function TodayStepper({ plan, ritual, stepFrei, setStep, resultOf
         })}
       </ol>
 
-      <p className="today-stepper-footnote">💡 تلميح: انقر على أي مهمة داخل الخطوة النشطة للانتقال إليها فوراً. الاسترجاع قبل الجديد دائماً.</p>
+      <p className="today-stepper-footnote">💡 ابدأ بالمهام 🟢 الأساسية. مهام ➕ التعميق تفتح بعد اكتمالها؛ غير المُسلَّم منها لا يدخل الإغلاق أو التعويض.</p>
     </section>
   );
 }

@@ -3,27 +3,22 @@
  *  📅 U6/R192 · هدف بتاريخ — إعادة إيقاع داخل السقوف فقط
  * ═══════════════════════════════════════════════════════════════════
  *  من موعد الامتحان وموضع المتعلّم الحالي يُشتقّ الإيقاع المطلوب:
- *  أيام خطة لكلّ يوم تقويمي، وحملٌ يومي بالدقائق من دقائق الخطة
- *  المخطّطة نفسها (planMinBis). الإعادة لا تلمس الخطة: سقوف اليوم
- *  (سقفا D1-B الموثّقان في K260) وتغطية 157/164/90 ثابتة بنيويًا،
- *  فلا نضغط يومًا فوق سقفه ولا نحذف محتوى. وإن صار الحمل فوق ما
- *  يُحتمل مستدامًا قلنا ذلك صراحةً واقترحنا أقرب موعد واقعي.
+ *  أيام خطة لكلّ يوم تقويمي، وحملٌ يومي من دقائق المسار الأساسي
+ *  نفسها (planKernMinBis). الإعادة لا تلمس الخطة ولا تحذف التعميق؛
+ *  وهي عتبة تخطيط داخلية غير مثبتة ميدانياً. إن تجاوز الموعد الحد
+ *  المحافظ قلنا ذلك صراحةً بدل ضغط المحتوى أو ادعاء الاستدامة.
  * ═══════════════════════════════════════════════════════════════════
  */
 import { lokalesDatum } from "./datum";
-import { planMinBis } from "./plan";
-import { D1_B2_DECKEL_MIN } from "./phasen";
+import { planKernMinBis } from "./plan";
+import { CORE_PATH_MAX_MINUTES } from "./day-path";
 import { TOTAL_DAYS } from "./types";
 import type { Progress } from "./types";
 
-/**
- * أقصى حمل يومي نعرضه كـ«ممكن باستدامة»: يومُ خطةٍ كاملٌ بأثقل سقفٍ
- * مخطط (D1_B2_DECKEL_MIN من lib/phasen — مصدر الثوابت الأوحد، وبه
- * يبقى ملفّنا بلا الرقم المحروس كما تطلبه K123a).
- */
-export const ZIEL_MINUTEN_OK = D1_B2_DECKEL_MIN;
-/** فوق ١٫٥ ضعفِ أثقلِ يومٍ لا ندّعي الواقعية بالحفاظ على السقوف */
-export const ZIEL_MINUTEN_MAX = Math.round(D1_B2_DECKEL_MIN * 1.5);
+/** حد تخطيط داخلي للمسار الأساسي، لا عتبة استدامة مثبتة ميدانياً. */
+export const ZIEL_MINUTEN_OK = CORE_PATH_MAX_MINUTES;
+/** فوق ١٫٥ ضعف المسار الأساسي نرفض تقديم الإيقاع كخيار محافظ. */
+export const ZIEL_MINUTEN_MAX = Math.round(CORE_PATH_MAX_MINUTES * 1.5);
 
 export type ZielStatus = "kein-datum" | "vorbei" | "fertig" | "ruhig" | "eng" | "unrealistisch";
 
@@ -62,7 +57,7 @@ export function zielTempo(progress: Progress, heuteIso: string): ZielTempo {
   const exam = progress.settings.examDate;
   const heuteTag = Math.min(Math.max(progress.plan.day, 1), TOTAL_DAYS);
   const restPlanTage = Math.max(0, TOTAL_DAYS - heuteTag + 1);
-  const restMinuten = planMinBis(TOTAL_DAYS) - planMinBis(heuteTag - 1);
+  const restMinuten = planKernMinBis(TOTAL_DAYS) - planKernMinBis(heuteTag - 1);
   const minutenJePlanTag = restPlanTage > 0 ? restMinuten / restPlanTage : 0;
 
   if (!exam) {

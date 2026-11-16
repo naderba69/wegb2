@@ -201,7 +201,8 @@ function Antrag({ progress: _progress }: { progress: Progress }) {
 
 /* ------------------------------------------- 171 · Zeugnis-Spiegel + كويز */
 
-function noteVon(v: number): number {
+function noteVon(v: number | null): number | null {
+  if (v === null) return null;
   return v >= 90 ? 1 : v >= 80 ? 2 : v >= 65 ? 3 : v >= 50 ? 4 : 5;
 }
 const NOTE_AR = ["", "ممتاز — sehr gut", "جيد جداً — gut", "جيد — befriedigend", "مقبول — ausreichend", "راسب — nicht bestanden"];
@@ -210,10 +211,13 @@ const FACH_DE: Record<string, string> = { Lesen: "Deutsch – Lesen & Textarbeit
 function Zeugnis({ progress }: { progress: Progress }) {
   const { update } = useProgress();
   const w = kompetenzWerte(progress);
-  const faecher = KOMPETENZEN.map((h) => ({ h, wert: Math.round(w[h]?.wert ?? 0), note: noteVon(w[h]?.wert ?? 0) }));
-  const beste = [...faecher].sort((a, b) => a.note - b.note || b.wert - a.wert)[0];
-  const schwach = [...faecher].sort((a, b) => b.note - a.note)[0];
-  const an4plus = faecher.filter((f) => f.note >= 4).length;
+  const faecher = KOMPETENZEN.map((h) => ({ h, wert: w[h].wert, note: noteVon(w[h].wert), aktivitaet: w[h].versuche }));
+  const gemessen = faecher.filter((fach): fach is typeof fach & { wert: number; note: number } => fach.wert !== null && fach.note !== null);
+  const beste = [...gemessen].sort((a, b) => a.note - b.note || b.wert - a.wert)[0]
+    ?? [...faecher].sort((a, b) => b.aktivitaet - a.aktivitaet || a.h.localeCompare(b.h))[0];
+  const fokus = [...gemessen].sort((a, b) => b.note - a.note || a.wert - b.wert)[0]
+    ?? [...faecher].sort((a, b) => a.aktivitaet - b.aktivitaet || a.h.localeCompare(b.h))[0];
+  const an4plus = gemessen.filter((f) => f.note >= 4).length;
 
   const [gabBeste, setGabBeste] = useState("");
   const [gabAnz, setGabAnz] = useState("");
@@ -237,28 +241,28 @@ function Zeugnis({ progress }: { progress: Progress }) {
     <div style={{ display: "grid", gap: "0.6rem" }}>
       <div className="card" style={{ padding: "0.8rem 1rem", background: "var(--color-paper)" }}>
         <div style={{ textAlign: "center", borderBottom: "2px solid var(--color-cola)", paddingBottom: 4, marginBottom: 8 }}>
-          <b style={{ letterSpacing: "0.05em", fontSize: "0.95rem" }}>🎓 Zeugnispiegel — شهادة رادارك بالنظام الألماني</b>
-          <div style={{ fontSize: "0.7rem", color: "var(--color-ink2)" }} dir="rtl">العكس المعتاد: 1 ممتازة و5 راسب — اقرأها بعين ألمانية</div>
+          <b style={{ letterSpacing: "0.05em", fontSize: "0.95rem" }}>📚 Übungsspiegel — مرآة التدريب الداخلية</b>
+          <div style={{ fontSize: "0.7rem", color: "var(--color-ink2)" }} dir="rtl">النوتة تظهر فقط لأداء مقاس بعينة كافية؛ «—» تعني مجهولاً لا رسوباً. هذا ليس كشف درجات مدرسياً.</div>
         </div>
         <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.78rem" }}>
           <tbody>
             {faecher.map((f) => (
               <tr key={f.h}>
                 <td style={{ padding: "0.28rem 0.4rem", borderBottom: "1px solid var(--color-line)" }} className="de">{FACH_DE[f.h]}</td>
-                <td style={{ padding: "0.28rem 0.4rem", borderBottom: "1px solid var(--color-line)", textAlign: "center", width: 52 }} dir="rtl">{f.wert}٪</td>
-                <td style={{ padding: "0.28rem 0.4rem", borderBottom: "1px solid var(--color-line)", fontWeight: 900, textAlign: "center", width: 42, color: f.note <= 2 ? "var(--color-a1)" : f.note >= 4 ? "#b91c1c" : "var(--color-gold)" }}>
-                  {f.note}
+                <td style={{ padding: "0.28rem 0.4rem", borderBottom: "1px solid var(--color-line)", textAlign: "center", width: 52 }} dir="rtl">{f.wert === null ? "—" : `${f.wert}٪`}</td>
+                <td style={{ padding: "0.28rem 0.4rem", borderBottom: "1px solid var(--color-line)", fontWeight: 900, textAlign: "center", width: 42, color: f.note === null ? "var(--color-ink2)" : f.note <= 2 ? "var(--color-a1)" : f.note >= 4 ? "#b91c1c" : "var(--color-gold)" }}>
+                  {f.note ?? "—"}
                 </td>
-                <td style={{ padding: "0.28rem 0.4rem", borderBottom: "1px solid var(--color-line)", fontSize: "0.7rem", color: "var(--color-ink2)" }} dir="rtl">{NOTE_AR[f.note]}</td>
+                <td style={{ padding: "0.28rem 0.4rem", borderBottom: "1px solid var(--color-line)", fontSize: "0.7rem", color: "var(--color-ink2)" }} dir="rtl">{f.note === null ? `نشاط ${f.aktivitaet} · غير مقاس` : `${NOTE_AR[f.note]} · تدريبي`}</td>
               </tr>
             ))}
           </tbody>
         </table>
         <div style={{ marginTop: 8, fontSize: "0.76rem", lineHeight: 1.8, background: "var(--color-gold-soft)", borderRadius: 8, padding: "0.5rem 0.7rem" }} dir="rtl">
-          <b>المرشد الصفي:</b> {activeProfile().name} zeigt besondere Sicherheit im Fach <span className="de" dir="ltr">{FACH_DE[beste.h]}</span> — هكذا يبدأ التعليق الرسمي. Und muss im Fach <span className="de" dir="ltr">{FACH_DE[schwach.h]}</span> regelmäßig zu Hause üben (15 Minuten täglich): <span dir="ltr" className="de">„mit Auffassungsgabe, aber wechselnder Sorgfalt“</span>.
+          <b>ملاحظة التدريب:</b> لدى {activeProfile().name} أعلى إشارة حالية في <span className="de" dir="ltr">{FACH_DE[beste.h]}</span>، ويُقترح تدريب <span className="de" dir="ltr">{FACH_DE[fokus.h]}</span>. {gemessen.length === 0 ? "الاختيار مبني على حجم النشاط فقط، لا على مستوى أو قوة/ضعف لغوي." : "القيم نسب أداء تدريب داخلي، وليست نوتة مدرسية أو CEFR."}
         </div>
       </div>
-      <div style={{ fontSize: "0.82rem", fontWeight: 900 }} dir="rtl">📋 قراءة الشهادة — ثلاث سؤالاً امتحانية عن وثيقتك أنت:</div>
+      <div style={{ fontSize: "0.82rem", fontWeight: 900 }} dir="rtl">📋 قراءة الجدول — ثلاثة أسئلة لغوية عن مرآة التدريب:</div>
       <div style={{ display: "grid", gap: 6 }}>
         <div style={{ fontSize: "0.78rem" }} dir="rtl">
           <b>1.</b> Was steht als <span className="de">Note 1</span> — ما درجة «١» في ألمانيا؟

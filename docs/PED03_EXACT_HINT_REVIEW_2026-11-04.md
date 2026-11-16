@@ -25,7 +25,7 @@
 
 - الرقعة المحروسة القابلة لإعادة التشغيل: `scripts/patches/fix_exact_answer_hints.py`؛ تقبل القيمة القديمة أو الجديدة فقط وتفشل عند انحراف السجل.
 - المصدر النقي للتطبيع والكشف: `lib/exercise-hints.ts`.
-- `npm run audit:words` يفشل الآن بنوع `answer-leak-exact` عند رجوع تسريب مؤكد.
+- `npm run lint:known-content-patterns` يفشل الآن بنوع `answer-leak-exact` عند رجوع تسريب مؤكد؛ الاسم يصرح بأنه فاحص أنماط محدود لا مراجعة كلمةً كلمة.
 - K355a–b تحرسان صفراً من التسريبات وتثبتان أن `(wohnen) → wohne` لا يُدان آلياً.
 
 ## حدود القرار
