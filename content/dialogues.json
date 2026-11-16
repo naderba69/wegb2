@@ -402,7 +402,7 @@
           "12."
         ],
         "explanationAr": "am zwölften Juli = في اليوم الثاني عشر من يوليو.",
-        "promptAr": "أكمل الفراغ بالكلمة المناسبة من الحوار."
+        "promptAr": "رحلة العودة في ___ يوليو."
       },
       {
         "id": "d-a2-01-q2",
@@ -415,16 +415,15 @@
         ],
         "answer": "im Zentrum, gegenüber vom Bahnhof",
         "explanationAr": "الدليل: «Ein Doppelzimmer im Zentrum, gegenüber vom Bahnhof». الفخّ 1: «neben» ≠ «gegenüber». الفخّ 2: ميونيخ صحيحة لكن «Stadtrand» يناقض «Zentrum».",
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "promptAr": "أين يقع الفندق؟"
       }
     ],
     "dictation": [
       "Ich möchte im Juli nach München fahren.",
       "Der Zug kostet achtzig Euro pro Person.",
-      "Ein Doppelzimmer im Zentrum."
+      "Ein Doppelzimmer im Zentrum"
     ],
-    "cultural_note": "German restaurants often serve bread with meals",
-    "cultural_theme": "Travel"
+    "cultural_theme": "Travel planning"
   },
   {
     "id": "d-a2-02",
@@ -480,7 +479,7 @@
         ],
         "answer": "seinen Geburtstag",
         "explanationAr": "الدليل: «Am Samstag feiere ich meinen Geburtstag». الفخّ 1: الحفلة في «achtzehn Uhr» لا الثامنة. الفخّ 2: عيد ميلاد مهدي لا سلمى.",
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "promptAr": "بماذا يحتفل مهدي؟"
       },
       {
         "id": "d-a2-02-q2",
@@ -490,7 +489,7 @@
           "mitbringen"
         ],
         "explanationAr": "mitbringen = أحضر معي.",
-        "promptAr": "أكمل الفراغ بالكلمة المناسبة من الحوار."
+        "promptAr": "هل ينبغي أن ___ شيئاً معي؟"
       }
     ],
     "dictation": [
@@ -498,8 +497,7 @@
       "Um achtzehn Uhr bei mir zu Hause.",
       "Soll ich etwas mitbringen?"
     ],
-    "cultural_theme": "Berliner Mauer - Berlin Wall history",
-    "cultural_note": "Theme: Berliner Mauer - Berlin Wall history"
+    "cultural_theme": "Invitations and celebrations"
   },
   {
     "id": "d-a2-03",
@@ -529,18 +527,18 @@
       },
       {
         "who": "Arzt",
-        "de": "Ich schreibe Ihnen ein Rezept. Nehmen Sie die Medizin dreimal am Tag.",
-        "ar": "سأكتب لك وصفة. خذ الدواء ثلاث مرات يومياً."
+        "de": "Ich untersuche Sie jetzt. Danach bespreche ich mit Ihnen, welche Behandlung sinnvoll ist.",
+        "ar": "سأفحصك الآن. وبعد ذلك أناقش معك العلاج المناسب."
       },
       {
         "who": "Patient",
-        "de": "Danke. Muss ich zu Hause bleiben?",
-        "ar": "شكراً. هل يجب أن أبقى في البيت؟"
+        "de": "Danke. Muss ich bis dahin zu Hause bleiben?",
+        "ar": "شكراً. هل يجب أن أبقى في البيت حتى ذلك الحين؟"
       },
       {
         "who": "Arzt",
-        "de": "Ja, zwei Tage. Trinken Sie viel Tee!",
-        "ar": "نعم، يومين. اشرب شاياً كثيراً!"
+        "de": "Das entscheiden wir nach der Untersuchung. Wenn es Ihnen plötzlich deutlich schlechter geht, holen Sie bitte sofort medizinische Hilfe.",
+        "ar": "نقرر ذلك بعد الفحص. وإذا ساءت حالتك فجأة وبوضوح، فاطلب مساعدة طبية فوراً."
       }
     ],
     "questions": [
@@ -552,28 +550,28 @@
           "Hals"
         ],
         "explanationAr": "der Hals = الحلق.",
-        "promptAr": "أكمل الفراغ بالكلمة المناسبة من الحوار."
+        "promptAr": "منذ ثلاثة أيام يؤلمه ___."
       },
       {
         "id": "d-a2-03-q2",
         "type": "mc",
-        "promptDe": "Wie oft soll er die Medizin nehmen?",
+        "promptDe": "Was macht der Arzt zuerst?",
         "options": [
-          "zweimal am Tag",
-          "dreimal am Tag",
-          "drei Tage lang einmal"
+          "Er untersucht den Patienten.",
+          "Er entscheidet vor der Untersuchung, dass der Patient zu Hause bleibt.",
+          "Er bespricht die Behandlung vor der Untersuchung."
         ],
-        "answer": "dreimal am Tag",
-        "explanationAr": "الدليل: «Nehmen Sie die Medizin dreimal am Tag». الفخّ 1: «zwei» هو أيام البقاء في البيت. الفخّ 2: «drei Tage» مدّة ألم الحلق.",
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "answer": "Er untersucht den Patienten.",
+        "explanationAr": "الدليل: «Ich untersuche Sie jetzt.» — يبدأ الطبيب بالفحص. الفخّ: قرار البقاء والعلاج يأتيان بعد الفحص لا قبله.",
+        "promptAr": "ماذا يفعل الطبيب أولاً؟"
       }
     ],
     "dictation": [
-      "Seit drei Tagen tut mir der Hals weh.",
-      "Nehmen Sie die Medizin dreimal am Tag.",
-      "Trinken Sie viel Tee!"
+      "Seit drei Tagen tut mir der Hals weh",
+      "Ich untersuche Sie jetzt.",
+      "Das entscheiden wir nach der Untersuchung."
     ],
-    "cultural_theme": "Hobbies"
+    "cultural_theme": "Medical consultation"
   },
   {
     "id": "d-a2-04",
@@ -619,7 +617,7 @@
         ],
         "answer": "in Frankfurt",
         "explanationAr": "الدليل: «in Frankfurt müssen Sie umsteigen». الفخّ 1: كولن الوجهة. الفخّ 2: أربع ساعات مدّة الرحلة.",
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "promptAr": "أين يجب على الرجل تبديل القطار؟"
       },
       {
         "id": "d-a2-04-q2",
@@ -629,15 +627,15 @@
           "Stunden"
         ],
         "explanationAr": "ساعات.",
-        "promptAr": "أكمل الفراغ بالكلمة المناسبة من الحوار."
+        "promptAr": "تستغرق الرحلة نحو أربع ___."
       }
     ],
     "dictation": [
-      "Ist dieser Platz frei?",
-      "In Frankfurt müssen Sie umsteigen.",
+      "ist dieser Platz frei?",
+      "in Frankfurt müssen Sie umsteigen.",
       "Ungefähr vier Stunden."
     ],
-    "cultural_theme": "Travel"
+    "cultural_theme": "Train travel"
   },
   {
     "id": "d-a2-05",
@@ -672,8 +670,8 @@
       },
       {
         "who": "Hassan",
-        "de": "Macht nichts. Treffen wir uns morgen?",
-        "ar": "لا عليك. نلتقي غداً؟"
+        "de": "Macht nichts. Wir können einen neuen Termin für morgen vereinbaren.",
+        "ar": "لا عليك. يمكننا تحديد موعد جديد ليوم غد."
       }
     ],
     "questions": [
@@ -688,7 +686,7 @@
         ],
         "answer": "Sie hat vergessen, zum Termin zu kommen.",
         "explanationAr": "الدليل: «Gestern habe ich vergessen, zum Termin zu kommen». الفخّ 1: المرض سأل عنه حسن ونفته سارة. الفخّ 2: الغد اقتراح حسن للقاء.",
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "promptAr": "لماذا تعتذر سارة؟"
       },
       {
         "id": "d-a2-05-q2",
@@ -698,16 +696,15 @@
           "entschuldigen"
         ],
         "explanationAr": "sich entschuldigen = يعتذر.",
-        "promptAr": "أكمل الفراغ بالكلمة المناسبة من الحوار."
+        "promptAr": "عليّ أن ___."
       }
     ],
     "dictation": [
-      "Ich muss mich entschuldigen.",
+      "ich muss mich entschuldigen.",
       "Gestern habe ich vergessen, zum Termin zu kommen.",
-      "Treffen wir uns morgen?"
+      "Wir können einen neuen Termin für morgen vereinbaren."
     ],
-    "cultural_theme": "Schulbildung - Education system",
-    "cultural_note": "Theme: Schulbildung - Education system"
+    "cultural_theme": "Apologies and rescheduling"
   },
   {
     "id": "d-b1-01",
@@ -1536,7 +1533,7 @@
           "gekauft"
         ],
         "explanationAr": "Perfekt لفعل منتظم: ge-kauf-t.",
-        "promptAr": "أكمل الفراغ بالكلمة المناسبة من الحوار."
+        "promptAr": "لقد ___ الكنزة أمس."
       },
       {
         "id": "d-a2-06-q2",
@@ -1549,15 +1546,15 @@
         ],
         "answer": "den Kassenzettel",
         "explanationAr": "الدليل: «Haben Sie den Kassenzettel dabei?». الفخّ 1: المقاس M هو ما تحصل عليه الزبونة. الفخّ 2: البلوفر الصغير تعيده هي، لكن البائع طلب الإيصال.",
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "promptAr": "ماذا يحتاج البائع؟"
       }
     ],
     "dictation": [
-      "Ich habe diesen Pullover gestern gekauft.",
+      "Ich habe diesen Pullover gestern gekauft",
       "Haben Sie den Kassenzettel dabei?",
       "Kann ich eine größere Größe haben?"
     ],
-    "cultural_theme": "Travel"
+    "cultural_theme": "Returning clothing"
   },
   {
     "id": "d-a2-07",
@@ -1578,7 +1575,7 @@
       {
         "who": "Herr Yilmaz",
         "de": "Gegen neun Uhr. Ich hatte gerade frei.",
-        "ar": "حوالي التاسعة. كنت في راحة."
+        "ar": "حوالي التاسعة. لم أكن في العمل حينها."
       },
       {
         "who": "Frau Klein",
@@ -1603,7 +1600,7 @@
         ],
         "answer": "Herr Yilmaz",
         "explanationAr": "الدليل: «Ich habe Ihr Paket angenommen» — يقولها السيد يلماز. الفخّ 1: فراو كلاين صاحبة الطرد. الفخّ 2: الساعي سلّمه لا استلمه.",
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "promptAr": "من استلم الطرد؟"
       },
       {
         "id": "d-a2-07-q2",
@@ -1614,7 +1611,7 @@
           "9"
         ],
         "explanationAr": "التاسعة.",
-        "promptAr": "أكمل الفراغ بالكلمة المناسبة من الحوار."
+        "promptAr": "جاء الموزّع نحو الساعة ___."
       }
     ],
     "dictation": [
@@ -1622,7 +1619,7 @@
       "Wann ist der Bote gekommen?",
       "Sie sind sehr freundlich."
     ],
-    "cultural_theme": "Hobbies"
+    "cultural_theme": "Neighbourly help and parcels"
   },
   {
     "id": "d-b1-06",
@@ -2069,13 +2066,13 @@
       },
       {
         "who": "Apothekerin",
-        "de": "Ich gebe Ihnen Lutschtabletten und einen Tee. Trinken Sie viel Wasser!",
-        "ar": "سأعطيك أقراصاً للامتصاص وشاياً. اشرب ماءً كثيراً!"
+        "de": "Bevor ich etwas empfehle: Haben Sie Allergien oder nehmen Sie andere Medikamente?",
+        "ar": "قبل أن أوصي بشيء: هل لديك حساسية أو تتناول أدوية أخرى؟"
       },
       {
         "who": "Karim",
-        "de": "Danke schön. Was macht das zusammen?",
-        "ar": "شكراً جزيلاً. كم المجموع؟"
+        "de": "Ja, ich nehme ein Medikament. Das bespreche ich gern zuerst mit Ihnen.",
+        "ar": "نعم، أتناول دواءً. يسرّني أن أناقش ذلك معك أولاً."
       }
     ],
     "questions": [
@@ -2091,28 +2088,27 @@
         ],
         "answer": "Halsschmerzen seit gestern Abend",
         "explanationAr": "الدليل: «Ich habe Halsschmerzen» و«Seit gestern Abend». الفخّ 1: الرأس لم يُذكر. الفخّ 2: «drei Tage» ليست في هذا الحوار. الفخّ 3: البلع مؤلم فعلاً لكن منذ «Abend» لا «Morgen».",
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "promptAr": "ممّ يعاني كريم؟"
       },
       {
         "id": "d-a2-08-q2",
         "type": "mc",
-        "promptDe": "Was bekommt er?",
+        "promptDe": "Was klärt die Apothekerin vor einer Empfehlung?",
         "options": [
-          "nur Wasser",
-          "Tabletten zum Schlucken",
-          "einen Tee und Wasser zum Kaufen",
-          "Lutschtabletten und einen Tee"
+          "Allergien und andere Medikamente",
+          "nur seit wann die Schmerzen bestehen",
+          "nur ob das Schlucken weh tut"
         ],
-        "answer": "Lutschtabletten und einen Tee",
-        "explanationAr": "الدليل: «Ich gebe Ihnen Lutschtabletten und einen Tee». الفخّ 1: «Trinken Sie viel Wasser!» نصيحة للشرب، لا ضمن ما قالت الصيدلانية إنها ستعطيه. الفخّ 2: «schlucken» ورد في وصف ألم البلع، لا كنوع الأقراص. الفخّ 3: لا يذكر الحوار شراء الماء.",
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "answer": "Allergien und andere Medikamente",
+        "explanationAr": "الدليل: «Haben Sie Allergien oder nehmen Sie andere Medikamente?» الفخّ: مدة الألم وألم البلع ذُكرا، لكنهما ليسا وحدهما ما تستوضحه قبل التوصية.",
+        "promptAr": "ما الذي تستوضحه الصيدلانية قبل تقديم توصية؟"
       }
     ],
     "dictation": [
       "Seit wann haben Sie die Schmerzen?",
-      "Trinken Sie viel Wasser!"
+      "Haben Sie Allergien oder nehmen Sie andere Medikamente?"
     ],
-    "cultural_theme": "Food"
+    "cultural_theme": "Pharmacy consultation"
   },
   {
     "id": "d-a2-09",
@@ -2128,7 +2124,7 @@
       {
         "who": "Mitarbeiterin",
         "de": "Um vierzehn Uhr dreißig, Gleis fünf.",
-        "ar": "الساعة الثانية والنصف بعد الظهر، على الرصيف الخامس."
+        "ar": "الساعة الثانية والنصف بعد الظهر، من المسار الخامس."
       },
       {
         "who": "Jonas",
@@ -2163,8 +2159,8 @@
           "um dreizehn Uhr dreißig"
         ],
         "answer": "um vierzehn Uhr dreißig",
-        "explanationAr": "الدليل: «Um vierzehn Uhr dreißig, Gleis fünf». الفخّ 1: vierzehn/fünfzehn. الفخّ 2: الرصيف خمسة لا ثلاثة، و«dreißig» دقائق. الفخّ 3: dreizehn/dreißig.",
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "explanationAr": "الدليل: «Um vierzehn Uhr dreißig, Gleis fünf». الفخّ 1: vierzehn/fünfzehn. الفخّ 2: المسار خمسة لا ثلاثة، و«dreißig» دقائق. الفخّ 3: dreizehn/dreißig.",
+        "promptAr": "متى ينطلق القطار؟"
       },
       {
         "id": "d-a2-09-q2",
@@ -2177,15 +2173,15 @@
           "fünf Fahrkarten"
         ],
         "answer": "eine Fahrkarte zweiter Klasse",
-        "explanationAr": "الدليل: «Eine Fahrkarte zweiter Klasse, bitte». الفخّ 1: عن تذكرة العودة سأل فقط ولم يطلبها. الفخّ 2: erster/zweiter. الفخّ 3: «fünf» رقم الرصيف.",
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "explanationAr": "الدليل: «Eine Fahrkarte zweiter Klasse, bitte». الفخّ 1: عن تذكرة العودة سأل فقط ولم يطلبها. الفخّ 2: erster/zweiter. الفخّ 3: «fünf» رقم المسار.",
+        "promptAr": "ماذا يشتري يوناس؟"
       }
     ],
     "dictation": [
-      "Wann fährt der nächste Zug nach Köln?",
+      "wann fährt der nächste Zug nach Köln?",
       "Gute Reise!"
     ],
-    "cultural_theme": "Food"
+    "cultural_theme": "Train tickets"
   },
   {
     "id": "d-b1-08",
@@ -6099,13 +6095,13 @@
       },
       {
         "who": "Verkäufer",
-        "de": "Innerhalb von vierzehn Tagen ist das kein Problem.",
-        "ar": "خلالَ أربعةَ عشرَ يوماً لا مشكلة."
+        "de": "Nach unserer Rückgaberegel ist das innerhalb von vierzehn Tagen kein Problem.",
+        "ar": "وفق سياسة الإرجاع لدينا، لا توجد مشكلة خلال أربعة عشر يوماً."
       },
       {
         "who": "Kundin",
         "de": "Sehr gut. Muss ich etwas unterschreiben?",
-        "ar": "ممتاز. أعليَّ التوقيعُ على شيء؟"
+        "ar": "ممتاز. هل عليّ أن أوقّع على شيء؟"
       },
       {
         "who": "Verkäufer",
@@ -6125,17 +6121,17 @@
         ],
         "answer": "ihr Geld zurück",
         "explanationAr": "الدليل: «Ich hätte gern mein Geld zurück». الفخّ 1: لم تطلب استبدالاً. الفخّ 2: أربعة عشر يوماً هي المهلة التي ذكرها البائع لقبول طلبها في هذا الحوار، لا مدة إصلاح ولا قاعدة عامة لكل المتاجر.",
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "promptAr": "ماذا تريد الزبونة؟"
       },
       {
         "id": "d-a2-31-q2",
         "type": "fill",
-        "promptDe": "___ von vierzehn Tagen ist das kein Problem.",
+        "promptDe": "Nach unserer Rückgaberegel ist das ___ von vierzehn Tagen kein Problem.",
         "answer": [
-          "Innerhalb"
+          "innerhalb"
         ],
-        "explanationAr": "innerhalb حرفُ جرٍّ يجرُّ بالمضاف: innerhalb von vierzehn Tagen.",
-        "promptAr": "أكمل الفراغ بالكلمة المناسبة من الحوار."
+        "explanationAr": "الدليل: «Nach unserer Rückgaberegel ist das innerhalb von vierzehn Tagen kein Problem.» — هذه سياسة المتجر في الحوار، وليست قاعدة عامة لكل المتاجر.",
+        "promptAr": "___ أربعة عشر يوماً لا توجد مشكلة وفق سياسة المتجر."
       },
       {
         "id": "d-a2-31-q3",
@@ -6147,7 +6143,7 @@
         ],
         "answer": "falsch",
         "explanationAr": "في النصِّ: «bekommen Sie den Betrag bar» أي نقداً.",
-        "promptAr": "هل العبارة صحيحة أم خاطئة حسب الحوار؟"
+        "promptAr": "هل تستلم المبلغ بالبطاقة؟"
       }
     ],
     "dictation": [
@@ -6155,8 +6151,7 @@
       "Das tut mir leid. Haben Sie den Kassenbon dabei?",
       "Ja, hier. Ich hätte gern mein Geld zurück."
     ],
-    "cultural_theme": "Oktoberfest - German beer festival",
-    "cultural_note": "Theme: Oktoberfest - German beer festival"
+    "cultural_theme": "Product complaints and refunds"
   },
   {
     "id": "d-a2-32",
@@ -6181,8 +6176,8 @@
       },
       {
         "who": "Weber",
-        "de": "Dann kurieren Sie sich bitte richtig aus.",
-        "ar": "إذنْ تعافَ كما ينبغي."
+        "de": "Gute Besserung. Bitte informieren Sie mich, falls sich die Dauer ändert.",
+        "ar": "أتمنى لك الشفاء. أبلغني من فضلك إذا تغيرت المدة."
       },
       {
         "who": "Amir",
@@ -6202,7 +6197,7 @@
         ],
         "answer": "drei Tage",
         "explanationAr": "الدليل: «Der Arzt hat mich für drei Tage krankgeschrieben». الفخّ 1: «drei» صحيح والوحدة خاطئة. الفخّ 2: «heute noch» موعد إرسال الإشعار بالبريد.",
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "promptAr": "ما مدة إجازته المرضية؟"
       },
       {
         "id": "d-a2-32-q2",
@@ -6212,7 +6207,7 @@
           "Krankmeldung"
         ],
         "explanationAr": "Krankmeldung = إبلاغُ جهةِ العملِ بالمرض؛ وفي الحوارِ يرسلُ أميرٌ هذا الإشعارَ بالبريد.",
-        "promptAr": "أكمل الفراغ بالكلمة المناسبة من الحوار."
+        "promptAr": "سأرسل ___ اليوم بالبريد."
       }
     ],
     "dictation": [
@@ -6220,7 +6215,7 @@
       "Das tut mir leid. Was fehlt Ihnen denn?",
       "Ich habe Fieber. Der Arzt hat mich für drei Tage krankgeschrieben."
     ],
-    "cultural_theme": "Weather"
+    "cultural_theme": "Reporting sickness at work"
   },
   {
     "id": "d-b1-31",
@@ -6536,8 +6531,8 @@
       },
       {
         "who": "Hausmeister",
-        "de": "Lüften Sie regelmäßig? Nach dem Duschen muss das Fenster zehn Minuten offen sein.",
-        "ar": "هل تهوّين بانتظام؟ بعد الاستحمام يجب أن تبقى النافذة مفتوحة عشر دقائق."
+        "de": "Lüften Sie regelmäßig? In unserem Merkblatt steht: Nach dem Duschen soll das Fenster zehn Minuten offen bleiben.",
+        "ar": "هل تهوّين بانتظام؟ يذكر دليلنا أنه بعد الاستحمام ينبغي أن تبقى النافذة مفتوحة عشر دقائق."
       },
       {
         "who": "Mieterin",
@@ -6546,18 +6541,18 @@
       },
       {
         "who": "Hausmeister",
-        "de": "Dann ist es ein Mangel an der Wohnung, nicht Ihr Fehler. Ich schreibe das der Hausverwaltung.",
-        "ar": "إذن هو عيب في الشقة لا خطؤك. سأكتب ذلك لإدارة العقار."
+        "de": "Dann muss die Hausverwaltung die Ursache prüfen. Ich melde den Schaden.",
+        "ar": "إذن يجب على إدارة العقار فحص السبب. سأبلغها بالضرر."
       },
       {
         "who": "Mieterin",
-        "de": "Muss ich mich auch selbst beschweren, oder reicht es, wenn der Hausmeister das meldet?",
-        "ar": "هل يجب أن أشتكي بنفسي أيضاً، أم يكفي أن يبلّغ الحارس؟"
+        "de": "Soll ich den Schaden auch selbst melden?",
+        "ar": "هل ينبغي أن أبلغ عن الضرر بنفسي أيضاً؟"
       },
       {
         "who": "Hausmeister",
-        "de": "Ja, bitte schriftlich, mit Foto und Datum. Dann kann die Verwaltung eine Mietminderung prüfen.",
-        "ar": "نعم، كتابياً من فضلك، مع صورة وتاريخ. عندها تستطيع الإدارة النظر في تخفيض الإيجار."
+        "de": "Ja, bitte schriftlich, mit Foto und Datum. Zu möglichen Rechten kann eine Mieterberatung Auskunft geben.",
+        "ar": "نعم، كتابياً من فضلك، مع صورة وتاريخ. ويمكن لجهة استشارية للمستأجرين تقديم معلومات عن الحقوق المحتملة."
       },
       {
         "who": "Mieterin",
@@ -6573,31 +6568,31 @@
     "questions": [
       {
         "type": "mc",
-        "promptDe": "Warum ist der Schimmel laut Hausmeister nicht der Fehler der Mieterin?",
+        "promptDe": "Warum meldet der Hausmeister den Schaden der Hausverwaltung?",
         "options": [
-          "Weil sie nicht lüftet.",
-          "Weil der Handwerker zu spät kommt.",
-          "Weil das Fenster sehr klein ist und die Feuchtigkeit bleibt."
+          "Weil die Feuchtigkeit trotz täglicher Lüftung bleibt.",
+          "Weil die Mieterin nie lüftet.",
+          "Weil der Handwerker schon da war."
         ],
-        "answer": "Weil das Fenster sehr klein ist und die Feuchtigkeit bleibt.",
-        "explanationAr": "الدليل: «die Feuchtigkeit bleibt, das Fenster ist sehr klein» ثم «Dann ist es ein Mangel an der Wohnung, nicht Ihr Fehler». الفخّ 1: التهوية سأل عنها وهي تهوّي يومياً. الفخّ 2: الحرفيّ موعد لا سبب.",
+        "answer": "Weil die Feuchtigkeit trotz täglicher Lüftung bleibt.",
+        "explanationAr": "الدليل: تقول المستأجرة إنها تهوّي يومياً، لكن الرطوبة تبقى؛ لذلك يبلّغ الحارس الإدارة لتفحص السبب. الفخّ: لم تقل إنها لا تهوّي، والحرفي لم يأت بعد.",
         "id": "d-a2-10-q1",
         "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "promptAr": "لماذا يبلغ الحارس إدارة العقار بالضرر؟"
       },
       {
         "type": "mc",
-        "promptDe": "Wie soll sich die Mieterin beschweren?",
+        "promptDe": "Wie soll die Mieterin den Schaden melden?",
         "options": [
           "schriftlich, mit Foto und Datum",
           "telefonisch beim Hausmeister",
           "persönlich beim Handwerker"
         ],
         "answer": "schriftlich, mit Foto und Datum",
-        "explanationAr": "الدليل: «Ja, bitte schriftlich, mit Foto und Datum». الفخّ 1: الحارس هو من تكلّمه الآن. الفخّ 2: الحرفيّ يأتي للإصلاح.",
+        "explanationAr": "الدليل: «bitte schriftlich, mit Foto und Datum». الفخّ: الحارس هو من تكلّمه الآن، والحرفي يأتي للإصلاح لا لاستلام البلاغ.",
         "id": "d-a2-10-q2",
         "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "promptAr": "كيف ينبغي للمستأجرة الإبلاغ عن الضرر؟"
       },
       {
         "type": "truefalse",
@@ -6609,25 +6604,27 @@
         "answer": "richtig",
         "explanationAr": "الدليل: «Der Handwerker kommt nächste Woche, am Dienstag um neun».",
         "id": "d-a2-10-q3",
-        "promptAr": "هل العبارة صحيحة أم خاطئة حسب الحوار؟"
+        "promptAr": "هل يأتي الحرفي يوم الثلاثاء عند التاسعة؟"
       }
     ],
     "dictation": [
       "Im Bad ist Schimmel an der Wand, oben in der Ecke.",
-      "Dann kann die Verwaltung eine Mietminderung prüfen."
+      "Zu möglichen Rechten kann eine Mieterberatung Auskunft geben."
     ],
     "neu": true,
     "waisen": [
-      "der Hausmeister",
       "lüften",
       "der Schimmel",
       "die Feuchtigkeit",
-      "der Mangel",
-      "die Mietminderung",
-      "sich beschweren",
-      "die Hausverwaltung"
+      "die Hausverwaltung",
+      "prüfen",
+      "der Handwerker",
+      "melden",
+      "der Schaden",
+      "die Auskunft",
+      "regelmäßig"
     ],
-    "cultural_theme": "Health"
+    "cultural_theme": "Housing defects and reporting"
   },
   {
     "id": "d-a2-11",
@@ -6667,13 +6664,13 @@
       },
       {
         "who": "Sekretärin",
-        "de": "Ja. Nach der Ansage sprechen Sie bitte Ihren Namen und Ihre Nummer.",
-        "ar": "نعم. بعد الإعلان قل اسمك ورقمك من فضلك."
+        "de": "Ja. Ich verbinde Sie mit ihrer Mailbox. Nach der Ansage sprechen Sie bitte Ihren Namen und Ihre Nummer. Frau Lang hört die Nachricht später.",
+        "ar": "نعم. سأحوّلك إلى صندوق بريدها الصوتي. بعد الرسالة الآلية اذكر اسمك ورقمك من فضلك. ستستمع السيدة لانغ إلى الرسالة لاحقاً."
       },
       {
         "who": "Karim",
-        "de": "Danke. Und sie ruft heute noch zurück?",
-        "ar": "شكراً. وهل تعاود الاتصال اليوم؟"
+        "de": "Danke. Dann hinterlasse ich meinen Namen und meine Nummer.",
+        "ar": "شكراً. سأترك إذن اسمي ورقمي."
       }
     ],
     "questions": [
@@ -6689,7 +6686,7 @@
         "explanationAr": "الدليل: «Frau Lang ist gerade besetzt». الفخّ 1: الزميل هو من عُرض تحويل المكالمة إليه. الفخّ 2: الإيميل وصل («die Bestätigung ist da»).",
         "id": "d-a2-11-q1",
         "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "promptAr": "لماذا لا يستطيع كريم التحدث إلى السيدة لانغ؟"
       },
       {
         "type": "mc",
@@ -6703,7 +6700,7 @@
         "explanationAr": "الدليل: «Nach der Ansage sprechen Sie bitte Ihren Namen und Ihre Nummer». الفخّ 1: رقمه هو لا رقم السكرتيرة. الفخّ 2: الإيميل كان أمس ووصل.",
         "id": "d-a2-11-q2",
         "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "promptAr": "ماذا ينبغي لكريم أن يفعل بعد الرسالة الآلية؟"
       },
       {
         "type": "fill",
@@ -6713,7 +6710,7 @@
         ],
         "explanationAr": "الدليل: «Soll ich den Anruf an ihren Kollegen weiterleiten?» — فعل منفصل في المصدر بعد soll.",
         "id": "d-a2-11-q3",
-        "promptAr": "أكمل الفراغ بالكلمة المناسبة من الحوار."
+        "promptAr": "هل ينبغي لي أن ___ المكالمة إلى زميلها؟"
       }
     ],
     "dictation": [
@@ -6731,7 +6728,7 @@
       "erreichen",
       "die Bestätigung"
     ],
-    "cultural_theme": "Accommodation"
+    "cultural_theme": "Office phone calls"
   },
   {
     "id": "d-a2-12",
@@ -6793,7 +6790,7 @@
         "explanationAr": "الدليل: «Am Morgen ist es neblig, besonders an den Flüssen». الفخّ 1: الشمس بعد العاشرة. الفخّ 2: العاصفة في المساء.",
         "id": "d-a2-12-q1",
         "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "promptAr": "كيف سيكون الطقس صباح غد؟"
       },
       {
         "type": "mc",
@@ -6807,7 +6804,7 @@
         "explanationAr": "الدليل: «in den Bergen gibt es ein Gewitter». الفخّ 1: الأنهار مكان الضباب. الفخّ 2: الغرب مصدر الرياح.",
         "id": "d-a2-12-q2",
         "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "promptAr": "أين ستحدث عاصفة رعدية مساءً؟"
       },
       {
         "type": "truefalse",
@@ -6819,7 +6816,7 @@
         "answer": "falsch",
         "explanationAr": "الدليل: «Nein, kein Frost».",
         "id": "d-a2-12-q3",
-        "promptAr": "هل العبارة صحيحة أم خاطئة حسب الحوار؟"
+        "promptAr": "هل سيكون هناك صقيع ليلاً؟"
       }
     ],
     "dictation": [
@@ -6838,7 +6835,7 @@
       "bewölkt",
       "neblig"
     ],
-    "cultural_theme": "Weather"
+    "cultural_theme": "Weather forecast"
   },
   {
     "id": "d-a2-13",
@@ -6900,7 +6897,7 @@
         "explanationAr": "الدليل: «Die Einarbeitung dauert vier Wochen». الفخّ 1: يومان هي مدة التكوين في كولن. الفخّ 2: الخريف موعد التكوين.",
         "id": "d-a2-13-q1",
         "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "promptAr": "كم تستغرق فترة التهيئة في العمل؟"
       },
       {
         "type": "mc",
@@ -6914,7 +6911,7 @@
         "explanationAr": "الدليل: «Ihr Kollege Tom. Er hat gute Kenntnisse und viel Geduld». الفخّ 1: المديرة تقدّمها للفريق فقط. الفخّ 2: كولن مكان التكوين.",
         "id": "d-a2-13-q2",
         "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "promptAr": "من يشرح البرنامج للسيدة منصور؟"
       },
       {
         "type": "fill",
@@ -6924,7 +6921,7 @@
         ],
         "explanationAr": "الدليل: «In dieser Zeit gibt es keinen Zeitdruck».",
         "id": "d-a2-13-q3",
-        "promptAr": "أكمل الفراغ بالكلمة المناسبة من الحوار."
+        "promptAr": "لا يوجد خلال هذه الفترة ___."
       }
     ],
     "dictation": [
@@ -6942,8 +6939,7 @@
       "die Firma",
       "pünktlich"
     ],
-    "cultural_theme": "Weihnachten - Christmas traditions",
-    "cultural_note": "Theme: Weihnachten - Christmas traditions"
+    "cultural_theme": "First day at work"
   },
   {
     "id": "d-a2-14",
@@ -6963,8 +6959,8 @@
       },
       {
         "who": "Gast",
-        "de": "Lang, aber die Landung war pünktlich. Ich habe nur ein kleines Gepäck.",
-        "ar": "طويلة، لكن الهبوط كان في موعده. معي أمتعة صغيرة فقط."
+        "de": "Lang, aber die Landung war pünktlich. Ich habe nur ein kleines Gepäckstück.",
+        "ar": "طويلة، لكن الهبوط كان في موعده. معي قطعة أمتعة صغيرة فقط."
       },
       {
         "who": "Rezeption",
@@ -6988,8 +6984,8 @@
       },
       {
         "who": "Rezeption",
-        "de": "Das ist freiwillig, ein bis zwei Euro sind üblich.",
-        "ar": "هذا اختياري، يورو أو اثنان هو المعتاد."
+        "de": "Trinkgeld ist freiwillig. Die Höhe entscheiden die Gäste selbst.",
+        "ar": "البقشيش اختياري. ويحدد النزلاء قيمته بأنفسهم."
       }
     ],
     "questions": [
@@ -7005,33 +7001,33 @@
         "explanationAr": "الدليل: «Ich habe ein Einzelzimmer reserviert» و«mit Aussicht auf den Fluss». الفخّ 1: الطابق الثالث صحيح لكن الغرفة مفردة لا مزدوجة. الفخّ 2: نهاية الممر يساراً هو مخرج الطوارئ.",
         "id": "d-a2-14-q1",
         "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "promptAr": "ما نوع غرفة النزيل؟"
       },
       {
         "type": "mc",
-        "promptDe": "Wie viele Übernachtungen bleibt er?",
+        "promptDe": "Wie viele Nächte bleibt der Gast?",
         "options": [
-          "zwei",
-          "drei",
-          "eine Übernachtung"
+          "eine Übernachtung",
+          "drei Übernachtungen",
+          "zwölf Übernachtungen"
         ],
-        "answer": "drei",
-        "explanationAr": "الدليل: «Drei Übernachtungen, richtig?» … «Ja». الفخّ: «ein bis zwei Euro» هو البقشيش.",
+        "answer": "drei Übernachtungen",
+        "explanationAr": "الدليل: «Drei Übernachtungen, richtig?» … «Ja». الفخّ: «Einzelzimmer» يصف نوع الغرفة، و312 رقم الغرفة، لا اثنتي عشرة ليلة.",
         "id": "d-a2-14-q2",
         "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "promptAr": "كم ليلة سيقيم النزيل؟"
       },
       {
         "type": "truefalse",
-        "promptDe": "Der Reiseführer kostet zwei Euro.",
+        "promptDe": "Trinkgeld ist freiwillig.",
         "options": [
           "richtig",
           "falsch"
         ],
-        "answer": "falsch",
-        "explanationAr": "الدليل: «Hier, kostenlos». اليورو أو الاثنان هما البقشيش المعتاد.",
+        "answer": "richtig",
+        "explanationAr": "الدليل: «Trinkgeld ist freiwillig.»",
         "id": "d-a2-14-q3",
-        "promptAr": "هل العبارة صحيحة أم خاطئة حسب الحوار؟"
+        "promptAr": "هل البقشيش اختياري؟"
       }
     ],
     "dictation": [
@@ -7051,8 +7047,7 @@
       "das Trinkgeld",
       "das Gepäck"
     ],
-    "cultural_theme": "Oktoberfest - German beer festival",
-    "cultural_note": "Theme: Oktoberfest - German beer festival"
+    "cultural_theme": "Hotel arrival and services"
   },
   {
     "id": "d-a2-15",
@@ -7067,8 +7062,8 @@
       },
       {
         "who": "Yusuf",
-        "de": "Ja. Das Fleisch habe ich gestern aus dem Gefrierfach genommen, es ist aufgetaut.",
-        "ar": "نعم. اللحم أخرجته أمس من الفريزر، وقد ذاب."
+        "de": "Ja. Das Fleisch habe ich gestern aus dem Gefrierfach in den Kühlschrank gelegt; jetzt ist es aufgetaut.",
+        "ar": "نعم. نقلت اللحم أمس من المجمّد إلى الثلاجة؛ وقد ذاب الآن."
       },
       {
         "who": "Lina",
@@ -7093,12 +7088,12 @@
       {
         "who": "Lina",
         "de": "Nur ein bisschen, am Ende. Salz haben wir schon.",
-        "ar": "قليلاً فقط، في النهاية. الملح وضعناه."
+        "ar": "قليلاً فقط، في النهاية. الملح لدينا بالفعل."
       },
       {
         "who": "Yusuf",
-        "de": "Und den Rest frieren wir ein? Das reicht für zwei Tage.",
-        "ar": "والباقي نجمّده؟ يكفي ليومين."
+        "de": "Gut. Dann fange ich jetzt mit den Zwiebeln an.",
+        "ar": "حسناً. سأبدأ الآن بالبصل."
       }
     ],
     "questions": [
@@ -7111,10 +7106,10 @@
           "den Backofen vorgeheizt"
         ],
         "answer": "das Fleisch aus dem Gefrierfach genommen",
-        "explanationAr": "الدليل: «Das Fleisch habe ich gestern aus dem Gefrierfach genommen». الفخّ 1: القلي الآن. الفخّ 2: التسخين هو أول خطوة اليوم.",
+        "explanationAr": "الدليل: «Das Fleisch habe ich gestern aus dem Gefrierfach in den Kühlschrank gelegt». الفخّ 1: القلي الآن. الفخّ 2: التسخين هو أول خطوة اليوم.",
         "id": "d-a2-15-q1",
         "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "promptAr": "ماذا فعل يوسف أمس؟"
       },
       {
         "type": "mc",
@@ -7128,7 +7123,7 @@
         "explanationAr": "الدليل: «gut umrühren, sonst gibt es Klumpen». الفخّ 1: الفلفل هو ما يخصّ الحرارة. الفخّ 2: اللحم ذاب أمس.",
         "id": "d-a2-15-q2",
         "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "promptAr": "لماذا ينبغي التحريك جيداً؟"
       },
       {
         "type": "fill",
@@ -7138,7 +7133,7 @@
         ],
         "explanationAr": "الدليل: «Zuerst den Backofen vorheizen, 180 Grad».",
         "id": "d-a2-15-q3",
-        "promptAr": "أكمل الفراغ بالكلمة المناسبة من الحوار."
+        "promptAr": "أولاً ___ الفرن مسبقاً على 180 درجة."
       }
     ],
     "dictation": [
@@ -7156,10 +7151,9 @@
       "vorheizen",
       "die Schüssel",
       "umrühren",
-      "einfrieren",
       "auftauen"
     ],
-    "cultural_theme": "Accommodation"
+    "cultural_theme": "Cooking together"
   },
   {
     "id": "d-a2-16",
@@ -7179,8 +7173,8 @@
       },
       {
         "who": "Meister",
-        "de": "In der Halle ja, und die Schutzkleidung auch: Schuhe, Brille, Handschuhe.",
-        "ar": "في القاعة نعم، وملابس الوقاية أيضاً: الحذاء والنظارة والقفازات."
+        "de": "Nach unseren Regeln tragen Sie in der Halle den Helm und die Schutzkleidung: Sicherheitsschuhe, Brille und Handschuhe.",
+        "ar": "وفق قواعدنا، ترتدي في القاعة الخوذة ومعدات الوقاية: حذاء السلامة والنظارة والقفازات."
       },
       {
         "who": "Azubi",
@@ -7189,8 +7183,8 @@
       },
       {
         "who": "Meister",
-        "de": "Dann fragen Sie sofort. Jede Anweisung muss man befolgen, aber erst, wenn man sie verstanden hat.",
-        "ar": "اسأل فوراً. كل تعليمة يجب اتباعها، لكن بعد فهمها أولاً."
+        "de": "Führen Sie nur Anweisungen aus, die Sie verstanden haben. Wenn etwas unklar ist, fragen Sie sofort.",
+        "ar": "لا تنفذ إلا التعليمات التي فهمتها. وإذا كان شيء غير واضح، فاسأل فوراً."
       },
       {
         "who": "Azubi",
@@ -7199,29 +7193,29 @@
       },
       {
         "who": "Meister",
-        "de": "Erste Hilfe, dann Meldung an mich als Meister. Der Erste-Hilfe-Kasten hängt neben der Tür, rot.",
-        "ar": "إسعاف أولي، ثم إبلاغي أنا المعلّم. صندوق الإسعاف معلّق قرب الباب، أحمر."
+        "de": "Bei einem Arbeitsunfall folgen Sie unserem Notfallplan und rufen Hilfe. Der Erste-Hilfe-Kasten hängt neben der Tür und ist rot. Das gelbe Schild daneben ist eine Warnung.",
+        "ar": "عند وقوع حادث عمل، اتبع خطة الطوارئ لدينا واطلب المساعدة. صندوق الإسعافات الأولية معلّق بجانب الباب ولونه أحمر. واللافتة الصفراء بجانبه تحذير."
       },
       {
         "who": "Azubi",
-        "de": "Verstanden. Und das gelbe Schild dort ist eine Warnung?",
-        "ar": "مفهوم. واللافتة الصفراء هناك تحذير؟"
+        "de": "Verstanden. Bei unklaren Anweisungen frage ich zuerst nach.",
+        "ar": "فهمت. عند وجود تعليمات غير واضحة سأستوضح أولاً."
       }
     ],
     "questions": [
       {
         "type": "mc",
-        "promptDe": "Wann muss man eine Anweisung befolgen?",
+        "promptDe": "Wann darf der Azubi eine Anweisung ausführen?",
         "options": [
-          "sofort, auch ohne sie zu verstehen",
-          "nur bei einem Arbeitsunfall",
-          "erst, wenn man sie verstanden hat"
+          "wenn er sie verstanden hat",
+          "sofort, auch wenn sie unklar ist",
+          "nur bei einem Arbeitsunfall"
         ],
-        "answer": "erst, wenn man sie verstanden hat",
-        "explanationAr": "الدليل: «Jede Anweisung muss man befolgen, aber erst, wenn man sie verstanden hat». الفخّ 1: «sofort» تخصّ السؤال. الفخّ 2: الحادث موضوع آخر.",
+        "answer": "wenn er sie verstanden hat",
+        "explanationAr": "الدليل: «Führen Sie nur Anweisungen aus, die Sie verstanden haben.» الفخّ: عند الغموض ينبغي السؤال فوراً، وحادث العمل موضوع خطة الطوارئ.",
         "id": "d-a2-16-q1",
         "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "promptAr": "متى يجوز للمتدرب تنفيذ تعليمة؟"
       },
       {
         "type": "mc",
@@ -7232,10 +7226,10 @@
           "Der Erste-Hilfe-Kasten hängt neben der Tür und ist gelb."
         ],
         "answer": "Der Erste-Hilfe-Kasten hängt neben der Tür und ist rot.",
-        "explanationAr": "الدليل: «Der Erste-Hilfe-Kasten hängt neben der Tür, rot». يثبت السطر مكان الصندوق وطريقة تعليقه ولونه. الفخّ: اعتبار «das gelbe Schild» دليلاً على أن الصندوق أصفر أو أن اللافتة تحذير؛ لا يذكر الحوار ذلك.",
+        "explanationAr": "الدليل: «Der Erste-Hilfe-Kasten hängt neben der Tür und ist rot.» الفخّ: اللافتة المجاورة صفراء، لا صندوق الإسعافات.",
         "id": "d-a2-16-q2",
         "falle": true,
-        "promptAr": "أيّ وصف لصندوق الإسعافات الأولية يطابق الحوار؟"
+        "promptAr": "أي وصف لصندوق الإسعافات الأولية يطابق الحوار؟"
       },
       {
         "type": "truefalse",
@@ -7247,12 +7241,12 @@
         "answer": "falsch",
         "explanationAr": "الدليل: «Das dauert eine halbe Stunde».",
         "id": "d-a2-16-q3",
-        "promptAr": "هل العبارة صحيحة أم خاطئة حسب الحوار؟"
+        "promptAr": "هل يستغرق التدريب ساعة؟"
       }
     ],
     "dictation": [
-      "In der Halle ja, und die Schutzkleidung auch: Schuhe, Brille, Handschuhe.",
-      "Der Erste-Hilfe-Kasten hängt neben der Tür, rot."
+      "Nach unseren Regeln tragen Sie in der Halle den Helm und die Schutzkleidung: Sicherheitsschuhe, Brille und Handschuhe.",
+      "Der Erste-Hilfe-Kasten hängt neben der Tür und ist rot."
     ],
     "neu": true,
     "waisen": [
@@ -7261,12 +7255,12 @@
       "die Warnung",
       "die Unterweisung",
       "die Anweisung",
-      "befolgen",
       "der Arbeitsunfall",
-      "der Erste-Hilfe-Kasten",
-      "die Arbeitssicherheit"
+      "die Arbeitssicherheit",
+      "der Handschuh",
+      "der Plan"
     ],
-    "cultural_theme": "Accommodation"
+    "cultural_theme": "Workplace safety"
   },
   {
     "id": "d-a2-17",
@@ -7296,8 +7290,8 @@
       },
       {
         "who": "Lehrerin",
-        "de": "Zehn, aber jeden Tag. Suchen Sie sich einen Lernpartner, das hilft bei der Motivation.",
-        "ar": "عشر، لكن كل يوم. ابحث عن شريك تعلّم، هذا يساعد على التحفيز."
+        "de": "Für Sie schlage ich zehn Wörter pro Tag vor. Probieren Sie das eine Woche lang aus. Ein Lernpartner kann bei der Motivation helfen.",
+        "ar": "أقترح لك عشر كلمات يومياً. جرّب ذلك لمدة أسبوع. ويمكن لشريك تعلّم أن يساعد على التحفيز."
       },
       {
         "who": "Ben Ali",
@@ -7328,7 +7322,7 @@
         "explanationAr": "الدليل: «Ihr Problem ist der Wortschatz: zu wenige Wörter». الفخّ 1: القواعد «kennen Sie». أمّا اللكنة فهي موضوع نصيحة لاحقة، لا السبب الذي سمّته المعلمة.",
         "id": "d-a2-17-q1",
         "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "promptAr": "ما المشكلة التي حددتها المعلمة لدى السيد بن علي؟"
       },
       {
         "type": "mc",
@@ -7342,17 +7336,17 @@
         "explanationAr": "الدليل: «können Sie am Freitag nachholen». الفخّ 1: سبتمبر موعد اختبار المستوى. الفخّ 2: الأسبوع الماضي كان مريضاً.",
         "id": "d-a2-17-q2",
         "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "promptAr": "متى يستطيع تعويض الامتحان النصفي؟"
       },
       {
         "type": "fill",
-        "promptDe": "Suchen Sie sich einen ___, das hilft bei der Motivation.",
+        "promptDe": "Ein ___ kann bei der Motivation helfen.",
         "answer": [
           "Lernpartner"
         ],
-        "explanationAr": "الدليل: «Suchen Sie sich einen Lernpartner, das hilft bei der Motivation».",
+        "explanationAr": "الدليل: «Ein Lernpartner kann bei der Motivation helfen.»",
         "id": "d-a2-17-q3",
-        "promptAr": "أكمل الفراغ بالكلمة المناسبة من الحوار."
+        "promptAr": "يمكن لـ ___ أن يساعد على التحفيز."
       }
     ],
     "dictation": [
@@ -7372,7 +7366,7 @@
       "die Grammatikregel",
       "die Sprachschule"
     ],
-    "cultural_theme": "Travel"
+    "cultural_theme": "Language learning and exams"
   },
   {
     "id": "d-a2-18",
@@ -7402,8 +7396,8 @@
       },
       {
         "who": "Vermieter",
-        "de": "Ja, in vier Wochen, nach der letzten Abrechnung der Warmmiete.",
-        "ar": "نعم، بعد أربعة أسابيع، عقب آخر تسوية للإيجار الشامل."
+        "de": "Nach unserem Übergabeplan rechnen wir die Kaution voraussichtlich in vier Wochen ab. Den genauen Termin bekommen Sie schriftlich.",
+        "ar": "وفق خطة التسليم لدينا، نتوقع تسوية الضمانة خلال أربعة أسابيع. وستتلقى الموعد الدقيق كتابياً."
       },
       {
         "who": "Mieter",
@@ -7434,21 +7428,21 @@
         "explanationAr": "الدليل: «Die Wände habe ich letzte Woche weiß gestrichen». الفخّ 1: المستأجر التالي وجدته الإدارة. الفخّ 2: المحضر يكتبه المؤجّر.",
         "id": "d-a2-18-q1",
         "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "promptAr": "ماذا فعل المستأجر الأسبوع الماضي؟"
       },
       {
         "type": "mc",
-        "promptDe": "Wann bekommt der Mieter die Kaution zurück?",
+        "promptDe": "Wann wird die Kaution laut Übergabeplan voraussichtlich abgerechnet?",
         "options": [
           "am Ersten, wenn der Nachmieter einzieht",
           "sofort bei der Übergabe",
-          "in vier Wochen, nach der Abrechnung"
+          "voraussichtlich in vier Wochen"
         ],
-        "answer": "in vier Wochen, nach der Abrechnung",
-        "explanationAr": "الدليل: «in vier Wochen, nach der letzten Abrechnung der Warmmiete». الفخّ: موعد «am Ersten» هو انتقال المستأجر التالي إلى الشقة، لا موعد ردّ الكفالة.",
+        "answer": "voraussichtlich in vier Wochen",
+        "explanationAr": "الدليل: «Nach unserem Übergabeplan … voraussichtlich in vier Wochen». الفخّ: الأول من الشهر موعد انتقال المستأجر التالي، وليس موعداً مضموناً لتسوية الضمانة.",
         "id": "d-a2-18-q2",
         "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "promptAr": "متى يُتوقع تسوية الضمانة وفق خطة التسليم؟"
       },
       {
         "type": "truefalse",
@@ -7458,9 +7452,9 @@
           "falsch"
         ],
         "answer": "richtig",
-        "explanationAr": "الدليل: «Die Wohnfläche ist 54 Quadratmeter, alles sauber». الفاعل المفرد «Die Wohnfläche» يقتضي «ist»؛ وتبقى الإجابة «richtig» لأن المعلومة صحيحة بعد التصحيح.",
+        "explanationAr": "الدليل: «Die Wohnfläche ist 54 Quadratmeter».",
         "id": "d-a2-18-q3",
-        "promptAr": "هل العبارة صحيحة أم خاطئة حسب الحوار؟"
+        "promptAr": "هل تبلغ مساحة السكن 54 متراً مربعاً؟"
       }
     ],
     "dictation": [
@@ -7471,26 +7465,27 @@
     "waisen": [
       "die Übergabe",
       "das Protokoll",
-      "streichen",
       "die Wohnfläche",
       "der Quadratmeter",
-      "die Warmmiete",
       "der Stellplatz",
       "die Hausverwaltung",
-      "der Nachmieter"
+      "der Nachmieter",
+      "der Plan",
+      "der Termin",
+      "rechnen"
     ],
-    "cultural_theme": "Health"
+    "cultural_theme": "Apartment handover"
   },
   {
     "id": "d-a2-19",
     "level": "A2",
-    "titleDe": "Im Bürgeramt: Ausweis verlängern",
-    "titleAr": "في مكتب المواطنين: تمديد البطاقة",
+    "titleDe": "Im Bürgeramt: Neuen Ausweis beantragen",
+    "titleAr": "في مكتب المواطنين: طلب بطاقة هوية جديدة",
     "lines": [
       {
         "who": "Sachbearbeiterin",
-        "de": "Guten Tag. Sie möchten den Personalausweis verlängern?",
-        "ar": "طاب يومك. تريد تمديد بطاقة الهوية؟"
+        "de": "Guten Tag. Sie möchten einen neuen Personalausweis beantragen, weil der alte abläuft?",
+        "ar": "طاب يومك. تريد طلب بطاقة هوية جديدة لأن القديمة ستنتهي صلاحيتها؟"
       },
       {
         "who": "Amir",
@@ -7509,8 +7504,8 @@
       },
       {
         "who": "Sachbearbeiterin",
-        "de": "Etwa drei Wochen. Sie bekommen dann einen Brief.",
-        "ar": "حوالي ثلاثة أسابيع. ستصلك رسالة بعدها."
+        "de": "Für diesen Antrag dauert die Bearbeitung voraussichtlich etwa drei Wochen. Sie bekommen dann einen Brief.",
+        "ar": "تستغرق معالجة هذا الطلب على الأرجح نحو ثلاثة أسابيع. وستصلك رسالة بعدها."
       },
       {
         "who": "Amir",
@@ -7519,13 +7514,13 @@
       },
       {
         "who": "Sachbearbeiterin",
-        "de": "Ja, mit einer Vollmacht von Ihnen und ihrem eigenen Ausweis.",
-        "ar": "نعم، بتوكيل منك وبطاقتها الشخصية."
+        "de": "Nach unserer aktuellen Abholregel ist das in diesem Fall möglich: mit einer Vollmacht von Ihnen und ihrem eigenen Ausweis.",
+        "ar": "وفق قاعدة الاستلام الحالية لدينا، يمكن ذلك في هذه الحالة: بتوكيل منك وبطاقتها الشخصية."
       },
       {
         "who": "Amir",
-        "de": "Und wer ist mein Ansprechpartner, wenn ich eine Auskunft brauche?",
-        "ar": "ومن هو الشخص المسؤول إذا احتجت معلومة؟"
+        "de": "Danke. Dann warte ich auf die schriftliche Bestätigung.",
+        "ar": "شكراً. سأنتظر إذن التأكيد الكتابي."
       }
     ],
     "questions": [
@@ -7541,7 +7536,7 @@
         "explanationAr": "الدليل: «Das Foto ist da, aber die Unterschrift auf dem Formular fehlt». الفخّ 1: الصورة موجودة. الفخّ 2: التوكيل يخصّ استلام الزوجة.",
         "id": "d-a2-19-q1",
         "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "promptAr": "لماذا كان الطلب غير مكتمل أولاً؟"
       },
       {
         "type": "mc",
@@ -7552,10 +7547,10 @@
           "das Foto und das Formular"
         ],
         "answer": "eine Vollmacht und ihren eigenen Ausweis",
-        "explanationAr": "الدليل: «mit einer Vollmacht von Ihnen und ihrem eigenen Ausweis». الفخّ 1: الرسالة تُعلم بالجاهزية فقط. الفخّ 2: الصورة والاستمارة للطلب.",
+        "explanationAr": "الدليل في هذه الحالة: «mit einer Vollmacht von Ihnen und ihrem eigenen Ausweis». الفخّ: الرسالة تؤكد سير الطلب، والصورة والاستمارة تخصان تقديمه.",
         "id": "d-a2-19-q2",
         "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "promptAr": "ماذا تحتاج زوجة أمير للاستلام في هذه الحالة؟"
       },
       {
         "type": "truefalse",
@@ -7565,29 +7560,29 @@
           "falsch"
         ],
         "answer": "falsch",
-        "explanationAr": "الدليل: «Etwa drei Wochen. Sie bekommen dann einen Brief» — أسابيع لا أيام.",
+        "explanationAr": "الدليل: «voraussichtlich etwa drei Wochen» — المدة تقديرية بالأسابيع لا ثلاثة أيام.",
         "id": "d-a2-19-q3",
-        "promptAr": "هل العبارة صحيحة أم خاطئة حسب الحوار؟"
+        "promptAr": "هل تستغرق المعالجة نحو ثلاثة أيام؟"
       }
     ],
     "dictation": [
-      "Sie möchten den Personalausweis verlängern?",
-      "Etwa drei Wochen. Sie bekommen dann einen Brief."
+      "Sie möchten einen neuen Personalausweis beantragen, weil der alte abläuft?",
+      "Für diesen Antrag dauert die Bearbeitung voraussichtlich etwa drei Wochen."
     ],
     "neu": true,
     "waisen": [
       "der Personalausweis",
-      "verlängern",
       "die Bearbeitungszeit",
       "vollständig",
       "unvollständig",
       "die Unterschrift",
       "die Vollmacht",
-      "der Ansprechpartner",
-      "die Auskunft"
+      "die Unterlagen",
+      "das Formular",
+      "die Bestätigung",
+      "der Ausweis"
     ],
-    "cultural_theme": "Oktoberfest - German beer festival",
-    "cultural_note": "Theme: Oktoberfest - German beer festival"
+    "cultural_theme": "Identity-card application"
   },
   {
     "id": "d-a2-20",
@@ -7622,18 +7617,18 @@
       },
       {
         "who": "Jonas",
-        "de": "Du hast recht. Machen wir eine feste Absprache: Ich bin ordentlich in der Küche, du kümmerst dich ums Bad?",
-        "ar": "معك حق. لنتّفق اتفاقاً ثابتاً: أنا مرتّب في المطبخ، وأنتِ تهتمّين بالحمّام؟"
+        "de": "Du hast recht. Machen wir eine feste Absprache: Ich kümmere mich um die Küche, du dich um das Bad?",
+        "ar": "معك حق. لنتفق اتفاقاً ثابتاً: أنا أهتم بالمطبخ وأنتِ بالحمّام؟"
       },
       {
         "who": "Nadia",
-        "de": "Einverstanden. Und beim nächsten Problem: erst zuhören, dann streiten.",
-        "ar": "موافقة. وعند المشكلة القادمة: نستمع أولاً ثم نتخاصم."
+        "de": "Einverstanden. Und beim nächsten Problem: erst zuhören, dann ruhig miteinander reden.",
+        "ar": "موافقة. وعند المشكلة القادمة: نستمع أولاً ثم نتحدث بهدوء."
       },
       {
         "who": "Jonas",
-        "de": "Lieber gar nicht streiten.",
-        "ar": "بل الأفضل ألا نتخاصم أصلاً."
+        "de": "Genau. Das ist besser als streiten.",
+        "ar": "بالضبط. هذا أفضل من الخصام."
       }
     ],
     "questions": [
@@ -7649,21 +7644,21 @@
         "explanationAr": "الدليل: «die Spülmaschine ist voll, aber niemand macht sie an». الفخّ 1: بقايا الطعام على الموقد لا في الغسّالة. الفخّ 2: «heute Abend» وعد يوناس بالغسل باليد.",
         "id": "d-a2-20-q1",
         "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "promptAr": "ما مشكلة غسالة الصحون؟"
       },
       {
         "type": "mc",
         "promptDe": "Welche Absprache schlägt Jonas vor?",
         "options": [
           "Beide räumen die Küche zusammen auf.",
-          "Er macht die Küche, Nadia das Bad.",
-          "Nadia macht die Küche, er das Bad."
+          "Er kümmert sich um die Küche, Nadia um das Bad.",
+          "Nadia kümmert sich um die Küche, er um das Bad."
         ],
-        "answer": "Er macht die Küche, Nadia das Bad.",
-        "explanationAr": "الدليل: «Ich bin ordentlich in der Küche, du kümmerst dich ums Bad?». الفخّ: قلب الأدوار.",
+        "answer": "Er kümmert sich um die Küche, Nadia um das Bad.",
+        "explanationAr": "الدليل: «Ich kümmere mich um die Küche, du dich um das Bad?» الفخّ: الخيار الآخر يقلب الدورين.",
         "id": "d-a2-20-q2",
         "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "promptAr": "ما الاتفاق الذي يقترحه يوناس؟"
       },
       {
         "type": "fill",
@@ -7673,7 +7668,7 @@
         ],
         "explanationAr": "الدليل: «In einer Wohngemeinschaft braucht man Rücksicht, sonst funktioniert es nicht».",
         "id": "d-a2-20-q3",
-        "promptAr": "أكمل الفراغ بالكلمة المناسبة من الحوار."
+        "promptAr": "يحتاج السكن المشترك إلى ___ كي ينجح."
       }
     ],
     "dictation": [
@@ -7683,18 +7678,17 @@
     "neu": true,
     "waisen": [
       "die Wohngemeinschaft",
-      "aufräumen",
       "die Spülmaschine",
-      "abwaschen",
       "die Essensreste",
       "die Rücksicht",
       "die Absprache",
-      "ordentlich",
       "chaotisch",
-      "zuhören"
+      "zuhören",
+      "der Streit",
+      "Einverstanden",
+      "stressig"
     ],
-    "cultural_theme": "Literatur - German literature",
-    "cultural_note": "Theme: Literatur - German literature"
+    "cultural_theme": "Shared-flat agreements"
   },
   {
     "id": "d-a2-21",
@@ -7705,7 +7699,7 @@
       {
         "who": "Trainer",
         "de": "Kopf hoch, Leute. Wir haben verloren, aber die Mannschaft hat gut gespielt.",
-        "ar": "ارفعوا رؤوسكم يا شباب. خسرنا لكن الفريق لعب جيداً."
+        "ar": "ارفعوا رؤوسكم يا جماعة. خسرنا لكن الفريق لعب جيداً."
       },
       {
         "who": "Selim",
@@ -7724,8 +7718,8 @@
       },
       {
         "who": "Trainer",
-        "de": "Dann muss er morgen zum Facharzt, nicht nur zum Hausarzt.",
-        "ar": "إذن عليه غداً الذهاب إلى الطبيب المختص لا إلى طبيب العائلة فقط."
+        "de": "Dann sollte er das Knie ärztlich untersuchen lassen, besonders wenn die Beschwerden stark bleiben.",
+        "ar": "إذن ينبغي أن يخضع ركبته لفحص طبي، خصوصاً إذا استمرت الأعراض شديدة."
       },
       {
         "who": "Selim",
@@ -7756,21 +7750,21 @@
         "explanationAr": "الدليل: «Wir haben verloren» و«Zwei zu drei». الفخّ 1: قلب النتيجة. الفخّ 2: الإصابة لم توقف المباراة.",
         "id": "d-a2-21-q1",
         "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "promptAr": "ما نتيجة المباراة؟"
       },
       {
         "type": "mc",
-        "promptDe": "Wohin soll Ali morgen gehen?",
+        "promptDe": "Was soll Ali wegen seiner Kniebeschwerden tun?",
         "options": [
-          "nur zum Hausarzt",
-          "zu Ali nach Hause",
-          "zum Facharzt"
+          "das Knie ärztlich untersuchen lassen",
+          "nur bis nächste Woche warten",
+          "heute Abend wieder Fußball spielen"
         ],
-        "answer": "zum Facharzt",
-        "explanationAr": "الدليل: «Dann muss er morgen zum Facharzt, nicht nur zum Hausarzt». الفخّ 1: «nicht nur zum Hausarzt» منفيّ صراحة. الفخّ 2: بيت علي يزوره الأصدقاء مساءً.",
+        "answer": "das Knie ärztlich untersuchen lassen",
+        "explanationAr": "الدليل: «sollte er das Knie ärztlich untersuchen lassen». الفخّ: الانتظار وحده والعودة إلى اللعب مساءً لا يردان كتوصية.",
         "id": "d-a2-21-q2",
         "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "promptAr": "ماذا ينبغي لعلي أن يفعل بسبب أعراض ركبته؟"
       },
       {
         "type": "truefalse",
@@ -7782,7 +7776,7 @@
         "answer": "richtig",
         "explanationAr": "الدليل: «heute Abend gehen wir alle zu ihm, um ihn zu trösten».",
         "id": "d-a2-21-q3",
-        "promptAr": "هل العبارة صحيحة أم خاطئة حسب الحوار؟"
+        "promptAr": "هل يزور الأصدقاء علياً هذا المساء؟"
       }
     ],
     "dictation": [
@@ -7793,15 +7787,16 @@
     "waisen": [
       "die Mannschaft",
       "gewinnen",
-      "verlieren",
       "die Verletzung",
       "sich verletzen",
-      "der Facharzt",
       "die Beschwerden",
       "trösten",
-      "hilfsbereit"
+      "hilfsbereit",
+      "das Knie",
+      "weh tun",
+      "schlimm"
     ],
-    "cultural_theme": "Accommodation"
+    "cultural_theme": "Sports injury and support"
   },
   {
     "id": "d-a2-22",
@@ -7811,8 +7806,8 @@
     "lines": [
       {
         "who": "Fatma",
-        "de": "Schau, die Nebenkostenabrechnung ist gekommen. Wir müssen 240 Euro nachzahlen.",
-        "ar": "انظر، وصلت تسوية المصاريف الجانبية. علينا دفع 240 يورو إضافية."
+        "de": "Schau, die Jahresabrechnung für Strom ist gekommen. Wir müssen 240 Euro nachzahlen.",
+        "ar": "انظر، وصلت التسوية السنوية للكهرباء. علينا دفع 240 يورو إضافية."
       },
       {
         "who": "Omar",
@@ -7846,8 +7841,8 @@
       },
       {
         "who": "Omar",
-        "de": "Und die 240 Euro? Können wir in Raten zahlen?",
-        "ar": "والـ240 يورو؟ هل نستطيع الدفع بالتقسيط؟"
+        "de": "Ob Ratenzahlung möglich ist, fragen wir beim Anbieter nach.",
+        "ar": "سنسأل المزوّد إن كان الدفع بالتقسيط ممكناً."
       }
     ],
     "questions": [
@@ -7863,7 +7858,7 @@
         "explanationAr": "الدليل: «Letztes Jahr gab es eine Rückzahlung von 80 Euro». الفخّ 1: قلب الاتجاه. الفخّ 2: تغيير المزوّد فكرة للمستقبل.",
         "id": "d-a2-22-q1",
         "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "promptAr": "ما الذي كان مختلفاً في السنة الماضية؟"
       },
       {
         "type": "mc",
@@ -7877,7 +7872,7 @@
         "explanationAr": "الدليل: «ich mache einen Preisvergleich. Vielleicht ist ein anderer Stromanbieter billiger». الفخّ 1: التقسيط سؤال عمر. الفخّ 2: 23 درجة هو ما يريدون تركه.",
         "id": "d-a2-22-q2",
         "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "promptAr": "ماذا تريد فاطمة أن تفعل؟"
       },
       {
         "type": "truefalse",
@@ -7889,7 +7884,7 @@
         "answer": "richtig",
         "explanationAr": "الدليل: «Wir müssen 240 Euro nachzahlen».",
         "id": "d-a2-22-q3",
-        "promptAr": "هل العبارة صحيحة أم خاطئة حسب الحوار؟"
+        "promptAr": "هل يجب عليهما دفع 240 يورو إضافية؟"
       }
     ],
     "dictation": [
@@ -7899,7 +7894,7 @@
     "neu": true,
     "waisen": [
       "der Stromanbieter",
-      "die Nebenkostenabrechnung",
+      "die Stromrechnung",
       "nachzahlen",
       "die Rückzahlung",
       "die Energiekosten",
@@ -7908,7 +7903,7 @@
       "der Preisvergleich",
       "die Ausgaben"
     ],
-    "cultural_theme": "Health"
+    "cultural_theme": "Household bills and budgeting"
   },
   {
     "id": "d-a2-23",
@@ -7970,7 +7965,7 @@
         "explanationAr": "الدليل: «Und die Dekoration? … Das machen die Kinder». الفخّ 1: الأم تحضّر الأطباق. الفخّ 2: الضيوف يأتون فقط.",
         "id": "d-a2-23-q1",
         "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "promptAr": "من يصنع الزينة؟"
       },
       {
         "type": "mc",
@@ -7984,7 +7979,7 @@
         "explanationAr": "الدليل: «Nur dich selbst». الفخّ 1: الحلويات تجرّبها. الفخّ 2: الأضواء زينة العائلة.",
         "id": "d-a2-23-q2",
         "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "promptAr": "ماذا ينبغي للينا أن تحضر؟"
       },
       {
         "type": "fill",
@@ -7994,7 +7989,7 @@
         ],
         "explanationAr": "الدليل: «Wie viele Gäste kommen?» … «Ungefähr zwanzig».",
         "id": "d-a2-23-q3",
-        "promptAr": "أكمل الفراغ بالكلمة المناسبة من الحوار."
+        "promptAr": "سيأتي نحو عشرين ___."
       }
     ],
     "dictation": [
@@ -8015,7 +8010,7 @@
       "die Gastfreundschaft",
       "das Ramadanfest"
     ],
-    "cultural_theme": "Accommodation"
+    "cultural_theme": "Family celebration and hospitality"
   },
   {
     "id": "d-a2-24",
@@ -8060,8 +8055,8 @@
       },
       {
         "who": "Youssef",
-        "de": "Und wie bereite ich mich auf das Gespräch vor?",
-        "ar": "وكيف أستعدّ للمقابلة؟"
+        "de": "Danke. Dann schicke ich die Unterlagen und bereite mich auf das Gespräch vor.",
+        "ar": "شكراً. سأرسل الوثائق وأستعد للمقابلة."
       }
     ],
     "questions": [
@@ -8077,7 +8072,7 @@
         "explanationAr": "الدليل: «In der letzten Klassenarbeit sogar eine Eins». الفخّ 1: «Eine Zwei» هي درجة الرياضيات العامة. الفخّ 2: قلب الدرجتين.",
         "id": "d-a2-24-q1",
         "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "promptAr": "ما درجة يوسف في آخر اختبار صفي؟"
       },
       {
         "type": "mc",
@@ -8091,7 +8086,7 @@
         "explanationAr": "الدليل: «Meine Eltern können das Studium nicht bezahlen». الفخّ 1: العمل في السوبرماركت واقع لا سبب. الفخّ 2: الدرجات جيدة.",
         "id": "d-a2-24-q2",
         "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "promptAr": "لماذا يحتاج يوسف إلى المنحة؟"
       },
       {
         "type": "truefalse",
@@ -8103,7 +8098,7 @@
         "answer": "falsch",
         "explanationAr": "الدليل: «Schicken Sie die Bewerbungsunterlagen bis zum 15. März» — مارس لا أبريل.",
         "id": "d-a2-24-q3",
-        "promptAr": "هل العبارة صحيحة أم خاطئة حسب الحوار؟"
+        "promptAr": "هل يجب وصول وثائق الطلب بحلول 15 أبريل؟"
       }
     ],
     "dictation": [
@@ -8123,8 +8118,7 @@
       "die Unterstützung",
       "sich vorbereiten auf"
     ],
-    "cultural_theme": "Berliner Mauer - Berlin Wall history",
-    "cultural_note": "Theme: Berliner Mauer - Berlin Wall history"
+    "cultural_theme": "Scholarship application"
   },
   {
     "id": "d-a2-25",
@@ -8154,23 +8148,23 @@
       },
       {
         "who": "Kontrolleur",
-        "de": "Das glaube ich Ihnen. Aber die Regel ist die Regel: 60 Euro.",
-        "ar": "أصدّقك. لكن القاعدة قاعدة: 60 يورو."
+        "de": "Das glaube ich Ihnen. Aber ich muss Ihnen eine Zahlungsaufforderung ausstellen; der aktuelle Betrag steht darauf.",
+        "ar": "أصدقك. لكن يجب أن أصدر لك مطالبة بالدفع؛ والمبلغ الحالي مذكور فيها."
       },
       {
         "who": "Rania",
-        "de": "Kann ich die neue Monatskarte nachher zeigen? Dann zahle ich weniger, oder?",
-        "ar": "هل يمكنني إظهار البطاقة الشهرية الجديدة لاحقاً؟ عندها أدفع أقل، صحيح؟"
+        "de": "Kann ich meine neue persönliche Monatskarte nachreichen?",
+        "ar": "هل يمكنني تقديم بطاقتي الشهرية الشخصية الجديدة لاحقاً؟"
       },
       {
         "who": "Kontrolleur",
-        "de": "Ja, innerhalb von einer Woche im Kundenzentrum. Dann sind es nur sieben Euro.",
-        "ar": "نعم، خلال أسبوع في مركز الزبائن. عندها سبعة يورو فقط."
+        "de": "Das Kundenzentrum prüft nach den aktuellen Bedingungen, ob sich der Betrag reduziert. Frist und Adresse stehen auf der Zahlungsaufforderung.",
+        "ar": "يفحص مركز الزبائن وفق الشروط الحالية إن كان المبلغ سيُخفّض. والمهلة والعنوان مذكوران في مطالبة الدفع."
       },
       {
         "who": "Rania",
-        "de": "Danke, dass Sie so höflich sind. Noch eine Auskunft bitte: Wegen der Umleitung heute, erreiche ich meine Verbindung am Hauptbahnhof?",
-        "ar": "شكراً لأنك مهذب. معلومة أخرى من فضلك: بسبب التحويلة اليوم، هل ألحق بقطار الربط في المحطة الرئيسية؟"
+        "de": "Danke. Wegen der Umleitung fahre ich früher zum Hauptbahnhof, damit ich meine Verbindung erreiche.",
+        "ar": "شكراً. بسبب التحويلة سأذهب أبكر إلى المحطة الرئيسية كي ألحق بقطار الربط."
       }
     ],
     "questions": [
@@ -8186,21 +8180,21 @@
         "explanationAr": "الدليل: «Die ist seit gestern nicht mehr gültig. Der Monat ist zu Ende». الفخّ 1: لم يُذكر خطأ في الشراء. الفخّ 2: التحويلة موضوع آخر.",
         "id": "d-a2-25-q1",
         "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "promptAr": "لماذا لم تعد البطاقة الشهرية صالحة؟"
       },
       {
         "type": "mc",
-        "promptDe": "Wie viel zahlt Rania, wenn sie die neue Monatskarte innerhalb einer Woche zeigt?",
+        "promptDe": "Was prüft das Kundenzentrum nach den aktuellen Bedingungen?",
         "options": [
-          "sieben Euro",
-          "60 Euro",
-          "sechs Euro"
+          "ob sich der Betrag nach dem Nachreichen reduziert",
+          "ob der Monat zu Ende ist",
+          "ob die Umleitung am Hauptbahnhof beginnt"
         ],
-        "answer": "sieben Euro",
-        "explanationAr": "الدليل: «innerhalb von einer Woche im Kundenzentrum. Dann sind es nur sieben Euro». الفخّ 1: 60 يورو بلا إثبات. الفخّ 2: sechs/sieben تشابه صوتي.",
+        "answer": "ob sich der Betrag nach dem Nachreichen reduziert",
+        "explanationAr": "الدليل: «prüft … ob sich der Betrag reduziert». الفخّ: انتهاء الشهر سبب عدم صلاحية البطاقة، والتحويلة موضوع الرحلة لا مراجعة المبلغ.",
         "id": "d-a2-25-q2",
         "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "promptAr": "ماذا يفحص مركز الزبائن وفق الشروط الحالية؟"
       },
       {
         "type": "fill",
@@ -8210,12 +8204,12 @@
         ],
         "explanationAr": "الدليل: «Ich wollte nicht schwarzfahren» — فعل منفصل في المصدر بعد wollte.",
         "id": "d-a2-25-q3",
-        "promptAr": "أكمل الفراغ بالكلمة المناسبة من الحوار."
+        "promptAr": "لم أُرِد أن ___."
       }
     ],
     "dictation": [
       "Die ist seit gestern nicht mehr gültig.",
-      "Aber die Regel ist die Regel: 60 Euro."
+      "der aktuelle Betrag steht darauf."
     ],
     "neu": true,
     "waisen": [
@@ -8226,15 +8220,19 @@
       "das Ticket",
       "die Umleitung",
       "die Verbindung",
-      "die Auskunft",
-      "höflich"
+      "der Bahnhof",
+      "erreichen",
+      "die Bedingung",
+      "prüfen",
+      "früher",
+      "damit"
     ],
-    "cultural_theme": "Health"
+    "cultural_theme": "Ticket inspection"
   },
   {
     "id": "d-a2-26",
     "level": "A2",
-    "titleDe": "Klamotten kaufen",
+    "titleDe": "Kleidung kaufen",
     "titleAr": "شراء ملابس",
     "lines": [
       {
@@ -8269,8 +8267,8 @@
       },
       {
         "who": "Verkäuferin",
-        "de": "Vierzehn Tage, aber nur mit Quittung. Heben Sie die Quittung also gut auf.",
-        "ar": "أربعة عشر يوماً، لكن بالإيصال فقط. احتفظي بالإيصال جيداً."
+        "de": "Bei uns gilt für diese Hose: vierzehn Tage, aber nur mit Quittung. Heben Sie die Quittung also gut auf.",
+        "ar": "تسري لدينا على هذا البنطال مهلة أربعة عشر يوماً، ولكن مع الإيصال فقط. لذا احتفظي بالإيصال جيداً."
       },
       {
         "who": "Mira",
@@ -8291,7 +8289,7 @@
         "explanationAr": "الدليل: «29 statt 49 Euro». الفخّ 1: 49 السعر القديم. الفخّ 2: 38 هو المقاس.",
         "id": "d-a2-26-q1",
         "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "promptAr": "كم سعر البنطال في العرض الخاص؟"
       },
       {
         "type": "mc",
@@ -8302,10 +8300,10 @@
           "die Farbe Dunkelblau"
         ],
         "answer": "die Quittung",
-        "explanationAr": "الدليل: «Vierzehn Tage, aber nur mit Quittung». الفخّ 1: غرفة القياس للتجربة. الفخّ 2: اللون رغبة ميرا.",
+        "explanationAr": "الدليل في سياسة هذا المتجر: «Bei uns gilt für diese Hose … nur mit Quittung». الفخّ: غرفة القياس للتجربة، واللون رغبة ميرا.",
         "id": "d-a2-26-q2",
         "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "promptAr": "ما المهم لإرجاع البنطال وفق سياسة المتجر؟"
       },
       {
         "type": "truefalse",
@@ -8317,7 +8315,7 @@
         "answer": "richtig",
         "explanationAr": "الدليل: «Die Farbe ist ein bisschen altmodisch».",
         "id": "d-a2-26-q3",
-        "promptAr": "هل العبارة صحيحة أم خاطئة حسب الحوار؟"
+        "promptAr": "هل ترى ميرا أن اللون الأول قديم الطراز؟"
       }
     ],
     "dictation": [
@@ -8337,7 +8335,7 @@
       "der Schmuck",
       "altmodisch"
     ],
-    "cultural_theme": "Entertainment"
+    "cultural_theme": "Clothing shopping and returns"
   },
   {
     "id": "d-a2-27",
@@ -8352,7 +8350,7 @@
       },
       {
         "who": "Oma",
-        "de": "Damals gab es kein Internet und nur ein Telefon im ganzen Haus. Wir haben draußen gespielt, bis es dunkel war.",
+        "de": "Damals gab es kein Internet und nur ein Telefon im ganzen Haus. Wir haben draußen gespielt, bis es dunkel wurde.",
         "ar": "آنذاك لم يكن هناك إنترنت وهاتف واحد فقط في البيت كله. كنا نلعب في الخارج حتى يحلّ الظلام."
       },
       {
@@ -8382,8 +8380,8 @@
       },
       {
         "who": "Oma",
-        "de": "Manchmal. Aber man gewöhnt sich an alles, auch an Handys.",
-        "ar": "أحياناً. لكن المرء يعتاد على كل شيء، حتى الهواتف."
+        "de": "Manchmal. Ich habe mich inzwischen sogar an Handys gewöhnt.",
+        "ar": "أحياناً. لقد اعتدت الآن حتى على الهواتف المحمولة."
       }
     ],
     "questions": [
@@ -8399,7 +8397,7 @@
         "explanationAr": "الدليل: «Der Höhepunkt war jeden Sommer die Reise ans Meer mit der ganzen Familie». الفخّ 1: اللعب في الخارج يومي لا ذروة الصيف. الفخّ 2: الهاتف تفصيل عن الماضي.",
         "id": "d-a2-27-q1",
         "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "promptAr": "ما أبرز حدث في كل صيف بحسب الجدة؟"
       },
       {
         "type": "mc",
@@ -8413,17 +8411,17 @@
         "explanationAr": "الدليل: «Nur das Meer ist gleich geblieben». الفخّ: الشوارع والمباني «neue»/«hohe».",
         "id": "d-a2-27-q2",
         "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "promptAr": "ما الذي بقي كما هو في سوسة؟"
       },
       {
         "type": "fill",
-        "promptDe": "Aber man gewöhnt sich ___ alles, auch an Handys.",
+        "promptDe": "Ich habe mich sogar ___ Handys gewöhnt.",
         "answer": [
           "an"
         ],
-        "explanationAr": "الدليل: «Aber man gewöhnt sich an alles» — sich gewöhnen an + Akkusativ.",
+        "explanationAr": "الدليل: «Ich habe mich inzwischen sogar an Handys gewöhnt.» — sich gewöhnen an + Akkusativ.",
         "id": "d-a2-27-q3",
-        "promptAr": "أكمل الفراغ بالكلمة المناسبة من الحوار."
+        "promptAr": "لقد اعتدت حتى ___ الهواتف المحمولة."
       }
     ],
     "dictation": [
@@ -8443,8 +8441,7 @@
       "erzählen",
       "sich gewöhnen an"
     ],
-    "cultural_theme": "Ostern - Easter celebrations",
-    "cultural_note": "Theme: Ostern - Easter celebrations"
+    "cultural_theme": "Childhood memories"
   },
   {
     "id": "d-a1-10",
@@ -10780,7 +10777,7 @@
     "dictation": [
       "Ich habe ein Problem mit meinem Zimmer."
     ],
-    "cultural_theme": "Travel"
+    "cultural_theme": "Hotel complaints"
   },
   {
     "id": "dlg-a2-terminabsage",
@@ -10834,12 +10831,12 @@
       {
         "who": "Patient",
         "de": "Ja, bitte. Geht es nächsten Dienstag um elf Uhr?",
-        "ar": "نعم، من فضلك. هل يناسبك الثلاثاء القادم عند الساعة الحادية عشرة؟"
+        "ar": "نعم، من فضلك. هل يتاح موعد يوم الثلاثاء القادم عند الساعة الحادية عشرة؟"
       },
       {
         "who": "Mitarbeiterin",
-        "de": "Am Dienstag um elf ist noch frei. Ich trage Sie ein. Tut mir leid, dass Sie nicht kommen können.",
-        "ar": "ما زال موعد الثلاثاء عند الساعة الحادية عشرة متاحاً. سأُسجّل لك. أعتذر لعدم تمكنك من الحضور."
+        "de": "Am Dienstag um elf ist noch frei. Ich trage Sie für diesen Termin ein.",
+        "ar": "ما زال موعد الثلاثاء عند الحادية عشرة متاحاً. سأُسجّلك في هذا الموعد."
       },
       {
         "who": "Patient",
@@ -10855,7 +10852,7 @@
     "dictation": [
       "Guten Tag, Praxis Dr. Müller, was kann ich für Sie tun?"
     ],
-    "cultural_theme": "Entertainment"
+    "cultural_theme": "Medical appointment rescheduling"
   },
   {
     "id": "dlg-a2-krankenversicherung",
@@ -10865,16 +10862,16 @@
     "questions": [
       {
         "options": [
-          "Sie und Ihr Arbeitgeber zahlen jeweils die Hälfte.",
-          "Nur Sie.",
-          "Nur Ihr Arbeitgeber."
+          "Die Krankenkasse berechnet sie nach den aktuellen Regeln.",
+          "Die Kundin nennt die Höhe selbst.",
+          "Der Arbeitgeber nennt die Höhe allein."
         ],
-        "answer": "Sie und Ihr Arbeitgeber zahlen jeweils die Hälfte.",
-        "explanationAr": "الدليل: قالت الموظفة إنكِ وصاحب العمل تدفعان المساهمة مناصفةً عند انطباق هذه الحالة. الفخّ: الخياران الآخران يحمّلان طرفاً واحداً كامل المبلغ، خلافاً للتقاسم المتساوي.",
-        "promptDe": "Wer zahlt den Beitrag?",
+        "answer": "Die Krankenkasse berechnet sie nach den aktuellen Regeln.",
+        "explanationAr": "الدليل: «Die Krankenkasse berechnet die genaue Höhe nach den aktuell geltenden Regeln». الفخّ: لا تحدد الزبونة أو صاحب العمل القيمة منفرداً.",
+        "promptDe": "Was sagt die Mitarbeiterin zur Beitragshöhe?",
         "type": "mc",
         "id": "dlg-a2-krankenversicherung-q1",
-        "promptAr": "من يدفع المساهمة؟"
+        "promptAr": "ماذا تقول الموظفة عن قيمة المساهمة؟"
       },
       {
         "options": [
@@ -10898,8 +10895,8 @@
       },
       {
         "who": "Mitarbeiterin",
-        "de": "Herzlich willkommen bei Ihrer gesetzlichen Krankenkasse. Sind Sie berufstätig oder studieren Sie?",
-        "ar": "أهلاً وسهلاً بك في صندوق التأمين الصحي القانوني. هل تعملين أم تدرسين؟"
+        "de": "Herzlich willkommen bei unserer gesetzlichen Krankenkasse. Sind Sie berufstätig oder studieren Sie?",
+        "ar": "أهلاً وسهلاً بك في صندوق التأمين الصحي القانوني لدينا. هل تعملين أم تدرسين؟"
       },
       {
         "who": "Kundin",
@@ -10918,8 +10915,8 @@
       },
       {
         "who": "Mitarbeiterin",
-        "de": "Der Beitrag richtet sich nach Ihrem Einkommen. Wenn Sie gesetzlich versichert und angestellt sind, tragen Sie und Ihr Arbeitgeber ihn grundsätzlich je zur Hälfte.",
-        "ar": "تتحدد المساهمة بحسب دخلك. وإذا كنتِ موظفة ومؤمّنة في نظام التأمين الصحي القانوني، فتدفعين أنتِ وصاحب العمل المساهمة مناصفةً في المعتاد."
+        "de": "Der Beitrag richtet sich nach Ihrem Einkommen. Die Krankenkasse berechnet die genaue Höhe nach den aktuell geltenden Regeln und erklärt Ihnen die Aufteilung mit dem Arbeitgeber.",
+        "ar": "تتحدد المساهمة بحسب دخلك. يحسب صندوق التأمين قيمتها الدقيقة وفق القواعد السارية حالياً ويشرح لك كيفية تقسيمها مع صاحب العمل."
       },
       {
         "who": "Kundin",
@@ -10935,7 +10932,7 @@
     "dictation": [
       "Guten Tag, ich möchte mich krankenversichern."
     ],
-    "cultural_theme": "Weather"
+    "cultural_theme": "Statutory health insurance"
   },
   {
     "id": "dlg-b1-kontoeroeffnung",
@@ -11573,23 +11570,23 @@
     "lines": [
       {
         "who": "Anrufbeantworter",
-        "de": "Guten Tag, Sie haben die Praxis von Dr. Müller erreicht. Unsere Sprechzeiten sind Montag bis Freitag von 8 bis 12 und Dienstag und Donnerstag von 15 bis 18 Uhr. In dringenden Fällen rufen Sie bitte den ärztlichen Notdienst unter der Nummer 116 117 an. Möchten Sie einen Termin vereinbaren, drücken Sie bitte die 1. Um die Ansage zu wiederholen, drücken Sie bitte die 9.",
-        "ar": "مرحباً، لقد اتصلتم بعيادة د. مولر. ساعات استقبال المرضى من الاثنين إلى الجمعة من ٨ صباحاً إلى ١٢ ظهراً، ويومي الثلاثاء والخميس من ١٥ إلى ١٨. في الحالات الطبية العاجلة، يُرجى الاتصال بخدمة الأطباء المناوبة على الرقم ١١٦ ١١٧. لحجز موعد، اضغطوا الرقم 1. ولإعادة سماع الإعلان، اضغطوا الرقم 9."
+        "de": "Guten Tag, Sie haben die Praxis von Dr. Müller erreicht. Unsere Sprechzeiten sind Montag bis Freitag von 8 bis 12 und Dienstag und Donnerstag von 15 bis 18 Uhr. In dringenden, aber nicht lebensbedrohlichen Fällen rufen Sie bitte den ärztlichen Bereitschaftsdienst unter 116 117 an. In lebensbedrohlichen Notfällen wählen Sie 112. Möchten Sie einen Termin vereinbaren, drücken Sie bitte die 1. Um die Ansage zu wiederholen, drücken Sie bitte die 9.",
+        "ar": "مرحباً، لقد اتصلتم بعيادة د. مولر. ساعات استقبال المرضى من الاثنين إلى الجمعة من ٨ صباحاً إلى ١٢ ظهراً، ويومي الثلاثاء والخميس من ١٥ إلى ١٨. في الحالات العاجلة غير المهددة للحياة، اتصلوا بخدمة الأطباء المناوبة على الرقم ١١٦ ١١٧. وفي الحالات الطارئة المهددة للحياة اتصلوا بالرقم ١١٢. لحجز موعد، اضغطوا الرقم ١. ولإعادة سماع الإعلان، اضغطوا الرقم ٩."
       }
     ],
     "questions": [
       {
         "type": "mc",
-        "promptDe": "Welche Nummer wählt man in dringenden Fällen?",
-        "promptAr": "ما رقم خدمة الأطباء المناوبة في الحالات العاجلة؟",
+        "promptDe": "Welche Nummer nennt die Ansage für dringende, nicht lebensbedrohliche Fälle?",
+        "promptAr": "ما الرقم المذكور للحالات العاجلة غير المهددة للحياة؟",
         "options": [
-          "Ärztlicher Notdienst: 110",
-          "Ärztlicher Notdienst: 112",
-          "Ärztlicher Notdienst: 116 117",
-          "Ärztlicher Notdienst: 0180-1"
+          "Ärztlicher Bereitschaftsdienst: 110",
+          "Ärztlicher Bereitschaftsdienst: 112",
+          "Ärztlicher Bereitschaftsdienst: 116 117",
+          "Ärztlicher Bereitschaftsdienst: 0180-1"
         ],
-        "answer": "Ärztlicher Notdienst: 116 117",
-        "explanationAr": "الدليل: يطلب التسجيل الاتصال بالخدمة الطبية المناوبة على 116 117 عند الحالات العاجلة. الفخّ: 110 و112 رقمان شائعان للطوارئ، لكنهما ليسا الرقم المنطوق لهذه الخدمة؛ و0180-1 غير وارد في الإعلان.",
+        "answer": "Ärztlicher Bereitschaftsdienst: 116 117",
+        "explanationAr": "الدليل: يذكر التسجيل 116 117 للحالات العاجلة غير المهددة للحياة. الفخّ: 112 مخصص في الإعلان للطوارئ المهددة للحياة، أما 110 و0180-1 فلا يردان لهذه الخدمة.",
         "id": "hoer-a2-01-q1"
       },
       {
@@ -11611,8 +11608,7 @@
       "Unsere Sprechzeiten sind Montag bis Freitag von 8 bis 12 und Dienstag und Donnerstag von 15 bis 18 Uhr."
     ],
     "hoertext": true,
-    "cultural_theme": "Musik - Classical music (Beethoven, Bach)",
-    "cultural_note": "Theme: Musik - Classical music (Beethoven, Bach)"
+    "cultural_theme": "Medical-practice opening hours"
   },
   {
     "id": "hoer-a2-02",
@@ -11661,7 +11657,7 @@
       "Im Süden bleibt es warm und trocken mit Höchstwerten bis 26 Grad."
     ],
     "hoertext": true,
-    "cultural_theme": "Accommodation"
+    "cultural_theme": "Weather forecast"
   },
   {
     "id": "hoer-b1-01",
@@ -12234,7 +12230,7 @@
       },
       {
         "de": "Das Angebot gilt nur heute bis Ladenschluss um 20 Uhr. Bitte beachten Sie auch unsere neue Damenabteilung im ersten Stock.",
-        "ar": "العرض ساري اليوم فقط حتى إغلاق المتجر الساعة ٢٠. زوروا قسم النساء الجديد في الطابق الأول.",
+        "ar": "العرض ساري اليوم فقط حتى إغلاق المتجر الساعة ٢٠. ويرجى أيضاً الانتباه إلى قسم الملابس النسائية الجديد في الطابق الأول.",
         "who": "Ansage"
       }
     ],
@@ -12258,8 +12254,7 @@
     "dictation": [
       "Sehr geehrte Kundinnen und Kunden!"
     ],
-    "cultural_theme": "Bierbrauerei - German beer culture",
-    "cultural_note": "Theme: Bierbrauerei - German beer culture"
+    "cultural_theme": "Department-store offer"
   },
   {
     "id": "d-b1-ht01",
@@ -12581,8 +12576,8 @@
     "situationAr": "رسالة من مركز تعليم الكبار",
     "lines": [
       {
-        "de": "Hallo Ahmed, hier ist Sabine Becker von der Volkshochschule. Ihr Kurs beginnt am kommenden Montag um 18 Uhr in Raum 304. Bitte bringen Sie Ihr Buch und einen Stift mit. Rückfragen unter 0221-4711.",
-        "ar": "مرحباً أحمد، أنا زابينه بيكر من مركز تعليم الكبار. تبدأ دورتك يوم الاثنين القادم الساعة 18 في الغرفة 304. يُرجى إحضار كتابك وقلماً معك. للاستفسار، اتصل على 0221-4711.",
+        "de": "Hallo Ahmed, hier ist Sabine Becker von der Volkshochschule. Ihr Kurs beginnt am kommenden Montag um 18 Uhr in Raum 304. Bitte bringen Sie Ihr Buch und einen Stift mit. Für Rückfragen nutzen Sie bitte die Nummer in Ihrer Kursbestätigung.",
+        "ar": "مرحباً أحمد، أنا زابينه بيكر من مركز تعليم الكبار. تبدأ دورتك يوم الاثنين القادم الساعة 18 في الغرفة 304. يُرجى إحضار كتابك وقلمك. وللاستفسار، استخدم الرقم الموجود في تأكيد الدورة.",
         "who": "Frau Becker"
       }
     ],
@@ -12606,43 +12601,42 @@
     "dictation": [
       "Hallo Ahmed, hier ist Sabine Becker von der Volkshochschule."
     ],
-    "cultural_theme": "Food"
+    "cultural_theme": "Adult-education course message"
   },
   {
     "id": "d-a2-ht03",
     "level": "A2",
     "type": "hoer",
-    "situationDe": "Radiomeldung: Unfall auf der A3",
-    "situationAr": "خبر: حادث على الطريق السريع A3",
+    "situationDe": "Fiktive Radiomeldung für eine Hörübung",
+    "situationAr": "نشرة إذاعية خيالية لتمرين استماع",
     "lines": [
       {
-        "de": "Die Polizei meldet einen Unfall auf der A3 kurz hinter der Anschlussstelle Lohmar in Fahrtrichtung Frankfurt. Drei Fahrzeuge sind beteiligt, die linke Spur ist gesperrt. Es gibt zurzeit einen Stau von acht Kilometern. Autofahrer werden gebeten, bei der nächsten Ausfahrt abzufahren.",
-        "ar": "تُبلغ الشرطة عن حادث على الطريق السريع A3 بعد مخرج لومار بقليل باتجاه فرانكفورت. اشتركت فيه ثلاث سيارات، والمسار الأيسر مغلق. يبلغ طول الازدحام حالياً ثمانية كيلومترات. ويُرجى من السائقين الخروج عند المخرج التالي.",
+        "de": "Beispielmeldung für diese Hörübung: Auf der A3 ist kurz hinter der Anschlussstelle Lohmar in Fahrtrichtung Frankfurt ein Unfall. Drei Fahrzeuge sind beteiligt, die linke Spur ist gesperrt. In der Übungsmeldung gibt es einen Stau von acht Kilometern. Autofahrer werden gebeten, bei der nächsten Ausfahrt abzufahren.",
+        "ar": "خبر نموذجي لهذا التمرين: وقع حادث على الطريق السريع A3 بعد مخرج لومار بقليل باتجاه فرانكفورت. اشتركت فيه ثلاث سيارات، والمسار الأيسر مغلق. ويبلغ طول الازدحام في الخبر التدريبي ثمانية كيلومترات. ويُطلب من السائقين الخروج عند المخرج التالي.",
         "who": "Sprecher"
       }
     ],
-    "titleDe": "Radiomeldung: Unfall auf der A3",
-    "titleAr": "خبر: حادث على الطريق السريع A3",
+    "titleDe": "Übungsmeldung: Unfall auf der A3",
+    "titleAr": "خبر تدريبي: حادث على الطريق السريع A3",
     "questions": [
       {
         "id": "d-a2-ht03-q1",
         "type": "mc",
-        "promptDe": "Wie lang ist der Stau auf der A3?",
-        "promptAr": "كم يبلغ طول الازدحام على A3؟",
+        "promptDe": "Wie lang ist der Stau in der Übungsmeldung?",
+        "promptAr": "كم يبلغ طول الازدحام في الخبر التدريبي؟",
         "options": [
           "acht Kilometer",
           "fünf Kilometer",
           "drei Kilometer"
         ],
         "answer": "acht Kilometer",
-        "explanationAr": "الدليل: «Es gibt zurzeit einen Stau von acht Kilometern». الفخّ: الرقمان خمسة وثلاثة يبدلان طول الازدحام المذكور."
+        "explanationAr": "الدليل داخل الخبر الخيالي: «In der Übungsmeldung gibt es einen Stau von acht Kilometern.» الفخّ: الرقمان خمسة وثلاثة لا يمثلان طول الازدحام المذكور."
       }
     ],
     "dictation": [
-      "Die Polizei meldet einen Unfall auf der A3 kurz hinter der Anschlussstelle Lohmar in Fahrtrichtung Frankfurt."
+      "Beispielmeldung für diese Hörübung: Auf der A3 ist kurz hinter der Anschlussstelle Lohmar in Fahrtrichtung Frankfurt ein Unfall."
     ],
-    "cultural_theme": "Automobilindustrie - German car industry",
-    "cultural_note": "Theme: Automobilindustrie - German car industry"
+    "cultural_theme": "Fictional traffic bulletin"
   },
   {
     "id": "d-b1-ht03",
@@ -13211,12 +13205,12 @@
       {
         "who": "Herr Berger",
         "de": "Bürgeramt Mitte, Berger, guten Tag. Wie kann ich Ihnen helfen?",
-        "ar": "مكتب المواطنين وسط المدينة، معك السيد Berger، طاب يومك. كيف أستطيع مساعدتك؟"
+        "ar": "مكتب المواطنين وسط المدينة، معك السيد بيرغر، طاب يومك. كيف أستطيع مساعدتك؟"
       },
       {
         "who": "Frau Kaya",
         "de": "Guten Tag, hier ist Kaya. Ich habe am Donnerstag einen Termin, aber ich kann nicht kommen.",
-        "ar": "طاب يومك، معك السيدة Kaya. عندي موعد يوم الخميس لكنني لا أستطيع الحضور."
+        "ar": "طاب يومك، معك السيدة كايا. عندي موعد يوم الخميس لكنني لا أستطيع الحضور."
       },
       {
         "who": "Herr Berger",
@@ -13240,8 +13234,8 @@
       },
       {
         "who": "Herr Berger",
-        "de": "Bringen Sie bitte Ihren Pass und die alte Aufenthaltserlaubnis mit.",
-        "ar": "أحضري من فضلك جواز سفرك وتصريح الإقامة القديم."
+        "de": "In Ihrer Terminbestätigung stehen für diesen Antrag: Ihr Pass und die alte Aufenthaltserlaubnis.",
+        "ar": "ورد في تأكيد موعدك لهذا الطلب: جواز سفرك وتصريح الإقامة القديم."
       },
       {
         "who": "Frau Kaya",
@@ -13250,8 +13244,8 @@
       },
       {
         "who": "Herr Berger",
-        "de": "Ja, ein aktuelles Foto brauchen wir auch. Und das Formular von unserer Webseite.",
-        "ar": "نعم، نحتاج أيضاً إلى صورة حديثة. والاستمارة من موقعنا الإلكتروني."
+        "de": "Ja, dort stehen auch ein aktuelles Foto und das Formular von unserer Webseite. Prüfen Sie die aktuelle Liste bitte vor dem Termin noch einmal.",
+        "ar": "نعم، ووردت هناك أيضاً صورة حديثة والاستمارة من موقعنا. تحققي من القائمة الحالية مرة أخرى قبل الموعد من فضلك."
       },
       {
         "who": "Frau Kaya",
@@ -13281,7 +13275,7 @@
         ],
         "answer": "Sie kann am Donnerstag nicht kommen",
         "explanationAr": "الدليل: «Ich habe am Donnerstag einen Termin, aber ich kann nicht kommen». الفخّ: الصورة والاستمارة جاءتا لاحقاً في المكالمة.",
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "promptAr": "لماذا تتصل السيدة كايا؟"
       },
       {
         "id": "dlg-a2-buergeramt-q2",
@@ -13294,7 +13288,7 @@
         ],
         "answer": "am Montag um elf Uhr",
         "explanationAr": "الدليل: «Der neue Termin ist am Montag um elf Uhr». الفخّ: العاشرة يوم الاثنين مشغولة، والخميس هو الموعد القديم.",
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "promptAr": "متى الموعد الجديد؟"
       },
       {
         "id": "dlg-a2-buergeramt-q3",
@@ -13304,14 +13298,15 @@
           "Formular"
         ],
         "explanationAr": "الدليل: «ich fülle das Formular zu Hause aus».",
-        "promptAr": "أكمل الفراغ بالكلمة المناسبة من الحوار."
+        "promptAr": "تملأ ___ في البيت."
       }
     ],
     "dictation": [
       "Ich habe am Donnerstag einen Termin",
       "Am Montag ist um zehn Uhr leider nichts frei",
-      "Bringen Sie bitte Ihren Pass"
-    ]
+      "Ihr Pass und die alte Aufenthaltserlaubnis."
+    ],
+    "cultural_theme": "Civic appointment and documents"
   },
   {
     "id": "dlg-b1-elterngespraech",

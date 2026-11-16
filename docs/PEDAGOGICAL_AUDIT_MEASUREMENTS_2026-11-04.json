@@ -671,11 +671,11 @@
     "claimBoundary": "87 bounded internal A0–B2 decisions; independent review, field validation, and external linguistic, phonetic, CEFR, or exam sign-off remain pending"
   },
   "inventorySnapshot": {
-    "indexedTrackedFilesAndAuditArtifacts": 3629,
+    "indexedTrackedFilesAndAuditArtifacts": 3631,
     "manual_complete": 61,
-    "manual_targeted": 66,
-    "not_started": 3441,
-    "audit_artifact": 61
+    "manual_targeted": 67,
+    "not_started": 3440,
+    "audit_artifact": 63
   },
   "learningStateCorrections": {
     "findings": [
@@ -988,7 +988,7 @@
     "independentLinguisticSignOff": false,
     "independentTranslationSignOff": false,
     "externalCefrOrExamValidation": false,
-    "claimBoundary": "157 bounded internal A0–B2 decisions across 529 questions; all dialogues remain outside PA-037, with 52 A0–A1 dialogues separately guarded by PA-038-01/02 and 124 A2–B2 dialogues still pending; re-synthesis and text/audio matching or listening checks for 59 changed German reading-audio sources, independent review, field validation, and external linguistic, translation, legal, medical, environmental, security, CEFR, or exam sign-off remain pending",
+    "claimBoundary": "157 bounded internal A0–B2 decisions across 529 questions; all dialogues remain outside PA-037, with 90 A0–A2 dialogues separately guarded by PA-038-01/02/03 and 86 B1–B2 dialogues still pending; re-synthesis and text/audio matching or listening checks for 59 changed German reading-audio sources, independent review, field validation, and external linguistic, translation, legal, medical, environmental, security, CEFR, or exam sign-off remain pending",
     "audioSourcePassagesChanged": [
       "t-a0-06",
       "t-a1-09",
@@ -1086,30 +1086,41 @@
         "confirmedCurrentDialogues": 0,
         "fixture": "scripts/fixtures/dialogues-reviewed-02.json",
         "patch": "scripts/patches/apply_dialogue_review_pa038_02.py"
+      },
+      {
+        "batch": "PA-038-03",
+        "level": "A2",
+        "reviewedDialogues": 38,
+        "reviewedLines": 248,
+        "reviewedQuestions": 93,
+        "correctedDialogues": 38,
+        "confirmedCurrentDialogues": 0,
+        "fixture": "scripts/fixtures/dialogues-reviewed-03.json",
+        "patch": "scripts/patches/apply_dialogue_review_pa038_03.py"
       }
     ],
-    "reviewedDialogues": 52,
-    "reviewedLines": 306,
-    "reviewedQuestions": 124,
+    "reviewedDialogues": 90,
+    "reviewedLines": 554,
+    "reviewedQuestions": 217,
     "reviewedLevels": [
       "A0",
-      "A1"
+      "A1",
+      "A2"
     ],
-    "correctedDialogues": 52,
+    "correctedDialogues": 90,
     "confirmedCurrentDialogues": 0,
-    "remainingDialogues": 124,
+    "remainingDialogues": 86,
     "remainingLevels": [
-      "A2",
       "B1",
       "B2"
     ],
-    "scope": "item-by-item internal full-dialogue review of identity, level, German and Arabic titles, situations, speakers, all bilingual lines, all questions and dependent data, options, answers, explanations, dictation, metadata, perspective, sequence, ambiguity, duplication, register, and cultural, medical, emergency-services, transport, pricing, and factual claim boundaries; heuristic scans used for triage only",
+    "scope": "item-by-item internal full-dialogue review of stable identity, level, German and Arabic titles, situations, speakers, all bilingual lines, all questions and dependent data, options, answers, explanations, dictation, metadata, perspective, sequence, ambiguity, duplication, register, and cultural, legal, medical, pharmacy, emergency-services, workplace-safety, housing, identity-document, insurance, transport, pricing, return-policy, and factual claim boundaries; searches, regexes, and structural checks used for triage only, not linguistic correction generation",
     "regressionGate": "npm run audit:dialogue-content-review",
     "independentLinguisticSignOff": false,
     "independentTranslationSignOff": false,
     "culturalOrMedicalSignOff": false,
     "externalCefrOrExamValidation": false,
-    "claimBoundary": "52 bounded internal A0–A1 full-dialogue decisions across 306 lines and 124 questions; 124 A2–B2 dialogues, re-synthesis and text/audio matching or listening checks for 19 changed German dialogue-audio sources, independent review, field validation, and external linguistic, translation, cultural, medical, emergency-services, CEFR, or exam sign-off remain pending",
+    "claimBoundary": "90 bounded internal A0–A2 full-dialogue decisions across 554 lines and 217 questions; 86 B1–B2 dialogues, re-synthesis and text/audio matching or listening checks for 45 changed German dialogue-audio sources, independent review, field validation, and external linguistic, translation, cultural, legal, medical, emergency-services, audio, CEFR, Goethe, telc, or exam sign-off remain pending",
     "audioSourceDialoguesChanged": [
       "d-a0-05",
       "d-a0-11",
@@ -1129,7 +1140,33 @@
       "d-a1-26",
       "d-a1-27",
       "hoer-a1-02",
-      "d-a1-ht01"
+      "d-a1-ht01",
+      "d-a2-03",
+      "d-a2-05",
+      "d-a2-08",
+      "d-a2-31",
+      "d-a2-32",
+      "d-a2-10",
+      "d-a2-11",
+      "d-a2-14",
+      "d-a2-15",
+      "d-a2-16",
+      "d-a2-17",
+      "d-a2-18",
+      "d-a2-19",
+      "d-a2-20",
+      "d-a2-21",
+      "d-a2-22",
+      "d-a2-24",
+      "d-a2-25",
+      "d-a2-26",
+      "d-a2-27",
+      "dlg-a2-terminabsage",
+      "dlg-a2-krankenversicherung",
+      "hoer-a2-01",
+      "d-a2-ht02",
+      "d-a2-ht03",
+      "dlg-a2-buergeramt"
     ],
     "audioRevalidationCompleted": false,
     "technicalAudioQc": {

@@ -193,13 +193,19 @@ const fails: string[] = [];
 const pa03802ReviewForHistoricalChecks = JSON.parse(
   readFileSync("scripts/fixtures/dialogues-reviewed-02.json", "utf8"),
 ) as { entries: { id: string; previous: unknown }[] };
+const pa03803ReviewForHistoricalChecks = JSON.parse(
+  readFileSync("scripts/fixtures/dialogues-reviewed-03.json", "utf8"),
+) as { entries: { id: string; previous: unknown }[] };
 const pa03802PreviousById = new Map(
   pa03802ReviewForHistoricalChecks.entries.map((entry) => [entry.id, entry.previous]),
 );
-// R439: تقارير A1 المؤرخة في أكتوبر آثار تاريخية؛ تُقارن بحالة PA-038-02 السابقة،
-// بينما K437 والبوابة المخصصة تحرسان البنك الحالي بعد المراجعة الكاملة.
-const dialoguesBeforePa03802 = dialogues.map((dialogue) =>
-  pa03802PreviousById.get(dialogue.id) ?? dialogue
+const pa03803PreviousById = new Map(
+  pa03803ReviewForHistoricalChecks.entries.map((entry) => [entry.id, entry.previous]),
+);
+// R439/R440: تقارير أكتوبر آثار تاريخية؛ تُقارن بالحالة السابقة لدفعتَي PA-038-02/03،
+// بينما K437/K438 والبوابة المخصصة تحرس البنك الحالي بعد المراجعة الكاملة.
+const dialoguesBeforePa038Reviews = dialogues.map((dialogue) =>
+  pa03802PreviousById.get(dialogue.id) ?? pa03803PreviousById.get(dialogue.id) ?? dialogue
 ) as typeof dialogues;
 
 const ok = (cond: boolean, name: string) => {
@@ -2718,13 +2724,14 @@ void 0;
     const fr = alleVokabeln.find((c) => c.de === "die Frist")!;
     const v = verknuepfung(fr);
     ok(v.kollokationen.length >= 2 && (v.texte.length + v.dialoge.length) >= 1 && v.texte.every((t) => t.level === fr.level) && v.dialoge.every((d) => d.level === fr.level), `K81e بطاقةُ Frist (${fr.level}) ترتبطُ بمتلازماتِها وبـ${v.texte.length} نصًّا و${v.dialoge.length} حواراً من مستواها فقط`);
-    const soll: Record<string, number> = { A1: 98, A2: 99, B1: 97, B2: 98 };
-    // R298: كسابقه K76c — الأساس على بطاقات الخطة، وحزم التوسعة الحرة تُستثنى؛ خط B2 أُعيد تثبيته بعد PA-037-05 لأن إزالة الادعاءات غير المسندة أهم من إبقاء كلماتٍ لإرضاء مؤشر الترابط.
+    const soll: Record<string, number> = { A1: 98, A2: 97, B1: 97, B2: 98 };
+    // R298/PA-038-03: الأساس على بطاقات الخطة وحزم التوسعة الحرة مستثناة. خُفّض خط A2 المعلن
+    // بعد حذف وصفات/وعود/مصطلحات غير آمنة؛ لا تُعاد ألفاظ إلى الحوار لمجرد تجميل مؤشر الترابط.
     const ab = Object.fromEntries(Object.keys(soll).map((L) => [L, abdeckung(L, "j")]));
-    ok(Object.keys(soll).every((L) => ab[L].prozent >= soll[L]), `K81f التغطيةُ من الفهرسِ نفسِه لبطاقاتِ الخطة: ${Object.keys(soll).map((L) => `${L} ${ab[L].prozent}%`).join(" · ")} — لا تراجع عن خط PA-037-05`);
+    ok(Object.keys(soll).every((L) => ab[L].prozent >= soll[L]), `K81f التغطيةُ من الفهرسِ نفسِه لبطاقاتِ الخطة: ${Object.keys(soll).map((L) => `${L} ${ab[L].prozent}%`).join(" · ")} — خط PA-038-03 المعلن لا يعلو على سلامة المحتوى`);
     const w = Object.fromEntries(Object.keys(soll).map((L) => [L, verwaiste(L, "j").length]));
-    const wSoll: Record<string, number> = { A1: 4, A2: 0, B1: 3, B2: 12 };
-    ok(Object.keys(soll).every((L) => w[L] <= wSoll[L]), `K81g اليتامى بعد PA-038-02 (لا تُعاد ألفاظ محذوفة لإرضاء المؤشر): A1 ${w.A1} · A2 ${w.A2} · B1 ${w.B1} · B2 ${w.B2}`);
+    const wSoll: Record<string, number> = { A1: 4, A2: 13, B1: 3, B2: 12 };
+    ok(Object.keys(soll).every((L) => w[L] <= wSoll[L]), `K81g اليتامى بعد PA-038-03 (لا تُعاد ألفاظ محذوفة لإرضاء المؤشر): A1 ${w.A1} · A2 ${w.A2} · B1 ${w.B1} · B2 ${w.B2}`);
     ok(stammVon("die Frist") === "fris" && stammVon("sich bewerben um") === "bewerb" && stammVon("zu") === "", "K81h قاعدةُ الجذعِ ثابتةٌ ومطابقةٌ لـK76c");
     const kw = alleVokabeln.find((c) => c.de === "der Klimawandel")!;
     const vk = verknuepfung(kw);
@@ -5019,7 +5026,7 @@ void 0;
     items: DialogueAuditItem[];
   };
   const auditMarkdown = readFileSync("docs/content-review-a1-dialogues-01-2026-10-04.md", "utf8");
-  const batch = ["d-a1-01", "d-a1-02", "d-a1-03"].map((id) => dialoguesBeforePa03802.find((dialogue) => dialogue.id === id));
+  const batch = ["d-a1-01", "d-a1-02", "d-a1-03"].map((id) => dialoguesBeforePa038Reviews.find((dialogue) => dialogue.id === id));
   const completeBatch = batch.every((dialogue) => !!dialogue && dialogue.level === "A1") ? batch as NonNullable<typeof batch[number]>[] : [];
   const expectedIds = [
     ...completeBatch.flatMap((dialogue) => [
@@ -5110,7 +5117,7 @@ void 0;
   };
   const auditMarkdown = readFileSync("docs/content-review-a1-dialogues-02-2026-10-04.md", "utf8");
   const batchIds = ["d-a1-04", "d-a1-05", "d-a1-06"];
-  const batch = batchIds.map((id) => dialoguesBeforePa03802.find((dialogue) => dialogue.id === id));
+  const batch = batchIds.map((id) => dialoguesBeforePa038Reviews.find((dialogue) => dialogue.id === id));
   const completeBatch = batch.every((dialogue) => !!dialogue && dialogue.level === "A1") ? batch as NonNullable<typeof batch[number]>[] : [];
   const expectedIds = [
     ...completeBatch.flatMap((dialogue) => [
@@ -5210,7 +5217,7 @@ void 0;
   };
   const auditMarkdown = readFileSync("docs/content-review-a1-dialogues-03-2026-10-04.md", "utf8");
   const batchIds = ["d-a1-07", "d-a1-08", "d-a1-09"];
-  const batch = batchIds.map((id) => dialoguesBeforePa03802.find((dialogue) => dialogue.id === id));
+  const batch = batchIds.map((id) => dialoguesBeforePa038Reviews.find((dialogue) => dialogue.id === id));
   const completeBatch = batch.every((dialogue) => !!dialogue && dialogue.level === "A1") ? batch as NonNullable<typeof batch[number]>[] : [];
   const expectedIds = completeBatch.flatMap((dialogue) => [
     dialogue.id,
@@ -5337,9 +5344,9 @@ void 0;
     items: DialogueAuditItem04[];
   };
   const auditMarkdown = readFileSync("docs/content-review-a1-dialogues-04-2026-10-05.md", "utf8");
-  const dialogueMetadata = dialoguesBeforePa03802 as unknown as { id: string; waisen?: string[] }[];
+  const dialogueMetadata = dialoguesBeforePa038Reviews as unknown as { id: string; waisen?: string[] }[];
   const batchIds = ["d-a1-10", "d-a1-11", "d-a1-12"];
-  const batch = batchIds.map((id) => dialoguesBeforePa03802.find((dialogue) => dialogue.id === id));
+  const batch = batchIds.map((id) => dialoguesBeforePa038Reviews.find((dialogue) => dialogue.id === id));
   const completeBatch = batch.every((dialogue) => !!dialogue && dialogue.level === "A1")
     ? batch as NonNullable<typeof batch[number]>[] : [];
   const expectedIds = completeBatch.flatMap((dialogue) => [
@@ -5401,8 +5408,8 @@ void 0;
 
   const snapshotsMatch = audit.items.every((item) => {
     const metadata = item.reviewed;
-    if (item.id === "d-a1-11.level") return dialoguesBeforePa03802.find((dialogue) => dialogue.id === "d-a1-11")?.level === metadata.level;
-    const dialogue = dialoguesBeforePa03802.find((candidate) => candidate.id === item.id ||
+    if (item.id === "d-a1-11.level") return dialoguesBeforePa038Reviews.find((dialogue) => dialogue.id === "d-a1-11")?.level === metadata.level;
+    const dialogue = dialoguesBeforePa038Reviews.find((candidate) => candidate.id === item.id ||
       (item.id.startsWith(`${candidate.id}.`) || candidate.questions.some((question) => question.id === item.id)));
     if (!dialogue) return false;
     if (item.id === dialogue.id) {
@@ -5502,7 +5509,7 @@ void 0;
       promptAr: string; explanationAr: string; falle?: boolean }[];
     dictation: string[];
   };
-  const liveBatch05 = dialoguesBeforePa03802 as unknown as LiveDialogue05[];
+  const liveBatch05 = dialoguesBeforePa038Reviews as unknown as LiveDialogue05[];
   const batchIds05 = ["d-a1-13", "d-a1-14", "d-a1-15"];
   const completeBatch05 = batchIds05.map((id) => liveBatch05.find((dialogue) => dialogue.id === id));
   const validBatch05 = completeBatch05.every((dialogue) => !!dialogue && dialogue.level === "A1")
@@ -5658,7 +5665,7 @@ void 0;
       promptAr: string; explanationAr: string; falle?: boolean }[];
     dictation: string[];
   };
-  const liveBatch06 = dialoguesBeforePa03802 as unknown as LiveDialogue06[];
+  const liveBatch06 = dialoguesBeforePa038Reviews as unknown as LiveDialogue06[];
   const batchIds06 = ["d-a1-16", "d-a1-17", "d-a1-18"];
   const completeBatch06 = batchIds06.map((id) => liveBatch06.find((dialogue) => dialogue.id === id));
   const validBatch06 = completeBatch06.every((dialogue) => !!dialogue && dialogue.level === "A1")
@@ -5844,7 +5851,7 @@ void 0;
       promptAr: string; explanationAr: string; falle?: boolean }[];
     dictation: string[];
   };
-  const liveBatch07 = dialoguesBeforePa03802 as unknown as LiveDialogue07[];
+  const liveBatch07 = dialoguesBeforePa038Reviews as unknown as LiveDialogue07[];
   const batchIds07 = ["d-a1-19", "d-a1-20", "d-a1-21"];
   const completeBatch07 = batchIds07.map((id) => liveBatch07.find((dialogue) => dialogue.id === id));
   const validBatch07 = completeBatch07.every((dialogue) => !!dialogue && dialogue.level === "A1")
@@ -5993,7 +6000,7 @@ void 0;
       promptAr?: string; explanationAr?: string; falle?: boolean }[];
     dictation: string[];
   };
-  const liveBatchAll08 = dialoguesBeforePa03802 as unknown as LiveDialogue08[];
+  const liveBatchAll08 = dialoguesBeforePa038Reviews as unknown as LiveDialogue08[];
   const batchIds08 = ["d-a1-22", "d-a1-23", "d-a1-24"];
   const completeBatch08 = batchIds08.map((id) => liveBatchAll08.find((dialogue) => dialogue.id === id));
   const validBatch08 = completeBatch08.every((dialogue) => !!dialogue && dialogue.level === "A1")
@@ -6168,7 +6175,7 @@ void 0;
       promptAr?: string; explanationAr?: string; falle?: boolean }[];
     dictation: string[];
   };
-  const liveBatchAll09 = dialoguesBeforePa03802 as unknown as LiveDialogue09[];
+  const liveBatchAll09 = dialoguesBeforePa038Reviews as unknown as LiveDialogue09[];
   const batchIds09 = ["d-a1-25", "d-a1-26", "d-a1-27"];
   const completeBatch09 = batchIds09.map((id) => liveBatchAll09.find((dialogue) => dialogue.id === id));
   const validBatch09 = completeBatch09.every((dialogue) => !!dialogue && dialogue.level === "A1")
@@ -6331,7 +6338,7 @@ void 0;
     sources: DialogueAuditSource10[]; items: DialogueAuditItem10[];
   };
   const auditMarkdown10 = readFileSync("docs/content-review-a1-dialogues-10-2026-10-05.md", "utf8");
-  const liveBatchAll10 = dialoguesBeforePa03802 as unknown as LiveDialogue10[];
+  const liveBatchAll10 = dialoguesBeforePa038Reviews as unknown as LiveDialogue10[];
   const batchIds10 = ["d-a1-31", "d-a1-32"];
   const completeBatch10 = batchIds10.map((id) => liveBatchAll10.find((dialogue) => dialogue.id === id));
   const validBatch10 = completeBatch10.every((dialogue) => !!dialogue && dialogue.level === "A1")
@@ -6492,7 +6499,7 @@ void 0;
     decision: string;
   };
   const gapMarkdown28to30 = readFileSync("docs/content-gap-a1-dialogues-28-30-2026-10-05.md", "utf8");
-  const liveGapBatch = dialoguesBeforePa03802 as unknown as GapDialogue10[];
+  const liveGapBatch = dialoguesBeforePa038Reviews as unknown as GapDialogue10[];
   const vocabGap = JSON.parse(readFileSync("content/vocab.json", "utf8")) as Record<string, GapCardDeck10>;
   const a1CardsGap = Object.values(vocabGap).filter((deck) => deck.level === "A1")
     .flatMap((deck) => deck.cards ?? []);
@@ -6588,7 +6595,7 @@ void 0;
   };
   const reviewA2 = JSON.parse(readFileSync("docs/content-review-a2-dialogues-01-2026-10-05.json", "utf8")) as A2ReviewReport;
   const reviewMarkdownA2 = readFileSync("docs/content-review-a2-dialogues-01-2026-10-05.md", "utf8");
-  const liveA2 = JSON.parse(readFileSync("content/dialogues.json", "utf8")) as A2DialogueAuditEntry[];
+  const liveA2 = dialoguesBeforePa038Reviews as unknown as A2DialogueAuditEntry[];
   const batchA2 = liveA2.filter((dialogue) => ["d-a2-31", "d-a2-32"].includes(dialogue.id));
   const expectedIdsA2 = batchA2.flatMap((dialogue) => [
     dialogue.id,
@@ -6758,7 +6765,7 @@ void 0;
   };
   const reviewA2Batch2 = JSON.parse(readFileSync("docs/content-review-a2-dialogues-02-2026-10-05.json", "utf8")) as A2Batch2Report;
   const reviewMarkdownA2Batch2 = readFileSync("docs/content-review-a2-dialogues-02-2026-10-05.md", "utf8");
-  const liveA2Batch2 = JSON.parse(readFileSync("content/dialogues.json", "utf8")) as A2Batch2Dialogue[];
+  const liveA2Batch2 = dialoguesBeforePa038Reviews as unknown as A2Batch2Dialogue[];
   const selectedA2Batch2 = liveA2Batch2.filter((dialogue) => ["d-a2-01", "d-a2-02", "d-a2-03"].includes(dialogue.id));
   const expectedIdsA2Batch2 = selectedA2Batch2.flatMap((dialogue) => [
     dialogue.id,
@@ -6896,7 +6903,7 @@ void 0;
   };
   const reviewA2Batch3 = JSON.parse(readFileSync("docs/content-review-a2-dialogues-03-2026-10-05.json", "utf8")) as A2Batch3Report;
   const reviewMarkdownA2Batch3 = readFileSync("docs/content-review-a2-dialogues-03-2026-10-05.md", "utf8");
-  const liveA2Batch3 = JSON.parse(readFileSync("content/dialogues.json", "utf8")) as A2Batch3Dialogue[];
+  const liveA2Batch3 = dialoguesBeforePa038Reviews as unknown as A2Batch3Dialogue[];
   const selectedA2Batch3 = liveA2Batch3.filter((dialogue) => ["d-a2-04", "d-a2-05", "d-a2-06"].includes(dialogue.id));
   const expectedIdsA2Batch3 = selectedA2Batch3.flatMap((dialogue) => [
     dialogue.id,
@@ -7070,7 +7077,7 @@ void 0;
   };
   const reviewA2Batch4 = JSON.parse(readFileSync("docs/content-review-a2-dialogues-04-2026-10-05.json", "utf8")) as A2Batch4Report;
   const reviewMarkdownA2Batch4 = readFileSync("docs/content-review-a2-dialogues-04-2026-10-05.md", "utf8");
-  const liveA2Batch4 = JSON.parse(readFileSync("content/dialogues.json", "utf8")) as A2Batch4Dialogue[];
+  const liveA2Batch4 = dialoguesBeforePa038Reviews as unknown as A2Batch4Dialogue[];
   const selectedA2Batch4 = liveA2Batch4.filter((dialogue) => ["d-a2-07", "d-a2-08", "d-a2-09"].includes(dialogue.id));
   const expectedIdsA2Batch4 = selectedA2Batch4.flatMap((dialogue) => [
     dialogue.id,
@@ -7240,7 +7247,7 @@ void 0;
 {
   const reviewA2Batch5 = JSON.parse(readFileSync("docs/content-review-a2-dialogues-05-2026-10-05.json", "utf8")) as any;
   const reviewMarkdownA2Batch5 = readFileSync("docs/content-review-a2-dialogues-05-2026-10-05.md", "utf8");
-  const liveDialoguesA2Batch5 = JSON.parse(readFileSync("content/dialogues.json", "utf8")) as any[];
+  const liveDialoguesA2Batch5 = dialoguesBeforePa038Reviews as unknown as any[];
   const selectedA2Batch5 = liveDialoguesA2Batch5.filter((dialogue) => ["d-a2-10", "d-a2-11", "d-a2-12"].includes(dialogue.id));
   const itemByIdA2Batch5 = new Map<string, any>(reviewA2Batch5.items.map((item: any) => [item.id, item]));
   const expectedIdsA2Batch5 = selectedA2Batch5.flatMap((dialogue) => [
@@ -7408,7 +7415,7 @@ void 0;
 {
   const reviewA2Batch6 = JSON.parse(readFileSync("docs/content-review-a2-dialogues-06-2026-10-05.json", "utf8")) as any;
   const reviewMarkdownA2Batch6 = readFileSync("docs/content-review-a2-dialogues-06-2026-10-05.md", "utf8");
-  const liveDialoguesA2Batch6 = JSON.parse(readFileSync("content/dialogues.json", "utf8")) as any[];
+  const liveDialoguesA2Batch6 = dialoguesBeforePa038Reviews as unknown as any[];
   const selectedA2Batch6 = liveDialoguesA2Batch6.filter((dialogue) => ["d-a2-13", "d-a2-14", "d-a2-15"].includes(dialogue.id));
   const itemByIdA2Batch6 = new Map<string, any>(reviewA2Batch6.items.map((item: any) => [item.id, item]));
   const expectedIdsA2Batch6 = selectedA2Batch6.flatMap((dialogue) => [
@@ -7609,7 +7616,7 @@ void 0;
 {
   const reviewA2Batch7 = JSON.parse(readFileSync("docs/content-review-a2-dialogues-07-2026-10-06.json", "utf8")) as any;
   const reviewMarkdownA2Batch7 = readFileSync("docs/content-review-a2-dialogues-07-2026-10-06.md", "utf8");
-  const liveDialoguesA2Batch7 = JSON.parse(readFileSync("content/dialogues.json", "utf8")) as any[];
+  const liveDialoguesA2Batch7 = dialoguesBeforePa038Reviews as unknown as any[];
   const selectedA2Batch7 = liveDialoguesA2Batch7.filter((dialogue) => ["d-a2-16", "d-a2-17", "d-a2-18"].includes(dialogue.id));
   const itemByIdA2Batch7 = new Map<string, any>(reviewA2Batch7.items.map((item: any) => [item.id, item]));
   const expectedIdsA2Batch7 = selectedA2Batch7.flatMap((dialogue) => [
@@ -7816,7 +7823,7 @@ void 0;
 {
   const reviewA2Batch8 = JSON.parse(readFileSync("docs/content-review-a2-dialogues-08-2026-10-07.json", "utf8")) as any;
   const reviewMarkdownA2Batch8 = readFileSync("docs/content-review-a2-dialogues-08-2026-10-07.md", "utf8");
-  const liveDialoguesA2Batch8 = JSON.parse(readFileSync("content/dialogues.json", "utf8")) as any[];
+  const liveDialoguesA2Batch8 = dialoguesBeforePa038Reviews as unknown as any[];
   const audioManifestA2Batch8 = JSON.parse(readFileSync("content/dialog-audio.json", "utf8")) as any;
   const patchSourceA2Batch8 = readFileSync("scripts/patches/review_a2_dialogues_08.py", "utf8");
   const patchReportA2Batch8 = readFileSync("scripts/patches/report_a2_dialogues_08.py", "utf8");
@@ -8017,7 +8024,7 @@ void 0;
 {
   const reviewA2Batch9 = JSON.parse(readFileSync("docs/content-review-a2-dialogues-09-2026-10-07.json", "utf8")) as any;
   const reviewMarkdownA2Batch9 = readFileSync("docs/content-review-a2-dialogues-09-2026-10-07.md", "utf8");
-  const liveDialoguesA2Batch9 = JSON.parse(readFileSync("content/dialogues.json", "utf8")) as any[];
+  const liveDialoguesA2Batch9 = dialoguesBeforePa038Reviews as unknown as any[];
   const audioManifestA2Batch9 = JSON.parse(readFileSync("content/dialog-audio.json", "utf8")) as any;
   const patchSourceA2Batch9 = readFileSync("scripts/patches/review_a2_dialogues_09.py", "utf8");
   const patchReportA2Batch9 = readFileSync("scripts/patches/report_a2_dialogues_09.py", "utf8");
@@ -8206,7 +8213,7 @@ void 0;
 {
   const reviewA2Batch10 = JSON.parse(readFileSync("docs/content-review-a2-dialogues-10-2026-10-07.json", "utf8")) as any;
   const reviewMarkdownA2Batch10 = readFileSync("docs/content-review-a2-dialogues-10-2026-10-07.md", "utf8");
-  const liveDialoguesA2Batch10 = JSON.parse(readFileSync("content/dialogues.json", "utf8")) as any[];
+  const liveDialoguesA2Batch10 = dialoguesBeforePa038Reviews as unknown as any[];
   const audioManifestA2Batch10 = JSON.parse(readFileSync("content/dialog-audio.json", "utf8")) as any;
   const patchSourceA2Batch10 = readFileSync("scripts/patches/review_a2_dialogues_10.py", "utf8");
   const patchReportA2Batch10 = readFileSync("scripts/patches/report_a2_dialogues_10.py", "utf8");
@@ -10892,7 +10899,7 @@ void 0;
 {
   const reviewA2Extras = JSON.parse(readFileSync("docs/content-review-a2-dialogues-11-2026-10-11.json", "utf8")) as any;
   const reviewA2ExtrasMd = readFileSync("docs/content-review-a2-dialogues-11-2026-10-11.md", "utf8");
-  const dialoguesArr = JSON.parse(readFileSync("content/dialogues.json", "utf8")) as any[];
+  const dialoguesArr = dialoguesBeforePa038Reviews as unknown as any[];
   const ids = ["dlg-a1-reklamation-hotel", "dlg-a2-terminabsage", "dlg-a2-krankenversicherung", "hoer-a2-01", "hoer-a2-02", "d-a2-ht01", "d-a2-ht02", "d-a2-ht03"];
   const batch = ids.map((id) => dialoguesArr.find((d:any) => d.id === id));
   const tasksValid = batch.every((d:any) => d && d.level === "A2" && Array.isArray(d.lines) && d.lines.length > 0 &&
@@ -16498,7 +16505,7 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const ciK436 = readFileSync(".github/workflows/ci.yml", "utf8");
   ok(patchK436.includes("current == reviewed") && patchK436.includes("current != previous") &&
     patchK436.includes("unexpected current dialogue") &&
-    auditK436.includes("all 52 bounded A0–A1 full-dialogue decisions match") && auditK436.includes("124 A2–B2 dialogues") &&
+    auditK436.includes("all 90 bounded A0–A2 full-dialogue decisions match") && auditK436.includes("86 B1–B2 dialogues") &&
     packageK436.includes('"audit:dialogue-content-review"') && ciK436.includes("npm run audit:dialogue-content-review") &&
     reviewK436.scope.includes("triage only") && reviewK436.scope.includes("not correction generators") &&
     reviewK436.scope.includes("not independent linguistic, translation, cultural, medical, CEFR, audio, or exam sign-off"),
@@ -16541,12 +16548,61 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const ciK437 = readFileSync(".github/workflows/ci.yml", "utf8");
   ok(patchK437.includes("current == reviewed") && patchK437.includes("current != previous") &&
     patchK437.includes("unexpected current dialogue") &&
-    auditK437.includes("all 52 bounded A0–A1 full-dialogue decisions match") && auditK437.includes("124 A2–B2 dialogues") &&
+    auditK437.includes("all 90 bounded A0–A2 full-dialogue decisions match") && auditK437.includes("86 B1–B2 dialogues") &&
     packageK437.includes('"audit:dialogue-content-review"') && ciK437.includes("npm run audit:dialogue-content-review") &&
     reviewK437.scope.includes("all 238 line alignments") && reviewK437.scope.includes("all 89 questions") &&
     reviewK437.scope.includes("triage only") && reviewK437.scope.includes("not correction generators") &&
     reviewK437.scope.includes("not independent linguistic, translation, cultural, medical, emergency-services, CEFR, audio, or exam sign-off"),
     "K437c PA-038-02: الرقعة مقفلة بالحوار الكامل وقابلة للإعادة والبوابة موصولة بـCI مع إبقاء 124 حواراً والصوت والتوقيع المستقل خارج الادعاء");
+}
+
+/* ═══ K438 — PA-038-03: مراجعة حوارات A2 بندياً ═══ */
+{
+  const reviewK438 = JSON.parse(readFileSync("scripts/fixtures/dialogues-reviewed-03.json", "utf8")) as {
+    schema: string;
+    batch: string;
+    scope: string;
+    entries: { id: string; level: string; decision: "corrected" | "confirmed-current"; rationale: string; previous: Record<string, unknown>; current: Record<string, unknown> }[];
+  };
+  const dialoguesK438 = JSON.parse(readFileSync("content/dialogues.json", "utf8")) as Array<Record<string, any>>;
+  const byIdK438 = new Map(dialoguesK438.map((dialogue) => [String(dialogue.id), dialogue]));
+  const expectedK438 = new Set(dialoguesK438.filter((dialogue) => dialogue.level === "A2").map((dialogue) => String(dialogue.id)));
+  const correctedK438 = reviewK438.entries.filter((entry) => entry.decision === "corrected");
+  const confirmedK438 = reviewK438.entries.filter((entry) => entry.decision === "confirmed-current");
+  const lineCountK438 = reviewK438.entries.reduce((sum, entry) => sum + ((entry.current.lines as unknown[])?.length ?? 0), 0);
+  const questionCountK438 = reviewK438.entries.reduce((sum, entry) => sum + ((entry.current.questions as unknown[])?.length ?? 0), 0);
+  ok(reviewK438.schema === "wegb2-reviewed-dialogue-decision-batch-v1" && reviewK438.batch === "PA-038-03" &&
+    reviewK438.entries.length === 38 && expectedK438.size === 38 &&
+    reviewK438.entries.every((entry) => expectedK438.has(entry.id) && entry.level === "A2" && entry.rationale.trim().length > 0) &&
+    correctedK438.length === 38 && confirmedK438.length === 0 && lineCountK438 === 248 && questionCountK438 === 93 &&
+    correctedK438.every((entry) => JSON.stringify(entry.previous) !== JSON.stringify(entry.current)),
+    "K438a PA-038-03: سجل القرار يغطي حوارات A2 الثمانية والثلاثين كاملة بـ248 سطراً و93 سؤالاً و38 تصحيحاً مبرراً");
+  const currentK438 = JSON.stringify([...expectedK438].map((id) => byIdK438.get(id)));
+  ok(reviewK438.entries.every((entry) => JSON.stringify(byIdK438.get(entry.id)) === JSON.stringify(entry.current)) &&
+    byIdK438.get("d-a2-03")?.lines?.[4]?.de.startsWith("Ich untersuche Sie jetzt.") &&
+    byIdK438.get("d-a2-08")?.lines?.[4]?.de.includes("Allergien") &&
+    byIdK438.get("d-a2-16")?.lines?.[6]?.de.includes("Notfallplan") &&
+    byIdK438.get("d-a2-22")?.lines?.[0]?.de.includes("Jahresabrechnung für Strom") &&
+    byIdK438.get("d-a2-25")?.lines?.[6]?.de.includes("aktuellen Bedingungen") &&
+    byIdK438.get("hoer-a2-01")?.lines?.[0]?.de.includes("116 117") &&
+    byIdK438.get("hoer-a2-01")?.lines?.[0]?.de.includes("112") &&
+    byIdK438.get("d-a2-ht03")?.situationDe === "Fiktive Radiomeldung für eine Hörübung" &&
+    !currentK438.includes("Nehmen Sie die Medizin dreimal am Tag") &&
+    !currentK438.includes("Rückfragen unter 0221-4711") &&
+    !currentK438.includes("Oktoberfest - German beer festival"),
+    "K438b PA-038-03: القرارات تطابق البنك وتحرس المحاذاة والتسلسل وحدود الطب والطوارئ والسلامة والسكن والنقل والتأمين والخبر الخيالي");
+  const patchK438 = readFileSync("scripts/patches/apply_dialogue_review_pa038_03.py", "utf8");
+  const auditK438 = readFileSync("scripts/dialogue_content_review_audit.ts", "utf8");
+  const packageK438 = readFileSync("package.json", "utf8");
+  const ciK438 = readFileSync(".github/workflows/ci.yml", "utf8");
+  ok(patchK438.includes("current == reviewed") && patchK438.includes("current != previous") &&
+    patchK438.includes("unexpected current dialogue") &&
+    auditK438.includes("all 90 bounded A0–A2 full-dialogue decisions match") && auditK438.includes("86 B1–B2 dialogues") &&
+    packageK438.includes('"audit:dialogue-content-review"') && ciK438.includes("npm run audit:dialogue-content-review") &&
+    reviewK438.scope.includes("all 248 line alignments") && reviewK438.scope.includes("all 93 questions") &&
+    reviewK438.scope.includes("triage only") && reviewK438.scope.includes("not linguistic correction generators") &&
+    reviewK438.scope.includes("not independent linguistic, translation, cultural, legal, medical, emergency-services, audio, CEFR, Goethe, telc, or exam sign-off"),
+    "K438c PA-038-03: الرقعة exact-match وقابلة للإعادة وفاشلة عند الانزياح والبوابة موصولة بـCI مع إبقاء 86 حواراً والصوت والتوقيع المستقل خارج الادعاء");
 }
 
 /* ═══ K334 — R309: القفل الفعلي الحقيقي — إغلاقُ اليوم عند حدود الوحدة ممنوعٌ لا منصوحٌ به فقط ═══ */
