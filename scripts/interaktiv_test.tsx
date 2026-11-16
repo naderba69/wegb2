@@ -3494,7 +3494,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
       {
         id: "d-a1-04", titleDe: "Einkaufen auf dem Markt", titleAr: "التسوّق في السوق",
         prompt: "Ein Kilo Tomaten kostet ___ Euro.", answer: "drei",
-        visible: ["من فضلك، أعطني كيلوغراماً.", "أكمل الفراغ بالسعر الصحيح من الحوار."],
+        visible: ["من فضلك، أعطني كيلوغراماً.", "يكلف كيلوغرام الطماطم ___ يورو."],
       },
       {
         id: "d-a1-05", titleDe: "Freizeit am Wochenende", titleAr: "وقت الفراغ في عطلة نهاية الأسبوع",
@@ -3541,7 +3541,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
     }[] = [
       {
         id: "d-a1-07", titleDe: "Beim Friseur", titleAr: "عند الحلاق",
-        visible: ["ماذا تفضّلين؟", "حسنًا. هل تريدين غسل شعركِ أيضًا؟", "أكمل الفراغ بالمبلغ الصحيح من الحوار."],
+        visible: ["ماذا تفضّلين؟", "حسنًا. هل تريدين غسل شعركِ أيضًا؟", "يبلغ المجموع ___ يورو."],
         questions: [
           { type: "mc", prompt: "Wie soll der Friseur schneiden?", answer: "schneiden, nicht zu kurz" },
           { type: "fill", prompt: "Es kostet zusammen ___ Euro.", answer: "20" },
@@ -3617,14 +3617,14 @@ const hasFile = txt().includes("صوتٌ من الدار");
       },
       {
         id: "d-a1-11", titleDe: "Beim Arzt: Was tut weh?", titleAr: "عند الطبيب: ما الذي يؤلم؟",
-        visible: ["الظهر يؤلمني، وعندي سعال.", "الأنف قليلاً. الأذن لا.", "استريحي ثلاثة أيام وابقي في البيت."],
+        visible: ["الظهر يؤلمني، وعندي سعال.", "الأنف قليلاً. الأذن لا.", "سأفحصك الآن. وبعد ذلك أستطيع أن أحدد"],
         questions: [
           { type: "mc", prompt: "Welche Körperstelle nennt Frau Nasri zuerst?", answer: "der Rücken" },
         ],
       },
       {
         id: "d-a1-12", titleDe: "Kleidung für den Winter", titleAr: "ملابس للشتاء",
-        visible: ["قبعة زرقاء. وجوارب دافئة.", "لن آخذ الجوارب.", "أكمل الفراغ بالمبلغ الصحيح من الحوار."],
+        visible: ["قبعة زرقاء. وجوارب دافئة.", "لن آخذ الجوارب.", "يكلف المعطف ___ يورو."],
         questions: [
           { type: "mc", prompt: "Was kauft Rami nicht?", answer: "die Socken" },
           { type: "fill", prompt: "Der Mantel kostet ___ Euro.", answer: "89" },
@@ -3677,19 +3677,19 @@ const hasFile = txt().includes("صوتٌ من الدار");
     }[] = [
       {
         id: "d-a1-13", titleDe: "Am Bahnhof: Der Zug nach Köln", titleAr: "في المحطة: القطار إلى كولن",
-        visible: ["Abfahrt um Viertel nach neun, Gleis 4.", "الانطلاق في التاسعة والربع، الرصيف 4.", "قطعتا أمتعة"],
+        visible: ["Abfahrt um Viertel nach neun, Gleis 4.", "الانطلاق في التاسعة والربع، المسار 4.", "قطعتا أمتعة"],
         questions: [
           { type: "mc", prompt: "Wann fährt der Zug ab?", answer: "um Viertel nach neun" },
-          { type: "mc", prompt: "Warum braucht Sami heute einen Sitzplatz?", answer: "Der Zug ist voll." },
+          { type: "mc", prompt: "Warum soll Sami heute einen Sitzplatz reservieren?", answer: "Der Zug ist voll." },
           { type: "truefalse", prompt: "Der Zug fährt von Gleis 4.", answer: "richtig" },
         ],
       },
       {
         id: "d-a1-14", titleDe: "Auf der Post", titleAr: "في مكتب البريد",
-        visible: ["Standardbrief ins Ausland bis 20 Gramm", "تعتمد كلفة الطرد على حجمه ووزنه.", "إلى طابع بريدي بقيمة 1.25 يورو"],
+        visible: ["Der Paketpreis hängt von Größe und Gewicht ab.", "تعتمد كلفة الطرد على حجمه ووزنه.", "السعر الحالي في هذه القائمة"],
         questions: [
           { type: "mc", prompt: "Wohin schickt die Kundin das Paket?", answer: "nach Österreich" },
-          { type: "mc", prompt: "Was kostet die Briefmarke?", answer: "1,25 Euro" },
+          { type: "mc", prompt: "Wovon hängt der Paketpreis ab?", answer: "von Größe und Gewicht" },
           { type: "truefalse", prompt: "Am Samstag ist die Post bis achtzehn Uhr geöffnet.", answer: "falsch" },
         ],
       },
@@ -3764,15 +3764,15 @@ const hasFile = txt().includes("صوتٌ من الدار");
         id: "d-a1-17", titleDe: "Hausarbeit am Samstag", titleAr: "أعمال البيت يوم السبت",
         visible: ["Heute ist Samstag.", "الغسيل أغسله أنا، وأنت تكوي القمصان بعده.", "Welche Aufgabe nennt die Mutter zuerst?"],
         questions: [
-          { type: "mc", prompt: "Welche Aufgabe nennt die Mutter zuerst?", answer: "Er kehrt die Küche." },
+          { type: "mc", prompt: "Welche Aufgabe nennt die Mutter zuerst?", answer: "Er kehrt den Küchenboden." },
           { type: "mc", prompt: "Was ist leer?", answer: "der Schrank" },
           { type: "fill", prompt: "Die wasche ich mit ___.", answer: "Seife" },
         ],
-        firstExplanation: "لا دليلاً على ترتيب تنفيذ الأعمال",
+        firstExplanation: "كي القمصان وإخراج القمامة يأتيان لاحقاً",
       },
       {
         id: "d-a1-18", titleDe: "Woher kommst du?", titleAr: "من أين أنت؟",
-        visible: ["Herr Haddad, welche Nationalität haben Sie?", "كثير من الأجانب في الدورة عزّاب أيضاً.", "Viele Ausländer im Kurs sind auch ledig."],
+        visible: ["Herr Haddad, welche Nationalität haben Sie?", "وطني تونس، وأنا من صفاقس.", "سأكتب ذلك في الاستمارة."],
         questions: [
           { type: "mc", prompt: "Welche Sprache ist die dritte Sprache von Herrn Haddad?", answer: "Deutsch" },
           { type: "mc", prompt: "Ist Herr Haddad verheiratet?", answer: "Nein, er ist ledig." },
@@ -3845,7 +3845,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
       },
       {
         id: "d-a1-20", titleDe: "Ein Termin im Kalender", titleAr: "موعد في التقويم",
-        visible: ["Also übermorgen. Und die Uhrzeit?", "إذن بعد غد. والساعة؟", "Vorgestern, am Montag."],
+        visible: ["Also übermorgen. Und die Uhrzeit?", "إذن بعد غد. والساعة؟", "Gestern, am Montag."],
         questions: [
           { type: "mc", prompt: "Wann ist der Termin mit der Firma Berger?", answer: "am Donnerstag um Punkt zwölf" },
           { type: "mc", prompt: "Wie lange war der letzte Termin?", answer: "nur eine Stunde" },
