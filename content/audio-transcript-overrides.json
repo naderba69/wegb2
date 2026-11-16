@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-11-07",
-  "claimAr": "لقطات نصية مجمدة للملفات التي بقي صوتها ثابتاً بينما توسع نص القراءة أو الحوار لاحقاً. تُستخدم لقياس سرعة التسجيل فقط، وتمنع الادعاء بأن الصوت يقرأ النسخة الموسعة الحالية.",
+  "updated": "2026-11-04",
+  "claimAr": "لقطات نصية مجمدة للملفات التي بقي صوتها ثابتاً بينما توسع نص القراءة أو الحوار أو تغير لاحقاً. تُستخدم لقياس سرعة التسجيل فقط، وتمنع الادعاء بأن الصوت يقرأ النسخة الحالية.",
   "items": [
     {
       "file": "/audio/dialog/d-a0-ht01.mp3",
@@ -33,6 +33,182 @@
       "group": "dialog",
       "textDe": "Die Polizei meldet einen Unfall auf der A3 kurz hinter der Anschlussstelle Lohmar in Fahrtrichtung Frankfurt. Drei Fahrzeuge sind beteiligt, die linke Spur ist gesperrt. Es gibt zurzeit einen Stau von acht Kilometern. Autofahrer werden gebeten, bei der nächsten Ausfahrt abzufahren.",
       "audioCommit": "bf060b8b1248fb9c12d162d085350f2224380441",
+      "sourcePath": "content/dialogues.json"
+    },
+    {
+      "file": "/audio/dialog/d-b1-04.mp3",
+      "id": "d-b1-04",
+      "group": "dialog",
+      "textDe": "Danke, dass du mir beim Umzug hilfst! Gern! Was sollen wir zuerst tragen? Die Bücher sind am schwersten. Die Kartons stehen schon im Flur. Alles klar. Achtung, die Tür ist eng! Danke dir. Nachher essen wir Pizza — mein Angebot!",
+      "audioCommit": "bbdf2255c4b84aa3e7938d5f3af1e0c7c1c7d053",
+      "sourcePath": "content/dialogues.json"
+    },
+    {
+      "file": "/audio/dialog/d-b1-06.mp3",
+      "id": "d-b1-06",
+      "group": "dialog",
+      "textDe": "Guten Tag. Ich möchte einen Termin zur Anmeldung vereinbaren. Gern. Haben Sie alle Unterlagen schon mitgebracht? Ich habe Pass und Mietvertrag dabei. Fehlt noch etwas? Eine Meldebescheinigung wäre noch nötig. Alles klar. Könnte der Termin am Donnerstag sein? Ja, um 11:30 Uhr. Bitte kommen Sie pünktlich.",
+      "audioCommit": "bbdf2255c4b84aa3e7938d5f3af1e0c7c1c7d053",
+      "sourcePath": "content/dialogues.json"
+    },
+    {
+      "file": "/audio/dialog/d-b1-07.mp3",
+      "id": "d-b1-07",
+      "group": "dialog",
+      "textDe": "Die Untersuchung zeigt: Es ist nichts Schlimmes. Gott sei Dank! Was soll ich denn tun? Sie sollten weniger am Bildschirm arbeiten und Pausen machen. Und wenn die Schmerzen zurückkommen? Dann kommen Sie bitte sofort wieder.",
+      "audioCommit": "bbdf2255c4b84aa3e7938d5f3af1e0c7c1c7d053",
+      "sourcePath": "content/dialogues.json"
+    },
+    {
+      "file": "/audio/dialog/d-b1-09.mp3",
+      "id": "d-b1-09",
+      "group": "dialog",
+      "textDe": "Guten Abend. Ich habe ein Problem mit meinem Zimmer. Was ist denn los, mein Herr? Die Heizung funktioniert nicht, und es ist sehr kalt. Das tut mir leid. Ich schicke sofort einen Techniker. Und könnten Sie vielleicht das Zimmer wechseln? Natürlich. Zimmer 205 ist frei und warm.",
+      "audioCommit": "bbdf2255c4b84aa3e7938d5f3af1e0c7c1c7d053",
+      "sourcePath": "content/dialogues.json"
+    },
+    {
+      "file": "/audio/dialog/d-b1-10.mp3",
+      "id": "d-b1-10",
+      "group": "dialog",
+      "textDe": "Guten Tag, ich möchte mich für den Deutschkurs anmelden. Sehr gern. Haben Sie den Einstufungstest schon gemacht? Noch nicht — ist das Pflicht? Ja, sonst passt die Gruppe nicht. Der Test ist Donnerstag um neun. Was kostet der Kurs pro Monat? Dreiundachtzig Euro — die Prüfung ist inklusive. Brauche ich einen Nachweis über meinen Aufenthalt? Nur Pass und Meldebescheinigung. Bis Donnerstag!",
+      "audioCommit": "bbdf2255c4b84aa3e7938d5f3af1e0c7c1c7d053",
+      "sourcePath": "content/dialogues.json"
+    },
+    {
+      "file": "/audio/dialog/d-b1-11.mp3",
+      "id": "d-b1-11",
+      "group": "dialog",
+      "textDe": "Danke für den Termin — die Anzeige klang vielversprechend. Gern. Die Küche ist möbliert: Herd, Spüle und Schränke bleiben. Sind Wasser und Heizung in der Miete enthalten? Nein — Kaltmiete vierhundertfünfzig, Nebenkosten kommen dazu. Die Wohnung wäre perfekt — wann wird sie frei? Zum Ersten. Ich brauche Selbstauskunft und Schufa. Die Unterlagen kommen bis morgen per Mail — und die Kaution? Zwei Monatsmieten, wie immer. Herzlich willkommen, wenn alles passt.",
+      "audioCommit": "bbdf2255c4b84aa3e7938d5f3af1e0c7c1c7d053",
+      "sourcePath": "content/dialogues.json"
+    },
+    {
+      "file": "/audio/dialog/d-b1-12.mp3",
+      "id": "d-b1-12",
+      "group": "dialog",
+      "textDe": "Mein Sohn hat seit gestern Fieber und einen Ausschlag. Seit wann genau, und hat er Ungewohntes gegessen? Seit gestern Abend — und nein, wir sind da sehr vorsichtig. Mund auf, bitte … Das sieht nach einer Virusinfektion aus. Ist das ansteckend für die Kita? Ja — bis zwei Tage nach dem letzten Fieber darf er nicht hin. Soll ich ein Antibiotikum geben? Nein, bei Viren wirkt es nicht. Fieber senken, viel trinken, beobachten. Wenn der Ausschlag bleibt — soll ich dann sofort wieder kommen?",
+      "audioCommit": "bbdf2255c4b84aa3e7938d5f3af1e0c7c1c7d053",
+      "sourcePath": "content/dialogues.json"
+    },
+    {
+      "file": "/audio/dialog/d-b1-13.mp3",
+      "id": "d-b1-13",
+      "group": "dialog",
+      "textDe": "Mein Termin für die Heizung am Dienstag — ich muss ihn verschieben. Warum? Ich plane sonst den Tag umsonst. Mein Chef gab mir unerwartet einen dringenden Auftrag. Donnerstag wäre frei — oder Montag um neun. Montag, aber nicht vor neun: erst die Kinder in die Kita. Neun Uhr passt. Ich brauche Zugang zum Keller. Den Schlüssel hält die Rezeption für Sie bereit. Danke für Ihre Flexibilität!",
+      "audioCommit": "bbdf2255c4b84aa3e7938d5f3af1e0c7c1c7d053",
+      "sourcePath": "content/dialogues.json"
+    },
+    {
+      "file": "/audio/dialog/d-b1-15.mp3",
+      "id": "d-b1-15",
+      "group": "dialog",
+      "textDe": "Ich habe meine EC-Karte verloren — bitte sofort sperren! Die Karte ist gesperrt. Wann und wo zuletzt benutzt? Gestern Vormittag, Automat am Hauptbahnhof. Kein Missbrauch vermerkt. Die neue Karte kommt in vierzehn Tagen. Was kostet die Sperrung? Zwanzig Euro bei Diebstahl, sechs bei Verlust — verloren, richtig? Leider Verlust — gestohlen wurde sie nicht. Dann sechs Euro. Den Ausweis bitte zum Abholen mitbringen.",
+      "audioCommit": "bbdf2255c4b84aa3e7938d5f3af1e0c7c1c7d053",
+      "sourcePath": "content/dialogues.json"
+    },
+    {
+      "file": "/audio/dialog/d-b1-16.mp3",
+      "id": "d-b1-16",
+      "group": "dialog",
+      "textDe": "Mein Zug nach München hatte sechzig Minuten Verspätung — Fahrgastrechte bitte. Bei sechzig Minuten stehen Ihnen fünfundzwanzig Prozent des Preises zu. Bar oder aufs Konto? Das Formular „Geld zurück“ online ausfüllen — die Erstattung geht aufs Konto. Muss ich die Fahrkarte beilegen? Eine Kopie genügt — bewahren Sie das Original auf. Der Anschlusszug fiel auch aus! Dann gilt der nächste Zug ohne Aufpreis — wir haben es vermerkt.",
+      "audioCommit": "bbdf2255c4b84aa3e7938d5f3af1e0c7c1c7d053",
+      "sourcePath": "content/dialogues.json"
+    },
+    {
+      "file": "/audio/dialog/d-b1-17.mp3",
+      "id": "d-b1-17",
+      "group": "dialog",
+      "textDe": "Willkommen — wie steht es um unseren Lesetag? Die Leseecke ist fertig; für die Bibliothek fehlt ein Sponsor. Eltern können auch beim Vorlesen helfen. Ich melde mich: einmal monatlich, samstags vor zehn. Die Abschlussfeier planen wir als Arbeitsgruppe am Freitag. Freitag passt erst nach siebzehn — mein Dienst beginnt früher. Wer lädt unsere Partnerschule ein? Die Einladung geht raus; sie meldet ihre Auftrittskinder an.",
+      "audioCommit": "bbdf2255c4b84aa3e7938d5f3af1e0c7c1c7d053",
+      "sourcePath": "content/dialogues.json"
+    },
+    {
+      "file": "/audio/dialog/d-b1-18.mp3",
+      "id": "d-b1-18",
+      "group": "dialog",
+      "textDe": "Gestern nach Mitternacht war es laut — die Hausordnung kennt Ruhezeiten. Das war die Übertragung meines Bruders, laut verstärkt. Das bleibt einmalig — ich erwarte eine Entschuldigung, und Nachtruhe ab zweiundzwanzig. Entschuldigung — schön, dass Sie sprechen statt zu schelten. Die Übertragung bleibt künftig aus. Bei Gästen sage ich Bescheid — zwanzig Minuten vorher. Dringt bei uns Musik durch die Wand, klopfen Sie einmal — wir drehen sofort leiser. Abgemacht — Treppe und Ruhe teilen wir uns.",
+      "audioCommit": "bbdf2255c4b84aa3e7938d5f3af1e0c7c1c7d053",
+      "sourcePath": "content/dialogues.json"
+    },
+    {
+      "file": "/audio/dialog/d-b1-19.mp3",
+      "id": "d-b1-19",
+      "group": "dialog",
+      "textDe": "Mein Freitagtermin fällt mit meiner Prüfung zusammen — ein Monat später? Verschiebungen nur schriftlich; den Grund bitte nachweisen. Hier ist die Prüfungsanmeldung der Universität. Neuer Termin: Erster des Folgemonats, vierzehn Uhr dreißig — nur mit diesem Brief. Die Unterlagen wieder in voller Zahl? Pass, Aufenthaltstitel, Mietvertrag, Versicherungsnachweis — wie beim ersten Mal. Verstanden — dann bin ich sicher da; und was folgt bei zweitem Versäumnis? Bei zweitem Versäumnis: Ablehnung, neue Gebühr.",
+      "audioCommit": "bbdf2255c4b84aa3e7938d5f3af1e0c7c1c7d053",
+      "sourcePath": "content/dialogues.json"
+    },
+    {
+      "file": "/audio/dialog/d-b1-20.mp3",
+      "id": "d-b1-20",
+      "group": "dialog",
+      "textDe": "Ist heute Nacht Notdienst? Der Kinderarzt schickte mich. Ja — bis acht Uhr früh. Was benötigen Sie? Ein Fiebermittel für ein zehnjähriges Kind, rezeptfrei? Acht Euro fünfzig — die Beilage genau durchlesen, bitte. Und etwas gegen nächtlichen Husten? Nicht kombinieren bei Kindern: nur ein Mittel zur Zeit. Das Rezept fürs Kind kann ich morgen bringen? Rezepte gelten bundesweit — gute Besserung für die Kleine!",
+      "audioCommit": "bbdf2255c4b84aa3e7938d5f3af1e0c7c1c7d053",
+      "sourcePath": "content/dialogues.json"
+    },
+    {
+      "file": "/audio/dialog/d-b1-21.mp3",
+      "id": "d-b1-21",
+      "group": "dialog",
+      "textDe": "Ich kündige meinen Vertrag zum Monatsende. Die Frist beträgt sechs Wochen, schriftlich — siehe Vertrag. Ich telefonierte vor zwei Wochen; keine Bestätigung kam. Telefon allein genügt nicht — schriftlich muss es vorliegen, dann zählt es. Warum wurde schon abgebucht, obwohl ich kündigte? Wir stoppen mit Fristablauf — zu viel Gezahltes wird erstattet. Und meine Schlüsselkaution? Fünfzehn Euro zurück, binnen vierzehn Tagen nach Übergabe.",
+      "audioCommit": "bbdf2255c4b84aa3e7938d5f3af1e0c7c1c7d053",
+      "sourcePath": "content/dialogues.json"
+    },
+    {
+      "file": "/audio/dialog/d-b1-22.mp3",
+      "id": "d-b1-22",
+      "group": "dialog",
+      "textDe": "Auf der Rechnung steht Mineralwasser — wir haben nichts bestellt. Ich prüfe das System … Sie haben recht — das ging an den Nebentisch. Bitte korrigieren Sie den Betrag vor dem Bezahlen. Zwölf Euro weniger: sechsundzwanzig statt achtunddreißig. Außerdem kam die Hauptspeise kalt. Das Dessert geht aufs Haus — Küche ist intern gemeldet. Mit Fairness kommt man wieder — danke. Bis zum nächsten Besuch, gute Nacht!",
+      "audioCommit": "bbdf2255c4b84aa3e7938d5f3af1e0c7c1c7d053",
+      "sourcePath": "content/dialogues.json"
+    },
+    {
+      "file": "/audio/dialog/d-b1-23.mp3",
+      "id": "d-b1-23",
+      "group": "dialog",
+      "textDe": "Ich muss den Stundenplan umbauen: Vorlesung gegen Praktikum. Wann liegt das Praktikum? Täglich acht bis zwölf — Fabrik im Industriegebiet. Die Vorlesung gibt es als Aufzeichnung; wir buchen Kurs B. Muss die Uni das Praktikum anerkennen? Ja: Bestätigung der Firma mit Zeiten, maximal dreißig Wochenstunden. Und wenn die Firma kein Schreiben ausstellt? Eine E-Mail der Chefin — formlos, aber schriftlich — genügt.",
+      "audioCommit": "bbdf2255c4b84aa3e7938d5f3af1e0c7c1c7d053",
+      "sourcePath": "content/dialogues.json"
+    },
+    {
+      "file": "/audio/dialog/d-b1-24.mp3",
+      "id": "d-b1-24",
+      "group": "dialog",
+      "textDe": "Gestern Abend verlor ich im Bus die Laptoptasche. Linie und Haltestelle — genau, bitte. Linie sechsundzwanzig, Endhaltestelle, Sitz hinten links. Ein Fund, gemeldet um zwanzig zwanzig — Beschreibung passt. Wann kann ich abholen? Ab neun — Ausweis und Eigentumsnachweis: Rechnung oder Fotos. Ich bringe Rechnung und Screenshots des Geräts. Sechs Monate Aufbewahrung nach Anzeige, dann Versteigerung — kommen Sie pünktlich.",
+      "audioCommit": "bbdf2255c4b84aa3e7938d5f3af1e0c7c1c7d053",
+      "sourcePath": "content/dialogues.json"
+    },
+    {
+      "file": "/audio/dialog/d-b1-25.mp3",
+      "id": "d-b1-25",
+      "group": "dialog",
+      "textDe": "Ich bin vor zwei Wochen umgezogen — Ummeldung, bitte. Genau zwei Wochen Frist — rechtzeitig. Formular, Ausweis, Vermieterbestätigung. Was ist diese Bestätigung? Ein Blatt mit der Unterschrift des Vermieters über den Einzug. Der Vermieter weilt in Tunesien; die Post braucht Tage. Ohne sie keine Anmeldung — ich gebe Ihnen vorläufig eine Bescheinigung. Was kostet sie? Anmeldung und Adressänderung sind gebührenfrei; die eID-Funktion schalten wir auch kostenlos frei. Nur ein biometrisches Lichtbild im Amt kostet etwa sechs Euro, falls Sie keines mitbringen.",
+      "audioCommit": "bbdf2255c4b84aa3e7938d5f3af1e0c7c1c7d053",
+      "sourcePath": "content/dialogues.json"
+    },
+    {
+      "file": "/audio/dialog/d-b1-26.mp3",
+      "id": "d-b1-26",
+      "group": "dialog",
+      "textDe": "Ich kündige zum Monatsersten und will Ihren Strom. Die Altvertragsfrist sind vier Wochen — wir übernehmen alles. Wie melde ich den Zählerstand am Umschalttag? Foto per Onlineformular, spätestens zweiundzwanzig Uhr. Wird die Versorgung unterbrochen? Nie — die Grundversorgung springt ohne eine Sekunde Pause ein. Was sagt die Bonusklausel? Bonus nur bei zwölf Monaten Bindung; Preisgarantie braucht Preisbindung.",
+      "audioCommit": "bbdf2255c4b84aa3e7938d5f3af1e0c7c1c7d053",
+      "sourcePath": "content/dialogues.json"
+    },
+    {
+      "file": "/audio/dialog/d-b1-27.mp3",
+      "id": "d-b1-27",
+      "group": "dialog",
+      "textDe": "Wann kann ich zur Theorieprüfung — vierzig Übungsstunden? Frühestens in zwei Wochen — Erste-Hilfe-Kurs vorher nötig. Wie lange ist diese Bescheinigung gültig? Einmal im Leben: sie läuft nie ab. Welche Papiere verlangt der Prüfer? Ausweis, Sehtest, Erste-Hilfe, Ausbildungsprotokoll, Passfoto — Gebühr vor Ort. Und nach zweimaligem Nichtbestehen? Vierzehn Tage Sperre bis zum nächsten Versuch; die Prüfgebühr wird für jeden Versuch erneut fällig, eine neue Antragstellung beim Amt ist nicht nötig.",
+      "audioCommit": "bbdf2255c4b84aa3e7938d5f3af1e0c7c1c7d053",
+      "sourcePath": "content/dialogues.json"
+    },
+    {
+      "file": "/audio/dialog/d-b1-32.mp3",
+      "id": "d-b1-32",
+      "group": "dialog",
+      "textDe": "Ihr Sohn arbeitet gut mit, aber er meldet sich selten. Zu Hause erzählt er viel. In der Klasse ist er wohl schüchtern. Das legt sich meistens. Wichtig wäre, dass er öfter laut liest. Wie viel sollte er täglich üben? Fünfzehn Minuten reichen, wenn es regelmäßig geschieht.",
+      "audioCommit": "bbdf2255c4b84aa3e7938d5f3af1e0c7c1c7d053",
       "sourcePath": "content/dialogues.json"
     },
     {
@@ -72,6 +248,38 @@
       "id": "d-b2-ht03",
       "group": "dialog",
       "textDe": "Betrachten wir ein Beispiel: Künstliche Intelligenz könnte berufliche Aufgaben verändern. Einige Tätigkeiten könnten automatisiert werden, während in anderen Bereichen neue Aufgaben entstehen. Besonders betroffen sein könnten wiederkehrende Büro- und Verwaltungsaufgaben. Aus diesem Beispiel lässt sich jedoch keine sichere Zahl künftig wegfallender Stellen ableiten. Entscheidend wären Weiterbildung und die Frage, ob Unternehmen KI unterstützend statt ersetzend einsetzen.",
+      "audioCommit": "bf060b8b1248fb9c12d162d085350f2224380441",
+      "sourcePath": "content/dialogues.json"
+    },
+    {
+      "file": "/audio/dialog/dlg-b1-berufsberatung.mp3",
+      "id": "dlg-b1-berufsberatung",
+      "group": "dialog",
+      "textDe": "Guten Tag, Frau Haddad. Sie suchen eine neue Stelle, richtig? Ja, genau. Ich habe fünf Jahre in einem Büro gearbeitet, aber jetzt möchte ich etwas Neues lernen. Haben Sie schon eine Idee, welcher Beruf zu Ihnen passen könnte? Ich arbeite gern mit Menschen. Vielleicht etwas im sozialen Bereich oder in einer Kita. Dafür brauchen Sie eine Weiterbildung. Die dauert meistens ein Jahr. Ein Jahr ist lang. Kann ich die Weiterbildung auch in Teilzeit machen? Ja, das ist möglich. Viele Kurse finden abends oder am Wochenende statt. Das wäre perfekt, weil ich morgens meine Kinder zur Schule bringe. Ich schicke Ihnen heute noch Informationen über zwei Kurse. Dann können Sie in Ruhe vergleichen. Vielen Dank! Ich freue mich, dass es einen Weg gibt, der zu meinem Leben passt.",
+      "audioCommit": "bf060b8b1248fb9c12d162d085350f2224380441",
+      "sourcePath": "content/dialogues.json"
+    },
+    {
+      "file": "/audio/dialog/dlg-b1-elterngespraech.mp3",
+      "id": "dlg-b1-elterngespraech",
+      "group": "dialog",
+      "textDe": "Guten Tag, Frau Demir. Schön, dass Sie Zeit für unser Gespräch haben. Guten Tag, Herr Wolf. Ich mache mir Sorgen um Elifs Noten in Mathe. Elif ist im Unterricht aufmerksam, aber bei den Hausaufgaben fehlt ihr oft die Übung. Zu Hause übt sie jeden Abend, aber die Texte in den Aufgaben versteht sie manchmal nicht. Das ist ein wichtiger Punkt. In Mathe muss man die Aufgaben zuerst genau lesen. Was können wir zu Hause noch tun? Zehn Minuten Kopfrechnen am Tag helfen mehr als eine Stunde am Wochenende. Das klingt gut. Und wie ist es in Deutsch? In Deutsch liest sie gern, aber sie schreibt zu schnell und macht viele kleine Fehler. Soll sie ihre Texte noch einmal langsam durchlesen? Genau. Und am Freitag gibt es eine AG, da kann sie zusätzlich üben. Vielen Dank für die Tipps, Herr Wolf. Auf Wiedersehen!",
+      "audioCommit": "bf060b8b1248fb9c12d162d085350f2224380441",
+      "sourcePath": "content/dialogues.json"
+    },
+    {
+      "file": "/audio/dialog/dlg-b1-kontoeroeffnung.mp3",
+      "id": "dlg-b1-kontoeroeffnung",
+      "group": "dialog",
+      "textDe": "Guten Tag! Ich möchte gerne ein Girokonto eröffnen. Guten Tag! Bringen Sie bitte Ihren Personalausweis oder Pass und Ihre Meldebescheinigung mit. Ja, hier sind mein Personalausweis und die Meldebescheinigung. Danke. Möchten Sie das Konto online führen oder möchten Sie regelmäßig in die Filiale kommen? Am liebsten online. Gibt es eine monatliche Gebühr? Für Studenten und Azubis ist das Girokonto kostenlos. Ansonsten kostet es 4,90 Euro im Monat. Ich bin Studentin. Hier ist meine Immatrikulationsbescheinigung. Perfekt. Dann füllen Sie bitte dieses Formular aus. Sie bekommen die Karte und die PIN in etwa einer Woche per Post. Vielen Dank für die Hilfe!",
+      "audioCommit": "bf060b8b1248fb9c12d162d085350f2224380441",
+      "sourcePath": "content/dialogues.json"
+    },
+    {
+      "file": "/audio/dialog/dlg-b1-wohnungssuche.mp3",
+      "id": "dlg-b1-wohnungssuche",
+      "group": "dialog",
+      "textDe": "Guten Tag, Herr Yilmaz! Kommen Sie bitte herein. Das ist die Wohnung, von der ich Ihnen erzählt habe. Guten Tag! Die Wohnung ist sehr hell. Wie viele Zimmer hat sie genau? Sie hat drei Zimmer, eine Küche und ein Bad. Die Küche ist neu, aber das Bad ist etwas klein. Das Bad ist für mich nicht so wichtig. Gibt es einen Balkon? Ja, der Balkon ist groß, und man kann dort morgens in der Sonne frühstücken. Das klingt gut! Wie hoch ist die Miete mit allen Kosten? Warm kostet die Wohnung siebenhundertfünfzig Euro im Monat. Strom und Internet zahlen Sie extra. Das ist für diese Gegend in Ordnung. Wann könnte ich einziehen? Ab dem ersten Oktober wäre die Wohnung frei. Wenn Sie möchten, können wir den Vertrag nächste Woche unterschreiben. Sehr gern! Ich bringe dann meine Unterlagen mit. Vielen Dank für die Besichtigung!",
       "audioCommit": "bf060b8b1248fb9c12d162d085350f2224380441",
       "sourcePath": "content/dialogues.json"
     },
