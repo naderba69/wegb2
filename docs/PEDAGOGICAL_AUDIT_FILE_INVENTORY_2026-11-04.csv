@@ -1,7 +1,7 @@
 path,domain,bytes,lines,sha256,manual_review_status,scope_note
 .config/nextjs-nodejs/config.json,.config,185,6,b68ec20dab75fb461a28d6ad2a24f1c56551b7106af3bf6737c0cbf0e34bae17,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 .github/dependabot.yml,.github,1112,41,ad1d3030df9333f855ed3256450e7e7685a4259a917f718d7f9cda78077e2be3,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
-.github/workflows/ci.yml,.github,5696,119,7aaba48fb22a1c4ca6e02ba5509727e2d881a9aae25c889d37328642317410a9,manual_targeted,رُوجعت مقاطع أو حقول مرتبطة بنتائج محددة؛ ليست مراجعة كاملة للملف
+.github/workflows/ci.yml,.github,5814,121,2f30b8fcf28065609f15318c5683f40e8c5576748f66e3af6c647cc533e34d18,manual_targeted,رُوجعت مقاطع أو حقول مرتبطة بنتائج محددة؛ ليست مراجعة كاملة للملف
 .gitignore,root,396,25,2c5c76b409b4eda37130e67ae54726e64db6da20bfb4e53a4c2fe1d3ac2fbed0,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 HANDOFF.md,root,91697,399,5d7a613448a89aadd6bb751893785c84ba83e8ca81e35390a1e3805e7425be81,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 README.md,root,47343,255,966a6376cfe4262569ed8e507c5450524b4859fc8ed4da22221164a680597352,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
@@ -144,7 +144,7 @@ content/accreditation-alignment.json,content,12292,250,eeaff6de265596c04e54a2fa5
 content/ant-ausnahmen.json,content,6120,164,f91b11f10e8fcb4c5fa7c9bab15545e3a7065f6ed283a553a0e4b36c0aa53747,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 content/antonyme.json,content,10045,773,c44e1294ca56985975ad424ef248218a83a638a5b0fde419ceb1dd19bc750716,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 content/arena.json,content,10359,425,a7f16eddde5141ebd2675be7aade20abe4fc0085684b705a448149b070f11def,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
-content/audio-transcript-overrides.json,content,87240,783,b1afcea710b6607317d7bf03f9a9a6cb932986691313d5b7eb61af32856be96b,manual_targeted,أضيفت 32 لقطة B2 وصار السجل 97 لقطة لقياس سرعة التسجيل بالنص القديم؛ لا تثبت مطابقة الصوت بالمتن الحالي
+content/audio-transcript-overrides.json,content,77678,703,f1ed552d223e5ba7806880c57a49cd9174fc7cb7c2a079036707b0585da39021,manual_targeted,خفضت PA-039-01 السجل من 97 إلى 87 لقطة بعد إعادة تصنيع عشر قراءات؛ اللقطات المتبقية للقياس ولا تثبت مطابقة المتن الحالي
 content/beispiele-batches.json,content,23452,1446,0e550340e1448e4453f616177fa440c04046ac0cf3ebb58bb9cc150b49f4697d,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 content/cando.json,content,16206,499,1e46de654922b2c957edafc9ff55171a59574795b313f94773336338bdf407b8,manual_complete,قُرئ الملف كاملاً بشرياً في هذه الدورة ضمن النطاق المبيّن في التقرير
 content/dialog-audio.json,content,30670,1413,534a84afc9b0448b26fc0942ea5fee6282ca8124fc3e7a57f5956b8e7a56389f,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
@@ -158,7 +158,7 @@ content/grammar-profile-governance.json,content,2564,55,b2381b9566584b6407436b59
 content/grammar-profile-matrix.json,content,353666,8629,2a43bea99f0d19778a55689a5f28aa4e10584e826b5ae613312a6add108bacaf,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 content/grammar.json,content,667488,17296,23b30297101f7d546c3d7aac2e704b4a0a2cab6dc963edf6e407d2163c13f88e,manual_complete,قُرئ الملف كاملاً داخلياً بنداً بنداً؛ لا يُعد ذلك توقيعاً لغوياً أو اعتماداً خارجياً
 content/haerte.json,content,13821,452,3bd29cd2447f466e94afcad5a7682c1261707fd704550ebef9fa97a4dfcd1144,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
-content/hoeren-audio.json,content,25352,1106,d99f48475c418d347806d0194dbaf7add3bc04c1d34f62c2594ca67972310c54,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
+content/hoeren-audio.json,content,25431,1106,71db6559a5bf1069f6746a5155f2c4487417a6f7d7404acaed3cb353e7c84c0c,not_started,حُدثت هوية الصوت والبايتات لعشرة ملفات في PA-039-01؛ لا توجد مراجعة استماع بشرية كاملة مثبتة في هذه الدورة
 content/hoerneu.json,content,40932,955,8aa661ac4179a41203b0ef8a6759298a2fca20c8aae7fd5e47e0497c2b2e1aa9,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 content/kollok-a1a2-soll.json,content,44255,2088,49255d1d3ba79874459151e7407e570b691820d7a1e12e9994d796596d89907e,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 content/kollok-ausnahmen.json,content,7174,265,25733c79fe44ad002ac474f0d92d4aa249119f6f0c1cff4edb4e0e2e183f70bd,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
@@ -266,14 +266,14 @@ docs/PA034_VOCAB_POSINFO_REVIEW_15_2026-11-04.md,docs,5305,44,4aa1582be8db0d1c2d
 docs/PED03_EXACT_HINT_REVIEW_2026-11-04.md,docs,2788,33,b626958d60b4d5485a7cdc0e5168bc80a682936d1216eb62d2e121c2dfeb2502,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 docs/PED31_B1_B2_REVIEW_2026-11-04.md,docs,3727,54,b44403941e6f125e088a18cdf529a8eef2baee7d2f52406b9eb553b28723b8da,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 docs/PED91_SCAFFOLD_BASELINE_2026-11-04.md,docs,4368,47,22aba27f011dba804cf694ec233362cb372542fd9e06514f8b7d0aa4d9a40e88,manual_targeted,رُوجعت مقاطع أو حقول مرتبطة بنتائج محددة؛ ليست مراجعة كاملة للملف
-docs/PEDAGOGICAL_AUDIT_MEASUREMENTS_2026-11-04.json,docs,40965,1268,a7526a3e626e506e79b3ef3ac3fcd8eee5f63ef1f6fac68d998551e5be056540,audit_artifact,ناتج هذه الدورة، لا يُعدّ مصدراً تعليمياً مراجعاً
+docs/PEDAGOGICAL_AUDIT_MEASUREMENTS_2026-11-04.json,docs,44338,1401,839c4bc8110f33fed873b41c606b7bc47b1c7c814613dd3ff66de5c9d4daa4c7,audit_artifact,ناتج هذه الدورة، لا يُعدّ مصدراً تعليمياً مراجعاً
 docs/PEDAGOGICAL_AUDIT_VOCAB_POSINFO_2026-11-04.csv,docs,28316,111,e3ad08a02f40d55e446f91ed812e0993244f3910764f0802fad1cae1a6f6fe56,audit_artifact,ناتج هذه الدورة، لا يُعدّ مصدراً تعليمياً مراجعاً
 docs/PEDAGOGICAL_AUDIT_WRITING_CONSISTENCY_2026-11-04.csv,docs,34132,148,3e8f6408ea98be9c06ff323bc2a5dca980e4d8525cc919bf3ca0232abf5bb35c,audit_artifact,ناتج هذه الدورة، لا يُعدّ مصدراً تعليمياً مراجعاً
-docs/PEDAGOGICAL_EXPERT_AUDIT_2026-11-04.md,docs,124670,614,c3b72e03d02c020a1b3a4d286e1b685558616e0edd459119a7e8b987e13b6c98,audit_artifact,ناتج هذه الدورة، لا يُعدّ مصدراً تعليمياً مراجعاً
+docs/PEDAGOGICAL_EXPERT_AUDIT_2026-11-04.md,docs,127533,622,36cd63f3ffc947e7fc76df3af35b1258291aa047154f210b4d920d74d9d1f531,audit_artifact,ناتج هذه الدورة، لا يُعدّ مصدراً تعليمياً مراجعاً
 docs/PEDAGOGIK_REVIEW_2026-10-16.md,docs,9032,57,92732191b521f9ced7dfa152b545b25d110473ee951a298647e595425377f50d,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 docs/PERFORMANCE_BUDGET.md,docs,2466,20,22bfc95e4bcccb33c929dbb0412f0ccd40cd4aa05012f39d76a14d9c2b40587c,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 docs/PLAN_HARF_HARF_2026-10-23.md,docs,3316,49,f4907c8757f631a1e89c63fe6042b67fcdf33024e68629b4bc30e9b1efe9ab33,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
-docs/PRODUCTION_HARDENING_2026-11-04.md,docs,14872,100,5c1e5b6fb7c578f28ae3acae2e9b5e3a27acd2a721af9439140e139cafcbf09e,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
+docs/PRODUCTION_HARDENING_2026-11-04.md,docs,15046,100,7628369b8c2d1ba9c1465007ac4955004e43e2570ae368cd27a933e122be59f5,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 docs/PRODUCTION_PLAN_2026-10-28.md,docs,14931,155,8b51822fec52057de1d1e08504cb1ad488804ef4a4dd5948eb3e477c7911fa89,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 docs/PROGRESS_100-100_2026-10-30.md,docs,3594,75,0fbb3958620bda98e2402a07f20ddcefa2844dfe3b4fa6f70923ac99477b7d04,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 docs/R162_PLURAL_PED09_2026-11-11.md,docs,43994,193,2b57129e0df5754a3cfad919b11652f6a96d16a7dc8619c7279c7089aed3344c,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
@@ -311,7 +311,7 @@ docs/archive/STUDENT_AUDIT_REPORT.md,docs,13836,160,d7526a94dc9367fa76d383df7362
 docs/archive/alle-180-karten.png,docs,6222690,22834,95752ee355df1bcf70d9da430eb374db2c4d0c61fcf8aeca6ca7ad4e49556341,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 docs/audio-qc-2026-10-16.json,docs,67600,3030,733f502e860cc1cff51b693e72ed1c7c3bbd822f206891e74c86b16b63679b71,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 docs/audio-qc-all-2026-10-18.json,docs,520960,21794,389468f7fb6ad0ccd70d13fcf4048345dfe9f695ac1e8a1de293c4de960ddbb3,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
-docs/audio-qc-all-2026-11-04.json,docs,440791,21002,e87683faaa903872bd9aed54c24cdc62290188be87408651eda068b555cbfde3,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
+docs/audio-qc-all-2026-11-04.json,docs,440871,21002,a23d9e67d9b3ca127053bbd91c5f7456ba24eae77ab9374256ec9ed3ed3ab310,not_started,تقرير QC تقني آلي 1099/1099؛ لا يساوي استماعاً بشرياً أو حكماً على النطق والطبيعية
 docs/audio-qc-hoerneu-2026-10-16.json,docs,6994,320,941ea3ebe914ed17c03c0983b5504683caa3e2536e8e541767192ea1bb62f812,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 docs/audit-2026-10-04.md,docs,32703,149,7482b982ea8e828bd08f4c800dadc49610fbe434d59ff627d50af2d30dd927b1,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 docs/content-gap-a1-dialogues-28-30-2026-10-05.json,docs,7041,152,d273741926c0ebbd0d9e6151ec9be3c291c113fcba4906075984570ee9fd7fe8,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
@@ -1616,9 +1616,9 @@ lighthouserc.json,root,830,27,cf46e4ff6e99284864b422685aaf4933af6d521d868eff0110
 middleware.ts,root,1282,38,a6504bbc084b9b703cdc273d11dbd6bdd64d94c40c481b6b1682598f54cc1895,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 next.config.mjs,root,1762,43,855d2d3ed1e43c25646b5b1270fbaaa71ea54345d1fd2496e30091358a321d16,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 package-lock.json,root,270221,8888,1d00f3bb9d34ead8f860a46745f3d71a2066816b433a9b89b778fb9b0520b7c4,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
-package.json,root,4857,97,369c19243bd438b3fcfae8c1beaab188af53ee7bf769aeabf3d753974c9ce552,manual_complete,قُرئ الملف كاملاً بشرياً في هذه الدورة ضمن النطاق المبيّن في التقرير
+package.json,root,4922,98,d2f722e7ef59e9431893eb5590020d169df05868caecd53a8717eb65f66d7483,manual_complete,قُرئ الملف كاملاً بشرياً في هذه الدورة ضمن النطاق المبيّن في التقرير
 postcss.config.mjs,root,94,7,dfac7ac2d86d326a0e5adb024e7943c181393ed17a5fcb8f0315b24c7da6ddde,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
-public/audio-manifest.json,public,54042,0,20b5a30e8171171e51a3aa5fb85fad6c4b56c0c00afbeb5a8563f90379714a9d,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
+public/audio-manifest.json,public,54037,0,693042abee19a388241cbdcb5a1df25505f19df4bc34eea17b4d5d7f83b40917,not_started,مانيفستو خدمة مولد آلياً ومطابق لبايتات الملفات؛ لا يثبت استماعاً بشرياً أو جودة النطق
 public/audio/dialog/d-a0-01.mp3,public,139206,566,706c49b90ef44d8e9bd8c5a8a44fcc0ffc348f86041ec91032f3169d3fa77a42,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 public/audio/dialog/d-a0-02.mp3,public,87078,376,c958920d8734eaf9640b825a0975c3b783eaeaa7cf826d7eeb318a6bb11064f2,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 public/audio/dialog/d-a0-03.mp3,public,45157,301,c1b312d3a5a85a9b492ae301e0699967d46486e09e2d2cec769e718e25df7a77,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
@@ -2706,15 +2706,15 @@ public/audio/hoeren/t-a2-27.mp3,public,227181,1118,297357ca9b1247522c6ccbaa35aff
 public/audio/hoeren/t-a2-28.mp3,public,227949,1144,4ba1f56c150df83bf67b344459f10d28be5db0ce568d036fd1097ef6581232c8,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 public/audio/hoeren/t-a2-29.mp3,public,244173,1243,a16a361e15598c315a7a65fb1d9af437fcaff443fddf8a530abfc74456e8a126,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 public/audio/hoeren/t-a2-30.mp3,public,251661,1214,9867cf0ddbcc547763450125e487e7d412864429b4a3a9a37395d9ad90913002,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
-public/audio/hoeren/t-b1-01.mp3,public,164693,1121,a30dd8f0589887c11f7ac4fad52d0fc908a970034687284892f302ee5c948da2,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
+public/audio/hoeren/t-b1-01.mp3,public,95949,455,8cc7bbd63cb57823430816c58e6bfe514011e646c842e647c123a149e5d822c6,not_started,أعيد توليده آلياً من مدخل النص الحالي في PA-039-01 ونجح QC التقني؛ لم يحدث استماع بشري أو حكم نطق
 public/audio/hoeren/t-b1-02.mp3,public,146721,964,cf6191d456d289cc1ef69d08f0f073112f51221b7e4c8174c61fd2e5f9f3a5a2,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
-public/audio/hoeren/t-b1-03.mp3,public,156334,1039,cab25130542ed7891ea5318c475be88a89d7b30719859d962923a5870fa3b883,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
+public/audio/hoeren/t-b1-03.mp3,public,92013,433,400eec55f8225e23ccc432e3b71054d3fce9b6167038f4414408fc823c11ddc1,not_started,أعيد توليده آلياً من مدخل النص الحالي في PA-039-01 ونجح QC التقني؛ لم يحدث استماع بشري أو حكم نطق
 public/audio/hoeren/t-b1-04.mp3,public,159469,1034,e2baef2a7abe486f47cfa70249bded6ab97a8e355aeaba52533a969a81da0001,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 public/audio/hoeren/t-b1-05.mp3,public,147139,971,32c9d0a6fcb0039553b647042870e9777e57ec9aa2f259b89811e9cdb3e667c7,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
-public/audio/hoeren/t-b1-06.mp3,public,169082,1085,b7da6cfe799496401df81dfd3132837b52ab130a4d09ef4106e1f2e7743ea0a0,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
-public/audio/hoeren/t-b1-07.mp3,public,159469,1107,fec05f23732618320b0906b07e8a25e143cc62a1810ca52647b8b5e51d27545a,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
-public/audio/hoeren/t-b1-08.mp3,public,141288,915,6ba60bc78add6c592ecfd7995b046d0e5fbf0d5a24512bfa36caf1ab4a3abfe5,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
-public/audio/hoeren/t-b1-09.mp3,public,114120,776,0ec1da4406b19ff887ea8a14922bb3db074aef1434da6c31e03460b2c3258e1c,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
+public/audio/hoeren/t-b1-06.mp3,public,91629,432,ced0d56704b2c664d4e814cafeea1b94e88c10927397ad6902d449b2ecb82e4e,not_started,أعيد توليده آلياً من مدخل النص الحالي في PA-039-01 ونجح QC التقني؛ لم يحدث استماع بشري أو حكم نطق
+public/audio/hoeren/t-b1-07.mp3,public,115821,559,94b73af2272276d5830478d01489b25ccedff0970df697bdedf76ee145f0067a,not_started,أعيد توليده آلياً من مدخل النص الحالي في PA-039-01 ونجح QC التقني؛ لم يحدث استماع بشري أو حكم نطق
+public/audio/hoeren/t-b1-08.mp3,public,82701,427,589c78c597620497eeffa6c3dfe32a2674e1ebcae3750cac2eefd7a6e970a8b2,not_started,أعيد توليده آلياً من مدخل النص الحالي في PA-039-01 ونجح QC التقني؛ لم يحدث استماع بشري أو حكم نطق
+public/audio/hoeren/t-b1-09.mp3,public,97869,464,6c06b248169578fa1c32ddd6b0dada0472e1a8d37b4cebdeb0c16a7ad0e15158,not_started,أعيد توليده آلياً من مدخل النص الحالي في PA-039-01 ونجح QC التقني؛ لم يحدث استماع بشري أو حكم نطق
 public/audio/hoeren/t-b1-10.mp3,public,161768,1064,0fb7a6b2977948c6fdd953398450c2f1048d0ab0f48ea0bf2d89252946b42539,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 public/audio/hoeren/t-b1-11.mp3,public,155080,964,3bff75c2bb6ba9b1f2df66da8dc1e714155f4e6986d96ff07f951468f0f112e9,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 public/audio/hoeren/t-b1-12.mp3,public,179949,1141,87f0888d54679d91e381b3a449a1b6cf7c2172371c72f26e99089ca745033a1c,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
@@ -2761,10 +2761,10 @@ public/audio/hoeren/t-b2-17.mp3,public,214431,1376,a3ff7d2e2f6f93c5f4162ec6ef824
 public/audio/hoeren/t-b2-18.mp3,public,225924,1431,21563142f44d614af83daca8da9382bdf0f0acf0c58920797ce010507cc916d7,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 public/audio/hoeren/t-b2-19.mp3,public,238881,1556,6cf339e6b5dba84014c752ae423eef04bae4d2959fc36e6f20a099e1484e0ae9,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 public/audio/hoeren/t-b2-20.mp3,public,222163,1477,09bad39b917add24e00c913b30d420ddcd20965ede722b2ca86d457cd7993bc1,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
-public/audio/hoeren/t-b2-21.mp3,public,321261,1602,6ea9a12b09fdc546f804e396da68ab9031e2bc1fdf42e7e9e82e6c551fd6c4ee,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
-public/audio/hoeren/t-b2-22.mp3,public,273453,1361,fb115fb5183bef473579bd0b62e2b84431bd51a8d73491f6db8a4226bbe27ccb,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
-public/audio/hoeren/t-b2-23.mp3,public,348333,1779,8113a91c640cda3fedfc23228dfee5a41b9db9533c55d22939db16501855f278,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
-public/audio/hoeren/t-b2-24.mp3,public,303021,1520,3f2aba1c7eb4020f7b507975950463c713b27bbe9ee030fc6d4a9002248d35eb,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
+public/audio/hoeren/t-b2-21.mp3,public,325101,1594,f6922999a70a50325d90d4d6c762b5dc3400f82d1b58a4aa825104eda95845f7,not_started,أعيد توليده آلياً من مدخل النص الحالي في PA-039-01 ونجح QC التقني؛ لم يحدث استماع بشري أو حكم نطق
+public/audio/hoeren/t-b2-22.mp3,public,280461,1338,d5073a7d75c3237a09e54f52be426d1b2d96fd8677bdbede1ffb0f7e8984eb9b,not_started,أعيد توليده آلياً من مدخل النص الحالي في PA-039-01 ونجح QC التقني؛ لم يحدث استماع بشري أو حكم نطق
+public/audio/hoeren/t-b2-23.mp3,public,363501,1813,3e22183ece4b7622d42ac682491a4fa02d01fa0c2e56d25ffd39195ed8ba2ef2,not_started,أعيد توليده آلياً من مدخل النص الحالي في PA-039-01 ونجح QC التقني؛ لم يحدث استماع بشري أو حكم نطق
+public/audio/hoeren/t-b2-24.mp3,public,303981,1552,e9402b05e9dd2ac1c9f7319925bba92ff6664a7ad8f294789b236dfbcd09d913,not_started,أعيد توليده آلياً من مدخل النص الحالي في PA-039-01 ونجح QC التقني؛ لم يحدث استماع بشري أو حكم نطق
 public/audio/hoeren/t-b2-25.mp3,public,341133,1715,eb01433aa2ccf05ffff1524eeed3a5f3b25a3fec421f38254b3aae93ab9e078e,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 public/audio/hoeren/t-b2-26.mp3,public,425709,2174,3bb53ed36ae1ec68f8f1f1fc53b3b6f704b1b001bac6b706fb7359d5e4158311,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 public/audio/hoeren/t-b2-27.mp3,public,394797,1954,efd5dc1de70015ef381de15bb1a7df44a1a66354308db96520bd9e6186e6929f,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
@@ -3225,6 +3225,7 @@ scripts/assessment_integrity_audit.ts,scripts,3621,72,743de971ace82f2fadf2baf50d
 scripts/audio_qc_all.py,scripts,12867,242,2884df455d7e44a1bea56a815cffd2a1d456dc2a238eae62a5f26422b490eef4,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 scripts/audio_qc_hoerneu.py,scripts,6102,119,922893cfb46500d0579d0d85da953ed0f6ec5c3d3e818a49bdab90c1dc676d4c,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 scripts/audio_qc_r169.py,scripts,6942,130,59b4b42972917b36c4d01aad252422b1a9f0453a9d49a2516cf443b97f26e835,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
+scripts/audio_refresh_audit.ts,scripts,7392,196,fe024043d257d548881f039f3f4f73a25900573489a5cb798a3900636ade903f,manual_complete,قُرئ الملف كاملاً بشرياً في هذه الدورة ضمن نطاق حراسة PA-039-01 وحدود الادعاء
 scripts/audit_harf_content.mjs,scripts,9113,142,23f3fd8392bd2ede7082ffc2a3c7809e28014f543fc5aea2758ae5d71091c8a0,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 scripts/audit_harf_grammar.mjs,scripts,11578,153,eca09dd54b2fe7669610fa19d06ec19157fe5f4e4803a055d7bf537207f51b87,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 scripts/audit_harf_vocab.mjs,scripts,12606,200,2aefcd599213c3c8c3bfb75c736b4f78f93ffe3fea359c191660a309259ea12c,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
@@ -3238,7 +3239,7 @@ scripts/copy_banks.mjs,scripts,3914,65,c395ed3d86d158b831b338c725d4fda55787f9307
 scripts/deep_audit.py,scripts,5435,166,11bbfdecdbf80a7a51dbf93d0751fbee771a3504627deb5262a99eca7be31945,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 scripts/dialoge_welle.py,scripts,14365,131,d3fb94919d0fc672d18585589fd8ec6932639d2379dcf24f3645defb542ce425,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 scripts/dialogue_content_review_audit.ts,scripts,37692,709,3e182696c43d7ba0247f4f9cf9cdb0dd1866e70b6606b482b696b16d023c95cb,manual_complete,قُرئ الملف كاملاً بشرياً في هذه الدورة ضمن النطاق المبيّن في التقرير
-scripts/engine_smoke.ts,scripts,1491113,17270,504d1baab2fd7c553cfe635ae4559b2f6d1990609fb094d8f78d149ad47bbdab,manual_targeted,رُوجعت مقاطع أو حقول مرتبطة بنتائج محددة؛ ليست مراجعة كاملة للملف
+scripts/engine_smoke.ts,scripts,1496098,17323,9dc769eea08ee84d4f2ad724f0aba32a46323da6f01f3d16a1f18171433e5ace,manual_targeted,رُوجعت مقاطع أو حقول مرتبطة بنتائج محددة؛ ليست مراجعة كاملة للملف
 scripts/evidence_hash.mjs,scripts,1184,36,95e649e69e90b46f0e95cbc932ad267aaba97bd6c2353fbe38782dd4fb7baee1,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 scripts/evidence_provenance_audit.ts,scripts,5609,115,8086f3b5baabdcdbcea23521123b7064ec0529da63b30ac23249eb17e993d9d3,manual_complete,قُرئ الملف كاملاً بشرياً في هذه الدورة ضمن النطاق المبيّن في التقرير
 scripts/expand_grammar.py,scripts,11430,93,f06828581108e63fa7abda9d9e2e3a0ab16f8f24dcf96c050907855d24cf476c,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
@@ -3253,6 +3254,7 @@ scripts/extract_tools.mjs,scripts,2200,50,495bae46be23a1820bcb4e9f5f6afe28875bc8
 scripts/fix_arabic_typos.py,scripts,2580,87,c39d091df39e2353b1c5a0661086bfb768015eb81f1cbc170c42b63d1bc8c8af,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 scripts/fix_cultural_remaining.mjs,scripts,17157,103,22d348a8211c20e8fe280324a983b4508e29edf20ea7aaf294245fd9e465799a,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
 scripts/fix_typos.py,scripts,3574,99,ef79613762105c897551ab3dcab4908929274534345111c9042a0d4b87d1ac8f,not_started,لا توجد مراجعة بشرية كاملة مثبتة في هذه الدورة
+scripts/fixtures/audio-refresh-pa039-01.json,scripts,7613,146,d4df28089d44c38befca579e5662910ed0b1962b8674faf06c0239b39ca9148b,audit_artifact,سجل توليد آلي محروس بالبصمات؛ لا يثبت استماعاً بشرياً أو حكماً على النطق
 scripts/fixtures/dialogues-reviewed-01.json,scripts,75242,2262,50f19351a15fbf6eb2122519d505b43243103c41ba949972b3a8cb687636bb5c,audit_artifact,ناتج هذه الدورة، لا يُعدّ مصدراً تعليمياً مراجعاً
 scripts/fixtures/dialogues-reviewed-02.json,scripts,254334,6477,5e42f0332432898ae8f2dd35b678e3d8968ac2639570f75944560aeedabf7b3b,audit_artifact,ناتج هذه الدورة، لا يُعدّ مصدراً تعليمياً مراجعاً
 scripts/fixtures/dialogues-reviewed-03.json,scripts,301823,6731,8e32cac9da3346c7554b6e2ea4fe0c5d53c15e5f878c2dbc52daef58334fe1e2,audit_artifact,ناتج هذه الدورة، لا يُعدّ مصدراً تعليمياً مراجعاً
