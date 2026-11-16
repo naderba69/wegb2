@@ -992,9 +992,9 @@
     {
       "id": "t-b2-25",
       "file": "/audio/hoeren/t-b2-25.mp3",
-      "voice": "voice-01 (de-DE, Arena TTS)",
+      "voice": "voice-02 (de-DE, Arena TTS)",
       "level": "B2",
-      "bytes": 341133
+      "bytes": 342861
     },
     {
       "id": "t-b2-26",
@@ -1034,65 +1034,65 @@
     {
       "id": "t-b2-31",
       "file": "/audio/hoeren/t-b2-31.mp3",
-      "voice": "voice-03 (de-DE, Arena TTS)",
+      "voice": "voice-02 (de-DE, Arena TTS)",
       "level": "B2",
-      "bytes": 355341
+      "bytes": 332781
     },
     {
       "id": "t-b2-32",
       "file": "/audio/hoeren/t-b2-32.mp3",
-      "voice": "voice-03 (de-DE, Arena TTS)",
+      "voice": "voice-02 (de-DE, Arena TTS)",
       "level": "B2",
-      "bytes": 334701
+      "bytes": 345261
     },
     {
       "id": "t-b2-33",
       "file": "/audio/hoeren/t-b2-33.mp3",
-      "voice": "voice-03 (de-DE, Arena TTS)",
+      "voice": "voice-02 (de-DE, Arena TTS)",
       "level": "B2",
-      "bytes": 323469
+      "bytes": 321741
     },
     {
       "id": "t-b2-34",
       "file": "/audio/hoeren/t-b2-34.mp3",
-      "voice": "voice-03 (de-DE, Arena TTS)",
+      "voice": "voice-02 (de-DE, Arena TTS)",
       "level": "B2",
-      "bytes": 359469
+      "bytes": 365229
     },
     {
       "id": "t-b2-35",
       "file": "/audio/hoeren/t-b2-35.mp3",
-      "voice": "voice-03 (de-DE, Arena TTS)",
+      "voice": "voice-02 (de-DE, Arena TTS)",
       "level": "B2",
-      "bytes": 370029
+      "bytes": 367533
     },
     {
       "id": "t-b2-36",
       "file": "/audio/hoeren/t-b2-36.mp3",
-      "voice": "voice-03 (de-DE, Arena TTS)",
+      "voice": "voice-02 (de-DE, Arena TTS)",
       "level": "B2",
-      "bytes": 322893
+      "bytes": 326733
     },
     {
       "id": "t-b2-37",
       "file": "/audio/hoeren/t-b2-37.mp3",
-      "voice": "voice-03 (de-DE, Arena TTS)",
+      "voice": "voice-02 (de-DE, Arena TTS)",
       "level": "B2",
-      "bytes": 347853
+      "bytes": 344109
     },
     {
       "id": "t-b2-38",
       "file": "/audio/hoeren/t-b2-38.mp3",
-      "voice": "voice-03 (de-DE, Arena TTS)",
+      "voice": "voice-02 (de-DE, Arena TTS)",
       "level": "B2",
-      "bytes": 360333
+      "bytes": 348429
     },
     {
       "id": "t-b2-39",
       "file": "/audio/hoeren/t-b2-39.mp3",
-      "voice": "voice-03 (de-DE, Arena TTS)",
+      "voice": "voice-02 (de-DE, Arena TTS)",
       "level": "B2",
-      "bytes": 333069
+      "bytes": 324621
     },
     {
       "id": "t-b2-40",

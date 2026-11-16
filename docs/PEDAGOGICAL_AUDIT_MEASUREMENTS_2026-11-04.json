@@ -988,7 +988,7 @@
     "independentLinguisticSignOff": false,
     "independentTranslationSignOff": false,
     "externalCefrOrExamValidation": false,
-    "claimBoundary": "157 bounded internal A0–B2 decisions across 529 questions; dialogues are reviewed separately by all five PA-038 batches. PA-039-01 programmatically regenerated ten reading recordings from current German source input, including six of the 59 PA-037-changed reading sources; 53 PA-037-changed reading-audio sources still need re-synthesis or text/audio matching/listening checks. Independent review, field validation, and external linguistic, translation, legal, medical, environmental, security, audio, CEFR, or exam sign-off remain pending.",
+    "claimBoundary": "157 bounded internal A0–B2 decisions across 529 questions; dialogues are reviewed separately by all five PA-038 batches. PA-039-01/02 programmatically regenerated twenty reading recordings from current German source input, including seven of the 59 PA-037-changed reading sources; 52 PA-037-changed reading-audio sources still need re-synthesis or text/audio matching/listening checks. Independent review, field validation, and external linguistic, translation, legal, medical, environmental, security, audio, CEFR, or exam sign-off remain pending.",
     "audioSourcePassagesChanged": [
       "t-a0-06",
       "t-a1-09",
@@ -1059,9 +1059,9 @@
       "result": "pass",
       "textAudioMatchChecked": false,
       "humanListeningCompleted": false,
-      "recordingsRegeneratedFromCurrentText": 10,
+      "recordingsRegeneratedFromCurrentText": 20,
       "generationInputProvenanceHashGuarded": true,
-      "recordingTranscriptOverridesAfterRefresh": 87
+      "recordingTranscriptOverridesAfterRefresh": 77
     },
     "audioSourcesRegeneratedFromCurrentText": [
       "t-b1-01",
@@ -1073,7 +1073,17 @@
       "t-b2-21",
       "t-b2-22",
       "t-b2-23",
-      "t-b2-24"
+      "t-b2-24",
+      "t-b2-25",
+      "t-b2-31",
+      "t-b2-32",
+      "t-b2-33",
+      "t-b2-34",
+      "t-b2-35",
+      "t-b2-36",
+      "t-b2-37",
+      "t-b2-38",
+      "t-b2-39"
     ],
     "audioSourcesRegeneratedFromPa037ChangedSet": [
       "t-b1-01",
@@ -1081,7 +1091,8 @@
       "t-b1-07",
       "t-b1-08",
       "t-b1-09",
-      "t-b2-21"
+      "t-b2-21",
+      "t-b2-25"
     ],
     "audioSourcePassagesPendingResynthesisOrListening": [
       "t-a0-06",
@@ -1135,8 +1146,7 @@
       "t-b2-17",
       "t-b2-18",
       "t-b2-19",
-      "t-b2-20",
-      "t-b2-25"
+      "t-b2-20"
     ]
   },
   "dialogueBankReviewAudit": {
@@ -1337,25 +1347,26 @@
       "result": "pass",
       "textAudioMatchChecked": false,
       "humanListeningCompleted": false,
-      "recordingTranscriptOverrides": 87,
+      "recordingTranscriptOverrides": 77,
       "b1RecordingSnapshotsAdded": 26,
       "snapshotPurpose": "tempo measurement against recording-time text only; does not establish current text/audio match",
       "b2RecordingSnapshotsAdded": 32,
       "readingSnapshotsRemovedByPa03901": 10,
-      "remainingReadingSnapshots": 16,
-      "remainingDialogueSnapshots": 71
+      "remainingReadingSnapshots": 6,
+      "remainingDialogueSnapshots": 71,
+      "readingSnapshotsRemovedByPa03902": 10
     }
   },
   "audioRefreshAudit": {
-    "batch": "PA-039-01",
-    "fixture": "scripts/fixtures/audio-refresh-pa039-01.json",
+    "batch": "PA-039-01/02",
+    "fixture": "scripts/fixtures/audio-refresh-pa039-01.json; scripts/fixtures/audio-refresh-pa039-02.json",
     "regressionGate": "npm run audit:audio-refresh",
     "sourcePath": "content/texts.json",
     "voice": "voice-02 (de-DE, Arena TTS)",
-    "recordings": 10,
+    "recordings": 20,
     "byLevel": {
       "B1": 6,
-      "B2": 4
+      "B2": 14
     },
     "ids": [
       "t-b1-01",
@@ -1367,18 +1378,28 @@
       "t-b2-21",
       "t-b2-22",
       "t-b2-23",
-      "t-b2-24"
+      "t-b2-24",
+      "t-b2-25",
+      "t-b2-31",
+      "t-b2-32",
+      "t-b2-33",
+      "t-b2-34",
+      "t-b2-35",
+      "t-b2-36",
+      "t-b2-37",
+      "t-b2-38",
+      "t-b2-39"
     ],
-    "sourceTextHashesMatchCurrentBank": 10,
-    "audioHashesAndManifestBytesMatch": 10,
-    "priorAudioIdentitiesReplaced": 10,
+    "sourceTextHashesMatchCurrentBank": 20,
+    "audioHashesAndManifestBytesMatch": 20,
+    "priorAudioIdentitiesReplaced": 20,
     "transcriptSnapshotLedger": {
       "before": 97,
-      "removed": 10,
-      "after": 87,
+      "removed": 20,
+      "after": 77,
       "afterByGroup": {
         "dialog": 71,
-        "hoeren": 16
+        "hoeren": 6
       }
     },
     "technicalAudioQc": {
@@ -1394,8 +1415,24 @@
     "naturalnessJudged": false,
     "independentLinguisticSignOff": false,
     "externalCefrOrExamValidation": false,
-    "remainingPa037ChangedReadingSources": 53,
-    "remainingDocumentedRecordingTimeSnapshots": 87,
-    "claimBoundary": "Programmatic generation provenance, source/audio hashes, manifest identity, and automated technical QC do not establish that a human heard every word and do not judge pronunciation, prosody, naturalness, pedagogy, CEFR level, or exam suitability."
+    "remainingPa037ChangedReadingSources": 52,
+    "remainingDocumentedRecordingTimeSnapshots": 77,
+    "claimBoundary": "Programmatic generation provenance, source/audio hashes, manifest identity, and automated technical QC do not establish that a human heard every word and do not judge pronunciation, prosody, naturalness, pedagogy, CEFR level, or exam suitability.",
+    "batches": [
+      {
+        "batch": "PA-039-01",
+        "fixture": "scripts/fixtures/audio-refresh-pa039-01.json",
+        "recordings": 10,
+        "ledgerBefore": 97,
+        "ledgerAfter": 87
+      },
+      {
+        "batch": "PA-039-02",
+        "fixture": "scripts/fixtures/audio-refresh-pa039-02.json",
+        "recordings": 10,
+        "ledgerBefore": 87,
+        "ledgerAfter": 77
+      }
+    ]
   }
 }

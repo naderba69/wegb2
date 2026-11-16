@@ -783,11 +783,12 @@ const vocabRepeatAudit = (() => {
       audioForNewTexts.length === 25 && r165AudioIds.every((id) => audioForNewTexts.includes(id) && hoerenAudio[id]?.voice === "voice-01 (de-DE, Arena TTS)") &&
       r166AudioIds.every((id) => audioIds.includes(id) && hoerenAudio[id]?.level === "B1" && hoerenAudio[id]?.voice === "voice-01 (de-DE, Arena TTS)") &&
       r167AudioIds.every((id) => audioForNewTexts.includes(id) && hoerenAudio[id]?.level === "B2" &&
-        hoerenAudio[id]?.voice === (id === "t-b2-25" ? "voice-01 (de-DE, Arena TTS)" : "voice-02 (de-DE, Arena TTS)")) &&
+        hoerenAudio[id]?.voice === "voice-02 (de-DE, Arena TTS)") &&
       r168AudioIds.every((id) => audioForNewTexts.includes(id) && hoerenAudio[id]?.level === "B2" && hoerenAudio[id]?.voice === "voice-02 (de-DE, Arena TTS)") &&
       r169AudioIds.every((id) => audioForNewTexts.includes(id) && hoerenAudio[id]?.level === "B2" && hoerenAudio[id]?.voice?.startsWith("voice-") && hoerenAudio[id]?.voice?.includes("(de-DE, Arena TTS)")) && r169Voices.size === 1 &&
-      r170AudioIds.every((id) => audioIds.includes(id) && hoerenAudio[id]?.level === "B2" && hoerenAudio[id]?.voice === "voice-03 (de-DE, Arena TTS)"),
-      `K26e تسجيلات R165–R170 مع بدائل PA-039-01 الحية (${audioIds.length} ملفاً؛ 25 نصاً neu وتغطية B2 ‏40/40)`);
+      r170AudioIds.every((id) => audioIds.includes(id) && hoerenAudio[id]?.level === "B2" &&
+        hoerenAudio[id]?.voice === (id === "t-b2-40" ? "voice-03 (de-DE, Arena TTS)" : "voice-02 (de-DE, Arena TTS)")),
+      `K26e تسجيلات R165–R170 مع بدائل PA-039 الحية (${audioIds.length} ملفاً؛ 25 نصاً neu وتغطية B2 ‏40/40)`);
     ok(Object.keys(hoerenAudio).length === man.einsaetze.length, "K26f الخريطة المصدَّرة بعدد المداخل — تصدير lib/content صادق");
     hoerenSrcCheck: {
       const src = readFileSync("components/hoeren.tsx", "utf8");
@@ -12306,27 +12307,21 @@ void 0;
   const dialogManifest = JSON.parse(readFileSync("content/dialog-audio.json", "utf8")) as any;
   const diktatManifest = JSON.parse(readFileSync("content/diktat-audio.json", "utf8")) as any;
   const audioEntries = hoerenManifest.einsaetze.filter((entry:any) => ids.includes(entry.id));
-  // لقطة R167 التاريخية تبقى موثقة في تقريرها. استبدلت PA-039-01 الملفات 21–24؛
-  // يحرس K441 هوياتها الحية، بينما بقي الملف 25 من دفعة R167 بلا تغيير.
+  // لقطة R167 التاريخية تبقى موثقة؛ استبدلت PA-039-01 الملفات 21–24 وPA-039-02 الملف 25.
   const historicalAudioEntriesValid = reviewR167.audio.files.length === 5 && reviewR167.audio.files.every((fileCheck:any) =>
     ids.includes(fileCheck.id) && fileCheck.bytes > 8000 && fileCheck.id3v2Header === true &&
     fileCheck.mpegLayer3Frames > 0 && fileCheck.sourceTextMatchesAudio === true && fileCheck.pendingRegeneration === false);
-  const audio25 = existsSync("public/audio/hoeren/t-b2-25.mp3") ? readFileSync("public/audio/hoeren/t-b2-25.mp3") : Buffer.alloc(0);
-  const entry25 = audioEntries.find((candidate:any) => candidate.id === "t-b2-25");
-  const currentUnaffectedAudioValid = entry25?.voice === "voice-01 (de-DE, Arena TTS)" && entry25?.level === "B2" &&
-    entry25?.file === "/audio/hoeren/t-b2-25.mp3" && audio25.subarray(0, 3).toString() === "ID3" &&
-    audio25.length === entry25?.bytes && reviewR167.audio.files.find((candidate:any) => candidate.id === "t-b2-25")?.bytes === audio25.length;
-  const supersededCurrentValid = ["t-b2-21", "t-b2-22", "t-b2-23", "t-b2-24"].every((id) => {
+  const supersededCurrentValid = ids.every((id) => {
     const entry = audioEntries.find((candidate:any) => candidate.id === id);
     return entry?.voice === "voice-02 (de-DE, Arena TTS)" && entry?.level === "B2" && entry?.bytes > 8000;
   });
   const noCrossManifest = [...dialogManifest.einsaetze, ...diktatManifest.einsaetze].every((entry:any) => !ids.includes(entry.id));
-  ok(audioEntries.length === 5 && historicalAudioEntriesValid && currentUnaffectedAudioValid && supersededCurrentValid &&
+  ok(audioEntries.length === 5 && historicalAudioEntriesValid && supersededCurrentValid &&
     noCrossManifest && reviewR167.audio.generatedAudioIds.length === 5 &&
     reviewR167.audio.sourceTextExact === true && reviewR167.audio.pendingRegenerationIds.length === 0 &&
     reviewR167.audio.validation.humanListening === false && reviewR167.audio.validation.pronunciationQualityJudged === false &&
     reviewR167.audio.otherManifests.dialogAudioEntriesForTargets === 0 && reviewR167.audio.otherManifests.diktatAudioEntriesForTargets === 0,
-    "K236d لقطة ملفات R167 الخمسة محفوظة؛ بقي t-b2-25 حياً واستبدلت PA-039-01 الملفات 21–24، بلا ادعاء استماع");
+    "K236d لقطة ملفات R167 الخمسة محفوظة؛ استبدلت دفعتا PA-039 الملفات 21–25 الحية، بلا ادعاء استماع");
 
   const coverageBefore = reviewR167.audio.coverage.before;
   const coverageAfter = reviewR167.audio.coverage.after;
@@ -12537,17 +12532,14 @@ void 0;
   const dialogR169 = JSON.parse(readFileSync("content/dialog-audio.json", "utf8")) as any;
   const diktatR169 = JSON.parse(readFileSync("content/diktat-audio.json", "utf8")) as any;
   const generatedR169 = hoerenR169.einsaetze.filter((entry:any) => idsR169.includes(entry.id));
-  const filesR169Valid = generatedR169.length === 5 && idsR169.every((id) => {
-    const entry = generatedR169.find((candidate:any) => candidate.id === id);
-    const file = `public/audio/hoeren/${id}.mp3`;
-    const audio = existsSync(file) ? readFileSync(file) : Buffer.alloc(0);
-    const fileCheck = reviewR169.audio.files.find((candidate:any) => candidate.id === id);
-    const digest = createHash("sha256").update(batchR169.find((text:any) => text.id === id).de, "utf8").digest("hex");
-    return entry?.voice === reviewR169.audio.voice && entry?.level === "B2" && entry?.file === `/audio/hoeren/${id}.mp3` &&
-      audio.subarray(0, 3).toString() === "ID3" && audio.length > 8000 && audio.length === entry?.bytes &&
-      fileCheck?.bytes === audio.length && fileCheck?.id3v2Header === true && fileCheck?.mpegLayer3Frames > 0 &&
-      fileCheck?.sourceTextMatchesAudio === true && fileCheck?.sourceTextSha256 === digest && fileCheck?.pendingRegeneration === false;
-  });
+  // R169 is historical. PA-039-02 replaced all five live recordings; K442 guards them.
+  const historicalFilesR169Valid = reviewR169.audio.files.length === 5 && reviewR169.audio.files.every((fileCheck:any) =>
+    idsR169.includes(fileCheck.id) && fileCheck.bytes > 8000 && fileCheck.id3v2Header === true &&
+    fileCheck.mpegLayer3Frames > 0 && fileCheck.sourceTextMatchesAudio === true &&
+    /^[a-f0-9]{64}$/.test(fileCheck.sourceTextSha256) && fileCheck.pendingRegeneration === false);
+  const supersededFilesR169Valid = generatedR169.length === 5 && generatedR169.every((entry:any) =>
+    entry.voice === "voice-02 (de-DE, Arena TTS)" && entry.level === "B2" &&
+    entry.file === `/audio/hoeren/${entry.id}.mp3` && entry.bytes > 8000);
   const otherHashesR169 = reviewR169.audio.otherManifests;
   const otherManifestsR169Valid = [...dialogR169.einsaetze, ...diktatR169.einsaetze].every((entry:any) => !idsR169.includes(entry.id)) &&
     otherHashesR169.dialogManifestUntouched === true && otherHashesR169.diktatManifestUntouched === true &&
@@ -12557,7 +12549,8 @@ void 0;
     sum + readdirSync(`public/audio/${folder}`).filter((file) => file.endsWith(".mp3")).length, 0);
   const coverageBeforeR169 = reviewR169.audio.coverage.before;
   const coverageAfterR169 = reviewR169.audio.coverage.after;
-  ok(filesR169Valid && otherManifestsR169Valid && hoerenR169.count === 157 && hoerenR169.count === hoerenR169.einsaetze.length &&
+  ok(historicalFilesR169Valid && supersededFilesR169Valid && otherManifestsR169Valid &&
+    hoerenR169.count === 157 && hoerenR169.count === hoerenR169.einsaetze.length &&
     reviewR169.audio.generatedAudioIds.join(",") === idsR169.join(",") && reviewR169.audio.sourceTextExact === true &&
     reviewR169.audio.pendingRegenerationIds.length === 0 && reviewR169.audio.manifestCount === 152 &&
     reviewR169.audio.manifestSha256AfterReapply === "669dd78fdde0e5642ee7db7c594d7d754d8f3aa186abc6fcd86c77f30e6c92db" &&
@@ -12565,7 +12558,7 @@ void 0;
     coverageBeforeR169.hoerenAudio === 147 && coverageBeforeR169.B2 === "30/40" && coverageBeforeR169.localAudioFilesTotal === 415 &&
     coverageAfterR169.hoerenAudio === 152 && coverageAfterR169.B2 === "35/40" && coverageAfterR169.remainingWithoutLocalMP3 === 5 &&
     coverageAfterR169.localAudioFilesTotal === 420 && localAudioTotalAtR169 >= coverageAfterR169.localAudioFilesTotal,
-    "K238d سجل R169 التاريخي 152/157 محفوظ؛ ملفاته الخمسة تطابق ID3/MPEG والمانيفستات قد تُحدَّث لاحقاً");
+    "K238d سجل R169 التاريخي 152/157 وبيانات ملفاته محفوظة؛ استبدلت PA-039-02 الملفات الخمسة الحية وتحرسها K442");
 
   ok(reviewR169.gates.planned === "K238a–f" && reviewR169.gates.result === "pass" &&
     reviewR169.gates.passed.join(",") === "K238a,K238b,K238c,K238d,K238e,K238f" && reviewR169.totals.unresolved === 0 &&
@@ -12655,16 +12648,20 @@ void 0;
   const dialogR170 = JSON.parse(readFileSync("content/dialog-audio.json", "utf8")) as any;
   const diktatR170 = JSON.parse(readFileSync("content/diktat-audio.json", "utf8")) as any;
   const generatedR170 = hoerenR170.einsaetze.filter((entry:any) => idsR170.includes(entry.id));
-  const filesR170Valid = generatedR170.length === 5 && idsR170.every((id) => {
+  // R170 is historical. PA-039-02 replaced 36–39; t-b2-40 remains the live R170 file.
+  const historicalFilesR170Valid = reviewR170.audio.files.length === 5 && reviewR170.audio.files.every((fileCheck:any) =>
+    idsR170.includes(fileCheck.id) && fileCheck.bytes > 8000 && fileCheck.id3v2Header === true &&
+    fileCheck.mpegLayer3Frames > 0 && fileCheck.sourceTextMatchesAudio === true &&
+    /^[a-f0-9]{64}$/.test(fileCheck.sourceTextSha256) && fileCheck.pendingRegeneration === false);
+  const entry40R170 = generatedR170.find((entry:any) => entry.id === "t-b2-40");
+  const audio40R170 = existsSync("public/audio/hoeren/t-b2-40.mp3") ? readFileSync("public/audio/hoeren/t-b2-40.mp3") : Buffer.alloc(0);
+  const current40R170Valid = entry40R170?.voice === reviewR170.audio.voice && entry40R170?.level === "B2" &&
+    entry40R170?.file === "/audio/hoeren/t-b2-40.mp3" && audio40R170.subarray(0, 3).toString() === "ID3" &&
+    audio40R170.length === entry40R170?.bytes &&
+    reviewR170.audio.files.find((fileCheck:any) => fileCheck.id === "t-b2-40")?.bytes === audio40R170.length;
+  const supersededFilesR170Valid = ["t-b2-36", "t-b2-37", "t-b2-38", "t-b2-39"].every((id) => {
     const entry = generatedR170.find((candidate:any) => candidate.id === id);
-    const file = `public/audio/hoeren/${id}.mp3`;
-    const audio = existsSync(file) ? readFileSync(file) : Buffer.alloc(0);
-    const fileCheck = reviewR170.audio.files.find((candidate:any) => candidate.id === id);
-    const digest = createHash("sha256").update(batchR170.find((text:any) => text.id === id).de, "utf8").digest("hex");
-    return entry?.voice === reviewR170.audio.voice && entry?.level === "B2" && entry?.file === `/audio/hoeren/${id}.mp3` &&
-      audio.subarray(0, 3).toString() === "ID3" && audio.length > 8000 && audio.length === entry?.bytes &&
-      fileCheck?.bytes === audio.length && fileCheck?.id3v2Header === true && fileCheck?.mpegLayer3Frames > 0 &&
-      fileCheck?.sourceTextMatchesAudio === true && fileCheck?.sourceTextSha256 === digest && fileCheck?.pendingRegeneration === false;
+    return entry?.voice === "voice-02 (de-DE, Arena TTS)" && entry?.level === "B2" && entry?.bytes > 8000;
   });
   const otherHashesR170 = reviewR170.audio.otherManifests;
   const otherManifestsR170Valid = [...dialogR170.einsaetze, ...diktatR170.einsaetze].every((entry:any) => !idsR170.includes(entry.id)) &&
@@ -12673,11 +12670,12 @@ void 0;
     otherHashesR170.diktatAudioSha256Before === otherHashesR170.diktatAudioSha256After;
   const localAudioTotalCurrent = ["hoeren", "dialog", "diktat", "sprichwort"].reduce((sum, folder) =>
     sum + readdirSync(`public/audio/${folder}`).filter((file) => file.endsWith(".mp3")).length, 0);
-  // R170 pins the historical manifest hash; later PA-039-01 legitimately replaced ten live entries.
+  // R170 pins the historical manifest hash; later PA-039 batches legitimately replaced live entries.
   const manifestShaR170 = createHash("sha256").update(readFileSync("content/hoeren-audio.json")).digest("hex");
   const coverageBeforeR170 = reviewR170.audio.coverage.before;
   const coverageAfterR170 = reviewR170.audio.coverage.after;
-  ok(filesR170Valid && otherManifestsR170Valid && hoerenR170.count === 157 && hoerenR170.count === hoerenR170.einsaetze.length &&
+  ok(historicalFilesR170Valid && current40R170Valid && supersededFilesR170Valid && otherManifestsR170Valid &&
+    hoerenR170.count === 157 && hoerenR170.count === hoerenR170.einsaetze.length &&
     reviewR170.audio.generatedAudioIds.join(",") === idsR170.join(",") && reviewR170.audio.sourceTextExact === true &&
     reviewR170.audio.pendingRegenerationIds.length === 0 && reviewR170.audio.manifestCount === 157 &&
     /^[a-f0-9]{64}$/.test(reviewR170.audio.manifestSha256AfterReapply) &&
@@ -12686,7 +12684,7 @@ void 0;
     coverageBeforeR170.hoerenAudio === 152 && coverageBeforeR170.B2 === "35/40" && coverageBeforeR170.localAudioFilesTotal === 420 &&
     coverageAfterR170.hoerenAudio === 157 && coverageAfterR170.B2 === "40/40" && coverageAfterR170.remainingWithoutLocalMP3 === 0 &&
     coverageAfterR170.localAudioFilesTotal === 425 && localAudioTotalCurrent >= coverageAfterR170.localAudioFilesTotal,
-    "K239d خمسة تسجيلات R170 تطابق بصمات الألمانية وID3/MPEG؛ لقطة التغطية التاريخية 157/157 وB2 ‏40/40");
+    "K239d لقطة ملفات R170 الخمسة محفوظة؛ بقي t-b2-40 حياً واستبدلت PA-039-02 الملفات 36–39 مع بقاء التغطية 157/157");
 
   ok(reviewR170.gates.planned === "K239a–f" && reviewR170.gates.result === "pass" &&
     reviewR170.gates.passed.join(",") === "K239a,K239b,K239c,K239d,K239e,K239f" && reviewR170.totals.unresolved === 0 &&
@@ -13215,7 +13213,7 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const transcripts304 = JSON.parse(readFileSync("content/audio-transcript-overrides.json", "utf8")) as {
     items: Array<{ file: string; id: string; group: string; textDe: string; audioCommit: string; sourcePath: string }>;
   };
-  const transcriptOverridesOk304 = transcripts304.items.length === 87 && transcripts304.items.every((entry) =>
+  const transcriptOverridesOk304 = transcripts304.items.length === 77 && transcripts304.items.every((entry) =>
     platten304.has(entry.file) && entry.textDe.trim().length > 0 && /^[0-9a-f]{40}$/.test(entry.audioCommit) &&
     (entry.group === "dialog" || entry.group === "hoeren") && entry.sourcePath.startsWith("content/"));
   const audioQcSrc304 = readFileSync("scripts/audio_qc_all.py", "utf8");
@@ -13236,7 +13234,7 @@ function collectR262(dir: string, out: string[] = []): string[] {
      audioQcSrc304.includes('fehler.append("placeholder")') && audioQcSrc304.includes('e["fehler"].append("audio-duplikat")') &&
      audioReq304.includes("miniaudio==1.71") && audioReq304.includes("numpy==2.4.6") &&
      audioReq304.includes("cffi==2.1.1") && audioReq304.includes("pycparser==3.12"),
-    `K304 مراجعةُ الصوتِ الآليةُ R272: ‏${platten304.size}/${platten304.size} ملفاً ذا مانيفستو مفكوكاً ومقيساً وفريد البصمة، مع 87 لقطة نص تسجيل صريحة بعد PA-039-01 وبلا شذوذ — لا يشمل الحكم 87 ملف قواعد بلا مانيفستو نص/صوت، ولا يساوي استماعاً بشرياً أو حكم نطق`);
+    `K304 مراجعةُ الصوتِ الآليةُ R272: ‏${platten304.size}/${platten304.size} ملفاً ذا مانيفستو مفكوكاً ومقيساً وفريد البصمة، مع 77 لقطة نص تسجيل صريحة بعد PA-039-02 وبلا شذوذ — لا يشمل الحكم 87 ملف قواعد بلا مانيفستو نص/صوت، ولا يساوي استماعاً بشرياً أو حكم نطق`);
 }
 
 // ===== K305 (R280 · M1+M2): FSRS-6-Scheduler + Meisterungsstufen Erkennen/Produktion =====
@@ -16747,7 +16745,7 @@ function collectR262(dir: string, out: string[] = []): string[] {
     refreshK441.items.length === 10 && new Set(refreshK441.items.map((item:any) => item.id)).size === 10 &&
     idsK441.every((id) => refreshK441.items.some((item:any) => item.id === id)) &&
     refreshK441.transcriptSnapshotLedger.before === 97 && refreshK441.transcriptSnapshotLedger.removed === 10 &&
-    refreshK441.transcriptSnapshotLedger.after === 87 && snapshotsK441.items.length === 87 &&
+    refreshK441.transcriptSnapshotLedger.after === 87 && snapshotsK441.items.length <= 87 &&
     snapshotsK441.items.every((item:any) => !idsK441.includes(item.id)),
     "K441a PA-039-01: سجل الدفعة يحصر عشر قراءات ويخفض لقطات التسجيل القديمة بصدق من 97 إلى 87");
   ok(refreshK441.items.every((item:any) => {
@@ -16771,10 +16769,55 @@ function collectR262(dir: string, out: string[] = []): string[] {
     refreshK441.validation.humanListening === false && refreshK441.validation.pronunciationQualityJudged === false &&
     refreshK441.validation.naturalnessJudged === false &&
     qcK441.dateien.length === 1099 && qcK441.anomalienGesamt === 0 && qcK441.abdeckung.luecken.length === 0 &&
-    auditK441.includes("10 current-text recordings guarded") && packageK441.includes('"audit:audio-refresh"') &&
+    auditK441.includes("PA-039-01/02 audio refresh") && packageK441.includes('"audit:audio-refresh"') &&
     ciK441.includes("npm run audit:audio-refresh") &&
     refreshK441.claimBoundary.includes("do not establish that a human heard every word"),
     "K441c التوليد من المدخل الحالي وAudio-QC ‏1099/1099 محروسان في CI، بلا ادعاء استماع أو حكم نطق/طبيعية/اعتماد مستقل");
+}
+
+/* ═══ K442 — PA-039-02: إعادة تصنيع عشر قراءات B2 إضافية من المتن الحالي ═══ */
+{
+  const refreshK442 = JSON.parse(readFileSync("scripts/fixtures/audio-refresh-pa039-02.json", "utf8")) as any;
+  const textsK442 = JSON.parse(readFileSync("content/texts.json", "utf8")) as any[];
+  const manifestK442 = JSON.parse(readFileSync("content/hoeren-audio.json", "utf8")) as any;
+  const publicManifestK442 = JSON.parse(readFileSync("public/audio-manifest.json", "utf8")) as any[];
+  const snapshotsK442 = JSON.parse(readFileSync("content/audio-transcript-overrides.json", "utf8")) as any;
+  const qcK442 = JSON.parse(readFileSync("docs/audio-qc-all-2026-11-04.json", "utf8")) as any;
+  const idsK442 = ["t-b2-25", "t-b2-31", "t-b2-32", "t-b2-33", "t-b2-34", "t-b2-35", "t-b2-36", "t-b2-37", "t-b2-38", "t-b2-39"];
+  const byTextK442 = new Map(textsK442.map((entry:any) => [entry.id, entry]));
+  const byAudioK442 = new Map(manifestK442.einsaetze.map((entry:any) => [entry.id, entry]));
+  ok(refreshK442.schema === "wegb2-audio-refresh-batch-v1" && refreshK442.batch === "PA-039-02" &&
+    refreshK442.items.length === 10 && new Set(refreshK442.items.map((item:any) => item.id)).size === 10 &&
+    idsK442.every((id) => refreshK442.items.some((item:any) => item.id === id)) &&
+    refreshK442.transcriptSnapshotLedger.before === 87 && refreshK442.transcriptSnapshotLedger.removed === 10 &&
+    refreshK442.transcriptSnapshotLedger.after === 77 && snapshotsK442.items.length === 77 &&
+    snapshotsK442.items.every((item:any) => !idsK442.includes(item.id)),
+    "K442a PA-039-02: سجل الدفعة يحصر عشر قراءات B2 ويخفض لقطات التسجيل القديمة بصدق من 87 إلى 77");
+  ok(refreshK442.items.every((item:any) => {
+    const source:any = byTextK442.get(item.id);
+    const entry:any = byAudioK442.get(item.id);
+    const audio = readFileSync(`public${item.file}`);
+    const sourceHash = createHash("sha256").update(source?.de ?? "", "utf8").digest("hex");
+    const audioHash = createHash("sha256").update(audio).digest("hex");
+    return source && entry && item.level === "B2" && source.level === "B2" && item.sourceTextSha256 === sourceHash &&
+      item.generatedAudioSha256 === audioHash && item.generatedAudioSha256 !== item.previousAudioSha256 &&
+      item.bytes === audio.length && entry.bytes === audio.length &&
+      publicManifestK442.some((candidate:any) => candidate.p === item.file && candidate.b === audio.length) &&
+      entry.voice === "voice-02 (de-DE, Arena TTS)" && entry.file === item.file && audio.subarray(0, 3).toString() === "ID3";
+  }),
+    "K442b مدخلات B2 الحالية وبصمات MP3 والبايتات والصوت voice-02 متطابقة في fixture ومانيفستَي المحتوى والخدمة والقرص");
+  const auditK442 = readFileSync("scripts/audio_refresh_audit.ts", "utf8");
+  const packageK442 = readFileSync("package.json", "utf8");
+  const ciK442 = readFileSync(".github/workflows/ci.yml", "utf8");
+  ok(refreshK442.validation.generationInputWasExactCurrentGermanText === true &&
+    refreshK442.validation.technicalAudioQc === "pass-1099-of-1099" &&
+    refreshK442.validation.humanListening === false && refreshK442.validation.pronunciationQualityJudged === false &&
+    refreshK442.validation.naturalnessJudged === false && qcK442.dateien.length === 1099 &&
+    qcK442.anomalienGesamt === 0 && qcK442.abdeckung.luecken.length === 0 &&
+    auditK442.includes("20 current-text recordings guarded") && packageK442.includes('"audit:audio-refresh"') &&
+    ciK442.includes("npm run audit:audio-refresh") &&
+    refreshK442.claimBoundary.includes("do not establish that a human heard every word"),
+    "K442c دفعتا التوليد وAudio-QC ‏1099/1099 محروستان في CI، بلا ادعاء استماع أو حكم نطق/طبيعية/اعتماد مستقل");
 }
 
 /* ═══ K334 — R309: القفل الفعلي الحقيقي — إغلاقُ اليوم عند حدود الوحدة ممنوعٌ لا منصوحٌ به فقط ═══ */

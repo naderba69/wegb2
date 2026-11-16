@@ -572,14 +572,6 @@
       "sourcePath": "content/dialogues.json"
     },
     {
-      "file": "/audio/hoeren/t-b2-25.mp3",
-      "id": "t-b2-25",
-      "group": "hoeren",
-      "textDe": "Das Turnier endete für den kleinen Verein aus dem Stadtteil im Halbfinale mit einem Elfmeter in der letzten Minute. Der Schiedsrichter hatte ein Foul gesehen, das die Hälfte der Zuschauer nicht gesehen hatte. Die andere Hälfte jubelte. So ist das bei einem Wettkampf: Dieselbe Szene, zwei Wahrheiten.\n\nInteressanter als die Niederlage war, was danach geschah. Auf der Mitgliederversammlung zwei Wochen später sprach niemand über den Schiedsrichter. Man sprach über Training. Die Trainerin legte Zahlen vor: drei Zerrungen und zwei Prellungen in einer Saison, fast alle in der zweiten Halbzeit. Diese Zahlen gehören zur Trainingsgeschichte; sie sind keine belegte Statistik. Ihre Erklärung war unbequem. Das Ausdauertraining sei gut, das Krafttraining schwach, und vor den Spielen dehne sich kaum jemand länger als zwei Minuten.\n\nDer Verein beschloss, disziplinierter zu werden, ohne strenger zu sein: zwei feste Einheiten pro Woche, ein Aufwärmplan, den jeder kennt, und ein Notizbuch, in dem jede Spielerin ihre Bestleistung selbst einträgt. Seit dem Beschluss verzeichnete der Verein sieben Beitritte. Die meisten neuen Mitglieder waren Eltern, die vorher nur vom Rand aus angefeuert hatten. Ob die Mannschaft nächstes Jahr eine Runde weiterkommt, ist offen. Sicher ist, dass die Mannschaft besser vorbereitet sein wird – ob sie gewinnt oder verliert.",
-      "audioCommit": "d65c279e3da8376aa75b805fe1e2f2b857a30061",
-      "sourcePath": "content/texts.json"
-    },
-    {
       "file": "/audio/hoeren/t-b2-26.mp3",
       "id": "t-b2-26",
       "group": "hoeren",
@@ -617,78 +609,6 @@
       "group": "hoeren",
       "textDe": "Das Beispiel ist erfunden: Vor Haus Nummer 14 liegt seit dem Frühjahr ein kleiner Stolperstein im Gehweg – ein Betonstein mit einer Messingplatte. Auf der Messingplatte stehen Name, Geburtsjahr und Schicksal einer im Nationalsozialismus verfolgten Person. Die Zehntklässlerinnen recherchierten die Geschichte der Familie, die dort einmal wohnte, und hielten bei der Verlegung eine Gedenkminute. Anders als ein großes Mahnmal oder eine Gedenkstätte mit festen Öffnungszeiten erinnert der Stein Passantinnen und Passanten im Alltag. So zeigt das Beispiel Erinnerungskultur im Kleinen.\n\nNicht alle im Haus waren dafür. Ein Bewohner fragte, ob man nicht irgendwann einen Schlussstrich ziehen könne; seine Großeltern seien doch nur Mitläufer gewesen. Die Lehrerin antwortete, Erinnerungsarbeit stelle den Enkeln keine Schuldfrage. Sie frage, wie Menschen Verfolgung unterstützten, duldeten oder sich ihr widersetzten, damit heutige Generationen Warnsignale erkennen könnten. Wer die Vergangenheit relativiert, sagt die Lehrerin, schützt nicht die Großeltern, sondern die eigene Bequemlichkeit.\n\nIn der Geschichte starb der letzte Zeitzeuge aus dieser Straße vor zwei Jahren. Sein Interview, eine Aufnahme von dreiundvierzig Minuten, liegt im Schularchiv. Die Schülerinnen hörten es, bevor der Stolperstein verlegt wurde. Vergangenheitsbewältigung klingt schwer und meint hier eine konkrete Aufgabe: genau hinsehen, das Geschehene aufarbeiten und Erinnerungen weitergeben. Manchmal beginnt Verharmlosung nicht mit einer offenen Lüge, sondern mit einem Wort, das weniger hart klingt als das Geschehene. Die Lehrerin sagt: Wer der Toten gedenkt, tut das nicht für die Toten allein.",
       "audioCommit": "dab21d8c22a7498c63f62ecb9f06be7a59bf5982",
-      "sourcePath": "content/texts.json"
-    },
-    {
-      "file": "/audio/hoeren/t-b2-31.mp3",
-      "id": "t-b2-31",
-      "group": "hoeren",
-      "textDe": "Dieses Beispiel ist erfunden. Frau Sahli pendelt seit ihrer Beförderung an Arbeitstagen insgesamt siebzig Kilometer zwischen Dorf und Kreisstadt. Um sechs Uhr morgens steht sie im Parkhaus am Bahnhof; abends ist sie meist um sieben zurück. Täglich braucht sie etwa drei Stunden; verpasst sie in der Kreisstadt den Anschluss, sind es vier. Ihr Mann arbeitet im Dorf, die Kinder gehen dort zur Schule, und das Eigenheim ist abbezahlt. Umziehen scheint logisch, doch Arbeit, Schule und das bezahlte Eigenheim binden die Familie ans Dorf.\n\nSie prüfte Alternativen: Eine Mitfahrgelegenheit passte nicht zu ihren Arbeitszeiten; der Fernbus fährt zu selten, ein Nachtzug ist für die kurze Strecke unpraktisch. Das Elektroauto half, bis die einzige Ladestation im Ort drei Wochen ausfiel. „Die Verkehrswende wird in der Stadt geplant und auf dem Land ausgehalten“, sagt sie; sie meint ihren eigenen Alltag. Bei Lastenrädern lächelt sie müde: Auf ihrem ländlichen Arbeitsweg lösen sie das Anschlussproblem nicht.\n\nIhr Kompromiss ist kein Umzug: An zwei Tagen arbeitet sie im Homeoffice, an den drei übrigen Tagen fährt sie mit der Bahn. Im Zug arbeitet sie; ihr Arbeitgeber zählt diese Zeit gemäß Vereinbarung als Arbeitszeit. Die Straßensperrung wegen einer neuen Brücke nimmt sie gelassen, da sie nicht mehr mit dem Auto in die Stadt fährt. Ob das trägt, weiß sie nicht. „Pendeln oder umziehen?“ hat für sie vorerst eine dritte Antwort.",
-      "audioCommit": "0b7a99fd46aee4c2d354298ef8480c923f1a6242",
-      "sourcePath": "content/texts.json"
-    },
-    {
-      "file": "/audio/hoeren/t-b2-32.mp3",
-      "id": "t-b2-32",
-      "group": "hoeren",
-      "textDe": "Dieses Beispiel ist erfunden. Meine Nichte ist sechzehn und braucht morgens etwa vierzig Minuten fürs Make-up, das aussehen soll, als trüge sie keines. Als ich sie fragte, für wen sie sich so zurechtmache, antwortete sie offener, als ich erwartet hatte: „Fürs Selfie. Ohne Filter geht das nicht mehr.“ Sie orientiert sich an einem Schönheitsideal, das sie vor allem auf Bildschirmen sieht. Viele Bilder, die sie dort sieht, sind retuschiert; sie weiß das, doch es verändert ihren Blick auf sich selbst nicht.\n\nIch wollte ihr Eitelkeit vorwerfen, ließ es aber. Eitelkeit ist alt; neu ist vor allem die Reichweite des Vergleichs. Früher verglich man sich vielleicht mit Mitschülerinnen, heute mit Bildern vieler Unbekannter. Manches modische Outfit wird von einem Label gesponsert; ein Styling-Team gestaltet den Look. Was künstlich wirkt, kann am Bildschirm natürlich aussehen; ein unretuschiertes Gesicht erscheint dann unfertig. Das ist eine Beobachtung dieser Geschichte, keine Aussage über alle Jugendlichen.\n\nWir probierten es eine Woche: Sie postete stilvolle Bilder ohne digitale Retusche. Die Likes sanken, Nachrichten von Freundinnen wurden mehr. „Du siehst aus wie du“, schrieb eine. Das Experiment belegt weder die Ursache der Reaktionen noch eine langfristige Veränderung ihres Selbstbewusstseins. „Attraktiv“ sei vielleicht ein Wort für Bilder, sagt sie jetzt; für Menschen brauche man ein anderes.",
-      "audioCommit": "0b7a99fd46aee4c2d354298ef8480c923f1a6242",
-      "sourcePath": "content/texts.json"
-    },
-    {
-      "file": "/audio/hoeren/t-b2-33.mp3",
-      "id": "t-b2-33",
-      "group": "hoeren",
-      "textDe": "Dieses Beispiel ist erfunden. Als Karim dem Verein beigetreten war, wollte er vor allem Fußball spielen. Fünf Jahre später gehörten zu seiner Freizeitgestaltung auch eine Radtour, Camping am See und ein Mountainbike-Wochenende. Jedes Jahr stand er am Rand des Marathons, um die Teilnehmenden anzufeuern; selbst lief er nie mit. Die Unternehmungen der Gruppe füllten seinen Kalender; der Verein war für ihn mehr als ein Wettbewerb.\n\nNach der regulären Spielzeit stand es im Pokal unentschieden. Während der Verlängerung erkannte der Schiedsrichter ein Tor wegen einer Abseitsstellung nicht an; er hatte Abseits gepfiffen. Auf der Wiederholungsaufnahme war die Position für Karim nicht eindeutig. Auch nach der Verlängerung blieb es unentschieden, sodass ein Elfmeterschießen folgte. Die Halle war ausverkauft, die Übertragung lief in zwei Kneipen. Ben beleidigte den Schiedsrichter lautstark; viele in der Halle hörten es.\n\nDer Vorstand verlangte eine Entschuldigung. Ben weigerte sich und erklärte seinen Austritt. Karim fragte sich, ob er mit seinem Freund austreten oder den Regeln treu bleiben sollte. Er blieb – nicht, weil der Schiedsrichter sicher recht hatte, sondern weil ein Verein ohne Regeln nur noch eine Gruppe mit derselben Farbe wäre. Trotzdem wollen Ben und Karim im Mai gemeinsam Rad fahren. Auf dieser Tour gibt es keine Schiedsrichter.",
-      "audioCommit": "0b7a99fd46aee4c2d354298ef8480c923f1a6242",
-      "sourcePath": "content/texts.json"
-    },
-    {
-      "file": "/audio/hoeren/t-b2-34.mp3",
-      "id": "t-b2-34",
-      "group": "hoeren",
-      "textDe": "Dieses Unterrichtsbeispiel ist erfunden. Eine zehnte Klasse liest dieselbe Nachricht in drei Fassungen: Agenturmeldung, Leitartikel und Clickbait-Beitrag mit zugespitzter Überschrift. Die Schüler beschreiben, was jede Version bei den Lesenden bewirkt, statt zu entscheiden, wer recht hat.\n\nSie erkennen rasch die Zuspitzung in der Überschrift und die Untertreibung im Nebensatz. Schwieriger ist das Framing: Derselbe Zahlenwert kann mit „nur“ heruntergespielt oder mit „schon“ als beachtlich gerahmt werden. Noch schwieriger ist die Frage, weshalb gerade dieses Thema erscheint. Die Auswahl beeinflusst mit, welche Themen öffentlich als wichtig gelten; das nennt man Agenda-Setting. Auch Leitmedien müssen auswählen. Ein Schüler sagt „Echokammer“, eine Mitschülerin findet das pauschal. Sie meint, die Filterblase sei nicht das Problem, sondern das Wohlgefühl darin.\n\nIn dieser Reihe kommt der Faktencheck zuletzt, nicht zuerst. „Fake News“ ist ungenau; Desinformation muss nicht vollständig erfunden sein. Auch richtige Zahlen können durch Auswahl oder fehlenden Kontext irreführen. Sie üben Quellenkritik: Wer schreibt, wer bezahlt, welche Belege gibt es, wem nützt der Beitrag? Eine starke Polarisierung der Sprache kann ein Warnsignal sein, aber noch kein Beweis für Meinungsmache. Die Aufmerksamkeitsökonomie kann Reichweite belohnen; hohe Reichweite belegt keine Wahrheit. Deshalb prüfen sie auch die Einordnung. Den Satz hängt die Klasse selbst an die Wand.",
-      "audioCommit": "0b7a99fd46aee4c2d354298ef8480c923f1a6242",
-      "sourcePath": "content/texts.json"
-    },
-    {
-      "file": "/audio/hoeren/t-b2-35.mp3",
-      "id": "t-b2-35",
-      "group": "hoeren",
-      "textDe": "Dieses Beispiel ist erfunden. Als Leila zu promovieren begann, hatte sie einen Karteikasten voller Fachbegriffe und für jeden eine Eselsbrücke. Drei Jahre später leitete sie ein Forschungsprojekt und erhielt eine Förderung für zwei Stellen. Ihre wichtigste Erkenntnis: Zur Wissenschaft gehören neben Wissen auch Fristen, Anträge und Absprachen, die man einhalten muss.\n\nIhr fiktives Projekt untersucht, wie Studentinnen und Studenten mit knapp ausreichender Abiturnote in einem Fach mit Numerus clausus lernen. Leila befragte zweihundert Personen an drei Fakultäten und begleitete eine Gruppe auf einer Exkursion. Dabei beobachtete sie, wie sich Kenntnisse außerhalb des Hörsaals zeigten. In der Auswertung der Beispielstudie zählte neben der Effizienz auch eine Person, die Anfängerfragen ernst nahm. Das gilt für diese erfundene Stichprobe, nicht allgemein. Leila sagt: „Allein kann man effizient lernen; manches versteht man erst im Austausch.“\n\nDie Veröffentlichung dauerte länger als die Studie. Zwei Gutachter wollten mehr Zahlen, ein dritter weniger Deutung. Leila zitiert ihre Betreuerin: „Nachhaltigkeit in der Forschung heißt, dass jemand in zehn Jahren noch etwas mit deinen Daten anfangen kann.“ Fragebogen, Anleitung und – soweit Einwilligungen und Datenschutzbestimmungen es zulassen – anonymisierte Auswertungen liegen im Hochschularchiv. Personenbezogene Rohdaten werden dort nicht öffentlich bereitgestellt. Den Karteikasten wirft sie trotzdem nicht weg.",
-      "audioCommit": "0b7a99fd46aee4c2d354298ef8480c923f1a6242",
-      "sourcePath": "content/texts.json"
-    },
-    {
-      "file": "/audio/hoeren/t-b2-36.mp3",
-      "id": "t-b2-36",
-      "group": "hoeren",
-      "textDe": "Eine mögliche Änderung wäre, den Schulbeginn von 8 auf 9 Uhr zu verlegen. Dafür spricht, dass viele Jugendliche in der Pubertät abends später einschlafen als jüngere Kinder. Sie sind morgens oft noch müde, was ihre Konzentration und ihr Gedächtnis beeinträchtigen kann. Auch für die psychische Gesundheit kann dauerhafter Schlafmangel problematisch sein. Befürworter meinen deshalb, ein späterer Start könne den Schulalltag besser an den Schlafrhythmus vieler Jugendlicher anpassen. Kritiker wenden ein, dass ein späterer Unterrichtsbeginn Eltern vor organisatorische Probleme stellt und mit den Nachmittagsaktivitäten der Jugendlichen kollidieren kann. Wie sich der spätere Beginn auf die schulischen Leistungen auswirkt, sollte man ebenfalls prüfen. Busfahrpläne, Arbeitszeiten der Eltern und die Betreuung jüngerer Geschwister müssten berücksichtigt werden. Ein späteres Schulende könnte zusätzliche Kosten für Räume und Betreuung verursachen.\n\nDennoch halte ich einen Modellversuch an einigen Schulen für sinnvoll. Dabei sollte man nicht nur Noten, sondern auch Schlaf, Wohlbefinden und Unterrichtsbeteiligung beobachten. Arbeitszeiten des Schulpersonals und Angebote am Nachmittag müssen ebenfalls berücksichtigt werden.\n\nZeigt sich, dass Jugendliche ausgeruhter und aufmerksamer sind, sollte man den Schulbeginn neu bewerten, statt den frühen Start um jeden Preis als selbstverständlich hinzunehmen.",
-      "audioCommit": "438f5d7a056210481f95637a79a78ef0549b4f3f",
-      "sourcePath": "content/texts.json"
-    },
-    {
-      "file": "/audio/hoeren/t-b2-37.mp3",
-      "id": "t-b2-37",
-      "group": "hoeren",
-      "textDe": "Das folgende Beispiel ist fiktiv. Als ich vor vier Jahren zum ersten Mal nach Deutschland kam, war ich überrascht, wie direkt Kolleginnen, Kollegen und Nachbarn ihre Meinung äußerten. In der Umgebung, aus der ich komme, galt es oft als höflich, Kritik indirekt zu formulieren und zunächst länger über alltägliche Dinge zu sprechen. Einige sagten etwa «Das funktioniert so nicht» oder «Da bin ich anderer Meinung», ohne unfreundlich wirken zu wollen. Anfangs empfand ich das als Ablehnung. Später verstand ich: Direkte Kommunikation muss nicht respektlos sein; sie kann Transparenz und Effizienz fördern. Meine vorsichtigen Formulierungen galten einigen deutschen Kolleginnen und Kollegen dagegen als unklar oder unentschlossen.\n\nDiese Erfahrung zeigte mir, dass Kommunikation auch kulturell geprägt ist. Missverständnisse werden seltener, wenn man eigene Erwartungen reflektiert und die der anderen ernst nimmt. Heute frage ich nach, wenn ich eine Äußerung nicht richtig verstehe, und formuliere meine eigene Meinung klarer als früher. So spreche ich Unklarheiten früh an. Das kostet manchmal Zeit, kann aber Vertrauen im Team schaffen.\n\nFür mich bedeutet gute Kommunikation nicht, immer einer Meinung zu sein. Wichtig ist, dass beide Seiten ihre Erwartungen erklären können. Die fiktive Geschichte ist kein Urteil über alle Menschen eines Landes. Sie zeigt, wie eine Person ein Missverständnis erlebt und ihre Einschätzung verändert.",
-      "audioCommit": "438f5d7a056210481f95637a79a78ef0549b4f3f",
-      "sourcePath": "content/texts.json"
-    },
-    {
-      "file": "/audio/hoeren/t-b2-38.mp3",
-      "id": "t-b2-38",
-      "group": "hoeren",
-      "textDe": "Vier-Tage-Modelle unterscheiden sich in Arbeitszeit, Lohn und Branche; ihre Ergebnisse sind nur begrenzt übertragbar. In Island blieben laut Alda und Autonomy Produktivität und Dienste trotz kürzerer Arbeitszeit meist stabil oder verbesserten sich; das Wohlbefinden stieg. Im britischen Versuch von 2022 verkürzten 61 Organisationen ihre Arbeitszeit sechs Monate lang ohne Gehaltskürzung. Nur 23 von 61 Organisationen lieferten Umsatzdaten; der nach Größe gewichtete Umsatzdurchschnitt stieg um 1,4 Prozent. Das beweist keine Kausalität. An der deutschen Pilotstudie nahmen 45 Organisationen teil. Beschäftigte berichteten von Verbesserungen ihrer mentalen und körperlichen Gesundheit; die Krankheitstage gingen leicht zurück, der Unterschied war jedoch statistisch nicht signifikant.\n\nDie Projekte waren zeitlich begrenzt und unterschiedlich aufgebaut; manche Ergebnisse beruhen auf Selbstauskünften. Eine Vier-Tage-Woche kann Wochenstunden reduzieren oder dieselben Stunden auf weniger Tage verteilen; die Folgen unterscheiden sich. Öffnungszeiten und Versorgung müssen in manchen Branchen gesichert bleiben.\n\nEin Erfolgsurteil für alle Branchen wäre unangebracht. Versuche sollten Arbeitsbelastung, Servicequalität, Leistung und Wohlbefinden länger erfassen. Ziele vereinbart man vorher mit Beschäftigten; mögliche Nachteile prüft man danach offen. Erst solche Daten zeigen, ob eine kürzere Woche am jeweiligen Arbeitsplatz fair und tragfähig ist.",
-      "audioCommit": "438f5d7a056210481f95637a79a78ef0549b4f3f",
-      "sourcePath": "content/texts.json"
-    },
-    {
-      "file": "/audio/hoeren/t-b2-39.mp3",
-      "id": "t-b2-39",
-      "group": "hoeren",
-      "textDe": "Manche Familien ziehen aus teuren Großstädten ins Umland oder aufs Land. Gründe können hohe Mieten, enge Wohnungen und der Wunsch nach mehr Natur und Ruhe sein. Doch das Landleben passt nicht für alle. Je nach Region fahren öffentliche Verkehrsmittel seltener; Arztpraxen und Schulen können weit entfernt sein, während kulturelle Angebote wie Theater oder Kinos rar sein können. Homeoffice und Videokonferenzen erleichtern manchen Beschäftigten den Umzug. Das setzt jedoch ausreichend schnelles Internet voraus. Ein Staat, der freie Wohnortwahl ermöglichen will, sollte fehlende Infrastruktur ausbauen. Sonst könnte «Stadtflucht» ein Privileg höherer Einkommen bleiben.\n\nVor dem Umzug sollten Familien die Entfernung zu ihren Arbeitsplätzen und verfügbare Kinderbetreuung prüfen. Wer ohne Auto lebt, braucht eine verlässliche Verbindung zur nächsten Stadt. Vereine und gute Nachbarschaftskontakte können Zugezogenen helfen, Anschluss zu finden. Ein ruhiger Wohnort allein löst nicht alle Probleme.\n\nGemeinden sollten deshalb neben Wohnraum auch Verkehr und öffentliche Angebote mitplanen. Welche Lösungen passen, hängt von den Bedingungen vor Ort ab. Wer ländliche Regionen stärken will, sollte die Bedürfnisse der heutigen Bewohner und der neu Zugezogenen berücksichtigen. Solche Lösungen sollten regelmäßig überprüft werden.",
-      "audioCommit": "438f5d7a056210481f95637a79a78ef0549b4f3f",
       "sourcePath": "content/texts.json"
     },
     {
