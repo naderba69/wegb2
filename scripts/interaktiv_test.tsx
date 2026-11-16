@@ -1992,7 +1992,10 @@ const hasFile = txt().includes("صوتٌ من الدار");
     ok(t0.includes("45.500 Euro mit Homeoffice") && t0.includes("48.000 Euro, wie Youssef"), "LVIII3 مهمّةُ الاستماعِ تعرضُ الخياراتِ الجديدةَ لا القديمة");
     ok(!t0.includes("kein Vertrag"), "LVIII4 والخيارُ السخيفُ القديمُ «kein Vertrag» اختفى");
     const q15 = dialogues.find((d) => d.id === "d-b1-15")!.questions.find((q) => q.id === "d-b1-15-q2")!;
-    ok((q15.options ?? []).includes("zwanzig Euro") && !grader.grade(q15, "zwanzig Euro").correct && grader.grade(q15, "sechs Euro").correct, "LVIII5 فخُّ B1 (رسمُ السرقةِ المسموع 20 €) يُرفَض، وستّةُ يورو تُقبَل");
+    const q15Trap = "ob die Karte gestohlen wurde, obwohl Imen den Verlust bestätigt";
+    ok((q15.options ?? []).includes(q15Trap) && !grader.grade(q15, q15Trap).correct &&
+      grader.grade(q15, "eine mögliche Gebühr und die Lieferzeit").correct,
+    "LVIII5 فخُّ B1 يخلط السرقةَ بالخسارة المؤكدة فيُرفض، وتُقبل مراجعةُ الرسم المحتمل ومدة التسليم");
   }
 
 

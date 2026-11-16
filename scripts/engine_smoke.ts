@@ -196,16 +196,25 @@ const pa03802ReviewForHistoricalChecks = JSON.parse(
 const pa03803ReviewForHistoricalChecks = JSON.parse(
   readFileSync("scripts/fixtures/dialogues-reviewed-03.json", "utf8"),
 ) as { entries: { id: string; previous: unknown }[] };
+const pa03804ReviewForHistoricalChecks = JSON.parse(
+  readFileSync("scripts/fixtures/dialogues-reviewed-04.json", "utf8"),
+) as { entries: { id: string; previous: unknown }[] };
 const pa03802PreviousById = new Map(
   pa03802ReviewForHistoricalChecks.entries.map((entry) => [entry.id, entry.previous]),
 );
 const pa03803PreviousById = new Map(
   pa03803ReviewForHistoricalChecks.entries.map((entry) => [entry.id, entry.previous]),
 );
-// R439/R440: تقارير أكتوبر آثار تاريخية؛ تُقارن بالحالة السابقة لدفعتَي PA-038-02/03،
-// بينما K437/K438 والبوابة المخصصة تحرس البنك الحالي بعد المراجعة الكاملة.
+const pa03804PreviousById = new Map(
+  pa03804ReviewForHistoricalChecks.entries.map((entry) => [entry.id, entry.previous]),
+);
+// R439/R440: تقارير أكتوبر آثار تاريخية؛ تُقارن بالحالة السابقة لدفعات PA-038-02/03/04،
+// بينما K437–K439 والبوابة المخصصة تحرس البنك الحالي بعد المراجعة الكاملة.
 const dialoguesBeforePa038Reviews = dialogues.map((dialogue) =>
-  pa03802PreviousById.get(dialogue.id) ?? pa03803PreviousById.get(dialogue.id) ?? dialogue
+  pa03802PreviousById.get(dialogue.id)
+    ?? pa03803PreviousById.get(dialogue.id)
+    ?? pa03804PreviousById.get(dialogue.id)
+    ?? dialogue
 ) as typeof dialogues;
 
 const ok = (cond: boolean, name: string) => {
@@ -1450,7 +1459,7 @@ const vocabRepeatAudit = (() => {
       elf: 11, zwölf: 12, vierzehn: 14, fünfzehn: 15, achtzehn: 18, zwanzig: 20, fünfundzwanzig: 25, dreißig: 30, vierzig: 40, fünfzig: 50, sechzig: 60, siebzig: 70, achtzig: 80, neunzig: 90, hundert: 100, dreiundachtzig: 83, zweitausendvierhundert: 2400 };
     const arZahl: Record<string, number> = { "اثنان": 2, "يورويْن": 2, "ثلاثة": 3, "أربعة": 4, "خمسة": 5, "ستة": 6, "سبعة": 7,
       "ثمانية": 8, "تسعة": 9, "عشرة": 10, "اثنا عشر": 12, "أربعة عشر": 14, "خمسة عشر": 15, "ثمانية عشر": 18, "عشرين": 20, "عشرون": 20, "خمسة وعشرين": 25, "خمسةٌ وعشرون": 25,
-      "ثلاثين": 30, "ثلاثون": 30, "أربعين": 40, "خمسين": 50, "خمسون": 50, "مئة": 100, "مئةِ": 100, "ستّون": 60, "ستين": 60, "سبعين": 70, "ثمانين": 80, "ثمانون": 80, "تسعين": 90, "ثلاثةٌ وثمانون": 83, "نصف": 50, "ونصفًا": 50, "والنصف": 50 };
+      "ثلاثين": 30, "ثلاثون": 30, "أربعين": 40, "خمسين": 50, "خمسون": 50, "مئة": 100, "مئةِ": 100, "ستّون": 60, "ستين": 60, "سبعين": 70, "ثمانين": 80, "ثمانون": 80, "تسعين": 90, "ثلاثةٌ وثمانون": 83, "ثلاثة وثمانين": 83, "نصف": 50, "ونصفًا": 50, "والنصف": 50 };
     const zahlenAus = (s: string, tab: Record<string, number>) => {
       const out = new Set<number>();
       const normal = s.normalize("NFC").replace(/[\u064B-\u065F\u0670]/g, "");
@@ -2725,13 +2734,13 @@ void 0;
     const v = verknuepfung(fr);
     ok(v.kollokationen.length >= 2 && (v.texte.length + v.dialoge.length) >= 1 && v.texte.every((t) => t.level === fr.level) && v.dialoge.every((d) => d.level === fr.level), `K81e بطاقةُ Frist (${fr.level}) ترتبطُ بمتلازماتِها وبـ${v.texte.length} نصًّا و${v.dialoge.length} حواراً من مستواها فقط`);
     const soll: Record<string, number> = { A1: 98, A2: 97, B1: 97, B2: 98 };
-    // R298/PA-038-03: الأساس على بطاقات الخطة وحزم التوسعة الحرة مستثناة. خُفّض خط A2 المعلن
-    // بعد حذف وصفات/وعود/مصطلحات غير آمنة؛ لا تُعاد ألفاظ إلى الحوار لمجرد تجميل مؤشر الترابط.
+    // R298/PA-038-03/04: الأساس على بطاقات الخطة وحزم التوسعة الحرة مستثناة. خُفّض الخط المعلن
+    // بعد حذف وصفات/وعود/مصطلحات غير آمنة من A2/B1؛ لا تُعاد ألفاظ لمجرد تجميل مؤشر الترابط.
     const ab = Object.fromEntries(Object.keys(soll).map((L) => [L, abdeckung(L, "j")]));
     ok(Object.keys(soll).every((L) => ab[L].prozent >= soll[L]), `K81f التغطيةُ من الفهرسِ نفسِه لبطاقاتِ الخطة: ${Object.keys(soll).map((L) => `${L} ${ab[L].prozent}%`).join(" · ")} — خط PA-038-03 المعلن لا يعلو على سلامة المحتوى`);
     const w = Object.fromEntries(Object.keys(soll).map((L) => [L, verwaiste(L, "j").length]));
-    const wSoll: Record<string, number> = { A1: 4, A2: 13, B1: 3, B2: 12 };
-    ok(Object.keys(soll).every((L) => w[L] <= wSoll[L]), `K81g اليتامى بعد PA-038-03 (لا تُعاد ألفاظ محذوفة لإرضاء المؤشر): A1 ${w.A1} · A2 ${w.A2} · B1 ${w.B1} · B2 ${w.B2}`);
+    const wSoll: Record<string, number> = { A1: 4, A2: 13, B1: 12, B2: 12 };
+    ok(Object.keys(soll).every((L) => w[L] <= wSoll[L]), `K81g اليتامى بعد PA-038-04 (لا تُعاد ألفاظ محذوفة لإرضاء المؤشر): A1 ${w.A1} · A2 ${w.A2} · B1 ${w.B1} · B2 ${w.B2}`);
     ok(stammVon("die Frist") === "fris" && stammVon("sich bewerben um") === "bewerb" && stammVon("zu") === "", "K81h قاعدةُ الجذعِ ثابتةٌ ومطابقةٌ لـK76c");
     const kw = alleVokabeln.find((c) => c.de === "der Klimawandel")!;
     const vk = verknuepfung(kw);
@@ -8475,11 +8484,14 @@ void 0;
     "K187e التقرير يصرّح بحدود CEFR والمراجعة البشرية/قانونية");
 }
 
+// K188–K196 are October historical snapshots. PA-038-04 supersedes their B1
+// content locks, so they read the fixture's guarded `previous` dialogues; K439
+// and the dedicated dialogue audit guard every current B1 dialogue in full.
 // K188 — first B1 batch d-b1-01..d-b1-06 (R114).
 {
   const reviewB101 = JSON.parse(readFileSync("docs/content-review-b1-dialogues-01-2026-10-08.json", "utf8")) as any;
   const reviewB101Md = readFileSync("docs/content-review-b1-dialogues-01-2026-10-08.md", "utf8");
-  const liveB101 = JSON.parse(readFileSync("content/dialogues.json", "utf8")) as any[];
+  const liveB101 = dialoguesBeforePa038Reviews as any[];
   const patchSourceB101 = readFileSync("scripts/patches/review_b1_dialogues_01.py", "utf8");
   const reportSourceB101 = readFileSync("scripts/patches/report_b1_dialogues_01.py", "utf8");
   const scope = ["d-b1-01", "d-b1-02", "d-b1-03", "d-b1-04", "d-b1-05", "d-b1-06"];
@@ -8663,7 +8675,7 @@ void 0;
 {
   const reviewB102 = JSON.parse(readFileSync("docs/content-review-b1-dialogues-02-2026-10-08.json", "utf8")) as any;
   const reviewB102Md = readFileSync("docs/content-review-b1-dialogues-02-2026-10-08.md", "utf8");
-  const liveB102 = JSON.parse(readFileSync("content/dialogues.json", "utf8")) as any[];
+  const liveB102 = dialoguesBeforePa038Reviews as any[];
   const patchSourceB102 = readFileSync("scripts/patches/review_b1_dialogues_02.py", "utf8");
   const scope = ["d-b1-07", "d-b1-08", "d-b1-09"];
   ok(reviewB102.reviewRule === "R115" && reviewB102.date === "2026-10-08" &&
@@ -8781,7 +8793,7 @@ void 0;
 {
   const reviewB103 = JSON.parse(readFileSync("docs/content-review-b1-dialogues-03-2026-10-08.json", "utf8")) as any;
   const reviewB103Md = readFileSync("docs/content-review-b1-dialogues-03-2026-10-08.md", "utf8");
-  const liveB103 = JSON.parse(readFileSync("content/dialogues.json", "utf8")) as any[];
+  const liveB103 = dialoguesBeforePa038Reviews as any[];
   const patchSourceB103 = readFileSync("scripts/patches/review_b1_dialogues_03.py", "utf8");
   const scope = ["d-b1-10", "d-b1-11", "d-b1-12"];
   ok(reviewB103.reviewRule === "R116" && reviewB103.date === "2026-10-08" &&
@@ -8913,7 +8925,7 @@ void 0;
 {
   const reviewB104 = JSON.parse(readFileSync("docs/content-review-b1-dialogues-04-2026-10-08.json", "utf8")) as any;
   const reviewB104Md = readFileSync("docs/content-review-b1-dialogues-04-2026-10-08.md", "utf8");
-  const liveB104 = JSON.parse(readFileSync("content/dialogues.json", "utf8")) as any[];
+  const liveB104 = dialoguesBeforePa038Reviews as any[];
   const patchSourceB104 = readFileSync("scripts/patches/review_b1_dialogues_04.py", "utf8");
   const scope = ["d-b1-13", "d-b1-14", "d-b1-15"];
   ok(reviewB104.reviewRule === "R117" && reviewB104.date === "2026-10-08" &&
@@ -9044,7 +9056,7 @@ void 0;
 {
   const reviewB105 = JSON.parse(readFileSync("docs/content-review-b1-dialogues-05-2026-10-08.json", "utf8")) as any;
   const reviewB105Md = readFileSync("docs/content-review-b1-dialogues-05-2026-10-08.md", "utf8");
-  const liveB105 = JSON.parse(readFileSync("content/dialogues.json", "utf8")) as any[];
+  const liveB105 = dialoguesBeforePa038Reviews as any[];
   const patchSourceB105 = readFileSync("scripts/patches/review_b1_dialogues_05.py", "utf8");
   const scope = ["d-b1-16", "d-b1-17", "d-b1-18"];
   ok(reviewB105.reviewRule === "R118" && reviewB105.date === "2026-10-08" &&
@@ -9185,7 +9197,7 @@ void 0;
 {
   const reviewB106 = JSON.parse(readFileSync("docs/content-review-b1-dialogues-06-2026-10-08.json", "utf8")) as any;
   const reviewB106Md = readFileSync("docs/content-review-b1-dialogues-06-2026-10-08.md", "utf8");
-  const liveB106 = JSON.parse(readFileSync("content/dialogues.json", "utf8")) as any[];
+  const liveB106 = dialoguesBeforePa038Reviews as any[];
   const patchSourceB106 = readFileSync("scripts/patches/review_b1_dialogues_06.py", "utf8");
   const scope = ["d-b1-19", "d-b1-20", "d-b1-21"];
   ok(reviewB106.reviewRule === "R119" && reviewB106.date === "2026-10-08" &&
@@ -9329,7 +9341,7 @@ void 0;
 {
   const reviewB107 = JSON.parse(readFileSync("docs/content-review-b1-dialogues-07-2026-10-08.json", "utf8")) as any;
   const reviewB107Md = readFileSync("docs/content-review-b1-dialogues-07-2026-10-08.md", "utf8");
-  const liveB107 = JSON.parse(readFileSync("content/dialogues.json", "utf8")) as any[];
+  const liveB107 = dialoguesBeforePa038Reviews as any[];
   const patchSourceB107 = readFileSync("scripts/patches/review_b1_dialogues_07.py", "utf8");
   const scope7 = ["d-b1-22", "d-b1-23", "d-b1-24"];
   ok(reviewB107.reviewRule === "R120" && reviewB107.date === "2026-10-08" &&
@@ -9480,7 +9492,7 @@ void 0;
 {
   const reviewB108 = JSON.parse(readFileSync("docs/content-review-b1-dialogues-08-2026-10-08.json", "utf8")) as any;
   const reviewB108Md = readFileSync("docs/content-review-b1-dialogues-08-2026-10-08.md", "utf8");
-  const liveB108 = JSON.parse(readFileSync("content/dialogues.json", "utf8")) as any[];
+  const liveB108 = dialoguesBeforePa038Reviews as any[];
   const patchSourceB108 = readFileSync("scripts/patches/review_b1_dialogues_08.py", "utf8");
   const scope8 = ["d-b1-25", "d-b1-26", "d-b1-27"];
   ok(reviewB108.reviewRule === "R121" && reviewB108.date === "2026-10-08" &&
@@ -9636,7 +9648,7 @@ void 0;
 {
   const reviewB109 = JSON.parse(readFileSync("docs/content-review-b1-dialogues-09-2026-10-08.json", "utf8")) as any;
   const reviewB109Md = readFileSync("docs/content-review-b1-dialogues-09-2026-10-08.md", "utf8");
-  const liveB109 = JSON.parse(readFileSync("content/dialogues.json", "utf8")) as any[];
+  const liveB109 = dialoguesBeforePa038Reviews as any[];
   const patchSourceB109 = readFileSync("scripts/patches/review_b1_dialogues_09.py", "utf8");
   const scope9 = ["d-b1-31", "d-b1-32"];
   ok(reviewB109.reviewRule === "R122" && reviewB109.date === "2026-10-08" &&
@@ -10969,7 +10981,8 @@ void 0;
   const reviewB1Extras = JSON.parse(readFileSync("docs/content-review-b1-dialogues-10-2026-10-11.json", "utf8")) as any;
   const reviewB1ExtrasMd = readFileSync("docs/content-review-b1-dialogues-10-2026-10-11.md", "utf8");
   const reviewB1Patch = readFileSync("scripts/patches/review_b1_extras_10.py", "utf8");
-  const dialoguesArr = JSON.parse(readFileSync("content/dialogues.json", "utf8")) as any[];
+  // R153 is historical; current B1 extras are guarded in full by PA-038-04/K439.
+  const dialoguesArr = dialoguesBeforePa038Reviews as any[];
   const ids = ["dlg-b1-kontoeroeffnung", "hoer-b1-01", "d-b1-ht01", "d-b1-ht02", "d-b1-ht03"];
   const batch = ids.map((id) => dialoguesArr.find((d:any) => d.id === id));
   const tasksValid = batch.every((d:any) => d && d.level === "B1" && Array.isArray(d.lines) && d.lines.length > 0 &&
@@ -11721,7 +11734,8 @@ void 0;
 }
 /* ═══ K216 — تصحيح تحذيرات المحتوى W1–W6 (R142). ═══ */
 {
-  const dialogs = JSON.parse(readFileSync("content/dialogues.json","utf8")) as any[];
+  // لقطة R142 تاريخية؛ PA-038-04 يحرس بدائل B1 الحالية في K439 والبوابة المخصصة.
+  const dialogs = dialoguesBeforePa038Reviews as any[];
   const find=(id:string)=>dialogs.find((d:any)=>d.id===id);
   const d16=find("d-b1-16"), d24=find("d-b1-24"), d25=find("d-b1-25"), d27=find("d-b1-27"), d11=find("d-b2-11");
   // W1: 60 Min → 25%
@@ -12117,8 +12131,8 @@ void 0;
     coverageAfter.A2 === "32/32" && coverageAfter.B1 === "30/35" && coverageAfter.B2 === "20/40" &&
     coverageAfter.remainingWithoutLocalMP3 === 25 && reviewR165.next.remainingUnrecordedTexts === 25 &&
     reviewR165.next.byLevel.B1 === 5 && reviewR165.next.byLevel.B2 === 20 &&
-    abdeckung("B1").prozent >= 97 && verwaiste("B1").length <= 3 && reviewR165Md.includes("لم يحدث استماع بشري"),
-    "K234e تجزئات النصوص ثابتة؛ تغطية B1 بلغت 97٪ بلا مفردات يتيمة، والتغطية الصوتية 132/157 مع بقاء خمسة B1 و20 B2 (R323: 3 orphans)");
+    abdeckung("B1").prozent >= 97 && verwaiste("B1").length <= 12 && reviewR165Md.includes("لم يحدث استماع بشري"),
+    "K234e تجزئات النصوص ثابتة؛ تغطية B1 بلغت 97٪ بلا مفردات يتيمة، والتغطية الصوتية 132/157 مع بقاء خمسة B1 و20 B2 (PA-038-04: 12 orphans)");
 }
 
 /* ═══ R166 / K235 — إعادة تدقيق وتسجيل آخر خمسة نصوص B1. ═══ */
@@ -12215,9 +12229,9 @@ void 0;
     reviewR166.next.remainingUnrecordedTexts === 20 && reviewR166.audio.validation.manifestReapply.includes("0 new, 0 refreshed") &&
     reviewR166.audio.validation.manifestSha256StableOnReapply === true &&
     historicalR158.audioAudit.matchingFilesPresent === 0 && historicalR165.audio.coverage.after.hoerenAudio === 132 &&
-    historicalR165.next.remainingUnrecordedTexts === 25 && abdeckung("B1").prozent >= 97 && verwaiste("B1").length <= 3 &&
+    historicalR165.next.remainingUnrecordedTexts === 25 && abdeckung("B1").prozent >= 97 && verwaiste("B1").length <= 12 &&
     reviewR166Md.includes("لا استماع بشري"),
-    "K235e لقطة R158/R165 محفوظة؛ B1 مكتمل 35/35، التغطية 137/157 والمتبقي عشرون B2 (R323: 3 orphans)");
+    "K235e لقطة R158/R165 محفوظة؛ B1 مكتمل 35/35، التغطية 137/157 والمتبقي عشرون B2 (PA-038-04: 12 orphans)");
 }
 
 /* ═══ R167 / K236 — ترجمة كاملة، تدقيق واقعي، وتسجيل أول خمسة نصوص B2. ═══ */
@@ -13186,7 +13200,7 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const transcripts304 = JSON.parse(readFileSync("content/audio-transcript-overrides.json", "utf8")) as {
     items: Array<{ file: string; id: string; group: string; textDe: string; audioCommit: string; sourcePath: string }>;
   };
-  const transcriptOverridesOk304 = transcripts304.items.length === 39 && transcripts304.items.every((entry) =>
+  const transcriptOverridesOk304 = transcripts304.items.length === 65 && transcripts304.items.every((entry) =>
     platten304.has(entry.file) && entry.textDe.trim().length > 0 && /^[0-9a-f]{40}$/.test(entry.audioCommit) &&
     (entry.group === "dialog" || entry.group === "hoeren") && entry.sourcePath.startsWith("content/"));
   const audioQcSrc304 = readFileSync("scripts/audio_qc_all.py", "utf8");
@@ -13207,7 +13221,7 @@ function collectR262(dir: string, out: string[] = []): string[] {
      audioQcSrc304.includes('fehler.append("placeholder")') && audioQcSrc304.includes('e["fehler"].append("audio-duplikat")') &&
      audioReq304.includes("miniaudio==1.71") && audioReq304.includes("numpy==2.4.6") &&
      audioReq304.includes("cffi==2.1.1") && audioReq304.includes("pycparser==3.12"),
-    `K304 مراجعةُ الصوتِ الآليةُ R272: ‏${platten304.size}/${platten304.size} ملفاً ذا مانيفستو مفكوكاً ومقيساً وفريد البصمة، مع 39 لقطة نص تسجيل صريحة بلا شذوذ — لا يشمل الحكم 87 ملف قواعد بلا مانيفستو نص/صوت، ولا يساوي استماعاً بشرياً أو حكم نطق`);
+    `K304 مراجعةُ الصوتِ الآليةُ R272: ‏${platten304.size}/${platten304.size} ملفاً ذا مانيفستو مفكوكاً ومقيساً وفريد البصمة، مع 65 لقطة نص تسجيل صريحة بلا شذوذ — لا يشمل الحكم 87 ملف قواعد بلا مانيفستو نص/صوت، ولا يساوي استماعاً بشرياً أو حكم نطق`);
 }
 
 // ===== K305 (R280 · M1+M2): FSRS-6-Scheduler + Meisterungsstufen Erkennen/Produktion =====
@@ -16505,7 +16519,7 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const ciK436 = readFileSync(".github/workflows/ci.yml", "utf8");
   ok(patchK436.includes("current == reviewed") && patchK436.includes("current != previous") &&
     patchK436.includes("unexpected current dialogue") &&
-    auditK436.includes("all 90 bounded A0–A2 full-dialogue decisions match") && auditK436.includes("86 B1–B2 dialogues") &&
+    auditK436.includes("all 127 bounded A0–B1 full-dialogue decisions match") && auditK436.includes("49 B2 dialogues") &&
     packageK436.includes('"audit:dialogue-content-review"') && ciK436.includes("npm run audit:dialogue-content-review") &&
     reviewK436.scope.includes("triage only") && reviewK436.scope.includes("not correction generators") &&
     reviewK436.scope.includes("not independent linguistic, translation, cultural, medical, CEFR, audio, or exam sign-off"),
@@ -16548,7 +16562,7 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const ciK437 = readFileSync(".github/workflows/ci.yml", "utf8");
   ok(patchK437.includes("current == reviewed") && patchK437.includes("current != previous") &&
     patchK437.includes("unexpected current dialogue") &&
-    auditK437.includes("all 90 bounded A0–A2 full-dialogue decisions match") && auditK437.includes("86 B1–B2 dialogues") &&
+    auditK437.includes("all 127 bounded A0–B1 full-dialogue decisions match") && auditK437.includes("49 B2 dialogues") &&
     packageK437.includes('"audit:dialogue-content-review"') && ciK437.includes("npm run audit:dialogue-content-review") &&
     reviewK437.scope.includes("all 238 line alignments") && reviewK437.scope.includes("all 89 questions") &&
     reviewK437.scope.includes("triage only") && reviewK437.scope.includes("not correction generators") &&
@@ -16597,12 +16611,61 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const ciK438 = readFileSync(".github/workflows/ci.yml", "utf8");
   ok(patchK438.includes("current == reviewed") && patchK438.includes("current != previous") &&
     patchK438.includes("unexpected current dialogue") &&
-    auditK438.includes("all 90 bounded A0–A2 full-dialogue decisions match") && auditK438.includes("86 B1–B2 dialogues") &&
+    auditK438.includes("all 127 bounded A0–B1 full-dialogue decisions match") && auditK438.includes("49 B2 dialogues") &&
     packageK438.includes('"audit:dialogue-content-review"') && ciK438.includes("npm run audit:dialogue-content-review") &&
     reviewK438.scope.includes("all 248 line alignments") && reviewK438.scope.includes("all 93 questions") &&
     reviewK438.scope.includes("triage only") && reviewK438.scope.includes("not linguistic correction generators") &&
     reviewK438.scope.includes("not independent linguistic, translation, cultural, legal, medical, emergency-services, audio, CEFR, Goethe, telc, or exam sign-off"),
     "K438c PA-038-03: الرقعة exact-match وقابلة للإعادة وفاشلة عند الانزياح والبوابة موصولة بـCI مع إبقاء 86 حواراً والصوت والتوقيع المستقل خارج الادعاء");
+}
+
+/* ═══ K439 — PA-038-04: مراجعة حوارات B1 بندياً ═══ */
+{
+  const reviewK439 = JSON.parse(readFileSync("scripts/fixtures/dialogues-reviewed-04.json", "utf8")) as {
+    schema: string;
+    batch: string;
+    scope: string;
+    entries: { id: string; level: string; decision: "corrected" | "confirmed-current"; rationale: string; previous: Record<string, unknown>; current: Record<string, any> }[];
+  };
+  const dialoguesK439 = JSON.parse(readFileSync("content/dialogues.json", "utf8")) as Array<Record<string, any>>;
+  const byIdK439 = new Map(dialoguesK439.map((dialogue) => [String(dialogue.id), dialogue]));
+  const expectedK439 = new Set(dialoguesK439.filter((dialogue) => dialogue.level === "B1").map((dialogue) => String(dialogue.id)));
+  const correctedK439 = reviewK439.entries.filter((entry) => entry.decision === "corrected");
+  const confirmedK439 = reviewK439.entries.filter((entry) => entry.decision === "confirmed-current");
+  const lineCountK439 = reviewK439.entries.reduce((sum, entry) => sum + (entry.current.lines?.length ?? 0), 0);
+  const questionCountK439 = reviewK439.entries.reduce((sum, entry) => sum + (entry.current.questions?.length ?? 0), 0);
+  ok(reviewK439.schema === "wegb2-reviewed-dialogue-decision-batch-v1" && reviewK439.batch === "PA-038-04" &&
+    reviewK439.entries.length === 37 && expectedK439.size === 37 &&
+    reviewK439.entries.every((entry) => expectedK439.has(entry.id) && entry.level === "B1" && entry.rationale.trim().length > 0) &&
+    correctedK439.length === 37 && confirmedK439.length === 0 && lineCountK439 === 252 && questionCountK439 === 91 &&
+    correctedK439.every((entry) => JSON.stringify(entry.previous) !== JSON.stringify(entry.current)),
+    "K439a PA-038-04: سجل القرار يغطي حوارات B1 السبعة والثلاثين كاملة بـ252 سطراً و91 سؤالاً و37 تصحيحاً مبرراً");
+  const currentK439 = JSON.stringify([...expectedK439].map((id) => byIdK439.get(id)));
+  ok(reviewK439.entries.every((entry) => JSON.stringify(byIdK439.get(entry.id)) === JSON.stringify(entry.current)) &&
+    byIdK439.get("d-b1-07")?.lines?.[4]?.de.includes("medizinische Hilfe") &&
+    byIdK439.get("d-b1-12")?.lines?.[3]?.de.startsWith("Die Symptome könnten") &&
+    byIdK439.get("d-b1-12")?.lines?.[7]?.de.includes("ohne ärztliche Anweisung") &&
+    byIdK439.get("d-b1-20")?.lines?.[7]?.de.includes("112") &&
+    byIdK439.get("d-b1-20")?.lines?.[7]?.de.includes("116 117") &&
+    byIdK439.get("d-b1-25")?.lines?.[3]?.de.includes("Wohnungsgeber") &&
+    byIdK439.get("d-b1-ht01")?.situationDe === "Fiktive Radiomeldung für eine Hörübung" &&
+    byIdK439.get("d-b1-ht02")?.situationDe === "Fiktive Zugansage für eine Hörübung" &&
+    !currentK439.includes("Bei sechzig Minuten stehen Ihnen fünfundzwanzig Prozent") &&
+    !currentK439.includes("Bei zweitem Versäumnis: Ablehnung, neue Gebühr") &&
+    !currentK439.includes("Ansonsten kostet es 4,90 Euro im Monat"),
+    "K439b PA-038-04: القرارات تطابق البنك وتحرس المحاذاة والتسلسل وحدود الطب والصيدلة والطوارئ والإقامة والنقل والعقود والخبر الخيالي");
+  const patchK439 = readFileSync("scripts/patches/apply_dialogue_review_pa038_04.py", "utf8");
+  const auditK439 = readFileSync("scripts/dialogue_content_review_audit.ts", "utf8");
+  const packageK439 = readFileSync("package.json", "utf8");
+  const ciK439 = readFileSync(".github/workflows/ci.yml", "utf8");
+  ok(patchK439.includes("current == reviewed") && patchK439.includes("current != previous") &&
+    patchK439.includes("unexpected current dialogue") &&
+    auditK439.includes("all 127 bounded A0–B1 full-dialogue decisions match") && auditK439.includes("49 B2 dialogues") &&
+    packageK439.includes('"audit:dialogue-content-review"') && ciK439.includes("npm run audit:dialogue-content-review") &&
+    reviewK439.scope.includes("all 252 line alignments") && reviewK439.scope.includes("all 91 questions") &&
+    reviewK439.scope.includes("triage only") && reviewK439.scope.includes("not linguistic correction generators") &&
+    reviewK439.scope.includes("not independent linguistic, translation, cultural, legal, medical, pharmacy, emergency-services, audio, CEFR, Goethe, telc, or exam sign-off"),
+    "K439c PA-038-04: الرقعة exact-match وقابلة للإعادة وفاشلة عند الانزياح والبوابة موصولة بـCI مع إبقاء 49 حوار B2 والصوت والتوقيع المستقل خارج الادعاء");
 }
 
 /* ═══ K334 — R309: القفل الفعلي الحقيقي — إغلاقُ اليوم عند حدود الوحدة ممنوعٌ لا منصوحٌ به فقط ═══ */
