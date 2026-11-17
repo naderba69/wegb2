@@ -1,0 +1,190 @@
+{
+  "schema": "wegb2-audio-refresh-batch-v1",
+  "batch": "PA-039-03",
+  "generatedAt": "2026-11-04",
+  "scope": "Six remaining B2 HörLabor readings regenerated programmatically by supplying the exact current German text from content/texts.json to Arena TTS. Five long readings use two paragraph-boundary chunks with ordered MP3 segment concatenation; t-b2-40 fits in one exact-source clip. Hashes guard source chunks and resulting files. Technical checks are automated only; no human listening, pronunciation, naturalness, linguistic, CEFR, Goethe/telc, or exam sign-off is claimed.",
+  "voice": "voice-02 (de-DE, Arena TTS)",
+  "sourcePath": "content/texts.json",
+  "generation": {
+    "mode": "exact-source chunks with ordered MP3 concatenation where required",
+    "sourceJoiner": "\\n\\n",
+    "twoSegmentIds": [
+      "t-b2-26",
+      "t-b2-27",
+      "t-b2-28",
+      "t-b2-29",
+      "t-b2-30"
+    ],
+    "singleSegmentIds": [
+      "t-b2-40"
+    ]
+  },
+  "items": [
+    {
+      "id": "t-b2-26",
+      "level": "B2",
+      "file": "/audio/hoeren/t-b2-26.mp3",
+      "sourceTextSha256": "09fcd34301c0b8e2f3e91c2c7b76c41afd76388dd016b07853243d866d956540",
+      "generatedAudioSha256": "462765224804c5df41e914e41f8e5ca0de15ce3904ef54b2d99ed40b36d8e270",
+      "bytes": 426522,
+      "previousAudioSha256": "3bb53ed36ae1ec68f8f1f1fc53b3b6f704b1b001bac6b706fb7359d5e4158311",
+      "previousBytes": 425709,
+      "removedTranscriptSnapshotSha256": "09fcd34301c0b8e2f3e91c2c7b76c41afd76388dd016b07853243d866d956540",
+      "removedTranscriptAudioCommit": "dab21d8c22a7498c63f62ecb9f06be7a59bf5982",
+      "generationChunks": [
+        {
+          "sourceTextSha256": "ee575f17cac13ed45c17fb15043e954d1a83fd508235b94e974cf8275aed9d59",
+          "characters": 1110,
+          "generatedSegmentAudioSha256": "8b9c989c1501f8d3a6a141863d7d5109bb790c4bfa8de476902da10798c7a11f",
+          "bytes": 285453
+        },
+        {
+          "sourceTextSha256": "4b9ecd0734ebd2e5500c84be3b973ed8978eade9b0759a463eaa3bd3d727a88e",
+          "characters": 552,
+          "generatedSegmentAudioSha256": "213a78cb73ccc2d38a934b0f0aede145d08d2fab4f77c42da8dded3fd01a1261",
+          "bytes": 141069
+        }
+      ]
+    },
+    {
+      "id": "t-b2-27",
+      "level": "B2",
+      "file": "/audio/hoeren/t-b2-27.mp3",
+      "sourceTextSha256": "11f1d3da3a8117a1de234243070ffbd187d5ac4d1d1f4b38f47392425adf785d",
+      "generatedAudioSha256": "c5cbb5dd1a0f38bc6556a41d6cbc820fb39c87ea3ea4028577dc5f21f1f70e9f",
+      "bytes": 407322,
+      "previousAudioSha256": "efd5dc1de70015ef381de15bb1a7df44a1a66354308db96520bd9e6186e6929f",
+      "previousBytes": 394797,
+      "removedTranscriptSnapshotSha256": "11f1d3da3a8117a1de234243070ffbd187d5ac4d1d1f4b38f47392425adf785d",
+      "removedTranscriptAudioCommit": "dab21d8c22a7498c63f62ecb9f06be7a59bf5982",
+      "generationChunks": [
+        {
+          "sourceTextSha256": "1f0680a93520cc7bb9fb3077d1c3fe7231725c19368e0a218a825f6818d3f85e",
+          "characters": 890,
+          "generatedSegmentAudioSha256": "c2988b688b90c0930d35effcbab6e26413aaff4c25a5438b729b1b5a6b46863f",
+          "bytes": 219789
+        },
+        {
+          "sourceTextSha256": "5fe2e2c976fe78470aa7dad21db617882816b5d3847758db14898594e7413251",
+          "characters": 790,
+          "generatedSegmentAudioSha256": "9bdc119778bfb4522c0889c847fd1378aea6dc488826a432f0465feda19b07e0",
+          "bytes": 187533
+        }
+      ]
+    },
+    {
+      "id": "t-b2-28",
+      "level": "B2",
+      "file": "/audio/hoeren/t-b2-28.mp3",
+      "sourceTextSha256": "f64af208a63307bc2524c72701dc03f78bd6e1040f217f56f82ccf6babe73198",
+      "generatedAudioSha256": "b09f0eff336c16a15c37959dba7c4fd52e4fc36a5511ecf59e874f13c27409f7",
+      "bytes": 394266,
+      "previousAudioSha256": "5e809aef9e372663b2997d9e162d2da747cd34929ed22a2504bc20f6560425f0",
+      "previousBytes": 403053,
+      "removedTranscriptSnapshotSha256": "f64af208a63307bc2524c72701dc03f78bd6e1040f217f56f82ccf6babe73198",
+      "removedTranscriptAudioCommit": "dab21d8c22a7498c63f62ecb9f06be7a59bf5982",
+      "generationChunks": [
+        {
+          "sourceTextSha256": "d92c650834a7741d655b5edd231555a902d67cefade52a4af0437489bd5969f6",
+          "characters": 1040,
+          "generatedSegmentAudioSha256": "fa757c271f52a5f8ac30277fc4a589622497f5c9305e6f15920dcbaee21a0382",
+          "bytes": 246573
+        },
+        {
+          "sourceTextSha256": "f172374dc46c977fef8aa38509fd94f364a72823ecc9ab398bf44d4960bd5488",
+          "characters": 588,
+          "generatedSegmentAudioSha256": "0ef5c0e9a64e21bab630d46acee0aa3496e04ebf4414d785dcbf0a49d0ed07ae",
+          "bytes": 147693
+        }
+      ]
+    },
+    {
+      "id": "t-b2-29",
+      "level": "B2",
+      "file": "/audio/hoeren/t-b2-29.mp3",
+      "sourceTextSha256": "990f801c5a6d586c787f090e81ee977762877ae6b553372b9c707f5143c2dc9f",
+      "generatedAudioSha256": "3264ecff38523c0f4f85ce298d74e89ca194e84f534df2cfedcb3ffe14afcca2",
+      "bytes": 422490,
+      "previousAudioSha256": "b13ee2d6dad9fbab4a459a641d7b1cf3c09ec48d8359a6370844f794aceb15d8",
+      "previousBytes": 426285,
+      "removedTranscriptSnapshotSha256": "990f801c5a6d586c787f090e81ee977762877ae6b553372b9c707f5143c2dc9f",
+      "removedTranscriptAudioCommit": "dab21d8c22a7498c63f62ecb9f06be7a59bf5982",
+      "generationChunks": [
+        {
+          "sourceTextSha256": "2abd4dd30824d38985f4a563b25d80426e9ecd47d1f5228d55257d925ad4f963",
+          "characters": 1255,
+          "generatedSegmentAudioSha256": "0a524e42853b0b750d480e346606bf128e9938b97fdd4fcdb5c77bbe9bc9135b",
+          "bytes": 307821
+        },
+        {
+          "sourceTextSha256": "350835a0c8c1ff876ed46c3cc163da5b5a7a273f8c942477196d67f1a3714983",
+          "characters": 439,
+          "generatedSegmentAudioSha256": "62c0f3912da1c812e03b7807e78d2f331a2b1e294395f103a0104dfbd7538143",
+          "bytes": 114669
+        }
+      ]
+    },
+    {
+      "id": "t-b2-30",
+      "level": "B2",
+      "file": "/audio/hoeren/t-b2-30.mp3",
+      "sourceTextSha256": "03775b7a2133642c40c9abc5f9be0be0ddecf7b91e117a4ecfbf19850805e55c",
+      "generatedAudioSha256": "c1e753b01dd03f67c3ea4f0bc9f351d20e87d3df2e9527af15667e8820ff2600",
+      "bytes": 448890,
+      "previousAudioSha256": "178e61fcf9c2b78bf8bf765a17b62fe61fc4b7d7558ea566b60a8df1b9209dd0",
+      "previousBytes": 440781,
+      "removedTranscriptSnapshotSha256": "03775b7a2133642c40c9abc5f9be0be0ddecf7b91e117a4ecfbf19850805e55c",
+      "removedTranscriptAudioCommit": "dab21d8c22a7498c63f62ecb9f06be7a59bf5982",
+      "generationChunks": [
+        {
+          "sourceTextSha256": "ab1267141bbdd1cf7352637e560a239c1369247051457d43009fcd686d854bf4",
+          "characters": 1088,
+          "generatedSegmentAudioSha256": "ca5db09a486e438f032ebb2efd65e82b21fc14de4e8cd342e45ca1f5bf46ebb8",
+          "bytes": 287469
+        },
+        {
+          "sourceTextSha256": "7fb2d78010c05de54e8b8c9d1981d2e21cfbde780003720f2180f4a1c243bf82",
+          "characters": 583,
+          "generatedSegmentAudioSha256": "f28676953c58c366e9e06fea7b4e5ed6d3d1823c6a3b829debc4ee314f4239d4",
+          "bytes": 161421
+        }
+      ]
+    },
+    {
+      "id": "t-b2-40",
+      "level": "B2",
+      "file": "/audio/hoeren/t-b2-40.mp3",
+      "sourceTextSha256": "e9e7b6ff82522140ee2b89677277ceca5e941655add59652abc3ce2234e87270",
+      "generatedAudioSha256": "ac30f2b5e4e3afc2220faf4a94135641377cd3e250d1c81dab7132a6bbcdcbda",
+      "bytes": 343533,
+      "previousAudioSha256": "009a4d20cfc73e55e49420a2446386072d82320eb7f22f8f79b47c071b66490e",
+      "previousBytes": 360909,
+      "removedTranscriptSnapshotSha256": "e9e7b6ff82522140ee2b89677277ceca5e941655add59652abc3ce2234e87270",
+      "removedTranscriptAudioCommit": "438f5d7a056210481f95637a79a78ef0549b4f3f",
+      "generationChunks": [
+        {
+          "sourceTextSha256": "e9e7b6ff82522140ee2b89677277ceca5e941655add59652abc3ce2234e87270",
+          "characters": 1457,
+          "generatedSegmentAudioSha256": "ac30f2b5e4e3afc2220faf4a94135641377cd3e250d1c81dab7132a6bbcdcbda",
+          "bytes": 343533
+        }
+      ]
+    }
+  ],
+  "transcriptSnapshotLedger": {
+    "before": 77,
+    "removed": 6,
+    "after": 71
+  },
+  "validation": {
+    "generationInputWasExactCurrentGermanText": true,
+    "technicalAudioQc": "pass-1099-of-1099",
+    "technicalAudioQcReport": "docs/audio-qc-all-2026-11-04.json",
+    "humanListening": false,
+    "pronunciationQualityJudged": false,
+    "naturalnessJudged": false,
+    "independentLinguisticSignOff": false,
+    "externalCefrOrExamValidation": false
+  },
+  "claimBoundary": "Programmatic generation provenance plus byte/hash identity and automated technical QC do not establish that a human heard every word, nor do they judge pronunciation, prosody, naturalness, pedagogy, CEFR level, or exam suitability."
+}

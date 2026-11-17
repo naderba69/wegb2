@@ -16,6 +16,12 @@ type RefreshItem = {
   previousBytes: number;
   removedTranscriptSnapshotSha256: string;
   removedTranscriptAudioCommit: string;
+  generationChunks?: Array<{
+    sourceTextSha256: string;
+    characters: number;
+    generatedSegmentAudioSha256: string;
+    bytes: number;
+  }>;
 };
 type RefreshFixture = {
   schema: string;
@@ -24,6 +30,12 @@ type RefreshFixture = {
   scope: string;
   voice: string;
   sourcePath: string;
+  generation?: {
+    mode: string;
+    sourceJoiner: string;
+    twoSegmentIds: string[];
+    singleSegmentIds: string[];
+  };
   items: RefreshItem[];
   transcriptSnapshotLedger: { before: number; removed: number; after: number };
   validation: {
@@ -89,6 +101,13 @@ const batchSpecs: BatchSpec[] = [
     ledgerBefore: 87,
     ledgerAfter: 77,
   },
+  {
+    batch: "PA-039-03",
+    fixturePath: "scripts/fixtures/audio-refresh-pa039-03.json",
+    ids: ["t-b2-26", "t-b2-27", "t-b2-28", "t-b2-29", "t-b2-30", "t-b2-40"],
+    ledgerBefore: 77,
+    ledgerAfter: 71,
+  },
 ];
 const fixtures = batchSpecs.map((spec) => ({ spec, fixture: readJson<RefreshFixture>(spec.fixturePath) }));
 const texts = readJson<ReadingText[]>("content/texts.json");
@@ -123,13 +142,23 @@ for (const { spec, fixture } of fixtures) {
   if (fixture.items.length !== spec.ids.length || new Set(fixtureIds).size !== spec.ids.length
     || spec.ids.some((id) => !fixtureIds.includes(id))
     || fixtureIds.some((id) => !expectedSet.has(id))) {
-    fail(`${spec.batch}: fixture must contain exactly its ten bounded reading IDs`);
+    fail(`${spec.batch}: fixture must contain exactly its bounded reading IDs`);
   }
   if (fixture.transcriptSnapshotLedger.before !== spec.ledgerBefore
     || fixture.transcriptSnapshotLedger.removed !== spec.ids.length
     || fixture.transcriptSnapshotLedger.after !== spec.ledgerAfter
     || spec.ledgerBefore - spec.ids.length !== spec.ledgerAfter) {
     fail(`${spec.batch}: transcript-snapshot ledger transition is inconsistent`);
+  }
+  if (spec.batch === "PA-039-03") {
+    const generation = fixture.generation;
+    const twoSegmentIds = spec.ids.filter((id) => id !== "t-b2-40");
+    if (!generation || generation.mode !== "exact-source chunks with ordered MP3 concatenation where required"
+      || generation.sourceJoiner !== "\\n\\n"
+      || generation.twoSegmentIds.join(",") !== twoSegmentIds.join(",")
+      || generation.singleSegmentIds.join(",") !== "t-b2-40") {
+      fail("PA-039-03: exact-source one/two-segment generation contract is missing");
+    }
   }
   if (!fixture.validation.generationInputWasExactCurrentGermanText
     || fixture.validation.technicalAudioQc !== "pass-1099-of-1099"
@@ -168,6 +197,28 @@ for (const { spec, fixture } of fixtures) {
       || sha256(audio) !== item.generatedAudioSha256) {
       fail(`${spec.batch}/${item.id}: generated MP3 bytes/hash/header drifted from fixture or manifests`);
     }
+    if (item.generationChunks) {
+      const paragraphs = text.de.split("\n\n");
+      const expectedChunks = item.id === "t-b2-40"
+        ? [text.de]
+        : [paragraphs.slice(0, 2).join("\n\n"), paragraphs.slice(2).join("\n\n")];
+      let offset = 0;
+      const chunksValid = item.generationChunks.length === expectedChunks.length
+        && expectedChunks.join("\n\n") === text.de
+        && item.generationChunks.every((chunk, index) => {
+          const segment = audio.subarray(offset, offset + chunk.bytes);
+          offset += chunk.bytes;
+          return chunk.characters === expectedChunks[index].length
+            && chunk.sourceTextSha256 === sha256(expectedChunks[index])
+            && chunk.generatedSegmentAudioSha256 === sha256(segment)
+            && segment.subarray(0, 3).toString() === "ID3";
+        }) && offset === audio.length;
+      if (!chunksValid) {
+        fail(`${spec.batch}/${item.id}: source chunks or ordered MP3 segment identity drifted`);
+      }
+    } else if (spec.batch === "PA-039-03") {
+      fail(`${spec.batch}/${item.id}: guarded generation chunks are missing`);
+    }
     if (item.generatedAudioSha256 === item.previousAudioSha256 || item.bytes === item.previousBytes) {
       fail(`${spec.batch}/${item.id}: fixture does not prove replacement of the prior recording identity`);
     }
@@ -187,7 +238,7 @@ const finalLedgerCount = batchSpecs.at(-1)?.ledgerAfter ?? -1;
 if (snapshots.items.length !== finalLedgerCount
   || snapshots.items.some((entry) => allExpectedSet.has(entry.id))
   || batchSpecs.some((spec, index) => index > 0 && batchSpecs[index - 1].ledgerAfter !== spec.ledgerBefore)) {
-  fail("recording-time transcript snapshot ledger must truthfully fall from 97 to 77 across both batches");
+  fail("recording-time transcript snapshot ledger must truthfully fall from 97 to 71 across all three batches");
 }
 if (qc.datum !== "2026-11-04" || qc.dateien.length !== 1099
   || qc.anomalienGesamt !== 0 || qc.abdeckung.luecken.length !== 0) {
@@ -200,4 +251,4 @@ if (errors.length > 0) {
   process.exit(1);
 }
 
-console.log("PA-039-01/02 audio refresh: 20 current-text recordings guarded; snapshot ledger 97 -> 77; technical QC passed; no human listening/pronunciation claim");
+console.log("PA-039-01/02/03 audio refresh: 26 current-text recordings guarded; snapshot ledger 97 -> 71; technical QC passed; no human listening/pronunciation claim");
