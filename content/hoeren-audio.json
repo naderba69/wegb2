@@ -1001,35 +1001,35 @@
       "file": "/audio/hoeren/t-b2-26.mp3",
       "voice": "voice-02 (de-DE, Arena TTS)",
       "level": "B2",
-      "bytes": 425709
+      "bytes": 426522
     },
     {
       "id": "t-b2-27",
       "file": "/audio/hoeren/t-b2-27.mp3",
       "voice": "voice-02 (de-DE, Arena TTS)",
       "level": "B2",
-      "bytes": 394797
+      "bytes": 407322
     },
     {
       "id": "t-b2-28",
       "file": "/audio/hoeren/t-b2-28.mp3",
       "voice": "voice-02 (de-DE, Arena TTS)",
       "level": "B2",
-      "bytes": 403053
+      "bytes": 394266
     },
     {
       "id": "t-b2-29",
       "file": "/audio/hoeren/t-b2-29.mp3",
       "voice": "voice-02 (de-DE, Arena TTS)",
       "level": "B2",
-      "bytes": 426285
+      "bytes": 422490
     },
     {
       "id": "t-b2-30",
       "file": "/audio/hoeren/t-b2-30.mp3",
       "voice": "voice-02 (de-DE, Arena TTS)",
       "level": "B2",
-      "bytes": 440781
+      "bytes": 448890
     },
     {
       "id": "t-b2-31",
@@ -1097,9 +1097,9 @@
     {
       "id": "t-b2-40",
       "file": "/audio/hoeren/t-b2-40.mp3",
-      "voice": "voice-03 (de-DE, Arena TTS)",
+      "voice": "voice-02 (de-DE, Arena TTS)",
       "level": "B2",
-      "bytes": 360909
+      "bytes": 343533
     }
   ],
   "updated": "2026-11-04"
