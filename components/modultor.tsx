@@ -133,7 +133,7 @@ export default function ModulTor({ day }: { day: number }) {
                           onError={() => setAudioDefekt((s) => ({ ...s, [id]: true }))} />
                         {istKi && (
                           <div data-audio-kind="ki" style={{ fontSize: "0.78rem", color: "var(--color-ink2)", marginTop: "0.2rem" }}>
-                            🎙️ صوت مولّد بالذكاء الاصطناعي (صوت واحد يقرأ كل الأدوار) — ليس تسجيلًا بشريًا بأداء أدوار.
+                            🎙️ صوت مولّد بالذكاء الاصطناعي (قد يستخدم صوتًا واحدًا أو أكثر) — ليس تسجيلًا بشريًا بأداء أدوار.
                           </div>
                         )}
                       </div>

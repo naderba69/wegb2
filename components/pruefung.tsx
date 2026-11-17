@@ -266,7 +266,7 @@ export function DialogOrdnung({ level, onFertig }: { level: Level; onFertig: (ok
                 else speakAny(d.lines.map((l) => l.de).join(" "));
               }}
             >
-              ▶️ استمع للحوار كاملًا {src ? (istKi ? "(بصوت ذكاء اصطناعي مولّد — صوت واحد يقرأ كل الأدوار)" : "") : "(بصوت المتصفح — الملفُّ لم يُفرَغ بعد)"}
+              ▶️ استمع للحوار كاملًا {src ? (istKi ? "(بصوت ذكاء اصطناعي مولّد — قد يستخدم صوتًا واحدًا أو أكثر)" : "") : "(بصوت المتصفح — الملفُّ لم يُفرَغ بعد)"}
             </button>
             <button className="btn btn-primary" style={{ minHeight: 44 }} onClick={neu}>حوار جديد ←</button>
           </div>

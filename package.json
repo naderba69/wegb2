@@ -17,6 +17,7 @@
     "audit:text-content-review": "tsx scripts/text_content_review_audit.ts",
     "audit:dialogue-content-review": "tsx scripts/dialogue_content_review_audit.ts",
     "audit:audio-refresh": "tsx scripts/audio_refresh_audit.ts",
+    "audit:dialog-audio-refresh": "tsx scripts/dialog_audio_refresh_audit.ts",
     "audit:learning-state": "tsx scripts/learning_state_audit.ts",
     "audit:assessment-integrity": "tsx scripts/assessment_integrity_audit.ts",
     "audit:evidence-provenance": "tsx scripts/evidence_provenance_audit.ts",
@@ -60,7 +61,7 @@
     "predev": "npm run banken",
     "audio:qc": "python3 scripts/run_audio_qc.py",
     "lint": "eslint app components lib scripts middleware.ts",
-    "audit:deps": "npm audit --audit-level=moderate"
+    "audit:deps": "npm audit --omit=dev --audit-level=moderate"
   },
   "dependencies": {
     "next": "15.5.29",
