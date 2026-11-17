@@ -671,11 +671,11 @@
     "claimBoundary": "87 bounded internal A0–B2 decisions; independent review, field validation, and external linguistic, phonetic, CEFR, or exam sign-off remain pending"
   },
   "inventorySnapshot": {
-    "indexedTrackedFilesAndAuditArtifacts": 3639,
-    "manual_complete": 63,
+    "indexedTrackedFilesAndAuditArtifacts": 3641,
+    "manual_complete": 64,
     "manual_targeted": 67,
     "not_started": 3439,
-    "audit_artifact": 70
+    "audit_artifact": 71
   },
   "learningStateCorrections": {
     "findings": [
@@ -1235,7 +1235,7 @@
     "independentTranslationSignOff": false,
     "culturalOrMedicalSignOff": false,
     "externalCefrOrExamValidation": false,
-    "claimBoundary": "176 bounded internal A0–B2 full-dialogue decisions across 1138 lines and 424 questions; no dialogue remains outside the internal PA-038 ledger, while re-synthesis and text/audio matching or listening checks for 107 changed German dialogue-audio sources, independent review, field validation, and external linguistic, translation, cultural, legal, medical, pharmacy, emergency-services, audio, CEFR, Goethe, telc, or exam sign-off remain pending",
+    "claimBoundary": "176 bounded internal A0–B2 full-dialogue decisions across 1138 lines and 424 questions; no dialogue remains outside the internal PA-038 ledger, while re-synthesis and text/audio matching or listening checks for 102 remaining changed German dialogue-audio sources after PA-040-01 regenerated five current-text recordings, independent review, field validation, and external linguistic, translation, cultural, legal, medical, pharmacy, emergency-services, audio, CEFR, Goethe, telc, or exam sign-off remain pending",
     "audioSourceDialoguesChanged": [
       "d-a0-05",
       "d-a0-11",
@@ -1353,15 +1353,17 @@
       "result": "pass",
       "textAudioMatchChecked": false,
       "humanListeningCompleted": false,
-      "recordingTranscriptOverrides": 71,
+      "recordingTranscriptOverrides": 66,
       "b1RecordingSnapshotsAdded": 26,
       "snapshotPurpose": "tempo measurement against recording-time text only; does not establish current text/audio match",
       "b2RecordingSnapshotsAdded": 32,
       "readingSnapshotsRemovedByPa03901": 10,
       "remainingReadingSnapshots": 0,
-      "remainingDialogueSnapshots": 71,
+      "remainingDialogueSnapshots": 66,
       "readingSnapshotsRemovedByPa03902": 10,
-      "readingSnapshotsRemovedByPa03903": 6
+      "readingSnapshotsRemovedByPa03903": 6,
+      "dialogueSnapshotsRemovedByPa04001": 5,
+      "dialogueRecordingsRegeneratedFromCurrentText": 5
     }
   },
   "audioRefreshAudit": {
@@ -1455,5 +1457,59 @@
         "generationMode": "five long readings use two paragraph-boundary MP3 segments; t-b2-40 uses one exact-source clip"
       }
     ]
+  },
+  "dialogAudioRefreshAudit": {
+    "batch": "PA-040-01",
+    "fixture": "scripts/fixtures/dialog-audio-refresh-pa040-01.json",
+    "regressionGate": "npm run audit:dialog-audio-refresh",
+    "sourcePath": "content/dialogues.json",
+    "recordings": 5,
+    "byLevel": {
+      "A0": 2,
+      "A2": 2,
+      "B1": 1
+    },
+    "ids": [
+      "d-a0-ht01",
+      "d-a0-ht02",
+      "d-a2-ht01",
+      "d-a2-ht03",
+      "d-b1-04"
+    ],
+    "sourceTextHashesMatchCurrentBank": 5,
+    "sourceSegmentAndSpeakerOrderHashesMatch": 5,
+    "audioHashesAndManifestBytesMatch": 5,
+    "priorAudioIdentitiesReplaced": 5,
+    "voices": {
+      "oneSpeakerAnnouncements": "ki-voice-02 (Arena voice-02, de-DE TTS)",
+      "twoSpeakerDialogue": "ki-voice-02+voice-03 (Arena de-DE TTS)",
+      "voice03Selection": "user-selected Arena audition"
+    },
+    "transcriptSnapshotLedger": {
+      "before": 71,
+      "removed": 5,
+      "after": 66,
+      "afterByGroup": {
+        "dialog": 66,
+        "hoeren": 0
+      }
+    },
+    "technicalAudioQc": {
+      "report": "docs/audio-qc-all-2026-11-04.json",
+      "files": 1099,
+      "passed": 1099,
+      "anomalies": 0,
+      "gaps": 0,
+      "result": "pass"
+    },
+    "humanListening": false,
+    "pronunciationQualityJudged": false,
+    "naturalnessJudged": false,
+    "speakerSuitabilityJudged": false,
+    "independentLinguisticSignOff": false,
+    "externalCefrOrExamValidation": false,
+    "remainingDocumentedDialogueSnapshots": 66,
+    "remainingChangedDialogueAudioSources": 102,
+    "claimBoundary": "Programmatic generation provenance, segment/speaker-order hashes, source/audio hashes, manifest identity, and automated technical QC do not establish that a human heard every word and do not judge speaker suitability, pronunciation, prosody, naturalness, pedagogy, CEFR level, or exam suitability."
   }
 }

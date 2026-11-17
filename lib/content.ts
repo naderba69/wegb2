@@ -285,12 +285,12 @@ export const diktatAudio: Record<string, HoerAudio> = {};
 export function diktatSrc(id: string): string | null {
   return diktatAudio[id]?.file ?? null;
 }
-/** 💬 ξ7 — حوارٌ كاملٌ بصوتٍ واحد من الدار (B1/B2 الوافدة): ملفٌّ أو لا شيء — والتراجعُ إلى TTS معلنٌ في الواجهة */
+/** 💬 ξ7 — ملف حوار محلي أو لا شيء؛ نوع الصوت مشتق من المانيفستو والتراجع إلى TTS معلن في الواجهة */
 export const dialogAudio: Record<string, HoerAudio> = {};
 export function dialogAudioSrc(id: string): string | null {
   return dialogAudio[id]?.file ?? null;
 }
-/** نوعُ صوتِ الحوار كما يجب أن يعرفَه المتعلم: تسجيلُ دارٍ بأداء أدوار، أو صوتُ KI أحاديٌّ موسوم */
+/** نوع صوت الحوار كما يجب أن يعرفه المتعلم: غير KI، أو صوت KI مولد آلياً بصوت واحد أو أكثر */
 export type DialogAudioArt = "haus" | "ki";
 export function dialogAudioArt(id: string): DialogAudioArt | null {
   const eintrag = dialogAudio[id];

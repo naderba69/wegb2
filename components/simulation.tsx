@@ -362,7 +362,7 @@ export default function Simulation() {
               )}
               {src && dialogAudioIstKi(g.dialogId) && (
                 <div style={{ fontSize: "0.8rem", color: "var(--color-ink2)", marginTop: "0.3rem" }}>
-                  🤖 الصوت مولّد بالذكاء الاصطناعي (صوت واحد) — مُفصَح كما في كلّ التطبيق.
+                  🤖 الصوت مولّد بالذكاء الاصطناعي (قد يستخدم صوتًا واحدًا أو أكثر) — مُفصَح كما في كلّ التطبيق.
                 </div>
               )}
               {fragenBlock(d.questions, g.fragen, antHoeren, (k, v) => setAntHoeren((a) => ({ ...a, [k]: v })), g.dialogId)}

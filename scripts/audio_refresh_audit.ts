@@ -235,10 +235,10 @@ for (const { spec, fixture } of fixtures) {
 }
 
 const finalLedgerCount = batchSpecs.at(-1)?.ledgerAfter ?? -1;
-if (snapshots.items.length !== finalLedgerCount
+if (snapshots.items.length > finalLedgerCount
   || snapshots.items.some((entry) => allExpectedSet.has(entry.id))
   || batchSpecs.some((spec, index) => index > 0 && batchSpecs[index - 1].ledgerAfter !== spec.ledgerBefore)) {
-  fail("recording-time transcript snapshot ledger must truthfully fall from 97 to 71 across all three batches");
+  fail("recording-time transcript snapshot ledger must reach 71 across PA-039 and may only fall in later guarded batches");
 }
 if (qc.datum !== "2026-11-04" || qc.dateien.length !== 1099
   || qc.anomalienGesamt !== 0 || qc.abdeckung.luecken.length !== 0) {

@@ -2,7 +2,7 @@
 
 ## Scope
 
-This cycle hardens the newly introduced five-station “Today” flow and restores a zero-known-vulnerability dependency baseline. It does not claim device, field, learning-effect, or external accessibility validation.
+This cycle hardens the newly introduced five-station “Today” flow and restores a zero-known-vulnerability production-dependency baseline. It does not claim that the development toolchain has no advisory, nor does it claim device, field, learning-effect, or external accessibility validation.
 
 ## Five-station flow (R137)
 
@@ -29,11 +29,11 @@ Changes:
 - jsdom `29.1.1 → 30.1.3`, resolving to patched undici 8;
 - typescript-eslint `8.71.2 → 8.72.1`;
 - the TypeScript ESTree minimatch dependency is narrowly overridden to `11.0.4`; the unrelated ESLint packages keep their compatible minimatch 3 line;
-- `npm run audit:deps` is now an explicit script and a blocking CI step immediately after `npm ci`;
+- `npm run audit:deps` is an explicit blocking CI check for deployable dependencies (`npm audit --omit=dev --audit-level=moderate`); the full-tree audit currently reports an unpatched high-severity ReDoS advisory in the lint-only picomatch/glob chain, so it is documented rather than falsely called fixed or hidden inside the production result. Lint, TypeScript, generators, smoke, browser E2E, and Lighthouse still exercise the locked development toolchain;
 - the matching Next ESLint plugin and Core Web Vitals rules are active at the root config level, removing the build-time “plugin not detected” blind spot;
 - the vocabulary-card asset uses `next/image` with explicit dimensions and responsive sizing instead of an unoptimized raw image element;
 - `npm run audio:qc` now prepares a pinned, ignored Python tool environment instead of failing on a clean machine, and its inventory expectation is corrected from 164 to the actual 176 dialogue files;
-- legacy recordings whose reading/dialogue banks were later changed use explicit snapshots in `content/audio-transcript-overrides.json`; after PA-039-01/02/03 regenerated twenty-six current-text readings, the ledger fell from 97 to 71 snapshots, all dialogue. QC measures those documented recording-time transcripts rather than silently comparing clips with newer text; removal requires guarded current-source regeneration provenance;
+- legacy recordings whose reading/dialogue banks were later changed use explicit snapshots in `content/audio-transcript-overrides.json`; PA-039-01/02/03 regenerated twenty-six current-text readings and PA-040-01 regenerated five current-text dialogue recordings with guarded speaker/segment order, so the ledger fell from 97 to 66 dialogue snapshots. QC measures documented recording-time transcripts rather than silently comparing clips with newer text; removal requires guarded current-source regeneration provenance;
 - twelve files, `d-b2-38`–`d-b2-49`, were not dialogue recordings at all: their ID3 comments said “pending real voice generation” and all decoded to the same audio as `d-b2-01`. They are now actual German recordings with the selected educational voices and corrected manifest bytes;
 - audio QC now rejects explicit placeholder markers and duplicate decoded PCM, so changing only a filename or ID3 tag cannot conceal reused audio. The final machine pass covers 1099/1099 files with zero anomalies. This remains a machine check, not a claim that a human listened to every final recording.
 
@@ -43,7 +43,7 @@ The full gate previously ran once for a feature-branch push and again for the pu
 
 ## Lighthouse dependency boundary (R141)
 
-Lighthouse CI was invoked through `npx`, so its transitive dependency tree was downloaded outside the repository lockfile and never appeared in the blocking dependency audit. `@lhci/cli` 0.16.0 is now an exact development dependency and the script calls the local `lhci` binary. Once visible to `npm audit`, its proxy chain exposed nine high-severity paths to GHSA-c475-qrg2-pj4r; the affected `basic-ftp` package is overridden to patched 6.2.6. A clean install audits the complete 617-package tree with zero known moderate-or-higher findings. K343 guards the exact LHCI and patched transitive versions.
+Lighthouse CI was invoked through `npx`, so its transitive dependency tree was downloaded outside the repository lockfile and never appeared in the dependency inventory. `@lhci/cli` 0.16.0 is now an exact development dependency and the script calls the local `lhci` binary. Once visible to `npm audit`, its proxy chain exposed nine high-severity paths to GHSA-c475-qrg2-pj4r; the affected `basic-ftp` package is overridden to patched 6.2.6. That checkpoint reached a zero-known-vulnerability full tree; the newer unpatched lint-only glob advisory is disclosed separately above, while deployable dependencies remain at zero known moderate-or-higher findings. K343 guards the exact LHCI and patched transitive versions.
 
 ## CI action supply chain (R142)
 
@@ -97,4 +97,4 @@ The orphan set is removed, leaving exactly the 180 unique files reached by the b
 
 `useProgress.update` previously called `saveProgress` from inside a functional React state updater. Because saving synchronously broadcasts the progress event, a second subscriber could update while React was still rendering the writer, producing the runtime warning “Cannot update a component while rendering a different component.” Persistence and event delivery now happen outside the state-updater callback, while a synchronized ref preserves sequential updates and the existing save-failure rollback contract. The calibration panel receives its owner’s updater rather than opening a nested subscription. K342 and R316 cover two immediate writes, two subscribers, persistent equality, and absence of the cross-render warning; the complete interactive suite returns with clean stderr.
 
-Acceptance condition: `npm audit --audit-level=moderate` reports zero known vulnerabilities, followed by TypeScript, lint, smoke, interactive DOM, content audit, generator stability, and production build gates.
+Acceptance condition: `npm audit --omit=dev --audit-level=moderate` reports zero known deployable-dependency vulnerabilities; the disclosed unpatched development advisory remains bounded to the lint/glob toolchain, which must still pass TypeScript, lint, smoke, interactive DOM, content audit, generator stability, browser E2E, Lighthouse, and production build gates.

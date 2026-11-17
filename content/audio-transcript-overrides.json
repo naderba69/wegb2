@@ -4,46 +4,6 @@
   "claimAr": "لقطات نصية مجمدة للملفات التي بقي صوتها ثابتاً بينما توسع نص القراءة أو الحوار أو تغير لاحقاً. تُستخدم لقياس سرعة التسجيل فقط، وتمنع الادعاء بأن الصوت يقرأ النسخة الحالية.",
   "items": [
     {
-      "file": "/audio/dialog/d-a0-ht01.mp3",
-      "id": "d-a0-ht01",
-      "group": "dialog",
-      "textDe": "Achtung, Gleis 3! Der Regionalzug nach Bonn fährt heute zehn Minuten später. Der Zug hält auch in Köln-Süd. Bitte steigen Sie erst ein, wenn der Zug steht.",
-      "audioCommit": "bf060b8b1248fb9c12d162d085350f2224380441",
-      "sourcePath": "content/dialogues.json"
-    },
-    {
-      "file": "/audio/dialog/d-a0-ht02.mp3",
-      "id": "d-a0-ht02",
-      "group": "dialog",
-      "textDe": "Liebe Kunden! Heute sind die Bananen im Angebot: ein Kilo für einen Euro. Bitte bezahlen Sie an der Kasse.",
-      "audioCommit": "bf060b8b1248fb9c12d162d085350f2224380441",
-      "sourcePath": "content/dialogues.json"
-    },
-    {
-      "file": "/audio/dialog/d-a2-ht01.mp3",
-      "id": "d-a2-ht01",
-      "group": "dialog",
-      "textDe": "Sehr geehrte Kundinnen und Kunden! Heute erhalten Sie auf alle Winterjacken 30 Prozent Rabatt. Das Angebot gilt nur heute bis Ladenschluss um 20 Uhr. Bitte beachten Sie auch unsere neue Damenabteilung im ersten Stock.",
-      "audioCommit": "bf060b8b1248fb9c12d162d085350f2224380441",
-      "sourcePath": "content/dialogues.json"
-    },
-    {
-      "file": "/audio/dialog/d-a2-ht03.mp3",
-      "id": "d-a2-ht03",
-      "group": "dialog",
-      "textDe": "Die Polizei meldet einen Unfall auf der A3 kurz hinter der Anschlussstelle Lohmar in Fahrtrichtung Frankfurt. Drei Fahrzeuge sind beteiligt, die linke Spur ist gesperrt. Es gibt zurzeit einen Stau von acht Kilometern. Autofahrer werden gebeten, bei der nächsten Ausfahrt abzufahren.",
-      "audioCommit": "bf060b8b1248fb9c12d162d085350f2224380441",
-      "sourcePath": "content/dialogues.json"
-    },
-    {
-      "file": "/audio/dialog/d-b1-04.mp3",
-      "id": "d-b1-04",
-      "group": "dialog",
-      "textDe": "Danke, dass du mir beim Umzug hilfst! Gern! Was sollen wir zuerst tragen? Die Bücher sind am schwersten. Die Kartons stehen schon im Flur. Alles klar. Achtung, die Tür ist eng! Danke dir. Nachher essen wir Pizza — mein Angebot!",
-      "audioCommit": "bbdf2255c4b84aa3e7938d5f3af1e0c7c1c7d053",
-      "sourcePath": "content/dialogues.json"
-    },
-    {
       "file": "/audio/dialog/d-b1-06.mp3",
       "id": "d-b1-06",
       "group": "dialog",
