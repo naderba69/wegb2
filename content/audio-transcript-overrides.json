@@ -4,14 +4,6 @@
   "claimAr": "لقطات نصية مجمدة للملفات التي بقي صوتها ثابتاً بينما توسع نص القراءة أو الحوار أو تغير لاحقاً. تُستخدم لقياس سرعة التسجيل فقط، وتمنع الادعاء بأن الصوت يقرأ النسخة الحالية.",
   "items": [
     {
-      "file": "/audio/dialog/d-b1-09.mp3",
-      "id": "d-b1-09",
-      "group": "dialog",
-      "textDe": "Guten Abend. Ich habe ein Problem mit meinem Zimmer. Was ist denn los, mein Herr? Die Heizung funktioniert nicht, und es ist sehr kalt. Das tut mir leid. Ich schicke sofort einen Techniker. Und könnten Sie vielleicht das Zimmer wechseln? Natürlich. Zimmer 205 ist frei und warm.",
-      "audioCommit": "bbdf2255c4b84aa3e7938d5f3af1e0c7c1c7d053",
-      "sourcePath": "content/dialogues.json"
-    },
-    {
       "file": "/audio/dialog/d-b1-10.mp3",
       "id": "d-b1-10",
       "group": "dialog",

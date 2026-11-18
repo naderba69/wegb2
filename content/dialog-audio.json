@@ -260,8 +260,8 @@
     {
       "id": "d-b1-09",
       "file": "/audio/dialog/d-b1-09.mp3",
-      "bytes": 138241,
-      "voice": "voice-01+voice-02",
+      "bytes": 85998,
+      "voice": "ki-voice-02+voice-03",
       "level": "B1",
       "stimmen": 2
     },

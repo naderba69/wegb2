@@ -1043,21 +1043,22 @@ const vocabRepeatAudit = (() => {
       ];
       const pa040MultiLabels = new Map<string, string>([
         ["d-b1-04", "ki-voice-02+voice-03"], ["d-b1-06", "ki-voice-02+voice-03"],
-        ["d-b1-07", "ki-voice-02+voice-03"], ["d-b1-32", "ki-voice-02+voice-03"],
+        ["d-b1-07", "ki-voice-02+voice-03"], ["d-b1-09", "ki-voice-02+voice-03"],
+        ["d-b1-32", "ki-voice-02+voice-03"],
         ["d-b2-07", "ki-voice-02+voice-04"], ["d-b2-32", "ki-voice-02+voice-03"],
       ]);
-      ok(dm.count === 176 && dm.einsaetze.length === 176 && dm.einsaetze.filter((e) => e.voice.startsWith("ki-")).length === 100 &&
-        dm.einsaetze.filter((e) => !e.voice.startsWith("ki-")).length === 76 &&
+      ok(dm.count === 176 && dm.einsaetze.length === 176 && dm.einsaetze.filter((e) => e.voice.startsWith("ki-")).length === 101 &&
+        dm.einsaetze.filter((e) => !e.voice.startsWith("ki-")).length === 75 &&
         dm.einsaetze.filter((e) => pa040SingleIds.includes(e.id) && e.voice === "ki-voice-02" && e.stimmen === 1).length === 14 &&
-        dm.einsaetze.filter((e) => pa040MultiLabels.get(e.id) === e.voice && e.stimmen === 2).length === 6,
-        "K36g مئة وستة وسبعون صوت حوار: 76 غير KI + 80 موسوماً KI تاريخياً + 20 مجددة وموسومة KI في PA-040-01/02/03/04/05");
+        dm.einsaetze.filter((e) => pa040MultiLabels.get(e.id) === e.voice && e.stimmen === 2).length === 7,
+        "K36g مئة وستة وسبعون صوت حوار: 75 غير KI + 80 موسوماً KI تاريخياً + 21 مجددة وموسومة KI في PA-040-01/02/03/04/05/06");
       ok(dm.einsaetze.every((e) => ddAlle.some((x) => x.id === e.id && x.level === e.level) &&
         (pa040SingleIds.includes(e.id) ? e.voice === "ki-voice-02" && e.stimmen === 1
           : pa040MultiLabels.has(e.id) ? e.voice === pa040MultiLabels.get(e.id) && e.stimmen === 2
             : e.voice.startsWith("ki-") ? ["ki-f1", "ki-f2", "ki-m1", "ki-m2"].includes(e.voice) && e.stimmen === 1
               : ["voice-01", "voice-01+voice-02", "voice-01+voice-02+voice-03", "voice-02+voice-03", "voice-04+voice-05"].includes(e.voice) && (e.stimmen ?? 1) >= 2)
         && e.bytes > 8000 && readFileSync(`public${e.file}`).byteLength === e.bytes),
-        "K36h كل ملف موجود ومستواه مطابق؛ ملفات PA-040-01/02/03/04/05 موسومة KI بأصواتها الفعلية، وبقية العقود التاريخية محفوظة");
+        "K36h كل ملف موجود ومستواه مطابق؛ ملفات PA-040-01/02/03/04/05/06 موسومة KI بأصواتها الفعلية، وبقية العقود التاريخية محفوظة");
       const audioIds = new Set(dm.einsaetze.map((e) => e.id));
       const ohneAufnahme = ddAlle.filter((x) => !audioIds.has(x.id));
       const alteOhneAufnahme = ohneAufnahme.filter((x) => !x.neu);
@@ -1067,7 +1068,7 @@ const vocabRepeatAudit = (() => {
       const ttsFallback = modultorSrc.includes("data-audio-fallback=\"tts\"") && modultorSrc.includes("speakAny(spokenText)") && pruefungSrc.includes("else speakAny(");
       ok(audioIds.size === dm.einsaetze.length && ddAlle.filter((x) => audioIds.has(x.id)).length === dm.einsaetze.length &&
         ohneAufnahme.length === 0 && alteOhneAufnahme.length === 0 && neueOhneAufnahme.length === 0 && ttsFallback,
-        `K36n التغطية الصوتية كاملة وتطابق المانيفستو (76 غير KI + 100 KI بعد PA-040-01/02/03/04/05)، وبديل TTS معلن عند تعذر التشغيل (${dm.einsaetze.length}/${ddAlle.length}، ${ohneAufnahme.length} بلا ملف)`);
+        `K36n التغطية الصوتية كاملة وتطابق المانيفستو (75 غير KI + 101 KI بعد PA-040-01/02/03/04/05/06)، وبديل TTS معلن عند تعذر التشغيل (${dm.einsaetze.length}/${ddAlle.length}، ${ohneAufnahme.length} بلا ملف)`);
     {
       /* ═══ K82 · الموجةُ الرابعة: neu علامةُ حداثةِ المحتوى لا حالةُ التسجيل؛ الصوتُ يُختبَر مستقلاً في K36n ═══ */
       const neu = ddAlle.filter((x) => x.neu);
@@ -1640,13 +1641,14 @@ const vocabRepeatAudit = (() => {
     ok(echt.every((d) => new Set(d.lines.map((l) => l.who)).size === 2), "K47h ونصُّهُ فعلاً بمتحدِّثَينِ اثنَين — فالصوتانِ يطابقانِ الدَّورَين");
     const kiMultiK47 = new Map<string, string>([
       ["d-b1-04", "ki-voice-02+voice-03"], ["d-b1-06", "ki-voice-02+voice-03"],
-      ["d-b1-07", "ki-voice-02+voice-03"], ["d-b1-32", "ki-voice-02+voice-03"],
+      ["d-b1-07", "ki-voice-02+voice-03"], ["d-b1-09", "ki-voice-02+voice-03"],
+      ["d-b1-32", "ki-voice-02+voice-03"],
       ["d-b2-07", "ki-voice-02+voice-04"], ["d-b2-32", "ki-voice-02+voice-03"],
     ]);
     ok(roh.einsaetze.every((e) => e.voice.startsWith("ki-")
       ? (kiMultiK47.has(e.id) ? e.voice === kiMultiK47.get(e.id) && e.stimmen === 2 : e.stimmen === 1)
       : (e.stimmen ?? 1) >= 2),
-      `K47k ملفات KI أحادية تاريخياً عدا ستة حوارات متعددة الصوت محروسة في PA-040-01/02/03/04/05؛ وغير KI متعدد الأدوار (${roh.count})`);
+      `K47k ملفات KI أحادية تاريخياً عدا سبعة حوارات متعددة الصوت محروسة في PA-040-01/02/03/04/05/06؛ وغير KI متعدد الأدوار (${roh.count})`);
     const drei = roh.einsaetze.filter((e) => e.stimmen === 3);
     ok(drei.length === 1 && drei[0].voice === "voice-01+voice-02+voice-03", "K47i حوارٌ واحدٌ بثلاثةِ أصواتٍ — وهو الوحيدُ الذي نصُّهُ ثلاثيُّ المتحدّثين");
     ok(drei.every((e) => { const d = dialogues.find((x) => x.id === e.id); return !!d && new Set(d.lines.map((l) => l.who)).size === 3; }), "K47j وثلاثةُ الأصواتِ تطابقُ ثلاثةَ الأدوارِ بالضبط");
@@ -12878,11 +12880,12 @@ void 0;
   const ids258 = new Set(man258.einsaetze.map((e) => e.id));
   const multi258 = new Map<string, string>([
     ["d-b1-04", "ki-voice-02+voice-03"], ["d-b1-06", "ki-voice-02+voice-03"],
-    ["d-b1-07", "ki-voice-02+voice-03"], ["d-b1-32", "ki-voice-02+voice-03"],
+    ["d-b1-07", "ki-voice-02+voice-03"], ["d-b1-09", "ki-voice-02+voice-03"],
+    ["d-b1-32", "ki-voice-02+voice-03"],
     ["d-b2-07", "ki-voice-02+voice-04"], ["d-b2-32", "ki-voice-02+voice-03"],
   ]);
-  ok(man258.count === 176 && man258.einsaetze.length === 176 && ki258.length === 100 && haus258.length === 76 && dialogues.every((d) => ids258.has(d.id)),
-    "K258a كل حوار من 176 له ملف: 76 غير KI و100 موسومة KI بعد PA-040-01/02/03/04/05 — صفر حوارات بلا صوت");
+  ok(man258.count === 176 && man258.einsaetze.length === 176 && ki258.length === 101 && haus258.length === 75 && dialogues.every((d) => ids258.has(d.id)),
+    "K258a كل حوار من 176 له ملف: 75 غير KI و101 موسومة KI بعد PA-040-01/02/03/04/05/06 — صفر حوارات بلا صوت");
   ok(ki258.every((e) => multi258.has(e.id)
     ? e.voice === multi258.get(e.id) && e.stimmen === 2
     : (["ki-f1", "ki-f2", "ki-m1", "ki-m2", "ki-voice-02"].includes(e.voice) && e.stimmen === 1)) &&
@@ -13251,7 +13254,7 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const transcripts304 = JSON.parse(readFileSync("content/audio-transcript-overrides.json", "utf8")) as {
     items: Array<{ file: string; id: string; group: string; textDe: string; audioCommit: string; sourcePath: string }>;
   };
-  const transcriptOverridesOk304 = transcripts304.items.length === 51 && transcripts304.items.every((entry) =>
+  const transcriptOverridesOk304 = transcripts304.items.length === 50 && transcripts304.items.every((entry) =>
     platten304.has(entry.file) && entry.textDe.trim().length > 0 && /^[0-9a-f]{40}$/.test(entry.audioCommit) &&
     (entry.group === "dialog" || entry.group === "hoeren") && entry.sourcePath.startsWith("content/"));
   const audioQcSrc304 = readFileSync("scripts/audio_qc_all.py", "utf8");
@@ -13272,7 +13275,7 @@ function collectR262(dir: string, out: string[] = []): string[] {
      audioQcSrc304.includes('fehler.append("placeholder")') && audioQcSrc304.includes('e["fehler"].append("audio-duplikat")') &&
      audioReq304.includes("miniaudio==1.71") && audioReq304.includes("numpy==2.4.6") &&
      audioReq304.includes("cffi==2.1.1") && audioReq304.includes("pycparser==3.12"),
-    `K304 مراجعةُ الصوتِ الآليةُ R272: ‏${platten304.size}/${platten304.size} ملفاً ذا مانيفستو مفكوكاً ومقيساً وفريد البصمة، مع 51 لقطة نص تسجيل حوارية صريحة بعد PA-040-05 وبلا شذوذ — لا يشمل الحكم 87 ملف قواعد بلا مانيفستو نص/صوت، ولا يساوي استماعاً بشرياً أو حكم نطق`);
+    `K304 مراجعةُ الصوتِ الآليةُ R272: ‏${platten304.size}/${platten304.size} ملفاً ذا مانيفستو مفكوكاً ومقيساً وفريد البصمة، مع 50 لقطة نص تسجيل حوارية صريحة بعد PA-040-06 وبلا شذوذ — لا يشمل الحكم 87 ملف قواعد بلا مانيفستو نص/صوت، ولا يساوي استماعاً بشرياً أو حكم نطق`);
 }
 
 // ===== K305 (R280 · M1+M2): FSRS-6-Scheduler + Meisterungsstufen Erkennen/Produktion =====
@@ -16980,7 +16983,7 @@ function collectR262(dir: string, out: string[] = []): string[] {
     refreshK444.validation.humanListening === false && refreshK444.validation.pronunciationQualityJudged === false &&
     refreshK444.validation.naturalnessJudged === false && qcK444.dateien.length === 1099 &&
     qcK444.anomalienGesamt === 0 && qcK444.abdeckung.luecken.length === 0 &&
-    auditK444.includes("20 current-text recordings guarded") && packageK444.includes('"audit:dialog-audio-refresh"') &&
+    auditK444.includes("21 current-text recordings guarded") && packageK444.includes('"audit:dialog-audio-refresh"') &&
     ciK444.includes("npm run audit:dialog-audio-refresh") &&
     refreshK444.claimBoundary.includes("do not establish that a human heard every word"),
     "K444c PA-040-01 وAudio-QC ‏1099/1099 محروسان في CI، بلا ادعاء استماع أو حكم ملاءمة صوت/نطق/طبيعية");
@@ -17162,7 +17165,7 @@ function collectR262(dir: string, out: string[] = []): string[] {
     refreshK448.sourcePath === "content/dialogues.json" && refreshK448.sourceLineJoiner === " " &&
     refreshK448.voices.additionalTwoSpeaker.includes("voice-04 separately selected for the second masculine role") &&
     refreshK448.transcriptSnapshotLedger.before === 53 && refreshK448.transcriptSnapshotLedger.removed === 2 &&
-    refreshK448.transcriptSnapshotLedger.after === 51 && snapshotsK448.items.length === 51 &&
+    refreshK448.transcriptSnapshotLedger.after === 51 && snapshotsK448.items.length <= 51 &&
     snapshotsK448.items.every((item:any) => item.group === "dialog" && !idsK448.includes(item.id)),
     "K448a PA-040-05: أقصر حواري B2 متبقيين محصوران، والسجل ينخفض من 53 إلى 51 لقطة حوارية");
   ok(refreshK448.items.every((item:any) => {
@@ -17200,6 +17203,57 @@ function collectR262(dir: string, out: string[] = []): string[] {
     refreshK448.claimBoundary.includes("do not establish that a human heard every word") &&
     refreshK448.claimBoundary.includes("legal or environmental validity"),
     "K448c PA-040-05 يحرس المصدر والهوية وحدود الادعاء: لا استماع بشري ولا حكم نطق/طبيعية/قانون/بيئة/CEFR/امتحان");
+}
+
+/* ═══ K449 — PA-040-06: أقصر حوار متبقٍ، ستة مقاطع B1 مرتبة ═══ */
+{
+  const refreshK449 = JSON.parse(readFileSync("scripts/fixtures/dialog-audio-refresh-pa040-06.json", "utf8")) as any;
+  const dialoguesK449 = JSON.parse(readFileSync("content/dialogues.json", "utf8")) as any[];
+  const manifestK449 = JSON.parse(readFileSync("content/dialog-audio.json", "utf8")) as any;
+  const snapshotsK449 = JSON.parse(readFileSync("content/audio-transcript-overrides.json", "utf8")) as any;
+  const idK449 = "d-b1-09";
+  const dialogueK449:any = dialoguesK449.find((entry:any) => entry.id === idK449);
+  const entryK449:any = manifestK449.einsaetze.find((entry:any) => entry.id === idK449);
+  const itemK449:any = refreshK449.items[0];
+  const voicesK449 = ["voice-02", "voice-03", "voice-02", "voice-03", "voice-02", "voice-03"];
+  ok(refreshK449.schema === "wegb2-dialog-audio-refresh-batch-v1" && refreshK449.batch === "PA-040-06" &&
+    refreshK449.items.length === 1 && itemK449?.id === idK449 && refreshK449.sourcePath === "content/dialogues.json" &&
+    refreshK449.sourceLineJoiner === " " && refreshK449.transcriptSnapshotLedger.before === 51 &&
+    refreshK449.transcriptSnapshotLedger.removed === 1 && refreshK449.transcriptSnapshotLedger.after === 50 &&
+    snapshotsK449.items.length === 50 && snapshotsK449.items.every((item:any) => item.group === "dialog" && item.id !== idK449),
+    "K449a PA-040-06: أقصر حوار متبقٍ محصور، والسجل ينخفض من 51 إلى 50 لقطة حوارية");
+  ok((() => {
+    if (!dialogueK449 || !entryK449 || !itemK449 || dialogueK449.lines.length !== 6 || itemK449.generationSegments?.length !== 6) return false;
+    const source = dialogueK449.lines.map((line:any) => line.de).join(" ");
+    const audio = readFileSync(`public${itemK449.file}`);
+    let offset = 0;
+    const segmentsValid = itemK449.generationSegments.every((segment:any, index:number) => {
+      const bytes = audio.subarray(offset, offset + segment.bytes);
+      offset += segment.bytes;
+      return segment.speaker === dialogueK449.lines[index].who && segment.voice === voicesK449[index] &&
+        segment.characters === dialogueK449.lines[index].de.length &&
+        segment.sourceTextSha256 === createHash("sha256").update(dialogueK449.lines[index].de, "utf8").digest("hex") &&
+        segment.generatedSegmentAudioSha256 === createHash("sha256").update(bytes).digest("hex") &&
+        bytes.subarray(0, 3).toString() === "ID3";
+    }) && offset === audio.length;
+    return itemK449.sourceTextSha256 === createHash("sha256").update(source, "utf8").digest("hex") &&
+      itemK449.generatedAudioSha256 === createHash("sha256").update(audio).digest("hex") &&
+      itemK449.generatedAudioSha256 !== itemK449.previousAudioSha256 && itemK449.bytes !== itemK449.previousBytes &&
+      itemK449.bytes === audio.length && itemK449.voice === "ki-voice-02+voice-03" &&
+      entryK449.file === itemK449.file && entryK449.bytes === audio.length &&
+      entryK449.voice === itemK449.voice && entryK449.stimmen === 2 && segmentsValid;
+  })(),
+    "K449b بصمات الأسطر الستة والمقاطع وترتيب المتحدثين والصوتين والملف والمانيفست متطابقة");
+  ok(refreshK449.validation.generationInputWasExactCurrentGermanText === true &&
+    refreshK449.validation.speakerOrderHashGuarded === true &&
+    refreshK449.validation.technicalAudioQc === "pass-1099-of-1099" &&
+    refreshK449.validation.humanListening === false && refreshK449.validation.pronunciationQualityJudged === false &&
+    refreshK449.validation.naturalnessJudged === false &&
+    refreshK449.validation.independentLinguisticSignOff === false &&
+    refreshK449.validation.externalCefrOrExamValidation === false &&
+    refreshK449.claimBoundary.includes("do not establish that a human heard every word") &&
+    refreshK449.claimBoundary.includes("hospitality-domain validity"),
+    "K449c PA-040-06 يحرس المصدر والهوية وحدود الادعاء: لا استماع بشري ولا حكم نطق/طبيعية/ضيافة/CEFR/امتحان");
 }
 
 /* ═══ K334 — R309: القفل الفعلي الحقيقي — إغلاقُ اليوم عند حدود الوحدة ممنوعٌ لا منصوحٌ به فقط ═══ */

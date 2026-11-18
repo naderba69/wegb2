@@ -671,11 +671,11 @@
     "claimBoundary": "87 bounded internal A0–B2 decisions; independent review, field validation, and external linguistic, phonetic, CEFR, or exam sign-off remain pending"
   },
   "inventorySnapshot": {
-    "indexedTrackedFilesAndAuditArtifacts": 3645,
+    "indexedTrackedFilesAndAuditArtifacts": 3646,
     "manual_complete": 64,
     "manual_targeted": 67,
     "not_started": 3439,
-    "audit_artifact": 75
+    "audit_artifact": 76
   },
   "learningStateCorrections": {
     "findings": [
@@ -1235,7 +1235,7 @@
     "independentTranslationSignOff": false,
     "culturalOrMedicalSignOff": false,
     "externalCefrOrExamValidation": false,
-    "claimBoundary": "176 bounded internal A0–B2 full-dialogue decisions across 1138 lines and 424 questions; no dialogue remains outside the internal PA-038 ledger, while re-synthesis and text/audio matching or listening checks for 87 remaining changed German dialogue-audio sources after PA-040-01/02/03/04/05 regenerated twenty current-text recordings, independent review, field validation, and external linguistic, translation, cultural, legal, medical, pharmacy, emergency-services, audio, CEFR, Goethe, telc, or exam sign-off remain pending",
+    "claimBoundary": "176 bounded internal A0–B2 full-dialogue decisions across 1138 lines and 424 questions; no dialogue remains outside the internal PA-038 ledger, while re-synthesis and text/audio matching or listening checks for 86 remaining changed German dialogue-audio sources after PA-040-01/02/03/04/05/06 regenerated twenty-one current-text recordings, independent review, field validation, and external linguistic, translation, cultural, legal, medical, pharmacy, emergency-services, audio, CEFR, Goethe, telc, or exam sign-off remain pending",
     "audioSourceDialoguesChanged": [
       "d-a0-05",
       "d-a0-11",
@@ -1353,21 +1353,22 @@
       "result": "pass",
       "textAudioMatchChecked": false,
       "humanListeningCompleted": false,
-      "recordingTranscriptOverrides": 51,
+      "recordingTranscriptOverrides": 50,
       "b1RecordingSnapshotsAdded": 26,
       "snapshotPurpose": "tempo measurement against recording-time text only; does not establish current text/audio match",
       "b2RecordingSnapshotsAdded": 32,
       "readingSnapshotsRemovedByPa03901": 10,
       "remainingReadingSnapshots": 0,
-      "remainingDialogueSnapshots": 51,
+      "remainingDialogueSnapshots": 50,
       "readingSnapshotsRemovedByPa03902": 10,
       "readingSnapshotsRemovedByPa03903": 6,
       "dialogueSnapshotsRemovedByPa04001": 5,
-      "dialogueRecordingsRegeneratedFromCurrentText": 20,
+      "dialogueRecordingsRegeneratedFromCurrentText": 21,
       "dialogueSnapshotsRemovedByPa04002": 5,
       "dialogueSnapshotsRemovedByPa04003": 6,
       "dialogueSnapshotsRemovedByPa04004": 2,
-      "dialogueSnapshotsRemovedByPa04005": 2
+      "dialogueSnapshotsRemovedByPa04005": 2,
+      "dialogueSnapshotsRemovedByPa04006": 1
     }
   },
   "audioRefreshAudit": {
@@ -1463,16 +1464,16 @@
     ]
   },
   "dialogAudioRefreshAudit": {
-    "batch": "PA-040-01/02/03/04/05",
-    "fixture": "scripts/fixtures/dialog-audio-refresh-pa040-01.json; scripts/fixtures/dialog-audio-refresh-pa040-02.json; scripts/fixtures/dialog-audio-refresh-pa040-03.json; scripts/fixtures/dialog-audio-refresh-pa040-04.json; scripts/fixtures/dialog-audio-refresh-pa040-05.json",
+    "batch": "PA-040-01/02/03/04/05/06",
+    "fixture": "scripts/fixtures/dialog-audio-refresh-pa040-01.json; scripts/fixtures/dialog-audio-refresh-pa040-02.json; scripts/fixtures/dialog-audio-refresh-pa040-03.json; scripts/fixtures/dialog-audio-refresh-pa040-04.json; scripts/fixtures/dialog-audio-refresh-pa040-05.json; scripts/fixtures/dialog-audio-refresh-pa040-06.json",
     "regressionGate": "npm run audit:dialog-audio-refresh",
     "sourcePath": "content/dialogues.json",
-    "recordings": 20,
+    "recordings": 21,
     "byLevel": {
       "A0": 2,
       "A1": 2,
       "A2": 3,
-      "B1": 7,
+      "B1": 8,
       "B2": 6
     },
     "ids": [
@@ -1495,12 +1496,13 @@
       "d-b1-32",
       "d-b1-07",
       "d-b2-07",
-      "d-b2-32"
+      "d-b2-32",
+      "d-b1-09"
     ],
-    "sourceTextHashesMatchCurrentBank": 20,
-    "sourceSegmentAndSpeakerOrderHashesMatch": 20,
-    "audioHashesAndManifestBytesMatch": 20,
-    "priorAudioIdentitiesReplaced": 20,
+    "sourceTextHashesMatchCurrentBank": 21,
+    "sourceSegmentAndSpeakerOrderHashesMatch": 21,
+    "audioHashesAndManifestBytesMatch": 21,
+    "priorAudioIdentitiesReplaced": 21,
     "voices": {
       "oneSpeakerAnnouncements": "ki-voice-02 (Arena voice-02, de-DE TTS)",
       "twoSpeakerDialogue": "ki-voice-02+voice-03 (Arena de-DE TTS)",
@@ -1510,10 +1512,10 @@
     },
     "transcriptSnapshotLedger": {
       "before": 71,
-      "removed": 20,
-      "after": 51,
+      "removed": 21,
+      "after": 50,
       "afterByGroup": {
-        "dialog": 51,
+        "dialog": 50,
         "hoeren": 0
       }
     },
@@ -1531,9 +1533,9 @@
     "speakerSuitabilityJudged": false,
     "independentLinguisticSignOff": false,
     "externalCefrOrExamValidation": false,
-    "remainingDocumentedDialogueSnapshots": 51,
-    "remainingChangedDialogueAudioSources": 87,
-    "claimBoundary": "Programmatic generation provenance, segment/speaker-order hashes, source/audio hashes, manifest identity, and automated technical QC do not establish that a human heard every word and do not judge speaker suitability, pronunciation, prosody, naturalness, pedagogy, legal or environmental validity, CEFR level, or exam suitability.",
+    "remainingDocumentedDialogueSnapshots": 50,
+    "remainingChangedDialogueAudioSources": 86,
+    "claimBoundary": "Programmatic generation provenance, segment/speaker-order hashes, source/audio hashes, manifest identity, and automated technical QC do not establish that a human heard every word and do not judge speaker suitability, pronunciation, prosody, naturalness, pedagogy, hospitality-domain validity, CEFR level, or exam suitability.",
     "batches": [
       {
         "batch": "PA-040-01",
@@ -1569,6 +1571,13 @@
         "recordings": 2,
         "ledgerBefore": 53,
         "ledgerAfter": 51
+      },
+      {
+        "batch": "PA-040-06",
+        "fixture": "scripts/fixtures/dialog-audio-refresh-pa040-06.json",
+        "recordings": 1,
+        "ledgerBefore": 51,
+        "ledgerAfter": 50
       }
     ]
   }
