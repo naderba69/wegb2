@@ -95,6 +95,13 @@ const batchSpecs: BatchSpec[] = [
     ledgerBefore: 66,
     ledgerAfter: 61,
   },
+  {
+    batch: "PA-040-03",
+    fixturePath: "scripts/fixtures/dialog-audio-refresh-pa040-03.json",
+    ids: ["d-b2-ht03", "hoer-a1-01", "hoer-a1-02", "hoer-a2-02", "hoer-b1-01", "hoer-b2-01"],
+    ledgerBefore: 61,
+    ledgerAfter: 55,
+  },
 ];
 const twoSpeakerVoices: Record<string, string[]> = {
   "d-b1-04": ["voice-02", "voice-03", "voice-02", "voice-03", "voice-02"],
@@ -132,7 +139,7 @@ for (const { spec, fixture } of fixtures) {
   const fixtureIds = fixture.items.map((entry) => entry.id);
   if (fixture.items.length !== spec.ids.length || new Set(fixtureIds).size !== spec.ids.length
     || spec.ids.some((id) => !fixtureIds.includes(id)) || fixtureIds.some((id) => !expectedSet.has(id))) {
-    fail(`${spec.batch}: fixture must contain exactly its five bounded dialogue IDs`);
+    fail(`${spec.batch}: fixture must contain exactly its bounded dialogue IDs`);
   }
   if (fixture.transcriptSnapshotLedger.before !== spec.ledgerBefore
     || fixture.transcriptSnapshotLedger.removed !== spec.ids.length
@@ -217,7 +224,7 @@ const finalLedgerCount = batchSpecs.at(-1)?.ledgerAfter ?? -1;
 if (snapshots.items.length > finalLedgerCount
   || snapshots.items.some((entry) => entry.group !== "dialog" || allExpectedSet.has(entry.id))
   || batchSpecs.some((spec, index) => index > 0 && batchSpecs[index - 1].ledgerAfter !== spec.ledgerBefore)) {
-  fail("recording-time transcript snapshot ledger must reach 61 across PA-040-01/02 and may only fall later");
+  fail("recording-time transcript snapshot ledger must reach 55 across PA-040-01/02/03 and may only fall later");
 }
 if (qc.datum !== "2026-11-04" || qc.dateien.length !== 1099
   || qc.anomalienGesamt !== 0 || qc.abdeckung.luecken.length !== 0) {
@@ -230,4 +237,4 @@ if (errors.length > 0) {
   process.exit(1);
 }
 
-console.log("PA-040-01/02 dialogue audio refresh: 10 current-text recordings guarded; snapshot ledger 71 -> 61; technical QC passed; no human listening/pronunciation claim");
+console.log("PA-040-01/02/03 dialogue audio refresh: 16 current-text recordings guarded; snapshot ledger 71 -> 55; technical QC passed; no human listening/pronunciation claim");

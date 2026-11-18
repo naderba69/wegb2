@@ -1044,16 +1044,16 @@
     {
       "id": "hoer-a1-01",
       "file": "/audio/dialog/hoer-a1-01.mp3",
-      "bytes": 86744,
-      "voice": "ki-m1",
+      "bytes": 51309,
+      "voice": "ki-voice-02",
       "level": "A1",
       "stimmen": 1
     },
     {
       "id": "hoer-a1-02",
       "file": "/audio/dialog/hoer-a1-02.mp3",
-      "bytes": 103462,
-      "voice": "ki-m2",
+      "bytes": 68589,
+      "voice": "ki-voice-02",
       "level": "A1",
       "stimmen": 1
     },
@@ -1068,24 +1068,24 @@
     {
       "id": "hoer-a2-02",
       "file": "/audio/dialog/hoer-a2-02.mp3",
-      "bytes": 135227,
-      "voice": "ki-m2",
+      "bytes": 83853,
+      "voice": "ki-voice-02",
       "level": "A2",
       "stimmen": 1
     },
     {
       "id": "hoer-b1-01",
       "file": "/audio/dialog/hoer-b1-01.mp3",
-      "bytes": 79821,
-      "voice": "ki-f1",
+      "bytes": 79149,
+      "voice": "ki-voice-02",
       "level": "B1",
       "stimmen": 1
     },
     {
       "id": "hoer-b2-01",
       "file": "/audio/dialog/hoer-b2-01.mp3",
-      "bytes": 160269,
-      "voice": "ki-f2",
+      "bytes": 131949,
+      "voice": "ki-voice-02",
       "level": "B2",
       "stimmen": 1
     },
@@ -1244,8 +1244,8 @@
     {
       "id": "d-b2-ht03",
       "file": "/audio/dialog/d-b2-ht03.mp3",
-      "bytes": 209624,
-      "voice": "ki-m1",
+      "bytes": 120909,
+      "voice": "ki-voice-02",
       "level": "B2",
       "stimmen": 1
     },

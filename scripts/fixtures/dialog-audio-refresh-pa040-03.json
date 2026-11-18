@@ -1,0 +1,175 @@
+{
+  "schema": "wegb2-dialog-audio-refresh-batch-v1",
+  "batch": "PA-040-03",
+  "generatedAt": "2026-11-04",
+  "scope": "Six remaining one-line, one-speaker dialogue-bank recordings regenerated programmatically from the exact current German dialogue line in content/dialogues.json using voice-02. Hashes guard every source line and resulting file. Technical checks are automated only; no human listening, pronunciation, naturalness, linguistic, CEFR, Goethe/telc, or exam sign-off is claimed.",
+  "sourcePath": "content/dialogues.json",
+  "sourceLineJoiner": " ",
+  "voices": {
+    "oneSpeaker": "ki-voice-02 (Arena voice-02, de-DE TTS)",
+    "twoSpeaker": "ki-voice-02+voice-03 (Arena de-DE TTS)"
+  },
+  "items": [
+    {
+      "id": "d-b2-ht03",
+      "level": "B2",
+      "file": "/audio/dialog/d-b2-ht03.mp3",
+      "sourceTextSha256": "3d0ed269b114d8ff4ca6f508c456a8f68bfe6f85b641598e9dbc5759ae365af8",
+      "sourceLineCount": 1,
+      "generatedAudioSha256": "12e8867e6f9bd4113cc36b8448621d0cb1ac87bc17a846686a563f5620a646b7",
+      "bytes": 120909,
+      "voice": "ki-voice-02",
+      "previousAudioSha256": "dedb9c2c68622e988ab337a615feaa0bd0c42a9af67317eed8a21232059bc5e7",
+      "previousBytes": 209624,
+      "removedTranscriptSnapshotSha256": "3d0ed269b114d8ff4ca6f508c456a8f68bfe6f85b641598e9dbc5759ae365af8",
+      "removedTranscriptAudioCommit": "bf060b8b1248fb9c12d162d085350f2224380441",
+      "generationSegments": [
+        {
+          "speaker": "Sprecher",
+          "voice": "voice-02",
+          "sourceTextSha256": "3d0ed269b114d8ff4ca6f508c456a8f68bfe6f85b641598e9dbc5759ae365af8",
+          "characters": 474,
+          "generatedSegmentAudioSha256": "12e8867e6f9bd4113cc36b8448621d0cb1ac87bc17a846686a563f5620a646b7",
+          "bytes": 120909
+        }
+      ]
+    },
+    {
+      "id": "hoer-a1-01",
+      "level": "A1",
+      "file": "/audio/dialog/hoer-a1-01.mp3",
+      "sourceTextSha256": "ffda288bb20ab86e223e7e9045d8f2e08a71b93dcf731f3db66a15229a4423fa",
+      "sourceLineCount": 1,
+      "generatedAudioSha256": "512a76ae1b64ba9fe75503fb5dd6478b90cb008b13f5cfd732b00664ce17f952",
+      "bytes": 51309,
+      "voice": "ki-voice-02",
+      "previousAudioSha256": "e3057f5688504d7d448a0ac78c550f796d9f53b1ecdc4d0dd208a764bfcce1ba",
+      "previousBytes": 86744,
+      "removedTranscriptSnapshotSha256": "ffda288bb20ab86e223e7e9045d8f2e08a71b93dcf731f3db66a15229a4423fa",
+      "removedTranscriptAudioCommit": "bf060b8b1248fb9c12d162d085350f2224380441",
+      "generationSegments": [
+        {
+          "speaker": "Lautsprecher",
+          "voice": "voice-02",
+          "sourceTextSha256": "ffda288bb20ab86e223e7e9045d8f2e08a71b93dcf731f3db66a15229a4423fa",
+          "characters": 140,
+          "generatedSegmentAudioSha256": "512a76ae1b64ba9fe75503fb5dd6478b90cb008b13f5cfd732b00664ce17f952",
+          "bytes": 51309
+        }
+      ]
+    },
+    {
+      "id": "hoer-a1-02",
+      "level": "A1",
+      "file": "/audio/dialog/hoer-a1-02.mp3",
+      "sourceTextSha256": "f46934d65caec7a99401d60a029db9636a177640132f96c14df419ace4da7c91",
+      "sourceLineCount": 1,
+      "generatedAudioSha256": "ee21bae70e9bc0f468ac3b7fb4ab9b84ef8f555f513beeecfaaf1e0da3df494a",
+      "bytes": 68589,
+      "voice": "ki-voice-02",
+      "previousAudioSha256": "263e262932fc598f282f70b20f192d6c506c277df11d0c2ff6b0c7b9427c8928",
+      "previousBytes": 103462,
+      "removedTranscriptSnapshotSha256": "a80875106f02e6936ff684b0732ab9b756fa0379ec9d24e5562596c87d6a414f",
+      "removedTranscriptAudioCommit": "bf060b8b1248fb9c12d162d085350f2224380441",
+      "generationSegments": [
+        {
+          "speaker": "Durchsage",
+          "voice": "voice-02",
+          "sourceTextSha256": "f46934d65caec7a99401d60a029db9636a177640132f96c14df419ace4da7c91",
+          "characters": 216,
+          "generatedSegmentAudioSha256": "ee21bae70e9bc0f468ac3b7fb4ab9b84ef8f555f513beeecfaaf1e0da3df494a",
+          "bytes": 68589
+        }
+      ]
+    },
+    {
+      "id": "hoer-a2-02",
+      "level": "A2",
+      "file": "/audio/dialog/hoer-a2-02.mp3",
+      "sourceTextSha256": "cefc196f088fa3c8b7211108b9cbaab9c02b78f378cdb8dcc2cca27a5016ddf4",
+      "sourceLineCount": 1,
+      "generatedAudioSha256": "902e909403359ea2d8dfaa2535818787213f78836b4092967ee1091b62b3cc98",
+      "bytes": 83853,
+      "voice": "ki-voice-02",
+      "previousAudioSha256": "13beeb0eefd7907363ff5a747a4b3c5339097f0bf55f49f1f257a1d3c1d5b1ba",
+      "previousBytes": 135227,
+      "removedTranscriptSnapshotSha256": "cefc196f088fa3c8b7211108b9cbaab9c02b78f378cdb8dcc2cca27a5016ddf4",
+      "removedTranscriptAudioCommit": "bf060b8b1248fb9c12d162d085350f2224380441",
+      "generationSegments": [
+        {
+          "speaker": "Radio",
+          "voice": "voice-02",
+          "sourceTextSha256": "cefc196f088fa3c8b7211108b9cbaab9c02b78f378cdb8dcc2cca27a5016ddf4",
+          "characters": 286,
+          "generatedSegmentAudioSha256": "902e909403359ea2d8dfaa2535818787213f78836b4092967ee1091b62b3cc98",
+          "bytes": 83853
+        }
+      ]
+    },
+    {
+      "id": "hoer-b1-01",
+      "level": "B1",
+      "file": "/audio/dialog/hoer-b1-01.mp3",
+      "sourceTextSha256": "5b2bdb8151dfad7d1490557a950d0f5508b6e70407c64536ad619a33cf5340be",
+      "sourceLineCount": 1,
+      "generatedAudioSha256": "b0bde17cfd178ca8ced0d42067bb4a4e7a8178b680b9177c582dd3b8ac47047e",
+      "bytes": 79149,
+      "voice": "ki-voice-02",
+      "previousAudioSha256": "a0552e5fdcf3be10459fd160fb3c90d4e0769ca575ccc1d4a415e0e47ea1144e",
+      "previousBytes": 79821,
+      "removedTranscriptSnapshotSha256": "5b2bdb8151dfad7d1490557a950d0f5508b6e70407c64536ad619a33cf5340be",
+      "removedTranscriptAudioCommit": "bf060b8b1248fb9c12d162d085350f2224380441",
+      "generationSegments": [
+        {
+          "speaker": "Kollegin",
+          "voice": "voice-02",
+          "sourceTextSha256": "5b2bdb8151dfad7d1490557a950d0f5508b6e70407c64536ad619a33cf5340be",
+          "characters": 338,
+          "generatedSegmentAudioSha256": "b0bde17cfd178ca8ced0d42067bb4a4e7a8178b680b9177c582dd3b8ac47047e",
+          "bytes": 79149
+        }
+      ]
+    },
+    {
+      "id": "hoer-b2-01",
+      "level": "B2",
+      "file": "/audio/dialog/hoer-b2-01.mp3",
+      "sourceTextSha256": "dadef70904f4b9e64282362748445b7fcbcfad0bc0746ae0e2649cc14b5edc37",
+      "sourceLineCount": 1,
+      "generatedAudioSha256": "e56a1cb2a97c388336673cb0dba154a5d9ca12b0caa10a91f7c0a157df6cb1e2",
+      "bytes": 131949,
+      "voice": "ki-voice-02",
+      "previousAudioSha256": "1dd01df61c73fbe8c3a83caf8600ab64bfa5e7d5ee5da686b139b0d6693f6dcb",
+      "previousBytes": 160269,
+      "removedTranscriptSnapshotSha256": "6c2d240bac70873af315d3a3665e12edb8420b6913c53832f09cdc5afabfd755",
+      "removedTranscriptAudioCommit": "bf060b8b1248fb9c12d162d085350f2224380441",
+      "generationSegments": [
+        {
+          "speaker": "Interviewer + Expertin",
+          "voice": "voice-02",
+          "sourceTextSha256": "dadef70904f4b9e64282362748445b7fcbcfad0bc0746ae0e2649cc14b5edc37",
+          "characters": 525,
+          "generatedSegmentAudioSha256": "e56a1cb2a97c388336673cb0dba154a5d9ca12b0caa10a91f7c0a157df6cb1e2",
+          "bytes": 131949
+        }
+      ]
+    }
+  ],
+  "transcriptSnapshotLedger": {
+    "before": 61,
+    "removed": 6,
+    "after": 55
+  },
+  "validation": {
+    "generationInputWasExactCurrentGermanText": true,
+    "speakerOrderHashGuarded": true,
+    "technicalAudioQc": "pass-1099-of-1099",
+    "technicalAudioQcReport": "docs/audio-qc-all-2026-11-04.json",
+    "humanListening": false,
+    "pronunciationQualityJudged": false,
+    "naturalnessJudged": false,
+    "independentLinguisticSignOff": false,
+    "externalCefrOrExamValidation": false
+  },
+  "claimBoundary": "Programmatic generation provenance plus segment/file byte and hash identity and automated technical QC do not establish that a human heard every word, nor do they judge speaker suitability, pronunciation, prosody, naturalness, pedagogy, CEFR level, or exam suitability."
+}
