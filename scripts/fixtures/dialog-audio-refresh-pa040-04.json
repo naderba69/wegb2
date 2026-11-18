@@ -1,0 +1,143 @@
+{
+  "schema": "wegb2-dialog-audio-refresh-batch-v1",
+  "batch": "PA-040-04",
+  "generatedAt": "2026-11-04",
+  "scope": "Two short five-line B1 two-speaker dialogue recordings regenerated programmatically from the exact current German dialogue lines in content/dialogues.json. Each recording alternates voice-03 for the female role and voice-02 for the male role across five line-level segments concatenated in source order. Hashes guard every source segment and resulting file. Technical checks are automated only; no human listening, pronunciation, naturalness, linguistic, medical, CEFR, Goethe/telc, or exam sign-off is claimed.",
+  "sourcePath": "content/dialogues.json",
+  "sourceLineJoiner": " ",
+  "voices": {
+    "oneSpeaker": "ki-voice-02 (Arena voice-02, de-DE TTS)",
+    "twoSpeaker": "ki-voice-02+voice-03 (Arena de-DE TTS)"
+  },
+  "items": [
+    {
+      "id": "d-b1-32",
+      "level": "B1",
+      "file": "/audio/dialog/d-b1-32.mp3",
+      "sourceTextSha256": "28ab2a49b1807ece44b300d5e40176d01fbde3781cf0d62401233457e026ebc1",
+      "sourceLineCount": 5,
+      "generatedAudioSha256": "c758e1ae2f3088c4e897e7456cf63b5a19a34e958a92041a78afe0b3fec631c4",
+      "bytes": 89121,
+      "voice": "ki-voice-02+voice-03",
+      "previousAudioSha256": "2f3b95780e6b935bc841ed089a6214e58af9d56ef59db4ffee723abc281febe6",
+      "previousBytes": 138851,
+      "removedTranscriptSnapshotSha256": "adf978d2b3e0ed46c281f057845e9a11fb877df6fc502a6aa4b673659ae1936d",
+      "removedTranscriptAudioCommit": "bbdf2255c4b84aa3e7938d5f3af1e0c7c1c7d053",
+      "generationSegments": [
+        {
+          "speaker": "Lehrerin",
+          "voice": "voice-03",
+          "sourceTextSha256": "2e2279ff57b81ba00e102e5e3a747982bea5785b751da90b40e8888498991266",
+          "characters": 58,
+          "generatedSegmentAudioSha256": "5ea739d84467dc65b4a6f30db35b528c4e04a2e46c2ee097a3cb13b9d4138402",
+          "bytes": 17709
+        },
+        {
+          "speaker": "Vater",
+          "voice": "voice-02",
+          "sourceTextSha256": "dc9537f475209f8c2f55604004d038752204a106bc864c3594dcb9a62475dcd4",
+          "characters": 63,
+          "generatedSegmentAudioSha256": "8f38de002179055cee491834c8042782acd5d2b4dedb41f14118ca02be37a58a",
+          "bytes": 19341
+        },
+        {
+          "speaker": "Lehrerin",
+          "voice": "voice-03",
+          "sourceTextSha256": "0a919b27b00a8f18a7ba6316f1b33fa97869b4a3eb36558094eae3e39e262585",
+          "characters": 88,
+          "generatedSegmentAudioSha256": "c6de8a062f07fe8e0a1c39aa9288a4f44d27bf75bfece35c56c9a36113999f14",
+          "bytes": 24909
+        },
+        {
+          "speaker": "Vater",
+          "voice": "voice-02",
+          "sourceTextSha256": "eba3d154ceb3016aca849e0f4d74128b0ae623670c9aaaae2998dd39e9ea36ad",
+          "characters": 32,
+          "generatedSegmentAudioSha256": "c727b2b2a86252d29fe8a771f3321f52dcb3706c8653e119177174aa086496d3",
+          "bytes": 11469
+        },
+        {
+          "speaker": "Lehrerin",
+          "voice": "voice-03",
+          "sourceTextSha256": "4eea101618138bea644a1b4f27902e910b2428d4f0fd91109c2bd224cb7a60dc",
+          "characters": 55,
+          "generatedSegmentAudioSha256": "836caebd5bff063dfcd099ca1c28c3a35438827f02f4e3aad5f913d4e578746f",
+          "bytes": 15693
+        }
+      ]
+    },
+    {
+      "id": "d-b1-07",
+      "level": "B1",
+      "file": "/audio/dialog/d-b1-07.mp3",
+      "sourceTextSha256": "a38c4bcb44be51fc358db8a18dc45d61cacdbb95435790832395dd38d1289ab1",
+      "sourceLineCount": 5,
+      "generatedAudioSha256": "6a0301c6631ff386b5efa870a33f94ed7e016fbad753224ea8aae2adc991f768",
+      "bytes": 95745,
+      "voice": "ki-voice-02+voice-03",
+      "previousAudioSha256": "9084ace20807ce905569c1a7e242e9589bca545650510d866748fb9883f4d74c",
+      "previousBytes": 101861,
+      "removedTranscriptSnapshotSha256": "47997ce8f232122b3a708b0b8918e2fb4f158d304d7fff2a3f9be2fa34c98b66",
+      "removedTranscriptAudioCommit": "bbdf2255c4b84aa3e7938d5f3af1e0c7c1c7d053",
+      "generationSegments": [
+        {
+          "speaker": "Ärztin",
+          "voice": "voice-03",
+          "sourceTextSha256": "94c80188923f8057636c77b429f7492f864c8b5d47f0e5b5bcd641e27bd16ea8",
+          "characters": 55,
+          "generatedSegmentAudioSha256": "717532693b88a6ff3acfdba0f372f1a8f6d6062c6f0afaaa764a162686da492e",
+          "bytes": 16461
+        },
+        {
+          "speaker": "Patient",
+          "voice": "voice-02",
+          "sourceTextSha256": "8d54e8717946009638c2b23b550dec66be47a0916fa1f4da4402e43e25111da7",
+          "characters": 37,
+          "generatedSegmentAudioSha256": "a1377114a7d31ac36409a11910aee610c659e06c90919e3e8c4f2b31106b88e9",
+          "bytes": 13389
+        },
+        {
+          "speaker": "Ärztin",
+          "voice": "voice-03",
+          "sourceTextSha256": "fe2bf7d6e4e7eb75aa523d1209ae442a71a0b4712931b14f765ef9b9a3335780",
+          "characters": 54,
+          "generatedSegmentAudioSha256": "85b17bbe7b2e972e8df344263139c1bd69206329695a69cd7336bd1db4adb48c",
+          "bytes": 15501
+        },
+        {
+          "speaker": "Patient",
+          "voice": "voice-02",
+          "sourceTextSha256": "8f285f73dc51052d7efdf5fa253f4dd162a816171fe194e7d5e841474c667309",
+          "characters": 36,
+          "generatedSegmentAudioSha256": "ed837ab3443a98e7c58175aa8ee5479ea2f6f175fe22a04bacf9e1da07e15581",
+          "bytes": 11181
+        },
+        {
+          "speaker": "Ärztin",
+          "voice": "voice-03",
+          "sourceTextSha256": "615c7208793a5edba42005f7594821cfbb81a52e24011eee8dbbd30b2e004c9e",
+          "characters": 153,
+          "generatedSegmentAudioSha256": "70a775e4efd0291e071344c5c27ab191927cc5ba6fa2dc2c5c90156d61c752e3",
+          "bytes": 39213
+        }
+      ]
+    }
+  ],
+  "transcriptSnapshotLedger": {
+    "before": 55,
+    "removed": 2,
+    "after": 53
+  },
+  "validation": {
+    "generationInputWasExactCurrentGermanText": true,
+    "speakerOrderHashGuarded": true,
+    "technicalAudioQc": "pass-1099-of-1099",
+    "technicalAudioQcReport": "docs/audio-qc-all-2026-11-04.json",
+    "humanListening": false,
+    "pronunciationQualityJudged": false,
+    "naturalnessJudged": false,
+    "independentLinguisticSignOff": false,
+    "externalCefrOrExamValidation": false
+  },
+  "claimBoundary": "Programmatic generation provenance plus segment/file byte and hash identity and automated technical QC do not establish that a human heard every word, nor do they judge speaker suitability, pronunciation, prosody, naturalness, pedagogy, medical validity, CEFR level, or exam suitability."
+}

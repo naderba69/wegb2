@@ -4,14 +4,6 @@
   "claimAr": "لقطات نصية مجمدة للملفات التي بقي صوتها ثابتاً بينما توسع نص القراءة أو الحوار أو تغير لاحقاً. تُستخدم لقياس سرعة التسجيل فقط، وتمنع الادعاء بأن الصوت يقرأ النسخة الحالية.",
   "items": [
     {
-      "file": "/audio/dialog/d-b1-07.mp3",
-      "id": "d-b1-07",
-      "group": "dialog",
-      "textDe": "Die Untersuchung zeigt: Es ist nichts Schlimmes. Gott sei Dank! Was soll ich denn tun? Sie sollten weniger am Bildschirm arbeiten und Pausen machen. Und wenn die Schmerzen zurückkommen? Dann kommen Sie bitte sofort wieder.",
-      "audioCommit": "bbdf2255c4b84aa3e7938d5f3af1e0c7c1c7d053",
-      "sourcePath": "content/dialogues.json"
-    },
-    {
       "file": "/audio/dialog/d-b1-09.mp3",
       "id": "d-b1-09",
       "group": "dialog",
@@ -152,14 +144,6 @@
       "id": "d-b1-27",
       "group": "dialog",
       "textDe": "Wann kann ich zur Theorieprüfung — vierzig Übungsstunden? Frühestens in zwei Wochen — Erste-Hilfe-Kurs vorher nötig. Wie lange ist diese Bescheinigung gültig? Einmal im Leben: sie läuft nie ab. Welche Papiere verlangt der Prüfer? Ausweis, Sehtest, Erste-Hilfe, Ausbildungsprotokoll, Passfoto — Gebühr vor Ort. Und nach zweimaligem Nichtbestehen? Vierzehn Tage Sperre bis zum nächsten Versuch; die Prüfgebühr wird für jeden Versuch erneut fällig, eine neue Antragstellung beim Amt ist nicht nötig.",
-      "audioCommit": "bbdf2255c4b84aa3e7938d5f3af1e0c7c1c7d053",
-      "sourcePath": "content/dialogues.json"
-    },
-    {
-      "file": "/audio/dialog/d-b1-32.mp3",
-      "id": "d-b1-32",
-      "group": "dialog",
-      "textDe": "Ihr Sohn arbeitet gut mit, aber er meldet sich selten. Zu Hause erzählt er viel. In der Klasse ist er wohl schüchtern. Das legt sich meistens. Wichtig wäre, dass er öfter laut liest. Wie viel sollte er täglich üben? Fünfzehn Minuten reichen, wenn es regelmäßig geschieht.",
       "audioCommit": "bbdf2255c4b84aa3e7938d5f3af1e0c7c1c7d053",
       "sourcePath": "content/dialogues.json"
     },
