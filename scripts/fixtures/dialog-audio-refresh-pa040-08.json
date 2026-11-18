@@ -1,0 +1,111 @@
+{
+  "schema": "wegb2-dialog-audio-refresh-batch-v1",
+  "batch": "PA-040-08",
+  "generatedAt": "2026-11-04",
+  "scope": "The shortest remaining documented changed-source dialogue recording, the eight-line B1 repair-appointment dialogue d-b1-13, regenerated programmatically from the exact current German lines in content/dialogues.json. Eight line-level segments alternate user-selected voice-03 for Frau Krause and voice-02 for Sami, then concatenate in source order. Hashes guard every source segment and resulting file. Technical checks are automated only; no human listening, pronunciation, naturalness, linguistic, trades, home-repair scheduling, consumer-services, CEFR, Goethe/telc, or exam sign-off is claimed.",
+  "sourcePath": "content/dialogues.json",
+  "sourceLineJoiner": " ",
+  "voices": {
+    "oneSpeaker": "ki-voice-02 (Arena voice-02, de-DE TTS)",
+    "twoSpeaker": "ki-voice-02+voice-03 (Arena de-DE TTS)"
+  },
+  "items": [
+    {
+      "id": "d-b1-13",
+      "level": "B1",
+      "file": "/audio/dialog/d-b1-13.mp3",
+      "sourceTextSha256": "5861376f6cd88e0b8c979b649869b56591bde93a2527ff4666ba2373d5daf753",
+      "sourceLineCount": 8,
+      "generatedAudioSha256": "eaa8303d86f5c066430373d03f06e563b3984ac42bbd0dc21b3cdf96080f160b",
+      "bytes": 130344,
+      "voice": "ki-voice-02+voice-03",
+      "previousAudioSha256": "464932ac3c8644493e3ebe2fb8254b58163e245a42a72e8272c086bb7254b2f9",
+      "previousBytes": 207028,
+      "removedTranscriptSnapshotSha256": "f6a3b77290c7aa56e3286430d18876cc469aee15e25b60640c689577a37385d8",
+      "removedTranscriptAudioCommit": "bbdf2255c4b84aa3e7938d5f3af1e0c7c1c7d053",
+      "generationSegments": [
+        {
+          "speaker": "Frau Krause",
+          "voice": "voice-03",
+          "sourceTextSha256": "19409b4e8f8431e6af81007dc9f6a2c9278e0995127c9c82f8991b130d6dd384",
+          "characters": 67,
+          "generatedSegmentAudioSha256": "844f8391fa84cd49b26e0238dcca5a67e6598dbc9ffdbcba57f521eb58f3c0dd",
+          "bytes": 18861
+        },
+        {
+          "speaker": "Sami",
+          "voice": "voice-02",
+          "sourceTextSha256": "2930d2009ae61d783a01bfd111eb4b700e2402b27acc9f894f80ae65a2e0ea47",
+          "characters": 88,
+          "generatedSegmentAudioSha256": "6ef73485df62bf97417d4399ca1168ba96f02a51728d780b4e27580260676fec",
+          "bytes": 23949
+        },
+        {
+          "speaker": "Frau Krause",
+          "voice": "voice-03",
+          "sourceTextSha256": "f556aa6cd8f789ec5e5a2c0030d2fa8c9ccf0609434585af74b3982a03453347",
+          "characters": 54,
+          "generatedSegmentAudioSha256": "a3d8843d8219cf47d3d1ae0914a9971256c7806bb7748ee376dda948e2fbdb26",
+          "bytes": 16653
+        },
+        {
+          "speaker": "Sami",
+          "voice": "voice-02",
+          "sourceTextSha256": "29e30960860685a2b14625a042aa11658176636d6173e939cfd4df426fa5535b",
+          "characters": 43,
+          "generatedSegmentAudioSha256": "3c8123b44d0d561a7dbbfd8e7e2aac707c10a3eaca1fb1ef7d0faad961e41e42",
+          "bytes": 15789
+        },
+        {
+          "speaker": "Frau Krause",
+          "voice": "voice-03",
+          "sourceTextSha256": "21b896c9721045778ff28a542e3dc0067a2c3e18f0eac8665e7ad285ac47a433",
+          "characters": 57,
+          "generatedSegmentAudioSha256": "6fa5f9c25e575b9d4bd5eb08b63befb5aec85957216558233710a709b8a223b4",
+          "bytes": 17229
+        },
+        {
+          "speaker": "Sami",
+          "voice": "voice-02",
+          "sourceTextSha256": "31ff3703f74455cc628b327b20057ab57b0e2d132646d38811c5de3b7ea45efa",
+          "characters": 46,
+          "generatedSegmentAudioSha256": "4283edd0dc79101212d0c07b41fef60b065ba1082efd92f0ed7ae275af102ed7",
+          "bytes": 15021
+        },
+        {
+          "speaker": "Frau Krause",
+          "voice": "voice-03",
+          "sourceTextSha256": "4392a2c21b152b87821d005d06d187dc649f10b836d7d04ae038baa5229e02b5",
+          "characters": 48,
+          "generatedSegmentAudioSha256": "53c3f7e069eae4c0b5ec8a11cb19d3b6b30ae6764e3aa48acb909f40619933f5",
+          "bytes": 12621
+        },
+        {
+          "speaker": "Sami",
+          "voice": "voice-02",
+          "sourceTextSha256": "51331b78c85a112c3c5b04d971bd6d0f1034c956c4e42835d071a2c0ef3fa5b1",
+          "characters": 28,
+          "generatedSegmentAudioSha256": "0d7f5d2e387bee8056668334627d4824c261bd7376a38370e6ff308b4e4124c4",
+          "bytes": 10221
+        }
+      ]
+    }
+  ],
+  "transcriptSnapshotLedger": {
+    "before": 49,
+    "removed": 1,
+    "after": 48
+  },
+  "validation": {
+    "generationInputWasExactCurrentGermanText": true,
+    "speakerOrderHashGuarded": true,
+    "technicalAudioQc": "pass-1099-of-1099",
+    "technicalAudioQcReport": "docs/audio-qc-all-2026-11-04.json",
+    "humanListening": false,
+    "pronunciationQualityJudged": false,
+    "naturalnessJudged": false,
+    "independentLinguisticSignOff": false,
+    "externalCefrOrExamValidation": false
+  },
+  "claimBoundary": "Programmatic generation provenance plus segment/file byte and hash identity and automated technical QC do not establish that a human heard every word, nor do they judge speaker suitability, pronunciation, prosody, naturalness, pedagogy, trades, home-repair scheduling, or consumer-services validity, CEFR level, or exam suitability."
+}

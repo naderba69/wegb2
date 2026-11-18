@@ -671,11 +671,11 @@
     "claimBoundary": "87 bounded internal A0–B2 decisions; independent review, field validation, and external linguistic, phonetic, CEFR, or exam sign-off remain pending"
   },
   "inventorySnapshot": {
-    "indexedTrackedFilesAndAuditArtifacts": 3647,
+    "indexedTrackedFilesAndAuditArtifacts": 3648,
     "manual_complete": 64,
     "manual_targeted": 67,
     "not_started": 3439,
-    "audit_artifact": 77
+    "audit_artifact": 78
   },
   "learningStateCorrections": {
     "findings": [
@@ -1235,7 +1235,7 @@
     "independentTranslationSignOff": false,
     "culturalOrMedicalSignOff": false,
     "externalCefrOrExamValidation": false,
-    "claimBoundary": "176 bounded internal A0–B2 full-dialogue decisions across 1138 lines and 424 questions; no dialogue remains outside the internal PA-038 ledger, while re-synthesis and text/audio matching or listening checks for 85 remaining changed German dialogue-audio sources after PA-040-01/02/03/04/05/06/07 regenerated twenty-two current-text recordings, independent review, field validation, and external linguistic, translation, cultural, legal, medical, pharmacy, emergency-services, audio, CEFR, Goethe, telc, or exam sign-off remain pending",
+    "claimBoundary": "176 bounded internal A0–B2 full-dialogue decisions across 1138 lines and 424 questions; no dialogue remains outside the internal PA-038 ledger, while re-synthesis and text/audio matching or listening checks for 84 remaining changed German dialogue-audio sources after PA-040-01/02/03/04/05/06/07/08 regenerated twenty-three current-text recordings, independent review, field validation, and external linguistic, translation, cultural, legal, medical, pharmacy, emergency-services, audio, CEFR, Goethe, telc, or exam sign-off remain pending",
     "audioSourceDialoguesChanged": [
       "d-a0-05",
       "d-a0-11",
@@ -1353,23 +1353,24 @@
       "result": "pass",
       "textAudioMatchChecked": false,
       "humanListeningCompleted": false,
-      "recordingTranscriptOverrides": 49,
+      "recordingTranscriptOverrides": 48,
       "b1RecordingSnapshotsAdded": 26,
       "snapshotPurpose": "tempo measurement against recording-time text only; does not establish current text/audio match",
       "b2RecordingSnapshotsAdded": 32,
       "readingSnapshotsRemovedByPa03901": 10,
       "remainingReadingSnapshots": 0,
-      "remainingDialogueSnapshots": 49,
+      "remainingDialogueSnapshots": 48,
       "readingSnapshotsRemovedByPa03902": 10,
       "readingSnapshotsRemovedByPa03903": 6,
       "dialogueSnapshotsRemovedByPa04001": 5,
-      "dialogueRecordingsRegeneratedFromCurrentText": 22,
+      "dialogueRecordingsRegeneratedFromCurrentText": 23,
       "dialogueSnapshotsRemovedByPa04002": 5,
       "dialogueSnapshotsRemovedByPa04003": 6,
       "dialogueSnapshotsRemovedByPa04004": 2,
       "dialogueSnapshotsRemovedByPa04005": 2,
       "dialogueSnapshotsRemovedByPa04006": 1,
-      "dialogueSnapshotsRemovedByPa04007": 1
+      "dialogueSnapshotsRemovedByPa04007": 1,
+      "dialogueSnapshotsRemovedByPa04008": 1
     }
   },
   "audioRefreshAudit": {
@@ -1465,16 +1466,16 @@
     ]
   },
   "dialogAudioRefreshAudit": {
-    "batch": "PA-040-01/02/03/04/05/06/07",
-    "fixture": "scripts/fixtures/dialog-audio-refresh-pa040-01.json; scripts/fixtures/dialog-audio-refresh-pa040-02.json; scripts/fixtures/dialog-audio-refresh-pa040-03.json; scripts/fixtures/dialog-audio-refresh-pa040-04.json; scripts/fixtures/dialog-audio-refresh-pa040-05.json; scripts/fixtures/dialog-audio-refresh-pa040-06.json; scripts/fixtures/dialog-audio-refresh-pa040-07.json",
+    "batch": "PA-040-01/02/03/04/05/06/07/08",
+    "fixture": "scripts/fixtures/dialog-audio-refresh-pa040-01.json; scripts/fixtures/dialog-audio-refresh-pa040-02.json; scripts/fixtures/dialog-audio-refresh-pa040-03.json; scripts/fixtures/dialog-audio-refresh-pa040-04.json; scripts/fixtures/dialog-audio-refresh-pa040-05.json; scripts/fixtures/dialog-audio-refresh-pa040-06.json; scripts/fixtures/dialog-audio-refresh-pa040-07.json; scripts/fixtures/dialog-audio-refresh-pa040-08.json",
     "regressionGate": "npm run audit:dialog-audio-refresh",
     "sourcePath": "content/dialogues.json",
-    "recordings": 22,
+    "recordings": 23,
     "byLevel": {
       "A0": 2,
       "A1": 2,
       "A2": 3,
-      "B1": 9,
+      "B1": 10,
       "B2": 6
     },
     "ids": [
@@ -1499,12 +1500,13 @@
       "d-b2-07",
       "d-b2-32",
       "d-b1-09",
-      "d-b1-22"
+      "d-b1-22",
+      "d-b1-13"
     ],
-    "sourceTextHashesMatchCurrentBank": 22,
-    "sourceSegmentAndSpeakerOrderHashesMatch": 22,
-    "audioHashesAndManifestBytesMatch": 22,
-    "priorAudioIdentitiesReplaced": 22,
+    "sourceTextHashesMatchCurrentBank": 23,
+    "sourceSegmentAndSpeakerOrderHashesMatch": 23,
+    "audioHashesAndManifestBytesMatch": 23,
+    "priorAudioIdentitiesReplaced": 23,
     "voices": {
       "oneSpeakerAnnouncements": "ki-voice-02 (Arena voice-02, de-DE TTS)",
       "twoSpeakerDialogue": "ki-voice-02+voice-03 (Arena de-DE TTS)",
@@ -1514,10 +1516,10 @@
     },
     "transcriptSnapshotLedger": {
       "before": 71,
-      "removed": 22,
-      "after": 49,
+      "removed": 23,
+      "after": 48,
       "afterByGroup": {
-        "dialog": 49,
+        "dialog": 48,
         "hoeren": 0
       }
     },
@@ -1535,9 +1537,9 @@
     "speakerSuitabilityJudged": false,
     "independentLinguisticSignOff": false,
     "externalCefrOrExamValidation": false,
-    "remainingDocumentedDialogueSnapshots": 49,
-    "remainingChangedDialogueAudioSources": 85,
-    "claimBoundary": "Programmatic generation provenance, segment/speaker-order hashes, source/audio hashes, manifest identity, and automated technical QC do not establish that a human heard every word and do not judge speaker suitability, pronunciation, prosody, naturalness, pedagogy, hospitality or consumer-rights validity, CEFR level, or exam suitability.",
+    "remainingDocumentedDialogueSnapshots": 48,
+    "remainingChangedDialogueAudioSources": 84,
+    "claimBoundary": "Programmatic generation provenance, segment/speaker-order hashes, source/audio hashes, manifest identity, and automated technical QC do not establish that a human heard every word and do not judge speaker suitability, pronunciation, prosody, naturalness, pedagogy, hospitality, consumer-rights, trades, home-repair scheduling, or consumer-services validity, CEFR level, or exam suitability.",
     "batches": [
       {
         "batch": "PA-040-01",
@@ -1587,6 +1589,13 @@
         "recordings": 1,
         "ledgerBefore": 50,
         "ledgerAfter": 49
+      },
+      {
+        "batch": "PA-040-08",
+        "fixture": "scripts/fixtures/dialog-audio-refresh-pa040-08.json",
+        "recordings": 1,
+        "ledgerBefore": 49,
+        "ledgerAfter": 48
       }
     ]
   }
