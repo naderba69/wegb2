@@ -4,14 +4,6 @@
   "claimAr": "لقطات نصية مجمدة للملفات التي بقي صوتها ثابتاً بينما توسع نص القراءة أو الحوار أو تغير لاحقاً. تُستخدم لقياس سرعة التسجيل فقط، وتمنع الادعاء بأن الصوت يقرأ النسخة الحالية.",
   "items": [
     {
-      "file": "/audio/dialog/d-b1-06.mp3",
-      "id": "d-b1-06",
-      "group": "dialog",
-      "textDe": "Guten Tag. Ich möchte einen Termin zur Anmeldung vereinbaren. Gern. Haben Sie alle Unterlagen schon mitgebracht? Ich habe Pass und Mietvertrag dabei. Fehlt noch etwas? Eine Meldebescheinigung wäre noch nötig. Alles klar. Könnte der Termin am Donnerstag sein? Ja, um 11:30 Uhr. Bitte kommen Sie pünktlich.",
-      "audioCommit": "bbdf2255c4b84aa3e7938d5f3af1e0c7c1c7d053",
-      "sourcePath": "content/dialogues.json"
-    },
-    {
       "file": "/audio/dialog/d-b1-07.mp3",
       "id": "d-b1-07",
       "group": "dialog",
@@ -169,22 +161,6 @@
       "group": "dialog",
       "textDe": "Ihr Sohn arbeitet gut mit, aber er meldet sich selten. Zu Hause erzählt er viel. In der Klasse ist er wohl schüchtern. Das legt sich meistens. Wichtig wäre, dass er öfter laut liest. Wie viel sollte er täglich üben? Fünfzehn Minuten reichen, wenn es regelmäßig geschieht.",
       "audioCommit": "bbdf2255c4b84aa3e7938d5f3af1e0c7c1c7d053",
-      "sourcePath": "content/dialogues.json"
-    },
-    {
-      "file": "/audio/dialog/d-b1-ht01.mp3",
-      "id": "d-b1-ht01",
-      "group": "dialog",
-      "textDe": "Am morgigen Dienstag werden Busse und Bahnen in der Stadt wegen eines Warnstreiks einer Gewerkschaft nur eingeschränkt fahren. Besonders die U-Bahn-Linien U1 und U3 sind betroffen. Die S-Bahn soll nach Angaben des Verkehrsunternehmens fast vollständig fahren. Der Streik dauert von 4 bis 10 Uhr morgens.",
-      "audioCommit": "bf060b8b1248fb9c12d162d085350f2224380441",
-      "sourcePath": "content/dialogues.json"
-    },
-    {
-      "file": "/audio/dialog/d-b1-ht02.mp3",
-      "id": "d-b1-ht02",
-      "group": "dialog",
-      "textDe": "Sehr geehrte Fahrgäste, wir bitten Sie, die Verspätung von etwa 15 Minuten zu entschuldigen. Grund sind Personen auf der Strecke, die die Polizei gerade wegschickt. Wir erreichen den Hauptbahnhof voraussichtlich um 17:45 Uhr. Der Anschluss nach Hamburg ist dadurch gefährdet.",
-      "audioCommit": "bf060b8b1248fb9c12d162d085350f2224380441",
       "sourcePath": "content/dialogues.json"
     },
     {
@@ -417,22 +393,6 @@
       "group": "dialog",
       "textDe": "Viele Bürger interessieren sich zwar für Politik, beteiligen sich aber selten aktiv. Aber liegt das nicht an fehlenden Möglichkeiten? Die Möglichkeiten gibt es, jedoch fehlt oft das Vertrauen. Die Parteien behaupten dagegen, die Bürger seien politikverdrossen. Diese Diagnose ist verkürzt, denn viele wollen mitgestalten, finden aber keinen Zugang. Was kann die Stadt konkret tun?",
       "audioCommit": "1a34344fc0d670b1b54dae7841c65a694ec28454",
-      "sourcePath": "content/dialogues.json"
-    },
-    {
-      "file": "/audio/dialog/d-b2-ht01.mp3",
-      "id": "d-b2-ht01",
-      "group": "dialog",
-      "textDe": "Umweltaktivisten haben heute Morgen eine Autobahn in einer Großstadt blockiert, indem sie sich auf der Fahrbahn festklebten. Die Polizei hat mit der Räumung begonnen. Es kam zu einem langen Stau. Die Straße ist stadteinwärts gesperrt; die Räumung wird voraussichtlich bis zum Mittag dauern.",
-      "audioCommit": "bf060b8b1248fb9c12d162d085350f2224380441",
-      "sourcePath": "content/dialogues.json"
-    },
-    {
-      "file": "/audio/dialog/d-b2-ht02.mp3",
-      "id": "d-b2-ht02",
-      "group": "dialog",
-      "textDe": "Guten Tag, Sie haben unser Büro erreicht. Es ist heute bereits geschlossen. Unsere Öffnungszeiten am Montag sind von 8 bis 17 Uhr. In dringenden Fällen finden Sie die Rufnummer unseres Notdienstes in Ihren Vertragsunterlagen. Vielen Dank für Ihr Verständnis.",
-      "audioCommit": "bf060b8b1248fb9c12d162d085350f2224380441",
       "sourcePath": "content/dialogues.json"
     },
     {
