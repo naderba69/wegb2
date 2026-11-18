@@ -300,14 +300,6 @@
       "sourcePath": "content/dialogues.json"
     },
     {
-      "file": "/audio/dialog/d-b2-45.mp3",
-      "id": "d-b2-45",
-      "group": "dialog",
-      "textDe": "Wir haben zwar viele Autos, aber zu wenig sichere Radwege. Aber braucht man nicht beides? Beides ja, jedoch ist der Platz begrenzt, deshalb braucht es Prioritäten. Die Opposition behauptet dagegen, die Pläne seien unrealistisch. Diese Kritik ist nicht neu, denn jede Veränderung erzeugt Widerstand. Wann beginnt der Umbau?",
-      "audioCommit": "1a34344fc0d670b1b54dae7841c65a694ec28454",
-      "sourcePath": "content/dialogues.json"
-    },
-    {
       "file": "/audio/dialog/d-b2-46.mp3",
       "id": "d-b2-46",
       "group": "dialog",
