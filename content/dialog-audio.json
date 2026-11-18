@@ -476,8 +476,8 @@
     {
       "id": "d-b2-07",
       "file": "/audio/dialog/d-b2-07.mp3",
-      "bytes": 161211,
-      "voice": "voice-01+voice-02",
+      "bytes": 97953,
+      "voice": "ki-voice-02+voice-04",
       "level": "B2",
       "stimmen": 2
     },
@@ -652,8 +652,8 @@
     {
       "id": "d-b2-32",
       "file": "/audio/dialog/d-b2-32.mp3",
-      "bytes": 189633,
-      "voice": "voice-02+voice-03",
+      "bytes": 107841,
+      "voice": "ki-voice-02+voice-03",
       "level": "B2",
       "stimmen": 2
     },

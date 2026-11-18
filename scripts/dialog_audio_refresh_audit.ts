@@ -35,7 +35,7 @@ type RefreshFixture = {
   scope: string;
   sourcePath: string;
   sourceLineJoiner: string;
-  voices: { oneSpeaker: string; twoSpeaker: string };
+  voices: { oneSpeaker: string; twoSpeaker: string; additionalTwoSpeaker?: string };
   items: RefreshItem[];
   transcriptSnapshotLedger: { before: number; removed: number; after: number };
   validation: {
@@ -73,6 +73,7 @@ type BatchSpec = {
   ids: string[];
   ledgerBefore: number;
   ledgerAfter: number;
+  additionalTwoSpeakerVoice?: string;
 };
 
 const root = process.cwd();
@@ -109,12 +110,30 @@ const batchSpecs: BatchSpec[] = [
     ledgerBefore: 55,
     ledgerAfter: 53,
   },
+  {
+    batch: "PA-040-05",
+    fixturePath: "scripts/fixtures/dialog-audio-refresh-pa040-05.json",
+    ids: ["d-b2-07", "d-b2-32"],
+    ledgerBefore: 53,
+    ledgerAfter: 51,
+    additionalTwoSpeakerVoice: "ki-voice-02+voice-04 (Arena voice-04 separately selected for the second masculine role, de-DE TTS)",
+  },
 ];
 const twoSpeakerVoices: Record<string, string[]> = {
   "d-b1-04": ["voice-02", "voice-03", "voice-02", "voice-03", "voice-02"],
   "d-b1-06": ["voice-03", "voice-02", "voice-03", "voice-02", "voice-03", "voice-02"],
   "d-b1-07": ["voice-03", "voice-02", "voice-03", "voice-02", "voice-03"],
   "d-b1-32": ["voice-03", "voice-02", "voice-03", "voice-02", "voice-03"],
+  "d-b2-07": ["voice-02", "voice-04", "voice-02", "voice-04", "voice-02"],
+  "d-b2-32": ["voice-03", "voice-02", "voice-03", "voice-02", "voice-03"],
+};
+const twoSpeakerVoiceLabels: Record<string, string> = {
+  "d-b1-04": "ki-voice-02+voice-03",
+  "d-b1-06": "ki-voice-02+voice-03",
+  "d-b1-07": "ki-voice-02+voice-03",
+  "d-b1-32": "ki-voice-02+voice-03",
+  "d-b2-07": "ki-voice-02+voice-04",
+  "d-b2-32": "ki-voice-02+voice-03",
 };
 const fixtures = batchSpecs.map((spec) => ({ spec, fixture: readJson<RefreshFixture>(spec.fixturePath) }));
 const dialogues = readJson<Dialogue[]>("content/dialogues.json");
@@ -141,7 +160,8 @@ for (const { spec, fixture } of fixtures) {
     || fixture.generatedAt !== "2026-11-04" || fixture.sourcePath !== "content/dialogues.json"
     || fixture.sourceLineJoiner !== " "
     || fixture.voices.oneSpeaker !== "ki-voice-02 (Arena voice-02, de-DE TTS)"
-    || fixture.voices.twoSpeaker !== "ki-voice-02+voice-03 (Arena de-DE TTS)") {
+    || fixture.voices.twoSpeaker !== "ki-voice-02+voice-03 (Arena de-DE TTS)"
+    || fixture.voices.additionalTwoSpeaker !== spec.additionalTwoSpeakerVoice) {
     fail(`${spec.batch}: fixture identity, source, date, joiner, or voices drifted`);
   }
   const expectedSet = new Set(spec.ids);
@@ -183,7 +203,7 @@ for (const { spec, fixture } of fixtures) {
     const expectedTexts = voices ? dialogue.lines.map((line) => line.de) : [source];
     const expectedSpeakers = voices ? dialogue.lines.map((line) => line.who) : [dialogue.lines[0].who];
     const expectedVoices = voices ?? ["voice-02"];
-    const expectedVoiceLabel = voices ? "ki-voice-02+voice-03" : "ki-voice-02";
+    const expectedVoiceLabel = voices ? twoSpeakerVoiceLabels[item.id] : "ki-voice-02";
     const expectedSpeakerCount = voices ? 2 : 1;
     if (item.level !== dialogue.level || entry.level !== dialogue.level
       || item.file !== `/audio/dialog/${item.id}.mp3` || entry.file !== item.file
@@ -233,7 +253,7 @@ const finalLedgerCount = batchSpecs.at(-1)?.ledgerAfter ?? -1;
 if (snapshots.items.length > finalLedgerCount
   || snapshots.items.some((entry) => entry.group !== "dialog" || allExpectedSet.has(entry.id))
   || batchSpecs.some((spec, index) => index > 0 && batchSpecs[index - 1].ledgerAfter !== spec.ledgerBefore)) {
-  fail("recording-time transcript snapshot ledger must reach 53 across PA-040-01/02/03/04 and may only fall later");
+  fail("recording-time transcript snapshot ledger must reach 51 across PA-040-01/02/03/04/05 and may only fall later");
 }
 if (qc.datum !== "2026-11-04" || qc.dateien.length !== 1099
   || qc.anomalienGesamt !== 0 || qc.abdeckung.luecken.length !== 0) {
@@ -246,4 +266,4 @@ if (errors.length > 0) {
   process.exit(1);
 }
 
-console.log("PA-040-01/02/03/04 dialogue audio refresh: 18 current-text recordings guarded; snapshot ledger 71 -> 53; technical QC passed; no human listening/pronunciation claim");
+console.log("PA-040-01/02/03/04/05 dialogue audio refresh: 20 current-text recordings guarded; snapshot ledger 71 -> 51; technical QC passed; no human listening/pronunciation claim");
