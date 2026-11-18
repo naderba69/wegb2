@@ -396,14 +396,6 @@
       "sourcePath": "content/dialogues.json"
     },
     {
-      "file": "/audio/dialog/d-b2-ht03.mp3",
-      "id": "d-b2-ht03",
-      "group": "dialog",
-      "textDe": "Betrachten wir ein Beispiel: Künstliche Intelligenz könnte berufliche Aufgaben verändern. Einige Tätigkeiten könnten automatisiert werden, während in anderen Bereichen neue Aufgaben entstehen. Besonders betroffen sein könnten wiederkehrende Büro- und Verwaltungsaufgaben. Aus diesem Beispiel lässt sich jedoch keine sichere Zahl künftig wegfallender Stellen ableiten. Entscheidend wären Weiterbildung und die Frage, ob Unternehmen KI unterstützend statt ersetzend einsetzen.",
-      "audioCommit": "bf060b8b1248fb9c12d162d085350f2224380441",
-      "sourcePath": "content/dialogues.json"
-    },
-    {
       "file": "/audio/dialog/dlg-b1-berufsberatung.mp3",
       "id": "dlg-b1-berufsberatung",
       "group": "dialog",
@@ -448,46 +440,6 @@
       "id": "dlg-b2-mietvertrag",
       "group": "dialog",
       "textDe": "Frau Saleh, hier ist der Mietvertrag. Die Kaltmiete beträgt 720 Euro und die Nebenkosten liegen bei 180 Euro. Zusammen sind das 900 Euro Warmmiete. Wie hoch ist die Kaution im Vertrag? Sie entspricht drei Kaltmieten, oder? Ja, die Kaution beträgt 2160 Euro und wird auf ein separates Kautionskonto eingezahlt. Wie lange ist die Kündigungsfrist? Für die ordentliche Kündigung gilt in der Regel eine gesetzliche Frist von drei Monaten. Für die ersten zwei Jahre ist eine Staffelmiete vereinbart; die Beträge und Termine stehen im Vertrag. Darf ich in der Wohnung Wände streichen oder kleine Bohrungen machen? Neutrale Wandfarben sind in Ordnung. Bitte sprechen Sie geplante Bohrungen vorher mit mir ab. Normale Gebrauchsspuren sind kein Problem; was bei Auszug nötig ist, richtet sich nach dem Vertrag und dem Zustand der Wohnung. Gut, dann lese ich den Vertrag noch einmal in Ruhe durch und schicke ihn Ihnen unterschrieben zurück.",
-      "audioCommit": "bf060b8b1248fb9c12d162d085350f2224380441",
-      "sourcePath": "content/dialogues.json"
-    },
-    {
-      "file": "/audio/dialog/hoer-a1-01.mp3",
-      "id": "hoer-a1-01",
-      "group": "dialog",
-      "textDe": "Achtung, Achtung! Der Zug RE 10 nach Köln fährt heute um 14 Uhr 25 von Gleis 3. Verspätung: circa 10 Minuten. Wir bitten um Ihr Verständnis.",
-      "audioCommit": "bf060b8b1248fb9c12d162d085350f2224380441",
-      "sourcePath": "content/dialogues.json"
-    },
-    {
-      "file": "/audio/dialog/hoer-a1-02.mp3",
-      "id": "hoer-a1-02",
-      "group": "dialog",
-      "textDe": "Sehr geehrte Kunden! Heute sind alle Äpfel im Angebot: ein Kilo für nur 99 Cent. Bananen, Brot und Milch kosten den normalen Preis. Die Öffnungszeiten heute sind von 8 bis 20 Uhr. Vielen Dank für Ihren Besuch!",
-      "audioCommit": "bf060b8b1248fb9c12d162d085350f2224380441",
-      "sourcePath": "content/dialogues.json"
-    },
-    {
-      "file": "/audio/dialog/hoer-a2-02.mp3",
-      "id": "hoer-a2-02",
-      "group": "dialog",
-      "textDe": "Und nun das Wetter für morgen: Im Norden ist es bewölkt mit etwas Regen bei Temperaturen zwischen 12 und 15 Grad. In der Mitte Deutschlands scheint die Sonne bei bis zu 20 Grad. Im Süden bleibt es warm und trocken mit Höchstwerten bis 26 Grad. Am Abend kann es im Westen Gewitter geben.",
-      "audioCommit": "bf060b8b1248fb9c12d162d085350f2224380441",
-      "sourcePath": "content/dialogues.json"
-    },
-    {
-      "file": "/audio/dialog/hoer-b1-01.mp3",
-      "id": "hoer-b1-01",
-      "group": "dialog",
-      "textDe": "Hallo Karim, hier ist Sarah von der Arbeit. Ich rufe an, weil der Termin mit Herrn Becker am Mittwoch leider ausfällt. Er ist krank geworden. Ich habe schon einen neuen Termin für den 18. November um 10 Uhr vorgeschlagen. Bitte sag mir bis morgen Bescheid, ob dir das passt. Ansonsten ruf mich bitte auf dem Handy zurück. Danke, bis dann!",
-      "audioCommit": "bf060b8b1248fb9c12d162d085350f2224380441",
-      "sourcePath": "content/dialogues.json"
-    },
-    {
-      "file": "/audio/dialog/hoer-b2-01.mp3",
-      "id": "hoer-b2-01",
-      "group": "dialog",
-      "textDe": "Wie beurteilen Sie die Situation auf dem deutschen Arbeitsmarkt für ausländische Fachkräfte? – Grundsätzlich ist die Nachfrage hoch, insbesondere in technischen Berufen und im Gesundheitswesen. Das Problem liegt oft weniger in der Qualifikation als vielmehr in der Anerkennung der Abschlüsse und in den Sprachkenntnissen. A2- oder B1-Kenntnisse reichen für manche Tätigkeiten nicht aus. Einige Arbeitgeber fordern mindestens B2, in bestimmten Bereichen sogar C1. Außerdem spielt interkulturelle Kompetenz eine immer größere Rolle. Mein Rat: frühzeitig Deutsch lernen und die Anerkennung bereits im Heimatland beantragen.",
       "audioCommit": "bf060b8b1248fb9c12d162d085350f2224380441",
       "sourcePath": "content/dialogues.json"
     }
