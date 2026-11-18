@@ -92,14 +92,6 @@
       "sourcePath": "content/dialogues.json"
     },
     {
-      "file": "/audio/dialog/d-b1-22.mp3",
-      "id": "d-b1-22",
-      "group": "dialog",
-      "textDe": "Auf der Rechnung steht Mineralwasser — wir haben nichts bestellt. Ich prüfe das System … Sie haben recht — das ging an den Nebentisch. Bitte korrigieren Sie den Betrag vor dem Bezahlen. Zwölf Euro weniger: sechsundzwanzig statt achtunddreißig. Außerdem kam die Hauptspeise kalt. Das Dessert geht aufs Haus — Küche ist intern gemeldet. Mit Fairness kommt man wieder — danke. Bis zum nächsten Besuch, gute Nacht!",
-      "audioCommit": "bbdf2255c4b84aa3e7938d5f3af1e0c7c1c7d053",
-      "sourcePath": "content/dialogues.json"
-    },
-    {
       "file": "/audio/dialog/d-b1-23.mp3",
       "id": "d-b1-23",
       "group": "dialog",

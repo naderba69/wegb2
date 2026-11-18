@@ -1,0 +1,111 @@
+{
+  "schema": "wegb2-dialog-audio-refresh-batch-v1",
+  "batch": "PA-040-07",
+  "generatedAt": "2026-11-04",
+  "scope": "The shortest remaining changed-source dialogue recording, the eight-line B1 restaurant-billing dialogue d-b1-22, regenerated programmatically from the exact current German lines in content/dialogues.json. Eight line-level segments alternate user-selected voice-03 for Leila and voice-02 for the waiter, then concatenate in source order. Hashes guard every source segment and resulting file. Technical checks are automated only; no human listening, pronunciation, naturalness, linguistic, hospitality, consumer-rights, CEFR, Goethe/telc, or exam sign-off is claimed.",
+  "sourcePath": "content/dialogues.json",
+  "sourceLineJoiner": " ",
+  "voices": {
+    "oneSpeaker": "ki-voice-02 (Arena voice-02, de-DE TTS)",
+    "twoSpeaker": "ki-voice-02+voice-03 (Arena de-DE TTS)"
+  },
+  "items": [
+    {
+      "id": "d-b1-22",
+      "level": "B1",
+      "file": "/audio/dialog/d-b1-22.mp3",
+      "sourceTextSha256": "a400aabb88c3fe95473f225febc2b1337a88a5a1417982036181df3f617fde76",
+      "sourceLineCount": 8,
+      "generatedAudioSha256": "465d22c6abdf9353f7268e6817d50561c16d17c9cf83e283791faeb143bc385a",
+      "bytes": 135048,
+      "voice": "ki-voice-02+voice-03",
+      "previousAudioSha256": "27f35a074669a40fdb184f69995adb7359b86add65b1a805b8989b926e9c3d32",
+      "previousBytes": 191566,
+      "removedTranscriptSnapshotSha256": "c8cdd51d1cfcd12c4cb599b3ec47ffcb0d89b78780eca2cb11ad1d7fbc391277",
+      "removedTranscriptAudioCommit": "bbdf2255c4b84aa3e7938d5f3af1e0c7c1c7d053",
+      "generationSegments": [
+        {
+          "speaker": "Leila",
+          "voice": "voice-03",
+          "sourceTextSha256": "b0352a3d70ea974cc1b4f854af646497faaf4b7f8fdbd339315ead7bf703c510",
+          "characters": 65,
+          "generatedSegmentAudioSha256": "a365f20c0493104fd9c62b851e28c359550f34eac904fb714586d16b272ebec6",
+          "bytes": 17421
+        },
+        {
+          "speaker": "Ober",
+          "voice": "voice-02",
+          "sourceTextSha256": "889650197cd560b9de408350760d2e178a665dcba73b01e6f3e39aae0b08c642",
+          "characters": 68,
+          "generatedSegmentAudioSha256": "d05be2181adf0771a9fd4f8d1ab1aa334821c560923f3cb4bb34bf797adae496",
+          "bytes": 23469
+        },
+        {
+          "speaker": "Leila",
+          "voice": "voice-03",
+          "sourceTextSha256": "26586fb3552a1d70be333f9d0b765b51ad3bf2aebb2cc238d1d2599dca091d50",
+          "characters": 50,
+          "generatedSegmentAudioSha256": "be07f48e91310b60664e1f6a959a013086b49cc8dd2ca480024e91f30e3d7879",
+          "bytes": 15693
+        },
+        {
+          "speaker": "Ober",
+          "voice": "voice-02",
+          "sourceTextSha256": "f75669ada0d4c8fbdf6340ccdab4cf00b25fed80b6293c701511fc47d80e45dd",
+          "characters": 57,
+          "generatedSegmentAudioSha256": "f5fd82ac2cd376130c13e2f80c9809b092714ef691aefc362879952fc0808f42",
+          "bytes": 19053
+        },
+        {
+          "speaker": "Leila",
+          "voice": "voice-03",
+          "sourceTextSha256": "f452ebfb3dad2225eaafc9e1e0616362975f3dce109af225456de789931dd7dd",
+          "characters": 34,
+          "generatedSegmentAudioSha256": "1d22def0dbbaf3fc3faf11e18267d31d2985309040ec4b84c59bd6a276de9263",
+          "bytes": 11949
+        },
+        {
+          "speaker": "Ober",
+          "voice": "voice-02",
+          "sourceTextSha256": "ab1879d697c408b5546de27020d7283683a0d617cc5cbc45dc17259e8e9db583",
+          "characters": 55,
+          "generatedSegmentAudioSha256": "b35e5bef43a2e1d88c4a79da3e3e19cf3b6a76ca5f7d500dea912c48d0ef3fff",
+          "bytes": 17613
+        },
+        {
+          "speaker": "Leila",
+          "voice": "voice-03",
+          "sourceTextSha256": "3f499c4e5093695152f9af11ecf6a844e47e1a5b4e3f0cdb6a39cc199c820555",
+          "characters": 60,
+          "generatedSegmentAudioSha256": "ee63689399b4700c9a8821d3747ea8dd6d5dc9cb2e52242dc260d023c1a0f78a",
+          "bytes": 17421
+        },
+        {
+          "speaker": "Ober",
+          "voice": "voice-02",
+          "sourceTextSha256": "191f445f7d59a460fcbea77b5ac9a8a9a7464c1f28356ac312a92ca162bd25c1",
+          "characters": 36,
+          "generatedSegmentAudioSha256": "3ad9cc8285e12b89ab574f9d283287145123b76f7b0b8abebaab4541b2f8a6bb",
+          "bytes": 12429
+        }
+      ]
+    }
+  ],
+  "transcriptSnapshotLedger": {
+    "before": 50,
+    "removed": 1,
+    "after": 49
+  },
+  "validation": {
+    "generationInputWasExactCurrentGermanText": true,
+    "speakerOrderHashGuarded": true,
+    "technicalAudioQc": "pass-1099-of-1099",
+    "technicalAudioQcReport": "docs/audio-qc-all-2026-11-04.json",
+    "humanListening": false,
+    "pronunciationQualityJudged": false,
+    "naturalnessJudged": false,
+    "independentLinguisticSignOff": false,
+    "externalCefrOrExamValidation": false
+  },
+  "claimBoundary": "Programmatic generation provenance plus segment/file byte and hash identity and automated technical QC do not establish that a human heard every word, nor do they judge speaker suitability, pronunciation, prosody, naturalness, pedagogy, hospitality or consumer-rights validity, CEFR level, or exam suitability."
+}
