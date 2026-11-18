@@ -1,0 +1,95 @@
+{
+  "schema": "wegb2-dialog-audio-refresh-batch-v1",
+  "batch": "PA-040-06",
+  "generatedAt": "2026-11-04",
+  "scope": "The shortest remaining changed-source dialogue recording, the six-line B1 hotel front-desk dialogue d-b1-09, regenerated programmatically from the exact current German lines in content/dialogues.json. Six line-level segments alternate user-selected voice-02 for Anwar and voice-03 for the front-desk role, then concatenate in source order. Hashes guard every source segment and resulting file. Technical checks are automated only; no human listening, pronunciation, naturalness, linguistic, hospitality-domain, CEFR, Goethe/telc, or exam sign-off is claimed.",
+  "sourcePath": "content/dialogues.json",
+  "sourceLineJoiner": " ",
+  "voices": {
+    "oneSpeaker": "ki-voice-02 (Arena voice-02, de-DE TTS)",
+    "twoSpeaker": "ki-voice-02+voice-03 (Arena de-DE TTS)"
+  },
+  "items": [
+    {
+      "id": "d-b1-09",
+      "level": "B1",
+      "file": "/audio/dialog/d-b1-09.mp3",
+      "sourceTextSha256": "aa3894c060d99fe46556879ea4412fc5f9304f61d008bcfe8372400ea25fb8a8",
+      "sourceLineCount": 6,
+      "generatedAudioSha256": "3c372f519a1a7835a53f3b143466f2cfeadf1261a90ac14b90683553d6d12afc",
+      "bytes": 85998,
+      "voice": "ki-voice-02+voice-03",
+      "previousAudioSha256": "cd436dcefd5c53187c487b18a728583af8957595809a3363599295f0d3ace015",
+      "previousBytes": 138241,
+      "removedTranscriptSnapshotSha256": "4001ec395bf10eb46c6dbcba74ff67bab8e34fa142c9089fd0bb05bbaa53ab34",
+      "removedTranscriptAudioCommit": "bbdf2255c4b84aa3e7938d5f3af1e0c7c1c7d053",
+      "generationSegments": [
+        {
+          "speaker": "Anwar",
+          "voice": "voice-02",
+          "sourceTextSha256": "7884c6b9cf503af066eac57768b605af5dffc6240686172165d02b5eccfbd757",
+          "characters": 52,
+          "generatedSegmentAudioSha256": "50bf3f4431e7dd28bd371a75b65b4d3f01cf2e62baa802ea24e37c41087347d3",
+          "bytes": 15213
+        },
+        {
+          "speaker": "Rezeption",
+          "voice": "voice-03",
+          "sourceTextSha256": "b2c28ed204e9b39934d3f5b6adabfff7ab6019220b97c4ce6326b163acb14639",
+          "characters": 17,
+          "generatedSegmentAudioSha256": "b479bfb039c24aeaf127d33bfb99241c92344fb11e40f6b07e5f9e528271cd86",
+          "bytes": 7149
+        },
+        {
+          "speaker": "Anwar",
+          "voice": "voice-02",
+          "sourceTextSha256": "8d93bd1a91032d2a2600fedcc5700f8699b163bf204b1f07f4a9af610484949f",
+          "characters": 53,
+          "generatedSegmentAudioSha256": "f984608f37e05dd7f781257403d7e47f52475bdbae43b1b6507028158ecd8f10",
+          "bytes": 16749
+        },
+        {
+          "speaker": "Rezeption",
+          "voice": "voice-03",
+          "sourceTextSha256": "3447ecc66b2c971676c51f57a74c1d710b181275540f58c497ec9cda3d427946",
+          "characters": 53,
+          "generatedSegmentAudioSha256": "543a75bb7bff6fcc8bf478f2c396a9c11277eb6d7c30fc05cda2205b57d996e1",
+          "bytes": 14733
+        },
+        {
+          "speaker": "Anwar",
+          "voice": "voice-02",
+          "sourceTextSha256": "145fadefb63239b04cee5e4788e9cf86389ebefe72c31258f10d1c87c70c956d",
+          "characters": 47,
+          "generatedSegmentAudioSha256": "84f4de6bc39724327c2c52b17add58f18f8dab7a038a8a689c762c69f3b73e6b",
+          "bytes": 13293
+        },
+        {
+          "speaker": "Rezeption",
+          "voice": "voice-03",
+          "sourceTextSha256": "6459a5e1c75ebacddfb06715b1d8f4e6f4dafe0e7f26081424bf96e660e0e069",
+          "characters": 40,
+          "generatedSegmentAudioSha256": "06381aa5ff63d285551af851edcab7d49b9244809846c4b409e33abde3318409",
+          "bytes": 18861
+        }
+      ]
+    }
+  ],
+  "transcriptSnapshotLedger": {
+    "before": 51,
+    "removed": 1,
+    "after": 50
+  },
+  "validation": {
+    "generationInputWasExactCurrentGermanText": true,
+    "speakerOrderHashGuarded": true,
+    "technicalAudioQc": "pass-1099-of-1099",
+    "technicalAudioQcReport": "docs/audio-qc-all-2026-11-04.json",
+    "humanListening": false,
+    "pronunciationQualityJudged": false,
+    "naturalnessJudged": false,
+    "independentLinguisticSignOff": false,
+    "externalCefrOrExamValidation": false
+  },
+  "claimBoundary": "Programmatic generation provenance plus segment/file byte and hash identity and automated technical QC do not establish that a human heard every word, nor do they judge speaker suitability, pronunciation, prosody, naturalness, pedagogy, hospitality-domain validity, CEFR level, or exam suitability."
+}
