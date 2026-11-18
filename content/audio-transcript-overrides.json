@@ -28,14 +28,6 @@
       "sourcePath": "content/dialogues.json"
     },
     {
-      "file": "/audio/dialog/d-b1-13.mp3",
-      "id": "d-b1-13",
-      "group": "dialog",
-      "textDe": "Mein Termin für die Heizung am Dienstag — ich muss ihn verschieben. Warum? Ich plane sonst den Tag umsonst. Mein Chef gab mir unerwartet einen dringenden Auftrag. Donnerstag wäre frei — oder Montag um neun. Montag, aber nicht vor neun: erst die Kinder in die Kita. Neun Uhr passt. Ich brauche Zugang zum Keller. Den Schlüssel hält die Rezeption für Sie bereit. Danke für Ihre Flexibilität!",
-      "audioCommit": "bbdf2255c4b84aa3e7938d5f3af1e0c7c1c7d053",
-      "sourcePath": "content/dialogues.json"
-    },
-    {
       "file": "/audio/dialog/d-b1-15.mp3",
       "id": "d-b1-15",
       "group": "dialog",
