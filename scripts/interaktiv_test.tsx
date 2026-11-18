@@ -623,15 +623,15 @@ const hasFile = txt().includes("صوتٌ من الدار");
   /* ---------- XVI — مانيفستُ dialog-audio: العقدُ مع القرص ---------- */
   {
     const es = Object.values(dialogAudio) as unknown as { id: string; file: string; bytes: number; voice: string; level: string; stimmen?: number }[];
-    ok(es.length === 176 && es.filter((e) => e.voice.startsWith("ki-")).length === 95 && es.filter((e) => !e.voice.startsWith("ki-")).length === 81, "XVI1 مئة وستة وسبعون مدخلاً: 81 غير KI و95 موسوماً KI بعد PA-040-01 — وكلها لحوارات البنك");
+    ok(es.length === 176 && es.filter((e) => e.voice.startsWith("ki-")).length === 96 && es.filter((e) => !e.voice.startsWith("ki-")).length === 80, "XVI1 مئة وستة وسبعون مدخلاً: 80 غير KI و96 موسوماً KI بعد PA-040-01/02 — وكلها لحوارات البنك");
     ok(es.every((e) => e.file === `/audio/dialog/${e.id}.mp3`), "XVI2 كلُّ ملفٍّ تحتَ دارِ الحواراتِ باسمِ حوارِه حرفياً");
-    ok(es.every((e) => e.id === "d-b1-04" ? e.voice === "ki-voice-02+voice-03" && e.stimmen === 2
-      : ["d-a0-ht01", "d-a0-ht02", "d-a2-ht01", "d-a2-ht03"].includes(e.id) ? e.voice === "ki-voice-02" && e.stimmen === 1
+    ok(es.every((e) => ["d-b1-04", "d-b1-06"].includes(e.id) ? e.voice === "ki-voice-02+voice-03" && e.stimmen === 2
+      : ["d-a0-ht01", "d-a0-ht02", "d-a2-ht01", "d-a2-ht03", "d-b1-ht01", "d-b1-ht02", "d-b2-ht01", "d-b2-ht02"].includes(e.id) ? e.voice === "ki-voice-02" && e.stimmen === 1
         : e.voice.startsWith("ki-") ? ["ki-f1", "ki-f2", "ki-m1", "ki-m2"].includes(e.voice) && e.stimmen === 1
           : ["voice-01", "voice-01+voice-02", "voice-01+voice-02+voice-03", "voice-02+voice-03", "voice-04+voice-05"].includes(e.voice)),
-      "XVI3 ملفات PA-040-01 موسومة KI بأصواتها وعدد متحدثيها، وبقية أصوات المانيفستو التاريخية محفوظة بلا تمويه");
+      "XVI3 ملفات PA-040-01/02 موسومة KI بأصواتها وعدد متحدثيها، وبقية أصوات المانيفستو التاريخية محفوظة بلا تمويه");
     const hausXVI = es.filter((e) => !e.voice.startsWith("ki-"));
-    ok(hausXVI.filter((e) => e.level === "B1").length === 28 && hausXVI.filter((e) => e.level === "B2").length === 29 && hausXVI.filter((e) => e.level === "A1").length === 11 && hausXVI.filter((e) => e.level === "A2").length === 11 && es.filter((e) => e.level === "A0").length === 16 && es.filter((e) => e.level === "A1").length === 36 && es.filter((e) => e.level === "A2").length === 38 && es.filter((e) => e.level === "B1").length === 37 && es.filter((e) => e.level === "B2").length === 49, "XVI4 غير KI: ‏B2 29 · B1 28 · A1 11 · A2 11 · A0 2؛ والإجمالي A0 16 · A1 36 · A2 38 · B1 37 · B2 49");
+    ok(hausXVI.filter((e) => e.level === "B1").length === 27 && hausXVI.filter((e) => e.level === "B2").length === 29 && hausXVI.filter((e) => e.level === "A1").length === 11 && hausXVI.filter((e) => e.level === "A2").length === 11 && hausXVI.filter((e) => e.level === "A0").length === 2 && es.filter((e) => e.level === "A0").length === 16 && es.filter((e) => e.level === "A1").length === 36 && es.filter((e) => e.level === "A2").length === 38 && es.filter((e) => e.level === "B1").length === 37 && es.filter((e) => e.level === "B2").length === 49, "XVI4 غير KI: ‏B2 29 · B1 27 · A1 11 · A2 11 · A0 2؛ والإجمالي A0 16 · A1 36 · A2 38 · B1 37 · B2 49");
     ok(es.every((e) => dialogAudioSrc(e.id) === e.file), "XVI5 dialogAudioSrc يردُّ ما في القرصِ حرفيًّا");
     ok(es.every((e) => dialogAudioArt(e.id) === (e.voice.startsWith("ki-") ? "ki" : "haus") && dialogAudioIstKi(e.id) === e.voice.startsWith("ki-")) && dialogAudioArt("gibt-es-nicht") === null && !dialogAudioIstKi("gibt-es-nicht"), "XVI7 نوع الصوت مشتق من المانيفستو: ki-* مولد آلياً بصوت واحد أو أكثر، وغيره غير KI، والشبح بلا نوع");
     ok(es.every((e) => (e.stimmen ?? 1) >= 2 ? e.bytes > 60000 : e.bytes > 20000), "XVI6 لا ملف أجوف: متعدد الأصوات فوق 60KB والأحادي فوق 20KB؛ والبايتات الدقيقة مقفولة في K258c/K444");

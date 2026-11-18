@@ -1,0 +1,191 @@
+{
+  "schema": "wegb2-dialog-audio-refresh-batch-v1",
+  "batch": "PA-040-02",
+  "generatedAt": "2026-11-04",
+  "scope": "Five further dialogue-bank recordings regenerated programmatically from the exact current German dialogue lines in content/dialogues.json. Four one-speaker announcements use voice-02; d-b1-06 alternates the user-selected voice-03 and voice-02 across six line-level segments concatenated in source order. Hashes guard every source segment and resulting file. Technical checks are automated only; no human listening, pronunciation, naturalness, linguistic, CEFR, Goethe/telc, or exam sign-off is claimed.",
+  "sourcePath": "content/dialogues.json",
+  "sourceLineJoiner": " ",
+  "voices": {
+    "oneSpeaker": "ki-voice-02 (Arena voice-02, de-DE TTS)",
+    "twoSpeaker": "ki-voice-02+voice-03 (Arena de-DE TTS)"
+  },
+  "items": [
+    {
+      "id": "d-b1-06",
+      "level": "B1",
+      "file": "/audio/dialog/d-b1-06.mp3",
+      "sourceTextSha256": "4e7acef3a836eaa75bde4f38589ef6538d03be8bc75c5499ef585324f9a117c5",
+      "sourceLineCount": 6,
+      "generatedAudioSha256": "8d513e8f63c65e171a7f7489c170e648a4eba1da94b58b89fd295f8340b33613",
+      "bytes": 114318,
+      "voice": "ki-voice-02+voice-03",
+      "previousAudioSha256": "7af003f51640802a5f75a0413089845d4c7680ab968ddcfc55739f109a12c3e1",
+      "previousBytes": 156422,
+      "removedTranscriptSnapshotSha256": "9fce0efc4fd438301df4f194098b3331e3d6fd625323c2019d3237f8fc28ed66",
+      "removedTranscriptAudioCommit": "bbdf2255c4b84aa3e7938d5f3af1e0c7c1c7d053",
+      "generationSegments": [
+        {
+          "speaker": "Bürgerin",
+          "voice": "voice-03",
+          "sourceTextSha256": "5d07edd53435aa0f82dfd524547c18c37fbbb3ff9fd6eb40f74faa4b136b5445",
+          "characters": 69,
+          "generatedSegmentAudioSha256": "32c597d73c9a296417dbcbe70b1d07f9168aade43d48f9b2633af195faf2eee1",
+          "bytes": 19821
+        },
+        {
+          "speaker": "Sachbearbeiter",
+          "voice": "voice-02",
+          "sourceTextSha256": "af76f04f789940a01bb2b3d986d7762b2bcc398affcf605b375fd3a020348fd8",
+          "characters": 89,
+          "generatedSegmentAudioSha256": "d6874df3d2bc4498c5a392396a67ded0f881b2f1970abc9381eca4c36c724d22",
+          "bytes": 25773
+        },
+        {
+          "speaker": "Bürgerin",
+          "voice": "voice-03",
+          "sourceTextSha256": "77e66f931afb0d9bef24856f77205663a101f94a559f88828a947d2ef5fd1f09",
+          "characters": 54,
+          "generatedSegmentAudioSha256": "940c87039f92c2dca74ecf982d906253f9bf257d520ce3e245d2cba58cd52e6b",
+          "bytes": 16653
+        },
+        {
+          "speaker": "Sachbearbeiter",
+          "voice": "voice-02",
+          "sourceTextSha256": "89e251252e2cd859e03b6e981c393ff9d66bac1aa110f72da8086d6b9253f12e",
+          "characters": 67,
+          "generatedSegmentAudioSha256": "ed5b7f0027ca3ef35e95f0d199cb87e0f861a83c64e11638c9753fe04291b776",
+          "bytes": 18093
+        },
+        {
+          "speaker": "Bürgerin",
+          "voice": "voice-03",
+          "sourceTextSha256": "bba2c5d5f2fb0ec4b48438d3085511d5e546c382aa13040c7e7ef7f1100203cf",
+          "characters": 49,
+          "generatedSegmentAudioSha256": "4eaebdb049599945cc91ecf9619d8f7e5e112c8d9596adc49c650d690b0a2fc3",
+          "bytes": 17229
+        },
+        {
+          "speaker": "Sachbearbeiter",
+          "voice": "voice-02",
+          "sourceTextSha256": "1cd648568fd6b0de5777087b85e6567ce7bbcfe37a97bcf4a084e6029b8b7c6b",
+          "characters": 45,
+          "generatedSegmentAudioSha256": "393b1bb12ce505d9fcbc061a70200ff245bcaed0e063b685abe7ebd19fcd3f76",
+          "bytes": 16749
+        }
+      ]
+    },
+    {
+      "id": "d-b1-ht01",
+      "level": "B1",
+      "file": "/audio/dialog/d-b1-ht01.mp3",
+      "sourceTextSha256": "41bf4afab18522267cb13f35e3ca4e5743dc130ac0f681b011464c5335af72cf",
+      "sourceLineCount": 2,
+      "generatedAudioSha256": "c895bb690ca8e53ca44699fee9606bfe940f92cf33cef9562e7fe6e797ae8675",
+      "bytes": 74349,
+      "voice": "ki-voice-02",
+      "previousAudioSha256": "596f5acb3435ac83327bcfc048db5d4c79397534a351065f570d556dc0a21efd",
+      "previousBytes": 133973,
+      "removedTranscriptSnapshotSha256": "ac17e698188c8425d6361ca0950d1155473a81bb4550e0d2196ec7fb4932bf2a",
+      "removedTranscriptAudioCommit": "bf060b8b1248fb9c12d162d085350f2224380441",
+      "generationSegments": [
+        {
+          "speaker": "Moderator",
+          "voice": "voice-02",
+          "sourceTextSha256": "41bf4afab18522267cb13f35e3ca4e5743dc130ac0f681b011464c5335af72cf",
+          "characters": 304,
+          "generatedSegmentAudioSha256": "c895bb690ca8e53ca44699fee9606bfe940f92cf33cef9562e7fe6e797ae8675",
+          "bytes": 74349
+        }
+      ]
+    },
+    {
+      "id": "d-b1-ht02",
+      "level": "B1",
+      "file": "/audio/dialog/d-b1-ht02.mp3",
+      "sourceTextSha256": "9c26272bcc07e17b2bf0d835386c4b215921d0da183884eafb79cc0271049d2f",
+      "sourceLineCount": 2,
+      "generatedAudioSha256": "7fb87921256b54065b2462698e0df75cfa47922dce648ef07c46f0b2986f6883",
+      "bytes": 78381,
+      "voice": "ki-voice-02",
+      "previousAudioSha256": "719c0ec79105058deed250ad984f9d309bb23861211d5e9dab0c53500e791529",
+      "previousBytes": 128749,
+      "removedTranscriptSnapshotSha256": "6cc8868d64314adda2efb6c8f56cf9fcdc0f3677460e547d60fdff180d17df6f",
+      "removedTranscriptAudioCommit": "bf060b8b1248fb9c12d162d085350f2224380441",
+      "generationSegments": [
+        {
+          "speaker": "Zugführer",
+          "voice": "voice-02",
+          "sourceTextSha256": "9c26272bcc07e17b2bf0d835386c4b215921d0da183884eafb79cc0271049d2f",
+          "characters": 308,
+          "generatedSegmentAudioSha256": "7fb87921256b54065b2462698e0df75cfa47922dce648ef07c46f0b2986f6883",
+          "bytes": 78381
+        }
+      ]
+    },
+    {
+      "id": "d-b2-ht01",
+      "level": "B2",
+      "file": "/audio/dialog/d-b2-ht01.mp3",
+      "sourceTextSha256": "d9e6dfab7ecf6c59e97d93c80d507b6f1d86ff3ea1c92bb9db42aa7a226f91d7",
+      "sourceLineCount": 2,
+      "generatedAudioSha256": "e42560032d9b80dd1d050a3571217f5b55aa4f3186a9296903044d34dd773a66",
+      "bytes": 63789,
+      "voice": "ki-voice-02",
+      "previousAudioSha256": "510e9b25e8e3b45b0148aaa3a873f450bb231664c44f0102a3b7d63fb570aebb",
+      "previousBytes": 133555,
+      "removedTranscriptSnapshotSha256": "9511634b04d9148fd262cc4436d37fa58e8107c03c1c22dfab9ee083e6eb9fc0",
+      "removedTranscriptAudioCommit": "bf060b8b1248fb9c12d162d085350f2224380441",
+      "generationSegments": [
+        {
+          "speaker": "Nachrichtensprecher",
+          "voice": "voice-02",
+          "sourceTextSha256": "d9e6dfab7ecf6c59e97d93c80d507b6f1d86ff3ea1c92bb9db42aa7a226f91d7",
+          "characters": 285,
+          "generatedSegmentAudioSha256": "e42560032d9b80dd1d050a3571217f5b55aa4f3186a9296903044d34dd773a66",
+          "bytes": 63789
+        }
+      ]
+    },
+    {
+      "id": "d-b2-ht02",
+      "level": "B2",
+      "file": "/audio/dialog/d-b2-ht02.mp3",
+      "sourceTextSha256": "f7e3268616db164a54438533ae979c9b39dddb32d7b758cebedb426c1890585f",
+      "sourceLineCount": 2,
+      "generatedAudioSha256": "9d5a6350073607bc52e718ff64fc1c84d9b815779b1e4109ccaa4fe8e92b4e79",
+      "bytes": 69933,
+      "voice": "ki-voice-02",
+      "previousAudioSha256": "577c69566963dc8d8f33cd400f5862fcb9fb1f84faa473a224493f93d106c1aa",
+      "previousBytes": 116628,
+      "removedTranscriptSnapshotSha256": "10cc098eee56ac3dda8d3fcb4f887a68417b033ad16e58a31366f22340bde580",
+      "removedTranscriptAudioCommit": "bf060b8b1248fb9c12d162d085350f2224380441",
+      "generationSegments": [
+        {
+          "speaker": "Anrufbeantworter",
+          "voice": "voice-02",
+          "sourceTextSha256": "f7e3268616db164a54438533ae979c9b39dddb32d7b758cebedb426c1890585f",
+          "characters": 278,
+          "generatedSegmentAudioSha256": "9d5a6350073607bc52e718ff64fc1c84d9b815779b1e4109ccaa4fe8e92b4e79",
+          "bytes": 69933
+        }
+      ]
+    }
+  ],
+  "transcriptSnapshotLedger": {
+    "before": 66,
+    "removed": 5,
+    "after": 61
+  },
+  "validation": {
+    "generationInputWasExactCurrentGermanText": true,
+    "speakerOrderHashGuarded": true,
+    "technicalAudioQc": "pass-1099-of-1099",
+    "technicalAudioQcReport": "docs/audio-qc-all-2026-11-04.json",
+    "humanListening": false,
+    "pronunciationQualityJudged": false,
+    "naturalnessJudged": false,
+    "independentLinguisticSignOff": false,
+    "externalCefrOrExamValidation": false
+  },
+  "claimBoundary": "Programmatic generation provenance plus segment/file byte and hash identity and automated technical QC do not establish that a human heard every word, nor do they judge speaker suitability, pronunciation, prosody, naturalness, pedagogy, CEFR level, or exam suitability."
+}
