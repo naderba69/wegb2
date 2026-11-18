@@ -139,6 +139,13 @@ const batchSpecs: BatchSpec[] = [
     ledgerBefore: 49,
     ledgerAfter: 48,
   },
+  {
+    batch: "PA-040-09",
+    fixturePath: "scripts/fixtures/dialog-audio-refresh-pa040-09.json",
+    ids: ["d-b2-45"],
+    ledgerBefore: 48,
+    ledgerAfter: 47,
+  },
 ];
 const twoSpeakerVoices: Record<string, string[]> = {
   "d-b1-04": ["voice-02", "voice-03", "voice-02", "voice-03", "voice-02"],
@@ -150,6 +157,7 @@ const twoSpeakerVoices: Record<string, string[]> = {
   "d-b1-32": ["voice-03", "voice-02", "voice-03", "voice-02", "voice-03"],
   "d-b2-07": ["voice-02", "voice-04", "voice-02", "voice-04", "voice-02"],
   "d-b2-32": ["voice-03", "voice-02", "voice-03", "voice-02", "voice-03"],
+  "d-b2-45": ["voice-03", "voice-02", "voice-03", "voice-02", "voice-03", "voice-02", "voice-03"],
 };
 const twoSpeakerVoiceLabels: Record<string, string> = {
   "d-b1-04": "ki-voice-02+voice-03",
@@ -161,6 +169,7 @@ const twoSpeakerVoiceLabels: Record<string, string> = {
   "d-b1-32": "ki-voice-02+voice-03",
   "d-b2-07": "ki-voice-02+voice-04",
   "d-b2-32": "ki-voice-02+voice-03",
+  "d-b2-45": "ki-voice-02+voice-03",
 };
 const fixtures = batchSpecs.map((spec) => ({ spec, fixture: readJson<RefreshFixture>(spec.fixturePath) }));
 const dialogues = readJson<Dialogue[]>("content/dialogues.json");
@@ -280,7 +289,7 @@ const finalLedgerCount = batchSpecs.at(-1)?.ledgerAfter ?? -1;
 if (snapshots.items.length > finalLedgerCount
   || snapshots.items.some((entry) => entry.group !== "dialog" || allExpectedSet.has(entry.id))
   || batchSpecs.some((spec, index) => index > 0 && batchSpecs[index - 1].ledgerAfter !== spec.ledgerBefore)) {
-  fail("recording-time transcript snapshot ledger must reach 48 across PA-040-01/02/03/04/05/06/07/08 and may only fall later");
+  fail("recording-time transcript snapshot ledger must reach 47 across PA-040-01/02/03/04/05/06/07/08/09 and may only fall later");
 }
 if (qc.datum !== "2026-11-04" || qc.dateien.length !== 1099
   || qc.anomalienGesamt !== 0 || qc.abdeckung.luecken.length !== 0) {
@@ -293,4 +302,4 @@ if (errors.length > 0) {
   process.exit(1);
 }
 
-console.log("PA-040-01/02/03/04/05/06/07/08 dialogue audio refresh: 23 current-text recordings guarded; snapshot ledger 71 -> 48; technical QC passed; no human listening/pronunciation claim");
+console.log("PA-040-01/02/03/04/05/06/07/08/09 dialogue audio refresh: 24 current-text recordings guarded; snapshot ledger 71 -> 47; technical QC passed; no human listening/pronunciation claim");

@@ -1,0 +1,103 @@
+{
+  "schema": "wegb2-dialog-audio-refresh-batch-v1",
+  "batch": "PA-040-09",
+  "generatedAt": "2026-11-04",
+  "scope": "The shortest remaining documented changed-source dialogue recording, the seven-line B2 urban-mobility dialogue d-b2-45, regenerated programmatically from the exact current German lines in content/dialogues.json. Seven line-level segments alternate user-selected voice-03 for the councilwoman and voice-02 for the citizen, then concatenate in source order. Hashes guard every source segment and resulting file. Technical checks are automated only; no human listening, pronunciation, naturalness, linguistic, municipal-planning, transport-policy, civic-process, environmental, CEFR, Goethe/telc, or exam sign-off is claimed.",
+  "sourcePath": "content/dialogues.json",
+  "sourceLineJoiner": " ",
+  "voices": {
+    "oneSpeaker": "ki-voice-02 (Arena voice-02, de-DE TTS)",
+    "twoSpeaker": "ki-voice-02+voice-03 (Arena de-DE TTS)"
+  },
+  "items": [
+    {
+      "id": "d-b2-45",
+      "level": "B2",
+      "file": "/audio/dialog/d-b2-45.mp3",
+      "sourceTextSha256": "382f96eff7bc5a0059062a634f7a5354fa16dbbb64771f978a40ad82b9caabb3",
+      "sourceLineCount": 7,
+      "generatedAudioSha256": "6c9c10c78f4a485ee0d3248d1b3b8f25715e5a954a75b2743b0fd497f835d891",
+      "bytes": 134043,
+      "voice": "ki-voice-02+voice-03",
+      "previousAudioSha256": "6ddbd74bad411da0bd36b9ae80330a22c701da9ead9bbee102fb0a5763d884f9",
+      "previousBytes": 129069,
+      "removedTranscriptSnapshotSha256": "0146ac09317d69c3ee8b3b9911a4bb7932eabf0e6703b9b9a4e03ffb7b47dba2",
+      "removedTranscriptAudioCommit": "1a34344fc0d670b1b54dae7841c65a694ec28454",
+      "generationSegments": [
+        {
+          "speaker": "Stadträtin",
+          "voice": "voice-03",
+          "sourceTextSha256": "efad00aa298c60f640ae8f9127ac3bd11456b172bdafc2758fafd293450fd0a5",
+          "characters": 58,
+          "generatedSegmentAudioSha256": "65c6fd623f3f4bad566979235c6d6bded2250fa59bede70303af9ec7fff2947f",
+          "bytes": 19629
+        },
+        {
+          "speaker": "Bürger",
+          "voice": "voice-02",
+          "sourceTextSha256": "d80f4bda14d7a671c1e13d7e54804f5e00ea2c027033ec59f148d1cd44bc0d4f",
+          "characters": 30,
+          "generatedSegmentAudioSha256": "e5f5af543f0de77bee7e5fbd1ed326ee2dfee96189fd5a303526ef6a0333b4cb",
+          "bytes": 9933
+        },
+        {
+          "speaker": "Stadträtin",
+          "voice": "voice-03",
+          "sourceTextSha256": "69e7bc1e2d2d23ebe57ba3639b77d4c6c136309d0c13d3391a50f5aa8b8dc935",
+          "characters": 73,
+          "generatedSegmentAudioSha256": "ea1ae369b6fd65a812b9a03093464d9e0b810dc59254553836ccea6b2511d9ea",
+          "bytes": 23181
+        },
+        {
+          "speaker": "Bürger",
+          "voice": "voice-02",
+          "sourceTextSha256": "7445e9d1e4ee40a95885b89b143415170e32ce22885eda0956e291d1e79d9b9b",
+          "characters": 64,
+          "generatedSegmentAudioSha256": "864dbeac91399d5dfa335b2dcaee8866d258782e91f6f3ea64f0c0ee13d8c0a5",
+          "bytes": 20013
+        },
+        {
+          "speaker": "Stadträtin",
+          "voice": "voice-03",
+          "sourceTextSha256": "d59b8b58a0b78501623cb01796163f47aba78facef2b0155d58d1bea2ec34d23",
+          "characters": 69,
+          "generatedSegmentAudioSha256": "a9f3fefd392177a1dc81238dae733cf68064d70b50e387e97f9b7ed473ae838d",
+          "bytes": 21069
+        },
+        {
+          "speaker": "Bürger",
+          "voice": "voice-02",
+          "sourceTextSha256": "1a298d0738273df8ed37acb1be653386df7b7f47b4f0f79fbdf5aa0cfd8cf52b",
+          "characters": 23,
+          "generatedSegmentAudioSha256": "8eb245eb8554eae82d1ea11af56a5b7fb1ec5ee95ff317b69b58e6c0888d583f",
+          "bytes": 7149
+        },
+        {
+          "speaker": "Stadträtin",
+          "voice": "voice-03",
+          "sourceTextSha256": "3963168842d2495a0dd222c0deefb140212d8a8ba1ba49855310de011dff3112",
+          "characters": 137,
+          "generatedSegmentAudioSha256": "d0d9c1ff1547e6614860ff50eeebbc4d40e1edebb9439898ce8022482f874aed",
+          "bytes": 33069
+        }
+      ]
+    }
+  ],
+  "transcriptSnapshotLedger": {
+    "before": 48,
+    "removed": 1,
+    "after": 47
+  },
+  "validation": {
+    "generationInputWasExactCurrentGermanText": true,
+    "speakerOrderHashGuarded": true,
+    "technicalAudioQc": "pass-1099-of-1099",
+    "technicalAudioQcReport": "docs/audio-qc-all-2026-11-04.json",
+    "humanListening": false,
+    "pronunciationQualityJudged": false,
+    "naturalnessJudged": false,
+    "independentLinguisticSignOff": false,
+    "externalCefrOrExamValidation": false
+  },
+  "claimBoundary": "Programmatic generation provenance plus segment/file byte and hash identity and automated technical QC do not establish that a human heard every word, nor do they judge speaker suitability, pronunciation, prosody, naturalness, pedagogy, municipal-planning, transport-policy, civic-process, or environmental validity, CEFR level, or exam suitability."
+}
