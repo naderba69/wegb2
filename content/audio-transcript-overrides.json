@@ -268,14 +268,6 @@
       "sourcePath": "content/dialogues.json"
     },
     {
-      "file": "/audio/dialog/d-b2-49.mp3",
-      "id": "d-b2-49",
-      "group": "dialog",
-      "textDe": "Viele Bürger interessieren sich zwar für Politik, beteiligen sich aber selten aktiv. Aber liegt das nicht an fehlenden Möglichkeiten? Die Möglichkeiten gibt es, jedoch fehlt oft das Vertrauen. Die Parteien behaupten dagegen, die Bürger seien politikverdrossen. Diese Diagnose ist verkürzt, denn viele wollen mitgestalten, finden aber keinen Zugang. Was kann die Stadt konkret tun?",
-      "audioCommit": "1a34344fc0d670b1b54dae7841c65a694ec28454",
-      "sourcePath": "content/dialogues.json"
-    },
-    {
       "file": "/audio/dialog/dlg-b1-berufsberatung.mp3",
       "id": "dlg-b1-berufsberatung",
       "group": "dialog",

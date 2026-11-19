@@ -1,0 +1,104 @@
+{
+  "schema": "wegb2-dialog-audio-refresh-batch-v1",
+  "batch": "PA-040-17",
+  "generatedAt": "2026-11-04",
+  "scope": "The shortest remaining documented changed-source dialogue recording, the seven-line B2 democracy-and-participation dialogue d-b2-49, regenerated programmatically from the exact current German lines in content/dialogues.json. Seven line-level segments alternate voice-19 for the Bürgermeister and voice-20 for the Bürgerin, then concatenate in source order. Hashes guard every source segment and resulting file. Technical checks are automated only; no human listening, pronunciation, naturalness, linguistic, political-science, civic-participation, or municipal-governance sign-off is claimed.",
+  "sourcePath": "content/dialogues.json",
+  "sourceLineJoiner": " ",
+  "voices": {
+    "oneSpeaker": "ki-voice-02 (Arena voice-02, de-DE TTS)",
+    "twoSpeaker": "ki-voice-02+voice-03 (Arena de-DE TTS)",
+    "additionalTwoSpeaker": "ki-voice-19+voice-20 (Arena voices voice-19 masculine for the Bürgermeister and voice-20 feminine for the Bürgerin in d-b2-49, each separately selected by the user via Arena auditions, de-DE TTS)"
+  },
+  "items": [
+    {
+      "id": "d-b2-49",
+      "level": "B2",
+      "file": "/audio/dialog/d-b2-49.mp3",
+      "sourceTextSha256": "4f77f347af5ff0f6d2fec0c05dd2dd82ad781ff51e65d8999d13027491b2eec7",
+      "sourceLineCount": 7,
+      "generatedAudioSha256": "6287dcd973a00b9f3fbfc68dac0c035e07ebe1122bd88595eb99c028a1ccb96e",
+      "bytes": 149019,
+      "voice": "ki-voice-19+voice-20",
+      "previousAudioSha256": "c68cbd94d30d95161e189eb50152a41cd6b48708f66877d8580728b4def2eb53",
+      "previousBytes": 136749,
+      "removedTranscriptSnapshotSha256": "a178e362802823638b1d533bdb49021e1b3f5c2aa982f471d52cb25234bacd02",
+      "removedTranscriptAudioCommit": "1a34344fc0d670b1b54dae7841c65a694ec28454",
+      "generationSegments": [
+        {
+          "speaker": "Bürgermeister",
+          "voice": "voice-19",
+          "sourceTextSha256": "616a251dd248b6f5b6d2c1be8ae133b05346ab9f0763cf9cbb57c7d1d1715457",
+          "characters": 84,
+          "generatedSegmentAudioSha256": "84265d1fab40237c4b3555ea6f4cac1d6fa51f9ed169b4a9b3d42179d8ebe7d8",
+          "bytes": 23853
+        },
+        {
+          "speaker": "Bürgerin",
+          "voice": "voice-20",
+          "sourceTextSha256": "a0d1f8af55e986456c727631cb87f43ffd367f0c396081f03d1d3fe511ca1046",
+          "characters": 48,
+          "generatedSegmentAudioSha256": "97c063c8f4dc7eca38c3a32d6e0f41ebcf42c55a0188f122ff156b5e9a2d991f",
+          "bytes": 14061
+        },
+        {
+          "speaker": "Bürgermeister",
+          "voice": "voice-19",
+          "sourceTextSha256": "51e41775192fa52a4af7226dcaf7fc40565bf7498c747669ed6638e8029f349f",
+          "characters": 58,
+          "generatedSegmentAudioSha256": "d709be77cbf5a4b638707bfc21e9eca16f61f629827dd0a443b48c3e060d8f98",
+          "bytes": 18189
+        },
+        {
+          "speaker": "Bürgerin",
+          "voice": "voice-20",
+          "sourceTextSha256": "b78a8a2f67f02dffe570d83be724efdcce830cd95da5f9eb6fd87071c98d56f8",
+          "characters": 67,
+          "generatedSegmentAudioSha256": "dc346f9e8bb3458e3b585b22b34011d2623f531730061e479b17d414c2120a1d",
+          "bytes": 18093
+        },
+        {
+          "speaker": "Bürgermeister",
+          "voice": "voice-19",
+          "sourceTextSha256": "d616b04dd2feedc5b666e75aba6d806977cb129bf6b13d94c9ac41c9281fd524",
+          "characters": 87,
+          "generatedSegmentAudioSha256": "b204e6bfc6ca58ea37804a4ecf58523a6b3c9b58f2468948a0ab53aec7524d82",
+          "bytes": 25293
+        },
+        {
+          "speaker": "Bürgerin",
+          "voice": "voice-20",
+          "sourceTextSha256": "7f82f91d1d2eb5d1fe475eecda7a596366a4591c0ffc14d36582eb7977ecbe73",
+          "characters": 31,
+          "generatedSegmentAudioSha256": "5a224eadda5009af4992cc53c4f16b3ffe1bd107eb37017dae479bccb63e9e5f",
+          "bytes": 10989
+        },
+        {
+          "speaker": "Bürgermeister",
+          "voice": "voice-19",
+          "sourceTextSha256": "1976c63e6adef32a7ae1eea557b726b74575f0494c895e5301edf4ece7af799b",
+          "characters": 137,
+          "generatedSegmentAudioSha256": "308a1c8bcd71c96a7888bfa8737edd7dd88c0663bdb04b1cbfd2ee750b65c78f",
+          "bytes": 38541
+        }
+      ]
+    }
+  ],
+  "transcriptSnapshotLedger": {
+    "before": 40,
+    "removed": 1,
+    "after": 39
+  },
+  "validation": {
+    "generationInputWasExactCurrentGermanText": true,
+    "speakerOrderHashGuarded": true,
+    "technicalAudioQc": "pass-1099-of-1099",
+    "technicalAudioQcReport": "docs/audio-qc-all-2026-11-04.json",
+    "humanListening": false,
+    "pronunciationQualityJudged": false,
+    "naturalnessJudged": false,
+    "independentLinguisticSignOff": false,
+    "externalCefrOrExamValidation": false
+  },
+  "claimBoundary": "Programmatic generation provenance plus segment/file byte and hash identity and automated technical QC do not establish that a human heard every word, nor do they judge speaker suitability, pronunciation, prosody, naturalness, pedagogy, political-science, civic-participation, or municipal-governance validity, CEFR level, or exam suitability."
+}
