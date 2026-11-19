@@ -1,0 +1,112 @@
+{
+  "schema": "wegb2-dialog-audio-refresh-batch-v1",
+  "batch": "PA-040-16",
+  "generatedAt": "2026-11-04",
+  "scope": "The shortest remaining documented changed-source dialogue recording, the eight-line B1 apartment-viewing dialogue d-b1-11, regenerated programmatically from the exact current German lines in content/dialogues.json. Eight line-level segments alternate voice-17 for the Frau Bähr and voice-18 for the Nadia, then concatenate in source order. Hashes guard every source segment and resulting file. Technical checks are automated only; no human listening, pronunciation, naturalness, linguistic, legal, tenancy-law, housing-application, or rental-procedure sign-off is claimed.",
+  "sourcePath": "content/dialogues.json",
+  "sourceLineJoiner": " ",
+  "voices": {
+    "oneSpeaker": "ki-voice-02 (Arena voice-02, de-DE TTS)",
+    "twoSpeaker": "ki-voice-02+voice-03 (Arena de-DE TTS)",
+    "additionalTwoSpeaker": "voice-17+voice-18 (Arena voices voice-17 feminine for the Frau Bähr and voice-18 feminine for the Nadia in d-b1-11, each separately selected by the user via Arena auditions, de-DE TTS; second historically non-KI dialogue moved to explicit dual real-voice labeling)"
+  },
+  "items": [
+    {
+      "id": "d-b1-11",
+      "level": "B1",
+      "file": "/audio/dialog/d-b1-11.mp3",
+      "sourceTextSha256": "b1ff75111cfa66acbc792a8347a930bac849bf5037b93649a82b494f52e988c6",
+      "sourceLineCount": 8,
+      "generatedAudioSha256": "dee2d794e5b2a2eb697c2c0c911def56babe6028c982e8b511b504c4d3077ee6",
+      "bytes": 154152,
+      "voice": "voice-17+voice-18",
+      "previousAudioSha256": "fbc60f97536282408136224cd7e7ce0c059c30637b6ef5a206980a73b193e924",
+      "previousBytes": 237540,
+      "removedTranscriptSnapshotSha256": "aacba39ba717072d45e230a021bf845e3ab2b15a035613664c04a0f32adf2a7c",
+      "removedTranscriptAudioCommit": "bbdf2255c4b84aa3e7938d5f3af1e0c7c1c7d053",
+      "generationSegments": [
+        {
+          "speaker": "Frau Bähr",
+          "voice": "voice-17",
+          "sourceTextSha256": "1a4faa5aece5d265e34adf99e8353178d9202fcec62d99593b1712e31e76fe6e",
+          "characters": 58,
+          "generatedSegmentAudioSha256": "a245b6e66c92f09827897f4fd23526d8bea0a9e6ed9fb139b427bc3e0152c976",
+          "bytes": 15213
+        },
+        {
+          "speaker": "Nadia",
+          "voice": "voice-18",
+          "sourceTextSha256": "6270bba2de392c8178143ca98a56cbc3e222df4cf8ec22ebdf2a6e5476bbc0b3",
+          "characters": 63,
+          "generatedSegmentAudioSha256": "f72d767532e361c87578491696cfdf37f22cc0cdea2f45f2212ce07e31ac894f",
+          "bytes": 26061
+        },
+        {
+          "speaker": "Frau Bähr",
+          "voice": "voice-17",
+          "sourceTextSha256": "657d6cf2195b20527d38d28b959ce799f6e8512cc19112f643f09eb1e24c5833",
+          "characters": 47,
+          "generatedSegmentAudioSha256": "d488fca0fe86248c075a60e721e247dc20d279dddb95a90a167fb7c0a76d2bd8",
+          "bytes": 12813
+        },
+        {
+          "speaker": "Nadia",
+          "voice": "voice-18",
+          "sourceTextSha256": "a36e4e27e0e9ac6113ea2bc45929bae0c911daf344b6dc8a7cdae5383bed4c19",
+          "characters": 61,
+          "generatedSegmentAudioSha256": "ceff6e686893107a547dccfd39c6e34672fc8cd0650c1159d53d390d40a90a0a",
+          "bytes": 19821
+        },
+        {
+          "speaker": "Frau Bähr",
+          "voice": "voice-17",
+          "sourceTextSha256": "eefaa4368660c0ac25b5f7d00b796030f02e70feae6a937a9c294aef9ff1d751",
+          "characters": 46,
+          "generatedSegmentAudioSha256": "a9a00131330fe59ee70e3af0402c79e600779943b97ade6fa8cc1df9ef6ebdeb",
+          "bytes": 14541
+        },
+        {
+          "speaker": "Nadia",
+          "voice": "voice-18",
+          "sourceTextSha256": "1b835ac3337d8c1069bab655c955949d3c745be8fc0bc46992f3afc4fa1b5d26",
+          "characters": 50,
+          "generatedSegmentAudioSha256": "6b0bef225fc7feb6b6622d31131f4a267ca6b6b3b5b1b81798db264638150590",
+          "bytes": 17901
+        },
+        {
+          "speaker": "Frau Bähr",
+          "voice": "voice-17",
+          "sourceTextSha256": "99e537c42321fe0bc7942dff10e8a98cc7eff991a1528e9bb8d94b0f0e92398f",
+          "characters": 60,
+          "generatedSegmentAudioSha256": "b643dab17b83561f025d0e3f1c2f3bb81701fd36579850c89b4a9077cf6152ac",
+          "bytes": 17901
+        },
+        {
+          "speaker": "Nadia",
+          "voice": "voice-18",
+          "sourceTextSha256": "555309fae729ca6be00e8a97525adae664cb52c4b6eb33223b11f07bd8cf191b",
+          "characters": 114,
+          "generatedSegmentAudioSha256": "3584354095ef5930db818969d1cefa0da1d7c3226efee5da182179dafb368055",
+          "bytes": 29901
+        }
+      ]
+    }
+  ],
+  "transcriptSnapshotLedger": {
+    "before": 41,
+    "removed": 1,
+    "after": 40
+  },
+  "validation": {
+    "generationInputWasExactCurrentGermanText": true,
+    "speakerOrderHashGuarded": true,
+    "technicalAudioQc": "pass-1099-of-1099",
+    "technicalAudioQcReport": "docs/audio-qc-all-2026-11-04.json",
+    "humanListening": false,
+    "pronunciationQualityJudged": false,
+    "naturalnessJudged": false,
+    "independentLinguisticSignOff": false,
+    "externalCefrOrExamValidation": false
+  },
+  "claimBoundary": "Programmatic generation provenance plus segment/file byte and hash identity and automated technical QC do not establish that a human heard every word, nor do they judge speaker suitability, pronunciation, prosody, naturalness, pedagogy, legal, tenancy-law, housing-application, or rental-procedure validity, CEFR level, or exam suitability."
+}
