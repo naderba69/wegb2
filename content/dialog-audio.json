@@ -1396,10 +1396,10 @@
     {
       "id": "d-b2-48",
       "file": "/audio/dialog/d-b2-48.mp3",
-      "bytes": 133869,
-      "voice": "ki-f1",
+      "bytes": 128187,
+      "voice": "ki-voice-09+voice-10",
       "level": "B2",
-      "stimmen": 1
+      "stimmen": 2
     },
     {
       "id": "d-b2-49",
