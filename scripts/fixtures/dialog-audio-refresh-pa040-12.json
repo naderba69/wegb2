@@ -1,0 +1,104 @@
+{
+  "schema": "wegb2-dialog-audio-refresh-batch-v1",
+  "batch": "PA-040-12",
+  "generatedAt": "2026-11-04",
+  "scope": "The shortest remaining documented changed-source dialogue recording, the seven-line B2 volunteering-and-society dialogue d-b2-48, regenerated programmatically from the exact current German lines in content/dialogues.json. Seven line-level segments alternate voice-09 for the Vorsitzende and voice-10 for the Mitglied, then concatenate in source order. Hashes guard every source segment and resulting file. Technical checks are automated only; no human listening, pronunciation, naturalness, linguistic, volunteering-sector, municipal, or association sign-off is claimed.",
+  "sourcePath": "content/dialogues.json",
+  "sourceLineJoiner": " ",
+  "voices": {
+    "oneSpeaker": "ki-voice-02 (Arena voice-02, de-DE TTS)",
+    "twoSpeaker": "ki-voice-02+voice-03 (Arena de-DE TTS)",
+    "additionalTwoSpeaker": "ki-voice-09+voice-10 (Arena voices voice-09 feminine for the Vorsitzende and voice-10 masculine for the Mitglied in d-b2-48, each separately selected by the user via Arena auditions, de-DE TTS)"
+  },
+  "items": [
+    {
+      "id": "d-b2-48",
+      "level": "B2",
+      "file": "/audio/dialog/d-b2-48.mp3",
+      "sourceTextSha256": "cb62cbcc26d5816be5f34c95b49154db89b5e786f1875abdf5a37e29bde9cd4b",
+      "sourceLineCount": 7,
+      "generatedAudioSha256": "5e92db72edcfca9f135f74d1be4381125d9b1c78a34876e90be674a3a02d0e21",
+      "bytes": 128187,
+      "voice": "ki-voice-09+voice-10",
+      "previousAudioSha256": "40905cd59b374a1df69744f14baedaeb6356e0d2c9d82f05893cfe739d9bc24f",
+      "previousBytes": 133869,
+      "removedTranscriptSnapshotSha256": "05a7b50d587f1403160d1314474be1cab76f0fbb8e2ae21ff8b2365447002235",
+      "removedTranscriptAudioCommit": "1a34344fc0d670b1b54dae7841c65a694ec28454",
+      "generationSegments": [
+        {
+          "speaker": "Vorsitzende",
+          "voice": "voice-09",
+          "sourceTextSha256": "f10a3c7f186b382dd2acd4fa9370c7325aa54379c2ebeb43fd78d6e5faf14571",
+          "characters": 72,
+          "generatedSegmentAudioSha256": "5c92eb9e40a7055526574549369fa4d0e1125301ad11fe7f35350e5ff0edff62",
+          "bytes": 20589
+        },
+        {
+          "speaker": "Mitglied",
+          "voice": "voice-10",
+          "sourceTextSha256": "1a6f63741c2005195eca5adfff610c6c41817016472a88fe6ad8dd8d046104f4",
+          "characters": 34,
+          "generatedSegmentAudioSha256": "8f332e0d6c6c27a7f6eeee34192a26d75cade5baace70bdae784e1f4239dde09",
+          "bytes": 8397
+        },
+        {
+          "speaker": "Vorsitzende",
+          "voice": "voice-09",
+          "sourceTextSha256": "da2077a48a189b7d8f4850b50f51ce2fe900489f4d9fdc65395b3842c52ff680",
+          "characters": 62,
+          "generatedSegmentAudioSha256": "8b578cc55bddfdb661a02c0679e66933ba6bef38d571f3055b3562930b36e0de",
+          "bytes": 18573
+        },
+        {
+          "speaker": "Mitglied",
+          "voice": "voice-10",
+          "sourceTextSha256": "d62cbc12395cf4441767122062e30a5c3f3371d170a6d8ee4d1a798f6935f58a",
+          "characters": 52,
+          "generatedSegmentAudioSha256": "08e288896ded7929dee092a759c7d3e50a181e2fa66adad184af5830f33d7ecc",
+          "bytes": 13293
+        },
+        {
+          "speaker": "Vorsitzende",
+          "voice": "voice-09",
+          "sourceTextSha256": "c55eb9f999f11b112e45b96be17879649430ba8c6eb0a21450d5518ab7de275b",
+          "characters": 75,
+          "generatedSegmentAudioSha256": "af081b60132224e5af80e408ef9d2badf9e02932d911e229a480e6e65c8017c6",
+          "bytes": 22221
+        },
+        {
+          "speaker": "Mitglied",
+          "voice": "voice-10",
+          "sourceTextSha256": "15d8aa100daa013995486f9dc9dd6230d43572fdff9b5b1a69877c6700f946e8",
+          "characters": 38,
+          "generatedSegmentAudioSha256": "d78f1a7bf333a57d1166c28df4df620b5c8811a1323c33e7147eadf795542354",
+          "bytes": 7533
+        },
+        {
+          "speaker": "Vorsitzende",
+          "voice": "voice-09",
+          "sourceTextSha256": "36087104cf7c95cdc18e0a40dfa34fab2fe52a5733ba425c2672dd253e7b5a02",
+          "characters": 138,
+          "generatedSegmentAudioSha256": "11c0aa4af3819fab0dba2583b32e0f2f09f29c77a48611127e229a102e427164",
+          "bytes": 37581
+        }
+      ]
+    }
+  ],
+  "transcriptSnapshotLedger": {
+    "before": 45,
+    "removed": 1,
+    "after": 44
+  },
+  "validation": {
+    "generationInputWasExactCurrentGermanText": true,
+    "speakerOrderHashGuarded": true,
+    "technicalAudioQc": "pass-1099-of-1099",
+    "technicalAudioQcReport": "docs/audio-qc-all-2026-11-04.json",
+    "humanListening": false,
+    "pronunciationQualityJudged": false,
+    "naturalnessJudged": false,
+    "independentLinguisticSignOff": false,
+    "externalCefrOrExamValidation": false
+  },
+  "claimBoundary": "Programmatic generation provenance plus segment/file byte and hash identity and automated technical QC do not establish that a human heard every word, nor do they judge speaker suitability, pronunciation, prosody, naturalness, pedagogy, volunteering-sector, municipal, or association validity, CEFR level, or exam suitability."
+}
