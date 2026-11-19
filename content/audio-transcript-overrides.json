@@ -276,14 +276,6 @@
       "sourcePath": "content/dialogues.json"
     },
     {
-      "file": "/audio/dialog/d-b2-47.mp3",
-      "id": "d-b2-47",
-      "group": "dialog",
-      "textDe": "Viele Studierende nutzen zwar KI-Tools, verstehen aber die Grundlagen kaum. Aber helfen die Tools nicht beim Lernen? Sie helfen teilweise, jedoch ersetzen sie nicht das eigene Denken. Die Hochschulen behaupten dagegen, die Nutzung sei bereits geregelt. Diese Regelung ist lückenhaft, denn die Praxis entwickelt sich schneller als die Regeln. Was empfehlen Sie uns?",
-      "audioCommit": "1a34344fc0d670b1b54dae7841c65a694ec28454",
-      "sourcePath": "content/dialogues.json"
-    },
-    {
       "file": "/audio/dialog/d-b2-49.mp3",
       "id": "d-b2-49",
       "group": "dialog",
