@@ -1356,10 +1356,10 @@
     {
       "id": "d-b2-43",
       "file": "/audio/dialog/d-b2-43.mp3",
-      "bytes": 93453,
-      "voice": "ki-m1",
+      "bytes": 126171,
+      "voice": "ki-voice-11+voice-12",
       "level": "B2",
-      "stimmen": 1
+      "stimmen": 2
     },
     {
       "id": "d-b2-44",

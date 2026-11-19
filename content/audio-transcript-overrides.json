@@ -276,14 +276,6 @@
       "sourcePath": "content/dialogues.json"
     },
     {
-      "file": "/audio/dialog/d-b2-43.mp3",
-      "id": "d-b2-43",
-      "group": "dialog",
-      "textDe": "Viele Leser fühlen sich zwar informiert, sind aber eigentlich überfordert. Aber ist das nicht ein Widerspruch? Die Menge ist riesig, jedoch fehlt oft der Überblick. Die Verlage behaupten dagegen, die Leser wollten nur Unterhaltung. Diese Behauptung ist verkürzt, denn Studien zeigen auch Interesse an Tiefe. Wie sollten wir darauf reagieren?",
-      "audioCommit": "1a34344fc0d670b1b54dae7841c65a694ec28454",
-      "sourcePath": "content/dialogues.json"
-    },
-    {
       "file": "/audio/dialog/d-b2-46.mp3",
       "id": "d-b2-46",
       "group": "dialog",
