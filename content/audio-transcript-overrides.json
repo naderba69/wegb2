@@ -44,14 +44,6 @@
       "sourcePath": "content/dialogues.json"
     },
     {
-      "file": "/audio/dialog/d-b1-17.mp3",
-      "id": "d-b1-17",
-      "group": "dialog",
-      "textDe": "Willkommen — wie steht es um unseren Lesetag? Die Leseecke ist fertig; für die Bibliothek fehlt ein Sponsor. Eltern können auch beim Vorlesen helfen. Ich melde mich: einmal monatlich, samstags vor zehn. Die Abschlussfeier planen wir als Arbeitsgruppe am Freitag. Freitag passt erst nach siebzehn — mein Dienst beginnt früher. Wer lädt unsere Partnerschule ein? Die Einladung geht raus; sie meldet ihre Auftrittskinder an.",
-      "audioCommit": "bbdf2255c4b84aa3e7938d5f3af1e0c7c1c7d053",
-      "sourcePath": "content/dialogues.json"
-    },
-    {
       "file": "/audio/dialog/d-b1-18.mp3",
       "id": "d-b1-18",
       "group": "dialog",
