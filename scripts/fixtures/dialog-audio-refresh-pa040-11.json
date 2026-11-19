@@ -1,0 +1,104 @@
+{
+  "schema": "wegb2-dialog-audio-refresh-batch-v1",
+  "batch": "PA-040-11",
+  "generatedAt": "2026-11-04",
+  "scope": "The shortest remaining documented changed-source dialogue recording, the seven-line B2 integration-and-language dialogue d-b2-44, regenerated programmatically from the exact current German lines in content/dialogues.json. Seven line-level segments alternate voice-07 for the Lehrerin and voice-08 for the Teilnehmer, then concatenate in source order. Hashes guard every source segment and resulting file. Technical checks are automated only; no human listening, pronunciation, naturalness, linguistic, integration-policy, authority, or education sign-off is claimed.",
+  "sourcePath": "content/dialogues.json",
+  "sourceLineJoiner": " ",
+  "voices": {
+    "oneSpeaker": "ki-voice-02 (Arena voice-02, de-DE TTS)",
+    "twoSpeaker": "ki-voice-02+voice-03 (Arena de-DE TTS)",
+    "additionalTwoSpeaker": "ki-voice-07+voice-08 (Arena voices voice-07 feminine for the Lehrerin and voice-08 masculine for the Teilnehmer in d-b2-44, each separately selected by the user via Arena auditions, de-DE TTS)"
+  },
+  "items": [
+    {
+      "id": "d-b2-44",
+      "level": "B2",
+      "file": "/audio/dialog/d-b2-44.mp3",
+      "sourceTextSha256": "3c1dc971f0d0f1d6641a6cdfc8c7b5bc67517fa97245f176f951393bd1b32a4f",
+      "sourceLineCount": 7,
+      "generatedAudioSha256": "3f61acfc9dd94a1d1b421be56468de93634dd22803513ac460cd551ec9982cd5",
+      "bytes": 135483,
+      "voice": "ki-voice-07+voice-08",
+      "previousAudioSha256": "143946a2b256db3b4b2dd1afd453f8f0dbb2dc123d857d0030a17eaf064e4806",
+      "previousBytes": 132333,
+      "removedTranscriptSnapshotSha256": "b8ecd0cb8ade03d1e3eeeff4711135ba399a875e12b27af5d752680ca18ae5a1",
+      "removedTranscriptAudioCommit": "1a34344fc0d670b1b54dae7841c65a694ec28454",
+      "generationSegments": [
+        {
+          "speaker": "Lehrerin",
+          "voice": "voice-07",
+          "sourceTextSha256": "2ae9447145bdbd7564e77ce3e615b97756d92e0638bca6b4027afd77589d45b9",
+          "characters": 82,
+          "generatedSegmentAudioSha256": "fe3d4cebff69b62a0b936489da0467e6783703a26763776cadf69b22f96f58cc",
+          "bytes": 24141
+        },
+        {
+          "speaker": "Teilnehmer",
+          "voice": "voice-08",
+          "sourceTextSha256": "0291b9ed77edddff987d3b5815636768d05d81c9a0dafd9340ee796d46686d14",
+          "characters": 36,
+          "generatedSegmentAudioSha256": "71fc5299a7d3afabf11b2ed345c94102e9784e7b59b22983b3bb80aeea87c76b",
+          "bytes": 12429
+        },
+        {
+          "speaker": "Lehrerin",
+          "voice": "voice-07",
+          "sourceTextSha256": "b7f9dae89505b82d2e4cc3cb6a9a71a7578584f39a26a50a508771f160b81053",
+          "characters": 65,
+          "generatedSegmentAudioSha256": "795c83d2d5e23ad4d97919cf2fa02c1cb42a0f233c630b10355aade44fb46bf8",
+          "bytes": 17901
+        },
+        {
+          "speaker": "Teilnehmer",
+          "voice": "voice-08",
+          "sourceTextSha256": "234b0cbbe729e7da00168ad0eab3517c7dfefdaec829427b935ca7452a19dcb8",
+          "characters": 55,
+          "generatedSegmentAudioSha256": "9d6eb989bb7d3acc528b62482d1e201e64d1abd719f2d72022263629581a3ad7",
+          "bytes": 16173
+        },
+        {
+          "speaker": "Lehrerin",
+          "voice": "voice-07",
+          "sourceTextSha256": "9d22519808fcefd4ad97f6983d467a42eccdef64b9906151928c4edb07d79694",
+          "characters": 65,
+          "generatedSegmentAudioSha256": "31e61e25f1c6f29df9e2fbf179ae499cfc5402e0a9e8600ee793988dfe4b0780",
+          "bytes": 21357
+        },
+        {
+          "speaker": "Teilnehmer",
+          "voice": "voice-08",
+          "sourceTextSha256": "a47b3285638b41a546d66d35ab8911310757eee4b01db3ec48074a72d5d2dc93",
+          "characters": 26,
+          "generatedSegmentAudioSha256": "0f9d7b6b77fa3f01621e388268de305a8bcc8a31109fd8fa7ee67afc66dc3f90",
+          "bytes": 9453
+        },
+        {
+          "speaker": "Lehrerin",
+          "voice": "voice-07",
+          "sourceTextSha256": "db74afafdfd75eb811f1a3e4764d56330956f95e3d28beba456107271922d990",
+          "characters": 139,
+          "generatedSegmentAudioSha256": "af164845f3f05f953a86f5df1d04e7ed4dfc59d278c71365f889259139098454",
+          "bytes": 34029
+        }
+      ]
+    }
+  ],
+  "transcriptSnapshotLedger": {
+    "before": 46,
+    "removed": 1,
+    "after": 45
+  },
+  "validation": {
+    "generationInputWasExactCurrentGermanText": true,
+    "speakerOrderHashGuarded": true,
+    "technicalAudioQc": "pass-1099-of-1099",
+    "technicalAudioQcReport": "docs/audio-qc-all-2026-11-04.json",
+    "humanListening": false,
+    "pronunciationQualityJudged": false,
+    "naturalnessJudged": false,
+    "independentLinguisticSignOff": false,
+    "externalCefrOrExamValidation": false
+  },
+  "claimBoundary": "Programmatic generation provenance plus segment/file byte and hash identity and automated technical QC do not establish that a human heard every word, nor do they judge speaker suitability, pronunciation, prosody, naturalness, pedagogy, integration-policy, authority, education, or counseling validity, CEFR level, or exam suitability."
+}
