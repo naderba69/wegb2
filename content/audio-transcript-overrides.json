@@ -12,14 +12,6 @@
       "sourcePath": "content/dialogues.json"
     },
     {
-      "file": "/audio/dialog/d-b1-11.mp3",
-      "id": "d-b1-11",
-      "group": "dialog",
-      "textDe": "Danke für den Termin — die Anzeige klang vielversprechend. Gern. Die Küche ist möbliert: Herd, Spüle und Schränke bleiben. Sind Wasser und Heizung in der Miete enthalten? Nein — Kaltmiete vierhundertfünfzig, Nebenkosten kommen dazu. Die Wohnung wäre perfekt — wann wird sie frei? Zum Ersten. Ich brauche Selbstauskunft und Schufa. Die Unterlagen kommen bis morgen per Mail — und die Kaution? Zwei Monatsmieten, wie immer. Herzlich willkommen, wenn alles passt.",
-      "audioCommit": "bbdf2255c4b84aa3e7938d5f3af1e0c7c1c7d053",
-      "sourcePath": "content/dialogues.json"
-    },
-    {
       "file": "/audio/dialog/d-b1-12.mp3",
       "id": "d-b1-12",
       "group": "dialog",
