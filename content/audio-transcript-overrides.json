@@ -276,14 +276,6 @@
       "sourcePath": "content/dialogues.json"
     },
     {
-      "file": "/audio/dialog/d-b2-46.mp3",
-      "id": "d-b2-46",
-      "group": "dialog",
-      "textDe": "Viele Firmen bieten zwar Homeoffice an, erwarten aber ständige Erreichbarkeit. Aber ist das nicht ein Widerspruch? Genau, deshalb ist das Ergebnis oft Stress, nicht mehr Freiheit. Die Arbeitgeber behaupten dagegen, die Flexibilität sei ein Vorteil. Diese Flexibilität ist oft einseitig, denn die Beschäftigten tragen das Risiko. Was wäre eine faire Lösung?",
-      "audioCommit": "1a34344fc0d670b1b54dae7841c65a694ec28454",
-      "sourcePath": "content/dialogues.json"
-    },
-    {
       "file": "/audio/dialog/d-b2-47.mp3",
       "id": "d-b2-47",
       "group": "dialog",
