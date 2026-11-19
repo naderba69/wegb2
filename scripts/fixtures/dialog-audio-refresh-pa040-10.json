@@ -1,0 +1,112 @@
+{
+  "schema": "wegb2-dialog-audio-refresh-batch-v1",
+  "batch": "PA-040-10",
+  "generatedAt": "2026-11-04",
+  "scope": "The shortest remaining documented changed-source dialogue recording, the eight-line B1 school reading-day dialogue d-b1-17, regenerated programmatically from the exact current German lines in content/dialogues.json. Eight line-level segments alternate voice-05 for Lehrerin Kern and voice-06 for Selim, then concatenate in source order. Hashes guard every source segment and resulting file. Technical checks are automated only; no human listening, pronunciation, naturalness, linguistic, school-event, parent-involvement, volunteering, CEFR, Goethe/telc, or exam sign-off is claimed.",
+  "sourcePath": "content/dialogues.json",
+  "sourceLineJoiner": " ",
+  "voices": {
+    "oneSpeaker": "ki-voice-02 (Arena voice-02, de-DE TTS)",
+    "twoSpeaker": "ki-voice-02+voice-03 (Arena de-DE TTS)",
+    "additionalTwoSpeaker": "ki-voice-05+voice-06 (Arena voices voice-05 feminine for Lehrerin Kern and voice-06 masculine for Selim, each separately selected by the user via Arena auditions, de-DE TTS)"
+  },
+  "items": [
+    {
+      "id": "d-b1-17",
+      "level": "B1",
+      "file": "/audio/dialog/d-b1-17.mp3",
+      "sourceTextSha256": "e61e0b47c1f92991ac6424268ea4b46e656d7919b7c5c9b8aa6459defef4baf0",
+      "sourceLineCount": 8,
+      "generatedAudioSha256": "c6d9ad42024e9ed650b37317f79b3deab916780b873fe00d80fb739b98fc7a0e",
+      "bytes": 124872,
+      "voice": "ki-voice-05+voice-06",
+      "previousAudioSha256": "e044df897de4d05e2556349e8b2d3b0f50ef92c96718329d725ee441f8ed04db",
+      "previousBytes": 204941,
+      "removedTranscriptSnapshotSha256": "9f1f065653124aa46de30af8e452b35f08c51b4244d6b81ff207899c5e489337",
+      "removedTranscriptAudioCommit": "bbdf2255c4b84aa3e7938d5f3af1e0c7c1c7d053",
+      "generationSegments": [
+        {
+          "speaker": "Lehrerin Kern",
+          "voice": "voice-05",
+          "sourceTextSha256": "366adcd3069e07022227fa19bd4bd4091cd2a958a512acd68f8c358d70e6fd65",
+          "characters": 45,
+          "generatedSegmentAudioSha256": "bae45a19d29068aab3bdddd3e64f8cc9a5952c85a31174615ab0ea9b106e5f26",
+          "bytes": 11373
+        },
+        {
+          "speaker": "Selim",
+          "voice": "voice-06",
+          "sourceTextSha256": "f41f070a7a33bbe823feaf9cdb78d99f1f2ac47d9e4e05afaff7acd3220ef17e",
+          "characters": 62,
+          "generatedSegmentAudioSha256": "0af7b7ccb440243feda8ac504ce0c76afe72c9f0c8a828e41ac9fa90d7aeaa6a",
+          "bytes": 17325
+        },
+        {
+          "speaker": "Lehrerin Kern",
+          "voice": "voice-05",
+          "sourceTextSha256": "362210237bb0e7ff47ff439c87bed4b5ebc56e160adf56887aed0b8d3a9f178c",
+          "characters": 40,
+          "generatedSegmentAudioSha256": "6349e9c18257c4e0ea6b5be2de5811041044420ea9eadeaaad4b5d8e20c88ddf",
+          "bytes": 9069
+        },
+        {
+          "speaker": "Selim",
+          "voice": "voice-06",
+          "sourceTextSha256": "d0795752a7648e6f8ea2dd03b227269b596f595b2d6bd1fa4eedc525eef9206d",
+          "characters": 52,
+          "generatedSegmentAudioSha256": "b4237159a12489d11e1fbea668090a079e0ff6ecf512363875d39782a1208df2",
+          "bytes": 16941
+        },
+        {
+          "speaker": "Lehrerin Kern",
+          "voice": "voice-05",
+          "sourceTextSha256": "e740196e9e828b080780861979e7c2056520373a9e19a45bdc4f0a860f5e4044",
+          "characters": 59,
+          "generatedSegmentAudioSha256": "3a4136040b52ae782d57332b983ae7ab95feb907303be50caec02effecbfb520",
+          "bytes": 15117
+        },
+        {
+          "speaker": "Selim",
+          "voice": "voice-06",
+          "sourceTextSha256": "13049fa5777e4750edd29d048bc85182bb9bd6366307206fc511d5c19110aa8c",
+          "characters": 70,
+          "generatedSegmentAudioSha256": "548211ba40fa3d69d230f1a7d25c34951425041ee0452f8bb5e10122700a9ac6",
+          "bytes": 19821
+        },
+        {
+          "speaker": "Lehrerin Kern",
+          "voice": "voice-05",
+          "sourceTextSha256": "69eb0cca8bd03bb7f6eacc378901d76fa8666e6b8ae45cea2bc6cb7744a119ee",
+          "characters": 34,
+          "generatedSegmentAudioSha256": "45cd299b9233ba2d267bc3823db65d9fca39940e42bf8902cde9c808b7f8fd95",
+          "bytes": 11373
+        },
+        {
+          "speaker": "Selim",
+          "voice": "voice-06",
+          "sourceTextSha256": "22813538ce4b86a1f38eacd859236381059a0843ba7631268f5d64d403fde75c",
+          "characters": 92,
+          "generatedSegmentAudioSha256": "d46b787dad0d04b2bc43d32d7268c878591e39ed5038284745b1e93323c14820",
+          "bytes": 23853
+        }
+      ]
+    }
+  ],
+  "transcriptSnapshotLedger": {
+    "before": 47,
+    "removed": 1,
+    "after": 46
+  },
+  "validation": {
+    "generationInputWasExactCurrentGermanText": true,
+    "speakerOrderHashGuarded": true,
+    "technicalAudioQc": "pass-1099-of-1099",
+    "technicalAudioQcReport": "docs/audio-qc-all-2026-11-04.json",
+    "humanListening": false,
+    "pronunciationQualityJudged": false,
+    "naturalnessJudged": false,
+    "independentLinguisticSignOff": false,
+    "externalCefrOrExamValidation": false
+  },
+  "claimBoundary": "Programmatic generation provenance plus segment/file byte and hash identity and automated technical QC do not establish that a human heard every word, nor do they judge speaker suitability, pronunciation, prosody, naturalness, pedagogy, school-event, parent-involvement, or volunteering validity, CEFR level, or exam suitability."
+}

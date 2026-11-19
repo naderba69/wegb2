@@ -146,6 +146,14 @@ const batchSpecs: BatchSpec[] = [
     ledgerBefore: 48,
     ledgerAfter: 47,
   },
+  {
+    batch: "PA-040-10",
+    fixturePath: "scripts/fixtures/dialog-audio-refresh-pa040-10.json",
+    ids: ["d-b1-17"],
+    ledgerBefore: 47,
+    ledgerAfter: 46,
+    additionalTwoSpeakerVoice: "ki-voice-05+voice-06 (Arena voices voice-05 feminine for Lehrerin Kern and voice-06 masculine for Selim, each separately selected by the user via Arena auditions, de-DE TTS)",
+  },
 ];
 const twoSpeakerVoices: Record<string, string[]> = {
   "d-b1-04": ["voice-02", "voice-03", "voice-02", "voice-03", "voice-02"],
@@ -153,6 +161,7 @@ const twoSpeakerVoices: Record<string, string[]> = {
   "d-b1-07": ["voice-03", "voice-02", "voice-03", "voice-02", "voice-03"],
   "d-b1-09": ["voice-02", "voice-03", "voice-02", "voice-03", "voice-02", "voice-03"],
   "d-b1-13": ["voice-03", "voice-02", "voice-03", "voice-02", "voice-03", "voice-02", "voice-03", "voice-02"],
+  "d-b1-17": ["voice-05", "voice-06", "voice-05", "voice-06", "voice-05", "voice-06", "voice-05", "voice-06"],
   "d-b1-22": ["voice-03", "voice-02", "voice-03", "voice-02", "voice-03", "voice-02", "voice-03", "voice-02"],
   "d-b1-32": ["voice-03", "voice-02", "voice-03", "voice-02", "voice-03"],
   "d-b2-07": ["voice-02", "voice-04", "voice-02", "voice-04", "voice-02"],
@@ -165,6 +174,7 @@ const twoSpeakerVoiceLabels: Record<string, string> = {
   "d-b1-07": "ki-voice-02+voice-03",
   "d-b1-09": "ki-voice-02+voice-03",
   "d-b1-13": "ki-voice-02+voice-03",
+  "d-b1-17": "ki-voice-05+voice-06",
   "d-b1-22": "ki-voice-02+voice-03",
   "d-b1-32": "ki-voice-02+voice-03",
   "d-b2-07": "ki-voice-02+voice-04",
@@ -289,7 +299,7 @@ const finalLedgerCount = batchSpecs.at(-1)?.ledgerAfter ?? -1;
 if (snapshots.items.length > finalLedgerCount
   || snapshots.items.some((entry) => entry.group !== "dialog" || allExpectedSet.has(entry.id))
   || batchSpecs.some((spec, index) => index > 0 && batchSpecs[index - 1].ledgerAfter !== spec.ledgerBefore)) {
-  fail("recording-time transcript snapshot ledger must reach 47 across PA-040-01/02/03/04/05/06/07/08/09 and may only fall later");
+  fail("recording-time transcript snapshot ledger must reach 46 across PA-040-01/02/03/04/05/06/07/08/09/10 and may only fall later");
 }
 if (qc.datum !== "2026-11-04" || qc.dateien.length !== 1099
   || qc.anomalienGesamt !== 0 || qc.abdeckung.luecken.length !== 0) {
@@ -302,4 +312,4 @@ if (errors.length > 0) {
   process.exit(1);
 }
 
-console.log("PA-040-01/02/03/04/05/06/07/08/09 dialogue audio refresh: 24 current-text recordings guarded; snapshot ledger 71 -> 47; technical QC passed; no human listening/pronunciation claim");
+console.log("PA-040-01/02/03/04/05/06/07/08/09/10 dialogue audio refresh: 25 current-text recordings guarded; snapshot ledger 71 -> 46; technical QC passed; no human listening/pronunciation claim");
