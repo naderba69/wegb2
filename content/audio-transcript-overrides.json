@@ -252,14 +252,6 @@
       "sourcePath": "content/dialogues.json"
     },
     {
-      "file": "/audio/dialog/d-b2-42.mp3",
-      "id": "d-b2-42",
-      "group": "dialog",
-      "textDe": "Wir haben zwar mehr Patienten, aber deutlich weniger Personal als früher. Aber die Qualität ist doch gleich geblieben? Die Qualität leidet leider, denn die Zeit pro Patient ist stark gesunken. Die Politik spricht dagegen von einer erfolgreichen Reform. Diese Reform ist in der Praxis kaum spürbar, denn die Belastung bleibt hoch. Was würden Sie konkret ändern?",
-      "audioCommit": "1a34344fc0d670b1b54dae7841c65a694ec28454",
-      "sourcePath": "content/dialogues.json"
-    },
-    {
       "file": "/audio/dialog/dlg-b1-berufsberatung.mp3",
       "id": "dlg-b1-berufsberatung",
       "group": "dialog",
