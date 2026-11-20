@@ -76,14 +76,6 @@
       "sourcePath": "content/dialogues.json"
     },
     {
-      "file": "/audio/dialog/d-b1-24.mp3",
-      "id": "d-b1-24",
-      "group": "dialog",
-      "textDe": "Gestern Abend verlor ich im Bus die Laptoptasche. Linie und Haltestelle — genau, bitte. Linie sechsundzwanzig, Endhaltestelle, Sitz hinten links. Ein Fund, gemeldet um zwanzig zwanzig — Beschreibung passt. Wann kann ich abholen? Ab neun — Ausweis und Eigentumsnachweis: Rechnung oder Fotos. Ich bringe Rechnung und Screenshots des Geräts. Sechs Monate Aufbewahrung nach Anzeige, dann Versteigerung — kommen Sie pünktlich.",
-      "audioCommit": "bbdf2255c4b84aa3e7938d5f3af1e0c7c1c7d053",
-      "sourcePath": "content/dialogues.json"
-    },
-    {
       "file": "/audio/dialog/d-b1-25.mp3",
       "id": "d-b1-25",
       "group": "dialog",
