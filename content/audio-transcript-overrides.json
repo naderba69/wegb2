@@ -4,14 +4,6 @@
   "claimAr": "لقطات نصية مجمدة للملفات التي بقي صوتها ثابتاً بينما توسع نص القراءة أو الحوار أو تغير لاحقاً. تُستخدم لقياس سرعة التسجيل فقط، وتمنع الادعاء بأن الصوت يقرأ النسخة الحالية.",
   "items": [
     {
-      "file": "/audio/dialog/d-b1-10.mp3",
-      "id": "d-b1-10",
-      "group": "dialog",
-      "textDe": "Guten Tag, ich möchte mich für den Deutschkurs anmelden. Sehr gern. Haben Sie den Einstufungstest schon gemacht? Noch nicht — ist das Pflicht? Ja, sonst passt die Gruppe nicht. Der Test ist Donnerstag um neun. Was kostet der Kurs pro Monat? Dreiundachtzig Euro — die Prüfung ist inklusive. Brauche ich einen Nachweis über meinen Aufenthalt? Nur Pass und Meldebescheinigung. Bis Donnerstag!",
-      "audioCommit": "bbdf2255c4b84aa3e7938d5f3af1e0c7c1c7d053",
-      "sourcePath": "content/dialogues.json"
-    },
-    {
       "file": "/audio/dialog/d-b1-12.mp3",
       "id": "d-b1-12",
       "group": "dialog",
