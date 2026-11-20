@@ -1,0 +1,112 @@
+{
+  "schema": "wegb2-dialog-audio-refresh-batch-v1",
+  "batch": "PA-040-18",
+  "generatedAt": "2026-11-04",
+  "scope": "The shortest remaining documented changed-source dialogue recording, the eight-line B1 lost-property dialogue d-b1-24, regenerated programmatically from the exact current German lines in content/dialogues.json. Eight line-level segments alternate voice-21 for the Wassim and voice-22 for the Polizist, then concatenate in source order. Hashes guard every source segment and resulting file. Technical checks are automated only; no human listening, pronunciation, naturalness, linguistic, legal, police-procedure, lost-property, or ownership-verification sign-off is claimed.",
+  "sourcePath": "content/dialogues.json",
+  "sourceLineJoiner": " ",
+  "voices": {
+    "oneSpeaker": "ki-voice-02 (Arena voice-02, de-DE TTS)",
+    "twoSpeaker": "ki-voice-02+voice-03 (Arena de-DE TTS)",
+    "additionalTwoSpeaker": "voice-21+voice-22 (Arena voices voice-21 masculine for the Wassim and voice-22 masculine for the Polizist in d-b1-24, each separately selected by the user via Arena auditions, de-DE TTS; third historically non-KI dialogue moved to explicit dual real-voice labeling)"
+  },
+  "items": [
+    {
+      "id": "d-b1-24",
+      "level": "B1",
+      "file": "/audio/dialog/d-b1-24.mp3",
+      "sourceTextSha256": "d108c8430929643b63a541da2bc59c6f9c6596a88e7957e5d5be778bf753ec31",
+      "sourceLineCount": 8,
+      "generatedAudioSha256": "5c6210438cb7d625c548058bf0a9f2dab50fe60a4fe86916e40c100c37938158",
+      "bytes": 150792,
+      "voice": "voice-21+voice-22",
+      "previousAudioSha256": "2bd957853291518d073b3a772b589a20de043da4a9cce7ed6e0c705f211f6229",
+      "previousBytes": 228553,
+      "removedTranscriptSnapshotSha256": "5a64de3415a97d08f4119c65de545e99907d6afa89a921e0ac663035eb894ec3",
+      "removedTranscriptAudioCommit": "bbdf2255c4b84aa3e7938d5f3af1e0c7c1c7d053",
+      "generationSegments": [
+        {
+          "speaker": "Wassim",
+          "voice": "voice-21",
+          "sourceTextSha256": "3ecf7a0494e1fd7ffa6945aa03943f3c0f1025670b3713d83c1bdba187e16439",
+          "characters": 49,
+          "generatedSegmentAudioSha256": "2ce3aef3171dd97f29440c03c1d6c9d8d38949d90cbaa4c29f51076fd0dc60a8",
+          "bytes": 17133
+        },
+        {
+          "speaker": "Polizist",
+          "voice": "voice-22",
+          "sourceTextSha256": "bd5b2ccc6eecf65417671bdb9977b146712abf1a4cf81098bd923bb0ca326664",
+          "characters": 37,
+          "generatedSegmentAudioSha256": "f3871034569fa05318390b14e1bb764a44a6d3dcd541e46cd02870a090ed86cf",
+          "bytes": 9933
+        },
+        {
+          "speaker": "Wassim",
+          "voice": "voice-21",
+          "sourceTextSha256": "4a83649b5ce635b78cdf0cf9530550628fb666a902a1f2d22c9299de2b4806b4",
+          "characters": 57,
+          "generatedSegmentAudioSha256": "75315b655251b6b295aec4a8e9c586b5a8c8d78dcb2d7d11c2c64c4c7cdac1c6",
+          "bytes": 22029
+        },
+        {
+          "speaker": "Polizist",
+          "voice": "voice-22",
+          "sourceTextSha256": "587f32de5207a48810b63fdcce35fc3dbdfabfbd029cff9545e45e7e78202646",
+          "characters": 59,
+          "generatedSegmentAudioSha256": "e0c040ff070a0b2674bb44ea3ca7bb7040b28de48b7f981741336d0152103e63",
+          "bytes": 18765
+        },
+        {
+          "speaker": "Wassim",
+          "voice": "voice-21",
+          "sourceTextSha256": "6a9bfcebee75559a4c43beea7df4ff4f40b43d7aa4d365bd0281edaa4cb5c580",
+          "characters": 22,
+          "generatedSegmentAudioSha256": "1f8541b4f24526894519447d2198601bfa50e33d71c278fb5d6797fe29d13185",
+          "bytes": 7053
+        },
+        {
+          "speaker": "Polizist",
+          "voice": "voice-22",
+          "sourceTextSha256": "1cfbfae90d2f8ac6eb44d00dc24d411f189a1d0fcc36d253c459c99ff89baf2c",
+          "characters": 127,
+          "generatedSegmentAudioSha256": "efb8ae6deae733927060eb4c47c7b861f2c7a1c92973acf71b90b6d92759f24b",
+          "bytes": 31341
+        },
+        {
+          "speaker": "Wassim",
+          "voice": "voice-21",
+          "sourceTextSha256": "97a8247fb9029e07a72b6df730fc0b2dcff37651959dcb7259464c1b9c9469af",
+          "characters": 47,
+          "generatedSegmentAudioSha256": "4e77edc9b774bad497ba4ad14d02510a4d668741ed2822b8190ee054e546769a",
+          "bytes": 17421
+        },
+        {
+          "speaker": "Polizist",
+          "voice": "voice-22",
+          "sourceTextSha256": "2124c8b11d389dc126e5e06cd991f043589dfb8981307ae2a592f3c54d25a76b",
+          "characters": 118,
+          "generatedSegmentAudioSha256": "b5949154f604862d976af9105613bf4b234fef32a833fc6c26826e86fd72c094",
+          "bytes": 27117
+        }
+      ]
+    }
+  ],
+  "transcriptSnapshotLedger": {
+    "before": 39,
+    "removed": 1,
+    "after": 38
+  },
+  "validation": {
+    "generationInputWasExactCurrentGermanText": true,
+    "speakerOrderHashGuarded": true,
+    "technicalAudioQc": "pass-1099-of-1099",
+    "technicalAudioQcReport": "docs/audio-qc-all-2026-11-04.json",
+    "humanListening": false,
+    "pronunciationQualityJudged": false,
+    "naturalnessJudged": false,
+    "independentLinguisticSignOff": false,
+    "externalCefrOrExamValidation": false
+  },
+  "claimBoundary": "Programmatic generation provenance plus segment/file byte and hash identity and automated technical QC do not establish that a human heard every word, nor do they judge speaker suitability, pronunciation, prosody, naturalness, pedagogy, legal, police-procedure, lost-property, or ownership-verification validity, CEFR level, or exam suitability."
+}
