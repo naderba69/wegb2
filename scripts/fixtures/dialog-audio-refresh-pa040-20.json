@@ -1,0 +1,112 @@
+{
+  "schema": "wegb2-dialog-audio-refresh-batch-v1",
+  "batch": "PA-040-20",
+  "generatedAt": "2026-11-04",
+  "scope": "The shortest remaining documented changed-source dialogue recording, the eight-line B1 language-course-registration dialogue d-b1-10, regenerated programmatically from the exact current German lines in content/dialogues.json. Eight line-level segments alternate voice-25 for the Frau Weber and voice-26 for the Yara, then concatenate in source order. Hashes guard every source segment and resulting file. Technical checks are automated only; no human listening, pronunciation, naturalness, linguistic, educational-administration, course-registration, or placement-test sign-off is claimed.",
+  "sourcePath": "content/dialogues.json",
+  "sourceLineJoiner": " ",
+  "voices": {
+    "oneSpeaker": "ki-voice-02 (Arena voice-02, de-DE TTS)",
+    "twoSpeaker": "ki-voice-02+voice-03 (Arena de-DE TTS)",
+    "additionalTwoSpeaker": "voice-25+voice-26 (Arena voices voice-25 feminine for the Frau Weber and voice-26 feminine for the Yara in d-b1-10, each separately selected by the user via Arena auditions, de-DE TTS; fourth historically non-KI dialogue moved to explicit dual real-voice labeling)"
+  },
+  "items": [
+    {
+      "id": "d-b1-10",
+      "level": "B1",
+      "file": "/audio/dialog/d-b1-10.mp3",
+      "sourceTextSha256": "4d417543613256a59dcfbc5b97f2f7c712fca73731fcaa1011e5e80ee3378409",
+      "sourceLineCount": 8,
+      "generatedAudioSha256": "9c33f743178d304176b1ec44054db930d3ba9d1d8157881478a1f030eae5f7e6",
+      "bytes": 132360,
+      "voice": "voice-25+voice-26",
+      "previousAudioSha256": "29bc2085991a47a1268eeea0999a99cd0147f702d853cb938a612d2391dfe460",
+      "previousBytes": 186133,
+      "removedTranscriptSnapshotSha256": "1d9c67e5d3a4e23eb67f2cebc6e9b27aa005d09ddd3ea496bab761c01badbb51",
+      "removedTranscriptAudioCommit": "bbdf2255c4b84aa3e7938d5f3af1e0c7c1c7d053",
+      "generationSegments": [
+        {
+          "speaker": "Frau Weber",
+          "voice": "voice-25",
+          "sourceTextSha256": "52c8328a7b7694d9bb88c6a4194132a8356e09673f65485323c631e7d2bf2b1d",
+          "characters": 56,
+          "generatedSegmentAudioSha256": "e68d8b5cccb21f124d39c379b89a0462ca2ac2402368a5a0f4ca0fcc9b4d4b63",
+          "bytes": 12621
+        },
+        {
+          "speaker": "Yara",
+          "voice": "voice-26",
+          "sourceTextSha256": "846e1baa28a8494d9b49bb0d4ffae6e17d021b7e32ed942b9c8b80b6a6def930",
+          "characters": 55,
+          "generatedSegmentAudioSha256": "d363476265419e2485626e0d556a751cd4b100553b4006fc85b3583904337cfc",
+          "bytes": 13005
+        },
+        {
+          "speaker": "Frau Weber",
+          "voice": "voice-25",
+          "sourceTextSha256": "c28ccbbcaffcf52e9b4e372aab07cad40d82a2388b8577d4b2e9f3df5d714604",
+          "characters": 29,
+          "generatedSegmentAudioSha256": "514ce3adff596ff39c703db114d328eddaaf1e1d898de6a8251ba36d5201c459",
+          "bytes": 7821
+        },
+        {
+          "speaker": "Yara",
+          "voice": "voice-26",
+          "sourceTextSha256": "e5ace2b203a71b02cc13680530be65ed69b0b93fafcd4b3cfc384bf29eac80d0",
+          "characters": 95,
+          "generatedSegmentAudioSha256": "c1b50a78ad55ec29d2c85e2fcc5951cb818144788d82048f93e856dfd8e60e7d",
+          "bytes": 25101
+        },
+        {
+          "speaker": "Frau Weber",
+          "voice": "voice-25",
+          "sourceTextSha256": "79a96e51cc5e86fa8a6346737de57879a74cfa49ecefabdaae5dd08333ef5abb",
+          "characters": 30,
+          "generatedSegmentAudioSha256": "6607c172d3b50e51b66c36bb946df6e759130cc8b2480bab20db856e0bd172ca",
+          "bytes": 11277
+        },
+        {
+          "speaker": "Yara",
+          "voice": "voice-26",
+          "sourceTextSha256": "a4a4d0a4c83a3ecc73a5eec7e8f264f21c4b5517f5324abacaf68e71ce56b40d",
+          "characters": 80,
+          "generatedSegmentAudioSha256": "82e05abb68b27268f42898256df568f29412fb19d60aa00cf3357885e7b4143f",
+          "bytes": 19053
+        },
+        {
+          "speaker": "Frau Weber",
+          "voice": "voice-25",
+          "sourceTextSha256": "dc8941ab8daa4635c6e4d817d3944319f8aef189aa84c4eeaa13c60f41a73d7f",
+          "characters": 50,
+          "generatedSegmentAudioSha256": "7c6d516f361865d2a17129e68385ef668e2d154eb5996cfe06afdb9399870bb9",
+          "bytes": 11277
+        },
+        {
+          "speaker": "Yara",
+          "voice": "voice-26",
+          "sourceTextSha256": "192b20f195e183af7cece863906a808a0b6d9c2f305dcb6db86d9aabf25ecf69",
+          "characters": 131,
+          "generatedSegmentAudioSha256": "c6b2bf95befb32b905dad6432446d6076ff8d5882694af67ba21bdd4f3e4d61e",
+          "bytes": 32205
+        }
+      ]
+    }
+  ],
+  "transcriptSnapshotLedger": {
+    "before": 37,
+    "removed": 1,
+    "after": 36
+  },
+  "validation": {
+    "generationInputWasExactCurrentGermanText": true,
+    "speakerOrderHashGuarded": true,
+    "technicalAudioQc": "pass-1099-of-1099",
+    "technicalAudioQcReport": "docs/audio-qc-all-2026-11-04.json",
+    "humanListening": false,
+    "pronunciationQualityJudged": false,
+    "naturalnessJudged": false,
+    "independentLinguisticSignOff": false,
+    "externalCefrOrExamValidation": false
+  },
+  "claimBoundary": "Programmatic generation provenance plus segment/file byte and hash identity and automated technical QC do not establish that a human heard every word, nor do they judge speaker suitability, pronunciation, prosody, naturalness, pedagogy, educational-administration, course-registration, or placement-test validity, CEFR level, or exam suitability."
+}
