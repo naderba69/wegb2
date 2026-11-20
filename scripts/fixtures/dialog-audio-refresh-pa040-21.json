@@ -1,0 +1,104 @@
+{
+  "schema": "wegb2-dialog-audio-refresh-batch-v1",
+  "batch": "PA-040-21",
+  "generatedAt": "2026-11-04",
+  "scope": "The shortest remaining documented changed-source dialogue recording, the seven-line B2 vocational-training-and-career-choice dialogue d-b2-41, regenerated programmatically from the exact current German lines in content/dialogues.json. Seven line-level segments alternate voice-27 for the Berater and voice-28 for the Eltern, then concatenate in source order. Hashes guard every source segment and resulting file. Technical checks are automated only; no human listening, pronunciation, naturalness, linguistic, careers-counselling, vocational-training, or employer-relations sign-off is claimed.",
+  "sourcePath": "content/dialogues.json",
+  "sourceLineJoiner": " ",
+  "voices": {
+    "oneSpeaker": "ki-voice-02 (Arena voice-02, de-DE TTS)",
+    "twoSpeaker": "ki-voice-02+voice-03 (Arena de-DE TTS)",
+    "additionalTwoSpeaker": "ki-voice-27+voice-28 (Arena voices voice-27 masculine for the Berater and voice-28 feminine for the Eltern in d-b2-41, each separately selected by the user via Arena auditions, de-DE TTS)"
+  },
+  "items": [
+    {
+      "id": "d-b2-41",
+      "level": "B2",
+      "file": "/audio/dialog/d-b2-41.mp3",
+      "sourceTextSha256": "98f3d5dc487502678a096e34750213fc4a7b380bebfc99897f90699432c9d65a",
+      "sourceLineCount": 7,
+      "generatedAudioSha256": "19d8f4df57a3b6bb6bf4480f184c5801edab2c90ce9e2192bcbe1d2223b56804",
+      "bytes": 139899,
+      "voice": "ki-voice-27+voice-28",
+      "previousAudioSha256": "bfa65fdbadf3cc9ac024a3299286d8bfbfe30be9623550ea2c8bcdc20c1ede24",
+      "previousBytes": 145293,
+      "removedTranscriptSnapshotSha256": "5eb8fde070bbf1f3907941f0afef3caeb6e1d4f77700cefaee505dfb95128a90",
+      "removedTranscriptAudioCommit": "1a34344fc0d670b1b54dae7841c65a694ec28454",
+      "generationSegments": [
+        {
+          "speaker": "Berater",
+          "voice": "voice-27",
+          "sourceTextSha256": "d8c7d4c86f0ac56e74b197a5108397d60801c692b75f9c50d95176e412b113af",
+          "characters": 79,
+          "generatedSegmentAudioSha256": "8d2f7c48cb1415e06b6314f9d7c0e89621434f45161c2bf8e904c9651612e96d",
+          "bytes": 21453
+        },
+        {
+          "speaker": "Eltern",
+          "voice": "voice-28",
+          "sourceTextSha256": "7847607cb009bb82a3172c6438230bdb623a9b6c5433344016a2aef6ab8b72d1",
+          "characters": 55,
+          "generatedSegmentAudioSha256": "6a9203a0a1b2d71345dcb8e73c3be71e54576098e2eb58d7c64edc6622444a38",
+          "bytes": 15789
+        },
+        {
+          "speaker": "Berater",
+          "voice": "voice-27",
+          "sourceTextSha256": "f2d2fb950226523b2a4c2761d593ff4bb63e434e60d710a4aa39b36b21becaa4",
+          "characters": 84,
+          "generatedSegmentAudioSha256": "549f8103fee8e952a5fed12fd8fad5dc7c36571d7c979cdcaa64a3ffc51a8cdd",
+          "bytes": 20973
+        },
+        {
+          "speaker": "Eltern",
+          "voice": "voice-28",
+          "sourceTextSha256": "a6ad0cd2f24da51e31774928be8f58fbaf6a618560bf5999bba6358a70084af3",
+          "characters": 65,
+          "generatedSegmentAudioSha256": "63f926c59ffd4d2617e5ce25ed874c7daf3bc9b91c590a0f16266b1004d323d8",
+          "bytes": 17421
+        },
+        {
+          "speaker": "Berater",
+          "voice": "voice-27",
+          "sourceTextSha256": "301fea0b1fd5a72ac58a6f683770b286e1134c2c86188e10607ef3d49664b4b9",
+          "characters": 92,
+          "generatedSegmentAudioSha256": "adfd0563b2d33ddc7611d62005d8409d326802c6ae1d186c0245de0db406cef1",
+          "bytes": 20589
+        },
+        {
+          "speaker": "Eltern",
+          "voice": "voice-28",
+          "sourceTextSha256": "bf816216d086c4329e87165fdf4ffa7fb3f3a0a1cf9f67c373e607f6dd128a73",
+          "characters": 33,
+          "generatedSegmentAudioSha256": "b512c7df111b232e4fd98a07e8ee01ecd54f4319ae52419e6724f3aca4997f19",
+          "bytes": 11373
+        },
+        {
+          "speaker": "Berater",
+          "voice": "voice-27",
+          "sourceTextSha256": "003ff5f33a498c152c36ef06b71d27eedb19d7358eef59ed47eca421c434c97e",
+          "characters": 131,
+          "generatedSegmentAudioSha256": "d1c81acf313a9e4c27df3e9fcc4369627178a8cec1c8f9a1727b92e605ca25e9",
+          "bytes": 32301
+        }
+      ]
+    }
+  ],
+  "transcriptSnapshotLedger": {
+    "before": 36,
+    "removed": 1,
+    "after": 35
+  },
+  "validation": {
+    "generationInputWasExactCurrentGermanText": true,
+    "speakerOrderHashGuarded": true,
+    "technicalAudioQc": "pass-1099-of-1099",
+    "technicalAudioQcReport": "docs/audio-qc-all-2026-11-04.json",
+    "humanListening": false,
+    "pronunciationQualityJudged": false,
+    "naturalnessJudged": false,
+    "independentLinguisticSignOff": false,
+    "externalCefrOrExamValidation": false
+  },
+  "claimBoundary": "Programmatic generation provenance plus segment/file byte and hash identity and automated technical QC do not establish that a human heard every word, nor do they judge speaker suitability, pronunciation, prosody, naturalness, pedagogy, careers-counselling, vocational-training, or employer-relations validity, CEFR level, or exam suitability."
+}
