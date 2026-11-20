@@ -671,11 +671,11 @@
     "claimBoundary": "87 bounded internal A0–B2 decisions; independent review, field validation, and external linguistic, phonetic, CEFR, or exam sign-off remain pending"
   },
   "inventorySnapshot": {
-    "indexedTrackedFilesAndAuditArtifacts": 3658,
+    "indexedTrackedFilesAndAuditArtifacts": 3659,
     "manual_complete": 64,
     "manual_targeted": 67,
     "not_started": 3439,
-    "audit_artifact": 88
+    "audit_artifact": 89
   },
   "learningStateCorrections": {
     "findings": [
@@ -1235,7 +1235,7 @@
     "independentTranslationSignOff": false,
     "culturalOrMedicalSignOff": false,
     "externalCefrOrExamValidation": false,
-    "claimBoundary": "176 bounded internal A0–B2 full-dialogue decisions across 1138 lines and 424 questions; no dialogue remains outside the internal PA-038 ledger, while re-synthesis and text/audio matching or listening checks for 74 remaining changed German dialogue-audio sources after PA-040-01/02/03/04/05/06/07/08/09/10/11/12/13/14/15/16/17/18 regenerated thirty-three current-text recordings, independent review, field validation, and external linguistic, translation, cultural, legal, medical, pharmacy, emergency-services, audio, CEFR, Goethe, telc, or exam sign-off remain pending",
+    "claimBoundary": "176 bounded internal A0–B2 full-dialogue decisions across 1138 lines and 424 questions; no dialogue remains outside the internal PA-038 ledger, while re-synthesis and text/audio matching or listening checks for 73 remaining changed German dialogue-audio sources after PA-040-01/02/03/04/05/06/07/08/09/10/11/12/13/14/15/16/17/18/19 regenerated thirty-four current-text recordings, independent review, field validation, and external linguistic, translation, cultural, legal, medical, pharmacy, emergency-services, audio, CEFR, Goethe, telc, or exam sign-off remain pending",
     "audioSourceDialoguesChanged": [
       "d-a0-05",
       "d-a0-11",
@@ -1353,17 +1353,17 @@
       "result": "pass",
       "textAudioMatchChecked": false,
       "humanListeningCompleted": false,
-      "recordingTranscriptOverrides": 38,
+      "recordingTranscriptOverrides": 37,
       "b1RecordingSnapshotsAdded": 26,
       "snapshotPurpose": "tempo measurement against recording-time text only; does not establish current text/audio match",
       "b2RecordingSnapshotsAdded": 32,
       "readingSnapshotsRemovedByPa03901": 10,
       "remainingReadingSnapshots": 0,
-      "remainingDialogueSnapshots": 38,
+      "remainingDialogueSnapshots": 37,
       "readingSnapshotsRemovedByPa03902": 10,
       "readingSnapshotsRemovedByPa03903": 6,
       "dialogueSnapshotsRemovedByPa04001": 5,
-      "dialogueRecordingsRegeneratedFromCurrentText": 33,
+      "dialogueRecordingsRegeneratedFromCurrentText": 34,
       "dialogueSnapshotsRemovedByPa04002": 5,
       "dialogueSnapshotsRemovedByPa04003": 6,
       "dialogueSnapshotsRemovedByPa04004": 2,
@@ -1380,7 +1380,8 @@
       "dialogueSnapshotsRemovedByPa04015": 1,
       "dialogueSnapshotsRemovedByPa04016": 1,
       "dialogueSnapshotsRemovedByPa04017": 1,
-      "dialogueSnapshotsRemovedByPa04018": 1
+      "dialogueSnapshotsRemovedByPa04018": 1,
+      "dialogueSnapshotsRemovedByPa04019": 1
     }
   },
   "audioRefreshAudit": {
@@ -1476,17 +1477,17 @@
     ]
   },
   "dialogAudioRefreshAudit": {
-    "batch": "PA-040-01/02/03/04/05/06/07/08/09/10/11/12/13/14/15/16/17/18",
-    "fixture": "scripts/fixtures/dialog-audio-refresh-pa040-01.json; scripts/fixtures/dialog-audio-refresh-pa040-02.json; scripts/fixtures/dialog-audio-refresh-pa040-03.json; scripts/fixtures/dialog-audio-refresh-pa040-04.json; scripts/fixtures/dialog-audio-refresh-pa040-05.json; scripts/fixtures/dialog-audio-refresh-pa040-06.json; scripts/fixtures/dialog-audio-refresh-pa040-07.json; scripts/fixtures/dialog-audio-refresh-pa040-08.json; scripts/fixtures/dialog-audio-refresh-pa040-09.json; scripts/fixtures/dialog-audio-refresh-pa040-10.json; scripts/fixtures/dialog-audio-refresh-pa040-11.json; scripts/fixtures/dialog-audio-refresh-pa040-12.json; scripts/fixtures/dialog-audio-refresh-pa040-13.json; scripts/fixtures/dialog-audio-refresh-pa040-14.json; scripts/fixtures/dialog-audio-refresh-pa040-15.json; scripts/fixtures/dialog-audio-refresh-pa040-16.json; scripts/fixtures/dialog-audio-refresh-pa040-17.json; scripts/fixtures/dialog-audio-refresh-pa040-18.json",
+    "batch": "PA-040-01/02/03/04/05/06/07/08/09/10/11/12/13/14/15/16/17/18/19",
+    "fixture": "scripts/fixtures/dialog-audio-refresh-pa040-01.json; scripts/fixtures/dialog-audio-refresh-pa040-02.json; scripts/fixtures/dialog-audio-refresh-pa040-03.json; scripts/fixtures/dialog-audio-refresh-pa040-04.json; scripts/fixtures/dialog-audio-refresh-pa040-05.json; scripts/fixtures/dialog-audio-refresh-pa040-06.json; scripts/fixtures/dialog-audio-refresh-pa040-07.json; scripts/fixtures/dialog-audio-refresh-pa040-08.json; scripts/fixtures/dialog-audio-refresh-pa040-09.json; scripts/fixtures/dialog-audio-refresh-pa040-10.json; scripts/fixtures/dialog-audio-refresh-pa040-11.json; scripts/fixtures/dialog-audio-refresh-pa040-12.json; scripts/fixtures/dialog-audio-refresh-pa040-13.json; scripts/fixtures/dialog-audio-refresh-pa040-14.json; scripts/fixtures/dialog-audio-refresh-pa040-15.json; scripts/fixtures/dialog-audio-refresh-pa040-16.json; scripts/fixtures/dialog-audio-refresh-pa040-17.json; scripts/fixtures/dialog-audio-refresh-pa040-18.json; scripts/fixtures/dialog-audio-refresh-pa040-19.json",
     "regressionGate": "npm run audit:dialog-audio-refresh",
     "sourcePath": "content/dialogues.json",
-    "recordings": 33,
+    "recordings": 34,
     "byLevel": {
       "A0": 2,
       "A1": 2,
       "A2": 3,
       "B1": 13,
-      "B2": 13
+      "B2": 14
     },
     "ids": [
       "d-a0-ht01",
@@ -1521,12 +1522,13 @@
       "d-b2-47",
       "d-b1-11",
       "d-b2-49",
-      "d-b1-24"
+      "d-b1-24",
+      "d-b2-42"
     ],
-    "sourceTextHashesMatchCurrentBank": 33,
-    "sourceSegmentAndSpeakerOrderHashesMatch": 33,
-    "audioHashesAndManifestBytesMatch": 33,
-    "priorAudioIdentitiesReplaced": 33,
+    "sourceTextHashesMatchCurrentBank": 34,
+    "sourceSegmentAndSpeakerOrderHashesMatch": 34,
+    "audioHashesAndManifestBytesMatch": 34,
+    "priorAudioIdentitiesReplaced": 34,
     "voices": {
       "oneSpeakerAnnouncements": "ki-voice-02 (Arena voice-02, de-DE TTS)",
       "twoSpeakerDialogue": "ki-voice-02+voice-03 (Arena de-DE TTS)",
@@ -1541,14 +1543,15 @@
       "aiEducationDialogueVoices": "ki-voice-15+voice-16 (Arena voices voice-15 masculine for the Professor and voice-16 feminine for the Studentin in d-b2-47, each separately selected by the user via Arena auditions)",
       "apartmentViewingDialogueVoices": "voice-17+voice-18 (Arena voices voice-17 feminine for the Frau Bähr and voice-18 feminine for the Nadia in d-b1-11, each separately selected by the user via Arena auditions; second historically non-KI dialogue moved to explicit dual real-voice labeling)",
       "democracyParticipationDialogueVoices": "ki-voice-19+voice-20 (Arena voices voice-19 masculine for the Bürgermeister and voice-20 feminine for the Bürgerin in d-b2-49, each separately selected by the user via Arena auditions)",
-      "lostPropertyDialogueVoices": "voice-21+voice-22 (Arena voices voice-21 masculine for the Wassim and voice-22 masculine for the Polizist in d-b1-24, each separately selected by the user via Arena auditions; third historically non-KI dialogue moved to explicit dual real-voice labeling)"
+      "lostPropertyDialogueVoices": "voice-21+voice-22 (Arena voices voice-21 masculine for the Wassim and voice-22 masculine for the Polizist in d-b1-24, each separately selected by the user via Arena auditions; third historically non-KI dialogue moved to explicit dual real-voice labeling)",
+      "healthSystemCareDialogueVoices": "ki-voice-23+voice-24 (Arena voices voice-23 masculine for the Pfleger and voice-24 feminine for the Leitung in d-b2-42, each separately selected by the user via Arena auditions)"
     },
     "transcriptSnapshotLedger": {
       "before": 71,
-      "removed": 33,
-      "after": 38,
+      "removed": 34,
+      "after": 37,
       "afterByGroup": {
-        "dialog": 38,
+        "dialog": 37,
         "hoeren": 0
       }
     },
@@ -1566,9 +1569,9 @@
     "speakerSuitabilityJudged": false,
     "independentLinguisticSignOff": false,
     "externalCefrOrExamValidation": false,
-    "remainingDocumentedDialogueSnapshots": 38,
-    "remainingChangedDialogueAudioSources": 74,
-    "claimBoundary": "Programmatic generation provenance, segment/speaker-order hashes, source/audio hashes, manifest identity, and automated technical QC do not establish that a human heard every word and do not judge speaker suitability, pronunciation, prosody, naturalness, pedagogy, hospitality, consumer-rights, trades, home-repair scheduling, consumer-services, municipal-planning, transport-policy, civic-process, environmental, school-event, parent-involvement, volunteering, integration-policy, authority, education, counseling, volunteering-sector, municipal, association, media-ethics, publishing-industry, journalism, labor-market, employment-rights, media-moderation, academic-integrity, higher-education-policy, AI-governance, legal, tenancy-law, housing-application, rental-procedure, political-science, civic-participation, municipal-governance, legal, police-procedure, lost-property, or ownership-verification validity, CEFR level, or exam suitability.",
+    "remainingDocumentedDialogueSnapshots": 37,
+    "remainingChangedDialogueAudioSources": 73,
+    "claimBoundary": "Programmatic generation provenance, segment/speaker-order hashes, source/audio hashes, manifest identity, and automated technical QC do not establish that a human heard every word and do not judge speaker suitability, pronunciation, prosody, naturalness, pedagogy, hospitality, consumer-rights, trades, home-repair scheduling, consumer-services, municipal-planning, transport-policy, civic-process, environmental, school-event, parent-involvement, volunteering, integration-policy, authority, education, counseling, volunteering-sector, municipal, association, media-ethics, publishing-industry, journalism, labor-market, employment-rights, media-moderation, academic-integrity, higher-education-policy, AI-governance, legal, tenancy-law, housing-application, rental-procedure, political-science, civic-participation, municipal-governance, legal, police-procedure, lost-property, ownership-verification, medical, nursing, or health-system validity, CEFR level, or exam suitability.",
     "batches": [
       {
         "batch": "PA-040-01",
@@ -1695,6 +1698,13 @@
         "recordings": 1,
         "ledgerBefore": 39,
         "ledgerAfter": 38
+      },
+      {
+        "batch": "PA-040-19",
+        "fixture": "scripts/fixtures/dialog-audio-refresh-pa040-19.json",
+        "recordings": 1,
+        "ledgerBefore": 38,
+        "ledgerAfter": 37
       }
     ]
   }
