@@ -236,14 +236,6 @@
       "sourcePath": "content/dialogues.json"
     },
     {
-      "file": "/audio/dialog/d-b2-41.mp3",
-      "id": "d-b2-41",
-      "group": "dialog",
-      "textDe": "Viele Jugendliche wählen zwar einen Beruf, brechen die Ausbildung aber früh ab. Aber ist das nicht ein Zeichen für falsche Erwartungen? Die Erwartungen sind oft unrealistisch, jedoch fehlt auch die Begleitung im Betrieb. Die Firmen sagen dagegen, die Jugendlichen seien nicht motiviert. Diese Aussage ist nur teilweise richtig, denn die Zahlen zeigen auch fehlende Unterstützung. Was empfehlen Sie uns als Eltern?",
-      "audioCommit": "1a34344fc0d670b1b54dae7841c65a694ec28454",
-      "sourcePath": "content/dialogues.json"
-    },
-    {
       "file": "/audio/dialog/dlg-b1-berufsberatung.mp3",
       "id": "dlg-b1-berufsberatung",
       "group": "dialog",
