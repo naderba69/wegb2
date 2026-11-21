@@ -44,14 +44,6 @@
       "sourcePath": "content/dialogues.json"
     },
     {
-      "file": "/audio/dialog/d-b1-23.mp3",
-      "id": "d-b1-23",
-      "group": "dialog",
-      "textDe": "Ich muss den Stundenplan umbauen: Vorlesung gegen Praktikum. Wann liegt das Praktikum? Täglich acht bis zwölf — Fabrik im Industriegebiet. Die Vorlesung gibt es als Aufzeichnung; wir buchen Kurs B. Muss die Uni das Praktikum anerkennen? Ja: Bestätigung der Firma mit Zeiten, maximal dreißig Wochenstunden. Und wenn die Firma kein Schreiben ausstellt? Eine E-Mail der Chefin — formlos, aber schriftlich — genügt.",
-      "audioCommit": "bbdf2255c4b84aa3e7938d5f3af1e0c7c1c7d053",
-      "sourcePath": "content/dialogues.json"
-    },
-    {
       "file": "/audio/dialog/d-b1-25.mp3",
       "id": "d-b1-25",
       "group": "dialog",

@@ -1,0 +1,112 @@
+{
+  "schema": "wegb2-dialog-audio-refresh-batch-v1",
+  "batch": "PA-040-24",
+  "generatedAt": "2026-11-04",
+  "scope": "The shortest remaining documented changed-source dialogue recording, the eight-line B1 university-timetable dialogue d-b1-23, regenerated programmatically from the exact current German lines in content/dialogues.json. Eight line-level segments alternate voice-33 for the Maha and voice-34 for the Beraterin, then concatenate in source order. Hashes guard every source segment and resulting file. Technical checks are automated only; no human listening, pronunciation, naturalness, linguistic, academic-administration, internship-recognition, or employer-confirmation sign-off is claimed.",
+  "sourcePath": "content/dialogues.json",
+  "sourceLineJoiner": " ",
+  "voices": {
+    "oneSpeaker": "ki-voice-02 (Arena voice-02, de-DE TTS)",
+    "twoSpeaker": "ki-voice-02+voice-03 (Arena de-DE TTS)",
+    "additionalTwoSpeaker": "voice-33+voice-34 (Arena voices voice-33 feminine for the Maha and voice-34 feminine for the Beraterin in d-b1-23, each separately selected by the user via Arena auditions, de-DE TTS; seventh historically non-KI dialogue moved to explicit dual real-voice labeling)"
+  },
+  "items": [
+    {
+      "id": "d-b1-23",
+      "level": "B1",
+      "file": "/audio/dialog/d-b1-23.mp3",
+      "sourceTextSha256": "2767be5e43528645d4c30bd6c9fd39149b3049753e9ac8b358af744ba8586935",
+      "sourceLineCount": 8,
+      "generatedAudioSha256": "7f173ca2800d0cbef3f75706f3ccfd224b45aa2279977c78928271e78ec43a91",
+      "bytes": 160392,
+      "voice": "voice-33+voice-34",
+      "previousAudioSha256": "02a1211596da8a1cc4c76381875df5a0c6684d17db8815be0b4ff692bd88fa71",
+      "previousBytes": 206194,
+      "removedTranscriptSnapshotSha256": "1396321fe4f853e26ad7d1bfb4901c9244c0fec8b5d3f1d9dc06f7b88f4360c1",
+      "removedTranscriptAudioCommit": "bbdf2255c4b84aa3e7938d5f3af1e0c7c1c7d053",
+      "generationSegments": [
+        {
+          "speaker": "Maha",
+          "voice": "voice-33",
+          "sourceTextSha256": "8118d76ccda683c5988e2d8ab977adca3d6cca905422ede1745d042515960ffb",
+          "characters": 89,
+          "generatedSegmentAudioSha256": "2398db1b8945337c012917e754c1ab9f08052bfae222e4aee408e0164892bddc",
+          "bytes": 23853
+        },
+        {
+          "speaker": "Beraterin",
+          "voice": "voice-34",
+          "sourceTextSha256": "d20bad9c6fde0e54dd917cec514a1aa2c93ca4eeff20195c99cf9bfad2932281",
+          "characters": 25,
+          "generatedSegmentAudioSha256": "a57ed877ed3a26b86d5fcc254162e19ef63567c3283b014d4a4b58714ec6ff8e",
+          "bytes": 7245
+        },
+        {
+          "speaker": "Maha",
+          "voice": "voice-33",
+          "sourceTextSha256": "b4709884c7650f2ece3599637d79a4078aa63cadd2ef1238f55a06896de4b275",
+          "characters": 51,
+          "generatedSegmentAudioSha256": "9e2b87a6789f64653a0e1b89dfa7b26a9c51c3200a6e70428e8846ac8896e90e",
+          "bytes": 19533
+        },
+        {
+          "speaker": "Beraterin",
+          "voice": "voice-34",
+          "sourceTextSha256": "48c29c262019d2259997120cd5e37b2aa6fbeea708239008d532fbcc0e15740a",
+          "characters": 58,
+          "generatedSegmentAudioSha256": "423da413cf5334309c10e8e22f763a03c11c42e0619d87c3b93583ad20253cbc",
+          "bytes": 18381
+        },
+        {
+          "speaker": "Maha",
+          "voice": "voice-33",
+          "sourceTextSha256": "aa6ef35d68b52d232f89af64473be9c3b940239ca89723c901d7a50cb987a216",
+          "characters": 38,
+          "generatedSegmentAudioSha256": "cd657b9c64a0d77ecc840e3f3ae52562b4b26eb63c5ec2a505e4803896cc9e0f",
+          "bytes": 11853
+        },
+        {
+          "speaker": "Beraterin",
+          "voice": "voice-34",
+          "sourceTextSha256": "62a8a74fac5f5aa117b54a96e1f45ba64c6b48b5eb59bf250e26888b16810dd2",
+          "characters": 162,
+          "generatedSegmentAudioSha256": "5208b3d04a464d31613659fc716f12a30851c83971bf7fc8ef05043abbe5b6d0",
+          "bytes": 37485
+        },
+        {
+          "speaker": "Maha",
+          "voice": "voice-33",
+          "sourceTextSha256": "c4282973766fff337f8f28b70af0cfdcc5f6ee2d9f501c3d1bd8948d9871811f",
+          "characters": 44,
+          "generatedSegmentAudioSha256": "b624f7f18720363451ec5b36c7422fd5e77a971a6fe9c4244d91dfc4f7ed26d1",
+          "bytes": 13581
+        },
+        {
+          "speaker": "Beraterin",
+          "voice": "voice-34",
+          "sourceTextSha256": "a947ce6ed989396fc658d5bbc6eed1767eadc1b40485b58e5ad8034fed34365c",
+          "characters": 105,
+          "generatedSegmentAudioSha256": "a72b032d2205ddbf4870dcd9a30a18f9064503296d9dda6a96311ab0040712de",
+          "bytes": 28461
+        }
+      ]
+    }
+  ],
+  "transcriptSnapshotLedger": {
+    "before": 33,
+    "removed": 1,
+    "after": 32
+  },
+  "validation": {
+    "generationInputWasExactCurrentGermanText": true,
+    "speakerOrderHashGuarded": true,
+    "technicalAudioQc": "pass-1099-of-1099",
+    "technicalAudioQcReport": "docs/audio-qc-all-2026-11-04.json",
+    "humanListening": false,
+    "pronunciationQualityJudged": false,
+    "naturalnessJudged": false,
+    "independentLinguisticSignOff": false,
+    "externalCefrOrExamValidation": false
+  },
+  "claimBoundary": "Programmatic generation provenance plus segment/file byte and hash identity and automated technical QC do not establish that a human heard every word, nor do they judge speaker suitability, pronunciation, prosody, naturalness, pedagogy, academic-administration, internship-recognition, or employer-confirmation validity, CEFR level, or exam suitability."
+}
