@@ -308,8 +308,8 @@
     {
       "id": "d-b1-15",
       "file": "/audio/dialog/d-b1-15.mp3",
-      "bytes": 226257,
-      "voice": "voice-01+voice-02",
+      "bytes": 164232,
+      "voice": "voice-31+voice-32",
       "level": "B1",
       "stimmen": 2
     },

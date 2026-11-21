@@ -1,0 +1,112 @@
+{
+  "schema": "wegb2-dialog-audio-refresh-batch-v1",
+  "batch": "PA-040-23",
+  "generatedAt": "2026-11-04",
+  "scope": "The shortest remaining documented changed-source dialogue recording, the eight-line B1 lost-bank-card dialogue d-b1-15, regenerated programmatically from the exact current German lines in content/dialogues.json. Eight line-level segments alternate voice-31 for the Imen and voice-32 for the Berater Vogel, then concatenate in source order. Hashes guard every source segment and resulting file. Technical checks are automated only; no human listening, pronunciation, naturalness, linguistic, banking, card-blocking, or fee-schedule sign-off is claimed.",
+  "sourcePath": "content/dialogues.json",
+  "sourceLineJoiner": " ",
+  "voices": {
+    "oneSpeaker": "ki-voice-02 (Arena voice-02, de-DE TTS)",
+    "twoSpeaker": "ki-voice-02+voice-03 (Arena de-DE TTS)",
+    "additionalTwoSpeaker": "voice-31+voice-32 (Arena voices voice-31 feminine for the Imen and voice-32 masculine for the Berater Vogel in d-b1-15, each separately selected by the user via Arena auditions, de-DE TTS; sixth historically non-KI dialogue moved to explicit dual real-voice labeling)"
+  },
+  "items": [
+    {
+      "id": "d-b1-15",
+      "level": "B1",
+      "file": "/audio/dialog/d-b1-15.mp3",
+      "sourceTextSha256": "379760a7fae7a831f71b2473c698b9e166eecdc7dcd7979ee7ed77f48f7754a0",
+      "sourceLineCount": 8,
+      "generatedAudioSha256": "4814258c25980af64abec48ef9eed902b571537c4abb9c40e10636a0a7602375",
+      "bytes": 164232,
+      "voice": "voice-31+voice-32",
+      "previousAudioSha256": "b85462ca71535e3b823eeea519ea3f2f098751e66cc537f64e21cd1fd7b10419",
+      "previousBytes": 226257,
+      "removedTranscriptSnapshotSha256": "14e7b3ed29e3127b703d94a69e7259156e6790d1e53a2ef991a072bfbe511f18",
+      "removedTranscriptAudioCommit": "bbdf2255c4b84aa3e7938d5f3af1e0c7c1c7d053",
+      "generationSegments": [
+        {
+          "speaker": "Imen",
+          "voice": "voice-31",
+          "sourceTextSha256": "a5616e12e7c260231e5ed4348161821217cf10e44eeacfae9a1e2323e8f4fabb",
+          "characters": 56,
+          "generatedSegmentAudioSha256": "d4bd5e45407350432b2d1d4825912977d9cf76aaf1b263966465b7aa485a2445",
+          "bytes": 20589
+        },
+        {
+          "speaker": "Berater Vogel",
+          "voice": "voice-32",
+          "sourceTextSha256": "9007cc6929226c8f050023322cd53d2ee4a2199b52e16319bb9e6d8a477e256e",
+          "characters": 52,
+          "generatedSegmentAudioSha256": "0a5a84e2f7e692ffe72e45c35f8ebbf1fc8c952444a272b1912a59d284f35196",
+          "bytes": 17901
+        },
+        {
+          "speaker": "Imen",
+          "voice": "voice-31",
+          "sourceTextSha256": "57d7f85210c4930f70df5c8cc6587b2b3fa7153099de9f90d0d672328465896b",
+          "characters": 43,
+          "generatedSegmentAudioSha256": "3fc6964011c66107bc1cb52227be2ad0af87182b6215b5c815c6ff8dc5145232",
+          "bytes": 15021
+        },
+        {
+          "speaker": "Berater Vogel",
+          "voice": "voice-32",
+          "sourceTextSha256": "3bdee0cf3b5d6e11d9157673c237844b4f7b6399537ff80dfb25b645863a6f4a",
+          "characters": 68,
+          "generatedSegmentAudioSha256": "f2e7dd8a0b602c7f1f6316cbd041fb5f78890adbdfeaa9c1fb1d34667ffc9d11",
+          "bytes": 18861
+        },
+        {
+          "speaker": "Imen",
+          "voice": "voice-31",
+          "sourceTextSha256": "309ad9b76273a4cfd274ca907a98806b8ff6775591ac471451326ebee9a17109",
+          "characters": 24,
+          "generatedSegmentAudioSha256": "313f08f9f55d59445938e50be0a876559653ab31940b6341896738cca7f9a642",
+          "bytes": 7533
+        },
+        {
+          "speaker": "Berater Vogel",
+          "voice": "voice-32",
+          "sourceTextSha256": "6b53b915706df08adb1749cc7b7743f9264e4d95dba90e6b43308c71c4699450",
+          "characters": 117,
+          "generatedSegmentAudioSha256": "7453dd472567bd70a54d47b7e130bc28a22a2ac488e8172ee5ef8da11f28ce95",
+          "bytes": 31821
+        },
+        {
+          "speaker": "Imen",
+          "voice": "voice-31",
+          "sourceTextSha256": "b414012d6d963a00c6953ff3f97e345b6af9dec67447f83b7ddf99b247455476",
+          "characters": 43,
+          "generatedSegmentAudioSha256": "fbcfe684e823d7ede762fed31be00e0ba61a06a26c00786d7c1f5699d825d360",
+          "bytes": 11757
+        },
+        {
+          "speaker": "Berater Vogel",
+          "voice": "voice-32",
+          "sourceTextSha256": "9924f79426e3369f67bd5c1553b0bfca9ffd9b02d449a9e9791bd4bdaccd3e52",
+          "characters": 163,
+          "generatedSegmentAudioSha256": "b8990ff8215426baa275472a11bb30ae1b00dd86c73940bb3ddb7aa3a2ca1150",
+          "bytes": 40749
+        }
+      ]
+    }
+  ],
+  "transcriptSnapshotLedger": {
+    "before": 34,
+    "removed": 1,
+    "after": 33
+  },
+  "validation": {
+    "generationInputWasExactCurrentGermanText": true,
+    "speakerOrderHashGuarded": true,
+    "technicalAudioQc": "pass-1099-of-1099",
+    "technicalAudioQcReport": "docs/audio-qc-all-2026-11-04.json",
+    "humanListening": false,
+    "pronunciationQualityJudged": false,
+    "naturalnessJudged": false,
+    "independentLinguisticSignOff": false,
+    "externalCefrOrExamValidation": false
+  },
+  "claimBoundary": "Programmatic generation provenance plus segment/file byte and hash identity and automated technical QC do not establish that a human heard every word, nor do they judge speaker suitability, pronunciation, prosody, naturalness, pedagogy, banking, card-blocking, or fee-schedule validity, CEFR level, or exam suitability."
+}
