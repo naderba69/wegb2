@@ -68,14 +68,6 @@
       "sourcePath": "content/dialogues.json"
     },
     {
-      "file": "/audio/dialog/d-b2-10.mp3",
-      "id": "d-b2-10",
-      "group": "dialog",
-      "textDe": "Danke, dass Sie sich die Zeit nehmen — Ihre Stelle interessiert mich sehr. Ebenso. Was schwebt Ihnen tariflich vor? Angesichts meiner Erfahrung käme ich auf 48.000 Euro brutto. Das liegt über unserem Rahmen; 45.000 plus variabler Anteil wäre verhandelbar. Auf der Zahl bestehe ich nicht — aber die Weiterbildungszeit zähle ich als Leistung. Fair. Dann 45.500, zwei Tage Homeoffice und 400 Euro Weiterbildungsbudget. Sofern der Vertrag die Probezeit auf drei Monate begrenzt, haben wir eine Übereinkunft. Abgemacht — die Zusage bekommen Sie schriftlich morgen Vormittag.",
-      "audioCommit": "bbdf2255c4b84aa3e7938d5f3af1e0c7c1c7d053",
-      "sourcePath": "content/dialogues.json"
-    },
-    {
       "file": "/audio/dialog/d-b2-11.mp3",
       "id": "d-b2-11",
       "group": "dialog",

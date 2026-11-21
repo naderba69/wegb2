@@ -1,0 +1,112 @@
+{
+  "schema": "wegb2-dialog-audio-refresh-batch-v1",
+  "batch": "PA-040-25",
+  "generatedAt": "2026-11-04",
+  "scope": "The shortest remaining documented changed-source dialogue recording, the eight-line B2 salary-negotiation dialogue d-b2-10, regenerated programmatically from the exact current German lines in content/dialogues.json. Eight line-level segments alternate voice-35 for the Youssef and voice-36 for the Personalchefin, then concatenate in source order. Hashes guard every source segment and resulting file. Technical checks are automated only; no human listening, pronunciation, naturalness, linguistic, labour-law, employment-contract, or salary-negotiation sign-off is claimed.",
+  "sourcePath": "content/dialogues.json",
+  "sourceLineJoiner": " ",
+  "voices": {
+    "oneSpeaker": "ki-voice-02 (Arena voice-02, de-DE TTS)",
+    "twoSpeaker": "ki-voice-02+voice-03 (Arena de-DE TTS)",
+    "additionalTwoSpeaker": "voice-35+voice-36 (Arena voices voice-35 masculine for the Youssef and voice-36 feminine for the Personalchefin in d-b2-10, each separately selected by the user via Arena auditions, de-DE TTS; eighth historically non-KI dialogue moved to explicit dual real-voice labeling)"
+  },
+  "items": [
+    {
+      "id": "d-b2-10",
+      "level": "B2",
+      "file": "/audio/dialog/d-b2-10.mp3",
+      "sourceTextSha256": "5e093b1cf9e158039b82845d98321f1367521fcaa7949ddbbca5677be8aca115",
+      "sourceLineCount": 8,
+      "generatedAudioSha256": "8e6e6c9871af30bfc039dcfc867d4b2d6e16080a0fe78304d85f2a3b874970a3",
+      "bytes": 180264,
+      "voice": "voice-35+voice-36",
+      "previousAudioSha256": "2c17ed193be56472f14adb912fea1cd7d6ec787db0df8a1ca815948db9a06ff3",
+      "previousBytes": 309429,
+      "removedTranscriptSnapshotSha256": "42d22ca75ffdda1752fc912bcf15ddb212b797b5aa7129838316fd5084fdc3d8",
+      "removedTranscriptAudioCommit": "bbdf2255c4b84aa3e7938d5f3af1e0c7c1c7d053",
+      "generationSegments": [
+        {
+          "speaker": "Youssef",
+          "voice": "voice-35",
+          "sourceTextSha256": "7620ec74a553803716b5f37d9ecf31d4a0cb5b0c8e801e5c7e043b69065ac39e",
+          "characters": 74,
+          "generatedSegmentAudioSha256": "48cf500535cca48cca704410125384fd616660faf6c6ae351968c0141b236996",
+          "bytes": 15789
+        },
+        {
+          "speaker": "Personalchefin",
+          "voice": "voice-36",
+          "sourceTextSha256": "f4588aa7be1a2e596c3702348441672936b07f6756eba01a1103a6f61b80a271",
+          "characters": 44,
+          "generatedSegmentAudioSha256": "8754cc317c58f32976b4959a02d3653d6b77ae5ea63b7672d1f4233d47734513",
+          "bytes": 15021
+        },
+        {
+          "speaker": "Youssef",
+          "voice": "voice-35",
+          "sourceTextSha256": "22b64ff3119855feb23ed348aac435407bf2c53858a9be516840ce9b51c81df9",
+          "characters": 60,
+          "generatedSegmentAudioSha256": "42a91f4bf01476b7c4827d0234ba93f9c59a9c3ee5ac6898821f8ddd706f0341",
+          "bytes": 22029
+        },
+        {
+          "speaker": "Personalchefin",
+          "voice": "voice-36",
+          "sourceTextSha256": "fe654d72bb4650c210055be65bf5c99a0d534907811ef19b36a4e11945277283",
+          "characters": 78,
+          "generatedSegmentAudioSha256": "12ca09bb927587feec7814ef6871718b6037ea29144b4611739e713a39d6c21b",
+          "bytes": 26829
+        },
+        {
+          "speaker": "Youssef",
+          "voice": "voice-35",
+          "sourceTextSha256": "51dcf3546dd24934604b18f4d97b13f73f14245aca841c3eb3b5380d15496672",
+          "characters": 98,
+          "generatedSegmentAudioSha256": "c3a2f0bf669f191b961b3316191093392d87ff1faad815b723b43743ce38297e",
+          "bytes": 27309
+        },
+        {
+          "speaker": "Personalchefin",
+          "voice": "voice-36",
+          "sourceTextSha256": "3a9272b17b6101def8d4c7a6acda01451e0a5f7ad9d0fd2816f8bcc501902538",
+          "characters": 74,
+          "generatedSegmentAudioSha256": "798a6143da5e849a9ca3b25369b336048664ca59e69ae466bf7cc95dae98f9f7",
+          "bytes": 31821
+        },
+        {
+          "speaker": "Youssef",
+          "voice": "voice-35",
+          "sourceTextSha256": "d60289bcb13880d0b4309c83614b8354e1426de58e2efe8cb357ca22e7be9d30",
+          "characters": 87,
+          "generatedSegmentAudioSha256": "f8fd45624d02b0e72349d0a7a671a2c471e01038675ee43d59870541b57695e7",
+          "bytes": 23373
+        },
+        {
+          "speaker": "Personalchefin",
+          "voice": "voice-36",
+          "sourceTextSha256": "0d2ab2548a65c9687e678835b5a72d614013802d975a283c1d7c55420bdfeb18",
+          "characters": 65,
+          "generatedSegmentAudioSha256": "37fac033e735f2ee5b9e97609ed92a1a7ab447d2b5bd34ef864b69ee55b2b80a",
+          "bytes": 18093
+        }
+      ]
+    }
+  ],
+  "transcriptSnapshotLedger": {
+    "before": 32,
+    "removed": 1,
+    "after": 31
+  },
+  "validation": {
+    "generationInputWasExactCurrentGermanText": true,
+    "speakerOrderHashGuarded": true,
+    "technicalAudioQc": "pass-1099-of-1099",
+    "technicalAudioQcReport": "docs/audio-qc-all-2026-11-04.json",
+    "humanListening": false,
+    "pronunciationQualityJudged": false,
+    "naturalnessJudged": false,
+    "independentLinguisticSignOff": false,
+    "externalCefrOrExamValidation": false
+  },
+  "claimBoundary": "Programmatic generation provenance plus segment/file byte and hash identity and automated technical QC do not establish that a human heard every word, nor do they judge speaker suitability, pronunciation, prosody, naturalness, pedagogy, labour-law, employment-contract, or salary-negotiation validity, CEFR level, or exam suitability."
+}
