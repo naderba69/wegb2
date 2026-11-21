@@ -1,0 +1,104 @@
+{
+  "schema": "wegb2-dialog-audio-refresh-batch-v1",
+  "batch": "PA-040-22",
+  "generatedAt": "2026-11-04",
+  "scope": "The shortest remaining documented changed-source dialogue recording, the seven-line B1 neighbourhood-noise dialogue d-b1-18, regenerated programmatically from the exact current German lines in content/dialogues.json. Seven line-level segments alternate voice-29 for the Frau Dittrich and voice-30 for the Oussama, then concatenate in source order. Hashes guard every source segment and resulting file. Technical checks are automated only; no human listening, pronunciation, naturalness, linguistic, tenancy-law, house-rules, or neighbour-conflict-resolution sign-off is claimed.",
+  "sourcePath": "content/dialogues.json",
+  "sourceLineJoiner": " ",
+  "voices": {
+    "oneSpeaker": "ki-voice-02 (Arena voice-02, de-DE TTS)",
+    "twoSpeaker": "ki-voice-02+voice-03 (Arena de-DE TTS)",
+    "additionalTwoSpeaker": "voice-29+voice-30 (Arena voices voice-29 feminine for the Frau Dittrich and voice-30 masculine for the Oussama in d-b1-18, each separately selected by the user via Arena auditions, de-DE TTS; fifth historically non-KI dialogue moved to explicit dual real-voice labeling)"
+  },
+  "items": [
+    {
+      "id": "d-b1-18",
+      "level": "B1",
+      "file": "/audio/dialog/d-b1-18.mp3",
+      "sourceTextSha256": "c1f6468cb556ebe2c22893f5904ab206e70c9cae69fd8c147b516f723e8fa055",
+      "sourceLineCount": 7,
+      "generatedAudioSha256": "2122dd8e3850e6183ae681c19f0d46d60f62bd361eea4e00c9d45749756ec2f9",
+      "bytes": 148347,
+      "voice": "voice-29+voice-30",
+      "previousAudioSha256": "2d8f07450fb52de35519fff05e3eaa8c77b6dd683265b4ff6c6d6954f7709b04",
+      "previousBytes": 253197,
+      "removedTranscriptSnapshotSha256": "d050279946351878711b22fedc3381bdab87806159c3a5b7a3ae310fdb4d2ec5",
+      "removedTranscriptAudioCommit": "bbdf2255c4b84aa3e7938d5f3af1e0c7c1c7d053",
+      "generationSegments": [
+        {
+          "speaker": "Frau Dittrich",
+          "voice": "voice-29",
+          "sourceTextSha256": "bc8335515aef13092a29990f1d87fa9d57ae101811cc64ed100721bdf0b103ad",
+          "characters": 79,
+          "generatedSegmentAudioSha256": "ad67d9c3dfd9ea9ee9fe391ab562fbf9e5eab96627b6b52d855ac960579032be",
+          "bytes": 22413
+        },
+        {
+          "speaker": "Oussama",
+          "voice": "voice-30",
+          "sourceTextSha256": "abe6aaecd6eecb333aae8167abc2c7627863a8ce308f06bfd735c9ccf8c0c274",
+          "characters": 83,
+          "generatedSegmentAudioSha256": "d22c44d76ceb9b5d20f5a4790e0439cca9547d3fc9b17991cc80eadb108f36d4",
+          "bytes": 17229
+        },
+        {
+          "speaker": "Frau Dittrich",
+          "voice": "voice-29",
+          "sourceTextSha256": "4a7ce770d0adc482f7813ee9b0211baf5b26b2908e4ac52817e78c9570bdb983",
+          "characters": 98,
+          "generatedSegmentAudioSha256": "ffd71f706e6b144759288ec9d6f634159bde9d76cb69736a69b2d29f0d030446",
+          "bytes": 26349
+        },
+        {
+          "speaker": "Oussama",
+          "voice": "voice-30",
+          "sourceTextSha256": "7ebea12fd583377f74fdcbf49fcb0dd6efa3cb0b53518d9a2eb453e72584e662",
+          "characters": 112,
+          "generatedSegmentAudioSha256": "bf19200027dc9fff5eaa74cdd0e77bc7a4b017bf8c90cac0e8ef6522ddf0f7cd",
+          "bytes": 27213
+        },
+        {
+          "speaker": "Frau Dittrich",
+          "voice": "voice-29",
+          "sourceTextSha256": "a262c2aee1d3423a0bc707ec4655a905b881d2f92143a163d513600d44c3314a",
+          "characters": 54,
+          "generatedSegmentAudioSha256": "caa258802bfd3c3df3271a564038fb21a226e3d7cb456e42f1ca1152bfaa1b5f",
+          "bytes": 15789
+        },
+        {
+          "speaker": "Oussama",
+          "voice": "voice-30",
+          "sourceTextSha256": "4f6c953fef53f43d18e759b6e33307b70a70c96978314e66b34d1f8bdaacbd0f",
+          "characters": 83,
+          "generatedSegmentAudioSha256": "10679d2a3a75f5ec6bc72d679e9c3702d8b0011239f4d1c0f865e76eb0fe41ca",
+          "bytes": 24525
+        },
+        {
+          "speaker": "Frau Dittrich",
+          "voice": "voice-29",
+          "sourceTextSha256": "9677e56cd0348232f301683320285475f8d66e58762f7a35a5c78ae71b17e144",
+          "characters": 43,
+          "generatedSegmentAudioSha256": "80ed78515905688963543370d459cf575dfd0533ff6b77bf3d19e877c615543e",
+          "bytes": 14829
+        }
+      ]
+    }
+  ],
+  "transcriptSnapshotLedger": {
+    "before": 35,
+    "removed": 1,
+    "after": 34
+  },
+  "validation": {
+    "generationInputWasExactCurrentGermanText": true,
+    "speakerOrderHashGuarded": true,
+    "technicalAudioQc": "pass-1099-of-1099",
+    "technicalAudioQcReport": "docs/audio-qc-all-2026-11-04.json",
+    "humanListening": false,
+    "pronunciationQualityJudged": false,
+    "naturalnessJudged": false,
+    "independentLinguisticSignOff": false,
+    "externalCefrOrExamValidation": false
+  },
+  "claimBoundary": "Programmatic generation provenance plus segment/file byte and hash identity and automated technical QC do not establish that a human heard every word, nor do they judge speaker suitability, pronunciation, prosody, naturalness, pedagogy, tenancy-law, house-rules, or neighbour-conflict-resolution validity, CEFR level, or exam suitability."
+}
