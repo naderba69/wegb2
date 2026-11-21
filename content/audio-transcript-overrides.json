@@ -28,14 +28,6 @@
       "sourcePath": "content/dialogues.json"
     },
     {
-      "file": "/audio/dialog/d-b1-18.mp3",
-      "id": "d-b1-18",
-      "group": "dialog",
-      "textDe": "Gestern nach Mitternacht war es laut — die Hausordnung kennt Ruhezeiten. Das war die Übertragung meines Bruders, laut verstärkt. Das bleibt einmalig — ich erwarte eine Entschuldigung, und Nachtruhe ab zweiundzwanzig. Entschuldigung — schön, dass Sie sprechen statt zu schelten. Die Übertragung bleibt künftig aus. Bei Gästen sage ich Bescheid — zwanzig Minuten vorher. Dringt bei uns Musik durch die Wand, klopfen Sie einmal — wir drehen sofort leiser. Abgemacht — Treppe und Ruhe teilen wir uns.",
-      "audioCommit": "bbdf2255c4b84aa3e7938d5f3af1e0c7c1c7d053",
-      "sourcePath": "content/dialogues.json"
-    },
-    {
       "file": "/audio/dialog/d-b1-19.mp3",
       "id": "d-b1-19",
       "group": "dialog",
