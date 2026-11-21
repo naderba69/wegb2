@@ -250,6 +250,14 @@ const batchSpecs: BatchSpec[] = [
     ledgerAfter: 34,
     additionalTwoSpeakerVoice: "voice-29+voice-30 (Arena voices voice-29 feminine for the Frau Dittrich and voice-30 masculine for the Oussama in d-b1-18, each separately selected by the user via Arena auditions, de-DE TTS; fifth historically non-KI dialogue moved to explicit dual real-voice labeling)",
   },
+  {
+    batch: "PA-040-23",
+    fixturePath: "scripts/fixtures/dialog-audio-refresh-pa040-23.json",
+    ids: ["d-b1-15"],
+    ledgerBefore: 34,
+    ledgerAfter: 33,
+    additionalTwoSpeakerVoice: "voice-31+voice-32 (Arena voices voice-31 feminine for the Imen and voice-32 masculine for the Berater Vogel in d-b1-15, each separately selected by the user via Arena auditions, de-DE TTS; sixth historically non-KI dialogue moved to explicit dual real-voice labeling)",
+  },
 ];
 const twoSpeakerVoices: Record<string, string[]> = {
   "d-b1-04": ["voice-02", "voice-03", "voice-02", "voice-03", "voice-02"],
@@ -273,6 +281,7 @@ const twoSpeakerVoices: Record<string, string[]> = {
   "d-b1-10": ["voice-25", "voice-26", "voice-25", "voice-26", "voice-25", "voice-26", "voice-25", "voice-26"],
   "d-b2-41": ["voice-27", "voice-28", "voice-27", "voice-28", "voice-27", "voice-28", "voice-27"],
   "d-b1-18": ["voice-29", "voice-30", "voice-29", "voice-30", "voice-29", "voice-30", "voice-29"],
+  "d-b1-15": ["voice-31", "voice-32", "voice-31", "voice-32", "voice-31", "voice-32", "voice-31", "voice-32"],
   "d-b2-48": ["voice-09", "voice-10", "voice-09", "voice-10", "voice-09", "voice-10", "voice-09"],
   "d-b2-45": ["voice-03", "voice-02", "voice-03", "voice-02", "voice-03", "voice-02", "voice-03"],
 };
@@ -298,6 +307,7 @@ const twoSpeakerVoiceLabels: Record<string, string> = {
   "d-b1-10": "voice-25+voice-26",
   "d-b2-41": "ki-voice-27+voice-28",
   "d-b1-18": "voice-29+voice-30",
+  "d-b1-15": "voice-31+voice-32",
   "d-b2-48": "ki-voice-09+voice-10",
   "d-b2-45": "ki-voice-02+voice-03",
 };
@@ -419,7 +429,7 @@ const finalLedgerCount = batchSpecs.at(-1)?.ledgerAfter ?? -1;
 if (snapshots.items.length > finalLedgerCount
   || snapshots.items.some((entry) => entry.group !== "dialog" || allExpectedSet.has(entry.id))
   || batchSpecs.some((spec, index) => index > 0 && batchSpecs[index - 1].ledgerAfter !== spec.ledgerBefore)) {
-  fail("recording-time transcript snapshot ledger must reach 34 across PA-040-01/02/03/04/05/06/07/08/09/10/11/12/13/14/15/16/17/18/19/20/21/22 and may only fall later");
+  fail("recording-time transcript snapshot ledger must reach 33 across PA-040-01/02/03/04/05/06/07/08/09/10/11/12/13/14/15/16/17/18/19/20/21/22/23 and may only fall later");
 }
 if (qc.datum !== "2026-11-04" || qc.dateien.length !== 1099
   || qc.anomalienGesamt !== 0 || qc.abdeckung.luecken.length !== 0) {
@@ -432,4 +442,4 @@ if (errors.length > 0) {
   process.exit(1);
 }
 
-console.log("PA-040-01/02/03/04/05/06/07/08/09/10/11/12/13/14/15/16/17/18/19/20/21/22 dialogue audio refresh: 37 current-text recordings guarded; snapshot ledger 71 -> 34; technical QC passed; no human listening/pronunciation claim");
+console.log("PA-040-01/02/03/04/05/06/07/08/09/10/11/12/13/14/15/16/17/18/19/20/21/22/23 dialogue audio refresh: 38 current-text recordings guarded; snapshot ledger 71 -> 33; technical QC passed; no human listening/pronunciation claim");

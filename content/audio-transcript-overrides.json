@@ -12,14 +12,6 @@
       "sourcePath": "content/dialogues.json"
     },
     {
-      "file": "/audio/dialog/d-b1-15.mp3",
-      "id": "d-b1-15",
-      "group": "dialog",
-      "textDe": "Ich habe meine EC-Karte verloren — bitte sofort sperren! Die Karte ist gesperrt. Wann und wo zuletzt benutzt? Gestern Vormittag, Automat am Hauptbahnhof. Kein Missbrauch vermerkt. Die neue Karte kommt in vierzehn Tagen. Was kostet die Sperrung? Zwanzig Euro bei Diebstahl, sechs bei Verlust — verloren, richtig? Leider Verlust — gestohlen wurde sie nicht. Dann sechs Euro. Den Ausweis bitte zum Abholen mitbringen.",
-      "audioCommit": "bbdf2255c4b84aa3e7938d5f3af1e0c7c1c7d053",
-      "sourcePath": "content/dialogues.json"
-    },
-    {
       "file": "/audio/dialog/d-b1-16.mp3",
       "id": "d-b1-16",
       "group": "dialog",
