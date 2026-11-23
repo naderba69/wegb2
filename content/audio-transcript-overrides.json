@@ -196,14 +196,6 @@
       "sourcePath": "content/dialogues.json"
     },
     {
-      "file": "/audio/dialog/d-b2-40.mp3",
-      "id": "d-b2-40",
-      "group": "dialog",
-      "textDe": "Viele Menschen reden zwar über Klimaschutz, handeln aber nur selten konsequent. Aber ist nachhaltiger Konsum nicht viel teurer? Die Preise sind eigentlich nicht höher, jedoch fehlt oft die Information. Die Industrie behauptet dagegen, die Kunden wollten keine Veränderung. Diese Behauptung ist kaum haltbar, denn Umfragen zeigen das Gegenteil. Was können wir also konkret tun?",
-      "audioCommit": "1a34344fc0d670b1b54dae7841c65a694ec28454",
-      "sourcePath": "content/dialogues.json"
-    },
-    {
       "file": "/audio/dialog/dlg-b1-berufsberatung.mp3",
       "id": "dlg-b1-berufsberatung",
       "group": "dialog",
