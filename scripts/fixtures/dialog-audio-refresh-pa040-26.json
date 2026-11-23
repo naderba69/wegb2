@@ -1,0 +1,104 @@
+{
+  "schema": "wegb2-dialog-audio-refresh-batch-v1",
+  "batch": "PA-040-26",
+  "generatedAt": "2026-11-04",
+  "scope": "The shortest remaining documented changed-source dialogue recording, the seven-line B2 environmental-consumer dialogue d-b2-40, regenerated programmatically from the exact current German lines in content/dialogues.json. Seven line-level segments alternate voice-37 for the Aktivist and voice-38 for the Publikum, then concatenate in source order. Hashes guard every source segment and resulting file. Technical checks are automated only; no human listening, pronunciation, naturalness, linguistic, environmental-science, consumer-protection, or advocacy sign-off is claimed.",
+  "sourcePath": "content/dialogues.json",
+  "sourceLineJoiner": " ",
+  "voices": {
+    "oneSpeaker": "ki-voice-02 (Arena voice-02, de-DE TTS)",
+    "twoSpeaker": "ki-voice-02+voice-03 (Arena de-DE TTS)",
+    "additionalTwoSpeaker": "voice-37+voice-38 (Arena voices voice-37 masculine for the Aktivist and voice-38 for the Publikum in d-b2-40, each separately selected by the user via Arena auditions, de-DE TTS; ninth historically non-KI dialogue moved to explicit dual real-voice labeling)"
+  },
+  "items": [
+    {
+      "id": "d-b2-40",
+      "level": "B2",
+      "file": "/audio/dialog/d-b2-40.mp3",
+      "sourceTextSha256": "b45e1c2f7f9d9a25f3c20bed86a0f80fa5c48db3b28694ba5b270e0171c4b091",
+      "sourceLineCount": 7,
+      "generatedAudioSha256": "c9ebaec4ee86501001db1feffa4385bf025a7b6acc8c782b399fb35fafde3bd2",
+      "bytes": 159483,
+      "voice": "voice-37+voice-38",
+      "previousAudioSha256": "c1775905e63677d8d15a9e082b475ffd2692b31c9f2f84391d690e93de30e2d9",
+      "previousBytes": 135981,
+      "removedTranscriptSnapshotSha256": "fdcb88003a4e598d6813db213dd222e39ff41c442f647bbbed1462c628097421",
+      "removedTranscriptAudioCommit": "1a34344fc0d670b1b54dae7841c65a694ec28454",
+      "generationSegments": [
+        {
+          "speaker": "Aktivist",
+          "voice": "voice-37",
+          "sourceTextSha256": "c2d2c779f58b286a8df7fa9e65110c1f5aeeeec91f45384a5ea777bdd5c151f4",
+          "characters": 79,
+          "generatedSegmentAudioSha256": "3df9bd0946d258f563912fca39148462b132f0ddea710a574e9c2a22f860ee16",
+          "bytes": 21741
+        },
+        {
+          "speaker": "Publikum",
+          "voice": "voice-38",
+          "sourceTextSha256": "27baf46c3fdb244a3ce049435043edd72e183fd93ba98256d419c45926225367",
+          "characters": 47,
+          "generatedSegmentAudioSha256": "733dc7f0c5104152063a68aa1bd2c90febd1c5cb306fe8b73b7a228370b9bbe9",
+          "bytes": 10989
+        },
+        {
+          "speaker": "Aktivist",
+          "voice": "voice-37",
+          "sourceTextSha256": "a3777becf872177353a8eecfe8885d4789a5172f5d3395a9c5a050edeeb052fd",
+          "characters": 136,
+          "generatedSegmentAudioSha256": "46dad27fb33f60c8c38f045060ee6b1184ce5faf90b33ec73c17d77a1f18c167",
+          "bytes": 38253
+        },
+        {
+          "speaker": "Publikum",
+          "voice": "voice-38",
+          "sourceTextSha256": "79144a6a0a1485227248957f1182eaca27083d4e3f284aac20c05ea034330b17",
+          "characters": 70,
+          "generatedSegmentAudioSha256": "212317e02f540ef6a5c5e1cc418567a344e3ede23bfefacf0bda9a8497a2adc7",
+          "bytes": 16557
+        },
+        {
+          "speaker": "Aktivist",
+          "voice": "voice-37",
+          "sourceTextSha256": "6130cc42000d8533f7ce38af5c839667080434fba692bf96ed300fabcb151892",
+          "characters": 70,
+          "generatedSegmentAudioSha256": "5fcf06f05ecbf15e959c9566f83dcbac02c746111cde9e614f0a0ab99b5c4a14",
+          "bytes": 20013
+        },
+        {
+          "speaker": "Publikum",
+          "voice": "voice-38",
+          "sourceTextSha256": "ff862aae64ef33a7e2cf00e577bc05764e90f1e3182aa59f8079a888094166e3",
+          "characters": 32,
+          "generatedSegmentAudioSha256": "97a27880b0a4170c80a98d276679f9995390b9f5abacdc4348d966f347fc7f99",
+          "bytes": 8781
+        },
+        {
+          "speaker": "Aktivist",
+          "voice": "voice-37",
+          "sourceTextSha256": "57f8bf2912d0990082f62bb5ec7088bbbb94626fe1aeb06e6e27b2b9d5fe25d7",
+          "characters": 149,
+          "generatedSegmentAudioSha256": "99162fe9b356b2e089ad3c9d8d87331767b7e663a21fa8151f1df32b6d07a094",
+          "bytes": 43149
+        }
+      ]
+    }
+  ],
+  "transcriptSnapshotLedger": {
+    "before": 31,
+    "removed": 1,
+    "after": 30
+  },
+  "validation": {
+    "generationInputWasExactCurrentGermanText": true,
+    "speakerOrderHashGuarded": true,
+    "technicalAudioQc": "pass-1099-of-1099",
+    "technicalAudioQcReport": "docs/audio-qc-all-2026-11-04.json",
+    "humanListening": false,
+    "pronunciationQualityJudged": false,
+    "naturalnessJudged": false,
+    "independentLinguisticSignOff": false,
+    "externalCefrOrExamValidation": false
+  },
+  "claimBoundary": "Programmatic generation provenance plus segment/file byte and hash identity and automated technical QC do not establish that a human heard every word, nor do they judge speaker suitability, pronunciation, prosody, naturalness, pedagogy, environmental-science, consumer-protection, or advocacy validity, CEFR level, or exam suitability."
+}
